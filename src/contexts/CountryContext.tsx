@@ -1,18 +1,17 @@
 
-import React, { createContext, useContext, useState, ReactNode, useEffect } from 'react';
-import { getCurrentCountryConfig, COUNTRY_LANGUAGES, SUPPORTED_COUNTRIES } from '@/config/countries';
+import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react';
+import { useTranslation } from 'react-i18next';
+import { toast } from 'sonner';
 import { geolocationService } from '@/services/geolocation';
 import { languageDetectionService } from '@/services/languageDetection';
-import { toast } from 'sonner';
-import { useTranslation } from 'react-i18next';
+import { SUPPORTED_COUNTRIES, COUNTRY_LANGUAGES } from '@/config/countries';
+import { CountryContext } from './CountryContextContext';
 
 interface CountryContextType {
   selectedCountryCode: string;
   setSelectedCountryCode: (countryCode: string) => void;
   isDetecting: boolean;
 }
-
-export const CountryContext = createContext<CountryContextType | undefined>(undefined);
 
 interface CountryProviderProps {
   children: ReactNode;
@@ -64,7 +63,7 @@ export const CountryProvider: React.FC<CountryProviderProps> = ({ children }) =>
           geoData: geoData
         });
         
-      } catch (error: Record<string, unknown>) {
+      } catch (error: unknown) {
         console.error('[CountryContext] Error detecting country/language:', error);
         
         // Fallback to UK/English
@@ -76,9 +75,9 @@ export const CountryProvider: React.FC<CountryProviderProps> = ({ children }) =>
         // Show user-friendly error message
         let userMessage = 'Unable to detect your location. Using default settings.';
         
-        if (error?.message?.includes('network')) {
+        if (error instanceof Error && error.message?.includes('network')) {
           userMessage = 'Network error. Using default settings.';
-        } else if (error?.message?.includes('timeout')) {
+        } else if (error instanceof Error && error.message?.includes('timeout')) {
           userMessage = 'Location detection timed out. Using default settings.';
         }
         
