@@ -137,7 +137,7 @@ const PrivacyControlPanel: React.FC = () => {
           <div>
             <Label>{t("privacyControlPanel.automatic_data_deletion_6")}</Label>
             <p className="text-sm text-gray-500">{t("privacyControlPanel.for_your_peace_of_mind_you_can_7")}</p>
-            <Select value={userSettings.autoDeleteAfter.toString()} onValueChange={(value) => handleSettingChange('autoDeleteAfter', parseInt(value))}>
+            <Select value={(userSettings.autoDeleteAfter ?? 0).toString()} onValueChange={(value) => handleSettingChange('autoDeleteAfter', parseInt(value))}>
               <SelectTrigger>
                 <SelectValue />
               </SelectTrigger>
@@ -163,7 +163,7 @@ const PrivacyControlPanel: React.FC = () => {
               <p className="text-sm text-gray-500">{t("privacyControlPanel.get_alerts_for_expiring_docume_13")}</p>
             </div>
             <Switch 
-              checked={userSettings.aiFeatureToggles.expirationIntelligence} 
+              checked={userSettings.aiFeatureToggles?.expirationIntelligence ?? true} 
               onCheckedChange={(checked) => handleSettingChange('aiFeatureToggles.expirationIntelligence', checked)} 
             />
           </div>

@@ -19,9 +19,15 @@ export class ProgressService {
   }
 
   static calculateCompletionScore(userId) {
-    // Mock calculation logic
-    // Replace with real calculations based on user profile
-    return 70; // Assume this user is at 70% completion
+    // Check if we have a cached score
+    const cachedScore = localStorage.getItem(`completionScore_${userId}`);
+    if (cachedScore) {
+      return parseInt(cachedScore, 10);
+    }
+
+    // Mock calculation logic - in a real app, this would fetch from database
+    // For now, return 0 for new users
+    return 0;
   }
 
   static getLastReviewDate(userId) {

@@ -27,6 +27,42 @@ export function SmartUploadZone({
   const { upload } = useDocumentUpload();
   const { preferences } = useUploadPreferences();
 
+  // Process selected files
+  const handleFiles = useCallback(async (files: File[]) => {
+    // Limit number of files
+    const filesToUpload = files.slice(0, maxFiles);
+
+    // Filter accepted types
+    const validFiles = filesToUpload.filter((file) => {
+      return acceptedTypes.some((type) => {
+        if (type.endsWith('/*')) {
+          const baseType = type.replace('/*', '');
+          return file.type.startsWith(baseType);
+        }
+        return file.type === type;
+      });
+    });
+
+    if (validFiles.length === 0) {
+      console.warn('No valid files selected');
+      return;
+    }
+
+    // Start upload
+    onUploadStart?.();
+
+    // Upload with user preferences
+    await upload(validFiles, {
+      privacy: preferences.privacy,
+      compress: preferences.autoCompress,
+      encrypt: preferences.autoEncrypt,
+      processOCR: preferences.processOCR,
+      analyzeWithAI: preferences.analyzeWithAI,
+      generateThumbnail: preferences.generateThumbnail,
+      familySharing: preferences.familySharing
+    });
+  }, [maxFiles, acceptedTypes, upload, preferences, onUploadStart]);
+
   // Handle drag events
   const handleDragEnter = useCallback((e: React.DragEvent) => {
      
@@ -34,7 +70,7 @@ export function SmartUploadZone({
     e.stopPropagation();
     setDragCounter((prev) => prev + 1);
 
-    if (e.dataTransfer.items && e.dataTransfer.items.length > 0) {
+    if (e.dataTransfer?.items && e.dataTransfer.items.length > 0) {
       setIsDragging(true);
     }
   }, []);
@@ -76,42 +112,6 @@ export function SmartUploadZone({
       handleFiles(files);
     }
   }, [handleFiles]);
-
-  // Process selected files
-  const handleFiles = useCallback(async (files: File[]) => {
-    // Limit number of files
-    const filesToUpload = files.slice(0, maxFiles);
-
-    // Filter accepted types
-    const validFiles = filesToUpload.filter((file) => {
-      return acceptedTypes.some((type) => {
-        if (type.endsWith('/*')) {
-          const baseType = type.replace('/*', '');
-          return file.type.startsWith(baseType);
-        }
-        return file.type === type;
-      });
-    });
-
-    if (validFiles.length === 0) {
-      console.warn('No valid files selected');
-      return;
-    }
-
-    // Start upload
-    onUploadStart?.();
-
-    // Upload with user preferences
-    await upload(validFiles, {
-      privacy: preferences.privacy,
-      compress: preferences.autoCompress,
-      encrypt: preferences.autoEncrypt,
-      processOCR: preferences.processOCR,
-      analyzeWithAI: preferences.analyzeWithAI,
-      generateThumbnail: preferences.generateThumbnail,
-      familySharing: preferences.familySharing
-    });
-  }, [maxFiles, acceptedTypes, upload, preferences, onUploadStart]);
 
   // Open file picker
   const openFilePicker = useCallback(() => {
