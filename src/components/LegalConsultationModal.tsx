@@ -75,6 +75,7 @@ const LegalConsultationModal: React.FC<LegalConsultationModalProps> = ({
   const consultationTypes = getConsultationTypes(t);
 
   useEffect(() => {
+     
     const selected = consultationTypes.find((type) => type.value === consultationType);
     if (selected) {
       setSelectedPrice(selected.price);

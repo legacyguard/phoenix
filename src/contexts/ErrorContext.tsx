@@ -54,6 +54,7 @@ export const ErrorProvider: React.FC<ErrorProviderProps> = ({
   });
 
   const saveErrors = useCallback((errorList: ErrorRecord[]) => {
+     
     if (persistErrors && typeof window !== 'undefined') {
       try {
         localStorage.setItem('app_error_records', JSON.stringify(errorList));
@@ -112,6 +113,7 @@ export const ErrorProvider: React.FC<ErrorProviderProps> = ({
   }, [maxErrors, saveErrors]);
 
   const clearError = useCallback((id: string) => {
+     
     setErrors(prev => {
       const updated = prev.map(err => 
         err.id === id ? { ...err, resolved: true } : err
@@ -122,6 +124,7 @@ export const ErrorProvider: React.FC<ErrorProviderProps> = ({
   }, [saveErrors]);
 
   const clearAllErrors = useCallback(() => {
+     
     setErrors([]);
     if (persistErrors && typeof window !== 'undefined') {
       localStorage.removeItem('app_error_records');
@@ -129,10 +132,12 @@ export const ErrorProvider: React.FC<ErrorProviderProps> = ({
   }, [persistErrors]);
 
   const getErrorCount = useCallback(() => {
+     
     return errors.filter(err => !err.resolved).length;
   }, [errors]);
 
   const getUnresolvedErrors = useCallback(() => {
+     
     return errors.filter(err => !err.resolved);
   }, [errors]);
 

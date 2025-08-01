@@ -57,6 +57,7 @@ export const EnhancedGrowthBookProvider: React.FC<GrowthBookProviderProps> = ({
   }, [user, growthbook]);
 
   useEffect(() => {
+     
     // Load feature flags from configuration
     const features: Record<string, unknown> = {};
     Object.entries(FEATURE_FLAGS).forEach(([key, config]) => {

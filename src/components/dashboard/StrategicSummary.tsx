@@ -42,6 +42,7 @@ export const StrategicSummary: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+     
     loadUserData();
   }, []);
 

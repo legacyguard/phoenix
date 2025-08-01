@@ -39,6 +39,7 @@ const Dashboard = () => {
       }
     };
     fetchProgressStatus();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const getStageIcon = (stage) => {

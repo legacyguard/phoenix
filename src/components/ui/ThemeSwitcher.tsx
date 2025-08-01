@@ -6,6 +6,7 @@ const ThemeSwitcher = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
+     
     // Check initial theme preference
     const savedTheme = localStorage.getItem('theme');
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;

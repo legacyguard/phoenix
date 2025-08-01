@@ -65,7 +65,7 @@ describe('OpenAI Service', () => {
 
       // Mock the OpenAI response
       const mockCreate = vi.fn().mockResolvedValue(mockResponse);
-      (openAIService as any).client = {
+      (openAIService as Record<string, unknown>).client = {
         chat: {
           completions: {
             create: mockCreate,
@@ -85,7 +85,7 @@ describe('OpenAI Service', () => {
     it('should handle analysis errors gracefully', async () => {
       const mockError = new Error('API Error');
       const mockCreate = vi.fn().mockRejectedValue(mockError);
-      (openAIService as any).client = {
+      (openAIService as Record<string, unknown>).client = {
         chat: {
           completions: {
             create: mockCreate,
@@ -115,7 +115,7 @@ describe('OpenAI Service', () => {
       };
 
       const mockCreate = vi.fn().mockResolvedValue(mockResponse);
-      (openAIService as any).client = {
+      (openAIService as Record<string, unknown>).client = {
         chat: {
           completions: {
             create: mockCreate,
@@ -161,7 +161,7 @@ describe('OpenAI Service', () => {
       };
 
       const mockCreate = vi.fn().mockResolvedValue(mockResponse);
-      (openAIService as any).client = {
+      (openAIService as Record<string, unknown>).client = {
         chat: {
           completions: {
             create: mockCreate,
@@ -211,7 +211,7 @@ describe('OpenAI Service', () => {
       };
 
       const mockCreate = vi.fn().mockResolvedValue(mockResponse);
-      (openAIService as any).client = {
+      (openAIService as Record<string, unknown>).client = {
         chat: {
           completions: {
             create: mockCreate,
@@ -247,7 +247,7 @@ describe('OpenAI Service', () => {
       };
 
       const mockCreate = vi.fn().mockResolvedValue(mockResponse);
-      (openAIService as any).client = {
+      (openAIService as Record<string, unknown>).client = {
         chat: {
           completions: {
             create: mockCreate,
@@ -267,7 +267,7 @@ describe('OpenAI Service', () => {
   describe('Rate Limiting', () => {
     it('should respect rate limits', async () => {
       // Mock rate limiter to return false
-      const rateLimiter = (openAIService as any).rateLimiter;
+      const rateLimiter = (openAIService as Record<string, unknown>).rateLimiter;
       vi.spyOn(rateLimiter, 'canMakeRequest').mockReturnValue(false);
 
       const result = await openAIService.analyzeDocument('mock-base64-image');
@@ -294,7 +294,7 @@ describe('OpenAI Service', () => {
       };
 
       const mockCreate = vi.fn().mockResolvedValue(mockResponse);
-      (openAIService as any).client = {
+      (openAIService as Record<string, unknown>).client = {
         chat: {
           completions: {
             create: mockCreate,
@@ -314,7 +314,7 @@ describe('OpenAI Service', () => {
 
   describe('Error Handling', () => {
     it('should handle authentication errors', async () => {
-      (openAIService as any).client = null;
+      (openAIService as Record<string, unknown>).client = null;
       
       const result = await openAIService.analyzeDocument('mock-base64-image');
       

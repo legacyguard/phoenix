@@ -55,6 +55,7 @@ export const CountryLanguageModal: React.FC<CountryLanguageModalProps> = ({
 
   // Update selected country when detected country changes
   useEffect(() => {
+     
     if (detectedCountry) {
       setSelectedCountry(detectedCountry);
     }

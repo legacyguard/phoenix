@@ -29,6 +29,7 @@ export function usePWA(): PWAHook {
 
   // Check if app is already installed
   useEffect(() => {
+     
     // Check if running as installed PWA
     const isInstalled = window.matchMedia('(display-mode: standalone)').matches
       || (window.navigator as Navigator & { standalone?: boolean }).standalone
@@ -97,6 +98,7 @@ export function usePWA(): PWAHook {
 
   // Register service worker and handle updates
   useEffect(() => {
+     
     if ('serviceWorker' in navigator) {
       registerServiceWorker();
     }
@@ -160,6 +162,7 @@ export function usePWA(): PWAHook {
 
   // Update app function
   const updateApp = useCallback(() => {
+     
     if ('serviceWorker' in navigator && navigator.serviceWorker.controller) {
       navigator.serviceWorker.controller.postMessage({ type: 'SKIP_WAITING' });
     }

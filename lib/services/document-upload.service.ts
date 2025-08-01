@@ -137,7 +137,7 @@ export class DocumentUploadService {
     file: File,
     options: UploadOptions
   ): Promise<any> {
-    const result: any = {};
+    const result: Record<string, unknown> = {};
 
     // Step 1: Compress if needed
     if (options.compress !== false && file.type.startsWith('image/')) {
@@ -294,7 +294,7 @@ export class DocumentUploadService {
   }
 
   // Extract important dates
-  private extractImportantDates(extractedData: any): Date[] {
+  private extractImportantDates(extractedData: Record<string, unknown>): Date[] {
     const dates: Date[] = [];
     
     if (extractedData?.issueDate) {

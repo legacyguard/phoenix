@@ -18,7 +18,7 @@ import { MAX_FILE_SIZES } from '@/utils/constants';
 import { useUserPlan } from '@/hooks/useUserPlan';
 
 interface DocumentUploadProps {
-  onDocumentUploaded: (document: any) => void;
+  onDocumentUploaded: (document: Record<string, unknown>) => void;
   onCancel: () => void;
 }
 
@@ -76,6 +76,7 @@ export const DocumentUpload: React.FC<DocumentUploadProps> = ({ onDocumentUpload
   }, [documentName, t]);
 
   const handleDrop = useCallback((e: React.DragEvent) => {
+     
     e.preventDefault();
     const droppedFile = e.dataTransfer.files[0];
     if (droppedFile) {
@@ -84,10 +85,12 @@ export const DocumentUpload: React.FC<DocumentUploadProps> = ({ onDocumentUpload
   }, [handleFileSelect]);
 
   const handleDragOver = useCallback((e: React.DragEvent) => {
+     
     e.preventDefault();
   }, []);
 
   const handleFileInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+     
     const selectedFile = e.target.files?.[0];
     if (selectedFile) {
       handleFileSelect(selectedFile);

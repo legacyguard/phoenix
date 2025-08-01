@@ -281,7 +281,7 @@ export class DocumentPreprocessor {
 
     // Czech/Slovak personal ID patterns
     const personalPatterns = [
-      /\d{6}\/\d{3,4}/g, // Birth number
+      /\d{6}/\d{3,4}/g, // Birth number
       /[A-Z]{2}\d{6}/g, // ID card number
       /\+?\d{3}\s?\d{3}\s?\d{3}\s?\d{3}/g, // Phone numbers
       /[\w.-]+@[\w.-]+\.\w+/g, // Email addresses
@@ -290,7 +290,7 @@ export class DocumentPreprocessor {
 
     // Names (simplified - would need more sophisticated NER in production)
     const namePatterns = [
-      /\b[A-ZÁČĎÉĚÍŇÓŘŠŤÚŮÝŽ][a-záčďéěíňóřšťúůýž]+\s+[A-ZÁČĎÉĚÍŇÓŘŠŤÚŮÝŽ][a-záčďéěíňóřšťúůýž]+\b/g,
+      /\b[A-Z][a-z]+\s+[A-Z][a-z]+\b/g,
     ];
 
     // Replace personal patterns
@@ -315,7 +315,7 @@ export class DocumentPreprocessor {
 
     // Optionally preserve dates
     if (!options.preserveDates) {
-      const datePattern = /\d{1,2}[.\/-]\d{1,2}[.\/-]\d{2,4}/g;
+      const datePattern = /\d{1,2}[./-]\d{1,2}[./-]\d{2,4}/g;
       const matches = anonymized.match(datePattern);
       if (matches) {
         removedCount += matches.length;
@@ -325,7 +325,7 @@ export class DocumentPreprocessor {
 
     // Optionally preserve amounts
     if (!options.preserveAmounts) {
-      const amountPattern = /\d+[,.\s]?\d*\s*(Kč|CZK|€|EUR|USD|\$)/g;
+      const amountPattern = /\d+[,.\s]?\d*\s*(K|CZK||EUR|USD|\$)/g;
       const matches = anonymized.match(amountPattern);
       if (matches) {
         removedCount += matches.length;

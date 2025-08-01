@@ -61,6 +61,7 @@ const PrivacyControlPanel: React.FC = () => {
     };
 
     fetchSettings();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [getToken]);
 
   const handleSettingChange = (key: string, value: Record<string, unknown>) => {

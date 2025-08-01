@@ -19,6 +19,7 @@ export function WillSyncSettings({ preferences: initialPreferences, onSave }: Wi
   const [saving, setSaving] = useState(false);
 
   useEffect(() => {
+     
     setPreferences(initialPreferences);
   }, [initialPreferences]);
 

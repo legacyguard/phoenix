@@ -76,9 +76,9 @@ class RateLimiter {
 
 // Simple in-memory cache
 class ResponseCache {
-  private cache = new Map<string, { data: any; timestamp: number }>();
+  private cache = new Map<string, { data: Record<string, unknown>; timestamp: number }>();
 
-  get(key: string): any | null {
+  get(key: string): Record<string, unknown> | null {
     const cached = this.cache.get(key);
     if (!cached) return null;
 
@@ -91,7 +91,7 @@ class ResponseCache {
     return cached.data;
   }
 
-  set(key: string, data: any): void {
+  set(key: string, data: Record<string, unknown>): void {
     if (this.cache.size >= OPENAI_CONFIG.cache.maxSize) {
       const oldestKey = Array.from(this.cache.entries())
         .sort(([, a], [, b]) => a.timestamp - b.timestamp)[0][0];

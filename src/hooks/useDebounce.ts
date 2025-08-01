@@ -10,6 +10,7 @@ export function useDebounce<T>(value: T, delay: number): T {
   const [debouncedValue, setDebouncedValue] = useState<T>(value);
 
   useEffect(() => {
+     
     const handler = setTimeout(() => {
       setDebouncedValue(value);
     }, delay);
@@ -37,6 +38,7 @@ export function useDebouncedCallback<T extends (...args: Array<Record<string, un
 
   // Update callback ref when it changes
   useEffect(() => {
+     
     callbackRef.current = callback;
   }, [callback]);
 
@@ -55,6 +57,7 @@ export function useDebouncedCallback<T extends (...args: Array<Record<string, un
 
   // Cleanup on unmount
   useEffect(() => {
+     
     return () => {
       if (timeoutRef.current) {
         clearTimeout(timeoutRef.current);

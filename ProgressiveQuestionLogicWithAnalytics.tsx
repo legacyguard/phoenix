@@ -212,6 +212,7 @@ const ProgressiveQuestionLogicWithAnalytics: React.FC<ProgressiveQuestionLogicWi
 
   // Track question view
   useEffect(() => {
+     
     if (enableAnalytics && currentQuestionId) {
       flowAnalytics.trackQuestionView(currentQuestionId);
       if (onAnalyticsEvent) {
@@ -222,6 +223,7 @@ const ProgressiveQuestionLogicWithAnalytics: React.FC<ProgressiveQuestionLogicWi
 
   // Update progress
   useEffect(() => {
+     
     if (onProgress) {
       onProgress(progress);
     }

@@ -51,6 +51,7 @@ export function useAnalytics({ componentName, userJourneyStage = 'maintenance' }
     // Track component unmount with time spent
     return () => {
       if (isTrackingEnabled) {
+    // eslint-disable-next-line react-hooks/exhaustive-deps
         const timeSpent = Date.now() - startTimeRef.current;
         analytics.track(
           'component_exited',
@@ -132,6 +133,7 @@ export function useAnalytics({ componentName, userJourneyStage = 'maintenance' }
 
   // Track timing for specific actions
   const startTimer = useCallback((actionName: string) => {
+     
     const timerId = `${actionName}_${Date.now()}`;
     sessionStorage.setItem(`analytics_timer_${timerId}`, Date.now().toString());
     return timerId;
@@ -227,10 +229,12 @@ export function useAnalytics({ componentName, userJourneyStage = 'maintenance' }
 
   // Control functions for consent management
   const enableTracking = useCallback(() => {
+     
     setIsTrackingEnabled(true);
   }, []);
   
   const disableTracking = useCallback(() => {
+     
     setIsTrackingEnabled(false);
   }, []);
   

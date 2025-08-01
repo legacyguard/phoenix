@@ -22,7 +22,7 @@ interface Asset {
   property_registry_number?: string;
   estimated_value?: number;
   currency_code: string;
-  metadata: any;
+  metadata: Record<string, unknown>;
 }
 
 const CURRENCIES = [
@@ -62,6 +62,7 @@ export const AssetDetail: React.FC = () => {
   const isNewAsset = assetId === 'new';
 
   useEffect(() => {
+     
     if (!isNewAsset && assetId) {
       loadAsset();
     }
@@ -103,7 +104,7 @@ export const AssetDetail: React.FC = () => {
         account_number: (data.metadata as any)?.account_number || '',
         login_credentials: (data.metadata as any)?.login_credentials || '',
       });
-        } catch (error: any) {
+        } catch (error: Record<string, unknown>) {
       const timestamp = new Date().toISOString();
       const errorMessage = error?.message || 'Neznáma chyba';
       const errorCode = error?.code || 'UNKNOWN_ERROR';
@@ -189,7 +190,7 @@ export const AssetDetail: React.FC = () => {
       }
 
       navigate('/dashboard');
-        } catch (error: any) {
+        } catch (error: Record<string, unknown>) {
       const timestamp = new Date().toISOString();
       const errorMessage = error?.message || 'Neznáma chyba';
       const errorCode = error?.code || 'UNKNOWN_ERROR';

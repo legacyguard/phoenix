@@ -32,6 +32,7 @@ export const NotificationPreferences: React.FC = () => {
   const [preferences, setPreferences] = useState<EmergencyContactPreference[]>([]);
 
   useEffect(() => {
+     
     loadPreferences();
   }, []);
 

@@ -50,6 +50,7 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
   }, [theme]);
 
   useEffect(() => {
+     
     localStorage.setItem('legacyguard-theme', theme);
     
     const root = document.documentElement;

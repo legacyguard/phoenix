@@ -27,6 +27,7 @@ export const InviteAcceptance: React.FC = () => {
   const [inviterName, setInviterName] = useState<string>('');
 
   useEffect(() => {
+     
     loadInvitation();
   }, [inviteToken]);
 
@@ -62,7 +63,7 @@ export const InviteAcceptance: React.FC = () => {
       // For now, we'll use a placeholder
       setInviterName(t('inviteAcceptance.defaultInviterName'));
       
-        } catch (error: any) {
+        } catch (error: Record<string, unknown>) {
       const timestamp = new Date().toISOString();
       const errorMessage = error?.message || 'Neznáma chyba';
       const errorCode = error?.code || 'UNKNOWN_ERROR';
@@ -119,7 +120,7 @@ export const InviteAcceptance: React.FC = () => {
       // Redirect to guardian view or login
       navigate('/guardian-view');
       
-        } catch (error: any) {
+        } catch (error: Record<string, unknown>) {
       const timestamp = new Date().toISOString();
       const errorMessage = error?.message || 'Neznáma chyba';
       const errorCode = error?.code || 'UNKNOWN_ERROR';
@@ -173,7 +174,7 @@ export const InviteAcceptance: React.FC = () => {
       toast.success(t('inviteAcceptance.messages.declined'));
       navigate('/');
       
-        } catch (error: any) {
+        } catch (error: Record<string, unknown>) {
       const timestamp = new Date().toISOString();
       const errorMessage = error?.message || 'Neznáma chyba';
       const errorCode = error?.code || 'UNKNOWN_ERROR';

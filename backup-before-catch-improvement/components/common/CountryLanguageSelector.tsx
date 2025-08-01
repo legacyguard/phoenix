@@ -24,6 +24,7 @@ export const CountryLanguageSelector: React.FC = () => {
 
   // Force re-render when language changes
   useEffect(() => {
+     
     // This effect ensures the component re-renders when the language changes
     // The i18n.language dependency will trigger a re-render
   }, [i18n.language]);

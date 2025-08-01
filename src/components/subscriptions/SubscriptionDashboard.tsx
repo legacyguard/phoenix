@@ -62,6 +62,7 @@ export const SubscriptionDashboard: React.FC = () => {
   const [upcomingRenewals, setUpcomingRenewals] = useState<Subscription[]>([]);
 
   useEffect(() => {
+     
     loadSubscriptionData();
   }, []);
 

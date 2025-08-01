@@ -68,6 +68,7 @@ const DocumentUploader: React.FC<DocumentUploaderProps> = ({ onDocumentProcessed
 
   // Handle drag and drop
   const handleDrag = useCallback((e: React.DragEvent) => {
+     
     e.preventDefault();
     e.stopPropagation();
     if (e.type === 'dragenter' || e.type === 'dragover') {
@@ -78,6 +79,7 @@ const DocumentUploader: React.FC<DocumentUploaderProps> = ({ onDocumentProcessed
   }, []);
 
   const handleDrop = useCallback((e: React.DragEvent) => {
+     
     e.preventDefault();
     e.stopPropagation();
     setDragActive(false);
@@ -88,6 +90,7 @@ const DocumentUploader: React.FC<DocumentUploaderProps> = ({ onDocumentProcessed
   }, [handleFileSelect]);
 
   const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+     
     e.preventDefault();
     if (e.target.files && e.target.files[0]) {
       handleFileSelect(e.target.files[0]);

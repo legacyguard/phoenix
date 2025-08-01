@@ -50,6 +50,7 @@ const ExecutorDashboard: React.FC = () => {
   const [showLegalConsultation, setShowLegalConsultation] = useState(false);
 
   useEffect(() => {
+     
     if (user) {
       fetchTasks();
     }

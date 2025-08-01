@@ -22,7 +22,7 @@ interface Asset {
   property_registry_number?: string;
   estimated_value?: number;
   currency_code: string;
-  metadata: any;
+  metadata: Record<string, unknown>;
 }
 
 const CURRENCIES = [
@@ -62,6 +62,7 @@ export const AssetDetail: React.FC = () => {
   const isNewAsset = assetId === 'new';
 
   useEffect(() => {
+     
     if (!isNewAsset && assetId) {
       loadAsset();
     }

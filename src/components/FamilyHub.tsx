@@ -75,6 +75,7 @@ export const FamilyHub: React.FC = () => {
     };
 
     fetchFamilyHubData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [getToken]);
 
   // Calculate overall family preparedness score

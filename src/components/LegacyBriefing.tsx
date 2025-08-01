@@ -84,6 +84,7 @@ export const LegacyBriefing: React.FC = () => {
   };
 
   useEffect(() => {
+     
     if (user) {
       fetchCapsules();
       fetchTrustedPeople();

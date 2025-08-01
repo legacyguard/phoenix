@@ -57,6 +57,7 @@ export default function GuardianPlaybook({ userId, guardianId, guardianName, isR
   const [activeTab, setActiveTab] = useState('funeral');
 
   useEffect(() => {
+     
     fetchPlaybook();
   }, [userId, guardianId]);
 

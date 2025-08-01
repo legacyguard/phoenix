@@ -77,10 +77,12 @@ const [showEditStoryModal, setShowEditStoryModal] = useState(false);
   const isNewAsset = assetId === 'new';
 
   useEffect(() => {
+     
     if (!isNewAsset && assetId) {
       loadAsset();
       fetchLiabilities();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [assetId, isNewAsset]);
 
   const loadAsset = async () => {

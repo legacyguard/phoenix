@@ -173,6 +173,7 @@ export const FamilyGuide: React.FC<FamilyGuideProps> = ({
   };
 
   useEffect(() => {
+     
     const discreteMode = localStorage.getItem('legacyguard-discrete-mode') === 'true';
     setIsDiscreteMode(discreteMode);
   }, []);

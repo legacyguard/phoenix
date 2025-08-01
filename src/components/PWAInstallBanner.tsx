@@ -11,6 +11,7 @@ export function PWAInstallBanner() {
 
   // Check if banner was previously dismissed
   useEffect(() => {
+     
     const dismissed = localStorage.getItem('pwa-install-dismissed');
     if (dismissed) {
       setIsDismissed(true);

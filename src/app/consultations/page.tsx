@@ -29,6 +29,7 @@ export default function MyConsultationsPage() {
   const [showResponseDialog, setShowResponseDialog] = useState(false);
 
   useEffect(() => {
+     
     if (user) {
       fetchConsultations();
     }

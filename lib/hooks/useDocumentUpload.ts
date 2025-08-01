@@ -43,6 +43,7 @@ export function useDocumentUpload(): UseDocumentUploadReturn {
   const isMounted = useRef(true);
 
   useEffect(() => {
+     
     return () => {
       isMounted.current = false;
     };
@@ -177,6 +178,7 @@ export function useDocumentUpload(): UseDocumentUploadReturn {
 
   // Upload single file
   const uploadSingle = useCallback(async (
+     
     file: File,
     options: UploadOptions = {}
   ): Promise<UploadResult> => {
@@ -208,6 +210,7 @@ export function useDocumentUpload(): UseDocumentUploadReturn {
 
   // Cancel upload
   const cancel = useCallback((id: string) => {
+     
     setUploadQueue(prev => prev.map(i =>
       i.id === id && i.status === 'pending' ? {
         ...i,
@@ -218,6 +221,7 @@ export function useDocumentUpload(): UseDocumentUploadReturn {
 
   // Clear completed items
   const clearCompleted = useCallback(() => {
+     
     setUploadQueue(prev => prev.filter(i =>
       i.status !== 'completed' && i.status !== 'cancelled'
     ));
@@ -225,6 +229,7 @@ export function useDocumentUpload(): UseDocumentUploadReturn {
 
   // Update uploading state
   useEffect(() => {
+     
     const hasActive = uploadQueue.some(i =>
       i.status === 'pending' || i.status === 'processing'
     );
@@ -260,6 +265,7 @@ export function useUploadPreferences() {
   });
 
   const updatePreference = useCallback(<K extends keyof typeof preferences>(
+     
     key: K,
     value: typeof preferences[K]
   ) => {
@@ -268,6 +274,7 @@ export function useUploadPreferences() {
 
   // Load preferences from localStorage
   useEffect(() => {
+     
     const stored = localStorage.getItem('uploadPreferences');
     if (stored) {
       try {
@@ -280,6 +287,7 @@ export function useUploadPreferences() {
 
   // Save preferences to localStorage
   useEffect(() => {
+     
     localStorage.setItem('uploadPreferences', JSON.stringify(preferences));
   }, [preferences]);
 

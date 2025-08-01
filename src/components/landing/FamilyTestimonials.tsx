@@ -70,6 +70,7 @@ export const FamilyTestimonials: React.FC = () => {
 
 
   useEffect(() => {
+     
     if (!isAutoPlaying) return;
 
     const interval = setInterval(() => {
@@ -81,6 +82,7 @@ export const FamilyTestimonials: React.FC = () => {
 
   // Track testimonial views
   useEffect(() => {
+     
     trackAction('testimonial_viewed', {
       testimonialId: testimonials[currentIndex].id,
       name: testimonials[currentIndex].name,

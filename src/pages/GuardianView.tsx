@@ -96,6 +96,7 @@ export const GuardianView: React.FC = () => {
   const [userId, setUserId] = useState<string>('');
 
   useEffect(() => {
+     
     loadGuardianData();
   }, []);
 

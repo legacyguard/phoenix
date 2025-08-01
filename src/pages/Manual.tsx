@@ -62,9 +62,11 @@ export const Manual: React.FC = () => {
   });
 
   useEffect(() => {
+     
     loadContacts();
     loadKeyDocuments();
     loadInstructions();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const loadContacts = async () => {
@@ -441,6 +443,7 @@ userMessage = t('manual.errors.duplicateEntry');
         
         toast.error(userMessage);
       }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     },
     [instructions]
   );

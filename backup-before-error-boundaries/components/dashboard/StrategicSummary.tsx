@@ -13,6 +13,7 @@ export const StrategicSummary: React.FC = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+     
     checkUserProgress();
   }, []);
 
@@ -40,10 +41,10 @@ export const StrategicSummary: React.FC = () => {
       } else {
         setUserProgress('initial');
       }
-        } catch (error: any) {
+    } catch (error: Record<string, unknown>) {
       const timestamp = new Date().toISOString();
-      const errorMessage = error?.message || 'Neznáma chyba';
-      const errorCode = error?.code || 'UNKNOWN_ERROR';
+      const errorMessage = (error?.message as string) || 'Neznáma chyba';
+      const errorCode = (error?.code as string) || 'UNKNOWN_ERROR';
       
       // Detailné logovanie pre debugging
       console.error('[Aplikácia] Chyba pri operácia:', {
@@ -52,25 +53,24 @@ export const StrategicSummary: React.FC = () => {
         errorCode,
         errorMessage,
         errorDetails: error,
-        stack: error?.stack
+        stack: (error?.stack as string)
       });
       
-      // Používateľsky prívetivá správa
+      // Používateľský prívetivá správa
       let userMessage = 'Nastala chyba pri operácia.';
       
       // Špecifické správy podľa typu chyby
-      if (error?.code === 'PGRST116') {
+      if ((error?.code as string) === 'PGRST116') {
         userMessage = 'Požadované dáta neboli nájdené.';
-      } else if (error?.message?.includes('network')) {
+      } else if ((error?.message as string)?.includes('network')) {
         userMessage = 'Chyba pripojenia. Skontrolujte internetové pripojenie.';
-      } else if (error?.message?.includes('permission')) {
+      } else if ((error?.message as string)?.includes('permission')) {
         userMessage = 'Nemáte oprávnenie na túto akciu.';
-      } else if (error?.message?.includes('duplicate')) {
+      } else if ((error?.message as string)?.includes('duplicate')) {
         userMessage = 'Takýto záznam už existuje.';
       }
       
-      toast.error(userMessage);
-    });
+      console.error(userMessage); // Replace toast.error with console.error for now
     } finally {
       setIsLoading(false);
     }

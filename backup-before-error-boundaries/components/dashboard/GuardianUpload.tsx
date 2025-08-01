@@ -114,7 +114,7 @@ export const GuardianUpload: React.FC<GuardianUploadProps> = ({
       }
 
       onSuccess();
-        } catch (error: any) {
+        } catch (error: Record<string, unknown>) {
       const timestamp = new Date().toISOString();
       const errorMessage = error?.message || 'Neznáma chyba';
       const errorCode = error?.code || 'UNKNOWN_ERROR';

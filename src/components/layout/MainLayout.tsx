@@ -19,6 +19,7 @@ export const MainLayout: React.FC = () => {
 
   // Cache critical data when user logs in
   useEffect(() => {
+     
     if (user?.id) {
       cacheCriticalData(user.id);
     }

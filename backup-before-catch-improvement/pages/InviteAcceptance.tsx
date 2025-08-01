@@ -27,6 +27,7 @@ export const InviteAcceptance: React.FC = () => {
   const [inviterName, setInviterName] = useState<string>('');
 
   useEffect(() => {
+     
     loadInvitation();
   }, [inviteToken]);
 

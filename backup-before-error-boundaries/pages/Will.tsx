@@ -60,6 +60,7 @@ export const Will: React.FC = () => {
   };
 
   useEffect(() => {
+     
     loadWill();
     loadContacts();
   }, []);
@@ -88,7 +89,7 @@ export const Will: React.FC = () => {
           notes: data.notes || '',
         });
       }
-        } catch (error: any) {
+        } catch (error: Record<string, unknown>) {
       const timestamp = new Date().toISOString();
       const errorMessage = error?.message || 'Neznáma chyba';
       const errorCode = error?.code || 'UNKNOWN_ERROR';
@@ -136,7 +137,7 @@ export const Will: React.FC = () => {
 
       if (error) throw error;
       setContacts(data || []);
-        } catch (error: any) {
+        } catch (error: Record<string, unknown>) {
       const timestamp = new Date().toISOString();
       const errorMessage = error?.message || 'Neznáma chyba';
       const errorCode = error?.code || 'UNKNOWN_ERROR';
@@ -206,7 +207,7 @@ export const Will: React.FC = () => {
 
       toast.success(t('will.messages.savedSuccessfully'));
       loadWill();
-        } catch (error: any) {
+        } catch (error: Record<string, unknown>) {
       const timestamp = new Date().toISOString();
       const errorMessage = error?.message || 'Neznáma chyba';
       const errorCode = error?.code || 'UNKNOWN_ERROR';
@@ -241,7 +242,7 @@ export const Will: React.FC = () => {
     }
   };
 
-  const handleDocumentUploaded = (document: any) => {
+  const handleDocumentUploaded = (document: Record<string, unknown>) => {
     setShowUpload(false);
     loadWill();
     toast.success(t('will.messages.documentUploaded'));

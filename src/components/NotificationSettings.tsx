@@ -32,6 +32,7 @@ export function NotificationSettings() {
 
   // Check current notification status
   useEffect(() => {
+     
     checkNotificationStatus();
   }, []);
 

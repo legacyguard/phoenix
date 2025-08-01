@@ -36,6 +36,7 @@ export const useLocalOCR = (): UseLocalOCRReturn => {
 
   // Check if service is ready on mount
   useEffect(() => {
+     
     const checkReady = setInterval(() => {
       if (localProcessingService.isReady()) {
         setState(prev => ({ ...prev, isReady: true }));
@@ -48,6 +49,7 @@ export const useLocalOCR = (): UseLocalOCRReturn => {
 
   // Set up progress callback
   useEffect(() => {
+     
     localProcessingService.setProgressCallback((progress) => {
       setState(prev => ({ ...prev, progress }));
     });
@@ -130,6 +132,7 @@ export const useLocalOCR = (): UseLocalOCRReturn => {
   }, []);
 
   const clearResult = useCallback(() => {
+     
     setState(prev => ({
       ...prev,
       result: null,
@@ -139,6 +142,7 @@ export const useLocalOCR = (): UseLocalOCRReturn => {
   }, []);
 
   const clearError = useCallback(() => {
+     
     setState(prev => ({
       ...prev,
       error: null

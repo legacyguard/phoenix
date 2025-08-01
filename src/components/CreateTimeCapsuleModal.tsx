@@ -61,6 +61,7 @@ export const CreateTimeCapsuleModal: React.FC<CreateTimeCapsuleModalProps> = ({
   const [showVideoRecorder, setShowVideoRecorder] = useState(false);
 
   const handleVideoRecorded = useCallback((file: File) => {
+     
     setAttachment(file);
     setShowVideoRecorder(false);
   }, []);

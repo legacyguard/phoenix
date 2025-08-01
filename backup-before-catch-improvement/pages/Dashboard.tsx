@@ -188,6 +188,7 @@ export const Dashboard: React.FC = () => {
 
   // Load documents and guardians on component mount
   useEffect(() => {
+     
     loadDocuments();
     loadGuardians();
   }, []);
@@ -253,7 +254,7 @@ export const Dashboard: React.FC = () => {
     }
   };
 
-  const handleDocumentUploaded = (document: any) => {
+  const handleDocumentUploaded = (document: Record<string, unknown>) => {
     const mappedDocument = {
       id: document.id,
       name: document.name,

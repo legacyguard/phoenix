@@ -77,11 +77,13 @@ export const ComponentName: React.FC<ComponentProps> = ({
   
   // Memoized callbacks
   const handleDataChange = useCallback((newData: ComponentData) => {
+     
     setData(newData);
     onChange?.(newData);
   }, [onChange]);
   
   const handleError = useCallback((error: Error) => {
+     
     console.error('[ComponentName] Error:', error);
     setError(error.message);
     toast.error(t('common.errors.generic'));
@@ -89,6 +91,7 @@ export const ComponentName: React.FC<ComponentProps> = ({
   
   // Effects
   useEffect(() => {
+     
     if (id) {
       loadData();
     }

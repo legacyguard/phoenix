@@ -102,6 +102,7 @@ const WillGenerator: React.FC<WillGeneratorProps> = ({
 
 
   useEffect(() => {
+     
     if (jurisdictionConfirmed && currentStep === 2) {
       fetchTemplate();
     }

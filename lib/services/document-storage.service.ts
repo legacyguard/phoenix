@@ -151,7 +151,7 @@ export class DocumentStorageService {
   // Store encryption metadata in Supabase
   private async storeCloudEncryptionMetadata(
     documentId: string,
-    metadata: any
+    metadata: Record<string, unknown>
   ): Promise<void> {
     const { error } = await supabase
       .from('document_encryption')

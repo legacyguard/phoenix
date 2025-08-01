@@ -45,6 +45,7 @@ const PersonalizationEngine: React.FC = () => {
   const [userProfile, setUserProfile] = useState<UserProfile | null>(null);
 
   useEffect(() => {
+     
     // Simulate loading user profile from storage or analysis
     const profile = generateUserProfile();
     setUserProfile(profile);

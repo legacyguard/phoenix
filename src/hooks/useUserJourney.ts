@@ -21,6 +21,7 @@ export function useUserJourney() {
 
   // Load user journey data on mount
   useEffect(() => {
+     
     loadUserJourney();
   }, []);
 
@@ -239,6 +240,7 @@ export function useUserJourney() {
 
   // Check milestones when metrics update
   useEffect(() => {
+     
     if (state.metrics) {
       checkMilestones();
     }

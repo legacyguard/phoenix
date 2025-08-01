@@ -75,6 +75,7 @@ export const EmergencyContacts: React.FC = () => {
   const [isReordering, setIsReordering] = useState(false);
 
   useEffect(() => {
+     
     loadData();
   }, []);
 

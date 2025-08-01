@@ -84,6 +84,7 @@ export const LegacyLetters: React.FC = () => {
   };
 
   useEffect(() => {
+     
     if (user) {
       fetchCapsules();
       fetchTrustedPeople();

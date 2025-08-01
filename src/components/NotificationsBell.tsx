@@ -36,6 +36,7 @@ export const NotificationsBell: React.FC = () => {
   const { t } = useTranslation('common');
 
   useEffect(() => {
+     
     if (user?.id) {
       fetchNotifications();
       // Set up periodic refresh every 5 minutes
@@ -46,6 +47,7 @@ export const NotificationsBell: React.FC = () => {
 
   // Close dropdown when clicking outside
   useEffect(() => {
+     
     const handleClickOutside = (event: MouseEvent) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
         setShowDropdown(false);

@@ -27,6 +27,7 @@ export const CountryProvider: React.FC<CountryProviderProps> = ({ children }) =>
 
   // Use effect to set the correct country based on domain
   React.useEffect(() => {
+     
     try {
       const currentConfig = getCurrentCountryConfig();
       setSelectedCountryCode(currentConfig.code);

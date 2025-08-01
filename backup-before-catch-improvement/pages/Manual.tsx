@@ -59,6 +59,7 @@ export const Manual: React.FC = () => {
   });
 
   useEffect(() => {
+     
     loadContacts();
     loadKeyDocuments();
     loadInstructions();
@@ -268,7 +269,8 @@ export const Manual: React.FC = () => {
           setInstructions(data);
         }
       } catch (error) {
-      }
+    console.error("Error occurred:", error);
+  }
     },
     [instructions]
   );

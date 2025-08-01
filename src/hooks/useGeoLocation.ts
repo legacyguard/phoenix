@@ -37,6 +37,7 @@ export function useGeoLocation() {
 
   // Remove automatic detection on mount since it's now handled in CountryContext
   // useEffect(() => {
+     
   //   checkLocationAndLanguage();
   // }, []);
 

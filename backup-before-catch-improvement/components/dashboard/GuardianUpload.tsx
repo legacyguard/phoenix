@@ -12,7 +12,7 @@ import { toast } from '@/hooks/use-toast';
 interface GuardianUploadProps {
   onSuccess: () => void;
   onCancel: () => void;
-  editingGuardian?: any;
+  editingGuardian?: Record<string, unknown>;
 }
 
 export const GuardianUpload: React.FC<GuardianUploadProps> = ({

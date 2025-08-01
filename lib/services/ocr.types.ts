@@ -139,7 +139,7 @@ export interface OCRError {
   code: 'initialization_failed' | 'processing_failed' | 'unsupported_format' | 'file_too_large' | 'worker_error';
   message: string;
   userMessage: string;
-  details?: any;
+  details?: Record<string, unknown>;
 }
 
 // Worker configuration

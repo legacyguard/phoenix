@@ -53,6 +53,7 @@ export const GuardianView: React.FC = () => {
   const [userInfo, setUserInfo] = useState<string>('');
 
   useEffect(() => {
+     
     loadGuardianData();
   }, []);
 
@@ -107,7 +108,7 @@ export const GuardianView: React.FC = () => {
       // Set placeholder user info
       setUserInfo(t('guardianView.defaultUserName'));
       
-        } catch (error: any) {
+        } catch (error: Record<string, unknown>) {
       const timestamp = new Date().toISOString();
       const errorMessage = error?.message || 'Neznáma chyba';
       const errorCode = error?.code || 'UNKNOWN_ERROR';

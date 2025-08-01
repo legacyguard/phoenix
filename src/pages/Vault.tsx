@@ -40,6 +40,7 @@ export const Vault: React.FC = () => {
 
   // Fetch assets on component mount
   useEffect(() => {
+     
     fetchAssets();
   }, [user]);
 

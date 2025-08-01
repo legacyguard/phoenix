@@ -24,6 +24,7 @@ export default function PasswordWall({ children }: PasswordWallProps) {
   console.log('PasswordWall render - ready:', ready, 'isLoading:', isLoading, 'isAuthenticated:', isAuthenticated);
 
   useEffect(() => {
+     
     // Check if user was previously authenticated
     const storedAuth = localStorage.getItem(STORAGE_KEY);
     if (storedAuth === 'true') {

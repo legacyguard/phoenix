@@ -31,6 +31,7 @@ export const EditStoryModal: React.FC<EditStoryModalProps> = ({
   const maxCharacters = 2000;
 
   useEffect(() => {
+     
     setCharacterCount(story.length);
   }, [story]);
 

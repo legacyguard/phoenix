@@ -41,6 +41,7 @@ export function useOCR(): UseOCRReturn {
   const isMountedRef = useRef(true);
 
   useEffect(() => {
+     
     return () => {
       isMountedRef.current = false;
       // Cleanup OCR service when component unmounts
@@ -49,6 +50,7 @@ export function useOCR(): UseOCRReturn {
   }, []);
 
   const handleProgress = useCallback((progressData: OCRProgress) => {
+     
     if (isMountedRef.current) {
       setProgress(progressData.progress);
       setProgressMessage(progressData.message);
@@ -107,6 +109,7 @@ export function useOCR(): UseOCRReturn {
   }, [isPrivacyMode, handleProgress]);
 
   const anonymizeText = useCallback((
+     
     text: string,
     options: AnonymizationOptions = {}
   ): AnonymizedText => {
@@ -114,6 +117,7 @@ export function useOCR(): UseOCRReturn {
   }, []);
 
   const reset = useCallback(() => {
+     
     setIsProcessing(false);
     setProgress(0);
     setProgressMessage('');
@@ -186,6 +190,7 @@ export function useStoredOCRResults() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+     
     loadStoredResults();
   }, []);
 

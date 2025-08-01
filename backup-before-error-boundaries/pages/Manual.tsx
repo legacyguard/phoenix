@@ -59,6 +59,7 @@ export const Manual: React.FC = () => {
   });
 
   useEffect(() => {
+     
     loadContacts();
     loadKeyDocuments();
     loadInstructions();
@@ -80,7 +81,7 @@ export const Manual: React.FC = () => {
       }
 
       setContacts(data || []);
-        } catch (error: any) {
+        } catch (error: Record<string, unknown>) {
       const timestamp = new Date().toISOString();
       const errorMessage = error?.message || 'Neznáma chyba';
       const errorCode = error?.code || 'UNKNOWN_ERROR';
@@ -187,7 +188,7 @@ export const Manual: React.FC = () => {
       setIsContactSheetOpen(false);
       resetForm();
       loadContacts();
-        } catch (error: any) {
+        } catch (error: Record<string, unknown>) {
       const timestamp = new Date().toISOString();
       const errorMessage = error?.message || 'Neznáma chyba';
       const errorCode = error?.code || 'UNKNOWN_ERROR';
@@ -233,7 +234,7 @@ export const Manual: React.FC = () => {
 
       setContacts(prev => prev.filter(contact => contact.id !== id));
       toast.success(t('manual.contacts.messages.deleted'));
-        } catch (error: any) {
+        } catch (error: Record<string, unknown>) {
       const timestamp = new Date().toISOString();
       const errorMessage = error?.message || 'Neznáma chyba';
       const errorCode = error?.code || 'UNKNOWN_ERROR';
@@ -283,7 +284,7 @@ export const Manual: React.FC = () => {
       }
 
       setDocuments(data || []);
-        } catch (error: any) {
+        } catch (error: Record<string, unknown>) {
       const timestamp = new Date().toISOString();
       const errorMessage = error?.message || 'Neznáma chyba';
       const errorCode = error?.code || 'UNKNOWN_ERROR';
@@ -344,7 +345,7 @@ export const Manual: React.FC = () => {
       }
 
       setInstructions(data);
-        } catch (error: any) {
+        } catch (error: Record<string, unknown>) {
       const timestamp = new Date().toISOString();
       const errorMessage = error?.message || 'Neznáma chyba';
       const errorCode = error?.code || 'UNKNOWN_ERROR';
@@ -407,7 +408,7 @@ export const Manual: React.FC = () => {
           if (error) throw error;
           setInstructions(data);
         }
-            } catch (error: any) {
+            } catch (error: Record<string, unknown>) {
         const timestamp = new Date().toISOString();
         const errorMessage = error?.message || 'Neznáma chyba';
         const errorCode = error?.code || 'UNKNOWN_ERROR';

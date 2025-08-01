@@ -63,7 +63,7 @@ export class OCRService {
       
       // Set parameters for better accuracy
       await this.worker.setParameters({
-        tessedit_char_whitelist: '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzáčďéěíňóřšťúůýžÁČĎÉĚÍŇÓŘŠŤÚŮÝŽäöüÄÖÜľĺŕôňäô .,;:!?()[]{}/-–—_@#$%&*+=€£"\'„"',
+        tessedit_char_whitelist: '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz .,;:!?()[]{}/-_@#$%&*+="\'"',
         preserve_interword_spaces: '1',
       });
 
@@ -238,9 +238,9 @@ export class OCRService {
 
     // Common patterns
     const patterns = {
-      date: /\d{1,2}[.\/-]\d{1,2}[.\/-]\d{2,4}/g,
-      amount: /\d+[,.\s]?\d*\s*(Kč|CZK|€|EUR|USD|\$)/g,
-      idNumber: /\d{6}\/\d{3,4}/g,
+      date: /\d{1,2}[./-]\d{1,2}[./-]\d{2,4}/g,
+      amount: /\d+[,.\s]?\d*\s*(K|CZK||EUR|USD|\$)/g,
+      idNumber: /\d{6}/\d{3,4}/g,
       email: /[\w.-]+@[\w.-]+\.\w+/g,
       phone: /\+?\d{3}\s?\d{3}\s?\d{3}\s?\d{3}/g,
     };
@@ -258,7 +258,7 @@ export class OCRService {
     const amounts = text.match(patterns.amount);
     if (amounts) {
       data.amounts = amounts.map(amount => {
-        const match = amount.match(/(\d+[,.\s]?\d*)\s*(Kč|CZK|€|EUR|USD|\$)/);
+        const match = amount.match(/(\d+[,.\s]?\d*)\s*(K|CZK||EUR|USD|\$)/);
         if (match) {
           return {
             value: parseFloat(match[1].replace(/[,\s]/g, '').replace(',', '.')),
@@ -273,18 +273,18 @@ export class OCRService {
     switch (documentType) {
       case 'insurance_policy':
         data.policyNumber = this.extractPattern(text, /\d{10,15}/);
-        data.insuredPerson = this.extractPattern(text, /pojištěný:?\s*([^\n]+)/i);
+        data.insuredPerson = this.extractPattern(text, /pojitn:?\s*([^\n]+)/i);
         break;
 
       case 'bank_statement':
         data.customFields = {
-          accountNumber: this.extractPattern(text, /\d{4,6}\/\d{4}/),
+          accountNumber: this.extractPattern(text, /\d{4,6}/\d{4}/),
           iban: this.extractPattern(text, /[A-Z]{2}\d{2}\s?\d{4}\s?\d{4}\s?\d{4}\s?\d{4}\s?\d{4}/),
         };
         break;
 
       case 'property_deed':
-        data.cadastralNumber = this.extractPattern(text, /\d+\/\d+/);
+        data.cadastralNumber = this.extractPattern(text, /\d+/\d+/);
         data.propertyAddress = this.extractPattern(text, /(?:adresa|address):?\s*([^\n]+)/i);
         break;
 
@@ -326,8 +326,8 @@ export class OCRService {
       ],
       documentStructure: {
         type: documentType.type,
-        hasFinancialData: /\d+[,.\s]?\d*\s*(Kč|CZK|€|EUR|USD|\$)/.test(text),
-        hasDates: /\d{1,2}[.\/-]\d{1,2}[.\/-]\d{2,4}/.test(text),
+        hasFinancialData: /\d+[,.\s]?\d*\s*(K|CZK||EUR|USD|\$)/.test(text),
+        hasDates: /\d{1,2}[./-]\d{1,2}[./-]\d{2,4}/.test(text),
         hasSignatures: /podpis|signature/i.test(text),
       },
     };
@@ -345,7 +345,7 @@ export class OCRService {
 
   private parseDate(dateStr: string): Date {
     // Handle common Czech/Slovak date formats
-    const parts = dateStr.split(/[.\/-]/);
+    const parts = dateStr.split(/[./-]/);
     if (parts.length === 3) {
       const day = parseInt(parts[0]);
       const month = parseInt(parts[1]) - 1;
@@ -360,7 +360,7 @@ export class OCRService {
     return match ? match[1] || match[0] : '';
   }
 
-  private createError(code: OCRError['code'], error: any): OCRError {
+  private createError(code: OCRError['code'], error: Record<string, unknown>): OCRError {
     const userMessages: Record<OCRError['code'], string> = {
       initialization_failed: 'Having trouble starting the document reader. Please try again.',
       processing_failed: 'Could not read your document. Please ensure the image is clear.',

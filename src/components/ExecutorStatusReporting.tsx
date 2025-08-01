@@ -59,6 +59,7 @@ export const ExecutorStatusReporting: React.FC<ExecutorStatusReportingProps> = (
   });
 
   useEffect(() => {
+     
     fetchCurrentStatus();
   }, []);
 

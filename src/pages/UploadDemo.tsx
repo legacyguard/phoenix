@@ -36,6 +36,7 @@ export function UploadDemo() {
 
   // Load storage stats
   React.useEffect(() => {
+     
     loadStorageStats();
   }, [successCount]);
 
@@ -46,6 +47,7 @@ export function UploadDemo() {
 
   // Simulate loading uploaded documents
   React.useEffect(() => {
+     
     const completed = uploadQueue
       .filter(item => item.status === 'completed' && item.result?.document)
       .map(item => item.result!.document!);

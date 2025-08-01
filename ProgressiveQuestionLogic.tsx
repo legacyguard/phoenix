@@ -332,6 +332,7 @@ const ProgressiveQuestionLogic: React.FC<ProgressiveQuestionLogicProps> = ({
   const progress = Math.min((questionHistory.length / maxQuestions) * 100, 100);
 
   useEffect(() => {
+     
     if (onProgress) {
       onProgress(progress);
     }

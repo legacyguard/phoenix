@@ -76,6 +76,7 @@ export const DocumentUpload: React.FC<DocumentUploadProps> = ({ onDocumentUpload
   }, [documentName, t]);
 
   const handleDrop = useCallback((e: React.DragEvent) => {
+     
     e.preventDefault();
     const droppedFile = e.dataTransfer.files[0];
     if (droppedFile) {
@@ -84,10 +85,12 @@ export const DocumentUpload: React.FC<DocumentUploadProps> = ({ onDocumentUpload
   }, [handleFileSelect]);
 
   const handleDragOver = useCallback((e: React.DragEvent) => {
+     
     e.preventDefault();
   }, []);
 
   const handleFileInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+     
     const selectedFile = e.target.files?.[0];
     if (selectedFile) {
       handleFileSelect(selectedFile);
@@ -121,7 +124,7 @@ export const DocumentUpload: React.FC<DocumentUploadProps> = ({ onDocumentUpload
       toast.success(t('documentUpload.fileUploadedSuccess'));
       
       return data.path;
-        } catch (error: any) {
+        } catch (error: Record<string, unknown>) {
       const timestamp = new Date().toISOString();
       const errorMessage = error?.message || 'Neznáma chyba';
       const errorCode = error?.code || 'UNKNOWN_ERROR';

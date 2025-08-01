@@ -38,6 +38,7 @@ export default function GuardianPlaybookView({ guardianId, userName }: GuardianP
   const [playbook, setPlaybook] = useState<GuardianPlaybookData | null>(null);
 
   useEffect(() => {
+     
     fetchPlaybook();
   }, [guardianId]);
 

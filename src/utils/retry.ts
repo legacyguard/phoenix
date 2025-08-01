@@ -208,6 +208,7 @@ export function useRetry<T>(
   }, [fn, options]);
 
   const reset = React.useCallback(() => {
+     
     setIsRetrying(false);
     setAttemptCount(0);
     setLastError(null);

@@ -6,21 +6,21 @@ export const documentPatterns: Record<DocumentType, DocumentPattern> = {
     type: 'insurance_policy',
     patterns: [
       // Czech patterns
-      { regex: /pojistná\s+smlouva/i, weight: 10, language: 'cs' },
-      { regex: /pojistník/i, weight: 8, language: 'cs' },
-      { regex: /pojištěný/i, weight: 8, language: 'cs' },
-      { regex: /pojistné\s+plnění/i, weight: 7, language: 'cs' },
-      { regex: /pojistná\s+částka/i, weight: 7, language: 'cs' },
-      { regex: /počátek\s+pojištění/i, weight: 6, language: 'cs' },
-      { regex: /konec\s+pojištění/i, weight: 6, language: 'cs' },
+      { regex: /pojistn\s+smlouva/i, weight: 10, language: 'cs' },
+      { regex: /pojistnk/i, weight: 8, language: 'cs' },
+      { regex: /pojitn/i, weight: 8, language: 'cs' },
+      { regex: /pojistn\s+plnn/i, weight: 7, language: 'cs' },
+      { regex: /pojistn\s+stka/i, weight: 7, language: 'cs' },
+      { regex: /potek\s+pojitn/i, weight: 6, language: 'cs' },
+      { regex: /konec\s+pojitn/i, weight: 6, language: 'cs' },
       // Slovak patterns
-      { regex: /poistná\s+zmluva/i, weight: 10, language: 'sk' },
-      { regex: /poistník/i, weight: 8, language: 'sk' },
-      { regex: /poistený/i, weight: 8, language: 'sk' },
-      { regex: /poistné\s+plnenie/i, weight: 7, language: 'sk' },
+      { regex: /poistn\s+zmluva/i, weight: 10, language: 'sk' },
+      { regex: /poistnk/i, weight: 8, language: 'sk' },
+      { regex: /poisten/i, weight: 8, language: 'sk' },
+      { regex: /poistn\s+plnenie/i, weight: 7, language: 'sk' },
       // Common insurance terms
       { regex: /\d{10,15}/, weight: 3 }, // Policy numbers
-      { regex: /premium|prémie/i, weight: 5 },
+      { regex: /premium|prmie/i, weight: 5 },
     ],
     requiredMatches: 3,
     confidenceThreshold: 0.7,
@@ -30,16 +30,16 @@ export const documentPatterns: Record<DocumentType, DocumentPattern> = {
     type: 'bank_statement',
     patterns: [
       // Czech patterns
-      { regex: /výpis\s+z\s+účtu/i, weight: 10, language: 'cs' },
-      { regex: /bankovní\s+výpis/i, weight: 10, language: 'cs' },
-      { regex: /číslo\s+účtu/i, weight: 8, language: 'cs' },
-      { regex: /zůstatek/i, weight: 7, language: 'cs' },
-      { regex: /příjmy/i, weight: 6, language: 'cs' },
-      { regex: /výdaje/i, weight: 6, language: 'cs' },
+      { regex: /vpis\s+z\s+tu/i, weight: 10, language: 'cs' },
+      { regex: /bankovn\s+vpis/i, weight: 10, language: 'cs' },
+      { regex: /slo\s+tu/i, weight: 8, language: 'cs' },
+      { regex: /zstatek/i, weight: 7, language: 'cs' },
+      { regex: /pjmy/i, weight: 6, language: 'cs' },
+      { regex: /vdaje/i, weight: 6, language: 'cs' },
       // Slovak patterns
-      { regex: /výpis\s+z\s+účtu/i, weight: 10, language: 'sk' },
-      { regex: /bankový\s+výpis/i, weight: 10, language: 'sk' },
-      { regex: /číslo\s+účtu/i, weight: 8, language: 'sk' },
+      { regex: /vpis\s+z\s+tu/i, weight: 10, language: 'sk' },
+      { regex: /bankov\s+vpis/i, weight: 10, language: 'sk' },
+      { regex: /slo\s+tu/i, weight: 8, language: 'sk' },
       { regex: /zostatok/i, weight: 7, language: 'sk' },
       // IBAN patterns
       { regex: /[A-Z]{2}\d{2}\s?\d{4}\s?\d{4}\s?\d{4}\s?\d{4}\s?\d{4}/i, weight: 8 },
@@ -54,19 +54,19 @@ export const documentPatterns: Record<DocumentType, DocumentPattern> = {
     type: 'property_deed',
     patterns: [
       // Czech patterns
-      { regex: /list\s+vlastnictví/i, weight: 10, language: 'cs' },
-      { regex: /výpis\s+z\s+katastru\s+nemovitostí/i, weight: 10, language: 'cs' },
-      { regex: /katastrální\s+území/i, weight: 8, language: 'cs' },
+      { regex: /list\s+vlastnictv/i, weight: 10, language: 'cs' },
+      { regex: /vpis\s+z\s+katastru\s+nemovitost/i, weight: 10, language: 'cs' },
+      { regex: /katastrln\s+zem/i, weight: 8, language: 'cs' },
       { regex: /parcela/i, weight: 7, language: 'cs' },
-      { regex: /vlastnické\s+právo/i, weight: 8, language: 'cs' },
-      { regex: /spoluvlastnický\s+podíl/i, weight: 7, language: 'cs' },
+      { regex: /vlastnick\s+prvo/i, weight: 8, language: 'cs' },
+      { regex: /spoluvlastnick\s+podl/i, weight: 7, language: 'cs' },
       // Slovak patterns
-      { regex: /list\s+vlastníctva/i, weight: 10, language: 'sk' },
-      { regex: /výpis\s+z\s+katastra\s+nehnuteľností/i, weight: 10, language: 'sk' },
-      { regex: /katastrálne\s+územie/i, weight: 8, language: 'sk' },
+      { regex: /list\s+vlastnctva/i, weight: 10, language: 'sk' },
+      { regex: /vpis\s+z\s+katastra\s+nehnutenost/i, weight: 10, language: 'sk' },
+      { regex: /katastrlne\s+zemie/i, weight: 8, language: 'sk' },
       // Common patterns
-      { regex: /LV\s*č\.\s*\d+/i, weight: 9 }, // LV number
-      { regex: /\d+\/\d+/, weight: 5 }, // Ownership fraction
+      { regex: /LV\s*\.\s*\d+/i, weight: 9 }, // LV number
+      { regex: /\d+/\d+/, weight: 5 }, // Ownership fraction
     ],
     requiredMatches: 3,
     confidenceThreshold: 0.8,
@@ -76,20 +76,20 @@ export const documentPatterns: Record<DocumentType, DocumentPattern> = {
     type: 'identity_card',
     patterns: [
       // Czech patterns
-      { regex: /občanský\s+průkaz/i, weight: 10, language: 'cs' },
-      { regex: /česká\s+republika/i, weight: 8, language: 'cs' },
-      { regex: /jméno\s+a\s+příjmení/i, weight: 7, language: 'cs' },
-      { regex: /datum\s+narození/i, weight: 7, language: 'cs' },
-      { regex: /rodné\s+číslo/i, weight: 8, language: 'cs' },
+      { regex: /obansk\s+prkaz/i, weight: 10, language: 'cs' },
+      { regex: /esk\s+republika/i, weight: 8, language: 'cs' },
+      { regex: /jmno\s+a\s+pjmen/i, weight: 7, language: 'cs' },
+      { regex: /datum\s+narozen/i, weight: 7, language: 'cs' },
+      { regex: /rodn\s+slo/i, weight: 8, language: 'cs' },
       { regex: /platnost\s+do/i, weight: 6, language: 'cs' },
       // Slovak patterns
-      { regex: /občiansky\s+preukaz/i, weight: 10, language: 'sk' },
-      { regex: /slovenská\s+republika/i, weight: 8, language: 'sk' },
+      { regex: /obiansky\s+preukaz/i, weight: 10, language: 'sk' },
+      { regex: /slovensk\s+republika/i, weight: 8, language: 'sk' },
       { regex: /meno\s+a\s+priezvisko/i, weight: 7, language: 'sk' },
-      { regex: /dátum\s+narodenia/i, weight: 7, language: 'sk' },
-      { regex: /rodné\s+číslo/i, weight: 8, language: 'sk' },
+      { regex: /dtum\s+narodenia/i, weight: 7, language: 'sk' },
+      { regex: /rodn\s+slo/i, weight: 8, language: 'sk' },
       // ID number pattern
-      { regex: /\d{6}\/\d{3,4}/, weight: 9 }, // Birth number format
+      { regex: /\d{6}/\d{3,4}/, weight: 9 }, // Birth number format
       { regex: /[A-Z]{2}\d{6}/, weight: 8 }, // ID card number
     ],
     requiredMatches: 4,
@@ -100,10 +100,10 @@ export const documentPatterns: Record<DocumentType, DocumentPattern> = {
     type: 'passport',
     patterns: [
       // Czech patterns
-      { regex: /cestovní\s+pas/i, weight: 10, language: 'cs' },
-      { regex: /pas\s+české\s+republiky/i, weight: 10, language: 'cs' },
+      { regex: /cestovn\s+pas/i, weight: 10, language: 'cs' },
+      { regex: /pas\s+esk\s+republiky/i, weight: 10, language: 'cs' },
       // Slovak patterns
-      { regex: /cestovný\s+pas/i, weight: 10, language: 'sk' },
+      { regex: /cestovn\s+pas/i, weight: 10, language: 'sk' },
       { regex: /pas\s+slovenskej\s+republiky/i, weight: 10, language: 'sk' },
       // Common passport patterns
       { regex: /passport/i, weight: 9 },
@@ -119,19 +119,19 @@ export const documentPatterns: Record<DocumentType, DocumentPattern> = {
     type: 'will',
     patterns: [
       // Czech patterns
-      { regex: /závěť/i, weight: 10, language: 'cs' },
-      { regex: /poslední\s+vůle/i, weight: 10, language: 'cs' },
-      { regex: /zůstavitel/i, weight: 8, language: 'cs' },
-      { regex: /dědic/i, weight: 7, language: 'cs' },
+      { regex: /zv/i, weight: 10, language: 'cs' },
+      { regex: /posledn\s+vle/i, weight: 10, language: 'cs' },
+      { regex: /zstavitel/i, weight: 8, language: 'cs' },
+      { regex: /ddic/i, weight: 7, language: 'cs' },
       { regex: /odkazuji/i, weight: 7, language: 'cs' },
       // Slovak patterns
-      { regex: /závet/i, weight: 10, language: 'sk' },
-      { regex: /posledná\s+vôľa/i, weight: 10, language: 'sk' },
-      { regex: /poručiteľ/i, weight: 8, language: 'sk' },
-      { regex: /dedič/i, weight: 7, language: 'sk' },
+      { regex: /zvet/i, weight: 10, language: 'sk' },
+      { regex: /posledn\s+va/i, weight: 10, language: 'sk' },
+      { regex: /poruite/i, weight: 8, language: 'sk' },
+      { regex: /dedi/i, weight: 7, language: 'sk' },
       // Common patterns
-      { regex: /notář|notár/i, weight: 6 },
-      { regex: /svědek|svedok/i, weight: 5 },
+      { regex: /not|notr/i, weight: 6 },
+      { regex: /svdek|svedok/i, weight: 5 },
     ],
     requiredMatches: 3,
     confidenceThreshold: 0.75,
@@ -141,15 +141,15 @@ export const documentPatterns: Record<DocumentType, DocumentPattern> = {
     type: 'medical_record',
     patterns: [
       // Czech patterns
-      { regex: /zdravotní\s+dokumentace/i, weight: 10, language: 'cs' },
-      { regex: /lékařská\s+zpráva/i, weight: 10, language: 'cs' },
-      { regex: /diagnóza/i, weight: 8, language: 'cs' },
-      { regex: /anamnéza/i, weight: 7, language: 'cs' },
-      { regex: /vyšetření/i, weight: 6, language: 'cs' },
+      { regex: /zdravotn\s+dokumentace/i, weight: 10, language: 'cs' },
+      { regex: /lkask\s+zprva/i, weight: 10, language: 'cs' },
+      { regex: /diagnza/i, weight: 8, language: 'cs' },
+      { regex: /anamnza/i, weight: 7, language: 'cs' },
+      { regex: /vyeten/i, weight: 6, language: 'cs' },
       // Slovak patterns
-      { regex: /zdravotná\s+dokumentácia/i, weight: 10, language: 'sk' },
-      { regex: /lekárska\s+správa/i, weight: 10, language: 'sk' },
-      { regex: /diagnóza/i, weight: 8, language: 'sk' },
+      { regex: /zdravotn\s+dokumentcia/i, weight: 10, language: 'sk' },
+      { regex: /lekrska\s+sprva/i, weight: 10, language: 'sk' },
+      { regex: /diagnza/i, weight: 8, language: 'sk' },
       // Medical codes
       { regex: /ICD-?\d{1,2}/, weight: 7 },
       { regex: /MKN-?\d{1,2}/, weight: 7 }, // Czech ICD
@@ -163,16 +163,16 @@ export const documentPatterns: Record<DocumentType, DocumentPattern> = {
     patterns: [
       // Czech patterns
       { regex: /smlouva/i, weight: 10, language: 'cs' },
-      { regex: /smluvní\s+strany/i, weight: 8, language: 'cs' },
-      { regex: /předmět\s+smlouvy/i, weight: 7, language: 'cs' },
-      { regex: /článek\s+[IVX\d]+/i, weight: 5, language: 'cs' },
+      { regex: /smluvn\s+strany/i, weight: 8, language: 'cs' },
+      { regex: /pedmt\s+smlouvy/i, weight: 7, language: 'cs' },
+      { regex: /lnek\s+[IVX\d]+/i, weight: 5, language: 'cs' },
       // Slovak patterns
       { regex: /zmluva/i, weight: 10, language: 'sk' },
-      { regex: /zmluvné\s+strany/i, weight: 8, language: 'sk' },
+      { regex: /zmluvn\s+strany/i, weight: 8, language: 'sk' },
       { regex: /predmet\s+zmluvy/i, weight: 7, language: 'sk' },
       // Common contract terms
-      { regex: /IČO?\s*:?\s*\d{8}/, weight: 6 }, // Company ID
-      { regex: /DIČ\s*:?\s*\d{10}/, weight: 6 }, // Tax ID
+      { regex: /IO?\s*:?\s*\d{8}/, weight: 6 }, // Company ID
+      { regex: /DI\s*:?\s*\d{10}/, weight: 6 }, // Tax ID
     ],
     requiredMatches: 3,
     confidenceThreshold: 0.65,
@@ -183,18 +183,18 @@ export const documentPatterns: Record<DocumentType, DocumentPattern> = {
     patterns: [
       // Czech patterns
       { regex: /faktura/i, weight: 10, language: 'cs' },
-      { regex: /daňový\s+doklad/i, weight: 10, language: 'cs' },
-      { regex: /variabilní\s+symbol/i, weight: 8, language: 'cs' },
+      { regex: /daov\s+doklad/i, weight: 10, language: 'cs' },
+      { regex: /variabiln\s+symbol/i, weight: 8, language: 'cs' },
       { regex: /datum\s+splatnosti/i, weight: 7, language: 'cs' },
-      { regex: /celkem\s+k\s+úhradě/i, weight: 8, language: 'cs' },
+      { regex: /celkem\s+k\s+hrad/i, weight: 8, language: 'cs' },
       // Slovak patterns
-      { regex: /faktúra/i, weight: 10, language: 'sk' },
-      { regex: /daňový\s+doklad/i, weight: 10, language: 'sk' },
-      { regex: /variabilný\s+symbol/i, weight: 8, language: 'sk' },
+      { regex: /faktra/i, weight: 10, language: 'sk' },
+      { regex: /daov\s+doklad/i, weight: 10, language: 'sk' },
+      { regex: /variabiln\s+symbol/i, weight: 8, language: 'sk' },
       // Common invoice patterns
       { regex: /DPH\s*\d{1,2}\s*%/, weight: 7 }, // VAT
-      { regex: /IČ\s*DPH/, weight: 6 }, // VAT ID
-      { regex: /\d+[,\.]\d{2}\s*(Kč|CZK|€|EUR)/, weight: 6 }, // Amount with currency
+      { regex: /I\s*DPH/, weight: 6 }, // VAT ID
+      { regex: /\d+[,\.]\d{2}\s*(K|CZK||EUR)/, weight: 6 }, // Amount with currency
     ],
     requiredMatches: 3,
     confidenceThreshold: 0.75,
@@ -204,12 +204,12 @@ export const documentPatterns: Record<DocumentType, DocumentPattern> = {
     type: 'receipt',
     patterns: [
       // Czech patterns
-      { regex: /účtenka/i, weight: 10, language: 'cs' },
+      { regex: /tenka/i, weight: 10, language: 'cs' },
       { regex: /paragon/i, weight: 10, language: 'cs' },
-      { regex: /prodejní\s+doklad/i, weight: 9, language: 'cs' },
+      { regex: /prodejn\s+doklad/i, weight: 9, language: 'cs' },
       // Slovak patterns
-      { regex: /účtenka/i, weight: 10, language: 'sk' },
-      { regex: /pokladničný\s+doklad/i, weight: 9, language: 'sk' },
+      { regex: /tenka/i, weight: 10, language: 'sk' },
+      { regex: /pokladnin\s+doklad/i, weight: 9, language: 'sk' },
       // Common receipt patterns
       { regex: /EET/, weight: 8 }, // Czech electronic evidence
       { regex: /FIK\s*:/, weight: 9 }, // Fiscal ID
@@ -231,17 +231,17 @@ export const documentPatterns: Record<DocumentType, DocumentPattern> = {
 // Helper function to detect document language
 export function detectLanguageFromText(text: string): 'cs' | 'sk' | 'en' | 'other' {
   const czechIndicators = [
-    /český|česká|české/i,
+    /esk|esk|esk/i,
     /praha/i,
-    /občan/i,
-    /průkaz/i,
-    /město/i,
+    /oban/i,
+    /prkaz/i,
+    /msto/i,
   ];
 
   const slovakIndicators = [
-    /slovenský|slovenská|slovenské/i,
+    /slovensk|slovensk|slovensk/i,
     /bratislava/i,
-    /občan/i,
+    /oban/i,
     /preukaz/i,
     /mesto/i,
   ];

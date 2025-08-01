@@ -211,6 +211,7 @@ export const BasicLifeQuestions: React.FC<BasicLifeQuestionsProps> = ({
   const progress = (currentQuestionIndex + 1) / questions.length * 100;
 
   useEffect(() => {
+     
     // Reset selected option when question changes
     const currentAnswer = answers[currentQuestion.id as keyof LifeAnswers];
     setSelectedOption(currentAnswer || null);

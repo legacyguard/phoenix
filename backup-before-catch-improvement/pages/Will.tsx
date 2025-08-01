@@ -60,6 +60,7 @@ export const Will: React.FC = () => {
   };
 
   useEffect(() => {
+     
     loadWill();
     loadContacts();
   }, []);
@@ -157,7 +158,7 @@ export const Will: React.FC = () => {
     }
   };
 
-  const handleDocumentUploaded = (document: any) => {
+  const handleDocumentUploaded = (document: Record<string, unknown>) => {
     setShowUpload(false);
     loadWill();
     toast.success(t('will.messages.documentUploaded'));

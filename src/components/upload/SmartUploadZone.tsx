@@ -29,6 +29,7 @@ export function SmartUploadZone({
 
   // Handle drag events
   const handleDragEnter = useCallback((e: React.DragEvent) => {
+     
     e.preventDefault();
     e.stopPropagation();
     setDragCounter((prev) => prev + 1);
@@ -39,6 +40,7 @@ export function SmartUploadZone({
   }, []);
 
   const handleDragLeave = useCallback((e: React.DragEvent) => {
+     
     e.preventDefault();
     e.stopPropagation();
     setDragCounter((prev) => prev - 1);
@@ -49,6 +51,7 @@ export function SmartUploadZone({
   }, [dragCounter]);
 
   const handleDragOver = useCallback((e: React.DragEvent) => {
+     
     e.preventDefault();
     e.stopPropagation();
   }, []);
@@ -67,6 +70,7 @@ export function SmartUploadZone({
 
   // Handle file selection
   const handleFileSelect = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+     
     const files = Array.from(e.target.files || []);
     if (files.length > 0) {
       handleFiles(files);
@@ -111,11 +115,13 @@ export function SmartUploadZone({
 
   // Open file picker
   const openFilePicker = useCallback(() => {
+     
     fileInputRef.current?.click();
   }, []);
 
   // Open camera (mobile)
   const openCamera = useCallback(() => {
+     
     if (fileInputRef.current) {
       fileInputRef.current.capture = 'environment';
       fileInputRef.current.click();

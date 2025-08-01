@@ -56,6 +56,7 @@ export const AlertCenter: React.FC<AlertCenterProps> = ({
   const [activeTab, setActiveTab] = useState<'active' | 'snoozed' | 'dismissed'>('active');
 
   useEffect(() => {
+     
     if (isOpen) {
       loadAlerts();
     }

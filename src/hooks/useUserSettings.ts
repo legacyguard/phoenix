@@ -32,6 +32,7 @@ export const useUserSettings = () => {
   const [settings, setSettings] = useState<UserSettings>(getStoredSettings);
 
   useEffect(() => {
+     
     saveSettings(settings);
   }, [settings]);
 

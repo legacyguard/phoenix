@@ -97,6 +97,7 @@ export const DocumentUpload: React.FC<DocumentUploadProps> = ({ onDocumentUpload
 
   // Cleanup on unmount
   useEffect(() => {
+     
     return () => {
       // Reset states if component unmounts during upload
       if (isUploading) {
@@ -162,6 +163,7 @@ export const DocumentUpload: React.FC<DocumentUploadProps> = ({ onDocumentUpload
   }, [documentName, t]);
 
   const handleDrop = useCallback((e: React.DragEvent) => {
+     
     e.preventDefault();
     const droppedFile = e.dataTransfer.files[0];
     if (droppedFile) {
@@ -170,10 +172,12 @@ export const DocumentUpload: React.FC<DocumentUploadProps> = ({ onDocumentUpload
   }, [handleFileSelect]);
 
   const handleDragOver = useCallback((e: React.DragEvent) => {
+     
     e.preventDefault();
   }, []);
 
   const handleFileInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+     
     const selectedFile = e.target.files?.[0];
     if (selectedFile) {
       handleFileSelect(selectedFile);

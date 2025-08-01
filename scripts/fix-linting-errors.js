@@ -7,31 +7,31 @@ const { execSync } = require('child_process');
 // Common type replacements
 const typeReplacements = [
   {
-    pattern: /: any\[\]/g,
+    pattern: /: Record<string, unknown>\[\]/g,
     replacement: ': Array<Record<string, unknown>>'
   },
   {
-    pattern: /: any\b/g,
+    pattern: /: Record<string, unknown>\b/g,
     replacement: ': Record<string, unknown>'
   },
   {
-    pattern: /: any\?/g,
+    pattern: /: Record<string, unknown>\?/g,
     replacement: ': Record<string, unknown>?'
   },
   {
-    pattern: /: any\s*;/g,
+    pattern: /: Record<string, unknown>\s*;/g,
     replacement: ': Record<string, unknown>;'
   },
   {
-    pattern: /: any\s*\)/g,
+    pattern: /: Record<string, unknown>\s*\)/g,
     replacement: ': Record<string, unknown>)'
   },
   {
-    pattern: /: any\s*=/g,
+    pattern: /: Record<string, unknown>\s*=/g,
     replacement: ': Record<string, unknown> ='
   },
   {
-    pattern: /: any\s*=>/g,
+    pattern: /: Record<string, unknown>\s*=>/g,
     replacement: ': Record<string, unknown> =>'
   }
 ];

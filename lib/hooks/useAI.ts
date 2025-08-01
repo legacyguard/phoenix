@@ -149,6 +149,7 @@ export function useAI(): UseAIReturn {
 
   // Wrapper functions with error handling
   const analyzeDocument = useCallback(async (file: File, options?: OpenAIRequestOptions): Promise<DocumentAnalysis | null> => {
+     
     try {
       setAnalysisError(null);
       const result = await analyzeDocumentMutation.mutateAsync({ file, options });
@@ -160,6 +161,7 @@ export function useAI(): UseAIReturn {
   }, []);
 
   const generateQuestion = useCallback(async (profile: UserProfile, options?: OpenAIRequestOptions): Promise<LifeQuestion | null> => {
+     
     try {
       setQuestionError(null);
       const result = await generateQuestionMutation.mutateAsync({ profile, options });
@@ -171,6 +173,7 @@ export function useAI(): UseAIReturn {
   }, []);
 
   const suggestAction = useCallback(async (context: UserContext, options?: OpenAIRequestOptions): Promise<ActionSuggestion | null> => {
+     
     try {
       setSuggestionError(null);
       const result = await suggestActionMutation.mutateAsync({ context, options });
@@ -182,6 +185,7 @@ export function useAI(): UseAIReturn {
   }, []);
 
   const extractMetadata = useCallback(async (text: string, docType: string, options?: OpenAIRequestOptions): Promise<DocumentMetadata | null> => {
+     
     try {
       setMetadataError(null);
       const result = await extractMetadataMutation.mutateAsync({ text, docType, options });
@@ -207,10 +211,12 @@ export function useAI(): UseAIReturn {
   }, []);
 
   const clearCache = useCallback(() => {
+     
     openAIService.clearCache();
   }, []);
 
   const resetErrors = useCallback(() => {
+     
     setAnalysisError(null);
     setQuestionError(null);
     setSuggestionError(null);

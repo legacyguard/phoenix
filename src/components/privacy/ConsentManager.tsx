@@ -414,6 +414,7 @@ export const ConsentSettings: React.FC = () => {
   });
 
   useEffect(() => {
+     
     const savedPreferences = localStorage.getItem(CONSENT_KEY);
     if (savedPreferences) {
       setPreferences(JSON.parse(savedPreferences));

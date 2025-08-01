@@ -28,6 +28,7 @@ export function SharedContentViewer({ token, password }: SharedContentViewerProp
   const effectiveToken = routeToken || token || '';
 
   useEffect(() => {
+     
     if (effectiveToken) {
       checkShareLink();
     }

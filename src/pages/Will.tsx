@@ -66,8 +66,10 @@ export const Will: React.FC = () => {
   };
 
   useEffect(() => {
+     
     loadWill();
     loadContacts();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const loadWill = async () => {

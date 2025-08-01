@@ -173,6 +173,7 @@ export const FamilyCrisisAssessment: React.FC<FamilyCrisisAssessmentProps> = ({
       t('familyCapabilities.noInheritancePlan')
     }];
 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [userAssets, userDocuments, userGuardians, userBeneficiaries]);
 
   // Define crisis situations and check preparedness

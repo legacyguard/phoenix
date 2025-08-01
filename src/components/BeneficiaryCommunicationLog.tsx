@@ -53,6 +53,7 @@ export const BeneficiaryCommunicationLog: React.FC<BeneficiaryCommunicationLogPr
   });
 
   useEffect(() => {
+     
     fetchCommunications();
   }, []);
 

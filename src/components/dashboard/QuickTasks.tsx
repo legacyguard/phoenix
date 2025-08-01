@@ -53,6 +53,7 @@ export const QuickTasks: React.FC<QuickTasksProps> = ({
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
 
   useEffect(() => {
+     
     generateTasks();
   }, []);
 

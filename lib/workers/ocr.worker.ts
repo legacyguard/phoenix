@@ -6,13 +6,13 @@ let worker: TesseractWorker | null = null;
 // Message types for worker communication
 interface WorkerMessage {
   type: 'INIT' | 'RECOGNIZE' | 'TERMINATE';
-  payload?: any;
+  payload?: Record<string, unknown>;
   id: string;
 }
 
 interface WorkerResponse {
   type: 'SUCCESS' | 'ERROR' | 'PROGRESS';
-  data?: any;
+  data?: Record<string, unknown>;
   error?: string;
   id: string;
 }
@@ -55,7 +55,7 @@ async function initializeWorker(languages: string[] = ['eng']) {
 }
 
 // Perform OCR on image
-async function recognize(imageData: string | ArrayBuffer, options: any = {}) {
+async function recognize(imageData: string | ArrayBuffer, options: Record<string, unknown> = {}) {
   if (!worker) {
     throw new Error('Worker not initialized');
   }
@@ -101,8 +101,10 @@ self.addEventListener('message', async (event: MessageEvent<WorkerMessage>) => {
         } as WorkerResponse);
         break;
 
-      case 'RECOGNIZE':
-        const result = await recognize(payload.imageData, payload.options);
+      case 'RECOGNIZE': {
+      const result = await recognize(payload.imageData, payload.options);
+      break;
+    }
         self.postMessage({
           type: 'SUCCESS',
           data: result,

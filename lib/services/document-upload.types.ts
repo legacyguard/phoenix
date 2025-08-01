@@ -45,8 +45,8 @@ export interface ProcessedDocument {
   // Extracted data
   thumbnail?: string;
   ocrText?: string;
-  extractedData?: any;
-  aiAnalysis?: any;
+  extractedData?: Record<string, unknown>;
+  aiAnalysis?: Record<string, unknown>;
   
   // Metadata
   metadata: DocumentMetadata;

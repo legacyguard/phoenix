@@ -68,6 +68,7 @@ export const AssetOverview: React.FC = () => {
   const [currency, setCurrency] = useState('USD');
 
   useEffect(() => {
+     
     loadAssetData();
   }, []);
 

@@ -95,6 +95,7 @@ export const useUsageNudge = ({ tasks }: UseUsageNudgeProps): UseUsageNudgeRetur
   }, [shouldShowToast, hasIncompleteTasks, totalTasks, completedTasks, t]);
 
   const dismissNudge = useCallback(() => {
+     
     setShouldShowNudge(false);
     // Dismiss for 24 hours
     const dismissUntil = new Date();
@@ -103,6 +104,7 @@ export const useUsageNudge = ({ tasks }: UseUsageNudgeProps): UseUsageNudgeRetur
   }, []);
 
   const dismissToast = useCallback(() => {
+     
     setShouldShowToast(false);
     // Dismiss for 48 hours (longer than nudge)
     const dismissUntil = new Date();

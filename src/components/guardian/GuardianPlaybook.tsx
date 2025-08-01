@@ -85,6 +85,7 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
 
   // Load existing playbook
   useEffect(() => {
+     
     loadPlaybook();
   }, [guardianId]);
 
