@@ -18,6 +18,8 @@ interface DynamicAssetFormProps {
 const DynamicAssetForm: React.FC<DynamicAssetFormProps> = ({ mainCategory, subType, onClose, isOpen }) => {
   // Translation hook for internationalization
   const { t } = useTranslation('common');
+  
+  // Form state management
   const [formData, setFormData] = useState<Record<string, any>>({});
 
   const handleInputChange = (field: string, value: any) => {
