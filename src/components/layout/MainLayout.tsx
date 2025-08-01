@@ -7,7 +7,7 @@ import { cn } from '@/lib/utils';
 import { useAuthLogging } from '@/hooks/useAuthLogging';
 import { PWAInstallBanner } from '@/components/PWAInstallBanner';
 import { usePWA } from '@/hooks/usePWA';
-import { useAuth } from '@/contexts/AuthContext';
+import { useAuth } from '@/hooks/useAuth';
 
 export const MainLayout: React.FC = () => {
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);

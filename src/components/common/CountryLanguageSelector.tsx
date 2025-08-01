@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useCountry } from '@/contexts/CountryContext';
+import { useCountry } from '@/hooks/useCountry';
 import { getCurrentCountryConfig, COUNTRY_CONFIGS } from '@/config/countries';
 import { Button } from '@/components/ui/button';
 import { toast } from 'sonner';

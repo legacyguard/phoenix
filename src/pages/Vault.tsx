@@ -8,7 +8,7 @@ import AssetTypeSelectorModal from '@/components/assets/AssetTypeSelectorModal';
 import DynamicAssetForm from '@/components/assets/DynamicAssetForm';
 import AssetCard from '@/components/assets/AssetCard';
 import { supabase } from '@/lib/supabase';
-import { useAuth } from '@/contexts/AuthContext';
+import { useAuth } from '@/hooks/useAuth';
 import { Skeleton } from '@/components/ui/skeleton';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 

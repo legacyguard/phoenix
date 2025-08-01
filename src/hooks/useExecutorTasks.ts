@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 import { ExecutorTaskService } from '@/services/executorTaskService';
-import { useAuth } from '@/contexts/AuthContext';
+import { useAuth } from '@/hooks/useAuth';
 
 interface ExecutorTask {
   id: string;

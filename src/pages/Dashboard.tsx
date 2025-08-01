@@ -9,7 +9,7 @@ import { Progress } from '@/components/ui/progress';
 import { Badge } from '@/components/ui/badge';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Mail, ClipboardCheck, Target, Shield, CheckCircle2, Lock, Clock, ShieldCheck, Calendar, AlertTriangle, Info, Book } from 'lucide-react';
-import { useAuth } from '@/contexts/AuthContext';
+import { useAuth } from '@/hooks/useAuth';
 import { cn } from '@/lib/utils';
 import AnnualReview from '@/components/AnnualReview';
 import LegalConsultationModal from '@/components/LegalConsultationModal';

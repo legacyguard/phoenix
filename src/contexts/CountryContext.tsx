@@ -12,7 +12,7 @@ interface CountryContextType {
   isDetecting: boolean;
 }
 
-const CountryContext = createContext<CountryContextType | undefined>(undefined);
+export const CountryContext = createContext<CountryContextType | undefined>(undefined);
 
 interface CountryProviderProps {
   children: ReactNode;

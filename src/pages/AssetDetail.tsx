@@ -8,7 +8,7 @@ import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { CountrySelector } from '@/components/common/CountrySelector';
-import { useCountry } from '@/contexts/CountryContext';
+import { useCountry } from '@/hooks/useCountry';
 import { supabaseWithRetry } from '@/utils/supabaseWithRetry';
 import { useRetry } from '@/utils/retry';
 import { RetryStatus } from '@/components/common/RetryStatus';

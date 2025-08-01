@@ -11,7 +11,7 @@ interface SubscriptionContextType {
   refreshSubscription: () => Promise<void>;
 }
 
-const SubscriptionContext = createContext<SubscriptionContextType | undefined>(undefined);
+export const SubscriptionContext = createContext<SubscriptionContextType | undefined>(undefined);
 
 // Feature access mapping
 const FEATURE_ACCESS = {

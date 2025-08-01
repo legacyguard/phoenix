@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { supabase } from '@/integrations/supabase/client';
-import { useAuth } from '@/contexts/AuthContext';
+import { useAuth } from '@/hooks/useAuth';
 import { MessageSquare, Phone, Mail, Users, FileText, Plus, Calendar } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import {

@@ -17,7 +17,7 @@ import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Switch } from '@/components/ui/switch';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { COUNTRY_CONFIGS } from '@/config/countries';
-import { useCountry } from '@/contexts/CountryContext';
+import { useCountry } from '@/hooks/useCountry';
 import { supabaseWithRetry } from '@/utils/supabaseWithRetry';
 import { useRetry } from '@/utils/retry';
 import { RetryStatus } from '@/components/common/RetryStatus';

@@ -7,11 +7,13 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger } from
 '@/components/ui/dropdown-menu';
-import { useTheme } from '@/contexts/ThemeContext';
-import { cn } from '@/lib/utils';import { useTranslation } from "react-i18next";
+import { useTheme } from '@/hooks/useTheme';
+import { cn } from '@/lib/utils';
+import { useTranslation } from "react-i18next";
 
 export const ThemeToggle: React.FC = () => {
   const { theme, setTheme, actualTheme } = useTheme();
+  const { t } = useTranslation();
 
   return (
     <DropdownMenu>

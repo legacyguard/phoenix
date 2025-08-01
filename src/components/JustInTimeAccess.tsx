@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { supabase } from '@/integrations/supabase/client';
-import { useAuth } from '@/contexts/AuthContext';
+import { useAuth } from '@/hooks/useAuth';
 import { Key, Shield, Eye, EyeOff, AlertCircle } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import {
