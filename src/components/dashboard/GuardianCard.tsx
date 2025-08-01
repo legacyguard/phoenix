@@ -30,7 +30,7 @@ export const GuardianCard: React.FC<GuardianCardProps> = ({
   onDelete,
   onSendInvite,
   onCreatePlaybook
-}) => {const { t: t } = useTranslation("common");
+}) => {
   const { t } = useTranslation('common');
   const [playbookStatus, setPlaybookStatus] = useState<'empty' | 'draft' | 'complete' | null>(null);
 

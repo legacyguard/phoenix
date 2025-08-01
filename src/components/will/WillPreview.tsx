@@ -22,7 +22,7 @@ export function WillPreview({
   requirements,
   countryCode,
   onGenerate
-}: WillPreviewProps) {const { t: t } = useTranslation("common");
+}: WillPreviewProps) {
   const { t } = useTranslation();
   const [showLegalConsultation, setShowLegalConsultation] = useState(false);
 

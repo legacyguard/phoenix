@@ -45,7 +45,7 @@ export const FamilyGuide: React.FC<FamilyGuideProps> = ({
   documents,
   assets,
   beneficiaries
-}) => {const { t: t } = useTranslation("common");
+}) => {
   const { t } = useTranslation('common');
   const [isGuideOpen, setIsGuideOpen] = useState(false);
   const [isDiscreteMode, setIsDiscreteMode] = useState(false);

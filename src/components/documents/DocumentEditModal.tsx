@@ -36,7 +36,7 @@ export const DocumentEditModal: React.FC<DocumentEditModalProps> = ({
   document,
   isOpen,
   onClose
-}) => {const { t: t } = useTranslation("common");
+}) => {
   const { t } = useTranslation();
   const queryClient = useQueryClient();
   const [isLoading, setIsLoading] = useState(false);

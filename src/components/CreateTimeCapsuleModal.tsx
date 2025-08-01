@@ -52,7 +52,7 @@ export const CreateTimeCapsuleModal: React.FC<CreateTimeCapsuleModalProps> = ({
   trustedPeople,
   onSuccess,
   editingCapsule
-}) => {const { t: t } = useTranslation("common");
+}) => {
   const { t } = useTranslation('common');
   const { user } = useUser();
   const { isPremium } = useSubscription();

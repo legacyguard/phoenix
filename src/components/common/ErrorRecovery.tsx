@@ -21,7 +21,7 @@ export const ErrorRecovery: React.FC<ErrorRecoveryProps> = ({
   showBackButton = true,
   customMessage,
   className = ''
-}) => {const { t: t } = useTranslation("common");
+}) => {
   const { t } = useTranslation();
   const navigate = useNavigate();
 

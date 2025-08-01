@@ -15,7 +15,7 @@ interface SharedContentViewerProps {
   password?: string;
 }
 
-export function SharedContentViewer({ token, password }: SharedContentViewerProps) {const { t: t } = useTranslation("common");
+export function SharedContentViewer({ token, password }: SharedContentViewerProps) {
   const { t } = useTranslation();
   const { token: routeToken } = useParams<{token: string;}>();
   const [sharedLink, setSharedLink] = useState<SharedLink | null>(null);

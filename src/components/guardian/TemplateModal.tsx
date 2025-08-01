@@ -68,7 +68,7 @@ export const TemplateModal: React.FC<TemplateModalProps> = ({
   section,
   onInsert,
   existingContent
-}) => {const { t: t } = useTranslation("common");
+}) => {
   const { t } = useTranslation('common');
   const [selectedTemplate, setSelectedTemplate] = useState<PlaybookTemplate | null>(null);
   const [variables, setVariables] = useState<Record<string, string>>({});

@@ -43,7 +43,7 @@ interface DocumentCardProps {
   onToggleKeyDocument?: (id: string, isKey: boolean) => void;
 }
 
-export const DocumentCard: React.FC<DocumentCardProps> = ({ document, onEdit, onDelete, onToggleKeyDocument }) => {const { t: t } = useTranslation("common");
+export const DocumentCard: React.FC<DocumentCardProps> = ({ document, onEdit, onDelete, onToggleKeyDocument }) => {
   const { t } = useTranslation('common');
 
   const getCountryFlag = (countryCode: string) => {
