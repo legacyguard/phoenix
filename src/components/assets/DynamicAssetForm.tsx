@@ -21,6 +21,8 @@ const DynamicAssetForm: React.FC<DynamicAssetFormProps> = ({ mainCategory, subTy
   
   // Form state management
   const [formData, setFormData] = useState<Record<string, any>>({});
+  
+  // Component logic starts here
 
   const handleInputChange = (field: string, value: any) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
