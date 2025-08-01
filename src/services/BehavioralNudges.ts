@@ -75,14 +75,24 @@ interface UserData {
   };
 }
 
-export async function generateNudgesForUser(userId: string) {
+export async function generateNudgesForUser(userId: string): Promise<void> {
+  if (!userId || typeof userId !== 'string') {
+    console.error('Invalid userId provided to generateNudgesForUser');
+    return;
+  }
+
   try {
     // Use the correct table names from the schema
-    const assets = await supabase.from('assets').select('type, estimated_value').eq('user_id', userId);
-    const guardians = await supabase.from('guardians').select('full_name, invitation_status').eq('user_id', userId);
-    const wills = await supabase.from('wills').select('status').eq('user_id', userId);
+    const [assets, guardians, wills] = await Promise.all([
+      supabase.from('assets').select('type, estimated_value').eq('user_id', userId),
+      supabase.from('guardians').select('full_name, invitation_status').eq('user_id', userId),
+      supabase.from('wills').select('status').eq('user_id', userId)
+    ]);
    
-    if (!assets.data || !guardians.data || !wills.data) return;
+    if (!assets.data || !guardians.data || !wills.data) {
+      console.warn('No data found for user:', userId);
+      return;
+    }
 
     // Nudge 1: Social Proof
     const hasLifeInsurance = assets.data.some((a: { type: string }) => a.type === 'life_insurance');
@@ -116,20 +126,24 @@ export async function generateNudgesForUser(userId: string) {
     }
 
     // Nudge 4: Commitment & Consistency
-    const unpreparedGuardians = guardians.data.filter((g: { invitation_status?: string }) => g.invitation_status !== 'accepted');
+    const unpreparedGuardians = guardians.data.filter((g: { invitation_status?: string; full_name: string }) => g.invitation_status !== 'accepted');
     if (unpreparedGuardians.length > 0) {
       await createNotification(userId, {
         type: 'nudge_commitment',
-        message: `You've identified ${unpreparedGuardians[0].full_name} as a guardian. Take the next step to ensure they are fully prepared for their responsibilities.`,
+        message: `You've identified ${(unpreparedGuardians[0] as { full_name: string }).full_name} as a guardian. Take the next step to ensure they are fully prepared for their responsibilities.`,
         urgency: 'medium',
       });
     }
   } catch (error) {
     console.error('Error generating nudges for user:', userId, error);
+    // In production, you might want to report this to an error tracking service
   }
 }
 
-async function createNotification(userId: string, { type, message, urgency }: { type: string; message: string; urgency: 'low' | 'medium' | 'high' }) {
+async function createNotification(
+  userId: string, 
+  { type, message, urgency }: { type: string; message: string; urgency: 'low' | 'medium' | 'high' }
+): Promise<void> {
   try {
     // Check if a similar nudge was sent recently (within 14 days)
     const recentNotifications = await checkRecentNotifications(userId, type);
@@ -154,9 +168,14 @@ async function createNotification(userId: string, { type, message, urgency }: { 
     
     // You could also store this in localStorage for client-side notifications
     if (typeof window !== 'undefined') {
-      const notifications = JSON.parse(localStorage.getItem('user_notifications') || '[]');
-      notifications.push({ userId, type, message, urgency, timestamp: new Date().toISOString() });
-      localStorage.setItem('user_notifications', JSON.stringify(notifications));
+      try {
+        const existingNotifications = localStorage.getItem('user_notifications');
+        const notifications = existingNotifications ? JSON.parse(existingNotifications) : [];
+        notifications.push({ userId, type, message, urgency, timestamp: new Date().toISOString() });
+        localStorage.setItem('user_notifications', JSON.stringify(notifications));
+      } catch (storageError) {
+        console.warn('Failed to store notification in localStorage:', storageError);
+      }
     }
   } catch (error) {
     console.error('Error creating notification:', error);
@@ -167,12 +186,17 @@ async function checkRecentNotifications(userId: string, type: string): Promise<b
   try {
     // Since notifications table doesn't exist, we'll use localStorage for client-side
     if (typeof window !== 'undefined') {
-      const notifications = JSON.parse(localStorage.getItem('user_notifications') || '[]');
-      const userNotifications = notifications.filter((n: Record<string, unknown>) => n.userId === userId && n.type === type);
+      const existingNotifications = localStorage.getItem('user_notifications');
+      if (!existingNotifications) return false;
+      
+      const notifications = JSON.parse(existingNotifications);
+      const userNotifications = notifications.filter(
+        (n: Record<string, unknown>) => n.userId === userId && n.type === type
+      );
       
       if (userNotifications.length > 0) {
-        const lastNotification = userNotifications[userNotifications.length - 1];
-        const lastNotificationDate = new Date(lastNotification.timestamp);
+        const lastNotification = userNotifications[userNotifications.length - 1] as Record<string, unknown>;
+        const lastNotificationDate = new Date(lastNotification.timestamp as string);
         const dateDiff = (new Date().getTime() - lastNotificationDate.getTime()) / (1000 * 60 * 60 * 24);
         return dateDiff < 14; // Return true if notification was sent within 14 days
       }
@@ -184,13 +208,13 @@ async function checkRecentNotifications(userId: string, type: string): Promise<b
   }
 }
 
-function calculateOverallPreparedness(userData: { assets?: unknown[]; guardians?: unknown[]; wills?: unknown[] }) {
+function calculateOverallPreparedness(userData: { assets?: unknown[]; guardians?: unknown[]; wills?: unknown[] }): number {
   // Calculate based on available data
   let score = 0;
   
-  if (userData.assets && userData.assets.length > 0) score += 30;
-  if (userData.guardians && userData.guardians.length > 0) score += 30;
-  if (userData.wills && userData.wills.length > 0) score += 40;
+  if (userData.assets && Array.isArray(userData.assets) && userData.assets.length > 0) score += 30;
+  if (userData.guardians && Array.isArray(userData.guardians) && userData.guardians.length > 0) score += 30;
+  if (userData.wills && Array.isArray(userData.wills) && userData.wills.length > 0) score += 40;
   
   return Math.min(score, 100);
 }
