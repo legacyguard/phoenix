@@ -15,7 +15,7 @@ interface DynamicAssetFormProps {
   isOpen: boolean;
 }
 
-const DynamicAssetForm: React.FC<DynamicAssetFormProps> = ({ mainCategory, subType, onClose, isOpen }) => {const { t: t } = useTranslation("common");
+const DynamicAssetForm: React.FC<DynamicAssetFormProps> = ({ mainCategory, subType, onClose, isOpen }) => {
   const { t } = useTranslation('common');
   const [formData, setFormData] = useState<Record<string, any>>({});
 
