@@ -92,7 +92,7 @@ export const useUsageNudge = ({ tasks }: UseUsageNudgeProps): UseUsageNudgeRetur
         );
       }, 3000); // Show after 3 seconds
     }
-  }, [shouldShowToast, hasIncompleteTasks, totalTasks, completedTasks, t]);
+  }, [shouldShowToast, hasIncompleteTasks, totalTasks, completedTasks, t, dismissToast]);
 
   const dismissNudge = useCallback(() => {
      

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useUser } from '@clerk/clerk-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -43,53 +43,46 @@ export const LegacyBriefing: React.FC = () => {
   }>>([]);
 
   // Fetch time capsules
-  const fetchCapsules = async () => {
+  const fetchCapsules = useCallback(async () => {
+    if (!user) return;
     try {
-      setLoading(true);
-      setError(null);
-
       const response = await fetch('/api/time-capsule', {
         headers: {
-          'Authorization': `Bearer ${await user?.getToken()}`
+          'Authorization': `Bearer ${await user.getToken()}`
         }
       });
-
-      if (!response.ok) {
-        throw new Error('Failed to fetch time capsules');
-      }
-
-      const { data } = await response.json();
-      setCapsules(data || []);
+      if (!response.ok) throw new Error('Failed to fetch time capsules');
+      const data = await response.json();
+      setCapsules(data);
     } catch (err) {
       console.error('Error fetching time capsules:', err);
-      setError(t("legacyLetters.failed_to_load_your_time_capsu_1"));
-    } finally {
-      setLoading(false);
+      toast.error(t('legacyBriefing.toastMessages.fetchError'));
     }
-  };
+  }, [user, t]);
 
   // Fetch trusted people for recipient selection
-  const fetchTrustedPeople = async () => {
-    if (!user?.id) return;
-
-    const { data, error } = await supabase.
-    from('trusted_people').
-    select('*').
-    eq('user_id', user.id).
-    order('name');
-
-    if (!error && data) {
+  const fetchTrustedPeople = useCallback(async () => {
+    if (!user) return;
+    try {
+      const response = await fetch('/api/trusted-people', {
+        headers: {
+          'Authorization': `Bearer ${await user.getToken()}`
+        }
+      });
+      if (!response.ok) throw new Error('Failed to fetch trusted people');
+      const data = await response.json();
       setTrustedPeople(data);
+    } catch (err) {
+      console.error('Error fetching trusted people:', err);
     }
-  };
+  }, [user]);
 
   useEffect(() => {
-     
     if (user) {
       fetchCapsules();
       fetchTrustedPeople();
     }
-  }, [user]);
+  }, [user, fetchCapsules, fetchTrustedPeople]);
 
   const handleDelete = async (capsuleId: string) => {
     if (!confirm(t("legacyLetters.are_you_sure_you_want_to_delet_2"))) {

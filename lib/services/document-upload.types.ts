@@ -148,6 +148,7 @@ export interface UploadQueueItem {
   addedAt: Date;
   startedAt?: Date;
   completedAt?: Date;
+  options?: UploadOptions;
 }
 
 export interface SharingStatus {

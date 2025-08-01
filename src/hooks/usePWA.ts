@@ -97,14 +97,7 @@ export function usePWA(): PWAHook {
   }, []);
 
   // Register service worker and handle updates
-  useEffect(() => {
-     
-    if ('serviceWorker' in navigator) {
-      registerServiceWorker();
-    }
-  }, []);
-
-  const registerServiceWorker = async () => {
+  const registerServiceWorker = useCallback(async () => {
     try {
       const registration = await navigator.serviceWorker.register('/service-worker.js');
       
@@ -140,7 +133,14 @@ export function usePWA(): PWAHook {
     } catch (error) {
       console.error('Service Worker registration failed:', error);
     }
-  };
+  }, [updateApp]);
+
+  useEffect(() => {
+     
+    if ('serviceWorker' in navigator) {
+      registerServiceWorker();
+    }
+  }, [registerServiceWorker]);
 
   // Install app function
   const installApp = useCallback(async () => {

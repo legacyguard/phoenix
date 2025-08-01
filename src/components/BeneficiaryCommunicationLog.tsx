@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { useAuth } from '@/contexts/AuthContext';
 import { MessageSquare, Phone, Mail, Users, FileText, Plus, Calendar } from 'lucide-react';
@@ -52,12 +52,7 @@ export const BeneficiaryCommunicationLog: React.FC<BeneficiaryCommunicationLogPr
     communication_date: new Date().toISOString().split('T')[0]
   });
 
-  useEffect(() => {
-     
-    fetchCommunications();
-  }, []);
-
-  const fetchCommunications = async () => {
+  const fetchCommunications = useCallback(async () => {
     try {
       const { data, error } = await supabase
         .from('beneficiary_communications')
@@ -71,7 +66,12 @@ export const BeneficiaryCommunicationLog: React.FC<BeneficiaryCommunicationLogPr
     } catch (err) {
       console.error('Failed to fetch communications:', err);
     }
-  };
+  }, [user?.id, deceasedUserId]);
+
+  useEffect(() => {
+     
+    fetchCommunications();
+  }, [fetchCommunications]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();

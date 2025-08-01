@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { toast } from 'sonner';
 import { supabase } from '@/lib/supabase';
@@ -37,12 +37,7 @@ export default function GuardianPlaybookView({ guardianId, userName }: GuardianP
   const [loading, setLoading] = useState(true);
   const [playbook, setPlaybook] = useState<GuardianPlaybookData | null>(null);
 
-  useEffect(() => {
-     
-    fetchPlaybook();
-  }, [guardianId]);
-
-  const fetchPlaybook = async () => {
+  const fetchPlaybook = useCallback(async () => {
     try {
       setLoading(true);
       const { data: { user } } = await supabase.auth.getUser();
@@ -89,7 +84,11 @@ export default function GuardianPlaybookView({ guardianId, userName }: GuardianP
     } finally {
       setLoading(false);
     }
-  };
+  }, [guardianId, t]);
+
+  useEffect(() => {
+    fetchPlaybook();
+  }, [guardianId, fetchPlaybook]);
 
   if (loading) {
     return (

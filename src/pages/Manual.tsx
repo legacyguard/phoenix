@@ -443,9 +443,8 @@ userMessage = t('manual.errors.duplicateEntry');
         
         toast.error(userMessage);
       }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     },
-    [instructions]
+    [instructions, t]
   );
 
   const getExpirationStatus = (expirationDate: string | null) => {

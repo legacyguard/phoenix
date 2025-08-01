@@ -59,7 +59,7 @@ export const ConsentManager: React.FC<ConsentManagerProps> = ({ onConsentUpdate 
       // Show banner if no consent has been given
       setShowBanner(true);
     }
-  }, []);
+  }, [disableTracking, enableTracking]);
 
   const savePreferences = (newPreferences: ConsentPreferences) => {
     const updatedPreferences = {

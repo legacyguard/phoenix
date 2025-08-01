@@ -1,8 +1,8 @@
 import React from 'react';
 import { Alert, AlertDescription } from '@/components/ui/alert';
-import { Progress } from '@/components/ui/progress';
 import { Button } from '@/components/ui/button';
-import { RefreshCw, Wifi, WifiOff, AlertCircle } from 'lucide-react';
+import { Progress } from '@/components/ui/progress';
+import { AlertCircle, RefreshCw, WifiOff } from 'lucide-react';
 import { useOnlineStatus } from '@/hooks/useOnlineStatus';
 
 interface RetryStatusProps {
@@ -93,23 +93,3 @@ export const RetryStatus: React.FC<RetryStatusProps> = ({
     </div>
   );
 };
-
-// Hook pre sledovanie online statusu
-export function useOnlineStatus() {
-  const [isOnline, setIsOnline] = React.useState(navigator.onLine);
-
-  React.useEffect(() => {
-    const handleOnline = () => setIsOnline(true);
-    const handleOffline = () => setIsOnline(false);
-
-    window.addEventListener('online', handleOnline);
-    window.addEventListener('offline', handleOffline);
-
-    return () => {
-      window.removeEventListener('online', handleOnline);
-      window.removeEventListener('offline', handleOffline);
-    };
-  }, []);
-
-  return isOnline;
-}

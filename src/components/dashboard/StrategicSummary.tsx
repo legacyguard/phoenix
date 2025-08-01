@@ -44,9 +44,9 @@ export const StrategicSummary: React.FC = () => {
   useEffect(() => {
      
     loadUserData();
-  }, []);
+  }, [loadUserData]);
 
-  const loadUserData = async () => {
+  const loadUserData = useCallback(async () => {
     try {
       const { data: { user } } = await supabaseWithRetry.auth.getUser();
       if (!user) return;
@@ -70,9 +70,9 @@ export const StrategicSummary: React.FC = () => {
     } finally {
       setIsLoading(false);
     }
-  };
+  }, [generateStrategicAreas]);
 
-  const generateStrategicAreas = (
+  const generateStrategicAreas = useCallback((
     guardians: Array<Record<string, unknown>>,
     documents: Array<Record<string, unknown>>,
     assets: Array<Record<string, unknown>>,
@@ -142,7 +142,7 @@ export const StrategicSummary: React.FC = () => {
     if (criticalIncomplete.length > 0) {
       setNextCriticalAction(criticalIncomplete[0].nextAction);
     }
-  };
+  }, [t]);
 
   const getNextDocumentAction = (documents: Array<Record<string, unknown>>): string => {
     const criticalDocs = documents.filter(d => d.importance_level === 'critical');

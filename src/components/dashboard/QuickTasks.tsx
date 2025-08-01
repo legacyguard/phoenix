@@ -55,9 +55,9 @@ export const QuickTasks: React.FC<QuickTasksProps> = ({
   useEffect(() => {
      
     generateTasks();
-  }, []);
+  }, [generateTasks]);
 
-  const generateTasks = () => {
+  const generateTasks = useCallback(() => {
     const allTasks: QuickTask[] = [
       // Document tasks
       {
@@ -180,7 +180,7 @@ export const QuickTasks: React.FC<QuickTasksProps> = ({
     ];
 
     setTasks(allTasks);
-  };
+  }, [t]);
 
   const filteredTasks = selectedCategory === 'all' 
     ? tasks 

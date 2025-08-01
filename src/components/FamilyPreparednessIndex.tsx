@@ -152,9 +152,8 @@ export const FamilyPreparednessIndex: React.FC<FamilyPreparednessIndexProps> = (
       status: userDocuments.some(d => d.type?.toLowerCase().includes('digital')) ? 'capable' : 'vulnerable',
       icon: userDocuments.some(d => d.type?.toLowerCase().includes('digital')) ? <CheckCircle2 /> : <AlertTriangle />
     },
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     // Additional capabilities go here
-  ], [userAssets, userDocuments, userGuardians, userBeneficiaries, t]);
+  ], [userAssets, userDocuments, t]);
 
   const crises = useMemo<CrisisSituation[]>(() => [
     {
@@ -173,10 +172,9 @@ export const FamilyPreparednessIndex: React.FC<FamilyPreparednessIndexProps> = (
       icon: <AlertCircle />,
       isPrepared: false, // Example: conditionally calculate
       requiredCapabilities: ['immediate_financial_needs', 'digital_access'],
-    // eslint-disable-next-line react-hooks/exhaustive-deps
       missingCapabilities: []
     }
-  ], [capabilities, t]);
+  ], [t]);
 
   // Determine preparedness level and message
   const getPreparednessLevel = (score: number) => {

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { supabaseWithRetry } from '@/utils/supabaseWithRetry';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -31,12 +31,7 @@ export const NotificationPreferences: React.FC = () => {
   const [saving, setSaving] = useState(false);
   const [preferences, setPreferences] = useState<EmergencyContactPreference[]>([]);
 
-  useEffect(() => {
-     
-    loadPreferences();
-  }, []);
-
-  const loadPreferences = async () => {
+  const loadPreferences = useCallback(async () => {
     try {
       const { data: { user } } = await supabaseWithRetry.auth.getUser();
       if (!user) return;
@@ -78,7 +73,11 @@ export const NotificationPreferences: React.FC = () => {
     } finally {
       setLoading(false);
     }
-  };
+  }, [t]);
+
+  useEffect(() => {
+    loadPreferences();
+  }, [loadPreferences]);
 
   const updatePreference = async (
     emergencyContactId: string,

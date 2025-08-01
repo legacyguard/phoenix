@@ -66,7 +66,7 @@ export function SmartUploadZone({
     if (files.length > 0) {
       handleFiles(files);
     }
-  }, []);
+  }, [handleFiles]);
 
   // Handle file selection
   const handleFileSelect = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
@@ -75,7 +75,7 @@ export function SmartUploadZone({
     if (files.length > 0) {
       handleFiles(files);
     }
-  }, []);
+  }, [handleFiles]);
 
   // Process selected files
   const handleFiles = useCallback(async (files: File[]) => {

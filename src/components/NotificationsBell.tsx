@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { Bell, AlertCircle, AlertTriangle, Info, X } from 'lucide-react';
 import { useUser } from '@clerk/clerk-react';
 import { useNavigate } from 'react-router-dom';
@@ -35,30 +35,7 @@ export const NotificationsBell: React.FC = () => {
   const navigate = useNavigate();
   const { t } = useTranslation('common');
 
-  useEffect(() => {
-     
-    if (user?.id) {
-      fetchNotifications();
-      // Set up periodic refresh every 5 minutes
-      const interval = setInterval(fetchNotifications, 5 * 60 * 1000);
-      return () => clearInterval(interval);
-    }
-  }, [user?.id]);
-
-  // Close dropdown when clicking outside
-  useEffect(() => {
-     
-    const handleClickOutside = (event: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
-        setShowDropdown(false);
-      }
-    };
-
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
-
-  const fetchNotifications = async () => {
+  const fetchNotifications = useCallback(async () => {
     if (!user?.id) return;
     
     try {
@@ -76,7 +53,30 @@ export const NotificationsBell: React.FC = () => {
     } finally {
       setLoading(false);
     }
-  };
+  }, [user?.id]);
+
+  useEffect(() => {
+     
+    if (user?.id) {
+      fetchNotifications();
+      // Set up periodic refresh every 5 minutes
+      const interval = setInterval(fetchNotifications, 5 * 60 * 1000);
+      return () => clearInterval(interval);
+    }
+  }, [user?.id, fetchNotifications]);
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+     
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setShowDropdown(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
 
   const handleNotificationClick = async (notification: Notification) => {
     // Mark as read

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -95,67 +95,51 @@ export const GuardianView: React.FC = () => {
   const [showingEmergencyContacts, setShowingEmergencyContacts] = useState(false);
   const [userId, setUserId] = useState<string>('');
 
-  useEffect(() => {
-     
-    loadGuardianData();
-  }, []);
-
-  const loadGuardianData = async () => {
+  const loadGuardianData = useCallback(async () => {
     try {
       const { data: { user } } = await supabaseWithRetry.auth.getUser();
-      
       if (!user) {
         toast.error(t('guardianView.errors.pleaseLogin'));
         return;
       }
-
       // For this demo, we'll load all data
       // In a real application, you'd verify the user is an accepted guardian
       // and only show data they have permission to see
-      
       // Load key documents only
       const { data: documentsData, error: docsError } = await supabaseWithRetry
         .from('documents')
         .select('*')
         .eq('is_key_document', true);
-
       if (docsError) {
         // Error loading documents
       } else {
         setDocuments(documentsData || []);
       }
-
       // Load important contacts
       const { data: contactsData, error: contactsError } = await supabaseWithRetry
         .from('contacts')
         .select('*');
-
       if (contactsError) {
         // Error loading contacts
       } else {
         setContacts(contactsData || []);
       }
-
       // Load instructions
       const { data: instructionsData, error: instructionsError } = await supabaseWithRetry
         .from('instructions')
         .select('*')
         .single();
-
       if (instructionsError && instructionsError.code !== 'PGRST116') {
         // Error loading instructions
       } else {
         setInstructions(instructionsData);
       }
-
       // Set placeholder user info
       setUserInfo(t('guardianView.defaultUserName'));
-      
-    } catch (error: Record<string, unknown>) {
+    } catch (error: unknown) {
       const timestamp = new Date().toISOString();
-      const errorMessage = error?.message || t('errors.unknown');
-      const errorCode = error?.code || 'UNKNOWN_ERROR';
-      
+      const errorMessage = error instanceof Error ? error.message : t('errors.unknown');
+      const errorCode = error instanceof Error && 'code' in error ? String(error.code) : 'UNKNOWN_ERROR';
       // Detailed logging for debugging
       console.error('[Guardian View] Error loading guardian data:', {
         timestamp,
@@ -163,29 +147,31 @@ export const GuardianView: React.FC = () => {
         errorCode,
         errorMessage,
         errorDetails: error,
-        stack: error?.stack
+        stack: error instanceof Error ? error.stack : undefined
       });
-      
       // User-friendly message
       let userMessage = t('guardianView.errors.failedToLoad');
-      
       // Specific messages based on error type
-      if (error?.code === 'PGRST116') {
+      if (errorCode === 'PGRST116') {
         userMessage = t('errors.dataNotFound');
-      } else if (error?.message?.includes('network')) {
+      } else if (errorMessage?.includes('network')) {
         userMessage = t('errors.networkError');
-      } else if (error?.message?.includes('permission')) {
+      } else if (errorMessage?.includes('permission')) {
         userMessage = t('errors.permissionDenied');
-      } else if (error?.message?.includes('duplicate')) {
+      } else if (errorMessage?.includes('duplicate')) {
         userMessage = t('errors.duplicateRecord');
       }
-      
-      setError(error);
+      setError(error instanceof Error ? error : new Error(errorMessage));
       toast.error(userMessage);
     } finally {
       setLoading(false);
     }
-  };
+  }, [t]);
+
+  useEffect(() => {
+     
+    loadGuardianData();
+  }, [loadGuardianData]);
 
   const getCountryFlag = (countryCode: string) => {
     const config = Object.values(COUNTRY_CONFIGS).find(c => c.code === countryCode);

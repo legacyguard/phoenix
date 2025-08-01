@@ -158,7 +158,7 @@ export function useAI(): UseAIReturn {
       console.error('Document analysis failed:', error);
       return null;
     }
-  }, []);
+  }, [analyzeDocumentMutation]);
 
   const generateQuestion = useCallback(async (profile: UserProfile, options?: OpenAIRequestOptions): Promise<LifeQuestion | null> => {
      
@@ -170,7 +170,7 @@ export function useAI(): UseAIReturn {
       console.error('Question generation failed:', error);
       return null;
     }
-  }, []);
+  }, [generateQuestionMutation]);
 
   const suggestAction = useCallback(async (context: UserContext, options?: OpenAIRequestOptions): Promise<ActionSuggestion | null> => {
      
@@ -182,7 +182,7 @@ export function useAI(): UseAIReturn {
       console.error('Action suggestion failed:', error);
       return null;
     }
-  }, []);
+  }, [suggestActionMutation]);
 
   const extractMetadata = useCallback(async (text: string, docType: string, options?: OpenAIRequestOptions): Promise<DocumentMetadata | null> => {
      
@@ -194,7 +194,7 @@ export function useAI(): UseAIReturn {
       console.error('Metadata extraction failed:', error);
       return null;
     }
-  }, []);
+  }, [extractMetadataMutation]);
 
   const generateMessage = useCallback(async (
     scenario: string, 
@@ -208,7 +208,7 @@ export function useAI(): UseAIReturn {
       console.error('Message generation failed:', error);
       return null;
     }
-  }, []);
+  }, [generateMessageMutation]);
 
   const clearCache = useCallback(() => {
      

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -61,12 +61,7 @@ export const SubscriptionDashboard: React.FC = () => {
   const [totalYearlyCost, setTotalYearlyCost] = useState(0);
   const [upcomingRenewals, setUpcomingRenewals] = useState<Subscription[]>([]);
 
-  useEffect(() => {
-     
-    loadSubscriptionData();
-  }, []);
-
-  const loadSubscriptionData = async () => {
+  const loadSubscriptionData = useCallback(async () => {
     try {
       setLoading(true);
       const { data: { user } } = await supabaseWithRetry.auth.getUser();
@@ -121,7 +116,11 @@ export const SubscriptionDashboard: React.FC = () => {
     } finally {
       setLoading(false);
     }
-  };
+  }, [t]);
+
+  useEffect(() => {
+    loadSubscriptionData();
+  }, [loadSubscriptionData]);
 
   const calculateCosts = (subs: Subscription[]) => {
     let monthly = 0;

@@ -20,12 +20,7 @@ export function useUserJourney() {
   });
 
   // Load user journey data on mount
-  useEffect(() => {
-     
-    loadUserJourney();
-  }, []);
-
-  const loadUserJourney = async () => {
+  const loadUserJourney = useCallback(async () => {
     try {
       const { data: { user } } = await supabase.auth.getUser();
       if (!user) {
@@ -53,7 +48,12 @@ export function useUserJourney() {
       console.error('Error loading user journey:', error);
       setState(prev => ({ ...prev, isLoading: false }));
     }
-  };
+  }, []);
+
+  useEffect(() => {
+     
+    loadUserJourney();
+  }, [loadUserJourney]);
 
   const determineCurrentStage = async (userId: string): Promise<AnalyticsEvent['user_journey_stage']> => {
     try {

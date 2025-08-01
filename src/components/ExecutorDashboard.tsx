@@ -54,9 +54,9 @@ const ExecutorDashboard: React.FC = () => {
     if (user) {
       fetchTasks();
     }
-  }, [user]);
+  }, [user, fetchTasks]);
 
-  const fetchTasks = async () => {
+  const fetchTasks = useCallback(async () => {
     try {
       setLoading(true);
       const taskList = await ExecutorTaskService.getExecutorTasks(user!.id);
@@ -90,7 +90,7 @@ const ExecutorDashboard: React.FC = () => {
     } finally {
       setLoading(false);
     }
-  };
+  }, [user, t]);
 
   const checkSensitiveInfoAvailability = async (tasks: ExecutorTask[]) => {
     try {

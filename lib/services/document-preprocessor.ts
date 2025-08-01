@@ -281,7 +281,7 @@ export class DocumentPreprocessor {
 
     // Czech/Slovak personal ID patterns
     const personalPatterns = [
-      /\d{6}/\d{3,4}/g, // Birth number
+      /\d{6}\/\d{3,4}/g, // Birth number
       /[A-Z]{2}\d{6}/g, // ID card number
       /\+?\d{3}\s?\d{3}\s?\d{3}\s?\d{3}/g, // Phone numbers
       /[\w.-]+@[\w.-]+\.\w+/g, // Email addresses
@@ -325,7 +325,7 @@ export class DocumentPreprocessor {
 
     // Optionally preserve amounts
     if (!options.preserveAmounts) {
-      const amountPattern = /\d+[,.\s]?\d*\s*(K|CZK||EUR|USD|\$)/g;
+      const amountPattern = /\d+[,.\s]?\d*\s*(K|CZK|EUR|USD|\$)/g;
       const matches = anonymized.match(amountPattern);
       if (matches) {
         removedCount += matches.length;

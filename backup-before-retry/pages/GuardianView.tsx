@@ -49,7 +49,7 @@ export const GuardianView: React.FC = () => {
   const [contacts, setContacts] = useState<Contact[]>([]);
   const [instructions, setInstructions] = useState<Instructions | null>(null);
   const [loading, setLoading] = useState(true);
-  const [guardianInfo, setGuardianInfo] = useState<any>(null);
+  const [guardianInfo, setGuardianInfo] = useState<Record<string, unknown> | null>(null);
   const [userInfo, setUserInfo] = useState<string>('');
 
   useEffect(() => {

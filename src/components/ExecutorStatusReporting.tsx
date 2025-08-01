@@ -61,9 +61,9 @@ export const ExecutorStatusReporting: React.FC<ExecutorStatusReportingProps> = (
   useEffect(() => {
      
     fetchCurrentStatus();
-  }, []);
+  }, [fetchCurrentStatus]);
 
-  const fetchCurrentStatus = async () => {
+  const fetchCurrentStatus = useCallback(async () => {
     try {
       const { data, error } = await supabase
         .from('executor_status')
@@ -85,7 +85,7 @@ export const ExecutorStatusReporting: React.FC<ExecutorStatusReportingProps> = (
     } catch (err) {
       console.error('Failed to fetch current status:', err);
     }
-  };
+  }, [deceasedUserId]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();

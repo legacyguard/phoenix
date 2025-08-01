@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -28,14 +28,7 @@ export default function MyConsultationsPage() {
   const [selectedConsultation, setSelectedConsultation] = useState<ConsultationRequest | null>(null);
   const [showResponseDialog, setShowResponseDialog] = useState(false);
 
-  useEffect(() => {
-     
-    if (user) {
-      fetchConsultations();
-    }
-  }, [user]);
-
-  const fetchConsultations = async () => {
+  const fetchConsultations = useCallback(async () => {
     if (!user) return;
     
     setLoading(true);
@@ -47,7 +40,14 @@ export default function MyConsultationsPage() {
     } finally {
       setLoading(false);
     }
-  };
+  }, [user]);
+
+  useEffect(() => {
+     
+    if (user) {
+      fetchConsultations();
+    }
+  }, [user, fetchConsultations]);
 
   const getStatusBadge = (status: string) => {
     const statusConfig = {

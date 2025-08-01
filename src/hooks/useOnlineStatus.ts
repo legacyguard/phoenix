@@ -1,30 +1,12 @@
-import { useState, useEffect } from 'react';
-import { toast } from 'sonner';
+import React from 'react';
 
+// Hook pre sledovanie online statusu
 export function useOnlineStatus() {
-  const [isOnline, setIsOnline] = useState(navigator.onLine);
-  const [wasOffline, setWasOffline] = useState(false);
+  const [isOnline, setIsOnline] = React.useState(navigator.onLine);
 
-  useEffect(() => {
-    const handleOnline = () => {
-      setIsOnline(true);
-      if (wasOffline) {
-        toast.success('Pripojenie obnovené', {
-          description: 'Môžete pokračovať v práci',
-          icon: '🌐'
-        });
-        setWasOffline(false);
-      }
-    };
-
-    const handleOffline = () => {
-      setIsOnline(false);
-      setWasOffline(true);
-      toast.error('Stratené pripojenie', {
-        description: 'Pracujete v offline režime',
-        icon: '📡'
-      });
-    };
+  React.useEffect(() => {
+    const handleOnline = () => setIsOnline(true);
+    const handleOffline = () => setIsOnline(false);
 
     window.addEventListener('online', handleOnline);
     window.addEventListener('offline', handleOffline);
@@ -33,7 +15,7 @@ export function useOnlineStatus() {
       window.removeEventListener('online', handleOnline);
       window.removeEventListener('offline', handleOffline);
     };
-  }, [wasOffline]);
+  }, []);
 
   return isOnline;
 }

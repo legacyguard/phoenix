@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router-dom';
 import { sharingService } from '@/services/sharingService';
@@ -27,14 +27,7 @@ export function SharedContentViewer({ token, password }: SharedContentViewerProp
 
   const effectiveToken = routeToken || token || '';
 
-  useEffect(() => {
-     
-    if (effectiveToken) {
-      checkShareLink();
-    }
-  }, [effectiveToken]);
-
-  const checkShareLink = async () => {
+  const checkShareLink = useCallback(async () => {
     setLoading(true);
     setError('');
 
@@ -83,7 +76,13 @@ export function SharedContentViewer({ token, password }: SharedContentViewerProp
     } finally {
       setLoading(false);
     }
-  };
+  }, [effectiveToken, providedPassword, t]);
+
+  useEffect(() => {
+    if (effectiveToken) {
+      checkShareLink();
+    }
+  }, [effectiveToken, checkShareLink]);
 
   const handlePasswordSubmit = async (e: React.FormEvent) => {
     e.preventDefault();

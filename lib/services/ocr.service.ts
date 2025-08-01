@@ -239,8 +239,8 @@ export class OCRService {
     // Common patterns
     const patterns = {
       date: /\d{1,2}[./-]\d{1,2}[./-]\d{2,4}/g,
-      amount: /\d+[,.\s]?\d*\s*(K|CZK||EUR|USD|\$)/g,
-      idNumber: /\d{6}/\d{3,4}/g,
+      amount: /\d+[,.\s]?\d*\s*(K|CZK|EUR|USD|\$)/g,
+      idNumber: /\d{6}\/\d{3,4}/g,
       email: /[\w.-]+@[\w.-]+\.\w+/g,
       phone: /\+?\d{3}\s?\d{3}\s?\d{3}\s?\d{3}/g,
     };
@@ -278,13 +278,13 @@ export class OCRService {
 
       case 'bank_statement':
         data.customFields = {
-          accountNumber: this.extractPattern(text, /\d{4,6}/\d{4}/),
+          accountNumber: this.extractPattern(text, /\d{4,6}\/\d{4}/),
           iban: this.extractPattern(text, /[A-Z]{2}\d{2}\s?\d{4}\s?\d{4}\s?\d{4}\s?\d{4}\s?\d{4}/),
         };
         break;
 
       case 'property_deed':
-        data.cadastralNumber = this.extractPattern(text, /\d+/\d+/);
+        data.cadastralNumber = this.extractPattern(text, /\d+\/\d+/);
         data.propertyAddress = this.extractPattern(text, /(?:adresa|address):?\s*([^\n]+)/i);
         break;
 

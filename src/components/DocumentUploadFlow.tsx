@@ -134,7 +134,7 @@ const DocumentUploadFlow: React.FC<DocumentUploadFlowProps> = ({
       setError(err instanceof Error ? err.message : `Failed to process document in ${processingMode} mode`);
       setCurrentStep('upload');
     }
-  }, [apiKey, onDocumentProcessed, processImage, processingMode]);
+  }, [apiKey, onDocumentProcessed, processImage, processingMode, classification, extractedData, findRelatedItems, suggestedLinks, t]);
 
   // Simulated metadata extraction
   const extractDocumentMetadata = async (classification: ClassificationResult, base64: string): Promise<Record<string, unknown>> => {
@@ -152,7 +152,7 @@ const DocumentUploadFlow: React.FC<DocumentUploadFlowProps> = ({
   };
 
   // Simulated relationship finding
-  const findRelatedItems = async (classification: ClassificationResult, metadata: Record<string, unknown>): Promise<Record<string, unknown>> => {
+  const findRelatedItems = useCallback(async (classification: ClassificationResult, metadata: Record<string, unknown>): Promise<Record<string, unknown>> => {
     const suggestions: Record<string, unknown> = {
       relatedPossessions: [],
       relatedPeople: [],
@@ -213,7 +213,7 @@ const DocumentUploadFlow: React.FC<DocumentUploadFlowProps> = ({
     }
 
     return suggestions;
-  };
+  }, [existingPossessions, trustedPeople]);
 
   // Convert file to base64
   const fileToBase64 = (file: File): Promise<string> => {

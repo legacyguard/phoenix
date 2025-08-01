@@ -121,7 +121,7 @@ export function VideoRecorder({
         return newDuration;
       });
     }, 1000);
-  }, [maxDurationSeconds]);
+  }, [maxDurationSeconds, stopRecording]);
 
   const stopRecording = useCallback(() => {
     if (!mediaRecorderRef.current || mediaRecorderRef.current.state === 'inactive') {

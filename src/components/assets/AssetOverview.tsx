@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import { supabaseWithRetry } from '@/utils/supabaseWithRetry';
@@ -67,12 +67,7 @@ export const AssetOverview: React.FC = () => {
   const [totalValue, setTotalValue] = useState(0);
   const [currency, setCurrency] = useState('USD');
 
-  useEffect(() => {
-     
-    loadAssetData();
-  }, []);
-
-  const loadAssetData = async () => {
+  const loadAssetData = useCallback(async () => {
     try {
       const { data: { user } } = await supabaseWithRetry.auth.getUser();
       if (!user) return;
@@ -114,7 +109,11 @@ export const AssetOverview: React.FC = () => {
     } finally {
       setLoading(false);
     }
-  };
+  }, [t]);
+
+  useEffect(() => {
+    loadAssetData();
+  }, [loadAssetData]);
 
   const formatCurrency = (value: number) => {
     return new Intl.NumberFormat('en-US', {

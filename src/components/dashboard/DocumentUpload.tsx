@@ -160,7 +160,7 @@ export const DocumentUpload: React.FC<DocumentUploadProps> = ({ onDocumentUpload
       const nameWithoutExtension = selectedFile.name.replace(/\.[^/.]+$/, '');
       setDocumentName(nameWithoutExtension);
     }
-  }, [documentName, t]);
+  }, [documentName, plan, storageUsage, t]);
 
   const handleDrop = useCallback((e: React.DragEvent) => {
      

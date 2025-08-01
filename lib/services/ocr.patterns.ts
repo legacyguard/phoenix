@@ -44,7 +44,7 @@ export const documentPatterns: Record<DocumentType, DocumentPattern> = {
       // IBAN patterns
       { regex: /[A-Z]{2}\d{2}\s?\d{4}\s?\d{4}\s?\d{4}\s?\d{4}\s?\d{4}/i, weight: 8 },
       // Transaction patterns
-      { regex: /\d{1,2}\.\d{1,2}\.\d{4}.*[+-]?\d+[,\.]\d{2}/, weight: 5 },
+      { regex: /\d{1,2}\.\d{1,2}\.\d{4}.*[+-]?\d+[,.]\d{2}/, weight: 5 },
     ],
     requiredMatches: 3,
     confidenceThreshold: 0.75,
@@ -66,7 +66,7 @@ export const documentPatterns: Record<DocumentType, DocumentPattern> = {
       { regex: /katastrlne\s+zemie/i, weight: 8, language: 'sk' },
       // Common patterns
       { regex: /LV\s*\.\s*\d+/i, weight: 9 }, // LV number
-      { regex: /\\d+\/\\d+/, weight: 5 }, // Ownership fraction
+      { regex: /\d+\/\d+/, weight: 5 }, // Ownership fraction
     ],
     requiredMatches: 3,
     confidenceThreshold: 0.8,
@@ -89,7 +89,7 @@ export const documentPatterns: Record<DocumentType, DocumentPattern> = {
       { regex: /dtum\s+narodenia/i, weight: 7, language: 'sk' },
       { regex: /rodn\s+slo/i, weight: 8, language: 'sk' },
       // ID number pattern
-      { regex: /\d{6}/\d{3,4}/, weight: 9 }, // Birth number format
+      { regex: /\d{6}\/\d{3,4}/, weight: 9 }, // Birth number format
       { regex: /[A-Z]{2}\d{6}/, weight: 8 }, // ID card number
     ],
     requiredMatches: 4,
@@ -194,7 +194,7 @@ export const documentPatterns: Record<DocumentType, DocumentPattern> = {
       // Common invoice patterns
       { regex: /DPH\s*\d{1,2}\s*%/, weight: 7 }, // VAT
       { regex: /I\s*DPH/, weight: 6 }, // VAT ID
-      { regex: /\d+[,\.]\d{2}\s*(K|CZK||EUR)/, weight: 6 }, // Amount with currency
+      { regex: /\d+[,.]\d{2}\s*(K|CZK||EUR)/, weight: 6 }, // Amount with currency
     ],
     requiredMatches: 3,
     confidenceThreshold: 0.75,
@@ -214,7 +214,7 @@ export const documentPatterns: Record<DocumentType, DocumentPattern> = {
       { regex: /EET/, weight: 8 }, // Czech electronic evidence
       { regex: /FIK\s*:/, weight: 9 }, // Fiscal ID
       { regex: /BKP\s*:/, weight: 8 }, // Security code
-      { regex: /celkem\s*:?\s*\d+[,\.]\d{2}/, weight: 7 },
+      { regex: /celkem\s*:?\s*\d+[,.]\d{2}/, weight: 7 },
     ],
     requiredMatches: 2,
     confidenceThreshold: 0.7,

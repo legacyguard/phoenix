@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { toast } from 'sonner';
 import { supabase } from '@/lib/supabase';
@@ -56,12 +56,7 @@ export default function GuardianPlaybook({ userId, guardianId, guardianName, isR
   const [showDiscardDialog, setShowDiscardDialog] = useState(false);
   const [activeTab, setActiveTab] = useState('funeral');
 
-  useEffect(() => {
-     
-    fetchPlaybook();
-  }, [userId, guardianId]);
-
-  const fetchPlaybook = async () => {
+  const fetchPlaybook = useCallback(async () => {
     try {
       setLoading(true);
       const { data, error } = await supabase
@@ -87,7 +82,11 @@ export default function GuardianPlaybook({ userId, guardianId, guardianName, isR
     } finally {
       setLoading(false);
     }
-  };
+  }, [userId, guardianId, t]);
+
+  useEffect(() => {
+    fetchPlaybook();
+  }, [userId, guardianId, fetchPlaybook]);
 
   const savePlaybook = async () => {
     try {

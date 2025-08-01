@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { ExecutorTaskService } from '@/services/executorTaskService';
 import { useAuth } from '@/contexts/AuthContext';
 
@@ -44,7 +44,7 @@ export function useExecutorTasks(): UseExecutorTasksReturn {
   const [error, setError] = useState<string | null>(null);
   const [stats, setStats] = useState({ total: 0, completed: 0, pending: 0 });
 
-  const fetchTasks = async () => {
+  const fetchTasks = useCallback(async () => {
     if (!user) return;
     
     try {
@@ -74,7 +74,7 @@ export function useExecutorTasks(): UseExecutorTasksReturn {
     } finally {
       setLoading(false);
     }
-  };
+  }, [user]);
 
   const updateTaskStatus = async (taskId: string, status: 'pending' | 'completed') => {
     if (!user) return;
@@ -95,7 +95,7 @@ export function useExecutorTasks(): UseExecutorTasksReturn {
     if (user) {
       fetchTasks();
     }
-  }, [user]);
+  }, [user, fetchTasks]);
 
   return {
     tasks,

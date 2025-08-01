@@ -80,7 +80,7 @@ const LegalConsultationModal: React.FC<LegalConsultationModalProps> = ({
     if (selected) {
       setSelectedPrice(selected.price);
     }
-  }, [consultationType]);
+  }, [consultationType, consultationTypes]);
 
   const handleProceed = () => {
     setError('');

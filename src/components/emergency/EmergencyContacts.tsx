@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { DragDropContext, Droppable, Draggable, DropResult } from '@hello-pangea/dnd';
 import { supabaseWithRetry } from '@/utils/supabaseWithRetry';
@@ -74,12 +74,7 @@ export const EmergencyContacts: React.FC = () => {
   const [relationship, setRelationship] = useState<string>('');
   const [isReordering, setIsReordering] = useState(false);
 
-  useEffect(() => {
-     
-    loadData();
-  }, []);
-
-  const loadData = async () => {
+  const loadData = useCallback(async () => {
     try {
       const { data: { user } } = await supabaseWithRetry.auth.getUser();
       if (!user) return;
@@ -115,7 +110,11 @@ export const EmergencyContacts: React.FC = () => {
     } finally {
       setLoading(false);
     }
-  };
+  }, [t]);
+
+  useEffect(() => {
+    loadData();
+  }, [loadData]);
 
   const handleDragEnd = async (result: DropResult) => {
     if (!result.destination) return;
@@ -371,7 +370,7 @@ export const EmergencyContacts: React.FC = () => {
                                         <span className="flex items-center gap-1 text-xs text-muted-foreground">
                                           <Clock className="h-3 w-3" />
                                           {t('emergency.lastContacted', {
-                                            time: formatDistanceToNow(new Date(contact.last_contacted))
+                                            time: format(new Date(contact.last_contacted), 'MM/dd/yyyy HH:mm')
                                           })}
                                         </span>
                                       )}
@@ -465,16 +464,4 @@ export const EmergencyContacts: React.FC = () => {
       </Dialog>
     </>
   );
-};
-
-// Helper function that might be used elsewhere
-import { formatDistanceToNow } from 'date-fns';
-
-export const formatLastContacted = (date: string | null): string => {
-  if (!date) return '';
-  try {
-    return formatDistanceToNow(new Date(date), { addSuffix: true });
-  } catch {
-    return '';
-  }
 };

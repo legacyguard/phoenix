@@ -84,12 +84,7 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
   });
 
   // Load existing playbook
-  useEffect(() => {
-     
-    loadPlaybook();
-  }, [guardianId]);
-
-  const loadPlaybook = async () => {
+  const loadPlaybook = useCallback(async () => {
     try {
       const { data: { user } } = await supabaseWithRetry.auth.getUser();
       if (!user) return;
@@ -122,7 +117,11 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
     } finally {
       setIsLoading(false);
     }
-  };
+  }, [guardianId, t]);
+
+  useEffect(() => {
+    loadPlaybook();
+  }, [guardianId, loadPlaybook]);
 
   // Auto-save functionality
   const autoSave = useDebouncedCallback(async () => {

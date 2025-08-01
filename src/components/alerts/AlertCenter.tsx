@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { supabaseWithRetry } from '@/utils/supabaseWithRetry';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -55,14 +55,7 @@ export const AlertCenter: React.FC<AlertCenterProps> = ({
   const [loading, setLoading] = useState(true);
   const [activeTab, setActiveTab] = useState<'active' | 'snoozed' | 'dismissed'>('active');
 
-  useEffect(() => {
-     
-    if (isOpen) {
-      loadAlerts();
-    }
-  }, [isOpen, activeTab]);
-
-  const loadAlerts = async () => {
+  const loadAlerts = useCallback(async () => {
     try {
       const { data: { user } } = await supabaseWithRetry.auth.getUser();
       if (!user) return;
@@ -121,7 +114,14 @@ export const AlertCenter: React.FC<AlertCenterProps> = ({
     } finally {
       setLoading(false);
     }
-  };
+  }, [activeTab, onAlertCountChange, t]);
+
+  useEffect(() => {
+     
+    if (isOpen) {
+      loadAlerts();
+    }
+  }, [isOpen, activeTab, loadAlerts]);
 
   const markAsRead = async (alertId: string) => {
     try {

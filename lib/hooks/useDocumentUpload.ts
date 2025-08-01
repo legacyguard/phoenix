@@ -41,6 +41,7 @@ export function useDocumentUpload(): UseDocumentUploadReturn {
   // Track active uploads
   const activeUploads = useRef(0);
   const isMounted = useRef(true);
+  const processQueueRef = useRef<(() => void) | null>(null);
 
   useEffect(() => {
      
@@ -58,23 +59,8 @@ export function useDocumentUpload(): UseDocumentUploadReturn {
   const successCount = uploadQueue.filter(item => item.status === 'completed').length;
   const failureCount = uploadQueue.filter(item => item.status === 'failed').length;
 
-  // Process upload queue
-  const processQueue = useCallback(async () => {
-    // Get pending items
-    const pending = uploadQueue.filter(item => item.status === 'pending');
-    
-    // Process up to MAX_CONCURRENT_UPLOADS
-    while (activeUploads.current < MAX_CONCURRENT_UPLOADS && pending.length > 0) {
-      const item = pending.shift();
-      if (!item) break;
-      
-      activeUploads.current++;
-      processUpload(item);
-    }
-  }, [uploadQueue]);
-
   // Process single upload
-  const processUpload = async (item: UploadQueueItem) => {
+  const processUpload = useCallback(async (item: UploadQueueItem) => {
     if (!isMounted.current) return;
 
     // Update status to processing
@@ -150,10 +136,26 @@ export function useDocumentUpload(): UseDocumentUploadReturn {
       if (isMounted.current) {
         setCurrentProcessing('');
         // Process next item in queue
-        processQueue();
+        processQueueRef.current?.();
       }
     }
-  };
+  }, []);
+
+  // Process queue
+  const processQueue = useCallback(() => {
+    if (activeUploads.current >= MAX_CONCURRENT_UPLOADS) return;
+    
+    const pendingItem = uploadQueue.find(item => item.status === 'pending');
+    if (!pendingItem) return;
+      
+    activeUploads.current++;
+    processUpload(pendingItem);
+  }, [uploadQueue, processUpload]);
+
+  // Store processQueue in ref
+  useEffect(() => {
+    processQueueRef.current = processQueue;
+  }, [processQueue]);
 
   // Upload multiple files
   const upload = useCallback(async (files: File[], options: UploadOptions = {}) => {

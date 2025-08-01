@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Alert, AlertDescription } from '@/components/ui/alert';
@@ -101,14 +101,7 @@ const WillGenerator: React.FC<WillGeneratorProps> = ({
   { id: 5, title: t("willGenerator.steps.signConfirm"), icon: AlertTriangle }];
 
 
-  useEffect(() => {
-     
-    if (jurisdictionConfirmed && currentStep === 2) {
-      fetchTemplate();
-    }
-  }, [jurisdictionConfirmed, currentStep]);
-
-  const fetchTemplate = async () => {
+  const fetchTemplate = useCallback(async () => {
     setLoading(true);
     setError(null);
     try {
@@ -123,7 +116,14 @@ const WillGenerator: React.FC<WillGeneratorProps> = ({
     } finally {
       setLoading(false);
     }
-  };
+  }, [countryCode, languageCode, t]);
+
+  useEffect(() => {
+     
+    if (jurisdictionConfirmed && currentStep === 2) {
+      fetchTemplate();
+    }
+  }, [jurisdictionConfirmed, currentStep, fetchTemplate]);
 
   const handleJurisdictionConfirm = (confirmed: boolean) => {
     if (confirmed) {

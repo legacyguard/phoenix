@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { useAuth } from '@/contexts/AuthContext';
 import { Activity, MessageSquare, Clock } from 'lucide-react';
@@ -30,12 +30,7 @@ export const FamilyExecutorStatusView: React.FC<FamilyExecutorStatusViewProps> =
   const [loading, setLoading] = useState(true);
   const [executorName, setExecutorName] = useState<string>('');
 
-  useEffect(() => {
-     
-    fetchData();
-  }, []);
-
-  const fetchData = async () => {
+  const fetchData = useCallback(async () => {
     try {
       setLoading(true);
       
@@ -63,7 +58,12 @@ export const FamilyExecutorStatusView: React.FC<FamilyExecutorStatusViewProps> =
     } finally {
       setLoading(false);
     }
-  };
+  }, [deceasedUserId, t]);
+
+  useEffect(() => {
+     
+    fetchData();
+  }, [fetchData]);
 
   if (loading) {
     return (

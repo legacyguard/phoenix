@@ -216,7 +216,7 @@ export const BasicLifeQuestions: React.FC<BasicLifeQuestionsProps> = ({
     const currentAnswer = answers[currentQuestion.id as keyof LifeAnswers];
     setSelectedOption(currentAnswer || null);
     setQuestionStartTime(Date.now());
-  }, [currentQuestionIndex]);
+  }, [currentQuestionIndex, answers, currentQuestion.id]);
 
   const handleOptionSelect = (value: string) => {
     setSelectedOption(value);

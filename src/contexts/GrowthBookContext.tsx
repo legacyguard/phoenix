@@ -19,14 +19,6 @@ const GrowthBookContext = createContext<GrowthBookContextType>({
   experiments: {}
 });
 
-export const useGrowthBook = () => {
-  const context = useContext(GrowthBookContext);
-  if (!context) {
-    throw new Error('useGrowthBook must be used within a GrowthBookProvider');
-  }
-  return context;
-};
-
 interface GrowthBookProviderProps {
   children: ReactNode;
   growthbook: GrowthBook;

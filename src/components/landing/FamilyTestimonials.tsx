@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Card, CardContent, CardDescription, CardHeader } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -36,37 +36,38 @@ export const FamilyTestimonials: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
-  const testimonials: Testimonial[] = [
-  {
-    id: 1,
-    name: t('testimonials.stories.1.name'),
-    role: t('testimonials.stories.1.role'),
-    location: t('testimonials.stories.1.location'),
-    quote: t('testimonials.stories.1.quote'),
-    highlight: t('testimonials.stories.1.highlight'),
-    rating: 5,
-    verified: true
-  },
-  {
-    id: 2,
-    name: t('testimonials.stories.2.name'),
-    role: t('testimonials.stories.2.role'),
-    location: t('testimonials.stories.2.location'),
-    quote: t('testimonials.stories.2.quote'),
-    highlight: t('testimonials.stories.2.highlight'),
-    rating: 5,
-    verified: true
-  },
-  {
-    id: 3,
-    name: t('testimonials.stories.3.name'),
-    role: t('testimonials.stories.3.role'),
-    location: t('testimonials.stories.3.location'),
-    quote: t('testimonials.stories.3.quote'),
-    highlight: t('testimonials.stories.3.highlight'),
-    rating: 5,
-    verified: true
-  }];
+  const testimonials: Testimonial[] = useMemo(() => [
+    {
+      id: 1,
+      name: t('testimonials.stories.1.name'),
+      role: t('testimonials.stories.1.role'),
+      location: t('testimonials.stories.1.location'),
+      quote: t('testimonials.stories.1.quote'),
+      highlight: t('testimonials.stories.1.highlight'),
+      rating: 5,
+      verified: true
+    },
+    {
+      id: 2,
+      name: t('testimonials.stories.2.name'),
+      role: t('testimonials.stories.2.role'),
+      location: t('testimonials.stories.2.location'),
+      quote: t('testimonials.stories.2.quote'),
+      highlight: t('testimonials.stories.2.highlight'),
+      rating: 5,
+      verified: true
+    },
+    {
+      id: 3,
+      name: t('testimonials.stories.3.name'),
+      role: t('testimonials.stories.3.role'),
+      location: t('testimonials.stories.3.location'),
+      quote: t('testimonials.stories.3.quote'),
+      highlight: t('testimonials.stories.3.highlight'),
+      rating: 5,
+      verified: true
+    }
+  ], [t]);
 
 
   useEffect(() => {
@@ -88,7 +89,7 @@ export const FamilyTestimonials: React.FC = () => {
       name: testimonials[currentIndex].name,
       autoPlay: isAutoPlaying
     });
-  }, [currentIndex, trackAction]);
+  }, [currentIndex, trackAction, isAutoPlaying, testimonials]);
 
   const handlePrevious = () => {
     setIsAutoPlaying(false);

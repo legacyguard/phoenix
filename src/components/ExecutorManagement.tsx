@@ -36,9 +36,9 @@ const ExecutorManagement: React.FC = () => {
     if (user) {
       fetchExecutors();
     }
-  }, [user]);
+  }, [user, fetchExecutors]);
 
-  const fetchExecutors = async () => {
+  const fetchExecutors = useCallback(async () => {
     try {
       setLoading(true);
       const { data, error } = await supabase.
@@ -61,7 +61,7 @@ const ExecutorManagement: React.FC = () => {
     } finally {
       setLoading(false);
     }
-  };
+  }, [user]);
 
   const addExecutor = async () => {
     try {

@@ -19,7 +19,7 @@ const resources = Object.entries(translations).reduce((acc, [path, content]) => 
     
     // Add the language resource to the accumulator
     acc[langCode] = { 
-      common: translationContent 
+      common: translationContent as Record<string, unknown>
     };
     
   } catch (error) {
@@ -27,7 +27,7 @@ const resources = Object.entries(translations).reduce((acc, [path, content]) => 
   }
   
   return acc;
-}, {} as Record<string, any>);
+}, {} as Record<string, Record<string, unknown>>);
 
 // Validation and debugging
 const loadedLanguages = Object.keys(resources).sort();

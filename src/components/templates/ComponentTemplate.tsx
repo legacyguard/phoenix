@@ -89,16 +89,8 @@ export const ComponentName: React.FC<ComponentProps> = ({
     toast.error(t('common.errors.generic'));
   }, [t]);
   
-  // Effects
-  useEffect(() => {
-     
-    if (id) {
-      loadData();
-    }
-  }, [id]);
-  
   // Data loading function
-  const loadData = async () => {
+  const loadData = useCallback(async () => {
     if (!id) return;
     
     setIsLoading(true);
@@ -130,7 +122,15 @@ export const ComponentName: React.FC<ComponentProps> = ({
     } finally {
       setIsLoading(false);
     }
-  };
+  }, [id, handleDataChange, handleError, getToken]);
+  
+  // Effects
+  useEffect(() => {
+     
+    if (id) {
+      loadData();
+    }
+  }, [id, loadData]);
   
   // Event handlers
   const handleSave = async () => {

@@ -53,7 +53,7 @@ export function UploadDemo() {
       .map(item => item.result!.document!);
     
     setUploadedDocuments(prev => [...prev, ...completed]);
-  }, [successCount]);
+  }, [successCount, uploadQueue]);
 
   const handleUploadStart = () => {
     console.log(t('demo.upload.console.uploadStarted'));

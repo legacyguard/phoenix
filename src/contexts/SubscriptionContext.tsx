@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useEffect, useState } from 'react';
+import React, { createContext, useContext, useState, useEffect, useCallback } from 'react';
 import { useUser } from '@clerk/clerk-react';
 import { stripeService, SubscriptionStatus } from '@/services/stripeService';
 import { supabase } from '@/lib/supabase';
@@ -42,7 +42,7 @@ export const SubscriptionProvider: React.FC<{ children: React.ReactNode }> = ({ 
   const [subscriptionStatus, setSubscriptionStatus] = useState<SubscriptionStatus | null>(null);
   const [isLoading, setIsLoading] = useState(true);
 
-  const refreshSubscription = async () => {
+  const refreshSubscription = useCallback(async () => {
     if (!user?.id) {
       setSubscriptionStatus(null);
       setIsLoading(false);
@@ -58,7 +58,7 @@ export const SubscriptionProvider: React.FC<{ children: React.ReactNode }> = ({ 
     } finally {
       setIsLoading(false);
     }
-  };
+  }, [user?.id]);
 
   // Check feature access
   const checkAccess = (feature: string): boolean => {
@@ -94,7 +94,7 @@ export const SubscriptionProvider: React.FC<{ children: React.ReactNode }> = ({ 
     return () => {
       subscription.unsubscribe();
     };
-  }, [user?.id]);
+  }, [user?.id, refreshSubscription]);
 
   const isPremium = subscriptionStatus?.active || false;
 
@@ -111,12 +111,4 @@ export const SubscriptionProvider: React.FC<{ children: React.ReactNode }> = ({ 
       {children}
     </SubscriptionContext.Provider>
   );
-};
-
-export const useSubscription = () => {
-  const context = useContext(SubscriptionContext);
-  if (context === undefined) {
-    throw new Error('useSubscription must be used within a SubscriptionProvider');
-  }
-  return context;
 };

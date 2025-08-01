@@ -13,20 +13,17 @@ interface State {
   hasError: boolean;
 }
 
-// Loading fallback component
-const DefaultLoadingFallback = () => (
-  <div className="flex items-center justify-center p-8">
-    <Loader2 className="h-8 w-8 animate-spin text-primary" />
-  </div>
-);
-
 // Wrapper pre async komponenty s Error Boundary a Suspense
 export class AsyncErrorBoundary extends Component<Props, State> {
   render() {
     const { 
       children, 
       fallback, 
-      loadingFallback = <DefaultLoadingFallback />,
+      loadingFallback = (
+        <div className="flex items-center justify-center p-8">
+          <Loader2 className="h-8 w-8 animate-spin text-primary" />
+        </div>
+      ),
       onError 
     } = this.props;
 
@@ -38,20 +35,4 @@ export class AsyncErrorBoundary extends Component<Props, State> {
       </ErrorBoundary>
     );
   }
-}
-
-// HOC pre ľahšie použitie
-export function withAsyncErrorBoundary<P extends object>(
-  Component: React.ComponentType<P>,
-  options?: {
-    fallback?: ReactNode;
-    loadingFallback?: ReactNode;
-    onError?: (error: Error, errorInfo: React.ErrorInfo) => void;
-  }
-) {
-  return (props: P) => (
-    <AsyncErrorBoundary {...options}>
-      <Component {...props} />
-    </AsyncErrorBoundary>
-  );
 }

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -38,29 +38,7 @@ export const Vault: React.FC = () => {
   const [selectedAsset, setSelectedAsset] = useState<Asset | null>(null);
   const [error, setError] = useState<string | null>(null);
 
-  // Fetch assets on component mount
-  useEffect(() => {
-     
-    fetchAssets();
-  }, [user]);
-
-  // Filter assets based on search query
-  useEffect(() => {
-    if (!searchQuery) {
-      setFilteredAssets(assets);
-    } else {
-      const query = searchQuery.toLowerCase();
-      const filtered = assets.filter(
-        asset => 
-          asset.name.toLowerCase().includes(query) ||
-          asset.main_category.toLowerCase().includes(query) ||
-          asset.sub_type.toLowerCase().includes(query)
-      );
-      setFilteredAssets(filtered);
-    }
-  }, [searchQuery, assets]);
-
-  const fetchAssets = async () => {
+  const fetchAssets = useCallback(async () => {
     if (!user) return;
     
     try {
@@ -83,7 +61,29 @@ export const Vault: React.FC = () => {
     } finally {
       setIsLoading(false);
     }
-  };
+  }, [user, t]);
+
+  // Fetch assets on component mount
+  useEffect(() => {
+     
+    fetchAssets();
+  }, [user, fetchAssets]);
+
+  // Filter assets based on search query
+  useEffect(() => {
+    if (!searchQuery) {
+      setFilteredAssets(assets);
+    } else {
+      const query = searchQuery.toLowerCase();
+      const filtered = assets.filter(
+        asset => 
+          asset.name.toLowerCase().includes(query) ||
+          asset.main_category.toLowerCase().includes(query) ||
+          asset.sub_type.toLowerCase().includes(query)
+      );
+      setFilteredAssets(filtered);
+    }
+  }, [searchQuery, assets]);
 
   const handleAssetTypeClick = (category: string) => {
     setSelectedMainCategory(category);
