@@ -10,15 +10,6 @@ interface VisualConnectionSystemProps {
   userBeneficiaries?: any[];
 }
 
-interface LifeAreaConnection {
-  id: string;
-  title: string;
-  description: string;
-  connectionStrength: string;
-  benefits: string;
-  impact: string;
-}
-
 const VisualConnectionSystem: React.FC<VisualConnectionSystemProps> = ({
   userAssets = [],
   userDocuments = [],

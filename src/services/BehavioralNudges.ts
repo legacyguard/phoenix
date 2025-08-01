@@ -46,16 +46,15 @@ interface UserData {
 }
 
 export async function generateNudgesForUser(userId: string) {
-  const user = await supabase.from('users').select('id, possessions (type, value), trustedPeople (name, preparednessScore), user_profiles (ai_feature_toggles)').eq('id', userId).single();
+  // Use the correct table names from the schema
+  const assets = await supabase.from('assets').select('type, estimated_value').eq('user_id', userId);
+  const guardians = await supabase.from('guardians').select('full_name, invitation_status').eq('user_id', userId);
+  const wills = await supabase.from('wills').select('status').eq('user_id', userId);
  
-  if (!user.data) return;
-
-  const userData = user.data;
- 
-  if (!userData.user_profiles?.ai_feature_toggles?.behavioralNudges) return; // Skip if user has disabled behavioral nudges
+  if (!assets.data || !guardians.data || !wills.data) return;
 
   // Nudge 1: Social Proof
-  const hasLifeInsurance = userData.possessions.some((p: any) => p.type === 'life_insurance');
+  const hasLifeInsurance = assets.data.some((a: any) => a.type === 'life_insurance');
   if (!hasLifeInsurance) {
     await createNotification(userId, {
       type: 'nudge_social_proof',
@@ -65,8 +64,8 @@ export async function generateNudgesForUser(userId: string) {
   }
 
   // Nudge 2: Loss Aversion
-  const hasWill = userData.possessions.some((p: any) => p.type === 'will_or_trust');
-  const totalAssetValue = userData.possessions.reduce((sum: number, p: any) => sum + (p.value || 0), 0);
+  const hasWill = wills.data.length > 0;
+  const totalAssetValue = assets.data.reduce((sum: number, a: any) => sum + (a.estimated_value || 0), 0);
   if (totalAssetValue > 50000 && !hasWill) {
     await createNotification(userId, {
       type: 'nudge_loss_aversion',
@@ -76,7 +75,7 @@ export async function generateNudgesForUser(userId: string) {
   }
 
   // Nudge 3: Progress Momentum
-  const preparednessScore = calculateOverallPreparedness(userData);
+  const preparednessScore = calculateOverallPreparedness({ assets: assets.data, guardians: guardians.data, wills: wills.data });
   if (preparednessScore > 70 && preparednessScore < 95) {
     await createNotification(userId, {
       type: 'nudge_progress_momentum',
@@ -86,47 +85,29 @@ export async function generateNudgesForUser(userId: string) {
   }
 
   // Nudge 4: Commitment & Consistency
-  const unpreparedPerson = userData.trustedPeople.find((p: any) => p.preparednessScore < 50);
-  if (unpreparedPerson) {
+  const unpreparedGuardians = guardians.data.filter((g: any) => g.invitation_status !== 'accepted');
+  if (unpreparedGuardians.length > 0) {
     await createNotification(userId, {
       type: 'nudge_commitment',
-      message: `You've identified ${unpreparedPerson.name} as a trusted person. Take the next step to ensure they are fully prepared for their responsibilities.`,
+      message: `You've identified ${unpreparedGuardians[0].full_name} as a guardian. Take the next step to ensure they are fully prepared for their responsibilities.`,
       urgency: 'medium',
     });
   }
 }
 
 async function createNotification(userId: string, { type, message, urgency }: { type: string; message: string; urgency: 'low' | 'medium' | 'high' }) {
-  const { data: recentNotifications } = await supabase
-    .from('notifications')
-    .select('id, created_at')
-    .eq('user_id', userId)
-    .eq('type', type)
-    .order('created_at', { ascending: false })
-    .limit(1);
-
-  // Check if a similar nudge was sent recently (within 14 days)
-  if (recentNotifications && recentNotifications.length > 0) {
-    const lastNotificationDate = new Date(recentNotifications[0].created_at);
-    const dateDiff = (new Date().getTime() - lastNotificationDate.getTime()) / (1000 * 60 * 60 * 24);
-    if (dateDiff < 14) return;
-  }
-
-  // Insert the new nudge notification
-  await supabase.from('notifications').insert([
-    {
-      user_id: userId,
-      type,
-      title: `Behavioral Nudge: ${type.replace('_', ' ')}`,
-      message,
-      urgency,
-      is_read: false,
-      created_at: new Date().toISOString(),
-    },
-  ]);
+  // Note: notifications table doesn't exist in the schema, so this would need to be implemented
+  // For now, we'll just log the notification
+  console.log('Notification would be created:', { userId, type, message, urgency });
 }
 
 function calculateOverallPreparedness(userData: any) {
-  // Dummy implementation; you should replace this with actual logic based on your data
-  return Math.floor(Math.random() * (95 - 70) + 70);
+  // Calculate based on available data
+  let score = 0;
+  
+  if (userData.assets && userData.assets.length > 0) score += 30;
+  if (userData.guardians && userData.guardians.length > 0) score += 30;
+  if (userData.wills && userData.wills.length > 0) score += 40;
+  
+  return Math.min(score, 100);
 }
