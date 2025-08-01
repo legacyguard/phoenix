@@ -20,7 +20,7 @@ interface LifeAreaConnection {
   impact: string;
 }
 
-const VisualConnectionSystem: React.FCVisualConnectionSystemProps = ({
+const VisualConnectionSystem: React.FC<VisualConnectionSystemProps> = ({
   userAssets = [],
   userDocuments = [],
   userGuardians = [],

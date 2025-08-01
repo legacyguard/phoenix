@@ -54,13 +54,13 @@ export const FamilyPreparednessIndex: React.FC<FamilyPreparednessIndexProps> = (
       id: 'immediate_financial_needs',
       capability: t('familyCapabilities.immediateFinancialNeeds'),
       status: userAssets.some(a => a.type?.toLowerCase().includes('bank')) ? 'capable' : 'vulnerable',
-      icon: userAssets.some(a => a.type?.toLowerCase().includes('bank')) ? CheckCircle2 : AlertTriangle
+      icon: userAssets.some(a => a.type?.toLowerCase().includes('bank')) ? <CheckCircle2 /> : <AlertTriangle />
     },
     {
       id: 'digital_access',
       capability: t('familyCapabilities.digitalAccess'),
       status: userDocuments.some(d => d.type?.toLowerCase().includes('digital')) ? 'capable' : 'vulnerable',
-      icon: userDocuments.some(d => d.type?.toLowerCase().includes('digital')) ? CheckCircle2 : AlertTriangle
+      icon: userDocuments.some(d => d.type?.toLowerCase().includes('digital')) ? <CheckCircle2 /> : <AlertTriangle />
     },
     // Additional capabilities go here
   ], [userAssets, userDocuments, userGuardians, userBeneficiaries]);
@@ -70,7 +70,7 @@ export const FamilyPreparednessIndex: React.FC<FamilyPreparednessIndexProps> = (
       id: 'emergency_hospital',
       title: t('preparedness.scenarios.emergencyHospital.title'),
       description: t('preparedness.scenarios.emergencyHospital.description'),
-      icon: Heart,
+      icon: <Heart />,
       isPrepared: true, // Example: conditionally calculate
       requiredCapabilities: [],
       missingCapabilities: []
@@ -79,7 +79,7 @@ export const FamilyPreparednessIndex: React.FC<FamilyPreparednessIndexProps> = (
       id: 'sudden_death',
       title: t('preparedness.scenarios.suddenDeath.title'),
       description: t('preparedness.scenarios.suddenDeath.description'),
-      icon: AlertCircle,
+      icon: <AlertCircle />,
       isPrepared: false, // Example: conditionally calculate
       requiredCapabilities: ['immediate_financial_needs', 'digital_access'],
       missingCapabilities: []

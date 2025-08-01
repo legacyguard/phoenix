@@ -47,7 +47,6 @@ interface UserData {
 
 export async function generateNudgesForUser(userId: string) {
   const user = await supabase.from('users').select('id, possessions (type, value), trustedPeople (name, preparednessScore), user_profiles (ai_feature_toggles)').eq('id', userId).single();
-ggles)').eq('id', userId).single();
  
   if (!user.data) return;
 
