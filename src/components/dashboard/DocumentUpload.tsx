@@ -36,7 +36,7 @@ interface DocumentUploadProps {
   onCancel: () => void;
 }
 
-export const DocumentUpload: React.FC<DocumentUploadProps> = ({ onDocumentUploaded, onCancel }) => {const { t: t } = useTranslation("common");
+export const DocumentUpload: React.FC<DocumentUploadProps> = ({ onDocumentUploaded, onCancel }) => {
   const { t } = useTranslation('common');
   const { selectedCountryCode } = useCountry();
 
