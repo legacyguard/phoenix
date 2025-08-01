@@ -787,9 +787,7 @@ export const Manual: React.FC = () => {
                     value={instructions?.funeral_wishes || ''}
                     onChange={(e) => {
                       const value = e.target.value;
-                      setInstructions(prev => prev ? { ...prev, funeral_wishes: value } : { id: '', funeral_wishes: value }
-    </ErrorBoundary>
-  );
+                      setInstructions(prev => prev ? { ...prev, funeral_wishes: value } : { id: '', funeral_wishes: value });
                       debouncedSaveInstructions('funeral_wishes', value);
                     }}
                     rows={4}
