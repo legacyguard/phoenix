@@ -19,6 +19,7 @@ export function SmartUploadZone({
   maxFiles = UPLOAD.maxFiles,
   acceptedTypes = UPLOAD.acceptedTypes
 }: SmartUploadZoneProps) {
+
   const { t } = useTranslation('common');
   const [isDragging, setIsDragging] = useState(false);
   const [dragCounter, setDragCounter] = useState(0);
