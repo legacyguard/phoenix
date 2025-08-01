@@ -4,6 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Alert, AlertDescription } from '@/components/ui/alert';
+import { Progress } from '@/components/ui/progress';
 import { 
   AlertCircle, 
   CheckCircle2, 
@@ -34,6 +35,20 @@ interface CrisisSituation {
   missingCapabilities: string[];
 }
 
+interface PreparednessScenario {
+  id: string;
+  title: string;
+  description: string;
+  icon: React.ReactNode;
+  requiredPreparedness: {
+    immediateAccess: number;
+    decisionMaking: number;
+    longTermSecurity: number;
+  };
+  familyReadiness: 'ready' | 'mostly_ready' | 'partially_ready' | 'not_ready';
+  gapsToAddress: string[];
+}
+
 interface FamilyPreparednessIndexProps {
   userAssets?: any[];
   userDocuments?: any[];
@@ -48,6 +63,50 @@ export const FamilyPreparednessIndex: React.FC<FamilyPreparednessIndexProps> = (
   userBeneficiaries = []
 }) => {
   const { t } = useTranslation('common');
+
+  // Calculate preparedness scores
+  const immediateAccessScore = useMemo(() => {
+    const hasBankAccount = userAssets.some(a => a.type?.toLowerCase().includes('bank'));
+    const hasDigitalAccess = userDocuments.some(d => d.type?.toLowerCase().includes('digital'));
+    const hasGuardians = userGuardians.length > 0;
+    
+    let score = 0;
+    if (hasBankAccount) score += 40;
+    if (hasDigitalAccess) score += 30;
+    if (hasGuardians) score += 30;
+    
+    return Math.min(score, 100);
+  }, [userAssets, userDocuments, userGuardians]);
+
+  const decisionMakingScore = useMemo(() => {
+    const hasMedicalDocuments = userDocuments.some(d => d.type?.toLowerCase().includes('medical'));
+    const hasLegalDocuments = userDocuments.some(d => d.type?.toLowerCase().includes('legal'));
+    const hasBeneficiaries = userBeneficiaries.length > 0;
+    
+    let score = 0;
+    if (hasMedicalDocuments) score += 35;
+    if (hasLegalDocuments) score += 35;
+    if (hasBeneficiaries) score += 30;
+    
+    return Math.min(score, 100);
+  }, [userDocuments, userBeneficiaries]);
+
+  const longTermSecurityScore = useMemo(() => {
+    const hasWill = userDocuments.some(d => d.type?.toLowerCase().includes('will'));
+    const hasTrust = userDocuments.some(d => d.type?.toLowerCase().includes('trust'));
+    const hasInsurance = userAssets.some(a => a.type?.toLowerCase().includes('insurance'));
+    
+    let score = 0;
+    if (hasWill) score += 40;
+    if (hasTrust) score += 30;
+    if (hasInsurance) score += 30;
+    
+    return Math.min(score, 100);
+  }, [userDocuments, userAssets]);
+
+  const overallIndex = useMemo(() => {
+    return Math.round((immediateAccessScore + decisionMakingScore + longTermSecurityScore) / 3);
+  }, [immediateAccessScore, decisionMakingScore, longTermSecurityScore]);
 
   const capabilities = useMemo<FamilyCapability[]>(() => [
     {
@@ -162,7 +221,7 @@ export const FamilyPreparednessIndex: React.FC<FamilyPreparednessIndexProps> = (
   const getNextImprovement = () => {
     const improvements = [];
     
-    if (preparednessData.immediateAccess.bankAccess < 80) {
+    if (immediateAccessScore < 80) {
       improvements.push({
         action: t('preparedness.improvements.addBankAccounts'),
         timeEstimate: '10 minutes',
@@ -171,7 +230,7 @@ export const FamilyPreparednessIndex: React.FC<FamilyPreparednessIndexProps> = (
       });
     }
     
-    if (preparednessData.decisionMaking.medicalPreferences < 70) {
+    if (decisionMakingScore < 70) {
       improvements.push({
         action: t('preparedness.improvements.documentMedicalWishes'),
         timeEstimate: '20 minutes',
@@ -180,7 +239,7 @@ export const FamilyPreparednessIndex: React.FC<FamilyPreparednessIndexProps> = (
       });
     }
     
-    if (preparednessData.longTermSecurity.legalDocuments < 80) {
+    if (longTermSecurityScore < 80) {
       improvements.push({
         action: t('preparedness.improvements.uploadLegalDocuments'),
         timeEstimate: '15 minutes',

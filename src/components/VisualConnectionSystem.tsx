@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Flowchart } from '@/components/ui/flowchart';
 import { Button } from '@/components/ui/button';
 
 interface VisualConnectionSystemProps {
@@ -58,17 +57,12 @@ const VisualConnectionSystem: React.FC<VisualConnectionSystemProps> = ({
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <Flowchart
-            connections={connections}
-            onNodeHover={(node) => {
-              // handle hover
-              console.log(node);
-            }}
-            onNodeClick={(node) => {
-              // handle click details or navigate
-              console.log(node);
-            }}
-          />
+          <div className="min-h-[300px] flex items-center justify-center border-2 border-dashed border-gray-300 rounded-lg">
+            <div className="text-center text-gray-500">
+              <p className="text-lg font-medium">Visual Connection System</p>
+              <p className="text-sm">Flowchart component will be implemented here</p>
+            </div>
+          </div>
           <div className="mt-4 text-center">
             <Button variant="outline">
               {t('visualConnectionSystem.exploreConnections')}
