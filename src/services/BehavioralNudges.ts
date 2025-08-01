@@ -76,76 +76,111 @@ interface UserData {
 }
 
 export async function generateNudgesForUser(userId: string) {
-  // Use the correct table names from the schema
-  const assets = await supabase.from('assets').select('type, estimated_value').eq('user_id', userId);
-  const guardians = await supabase.from('guardians').select('full_name, invitation_status').eq('user_id', userId);
-  const wills = await supabase.from('wills').select('status').eq('user_id', userId);
- 
-  if (!assets.data || !guardians.data || !wills.data) return;
+  try {
+    // Use the correct table names from the schema
+    const assets = await supabase.from('assets').select('type, estimated_value').eq('user_id', userId);
+    const guardians = await supabase.from('guardians').select('full_name, invitation_status').eq('user_id', userId);
+    const wills = await supabase.from('wills').select('status').eq('user_id', userId);
+   
+    if (!assets.data || !guardians.data || !wills.data) return;
 
-  // Nudge 1: Social Proof
-  const hasLifeInsurance = assets.data.some((a: { type: string }) => a.type === 'life_insurance');
-  if (!hasLifeInsurance) {
-    await createNotification(userId, {
-      type: 'nudge_social_proof',
-      message: "Did you know? 85% of fathers in their 40s have life insurance to protect their family's financial future.",
-      urgency: 'low',
-    });
-  }
+    // Nudge 1: Social Proof
+    const hasLifeInsurance = assets.data.some((a: { type: string }) => a.type === 'life_insurance');
+    if (!hasLifeInsurance) {
+      await createNotification(userId, {
+        type: 'nudge_social_proof',
+        message: "Did you know? 85% of fathers in their 40s have life insurance to protect their family's financial future.",
+        urgency: 'low',
+      });
+    }
 
-  // Nudge 2: Loss Aversion
-  const hasWill = wills.data.length > 0;
-  const totalAssetValue = assets.data.reduce((sum: number, a: { estimated_value?: number }) => sum + (a.estimated_value || 0), 0);
-  if (totalAssetValue > 50000 && !hasWill) {
-    await createNotification(userId, {
-      type: 'nudge_loss_aversion',
-      message: "Without clear instructions, a significant portion of your assets could be lost to legal fees or taxes. Secure your legacy by outlining your wishes.",
-      urgency: 'medium',
-    });
-  }
+    // Nudge 2: Loss Aversion
+    const hasWill = wills.data.length > 0;
+    const totalAssetValue = assets.data.reduce((sum: number, a: { estimated_value?: number }) => sum + (a.estimated_value || 0), 0);
+    if (totalAssetValue > 50000 && !hasWill) {
+      await createNotification(userId, {
+        type: 'nudge_loss_aversion',
+        message: "Without clear instructions, a significant portion of your assets could be lost to legal fees or taxes. Secure your legacy by outlining your wishes.",
+        urgency: 'medium',
+      });
+    }
 
-  // Nudge 3: Progress Momentum
-  const preparednessScore = calculateOverallPreparedness({ assets: assets.data, guardians: guardians.data, wills: wills.data });
-  if (preparednessScore > 70 && preparednessScore < 95) {
-    await createNotification(userId, {
-      type: 'nudge_progress_momentum',
-      message: `You're ${preparednessScore}% of the way to complete peace of mind! You are just a few small steps away from being fully prepared.`,
-      urgency: 'low',
-    });
-  }
+    // Nudge 3: Progress Momentum
+    const preparednessScore = calculateOverallPreparedness({ assets: assets.data, guardians: guardians.data, wills: wills.data });
+    if (preparednessScore > 70 && preparednessScore < 95) {
+      await createNotification(userId, {
+        type: 'nudge_progress_momentum',
+        message: `You're ${preparednessScore}% of the way to complete peace of mind! You are just a few small steps away from being fully prepared.`,
+        urgency: 'low',
+      });
+    }
 
-  // Nudge 4: Commitment & Consistency
-  const unpreparedGuardians = guardians.data.filter((g: { invitation_status?: string }) => g.invitation_status !== 'accepted');
-  if (unpreparedGuardians.length > 0) {
-    await createNotification(userId, {
-      type: 'nudge_commitment',
-      message: `You've identified ${unpreparedGuardians[0].full_name} as a guardian. Take the next step to ensure they are fully prepared for their responsibilities.`,
-      urgency: 'medium',
-    });
+    // Nudge 4: Commitment & Consistency
+    const unpreparedGuardians = guardians.data.filter((g: { invitation_status?: string }) => g.invitation_status !== 'accepted');
+    if (unpreparedGuardians.length > 0) {
+      await createNotification(userId, {
+        type: 'nudge_commitment',
+        message: `You've identified ${unpreparedGuardians[0].full_name} as a guardian. Take the next step to ensure they are fully prepared for their responsibilities.`,
+        urgency: 'medium',
+      });
+    }
+  } catch (error) {
+    console.error('Error generating nudges for user:', userId, error);
   }
 }
 
 async function createNotification(userId: string, { type, message, urgency }: { type: string; message: string; urgency: 'low' | 'medium' | 'high' }) {
-  // TODO: Implement proper notification system
-  // For now, we'll log the notification and could extend this to:
-  // 1. Store in a notifications table (if created)
-  // 2. Send email notifications
-  // 3. Push notifications
-  // 4. In-app notifications
-  
-  console.log('Notification created:', { 
-    userId, 
-    type, 
-    message, 
-    urgency, 
-    timestamp: new Date().toISOString() 
-  });
-  
-  // You could also store this in localStorage for client-side notifications
-  if (typeof window !== 'undefined') {
-    const notifications = JSON.parse(localStorage.getItem('user_notifications') || '[]');
-    notifications.push({ userId, type, message, urgency, timestamp: new Date().toISOString() });
-    localStorage.setItem('user_notifications', JSON.stringify(notifications));
+  try {
+    // Check if a similar nudge was sent recently (within 14 days)
+    const recentNotifications = await checkRecentNotifications(userId, type);
+    if (recentNotifications) {
+      return; // Skip if recent notification exists
+    }
+
+    // TODO: Implement proper notification system
+    // For now, we'll log the notification and could extend this to:
+    // 1. Store in a notifications table (if created)
+    // 2. Send email notifications
+    // 3. Push notifications
+    // 4. In-app notifications
+    
+    console.log('Notification created:', { 
+      userId, 
+      type, 
+      message, 
+      urgency, 
+      timestamp: new Date().toISOString() 
+    });
+    
+    // You could also store this in localStorage for client-side notifications
+    if (typeof window !== 'undefined') {
+      const notifications = JSON.parse(localStorage.getItem('user_notifications') || '[]');
+      notifications.push({ userId, type, message, urgency, timestamp: new Date().toISOString() });
+      localStorage.setItem('user_notifications', JSON.stringify(notifications));
+    }
+  } catch (error) {
+    console.error('Error creating notification:', error);
+  }
+}
+
+async function checkRecentNotifications(userId: string, type: string): Promise<boolean> {
+  try {
+    // Since notifications table doesn't exist, we'll use localStorage for client-side
+    if (typeof window !== 'undefined') {
+      const notifications = JSON.parse(localStorage.getItem('user_notifications') || '[]');
+      const userNotifications = notifications.filter((n: Record<string, unknown>) => n.userId === userId && n.type === type);
+      
+      if (userNotifications.length > 0) {
+        const lastNotification = userNotifications[userNotifications.length - 1];
+        const lastNotificationDate = new Date(lastNotification.timestamp);
+        const dateDiff = (new Date().getTime() - lastNotificationDate.getTime()) / (1000 * 60 * 60 * 24);
+        return dateDiff < 14; // Return true if notification was sent within 14 days
+      }
+    }
+    return false;
+  } catch (error) {
+    console.error('Error checking recent notifications:', error);
+    return false;
   }
 }
 

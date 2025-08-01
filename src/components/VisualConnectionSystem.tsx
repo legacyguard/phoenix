@@ -3,6 +3,15 @@ import { useTranslation } from 'react-i18next';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 
+interface LifeAreaConnection {
+  id: string;
+  title: string;
+  description: string;
+  connectionStrength: string;
+  benefits: string;
+  impact: string;
+}
+
 interface VisualConnectionSystemProps {
   userAssets?: Array<{
     id: string;
