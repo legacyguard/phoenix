@@ -4,10 +4,32 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 
 interface VisualConnectionSystemProps {
-  userAssets?: any[];
-  userDocuments?: any[];
-  userGuardians?: any[];
-  userBeneficiaries?: any[];
+  userAssets?: Array<{
+    id: string;
+    type: string;
+    name: string;
+    value?: number;
+    category?: string;
+  }>;
+  userDocuments?: Array<{
+    id: string;
+    type: string;
+    category?: string;
+    metadata?: Record<string, unknown>;
+  }>;
+  userGuardians?: Array<{
+    id: string;
+    name: string;
+    email?: string;
+    status?: string;
+    playbook_status?: string;
+  }>;
+  userBeneficiaries?: Array<{
+    id: string;
+    name: string;
+    email?: string;
+    relationship?: string;
+  }>;
 }
 
 const VisualConnectionSystem: React.FC<VisualConnectionSystemProps> = ({

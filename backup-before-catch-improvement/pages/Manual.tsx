@@ -233,7 +233,7 @@ export const Manual: React.FC = () => {
 
       setInstructions(data);
     } catch (error) {
-      toast.error(t('manual.instructions.errors.loadFailed'));
+      console.error('Error loading instructions:', error);
     } finally {
       setIsInstructionsLoading(false);
     }

@@ -26,7 +26,7 @@ export function WillPreview({
   const { t } = useTranslation();
   const [showLegalConsultation, setShowLegalConsultation] = useState(false);
 
-  const formatWillText = (template: string, data: any) => {
+  const formatWillText = (template: string, data: Record<string, unknown>) => {
     return template.
     replace('{name}', data.name || '').
     replace('{birthDate}', data.birthDate || '').

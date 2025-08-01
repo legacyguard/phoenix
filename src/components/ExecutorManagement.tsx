@@ -179,7 +179,7 @@ const ExecutorManagement: React.FC = () => {
 
               <div>
                 <Label htmlFor="type">{t("executorManagement.relationship_type_13")}</Label>
-                <Select value={relationshipType} onValueChange={(value: any) => setRelationshipType(value)}>
+                <Select value={relationshipType} onValueChange={(value: Record<string, unknown>) => setRelationshipType(value)}>
                   <SelectTrigger id="type">
                     <SelectValue />
                   </SelectTrigger>

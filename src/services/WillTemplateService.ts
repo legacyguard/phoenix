@@ -7,16 +7,7 @@ export interface WillTemplate {
   template_name: string;
   template_body: string;
   execution_instructions: string;
-  legal_guidance: {
-    forced_heirship?: boolean;
-    witnesses_required?: number;
-    notary_required?: boolean;
-    handwritten_required?: boolean;
-    minimum_age?: number;
-    pflichtteil?: boolean;
-    notes?: string;
-    [key: string]: any;
-  };
+  legal_guidance: Record<string, unknown>;
   is_active: boolean;
   version: number;
   created_at: string;
@@ -29,7 +20,7 @@ export interface WillTemplateFormData {
   template_name: string;
   template_body: string;
   execution_instructions: string;
-  legal_guidance: Record<string, any>;
+  legal_guidance: Record<string, unknown>;
 }
 
 export class WillTemplateService {
@@ -273,7 +264,7 @@ export class WillTemplateService {
   /**
    * Fill template with user data
    */
-  static fillTemplate(template: WillTemplate, userData: Record<string, any>): string {
+  static fillTemplate(template: WillTemplate, userData: Record<string, unknown>): string {
     let filledTemplate = template.template_body;
 
     // Replace simple placeholders

@@ -23,7 +23,7 @@ export const LanguageSelector: React.FC = () => {
   const handleLanguageSelect = (languageCode: string) => {
     try {
       i18n.changeLanguage(languageCode);
-    } catch (error: any) {
+    } catch (error: Record<string, unknown>) {
       console.error('[LanguageSelector] Error changing language:', error);
     }
   };

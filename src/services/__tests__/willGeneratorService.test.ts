@@ -20,7 +20,7 @@ global.crypto = {
     }
     return array;
   },
-} as any;
+} as Record<string, unknown>;
 
 describe('WillGenerator Service', () => {
   const mockUserId = 'test-user-123';
@@ -119,14 +119,14 @@ describe('WillGenerator Service', () => {
                 single: vi.fn().mockResolvedValue({ data: mockUserData, error: null }),
               }),
             }),
-          } as any;
+          } as Record<string, unknown>;
         }
         if (table === 'assets') {
           return {
             select: vi.fn().mockReturnValue({
               eq: vi.fn().mockResolvedValue({ data: mockAssets, error: null }),
             }),
-          } as any;
+          } as Record<string, unknown>;
         }
         if (table === 'trusted_people') {
           return {
@@ -135,9 +135,9 @@ describe('WillGenerator Service', () => {
                 in: vi.fn().mockResolvedValue({ data: mockBeneficiaries, error: null }),
               }),
             }),
-          } as any;
+          } as Record<string, unknown>;
         }
-        return {} as any;
+        return {} as Record<string, unknown>;
       });
 
       // Test will generation
@@ -189,7 +189,7 @@ describe('WillGenerator Service', () => {
       const mockInsert = vi.fn().mockResolvedValue({ data: { id: 'backup-123' }, error: null });
       vi.mocked(supabase.from).mockReturnValue({
         insert: mockInsert,
-      } as any);
+      } as Record<string, unknown>);
 
       // Simulate will update
       const willUpdate = {
@@ -206,7 +206,7 @@ describe('WillGenerator Service', () => {
 });
 
 // Helper function for validation
-function validateWillData(data: any): boolean {
+function validateWillData(data: Record<string, unknown>): boolean {
   return (
     data.user?.full_name &&
     data.user?.date_of_birth &&

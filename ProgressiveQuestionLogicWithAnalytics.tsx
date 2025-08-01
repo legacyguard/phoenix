@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { ChevronRight, AlertCircle, CheckCircle, TrendingUp, Users, Clock } from 'lucide-react';
 import { 
   UserContext, 
@@ -12,7 +12,7 @@ import { flowAnalytics, flowOptimizer } from './progressiveQuestionAnalytics';
 // Extended props to include analytics
 interface ProgressiveQuestionLogicWithAnalyticsProps extends ProgressiveQuestionLogicProps {
   enableAnalytics?: boolean;
-  onAnalyticsEvent?: (eventType: string, data: any) => void;
+  onAnalyticsEvent?: (eventType: string, data: Record<string, unknown>) => void;
   showDebugInfo?: boolean;
 }
 
@@ -193,15 +193,19 @@ const ProgressiveQuestionLogicWithAnalytics: React.FC<ProgressiveQuestionLogicWi
   const [showInsight, setShowInsight] = useState(false);
   const [currentInsight, setCurrentInsight] = useState<string>('');
 
-  const questionGenerator = new DynamicQuestionGenerator();
-  const questions = { ...ENHANCED_QUESTIONS };
+  const questionGenerator = useMemo(() => new DynamicQuestionGenerator(), []);
+  const questions = useMemo(() => {
+    const baseQuestions = { ...ENHANCED_QUESTIONS };
+    
+    // Add dynamically generated questions
+    const dynamicQuestion = questionGenerator.generateContextualQuestion(userContext, answers);
+    if (dynamicQuestion) {
+      baseQuestions[dynamicQuestion.id] = dynamicQuestion;
+    }
+    
+    return baseQuestions;
+  }, [questionGenerator, userContext, answers]);
   
-  // Add dynamically generated questions
-  const dynamicQuestion = questionGenerator.generateContextualQuestion(userContext, answers);
-  if (dynamicQuestion) {
-    questions[dynamicQuestion.id] = dynamicQuestion;
-  }
-
   const currentQuestion = questions[currentQuestionId];
   const maxQuestions = 8;
   const progress = Math.min((questionHistory.length / maxQuestions) * 100, 100);

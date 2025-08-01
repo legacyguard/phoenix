@@ -16,7 +16,7 @@ export interface LifeEventChecklist {
 }
 
 export class LifeEventService {
-  static generateChecklist(eventId: string, t?: (key: string, params?: any) => string): LifeEventChecklist {
+  static generateChecklist(eventId: string, t?: (key: string, params?: Record<string, unknown>) => string): LifeEventChecklist {
     // Default translation function if none provided
     const translate = t || ((key: string) => key);
     switch (eventId) {

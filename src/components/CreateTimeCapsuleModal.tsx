@@ -41,7 +41,7 @@ import { useTranslation } from 'react-i18next';
 interface CreateTimeCapsuleModalProps {
   open: boolean;
   onClose: () => void;
-  trustedPeople: any[];
+  trustedPeople: Array<Record<string, unknown>>;
   onSuccess: () => void;
   editingCapsule?: TimeCapsuleMessage | null;
 }

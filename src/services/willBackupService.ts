@@ -9,7 +9,7 @@ interface BackupResult {
 
 interface RestoreResult {
   success: boolean;
-  data?: any;
+  data?: Record<string, unknown>;
   error?: string;
 }
 
@@ -18,7 +18,7 @@ class WillBackupService {
   private backupBucket = process.env.WILL_BACKUP_BUCKET || 'will-backups';
 
   // Backup a generated will
-  async backupWill(willId: string, willContent: any, userId: string): Promise<BackupResult> {
+  async backupWill(willId: string, willContent: Record<string, unknown>, userId: string): Promise<BackupResult> {
     try {
       // Encrypt will content
       const encryptedContent = this.encryptData(JSON.stringify(willContent));

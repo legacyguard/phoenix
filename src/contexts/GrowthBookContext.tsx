@@ -8,7 +8,10 @@ import { FEATURE_FLAGS } from '../config/featureFlags';
 
 interface GrowthBookContextType {
   growthbook: GrowthBook | null;
-  experiments: Record<string, any>;
+  experiments: Record<string, {
+    variation: number;
+    value: unknown;
+  }>;
 }
 
 const GrowthBookContext = createContext<GrowthBookContextType>({
@@ -34,7 +37,10 @@ export const EnhancedGrowthBookProvider: React.FC<GrowthBookProviderProps> = ({
   growthbook 
 }) => {
   const { user } = useAuth();
-  const [experiments, setExperiments] = useState<Record<string, any>>({});
+  const [experiments, setExperiments] = useState<Record<string, {
+    variation: number;
+    value: unknown;
+  }>>({});
 
   useEffect(() => {
     // Update GrowthBook attributes when user changes
@@ -52,7 +58,7 @@ export const EnhancedGrowthBookProvider: React.FC<GrowthBookProviderProps> = ({
 
   useEffect(() => {
     // Load feature flags from configuration
-    const features: Record<string, any> = {};
+    const features: Record<string, unknown> = {};
     Object.entries(FEATURE_FLAGS).forEach(([key, config]) => {
       features[key] = config.defaultValue;
     });

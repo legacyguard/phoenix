@@ -28,7 +28,7 @@ export async function POST(req: NextRequest) {
 
   // Handle the event
   switch (event.type) {
-    case 'payment_intent.succeeded':
+    case 'payment_intent.succeeded': {
       const paymentIntent = event.data.object as Stripe.PaymentIntent;
       
       // Extract consultation ID from metadata
@@ -58,8 +58,9 @@ export async function POST(req: NextRequest) {
 
       console.log(`Payment successful for consultation ${consultationId}`);
       break;
+    }
 
-    case 'payment_intent.payment_failed':
+    case 'payment_intent.payment_failed': {
       const failedPayment = event.data.object as Stripe.PaymentIntent;
       const failedConsultationId = failedPayment.metadata?.consultationId;
       
@@ -72,6 +73,7 @@ export async function POST(req: NextRequest) {
         console.log(`Payment failed for consultation ${failedConsultationId}`);
       }
       break;
+    }
 
     default:
       console.log(`Unhandled event type: ${event.type}`);

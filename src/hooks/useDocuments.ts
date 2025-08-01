@@ -9,7 +9,7 @@ export interface Document {
   file_size: number;
   file_type: string;
   category: string;
-  metadata: any;
+  metadata: Record<string, unknown>;
   created_at: string;
   expiration_date?: string;
 }

@@ -121,7 +121,7 @@ export default function GuardianPlaybook({ userId, guardianId, guardianName, isR
     }
   };
 
-  const updateField = (field: keyof GuardianPlaybookData, value: any) => {
+  const updateField = (field: keyof GuardianPlaybookData, value: Record<string, unknown>) => {
     setPlaybook(prev => ({ ...prev, [field]: value }));
     setHasChanges(true);
   };

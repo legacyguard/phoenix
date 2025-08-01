@@ -25,20 +25,36 @@ export async function GET(request: Request) {
 
     console.log('Starting behavioral nudges generation...');
     
-    // Get all active users (users who have logged in within the last 30 days)
-    const thirtyDaysAgo = new Date();
-    thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
-    
-    const { data: activeUsers, error: usersError } = await supabase
-      .from('users')
-      .select('id, email, last_sign_in_at')
-      .gte('last_sign_in_at', thirtyDaysAgo.toISOString())
-      .order('last_sign_in_at', { ascending: false });
+    // Get all active users (users who have assets, guardians, or wills - indicating they're active)
+    // Since there's no direct users table, we'll get users from existing data
+    const { data: usersWithAssets, error: assetsError } = await supabase
+      .from('assets')
+      .select('user_id')
+      .limit(1000); // Limit to prevent overwhelming the system
 
-    if (usersError) {
-      console.error('Error fetching active users:', usersError);
-      throw usersError;
+    const { data: usersWithGuardians, error: guardiansError } = await supabase
+      .from('guardians')
+      .select('user_id')
+      .limit(1000);
+
+    const { data: usersWithWills, error: willsError } = await supabase
+      .from('wills')
+      .select('user_id')
+      .limit(1000);
+
+    if (assetsError || guardiansError || willsError) {
+      console.error('Error fetching user data:', { assetsError, guardiansError, willsError });
+      throw new Error('Failed to fetch user data');
     }
+
+    // Combine all user IDs and remove duplicates
+    const allUserIds = new Set([
+      ...(usersWithAssets?.map(u => u.user_id) || []),
+      ...(usersWithGuardians?.map(u => u.user_id) || []),
+      ...(usersWithWills?.map(u => u.user_id) || [])
+    ]);
+
+    const activeUsers = Array.from(allUserIds).map(id => ({ id }));
 
     console.log(`Found ${activeUsers?.length || 0} active users`);
     
@@ -55,7 +71,7 @@ export async function GET(request: Request) {
         errorCount++;
         errors.push({
           userId: user.id,
-          email: user.email,
+          email: 'unknown', // We don't have email in this structure
           error: error instanceof Error ? error.message : 'Unknown error'
         });
         console.error(`Error generating nudges for user ${user.id}:`, error);

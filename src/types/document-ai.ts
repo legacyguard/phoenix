@@ -138,7 +138,7 @@ export interface DocumentProcessingResult {
 export interface DocumentProcessingError {
   code: 'INVALID_IMAGE' | 'OCR_FAILED' | 'CLASSIFICATION_FAILED' | 'EXTRACTION_FAILED' | 'UNKNOWN';
   message: string;
-  details?: any;
+  details?: Record<string, unknown>;
 }
 
 // Extracted metadata types
@@ -251,7 +251,7 @@ export interface Possession {
     
     // General
     value?: number;
-    [key: string]: any;
+    [key: string]: Record<string, unknown>;
   };
   type?: string; // e.g., 'mortgage', 'property_insurance', 'vehicle', 'investment_account'
 }

@@ -391,7 +391,7 @@ export const AlertCenter: React.FC<AlertCenterProps> = ({
           </CardHeader>
 
           <CardContent className="p-0">
-            <Tabs value={activeTab} onValueChange={(v) => setActiveTab(v as any)}>
+            <Tabs value={activeTab} onValueChange={(v) => setActiveTab(v as 'active' | 'snoozed' | 'dismissed')}>
               <TabsList className="w-full rounded-none">
                 <TabsTrigger value="active" className="flex-1">
                   {t('alerts.tabs.active')}

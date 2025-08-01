@@ -149,7 +149,7 @@ export const SubscriptionDashboard: React.FC = () => {
     setUpcomingRenewals(upcoming);
   };
 
-  const updatePreference = async (key: keyof SubscriptionPreferences, value: any) => {
+  const updatePreference = async (key: keyof SubscriptionPreferences, value: Record<string, unknown>) => {
     if (!preferences) return;
 
     try {

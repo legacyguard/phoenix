@@ -9,7 +9,7 @@ import { FormField } from '@/components/ui/form-field';
 import { toast } from 'sonner';
 
 // Create beneficiary form schema
-const createBeneficiaryFormSchema = (t: any) => z.object({
+const createBeneficiaryFormSchema = (t: Record<string, unknown>) => z.object({
   name: z.string()
     .min(2, { message: t('validation.errors.nameMinLength') })
     .max(100, { message: t('validation.errors.nameMaxLength', { max: 100 }) })

@@ -8,7 +8,7 @@ interface PWAState {
   isInstalled: boolean;
   isOffline: boolean;
   isUpdateAvailable: boolean;
-  installPrompt: any;
+  installPrompt: Record<string, unknown>;
 }
 
 interface PWAHook extends PWAState {
@@ -31,7 +31,7 @@ export function usePWA(): PWAHook {
   useEffect(() => {
     // Check if running as installed PWA
     const isInstalled = window.matchMedia('(display-mode: standalone)').matches
-      || (window.navigator as any).standalone
+      || (window.navigator as Navigator & { standalone?: boolean }).standalone
       || document.referrer.includes('android-app://');
     
     setState(prev => ({ ...prev, isInstalled }));

@@ -232,7 +232,7 @@ class StripeService {
   }
 
   // Get payment history
-  async getPaymentHistory(userId: string): Promise<any[]> {
+  async getPaymentHistory(userId: string): Promise<Array<Record<string, unknown>>> {
     try {
       const { data, error } = await supabase
         .from('payment_history')

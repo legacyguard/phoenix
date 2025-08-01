@@ -16,7 +16,7 @@ interface LegalConsultationModalProps {
   userCountry?: string;
 }
 
-const getConsultationTypes = (t: any) => [
+const getConsultationTypes = (t: Record<string, unknown>) => [
 {
   value: 'will_review',
   label: t('legalConsultation.types.willReview.label'),

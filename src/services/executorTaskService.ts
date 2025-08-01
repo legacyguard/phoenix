@@ -169,7 +169,7 @@ export class ExecutorTaskService {
   /**
    * Fetches user data for personalization
    */
-  private static async fetchUserData(userId: string): Promise<any> {
+  private static async fetchUserData(userId: string): Promise<Record<string, unknown>> {
     const { data, error } = await supabase
       .from('profiles')
       .select('*')
@@ -187,7 +187,7 @@ export class ExecutorTaskService {
   /**
    * Fetches user documents for task personalization
    */
-  private static async fetchUserDocuments(userId: string): Promise<any[]> {
+  private static async fetchUserDocuments(userId: string): Promise<Array<Record<string, unknown>>> {
     const { data, error } = await supabase
       .from('documents')
       .select('*')
@@ -206,8 +206,8 @@ export class ExecutorTaskService {
    */
   private static async personalizeTaskDetails(
     template: TaskTemplate,
-    userData: any,
-    documents: any[]
+    userData: Record<string, unknown>,
+    documents: Array<Record<string, unknown>>
   ): Promise<string> {
     let details = template.detailsTemplate;
 
@@ -255,7 +255,7 @@ export class ExecutorTaskService {
    */
   private static getRelatedDocumentIds(
     template: TaskTemplate,
-    documents: any[]
+    documents: Array<Record<string, unknown>>
   ): string[] {
     if (!template.requiresDocuments) return [];
 
@@ -309,7 +309,7 @@ export class ExecutorTaskService {
     status: 'pending' | 'completed',
     executorId: string
   ) {
-    const updateData: any = { status };
+    const updateData: Record<string, unknown> = { status };
     
     if (status === 'completed') {
       updateData.completed_at = new Date().toISOString();

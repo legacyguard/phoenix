@@ -94,7 +94,7 @@ export function WillGenerator({ onComplete }: WillGeneratorProps) {
         }
         break;
 
-      case 1: // Asset allocation
+      case 1: { // Asset allocation
         const totalAllocation = willContent.beneficiaries?.reduce((sum, b) => {
           const percentageAllocation = b.allocation
             .filter(a => a.assetType === 'percentage')
@@ -109,8 +109,9 @@ export function WillGenerator({ onComplete }: WillGeneratorProps) {
           errors.beneficiaries = t('will.validation.atLeastOneBeneficiary');
         }
         break;
+      }
 
-      case 2: // Beneficiaries
+      case 2: { // Beneficiaries
         willContent.beneficiaries?.forEach((b, index) => {
           if (!b.name) {
             errors[`beneficiary_${index}_name`] = t('will.validation.requiredField');
@@ -120,12 +121,14 @@ export function WillGenerator({ onComplete }: WillGeneratorProps) {
           }
         });
         break;
+      }
 
-      case 3: // Executors
+      case 3: { // Executors
         if (!willContent.executor?.name) {
           errors.executor = t('will.validation.executorRequired');
         }
         break;
+      }
     }
 
     setValidationErrors(errors);

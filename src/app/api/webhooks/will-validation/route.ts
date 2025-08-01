@@ -9,7 +9,7 @@ const WEBHOOK_SECRET = process.env.LEGAL_VALIDATION_WEBHOOK_SECRET || '';
 interface LegalValidationRequest {
   willId: string;
   countryCode: string;
-  willContent: any;
+  willContent: Record<string, unknown>;
   validationType: 'full' | 'compliance' | 'signature';
 }
 
@@ -116,7 +116,7 @@ export async function POST(request: NextRequest) {
 // Perform legal validation based on country-specific rules
 async function performLegalValidation(
   countryCode: string,
-  willContent: any,
+  willContent: Record<string, unknown>,
   validationType: string
 ): Promise<LegalValidationResponse> {
   const issues: LegalValidationResponse['issues'] = [];
@@ -169,7 +169,7 @@ async function performLegalValidation(
 
 // Validate Slovak will requirements
 function validateSlovakianWill(
-  willContent: any,
+  willContent: Record<string, unknown>,
   issues: LegalValidationResponse['issues'],
   recommendations: string[]
 ) {
@@ -208,7 +208,7 @@ function validateSlovakianWill(
 
 // Validate Czech will requirements
 function validateCzechWill(
-  willContent: any,
+  willContent: Record<string, unknown>,
   issues: LegalValidationResponse['issues'],
   recommendations: string[]
 ) {
@@ -239,7 +239,7 @@ function validateCzechWill(
 
 // Validate Moldovan will requirements
 function validateMoldovanWill(
-  willContent: any,
+  willContent: Record<string, unknown>,
   issues: LegalValidationResponse['issues'],
   recommendations: string[]
 ) {
@@ -276,7 +276,7 @@ function validateMoldovanWill(
 
 // Validate Ukrainian will requirements
 function validateUkrainianWill(
-  willContent: any,
+  willContent: Record<string, unknown>,
   issues: LegalValidationResponse['issues'],
   recommendations: string[]
 ) {
@@ -305,7 +305,7 @@ function validateUkrainianWill(
 
 // Validate Serbian will requirements
 function validateSerbianWill(
-  willContent: any,
+  willContent: Record<string, unknown>,
   issues: LegalValidationResponse['issues'],
   recommendations: string[]
 ) {
@@ -334,7 +334,7 @@ function validateSerbianWill(
 
 // Validate Albanian will requirements
 function validateAlbanianWill(
-  willContent: any,
+  willContent: Record<string, unknown>,
   issues: LegalValidationResponse['issues'],
   recommendations: string[]
 ) {
@@ -372,7 +372,7 @@ function validateAlbanianWill(
 
 // Validate Macedonian will requirements
 function validateMacedonianWill(
-  willContent: any,
+  willContent: Record<string, unknown>,
   issues: LegalValidationResponse['issues'],
   recommendations: string[]
 ) {
@@ -409,7 +409,7 @@ function validateMacedonianWill(
 
 // Validate Montenegrin will requirements
 function validateMontenegrinWill(
-  willContent: any,
+  willContent: Record<string, unknown>,
   issues: LegalValidationResponse['issues'],
   recommendations: string[]
 ) {
@@ -438,15 +438,15 @@ function validateMontenegrinWill(
 
 // Common validation requirements
 function validateCommonRequirements(
-  willContent: any,
+  willContent: Record<string, unknown>,
   issues: LegalValidationResponse['issues'],
   recommendations: string[]
 ) {
   // Check allocation totals to 100%
-  const totalAllocation = willContent.beneficiaries?.reduce((sum: number, b: any) => {
+  const totalAllocation = willContent.beneficiaries?.reduce((sum: number, b: Record<string, unknown>) => {
     const percentageAllocation = b.allocation
-      ?.filter((a: any) => a.assetType === 'percentage')
-      ?.reduce((s: number, a: any) => s + (a.value || 0), 0) || 0;
+      ?.filter((a: Record<string, unknown>) => a.assetType === 'percentage')
+      ?.reduce((s: number, a: Record<string, unknown>) => s + (a.value || 0), 0) || 0;
     return sum + percentageAllocation;
   }, 0) || 0;
 
@@ -471,7 +471,7 @@ function validateCommonRequirements(
 
   // Check for ambiguous language
   if (willContent.specialBequests) {
-    willContent.specialBequests.forEach((bequest: any, index: number) => {
+    willContent.specialBequests.forEach((bequest: Record<string, unknown>, index: number) => {
       if (bequest.condition && bequest.condition.includes('approximately')) {
         issues?.push({
           severity: 'warning',

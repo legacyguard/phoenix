@@ -2,7 +2,7 @@ import { z } from 'zod';
 import { MAX_FILE_SIZES } from '@/utils/constants';
 
 // Function to create document form schema with translations
-export const createDocumentFormSchema = (t: (key: string, params?: any) => string) => z.object({
+export const createDocumentFormSchema = (t: (key: string, params?: Record<string, unknown>) => string) => z.object({
   name: z.string()
     .min(1, { message: t("validation.errors.documentNameRequired") })
     .max(200, { message: t("validation.errors.nameMaxLength", { max: 200 }) })
@@ -38,7 +38,7 @@ export const createDocumentFormSchema = (t: (key: string, params?: any) => strin
 });
 
 // Function to create file upload schema with translations
-export const createFileUploadSchema = (t: (key: string, params?: any) => string) => z.object({
+export const createFileUploadSchema = (t: (key: string, params?: Record<string, unknown>) => string) => z.object({
   file: z.instanceof(File)
     .refine((file) => file.size <= MAX_FILE_SIZES.starter, {
       message: t("validation.errors.fileSizeTooLarge", { maxSize: "10MB" })

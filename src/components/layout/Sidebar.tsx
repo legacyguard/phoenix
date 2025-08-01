@@ -34,7 +34,7 @@ interface NavigationSection {
   title?: string;
   items: Array<{
     label: string;
-    icon: any;
+    icon: Record<string, unknown>;
     href: string;
   }>;
 }

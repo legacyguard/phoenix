@@ -77,7 +77,7 @@ export const AddLiabilityModal: React.FC<AddLiabilityModalProps> = ({ assetId, o
       toast.success(t('addLiabilityModal.messages.addedSuccessfully'));
       onLiabilityAdded();
       onClose();
-    } catch (error: any) {
+    } catch (error: Record<string, unknown>) {
       toast.error(t('errors.generic'));   
     } finally {
       setIsLoading(false);

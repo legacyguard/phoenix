@@ -65,7 +65,7 @@ export const InviteAcceptance: React.FC = () => {
         setInvitation(data);
         // Get inviter's information
         setInviterName(t('inviteAcceptance.defaultInviterName'));
-      } catch (error: any) {
+      } catch (error: Record<string, unknown>) {
         if (!mounted) return;
         
         const timestamp = new Date().toISOString();
@@ -141,7 +141,7 @@ const errorMessage = error?.message || t('errors.unknown');
       // For now, we'll use a placeholder
       setInviterName(t('inviteAcceptance.defaultInviterName'));
       
-    } catch (error: any) {
+    } catch (error: Record<string, unknown>) {
       const timestamp = new Date().toISOString();
 const errorMessage = error?.message || t('errors.unknown');
       const errorCode = error?.code || 'UNKNOWN_ERROR';
@@ -198,7 +198,7 @@ const errorMessage = error?.message || t('errors.unknown');
       // Redirect to guardian view or login
       navigate('/guardian-view');
       
-    } catch (error: any) {
+    } catch (error: Record<string, unknown>) {
       const timestamp = new Date().toISOString();
 const errorMessage = error?.message || t('errors.unknown');
       const errorCode = error?.code || 'UNKNOWN_ERROR';
@@ -252,7 +252,7 @@ const errorMessage = error?.message || t('errors.unknown');
       toast.success(t('inviteAcceptance.messages.declined'));
       navigate('/');
       
-    } catch (error: any) {
+    } catch (error: Record<string, unknown>) {
       const timestamp = new Date().toISOString();
 const errorMessage = error?.message || t('errors.unknown');
       const errorCode = error?.code || 'UNKNOWN_ERROR';

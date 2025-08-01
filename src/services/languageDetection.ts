@@ -89,9 +89,9 @@ class LanguageDetectionService {
     }
     
     // Fallback to userLanguage for older browsers
-    // @ts-ignore - userLanguage is not in TypeScript definitions
+    // @ts-expect-error - userLanguage is not in TypeScript definitions but exists in older browsers
     if (navigator.userLanguage && !languages.includes(navigator.userLanguage)) {
-      // @ts-ignore
+      // @ts-expect-error - userLanguage is not in TypeScript definitions but exists in older browsers
       languages.push(navigator.userLanguage);
     }
     

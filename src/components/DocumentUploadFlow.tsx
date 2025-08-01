@@ -1,8 +1,9 @@
 import React, { useState, useCallback } from 'react';
+import { useTranslation } from 'react-i18next';
 import { ClassificationResult, DocumentCategory, DocumentProcessingResult } from '../types/document-ai';
 import { classifyDocumentFromBase64 } from '../functions/document-classifier';
 import { useLocalOCR } from '@/hooks/useLocalOCR';
-import { useUserSettings } from '@/hooks/useUserSettings';import { useTranslation } from "react-i18next";
+import { useUserSettings } from '@/hooks/useUserSettings';
 
 interface DocumentUploadFlowProps {
   onDocumentProcessed?: (result: DocumentProcessingResult) => void;
@@ -21,13 +22,14 @@ const DocumentUploadFlow: React.FC<DocumentUploadFlowProps> = ({
   existingPossessions = [],
   trustedPeople = []
 }) => {
+  const { t } = useTranslation('common');
   const { defaultProcessingMode } = useUserSettings();
   const [currentStep, setCurrentStep] = useState<UploadStep>('modeSelection');
   const [processingMode, setProcessingMode] = useState<ProcessingMode>(defaultProcessingMode);
   const [uploadedFile, setUploadedFile] = useState<File | null>(null);
   const [classification, setClassification] = useState<ClassificationResult | null>(null);
-  const [extractedData, setExtractedData] = useState<any>(null);
-  const [suggestedLinks, setSuggestedLinks] = useState<any>(null);
+  const [extractedData, setExtractedData] = useState<Record<string, unknown> | null>(null);
+  const [suggestedLinks, setSuggestedLinks] = useState<Record<string, unknown> | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [dragActive, setDragActive] = useState(false);
 
@@ -121,13 +123,12 @@ const DocumentUploadFlow: React.FC<DocumentUploadFlowProps> = ({
 
 
       // Call parent callback if provided
-      if (classificationResult && onDocumentProcessed) {
-        const result: DocumentProcessingResult = {
-          classification: classificationResult,
-          extractedMetadata: metadata || {},
-          suggestions: links || {}
-        };
-        onDocumentProcessed(result);
+      if (classification && onDocumentProcessed) {
+        onDocumentProcessed({
+          classification,
+          extractedMetadata: extractedData || {},
+          suggestions: suggestedLinks || {}
+        });
       }
     } catch (err) {
       setError(err instanceof Error ? err.message : `Failed to process document in ${processingMode} mode`);
@@ -136,48 +137,23 @@ const DocumentUploadFlow: React.FC<DocumentUploadFlowProps> = ({
   }, [apiKey, onDocumentProcessed, processImage, processingMode]);
 
   // Simulated metadata extraction
-  const extractDocumentMetadata = async (classification: ClassificationResult, base64: string): Promise<any> => {
-    // In a real implementation, this would use OCR and AI to extract specific fields
-    const mockMetadata: any = {
-      documentId: `doc_${Date.now()}`,
-      category: classification.category,
-      uploadDate: new Date(),
-      summary: `A ${classification.category.replace(/_/g, ' ')} document`
+  const extractDocumentMetadata = async (classification: ClassificationResult, base64: string): Promise<Record<string, unknown>> => {
+    // Simulate metadata extraction
+    return {
+      documentType: classification.category,
+      confidence: classification.confidence,
+      extractedText: 'Sample extracted text...',
+      metadata: {
+        title: 'Sample Document',
+        date: new Date().toISOString(),
+        author: 'Unknown'
+      }
     };
-
-    // Add category-specific metadata
-    switch (classification.category) {
-      case 'insurance_policy':
-        mockMetadata.specificMetadata = {
-          policyNumber: 'POL-123456',
-          insuranceCompany: 'Example Insurance Co.',
-          coverageAmount: 500000,
-          policyType: 'life'
-        };
-        break;
-      case 'property_deed':
-        mockMetadata.specificMetadata = {
-          propertyAddress: '123 Oak Street',
-          parcelNumber: 'APN-12345',
-          owners: ['John Doe', 'Jane Doe']
-        };
-        break;
-      case 'bank_statement':
-        mockMetadata.specificMetadata = {
-          accountNumber: '****1234',
-          institutionName: 'Example Bank',
-          accountType: 'checking',
-          balance: 25000
-        };
-        break;
-    }
-
-    return mockMetadata;
   };
 
   // Simulated relationship finding
-  const findRelatedItems = async (classification: ClassificationResult, metadata: any): Promise<any> => {
-    const suggestions: any = {
+  const findRelatedItems = async (classification: ClassificationResult, metadata: Record<string, unknown>): Promise<Record<string, unknown>> => {
+    const suggestions: Record<string, unknown> = {
       relatedPossessions: [],
       relatedPeople: [],
       relevantScenarios: []
@@ -538,13 +514,13 @@ const DocumentUploadFlow: React.FC<DocumentUploadFlowProps> = ({
           <div className="p-4 bg-green-50 rounded-lg">
                 <h4 className="font-semibold text-green-900 mb-2">{t("documentUploadFlow.suggested_connections_23")}</h4>
                 <div className="space-y-2 text-sm text-green-800">
-                  {suggestedLinks.relatedPossessions?.map((item: any) =>
+                  {suggestedLinks.relatedPossessions?.map((item: Record<string, unknown>) =>
               <div key={item.possessionId} className="flex items-center">
                       <span>🏠</span>
                       <span className="ml-2">{t("documentUploadFlow.link_to_24")}{item.possessionName}</span>
                     </div>
               )}
-                  {suggestedLinks.relatedPeople?.map((person: any) =>
+                  {suggestedLinks.relatedPeople?.map((person: Record<string, unknown>) =>
               <div key={person.personId} className="flex items-center">
                       <span>👤</span>
                       <span className="ml-2">{t("documentUploadFlow.related_to_25")}{person.personName} ({person.relationship})</span>

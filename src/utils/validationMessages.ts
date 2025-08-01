@@ -1,7 +1,7 @@
 import i18n from '@/i18n';
 
 // Centralized validation messages that can be translated
-export const getValidationMessage = (key: string, params?: Record<string, any>) => {
+export const getValidationMessage = (key: string, params?: Record<string, unknown>) => {
   const t = i18n.t;
   
   const messages: Record<string, string> = {

@@ -35,7 +35,12 @@ export const LegacyBriefing: React.FC = () => {
   const [error, setError] = useState<string | null>(null);
   const [showCreateModal, setShowCreateModal] = useState(false);
   const [selectedCapsule, setSelectedCapsule] = useState<TimeCapsuleMessage | null>(null);
-  const [trustedPeople, setTrustedPeople] = useState<any[]>([]);
+  const [trustedPeople, setTrustedPeople] = useState<Array<{
+    id: string;
+    name: string;
+    email?: string;
+    relationship?: string;
+  }>>([]);
 
   // Fetch time capsules
   const fetchCapsules = async () => {

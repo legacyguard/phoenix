@@ -12,10 +12,10 @@ import {
 } from 'lucide-react';
 
 interface WhatIfScenariosProps {
-  userAssets?: any[];
-  userDocuments?: any[];
-  userGuardians?: any[];
-  userBeneficiaries?: any[];
+  userAssets?: Array<Record<string, unknown>>;
+  userDocuments?: Array<Record<string, unknown>>;
+  userGuardians?: Array<Record<string, unknown>>;
+  userBeneficiaries?: Array<Record<string, unknown>>;
 }
 
 interface Scenario {

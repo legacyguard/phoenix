@@ -146,8 +146,8 @@ function validateCategory(category: string): DocumentCategory | null {
 }
 
 // Helper function to parse text response if JSON parsing fails
-function parseTextResponse(text: string): any {
-  const result: any = {
+function parseTextResponse(text: string): Record<string, unknown> {
+  const result: Record<string, unknown> = {
     category: 'other',
     confidence: 0.5,
     reasoning: text

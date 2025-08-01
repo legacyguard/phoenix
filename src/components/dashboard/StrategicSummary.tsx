@@ -72,10 +72,10 @@ export const StrategicSummary: React.FC = () => {
   };
 
   const generateStrategicAreas = (
-    guardians: any[],
-    documents: any[],
-    assets: any[],
-    beneficiaries: any[]
+    guardians: Array<Record<string, unknown>>,
+    documents: Array<Record<string, unknown>>,
+    assets: Array<Record<string, unknown>>,
+    beneficiaries: Array<Record<string, unknown>>
   ) => {
     const areas: StrategicArea[] = [
       {
@@ -143,7 +143,7 @@ export const StrategicSummary: React.FC = () => {
     }
   };
 
-  const getNextDocumentAction = (documents: any[]): string => {
+  const getNextDocumentAction = (documents: Array<Record<string, unknown>>): string => {
     const criticalDocs = documents.filter(d => d.importance_level === 'critical');
     
     if (!documents.some(d => d.title?.toLowerCase().includes('birth'))) {

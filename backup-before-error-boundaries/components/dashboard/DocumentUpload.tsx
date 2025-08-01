@@ -18,7 +18,7 @@ import { MAX_FILE_SIZES } from '@/utils/constants';
 import { useUserPlan } from '@/hooks/useUserPlan';
 
 interface DocumentUploadProps {
-  onDocumentUploaded: (document: any) => void;
+  onDocumentUploaded: (document: Record<string, unknown>) => void;
   onCancel: () => void;
 }
 
@@ -151,19 +151,6 @@ export const DocumentUpload: React.FC<DocumentUploadProps> = ({ onDocumentUpload
       }
       
       toast.error(userMessage);
-    });
-      
-      let errorMessage = t('documentUpload.fileUploadFailed');
-      if (error instanceof Error) {
-        if (error.message.includes('storage')) {
-          errorMessage = `${t('documentUpload.fileUploadFailed')}: Problém s úložiskom`;
-        } else if (error.message.includes('network')) {
-          errorMessage = `${t('documentUpload.fileUploadFailed')}: Skontrolujte internetové pripojenie`;
-        }
-      }
-      
-      toast.error(errorMessage);
-      return null;
     } finally {
       setIsUploading(false);
     }
@@ -203,10 +190,10 @@ export const DocumentUpload: React.FC<DocumentUploadProps> = ({ onDocumentUpload
 
       toast.success(t('documentUpload.saved'));
       onDocumentUploaded(data);
-        } catch (error: any) {
+    } catch (error: Record<string, unknown>) {
       const timestamp = new Date().toISOString();
-      const errorMessage = error?.message || 'Neznáma chyba';
-      const errorCode = error?.code || 'UNKNOWN_ERROR';
+      const errorMessage = (error as Error)?.message || 'Neznáma chyba';
+      const errorCode = (error as { code?: string })?.code || 'UNKNOWN_ERROR';
       
       // Detailné logovanie pre debugging
       console.error('[Aplikácia] Chyba pri operácia:', {
@@ -215,36 +202,24 @@ export const DocumentUpload: React.FC<DocumentUploadProps> = ({ onDocumentUpload
         errorCode,
         errorMessage,
         errorDetails: error,
-        stack: error?.stack
+        stack: (error as Error)?.stack
       });
       
       // Používateľsky prívetivá správa
       let userMessage = 'Nastala chyba pri operácia.';
       
       // Špecifické správy podľa typu chyby
-      if (error?.code === 'PGRST116') {
+      if (errorCode === 'PGRST116') {
         userMessage = 'Požadované dáta neboli nájdené.';
-      } else if (error?.message?.includes('network')) {
+      } else if (errorMessage.includes('network')) {
         userMessage = 'Chyba pripojenia. Skontrolujte internetové pripojenie.';
-      } else if (error?.message?.includes('permission')) {
+      } else if (errorMessage.includes('permission')) {
         userMessage = 'Nemáte oprávnenie na túto akciu.';
-      } else if (error?.message?.includes('duplicate')) {
+      } else if (errorMessage.includes('duplicate')) {
         userMessage = 'Takýto záznam už existuje.';
       }
       
       toast.error(userMessage);
-    });
-      
-      let errorMessage = t('documentUpload.failedSave');
-      if (error instanceof Error) {
-        if (error.message.includes('duplicate')) {
-          errorMessage = `${t('documentUpload.failedSave')}: Dokument s týmto názvom už existuje`;
-        } else if (error.message.includes('permission')) {
-          errorMessage = `${t('documentUpload.failedSave')}: Nedostatočné oprávnenia`;
-        }
-      }
-      
-      toast.error(errorMessage);
     }
   };
 

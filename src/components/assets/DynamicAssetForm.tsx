@@ -20,11 +20,11 @@ const DynamicAssetForm: React.FC<DynamicAssetFormProps> = ({ mainCategory, subTy
   const { t } = useTranslation('common');
   
   // Form state management
-  const [formData, setFormData] = useState<Record<string, any>>({});
+  const [formData, setFormData] = useState<Record<string, unknown>>({});
   
   // Component logic starts here
 
-  const handleInputChange = (field: string, value: any) => {
+  const handleInputChange = (field: string, value: Record<string, unknown>) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
   };
 

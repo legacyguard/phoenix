@@ -13,7 +13,7 @@ import { cn } from '@/lib/utils';
 
 interface WillGeneratorProps {
   preselectedCountry?: string;
-  onComplete?: (willData: any) => void;
+  onComplete?: (willData: Record<string, unknown>) => void;
 }
 
 const WillGenerator: React.FC<WillGeneratorProps> = ({

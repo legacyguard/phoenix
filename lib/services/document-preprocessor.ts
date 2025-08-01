@@ -24,7 +24,7 @@ export class DocumentPreprocessor {
     const img = await this.loadImage(file);
     
     // Calculate dimensions
-    let { width, height } = this.calculateDimensions(
+    const { width, height } = this.calculateDimensions(
       img.width,
       img.height,
       maxWidth,

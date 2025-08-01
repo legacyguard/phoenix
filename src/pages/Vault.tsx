@@ -21,7 +21,7 @@ interface Asset {
   currency?: string;
   created_at: string;
   updated_at: string;
-  details?: Record<string, any>;
+  details?: Record<string, unknown>;
 }
 
 export const Vault: React.FC = () => {

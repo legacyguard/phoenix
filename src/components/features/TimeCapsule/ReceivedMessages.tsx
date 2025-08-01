@@ -34,7 +34,7 @@ interface TimeCapsuleMessage {
   messageType: 'text' | 'photo' | 'video' | 'audio';
   textContent: string | null;
   attachmentUrl: string | null;
-  attachmentMetadata: any;
+  attachmentMetadata: Record<string, unknown>;
   status: 'unlocked' | 'delivered';
   unlockCondition: 'date' | 'after_passing';
   unlockedAt: string;

@@ -40,7 +40,7 @@ describe('PrivacyControlPanel', () => {
 
   beforeEach(() => {
     vi.clearAllMocks();
-    (global.fetch as any).mockResolvedValue({
+    (global.fetch as unknown as jest.MockedFunction<typeof fetch>).mockResolvedValue({
       ok: true,
       json: () => Promise.resolve(mockSettings),
     });
@@ -126,7 +126,7 @@ describe('PrivacyControlPanel', () => {
     const user = userEvent.setup();
     const { toast } = await import('sonner');
     
-    (global.fetch as any)
+    (global.fetch as unknown as jest.MockedFunction<typeof fetch>)
       .mockResolvedValueOnce({
         ok: true,
         json: () => Promise.resolve(mockSettings),
@@ -162,7 +162,7 @@ describe('PrivacyControlPanel', () => {
     const user = userEvent.setup();
     const { toast } = await import('sonner');
     
-    (global.fetch as any)
+    (global.fetch as unknown as jest.MockedFunction<typeof fetch>)
       .mockResolvedValueOnce({
         ok: true,
         json: () => Promise.resolve(mockSettings),
@@ -189,7 +189,7 @@ describe('PrivacyControlPanel', () => {
   it('should handle load error', async () => {
     const { toast } = await import('sonner');
     
-    (global.fetch as any).mockResolvedValue({
+    (global.fetch as unknown as jest.MockedFunction<typeof fetch>).mockResolvedValue({
       ok: false,
       status: 500,
     });
@@ -204,7 +204,7 @@ describe('PrivacyControlPanel', () => {
   it('should show saving state when saving', async () => {
     const user = userEvent.setup();
     
-    (global.fetch as any)
+    (global.fetch as unknown as jest.MockedFunction<typeof fetch>)
       .mockResolvedValueOnce({
         ok: true,
         json: () => Promise.resolve(mockSettings),

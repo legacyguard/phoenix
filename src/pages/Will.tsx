@@ -94,7 +94,7 @@ export const Will: React.FC = () => {
           notes: data.notes || '',
         });
       }
-        } catch (error: any) {
+        } catch (error: Record<string, unknown>) {
       const timestamp = new Date().toISOString();
 const errorMessage = error?.message || t('errors.unknown');
       const errorCode = error?.code || 'UNKNOWN_ERROR';
@@ -142,7 +142,7 @@ const errorMessage = error?.message || t('errors.unknown');
 
       if (error) throw error;
       setContacts(data || []);
-        } catch (error: any) {
+        } catch (error: Record<string, unknown>) {
       const timestamp = new Date().toISOString();
 const errorMessage = error?.message || t('errors.unknown');
       const errorCode = error?.code || 'UNKNOWN_ERROR';
@@ -212,7 +212,7 @@ const errorMessage = error?.message || t('errors.unknown');
 
       toast.success(t('will.messages.savedSuccessfully'));
       loadWill();
-        } catch (error: any) {
+        } catch (error: Record<string, unknown>) {
       const timestamp = new Date().toISOString();
 const errorMessage = error?.message || t('errors.unknown');
       const errorCode = error?.code || 'UNKNOWN_ERROR';
@@ -247,13 +247,13 @@ const errorMessage = error?.message || t('errors.unknown');
     }
   };
 
-  const handleDocumentUploaded = (document: any) => {
+  const handleDocumentUploaded = (document: Record<string, unknown>) => {
     setShowUpload(false);
     loadWill();
     toast.success(t('will.messages.documentUploaded'));
   };
 
-  const handleWillGenerated = (willData: any) => {
+  const handleWillGenerated = (willData: Record<string, unknown>) => {
     setShowGenerator(false);
     // Update the will status to "in preparation" or "completed"
     setFormData(prev => ({ ...prev, status: 'inPreparation' }));

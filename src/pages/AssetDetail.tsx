@@ -28,7 +28,7 @@ interface Asset {
   property_registry_number?: string;
   estimated_value?: number;
   currency_code: string;
-  metadata: any;
+  metadata: Record<string, unknown>;
   asset_story?: string;
 }
 
@@ -50,7 +50,12 @@ export const AssetDetail: React.FC = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [isSaving, setIsSaving] = useState(false);
   const [asset, setAsset] = useState<Asset | null>(null);
-  const [liabilities, setLiabilities] = useState<any[]>([]);
+  const [liabilities, setLiabilities] = useState<Array<{
+    id: string;
+    name: string;
+    amount: number;
+    type: string;
+  }>>([]);
 const [showAddLiabilityModal, setShowAddLiabilityModal] = useState(false);
 const [showEditStoryModal, setShowEditStoryModal] = useState(false);
   
@@ -109,12 +114,12 @@ const [showEditStoryModal, setShowEditStoryModal] = useState(false);
         estimated_value: data.estimated_value?.toString() || '',
         currency_code: data.currency_code || 'EUR',
         // Financial Account specific fields
-        account_type: (data.metadata as any)?.account_type || '',
-        financial_institution: (data.metadata as any)?.financial_institution || '',
-        account_number: (data.metadata as any)?.account_number || '',
-        login_credentials: (data.metadata as any)?.login_credentials || '',
+        account_type: (data.metadata as Record<string, unknown>)?.account_type as string || '',
+        financial_institution: (data.metadata as Record<string, unknown>)?.financial_institution as string || '',
+        account_number: (data.metadata as Record<string, unknown>)?.account_number as string || '',
+        login_credentials: (data.metadata as Record<string, unknown>)?.login_credentials as string || '',
       });
-    } catch (error: any) {
+    } catch (error) {
       const errorMessage = getErrorMessage(error, t);
       handleError(error, {
         operation: 'loadAsset',
@@ -177,7 +182,7 @@ const [showEditStoryModal, setShowEditStoryModal] = useState(false);
       }
 
       navigate('/dashboard');
-    } catch (error: any) {
+    } catch (error: Record<string, unknown>) {
       const errorMessage = getErrorMessage(error, t);
       handleError(error, {
         operation: 'handleSave',
@@ -235,7 +240,7 @@ const [showEditStoryModal, setShowEditStoryModal] = useState(false);
 
       if (error) throw error;
       setLiabilities(data || []);
-    } catch (error: any) {
+    } catch (error: Record<string, unknown>) {
       console.error('Error fetching liabilities:', error);
     }
   };

@@ -20,10 +20,10 @@ import {
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
 
 interface FamilyGuideProps {
-  guardians: any[];
-  documents: any[];
-  assets: any[];
-  beneficiaries: any[];
+  guardians: Array<Record<string, unknown>>;
+  documents: Array<Record<string, unknown>>;
+  assets: Array<Record<string, unknown>>;
+  beneficiaries: Array<Record<string, unknown>>;
 }
 
 interface EmergencyContact {

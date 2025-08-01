@@ -18,7 +18,7 @@ import {
   ArrowRight,
   CheckCircle2,
   Clock,
-  Infinity,
+  Infinity as InfinityIcon,
   Home,
   FileSearch,
   Navigation

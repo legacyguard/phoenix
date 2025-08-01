@@ -1,5 +1,35 @@
-import { Database } from '@/integrations/supabase/types';
 import { createClient } from '@supabase/supabase-js';
+
+// Define the database types inline since the import path might be incorrect
+interface Database {
+  public: {
+    Tables: {
+      assets: {
+        Row: {
+          id: string;
+          type: string;
+          estimated_value?: number;
+          user_id: string;
+        };
+      };
+      guardians: {
+        Row: {
+          id: string;
+          full_name: string;
+          invitation_status?: string;
+          user_id: string;
+        };
+      };
+      wills: {
+        Row: {
+          id: string;
+          status: string;
+          user_id: string;
+        };
+      };
+    };
+  };
+}
 
 const supabase = createClient<Database>(
   process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -29,7 +59,7 @@ interface UserData {
     id: string;
     type: string;
     category?: string;
-    metadata?: any;
+    metadata?: Record<string, unknown>;
   }>;
   guardians?: Array<{
     id: string;
@@ -54,7 +84,7 @@ export async function generateNudgesForUser(userId: string) {
   if (!assets.data || !guardians.data || !wills.data) return;
 
   // Nudge 1: Social Proof
-  const hasLifeInsurance = assets.data.some((a: any) => a.type === 'life_insurance');
+  const hasLifeInsurance = assets.data.some((a: { type: string }) => a.type === 'life_insurance');
   if (!hasLifeInsurance) {
     await createNotification(userId, {
       type: 'nudge_social_proof',
@@ -65,7 +95,7 @@ export async function generateNudgesForUser(userId: string) {
 
   // Nudge 2: Loss Aversion
   const hasWill = wills.data.length > 0;
-  const totalAssetValue = assets.data.reduce((sum: number, a: any) => sum + (a.estimated_value || 0), 0);
+  const totalAssetValue = assets.data.reduce((sum: number, a: { estimated_value?: number }) => sum + (a.estimated_value || 0), 0);
   if (totalAssetValue > 50000 && !hasWill) {
     await createNotification(userId, {
       type: 'nudge_loss_aversion',
@@ -85,7 +115,7 @@ export async function generateNudgesForUser(userId: string) {
   }
 
   // Nudge 4: Commitment & Consistency
-  const unpreparedGuardians = guardians.data.filter((g: any) => g.invitation_status !== 'accepted');
+  const unpreparedGuardians = guardians.data.filter((g: { invitation_status?: string }) => g.invitation_status !== 'accepted');
   if (unpreparedGuardians.length > 0) {
     await createNotification(userId, {
       type: 'nudge_commitment',
@@ -96,12 +126,30 @@ export async function generateNudgesForUser(userId: string) {
 }
 
 async function createNotification(userId: string, { type, message, urgency }: { type: string; message: string; urgency: 'low' | 'medium' | 'high' }) {
-  // Note: notifications table doesn't exist in the schema, so this would need to be implemented
-  // For now, we'll just log the notification
-  console.log('Notification would be created:', { userId, type, message, urgency });
+  // TODO: Implement proper notification system
+  // For now, we'll log the notification and could extend this to:
+  // 1. Store in a notifications table (if created)
+  // 2. Send email notifications
+  // 3. Push notifications
+  // 4. In-app notifications
+  
+  console.log('Notification created:', { 
+    userId, 
+    type, 
+    message, 
+    urgency, 
+    timestamp: new Date().toISOString() 
+  });
+  
+  // You could also store this in localStorage for client-side notifications
+  if (typeof window !== 'undefined') {
+    const notifications = JSON.parse(localStorage.getItem('user_notifications') || '[]');
+    notifications.push({ userId, type, message, urgency, timestamp: new Date().toISOString() });
+    localStorage.setItem('user_notifications', JSON.stringify(notifications));
+  }
 }
 
-function calculateOverallPreparedness(userData: any) {
+function calculateOverallPreparedness(userData: { assets?: unknown[]; guardians?: unknown[]; wills?: unknown[] }) {
   // Calculate based on available data
   let score = 0;
   

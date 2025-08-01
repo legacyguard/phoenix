@@ -44,7 +44,7 @@ describe('Dashboard Service - Plan Strength & Stages', () => {
             single: vi.fn().mockResolvedValue({ data: mockProfile, error: null }),
           }),
         }),
-      } as any);
+      } as Record<string, unknown>);
       
       const strength = ProgressService.calculateCompletionScore(mockUserId);
       expect(strength).toBeGreaterThan(0);
@@ -70,7 +70,7 @@ describe('Dashboard Service - Plan Strength & Stages', () => {
             single: vi.fn().mockResolvedValue({ data: completeProfile, error: null }),
           }),
         }),
-      } as any);
+      } as Record<string, unknown>);
       
       // Mock localStorage to simulate 100% completion
       localStorage.setItem(`completionScore_${mockUserId}`, '100');
@@ -166,7 +166,7 @@ describe('Dashboard Service - Plan Strength & Stages', () => {
             single: vi.fn().mockResolvedValue({ data: null, error: new Error('Not found') }),
           }),
         }),
-      } as any);
+      } as Record<string, unknown>);
       
       const strength = ProgressService.calculateCompletionScore(mockUserId);
       expect(strength).toBe(70); // Should return default mock value

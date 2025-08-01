@@ -156,10 +156,10 @@ export function enhanceError(
     component?: string;
     action?: string;
     userId?: string;
-    metadata?: Record<string, any>;
+    metadata?: Record<string, unknown>;
   }
-): Error & { enhanced: boolean; context?: any } {
-  const enhanced = error as Error & { enhanced: boolean; context?: any };
+): Error & { enhanced: boolean; context?: Record<string, unknown> } {
+  const enhanced = error as Error & { enhanced: boolean; context?: Record<string, unknown> };
   
   if (enhanced.enhanced) {
     return enhanced;
@@ -211,8 +211,8 @@ export function getErrorSummary(error: Error): {
 /**
  * Serializuje Error objekt pre odoslanie alebo uloženie
  */
-export function serializeError(error: Error): Record<string, any> {
-  const serialized: Record<string, any> = {
+export function serializeError(error: Error): Record<string, unknown> {
+  const serialized: Record<string, unknown> = {
     name: error.name,
     message: error.message,
     stack: error.stack,
@@ -221,8 +221,8 @@ export function serializeError(error: Error): Record<string, any> {
 
   // Pridať vlastné vlastnosti
   for (const key in error) {
-    if (error.hasOwnProperty(key) && !serialized[key]) {
-      serialized[key] = (error as any)[key];
+    if (Object.prototype.hasOwnProperty.call(error, key) && !serialized[key]) {
+      serialized[key] = (error as unknown as Record<string, unknown>)[key];
     }
   }
 
@@ -247,7 +247,7 @@ export function normalizeError(error: unknown): Error {
   }
 
   if (typeof error === 'object' && error !== null) {
-    const err = new Error((error as any).message || 'Unknown error');
+    const err = new Error((error as Record<string, unknown>).message as string || 'Unknown error');
     Object.assign(err, error);
     return err;
   }

@@ -43,7 +43,7 @@ export const useErrorHandler = () => {
         message: errorObj.message,
         name: errorObj.name,
         stack: errorObj.stack,
-        cause: (errorObj as any).cause
+        cause: (errorObj as Error & { cause?: unknown }).cause
       },
       location: {
         href: window.location.href,
@@ -84,7 +84,7 @@ export const useErrorHandler = () => {
   const logError = useCallback((
     message: string,
     error?: unknown,
-    additionalData?: Record<string, any>
+    additionalData?: Record<string, unknown>
   ) => {
     const errorDetails = {
       timestamp: new Date().toISOString(),
@@ -111,7 +111,7 @@ export const useErrorHandler = () => {
 
   const captureException = useCallback((
     error: Error,
-    context?: Record<string, any>
+    context?: Record<string, unknown>
   ) => {
     const errorDetails = {
       timestamp: new Date().toISOString(),
@@ -142,7 +142,7 @@ export const useErrorHandler = () => {
 };
 
 // Helper funkcia pre získanie breadcrumbs
-function getBreadcrumbs(): any[] {
+function getBreadcrumbs(): Array<Record<string, unknown>> {
   try {
     // Tu by sme mohli implementovať vlastný breadcrumb systém
     // Zatiaľ vrátime základné informácie

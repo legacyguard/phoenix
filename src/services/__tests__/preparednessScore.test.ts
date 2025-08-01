@@ -2,7 +2,7 @@ import { describe, it, expect } from 'vitest';
 
 // Import the calculatePreparednessScore function from the family-hub route
 // Since it's not exported, we'll recreate the logic here for testing
-function calculatePreparednessScore(person: any): number {
+function calculatePreparednessScore(person: Record<string, unknown>): number {
   let score = 0;
   
   // Base score for being added as trusted person

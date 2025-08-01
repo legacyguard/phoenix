@@ -76,7 +76,13 @@ export const GuardianView: React.FC = () => {
   const [contacts, setContacts] = useState<Contact[]>([]);
   const [instructions, setInstructions] = useState<Instructions | null>(null);
   const [loading, setLoading] = useState(true);
-  const [guardianInfo, setGuardianInfo] = useState<any>(null);
+  const [guardianInfo, setGuardianInfo] = useState<{
+    id: string;
+    name: string;
+    email?: string;
+    relationship?: string;
+    status?: string;
+  } | null>(null);
   const [userInfo, setUserInfo] = useState<string>('');
   const [error, setError] = useState<Error | null>(null);
   
@@ -144,7 +150,7 @@ export const GuardianView: React.FC = () => {
       // Set placeholder user info
       setUserInfo(t('guardianView.defaultUserName'));
       
-    } catch (error: any) {
+    } catch (error: Record<string, unknown>) {
       const timestamp = new Date().toISOString();
       const errorMessage = error?.message || t('errors.unknown');
       const errorCode = error?.code || 'UNKNOWN_ERROR';

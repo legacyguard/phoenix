@@ -216,7 +216,7 @@ export const AnalyticsDashboard: React.FC = () => {
           </p>
         </div>
         <div className="flex items-center space-x-4">
-          <Select value={timeRange} onValueChange={(value: any) => setTimeRange(value)}>
+          <Select value={timeRange} onValueChange={(value: Record<string, unknown>) => setTimeRange(value)}>
             <SelectTrigger className="w-[140px]">
               <SelectValue />
             </SelectTrigger>

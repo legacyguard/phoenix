@@ -28,7 +28,7 @@ export interface NotificationPayload {
   icon?: string;
   badge?: string;
   tag?: string;
-  data?: any;
+  data?: Record<string, unknown>;
   actions?: Array<{
     action: string;
     title: string;
@@ -103,7 +103,7 @@ export class PushNotificationSender {
     try {
       await webpush.sendNotification(pushSubscription, notificationPayload);
       console.log(`Notification sent to ${subscription.endpoint}`);
-    } catch (error: any) {
+    } catch (error: Record<string, unknown>) {
       console.error(`Failed to send notification to ${subscription.endpoint}:`, error);
       
       // If subscription is invalid, remove it

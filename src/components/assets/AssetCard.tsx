@@ -23,7 +23,7 @@ interface Asset {
   estimated_value?: number;
   currency?: string;
   created_at: string;
-  details?: Record<string, any>;
+  details?: Record<string, unknown>;
 }
 
 interface AssetCardProps {

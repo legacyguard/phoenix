@@ -56,7 +56,7 @@ describe('AnalyticsService', () => {
     vi.clearAllMocks();
     mockSessionStorage.getItem.mockReturnValue(null);
     mockLocalStorage.getItem.mockReturnValue('true'); // Consent given by default
-    (global.fetch as any).mockResolvedValue({
+    (global.fetch as jest.MockedFunction<typeof fetch>).mockResolvedValue({
       ok: true,
       json: () => Promise.resolve({ success: true }),
     });
@@ -65,7 +65,7 @@ describe('AnalyticsService', () => {
     mockInsert.mockResolvedValue({ error: null });
     
     // Reset the singleton instance
-    (AnalyticsService as any).instance = undefined;
+    (AnalyticsService as { instance?: AnalyticsService }).instance = undefined;
     analyticsService = AnalyticsService.getInstance();
   });
 
@@ -250,7 +250,7 @@ describe('AnalyticsService', () => {
 
   describe('Error Handling', () => {
     it('should handle network errors gracefully', async () => {
-      (global.fetch as any).mockRejectedValue(new Error('Network error'));
+      (global.fetch as jest.MockedFunction<typeof fetch>).mockRejectedValue(new Error('Network error'));
       const service = AnalyticsService.getInstance();
       
       // Should not throw an error
@@ -258,7 +258,7 @@ describe('AnalyticsService', () => {
     });
 
     it('should handle API errors gracefully', async () => {
-      (global.fetch as any).mockResolvedValue({
+      (global.fetch as jest.MockedFunction<typeof fetch>).mockResolvedValue({
         ok: false,
         status: 500,
         statusText: 'Internal Server Error'

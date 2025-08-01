@@ -41,7 +41,7 @@ global.ResizeObserver = vi.fn().mockImplementation(() => ({
 // Suppress console errors during tests (can be removed for debugging)
 const originalError = console.error;
 beforeAll(() => {
-  console.error = (...args: any[]) => {
+  console.error = (...args: Array<Record<string, unknown>>) => {
     if (
       typeof args[0] === 'string' &&
       args[0].includes('Warning: ReactDOM.render')

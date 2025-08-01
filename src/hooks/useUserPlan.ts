@@ -50,7 +50,7 @@ export function useUserPlan() {
         } else {
           setPlan(subscription?.plan_type || 'starter');
         }
-    } catch (error: any) {
+    } catch (error: Record<string, unknown>) {
         const timestamp = new Date().toISOString();
         const errorMessage = error?.message || 'Unknown error';
         const errorCode = error?.code || 'UNKNOWN_ERROR';

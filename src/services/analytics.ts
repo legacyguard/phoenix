@@ -71,7 +71,7 @@ export class AnalyticsService {
 
   async track(
     eventName: string,
-    properties: Record<string, any> = {},
+    properties: Record<string, unknown> = {},
     emotionalContext?: AnalyticsEvent['emotional_context'],
     userJourneyStage: AnalyticsEvent['user_journey_stage'] = 'maintenance'
   ): Promise<void> {
@@ -110,7 +110,7 @@ export class AnalyticsService {
     }
   }
 
-  private sanitizeProperties(properties: Record<string, any>): Record<string, any> {
+  private sanitizeProperties(properties: Record<string, unknown>): Record<string, unknown> {
     // Remove any PII or sensitive data
     const sanitized = { ...properties };
     const sensitiveKeys = ['email', 'name', 'phone', 'ssn', 'address', 'password'];
@@ -272,7 +272,7 @@ export class AnalyticsService {
     }
   }
 
-  private calculateOnboardingCompletion(events: any[]): number {
+  private calculateOnboardingCompletion(events: Array<Record<string, unknown>>): number {
     const onboardingEvents = events.filter(e => e.user_journey_stage === 'onboarding');
     const completedSteps = new Set(
       onboardingEvents
@@ -284,7 +284,7 @@ export class AnalyticsService {
     return (completedSteps.size / 5) * 100;
   }
 
-  private calculateTimeToFirstValue(events: any[]): number {
+  private calculateTimeToFirstValue(events: Array<Record<string, unknown>>): number {
     const firstEvent = events[0];
     const firstValueEvent = events.find(e => 
       e.event_name === 'document_uploaded' || 
@@ -297,7 +297,7 @@ export class AnalyticsService {
     return Math.floor(timeDiff / 60000); // Convert to minutes
   }
 
-  private calculateFeatureAdoption(events: any[]): Record<string, number> {
+  private calculateFeatureAdoption(events: Array<Record<string, unknown>>): Record<string, number> {
     const features = ['ai_suggestions', 'manual_mode', 'privacy_mode', 'family_sharing'];
     const adoption: Record<string, number> = {};
 
@@ -312,7 +312,7 @@ export class AnalyticsService {
     return adoption;
   }
 
-  private calculateDocumentCompletion(events: any[]): number {
+  private calculateDocumentCompletion(events: Array<Record<string, unknown>>): number {
     const uploadedDocs = events.filter(e => e.event_name === 'document_uploaded').length;
     const categorizedDocs = events.filter(e => e.event_name === 'document_categorized').length;
     
@@ -320,7 +320,7 @@ export class AnalyticsService {
     return (categorizedDocs / uploadedDocs) * 100;
   }
 
-  private calculateFamilyPreparedness(events: any[]): number {
+  private calculateFamilyPreparedness(events: Array<Record<string, unknown>>): number {
     const familyActions = ['guardian_added', 'beneficiary_updated', 'member_invited'];
     const completedActions = familyActions.filter(action =>
       events.some(e => e.event_name === action)

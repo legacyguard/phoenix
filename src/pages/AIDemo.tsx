@@ -13,8 +13,8 @@ export function AIDemo() {
   const { t } = useTranslation();
   const { generateQuestion, generateMessage, suggestAction } = useAI();
   const [generatedMessage, setGeneratedMessage] = React.useState('');
-  const [currentQuestion, setCurrentQuestion] = React.useState<any>(null);
-  const [currentSuggestion, setCurrentSuggestion] = React.useState<any>(null);
+  const [currentQuestion, setCurrentQuestion] = React.useState<Record<string, unknown> | null>(null);
+  const [currentSuggestion, setCurrentSuggestion] = React.useState<Record<string, unknown> | null>(null);
 
   // Mock user profile for demo
   const demoProfile: UserProfile = {
@@ -51,7 +51,7 @@ export function AIDemo() {
     }
   };
 
-  const handleGenerateMessage = async (scenario: string, tone: any) => {
+  const handleGenerateMessage = async (scenario: string, tone: Record<string, unknown>) => {
     const message = await generateMessage(scenario, tone);
     if (message) {
       setGeneratedMessage(message);

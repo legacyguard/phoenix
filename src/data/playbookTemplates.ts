@@ -18,7 +18,7 @@ export interface PlaybookTemplates {
 }
 
 // Function to create playbook templates with translations
-export const createPlaybookTemplates = (t?: (key: string, params?: any) => string): PlaybookTemplates => {
+export const createPlaybookTemplates = (t?: (key: string, params?: Record<string, unknown>) => string): PlaybookTemplates => {
   // Default translation function if none provided
   const translate = t || ((key: string) => key);
   
@@ -418,7 +418,7 @@ SEASONAL TASKS:
 export const getTemplatesByFilter = (
   section: keyof PlaybookTemplates,
   filter?: { category?: string; tone?: string },
-  t?: (key: string, params?: any) => string
+  t?: (key: string, params?: Record<string, unknown>) => string
 ): PlaybookTemplate[] => {
   const templates = createPlaybookTemplates(t)[section];
   

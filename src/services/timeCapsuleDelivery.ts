@@ -103,7 +103,7 @@ async function checkAndUnlockTimeCapsules(): Promise<void> {
  */
 async function unlockAndNotifyRecipients(
   capsule: TimeCapsuleMessage,
-  supabase: any
+  supabase: Record<string, unknown>
 ): Promise<void> {
   try {
     // Update capsule status to unlocked
@@ -223,7 +223,7 @@ async function createInAppNotification(
   capsuleId: string,
   senderName: string,
   capsuleTitle: string,
-  supabase: any
+  supabase: Record<string, unknown>
 ): Promise<void> {
   try {
     const { error } = await supabase

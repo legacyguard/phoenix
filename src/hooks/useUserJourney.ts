@@ -142,12 +142,13 @@ export function useUserJourney() {
       case 'family_prep':
         return state.metrics?.family_preparedness_score || 0;
       
-      case 'maintenance':
+      case 'maintenance': {
         // In maintenance, we track overall completion
         const avgCompletion = state.metrics ? 
           (state.metrics.document_completion_percentage + 
            state.metrics.family_preparedness_score) / 2 : 0;
         return avgCompletion;
+      }
       
       default:
         return 0;
@@ -195,7 +196,7 @@ export function useUserJourney() {
   // Track journey events
   const trackJourneyEvent = useCallback((
     event: string,
-    properties?: Record<string, any>
+    properties?: Record<string, unknown>
   ) => {
     analytics.track(
       event,

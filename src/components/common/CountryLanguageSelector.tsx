@@ -42,7 +42,7 @@ export const CountryLanguageSelector: React.FC = () => {
   const handleLanguageSelect = (languageCode: string) => {
     try {
       i18n.changeLanguage(languageCode);
-    } catch (error: any) {
+    } catch (error: Record<string, unknown>) {
       const timestamp = new Date().toISOString();
       const errorMessage = error?.message || 'Neznáma chyba';
       const errorCode = error?.code || 'UNKNOWN_ERROR';

@@ -19,7 +19,7 @@ export function SharedContentViewer({ token, password }: SharedContentViewerProp
   const { t } = useTranslation();
   const { token: routeToken } = useParams<{token: string;}>();
   const [sharedLink, setSharedLink] = useState<SharedLink | null>(null);
-  const [content, setContent] = useState<any>(null);
+  const [content, setContent] = useState<Record<string, unknown> | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string>('');
   const [providedPassword, setProvidedPassword] = useState(password || '');
@@ -116,7 +116,7 @@ export function SharedContentViewer({ token, password }: SharedContentViewerProp
     <p className="text-muted-foreground">{content.description}</p>
     }
       <div className="space-y-4">
-        {content.playbook_contacts?.map((contact: any) =>
+        {content.playbook_contacts?.map((contact: Record<string, unknown>) =>
       <Card key={contact.id}>
             <CardHeader>
               <CardTitle className="text-lg">{contact.contact.name}</CardTitle>
@@ -150,7 +150,7 @@ export function SharedContentViewer({ token, password }: SharedContentViewerProp
         </CardHeader>
         <CardContent>
           <div className="space-y-4">
-            {content.categories.map((category: any) =>
+            {content.categories.map((category: Record<string, unknown>) =>
           <div key={category.name} className="flex justify-between items-center">
                 <span className="font-medium">{category.name}</span>
                 <div className="text-right">
@@ -172,7 +172,7 @@ export function SharedContentViewer({ token, password }: SharedContentViewerProp
         <h2 className="text-2xl font-bold">{t('sharing.inheritanceAllocation')}</h2>
       </div>
       <div className="grid gap-4">
-        {content.beneficiaries.map((beneficiary: any) =>
+        {content.beneficiaries.map((beneficiary: Record<string, unknown>) =>
       <Card key={beneficiary.name}>
             <CardHeader>
               <CardTitle className="text-lg">{beneficiary.name}</CardTitle>
@@ -329,7 +329,7 @@ export function SharedContentViewer({ token, password }: SharedContentViewerProp
         @media print {
           .no-print { display: none !important; }
           body { background: white !important; }
-          .print\:break-inside-avoid { break-inside: avoid; }
+          .print:break-inside-avoid { break-inside: avoid; }
         }
       `}</style>
     </div>);

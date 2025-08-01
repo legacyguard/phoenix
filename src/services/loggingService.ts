@@ -7,7 +7,7 @@ interface LogActivityParams {
   targetId?: string;
   ipAddress?: string;
   userAgent?: string;
-  metadata?: Record<string, any>;
+  metadata?: Record<string, unknown>;
 }
 
 export async function logActivity({

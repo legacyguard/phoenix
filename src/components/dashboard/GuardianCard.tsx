@@ -18,10 +18,10 @@ interface GuardianCardProps {
     invitation_status?: string;
     invitation_email?: string;
   };
-  onEdit: (guardian: any) => void;
+  onEdit: (guardian: Record<string, unknown>) => void;
   onDelete: (id: string) => void;
-  onSendInvite?: (guardian: any) => void;
-  onCreatePlaybook?: (guardian: any) => void;
+  onSendInvite?: (guardian: Record<string, unknown>) => void;
+  onCreatePlaybook?: (guardian: Record<string, unknown>) => void;
 }
 
 export const GuardianCard: React.FC<GuardianCardProps> = ({

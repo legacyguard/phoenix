@@ -6,7 +6,7 @@ interface ErrorContext {
   component?: string;
   action?: string;
   userId?: string;
-  [key: string]: any;
+  [key: string]: Record<string, unknown>;
 }
 
 interface BrowserInfo {
@@ -21,7 +21,7 @@ interface BrowserInfo {
 
 class ErrorTracker {
   private static instance: ErrorTracker;
-  private errorQueue: any[] = [];
+  private errorQueue: Array<Record<string, unknown>> = [];
   private isProcessing = false;
   private batchSize = 10;
   private flushInterval = 5000; // 5 seconds
@@ -191,7 +191,7 @@ class ErrorTracker {
   }
 
   // React Error Boundary integration
-  logErrorBoundary(error: Error, errorInfo: any) {
+  logErrorBoundary(error: Error, errorInfo: Record<string, unknown>) {
     return this.logError('critical', error.message, {
       type: 'errorBoundary',
       componentStack: errorInfo.componentStack,
@@ -216,6 +216,6 @@ export function useErrorTracking() {
 }
 
 // Error boundary error logger
-export function logErrorToSupabase(error: Error, errorInfo: any) {
+export function logErrorToSupabase(error: Error, errorInfo: Record<string, unknown>) {
   errorTracker.logErrorBoundary(error, errorInfo);
 }

@@ -78,7 +78,7 @@ async function getCalendarEvents(googleOAuthToken: string) {
   return [];
 }
 
-function detectWeddingOrAnniversary(events: any[]): boolean {
+function detectWeddingOrAnniversary(events: Array<Record<string, unknown>>): boolean {
   // Placeholder for event detection logic
   return false;
 }
@@ -88,7 +88,7 @@ async function getFinancialData(plaidAccessToken: string) {
   return [];
 }
 
-function detectHomePurchase(transactions: any[]): boolean {
+function detectHomePurchase(transactions: Array<Record<string, unknown>>): boolean {
   // Placeholder for home purchase detection
   return false;
 }

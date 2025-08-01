@@ -122,11 +122,12 @@ export function groupEventsByPeriod(
       case 'day':
         key = date.toISOString().slice(0, 10);
         break;
-      case 'week':
+      case 'week': {
         const weekStart = new Date(date);
         weekStart.setDate(date.getDate() - date.getDay());
         key = weekStart.toISOString().slice(0, 10);
         break;
+      }
       case 'month':
         key = date.toISOString().slice(0, 7);
         break;

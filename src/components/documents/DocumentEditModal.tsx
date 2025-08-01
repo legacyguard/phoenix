@@ -128,7 +128,7 @@ export const DocumentEditModal: React.FC<DocumentEditModalProps> = ({
         }
 
         // Prepare metadata
-        const metadata: any = {};
+        const metadata: Record<string, unknown> = {};
         if (contractNumber) metadata.contractNumber = contractNumber;
         if (contactPerson) metadata.contactPerson = contactPerson;
         if (contactPhone) metadata.contactPhone = contactPhone;
@@ -141,7 +141,7 @@ export const DocumentEditModal: React.FC<DocumentEditModalProps> = ({
         }
 
         // Prepare provider contact info
-        const providerContactInfo: any = {};
+        const providerContactInfo: Record<string, unknown> = {};
         if (providerPhone) providerContactInfo.phone = providerPhone;
         if (providerEmail) providerContactInfo.email = providerEmail;
         if (providerWebsite) providerContactInfo.website = providerWebsite;

@@ -3,7 +3,7 @@ export interface AnalyticsEvent {
   user_id?: string;
   session_id: string;
   timestamp: Date;
-  properties: Record<string, any>;
+  properties: Record<string, unknown>;
   emotional_context?: 'frustrated' | 'confused' | 'satisfied' | 'accomplished';
   user_journey_stage: 'onboarding' | 'setup' | 'maintenance' | 'family_prep';
 }

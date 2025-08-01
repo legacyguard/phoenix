@@ -8,8 +8,10 @@ describe('utils', () => {
     });
 
     it('handles conditional classes', () => {
-      expect(cn('base', false && 'conditional', 'final')).toBe('base final');
-      expect(cn('base', true && 'conditional', 'final')).toBe('base conditional final');
+      const shouldInclude = false;
+      const shouldExclude = true;
+      expect(cn('base', shouldInclude ? 'conditional' : '', 'final')).toBe('base final');
+      expect(cn('base', shouldExclude ? 'conditional' : '', 'final')).toBe('base conditional final');
     });
 
     it('merges Tailwind classes correctly', () => {

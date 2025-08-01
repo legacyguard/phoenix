@@ -26,11 +26,11 @@ export class SupabaseWithRetry {
     const originalFrom = supabase.from(table);
     
     return {
-      select: (...args: any[]) => this.wrapQuery(originalFrom.select(...args)),
-      insert: (...args: any[]) => this.wrapQuery(originalFrom.insert(...args)),
-      update: (...args: any[]) => this.wrapQuery(originalFrom.update(...args)),
-      upsert: (...args: any[]) => this.wrapQuery(originalFrom.upsert(...args)),
-      delete: (...args: any[]) => this.wrapQuery(originalFrom.delete(...args))
+      select: (...args: Array<Record<string, unknown>>) => this.wrapQuery(originalFrom.select(...args)),
+      insert: (...args: Array<Record<string, unknown>>) => this.wrapQuery(originalFrom.insert(...args)),
+      update: (...args: Array<Record<string, unknown>>) => this.wrapQuery(originalFrom.update(...args)),
+      upsert: (...args: Array<Record<string, unknown>>) => this.wrapQuery(originalFrom.upsert(...args)),
+      delete: (...args: Array<Record<string, unknown>>) => this.wrapQuery(originalFrom.delete(...args))
     };
   }
 
@@ -42,7 +42,7 @@ export class SupabaseWithRetry {
       const originalStorage = supabase.storage.from(bucket);
       
       return {
-        upload: async (path: string, file: File, options?: any) => {
+        upload: async (path: string, file: File, options?: Record<string, unknown>) => {
           return retry(
             () => originalStorage.upload(path, file, options),
             this.defaultRetryOptions
@@ -80,7 +80,7 @@ export class SupabaseWithRetry {
         this.defaultRetryOptions
       );
     },
-    signIn: async (credentials: any) => {
+    signIn: async (credentials: Record<string, unknown>) => {
       return retry(
         () => supabase.auth.signInWithPassword(credentials),
         {
@@ -100,7 +100,7 @@ export class SupabaseWithRetry {
   /**
    * Wrapper pre query builder s retry
    */
-  private wrapQuery(query: any) {
+  private wrapQuery(query: Record<string, unknown>) {
     // Uložíme si pôvodnú query
     const execute = async () => {
       const result = await query;
@@ -122,7 +122,7 @@ export class SupabaseWithRetry {
         
         // Pre ostatné metódy, vrátime wrapped query
         if (typeof target[prop] === 'function') {
-          return (...args: any[]) => {
+          return (...args: Array<Record<string, unknown>>) => {
             return this.wrapQuery(target[prop](...args));
           };
         }
@@ -193,9 +193,9 @@ export const supabaseHelpers = {
       concurrency?: number;
       stopOnError?: boolean;
     }
-  ): Promise<Array<{ success: boolean; data?: T; error?: any }>> {
+  ): Promise<Array<{ success: boolean; data?: T; error?: Record<string, unknown> }>> {
     const { concurrency = 3, stopOnError = false } = options || {};
-    const results: Array<{ success: boolean; data?: T; error?: any }> = [];
+    const results: Array<{ success: boolean; data?: T; error?: Record<string, unknown> }> = [];
     
     // Rozdelíme operácie na chunky
     for (let i = 0; i < operations.length; i += concurrency) {

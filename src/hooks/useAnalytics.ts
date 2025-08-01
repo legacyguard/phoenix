@@ -69,7 +69,7 @@ export function useAnalytics({ componentName, userJourneyStage = 'maintenance' }
   // Track user action with automatic emotional context inference
   const trackAction = useCallback((
     action: string,
-    properties?: Record<string, any>,
+    properties?: Record<string, unknown>,
     emotionalContext?: AnalyticsEvent['emotional_context']
   ) => {
     if (!isTrackingEnabled) return;
@@ -95,7 +95,7 @@ export function useAnalytics({ componentName, userJourneyStage = 'maintenance' }
   // Track errors or retries
   const trackError = useCallback((
     error: string,
-    details?: Record<string, any>
+    details?: Record<string, unknown>
   ) => {
     if (!isTrackingEnabled) return;
     
@@ -119,7 +119,7 @@ export function useAnalytics({ componentName, userJourneyStage = 'maintenance' }
   const trackFeature = useCallback((
     feature: string,
     accepted: boolean = true,
-    details?: Record<string, any>
+    details?: Record<string, unknown>
   ) => {
     if (!isTrackingEnabled) return;
     
@@ -140,7 +140,7 @@ export function useAnalytics({ componentName, userJourneyStage = 'maintenance' }
   const endTimer = useCallback((
     timerId: string,
     success: boolean = true,
-    properties?: Record<string, any>
+    properties?: Record<string, unknown>
   ) => {
     const startTime = sessionStorage.getItem(`analytics_timer_${timerId}`);
     if (!startTime) return;
@@ -178,7 +178,7 @@ export function useAnalytics({ componentName, userJourneyStage = 'maintenance' }
   const trackDocument = useCallback((
     action: 'uploaded' | 'categorized' | 'shared',
     documentType?: string,
-    details?: Record<string, any>
+    details?: Record<string, unknown>
   ) => {
     if (!isTrackingEnabled) return;
     
@@ -195,7 +195,7 @@ export function useAnalytics({ componentName, userJourneyStage = 'maintenance' }
   // Track family-related actions
   const trackFamily = useCallback((
     action: 'guardian_added' | 'beneficiary_updated' | 'member_invited',
-    details?: Record<string, any>
+    details?: Record<string, unknown>
   ) => {
     if (!isTrackingEnabled) return;
     
@@ -209,7 +209,7 @@ export function useAnalytics({ componentName, userJourneyStage = 'maintenance' }
   // Track emotional milestones
   const trackMilestone = useCallback((
     milestone: 'first_peace_of_mind' | 'family_protection_realized' | 'procrastination_overcome' | string,
-    details?: Record<string, any>
+    details?: Record<string, unknown>
   ) => {
     if (!isTrackingEnabled) return;
     
@@ -238,7 +238,7 @@ export function useAnalytics({ componentName, userJourneyStage = 'maintenance' }
   const trackNavigation = useCallback((
     from: string,
     to: string,
-    metadata?: Record<string, any>
+    metadata?: Record<string, unknown>
   ) => {
     if (!isTrackingEnabled) return;
     

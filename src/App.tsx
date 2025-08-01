@@ -189,30 +189,33 @@ const AppContent = () => {
                 <Route index element={<LegacyLetters />} />
               </Route>
               
-              {/* Test error route - REMOVE BEFORE PRODUCTION */}
-              <Route path="/test-error" element={
-                <SignedIn>
-                  <MainLayout />
-                </SignedIn>
-              }>
-                <Route index element={<TestError />} />
-              </Route>
-              
-              {/* Demo routes - REMOVE BEFORE PRODUCTION */}
-              <Route path="/ocr-demo" element={
-                <SignedIn>
-                  <MainLayout />
-                </SignedIn>
-              }>
-                <Route index element={<OCRDemo />} />
-              </Route>
-              <Route path="/upload-demo" element={
-                <SignedIn>
-                  <MainLayout />
-                </SignedIn>
-              }>
-                <Route index element={<UploadDemo />} />
-              </Route>
+              {/* Demo routes - only in development */}
+              {import.meta.env.DEV && (
+                <>
+                  <Route path="/test-error" element={
+                    <SignedIn>
+                      <MainLayout />
+                    </SignedIn>
+                  }>
+                    <Route index element={<TestError />} />
+                  </Route>
+                  
+                  <Route path="/ocr-demo" element={
+                    <SignedIn>
+                      <MainLayout />
+                    </SignedIn>
+                  }>
+                    <Route index element={<OCRDemo />} />
+                  </Route>
+                  <Route path="/upload-demo" element={
+                    <SignedIn>
+                      <MainLayout />
+                    </SignedIn>
+                  }>
+                    <Route index element={<UploadDemo />} />
+                  </Route>
+                </>
+              )}
               <Route path="/analytics" element={
                 <SignedIn>
                   <MainLayout />

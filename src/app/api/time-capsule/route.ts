@@ -62,7 +62,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Prepare database record
-    const dbRecord: Record<string, any> = {
+    const dbRecord: Record<string, unknown> = {
       user_id: user.id,
       title: capsuleData.title,
       message_type: capsuleData.messageType,

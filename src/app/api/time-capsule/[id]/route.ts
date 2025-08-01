@@ -37,7 +37,7 @@ export async function PUT(
     const updates: UpdateTimeCapsuleDto = await request.json();
 
     // Prepare update data
-    const updateData: any = {};
+    const updateData: Record<string, unknown> = {};
     if (updates.title !== undefined) updateData.title = updates.title;
     if (updates.textContent !== undefined) updateData.text_content = updates.textContent;
     if (updates.recipientIds !== undefined) updateData.recipient_ids = updates.recipientIds;

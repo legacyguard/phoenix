@@ -1,7 +1,7 @@
 import { z } from 'zod';
 
 // Function to create beneficiary form schema with translations
-export const createBeneficiaryFormSchema = (t: (key: string, params?: any) => string) => z.object({
+export const createBeneficiaryFormSchema = (t: (key: string, params?: Record<string, unknown>) => string) => z.object({
   name: z.string()
     .min(2, { message: t("validation.errors.beneficiaryNameRequired") })
     .max(100, { message: t("validation.errors.nameMaxLength", { max: 100 }) })

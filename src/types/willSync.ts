@@ -36,7 +36,7 @@ export interface WillVersion {
   id: string;
   will_id: string;
   version_number: number;
-  content_snapshot: any; // Will content structure
+  content_snapshot: Record<string, unknown>; // Will content structure
   changes_from_previous?: WillChanges;
   created_by: 'user' | 'system' | 'auto_sync';
   created_reason: string;
@@ -62,8 +62,8 @@ export interface TriggerEvent {
   asset_name?: string;
   beneficiary_id?: string;
   beneficiary_name?: string;
-  old_value?: any;
-  new_value?: any;
+  old_value?: Record<string, unknown>;
+  new_value?: Record<string, unknown>;
   timestamp: string;
 }
 
@@ -85,15 +85,15 @@ export interface WillChanges {
       id: string;
       name: string;
       field: string;
-      old_value: any;
-      new_value: any;
+      old_value: Record<string, unknown>;
+      new_value: Record<string, unknown>;
     }>;
     beneficiaries?: Array<{
       id: string;
       name: string;
       field: string;
-      old_value: any;
-      new_value: any;
+      old_value: Record<string, unknown>;
+      new_value: Record<string, unknown>;
     }>;
     allocations?: Array<{
       beneficiary_id: string;

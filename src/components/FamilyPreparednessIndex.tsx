@@ -58,10 +58,32 @@ interface Improvement {
 }
 
 interface FamilyPreparednessIndexProps {
-  userAssets?: any[];
-  userDocuments?: any[];
-  userGuardians?: any[];
-  userBeneficiaries?: any[];
+  userAssets?: Array<{
+    id: string;
+    type: string;
+    name: string;
+    value?: number;
+    category?: string;
+  }>;
+  userDocuments?: Array<{
+    id: string;
+    type: string;
+    category?: string;
+    metadata?: Record<string, unknown>;
+  }>;
+  userGuardians?: Array<{
+    id: string;
+    name: string;
+    email?: string;
+    status?: string;
+    playbook_status?: string;
+  }>;
+  userBeneficiaries?: Array<{
+    id: string;
+    name: string;
+    email?: string;
+    relationship?: string;
+  }>;
 }
 
 export const FamilyPreparednessIndex: React.FC<FamilyPreparednessIndexProps> = ({
@@ -130,7 +152,7 @@ export const FamilyPreparednessIndex: React.FC<FamilyPreparednessIndexProps> = (
       icon: userDocuments.some(d => d.type?.toLowerCase().includes('digital')) ? <CheckCircle2 /> : <AlertTriangle />
     },
     // Additional capabilities go here
-  ], [userAssets, userDocuments, userGuardians, userBeneficiaries]);
+  ], [userAssets, userDocuments, userGuardians, userBeneficiaries, t]);
 
   const crises = useMemo<CrisisSituation[]>(() => [
     {
@@ -151,7 +173,7 @@ export const FamilyPreparednessIndex: React.FC<FamilyPreparednessIndexProps> = (
       requiredCapabilities: ['immediate_financial_needs', 'digital_access'],
       missingCapabilities: []
     }
-  ], [capabilities]);
+  ], [capabilities, t]);
 
   // Determine preparedness level and message
   const getPreparednessLevel = (score: number) => {

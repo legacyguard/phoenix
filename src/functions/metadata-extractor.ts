@@ -203,7 +203,7 @@ ${truncatedText}
 Remember to return ONLY valid JSON with the extracted values.`;
 }
 
-function cleanExtractedData(data: any, category: DocumentCategory): ExtractedMetadata {
+function cleanExtractedData(data: Record<string, unknown>, category: DocumentCategory): ExtractedMetadata {
   const cleaned: ExtractedMetadata = {};
 
   // Copy all valid fields

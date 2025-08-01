@@ -63,7 +63,7 @@ const PrivacyControlPanel: React.FC = () => {
     fetchSettings();
   }, [getToken]);
 
-  const handleSettingChange = (key: string, value: any) => {
+  const handleSettingChange = (key: string, value: Record<string, unknown>) => {
     if (key.includes('.')) {
       // Handle nested properties
       const [parent, child] = key.split('.');

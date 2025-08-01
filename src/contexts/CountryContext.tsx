@@ -72,7 +72,7 @@ export const CountryProvider: React.FC<CountryProviderProps> = ({ children }) =>
           geoData: geoData
         });
         
-      } catch (error: any) {
+      } catch (error: Record<string, unknown>) {
         console.error('[CountryContext] Error detecting country/language:', error);
         
         // Fallback to UK/English

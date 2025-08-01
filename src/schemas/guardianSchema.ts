@@ -1,7 +1,7 @@
 import { z } from 'zod';
 
 // Function to create guardian form schema with translations
-export const createGuardianFormSchema = (t: (key: string, params?: any) => string) => z.object({
+export const createGuardianFormSchema = (t: (key: string, params?: Record<string, unknown>) => string) => z.object({
   full_name: z.string()
     .min(2, { message: t("validation.errors.nameMinLength", { min: 2 }) })
     .max(100, { message: t("validation.errors.nameMaxLength", { max: 100 }) })

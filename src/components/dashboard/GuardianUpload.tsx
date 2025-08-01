@@ -19,7 +19,7 @@ import { useDebouncedCallback } from '@/hooks/useDebounce';
 interface GuardianUploadProps {
   onSuccess: () => void;
   onCancel: () => void;
-  editingGuardian?: any;
+  editingGuardian?: Record<string, unknown>;
 }
 
 export const GuardianUpload: React.FC<GuardianUploadProps> = ({
@@ -132,7 +132,7 @@ export const GuardianUpload: React.FC<GuardianUploadProps> = ({
 
       reset();
       onSuccess();
-    } catch (error: any) {
+    } catch (error: Record<string, unknown>) {
       const timestamp = new Date().toISOString();
       const errorMessage = error?.message || t('guardianUpload.errors.unknownError');
       const errorCode = error?.code || 'UNKNOWN_ERROR';

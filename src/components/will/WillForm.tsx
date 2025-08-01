@@ -55,7 +55,7 @@ export const WillForm: React.FC<WillFormProps> = ({
 
   const getStatusVariant = (status: string): "default" | "secondary" | "destructive" | "outline" => {
     const option = statusOptions.find(opt => opt.key === status);
-    return (option?.variant || 'default') as any;
+    return (option?.variant || 'default') as "default" | "secondary" | "destructive" | "outline";
   };
 
   return (

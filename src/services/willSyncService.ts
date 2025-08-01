@@ -147,7 +147,7 @@ class WillSyncService {
   }
 
   // Real-time Subscriptions
-  subscribeToSyncQueue(userId: string, callback: (payload: any) => void): () => void {
+  subscribeToSyncQueue(userId: string, callback: (payload: Record<string, unknown>) => void): () => void {
     const channelName = `sync-queue-${userId}`;
     
     // Unsubscribe from existing channel if any
@@ -183,7 +183,7 @@ class WillSyncService {
     return () => this.unsubscribeFromChannel(channelName);
   }
 
-  subscribeToSyncLogs(userId: string, callback: (payload: any) => void): () => void {
+  subscribeToSyncLogs(userId: string, callback: (payload: Record<string, unknown>) => void): () => void {
     const channelName = `sync-logs-${userId}`;
     
     this.unsubscribeFromChannel(channelName);
@@ -262,7 +262,7 @@ class WillSyncService {
     }
   }
 
-  private mergeWillChanges(currentContent: any, changes: WillChanges): any {
+  private mergeWillChanges(currentContent: Record<string, unknown>, changes: WillChanges): Record<string, unknown> {
     const updatedContent = { ...currentContent };
 
     // Apply additions
@@ -287,13 +287,13 @@ class WillSyncService {
       if (changes.removed.assets) {
         const removedIds = changes.removed.assets.map(a => a.id);
         updatedContent.assets = updatedContent.assets?.filter(
-          (a: any) => !removedIds.includes(a.id)
+          (a: Record<string, unknown>) => !removedIds.includes(a.id)
         );
       }
       if (changes.removed.beneficiaries) {
         const removedIds = changes.removed.beneficiaries.map(b => b.id);
         updatedContent.beneficiaries = updatedContent.beneficiaries?.filter(
-          (b: any) => !removedIds.includes(b.id)
+          (b: Record<string, unknown>) => !removedIds.includes(b.id)
         );
         
         // Redistribute allocations
@@ -307,7 +307,7 @@ class WillSyncService {
     if (changes.modified?.allocations) {
       changes.modified.allocations.forEach(alloc => {
         const beneficiary = updatedContent.beneficiaries?.find(
-          (b: any) => b.id === alloc.beneficiary_id
+          (b: Record<string, unknown>) => b.id === alloc.beneficiary_id
         );
         if (beneficiary) {
           beneficiary.allocation = [{
@@ -322,14 +322,14 @@ class WillSyncService {
     return updatedContent;
   }
 
-  private redistributeAllocations(content: any) {
+  private redistributeAllocations(content: Record<string, unknown>) {
     if (!content.beneficiaries || content.beneficiaries.length === 0) return;
 
     // Calculate equal distribution
     const equalShare = Math.floor(100 / content.beneficiaries.length);
     const remainder = 100 % content.beneficiaries.length;
 
-    content.beneficiaries.forEach((beneficiary: any, index: number) => {
+    content.beneficiaries.forEach((beneficiary: Record<string, unknown>, index: number) => {
       const allocation = equalShare + (index < remainder ? 1 : 0);
       beneficiary.allocation = [{
         assetType: 'percentage',

@@ -13,11 +13,8 @@ if (!PUBLISHABLE_KEY) {
   throw new Error("Missing Clerk Publishable Key")
 }
 
-console.log('main.tsx is loading...');
-
 try {
   const root = document.getElementById('root');
-  console.log('Root element:', root);
   
   if (root) {
     createRoot(root).render(
@@ -38,7 +35,6 @@ try {
         </I18nextProvider>
       </React.StrictMode>
     );
-    console.log('React app rendered successfully');
   } else {
     console.error('Root element not found!');
   }

@@ -7,8 +7,8 @@ export interface RetryOptions {
   initialDelay?: number;
   maxDelay?: number;
   backoffMultiplier?: number;
-  retryCondition?: (error: any) => boolean;
-  onRetry?: (error: any, attempt: number) => void;
+  retryCondition?: (error: Record<string, unknown>) => boolean;
+  onRetry?: (error: Record<string, unknown>, attempt: number) => void;
   signal?: AbortSignal;
 }
 
@@ -27,7 +27,7 @@ export async function retry<T>(
   options: RetryOptions = {}
 ): Promise<T> {
   const opts = { ...DEFAULT_OPTIONS, ...options };
-  let lastError: any;
+  let lastError: Record<string, unknown>;
 
   for (let attempt = 1; attempt <= opts.maxAttempts; attempt++) {
     try {
@@ -83,7 +83,7 @@ export function sleep(ms: number): Promise<void> {
  */
 export const RetryConditions = {
   // Opakuj len pre sieťové chyby
-  networkErrors: (error: any): boolean => {
+  networkErrors: (error: Record<string, unknown>): boolean => {
     const networkErrorMessages = [
       'network',
       'fetch',
@@ -107,13 +107,13 @@ export const RetryConditions = {
   },
 
   // Opakuj pre HTTP chyby, ktoré môžu byť dočasné
-  httpRetryableErrors: (error: any): boolean => {
+  httpRetryableErrors: (error: Record<string, unknown>): boolean => {
     const retryableStatusCodes = [408, 429, 500, 502, 503, 504];
     return retryableStatusCodes.includes(error?.status || error?.response?.status);
   },
 
   // Opakuj pre Supabase chyby
-  supabaseErrors: (error: any): boolean => {
+  supabaseErrors: (error: Record<string, unknown>): boolean => {
     const retryableCodes = [
       'PGRST301', // Moved Permanently
       '57P01', // admin_shutdown
@@ -130,7 +130,7 @@ export const RetryConditions = {
   },
 
   // Kombinovaná podmienka pre bežné prípady
-  default: (error: any): boolean => {
+  default: (error: Record<string, unknown>): boolean => {
     return RetryConditions.networkErrors(error) || 
            RetryConditions.httpRetryableErrors(error);
   }
@@ -139,7 +139,7 @@ export const RetryConditions = {
 /**
  * Retry wrapper pre async funkcie
  */
-export function withRetry<T extends (...args: any[]) => Promise<any>>(
+export function withRetry<T extends (...args: Array<Record<string, unknown>>) => Promise<unknown>>(
   fn: T,
   options: RetryOptions = {}
 ): T {
@@ -153,13 +153,13 @@ export function withRetry<T extends (...args: any[]) => Promise<any>>(
  */
 export function Retry(options: RetryOptions = {}) {
   return function (
-    target: any,
+    target: Record<string, unknown>,
     propertyKey: string,
     descriptor: PropertyDescriptor
   ) {
     const originalMethod = descriptor.value;
 
-    descriptor.value = async function (...args: any[]) {
+    descriptor.value = async function (...args: Array<Record<string, unknown>>) {
       return retry(() => originalMethod.apply(this, args), options);
     };
 

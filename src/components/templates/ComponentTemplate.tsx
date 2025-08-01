@@ -25,7 +25,7 @@ interface ComponentProps {
   /** Unique identifier for the component */
   id?: string;
   /** Optional callback when data changes */
-  onChange?: (data: any) => void;
+  onChange?: (data: Record<string, unknown>) => void;
   /** Whether the component is in loading state */
   loading?: boolean;
   /** Optional CSS class name */

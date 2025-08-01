@@ -12,7 +12,7 @@ const resources = Object.entries(translations).reduce((acc, [path, content]) => 
     const langCode = pathParts[pathParts.length - 2]; // Get the language folder name
     
     // Validate that we have valid content
-    const translationContent = (content as any).default || content;
+    const translationContent = (content as { default?: Record<string, unknown> } | Record<string, unknown>).default || content;
     if (!translationContent || typeof translationContent !== 'object') {
       return acc;
     }
@@ -22,12 +22,12 @@ const resources = Object.entries(translations).reduce((acc, [path, content]) => 
       common: translationContent 
     };
     
-  } catch (error: any) {
+  } catch (error: Record<string, unknown>) {
     console.error('[i18n] Error loading translation for path:', path, error);
   }
   
   return acc;
-}, {} as Record<string, any>);
+}, {} as Record<string, { common: Record<string, unknown> }>);
 
 // Validation and debugging
 const loadedLanguages = Object.keys(resources).sort();
@@ -65,7 +65,7 @@ const getInitialLanguage = (): string => {
     
     // Ultimate fallback to English
     return 'en';
-  } catch (error: any) {
+  } catch (error: Record<string, unknown>) {
     console.error('[i18n] Error getting initial language:', error);
     return 'en';
   }

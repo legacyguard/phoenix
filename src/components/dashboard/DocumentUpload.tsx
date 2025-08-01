@@ -32,7 +32,7 @@ import { useStorageUsage } from '@/hooks/useStorageUsage';
 import { canAddFile, formatBytes } from '@/utils/planLimits';
 
 interface DocumentUploadProps {
-  onDocumentUploaded: (document: any) => void;
+  onDocumentUploaded: (document: Record<string, unknown>) => void;
   onCancel: () => void;
 }
 
@@ -227,7 +227,7 @@ export const DocumentUpload: React.FC<DocumentUploadProps> = ({ onDocumentUpload
       toast.success(t('documentUpload.fileUploadedSuccess'));
 
       return data.path;
-    } catch (error: any) {
+    } catch (error: Record<string, unknown>) {
       const timestamp = new Date().toISOString();
       const errorDetails = error?.message || 'Unknown error';
       const errorCode = error?.code || 'UNKNOWN_ERROR';
@@ -308,7 +308,7 @@ export const DocumentUpload: React.FC<DocumentUploadProps> = ({ onDocumentUpload
 
       toast.success(t('documentUpload.saved'));
       onDocumentUploaded(data);
-    } catch (error: any) {
+    } catch (error: Record<string, unknown>) {
       const timestamp = new Date().toISOString();
       const errorMessage = error?.message || 'Unknown error';
       const errorCode = error?.code || 'UNKNOWN_ERROR';
@@ -375,7 +375,7 @@ export const DocumentUpload: React.FC<DocumentUploadProps> = ({ onDocumentUpload
           {/* Importance Level */}
           <div className="space-y-2">
             <Label>{t('dashboard.metadata.importanceLevel')}</Label>
-            <RadioGroup value={importanceLevel} onValueChange={(value) => setImportanceLevel(value as any)}>
+            <RadioGroup value={importanceLevel} onValueChange={(value) => setImportanceLevel(value as 'critical' | 'important' | 'reference')}>
               <div className="flex items-center space-x-2">
                 <RadioGroupItem value="critical" id="critical" />
                 <Label htmlFor="critical" className="font-normal cursor-pointer">
@@ -572,7 +572,7 @@ export const DocumentUpload: React.FC<DocumentUploadProps> = ({ onDocumentUpload
               <div className="space-y-4">
                 <div className="space-y-2">
                   <Label>{t('dashboard.subscription.type')}</Label>
-                  <Select value={subscriptionType} onValueChange={(value) => setSubscriptionType(value as any)}>
+                  <Select value={subscriptionType} onValueChange={(value) => setSubscriptionType(value as 'none' | 'monthly' | 'yearly' | 'one-time')}>
                     <SelectTrigger>
                       <SelectValue placeholder={t('dashboard.subscription.typePlaceholder')} />
                     </SelectTrigger>
@@ -605,7 +605,7 @@ export const DocumentUpload: React.FC<DocumentUploadProps> = ({ onDocumentUpload
                       
                       <div className="space-y-2">
                         <Label>{t('dashboard.subscription.cancellationNotice')}</Label>
-                        <Select value={cancellationNoticePeriod.toString()} onValueChange={(value) => setCancellationNoticePeriod(parseInt(value) as any)}>
+                        <Select value={cancellationNoticePeriod.toString()} onValueChange={(value) => setCancellationNoticePeriod(parseInt(value))}>
                           <SelectTrigger>
                             <SelectValue />
                           </SelectTrigger>

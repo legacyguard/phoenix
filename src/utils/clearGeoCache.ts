@@ -26,7 +26,7 @@ export function hasGeolocationCache(): boolean {
 /**
  * Get cached geolocation data (for debugging)
  */
-export function getCachedGeolocationData(): any {
+export function getCachedGeolocationData(): Record<string, unknown> {
   try {
     const cached = localStorage.getItem('geolocation_data');
     if (cached) {

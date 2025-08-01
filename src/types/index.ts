@@ -37,7 +37,7 @@ export interface HeritageItem {
   title: string;
   description?: string;
   filePath?: string;
-  metadata: Record<string, any>;
+  metadata: Record<string, unknown>;
   tags: string[];
   isPrivate: boolean;
   accessConditions?: AccessCondition[];
@@ -48,7 +48,7 @@ export interface HeritageItem {
 export interface AccessCondition {
   id: string;
   type: 'time_lock' | 'guardian_approval' | 'special_event';
-  parameters: Record<string, any>;
+  parameters: Record<string, unknown>;
   description: string;
 }
 
@@ -75,7 +75,7 @@ export interface SecurityEvent {
   type: 'login' | 'file_access' | 'guardian_action' | 'security_alert';
   description: string;
   severity: 'info' | 'warning' | 'critical';
-  metadata: Record<string, any>;
+  metadata: Record<string, unknown>;
   timestamp: Date;
 }
 
@@ -84,7 +84,7 @@ export interface BaseComponentProps {
   /** Unique identifier for the component */
   id?: string;
   /** Optional callback when data changes */
-  onChange?: (data: any) => void;
+  onChange?: (data: Record<string, unknown>) => void;
   /** Whether the component is in loading state */
   loading?: boolean;
   /** Optional CSS class name */
@@ -93,11 +93,11 @@ export interface BaseComponentProps {
 
 export interface FormComponentProps extends BaseComponentProps {
   /** Form submission handler */
-  onSubmit: (data: any) => void | Promise<void>;
+  onSubmit: (data: Record<string, unknown>) => void | Promise<void>;
   /** Form cancellation handler */
   onCancel?: () => void;
   /** Initial form data */
-  initialData?: any;
+  initialData?: Record<string, unknown>;
   /** Whether the form is in editing mode */
   isEditing?: boolean;
 }

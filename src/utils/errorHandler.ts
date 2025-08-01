@@ -7,7 +7,7 @@ interface ErrorHandlerOptions {
   customMessage?: string;
 }
 
-export function handleError(error: any, options: ErrorHandlerOptions): void {
+export function handleError(error: Record<string, unknown>, options: ErrorHandlerOptions): void {
   const { operation, context = 'Application', showToast = true, customMessage } = options;
   
   const timestamp = new Date().toISOString();
@@ -31,7 +31,7 @@ export function handleError(error: any, options: ErrorHandlerOptions): void {
   }
 }
 
-export function getErrorMessage(error: any, t: (key: string) => string): string {
+export function getErrorMessage(error: Record<string, unknown>, t: (key: string) => string): string {
   // Specific messages based on error type
   if (error?.code === 'PGRST116') {
     return t('errors.dataNotFound');

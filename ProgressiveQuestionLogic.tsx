@@ -129,10 +129,10 @@ const QUESTIONS: Record<string, Question> = {
     type: 'followup',
     category: 'business',
     options: [
-      { value: 'sole-owner', label: 'I'm the sole owner and decision maker' },
-      { value: 'majority-owner', label: 'I'm the majority owner with partners' },
-      { value: 'equal-partner', label: 'I'm an equal partner in the business' },
-      { value: 'key-employee', label: 'I'm a key employee but not an owner' }
+      { value: 'sole-owner', label: "I'm the sole owner and decision maker" },
+      { value: 'majority-owner', label: "I'm the majority owner with partners" },
+      { value: 'equal-partner', label: "I'm an equal partner in the business" },
+      { value: 'key-employee', label: "I'm a key employee but not an owner" }
     ]
   },
   

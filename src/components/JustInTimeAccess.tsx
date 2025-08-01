@@ -25,7 +25,7 @@ interface SensitiveData {
   password?: string;
   pin?: string;
   notes?: string;
-  [key: string]: any;
+  [key: string]: Record<string, unknown>;
 }
 
 interface JustInTimeAccessProps {

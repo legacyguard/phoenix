@@ -21,7 +21,7 @@ describe('LoggingService', () => {
   describe('logActivity', () => {
     it('should successfully log activity with all parameters', async () => {
       const mockInsert = vi.fn().mockResolvedValue({ error: null });
-      (supabase.from as any).mockReturnValue({ insert: mockInsert });
+      (supabase.from as Record<string, unknown>).mockReturnValue({ insert: mockInsert });
 
       const logParams = {
         userId: 'user-123',
@@ -49,7 +49,7 @@ describe('LoggingService', () => {
 
     it('should successfully log activity with minimal parameters', async () => {
       const mockInsert = vi.fn().mockResolvedValue({ error: null });
-      (supabase.from as any).mockReturnValue({ insert: mockInsert });
+      (supabase.from as Record<string, unknown>).mockReturnValue({ insert: mockInsert });
 
       const logParams = {
         userId: 'user-123',
@@ -74,7 +74,7 @@ describe('LoggingService', () => {
     it('should handle database errors gracefully', async () => {
       const mockError = new Error('Database connection failed');
       const mockInsert = vi.fn().mockResolvedValue({ error: mockError });
-      (supabase.from as any).mockReturnValue({ insert: mockInsert });
+      (supabase.from as Record<string, unknown>).mockReturnValue({ insert: mockInsert });
 
       const logParams = {
         userId: 'user-123',
@@ -91,7 +91,7 @@ describe('LoggingService', () => {
     it('should handle network errors gracefully', async () => {
       const mockError = new Error('Network timeout');
       const mockInsert = vi.fn().mockRejectedValue(mockError);
-      (supabase.from as any).mockReturnValue({ insert: mockInsert });
+      (supabase.from as Record<string, unknown>).mockReturnValue({ insert: mockInsert });
 
       const logParams = {
         userId: 'user-123',
@@ -107,7 +107,7 @@ describe('LoggingService', () => {
 
     it('should use default empty object for metadata when not provided', async () => {
       const mockInsert = vi.fn().mockResolvedValue({ error: null });
-      (supabase.from as any).mockReturnValue({ insert: mockInsert });
+      (supabase.from as Record<string, unknown>).mockReturnValue({ insert: mockInsert });
 
       const logParams = {
         userId: 'user-123',
@@ -130,7 +130,7 @@ describe('LoggingService', () => {
 
     it('should handle all actor types correctly', async () => {
       const mockInsert = vi.fn().mockResolvedValue({ error: null });
-      (supabase.from as any).mockReturnValue({ insert: mockInsert });
+      (supabase.from as Record<string, unknown>).mockReturnValue({ insert: mockInsert });
 
       const actors = ['USER', 'AI_SYSTEM', 'TRUSTED_PERSON'] as const;
 

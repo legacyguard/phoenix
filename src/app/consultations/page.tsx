@@ -94,7 +94,7 @@ export default function MyConsultationsPage() {
   };
 
   const getConsultationTypeIcon = (type: string) => {
-    const iconMap: Record<string, any> = {
+    const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
       will_review: FileText,
       estate_planning: Building,
       inheritance_dispute: AlertCircle,

@@ -83,7 +83,7 @@ export const Manual: React.FC = () => {
       }
 
       setContacts(data || []);
-        } catch (error: any) {
+        } catch (error: Record<string, unknown>) {
       const timestamp = new Date().toISOString();
 const errorMessage = error?.message || t('manual.errors.unknown');
       const errorCode = error?.code || 'UNKNOWN_ERROR';
@@ -190,7 +190,7 @@ userMessage = t('manual.errors.duplicateEntry');
       setIsContactSheetOpen(false);
       resetForm();
       loadContacts();
-        } catch (error: any) {
+        } catch (error: Record<string, unknown>) {
       const timestamp = new Date().toISOString();
 const errorMessage = error?.message || t('manual.errors.unknown');
       const errorCode = error?.code || 'UNKNOWN_ERROR';
@@ -236,7 +236,7 @@ userMessage = t('manual.errors.duplicateEntry');
 
       setContacts(prev => prev.filter(contact => contact.id !== id));
       toast.success(t('manual.contacts.messages.deleted'));
-        } catch (error: any) {
+        } catch (error: Record<string, unknown>) {
       const timestamp = new Date().toISOString();
 const errorMessage = error?.message || t('manual.errors.unknown');
       const errorCode = error?.code || 'UNKNOWN_ERROR';
@@ -286,7 +286,7 @@ userMessage = t('manual.errors.duplicateEntry');
       }
 
       setDocuments(data || []);
-        } catch (error: any) {
+        } catch (error: Record<string, unknown>) {
       const timestamp = new Date().toISOString();
 const errorMessage = error?.message || t('manual.errors.unknown');
       const errorCode = error?.code || 'UNKNOWN_ERROR';
@@ -347,7 +347,7 @@ userMessage = t('manual.errors.duplicateEntry');
       }
 
       setInstructions(data);
-        } catch (error: any) {
+        } catch (error: Record<string, unknown>) {
       const timestamp = new Date().toISOString();
 const errorMessage = error?.message || t('manual.errors.unknown');
       const errorCode = error?.code || 'UNKNOWN_ERROR';
@@ -410,7 +410,7 @@ userMessage = t('manual.errors.duplicateEntry');
           if (error) throw error;
           setInstructions(data);
         }
-            } catch (error: any) {
+            } catch (error: Record<string, unknown>) {
         const timestamp = new Date().toISOString();
 const errorMessage = error?.message || t('manual.errors.unknown');
         const errorCode = error?.code || 'UNKNOWN_ERROR';

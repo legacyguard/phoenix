@@ -7,7 +7,7 @@ export async function detectRelationships(
 ): Promise<RelationshipResult> {
   const { vinNumber, propertyAddress, ownerNames } = newDocMetadata;
   const { possessions, people } = userInventory;
-  let result: RelationshipResult = {};
+  const result: RelationshipResult = {};
 
   // Link to Possessions
   if (vinNumber) {

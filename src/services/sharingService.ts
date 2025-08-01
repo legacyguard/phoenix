@@ -182,7 +182,7 @@ export class SharingService {
   }
 
   // Get shared content based on type and ID
-  async getSharedContent(contentType: ContentType, contentId: string): Promise<any> {
+  async getSharedContent(contentType: ContentType, contentId: string): Promise<Record<string, unknown>> {
     switch (contentType) {
       case 'playbook_section':
         return this.getPlaybookSection(contentId);
@@ -225,7 +225,7 @@ export class SharingService {
     return token;
   }
 
-  private async getPlaybookSection(sectionId: string): Promise<any> {
+  private async getPlaybookSection(sectionId: string): Promise<Record<string, unknown>> {
     const { data, error } = await supabase
       .from('playbooks')
       .select(`
@@ -250,7 +250,7 @@ export class SharingService {
     return data;
   }
 
-  private async getAssetSummary(userId: string): Promise<any> {
+  private async getAssetSummary(userId: string): Promise<Record<string, unknown>> {
     const { data: assets, error } = await supabase
       .from('assets')
       .select('*')
@@ -268,7 +268,7 @@ export class SharingService {
     return summary;
   }
 
-  private async getInheritanceAllocation(userId: string): Promise<any> {
+  private async getInheritanceAllocation(userId: string): Promise<Record<string, unknown>> {
     const { data: allocations, error } = await supabase
       .from('asset_beneficiaries')
       .select(`
@@ -285,7 +285,7 @@ export class SharingService {
     return summary;
   }
 
-  private async getDocument(documentId: string): Promise<any> {
+  private async getDocument(documentId: string): Promise<Record<string, unknown>> {
     const { data, error } = await supabase
       .from('documents')
       .select('*')
@@ -296,7 +296,7 @@ export class SharingService {
     return data;
   }
 
-  private calculateCategoryDistribution(assets: any[]): any[] {
+  private calculateCategoryDistribution(assets: Array<Record<string, unknown>>): Array<Record<string, unknown>> {
     const categories: Record<string, number> = {};
     
     assets.forEach(asset => {
@@ -312,8 +312,8 @@ export class SharingService {
     }));
   }
 
-  private calculateAllocationSummary(allocations: any[]): any {
-    const beneficiaryMap: Record<string, any> = {};
+  private calculateAllocationSummary(allocations: Array<Record<string, unknown>>): Record<string, unknown> {
+    const beneficiaryMap: Record<string, Record<string, unknown>> = {};
     let totalAllocated = 0;
 
     allocations.forEach(allocation => {

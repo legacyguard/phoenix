@@ -28,7 +28,7 @@ export function HybridDocumentProcessor() {
 
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [showOriginalText, setShowOriginalText] = useState(false);
-  const [aiEnhancement, setAiEnhancement] = useState<any>(null);
+  const [aiEnhancement, setAiEnhancement] = useState<Record<string, unknown> | null>(null);
 
   const handleFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];

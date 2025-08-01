@@ -42,10 +42,10 @@ interface CrisisSituation {
 }
 
 interface FamilyCrisisAssessmentProps {
-  userAssets?: any[];
-  userDocuments?: any[];
-  userGuardians?: any[];
-  userBeneficiaries?: any[];
+  userAssets?: Array<Record<string, unknown>>;
+  userDocuments?: Array<Record<string, unknown>>;
+  userGuardians?: Array<Record<string, unknown>>;
+  userBeneficiaries?: Array<Record<string, unknown>>;
 }
 
 export const FamilyCrisisAssessment: React.FC<FamilyCrisisAssessmentProps> = ({

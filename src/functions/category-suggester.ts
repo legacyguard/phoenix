@@ -49,7 +49,7 @@ function analyzeDocumentForSuggestion(
   const hasFinancialInfo = metadata.accountNumber || metadata.balance !== undefined;
   
   switch (docCategory) {
-    case 'insurance_policy':
+    case 'insurance_policy': {
       // Analyze the type of insurance
       const policyType = metadata.policyType?.toLowerCase() || '';
       
@@ -82,6 +82,7 @@ function analyzeDocumentForSuggestion(
         area: 'personal', 
         reasoning: 'Insurance policies protect your personal interests' 
       };
+    }
 
     case 'property_deed':
       return { 
@@ -95,7 +96,7 @@ function analyzeDocumentForSuggestion(
         reasoning: 'Vehicle titles are typically stored with home and property documents' 
       };
 
-    case 'bank_statement':
+    case 'bank_statement': {
       // Check if it's a business account
       if (hasBusinessName || textLower.includes('business') || textLower.includes('commercial')) {
         return { 
@@ -115,6 +116,7 @@ function analyzeDocumentForSuggestion(
         area: 'personal', 
         reasoning: 'Personal banking documents for everyday finances' 
       };
+    }
 
     case 'investment_statement':
       return { 
@@ -140,7 +142,7 @@ function analyzeDocumentForSuggestion(
         reasoning: 'Personal identification documents for you and your family' 
       };
 
-    case 'tax_document':
+    case 'tax_document': {
       // Check if business tax document
       if (hasBusinessName || textLower.includes('schedule c') || textLower.includes('1120')) {
         return { 
@@ -152,6 +154,7 @@ function analyzeDocumentForSuggestion(
         area: 'personal', 
         reasoning: 'Personal tax returns and documentation' 
       };
+    }
 
     case 'medical_document':
       return { 

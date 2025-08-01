@@ -1,18 +1,5 @@
 import React, { useState } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue } from
-'@/components/ui/select';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
-import { Bot, AlertCircle } from 'lucide-react';import { useTranslation } from "react-i18next";
+import { useTranslation } from 'react-i18next';
 
 interface DocumentConfirmationProps {
   documentData: {
@@ -20,7 +7,7 @@ interface DocumentConfirmationProps {
     category: string;
     confidence: number;
     extractedText: string;
-    metadata: Record<string, any>;
+    metadata: Record<string, unknown>;
     suggestedArea: string;
     areaConfidence: number;
     relationships: {
@@ -32,7 +19,7 @@ interface DocumentConfirmationProps {
   categories: string[];
   possessions: {id: string;name: string;}[];
   people: {id: string;name: string;}[];
-  onSave: (finalData: any) => void;
+  onSave: (finalData: Record<string, unknown>) => void;
 }
 
 const DocumentConfirmation: React.FC<DocumentConfirmationProps> = ({
@@ -42,6 +29,8 @@ const DocumentConfirmation: React.FC<DocumentConfirmationProps> = ({
   people,
   onSave
 }) => {
+  const { t } = useTranslation('common');
+  
   // Local states for user edits
   const [category, setCategory] = useState(documentData.category);
   const [metadata, setMetadata] = useState(documentData.metadata);
@@ -50,7 +39,7 @@ const DocumentConfirmation: React.FC<DocumentConfirmationProps> = ({
   const [linkedPersonId, setLinkedPersonId] = useState(documentData.relationships.linkedPersonId || '');
 
   // Handle metadata change
-  const handleMetadataChange = (key: string, value: any) => {
+  const handleMetadataChange = (key: string, value: unknown) => {
     setMetadata((prev) => ({ ...prev, [key]: value }));
   };
 
@@ -85,7 +74,7 @@ const DocumentConfirmation: React.FC<DocumentConfirmationProps> = ({
             <label>{key}</label>
             <input
             type="text"
-            value={metadata[key] || ''}
+            value={String(metadata[key] || '')}
             onChange={(e) => handleMetadataChange(key, e.target.value)} />
 
           </div>

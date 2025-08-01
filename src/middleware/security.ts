@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-export function withSecurityHeaders(handler: Function) {
-  return async (req: NextRequest, ...args: any[]) => {
+export function withSecurityHeaders(handler: (req: NextRequest, ...args: Array<Record<string, unknown>>) => Promise<NextResponse>) {
+  return async (req: NextRequest, ...args: Array<Record<string, unknown>>) => {
     const response = await handler(req, ...args);
     
     // Add security headers

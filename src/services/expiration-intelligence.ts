@@ -87,7 +87,7 @@ export class ExpirationIntelligenceService {
   }
 
   private createNotificationForDocument(
-    doc: any,
+    doc: Record<string, unknown>,
     expirationDate: Date,
     daysUntilExpiration: number
   ): ExpirationNotification | null {
@@ -273,7 +273,7 @@ export class ExpirationIntelligenceService {
     return count || 0;
   }
 
-  async getUserNotifications(userId: string): Promise<any[]> {
+  async getUserNotifications(userId: string): Promise<Array<Record<string, unknown>>> {
     const { data, error } = await supabase
       .from('notifications')
       .select(`

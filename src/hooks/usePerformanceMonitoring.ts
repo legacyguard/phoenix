@@ -86,7 +86,7 @@ export const usePerformanceMonitoring = (enableLogging = false) => {
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           // Only count layout shifts without recent user input
-          if (!(entry as any).hadRecentInput) {
+          if (!(entry as PerformanceEntry & { hadRecentInput?: boolean }).hadRecentInput) {
             const firstSessionEntry = sessionEntries[0];
             const lastSessionEntry = sessionEntries[sessionEntries.length - 1];
 
@@ -96,10 +96,10 @@ export const usePerformanceMonitoring = (enableLogging = false) => {
             if (sessionValue &&
                 entry.startTime - lastSessionEntry.startTime < 1000 &&
                 entry.startTime - firstSessionEntry.startTime < 5000) {
-              sessionValue += (entry as any).value;
+              sessionValue += (entry as PerformanceEntry & { value?: number }).value || 0;
               sessionEntries.push(entry);
             } else {
-              sessionValue = (entry as any).value;
+              sessionValue = (entry as PerformanceEntry & { value?: number }).value || 0;
               sessionEntries = [entry];
             }
 

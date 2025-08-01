@@ -28,7 +28,7 @@ interface StoredError {
     name: string;
     stack?: string;
   };
-  context?: any;
+  context?: Record<string, unknown>;
   location?: {
     href: string;
     pathname: string;

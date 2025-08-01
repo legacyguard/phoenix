@@ -1,7 +1,7 @@
 import { z } from 'zod';
 
 // Function to create asset form schema with translations
-export const createAssetFormSchema = (t: (key: string, params?: any) => string) => z.object({
+export const createAssetFormSchema = (t: (key: string, params?: Record<string, unknown>) => string) => z.object({
   name: z.string()
     .min(1, { message: t("validation.errors.assetNameRequired") })
     .max(200, { message: t("validation.errors.nameMaxLength", { max: 200 }) })
