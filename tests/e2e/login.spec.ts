@@ -27,7 +27,7 @@ test.describe('User Login Flow', () => {
     // Mock successful authentication
     await page.addInitScript(() => {
       // Mock Clerk authentication
-      (window as any).Clerk = {
+      (window as Record<string, unknown>).Clerk = {
         isSignedIn: () => true,
         user: {
           id: 'test-user-id',
@@ -50,7 +50,7 @@ test.describe('User Login Flow', () => {
     
     // Mock authentication error
     await page.addInitScript(() => {
-      (window as any).Clerk = {
+      (window as Record<string, unknown>).Clerk = {
         isSignedIn: () => false,
         openSignIn: () => {
           throw new Error('Authentication failed');

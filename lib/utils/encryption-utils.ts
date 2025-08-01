@@ -217,7 +217,7 @@ export async function retrieveEncryptionKey(
   const transaction = db.transaction(['keys'], 'readonly');
   const store = transaction.objectStore('keys');
   
-  const keyData = await new Promise<any>((resolve, reject) => {
+  const keyData = await new Promise<Record<string, unknown>>((resolve, reject) => {
     const request = store.get(documentId);
     request.onsuccess = () => resolve(request.result);
     request.onerror = () => reject(request.error);

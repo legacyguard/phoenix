@@ -99,10 +99,10 @@ export const AssetDetail: React.FC = () => {
         estimated_value: data.estimated_value?.toString() || '',
         currency_code: data.currency_code || 'EUR',
         // Financial Account specific fields
-        account_type: (data.metadata as any)?.account_type || '',
-        financial_institution: (data.metadata as any)?.financial_institution || '',
-        account_number: (data.metadata as any)?.account_number || '',
-        login_credentials: (data.metadata as any)?.login_credentials || '',
+        account_type: (data.metadata as Record<string, unknown>)?.account_type || '',
+        financial_institution: (data.metadata as Record<string, unknown>)?.financial_institution || '',
+        account_number: (data.metadata as Record<string, unknown>)?.account_number || '',
+        login_credentials: (data.metadata as Record<string, unknown>)?.login_credentials || '',
       });
     } catch (error) {
       toast.error(t('assetDetail.errors.failedToLoad'));

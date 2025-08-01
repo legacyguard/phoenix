@@ -27,7 +27,7 @@ async function initializeWorker(languages: string[] = ['eng']) {
     logger: (progress) => {
       // Send progress updates to main thread
       const progressData: OCRProgress = {
-        status: progress.status as any,
+        status: progress.status as Record<string, unknown>,
         progress: Math.round(progress.progress * 100),
         message: getProgressMessage(progress.status, progress.progress),
       };

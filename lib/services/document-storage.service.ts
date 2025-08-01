@@ -189,7 +189,7 @@ export class DocumentStorageService {
     const transaction = db.transaction(['documents'], 'readonly');
     const store = transaction.objectStore('documents');
 
-    const data = await new Promise<any>((resolve, reject) => {
+    const data = await new Promise<Record<string, unknown>>((resolve, reject) => {
       const request = store.get(documentId);
       request.onsuccess = () => resolve(request.result);
       request.onerror = () => reject(request.error);

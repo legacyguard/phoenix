@@ -111,7 +111,7 @@ class OpenAIService {
   private client: OpenAI | null = null;
   private rateLimiter = new RateLimiter();
   private cache = new ResponseCache();
-  private requestQueue: Array<() => Promise<any>> = [];
+  private requestQueue: Array<() => Promise<Record<string, unknown>>> = [];
   private processing = false;
 
   constructor() {

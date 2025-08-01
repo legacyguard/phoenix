@@ -136,7 +136,7 @@ export class DocumentUploadService {
   async processDocumentPipeline(
     file: File,
     options: UploadOptions
-  ): Promise<any> {
+  ): Promise<Record<string, unknown>> {
     const result: Record<string, unknown> = {};
 
     // Step 1: Compress if needed
@@ -216,7 +216,7 @@ export class DocumentUploadService {
   }
 
   // Validate document
-  async validateDocument(file: File): Promise<any> {
+  async validateDocument(file: File): Promise<Record<string, unknown>> {
     const validation = validateDocument(file);
     
     // Additional dimension check for images

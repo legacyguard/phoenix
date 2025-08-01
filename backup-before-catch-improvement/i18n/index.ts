@@ -12,7 +12,7 @@ const resources = Object.entries(translations).reduce((acc, [path, content]) => 
     const langCode = pathParts[pathParts.length - 2]; // Get the language folder name
     
     // Validate that we have valid content
-    const translationContent = (content as any).default || content;
+    const translationContent = (content as Record<string, unknown>).default || content;
     if (!translationContent || typeof translationContent !== 'object') {
       return acc;
     }

@@ -32,7 +32,7 @@ interface WillTemplateData {
   template_name: string;
   template_body: string;
   execution_instructions: string;
-  legal_guidance: Record<string, any>;
+  legal_guidance: Record<string, unknown>;
 }
 
 const holographicWill: WillTemplateData = {

@@ -66,7 +66,7 @@ export const documentPatterns: Record<DocumentType, DocumentPattern> = {
       { regex: /katastrlne\s+zemie/i, weight: 8, language: 'sk' },
       // Common patterns
       { regex: /LV\s*\.\s*\d+/i, weight: 9 }, // LV number
-      { regex: /\d+/\d+/, weight: 5 }, // Ownership fraction
+      { regex: /\\d+\/\\d+/, weight: 5 }, // Ownership fraction
     ],
     requiredMatches: 3,
     confidenceThreshold: 0.8,

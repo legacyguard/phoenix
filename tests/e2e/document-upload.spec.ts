@@ -5,7 +5,7 @@ test.describe('Document Upload Flow', () => {
   test.beforeEach(async ({ page }) => {
     // Mock authentication for all tests
     await page.addInitScript(() => {
-      (window as any).Clerk = {
+      (window as Record<string, unknown>).Clerk = {
         isSignedIn: () => true,
         user: {
           id: 'test-user-id',
