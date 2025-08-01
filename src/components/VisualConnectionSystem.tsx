@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -27,27 +27,6 @@ const VisualConnectionSystem: React.FC<VisualConnectionSystemProps> = ({
 }) => {
   const { t } = useTranslation('common');
 
-  // Define connections between life areas and benefits
-  const connections: LifeAreaConnection[] = [
-    {
-      id: 'home_to_finances',
-      title: t('connections.homeToFinances.title'),
-      description: t('connections.homeToFinances.description'),
-      connectionStrength: 'medium',
-      benefits: t('connections.homeToFinances.benefits'),
-      impact: t('connections.homeToFinances.impact')
-    },
-    {
-      id: 'finances_to_family',
-      title: t('connections.financesToFamily.title'),
-      description: t('connections.financesToFamily.description'),
-      connectionStrength: 'strong',
-      benefits: t('connections.financesToFamily.benefits'),
-      impact: t('connections.financesToFamily.impact')
-    }
-    // Additional connections...
-  ];
-
   return (
     <div className="space-y-6">
       <Card>
@@ -61,6 +40,10 @@ const VisualConnectionSystem: React.FC<VisualConnectionSystemProps> = ({
             <div className="text-center text-gray-500">
               <p className="text-lg font-medium">Visual Connection System</p>
               <p className="text-sm">Flowchart component will be implemented here</p>
+              <div className="mt-4 space-y-2 text-xs">
+                <p>• Home to Finances: Medium connection strength</p>
+                <p>• Finances to Family: Strong connection strength</p>
+              </div>
             </div>
           </div>
           <div className="mt-4 text-center">

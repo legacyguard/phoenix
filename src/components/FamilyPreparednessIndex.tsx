@@ -14,7 +14,8 @@ import {
   AlertTriangle,
   Users,
   FileText,
-  Heart
+  Heart,
+  TrendingUp
 } from 'lucide-react';
 
 interface FamilyCapability {
@@ -47,6 +48,13 @@ interface PreparednessScenario {
   };
   familyReadiness: 'ready' | 'mostly_ready' | 'partially_ready' | 'not_ready';
   gapsToAddress: string[];
+}
+
+interface Improvement {
+  action: string;
+  timeEstimate: string;
+  impact: number;
+  area: string;
 }
 
 interface FamilyPreparednessIndexProps {
@@ -218,8 +226,8 @@ export const FamilyPreparednessIndex: React.FC<FamilyPreparednessIndexProps> = (
   ];
 
   // Get next improvement recommendation
-  const getNextImprovement = () => {
-    const improvements = [];
+  const getNextImprovement = (): Improvement | undefined => {
+    const improvements: Improvement[] = [];
     
     if (immediateAccessScore < 80) {
       improvements.push({
