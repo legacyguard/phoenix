@@ -1,0 +1,15 @@
+{
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/" }
+  ],
+  "crons": [
+    {
+      "path": "/api/cron/check-expirations",
+      "schedule": "0 9 * * *"
+    },
+    {
+      "path": "/api/cron/behavioral-nudges",
+      "schedule": "0 2 * * *"
+    }
+  ]
+}

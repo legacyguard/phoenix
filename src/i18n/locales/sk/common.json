@@ -1,0 +1,3309 @@
+{
+  "familyHub": {
+    "title": "Rodinné centrum",
+    "subtitle": "Spravujte úrovne prístupu a používajte nástroje pripravenosti na zabezpečenie, aby vaša rodina bola dobre pripravená.",
+    "tabs": {
+      "familyMembers": "Členovia rodiny",
+      "members": "Členovia",
+      "preparednessTools": "Nástroje pripravenosti",
+      "tools": "Nástroje"
+    },
+    "overallPreparedness": {
+      "title": "Celková pripravenosť rodiny",
+      "description": "Toto skóre odráža, ako je pripravená vaša celá rodina na núdzovú situáciu.",
+      "improvementNeeded": "Pripravenosť vašej rodiny by sa dala zlepšiť. Zvážte odoslanie aktualizácií tým, ktorí majú nižšie skóre."
+    },
+    "emergencyProtocol": {
+      "title": "Núdzový protokol",
+      "description": "Núdzový protokol umožňuje dôveryhodným osobám s prístupom \"Len v núdzi\" požiadať o informácie počas kritických situácií. Vyžaduje potvrdenie od inej dôveryhodnej osoby.",
+      "configured": "Nakonfigurované",
+      "configure": "Nakonfigurovať",
+      "activeMessage": "Núdzový protokol je aktívny a nakonfigurovaný"
+    },
+    "memberManagement": {
+      "title": "Spravujte svojich dôveryhodných ľudí",
+      "addTrustedPerson": "Pridať dôveryhodnú osobu",
+      "addMorePeople": "Pridajte viac dôveryhodných ľudí do svojej siete",
+      "informationAccessLevel": "Úroveň prístupu k informáciám",
+      "preparedness": "Pripravenosť",
+      "lastContacted": "Posledný kontakt",
+      "daysAgo": "pred {{days}} dňami",
+      "sendUpdate": "Odoslať aktualizáciu",
+      "sendUpdateTo": "Odoslať aktualizáciu pre {{name}}",
+      "lastContactOver30Days": "Posledný kontakt pred viac ako 30 dňami"
+    },
+    "accessLevels": {
+      "none": {
+        "title": "Žiadny",
+        "description": "Nemôže vidieť žiadne informácie"
+      },
+      "emergencyOnly": {
+        "title": "Len v núdzi",
+        "description": "Prístup počas núdzových situácií",
+        "fullDescription": "Získa prístup len keď je aktivovaný núdzový protokol"
+      },
+      "limitedInfo": {
+        "title": "Obmedzené informácie",
+        "description": "Základné informácie na prípravu",
+        "fullDescription": "Môže vidieť základné informácie teraz, aby im pomohol pripraviť sa"
+      },
+      "fullAccess": {
+        "title": "Úplný prístup",
+        "description": "Všetky zdieľané informácie",
+        "fullDescription": "Môže vidieť všetky informácie, ktoré ste s nimi zdieľali"
+      }
+    },
+    "messages": {
+      "accessLevelUpdated": "Úroveň prístupu úspešne aktualizovaná",
+      "updateSentTo": "Aktualizácia odoslaná pre {{name}}",
+      "failedToSendUpdate": "Nepodarilo sa odoslať aktualizáciu pre {{name}}"
+    },
+    "errors": {
+      "authenticationRequired": "Vyžaduje sa overenie",
+      "failedToFetchData": "Nepodarilo sa načítať údaje o rodine",
+      "failedToLoadMembers": "Nepodarilo sa načítať členov rodiny"
+    }
+  },
+  "vault": {
+    "title": "Trezor",
+    "subtitle": "Váš bezpečný inventár všetkých finančných aktív a cenných majetkov.",
+    "errorLoadingAssets": "Nepodarilo sa načítať vaše aktíva. Skúste to prosím znova.",
+    "letsBuildInventory": "Zostavme váš inventár",
+    "addProperty": "Pridať nehnuteľnosť",
+    "addFinances": "Pridať financie",
+    "addVehicle": "Pridať vozidlo",
+    "addDigitalAsset": "Pridať digitálne aktívum",
+    "addPersonalItem": "Pridať osobný predmet",
+    "addOther": "Pridať niečo iné...",
+    "confirmDeletion": "Ste si istý, že chcete vymazať \"{{assetName}}\"?",
+    "errorDeletingAsset": "Nepodarilo sa vymazať aktívum. Skúste to prosím znova.",
+    "searchPlaceholder": "Hľadať vaše aktíva...",
+    "addAsset": "Pridať aktívum",
+    "totalAssets": "Celkové aktíva",
+    "totalValue": "Celková hodnota",
+    "categories": "Kategórie",
+    "noAssetsFound": "Nenašli sa žiadne aktíva zodpovedajúce \"{{searchQuery}}\"",
+    "startAddingAssets": "Začnite pridávať aktíva na zostavenie vášho inventára",
+    "addNewAsset": "Pridať nové aktívum"
+  },
+  "hero": {
+    "title": "Spite pokojne s vedomím, že vaša rodina bude v poriadku",
+    "subtitle": "Keď život zmení neočakávaný smer, vaša rodina nebude musieť hľadať, hádať sa alebo sa obávať. Všetko, čo potrebujú, bude presne tam, kde to môžu nájsť.",
+    "cta_primary": "Prevezmite kontrolu nad budúcnosťou vašej rodiny dnes",
+    "cta_secondary": "Pozrieť, aké je to jednoduché",
+    "urgencySubtitle": "Nastavenie trvá len 10 minút - buďte pripraveným rodičom, ktorého vaša rodina potrebuje",
+    "secondaryContext": "2-minútové video zobrazujúce skutočné rodiny",
+    "trustSignals": {
+      "dataOwnership": "Súkromné záležitosti vašej rodiny zostávajú súkromné",
+      "gdprCompliant": "Vytvorené s európskymi rodinnými hodnotami",
+      "europeanFamilies": "Dôverujú mu rodiny, ktoré si veľmi cenia"
+    },
+    "community": {
+      "growing": "Pridajte sa k {{count}} rodinám, ktoré si už chránia svoje dedičstvo",
+      "growingFallback": "Pridajte sa k našej rastúcej komunite"
+    }
+  },
+  "nav": {
+    "dashboard": "Nástenka",
+    "manual": "Manuál",
+    "vault": "Trezor dedičstva",
+    "guardians": "Sieť strážcov",
+    "will": "Závet",
+    "settings": "Nastavenia",
+    "help": "Pomoc a podpora"
+  },
+  "scenarios": {
+    "title": "Čo sa stane, keď život zmení neočakávaný smer?",
+    "subtitle": "Skutočné rodiny, skutočné situácie, skutočná kontrola a pripravenosť",
+    "hospitalStay": {
+      "title": "Neočakávaný pobyt v nemocnici",
+      "before": {
+        "situation": "Sarahin manžel mal infarkt. Zatiaľ čo bol na jednotke intenzívnej starostlivosti, trávila dni hľadaním ich poistných dokumentov, informácií o bankovom účte a dôležitých kontaktov. Stres bol ohromujúci, keď sa potrebovala sústrediť na jeho uzdravenie.",
+        "emotion": "Stres a obavy",
+        "consequence": "Dni hľadania informácií a podpory."
+      },
+      "after": {
+        "situation": "Keď mal Mark nehodu, jeho manželka Lisa otvorila ich rodinný sprievodcu a našla všetko zorganizované: podrobnosti o poistení, bankové kontakty, lekárske informácie a dokonca zoznam ľudí na upozornenie. Mohla sa sústrediť na to, čo bolo najdôležitejšie - byť tam pre Marka.",
+        "emotion": "Pokoj a sústredenie",
+        "benefit": "Okamžitý prístup ku všetkému, čo potrebovala."
+      }
+    },
+    "businessTrip": {
+      "title": "Núdzová situácia na služobnej ceste",
+      "before": {
+        "situation": "Keď bol Davidov let oneskorený a zmeškal pohotovostnú operáciu svojej dcéry, jeho manželka nemohla pristúpiť k ich sporiacemu účtu ani nájsť informácie o ich zdravotnom poistení. Kritické rozhodnutia museli počkať.",
+        "emotion": "Frustrácia a bezmocnosť",
+        "consequence": "Dôležité lekárske rozhodnutia oneskorené."
+      },
+      "after": {
+        "situation": "Keď Emma potrebovala pohotovostné finančné prostriedky pre operáciu svojho syna počas manželovej služobnej cesty, mala okamžitý prístup ku všetkým informáciám o účte, podrobnostiam o poistení a dokonca predpísaným autorizačným listom. Žiadne oneskorenia, žiadny stres.",
+        "emotion": "Úľava a pripravenosť",
+        "benefit": "Všetko dostupné presne vtedy, keď to potrebovala."
+      }
+    },
+    "suddenLoss": {
+      "title": "Náhla strata",
+      "before": {
+        "situation": "Po náhlej strate svojho otca trávila Maria mesiace skúšaním zložiť jeho finančné záležitosti. Našla účty, o ktorých nevedela, že existujú, a zmeškala dôležité termíny, pretože dokumenty boli roztrúsené všade.",
+        "emotion": "Zmatek a ľútosť",
+        "consequence": "Zmeškané termíny a stratený čas."
+      },
+      "after": {
+        "situation": "Keď Johnova rodina potrebovala riešiť jeho záležitosti, všetko bolo jasne zorganizované: úplný zoznam účtov, dôležité kontakty, pokyny krok za krokom a dokonca osobné správy, ktoré pripravil pre každého člena rodiny.",
+        "emotion": "Pokoj a jasnosť",
+        "benefit": "Jasná cesta na nasledovanie v ťažkých časoch."
+      }
+    },
+    "labels": {
+      "before": "Pred LegacyGuard",
+              "after": "Po Dedičnom trezore",
+      "feeling": "Pocit"
+    },
+    "bottomCta": {
+      "primary": "Nenechajte svoju rodinu čeliť tomuto chaosu",
+      "secondary": "Začnite organizovať za 10 minút",
+      "urgency": "Každý deň, ktorý čakáte, je ďalší deň, kedy je vaša rodina nepripravená"
+    },
+    "testimonials": {
+      "1": "Po náhlej nehode môjho brata som sledoval, ako moja švagriná týždne zápasila s hľadaním dôležitých dokumentov a hesiel. Vtedy som vedel, že nemôžem nechať, aby sa to isté stalo mojej rodine.",
+              "2": "Ako samostatná mama prevádzkujúca podnik, neustále som sa obávala, čo by sa stalo, keby sa mi niečo stalo. Dedičný trezor mi pomohol zorganizovať všetko.",
+              "3": "Moja manželka má rané štádium demencie a uvedomil som si, že sa musím pripraviť, kým ešte môžem. Dedičný trezor to zjednodušil na organizáciu našich 40 rokov života spolu."
+    }
+  },
+  "pillars": {
+    "secure": {
+      "title": "ZABEZPEČIŤ",
+      "description": "Chráňte svoju rodinu a majetok proaktívnymi bezpečnostnými opatreniami"
+    },
+    "organize": {
+      "title": "ZORGANIZOVAŤ",
+      "description": "Katalogizujte a spravujte svoje digitálne a fyzické aktíva"
+    },
+    "transfer": {
+      "title": "PRENIESŤ",
+      "description": "Zabezpečte, aby sa vaše dedičstvo odovzdalo podľa vašich želaní"
+    }
+  },
+  "calculator": {
+    "badge": "Kalkulačka pripravenosti",
+    "title": "Vypočítajte skóre pripravenosti vašej rodiny",
+    "subtitle": "Pozrite si skutočný čas a peniaze, ktoré vaša rodina ušetrí, keď je všetko zorganizované",
+    "inputs": {
+      "title": "Situácia vašej rodiny",
+      "description": "Povedzte nám trochu o vašej rodine na personalizáciu vašich výsledkov",
+      "dependents": "Koľko ľudí závisí od vás?",
+      "dependentsHelp": "Zahrňte manžela/ku, deti, starších rodičov",
+      "income": "Aký je mesačný príjem vašej rodiny?",
+      "incomeHelp": "Toto pomáha vypočítať potenciálne stratené mzdy",
+      "property": "Vlastníte nehnuteľnosť?",
+      "business": "Máte podnik?",
+      "accounts": "Koľko máte bankových účtov?",
+      "accountsHelp": "Zahrňte bežné, sporiace, investičné"
+    },
+    "calculateButton": "Vypočítať moje úspory",
+    "results": {
+      "title": "Úspory vašej rodiny",
+      "description": "Tu je, čo znamená byť pripravený pre vašich blízkych",
+      "timeSavings": {
+        "title": "Čas, ktorý vaša rodina ušetrí",
+        "without": "Bez organizácie",
+        "withoutHours": "40-120 hodín hľadania",
+        "with": "S Dedičným trezorom",
+        "withMinutes": "Menej ako 5 minút"
+      },
+      "moneySavings": {
+        "title": "Peniaze, ktoré vaša rodina ušetrí",
+        "legalFees": "Právne poplatky za rekonštrukciu",
+        "lostWages": "Stratené mzdy z času mimo práce",
+        "penalties": "Zmeškané termíny a pokuty",
+        "total": "Celkové potenciálne úspory"
+      },
+      "emotional": {
+        "title": "Vplyv na emocionálnu pohodu",
+        "stress": "Zníženie úrovne stresu",
+        "confidence": "Zvýšenie rodinnej dôvery",
+        "peace": "Hodnotenie kontroly a pripravenosti"
+      },
+      "socialProof": "Pridajte sa k rodinám, ktoré už lepšie spia v noci",
+      "families": "15 000+ rodín chránených",
+      "ctaContext": "Väčšina rodín dokončí nastavenie počas obednej prestávky",
+      "shareButton": "Zdieľať výsledky"
+    },
+    "testimonial": {
+      "quote": "Nikdy som si neuvedomil, koľko stresu niesem, kým som všetko nezorganizoval. Teraz viem, že moja rodina bude v poriadku, bez ohľadu na to, čo sa stane.",
+      "author": "Sarah M., matka troch detí"
+    },
+    "shareTitle": "Výsledky kalkulačky pripravenosti rodiny",
+    "shareCopied": "Výsledky skopírované do schránky!"
+  },
+  "executor": {
+    "dashboard": {
+      "title": "Nástenka vykonávateľa",
+      "subtitle": "Sprievodca krok za krokom, ktorý vám pomôže prejsť týmto ťažkým časom",
+      "reminder": "Pamätajte, že sa máte starať o seba počas tohto ťažkého času. Neváhajte požiadať o pomoc, keď je potrebná."
+    },
+    "errors": {
+      "loadTasksFailed": "Nepodarilo sa načítať úlohy vykonávateľa. Skúste to prosím neskôr.",
+      "updateTaskFailed": "Nepodarilo sa aktualizovať stav úlohy."
+    },
+    "highPriority": "Vysoká priorita",
+    "due": "Splatné",
+    "completed": "Dokončené",
+    "undo": "Späť",
+    "markComplete": "Označiť ako dokončené",
+    "viewAccountDetails": "Zobraziť podrobnosti účtu a heslo",
+    "viewRelatedDocuments": "Zobraziť súvisiace dokumenty ({{count}})",
+    "stats": {
+      "totalTasks": "Celkové úlohy",
+      "completed": "Dokončené",
+      "remaining": "Zostávajúce"
+    },
+    "sections": {
+      "immediate": {
+        "title": "Okamžité úlohy (Prvých 48 hodín)",
+        "description": "Kritické úlohy, ktoré vyžadujú vašu okamžitú pozornosť",
+        "empty": "Všetky okamžité úlohy dokončené!"
+      },
+      "firstWeek": {
+        "title": "Úlohy prvého týždňa",
+        "description": "Dôležité úlohy na dokončenie v rámci prvého týždňa",
+        "empty": "Všetky úlohy prvého týždňa dokončené!"
+      },
+      "ongoing": {
+        "title": "Prebiehajúce zodpovednosti",
+        "description": "Úlohy na riešenie v nadchádzajúcich týždňoch a mesiacoch",
+        "empty": "Všetky prebiehajúce úlohy dokončené!"
+      }
+    },
+    "communications": {
+      "title": "Komunikácia s dedičmi",
+      "description": "Sledujte všetku komunikáciu s dedičmi na udržanie transparentnosti",
+      "logCommunication": "Zaznamenať komunikáciu",
+      "logTitle": "Zaznamenať komunikáciu s dedičom",
+      "logDescription": "Zaznamenajte podrobnosti vašej komunikácie s dedičmi",
+      "beneficiaryName": "Meno dediča",
+      "beneficiaryEmail": "E-mail (voliteľné)",
+      "communicationType": "Typ",
+      "communicationDate": "Dátum",
+      "subject": "Predmet",
+      "summary": "Zhrnutie",
+      "subjectPlaceholder": "napr. Počiatočná aktualizácia majetku",
+      "summaryPlaceholder": "Stručné zhrnutie toho, o čom sa diskutovalo...",
+      "types": {
+        "email": "E-mail",
+        "phone": "Telefonát",
+        "letter": "List",
+        "in_person": "Osobne",
+        "other": "Iné"
+      },
+      "saving": "Ukladá sa...",
+      "saveCommunication": "Uložiť komunikáciu",
+      "cancel": "Zrušiť",
+      "noCommunications": "Zatiaľ nebola zaznamenaná žiadna komunikácia",
+      "startTracking": "Začnite sledovať vašu komunikáciu s dedičmi",
+      "errors": {
+        "saveFailed": "Nepodarilo sa zaznamenať komunikáciu"
+      }
+    },
+    "status": {
+      "title": "Stav správy majetku",
+      "description": "Aktuálny vysoký stav viditeľný autorizovaným členom rodiny",
+      "updateStatus": "Aktualizovať stav",
+      "updateTitle": "Aktualizovať stav majetku",
+      "updateDescription": "Tento stav bude viditeľný autorizovaným členom rodiny",
+      "statusLabel": "Stav",
+      "additionalDetails": "Dodatočné podrobnosti (voliteľné)",
+      "detailsPlaceholder": "Poskytnite akékoľvek dodatočné informácie...",
+      "selectStatus": "Vyberte stav",
+      "updating": "Aktualizuje sa...",
+      "lastUpdated": "Posledná aktualizácia",
+      "progress": "Pokrok",
+      "noStatusSet": "Zatiaľ nie je nastavený žiadny stav. Kliknite na \"Aktualizovať stav\" na nastavenie počiatočného stavu.",
+      "noStatusUpdates": "Zatiaľ neboli zverejnené žiadne aktualizácie stavu.",
+      "statuses": {
+        "initial_review": "Počiatočný prehľad",
+        "gathering_documents": "Zber dokumentov",
+        "probate_initiated": "Proces pozostatkového konania zahájený",
+        "assets_being_valued": "Aktíva sa hodnotia",
+        "debts_being_settled": "Dlhy sa vyrovnávajú",
+        "tax_preparation": "Príprava daní",
+        "ready_for_distribution": "Pripravené na distribúciu",
+        "distribution_in_progress": "Distribúcia prebieha",
+        "estate_closed": "Majetok uzavretý"
+      },
+      "errors": {
+        "updateFailed": "Nepodarilo sa aktualizovať stav"
+      }
+    },
+    "justInTime": {
+      "viewAccountDetails": "Zobraziť podrobnosti účtu a heslo",
+      "secureInfoAccess": "Bezpečný prístup k informáciám",
+      "reauthenticate": "Znovu overiť na zobrazenie citlivých informácií pre",
+      "securityReason": "Z bezpečnostných dôvodov zadajte prosím svoje heslo na prístup k týmto informáciám.",
+      "password": "Heslo",
+      "enterPassword": "Zadajte svoje heslo",
+      "incorrectPassword": "Nesprávne heslo. Skúste to prosím znova.",
+      "cancel": "Zrušiť",
+      "verifying": "Overuje sa...",
+      "verifyContinue": "Overiť a pokračovať",
+      "accountName": "Názov účtu",
+      "accountNumber": "Číslo účtu",
+      "username": "Používateľské meno",
+      "pin": "PIN",
+      "additionalNotes": "Dodatočné poznámky",
+      "noSensitiveInfo": "K tejto úlohe nie sú pripojené žiadne citlivé informácie.",
+      "accessLogged": "Tento prístup bol zaznamenaný z bezpečnostných dôvodov.",
+      "accessTime": "Čas prístupu",
+      "close": "Zavrieť",
+      "errors": {
+        "reauthFailed": "Nepodarilo sa overiť vašu identitu. Skúste to prosím znova.",
+        "notFound": "Pre túto úlohu sa nenašli žiadne citlivé informácie.",
+        "retrieveFailed": "Nepodarilo sa načítať citlivé informácie."
+      }
+    },
+    "familyView": {
+      "title": "Stav správy majetku",
+      "subtitle": "Zostaňte informovaní o pokroku správy majetku",
+      "recentCommunications": "Nedávna komunikácia vykonávateľa",
+      "recentCommunicationsDescription": "Nedávne aktualizácie od {{executorName}} pre dedičov",
+      "to": "Pre",
+      "noCommunications": "Zatiaľ nebola zaznamenaná žiadna komunikácia.",
+      "infoMessage": "Tieto informácie aktualizuje {{executorName}} na informovanie členov rodiny. Pre podrobné otázky kontaktujte prosím vykonávateľa priamo.",
+      "defaultExecutor": "vykonávateľ",
+      "errors": {
+        "loadFailed": "Nepodarilo sa načítať údaje"
+      }
+    }
+  },
+  "features": {
+    "title": "Tri jednoduché sľuby, ktoré vám dávame",
+    "subtitle": "Všetko, čo vaša rodina potrebuje, nič, čo nepotrebuje. Jednoduché, jasné a vždy tam, keď to záleží.",
+    "sleepBetter": {
+      "title": "Spite lepšie dnes v noci",
+      "description": "Prestaňte sa obávať 'čo ak sa mi niečo stane.' Vaša rodina bude presne vedieť, čo robiť, kde nájsť všetko a koho volať."
+    },
+    "noChaos": {
+      "title": "Žiadne zúfalé hľadanie",
+      "description": "Vaša rodina nebude tráviť dni hľadaním v zásuvkách, volaním bánk alebo skúšaním uhádnuť heslá. Všetko dôležité je zorganizované na jednom bezpečnom mieste."
+    },
+    "clearInstructions": {
+      "title": "Pokyny krok za krokom",
+      "description": "Vaši blízki dostanú jasné, jednoduché pokyny presne na to, čo robiť a kedy. Žiadny zmätok, žiadne hádanie, žiadny stres počas ťažkých časov."
+    },
+    "security": {
+      "title": "Absolútna dôvernosť a súkromie",
+      "description": "Navrhnuté tak, aby k vašim údajom nemala prístup žiadna neoprávnená osoba. Ani my. Vaše súkromie je našou najvyššou prioritou."
+    },
+    "guardians": {
+      "title": "Sieť strážcov",
+      "description": "Určte dôveryhodných členov rodiny a priateľov za strážcov, aby ste zabezpečili kontinuitu dedičstva."
+    },
+    "storage": {
+      "title": "Bezpečné cloudové úložisko",
+      "description": "Redundantné zálohy vo viacerých dátových centrách s garantovanou 99,99% dostupnosťou."
+    },
+    "timelock": {
+      "title": "Časovo obmedzený prístup",
+      "description": "Nastavte podmienky, kedy a ako budú mať dediči prístup k vášmu digitálnemu dedičstvu."
+    },
+    "stories": {
+      "title": "Osobné príbehy",
+      "description": "Vytvárajte bohaté multimediálne príbehy, ktoré zachytávajú podstatu cesty vašej rodiny."
+    },
+    "preservation": {
+      "title": "Celoživotné uchovanie",
+      "description": "Vaše dedičstvo je uchovávané na neurčito s automatickou migráciou formátov a aktualizáciami."
+    }
+  },
+  "testimonials": {
+    "badge": "Skutočné rodiny prevzímajúce kontrolu",
+    "title": "Dôveruje mu 15 000+ európskych rodín",
+            "subtitle": "Pozrite si, ako rodiny ako vaša našli bezpečnosť a pokoj s Dedičným trezorom",
+    "verified": "Overená rodina",
+    "trustedBy": "Dôveruje a odporúča",
+    "stats": {
+      "families": "15 000+",
+      "familiesLabel": "európskych rodín chránených",
+      "satisfaction": "99,7%",
+      "satisfactionLabel": "sa cítia pripravenejšie a pod kontrolou",
+      "stressReduction": "92%",
+      "stressReductionLabel": "menej rodinného stresu hlásených",
+      "timeSaved": "120 hod",
+      "timeSavedLabel": "priemerný čas ušetrený na rodinu"
+    },
+    "stories": {
+      "1": {
+        "name": "Michael K.",
+        "role": "Otec troch detí",
+        "location": "Mníchov, Nemecko",
+        "quote": "Po náhlej nehode môjho brata som sledoval, ako moja švagriná týždne zápasila s hľadaním dôležitých dokumentov a hesiel. Vtedy som vedel, že nemôžem nechať, aby sa to isté stalo mojej rodine. Teraz je všetko zorganizované a moja manželka presne vie, kde nájsť to, čo potrebuje. Byť pripravený a pod kontrolou je neoceniteľné.",
+        "highlight": "✨ Nastavené za len 2 hodiny, chrániace 3 deti a manželku"
+      },
+      "2": {
+        "name": "Anna S.",
+        "role": "Podnikateľka",
+        "location": "Viedeň, Rakúsko",
+        "quote": "Ako samostatná mama prevádzkujúca podnik, neustále som sa obávala, čo by sa stalo, keby sa mi niečo stalo. Dedičný trezor mi pomohol zorganizovať všetko - od obchodných účtov po informácie o škole mojich detí. Moja sestra teraz má prístup ku všetkému, čo by potrebovala na zasiahnutie. Spím oveľa lepšie s vedomím, že sú chránení.",
+        "highlight": "💼 Obchodný a osobný život zorganizovaný na jednom bezpečnom mieste"
+      },
+      "3": {
+        "name": "Thomas R.",
+        "role": "Dôchodca učiteľ",
+        "location": "Curych, Švajčiarsko",
+        "quote": "Moja manželka má rané štádium demencie a uvedomil som si, že sa musím pripraviť, kým ešte môžem. Dedičný trezor to zjednodušil na organizáciu našich 40 rokov života spolu. Naše deti teraz majú jasné pokyny a prístup ku všetkému. Zblížilo to našu celú rodinu s vedomím, že sme pripravení na čokoľvek, čo príde.",
+        "highlight": "❤️ 40 rokov rodinnej histórie zachovaných a chránených"
+      }
+    },
+    "authority": {
+      "advisors": "Odporúčané finančnými poradcami",
+      "attorneys": "Dôveruje mu rodinní právnici",
+      "counselors": "Schválené poradcami pre zármutok"
+    },
+    "compliance": {
+      "gdpr": "V súlade s GDPR",
+      "dataProtection": "Certifikované ochrany údajov",
+      "iso": "ISO 27001 certifikované"
+    },
+    "bottomCta": {}
+  },
+  "dashboard": {
+    "strategicSummary": {
+      "initial": "Začnite budovať svoje digitálne dedičstvo pridaním prvého dokumentu.",
+      "addDocument": "Pridať Dokument",
+          "addPrimaryGuardian": "Pridať primárneho opatrovníka",
+    "addBackupGuardian": "Pridať záložného opatrovníka",
+      "addHomeProperty": "Pridať vašu domovú nehnuteľnosť",
+          "addFinancialAccounts": "Pridať finančné účty",
+    "addPrimaryBeneficiary": "Pridať primárneho dediča",
+    "addContingentBeneficiaries": "Pridať náhradných dedičov",
+      "minutes": "{{count}} minutes",
+      "assetInventory": "Zásoby majetku",
+      "assetInventoryDesc": "Kompletný zoznam vášho cenného majetku",
+      "criticalDocuments": "Kritické dokumenty",
+      "criticalDocumentsDesc": "Základné dokumenty, ktoré vaša rodina potrebuje okamžite",
+      "guardianNetwork": "Sieť opatrovníkov",
+      "guardianNetworkDesc": "Dôveryhodní ľudia, ktorí sa postarajú o vaše",
+      "ifNotDone": "⚠️ Ak nie je hotové",
+      "impact": {},
+      "inheritancePlan": "Plán dedičstva",
+      "inheritancePlanDesc": "Jasné pokyny pre distribúciu majetku",
+      "nextAction": "⚡ Ďalšia akcia",
+      "nextCriticalStep": "Ďalší kritický krok",
+      "startWithNext": "Začnite ďalším kritickým krokom",
+      "subtitle": "Máte {count} kľúčových oblastí, ktoré si vyžadujú pozornosť. Dokončenie týchto krokov zabezpečí {percentage}% ochranu pre vašu rodinu a majetok.",
+      "title": "Strategický prehľad",
+      "whyImportant": "🛡️ Prečo je dôležité"
+    },
+    "stats": {
+      "totalAssets": "Celkové aktíva",
+      "activeAssetsManaged": "Aktívne spravované aktíva",
+      "activeGuardians": "Aktívni opatrovníci",
+      "trustedGuardians": "Priradení dôveryhodní opatrovníci",
+      "beneficiaries": "Príjemcovia",
+      "legacyRecipients": "Menovaní dediči",
+      "securityScore": "Skóre bezpečnosti",
+      "securityScoreValue": "98%",
+      "excellent": "Vynikajúce",
+      "good": "Dobré",
+      "needsImprovement": "Vyžaduje zlepšenie"
+    },
+    "quickTasks": {
+      "taskCompleted": "Úloha dokončená!",
+      "taskStarted": "Spúšťa sa úloha...",
+      "tasks": {
+        "birthCertificate": {
+          "title": "🛡️ Pridať rodný list",
+          "description": "Bez tohto dokumentu vaša rodina nemôže dokázať dedičské práva alebo pristúpiť k účtom"
+        },
+        "insurancePolicy": {
+          "title": "💰 Pridať životnú poistnú zmluvu",
+          "description": "Vaša rodina potrebuje okamžitý prístup na uplatnenie nárokov a vyhnutie sa oneskoreniam"
+        },
+        "will": {
+          "title": "⚖️ Pridať závet alebo testament",
+          "description": "Predchádza rodinným sporom a zabezpečuje, že sa dodržiavajú vaše želania"
+        },
+        "spouseGuardian": {
+          "title": "👥 Pridať manžela/ku ako opatrovníka",
+          "description": "Bez opatrovníkov nikto nemôže legálne konať vaším menom alebo robiť lekárske rozhodnutia"
+        },
+        "backupGuardian": {
+          "title": "🤝 Pridať záložného opatrovníka",
+          "description": "Zabezpečuje, že niekto môže zasiahnuť, ak váš primárny opatrovník nie je dostupný"
+        },
+        "bankAccount": {
+          "title": "🏦 Pridať bankový účet",
+          "description": "Vaša rodina potrebuje vedieť, kde sú vaše peniaze, aby k nim mohla okamžite pristúpiť"
+        },
+        "homeProperty": {
+          "title": "🏠 Pridať domovú nehnuteľnosť",
+          "description": "Predchádza strate vašej najcennejšej nehnuteľnosti vašou rodinou"
+        },
+        "vehicle": {
+          "title": "🚗 Pridať vozidlo",
+          "description": "Zabezpečuje, že vaša rodina môže previesť vlastníctvo a vyhnúť sa komplikáciám"
+        },
+        "spouseBeneficiary": {
+          "title": "💝 Pridať manžela/ku ako dediča",
+          "description": "Bez jasných pokynov môžu vzniknúť rodinné spory o dedičstvo"
+        },
+        "childrenBeneficiaries": {
+          "title": "👶 Pridať deti ako dedičov",
+          "description": "Zabezpečuje, že vaše deti dostanú to, čo ste pre ne zamýšľali"
+        }
+      },
+      "allCompleted": "Všetky úlohy dokončené!",
+      "allTasks": "Všetky úlohy",
+      "assets": "Aktíva",
+      "beneficiaries": "Požívatelia ochrany",
+      "completed": "dokončený",
+      "documents": "Dokumenty",
+      "greatProgress": "Skvelý pokrok! Dokončili ste {count} úloh.",
+      "guardians": "Poručníci",
+      "ifNotDone": "⚠️ Ak nie je hotové",
+      "markAsComplete": "Označiť ako dokončené",
+      "progress": "Pokrok",
+      "start": "Štart",
+      "title": "5-minútové úlohy",
+      "wellOnWay": "🎉 Ste na dobrej ceste k zabezpečeniu budúcnosti vašej rodiny!",
+      "whyImportant": "🛡️ Prečo je dôležité"
+    },
+    "familyGuide": {
+      "view": "Zobraziť",
+      "subtitle": "Automaticky vygenerovaný sprievodca pre vašu rodinu",
+      "discreteModeDesc": "Vaše osobné poznámky a pripomenutia",
+      "callNow": "Volajte Teraz",
+      "callSoon": "Čoskoro zavolajte",
+      "critical": "Kritická",
+      "discreteMode": "Diskrétny režim",
+      "emergencyContacts": "Núdzové kontakty",
+      "exportGuide": "Sprievodca exportom",
+      "generateGuide": "Vytvoriť sprievodcu",
+      "important": "Dôležité",
+      "importantDocuments": "Dôležité dokumenty",
+      "shareWithFamily": "Zdieľať s rodinou",
+      "timeline": "Čo robiť keď ...?",
+      "title": "Príručka pre núdzové situácie pre"
+    },
+    "sectionHeaders": {}
+  },
+  "onboarding": {
+    "title": "Vitajte v LegacyGuard",
+    "subtitle": "Pomôžeme vám zabezpečiť budúcnosť vašej rodiny",
+    "mainTitle": "Projektový poriadok",
+    "mainSubtitle": "Vytvorme si váš osobný plán ochrany dedičstva",
+    "progressText": "Projektový poriadok: Krok {{step}} z 4",
+    "skipButton": "Preskočiť zatiaľ",
+    "skipConfirmTitle": "Preskočiť úvod?",
+    "skipConfirmMessage": "Toto nastavenie môžete kedykoľvek znova spustiť v nastaveniach",
+    "skipConfirmYes": "Preskočiť",
+    "skipConfirmNo": "Pokračovať v nastavení",
+    "restartButton": "Reštartovať úvod",
+    "welcomeBack": "Vitajte späť! Ste pripravení dokončiť nastavenie?",
+    "resumeTitle": "Pokračujte tam, kde ste prestali",
+    "resumeMessage": "Boli ste na kroku {{step}} zo 4",
+    "partialProgress": "{{percentage}}% hotovo",
+    "inventory": {
+      "documentAccess": {
+        "question": "Keby sa vám dnes niečo stalo, vedela by vaša rodina, kde nájsť vaše dôležité dokumenty?",
+        "answers": {
+          "yes": "Áno",
+          "no": "Nie",
+          "partially": "Čiastočne"
+        }
+      },
+      "caretaker": {
+        "question": "Kto by sa postaral o vaše deti/majetok/digitálne účty?",
+        "answers": {
+          "designated": "Mám určenú osobu",
+          "familyFigureOut": "Rodina by si poradila",
+          "notThought": "Nerozmýšľal/a som o tom"
+        }
+      },
+      "familyClarity": {
+        "question": "Myslíte si, že by vaša rodina vedela, čo ste pre nich chceli?",
+        "answers": {
+          "clear": "Áno, je to jasné",
+          "somewhat": "Tak trochu",
+          "neverDiscussed": "Nie, nikdy sme o tom nehovorili"
+        }
+      },
+      "biggestWorry": {
+        "question": "Čo vás najviac trápi v súvislosti s budúcnosťou vašej rodiny?",
+        "answers": {
+          "financial": "Finančná istota",
+          "legal": "Právne komplikácie",
+          "memories": "Strata spomienok",
+          "conflicts": "Rodinné konflikty"
+        }
+      },
+      "personalized": {
+        "documentCentralization": "Na základe vašej odpovede o prístupe k dokumentom odporúčame začať centralizáciou vašich dôležitých dokumentov.",
+        "guardianDesignation": "Keďže ste neurčili nikoho, kto by sa staral o váš majetok, vymenovanie strážcu by malo byť vašou prioritou.",
+        "willPreparation": "Vaša rodina potrebuje mať jasno vo vašich želaniach. Vytvorenie závetu je nevyhnutným prvým krokom.",
+        "financialPlanning": "Finančná istota je kľúčová. Začnime zdokumentovaním vašich bankových účtov a majetku.",
+        "conflictPrevention": "Na predchádzanie rodinným konfliktom je kľúčová jasná dokumentácia a komunikácia.",
+        "memoryPreservation": "Uchovávanie spomienok sa začína organizovaním vašich digitálnych fotografií a príbehov.",
+        "legalOrganization": "Zorganizujme vaše právne dokumenty, aby sme predišli neskorším komplikáciám."
+      }
+    },
+    "q1": {
+      "title": "Keby sa vám dnes niečo stalo, vedela by vaša rodina, kde nájsť vaše dôležité dokumenty?",
+      "option1": "Áno",
+      "option2": "Nie",
+      "option3": "Čiastočne"
+    },
+    "q2": {
+      "title": "Kto by sa postaral o vaše deti/majetok/digitálne účty?",
+      "option1": "Mám určenú osobu",
+      "option2": "Rodina by si poradila",
+      "option3": "Nerozmýšľal/a som o tom"
+    },
+    "q3": {
+      "title": "Myslíte si, že by vaša rodina vedela, čo ste pre nich chceli?",
+      "option1": "Áno, je to jasné",
+      "option2": "Tak trochu",
+      "option3": "Nie, nikdy sme o tom nehovorili"
+    },
+    "q4": {
+      "title": "Čo vás najviac trápi v súvislosti s budúcnosťou vašej rodiny?",
+      "option1": "Finančná istota",
+      "option2": "Právne komplikácie",
+      "option3": "Strata spomienok",
+      "option4": "Rodinné konflikty"
+    },
+    "buttons": {
+      "previous": "Predchádzajúci",
+      "next": "Ďalší",
+      "generate": "Vygenerovať môj Projektový poriadok"
+    },
+    "analysis": {
+      "title": "Analyzujeme vaše odpovede...",
+      "subtitle": "Pripravujeme váš osobný 'Projektový poriadok'...",
+      "done": "Hotovo!"
+    },
+    "complete": "Skvelý začiatok! Prispôsobili sme vašu nástenku na základe vašich odpovedí. Ste pripravení začať budovať svoj komplexný plán dedičstva.",
+    "success": {
+      "stepCompleted": "Krok {{step}} úspešne dokončený!",
+      "inventoryComplete": "Inventár života dokončený! Váš osobný plán je pripravený.",
+      "allQuestionsAnswered": "Všetky otázky zodpovedané. Generuje sa váš akčný plán..."
+    },
+    "errors": {
+      "questionRequired": "Prosím, odpovedzte na túto otázku, aby ste mohli pokračovať",
+      "failedToSave": "Nepodarilo sa uložiť vaše odpovede. Skúste to prosím znova.",
+      "loadingFailed": "Nepodarilo sa načítať úvodné otázky"
+    },
+    "addAnother": "Pridať ďalší",
+    "previous": "Predchádzajúci",
+    "next": "Ďalší",
+    "continue": "Pokračovať na nástenku"
+  },
+  "manual": {
+    "title": "Manuál pre pozostalých",
+    "subtitle": "Základné informácie pre vašich blízkych, keď ich najviac potrebujú",
+    "tabs": {
+      "contacts": "Dôležité kontakty",
+      "documents": "Kľúčové dokumenty",
+      "instructions": "Pokyny"
+    },
+    "contacts": {
+      "title": "Dôležité kontakty",
+      "description": "Kľúčové osoby, ktoré by mala vaša rodina kontaktovať v prípade núdze",
+      "addContact": "Pridať kontakt",
+      "addFirstContact": "Pridajte svoj prvý kontakt",
+      "loading": "Načítavajú sa kontakty...",
+      "empty": {
+        "title": "Zatiaľ neboli pridané žiadne kontakty",
+        "description": "Začnite pridaním dôležitých ľudí, o ktorých by mala vaša rodina vedieť."
+      },
+      "form": {
+        "editTitle": "Upraviť kontakt",
+        "addTitle": "Pridať dôležitý kontakt",
+        "description": "Pridajte ľudí, ktorých by mala vaša rodina kontaktovať v dôležitých situáciách.",
+        "nameLabel": "Meno kontaktu *",
+        "namePlaceholder": "napr. Ján Vážny",
+        "roleLabel": "Úloha/Profesia *",
+        "rolePlaceholder": "napr. Rodinný právnik, Účtovník, Lekár",
+        "phoneLabel": "Telefónne číslo",
+        "phonePlaceholder": "+421 900 123 456",
+        "emailLabel": "E-mailová adresa",
+        "emailPlaceholder": "kontakt@priklad.sk",
+        "notesLabel": "Poznámky",
+        "notesPlaceholder": "Ďalšie informácie o tomto kontakte...",
+        "updateButton": "Aktualizovať kontakt",
+        "addButton": "Pridať kontakt",
+        "saving": "Ukladá sa...",
+        "cancel": "Zrušiť"
+      },
+      "card": {
+        "edit": "Upraviť"
+      },
+      "messages": {
+        "nameAndRoleRequired": "Meno a úloha sú povinné",
+        "loginRequired": "Pre uloženie kontaktov musíte byť prihlásený",
+        "updated": "Kontakt úspešne aktualizovaný!",
+        "added": "Kontakt úspešne pridaný!",
+        "deleted": "Kontakt úspešne odstránený!"
+      },
+      "errors": {
+        "loadFailed": "Nepodarilo sa načítať kontakty",
+        "saveFailed": "Nepodarilo sa uložiť kontakt",
+        "deleteFailed": "Nepodarilo sa odstrániť kontakt"
+      }
+    },
+    "documents": {
+      "title": "Kľúčové dokumenty",
+      "description": "Kritické dokumenty, o ktorých musí vaša rodina vedieť",
+      "loading": "Načítavajú sa kľúčové dokumenty...",
+      "empty": {
+        "title": "Zatiaľ neboli pridané žiadne kľúčové dokumenty",
+        "description": "Označte dôležité dokumenty ako \"kľúčové dokumenty\" vo vašom trezore, aby sa tu zobrazili.",
+        "tip": "Tip: Prejdite do svojho trezoru a prepnite \"Zahrnúť do Manuálu pre pozostalých\" pre dôležité dokumenty"
+      },
+      "card": {
+        "essentialNote": "Tento dokument je označený ako nevyhnutný pre vašich pozostalých."
+      },
+      "errors": {
+        "loadFailed": "Nepodarilo sa načítať kľúčové dokumenty"
+      },
+      "expiration": {
+        "expired": "Exspirovaný",
+        "expiresSoon": "Čoskoro exspiruje",
+        "expiring": "Exspiruje"
+      }
+    },
+    "instructions": {
+      "title": "Posledné želania a pokyny",
+      "description": "Osobné usmernenia a správy pre vašich blízkych",
+      "loading": "Načítavajú sa pokyny...",
+      "autoSaveNote": "Vaše pokyny sa automaticky ukladajú počas písania",
+      "sections": {
+        "funeral": {
+          "title": "Pohrebné želania",
+          "description": "Vaše preferencie týkajúce sa pohrebných obradov a ceremónií",
+          "placeholder": "napr. Kremácia, žiadna formálna ceremónia, zahrajte 'My Way' od Franka Sinatru..."
+        },
+        "digitalAccounts": {
+          "title": "Zrušenie digitálnych účtov",
+          "description": "Pokyny na zaobchádzanie s vašimi digitálnymi účtami a online prítomnosťou",
+          "placeholder": "napr. Prosím, odstráňte môj profil na Facebooku, ale archivujte môj Gmail. Presuňte moje fotky z Google Drive do..."
+        },
+        "messages": {
+          "title": "Správy pre blízkych",
+          "description": "Osobné správy a posledné myšlienky pre vašu rodinu a priateľov",
+          "placeholder": "Podeľte sa o svoje myšlienky, spomienky a posledné správy s tými, ktorých milujete..."
+        }
+      },
+      "errors": {
+        "loadFailed": "Nepodarilo sa načítať pokyny"
+      }
+    }
+  },
+  "documentTypes": {
+    "realEstateDeed": "List vlastníctva",
+    "birthCertificate": "Rodný list",
+    "insurancePolicy": "Poistná zmluva",
+    "lastWill": "Posledná vôľa a závet",
+    "employmentContract": "Pracovná zmluva",
+    "passport": "Pas",
+    "drivingLicense": "Vodičský preukaz",
+    "bankStatement": "Výpis z bankového účtu",
+    "investmentCertificate": "Investičný certifikát",
+    "energyContract": "Zmluva o dodávke energie",
+    "softwareLicense": "Softvérová licencia",
+    "subscriptionService": "Služba predplatného",
+    "other": "Iné"
+  },
+  "navigation": {
+    "dashboard": "Nástenka",
+    "vault": "Trezor",
+    "trustedCircle": {
+      "title": "Váš dôveryhodný kruh",
+      "subtitle": "Ľudia, ktorým dôverujete, aby pomohli chrániť a starať sa o vašu rodinu a dedičstvo.",
+      "responsibilities": "Ich zodpovednosti:",
+      "preparationStatus": "Stav prípravy:",
+      "informedOfRole": "Bol informovaný o svojej úlohe",
+      "acceptedResponsibility": "Prijal zodpovednosť",
+      "hasAccessToDocuments": "Má prístup k potrebným dokumentom",
+      "reviewedEmergencyProcedures": "Prezrel núdzové postupy",
+      "addTrustedPerson": "+ Pridať dôveryhodnú osobu",
+      "preparednessStatus": {
+        "wellPrepared": "Dobre pripravený",
+        "partiallyPrepared": "Čiastočne pripravený",
+        "needsAttention": "Vyžaduje pozornosť"
+      },
+      "buttonText": {
+        "prepared": "✓ {{name}} je pripravený",
+        "prepareNow": "Pripraviť {{name}} teraz"
+      },
+      "mockData": {
+        "sarah": {
+          "name": "Sarah Johnson",
+          "relationship": "Manželka",
+          "responsibilities": {
+            "bankAccess": "Môže pristúpiť ku všetkým bankovým účtom na platbu účtov a správu domácich výdavkov.",
+            "inheritAssets": "Zdedí rodinný dom, chatu a všetky úspory.",
+            "medicalPower": "Má lekárske splnomocnenie na rozhodovanie o zdravotnej starostlivosti."
+          }
+        },
+        "michael": {
+          "name": "Michael Johnson",
+          "relationship": "Brat",
+          "responsibilities": {
+            "childCare": "Postará sa o naše deti, ak obaja rodičia zomrú.",
+            "estateExecution": "Vykoná naše posledné želania a spravuje vyrovnanie majetku.",
+            "businessManagement": "Môže zasiahnuť na správu Johnson Contracting LLC dočasne."
+          }
+        },
+        "robert": {
+          "name": "Robert Chen",
+          "relationship": "Obchodný partner",
+          "responsibilities": {
+            "businessAuthority": "Má oprávnenie spravovať obchodné operácie a podpisovať zmluvy.",
+            "buySellAgreement": "Kúpi moje obchodné podiely podľa našej kúpno-predajnej dohody."
+          }
+        },
+        "emily": {
+          "name": "Emily Thompson",
+          "relationship": "Švagriná",
+          "responsibilities": {
+            "backupGuardian": "Záložný opatrovník pre deti, ak primárny opatrovník nemôže slúžiť."
+          }
+        }
+      }
+    },
+    "familyHub": "Rodinné centrum",
+    "legacyBriefing": {
+      "legacy_briefing_3": "Prehľad dedičstva",
+      "create_and_manage_sealed_messa_4": "Vytvárajte a spravujte zapečatené správy pre vašich blízkych",
+      "failed_to_load_your_time_capsu_1": "Nepodarilo sa načítať vaše časové kapsuly",
+      "are_you_sure_you_want_to_delet_2": "Ste si istý, že chcete vymazať túto časovú kapsulu?",
+      "create_new_message_5": "Vytvoriť novú správu",
+      "no_time_capsules_yet_6": "Zatiaľ žiadne časové kapsuly",
+      "create_meaningful_messages_for_7": "Vytvárajte zmysluplné správy pre vašich blízkych na prijatie v budúcnosti",
+      "create_your_first_message_8": "Vytvorte svoju prvú správu",
+      "to_9": "Pre:",
+      "unlocks_on_10": "Odomkne sa:",
+      "unlocks_11": "Odomkne sa:",
+      "after_passing_12": "Po úmrtí",
+      "statusLabels": {
+        "locked": "Zamknuté",
+        "unlocked": "Odomknuté",
+        "delivered": "Doručené",
+        "noRecipients": "Žiadni príjemcovia"
+      },
+      "messageTypes": {
+        "text": "Textová správa",
+        "photo": "Fotografická správa",
+        "video": "Videopráva",
+        "audio": "Zvuková správa"
+      },
+      "actions": {
+        "edit": "Upraviť",
+        "delete": "Vymazať"
+      },
+      "toastMessages": {
+        "deleteSuccess": "Časová kapsula úspešne vymazaná",
+        "deleteError": "Nepodarilo sa vymazať časovú kapsulu"
+      },
+      "dateFormat": {
+        "dateNotSet": "Dátum nie je nastavený",
+        "created": "Vytvorené"
+      }
+    },
+    "executorToolkit": "Sada nástrojov vykonávateľa",
+    "assets": "Čo vlastníte a ceníte si",
+    "manual": "Manuál",
+    "documents": "Dôležité dokumenty",
+    "guardians": "Ľudia, ktorým dôverujete",
+    "family": "Rodinné centrum",
+    "timeCapsule": "Časové kapsuly",
+    "will": "Vaše posledné želania",
+    "consultations": "Právne konzultácie",
+    "settings": "Nastavenia",
+    "help": "Pomoc a podpora",
+    "subscriptions": "Predplatné"
+  },
+  "app": {
+    "name": "LegacyGuard",
+    "tagline": "Ochrana vášho dedičstva"
+  },
+  "invite": {
+    "title": "{{name}} vás pozval, aby ste sa stali Strážcom jeho/jej digitálneho dedičstva"
+  },
+  "common": {
+    "loading": "Načítava sa...",
+    "viewDetails": "Zobraziť podrobnosti",
+    "edit": "Upraviť",
+    "delete": "Vymazať",
+    "addedOn": "Pridané {{date}}",
+    "priority": {
+      "high": "Vysoká",
+      "medium": "Stredná",
+      "low": "Nízka"
+    },
+    "pagination": {
+      "previous": "Predchádzajúca",
+      "next": "Ďalšia",
+      "morePages": "Viac strán",
+      "page": "Stránka",
+      "of": "z",
+      "showing": "Zobrazuje sa",
+      "to": "do",
+      "results": "výsledkov",
+      "perPage": "na stránku",
+      "goToPage": "Prejsť na stránku",
+      "currentPage": "Aktuálna stránka",
+      "totalPages": "Celkové stránky",
+      "firstPage": "Prvá stránka",
+      "lastPage": "Posledná stránka",
+      "pageInfo": "Stránka {{current}} z {{total}}",
+      "resultsInfo": "Zobrazuje sa {{start}} až {{end}} z {{total}} výsledkov",
+      "noResults": "Nenašli sa žiadne výsledky",
+      "loading": "Načítava sa...",
+      "navigation": {
+        "title": "Navigácia stránkovania",
+        "description": "Navigujte cez stránky výsledkov",
+        "first": "Prejsť na prvú stránku",
+        "last": "Prejsť na poslednú stránku",
+        "previous": "Prejsť na predchádzajúcu stránku",
+        "next": "Prejsť na ďalšiu stránku",
+        "page": "Prejsť na stránku {{number}}"
+      },
+      "accessibility": {
+        "pagination": "Stránkovanie",
+        "currentPage": "Aktuálna stránka, stránka {{number}}",
+        "page": "Stránka {{number}}",
+        "previousPage": "Predchádzajúca stránka",
+        "nextPage": "Ďalšia stránka",
+        "firstPage": "Prvá stránka",
+        "lastPage": "Posledná stránka",
+        "morePages": "Dostupné viac strán"
+      }
+    },
+    "errors": {
+      "missingClerkKey": "Chýba Clerk Publishable Key",
+      "errorLoadingApp": "Chyba načítania aplikácie"
+    },
+    "redirect": {
+      "simulationTitle": "Simulácia presmerovania"
+    },
+    "ui": {
+      "close": "Zavrieť",
+      "more": "Viac",
+      "previousSlide": "Predchádzajúci snímok",
+      "nextSlide": "Ďalší snímok",
+      "toggleSidebar": "Prepínať bočné menu",
+      "goToPreviousPage": "Prejsť na predchádzajúcu stránku",
+      "goToNextPage": "Prejsť na ďalšiu stránku",
+      "carousel": {
+        "title": "Karusel",
+        "description": "Obrázkový karusel s navigačnými ovládacími prvkami",
+        "previousSlide": "Predchádzajúci snímok",
+        "nextSlide": "Ďalší snímok",
+        "currentSlide": "Aktuálny snímok",
+        "slide": "Snímok",
+        "of": "z",
+        "slideInfo": "Snímok {{current}} z {{total}}",
+        "goToSlide": "Prejsť na snímok {{number}}",
+        "autoplay": "Automatické prehrávanie",
+        "pauseAutoplay": "Pozastaviť automatické prehrávanie",
+        "resumeAutoplay": "Pokračovať v automatickom prehrávaní",
+        "stopAutoplay": "Zastaviť automatické prehrávanie",
+        "carouselNavigation": "Navigácia karuselu",
+        "carouselControls": "Ovládacie prvky karuselu",
+        "slideNavigation": "Navigácia snímkov",
+        "imageCarousel": "Obrázkový karusel",
+        "contentCarousel": "Obsahový karusel",
+        "gallery": "Galéria",
+        "photoGallery": "Fotogaléria",
+        "imageGallery": "Obrázková galéria",
+        "slideshow": "Prezentácia",
+        "presentation": "Prezentácia",
+        "showcase": "Výstava",
+        "browseImages": "Prehliadať obrázky",
+        "viewImages": "Zobraziť obrázky",
+        "navigateSlides": "Navigovať snímky",
+        "slideCount": "{{count}} snímkov",
+        "slideCountSingular": "{{count}} snímok",
+        "slideCountPlural": "{{count}} snímkov",
+        "accessibility": {
+          "carousel": "Karusel",
+          "slide": "Snímok",
+          "currentSlide": "Aktuálny snímok, snímok {{number}}",
+          "previousSlide": "Predchádzajúci snímok",
+          "nextSlide": "Ďalší snímok",
+          "goToSlide": "Prejsť na snímok {{number}}",
+          "slideCount": "Snímok {{current}} z {{total}}",
+          "carouselNavigation": "Navigačné ovládacie prvky karuselu",
+          "slideNavigation": "Navigačné ovládacie prvky snímkov",
+          "autoplayEnabled": "Automatické prehrávanie povolené",
+          "autoplayDisabled": "Automatické prehrávanie zakázané",
+          "autoplayPaused": "Automatické prehrávanie pozastavené",
+          "autoplayStopped": "Automatické prehrávanie zastavené"
+        }
+      },
+      "form": {
+        "title": "Formulár",
+        "description": "Formulár s validáciou a spracovaním chýb",
+        "label": "Označenie",
+        "placeholder": "Zástupný text",
+        "description": "Popis",
+        "error": "Chyba",
+        "success": "Úspech",
+        "warning": "Upozornenie",
+        "info": "Informácia",
+        "required": "Povinné",
+        "optional": "Voliteľné",
+        "submit": "Odoslať",
+        "cancel": "Zrušiť",
+        "save": "Uložiť",
+        "reset": "Resetovať",
+        "clear": "Vymazať",
+        "loading": "Načítava sa...",
+        "saving": "Ukladá sa...",
+        "submitting": "Odosiela sa...",
+        "validating": "Overuje sa...",
+        "accessibility": {
+          "form": "Formulár",
+          "field": "Pole formulára",
+          "required": "Povinné pole",
+          "optional": "Voliteľné pole",
+          "error": "Pole má chybu",
+          "success": "Pole je platné",
+          "warning": "Pole má upozornenie",
+          "description": "Popis poľa",
+          "label": "Označenie poľa"
+        },
+        "validation": {
+          "required": "Toto pole je povinné",
+          "invalid": "Toto pole je neplatné",
+          "minLength": "Musí mať aspoň {{min}} znakov",
+          "maxLength": "Musí mať maximálne {{max}} znakov",
+          "minValue": "Musí byť aspoň {{min}}",
+          "maxValue": "Musí byť maximálne {{max}}",
+          "pattern": "Musí zodpovedať požadovanému vzoru",
+          "email": "Musí byť platná e-mailová adresa",
+          "url": "Musí byť platná URL",
+          "phone": "Musí byť platné telefónne číslo",
+          "date": "Musí byť platný dátum",
+          "time": "Musí byť platný čas",
+          "number": "Musí byť platné číslo",
+          "integer": "Musí byť celé číslo",
+          "positive": "Musí byť kladné číslo",
+          "negative": "Musí byť záporné číslo",
+          "between": "Musí byť medzi {{min}} a {{max}}",
+          "oneOf": "Musí byť jedna z povolených hodnôt",
+          "custom": "Neplatná hodnota",
+          "unknown": "Neznáma chyba validácie"
+        },
+        "errors": {
+          "general": "Prosím, opravte chyby vo formulári",
+          "network": "Vyskytla sa chyba siete",
+          "server": "Vyskytla sa chyba servera",
+          "timeout": "Požiadavka vypršala",
+          "unauthorized": "Nie ste oprávnený vykonať túto akciu",
+          "forbidden": "Prístup zamietnutý",
+          "notFound": "Zdroj sa nenašiel",
+          "conflict": "Konflikt zdrojov",
+          "validation": "Validácia zlyhala",
+          "unknown": "Vyskytla sa neznáma chyba"
+        },
+        "messages": {
+          "saved": "Formulár úspešne uložený",
+          "submitted": "Formulár úspešne odoslaný",
+          "updated": "Formulár úspešne aktualizovaný",
+          "deleted": "Formulár úspešne vymazaný",
+          "created": "Formulár úspešne vytvorený",
+          "loaded": "Formulár úspešne načítaný",
+          "reset": "Formulár úspešne resetovaný",
+          "cleared": "Formulár úspešne vymazaný"
+        }
+      },
+      "breadcrumb": {
+        "title": "Navigácia breadcrumb",
+        "description": "Navigačný breadcrumb zobrazujúci aktuálnu polohu",
+        "separator": "Oddeľovač",
+        "ellipsis": "Viac",
+        "currentPage": "Aktuálna stránka",
+        "home": "Domov",
+        "back": "Späť",
+        "previous": "Predchádzajúca",
+        "next": "Ďalšia",
+        "navigation": "Navigácia",
+        "location": "Poloha",
+        "path": "Cesta",
+        "breadcrumb": "Breadcrumb",
+        "breadcrumbs": "Breadcrumbs",
+        "separatorText": "Oddeľovač",
+        "separatorDescription": "Oddeľovač medzi položkami breadcrumb",
+        "ellipsisText": "Viac položiek",
+        "ellipsisDescription": "Dostupné viac položiek breadcrumb",
+        "accessibility": {
+          "breadcrumb": "Navigácia breadcrumb",
+          "currentPage": "Aktuálna stránka",
+          "separator": "Oddeľovač",
+          "ellipsis": "Viac položiek",
+          "navigation": "Navigácia breadcrumb",
+          "location": "Aktuálna poloha",
+          "path": "Navigačná cesta",
+          "item": "Položka breadcrumb",
+          "link": "Odkaz breadcrumb",
+          "page": "Aktuálna stránka"
+        },
+        "separators": {
+          "chevron": "Chevron",
+          "slash": "Lomítko",
+          "arrow": "Šípka",
+          "greaterThan": "Väčšie ako",
+          "dash": "Pomlčka",
+          "dot": "Bodka",
+          "pipe": "Rúrka",
+          "default": "Predvolený oddeľovač"
+        },
+        "messages": {
+          "navigateTo": "Navigovať na {{item}}",
+          "currentLocation": "Aktuálna poloha: {{location}}",
+          "breadcrumbPath": "Cesta breadcrumb: {{path}}",
+          "moreItems": "Dostupné viac položiek",
+          "separatorBetween": "Oddeľovač medzi {{item1}} a {{item2}}"
+        }
+      }
+    },
+    "auth": {
+      "protectedApplication": "Chránená aplikácia",
+      "protectedApplicationDesc": "Táto aplikácia je chránená. Zadajte prosím heslo na prístup.",
+      "incorrectPassword": "Nesprávne heslo. Skúste to prosím znova.",
+      "password": "Heslo",
+      "enterPassword": "Zadajte svoje heslo",
+      "accessApplication": "Prístup k aplikácii"
+    },
+    "routeErrorBoundary": {
+      "code_1": "Kód chyby: ",
+      "reload_page_2": "Obnoviť stránku",
+      "technical_details_3": "Technické podrobnosti",
+      "pageNotFound": "Stránka sa nenašla",
+      "errorLoadingPage": "Chyba načítania stránky",
+      "pageNotFoundDescription": "Požadovaná stránka neexistuje alebo bola presunutá.",
+      "errorLoadingPageDescription": "Vyskytla sa chyba počas načítania tejto stránky.",
+      "unknownError": "Neznáma chyba",
+      "home": "Domov",
+      "errorDetails": "Podrobnosti chyby",
+      "errorLogging": "Podrobnosti zaznamenávania chyby",
+      "timestamp": "Časová značka",
+      "errorMessage": "Chybová správa",
+      "errorStatus": "Stav chyby",
+      "errorDetailsLabel": "Podrobnosti chyby",
+      "location": "Poloha",
+      "consoleLog": "Chyba zaznamenaná do konzoly",
+      "actions": {
+        "goHome": "Prejsť na domovskú stránku",
+        "reloadPage": "Obnoviť aktuálnu stránku",
+        "viewDetails": "Zobraziť technické podrobnosti",
+        "hideDetails": "Skryť technické podrobnosti"
+      },
+      "messages": {
+        "errorCaught": "Chyba zachytená RouteErrorBoundary",
+        "errorLogged": "Podrobnosti chyby boli zaznamenané",
+        "contactSupport": "Ak táto chyba pretrváva, kontaktujte prosím podporu"
+      }
+    },
+    "appName": "LegacyGuard",
+    "cancel": "Zrušiť",
+    "error": "Chyba",
+    "retry": "Skúsiť znova",
+    "goBack": "Ísť späť",
+    "goHome": "Prejsť na nástenku"
+  },
+  "annualReview": {
+    "title": "Ročný prehľad dedičstva",
+    "subtitle": "Udržujte plán ochrany vašej rodiny aktuálny a účinný",
+    "description": "Život sa rýchlo mení. Tento ročný prehľad zabezpečuje, že váš plán dedičstva zostáva v súlade s vašou súčasnou situáciou a želaniami.",
+    "progress": {
+      "title": "Pokrok prehľadu",
+      "completed": "Dokončené",
+      "inProgress": "Prebieha",
+      "notStarted": "Nezačaté",
+      "totalSteps": "Celkové kroky",
+      "estimatedTime": "Odhadovaný čas: 15 minút"
+    },
+    "step1": {
+      "title": "Prehľad vašich vykonávateľov",
+      "description": "Potvrďte, že vaši dôveryhodní ľudia sú stále správnymi voľbami pre vašu rodinu"
+    },
+    "step2": {
+      "title": "Prehľad vašich aktív",
+      "description": "Overte, že váš inventár aktív je aktuálny a úplný"
+    },
+    "step3": {
+      "title": "Prehľad vašich dedičov",
+      "description": "Zabezpečte, že vaši dedičia sú stále správnymi ľuďmi"
+    },
+    "step4": {
+      "title": "Dokončiť prehľad",
+      "description": "Dokončite váš ročný prehľad a aktualizujte váš plán"
+    },
+    "commandRoster": {
+      "title": "Prehľad veliteľského zoznamu",
+      "description": "Vaši vykonávatelia a dôveryhodní ľudia sú základom plánu ochrany vašej rodiny.",
+      "executorQuestion": "Je {name} stále správnou osobou na byť vaším vykonávateľom?",
+      "guardianQuestion": "Je {name} stále správnou osobou na starostlivosť o vaše deti?",
+      "trustedPersonQuestion": "Je {name} stále správnou osobou pre {role}?",
+      "status": {
+        "current": "Aktuálny",
+        "needsUpdate": "Vyžaduje aktualizáciu",
+        "outdated": "Zastaraný",
+        "missing": "Chýbajúci"
+      },
+      "details": {
+        "executor": "Primárny vykonávateľ pre váš majetok",
+        "guardian": "Opatrovník pre maloleté deti",
+        "trustedPerson": "Dôveryhodná osoba s prístupom {accessLevel}",
+        "emergencyContact": "Núdzový kontakt"
+      }
+    },
+    "armory": {
+      "title": "Prehľad inventára aktív",
+      "description": "Vaše aktíva sú to, čo chráňte. Udržujte tento inventár aktuálny.",
+      "ownershipQuestion": "Stále vlastníte {assetName}?",
+      "valueQuestion": "Zmenila sa hodnota {assetName} výrazne?",
+      "locationQuestion": "Je umiestnenie {assetName} stále správne?",
+      "status": {
+        "current": "Aktuálny",
+        "needsUpdate": "Vyžaduje aktualizáciu",
+        "outdated": "Zastaraný",
+        "missing": "Chýbajúci"
+      },
+      "categories": {
+        "realEstate": "Nehnuteľnosti",
+        "vehicles": "Vozidlá",
+        "bankAccounts": "Bankové účty",
+        "investments": "Investície",
+        "insurance": "Poistenie",
+        "digitalAssets": "Digitálne aktíva",
+        "personalItems": "Osobné predmety"
+      }
+    },
+    "beneficiaries": {
+      "title": "Prehľad dedičov",
+      "description": "Zabezpečte, aby správni ľudia dostali správne aktíva v správnom čase.",
+      "confirmationQuestion": "Sú toto stále správni ľudia na prijatie týchto aktív?",
+      "distributionQuestion": "Je percento distribúcie stále správne?",
+      "contactQuestion": "Sú kontaktné údaje pre {name} stále aktuálne?",
+      "status": {
+        "current": "Aktuálny",
+        "needsUpdate": "Vyžaduje aktualizáciu",
+        "outdated": "Zastaraný",
+        "missing": "Chýbajúci"
+      },
+      "details": {
+        "primary": "Primárny dedič",
+        "contingent": "Náhradný dedič",
+        "percentage": "{percentage}% aktív",
+        "specific": "Dedič konkrétneho aktíva"
+      }
+    },
+    "complete": {
+      "title": "Prehľad dokončený",
+      "description": "Váš ročný prehľad bol úspešne dokončený.",
+      "message": "Váš ročný prehľad bol dokončený. Plán ochrany vašej rodiny je teraz aktuálny a účinný.",
+      "summary": "Zhrnutie prehľadu",
+      "changes": "Vykonané zmeny",
+      "noChanges": "Neboli potrebné žiadne zmeny. Váš plán je aktuálny.",
+      "nextReview": "Ďalší prehľad splatný",
+      "reminder": "Pripomenieme vám, keď bude čas na váš ďalší ročný prehľad."
+    },
+    "buttons": {
+      "confirm": "Potvrdiť",
+      "update": "Aktualizovať",
+      "back": "Späť",
+      "next": "Ďalší",
+      "finish": "Dokončiť prehľad",
+      "save": "Uložiť zmeny",
+      "skip": "Preskočiť zatiaľ",
+      "reviewLater": "Prehľad neskôr"
+    },
+    "status": {
+      "title": "Stav prehľadu",
+      "overdue": "Po termíne",
+      "dueSoon": "Čoskoro splatný",
+      "current": "Aktuálny",
+      "completed": "Dokončený",
+      "lastReview": "Posledný prehľad",
+      "nextReview": "Ďalší prehľad",
+      "daysOverdue": "{days} dní po termíne",
+      "daysUntilDue": "{days} dní do splatnosti"
+    },
+    "notifications": {
+      "reviewDue": "Ročný prehľad splatný",
+      "reviewOverdue": "Ročný prehľad po termíne",
+      "reviewCompleted": "Ročný prehľad dokončený",
+      "changesSaved": "Zmeny úspešne uložené",
+      "errorSaving": "Chyba ukladania zmien",
+      "reminderSet": "Pripomenutie nastavené pre ďalší prehľad"
+    }
+  },
+  "complexityReduction": {
+    "title": "Zjednodušte svoje plánovanie dedičstva",
+    "subtitle": "Rozdeľte zložité úlohy na jednoduché, zvládnuteľné kroky",
+    "description": "Rozumieme, že plánovanie budúcnosti môže pôsobiť ohromujúco. Náš systém znižovania zložitosti rozdeľuje každú úlohu na jednoduché, akčné kroky, ktoré trvajú len minúty na dokončenie.",
+    "benefits": {
+      "title": "Prečo znižovanie zložitosti funguje",
+      "overwhelm": {
+        "title": "Eliminuje ohromenie",
+        "description": "Namiesto čelenia masívnemu zoznamu úloh riešite jednu malú úlohu naraz. Každý krok je navrhnutý na dokončenie za menej ako 5 minút."
+      },
+      "progress": {
+        "title": "Viditeľný pokrok",
+        "description": "Vidite, ako rastie pripravenosť vašej rodiny s každým dokončeným krokom. Sledujte svoj pokrok a oslavujte malé víťazstvá po ceste."
+      },
+      "confidence": {
+        "title": "Buduje dôveru",
+        "description": "Ako dokončujete každý krok, budete sa cítiť sebistočnejšie a pod kontrolou. To, čo sa kedysi zdalo nemožné, sa stáva dosiahnuteľným."
+      },
+      "family": {
+        "title": "Ochrana rodiny",
+        "description": "Každý dokončený krok priamo chráni vašu rodinu. Od núdzového prístupu po dlhodobé plánovanie, každá akcia záleží."
+      }
+    },
+    "steps": {
+      "identifyBankAccount": {
+        "title": "Identifikujte svoj hlavný bankový účet",
+        "why": "Prečo to záleží: Okamžitý prístup k finančným prostriedkom počas núdzových situácií",
+        "whatYouDo": "Čo robíte: Vyfotografujte alebo zapíšte informácie o účte",
+        "whatWeDo": "Čo robíme: Bezpečne uložíme informácie a vytvoríme prístupové pokyny",
+        "timeRequired": "Potrebný čas: 2 minúty",
+        "complexity": "Úroveň zložitosti: Jednoduché"
+      },
+      "emergencyContacts": {
+        "title": "Zoznam núdzových kontaktov",
+        "why": "Prečo to záleží: Rýchly prístup k dôležitým ľuďom počas kríz",
+        "whatYouDo": "Čo robíte: Pridajte telefónne čísla a vzťahy",
+        "whatWeDo": "Čo robíme: Zorganizujeme kontakty podľa priority a vytvoríme núdzové protokoly",
+        "timeRequired": "Potrebný čas: 3 minúty",
+        "complexity": "Úroveň zložitosti: Jednoduché"
+      },
+      "insurancePolicies": {
+        "title": "Dokumentujte poistné zmluvy",
+        "why": "Prečo to záleží: Zabezpečuje, že nároky môžu byť podané rýchlo a správne",
+        "whatYouDo": "Čo robíte: Nahrajte dokumenty zmlúv alebo vyfotografujte",
+        "whatWeDo": "Čo robíme: Extrahujeme kľúčové informácie a vytvoríme pokyny na nároky",
+        "timeRequired": "Potrebný čas: 5 minút",
+        "complexity": "Úroveň zložitosti: Ľahké"
+      },
+      "digitalAssets": {
+        "title": "Zabezpečte digitálne aktíva",
+        "why": "Prečo to záleží: Chráni online účty a digitálne spomienky",
+        "whatYouDo": "Čo robíte: Zoznam dôležitých účtov a hesiel",
+        "whatWeDo": "Čo robíme: Vytvoríme bezpečné prístupové protokoly a zálohovacie pokyny",
+        "timeRequired": "Potrebný čas: 4 minúty",
+        "complexity": "Úroveň zložitosti: Ľahké"
+      },
+      "legalDocuments": {
+        "title": "Zorganizujte právne dokumenty",
+        "why": "Prečo to záleží: Zabezpečuje, že právne želania sa dodržiavajú a procesy sú plynulé",
+        "whatYouDo": "Čo robíte: Nahrajte závety, splnomocnenia a iné dokumenty",
+        "whatWeDo": "Čo robíme: Vytvoríme zhrnutia a zabezpečíme správny právny prístup",
+        "timeRequired": "Potrebný čas: 6 minút",
+        "complexity": "Úroveň zložitosti: Stredné"
+      },
+      "familyInstructions": {
+        "title": "Napíšte rodinné pokyny",
+        "why": "Prečo to záleží: Poskytuje jasné usmernenie počas ťažkých časov",
+        "whatYouDo": "Čo robíte: Napíšte osobné správy a pokyny",
+        "whatWeDo": "Čo robíme: Zorganizujeme správy a vytvoríme harmonogramy doručenia",
+        "timeRequired": "Potrebný čas: 8 minút",
+        "complexity": "Úroveň zložitosti: Stredné"
+      }
+    },
+    "actions": {
+      "startThisStep": "Začať tento krok",
+      "showMeHow": "Ukážte mi ako",
+      "iNeedHelp": "Potrebujem pomoc",
+      "nextStep": "Ďalší krok",
+      "previousStep": "Predchádzajúci krok",
+      "completeStep": "Označiť ako dokončené",
+      "skipStep": "Preskočiť zatiaľ"
+    },
+    "progress": {
+      "title": "Váš pokrok",
+      "completed": "Dokončené",
+      "inProgress": "Prebieha",
+      "notStarted": "Nezačaté",
+      "totalSteps": "Celkové kroky",
+      "estimatedTime": "Odhadovaný zostávajúci čas"
+    },
+    "features": {
+      "title": "Ako funguje znižovanie zložitosti",
+      "stepByStep": {
+        "title": "Pokyny krok za krokom",
+        "description": "Každá úloha je rozdelená na jasné, jednoduché pokyny, ktoré môže ktokoľvek nasledovať."
+      },
+      "timeEstimation": {
+        "title": "Presné odhady času",
+        "description": "Vedzte presne, ako dlho bude trvať každý krok, od 2 minút do 15 minút maximum."
+      },
+      "difficultyLevels": {
+        "title": "Jasné úrovne obtiažnosti",
+        "description": "Jednoduché, Ľahké, Stredné a Zložité hodnotenia vám pomôžu vybrať, čo riešiť ako prvé."
+      },
+      "progressTracking": {
+        "title": "Sledovanie pokroku",
+        "description": "Vidite, ako rastie pripravenosť vašej rodiny s každým dokončeným krokom."
+      },
+      "helpAvailable": {
+        "title": "Pomoc, keď ju potrebujete",
+        "description": "Získajte pomoc, vysvetlenia a podporu pre akýkoľvek krok, ktorý sa zdá náročný."
+      }
+    }
+  },
+  "createTimeCapsuleModal": {
+    "title": "Vytvoriť časovú kapsulu",
+    "titleCreate": "Vytvoriť časovú kapsulu",
+    "titleEdit": "Upraviť časovú kapsulu",
+    "description": "Vytvorte správu, ktorá bude doručená vašim blízkym v budúcnosti.",
+    "errors": {
+      "noTitle": "Prosím, zadajte názov pre vašu časovú kapsulu.",
+      "noRecipients": "Prosím, vyberte aspoň jedného príjemcu.",
+      "noUnlockDate": "Prosím, vyberte dátum odomknutia.",
+      "noMessage": "Prosím, zadajte vašu správu.",
+      "noFile": "Prosím, nahrajte súbor.",
+      "updateFailed": "Nepodarilo sa aktualizovať časovú kapsulu.",
+      "saveFailed": "Nepodarilo sa uložiť časovú kapsulu.",
+      "fileTooLarge": "Veľkosť súboru musí byť menšia ako 50MB.",
+      "invalidFileType": "Neplatný typ súboru pre {{messageType}}."
+    },
+    "success": {
+      "updated": "Časová kapsula aktualizovaná!",
+      "created": "Časová kapsula vytvorená!"
+    },
+    "labels": {
+      "title": "Názov",
+      "messageType": "Typ správy",
+      "recipients": "Príjemcovia",
+      "deliveryQuestion": "Kedy by mala byť táto správa doručená?",
+      "unlockDate": "Dátum odomknutia",
+      "yourMessage": "Vaša správa",
+      "uploadFile": "Nahrať {{messageType}}"
+    },
+    "placeholders": {
+      "title": "napr. Pre vaše 18. narodeniny",
+      "message": "Napíšte svoju srdečnú správu tu...",
+      "selectDate": "Vybrať dátum"
+    },
+    "messageTypes": {
+      "text": "Textová správa",
+      "photo": "Fotografia",
+      "video": "Video",
+      "audio": "Zvuk"
+    },
+    "recipients": {
+      "noTrustedPeople": "Zatiaľ ste nepridali žiadnych dôveryhodných ľudí. Pridajte ich najprv z vašej nástenky.",
+      "selected": "Vybrané"
+    },
+    "unlockConditions": {
+      "onDate": "V konkrétny dátum",
+      "afterPassing": "Po mojej smrti"
+    },
+    "fileUpload": {
+      "clickToUpload": "Kliknite na nahranie",
+      "dragAndDrop": " alebo potiahnite a položte",
+      "maxSize": "Maximálna veľkosť súboru: 50MB",
+      "fileSizeMB": "{{size}} MB"
+    },
+    "premium": {
+      "videoMessage": "Videoprávy sú prémiová funkcia.",
+      "upgradeNow": "Inovovať teraz"
+    },
+    "buttons": {
+      "recordVideo": "Nahrať videoprávu",
+      "cancel": "Zrušiť",
+      "saving": "Ukladá sa...",
+      "update": "Aktualizovať časovú kapsulu",
+      "create": "Vytvoriť časovú kapsulu"
+    },
+    "characterCount": "{{count}}/{{max}} znakov"
+  },
+  "dataTransparency": {
+    "loadingMessage": "Načítavajú sa informácie o transparentnosti vašich údajov...",
+    "loadingError": "Nepodarilo sa načítať údaje o transparentnosti. Skúste to prosím neskôr.",
+    "title": "Vaše údaje, vaša kontrola",
+    "description": "Veríme v úplnú transparentnosť. Tu je presne, ako spravujeme vaše informácie.",
+    "dataFlow": {
+      "whereDataLives": "Kde žijú vaše údaje",
+      "collection": "Zber",
+      "storage": "Uloženie",
+      "processing": "Spracovanie",
+      "sharing": "Zdieľanie"
+    },
+    "recentActivity": {
+      "title": "Nedávna aktivita",
+      "premiumTitle": "Odomknite svoj trvalý záznam sledovania",
+      "premiumText": "Váš 30-dňový prevádzkový záznam poskytuje základnú bezpečnosť. Pre maximálnu zodpovednosť a pokoj mysle inovujte na Command Package na udržanie úplného, nezmeniteľného záznamu auditu každej akcie vykonanej vo vašom trezore, navždy."
+    },
+    "dataOwnership": {
+      "title": "Vlastníctvo údajov",
+      "description": "Vy vlastníte svoje údaje, vždy. Môžete si stiahnuť úplnú kópiu kedykoľvek.",
+      "downloadButton": "Stiahnuť môj archív údajov"
+    }
+  },
+  "editStoryModal": {
+    "editStory": "Upraviť príbeh",
+    "addStory": "Pridať príbeh",
+    "description": "Zdieľajte príbeh za \"{{assetName}}\". Tento osobný dotyk bude neoceniteľný pre vašich blízkych.",
+    "fields": {
+      "yourStory": "Váš príbeh"
+    },
+    "placeholders": {
+      "story": "napr. Toto bol snubný prsteň vašej babičky, daný jej v roku 1952, keď sa vydala za vášho dedka v malom kostole v ich rodnom meste. Nosila ho každý deň 65 rokov..."
+    },
+    "hints": {
+      "shareMemories": "Zdieľajte spomienky, význam alebo históriu"
+    },
+    "tips": {
+      "title": "Tipy pre zmysluplný príbeh:",
+      "explainSpecial": "Vysvetlite, prečo je tento predmet pre vás špeciálny",
+      "shareMemories": "Zdieľajte spomienky spojené s ním",
+      "describeHistory": "Opíšte jeho históriu alebo ako ste ho získali",
+      "mentionWishes": "Spomeňte akékoľvek želania pre to, ako by sa mal používať alebo uchovávať"
+    },
+    "saving": "Ukladá sa...",
+    "saveStory": "Uložiť príbeh",
+    "messages": {
+      "saved": "Príbeh úspešne uložený"
+    },
+    "errors": {
+      "notAuthenticated": "Pre uloženie príbehu musíte byť prihlásený",
+      "saveFailed": "Nepodarilo sa uložiť príbeh"
+    }
+  },
+  "dynamicAssetForm": {
+    "propertyAddress": "Adresa nehnuteľnosti",
+    "purchaseDate": "Dátum kúpy",
+    "purchasePrice": "Kúpna cena",
+    "currentEstimatedValue": "Aktuálna odhadovaná hodnota",
+    "mortgageInformation": "Informácie o hypotéke",
+    "locationOfPropertyDocuments": "Umiestnenie dokumentov o nehnuteľnosti",
+    "locationAddress": "Umiestnenie / Adresa",
+    "size": "Veľkosť (akre/m²)",
+    "zoningType": "Typ územného plánovania",
+    "currentUse": "Aktuálne použitie",
+    "bankName": "Názov banky",
+    "accountType": "Typ účtu",
+    "selectAccountType": "Vybrať typ účtu",
+    "checking": "Bežný",
+    "savings": "Sporiaci",
+    "moneyMarket": "Peňažný trh",
+    "certificateOfDeposit": "Vkladový certifikát",
+    "accountHolderName": "Meno držiteľa účtu",
+    "accountNumberLast4": "Číslo účtu (posledné 4 číslice)",
+    "routingNumber": "Smerovacie číslo",
+    "brokerageFirm": "Maklérska spoločnosť",
+    "accountNumber": "Číslo účtu",
+    "individual": "Individuálny",
+    "joint": "Spoločný",
+    "ira": "IRA",
+    "rothIra": "Roth IRA",
+    "401k": "401(k)",
+    "approximateValue": "Približná hodnota",
+    "financialAdvisor": "Finančný poradca (ak existuje)",
+    "walletNameLabel": "Názov/označenie peňaženky",
+    "walletType": "Typ peňaženky",
+    "selectWalletType": "Vybrať typ peňaženky",
+    "hardwareWallet": "Hardvérová peňaženka",
+    "softwareWallet": "Softvérová peňaženka",
+    "exchangeWallet": "Burzová peňaženka",
+    "paperWallet": "Papierová peňaženka",
+    "cryptocurrenciesHeld": "Držané kryptomeny",
+    "locationOfSeedPhrase": "Umiestnenie seed frázy/súkromných kľúčov",
+    "exchangeInformation": "Informácie o burze (ak sa vzťahuje)",
+    "makeAndModel": "Značka a model",
+    "year": "Rok",
+    "vinNumber": "VIN číslo",
+    "licensePlate": "Štátna poznávacia značka",
+    "loanInformation": "Informácie o pôžičke (ak existuje)",
+    "locationOfTitle": "Umiestnenie listu vlastníctva",
+    "platformWebsiteName": "Názov platformy/webovej stránky",
+    "accountEmail": "E-mail účtu/používateľské meno",
+    "accountPurpose": "Účel účtu/popis",
+    "recoveryInformation": "Informácie o obnovení",
+    "faMethod": "Metóda 2FA (ak je povolená)",
+    "itemDescription": "Popis položky",
+    "appraisedValue": "Odhadená hodnota",
+    "lastAppraisalDate": "Dátum posledného odhadu",
+    "storageLocation": "Umiestnenie skladovania",
+    "insuranceInformation": "Informácie o poistení",
+    "sentimentalValue": "Sentimentálna hodnota/história",
+    "assetName": "Názov aktíva",
+    "estimatedValue": "Odhadovaná hodnota",
+    "description": "Popis",
+    "locationAccessInformation": "Umiestnenie/Informácie o prístupe",
+    "addSubType": "Pridať {subType}",
+    "cancel": "Zrušiť",
+    "saveAsset": "Uložiť aktívum",
+    "placeholders": {
+      "123_main_st_city_state_zip_1": "123 Hlavná ul., Mesto, Štát, PSČ",
+      "lender_name_account_number_rem_2": "Názov veriteľa, číslo účtu, zostávajúci zostatok",
+      "e_g_safe_deposit_box_filing_ca_3": "napr. Bezpečnostná schránka, kartotéka",
+      "property_location_or_parcel_nu_4": "Umiestnenie nehnuteľnosti alebo číslo parcely",
+      "e_g_10_acres_5": "napr. 10 akrov, 5 000 m²",
+      "e_g_commercial_agricultural_6": "napr. Komerčné, Poľnohospodárske, Rezidenčné",
+      "describe_current_use_of_the_pr_7": "Opíšte aktuálne použitie nehnuteľnosti",
+      "e_g_chase_bank_8": "napr. Chase Bank, Wells Fargo",
+      "john_doe_9": "Ján Vážny",
+      "1234_10": "1234",
+      "e_g_fidelity_vanguard_11": "napr. Fidelity, Vanguard, Charles Schwab",
+      "account_number_12": "Číslo účtu",
+      "name_and_contact_information_13": "Meno a kontaktné informácie",
+      "e_g_main_bitcoin_wallet_14": "napr. Hlavná Bitcoin peňaženka",
+      "e_g_bitcoin_ethereum_15": "napr. Bitcoin, Ethereum, Litecoin",
+      "do_not_enter_the_actual_seed_p_16": "Nezadávajte tu skutočnú seed frázu",
+      "exchange_name_and_account_emai_17": "Názov burzy a e-mail účtu",
+      "e_g_toyota_camry_18": "napr. Toyota Camry, Honda Civic",
+      "vehicle_identification_number_19": "Identifikačné číslo vozidla",
+      "lender_account_number_payoff_a_20": "Veriteľ, číslo účtu, suma na splatenie",
+      "e_g_safe_deposit_box_21": "napr. Bezpečnostná schránka, domáci trezor",
+      "e_g_gmail_facebook_22": "napr. Gmail, Facebook, LinkedIn",
+      "user_example_com_23": "pouzivatel@priklad.sk",
+      "what_this_account_is_used_for_24": "Na čo sa tento účet používa",
+      "recovery_email_phone_or_securi_25": "E-mail na obnovenie, telefón alebo bezpečnostné otázky",
+      "e_g_sms_to_phone_ending_in_123_26": "napr. SMS na telefón končiaci na 123",
+      "e_g_diamond_engagement_ring_27": "napr. Diamantový snubný prsteň, zlatý náhrdelník",
+      "e_g_home_safe_bank_deposit_box_28": "napr. Domáci trezor, banková schránka",
+      "policy_number_and_company_29": "Číslo zmluvy a spoločnosť",
+      "special_meaning_or_history_of__30": "Špeciálny význam alebo história tejto položky",
+      "name_or_description_of_asset_31": "Názov alebo popis aktíva",
+      "detailed_description_of_the_as_32": "Podrobný popis aktíva",
+      "where_to_find_this_asset_or_ho_33": "Kde nájsť toto aktívum alebo ako k nemu pristúpiť"
+    }
+  },
+  "documentUploader": {
+    "smart_document_upload_2": "Inteligentné nahranie dokumentu",
+    "upload_any_document_and_our_ai_3": "Nahrajte akýkoľvek dokument a náš AI ho automaticky klasifikuje pre vás",
+    "please_upload_an_image_or_pdf__1": "Prosím, nahrajte obrázok alebo PDF súbor",
+    "image_application_pdf_4": "image/*,application/pdf",
+    "0_0_48_48_5": "0 0 48 48",
+    "m24_12v12m0_0l_4_4m4_4l4_4m10__6": "M24 12v12m0 0l-4 4m4-4l4 4m10-6",
+    "drop_your_document_here_or_cli_7": "Položte sem svoj dokument alebo kliknite na prehliadanie",
+    "supports_images_and_pdfs_up_to_8": "Podporuje obrázky a PDF súbory do 10MB",
+    "document_analysis_complete_10": "Analýza dokumentu dokončená",
+    "document_type_11": "Typ dokumentu",
+    "suggested_title_12": "Navrhovaný názov",
+    "confidence": "Dôvera",
+    "ai_analysis_13": "AI analýza",
+    "continue_with_this_classificat_14": "Pokračovať s touto klasifikáciou",
+    "change_category_15": "Zmeniť kategóriu",
+    "documents_we_can_process_16": "Dokumenty, ktoré môžeme spracovať:",
+    "insurance_policies_life_health_17": "Poistné zmluvy (život, zdravie, dom, auto)",
+    "property_deeds_and_titles_18": "Listy vlastníctva a tituly",
+    "vehicle_ownership_documents_19": "Dokumenty o vlastníctve vozidiel",
+    "bank_and_investment_statements_20": "Bankové a investičné výpisy",
+    "wills_and_estate_planning_docu_21": "Závety a dokumenty plánovania majetku",
+    "business_contracts_and_ownersh_22": "Obchodné zmluvy a dokumenty o vlastníctve",
+    "personal_identification_docume_23": "Osobné identifikačné dokumenty",
+    "tax_returns_and_documents_24": "Daňové priznania a dokumenty",
+    "categoryDescriptions": {
+      "insurance_policy": "Život, zdravie, dom, auto alebo invalidné poistenie",
+      "property_deed": "Dokumenty o vlastníctve nehnuteľností a listy vlastníctva",
+      "vehicle_title": "Dokumenty o vlastníctve áut, lodí alebo iných vozidiel",
+      "bank_statement": "Výpisy z bankových účtov a dokumenty",
+      "investment_statement": "Výpisy z investičných a dôchodkových účtov",
+      "will_or_trust": "Závety, trusty a dokumenty plánovania majetku",
+      "business_document": "Vlastníctvo podniku a dôležité zmluvy",
+      "personal_id": "Pasy, preukazy, rodné listy",
+      "tax_document": "Daňové priznania a súvisiace dokumenty",
+      "medical_document": "Lekárske záznamy a pokyny zdravotnej starostlivosti",
+      "other": "Iné dôležité dokumenty"
+    },
+    "errors": {
+      "fileTypeError": "Prosím, nahrajte obrázok alebo PDF súbor",
+      "processingError": "Nepodarilo sa spracovať dokument",
+      "uploadError": "Nepodarilo sa nahrať dokument",
+      "classificationError": "Nepodarilo sa klasifikovať dokument"
+    }
+  },
+  "executorManagement": {
+    "failed_to_load_executors_2": "Nepodarilo sa načítať vykonávateľov",
+    "user_not_found_with_this_email_3": "Používateľ s týmto e-mailom sa nenašiel",
+    "this_person_is_already_designa_4": "Táto osoba je už určená ako vykonávateľ",
+    "failed_to_add_executor_5": "Nepodarilo sa pridať vykonávateľa",
+    "failed_to_remove_executor_6": "Nepodarilo sa odstrániť vykonávateľa",
+    "loading_executors_7": "Načítavajú sa vykonávatelia...",
+    "executor_management_8": "Správa vykonávateľov",
+    "designate_trusted_individuals__9": "Určte dôveryhodných jednotlivcov, ktorí pomôžu spravovať vaše záležitosti a podporiť vašich blízkych",
+    "add_new_executor_10": "Pridať nového vykonávateľa",
+    "email_address_11": "E-mailová adresa",
+    "executor_example_com_12": "vykonavatel@priklad.sk",
+    "relationship_type_13": "Typ vzťahu",
+    "primary_executor_14": "Primárny vykonávateľ",
+    "secondary_executor_15": "Sekundárny vykonávateľ",
+    "emergency_contact_16": "Núdzový kontakt",
+    "current_executors_17": "Aktuálni vykonávatelia",
+    "no_executors_designated_yet_ad_18": "Zatiaľ nie sú určení žiadni vykonávatelia. Pridajte niekoho, komu dôverujete, aby pomohol spravovať vaše záležitosti.",
+    "important_information_19": "Dôležité informácie",
+    "primary_executors_receive_imme_20": "Primárni vykonávatelia dostanú okamžitý prístup k vášmu trezoru, keď je potrebný",
+    "secondary_executors_are_notifi_21": "Sekundárni vykonávatelia sú upozornení, ale majú obmedzený prístup",
+    "emergency_contacts_are_notifie_22": "Núdzové kontakty sú upozornené len v naliehavých situáciách",
+    "all_executors_must_have_legacy_23": "Všetci vykonávatelia musia mať LegacyGuard účty na prístup k vašim informáciám",
+    "successMessages": {
+      "executorAdded": "Vykonávateľ úspešne pridaný",
+      "executorRemoved": "Vykonávateľ úspešne odstránený"
+    },
+    "validationMessages": {
+      "emailRequired": "E-mailová adresa je povinná",
+      "invalidEmail": "Prosím, zadajte platnú e-mailovú adresu",
+      "relationshipTypeRequired": "Typ vzťahu je povinný"
+    },
+    "statusLabels": {
+      "adding": "Pridáva sa...",
+      "addExecutor": "Pridať vykonávateľa",
+      "unknownUser": "Neznámy používateľ"
+    }
+  },
+  "emotionalContextSystem": {
+    "emotional_support_1": "Emocionálna podpora",
+    "advice_2": "Rada: ",
+    "motivation_3": "Motivácia: ",
+    "next_steps_4": "Ďalšie kroky: ",
+    "contextResponses": {
+      "lowConfidence": {
+        "primaryMessage": "Riešite túto situáciu s opatrnosťou a vhľadom.",
+        "supportingMessage": "Ukazuje to, že rozumiete dôležitosti úlohy.",
+        "actionableAdvice": "Pokračujte vlastným pohodlným tempom.",
+        "motivationalElement": "Váš premyslený prístup je svedectvom vašich hodnôt.",
+        "nextStepGuidance": "Keď budete pripravení, pokračujte s ďalším dôležitým krokom na zabezpečenie budúcnosti vašej rodiny."
+      },
+      "highOverwhelm": {
+        "primaryMessage": "Vaša oddanosť vašej rodine je chvályhodná.",
+        "supportingMessage": "Je v poriadku vziať si chvíľku na zotavenie.",
+        "actionableAdvice": "Zvážte rozdelenie úlohy na menšie časti pre sústredenie.",
+        "motivationalElement": "Vedieť, že ste poháňaní láskou a starostlivosťou.",
+        "nextStepGuidance": "Každá malá akcia, ktorú urobíte, má významný vplyv."
+      },
+      "default": {
+        "primaryMessage": "Robíte zmysluplnú prácu.",
+        "supportingMessage": "Toto úsilie posilňuje základ vašej rodiny.",
+        "actionableAdvice": "Zostaňte oddaní svojmu plánu.",
+        "motivationalElement": "Každé rozhodnutie, ktoré urobíte, chráni vašich blízkych.",
+        "nextStepGuidance": "Videnie celkového obrazu vás povedie k ďalším krokom."
+      }
+    },
+    "emotionalStates": {
+      "confidence": {
+        "high": "Vysoká",
+        "medium": "Stredná",
+        "low": "Nízka"
+      },
+      "motivation": {
+        "high": "Vysoká",
+        "medium": "Stredná",
+        "low": "Nízka"
+      },
+      "overwhelm": {
+        "none": "Žiadna",
+        "slight": "Mierna",
+        "moderate": "Stredná",
+        "high": "Vysoká"
+      },
+      "urgency": {
+        "relaxed": "Uvoľnený",
+        "focused": "Sústredený",
+        "pressed": "Pod tlakom",
+        "stressed": "Vystresovaný"
+      }
+    }
+  },
+  "microTaskGenerator": {
+    "minutes_1": " minút • ",
+    "family_impact_2": " rodinný vplyv",
+    "start_task_3": "Začať úlohu",
+    "complete_task_4": "Dokončiť úlohu",
+    "skip_for_now_5": "Preskočiť zatiaľ",
+    "taskCategories": {
+      "identification": "Identifikačné dokumenty",
+      "financial": "Finančné informácie",
+      "healthcare": "Zdravotnícke dokumenty",
+      "legal": "Právne dokumenty",
+      "digital": "Digitálne aktíva",
+      "personal": "Osobné informácie"
+    },
+    "difficultyLevels": {
+      "trivial": "Triviálne",
+      "easy": "Ľahké",
+      "simple": "Jednoduché"
+    },
+    "familyImpactLevels": {
+      "high": "Vysoký",
+      "medium": "Stredný",
+      "low": "Nízky"
+    },
+    "taskStatus": {
+      "available": "Dostupné",
+      "in_progress": "Prebieha",
+      "completed": "Dokončené",
+      "skipped": "Preskočené"
+    },
+    "tasks": {
+      "driversLicense": {
+        "title": "Vyfotografujte svoj vodičský preukaz",
+        "description": "Vaša rodina bude potrebovať toto pre právne a finančné záležitosti. Mať jasnú fotografiu im ušetrí čas a stres.",
+        "completionMessage": "Vaša rodina má teraz prístup k kritickým informáciám o ID."
+      },
+      "passport": {
+        "title": "Vyfotografujte svoj pas",
+        "description": "Nevyhnutné pre medzinárodné cestovné zariadenia a právnu identifikáciu.",
+        "completionMessage": "Medzinárodná cestovná dokumentácia je teraz zabezpečená pre vašu rodinu."
+      },
+      "birthCertificate": {
+        "title": "Naskenujte svoj rodný list",
+        "description": "Vyžadované pre mnohé právne procesy a dokumentáciu rodinnej histórie.",
+        "completionMessage": "Rodný list je teraz digitálne zachovaný pre budúce potreby."
+      },
+      "socialSecurityCard": {
+        "title": "Dokumentujte svoju kartu sociálneho zabezpečenia",
+        "description": "Kritické pre dávky a právne identifikačné procesy.",
+        "completionMessage": "Informácie o sociálnom zabezpečení sú teraz bezpečne dokumentované."
+      },
+      "bankAccounts": {
+        "title": "Zoznam vašich bankových účtov",
+        "description": "Pomôžte vašej rodine spravovať financie a pristúpiť k finančným prostriedkom, keď je potrebné.",
+        "completionMessage": "Informácie o bankovom účte sú teraz zorganizované pre vašu rodinu."
+      },
+      "insurancePolicies": {
+        "title": "Zostavte podrobnosti o poistných zmluvách",
+        "description": "Zabezpečuje, že vaša rodina vie o všetkom krytí a môže podať nároky.",
+        "completionMessage": "Informácie o poistení sú teraz komplexné a dostupné."
+      },
+      "medicalRecords": {
+        "title": "Zorganizujte lekárskej histórie",
+        "description": "Pomôžte poskytovateľom zdravotnej starostlivosti pochopiť vašu lekárskej históriu.",
+        "completionMessage": "Lekárskej histórie je teraz zorganizovaná pre lepšie rozhodnutia o zdravotnej starostlivosti."
+      },
+      "medications": {
+        "title": "Zoznam aktuálnych liekov",
+        "description": "Kritické pre lekárske núdzové situácie a pokračujúcu starostlivosť.",
+        "completionMessage": "Zoznam liekov je teraz dostupný pre lekárov."
+      },
+      "will": {
+        "title": "Vytvorte alebo aktualizujte svoj závet",
+        "description": "Zabezpečuje, že vaše želania sú jasne dokumentované a právne záväzné.",
+        "completionMessage": "Váš závet je teraz aktuálny a právne chránený."
+      },
+      "powerOfAttorney": {
+        "title": "Určte splnomocnenie",
+        "description": "Autorizujte dôveryhodných jednotlivcov na rozhodovanie vaším menom.",
+        "completionMessage": "Splnomocnenie je teraz správne určené."
+      },
+      "digitalPasswords": {
+        "title": "Zabezpečte digitálny zoznam hesiel",
+        "description": "Pomôžte rodine pristúpiť k dôležitým online účtom a službám.",
+        "completionMessage": "Digitálny prístup je teraz bezpečne zorganizovaný pre vašu rodinu."
+      },
+      "socialMedia": {
+        "title": "Naplánujte účty na sociálnych sieťach",
+        "description": "Rozhodnite, ako by sa malo zaobchádzať s vašou online prítomnosťou.",
+        "completionMessage": "Digitálne dedičstvo na sociálnych sieťach je teraz naplánované a dokumentované."
+      }
+    },
+    "sessionStats": {
+      "tasksCompleted": "Dokončené úlohy",
+      "totalTimeSpent": "Celkový strávený čas",
+      "momentumScore": "Skóre hybnosti",
+      "nextRecommendedTask": "Ďalšia odporúčaná úloha"
+    },
+    "scoring": {
+      "urgency": "Naliehavosť",
+      "impact": "Vplyv",
+      "ease": "Jednoduchosť",
+      "momentum": "Hybnosť"
+    }
+  },
+  "settings": {
+    "title": "Nastavenia",
+    "subtitle": "Spravujte predvoľby svojho účtu a nastavenia zabezpečenia",
+    "loading": "Načítavajú sa nastavenia vášho účtu...",
+    "profile": {
+      "title": "Informácie o profile",
+      "description": "Aktualizujte svoje osobné informácie a predvoľby",
+      "emailAddress": "E-mailová adresa",
+      "emailCannotBeChanged": "Vaša e-mailová adresa sa nedá zmeniť",
+      "firstName": "Meno",
+      "firstNamePlaceholder": "Zadajte svoje meno",
+      "lastName": "Priezvisko",
+      "lastNamePlaceholder": "Zadajte svoje priezvisko",
+      "saving": "Ukladá sa...",
+      "saveChanges": "Uložiť zmeny"
+    },
+    "security": {
+      "title": "Zabezpečenie",
+      "description": "Spravujte zabezpečenie a prístup k svojmu účtu",
+      "changePassword": "Zmeniť heslo",
+      "currentPassword": "Súčasné heslo",
+      "currentPasswordPlaceholder": "Zadajte súčasné heslo",
+      "newPassword": "Nové heslo",
+      "newPasswordPlaceholder": "Zadajte nové heslo",
+      "confirmNewPassword": "Potvrďte nové heslo",
+      "confirmNewPasswordPlaceholder": "Potvrďte nové heslo",
+      "updating": "Aktualizuje sa...",
+      "updatePassword": "Aktualizovať heslo",
+      "twoFactorAuth": "Dvojfaktorové overenie",
+      "enable2FA": "Povoliť 2FA",
+      "2FADescription": "Pridajte ďalšiu vrstvu zabezpečenia k svojmu účtu. (Čoskoro)"
+    },
+    "accountManagement": {
+      "title": "Správa účtu",
+      "description": "Trvalé akcie s účtom - postupujte prosím s opatrnosťou",
+      "deleteAccountTitle": "Zmazať účet",
+      "deleteAccountWarning": "Táto akcia je nezvratná a natrvalo odstráni všetky vaše údaje, vrátane nahraných dokumentov a pripravených pokynov. Informácie o vašom digitálnom dedičstve budú úplne odstránené z našich systémov.",
+      "deleteMyAccount": "Zmazať môj účet",
+      "confirmTitle": "Ste si úplne istý?",
+      "confirmDescription": "Túto akciu nemožno vrátiť späť. Týmto sa natrvalo odstráni váš účet a všetky vaše údaje z našich serverov.",
+      "confirmEmailPrompt": "Prosím, zadajte svoju e-mailovú adresu {{email}} pre potvrdenie:",
+      "emailPlaceholder": "Zadajte svoju e-mailovú adresu",
+      "deleting": "Odstraňuje sa...",
+      "deleteAccount": "Zmazať účet"
+    },
+    "errors": {
+      "loadProfile": "Nepodarilo sa načítať informácie o profile",
+      "updateProfile": "Nepodarilo sa aktualizovať profil",
+      "passwordFieldsRequired": "Prosím, vyplňte všetky polia pre heslo",
+      "passwordsDoNotMatch": "Nové heslá sa nezhodujú",
+      "passwordTooShort": "Nové heslo musí mať aspoň 6 znakov",
+      "updatePassword": "Nepodarilo sa aktualizovať heslo",
+      "emailDoesNotMatch": "E-mailová adresa sa nezhoduje",
+      "deleteAccountSupport": "Zmazanie účtu je potrebné vyžiadať prostredníctvom podpory. Prosím, kontaktujte nás pre pomoc.",
+      "deleteAccount": "Nepodarilo sa zmazať účet"
+    },
+    "success": {
+      "profileUpdated": "Profil úspešne aktualizovaný",
+      "passwordUpdated": "Heslo úspešne aktualizované"
+    }
+  },
+  "assetType": {
+    "selectType": "Vybrať typ {{mainCategory}}",
+    "primaryResidence": "Hlavné bydlisko",
+    "vacationHome": "Rekreačný dom",
+    "rentalProperty": "Nájomná nehnuteľnosť",
+    "land": "Pozemok",
+    "commercialProperty": "Komerčná nehnuteľnosť",
+    "bankAccount": "Bankový účet",
+    "investmentPortfolio": "Investičné portfólio",
+    "cryptocurrencyWallet": "Peňaženka s kryptomenami",
+    "loanMortgage": "Pôžička / Hypotéka",
+    "insurancePolicy": "Poistná zmluva",
+    "pensionRetirement": "Dôchodok / Dôchodkové zabezpečenie",
+    "car": "Auto",
+    "motorcycle": "Motorka",
+    "boat": "Loď",
+    "rvCamper": "Karavan / Kemping",
+    "aircraft": "Lietadlo",
+    "onlineAccount": "Online účet",
+    "softwareLicense": "Softvérová licencia",
+    "domainName": "Názov domény",
+    "digitalSubscription": "Digitálne predplatné",
+    "cryptocurrency": "Kryptomena",
+    "nft": "NFT",
+    "jewelry": "Šperky",
+    "artCollectibles": "Umenie / Zberateľské predmety",
+    "electronics": "Elektronika",
+    "furniture": "Nábytok",
+    "toolsEquipment": "Nástroje / Vybavenie",
+    "otherValuables": "Iné cennosti",
+    "customAsset": "Vlastné aktívum"
+  },
+  "beneficiaryCommunications": {
+    "title": "Komunikácia s dedičmi",
+    "description": "Sledujte všetku komunikáciu s dedičmi",
+    "logCommunication": "Zaznamenať komunikáciu",
+    "logAction": "Zaznamenaná komunikácia s {name}",
+    "dialog": {
+      "title": "Zaznamenať komunikáciu",
+      "description": "Zaznamenajte podrobnosti vašej komunikácie s dedičom"
+    },
+    "fields": {
+      "beneficiaryName": "Meno dediča",
+      "email": "E-mail",
+      "type": "Typ",
+      "date": "Dátum",
+      "subject": "Predmet",
+      "summary": "Zhrnutie"
+    },
+    "placeholders": {
+      "subject": "Stručný predmet komunikácie",
+      "summary": "Podrobné zhrnutie toho, o čom sa diskutovalo"
+    },
+    "types": {
+      "email": "E-mail",
+      "phone": "Telefón",
+      "letter": "List",
+      "inPerson": "Osobne",
+      "in_person": "Osobne",
+      "other": "Iné"
+    },
+    "actions": {
+      "cancel": "Zrušiť",
+      "saving": "Ukladá sa...",
+      "save": "Uložiť komunikáciu"
+    },
+    "empty": {
+      "title": "Zatiaľ nebola zaznamenaná žiadna komunikácia",
+      "subtitle": "Kliknite na 'Zaznamenať komunikáciu' na zaznamenanie vašej prvej interakcie"
+    }
+  },
+  "errors": {
+    "dataNotFound": "Požadované údaje sa nenašli.",
+    "networkError": "Chyba siete. Skontrolujte prosím svoje internetové pripojenie.",
+    "permissionDenied": "Nemáte oprávnenie na túto akciu.",
+    "duplicateRecord": "Záznam s týmito údajmi už existuje.",
+    "unknown": "Vyskytla sa neočakávaná chyba."
+  },
+  "addLiabilityModal": {
+    "title": "Pridať záväzok",
+    "fields": {
+      "type": "Typ",
+      "provider": "Poskytovateľ",
+      "referenceNumber": "Referenčné číslo",
+      "paymentFrequency": "Frekvencia platby",
+      "notes": "Poznámky"
+    },
+    "placeholders": {
+      "selectType": "Vybrať typ",
+      "provider": "Názov poskytovateľa",
+      "referenceNumber": "Referenčné číslo",
+      "paymentFrequency": "Vybrať frekvenciu",
+      "notes": "Dodatočné poznámky"
+    },
+    "buttons": {
+      "cancel": "Zrušiť",
+      "add": "Pridať záväzok"
+    },
+    "errors": {
+      "requiredFields": "Všetky polia sú povinné"
+    },
+    "messages": {
+      "addedSuccessfully": "Záväzok úspešne pridaný"
+    },
+    "types": {
+      "insurancePolicy": "Poistná zmluva",
+      "utilityBill": "Účet za energie",
+      "propertyTax": "Daň z nehnuteľnosti",
+      "subscriptionFee": "Poplatok za predplatné",
+      "maintenanceContract": "Zmluva o údržbe",
+      "loan": "Pôžička",
+      "leaseAgreement": "Nájomná zmluva",
+      "warranty": "Záruka",
+      "other": "Iné"
+    },
+    "frequencies": {
+      "monthly": "Mesačne",
+      "quarterly": "Štvrťročne",
+      "semiAnnually": "Polročne",
+      "annually": "Ročne",
+      "oneTime": "Jednorazovo",
+      "asNeeded": "Podľa potreby"
+    }
+  },
+  "debug": {
+    "panel": {
+      "title": "Panel pre ladenie",
+      "recentErrors": "Nedávne chyby aplikácie",
+      "technicalDetails": "Technické podrobnosti",
+      "tabs": {
+        "list": "Zoznam",
+        "details": "Podrobnosti"
+      },
+      "errorCount": "{{count}} chýb",
+      "actions": {
+        "downloadErrors": "Stiahnuť chyby",
+        "clearAllErrors": "Vymazať všetky chyby"
+      },
+      "messages": {
+        "errorsCleared": "Všetky chyby vymazané",
+        "errorCopied": "Chyba skopírovaná do schránky",
+        "errorsDownloaded": "Chyby stiahnuté"
+      },
+      "error": {
+        "unknownError": "Neznáma chyba",
+        "noMessage": "Žiadna správa",
+        "errorMessage": "Chybová správa"
+      },
+      "sections": {
+        "stackTrace": "Sledovanie zásobníka",
+        "context": "Kontext",
+        "location": "Umiestnenie",
+        "browserInfo": "Informácie o prehliadači",
+        "time": "Čas"
+      },
+      "fields": {
+        "url": "URL:",
+        "path": "Cesta:",
+        "query": "Dotaz:",
+        "userAgent": "User Agent:",
+        "viewport": "Viewport:"
+      }
+    }
+  },
+  "will": {
+    "errors": {
+      "mustBeLoggedIn": "Pre uloženie musíte byť prihlásený.",
+      "loadingFailed": "Nepodarilo sa načítať závet.",
+      "savingFailed": "Nepodarilo sa uložiť závet."
+    },
+    "messages": {
+      "savedSuccessfully": "Závet úspešne uložený.",
+      "documentUploaded": "Dokument úspešne nahraný."
+    },
+    "loading": "Načítava sa závet...",
+    "title": "Závet",
+    "subtitle": "Spravujte svoj závet a určte svojich vykonávateľov.",
+    "sections": {
+      "statusInfo": "Stav a informácie",
+      "willDocument": "Dokument závetu"
+    },
+    "fields": {
+      "currentStatus": "Aktuálny stav",
+      "physicalLocation": "Fyzické umiestnenie",
+      "executorContact": "Kontakt na vykonávateľa",
+      "additionalNotes": "Dodatočné poznámky"
+    },
+    "placeholders": {
+      "physicalLocation": "napr. Domáci trezor, Advokátska kancelária",
+      "selectContact": "Vyberte kontakt",
+      "additionalNotes": "Akékoľvek ďalšie informácie..."
+    },
+    "descriptions": {
+      "statusDescription": "Sledujte aktuálny stav svojho závetu.",
+      "physicalLocationDescription": "Kde je váš závet fyzicky uložený?",
+      "executorDescription": "Osoba zodpovedná za vykonanie vášho závetu."
+    },
+    "options": {
+      "noContactSelected": "Nebol vybraný žiadny kontakt"
+    },
+    "status": {
+      "notStarted": "Nezačaté",
+      "inPreparation": "V príprave",
+      "completedSigned": "Dokončené a podpísané",
+      "withNotary": "U notára",
+      "draft": "Návrh",
+      "notarized": "Notársky overené",
+      "stored": "Uložené",
+      "updated": "Aktualizované"
+    },
+    "document": {
+      "uploaded": "Dokument závetu nahraný",
+      "uploadedDescription": "Váš dokument závetu bol bezpečne uložený.",
+      "noDocument": "Žiadny dokument závetu",
+      "noDocumentDescription": "Nahrajte kópiu svojho závetu na bezpečné uchovanie."
+    },
+    "buttons": {
+      "saveWillInfo": "Uložiť informácie o závete",
+      "saving": "Ukladá sa...",
+      "uploadDocument": "Nahrať dokument",
+      "uploadNewVersion": "Nahrať novú verziu"
+    },
+    "steps": {
+      "countrySelection": "Výber krajiny",
+      "countrySelectionDesc": "Vyberte svoju krajinu a zadajte svoje údaje",
+      "assetAllocation": "Rozdelenie majetku",
+      "assetAllocationDesc": "Rozdeľte majetok medzi dedičov",
+      "beneficiaries": "Dedičia",
+      "beneficiariesDesc": "Definujte svojich dedičov",
+      "executors": "Vykonávatelia",
+      "executorsDesc": "Priraďte vykonávateľov na správu vášho závetu",
+      "review": "Prehľad",
+      "reviewDesc": "Prezrite si a dokončite svoj závet"
+    },
+    "progress": "Krok {{current}} z {{total}}",
+    "validation": {
+      "selectCountry": "Prosím, vyberte krajinu",
+      "requiredField": "Toto pole je povinné",
+      "allocation100": "Celkový podiel musí byť 100%",
+      "atLeastOneBeneficiary": "Je potrebný aspoň jeden dedič",
+      "executorRequired": "Vykonávateľ je povinný",
+      "fixErrors": "Prosím, opravte chyby vo formulári"
+    },
+    "generation": {
+      "success": "Závet úspešne vygenerovaný!",
+      "error": "Nepodarilo sa vygenerovať závet"
+    }
+  },
+  "contacts": {
+    "errors": {
+      "loadingFailed": "Nepodarilo sa načítať kontakty."
+    }
+  },
+  "guardianUpload": {
+    "error": "Chyba",
+    "success": "Úspech",
+    "fillRequired": "Prosím, vyplňte všetky povinné polia",
+    "loginToSave": "Pre uloženie strážcov musíte byť prihlásený",
+    "updated": "Strážca úspešne aktualizovaný",
+    "added": "Strážca úspešne pridaný",
+    "failedSave": "Nepodarilo sa uložiť strážcu. Skúste to prosím znova.",
+    "editTitle": "Upraviť strážcu",
+    "addTitle": "Pridať strážcu",
+    "description": "Pridajte niekoho, komu dôverujete, aby pomohol spravovať vaše dedičstvo",
+    "fullNameLabel": "Celé meno strážcu *",
+    "fullNamePlaceholder": "Zadajte celé meno strážcu",
+    "relationshipLabel": "Vzťah *",
+    "relationshipPlaceholder": "Vyberte vzťah",
+    "countryLabel": "Krajina pobytu *",
+    "countryPlaceholder": "Vyberte krajinu",
+    "countryDescription": "Vyberte krajinu, v ktorej tento strážca býva",
+    "rolesTitle": "Úlohy a zodpovednosti",
+    "saving": "Ukladá sa...",
+    "updateButton": "Aktualizovať strážcu",
+    "addButton": "Pridať strážcu",
+    "relationships": {
+      "spouse": "Manžel/Manželka",
+      "parent": "Rodič",
+      "sibling": "Súrodenec",
+      "child": "Dieťa",
+      "friend": "Priateľ",
+      "legalProfessional": "Právnik",
+      "other": "Iné"
+    },
+    "roles": {
+      "guardianForChildren": "Opatrovník detí",
+      "executorOfWill": "Vykonávateľ závetu",
+      "healthcareProxy": "Splnomocnenec pre zdravotnú starostlivosť",
+      "financialPowerOfAttorney": "Finančné splnomocnenie",
+      "emergencyContact": "Núdzový kontakt",
+      "trustee": "Správca"
+    }
+  },
+  "documentUpload": {
+    "fileUploadedSuccess": "Súbor úspešne nahraný!",
+    "fileUploadFailed": "Nepodarilo sa nahrať súbor. Skúste to prosím znova.",
+    "fileTooLarge": "Vybraný súbor je príliš veľký. Maximálna veľkosť je {{maxSize}} MB.",
+    "fillRequiredFields": "Prosím, vyplňte všetky povinné polia",
+    "loginToSave": "Pre uloženie dokumentov musíte byť prihlásený",
+    "saved": "Dokument úspešne uložený!",
+    "failedSave": "Nepodarilo sa uložiť dokument. Skúste to prosím znova.",
+    "detailsTitle": "Podrobnosti o dokumente",
+    "detailsSubtitle": "Pridajte informácie o nahranom dokumente",
+    "namePlaceholder": "Zadajte názov dokumentu",
+    "typePlaceholder": "Vyberte typ dokumentu",
+    "countryPlaceholder": "Vyberte krajinu",
+    "pickDate": "Vyberte dátum",
+    "title": "Nahrať dokument",
+    "subtitle": "Bezpečne nahrajte právne a osobné dokumenty",
+    "browseFiles": "Prehliadať súbory",
+    "chooseDifferent": "Vybrať iný súbor",
+    "uploadButton": "Nahrať dokument",
+    "storageLimitReached": "Súbor sa nedá nahrať. Zostáva vám {{remaining}} úložného priestoru, ale tento súbor má veľkosť {{fileSize}}. Inovujte si plán alebo odstráňte niektoré existujúce súbory."
+  },
+  "auth": {
+    "noAccount": "Nemáte účet?",
+    "signUpLink": "Zaregistrujte sa",
+    "hasAccount": "Máte už účet?",
+    "loginLink": "Prihláste sa",
+    "loginButton": "Prihlásiť sa",
+    "signupButton": "Zaregistrovať sa"
+  },
+  "assetDetail": {
+    "loading": "Načítavajú sa podrobnosti o aktíve...",
+    "errors": {
+      "failedToLoad": "Nepodarilo sa načítať podrobnosti o aktíve",
+      "nameRequired": "Názov aktíva je povinný",
+      "failedToSave": "Nepodarilo sa uložiť aktívum"
+    },
+    "messages": {
+      "createdSuccessfully": "Aktívum úspešne vytvorené",
+      "updatedSuccessfully": "Aktívum úspešne aktualizované"
+    },
+    "title": {
+      "new": "Nové {{type}}"
+    },
+    "subtitle": {
+      "new": "Vyplňte podrobnosti na pridanie tohto aktíva do svojho portfólia",
+      "edit": "Aktualizujte podrobnosti o tomto aktíve"
+    },
+    "sections": {
+      "assetInformation": "Informácie o aktíve",
+      "basicInformation": "Základné informácie",
+      "propertyDetails": "Podrobnosti o nehnuteľnosti",
+      "accountDetails": "Podrobnosti o účte",
+      "financialDetails": "Finančné podrobnosti"
+    },
+    "fields": {
+      "assetName": "Názov aktíva",
+      "assetType": "Typ aktíva",
+      "propertyAddress": "Adresa nehnuteľnosti",
+      "propertyRegistryNumber": "Číslo listu vlastníctva",
+      "accountType": "Typ účtu",
+      "financialInstitution": "Finančná inštitúcia",
+      "accountNumber": "Číslo účtu / IBAN",
+      "loginCredentials": "Prihlasovacie údaje a poznámky",
+      "estimatedValue": "Odhadovaná hodnota",
+      "currency": "Mena"
+    },
+    "placeholders": {
+      "assetName": "napr. Rodinný dom, Investičné portfólio",
+      "propertyAddress": "Zadajte úplnú adresu nehnuteľnosti",
+      "propertyRegistryNumber": "napr. Číslo listu vlastníctva",
+      "selectAccountType": "Vyberte typ účtu",
+      "financialInstitution": "napr. Slovenská sporiteľňa, Tatra banka",
+      "accountNumber": "napr. SK12345678901234567890",
+      "loginCredentials": "Správca hesiel: trezor 1Password 'Bankovníctvo'",
+      "estimatedValue": "0"
+    },
+    "descriptions": {
+      "assetName": "Dajte tomuto aktívu popisný názov pre jednoduchú identifikáciu",
+      "assetType": "Vyberte typ, ktorý najlepšie popisuje toto aktívum",
+      "propertyAddress": "Úplná adresa vrátane ulice, mesta, PSČ a krajiny",
+      "propertyRegistryNumber": "Oficiálne registračné alebo katastrálne číslo tejto nehnuteľnosti",
+      "accountType": "Typ finančného účtu alebo investície",
+      "financialInstitution": "Názov banky alebo finančnej inštitúcie",
+      "accountNumber": "Číslo účtu, IBAN alebo iné identifikačné informácie",
+      "estimatedValue": "Súčasná trhová hodnota alebo posledná známa hodnota tohto aktíva",
+      "currency": "Mena, v ktorej je hodnota vyjadrená"
+    },
+    "types": {
+      "realEstate": "Nehnuteľnosť",
+      "business": "Podnikanie",
+      "vehicle": "Vozidlo",
+      "financialAccount": "Finančný účet",
+      "asset": "Aktívum"
+    },
+    "accountTypes": {
+      "bankAccount": "Bankový účet",
+      "investmentPortfolio": "Investičné portfólio",
+      "pensionFund": "Dôchodkový fond"
+    },
+    "securityWarning": "Bezpečnostné upozornenie:",
+    "securityWarningText": "Neukladajte tu skutočné heslá. Použite toto pole na nápovedy, umiestnenia správcov hesiel alebo iné bezpečné prístupové pokyny.",
+    "buttons": {
+      "cancel": "Zrušiť",
+      "saving": "Ukladá sa...",
+      "createAsset": "Vytvoriť aktívum",
+      "updateAsset": "Aktualizovať aktívum"
+    }
+  },
+  "assets": {
+    "overview": {
+      "title": "Portfólio aktív",
+      "subtitle": "Spravujte a sledujte svoje aktíva, nehnuteľnosti a investície",
+      "addAsset": "Pridať aktívum",
+      "totalPortfolioValue": "Celková hodnota portfólia",
+      "estimatedValue": "Odhadovaná hodnota všetkých aktív",
+      "distribution": {
+        "title": "Rozdelenie aktív",
+        "subtitle": "Rozdelenie portfólia podľa kategórií"
+      },
+      "beneficiaryAllocation": {
+        "title": "Pridelenie dedičom",
+        "subtitle": "Sledujte rozdelenie aktív dedičom",
+        "allAssigned": "Všetky aktíva majú priradených dedičov",
+        "unassignedWarning": "{{count}} aktív vyžaduje pridelenie dedičov"
+      },
+      "viewInheritanceSummary": "Zobraziť zhrnutie dedičstva",
+      "addNew": "Pridať nové",
+      "errors": {
+        "loadFailed": "Nepodarilo sa načítať údaje o aktívach"
+      }
+    },
+    "categories": {
+      "property": "Nehnuteľnosť",
+      "vehicle": "Vozidlo",
+      "financial": "Finančné",
+      "business": "Podnikanie",
+      "personal": "Osobné",
+      "uncategorized": "Nekategorizované"
+    }
+  },
+  "pricing": {
+    "title": "Vyberte si svoj Plán Dedičstva",
+    "subtitle": "Začnite s našou bezplatnou úrovňou alebo si inovujte na prémiové funkcie.",
+    "mainTitle": "Vyberte si svoj Plán Dedičstva",
+    "mainSubtitle": "Začnite s našou bezplatnou úrovňou alebo si inovujte na prémiové funkcie.",
+    "starter": {
+      "name": "Heritage Starter",
+      "price": "Zadarmo",
+      "description": "Ideálne na začiatok uchovávania vášho digitálneho dedičstva.",
+      "button": "Začať Zadarmo",
+      "features": {
+        "storage": "{{amount}} Úložisko",
+        "guardians": "Až {{count}} Strážcov",
+        "documents": "Základný Trezor Dokumentov",
+        "playbook": "Základný Manuál pre Strážcu",
+        "support": "Komunitná Podpora"
+      },
+      "limits": {
+        "storage": "500 MB",
+        "guardians": "3",
+        "fileSize": "10 MB na súbor"
+      }
+    },
+    "premium": {
+      "name": "Heritage Premium",
+      "price": "19 €",
+      "period": "/ mesiac",
+      "badge": "Najpopulárnejší",
+      "description": "Pokročilé funkcie pre komplexnú správu dedičstva.",
+      "button": "Vybrať Premium",
+      "features": {
+        "storage": "{{amount}} Úložisko",
+        "guardians": "Až {{count}} Strážcov",
+        "manual": "Manuál pre Pozostalých",
+        "support": "Prioritná E-mailová Podpora"
+      },
+      "limits": {
+        "storage": "10 GB",
+        "guardians": "5",
+        "fileSize": "50 MB na súbor"
+      }
+    },
+    "enterprise": {
+      "name": "Heritage Enterprise",
+      "price": "Na mieru",
+      "description": "Pre rodiny a firmy so zložitými potrebami vyžadujúcimi najvyššiu úroveň služieb.",
+      "button": "Kontaktovať Predaj",
+      "features": {
+        "storage": "{{amount}}+ Úložisko",
+        "guardians": "Neobmedzený Počet Strážcov",
+        "legal": "Koordinácia s Právnikom",
+        "support": "Dedikovaný Manažér Účtu"
+      },
+      "limits": {
+        "storage": "500 GB",
+        "guardians": "neobmedzene",
+        "fileSize": "100 MB na súbor"
+      }
+    }
+  },
+  "cta": {
+    "title": "Vaše Dedičstvo Čaká na Ochranu",
+    "description": "Pridajte sa k tisícom rodín, ktoré dôverujú LegacyGuard pri uchovávaní svojich najcennejších spomienok a dôležitých dokumentov pre budúce generácie.",
+    "button": "Začnite Svoju Cestu Dedičstva Dnes"
+  },
+  "cookies": {
+    "bannerText": "Používame nevyhnutné súbory cookie na zabezpečenie správneho fungovania našej stránky. S vaším súhlasom môžeme používať aj analytické súbory cookie na zlepšenie našich služieb.",
+    "declineButton": "Odmietnuť",
+    "acceptButton": "Prijať Všetko",
+    "learnMoreLink": "Dozvedieť sa Viac"
+  },
+  "notfound": {
+    "title": "Stránka sa Nenašla",
+    "description": "Stránka, ktorú hľadáte, neexistuje alebo bola presunutá.",
+    "goHome": "Prejsť na Domovskú Stránku",
+    "goBack": "Ísť Späť"
+  },
+  "guardianView": {
+    "title": "Nástenka Strážcu",
+    "subtitle": "Bezpečný prístup k základným informáciám používateľa {{userName}}",
+    "readOnlyAccess": "Prístup len na čítanie",
+    "loading": "Načítava sa nástenka strážcu...",
+    "errors": {
+      "pleaseLogin": "Prosím, prihláste sa pre prístup k zobrazeniu strážcu",
+      "failedToLoad": "Nepodarilo sa načítať informácie o strážcovi",
+      "loadFailed": "Nepodarilo sa načítať núdzové kontakty",
+      "addFailed": "Nepodarilo sa pridať núdzový kontakt",
+      "removeFailed": "Nepodarilo sa odstrániť núdzový kontakt",
+      "reorderFailed": "Nepodarilo sa aktualizovať poradie kontaktov",
+      "testFailed": "Nepodarilo sa odoslať testovaciu správu",
+      "selectContact": "Prosím, vyberte kontakt"
+    },
+    "sections": {
+      "keyDocuments": {
+        "title": "Kľúčové Dokumenty",
+        "description": "Základné dokumenty označené ako kritické držiteľom účtu",
+        "keyDocumentBadge": "Kľúčový Dokument",
+        "expires": "Exspiruje",
+        "noExpiration": "Bez exspirácie",
+        "empty": "Žiadne kľúčové dokumenty nie sú k dispozícii"
+      },
+      "importantContacts": {
+        "title": "Dôležité Kontakty",
+        "description": "Kľúčové kontakty pre núdzové situácie",
+        "empty": "Žiadne dôležité kontakty nie sú k dispozícii"
+      },
+      "finalWishes": {
+        "title": "Posledné Želania a Pokyny",
+        "description": "Osobné pokyny a posledné želania",
+        "funeralWishes": "Pohrebné Želania",
+        "digitalAccountsShutdown": "Zrušenie Digitálnych Účtov",
+        "messagesToLovedOnes": "Správy pre Blízkych",
+        "empty": "Žiadne posledné želania ani pokyny nie sú k dispozícii"
+      }
+    },
+    "guardianInfo": {
+      "description": "Prezeráte si tieto informácie ako dôveryhodný Strážca. Tento prístup je poskytovaný pre núdzové situácie a na pomoc pri plnení vašich povinností.",
+      "securityNote": "Všetok prístup je zaznamenávaný a monitorovaný z bezpečnostných dôvodov."
+    },
+    "defaultUserName": "Hlavný Držiteľ Účtu",
+    "description": "Spravujte až 3 núdzové kontakty v poradí priority",
+    "addContact": "Pridať Kontakt",
+    "noContacts": "Zatiaľ neboli pridané žiadne núdzové kontakty. Pridajte kontakty, ktoré by mali byť informované v prípade núdze.",
+    "maxContactsReached": "Dosiahli ste maximálny počet 3 núdzových kontaktov.",
+    "sendTest": "Odoslať Test",
+    "lastContacted": "Posledný kontakt pred {{time}}",
+    "priority": {
+      "1": "Priorita 1",
+      "2": "Priorita 2",
+      "3": "Priorita 3"
+    },
+    "addContactDialog": {
+      "title": "Pridať Núdzový Kontakt",
+      "description": "Vyberte kontakt zo svojho zoznamu a pridajte ho ako núdzový kontakt.",
+      "selectContact": "Vybrať Kontakt",
+      "selectPlaceholder": "Vyberte kontakt...",
+      "relationship": "Vzťah (voliteľné)",
+      "relationshipPlaceholder": "Vyberte vzťah...",
+      "addButton": "Pridať Núdzový Kontakt"
+    },
+    "messages": {
+      "added": "Núdzový kontakt úspešne pridaný",
+      "removed": "Núdzový kontakt odstránený",
+      "reordered": "Priorita kontaktu aktualizovaná",
+      "testSent": "Testovacia správa odoslaná {{name}}"
+    }
+  },
+  "notificationPreferences": {
+    "title": "Predvoľby Núdzových Oznámení",
+    "description": "Spravujte nastavenia oznámení pre svoje núdzové kontakty",
+    "noContacts": "Pridajte núdzové kontakty na spravovanie ich predvolieb oznámení.",
+    "noEmail": "Žiadna e-mailová adresa v záznamoch",
+    "emailRequired": "Vyžaduje sa e-mail",
+    "lastUpdated": "Posledná aktualizácia: {{date}}",
+    "info": "Keď je udelený núdzový prístup, oznámenia budú odosielané len kontaktom s povolenými e-mailovými oznámeniami.",
+    "howItWorks": {
+      "title": "Ako Fungujú Núdzové Oznámenia",
+      "point1": "Strážcovia môžu získať prístup k núdzovým kontaktom v kritických situáciách",
+      "point2": "Všetky prihlásené kontakty dostanú okamžité e-mailové oznámenia",
+      "point3": "Dostanete tiež oznámenie, keď dôjde k prístupu"
+    },
+    "messages": {
+      "updated": "Predvoľby oznámení aktualizované"
+    },
+    "errors": {
+      "loadFailed": "Nepodarilo sa načítať predvoľby oznámení",
+      "updateFailed": "Nepodarilo sa aktualizovať predvoľby"
+    }
+  },
+  "relationships": {
+    "spouse": "Manžel/Manželka",
+    "child": "Dieťa",
+    "parent": "Rodič",
+    "sibling": "Súrodenec",
+    "friend": "Priateľ",
+    "other": "Iné"
+  },
+  "emergencyAccess": {
+    "button": "Núdzový Prístup",
+    "modalTitle": "Prístup k Núdzovým Kontaktom",
+    "modalDescription": "Týmto získate prístup k informáciám o núdzových kontaktoch. Použite to len v skutočných núdzových situáciách.",
+    "warningText": "Tento prístup je zaznamenávaný a držiteľ účtu bude informovaný.",
+    "reasonLabel": "Dôvod núdzového prístupu (povinné)",
+    "reasonPlaceholder": "Opíšte prosím núdzovú situáciu vyžadujúcu prístup k kontaktným informáciám...",
+    "confirmCheckbox": "Potvrdzujem, že ide o skutočnú núdzovú situáciu a potrebujem prístup k kontaktným informáciám",
+    "accessing": "Pristupuje sa...",
+    "confirmButton": "Získať Prístup k Núdzovým Kontaktom",
+    "pleaseConfirm": "Prosím, potvrďte núdzovú situáciu a uveďte dôvod",
+    "notAuthorized": "Nie ste oprávnený na núdzový prístup",
+    "failedToLoadContacts": "Nepodarilo sa načítať núdzové kontakty",
+    "accessGranted": "Núdzový prístup udelený. Kontaktné informácie sú teraz k dispozícii.",
+    "accessFailed": "Nepodarilo sa získať prístup k núdzovým kontaktom",
+    "contactsTitle": "Núdzové Kontakty",
+    "contactsDescription": "Kontaktujte tieto osoby v poradí priority. Kliknite na telefónne čísla pre volanie alebo na e-maily pre odoslanie správ.",
+    "priorityOrder": "Poradie Priority",
+    "priority": "Priorita #{{order}}",
+    "logContact": "Zaznamenať Pokus o Kontakt",
+    "contactLogged": "Pokus o kontakt zaznamenaný",
+    "lastContacted": "Posledný kontakt: {{time}}",
+    "importantNote": "Dôležité: Kontaktujte týchto jednotlivcov v zobrazenom poradí. Vždy najprv skúste primárny spôsob kontaktu. Zaznamenajte všetky pokusy o kontakt pre evidenciu."
+  },
+  "countryLanguage": {
+    "title": "Vitajte v LegacyGuard",
+    "description": "Prosím, potvrďte svoju polohu a jazykové predvoľby",
+    "detectedLocation": "Zistili sme, že sa nachádzate v {{country}}",
+    "selectCountry": "Vyberte svoju krajinu",
+    "selectLanguage": "Vyberte svoj jazyk",
+    "chooseLang": "Vyberte jazyk",
+    "domainSuggestion": "K dispozícii je lepší zážitok",
+    "domainSuggestionText": "Pre najlepší zážitok vo vašom regióne odporúčame použiť {{domain}}",
+    "privacyNote": "Vaše údaje o polohe sa používajú len na poskytnutie najlepšieho miestneho zážitku a nikdy sa nezdieľajú s tretími stranami.",
+    "confirm": "Potvrdiť",
+    "confirmAndRedirect": "Pokračovať na {{domain}}"
+  },
+  "helpPage": {
+    "title": "Centrum Pomoci a Podpory",
+    "subtitle": "Sme tu pre vás. Nájdite odpovede na svoje otázky alebo nás kontaktujte priamo.",
+    "faq": {
+      "title": "Často Kladené Otázky",
+      "q1": {
+        "question": "Je LegacyGuard bezpečný?",
+        "answer": "Áno, bezpečnosť je našou najvyššou prioritou. Používame end-to-end šifrovanie a architektúru zero-trust, čo znamená, že žiadna neoprávnená osoba nemôže získať prístup k vašim údajom, ani my. Všetky údaje sú uložené v bezpečných dátových centrách v Európskej únii v súlade s GDPR."
+      },
+      "q2": {
+        "question": "Čo sa stane s mojimi údajmi, ak zruším predplatné?",
+        "answer": "Po zrušení zostanú vaše údaje bezpečne uložené v režime iba na čítanie po dobu 90 dní. Kedykoľvek počas tohto obdobia môžete svoje predplatné znova aktivovať a získať plný prístup. Po 90 dňoch budú vaše údaje bezpečne a natrvalo odstránené z našich systémov."
+      },
+      "q3": {
+        "question": "Čo je to 'Strážca'?",
+        "answer": "Strážca je dôveryhodná osoba (napr. partner, súrodenec alebo právnik), ktorej udelíte špeciálny, obmedzený prístup k vašim informáciám pre núdzové situácie. Strážca nemôže meniť vaše údaje; môže ich len prezerať, aby konal podľa vašich pokynov."
+      },
+      "q4": {
+        "question": "Aký je rozdiel medzi 'Trezorom' a 'Manuálom'?",
+        "answer": "Trezor dedičstva je miesto, kde bezpečne ukladáte všetky svoje dôležité dokumenty a aktíva. Manuál pre pozostalých je kurátorský výber najdôležitejších kontaktov, dokumentov a pokynov z vášho trezoru, navrhnutý tak, aby vaši Strážcovia mali všetko podstatné na jednom mieste."
+      },
+      "q5": {
+        "question": "Je závet vytvorený v LegacyGuard právne záväzný?",
+        "answer": "LegacyGuard vám pomáha pripraviť a zorganizovať všetky podklady a informácie pre váš závet. Avšak vo väčšine európskych krajín digitálny dokument nenahrádza potrebu oficiálneho, podpísaného (a často notársky overeného) dokumentu. Odporúčame vždy konzultovať konečnú verziu s právnikom."
+      }
+    },
+    "contact": {
+      "title": "Nenašli ste, čo ste hľadali?",
+      "email": {
+        "title": "Napíšte nám E-mail",
+        "description": "Pre všeobecné otázky a podporu.",
+        "button": "Otvoriť E-mailového Klienta"
+      },
+      "call": {
+        "title": "Naplánujte si Hovor (pre Premium)",
+        "description": "Pre zákazníkov Premium a Enterprise.",
+        "button": "Naplánovať Hovor"
+      }
+    }
+  },
+  "index": {
+    "welcome": "Vitajte vo Vašej Prázdnej Aplikácii",
+    "startBuilding": "Začnite tu budovať svoj úžasný projekt!"
+  },
+  "inviteAcceptance": {
+    "loading": "Načítava sa pozvánka...",
+    "errors": {
+      "invalidLink": "Neplatný odkaz na pozvánku",
+      "notFound": "Pozvánka sa nenašla",
+      "alreadyProcessed": "Táto pozvánka už bola spracovaná",
+      "loadingFailed": "Nepodarilo sa načítať pozvánku",
+      "acceptFailed": "Nepodarilo sa prijať pozvánku",
+      "declineFailed": "Nepodarilo sa odmietnuť pozvánku"
+    },
+    "messages": {
+      "accepted": "Ďakujeme. Vaša rola Strážcu bola potvrdená.",
+      "declined": "Odmietli ste túto rolu. Odosielateľ bude informovaný."
+    },
+    "notFound": {
+      "title": "Pozvánka sa Nenašla",
+      "description": "Tento odkaz na pozvánku je neplatný alebo jeho platnosť vypršala."
+    },
+    "subtitle": "Boli ste pozvaný, aby ste sa stali Strážcom ich digitálneho dedičstva na LegacyGuard.",
+    "guardianRole": {
+      "title": "Vaša Rola Strážcu",
+      "yourName": "Vaše Meno:",
+      "relationship": "Vzťah:",
+      "responsibilities": "Zodpovednosti:"
+    },
+    "whatThisMeans": {
+      "title": "Čo to Znamená",
+      "point1": "Budete mať bezpečný prístup k ich dôležitým dokumentom a informáciám",
+      "point2": "Môžete len prezerať informácie - bez možnosti úpravy alebo mazania",
+      "point3": "Váš prístup je navrhnutý pre núdzové situácie alebo keď je potrebná pomoc",
+      "point4": "Všetok prístup je zaznamenávaný a bezpečný"
+    },
+    "buttons": {
+      "processing": "Spracováva sa...",
+      "acceptRole": "Prijať Rolu",
+      "decline": "Odmietnuť"
+    },
+    "disclaimer": "Prijatím tejto role beriete na vedomie zodpovednosť byť dôveryhodným Strážcom ich digitálneho dedičstva.",
+    "defaultInviterName": "Váš dôveryhodný kontakt"
+  },
+  "validation": {
+    "errors": {
+      "nameMinLength": "Meno musí mať aspoň 2 znaky",
+      "nameMaxLength": "Meno môže mať maximálne {{max}} znakov",
+      "fieldRequired": "Pole {{field}} je povinné",
+      "countryRequired": "Krajina je povinná",
+      "countryCodeLength": "Kód krajiny musí mať 2 znaky",
+      "selectAtLeastOne": "Vyberte aspoň jedno {{field}}",
+      "selectUpTo": "Môžete vybrať až {{max}} {{field}}",
+      "invalidEmail": "Zadajte platnú e-mailovú adresu",
+      "invalidPhone": "Zadajte platné telefónne číslo",
+      "valueMustBeNumber": "Hodnota musí byť číslo",
+      "valueMustBePositive": "Hodnota musí byť kladná",
+      "currencyCodeLength": "Kód meny musí mať 3 znaky",
+      "maxCharacters": "Pole {{field}} môže mať maximálne {{max}} znakov",
+      "allocationRequired": "Percento podielu je povinné",
+      "allocationMustBeNumber": "Podiel musí byť číslo",
+      "allocationRange": "Podiel musí byť medzi 1% a 100%",
+      "expirationDateFuture": "Dátum exspirácie musí byť v budúcnosti",
+      "maxTags": "Môžete pridať maximálne {{max}} značiek",
+      "fileSizeTooLarge": "Veľkosť súboru musí byť {{maxSize}} alebo menej",
+      "invalidFileType": "Povolené sú len súbory typu {{types}}",
+      "unknownError": "Neznáma chyba",
+      "dataNotFound": "Požadované údaje sa nenašli",
+      "connectionError": "Chyba pripojenia. Skontrolujte svoje internetové pripojenie.",
+      "permissionDenied": "Nemáte povolenie na vykonanie tejto akcie.",
+      "duplicateRecord": "Záznam s týmito informáciami už existuje."
+    }
+  },
+  "subscription": {
+    "dashboard": {
+      "title": "Nástenka Predplatných",
+      "subtitle": "Spravujte svoje predplatné, náklady a pripomienky"
+    },
+    "monthlyCost": "Celkové Mesačné Náklady",
+    "yearlyCost": "Celkové Ročné Náklady",
+    "activeSubscriptions": "Aktívne Predplatné",
+    "upcomingSoon": "čoskoro",
+    "exportReport": "Exportovať Správu",
+    "perMonth": "mesačne",
+    "perYear": "ročne",
+    "allSubscriptions": "Všetky Predplatné",
+    "allSubscriptionsDesc": "Prehľad všetkých aktívnych predplatných zoradených podľa dátumu obnovenia",
+    "upcomingRenewals": "Nadchádzajúce Obnovenia",
+    "upcomingRenewalsTitle": "Upozornenie na Nadchádzajúce Obnovenia",
+    "upcomingRenewalsDesc": "Máte {{count}} nadchádzajúcich obnovení v nasledujúcich 90 dňoch",
+    "next90Days": "Nasledujúcich 90 Dní",
+    "noUpcomingRenewals": "Žiadne nadchádzajúce obnovenia v nasledujúcich 90 dňoch",
+    "renew": "Obnoviť",
+    "review": "Prezrieť",
+    "preferences": "Predvoľby Predplatného",
+    "preferencesDesc": "Spravujte, ako sa sledujú a spravujú vaše predplatné",
+    "enableTracking": "Povoliť Sledovanie Predplatného",
+    "enableTrackingDesc": "Automaticky spravujte a sledujte dokumenty súvisiace s predplatným",
+    "costOptimization": "Povoliť Návrhy na Optimalizáciu Nákladov",
+    "costOptimizationDesc": "Dostávajte návrhy na optimalizáciu a zníženie nákladov na predplatné",
+    "reminderPeriods": "Predvolené Obdobia Pripomienok",
+    "daysBefore": "dní pred",
+    "loadError": "Nepodarilo sa načítať podrobnosti o predplatnom",
+    "updateError": "Nepodarilo sa aktualizovať predvoľby predplatného",
+    "preferencesUpdated": "Predvoľby úspešne aktualizované",
+    "tabs": {
+      "overview": "Prehľad",
+      "upcoming": "Nadchádzajúce",
+      "settings": "Nastavenia"
+    },
+    "types": {
+      "monthly": "Mesačne",
+      "yearly": "Ročne",
+      "oneTime": "Jednorazovo",
+      "none": "Žiadne"
+    },
+    "daysUntilRenewal": "dní do obnovenia",
+    "days": "dní",
+    "loadFailed": "Nepodarilo sa načítať údaje o predplatnom",
+    "autoRenewal": "Automatické Obnovenie: Áno",
+    "manual": "Automatické Obnovenie: Nie",
+    "trackingSuggestion": "Zvážte povolenie sledovania predplatného pre lepšiu správu a pripomienky",
+    "type": "Typ Predplatného",
+    "typePlaceholder": "Vyberte typ",
+    "renewalCost": "Náklady na Obnovenie",
+    "renewalCostPlaceholder": "Zadajte náklady na obnovenie",
+    "cancellationNotice": "Výpovedná Lehota",
+    "noNoticeRequired": "Nevyžaduje sa Žiadna Výpovedná Lehota",
+    "providerContact": "Kontaktné Informácie Poskytovateľa",
+    "providerPhone": "Telefón",
+    "providerEmail": "E-mail",
+    "providerWebsite": "Webová Stránka",
+    "cancellationNoticeWarning": "Poznámka: Zrušenie vyžaduje {{days}} dňovú výpovednú lehotu"
+  },
+  "emailTemplates": {
+    "welcome": {
+      "subject": "Vitajte v LegacyGuard - Vaša Cesta Digitálnym Dedičstvom Začína",
+      "greeting": "Vitajte, {{name}},",
+      "body": "Ďakujeme, že ste sa pridali k LegacyGuard. Urobili ste prvý dôležitý krok k ochrane budúcnosti vašej rodiny.",
+      "cta": "Dokončite Svoj Životný Inventár",
+      "footer": "Ak máte akékoľvek otázky, náš tím podpory je tu, aby vám pomohol."
+    },
+    "inventoryComplete": {
+      "subject": "Životný Inventár Dokončený - Váš Osobný Plán je Pripravený",
+      "greeting": "Gratulujeme, {{name}},",
+      "body": "Dokončili ste svoj životný inventár! Na základe vašich odpovedí sme vytvorili osobný akčný plán, ktorý vám pomôže zabezpečiť budúcnosť vašej rodiny.",
+      "nextSteps": "Vaše 3 hlavné priority:",
+      "cta": "Zobraziť Váš Akčný Plán",
+      "encouragement": "Pamätajte, každý malý krok, ktorý dnes urobíte, má veľký význam pre vašich blízkych zajtra."
+    },
+    "guardianInvite": {
+      "subject": "{{inviterName}} vás pozval, aby ste sa stali jeho/jej Strážcom na LegacyGuard",
+      "greeting": "Dobrý deň, {{guardianName}},",
+      "body": "{{inviterName}} vám zveruje dôležitú zodpovednosť - byť Strážcom jeho/jej digitálneho dedičstva.",
+      "whatThisMeans": "Ako Strážca budete mať bezpečný, len na čítanie, prístup k jeho/jej dôležitým dokumentom a pokynom v prípade núdze.",
+      "cta": "Zobraziť Pozvánku",
+      "expires": "Táto pozvánka vyprší o 7 dní."
+    },
+    "planUpgrade": {
+      "subject": "Dosiahli ste limit svojho plánu {{planName}}",
+      "greeting": "Ahoj, {{name}},",
+      "body": "Robíte skvelý pokrok! Dosiahli ste limit {{limitType}} vo svojom súčasnom pláne.",
+      "upgradeText": "Inovujte na {{suggestedPlan}}, aby ste mohli naďalej pridávať viac {{limitType}} a odomknúť ďalšie funkcie.",
+      "cta": "Zobraziť Možnosti Inovácie"
+    }
+  },
+  "guardian": {
+    "invitationSent": "Pozvánka Odoslaná",
+    "accepted": "Prijaté",
+    "declined": "Odmietnuté",
+    "sendInvite": "Odoslať Pozvánku"
+  },
+  "alerts": {
+    "title": "Centrum Upozornení",
+    "description": "Spravujte svoje upozornenia na exspiráciu dokumentov.",
+    "unread": "Neprečítané",
+    "markAsRenewed": "Označiť ako Obnovené",
+    "snooze7Days": "Odložiť o 7 Dní",
+    "dismiss": "Zamietnuť",
+    "unsnooze": "Zrušiť Odloženie",
+    "tabs": {
+      "active": "Aktívne",
+      "snoozed": "Odložené",
+      "dismissed": "Zamietnuté"
+    },
+    "noActiveAlerts": "Nemáte žiadne aktívne upozornenia.",
+    "noSnoozedAlerts": "Nemáte žiadne odložené upozornenia.",
+    "noDismissedAlerts": "Nemáte žiadne zamietnuté upozornenia.",
+    "expiresOn": "Exspiruje {{date}}",
+    "snoozedUntil": "Odložené do {{date}}",
+    "renewalInstructions": "Pokyny na Obnovenie",
+    "badges": {
+      "expired": "Exspirované",
+      "expiring_7": "Čoskoro Exspiruje",
+      "expiring_30": "Exspiruje o 30 Dní",
+      "expiring_90": "Exspiruje o 90 Dní"
+    },
+    "types": {
+      "expired": "Dokument {{documentName}} exspiroval pred {{daysAgo}} dňami!",
+      "expiring7": "Ponáhľajte sa! {{documentName}} exspiruje o {{days}} dní.",
+      "expiring30": "Pripomienka: {{documentName}} exspiruje o {{days}} dní.",
+      "expiring90": "Pozor: {{documentName}} má exspirovať o {{days}} dní."
+    },
+    "messages": {
+      "dismissed": "Upozornenie úspešne zamietnuté.",
+      "snoozed": "Upozornenie odložené o {{days}} dní.",
+      "markedAsRenewed": "Dokument označený ako obnovený."
+    },
+    "errors": {
+      "loadFailed": "Nepodarilo sa načítať upozornenia.",
+      "dismissFailed": "Nepodarilo sa zamietnuť upozornenie.",
+      "snoozeFailed": "Nepodarilo sa odložiť upozornenie.",
+      "renewFailed": "Nepodarilo sa označiť dokument ako obnovený."
+    }
+  },
+  "errorBoundary": {
+    "title": "Ups! Niečo sa pokazilo",
+    "description": "Ospravedlňujeme sa za nepríjemnosti. Vyskytla sa neočakávaná chyba.",
+    "errorId": "ID Chyby",
+    "tryAgain": "Skúsiť Znova",
+    "reloadPage": "Obnoviť Stránku",
+    "goToHomepage": "Prejsť na Domovskú Stránku",
+    "technicalDetails": "Technické Podrobnosti",
+    "hide": "Skryť",
+    "show": "Zobraziť",
+    "stackTrace": "Sledovanie Zásobníka",
+    "componentStack": "Zásobník Komponentov",
+    "helpText": "Ak problém pretrváva, kontaktujte našu podporu s ID chyby."
+  },
+  "errorTest": {
+    "title": "Test Zaznamenávania Chýb",
+    "triggerSyncError": "Spustiť Synchronnú Chybu (ErrorBoundary)",
+    "triggerAsyncError": "Spustiť Asynchrónnu Chybu",
+    "logRegularError": "Zaznamenať Bežnú Chybu",
+    "logCriticalError": "Zaznamenať Kritickú Chybu",
+    "triggerAlert": "Spustiť Upozornenie (6 Kritických Chýb)"
+  },
+  "footer": {
+    "tagline": "Uchovávanie vášho dedičstva pre budúce generácie.",
+    "platform": {
+      "title": "Platforma",
+      "heritageVault": "Trezor Dedičstva",
+      "guardianNetwork": "Sieť Strážcov",
+      "dashboard": "Nástenka",
+      "security": "Bezpečnosť"
+    },
+    "support": {
+      "title": "Podpora",
+      "helpCenter": "Centrum Pomoci",
+      "userGuides": "Používateľské Príručky",
+      "contactUs": "Kontaktujte Nás",
+      "community": "Komunita"
+    },
+    "legal": {
+      "title": "Právne",
+      "privacyPolicy": "Zásady Ochrany Osobných Údajov",
+      "termsOfService": "Podmienky Služby",
+      "dataProtection": "Ochrana Dát"
+    },
+    "copyright": "© {{year}} LegacyGuard. Všetky práva vyhradené.",
+    "description": "Správa digitálneho dedičstva na podnikovej úrovni."
+  },
+  "playbook": {
+    "label": "Playbook",
+    "create": "Vytvoriť Playbook",
+    "edit": "Upraviť Playbook",
+    "preview": "Náhľad",
+    "exitPreview": "Ukončiť Náhľad",
+    "save": "Uložiť Playbook",
+    "saving": "Ukladá sa...",
+    "loading": "Načítava sa playbook...",
+    "autoSaveNotice": "Vaše zmeny sa automaticky ukladajú počas písania.",
+    "noContent": "Zatiaľ nebol pridaný žiadny obsah.",
+    "noContacts": "Zatiaľ neboli pridané žiadne kontakty.",
+    "addContact": "Pridať Kontakt",
+    "contact": "Kontakt",
+    "title": "Playbook pre {{name}}",
+    "titleReadOnly": "Playbook používateľa {{name}}",
+    "description": "Vytvorte osobné pokyny a informácie pre svojho strážcu",
+    "viewTitle": "Playbook Strážcu: {{userName}}",
+    "viewDescription": "Základné informácie a pokyny pripravené špeciálne pre vás",
+    "lastUpdated": "Posledná Aktualizácia",
+    "viewFooter": "Tieto informácie vám boli zverené ako strážcovi. Prosím, uchovávajte ich v tajnosti a bezpečí.",
+    "notAuthenticated": "Prosím, prihláste sa pre zobrazenie tohto playbooku",
+    "accessDenied": "Nemáte oprávnenie na zobrazenie tohto playbooku",
+    "fetchError": "Nepodarilo sa načítať playbook",
+    "saveSuccess": "Playbook úspešne uložený",
+    "saveError": "Nepodarilo sa uložiť playbook",
+    "discardChanges": {
+      "title": "Zahodiť Zmeny?",
+      "description": "Máte neuložené zmeny. Ste si istý, že ich chcete zahodiť?",
+      "cancel": "Pokračovať v Úpravách",
+      "confirm": "Zahodiť Zmeny"
+    },
+    "importantContacts": {
+      "label": "Dôležité Kontakty",
+      "description": "Pridajte kľúčové osoby, ktoré by mal tento strážca kontaktovať",
+      "viewDescription": "V prípade potreby kontaktujte tieto osoby",
+      "add": "Pridať Kontakt",
+      "remove": "Odstrániť",
+      "empty": "Zatiaľ neboli pridané žiadne kontakty. Kliknite na 'Pridať Kontakt' pre pridanie dôležitých osôb.",
+      "name": "Meno",
+      "namePlaceholder": "Celé meno",
+      "relationship": "Vzťah",
+      "relationshipPlaceholder": "napr. Rodinný právnik",
+      "phone": "Telefón",
+      "phonePlaceholder": "+421 900 123 456",
+      "email": "E-mail",
+      "emailPlaceholder": "email@priklad.sk",
+      "notes": "Poznámky",
+      "notesPlaceholder": "Ďalšie informácie"
+    },
+    "funeralWishes": {
+      "label": "Pohrebné Želania",
+      "description": "Vaše preferencie týkajúce sa pohrebných obradov",
+      "placeholder": "Opíšte svoje želania týkajúce sa pohrebu alebo spomienkovej slávnosti..."
+    },
+    "digitalAccounts": {
+      "label": "Digitálne Účty",
+      "description": "Pokyny na zaobchádzanie s vašimi online účtami",
+      "placeholder": "Uveďte svoje digitálne účty a ako by sa s nimi malo zaobchádzať..."
+    },
+    "documentLocations": {
+      "label": "Umiestnenie Dokumentov",
+      "description": "Kde nájsť dôležité dokumenty",
+      "placeholder": "Opíšte, kde sa nachádzajú dôležité dokumenty..."
+    },
+    "personalMessages": {
+      "label": "Osobné Správy",
+      "description": "Osobné správy pre tohto strážcu",
+      "placeholder": "Napíšte osobnú správu tomuto strážcovi..."
+    },
+    "practicalInstructions": {
+      "label": "Praktické Pokyny",
+      "description": "Okamžité kroky a zodpovednosti",
+      "placeholder": "Uveďte praktické úlohy a okamžité kroky..."
+    },
+    "notFound": {
+      "title": "Playbook sa Nenašiel",
+      "description": "Playbook, ktorý hľadáte, ešte nebol vytvorený."
+    },
+    "subtitle": {
+      "edit": "Vytvorte osobné pokyny a informácie pre tohto strážcu.",
+      "view": "Základné informácie a pokyny pripravené pre vás."
+    },
+    "status": {
+      "empty": "Nezačaté",
+      "draft": "Prebieha",
+      "complete": "Dokončené"
+    },
+    "tabs": {
+      "funeral": "Pohreb",
+      "digital": "Digitálne",
+      "contacts": "Kontakty",
+      "documents": "Dokumenty",
+      "messages": "Správy",
+      "instructions": "Pokyny"
+    },
+    "sections": {
+      "funeral": {
+        "title": "Pohrebné Želania",
+        "description": "Vaše preferencie týkajúce sa pohrebných obradov a spomienkových slávností.",
+        "placeholder": "Opíšte svoje želania týkajúce sa pohrebu alebo spomienkovej slávnosti...\n\nNapríklad:\n- Typ obradu (náboženský, svetský, oslava života)\n- Preferencie pohrebu alebo kremácie\n- Preferencie miesta\n- Hudba, čítania alebo špeciálne požiadavky\n- Kto by mal hovoriť alebo sa zúčastniť\n- Akékoľvek špecifické tradície, ktoré treba dodržať"
+      },
+      "digital": {
+        "title": "Zrušenie Digitálnych Účtov",
+        "description": "Pokyny na zaobchádzanie s vašou digitálnou prítomnosťou a online účtami.",
+        "placeholder": "Uveďte svoje digitálne účty a ako by sa s nimi malo zaobchádzať...\n\nNapríklad:\n- Účty na sociálnych sieťach (Facebook, Instagram, LinkedIn)\n- E-mailové účty\n- Cloudové úložisko (Google Drive, Dropbox)\n- Služby predplatného (Netflix, Spotify)\n- Online bankovníctvo a finančné účty\n- Peňaženky s kryptomenami\n- Webové stránky alebo názvy domén"
+      },
+      "contacts": {
+        "title": "Dôležité Kontakty",
+        "description": "Kľúčové osoby, ktoré by mal tento strážca kontaktovať alebo informovať.",
+        "placeholder": "Pridajte dôležité kontakty špecifické pre zodpovednosti tohto strážcu."
+      },
+      "documents": {
+        "title": "Umiestnenie Dokumentov",
+        "description": "Kde nájsť dôležité fyzické a digitálne dokumenty.",
+        "placeholder": "Opíšte, kde sa nachádzajú dôležité dokumenty...\n\nNapríklad:\n- Umiestnenie závetu\n- Poistné zmluvy\n- Listy vlastníctva\n- Informácie o bankovom účte\n- Investičné dokumenty\n- Daňové priznania\n- Heslá a prístupové kódy\n- Umiestnenie a kľúč od bezpečnostnej schránky"
+      },
+      "messages": {
+        "title": "Osobné Správy",
+        "description": "Osobné správy a posledné myšlienky pre tohto strážcu.",
+        "placeholder": "Napíšte osobnú správu tomuto strážcovi...\n\nToto je vaša príležitosť:\n- Vyjadriť svoje pocity a vďačnosť\n- Podeliť sa o dôležité spomienky\n- Poskytnúť usmernenie alebo radu\n- Vysvetliť svoje rozhodnutia\n- Zanechať slová útechy\n- Podeliť sa o svoje nádeje do budúcnosti"
+      },
+      "practical": {
+        "title": "Praktické Pokyny",
+        "description": "Okamžité praktické kroky a zodpovednosti pre tohto strážcu.",
+        "placeholder": "Uveďte praktické úlohy a okamžité kroky...\n\nNapríklad:\n- Kontrolný zoznam na prvých 24-48 hodín\n- Koho informovať ako prvého\n- Naliehavé účty alebo platby\n- Pokyny na starostlivosť (domáce zvieratá, rastliny, majetok)\n- Obchodné záležitosti vyžadujúce pozornosť\n- Naplánované stretnutia na zrušenie\n- Potrebné kľúče a prístupové kódy"
+      }
+    },
+    "contactFields": {
+      "name": "Meno",
+      "namePlaceholder": "Celé meno",
+      "role": "Úloha/Vzťah",
+      "rolePlaceholder": "napr. Rodinný právnik, Účtovník",
+      "phone": "Telefón",
+      "phonePlaceholder": "+421 900 123 456",
+      "email": "E-mail",
+      "emailPlaceholder": "email@priklad.sk",
+      "notes": "Poznámky",
+      "notesPlaceholder": "Ďalšie informácie o tomto kontakte"
+    },
+    "messages": {
+      "autoSaved": "Uložené",
+      "saved": "Playbook úspešne uložený"
+    },
+    "errors": {
+      "loadFailed": "Nepodarilo sa načítať playbook",
+      "saveFailed": "Nepodarilo sa uložiť playbook"
+    }
+  },
+  "app": {
+    "comingSoon": {
+      "heritageVault": "Trezor Dedičstva - Čoskoro",
+      "guardianNetwork": "Sieť Strážcov - Čoskoro"
+    }
+  },
+  "analytics": {
+    "demo": {
+      "startTimer": "Spustiť Časovač",
+      "stopTimer": "Zastaviť Časovač"
+    }
+  },
+  "familyPreparedness": {
+    "tools": {
+      "chooseScenario": "Vyberte núdzový scenár",
+      "cancel": "Zrušiť",
+      "generateGuide": "Vytvoriť Sprievodcu",
+      "generating": "Vytváram...",
+      "printGuide": "Vytlačiť Sprievodcu"
+    }
+  },
+  "upload": {
+    "zone": {
+      "dropHere": "Položte sem svoje dôležité dokumenty",
+      "dropHereActive": "Áno! Položte ich sem",
+      "description": "Zorganizujem všetko pre vás - len potiahnite súbory sem alebo kliknite na prehliadanie",
+      "descriptionActive": "Som pripravený zorganizovať všetko pre vás",
+      "chooseFiles": "Vybrať Súbory",
+      "takePhoto": "Urobiť Fotku",
+      "processingLocally": "Spracovávam lokálne na vašom zariadení",
+      "dragOverlay": {
+        "title": "Položte sem svoje dokumenty",
+        "subtitle": "Postarám sa o ne"
+      }
+    }
+  },
+  "privacy": {
+    "familyAccess": "Správa Prístupu Rodiny (Čoskoro)"
+  },
+  "upgradeCard": {
+    "pricing_1": "/pricing",
+    "defaultButtonText": "Inovovať na Command Package"
+  },
+  "myPossessions": {
+    "my_possessions_1": "Moje majetky",
+    "an_inventory_of_the_important__2": "Inventár dôležitých vecí, ktoré podporujú budúcnosť vašej rodiny.",
+    "family_impact_3": "Rodinný vplyv:",
+    "edit_details_4": "Upraviť podrobnosti",
+    "link_papers_5": "Prepojiť dokumenty (",
+    "assign_access_6": "Priradiť prístup",
+    "add_your_first_7": "Pridať svoj prvý ",
+    "areas": {
+      "home": {
+        "title": "Váš dom a nehnuteľnosť",
+        "description": "Miesta, ktoré poskytujú útočisko a vytvárajú spomienky.",
+        "emptyState": "Dokumentujte svoju nehnuteľnosť na zabezpečenie útočiska vašej rodiny.",
+        "addButton": "Nehnuteľnosť"
+      },
+      "savings": {
+        "title": "Vaše úspory a investície",
+        "description": "Finančný základ, ktorý ste vybudovali pre budúcnosť vašej rodiny.",
+        "emptyState": "Zaznamenajte svoje finančné účty, aby vaša rodina mohla pristúpiť k prostriedkom, keď je potrebné.",
+        "addButton": "Účet"
+      },
+      "business": {
+        "title": "Váš podnik",
+        "description": "Práca, ktorá podporuje vašu rodinu a vytvára vaše profesionálne dedičstvo.",
+        "emptyState": "Dokumentujte podrobnosti o svojom podnikaní na zabezpečenie plynulého nástupníctva a pokračujúceho príjmu.",
+        "addButton": "Podnikanie"
+      },
+      "valuables": {
+        "title": "Vaše cennosti a zbierky",
+        "description": "Položky finančnej alebo sentimentálnej hodnoty, ktoré vyžadujú špeciálnu pozornosť.",
+        "emptyState": "Zoznam cenných položiek, ktoré vyžadujú špeciálne zaobchádzanie alebo majú sentimentálnu hodnotu.",
+        "addButton": "Cennosť"
+      }
+    },
+    "mockData": {
+      "lakeCabin": "Chata pri jazere",
+      "emergencyFund": "Núdzový fond",
+      "yourBusiness": "Váš podnik",
+      "johnsonContracting": "Johnson Contracting LLC",
+      "classicCarCollection": "Zbierka klasických áut"
+    }
+  },
+  "analytics": {
+    "testData": {
+      "dashboardTitleExperiment": "Experiment s názvom nástenky",
+      "onboardingFlowSimplification": "Zjednodušenie onboardingového toku",
+      "variation": "Variácia",
+      "highlyEngaged": "Vysoko zapojený",
+      "moderatelyEngaged": "Stredne zapojený",
+      "atRisk": "V riziku",
+      "dormant": "Neaktívny"
+    },
+    "analyticsDashboard": {
+      "loading_analytics_data_1": "Načítavajú sa analytické údaje...",
+      "analytics_dashboard_2": "Analytická nástenka",
+      "monitor_user_engagement_featur_3": "Sledujte zapojenie používateľov, adopciu funkcií a výkonnosť platformy",
+      "refreshing_4": "Obnovuje sa...",
+      "using_cached_data_5": "Používajú sa cacheované údaje",
+      "from_last_month_6": "z minulého mesiaca",
+      "user_journey_7": "Cesta používateľa",
+      "feature_adoption_8": "Adopcia funkcií",
+      "a_b_tests_9": "A/B testy",
+      "overview": "Prehľad",
+      "user_growth_11": "Rast používateľov",
+      "active_and_new_users_over_time_12": "Aktívni a noví používatelia v čase",
+      "3_3_7": "3 3",
+      "platform_statistics_15": "Štatistiky platformy",
+      "key_platform_metrics_16": "Kľúčové metriky platformy a ukazovatele výkonnosti",
+      "avg_session_duration_17": "Priem. dĺžka relácie",
+      "bounce_rate_18": "Miera okamžitého opustenia",
+      "avg_documents_per_user_19": "Priem. dokumentov na používateľa",
+      "avg_trusted_people_per_user_20": "Priem. dôveryhodných osôb na používateľa",
+      "user_journey_funnel_21": "Funnel cesty používateľa",
+      "track_user_progression_through_22": "Sledujte progresiu používateľov cez kľúčové míľniky",
+      "feature_adoption_rates_23": "Miera adopcie funkcií",
+      "percentage_of_users_using_each_24": "Percento používateľov používajúcich každú funkciu",
+      "sample_size_27": "Veľkosť vzorky: ",
+      "users_duration_28": " používateľov • Trvanie: ",
+      "confidence_29": "% dôvera",
+      "user_segments_30": "Segmenty používateľov",
+      "user_distribution_by_engagemen_31": "Distribúcia používateľov podľa úrovne zapojenia",
+      "chartLabels": {
+        "totalUsers": "Celkoví používatelia",
+        "activeUsers": "Aktívni používatelia",
+        "avgPreparedness": "Priem. pripravenosť",
+        "willsCreated": "Vytvorené závety",
+        "signUp": "Registrácia",
+        "completeOnboarding": "Dokončenie onboardingu",
+        "addFirstPossession": "Pridanie prvého majetku",
+        "addTrustedPerson": "Pridanie dôveryhodnej osoby",
+        "uploadDocument": "Nahranie dokumentu",
+        "generateWill": "Vygenerovanie závetu",
+        "localOnlyModeUsers": "Používatelia režimu len lokálne",
+        "familyHubUsers": "Používatelia rodinného centra",
+        "documentScannerUsers": "Používatelia skenera dokumentov"
+      }
+    }
+  },
+  "notificationSettings": {
+    "notifications_not_supported_1": "Oznámenia nie sú podporované",
+    "your_browser_doesn_t_support_p_2": "Váš prehliadač nepodporuje push oznámenia. Skúste použiť moderný prehliadač ako Chrome, Firefox alebo Edge.",
+    "push_notifications_3": "Push oznámenia",
+    "get_notified_about_important_u_4": "Dostať oznámenia o dôležitých aktualizáciách a pripomenutiach",
+    "enable_notifications_to_receiv_5": "Povoľte oznámenia na prijímanie včasných upozornení o exspirácii dokumentov, aktualizáciách rodiny a pokusoch o núdzový prístup.",
+    "notifications_are_enabled_6": "Oznámenia sú povolené",
+    "you_ll_receive_notifications_o_7": "Dostanete oznámenia na tomto zariadení, keď nastanú dôležité udalosti.",
+    "notification_preferences_8": "Predvoľby oznámení",
+    "choose_which_types_of_notifica_9": "Vyberte, aké typy oznámení chcete prijímať",
+    "document_expiration_10": "Exspirácia dokumentov",
+    "get_alerts_when_important_docu_11": "Dostať upozornenia, keď dôležité dokumenty čoskoro exspirujú",
+    "inactivity_reminders_12": "Pripomenutia neaktivity",
+    "periodic_reminders_to_review_a_13": "Periodické pripomenutia na kontrolu a aktualizáciu vašich informácií",
+    "emergency_access_alerts_14": "Upozornenia na núdzový prístup",
+    "notify_me_when_someone_accesse_15": "Upozorniť ma, keď niekto pristúpi k môjmu trezoru v núdzi",
+    "system_updates_16": "Systémové aktualizácie",
+    "new_features_and_important_sys_17": "Nové funkcie a dôležité systémové oznámenia",
+    "test_notifications_18": "Testovacie oznámenia",
+    "send_a_test_notification_to_ve_19": "Odoslať testovacie oznámenie na overenie, že všetko funguje",
+    "send_test_notification_20": "Odoslať testovacie oznámenie",
+    "errors": {
+      "pleaseSignIn": "Prosím, prihláste sa na povolenie oznámení",
+      "failedToEnable": "Nepodarilo sa povoliť oznámenia",
+      "failedToDisable": "Nepodarilo sa zakázať oznámenia"
+    },
+    "messages": {
+      "preferencesUpdated": "Predvoľby oznámení aktualizované"
+    },
+    "buttons": {
+      "enabling": "Povoľuje sa...",
+      "enableNotifications": "Povoliť oznámenia",
+      "disable": "Zakázať"
+    },
+    "testNotification": {
+      "title": "Oznámenia povolené!",
+      "body": "Teraz budete dostávať dôležité aktualizácie o pripravenosti vašej rodiny."
+    }
+  },
+  "logLifeEvent": {
+    "title": "Zaznamenať životnú udalosť",
+    "description": "Vyberte významnú životnú zmenu na vygenerovanie personalizovaného kontrolného zoznamu pre aktualizáciu plánu ochrany vašej rodiny.",
+    "eventTypes": {
+      "married_divorced": "Oženil sa / Rozviedol sa",
+      "new_child": "Má nové dieťa",
+      "bought_sold_home": "Kúpil / Predal dom",
+      "started_business": "Začal podnikať",
+      "trusted_person_passed": "Dôveryhodná osoba zomrela",
+      "job_change": "Zmenil zamestnanie",
+      "moved_location": "Presťahoval sa na nové miesto",
+      "inheritance": "Dostal dedičstvo",
+      "retirement": "Odísť do dôchodku",
+      "health_change": "Významná zmena zdravia",
+      "child_graduated": "Dieťa ukončilo školu / Odíšlo z domu",
+      "career_advancement": "Kariérny postup",
+      "financial_windfall": "Finančný zisk",
+      "debt_change": "Významná zmena dlhu",
+      "insurance_change": "Zmena poistnej zmluvy"
+    },
+    "form": {
+      "title": "Zaznamenať životnú udalosť",
+      "description": "Vyberte významnú životnú zmenu na vygenerovanie personalizovaného kontrolného zoznamu",
+      "eventSelection": "Vybrať životnú udalosť",
+      "eventDescription": "Vyberte životnú udalosť, ktorá najlepšie popisuje vašu súčasnú situáciu",
+      "generateChecklist": "Vygenerovať kontrolný zoznam",
+      "cancel": "Zrušiť",
+      "submit": "Odoslať",
+      "close": "Zavrieť"
+    },
+    "checklist": {
+      "title": "Personalizovaný kontrolný zoznam",
+      "description": "Na základe vašej životnej udalosti sú tu kľúčové položky, ktoré by ste mali skontrolovať a aktualizovať:",
+      "priority": "Priorita",
+      "action": "Akcia",
+      "estimatedTime": "Odhadovaný čas",
+      "high": "Vysoká",
+      "medium": "Stredná",
+      "low": "Nízka",
+      "completed": "Dokončené",
+      "pending": "Čakajúce"
+    },
+    "notifications": {
+      "eventLogged": "Životná udalosť úspešne zaznamenaná",
+      "checklistGenerated": "Personalizovaný kontrolný zoznam vygenerovaný",
+      "errorLogging": "Chyba pri zaznamenávaní životnej udalosti",
+      "reminderSet": "Pripomenutie nastavené pre následné akcie"
+    }
+  }
+}

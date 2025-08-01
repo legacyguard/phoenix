@@ -1,0 +1,24 @@
+{
+  "extends": ["./.eslintrc.json"],
+  "plugins": ["i18n-text"],
+  "rules": {
+    "i18n-text/no-en": [
+      "warn",
+      {
+        "ignoreFiles": [
+          "**/*.test.tsx",
+          "**/*.test.ts",
+          "**/*.spec.tsx",
+          "**/*.spec.ts",
+          "**/ui/**",
+          "**/*.config.js",
+          "**/*.config.ts"
+        ],
+        "ignoreAttribute": ["className", "id", "name", "type", "href", "src", "alt", "key", "data-testid"],
+        "ignoreProperty": ["className", "id", "key", "style"],
+        "ignoreComponent": ["script", "style"],
+        "message": "Hardcoded string found - should use t() function"
+      }
+    ]
+  }
+}
