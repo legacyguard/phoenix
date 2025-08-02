@@ -16,7 +16,7 @@ export type Beneficiary = {
   allocation: number;
   identification?: string;
   alternativeBeneficiary?: string;
-  [key: string]: any;
+  [key: string]: string | number | boolean | undefined;
 };
 
 // Props for the consolidated form
@@ -57,12 +57,24 @@ export const BeneficiariesForm: React.FC<BeneficiariesFormProps> = ({
 }) => {
   const { t } = useTranslation();
 
+  // Always initialize both forms to avoid conditional hook calls
+  const singleForm = useForm<Beneficiary>({
+    resolver: zodResolver(beneficiarySchema),
+    defaultValues: initialDataSingle || { id: '', name: '', allocation: 0 },
+  });
+  
+  const methods = useForm<{ beneficiaries: Beneficiary[] }>({
+    resolver: zodResolver(beneficiariesArraySchema),
+    defaultValues: { beneficiaries },
+  });
+  
+  const { fields, append, remove, update } = useFieldArray({
+    control: methods.control,
+    name: 'beneficiaries',
+  });
+
   // Single-edit mode
   if (singleMode) {
-    const singleForm = useForm<Beneficiary>({
-      resolver: zodResolver(beneficiarySchema),
-      defaultValues: initialDataSingle || { id: '', name: '', allocation: 0 },
-    });
     const { register, handleSubmit, formState: { errors: formErrors, isSubmitting } } = singleForm;
 
     const onFormSubmit = async (data: Beneficiary) => {
@@ -92,14 +104,6 @@ export const BeneficiariesForm: React.FC<BeneficiariesFormProps> = ({
   }
 
   // Multi-edit mode
-  const methods = useForm<{ beneficiaries: Beneficiary[] }>({
-    resolver: zodResolver(beneficiariesArraySchema),
-    defaultValues: { beneficiaries },
-  });
-  const { fields, append, remove, update } = useFieldArray({
-    control: methods.control,
-    name: 'beneficiaries',
-  });
 
   const handleUpdate = (index: number, updates: Partial<Beneficiary>) => {
     update(index, { ...fields[index], ...updates });

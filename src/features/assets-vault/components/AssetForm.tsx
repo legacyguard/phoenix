@@ -19,7 +19,7 @@ export type AssetField = {
   options?: Array<{ label: string; value: string }>; // for select fields in the future
 };
 
-export type AssetFormData = Record<string, any>;
+export type AssetFormData = Record<string, string | number | boolean>;
 
 export interface AssetFormProps {
   onSubmit: (data: AssetFormData) => void;
@@ -51,14 +51,28 @@ export const AssetForm: React.FC<AssetFormProps> = ({
     if (schema) return schema;
     const shape: ZodRawShape = {};
     fields.forEach(field => {
-      let zodField = z.string();
-      if (field.required) {
-        zodField = zodField.min(1, { message: t('validation.errors.requiredField') });
-      }
       if (field.type === 'number') {
-        zodField = z.preprocess(val => (val === '' ? undefined : Number(val)), z.number({ invalid_type_error: t('validation.errors.mustBeNumber') }));
+        if (field.required) {
+          shape[field.name] = z.preprocess(
+            val => (val === '' ? undefined : Number(val)),
+            z.number({
+              required_error: t('validation.errors.requiredField'),
+              invalid_type_error: t('validation.errors.mustBeNumber')
+            })
+          );
+        } else {
+          shape[field.name] = z.preprocess(
+            val => (val === '' ? undefined : Number(val)),
+            z.number({ invalid_type_error: t('validation.errors.mustBeNumber') }).optional()
+          );
+        }
+      } else {
+        let zodField = z.string();
+        if (field.required) {
+          zodField = zodField.min(1, { message: t('validation.errors.requiredField') });
+        }
+        shape[field.name] = zodField;
       }
-      shape[field.name] = zodField;
     });
     return z.object(shape);
   }, [fields, schema, t]);
