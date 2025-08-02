@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { ProgressService } from '../services/ProgressService';
-import { LifeEventService } from '../services/LifeEventService';
+import { ProgressService } from '@/services/ProgressService';
+import { LifeEventService } from '@/services/LifeEventService';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Progress } from '@/components/ui/progress';

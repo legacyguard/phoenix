@@ -23,7 +23,7 @@ import {
 'lucide-react';
 import { format, formatDistanceToNow } from 'date-fns';
 import { TimeCapsuleMessage } from '@/types/timeCapsule';
-import { CreateTimeCapsuleModal } from './CreateTimeCapsuleModal';
+import { CreateTimeCapsuleModal } from '@/components/CreateTimeCapsuleModal';
 import { supabase } from '@/lib/supabase';
 import { toast } from 'sonner';
 

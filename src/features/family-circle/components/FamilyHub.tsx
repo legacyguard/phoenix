@@ -11,7 +11,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Shield, Users, Clock, Send, AlertTriangle, CheckCircle2, Wrench } from 'lucide-react';
 import { toast } from 'sonner';
 import { useTranslation } from 'react-i18next';
-import FamilyPreparednessTools from './FamilyPreparednessTools';
+import FamilyPreparednessTools from '@/components/FamilyPreparednessTools';
 
 // Define the access levels
 type AccessLevel = 'none' | 'emergency_only' | 'limited_info' | 'full_access';
