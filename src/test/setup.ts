@@ -5,9 +5,12 @@ import { mockSupabaseClient } from './mocks/supabase';
 // Mock environment variables for tests
 vi.stubEnv('VITE_SUPABASE_URL', 'https://test.supabase.co');
 vi.stubEnv('VITE_SUPABASE_ANON_KEY', 'test-anon-key');
+vi.stubEnv('NEXT_PUBLIC_SUPABASE_URL', 'https://test.supabase.co');
+vi.stubEnv('SUPABASE_SERVICE_ROLE_KEY', 'test-service-role-key');
 vi.stubEnv('VITE_CLERK_PUBLISHABLE_KEY', 'test-clerk-key');
 vi.stubEnv('VITE_APP_URL', 'http://localhost:3000');
 vi.stubEnv('VITE_ENCRYPTION_KEY', 'test-encryption-key');
+vi.stubEnv('VITE_OPENAI_API_KEY', 'test-openai-key');
 
 // Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
@@ -41,7 +44,7 @@ global.ResizeObserver = vi.fn().mockImplementation(() => ({
 // Suppress console errors during tests (can be removed for debugging)
 const originalError = console.error;
 beforeAll(() => {
-  console.error = (...args: Array<Record<string, unknown>>) => {
+  console.error = (...args: any[]) => {
     if (
       typeof args[0] === 'string' &&
       args[0].includes('Warning: ReactDOM.render')

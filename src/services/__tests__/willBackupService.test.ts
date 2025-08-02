@@ -2,13 +2,15 @@ import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import crypto from 'crypto';
 import { willBackupService } from '../willBackupService';
 
-vi.mock('@/lib/supabase', () => ({
-  supabase: {
-    storage: {
-      from: vi.fn(),
-    },
+const mockSupabaseClient = {
+  storage: {
     from: vi.fn(),
   },
+  from: vi.fn(),
+};
+
+vi.mock('@/lib/supabase', () => ({
+  supabase: mockSupabaseClient,
 }));
 
 // Mock crypto module

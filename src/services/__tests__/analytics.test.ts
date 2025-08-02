@@ -3,12 +3,13 @@ import { AnalyticsService } from '../analytics';
 
 // Mock the supabase client
 const mockInsert = vi.fn();
+const mockSelect = vi.fn(() => ({
+  eq: vi.fn(() => ({
+    single: vi.fn()
+  }))
+}));
 const mockFrom = vi.fn(() => ({
-  select: vi.fn(() => ({
-    eq: vi.fn(() => ({
-      single: vi.fn()
-    }))
-  })),
+  select: mockSelect,
   insert: mockInsert
 }));
 
@@ -56,16 +57,16 @@ describe('AnalyticsService', () => {
     vi.clearAllMocks();
     mockSessionStorage.getItem.mockReturnValue(null);
     mockLocalStorage.getItem.mockReturnValue('true'); // Consent given by default
-    (global.fetch as jest.MockedFunction<typeof fetch>).mockResolvedValue({
+    (global.fetch as any).mockResolvedValue({
       ok: true,
       json: () => Promise.resolve({ success: true }),
-    });
+    } as Response);
     
     // Setup default insert mock behavior
     mockInsert.mockResolvedValue({ error: null });
     
     // Reset the singleton instance
-    (AnalyticsService as { instance?: AnalyticsService }).instance = undefined;
+    (AnalyticsService as any).instance = undefined;
     analyticsService = AnalyticsService.getInstance();
   });
 
@@ -250,7 +251,7 @@ describe('AnalyticsService', () => {
 
   describe('Error Handling', () => {
     it('should handle network errors gracefully', async () => {
-      (global.fetch as jest.MockedFunction<typeof fetch>).mockRejectedValue(new Error('Network error'));
+      (global.fetch as any).mockRejectedValue(new Error('Network error'));
       const service = AnalyticsService.getInstance();
       
       // Should not throw an error
@@ -258,11 +259,11 @@ describe('AnalyticsService', () => {
     });
 
     it('should handle API errors gracefully', async () => {
-      (global.fetch as jest.MockedFunction<typeof fetch>).mockResolvedValue({
+      (global.fetch as any).mockResolvedValue({
         ok: false,
         status: 500,
         statusText: 'Internal Server Error'
-      });
+      } as Response);
       const service = AnalyticsService.getInstance();
       
       // Should not throw an error

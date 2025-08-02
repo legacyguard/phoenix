@@ -40,10 +40,10 @@ describe('PrivacyControlPanel', () => {
 
   beforeEach(() => {
     vi.clearAllMocks();
-    (global.fetch as unknown as jest.MockedFunction<typeof fetch>).mockResolvedValue({
+    (global.fetch as any).mockResolvedValue({
       ok: true,
       json: () => Promise.resolve(mockSettings),
-    });
+    } as Response);
   });
 
   it('should render the privacy control panel', async () => {
@@ -57,7 +57,8 @@ describe('PrivacyControlPanel', () => {
   it('should display loading state initially', () => {
     render(<PrivacyControlPanel />);
     
-    expect(screen.getByRole('img', { hidden: true })).toBeInTheDocument();
+    // Look for the loading spinner SVG by class name instead of role
+    expect(document.querySelector('.lucide-loader-circle')).toBeInTheDocument();
   });
 
   it('should load and display privacy settings', async () => {
@@ -113,7 +114,7 @@ describe('PrivacyControlPanel', () => {
     const user = userEvent.setup();
     const { toast } = await import('sonner');
     
-    (global.fetch as unknown as jest.MockedFunction<typeof fetch>)
+    (global.fetch as any)
       .mockResolvedValueOnce({
         ok: true,
         json: () => Promise.resolve(mockSettings),
@@ -149,7 +150,7 @@ describe('PrivacyControlPanel', () => {
     const user = userEvent.setup();
     const { toast } = await import('sonner');
     
-    (global.fetch as unknown as jest.MockedFunction<typeof fetch>)
+    (global.fetch as any)
       .mockResolvedValueOnce({
         ok: true,
         json: () => Promise.resolve(mockSettings),
@@ -176,7 +177,7 @@ describe('PrivacyControlPanel', () => {
   it('should handle load error', async () => {
     const { toast } = await import('sonner');
     
-    (global.fetch as unknown as jest.MockedFunction<typeof fetch>).mockResolvedValue({
+    (global.fetch as any).mockResolvedValue({
       ok: false,
       status: 500,
     });
@@ -191,7 +192,7 @@ describe('PrivacyControlPanel', () => {
   it('should show saving state when saving', async () => {
     const user = userEvent.setup();
     
-    (global.fetch as unknown as jest.MockedFunction<typeof fetch>)
+    (global.fetch as any)
       .mockResolvedValueOnce({
         ok: true,
         json: () => Promise.resolve(mockSettings),

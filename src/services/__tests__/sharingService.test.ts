@@ -4,18 +4,30 @@ import type { CreateShareLinkParams } from '@/types/sharing';
 import bcrypt from 'bcryptjs';
 import QRCode from 'qrcode';
 
+const mockSupabaseClient = {
+  auth: {
+    getUser: vi.fn(),
+  },
+  from: vi.fn(),
+  rpc: vi.fn(),
+};
+
 vi.mock('@/lib/supabase', () => ({
-  supabase: {
-    auth: {
-      getUser: vi.fn(),
-    },
-    from: vi.fn(),
-    rpc: vi.fn(),
+  supabase: mockSupabaseClient,
+}));
+
+vi.mock('bcryptjs', () => ({
+  default: {
+    hash: vi.fn(),
+    compare: vi.fn(),
   },
 }));
 
-vi.mock('bcryptjs');
-vi.mock('qrcode');
+vi.mock('qrcode', () => ({
+  default: {
+    toDataURL: vi.fn(),
+  },
+}));
 
 // Mock environment variables
 vi.stubEnv('VITE_SUPABASE_RPC_TOKEN_FUNC', 'generate_share_token');
@@ -68,7 +80,7 @@ describe('SharingService', () => {
         password: 'mypassword',
       };
 
-      bcrypt.hash.mockResolvedValue('hashed-password');
+      (bcrypt.hash as any).mockResolvedValue('hashed-password');
 
       const result = await sharingService.createShareLink(linkParams);
 
@@ -153,9 +165,26 @@ describe('SharingService', () => {
         password_hash: 'hashed-password'
       };
 
-      bcrypt.compare.mockResolvedValue(true);
+      (bcrypt.compare as any).mockResolvedValue(true);
 
-      vi.spyOn(sharingService, 'getShareLinkByToken').mockResolvedValue(mockLink);
+      const fullMockLink = {
+        id: 'share-123',
+        token: 'secured-token',
+        password_hash: 'hashed-password',
+        user_id: 'user-123',
+        content_type: 'document' as const,
+        content_id: 'doc-123',
+        view_count: 0,
+        settings: {},
+        created_at: new Date().toISOString(),
+        updated_at: new Date().toISOString(),
+        expires_at: null,
+        max_views: null,
+        title: 'Test',
+        description: null,
+      };
+
+      vi.spyOn(sharingService, 'getShareLinkByToken').mockResolvedValue(fullMockLink);
 
       const isValid = await sharingService.validateSharePassword('secured-token', 'correctpassword');
 
@@ -165,7 +194,7 @@ describe('SharingService', () => {
 
   describe('generateQRCode', () => {
     it('should generate QR code for a share URL', async () => {
-      QRCode.toDataURL.mockResolvedValue('data:image/png;base64,exampleQrCode');
+      (QRCode.toDataURL as any).mockResolvedValue('data:image/png;base64,exampleQrCode');
 
       const qrCode = await sharingService.generateQRCode('http://example.com');
 
