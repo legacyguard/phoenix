@@ -20,7 +20,13 @@ global.crypto = {
     }
     return array;
   },
-} as Record<string, unknown>;
+  subtle: {} as SubtleCrypto,
+  randomUUID: () => 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+    const r = Math.random() * 16 | 0;
+    const v = c === 'x' ? r : (r & 0x3 | 0x8);
+    return v.toString(16);
+  }) as `${string}-${string}-${string}-${string}-${string}`,
+} as unknown as Crypto;
 
 describe('WillGenerator Service', () => {
   const mockUserId = 'test-user-123';
@@ -83,7 +89,7 @@ describe('WillGenerator Service', () => {
     it('should include special requirements for specific countries', () => {
       // Slovakia requires handwritten will
       const skRequirements = WILL_REQUIREMENTS['SK'];
-      expect(skRequirements.specialRequirements).toContain('handwritten');
+      expect(skRequirements.specialRequirements).toContain('Must be handwritten');
       
       // Germany requires notarization for certain cases
       const deRequirements = WILL_REQUIREMENTS['DE'];
@@ -207,10 +213,13 @@ describe('WillGenerator Service', () => {
 
 // Helper function for validation
 function validateWillData(data: Record<string, unknown>): boolean {
-  return (
-    data.user?.full_name &&
-    data.user?.date_of_birth &&
-    data.user?.address &&
-    data.beneficiaries?.length > 0
+  const user = data.user as Record<string, unknown>;
+  const beneficiaries = data.beneficiaries as unknown[];
+  
+  return !!(
+    user?.full_name &&
+    user?.date_of_birth &&
+    user?.address &&
+    beneficiaries?.length > 0
   );
 }

@@ -21,18 +21,21 @@ describe('Annual Review Service', () => {
 
   describe('Review Identification', () => {
     it('should identify accounts that have never been reviewed', async () => {
-      const mockProfiles = [
-        { id: 'user1', last_review_date: null, created_at: '2023-01-01' },
-        { id: 'user2', last_review_date: null, created_at: '2023-06-01' },
-      ];
+      const mockProfile = {
+        id: mockUserId,
+        last_review_date: null,
+        created_at: '2023-01-01'
+      };
 
       vi.mocked(supabase.from).mockReturnValue({
         select: vi.fn().mockReturnValue({
-          is: vi.fn().mockResolvedValue({ data: mockProfiles, error: null }),
+          eq: vi.fn().mockReturnValue({
+            single: vi.fn().mockResolvedValue({ data: mockProfile, error: null }),
+          }),
         }),
       } as Record<string, unknown>);
 
-      const service = new LifeMilestoneTriggers(supabase as Record<string, unknown>);
+      const service = new LifeMilestoneTriggers(supabase as unknown as Record<string, unknown>);
       const needsReview = await service.checkForAnnualReview(mockUserId);
       
       expect(needsReview).toBe(true);
@@ -56,7 +59,7 @@ describe('Annual Review Service', () => {
         }),
       } as Record<string, unknown>);
 
-      const service = new LifeMilestoneTriggers(supabase as Record<string, unknown>);
+      const service = new LifeMilestoneTriggers(supabase as unknown as Record<string, unknown>);
       const needsReview = await service.checkForAnnualReview(mockUserId);
       
       expect(needsReview).toBe(true);
@@ -79,7 +82,7 @@ describe('Annual Review Service', () => {
         }),
       } as Record<string, unknown>);
 
-      const service = new LifeMilestoneTriggers(supabase as Record<string, unknown>);
+      const service = new LifeMilestoneTriggers(supabase as unknown as Record<string, unknown>);
       const needsReview = await service.checkForAnnualReview(mockUserId);
       
       expect(needsReview).toBe(false);
@@ -88,7 +91,7 @@ describe('Annual Review Service', () => {
 
   describe('Review Notifications', () => {
     it('should send notification for overdue review', async () => {
-      const service = new LifeMilestoneTriggers(supabase as Record<string, unknown>);
+      const service = new LifeMilestoneTriggers(supabase as unknown as Record<string, unknown>);
       const mockSendNotification = vi.spyOn(service, 'sendReviewNotification');
       
       // Mock overdue profile
@@ -115,7 +118,7 @@ describe('Annual Review Service', () => {
 });
 
 describe('Life Event Checklist Generator', () => {
-  const service = new LifeMilestoneTriggers(supabase as Record<string, unknown>);
+  const service = new LifeMilestoneTriggers(supabase as unknown as Record<string, unknown>);
 
   describe('New Child Event', () => {
     it('should generate complete checklist for new child', () => {
@@ -262,11 +265,12 @@ describe('Life Event Checklist Generator', () => {
         insert: mockInsert,
       } as Record<string, unknown>);
 
-      await service.saveLifeEventChecklist(mockUserId, 'new_child');
+      const testUserId = 'test-user-123';
+      await service.saveLifeEventChecklist(testUserId, 'new_child');
       
       expect(mockInsert).toHaveBeenCalledWith(
         expect.objectContaining({
-          user_id: mockUserId,
+          user_id: testUserId,
           event_type: 'new_child',
           checklist_items: expect.any(Array),
         })

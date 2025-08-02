@@ -1,5 +1,5 @@
 import React from 'react';
-import { LegacyBriefing } from '@/components/LegacyBriefing';
+import { LegacyBriefing } from '@/features/legacy-briefing/components/LegacyBriefing';
 
 const LegacyBriefingPage: React.FC = () => {
   return (

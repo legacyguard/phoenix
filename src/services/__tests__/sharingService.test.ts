@@ -4,17 +4,19 @@ import type { CreateShareLinkParams } from '@/types/sharing';
 import bcrypt from 'bcryptjs';
 import QRCode from 'qrcode';
 
-const mockSupabaseClient = {
-  auth: {
-    getUser: vi.fn(),
-  },
-  from: vi.fn(),
-  rpc: vi.fn(),
-};
+vi.mock('@/lib/supabase', () => {
+  const mockSupabaseClient = {
+    auth: {
+      getUser: vi.fn(),
+    },
+    from: vi.fn(),
+    rpc: vi.fn(),
+  };
 
-vi.mock('@/lib/supabase', () => ({
-  supabase: mockSupabaseClient,
-}));
+  return {
+    supabase: mockSupabaseClient,
+  };
+});
 
 vi.mock('bcryptjs', () => ({
   default: {
@@ -35,16 +37,20 @@ vi.stubEnv('VITE_SUPABASE_RPC_TOKEN_FUNC', 'generate_share_token');
 const sharingService = SharingService.getInstance();
 
 describe('SharingService', () => {
-  beforeEach(() => {
+  let mockSupabase: any;
+
+  beforeEach(async () => {
     vi.clearAllMocks();
+    const { supabase } = await import('@/lib/supabase');
+    mockSupabase = supabase;
   });
 
   describe('createShareLink', () => {
     it('should create a new share link', async () => {
       const mockUserData = { user: { id: 'user-123' } };
-      mockSupabaseClient.auth.getUser.mockResolvedValue({ data: mockUserData, error: null });
+      mockSupabase.auth.getUser.mockResolvedValue({ data: mockUserData, error: null });
 
-      mockSupabaseClient.rpc.mockResolvedValueOnce({
+      mockSupabase.rpc.mockResolvedValueOnce({
         data: 'mock-gen-token'
       });
 
@@ -61,7 +67,7 @@ describe('SharingService', () => {
         updated_at: new Date().toISOString()
       };
 
-      mockSupabaseClient.from.mockReturnValue({
+      mockSupabase.from.mockReturnValue({
         insert: vi.fn().mockReturnThis(),
         select: vi.fn().mockReturnThis(),
         single: vi.fn().mockResolvedValue({
@@ -85,7 +91,7 @@ describe('SharingService', () => {
       const result = await sharingService.createShareLink(linkParams);
 
       expect(result.token).toBe('mock-gen-token');
-      expect(mockSupabaseClient.from).toHaveBeenCalledWith('shared_links');
+      expect(mockSupabase.from).toHaveBeenCalledWith('shared_links');
       expect(bcrypt.hash).toHaveBeenCalledWith('mypassword', 10);
     });
   });
@@ -93,14 +99,14 @@ describe('SharingService', () => {
   describe('getUserShareLinks', () => {
     it('should retrieve all share links for the user', async () => {
       const mockUserData = { user: { id: 'user-123' } };
-      mockSupabaseClient.auth.getUser.mockResolvedValue({ data: mockUserData, error: null });
+      mockSupabase.auth.getUser.mockResolvedValue({ data: mockUserData, error: null });
 
       const mockLinks = [
         { id: 'link-1', content_id: 'doc-123' },
         { id: 'link-2', content_id: 'doc-456' }
       ];
 
-      mockSupabaseClient.from.mockReturnValue({
+      mockSupabase.from.mockReturnValue({
         select: vi.fn().mockReturnThis(),
         eq: vi.fn().mockReturnThis(),
         order: vi.fn().mockResolvedValue({
@@ -110,7 +116,7 @@ describe('SharingService', () => {
 
       const links = await sharingService.getUserShareLinks();
       expect(links).toHaveLength(2);
-      expect(mockSupabaseClient.from).toHaveBeenCalledWith('shared_links');
+      expect(mockSupabase.from).toHaveBeenCalledWith('shared_links');
     });
   });
 
@@ -123,7 +129,7 @@ describe('SharingService', () => {
         view_count: 0
       };
 
-      mockSupabaseClient.from.mockReturnValue({
+      mockSupabase.from.mockReturnValue({
         select: vi.fn().mockReturnThis(),
         eq: vi.fn().mockReturnThis(),
         is: vi.fn().mockReturnThis(),
@@ -134,7 +140,7 @@ describe('SharingService', () => {
       });
 
       const link = await sharingService.getShareLinkByToken('share-token');
-      expect(link).toBeNull(); // The mock returns null by default
+      expect(link).toEqual(mockLink);
     });
 
     it('should return null for expired link', async () => {
@@ -143,7 +149,7 @@ describe('SharingService', () => {
         expires_at: new Date(Date.now() - 10000).toISOString(),
       };
 
-      mockSupabaseClient.from.mockReturnValue({
+      mockSupabase.from.mockReturnValue({
         select: vi.fn().mockReturnThis(),
         eq: vi.fn().mockReturnThis(),
         is: vi.fn().mockReturnThis(),
@@ -202,4 +208,3 @@ describe('SharingService', () => {
     });
   });
 });
-

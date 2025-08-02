@@ -32,7 +32,7 @@ import {
   Lock } from
 'lucide-react';
 import { toast } from 'sonner';
-import { VideoRecorder } from '@/components/features/TimeCapsule/VideoRecorder';
+import { VideoRecorder } from '@/features/time-capsule/components/VideoRecorder';
 import { TimeCapsuleMessage, MessageType, UnlockCondition } from '@/types/timeCapsule';
 import { useSubscription } from '@/hooks/useSubscription';
 import { Link } from 'react-router-dom';
