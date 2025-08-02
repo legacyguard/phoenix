@@ -32,7 +32,7 @@ const Register = React.lazy(() => import("./pages/Register"));
 const Dashboard = React.lazy(() => import("./pages/Dashboard"));
 const AssetDetail = React.lazy(() => import("./pages/AssetDetail").then(m => ({ default: m.AssetDetail })));
 const Manual = React.lazy(() => import("./pages/Manual").then(m => ({ default: m.Manual })));
-const Will = React.lazy(() => import("./pages/Will").then(m => ({ default: m.Will })));
+const Will = React.lazy(() => import("./features/will-generator/components/WillGenerator").then(m => ({ default: m.default })));
 const InviteAcceptance = React.lazy(() => import("./pages/InviteAcceptance").then(m => ({ default: m.InviteAcceptance })));
 const GuardianView = React.lazy(() => import('@/pages/GuardianView').then(m => ({ default: m.GuardianView })));
 const TestError = React.lazy(() => import('@/pages/TestError'));

@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import { WillTemplateService } from '@/services/WillTemplateService';
+import { WillTemplateService } from '@/features/will-generator/api/WillTemplateService';
 import { supabase } from '@/lib/supabase';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
