@@ -19,7 +19,7 @@ export interface Checklist {
 // Mock database interface
 export const db = {
   accounts: {
-    where: (field: string, value: any): Account[] => {
+    where: (field: string, value: string | number | boolean): Account[] => {
       // Stub implementation
       return [];
     },

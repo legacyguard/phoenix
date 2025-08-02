@@ -1,9 +1,11 @@
 import { createClient } from '@supabase/supabase-js';
 
-export class LifeMilestoneTriggers {
-  private supabase: any;
+import { SupabaseClient } from '@supabase/supabase-js';
 
-  constructor(supabaseClient?: any) {
+export class LifeMilestoneTriggers {
+  private supabase: SupabaseClient;
+
+  constructor(supabaseClient?: SupabaseClient) {
     if (supabaseClient) {
       this.supabase = supabaseClient;
     } else {

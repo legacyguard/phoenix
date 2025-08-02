@@ -37,7 +37,7 @@ vi.stubEnv('VITE_SUPABASE_RPC_TOKEN_FUNC', 'generate_share_token');
 const sharingService = SharingService.getInstance();
 
 describe('SharingService', () => {
-  let mockSupabase: any;
+  let mockSupabase: any; // Using any for test mocks as the mock structure is complex
 
   beforeEach(async () => {
     vi.clearAllMocks();
