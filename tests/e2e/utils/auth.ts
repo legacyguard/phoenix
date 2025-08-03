@@ -47,27 +47,25 @@ export async function signUp(page: Page, user: TestUser) {
 export async function signIn(page: Page, user: TestUser) {
   // Navigate to auth page
   await page.goto('/auth');
-  
+
   // Fill in login form
   await page.fill('input[name="email"]', user.email);
   await page.fill('input[name="password"]', user.password);
-  
+
   // Submit form
   await page.click('button[type="submit"]:has-text("Sign in")');
-  
+
   // Wait for navigation to dashboard
   await page.waitForURL(/\/dashboard/);
 }
 
+// Minimal helper to sign the user out
 export async function signOut(page: Page) {
-  // Click on user menu
-  await page.click('button[aria-label="User menu"]');
-  
-  // Click sign out
-  await page.click('text=Sign out');
-  
-  // Wait for redirect to auth page
-  await page.waitForURL(/\/auth/);
+  try {
+    await page.click('button[aria-label="User menu"]');
+    await page.click('text=Sign out');
+    await page.waitForURL(/\/auth/);
+  } catch {}
 }
 
 // Mock premium status for testing

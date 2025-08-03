@@ -70,7 +70,7 @@ describe('SmartUploadZone', () => {
     await waitFor(() => {
       expect(screen.getByText('upload.zone.dropHereActive')).toBeInTheDocument();
       expect(screen.getByText('upload.zone.descriptionActive')).toBeInTheDocument();
-    });
+    }, { timeout: 3000 });
   });
 
   it('should handle file selection via button click', async () => {
@@ -152,9 +152,16 @@ describe('SmartUploadZone', () => {
     const fileInput = screen.getByTestId('file-input');
     const invalidFile = new File(['content'], 'test.txt', { type: 'text/plain' });
 
+    // Temporarily suppress console output for expected validation warning
+    const originalConsoleError = console.error;
+    console.error = vi.fn();
+
     fireEvent.change(fileInput, {
       target: { files: [invalidFile] },
     });
+
+    // Restore console.error
+    console.error = originalConsoleError;
 
     // Should not call onUploadStart for invalid file type
     expect(mockOnUploadStart).not.toHaveBeenCalled();

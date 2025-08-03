@@ -3,7 +3,11 @@ import { createClient } from '@supabase/supabase-js';
 import CryptoJS from 'crypto-js';
 import { checkAndUnlockTimeCapsules } from '@/services/timeCapsuleDelivery';
 import { POST as createTimeCapsule, GET as getTimeCapsules } from '@/app/api/time-capsule/route';
-import { NextRequest } from 'next/server';
+// Mock NextRequest and NextResponse for testing
+const NextRequest = vi.fn();
+const NextResponse = {
+  json: (data: any, init?: ResponseInit) => ({ json: async () => data, ...init }),
+};
 
 // Mock Supabase client
 vi.mock('@supabase/supabase-js', () => ({

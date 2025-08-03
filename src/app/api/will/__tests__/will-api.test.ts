@@ -1,5 +1,9 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest';
-import { NextRequest } from 'next/server';
+// Mock NextRequest and NextResponse for testing
+const NextRequest = vi.fn();
+const NextResponse = {
+  json: (data: any, init?: ResponseInit) => ({ json: async () => data, ...init }),
+};
 import { GET as getWillList } from '../list/route';
 import { GET as getWill, PUT as updateWill, DELETE as deleteWill } from '../[id]/route';
 import { POST as generateWill } from '../generate/route';

@@ -43,18 +43,33 @@ global.ResizeObserver = vi.fn().mockImplementation(() => ({
 
 // Suppress console errors during tests (can be removed for debugging)
 const originalError = console.error;
+const originalWarn = console.warn;
 beforeAll(() => {
   console.error = (...args: unknown[]) => {
     if (
       typeof args[0] === 'string' &&
-      args[0].includes('Warning: ReactDOM.render')
+      (args[0].includes('Warning: ReactDOM.render') || 
+       args[0].includes('Could not parse CSS') ||
+       args[0].includes('act()'))
     ) {
       return;
     }
     originalError.call(console, ...args);
   };
+  
+  console.warn = (...args: unknown[]) => {
+    if (
+      typeof args[0] === 'string' &&
+      (args[0].includes('act()') || 
+       args[0].includes('was not wrapped in act'))
+    ) {
+      return;
+    }
+    originalWarn.call(console, ...args);
+  };
 });
 
 afterAll(() => {
   console.error = originalError;
+  console.warn = originalWarn;
 });

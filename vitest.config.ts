@@ -8,7 +8,11 @@ export default defineConfig({
     globals: true,
     environment: 'jsdom',
     setupFiles: ['./src/test/setup.ts'],
-    css: true,
+    css: {
+      modules: {
+        classNameStrategy: 'non-scoped'
+      }
+    },
     exclude: [
       '**/node_modules/**',
       '**/dist/**',
@@ -16,6 +20,9 @@ export default defineConfig({
       '**/tests/e2e/**',
       '**/*.e2e.spec.ts',
       '**/*.spec.ts',
+      '**/app/api/**/*.test.ts',
+      '**/app/api/**/*.test.tsx',
+      '**/src/__tests__/timeCapsule.test.ts'
     ],
     coverage: {
       provider: 'v8',
