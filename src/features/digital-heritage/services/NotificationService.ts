@@ -6,7 +6,7 @@ export interface NotificationPayload {
   message: string;
   type: 'email' | 'sms' | 'push';
   priority: 'low' | 'medium' | 'high';
-  metadata?: Record<string, any>;
+  metadata?: Record<string, unknown>;
 }
 
 export interface EmailNotification {
@@ -27,7 +27,7 @@ export interface PushNotification {
   tokens: string[];
   title: string;
   body: string;
-  data?: Record<string, any>;
+  data?: Record<string, unknown>;
   priority: 'low' | 'medium' | 'high';
 }
 
@@ -146,7 +146,7 @@ export class NotificationService {
     await Promise.all(promises);
   }
 
-  async getNotificationHistory(userId: string, limit: number = 50): Promise<any[]> {
+  async getNotificationHistory(userId: string, limit: number = 50): Promise<Array<Record<string, unknown>>> {
     const { data, error } = await supabase
       .from('notifications')
       .select('*')
@@ -191,7 +191,7 @@ export class NotificationService {
   async sendEscalationAlert(
     recipients: string[],
     switchName: string,
-    step: any
+    step: { message: string }
   ): Promise<void> {
     const message = `Escalation step triggered for dead man switch "${switchName}": ${step.message}`;
     

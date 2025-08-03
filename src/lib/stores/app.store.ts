@@ -10,6 +10,16 @@ export interface User {
   avatar?: string;
 }
 
+export interface Document {
+  id: string;
+  title: string;
+  type: string;
+  createdAt: string;
+  updatedAt: string;
+  content?: unknown;
+  metadata?: Record<string, unknown>;
+}
+
 export interface AppState {
   // User state
   user: User | null;
@@ -22,8 +32,8 @@ export interface AppState {
   language: string;
   
   // Document state
-  documents: any[];
-  selectedDocument: any | null;
+  documents: Document[];
+  selectedDocument: Document | null;
   
   // Error state
   error: string | null;
@@ -41,8 +51,8 @@ export interface AppActions {
   setLanguage: (language: string) => void;
   
   // Document actions
-  setDocuments: (documents: any[]) => void;
-  setSelectedDocument: (document: any | null) => void;
+  setDocuments: (documents: Document[]) => void;
+  setSelectedDocument: (document: Document | null) => void;
   
   // Error actions
   setError: (error: string | null) => void;

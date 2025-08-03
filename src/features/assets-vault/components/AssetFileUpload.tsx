@@ -54,29 +54,6 @@ export const AssetFileUpload: React.FC<AssetFileUploadProps> = ({
   const [tagInput, setTagInput] = useState('');
   const [uploading, setUploading] = useState(false);
 
-  const handleDragOver = useCallback((e: React.DragEvent) => {
-    e.preventDefault();
-    setIsDragging(true);
-  }, []);
-
-  const handleDragLeave = useCallback((e: React.DragEvent) => {
-    e.preventDefault();
-    setIsDragging(false);
-  }, []);
-
-  const handleDrop = useCallback((e: React.DragEvent) => {
-    e.preventDefault();
-    setIsDragging(false);
-    
-    const droppedFiles = Array.from(e.dataTransfer.files);
-    addFiles(droppedFiles);
-  }, []);
-
-  const handleFileSelect = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
-    const selectedFiles = Array.from(e.target.files || []);
-    addFiles(selectedFiles);
-  }, []);
-
   const addFiles = useCallback((newFiles: File[]) => {
     const currentCount = files.length;
     const remainingSlots = maxFiles - currentCount;
@@ -95,6 +72,29 @@ export const AssetFileUpload: React.FC<AssetFileUploadProps> = ({
 
     setFiles(prev => [...prev, ...filesToAdd]);
   }, [files.length, maxFiles, t]);
+
+  const handleDragOver = useCallback((e: React.DragEvent) => {
+    e.preventDefault();
+    setIsDragging(true);
+  }, []);
+
+  const handleDragLeave = useCallback((e: React.DragEvent) => {
+    e.preventDefault();
+    setIsDragging(false);
+  }, []);
+
+  const handleDrop = useCallback((e: React.DragEvent) => {
+    e.preventDefault();
+    setIsDragging(false);
+    
+    const droppedFiles = Array.from(e.dataTransfer.files);
+    addFiles(droppedFiles);
+  }, [addFiles]);
+
+  const handleFileSelect = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+    const selectedFiles = Array.from(e.target.files || []);
+    addFiles(selectedFiles);
+  }, [addFiles]);
 
   const removeFile = useCallback((fileId: string) => {
     setFiles(prev => prev.filter(f => f.id !== fileId));

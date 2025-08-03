@@ -16,12 +16,12 @@ export interface UseApiState<T> {
 }
 
 export interface UseApiActions<T> {
-  execute: (...args: any[]) => Promise<T>;
+  execute: (...args: unknown[]) => Promise<T>;
   reset: () => void;
 }
 
-export function useApi<T = any>(
-  apiCall: (...args: any[]) => Promise<T>,
+export function useApi<T = unknown>(
+  apiCall: (...args: unknown[]) => Promise<T>,
   options: UseApiOptions<T> = {}
 ): UseApiState<T> & UseApiActions<T> {
   const [data, setData] = useState<T | null>(null);
@@ -29,7 +29,7 @@ export function useApi<T = any>(
   const [error, setError] = useState<ApiClientError | null>(null);
   const abortControllerRef = useRef<AbortController | null>(null);
 
-  const execute = useCallback(async (...args: any[]) => {
+  const execute = useCallback(async (...args: unknown[]) => {
     try {
       setLoading(true);
       setError(null);
@@ -73,9 +73,9 @@ export function useApi<T = any>(
   };
 }
 
-export function useGet<T = any>(
+export function useGet<T = unknown>(
   url: string,
-  params?: Record<string, any>,
+  params?: Record<string, unknown>,
   options: Omit<UseApiOptions<T>, 'manual'> = {}
 ) {
   return useApi<T>(
@@ -84,27 +84,27 @@ export function useGet<T = any>(
   );
 }
 
-export function usePost<T = any>(
+export function usePost<T = unknown>(
   url: string,
   options: Omit<UseApiOptions<T>, 'manual'> = {}
 ) {
   return useApi<T>(
-    (data: any) => apiClient.post<T>(url, data).then(res => res.data),
+    (data: unknown) => apiClient.post<T>(url, data).then(res => res.data),
     options
   );
 }
 
-export function usePut<T = any>(
+export function usePut<T = unknown>(
   url: string,
   options: Omit<UseApiOptions<T>, 'manual'> = {}
 ) {
   return useApi<T>(
-    (data: any) => apiClient.put<T>(url, data).then(res => res.data),
+    (data: unknown) => apiClient.put<T>(url, data).then(res => res.data),
     options
   );
 }
 
-export function useDelete<T = any>(
+export function useDelete<T = unknown>(
   url: string,
   options: Omit<UseApiOptions<T>, 'manual'> = {}
 ) {

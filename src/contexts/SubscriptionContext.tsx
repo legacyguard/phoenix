@@ -1,38 +1,9 @@
-import React, { createContext, useContext, useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useUser } from '@clerk/clerk-react';
 import { stripeService, SubscriptionStatus } from '@/services/stripeService';
 import { supabase } from '@/lib/supabase';
-export const SubscriptionContext = createContext<{
-  subscriptionStatus: SubscriptionStatus | null;
-  isLoading: boolean;
-  isPremium: boolean;
-  checkAccess: (feature: string) => boolean;
-  refreshSubscription: () => Promise<void>;
-} | undefined>(undefined);
-
-// Feature access mapping
-const FEATURE_ACCESS = {
-  free: [
-    'basic_will',
-    'basic_assets',
-    'basic_guardians'
-  ],
-  premium: [
-    'basic_will',
-    'basic_assets',
-    'basic_guardians',
-    'unlimited_wills',
-    'unlimited_assets',
-    'unlimited_guardians',
-    'document_encryption',
-    'emergency_access',
-    'version_history',
-    'legal_templates',
-    'priority_support',
-    'sharing_links',
-    'advanced_notifications'
-  ]
-};
+import { SubscriptionContext } from './SubscriptionContext.context';
+import { FEATURE_ACCESS } from './SubscriptionContext.constants';
 
 export const SubscriptionProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const { user } = useUser();

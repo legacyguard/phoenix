@@ -1,6 +1,6 @@
 import jsPDF from 'jspdf';
 import type { WillContent, WillRequirements } from '@/types/will';
-import { getLegacyGuardSignatureSVG } from '@/components/LegacyGuardSignature';
+import { getLegacyGuardSignatureSVG } from '@/components/LegacyGuardSignature.utils';
 
 export class PDFGenerationService {
   generateWillPDF(

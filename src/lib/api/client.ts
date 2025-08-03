@@ -2,7 +2,7 @@ import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse, AxiosError } f
 import { createClient } from '@supabase/supabase-js';
 
 // Types
-export interface ApiResponse<T = any> {
+export interface ApiResponse<T = unknown> {
   data: T;
   message?: string;
   status: number;
@@ -11,7 +11,7 @@ export interface ApiResponse<T = any> {
 export interface ApiError {
   message: string;
   code?: string;
-  details?: any;
+  details?: unknown;
   status?: number;
 }
 
@@ -34,10 +34,10 @@ const DEFAULT_RETRY_CONFIG: RetryConfig = {
 // Custom error class
 export class ApiClientError extends Error {
   public readonly code?: string;
-  public readonly details?: any;
+  public readonly details?: unknown;
   public readonly status?: number;
 
-  constructor(message: string, code?: string, details?: any, status?: number) {
+  constructor(message: string, code?: string, details?: unknown, status?: number) {
     super(message);
     this.name = 'ApiClientError';
     this.code = code;
@@ -113,9 +113,9 @@ export class ApiClient {
   }
 
   private transformError(error: AxiosError): ApiClientError {
-    const responseData = error.response?.data as any;
-    const message = responseData?.message || error.message || 'An unexpected error occurred';
-    const code = responseData?.code || error.code;
+    const responseData = error.response?.data as Record<string, unknown> | undefined;
+    const message = (responseData?.message as string) || error.message || 'An unexpected error occurred';
+    const code = (responseData?.code as string) || error.code;
     const details = responseData?.details || responseData;
     const status = error.response?.status;
 
@@ -128,17 +128,17 @@ export class ApiClient {
     return { data: response.data, status: response.status };
   }
 
-  async post<T>(url: string, data?: any, config?: AxiosRequestConfig): Promise<ApiResponse<T>> {
+  async post<T>(url: string, data?: unknown, config?: AxiosRequestConfig): Promise<ApiResponse<T>> {
     const response = await this.client.post<T>(url, data, config);
     return { data: response.data, status: response.status };
   }
 
-  async put<T>(url: string, data?: any, config?: AxiosRequestConfig): Promise<ApiResponse<T>> {
+  async put<T>(url: string, data?: unknown, config?: AxiosRequestConfig): Promise<ApiResponse<T>> {
     const response = await this.client.put<T>(url, data, config);
     return { data: response.data, status: response.status };
   }
 
-  async patch<T>(url: string, data?: any, config?: AxiosRequestConfig): Promise<ApiResponse<T>> {
+  async patch<T>(url: string, data?: unknown, config?: AxiosRequestConfig): Promise<ApiResponse<T>> {
     const response = await this.client.patch<T>(url, data, config);
     return { data: response.data, status: response.status };
   }

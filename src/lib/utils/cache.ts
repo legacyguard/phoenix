@@ -14,7 +14,7 @@ interface CacheItem<T> {
   key: string;
 }
 
-export class CacheManager<T = any> {
+export class CacheManager<T = unknown> {
   private cache: Map<string, CacheItem<T>> = new Map();
   private config: CacheConfig;
 
@@ -91,7 +91,7 @@ export class CacheManager<T = any> {
     const keys = Array.from(this.cache.keys());
     
     switch (this.config.strategy) {
-      case 'LRU':
+      case 'LRU': {
         // Remove oldest accessed item
         let oldestKey = keys[0];
         let oldestTime = this.cache.get(keys[0])!.timestamp;
@@ -105,8 +105,9 @@ export class CacheManager<T = any> {
         }
         this.cache.delete(oldestKey);
         break;
+      }
         
-      case 'LFU':
+      case 'LFU': {
         // Remove least frequently used item
         let lfuKey = keys[0];
         let minAccess = this.cache.get(keys[0])!.accessCount;
@@ -120,6 +121,7 @@ export class CacheManager<T = any> {
         }
         this.cache.delete(lfuKey);
         break;
+      }
         
       case 'FIFO':
         // Remove oldest item (first inserted)
@@ -148,7 +150,7 @@ export class CacheManager<T = any> {
 }
 
 // API response cache
-export class ApiCache extends CacheManager<any> {
+export class ApiCache extends CacheManager<unknown> {
   private static instance: ApiCache;
 
   static getInstance(): ApiCache {
@@ -163,7 +165,7 @@ export class ApiCache extends CacheManager<any> {
   }
 
   // Generate cache key from URL and params
-  generateKey(url: string, params?: any): string {
+  generateKey(url: string, params?: unknown): string {
     const paramsString = params ? JSON.stringify(params) : '';
     return `${url}:${this.hashCode(paramsString)}`;
   }
@@ -179,13 +181,13 @@ export class ApiCache extends CacheManager<any> {
   }
 
   // Cache API response with automatic key generation
-  cacheResponse(url: string, params: any, data: any): void {
+  cacheResponse(url: string, params: unknown, data: unknown): void {
     const key = this.generateKey(url, params);
     this.set(key, data);
   }
 
   // Get cached API response
-  getCachedResponse(url: string, params: any): any | undefined {
+  getCachedResponse(url: string, params: unknown): unknown | undefined {
     const key = this.generateKey(url, params);
     return this.get(key);
   }
@@ -217,7 +219,7 @@ export function useApiCache() {
 }
 
 // Local storage cache for persistent caching
-export class LocalStorageCache<T = any> {
+export class LocalStorageCache<T = unknown> {
   private prefix: string;
 
   constructor(prefix: string = 'app_cache_') {

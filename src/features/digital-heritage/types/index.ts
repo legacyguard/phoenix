@@ -5,13 +5,13 @@ export interface DigitalAsset {
   description?: string;
   value: number;
   currency: string;
-  metadata?: Record<string, any>;
+  metadata?: Record<string, unknown>;
   ownership: {
     owner_id: string;
     backup_contacts?: string[];
     legal_status?: string;
   };
-  transfer_conditions?: any[];
+  transfer_conditions?: TransferCondition[];
   encryption?: {
     algorithm: string;
     key_id: string;
@@ -29,8 +29,8 @@ export interface AssetTransfer {
   to_beneficiary: string;
   transfer_date: string;
   status: TransferStatus;
-  conditions: any[];
-  metadata?: Record<string, any>;
+  conditions: TransferCondition[];
+  metadata?: Record<string, unknown>;
 }
 
 export interface ValueMaximization {
@@ -58,16 +58,16 @@ export interface CreateAssetRequest {
   description?: string;
   value: number;
   currency: string;
-  metadata?: Record<string, any>;
+  metadata?: Record<string, unknown>;
   userId: string;
-  transferConditions?: any[];
+  transferConditions?: TransferCondition[];
 }
 
 export interface UpdateAssetRequest {
   name?: string;
   description?: string;
   value?: number;
-  metadata?: Record<string, any>;
+  metadata?: Record<string, unknown>;
 }
 
 export enum TransferStatus {
@@ -95,11 +95,11 @@ export enum RiskLevel {
 export interface AssetMetadata {
   lastValuationDate?: string;
   valuationMethod?: string;
-  marketData?: any;
+  marketData?: Record<string, unknown>;
   privateKey?: string;
   recoveryPhrase?: string;
   accessInstructions?: string;
-  [key: string]: any;
+  [key: string]: unknown;
 }
 
 export interface Beneficiary {
@@ -108,11 +108,17 @@ export interface Beneficiary {
   email: string;
   relationship: string;
   percentage: number;
-  conditions?: any[];
+  conditions?: TransferCondition[];
 }
 
 export interface ConditionType {
   type: string;
-  parameters: any[];
+  parameters: unknown[];
   description: string;
+}
+
+export interface TransferCondition {
+  type: string;
+  value: unknown;
+  description?: string;
 }

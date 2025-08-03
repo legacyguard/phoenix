@@ -165,7 +165,24 @@ export class NotarizationService {
   }
 
   // Get notarization status
-  async getNotarizationStatus(willId: string): Promise<any> {
+  async getNotarizationStatus(willId: string): Promise<{
+    id: string;
+    will_id: string;
+    user_id: string;
+    country_code: string;
+    preferred_date?: string;
+    preferred_location?: string;
+    status: string;
+    created_at: string;
+    completed_at?: string;
+    notary_details?: {
+      notaryName: string;
+      notaryLicense: string;
+      notarizationDate: string;
+      location: string;
+      witnesses?: string[];
+    };
+  } | null> {
     try {
       const { data, error } = await supabase
         .from('notarization_appointments')

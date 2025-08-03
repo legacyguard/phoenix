@@ -196,37 +196,3 @@ export const ProgressiveLoading: React.FC<{
     </div>
   );
 };
-
-// Hook for managing loading states
-export function useLoadingState(initialState = false) {
-  const [isLoading, setIsLoading] = React.useState(initialState);
-  const [error, setError] = React.useState<string | null>(null);
-
-  const startLoading = () => {
-    setIsLoading(true);
-    setError(null);
-  };
-
-  const stopLoading = () => {
-    setIsLoading(false);
-  };
-
-  const setLoadingError = (message: string) => {
-    setIsLoading(false);
-    setError(message);
-  };
-
-  const reset = () => {
-    setIsLoading(false);
-    setError(null);
-  };
-
-  return {
-    isLoading,
-    error,
-    startLoading,
-    stopLoading,
-    setLoadingError,
-    reset,
-  };
-}

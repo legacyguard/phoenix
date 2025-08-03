@@ -11,14 +11,26 @@ export interface AuthUser {
   imageUrl?: string;
   role: 'user' | 'admin' | 'premium';
   subscriptionStatus: 'free' | 'premium' | 'enterprise';
-  metadata?: Record<string, any>;
+  metadata?: Record<string, unknown>;
 }
 
 class AuthService {
   /**
    * Sync Clerk user with Supabase user profile
    */
-  async syncUserWithSupabase(clerkUser: any): Promise<void> {
+  async syncUserWithSupabase(clerkUser: {
+    id: string;
+    fullName?: string;
+    firstName?: string;
+    lastName?: string;
+    primaryEmailAddress?: { emailAddress: string };
+    emailAddresses?: Array<{ emailAddress: string }>;
+    publicMetadata?: {
+      language?: string;
+      role?: string;
+      subscriptionStatus?: string;
+    };
+  }): Promise<void> {
     if (!clerkUser?.id) return;
 
     try {

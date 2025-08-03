@@ -65,7 +65,9 @@ export async function signOut(page: Page) {
     await page.click('button[aria-label="User menu"]');
     await page.click('text=Sign out');
     await page.waitForURL(/\/auth/);
-  } catch {}
+  } catch {
+    // Ignore errors if already signed out
+  }
 }
 
 // Mock premium status for testing

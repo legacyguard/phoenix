@@ -42,7 +42,7 @@ export function initSentry() {
       if (process.env.NODE_ENV === 'development') {
         const error = hint.originalException;
         if (error && typeof error === 'object' && 'status' in error) {
-          const status = (error as any).status;
+          const status = (error as { status: number }).status;
           if (status >= 400 && status < 500) {
             return null; // Don't send client errors in dev
           }
@@ -73,7 +73,7 @@ export function initSentry() {
 }
 
 // Custom error boundary for React components
-export function logError(error: Error, errorInfo?: any) {
+export function logError(error: Error, errorInfo?: unknown) {
   console.error('Application error:', error);
   
   if (SENTRY_DSN) {
@@ -109,7 +109,7 @@ export function clearUserContext() {
 }
 
 // Custom breadcrumb helper
-export function addBreadcrumb(message: string, category: string, data?: any) {
+export function addBreadcrumb(message: string, category: string, data?: unknown) {
   Sentry.addBreadcrumb({
     message,
     category,

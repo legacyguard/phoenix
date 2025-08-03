@@ -52,7 +52,7 @@ export const useTranslationNamespaces = (
     };
 
     loadRequiredNamespaces();
-  }, [namespaces, i18n.language]);
+  }, [namespaces, i18n.language, i18n]);
 
   return { t, i18n, isLoading, error };
 };

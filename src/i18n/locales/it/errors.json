@@ -16,25 +16,25 @@
   },
   "errorTest": {
     "title": "Test Registrazione Errori",
-    "description": "Test error handling and logging functionality",
+    "description": "Test della gestione degli errori e della funzionalità di registrazione",
     "triggerSyncError": "Attiva Errore Sincrono (ErrorBoundary)",
     "triggerAsyncError": "Attiva Errore Asincrono",
     "logRegularError": "Registra Errore Normale",
     "logCriticalError": "Registra Errore Critico",
     "triggerAlert": "Attiva Avviso (6 Errori Critici)",
     "errorMessages": {
-      "testError": "Test error from ErrorTest component",
-      "testAsyncRejection": "Test async rejection",
-      "manualTestError": "Manual test error",
-      "testCriticalError": "Test critical error",
-      "criticalErrorWithIndex": "Critical error {{index}}"
+      "testError": "Errore di test dal componente ErrorTest",
+      "testAsyncRejection": "Test di rifiuto asincrono",
+      "manualTestError": "Errore di test manuale",
+      "testCriticalError": "Errore critico di test",
+      "criticalErrorWithIndex": "Errore critico {{index}}"
     },
     "descriptions": {
-      "syncError": "Triggers a synchronous error that will be caught by the ErrorBoundary",
-      "asyncError": "Triggers an asynchronous error that will be caught by error handling",
-      "regularError": "Logs a regular error for testing error tracking",
-      "criticalError": "Logs a critical error for testing critical error handling",
-      "multipleErrors": "Triggers multiple critical errors to test alert thresholds"
+      "syncError": "Attiva un errore sincrono che verrà catturato dall'ErrorBoundary",
+      "asyncError": "Attiva un errore asincrono che verrà catturato dalla gestione degli errori",
+      "regularError": "Registra un errore normale per testare il tracciamento degli errori",
+      "criticalError": "Registra un errore critico per testare la gestione degli errori critici",
+      "multipleErrors": "Attiva più errori critici per testare le soglie di allerta"
     },
     "context": {
       "component": "ErrorTest",
@@ -42,11 +42,11 @@
       "severity": "high"
     },
     "notifications": {
-      "errorLogged": "Error logged successfully",
-      "criticalErrorLogged": "Critical error logged successfully",
-      "multipleErrorsTriggered": "Multiple critical errors triggered",
-      "errorBoundaryTriggered": "Error boundary triggered",
-      "asyncErrorCaught": "Async error caught and handled"
+      "errorLogged": "Errore registrato con successo",
+      "criticalErrorLogged": "Errore critico registrato con successo",
+      "multipleErrorsTriggered": "Più errori critici attivati",
+      "errorBoundaryTriggered": "Limite di errore attivato",
+      "asyncErrorCaught": "Errore asincrono catturato e gestito"
     }
   },
   "debug": {
@@ -84,15 +84,15 @@
         "url": "URL:",
         "path": "Percorso:",
         "query": "Query:",
-        "userAgent": "User Agent:",
-        "viewport": "Viewport:"
+        "userAgent": "Agente utente:",
+        "viewport": "Area di visualizzazione:"
       }
     }
   },
   "test": {
     "environment": {
-      "title": "Test Environment Only",
-      "description": "This page is for testing the error logging system. Remove this route before deploying to production."
+      "title": "Solo ambiente di test",
+      "description": "Questa pagina è per testare il sistema di registrazione degli errori. Rimuovi questa rotta prima di distribuire in produzione."
     }
   }
 }

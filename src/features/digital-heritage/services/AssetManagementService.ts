@@ -258,20 +258,20 @@ export class AssetManagementService {
   /**
    * Map database record to DigitalAsset
    */
-  private mapToDigitalAsset(data: any): DigitalAsset {
+  private mapToDigitalAsset(data: Record<string, unknown>): DigitalAsset {
     return {
-      id: data.id,
-      type: data.type,
-      name: data.name,
-      description: data.description,
-      value: data.value,
-      currency: data.currency,
-      metadata: data.metadata || {},
-      ownership: data.ownership || {},
-      transferConditions: data.transfer_conditions || [],
-      encryption: data.encryption || {},
-      createdAt: new Date(data.created_at),
-      updatedAt: new Date(data.updated_at)
+      id: data.id as string,
+      type: data.type as DigitalAsset['type'],
+      name: data.name as string,
+      description: data.description as string,
+      value: data.value as number,
+      currency: data.currency as string,
+      metadata: (data.metadata || {}) as Record<string, unknown>,
+      ownership: (data.ownership || {}) as DigitalAsset['ownership'],
+      transferConditions: (data.transfer_conditions || []) as DigitalAsset['transferConditions'],
+      encryption: (data.encryption || {}) as DigitalAsset['encryption'],
+      createdAt: new Date(data.created_at as string),
+      updatedAt: new Date(data.updated_at as string)
     };
   }
 

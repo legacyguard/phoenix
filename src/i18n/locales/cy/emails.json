@@ -1,35 +1,89 @@
 {
-  "_comment": "Shared translations used across the application",
-  "emailTemplates": {
-    "welcome": {
-      "subject": "Welcome to LegacyGuard - Your Digital Legacy Journey Begins",
-      "greeting": "Welcome {{name}},",
-      "body": "Thank you for joining LegacyGuard. You've taken the first important step in protecting your family's future.",
-      "cta": "Complete Your Life Inventory",
-      "footer": "If you have any questions, our support team is here to help."
-    },
-    "inventoryComplete": {
-      "subject": "Life Inventory Complete - Your Personalized Plan is Ready",
-      "greeting": "Congratulations {{name}},",
-      "body": "You've completed your life inventory! Based on your answers, we've created a personalized action plan to help secure your family's future.",
-      "nextSteps": "Your top 3 priorities:",
-      "cta": "View Your Action Plan",
-      "encouragement": "Remember, every small step you take today makes a big difference for your loved ones tomorrow."
-    },
-    "guardianInvite": {
-      "subject": "{{inviterName}} has invited you to be their Guardian on LegacyGuard",
-      "greeting": "Hello {{guardianName}},",
-      "body": "{{inviterName}} trusts you with an important responsibility - to be a Guardian for their digital legacy.",
-      "whatThisMeans": "As a Guardian, you'll have secure, read-only access to their important documents and instructions in case of emergency.",
-      "cta": "View Invitation",
-      "expires": "This invitation expires in 7 days."
-    },
-    "planUpgrade": {
-      "subject": "You've Reached Your {{planName}} Plan Limit",
-      "greeting": "Hi {{name}},",
-      "body": "You're making great progress! You've reached the {{limitType}} limit on your current plan.",
-      "upgradeText": "Upgrade to {{suggestedPlan}} to continue adding more {{limitType}} and unlock additional features.",
-      "cta": "View Upgrade Options"
-    }
+  "_comment": "Email template translations",
+  "welcome": {
+    "subject": "Croeso i LegacyGuard",
+    "title": "Croeso i LegacyGuard",
+    "subtitle": "Diolch am gofrestru",
+    "message": "Rydych wedi cychwyn ar eich taith i ddiogelu eich etifeddiaeth ddigidol.",
+    "cta": "Cychwyn",
+    "footer": "Os nad ydych wedi creu'r cyfrif hwn, gallwch anwybyddu'r e-bost hwn."
+  },
+  "verification": {
+    "subject": "Gwirio eich cyfrif LegacyGuard",
+    "title": "Gwirio eich e-bost",
+    "message": "Cliciwch y botwm isod i wirio eich cyfrif:",
+    "cta": "Gwirio cyfrif",
+    "expires": "Mae'r ddolen hon yn dod i ben mewn 24 awr",
+    "footer": "Os nad ydych wedi gofyn am wirio, gallwch anwybyddu'r e-bost hwn."
+  },
+  "passwordReset": {
+    "subject": "Ailosod cyfrinair LegacyGuard",
+    "title": "Ailosod cyfrinair",
+    "message": "Rydych wedi gofyn am ailosod eich cyfrinair. Cliciwch y botwm isod:",
+    "cta": "Ailosod cyfrinair",
+    "expires": "Mae'r ddolen hon yn dod i ben mewn awr",
+    "footer": "Os nad ydych wedi gofyn am ailosod cyfrinair, gallwch anwybyddu'r e-bost hwn."
+  },
+  "documentShared": {
+    "subject": "Dogfen wedi'i rhannu â chi",
+    "title": "Dogfen wedi'i rhannu",
+    "message": "Mae {{senderName}} wedi rhannu dogfen â chi:",
+    "documentName": "Enw'r ddogfen: {{name}}",
+    "cta": "Gweld y ddogfen",
+    "footer": "Mae'r ddolen hon yn dod i ben mewn 7 diwrnod."
+  },
+  "guardianInvitation": {
+    "subject": "Gwahoddiad i fod yn warcheidwad",
+    "title": "Gwahoddiad gwarcheidwad",
+    "message": "Mae {{inviterName}} wedi'ch gwahodd i fod yn warcheidwad ar eu cyfrif LegacyGuard.",
+    "cta": "Derbyn gwahoddiad",
+    "footer": "Gallwch wrthod y gwahoddiad hwn os nad ydych yn fodlon."
+  },
+  "securityAlert": {
+    "subject": "Rhybudd diogelwch LegacyGuard",
+    "title": "Rhybudd diogelwch",
+    "message": "Cafwyd mynediad i'ch cyfrif o leoliad newydd:",
+    "location": "Lleoliad: {{location}}",
+    "device": "Dyfais: {{device}}",
+    "time": "Amser: {{time}}",
+    "cta": "Gweld gweithgaredd",
+    "footer": "Os nad ydych wedi mewngofnodi, cysylltwch â ni ar unwaith."
+  },
+  "subscription": {
+    "subject": "Diweddariad tanysgrifiad LegacyGuard",
+    "title": "Diweddariad tanysgrifiad",
+    "message": "Mae eich tanysgrifiad wedi'i ddiweddaru:",
+    "plan": "Cynllun: {{plan}}",
+    "amount": "Swm: {{amount}}",
+    "nextBilling": "Bilio nesaf: {{date}}",
+    "cta": "Gweld manylion",
+    "footer": "Gallwch newid neu ddiddymu eich tanysgrifiad ar unrhyw adeg."
+  },
+  "expiryReminder": {
+    "subject": "Dogfen yn dod i ben - LegacyGuard",
+    "title": "Dogfen yn dod i ben",
+    "message": "Mae'r ddogfen ganlynol yn dod i ben yn fuan:",
+    "documentName": "Enw'r ddogfen: {{name}}",
+    "expiryDate": "Dyddiad dod i ben: {{date}}",
+    "cta": "Gweld y ddogfen",
+    "footer": "Gwnewch yn siŵr eich bod yn adnewyddu'r ddogfen cyn iddi ddod i ben."
+  },
+  "weeklyDigest": {
+    "subject": "Crynodeb wythnosol LegacyGuard",
+    "title": "Crynodeb wythnosol",
+    "message": "Dyma grynodeb o'ch gweithgareddau dros yr wythnos ddiwethaf:",
+    "newDocuments": "Dogfennau newydd: {{count}}",
+    "completedTasks": "Tasgau wedi'u cwblhau: {{count}}",
+    "pendingTasks": "Tasgau sy'n aros: {{count}}",
+    "cta": "Gweld crynodeb llawn",
+    "footer": "Gallwch newid eich hysbysiadau yn eich gosodiadau."
+  },
+  "support": {
+    "subject": "Ateb cefnogaeth LegacyGuard",
+    "title": "Ateb cefnogaeth",
+    "message": "Dyma ateb i'ch cais cefnogaeth:",
+    "ticketNumber": "Rhif tocyn: {{number}}",
+    "cta": "Gweld ymateb",
+    "footer": "Os oes gennych gwestiynau pellach, atebwch yr e-bost hwn."
   }
-}
+} 

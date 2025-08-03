@@ -45,7 +45,7 @@ export const RouteWithNamespaces: React.FC<RouteWithNamespacesProps> = ({
     };
 
     loadRequiredNamespaces();
-  }, [namespaces, i18n.language]);
+  }, [namespaces, i18n.language, i18n]);
 
   if (error) {
     // Fallback to children even if translations fail to load

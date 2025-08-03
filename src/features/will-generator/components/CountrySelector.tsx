@@ -109,7 +109,7 @@ export function CountrySelector({
     }
 
     fetchRequirements();
-  }, []);
+  }, [t]);
 
   return (
     <div className="space-y-6">

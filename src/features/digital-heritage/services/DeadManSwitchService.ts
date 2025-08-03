@@ -56,7 +56,7 @@ export class DeadManSwitchService {
   }
 
   async update(id: string, request: UpdateDeadManSwitchRequest): Promise<DeadManSwitch> {
-    const updateData: any = {
+    const updateData: Record<string, unknown> = {
       ...request,
       updated_at: new Date().toISOString()
     };
@@ -223,22 +223,22 @@ export class DeadManSwitchService {
     return `transfer_${deadManSwitch.id}_${step.id}`;
   }
 
-  private mapToDeadManSwitch(data: any): DeadManSwitch {
+  private mapToDeadManSwitch(data: Record<string, unknown>): DeadManSwitch {
     return {
-      id: data.id,
-      userId: data.user_id,
-      name: data.name,
-      description: data.description,
-      checkInterval: data.check_interval,
-      escalationSteps: data.escalation_steps || [],
-      backupContacts: data.backup_contacts || [],
-      status: data.status,
-      lastActivity: data.last_activity,
-      nextCheck: data.next_check,
-      createdAt: data.created_at,
-      updatedAt: data.updated_at,
-      triggeredAt: data.triggered_at,
-      pausedAt: data.paused_at
+      id: data.id as string,
+      userId: data.user_id as string,
+      name: data.name as string,
+      description: data.description as string,
+      checkInterval: data.check_interval as number,
+      escalationSteps: (data.escalation_steps || []) as EscalationStep[],
+      backupContacts: (data.backup_contacts || []) as DeadManSwitch['backupContacts'],
+      status: data.status as SwitchStatus,
+      lastActivity: data.last_activity as string,
+      nextCheck: data.next_check as string,
+      createdAt: data.created_at as string,
+      updatedAt: data.updated_at as string,
+      triggeredAt: data.triggered_at as string | undefined,
+      pausedAt: data.paused_at as string | undefined
     };
   }
 }

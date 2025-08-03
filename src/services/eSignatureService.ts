@@ -78,7 +78,10 @@ export class ESignatureService {
     }
   }
 
-  async handleWebhook(event: any): Promise<void> {
+  async handleWebhook(event: {
+    envelopeId: string;
+    status: 'sent' | 'delivered' | 'signed' | 'completed' | 'declined';
+  }): Promise<void> {
     // Handle DocuSign webhook events
     const { envelopeId, status } = event;
 
@@ -134,7 +137,13 @@ export class ESignatureService {
   }
 
   // Request QES signature via Skribble
-  async requestSkribbleSignature(willId: string, documentBase64: string): Promise<any> {
+  async requestSkribbleSignature(willId: string, documentBase64: string): Promise<{
+    success?: boolean;
+    requestId?: string;
+    url?: string;
+    error?: string;
+    status?: number;
+  }> {
     try {
       // Create signature request in Skribble
       const response = await fetch(`${this.skribbleApiBase}/v2/signature-requests`, {
@@ -198,7 +207,11 @@ export class ESignatureService {
   }
 
   // Handle Skribble webhook
-  async handleSkribbleWebhook(event: any): Promise<void> {
+  async handleSkribbleWebhook(event: {
+    signature_request_id: string;
+    status: string;
+    signatures: Array<{ certificate?: string }>;
+  }): Promise<void> {
     const { signature_request_id, status, signatures } = event;
 
     // Update signature request status

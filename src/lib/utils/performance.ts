@@ -75,7 +75,7 @@ export function usePerformanceMonitor(componentName: string) {
       const renderTime = performance.now() - startTimeRef.current;
       monitor.recordRenderTime(componentName, renderTime);
     };
-  }, [componentName]);
+  }, [componentName, monitor]);
 
   return {
     startTimer: () => monitor.startTimer(componentName),
@@ -98,7 +98,7 @@ PerformanceMonitor.prototype.recordRenderTime = function(key: string, duration: 
 };
 
 // Web Vitals tracking
-export function reportWebVitals(metric: any) {
+export function reportWebVitals(metric: unknown) {
   if (process.env.NODE_ENV === 'production') {
     // Send to analytics service
     console.log('Web Vital:', metric);
@@ -108,13 +108,13 @@ export function reportWebVitals(metric: any) {
 // Memory usage tracking
 export function getMemoryUsage(): number | undefined {
   if ('memory' in performance) {
-    return (performance as any).memory.usedJSHeapSize;
+    return (performance as { memory: { usedJSHeapSize: number } }).memory.usedJSHeapSize;
   }
   return undefined;
 }
 
 // Debounce utility
-export function debounce<T extends (...args: any[]) => any>(
+export function debounce<T extends (...args: unknown[]) => unknown>(
   func: T,
   delay: number
 ): (...args: Parameters<T>) => void {
@@ -127,7 +127,7 @@ export function debounce<T extends (...args: any[]) => any>(
 }
 
 // Throttle utility
-export function throttle<T extends (...args: any[]) => any>(
+export function throttle<T extends (...args: unknown[]) => unknown>(
   func: T,
   limit: number
 ): (...args: Parameters<T>) => void {

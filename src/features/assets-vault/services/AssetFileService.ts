@@ -64,7 +64,7 @@ export class AssetFileService {
 
     try {
       let uploadData: Blob;
-      let encryptionMetadata: Record<string, any> | null = null;
+      let encryptionMetadata: Record<string, unknown> | null = null;
 
       if (shouldEncrypt) {
         // Generate encryption key

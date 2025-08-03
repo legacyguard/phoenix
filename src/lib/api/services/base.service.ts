@@ -5,7 +5,7 @@ export interface BaseServiceConfig {
   timeout?: number;
 }
 
-export abstract class BaseService<T = any> {
+export abstract class BaseService<T = unknown> {
   protected endpoint: string;
   protected timeout: number;
 
@@ -19,7 +19,7 @@ export abstract class BaseService<T = any> {
     return response.data;
   }
 
-  protected async getAll<R = T[]>(params?: Record<string, any>): Promise<R> {
+  protected async getAll<R = T[]>(params?: Record<string, unknown>): Promise<R> {
     const response = await apiClient.get<R>(this.endpoint, { params });
     return response.data;
   }
@@ -34,17 +34,18 @@ export abstract class BaseService<T = any> {
     return response.data;
   }
 
-  protected async delete<R = any>(id: string): Promise<R> {
+  protected async delete<R = unknown>(id: string): Promise<R> {
     const response = await apiClient.delete<R>(`${this.endpoint}/${id}`);
     return response.data;
   }
 
-  protected handleError(error: any): never {
+  protected handleError(error: unknown): never {
     if (error instanceof ApiClientError) {
       throw error;
     }
+    const message = error instanceof Error ? error.message : 'An unexpected error occurred';
     throw new ApiClientError(
-      error.message || 'An unexpected error occurred',
+      message,
       'UNKNOWN_ERROR',
       error
     );

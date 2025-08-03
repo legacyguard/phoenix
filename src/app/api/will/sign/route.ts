@@ -5,7 +5,7 @@ import { pdfGenerationService } from '@/services/pdfGenerationService';
 import { willBackupService } from '@/services/willBackupService';
 import type { WillContent, WillRequirements } from '@/types/will';
 import { eSignatureService } from '@/services/eSignatureService';
-import { getLegacyGuardSignatureSVG, svgToBase64 } from '@/components/LegacyGuardSignature';
+import { getLegacyGuardSignatureSVG, svgToBase64 } from '@/components/LegacyGuardSignature.utils';
 import { getServerTranslation, getLocaleFromRequest } from '@/lib/server-i18n';
 
 export async function POST(request: NextRequest) {

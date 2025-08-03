@@ -1,40 +1,40 @@
 {
   "_comment": "Shared translations used across the application",
   "errorBoundary": {
-    "title": "Oops! Something went wrong",
-    "description": "We apologize for the inconvenience. An unexpected error has occurred.",
-    "errorId": "Error ID",
-    "tryAgain": "Try Again",
-    "reloadPage": "Reload Page",
-    "goToHomepage": "Go to Homepage",
-    "technicalDetails": "Technical Details",
-    "hide": "Hide",
-    "show": "Show",
-    "stackTrace": "Stack Trace",
-    "componentStack": "Component Stack",
-    "helpText": "If the problem persists, contact our support with the error ID."
+    "title": "Oups ! Quelque chose s'est mal passé",
+    "description": "Nous nous excusons pour le désagrément. Une erreur inattendue s'est produite.",
+    "errorId": "ID d'erreur",
+    "tryAgain": "Réessayer",
+    "reloadPage": "Recharger la page",
+    "goToHomepage": "Aller à la page d'accueil",
+    "technicalDetails": "Détails techniques",
+    "hide": "Masquer",
+    "show": "Afficher",
+    "stackTrace": "Trace de la pile",
+    "componentStack": "Pile des composants",
+    "helpText": "Si le problème persiste, contactez notre support avec l'ID d'erreur."
   },
   "errorTest": {
-    "title": "Error Logging Test",
-    "description": "Test error handling and logging functionality",
-    "triggerSyncError": "Trigger Sync Error (ErrorBoundary)",
-    "triggerAsyncError": "Trigger Async Error",
-    "logRegularError": "Log Regular Error",
-    "logCriticalError": "Log Critical Error",
-    "triggerAlert": "Trigger Alert (6 Critical Errors)",
+    "title": "Test de journalisation d'erreurs",
+    "description": "Test de la gestion des erreurs et de la fonctionnalité de journalisation",
+    "triggerSyncError": "Déclencher une erreur synchrone (ErrorBoundary)",
+    "triggerAsyncError": "Déclencher une erreur asynchrone",
+    "logRegularError": "Enregistrer une erreur normale",
+    "logCriticalError": "Enregistrer une erreur critique",
+    "triggerAlert": "Déclencher une alerte (6 erreurs critiques)",
     "errorMessages": {
-      "testError": "Test error from ErrorTest component",
-      "testAsyncRejection": "Test async rejection",
-      "manualTestError": "Manual test error",
-      "testCriticalError": "Test critical error",
-      "criticalErrorWithIndex": "Critical error {{index}}"
+      "testError": "Erreur de test du composant ErrorTest",
+      "testAsyncRejection": "Test de rejet asynchrone",
+      "manualTestError": "Erreur de test manuel",
+      "testCriticalError": "Erreur critique de test",
+      "criticalErrorWithIndex": "Erreur critique {{index}}"
     },
     "descriptions": {
-      "syncError": "Triggers a synchronous error that will be caught by the ErrorBoundary",
-      "asyncError": "Triggers an asynchronous error that will be caught by error handling",
-      "regularError": "Logs a regular error for testing error tracking",
-      "criticalError": "Logs a critical error for testing critical error handling",
-      "multipleErrors": "Triggers multiple critical errors to test alert thresholds"
+      "syncError": "Déclenche une erreur synchrone qui sera capturée par l'ErrorBoundary",
+      "asyncError": "Déclenche une erreur asynchrone qui sera capturée par la gestion d'erreurs",
+      "regularError": "Enregistre une erreur normale pour tester le suivi des erreurs",
+      "criticalError": "Enregistre une erreur critique pour tester la gestion des erreurs critiques",
+      "multipleErrors": "Déclenche plusieurs erreurs critiques pour tester les seuils d'alerte"
     },
     "context": {
       "component": "ErrorTest",
@@ -42,57 +42,57 @@
       "severity": "high"
     },
     "notifications": {
-      "errorLogged": "Error logged successfully",
-      "criticalErrorLogged": "Critical error logged successfully",
-      "multipleErrorsTriggered": "Multiple critical errors triggered",
-      "errorBoundaryTriggered": "Error boundary triggered",
-      "asyncErrorCaught": "Async error caught and handled"
+      "errorLogged": "Erreur enregistrée avec succès",
+      "criticalErrorLogged": "Erreur critique enregistrée avec succès",
+      "multipleErrorsTriggered": "Plusieurs erreurs critiques déclenchées",
+      "errorBoundaryTriggered": "Limite d'erreur déclenchée",
+      "asyncErrorCaught": "Erreur asynchrone capturée et traitée"
     }
   },
   "debug": {
     "panel": {
-      "title": "Debug Panel",
-      "recentErrors": "Recent application errors",
-      "technicalDetails": "Technical Details",
+      "title": "Panneau de débogage",
+      "recentErrors": "Erreurs récentes de l'application",
+      "technicalDetails": "Détails techniques",
       "tabs": {
-        "list": "List",
-        "details": "Details"
+        "list": "Liste",
+        "details": "Détails"
       },
-      "errorCount": "{{count}} errors",
+      "errorCount": "{{count}} erreurs",
       "actions": {
-        "downloadErrors": "Download errors",
-        "clearAllErrors": "Clear all errors"
+        "downloadErrors": "Télécharger les erreurs",
+        "clearAllErrors": "Effacer toutes les erreurs"
       },
       "messages": {
-        "errorsCleared": "All errors cleared",
-        "errorCopied": "Error copied to clipboard",
-        "errorsDownloaded": "Errors downloaded"
+        "errorsCleared": "Toutes les erreurs effacées",
+        "errorCopied": "Erreur copiée dans le presse-papiers",
+        "errorsDownloaded": "Erreurs téléchargées"
       },
       "error": {
-        "unknownError": "Unknown Error",
-        "noMessage": "No message",
-        "errorMessage": "Error Message"
+        "unknownError": "Erreur inconnue",
+        "noMessage": "Aucun message",
+        "errorMessage": "Message d'erreur"
       },
       "sections": {
-        "stackTrace": "Stack Trace",
-        "context": "Context",
-        "location": "Location",
-        "browserInfo": "Browser Information",
-        "time": "Time"
+        "stackTrace": "Trace de la pile",
+        "context": "Contexte",
+        "location": "Emplacement",
+        "browserInfo": "Informations du navigateur",
+        "time": "Heure"
       },
       "fields": {
         "url": "URL:",
-        "path": "Path:",
-        "query": "Query:",
-        "userAgent": "User Agent:",
-        "viewport": "Viewport:"
+        "path": "Chemin:",
+        "query": "Requête:",
+        "userAgent": "Agent utilisateur:",
+        "viewport": "Zone d'affichage:"
       }
     }
   },
   "test": {
     "environment": {
-      "title": "Test Environment Only",
-      "description": "This page is for testing the error logging system. Remove this route before deploying to production."
+      "title": "Environnement de test uniquement",
+      "description": "Cette page est destinée à tester le système de journalisation d'erreurs. Supprimez cette route avant de déployer en production."
     }
   }
 }
