@@ -1,0 +1,98 @@
+{
+  "_comment": "Shared translations used across the application",
+  "errorBoundary": {
+    "title": "Oops! Qualcosa è andato storto",
+    "description": "Ci scusiamo per l'inconveniente. Si è verificato un errore inaspettato.",
+    "errorId": "ID Errore",
+    "tryAgain": "Riprova",
+    "reloadPage": "Ricarica Pagina",
+    "goToHomepage": "Vai alla Homepage",
+    "technicalDetails": "Dettagli Tecnici",
+    "hide": "Nascondi",
+    "show": "Mostra",
+    "stackTrace": "Stack Trace",
+    "componentStack": "Component Stack",
+    "helpText": "Se il problema persiste, contatta il nostro supporto con l'ID dell'errore."
+  },
+  "errorTest": {
+    "title": "Test Registrazione Errori",
+    "description": "Test error handling and logging functionality",
+    "triggerSyncError": "Attiva Errore Sincrono (ErrorBoundary)",
+    "triggerAsyncError": "Attiva Errore Asincrono",
+    "logRegularError": "Registra Errore Normale",
+    "logCriticalError": "Registra Errore Critico",
+    "triggerAlert": "Attiva Avviso (6 Errori Critici)",
+    "errorMessages": {
+      "testError": "Test error from ErrorTest component",
+      "testAsyncRejection": "Test async rejection",
+      "manualTestError": "Manual test error",
+      "testCriticalError": "Test critical error",
+      "criticalErrorWithIndex": "Critical error {{index}}"
+    },
+    "descriptions": {
+      "syncError": "Triggers a synchronous error that will be caught by the ErrorBoundary",
+      "asyncError": "Triggers an asynchronous error that will be caught by error handling",
+      "regularError": "Logs a regular error for testing error tracking",
+      "criticalError": "Logs a critical error for testing critical error handling",
+      "multipleErrors": "Triggers multiple critical errors to test alert thresholds"
+    },
+    "context": {
+      "component": "ErrorTest",
+      "action": "button-click",
+      "severity": "high"
+    },
+    "notifications": {
+      "errorLogged": "Error logged successfully",
+      "criticalErrorLogged": "Critical error logged successfully",
+      "multipleErrorsTriggered": "Multiple critical errors triggered",
+      "errorBoundaryTriggered": "Error boundary triggered",
+      "asyncErrorCaught": "Async error caught and handled"
+    }
+  },
+  "debug": {
+    "panel": {
+      "title": "Pannello di Debug",
+      "recentErrors": "Errori recenti dell'applicazione",
+      "technicalDetails": "Dettagli Tecnici",
+      "tabs": {
+        "list": "Lista",
+        "details": "Dettagli"
+      },
+      "errorCount": "{{count}} errori",
+      "actions": {
+        "downloadErrors": "Scarica errori",
+        "clearAllErrors": "Cancella tutti gli errori"
+      },
+      "messages": {
+        "errorsCleared": "Tutti gli errori cancellati",
+        "errorCopied": "Errore copiato negli appunti",
+        "errorsDownloaded": "Errori scaricati"
+      },
+      "error": {
+        "unknownError": "Errore Sconosciuto",
+        "noMessage": "Nessun messaggio",
+        "errorMessage": "Messaggio di Errore"
+      },
+      "sections": {
+        "stackTrace": "Stack Trace",
+        "context": "Contesto",
+        "location": "Posizione",
+        "browserInfo": "Informazioni sul Browser",
+        "time": "Ora"
+      },
+      "fields": {
+        "url": "URL:",
+        "path": "Percorso:",
+        "query": "Query:",
+        "userAgent": "User Agent:",
+        "viewport": "Viewport:"
+      }
+    }
+  },
+  "test": {
+    "environment": {
+      "title": "Test Environment Only",
+      "description": "This page is for testing the error logging system. Remove this route before deploying to production."
+    }
+  }
+}

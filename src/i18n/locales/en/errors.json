@@ -1,0 +1,98 @@
+{
+  "_comment": "Error handling and debugging",
+  "errorBoundary": {
+    "title": "Oops! Something went wrong",
+    "description": "We apologize for the inconvenience. An unexpected error has occurred.",
+    "errorId": "Error ID",
+    "tryAgain": "Try Again",
+    "reloadPage": "Reload Page",
+    "goToHomepage": "Go to Homepage",
+    "technicalDetails": "Technical Details",
+    "hide": "Hide",
+    "show": "Show",
+    "stackTrace": "Stack Trace",
+    "componentStack": "Component Stack",
+    "helpText": "If the problem persists, contact our support with the error ID."
+  },
+  "errorTest": {
+    "title": "Error Logging Test",
+    "description": "Test error handling and logging functionality",
+    "triggerSyncError": "Trigger Sync Error (ErrorBoundary)",
+    "triggerAsyncError": "Trigger Async Error",
+    "logRegularError": "Log Regular Error",
+    "logCriticalError": "Log Critical Error",
+    "triggerAlert": "Trigger Alert (6 Critical Errors)",
+    "errorMessages": {
+      "testError": "Test error from ErrorTest component",
+      "testAsyncRejection": "Test async rejection",
+      "manualTestError": "Manual test error",
+      "testCriticalError": "Test critical error",
+      "criticalErrorWithIndex": "Critical error {{index}}"
+    },
+    "descriptions": {
+      "syncError": "Triggers a synchronous error that will be caught by the ErrorBoundary",
+      "asyncError": "Triggers an asynchronous error that will be caught by error handling",
+      "regularError": "Logs a regular error for testing error tracking",
+      "criticalError": "Logs a critical error for testing critical error handling",
+      "multipleErrors": "Triggers multiple critical errors to test alert thresholds"
+    },
+    "context": {
+      "component": "ErrorTest",
+      "action": "button-click",
+      "severity": "high"
+    },
+    "notifications": {
+      "errorLogged": "Error logged successfully",
+      "criticalErrorLogged": "Critical error logged successfully",
+      "multipleErrorsTriggered": "Multiple critical errors triggered",
+      "errorBoundaryTriggered": "Error boundary triggered",
+      "asyncErrorCaught": "Async error caught and handled"
+    }
+  },
+  "debug": {
+    "panel": {
+      "title": "Debug Panel",
+      "recentErrors": "Recent application errors",
+      "technicalDetails": "Technical Details",
+      "tabs": {
+        "list": "List",
+        "details": "Details"
+      },
+      "errorCount": "{{count}} errors",
+      "actions": {
+        "downloadErrors": "Download errors",
+        "clearAllErrors": "Clear all errors"
+      },
+      "messages": {
+        "errorsCleared": "All errors cleared",
+        "errorCopied": "Error copied to clipboard",
+        "errorsDownloaded": "Errors downloaded"
+      },
+      "error": {
+        "unknownError": "Unknown Error",
+        "noMessage": "No message",
+        "errorMessage": "Error Message"
+      },
+      "sections": {
+        "stackTrace": "Stack Trace",
+        "context": "Context",
+        "location": "Location",
+        "browserInfo": "Browser Information",
+        "time": "Time"
+      },
+      "fields": {
+        "url": "URL:",
+        "path": "Path:",
+        "query": "Query:",
+        "userAgent": "User Agent:",
+        "viewport": "Viewport:"
+      }
+    }
+  },
+  "test": {
+    "environment": {
+      "title": "Test Environment Only",
+      "description": "This page is for testing the error logging system. Remove this route before deploying to production."
+    }
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "_comment": "Shared translations used across the application",
+  "errorBoundary": {
+    "title": "Jejda! Něco se pokazilo",
+    "description": "Omlouváme se za nepříjemnosti. Vyskytla se neočekávaná chyba.",
+    "errorId": "ID chyby",
+    "tryAgain": "Zkusit znovu",
+    "reloadPage": "Znovu načíst stránku",
+    "goToHomepage": "Přejít na domovskou stránku",
+    "technicalDetails": "Technické podrobnosti",
+    "hide": "Skrýt",
+    "show": "Zobrazit",
+    "stackTrace": "Výpis zásobníku",
+    "componentStack": "Zásobník komponent",
+    "helpText": "Pokud problém přetrvává, kontaktujte naši podporu s ID chyby."
+  },
+  "errorTest": {
+    "title": "Test protokolování chyb",
+    "description": "Test funkcí zpracování a logování chyb",
+    "triggerSyncError": "Spustit synchronní chybu (ErrorBoundary)",
+    "triggerAsyncError": "Spustit asynchronní chybu",
+    "logRegularError": "Zaznamenat běžnou chybu",
+    "logCriticalError": "Zaznamenat kritickou chybu",
+    "triggerAlert": "Spustit upozornění (6 kritických chyb)",
+    "errorMessages": {
+      "testError": "Test chyby z komponenty ErrorTest",
+      "testAsyncRejection": "Test asynchronního odmítnutí",
+      "manualTestError": "Manuální test chyby",
+      "testCriticalError": "Test kritické chyby",
+      "criticalErrorWithIndex": "Kritická chyba {{index}}"
+    },
+    "descriptions": {
+      "syncError": "Spustí synchronní chybu, která bude zachycena ErrorBoundary",
+      "asyncError": "Spustí asynchronní chybu, která bude zachycena zpracováním chyb",
+      "regularError": "Zaloguje běžnou chybu pro testování sledování chyb",
+      "criticalError": "Zaloguje kritickou chybu pro testování zpracování kritických chyb",
+      "multipleErrors": "Spustí více kritických chyb pro testování prahových hodnot upozornění"
+    },
+    "context": {
+      "component": "ErrorTest",
+      "action": "button-click",
+      "severity": "high"
+    },
+    "notifications": {
+      "errorLogged": "Chyba byla úspěšně zalogována",
+      "criticalErrorLogged": "Kritická chyba byla úspěšně zalogována",
+      "multipleErrorsTriggered": "Spuštěno více kritických chyb",
+      "errorBoundaryTriggered": "ErrorBoundary byla spuštěna",
+      "asyncErrorCaught": "Asynchronní chyba byla zachycena a zpracována"
+    }
+  },
+  "debug": {
+    "panel": {
+      "title": "Panel pre ladenie",
+      "recentErrors": "Nedávne chyby aplikácie",
+      "technicalDetails": "Technické podrobnosti",
+      "tabs": {
+        "list": "Zoznam",
+        "details": "Podrobnosti"
+      },
+      "errorCount": "{{count}} chýb",
+      "actions": {
+        "downloadErrors": "Stiahnuť chyby",
+        "clearAllErrors": "Vymazať všetky chyby"
+      },
+      "messages": {
+        "errorsCleared": "Všetky chyby vymazané",
+        "errorCopied": "Chyba skopírovaná do schránky",
+        "errorsDownloaded": "Chyby stiahnuté"
+      },
+      "error": {
+        "unknownError": "Neznáma chyba",
+        "noMessage": "Žiadna správa",
+        "errorMessage": "Chybová správa"
+      },
+      "sections": {
+        "stackTrace": "Sledovanie zásobníka",
+        "context": "Kontext",
+        "location": "Umiestnenie",
+        "browserInfo": "Informácie o prehliadači",
+        "time": "Čas"
+      },
+      "fields": {
+        "url": "URL:",
+        "path": "Cesta:",
+        "query": "Dotaz:",
+        "userAgent": "User Agent:",
+        "viewport": "Viewport:"
+      }
+    }
+  },
+  "test": {
+    "environment": {
+      "title": "Test Environment Only",
+      "description": "This page is for testing the error logging system. Remove this route before deploying to production."
+    }
+  }
+}

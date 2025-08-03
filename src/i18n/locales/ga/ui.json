@@ -1,0 +1,264 @@
+{
+  "_comment": "Shared translations used across the application",
+  "navigation": {
+    "dashboard": "Painéal",
+    "vault": "An Cruinneachán",
+    "trustedCircle": {
+      "title": "Do Chiorcal Iontaofa",
+      "subtitle": "Na daoine a bhfuil muinín agat astu chun cabhrú le cosaint agus cúram do theaghlaigh agus d'oidhreachta.",
+      "responsibilities": "A bhFreagrachtaí:",
+      "preparationStatus": "Stádas Ullmhachta:",
+      "informedOfRole": "Tá a ról curtha in iúl dóibh",
+      "acceptedResponsibility": "Ghlac siad leis an bhfreagracht",
+      "hasAccessToDocuments": "Tá rochtain acu ar dhoiciméid riachtanacha",
+      "reviewedEmergencyProcedures": "Rinne siad athbhreithniú ar nósanna imeachta éigeandála",
+      "addTrustedPerson": "+ Cuir Duine Iontaofa Leis",
+      "preparednessStatus": {
+        "wellPrepared": "Ullamh go Maith",
+        "partiallyPrepared": "Ullamh go Páirteach",
+        "needsAttention": "Teastaíonn Aird"
+      },
+      "buttonText": {
+        "prepared": "✓ Tá {{name}} Ullamh",
+        "prepareNow": "Ullmhaigh {{name}} Anois"
+      },
+      "mockData": {
+        "sarah": {
+          "name": "Sarah Johnson",
+          "relationship": "Bean chéile",
+          "responsibilities": {
+            "bankAccess": "Is féidir léi rochtain a fháil ar gach cuntas bainc chun billí a íoc agus costais teaghlaigh a bhainistiú.",
+            "inheritAssets": "Gheobhaidh sí teach an teaghlaigh, cábán, agus gach taisce.",
+            "medicalPower": "Tá cumhacht míochaine aici chun cinntí cúraim sláinte a dhéanamh."
+          }
+        },
+        "michael": {
+          "name": "Michael Johnson",
+          "relationship": "Deartháir",
+          "responsibilities": {
+            "childCare": "Tabharfaidh sé aire dár leanaí má táimid beirt tuismitheoirí imithe.",
+            "estateExecution": "Forghníomhóidh sé ár mianta deiridh agus bainistíocht socrú eastáit.",
+            "businessManagement": "Is féidir leis dul isteach chun Johnson Contracting LLC a bhainistiú go sealadach."
+          }
+        },
+        "robert": {
+          "name": "Robert Chen",
+          "relationship": "Comhpháirtí gnó",
+          "responsibilities": {
+            "businessAuthority": "Tá údarás aige chun oibríochtaí gnó a bhainistiú agus conarthaí a shíniú.",
+            "buySellAgreement": "Ceannóidh sé mo scaireanna gnó de réir ár gcomhaontú ceannaigh-díola."
+          }
+        },
+        "emily": {
+          "name": "Emily Thompson",
+          "relationship": "Deirfiúr chéile",
+          "responsibilities": {
+            "backupGuardian": "Caomhnóir cúltaca do leanaí má ní féidir leis an gcaomhnóir príomha freastal."
+          }
+        }
+      }
+    },
+    "familyHub": "Ionad Teaghlaigh",
+    "legacyBriefing": {
+      "legacy_briefing_3": "Briathrá Oidhreachta",
+      "create_and_manage_sealed_messa_4": "Cruthaigh agus bainistigh teachtaireachtaí séalaithe do do mhuintir",
+      "failed_to_load_your_time_capsu_1": "Theip ar do chapsúil ama a lódáil",
+      "are_you_sure_you_want_to_delet_2": "An bhfuil tú cinnte gur mian leat an chapsúil ama seo a scriosadh?",
+      "create_new_message_5": "Cruthaigh Teachtaireacht Nua",
+      "no_time_capsules_yet_6": "Níl aon chapsúil ama go fóill",
+      "create_meaningful_messages_for_7": "Cruthaigh teachtaireachtaí bríúla do do mhuintir le fáil sa todhchaí",
+      "create_your_first_message_8": "Cruthaigh do Chéad Teachtaireacht",
+      "to_9": "Chuig:",
+      "unlocks_on_10": "Osclaíonn ar:",
+      "unlocks_11": "Osclaíonn:",
+      "after_passing_12": "Tar éis báis",
+      "statusLabels": {
+        "locked": "Glasáilte",
+        "unlocked": "Oscailte",
+        "delivered": "Seachadta",
+        "noRecipients": "Gan faighteoirí"
+      },
+      "messageTypes": {
+        "text": "Teachtaireacht téacs",
+        "photo": "Teachtaireacht grianghraif",
+        "video": "Teachtaireacht físe",
+        "audio": "Teachtaireacht fuaime"
+      },
+      "actions": {
+        "edit": "Cuir in Eagar",
+        "delete": "Scrios"
+      },
+      "toastMessages": {
+        "deleteSuccess": "Scriosadh an chapsúil ama go rathúil",
+        "deleteError": "Theip ar chapsúil ama a scriosadh"
+      },
+      "dateFormat": {
+        "dateNotSet": "Dáta gan socrú",
+        "created": "Cruthaithe"
+      },
+      "errors": {
+        "textContentRequired": "Text content is required for text messages",
+        "unlockDateRequired": "Unlock date is required when condition is date",
+        "failedToUploadAttachment": "Failed to upload attachment",
+        "failedToCreate": "Failed to create time capsule",
+        "failedToFetch": "Failed to fetch time capsules",
+        "failedToUpdate": "Failed to update time capsule",
+        "failedToDelete": "Failed to delete time capsule",
+        "notFoundOrCannotModify": "Time capsule not found or cannot be modified",
+        "notFoundOrCannotDelete": "Time capsule not found or cannot be deleted",
+        "missingUploadFields": "Missing required fields: fileName, fileType, fileSizeBytes",
+        "invalidFileType": "Invalid file type. Allowed types: webm, mp4, mov",
+        "fileSizeExceeds500MB": "File size exceeds maximum allowed size of 500MB",
+        "premiumRequired": "Premium subscription required",
+        "premiumRequiredMessage": "Video messages are a premium feature. Please upgrade your subscription to use this feature.",
+        "failedToCreateUploadUrl": "Failed to create upload URL"
+      }
+    },
+    "executorToolkit": "Uirlisí an tSeiceadóra",
+    "assets": "Sócmhainní",
+    "manual": "Lámhleabhar",
+    "documents": "Doiciméid",
+    "guardians": "Daoine a bhfuil muinín agat astu",
+    "family": "Ionad Teaghlaigh",
+    "timeCapsule": "Capsúil Ama",
+    "will": "Do mhianta deiridh",
+    "consultations": "Comhairliúcháin Dlí",
+    "settings": "Socruithe",
+    "help": "Cabhair & Tacaíocht",
+    "subscriptions": "Síntiúis"
+  },
+  "nav": {
+    "dashboard": "Painéal",
+    "manual": "Lámhleabhar",
+    "vault": "Cruinneachán Oidhreachta",
+    "guardians": "Líonra na gCaomhnóirí",
+    "will": "Uacht",
+    "settings": "Socruithe",
+    "help": "Cabhair & Tacaíocht"
+  },
+  "footer": {
+    "tagline": "Ag caomhnú d'oidhreachta do na glúnta atá le teacht.",
+    "platform": {
+      "title": "Ardán",
+      "heritageVault": "Cruinneachán Oidhreachta",
+      "guardianNetwork": "Líonra na gCaomhnóirí",
+      "dashboard": "Painéal",
+      "security": "Slándáil"
+    },
+    "support": {
+      "title": "Tacaíocht",
+      "helpCenter": "Ionad Cabhrach",
+      "userGuides": "Treoirleabhair Úsáideora",
+      "contactUs": "Déan Teagmháil Linn",
+      "community": "Pobal"
+    },
+    "legal": {
+      "title": "Dlíthiúil",
+      "privacyPolicy": "Polasaí Príobháideachais",
+      "termsOfService": "Téarmaí Seirbhíse",
+      "dataProtection": "Cosaint Sonraí"
+    },
+    "copyright": "© {{year}} LegacyGuard. Gach ceart ar cosaint.",
+    "description": "Bainistíocht oidhreachta digití ar ghrád fiontair."
+  },
+  "hero": {
+    "title": "Cosain Oidhreacht Dhigiteach do Theaghlaigh go Deo",
+    "subtitle": "An t-ardán slán, iomasach a chuidíonn le teaghlaigh a gcuid cuimhní agus doiciméad is tábhachtaí a eagrú, a chosaint agus a aistriú ó ghlúin go glúin.",
+    "cta_primary": "Tosaigh do Phlean Oidhreachta",
+    "cta_secondary": "Féach ar an Taispeántas",
+    "urgencySubtitle": "Tógann an socrú ach 10 nóiméad - bí an tuismitheoir ullamh a theastaíonn ó do theaghlach",
+    "secondaryContext": "Físeán 2 nóiméad a thaispeánann teaghlaigh fíoracha",
+    "trustSignals": {
+      "dataOwnership": "Fanann do chuid sonraí leatsa - ní dhíolaimid iad choíche",
+      "gdprCompliant": "Comhlíontach le GDPR de réir dearaidh",
+      "europeanFamilies": "Tógtha do theaghlaigh Eorpacha"
+    },
+    "community": {
+      "growing": "Bí páirteach le {{count}} teaghlach atá ag cosaint a n-oidhreachta cheana féin",
+      "growingFallback": "Bí inár bpobal atá ag fás"
+    }
+  },
+  "features": {
+    "title": "Cén Fáth Roghnú LegacyGuard?",
+    "subtitle": "Tógtha le slándáil ghrád fiontair agus deartha do theaghlaigh a bhfuil luach acu ar a n-oidhreacht.",
+    "sleepBetter": {
+      "title": "Codail níos Fearr Anocht",
+      "description": "Stop ag baint imní faoi 'cad a tharlódh dá dtarlódh rud éigin domsa.' Beidh a fhios ag do theaghlach díreach cad le déanamh, cá bhfaighfidh siad gach rud, agus cé ar cheart dóibh glaoch."
+    },
+    "noChaos": {
+      "title": "Gan Cuardach Frantic",
+      "description": "Ní chaithfidh do theaghlach laethanta ag cuardach trí tarraiceáin, ag glaoch ar bhainc, nó ag iarraidh pasfhocail a thomhas. Tá gach rud tábhachtach eagraithe in aon áit slán amháin."
+    },
+    "clearInstructions": {
+      "title": "Treoir Céim ar Chéim",
+      "description": "Faigheann do mhuintir treoracha soiléire, simplí maidir le díreach cad le déanamh agus cathain. Gan confusion, gan tomhas, gan strus le linn amanna deacra."
+    },
+    "security": {
+      "title": "Rúndacht & Príobháideacht Iomlán",
+      "description": "Deartha ionas nach féidir le duine neamhúdaraithe ar bith rochtain a fháil ar do chuid sonraí. Ní fiú sinne. Is í do phríobháideacht an tosaíocht is airde atá againn."
+    },
+    "guardians": {
+      "title": "Líonra na gCaomhnóirí",
+      "description": "Ainmnigh baill teaghlaigh iontaofa agus cairde mar chaomhnóirí chun leanúnachas na hoidhreachta a chinntiú."
+    },
+    "storage": {
+      "title": "Stóráil Néil Slán",
+      "description": "Cúltacaí iomarcacha thar il-ionaid sonraí le ráthaíocht aga fónaimh 99.99%."
+    },
+    "timelock": {
+      "title": "Rochtain le hAmlas",
+      "description": "Socraigh coinníollacha maidir le cathain agus conas a fhaigheann tairbhithe rochtain ar d'oidhreacht dhigiteach."
+    },
+    "stories": {
+      "title": "Scéalta Pearsanta",
+      "description": "Cruthaigh insintí saibhre ilmheán a ghabhann croílár aistear do theaghlaigh."
+    },
+    "preservation": {
+      "title": "Caomhnú ar Feadh an tSaoil",
+      "description": "Caomhnaítear d'oidhreacht ar feadh tréimhse éiginnte le himirce uathoibríoch formáide agus nuashonruithe."
+    }
+  },
+  "alerts": {
+    "title": "Ionad na bhFoláireamh",
+    "description": "Bainistigh do chuid foláireamh faoi dhul in éag doiciméad.",
+    "unread": "Gan Léamh",
+    "markAsRenewed": "Marcáil mar Athnuaite",
+    "snooze7Days": "Cuir ar Suan ar feadh 7 Lá",
+    "dismiss": "Díbhe",
+    "unsnooze": "Bain den Suan",
+    "tabs": {
+      "active": "Gníomhach",
+      "snoozed": "Ar Suan",
+      "dismissed": "Díbeartha"
+    },
+    "noActiveAlerts": "Níl aon fholáireamh gníomhach agat.",
+    "noSnoozedAlerts": "Níl aon fholáireamh ar suan agat.",
+    "noDismissedAlerts": "Níl aon fholáireamh díbeartha agat.",
+    "expiresOn": "Téann in éag ar {{date}}",
+    "snoozedUntil": "Ar suan go dtí {{date}}",
+    "renewalInstructions": "Treoracha Athnuachana",
+    "badges": {
+      "expired": "Éagtha",
+      "expiring_7": "Ag dul in Éag go Luath",
+      "expiring_30": "Ag dul in Éag i 30 Lá",
+      "expiring_90": "Ag dul in Éag i 90 Lá"
+    },
+    "types": {
+      "expired": "Chuaigh an doiciméad {{documentName}} in éag {{daysAgo}} lá ó shin!",
+      "expiring7": "Déan deifir! Chuaigh {{documentName}} in éag i {{days}} lá.",
+      "expiring30": "Meabhrúchán: Chuaigh {{documentName}} in éag i {{days}} lá.",
+      "expiring90": "Bí ar an eolas: tá {{documentName}} le dul in éag i {{days}} lá."
+    },
+    "messages": {
+      "dismissed": "D'éirigh le díbhe an fholáirimh.",
+      "snoozed": "Cuireadh an foláireamh ar suan ar feadh {{days}} lá.",
+      "markedAsRenewed": "Marcáladh an doiciméad mar athnuaite."
+    },
+    "errors": {
+      "loadFailed": "Theip ar na foláirimh a lódáil.",
+      "dismissFailed": "Níorbh fhéidir an foláireamh a dhíbhe.",
+      "snoozeFailed": "Níorbh fhéidir an foláireamh a chur ar suan.",
+      "renewFailed": "Níorbh fhéidir an doiciméad a mharcáil mar athnuaite."
+    }
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "_comment": "Shared translations used across the application",
+  "errorBoundary": {
+    "title": "Hay aksi! Bir şeyler ters gitti",
+    "description": "Verdiğimiz rahatsızlıktan dolayı özür dileriz. Beklenmedik bir hata oluştu.",
+    "errorId": "Hata ID'si",
+    "tryAgain": "Tekrar Dene",
+    "reloadPage": "Sayfayı Yenile",
+    "goToHomepage": "Ana Sayfaya Git",
+    "technicalDetails": "Teknik Detaylar",
+    "hide": "Gizle",
+    "show": "Göster",
+    "stackTrace": "Yığın İzleme",
+    "componentStack": "Bileşen Yığını",
+    "helpText": "Sorun devam ederse, hata ID'si ile destek ekibimizle iletişime geçin."
+  },
+  "errorTest": {
+    "title": "Hata Kaydı Testi",
+    "description": "Test error handling and logging functionality",
+    "triggerSyncError": "Senkron Hata Tetikle (ErrorBoundary)",
+    "triggerAsyncError": "Asenkron Hata Tetikle",
+    "logRegularError": "Normal Hata Kaydet",
+    "logCriticalError": "Kritik Hata Kaydet",
+    "triggerAlert": "Uyarı Tetikle (6 Kritik Hata)",
+    "errorMessages": {
+      "testError": "Test error from ErrorTest component",
+      "testAsyncRejection": "Test async rejection",
+      "manualTestError": "Manual test error",
+      "testCriticalError": "Test critical error",
+      "criticalErrorWithIndex": "Critical error {{index}}"
+    },
+    "descriptions": {
+      "syncError": "Triggers a synchronous error that will be caught by the ErrorBoundary",
+      "asyncError": "Triggers an asynchronous error that will be caught by error handling",
+      "regularError": "Logs a regular error for testing error tracking",
+      "criticalError": "Logs a critical error for testing critical error handling",
+      "multipleErrors": "Triggers multiple critical errors to test alert thresholds"
+    },
+    "context": {
+      "component": "ErrorTest",
+      "action": "button-click",
+      "severity": "high"
+    },
+    "notifications": {
+      "errorLogged": "Error logged successfully",
+      "criticalErrorLogged": "Critical error logged successfully",
+      "multipleErrorsTriggered": "Multiple critical errors triggered",
+      "errorBoundaryTriggered": "Error boundary triggered",
+      "asyncErrorCaught": "Async error caught and handled"
+    }
+  },
+  "debug": {
+    "panel": {
+      "title": "Hata Ayıklama Paneli",
+      "recentErrors": "Son uygulama hataları",
+      "technicalDetails": "Teknik Detaylar",
+      "tabs": {
+        "list": "Liste",
+        "details": "Detaylar"
+      },
+      "errorCount": "{{count}} hata",
+      "actions": {
+        "downloadErrors": "Hataları İndir",
+        "clearAllErrors": "Tüm Hataları Temizle"
+      },
+      "messages": {
+        "errorsCleared": "Tüm hatalar temizlendi",
+        "errorCopied": "Hata panoya kopyalandı",
+        "errorsDownloaded": "Hatalar indirildi"
+      },
+      "error": {
+        "unknownError": "Bilinmeyen Hata",
+        "noMessage": "Mesaj yok",
+        "errorMessage": "Hata Mesajı"
+      },
+      "sections": {
+        "stackTrace": "Yığın İzleme",
+        "context": "Bağlam",
+        "location": "Konum",
+        "browserInfo": "Tarayıcı Bilgileri",
+        "time": "Zaman"
+      },
+      "fields": {
+        "url": "URL:",
+        "path": "Yol:",
+        "query": "Sorgu:",
+        "userAgent": "Kullanıcı Aracısı:",
+        "viewport": "Görünüm Alanı:"
+      }
+    }
+  },
+  "test": {
+    "environment": {
+      "title": "Test Environment Only",
+      "description": "This page is for testing the error logging system. Remove this route before deploying to production."
+    }
+  }
+}

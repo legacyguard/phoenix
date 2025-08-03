@@ -1,0 +1,1822 @@
+{
+  "_comment": "Shared translations used across the application",
+  "common": {
+    "loading": "Loading...",
+    "viewDetails": "View Details",
+    "edit": "Edit",
+    "delete": "Delete",
+    "addedOn": "Added {{date}}",
+    "priority": {
+      "high": "High",
+      "medium": "Medium",
+      "low": "Low"
+    },
+    "pagination": {
+      "previous": "Previous",
+      "next": "Next",
+      "morePages": "More pages",
+      "page": "Page",
+      "of": "of",
+      "showing": "Showing",
+      "to": "to",
+      "results": "results",
+      "perPage": "per page",
+      "goToPage": "Go to page",
+      "currentPage": "Current page",
+      "totalPages": "Total pages",
+      "firstPage": "First page",
+      "lastPage": "Last page",
+      "pageInfo": "Page {{current}} of {{total}}",
+      "resultsInfo": "Showing {{start}} to {{end}} of {{total}} results",
+      "noResults": "No results found",
+      "loading": "Loading...",
+      "navigation": {
+        "title": "Pagination Navigation",
+        "description": "Navigate through pages of results",
+        "first": "Go to first page",
+        "last": "Go to last page",
+        "previous": "Go to previous page",
+        "next": "Go to next page",
+        "page": "Go to page {{number}}"
+      },
+      "accessibility": {
+        "pagination": "Pagination",
+        "currentPage": "Current page, page {{number}}",
+        "page": "Page {{number}}",
+        "previousPage": "Previous page",
+        "nextPage": "Next page",
+        "firstPage": "First page",
+        "lastPage": "Last page",
+        "morePages": "More pages available"
+      }
+    },
+    "errors": {
+      "missingClerkKey": "Missing Clerk Publishable Key",
+      "errorLoadingApp": "Error loading app",
+      "unauthorized": "Unauthorized",
+      "invalidAuthentication": "Invalid authentication",
+      "internalServerError": "Internal server error",
+      "missingRequiredFields": "Missing required fields",
+      "failedToFetchProfile": "Failed to fetch user profile"
+    },
+    "redirect": {
+      "simulationTitle": "Redirect Simulation"
+    },
+    "ui": {
+      "close": "Close",
+      "more": "More",
+      "previousSlide": "Previous slide",
+      "nextSlide": "Next slide",
+      "toggleSidebar": "Toggle Sidebar",
+      "goToPreviousPage": "Go to previous page",
+      "goToNextPage": "Go to next page",
+      "carousel": {
+        "title": "Carousel",
+        "description": "Image carousel with navigation controls",
+        "previousSlide": "Previous slide",
+        "nextSlide": "Next slide",
+        "currentSlide": "Current slide",
+        "slide": "Slide",
+        "of": "of",
+        "slideInfo": "Slide {{current}} of {{total}}",
+        "goToSlide": "Go to slide {{number}}",
+        "autoplay": "Autoplay",
+        "pauseAutoplay": "Pause autoplay",
+        "resumeAutoplay": "Resume autoplay",
+        "stopAutoplay": "Stop autoplay",
+        "carouselNavigation": "Carousel navigation",
+        "carouselControls": "Carousel controls",
+        "slideNavigation": "Slide navigation",
+        "imageCarousel": "Image carousel",
+        "contentCarousel": "Content carousel",
+        "gallery": "Gallery",
+        "photoGallery": "Photo gallery",
+        "imageGallery": "Image gallery",
+        "slideshow": "Slideshow",
+        "presentation": "Presentation",
+        "showcase": "Showcase",
+        "browseImages": "Browse images",
+        "viewImages": "View images",
+        "navigateSlides": "Navigate slides",
+        "slideCount": "{{count}} slides",
+        "slideCountSingular": "{{count}} slide",
+        "slideCountPlural": "{{count}} slides",
+        "accessibility": {
+          "carousel": "Carousel",
+          "slide": "Slide",
+          "currentSlide": "Current slide, slide {{number}}",
+          "previousSlide": "Previous slide",
+          "nextSlide": "Next slide",
+          "goToSlide": "Go to slide {{number}}",
+          "slideCount": "Slide {{current}} of {{total}}",
+          "carouselNavigation": "Carousel navigation controls",
+          "slideNavigation": "Slide navigation controls",
+          "autoplayEnabled": "Autoplay enabled",
+          "autoplayDisabled": "Autoplay disabled",
+          "autoplayPaused": "Autoplay paused",
+          "autoplayStopped": "Autoplay stopped"
+        }
+      },
+      "form": {
+        "title": "Form",
+        "description": "Description",
+        "label": "Label",
+        "placeholder": "Placeholder",
+        "error": "Error",
+        "success": "Success",
+        "warning": "Warning",
+        "info": "Information",
+        "required": "Required",
+        "optional": "Optional",
+        "submit": "Submit",
+        "cancel": "Cancel",
+        "save": "Save",
+        "reset": "Reset",
+        "clear": "Clear",
+        "loading": "Loading...",
+        "saving": "Saving...",
+        "submitting": "Submitting...",
+        "validating": "Validating...",
+        "accessibility": {
+          "form": "Form",
+          "field": "Form field",
+          "required": "Required field",
+          "optional": "Optional field",
+          "error": "Field has error",
+          "success": "Field is valid",
+          "warning": "Field has warning",
+          "description": "Field description",
+          "label": "Field label"
+        },
+        "validation": {
+          "required": "This field is required",
+          "invalid": "This field is invalid",
+          "minLength": "Must be at least {{min}} characters",
+          "maxLength": "Must be no more than {{max}} characters",
+          "minValue": "Must be at least {{min}}",
+          "maxValue": "Must be no more than {{max}}",
+          "pattern": "Must match the required pattern",
+          "email": "Must be a valid email address",
+          "url": "Must be a valid URL",
+          "phone": "Must be a valid phone number",
+          "date": "Must be a valid date",
+          "time": "Must be a valid time",
+          "number": "Must be a valid number",
+          "integer": "Must be a whole number",
+          "positive": "Must be a positive number",
+          "negative": "Must be a negative number",
+          "between": "Must be between {{min}} and {{max}}",
+          "oneOf": "Must be one of the allowed values",
+          "custom": "Invalid value",
+          "unknown": "Unknown validation error"
+        },
+        "errors": {
+          "general": "Please fix the errors in the form",
+          "network": "Network error occurred",
+          "server": "Server error occurred",
+          "timeout": "Request timed out",
+          "unauthorized": "You are not authorized to perform this action",
+          "forbidden": "Access denied",
+          "notFound": "Resource not found",
+          "conflict": "Resource conflict",
+          "validation": "Validation failed",
+          "unknown": "An unknown error occurred"
+        },
+        "messages": {
+          "saved": "Form saved successfully",
+          "submitted": "Form submitted successfully",
+          "updated": "Form updated successfully",
+          "deleted": "Form deleted successfully",
+          "created": "Form created successfully",
+          "loaded": "Form loaded successfully",
+          "reset": "Form reset successfully",
+          "cleared": "Form cleared successfully"
+        }
+      },
+      "breadcrumb": {
+        "title": "Breadcrumb Navigation",
+        "description": "Navigation breadcrumb showing current location",
+        "separator": "Separator",
+        "ellipsis": "More",
+        "currentPage": "Current page",
+        "home": "Home",
+        "back": "Back",
+        "previous": "Previous",
+        "next": "Next",
+        "navigation": "Navigation",
+        "location": "Location",
+        "path": "Path",
+        "breadcrumb": "Breadcrumb",
+        "breadcrumbs": "Breadcrumbs",
+        "separatorText": "Separator",
+        "separatorDescription": "Separator between breadcrumb items",
+        "ellipsisText": "More items",
+        "ellipsisDescription": "More breadcrumb items available",
+        "accessibility": {
+          "breadcrumb": "Breadcrumb navigation",
+          "currentPage": "Current page",
+          "separator": "Separator",
+          "ellipsis": "More items",
+          "navigation": "Breadcrumb navigation",
+          "location": "Current location",
+          "path": "Navigation path",
+          "item": "Breadcrumb item",
+          "link": "Breadcrumb link",
+          "page": "Current page"
+        },
+        "separators": {
+          "chevron": "Chevron",
+          "slash": "Slash",
+          "arrow": "Arrow",
+          "greaterThan": "Greater than",
+          "dash": "Dash",
+          "dot": "Dot",
+          "pipe": "Pipe",
+          "default": "Default separator"
+        },
+        "messages": {
+          "navigateTo": "Navigate to {{item}}",
+          "currentLocation": "Current location: {{location}}",
+          "breadcrumbPath": "Breadcrumb path: {{path}}",
+          "moreItems": "More items available",
+          "separatorBetween": "Separator between {{item1}} and {{item2}}"
+        }
+      }
+    },
+    "auth": {
+      "protectedApplication": "Protected Application",
+      "protectedApplicationDesc": "This application is protected. Please enter the password to access.",
+      "incorrectPassword": "Incorrect password. Please try again.",
+      "password": "Password",
+      "enterPassword": "Enter your password",
+      "accessApplication": "Access Application"
+    },
+    "routeErrorBoundary": {
+      "code_1": "Error Code: ",
+      "reload_page_2": "Reload Page",
+      "technical_details_3": "Technical Details",
+      "pageNotFound": "Page Not Found",
+      "errorLoadingPage": "Error Loading Page",
+      "pageNotFoundDescription": "The requested page does not exist or has been moved.",
+      "errorLoadingPageDescription": "An error occurred while loading this page.",
+      "unknownError": "Unknown error",
+      "home": "Home",
+      "errorDetails": "Error Details",
+      "errorLogging": "Error logging details",
+      "timestamp": "Timestamp",
+      "errorMessage": "Error Message",
+      "errorStatus": "Error Status",
+      "errorDetailsLabel": "Error Details",
+      "location": "Location",
+      "consoleLog": "Error logged to console",
+      "actions": {
+        "goHome": "Go to Home Page",
+        "reloadPage": "Reload Current Page",
+        "viewDetails": "View Technical Details",
+        "hideDetails": "Hide Technical Details"
+      },
+      "messages": {
+        "errorCaught": "Error caught by RouteErrorBoundary",
+        "errorLogged": "Error details have been logged",
+        "contactSupport": "If this error persists, please contact support"
+      }
+    },
+    "appName": "LegacyGuard",
+    "cancel": "Avbryt",
+    "error": "Feil",
+    "retry": "Prøv igjen",
+    "goBack": "Gå tilbake",
+    "goHome": "Gå til dashbordet"
+  },
+  "action": {
+    "loading": "Loading...",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "add": "Add",
+    "remove": "Remove",
+    "search": "Search",
+    "filter": "Filter"
+  },
+  "cta": {
+    "title": "Din arv venter på beskyttelse",
+    "subtitle": "Don't wait for 'someday' - give your family security today",
+    "description": "Bli med tusenvis av familier som stoler på LegacyGuard for å bevare sine mest dyrebare minner og viktige dokumenter for fremtidige generasjoner.",
+    "button": "Start din arvereise i dag",
+    "secondary": "Start Free Trial",
+    "urgency": "Setup takes 10 minutes, being prepared lasts forever",
+    "gentleUrgency": {
+      "1": "Every day matters when it comes to family security",
+      "2": "The best time to prepare was yesterday, the second best time is now",
+      "3": "Your family's security and preparedness can't wait",
+      "4": "10 minutes today saves your family 40+ hours later"
+    },
+    "socialUrgency": {
+      "1": "Join the families who are already prepared",
+      "2": "Don't be the family that wishes they had organized sooner",
+      "3": "Be the parent/spouse who thought ahead"
+    },
+    "timeUrgency": {
+      "1": "Start today, sleep better tonight",
+      "2": "Complete setup this weekend",
+      "3": "Give your family this gift today"
+    }
+  },
+  "validation": {
+    "errors": {
+      "nameMinLength": "Navnet må være minst 2 tegn langt",
+      "nameMaxLength": "Navnet kan være maksimalt {{max}} tegn langt",
+      "fieldRequired": "{{field}} er påkrevd",
+      "countryRequired": "Land er påkrevd",
+      "countryCodeLength": "Landskoden må være 2 tegn lang",
+      "selectAtLeastOne": "Velg minst én {{field}}",
+      "selectUpTo": "Du kan velge opptil {{max}} {{field}}",
+      "invalidEmail": "Skriv inn en gyldig e-postadresse",
+      "invalidPhone": "Skriv inn et gyldig telefonnummer",
+      "valueMustBeNumber": "Verdien må være et tall",
+      "valueMustBePositive": "Verdien må være positiv",
+      "currencyCodeLength": "Valutakoden må være 3 tegn lang",
+      "maxCharacters": "{{field}} kan være maksimalt {{max}} tegn",
+      "allocationRequired": "Tildelingsprosent er påkrevd",
+      "allocationMustBeNumber": "Tildeling må være et tall",
+      "allocationRange": "Tildeling må være mellom 1% og 100%",
+      "expirationDateFuture": "Utløpsdatoen må være i fremtiden",
+      "maxTags": "Du kan legge til maksimalt {{max}} tagger",
+      "fileSizeTooLarge": "Filstørrelsen må være {{maxSize}} eller mindre",
+      "invalidFileType": "Kun {{types}} filer er tillatt",
+      "unknownError": "Ukjent feil",
+      "dataNotFound": "Nødvendige data ble ikke funnet",
+      "connectionError": "Tilkoblingsfeil. Vennligst sjekk internettforbindelsen din.",
+      "permissionDenied": "Du har ikke tillatelse til å utføre denne handlingen.",
+      "duplicateRecord": "En post med denne informasjonen eksisterer allerede.",
+      "assetNameRequired": "Asset name is required",
+      "assetTypeRequired": "Asset type is required",
+      "addressMaxLength": "Address can be a maximum of {{max}} characters",
+      "registryNumberMaxLength": "Registry number can be a maximum of {{max}} characters",
+      "institutionNameMaxLength": "Institution name can be a maximum of {{max}} characters",
+      "accountNumberMaxLength": "Account number can be a maximum of {{max}} characters",
+      "credentialsMaxLength": "Credentials can be a maximum of {{max}} characters",
+      "relationshipRequired": "Relationship is required",
+      "beneficiaryNameRequired": "Beneficiary name is required (min. 2 characters)",
+      "notesMaxLength": "Notes can be a maximum of {{max}} characters",
+      "documentNameRequired": "Document name is required",
+      "documentTypeRequired": "Document type is required",
+      "descriptionMaxLength": "Description can be a maximum of {{max}} characters"
+    }
+  },
+  "errors": {
+    "dataNotFound": "Nødvendige data ble ikke funnet.",
+    "networkError": "Nettverksfeil. Vennligst sjekk internettforbindelsen din.",
+    "permissionDenied": "Du har ikke tillatelse til denne handlingen.",
+    "duplicateRecord": "En post med disse dataene eksisterer allerede.",
+    "unknown": "En uventet feil oppstod."
+  },
+  "app": {
+    "name": "LegacyGuard",
+    "comingSoon": {
+      "heritageVault": "Heritage Vault - Coming Soon",
+      "guardianNetwork": "Guardian Network - Coming Soon"
+    },
+    "tagline": "Beskytter din arv"
+  },
+  "index": {
+    "welcome": "Velkommen til din tomme app",
+    "startBuilding": "Begynn å bygge ditt fantastiske prosjekt her!"
+  },
+  "notfound": {
+    "title": "Siden ble ikke funnet",
+    "description": "Siden du leter etter, eksisterer ikke eller har blitt flyttet.",
+    "goHome": "Gå til hjemmesiden",
+    "goBack": "Gå tilbake"
+  },
+  "countryLanguage": {
+    "title": "Velkommen til LegacyGuard",
+    "description": "Vennligst bekreft din plassering og språkpreferanser",
+    "detectedLocation": "Vi har oppdaget at du er i {{country}}",
+    "selectCountry": "Velg ditt land",
+    "selectLanguage": "Velg ditt språk",
+    "chooseLang": "Velg et språk",
+    "domainSuggestion": "Bedre opplevelse tilgjengelig",
+    "domainSuggestionText": "Vi anbefaler å bruke {{domain}} for den beste opplevelsen i din region",
+    "privacyNote": "Dine posisjonsdata brukes kun for å gi deg den beste lokale opplevelsen og deles aldri med tredjeparter.",
+    "confirm": "Bekreft",
+    "confirmAndRedirect": "Fortsett til {{domain}}"
+  },
+  "hero": {
+    "title": "Beskytt familiens digitale arv for alltid",
+    "subtitle": "Den sikre, intuitive plattformen som hjelper familier med å organisere, beskytte og overføre sine viktigste minner og dokumenter på tvers av generasjoner.",
+    "cta_primary": "Start din arveplan",
+    "cta_secondary": "Se demo",
+    "trustSignals": {
+      "dataOwnership": "Dine data forblir dine – vi selger dem aldri",
+      "gdprCompliant": "GDPR-kompatibel by design",
+      "europeanFamilies": "Laget for europeiske familier"
+    },
+    "community": {
+      "growing": "Bli med {{count}} familier som allerede beskytter sin arv",
+      "growingFallback": "Bli med i vårt voksende fellesskap"
+    }
+  },
+  "nav": {
+    "dashboard": "Dashbord",
+    "manual": "Manual",
+    "vault": "Arvehvelv",
+    "guardians": "Vergenettverk",
+    "will": "Testament",
+    "settings": "Innstillinger",
+    "help": "Hjelp og støtte"
+  },
+  "pillars": {
+    "secure": {
+      "title": "SIKKER",
+      "description": "Beskytt din familie og dine eiendeler med proaktive sikkerhetstiltak"
+    },
+    "organize": {
+      "title": "ORGANISER",
+      "description": "Katalogiser og administrer dine digitale og fysiske eiendeler"
+    },
+    "transfer": {
+      "title": "OVERFØR",
+      "description": "Sikre at arven din blir videreført i henhold til dine ønsker"
+    }
+  },
+  "features": {
+    "title": "Hvorfor velge LegacyGuard?",
+    "subtitle": "Bygget med sikkerhet i bedriftsklasse og designet for familier som verdsetter sin arv.",
+    "security": {
+      "title": "Absolutt konfidensialitet og personvern",
+      "description": "Designet slik at ingen uautorisert person kan få tilgang til dine data. Ikke engang oss. Ditt personvern er vår høyeste prioritet."
+    },
+    "guardians": {
+      "title": "Vergenettverk",
+      "description": "Utnevn betrodde familiemedlemmer og venner som verger for å sikre arvens kontinuitet."
+    },
+    "storage": {
+      "title": "Sikker skylagring",
+      "description": "Redundante sikkerhetskopier på tvers av flere datasentre med 99,99 % oppetidsgaranti."
+    },
+    "timelock": {
+      "title": "Tidslåst tilgang",
+      "description": "Sett betingelser for når og hvordan din digitale arv skal være tilgjengelig for begunstigede."
+    },
+    "stories": {
+      "title": "Personlige historier",
+      "description": "Lag rike multimediefortellinger som fanger essensen av familiens reise."
+    },
+    "preservation": {
+      "title": "Livslang bevaring",
+      "description": "Din arv bevares på ubestemt tid med automatisk formatmigrering og oppdateringer."
+    }
+  },
+  "dashboard": {
+    "strategicSummary": {
+      "initial": "Begynn å bygge din digitale arv ved å legge til ditt første dokument.",
+      "addDocument": "Legg til dokument",
+      "addPrimaryGuardian": "Add primary guardian",
+      "addBackupGuardian": "Add backup guardian",
+      "addHomeProperty": "Add your home property",
+      "addFinancialAccounts": "Add financial accounts",
+      "addPrimaryBeneficiary": "Add primary beneficiary",
+      "addContingentBeneficiaries": "Add contingent beneficiaries",
+      "minutes": "{{count}} minutes",
+      "assetInventory": "Inventar av eiendeler",
+      "assetInventoryDesc": "Fullstendig liste over dine verdifulle eiendeler",
+      "criticalDocuments": "Kritiske dokumenter",
+      "criticalDocumentsDesc": "Viktige dokumenter familien din trenger umiddelbart",
+      "guardianNetwork": "Vergenettverket",
+      "guardianNetworkDesc": "Pålitelige folk til å håndtere dine saker",
+      "ifNotDone": "⚠️ If Not Done",
+      "impact": {},
+      "inheritancePlan": "Arveplan",
+      "inheritancePlanDesc": "Tydelige instruksjoner for fordeling av eiendeler",
+      "nextAction": "⚡ Next Action",
+      "nextCriticalStep": "Neste kritiske trinn",
+      "startWithNext": "Start med neste kritiske trinn",
+      "subtitle": "Du har {count} viktige områder som trenger oppmerksomhet. Ved å fullføre disse trinnene vil du sikre {percentage} % beskyttelse for familien og eiendelene dine.",
+      "title": "Din strategiske oversikt",
+      "whyImportant": "🛡️ Why Important"
+    },
+    "stats": {
+      "totalAssets": "Totale Aktiver",
+      "activeAssetsManaged": "Aktive forvaltede aktiver",
+      "activeGuardians": "Aktive Verger",
+      "trustedGuardians": "Tildelte betrodde verger",
+      "beneficiaries": "Mottakere",
+      "legacyRecipients": "Utpekte mottakere",
+      "securityScore": "Sikkerhetsscore",
+      "securityScoreValue": "98%",
+      "excellent": "Utmerket",
+      "good": "Bra",
+      "needsImprovement": "Krever Forbedring"
+    },
+    "tasks": {
+      "personalMessages": {
+        "title": "Skriv personlige meldinger",
+        "description": "Legg igjen varme meldinger og viktige ord til dine kjære."
+      },
+      "familyMeeting": {
+        "title": "Hold et familiemøte",
+        "description": "Diskuter dine ønsker og planer med familien for å sikre at alle forstår dine hensikter."
+      }
+    },
+    "quickTasks": {
+      "taskCompleted": "Task completed!",
+      "taskStarted": "Starting task...",
+      "tasks": {
+        "birthCertificate": {
+          "title": "🛡️ Add Birth Certificate",
+          "description": "Without this document, your family cannot prove inheritance rights or access accounts"
+        },
+        "insurancePolicy": {
+          "title": "💰 Add Life Insurance Policy",
+          "description": "Your family needs immediate access to claim benefits and avoid delays"
+        },
+        "will": {
+          "title": "⚖️ Add Will or Testament",
+          "description": "Prevents family disputes and ensures your wishes are followed"
+        },
+        "spouseGuardian": {
+          "title": "👥 Add Spouse as Guardian",
+          "description": "Without guardians, no one can legally act on your behalf or make medical decisions"
+        },
+        "backupGuardian": {
+          "title": "🤝 Add Backup Guardian",
+          "description": "Ensures someone can step in if your primary guardian is unavailable"
+        },
+        "bankAccount": {
+          "title": "🏦 Add Bank Account",
+          "description": "Your family needs to know where your money is to access it immediately"
+        },
+        "homeProperty": {
+          "title": "🏠 Add Home Property",
+          "description": "Prevents your family from losing your most valuable asset"
+        },
+        "vehicle": {
+          "title": "🚗 Add Vehicle",
+          "description": "Ensures your family can transfer ownership and avoid complications"
+        },
+        "spouseBeneficiary": {
+          "title": "💝 Add Spouse as Beneficiary",
+          "description": "Without clear instructions, family disputes can arise over inheritance"
+        },
+        "childrenBeneficiaries": {
+          "title": "👶 Add Children as Beneficiaries",
+          "description": "Ensures your children receive what you intended for them"
+        }
+      },
+      "allCompleted": "Oppgaver fullført",
+      "allTasks": "Alle Oppgaver",
+      "assets": "Aktiva",
+      "beneficiaries": "Mottakere",
+      "completed": "fullført",
+      "documents": "Dokumenter",
+      "greatProgress": "Flott fremgang! Du har fullført {count} oppgaver.",
+      "guardians": "Foresatt",
+      "ifNotDone": "⚠️ If Not Done",
+      "markAsComplete": "Marker som fullført",
+      "progress": "Fremdrift",
+      "start": "Starter",
+      "title": "5-minuttersoppgaver",
+      "wellOnWay": "🎉 Du er godt på vei til å sikre familiens fremtid!",
+      "whyImportant": "🛡️ Why Important"
+    },
+    "familyGuide": {
+      "view": "View",
+      "subtitle": "Automatically generated guide for your family",
+      "discreteModeDesc": "Your personal notes and reminders",
+      "callNow": "Ring nå",
+      "callSoon": "Ring snart",
+      "critical": "Kritisk",
+      "discreteMode": "Diskret modus",
+      "emergencyContacts": "Nødkontakter",
+      "exportGuide": "Eksportveiledning",
+      "generateGuide": "Generer veiledning",
+      "important": "Viktig",
+      "importantDocuments": "Viktige dokumenter",
+      "shareWithFamily": "Del med familien",
+      "timeline": "Hva du skal gjøre når",
+      "title": "Familieveiledning for nødstilfeller"
+    },
+    "sectionHeaders": {}
+  },
+  "onboarding": {
+    "title": "Velkommen til LegacyGuard",
+    "subtitle": "La oss hjelpe deg med å sikre familiens fremtid",
+    "mainTitle": "Prosjektordre",
+    "mainSubtitle": "La oss lage din personlige plan for arvebeskyttelse",
+    "progressText": "Prosjektordre: Trinn {{step}} av 4",
+    "skipButton": "Hopp over for nå",
+    "skipConfirmTitle": "Hoppe over introduksjonen?",
+    "skipConfirmMessage": "Du kan alltid starte denne oppsettet på nytt senere i innstillingene",
+    "skipConfirmYes": "Hopp over",
+    "skipConfirmNo": "Fortsett oppsettet",
+    "restartButton": "Start introduksjonen på nytt",
+    "welcomeBack": "Velkommen tilbake! Klar til å fullføre oppsettet ditt?",
+    "resumeTitle": "Fortsett der du slapp",
+    "resumeMessage": "Du var på trinn {{step}} av 4",
+    "partialProgress": "{{percentage}}% fullført",
+    "inventory": {
+      "documentAccess": {
+        "question": "Hvis noe skulle skje med deg i dag, ville familien din vite hvor de skulle finne dine viktige dokumenter?",
+        "answers": {
+          "yes": "Ja",
+          "no": "Nei",
+          "partially": "Delvis"
+        }
+      },
+      "caretaker": {
+        "question": "Hvem ville ta seg av dine barn/eiendeler/digitale kontoer?",
+        "answers": {
+          "designated": "Har en utpekt person",
+          "familyFigureOut": "Familien ville funnet ut av det",
+          "notThought": "Har ikke tenkt på det"
+        }
+      },
+      "familyClarity": {
+        "question": "Føler du at familien din ville vite hva du ønsket for dem?",
+        "answers": {
+          "clear": "Ja, det er klart",
+          "somewhat": "Til en viss grad",
+          "neverDiscussed": "Nei, vi har aldri diskutert det"
+        }
+      },
+      "biggestWorry": {
+        "question": "Hva bekymrer deg mest for familiens fremtid?",
+        "answers": {
+          "financial": "Økonomisk sikkerhet",
+          "legal": "Juridiske komplikasjoner",
+          "memories": "Tap av minner",
+          "conflicts": "Familiekonflikter"
+        }
+      },
+      "personalized": {
+        "documentCentralization": "Basert på ditt svar om dokumenttilgang, anbefaler vi å starte med å sentralisere dine viktige dokumenter.",
+        "guardianDesignation": "Siden du ikke har utpekt noen til å ta vare på dine eiendeler, bør utnevnelse av en verge være din prioritet.",
+        "willPreparation": "Familien din trenger klarhet om dine ønsker. Å lage et testament er et viktig første skritt.",
+        "financialPlanning": "Økonomisk sikkerhet er avgjørende. La oss starte med å dokumentere dine bankkontoer og eiendeler.",
+        "conflictPrevention": "For å forhindre familiekonflikter er klar dokumentasjon og kommunikasjon nøkkelen.",
+        "memoryPreservation": "Å bevare minner starter med å organisere dine digitale bilder og historier.",
+        "legalOrganization": "La oss organisere dine juridiske dokumenter for å unngå komplikasjoner senere."
+      }
+    },
+    "q1": {
+      "title": "Hvis noe skulle skje med deg i dag, ville familien din vite hvor de skulle finne dine viktige dokumenter?",
+      "option1": "Ja",
+      "option2": "Nei",
+      "option3": "Delvis"
+    },
+    "q2": {
+      "title": "Hvem ville ta seg av dine barn/eiendeler/digitale kontoer?",
+      "option1": "Har en utpekt person",
+      "option2": "Familien ville funnet ut av det",
+      "option3": "Har ikke tenkt på det"
+    },
+    "q3": {
+      "title": "Føler du at familien din ville vite hva du ønsket for dem?",
+      "option1": "Ja, det er klart",
+      "option2": "Til en viss grad",
+      "option3": "Nei, vi har aldri diskutert det"
+    },
+    "q4": {
+      "title": "Hva bekymrer deg mest for familiens fremtid?",
+      "option1": "Økonomisk sikkerhet",
+      "option2": "Juridiske komplikasjoner",
+      "option3": "Tap av minner",
+      "option4": "Familiekonflikter"
+    },
+    "buttons": {
+      "previous": "Forrige",
+      "next": "Neste",
+      "generate": "Generer min prosjektordre"
+    },
+    "analysis": {
+      "title": "Analyserer svarene dine...",
+      "subtitle": "Forbereder din personlige 'Prosjektordre'...",
+      "done": "Ferdig!"
+    },
+    "complete": "Flott start! Vi har tilpasset dashbordet ditt basert på svarene dine. Du er klar til å begynne å bygge din omfattende arveplan.",
+    "success": {
+      "stepCompleted": "Trinn {{step}} fullført!",
+      "inventoryComplete": "Livsinventar fullført! Din personlige plan er klar.",
+      "allQuestionsAnswered": "Alle spørsmål besvart. Genererer din handlingsplan..."
+    },
+    "errors": {
+      "questionRequired": "Vennligst svar på dette spørsmålet for å fortsette",
+      "failedToSave": "Kunne ikke lagre svarene dine. Vennligst prøv igjen.",
+      "loadingFailed": "Kunne ikke laste introduksjonsspørsmålene"
+    },
+    "addAnother": "Legg til en til",
+    "previous": "Forrige",
+    "next": "Neste",
+    "continue": "Fortsett til dashbordet"
+  },
+  "manual": {
+    "title": "Manual for etterlatte",
+    "subtitle": "Viktig informasjon for dine kjære når de trenger det mest",
+    "tabs": {
+      "contacts": "Viktige kontakter",
+      "documents": "Nøkkeldokumenter",
+      "instructions": "Instruksjoner"
+    },
+    "contacts": {
+      "title": "Viktige kontakter",
+      "description": "Nøkkelpersoner familien din bør kontakte i en nødssituasjon",
+      "addContact": "Legg til kontakt",
+      "addFirstContact": "Legg til din første kontakt",
+      "loading": "Laster kontakter...",
+      "empty": {
+        "title": "Ingen kontakter lagt til ennå",
+        "description": "Start med å legge til viktige personer som familien din bør kjenne til."
+      },
+      "form": {
+        "editTitle": "Rediger kontakt",
+        "addTitle": "Legg til viktig kontakt",
+        "description": "Legg til personer familien din bør kontakte i viktige situasjoner.",
+        "nameLabel": "Kontaktnavn *",
+        "namePlaceholder": "f.eks. Ola Nordmann",
+        "roleLabel": "Rolle/Yrke *",
+        "rolePlaceholder": "f.eks. Familieadvokat, Regnskapsfører, Lege",
+        "phoneLabel": "Telefonnummer",
+        "phonePlaceholder": "+47 123 45 678",
+        "emailLabel": "E-postadresse",
+        "emailPlaceholder": "kontakt@example.no",
+        "notesLabel": "Notater",
+        "notesPlaceholder": "Ytterligere informasjon om denne kontakten...",
+        "updateButton": "Oppdater kontakt",
+        "addButton": "Legg til kontakt",
+        "saving": "Lagrer...",
+        "cancel": "Avbryt"
+      },
+      "card": {
+        "edit": "Rediger"
+      },
+      "messages": {
+        "nameAndRoleRequired": "Navn og rolle er påkrevd",
+        "loginRequired": "Du må være logget inn for å lagre kontakter",
+        "updated": "Kontakten ble oppdatert!",
+        "added": "Kontakten ble lagt til!",
+        "deleted": "Kontakten ble slettet!"
+      },
+      "errors": {
+        "loadFailed": "Kunne ikke laste kontakter",
+        "saveFailed": "Kunne ikke lagre kontakt",
+        "deleteFailed": "Kunne ikke slette kontakt"
+      }
+    },
+    "documents": {
+      "title": "Nøkkeldokumenter",
+      "description": "Kritiske dokumenter familien din trenger å vite om",
+      "loading": "Laster nøkkeldokumenter...",
+      "empty": {
+        "title": "Ingen nøkkeldokumenter lagt til ennå",
+        "description": "Merk viktige dokumenter som \"nøkkeldokumenter\" fra hvelvet ditt for å få dem til å vises her.",
+        "tip": "Tips: Gå til hvelvet ditt og slå på \"Inkluder i manual for etterlatte\" for viktige dokumenter"
+      },
+      "card": {
+        "essentialNote": "Dette dokumentet er merket som essensielt for dine etterlatte."
+      },
+      "errors": {
+        "loadFailed": "Kunne ikke laste nøkkeldokumenter"
+      },
+      "expiration": {
+        "expired": "Utløpt",
+        "expiresSoon": "Utløper snart",
+        "expiring": "Utløper"
+      }
+    },
+    "instructions": {
+      "title": "Siste ønsker og instruksjoner",
+      "description": "Personlig veiledning og meldinger til dine kjære",
+      "loading": "Laster instruksjoner...",
+      "autoSaveNote": "Dine instruksjoner lagres automatisk mens du skriver",
+      "sections": {
+        "funeral": {
+          "title": "Begravelsesønsker",
+          "description": "Dine preferanser for begravelsesarrangementer og seremonier",
+          "placeholder": "f.eks. Kremasjon, ingen formell seremoni, spill 'My Way' av Frank Sinatra..."
+        },
+        "digitalAccounts": {
+          "title": "Nedstenging av digitale kontoer",
+          "description": "Instruksjoner for håndtering av dine digitale kontoer og online tilstedeværelse",
+          "placeholder": "f.eks. Vennligst slett min Facebook-profil, men arkiver min Gmail. Overfør bildene mine fra Google Drive til..."
+        },
+        "messages": {
+          "title": "Meldinger til kjære",
+          "description": "Personlige meldinger og siste tanker til din familie og venner",
+          "placeholder": "Del dine tanker, minner og siste meldinger til de du elsker..."
+        }
+      },
+      "errors": {
+        "loadFailed": "Kunne ikke laste instruksjoner"
+      }
+    }
+  },
+  "documentTypes": {
+    "realEstateDeed": "Skjøte",
+    "birthCertificate": "Fødselsattest",
+    "insurancePolicy": "Forsikringspolise",
+    "lastWill": "Siste vilje og testament",
+    "employmentContract": "Arbeidskontrakt",
+    "passport": "Pass",
+    "drivingLicense": "Førerkort",
+    "bankStatement": "Bankutskrift",
+    "investmentCertificate": "Investeringsbevis",
+    "energyContract": "Energikontrakt",
+    "softwareLicense": "Programvarelisens",
+    "subscriptionService": "Abonnementstjeneste",
+    "other": "Annet"
+  },
+  "navigation": {
+    "dashboard": "Dashbord",
+    "assets": "Eiendeler",
+    "manual": "Manual",
+    "documents": "Arvehvelv",
+    "guardians": "Vergenettverk",
+    "will": "Testament",
+    "settings": "Innstillinger",
+    "help": "Hjelp og støtte"
+  },
+  "invite": {
+    "title": "{{name}} har invitert deg til å være en verge for deres digitale arv"
+  },
+  "settings": {
+    "title": "Innstillinger",
+    "subtitle": "Administrer dine kontopreferanser og sikkerhetsinnstillinger",
+    "loading": "Laster dine kontoinnstillinger...",
+    "profile": {
+      "title": "Profilinformasjon",
+      "description": "Oppdater din personlige informasjon og preferanser",
+      "emailAddress": "E-postadresse",
+      "emailCannotBeChanged": "Din e-postadresse kan ikke endres",
+      "firstName": "Fornavn",
+      "firstNamePlaceholder": "Skriv inn ditt fornavn",
+      "lastName": "Etternavn",
+      "lastNamePlaceholder": "Skriv inn ditt etternavn",
+      "saving": "Lagrer...",
+      "saveChanges": "Lagre endringer"
+    },
+    "security": {
+      "title": "Sikkerhet",
+      "description": "Administrer din kontosikkerhet og tilgang",
+      "changePassword": "Endre passord",
+      "currentPassword": "Nåværende passord",
+      "currentPasswordPlaceholder": "Skriv inn nåværende passord",
+      "newPassword": "Nytt passord",
+      "newPasswordPlaceholder": "Skriv inn nytt passord",
+      "confirmNewPassword": "Bekreft nytt passord",
+      "confirmNewPasswordPlaceholder": "Bekreft nytt passord",
+      "updating": "Oppdaterer...",
+      "updatePassword": "Oppdater passord",
+      "twoFactorAuth": "Tofaktorautentisering",
+      "enable2FA": "Aktiver 2FA",
+      "2FADescription": "Legg til et ekstra sikkerhetslag på kontoen din. (Kommer snart)"
+    },
+    "accountManagement": {
+      "title": "Kontoadministrasjon",
+      "description": "Permanente kontohandlinger - vennligst fortsett med forsiktighet",
+      "deleteAccountTitle": "Slett konto",
+      "deleteAccountWarning": "Denne handlingen er irreversibel og vil permanent slette alle dine data, inkludert opplastede dokumenter og forberedte instruksjoner. Din digitale arvinformasjon vil bli fullstendig fjernet fra våre systemer.",
+      "deleteMyAccount": "Slett min konto",
+      "confirmTitle": "Er du helt sikker?",
+      "confirmDescription": "Denne handlingen kan ikke angres. Dette vil permanent slette din konto og fjerne alle dine data fra våre servere.",
+      "confirmEmailPrompt": "Vennligst skriv inn din e-postadresse {{email}} for å bekrefte:",
+      "emailPlaceholder": "Skriv inn din e-postadresse",
+      "deleting": "Sletter...",
+      "deleteAccount": "Slett konto"
+    },
+    "errors": {
+      "loadProfile": "Kunne ikke laste profilinformasjon",
+      "updateProfile": "Kunne ikke oppdatere profil",
+      "passwordFieldsRequired": "Vennligst fyll ut alle passordfeltene",
+      "passwordsDoNotMatch": "Nye passord stemmer ikke overens",
+      "passwordTooShort": "Nytt passord må være minst 6 tegn langt",
+      "updatePassword": "Kunne ikke oppdatere passord",
+      "emailDoesNotMatch": "E-postadressen stemmer ikke overens",
+      "deleteAccountSupport": "Sletting av konto må bes om via kundestøtte. Vennligst kontakt oss for hjelp.",
+      "deleteAccount": "Kunne ikke slette konto"
+    },
+    "success": {
+      "profileUpdated": "Profilen ble oppdatert",
+      "passwordUpdated": "Passordet ble oppdatert"
+    }
+  },
+  "debug": {
+    "panel": {
+      "title": "Debug-panel",
+      "recentErrors": "Nylige applikasjonsfeil",
+      "technicalDetails": "Tekniske detaljer",
+      "tabs": {
+        "list": "Liste",
+        "details": "Detaljer"
+      },
+      "errorCount": "{{count}} feil",
+      "actions": {
+        "downloadErrors": "Last ned feil",
+        "clearAllErrors": "Slett alle feil"
+      },
+      "messages": {
+        "errorsCleared": "Alle feil slettet",
+        "errorCopied": "Feil kopiert til utklippstavlen",
+        "errorsDownloaded": "Feil lastet ned"
+      },
+      "error": {
+        "unknownError": "Ukjent feil",
+        "noMessage": "Ingen melding",
+        "errorMessage": "Feilmelding"
+      },
+      "sections": {
+        "stackTrace": "Stack Trace",
+        "context": "Kontekst",
+        "location": "Plassering",
+        "browserInfo": "Nettleserinformasjon",
+        "time": "Tid"
+      },
+      "fields": {
+        "url": "URL:",
+        "path": "Sti:",
+        "query": "Spørring:",
+        "userAgent": "User Agent:",
+        "viewport": "Viewport:"
+      }
+    }
+  },
+  "will": {
+    "errors": {
+      "mustBeLoggedIn": "Du må være logget inn for å lagre.",
+      "loadingFailed": "Kunne ikke laste testamentet.",
+      "savingFailed": "Kunne ikke lagre testamentet."
+    },
+    "messages": {
+      "savedSuccessfully": "Testamentet ble lagret.",
+      "documentUploaded": "Dokumentet ble lastet opp."
+    },
+    "loading": "Laster testament...",
+    "title": "Testament",
+    "subtitle": "Administrer ditt testament og utnevn dine eksekutører.",
+    "sections": {
+      "statusInfo": "Status og informasjon",
+      "willDocument": "Testamentdokument"
+    },
+    "fields": {
+      "currentStatus": "Nåværende status",
+      "physicalLocation": "Fysisk plassering",
+      "executorContact": "Kontakt for eksekutør",
+      "additionalNotes": "Tilleggsnotater"
+    },
+    "placeholders": {
+      "physicalLocation": "f.eks. Hjemmesafe, Advokatkontor",
+      "selectContact": "Velg kontakt",
+      "additionalNotes": "Eventuell tilleggsinformasjon..."
+    },
+    "descriptions": {
+      "statusDescription": "Følg den nåværende statusen til ditt testament.",
+      "physicalLocationDescription": "Hvor er ditt testament fysisk lagret?",
+      "executorDescription": "Person som er ansvarlig for å utføre ditt testament."
+    },
+    "options": {
+      "noContactSelected": "Ingen kontakt valgt"
+    },
+    "status": {
+      "notStarted": "Ikke startet",
+      "inPreparation": "Under forberedelse",
+      "completedSigned": "Fullført og signert",
+      "withNotary": "Hos notarius",
+      "draft": "Utkast",
+      "notarized": "Notarisert",
+      "stored": "Lagret",
+      "updated": "Oppdatert"
+    },
+    "document": {
+      "uploaded": "Testamentdokument lastet opp",
+      "uploadedDescription": "Ditt testamentdokument er sikkert lagret.",
+      "noDocument": "Intet testamentdokument",
+      "noDocumentDescription": "Last opp en kopi av ditt testament for sikker oppbevaring."
+    },
+    "buttons": {
+      "saveWillInfo": "Lagre testamentinformasjon",
+      "saving": "Lagrer...",
+      "uploadDocument": "Last opp dokument",
+      "uploadNewVersion": "Last opp ny versjon"
+    },
+    "steps": {
+      "countrySelection": "Valg av land",
+      "countrySelectionDesc": "Velg ditt land og skriv inn dine detaljer",
+      "assetAllocation": "Tildeling av eiendeler",
+      "assetAllocationDesc": "Fordel eiendeler mellom begunstigede",
+      "beneficiaries": "Begunstigede",
+      "beneficiariesDesc": "Definer dine begunstigede",
+      "executors": "Eksekutører",
+      "executorsDesc": "Tildel eksekutører til å administrere ditt testament",
+      "review": "Gjennomgang",
+      "reviewDesc": "Gjennomgå og ferdigstill ditt testament"
+    },
+    "progress": "Trinn {{current}} av {{total}}",
+    "validation": {
+      "selectCountry": "Vennligst velg et land",
+      "requiredField": "Dette feltet er påkrevd",
+      "allocation100": "Total tildeling må være lik 100%",
+      "atLeastOneBeneficiary": "Minst én begunstiget er påkrevd",
+      "executorRequired": "Eksekutør er påkrevd",
+      "fixErrors": "Vennligst rett feilene i skjemaet"
+    },
+    "generation": {
+      "success": "Testamentet ble generert!",
+      "error": "Kunne ikke generere testamentet"
+    }
+  },
+  "contacts": {
+    "errors": {
+      "loadingFailed": "Kunne ikke laste kontakter."
+    }
+  },
+  "guardianUpload": {
+    "error": "Feil",
+    "success": "Suksess",
+    "fillRequired": "Vennligst fyll ut alle obligatoriske felt",
+    "loginToSave": "Du må være logget inn for å lagre verger",
+    "updated": "Vergen ble oppdatert",
+    "added": "Vergen ble lagt til",
+    "failedSave": "Kunne ikke lagre vergen. Vennligst prøv igjen.",
+    "editTitle": "Rediger verge",
+    "addTitle": "Legg til verge",
+    "description": "Legg til noen du stoler på for å hjelpe til med å administrere arven din",
+    "fullNameLabel": "Vergens fulle navn *",
+    "fullNamePlaceholder": "Skriv inn vergens fulle navn",
+    "relationshipLabel": "Forhold *",
+    "relationshipPlaceholder": "Velg forhold",
+    "countryLabel": "Bostedsland *",
+    "countryPlaceholder": "Velg land",
+    "countryDescription": "Velg landet der denne vergen bor",
+    "rolesTitle": "Roller og ansvar",
+    "saving": "Lagrer...",
+    "updateButton": "Oppdater verge",
+    "addButton": "Legg til verge",
+    "relationships": {
+      "spouse": "Ektefelle",
+      "parent": "Forelder",
+      "sibling": "Søsken",
+      "child": "Barn",
+      "friend": "Venn",
+      "legalProfessional": "Juridisk profesjonell",
+      "other": "Annet"
+    },
+    "roles": {
+      "guardianForChildren": "Verge for barn",
+      "executorOfWill": "Testamentfullbyrder",
+      "healthcareProxy": "Fremtidsfullmakt for helse",
+      "financialPowerOfAttorney": "Finansiell fremtidsfullmakt",
+      "emergencyContact": "Nødkontakt",
+      "trustee": "Tillitsmann"
+    }
+  },
+  "documentUpload": {
+    "fileUploadedSuccess": "Filen ble lastet opp!",
+    "fileUploadFailed": "Kunne ikke laste opp filen. Vennligst prøv igjen.",
+    "fileTooLarge": "Valgt fil er for stor. Maksimal størrelse er {{maxSize}} MB.",
+    "fillRequiredFields": "Vennligst fyll ut alle obligatoriske felt",
+    "loginToSave": "Du må være logget inn for å lagre dokumenter",
+    "saved": "Dokumentet ble lagret!",
+    "failedSave": "Kunne ikke lagre dokumentet. Vennligst prøv igjen.",
+    "detailsTitle": "Dokumentdetaljer",
+    "detailsSubtitle": "Legg til informasjon om ditt opplastede dokument",
+    "namePlaceholder": "Skriv inn dokumentnavn",
+    "typePlaceholder": "Velg dokumenttype",
+    "countryPlaceholder": "Velg land",
+    "pickDate": "Velg en dato",
+    "title": "Last opp dokument",
+    "subtitle": "Last opp juridiske og personlige dokumenter sikkert",
+    "browseFiles": "Bla gjennom filer",
+    "chooseDifferent": "Velg en annen fil",
+    "uploadButton": "Last opp dokument",
+    "storageLimitReached": "Kan ikke laste opp fil. Du har {{remaining}} lagringsplass igjen, men denne filen er {{fileSize}}. Vennligst oppgrader planen din eller fjern noen eksisterende filer."
+  },
+  "auth": {
+    "noAccount": "Har du ikke en konto?",
+    "signUpLink": "Registrer deg",
+    "hasAccount": "Har du allerede en konto?",
+    "loginLink": "Logg inn",
+    "loginButton": "Logg inn",
+    "signupButton": "Registrer deg"
+  },
+  "assetDetail": {
+    "loading": "Laster detaljer for eiendel...",
+    "errors": {
+      "failedToLoad": "Kunne ikke laste detaljer for eiendel",
+      "nameRequired": "Navn på eiendel er påkrevd",
+      "failedToSave": "Kunne ikke lagre eiendel"
+    },
+    "messages": {
+      "createdSuccessfully": "Eiendelen ble opprettet",
+      "updatedSuccessfully": "Eiendelen ble oppdatert"
+    },
+    "title": {
+      "new": "Ny {{type}}"
+    },
+    "subtitle": {
+      "new": "Fyll ut detaljene for å legge til denne eiendelen i porteføljen din",
+      "edit": "Oppdater detaljene for denne eiendelen"
+    },
+    "sections": {
+      "assetInformation": "Informasjon om eiendel",
+      "basicInformation": "Grunnleggende informasjon",
+      "propertyDetails": "Eiendomsdetaljer",
+      "accountDetails": "Kontodetaljer",
+      "financialDetails": "Finansielle detaljer"
+    },
+    "fields": {
+      "assetName": "Navn på eiendel",
+      "assetType": "Type eiendel",
+      "propertyAddress": "Eiendomsadresse",
+      "propertyRegistryNumber": "Matrikkelnummer",
+      "accountType": "Kontotype",
+      "financialInstitution": "Finansinstitusjon",
+      "accountNumber": "Kontonummer / IBAN",
+      "loginCredentials": "Innloggingsdetaljer og notater",
+      "estimatedValue": "Estimert verdi",
+      "currency": "Valuta"
+    },
+    "placeholders": {
+      "assetName": "f.eks. Familiehjem, Investeringsportefølje",
+      "propertyAddress": "Skriv inn fullstendig eiendomsadresse",
+      "propertyRegistryNumber": "f.eks. Gårds- og bruksnummer",
+      "selectAccountType": "Velg kontotype",
+      "financialInstitution": "f.eks. DNB, Nordea",
+      "accountNumber": "f.eks. 12345678901",
+      "loginCredentials": "Passordbehandler: 1Password-hvelv 'Bank'",
+      "estimatedValue": "0"
+    },
+    "descriptions": {
+      "assetName": "Gi denne eiendelen et beskrivende navn for enkel identifisering",
+      "assetType": "Velg typen som best beskriver denne eiendelen",
+      "propertyAddress": "Fullstendig adresse inkludert gate, by, postnummer og land",
+      "propertyRegistryNumber": "Offisielt register- eller matrikkelnummer for denne eiendommen",
+      "accountType": "Type finanskonto eller investering",
+      "financialInstitution": "Navn på banken eller finansinstitusjonen",
+      "accountNumber": "Kontonummer, IBAN eller annen identifiserende informasjon",
+      "estimatedValue": "Nåværende markedsverdi eller sist kjente verdi av denne eiendelen",
+      "currency": "Valuta verdien er uttrykt i"
+    },
+    "types": {
+      "realEstate": "Eiendom",
+      "business": "Bedrift",
+      "vehicle": "Kjøretøy",
+      "financialAccount": "Finanskonto",
+      "asset": "Eiendel"
+    },
+    "accountTypes": {
+      "bankAccount": "Bankkonto",
+      "investmentPortfolio": "Investeringsportefølje",
+      "pensionFund": "Pensjonsfond"
+    },
+    "securityWarning": "Sikkerhetsadvarsel:",
+    "securityWarningText": "Ikke lagre faktiske passord her. Bruk dette feltet for hint, plasseringer av passordbehandlere eller andre sikre tilgangsinstruksjoner.",
+    "buttons": {
+      "cancel": "Avbryt",
+      "saving": "Lagrer...",
+      "createAsset": "Opprett eiendel",
+      "updateAsset": "Oppdater eiendel"
+    }
+  },
+  "assets": {
+    "overview": {
+      "title": "Eiendelsportefølje",
+      "subtitle": "Administrer og spor dine eiendeler, eiendommer og investeringer",
+      "addAsset": "Legg til eiendel",
+      "totalPortfolioValue": "Total porteføljeverdi",
+      "estimatedValue": "Estimert verdi på tvers av alle eiendeler",
+      "distribution": {
+        "title": "Fordeling av eiendeler",
+        "subtitle": "Porteføljeinndeling etter kategori"
+      },
+      "beneficiaryAllocation": {
+        "title": "Tildeling til begunstigede",
+        "subtitle": "Spor fordelingen av eiendeler til begunstigede",
+        "allAssigned": "Alle eiendeler har tildelt begunstigede",
+        "unassignedWarning": "{{count}} eiendeler trenger tildeling til begunstigede"
+      },
+      "viewInheritanceSummary": "Se arveoppsummering",
+      "addNew": "Legg til ny",
+      "errors": {
+        "loadFailed": "Kunne ikke laste eiendelsdata"
+      }
+    },
+    "categories": {
+      "property": "Eiendom",
+      "vehicle": "Kjøretøy",
+      "financial": "Finansiell",
+      "business": "Bedrift",
+      "personal": "Personlig",
+      "uncategorized": "Ukategorisert"
+    }
+  },
+  "pricing": {
+    "title": "Velg din arveplan",
+    "subtitle": "Start med vår gratis plan eller oppgrader for premiumfunksjoner.",
+    "mainTitle": "Velg din arveplan",
+    "mainSubtitle": "Start med vår gratis plan eller oppgrader for premiumfunksjoner.",
+    "starter": {
+      "name": "Heritage Starter",
+      "price": "Gratis",
+      "description": "Ideell for å komme i gang med å bevare din digitale arv.",
+      "button": "Start gratis",
+      "features": {
+        "storage": "{{amount}} lagring",
+        "guardians": "Opptil {{count}} verger",
+        "documents": "Grunnleggende dokumenthvelv",
+        "playbook": "Grunnleggende vergedraaibok",
+        "support": "Fellesskapsstøtte"
+      },
+      "limits": {
+        "storage": "500 MB",
+        "guardians": "3",
+        "fileSize": "10 MB per fil"
+      }
+    },
+    "premium": {
+      "name": "Heritage Premium",
+      "price": "kr 199",
+      "period": "/ mnd",
+      "badge": "Mest populær",
+      "description": "Avanserte funksjoner for omfattende arveadministrasjon.",
+      "button": "Velg Premium",
+      "features": {
+        "storage": "{{amount}} lagring",
+        "guardians": "Opptil {{count}} verger",
+        "manual": "Manual for etterlatte",
+        "support": "Prioritert e-poststøtte"
+      },
+      "limits": {
+        "storage": "10 GB",
+        "guardians": "5",
+        "fileSize": "50 MB per fil"
+      }
+    },
+    "enterprise": {
+      "name": "Heritage Enterprise",
+      "price": "Tilpasset",
+      "description": "For familier og bedrifter med komplekse behov som krever det høyeste servicenivået.",
+      "button": "Kontakt salg",
+      "features": {
+        "storage": "{{amount}}+ lagring",
+        "guardians": "Ubegrenset antall verger",
+        "legal": "Koordinering med juridisk profesjonell",
+        "support": "Dedikert kontoadministrator"
+      },
+      "limits": {
+        "storage": "500 GB",
+        "guardians": "ubegrenset",
+        "fileSize": "100 MB per fil"
+      }
+    }
+  },
+  "cookies": {
+    "bannerText": "Vi bruker essensielle informasjonskapsler for å sikre at nettstedet vårt fungerer som det skal. Med ditt samtykke kan vi også bruke analytiske informasjonskapsler for å forbedre tjenestene våre.",
+    "declineButton": "Avslå",
+    "acceptButton": "Godta alle",
+    "learnMoreLink": "Lær mer"
+  },
+  "guardianView": {
+    "title": "Vergedashbord",
+    "subtitle": "Sikker tilgang til {{userName}}s essensielle informasjon",
+    "readOnlyAccess": "Kun lesetilgang",
+    "loading": "Laster vergedashbord...",
+    "errors": {
+      "pleaseLogin": "Vennligst logg inn for å få tilgang til vergevisningen",
+      "failedToLoad": "Kunne ikke laste vergeinformasjon",
+      "loadFailed": "Kunne ikke laste nødkontakter",
+      "addFailed": "Kunne ikke legge til nødkontakt",
+      "removeFailed": "Kunne ikke fjerne nødkontakt",
+      "reorderFailed": "Kunne ikke oppdatere kontaktordre",
+      "testFailed": "Kunne ikke sende testmelding",
+      "selectContact": "Vennligst velg en kontakt"
+    },
+    "sections": {
+      "keyDocuments": {
+        "title": "Nøkkeldokumenter",
+        "description": "Essensielle dokumenter merket som kritiske av kontoeieren",
+        "keyDocumentBadge": "Nøkkeldokument",
+        "expires": "Utløper",
+        "noExpiration": "Ingen utløpsdato",
+        "empty": "Ingen nøkkeldokumenter tilgjengelig"
+      },
+      "importantContacts": {
+        "title": "Viktige kontakter",
+        "description": "Nøkkelkontakter for nødssituasjoner",
+        "empty": "Ingen viktige kontakter tilgjengelig"
+      },
+      "finalWishes": {
+        "title": "Siste ønsker og instruksjoner",
+        "description": "Personlige instruksjoner og siste ønsker",
+        "funeralWishes": "Begravelsesønsker",
+        "digitalAccountsShutdown": "Nedstenging av digitale kontoer",
+        "messagesToLovedOnes": "Meldinger til kjære",
+        "empty": "Ingen siste ønsker eller instruksjoner tilgjengelig"
+      }
+    },
+    "guardianInfo": {
+      "description": "Du ser denne informasjonen som en betrodd verge. Denne tilgangen er gitt for nødssituasjoner og for å hjelpe deg med å oppfylle dine ansvar.",
+      "securityNote": "All tilgang logges og overvåkes av sikkerhetshensyn."
+    },
+    "defaultUserName": "Primær kontoeier",
+    "description": "Administrer opptil 3 nødkontakter i prioritert rekkefølge",
+    "addContact": "Legg til kontakt",
+    "noContacts": "Ingen nødkontakter lagt til ennå. Legg til kontakter som skal varsles i en nødssituasjon.",
+    "maxContactsReached": "Du har nådd maksimalt antall på 3 nødkontakter.",
+    "sendTest": "Send test",
+    "lastContacted": "Sist kontaktet for {{time}} siden",
+    "priority": {
+      "1": "Prioritet 1",
+      "2": "Prioritet 2",
+      "3": "Prioritet 3"
+    },
+    "addContactDialog": {
+      "title": "Legg til nødkontakt",
+      "description": "Velg en kontakt fra listen din for å legge til som nødkontakt.",
+      "selectContact": "Velg kontakt",
+      "selectPlaceholder": "Velg en kontakt...",
+      "relationship": "Forhold (valgfritt)",
+      "relationshipPlaceholder": "Velg forhold...",
+      "addButton": "Legg til nødkontakt"
+    },
+    "messages": {
+      "added": "Nødkontakt ble lagt til",
+      "removed": "Nødkontakt fjernet",
+      "reordered": "Kontaktprioritet oppdatert",
+      "testSent": "Testmelding sendt til {{name}}"
+    }
+  },
+  "notificationPreferences": {
+    "title": "Innstillinger for nødvarsler",
+    "description": "Administrer varslingsinnstillinger for dine nødkontakter",
+    "noContacts": "Legg til nødkontakter for å administrere deres varslingsinnstillinger.",
+    "noEmail": "Ingen e-postadresse registrert",
+    "emailRequired": "E-post påkrevd",
+    "lastUpdated": "Sist oppdatert: {{date}}",
+    "info": "Når nødtilgang gis, vil varsler kun bli sendt til kontakter med e-postvarsler aktivert.",
+    "howItWorks": {
+      "title": "Hvordan nødvarsler fungerer",
+      "point1": "Verger kan få tilgang til nødkontakter i kritiske situasjoner",
+      "point2": "Alle påmeldte kontakter mottar umiddelbare e-postvarsler",
+      "point3": "Du vil også motta et varsel når tilgang skjer"
+    },
+    "messages": {
+      "updated": "Varslingsinnstillinger oppdatert"
+    },
+    "errors": {
+      "loadFailed": "Kunne ikke laste varslingsinnstillinger",
+      "updateFailed": "Kunne ikke oppdatere innstillinger"
+    }
+  },
+  "relationships": {
+    "spouse": "Ektefelle",
+    "child": "Barn",
+    "parent": "Forelder",
+    "sibling": "Søsken",
+    "friend": "Venn",
+    "other": "Annet"
+  },
+  "emergencyAccess": {
+    "button": "Nødtilgang",
+    "modalTitle": "Tilgang til nødkontakter",
+    "modalDescription": "Dette vil gi deg tilgang til kontaktinformasjon for nødsituasjoner. Bruk dette kun i ekte nødssituasjoner.",
+    "warningText": "Denne tilgangen logges, og kontoeieren vil bli varslet.",
+    "reasonLabel": "Årsak til nødtilgang (påkrevd)",
+    "reasonPlaceholder": "Vennligst beskriv nødssituasjonen som krever tilgang til kontaktinformasjon...",
+    "confirmCheckbox": "Jeg bekrefter at dette er en ekte nødssituasjon og at jeg trenger tilgang til kontaktinformasjon",
+    "accessing": "Får tilgang...",
+    "confirmButton": "Få tilgang til nødkontakter",
+    "pleaseConfirm": "Vennligst bekreft nødsituasjonen og oppgi en årsak",
+    "notAuthorized": "Du er ikke autorisert for nødtilgang",
+    "failedToLoadContacts": "Kunne ikke laste nødkontakter",
+    "accessGranted": "Nødtilgang gitt. Kontaktinformasjon er nå tilgjengelig.",
+    "accessFailed": "Kunne ikke få tilgang til nødkontakter",
+    "contactsTitle": "Nødkontakter",
+    "contactsDescription": "Kontakt disse personene i prioritert rekkefølge. Klikk på telefonnumre for å ringe eller e-poster for å sende meldinger.",
+    "priorityOrder": "Prioritert rekkefølge",
+    "priority": "Prioritet #{{order}}",
+    "logContact": "Logg kontaktforsøk",
+    "contactLogged": "Kontaktforsøk logget",
+    "lastContacted": "Sist kontaktet: {{time}}",
+    "importantNote": "Viktig: Kontakt disse personene i den viste rekkefølgen. Prøv alltid den primære kontaktmetoden først. Logg alle kontaktforsøk for journalføring."
+  },
+  "helpPage": {
+    "title": "Hjelp- og støttesenter",
+    "subtitle": "Vi er her for deg. Finn svar på dine spørsmål eller kontakt oss direkte.",
+    "faq": {
+      "title": "Ofte stilte spørsmål",
+      "q1": {
+        "question": "Er LegacyGuard sikkert?",
+        "answer": "Ja, sikkerhet er vår høyeste prioritet. Vi bruker ende-til-ende-kryptering og en null-tillit-arkitektur, noe som betyr at ingen uautorisert person kan få tilgang til dine data, ikke engang oss. Alle data lagres i sikre datasentre innenfor EU i samsvar med GDPR."
+      },
+      "q2": {
+        "question": "Hva skjer med mine data hvis jeg kansellerer abonnementet mitt?",
+        "answer": "Etter kansellering forblir dine data sikkert lagret i skrivebeskyttet modus i 90 dager. Du kan reaktivere abonnementet ditt når som helst innenfor denne perioden for å få full tilgang igjen. Etter 90 dager vil dine data bli sikkert og permanent slettet fra våre systemer."
+      },
+      "q3": {
+        "question": "Hva er en 'verge'?",
+        "answer": "En verge er en betrodd person (f.eks. en partner, søsken eller juridisk profesjonell) du gir spesiell, begrenset tilgang til din informasjon for nødssituasjoner. En verge kan ikke endre dine data; de kan kun se dem for å handle på dine instruksjoner."
+      },
+      "q4": {
+        "question": "Hva er forskjellen mellom 'Hvelvet' og 'Manualen'?",
+        "answer": "Arvehvelvet er der du sikkert lagrer alle dine viktige dokumenter og eiendeler. Manualen for etterlatte er et kuratert utvalg av de mest kritiske kontaktene, dokumentene og instruksjonene fra hvelvet ditt, designet for at dine verger skal ha alt det essensielle på ett sted."
+      },
+      "q5": {
+        "question": "Er et testament opprettet i LegacyGuard juridisk bindende?",
+        "answer": "LegacyGuard hjelper deg med å forberede og organisere alt grunnarbeidet og informasjonen for ditt testament. I de fleste europeiske land erstatter imidlertid det digitale dokumentet ikke behovet for et offisielt, signert (og ofte notarisert) dokument. Vi anbefaler alltid å konsultere den endelige versjonen med en juridisk profesjonell."
+      }
+    },
+    "contact": {
+      "title": "Fant du ikke det du lette etter?",
+      "email": {
+        "title": "Send oss en e-post",
+        "description": "For generelle spørsmål og støtte.",
+        "button": "Åpne e-postklient"
+      },
+      "call": {
+        "title": "Planlegg en samtale (for Premium)",
+        "description": "For Premium- og Enterprise-kunder.",
+        "button": "Planlegg en samtale"
+      }
+    }
+  },
+  "inviteAcceptance": {
+    "loading": "Laster invitasjon...",
+    "errors": {
+      "invalidLink": "Ugyldig invitasjonslenke",
+      "notFound": "Invitasjon ikke funnet",
+      "alreadyProcessed": "Denne invitasjonen er allerede behandlet",
+      "loadingFailed": "Kunne ikke laste invitasjon",
+      "acceptFailed": "Kunne ikke godta invitasjon",
+      "declineFailed": "Kunne ikke avslå invitasjon"
+    },
+    "messages": {
+      "accepted": "Takk. Din rolle som verge er bekreftet.",
+      "declined": "Du har avslått rollen. Avsenderen vil bli varslet."
+    },
+    "notFound": {
+      "title": "Invitasjon ikke funnet",
+      "description": "Denne invitasjonslenken er ugyldig eller har utløpt."
+    },
+    "subtitle": "Du har blitt invitert til å bli en verge for deres digitale arv på LegacyGuard.",
+    "guardianRole": {
+      "title": "Din vergerolle",
+      "yourName": "Ditt navn:",
+      "relationship": "Forhold:",
+      "responsibilities": "Ansvar:"
+    },
+    "whatThisMeans": {
+      "title": "Hva dette betyr",
+      "point1": "Du vil ha sikker tilgang til deres viktige dokumenter og informasjon",
+      "point2": "Du kan kun se informasjon - ingen redigerings- eller slettemuligheter",
+      "point3": "Din tilgang er designet for nødssituasjoner eller når assistanse er nødvendig",
+      "point4": "All tilgang er logget og sikker"
+    },
+    "buttons": {
+      "processing": "Behandler...",
+      "acceptRole": "Godta rolle",
+      "decline": "Avslå"
+    },
+    "disclaimer": "Ved å godta denne rollen, anerkjenner du ansvaret for å være en betrodd verge for deres digitale arv.",
+    "defaultInviterName": "Din betrodde kontakt"
+  },
+  "subscription": {
+    "dashboard": {
+      "title": "Abonnementsdashbord",
+      "subtitle": "Administrer dine abonnementer, kostnader og påminnelser"
+    },
+    "monthlyCost": "Total månedlig kostnad",
+    "yearlyCost": "Total årlig kostnad",
+    "activeSubscriptions": "Aktive abonnementer",
+    "upcomingSoon": "kommer snart",
+    "exportReport": "Eksporter rapport",
+    "perMonth": "per måned",
+    "perYear": "per år",
+    "allSubscriptions": "Alle abonnementer",
+    "allSubscriptionsDesc": "Oversikt over alle aktive abonnementer sortert etter fornyelsesdato",
+    "upcomingRenewals": "Kommende fornyelser",
+    "upcomingRenewalsTitle": "Varsel om kommende fornyelser",
+    "upcomingRenewalsDesc": "Du har {{count}} kommende fornyelser i løpet av de neste 90 dagene",
+    "next90Days": "Neste 90 dager",
+    "noUpcomingRenewals": "Ingen kommende fornyelser i løpet av de neste 90 dagene",
+    "renew": "Forny",
+    "review": "Gjennomgå",
+    "preferences": "Abonnementsinnstillinger",
+    "preferencesDesc": "Administrer hvordan dine abonnementer spores og administreres",
+    "enableTracking": "Aktiver abonnementssporing",
+    "enableTrackingDesc": "Administrer og spor automatisk abonnementsrelaterte dokumenter",
+    "costOptimization": "Aktiver forslag til kostnadsoptimalisering",
+    "costOptimizationDesc": "Motta forslag for å optimalisere og redusere abonnementskostnader",
+    "reminderPeriods": "Standard påminnelsesperioder",
+    "daysBefore": "dager før",
+    "loadError": "Kunne ikke laste abonnementsdetaljer",
+    "updateError": "Kunne ikke oppdatere abonnementsinnstillinger",
+    "preferencesUpdated": "Innstillinger ble oppdatert",
+    "tabs": {
+      "overview": "Oversikt",
+      "upcoming": "Kommende",
+      "settings": "Innstillinger"
+    },
+    "types": {
+      "monthly": "Månedlig",
+      "yearly": "Årlig",
+      "oneTime": "Engangs",
+      "none": "Ingen"
+    },
+    "daysUntilRenewal": "dager til fornyelse",
+    "days": "dager",
+    "loadFailed": "Kunne ikke laste abonnementsdata",
+    "autoRenewal": "Automatisk fornyelse: Ja",
+    "manual": "Automatisk fornyelse: Nei",
+    "trackingSuggestion": "Vurder å aktivere abonnementssporing for bedre administrasjon og påminnelser",
+    "type": "Abonnementstype",
+    "typePlaceholder": "Velg type",
+    "renewalCost": "Fornyelseskostnad",
+    "renewalCostPlaceholder": "Skriv inn fornyelseskostnad",
+    "cancellationNotice": "Oppsigelsesperiode",
+    "noNoticeRequired": "Ingen oppsigelsesperiode påkrevd",
+    "providerContact": "Kontaktinfo for leverandør",
+    "providerPhone": "Telefon",
+    "providerEmail": "E-post",
+    "providerWebsite": "Nettsted",
+    "cancellationNoticeWarning": "Merk: Oppsigelse krever {{days}} dagers varsel"
+  },
+  "emailTemplates": {
+    "welcome": {
+      "subject": "Velkommen til LegacyGuard - Din digitale arvereise begynner",
+      "greeting": "Velkommen {{name}},",
+      "body": "Takk for at du ble med i LegacyGuard. Du har tatt det første viktige skrittet for å beskytte familiens fremtid.",
+      "cta": "Fullfør ditt livsinventar",
+      "footer": "Hvis du har spørsmål, er vårt støtteteam her for å hjelpe."
+    },
+    "inventoryComplete": {
+      "subject": "Livsinventar fullført - Din personlige plan er klar",
+      "greeting": "Gratulerer {{name}},",
+      "body": "Du har fullført ditt livsinventar! Basert på svarene dine har vi laget en personlig handlingsplan for å hjelpe deg med å sikre familiens fremtid.",
+      "nextSteps": "Dine topp 3 prioriteringer:",
+      "cta": "Se din handlingsplan",
+      "encouragement": "Husk, hvert lille skritt du tar i dag gjør en stor forskjell for dine kjære i morgen."
+    },
+    "guardianInvite": {
+      "subject": "{{inviterName}} har invitert deg til å være deres verge på LegacyGuard",
+      "greeting": "Hallo {{guardianName}},",
+      "body": "{{inviterName}} stoler på deg med et viktig ansvar - å være en verge for deres digitale arv.",
+      "whatThisMeans": "Som verge vil du ha sikker, skrivebeskyttet tilgang til deres viktige dokumenter og instruksjoner i tilfelle en nødsituasjon.",
+      "cta": "Se invitasjon",
+      "expires": "Denne invitasjonen utløper om 7 dager."
+    },
+    "planUpgrade": {
+      "subject": "Du har nådd grensen for din {{planName}}-plan",
+      "greeting": "Hei {{name}},",
+      "body": "Du gjør store fremskritt! Du har nådd grensen for {{limitType}} på din nåværende plan.",
+      "upgradeText": "Oppgrader til {{suggestedPlan}} for å fortsette å legge til mer {{limitType}} og låse opp flere funksjoner.",
+      "cta": "Se oppgraderingsalternativer"
+    }
+  },
+  "guardian": {
+    "invitationSent": "Invitasjon sendt",
+    "accepted": "Godtatt",
+    "declined": "Avslått",
+    "sendInvite": "Send invitasjon"
+  },
+  "alerts": {
+    "title": "Varslingssenter",
+    "description": "Administrer varsler om dokumentutløp.",
+    "unread": "Ulest",
+    "markAsRenewed": "Merk som fornyet",
+    "snooze7Days": "Utsett i 7 dager",
+    "dismiss": "Avvis",
+    "unsnooze": "Fjern utsettelse",
+    "tabs": {
+      "active": "Aktiv",
+      "snoozed": "Utsatt",
+      "dismissed": "Avvist"
+    },
+    "noActiveAlerts": "Du har ingen aktive varsler.",
+    "noSnoozedAlerts": "Du har ingen utsatte varsler.",
+    "noDismissedAlerts": "Du har ingen avviste varsler.",
+    "expiresOn": "Utløper {{date}}",
+    "snoozedUntil": "Utsatt til {{date}}",
+    "renewalInstructions": "Instruksjoner for fornyelse",
+    "badges": {
+      "expired": "Utløpt",
+      "expiring_7": "Utløper snart",
+      "expiring_30": "Utløper om 30 dager",
+      "expiring_90": "Utløper om 90 dager"
+    },
+    "types": {
+      "expired": "Dokumentet {{documentName}} utløp for {{daysAgo}} dager siden!",
+      "expiring7": "Skynd deg! {{documentName}} utløper om {{days}} dager.",
+      "expiring30": "Påminnelse: {{documentName}} utløper om {{days}} dager.",
+      "expiring90": "Obs: {{documentName}} er satt til å utløpe om {{days}} dager."
+    },
+    "messages": {
+      "dismissed": "Varsel avvist.",
+      "snoozed": "Varsel utsatt i {{days}} dager.",
+      "markedAsRenewed": "Dokument merket som fornyet."
+    },
+    "errors": {
+      "loadFailed": "Kunne ikke laste varsler.",
+      "dismissFailed": "Kunne ikke avvise varselet.",
+      "snoozeFailed": "Kunne ikke utsette varselet.",
+      "renewFailed": "Kunne ikke merke dokumentet som fornyet."
+    }
+  },
+  "errorBoundary": {
+    "title": "Oops! Noe gikk galt",
+    "description": "Vi beklager ulempen. En uventet feil har oppstått.",
+    "errorId": "Feil-ID",
+    "tryAgain": "Prøv igjen",
+    "reloadPage": "Last siden på nytt",
+    "goToHomepage": "Gå til hjemmesiden",
+    "technicalDetails": "Tekniske detaljer",
+    "hide": "Skjul",
+    "show": "Vis",
+    "stackTrace": "Stack Trace",
+    "componentStack": "Component Stack",
+    "helpText": "Hvis problemet vedvarer, kontakt vår support med feil-ID-en."
+  },
+  "errorTest": {
+    "title": "Test av feillogging",
+    "triggerSyncError": "Utløs synkron feil (ErrorBoundary)",
+    "triggerAsyncError": "Utløs asynkron feil",
+    "logRegularError": "Logg vanlig feil",
+    "logCriticalError": "Logg kritisk feil",
+    "triggerAlert": "Utløs varsel (6 kritiske feil)"
+  },
+  "footer": {
+    "tagline": "Bevarer arven din for kommende generasjoner.",
+    "platform": {
+      "title": "Plattform",
+      "heritageVault": "Arvehvelv",
+      "guardianNetwork": "Vergenettverk",
+      "dashboard": "Dashbord",
+      "security": "Sikkerhet"
+    },
+    "support": {
+      "title": "Støtte",
+      "helpCenter": "Hjelpesenter",
+      "userGuides": "Brukerguider",
+      "contactUs": "Kontakt oss",
+      "community": "Fellesskap"
+    },
+    "legal": {
+      "title": "Juridisk",
+      "privacyPolicy": "Personvernerklæring",
+      "termsOfService": "Tjenestevilkår",
+      "dataProtection": "Databeskyttelse"
+    },
+    "copyright": "© {{year}} LegacyGuard. Alle rettigheter forbeholdt.",
+    "description": "Digital arveadministrasjon i bedriftsklasse."
+  },
+  "playbook": {
+    "label": "Draaibok",
+    "create": "Opprett draaibok",
+    "edit": "Rediger draaibok",
+    "preview": "Forhåndsvisning",
+    "exitPreview": "Avslutt forhåndsvisning",
+    "save": "Lagre draaibok",
+    "saving": "Lagrer...",
+    "loading": "Laster draaibok...",
+    "autoSaveNotice": "Endringene dine lagres automatisk mens du skriver.",
+    "noContent": "Ingen innhold lagt til ennå.",
+    "noContacts": "Ingen kontakter lagt til ennå.",
+    "addContact": "Legg til kontakt",
+    "contact": "Kontakt",
+    "title": "Draaibok for {{name}}",
+    "titleReadOnly": "{{name}}s draaibok",
+    "description": "Lag personlige instruksjoner og informasjon for din verge",
+    "viewTitle": "Vergedraaibok: {{userName}}",
+    "viewDescription": "Essensiell informasjon og instruksjoner forberedt spesielt for deg",
+    "lastUpdated": "Sist oppdatert",
+    "viewFooter": "Denne informasjonen er betrodd deg som verge. Vennligst hold den konfidensiell og sikker.",
+    "notAuthenticated": "Vennligst logg inn for å se denne draaiboken",
+    "accessDenied": "Du har ikke tilgang til å se denne draaiboken",
+    "fetchError": "Kunne ikke laste draaiboken",
+    "saveSuccess": "Draaiboken ble lagret",
+    "saveError": "Kunne ikke lagre draaiboken",
+    "discardChanges": {
+      "title": "Forkaste endringer?",
+      "description": "Du har ulagrede endringer. Er du sikker på at du vil forkaste dem?",
+      "cancel": "Fortsett redigering",
+      "confirm": "Forkast endringer"
+    },
+    "importantContacts": {
+      "label": "Viktige kontakter",
+      "description": "Legg til nøkkelpersoner denne vergen bør kontakte",
+      "viewDescription": "Kontakt disse personene ved behov",
+      "add": "Legg til kontakt",
+      "remove": "Fjern",
+      "empty": "Ingen kontakter lagt til ennå. Klikk 'Legg til kontakt' for å legge til viktige personer.",
+      "name": "Navn",
+      "namePlaceholder": "Fullt navn",
+      "relationship": "Forhold",
+      "relationshipPlaceholder": "f.eks. Familieadvokat",
+      "phone": "Telefon",
+      "phonePlaceholder": "+47 123 45 678",
+      "email": "E-post",
+      "emailPlaceholder": "e-post@example.no",
+      "notes": "Notater",
+      "notesPlaceholder": "Ytterligere informasjon"
+    },
+    "funeralWishes": {
+      "label": "Begravelsesønsker",
+      "description": "Dine preferanser for begravelsesarrangementer",
+      "placeholder": "Beskriv dine ønsker for din begravelse eller minnestund..."
+    },
+    "digitalAccounts": {
+      "label": "Digitale kontoer",
+      "description": "Instruksjoner for håndtering av dine nettkontoer",
+      "placeholder": "List opp dine digitale kontoer og hvordan de skal håndteres..."
+    },
+    "documentLocations": {
+      "label": "Dokumentplasseringer",
+      "description": "Hvor man kan finne viktige dokumenter",
+      "placeholder": "Beskriv hvor viktige dokumenter befinner seg..."
+    },
+    "personalMessages": {
+      "label": "Personlige meldinger",
+      "description": "Personlige meldinger til denne vergen",
+      "placeholder": "Skriv en personlig melding til denne vergen..."
+    },
+    "practicalInstructions": {
+      "label": "Praktiske instruksjoner",
+      "description": "Umiddelbare skritt og ansvar",
+      "placeholder": "List opp praktiske oppgaver og umiddelbare handlinger..."
+    },
+    "notFound": {
+      "title": "Ingen draaibok funnet",
+      "description": "Draaiboken du ser etter er ikke opprettet ennå."
+    },
+    "subtitle": {
+      "edit": "Lag personlige instruksjoner og informasjon for denne vergen.",
+      "view": "Essensiell informasjon og instruksjoner forberedt for deg."
+    },
+    "status": {
+      "empty": "Ikke startet",
+      "draft": "Pågår",
+      "complete": "Fullført"
+    },
+    "tabs": {
+      "funeral": "Begravelse",
+      "digital": "Digitalt",
+      "contacts": "Kontakter",
+      "documents": "Dokumenter",
+      "messages": "Meldinger",
+      "instructions": "Instruksjoner"
+    },
+    "sections": {
+      "funeral": {
+        "title": "Begravelsesønsker",
+        "description": "Dine preferanser for begravelsesarrangementer og minnestunder.",
+        "placeholder": "Beskriv dine ønsker for din begravelse eller minnestund...\n\nFor eksempel:\n- Type seremoni (religiøs, sekulær, feiring av livet)\n- Preferanser for begravelse eller kremasjon\n- Stedspreferanser\n- Musikk, lesninger eller spesielle forespørsler\n- Hvem som skal tale eller delta\n- Eventuelle spesifikke tradisjoner som skal følges"
+      },
+      "digital": {
+        "title": "Nedstenging av digitale kontoer",
+        "description": "Instruksjoner for håndtering av din digitale tilstedeværelse og nettkontoer.",
+        "placeholder": "List opp dine digitale kontoer og hvordan de skal håndteres...\n\nFor eksempel:\n- Sosiale mediekontoer (Facebook, Instagram, LinkedIn)\n- E-postkontoer\n- Skylagring (Google Drive, Dropbox)\n- Abonnementstjenester (Netflix, Spotify)\n- Nettbank og finanskontoer\n- Kryptovaluta-lommebøker\n- Nettsteder eller domenenavn"
+      },
+      "contacts": {
+        "title": "Viktige kontakter",
+        "description": "Nøkkelpersoner denne vergen bør kontakte eller varsle.",
+        "placeholder": "Legg til viktige kontakter som er spesifikke for denne vergens ansvar."
+      },
+      "documents": {
+        "title": "Dokumentplasseringer",
+        "description": "Hvor man kan finne viktige fysiske og digitale dokumenter.",
+        "placeholder": "Beskriv hvor viktige dokumenter befinner seg...\n\nFor eksempel:\n- Plassering av testament\n- Forsikringspoliser\n- Skjøter\n- Bankkontoinformasjon\n- Investeringsdokumenter\n- Skattemeldinger\n- Passord og tilgangskoder\n- Plassering og nøkkel til bankboks"
+      },
+      "messages": {
+        "title": "Personlige meldinger",
+        "description": "Personlige meldinger og siste tanker til denne vergen.",
+        "placeholder": "Skriv en personlig melding til denne vergen...\n\nDette er din mulighet til å:\n- Uttrykke dine følelser og takknemlighet\n- Dele viktige minner\n- Gi veiledning eller råd\n- Forklare dine beslutninger\n- Etterlate trøstende ord\n- Dele dine håp for fremtiden"
+      },
+      "practical": {
+        "title": "Praktiske instruksjoner",
+        "description": "Umiddelbare praktiske skritt og ansvar for denne vergen.",
+        "placeholder": "List opp praktiske oppgaver og umiddelbare handlinger...\n\nFor eksempel:\n- Sjekkliste for de første 24-48 timene\n- Hvem som skal varsles først\n- Hastefakturaer eller betalinger\n- Pleieinstruksjoner (kjæledyr, planter, eiendom)\n- Forretningssaker som krever oppmerksomhet\n- Planlagte avtaler som skal avlyses\n- Nødvendige nøkler og tilgangskoder"
+      }
+    },
+    "contactFields": {
+      "name": "Navn",
+      "namePlaceholder": "Fullt navn",
+      "role": "Rolle/Forhold",
+      "rolePlaceholder": "f.eks. Familieadvokat, Regnskapsfører",
+      "phone": "Telefon",
+      "phonePlaceholder": "+47 123 45 678",
+      "email": "E-post",
+      "emailPlaceholder": "e-post@example.no",
+      "notes": "Notater",
+      "notesPlaceholder": "Ytterligere informasjon om denne kontakten"
+    },
+    "messages": {
+      "autoSaved": "Lagret",
+      "saved": "Draaiboken ble lagret"
+    },
+    "errors": {
+      "loadFailed": "Kunne ikke laste draaiboken",
+      "saveFailed": "Kunne ikke lagre draaiboken"
+    }
+  }
+}

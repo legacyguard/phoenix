@@ -1,0 +1,444 @@
+{
+  "_comment": "Shared translations used across the application",
+  "assets": {
+    "overview": {
+      "title": "Portafolio de Activos",
+      "subtitle": "Gestione y siga sus activos, propiedades e inversiones",
+      "addAsset": "Añadir Activo",
+      "totalPortfolioValue": "Valor Total del Portafolio",
+      "estimatedValue": "Valor estimado de todos los activos",
+      "distribution": {
+        "title": "Distribución de Activos",
+        "subtitle": "Desglose del portafolio por categoría"
+      },
+      "beneficiaryAllocation": {
+        "title": "Asignación a Beneficiarios",
+        "subtitle": "Siga la distribución de activos a los beneficiarios",
+        "allAssigned": "Todos los activos tienen beneficiarios asignados",
+        "unassignedWarning": "{{count}} activos necesitan asignación de beneficiarios"
+      },
+      "viewInheritanceSummary": "Ver Resumen de Herencia",
+      "addNew": "Añadir Nuevo",
+      "errors": {
+        "loadFailed": "Error al cargar los datos de los activos"
+      }
+    },
+    "categories": {
+      "property": "Propiedad",
+      "vehicle": "Vehículo",
+      "financial": "Financiero",
+      "business": "Negocio",
+      "personal": "Personal",
+      "uncategorized": "Sin categoría"
+    }
+  },
+  "assetCard": {
+    "assetTypes": {
+      "Primary Residence": "Primary Residence",
+      "Vacation Home": "Vacation Home",
+      "Rental Property": "Rental Property",
+      "Land": "Land",
+      "Commercial Property": "Commercial Property",
+      "Bank Account": "Bank Account",
+      "Investment Portfolio": "Investment Portfolio",
+      "Cryptocurrency Wallet": "Cryptocurrency Wallet",
+      "Loan / Mortgage": "Loan / Mortgage",
+      "Insurance Policy": "Insurance Policy",
+      "Pension / Retirement Account": "Pension / Retirement Account",
+      "Car": "Car",
+      "Motorcycle": "Motorcycle",
+      "Boat": "Boat",
+      "RV / Camper": "RV / Camper",
+      "Aircraft": "Aircraft",
+      "Online Account": "Online Account",
+      "Software License": "Software License",
+      "Domain Name": "Domain Name",
+      "Digital Subscription": "Digital Subscription",
+      "Cryptocurrency": "Cryptocurrency",
+      "NFT": "NFT",
+      "Jewelry": "Jewelry",
+      "Art / Collectibles": "Art / Collectibles",
+      "Electronics": "Electronics",
+      "Furniture": "Furniture",
+      "Tools / Equipment": "Tools / Equipment",
+      "Other Valuables": "Other Valuables",
+      "Custom Asset": "Custom Asset"
+    },
+    "dateFormat": {
+      "addedOn": "Added on {{date}}",
+      "createdOn": "Created on {{date}}",
+      "updatedOn": "Updated on {{date}}"
+    },
+    "labels": {
+      "estimatedValue": "Estimated Value",
+      "category": "Category",
+      "subType": "Type"
+    },
+    "title": "Tarjeta de Activo",
+    "description": "Información del activo"
+  },
+  "assetDetail": {
+    "loading": "Cargando detalles del activo...",
+    "errors": {
+      "failedToLoad": "Error al cargar los detalles del activo.",
+      "nameRequired": "El nombre del activo es obligatorio.",
+      "failedToSave": "Error al guardar el activo."
+    },
+    "messages": {
+      "createdSuccessfully": "Activo creado correctamente.",
+      "updatedSuccessfully": "Activo actualizado correctamente."
+    },
+    "title": {
+      "new": "Nuevo {{type}}"
+    },
+    "subtitle": {
+      "new": "Rellene los detalles para añadir este activo a su cartera.",
+      "edit": "Actualice los detalles de este activo."
+    },
+    "story": {
+      "title": "The Story Behind This {{type}}",
+      "editButton": "Edit Story",
+      "addButton": "Add a Story",
+      "emptyTitle": "What's the story behind this item?",
+      "emptyDescription": "Add a personal memory or explain the significance of this item for your loved ones. This intangible legacy is often the most valuable."
+    },
+    "sections": {
+      "assetInformation": "Información del Activo",
+      "basicInformation": "Información Básica",
+      "propertyDetails": "Detalles de la Propiedad",
+      "accountDetails": "Detalles de la Cuenta",
+      "financialDetails": "Detalles Financieros",
+      "liabilitiesAndDocuments": "Related Liabilities & Documents"
+    },
+    "fields": {
+      "assetName": "Nombre del Activo",
+      "assetType": "Tipo de Activo",
+      "propertyAddress": "Dirección de la Propiedad",
+      "propertyRegistryNumber": "Número de Referencia Catastral",
+      "accountType": "Tipo de Cuenta",
+      "financialInstitution": "Institución Financiera",
+      "accountNumber": "Número de Cuenta / IBAN",
+      "loginCredentials": "Credenciales de Acceso y Notas",
+      "estimatedValue": "Valor Estimado",
+      "currency": "Moneda",
+      "liabilityType": "Liability Type",
+      "providerName": "Provider Name",
+      "referenceNumber": "Reference Number"
+    },
+    "placeholders": {
+      "assetName": "Ej: Casa familiar, Cartera de inversiones",
+      "propertyAddress": "Introduzca la dirección completa de la propiedad",
+      "propertyRegistryNumber": "Ej: Número de referencia catastral",
+      "selectAccountType": "Seleccione el tipo de cuenta",
+      "financialInstitution": "Ej: Banco Santander, BBVA",
+      "accountNumber": "Ej: ES9121000418450200051332",
+      "loginCredentials": "Gestor de contraseñas: 1Password, bóveda 'Banca'",
+      "estimatedValue": "0"
+    },
+    "descriptions": {
+      "assetName": "Dé a este activo un nombre descriptivo para identificarlo fácilmente.",
+      "assetType": "Seleccione el tipo que mejor describa este activo.",
+      "propertyAddress": "Dirección completa incluyendo calle, ciudad, código postal y país.",
+      "propertyRegistryNumber": "Número oficial del catastro o registro de la propiedad.",
+      "accountType": "Tipo de cuenta financiera o de inversión.",
+      "financialInstitution": "Nombre del banco o institución financiera.",
+      "accountNumber": "Número de cuenta, IBAN u otra información de identificación.",
+      "estimatedValue": "Valor de mercado actual o último valor conocido de este activo.",
+      "currency": "Moneda en la que se expresa el valor.",
+      "noLiabilities": "No liabilities added yet"
+    },
+    "types": {
+      "realEstate": "Bienes Inmuebles",
+      "business": "Negocio",
+      "vehicle": "Vehículo",
+      "financialAccount": "Cuenta Financiera",
+      "asset": "Activo"
+    },
+    "accountTypes": {
+      "bankAccount": "Cuenta Bancaria",
+      "investmentPortfolio": "Cartera de Inversiones",
+      "pensionFund": "Fondo de Pensiones"
+    },
+    "securityWarning": "Advertencia de seguridad:",
+    "securityWarningText": "No almacene contraseñas reales aquí. Use este campo para pistas, ubicaciones en gestores de contraseñas u otras instrucciones de acceso seguro.",
+    "buttons": {
+      "cancel": "Cancelar",
+      "saving": "Guardando...",
+      "createAsset": "Crear Activo",
+      "updateAsset": "Actualizar Activo",
+      "addLiability": "Add Liability"
+    }
+  },
+  "assetType": {
+    "selectType": "Seleccionar Tipo de {{mainCategory}}",
+    "primaryResidence": "Residencia Principal",
+    "vacationHome": "Casa de Vacaciones",
+    "rentalProperty": "Propiedad de Alquiler",
+    "land": "Terreno",
+    "commercialProperty": "Propiedad Comercial",
+    "bankAccount": "Cuenta Bancaria",
+    "investmentPortfolio": "Cartera de Inversiones",
+    "cryptocurrencyWallet": "Cartera de Criptomonedas",
+    "loanMortgage": "Préstamo / Hipoteca",
+    "insurancePolicy": "Póliza de Seguro",
+    "pensionRetirement": "Pensión / Jubilación",
+    "car": "Coche",
+    "motorcycle": "Motocicleta",
+    "boat": "Barco",
+    "rvCamper": "Caravana / Autocaravana",
+    "aircraft": "Aeronave",
+    "onlineAccount": "Cuenta en Línea",
+    "softwareLicense": "Licencia de Software",
+    "domainName": "Nombre de Dominio",
+    "digitalSubscription": "Suscripción Digital",
+    "cryptocurrency": "Criptomoneda",
+    "nft": "NFT",
+    "jewelry": "Joyería",
+    "artCollectibles": "Arte / Coleccionables",
+    "electronics": "Electrónicos",
+    "furniture": "Muebles",
+    "toolsEquipment": "Herramientas / Equipos",
+    "otherValuables": "Otros Objetos de Valor",
+    "customAsset": "Activo Personalizado"
+  },
+  "dynamicAssetForm": {
+    "propertyAddress": "Dirección de la Propiedad",
+    "purchaseDate": "Fecha de Compra",
+    "purchasePrice": "Precio de Compra",
+    "currentEstimatedValue": "Valor Estimado Actual",
+    "mortgageInformation": "Información de Hipoteca",
+    "locationOfPropertyDocuments": "Ubicación de Documentos de Propiedad",
+    "locationAddress": "Ubicación / Dirección",
+    "size": "Tamaño (acres/pies cuadrados)",
+    "zoningType": "Tipo de Zonificación",
+    "currentUse": "Uso Actual",
+    "bankName": "Nombre del Banco",
+    "accountType": "Tipo de Cuenta",
+    "selectAccountType": "Seleccionar tipo de cuenta",
+    "checking": "Corriente",
+    "savings": "Ahorro",
+    "moneyMarket": "Mercado Monetario",
+    "certificateOfDeposit": "Certificado de Depósito",
+    "accountHolderName": "Nombre(s) del Titular de la Cuenta",
+    "accountNumberLast4": "Número de Cuenta (Últimos 4 dígitos)",
+    "routingNumber": "Número de Ruta",
+    "brokerageFirm": "Firma de Corretaje",
+    "accountNumber": "Número de Cuenta",
+    "individual": "Individual",
+    "joint": "Conjunta",
+    "ira": "IRA",
+    "rothIra": "Roth IRA",
+    "401k": "401(k)",
+    "approximateValue": "Valor Aproximado",
+    "financialAdvisor": "Asesor Financiero (si lo hay)",
+    "walletNameLabel": "Nombre/Etiqueta de Cartera",
+    "walletType": "Tipo de Cartera",
+    "selectWalletType": "Seleccionar tipo de cartera",
+    "hardwareWallet": "Cartera de Hardware",
+    "softwareWallet": "Cartera de Software",
+    "exchangeWallet": "Cartera de Intercambio",
+    "paperWallet": "Cartera de Papel",
+    "cryptocurrenciesHeld": "Criptomonedas Mantenidas",
+    "locationOfSeedPhrase": "Ubicación de Frase Semilla/Claves Privadas",
+    "exchangeInformation": "Información de Intercambio (si aplica)",
+    "makeAndModel": "Marca y Modelo",
+    "year": "Año",
+    "vinNumber": "Número VIN",
+    "licensePlate": "Matrícula",
+    "loanInformation": "Información de Préstamo (si lo hay)",
+    "locationOfTitle": "Ubicación del Título",
+    "platformWebsiteName": "Nombre de Plataforma/Sitio Web",
+    "accountEmail": "Correo Electrónico/Nombre de Usuario de Cuenta",
+    "accountPurpose": "Propósito/Descripción de Cuenta",
+    "recoveryInformation": "Información de Recuperación",
+    "faMethod": "Método 2FA (si está habilitado)",
+    "itemDescription": "Descripción del Artículo",
+    "appraisedValue": "Valor Tasado",
+    "lastAppraisalDate": "Última Fecha de Tasación",
+    "storageLocation": "Ubicación de Almacenamiento",
+    "insuranceInformation": "Información de Seguro",
+    "sentimentalValue": "Valor Sentimental/Historia",
+    "assetName": "Nombre del Activo",
+    "estimatedValue": "Valor Estimado",
+    "description": "Descripción",
+    "locationAccessInformation": "Información de Ubicación/Acceso",
+    "addSubType": "Añadir {subType}",
+    "cancel": "Cancelar",
+    "saveAsset": "Guardar Activo",
+    "placeholders": {
+      "123_main_st_city_state_zip_1": "123 Main St, Ciudad, Estado, Código Postal",
+      "lender_name_account_number_rem_2": "Nombre del prestamista, número de cuenta, saldo restante",
+      "e_g_safe_deposit_box_filing_ca_3": "ej., Caja de seguridad, archivador",
+      "property_location_or_parcel_nu_4": "Ubicación de propiedad o número de parcela",
+      "e_g_10_acres_5": "ej., 10 acres, 5,000 pies cuadrados",
+      "e_g_commercial_agricultural_6": "ej., Comercial, Agrícola, Residencial",
+      "describe_current_use_of_the_pr_7": "Describa el uso actual de la propiedad",
+      "e_g_chase_bank_8": "ej., Chase Bank, Wells Fargo",
+      "john_doe_9": "John Doe",
+      "1234_10": "1234",
+      "e_g_fidelity_vanguard_11": "ej., Fidelity, Vanguard, Charles Schwab",
+      "account_number_12": "Número de cuenta",
+      "name_and_contact_information_13": "Nombre e información de contacto",
+      "e_g_main_bitcoin_wallet_14": "ej., Cartera Principal de Bitcoin",
+      "e_g_bitcoin_ethereum_15": "ej., Bitcoin, Ethereum, Litecoin",
+      "do_not_enter_the_actual_seed_p_16": "No ingrese la frase semilla real aquí",
+      "exchange_name_and_account_emai_17": "Nombre del intercambio y correo electrónico de cuenta",
+      "e_g_toyota_camry_18": "ej., Toyota Camry, Honda Civic",
+      "vehicle_identification_number_19": "Número de Identificación del Vehículo",
+      "lender_account_number_payoff_a_20": "Prestamista, número de cuenta, cantidad de pago",
+      "e_g_safe_deposit_box_21": "ej., Caja de seguridad, caja fuerte en casa",
+      "e_g_gmail_facebook_22": "ej., Gmail, Facebook, LinkedIn",
+      "user_example_com_23": "usuario@example.com",
+      "what_this_account_is_used_for_24": "Para qué se usa esta cuenta",
+      "recovery_email_phone_or_securi_25": "Correo electrónico de recuperación, teléfono o preguntas de seguridad",
+      "e_g_sms_to_phone_ending_in_123_26": "ej., SMS al teléfono que termina en 123",
+      "e_g_diamond_engagement_ring_27": "ej., Anillo de compromiso de diamante, collar de oro",
+      "e_g_home_safe_bank_deposit_box_28": "ej., Caja fuerte en casa, caja de seguridad bancaria",
+      "policy_number_and_company_29": "Número de póliza y compañía",
+      "special_meaning_or_history_of__30": "Significado especial o historia de este artículo",
+      "name_or_description_of_asset_31": "Nombre o descripción del activo",
+      "detailed_description_of_the_as_32": "Descripción detallada del activo",
+      "where_to_find_this_asset_or_ho_33": "Dónde encontrar este activo o cómo acceder a él"
+    }
+  },
+  "myPossessions": {
+    "my_possessions_1": "Mis Posesiones",
+    "an_inventory_of_the_important__2": "Un inventario de las cosas importantes que apoyan el futuro de su familia.",
+    "family_impact_3": "Impacto Familiar:",
+    "edit_details_4": "Editar Detalles",
+    "link_papers_5": "Vincular Documentos (",
+    "assign_access_6": "Asignar Acceso",
+    "add_your_first_7": "Añadir Su Primera ",
+    "areas": {
+      "home": {
+        "title": "Su Hogar y Propiedad",
+        "description": "Los lugares que proporcionan refugio y crean recuerdos.",
+        "emptyState": "Documente su propiedad para asegurar que el refugio de su familia esté seguro.",
+        "addButton": "Propiedad"
+      },
+      "savings": {
+        "title": "Sus Ahorros e Inversiones",
+        "description": "La base financiera que ha construido para el futuro de su familia.",
+        "emptyState": "Registre sus cuentas financieras para que su familia pueda acceder a fondos cuando sea necesario.",
+        "addButton": "Cuenta"
+      },
+      "business": {
+        "title": "Su Negocio",
+        "description": "El trabajo que apoya a su familia y crea su legado profesional.",
+        "emptyState": "Documente los detalles de su negocio para asegurar una sucesión fluida e ingresos continuos.",
+        "addButton": "Negocio"
+      },
+      "valuables": {
+        "title": "Sus Objetos de Valor y Colecciones",
+        "description": "Artículos de valor financiero o sentimental que necesitan consideración especial.",
+        "emptyState": "Liste artículos valiosos que necesitan manejo especial o tienen valor sentimental.",
+        "addButton": "Objeto de Valor"
+      }
+    },
+    "mockData": {
+      "lakeCabin": "Cabaña del Lago",
+      "emergencyFund": "Fondo de Emergencia",
+      "yourBusiness": "Su Negocio",
+      "johnsonContracting": "Johnson Contracting LLC",
+      "classicCarCollection": "Colección de Autos Clásicos"
+    }
+  },
+  "addLiabilityModal": {
+    "title": "Añadir Pasivo",
+    "fields": {
+      "type": "Tipo",
+      "provider": "Proveedor",
+      "referenceNumber": "Número de Referencia",
+      "paymentFrequency": "Frecuencia de Pago",
+      "notes": "Notas"
+    },
+    "placeholders": {
+      "selectType": "Seleccionar tipo",
+      "provider": "Nombre del proveedor",
+      "referenceNumber": "Número de referencia",
+      "paymentFrequency": "Seleccionar frecuencia",
+      "notes": "Notas adicionales"
+    },
+    "buttons": {
+      "cancel": "Cancelar",
+      "add": "Añadir Pasivo"
+    },
+    "errors": {
+      "requiredFields": "Todos los campos son obligatorios"
+    },
+    "messages": {
+      "addedSuccessfully": "Pasivo añadido exitosamente"
+    },
+    "types": {
+      "insurancePolicy": "Póliza de Seguro",
+      "utilityBill": "Factura de Servicios",
+      "propertyTax": "Impuesto de Propiedad",
+      "subscriptionFee": "Tarifa de Suscripción",
+      "maintenanceContract": "Contrato de Mantenimiento",
+      "loan": "Préstamo",
+      "leaseAgreement": "Contrato de Arrendamiento",
+      "warranty": "Garantía",
+      "other": "Otro"
+    },
+    "frequencies": {
+      "monthly": "Mensual",
+      "quarterly": "Trimestral",
+      "semiAnnually": "Semestral",
+      "annually": "Anual",
+      "oneTime": "Pago Único",
+      "asNeeded": "Según Necesidad"
+    }
+  },
+  "calculator": {
+    "badge": "Calculadora de Preparación",
+    "title": "Calcule la Puntuación de Preparación de Su Familia",
+    "subtitle": "Vea el tiempo y dinero real que su familia ahorra cuando todo está organizado",
+    "inputs": {
+      "title": "Su Situación Familiar",
+      "description": "Cuéntenos un poco sobre su familia para personalizar sus resultados",
+      "dependents": "¿Cuántas personas dependen de usted?",
+      "dependentsHelp": "Incluya cónyuge, hijos, padres ancianos",
+      "income": "¿Cuál es el ingreso mensual de su familia?",
+      "incomeHelp": "Esto ayuda a calcular los salarios perdidos potenciales",
+      "property": "¿Posee propiedad?",
+      "business": "¿Tiene un negocio?",
+      "accounts": "¿Cuántas cuentas bancarias tiene?",
+      "accountsHelp": "Incluya cuentas corrientes, de ahorro, inversiones"
+    },
+    "calculateButton": "Calcular Mis Ahorros",
+    "results": {
+      "title": "Los Ahorros de Su Familia",
+      "description": "Aquí está lo que significa estar preparado para sus seres queridos",
+      "timeSavings": {
+        "title": "Tiempo que Su Familia Ahorra",
+        "without": "Sin organización",
+        "withoutHours": "40-120 horas buscando",
+        "with": "Con Heritage Vault",
+        "withMinutes": "Menos de 5 minutos"
+      },
+      "moneySavings": {
+        "title": "Dinero que Su Familia Ahorra",
+        "legalFees": "Honorarios legales por reconstrucción",
+        "lostWages": "Salarios perdidos por tiempo libre",
+        "penalties": "Fechas perdidas y penalizaciones",
+        "total": "Ahorros potenciales totales"
+      },
+      "emotional": {
+        "title": "Impacto en el Bienestar Emocional",
+        "stress": "Reducción del nivel de estrés",
+        "confidence": "Aumento de la confianza familiar",
+        "peace": "Calificación de control y preparación"
+      },
+      "socialProof": "Únase a familias que ya duermen mejor por la noche",
+      "families": "15,000+ familias protegidas",
+      "ctaContext": "La mayoría de las familias completan la configuración durante su almuerzo",
+      "shareButton": "Compartir Resultados"
+    },
+    "testimonial": {
+      "quote": "Nunca me di cuenta de cuánto estrés estaba cargando hasta que organicé todo. Ahora sé que mi familia estará bien, sin importar qué pase.",
+      "author": "Sarah M., madre de tres"
+    },
+    "shareTitle": "Resultados de la Calculadora de Preparación Familiar",
+    "shareCopied": "¡Resultados copiados al portapapeles!"
+  }
+}

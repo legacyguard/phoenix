@@ -1,0 +1,98 @@
+{
+  "_comment": "Shared translations used across the application",
+  "errorBoundary": {
+    "title": "Oi! Kažkas nutiko ne taip",
+    "description": "Atsiprašome už nepatogumus. Įvyko netikėta klaida.",
+    "errorId": "Klaidos ID",
+    "tryAgain": "Bandykite Dar Kartą",
+    "reloadPage": "Perkrauti Puslapį",
+    "goToHomepage": "Eiti į Pradžios Puslapį",
+    "technicalDetails": "Techninės Detalės",
+    "hide": "Slėpti",
+    "show": "Rodyti",
+    "stackTrace": "Dėklo Atsekamumas",
+    "componentStack": "Komponentų Dėklas",
+    "helpText": "Jei problema išlieka, susisiekite su mūsų palaikymo tarnyba nurodydami klaidos ID."
+  },
+  "errorTest": {
+    "title": "Klaidų Registravimo Testas",
+    "description": "Test error handling and logging functionality",
+    "triggerSyncError": "Sukelti Sinchroninę Klaidą (ErrorBoundary)",
+    "triggerAsyncError": "Sukelti Asinchroninę Klaidą",
+    "logRegularError": "Registruoti Įprastą Klaidą",
+    "logCriticalError": "Registruoti Kritinę Klaidą",
+    "triggerAlert": "Sukelti Pranešimą (6 Kritinės Klaidos)",
+    "errorMessages": {
+      "testError": "Test error from ErrorTest component",
+      "testAsyncRejection": "Test async rejection",
+      "manualTestError": "Manual test error",
+      "testCriticalError": "Test critical error",
+      "criticalErrorWithIndex": "Critical error {{index}}"
+    },
+    "descriptions": {
+      "syncError": "Triggers a synchronous error that will be caught by the ErrorBoundary",
+      "asyncError": "Triggers an asynchronous error that will be caught by error handling",
+      "regularError": "Logs a regular error for testing error tracking",
+      "criticalError": "Logs a critical error for testing critical error handling",
+      "multipleErrors": "Triggers multiple critical errors to test alert thresholds"
+    },
+    "context": {
+      "component": "ErrorTest",
+      "action": "button-click",
+      "severity": "high"
+    },
+    "notifications": {
+      "errorLogged": "Error logged successfully",
+      "criticalErrorLogged": "Critical error logged successfully",
+      "multipleErrorsTriggered": "Multiple critical errors triggered",
+      "errorBoundaryTriggered": "Error boundary triggered",
+      "asyncErrorCaught": "Async error caught and handled"
+    }
+  },
+  "debug": {
+    "panel": {
+      "title": "Derinimo Skydelis",
+      "recentErrors": "Naujausios programos klaidos",
+      "technicalDetails": "Techninės Detalės",
+      "tabs": {
+        "list": "Sąrašas",
+        "details": "Detalės"
+      },
+      "errorCount": "{{count}} klaidos",
+      "actions": {
+        "downloadErrors": "Atsisiųsti klaidas",
+        "clearAllErrors": "Išvalyti visas klaidas"
+      },
+      "messages": {
+        "errorsCleared": "Visos klaidos išvalytos",
+        "errorCopied": "Klaida nukopijuota į iškarpinę",
+        "errorsDownloaded": "Klaidos atsisiųstos"
+      },
+      "error": {
+        "unknownError": "Nežinoma Klaida",
+        "noMessage": "Nėra žinutės",
+        "errorMessage": "Klaidos Pranešimas"
+      },
+      "sections": {
+        "stackTrace": "Dėklo Atsekamumas",
+        "context": "Kontekstas",
+        "location": "Vieta",
+        "browserInfo": "Naršyklės Informacija",
+        "time": "Laikas"
+      },
+      "fields": {
+        "url": "URL:",
+        "path": "Kelias:",
+        "query": "Užklausa:",
+        "userAgent": "User Agent:",
+        "viewport": "Viewport:"
+      }
+    }
+  },
+  "test": {
+    "environment": {
+      "title": "Test Environment Only",
+      "description": "This page is for testing the error logging system. Remove this route before deploying to production."
+    }
+  }
+}

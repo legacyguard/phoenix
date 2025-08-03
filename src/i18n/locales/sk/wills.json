@@ -1,0 +1,937 @@
+{
+  "_comment": "Shared translations used across the application",
+  "will": {
+    "title": "Závěť",
+    "fields": {
+      "notes": "Notes",
+      "status": "Status",
+      "physical_location": "Physical Location",
+      "executor_contact_id": "Executor Contact ID",
+      "currentStatus": "Aktuální stav",
+      "physicalLocation": "Fyzické umístění",
+      "executorContact": "Kontakt na vykonavatele",
+      "additionalNotes": "Další poznámky"
+    },
+    "statuses": {
+      "draft": "Draft",
+      "pending_signatures": "Pending Signatures",
+      "completed": "Completed",
+      "needs_revision": "Needs Revision"
+    },
+    "actions": {
+      "save": "Save",
+      "edit": "Edit"
+    },
+    "placeholders": {
+      "notes_placeholder": "Enter any additional notes here...",
+      "physicalLocation": "např. Domácí trezor, Advokátní kancelář",
+      "selectContact": "Vyberte kontakt",
+      "additionalNotes": "Jakékoli další informace..."
+    },
+    "errors": {
+      "unauthorized": "Unauthorized access.",
+      "save_will_failed": "Failed to save the will. Please try again.",
+      "retrieve_will_failed": "Failed to retrieve the will.",
+      "load_template_failed": "Failed to load template.",
+      "not_found": "Will not found.",
+      "failed_to_save": "Failed to save will.",
+      "failed_to_load": "Failed to load will.",
+      "failed_to_retrieve": "Failed to retrieve will.",
+      "failed_to_fetch": "Failed to fetch wills.",
+      "failed_to_generate": "Failed to generate will.",
+      "failed_to_sign": "Failed to sign will.",
+      "failed_to_delete": "Failed to delete will.",
+      "failed_to_notarize": "Failed to notarize will.",
+      "failed_to_update_status": "Failed to update will status.",
+      "failed_to_verify": "Failed to verify notarization.",
+      "cannot_update_non_draft": "Cannot update non-draft will.",
+      "cannot_delete_non_draft": "Cannot delete non-draft will.",
+      "must_be_signed": "Will must be signed before notarization.",
+      "verification_code_required": "Verification code required.",
+      "invalid_verification_code": "Invalid verification code.",
+      "mustBeLoggedIn": "Pro uložení musíte být přihlášeni.",
+      "loadingFailed": "Načtení závěti se nezdařilo.",
+      "savingFailed": "Uložení závěti se nezdařilo."
+    },
+    "messages": {
+      "will_saved": "Will saved successfully.",
+      "template_loaded": "Template loaded successfully.",
+      "backup_success": "Backup created successfully.",
+      "backup_failed": "Failed to create a backup.",
+      "savedSuccessfully": "Závěť byla úspěšně uložena.",
+      "documentUploaded": "Dokument byl úspěšně nahrán."
+    },
+    "success": {
+      "will_saved": "Will saved successfully.",
+      "backup_created": "Backup created successfully.",
+      "notarized": "Will has been successfully notarized."
+    },
+    "instructions": {
+      "verify_info": "Verify all information before proceeding to next steps.",
+      "provide_full_details": "Please provide full details for accuracy."
+    },
+    "loading": "Načítání závěti...",
+    "subtitle": "Spravujte svou závěť a jmenujte vykonavatele.",
+    "sections": {
+      "statusInfo": "Stav a informace",
+      "willDocument": "Dokument závěti"
+    },
+    "descriptions": {
+      "statusDescription": "Sledujte aktuální stav vaší závěti.",
+      "physicalLocationDescription": "Kde je vaše závěť fyzicky uložena?",
+      "executorDescription": "Osoba odpovědná za vykonání vaší závěti."
+    },
+    "options": {
+      "noContactSelected": "Není vybrán žádný kontakt"
+    },
+    "status": {
+      "notStarted": "Nezačato",
+      "inPreparation": "V přípravě",
+      "completedSigned": "Dokončeno a podepsáno",
+      "withNotary": "U notáře",
+      "draft": "Návrh",
+      "notarized": "Notářsky ověřeno",
+      "stored": "Uloženo",
+      "updated": "Aktualizováno"
+    },
+    "document": {
+      "uploaded": "Dokument závěti nahrán",
+      "uploadedDescription": "Váš dokument závěti byl bezpečně uložen.",
+      "noDocument": "Žádný dokument závěti",
+      "noDocumentDescription": "Nahrajte kopii své závěti pro bezpečné uchování."
+    },
+    "buttons": {
+      "saveWillInfo": "Uložit informace o závěti",
+      "saving": "Ukládám...",
+      "uploadDocument": "Nahrát dokument",
+      "uploadNewVersion": "Nahrát novou verzi"
+    },
+    "steps": {
+      "countrySelection": "Výběr země",
+      "countrySelectionDesc": "Vyberte svou zemi a zadejte své údaje",
+      "assetAllocation": "Rozdělení majetku",
+      "assetAllocationDesc": "Rozdělte majetek mezi oprávněné osoby",
+      "beneficiaries": "Oprávněné osoby",
+      "beneficiariesDesc": "Definujte své oprávněné osoby",
+      "executors": "Vykonavatelé",
+      "executorsDesc": "Přiřaďte vykonavatele pro správu vaší závěti",
+      "review": "Kontrola",
+      "reviewDesc": "Zkontrolujte a dokončete svou závěť"
+    },
+    "progress": "Krok {{current}} z {{total}}",
+    "validation": {
+      "selectCountry": "Prosím, vyberte zemi",
+      "requiredField": "Toto pole je povinné",
+      "allocation100": "Celkové rozdělení musí činit 100 %",
+      "atLeastOneBeneficiary": "Je vyžadována alespoň jedna oprávněná osoba",
+      "executorRequired": "Vykonavatel je povinný",
+      "fixErrors": "Prosím, opravte chyby ve formuláři",
+      "errors": {
+        "nameMinLength": "Jméno musí mít alespoň {{min}} znaků",
+        "nameMaxLength": "Jméno nesmí mít více než {{max}} znaků",
+        "relationshipRequired": "Vztah je povinný",
+        "countryRequired": "Země je povinná",
+        "countryCodeLength": "Kód země musí mít 2 znaky",
+        "selectAtLeastOne": "Prosím, vyberte alespoň jednu {{field}}",
+        "selectUpTo": "Prosím, vyberte maximálně {{max}} {{field}}",
+        "invalidEmail": "Prosím, zadejte platnou e-mailovou adresu",
+        "invalidPhone": "Prosím, zadejte platné telefonní číslo"
+      }
+    },
+    "generation": {
+      "success": "Závěť byla úspěšně vygenerována!",
+      "error": "Generování závěti se nezdařilo"
+    }
+  },
+  "willGenerator": {
+    "countries": {
+      "GB": "Spojené království",
+      "DE": "Německo",
+      "FR": "Francie",
+      "ES": "Španělsko",
+      "IT": "Itálie",
+      "CZ": "Česká republika",
+      "SK": "Slovensko",
+      "PL": "Polsko",
+      "AT": "Rakousko",
+      "CH": "Švýcarsko",
+      "NL": "Nizozemsko",
+      "BE": "Belgie",
+      "LU": "Lucembursko",
+      "LI": "Lichtenštejnsko",
+      "DK": "Dánsko",
+      "SE": "Švédsko",
+      "FI": "Finsko",
+      "NO": "Norsko",
+      "IS": "Island",
+      "IE": "Irsko",
+      "PT": "Portugalsko",
+      "GR": "Řecko",
+      "HU": "Maďarsko",
+      "RO": "Rumunsko",
+      "BG": "Bulharsko",
+      "HR": "Chorvatsko",
+      "SI": "Slovinsko",
+      "EE": "Estonsko",
+      "LV": "Lotyšsko",
+      "LT": "Litva",
+      "MT": "Malta",
+      "CY": "Kypr",
+      "MD": "Moldavsko",
+      "UA": "Ukrajina",
+      "RS": "Srbsko",
+      "AL": "Albánie",
+      "MK": "Severní Makedonie",
+      "ME": "Černá Hora",
+      "BA": "Bosna a Hercegovina"
+    },
+    "steps": {
+      "confirmJurisdiction": "Potvrdit jurisdikci",
+      "personalInformation": "Osobní informace",
+      "executorBeneficiaries": "Vykonavatel a obdarovaní",
+      "reviewGenerate": "Kontrola a generování",
+      "signConfirm": "Podpis a potvrzení"
+    },
+    "no_template_found_for_this_jur_1": "Pro tuto jurisdikci nebyla nalezena žádná šablona",
+    "failed_to_load_will_template_2": "Načtení šablony závěti selhalo",
+    "please_confirm_that_you_have_s_3": "Prosím potvrďte, že jste dokument podepsali",
+    "console": {
+      "willGenerationCompleted": "Generování závěti dokončeno!",
+      "templateLoaded": "Šablona závěti byla úspěšně načtena",
+      "templateLoadFailed": "Načtení šablony závěti selhalo",
+      "willGenerated": "Dokument závěti byl úspěšně vygenerován"
+    },
+    "confirmCountry": "Prosím potvrďte vaši jurisdikci: {{country}}",
+    "changeCountry": "Změnit zemi",
+    "select_a_country_4": "Vyberte zemi",
+    "fullName": "Celé jméno",
+    "executionInstructions": "Pokyny k vykonání",
+    "confirmSigned": "Potvrzuji, že jsem tento dokument podepsal",
+    "finalizeUpload": "Dokončit a nahrát",
+    "alerts": {
+      "jurisdictionRequired": "Prosím vyberte jurisdikci před pokračováním",
+      "templateLoadError": "Nelze načíst šablonu závěti pro vybranou jurisdikci",
+      "generationSuccess": "Závěť byla úspěšně vygenerována",
+      "generationError": "Generování dokumentu závěti selhalo",
+      "signatureRequired": "Prosím potvrďte, že jste dokument podepsali před pokračováním"
+    }
+  },
+  "will_generator": {
+    "uk_jurisdiction_title": "Which part of the UK is your primary residence?",
+    "jurisdiction_england": "England",
+    "jurisdiction_wales": "Wales",
+    "jurisdiction_scotland": "Scotland",
+    "jurisdiction_northern_ireland": "Northern Ireland",
+    "select_will_language_title": "Please select the language for your will:",
+    "error_uk_jurisdiction_required": "Please select a jurisdiction within the UK to continue."
+  },
+  "playbook": {
+    "label": "Manuál",
+    "create": "Vytvořit manuál",
+    "edit": "Upravit manuál",
+    "preview": "Náhled",
+    "exitPreview": "Ukončit náhled",
+    "save": "Uložit manuál",
+    "saving": "Ukládám...",
+    "loading": "Načítám manuál...",
+    "autoSaveNotice": "Vaše změny se automaticky ukládají při psaní.",
+    "noContent": "Zatím nebyl přidán žádný obsah.",
+    "noContacts": "Zatím nebyly přidány žádné kontakty.",
+    "addContact": "Přidat kontakt",
+    "contact": "Kontakt",
+    "title": "Manuál pro {{name}}",
+    "titleReadOnly": "Manuál uživatele {{name}}",
+    "description": "Vytvořte osobní pokyny a informace pro svého důvěrníka.",
+    "viewTitle": "Manuál pro důvěrníka: {{userName}}",
+    "viewDescription": "Základní informace a pokyny připravené speciálně pro vás.",
+    "lastUpdated": "Poslední aktualizace",
+    "viewFooter": "Tyto informace vám byly svěřeny jako důvěrníkovi. Prosím, uchovávejte je v tajnosti a bezpečí.",
+    "notAuthenticated": "Pro zobrazení tohoto manuálu se prosím přihlaste.",
+    "accessDenied": "Nemáte oprávnění k zobrazení tohoto manuálu.",
+    "fetchError": "Načtení manuálu se nezdařilo.",
+    "saveSuccess": "Manuál byl úspěšně uložen.",
+    "saveError": "Uložení manuálu se nezdařilo.",
+    "discardChanges": {
+      "title": "Zahodit změny?",
+      "description": "Máte neuložené změny. Jste si jisti, že je chcete zahodit?",
+      "cancel": "Pokračovat v úpravách",
+      "confirm": "Zahodit změny"
+    },
+    "importantContacts": {
+      "label": "Důležité kontakty",
+      "description": "Přidejte klíčové osoby, které by měl tento důvěrník kontaktovat.",
+      "viewDescription": "V případě potřeby kontaktujte tyto osoby.",
+      "add": "Přidat kontakt",
+      "remove": "Odebrat",
+      "empty": "Zatím nebyly přidány žádné kontakty. Klikněte na 'Přidat kontakt' pro přidání důležitých osob.",
+      "name": "Jméno",
+      "namePlaceholder": "Celé jméno",
+      "relationship": "Vztah",
+      "relationshipPlaceholder": "např. Rodinný právník",
+      "phone": "Telefon",
+      "phonePlaceholder": "+420 123 456 789",
+      "email": "E-mail",
+      "emailPlaceholder": "email@example.com",
+      "notes": "Poznámky",
+      "notesPlaceholder": "Další informace"
+    },
+    "funeralWishes": {
+      "label": "Pohřební přání",
+      "description": "Vaše preference ohledně pohřebního uspořádání.",
+      "placeholder": "Popište svá přání ohledně pohřbu nebo smutečního obřadu..."
+    },
+    "digitalAccounts": {
+      "label": "Digitální účty",
+      "description": "Pokyny pro nakládání s vašimi online účty.",
+      "placeholder": "Uveďte seznam svých digitálních účtů a jak s nimi má být naloženo..."
+    },
+    "documentLocations": {
+      "label": "Umístění dokumentů",
+      "description": "Kde najít důležité dokumenty.",
+      "placeholder": "Popište, kde se nacházejí důležité dokumenty..."
+    },
+    "personalMessages": {
+      "label": "Osobní vzkazy",
+      "description": "Osobní vzkazy pro tohoto důvěrníka.",
+      "placeholder": "Napište osobní vzkaz tomuto důvěrníkovi..."
+    },
+    "practicalInstructions": {
+      "label": "Praktické pokyny",
+      "description": "Okamžité kroky a povinnosti.",
+      "placeholder": "Uveďte seznam praktických úkolů a okamžitých akcí..."
+    },
+    "notFound": {
+      "title": "Manuál nenalezen",
+      "description": "Manuál, který hledáte, ještě nebyl vytvořen."
+    },
+    "subtitle": {
+      "edit": "Vytvořte osobní pokyny a informace pro tohoto důvěrníka.",
+      "view": "Základní informace a pokyny připravené pro vás."
+    },
+    "status": {
+      "empty": "Nezačato",
+      "draft": "V přípravě",
+      "complete": "Dokončeno"
+    },
+    "tabs": {
+      "funeral": "Pohřeb",
+      "digital": "Digitální",
+      "contacts": "Kontakty",
+      "documents": "Dokumenty",
+      "messages": "Vzkazy",
+      "instructions": "Pokyny"
+    },
+    "templates": {
+      "funeralWishes": {
+        "traditionalReligiousBurial": "Traditional Religious Burial",
+        "simpleCremationService": "Simple Cremation Service",
+        "ecoFriendlyNaturalBurial": "Eco-Friendly Natural Burial"
+      },
+      "digitalAccountsShutdown": {
+        "comprehensiveDigitalShutdown": "Comprehensive Digital Shutdown",
+        "minimalDigitalFootprint": "Minimal Digital Footprint",
+        "professionalBusinessAccounts": "Professional & Business Accounts"
+      },
+      "importantContacts": {
+        "essentialContactsList": "Essential Contacts List",
+        "childrenDependentsContacts": "Children & Dependents Contacts"
+      },
+      "documentLocations": {
+        "homeFilingSystem": "Home Filing System",
+        "professionalStorage": "Professional Storage"
+      },
+      "personalMessages": {
+        "letterToSpousePartner": "Letter to Spouse/Partner",
+        "letterToChildren": "Letter to Children",
+        "letterToParents": "Letter to Parents"
+      },
+      "practicalInstructions": {
+        "first48HoursChecklist": "First 48 Hours Checklist",
+        "businessContinuityPlan": "Business Continuity Plan",
+        "householdManagementGuide": "Household Management Guide"
+      }
+    },
+    "sections": {
+      "funeral": {
+        "title": "Pohřební přání",
+        "description": "Vaše preference ohledně pohřebního uspořádání a smutečních obřadů.",
+        "placeholder": "Popište svá přání ohledně pohřbu nebo smutečního obřadu...\n\nNapříklad:\n- Typ obřadu (náboženský, světský, oslava života)\n- Preference ohledně pohřbu nebo kremace\n- Preference ohledně místa\n- Hudba, čtení nebo speciální požadavky\n- Kdo by měl mluvit nebo se účastnit\n- Jakékoli specifické tradice, které je třeba dodržet"
+      },
+      "digital": {
+        "title": "Ukončení digitálních účtů",
+        "description": "Pokyny pro nakládání s vaším digitálním přítomností a online účty.",
+        "placeholder": "Uveďte seznam svých digitálních účtů a jak s nimi má být naloženo...\n\nNapříklad:\n- Účty na sociálních sítích (Facebook, Instagram, LinkedIn)\n- E-mailové účty\n- Cloudové úložiště (Google Drive, Dropbox)\n- Předplatné služby (Netflix, Spotify)\n- Online bankovnictví a finanční účty\n- Peněženky s kryptoměnami\n- Webové stránky nebo názvy domén"
+      },
+      "contacts": {
+        "title": "Důležité kontakty",
+        "description": "Klíčové osoby, které by měl tento důvěrník kontaktovat nebo informovat.",
+        "placeholder": "Přidejte důležité kontakty specifické pro povinnosti tohoto důvěrníka."
+      },
+      "documents": {
+        "title": "Umístění dokumentů",
+        "description": "Kde najít důležité fyzické a digitální dokumenty.",
+        "placeholder": "Popište, kde se nacházejí důležité dokumenty...\n\nNapříklad:\n- Umístění závěti a poslední vůle\n- Pojistné smlouvy\n- Listy vlastnictví\n- Informace o bankovních účtech\n- Investiční dokumenty\n- Daňová přiznání\n- Hesla a přístupové kódy\n- Umístění bezpečnostní schránky a klíče"
+      },
+      "messages": {
+        "title": "Osobní vzkazy",
+        "description": "Osobní vzkazy a poslední myšlenky pro tohoto důvěrníka.",
+        "placeholder": "Napište osobní vzkaz tomuto důvěrníkovi...\n\nZde máte příležitost:\n- Vyjádřit své pocity a vděčnost\n- Sdílet důležité vzpomínky\n- Poskytnout rady nebo doporučení\n- Vysvětlit svá rozhodnutí\n- Zanechat slova útěchy\n- Podělit se o své naděje do budoucna"
+      },
+      "practical": {
+        "title": "Praktické pokyny",
+        "description": "Okamžité praktické kroky a povinnosti pro tohoto důvěrníka.",
+        "placeholder": "Uveďte seznam praktických úkolů a okamžitých akcí...\n\nNapříklad:\n- Kontrolní seznam pro prvních 24-48 hodin\n- Koho informovat jako prvního\n- Naléhavé účty nebo platby\n- Pokyny k péči (domácí mazlíčci, rostliny, majetek)\n- Obchodní záležitosti vyžadující pozornost\n- Plánované schůzky k zrušení\n- Potřebné klíče a přístupové kódy"
+      }
+    },
+    "contactFields": {
+      "name": "Jméno",
+      "namePlaceholder": "Celé jméno",
+      "role": "Role/Vztah",
+      "rolePlaceholder": "např. Rodinný právník, Účetní",
+      "phone": "Telefon",
+      "phonePlaceholder": "+420 123 456 789",
+      "email": "E-mail",
+      "emailPlaceholder": "email@example.com",
+      "notes": "Poznámky",
+      "notesPlaceholder": "Další informace o tomto kontaktu"
+    },
+    "messages": {
+      "autoSaved": "Uloženo",
+      "saved": "Manuál byl úspěšně uložen"
+    },
+    "errors": {
+      "loadFailed": "Načtení manuálu se nezdařilo",
+      "saveFailed": "Uložení manuálu se nezdařilo"
+    }
+  },
+  "scenarioPlanner": {
+    "scenarios": {
+      "hospitalized": {
+        "title": "Co když budete v nemocnici 3 měsíce?",
+        "description": "Neočekávaný zdravotní problém znamená, že nemůžete spravovat každodenní záležitosti. Vaše rodina musí zasáhnout."
+      },
+      "incapacitated": {
+        "title": "Co když se stanete neschopným?",
+        "description": "Vážná nehoda vás zanechá neschopným rozhodovat za sebe. Kdo bude rozhodovat za vás?"
+      },
+      "suddenPassing": {
+        "title": "Co když se vám něco stane zítra?",
+        "description": "Ultimátní test vaší přípravy. Je vaše rodina připravena projít tímto obtížným obdobím bez chaosu?"
+      }
+    },
+    "timeframes": {
+      "first24Hours": "Prvních 24 hodin",
+      "firstWeek": "První týden",
+      "firstMonth": "První měsíc",
+      "threeToSixMonths": "3-6 měsíců"
+    },
+    "vulnerabilities": {
+      "billsGoUnpaid": "Účty zůstávají nezaplacené",
+      "businessDecisionsStall": "Obchodní rozhodnutí se zastavují",
+      "familyCannotManageFinances": "Rodina nemůže legálně spravovat vaše finance",
+      "familyCannotAccessBankAccount": "Rodina nemůže přistupovat k hlavnímu bankovnímu účtu",
+      "businessNoLeadership": "Obchodní operace nemají jasné vedení",
+      "noWillFound": "Závěť nebyla nalezena",
+      "insuranceDetailsUnknown": "Detaily pojištění nejsou známy",
+      "noWillAvailable": "Závěť není k dispozici",
+      "unknownLifeInsurance": "Neznámé detaily životního pojištění"
+    },
+    "actions": {
+      "designatePowerOfAttorney": "Určit plnou moc pro finance",
+      "grantSpouseAccess": "Udělit manželovi přístup k vašemu hlavnímu účtu",
+      "createBusinessContinuityPlan": "Vytvořit plán kontinuity podnikání",
+      "draftWill": "Vypracovat a uložit právně závaznou závěť",
+      "compileInsuranceList": "Sestavit seznam všech pojistných smluv"
+    },
+    "timelineEvents": {
+      "notifyImmediateFamily": "Upozornit nejbližší rodinu",
+      "securePhysicalProperty": "Zabezpečit fyzický majetek",
+      "contactExecutor": "Kontaktovat vykonavatele",
+      "locateWill": "Najít závěť",
+      "executorBeginsProbate": "Vykonavatel zahájí proces pozůstalosti",
+      "notifyEmployer": "Upozornit zaměstnavatele",
+      "activatePowerOfAttorney": "Aktivovat plnou moc",
+      "arrangeBillPayments": "Zařídit platby účtů",
+      "fileDisabilityBenefits": "Podat žádost o invalidní dávky"
+    },
+    "descriptions": {
+      "billsGoUnpaid": "Vaše rodina nemůže přistupovat k vašemu hlavnímu běžnému účtu na zaplacení hypotéky.",
+      "businessDecisionsStall": "Klienti a zaměstnanci nevědí, kdo je oprávněn rozhodovat.",
+      "familyCannotManageFinances": "Váš manžel nyní může legálně spravovat všechny finanční záležitosti, zajistit zaplacení účtů a ochránit investice.",
+      "familyCannotAccessBankAccount": "Vaše rodina nyní může platit účty a spravovat každodenní výdaje bez zpoždění nebo právních komplikací.",
+      "businessNoLeadership": "Vaše podnikání může pokračovat plynule s jasným vedením a rozhodovacími procesy.",
+      "noWillFound": "Rodina nemůže najít nebo potvrdit existenci závěti.",
+      "insuranceDetailsUnknown": "Detaily životní pojistné smlouvy a beneficienti nejsou známi.",
+      "notifyImmediateFamily": "Zajistit, aby byli informováni všichni nejbližší členové rodiny.",
+      "securePhysicalProperty": "Zajistit, aby byly domov a vozidla zabezpečeny.",
+      "contactExecutor": "Kontaktovat Jana Nováka pro zahájení procesu závěti.",
+      "locateWill": "Najít a zabezpečit závěť na určeném místě.",
+      "executorBeginsProbate": "Vykonavatel podá žádost o pozůstalost pro správu majetku.",
+      "notifyEmployer": "Informovat pracoviště o prodloužené absenci.",
+      "activatePowerOfAttorney": "Zajistit, aby určená osoba mohla rozhodovat.",
+      "arrangeBillPayments": "Nastavit automatické platby nebo delegovat důvěryhodné osobě.",
+      "fileDisabilityBenefits": "Podat potřebné dokumenty pro pojistné nároky."
+    },
+    "scenario_planner_1": "Plánovač scénářů",
+    "let_s_see_how_prepared_your_fa_2": "Podívejme se, jak je vaše rodina připravena na různé scénáře",
+    "generate_family_action_plan_3": "Vygenerovat rodinný akční plán",
+    "generate_plan_4": "Vygenerovat plán",
+    "current_family_vulnerabilities_6": "Současné rodinné zranitelnosti",
+    "without_proper_preparation_you_7": "Bez řádné přípravy byste vy a vaše rodina mohli čelit těmto výzvám",
+    "projected_timeline_8": "Předpokládaný časový harmonogram",
+    "potential_financial_impact_9": "Potenciální finanční dopad",
+    "these_are_estimates_of_the_pos_10": "Toto jsou odhady potenciálních nákladů, pokud nebudou zranitelnosti řešeny",
+    "no_will_11": "Žádná závěť: ",
+    "potential_cost_of_lengthy_prob_12": "Potenciální náklady na dlouhý proces pozůstalosti: ",
+    "5_000_15_000_13": "5 000 - 15 000 Kč",
+    "estimated_14": " odhadované",
+    "potential_loss_of_business_rev_15": "Potenciální ztráta obchodních příjmů během přechodu: ",
+    "20_000_16": "20 000 Kč",
+    "your_preparedness_blueprint_17": "Váš plán připravenosti",
+    "your_family_is_currently_18": "Vaše rodina je v současné době ",
+    "protected_in_this_scenario_19": "% chráněna v tomto scénáři",
+    "vulnerability_20": "Zranitelnost: ",
+    "action_required_21": "Požadovaná akce: ",
+    "resolve_this_vulnerability_22": "Vyřešit tuto zranitelnost",
+    "resolved_23": "Vyřešeno: ",
+    "family_action_plan_24": "Rodinný akční plán",
+    "a_comprehensive_guide_for_your_25": "Komplexní průvodce pro vaši rodinu, který má následovat v případě nouze",
+    "print_plan_26": "Vytisknout plán",
+    "_27": "🤕"
+  },
+  "scenarios": {
+    "title": "Co se stane, když život vezme neočekávaný obrat?",
+    "subtitle": "Skutečné rodiny, skutečné situace, skutečná kontrola a připravenost",
+    "hospitalStay": {
+      "title": "Neočekávaný pobyt v nemocnici",
+      "before": {
+        "situation": "Sarahin manžel měl infarkt. Zatímco byl na jednotce intenzivní péče, strávila dny hledáním jejich pojištění, informací o bankovním účtu a důležitých kontaktů. Stres byl ohromující, když se potřebovala soustředit na jeho uzdravení.",
+        "emotion": "Stres a obavy",
+        "consequence": "Dny hledání informací a podpory."
+      },
+      "after": {
+        "situation": "Když měl Mark nehodu, jeho manželka Lisa otevřela jejich rodinný průvodce a našla vše organizované: detaily pojištění, bankovní kontakty, lékařské informace a dokonce seznam lidí k oznámení. Mohla se soustředit na to, co bylo nejdůležitější - být tam pro Marka.",
+        "emotion": "Klid a soustředění",
+        "benefit": "Okamžitý přístup ke všemu, co potřebovala."
+      }
+    },
+    "businessTrip": {
+      "title": "Nouzová situace na služební cestě",
+      "before": {
+        "situation": "Když byl Davidův let zpožděn a zmeškal neodkladnou operaci své dcery, jeho manželka nemohla přistupovat k jejich spořicímu účtu ani najít informace o zdravotním pojištění. Kritická rozhodnutí musela počkat.",
+        "emotion": "Frustrace a bezmocnost",
+        "consequence": "Důležitá lékařská rozhodnutí odložena."
+      },
+      "after": {
+        "situation": "Když Emma potřebovala nouzové prostředky na operaci syna a její manžel byl na cestách, měla okamžitý přístup ke všem informacím o účtech, detailům pojištění a dokonce předem napsaným autorizačním dopisům. Žádné zpoždění, žádný stres.",
+        "emotion": "Úleva a připravenost",
+        "benefit": "Vše dostupné přesně když to potřebovala."
+      }
+    },
+    "suddenLoss": {
+      "title": "Náhlá ztráta",
+      "before": {
+        "situation": "Po náhlé ztrátě otce strávila Maria měsíce pokusy o sestavení jeho finančních záležitostí. Našla účty, o kterých nevěděla, že existují, a zmeškala důležité termíny, protože dokumenty byly rozptýlené všude.",
+        "emotion": "Zmatení a lítost",
+        "consequence": "Zmeškané termíny a ztracený čas."
+      },
+      "after": {
+        "situation": "Když rodina Johna potřebovala řešit jeho záležitosti, vše bylo jasně organizované: kompletní seznam účtů, důležité kontakty, pokyny krok za krokem a dokonce osobní zprávy, které připravil pro každého člena rodiny.",
+        "emotion": "Klid a jasnost",
+        "benefit": "Jasná cesta k následování v obtížných časech."
+      }
+    },
+    "labels": {
+      "before": "Před použitím LegacyGuard",
+      "after": "Po použití LegacyGuard",
+      "feeling": "Pocit"
+    },
+    "bottomCta": {
+      "primary": "Nenechte svou rodinu čelit tomuto chaosu",
+      "secondary": "Začněte organizovat za 10 minut",
+      "urgency": "Každý den, který čekáte, je další den, kdy je vaše rodina nepřipravená"
+    },
+    "testimonials": {
+      "1": "Po náhlej nehode môjho brata som sledoval, ako moja švagriná týždne zápasila s hľadaním dôležitých dokumentov a hesiel. Vtedy som vedel, že nemôžem nechať, aby sa to isté stalo mojej rodine.",
+      "2": "Ako samostatná mama prevádzkujúca podnik, neustále som sa obávala, čo by sa stalo, keby sa mi niečo stalo. Dedičný trezor mi pomohol zorganizovať všetko.",
+      "3": "Moja manželka má rané štádium demencie a uvedomil som si, že sa musím pripraviť, kým ešte môžem. Dedičný trezor to zjednodušil na organizáciu našich 40 rokov života spolu."
+    }
+  },
+  "annualReview": {
+    "title": "Roční přezkoumání dědictví",
+    "subtitle": "Udržujte ochranný plán vaší rodiny aktuální a efektivní",
+    "description": "Život se rychle mění. Toto roční přezkoumání zajišťuje, že váš plán dědictví zůstává v souladu s vaší současnou situací a přáními.",
+    "progress": {
+      "title": "Průběh přezkoumání",
+      "completed": "Dokončeno",
+      "inProgress": "Probíhá",
+      "notStarted": "Nezahájeno",
+      "totalSteps": "Celkem kroků",
+      "estimatedTime": "Odhadovaný čas: 15 minut"
+    },
+    "step1": {
+      "title": "Přezkoumejte své vykonavatele",
+      "description": "Potvrďte, že vaši důvěryhodní lidé jsou stále správnou volbou pro vaši rodinu"
+    },
+    "step2": {
+      "title": "Přezkoumejte svá aktiva",
+      "description": "Ověřte, že inventář vašich aktiv je aktuální a kompletní"
+    },
+    "step3": {
+      "title": "Přezkoumejte své obmyšlené",
+      "description": "Ujistěte se, že vaši obmyšlení jsou stále správní lidé"
+    },
+    "step4": {
+      "title": "Dokončit přezkoumání",
+      "description": "Dokončete své roční přezkoumání a aktualizujte svůj plán"
+    },
+    "commandRoster": {
+      "title": "Přezkoumání velitelského sboru",
+      "description": "Vaši vykonavatelé a důvěryhodní lidé jsou základem ochranného plánu vaší rodiny.",
+      "executorQuestion": "Je {name} stále správnou osobou pro vašeho vykonavatele?",
+      "guardianQuestion": "Je {name} stále správnou osobou pro péči o vaše děti?",
+      "trustedPersonQuestion": "Je {name} stále správnou osobou pro {role}?",
+      "status": {
+        "current": "Aktuální",
+        "needsUpdate": "Potřebuje aktualizaci",
+        "outdated": "Zastaralé",
+        "missing": "Chybí"
+      },
+      "details": {
+        "executor": "Hlavní vykonavatel vašeho majetku",
+        "guardian": "Opatrovník pro nezletilé děti",
+        "trustedPerson": "Důvěryhodná osoba s přístupem {accessLevel}",
+        "emergencyContact": "Nouzový kontakt"
+      }
+    },
+    "armory": {
+      "title": "Přezkoumání inventáře aktiv",
+      "description": "Vaše aktiva jsou to, co chráníte. Udržujte tento inventář aktuální.",
+      "ownershipQuestion": "Stále vlastníte {assetName}?",
+      "valueQuestion": "Změnila se hodnota {assetName} výrazně?",
+      "locationQuestion": "Je umístění {assetName} stále správné?",
+      "status": {
+        "current": "Aktuální",
+        "needsUpdate": "Potřebuje aktualizaci",
+        "outdated": "Zastaralé",
+        "missing": "Chybí"
+      },
+      "categories": {
+        "realEstate": "Nemovitosti",
+        "vehicles": "Vozidla",
+        "bankAccounts": "Bankovní účty",
+        "investments": "Investice",
+        "insurance": "Pojištění",
+        "digitalAssets": "Digitální aktiva",
+        "personalItems": "Osobní předměty"
+      }
+    },
+    "beneficiaries": {
+      "title": "Přezkoumání obmyšlených",
+      "description": "Zajistěte, aby správní lidé obdrželi správná aktiva ve správný čas.",
+      "confirmationQuestion": "Jsou to stále správní lidé pro obdržení těchto aktiv?",
+      "distributionQuestion": "Je procento rozdělení stále správné?",
+      "contactQuestion": "Jsou kontaktní údaje pro {name} stále aktuální?",
+      "status": {
+        "current": "Aktuální",
+        "needsUpdate": "Potřebuje aktualizaci",
+        "outdated": "Zastaralé",
+        "missing": "Chybí"
+      },
+      "details": {
+        "primary": "Hlavní obmyšlený",
+        "contingent": "Náhradní obmyšlený",
+        "percentage": "{percentage}% aktiv",
+        "specific": "Obmyšlený konkrétního aktiva"
+      }
+    },
+    "complete": {
+      "title": "Přezkoumání dokončeno",
+      "description": "Vaše roční přezkoumání bylo úspěšně dokončeno.",
+      "message": "Vaše roční přezkoumání bylo dokončeno. Ochranný plán vaší rodiny je nyní aktuální a efektivní.",
+      "summary": "Shrnutí přezkoumání",
+      "changes": "Provedené změny",
+      "noChanges": "Nebyly potřeba žádné změny. Váš plán je aktuální.",
+      "nextReview": "Příští přezkoumání",
+      "reminder": "Připomeneme vám, když bude čas na vaše příští roční přezkoumání."
+    },
+    "buttons": {
+      "confirm": "Potvrdit",
+      "update": "Aktualizovat",
+      "back": "Zpět",
+      "next": "Další",
+      "finish": "Dokončit přezkoumání",
+      "save": "Uložit změny",
+      "skip": "Přeskočit prozatím",
+      "reviewLater": "Přezkoumat později"
+    },
+    "status": {
+      "title": "Stav přezkoumání",
+      "overdue": "Po termínu",
+      "dueSoon": "Brzy splatné",
+      "current": "Aktuální",
+      "completed": "Dokončeno",
+      "lastReview": "Poslední přezkoumání",
+      "nextReview": "Příští přezkoumání",
+      "daysOverdue": "{days} dní po termínu",
+      "daysUntilDue": "{days} dní do splatnosti"
+    },
+    "notifications": {
+      "reviewDue": "Roční přezkoumání splatné",
+      "reviewOverdue": "Roční přezkoumání po termínu",
+      "reviewCompleted": "Roční přezkoumání dokončeno",
+      "changesSaved": "Změny úspěšně uloženy",
+      "errorSaving": "Chyba při ukládání změn",
+      "reminderSet": "Připomenutí nastaveno pro příští přezkoumání"
+    }
+  },
+  "complexityReduction": {
+    "title": "Zjednodušte své plánování dědictví",
+    "subtitle": "Rozdělte složité úkoly na jednoduché, zvládnutelné kroky",
+    "description": "Rozumíme, že plánování budoucnosti může být ohromující. Náš systém redukce složitosti rozděluje každý úkol na jednoduché, proveditelné kroky, které trvají jen minuty.",
+    "benefits": {
+      "title": "Proč redukce složitosti funguje",
+      "overwhelm": {
+        "title": "Odstraňuje přetížení",
+        "description": "Místo čelit obrovskému seznamu úkolů řešíte jeden malý úkol po druhém. Každý krok je navržen tak, aby byl dokončen za méně než 5 minut."
+      },
+      "progress": {
+        "title": "Viditelný pokrok",
+        "description": "Sledujte, jak roste připravenost vaší rodiny s každým dokončeným krokem. Sledujte svůj pokrok a oslavujte malá vítězství."
+      },
+      "confidence": {
+        "title": "Buduje sebedůvěru",
+        "description": "Jak dokončujete každý krok, budete se cítit sebejistější a pod kontrolou. To, co se zdálo nemožné, se stává dosažitelným."
+      },
+      "family": {
+        "title": "Ochrana rodiny",
+        "description": "Každý dokončený krok přímo chrání vaši rodinu. Od nouzového přístupu po dlouhodobé plánování, každá akce má význam."
+      }
+    },
+    "steps": {
+      "identifyBankAccount": {
+        "title": "Identifikujte svůj hlavní bankovní účet",
+        "why": "Proč je to důležité: Okamžitý přístup k prostředkům během nouzových situací",
+        "whatYouDo": "Co děláte: Vyfoťte nebo zapište informace o účtu",
+        "whatWeDo": "Co děláme: Bezpečně ukládáme informace a vytváříme instrukce pro přístup",
+        "timeRequired": "Potřebný čas: 2 minuty",
+        "complexity": "Úroveň složitosti: Jednoduchá"
+      },
+      "emergencyContacts": {
+        "title": "Seznam nouzových kontaktů",
+        "why": "Proč je to důležité: Rychlý přístup k důležitým lidem během krizí",
+        "whatYouDo": "Co děláte: Přidejte telefonní čísla a vztahy",
+        "whatWeDo": "Co děláme: Organizujeme kontakty podle priority a vytváříme nouzové protokoly",
+        "timeRequired": "Potřebný čas: 3 minuty",
+        "complexity": "Úroveň složitosti: Jednoduchá"
+      },
+      "insurancePolicies": {
+        "title": "Dokumentujte pojistné smlouvy",
+        "why": "Proč je to důležité: Zajišťuje, že nároky mohou být podány rychle a správně",
+        "whatYouDo": "Co děláte: Nahrajte dokumenty smluv nebo vyfoťte",
+        "whatWeDo": "Co děláme: Extrahujeme klíčové informace a vytváříme instrukce pro nároky",
+        "timeRequired": "Potřebný čas: 5 minut",
+        "complexity": "Úroveň složitosti: Snadná"
+      },
+      "digitalAssets": {
+        "title": "Zabezpečte digitální aktiva",
+        "why": "Proč je to důležité: Chrání online účty a digitální vzpomínky",
+        "whatYouDo": "Co děláte: Uveďte důležité účty a hesla",
+        "whatWeDo": "Co děláme: Vytváříme bezpečné přístupové protokoly a instrukce pro zálohování",
+        "timeRequired": "Potřebný čas: 4 minuty",
+        "complexity": "Úroveň složitosti: Snadná"
+      },
+      "legalDocuments": {
+        "title": "Organizujte právní dokumenty",
+        "why": "Proč je to důležité: Zajišťuje, že právní přání jsou dodržována a procesy jsou plynulé",
+        "whatYouDo": "Co děláte: Nahrajte závěti, plné moci a další dokumenty",
+        "whatWeDo": "Co děláme: Vytváříme shrnutí a zajišťujeme správný právní přístup",
+        "timeRequired": "Potřebný čas: 6 minut",
+        "complexity": "Úroveň složitosti: Střední"
+      },
+      "familyInstructions": {
+        "title": "Napište rodinné instrukce",
+        "why": "Proč je to důležité: Poskytuje jasné vedení během obtížných časů",
+        "whatYouDo": "Co děláte: Napište osobní zprávy a instrukce",
+        "whatWeDo": "Co děláme: Organizujeme zprávy a vytváříme harmonogramy doručení",
+        "timeRequired": "Potřebný čas: 8 minut",
+        "complexity": "Úroveň složitosti: Střední"
+      }
+    },
+    "actions": {
+      "startThisStep": "Začít tento krok",
+      "showMeHow": "Ukažte mi jak",
+      "iNeedHelp": "Potřebuji pomoc",
+      "nextStep": "Další krok",
+      "previousStep": "Předchozí krok",
+      "completeStep": "Označit jako dokončené",
+      "skipStep": "Přeskočit prozatím"
+    },
+    "progress": {
+      "title": "Váš pokrok",
+      "completed": "Dokončeno",
+      "inProgress": "Probíhá",
+      "notStarted": "Nezahájeno",
+      "totalSteps": "Celkem kroků",
+      "estimatedTime": "Odhadovaný zbývající čas"
+    },
+    "features": {
+      "title": "Jak funguje redukce složitosti",
+      "stepByStep": {
+        "title": "Krok za krokem vedení",
+        "description": "Každý úkol je rozdělen na jasné, jednoduché instrukce, které může kdokoliv následovat."
+      },
+      "timeEstimation": {
+        "title": "Přesné odhady času",
+        "description": "Získejte přesné informace o tom, jak dlouho bude každý krok trvat, od 2 minut do maximálně 15 minut."
+      },
+      "difficultyLevels": {
+        "title": "Jasné úrovně obtížnosti",
+        "description": "Jednoduché, Snadné, Střední a Složité hodnocení vám pomůže vybrat, co řešit jako první."
+      },
+      "progressTracking": {
+        "title": "Sledování pokroku",
+        "description": "Sledujte, jak roste připravenost vaší rodiny s každým dokončeným krokem."
+      },
+      "helpAvailable": {
+        "title": "Pomoc, když ji potřebujete",
+        "description": "Získejte pomoc, vysvětlení a podporu pro jakýkoliv krok, který se zdá náročný."
+      }
+    }
+  },
+  "microTaskGenerator": {
+    "minutes_1": " minut • ",
+    "family_impact_2": " dopad na rodinu",
+    "start_task_3": "Zahájit úkol",
+    "complete_task_4": "Dokončit úkol",
+    "skip_for_now_5": "Přeskočit prozatím",
+    "taskCategories": {
+      "identification": "Identifikační dokumenty",
+      "financial": "Finanční informace",
+      "healthcare": "Zdravotní dokumenty",
+      "legal": "Právní dokumenty",
+      "digital": "Digitální aktiva",
+      "personal": "Osobní informace"
+    },
+    "difficultyLevels": {
+      "trivial": "Triviální",
+      "easy": "Snadný",
+      "simple": "Jednoduchý"
+    },
+    "familyImpactLevels": {
+      "high": "Vysoký",
+      "medium": "Střední",
+      "low": "Nízký"
+    },
+    "taskStatus": {
+      "available": "Dostupné",
+      "in_progress": "Probíhá",
+      "completed": "Dokončeno",
+      "skipped": "Přeskočeno"
+    },
+    "tasks": {
+      "driversLicense": {
+        "title": "Vyfotografujte svůj řidičský průkaz",
+        "description": "Vaše rodina to bude potřebovat pro právní a finanční záležitosti. Jasná fotografie jim ušetří čas a stres.",
+        "completionMessage": "Vaše rodina nyní má přístup ke kritickým identifikačním informacím."
+      },
+      "passport": {
+        "title": "Vyfotografujte svůj pas",
+        "description": "Nezbytné pro mezinárodní cestovní zařízení a právní identifikaci.",
+        "completionMessage": "Mezinárodní cestovní dokumentace je nyní zabezpečena pro vaši rodinu."
+      },
+      "birthCertificate": {
+        "title": "Naskenujte svůj rodný list",
+        "description": "Vyžadováno pro mnoho právních procesů a dokumentaci rodinné historie.",
+        "completionMessage": "Rodný list je nyní digitálně zachován pro budoucí potřeby."
+      },
+      "socialSecurityCard": {
+        "title": "Dokumentujte svou kartu sociálního zabezpečení",
+        "description": "Kritické pro dávky a právní identifikační procesy.",
+        "completionMessage": "Informace o sociálním zabezpečení jsou nyní bezpečně dokumentovány."
+      },
+      "bankAccounts": {
+        "title": "Vypište své bankovní účty",
+        "description": "Pomozte své rodině spravovat finance a přistupovat k prostředkům, když je potřeba.",
+        "completionMessage": "Informace o bankovních účtech jsou nyní organizovány pro vaši rodinu."
+      },
+      "insurancePolicies": {
+        "title": "Sestavte detaily pojistných smluv",
+        "description": "Zajistěte, aby vaše rodina věděla o všech krytích a mohla podat nároky.",
+        "completionMessage": "Pojistné informace jsou nyní komplexní a přístupné."
+      },
+      "medicalRecords": {
+        "title": "Organizujte lékařskou anamnézu",
+        "description": "Pomozte zdravotnickým pracovníkům pochopit vaši lékařskou historii.",
+        "completionMessage": "Lékařská anamnéza je nyní organizována pro lepší zdravotní rozhodnutí."
+      },
+      "medications": {
+        "title": "Vypište současné léky",
+        "description": "Kritické pro lékařské pohotovosti a pokračující péči.",
+        "completionMessage": "Seznam léků je nyní k dispozici pro lékařské profesionály."
+      },
+      "will": {
+        "title": "Vytvořte nebo aktualizujte svou závěť",
+        "description": "Zajistěte, aby vaše přání byla jasně dokumentována a právně závazná.",
+        "completionMessage": "Vaše závěť je nyní aktuální a právně chráněná."
+      },
+      "powerOfAttorney": {
+        "title": "Určete plnou moc",
+        "description": "Autorizujte důvěryhodné osoby k rozhodování vaším jménem.",
+        "completionMessage": "Plná moc je nyní řádně určena."
+      },
+      "digitalPasswords": {
+        "title": "Zabezpečte seznam digitálních hesel",
+        "description": "Pomozte rodině přistupovat k důležitým online účtům a službám.",
+        "completionMessage": "Digitální přístup je nyní bezpečně organizován pro vaši rodinu."
+      },
+      "socialMedia": {
+        "title": "Naplánujte sociální média",
+        "description": "Rozhodněte, jak by měla být řešena vaše online přítomnost.",
+        "completionMessage": "Dědictví sociálních médií je nyní naplánováno a dokumentováno."
+      }
+    },
+    "sessionStats": {
+      "tasksCompleted": "Dokončené úkoly",
+      "totalTimeSpent": "Celkový strávený čas",
+      "momentumScore": "Skóre hybnosti",
+      "nextRecommendedTask": "Další doporučený úkol"
+    },
+    "scoring": {
+      "urgency": "Naléhavost",
+      "impact": "Dopad",
+      "ease": "Snadnost",
+      "momentum": "Hybnost"
+    }
+  },
+  "editStoryModal": {
+    "editStory": "Upraviť príbeh",
+    "addStory": "Pridať príbeh",
+    "description": "Zdieľajte príbeh za \"{{assetName}}\". Tento osobný dotyk bude neoceniteľný pre vašich blízkych.",
+    "fields": {
+      "yourStory": "Váš príbeh"
+    },
+    "placeholders": {
+      "story": "napr. Toto bol snubný prsteň vašej babičky, daný jej v roku 1952, keď sa vydala za vášho dedka v malom kostole v ich rodnom meste. Nosila ho každý deň 65 rokov..."
+    },
+    "hints": {
+      "shareMemories": "Zdieľajte spomienky, význam alebo históriu"
+    },
+    "tips": {
+      "title": "Tipy pre zmysluplný príbeh:",
+      "explainSpecial": "Vysvetlite, prečo je tento predmet pre vás špeciálny",
+      "shareMemories": "Zdieľajte spomienky spojené s ním",
+      "describeHistory": "Opíšte jeho históriu alebo ako ste ho získali",
+      "mentionWishes": "Spomeňte akékoľvek želania pre to, ako by sa mal používať alebo uchovávať"
+    },
+    "saving": "Ukladá sa...",
+    "saveStory": "Uložiť príbeh",
+    "messages": {
+      "saved": "Príbeh úspešne uložený"
+    },
+    "errors": {
+      "notAuthenticated": "Pre uloženie príbehu musíte byť prihlásený",
+      "saveFailed": "Nepodarilo sa uložiť príbeh"
+    }
+  }
+}

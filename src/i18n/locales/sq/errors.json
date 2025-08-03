@@ -1,0 +1,98 @@
+{
+  "_comment": "Shared translations used across the application",
+  "errorBoundary": {
+    "title": "Ups! Diçka shkoi keq",
+    "description": "Na vjen keq për bezdisjen. Ndodhi një gabim i papritur.",
+    "errorId": "ID e Gabimit",
+    "tryAgain": "Provo Përsëri",
+    "reloadPage": "Ringarko Faqen",
+    "goToHomepage": "Shko në Faqen Kryesore",
+    "technicalDetails": "Detajet Teknike",
+    "hide": "Fshih",
+    "show": "Shfaq",
+    "stackTrace": "Gjurma e Stack-ut",
+    "componentStack": "Stack-u i Komponentëve",
+    "helpText": "Nëse problemi vazhdon, kontaktoni mbështetjen tonë me ID-në e gabimit."
+  },
+  "errorTest": {
+    "title": "Testi i Regjistrimit të Gabimeve",
+    "description": "Test error handling and logging functionality",
+    "triggerSyncError": "Shkakto Gabim Sinkron (ErrorBoundary)",
+    "triggerAsyncError": "Shkakto Gabim Asinkron",
+    "logRegularError": "Regjistro Gabim të Rregullt",
+    "logCriticalError": "Regjistro Gabim Kritik",
+    "triggerAlert": "Shkakto Sinjalizim (6 Gabime Kritike)",
+    "errorMessages": {
+      "testError": "Test error from ErrorTest component",
+      "testAsyncRejection": "Test async rejection",
+      "manualTestError": "Manual test error",
+      "testCriticalError": "Test critical error",
+      "criticalErrorWithIndex": "Critical error {{index}}"
+    },
+    "descriptions": {
+      "syncError": "Triggers a synchronous error that will be caught by the ErrorBoundary",
+      "asyncError": "Triggers an asynchronous error that will be caught by error handling",
+      "regularError": "Logs a regular error for testing error tracking",
+      "criticalError": "Logs a critical error for testing critical error handling",
+      "multipleErrors": "Triggers multiple critical errors to test alert thresholds"
+    },
+    "context": {
+      "component": "ErrorTest",
+      "action": "button-click",
+      "severity": "high"
+    },
+    "notifications": {
+      "errorLogged": "Error logged successfully",
+      "criticalErrorLogged": "Critical error logged successfully",
+      "multipleErrorsTriggered": "Multiple critical errors triggered",
+      "errorBoundaryTriggered": "Error boundary triggered",
+      "asyncErrorCaught": "Async error caught and handled"
+    }
+  },
+  "debug": {
+    "panel": {
+      "title": "Paneli i Debugimit",
+      "recentErrors": "Gabimet e fundit të aplikacionit",
+      "technicalDetails": "Detajet Teknike",
+      "tabs": {
+        "list": "Lista",
+        "details": "Detajet"
+      },
+      "errorCount": "{{count}} gabime",
+      "actions": {
+        "downloadErrors": "Shkarko gabimet",
+        "clearAllErrors": "Pastro të gjitha gabimet"
+      },
+      "messages": {
+        "errorsCleared": "Të gjitha gabimet u pastruan",
+        "errorCopied": "Gabimi u kopjua në clipboard",
+        "errorsDownloaded": "Gabimet u shkarkuan"
+      },
+      "error": {
+        "unknownError": "Gabim i Panjohur",
+        "noMessage": "Asnjë mesazh",
+        "errorMessage": "Mesazhi i Gabimit"
+      },
+      "sections": {
+        "stackTrace": "Gjurma e Stack-ut",
+        "context": "Konteksti",
+        "location": "Vendndodhja",
+        "browserInfo": "Informacioni i Shfletuesit",
+        "time": "Koha"
+      },
+      "fields": {
+        "url": "URL:",
+        "path": "Rruga:",
+        "query": "Pyetja:",
+        "userAgent": "Agjenti i Përdoruesit:",
+        "viewport": "Pamja:"
+      }
+    }
+  },
+  "test": {
+    "environment": {
+      "title": "Test Environment Only",
+      "description": "This page is for testing the error logging system. Remove this route before deploying to production."
+    }
+  }
+}

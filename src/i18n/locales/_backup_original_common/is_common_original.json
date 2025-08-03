@@ -1,0 +1,1820 @@
+{
+  "_comment": "Shared translations used across the application",
+  "common": {
+    "loading": "Loading...",
+    "viewDetails": "View Details",
+    "edit": "Edit",
+    "delete": "Delete",
+    "addedOn": "Added {{date}}",
+    "priority": {
+      "high": "High",
+      "medium": "Medium",
+      "low": "Low"
+    },
+    "pagination": {
+      "previous": "Previous",
+      "next": "Next",
+      "morePages": "More pages",
+      "page": "Page",
+      "of": "of",
+      "showing": "Showing",
+      "to": "to",
+      "results": "results",
+      "perPage": "per page",
+      "goToPage": "Go to page",
+      "currentPage": "Current page",
+      "totalPages": "Total pages",
+      "firstPage": "First page",
+      "lastPage": "Last page",
+      "pageInfo": "Page {{current}} of {{total}}",
+      "resultsInfo": "Showing {{start}} to {{end}} of {{total}} results",
+      "noResults": "No results found",
+      "loading": "Loading...",
+      "navigation": {
+        "title": "Pagination Navigation",
+        "description": "Navigate through pages of results",
+        "first": "Go to first page",
+        "last": "Go to last page",
+        "previous": "Go to previous page",
+        "next": "Go to next page",
+        "page": "Go to page {{number}}"
+      },
+      "accessibility": {
+        "pagination": "Pagination",
+        "currentPage": "Current page, page {{number}}",
+        "page": "Page {{number}}",
+        "previousPage": "Previous page",
+        "nextPage": "Next page",
+        "firstPage": "First page",
+        "lastPage": "Last page",
+        "morePages": "More pages available"
+      }
+    },
+    "errors": {
+      "missingClerkKey": "Missing Clerk Publishable Key",
+      "errorLoadingApp": "Error loading app",
+      "unauthorized": "Unauthorized",
+      "invalidAuthentication": "Invalid authentication",
+      "internalServerError": "Internal server error",
+      "missingRequiredFields": "Missing required fields",
+      "failedToFetchProfile": "Failed to fetch user profile"
+    },
+    "redirect": {
+      "simulationTitle": "Redirect Simulation"
+    },
+    "ui": {
+      "close": "Close",
+      "more": "More",
+      "previousSlide": "Previous slide",
+      "nextSlide": "Next slide",
+      "toggleSidebar": "Toggle Sidebar",
+      "goToPreviousPage": "Go to previous page",
+      "goToNextPage": "Go to next page",
+      "carousel": {
+        "title": "Carousel",
+        "description": "Image carousel with navigation controls",
+        "previousSlide": "Previous slide",
+        "nextSlide": "Next slide",
+        "currentSlide": "Current slide",
+        "slide": "Slide",
+        "of": "of",
+        "slideInfo": "Slide {{current}} of {{total}}",
+        "goToSlide": "Go to slide {{number}}",
+        "autoplay": "Autoplay",
+        "pauseAutoplay": "Pause autoplay",
+        "resumeAutoplay": "Resume autoplay",
+        "stopAutoplay": "Stop autoplay",
+        "carouselNavigation": "Carousel navigation",
+        "carouselControls": "Carousel controls",
+        "slideNavigation": "Slide navigation",
+        "imageCarousel": "Image carousel",
+        "contentCarousel": "Content carousel",
+        "gallery": "Gallery",
+        "photoGallery": "Photo gallery",
+        "imageGallery": "Image gallery",
+        "slideshow": "Slideshow",
+        "presentation": "Presentation",
+        "showcase": "Showcase",
+        "browseImages": "Browse images",
+        "viewImages": "View images",
+        "navigateSlides": "Navigate slides",
+        "slideCount": "{{count}} slides",
+        "slideCountSingular": "{{count}} slide",
+        "slideCountPlural": "{{count}} slides",
+        "accessibility": {
+          "carousel": "Carousel",
+          "slide": "Slide",
+          "currentSlide": "Current slide, slide {{number}}",
+          "previousSlide": "Previous slide",
+          "nextSlide": "Next slide",
+          "goToSlide": "Go to slide {{number}}",
+          "slideCount": "Slide {{current}} of {{total}}",
+          "carouselNavigation": "Carousel navigation controls",
+          "slideNavigation": "Slide navigation controls",
+          "autoplayEnabled": "Autoplay enabled",
+          "autoplayDisabled": "Autoplay disabled",
+          "autoplayPaused": "Autoplay paused",
+          "autoplayStopped": "Autoplay stopped"
+        }
+      },
+      "form": {
+        "title": "Form",
+        "description": "Description",
+        "label": "Label",
+        "placeholder": "Placeholder",
+        "error": "Error",
+        "success": "Success",
+        "warning": "Warning",
+        "info": "Information",
+        "required": "Required",
+        "optional": "Optional",
+        "submit": "Submit",
+        "cancel": "Cancel",
+        "save": "Save",
+        "reset": "Reset",
+        "clear": "Clear",
+        "loading": "Loading...",
+        "saving": "Saving...",
+        "submitting": "Submitting...",
+        "validating": "Validating...",
+        "accessibility": {
+          "form": "Form",
+          "field": "Form field",
+          "required": "Required field",
+          "optional": "Optional field",
+          "error": "Field has error",
+          "success": "Field is valid",
+          "warning": "Field has warning",
+          "description": "Field description",
+          "label": "Field label"
+        },
+        "validation": {
+          "required": "This field is required",
+          "invalid": "This field is invalid",
+          "minLength": "Must be at least {{min}} characters",
+          "maxLength": "Must be no more than {{max}} characters",
+          "minValue": "Must be at least {{min}}",
+          "maxValue": "Must be no more than {{max}}",
+          "pattern": "Must match the required pattern",
+          "email": "Must be a valid email address",
+          "url": "Must be a valid URL",
+          "phone": "Must be a valid phone number",
+          "date": "Must be a valid date",
+          "time": "Must be a valid time",
+          "number": "Must be a valid number",
+          "integer": "Must be a whole number",
+          "positive": "Must be a positive number",
+          "negative": "Must be a negative number",
+          "between": "Must be between {{min}} and {{max}}",
+          "oneOf": "Must be one of the allowed values",
+          "custom": "Invalid value",
+          "unknown": "Unknown validation error"
+        },
+        "errors": {
+          "general": "Please fix the errors in the form",
+          "network": "Network error occurred",
+          "server": "Server error occurred",
+          "timeout": "Request timed out",
+          "unauthorized": "You are not authorized to perform this action",
+          "forbidden": "Access denied",
+          "notFound": "Resource not found",
+          "conflict": "Resource conflict",
+          "validation": "Validation failed",
+          "unknown": "An unknown error occurred"
+        },
+        "messages": {
+          "saved": "Form saved successfully",
+          "submitted": "Form submitted successfully",
+          "updated": "Form updated successfully",
+          "deleted": "Form deleted successfully",
+          "created": "Form created successfully",
+          "loaded": "Form loaded successfully",
+          "reset": "Form reset successfully",
+          "cleared": "Form cleared successfully"
+        }
+      },
+      "breadcrumb": {
+        "title": "Breadcrumb Navigation",
+        "description": "Navigation breadcrumb showing current location",
+        "separator": "Separator",
+        "ellipsis": "More",
+        "currentPage": "Current page",
+        "home": "Home",
+        "back": "Back",
+        "previous": "Previous",
+        "next": "Next",
+        "navigation": "Navigation",
+        "location": "Location",
+        "path": "Path",
+        "breadcrumb": "Breadcrumb",
+        "breadcrumbs": "Breadcrumbs",
+        "separatorText": "Separator",
+        "separatorDescription": "Separator between breadcrumb items",
+        "ellipsisText": "More items",
+        "ellipsisDescription": "More breadcrumb items available",
+        "accessibility": {
+          "breadcrumb": "Breadcrumb navigation",
+          "currentPage": "Current page",
+          "separator": "Separator",
+          "ellipsis": "More items",
+          "navigation": "Breadcrumb navigation",
+          "location": "Current location",
+          "path": "Navigation path",
+          "item": "Breadcrumb item",
+          "link": "Breadcrumb link",
+          "page": "Current page"
+        },
+        "separators": {
+          "chevron": "Chevron",
+          "slash": "Slash",
+          "arrow": "Arrow",
+          "greaterThan": "Greater than",
+          "dash": "Dash",
+          "dot": "Dot",
+          "pipe": "Pipe",
+          "default": "Default separator"
+        },
+        "messages": {
+          "navigateTo": "Navigate to {{item}}",
+          "currentLocation": "Current location: {{location}}",
+          "breadcrumbPath": "Breadcrumb path: {{path}}",
+          "moreItems": "More items available",
+          "separatorBetween": "Separator between {{item1}} and {{item2}}"
+        }
+      }
+    },
+    "auth": {
+      "protectedApplication": "Protected Application",
+      "protectedApplicationDesc": "This application is protected. Please enter the password to access.",
+      "incorrectPassword": "Incorrect password. Please try again.",
+      "password": "Password",
+      "enterPassword": "Enter your password",
+      "accessApplication": "Access Application"
+    },
+    "routeErrorBoundary": {
+      "code_1": "Error Code: ",
+      "reload_page_2": "Reload Page",
+      "technical_details_3": "Technical Details",
+      "pageNotFound": "Page Not Found",
+      "errorLoadingPage": "Error Loading Page",
+      "pageNotFoundDescription": "The requested page does not exist or has been moved.",
+      "errorLoadingPageDescription": "An error occurred while loading this page.",
+      "unknownError": "Unknown error",
+      "home": "Home",
+      "errorDetails": "Error Details",
+      "errorLogging": "Error logging details",
+      "timestamp": "Timestamp",
+      "errorMessage": "Error Message",
+      "errorStatus": "Error Status",
+      "errorDetailsLabel": "Error Details",
+      "location": "Location",
+      "consoleLog": "Error logged to console",
+      "actions": {
+        "goHome": "Go to Home Page",
+        "reloadPage": "Reload Current Page",
+        "viewDetails": "View Technical Details",
+        "hideDetails": "Hide Technical Details"
+      },
+      "messages": {
+        "errorCaught": "Error caught by RouteErrorBoundary",
+        "errorLogged": "Error details have been logged",
+        "contactSupport": "If this error persists, please contact support"
+      }
+    },
+    "appName": "LegacyGuard",
+    "cancel": "Hætta við",
+    "error": "Villa",
+    "retry": "Reyna aftur",
+    "goBack": "Fara til baka",
+    "goHome": "Fara á mælaborð"
+  },
+  "action": {
+    "loading": "Loading...",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "add": "Add",
+    "remove": "Remove",
+    "search": "Search",
+    "filter": "Filter"
+  },
+  "cta": {
+    "title": "Arfleifð þín bíður verndar",
+    "subtitle": "Don't wait for 'someday' - give your family security today",
+    "description": "Slástu í hóp þúsunda fjölskyldna sem treysta LegacyGuard til að varðveita dýrmætustu minningar sínar og mikilvæg skjöl fyrir komandi kynslóðir.",
+    "button": "Hefja arfleifðarferðalag þitt í dag",
+    "secondary": "Start Free Trial",
+    "urgency": "Setup takes 10 minutes, being prepared lasts forever",
+    "gentleUrgency": {
+      "1": "Every day matters when it comes to family security",
+      "2": "The best time to prepare was yesterday, the second best time is now",
+      "3": "Your family's security and preparedness can't wait",
+      "4": "10 minutes today saves your family 40+ hours later"
+    },
+    "socialUrgency": {
+      "1": "Join the families who are already prepared",
+      "2": "Don't be the family that wishes they had organized sooner",
+      "3": "Be the parent/spouse who thought ahead"
+    },
+    "timeUrgency": {
+      "1": "Start today, sleep better tonight",
+      "2": "Complete setup this weekend",
+      "3": "Give your family this gift today"
+    }
+  },
+  "validation": {
+    "errors": {
+      "nameMinLength": "Nafn verður að vera að minnsta kosti 2 stafir",
+      "nameMaxLength": "Nafn má vera að hámarki {{max}} stafir",
+      "fieldRequired": "{{field}} er nauðsynlegt",
+      "countryRequired": "Land er nauðsynlegt",
+      "countryCodeLength": "Landskóði verður að vera 2 stafir",
+      "selectAtLeastOne": "Veldu að minnsta kosti einn {{field}}",
+      "selectUpTo": "Þú getur valið allt að {{max}} {{field}}",
+      "invalidEmail": "Sláðu inn gilt netfang",
+      "invalidPhone": "Sláðu inn gilt símanúmer",
+      "valueMustBeNumber": "Gildi verður að vera tala",
+      "valueMustBePositive": "Gildi verður að vera jákvætt",
+      "currencyCodeLength": "Gjaldmiðilskóði verður að vera 3 stafir",
+      "maxCharacters": "{{field}} má vera að hámarki {{max}} stafir",
+      "allocationRequired": "Úthlutunarprósenta er nauðsynleg",
+      "allocationMustBeNumber": "Úthlutun verður að vera tala",
+      "allocationRange": "Úthlutun verður að vera á bilinu 1% til 100%",
+      "expirationDateFuture": "Gildistími verður að vera í framtíðinni",
+      "maxTags": "Þú getur bætt við að hámarki {{max}} merkjum",
+      "fileSizeTooLarge": "Skráarstærð verður að vera {{maxSize}} eða minni",
+      "invalidFileType": "Aðeins {{types}} skrár eru leyfðar",
+      "unknownError": "Óþekkt villa",
+      "dataNotFound": "Nauðsynleg gögn fundust ekki",
+      "connectionError": "Tengingarvilla. Vinsamlegast athugaðu nettenginguna þína.",
+      "permissionDenied": "Þú hefur ekki heimild til að framkvæma þessa aðgerð.",
+      "duplicateRecord": "Skrá með þessum upplýsingum er þegar til.",
+      "assetNameRequired": "Asset name is required",
+      "assetTypeRequired": "Asset type is required",
+      "addressMaxLength": "Address can be a maximum of {{max}} characters",
+      "registryNumberMaxLength": "Registry number can be a maximum of {{max}} characters",
+      "institutionNameMaxLength": "Institution name can be a maximum of {{max}} characters",
+      "accountNumberMaxLength": "Account number can be a maximum of {{max}} characters",
+      "credentialsMaxLength": "Credentials can be a maximum of {{max}} characters",
+      "relationshipRequired": "Relationship is required",
+      "beneficiaryNameRequired": "Beneficiary name is required (min. 2 characters)",
+      "notesMaxLength": "Notes can be a maximum of {{max}} characters",
+      "documentNameRequired": "Document name is required",
+      "documentTypeRequired": "Document type is required",
+      "descriptionMaxLength": "Description can be a maximum of {{max}} characters"
+    }
+  },
+  "errors": {
+    "dataNotFound": "Nauðsynleg gögn fundust ekki.",
+    "networkError": "Netvilla. Vinsamlegast athugaðu nettenginguna þína.",
+    "permissionDenied": "Þú hefur ekki leyfi fyrir þessari aðgerð.",
+    "duplicateRecord": "Skrá með þessum gögnum er þegar til.",
+    "unknown": "Óvænt villa kom upp."
+  },
+  "app": {
+    "name": "LegacyGuard",
+    "comingSoon": {
+      "heritageVault": "Heritage Vault - Coming Soon",
+      "guardianNetwork": "Guardian Network - Coming Soon"
+    },
+    "tagline": "Verndum arfleifð þína"
+  },
+  "index": {
+    "welcome": "Velkomin(n) í tóma forritið þitt",
+    "startBuilding": "Byrjaðu að byggja upp frábæra verkefnið þitt hér!"
+  },
+  "notfound": {
+    "title": "Síða fannst ekki",
+    "description": "Síðan sem þú ert að leita að er ekki til eða hefur verið færð.",
+    "goHome": "Fara á heimasíðu",
+    "goBack": "Fara til baka"
+  },
+  "countryLanguage": {
+    "title": "Velkomin(n) í LegacyGuard",
+    "description": "Vinsamlegast staðfestu staðsetningu þína og tungumálastillingar",
+    "detectedLocation": "Við greindum að þú ert í {{country}}",
+    "selectCountry": "Veldu land þitt",
+    "selectLanguage": "Veldu tungumál þitt",
+    "chooseLang": "Veldu tungumál",
+    "domainSuggestion": "Betri upplifun í boði",
+    "domainSuggestionText": "Við mælum með því að nota {{domain}} fyrir bestu upplifunina á þínu svæði",
+    "privacyNote": "Staðsetningargögnin þín eru aðeins notuð til að veita þér bestu staðbundnu upplifunina og eru aldrei deilt með þriðja aðila.",
+    "confirm": "Staðfesta",
+    "confirmAndRedirect": "Halda áfram á {{domain}}"
+  },
+  "hero": {
+    "title": "Verndaðu stafræna arfleifð fjölskyldu þinnar að eilífu",
+    "subtitle": "Öruggur og leiðandi vettvangur sem hjálpar fjölskyldum að skipuleggja, vernda og miðla mikilvægustu minningum sínum og skjölum milli kynslóða.",
+    "cta_primary": "Byrjaðu þína arfleifðaráætlun",
+    "cta_secondary": "Horfa á kynningu",
+    "trustSignals": {
+      "dataOwnership": "Gögnin þín eru áfram þín - við seljum þau aldrei",
+      "gdprCompliant": "Í samræmi við GDPR frá upphafi",
+      "europeanFamilies": "Hannað fyrir evrópskar fjölskyldur"
+    },
+    "community": {
+      "growing": "Slástu í hóp með {{count}} fjölskyldum sem þegar vernda arfleifð sína",
+      "growingFallback": "Slástu í hóp okkar sem stækkar stöðugt"
+    }
+  },
+  "nav": {
+    "dashboard": "Mælaborð",
+    "manual": "Handbók",
+    "vault": "Arfleifðarhvelfing",
+    "guardians": "Net vernda",
+    "will": "Erfðaskrá",
+    "settings": "Stillingar",
+    "help": "Hjálp og aðstoð"
+  },
+  "pillars": {
+    "secure": {
+      "title": "ÖRYGGI",
+      "description": "Verndaðu fjölskyldu þína og eignir með fyrirbyggjandi öryggisráðstöfunum"
+    },
+    "organize": {
+      "title": "SKIPULAG",
+      "description": "Skráðu og stjórnaðu stafrænum og efnislegum eignum þínum"
+    },
+    "transfer": {
+      "title": "YFIRFÆRSLA",
+      "description": "Tryggðu að arfleifð þín sé afhent í samræmi við óskir þínar"
+    }
+  },
+  "features": {
+    "title": "Af hverju að velja LegacyGuard?",
+    "subtitle": "Byggt á fyrirtækjaflokks öryggi og hannað fyrir fjölskyldur sem meta arfleifð sína.",
+    "security": {
+      "title": "Alger trúnaður og friðhelgi",
+      "description": "Hannað þannig að enginn óviðkomandi geti nálgast gögnin þín. Ekki einu sinni við. Friðhelgi þín er okkar æðsta forgangsatriði."
+    },
+    "guardians": {
+      "title": "Net vernda",
+      "description": "Tilnefndu trausta fjölskyldumeðlimi og vini sem verði til að tryggja samfellu arfleifðarinnar."
+    },
+    "storage": {
+      "title": "Örugg skýgeymsla",
+      "description": "Endurtekin afritun á mörgum gagnaverum með 99,99% uppitíma tryggingu."
+    },
+    "timelock": {
+      "title": "Tímalæstur aðgangur",
+      "description": "Settu skilyrði fyrir því hvenær og hvernig erfingjar þínir fá aðgang að stafrænni arfleifð þinni."
+    },
+    "stories": {
+      "title": "Persónulegar sögur",
+      "description": "Búðu til ríkulegar margmiðlunarfrásagnir sem fanga kjarna ferðalags fjölskyldu þinnar."
+    },
+    "preservation": {
+      "title": "Ævilöng varðveisla",
+      "description": "Arfleifð þín er varðveitt um ókomna tíð með sjálfvirkri sniðfæringu og uppfærslum."
+    }
+  },
+  "dashboard": {
+    "strategicSummary": {
+      "initial": "Byrjaðu að byggja upp stafræna arfleifð þína með því að bæta við fyrsta skjalinu þínu.",
+      "addDocument": "Bæta við Skjali",
+      "addPrimaryGuardian": "Add primary guardian",
+      "addBackupGuardian": "Add backup guardian",
+      "addHomeProperty": "Add your home property",
+      "addFinancialAccounts": "Add financial accounts",
+      "addPrimaryBeneficiary": "Add primary beneficiary",
+      "addContingentBeneficiaries": "Add contingent beneficiaries",
+      "minutes": "{{count}} minutes",
+      "assetInventory": "Eignabirgðir",
+      "assetInventoryDesc": "Heildarlisti yfir verðmætar eigur þínar",
+      "criticalDocuments": "Mikilvæg skjöl",
+      "criticalDocumentsDesc": "Nauðsynleg gögn sem fjölskylda þín þarfnast samstundis",
+      "guardianNetwork": "Verndarnet",
+      "guardianNetworkDesc": "Traust fólk til að sjá um þín mál",
+      "ifNotDone": "⚠️ If Not Done",
+      "impact": {},
+      "inheritancePlan": "Erfðaskrá",
+      "inheritancePlanDesc": "Skýrar leiðbeiningar um dreifingu eigna",
+      "nextAction": "⚡ Next Action",
+      "nextCriticalStep": "Næsta mikilvæga skref",
+      "startWithNext": "Byrjaðu á næsta mikilvæga skrefi",
+      "subtitle": "Þú ert með {count} lykilsvið sem þarfnast athygli. Að ljúka þessum skrefum tryggir {percentage}% vernd fyrir fjölskyldu þína og eignir.",
+      "title": "Stefnumótandi yfirlit þitt",
+      "whyImportant": "🛡️ Why Important"
+    },
+    "stats": {
+      "totalAssets": "Heildareignir",
+      "activeAssetsManaged": "Virk stjórnun eigna",
+      "activeGuardians": "Virkir verðir",
+      "trustedGuardians": "Traustir verðir",
+      "beneficiaries": "Erfingjum",
+      "legacyRecipients": "Nafngreindir erfingjar",
+      "securityScore": "Öryggisstig",
+      "securityScoreValue": "98%",
+      "excellent": "Framúrskarandi",
+      "good": "Gott",
+      "needsImprovement": "Þarfnast úrbóta"
+    },
+    "tasks": {
+      "personalMessages": {
+        "title": "Skrifaðu persónuleg skilaboð",
+        "description": "Skildu eftir hlý skilaboð og mikilvæg orð fyrir ástvini þína."
+      },
+      "familyMeeting": {
+        "title": "Haltu fjölskyldufund",
+        "description": "Ræddu óskir þínar og áætlanir við fjölskylduna til að tryggja að allir skilji ásetning þinn."
+      }
+    },
+    "quickTasks": {
+      "taskCompleted": "Task completed!",
+      "taskStarted": "Starting task...",
+      "tasks": {
+        "birthCertificate": {
+          "title": "🛡️ Add Birth Certificate",
+          "description": "Without this document, your family cannot prove inheritance rights or access accounts"
+        },
+        "insurancePolicy": {
+          "title": "💰 Add Life Insurance Policy",
+          "description": "Your family needs immediate access to claim benefits and avoid delays"
+        },
+        "will": {
+          "title": "⚖️ Add Will or Testament",
+          "description": "Prevents family disputes and ensures your wishes are followed"
+        },
+        "spouseGuardian": {
+          "title": "👥 Add Spouse as Guardian",
+          "description": "Without guardians, no one can legally act on your behalf or make medical decisions"
+        },
+        "backupGuardian": {
+          "title": "🤝 Add Backup Guardian",
+          "description": "Ensures someone can step in if your primary guardian is unavailable"
+        },
+        "bankAccount": {
+          "title": "🏦 Add Bank Account",
+          "description": "Your family needs to know where your money is to access it immediately"
+        },
+        "homeProperty": {
+          "title": "🏠 Add Home Property",
+          "description": "Prevents your family from losing your most valuable asset"
+        },
+        "vehicle": {
+          "title": "🚗 Add Vehicle",
+          "description": "Ensures your family can transfer ownership and avoid complications"
+        },
+        "spouseBeneficiary": {
+          "title": "💝 Add Spouse as Beneficiary",
+          "description": "Without clear instructions, family disputes can arise over inheritance"
+        },
+        "childrenBeneficiaries": {
+          "title": "👶 Add Children as Beneficiaries",
+          "description": "Ensures your children receive what you intended for them"
+        }
+      },
+      "allCompleted": "Öllum verkefnum lokið!",
+      "allTasks": "Afrita öll verkefni",
+      "assets": "Eignir",
+      "beneficiaries": "Styrkþegar",
+      "completed": "& lokið",
+      "documents": "Skjöl",
+      "greatProgress": "Þetta gengur vel! Þú hefur lokið {count} verkefnum.",
+      "guardians": "Forráðamenn",
+      "ifNotDone": "⚠️ If Not Done",
+      "markAsComplete": "& Merkja sem lokið",
+      "progress": "Í ferli",
+      "start": "Byrja",
+      "title": "5 mínútna verkefni",
+      "wellOnWay": "🎉 Þú ert á góðri leið með að tryggja framtíð fjölskyldunnar þinnar!",
+      "whyImportant": "🛡️ Why Important"
+    },
+    "familyGuide": {
+      "view": "View",
+      "subtitle": "Automatically generated guide for your family",
+      "discreteModeDesc": "Your personal notes and reminders",
+      "callNow": "Hringja núna",
+      "callSoon": "Hringja fljótlega",
+      "critical": "Alvarlegt",
+      "discreteMode": "Stakur hamur",
+      "emergencyContacts": "Neyðartengiliðir",
+      "exportGuide": "Útflutningsleiðbeiningar",
+      "generateGuide": "Búa til handbók",
+      "important": "Mikilvægt",
+      "importantDocuments": "Mikilvæg skjöl",
+      "shareWithFamily": "Deila með fjölskyldu",
+      "timeline": "Hvað á að gera hvenær",
+      "title": "Neyðarhandbók fyrir fjölskyldur"
+    },
+    "sectionHeaders": {}
+  },
+  "onboarding": {
+    "title": "Velkomin(n) í LegacyGuard",
+    "subtitle": "Leyfðu okkur að hjálpa þér að tryggja framtíð fjölskyldu þinnar",
+    "mainTitle": "Arfleifðaráætlun",
+    "mainSubtitle": "Búum til þína persónulegu arfleifðarverndaráætlun",
+    "progressText": "Arfleifðaráætlun: Skref {{step}} af 4",
+    "skipButton": "Sleppa í bili",
+    "skipConfirmTitle": "Sleppa upphafsferli?",
+    "skipConfirmMessage": "Þú getur alltaf endurræst þessa uppsetningu síðar í stillingum",
+    "skipConfirmYes": "Sleppa",
+    "skipConfirmNo": "Halda áfram uppsetningu",
+    "restartButton": "Endurræsa upphafsferli",
+    "welcomeBack": "Velkomin(n) aftur! Tilbúin(n) að ljúka uppsetningunni?",
+    "resumeTitle": "Haltu áfram þar sem frá var horfið",
+    "resumeMessage": "Þú varst á skrefi {{step}} af 4",
+    "partialProgress": "{{percentage}}% lokið",
+    "inventory": {
+      "documentAccess": {
+        "question": "Ef eitthvað kæmi fyrir þig í dag, vissi fjölskylda þín hvar hún ætti að finna mikilvægu skjölin þín?",
+        "answers": {
+          "yes": "Já",
+          "no": "Nei",
+          "partially": "Að hluta til"
+        }
+      },
+      "caretaker": {
+        "question": "Hver myndi sjá um börnin þín/eignir/stafræna reikninga?",
+        "answers": {
+          "designated": "Er með tilnefndan aðila",
+          "familyFigureOut": "Fjölskyldan myndi finna út úr því",
+          "notThought": "Hef ekki hugsað um það"
+        }
+      },
+      "familyClarity": {
+        "question": "Finnst þér að fjölskylda þín vissi hvað þú vildir fyrir þau?",
+        "answers": {
+          "clear": "Já, það er á hreinu",
+          "somewhat": "Nokkuð",
+          "neverDiscussed": "Nei, við ræddum það aldrei"
+        }
+      },
+      "biggestWorry": {
+        "question": "Hvað veldur þér mestum áhyggjum varðandi framtíð fjölskyldu þinnar?",
+        "answers": {
+          "financial": "Fjárhagslegt öryggi",
+          "legal": "Lagalegir flækjur",
+          "memories": "Að missa minningar",
+          "conflicts": "Fjölskylduerjur"
+        }
+      },
+      "personalized": {
+        "documentCentralization": "Byggt á svari þínu um aðgang að skjölum mælum við með því að byrja á því að miðstýra mikilvægum skjölum þínum.",
+        "guardianDesignation": "Þar sem þú hefur ekki tilnefnt neinn til að sjá um eignir þínar, ætti tilnefning verndar að vera forgangsverkefni þitt.",
+        "willPreparation": "Fjölskylda þín þarf skýrleika um óskir þínar. Að gera erfðaskrá er nauðsynlegt fyrsta skref.",
+        "financialPlanning": "Fjárhagslegt öryggi er lykilatriði. Byrjum á því að skrá bankareikninga þína og eignir.",
+        "conflictPrevention": "Til að koma í veg fyrir fjölskylduerjur eru skýr skjöl og samskipti lykilatriði.",
+        "memoryPreservation": "Varðveisla minninga byrjar með því að skipuleggja stafrænu myndirnar þínar og sögur.",
+        "legalOrganization": "Skipuleggjum lagaleg skjöl þín til að forðast flækjur síðar."
+      }
+    },
+    "q1": {
+      "title": "Ef eitthvað kæmi fyrir þig í dag, vissi fjölskylda þín hvar hún ætti að finna mikilvægu skjölin þín?",
+      "option1": "Já",
+      "option2": "Nei",
+      "option3": "Að hluta til"
+    },
+    "q2": {
+      "title": "Hver myndi sjá um börnin þín/eignir/stafræna reikninga?",
+      "option1": "Er með tilnefndan aðila",
+      "option2": "Fjölskyldan myndi finna út úr því",
+      "option3": "Hef ekki hugsað um það"
+    },
+    "q3": {
+      "title": "Finnst þér að fjölskylda þín vissi hvað þú vildir fyrir þau?",
+      "option1": "Já, það er á hreinu",
+      "option2": "Nokkuð",
+      "option3": "Nei, við ræddum það aldrei"
+    },
+    "q4": {
+      "title": "Hvað veldur þér mestum áhyggjum varðandi framtíð fjölskyldu þinnar?",
+      "option1": "Fjárhagslegt öryggi",
+      "option2": "Lagalegir flækjur",
+      "option3": "Að missa minningar",
+      "option4": "Fjölskylduerjur"
+    },
+    "buttons": {
+      "previous": "Fyrri",
+      "next": "Næsta",
+      "generate": "Búa til mína arfleifðaráætlun"
+    },
+    "analysis": {
+      "title": "Greini svörin þín...",
+      "subtitle": "Undirbý þína persónulegu 'Arfleifðaráætlun'...",
+      "done": "Lokið!"
+    },
+    "complete": "Frábær byrjun! Við höfum sérsniðið mælaborðið þitt byggt á svörum þínum. Þú ert tilbúin(n) að byrja að byggja upp yfirgripsmikla arfleifðaráætlun þína.",
+    "success": {
+      "stepCompleted": "Skrefi {{step}} lokið!",
+      "inventoryComplete": "Lífsskránni lokið! Persónuleg áætlun þín er tilbúin.",
+      "allQuestionsAnswered": "Öllum spurningum svarað. Bý til aðgerðaáætlun þína..."
+    },
+    "errors": {
+      "questionRequired": "Vinsamlegast svaraðu þessari spurningu til að halda áfram",
+      "failedToSave": "Mistókst að vista svörin þín. Vinsamlegast reyndu aftur.",
+      "loadingFailed": "Mistókst að hlaða upphafsferlisspurningum"
+    },
+    "addAnother": "Bæta við öðru",
+    "previous": "Fyrri",
+    "next": "Næsta",
+    "continue": "Halda áfram á mælaborð"
+  },
+  "manual": {
+    "title": "Handbók fyrir aðstandendur",
+    "subtitle": "Nauðsynlegar upplýsingar fyrir ástvini þína þegar þeir þurfa mest á þeim að halda",
+    "tabs": {
+      "contacts": "Mikilvægir tengiliðir",
+      "documents": "Lykilskjöl",
+      "instructions": "Leiðbeiningar"
+    },
+    "contacts": {
+      "title": "Mikilvægir tengiliðir",
+      "description": "Lykilfólk sem fjölskylda þín ætti að hafa samband við í neyðartilvikum",
+      "addContact": "Bæta við tengilið",
+      "addFirstContact": "Bættu við fyrsta tengiliðnum þínum",
+      "loading": "Hleð tengiliðum...",
+      "empty": {
+        "title": "Engum tengiliðum bætt við ennþá",
+        "description": "Byrjaðu á því að bæta við mikilvægu fólki sem fjölskylda þín ætti að vita um."
+      },
+      "form": {
+        "editTitle": "Breyta tengilið",
+        "addTitle": "Bæta við mikilvægum tengilið",
+        "description": "Bættu við fólki sem fjölskylda þín ætti að hafa samband við í mikilvægum aðstæðum.",
+        "nameLabel": "Nafn tengiliðar *",
+        "namePlaceholder": "t.d. Jón Jónsson",
+        "roleLabel": "Hlutverk/Starfsgrein *",
+        "rolePlaceholder": "t.d. Fjölskyldulögfræðingur, Bókari, Læknir",
+        "phoneLabel": "Símanúmer",
+        "phonePlaceholder": "+354 555 1234",
+        "emailLabel": "Netfang",
+        "emailPlaceholder": "contact@daemi.is",
+        "notesLabel": "Athugasemdir",
+        "notesPlaceholder": "Viðbótarupplýsingar um þennan tengilið...",
+        "updateButton": "Uppfæra tengilið",
+        "addButton": "Bæta við tengilið",
+        "saving": "Vista...",
+        "cancel": "Hætta við"
+      },
+      "card": {
+        "edit": "Breyta"
+      },
+      "messages": {
+        "nameAndRoleRequired": "Nafn og hlutverk eru nauðsynleg",
+        "loginRequired": "Þú verður að vera innskráð(ur) til að vista tengiliði",
+        "updated": "Tengiliður uppfærður!",
+        "added": "Tengilið bætt við!",
+        "deleted": "Tengilið eytt!"
+      },
+      "errors": {
+        "loadFailed": "Mistókst að hlaða tengiliðum",
+        "saveFailed": "Mistókst að vista tengilið",
+        "deleteFailed": "Mistókst að eyða tengilið"
+      }
+    },
+    "documents": {
+      "title": "Lykilskjöl",
+      "description": "Mikilvæg skjöl sem fjölskylda þín þarf að vita um",
+      "loading": "Hleð lykilskjölum...",
+      "empty": {
+        "title": "Engum lykilskjölum bætt við ennþá",
+        "description": "Merktu mikilvæg skjöl sem „lykilskjöl“ úr hvelfingunni þinni til að þau birtist hér.",
+        "tip": "Ábending: Farðu í hvelfinguna þína og kveiktu á „Sýna í handbók fyrir aðstandendur“ fyrir mikilvæg skjöl"
+      },
+      "card": {
+        "essentialNote": "Þetta skjal er merkt sem nauðsynlegt fyrir aðstandendur þína."
+      },
+      "errors": {
+        "loadFailed": "Mistókst að hlaða lykilskjölum"
+      },
+      "expiration": {
+        "expired": "Útrunnið",
+        "expiresSoon": "Rennur út fljótlega",
+        "expiring": "Rennur út"
+      }
+    },
+    "instructions": {
+      "title": "Síðustu óskir og leiðbeiningar",
+      "description": "Persónuleg leiðsögn og skilaboð til ástvina þinna",
+      "loading": "Hleð leiðbeiningum...",
+      "autoSaveNote": "Leiðbeiningar þínar eru vistaðar sjálfkrafa þegar þú skrifar",
+      "sections": {
+        "funeral": {
+          "title": "Útfararóskir",
+          "description": "Óskir þínar varðandi útfararathafnir og -skipulag",
+          "placeholder": "t.d. brennsla, engin formleg athöfn, spila 'My Way' með Frank Sinatra..."
+        },
+        "digitalAccounts": {
+          "title": "Lokun stafrænna reikninga",
+          "description": "Leiðbeiningar um meðferð stafrænu reikninganna þinna og netveru",
+          "placeholder": "t.d. Vinsamlegast eyddu Facebook-prófílnum mínum, en geymdu Gmail-póstinn minn. Færðu myndirnar mínar af Google Drive yfir á..."
+        },
+        "messages": {
+          "title": "Skilaboð til ástvina",
+          "description": "Persónuleg skilaboð og síðustu hugsanir til fjölskyldu þinnar og vina",
+          "placeholder": "Deildu hugsunum þínum, minningum og síðustu skilaboðum til þeirra sem þú elskar..."
+        }
+      },
+      "errors": {
+        "loadFailed": "Mistókst að hlaða leiðbeiningum"
+      }
+    }
+  },
+  "documentTypes": {
+    "realEstateDeed": "Afsláttarbréf",
+    "birthCertificate": "Fæðingarvottorð",
+    "insurancePolicy": "Tryggingarskírteini",
+    "lastWill": "Erfðaskrá",
+    "employmentContract": "Ráðningarsamningur",
+    "passport": "Vegabréf",
+    "drivingLicense": "Ökuskírteini",
+    "bankStatement": "Bankayfirlit",
+    "investmentCertificate": "Fjárfestingarskírteini",
+    "energyContract": "Orkusamningur",
+    "softwareLicense": "Hugbúnaðarleyfi",
+    "subscriptionService": "Áskriftarþjónusta",
+    "other": "Annað"
+  },
+  "navigation": {
+    "dashboard": "Mælaborð",
+    "assets": "Eignir",
+    "manual": "Handbók",
+    "documents": "Arfleifðarhvelfing",
+    "guardians": "Net vernda",
+    "will": "Erfðaskrá",
+    "settings": "Stillingar",
+    "help": "Hjálp og aðstoð"
+  },
+  "invite": {
+    "title": "{{name}} hefur boðið þér að vera vörður fyrir stafræna arfleifð sína"
+  },
+  "settings": {
+    "title": "Stillingar",
+    "subtitle": "Hafðu umsjón með reikningsstillingum þínum og öryggisstillingum",
+    "loading": "Hleð reikningsstillingum þínum...",
+    "profile": {
+      "title": "Prófílupplýsingar",
+      "description": "Uppfærðu persónuupplýsingar þínar og valkosti",
+      "emailAddress": "Netfang",
+      "emailCannotBeChanged": "Ekki er hægt að breyta netfanginu þínu",
+      "firstName": "Fornafn",
+      "firstNamePlaceholder": "Sláðu inn fornafnið þitt",
+      "lastName": "Eftirnafn",
+      "lastNamePlaceholder": "Sláðu inn eftirnafnið þitt",
+      "saving": "Vista...",
+      "saveChanges": "Vista breytingar"
+    },
+    "security": {
+      "title": "Öryggi",
+      "description": "Hafðu umsjón með öryggi reikningsins þíns og aðgangi",
+      "changePassword": "Breyta lykilorði",
+      "currentPassword": "Núverandi lykilorð",
+      "currentPasswordPlaceholder": "Sláðu inn núverandi lykilorð",
+      "newPassword": "Nýtt lykilorð",
+      "newPasswordPlaceholder": "Sláðu inn nýtt lykilorð",
+      "confirmNewPassword": "Staðfesta nýtt lykilorð",
+      "confirmNewPasswordPlaceholder": "Staðfestu nýtt lykilorð",
+      "updating": "Uppfæri...",
+      "updatePassword": "Uppfæra lykilorð",
+      "twoFactorAuth": "Tveggja þátta auðkenning",
+      "enable2FA": "Virkja 2FA",
+      "2FADescription": "Bættu við auka öryggislagi við reikninginn þinn. (Kemur bráðum)"
+    },
+    "accountManagement": {
+      "title": "Reikningsstjórnun",
+      "description": "Varanlegar aðgerðir á reikningi - vinsamlegast farðu varlega",
+      "deleteAccountTitle": "Eyða reikningi",
+      "deleteAccountWarning": "Þessi aðgerð er óafturkræf og mun eyða öllum gögnum þínum varanlega, þar á meðal upphlöðnum skjölum og undirbúnum leiðbeiningum. Upplýsingar um stafræna arfleifð þína verða algjörlega fjarlægðar úr kerfum okkar.",
+      "deleteMyAccount": "Eyða reikningnum mínum",
+      "confirmTitle": "Ertu alveg viss?",
+      "confirmDescription": "Þessari aðgerð er ekki hægt að afturkalla. Þetta mun eyða reikningnum þínum varanlega og fjarlægja öll gögnin þín af netþjónum okkar.",
+      "confirmEmailPrompt": "Vinsamlegast sláðu inn netfangið þitt {{email}} til að staðfesta:",
+      "emailPlaceholder": "Sláðu inn netfangið þitt",
+      "deleting": "Eyði...",
+      "deleteAccount": "Eyða reikningi"
+    },
+    "errors": {
+      "loadProfile": "Mistókst að hlaða prófílupplýsingum",
+      "updateProfile": "Mistókst að uppfæra prófíl",
+      "passwordFieldsRequired": "Vinsamlegast fylltu út öll lykilorðssvæði",
+      "passwordsDoNotMatch": "Nýju lykilorðin passa ekki saman",
+      "passwordTooShort": "Nýtt lykilorð verður að vera að minnsta kosti 6 stafir",
+      "updatePassword": "Mistókst að uppfæra lykilorð",
+      "emailDoesNotMatch": "Netfangið passar ekki",
+      "deleteAccountSupport": "Beiðni um eyðingu reiknings verður að fara í gegnum þjónustuver. Vinsamlegast hafðu samband við okkur til að fá aðstoð.",
+      "deleteAccount": "Mistókst að eyða reikningi"
+    },
+    "success": {
+      "profileUpdated": "Prófíll uppfærður",
+      "passwordUpdated": "Lykilorð uppfært"
+    }
+  },
+  "debug": {
+    "panel": {
+      "title": "Villuleitarborð",
+      "recentErrors": "Nýlegar forritsvillur",
+      "technicalDetails": "Tæknilegar upplýsingar",
+      "tabs": {
+        "list": "Listi",
+        "details": "Upplýsingar"
+      },
+      "errorCount": "{{count}} villur",
+      "actions": {
+        "downloadErrors": "Hlaða niður villum",
+        "clearAllErrors": "Hreinsa allar villur"
+      },
+      "messages": {
+        "errorsCleared": "Allar villur hreinsaðar",
+        "errorCopied": "Villa afrituð á klemmuspjald",
+        "errorsDownloaded": "Villur hlaðnar niður"
+      },
+      "error": {
+        "unknownError": "Óþekkt villa",
+        "noMessage": "Engin skilaboð",
+        "errorMessage": "Villuskilaboð"
+      },
+      "sections": {
+        "stackTrace": "Kallastafla",
+        "context": "Samhengi",
+        "location": "Staðsetning",
+        "browserInfo": "Upplýsingar um vafra",
+        "time": "Tími"
+      },
+      "fields": {
+        "url": "URL:",
+        "path": "Slóð:",
+        "query": "Fyrirspurn:",
+        "userAgent": "User Agent:",
+        "viewport": "Viewport:"
+      }
+    }
+  },
+  "will": {
+    "errors": {
+      "mustBeLoggedIn": "Þú verður að vera innskráð(ur) til að vista.",
+      "loadingFailed": "Mistókst að hlaða erfðaskrá.",
+      "savingFailed": "Mistókst að vista erfðaskrá."
+    },
+    "messages": {
+      "savedSuccessfully": "Erfðaskrá vistuð.",
+      "documentUploaded": "Skjal upphlaðið."
+    },
+    "loading": "Hleð erfðaskrá...",
+    "title": "Erfðaskrá",
+    "subtitle": "Hafðu umsjón með erfðaskránni þinni og tilnefndu skiptastjóra þína.",
+    "sections": {
+      "statusInfo": "Staða og upplýsingar",
+      "willDocument": "Erfðaskjöl"
+    },
+    "fields": {
+      "currentStatus": "Núverandi staða",
+      "physicalLocation": "Líkamleg staðsetning",
+      "executorContact": "Tengiliður skiptastjóra",
+      "additionalNotes": "Viðbótarathugasemdir"
+    },
+    "placeholders": {
+      "physicalLocation": "t.d. Peningaskápur heima, Lögfræðistofa",
+      "selectContact": "Veldu tengilið",
+      "additionalNotes": "Allar viðbótarupplýsingar..."
+    },
+    "descriptions": {
+      "statusDescription": "Fylgstu með núverandi stöðu erfðaskrárinnar þinnar.",
+      "physicalLocationDescription": "Hvar er erfðaskráin þín geymd líkamlega?",
+      "executorDescription": "Aðili sem ber ábyrgð á framkvæmd erfðaskrárinnar þinnar."
+    },
+    "options": {
+      "noContactSelected": "Enginn tengiliður valinn"
+    },
+    "status": {
+      "notStarted": "Ekki hafin",
+      "inPreparation": "Í undirbúningi",
+      "completedSigned": "Lokið og undirritað",
+      "withNotary": "Hjá sýslumanni",
+      "draft": "Drög",
+      "notarized": "Þinglýst",
+      "stored": "Geymt",
+      "updated": "Uppfært"
+    },
+    "document": {
+      "uploaded": "Erfðaskjal upphlaðið",
+      "uploadedDescription": "Erfðaskjalið þitt hefur verið geymt á öruggan hátt.",
+      "noDocument": "Ekkert erfðaskjal",
+      "noDocumentDescription": "Hladdu upp afriti af erfðaskránni þinni til öruggrar geymslu."
+    },
+    "buttons": {
+      "saveWillInfo": "Vista upplýsingar um erfðaskrá",
+      "saving": "Vista...",
+      "uploadDocument": "Hlaða upp skjali",
+      "uploadNewVersion": "Hlaða upp nýrri útgáfu"
+    },
+    "steps": {
+      "countrySelection": "Val á landi",
+      "countrySelectionDesc": "Veldu land þitt og sláðu inn upplýsingar þínar",
+      "assetAllocation": "Eignaúthlutun",
+      "assetAllocationDesc": "Skiptu eignum milli erfingja",
+      "beneficiaries": "Erfingjar",
+      "beneficiariesDesc": "Skilgreindu erfingja þína",
+      "executors": "Skiptastjórar",
+      "executorsDesc": "Úthlutaðu skiptastjórum til að stjórna erfðaskránni þinni",
+      "review": "Yfirferð",
+      "reviewDesc": "Farðu yfir og ljúktu við erfðaskrána þína"
+    },
+    "progress": "Skref {{current}} af {{total}}",
+    "validation": {
+      "selectCountry": "Vinsamlegast veldu land",
+      "requiredField": "Þetta svæði er nauðsynlegt",
+      "allocation100": "Heildarúthlutun verður að vera 100%",
+      "atLeastOneBeneficiary": "Að minnsta kosti einn erfingi er nauðsynlegur",
+      "executorRequired": "Skiptastjóri er nauðsynlegur",
+      "fixErrors": "Vinsamlegast lagaðu villurnar í eyðublaðinu"
+    },
+    "generation": {
+      "success": "Erfðaskrá búin til!",
+      "error": "Mistókst að búa til erfðaskrá"
+    }
+  },
+  "contacts": {
+    "errors": {
+      "loadingFailed": "Mistókst að hlaða tengiliðum."
+    }
+  },
+  "guardianUpload": {
+    "error": "Villa",
+    "success": "Tókst",
+    "fillRequired": "Vinsamlegast fylltu út öll nauðsynleg svæði",
+    "loginToSave": "Þú verður að vera innskráð(ur) til að vista verði",
+    "updated": "Vörður uppfærður",
+    "added": "Vörður bætt við",
+    "failedSave": "Mistókst að vista vörð. Vinsamlegast reyndu aftur.",
+    "editTitle": "Breyta verði",
+    "addTitle": "Bæta við verði",
+    "description": "Bættu við einhverjum sem þú treystir til að hjálpa þér að stjórna arfleifð þinni",
+    "fullNameLabel": "Fullt nafn verndar *",
+    "fullNamePlaceholder": "Sláðu inn fullt nafn verndar",
+    "relationshipLabel": "Tengsl *",
+    "relationshipPlaceholder": "Veldu tengsl",
+    "countryLabel": "Búsetuland *",
+    "countryPlaceholder": "Veldu land",
+    "countryDescription": "Veldu landið þar sem þessi vörður býr",
+    "rolesTitle": "Hlutverk og ábyrgð",
+    "saving": "Vista...",
+    "updateButton": "Uppfæra vörð",
+    "addButton": "Bæta við verði",
+    "relationships": {
+      "spouse": "Maki",
+      "parent": "Foreldri",
+      "sibling": "Systkini",
+      "child": "Barn",
+      "friend": "Vinur",
+      "legalProfessional": "Lögfræðingur",
+      "other": "Annað"
+    },
+    "roles": {
+      "guardianForChildren": "Lögráðamaður fyrir börn",
+      "executorOfWill": "Skiptastjóri erfðaskrár",
+      "healthcareProxy": "Umboðsmaður í heilbrigðismálum",
+      "financialPowerOfAttorney": "Fjárhagslegt umboð",
+      "emergencyContact": "Neyðartengiliður",
+      "trustee": "Sjálfseignarstofnun"
+    }
+  },
+  "documentUpload": {
+    "fileUploadedSuccess": "Skrá upphlaðin!",
+    "fileUploadFailed": "Mistókst að hlaða upp skrá. Vinsamlegast reyndu aftur.",
+    "fileTooLarge": "Valin skrá er of stór. Hámarksstærð er {{maxSize}} MB.",
+    "fillRequiredFields": "Vinsamlegast fylltu út öll nauðsynleg svæði",
+    "loginToSave": "Þú verður að vera innskráð(ur) til að vista skjöl",
+    "saved": "Skjal vistað!",
+    "failedSave": "Mistókst að vista skjal. Vinsamlegast reyndu aftur.",
+    "detailsTitle": "Upplýsingar um skjal",
+    "detailsSubtitle": "Bættu við upplýsingum um upphlaðna skjalið þitt",
+    "namePlaceholder": "Sláðu inn nafn skjals",
+    "typePlaceholder": "Veldu tegund skjals",
+    "countryPlaceholder": "Veldu land",
+    "pickDate": "Veldu dagsetningu",
+    "title": "Hlaða upp skjali",
+    "subtitle": "Hladdu upp löglegum og persónulegum skjölum á öruggan hátt",
+    "browseFiles": "Vafra skrár",
+    "chooseDifferent": "Velja aðra skrá",
+    "uploadButton": "Hlaða upp skjali",
+    "storageLimitReached": "Ekki er hægt að hlaða upp skrá. Þú átt {{remaining}} af geymsluplássi eftir, en þessi skrá er {{fileSize}}. Vinsamlegast uppfærðu áætlunina þína eða fjarlægðu nokkrar núverandi skrár."
+  },
+  "auth": {
+    "noAccount": "Ertu ekki með reikning?",
+    "signUpLink": "Nýskráning",
+    "hasAccount": "Ertu þegar með reikning?",
+    "loginLink": "Innskráning",
+    "loginButton": "Innskráning",
+    "signupButton": "Nýskráning"
+  },
+  "assetDetail": {
+    "loading": "Hleð upplýsingum um eign...",
+    "errors": {
+      "failedToLoad": "Mistókst að hlaða upplýsingum um eign",
+      "nameRequired": "Nafn eignar er nauðsynlegt",
+      "failedToSave": "Mistókst að vista eign"
+    },
+    "messages": {
+      "createdSuccessfully": "Eign búin til",
+      "updatedSuccessfully": "Eign uppfærð"
+    },
+    "title": {
+      "new": "Ný(tt) {{type}}"
+    },
+    "subtitle": {
+      "new": "Fylltu út upplýsingarnar til að bæta þessari eign við safnið þitt",
+      "edit": "Uppfærðu upplýsingar um þessa eign"
+    },
+    "sections": {
+      "assetInformation": "Upplýsingar um eign",
+      "basicInformation": "Grunnupplýsingar",
+      "propertyDetails": "Upplýsingar um fasteign",
+      "accountDetails": "Upplýsingar um reikning",
+      "financialDetails": "Fjárhagsupplýsingar"
+    },
+    "fields": {
+      "assetName": "Nafn eignar",
+      "assetType": "Tegund eignar",
+      "propertyAddress": "Heimilisfang fasteignar",
+      "propertyRegistryNumber": "Fasteignanúmer",
+      "accountType": "Tegund reiknings",
+      "financialInstitution": "Fjármálastofnun",
+      "accountNumber": "Reikningsnúmer / IBAN",
+      "loginCredentials": "Innskráningarupplýsingar og athugasemdir",
+      "estimatedValue": "Áætlað verðmæti",
+      "currency": "Gjaldmiðill"
+    },
+    "placeholders": {
+      "assetName": "t.d. Fjölskylduhús, Fjárfestingasafn",
+      "propertyAddress": "Sláðu inn fullt heimilisfang fasteignar",
+      "propertyRegistryNumber": "t.d. Fasteignanúmer",
+      "selectAccountType": "Veldu tegund reiknings",
+      "financialInstitution": "t.d. Landsbankinn, Íslandsbanki",
+      "accountNumber": "t.d. 1234-56-789012",
+      "loginCredentials": "Lykilorðastjóri: 1Password hvelfing 'Bankamál'",
+      "estimatedValue": "0"
+    },
+    "descriptions": {
+      "assetName": "Gefðu þessari eign lýsandi nafn til að auðkenna hana auðveldlega",
+      "assetType": "Veldu tegundina sem best lýsir þessari eign",
+      "propertyAddress": "Fullt heimilisfang með götu, borg, póstnúmeri og landi",
+      "propertyRegistryNumber": "Opinbert skráningar- eða fasteignanúmer fyrir þessa eign",
+      "accountType": "Tegund fjárhagsreiknings eða fjárfestingar",
+      "financialInstitution": "Nafn banka eða fjármálastofnunar",
+      "accountNumber": "Reikningsnúmer, IBAN eða aðrar auðkennisupplýsingar",
+      "estimatedValue": "Núverandi markaðsvirði eða síðast þekkta virði þessarar eignar",
+      "currency": "Gjaldmiðillinn sem virðið er gefið upp í"
+    },
+    "types": {
+      "realEstate": "Fasteign",
+      "business": "Fyrirtæki",
+      "vehicle": "Ökutæki",
+      "financialAccount": "Fjárhagsreikningur",
+      "asset": "Eign"
+    },
+    "accountTypes": {
+      "bankAccount": "Bankareikningur",
+      "investmentPortfolio": "Fjárfestingasafn",
+      "pensionFund": "Lífeyrissjóður"
+    },
+    "securityWarning": "Öryggisviðvörun:",
+    "securityWarningText": "Ekki geyma raunveruleg lykilorð hér. Notaðu þetta svæði fyrir vísbendingar, staðsetningar lykilorðastjóra eða aðrar öruggar aðgangsleiðbeiningar.",
+    "buttons": {
+      "cancel": "Hætta við",
+      "saving": "Vista...",
+      "createAsset": "Búa til eign",
+      "updateAsset": "Uppfæra eign"
+    }
+  },
+  "assets": {
+    "overview": {
+      "title": "Eignasafn",
+      "subtitle": "Hafðu umsjón með og fylgstu með eignum þínum, fasteignum og fjárfestingum",
+      "addAsset": "Bæta við eign",
+      "totalPortfolioValue": "Heildarverðmæti safns",
+      "estimatedValue": "Áætlað verðmæti allra eigna",
+      "distribution": {
+        "title": "Eignadreifing",
+        "subtitle": "Sundurliðun safns eftir flokkum"
+      },
+      "beneficiaryAllocation": {
+        "title": "Úthlutun til erfingja",
+        "subtitle": "Fylgstu með eignadreifingu til erfingja",
+        "allAssigned": "Öllum eignum hefur verið úthlutað til erfingja",
+        "unassignedWarning": "{{count}} eignir þarfnast úthlutunar til erfingja"
+      },
+      "viewInheritanceSummary": "Skoða yfirlit yfir erfðir",
+      "addNew": "Bæta við nýju",
+      "errors": {
+        "loadFailed": "Mistókst að hlaða eignagögnum"
+      }
+    },
+    "categories": {
+      "property": "Fasteignir",
+      "vehicle": "Ökutæki",
+      "financial": "Fjármál",
+      "business": "Viðskipti",
+      "personal": "Persónulegt",
+      "uncategorized": "Óflokkað"
+    }
+  },
+  "pricing": {
+    "title": "Veldu þína arfleifðaráætlun",
+    "subtitle": "Byrjaðu með ókeypis áætluninni okkar eða uppfærðu fyrir úrvalsaðgerðir.",
+    "mainTitle": "Veldu þína arfleifðaráætlun",
+    "mainSubtitle": "Byrjaðu með ókeypis áætluninni okkar eða uppfærðu fyrir úrvalsaðgerðir.",
+    "starter": {
+      "name": "Arfleifð Byrjandi",
+      "price": "Ókeypis",
+      "description": "Tilvalið til að byrja að varðveita stafræna arfleifð þína.",
+      "button": "Byrjaðu ókeypis",
+      "features": {
+        "storage": "{{amount}} geymsla",
+        "guardians": "Allt að {{count}} verðir",
+        "documents": "Grunn skjalageymsla",
+        "playbook": "Grunn leiðbeiningar fyrir verði",
+        "support": "Samfélagsaðstoð"
+      },
+      "limits": {
+        "storage": "500 MB",
+        "guardians": "3",
+        "fileSize": "10 MB á skrá"
+      }
+    },
+    "premium": {
+      "name": "Arfleifð Úrval",
+      "price": "$19",
+      "period": "/ mánuði",
+      "badge": "Vinsælast",
+      "description": "Framsæknar aðgerðir fyrir alhliða arfleifðarstjórnun.",
+      "button": "Velja Úrval",
+      "features": {
+        "storage": "{{amount}} geymsla",
+        "guardians": "Allt að {{count}} verðir",
+        "manual": "Handbók fyrir aðstandendur",
+        "support": "Forgangs tölvupóstsaðstoð"
+      },
+      "limits": {
+        "storage": "10 GB",
+        "guardians": "5",
+        "fileSize": "50 MB á skrá"
+      }
+    },
+    "enterprise": {
+      "name": "Arfleifð Fyrirtæki",
+      "price": "Sérsniðið",
+      "description": "Fyrir fjölskyldur og fyrirtæki með flóknar þarfir sem krefjast hæsta stigs þjónustu.",
+      "button": "Hafðu samband við sölu",
+      "features": {
+        "storage": "{{amount}}+ geymsla",
+        "guardians": "Ótakmarkaðir verðir",
+        "legal": "Samhæfing við lögfræðinga",
+        "support": "Sérstakur reikningsstjóri"
+      },
+      "limits": {
+        "storage": "500 GB",
+        "guardians": "ótakmarkað",
+        "fileSize": "100 MB á skrá"
+      }
+    }
+  },
+  "cookies": {
+    "bannerText": "Við notum nauðsynlegar kökur til að tryggja rétta virkni síðunnar okkar. Með þínu samþykki gætum við einnig notað greiningarkökur til að bæta þjónustu okkar.",
+    "declineButton": "Hafna",
+    "acceptButton": "Samþykkja allt",
+    "learnMoreLink": "Læra meira"
+  },
+  "guardianView": {
+    "title": "Mælaborð verndar",
+    "subtitle": "Öruggur aðgangur að nauðsynlegum upplýsingum {{userName}}",
+    "readOnlyAccess": "Aðeins lesaðgangur",
+    "loading": "Hleð mælaborði verndar...",
+    "errors": {
+      "loadFailed": "Mistókst að hlaða neyðartengiliðum",
+      "addFailed": "Mistókst að bæta við neyðartengilið",
+      "removeFailed": "Mistókst að fjarlægja neyðartengilið",
+      "reorderFailed": "Mistókst að uppfæra röð tengiliða",
+      "testFailed": "Mistókst að senda prófskilaboð",
+      "selectContact": "Vinsamlegast veldu tengilið"
+    },
+    "sections": {
+      "keyDocuments": {
+        "title": "Lykilskjöl",
+        "description": "Nauðsynleg skjöl merkt sem mikilvæg af reikningshafa",
+        "keyDocumentBadge": "Lykilskjal",
+        "expires": "Rennur út",
+        "noExpiration": "Enginn gildistími",
+        "empty": "Engin lykilskjöl í boði"
+      },
+      "importantContacts": {
+        "title": "Mikilvægir tengiliðir",
+        "description": "Lykiltengiliðir fyrir neyðartilvik",
+        "empty": "Engir mikilvægir tengiliðir í boði"
+      },
+      "finalWishes": {
+        "title": "Síðustu óskir og leiðbeiningar",
+        "description": "Persónulegar leiðbeiningar og síðustu óskir",
+        "funeralWishes": "Útfararóskir",
+        "digitalAccountsShutdown": "Lokun stafrænna reikninga",
+        "messagesToLovedOnes": "Skilaboð til ástvina",
+        "empty": "Engar síðustu óskir eða leiðbeiningar í boði"
+      }
+    },
+    "guardianInfo": {
+      "description": "Þú ert að skoða þessar upplýsingar sem traustur vörður. Þessi aðgangur er veittur fyrir neyðartilvik og til að hjálpa þér að uppfylla skyldur þínar.",
+      "securityNote": "Allur aðgangur er skráður og fylgst með honum af öryggisástæðum."
+    },
+    "defaultUserName": "Aðalreikningshafi",
+    "description": "Hafðu umsjón með allt að 3 neyðartengiliðum í forgangsröð",
+    "addContact": "Bæta við tengilið",
+    "noContacts": "Engum neyðartengiliðum bætt við ennþá. Bættu við tengiliðum sem ætti að tilkynna í neyðartilvikum.",
+    "maxContactsReached": "Þú hefur náð hámarksfjölda 3 neyðartengiliða.",
+    "sendTest": "Senda próf",
+    "lastContacted": "Síðast haft samband fyrir {{time}}",
+    "priority": {
+      "1": "Forgangur 1",
+      "2": "Forgangur 2",
+      "3": "Forgangur 3"
+    },
+    "addContactDialog": {
+      "title": "Bæta við neyðartengilið",
+      "description": "Veldu tengilið af listanum þínum til að bæta við sem neyðartengilið.",
+      "selectContact": "Veldu tengilið",
+      "selectPlaceholder": "Veldu tengilið...",
+      "relationship": "Tengsl (valfrjálst)",
+      "relationshipPlaceholder": "Veldu tengsl...",
+      "addButton": "Bæta við neyðartengilið"
+    },
+    "messages": {
+      "added": "Neyðartengilið bætt við",
+      "removed": "Neyðartengiliður fjarlægður",
+      "reordered": "Forgangur tengiliðar uppfærður",
+      "testSent": "Prófskilaboð send til {{name}}"
+    }
+  },
+  "notificationPreferences": {
+    "title": "Stillingar fyrir neyðartilkynningar",
+    "description": "Hafðu umsjón með tilkynningastillingum fyrir neyðartengiliðina þína",
+    "noContacts": "Bættu við neyðartengiliðum til að hafa umsjón með tilkynningastillingum þeirra.",
+    "noEmail": "Ekkert netfang skráð",
+    "emailRequired": "Netfang nauðsynlegt",
+    "lastUpdated": "Síðast uppfært: {{date}}",
+    "info": "Þegar neyðaraðgangur er veittur verða tilkynningar aðeins sendar til tengiliða með virkar tölvupósttilkynningar.",
+    "howItWorks": {
+      "title": "Hvernig neyðartilkynningar virka",
+      "point1": "Verðir geta nálgast neyðartengiliði í krítískum aðstæðum",
+      "point2": "Allir skráðir tengiliðir fá strax tölvupósttilkynningar",
+      "point3": "Þú færð einnig tilkynningu þegar aðgangur á sér stað"
+    },
+    "messages": {
+      "updated": "Tilkynningastillingar uppfærðar"
+    },
+    "errors": {
+      "loadFailed": "Mistókst að hlaða tilkynningastillingum",
+      "updateFailed": "Mistókst að uppfæra stillingar"
+    }
+  },
+  "relationships": {
+    "spouse": "Maki",
+    "child": "Barn",
+    "parent": "Foreldri",
+    "sibling": "Systkini",
+    "friend": "Vinur",
+    "other": "Annað"
+  },
+  "emergencyAccess": {
+    "button": "Neyðaraðgangur",
+    "modalTitle": "Aðgangur að neyðartengiliðum",
+    "modalDescription": "Þetta veitir þér aðgang að upplýsingum um neyðartengiliði. Notaðu þetta aðeins í raunverulegum neyðartilvikum.",
+    "warningText": "Þessi aðgangur er skráður og reikningshafa verður tilkynnt.",
+    "reasonLabel": "Ástæða fyrir neyðaraðgangi (nauðsynlegt)",
+    "reasonPlaceholder": "Vinsamlegast lýstu neyðarástandinu sem krefst aðgangs að tengiliðaupplýsingum...",
+    "confirmCheckbox": "Ég staðfesti að þetta sé raunverulegt neyðartilvik og að ég þurfi aðgang að tengiliðaupplýsingum",
+    "accessing": "Nálgast...",
+    "confirmButton": "Nálgast neyðartengiliði",
+    "pleaseConfirm": "Vinsamlegast staðfestu neyðartilvikið og gefðu upp ástæðu",
+    "notAuthorized": "Þú hefur ekki heimild til neyðaraðgangs",
+    "failedToLoadContacts": "Mistókst að hlaða neyðartengiliðum",
+    "accessGranted": "Neyðaraðgangur veittur. Tengiliðaupplýsingar eru nú aðgengilegar.",
+    "accessFailed": "Mistókst að nálgast neyðartengiliði",
+    "contactsTitle": "Neyðartengiliðir",
+    "contactsDescription": "Hafðu samband við þetta fólk í forgangsröð. Smelltu á símanúmer til að hringja eða netföng til að senda skilaboð.",
+    "priorityOrder": "Forgangsröð",
+    "priority": "Forgangur #{{order}}",
+    "logContact": "Skrá sambandstilraun",
+    "contactLogged": "Sambandstilraun skráð",
+    "lastContacted": "Síðast haft samband: {{time}}",
+    "importantNote": "Mikilvægt: Hafðu samband við þessa einstaklinga í sýndri röð. Reyndu alltaf fyrst að nota aðalsambandsaðferðina. Skráðu allar sambandstilraunir til skráningar."
+  },
+  "helpPage": {
+    "title": "Hjálpar- og þjónustumiðstöð",
+    "subtitle": "Við erum hér fyrir þig. Finndu svör við spurningum þínum eða hafðu samband við okkur beint.",
+    "faq": {
+      "title": "Algengar spurningar",
+      "q1": {
+        "question": "Er LegacyGuard öruggt?",
+        "answer": "Já, öryggi er okkar æðsta forgangsatriði. Við notum enda-til-enda dulkóðun og núll-traust arkitektúr, sem þýðir að enginn óviðkomandi getur nálgast gögnin þín, ekki einu sinni við. Öll gögn eru geymd í öruggum gagnaverum innan Evrópusambandsins í samræmi við GDPR."
+      },
+      "q2": {
+        "question": "Hvað verður um gögnin mín ef ég segi upp áskriftinni minni?",
+        "answer": "Eftir uppsögn eru gögnin þín geymd á öruggan hátt í lesham í 90 daga. Þú getur endurvirkjað áskriftina þína hvenær sem er innan þessa tímabils til að fá aftur fullan aðgang. Eftir 90 daga verða gögnin þín örugglega og varanlega eytt úr kerfum okkar."
+      },
+      "q3": {
+        "question": "Hvað er 'vörður'?",
+        "answer": "Vörður er traustur aðili (t.d. maki, systkini eða lögfræðingur) sem þú veitir sérstakan, takmarkaðan aðgang að upplýsingum þínum fyrir neyðartilvik. Vörður getur ekki breytt gögnunum þínum; hann getur aðeins skoðað þau til að bregðast við leiðbeiningum þínum."
+      },
+      "q4": {
+        "question": "Hver er munurinn á 'hvelfingunni' og 'handbókinni'?",
+        "answer": "Arfleifðarhvelfingin er þar sem þú geymir öll mikilvæg skjöl þín og eignir á öruggan hátt. Handbók fyrir aðstandendur er úrval af mikilvægustu tengiliðum, skjölum og leiðbeiningum úr hvelfingunni þinni, hönnuð til að verðir þínir hafi allt nauðsynlegt á einum stað."
+      },
+      "q5": {
+        "question": "Er erfðaskrá búin til í LegacyGuard lagalega bindandi?",
+        "answer": "LegacyGuard hjálpar þér að undirbúa og skipuleggja allan grunninn og upplýsingarnar fyrir erfðaskrána þína. Hins vegar, í flestum Evrópulöndum kemur stafræna skjalið ekki í stað þess að þörf sé á opinberu, undirrituðu (og oft þinglýstu) skjali. Við mælum með því að alltaf sé ráðfært við lögfræðing um lokaútgáfuna."
+      }
+    },
+    "contact": {
+      "title": "Fannstu ekki það sem þú leitaðir að?",
+      "email": {
+        "title": "Sendu okkur tölvupóst",
+        "description": "Fyrir almennar spurningar og aðstoð.",
+        "button": "Opna tölvupóstforrit"
+      },
+      "call": {
+        "title": "Bóka símtal (fyrir Úrval)",
+        "description": "Fyrir Úrvals- og Fyrirtækjanotendur.",
+        "button": "Bóka símtal"
+      }
+    }
+  },
+  "inviteAcceptance": {
+    "loading": "Hleð boði...",
+    "errors": {
+      "invalidLink": "Ógildur boðstengill",
+      "notFound": "Boð fannst ekki",
+      "alreadyProcessed": "Þetta boð hefur þegar verið afgreitt",
+      "loadingFailed": "Mistókst að hlaða boði",
+      "acceptFailed": "Mistókst að samþykkja boð",
+      "declineFailed": "Mistókst að hafna boði"
+    },
+    "messages": {
+      "accepted": "Þakka þér fyrir. Hlutverk þitt sem vörður hefur verið staðfest.",
+      "declined": "Þú hefur hafnað hlutverkinu. Sendanda verður tilkynnt."
+    },
+    "notFound": {
+      "title": "Boð fannst ekki",
+      "description": "Þessi boðstengill er ógildur eða útrunninn."
+    },
+    "subtitle": "Þér hefur verið boðið að verða vörður fyrir stafræna arfleifð þeirra á LegacyGuard.",
+    "guardianRole": {
+      "title": "Þitt hlutverk sem vörður",
+      "yourName": "Þitt nafn:",
+      "relationship": "Tengsl:",
+      "responsibilities": "Ábyrgð:"
+    },
+    "whatThisMeans": {
+      "title": "Hvað þýðir þetta",
+      "point1": "Þú munt hafa öruggan aðgang að mikilvægum skjölum þeirra og upplýsingum",
+      "point2": "Þú getur aðeins skoðað upplýsingar - engin breytingar- eða eyðingargeta",
+      "point3": "Aðgangur þinn er hannaður fyrir neyðartilvik eða þegar aðstoðar er þörf",
+      "point4": "Allur aðgangur er skráður og öruggur"
+    },
+    "buttons": {
+      "processing": "Vinnur...",
+      "acceptRole": "Samþykkja hlutverk",
+      "decline": "Hafna"
+    },
+    "disclaimer": "Með því að samþykkja þetta hlutverk viðurkennir þú ábyrgðina sem fylgir því að vera traustur vörður fyrir stafræna arfleifð þeirra.",
+    "defaultInviterName": "Trausti tengiliðurinn þinn"
+  },
+  "subscription": {
+    "dashboard": {
+      "title": "Mælaborð áskrifta",
+      "subtitle": "Hafðu umsjón með áskriftum þínum, kostnaði og áminningum"
+    },
+    "monthlyCost": "Heildar mánaðarkostnaður",
+    "yearlyCost": "Heildar árskostnaður",
+    "activeSubscriptions": "Virkar áskriftir",
+    "upcomingSoon": "kemur bráðum",
+    "exportReport": "Flytja út skýrslu",
+    "perMonth": "á mánuði",
+    "perYear": "á ári",
+    "allSubscriptions": "Allar áskriftir",
+    "allSubscriptionsDesc": "Yfirlit yfir allar virkar áskriftir raðað eftir endurnýjunardegi",
+    "upcomingRenewals": "Næstu endurnýjanir",
+    "upcomingRenewalsTitle": "Viðvörun um næstu endurnýjanir",
+    "upcomingRenewalsDesc": "Þú átt {{count}} næstu endurnýjanir á næstu 90 dögum",
+    "next90Days": "Næstu 90 dagar",
+    "noUpcomingRenewals": "Engar næstu endurnýjanir á næstu 90 dögum",
+    "renew": "Endurnýja",
+    "review": "Yfirfara",
+    "preferences": "Áskriftarstillingar",
+    "preferencesDesc": "Hafðu umsjón með því hvernig áskriftirnar þínar eru raktaðar og stjórnaðar",
+    "enableTracking": "Virkja áskriftarrakningu",
+    "enableTrackingDesc": "Hafðu sjálfkrafa umsjón með og raktaðu áskriftatengd skjöl",
+    "costOptimization": "Virkja tillögur um kostnaðarhagræðingu",
+    "costOptimizationDesc": "Fáðu tillögur til að hagræða og draga úr áskriftarkostnaði",
+    "reminderPeriods": "Sjálfgefin áminningartímabil",
+    "daysBefore": "dögum áður",
+    "loadError": "Mistókst að hlaða áskriftarupplýsingum",
+    "updateError": "Mistókst að uppfæra áskriftarstillingar",
+    "preferencesUpdated": "Stillingar uppfærðar",
+    "tabs": {
+      "overview": "Yfirlit",
+      "upcoming": "Næst",
+      "settings": "Stillingar"
+    },
+    "types": {
+      "monthly": "Mánaðarlega",
+      "yearly": "Árlega",
+      "oneTime": "Einu sinni",
+      "none": "Engin"
+    },
+    "daysUntilRenewal": "dagar þar til endurnýjun",
+    "days": "dagar",
+    "loadFailed": "Mistókst að hlaða áskriftargögnum",
+    "autoRenewal": "Sjálfvirk endurnýjun: Já",
+    "manual": "Sjálfvirk endurnýjun: Nei",
+    "trackingSuggestion": "Íhugaðu að virkja áskriftarrakningu fyrir betri stjórnun og áminningar",
+    "type": "Tegund áskriftar",
+    "typePlaceholder": "Veldu tegund",
+    "renewalCost": "Endurnýjunarkostnaður",
+    "renewalCostPlaceholder": "Sláðu inn endurnýjunarkostnað",
+    "cancellationNotice": "Uppsagnarfrestur",
+    "noNoticeRequired": "Enginn uppsagnarfrestur nauðsynlegur",
+    "providerContact": "Tengiliðaupplýsingar veitanda",
+    "providerPhone": "Sími",
+    "providerEmail": "Netfang",
+    "providerWebsite": "Vefsíða",
+    "cancellationNoticeWarning": "Athugið: Uppsögn krefst {{days}} daga fyrirvara"
+  },
+  "emailTemplates": {
+    "welcome": {
+      "subject": "Velkomin(n) í LegacyGuard - Stafræna arfleifðarferðalagið þitt hefst",
+      "greeting": "Velkomin(n) {{name}},",
+      "body": "Þakka þér fyrir að ganga til liðs við LegacyGuard. Þú hefur tekið fyrsta mikilvæga skrefið í að vernda framtíð fjölskyldu þinnar.",
+      "cta": "Ljúktu við lífsskránna þína",
+      "footer": "Ef þú hefur einhverjar spurningar er þjónustuteymið okkar hér til að hjálpa."
+    },
+    "inventoryComplete": {
+      "subject": "Lífsskránni lokið - Persónulega áætlunin þín er tilbúin",
+      "greeting": "Til hamingju {{name}},",
+      "body": "Þú hefur lokið við lífsskránna þína! Byggt á svörum þínum höfum við búið til persónulega aðgerðaáætlun til að hjálpa þér að tryggja framtíð fjölskyldu þinnar.",
+      "nextSteps": "Þín 3 helstu forgangsatriði:",
+      "cta": "Skoðaðu aðgerðaáætlunina þína",
+      "encouragement": "Mundu að hvert lítið skref sem þú tekur í dag skiptir miklu máli fyrir ástvini þína á morgun."
+    },
+    "guardianInvite": {
+      "subject": "{{inviterName}} hefur boðið þér að vera vörður hans/hennar á LegacyGuard",
+      "greeting": "Halló {{guardianName}},",
+      "body": "{{inviterName}} treystir þér fyrir mikilvægri ábyrgð - að vera vörður fyrir stafræna arfleifð hans/hennar.",
+      "whatThisMeans": "Sem vörður færðu öruggan, lesaðgang að mikilvægum skjölum hans/hennar og leiðbeiningum í neyðartilvikum.",
+      "cta": "Skoða boð",
+      "expires": "Þetta boð rennur út eftir 7 daga."
+    },
+    "planUpgrade": {
+      "subject": "Þú hefur náð takmörkum {{planName}} áætlunar þinnar",
+      "greeting": "Hæ {{name}},",
+      "body": "Þú stendur þig frábærlega! Þú hefur náð {{limitType}} takmörkunum á núverandi áætlun þinni.",
+      "upgradeText": "Uppfærðu í {{suggestedPlan}} til að halda áfram að bæta við fleiri {{limitType}} og opna fyrir viðbótaraðgerðir.",
+      "cta": "Skoða uppfærslumöguleika"
+    }
+  },
+  "guardian": {
+    "invitationSent": "Boð sent",
+    "accepted": "Samþykkt",
+    "declined": "Hafnað",
+    "sendInvite": "Senda boð"
+  },
+  "alerts": {
+    "title": "Tilkynningamiðstöð",
+    "description": "Hafðu umsjón með tilkynningum um gildistíma skjala.",
+    "unread": "Ólesið",
+    "markAsRenewed": "Merkja sem endurnýjað",
+    "snooze7Days": "Fresta í 7 daga",
+    "dismiss": "Hunsa",
+    "unsnooze": "Fjarlægja frestun",
+    "tabs": {
+      "active": "Virkt",
+      "snoozed": "Frestað",
+      "dismissed": "Hunsað"
+    },
+    "noActiveAlerts": "Þú hefur engar virkar tilkynningar.",
+    "noSnoozedAlerts": "Þú hefur engar frestaðar tilkynningar.",
+    "noDismissedAlerts": "Þú hefur engar hunsaðar tilkynningar.",
+    "expiresOn": "Rennur út {{date}}",
+    "snoozedUntil": "Frestað til {{date}}",
+    "renewalInstructions": "Leiðbeiningar um endurnýjun",
+    "badges": {
+      "expired": "Útrunnið",
+      "expiring_7": "Rennur út fljótlega",
+      "expiring_30": "Rennur út eftir 30 daga",
+      "expiring_90": "Rennur út eftir 90 daga"
+    },
+    "types": {
+      "expired": "Skjalið {{documentName}} rann út fyrir {{daysAgo}} dögum!",
+      "expiring7": "Drífðu þig! {{documentName}} rennur út eftir {{days}} daga.",
+      "expiring30": "Áminning: {{documentName}} rennur út eftir {{days}} daga.",
+      "expiring90": "Athugið: {{documentName}} rennur út eftir {{days}} daga."
+    },
+    "messages": {
+      "dismissed": "Tilkynning hunsuð.",
+      "snoozed": "Tilkynning frestuð um {{days}} daga.",
+      "markedAsRenewed": "Skjal merkt sem endurnýjað."
+    },
+    "errors": {
+      "loadFailed": "Mistókst að hlaða tilkynningum.",
+      "dismissFailed": "Ekki tókst að hunsa tilkynninguna.",
+      "snoozeFailed": "Ekki tókst að fresta tilkynningunni.",
+      "renewFailed": "Ekki tókst að merkja skjal sem endurnýjað."
+    }
+  },
+  "errorBoundary": {
+    "title": "Úps! Eitthvað fór úrskeiðis",
+    "description": "Við biðjumst velvirðingar á óþægindunum. Óvænt villa kom upp.",
+    "errorId": "Villuauðkenni",
+    "tryAgain": "Reyna aftur",
+    "reloadPage": "Endurhlaða síðu",
+    "goToHomepage": "Fara á heimasíðu",
+    "technicalDetails": "Tæknilegar upplýsingar",
+    "hide": "Fela",
+    "show": "Sýna",
+    "stackTrace": "Kallastafla",
+    "componentStack": "Íhlutastafla",
+    "helpText": "Ef vandamálið heldur áfram, hafðu samband við þjónustuver okkar með villuauðkennið."
+  },
+  "errorTest": {
+    "title": "Villuskráningarpróf",
+    "triggerSyncError": "Kveikja á samstilltri villu (ErrorBoundary)",
+    "triggerAsyncError": "Kveikja á ósamstilltri villu",
+    "logRegularError": "Skrá venjulega villu",
+    "logCriticalError": "Skrá krítíska villu",
+    "triggerAlert": "Kveikja á viðvörun (6 krítískar villur)"
+  },
+  "footer": {
+    "tagline": "Varðveitum arfleifð þína fyrir komandi kynslóðir.",
+    "platform": {
+      "title": "Vettvangur",
+      "heritageVault": "Arfleifðarhvelfing",
+      "guardianNetwork": "Net vernda",
+      "dashboard": "Mælaborð",
+      "security": "Öryggi"
+    },
+    "support": {
+      "title": "Aðstoð",
+      "helpCenter": "Hjálparmiðstöð",
+      "userGuides": "Notendaleiðbeiningar",
+      "contactUs": "Hafðu samband",
+      "community": "Samfélag"
+    },
+    "legal": {
+      "title": "Lagalegt",
+      "privacyPolicy": "Persónuverndarstefna",
+      "termsOfService": "Þjónustuskilmálar",
+      "dataProtection": "Gagnavernd"
+    },
+    "copyright": "© {{year}} LegacyGuard. Allur réttur áskilinn.",
+    "description": "Stafræn arfleifðarstjórnun á fyrirtækjaflokki."
+  },
+  "playbook": {
+    "label": "Leiðbeiningar",
+    "create": "Búa til leiðbeiningar",
+    "edit": "Breyta leiðbeiningum",
+    "preview": "Forskoðun",
+    "exitPreview": "Hætta forskoðun",
+    "save": "Vista leiðbeiningar",
+    "saving": "Vista...",
+    "loading": "Hleð leiðbeiningum...",
+    "autoSaveNotice": "Breytingar þínar eru vistaðar sjálfkrafa þegar þú skrifar.",
+    "noContent": "Ekkert efni bætt við ennþá.",
+    "noContacts": "Engum tengiliðum bætt við ennþá.",
+    "addContact": "Bæta við tengilið",
+    "contact": "Tengiliður",
+    "title": "Leiðbeiningar fyrir {{name}}",
+    "titleReadOnly": "Leiðbeiningar {{name}}",
+    "description": "Búðu til persónulegar leiðbeiningar og upplýsingar fyrir vörðinn þinn",
+    "viewTitle": "Leiðbeiningar fyrir vörð: {{userName}}",
+    "viewDescription": "Nauðsynlegar upplýsingar og leiðbeiningar undirbúnar sérstaklega fyrir þig",
+    "lastUpdated": "Síðast uppfært",
+    "viewFooter": "Þessar upplýsingar hafa verið þér trúað fyrir sem verði. Vinsamlegast gættu trúnaðar og öryggis.",
+    "notAuthenticated": "Vinsamlegast skráðu þig inn til að skoða þessar leiðbeiningar",
+    "accessDenied": "Þú hefur ekki heimild til að skoða þessar leiðbeiningar",
+    "fetchError": "Mistókst að hlaða leiðbeiningum",
+    "saveSuccess": "Leiðbeiningar vistaðar",
+    "saveError": "Mistókst að vista leiðbeiningar",
+    "discardChanges": {
+      "title": "Henda breytingum?",
+      "description": "Þú ert með óvistaðar breytingar. Ertu viss um að þú viljir henda þeim?",
+      "cancel": "Halda áfram að breyta",
+      "confirm": "Henda breytingum"
+    },
+    "importantContacts": {
+      "label": "Mikilvægir tengiliðir",
+      "description": "Bættu við lykilfólki sem þessi vörður ætti að hafa samband við",
+      "viewDescription": "Hafðu samband við þetta fólk þegar þörf krefur",
+      "add": "Bæta við tengilið",
+      "remove": "Fjarlægja",
+      "empty": "Engum tengiliðum bætt við ennþá. Smelltu á 'Bæta við tengilið' til að bæta við mikilvægu fólki.",
+      "name": "Nafn",
+      "namePlaceholder": "Fullt nafn",
+      "relationship": "Tengsl",
+      "relationshipPlaceholder": "t.d. Fjölskyldulögfræðingur",
+      "phone": "Sími",
+      "phonePlaceholder": "+354 555 1234",
+      "email": "Netfang",
+      "emailPlaceholder": "email@daemi.is",
+      "notes": "Athugasemdir",
+      "notesPlaceholder": "Viðbótarupplýsingar"
+    },
+    "funeralWishes": {
+      "label": "Útfararóskir",
+      "description": "Óskir þínar varðandi útfararskipulag",
+      "placeholder": "Lýstu óskum þínum varðandi útför þína eða minningarathöfn..."
+    },
+    "digitalAccounts": {
+      "label": "Stafrænir reikningar",
+      "description": "Leiðbeiningar um meðferð netreikninga þinna",
+      "placeholder": "Skráðu stafrænu reikningana þína og hvernig eigi að meðhöndla þá..."
+    },
+    "documentLocations": {
+      "label": "Staðsetning skjala",
+      "description": "Hvar á að finna mikilvæg skjöl",
+      "placeholder": "Lýstu því hvar mikilvæg skjöl eru staðsett..."
+    },
+    "personalMessages": {
+      "label": "Persónuleg skilaboð",
+      "description": "Persónuleg skilaboð til þessa verndar",
+      "placeholder": "Skrifaðu persónuleg skilaboð til þessa verndar..."
+    },
+    "practicalInstructions": {
+      "label": "Hagnýtar leiðbeiningar",
+      "description": "Skjótar ráðstafanir og ábyrgð",
+      "placeholder": "Skráðu hagnýt verkefni og skjótar ráðstafanir..."
+    },
+    "notFound": {
+      "title": "Engar leiðbeiningar fundust",
+      "description": "Leiðbeiningarnar sem þú ert að leita að hafa ekki verið búnar til ennþá."
+    },
+    "subtitle": {
+      "edit": "Búðu til persónulegar leiðbeiningar og upplýsingar fyrir þennan vörð.",
+      "view": "Nauðsynlegar upplýsingar og leiðbeiningar undirbúnar fyrir þig."
+    },
+    "status": {
+      "empty": "Ekki hafið",
+      "draft": "Í vinnslu",
+      "complete": "Lokið"
+    },
+    "tabs": {
+      "funeral": "Útför",
+      "digital": "Stafrænt",
+      "contacts": "Tengiliðir",
+      "documents": "Skjöl",
+      "messages": "Skilaboð",
+      "instructions": "Leiðbeiningar"
+    },
+    "sections": {
+      "funeral": {
+        "title": "Útfararóskir",
+        "description": "Óskir þínar varðandi útfararskipulag og minningarathafnir.",
+        "placeholder": "Lýstu óskum þínum varðandi útför þína eða minningarathöfn...\n\nTil dæmis:\n- Tegund athafnar (trúarleg, veraldleg, lífshátíð)\n- Óskir um greftrun eða bálför\n- Óskir um staðsetningu\n- Tónlist, upplestur eða sérstakar beiðnir\n- Hver ætti að tala eða taka þátt\n- Allar sérstakar hefðir sem fylgja skal"
+      },
+      "digital": {
+        "title": "Lokun stafrænna reikninga",
+        "description": "Leiðbeiningar um meðferð stafrænnar nærveru þinnar og netreikninga.",
+        "placeholder": "Skráðu stafrænu reikningana þína og hvernig eigi að meðhöndla þá...\n\nTil dæmis:\n- Samfélagsmiðlareikningar (Facebook, Instagram, LinkedIn)\n- Netfangareikningar\n- Skýgeymsla (Google Drive, Dropbox)\n- Áskriftarþjónustur (Netflix, Spotify)\n- Netbanka- og fjárhagsreikningar\n- Rafmyntaveski\n- Vefsíður eða lén"
+      },
+      "contacts": {
+        "title": "Mikilvægir tengiliðir",
+        "description": "Lykilfólk sem þessi vörður ætti að hafa samband við eða tilkynna.",
+        "placeholder": "Bættu við mikilvægum tengiliðum sem eru sértækir fyrir ábyrgð þessa verndar."
+      },
+      "documents": {
+        "title": "Staðsetning skjala",
+        "description": "Hvar á að finna mikilvæg líkamleg og stafræn skjöl.",
+        "placeholder": "Lýstu því hvar mikilvæg skjöl eru staðsett...\n\nTil dæmis:\n- Staðsetning erfðaskrár\n- Tryggingarskírteini\n- Afsláttarbréf\n- Upplýsingar um bankareikninga\n- Fjárfestingaskjöl\n- Skattaskýrslur\n- Lykilorð og aðgangskóðar\n- Staðsetning peningaskáps og lykill"
+      },
+      "messages": {
+        "title": "Persónuleg skilaboð",
+        "description": "Persónuleg skilaboð og síðustu hugsanir til þessa verndar.",
+        "placeholder": "Skrifaðu persónuleg skilaboð til þessa verndar...\n\nÞetta er tækifærið þitt til að:\n- Tjá tilfinningar þínar og þakklæti\n- Deila mikilvægum minningum\n- Veita leiðsögn eða ráð\n- Útskýra ákvarðanir þínar\n- Skilja eftir huggunarorð\n- Deila vonum þínum fyrir framtíðina"
+      },
+      "practical": {
+        "title": "Hagnýtar leiðbeiningar",
+        "description": "Skjótar hagnýtar ráðstafanir og ábyrgð fyrir þennan vörð.",
+        "placeholder": "Skráðu hagnýt verkefni og skjótar ráðstafanir...\n\nTil dæmis:\n- Gátlisti fyrir fyrstu 24-48 klukkustundirnar\n- Hverjum á að tilkynna fyrst\n- Brýnir reikningar eða greiðslur\n- Umönnunarleiðbeiningar (gæludýr, plöntur, eignir)\n- Viðskiptamál sem krefjast athygli\n- Áætlaðar tímasetningar til að aflýsa\n- Nauðsynlegir lyklar og aðgangskóðar"
+      }
+    },
+    "contactFields": {
+      "name": "Nafn",
+      "namePlaceholder": "Fullt nafn",
+      "role": "Hlutverk/Tengsl",
+      "rolePlaceholder": "t.d. Fjölskyldulögfræðingur, Bókari",
+      "phone": "Sími",
+      "phonePlaceholder": "+354 555 1234",
+      "email": "Netfang",
+      "emailPlaceholder": "email@daemi.is",
+      "notes": "Athugasemdir",
+      "notesPlaceholder": "Viðbótarupplýsingar um þennan tengilið"
+    },
+    "messages": {
+      "autoSaved": "Vistað",
+      "saved": "Leiðbeiningar vistaðar"
+    },
+    "errors": {
+      "loadFailed": "Mistókst að hlaða leiðbeiningum",
+      "saveFailed": "Mistókst að vista leiðbeiningar"
+    }
+  }
+}

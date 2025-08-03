@@ -1,0 +1,1810 @@
+{
+  "_comment": "Shared translations used across the application",
+  "common": {
+    "loading": "Loading...",
+    "viewDetails": "View Details",
+    "edit": "Edit",
+    "delete": "Delete",
+    "addedOn": "Added {{date}}",
+    "priority": {
+      "high": "High",
+      "medium": "Medium",
+      "low": "Low"
+    },
+    "pagination": {
+      "previous": "Previous",
+      "next": "Next",
+      "morePages": "More pages",
+      "page": "Page",
+      "of": "of",
+      "showing": "Showing",
+      "to": "to",
+      "results": "results",
+      "perPage": "per page",
+      "goToPage": "Go to page",
+      "currentPage": "Current page",
+      "totalPages": "Total pages",
+      "firstPage": "First page",
+      "lastPage": "Last page",
+      "pageInfo": "Page {{current}} of {{total}}",
+      "resultsInfo": "Showing {{start}} to {{end}} of {{total}} results",
+      "noResults": "No results found",
+      "loading": "Loading...",
+      "navigation": {
+        "title": "Pagination Navigation",
+        "description": "Navigate through pages of results",
+        "first": "Go to first page",
+        "last": "Go to last page",
+        "previous": "Go to previous page",
+        "next": "Go to next page",
+        "page": "Go to page {{number}}"
+      },
+      "accessibility": {
+        "pagination": "Pagination",
+        "currentPage": "Current page, page {{number}}",
+        "page": "Page {{number}}",
+        "previousPage": "Previous page",
+        "nextPage": "Next page",
+        "firstPage": "First page",
+        "lastPage": "Last page",
+        "morePages": "More pages available"
+      }
+    },
+    "errors": {
+      "missingClerkKey": "Missing Clerk Publishable Key",
+      "errorLoadingApp": "Error loading app",
+      "unauthorized": "Unauthorized",
+      "invalidAuthentication": "Invalid authentication",
+      "internalServerError": "Internal server error",
+      "missingRequiredFields": "Missing required fields",
+      "failedToFetchProfile": "Failed to fetch user profile"
+    },
+    "redirect": {
+      "simulationTitle": "Redirect Simulation"
+    },
+    "ui": {
+      "close": "Close",
+      "more": "More",
+      "previousSlide": "Previous slide",
+      "nextSlide": "Next slide",
+      "toggleSidebar": "Toggle Sidebar",
+      "goToPreviousPage": "Go to previous page",
+      "goToNextPage": "Go to next page",
+      "carousel": {
+        "title": "Carousel",
+        "description": "Image carousel with navigation controls",
+        "previousSlide": "Previous slide",
+        "nextSlide": "Next slide",
+        "currentSlide": "Current slide",
+        "slide": "Slide",
+        "of": "of",
+        "slideInfo": "Slide {{current}} of {{total}}",
+        "goToSlide": "Go to slide {{number}}",
+        "autoplay": "Autoplay",
+        "pauseAutoplay": "Pause autoplay",
+        "resumeAutoplay": "Resume autoplay",
+        "stopAutoplay": "Stop autoplay",
+        "carouselNavigation": "Carousel navigation",
+        "carouselControls": "Carousel controls",
+        "slideNavigation": "Slide navigation",
+        "imageCarousel": "Image carousel",
+        "contentCarousel": "Content carousel",
+        "gallery": "Gallery",
+        "photoGallery": "Photo gallery",
+        "imageGallery": "Image gallery",
+        "slideshow": "Slideshow",
+        "presentation": "Presentation",
+        "showcase": "Showcase",
+        "browseImages": "Browse images",
+        "viewImages": "View images",
+        "navigateSlides": "Navigate slides",
+        "slideCount": "{{count}} slides",
+        "slideCountSingular": "{{count}} slide",
+        "slideCountPlural": "{{count}} slides",
+        "accessibility": {
+          "carousel": "Carousel",
+          "slide": "Slide",
+          "currentSlide": "Current slide, slide {{number}}",
+          "previousSlide": "Previous slide",
+          "nextSlide": "Next slide",
+          "goToSlide": "Go to slide {{number}}",
+          "slideCount": "Slide {{current}} of {{total}}",
+          "carouselNavigation": "Carousel navigation controls",
+          "slideNavigation": "Slide navigation controls",
+          "autoplayEnabled": "Autoplay enabled",
+          "autoplayDisabled": "Autoplay disabled",
+          "autoplayPaused": "Autoplay paused",
+          "autoplayStopped": "Autoplay stopped"
+        }
+      },
+      "form": {
+        "title": "Form",
+        "description": "Description",
+        "label": "Label",
+        "placeholder": "Placeholder",
+        "error": "Error",
+        "success": "Success",
+        "warning": "Warning",
+        "info": "Information",
+        "required": "Required",
+        "optional": "Optional",
+        "submit": "Submit",
+        "cancel": "Cancel",
+        "save": "Save",
+        "reset": "Reset",
+        "clear": "Clear",
+        "loading": "Loading...",
+        "saving": "Saving...",
+        "submitting": "Submitting...",
+        "validating": "Validating...",
+        "accessibility": {
+          "form": "Form",
+          "field": "Form field",
+          "required": "Required field",
+          "optional": "Optional field",
+          "error": "Field has error",
+          "success": "Field is valid",
+          "warning": "Field has warning",
+          "description": "Field description",
+          "label": "Field label"
+        },
+        "validation": {
+          "required": "This field is required",
+          "invalid": "This field is invalid",
+          "minLength": "Must be at least {{min}} characters",
+          "maxLength": "Must be no more than {{max}} characters",
+          "minValue": "Must be at least {{min}}",
+          "maxValue": "Must be no more than {{max}}",
+          "pattern": "Must match the required pattern",
+          "email": "Must be a valid email address",
+          "url": "Must be a valid URL",
+          "phone": "Must be a valid phone number",
+          "date": "Must be a valid date",
+          "time": "Must be a valid time",
+          "number": "Must be a valid number",
+          "integer": "Must be a whole number",
+          "positive": "Must be a positive number",
+          "negative": "Must be a negative number",
+          "between": "Must be between {{min}} and {{max}}",
+          "oneOf": "Must be one of the allowed values",
+          "custom": "Invalid value",
+          "unknown": "Unknown validation error"
+        },
+        "errors": {
+          "general": "Please fix the errors in the form",
+          "network": "Network error occurred",
+          "server": "Server error occurred",
+          "timeout": "Request timed out",
+          "unauthorized": "You are not authorized to perform this action",
+          "forbidden": "Access denied",
+          "notFound": "Resource not found",
+          "conflict": "Resource conflict",
+          "validation": "Validation failed",
+          "unknown": "An unknown error occurred"
+        },
+        "messages": {
+          "saved": "Form saved successfully",
+          "submitted": "Form submitted successfully",
+          "updated": "Form updated successfully",
+          "deleted": "Form deleted successfully",
+          "created": "Form created successfully",
+          "loaded": "Form loaded successfully",
+          "reset": "Form reset successfully",
+          "cleared": "Form cleared successfully"
+        }
+      },
+      "breadcrumb": {
+        "title": "Breadcrumb Navigation",
+        "description": "Navigation breadcrumb showing current location",
+        "separator": "Separator",
+        "ellipsis": "More",
+        "currentPage": "Current page",
+        "home": "Home",
+        "back": "Back",
+        "previous": "Previous",
+        "next": "Next",
+        "navigation": "Navigation",
+        "location": "Location",
+        "path": "Path",
+        "breadcrumb": "Breadcrumb",
+        "breadcrumbs": "Breadcrumbs",
+        "separatorText": "Separator",
+        "separatorDescription": "Separator between breadcrumb items",
+        "ellipsisText": "More items",
+        "ellipsisDescription": "More breadcrumb items available",
+        "accessibility": {
+          "breadcrumb": "Breadcrumb navigation",
+          "currentPage": "Current page",
+          "separator": "Separator",
+          "ellipsis": "More items",
+          "navigation": "Breadcrumb navigation",
+          "location": "Current location",
+          "path": "Navigation path",
+          "item": "Breadcrumb item",
+          "link": "Breadcrumb link",
+          "page": "Current page"
+        },
+        "separators": {
+          "chevron": "Chevron",
+          "slash": "Slash",
+          "arrow": "Arrow",
+          "greaterThan": "Greater than",
+          "dash": "Dash",
+          "dot": "Dot",
+          "pipe": "Pipe",
+          "default": "Default separator"
+        },
+        "messages": {
+          "navigateTo": "Navigate to {{item}}",
+          "currentLocation": "Current location: {{location}}",
+          "breadcrumbPath": "Breadcrumb path: {{path}}",
+          "moreItems": "More items available",
+          "separatorBetween": "Separator between {{item1}} and {{item2}}"
+        }
+      }
+    },
+    "auth": {
+      "protectedApplication": "Protected Application",
+      "protectedApplicationDesc": "This application is protected. Please enter the password to access.",
+      "incorrectPassword": "Incorrect password. Please try again.",
+      "password": "Password",
+      "enterPassword": "Enter your password",
+      "accessApplication": "Access Application"
+    },
+    "routeErrorBoundary": {
+      "code_1": "Error Code: ",
+      "reload_page_2": "Reload Page",
+      "technical_details_3": "Technical Details",
+      "pageNotFound": "Page Not Found",
+      "errorLoadingPage": "Error Loading Page",
+      "pageNotFoundDescription": "The requested page does not exist or has been moved.",
+      "errorLoadingPageDescription": "An error occurred while loading this page.",
+      "unknownError": "Unknown error",
+      "home": "Home",
+      "errorDetails": "Error Details",
+      "errorLogging": "Error logging details",
+      "timestamp": "Timestamp",
+      "errorMessage": "Error Message",
+      "errorStatus": "Error Status",
+      "errorDetailsLabel": "Error Details",
+      "location": "Location",
+      "consoleLog": "Error logged to console",
+      "actions": {
+        "goHome": "Go to Home Page",
+        "reloadPage": "Reload Current Page",
+        "viewDetails": "View Technical Details",
+        "hideDetails": "Hide Technical Details"
+      },
+      "messages": {
+        "errorCaught": "Error caught by RouteErrorBoundary",
+        "errorLogged": "Error details have been logged",
+        "contactSupport": "If this error persists, please contact support"
+      }
+    },
+    "appName": "LegacyGuard",
+    "cancel": "Mégse",
+    "error": "Hiba",
+    "retry": "Próbálja újra",
+    "goBack": "Vissza",
+    "goHome": "Ugrás az Irányítópultra"
+  },
+  "action": {
+    "loading": "Loading...",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "add": "Add",
+    "remove": "Remove",
+    "search": "Search",
+    "filter": "Filter"
+  },
+  "cta": {
+    "title": "Az Ön öröksége védelemre vár",
+    "subtitle": "Don't wait for 'someday' - give your family security today",
+    "description": "Csatlakozzon a több ezer családhoz, akik a LegacyGuard-ra bízzák legértékesebb emlékeik és fontos dokumentumaik megőrzését a jövő generációi számára.",
+    "button": "Kezdje el örökségi útját még ma",
+    "secondary": "Start Free Trial",
+    "urgency": "Setup takes 10 minutes, being prepared lasts forever",
+    "gentleUrgency": {
+      "1": "Every day matters when it comes to family security",
+      "2": "The best time to prepare was yesterday, the second best time is now",
+      "3": "Your family's security and preparedness can't wait",
+      "4": "10 minutes today saves your family 40+ hours later"
+    },
+    "socialUrgency": {
+      "1": "Join the families who are already prepared",
+      "2": "Don't be the family that wishes they had organized sooner",
+      "3": "Be the parent/spouse who thought ahead"
+    },
+    "timeUrgency": {
+      "1": "Start today, sleep better tonight",
+      "2": "Complete setup this weekend",
+      "3": "Give your family this gift today"
+    }
+  },
+  "validation": {
+    "errors": {
+      "nameMinLength": "A névnek legalább 2 karakter hosszúnak kell lennie",
+      "nameMaxLength": "A név legfeljebb {{max}} karakter hosszú lehet",
+      "fieldRequired": "A(z) {{field}} mező kötelező",
+      "countryRequired": "Az ország megadása kötelező",
+      "countryCodeLength": "Az országkódnak 2 karakter hosszúnak kell lennie",
+      "selectAtLeastOne": "Válasszon ki legalább egy {{field}}",
+      "selectUpTo": "Legfeljebb {{max}} {{field}} választhat",
+      "invalidEmail": "Adjon meg egy érvényes e-mail címet",
+      "invalidPhone": "Adjon meg egy érvényes telefonszámot",
+      "valueMustBeNumber": "Az értéknek számnak kell lennie",
+      "valueMustBePositive": "Az értéknek pozitívnak kell lennie",
+      "currencyCodeLength": "A pénznem kódjának 3 karakter hosszúnak kell lennie",
+      "maxCharacters": "A(z) {{field}} legfeljebb {{max}} karakter hosszú lehet",
+      "allocationRequired": "Az elosztási százalék kötelező",
+      "allocationMustBeNumber": "Az elosztásnak számnak kell lennie",
+      "allocationRange": "Az elosztásnak 1% és 100% között kell lennie",
+      "expirationDateFuture": "A lejárati dátumnak a jövőben kell lennie",
+      "maxTags": "Legfeljebb {{max}} címkét adhat hozzá",
+      "fileSizeTooLarge": "A fájlméret legfeljebb {{maxSize}} lehet",
+      "invalidFileType": "Csak {{types}} fájlok engedélyezettek",
+      "unknownError": "Ismeretlen hiba",
+      "dataNotFound": "A szükséges adatok nem találhatók",
+      "connectionError": "Csatlakozási hiba. Kérjük, ellenőrizze az internetkapcsolatát.",
+      "permissionDenied": "Nincs jogosultsága végrehajtani ezt a műveletet.",
+      "duplicateRecord": "Ilyen információkkal már létezik rekord.",
+      "assetNameRequired": "Asset name is required",
+      "assetTypeRequired": "Asset type is required",
+      "addressMaxLength": "Address can be a maximum of {{max}} characters",
+      "registryNumberMaxLength": "Registry number can be a maximum of {{max}} characters",
+      "institutionNameMaxLength": "Institution name can be a maximum of {{max}} characters",
+      "accountNumberMaxLength": "Account number can be a maximum of {{max}} characters",
+      "credentialsMaxLength": "Credentials can be a maximum of {{max}} characters",
+      "relationshipRequired": "Relationship is required",
+      "beneficiaryNameRequired": "Beneficiary name is required (min. 2 characters)",
+      "notesMaxLength": "Notes can be a maximum of {{max}} characters",
+      "documentNameRequired": "Document name is required",
+      "documentTypeRequired": "Document type is required",
+      "descriptionMaxLength": "Description can be a maximum of {{max}} characters"
+    }
+  },
+  "errors": {
+    "dataNotFound": "A szükséges adatok nem találhatók.",
+    "networkError": "Hálózati hiba. Kérjük, ellenőrizze az internetkapcsolatát.",
+    "permissionDenied": "Nincs jogosultsága ehhez a művelethez.",
+    "duplicateRecord": "Ilyen adatokkal már létezik rekord.",
+    "unknown": "Váratlan hiba történt."
+  },
+  "app": {
+    "name": "LegacyGuard",
+    "comingSoon": {
+      "heritageVault": "Heritage Vault - Coming Soon",
+      "guardianNetwork": "Guardian Network - Coming Soon"
+    },
+    "tagline": "Az Ön örökségének védelme"
+  },
+  "index": {
+    "welcome": "Üdvözöljük az Üres Alkalmazásában",
+    "startBuilding": "Kezdje el építeni a csodálatos projektjét itt!"
+  },
+  "notfound": {
+    "title": "Az oldal nem található",
+    "description": "A keresett oldal nem létezik, vagy áthelyezték.",
+    "goHome": "Kezdőlapra",
+    "goBack": "Vissza"
+  },
+  "countryLanguage": {
+    "title": "Üdvözöljük a LegacyGuard-ban",
+    "description": "Kérjük, erősítse meg tartózkodási helyét és nyelvi beállításait",
+    "detectedLocation": "Észleltük, hogy Ön itt tartózkodik: {{country}}",
+    "selectCountry": "Válassza ki az országát",
+    "selectLanguage": "Válassza ki a nyelvét",
+    "chooseLang": "Válasszon nyelvet",
+    "domainSuggestion": "Jobb élmény érhető el",
+    "domainSuggestionText": "Javasoljuk a(z) {{domain}} használatát a legjobb élmény érdekében az Ön régiójában",
+    "privacyNote": "A tartózkodási hely adatait csak a legjobb helyi élmény biztosítására használjuk, és soha nem osztjuk meg harmadik felekkel.",
+    "confirm": "Megerősítés",
+    "confirmAndRedirect": "Tovább a(z) {{domain}} oldalra"
+  },
+  "hero": {
+    "title": "Védje meg családja digitális örökségét örökre",
+    "subtitle": "A biztonságos, intuitív platform, amely segít a családoknak megszervezni, megvédeni és átadni legfontosabb emlékeiket és dokumentumaikat generációkon át.",
+    "cta_primary": "Indítsa el az Örökség Tervét",
+    "cta_secondary": "Demó megtekintése",
+    "trustSignals": {
+      "dataOwnership": "Az Ön adatai az Önéi maradnak - soha nem adjuk el",
+      "gdprCompliant": "GDPR-kompatibilis kialakítás",
+      "europeanFamilies": "Európai családok számára készült"
+    },
+    "community": {
+      "growing": "Csatlakozzon a(z) {{count}} családhoz, akik már védik örökségüket",
+      "growingFallback": "Csatlakozzon növekvő közösségünkhöz"
+    }
+  },
+  "nav": {
+    "dashboard": "Irányítópult",
+    "manual": "Kézikönyv",
+    "vault": "Örökség Széf",
+    "guardians": "Őrzők Hálózata",
+    "will": "Végrendelet",
+    "settings": "Beállítások",
+    "help": "Súgó és támogatás"
+  },
+  "pillars": {
+    "secure": {
+      "title": "BIZTONSÁG",
+      "description": "Védje családját és vagyonát proaktív biztonsági intézkedésekkel"
+    },
+    "organize": {
+      "title": "SZERVEZÉS",
+      "description": "Katalogizálja és kezelje digitális és fizikai eszközeit"
+    },
+    "transfer": {
+      "title": "ÁTADÁS",
+      "description": "Biztosítsa, hogy öröksége az Ön kívánságai szerint kerüljön átadásra"
+    }
+  },
+  "features": {
+    "title": "Miért válassza a LegacyGuard-ot?",
+    "subtitle": "Vállalati szintű biztonsággal készült, és olyan családok számára tervezték, akik értékelik örökségüket.",
+    "security": {
+      "title": "Abszolút titoktartás és adatvédelem",
+      "description": "Úgy terveztük, hogy illetéktelen személy ne férhessen hozzá az adataihoz. Még mi sem. Az Ön adatainak védelme a legfőbb prioritásunk."
+    },
+    "guardians": {
+      "title": "Őrzők Hálózata",
+      "description": "Jelöljön ki megbízható családtagokat és barátokat őrzőként az örökség folytonosságának biztosítására."
+    },
+    "storage": {
+      "title": "Biztonságos felhőalapú tárolás",
+      "description": "Redundáns biztonsági mentések több adatközpontban, 99,99%-os rendelkezésre állási garanciával."
+    },
+    "timelock": {
+      "title": "Időzárral ellátott hozzáférés",
+      "description": "Állítson be feltételeket arra, hogy a kedvezményezettek mikor és hogyan férhetnek hozzá digitális örökségéhez."
+    },
+    "stories": {
+      "title": "Személyes történetek",
+      "description": "Hozzon létre gazdag multimédiás elbeszéléseket, amelyek megragadják családja utazásának lényegét."
+    },
+    "preservation": {
+      "title": "Élethosszig tartó megőrzés",
+      "description": "Örökségét határozatlan ideig megőrizzük automatikus formátum-migrációval és frissítésekkel."
+    }
+  },
+  "dashboard": {
+    "strategicSummary": {
+      "initial": "Kezdje el építeni a digitális örökségét az első dokumentuma hozzáadásával.",
+      "addDocument": "Dokumentum Hozzáadása",
+      "addPrimaryGuardian": "Add primary guardian",
+      "addBackupGuardian": "Add backup guardian",
+      "addHomeProperty": "Add your home property",
+      "addFinancialAccounts": "Add financial accounts",
+      "addPrimaryBeneficiary": "Add primary beneficiary",
+      "addContingentBeneficiaries": "Add contingent beneficiaries",
+      "minutes": "{{count}} minutes",
+      "assetInventory": "Eszközleltár",
+      "assetInventoryDesc": "Értékes vagyontárgyaid teljes listája",
+      "criticalDocuments": "Kritikus dokumentumok",
+      "criticalDocumentsDesc": "Alapvető dokumentumok, amelyekre a családodnak azonnal szüksége van",
+      "guardianNetwork": "Guardian Network",
+      "guardianNetworkDesc": "Megbízható emberek kezelik az ügyeidet",
+      "ifNotDone": "⚠️ If Not Done",
+      "impact": {},
+      "inheritancePlan": "Öröklési terv",
+      "inheritancePlanDesc": "Egyértelmű utasítások az eszközelosztásra",
+      "nextAction": "⚡ Next Action",
+      "nextCriticalStep": "Következő kritikus lépés",
+      "startWithNext": "Kezdje a következő kritikus lépéssel",
+      "subtitle": "{count} kulcsfontosságú területed van, amelyre oda kell figyelned. Ezeknek a lépéseknek a végrehajtása {percentage}% -os védelmet biztosít családjának és eszközeinek.",
+      "title": "Stratégiai áttekintés",
+      "whyImportant": "🛡️ Why Important"
+    },
+    "stats": {
+      "totalAssets": "Összes eszköz",
+      "activeAssetsManaged": "Aktív kezelt eszközök",
+      "activeGuardians": "Aktív őrzők",
+      "trustedGuardians": "Hozzárendelt megbízható őrzők",
+      "beneficiaries": "Kedvezményezettek",
+      "legacyRecipients": "Megnevezett örökség-kedvezményezettek",
+      "securityScore": "Biztonsági pontszám",
+      "securityScoreValue": "98%",
+      "excellent": "Kiváló",
+      "good": "Jó",
+      "needsImprovement": "Fejlesztést Igényel"
+    },
+    "quickTasks": {
+      "taskCompleted": "Task completed!",
+      "taskStarted": "Starting task...",
+      "tasks": {
+        "birthCertificate": {
+          "title": "🛡️ Add Birth Certificate",
+          "description": "Without this document, your family cannot prove inheritance rights or access accounts"
+        },
+        "insurancePolicy": {
+          "title": "💰 Add Life Insurance Policy",
+          "description": "Your family needs immediate access to claim benefits and avoid delays"
+        },
+        "will": {
+          "title": "⚖️ Add Will or Testament",
+          "description": "Prevents family disputes and ensures your wishes are followed"
+        },
+        "spouseGuardian": {
+          "title": "👥 Add Spouse as Guardian",
+          "description": "Without guardians, no one can legally act on your behalf or make medical decisions"
+        },
+        "backupGuardian": {
+          "title": "🤝 Add Backup Guardian",
+          "description": "Ensures someone can step in if your primary guardian is unavailable"
+        },
+        "bankAccount": {
+          "title": "🏦 Add Bank Account",
+          "description": "Your family needs to know where your money is to access it immediately"
+        },
+        "homeProperty": {
+          "title": "🏠 Add Home Property",
+          "description": "Prevents your family from losing your most valuable asset"
+        },
+        "vehicle": {
+          "title": "🚗 Add Vehicle",
+          "description": "Ensures your family can transfer ownership and avoid complications"
+        },
+        "spouseBeneficiary": {
+          "title": "💝 Add Spouse as Beneficiary",
+          "description": "Without clear instructions, family disputes can arise over inheritance"
+        },
+        "childrenBeneficiaries": {
+          "title": "👶 Add Children as Beneficiaries",
+          "description": "Ensures your children receive what you intended for them"
+        }
+      },
+      "allCompleted": "Összes feladat teljesítve",
+      "allTasks": "Minden feladat",
+      "assets": "Eszközök",
+      "beneficiaries": "Kedvezményezettek",
+      "completed": "befejezve",
+      "documents": "Dokumentumok",
+      "greatProgress": "Remekül haladsz! {count} feladatot teljesítettél.",
+      "guardians": "Gyáms",
+      "ifNotDone": "⚠️ If Not Done",
+      "markAsComplete": "Megjelölés készként",
+      "progress": "Előrehaladás",
+      "start": "Start",
+      "title": "5 perces feladatok",
+      "wellOnWay": "🎉 Jó úton haladsz a családod jövőjének biztosítása felé!",
+      "whyImportant": "🛡️ Why Important"
+    },
+    "familyGuide": {
+      "view": "View",
+      "subtitle": "Automatically generated guide for your family",
+      "discreteModeDesc": "Your personal notes and reminders",
+      "callNow": "Hívás most",
+      "callSoon": "Hívás hamarosan",
+      "critical": "Kritikus",
+      "discreteMode": "Diszkrét üzemmód",
+      "emergencyContacts": "Vészhelyzetben értesítendő személyek",
+      "exportGuide": "Útmutató exportálása",
+      "generateGuide": "Útmutató létrehozása",
+      "important": "Fontos",
+      "importantDocuments": "Fontos dokumentumok",
+      "shareWithFamily": "Megosztás a családdal",
+      "timeline": "Teendő",
+      "title": "Családi vészhelyzeti útmutató"
+    },
+    "sectionHeaders": {}
+  },
+  "onboarding": {
+    "title": "Üdvözöljük a LegacyGuard-ban",
+    "subtitle": "Engedje meg, hogy segítsünk bebiztosítani családja jövőjét",
+    "mainTitle": "Örökségvédelmi Terv",
+    "mainSubtitle": "Hozzuk létre személyre szabott örökségvédelmi tervét",
+    "progressText": "Örökségvédelmi Terv: {{step}}. lépés a 4-ből",
+    "skipButton": "Kihagyás egyelőre",
+    "skipConfirmTitle": "Kihagyja a bevezetést?",
+    "skipConfirmMessage": "Ezt a beállítást később bármikor újraindíthatja a beállításokban",
+    "skipConfirmYes": "Kihagyás",
+    "skipConfirmNo": "Beállítás folytatása",
+    "restartButton": "Bevezetés újraindítása",
+    "welcomeBack": "Üdvözöljük újra! Készen áll a beállítás befejezésére?",
+    "resumeTitle": "Folytassa ott, ahol abbahagyta",
+    "resumeMessage": "A(z) {{step}}. lépésnél tartott a 4-ből",
+    "partialProgress": "{{percentage}}% kész",
+    "inventory": {
+      "documentAccess": {
+        "question": "Ha ma történne Önnel valami, tudná a családja, hol találja a fontos dokumentumait?",
+        "answers": {
+          "yes": "Igen",
+          "no": "Nem",
+          "partially": "Részben"
+        }
+      },
+      "caretaker": {
+        "question": "Ki gondoskodna a gyermekeiről/vagyonáról/digitális fiókjairól?",
+        "answers": {
+          "designated": "Van kijelölt személy",
+          "familyFigureOut": "A család kitalálná",
+          "notThought": "Nem gondolkodtam rajta"
+        }
+      },
+      "familyClarity": {
+        "question": "Úgy érzi, a családja tudná, mit szeretett volna számukra?",
+        "answers": {
+          "clear": "Igen, egyértelmű",
+          "somewhat": "Valamennyire",
+          "neverDiscussed": "Nem, soha nem beszéltünk róla"
+        }
+      },
+      "biggestWorry": {
+        "question": "Mi aggasztja a legjobban a családja jövőjével kapcsolatban?",
+        "answers": {
+          "financial": "Pénzügyi biztonság",
+          "legal": "Jogi bonyodalmak",
+          "memories": "Emlékek elvesztése",
+          "conflicts": "Családi konfliktusok"
+        }
+      },
+      "personalized": {
+        "documentCentralization": "A dokumentumokhoz való hozzáférésről adott válasza alapján javasoljuk, hogy kezdje a fontos dokumentumok központosításával.",
+        "guardianDesignation": "Mivel még nem jelölt ki senkit, aki gondoskodna a vagyonáról, egy őrző kijelölése kellene, hogy legyen a prioritása.",
+        "willPreparation": "A családjának tisztánlátásra van szüksége a kívánságait illetően. A végrendelet elkészítése elengedhetetlen első lépés.",
+        "financialPlanning": "A pénzügyi biztonság kulcsfontosságú. Kezdjük a bankszámláinak és vagyonának dokumentálásával.",
+        "conflictPrevention": "A családi konfliktusok megelőzése érdekében a tiszta dokumentáció és kommunikáció kulcsfontosságú.",
+        "memoryPreservation": "Az emlékek megőrzése a digitális fényképek és történetek rendszerezésével kezdődik.",
+        "legalOrganization": "Rendszerezzük a jogi dokumentumait, hogy elkerüljük a későbbi bonyodalmakat."
+      }
+    },
+    "q1": {
+      "title": "Ha ma történne Önnel valami, tudná a családja, hol találja a fontos dokumentumait?",
+      "option1": "Igen",
+      "option2": "Nem",
+      "option3": "Részben"
+    },
+    "q2": {
+      "title": "Ki gondoskodna a gyermekeiről/vagyonáról/digitális fiókjairól?",
+      "option1": "Van kijelölt személy",
+      "option2": "A család kitalálná",
+      "option3": "Nem gondolkodtam rajta"
+    },
+    "q3": {
+      "title": "Úgy érzi, a családja tudná, mit szeretett volna számukra?",
+      "option1": "Igen, egyértelmű",
+      "option2": "Valamennyire",
+      "option3": "Nem, soha nem beszéltünk róla"
+    },
+    "q4": {
+      "title": "Mi aggasztja a legjobban a családja jövőjével kapcsolatban?",
+      "option1": "Pénzügyi biztonság",
+      "option2": "Jogi bonyodalmak",
+      "option3": "Emlékek elvesztése",
+      "option4": "Családi konfliktusok"
+    },
+    "buttons": {
+      "previous": "Előző",
+      "next": "Következő",
+      "generate": "Örökségvédelmi Tervem létrehozása"
+    },
+    "analysis": {
+      "title": "Válaszainak elemzése...",
+      "subtitle": "Személyes 'Örökségvédelmi Tervének' előkészítése...",
+      "done": "Kész!"
+    },
+    "complete": "Nagyszerű kezdet! Válaszai alapján személyre szabtuk az irányítópultját. Készen áll arra, hogy elkezdje építeni átfogó örökségi tervét.",
+    "success": {
+      "stepCompleted": "{{step}}. lépés sikeresen befejezve!",
+      "inventoryComplete": "Az életleltár elkészült! Személyre szabott terve készen áll.",
+      "allQuestionsAnswered": "Minden kérdés megválaszolva. Cselekvési tervének generálása..."
+    },
+    "errors": {
+      "questionRequired": "Kérjük, válaszoljon erre a kérdésre a folytatáshoz",
+      "failedToSave": "Nem sikerült menteni a válaszait. Kérjük, próbálja újra.",
+      "loadingFailed": "Nem sikerült betölteni a bevezető kérdéseket"
+    },
+    "addAnother": "Másik hozzáadása",
+    "previous": "Előző",
+    "next": "Következő",
+    "continue": "Tovább az Irányítópultra"
+  },
+  "manual": {
+    "title": "Kézikönyv Hátramaradottaknak",
+    "subtitle": "Lényeges információk szeretteinek, amikor a legnagyobb szükségük van rá",
+    "tabs": {
+      "contacts": "Fontos Kapcsolatok",
+      "documents": "Kulcsfontosságú Dokumentumok",
+      "instructions": "Utasítások"
+    },
+    "contacts": {
+      "title": "Fontos Kapcsolatok",
+      "description": "Kulcsfontosságú személyek, akiket családjának vészhelyzet esetén értesítenie kell",
+      "addContact": "Kapcsolat hozzáadása",
+      "addFirstContact": "Adja hozzá az első kapcsolatot",
+      "loading": "Kapcsolatok betöltése...",
+      "empty": {
+        "title": "Még nincsenek hozzáadva kapcsolatok",
+        "description": "Kezdje azzal, hogy hozzáadja a fontos személyeket, akikről a családjának tudnia kell."
+      },
+      "form": {
+        "editTitle": "Kapcsolat szerkesztése",
+        "addTitle": "Fontos kapcsolat hozzáadása",
+        "description": "Adjon hozzá személyeket, akiket családja fontos helyzetekben értesíthet.",
+        "nameLabel": "Kapcsolat neve *",
+        "namePlaceholder": "pl. Kovács János",
+        "roleLabel": "Szerep/Foglalkozás *",
+        "rolePlaceholder": "pl. Családi ügyvéd, Könyvelő, Orvos",
+        "phoneLabel": "Telefonszám",
+        "phonePlaceholder": "+36 30 123 4567",
+        "emailLabel": "E-mail cím",
+        "emailPlaceholder": "kapcsolat@pelda.com",
+        "notesLabel": "Jegyzetek",
+        "notesPlaceholder": "További információk erről a kapcsolatról...",
+        "updateButton": "Kapcsolat frissítése",
+        "addButton": "Kapcsolat hozzáadása",
+        "saving": "Mentés...",
+        "cancel": "Mégse"
+      },
+      "card": {
+        "edit": "Szerkesztés"
+      },
+      "messages": {
+        "nameAndRoleRequired": "A név és a szerep kötelező",
+        "loginRequired": "Be kell jelentkeznie a kapcsolatok mentéséhez",
+        "updated": "A kapcsolat sikeresen frissítve!",
+        "added": "A kapcsolat sikeresen hozzáadva!",
+        "deleted": "A kapcsolat sikeresen törölve!"
+      },
+      "errors": {
+        "loadFailed": "Nem sikerült betölteni a kapcsolatokat",
+        "saveFailed": "Nem sikerült menteni a kapcsolatot",
+        "deleteFailed": "Nem sikerült törölni a kapcsolatot"
+      }
+    },
+    "documents": {
+      "title": "Kulcsfontosságú Dokumentumok",
+      "description": "Kritikus dokumentumok, amelyekről a családjának tudnia kell",
+      "loading": "Kulcsfontosságú dokumentumok betöltése...",
+      "empty": {
+        "title": "Még nincsenek hozzáadva kulcsfontosságú dokumentumok",
+        "description": "Jelölje meg a fontos dokumentumokat \"kulcsfontosságú dokumentumként\" a széfjéből, hogy itt megjelenjenek.",
+        "tip": "Tipp: Menjen a széfjébe, és kapcsolja be a \"Belefoglalás a Kézikönyv Hátramaradottaknak\" opciót a fontos dokumentumoknál"
+      },
+      "card": {
+        "essentialNote": "Ez a dokumentum elengedhetetlennek van megjelölve a hátramaradottak számára."
+      },
+      "errors": {
+        "loadFailed": "Nem sikerült betölteni a kulcsfontosságú dokumentumokat"
+      },
+      "expiration": {
+        "expired": "Lejárt",
+        "expiresSoon": "Hamarosan lejár",
+        "expiring": "Lejár"
+      }
+    },
+    "instructions": {
+      "title": "Végakarat és Utasítások",
+      "description": "Személyes útmutatások és üzenetek szeretteinek",
+      "loading": "Utasítások betöltése...",
+      "autoSaveNote": "Az utasításai automatikusan mentésre kerülnek gépelés közben",
+      "sections": {
+        "funeral": {
+          "title": "Temetési kívánságok",
+          "description": "Az Ön preferenciái a temetési szertartásokkal és rendezvényekkel kapcsolatban",
+          "placeholder": "pl. Hamvasztás, nincs hivatalos szertartás, játsszák le a 'My Way'-t Frank Sinatrától..."
+        },
+        "digitalAccounts": {
+          "title": "Digitális fiókok leállítása",
+          "description": "Utasítások a digitális fiókjainak és online jelenlétének kezelésére",
+          "placeholder": "pl. Kérlek, töröljétek a Facebook profilomat, de archiváljátok a Gmail-emet. Másoljátok át a fotóimat a Google Drive-ról ide..."
+        },
+        "messages": {
+          "title": "Üzenetek szeretteimnek",
+          "description": "Személyes üzenetek és utolsó gondolatok családjának és barátainak",
+          "placeholder": "Ossza meg gondolatait, emlékeit és utolsó üzeneteit azoknak, akiket szeret..."
+        }
+      },
+      "errors": {
+        "loadFailed": "Nem sikerült betölteni az utasításokat"
+      }
+    }
+  },
+  "documentTypes": {
+    "realEstateDeed": "Tulajdoni lap",
+    "birthCertificate": "Születési anyakönyvi kivonat",
+    "insurancePolicy": "Biztosítási kötvény",
+    "lastWill": "Végrendelet",
+    "employmentContract": "Munkaszerződés",
+    "passport": "Útlevél",
+    "drivingLicense": "Vezetői engedély",
+    "bankStatement": "Bankszámlakivonat",
+    "investmentCertificate": "Befektetési igazolás",
+    "energyContract": "Energiaszolgáltatási szerződés",
+    "softwareLicense": "Szoftverlicenc",
+    "subscriptionService": "Előfizetési szolgáltatás",
+    "other": "Egyéb"
+  },
+  "navigation": {
+    "dashboard": "Irányítópult",
+    "assets": "Eszközök",
+    "manual": "Kézikönyv",
+    "documents": "Örökség Széf",
+    "guardians": "Őrzők Hálózata",
+    "will": "Végrendelet",
+    "settings": "Beállítások",
+    "help": "Súgó és támogatás"
+  },
+  "invite": {
+    "title": "{{name}} meghívta Önt, hogy legyen digitális örökségének Őrzője"
+  },
+  "settings": {
+    "title": "Beállítások",
+    "subtitle": "Kezelje fiókja beállításait és biztonsági beállításait",
+    "loading": "Fiókbeállításainak betöltése...",
+    "profile": {
+      "title": "Profilinformációk",
+      "description": "Frissítse személyes adatait és beállításait",
+      "emailAddress": "E-mail cím",
+      "emailCannotBeChanged": "Az e-mail címe nem módosítható",
+      "firstName": "Keresztnév",
+      "firstNamePlaceholder": "Adja meg a keresztnevét",
+      "lastName": "Vezetéknév",
+      "lastNamePlaceholder": "Adja meg a vezetéknevét",
+      "saving": "Mentés...",
+      "saveChanges": "Változtatások mentése"
+    },
+    "security": {
+      "title": "Biztonság",
+      "description": "Kezelje fiókja biztonságát és hozzáférését",
+      "changePassword": "Jelszó megváltoztatása",
+      "currentPassword": "Jelenlegi jelszó",
+      "currentPasswordPlaceholder": "Adja meg a jelenlegi jelszót",
+      "newPassword": "Új jelszó",
+      "newPasswordPlaceholder": "Adja meg az új jelszót",
+      "confirmNewPassword": "Új jelszó megerősítése",
+      "confirmNewPasswordPlaceholder": "Erősítse meg az új jelszót",
+      "updating": "Frissítés...",
+      "updatePassword": "Jelszó frissítése",
+      "twoFactorAuth": "Kétfaktoros hitelesítés",
+      "enable2FA": "2FA engedélyezése",
+      "2FADescription": "Adjon hozzá egy extra biztonsági réteget a fiókjához. (Hamarosan elérhető)"
+    },
+    "accountManagement": {
+      "title": "Fiókkezelés",
+      "description": "Végleges fiókműveletek - kérjük, óvatosan járjon el",
+      "deleteAccountTitle": "Fiók törlése",
+      "deleteAccountWarning": "Ez a művelet visszavonhatatlan, és véglegesen törli az összes adatát, beleértve a feltöltött dokumentumokat és az előkészített utasításokat. Digitális örökségi információi teljesen eltávolításra kerülnek rendszereinkből.",
+      "deleteMyAccount": "Fiókom törlése",
+      "confirmTitle": "Teljesen biztos benne?",
+      "confirmDescription": "Ez a művelet nem vonható vissza. Véglegesen törli a fiókját és eltávolítja az összes adatát a szervereinkről.",
+      "confirmEmailPrompt": "Kérjük, írja be az e-mail címét ({{email}}) a megerősítéshez:",
+      "emailPlaceholder": "Adja meg az e-mail címét",
+      "deleting": "Törlés...",
+      "deleteAccount": "Fiók törlése"
+    },
+    "errors": {
+      "loadProfile": "Nem sikerült betölteni a profilinformációkat",
+      "updateProfile": "Nem sikerült frissíteni a profilt",
+      "passwordFieldsRequired": "Kérjük, töltse ki az összes jelszómezőt",
+      "passwordsDoNotMatch": "Az új jelszavak nem egyeznek",
+      "passwordTooShort": "Az új jelszónak legalább 6 karakter hosszúnak kell lennie",
+      "updatePassword": "Nem sikerült frissíteni a jelszót",
+      "emailDoesNotMatch": "Az e-mail cím nem egyezik",
+      "deleteAccountSupport": "A fiók törlését a támogatáson keresztül kell kérni. Kérjük, vegye fel velünk a kapcsolatot segítségért.",
+      "deleteAccount": "Nem sikerült törölni a fiókot"
+    },
+    "success": {
+      "profileUpdated": "A profil sikeresen frissítve",
+      "passwordUpdated": "A jelszó sikeresen frissítve"
+    }
+  },
+  "debug": {
+    "panel": {
+      "title": "Hibakereső panel",
+      "recentErrors": "Legutóbbi alkalmazáshibák",
+      "technicalDetails": "Technikai részletek",
+      "tabs": {
+        "list": "Lista",
+        "details": "Részletek"
+      },
+      "errorCount": "{{count}} hiba",
+      "actions": {
+        "downloadErrors": "Hibák letöltése",
+        "clearAllErrors": "Összes hiba törlése"
+      },
+      "messages": {
+        "errorsCleared": "Minden hiba törölve",
+        "errorCopied": "Hiba a vágólapra másolva",
+        "errorsDownloaded": "Hibák letöltve"
+      },
+      "error": {
+        "unknownError": "Ismeretlen hiba",
+        "noMessage": "Nincs üzenet",
+        "errorMessage": "Hibaüzenet"
+      },
+      "sections": {
+        "stackTrace": "Verem nyomkövetés",
+        "context": "Kontextus",
+        "location": "Hely",
+        "browserInfo": "Böngésző információk",
+        "time": "Idő"
+      },
+      "fields": {
+        "url": "URL:",
+        "path": "Útvonal:",
+        "query": "Lekérdezés:",
+        "userAgent": "User Agent:",
+        "viewport": "Viewport:"
+      }
+    }
+  },
+  "will": {
+    "errors": {
+      "mustBeLoggedIn": "A mentéshez be kell jelentkeznie.",
+      "loadingFailed": "Nem sikerült betölteni a végrendeletet.",
+      "savingFailed": "Nem sikerült menteni a végrendeletet."
+    },
+    "messages": {
+      "savedSuccessfully": "A végrendelet sikeresen mentve.",
+      "documentUploaded": "A dokumentum sikeresen feltöltve."
+    },
+    "loading": "Végrendelet betöltése...",
+    "title": "Végrendelet",
+    "subtitle": "Kezelje végrendeletét és jelölje ki a végrehajtóit.",
+    "sections": {
+      "statusInfo": "Állapot és információk",
+      "willDocument": "Végrendeleti dokumentum"
+    },
+    "fields": {
+      "currentStatus": "Jelenlegi állapot",
+      "physicalLocation": "Fizikai hely",
+      "executorContact": "Végrehajtó elérhetősége",
+      "additionalNotes": "További jegyzetek"
+    },
+    "placeholders": {
+      "physicalLocation": "pl. Otthoni széf, Ügyvédi iroda",
+      "selectContact": "Válasszon kapcsolatot",
+      "additionalNotes": "Bármilyen további információ..."
+    },
+    "descriptions": {
+      "statusDescription": "Kövesse nyomon végrendelete jelenlegi állapotát.",
+      "physicalLocationDescription": "Hol tárolják fizikailag a végrendeletét?",
+      "executorDescription": "A végrendelet végrehajtásáért felelős személy."
+    },
+    "options": {
+      "noContactSelected": "Nincs kiválasztva kapcsolat"
+    },
+    "status": {
+      "notStarted": "Nincs elkezdve",
+      "inPreparation": "Előkészületben",
+      "completedSigned": "Befejezve és aláírva",
+      "withNotary": "Közjegyzőnél",
+      "draft": "Piszkozat",
+      "notarized": "Közjegyző által hitelesített",
+      "stored": "Tárolva",
+      "updated": "Frissítve"
+    },
+    "document": {
+      "uploaded": "Végrendeleti dokumentum feltöltve",
+      "uploadedDescription": "Végrendeleti dokumentumát biztonságosan tároljuk.",
+      "noDocument": "Nincs végrendeleti dokumentum",
+      "noDocumentDescription": "Töltsön fel egy másolatot a végrendeletéről a biztonságos megőrzés érdekében."
+    },
+    "buttons": {
+      "saveWillInfo": "Végrendeleti információk mentése",
+      "saving": "Mentés...",
+      "uploadDocument": "Dokumentum feltöltése",
+      "uploadNewVersion": "Új verzió feltöltése"
+    },
+    "steps": {
+      "countrySelection": "Ország kiválasztása",
+      "countrySelectionDesc": "Válassza ki az országát és adja meg az adatait",
+      "assetAllocation": "Vagyonelosztás",
+      "assetAllocationDesc": "Ossza el a vagyont a kedvezményezettek között",
+      "beneficiaries": "Kedvezményezettek",
+      "beneficiariesDesc": "Határozza meg a kedvezményezetteket",
+      "executors": "Végrehajtók",
+      "executorsDesc": "Rendeljen végrehajtókat a végrendelet kezeléséhez",
+      "review": "Felülvizsgálat",
+      "reviewDesc": "Vizsgálja felül és véglegesítse a végrendeletét"
+    },
+    "progress": "{{current}}. lépés / {{total}}",
+    "validation": {
+      "selectCountry": "Kérjük, válasszon országot",
+      "requiredField": "Ez a mező kötelező",
+      "allocation100": "A teljes elosztásnak 100%-nak kell lennie",
+      "atLeastOneBeneficiary": "Legalább egy kedvezményezett szükséges",
+      "executorRequired": "Végrehajtó megadása kötelező",
+      "fixErrors": "Kérjük, javítsa a hibákat az űrlapon"
+    },
+    "generation": {
+      "success": "A végrendelet sikeresen generálva!",
+      "error": "Nem sikerült generálni a végrendeletet"
+    }
+  },
+  "contacts": {
+    "errors": {
+      "loadingFailed": "Nem sikerült betölteni a kapcsolatokat."
+    }
+  },
+  "guardianUpload": {
+    "error": "Hiba",
+    "success": "Siker",
+    "fillRequired": "Kérjük, töltse ki az összes kötelező mezőt",
+    "loginToSave": "Be kell jelentkeznie az őrzők mentéséhez",
+    "updated": "Az őrző sikeresen frissítve",
+    "added": "Az őrző sikeresen hozzáadva",
+    "failedSave": "Nem sikerült menteni az őrzőt. Kérjük, próbálja újra.",
+    "editTitle": "Őrző szerkesztése",
+    "addTitle": "Őrző hozzáadása",
+    "description": "Adjon hozzá valakit, akiben megbízik, hogy segítsen kezelni az örökségét",
+    "fullNameLabel": "Őrző teljes neve *",
+    "fullNamePlaceholder": "Adja meg az őrző teljes nevét",
+    "relationshipLabel": "Kapcsolat *",
+    "relationshipPlaceholder": "Válassza ki a kapcsolatot",
+    "countryLabel": "Lakóhely szerinti ország *",
+    "countryPlaceholder": "Válassza ki az országot",
+    "countryDescription": "Válassza ki az országot, ahol ez az őrző lakik",
+    "rolesTitle": "Szerepek és felelősségek",
+    "saving": "Mentés...",
+    "updateButton": "Őrző frissítése",
+    "addButton": "Őrző hozzáadása",
+    "relationships": {
+      "spouse": "Házastárs",
+      "parent": "Szülő",
+      "sibling": "Testvér",
+      "child": "Gyermek",
+      "friend": "Barát",
+      "legalProfessional": "Jogi szakember",
+      "other": "Egyéb"
+    },
+    "roles": {
+      "guardianForChildren": "Gyám",
+      "executorOfWill": "Végrendeleti végrehajtó",
+      "healthcareProxy": "Egészségügyi meghatalmazott",
+      "financialPowerOfAttorney": "Pénzügyi meghatalmazott",
+      "emergencyContact": "Sürgősségi kapcsolattartó",
+      "trustee": "Vagyonkezelő"
+    }
+  },
+  "documentUpload": {
+    "fileUploadedSuccess": "A fájl sikeresen feltöltve!",
+    "fileUploadFailed": "Nem sikerült feltölteni a fájlt. Kérjük, próbálja újra.",
+    "fileTooLarge": "A kiválasztott fájl túl nagy. A maximális méret {{maxSize}} MB.",
+    "fillRequiredFields": "Kérjük, töltse ki az összes kötelező mezőt",
+    "loginToSave": "Be kell jelentkeznie a dokumentumok mentéséhez",
+    "saved": "A dokumentum sikeresen mentve!",
+    "failedSave": "Nem sikerült menteni a dokumentumot. Kérjük, próbálja újra.",
+    "detailsTitle": "Dokumentum részletei",
+    "detailsSubtitle": "Adjon meg információkat a feltöltött dokumentumról",
+    "namePlaceholder": "Adja meg a dokumentum nevét",
+    "typePlaceholder": "Válassza ki a dokumentum típusát",
+    "countryPlaceholder": "Válassza ki az országot",
+    "pickDate": "Válasszon dátumot",
+    "title": "Dokumentum feltöltése",
+    "subtitle": "Töltsön fel jogi és személyes dokumentumokat biztonságosan",
+    "browseFiles": "Fájlok tallózása",
+    "chooseDifferent": "Másik fájl választása",
+    "uploadButton": "Dokumentum feltöltése",
+    "storageLimitReached": "Nem lehet feltölteni a fájlt. Önnek {{remaining}} tárhelye maradt, de ez a fájl {{fileSize}} méretű. Kérjük, frissítse a tervét, vagy távolítson el néhány meglévő fájlt."
+  },
+  "auth": {
+    "noAccount": "Nincs fiókja?",
+    "signUpLink": "Regisztráció",
+    "hasAccount": "Már van fiókja?",
+    "loginLink": "Bejelentkezés",
+    "loginButton": "Bejelentkezés",
+    "signupButton": "Regisztráció"
+  },
+  "assetDetail": {
+    "loading": "Eszköz részleteinek betöltése...",
+    "errors": {
+      "failedToLoad": "Nem sikerült betölteni az eszköz részleteit",
+      "nameRequired": "Az eszköz neve kötelező",
+      "failedToSave": "Nem sikerült menteni az eszközt"
+    },
+    "messages": {
+      "createdSuccessfully": "Az eszköz sikeresen létrehozva",
+      "updatedSuccessfully": "Az eszköz sikeresen frissítve"
+    },
+    "title": {
+      "new": "Új {{type}}"
+    },
+    "subtitle": {
+      "new": "Töltse ki a részleteket, hogy hozzáadja ezt az eszközt a portfóliójához",
+      "edit": "Frissítse ennek az eszköznek a részleteit"
+    },
+    "sections": {
+      "assetInformation": "Eszközinformációk",
+      "basicInformation": "Alapinformációk",
+      "propertyDetails": "Ingatlan adatai",
+      "accountDetails": "Számla adatai",
+      "financialDetails": "Pénzügyi adatok"
+    },
+    "fields": {
+      "assetName": "Eszköz neve",
+      "assetType": "Eszköz típusa",
+      "propertyAddress": "Ingatlan címe",
+      "propertyRegistryNumber": "Helyrajzi szám",
+      "accountType": "Számla típusa",
+      "financialInstitution": "Pénzintézet",
+      "accountNumber": "Számlaszám / IBAN",
+      "loginCredentials": "Bejelentkezési adatok és jegyzetek",
+      "estimatedValue": "Becsült érték",
+      "currency": "Pénznem"
+    },
+    "placeholders": {
+      "assetName": "pl. Családi ház, Befektetési portfólió",
+      "propertyAddress": "Adja meg az ingatlan teljes címét",
+      "propertyRegistryNumber": "pl. Helyrajzi szám",
+      "selectAccountType": "Válassza ki a számla típusát",
+      "financialInstitution": "pl. OTP Bank, K&H Bank",
+      "accountNumber": "pl. 12345678-12345678-12345678",
+      "loginCredentials": "Jelszókezelő: 1Password széf 'Bankolás'",
+      "estimatedValue": "0"
+    },
+    "descriptions": {
+      "assetName": "Adjon ennek az eszköznek egy leíró nevet a könnyű azonosítás érdekében",
+      "assetType": "Válassza ki a típust, amely a legjobban leírja ezt az eszközt",
+      "propertyAddress": "Teljes cím, beleértve az utcát, várost, irányítószámot és országot",
+      "propertyRegistryNumber": "Hivatalos nyilvántartási vagy kataszteri szám ehhez az ingatlanhoz",
+      "accountType": "Pénzügyi számla vagy befektetés típusa",
+      "financialInstitution": "A bank vagy pénzintézet neve",
+      "accountNumber": "Számlaszám, IBAN vagy egyéb azonosító információ",
+      "estimatedValue": "Az eszköz jelenlegi piaci értéke vagy utolsó ismert értéke",
+      "currency": "A pénznem, amelyben az érték kifejezésre kerül"
+    },
+    "types": {
+      "realEstate": "Ingatlan",
+      "business": "Vállalkozás",
+      "vehicle": "Jármű",
+      "financialAccount": "Pénzügyi számla",
+      "asset": "Eszköz"
+    },
+    "accountTypes": {
+      "bankAccount": "Bankszámla",
+      "investmentPortfolio": "Befektetési portfólió",
+      "pensionFund": "Nyugdíjpénztár"
+    },
+    "securityWarning": "Biztonsági figyelmeztetés:",
+    "securityWarningText": "Ne tároljon itt tényleges jelszavakat. Használja ezt a mezőt tippekhez, jelszókezelő helyekhez vagy egyéb biztonságos hozzáférési utasításokhoz.",
+    "buttons": {
+      "cancel": "Mégse",
+      "saving": "Mentés...",
+      "createAsset": "Eszköz létrehozása",
+      "updateAsset": "Eszköz frissítése"
+    }
+  },
+  "assets": {
+    "overview": {
+      "title": "Vagyon portfólió",
+      "subtitle": "Kezelje és kövesse nyomon eszközeit, ingatlanait és befektetéseit",
+      "addAsset": "Eszköz hozzáadása",
+      "totalPortfolioValue": "Teljes portfólió érték",
+      "estimatedValue": "Becsült érték az összes eszközön",
+      "distribution": {
+        "title": "Eszközök eloszlása",
+        "subtitle": "Portfólió bontása kategóriák szerint"
+      },
+      "beneficiaryAllocation": {
+        "title": "Kedvezményezetti elosztás",
+        "subtitle": "Kövesse nyomon az eszközök elosztását a kedvezményezetteknek",
+        "allAssigned": "Minden eszközhöz hozzárendeltek kedvezményezettet",
+        "unassignedWarning": "{{count}} eszközhöz kedvezményezetti elosztás szükséges"
+      },
+      "viewInheritanceSummary": "Öröklési összefoglaló megtekintése",
+      "addNew": "Új hozzáadása",
+      "errors": {
+        "loadFailed": "Nem sikerült betölteni a vagyonadatokat"
+      }
+    },
+    "categories": {
+      "property": "Ingatlan",
+      "vehicle": "Jármű",
+      "financial": "Pénzügyi",
+      "business": "Üzleti",
+      "personal": "Személyes",
+      "uncategorized": "Kategorizálatlan"
+    }
+  },
+  "pricing": {
+    "title": "Válassza ki Örökség Tervét",
+    "subtitle": "Kezdje ingyenes csomagunkkal, vagy frissítsen prémium funkciókért.",
+    "mainTitle": "Válassza ki Örökség Tervét",
+    "mainSubtitle": "Kezdje ingyenes csomagunkkal, vagy frissítsen prémium funkciókért.",
+    "starter": {
+      "name": "Örökség Kezdő",
+      "price": "Ingyenes",
+      "description": "Ideális a digitális örökség megőrzésének megkezdéséhez.",
+      "button": "Kezdje ingyen",
+      "features": {
+        "storage": "{{amount}} tárhely",
+        "guardians": "Akár {{count}} Őrző",
+        "documents": "Alapvető dokumentumszéf",
+        "playbook": "Alapvető Őrzői Útmutató",
+        "support": "Közösségi támogatás"
+      },
+      "limits": {
+        "storage": "500 MB",
+        "guardians": "3",
+        "fileSize": "10 MB / fájl"
+      }
+    },
+    "premium": {
+      "name": "Örökség Prémium",
+      "price": "19 $",
+      "period": "/ hó",
+      "badge": "Legnépszerűbb",
+      "description": "Haladó funkciók az átfogó örökségkezeléshez.",
+      "button": "Prémium választása",
+      "features": {
+        "storage": "{{amount}} tárhely",
+        "guardians": "Akár {{count}} Őrző",
+        "manual": "Kézikönyv Hátramaradottaknak",
+        "support": "Prioritási e-mail támogatás"
+      },
+      "limits": {
+        "storage": "10 GB",
+        "guardians": "5",
+        "fileSize": "50 MB / fájl"
+      }
+    },
+    "enterprise": {
+      "name": "Örökség Vállalati",
+      "price": "Egyedi",
+      "description": "Családok és vállalkozások számára, akiknek komplex igényeik a legmagasabb szintű szolgáltatást igénylik.",
+      "button": "Értékesítés felkeresése",
+      "features": {
+        "storage": "{{amount}}+ tárhely",
+        "guardians": "Korlátlan Őrző",
+        "legal": "Jogi szakember koordinációja",
+        "support": "Dedikált fiókkezelő"
+      },
+      "limits": {
+        "storage": "500 GB",
+        "guardians": "korlátlan",
+        "fileSize": "100 MB / fájl"
+      }
+    }
+  },
+  "cookies": {
+    "bannerText": "Alapvető sütiket használunk webhelyünk megfelelő működésének biztosításához. Az Ön hozzájárulásával analitikai sütiket is használhatunk szolgáltatásaink javítására.",
+    "declineButton": "Elutasítás",
+    "acceptButton": "Összes elfogadása",
+    "learnMoreLink": "Tudjon meg többet"
+  },
+  "guardianView": {
+    "title": "Őrzői Irányítópult",
+    "subtitle": "Biztonságos hozzáférés {{userName}} alapvető információihoz",
+    "readOnlyAccess": "Csak olvasási hozzáférés",
+    "loading": "Őrzői irányítópult betöltése...",
+    "errors": {
+      "loadFailed": "Nem sikerült betölteni a sürgősségi kapcsolatokat",
+      "addFailed": "Nem sikerült hozzáadni a sürgősségi kapcsolatot",
+      "removeFailed": "Nem sikerült eltávolítani a sürgősségi kapcsolatot",
+      "reorderFailed": "Nem sikerült frissíteni a kapcsolatok sorrendjét",
+      "testFailed": "Nem sikerült elküldeni a tesztüzenetet",
+      "selectContact": "Kérjük, válasszon egy kapcsolatot"
+    },
+    "sections": {
+      "keyDocuments": {
+        "title": "Kulcsfontosságú Dokumentumok",
+        "description": "A fióktulajdonos által kritikusként megjelölt alapvető dokumentumok",
+        "keyDocumentBadge": "Kulcsdokumentum",
+        "expires": "Lejár",
+        "noExpiration": "Nincs lejárat",
+        "empty": "Nincsenek elérhető kulcsfontosságú dokumentumok"
+      },
+      "importantContacts": {
+        "title": "Fontos Kapcsolatok",
+        "description": "Kulcsfontosságú kapcsolatok vészhelyzetekre",
+        "empty": "Nincsenek elérhető fontos kapcsolatok"
+      },
+      "finalWishes": {
+        "title": "Végakarat és Utasítások",
+        "description": "Személyes utasítások és végakarat",
+        "funeralWishes": "Temetési kívánságok",
+        "digitalAccountsShutdown": "Digitális fiókok leállítása",
+        "messagesToLovedOnes": "Üzenetek szeretteimnek",
+        "empty": "Nincs elérhető végakarat vagy utasítás"
+      }
+    },
+    "guardianInfo": {
+      "description": "Ezeket az információkat megbízható Őrzőként tekinti meg. Ez a hozzáférés vészhelyzetekre szolgál, és segít Önnek felelősségei teljesítésében.",
+      "securityNote": "Minden hozzáférés naplózva és biztonsági okokból felügyelve van."
+    },
+    "defaultUserName": "Fő fióktulajdonos",
+    "description": "Kezeljen akár 3 sürgősségi kapcsolatot prioritási sorrendben",
+    "addContact": "Kapcsolat hozzáadása",
+    "noContacts": "Még nincsenek hozzáadva sürgősségi kapcsolatok. Adjon hozzá kapcsolatokat, akiket vészhelyzet esetén értesíteni kell.",
+    "maxContactsReached": "Elérte a maximális 3 sürgősségi kapcsolatot.",
+    "sendTest": "Teszt küldése",
+    "lastContacted": "Utoljára kapcsolatba lépve {{time}}",
+    "priority": {
+      "1": "1. prioritás",
+      "2": "2. prioritás",
+      "3": "3. prioritás"
+    },
+    "addContactDialog": {
+      "title": "Sürgősségi kapcsolat hozzáadása",
+      "description": "Válasszon egy kapcsolatot a listájáról, hogy hozzáadja sürgősségi kapcsolatként.",
+      "selectContact": "Válasszon kapcsolatot",
+      "selectPlaceholder": "Válasszon egy kapcsolatot...",
+      "relationship": "Kapcsolat (opcionális)",
+      "relationshipPlaceholder": "Válassza ki a kapcsolatot...",
+      "addButton": "Sürgősségi kapcsolat hozzáadása"
+    },
+    "messages": {
+      "added": "Sürgősségi kapcsolat sikeresen hozzáadva",
+      "removed": "Sürgősségi kapcsolat eltávolítva",
+      "reordered": "Kapcsolati prioritás frissítve",
+      "testSent": "Tesztüzenet elküldve a(z) {{name}} részére"
+    }
+  },
+  "notificationPreferences": {
+    "title": "Sürgősségi értesítési beállítások",
+    "description": "Kezelje a sürgősségi kapcsolatai értesítési beállításait",
+    "noContacts": "Adjon hozzá sürgősségi kapcsolatokat az értesítési beállításaik kezeléséhez.",
+    "noEmail": "Nincs e-mail cím a nyilvántartásban",
+    "emailRequired": "E-mail cím szükséges",
+    "lastUpdated": "Utoljára frissítve: {{date}}",
+    "info": "Sürgősségi hozzáférés engedélyezésekor csak az engedélyezett e-mail értesítésekkel rendelkező kapcsolatok kapnak értesítést.",
+    "howItWorks": {
+      "title": "Hogyan működnek a sürgősségi értesítések",
+      "point1": "Az őrzők kritikus helyzetekben hozzáférhetnek a sürgősségi kapcsolatokhoz",
+      "point2": "Minden feliratkozott kapcsolat azonnali e-mail értesítést kap",
+      "point3": "Ön is kap értesítést, amikor a hozzáférés megtörténik"
+    },
+    "messages": {
+      "updated": "Értesítési beállítások frissítve"
+    },
+    "errors": {
+      "loadFailed": "Nem sikerült betölteni az értesítési beállításokat",
+      "updateFailed": "Nem sikerült frissíteni a beállításokat"
+    }
+  },
+  "relationships": {
+    "spouse": "Házastárs",
+    "child": "Gyermek",
+    "parent": "Szülő",
+    "sibling": "Testvér",
+    "friend": "Barát",
+    "other": "Egyéb"
+  },
+  "emergencyAccess": {
+    "button": "Sürgősségi hozzáférés",
+    "modalTitle": "Sürgősségi kapcsolati hozzáférés",
+    "modalDescription": "Ez hozzáférést biztosít Önnek a sürgősségi kapcsolati információkhoz. Csak valódi vészhelyzetekben használja.",
+    "warningText": "Ez a hozzáférés naplózásra kerül, és a fióktulajdonost értesítjük.",
+    "reasonLabel": "Sürgősségi hozzáférés oka (kötelező)",
+    "reasonPlaceholder": "Kérjük, írja le a vészhelyzetet, amely szükségessé teszi a kapcsolati információkhoz való hozzáférést...",
+    "confirmCheckbox": "Megerősítem, hogy ez egy valódi vészhelyzet, és szükségem van a kapcsolati információkhoz való hozzáférésre",
+    "accessing": "Hozzáférés...",
+    "confirmButton": "Sürgősségi kapcsolatok elérése",
+    "pleaseConfirm": "Kérjük, erősítse meg a vészhelyzetet és adja meg az okát",
+    "notAuthorized": "Nincs jogosultsága sürgősségi hozzáférésre",
+    "failedToLoadContacts": "Nem sikerült betölteni a sürgősségi kapcsolatokat",
+    "accessGranted": "Sürgősségi hozzáférés engedélyezve. A kapcsolati információk most elérhetők.",
+    "accessFailed": "Nem sikerült hozzáférni a sürgősségi kapcsolatokhoz",
+    "contactsTitle": "Sürgősségi kapcsolatok",
+    "contactsDescription": "Lépjen kapcsolatba ezekkel a személyekkel prioritási sorrendben. Kattintson a telefonszámokra a híváshoz vagy az e-mailekre az üzenetküldéshez.",
+    "priorityOrder": "Prioritási sorrend",
+    "priority": "#{{order}} prioritás",
+    "logContact": "Kapcsolatfelvételi kísérlet naplózása",
+    "contactLogged": "Kapcsolatfelvételi kísérlet naplózva",
+    "lastContacted": "Utoljára kapcsolatba lépve: {{time}}",
+    "importantNote": "Fontos: Lépjen kapcsolatba ezekkel a személyekkel a megadott sorrendben. Mindig próbálja meg először az elsődleges kapcsolatfelvételi módszert. Naplózza az összes kapcsolatfelvételi kísérletet a nyilvántartás érdekében."
+  },
+  "helpPage": {
+    "title": "Súgó- és Támogatási Központ",
+    "subtitle": "Itt vagyunk Önnek. Találjon választ kérdéseire, vagy lépjen kapcsolatba velünk közvetlenül.",
+    "faq": {
+      "title": "Gyakran Ismételt Kérdések",
+      "q1": {
+        "question": "Biztonságos a LegacyGuard?",
+        "answer": "Igen, a biztonság a legfőbb prioritásunk. Végpontok közötti titkosítást és zéró bizalmi architektúrát használunk, ami azt jelenti, hogy illetéktelen személy nem férhet hozzá az adataihoz, még mi sem. Minden adatot biztonságos adatközpontokban tárolunk az Európai Unióban, a GDPR-nak megfelelően."
+      },
+      "q2": {
+        "question": "Mi történik az adataimmal, ha lemondom az előfizetésemet?",
+        "answer": "A lemondás után adatai 90 napig biztonságosan, csak olvasható módban tárolódnak. Ezen időszak alatt bármikor újraaktiválhatja előfizetését a teljes hozzáférés visszaszerzéséhez. 90 nap elteltével adatait biztonságosan és véglegesen töröljük rendszereinkből."
+      },
+      "q3": {
+        "question": "Mi az az 'Őrző'?",
+        "answer": "Az Őrző egy megbízható személy (pl. partner, testvér vagy jogi szakember), akinek különleges, korlátozott hozzáférést biztosít az információihoz vészhelyzetek esetére. Az Őrző nem módosíthatja az adatait; csak megtekintheti őket, hogy az Ön utasításai szerint cselekedjen."
+      },
+      "q4": {
+        "question": "Mi a különbség a 'Széf' és a 'Kézikönyv' között?",
+        "answer": "Az Örökség Széf az a hely, ahol biztonságosan tárolja az összes fontos dokumentumát és vagyonát. A Kézikönyv Hátramaradottaknak egy gondosan összeválogatott gyűjtemény a legkritikusabb kapcsolatokból, dokumentumokból és utasításokból a széfjéből, amely arra szolgál, hogy az Őrzői minden lényegeset egy helyen találjanak."
+      },
+      "q5": {
+        "question": "A LegacyGuard-ban létrehozott végrendelet jogilag kötelező érvényű?",
+        "answer": "A LegacyGuard segít előkészíteni és megszervezni a végrendeletéhez szükséges összes alapot és információt. Azonban a legtöbb európai országban a digitális dokumentum nem helyettesíti a hivatalos, aláírt (és gyakran közjegyző által hitelesített) dokumentum szükségességét. Javasoljuk, hogy a végleges verziót mindig konzultálja egy jogi szakemberrel."
+      }
+    },
+    "contact": {
+      "title": "Nem találta, amit keresett?",
+      "email": {
+        "title": "Írjon nekünk e-mailt",
+        "description": "Általános kérdések és támogatás esetén.",
+        "button": "E-mail kliens megnyitása"
+      },
+      "call": {
+        "title": "Hívás ütemezése (Prémium esetén)",
+        "description": "Prémium és Vállalati ügyfelek számára.",
+        "button": "Hívás ütemezése"
+      }
+    }
+  },
+  "inviteAcceptance": {
+    "loading": "Meghívó betöltése...",
+    "errors": {
+      "invalidLink": "Érvénytelen meghívó link",
+      "notFound": "Meghívó nem található",
+      "alreadyProcessed": "Ez a meghívó már feldolgozásra került",
+      "loadingFailed": "Nem sikerült betölteni a meghívót",
+      "acceptFailed": "Nem sikerült elfogadni a meghívót",
+      "declineFailed": "Nem sikerült elutasítani a meghívót"
+    },
+    "messages": {
+      "accepted": "Köszönjük. Az Őrzői szerepét megerősítettük.",
+      "declined": "Ön elutasította a szerepet. A küldőt értesítjük."
+    },
+    "notFound": {
+      "title": "Meghívó nem található",
+      "description": "Ez a meghívó link érvénytelen vagy lejárt."
+    },
+    "subtitle": "Meghívást kapott, hogy legyen egy digitális örökség Őrzője a LegacyGuard-on.",
+    "guardianRole": {
+      "title": "Az Ön Őrzői szerepe",
+      "yourName": "Az Ön neve:",
+      "relationship": "Kapcsolat:",
+      "responsibilities": "Felelősségek:"
+    },
+    "whatThisMeans": {
+      "title": "Ez mit jelent",
+      "point1": "Biztonságos hozzáférése lesz a fontos dokumentumaihoz és információihoz",
+      "point2": "Csak információkat tekinthet meg - szerkesztési vagy törlési lehetőség nélkül",
+      "point3": "A hozzáférése vészhelyzetekre vagy segítségnyújtásra szolgál",
+      "point4": "Minden hozzáférés naplózva és biztonságos"
+    },
+    "buttons": {
+      "processing": "Feldolgozás...",
+      "acceptRole": "Szerep elfogadása",
+      "decline": "Elutasítás"
+    },
+    "disclaimer": "E szerep elfogadásával Ön tudomásul veszi a megbízható Őrzői felelősséget a digitális örökségükért.",
+    "defaultInviterName": "Az Ön megbízható kapcsolata"
+  },
+  "subscription": {
+    "dashboard": {
+      "title": "Előfizetések Irányítópultja",
+      "subtitle": "Kezelje előfizetéseit, költségeit és emlékeztetőit"
+    },
+    "monthlyCost": "Teljes havi költség",
+    "yearlyCost": "Teljes éves költség",
+    "activeSubscriptions": "Aktív előfizetések",
+    "upcomingSoon": "hamarosan",
+    "exportReport": "Jelentés exportálása",
+    "perMonth": "havonta",
+    "perYear": "évente",
+    "allSubscriptions": "Minden előfizetés",
+    "allSubscriptionsDesc": "Az összes aktív előfizetés áttekintése megújítási dátum szerint rendezve",
+    "upcomingRenewals": "Közelgő megújítások",
+    "upcomingRenewalsTitle": "Közelgő megújítási riasztás",
+    "upcomingRenewalsDesc": "{{count}} közelgő megújítása van a következő 90 napban",
+    "next90Days": "Következő 90 nap",
+    "noUpcomingRenewals": "Nincsenek közelgő megújítások a következő 90 napban",
+    "renew": "Megújítás",
+    "review": "Felülvizsgálat",
+    "preferences": "Előfizetési beállítások",
+    "preferencesDesc": "Kezelje, hogyan követik és kezelik az előfizetéseit",
+    "enableTracking": "Előfizetés-követés engedélyezése",
+    "enableTrackingDesc": "Automatikusan kezelje és kövesse nyomon az előfizetéssel kapcsolatos dokumentumokat",
+    "costOptimization": "Költségoptimalizálási javaslatok engedélyezése",
+    "costOptimizationDesc": "Kapjon javaslatokat az előfizetési költségek optimalizálására és csökkentésére",
+    "reminderPeriods": "Alapértelmezett emlékeztetői időszakok",
+    "daysBefore": "nappal előtte",
+    "loadError": "Nem sikerült betölteni az előfizetés részleteit",
+    "updateError": "Nem sikerült frissíteni az előfizetési beállításokat",
+    "preferencesUpdated": "A beállítások sikeresen frissítve",
+    "tabs": {
+      "overview": "Áttekintés",
+      "upcoming": "Közelgő",
+      "settings": "Beállítások"
+    },
+    "types": {
+      "monthly": "Havi",
+      "yearly": "Éves",
+      "oneTime": "Egyszeri",
+      "none": "Nincs"
+    },
+    "daysUntilRenewal": "nap a megújításig",
+    "days": "nap",
+    "loadFailed": "Nem sikerült betölteni az előfizetési adatokat",
+    "autoRenewal": "Automatikus megújítás: Igen",
+    "manual": "Automatikus megújítás: Nem",
+    "trackingSuggestion": "Fontolja meg az előfizetés-követés engedélyezését a jobb kezelés és emlékeztetők érdekében",
+    "type": "Előfizetés típusa",
+    "typePlaceholder": "Válassza ki a típust",
+    "renewalCost": "Megújítási költség",
+    "renewalCostPlaceholder": "Adja meg a megújítási költséget",
+    "cancellationNotice": "Felmondási idő",
+    "noNoticeRequired": "Nincs szükség felmondási időre",
+    "providerContact": "Szolgáltató elérhetőségei",
+    "providerPhone": "Telefon",
+    "providerEmail": "E-mail",
+    "providerWebsite": "Weboldal",
+    "cancellationNoticeWarning": "Megjegyzés: A felmondás {{days}} napos felmondási időt igényel"
+  },
+  "emailTemplates": {
+    "welcome": {
+      "subject": "Üdvözöljük a LegacyGuard-ban - Digitális örökségi útja megkezdődik",
+      "greeting": "Üdvözöljük, {{name}}!",
+      "body": "Köszönjük, hogy csatlakozott a LegacyGuard-hoz. Megtette az első fontos lépést családja jövőjének védelmében.",
+      "cta": "Töltse ki Életleltárát",
+      "footer": "Ha bármilyen kérdése van, támogatási csapatunk készséggel áll rendelkezésére."
+    },
+    "inventoryComplete": {
+      "subject": "Életleltár elkészült - Személyre szabott terve készen áll",
+      "greeting": "Gratulálunk, {{name}}!",
+      "body": "Elkészítette életleltárát! Válaszai alapján személyre szabott cselekvési tervet készítettünk, hogy segítsünk bebiztosítani családja jövőjét.",
+      "nextSteps": "Az Ön 3 legfontosabb prioritása:",
+      "cta": "Tekintse meg cselekvési tervét",
+      "encouragement": "Ne feledje, minden kis lépés, amit ma megtesz, nagy különbséget jelent szerettei számára holnap."
+    },
+    "guardianInvite": {
+      "subject": "{{inviterName}} meghívta Önt, hogy legyen az Őrzője a LegacyGuard-on",
+      "greeting": "Kedves {{guardianName}}!",
+      "body": "{{inviterName}} egy fontos felelősséggel bízta meg Önt - hogy legyen digitális örökségének Őrzője.",
+      "whatThisMeans": "Őrzőként biztonságos, csak olvasható hozzáférése lesz a fontos dokumentumaihoz és utasításaihoz vészhelyzet esetén.",
+      "cta": "Meghívó megtekintése",
+      "expires": "Ez a meghívó 7 nap múlva lejár."
+    },
+    "planUpgrade": {
+      "subject": "Elérte a(z) {{planName}} csomag limitjét",
+      "greeting": "Szia {{name}}!",
+      "body": "Nagyszerűen halad! Elérte a(z) {{limitType}} limitet a jelenlegi csomagjában.",
+      "upgradeText": "Frissítsen a(z) {{suggestedPlan}} csomagra, hogy továbbra is hozzáadhasson több {{limitType}}-t és további funkciókat oldjon fel.",
+      "cta": "Frissítési lehetőségek megtekintése"
+    }
+  },
+  "guardian": {
+    "invitationSent": "Meghívó elküldve",
+    "accepted": "Elfogadva",
+    "declined": "Elutasítva",
+    "sendInvite": "Meghívó küldése"
+  },
+  "alerts": {
+    "title": "Riasztási Központ",
+    "description": "Kezelje a dokumentumok lejárati riasztásait.",
+    "unread": "Olvasatlan",
+    "markAsRenewed": "Megjelölés megújítottként",
+    "snooze7Days": "Szundi 7 napra",
+    "dismiss": "Elvetés",
+    "unsnooze": "Szundi eltávolítása",
+    "tabs": {
+      "active": "Aktív",
+      "snoozed": "Szundikáló",
+      "dismissed": "Elvetett"
+    },
+    "noActiveAlerts": "Nincsenek aktív riasztásai.",
+    "noSnoozedAlerts": "Nincsenek szundikáló riasztásai.",
+    "noDismissedAlerts": "Nincsenek elvetett riasztásai.",
+    "expiresOn": "Lejár: {{date}}",
+    "snoozedUntil": "Szundikál: {{date}}-ig",
+    "renewalInstructions": "Megújítási utasítások",
+    "badges": {
+      "expired": "Lejárt",
+      "expiring_7": "Hamarosan lejár",
+      "expiring_30": "30 napon belül lejár",
+      "expiring_90": "90 napon belül lejár"
+    },
+    "types": {
+      "expired": "A(z) {{documentName}} dokumentum {{daysAgo}} nappal ezelőtt lejárt!",
+      "expiring7": "Siessen! A(z) {{documentName}} {{days}} nap múlva lejár.",
+      "expiring30": "Emlékeztető: A(z) {{documentName}} {{days}} nap múlva lejár.",
+      "expiring90": "Figyelem: A(z) {{documentName}} {{days}} nap múlva lejár."
+    },
+    "messages": {
+      "dismissed": "A riasztás sikeresen elvetve.",
+      "snoozed": "A riasztás {{days}} napra szundikál.",
+      "markedAsRenewed": "A dokumentum megújítottként megjelölve."
+    },
+    "errors": {
+      "loadFailed": "Nem sikerült betölteni a riasztásokat.",
+      "dismissFailed": "Nem sikerült elvetni a riasztást.",
+      "snoozeFailed": "Nem sikerült szundikáltatni a riasztást.",
+      "renewFailed": "Nem sikerült megjelölni a dokumentumot megújítottként."
+    }
+  },
+  "errorBoundary": {
+    "title": "Hoppá! Valami hiba történt",
+    "description": "Elnézést kérünk a kellemetlenségért. Váratlan hiba történt.",
+    "errorId": "Hibaazonosító",
+    "tryAgain": "Próbálja újra",
+    "reloadPage": "Oldal újratöltése",
+    "goToHomepage": "Ugrás a kezdőlapra",
+    "technicalDetails": "Technikai részletek",
+    "hide": "Elrejtés",
+    "show": "Mutatás",
+    "stackTrace": "Verem nyomkövetés",
+    "componentStack": "Komponens verem",
+    "helpText": "Ha a probléma továbbra is fennáll, vegye fel a kapcsolatot a támogatásunkkal a hibaazonosítóval."
+  },
+  "errorTest": {
+    "title": "Hibanaplózási teszt",
+    "triggerSyncError": "Szinkron hiba kiváltása (ErrorBoundary)",
+    "triggerAsyncError": "Aszinkron hiba kiváltása",
+    "logRegularError": "Normál hiba naplózása",
+    "logCriticalError": "Kritikus hiba naplózása",
+    "triggerAlert": "Riasztás kiváltása (6 kritikus hiba)"
+  },
+  "footer": {
+    "tagline": "Örökségének megőrzése a jövő generációi számára.",
+    "platform": {
+      "title": "Platform",
+      "heritageVault": "Örökség Széf",
+      "guardianNetwork": "Őrzők Hálózata",
+      "dashboard": "Irányítópult",
+      "security": "Biztonság"
+    },
+    "support": {
+      "title": "Támogatás",
+      "helpCenter": "Súgóközpont",
+      "userGuides": "Felhasználói útmutatók",
+      "contactUs": "Lépjen kapcsolatba velünk",
+      "community": "Közösség"
+    },
+    "legal": {
+      "title": "Jogi",
+      "privacyPolicy": "Adatvédelmi irányelvek",
+      "termsOfService": "Szolgáltatási feltételek",
+      "dataProtection": "Adatvédelem"
+    },
+    "copyright": "© {{year}} LegacyGuard. Minden jog fenntartva.",
+    "description": "Vállalati szintű digitális örökségkezelés."
+  },
+  "playbook": {
+    "label": "Útmutató",
+    "create": "Útmutató létrehozása",
+    "edit": "Útmutató szerkesztése",
+    "preview": "Előnézet",
+    "exitPreview": "Előnézet bezárása",
+    "save": "Útmutató mentése",
+    "saving": "Mentés...",
+    "loading": "Útmutató betöltése...",
+    "autoSaveNotice": "A változtatásai automatikusan mentésre kerülnek gépelés közben.",
+    "noContent": "Még nincs hozzáadva tartalom.",
+    "noContacts": "Még nincsenek hozzáadva kapcsolatok.",
+    "addContact": "Kapcsolat hozzáadása",
+    "contact": "Kapcsolat",
+    "title": "Útmutató {{name}} számára",
+    "titleReadOnly": "{{name}} útmutatója",
+    "description": "Hozzon létre személyre szabott utasításokat és információkat az őrzője számára",
+    "viewTitle": "Őrzői Útmutató: {{userName}}",
+    "viewDescription": "Lényeges információk és utasítások, amelyeket kifejezetten Önnek készítettek",
+    "lastUpdated": "Utoljára frissítve",
+    "viewFooter": "Ezt az információt őrzőként bízták Önre. Kérjük, kezelje bizalmasan és biztonságosan.",
+    "notAuthenticated": "Kérjük, jelentkezzen be az útmutató megtekintéséhez",
+    "accessDenied": "Nincs jogosultsága megtekinteni ezt az útmutatót",
+    "fetchError": "Nem sikerült betölteni az útmutatót",
+    "saveSuccess": "Az útmutató sikeresen mentve",
+    "saveError": "Nem sikerült menteni az útmutatót",
+    "discardChanges": {
+      "title": "Elveti a változtatásokat?",
+      "description": "Nem mentett változtatásai vannak. Biztosan elveti őket?",
+      "cancel": "Szerkesztés folytatása",
+      "confirm": "Változtatások elvetése"
+    },
+    "importantContacts": {
+      "label": "Fontos kapcsolatok",
+      "description": "Adjon hozzá kulcsfontosságú személyeket, akiket ennek az őrzőnek értesítenie kell",
+      "viewDescription": "Szükség esetén lépjen kapcsolatba ezekkel a személyekkel",
+      "add": "Kapcsolat hozzáadása",
+      "remove": "Eltávolítás",
+      "empty": "Még nincsenek hozzáadva kapcsolatok. Kattintson a 'Kapcsolat hozzáadása' gombra a fontos személyek hozzáadásához.",
+      "name": "Név",
+      "namePlaceholder": "Teljes név",
+      "relationship": "Kapcsolat",
+      "relationshipPlaceholder": "pl. Családi ügyvéd",
+      "phone": "Telefon",
+      "phonePlaceholder": "+36 1 234 5678",
+      "email": "E-mail",
+      "emailPlaceholder": "email@pelda.com",
+      "notes": "Jegyzetek",
+      "notesPlaceholder": "További információk"
+    },
+    "funeralWishes": {
+      "label": "Temetési kívánságok",
+      "description": "Az Ön preferenciái a temetési szertartásokkal kapcsolatban",
+      "placeholder": "Írja le a temetésével vagy megemlékezésével kapcsolatos kívánságait..."
+    },
+    "digitalAccounts": {
+      "label": "Digitális fiókok",
+      "description": "Utasítások az online fiókjainak kezelésére",
+      "placeholder": "Sorolja fel digitális fiókjait és azt, hogyan kellene kezelni őket..."
+    },
+    "documentLocations": {
+      "label": "Dokumentumok helye",
+      "description": "Hol találhatók a fontos dokumentumok",
+      "placeholder": "Írja le, hol találhatók a fontos dokumentumok..."
+    },
+    "personalMessages": {
+      "label": "Személyes üzenetek",
+      "description": "Személyes üzenetek ennek az őrzőnek",
+      "placeholder": "Írjon egy személyes üzenetet ennek az őrzőnek..."
+    },
+    "practicalInstructions": {
+      "label": "Gyakorlati utasítások",
+      "description": "Azonnali lépések és felelősségek",
+      "placeholder": "Sorolja fel a gyakorlati feladatokat és az azonnali teendőket..."
+    },
+    "notFound": {
+      "title": "Nem található útmutató",
+      "description": "A keresett útmutató még nem lett létrehozva."
+    },
+    "subtitle": {
+      "edit": "Hozzon létre személyre szabott utasításokat és információkat ennek az őrzőnek.",
+      "view": "Lényeges információk és utasítások, amelyeket Önnek készítettek."
+    },
+    "status": {
+      "empty": "Nincs elkezdve",
+      "draft": "Folyamatban",
+      "complete": "Befejezve"
+    },
+    "tabs": {
+      "funeral": "Temetés",
+      "digital": "Digitális",
+      "contacts": "Kapcsolatok",
+      "documents": "Dokumentumok",
+      "messages": "Üzenetek",
+      "instructions": "Utasítások"
+    },
+    "sections": {
+      "funeral": {
+        "title": "Temetési kívánságok",
+        "description": "Az Ön preferenciái a temetési szertartásokkal és megemlékezésekkel kapcsolatban.",
+        "placeholder": "Írja le a temetésével vagy megemlékezésével kapcsolatos kívánságait...\n\nPéldául:\n- Szertartás típusa (vallási, világi, életünnep)\n- Temetési vagy hamvasztási preferenciák\n- Helyszín preferenciák\n- Zene, felolvasások vagy különleges kérések\n- Ki beszéljen vagy vegyen részt\n- Bármilyen követendő specifikus hagyomány"
+      },
+      "digital": {
+        "title": "Digitális fiókok leállítása",
+        "description": "Utasítások a digitális jelenlétének és online fiókjainak kezelésére.",
+        "placeholder": "Sorolja fel digitális fiókjait és azt, hogyan kellene kezelni őket...\n\nPéldául:\n- Közösségi média fiókok (Facebook, Instagram, LinkedIn)\n- E-mail fiókok\n- Felhőalapú tárolás (Google Drive, Dropbox)\n- Előfizetési szolgáltatások (Netflix, Spotify)\n- Online banki és pénzügyi fiókok\n- Kriptovaluta tárcák\n- Weboldal vagy domain nevek"
+      },
+      "contacts": {
+        "title": "Fontos kapcsolatok",
+        "description": "Kulcsfontosságú személyek, akiket ennek az őrzőnek értesítenie kell.",
+        "placeholder": "Adjon hozzá fontos kapcsolatokat, amelyek specifikusak ennek az őrzőnek a felelősségeihez."
+      },
+      "documents": {
+        "title": "Dokumentumok helye",
+        "description": "Hol találhatók a fontos fizikai és digitális dokumentumok.",
+        "placeholder": "Írja le, hol találhatók a fontos dokumentumok...\n\nPéldául:\n- Végrendelet helye\n- Biztosítási kötvények\n- Tulajdoni lapok\n- Bankszámla információk\n- Befektetési dokumentumok\n- Adóbevallások\n- Jelszavak és hozzáférési kódok\n- Széf helye és kulcsa"
+      },
+      "messages": {
+        "title": "Személyes üzenetek",
+        "description": "Személyes üzenetek és utolsó gondolatok ennek az őrzőnek.",
+        "placeholder": "Írjon egy személyes üzenetet ennek az őrzőnek...\n\nEz az Ön lehetősége, hogy:\n- Kifejezze érzéseit és háláját\n- Megosszon fontos emlékeket\n- Útmutatást vagy tanácsot adjon\n- Megmagyarázza döntéseit\n- Vigasztaló szavakat hagyjon\n- Megossza reményeit a jövőre nézve"
+      },
+      "practical": {
+        "title": "Gyakorlati utasítások",
+        "description": "Azonnali gyakorlati lépések és felelősségek ennek az őrzőnek.",
+        "placeholder": "Sorolja fel a gyakorlati feladatokat és az azonnali teendőket...\n\nPéldául:\n- Első 24-48 órás ellenőrzőlista\n- Kit kell először értesíteni\n- Sürgős számlák vagy fizetések\n- Gondozási utasítások (háziállatok, növények, ingatlan)\n- Figyelmet igénylő üzleti ügyek\n- Lemondandó ütemezett találkozók\n- Szükséges kulcsok és hozzáférési kódok"
+      }
+    },
+    "contactFields": {
+      "name": "Név",
+      "namePlaceholder": "Teljes név",
+      "role": "Szerep/Kapcsolat",
+      "rolePlaceholder": "pl. Családi ügyvéd, Könyvelő",
+      "phone": "Telefon",
+      "phonePlaceholder": "+36 1 234 5678",
+      "email": "E-mail",
+      "emailPlaceholder": "email@pelda.com",
+      "notes": "Jegyzetek",
+      "notesPlaceholder": "További információk erről a kapcsolatról"
+    },
+    "messages": {
+      "autoSaved": "Mentve",
+      "saved": "Az útmutató sikeresen mentve"
+    },
+    "errors": {
+      "loadFailed": "Nem sikerült betölteni az útmutatót",
+      "saveFailed": "Nem sikerült menteni az útmutatót"
+    }
+  }
+}

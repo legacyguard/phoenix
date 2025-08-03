@@ -1,0 +1,98 @@
+{
+  "_comment": "Shared translations used across the application",
+  "errorBoundary": {
+    "title": "Oeps! Er is iets misgegaan",
+    "description": "Onze excuses voor het ongemak. Er is een onverwachte fout opgetreden.",
+    "errorId": "Fout-ID",
+    "tryAgain": "Probeer Opnieuw",
+    "reloadPage": "Pagina Herladen",
+    "goToHomepage": "Ga naar de Startpagina",
+    "technicalDetails": "Technische Details",
+    "hide": "Verbergen",
+    "show": "Tonen",
+    "stackTrace": "Stack Trace",
+    "componentStack": "Component Stack",
+    "helpText": "Als het probleem aanhoudt, neem dan contact op met onze ondersteuning met de fout-ID."
+  },
+  "errorTest": {
+    "title": "Foutlogtest",
+    "description": "Test error handling and logging functionality",
+    "triggerSyncError": "Trigger Sync Fout (ErrorBoundary)",
+    "triggerAsyncError": "Trigger Async Fout",
+    "logRegularError": "Log Reguliere Fout",
+    "logCriticalError": "Log Kritieke Fout",
+    "triggerAlert": "Trigger Alert (6 Kritieke Fouten)",
+    "errorMessages": {
+      "testError": "Test error from ErrorTest component",
+      "testAsyncRejection": "Test async rejection",
+      "manualTestError": "Manual test error",
+      "testCriticalError": "Test critical error",
+      "criticalErrorWithIndex": "Critical error {{index}}"
+    },
+    "descriptions": {
+      "syncError": "Triggers a synchronous error that will be caught by the ErrorBoundary",
+      "asyncError": "Triggers an asynchronous error that will be caught by error handling",
+      "regularError": "Logs a regular error for testing error tracking",
+      "criticalError": "Logs a critical error for testing critical error handling",
+      "multipleErrors": "Triggers multiple critical errors to test alert thresholds"
+    },
+    "context": {
+      "component": "ErrorTest",
+      "action": "button-click",
+      "severity": "high"
+    },
+    "notifications": {
+      "errorLogged": "Error logged successfully",
+      "criticalErrorLogged": "Critical error logged successfully",
+      "multipleErrorsTriggered": "Multiple critical errors triggered",
+      "errorBoundaryTriggered": "Error boundary triggered",
+      "asyncErrorCaught": "Async error caught and handled"
+    }
+  },
+  "debug": {
+    "panel": {
+      "title": "Debug Paneel",
+      "recentErrors": "Recente applicatiefouten",
+      "technicalDetails": "Technische Details",
+      "tabs": {
+        "list": "Lijst",
+        "details": "Details"
+      },
+      "errorCount": "{{count}} fouten",
+      "actions": {
+        "downloadErrors": "Fouten downloaden",
+        "clearAllErrors": "Alle fouten wissen"
+      },
+      "messages": {
+        "errorsCleared": "Alle fouten gewist",
+        "errorCopied": "Fout gekopieerd naar klembord",
+        "errorsDownloaded": "Fouten gedownload"
+      },
+      "error": {
+        "unknownError": "Onbekende Fout",
+        "noMessage": "Geen bericht",
+        "errorMessage": "Foutmelding"
+      },
+      "sections": {
+        "stackTrace": "Stack Trace",
+        "context": "Context",
+        "location": "Locatie",
+        "browserInfo": "Browserinformatie",
+        "time": "Tijd"
+      },
+      "fields": {
+        "url": "URL:",
+        "path": "Pad:",
+        "query": "Query:",
+        "userAgent": "User Agent:",
+        "viewport": "Viewport:"
+      }
+    }
+  },
+  "test": {
+    "environment": {
+      "title": "Test Environment Only",
+      "description": "This page is for testing the error logging system. Remove this route before deploying to production."
+    }
+  }
+}

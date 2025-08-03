@@ -1,0 +1,98 @@
+{
+  "_comment": "Shared translations used across the application",
+  "errorBoundary": {
+    "title": "Hoppla! Etwas ist schiefgegangen",
+    "description": "Wir entschuldigen uns für die Unannehmlichkeiten. Ein unerwarteter Fehler ist aufgetreten.",
+    "errorId": "Fehler-ID",
+    "tryAgain": "Erneut versuchen",
+    "reloadPage": "Seite neu laden",
+    "goToHomepage": "Zur Startseite",
+    "technicalDetails": "Technische Details",
+    "hide": "Ausblenden",
+    "show": "Anzeigen",
+    "stackTrace": "Stack-Trace",
+    "componentStack": "Komponenten-Stack",
+    "helpText": "Wenn das Problem weiterhin besteht, kontaktieren Sie unseren Support mit der Fehler-ID."
+  },
+  "errorTest": {
+    "title": "Fehlerprotokollierungstest",
+    "description": "Test der Fehlerbehandlung und Protokollierungsfunktionen",
+    "triggerSyncError": "Synchronen Fehler auslösen (ErrorBoundary)",
+    "triggerAsyncError": "Asynchronen Fehler auslösen",
+    "logRegularError": "Normalen Fehler protokollieren",
+    "logCriticalError": "Kritischen Fehler protokollieren",
+    "triggerAlert": "Alarm auslösen (6 kritische Fehler)",
+    "errorMessages": {
+      "testError": "Testfehler aus ErrorTest-Komponente",
+      "testAsyncRejection": "Test asynchrone Ablehnung",
+      "manualTestError": "Manueller Testfehler",
+      "testCriticalError": "Test kritischer Fehler",
+      "criticalErrorWithIndex": "Kritischer Fehler {{index}}"
+    },
+    "descriptions": {
+      "syncError": "Löst einen synchronen Fehler aus, der von der ErrorBoundary abgefangen wird",
+      "asyncError": "Löst einen asynchronen Fehler aus, der von der Fehlerbehandlung abgefangen wird",
+      "regularError": "Protokolliert einen regulären Fehler zum Testen der Fehlerverfolgung",
+      "criticalError": "Protokolliert einen kritischen Fehler zum Testen der kritischen Fehlerbehandlung",
+      "multipleErrors": "Löst mehrere kritische Fehler aus, um Warnschwellen zu testen"
+    },
+    "context": {
+      "component": "ErrorTest",
+      "action": "button-click",
+      "severity": "high"
+    },
+    "notifications": {
+      "errorLogged": "Fehler erfolgreich protokolliert",
+      "criticalErrorLogged": "Kritischer Fehler erfolgreich protokolliert",
+      "multipleErrorsTriggered": "Mehrere kritische Fehler ausgelöst",
+      "errorBoundaryTriggered": "ErrorBoundary ausgelöst",
+      "asyncErrorCaught": "Asynchroner Fehler abgefangen und behandelt"
+    }
+  },
+  "debug": {
+    "panel": {
+      "title": "Debug-Panel",
+      "recentErrors": "Aktuelle Anwendungsfehler",
+      "technicalDetails": "Technische Details",
+      "tabs": {
+        "list": "Liste",
+        "details": "Details"
+      },
+      "errorCount": "{{count}} Fehler",
+      "actions": {
+        "downloadErrors": "Fehler herunterladen",
+        "clearAllErrors": "Alle Fehler löschen"
+      },
+      "messages": {
+        "errorsCleared": "Alle Fehler gelöscht",
+        "errorCopied": "Fehler in die Zwischenablage kopiert",
+        "errorsDownloaded": "Fehler heruntergeladen"
+      },
+      "error": {
+        "unknownError": "Unbekannter Fehler",
+        "noMessage": "Keine Nachricht",
+        "errorMessage": "Fehlermeldung"
+      },
+      "sections": {
+        "stackTrace": "Stack-Trace",
+        "context": "Kontext",
+        "location": "Standort",
+        "browserInfo": "Browser-Informationen",
+        "time": "Zeit"
+      },
+      "fields": {
+        "url": "URL:",
+        "path": "Pfad:",
+        "query": "Abfrage:",
+        "userAgent": "User Agent:",
+        "viewport": "Viewport:"
+      }
+    }
+  },
+  "test": {
+    "environment": {
+      "title": "Test Environment Only",
+      "description": "This page is for testing the error logging system. Remove this route before deploying to production."
+    }
+  }
+}

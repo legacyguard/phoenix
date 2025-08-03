@@ -1,0 +1,98 @@
+{
+  "_comment": "Shared translations used across the application",
+  "errorBoundary": {
+    "title": "Hoppá! Valami hiba történt",
+    "description": "Elnézést kérünk a kellemetlenségért. Váratlan hiba történt.",
+    "errorId": "Hibaazonosító",
+    "tryAgain": "Próbálja újra",
+    "reloadPage": "Oldal újratöltése",
+    "goToHomepage": "Ugrás a kezdőlapra",
+    "technicalDetails": "Technikai részletek",
+    "hide": "Elrejtés",
+    "show": "Mutatás",
+    "stackTrace": "Verem nyomkövetés",
+    "componentStack": "Komponens verem",
+    "helpText": "Ha a probléma továbbra is fennáll, vegye fel a kapcsolatot a támogatásunkkal a hibaazonosítóval."
+  },
+  "errorTest": {
+    "title": "Hibanaplózási teszt",
+    "description": "Test error handling and logging functionality",
+    "triggerSyncError": "Szinkron hiba kiváltása (ErrorBoundary)",
+    "triggerAsyncError": "Aszinkron hiba kiváltása",
+    "logRegularError": "Normál hiba naplózása",
+    "logCriticalError": "Kritikus hiba naplózása",
+    "triggerAlert": "Riasztás kiváltása (6 kritikus hiba)",
+    "errorMessages": {
+      "testError": "Test error from ErrorTest component",
+      "testAsyncRejection": "Test async rejection",
+      "manualTestError": "Manual test error",
+      "testCriticalError": "Test critical error",
+      "criticalErrorWithIndex": "Critical error {{index}}"
+    },
+    "descriptions": {
+      "syncError": "Triggers a synchronous error that will be caught by the ErrorBoundary",
+      "asyncError": "Triggers an asynchronous error that will be caught by error handling",
+      "regularError": "Logs a regular error for testing error tracking",
+      "criticalError": "Logs a critical error for testing critical error handling",
+      "multipleErrors": "Triggers multiple critical errors to test alert thresholds"
+    },
+    "context": {
+      "component": "ErrorTest",
+      "action": "button-click",
+      "severity": "high"
+    },
+    "notifications": {
+      "errorLogged": "Error logged successfully",
+      "criticalErrorLogged": "Critical error logged successfully",
+      "multipleErrorsTriggered": "Multiple critical errors triggered",
+      "errorBoundaryTriggered": "Error boundary triggered",
+      "asyncErrorCaught": "Async error caught and handled"
+    }
+  },
+  "debug": {
+    "panel": {
+      "title": "Hibakereső panel",
+      "recentErrors": "Legutóbbi alkalmazáshibák",
+      "technicalDetails": "Technikai részletek",
+      "tabs": {
+        "list": "Lista",
+        "details": "Részletek"
+      },
+      "errorCount": "{{count}} hiba",
+      "actions": {
+        "downloadErrors": "Hibák letöltése",
+        "clearAllErrors": "Összes hiba törlése"
+      },
+      "messages": {
+        "errorsCleared": "Minden hiba törölve",
+        "errorCopied": "Hiba a vágólapra másolva",
+        "errorsDownloaded": "Hibák letöltve"
+      },
+      "error": {
+        "unknownError": "Ismeretlen hiba",
+        "noMessage": "Nincs üzenet",
+        "errorMessage": "Hibaüzenet"
+      },
+      "sections": {
+        "stackTrace": "Verem nyomkövetés",
+        "context": "Kontextus",
+        "location": "Hely",
+        "browserInfo": "Böngésző információk",
+        "time": "Idő"
+      },
+      "fields": {
+        "url": "URL:",
+        "path": "Útvonal:",
+        "query": "Lekérdezés:",
+        "userAgent": "User Agent:",
+        "viewport": "Viewport:"
+      }
+    }
+  },
+  "test": {
+    "environment": {
+      "title": "Test Environment Only",
+      "description": "This page is for testing the error logging system. Remove this route before deploying to production."
+    }
+  }
+}

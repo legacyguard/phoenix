@@ -1,0 +1,3247 @@
+{
+  "_comment": "Shared translations used across the application",
+  "common": {
+    "loading": "Indlæser...",
+    "viewDetails": "Se detaljer",
+    "edit": "Rediger",
+    "delete": "Slet",
+    "addedOn": "Tilføjet {{date}}",
+    "priority": {
+      "high": "Høj",
+      "medium": "Medium",
+      "low": "Lav"
+    },
+    "pagination": {
+      "previous": "Forrige",
+      "next": "Næste",
+      "morePages": "Flere sider",
+      "page": "Side",
+      "of": "af",
+      "showing": "Viser",
+      "to": "til",
+      "results": "resultater",
+      "perPage": "per side",
+      "goToPage": "Gå til side",
+      "currentPage": "Nuværende side",
+      "totalPages": "Samlede sider",
+      "firstPage": "Første side",
+      "lastPage": "Sidste side",
+      "pageInfo": "Side {{current}} af {{total}}",
+      "resultsInfo": "Viser {{start}} til {{end}} af {{total}} resultater",
+      "noResults": "Ingen resultater fundet",
+      "loading": "Indlæser...",
+      "navigation": {
+        "title": "Sideinddeling navigation",
+        "description": "Naviger gennem sider af resultater",
+        "first": "Gå til første side",
+        "last": "Gå til sidste side",
+        "previous": "Gå til forrige side",
+        "next": "Gå til næste side",
+        "page": "Gå til side {{number}}"
+      },
+      "accessibility": {
+        "pagination": "Sideinddeling",
+        "currentPage": "Nuværende side, side {{number}}",
+        "page": "Side {{number}}",
+        "previousPage": "Forrige side",
+        "nextPage": "Næste side",
+        "firstPage": "Første side",
+        "lastPage": "Sidste side",
+        "morePages": "Flere sider tilgængelige"
+      }
+    },
+    "errors": {
+      "missingClerkKey": "Manglende Clerk Publishable Key",
+      "errorLoadingApp": "Fejl ved indlæsning af app",
+      "unauthorized": "Unauthorized",
+      "invalidAuthentication": "Invalid authentication",
+      "internalServerError": "Internal server error",
+      "missingRequiredFields": "Missing required fields",
+      "failedToFetchProfile": "Failed to fetch user profile"
+    },
+    "redirect": {
+      "simulationTitle": "Omdirigeringssimulation"
+    },
+    "ui": {
+      "close": "Luk",
+      "more": "Mere",
+      "previousSlide": "Forrige slide",
+      "nextSlide": "Næste slide",
+      "toggleSidebar": "Skift sidebar",
+      "goToPreviousPage": "Gå til forrige side",
+      "goToNextPage": "Gå til næste side",
+      "carousel": {
+        "title": "Karrusel",
+        "description": "Billedkarrusel med navigationskontroller",
+        "previousSlide": "Forrige slide",
+        "nextSlide": "Næste slide",
+        "currentSlide": "Nuværende slide",
+        "slide": "Slide",
+        "of": "af",
+        "slideInfo": "Slide {{current}} af {{total}}",
+        "goToSlide": "Gå til slide {{number}}",
+        "autoplay": "Autoplay",
+        "pauseAutoplay": "Pause autoplay",
+        "resumeAutoplay": "Genoptag autoplay",
+        "stopAutoplay": "Stop autoplay",
+        "carouselNavigation": "Karruselnavigation",
+        "carouselControls": "Karruselkontroller",
+        "slideNavigation": "Slidenavigation",
+        "imageCarousel": "Billedkarrusel",
+        "contentCarousel": "Indholdskarrusel",
+        "gallery": "Galleri",
+        "photoGallery": "Fotogalleri",
+        "imageGallery": "Billedgalleri",
+        "slideshow": "Diasshow",
+        "presentation": "Præsentation",
+        "showcase": "Showcase",
+        "browseImages": "Gennemse billeder",
+        "viewImages": "Se billeder",
+        "navigateSlides": "Naviger slides",
+        "slideCount": "{{count}} slides",
+        "slideCountSingular": "{{count}} slide",
+        "slideCountPlural": "{{count}} slides",
+        "accessibility": {
+          "carousel": "Karrusel",
+          "slide": "Slide",
+          "currentSlide": "Nuværende slide, slide {{number}}",
+          "previousSlide": "Forrige slide",
+          "nextSlide": "Næste slide",
+          "goToSlide": "Gå til slide {{number}}",
+          "slideCount": "Slide {{current}} af {{total}}",
+          "carouselNavigation": "Karruselnavigationskontroller",
+          "slideNavigation": "Slidenavigationskontroller",
+          "autoplayEnabled": "Autoplay aktiveret",
+          "autoplayDisabled": "Autoplay deaktiveret",
+          "autoplayPaused": "Autoplay sat på pause",
+          "autoplayStopped": "Autoplay stoppet"
+        }
+      },
+      "form": {
+        "title": "Formular",
+        "description": "Beskrivelse",
+        "label": "Etiket",
+        "placeholder": "Pladsholder",
+        "error": "Fejl",
+        "success": "Succes",
+        "warning": "Advarsel",
+        "info": "Information",
+        "required": "Påkrævet",
+        "optional": "Valgfrit",
+        "submit": "Send",
+        "cancel": "Annuller",
+        "save": "Gem",
+        "reset": "Nulstil",
+        "clear": "Ryd",
+        "loading": "Indlæser...",
+        "saving": "Gemmer...",
+        "submitting": "Sender...",
+        "validating": "Validerer...",
+        "accessibility": {
+          "form": "Formular",
+          "field": "Formularfelt",
+          "required": "Påkrævet felt",
+          "optional": "Valgfrit felt",
+          "error": "Felt har fejl",
+          "success": "Felt er gyldigt",
+          "warning": "Felt har advarsel",
+          "description": "Feltbeskrivelse",
+          "label": "Feltetiket"
+        },
+        "validation": {
+          "required": "Dette felt er påkrævet",
+          "invalid": "Dette felt er ugyldigt",
+          "minLength": "Skal være mindst {{min}} tegn",
+          "maxLength": "Må højst være {{max}} tegn",
+          "minValue": "Skal være mindst {{min}}",
+          "maxValue": "Må højst være {{max}}",
+          "pattern": "Skal matche det påkrævede mønster",
+          "email": "Skal være en gyldig e-mailadresse",
+          "url": "Skal være en gyldig URL",
+          "phone": "Skal være et gyldigt telefonnummer",
+          "date": "Skal være en gyldig dato",
+          "time": "Skal være et gyldigt tidspunkt",
+          "number": "Skal være et gyldigt tal",
+          "integer": "Skal være et helt tal",
+          "positive": "Skal være et positivt tal",
+          "negative": "Skal være et negativt tal",
+          "between": "Skal være mellem {{min}} og {{max}}",
+          "oneOf": "Skal være en af de tilladte værdier",
+          "custom": "Ugyldig værdi",
+          "unknown": "Ukendt valideringsfejl"
+        },
+        "errors": {
+          "general": "Ret venligst fejlene i formularen",
+          "network": "Netværksfejl opstod",
+          "server": "Serverfejl opstod",
+          "timeout": "Anmodning udløb",
+          "unauthorized": "Du er ikke autoriseret til at udføre denne handling",
+          "forbidden": "Adgang nægtet",
+          "notFound": "Ressource ikke fundet",
+          "conflict": "Ressourcekonflikt",
+          "validation": "Validering mislykkedes",
+          "unknown": "En ukendt fejl opstod"
+        },
+        "messages": {
+          "saved": "Formular gemt",
+          "submitted": "Formular sendt",
+          "updated": "Formular opdateret",
+          "deleted": "Formular slettet",
+          "created": "Formular oprettet",
+          "loaded": "Formular indlæst",
+          "reset": "Formular nulstillet",
+          "cleared": "Formular ryddet"
+        }
+      },
+      "breadcrumb": {
+        "title": "Brødkrummenavigation",
+        "description": "Navigationsbrødkrumme der viser nuværende placering",
+        "separator": "Separator",
+        "ellipsis": "Mere",
+        "currentPage": "Nuværende side",
+        "home": "Hjem",
+        "back": "Tilbage",
+        "previous": "Forrige",
+        "next": "Næste",
+        "navigation": "Navigation",
+        "location": "Placering",
+        "path": "Sti",
+        "breadcrumb": "Brødkrumme",
+        "breadcrumbs": "Brødkrummer",
+        "separatorText": "Separator",
+        "separatorDescription": "Separator mellem brødkrummeelementer",
+        "ellipsisText": "Flere elementer",
+        "ellipsisDescription": "Flere brødkrummeelementer tilgængelige",
+        "accessibility": {
+          "breadcrumb": "Brødkrummenavigation",
+          "currentPage": "Nuværende side",
+          "separator": "Separator",
+          "ellipsis": "Flere elementer",
+          "navigation": "Brødkrummenavigation",
+          "location": "Nuværende placering",
+          "path": "Navigationssti",
+          "item": "Brødkrummeelement",
+          "link": "Brødkrummelink",
+          "page": "Nuværende side"
+        },
+        "separators": {
+          "chevron": "Chevron",
+          "slash": "Skråstreg",
+          "arrow": "Pil",
+          "greaterThan": "Større end",
+          "dash": "Bindestreg",
+          "dot": "Punktum",
+          "pipe": "Pipe",
+          "default": "Standard separator"
+        },
+        "messages": {
+          "navigateTo": "Naviger til {{item}}",
+          "currentLocation": "Nuværende placering: {{location}}",
+          "breadcrumbPath": "Brødkrummesti: {{path}}",
+          "moreItems": "Flere elementer tilgængelige",
+          "separatorBetween": "Separator mellem {{item1}} og {{item2}}"
+        }
+      }
+    },
+    "auth": {
+      "protectedApplication": "Beskyttet applikation",
+      "protectedApplicationDesc": "Denne applikation er beskyttet. Indtast venligst adgangskoden for at få adgang.",
+      "incorrectPassword": "Forkert adgangskode. Prøv venligst igen.",
+      "password": "Adgangskode",
+      "enterPassword": "Indtast din adgangskode",
+      "accessApplication": "Få adgang til applikation"
+    },
+    "routeErrorBoundary": {
+      "code_1": "Fejlkode: ",
+      "reload_page_2": "Genindlæs side",
+      "technical_details_3": "Tekniske detaljer",
+      "pageNotFound": "Side ikke fundet",
+      "errorLoadingPage": "Fejl ved indlæsning af side",
+      "pageNotFoundDescription": "Den anmodede side eksisterer ikke eller er blevet flyttet.",
+      "errorLoadingPageDescription": "Der opstod en fejl under indlæsning af denne side.",
+      "unknownError": "Ukendt fejl",
+      "home": "Hjem",
+      "errorDetails": "Fejldetaljer",
+      "errorLogging": "Fejllogning detaljer",
+      "timestamp": "Tidsstempel",
+      "errorMessage": "Fejlbesked",
+      "errorStatus": "Fejlstatus",
+      "errorDetailsLabel": "Fejldetaljer",
+      "location": "Placering",
+      "consoleLog": "Fejl logget til konsol",
+      "actions": {
+        "goHome": "Gå til hjemmeside",
+        "reloadPage": "Genindlæs nuværende side",
+        "viewDetails": "Se tekniske detaljer",
+        "hideDetails": "Skjul tekniske detaljer"
+      },
+      "messages": {
+        "errorCaught": "Fejl fanget af RouteErrorBoundary",
+        "errorLogged": "Fejldetaljer er blevet logget",
+        "contactSupport": "Hvis denne fejl fortsætter, kontakt venligst support med fejl-ID'et"
+      }
+    }
+  },
+  "action": {
+    "loading": "Loading...",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "add": "Add",
+    "remove": "Remove",
+    "search": "Search",
+    "filter": "Filter"
+  },
+  "cta": {
+    "title": "Din arv venter på beskyttelse",
+    "subtitle": "Don't wait for 'someday' - give your family security today",
+    "description": "Slut dig til tusindvis af familier, der stoler på LegacyGuard til at bevare deres mest dyrebare minder og vigtige dokumenter for fremtidige generationer.",
+    "button": "Begynd din arverejse i dag",
+    "secondary": "Start Free Trial",
+    "urgency": "Setup takes 10 minutes, being prepared lasts forever",
+    "gentleUrgency": {
+      "1": "Every day matters when it comes to family security",
+      "2": "The best time to prepare was yesterday, the second best time is now",
+      "3": "Your family's security and preparedness can't wait",
+      "4": "10 minutes today saves your family 40+ hours later"
+    },
+    "socialUrgency": {
+      "1": "Join the families who are already prepared",
+      "2": "Don't be the family that wishes they had organized sooner",
+      "3": "Be the parent/spouse who thought ahead"
+    },
+    "timeUrgency": {
+      "1": "Start today, sleep better tonight",
+      "2": "Complete setup this weekend",
+      "3": "Give your family this gift today"
+    }
+  },
+  "validation": {
+    "errors": {
+      "nameMinLength": "Navn skal være mindst 2 tegn.",
+      "nameMaxLength": "Navn må højst være {{max}} tegn.",
+      "fieldRequired": "Feltet '{{field}}' er påkrævet.",
+      "countryRequired": "Land er påkrævet.",
+      "countryCodeLength": "Landekode skal være 2 tegn.",
+      "selectAtLeastOne": "Vælg mindst én '{{field}}'.",
+      "selectUpTo": "Du kan vælge op til {{max}} '{{field}}'.",
+      "invalidEmail": "Indtast en gyldig e-mailadresse.",
+      "invalidPhone": "Indtast et gyldigt telefonnummer.",
+      "valueMustBeNumber": "Værdi skal være et tal.",
+      "valueMustBePositive": "Værdi skal være positiv.",
+      "currencyCodeLength": "Valutakode skal være 3 tegn.",
+      "maxCharacters": "Feltet '{{field}}' må højst være {{max}} tegn.",
+      "allocationRequired": "Tildelingsprocent er påkrævet.",
+      "allocationMustBeNumber": "Tildeling skal være et tal.",
+      "allocationRange": "Tildeling skal være mellem 1% og 100%.",
+      "expirationDateFuture": "Udløbsdato skal være i fremtiden.",
+      "maxTags": "Du kan tilføje højst {{max}} tags.",
+      "fileSizeTooLarge": "Filstørrelsen skal være {{maxSize}} eller mindre.",
+      "invalidFileType": "Kun {{types}} filer er tilladt.",
+      "unknownError": "Ukendt fejl.",
+      "dataNotFound": "De nødvendige data blev ikke fundet.",
+      "connectionError": "Forbindelsesfejl. Tjek venligst din internetforbindelse.",
+      "permissionDenied": "Du har ikke tilladelse til at udføre denne handling.",
+      "duplicateRecord": "Der findes allerede en post med disse oplysninger.",
+      "assetNameRequired": "Asset name is required",
+      "assetTypeRequired": "Asset type is required",
+      "addressMaxLength": "Address can be a maximum of {{max}} characters",
+      "registryNumberMaxLength": "Registry number can be a maximum of {{max}} characters",
+      "institutionNameMaxLength": "Institution name can be a maximum of {{max}} characters",
+      "accountNumberMaxLength": "Account number can be a maximum of {{max}} characters",
+      "credentialsMaxLength": "Credentials can be a maximum of {{max}} characters",
+      "relationshipRequired": "Relationship is required",
+      "beneficiaryNameRequired": "Beneficiary name is required (min. 2 characters)",
+      "notesMaxLength": "Notes can be a maximum of {{max}} characters",
+      "documentNameRequired": "Document name is required",
+      "documentTypeRequired": "Document type is required",
+      "descriptionMaxLength": "Description can be a maximum of {{max}} characters"
+    }
+  },
+  "errors": {
+    "dataNotFound": "De nødvendige data blev ikke fundet.",
+    "networkError": "Netværksfejl. Tjek venligst din internetforbindelse.",
+    "permissionDenied": "Du har ikke tilladelse til denne handling.",
+    "duplicateRecord": "Der findes allerede en post med disse data.",
+    "unknown": "Der opstod en uventet fejl."
+  },
+  "app": {
+    "name": "Arveboks",
+    "comingSoon": {
+      "heritageVault": "Heritage Vault - Coming Soon",
+      "guardianNetwork": "Guardian Network - Coming Soon"
+    },
+    "tagline": "Sikrer din families fremtid"
+  },
+  "index": {
+    "welcome": "Velkommen til din tomme app",
+    "startBuilding": "Begynd at bygge dit fantastiske projekt her!"
+  },
+  "notfound": {
+    "title": "Side ikke fundet",
+    "description": "Siden du leder efter, eksisterer ikke eller er blevet flyttet.",
+    "goHome": "Hjem",
+    "goBack": "Tilbage"
+  },
+  "countryLanguage": {
+    "title": "Welcome to LegacyGuard",
+    "description": "Please confirm your location and language preferences",
+    "detectedLocation": "We detected you are in {{country}}",
+    "selectCountry": "Select your country",
+    "selectLanguage": "Select your language",
+    "chooseLang": "Choose a language",
+    "domainSuggestion": "Better experience available",
+    "domainSuggestionText": "We recommend using {{domain}} for the best experience in your region",
+    "privacyNote": "Your location data is only used to provide you with the best local experience and is never shared with third parties.",
+    "confirm": "Confirm",
+    "confirmAndRedirect": "Continue to {{domain}}"
+  },
+  "familyHub": {
+    "title": "Familie Hub",
+    "subtitle": "Administrer adgangsniveauer og brug forberedelsesværktøjer for at sikre, at din familie er godt forberedt.",
+    "tabs": {
+      "familyMembers": "Familiemedlemmer",
+      "members": "Medlemmer",
+      "preparednessTools": "Forberedelsesværktøjer",
+      "tools": "Værktøjer"
+    },
+    "overallPreparedness": {
+      "title": "Samlet familiens forberedelse",
+      "description": "Denne score afspejler, hvor klar hele din familie er til en nødsituation.",
+      "improvementNeeded": "Din families forberedelse kan forbedres. Overvej at sende opdateringer til dem med lavere scores."
+    },
+    "emergencyProtocol": {
+      "title": "Nødprotokol",
+      "description": "Nødprotokol giver betroede personer med \"Kun nød\" adgang til at anmode om information under kritiske situationer. Kræver bekræftelse fra en anden betroet person.",
+      "configured": "Konfigureret",
+      "configure": "Konfigurer",
+      "activeMessage": "Nødprotokol er aktiv og konfigureret"
+    },
+    "memberManagement": {
+      "title": "Administrer dine betroede personer",
+      "addTrustedPerson": "Tilføj betroet person",
+      "addMorePeople": "Tilføj flere betroede personer til dit netværk",
+      "informationAccessLevel": "Informationsadgangsniveau",
+      "preparedness": "Forberedelse",
+      "lastContacted": "Sidst kontaktet",
+      "daysAgo": "{{days}} dage siden",
+      "sendUpdate": "Send opdatering",
+      "sendUpdateTo": "Send opdatering til {{name}}",
+      "lastContactOver30Days": "Sidste kontakt for over 30 dage siden"
+    },
+    "accessLevels": {
+      "none": {
+        "title": "Ingen",
+        "description": "Kan ikke se nogen information"
+      },
+      "emergencyOnly": {
+        "title": "Kun nød",
+        "description": "Adgang under nødsituationer",
+        "fullDescription": "Får kun adgang, når nødprotokol aktiveres"
+      },
+      "limitedInfo": {
+        "title": "Begrænset info",
+        "description": "Grundlæggende information til forberedelse",
+        "fullDescription": "Kan se grundlæggende information nu for at hjælpe dem med at forberede sig"
+      },
+      "fullAccess": {
+        "title": "Fuld adgang",
+        "description": "Al delt information",
+        "fullDescription": "Kan se al information, du har delt med dem"
+      }
+    },
+    "messages": {
+      "accessLevelUpdated": "Adgangsniveau opdateret",
+      "updateSentTo": "Opdatering sendt til {{name}}",
+      "failedToSendUpdate": "Kunne ikke sende opdatering til {{name}}"
+    },
+    "errors": {
+      "authenticationRequired": "Godkendelse påkrævet",
+      "failedToFetchData": "Kunne ikke hente familiedata",
+      "failedToLoadMembers": "Kunne ikke indlæse familiemedlemmer"
+    }
+  },
+  "hero": {
+    "title": "Sov roligt ved at vide, at din familie vil være okay",
+    "subtitle": "Når livet tager en uventet drejning, behøver din familie ikke at søge, gætte eller bekymre sig. Alt, hvad de har brug for, vil være lige der, hvor de kan finde det.",
+    "cta_primary": "Tag kontrol over din families fremtid i dag",
+    "cta_secondary": "Se hvor enkelt det er",
+    "urgencySubtitle": "Opsætning tager kun 10 minutter - vær den forberedte forælder, din familie har brug for",
+    "secondaryContext": "2-minutters video, der viser rigtige familier",
+    "trustSignals": {
+      "dataOwnership": "Din families private anliggender forbliver private",
+      "gdprCompliant": "Bygget med europæiske familieværdier",
+      "europeanFamilies": "Betroet af familier, der bekymrer sig dybt"
+    },
+    "community": {}
+  },
+  "nav": {
+    "dashboard": "Oversigt",
+    "manual": "Vejledning for efterladte",
+    "vault": "Arveboks",
+    "guardians": "Værgenetværk",
+    "will": "Testamente",
+    "settings": "Indstillinger",
+    "help": "Hjælp og support"
+  },
+  "vault": {
+    "title": "Arveboksen",
+    "subtitle": "Dit sikre inventar over alle finansielle aktiver og værdifulde ejendele.",
+    "errorLoadingAssets": "Kunne ikke indlæse dine aktiver. Prøv venligst igen.",
+    "letsBuildInventory": "Lad os bygge dit inventar",
+    "addProperty": "Tilføj ejendom",
+    "addFinances": "Tilføj finansiering",
+    "addVehicle": "Tilføj køretøj",
+    "addDigitalAsset": "Tilføj digitalt aktiv",
+    "addPersonalItem": "Tilføj personlig genstand",
+    "addOther": "Tilføj noget andet...",
+    "confirmDeletion": "Er du sikker på, at du vil slette \"{{assetName}}\"?",
+    "errorDeletingAsset": "Kunne ikke slette aktiv. Prøv venligst igen.",
+    "searchPlaceholder": "Søg i dine aktiver...",
+    "addAsset": "Tilføj aktiv",
+    "totalAssets": "Samlede aktiver",
+    "totalValue": "Samlet værdi",
+    "categories": "Kategorier",
+    "noAssetsFound": "Ingen aktiver fundet, der matcher \"{{searchQuery}}\"",
+    "startAddingAssets": "Begynd at tilføje aktiver for at bygge dit inventar",
+    "addNewAsset": "Tilføj nyt aktiv"
+  },
+  "pillars": {
+    "secure": {
+      "title": "BESKYT",
+      "description": "Beskyt din familie og dine aktiver med proaktive sikkerhedsforanstaltninger."
+    },
+    "organize": {
+      "title": "ORGANISER",
+      "description": "Katalogiser og administrer dine digitale og fysiske aktiver."
+    },
+    "transfer": {
+      "title": "OVERFØR",
+      "description": "Sørg for, at din arv bliver givet videre i overensstemmelse med dine ønsker."
+    }
+  },
+  "scenarios": {
+    "title": "Hvad sker der, når livet tager en uventet drejning?",
+    "subtitle": "Rigtige familier, rigtige situationer, rigtig kontrol og forberedelse",
+    "hospitalStay": {
+      "title": "Den uventede hospitalsindlæggelse",
+      "before": {
+        "situation": "Sarahs mand fik et hjerteanfald. Mens han var på intensivafdelingen, brugte hun dage på at finde deres forsikringspapirer, bankkontooplysninger og vigtige kontakter. Stressen var overvældende, da hun havde brug for at fokusere på hans bedring.",
+        "emotion": "Stress og bekymring",
+        "consequence": "Dage med at søge efter information og støtte."
+      },
+      "after": {
+        "situation": "Da Mark havde sin ulykke, åbnede hans kone Lisa deres familieguide og fandt alt organiseret: forsikringsdetaljer, bankkontakter, medicinske oplysninger og endda en liste over personer, der skulle underrettes. Hun kunne fokusere på det vigtigste - at være der for Mark.",
+        "emotion": "Fred og fokus",
+        "benefit": "Øjeblikkelig adgang til alt, hun havde brug for."
+      }
+    },
+    "businessTrip": {
+      "title": "Forretningsrejsens nødsituation",
+      "before": {
+        "situation": "Da Davids fly blev forsinket og han missede sin datters akutte operation, kunne hans kone ikke få adgang til deres opsparingskonto eller finde deres sygesikringsoplysninger. Kritiske beslutninger måtte vente.",
+        "emotion": "Frustration og hjælpeløshed",
+        "consequence": "Vigtige medicinske beslutninger forsinket."
+      },
+      "after": {
+        "situation": "Da Emmas mand rejste og hun havde brug for nødfonde til deres søns operation, havde hun øjeblikkelig adgang til alle kontooplysninger, forsikringsdetaljer og endda forudskrevne autorisationsbreve. Ingen forsinkelser, ingen stress.",
+        "emotion": "Lettelse og klarhed",
+        "benefit": "Alt tilgængeligt lige når hun havde brug for det."
+      }
+    },
+    "suddenLoss": {
+      "title": "Det pludselige tab",
+      "before": {
+        "situation": "Efter at have mistet sin far pludseligt, brugte Maria måneder på at samle hans økonomiske anliggender. Hun fandt konti, hun ikke vidste eksisterede, og missede vigtige deadlines, fordi dokumenter lå spredt overalt.",
+        "emotion": "Forvirring og fortrydelse",
+        "consequence": "Missede deadlines og mistet tid."
+      },
+      "after": {
+        "situation": "Da Johns familie havde brug for at håndtere hans anliggender, var alt tydeligt organiseret: en komplet liste over konti, vigtige kontakter, trin-for-trin instruktioner og endda personlige beskeder, han havde forberedt til hvert familiemedlem.",
+        "emotion": "Rolighed og klarhed",
+        "benefit": "En klar sti at følge i svære tider."
+      }
+    },
+    "labels": {
+      "before": "Før LegacyGuard",
+      "after": "Efter Arveboks",
+      "feeling": "Følelse"
+    },
+    "bottomCta": {
+      "primary": "Lad ikke din familie stå over for denne kaos",
+      "secondary": "Start med at organisere på 10 minutter",
+      "urgency": "Hver dag du venter, er en dag mere, hvor din familie er uforberedt"
+    },
+    "testimonials": {
+      "1": "Efter min brors pludselige ulykke så jeg min svigerinde kæmpe i uger med at finde vigtige dokumenter og adgangskoder. Det var da, jeg vidste, jeg ikke kunne lade det samme ske for min familie.",
+      "2": "Som enlig mor, der driver en virksomhed, bekymrede jeg mig konstant om, hvad der ville ske, hvis der skete mig noget. Arveboks hjalp mig med at organisere alt.",
+      "3": "Min kone har tidlig demens, og jeg indså, jeg havde brug for at forberede mig, mens jeg stadig kunne. Arveboks gjorde det enkelt at organisere vores 40 års liv sammen."
+    }
+  },
+  "calculator": {
+    "badge": "Forberedelsesberegner",
+    "title": "Beregn din families forberedelsesscore",
+    "subtitle": "Se den rigtige tid og penge, din familie sparer, når alt er organiseret",
+    "inputs": {
+      "title": "Din families situation",
+      "description": "Fortæl os lidt om din familie for at tilpasse dine resultater",
+      "dependents": "Hvor mange mennesker er afhængige af dig?",
+      "dependentsHelp": "Inkluder ægtefælle, børn, ældre forældre",
+      "income": "Hvad er din families månedlige indkomst?",
+      "incomeHelp": "Dette hjælper med at beregne potentielle tabte lønninger",
+      "property": "Ejer du ejendom?",
+      "business": "Har du en virksomhed?",
+      "accounts": "Hvor mange bankkonti har du?",
+      "accountsHelp": "Inkluder lønkonto, opsparing, investeringer"
+    },
+    "calculateButton": "Beregn mine besparelser",
+    "results": {
+      "title": "Din families besparelser",
+      "description": "Her er hvad det betyder at være forberedt for dine kære",
+      "timeSavings": {
+        "title": "Tid din familie sparer",
+        "without": "Uden organisation",
+        "withoutHours": "40-120 timer med søgning",
+        "with": "Med Arveboks",
+        "withMinutes": "Under 5 minutter"
+      },
+      "moneySavings": {
+        "title": "Penge din familie sparer",
+        "legalFees": "Advokatomkostninger til rekonstruktion",
+        "lostWages": "Tabte lønninger fra fridage",
+        "penalties": "Missede deadlines og bøder",
+        "total": "Samlede potentielle besparelser"
+      },
+      "emotional": {
+        "title": "Påvirkning på følelsesmæssig velvære",
+        "stress": "Stressniveau reduktion",
+        "confidence": "Families tillidsstigning",
+        "peace": "Kontrol og forberedelsesrating"
+      },
+      "socialProof": "Slut dig til familier, der allerede sover bedre om natten",
+      "families": "15.000+ familier beskyttet",
+      "ctaContext": "De fleste familier fuldfører opsætning under deres frokostpause",
+      "shareButton": "Del resultater"
+    },
+    "testimonial": {
+      "quote": "Jeg vidste aldrig, hvor meget stress jeg bar på, før jeg fik alt organiseret. Nu ved jeg, at min familie vil være okay, uanset hvad der sker.",
+      "author": "Sarah M., mor til tre"
+    },
+    "shareTitle": "Families forberedelsesberegner resultater",
+    "shareCopied": "Resultater kopieret til udklipsholder!"
+  },
+  "testimonials": {
+    "badge": "Rigtige familier tager kontrol",
+    "title": "Betroet af 15.000+ europæiske familier",
+    "subtitle": "Se hvordan familier som din fandt sikkerhed og fred med Arveboks",
+    "verified": "Verificeret familie",
+    "trustedBy": "Betroet og anbefalet af",
+    "stats": {
+      "families": "15.000+",
+      "familiesLabel": "europæiske familier beskyttet",
+      "satisfaction": "99,7%",
+      "satisfactionLabel": "føler sig mere forberedt og i kontrol",
+      "stressReduction": "92%",
+      "stressReductionLabel": "mindre familiestress rapporteret",
+      "timeSaved": "120 timer",
+      "timeSavedLabel": "gennemsnitlig tid sparet per familie"
+    },
+    "stories": {
+      "1": {
+        "name": "Michael K.",
+        "role": "Far til tre",
+        "location": "München, Tyskland",
+        "quote": "Efter min brors pludselige ulykke så jeg min svigerinde kæmpe i uger med at finde vigtige dokumenter og adgangskoder. Det var da, jeg vidste, jeg ikke kunne lade det samme ske for min familie. Nu er alt organiseret, og min kone ved præcis, hvor hun skal finde, hvad hun har brug for. At være forberedt og i kontrol er uvurderligt.",
+        "highlight": "✨ Sat op på kun 2 timer, beskytter 3 børn og ægtefælle"
+      },
+      "2": {
+        "name": "Anna S.",
+        "role": "Virksomhedsejer",
+        "location": "Wien, Østrig",
+        "quote": "Som enlig mor, der driver en virksomhed, bekymrede jeg mig konstant om, hvad der ville ske, hvis der skete mig noget. Arveboks hjalp mig med at organisere alt - fra virksomhedskonti til mine børns skoleoplysninger. Min søster har nu adgang til alt, hun har brug for at træde til. Jeg sover så meget bedre ved at vide, at de er beskyttet.",
+        "highlight": "💼 Virksomhed og privatliv organiseret på ét sikkert sted"
+      },
+      "3": {
+        "name": "Thomas R.",
+        "role": "Pensioneret lærer",
+        "location": "Zürich, Schweiz",
+        "quote": "Min kone har tidlig demens, og jeg indså, jeg havde brug for at forberede mig, mens jeg stadig kunne. Arveboks gjorde det enkelt at organisere vores 40 års liv sammen. Vores børn har nu klare instruktioner og adgang til alt. Det har bragt hele vores familie tættere sammen ved at vide, at vi er forberedt på hvad som helst, der kommer.",
+        "highlight": "❤️ 40 års familiehistorie bevaret og beskyttet"
+      }
+    },
+    "authority": {
+      "advisors": "Anbefalet af finansielle rådgivere",
+      "attorneys": "Betroet af familieadvokater",
+      "counselors": "Støttet af sorgrådgivere"
+    },
+    "compliance": {
+      "gdpr": "GDPR-kompatibel",
+      "dataProtection": "Databeskyttelse certificeret",
+      "iso": "ISO 27001 certificeret"
+    },
+    "bottomCta": {}
+  },
+  "executor": {
+    "dashboard": {
+      "title": "Eksekutors oversigt",
+      "subtitle": "En trin-for-trin guide til at hjælpe dig gennem denne svære tid",
+      "reminder": "Husk at tage dig af dig selv i denne svære tid. Tøv ikke med at bede om hjælp, når det er nødvendigt."
+    },
+    "errors": {
+      "loadTasksFailed": "Kunne ikke indlæse eksekutoropgaver. Prøv venligst igen senere.",
+      "updateTaskFailed": "Kunne ikke opdatere opgavestatus."
+    },
+    "highPriority": "Høj prioritet",
+    "due": "Forfalder",
+    "completed": "Fuldført",
+    "undo": "Fortryd",
+    "markComplete": "Marker som fuldført",
+    "viewAccountDetails": "Se kontooplysninger og adgangskode",
+    "viewRelatedDocuments": "Se relaterede dokumenter ({{count}})",
+    "stats": {
+      "totalTasks": "Samlede opgaver",
+      "completed": "Fuldført",
+      "remaining": "Resterende"
+    },
+    "sections": {
+      "immediate": {
+        "title": "Øjeblikkelige opgaver (Første 48 timer)",
+        "description": "Kritiske opgaver, der kræver din øjeblikkelige opmærksomhed",
+        "empty": "Alle øjeblikkelige opgaver fuldført!"
+      },
+      "firstWeek": {
+        "title": "Første uges opgaver",
+        "description": "Vigtige opgaver, der skal fuldføres inden for den første uge",
+        "empty": "Alle første uges opgaver fuldført!"
+      },
+      "ongoing": {
+        "title": "Løbende ansvar",
+        "description": "Opgaver, der skal håndteres i de kommende uger og måneder",
+        "empty": "Alle løbende opgaver fuldført!"
+      }
+    },
+    "communications": {
+      "title": "Modtagerkommunikation",
+      "description": "Spor al kommunikation med modtagere for at opretholde gennemsigtighed",
+      "logCommunication": "Log kommunikation",
+      "logTitle": "Log modtagerkommunikation",
+      "logDescription": "Registrer detaljer om din kommunikation med modtagere",
+      "beneficiaryName": "Modtagers navn",
+      "beneficiaryEmail": "E-mail (valgfrit)",
+      "communicationType": "Type",
+      "communicationDate": "Dato",
+      "subject": "Emne",
+      "summary": "Sammenfatning",
+      "subjectPlaceholder": "f.eks. Indledende boopdatering",
+      "summaryPlaceholder": "Kort sammenfatning af hvad der blev diskuteret...",
+      "types": {
+        "email": "E-mail",
+        "phone": "Telefonopkald",
+        "letter": "Brev",
+        "in_person": "Personligt",
+        "other": "Andet"
+      },
+      "saving": "Gemmer...",
+      "saveCommunication": "Gem kommunikation",
+      "cancel": "Annuller",
+      "noCommunications": "Ingen kommunikation logget endnu",
+      "startTracking": "Start med at spore din modtagerkommunikation",
+      "errors": {
+        "saveFailed": "Kunne ikke logge kommunikation"
+      }
+    },
+    "status": {
+      "title": "Boadministrationsstatus",
+      "description": "Nuværende højniveau status synlig for autoriserede familiemedlemmer",
+      "updateStatus": "Opdater status",
+      "updateTitle": "Opdater bostatus",
+      "updateDescription": "Denne status vil være synlig for autoriserede familiemedlemmer",
+      "statusLabel": "Status",
+      "additionalDetails": "Yderligere detaljer (valgfrit)",
+      "detailsPlaceholder": "Giv eventuel yderligere kontekst...",
+      "selectStatus": "Vælg en status",
+      "updating": "Opdaterer...",
+      "lastUpdated": "Sidst opdateret",
+      "progress": "Fremskridt",
+      "noStatusSet": "Ingen status sat endnu. Klik på \"Opdater status\" for at sætte den indledende status.",
+      "noStatusUpdates": "Ingen statusopdateringer er blevet sendt endnu.",
+      "statuses": {
+        "initial_review": "Indledende gennemgang",
+        "gathering_documents": "Indsamler dokumenter",
+        "probate_initiated": "Skifteproces startet",
+        "assets_being_valued": "Aktiver bliver vurderet",
+        "debts_being_settled": "Gæld bliver afviklet",
+        "tax_preparation": "Skatteforberedelse",
+        "ready_for_distribution": "Klar til fordeling",
+        "distribution_in_progress": "Fordeling i gang",
+        "estate_closed": "Bo lukket"
+      },
+      "errors": {
+        "updateFailed": "Kunne ikke opdatere status"
+      }
+    },
+    "justInTime": {
+      "viewAccountDetails": "Se kontooplysninger og adgangskode",
+      "secureInfoAccess": "Sikker informationsadgang",
+      "reauthenticate": "Re-autentificer for at se følsomme oplysninger for",
+      "securityReason": "Af sikkerhedsmæssige årsager, indtast venligst din adgangskode for at få adgang til disse oplysninger.",
+      "password": "Adgangskode",
+      "enterPassword": "Indtast din adgangskode",
+      "incorrectPassword": "Forkert adgangskode. Prøv venligst igen.",
+      "cancel": "Annuller",
+      "verifying": "Verificerer...",
+      "verifyContinue": "Verificer og fortsæt",
+      "accountName": "Kontonavn",
+      "accountNumber": "Kontonummer",
+      "username": "Brugernavn",
+      "pin": "PIN",
+      "additionalNotes": "Yderligere noter",
+      "noSensitiveInfo": "Ingen følsomme oplysninger er knyttet til denne opgave.",
+      "accessLogged": "Denne adgang er blevet logget af sikkerhedsmæssige årsager.",
+      "accessTime": "Adgangstid",
+      "close": "Luk",
+      "errors": {
+        "reauthFailed": "Kunne ikke verificere din identitet. Prøv venligst igen.",
+        "notFound": "Ingen følsomme oplysninger fundet til denne opgave.",
+        "retrieveFailed": "Kunne ikke hente følsomme oplysninger."
+      }
+    },
+    "familyView": {
+      "title": "Boadministrationsstatus",
+      "subtitle": "Hold dig informeret om fremskridtet med boadministration",
+      "recentCommunications": "Seneste eksekutorkommunikation",
+      "recentCommunicationsDescription": "Seneste opdateringer fra {{executorName}} til modtagere",
+      "to": "Til",
+      "noCommunications": "Ingen kommunikation er blevet logget endnu.",
+      "infoMessage": "Denne information opdateres af {{executorName}} for at holde familiemedlemmer informeret. For detaljerede spørgsmål, kontakt venligst eksekutoren direkte.",
+      "defaultExecutor": "eksekutoren",
+      "errors": {
+        "loadFailed": "Kunne ikke indlæse data"
+      }
+    }
+  },
+  "features": {
+    "title": "Tre enkle løfter, vi giver dig",
+    "subtitle": "Alt din familie har brug for, intet de ikke har. Enkelt, klart og altid der, når det betyder noget.",
+    "sleepBetter": {
+      "title": "Sov bedre i nat",
+      "description": "Stop med at bekymre dig om 'hvad hvis der sker mig noget.' Din familie vil vide præcis, hvad de skal gøre, hvor de skal finde alt, og hvem de skal ringe til."
+    },
+    "noChaos": {
+      "title": "Ingen desperat søgning",
+      "description": "Din familie vil ikke bruge dage på at lede i skuffer, ringe til banker eller gætte adgangskoder. Alt vigtigt er organiseret på ét sikkert sted."
+    },
+    "clearInstructions": {
+      "title": "Trin-for-trin vejledning",
+      "description": "Dine kære får klare, enkle instruktioner til præcis, hvad de skal gøre og hvornår. Ingen forvirring, ingen gætteri, ingen stress i svære tider."
+    },
+    "security": {
+      "title": "Absolut fortrolighed og privatliv",
+      "description": "Designet så ingen uautoriseret person kan få adgang til dine data. Heller ikke os. Dit privatliv er vores højeste prioritet."
+    },
+    "guardians": {
+      "title": "Værgenetværk",
+      "description": "Udpeg betroede familiemedlemmer og venner som værger for at sikre arvens kontinuitet."
+    },
+    "storage": {
+      "title": "Sikker cloud-lagring",
+      "description": "Redundante sikkerhedskopier i flere datacentre med 99,99 % oppetidsgaranti."
+    },
+    "timelock": {
+      "title": "Tidslåst adgang",
+      "description": "Indstil betingelser for, hvornår og hvordan din digitale arv tilgås af modtagere."
+    },
+    "stories": {
+      "title": "Personlige historier",
+      "description": "Skab rige multimediefortællinger, der fanger essensen af din families rejse."
+    },
+    "preservation": {
+      "title": "Livslang bevarelse",
+      "description": "Din arv bevares på ubestemt tid med automatisk formatmigrering og opdateringer."
+    }
+  },
+  "dashboard": {
+    "title": "Din arveoversigt",
+    "subtitle": "Dit centrale hub til at bevare og beskytte din families arv",
+    "planStrength": {
+      "title": "Plans styrke",
+      "description": "Samlet familiens forberedelse og beskyttelsesniveau",
+      "currentStage": "Nuværende trin: {{stage}}"
+    },
+    "nextStep": {
+      "title": "Næste anbefalede trin",
+      "estimatedTime": "Anslået tid: {{time}}"
+    },
+    "protectionJourney": {
+      "title": "Beskyttelsesrejse",
+      "description": "Din rejse til komplet familiebeskyttelse",
+      "planStrengthRange": "Plans styrke: {{range}}",
+      "stage": "Trin {{number}}: {{name}}"
+    },
+    "stages": {
+      "foundation": "Grundlæggende trin",
+      "building": "Opbygnings trin",
+      "strengthening": "Styrkelse trin",
+      "advancedPlanning": "Avanceret planlægning",
+      "legacy": "Arve trin"
+    },
+    "deepDive": {
+      "milestoneAchieved": "MILESTONE OPNÅET"
+    },
+    "preservationMode": {
+      "lastReviewDate": "Sidste gennemgangsdato: {{date}}",
+      "startAnnualCheck": "Start årlig systemkontrol",
+      "latestUpdates": "Seneste opdateringer"
+    },
+    "complexProfile": {
+      "detected": "Kompleks profil opdaget",
+      "personalizedGuidance": "Personlig vejledning",
+      "businessSuccessionNote": "Vi har bemærket, at din plan inkluderer virksomhedsaktiver. Successionsplanlægning kan være kompleks. Overvej en professionel gennemgang for at sikre, at din virksomhedsovergang er problemfri.",
+      "discussWithExpert": "Diskuter med en juridisk ekspert"
+    },
+    "errors": {
+      "failedToFetchStatus": "Kunne ikke hente fremskridtsstatus",
+      "failedToDeleteDocument": "Kunne ikke slette dokument",
+      "failedToUpdateDocument": "Kunne ikke opdatere dokument",
+      "failedToDeleteGuardian": "Kunne ikke slette værge",
+      "pleaseEnterValidEmail": "Indtast venligst en gyldig e-mailadresse",
+      "failedToSendInvitation": "Kunne ikke sende invitation",
+      "guardianLimitReached": "Du har nået grænsen på {{limit}} værger på din nuværende plan"
+    },
+    "nudge": {
+      "progressTitle": "Din arvebeskyttelses fremskridt",
+      "completeNow": "Fuldfør nu"
+    },
+    "sectionHeaders": {},
+    "tasks": {
+      "progress": "{{completed}} af {{total}} opgaver fuldført"
+    },
+    "metadata": {
+      "contact": "Kontakt",
+      "renewsOn": "Fornyes den"
+    },
+    "invitation": {
+      "name": "Navn",
+      "relationship": "Relation",
+      "roles": "Roller",
+      "emailLabel": "E-mailadresse"
+    },
+    "allocationDisplay": "{{percentage}}% tildelt",
+    "header": {
+      "initial": "Din arvebeskyttelses rejse",
+      "inProgress": "Gør store fremskridt!",
+      "complete": "Alt klar!"
+    },
+    "messages": {
+      "welcomeToHeritageVault": "Velkommen til Arveboks! Lad os sikre din families fremtid sammen.",
+      "excellentFirstStep": "Fremragende første skridt!",
+      "taskBringsClarity": "Hver opgave bringer mere klarhed og sikkerhed til din familie.",
+      "projectOrderComplete": "Din handlingsplan er fuldført!",
+      "successfullySecured": "Du har succesfuldt sikret din families fremtid. Godt gået!",
+      "progressMade": "Store fremskridt!",
+      "anotherPieceInPlace": "Endnu et vigtigt stykke på plads.",
+      "startingTask": "Starter: {{taskTitle}}",
+      "documentDeleted": "Dokument slettet",
+      "documentMarkedAsKey": "Dokument markeret som nøgledokument",
+      "documentRemovedFromKey": "Dokument fjernet fra nøgledokumenter",
+      "assetDeleted": "Aktiv slettet",
+      "assetAdded": "Aktiv tilføjet",
+      "assetUpdated": "Aktiv opdateret",
+      "guardianDeleted": "Værge slettet",
+      "invitationSent": "Invitation sendt til {{email}}",
+      "sendingInvitation": "Sender invitation...",
+      "beneficiaryDeleted": "Modtager slettet",
+      "beneficiaryAdded": "Modtager tilføjet",
+      "beneficiaryUpdated": "Modtager opdateret"
+    },
+    "sheets": {
+      "editAsset": "Rediger aktiv",
+      "addAsset": "Tilføj aktiv",
+      "editAssetDescription": "Opdater detaljerne for dette aktiv",
+      "addAssetDescription": "Tilføj et nyt aktiv til din portefølje",
+      "uploadDocument": "Upload dokument",
+      "uploadDocumentDescription": "Upload og organiser dine vigtige dokumenter",
+      "editBeneficiary": "Rediger modtager",
+      "addBeneficiary": "Tilføj modtager",
+      "editBeneficiaryDescription": "Opdater modtagerdetaljer",
+      "addBeneficiaryDescription": "Tilføj nogen, der vil arve fra dig"
+    },
+    "addGuardian": "Tilføj værge",
+    "addItem": "Tilføj genstand",
+    "uploadDocument": "Upload dokument",
+    "addBeneficiary": "Tilføj modtager",
+    "empty": {
+      "noGuardians": "Ingen værger tilføjet endnu",
+      "noAssetsOrDocuments": "Ingen aktiver eller dokumenter tilføjet endnu",
+      "noBeneficiaries": "Ingen modtagere tilføjet endnu"
+    },
+    "strategicSummary": {
+      "initial": "Begynd at opbygge din digitale arv ved at tilføje dit første dokument.",
+      "addDocument": "Tilføj Dokument",
+      "addPrimaryGuardian": "Tilføj primær værge",
+      "addBackupGuardian": "Tilføj backup værge",
+      "addHomeProperty": "Tilføj din boligejendom",
+      "addFinancialAccounts": "Tilføj finansielle konti",
+      "addPrimaryBeneficiary": "Tilføj primær modtager",
+      "addContingentBeneficiaries": "Tilføj betingede modtagere",
+      "minutes": "{{count}} minutter",
+      "assetInventory": "Aktivlager",
+      "assetInventoryDesc": "Komplet liste over dine værdifulde ejendele",
+      "criticalDocuments": "Kritiske dokumenter",
+      "criticalDocumentsDesc": "Vigtige dokumenter, som din familie har brug for med det",
+      "guardianNetwork": "Vogternetværk",
+      "guardianNetworkDesc": "Betroede folk til at håndtere dine anliggender",
+      "ifNotDone": "⚠️ Hvis ikke gjort",
+      "impact": {},
+      "inheritancePlan": "Arveplan",
+      "inheritancePlanDesc": "Klare instruktioner til fordeling af aktiver",
+      "nextAction": "⚡ Næste handling",
+      "nextCriticalStep": "Næste kritiske trin",
+      "startWithNext": "Start med næste kritiske trin",
+      "subtitle": "Du har {count} nøgleområder, der kræver opmærksomhed. Hvis du gennemfører disse trin, sikres {percentage}% beskyttelse af din familie og dine aktiver.",
+      "title": "Dit strategiske overblik",
+      "whyImportant": "🛡️ Hvorfor vigtigt"
+    },
+    "stats": {
+      "totalAssets": "Samlede Aktiver",
+      "activeAssetsManaged": "Aktive forvaltede aktiver",
+      "activeGuardians": "Aktive Værger",
+      "trustedGuardians": "Tildelte betroede værger",
+      "beneficiaries": "Modtagere",
+      "legacyRecipients": "Navngivne arvemodtagere",
+      "securityScore": "Sikkerhedsscore",
+      "securityScoreValue": "98%",
+      "excellent": "Fremragende",
+      "good": "God",
+      "needsImprovement": "Kræver Forbedring"
+    },
+    "quickTasks": {
+      "taskCompleted": "Task completed!",
+      "taskStarted": "Starting task...",
+      "tasks": {
+        "birthCertificate": {
+          "title": "🛡️ Add Birth Certificate",
+          "description": "Without this document, your family cannot prove inheritance rights or access accounts"
+        },
+        "insurancePolicy": {
+          "title": "💰 Add Life Insurance Policy",
+          "description": "Your family needs immediate access to claim benefits and avoid delays"
+        },
+        "will": {
+          "title": "⚖️ Add Will or Testament",
+          "description": "Prevents family disputes and ensures your wishes are followed"
+        },
+        "spouseGuardian": {
+          "title": "👥 Add Spouse as Guardian",
+          "description": "Without guardians, no one can legally act on your behalf or make medical decisions"
+        },
+        "backupGuardian": {
+          "title": "🤝 Add Backup Guardian",
+          "description": "Ensures someone can step in if your primary guardian is unavailable"
+        },
+        "bankAccount": {
+          "title": "🏦 Add Bank Account",
+          "description": "Your family needs to know where your money is to access it immediately"
+        },
+        "homeProperty": {
+          "title": "🏠 Add Home Property",
+          "description": "Prevents your family from losing your most valuable asset"
+        },
+        "vehicle": {
+          "title": "🚗 Add Vehicle",
+          "description": "Ensures your family can transfer ownership and avoid complications"
+        },
+        "spouseBeneficiary": {
+          "title": "💝 Add Spouse as Beneficiary",
+          "description": "Without clear instructions, family disputes can arise over inheritance"
+        },
+        "childrenBeneficiaries": {
+          "title": "👶 Add Children as Beneficiaries",
+          "description": "Ensures your children receive what you intended for them"
+        }
+      },
+      "allCompleted": "Opgaver fuldført",
+      "allTasks": "Alle opgaver",
+      "assets": "Filer",
+      "beneficiaries": "Modtager",
+      "completed": "gennemført",
+      "documents": "Dokumenter",
+      "greatProgress": "Godt gået! Du har fuldført {count} opgaver.",
+      "guardians": "Værger",
+      "ifNotDone": "⚠️ If Not Done",
+      "markAsComplete": "Marker som gennemført",
+      "progress": "Status",
+      "start": "Start",
+      "title": "Opgaver på 5 minutter",
+      "wellOnWay": "🎉 Du er godt på vej til at sikre din families fremtid!",
+      "whyImportant": "🛡️ Why Important"
+    },
+    "familyGuide": {
+      "view": "View",
+      "subtitle": "Automatically generated guide for your family",
+      "discreteModeDesc": "Your personal notes and reminders",
+      "callNow": "Ring nu",
+      "callSoon": "Ring snart",
+      "critical": "Kritisk",
+      "discreteMode": "Diskret tilstand",
+      "emergencyContacts": "Nødkontakter:",
+      "exportGuide": "Eksportvejledning",
+      "generateGuide": "Generer vejledning",
+      "important": "Vigtig",
+      "importantDocuments": "V.Esentlige dokumenter",
+      "shareWithFamily": "Del det med familien. ",
+      "timeline": "Hvad skal du gøre",
+      "title": "Nødvejledning til familien"
+    }
+  },
+  "onboarding": {
+    "title": "Velkommen til LegacyGuard",
+    "subtitle": "Lad os hjælpe dig med at sikre din families fremtid",
+    "mainTitle": "Handlingsplan",
+    "mainSubtitle": "Lad os skabe din personlige plan for arvebeskyttelse.",
+    "progressText": "Handlingsplan: Trin {{step}} af 4",
+    "skipButton": "Spring over for nu",
+    "skipConfirmTitle": "Spring onboarding over?",
+    "skipConfirmMessage": "Du kan altid genstarte denne opsætning senere i indstillingerne.",
+    "skipConfirmYes": "Spring over",
+    "skipConfirmNo": "Fortsæt opsætning",
+    "restartButton": "Genstart Onboarding",
+    "welcomeBack": "Velkommen tilbage! Klar til at fuldføre din opsætning?",
+    "resumeTitle": "Fortsæt hvor du slap",
+    "resumeMessage": "Du var på trin {{step}} af 4.",
+    "partialProgress": "{{percentage}}% fuldført",
+    "inventory": {
+      "documentAccess": {
+        "question": "Hvis der skete dig noget i dag, ville din familie så vide, hvor de skulle finde dine vigtige dokumenter?",
+        "answers": {
+          "yes": "Ja",
+          "no": "Nej",
+          "partially": "Delvist"
+        }
+      },
+      "caretaker": {
+        "question": "Hvem ville tage sig af dine børn/aktiver/digitale konti?",
+        "answers": {
+          "designated": "Jeg har en udpeget person",
+          "familyFigureOut": "Familien ville finde ud af det",
+          "notThought": "Det har jeg ikke tænkt over"
+        }
+      },
+      "familyClarity": {
+        "question": "Føler du, at din familie ville vide, hvad du ønskede for dem?",
+        "answers": {
+          "clear": "Ja, det er helt klart",
+          "somewhat": "Til en vis grad",
+          "neverDiscussed": "Nej, det har vi aldrig talt om"
+        }
+      },
+      "biggestWorry": {
+        "question": "Hvad bekymrer dig mest for din families fremtid?",
+        "answers": {
+          "financial": "Økonomisk sikkerhed",
+          "legal": "Juridiske komplikationer",
+          "memories": "At miste minder",
+          "conflicts": "Familiekonflikter"
+        }
+      },
+      "personalized": {
+        "documentCentralization": "Baseret på dit svar om dokumentadgang, anbefaler vi at starte med at centralisere dine vigtige dokumenter.",
+        "guardianDesignation": "Da du ikke har udpeget nogen til at tage sig af dine aktiver, bør udpegning af en værge være din prioritet.",
+        "willPreparation": "Din familie har brug for klarhed om dine ønsker. At oprette et testamente er et essentielt første skridt.",
+        "financialPlanning": "Økonomisk sikkerhed er afgørende. Lad os starte med at dokumentere dine bankkonti og aktiver.",
+        "conflictPrevention": "For at forhindre familiekonflikter er klar dokumentation og kommunikation nøglen.",
+        "memoryPreservation": "Bevarelse af minder starter med at organisere dine digitale fotos og historier.",
+        "legalOrganization": "Lad os organisere dine juridiske dokumenter for at undgå komplikationer senere."
+      }
+    },
+    "q1": {
+      "title": "Hvis der skete dig noget i dag, ville din familie så vide, hvor de skulle finde dine vigtige dokumenter?",
+      "option1": "Ja",
+      "option2": "Nej",
+      "option3": "Delvist"
+    },
+    "q2": {
+      "title": "Hvem ville tage sig af dine børn/aktiver/digitale konti?",
+      "option1": "Jeg har en udpeget person",
+      "option2": "Familien ville finde ud af det",
+      "option3": "Det har jeg ikke tænkt over"
+    },
+    "q3": {
+      "title": "Føler du, at din familie ville vide, hvad du ønskede for dem?",
+      "option1": "Ja, det er helt klart",
+      "option2": "Til en vis grad",
+      "option3": "Nej, det har vi aldrig talt om"
+    },
+    "q4": {
+      "title": "Hvad bekymrer dig mest for din families fremtid?",
+      "option1": "Økonomisk sikkerhed",
+      "option2": "Juridiske komplikationer",
+      "option3": "At miste minder",
+      "option4": "Familiekonflikter"
+    },
+    "buttons": {
+      "previous": "Forrige",
+      "next": "Næste",
+      "generate": "Generer min handlingsplan"
+    },
+    "analysis": {
+      "title": "Analyserer dine svar...",
+      "subtitle": "Forbereder din personlige 'Handlingsplan'...",
+      "done": "Færdig!"
+    },
+    "complete": "God start! Vi har tilpasset din oversigt baseret på dine svar. Du er klar til at begynde at opbygge din omfattende arveplan.",
+    "success": {
+      "stepCompleted": "Trin {{step}} fuldført!",
+      "inventoryComplete": "Livsinventar fuldført! Din personlige plan er klar.",
+      "allQuestionsAnswered": "Alle spørgsmål er besvaret. Genererer din handlingsplan..."
+    },
+    "errors": {
+      "questionRequired": "Besvar venligst dette spørgsmål for at fortsætte.",
+      "failedToSave": "Kunne ikke gemme dine svar. Prøv venligst igen.",
+      "loadingFailed": "Kunne ikke indlæse onboarding-spørgsmål."
+    },
+    "addAnother": "Tilføj en til",
+    "previous": "Forrige",
+    "next": "Næste",
+    "continue": "Fortsæt til oversigt"
+  },
+  "manual": {
+    "title": "Vejledning for efterladte",
+    "subtitle": "Væsentlig information til dine kære, når de har mest brug for det.",
+    "tabs": {
+      "contacts": "Vigtige kontakter",
+      "documents": "Nøgledokumenter",
+      "instructions": "Instruktioner"
+    },
+    "contacts": {
+      "title": "Vigtige kontakter",
+      "description": "Nøglepersoner din familie bør kontakte i tilfælde af en nødsituation.",
+      "addContact": "Tilføj kontakt",
+      "addFirstContact": "Tilføj din første kontakt",
+      "loading": "Indlæser kontakter...",
+      "empty": {
+        "title": "Ingen kontakter tilføjet endnu.",
+        "description": "Start med at tilføje vigtige personer, som din familie bør kende til."
+      },
+      "form": {
+        "editTitle": "Rediger kontakt",
+        "addTitle": "Tilføj vigtig kontakt",
+        "description": "Tilføj personer, som din familie bør kontakte i vigtige situationer.",
+        "nameLabel": "Kontaktnavn *",
+        "namePlaceholder": "f.eks. Jens Hansen",
+        "roleLabel": "Rolle/Profession *",
+        "rolePlaceholder": "f.eks. Familieadvokat, Revisor, Læge",
+        "phoneLabel": "Telefonnummer",
+        "phonePlaceholder": "+45 12 34 56 78",
+        "emailLabel": "E-mailadresse",
+        "emailPlaceholder": "kontakt@example.com",
+        "notesLabel": "Noter",
+        "notesPlaceholder": "Yderligere oplysninger om denne kontakt...",
+        "updateButton": "Opdater kontakt",
+        "addButton": "Tilføj kontakt",
+        "saving": "Gemmer...",
+        "cancel": "Annuller"
+      },
+      "card": {
+        "edit": "Rediger"
+      },
+      "messages": {
+        "nameAndRoleRequired": "Navn og rolle er påkrævet.",
+        "loginRequired": "Du skal være logget ind for at gemme kontakter.",
+        "updated": "Kontakt opdateret!",
+        "added": "Kontakt tilføjet!",
+        "deleted": "Kontakt slettet!"
+      },
+      "errors": {
+        "loadFailed": "Kunne ikke indlæse kontakter.",
+        "saveFailed": "Kunne ikke gemme kontakt.",
+        "deleteFailed": "Kunne ikke slette kontakt."
+      }
+    },
+    "documents": {
+      "title": "Nøgledokumenter",
+      "description": "Kritiske dokumenter, som din familie har brug for at kende til.",
+      "loading": "Indlæser nøgledokumenter...",
+      "empty": {
+        "title": "Ingen nøgledokumenter tilføjet endnu.",
+        "description": "Marker vigtige dokumenter som \"nøgledokumenter\" fra din boks for at få dem vist her.",
+        "tip": "Tip: Gå til din boks og slå \"Inkluder i Vejledning for efterladte\" til for vigtige dokumenter."
+      },
+      "card": {
+        "essentialNote": "Dette dokument er markeret som værende essentielt for dine efterladte."
+      },
+      "errors": {
+        "loadFailed": "Kunne ikke indlæse nøgledokumenter."
+      },
+      "expiration": {
+        "expired": "Udløbet",
+        "expiresSoon": "Udløber snart",
+        "expiring": "Udløber"
+      }
+    },
+    "instructions": {
+      "title": "Sidste ønsker & instruktioner",
+      "description": "Personlig vejledning og beskeder til dine kære.",
+      "loading": "Indlæser instruktioner...",
+      "autoSaveNote": "Dine instruktioner gemmes automatisk, mens du skriver.",
+      "sections": {
+        "funeral": {
+          "title": "Begravelsesønsker",
+          "description": "Dine præferencer for begravelsesarrangementer og ceremonier.",
+          "placeholder": "f.eks. Kremering, ingen formel ceremoni, spil 'My Way' af Frank Sinatra..."
+        },
+        "digitalAccounts": {
+          "title": "Nedlukning af digitale konti",
+          "description": "Instruktioner til håndtering af dine digitale konti og online tilstedeværelse.",
+          "placeholder": "f.eks. Slet venligst min Facebook-profil, men arkiver min Gmail. Overfør mine billeder fra Google Drive til..."
+        },
+        "messages": {
+          "title": "Beskeder til kære",
+          "description": "Personlige beskeder og sidste tanker til din familie og venner.",
+          "placeholder": "Del dine tanker, minder og sidste beskeder til dem, du elsker..."
+        }
+      },
+      "errors": {
+        "loadFailed": "Kunne ikke indlæse instruktioner."
+      }
+    }
+  },
+  "documentTypes": {
+    "realEstateDeed": "Skøde",
+    "birthCertificate": "Fødselsattest",
+    "insurancePolicy": "Forsikringspolice",
+    "lastWill": "Testamente",
+    "employmentContract": "Ansættelseskontrakt",
+    "passport": "Pas",
+    "drivingLicense": "Kørekort",
+    "bankStatement": "Kontoudtog",
+    "investmentCertificate": "Investeringsbevis",
+    "energyContract": "Energikontrakt",
+    "softwareLicense": "Softwarelicens",
+    "subscriptionService": "Abonnementstjeneste",
+    "other": "Andet"
+  },
+  "navigation": {
+    "dashboard": "Oversigt",
+    "vault": "Arveboksen",
+    "trustedCircle": {
+      "title": "Dit betroede netværk",
+      "subtitle": "De mennesker, du stoler på til at hjælpe med at beskytte og tage sig af din familie og arv.",
+      "responsibilities": "Deres ansvar:",
+      "preparationStatus": "Forberedelsesstatus:",
+      "informedOfRole": "Er blevet informeret om deres rolle",
+      "acceptedResponsibility": "Har accepteret ansvaret",
+      "hasAccessToDocuments": "Har adgang til nødvendige dokumenter",
+      "reviewedEmergencyProcedures": "Har gennemgået nødprocedurer",
+      "addTrustedPerson": "+ Tilføj en betroet person",
+      "preparednessStatus": {
+        "wellPrepared": "Godt forberedt",
+        "partiallyPrepared": "Delvist forberedt",
+        "needsAttention": "Kræver opmærksomhed"
+      },
+      "buttonText": {
+        "prepared": "✓ {{name}} er forberedt",
+        "prepareNow": "Forbered {{name}} nu"
+      },
+      "mockData": {
+        "sarah": {
+          "name": "Sarah Johnson",
+          "relationship": "Kone",
+          "responsibilities": {
+            "bankAccess": "Kan få adgang til alle bankkonti for at betale regninger og administrere husholdningsudgifter.",
+            "inheritAssets": "Vil arve familieboligen, sommerhuset og al opsparing.",
+            "medicalPower": "Har sundhedsfuldmagt til at træffe sundhedsbeslutninger."
+          }
+        },
+        "michael": {
+          "name": "Michael Johnson",
+          "relationship": "Bror",
+          "responsibilities": {
+            "childCare": "Vil tage sig af vores børn, hvis begge forældre er væk.",
+            "estateExecution": "Vil eksekvere vores sidste ønsker og administrere boafvikling.",
+            "businessManagement": "Kan træde til for at administrere Johnson Contracting LLC midlertidigt."
+          }
+        },
+        "robert": {
+          "name": "Robert Chen",
+          "relationship": "Forretningspartner",
+          "responsibilities": {
+            "businessAuthority": "Har myndighed til at administrere forretningsdrift og underskrive kontrakter.",
+            "buySellAgreement": "Vil købe mine forretningsandele i henhold til vores køb-salg-aftale."
+          }
+        },
+        "emily": {
+          "name": "Emily Thompson",
+          "relationship": "Svigerinde",
+          "responsibilities": {
+            "backupGuardian": "Backup værge for børn, hvis primær værge ikke kan fungere."
+          }
+        }
+      }
+    },
+    "familyHub": "Familie Hub",
+    "legacyBriefing": {
+      "legacy_briefing_3": "Arvebriefing",
+      "create_and_manage_sealed_messa_4": "Opret og administrer forseglede beskeder til dine kære",
+      "failed_to_load_your_time_capsu_1": "Kunne ikke indlæse dine tidskapsler",
+      "are_you_sure_you_want_to_delet_2": "Er du sikker på, at du vil slette denne tidskapsel?",
+      "create_new_message_5": "Opret ny besked",
+      "no_time_capsules_yet_6": "Ingen tidskapsler endnu",
+      "create_meaningful_messages_for_7": "Opret meningsfulde beskeder til dine kære at modtage i fremtiden",
+      "create_your_first_message_8": "Opret din første besked",
+      "to_9": "Til:",
+      "unlocks_on_10": "Låses op den:",
+      "unlocks_11": "Låses op:",
+      "after_passing_12": "Efter dødsfald",
+      "statusLabels": {
+        "locked": "Låst",
+        "unlocked": "Låst op",
+        "delivered": "Leveret",
+        "noRecipients": "Ingen modtagere"
+      },
+      "messageTypes": {
+        "text": "Tekstbesked",
+        "photo": "Fotobesked",
+        "video": "Videobesked",
+        "audio": "Lydbesked"
+      },
+      "actions": {
+        "edit": "Rediger",
+        "delete": "Slet"
+      },
+      "toastMessages": {
+        "deleteSuccess": "Tidskapsel slettet",
+        "deleteError": "Kunne ikke slette tidskapsel"
+      },
+      "dateFormat": {
+        "dateNotSet": "Dato ikke sat",
+        "created": "Oprettet"
+      }
+    },
+    "executorToolkit": "Eksekutors værktøjskasse",
+    "assets": "Hvad du ejer og værdsætter",
+    "manual": "Vejledning",
+    "documents": "Vigtige papirer",
+    "guardians": "Mennesker du stoler på",
+    "family": "Familie Hub",
+    "timeCapsule": "Tidskapsler",
+    "will": "Dine sidste ønsker",
+    "consultations": "Juridiske konsultationer",
+    "settings": "Indstillinger",
+    "help": "Hjælp og support",
+    "subscriptions": "Abonnementer"
+  },
+  "invite": {
+    "title": "{{name}} har inviteret dig til at være værge for deres digitale arv."
+  },
+  "settings": {
+    "title": "Indstillinger",
+    "subtitle": "Administrer dine kontopræferencer og sikkerhedsindstillinger.",
+    "loading": "Indlæser dine kontoindstillinger...",
+    "profile": {
+      "title": "Profiloplysninger",
+      "description": "Opdater dine personlige oplysninger og præferencer.",
+      "emailAddress": "E-mailadresse",
+      "emailCannotBeChanged": "Din e-mailadresse kan ikke ændres.",
+      "firstName": "Fornavn",
+      "firstNamePlaceholder": "Indtast dit fornavn",
+      "lastName": "Efternavn",
+      "lastNamePlaceholder": "Indtast dit efternavn",
+      "saving": "Gemmer...",
+      "saveChanges": "Gem ændringer"
+    },
+    "security": {
+      "title": "Sikkerhed",
+      "description": "Administrer din kontosikkerhed og adgang.",
+      "changePassword": "Skift adgangskode",
+      "currentPassword": "Nuværende adgangskode",
+      "currentPasswordPlaceholder": "Indtast nuværende adgangskode",
+      "newPassword": "Ny adgangskode",
+      "newPasswordPlaceholder": "Indtast ny adgangskode",
+      "confirmNewPassword": "Bekræft ny adgangskode",
+      "confirmNewPasswordPlaceholder": "Bekræft ny adgangskode",
+      "updating": "Opdaterer...",
+      "updatePassword": "Opdater adgangskode",
+      "twoFactorAuth": "To-faktor-godkendelse",
+      "enable2FA": "Aktiver 2FA",
+      "2FADescription": "Tilføj et ekstra lag sikkerhed til din konto. (Kommer snart)"
+    },
+    "accountManagement": {
+      "title": "Kontoadministration",
+      "description": "Permanente konto-handlinger - fortsæt venligst med forsigtighed.",
+      "deleteAccountTitle": "Slet konto",
+      "deleteAccountWarning": "Denne handling er uigenkaldelig og vil permanent slette alle dine data, inklusive uploadede dokumenter og forberedte instruktioner. Dine digitale arveoplysninger vil blive fuldstændig fjernet fra vores systemer.",
+      "deleteMyAccount": "Slet min konto",
+      "confirmTitle": "Er du helt sikker?",
+      "confirmDescription": "Denne handling kan ikke fortrydes. Dette vil permanent slette din konto og fjerne alle dine data fra vores servere.",
+      "confirmEmailPrompt": "Indtast venligst din e-mailadresse {{email}} for at bekræfte:",
+      "emailPlaceholder": "Indtast din e-mailadresse",
+      "deleting": "Sletter...",
+      "deleteAccount": "Slet konto"
+    },
+    "errors": {
+      "loadProfile": "Kunne ikke indlæse profiloplysninger.",
+      "updateProfile": "Kunne ikke opdatere profil.",
+      "passwordFieldsRequired": "Udfyld venligst alle adgangskodefelter.",
+      "passwordsDoNotMatch": "De nye adgangskoder stemmer ikke overens.",
+      "passwordTooShort": "Ny adgangskode skal være på mindst 6 tegn.",
+      "updatePassword": "Kunne ikke opdatere adgangskode.",
+      "emailDoesNotMatch": "E-mailadressen stemmer ikke overens.",
+      "deleteAccountSupport": "Sletning af konto skal anmodes via support. Kontakt os venligst for assistance.",
+      "deleteAccount": "Kunne ikke slette konto."
+    },
+    "success": {
+      "profileUpdated": "Profilen er blevet opdateret.",
+      "passwordUpdated": "Adgangskoden er blevet opdateret."
+    },
+    "privacySettings": {
+      "privacy_settings_1": "Privatlivsindstillinger",
+      "control_how_your_documents_are_2": "Kontroller, hvordan dine dokumenter behandles og lagres",
+      "default_processing_mode_3": "Standard behandlingstilstand",
+      "choose_how_documents_are_proce_4": "Vælg, hvordan dokumenter behandles som standard",
+      "hybrid_mode_recommended_5": "Hybrid tilstand (Anbefalet)",
+      "combines_local_and_cloud_ai_fo_6": "Kombinerer lokal og cloud AI for optimal ydeevne og privatliv",
+      "local_only_privacy_mode_7": "Kun lokal privatlivstilstand",
+      "processes_documents_entirely_i_8": "Behandler dokumenter helt i din browser for maksimal privatliv",
+      "note_9": "Bemærk: ",
+      "you_can_always_override_this_s_10": "Du kan altid tilsidesætte denne indstilling, når du uploader individuelle dokumenter"
+    }
+  },
+  "assetType": {
+    "selectType": "Vælg {{mainCategory}} type",
+    "primaryResidence": "Primær bolig",
+    "vacationHome": "Sommerhus",
+    "rentalProperty": "Lejeejendom",
+    "land": "Jord",
+    "commercialProperty": "Erhvervsejendom",
+    "bankAccount": "Bankkonto",
+    "investmentPortfolio": "Investeringsportefølje",
+    "cryptocurrencyWallet": "Kryptovaluta-pung",
+    "loanMortgage": "Lån / realkredit",
+    "insurancePolicy": "Forsikringspolice",
+    "pensionRetirement": "Pension / pensionering",
+    "car": "Bil",
+    "motorcycle": "Motorcykel",
+    "boat": "Båd",
+    "rvCamper": "Campingvogn / camper",
+    "aircraft": "Luftfartøj",
+    "onlineAccount": "Online konto",
+    "softwareLicense": "Softwarelicens",
+    "domainName": "Domænenavn",
+    "digitalSubscription": "Digitalt abonnement",
+    "cryptocurrency": "Kryptovaluta",
+    "nft": "NFT",
+    "jewelry": "Smykker",
+    "artCollectibles": "Kunst / samleobjekter",
+    "electronics": "Elektronik",
+    "furniture": "Møbler",
+    "toolsEquipment": "Værktøj / udstyr",
+    "otherValuables": "Andre værdigenstande",
+    "customAsset": "Tilpasset aktiv"
+  },
+  "addLiabilityModal": {
+    "title": "Tilføj forpligtelse",
+    "fields": {
+      "type": "Type",
+      "provider": "Udbyder",
+      "referenceNumber": "Referencenummer",
+      "paymentFrequency": "Betalingsfrekvens",
+      "notes": "Noter"
+    },
+    "placeholders": {
+      "selectType": "Vælg type",
+      "provider": "Udbydernavn",
+      "referenceNumber": "Referencenummer",
+      "paymentFrequency": "Vælg frekvens",
+      "notes": "Yderligere noter"
+    },
+    "buttons": {
+      "cancel": "Annuller",
+      "add": "Tilføj forpligtelse"
+    },
+    "errors": {
+      "requiredFields": "Alle felter er påkrævet"
+    },
+    "messages": {
+      "addedSuccessfully": "Forpligtelse tilføjet"
+    },
+    "types": {
+      "insurancePolicy": "Forsikringspolice",
+      "utilityBill": "Forsyningsregning",
+      "propertyTax": "Ejendomsskat",
+      "subscriptionFee": "Abonnementsgebyr",
+      "maintenanceContract": "Vedligeholdelseskontrakt",
+      "loan": "Lån",
+      "leaseAgreement": "Lejeaftale",
+      "warranty": "Garanti",
+      "other": "Andet"
+    },
+    "frequencies": {
+      "monthly": "Månedlig",
+      "quarterly": "Kvartalsvis",
+      "semiAnnually": "Halvårlig",
+      "annually": "Årlig",
+      "oneTime": "Engangs",
+      "asNeeded": "Efter behov"
+    }
+  },
+  "annualReview": {
+    "title": "Årlig arvegennemgang",
+    "subtitle": "Hold din families beskyttelsesplan aktuelt og effektiv",
+    "description": "Livet ændrer sig hurtigt. Denne årlige gennemgang sikrer, at din arveplan forbliver i overensstemmelse med din nuværende situation og ønsker.",
+    "progress": {
+      "title": "Gennemgangsfremskridt",
+      "completed": "Fuldført",
+      "inProgress": "I gang",
+      "notStarted": "Ikke startet",
+      "totalSteps": "Samlede trin",
+      "estimatedTime": "Anslået tid: 15 minutter"
+    },
+    "step1": {
+      "title": "Gennemgå dine eksekutorer",
+      "description": "Bekræft, at dine betroede personer stadig er de rigtige valg for din familie"
+    },
+    "step2": {
+      "title": "Gennemgå dine aktiver",
+      "description": "Verificer, at dit aktivinventar er aktuelt og komplet"
+    },
+    "step3": {
+      "title": "Gennemgå dine modtagere",
+      "description": "Sikr, at dine modtagere stadig er de rigtige personer"
+    },
+    "step4": {
+      "title": "Fuldfør gennemgang",
+      "description": "Færdiggør din årlige gennemgang og opdater din plan"
+    },
+    "commandRoster": {
+      "title": "Kommandostab gennemgang",
+      "description": "Dine eksekutorer og betroede personer er grundlaget for din families beskyttelsesplan.",
+      "executorQuestion": "Er {name} stadig den rigtige person til at være din eksekutor?",
+      "guardianQuestion": "Er {name} stadig den rigtige person til at tage sig af dine børn?",
+      "trustedPersonQuestion": "Er {name} stadig den rigtige person for {role}?",
+      "status": {
+        "current": "Aktuel",
+        "needsUpdate": "Kræver opdatering",
+        "outdated": "Forældet",
+        "missing": "Manglende"
+      },
+      "details": {
+        "executor": "Primær eksekutor for dit bo",
+        "guardian": "Værge for mindreårige børn",
+        "trustedPerson": "Betroet person med {accessLevel} adgang",
+        "emergencyContact": "Nødkontaktperson"
+      }
+    },
+    "armory": {
+      "title": "Aktivinventar gennemgang",
+      "description": "Dine aktiver er det, du beskytter. Hold dette inventar aktuelt.",
+      "ownershipQuestion": "Ejer du stadig {assetName}?",
+      "valueQuestion": "Har værdien af {assetName} ændret sig betydeligt?",
+      "locationQuestion": "Er placeringen af {assetName} stadig korrekt?",
+      "status": {
+        "current": "Aktuel",
+        "needsUpdate": "Kræver opdatering",
+        "outdated": "Forældet",
+        "missing": "Manglende"
+      },
+      "categories": {
+        "realEstate": "Fast ejendom",
+        "vehicles": "Køretøjer",
+        "bankAccounts": "Bankkonti",
+        "investments": "Investeringer",
+        "insurance": "Forsikring",
+        "digitalAssets": "Digitale aktiver",
+        "personalItems": "Personlige genstande"
+      }
+    },
+    "beneficiaries": {
+      "title": "Modtager gennemgang",
+      "description": "Sikr, at de rigtige personer modtager de rigtige aktiver på det rigtige tidspunkt.",
+      "confirmationQuestion": "Er disse stadig de korrekte personer til at modtage disse aktiver?",
+      "distributionQuestion": "Er fordelingen i procent stadig korrekt?",
+      "contactQuestion": "Er kontaktoplysningerne for {name} stadig aktuelle?",
+      "status": {
+        "current": "Aktuel",
+        "needsUpdate": "Kræver opdatering",
+        "outdated": "Forældet",
+        "missing": "Manglende"
+      },
+      "details": {
+        "primary": "Primær modtager",
+        "contingent": "Betinget modtager",
+        "percentage": "{percentage}% af aktiver",
+        "specific": "Specifik aktivmodtager"
+      }
+    },
+    "complete": {
+      "title": "Gennemgang fuldført",
+      "description": "Din årlige gennemgang er blevet fuldført.",
+      "message": "Din årlige gennemgang er fuldført. Din families beskyttelsesplan er nu aktuelt og effektiv.",
+      "summary": "Gennemgangssammenfatning",
+      "changes": "Ændringer foretaget",
+      "noChanges": "Ingen ændringer var nødvendige. Din plan er aktuelt.",
+      "nextReview": "Næste gennemgang forfalder",
+      "reminder": "Vi vil påminde dig, når det er tid til din næste årlige gennemgang."
+    },
+    "buttons": {
+      "confirm": "Bekræft",
+      "update": "Opdater",
+      "back": "Tilbage",
+      "next": "Næste",
+      "finish": "Afslut gennemgang",
+      "save": "Gem ændringer",
+      "skip": "Spring over for nu",
+      "reviewLater": "Gennemgå senere"
+    },
+    "status": {
+      "title": "Gennemgangsstatus",
+      "overdue": "Forfalden",
+      "dueSoon": "Forfalder snart",
+      "current": "Aktuel",
+      "completed": "Fuldført",
+      "lastReview": "Sidste gennemgang",
+      "nextReview": "Næste gennemgang",
+      "daysOverdue": "{days} dage forfalden",
+      "daysUntilDue": "{days} dage til forfalden"
+    },
+    "notifications": {
+      "reviewDue": "Årlig gennemgang forfalden",
+      "reviewOverdue": "Årlig gennemgang forfalden",
+      "reviewCompleted": "Årlig gennemgang fuldført",
+      "changesSaved": "Ændringer gemt",
+      "errorSaving": "Fejl ved gemning af ændringer",
+      "reminderSet": "Påmindelse sat til næste gennemgang"
+    }
+  },
+  "beneficiaryCommunications": {
+    "title": "Modtagerkommunikation",
+    "description": "Spor al kommunikation med modtagere",
+    "logCommunication": "Log kommunikation",
+    "logAction": "Logget kommunikation med {name}",
+    "dialog": {
+      "title": "Log kommunikation",
+      "description": "Registrer detaljer om din kommunikation med en modtager"
+    },
+    "fields": {
+      "beneficiaryName": "Modtagers navn",
+      "email": "E-mail",
+      "type": "Type",
+      "date": "Dato",
+      "subject": "Emne",
+      "summary": "Sammenfatning"
+    },
+    "placeholders": {
+      "subject": "Kort emne for kommunikationen",
+      "summary": "Detaljeret sammenfatning af hvad der blev diskuteret"
+    },
+    "types": {
+      "email": "E-mail",
+      "phone": "Telefon",
+      "letter": "Brev",
+      "inPerson": "Personligt",
+      "in_person": "Personligt",
+      "other": "Andet"
+    },
+    "actions": {
+      "cancel": "Annuller",
+      "saving": "Gemmer...",
+      "save": "Gem kommunikation"
+    },
+    "empty": {
+      "title": "Ingen kommunikation logget endnu",
+      "subtitle": "Klik på 'Log kommunikation' for at registrere din første interaktion"
+    }
+  },
+  "complexityReduction": {
+    "title": "Forenkl din arveplanlægning",
+    "subtitle": "Bryd komplekse opgaver ned i simple, håndterbare trin",
+    "description": "Vi forstår, at planlægning for fremtiden kan føles overvældende. Vores kompleksitetsreduktionssystem bryder hver opgave ned i simple, handlingsorienterede trin, der kun tager minutter at fuldføre.",
+    "benefits": {
+      "title": "Hvorfor kompleksitetsreduktion virker",
+      "overwhelm": {
+        "title": "Eliminerer overvældelse",
+        "description": "I stedet for at stå over for en massiv to-do liste, tackler du én lille opgave ad gangen. Hvert trin er designet til at blive fuldført på under 5 minutter."
+      },
+      "progress": {
+        "title": "Synligt fremskridt",
+        "description": "Se din families forberedelse vokse med hvert fuldført trin. Spor dit fremskridt og fejr små sejre undervejs."
+      },
+      "confidence": {
+        "title": "Bygger tillid",
+        "description": "Når du fuldfører hvert trin, vil du føle dig mere selvsikker og i kontrol. Det, der engang syntes umuligt, bliver opnåeligt."
+      },
+      "family": {
+        "title": "Familiebeskyttelse",
+        "description": "Hvert fuldført trin beskytter direkte din familie. Fra nødadgang til langsigtet planlægning betyder hver handling noget."
+      }
+    },
+    "steps": {
+      "identifyBankAccount": {
+        "title": "Identificer din primære bankkonto",
+        "why": "Hvorfor dette betyder noget: Øjeblikkelig adgang til midler under nødsituationer",
+        "whatYouDo": "Hvad du gør: Tag et foto eller skriv kontooplysninger ned",
+        "whatWeDo": "Hvad vi gør: Gemmer information sikkert og opretter adgangsinstruktioner",
+        "timeRequired": "Tid påkrævet: 2 minutter",
+        "complexity": "Kompleksitetsniveau: Simpel"
+      },
+      "emergencyContacts": {
+        "title": "Liste over nødkontakter",
+        "why": "Hvorfor dette betyder noget: Hurtig adgang til vigtige personer under kriser",
+        "whatYouDo": "Hvad du gør: Tilføj telefonnumre og relationer",
+        "whatWeDo": "Hvad vi gør: Organiserer kontakter efter prioritet og opretter nødprocedurer",
+        "timeRequired": "Tid påkrævet: 3 minutter",
+        "complexity": "Kompleksitetsniveau: Simpel"
+      },
+      "insurancePolicies": {
+        "title": "Dokumenter forsikringspolicer",
+        "why": "Hvorfor dette betyder noget: Sikrer, at krav kan indgives hurtigt og korrekt",
+        "whatYouDo": "Hvad du gør: Upload policedokumenter eller tag fotos",
+        "whatWeDo": "Hvad vi gør: Udtrækker nøgleinformation og opretter kravinstruktioner",
+        "timeRequired": "Tid påkrævet: 5 minutter",
+        "complexity": "Kompleksitetsniveau: Let"
+      },
+      "digitalAssets": {
+        "title": "Sikre digitale aktiver",
+        "why": "Hvorfor dette betyder noget: Beskytter online konti og digitale minder",
+        "whatYouDo": "Hvad du gør: List vigtige konti og adgangskoder",
+        "whatWeDo": "Hvad vi gør: Opretter sikre adgangsprotokoller og backup-instruktioner",
+        "timeRequired": "Tid påkrævet: 4 minutter",
+        "complexity": "Kompleksitetsniveau: Let"
+      },
+      "legalDocuments": {
+        "title": "Organiser juridiske dokumenter",
+        "why": "Hvorfor dette betyder noget: Sikrer, at juridiske ønsker følges og processer er problemfri",
+        "whatYouDo": "Hvad du gør: Upload testamenter, fuldmagter og andre dokumenter",
+        "whatWeDo": "Hvad vi gør: Opretter sammenfatninger og sikrer korrekt juridisk adgang",
+        "timeRequired": "Tid påkrævet: 6 minutter",
+        "complexity": "Kompleksitetsniveau: Medium"
+      },
+      "familyInstructions": {
+        "title": "Skriv familieinstruktioner",
+        "why": "Hvorfor dette betyder noget: Giver klar vejledning under svære tider",
+        "whatYouDo": "Hvad du gør: Skriv personlige beskeder og instruktioner",
+        "whatWeDo": "Hvad vi gør: Organiserer beskeder og opretter leveringsplaner",
+        "timeRequired": "Tid påkrævet: 8 minutter",
+        "complexity": "Kompleksitetsniveau: Medium"
+      }
+    },
+    "actions": {
+      "startThisStep": "Start dette trin",
+      "showMeHow": "Vis mig hvordan",
+      "iNeedHelp": "Jeg har brug for hjælp",
+      "nextStep": "Næste trin",
+      "previousStep": "Forrige trin",
+      "completeStep": "Marker som fuldført",
+      "skipStep": "Spring over for nu"
+    },
+    "progress": {
+      "title": "Dit fremskridt",
+      "completed": "Fuldført",
+      "inProgress": "I gang",
+      "notStarted": "Ikke startet",
+      "totalSteps": "Samlede trin",
+      "estimatedTime": "Anslået resterende tid"
+    },
+    "features": {
+      "title": "Hvordan kompleksitetsreduktion virker",
+      "stepByStep": {
+        "title": "Trin-for-trin vejledning",
+        "description": "Hver opgave er brudt ned i klare, simple instruktioner, som alle kan følge."
+      },
+      "timeEstimation": {
+        "title": "Præcise tidsestimater",
+        "description": "Vid præcis, hvor lang tid hvert trin vil tage, fra 2 minutter til 15 minutter maksimum."
+      },
+      "difficultyLevels": {
+        "title": "Klare sværhedsgrader",
+        "description": "Simpel, Let, Medium og Kompleks ratings hjælper dig med at vælge, hvad du skal tackle først."
+      },
+      "progressTracking": {
+        "title": "Fremskridtssporing",
+        "description": "Se din families forberedelse vokse med hvert fuldført trin."
+      },
+      "helpAvailable": {
+        "title": "Hjælp når du har brug for det",
+        "description": "Få assistance, forklaringer og støtte til ethvert trin, der føles udfordrende."
+      }
+    }
+  },
+  "createTimeCapsuleModal": {
+    "title": "Opret tidskapsel",
+    "titleCreate": "Opret tidskapsel",
+    "titleEdit": "Rediger tidskapsel",
+    "description": "Opret en besked, der vil blive leveret til dine kære i fremtiden.",
+    "errors": {
+      "noTitle": "Indtast venligst en titel til din tidskapsel.",
+      "noRecipients": "Vælg venligst mindst én modtager.",
+      "noUnlockDate": "Vælg venligst en låseopdato.",
+      "noMessage": "Indtast venligst din besked.",
+      "noFile": "Upload venligst en fil.",
+      "updateFailed": "Kunne ikke opdatere tidskapsel.",
+      "saveFailed": "Kunne ikke gemme tidskapsel.",
+      "fileTooLarge": "Filstørrelsen skal være mindre end 50MB.",
+      "invalidFileType": "Ugyldig filtype for {{messageType}}."
+    },
+    "success": {
+      "updated": "Tidskapsel opdateret!",
+      "created": "Tidskapsel oprettet!"
+    },
+    "labels": {
+      "title": "Titel",
+      "messageType": "Beskedtype",
+      "recipients": "Modtagere",
+      "deliveryQuestion": "Hvornår skal denne besked leveres?",
+      "unlockDate": "Låseopdato",
+      "yourMessage": "Din besked",
+      "uploadFile": "Upload {{messageType}}"
+    },
+    "placeholders": {
+      "title": "f.eks. Til din 18-års fødselsdag",
+      "message": "Skriv din hjertelige besked her...",
+      "selectDate": "Vælg en dato"
+    },
+    "messageTypes": {
+      "text": "Tekstbesked",
+      "photo": "Foto",
+      "video": "Video",
+      "audio": "Lyd"
+    },
+    "recipients": {
+      "noTrustedPeople": "Du har ikke tilføjet nogen betroede personer endnu. Tilføj dem fra din oversigt først.",
+      "selected": "Valgt"
+    },
+    "unlockConditions": {
+      "onDate": "På en bestemt dato",
+      "afterPassing": "Efter mit dødsfald"
+    },
+    "fileUpload": {
+      "clickToUpload": "Klik for at uploade",
+      "dragAndDrop": " eller træk og slip",
+      "maxSize": "Maksimal filstørrelse: 50MB",
+      "fileSizeMB": "{{size}} MB"
+    },
+    "premium": {
+      "videoMessage": "Videobeskeder er en premium-funktion.",
+      "upgradeNow": "Opgrader nu"
+    },
+    "buttons": {
+      "recordVideo": "Optag videobesked",
+      "cancel": "Annuller",
+      "saving": "Gemmer...",
+      "update": "Opdater tidskapsel",
+      "create": "Opret tidskapsel"
+    },
+    "characterCount": "{{count}}/{{max}} tegn"
+  },
+  "dataTransparency": {
+    "loadingMessage": "Indlæser din datatransparensoplysninger...",
+    "loadingError": "Kunne ikke indlæse transparensdata. Prøv venligst igen senere.",
+    "title": "Dine data, din kontrol",
+    "description": "Vi tror på total gennemsigtighed. Her er præcis, hvordan vi håndterer dine oplysninger.",
+    "dataFlow": {
+      "whereDataLives": "Hvor dine data lever",
+      "collection": "Indsamling",
+      "storage": "Lagring",
+      "processing": "Behandling",
+      "sharing": "Deling"
+    },
+    "recentActivity": {
+      "title": "Seneste aktivitet",
+      "premiumTitle": "Lås op for din permanente overvågningslog",
+      "premiumText": "Din 30-dages operationelle log giver grundlæggende sikkerhed. For maksimal ansvarlighed og ro i sindet, opgrader til Command-pakken for at opretholde en komplet, uændret revisionshistorik over enhver handling foretaget i din boks, for evigt."
+    },
+    "dataOwnership": {
+      "title": "Dataejerskab",
+      "description": "Du ejer dine data, altid. Du kan downloade en komplet kopi når som helst.",
+      "downloadButton": "Download min dataarkiv"
+    }
+  },
+  "editStoryModal": {
+    "editStory": "Rediger historie",
+    "addStory": "Tilføj en historie",
+    "description": "Del historien bag \"{{assetName}}\". Dette personlige touch vil være uvurderligt for dine kære.",
+    "fields": {
+      "yourStory": "Din historie"
+    },
+    "placeholders": {
+      "story": "f.eks. Dette var din bedstemors vielsesring, givet til hende i 1952, da hun giftede sig med din bedstefar i den lille kirke i deres hjemby. Hun bar den hver dag i 65 år..."
+    },
+    "hints": {
+      "shareMemories": "Del minder, betydning eller historie"
+    },
+    "tips": {
+      "title": "Tips til en meningsfuld historie:",
+      "explainSpecial": "Forklar, hvorfor denne genstand er særlig for dig",
+      "shareMemories": "Del minder forbundet med den",
+      "describeHistory": "Beskriv dens historie eller hvordan du fik den",
+      "mentionWishes": "Nævn eventuelle ønsker for, hvordan den skal bruges eller bevares"
+    },
+    "saving": "Gemmer...",
+    "saveStory": "Gem historie",
+    "messages": {
+      "saved": "Historie gemt"
+    },
+    "errors": {
+      "notAuthenticated": "Du skal være logget ind for at gemme en historie",
+      "saveFailed": "Kunne ikke gemme historie"
+    }
+  },
+  "dynamicAssetForm": {
+    "propertyAddress": "Ejendommens adresse",
+    "purchaseDate": "Købsdato",
+    "purchasePrice": "Købspris",
+    "currentEstimatedValue": "Nuværende anslåede værdi",
+    "mortgageInformation": "Realkreditoplysninger",
+    "locationOfPropertyDocuments": "Placering af ejendomsdokumenter",
+    "locationAddress": "Placering / adresse",
+    "size": "Størrelse (acre/kvadratfod)",
+    "zoningType": "Zoneringstype",
+    "currentUse": "Nuværende brug",
+    "bankName": "Banknavn",
+    "accountType": "Kontotype",
+    "selectAccountType": "Vælg kontotype",
+    "checking": "Lønkonto",
+    "savings": "Opsparing",
+    "moneyMarket": "Pengemarked",
+    "certificateOfDeposit": "Indlånsbevis",
+    "accountHolderName": "Kontoholders navn(e)",
+    "accountNumberLast4": "Kontonummer (sidste 4 cifre)",
+    "routingNumber": "Routingnummer",
+    "brokerageFirm": "Mæglerfirma",
+    "accountNumber": "Kontonummer",
+    "individual": "Individuel",
+    "joint": "Fælles",
+    "ira": "IRA",
+    "rothIra": "Roth IRA",
+    "401k": "401(k)",
+    "approximateValue": "Anslået værdi",
+    "financialAdvisor": "Finansiel rådgiver (hvis nogen)",
+    "walletNameLabel": "Pungnavn/etiket",
+    "walletType": "Pungtype",
+    "selectWalletType": "Vælg pungtype",
+    "hardwareWallet": "Hardware-pung",
+    "softwareWallet": "Software-pung",
+    "exchangeWallet": "Børs-pung",
+    "paperWallet": "Papir-pung",
+    "cryptocurrenciesHeld": "Kryptovalutaer holdt",
+    "locationOfSeedPhrase": "Placering af seed-frase/private nøgler",
+    "exchangeInformation": "Børsoplysninger (hvis relevant)",
+    "makeAndModel": "Mærke og model",
+    "year": "År",
+    "vinNumber": "VIN-nummer",
+    "licensePlate": "Nummerplade",
+    "loanInformation": "Låneoplysninger (hvis nogen)",
+    "locationOfTitle": "Placering af titel",
+    "platformWebsiteName": "Platform/hjemmesidenavn",
+    "accountEmail": "Konto e-mail/brugernavn",
+    "accountPurpose": "Kontoformål/beskrivelse",
+    "recoveryInformation": "Gendannelsesoplysninger",
+    "faMethod": "2FA-metode (hvis aktiveret)",
+    "itemDescription": "Genstandbeskrivelse",
+    "appraisedValue": "Vurderet værdi",
+    "lastAppraisalDate": "Sidste vurderingsdato",
+    "storageLocation": "Lagringsplacering",
+    "insuranceInformation": "Forsikringsoplysninger",
+    "sentimentalValue": "Følelsesmæssig værdi/historie",
+    "assetName": "Aktivnavn",
+    "estimatedValue": "Anslået værdi",
+    "description": "Beskrivelse",
+    "locationAccessInformation": "Placering/adgangsoplysninger",
+    "addSubType": "Tilføj {subType}",
+    "cancel": "Annuller",
+    "saveAsset": "Gem aktiv",
+    "placeholders": {
+      "123_main_st_city_state_zip_1": "123 Hovedgade, By, Stat, Postnummer",
+      "lender_name_account_number_rem_2": "Långiver navn, kontonummer, resterende saldo",
+      "e_g_safe_deposit_box_filing_ca_3": "f.eks. Bankboks, arkivskab",
+      "property_location_or_parcel_nu_4": "Ejendomsplacering eller matrikelnummer",
+      "e_g_10_acres_5": "f.eks. 10 acre, 5.000 kvadratfod",
+      "e_g_commercial_agricultural_6": "f.eks. Erhverv, landbrug, bolig",
+      "describe_current_use_of_the_pr_7": "Beskriv nuværende brug af ejendommen",
+      "e_g_chase_bank_8": "f.eks. Chase Bank, Wells Fargo",
+      "john_doe_9": "John Doe",
+      "1234_10": "1234",
+      "e_g_fidelity_vanguard_11": "f.eks. Fidelity, Vanguard, Charles Schwab",
+      "account_number_12": "Kontonummer",
+      "name_and_contact_information_13": "Navn og kontaktoplysninger",
+      "e_g_main_bitcoin_wallet_14": "f.eks. Hovedbitcoin-pung",
+      "e_g_bitcoin_ethereum_15": "f.eks. Bitcoin, Ethereum, Litecoin",
+      "do_not_enter_the_actual_seed_p_16": "Indtast ikke den faktiske seed-frase her",
+      "exchange_name_and_account_emai_17": "Børsnavn og konto e-mail",
+      "e_g_toyota_camry_18": "f.eks. Toyota Camry, Honda Civic",
+      "vehicle_identification_number_19": "Køretøjets identifikationsnummer",
+      "lender_account_number_payoff_a_20": "Långiver, kontonummer, indfrielsesbeløb",
+      "e_g_safe_deposit_box_21": "f.eks. Bankboks, hjemmesafe",
+      "e_g_gmail_facebook_22": "f.eks. Gmail, Facebook, LinkedIn",
+      "user_example_com_23": "bruger@example.com",
+      "what_this_account_is_used_for_24": "Hvad denne konto bruges til",
+      "recovery_email_phone_or_securi_25": "Gendannelses e-mail, telefon eller sikkerhedsspørgsmål",
+      "e_g_sms_to_phone_ending_in_123_26": "f.eks. SMS til telefon der slutter på 123",
+      "e_g_diamond_engagement_ring_27": "f.eks. Diamant forlovelsesring, guldhalskæde",
+      "e_g_home_safe_bank_deposit_box_28": "f.eks. Hjemmesafe, bankboks",
+      "policy_number_and_company_29": "Policenummer og selskab",
+      "special_meaning_or_history_of__30": "Særlig betydning eller historie for denne genstand",
+      "name_or_description_of_asset_31": "Navn eller beskrivelse af aktiv",
+      "detailed_description_of_the_as_32": "Detaljeret beskrivelse af aktivet",
+      "where_to_find_this_asset_or_ho_33": "Hvor man kan finde dette aktiv eller hvordan man får adgang til det"
+    }
+  },
+  "documentUploader": {
+    "smart_document_upload_2": "Smart dokumentupload",
+    "upload_any_document_and_our_ai_3": "Upload ethvert dokument, og vores AI vil automatisk klassificere det for dig",
+    "please_upload_an_image_or_pdf__1": "Upload venligst et billede eller PDF-fil",
+    "image_application_pdf_4": "image/*,application/pdf",
+    "0_0_48_48_5": "0 0 48 48",
+    "m24_12v12m0_0l_4_4m4_4l4_4m10__6": "M24 12v12m0 0l-4 4m4-4l4 4m10-6",
+    "drop_your_document_here_or_cli_7": "Træk dit dokument her eller klik for at gennemse",
+    "supports_images_and_pdfs_up_to_8": "Understøtter billeder og PDF'er op til 10MB",
+    "document_analysis_complete_10": "Dokumentanalyse fuldført",
+    "document_type_11": "Dokumenttype",
+    "suggested_title_12": "Foreslået titel",
+    "confidence": "Tillid",
+    "ai_analysis_13": "AI-analyse",
+    "continue_with_this_classificat_14": "Fortsæt med denne klassifikation",
+    "change_category_15": "Skift kategori",
+    "documents_we_can_process_16": "Dokumenter vi kan behandle:",
+    "insurance_policies_life_health_17": "Forsikringspolicer (liv, sundhed, hjem, bil)",
+    "property_deeds_and_titles_18": "Ejendomsskøder og titler",
+    "vehicle_ownership_documents_19": "Køretøjsejerskabsdokumenter",
+    "bank_and_investment_statements_20": "Bank- og investeringskontoudtog",
+    "wills_and_estate_planning_docu_21": "Testamenter og boplanlægningsdokumenter",
+    "business_contracts_and_ownersh_22": "Forretningskontrakter og ejerskabspapirer",
+    "personal_identification_docume_23": "Personlige identifikationsdokumenter",
+    "tax_returns_and_documents_24": "Skatteopgørelser og dokumenter",
+    "categoryDescriptions": {
+      "insurance_policy": "Liv, sundhed, hjem, bil eller invaliditetsforsikring",
+      "property_deed": "Ejendomsejerskabsdokumenter og skøder",
+      "vehicle_title": "Bil, båd eller andre køretøjsejerskabspapirer",
+      "bank_statement": "Bankkontoopgørelser og dokumenter",
+      "investment_statement": "Investerings- og pensionskontoopgørelser",
+      "will_or_trust": "Testamenter, truster og boplanlægningsdokumenter",
+      "business_document": "Forretningsejerskab og vigtige kontrakter",
+      "personal_id": "Pas, kørekort, fødselsattester",
+      "tax_document": "Skatteopgørelser og relaterede dokumenter",
+      "medical_document": "Medicinske journaler og sundhedsinstruktioner",
+      "other": "Andre vigtige dokumenter"
+    },
+    "errors": {
+      "fileTypeError": "Upload venligst et billede eller PDF-fil",
+      "processingError": "Kunne ikke behandle dokument",
+      "uploadError": "Kunne ikke uploade dokument",
+      "classificationError": "Kunne ikke klassificere dokument"
+    }
+  },
+  "executorManagement": {
+    "failed_to_load_executors_2": "Kunne ikke indlæse eksekutorer",
+    "user_not_found_with_this_email_3": "Bruger ikke fundet med denne e-mail",
+    "this_person_is_already_designa_4": "Denne person er allerede udpeget som eksekutor",
+    "failed_to_add_executor_5": "Kunne ikke tilføje eksekutor",
+    "failed_to_remove_executor_6": "Kunne ikke fjerne eksekutor",
+    "loading_executors_7": "Indlæser eksekutorer...",
+    "executor_management_8": "Eksekutoradministration",
+    "designate_trusted_individuals__9": "Udpeg betroede personer, der vil hjælpe med at administrere dine anliggender og støtte dine kære",
+    "add_new_executor_10": "Tilføj ny eksekutor",
+    "email_address_11": "E-mailadresse",
+    "executor_example_com_12": "eksekutor@example.com",
+    "relationship_type_13": "Relationstype",
+    "primary_executor_14": "Primær eksekutor",
+    "secondary_executor_15": "Sekundær eksekutor",
+    "emergency_contact_16": "Nødkontakt",
+    "current_executors_17": "Nuværende eksekutorer",
+    "no_executors_designated_yet_ad_18": "Ingen eksekutorer udpeget endnu. Tilføj nogen, du stoler på, til at hjælpe med at administrere dine anliggender.",
+    "important_information_19": "Vigtig information",
+    "primary_executors_receive_imme_20": "Primære eksekutorer modtager øjeblikkelig adgang til din boks, når det er nødvendigt",
+    "secondary_executors_are_notifi_21": "Sekundære eksekutorer underrettes, men har begrænset adgang",
+    "emergency_contacts_are_notifie_22": "Nødkontakter underrettes kun i presserende situationer",
+    "all_executors_must_have_legacy_23": "Alle eksekutorer skal have LegacyGuard-konti for at få adgang til dine oplysninger",
+    "successMessages": {
+      "executorAdded": "Eksekutor tilføjet",
+      "executorRemoved": "Eksekutor fjernet"
+    },
+    "validationMessages": {
+      "emailRequired": "E-mailadresse er påkrævet",
+      "invalidEmail": "Indtast venligst en gyldig e-mailadresse",
+      "relationshipTypeRequired": "Relationstype er påkrævet"
+    },
+    "statusLabels": {
+      "adding": "Tilføjer...",
+      "addExecutor": "Tilføj eksekutor",
+      "unknownUser": "Ukendt bruger"
+    }
+  },
+  "emotionalContextSystem": {
+    "emotional_support_1": "Følelsesmæssig støtte",
+    "advice_2": "Råd: ",
+    "motivation_3": "Motivation: ",
+    "next_steps_4": "Næste trin: ",
+    "contextResponses": {
+      "lowConfidence": {
+        "primaryMessage": "Du håndterer denne situation med omsorg og indsigt.",
+        "supportingMessage": "Det viser, at du forstår opgavens betydning.",
+        "actionableAdvice": "Fortsæt i dit eget komfortable tempo.",
+        "motivationalElement": "Din omhyggelige tilgang er et bevis på dine værdier.",
+        "nextStepGuidance": "Når du er klar, fortsæt med det næste vigtige trin for at sikre din families fremtid."
+      },
+      "highOverwhelm": {
+        "primaryMessage": "Din dedikation til din familie er beundringsværdig.",
+        "supportingMessage": "Det er okay at tage et øjeblik til at samle sig.",
+        "actionableAdvice": "Overvej at bryde opgaven ned i mindre dele for fokus.",
+        "motivationalElement": "At vide, du drives af kærlighed og omsorg.",
+        "nextStepGuidance": "Hver lille handling, du tager, gør en betydelig forskel."
+      },
+      "default": {
+        "primaryMessage": "Du laver meningsfuldt arbejde.",
+        "supportingMessage": "Denne indsats styrker din families fundament.",
+        "actionableAdvice": "Forbliv forpligtet til din plan.",
+        "motivationalElement": "Hver beslutning, du tager, beskytter dine kære.",
+        "nextStepGuidance": "At se det store billede vil guide dine næste trin."
+      }
+    },
+    "emotionalStates": {
+      "confidence": {
+        "high": "Høj",
+        "medium": "Medium",
+        "low": "Lav"
+      },
+      "motivation": {
+        "high": "Høj",
+        "medium": "Medium",
+        "low": "Lav"
+      },
+      "overwhelm": {
+        "none": "Ingen",
+        "slight": "Let",
+        "moderate": "Moderat",
+        "high": "Høj"
+      },
+      "urgency": {
+        "relaxed": "Afslappet",
+        "focused": "Fokuseret",
+        "pressed": "Presset",
+        "stressed": "Stresset"
+      }
+    }
+  },
+  "microTaskGenerator": {
+    "minutes_1": " minutter • ",
+    "family_impact_2": " familieindvirkning",
+    "start_task_3": "Start opgave",
+    "complete_task_4": "Fuldfør opgave",
+    "skip_for_now_5": "Spring over for nu",
+    "taskCategories": {
+      "identification": "Identifikationsdokumenter",
+      "financial": "Finansielle oplysninger",
+      "healthcare": "Sundhedsdokumenter",
+      "legal": "Juridiske dokumenter",
+      "digital": "Digitale aktiver",
+      "personal": "Personlige oplysninger"
+    },
+    "difficultyLevels": {
+      "trivial": "Trivielt",
+      "easy": "Let",
+      "simple": "Simpel"
+    },
+    "familyImpactLevels": {
+      "high": "Høj",
+      "medium": "Medium",
+      "low": "Lav"
+    },
+    "taskStatus": {
+      "available": "Tilgængelig",
+      "in_progress": "I gang",
+      "completed": "Fuldført",
+      "skipped": "Skippet"
+    },
+    "tasks": {
+      "driversLicense": {
+        "title": "Tag et foto af dit kørekort",
+        "description": "Din familie vil have brug for dette til juridiske og finansielle anliggender. At have et klart foto sparer dem tid og stress.",
+        "completionMessage": "Din familie har nu adgang til kritiske ID-oplysninger."
+      },
+      "passport": {
+        "title": "Fotografer dit pas",
+        "description": "Essentielt til internationale rejsearrangementer og juridisk identifikation.",
+        "completionMessage": "Internationale rejsedokumenter er nu sikret for din familie."
+      },
+      "birthCertificate": {
+        "title": "Scan din fødselsattest",
+        "description": "Påkrævet til mange juridiske processer og familiehistoriedokumentation.",
+        "completionMessage": "Fødselsattest er nu digitalt bevaret til fremtidige behov."
+      },
+      "socialSecurityCard": {
+        "title": "Dokumenter dit social security kort",
+        "description": "Kritisk til ydelser og juridiske identifikationsprocesser.",
+        "completionMessage": "Social security oplysninger er nu sikkert dokumenteret."
+      },
+      "bankAccounts": {
+        "title": "List dine bankkonti",
+        "description": "Hjælp din familie med at administrere finansiering og få adgang til midler, når det er nødvendigt.",
+        "completionMessage": "Bankkontooplysninger er nu organiseret for din familie."
+      },
+      "insurancePolicies": {
+        "title": "Sammenlign forsikringspolicedetaljer",
+        "description": "Sikr, at din familie ved om al dækning og kan indgive krav.",
+        "completionMessage": "Forsikringsoplysninger er nu omfattende og tilgængelige."
+      },
+      "medicalRecords": {
+        "title": "Organiser medicinsk historie",
+        "description": "Hjælp sundhedsydere med at forstå din medicinske baggrund.",
+        "completionMessage": "Medicinsk historie er nu organiseret til bedre sundhedsbeslutninger."
+      },
+      "medications": {
+        "title": "List nuværende medicin",
+        "description": "Kritisk til medicinske nødsituationer og løbende pleje.",
+        "completionMessage": "Medicinliste er nu tilgængelig for sundhedspersonale."
+      },
+      "will": {
+        "title": "Opret eller opdater dit testamente",
+        "description": "Sikr, at dine ønsker er tydeligt dokumenteret og juridisk bindende.",
+        "completionMessage": "Dit testamente er nu aktuelt og juridisk beskyttet."
+      },
+      "powerOfAttorney": {
+        "title": "Udpeg fuldmagt",
+        "description": "Autoriser betroede personer til at træffe beslutninger på dine vegne.",
+        "completionMessage": "Fuldmagt er nu korrekt udpeget."
+      },
+      "digitalPasswords": {
+        "title": "Sikker digital adgangskodeliste",
+        "description": "Hjælp familie med at få adgang til vigtige online konti og tjenester.",
+        "completionMessage": "Digital adgang er nu sikkert organiseret for din familie."
+      },
+      "socialMedia": {
+        "title": "Planlæg sociale mediekonti",
+        "description": "Beslut, hvordan din online tilstedeværelse skal håndteres.",
+        "completionMessage": "Sociale medier arv er nu planlagt og dokumenteret."
+      }
+    },
+    "sessionStats": {
+      "tasksCompleted": "Opgaver fuldført",
+      "totalTimeSpent": "Samlet tid brugt",
+      "momentumScore": "Momentum score",
+      "nextRecommendedTask": "Næste anbefalede opgave"
+    },
+    "scoring": {
+      "urgency": "Haste",
+      "impact": "Indvirkning",
+      "ease": "Lethed",
+      "momentum": "Momentum"
+    }
+  },
+  "will": {
+    "errors": {
+      "mustBeLoggedIn": "Du skal være logget ind for at gemme.",
+      "loadingFailed": "Kunne ikke indlæse testamente.",
+      "savingFailed": "Kunne ikke gemme testamente."
+    },
+    "messages": {
+      "savedSuccessfully": "Testamente gemt.",
+      "documentUploaded": "Dokument uploadet."
+    },
+    "loading": "Indlæser testamente...",
+    "title": "Testamente",
+    "subtitle": "Administrer dit testamente og udpeg dine eksekutorer.",
+    "sections": {
+      "statusInfo": "Status & Information",
+      "willDocument": "Testamentedokument"
+    },
+    "fields": {
+      "currentStatus": "Nuværende status",
+      "physicalLocation": "Fysisk placering",
+      "executorContact": "Eksekutor kontakt",
+      "additionalNotes": "Yderligere noter"
+    },
+    "placeholders": {
+      "physicalLocation": "f.eks. Hjemmeboks, Advokatkontor",
+      "selectContact": "Vælg kontakt",
+      "additionalNotes": "Eventuelle yderligere oplysninger..."
+    },
+    "descriptions": {
+      "statusDescription": "Følg den aktuelle status for dit testamente.",
+      "physicalLocationDescription": "Hvor opbevares dit testamente fysisk?",
+      "executorDescription": "Person ansvarlig for at eksekvere dit testamente."
+    },
+    "options": {
+      "noContactSelected": "Ingen kontakt valgt"
+    },
+    "status": {
+      "notStarted": "Ikke startet",
+      "inPreparation": "Under forberedelse",
+      "completedSigned": "Fuldført & underskrevet",
+      "withNotary": "Hos notar",
+      "draft": "Udkast",
+      "notarized": "Notariseret",
+      "stored": "Opbevaret",
+      "updated": "Opdateret"
+    },
+    "document": {
+      "uploaded": "Testamentedokument uploadet",
+      "uploadedDescription": "Dit testamentedokument er blevet sikkert gemt.",
+      "noDocument": "Intet testamentedokument",
+      "noDocumentDescription": "Upload en kopi af dit testamente til sikker opbevaring."
+    },
+    "buttons": {
+      "saveWillInfo": "Gem testamenteoplysninger",
+      "saving": "Gemmer...",
+      "uploadDocument": "Upload dokument",
+      "uploadNewVersion": "Upload ny version"
+    },
+    "steps": {
+      "countrySelection": "Valg af land",
+      "countrySelectionDesc": "Vælg dit land og indtast dine oplysninger",
+      "assetAllocation": "Fordeling af aktiver",
+      "assetAllocationDesc": "Fordel aktiver mellem begunstigede",
+      "beneficiaries": "Begunstigede",
+      "beneficiariesDesc": "Definer dine begunstigede",
+      "executors": "Eksekutorer",
+      "executorsDesc": "Tildel eksekutorer til at administrere dit testamente",
+      "review": "Gennemgang",
+      "reviewDesc": "Gennemgå og færdiggør dit testamente"
+    },
+    "progress": "Trin {{current}} af {{total}}",
+    "validation": {
+      "selectCountry": "Vælg venligst et land",
+      "requiredField": "Dette felt er påkrævet",
+      "allocation100": "Samlet tildeling skal være lig med 100%",
+      "atLeastOneBeneficiary": "Mindst én begunstiget er påkrævet",
+      "executorRequired": "Eksekutor er påkrævet",
+      "fixErrors": "Ret venligst fejlene i formularen"
+    },
+    "generation": {
+      "success": "Testamente genereret!",
+      "error": "Kunne ikke generere testamente"
+    }
+  },
+  "contacts": {
+    "errors": {
+      "loadingFailed": "Kunne ikke indlæse kontakter."
+    }
+  },
+  "guardianUpload": {
+    "error": "Fejl",
+    "success": "Succes",
+    "fillRequired": "Udfyld venligst alle påkrævede felter.",
+    "loginToSave": "Du skal være logget ind for at gemme værger.",
+    "updated": "Værge er blevet opdateret.",
+    "added": "Værge er blevet tilføjet.",
+    "failedSave": "Kunne ikke gemme værge. Prøv venligst igen.",
+    "editTitle": "Rediger værge",
+    "addTitle": "Tilføj værge",
+    "description": "Tilføj en person, du stoler på, til at hjælpe med at administrere din arv.",
+    "fullNameLabel": "Værges fulde navn *",
+    "fullNamePlaceholder": "Indtast værges fulde navn",
+    "relationshipLabel": "Relation *",
+    "relationshipPlaceholder": "Vælg relation",
+    "countryLabel": "Bopælsland *",
+    "countryPlaceholder": "Vælg land",
+    "countryDescription": "Vælg det land, hvor denne værge bor.",
+    "rolesTitle": "Roller og ansvar",
+    "saving": "Gemmer...",
+    "updateButton": "Opdater værge",
+    "addButton": "Tilføj værge",
+    "relationships": {
+      "spouse": "Ægtefælle",
+      "parent": "Forælder",
+      "sibling": "Søskende",
+      "child": "Barn",
+      "friend": "Ven",
+      "legalProfessional": "Jurist",
+      "other": "Andet"
+    },
+    "roles": {
+      "guardianForChildren": "Værge for børn",
+      "executorOfWill": "Testamentseksekutor",
+      "healthcareProxy": "Sundhedsfuldmagt",
+      "financialPowerOfAttorney": "Økonomisk fuldmagt",
+      "emergencyContact": "Nødkontakt",
+      "trustee": "Bobestyrer"
+    }
+  },
+  "documentUpload": {
+    "fileUploadedSuccess": "Filen er blevet uploadet!",
+    "fileUploadFailed": "Kunne ikke uploade fil. Prøv venligst igen.",
+    "fileTooLarge": "Valgt fil er for stor. Maksimal størrelse er {{maxSize}} MB.",
+    "fillRequiredFields": "Udfyld venligst alle påkrævede felter.",
+    "loginToSave": "Du skal være logget ind for at gemme dokumenter.",
+    "saved": "Dokumentet er blevet gemt!",
+    "failedSave": "Kunne ikke gemme dokument. Prøv venligst igen.",
+    "detailsTitle": "Dokumentdetaljer",
+    "detailsSubtitle": "Tilføj oplysninger om dit uploadede dokument.",
+    "namePlaceholder": "Indtast dokumentnavn",
+    "typePlaceholder": "Vælg dokumenttype",
+    "countryPlaceholder": "Vælg land",
+    "pickDate": "Vælg en dato",
+    "title": "Upload dokument",
+    "subtitle": "Upload juridiske og personlige dokumenter sikkert.",
+    "browseFiles": "Gennemse filer",
+    "chooseDifferent": "Vælg en anden fil",
+    "uploadButton": "Upload dokument",
+    "storageLimitReached": "Kan ikke uploade fil. Du har {{remaining}} lagerplads tilbage, men denne fil er {{fileSize}}. Opgrader venligst din plan eller fjern nogle eksisterende filer."
+  },
+  "auth": {
+    "noAccount": "Har du ikke en konto?",
+    "signUpLink": "Tilmeld dig",
+    "hasAccount": "Har du allerede en konto?",
+    "loginLink": "Log ind",
+    "loginButton": "Log ind",
+    "signupButton": "Tilmeld dig"
+  },
+  "assetDetail": {
+    "loading": "Indlæser aktivdetaljer...",
+    "errors": {
+      "failedToLoad": "Kunne ikke indlæse aktivdetaljer.",
+      "nameRequired": "Navn på aktiv er påkrævet.",
+      "failedToSave": "Kunne ikke gemme aktiv."
+    },
+    "messages": {
+      "createdSuccessfully": "Aktiv oprettet.",
+      "updatedSuccessfully": "Aktiv opdateret."
+    },
+    "title": {
+      "new": "Nyt {{type}}"
+    },
+    "subtitle": {
+      "new": "Udfyld detaljerne for at føje dette aktiv til din portefølje.",
+      "edit": "Opdater detaljerne for dette aktiv."
+    },
+    "sections": {
+      "assetInformation": "Aktivoplysninger",
+      "basicInformation": "Grundlæggende oplysninger",
+      "propertyDetails": "Ejendomsdetaljer",
+      "accountDetails": "Kontodetaljer",
+      "financialDetails": "Finansielle detaljer"
+    },
+    "fields": {
+      "assetName": "Navn på aktiv",
+      "assetType": "Type af aktiv",
+      "propertyAddress": "Ejendommens adresse",
+      "propertyRegistryNumber": "Matrikelnummer",
+      "accountType": "Kontotype",
+      "financialInstitution": "Finansiel institution",
+      "accountNumber": "Kontonummer / IBAN",
+      "loginCredentials": "Loginoplysninger & noter",
+      "estimatedValue": "Anslået værdi",
+      "currency": "Valuta"
+    },
+    "placeholders": {
+      "assetName": "f.eks. Familiebolig, Investeringsportefølje",
+      "propertyAddress": "Indtast fuld ejendomsadresse",
+      "propertyRegistryNumber": "f.eks. Matrikelnummer",
+      "selectAccountType": "Vælg kontotype",
+      "financialInstitution": "f.eks. Danske Bank, Nordea",
+      "accountNumber": "f.eks. 1234567890",
+      "loginCredentials": "Adgangskode-manager: 1Password boks 'Bank'",
+      "estimatedValue": "0"
+    },
+    "descriptions": {
+      "assetName": "Giv dette aktiv et beskrivende navn for nem identifikation.",
+      "assetType": "Vælg den type, der bedst beskriver dette aktiv.",
+      "propertyAddress": "Fuld adresse inklusive gade, by, postnummer og land.",
+      "propertyRegistryNumber": "Officielt matrikel- eller tingbogsnummer for denne ejendom.",
+      "accountType": "Type af finansiel konto eller investering.",
+      "financialInstitution": "Navn på banken eller den finansielle institution.",
+      "accountNumber": "Kontonummer, IBAN eller anden identificerende information.",
+      "estimatedValue": "Nuværende markedsværdi eller senest kendte værdi af dette aktiv.",
+      "currency": "Valuta, som værdien er udtrykt i."
+    },
+    "types": {
+      "realEstate": "Ejendom",
+      "business": "Virksomhed",
+      "vehicle": "Køretøj",
+      "financialAccount": "Finansiel konto",
+      "asset": "Aktiv"
+    },
+    "accountTypes": {
+      "bankAccount": "Bankkonto",
+      "investmentPortfolio": "Investeringsportefølje",
+      "pensionFund": "Pensionsfond"
+    },
+    "securityWarning": "Sikkerhedsadvarsel:",
+    "securityWarningText": "Gem ikke faktiske adgangskoder her. Brug dette felt til hints, placeringer i adgangskode-managere eller andre sikre adgangsinstruktioner.",
+    "buttons": {
+      "cancel": "Annuller",
+      "saving": "Gemmer...",
+      "createAsset": "Opret aktiv",
+      "updateAsset": "Opdater aktiv"
+    }
+  },
+  "assets": {
+    "overview": {
+      "title": "Aktiv-portfolio",
+      "subtitle": "Administrer og spor dine aktiver, ejendomme og investeringer",
+      "addAsset": "Tilføj aktiv",
+      "totalPortfolioValue": "Samlet porteføljeværdi",
+      "estimatedValue": "Anslået værdi på tværs af alle aktiver",
+      "distribution": {
+        "title": "Fordeling af aktiver",
+        "subtitle": "Porteføljeopdeling efter kategori"
+      },
+      "beneficiaryAllocation": {
+        "title": "Fordeling til begunstigede",
+        "subtitle": "Spor fordeling af aktiver til begunstigede",
+        "allAssigned": "Alle aktiver er tildelt begunstigede",
+        "unassignedWarning": "{{count}} aktiver mangler tildeling til begunstigede"
+      },
+      "viewInheritanceSummary": "Se arveoversigt",
+      "addNew": "Tilføj ny",
+      "errors": {
+        "loadFailed": "Kunne ikke indlæse data om aktiver"
+      }
+    },
+    "categories": {
+      "property": "Ejendom",
+      "vehicle": "Køretøj",
+      "financial": "Finansiel",
+      "business": "Virksomhed",
+      "personal": "Personlig",
+      "uncategorized": "Ukategoriseret"
+    }
+  },
+  "pricing": {
+    "title": "Vælg din arveplan",
+    "subtitle": "Start med vores gratis plan eller opgrader for premium-funktioner.",
+    "mainTitle": "Vælg din arveplan",
+    "mainSubtitle": "Start med vores gratis plan eller opgrader for premium-funktioner.",
+    "starter": {
+      "name": "Starter",
+      "price": "Gratis",
+      "description": "Ideel til at komme i gang med at bevare din digitale arv.",
+      "button": "Start gratis",
+      "features": {
+        "storage": "{{amount}} lagerplads",
+        "guardians": "Op til {{count}} værger",
+        "documents": "Grundlæggende dokumentboks",
+        "playbook": "Grundlæggende køreplan for værge",
+        "support": "Fællesskabssupport"
+      },
+      "limits": {
+        "storage": "500 MB",
+        "guardians": "3",
+        "fileSize": "10 MB pr. fil"
+      }
+    },
+    "premium": {
+      "name": "Premium",
+      "price": "$19",
+      "period": "/måned",
+      "badge": "Mest populære",
+      "description": "Avancerede funktioner til omfattende arveadministration.",
+      "button": "Vælg Premium",
+      "features": {
+        "storage": "{{amount}} lagerplads",
+        "guardians": "Op til {{count}} værger",
+        "manual": "Vejledning for efterladte",
+        "support": "Prioriteret e-mail-support"
+      },
+      "limits": {
+        "storage": "10 GB",
+        "guardians": "5",
+        "fileSize": "50 MB pr. fil"
+      }
+    },
+    "enterprise": {
+      "name": "Enterprise",
+      "price": "Tilpasset",
+      "description": "For familier og virksomheder med komplekse behov, der kræver det højeste serviceniveau.",
+      "button": "Kontakt salg",
+      "features": {
+        "storage": "{{amount}}+ lagerplads",
+        "guardians": "Ubegrænsede værger",
+        "legal": "Koordinering med jurister",
+        "support": "Dedikeret Account Manager"
+      },
+      "limits": {
+        "storage": "500 GB",
+        "guardians": "ubegrænset",
+        "fileSize": "100 MB pr. fil"
+      }
+    }
+  },
+  "cookies": {
+    "bannerText": "Vi bruger essentielle cookies for at sikre, at vores side fungerer korrekt. Med dit samtykke kan vi også bruge analytiske cookies til at forbedre vores tjenester.",
+    "declineButton": "Afvis",
+    "acceptButton": "Accepter alle",
+    "learnMoreLink": "Lær mere"
+  },
+  "guardianView": {
+    "title": "Værge-oversigt",
+    "subtitle": "Sikker adgang til {{userName}}'s essentielle oplysninger",
+    "readOnlyAccess": "Skrivebeskyttet adgang",
+    "loading": "Indlæser værge-oversigt...",
+    "errors": {
+      "loadFailed": "Kunne ikke indlæse nødkontakter.",
+      "addFailed": "Kunne ikke tilføje nødkontakt.",
+      "removeFailed": "Kunne ikke fjerne nødkontakt.",
+      "reorderFailed": "Kunne ikke opdatere kontaktorden.",
+      "testFailed": "Kunne ikke sende testbesked.",
+      "selectContact": "Vælg venligst en kontakt."
+    },
+    "sections": {
+      "keyDocuments": {
+        "title": "Nøgledokumenter",
+        "description": "Essentielle dokumenter markeret som kritiske af kontoejeren.",
+        "keyDocumentBadge": "Nøgledokument",
+        "expires": "Udløber",
+        "noExpiration": "Ingen udløbsdato",
+        "empty": "Ingen nøgledokumenter tilgængelige."
+      },
+      "importantContacts": {
+        "title": "Vigtige kontakter",
+        "description": "Nøglekontakter til nødsituationer.",
+        "empty": "Ingen vigtige kontakter tilgængelige."
+      },
+      "finalWishes": {
+        "title": "Sidste ønsker & instruktioner",
+        "description": "Personlige instruktioner og sidste ønsker.",
+        "funeralWishes": "Begravelsesønsker",
+        "digitalAccountsShutdown": "Nedlukning af digitale konti",
+        "messagesToLovedOnes": "Beskeder til kære",
+        "empty": "Ingen sidste ønsker eller instruktioner tilgængelige."
+      }
+    },
+    "guardianInfo": {
+      "description": "Du ser disse oplysninger som en betroet Værge. Denne adgang gives i nødsituationer og for at hjælpe dig med at opfylde dine ansvarsområder.",
+      "securityNote": "Al adgang logges og overvåges af sikkerhedsmæssige årsager."
+    },
+    "defaultUserName": "Primær kontoholder",
+    "description": "Administrer op til 3 nødkontakter i prioriteret rækkefølge.",
+    "addContact": "Tilføj kontakt",
+    "noContacts": "Ingen nødkontakter tilføjet endnu. Tilføj kontakter, der skal underrettes i en nødsituation.",
+    "maxContactsReached": "Du har nået det maksimale antal på 3 nødkontakter.",
+    "sendTest": "Send test",
+    "lastContacted": "Sidst kontaktet for {{time}} siden",
+    "priority": {
+      "1": "Prioritet 1",
+      "2": "Prioritet 2",
+      "3": "Prioritet 3"
+    },
+    "addContactDialog": {
+      "title": "Tilføj nødkontakt",
+      "description": "Vælg en kontakt fra din liste for at tilføje som nødkontakt.",
+      "selectContact": "Vælg kontakt",
+      "selectPlaceholder": "Vælg en kontakt...",
+      "relationship": "Relation (valgfrit)",
+      "relationshipPlaceholder": "Vælg relation...",
+      "addButton": "Tilføj nødkontakt"
+    },
+    "messages": {
+      "added": "Nødkontakt tilføjet.",
+      "removed": "Nødkontakt fjernet.",
+      "reordered": "Kontaktprioritet opdateret.",
+      "testSent": "Testbesked sendt til {{name}}."
+    }
+  },
+  "notificationPreferences": {
+    "title": "Indstillinger for nødmeddelelser",
+    "description": "Administrer notifikationsindstillinger for dine nødkontakter.",
+    "noContacts": "Tilføj nødkontakter for at administrere deres notifikationsindstillinger.",
+    "noEmail": "Ingen e-mailadresse registreret.",
+    "emailRequired": "E-mail påkrævet.",
+    "lastUpdated": "Sidst opdateret: {{date}}",
+    "info": "Når nødadgang gives, sendes notifikationer kun til kontakter med e-mail-notifikationer aktiveret.",
+    "howItWorks": {
+      "title": "Hvordan nødmeddelelser fungerer",
+      "point1": "Værger kan få adgang til nødkontakter i kritiske situationer.",
+      "point2": "Alle tilmeldte kontakter modtager øjeblikkelige e-mail-notifikationer.",
+      "point3": "Du vil også modtage en notifikation, når der sker adgang."
+    },
+    "messages": {
+      "updated": "Notifikationsindstillinger opdateret."
+    },
+    "errors": {
+      "loadFailed": "Kunne ikke indlæse notifikationsindstillinger.",
+      "updateFailed": "Kunne ikke opdatere indstillinger."
+    }
+  },
+  "relationships": {
+    "spouse": "Ægtefælle",
+    "child": "Barn",
+    "parent": "Forælder",
+    "sibling": "Søskende",
+    "friend": "Ven",
+    "other": "Andet"
+  },
+  "emergencyAccess": {
+    "button": "Nødadgang",
+    "modalTitle": "Adgang til nødkontakter",
+    "modalDescription": "Dette giver dig adgang til kontaktoplysninger i nødstilfælde. Brug kun i reelle nødsituationer.",
+    "warningText": "Denne adgang logges, og kontoejeren vil blive underrettet.",
+    "reasonLabel": "Årsag til nødadgang (påkrævet)",
+    "reasonPlaceholder": "Beskriv venligst nødsituationen, der kræver adgang til kontaktoplysninger...",
+    "confirmCheckbox": "Jeg bekræfter, at dette er en reel nødsituation, og jeg har brug for adgang til kontaktoplysninger.",
+    "accessing": "Får adgang...",
+    "confirmButton": "Få adgang til nødkontakter",
+    "pleaseConfirm": "Bekræft venligst nødsituationen og angiv en årsag.",
+    "notAuthorized": "Du er ikke autoriseret til nødadgang.",
+    "failedToLoadContacts": "Kunne ikke indlæse nødkontakter.",
+    "accessGranted": "Nødadgang givet. Kontaktoplysninger er nu tilgængelige.",
+    "accessFailed": "Kunne ikke få adgang til nødkontakter.",
+    "contactsTitle": "Nødkontakter",
+    "contactsDescription": "Kontakt disse personer i prioriteret rækkefølge. Klik på telefonnumre for at ringe eller e-mails for at sende beskeder.",
+    "priorityOrder": "Prioriteret rækkefølge",
+    "priority": "Prioritet #{{order}}",
+    "logContact": "Log kontaktforsøg",
+    "contactLogged": "Kontaktforsøg logget.",
+    "lastContacted": "Sidst kontaktet: {{time}}",
+    "importantNote": "Vigtigt: Kontakt disse personer i den viste rækkefølge. Prøv altid den primære kontaktmetode først. Log alle kontaktforsøg for dokumentation."
+  },
+  "helpPage": {
+    "title": "Hjælp & Support Center",
+    "subtitle": "Vi er her for dig. Find svar på dine spørgsmål eller kontakt os direkte.",
+    "faq": {
+      "title": "Ofte stillede spørgsmål",
+      "q1": {
+        "question": "Er LegacyGuard sikkert?",
+        "answer": "Ja, sikkerhed er vores højeste prioritet. Vi bruger ende-til-ende-kryptering og en nul-tillids-arkitektur, hvilket betyder, at ingen uautoriseret person kan få adgang til dine data, heller ikke os. Alle data opbevares i sikre datacentre inden for EU i overensstemmelse med GDPR."
+      },
+      "q2": {
+        "question": "Hvad sker der med mine data, hvis jeg opsiger mit abonnement?",
+        "answer": "Efter opsigelse forbliver dine data sikkert opbevaret i skrivebeskyttet tilstand i 90 dage. Du kan genaktivere dit abonnement når som helst inden for denne periode for at få fuld adgang igen. Efter 90 dage vil dine data blive sikkert og permanent slettet fra vores systemer."
+      },
+      "q3": {
+        "question": "Hvad er en 'Værge'?",
+        "answer": "En Værge er en betroet person (f.eks. en partner, søskende eller jurist), som du giver særlig, begrænset adgang til dine oplysninger i nødstilfælde. En Værge kan ikke ændre dine data; de kan kun se dem for at handle på dine instruktioner."
+      },
+      "q4": {
+        "question": "Hvad er forskellen på 'Boksen' og 'Vejledningen'?",
+        "answer": "Arveboksen er, hvor du sikkert opbevarer alle dine vigtige dokumenter og aktiver. Vejledningen for efterladte er et kurateret udvalg af de mest kritiske kontakter, dokumenter og instruktioner fra din boks, designet til at dine Værger har alt det essentielle på ét sted."
+      },
+      "q5": {
+        "question": "Er et testamente oprettet i LegacyGuard juridisk bindende?",
+        "answer": "LegacyGuard hjælper dig med at forberede og organisere alt forarbejdet og informationen til dit testamente. I de fleste europæiske lande erstatter det digitale dokument dog ikke behovet for et officielt, underskrevet (og ofte notariseret) dokument. Vi anbefaler altid at konsultere den endelige version med en jurist."
+      }
+    },
+    "contact": {
+      "title": "Fandt du ikke, hvad du ledte efter?",
+      "email": {
+        "title": "Send os en e-mail",
+        "description": "For generelle spørgsmål og support.",
+        "button": "Åbn e-mail-klient"
+      },
+      "call": {
+        "title": "Planlæg et opkald (for Premium)",
+        "description": "For Premium- og Enterprise-kunder.",
+        "button": "Planlæg et opkald"
+      }
+    }
+  },
+  "inviteAcceptance": {
+    "loading": "Indlæser invitation...",
+    "errors": {
+      "invalidLink": "Ugyldigt invitationslink.",
+      "notFound": "Invitation ikke fundet.",
+      "alreadyProcessed": "Denne invitation er allerede blevet behandlet.",
+      "loadingFailed": "Kunne ikke indlæse invitationen.",
+      "acceptFailed": "Kunne ikke acceptere invitationen.",
+      "declineFailed": "Kunne ikke afvise invitationen."
+    },
+    "messages": {
+      "accepted": "Tak. Din rolle som Værge er blevet bekræftet.",
+      "declined": "Du har afvist rollen. Afsenderen vil blive underrettet."
+    },
+    "notFound": {
+      "title": "Invitation ikke fundet",
+      "description": "Dette invitationslink er ugyldigt eller udløbet."
+    },
+    "subtitle": "Du er blevet inviteret til at blive Værge for deres digitale arv på LegacyGuard.",
+    "guardianRole": {
+      "title": "Din rolle som Værge",
+      "yourName": "Dit navn:",
+      "relationship": "Relation:",
+      "responsibilities": "Ansvar:"
+    },
+    "whatThisMeans": {
+      "title": "Hvad dette betyder",
+      "point1": "Du vil have sikker adgang til deres vigtige dokumenter og oplysninger.",
+      "point2": "Du kan kun se oplysninger - ingen redigerings- eller sletningsmuligheder.",
+      "point3": "Din adgang er designet til nødsituationer eller når der er brug for assistance.",
+      "point4": "Al adgang logges og er sikker."
+    },
+    "buttons": {
+      "processing": "Behandler...",
+      "acceptRole": "Accepter rolle",
+      "decline": "Afvis"
+    },
+    "disclaimer": "Ved at acceptere denne rolle anerkender du ansvaret for at være en betroet Værge for deres digitale arv.",
+    "defaultInviterName": "Din betroede kontakt"
+  },
+  "subscription": {
+    "dashboard": {
+      "title": "Abonnementsoversigt",
+      "subtitle": "Administrer dine abonnementer, omkostninger og påmindelser"
+    },
+    "monthlyCost": "Samlede månedlige omkostninger",
+    "yearlyCost": "Samlede årlige omkostninger",
+    "activeSubscriptions": "Aktive abonnementer",
+    "upcomingSoon": "kommer snart",
+    "exportReport": "Eksporter rapport",
+    "perMonth": "pr. måned",
+    "perYear": "pr. år",
+    "allSubscriptions": "Alle abonnementer",
+    "allSubscriptionsDesc": "Oversigt over alle aktive abonnementer sorteret efter fornyelsesdato",
+    "upcomingRenewals": "Kommende fornyelser",
+    "upcomingRenewalsTitle": "Advarsel om kommende fornyelser",
+    "upcomingRenewalsDesc": "Du har {{count}} kommende fornyelser inden for de næste 90 dage",
+    "next90Days": "Næste 90 dage",
+    "noUpcomingRenewals": "Ingen kommende fornyelser inden for de næste 90 dage",
+    "renew": "Forny",
+    "review": "Gennemgå",
+    "preferences": "Abonnementsindstillinger",
+    "preferencesDesc": "Administrer, hvordan dine abonnementer spores og administreres",
+    "enableTracking": "Aktiver sporing af abonnementer",
+    "enableTrackingDesc": "Administrer og spor automatisk abonnementsrelaterede dokumenter",
+    "costOptimization": "Aktiver forslag til omkostningsoptimering",
+    "costOptimizationDesc": "Modtag forslag til at optimere og reducere abonnementsomkostninger",
+    "reminderPeriods": "Standard påmindelsesperioder",
+    "daysBefore": "dage før",
+    "loadError": "Kunne ikke indlæse abonnementsoplysninger",
+    "updateError": "Kunne ikke opdatere abonnementsindstillinger",
+    "preferencesUpdated": "Indstillinger opdateret",
+    "tabs": {
+      "overview": "Oversigt",
+      "upcoming": "Kommende",
+      "settings": "Indstillinger"
+    },
+    "types": {
+      "monthly": "Månedlig",
+      "yearly": "Årlig",
+      "oneTime": "Engangs",
+      "none": "Ingen"
+    },
+    "daysUntilRenewal": "dage til fornyelse",
+    "days": "dage",
+    "loadFailed": "Kunne ikke indlæse abonnementsdata",
+    "autoRenewal": "Automatisk fornyelse: Ja",
+    "manual": "Automatisk fornyelse: Nej",
+    "trackingSuggestion": "Overvej at aktivere sporing af abonnementer for bedre administration og påmindelser",
+    "type": "Abonnementstype",
+    "typePlaceholder": "Vælg type",
+    "renewalCost": "Fornyelsesomkostninger",
+    "renewalCostPlaceholder": "Indtast fornyelsesomkostninger",
+    "cancellationNotice": "Opsigelsesvarsel",
+    "noNoticeRequired": "Intet varsel påkrævet",
+    "providerContact": "Udbyderens kontaktoplysninger",
+    "providerPhone": "Telefon",
+    "providerEmail": "E-mail",
+    "providerWebsite": "Hjemmeside",
+    "cancellationNoticeWarning": "Bemærk: Opsigelse kræver {{days}} dages varsel"
+  },
+  "emailTemplates": {
+    "welcome": {
+      "subject": "Velkommen til LegacyGuard - Din rejse mod digital arv begynder",
+      "greeting": "Velkommen, {{name}},",
+      "body": "Tak, fordi du har tilmeldt dig LegacyGuard. Du har taget det første vigtige skridt for at beskytte din families fremtid.",
+      "cta": "Fuldfør dit livsinventar",
+      "footer": "Hvis du har spørgsmål, er vores supportteam klar til at hjælpe."
+    },
+    "inventoryComplete": {
+      "subject": "Livsinventar fuldført - Din personlige plan er klar",
+      "greeting": "Tillykke, {{name}},",
+      "body": "Du har fuldført dit livsinventar! Baseret på dine svar har vi oprettet en personlig handlingsplan for at hjælpe med at sikre din families fremtid.",
+      "nextSteps": "Dine top 3 prioriteter:",
+      "cta": "Se din handlingsplan",
+      "encouragement": "Husk, at hvert lille skridt, du tager i dag, gør en stor forskel for dine kære i morgen."
+    },
+    "guardianInvite": {
+      "subject": "{{inviterName}} har inviteret dig til at være deres værge på LegacyGuard",
+      "greeting": "Hej {{guardianName}},",
+      "body": "{{inviterName}} betror dig et vigtigt ansvar - at være værge for deres digitale arv.",
+      "whatThisMeans": "Som værge vil du have sikker, skrivebeskyttet adgang til deres vigtige dokumenter og instruktioner i tilfælde af en nødsituation.",
+      "cta": "Se invitation",
+      "expires": "Denne invitation udløber om 7 dage."
+    },
+    "planUpgrade": {
+      "subject": "Du har nået grænsen for din {{planName}}-plan",
+      "greeting": "Hej {{name}},",
+      "body": "Du gør store fremskridt! Du har nået {{limitType}}-grænsen på din nuværende plan.",
+      "upgradeText": "Opgrader til {{suggestedPlan}} for at fortsætte med at tilføje flere {{limitType}} og låse op for yderligere funktioner.",
+      "cta": "Se opgraderingsmuligheder"
+    }
+  },
+  "guardian": {
+    "invitationSent": "Invitation sendt",
+    "accepted": "Accepteret",
+    "declined": "Afvist",
+    "sendInvite": "Send invitation"
+  },
+  "alerts": {
+    "title": "Advarselscenter",
+    "description": "Administrer dine advarsler om dokumentudløb.",
+    "unread": "Ulæst",
+    "markAsRenewed": "Marker som fornyet",
+    "snooze7Days": "Udsæt i 7 dage",
+    "dismiss": "Afvis",
+    "unsnooze": "Fjern udsættelse",
+    "tabs": {
+      "active": "Aktive",
+      "snoozed": "Udsatte",
+      "dismissed": "Afviste"
+    },
+    "noActiveAlerts": "Du har ingen aktive advarsler.",
+    "noSnoozedAlerts": "Du har ingen udsatte advarsler.",
+    "noDismissedAlerts": "Du har ingen afviste advarsler.",
+    "expiresOn": "Udløber den {{date}}",
+    "snoozedUntil": "Udsat indtil {{date}}",
+    "renewalInstructions": "Fornyelsesinstruktioner",
+    "badges": {
+      "expired": "Udløbet",
+      "expiring_7": "Udløber snart",
+      "expiring_30": "Udløber om 30 dage",
+      "expiring_90": "Udløber om 90 dage"
+    },
+    "types": {
+      "expired": "Dokumentet {{documentName}} udløb for {{daysAgo}} dage siden!",
+      "expiring7": "Skynd dig! {{documentName}} udløber om {{days}} dage.",
+      "expiring30": "Påmindelse: {{documentName}} udløber om {{days}} dage.",
+      "expiring90": "Bemærk: {{documentName}} udløber om {{days}} dage."
+    },
+    "messages": {
+      "dismissed": "Advarsel afvist.",
+      "snoozed": "Advarsel udsat i {{days}} dage.",
+      "markedAsRenewed": "Dokument markeret som fornyet."
+    },
+    "errors": {
+      "loadFailed": "Kunne ikke indlæse advarsler.",
+      "dismissFailed": "Kunne ikke afvise advarsel.",
+      "snoozeFailed": "Kunne ikke udsætte advarsel.",
+      "renewFailed": "Kunne ikke markere dokument som fornyet."
+    }
+  },
+  "errorBoundary": {
+    "title": "Ups! Noget gik galt",
+    "description": "Vi beklager ulejligheden. Der er opstået en uventet fejl.",
+    "errorId": "Fejl-ID",
+    "tryAgain": "Prøv igen",
+    "reloadPage": "Genindlæs siden",
+    "goToHomepage": "Gå til forsiden",
+    "technicalDetails": "Tekniske detaljer",
+    "hide": "Skjul",
+    "show": "Vis",
+    "stackTrace": "Stack Trace",
+    "componentStack": "Component Stack",
+    "helpText": "Hvis problemet fortsætter, bedes du kontakte vores support med fejl-ID'et."
+  },
+  "errorTest": {
+    "title": "Test af fejllogning",
+    "triggerSyncError": "Udløs synkron fejl (ErrorBoundary)",
+    "triggerAsyncError": "Udløs asynkron fejl",
+    "logRegularError": "Log almindelig fejl",
+    "logCriticalError": "Log kritisk fejl",
+    "triggerAlert": "Udløs advarsel (6 kritiske fejl)"
+  },
+  "footer": {
+    "tagline": "Bevarelse af din arv for kommende generationer.",
+    "platform": {
+      "title": "Platform",
+      "heritageVault": "Arveboks",
+      "guardianNetwork": "Værgenetværk",
+      "dashboard": "Oversigt",
+      "security": "Sikkerhed"
+    },
+    "support": {
+      "title": "Support",
+      "helpCenter": "Hjælpecenter",
+      "userGuides": "Brugervejledninger",
+      "contactUs": "Kontakt os",
+      "community": "Fællesskab"
+    },
+    "legal": {
+      "title": "Juridisk",
+      "privacyPolicy": "Privatlivspolitik",
+      "termsOfService": "Servicevilkår",
+      "dataProtection": "Databeskyttelse"
+    },
+    "copyright": "© {{year}} LegacyGuard. Alle rettigheder forbeholdes.",
+    "description": "Digital arveadministration i virksomhedsklasse."
+  },
+  "playbook": {
+    "label": "Køreplan",
+    "create": "Opret køreplan",
+    "edit": "Rediger køreplan",
+    "preview": "Forhåndsvisning",
+    "exitPreview": "Afslut forhåndsvisning",
+    "save": "Gem køreplan",
+    "saving": "Gemmer...",
+    "loading": "Indlæser køreplan...",
+    "autoSaveNotice": "Dine ændringer gemmes automatisk, mens du skriver.",
+    "noContent": "Intet indhold tilføjet endnu.",
+    "noContacts": "Ingen kontakter tilføjet endnu.",
+    "addContact": "Tilføj kontakt",
+    "contact": "Kontakt",
+    "title": "Køreplan for {{name}}",
+    "titleReadOnly": "{{name}}'s køreplan",
+    "description": "Opret personlige instruktioner og information til din værge.",
+    "viewTitle": "Værges køreplan: {{userName}}",
+    "viewDescription": "Væsentlig information og instruktioner forberedt specielt til dig.",
+    "lastUpdated": "Sidst opdateret",
+    "viewFooter": "Disse oplysninger er blevet betroet dig som værge. Behandl dem fortroligt og sikkert.",
+    "notAuthenticated": "Log venligst ind for at se denne køreplan.",
+    "accessDenied": "Du har ikke tilladelse til at se denne køreplan.",
+    "fetchError": "Kunne ikke indlæse køreplan.",
+    "saveSuccess": "Køreplan gemt.",
+    "saveError": "Kunne ikke gemme køreplan.",
+    "discardChanges": {
+      "title": "Kassér ændringer?",
+      "description": "Du har ugemte ændringer. Er du sikker på, at du vil kassere dem?",
+      "cancel": "Fortsæt redigering",
+      "confirm": "Kassér ændringer"
+    },
+    "importantContacts": {
+      "label": "Vigtige kontakter",
+      "description": "Tilføj nøglepersoner, som denne værge bør kontakte.",
+      "viewDescription": "Kontakt disse personer ved behov.",
+      "add": "Tilføj kontakt",
+      "remove": "Fjern",
+      "empty": "Ingen kontakter tilføjet endnu. Klik på 'Tilføj kontakt' for at tilføje vigtige personer.",
+      "name": "Navn",
+      "namePlaceholder": "Fulde navn",
+      "relationship": "Relation",
+      "relationshipPlaceholder": "f.eks. Familieadvokat",
+      "phone": "Telefon",
+      "phonePlaceholder": "+45 12 34 56 78",
+      "email": "E-mail",
+      "emailPlaceholder": "email@example.com",
+      "notes": "Noter",
+      "notesPlaceholder": "Yderligere oplysninger"
+    },
+    "funeralWishes": {
+      "label": "Begravelsesønsker",
+      "description": "Dine præferencer for begravelsesarrangementer.",
+      "placeholder": "Beskriv dine ønsker for din begravelse eller mindehøjtidelighed..."
+    },
+    "digitalAccounts": {
+      "label": "Digitale konti",
+      "description": "Instruktioner til håndtering af dine onlinekonti.",
+      "placeholder": "Angiv dine digitale konti, og hvordan de skal håndteres..."
+    },
+    "documentLocations": {
+      "label": "Dokumentplaceringer",
+      "description": "Hvor man kan finde vigtige dokumenter.",
+      "placeholder": "Beskriv, hvor vigtige dokumenter er placeret..."
+    },
+    "personalMessages": {
+      "label": "Personlige beskeder",
+      "description": "Personlige beskeder til denne værge.",
+      "placeholder": "Skriv en personlig besked til denne værge..."
+    },
+    "practicalInstructions": {
+      "label": "Praktiske instruktioner",
+      "description": "Umiddelbare skridt og ansvarsområder.",
+      "placeholder": "Angiv praktiske opgaver og umiddelbare handlinger..."
+    },
+    "notFound": {
+      "title": "Ingen køreplan fundet",
+      "description": "Den køreplan, du leder efter, er endnu ikke oprettet."
+    },
+    "subtitle": {
+      "edit": "Opret personlige instruktioner og information til denne værge.",
+      "view": "Væsentlig information og instruktioner forberedt til dig."
+    },
+    "status": {
+      "empty": "Ikke startet",
+      "draft": "Igangværende",
+      "complete": "Fuldført"
+    },
+    "tabs": {
+      "funeral": "Begravelse",
+      "digital": "Digital",
+      "contacts": "Kontakter",
+      "documents": "Dokumenter",
+      "messages": "Beskeder",
+      "instructions": "Instruktioner"
+    },
+    "sections": {
+      "funeral": {
+        "title": "Begravelsesønsker",
+        "description": "Dine præferencer for begravelsesarrangementer og mindehøjtideligheder.",
+        "placeholder": "Beskriv dine ønsker til din begravelse eller mindehøjtidelighed...\n\nFor eksempel:\n- Type af ceremoni (religiøs, sekulær, fejring af livet)\n- Præferencer for begravelse eller kremering\n- Præferencer for placering\n- Musik, oplæsninger eller særlige ønsker\n- Hvem der skal tale eller deltage\n- Eventuelle specifikke traditioner, der skal følges"
+      },
+      "digital": {
+        "title": "Nedlukning af digitale konti",
+        "description": "Instruktioner til håndtering af din digitale tilstedeværelse og onlinekonti.",
+        "placeholder": "Angiv dine digitale konti og hvordan de skal håndteres...\n\nFor eksempel:\n- Sociale mediekonti (Facebook, Instagram, LinkedIn)\n- E-mailkonti\n- Cloud-lagring (Google Drive, Dropbox)\n- Abonnementstjenester (Netflix, Spotify)\n- Onlinebank- og finanskonti\n- Kryptovaluta-punge\n- Hjemmeside- eller domænenavne"
+      },
+      "contacts": {
+        "title": "Vigtige kontakter",
+        "description": "Nøglepersoner, som denne værge bør kontakte eller underrette.",
+        "placeholder": "Tilføj vigtige kontakter, der er specifikke for denne værges ansvarsområder."
+      },
+      "documents": {
+        "title": "Dokumentplaceringer",
+        "description": "Hvor man kan finde vigtige fysiske og digitale dokumenter.",
+        "placeholder": "Beskriv, hvor vigtige dokumenter er placeret...\n\nFor eksempel:\n- Placering af testamente\n- Forsikringspolicer\n- Skøder på ejendom\n- Oplysninger om bankkonti\n- Investeringsdokumenter\n- Selvangivelser\n- Adgangskoder og adgangskoder\n- Placering af bankboks og nøgle"
+      },
+      "messages": {
+        "title": "Personlige beskeder",
+        "description": "Personlige beskeder og sidste tanker til denne værge.",
+        "placeholder": "Skriv en personlig besked til denne værge...\n\nDette er din mulighed for at:\n- Udtrykke dine følelser og taknemmelighed\n- Dele vigtige minder\n- Give vejledning eller råd\n- Forklare dine beslutninger\n- Efterlade trøstende ord\n- Dele dine håb for fremtiden"
+      },
+      "practical": {
+        "title": "Praktiske instruktioner",
+        "description": "Umiddelbare praktiske skridt og ansvarsområder for denne værge.",
+        "placeholder": "Angiv praktiske opgaver og umiddelbare handlinger...\n\nFor eksempel:\n- Tjekliste for de første 24-48 timer\n- Hvem der skal underrettes først\n- Haste-regninger eller betalinger\n- Plejeinstruktioner (kæledyr, planter, ejendom)\n- Forretningsanliggender, der kræver opmærksomhed\n- Planlagte aftaler, der skal aflyses\n- Nødvendige nøgler og adgangskoder"
+      }
+    },
+    "contactFields": {
+      "name": "Navn",
+      "namePlaceholder": "Fulde navn",
+      "role": "Rolle/Relation",
+      "rolePlaceholder": "f.eks. Familieadvokat, Revisor",
+      "phone": "Telefon",
+      "phonePlaceholder": "+45 12 34 56 78",
+      "email": "E-mail",
+      "emailPlaceholder": "email@example.com",
+      "notes": "Noter",
+      "notesPlaceholder": "Yderligere oplysninger om denne kontakt"
+    },
+    "messages": {
+      "autoSaved": "Gemt",
+      "saved": "Køreplan gemt"
+    },
+    "errors": {
+      "loadFailed": "Kunne ikke indlæse køreplan.",
+      "saveFailed": "Kunne ikke gemme køreplan."
+    }
+  },
+  "debug": {
+    "panel": {
+      "title": "Debug panel",
+      "recentErrors": "Seneste applikationsfejl",
+      "technicalDetails": "Tekniske detaljer",
+      "tabs": {
+        "list": "Liste",
+        "details": "Detaljer"
+      },
+      "errorCount": "{{count}} fejl",
+      "actions": {
+        "downloadErrors": "Download fejl",
+        "clearAllErrors": "Ryd alle fejl"
+      },
+      "messages": {
+        "errorsCleared": "Alle fejl ryddet",
+        "errorCopied": "Fejl kopieret til udklipsholder",
+        "errorsDownloaded": "Fejl downloadet"
+      },
+      "error": {
+        "unknownError": "Ukendt fejl",
+        "noMessage": "Ingen besked",
+        "errorMessage": "Fejlbesked"
+      },
+      "sections": {
+        "stackTrace": "Stack Trace",
+        "context": "Kontekst",
+        "location": "Placering",
+        "browserInfo": "Browser information",
+        "time": "Tid"
+      },
+      "fields": {
+        "url": "URL:",
+        "path": "Sti:",
+        "query": "Forespørgsel:",
+        "userAgent": "User Agent:",
+        "viewport": "Viewport:"
+      }
+    }
+  }
+}

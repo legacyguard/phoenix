@@ -1,0 +1,442 @@
+{
+  "_comment": "Shared translations used across the application",
+  "assets": {
+    "overview": {
+      "title": "Vermögensportfolio",
+      "subtitle": "Verwalten und verfolgen Sie Ihre Vermögenswerte, Immobilien und Investitionen",
+      "addAsset": "Vermögenswert hinzufügen",
+      "totalPortfolioValue": "Gesamter Portfoliowert",
+      "estimatedValue": "Geschätzter Wert über alle Vermögenswerte",
+      "distribution": {
+        "title": "Vermögensaufteilung",
+        "subtitle": "Portfolioaufschlüsselung nach Kategorie"
+      },
+      "beneficiaryAllocation": {
+        "title": "Zuweisung an Begünstigte",
+        "subtitle": "Verfolgen Sie die Verteilung der Vermögenswerte an die Begünstigten",
+        "allAssigned": "Alle Vermögenswerte sind Begünstigten zugewiesen",
+        "unassignedWarning": "{{count}} Vermögenswerte benötigen eine Zuweisung an Begünstigte"
+      },
+      "viewInheritanceSummary": "Erbschaftsübersicht anzeigen",
+      "addNew": "Neu hinzufügen",
+      "errors": {
+        "loadFailed": "Laden der Vermögensdaten fehlgeschlagen"
+      }
+    },
+    "categories": {
+      "property": "Immobilien",
+      "vehicle": "Fahrzeug",
+      "financial": "Finanzen",
+      "business": "Unternehmen",
+      "personal": "Persönlich",
+      "uncategorized": "Unkategorisiert"
+    }
+  },
+  "assetCard": {
+    "assetTypes": {
+      "Primary Residence": "Hauptwohnsitz",
+      "Vacation Home": "Ferienhaus",
+      "Rental Property": "Mietobjekt",
+      "Land": "Grundstück",
+      "Commercial Property": "Gewerbeimmobilie",
+      "Bank Account": "Bankkonto",
+      "Investment Portfolio": "Anlageportfolio",
+      "Cryptocurrency Wallet": "Kryptowährungs-Wallet",
+      "Loan / Mortgage": "Kredit / Hypothek",
+      "Insurance Policy": "Versicherungspolice",
+      "Pension / Retirement Account": "Rentenkonto",
+      "Car": "Auto",
+      "Motorcycle": "Motorrad",
+      "Boat": "Boot",
+      "RV / Camper": "Wohnmobil / Wohnwagen",
+      "Aircraft": "Flugzeug",
+      "Online Account": "Online-Konto",
+      "Software License": "Software-Lizenz",
+      "Domain Name": "Domain-Name",
+      "Digital Subscription": "Digitales Abonnement",
+      "Cryptocurrency": "Kryptowährung",
+      "NFT": "NFT",
+      "Jewelry": "Schmuck",
+      "Art / Collectibles": "Kunst / Sammlerstücke",
+      "Electronics": "Elektronik",
+      "Furniture": "Möbel",
+      "Tools / Equipment": "Werkzeuge / Ausrüstung",
+      "Other Valuables": "Andere Wertgegenstände",
+      "Custom Asset": "Benutzerdefiniertes Asset"
+    },
+    "dateFormat": {
+      "addedOn": "Hinzugefügt am {{date}}",
+      "createdOn": "Erstellt am {{date}}",
+      "updatedOn": "Aktualisiert am {{date}}"
+    },
+    "labels": {
+      "estimatedValue": "Geschätzter Wert",
+      "category": "Kategorie",
+      "subType": "Typ"
+    }
+  },
+  "assetDetail": {
+    "loading": "Lade Details zum Vermögenswert...",
+    "errors": {
+      "failedToLoad": "Details zum Vermögenswert konnten nicht geladen werden.",
+      "nameRequired": "Name des Vermögenswerts ist erforderlich.",
+      "failedToSave": "Speichern des Vermögenswerts fehlgeschlagen."
+    },
+    "messages": {
+      "createdSuccessfully": "Vermögenswert erfolgreich erstellt.",
+      "updatedSuccessfully": "Vermögenswert erfolgreich aktualisiert."
+    },
+    "title": {
+      "new": "Neuer {{type}}"
+    },
+    "subtitle": {
+      "new": "Füllen Sie die Details aus, um diesen Vermögenswert Ihrem Portfolio hinzuzufügen.",
+      "edit": "Aktualisieren Sie die Details dieses Vermögenswerts."
+    },
+    "story": {
+      "title": "The Story Behind This {{type}}",
+      "editButton": "Edit Story",
+      "addButton": "Add a Story",
+      "emptyTitle": "What's the story behind this item?",
+      "emptyDescription": "Add a personal memory or explain the significance of this item for your loved ones. This intangible legacy is often the most valuable."
+    },
+    "sections": {
+      "assetInformation": "Informationen zum Vermögenswert",
+      "basicInformation": "Grundlegende Informationen",
+      "propertyDetails": "Immobiliendetails",
+      "accountDetails": "Kontodetails",
+      "financialDetails": "Finanzielle Details",
+      "liabilitiesAndDocuments": "Related Liabilities & Documents"
+    },
+    "fields": {
+      "assetName": "Name des Vermögenswerts",
+      "assetType": "Art des Vermögenswerts",
+      "propertyAddress": "Adresse der Immobilie",
+      "propertyRegistryNumber": "Grundbuchnummer",
+      "accountType": "Kontoart",
+      "financialInstitution": "Finanzinstitut",
+      "accountNumber": "Kontonummer / IBAN",
+      "loginCredentials": "Anmeldeinformationen & Notizen",
+      "estimatedValue": "Geschätzter Wert",
+      "currency": "Währung",
+      "liabilityType": "Liability Type",
+      "providerName": "Provider Name",
+      "referenceNumber": "Reference Number"
+    },
+    "placeholders": {
+      "assetName": "z.B. Familienhaus, Anlageportfolio",
+      "propertyAddress": "Geben Sie die vollständige Adresse der Immobilie ein",
+      "propertyRegistryNumber": "z.B. Grundbuchnummer",
+      "selectAccountType": "Wählen Sie eine Kontoart aus",
+      "financialInstitution": "z.B. Deutsche Bank, Commerzbank",
+      "accountNumber": "z.B. DE1234567890",
+      "loginCredentials": "Passwort-Manager: 1Password Tresor 'Banking'",
+      "estimatedValue": "0"
+    },
+    "descriptions": {
+      "assetName": "Geben Sie diesem Vermögenswert einen aussagekräftigen Namen zur einfachen Identifizierung.",
+      "assetType": "Wählen Sie die Art, die diesen Vermögenswert am besten beschreibt.",
+      "propertyAddress": "Vollständige Adresse inklusive Straße, Stadt, Postleitzahl und Land.",
+      "propertyRegistryNumber": "Offizielle Registrierungs- oder Katasternummer für diese Immobilie.",
+      "accountType": "Art des Finanzkontos oder der Anlage.",
+      "financialInstitution": "Name der Bank oder des Finanzinstituts.",
+      "accountNumber": "Kontonummer, IBAN oder andere identifizierende Informationen.",
+      "estimatedValue": "Aktueller Marktwert oder letzter bekannter Wert dieses Vermögenswerts.",
+      "currency": "Währung, in der der Wert ausgedrückt wird.",
+      "noLiabilities": "No liabilities added yet"
+    },
+    "types": {
+      "realEstate": "Immobilie",
+      "business": "Unternehmen",
+      "vehicle": "Fahrzeug",
+      "financialAccount": "Finanzkonto",
+      "asset": "Vermögenswert"
+    },
+    "accountTypes": {
+      "bankAccount": "Bankkonto",
+      "investmentPortfolio": "Anlageportfolio",
+      "pensionFund": "Pensionsfonds"
+    },
+    "securityWarning": "Sicherheitswarnung:",
+    "securityWarningText": "Speichern Sie hier keine tatsächlichen Passwörter. Verwenden Sie dieses Feld für Hinweise, Speicherorte in Passwort-Managern oder andere sichere Zugangsanweisungen.",
+    "buttons": {
+      "cancel": "Abbrechen",
+      "saving": "Speichern...",
+      "createAsset": "Vermögenswert erstellen",
+      "updateAsset": "Vermögenswert aktualisieren",
+      "addLiability": "Add Liability"
+    }
+  },
+  "assetType": {
+    "selectType": "{{mainCategory}}-Typ auswählen",
+    "primaryResidence": "Hauptwohnsitz",
+    "vacationHome": "Ferienhaus",
+    "rentalProperty": "Mietobjekt",
+    "land": "Grundstück",
+    "commercialProperty": "Gewerbeimmobilie",
+    "bankAccount": "Bankkonto",
+    "investmentPortfolio": "Anlageportfolio",
+    "cryptocurrencyWallet": "Kryptowährungs-Wallet",
+    "loanMortgage": "Kredit / Hypothek",
+    "insurancePolicy": "Versicherungspolice",
+    "pensionRetirement": "Rente / Ruhestand",
+    "car": "Auto",
+    "motorcycle": "Motorrad",
+    "boat": "Boot",
+    "rvCamper": "Wohnmobil / Camper",
+    "aircraft": "Flugzeug",
+    "onlineAccount": "Online-Konto",
+    "softwareLicense": "Software-Lizenz",
+    "domainName": "Domain-Name",
+    "digitalSubscription": "Digitales Abonnement",
+    "cryptocurrency": "Kryptowährung",
+    "nft": "NFT",
+    "jewelry": "Schmuck",
+    "artCollectibles": "Kunst / Sammlerstücke",
+    "electronics": "Elektronik",
+    "furniture": "Möbel",
+    "toolsEquipment": "Werkzeuge / Ausrüstung",
+    "otherValuables": "Andere Wertgegenstände",
+    "customAsset": "Benutzerdefiniertes Asset"
+  },
+  "dynamicAssetForm": {
+    "propertyAddress": "Immobilienadresse",
+    "purchaseDate": "Kaufdatum",
+    "purchasePrice": "Kaufpreis",
+    "currentEstimatedValue": "Aktueller geschätzter Wert",
+    "mortgageInformation": "Hypothekeninformationen",
+    "locationOfPropertyDocuments": "Standort der Immobiliendokumente",
+    "locationAddress": "Standort / Adresse",
+    "size": "Größe (Morgen/qm)",
+    "zoningType": "Zonierungstyp",
+    "currentUse": "Aktuelle Nutzung",
+    "bankName": "Bankname",
+    "accountType": "Kontotyp",
+    "selectAccountType": "Kontotyp auswählen",
+    "checking": "Girokonto",
+    "savings": "Sparkonto",
+    "moneyMarket": "Geldmarktkonto",
+    "certificateOfDeposit": "Einlagenzertifikat",
+    "accountHolderName": "Kontoinhabername(n)",
+    "accountNumberLast4": "Kontonummer (Letzte 4 Ziffern)",
+    "routingNumber": "Routing-Nummer",
+    "brokerageFirm": "Maklerfirma",
+    "accountNumber": "Kontonummer",
+    "individual": "Einzelperson",
+    "joint": "Gemeinsam",
+    "ira": "IRA",
+    "rothIra": "Roth IRA",
+    "401k": "401(k)",
+    "approximateValue": "Ungefährer Wert",
+    "financialAdvisor": "Finanzberater (falls vorhanden)",
+    "walletNameLabel": "Wallet-Name/Bezeichnung",
+    "walletType": "Wallet-Typ",
+    "selectWalletType": "Wallet-Typ auswählen",
+    "hardwareWallet": "Hardware-Wallet",
+    "softwareWallet": "Software-Wallet",
+    "exchangeWallet": "Börsen-Wallet",
+    "paperWallet": "Papier-Wallet",
+    "cryptocurrenciesHeld": "Gehaltene Kryptowährungen",
+    "locationOfSeedPhrase": "Standort der Seed-Phrase/Private Keys",
+    "exchangeInformation": "Börseninformationen (falls zutreffend)",
+    "makeAndModel": "Marke und Modell",
+    "year": "Jahr",
+    "vinNumber": "Fahrgestellnummer",
+    "licensePlate": "Kennzeichen",
+    "loanInformation": "Kreditinformationen (falls vorhanden)",
+    "locationOfTitle": "Standort der Fahrzeugpapiere",
+    "platformWebsiteName": "Plattform/Website-Name",
+    "accountEmail": "Konto-E-Mail/Benutzername",
+    "accountPurpose": "Kontozweck/Beschreibung",
+    "recoveryInformation": "Wiederherstellungsinformationen",
+    "faMethod": "2FA-Methode (falls aktiviert)",
+    "itemDescription": "Gegenstandsbeschreibung",
+    "appraisedValue": "Bewerteter Wert",
+    "lastAppraisalDate": "Letztes Bewertungsdatum",
+    "storageLocation": "Lagerort",
+    "insuranceInformation": "Versicherungsinformationen",
+    "sentimentalValue": "Sentimentaler Wert/Geschichte",
+    "assetName": "Vermögenswertname",
+    "estimatedValue": "Geschätzter Wert",
+    "description": "Beschreibung",
+    "locationAccessInformation": "Standort/Zugangsinformationen",
+    "addSubType": "{subType} hinzufügen",
+    "cancel": "Abbrechen",
+    "saveAsset": "Vermögenswert speichern",
+    "placeholders": {
+      "123_main_st_city_state_zip_1": "123 Hauptstraße, Stadt, Bundesland, PLZ",
+      "lender_name_account_number_rem_2": "Kreditgeber-Name, Kontonummer, verbleibender Saldo",
+      "e_g_safe_deposit_box_filing_ca_3": "z.B. Bankschließfach, Aktenschrank",
+      "property_location_or_parcel_nu_4": "Immobilienstandort oder Parzellennummer",
+      "e_g_10_acres_5": "z.B. 10 Morgen, 5.000 qm",
+      "e_g_commercial_agricultural_6": "z.B. Gewerbe, Landwirtschaft, Wohnen",
+      "describe_current_use_of_the_pr_7": "Beschreiben Sie die aktuelle Nutzung der Immobilie",
+      "e_g_chase_bank_8": "z.B. Chase Bank, Wells Fargo",
+      "john_doe_9": "Max Mustermann",
+      "1234_10": "1234",
+      "e_g_fidelity_vanguard_11": "z.B. Fidelity, Vanguard, Charles Schwab",
+      "account_number_12": "Kontonummer",
+      "name_and_contact_information_13": "Name und Kontaktinformationen",
+      "e_g_main_bitcoin_wallet_14": "z.B. Haupt-Bitcoin-Wallet",
+      "e_g_bitcoin_ethereum_15": "z.B. Bitcoin, Ethereum, Litecoin",
+      "do_not_enter_the_actual_seed_p_16": "Geben Sie hier nicht die tatsächliche Seed-Phrase ein",
+      "exchange_name_and_account_emai_17": "Börsenname und Konto-E-Mail",
+      "e_g_toyota_camry_18": "z.B. Toyota Camry, Honda Civic",
+      "vehicle_identification_number_19": "Fahrzeugidentifikationsnummer",
+      "lender_account_number_payoff_a_20": "Kreditgeber, Kontonummer, Rückzahlungsbetrag",
+      "e_g_safe_deposit_box_21": "z.B. Bankschließfach, Haussafe",
+      "e_g_gmail_facebook_22": "z.B. Gmail, Facebook, LinkedIn",
+      "user_example_com_23": "benutzer@beispiel.de",
+      "what_this_account_is_used_for_24": "Wofür dieses Konto verwendet wird",
+      "recovery_email_phone_or_securi_25": "Wiederherstellungs-E-Mail, Telefon oder Sicherheitsfragen",
+      "e_g_sms_to_phone_ending_in_123_26": "z.B. SMS an Telefon mit Endung 123",
+      "e_g_diamond_engagement_ring_27": "z.B. Diamant-Verlobungsring, Goldkette",
+      "e_g_home_safe_bank_deposit_box_28": "z.B. Haussafe, Bankschließfach",
+      "policy_number_and_company_29": "Policennummer und Unternehmen",
+      "special_meaning_or_history_of__30": "Besondere Bedeutung oder Geschichte dieses Gegenstands",
+      "name_or_description_of_asset_31": "Name oder Beschreibung des Vermögenswerts",
+      "detailed_description_of_the_as_32": "Detaillierte Beschreibung des Vermögenswerts",
+      "where_to_find_this_asset_or_ho_33": "Wo dieser Vermögenswert zu finden ist oder wie darauf zuzugreifen ist"
+    }
+  },
+  "myPossessions": {
+    "my_possessions_1": "Mein Besitz",
+    "an_inventory_of_the_important__2": "Ein Inventar der wichtigen Dinge, die die Zukunft Ihrer Familie unterstützen.",
+    "family_impact_3": "Familienauswirkung:",
+    "edit_details_4": "Details bearbeiten",
+    "link_papers_5": "Papiere verknüpfen (",
+    "assign_access_6": "Zugang zuweisen",
+    "add_your_first_7": "Fügen Sie Ihre erste ",
+    "areas": {
+      "home": {
+        "title": "Ihr Zuhause & Eigentum",
+        "description": "Die Orte, die Schutz bieten und Erinnerungen schaffen.",
+        "emptyState": "Dokumentieren Sie Ihr Eigentum, um sicherzustellen, dass der Schutz Ihrer Familie gesichert ist.",
+        "addButton": "Eigentum"
+      },
+      "savings": {
+        "title": "Ihre Ersparnisse & Investitionen",
+        "description": "Das finanzielle Fundament, das Sie für die Zukunft Ihrer Familie aufgebaut haben.",
+        "emptyState": "Zeichnen Sie Ihre Finanzkonten auf, damit Ihre Familie bei Bedarf auf Mittel zugreifen kann.",
+        "addButton": "Konto"
+      },
+      "business": {
+        "title": "Ihr Geschäft",
+        "description": "Die Arbeit, die Ihre Familie unterstützt und Ihr berufliches Erbe schafft.",
+        "emptyState": "Dokumentieren Sie Ihre Geschäftsdetails, um eine reibungslose Nachfolge und kontinuierliche Einnahmen zu gewährleisten.",
+        "addButton": "Geschäft"
+      },
+      "valuables": {
+        "title": "Ihre Wertgegenstände & Sammlungen",
+        "description": "Gegenstände von finanziellem oder sentimentalem Wert, die besondere Berücksichtigung benötigen.",
+        "emptyState": "Listen Sie wertvolle Gegenstände auf, die besondere Behandlung benötigen oder sentimentalen Wert haben.",
+        "addButton": "Wertgegenstand"
+      }
+    },
+    "mockData": {
+      "lakeCabin": "Seekabine",
+      "emergencyFund": "Notfallfonds",
+      "yourBusiness": "Ihr Geschäft",
+      "johnsonContracting": "Johnson Contracting LLC",
+      "classicCarCollection": "Klassische Autosammlung"
+    }
+  },
+  "addLiabilityModal": {
+    "title": "Verbindlichkeit hinzufügen",
+    "fields": {
+      "type": "Typ",
+      "provider": "Anbieter",
+      "referenceNumber": "Referenznummer",
+      "paymentFrequency": "Zahlungshäufigkeit",
+      "notes": "Notizen"
+    },
+    "placeholders": {
+      "selectType": "Typ auswählen",
+      "provider": "Anbietername",
+      "referenceNumber": "Referenznummer",
+      "paymentFrequency": "Häufigkeit auswählen",
+      "notes": "Zusätzliche Notizen"
+    },
+    "buttons": {
+      "cancel": "Abbrechen",
+      "add": "Verbindlichkeit hinzufügen"
+    },
+    "errors": {
+      "requiredFields": "Alle Felder sind erforderlich"
+    },
+    "messages": {
+      "addedSuccessfully": "Verbindlichkeit erfolgreich hinzugefügt"
+    },
+    "types": {
+      "insurancePolicy": "Versicherungspolice",
+      "utilityBill": "Nebenkostenrechnung",
+      "propertyTax": "Grundsteuer",
+      "subscriptionFee": "Abonnementgebühr",
+      "maintenanceContract": "Wartungsvertrag",
+      "loan": "Kredit",
+      "leaseAgreement": "Mietvertrag",
+      "warranty": "Garantie",
+      "other": "Andere"
+    },
+    "frequencies": {
+      "monthly": "Monatlich",
+      "quarterly": "Vierteljährlich",
+      "semiAnnually": "Halbjährlich",
+      "annually": "Jährlich",
+      "oneTime": "Einmalig",
+      "asNeeded": "Bei Bedarf"
+    }
+  },
+  "calculator": {
+    "badge": "Vorbereitungsrechner",
+    "title": "Berechnen Sie die Vorbereitungsbewertung Ihrer Familie",
+    "subtitle": "Sehen Sie die echte Zeit und das Geld, die Ihre Familie spart, wenn alles organisiert ist",
+    "inputs": {
+      "title": "Ihre Familiensituation",
+      "description": "Erzählen Sie uns ein wenig über Ihre Familie, um Ihre Ergebnisse zu personalisieren",
+      "dependents": "Wie viele Menschen sind von Ihnen abhängig?",
+      "dependentsHelp": "Einschließlich Ehepartner, Kinder, ältere Eltern",
+      "income": "Was ist das monatliche Einkommen Ihrer Familie?",
+      "incomeHelp": "Dies hilft bei der Berechnung potenzieller Lohnverluste",
+      "property": "Besitzen Sie Immobilien?",
+      "business": "Haben Sie ein Geschäft?",
+      "accounts": "Wie viele Bankkonten haben Sie?",
+      "accountsHelp": "Einschließlich Girokonto, Sparkonto, Investitionen"
+    },
+    "calculateButton": "Meine Einsparungen berechnen",
+    "results": {
+      "title": "Die Einsparungen Ihrer Familie",
+      "description": "Hier ist, was Vorbereitung für Ihre Liebsten bedeutet",
+      "timeSavings": {
+        "title": "Zeit, die Ihre Familie spart",
+        "without": "Ohne Organisation",
+        "withoutHours": "40-120 Stunden Suche",
+        "with": "Mit Heritage Vault",
+        "withMinutes": "Unter 5 Minuten"
+      },
+      "moneySavings": {
+        "title": "Geld, das Ihre Familie spart",
+        "legalFees": "Rechtskosten für Rekonstruktion",
+        "lostWages": "Lohnverluste durch Ausfallzeiten",
+        "penalties": "Verpasste Fristen & Strafen",
+        "total": "Gesamte potenzielle Einsparungen"
+      },
+      "emotional": {
+        "title": "Auswirkungen auf das emotionale Wohlbefinden",
+        "stress": "Stressreduktion",
+        "confidence": "Zunahme des Familienvertrauens",
+        "peace": "Kontroll- & Vorbereitungsbewertung"
+      },
+      "socialProof": "Schließen Sie sich Familien an, die bereits besser schlafen",
+      "families": "15.000+ Familien geschützt",
+      "ctaContext": "Die meisten Familien schließen die Einrichtung während ihrer Mittagspause ab",
+      "shareButton": "Ergebnisse teilen"
+    },
+    "testimonial": {
+      "quote": "Ich habe nie erkannt, wie viel Stress ich trug, bis ich alles organisiert hatte. Jetzt weiß ich, dass es meiner Familie gut gehen wird, egal was passiert.",
+      "author": "Sarah M., Mutter von drei Kindern"
+    },
+    "shareTitle": "Ergebnisse des Familienvorbereitungsrechners",
+    "shareCopied": "Ergebnisse in die Zwischenablage kopiert!"
+  }
+}

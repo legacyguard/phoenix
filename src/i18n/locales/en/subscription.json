@@ -1,0 +1,204 @@
+{
+  "_comment": "Subscription, billing, and pricing related",
+  "subscription": {
+    "dashboard": {
+      "title": "Subscription Dashboard",
+      "subtitle": "Manage your subscriptions, costs, and reminders"
+    },
+    "monthlyCost": "Total Monthly Cost",
+    "yearlyCost": "Total Yearly Cost",
+    "activeSubscriptions": "Active Subscriptions",
+    "upcomingSoon": "upcoming soon",
+    "exportReport": "Export Report",
+    "perMonth": "per month",
+    "perYear": "per year",
+    "allSubscriptions": "All Subscriptions",
+    "allSubscriptionsDesc": "Overview of all active subscriptions sorted by renewal date",
+    "upcomingRenewals": "Upcoming Renewals",
+    "upcomingRenewalsTitle": "Upcoming Renewals Alert",
+    "upcomingRenewalsDesc": "You have {{count}} upcoming renewals in the next 90 days",
+    "next90Days": "Next 90 Days",
+    "noUpcomingRenewals": "No upcoming renewals in the next 90 days",
+    "renew": "Renew",
+    "review": "Review",
+    "preferences": "Subscription Preferences",
+    "preferencesDesc": "Manage how your subscriptions are tracked and managed",
+    "enableTracking": "Enable Subscription Tracking",
+    "enableTrackingDesc": "Automatically manage and track subscription-related documents",
+    "costOptimization": "Enable Cost Optimization Suggestions",
+    "costOptimizationDesc": "Receive suggestions to optimize and reduce subscription costs",
+    "reminderPeriods": "Default Reminder Periods",
+    "daysBefore": "days before",
+    "loadError": "Failed to load subscription details",
+    "updateError": "Failed to update subscription preferences",
+    "preferencesUpdated": "Preferences successfully updated",
+    "tabs": {
+      "overview": "Overview",
+      "upcoming": "Upcoming",
+      "settings": "Settings"
+    },
+    "types": {
+      "monthly": "Monthly",
+      "yearly": "Yearly",
+      "oneTime": "One-Time",
+      "none": "None"
+    },
+    "daysUntilRenewal": "days until renewal",
+    "days": "days",
+    "loadFailed": "Failed to load subscription data",
+    "autoRenewal": "Auto-Renew: Yes",
+    "manual": "Auto-Renew: No",
+    "trackingSuggestion": "Consider enabling subscription tracking for better management and reminders",
+    "type": "Subscription Type",
+    "typePlaceholder": "Select type",
+    "renewalCost": "Renewal Cost",
+    "renewalCostPlaceholder": "Enter renewal cost",
+    "cancellationNotice": "Cancellation Notice Period",
+    "noNoticeRequired": "No Notice Required",
+    "providerContact": "Provider Contact Info",
+    "providerPhone": "Phone",
+    "providerEmail": "Email",
+    "providerWebsite": "Website",
+    "cancellationNoticeWarning": "Note: Cancellation requires {{days}} days notice",
+    "title": "Subscription",
+    "currentPlan": "Current Plan",
+    "active": "Active",
+    "planDescription": "Manage your subscription and billing",
+    "planName": "Plan",
+    "premium": "Premium",
+    "free": "Free",
+    "nextBilling": "Next billing date",
+    "cancelledNotice": "Your subscription will end on {{date}}",
+    "manageBilling": "Manage Billing",
+    "resume": "Resume Subscription",
+    "cancel": "Cancel Subscription",
+    "upgradeToPremium": "Upgrade to Premium",
+    "features": {
+      "title": "Plan Features",
+      "premiumDescription": "You have access to all premium features",
+      "freeDescription": "Upgrade to unlock more features",
+      "unlimited": "Unlimited documents and assets",
+      "encryption": "Advanced encryption",
+      "priority": "Priority support",
+      "history": "Version history",
+      "basicWill": "Basic will document",
+      "limitedGuardians": "Up to 2 guardians",
+      "basicSupport": "Community support"
+    },
+    "errors": {
+      "portalFailed": "Failed to open billing portal",
+      "cancelFailed": "Failed to cancel subscription",
+      "resumeFailed": "Failed to resume subscription"
+    },
+    "cancelSuccess": "Subscription cancelled successfully",
+    "resumeSuccess": "Subscription resumed successfully",
+    "successTitle": "Payment Successful!",
+    "successMessage": "Thank you for your purchase. Your subscription has been activated.",
+    "cancelTitle": "Payment Cancelled",
+    "cancelMessage": "It seems like your transaction was cancelled. Please try again or contact support."
+  },
+  "pricing": {
+    "title": "Pricing",
+    "subtitle": "Start free or upgrade for more ways to protect your loved ones.",
+    "mainTitle": "Choose How You Care",
+    "mainSubtitle": "Start free or add more protection features when you're ready.",
+    "freePlan": {
+      "name": "Essential Protector",
+      "description": "Get started with basic features",
+      "price": "Free",
+      "features": {
+        "will": "1 Will document",
+        "guardians": "2 Guardians",
+        "assets": "5 Assets",
+        "support": "Basic support"
+      }
+    },
+    "premiumPlan": {
+      "name": "Command Package",
+      "description": "Perfect for individuals and families",
+      "price": "$9.99 / month",
+      "upgradeButton": "Upgrade Now",
+      "features": {
+        "will": "Unlimited Will documents",
+        "guardians": "Unlimited Guardians",
+        "assets": "Unlimited Assets",
+        "encryption": "Document encryption",
+        "access": "Emergency access",
+        "support": "Priority support",
+        "history": "Version history",
+        "templates": "Legal templates"
+      }
+    },
+    "devMode": {
+      "title": "Developer Mode",
+      "button": {
+        "grant": "Dev Mode: Grant Premium Access",
+        "granting": "Granting..."
+      },
+      "description": "This button is only visible in development mode. Click to instantly grant premium access for testing.",
+      "successMessage": "Developer premium access granted!",
+      "errorMessage": "Failed to grant developer premium access"
+    },
+    "errors": {
+      "checkoutFailed": "Failed to start checkout process"
+    },
+    "starter": {
+      "name": "Heritage Starter",
+      "price": "Free",
+      "description": "Ideal for getting started with preserving your digital legacy.",
+      "button": "Start for Free",
+      "features": {
+        "storage": "{{amount}} Storage",
+        "guardians": "Up to {{count}} trusted helpers",
+        "documents": "Basic Document Vault",
+        "playbook": "Basic Guardian Playbook",
+        "support": "Community Support"
+      },
+      "limits": {
+        "storage": "500 MB",
+        "guardians": "3",
+        "fileSize": "10 MB per file"
+      }
+    },
+    "premium": {
+      "name": "Heritage Premium",
+      "price": "$19",
+      "period": "/ month",
+      "badge": "Most Popular",
+      "description": "Advanced features for comprehensive legacy management.",
+      "button": "Choose Premium",
+      "features": {
+        "storage": "{{amount}} Storage",
+        "guardians": "Up to {{count}} trusted helpers",
+        "manual": "Survivor's Manual",
+        "support": "Priority Email Support"
+      },
+      "limits": {
+        "storage": "10 GB",
+        "guardians": "5",
+        "fileSize": "50 MB per file"
+      }
+    },
+    "enterprise": {
+      "name": "Heritage Enterprise",
+      "price": "Custom",
+      "description": "For families and businesses with complex needs requiring the highest level of service.",
+      "button": "Contact Sales",
+      "features": {
+        "storage": "{{amount}}+ Storage",
+        "guardians": "Unlimited trusted helpers",
+        "legal": "Legal Professional Coordination",
+        "support": "Dedicated Account Manager"
+      },
+      "limits": {
+        "storage": "500 GB",
+        "guardians": "unlimited",
+        "fileSize": "100 MB per file"
+      }
+    }
+  },
+  "upgradeCard": {
+    "pricing_1": "/pricing",
+    "defaultButtonText": "Upgrade to Command Package"
+  }
+}

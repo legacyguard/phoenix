@@ -1,0 +1,442 @@
+{
+  "_comment": "Shared translations used across the application",
+  "assets": {
+    "overview": {
+      "title": "What You Own and Cherish",
+      "subtitle": "Manage and track your assets, properties, and investments",
+      "addAsset": "Add Asset",
+      "totalPortfolioValue": "Total Portfolio Value",
+      "estimatedValue": "Estimated value across all assets",
+      "distribution": {
+        "title": "Asset Distribution",
+        "subtitle": "Portfolio breakdown by category"
+      },
+      "beneficiaryAllocation": {
+        "title": "Sharing Your Treasures",
+        "subtitle": "Track how your treasures are shared with loved ones",
+        "allAssigned": "All treasures have loved ones assigned",
+        "unassignedWarning": "{{count}} treasures need to be assigned to loved ones"
+      },
+      "viewInheritanceSummary": "View Inheritance Summary",
+      "addNew": "Add New",
+      "errors": {
+        "loadFailed": "Failed to load asset data"
+      }
+    },
+    "categories": {
+      "property": "Property",
+      "vehicle": "Vehicle",
+      "financial": "Financial",
+      "business": "Business",
+      "personal": "Personal",
+      "uncategorized": "Uncategorized"
+    }
+  },
+  "assetCard": {
+    "assetTypes": {
+      "Primary Residence": "Primary Residence",
+      "Vacation Home": "Vacation Home",
+      "Rental Property": "Rental Property",
+      "Land": "Land",
+      "Commercial Property": "Commercial Property",
+      "Bank Account": "Bank Account",
+      "Investment Portfolio": "Investment Portfolio",
+      "Cryptocurrency Wallet": "Cryptocurrency Wallet",
+      "Loan / Mortgage": "Loan / Mortgage",
+      "Insurance Policy": "Insurance Policy",
+      "Pension / Retirement Account": "Pension / Retirement Account",
+      "Car": "Car",
+      "Motorcycle": "Motorcycle",
+      "Boat": "Boat",
+      "RV / Camper": "RV / Camper",
+      "Aircraft": "Aircraft",
+      "Online Account": "Online Account",
+      "Software License": "Software License",
+      "Domain Name": "Domain Name",
+      "Digital Subscription": "Digital Subscription",
+      "Cryptocurrency": "Cryptocurrency",
+      "NFT": "NFT",
+      "Jewelry": "Jewelry",
+      "Art / Collectibles": "Art / Collectibles",
+      "Electronics": "Electronics",
+      "Furniture": "Furniture",
+      "Tools / Equipment": "Tools / Equipment",
+      "Other Valuables": "Other Valuables",
+      "Custom Asset": "Custom Asset"
+    },
+    "dateFormat": {
+      "addedOn": "Added on {{date}}",
+      "createdOn": "Created on {{date}}",
+      "updatedOn": "Updated on {{date}}"
+    },
+    "labels": {
+      "estimatedValue": "Estimated Value",
+      "category": "Category",
+      "subType": "Type"
+    }
+  },
+  "assetDetail": {
+    "loading": "Loading asset details...",
+    "errors": {
+      "failedToLoad": "Failed to load asset details",
+      "nameRequired": "Asset name is required",
+      "failedToSave": "Failed to save asset"
+    },
+    "messages": {
+      "createdSuccessfully": "Asset created successfully",
+      "updatedSuccessfully": "Asset updated successfully"
+    },
+    "title": {
+      "new": "New {{type}}"
+    },
+    "subtitle": {
+      "new": "Fill in the details to add this asset to your portfolio",
+      "edit": "Update the details of this asset"
+    },
+    "story": {
+      "title": "The Story Behind This {{type}}",
+      "editButton": "Edit Story",
+      "addButton": "Add a Story",
+      "emptyTitle": "What's the story behind this item?",
+      "emptyDescription": "Add a personal memory or explain the significance of this item for your loved ones. This intangible legacy is often the most valuable."
+    },
+    "sections": {
+      "assetInformation": "Asset Information",
+      "basicInformation": "Basic Information",
+      "propertyDetails": "Property Details",
+      "accountDetails": "Account Details",
+      "financialDetails": "Financial Details",
+      "liabilitiesAndDocuments": "Related Liabilities & Documents"
+    },
+    "fields": {
+      "assetName": "Asset Name",
+      "assetType": "Asset Type",
+      "propertyAddress": "Property Address",
+      "propertyRegistryNumber": "Property Registry Number",
+      "accountType": "Account Type",
+      "financialInstitution": "Financial Institution",
+      "accountNumber": "Account Number / IBAN",
+      "loginCredentials": "Login Credentials & Notes",
+      "estimatedValue": "Estimated Value",
+      "currency": "Currency",
+      "liabilityType": "Liability Type",
+      "providerName": "Provider Name",
+      "referenceNumber": "Reference Number"
+    },
+    "placeholders": {
+      "assetName": "e.g., Family Home, Investment Portfolio",
+      "propertyAddress": "Enter full property address",
+      "propertyRegistryNumber": "e.g., Property registry number",
+      "selectAccountType": "Select account type",
+      "financialInstitution": "e.g., Bank of America, Chase",
+      "accountNumber": "e.g., 1234567890",
+      "loginCredentials": "Password manager: 1Password vault 'Banking'",
+      "estimatedValue": "0"
+    },
+    "descriptions": {
+      "assetName": "Give this asset a descriptive name for easy identification",
+      "assetType": "Select the type that best describes this asset",
+      "propertyAddress": "Complete address including street, city, postal code, and country",
+      "propertyRegistryNumber": "Official registry or cadastral number for this property",
+      "accountType": "Type of financial account or investment",
+      "financialInstitution": "Name of the bank or financial institution",
+      "accountNumber": "Account number, IBAN, or other identifying information",
+      "estimatedValue": "Current market value or last known value of this asset",
+      "currency": "Currency in which the value is expressed",
+      "noLiabilities": "No liabilities added yet"
+    },
+    "types": {
+      "realEstate": "Real Estate",
+      "business": "Business",
+      "vehicle": "Vehicle",
+      "financialAccount": "Financial Account",
+      "asset": "Asset"
+    },
+    "accountTypes": {
+      "bankAccount": "Bank Account",
+      "investmentPortfolio": "Investment Portfolio",
+      "pensionFund": "Pension Fund"
+    },
+    "securityWarning": "Security Warning:",
+    "securityWarningText": "Do not store actual passwords here. Use this field for hints, password manager locations, or other secure access instructions.",
+    "buttons": {
+      "cancel": "Cancel",
+      "saving": "Saving...",
+      "createAsset": "Create Asset",
+      "updateAsset": "Update Asset",
+      "addLiability": "Add Liability"
+    }
+  },
+  "assetType": {
+    "selectType": "Select {{mainCategory}} Type",
+    "primaryResidence": "Primary Residence",
+    "vacationHome": "Vacation Home",
+    "rentalProperty": "Rental Property",
+    "land": "Land",
+    "commercialProperty": "Commercial Property",
+    "bankAccount": "Bank Account",
+    "investmentPortfolio": "Investment Portfolio",
+    "cryptocurrencyWallet": "Cryptocurrency Wallet",
+    "loanMortgage": "Loan / Mortgage",
+    "insurancePolicy": "Insurance Policy",
+    "pensionRetirement": "Pension / Retirement",
+    "car": "Car",
+    "motorcycle": "Motorcycle",
+    "boat": "Boat",
+    "rvCamper": "RV / Camper",
+    "aircraft": "Aircraft",
+    "onlineAccount": "Online Account",
+    "softwareLicense": "Software License",
+    "domainName": "Domain Name",
+    "digitalSubscription": "Digital Subscription",
+    "cryptocurrency": "Cryptocurrency",
+    "nft": "NFT",
+    "jewelry": "Jewelry",
+    "artCollectibles": "Art / Collectibles",
+    "electronics": "Electronics",
+    "furniture": "Furniture",
+    "toolsEquipment": "Tools / Equipment",
+    "otherValuables": "Other Valuables",
+    "customAsset": "Custom Asset"
+  },
+  "dynamicAssetForm": {
+    "propertyAddress": "Property Address",
+    "purchaseDate": "Purchase Date",
+    "purchasePrice": "Purchase Price",
+    "currentEstimatedValue": "Current Estimated Value",
+    "mortgageInformation": "Mortgage Information",
+    "locationOfPropertyDocuments": "Location of Property Documents",
+    "locationAddress": "Location / Address",
+    "size": "Size (acres/sq ft)",
+    "zoningType": "Zoning Type",
+    "currentUse": "Current Use",
+    "bankName": "Bank Name",
+    "accountType": "Account Type",
+    "selectAccountType": "Select account type",
+    "checking": "Checking",
+    "savings": "Savings",
+    "moneyMarket": "Money Market",
+    "certificateOfDeposit": "Certificate of Deposit",
+    "accountHolderName": "Account Holder Name(s)",
+    "accountNumberLast4": "Account Number (Last 4 digits)",
+    "routingNumber": "Routing Number",
+    "brokerageFirm": "Brokerage Firm",
+    "accountNumber": "Account Number",
+    "individual": "Individual",
+    "joint": "Joint",
+    "ira": "IRA",
+    "rothIra": "Roth IRA",
+    "401k": "401(k)",
+    "approximateValue": "Approximate Value",
+    "financialAdvisor": "Financial Advisor (if any)",
+    "walletNameLabel": "Wallet Name/Label",
+    "walletType": "Wallet Type",
+    "selectWalletType": "Select wallet type",
+    "hardwareWallet": "Hardware Wallet",
+    "softwareWallet": "Software Wallet",
+    "exchangeWallet": "Exchange Wallet",
+    "paperWallet": "Paper Wallet",
+    "cryptocurrenciesHeld": "Cryptocurrencies Held",
+    "locationOfSeedPhrase": "Location of Seed Phrase/Private Keys",
+    "exchangeInformation": "Exchange Information (if applicable)",
+    "makeAndModel": "Make and Model",
+    "year": "Year",
+    "vinNumber": "VIN Number",
+    "licensePlate": "License Plate",
+    "loanInformation": "Loan Information (if any)",
+    "locationOfTitle": "Location of Title",
+    "platformWebsiteName": "Platform/Website Name",
+    "accountEmail": "Account Email/Username",
+    "accountPurpose": "Account Purpose/Description",
+    "recoveryInformation": "Recovery Information",
+    "faMethod": "2FA Method (if enabled)",
+    "itemDescription": "Item Description",
+    "appraisedValue": "Appraised Value",
+    "lastAppraisalDate": "Last Appraisal Date",
+    "storageLocation": "Storage Location",
+    "insuranceInformation": "Insurance Information",
+    "sentimentalValue": "Sentimental Value/History",
+    "assetName": "Asset Name",
+    "estimatedValue": "Estimated Value",
+    "description": "Description",
+    "locationAccessInformation": "Location/Access Information",
+    "addSubType": "Add {subType}",
+    "cancel": "Cancel",
+    "saveAsset": "Save Asset",
+    "placeholders": {
+      "123_main_st_city_state_zip_1": "123 Main St, City, State, ZIP",
+      "lender_name_account_number_rem_2": "Lender name, account number, remaining balance",
+      "e_g_safe_deposit_box_filing_ca_3": "e.g., Safe deposit box, filing cabinet",
+      "property_location_or_parcel_nu_4": "Property location or parcel number",
+      "e_g_10_acres_5": "e.g., 10 acres, 5,000 sq ft",
+      "e_g_commercial_agricultural_6": "e.g., Commercial, Agricultural, Residential",
+      "describe_current_use_of_the_pr_7": "Describe current use of the property",
+      "e_g_chase_bank_8": "e.g., Chase Bank, Wells Fargo",
+      "john_doe_9": "John Doe",
+      "1234_10": "1234",
+      "e_g_fidelity_vanguard_11": "e.g., Fidelity, Vanguard, Charles Schwab",
+      "account_number_12": "Account number",
+      "name_and_contact_information_13": "Name and contact information",
+      "e_g_main_bitcoin_wallet_14": "e.g., Main Bitcoin Wallet",
+      "e_g_bitcoin_ethereum_15": "e.g., Bitcoin, Ethereum, Litecoin",
+      "do_not_enter_the_actual_seed_p_16": "Do not enter the actual seed phrase here",
+      "exchange_name_and_account_emai_17": "Exchange name and account email",
+      "e_g_toyota_camry_18": "e.g., Toyota Camry, Honda Civic",
+      "vehicle_identification_number_19": "Vehicle Identification Number",
+      "lender_account_number_payoff_a_20": "Lender, account number, payoff amount",
+      "e_g_safe_deposit_box_21": "e.g., Safe deposit box, home safe",
+      "e_g_gmail_facebook_22": "e.g., Gmail, Facebook, LinkedIn",
+      "user_example_com_23": "user@example.com",
+      "what_this_account_is_used_for_24": "What this account is used for",
+      "recovery_email_phone_or_securi_25": "Recovery email, phone, or security questions",
+      "e_g_sms_to_phone_ending_in_123_26": "e.g., SMS to phone ending in 123",
+      "e_g_diamond_engagement_ring_27": "e.g., Diamond engagement ring, gold necklace",
+      "e_g_home_safe_bank_deposit_box_28": "e.g., Home safe, bank deposit box",
+      "policy_number_and_company_29": "Policy number and company",
+      "special_meaning_or_history_of__30": "Special meaning or history of this item",
+      "name_or_description_of_asset_31": "Name or description of asset",
+      "detailed_description_of_the_as_32": "Detailed description of the asset",
+      "where_to_find_this_asset_or_ho_33": "Where to find this asset or how to access it"
+    }
+  },
+  "myPossessions": {
+    "my_possessions_1": "My Possessions",
+    "an_inventory_of_the_important__2": "An inventory of the important things that support your family's future.",
+    "family_impact_3": "Family Impact:",
+    "edit_details_4": "Edit Details",
+    "link_papers_5": "Link Papers (",
+    "assign_access_6": "Assign Access",
+    "add_your_first_7": "Add Your First ",
+    "areas": {
+      "home": {
+        "title": "Your Home & Property",
+        "description": "The places that provide shelter and create memories.",
+        "emptyState": "Document your property to ensure your family's shelter is secure.",
+        "addButton": "Property"
+      },
+      "savings": {
+        "title": "Your Savings & Investments",
+        "description": "The financial foundation you've built for your family's future.",
+        "emptyState": "Record your financial accounts so your family can access funds when needed.",
+        "addButton": "Account"
+      },
+      "business": {
+        "title": "Your Business",
+        "description": "The work that supports your family and creates your professional legacy.",
+        "emptyState": "Document your business details to ensure smooth succession and continued income.",
+        "addButton": "Business"
+      },
+      "valuables": {
+        "title": "Your Valuables & Collections",
+        "description": "Items of financial or sentimental value that need special consideration.",
+        "emptyState": "List valuable items that need special handling or have sentimental value.",
+        "addButton": "Valuable"
+      }
+    },
+    "mockData": {
+      "lakeCabin": "Lake Cabin",
+      "emergencyFund": "Emergency Fund",
+      "yourBusiness": "Your Business",
+      "johnsonContracting": "Johnson Contracting LLC",
+      "classicCarCollection": "Classic Car Collection"
+    }
+  },
+  "addLiabilityModal": {
+    "title": "Add Liability",
+    "fields": {
+      "type": "Type",
+      "provider": "Provider",
+      "referenceNumber": "Reference Number",
+      "paymentFrequency": "Payment Frequency",
+      "notes": "Notes"
+    },
+    "placeholders": {
+      "selectType": "Select type",
+      "provider": "Provider name",
+      "referenceNumber": "Reference number",
+      "paymentFrequency": "Select frequency",
+      "notes": "Additional notes"
+    },
+    "buttons": {
+      "cancel": "Cancel",
+      "add": "Add Liability"
+    },
+    "errors": {
+      "requiredFields": "All fields are required"
+    },
+    "messages": {
+      "addedSuccessfully": "Liability added successfully"
+    },
+    "types": {
+      "insurancePolicy": "Insurance Policy",
+      "utilityBill": "Utility Bill",
+      "propertyTax": "Property Tax",
+      "subscriptionFee": "Subscription Fee",
+      "maintenanceContract": "Maintenance Contract",
+      "loan": "Loan",
+      "leaseAgreement": "Lease Agreement",
+      "warranty": "Warranty",
+      "other": "Other"
+    },
+    "frequencies": {
+      "monthly": "Monthly",
+      "quarterly": "Quarterly",
+      "semiAnnually": "Semi-Annually",
+      "annually": "Annually",
+      "oneTime": "One-Time",
+      "asNeeded": "As Needed"
+    }
+  },
+  "calculator": {
+    "badge": "Calculateur de Préparation",
+    "title": "Calculez le Score de Préparation de Votre Famille",
+    "subtitle": "Voyez le temps et l'argent réels que votre famille économise quand tout est organisé",
+    "inputs": {
+      "title": "Votre Situation Familiale",
+      "description": "Dites-nous un peu de votre famille pour personnaliser vos résultats",
+      "dependents": "Combien de personnes dépendent de vous ?",
+      "dependentsHelp": "Incluez conjoint, enfants, parents âgés",
+      "income": "Quel est le revenu mensuel de votre famille ?",
+      "incomeHelp": "Cela aide à calculer les salaires potentiellement perdus",
+      "property": "Possédez-vous une propriété ?",
+      "business": "Avez-vous une entreprise ?",
+      "accounts": "Combien de comptes bancaires avez-vous ?",
+      "accountsHelp": "Incluez comptes courants, épargne, investissements"
+    },
+    "calculateButton": "Calculer Mes Économies",
+    "results": {
+      "title": "Les Économies de Votre Famille",
+      "description": "Voici ce que signifie être préparé pour vos proches",
+      "timeSavings": {
+        "title": "Temps Économisé par Votre Famille",
+        "without": "Sans organisation",
+        "withoutHours": "40-120 heures de recherche",
+        "with": "Avec le Coffre-fort Patrimonial",
+        "withMinutes": "Moins de 5 minutes"
+      },
+      "moneySavings": {
+        "title": "Argent Économisé par Votre Famille",
+        "legalFees": "Frais juridiques pour la reconstruction",
+        "lostWages": "Salaires perdus du temps libre",
+        "penalties": "Délais manqués et pénalités",
+        "total": "Économies potentielles totales"
+      },
+      "emotional": {
+        "title": "Impact sur le Bien-être Émotionnel",
+        "stress": "Réduction du niveau de stress",
+        "confidence": "Augmentation de la confiance familiale",
+        "peace": "Évaluation du contrôle et de la préparation"
+      },
+      "socialProof": "Rejoignez les familles qui dorment déjà mieux la nuit",
+      "families": "15 000+ familles protégées",
+      "ctaContext": "La plupart des familles terminent la configuration pendant leur pause déjeuner",
+      "shareButton": "Partager les Résultats"
+    },
+    "testimonial": {
+      "quote": "Je n'avais jamais réalisé tout le stress que je portais jusqu'à ce que j'organise tout. Maintenant je sais que ma famille ira bien, peu importe ce qui arrive.",
+      "author": "Sarah M., mère de trois enfants"
+    },
+    "shareTitle": "Résultats du Calculateur de Préparation Familiale",
+    "shareCopied": "Résultats copiés dans le presse-papiers !"
+  }
+}

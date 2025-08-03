@@ -1,0 +1,98 @@
+{
+  "_comment": "Shared translations used across the application",
+  "errorBoundary": {
+    "title": "Úps! Chuaigh rud éigin mícheart",
+    "description": "Gabhaimid leithscéal as an míchaoithiúlacht. Tharla earráid gan choinne.",
+    "errorId": "Aitheantas Earráide",
+    "tryAgain": "Bain Triail Eile As",
+    "reloadPage": "Athlódáil an Leathanach",
+    "goToHomepage": "Téigh go dtí an Leathanach Baile",
+    "technicalDetails": "Sonraí Teicniúla",
+    "hide": "Folaigh",
+    "show": "Taispeáin",
+    "stackTrace": "Lorg na Cruaiche",
+    "componentStack": "Cruach na gComhpháirteanna",
+    "helpText": "Má leanann an fhadhb, déan teagmháil lenár dtacaíocht leis an aitheantas earráide."
+  },
+  "errorTest": {
+    "title": "Tástáil Logáil Earráide",
+    "description": "Tástáil feidhmiúlacht láimhseála agus logála earráide",
+    "triggerSyncError": "Spreag Earráid Sioncronach (Teorainn Earráide)",
+    "triggerAsyncError": "Spreag Earráid Asioncronach",
+    "logRegularError": "Log Earráid Rialta",
+    "logCriticalError": "Log Earráid Chriticiúil",
+    "triggerAlert": "Spreag Foláireamh (6 Earráid Chriticiúil)",
+    "errorMessages": {
+      "testError": "Earráid tástála ó chomhpháirt ErrorTest",
+      "testAsyncRejection": "Diúltaíocht asioncronach tástála",
+      "manualTestError": "Earráid tástála láimhe",
+      "testCriticalError": "Earráid chriticiúil tástála",
+      "criticalErrorWithIndex": "Earráid chriticiúil {{index}}"
+    },
+    "descriptions": {
+      "syncError": "Spreagann earráid shioncronach a gheobhaidh an Teorainn Earráide",
+      "asyncError": "Spreagann earráid asioncronach a gheobhaidh láimhseáil earráide",
+      "regularError": "Logaíonn earráid rialta le haghaidh tástála rianú earráide",
+      "criticalError": "Logaíonn earráid chriticiúil le haghaidh tástála láimhseála earráide criticiúil",
+      "multipleErrors": "Spreagann earráidí criticiúla iolracha le haghaidh tástála tairsí foláirimh"
+    },
+    "context": {
+      "component": "ErrorTest",
+      "action": "cnaipe-cliceáil",
+      "severity": "ard"
+    },
+    "notifications": {
+      "errorLogged": "Logaíodh earráid go rathúil",
+      "criticalErrorLogged": "Logaíodh earráid chriticiúil go rathúil",
+      "multipleErrorsTriggered": "Spreagadh earráidí criticiúla iolracha",
+      "errorBoundaryTriggered": "Spreagadh teorainn earráide",
+      "asyncErrorCaught": "Ghabhadh agus láimhseáladh earráid asioncronach"
+    }
+  },
+  "debug": {
+    "panel": {
+      "title": "Debug Panel",
+      "recentErrors": "Recent application errors",
+      "technicalDetails": "Technical Details",
+      "tabs": {
+        "list": "List",
+        "details": "Details"
+      },
+      "errorCount": "{{count}} errors",
+      "actions": {
+        "downloadErrors": "Download errors",
+        "clearAllErrors": "Clear all errors"
+      },
+      "messages": {
+        "errorsCleared": "All errors cleared",
+        "errorCopied": "Error copied to clipboard",
+        "errorsDownloaded": "Errors downloaded"
+      },
+      "error": {
+        "unknownError": "Unknown Error",
+        "noMessage": "No message",
+        "errorMessage": "Error Message"
+      },
+      "sections": {
+        "stackTrace": "Stack Trace",
+        "context": "Context",
+        "location": "Location",
+        "browserInfo": "Browser Information",
+        "time": "Time"
+      },
+      "fields": {
+        "url": "URL:",
+        "path": "Path:",
+        "query": "Query:",
+        "userAgent": "User Agent:",
+        "viewport": "Viewport:"
+      }
+    }
+  },
+  "test": {
+    "environment": {
+      "title": "Test Environment Only",
+      "description": "This page is for testing the error logging system. Remove this route before deploying to production."
+    }
+  }
+}

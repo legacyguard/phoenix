@@ -1,0 +1,307 @@
+{
+  "_comment": "Shared translations used across the application",
+  "guardian": {
+    "invitationSent": "Invitation Sent",
+    "accepted": "Accepted",
+    "declined": "Declined",
+    "sendInvite": "Send Invite"
+  },
+  "guardianUpload": {
+    "addTitle": "Add Guardian",
+    "editTitle": "Edit Guardian",
+    "description": "Add a trusted person who will help manage your affairs and support your loved ones.",
+    "fullNameLabel": "Full Name",
+    "fullNamePlaceholder": "Enter guardian's full name",
+    "relationshipLabel": "Relationship",
+    "relationshipPlaceholder": "Select relationship",
+    "countryLabel": "Country of Residence",
+    "countryPlaceholder": "Select country",
+    "countryDescription": "This helps us provide region-specific legal guidance",
+    "rolesTitle": "Roles & Responsibilities",
+    "emailLabel": "Email Address",
+    "emailPlaceholder": "Enter email address (optional)",
+    "phoneLabel": "Phone Number",
+    "phonePlaceholder": "Enter phone number (optional)",
+    "addButton": "Add Guardian",
+    "updateButton": "Update Guardian",
+    "saving": "Saving...",
+    "success": "Success",
+    "added": "Guardian added successfully",
+    "updated": "Guardian updated successfully",
+    "error": "Error",
+    "loginToSave": "You must be logged in to save guardians",
+    "relationships": {
+      "spouse": "Spouse",
+      "parent": "Parent",
+      "sibling": "Sibling",
+      "child": "Child",
+      "friend": "Friend",
+      "legalProfessional": "Legal Professional",
+      "other": "Other"
+    },
+    "roles": {
+      "guardianForChildren": "Guardian for Children",
+      "executorOfWill": "Executor of Will",
+      "healthcareProxy": "Healthcare Proxy",
+      "financialPowerOfAttorney": "Financial Power of Attorney",
+      "emergencyContact": "Emergency Contact",
+      "trustee": "Trustee"
+    },
+    "errors": {
+      "saveError": "An error occurred while saving the guardian",
+      "requiredDataNotFound": "Required data were not found",
+      "connectionError": "Connection error. Please check your internet connection",
+      "permissionError": "You do not have permission to perform this action",
+      "duplicateError": "A record with this information already exists",
+      "unknownError": "An unknown error occurred"
+    }
+  },
+  "guardianView": {
+    "title": "Emergency Contacts",
+    "subtitle": "Secure access to {{userName}}'s essential information",
+    "readOnlyAccess": "Read-Only Access",
+    "loading": "Loading guardian dashboard...",
+    "errors": {
+      "pleaseLogin": "Please log in to view this information",
+      "failedToLoad": "Failed to load guardian data",
+      "loadFailed": "Failed to load emergency contacts",
+      "addFailed": "Failed to add emergency contact",
+      "removeFailed": "Failed to remove emergency contact",
+      "reorderFailed": "Failed to update contact order",
+      "testFailed": "Failed to send test message",
+      "selectContact": "Please select a contact"
+    },
+    "sections": {
+      "keyDocuments": {
+        "title": "Important Papers",
+        "description": "Essential documents marked as critical by the account holder",
+        "keyDocumentBadge": "Key Document",
+        "expires": "Expires",
+        "noExpiration": "No expiration",
+        "empty": "No key documents available"
+      },
+      "importantContacts": {
+        "title": "Important Contacts",
+        "description": "Key contacts for emergency situations",
+        "empty": "No important contacts available"
+      },
+      "finalWishes": {
+        "title": "Final Wishes & Instructions",
+        "description": "Personal instructions and final wishes",
+        "funeralWishes": "Funeral Wishes",
+        "digitalAccounts": "Digital Accounts Shutdown",
+        "digitalAccountsShutdown": "Digital Accounts Shutdown",
+        "messagesToLovedOnes": "Messages to Loved Ones",
+        "empty": "No final wishes or instructions available"
+      }
+    },
+    "guardianInfo": {
+      "description": "You are viewing this information as a trusted Guardian. This access is provided for emergency situations and to help you fulfill your responsibilities.",
+      "securityNote": "All access is logged and monitored for security purposes."
+    },
+    "defaultUserName": "Primary Account Holder",
+    "description": "Manage up to 3 emergency contacts in priority order",
+    "addContact": "Add Contact",
+    "noContacts": "No emergency contacts added yet. Add contacts that should be notified in case of emergency.",
+    "maxContactsReached": "You have reached the maximum of 3 emergency contacts.",
+    "sendTest": "Send Test",
+    "lastContacted": "Last contacted {{time}} ago",
+    "priority": {
+      "1": "Priority 1",
+      "2": "Priority 2",
+      "3": "Priority 3"
+    },
+    "addContactDialog": {
+      "title": "Add Emergency Contact",
+      "description": "Select a contact from your list to add as an emergency contact.",
+      "selectContact": "Select Contact",
+      "selectPlaceholder": "Choose a contact...",
+      "relationship": "Relationship (optional)",
+      "relationshipPlaceholder": "Select relationship...",
+      "addButton": "Add Emergency Contact"
+    },
+    "messages": {
+      "added": "Emergency contact added successfully",
+      "removed": "Emergency contact removed",
+      "reordered": "Contact priority updated",
+      "testSent": "Test message sent to {{name}}"
+    }
+  },
+  "executor": {
+    "dashboard": {
+      "title": "Tableau de Bord de l'Exécuteur",
+      "subtitle": "Un guide étape par étape pour vous aider pendant cette période difficile",
+      "reminder": "N'oubliez pas de prendre soin de vous pendant cette période difficile. N'hésitez pas à demander de l'aide quand nécessaire."
+    },
+    "errors": {
+      "loadTasksFailed": "Échec du chargement des tâches d'exécuteur. Veuillez réessayer plus tard.",
+      "updateTaskFailed": "Échec de la mise à jour du statut de la tâche."
+    },
+    "highPriority": "Haute Priorité",
+    "due": "Échéance",
+    "completed": "Terminé",
+    "undo": "Annuler",
+    "markComplete": "Marquer comme Terminé",
+    "viewAccountDetails": "Voir les Détails du Compte et le Mot de Passe",
+    "viewRelatedDocuments": "Voir les Documents Associés ({{count}})",
+    "stats": {
+      "totalTasks": "Tâches Totales",
+      "completed": "Terminées",
+      "remaining": "Restantes"
+    },
+    "sections": {
+      "immediate": {
+        "title": "Tâches Immédiates (Premières 48 Heures)",
+        "description": "Tâches critiques qui nécessitent votre attention immédiate",
+        "empty": "Toutes les tâches immédiates terminées !"
+      },
+      "firstWeek": {
+        "title": "Tâches de la Première Semaine",
+        "description": "Tâches importantes à terminer dans la première semaine",
+        "empty": "Toutes les tâches de la première semaine terminées !"
+      },
+      "ongoing": {
+        "title": "Responsabilités Continues",
+        "description": "Tâches à gérer dans les semaines et mois à venir",
+        "empty": "Toutes les tâches continues terminées !"
+      }
+    },
+    "communications": {
+      "title": "Communications avec les Bénéficiaires",
+      "description": "Suivez toutes les communications avec les bénéficiaires pour maintenir la transparence",
+      "logCommunication": "Enregistrer la Communication",
+      "logTitle": "Enregistrer la Communication avec le Bénéficiaire",
+      "logDescription": "Enregistrez les détails de votre communication avec les bénéficiaires",
+      "beneficiaryName": "Nom du Bénéficiaire",
+      "beneficiaryEmail": "E-mail (optionnel)",
+      "communicationType": "Type",
+      "communicationDate": "Date",
+      "subject": "Sujet",
+      "summary": "Résumé",
+      "subjectPlaceholder": "ex: Mise à jour initiale de la succession",
+      "summaryPlaceholder": "Résumé bref de ce qui a été discuté...",
+      "types": {
+        "email": "E-mail",
+        "phone": "Appel Téléphonique",
+        "letter": "Lettre",
+        "in_person": "En Personne",
+        "other": "Autre"
+      },
+      "saving": "Enregistrement...",
+      "saveCommunication": "Enregistrer la Communication",
+      "cancel": "Annuler",
+      "noCommunications": "Aucune communication enregistrée pour le moment",
+      "startTracking": "Commencez à suivre vos communications avec les bénéficiaires",
+      "errors": {
+        "saveFailed": "Échec de l'enregistrement de la communication"
+      }
+    },
+    "status": {
+      "title": "Statut d'Administration de la Succession",
+      "description": "Statut actuel de haut niveau visible aux membres de la famille autorisés",
+      "updateStatus": "Mettre à Jour le Statut",
+      "updateTitle": "Mettre à Jour le Statut de la Succession",
+      "updateDescription": "Ce statut sera visible aux membres de la famille autorisés",
+      "statusLabel": "Statut",
+      "additionalDetails": "Détails Supplémentaires (optionnel)",
+      "detailsPlaceholder": "Fournissez tout contexte supplémentaire...",
+      "selectStatus": "Sélectionner un statut",
+      "updating": "Mise à jour...",
+      "lastUpdated": "Dernière mise à jour",
+      "progress": "Progression",
+      "noStatusSet": "Aucun statut défini pour le moment. Cliquez sur \"Mettre à Jour le Statut\" pour définir le statut initial.",
+      "noStatusUpdates": "Aucune mise à jour de statut n'a encore été publiée.",
+      "statuses": {
+        "initial_review": "Examen Initial",
+        "gathering_documents": "Collecte de Documents",
+        "probate_initiated": "Processus de Succession Initié",
+        "assets_being_valued": "Actifs en Cours d'Évaluation",
+        "debts_being_settled": "Dettes en Cours de Règlement",
+        "tax_preparation": "Préparation Fiscale",
+        "ready_for_distribution": "Prêt pour la Distribution",
+        "distribution_in_progress": "Distribution en Cours",
+        "estate_closed": "Succession Fermée"
+      },
+      "errors": {
+        "updateFailed": "Échec de la mise à jour du statut"
+      }
+    },
+    "justInTime": {
+      "viewAccountDetails": "Voir les Détails du Compte et le Mot de Passe",
+      "secureInfoAccess": "Accès Sécurisé aux Informations",
+      "reauthenticate": "Ré-authentifier pour voir les informations sensibles pour",
+      "securityReason": "Pour des raisons de sécurité, veuillez saisir votre mot de passe pour accéder à ces informations.",
+      "password": "Mot de Passe",
+      "enterPassword": "Saisir votre mot de passe",
+      "incorrectPassword": "Mot de passe incorrect. Veuillez réessayer.",
+      "cancel": "Annuler",
+      "verifying": "Vérification...",
+      "verifyContinue": "Vérifier et Continuer",
+      "accountName": "Nom du Compte",
+      "accountNumber": "Numéro de Compte",
+      "username": "Nom d'Utilisateur",
+      "pin": "Code PIN",
+      "additionalNotes": "Notes Supplémentaires",
+      "noSensitiveInfo": "Aucune information sensible n'est associée à cette tâche.",
+      "accessLogged": "Cet accès a été enregistré à des fins de sécurité.",
+      "accessTime": "Heure d'accès",
+      "close": "Fermer",
+      "errors": {
+        "reauthFailed": "Échec de la vérification de votre identité. Veuillez réessayer.",
+        "notFound": "Aucune information sensible trouvée pour cette tâche.",
+        "retrieveFailed": "Échec de la récupération des informations sensibles."
+      }
+    },
+    "familyView": {
+      "title": "Statut d'Administration de la Succession",
+      "subtitle": "Restez informé de la progression de l'administration de la succession",
+      "recentCommunications": "Communications Récentes de l'Exécuteur",
+      "recentCommunicationsDescription": "Mises à jour récentes de {{executorName}} aux bénéficiaires",
+      "to": "À",
+      "noCommunications": "Aucune communication n'a encore été enregistrée.",
+      "infoMessage": "Ces informations sont mises à jour par {{executorName}} pour tenir les membres de la famille informés. Pour des questions détaillées, veuillez contacter l'exécuteur directement.",
+      "defaultExecutor": "l'exécuteur",
+      "errors": {
+        "loadFailed": "Échec du chargement des données"
+      }
+    }
+  },
+  "executorManagement": {
+    "failed_to_load_executors_2": "Failed to load executors",
+    "user_not_found_with_this_email_3": "User not found with this email",
+    "this_person_is_already_designa_4": "This person is already designated as an executor",
+    "failed_to_add_executor_5": "Failed to add executor",
+    "failed_to_remove_executor_6": "Failed to remove executor",
+    "loading_executors_7": "Loading executors...",
+    "executor_management_8": "Executor Management",
+    "designate_trusted_individuals__9": "Designate trusted individuals who will help manage your affairs and support your loved ones",
+    "add_new_executor_10": "Add New Executor",
+    "email_address_11": "Email Address",
+    "executor_example_com_12": "executor@example.com",
+    "relationship_type_13": "Relationship Type",
+    "primary_executor_14": "Primary Executor",
+    "secondary_executor_15": "Secondary Executor",
+    "emergency_contact_16": "Emergency Contact",
+    "current_executors_17": "Current Executors",
+    "no_executors_designated_yet_ad_18": "No executors designated yet. Add someone you trust to help manage your affairs.",
+    "important_information_19": "Important Information",
+    "primary_executors_receive_imme_20": "Primary executors receive immediate access to your vault when needed",
+    "secondary_executors_are_notifi_21": "Secondary executors are notified but have limited access",
+    "emergency_contacts_are_notifie_22": "Emergency contacts are notified in urgent situations only",
+    "all_executors_must_have_legacy_23": "All executors must have LegacyGuard accounts to access your information",
+    "successMessages": {
+      "executorAdded": "Executor added successfully",
+      "executorRemoved": "Executor removed successfully"
+    },
+    "validationMessages": {
+      "emailRequired": "Email address is required",
+      "invalidEmail": "Please enter a valid email address",
+      "relationshipTypeRequired": "Relationship type is required"
+    },
+    "statusLabels": {
+      "adding": "Adding...",
+      "addExecutor": "Add Executor",
+      "unknownUser": "Unknown User"
+    }
+  }
+}
