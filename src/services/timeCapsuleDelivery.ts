@@ -203,6 +203,7 @@ async function sendUnlockNotification(
               View Message
             </a>
           </div>
+          <p>You can also set notifications via SMS if preferred.</p>
           <p>Best regards,<br>The LegacyGuard Team</p>
         </div>
       `,

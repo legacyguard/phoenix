@@ -33,6 +33,7 @@ import {
 'lucide-react';
 import { toast } from 'sonner';
 import { VideoRecorder } from '@/features/time-capsule/components/VideoRecorder';
+import CryptoJS from 'crypto-js';
 import { TimeCapsuleMessage, MessageType, UnlockCondition } from '@/types/timeCapsule';
 import { useSubscription } from '@/hooks/useSubscription';
 import { Link } from 'react-router-dom';
@@ -60,9 +61,15 @@ export const CreateTimeCapsuleModal: React.FC<CreateTimeCapsuleModalProps> = ({
   const [error, setError] = useState<string | null>(null);
   const [showVideoRecorder, setShowVideoRecorder] = useState(false);
 
-  const handleVideoRecorded = useCallback((file: File) => {
-     
-    setAttachment(file);
+const handleVideoRecorded = useCallback((file: File) => {
+    // Encrypt file with AES
+    const reader = new FileReader();
+    reader.onload = () => {
+      const encrypted = CryptoJS.AES.encrypt(reader.result as string, 'secret-key').toString();
+      const encryptedBlob = new Blob([encrypted], { type: file.type });
+      setAttachment(new File([encryptedBlob], file.name));
+    };
+    reader.readAsBinaryString(file);
     setShowVideoRecorder(false);
   }, []);
   const [title, setTitle] = useState('');

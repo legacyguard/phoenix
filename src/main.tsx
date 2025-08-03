@@ -5,6 +5,7 @@ import { I18nextProvider } from 'react-i18next'
 import i18n from './i18n/index'
 import App from './App.tsx'
 import PasswordWall from './components/PasswordWall'
+import { AuthSyncProvider } from './components/auth/AuthSyncProvider'
 import './index.css'
 
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY
@@ -29,7 +30,9 @@ try {
               signInUrl="/login"
               signUpUrl="/register"
             >
-              <App />
+              <AuthSyncProvider>
+                <App />
+              </AuthSyncProvider>
             </ClerkProvider>
           </PasswordWall>
         </I18nextProvider>

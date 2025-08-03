@@ -4,6 +4,8 @@
     "subtitle": "Turvaline ja intuitiivne platvorm, mis aitab peredel korraldada, kaitsta ja edasi anda oma kõige olulisemaid mälestusi ja dokumente põlvest põlve.",
     "cta_primary": "Alusta pärandi planeerimist",
     "cta_secondary": "Vaata demo",
+    "urgencySubtitle": "Seadistamine võtab ainult 10 minutit - olge ettevalmistatud vanem, keda teie pere vajab",
+    "secondaryContext": "2-minutiline video, mis näitab päris peresid",
     "trustSignals": {
       "dataOwnership": "Teie andmed jäävad teile – me ei müü neid kunagi",
       "gdprCompliant": "Disainilt GDPR-nõuetele vastav",
@@ -14,6 +16,71 @@
       "growingFallback": "Liituge meie kasvava kogukonnaga"
     }
   },
+  "familyHub": {
+    "title": "Perekeskus",
+    "subtitle": "Hallake juurdepääsutasemeid ja kasutage ettevalmistustööriistu, et tagada oma pere hea ettevalmistus.",
+    "tabs": {
+      "familyMembers": "Perekonnaliikmed",
+      "members": "Liikmed",
+      "preparednessTools": "Ettevalmistustööriistad",
+      "tools": "Tööriistad"
+    },
+    "overallPreparedness": {
+      "title": "Üldine pere ettevalmistus",
+      "description": "See skoor peegeldab, kui valmis on kogu teie pere hädaolukorrale.",
+      "improvementNeeded": "Teie pere ettevalmistust võiks parandada. Kaaluge uuenduste saatmist neile, kellel on madalamad skoorid."
+    },
+    "emergencyProtocol": {
+      "title": "Hädaolukorra protokoll",
+      "description": "Hädaolukorra protokoll võimaldab usaldusväärsetel inimestel \"Ainult hädaolukorras\" juurdepääsuga taotleda teavet kriitilistes olukordades. Nõuab kinnitust teiselt usaldusväärselt inimeselt.",
+      "configured": "Konfigureeritud",
+      "configure": "Konfigureeri",
+      "activeMessage": "Hädaolukorra protokoll on aktiivne ja konfigureeritud"
+    },
+    "memberManagement": {
+      "title": "Hallake oma usaldusväärseid inimesi",
+      "addTrustedPerson": "Lisa usaldusväärne isik",
+      "addMorePeople": "Lisage oma võrgustikku rohkem usaldusväärseid inimesi",
+      "informationAccessLevel": "Teabe juurdepääsutase",
+      "preparedness": "Ettevalmistus",
+      "lastContacted": "Viimati kontakteerutud",
+      "daysAgo": "{{days}} päeva tagasi",
+      "sendUpdate": "Saada uuendus",
+      "sendUpdateTo": "Saada uuendus {{name}}le",
+      "lastContactOver30Days": "Viimane kontakt üle 30 päeva tagasi"
+    },
+    "accessLevels": {
+      "none": {
+        "title": "Puudub",
+        "description": "Ei näe ühtegi teavet"
+      },
+      "emergencyOnly": {
+        "title": "Ainult hädaolukorras",
+        "description": "Juurdepääs hädaolukordades",
+        "fullDescription": "Saab juurdepääsu ainult siis, kui hädaolukorra protokoll on aktiveeritud"
+      },
+      "limitedInfo": {
+        "title": "Piiratud teave",
+        "description": "Põhiteave ettevalmistuseks",
+        "fullDescription": "Võib näha põhiteavet nüüd, et aidata neil ette valmistuda"
+      },
+      "fullAccess": {
+        "title": "Täielik juurdepääs",
+        "description": "Kogu jagatud teave",
+        "fullDescription": "Võib näha kogu teavet, mille olete nendega jagatud"
+      }
+    },
+    "messages": {
+      "accessLevelUpdated": "Juurdepääsutase edukalt uuendatud",
+      "updateSentTo": "Uuendus saadetud {{name}}le",
+      "failedToSendUpdate": "Uuenduse saatmine {{name}}le ebaõnnestus"
+    },
+    "errors": {
+      "authenticationRequired": "Autentimine on vajalik",
+      "failedToFetchData": "Pere andmete laadimine ebaõnnestus",
+      "failedToLoadMembers": "Perekonnaliikmete laadimine ebaõnnestus"
+    }
+  },
   "nav": {
     "dashboard": "Töölaud",
     "manual": "Käsiraamat",
@@ -22,6 +89,28 @@
     "will": "Testament",
     "settings": "Seaded",
     "help": "Abi ja tugi"
+  },
+  "vault": {
+    "title": "Varamu",
+    "subtitle": "Teie turvaline inventuur kõigist finantsvaradest ja väärtuslikest omanditest.",
+    "errorLoadingAssets": "Teie varade laadimine ebaõnnestus. Palun proovige uuesti.",
+    "letsBuildInventory": "Ehitame teie inventuuri",
+    "addProperty": "Lisa kinnisvara",
+    "addFinances": "Lisa rahandus",
+    "addVehicle": "Lisa sõiduk",
+    "addDigitalAsset": "Lisa digivara",
+    "addPersonalItem": "Lisa isiklik ese",
+    "addOther": "Lisa midagi muud...",
+    "confirmDeletion": "Kas olete kindel, et soovite kustutada \"{{assetName}}\"?",
+    "errorDeletingAsset": "Vara kustutamine ebaõnnestus. Palun proovige uuesti.",
+    "searchPlaceholder": "Otsige oma varasid...",
+    "addAsset": "Lisa vara",
+    "totalAssets": "Varad kokku",
+    "totalValue": "Koguväärtus",
+    "categories": "Kategooriad",
+    "noAssetsFound": "Varasid ei leitud, mis vastaks \"{{searchQuery}}\"",
+    "startAddingAssets": "Alustage varade lisamist oma inventuuri ehitamiseks",
+    "addNewAsset": "Lisa uus vara"
   },
   "pillars": {
     "secure": {
@@ -37,9 +126,79 @@
       "description": "Veenduge, et teie pärand antakse edasi vastavalt teie soovidele"
     }
   },
+  "scenarios": {
+    "title": "Mis juhtub, kui elu võtab ootamatu pöörde?",
+    "subtitle": "Päris pered, päris olukorrad, päris kontroll ja ettevalmistus",
+    "hospitalStay": {
+      "title": "Ootamatu haiglasviibimine",
+      "before": {
+        "situation": "Sarah abikaasal oli südameatakk. Kui ta oli intensiivravis, veetis ta päevi, püüdes leida nende kindlustuspabereid, pangakonto teavet ja olulisi kontakte. Stress oli ülekoormav, kui ta pidi keskenduma tema taastumisele.",
+        "emotion": "Stress ja mure",
+        "consequence": "Päevi teabe otsimiseks ja toe leidmiseks."
+      },
+      "after": {
+        "situation": "Kui Markil oli õnnetus, avas tema abikaasa Lisa nende pere juhendi ja leidis kõik korraldatud: kindlustuse üksikasjad, pangakontaktid, meditsiiniteave ja isegi nimekiri teavitada vajavatest inimestest. Ta võis keskenduda kõige olulisemale - Marki toetamisele.",
+        "emotion": "Rahu ja keskendus",
+        "benefit": "Kohene juurdepääs kõigele, mida ta vajas."
+      }
+    },
+    "businessTrip": {
+      "title": "Ärireisi hädaolukord",
+      "before": {
+        "situation": "Kui Davidi lennuk viibis ja ta jäi oma tütre kiireloomulise operatsiooni vahele, ei saanud tema abikaasa juurdepääsu nende säästukontole ega leidnud nende meditsiini kindlustuse teavet. Kriitilised otsused pidid ootama.",
+        "emotion": "Frustratsioon ja abituses",
+        "consequence": "Olulised meditsiinilised otsused viivitati."
+      },
+      "after": {
+        "situation": "Kui Emma abikaasa reisis ja ta vajas kiireloomulisi vahendeid oma poja operatsiooni jaoks, oli tal kohene juurdepääs kõigile kontoteabele, kindlustuse üksikasjadele ja isegi eelnevalt kirjutatud volituskirjadele. Ei viivitust, ei stressi.",
+        "emotion": "Kergendus ja valmisolek",
+        "benefit": "Kõik saadaval täpselt siis, kui ta seda vajas."
+      }
+    },
+    "suddenLoss": {
+      "title": "Ootamatu kaotus",
+      "before": {
+        "situation": "Pärast oma isa ootamatut kaotamist veetis Maria kuud, püüdes kokku panna tema rahalisi asju. Ta leidis kontod, millest ta ei teadnud, ja jäi ilma olulistest tähtaegadest, kuna dokumendid olid kõikjal laiali.",
+        "emotion": "Segadus ja kahetsus",
+        "consequence": "Tähtaegade möödumine ja aja kaotus."
+      },
+      "after": {
+        "situation": "Kui Johni pere pidi tegelema tema asjadega, oli kõik selgelt korraldatud: täielik kontode nimekiri, olulised kontaktid, sammud-sammult juhised ja isegi isiklikud sõnumid, mida ta oli iga pereliikme jaoks ette valmistanud.",
+        "emotion": "Rahu ja selgus",
+        "benefit": "Selge tee, mida järgida rasketel aegadel."
+      }
+    },
+    "labels": {
+      "before": "Enne LegacyGuard",
+      "after": "Pärast Pärandi varamut",
+      "feeling": "Tunne"
+    },
+    "bottomCta": {
+      "primary": "Ärge laske oma perel silmitsi seista selle kaosega",
+      "secondary": "Alustage korraldamist 10 minutiga",
+      "urgency": "Iga päev, mida ootate, on teine päev, mil teie pere pole ettevalmistatud"
+    },
+    "testimonials": {
+      "1": "Pärast oma venna ootamatut õnnetust nägin, kuidas mu õde-õde nädalaid püüdis leida olulisi dokumente ja paroole. Siis teadsin, et ei saa lasta samal asjal juhtuda minu perega.",
+      "2": "Kui üksikema, kes juhib äri, muretsesin pidevalt, mis juhtuks, kui minuga midagi juhtuks. Pärandi varamu aitas mul kõike korraldada.",
+      "3": "Mu abikaasal on varajane dementsus ja mõistsin, et pean ette valmistama, kui veel suudan. Pärandi varamu tegi lihtsaks meie 40-aastase kooselu korraldamise."
+    }
+  },
   "features": {
-    "title": "Miks valida LegacyGuard?",
-    "subtitle": "Ehitatud äriklassi turvalisusega ja loodud peredele, kes väärtustavad oma pärandit.",
+    "title": "Kolm lihtsat lubadust, mida teile teeme",
+    "subtitle": "Kõik, mida teie pere vajab, mitte midagi, mida nad ei vaja. Lihtne, selge ja alati seal, kui see on oluline.",
+    "sleepBetter": {
+      "title": "Magage paremini täna öösel",
+      "description": "Lõpetage muretsemine 'mis siis, kui minuga midagi juhtub.' Teie pere teab täpselt, mida teha, kust leida kõik ja keda kutsuda."
+    },
+    "noChaos": {
+      "title": "Ei ole põnevat otsimist",
+      "description": "Teie pere ei veeta päevi, otsides kastidest, helistades pankadele või arvates paroole. Kõik oluline on korraldatud ühes turvalises kohas."
+    },
+    "clearInstructions": {
+      "title": "Sammud-sammult juhendamine",
+      "description": "Teie lähedased saavad selged, lihtsad juhised täpselt selle kohta, mida teha ja millal. Ei segadust, ei arvamist, ei stressi rasketel aegadel."
+    },
     "security": {
       "title": "Absoluutne konfidentsiaalsus ja privaatsus",
       "description": "Disainitud nii, et ükski volitamata isik ei pääseks teie andmetele juurde. Isegi mitte meie. Teie privaatsus on meie kõrgeim prioriteet."
@@ -65,33 +224,402 @@
       "description": "Teie pärandit säilitatakse määramata aja koos automaatse vormingute migratsiooni ja uuendustega."
     }
   },
+  "executor": {
+    "dashboard": {
+      "title": "Täideviija töölaud",
+      "subtitle": "Sammud-sammult juhend, mis aitab teil läbi selle raskel ajal",
+      "reminder": "Pidage meeles, et hoolitseda enda eest selle raskel ajal. Ärge kõhelge abi paluda, kui seda vajate."
+    },
+    "errors": {
+      "loadTasksFailed": "Täideviija ülesannete laadimine ebaõnnestus. Palun proovige hiljem uuesti.",
+      "updateTaskFailed": "Ülesande staatuse uuendamine ebaõnnestus."
+    },
+    "highPriority": "Kõrge prioriteet",
+    "due": "Tähtaeg",
+    "completed": "Lõpetatud",
+    "undo": "Tühista",
+    "markComplete": "Märgi lõpetatuks",
+    "viewAccountDetails": "Vaata konto üksikasju ja parooli",
+    "viewRelatedDocuments": "Vaata seotud dokumente ({{count}})",
+    "stats": {
+      "totalTasks": "Ülesanded kokku",
+      "completed": "Lõpetatud",
+      "remaining": "Järelejäänud"
+    },
+    "sections": {
+      "immediate": {
+        "title": "Kohesed ülesanded (Esimesed 48 tundi)",
+        "description": "Kriitilised ülesanded, mis vajavad teie kohest tähelepanu",
+        "empty": "Kõik kohesed ülesanded lõpetatud!"
+      },
+      "firstWeek": {
+        "title": "Esimese nädala ülesanded",
+        "description": "Olulised ülesanded, mis tuleb lõpetada esimese nädala jooksul",
+        "empty": "Kõik esimese nädala ülesanded lõpetatud!"
+      },
+      "ongoing": {
+        "title": "Jätkuvad vastutused",
+        "description": "Ülesanded, mida tuleb hallata tulevates nädalates ja kuudes",
+        "empty": "Kõik jätkuvad ülesanded lõpetatud!"
+      }
+    },
+    "communications": {
+      "title": "Pärija kommunikatsioon",
+      "description": "Jälgige kõiki kommunikatsioone pärijatega, et säilitada läbipaistvust",
+      "logCommunication": "Logi kommunikatsioon",
+      "logTitle": "Logi pärija kommunikatsioon",
+      "logDescription": "Salvestage oma kommunikatsiooni üksikasjad pärijatega",
+      "beneficiaryName": "Pärija nimi",
+      "beneficiaryEmail": "E-post (valikuline)",
+      "communicationType": "Tüüp",
+      "communicationDate": "Kuupäev",
+      "subject": "Teema",
+      "summary": "Kokkuvõte",
+      "subjectPlaceholder": "nt Esialgne pärandi uuendus",
+      "summaryPlaceholder": "Lühike kokkuvõte sellest, millest räägiti...",
+      "types": {
+        "email": "E-post",
+        "phone": "Telefonikõne",
+        "letter": "Kiri",
+        "in_person": "Isiklikult",
+        "other": "Muu"
+      },
+      "saving": "Salvestan...",
+      "saveCommunication": "Salvesta kommunikatsioon",
+      "cancel": "Tühista",
+      "noCommunications": "Kommunikatsioone pole veel logitud",
+      "startTracking": "Alustage oma pärija kommunikatsioonide jälgimist",
+      "errors": {
+        "saveFailed": "Kommunikatsiooni logimine ebaõnnestus"
+      }
+    },
+    "status": {
+      "title": "Pärandi haldamise staatus",
+      "description": "Praegune kõrgetasemeline staatus, mis on nähtav volitatud pereliikmetele",
+      "updateStatus": "Uuenda staatus",
+      "updateTitle": "Uuenda pärandi staatus",
+      "updateDescription": "See staatus on nähtav volitatud pereliikmetele",
+      "statusLabel": "Staatus",
+      "additionalDetails": "Lisateave (valikuline)",
+      "detailsPlaceholder": "Esitage täiendavat konteksti...",
+      "selectStatus": "Valige staatus",
+      "updating": "Uuendan...",
+      "lastUpdated": "Viimati uuendatud",
+      "progress": "Edenemine",
+      "noStatusSet": "Staatus pole veel määratud. Klõpsake \"Uuenda staatus\", et määrata esialgne staatus.",
+      "noStatusUpdates": "Staatusuuendusi pole veel postitatud.",
+      "statuses": {
+        "initial_review": "Esialgne ülevaatus",
+        "gathering_documents": "Dokumentide kogumine",
+        "probate_initiated": "Pärandi menetlus alustatud",
+        "assets_being_valued": "Varad hinnatakse",
+        "debts_being_settled": "Võlad lahendatakse",
+        "tax_preparation": "Maksude ettevalmistamine",
+        "ready_for_distribution": "Valmis jaotamiseks",
+        "distribution_in_progress": "Jaotamine pooleli",
+        "estate_closed": "Pärand suletud"
+      },
+      "errors": {
+        "updateFailed": "Staatuse uuendamine ebaõnnestus"
+      }
+    },
+    "justInTime": {
+      "viewAccountDetails": "Vaata konto üksikasju ja parooli",
+      "secureInfoAccess": "Turvaline teabe juurdepääs",
+      "reauthenticate": "Autentige uuesti, et vaadata tundlikku teavet",
+      "securityReason": "Turvalisuse huvides sisestage palun oma parool, et pääseda ligi sellele teabele.",
+      "password": "Parool",
+      "enterPassword": "Sisestage oma parool",
+      "incorrectPassword": "Vale parool. Palun proovige uuesti.",
+      "cancel": "Tühista",
+      "verifying": "Kontrollin...",
+      "verifyContinue": "Kontrolli ja jätka",
+      "accountName": "Konto nimi",
+      "accountNumber": "Konto number",
+      "username": "Kasutajanimi",
+      "pin": "PIN",
+      "additionalNotes": "Lisateave",
+      "noSensitiveInfo": "Selle ülesandega ei ole seotud tundlikku teavet.",
+      "accessLogged": "See juurdepääs on logitud turvalisuse huvides.",
+      "accessTime": "Juurdepääsu aeg",
+      "close": "Sulge",
+      "errors": {
+        "reauthFailed": "Teie identiteedi kontrollimine ebaõnnestus. Palun proovige uuesti.",
+        "notFound": "Selle ülesande jaoks tundlikku teavet ei leitud.",
+        "retrieveFailed": "Tundliku teabe laadimine ebaõnnestus."
+      }
+    },
+    "familyView": {
+      "title": "Pärandi haldamise staatus",
+      "subtitle": "Olge teadlik pärandi haldamise edenemisest",
+      "recentCommunications": "Viimased täideviija kommunikatsioonid",
+      "recentCommunicationsDescription": "Viimased uuendused {{executorName}}lt pärijatele",
+      "to": "Kellele",
+      "noCommunications": "Kommunikatsioone pole veel logitud.",
+      "infoMessage": "Seda teavet uuendab {{executorName}}, et hoida pereliikmeid teadlikuna. Detailsete küsimuste korral võtke palun otse ühendust täideviijaga.",
+      "defaultExecutor": "täideviija",
+      "errors": {
+        "loadFailed": "Andmete laadimine ebaõnnestus"
+      }
+    }
+  },
+  "testimonials": {
+    "badge": "Päris pered võtavad kontrolli",
+    "title": "15 000+ Euroopa pere usaldab",
+    "subtitle": "Vaadake, kuidas pered nagu teie leidsid turvalisuse ja rahu Pärandi varamuga",
+    "verified": "Kinnitatud pere",
+    "trustedBy": "Usaldatud ja soovitatud",
+    "stats": {
+      "families": "15 000+",
+      "familiesLabel": "Euroopa peret kaitstud",
+      "satisfaction": "99,7%",
+      "satisfactionLabel": "tunnevad end ettevalmistatuna ja kontrollis",
+      "stressReduction": "92%",
+      "stressReductionLabel": "vähem pere stressi raporteeritud",
+      "timeSaved": "120 tundi",
+      "timeSavedLabel": "keskmine aeg, mida pere kohta säästetud"
+    },
+    "stories": {
+      "1": {
+        "name": "Michael K.",
+        "role": "Kolmekordne isa",
+        "location": "München, Saksamaa",
+        "quote": "Pärast oma venna ootamatut õnnetust nägin, kuidas mu õde-õde nädalaid püüdis leida olulisi dokumente ja paroole. Siis teadsin, et ei saa lasta samal asjal juhtuda minu perega. Nüüd on kõik korraldatud ja mu abikaasa teab täpselt, kust leida, mida ta vajab. Olla ettevalmistatud ja kontrollis on hindamatu.",
+        "highlight": "✨ Seadistatud ainult 2 tunniga, kaitstes 3 last ja abikaasat"
+      },
+      "2": {
+        "name": "Anna S.",
+        "role": "Äriomanik",
+        "location": "Viin, Austria",
+        "quote": "Kui üksikema, kes juhib äri, muretsesin pidevalt, mis juhtuks, kui minuga midagi juhtuks. Pärandi varamu aitas mul kõike korraldada - alates ärikontodest kuni laste kooliteateni. Mu õde nüüd juurdepääs kõigele, mida ta vajaks, et astuda minu asemele. Ma magan nii palju paremini, teades, et nad on kaitstud.",
+        "highlight": "💼 Äri ja isiklik elu korraldatud ühes turvalises kohas"
+      },
+      "3": {
+        "name": "Thomas R.",
+        "role": "Pensionil õpetaja",
+        "location": "Zürich, Šveits",
+        "quote": "Mu abikaasal on varajane dementsus ja mõistsin, et pean ette valmistama, kui veel suudan. Pärandi varamu tegi lihtsaks meie 40-aastase kooselu korraldamise. Meie lapsed nüüd selged juhised ja juurdepääs kõigele. See on tõonud kogu meie pere lähemale, teades, et oleme ettevalmistatud ükskõik mis juhtuks.",
+        "highlight": "❤️ 40 aastat pere ajalugu säilitatud ja kaitstud"
+      }
+    },
+    "authority": {
+      "advisors": "Soovitatud finantsnõunike poolt",
+      "attorneys": "Usaldatud pereadvokaatide poolt",
+      "counselors": "Toetatud leinakonsultantide poolt"
+    },
+    "compliance": {
+      "gdpr": "GDPR-nõuetele vastav",
+      "dataProtection": "Andmekaitse sertifitseeritud",
+      "iso": "ISO 27001 sertifitseeritud"
+    },
+    "bottomCta": {}
+  },
+  "calculator": {
+    "badge": "Ettevalmistuse kalkulaator",
+    "title": "Arvutage oma pere ettevalmistuse skoor",
+    "subtitle": "Vaadake reaalne aeg ja raha, mida teie pere säästab, kui kõik on korraldatud",
+    "inputs": {
+      "title": "Teie pere olukord",
+      "description": "Rääkige meile natuke oma perest, et isikupärastada teie tulemusi",
+      "dependents": "Kui palju inimesi sõltub teist?",
+      "dependentsHelp": "Kaasa arvatud abikaasa, lapsed, vanemad vanemad",
+      "income": "Mis on teie pere kuu sissetulek?",
+      "incomeHelp": "See aitab arvutada potentsiaalset kaotatud töötasu",
+      "property": "Kas teil on kinnisvara?",
+      "business": "Kas teil on äri?",
+      "accounts": "Kui palju pangakontosid teil on?",
+      "accountsHelp": "Kaasa arvatud võlakirjad, säästud, investeeringud"
+    },
+    "calculateButton": "Arvuta minu sääst",
+    "results": {
+      "title": "Teie pere sääst",
+      "description": "Siin on, mida ettevalmistus tähendab teie lähedastele",
+      "timeSavings": {
+        "title": "Aeg, mida teie pere säästab",
+        "without": "Ilma korralduseta",
+        "withoutHours": "40-120 tundi otsimist",
+        "with": "Pärandi varamuga",
+        "withMinutes": "Alla 5 minuti"
+      },
+      "moneySavings": {
+        "title": "Raha, mida teie pere säästab",
+        "legalFees": "Juriidilised tasud rekonstrueerimiseks",
+        "lostWages": "Kaotatud töötasu vabastuse tõttu",
+        "penalties": "Möödunud tähtajad ja trahvid",
+        "total": "Kogupotentsiaalne sääst"
+      },
+      "emotional": {
+        "title": "Emotsionaalse heaolu mõju",
+        "stress": "Stressi taseme vähenemine",
+        "confidence": "Pere usalduse suurenemine",
+        "peace": "Kontrolli ja ettevalmistuse hinnang"
+      },
+      "socialProof": "Liituge peredega, kes juba magavad paremini öösel",
+      "families": "15 000+ peret kaitstud",
+      "ctaContext": "Enamik peresid lõpetab seadistamise lõunaajal",
+      "shareButton": "Jaga tulemusi"
+    },
+    "testimonial": {
+      "quote": "Ma ei teadnud kunagi, kui palju stressi kandsid, kuni sain kõike korraldada. Nüüd tean, et minu pere saab hakkama, ükskõik mis juhtub.",
+      "author": "Sarah M., kolme lapse ema"
+    },
+    "shareTitle": "Pere ettevalmistuse kalkulaatori tulemused",
+    "shareCopied": "Tulemused kopeeritud lõikelauale!"
+  },
   "dashboard": {
+    "title": "Teie pärandi töölaud",
+    "subtitle": "Teie keskne keskus pärandi säilitamiseks ja kaitseks",
+    "planStrength": {
+      "title": "Plaani tugevus",
+      "description": "Üldine pere ettevalmistuse ja kaitse tase",
+      "currentStage": "Praegune etapp: {{stage}}"
+    },
+    "nextStep": {
+      "title": "Järgmine soovituslik samm",
+      "estimatedTime": "Hinnanguline aeg: {{time}}"
+    },
+    "protectionJourney": {
+      "title": "Kaitse teekond",
+      "description": "Teie teekond täieliku pere kaitse saavutamiseks",
+      "planStrengthRange": "Plaani tugevus: {{range}}",
+      "stage": "Etapp {{number}}: {{name}}"
+    },
+    "stages": {
+      "foundation": "Aluse etapp",
+      "building": "Ehitamise etapp",
+      "strengthening": "Tugevdamise etapp",
+      "advancedPlanning": "Täiustatud planeerimine",
+      "legacy": "Pärandi etapp"
+    },
+    "deepDive": {
+      "milestoneAchieved": "SAVUTUD"
+    },
+    "preservationMode": {
+      "lastReviewDate": "Viimane ülevaatus: {{date}}",
+      "startAnnualCheck": "Alusta aastast kontrolli",
+      "latestUpdates": "Viimased uuendused"
+    },
+    "complexProfile": {
+      "detected": "Keeruline profiil tuvastatud",
+      "personalizedGuidance": "Isikupärastatud juhendamine",
+      "businessSuccessionNote": "Oleme märganud, et teie plaan sisaldab äri varasid. Järgluse planeerimine võib olla keeruline. Kaaluge professionaalset ülevaadet, et tagada teie äri üleminek sujuvalt.",
+      "discussWithExpert": "Arutage õigusala spetsialistiga"
+    },
+    "errors": {
+      "failedToFetchStatus": "Edenemise staatuse laadimine ebaõnnestus",
+      "failedToDeleteDocument": "Dokumendi kustutamine ebaõnnestus",
+      "failedToUpdateDocument": "Dokumendi uuendamine ebaõnnestus",
+      "failedToDeleteGuardian": "Eestkostja kustutamine ebaõnnestus",
+      "pleaseEnterValidEmail": "Palun sisestage kehtiv e-posti aadress",
+      "failedToSendInvitation": "Kutse saatmine ebaõnnestus",
+      "guardianLimitReached": "Olete saavutanud {{limit}} eestkostja limiidi oma praegusel plaani"
+    },
+    "nudge": {
+      "progressTitle": "Teie pärandi kaitse edenemine",
+      "completeNow": "Lõpeta nüüd"
+    },
+    "sectionHeaders": {
+      "familyGuide": "Pere hädaolukorra juhend",
+      "familyGuideSubtitle": "Kõik, mida teie pere vajab ühes selges, ligipääsetavas kohas",
+      "quickTasks": "5-minutilised ülesanded",
+      "quickTasksSubtitle": "Väiksed tegevused, suur mõju - ülesanded, mida saate kohe teha"
+    },
+    "tasks": {
+      "progress": "{{completed}} {{total}}-st ülesandest lõpetatud",
+      "personalMessages": {
+        "title": "Kirjuta isiklikud sõnumid",
+        "description": "Jäta oma lähedastele soojad sõnumid ja olulised sõnad."
+      },
+      "familyMeeting": {
+        "title": "Pidage perekonna kohtumine",
+        "description": "Arutage oma soove ja plaane perekonnaga, et tagada, et kõik mõistavad teie kavatsusi."
+      }
+    },
+    "metadata": {
+      "contact": "Kontakt",
+      "renewsOn": "Uuendub"
+    },
+    "invitation": {
+      "name": "Nimi",
+      "relationship": "Suhe",
+      "roles": "Rollid",
+      "emailLabel": "E-posti aadress"
+    },
+    "allocationDisplay": "{{percentage}}% määratud",
+    "header": {
+      "initial": "Teie pärandi kaitse teekond",
+      "inProgress": "Suurepärased edusammud!",
+      "complete": "Kõik valmis!"
+    },
+    "messages": {
+      "welcomeToHeritageVault": "Tere tulemast Pärandi varamusse! Kindlustame koos teie pere tuleviku.",
+      "excellentFirstStep": "Suurepärane esimene samm!",
+      "taskBringsClarity": "Iga ülesanne toob rohkem selgust ja turvalisust teie perele.",
+      "projectOrderComplete": "Teie tegevuskava on valmis!",
+      "successfullySecured": "Olete edukalt kindlustanud oma pere tuleviku. Hästi tehtud!",
+      "progressMade": "Suurepärased edusammud!",
+      "anotherPieceInPlace": "Teine oluline tükk paigas.",
+      "startingTask": "Alustan: {{taskTitle}}",
+      "documentDeleted": "Dokument edukalt kustutatud",
+      "documentMarkedAsKey": "Dokument märgitud võtmedokumendiks",
+      "documentRemovedFromKey": "Dokument eemaldatud võtmedokumentidest",
+      "assetDeleted": "Vara edukalt kustutatud",
+      "assetAdded": "Vara edukalt lisatud",
+      "assetUpdated": "Vara edukalt uuendatud",
+      "guardianDeleted": "Eestkostja edukalt kustutatud",
+      "invitationSent": "Kutse saadetud {{email}}le",
+      "sendingInvitation": "Saadan kutset...",
+      "beneficiaryDeleted": "Pärija edukalt kustutatud",
+      "beneficiaryAdded": "Pärija edukalt lisatud",
+      "beneficiaryUpdated": "Pärija edukalt uuendatud"
+    },
+    "sheets": {
+      "editAsset": "Muuda vara",
+      "addAsset": "Lisa vara",
+      "editAssetDescription": "Uuenda selle vara üksikasju",
+      "addAssetDescription": "Lisa uus vara oma portfelli",
+      "uploadDocument": "Laadi dokument üles",
+      "uploadDocumentDescription": "Laadi üles ja korralda oma olulised dokumendid",
+      "editBeneficiary": "Muuda pärija",
+      "addBeneficiary": "Lisa pärija",
+      "editBeneficiaryDescription": "Uuenda pärija üksikasju",
+      "addBeneficiaryDescription": "Lisa keegi, kes teilt pärib"
+    },
+    "addGuardian": "Lisa eestkostja",
+    "addItem": "Lisa ese",
+    "uploadDocument": "Laadi dokument üles",
+    "addBeneficiary": "Lisa pärija",
+    "empty": {
+      "noGuardians": "Eestkostjaid pole veel lisatud",
+      "noAssetsOrDocuments": "Varasid või dokumente pole veel lisatud",
+      "noBeneficiaries": "Pärijaid pole veel lisatud"
+    },
     "strategicSummary": {
       "initial": "Alustage oma digitaalset pärandit oma esimese dokumendi lisamisega.",
       "addDocument": "Lisa Dokument",
-      "addPrimaryGuardian": "Add primary guardian",
-      "addBackupGuardian": "Add backup guardian",
-      "addHomeProperty": "Add your home property",
-      "addFinancialAccounts": "Add financial accounts",
-      "addPrimaryBeneficiary": "Add primary beneficiary",
-      "addContingentBeneficiaries": "Add contingent beneficiaries",
-      "minutes": "{{count}} minutes",
+      "addPrimaryGuardian": "Lisa peamine eestkostja",
+      "addBackupGuardian": "Lisa varu eestkostja",
+      "addHomeProperty": "Lisa oma kodu kinnisvara",
+      "addFinancialAccounts": "Lisa finantskontod",
+      "addPrimaryBeneficiary": "Lisa peamine pärija",
+      "addContingentBeneficiaries": "Lisa tingimuslikud pärijad",
+      "minutes": "{{count}} minutit",
       "assetInventory": "Vara inventarinimestik",
       "assetInventoryDesc": "Täielik nimekiri sinu väärtuslikest asjadest",
       "criticalDocuments": "Kriitilised dokumendid",
       "criticalDocumentsDesc": "Olulised dokumendid, mida sinu pere kohe vajab",
       "guardianNetwork": "Eestkostja võrk",
       "guardianNetworkDesc": "Usaldusväärsed inimesed, kes tegelevad sinu asjadega",
-      "ifNotDone": "⚠️ If Not Done",
+      "ifNotDone": "⚠️ Kui pole tehtud",
       "impact": {},
       "inheritancePlan": "Pärandiplaan",
       "inheritancePlanDesc": "Selged juhised varade jaotamiseks",
-      "nextAction": "⚡ Next Action",
+      "nextAction": "⚡ Järgmine tegevus",
       "nextCriticalStep": "Järgmine kriitiline samm",
       "startWithNext": "Alusta järgmise kriitilise sammuga",
       "subtitle": "Sul on {count} võtmevaldkonda, mis vajavad tähelepanu. Nende toimingute tegemine tagab sinu perele ja varadele {percentage}% -lise kaitse.",
       "title": "Sinu strateegiline ülevaade",
-      "whyImportant": "🛡️ Why Important"
+      "whyImportant": "🛡️ Miks oluline"
     },
     "stats": {
       "totalAssets": "Varad kokku",
@@ -107,83 +635,83 @@
       "needsImprovement": "Vajab parandamist"
     },
     "quickTasks": {
-      "taskCompleted": "Task completed!",
-      "taskStarted": "Starting task...",
+      "taskCompleted": "Ülesanne lõpetatud!",
+      "taskStarted": "Alustan ülesannet...",
       "tasks": {
         "birthCertificate": {
-          "title": "🛡️ Add Birth Certificate",
-          "description": "Without this document, your family cannot prove inheritance rights or access accounts"
+          "title": "🛡️ Lisa sünnitunnistus",
+          "description": "Ilma selle dokumendita ei saa teie pere tõestada pärimisõigusi ega pääseda ligi kontodele"
         },
         "insurancePolicy": {
-          "title": "💰 Add Life Insurance Policy",
-          "description": "Your family needs immediate access to claim benefits and avoid delays"
+          "title": "💰 Lisa elukindlustuse poliis",
+          "description": "Teie pere vajab kohest juurdepääsu kasude taotlemiseks ja viivituste vältimiseks"
         },
         "will": {
-          "title": "⚖️ Add Will or Testament",
-          "description": "Prevents family disputes and ensures your wishes are followed"
+          "title": "⚖️ Lisa testament",
+          "description": "Võtab ära perekonfliktid ja tagab teie soovide järgimise"
         },
         "spouseGuardian": {
-          "title": "👥 Add Spouse as Guardian",
-          "description": "Without guardians, no one can legally act on your behalf or make medical decisions"
+          "title": "👥 Lisa abikaasa eestkostjaks",
+          "description": "Ilma eestkostjateta ei saa keegi teie nimel seaduslikult tegutseda ega teha meditsiinilisi otsuseid"
         },
         "backupGuardian": {
-          "title": "🤝 Add Backup Guardian",
-          "description": "Ensures someone can step in if your primary guardian is unavailable"
+          "title": "🤝 Lisa varu eestkostja",
+          "description": "Tagab, et keegi saab astuda, kui teie peamine eestkostja pole saadaval"
         },
         "bankAccount": {
-          "title": "🏦 Add Bank Account",
-          "description": "Your family needs to know where your money is to access it immediately"
+          "title": "🏦 Lisa pangakonto",
+          "description": "Teie pere peab teadma, kus teie raha on, et pääseda ligi koheselt"
         },
         "homeProperty": {
-          "title": "🏠 Add Home Property",
-          "description": "Prevents your family from losing your most valuable asset"
+          "title": "🏠 Lisa kodu kinnisvara",
+          "description": "Võtab ära võimaluse, et teie pere kaotaks teie kõige väärtuslikuma vara"
         },
         "vehicle": {
-          "title": "🚗 Add Vehicle",
-          "description": "Ensures your family can transfer ownership and avoid complications"
+          "title": "🚗 Lisa sõiduk",
+          "description": "Tagab, et teie pere saab omandi üle anda ja vältida keerukusi"
         },
         "spouseBeneficiary": {
-          "title": "💝 Add Spouse as Beneficiary",
-          "description": "Without clear instructions, family disputes can arise over inheritance"
+          "title": "💝 Lisa abikaasa pärijaks",
+          "description": "Ilma selgete juhisteta võivad tekkida perekonfliktid pärandi üle"
         },
         "childrenBeneficiaries": {
-          "title": "👶 Add Children as Beneficiaries",
-          "description": "Ensures your children receive what you intended for them"
+          "title": "👶 Lisa lapsed pärijateks",
+          "description": "Tagab, et teie lapsed saavad selle, mida teie neile mõtlesite"
         }
       },
       "allCompleted": "Kõik ülesanded on täidetud!",
       "allTasks": "Kõik ülesanded",
       "assets": "Varad",
-      "beneficiaries": "Abisaajad",
+      "beneficiaries": "Pärijad",
       "completed": "lõpetatud",
       "documents": "Dokumendid",
       "greatProgress": "Suurepärased edusammud! Oled lõpetanud {count} ülesannet.",
       "guardians": "eestkostjad.",
-      "ifNotDone": "⚠️ If Not Done",
+      "ifNotDone": "⚠️ Kui pole tehtud",
       "markAsComplete": "Märgi tehtuks",
       "progress": "Edenemine",
-      "start": "Start",
+      "start": "Alusta",
       "title": "5-minutilised ülesanded",
       "wellOnWay": "🎉 Oled teel oma pere tuleviku kindlustamisele!",
-      "whyImportant": "🛡️ Why Important"
+      "whyImportant": "🛡️ Miks oluline"
     },
-    "familyGuide": {
-      "view": "View",
-      "subtitle": "Automatically generated guide for your family",
-      "discreteModeDesc": "Your personal notes and reminders",
-      "callNow": "Helista kohe",
-      "callSoon": "Helista varsti",
-      "critical": "Kriitiline",
-      "discreteMode": "Diskreetne režiim",
-      "emergencyContacts": "Hädaabikontaktid",
-      "exportGuide": "Ekspordijuhend",
-      "generateGuide": "Loo juhend",
-      "important": "Oluline",
-      "importantDocuments": "Olulised dokumendid",
-      "shareWithFamily": "Jaga oma perega",
-      "timeline": "Mida teha?",
-      "title": "Pere hädaolukorra juhend"
-    },
+          "familyGuide": {
+        "view": "Vaata",
+        "subtitle": "Automaatselt genereeritud juhend teie perele",
+        "discreteModeDesc": "Teie isiklikud märkmed ja meeldetuletused",
+        "callNow": "Helista kohe",
+        "callSoon": "Helista varsti",
+        "critical": "Kriitiline",
+        "discreteMode": "Diskreetne režiim",
+        "emergencyContacts": "Hädaabikontaktid",
+        "exportGuide": "Ekspordi juhend",
+        "generateGuide": "Loo juhend",
+        "important": "Oluline",
+        "importantDocuments": "Olulised dokumendid",
+        "shareWithFamily": "Jaga oma perega",
+        "timeline": "Mida teha?",
+        "title": "Pere hädaolukorra juhend"
+      },
     "sectionHeaders": {}
   },
   "onboarding": {
@@ -415,28 +943,398 @@
   },
   "navigation": {
     "dashboard": "Töölaud",
-    "assets": "Varad",
+    "vault": "Varamu",
+    "trustedCircle": {
+      "title": "Teie usaldusväärne ring",
+      "subtitle": "Inimesed, keda teie usaldate, et aidata kaitsta ja hoolitseda oma pere ja pärandi eest.",
+      "responsibilities": "Nende vastutused:",
+      "preparationStatus": "Ettevalmistuse staatus:",
+      "informedOfRole": "On teadlik oma rollist",
+      "acceptedResponsibility": "On vastu võtnud vastutuse",
+      "hasAccessToDocuments": "On juurdepääs vajalikele dokumentidele",
+      "reviewedEmergencyProcedures": "On vaadanud üle hädaolukorra protseduurid",
+      "addTrustedPerson": "+ Lisa usaldusväärne isik",
+      "preparednessStatus": {
+        "wellPrepared": "Hästi ettevalmistatud",
+        "partiallyPrepared": "Osaliselt ettevalmistatud",
+        "needsAttention": "Vajab tähelepanu"
+      },
+      "buttonText": {
+        "prepared": "✓ {{name}} on ettevalmistatud",
+        "prepareNow": "Valmista {{name}} nüüd ette"
+      },
+      "mockData": {
+        "sarah": {
+          "name": "Sarah Johnson",
+          "relationship": "Abikaasa",
+          "responsibilities": {
+            "bankAccess": "Võib pääseda ligi kõigile pangakontodele arvete tasumiseks ja majapidamise kulude haldamiseks.",
+            "inheritAssets": "Pärib perekodu, suvila ja kõik säästud.",
+            "medicalPower": "On meditsiiniline volikiri tervishoiuotsuste tegemiseks."
+          }
+        },
+        "michael": {
+          "name": "Michael Johnson",
+          "relationship": "Vend",
+          "responsibilities": {
+            "childCare": "Hoolitseb meie laste eest, kui mõlemad vanemad on läinud.",
+            "estateExecution": "Täidab meie viimaseid soove ja haldab pärandi lahendamist.",
+            "businessManagement": "Võib astuda Johnson Contracting LLC ajutiseks haldamiseks."
+          }
+        },
+        "robert": {
+          "name": "Robert Chen",
+          "relationship": "Äripartner",
+          "responsibilities": {
+            "businessAuthority": "On volitus äritegevust hallata ja lepinguid allkirjastada.",
+            "buySellAgreement": "Ostab minu äri osad vastavalt meie ostu-müügi lepingule."
+          }
+        },
+        "emily": {
+          "name": "Emily Thompson",
+          "relationship": "Õde-õde",
+          "responsibilities": {
+            "backupGuardian": "Varu eestkostja lastele, kui peamine eestkostja ei saa teenida."
+          }
+        }
+      }
+    },
+    "familyHub": "Perekeskus",
+    "legacyBriefing": {
+      "legacy_briefing_3": "Pärandi ettekanne",
+      "create_and_manage_sealed_messa_4": "Looge ja hallake suletud sõnumeid oma lähedastele",
+      "failed_to_load_your_time_capsu_1": "Teie ajakapslite laadimine ebaõnnestus",
+      "are_you_sure_you_want_to_delet_2": "Kas olete kindel, et soovite selle ajakapsli kustutada?",
+      "create_new_message_5": "Loo uus sõnum",
+      "no_time_capsules_yet_6": "Ajakapsleid pole veel",
+      "create_meaningful_messages_for_7": "Looge mõtestatud sõnumeid oma lähedastele, mida nad saavad tulevikus",
+      "create_your_first_message_8": "Loo oma esimene sõnum",
+      "to_9": "Kellele:",
+      "unlocks_on_10": "Avatakse:",
+      "unlocks_11": "Avatakse:",
+      "after_passing_12": "Pärast surma",
+      "statusLabels": {
+        "locked": "Lukustatud",
+        "unlocked": "Avatud",
+        "delivered": "Kohale toimetatud",
+        "noRecipients": "Saajaid pole"
+      },
+      "messageTypes": {
+        "text": "Tekstisõnum",
+        "photo": "Fotosõnum",
+        "video": "Videosõnum",
+        "audio": "Helisõnum"
+      },
+      "actions": {
+        "edit": "Muuda",
+        "delete": "Kustuta"
+      },
+      "toastMessages": {
+        "deleteSuccess": "Ajakapsel edukalt kustutatud",
+        "deleteError": "Ajakapsli kustutamine ebaõnnestus"
+      },
+      "dateFormat": {
+        "dateNotSet": "Kuupäev pole määratud",
+        "created": "Loodud"
+      }
+    },
+    "executorToolkit": "Täideviija tööriistad",
+    "assets": "Mida teie omate ja väärtustate",
     "manual": "Käsiraamat",
-    "documents": "Pärandi varamu",
-    "guardians": "Eestkostjate võrgustik",
-    "will": "Testament",
+    "documents": "Olulised dokumendid",
+    "guardians": "Inimesed, keda teie usaldate",
+    "family": "Perekeskus",
+    "timeCapsule": "Ajakapslid",
+    "will": "Teie viimased soovid",
+    "consultations": "Õigusala konsultatsioonid",
     "settings": "Seaded",
-    "help": "Abi ja tugi"
+    "help": "Abi ja tugi",
+    "subscriptions": "Tellimused"
   },
   "app": {
-    "name": "LegacyGuard",
-    "tagline": "Kaitstes teie pärandit"
+    "name": "Pärandi varamu",
+    "tagline": "Kaitstes teie pere tuleviku"
   },
   "invite": {
-    "title": "{{name}} on kutsunud teid oma digitaalse pärandi eestkostjaks."
+    "title": "{{name}} on kutsunud teid olema usaldusväärne abiline nende digitaalsele pärandile"
   },
   "common": {
-    "appName": "LegacyGuard",
-    "cancel": "Tühista",
-    "error": "Viga",
-    "retry": "Proovi uuesti",
-    "goBack": "Tagasi",
-    "goHome": "Mine töölauale"
+    "loading": "Laen...",
+    "viewDetails": "Vaata üksikasju",
+    "edit": "Muuda",
+    "delete": "Kustuta",
+    "addedOn": "Lisatud {{date}}",
+    "priority": {
+      "high": "Kõrge",
+      "medium": "Keskmine",
+      "low": "Madal"
+    },
+    "pagination": {
+      "previous": "Eelmine",
+      "next": "Järgmine",
+      "morePages": "Rohkem lehti",
+      "page": "Leht",
+      "of": "kohal",
+      "showing": "Näitan",
+      "to": "kuni",
+      "results": "tulemust",
+      "perPage": "lehe kohta",
+      "goToPage": "Mine lehele",
+      "currentPage": "Praegune leht",
+      "totalPages": "Lehti kokku",
+      "firstPage": "Esimene leht",
+      "lastPage": "Viimane leht",
+      "pageInfo": "Leht {{current}} {{total}}-st",
+      "resultsInfo": "Näitan {{start}} kuni {{end}} {{total}} tulemusest",
+      "noResults": "Tulemusi ei leitud",
+      "loading": "Laen...",
+      "navigation": {
+        "title": "Lehekülgede navigatsioon",
+        "description": "Navigeerige tulemuste lehtede vahel",
+        "first": "Mine esimesele lehele",
+        "last": "Mine viimasele lehele",
+        "previous": "Mine eelmisele lehele",
+        "next": "Mine järgmisele lehele",
+        "page": "Mine lehele {{number}}"
+      },
+      "accessibility": {
+        "pagination": "Lehekülgede navigatsioon",
+        "currentPage": "Praegune leht, leht {{number}}",
+        "page": "Leht {{number}}",
+        "previousPage": "Eelmine leht",
+        "nextPage": "Järgmine leht",
+        "firstPage": "Esimene leht",
+        "lastPage": "Viimane leht",
+        "morePages": "Rohkem lehti saadaval"
+      }
+    },
+    "errors": {
+      "missingClerkKey": "Puudub Clerk avalik võti",
+      "errorLoadingApp": "Rakenduse laadimise viga"
+    },
+    "redirect": {
+      "simulationTitle": "Ümbersuunamise simulatsioon"
+    },
+    "ui": {
+      "close": "Sulge",
+      "more": "Rohkem",
+      "previousSlide": "Eelmine slaid",
+      "nextSlide": "Järgmine slaid",
+      "toggleSidebar": "Lülita külgriba",
+      "goToPreviousPage": "Mine eelmisele lehele",
+      "goToNextPage": "Mine järgmisele lehele",
+      "carousel": {
+        "title": "Karussell",
+        "description": "Piltide karussell navigatsioonikontrollidega",
+        "previousSlide": "Eelmine slaid",
+        "nextSlide": "Järgmine slaid",
+        "currentSlide": "Praegune slaid",
+        "slide": "Slaid",
+        "of": "kohal",
+        "slideInfo": "Slaid {{current}} {{total}}-st",
+        "goToSlide": "Mine slaidile {{number}}",
+        "autoplay": "Automaatne esitus",
+        "pauseAutoplay": "Peata automaatne esitus",
+        "resumeAutoplay": "Jätka automaatset esitust",
+        "stopAutoplay": "Peata automaatne esitus",
+        "carouselNavigation": "Karusselli navigatsioon",
+        "carouselControls": "Karusselli kontrollid",
+        "slideNavigation": "Slaidide navigatsioon",
+        "imageCarousel": "Piltide karussell",
+        "contentCarousel": "Sisu karussell",
+        "gallery": "Galerii",
+        "photoGallery": "Fotogalerii",
+        "imageGallery": "Piltide galerii",
+        "slideshow": "Slaidiesitus",
+        "presentation": "Esitlus",
+        "showcase": "Vitriin",
+        "browseImages": "Sirvi pilte",
+        "viewImages": "Vaata pilte",
+        "navigateSlides": "Navigeerige slaide",
+        "slideCount": "{{count}} slaidi",
+        "slideCountSingular": "{{count}} slaid",
+        "slideCountPlural": "{{count}} slaidi",
+        "accessibility": {
+          "carousel": "Karussell",
+          "slide": "Slaid",
+          "currentSlide": "Praegune slaid, slaid {{number}}",
+          "previousSlide": "Eelmine slaid",
+          "nextSlide": "Järgmine slaid",
+          "goToSlide": "Mine slaidile {{number}}",
+          "slideCount": "Slaid {{current}} {{total}}-st",
+          "carouselNavigation": "Karusselli navigatsioonikontrollid",
+          "slideNavigation": "Slaidide navigatsioonikontrollid",
+          "autoplayEnabled": "Automaatne esitus lubatud",
+          "autoplayDisabled": "Automaatne esitus keelatud",
+          "autoplayPaused": "Automaatne esitus peatatud",
+          "autoplayStopped": "Automaatne esitus peatatud"
+        }
+      },
+      "form": {
+        "title": "Vorm",
+        "description": "Vorm valideerimise ja veakäsitlusega",
+        "label": "Silt",
+        "placeholder": "Kohatäitja",
+        "description": "Kirjeldus",
+        "error": "Viga",
+        "success": "Edu",
+        "warning": "Hoiatus",
+        "info": "Teave",
+        "required": "Kohustuslik",
+        "optional": "Valikuline",
+        "submit": "Esita",
+        "cancel": "Tühista",
+        "save": "Salvesta",
+        "reset": "Lähtesta",
+        "clear": "Tühjenda",
+        "loading": "Laen...",
+        "saving": "Salvestan...",
+        "submitting": "Esitan...",
+        "validating": "Valideerin...",
+        "accessibility": {
+          "form": "Vorm",
+          "field": "Vormiväli",
+          "required": "Kohustuslik väli",
+          "optional": "Valikuline väli",
+          "error": "Väljal on viga",
+          "success": "Väli on kehtiv",
+          "warning": "Väljal on hoiatus",
+          "description": "Välja kirjeldus",
+          "label": "Välja silt"
+        },
+        "validation": {
+          "required": "See väli on kohustuslik",
+          "invalid": "See väli on kehtetu",
+          "minLength": "Peab olema vähemalt {{min}} tähemärki",
+          "maxLength": "Ei tohi olla rohkem kui {{max}} tähemärki",
+          "minValue": "Peab olema vähemalt {{min}}",
+          "maxValue": "Ei tohi olla rohkem kui {{max}}",
+          "pattern": "Peab vastama nõutud mustrile",
+          "email": "Peab olema kehtiv e-posti aadress",
+          "url": "Peab olema kehtiv URL",
+          "phone": "Peab olema kehtiv telefoninumber",
+          "date": "Peab olema kehtiv kuupäev",
+          "time": "Peab olema kehtiv aeg",
+          "number": "Peab olema kehtiv number",
+          "integer": "Peab olema täisarv",
+          "positive": "Peab olema positiivne number",
+          "negative": "Peab olema negatiivne number",
+          "between": "Peab olema vahemikus {{min}} kuni {{max}}",
+          "oneOf": "Peab olema üks lubatud väärtustest",
+          "custom": "Kehtetu väärtus",
+          "unknown": "Tundmatu valideerimise viga"
+        },
+        "errors": {
+          "general": "Palun parandage vormis olevad vead",
+          "network": "Võrguviga",
+          "server": "Serveri viga",
+          "timeout": "Päring aegus",
+          "unauthorized": "Teil pole luba selle toimingu tegemiseks",
+          "forbidden": "Juurdepääs keelatud",
+          "notFound": "Ressurss ei leitud",
+          "conflict": "Ressursi konflikt",
+          "validation": "Valideerimine ebaõnnestus",
+          "unknown": "Tundmatu viga"
+        },
+        "messages": {
+          "saved": "Vorm edukalt salvestatud",
+          "submitted": "Vorm edukalt esitatud",
+          "updated": "Vorm edukalt uuendatud",
+          "deleted": "Vorm edukalt kustutatud",
+          "created": "Vorm edukalt loodud",
+          "loaded": "Vorm edukalt laaditud",
+          "reset": "Vorm edukalt lähtestatud",
+          "cleared": "Vorm edukalt tühjendatud"
+        }
+      },
+      "breadcrumb": {
+        "title": "Navigatsiooni leivapuru",
+        "description": "Navigatsiooni leivapuru, mis näitab praegust asukohta",
+        "separator": "Eraldaja",
+        "ellipsis": "Rohkem",
+        "currentPage": "Praegune leht",
+        "home": "Avaleht",
+        "back": "Tagasi",
+        "previous": "Eelmine",
+        "next": "Järgmine",
+        "navigation": "Navigatsioon",
+        "location": "Asukoht",
+        "path": "Tee",
+        "breadcrumb": "Leivapuru",
+        "breadcrumbs": "Leivapuru",
+        "separatorText": "Eraldaja",
+        "separatorDescription": "Eraldaja leivapuru elementide vahel",
+        "ellipsisText": "Rohkem elemente",
+        "ellipsisDescription": "Rohkem leivapuru elemente saadaval",
+        "accessibility": {
+          "breadcrumb": "Leivapuru navigatsioon",
+          "currentPage": "Praegune leht",
+          "separator": "Eraldaja",
+          "ellipsis": "Rohkem elemente",
+          "navigation": "Leivapuru navigatsioon",
+          "location": "Praegune asukoht",
+          "path": "Navigatsioonitee",
+          "item": "Leivapuru element",
+          "link": "Leivapuru link",
+          "page": "Praegune leht"
+        },
+        "separators": {
+          "chevron": "Noolekujuline",
+          "slash": "Kaldkriips",
+          "arrow": "Nool",
+          "greaterThan": "Suurem kui",
+          "dash": "Sidekriips",
+          "dot": "Punkt",
+          "pipe": "Toru",
+          "default": "Vaikimisi eraldaja"
+        },
+        "messages": {
+          "navigateTo": "Navigeerige {{item}}",
+          "currentLocation": "Praegune asukoht: {{location}}",
+          "breadcrumbPath": "Leivapuru tee: {{path}}",
+          "moreItems": "Rohkem elemente saadaval",
+          "separatorBetween": "Eraldaja {{item1}} ja {{item2}} vahel"
+        }
+      }
+    },
+    "auth": {
+      "protectedApplication": "Kaitstud rakendus",
+      "protectedApplicationDesc": "See rakendus on kaitstud. Palun sisestage parool juurdepääsuks.",
+      "incorrectPassword": "Vale parool. Palun proovige uuesti.",
+      "password": "Parool",
+      "enterPassword": "Sisestage oma parool",
+      "accessApplication": "Juurdepääs rakendusele"
+    },
+    "routeErrorBoundary": {
+      "code_1": "Vea kood: ",
+      "reload_page_2": "Laadi leht uuesti",
+      "technical_details_3": "Tehnilised üksikasjad",
+      "pageNotFound": "Lehte ei leitud",
+      "errorLoadingPage": "Lehe laadimise viga",
+      "pageNotFoundDescription": "Otsitud lehte ei eksisteeri või on see teisaldatud.",
+      "errorLoadingPageDescription": "Lehe laadimisel ilmnes viga.",
+      "unknownError": "Tundmatu viga",
+      "home": "Avaleht",
+      "errorDetails": "Vea üksikasjad",
+      "errorLogging": "Vea logimise üksikasjad",
+      "timestamp": "Ajatempel",
+      "errorMessage": "Vea sõnum",
+      "errorStatus": "Vea staatus",
+      "errorDetailsLabel": "Vea üksikasjad",
+      "location": "Asukoht",
+      "consoleLog": "Viga logitud konsooli",
+      "actions": {
+        "goHome": "Mine avalehele",
+        "reloadPage": "Laadi praegune leht uuesti",
+        "viewDetails": "Vaata tehnilisi üksikasju",
+        "hideDetails": "Peida üksikasjad"
+      },
+      "messages": {
+        "errorCaught": "Viga püütud RouteErrorBoundary poolt",
+        "errorLogged": "Vea üksikasjad on logitud",
+        "contactSupport": "Kui see viga püsib, võtke ühendust toega"
+      }
+    }
   },
   "settings": {
     "title": "Seaded",
@@ -498,6 +1396,668 @@
       "profileUpdated": "Profiil edukalt uuendatud.",
       "passwordUpdated": "Parool edukalt uuendatud."
     }
+  },
+  "executorManagement": {
+    "failed_to_load_executors_2": "Täideviijate laadimine ebaõnnestus",
+    "user_not_found_with_this_email_3": "Selle e-posti aadressiga kasutajat ei leitud",
+    "this_person_is_already_designa_4": "See isik on juba määratud täideviijaks",
+    "failed_to_add_executor_5": "Täideviija lisamine ebaõnnestus",
+    "failed_to_remove_executor_6": "Täideviija eemaldamine ebaõnnestus",
+    "loading_executors_7": "Laen täideviijaid...",
+    "executor_management_8": "Täideviija haldamine",
+    "designate_trusted_individuals__9": "Määrake usaldusväärsed isikud, kes aitavad hallata teie asju ja toetada teie lähedasi",
+    "add_new_executor_10": "Lisa uus täideviija",
+    "email_address_11": "E-posti aadress",
+    "executor_example_com_12": "executor@example.com",
+    "relationship_type_13": "Suhte tüüp",
+    "primary_executor_14": "Peamine täideviija",
+    "secondary_executor_15": "Sekundaarne täideviija",
+    "emergency_contact_16": "Hädaolukorra kontakt",
+    "current_executors_17": "Praegused täideviijad",
+    "no_executors_designated_yet_ad_18": "Täideviijaid pole veel määratud. Lisage keegi, keda usaldate, et aidata hallata teie asju.",
+    "important_information_19": "Oluline teave",
+    "primary_executors_receive_imme_20": "Peamised täideviijad saavad kohese juurdepääsu teie varamule, kui seda vajatakse",
+    "secondary_executors_are_notifi_21": "Sekundaarsed täideviijad teavitatakse, kuid neil on piiratud juurdepääs",
+    "emergency_contacts_are_notifie_22": "Hädaolukorra kontaktid teavitatakse ainult kiireloomulistes olukordades",
+    "all_executors_must_have_legacy_23": "Kõikidel täideviijatel peab olema LegacyGuard kontod, et pääseda ligi teie teabele",
+    "successMessages": {
+      "executorAdded": "Täideviija edukalt lisatud",
+      "executorRemoved": "Täideviija edukalt eemaldatud"
+    },
+    "validationMessages": {
+      "emailRequired": "E-posti aadress on kohustuslik",
+      "invalidEmail": "Palun sisestage kehtiv e-posti aadress",
+      "relationshipTypeRequired": "Suhte tüüp on kohustuslik"
+    },
+    "statusLabels": {
+      "adding": "Lisan...",
+      "addExecutor": "Lisa täideviija",
+      "unknownUser": "Tundmatu kasutaja"
+    }
+  },
+  "documentUploader": {
+    "smart_document_upload_2": "Tark dokumendi üleslaadimine",
+    "upload_any_document_and_our_ai_3": "Laadige üles mis tahes dokument ja meie AI klassifitseerib selle automaatselt teie jaoks",
+    "please_upload_an_image_or_pdf__1": "Palun laadige üles pilt või PDF fail",
+    "image_application_pdf_4": "image/*,application/pdf",
+    "0_0_48_48_5": "0 0 48 48",
+    "m24_12v12m0_0l_4_4m4_4l4_4m10__6": "M24 12v12m0 0l-4 4m4-4l4 4m10-6",
+    "drop_your_document_here_or_cli_7": "Kukutage oma dokument siia või klõpsake sirvimiseks",
+    "supports_images_and_pdfs_up_to_8": "Toetab pilte ja PDF-e kuni 10MB",
+    "document_analysis_complete_10": "Dokumendi analüüs lõpetatud",
+    "document_type_11": "Dokumendi tüüp",
+    "suggested_title_12": "Soovituslik pealkiri",
+    "confidence": "Usaldusväärsus",
+    "ai_analysis_13": "AI analüüs",
+    "continue_with_this_classificat_14": "Jätka selle klassifitseerimisega",
+    "change_category_15": "Muuda kategooriat",
+    "documents_we_can_process_16": "Dokumendid, mida saame töödelda:",
+    "insurance_policies_life_health_17": "Kindlustuspoliisid (elu, tervis, kodu, auto)",
+    "property_deeds_and_titles_18": "Kinnisvara omandiõiguse tunnistused ja tiitlid",
+    "vehicle_ownership_documents_19": "Sõiduki omandiõiguse dokumendid",
+    "bank_and_investment_statements_20": "Panga ja investeerimise väljavõtted",
+    "wills_and_estate_planning_docu_21": "Testamendid ja pärandi planeerimise dokumendid",
+    "business_contracts_and_ownersh_22": "Ärilepingud ja omandiõiguse paberid",
+    "personal_identification_docume_23": "Isiklikud identifitseerimisdokumendid",
+    "tax_returns_and_documents_24": "Maksudeklaratsioonid ja dokumendid",
+    "categoryDescriptions": {
+      "insurance_policy": "Elu, tervis, kodu, auto või puude kindlustus",
+      "property_deed": "Kinnisvara omandiõiguse dokumendid ja omandiõiguse tunnistused",
+      "vehicle_title": "Auto, paadi või muu sõiduki omandiõiguse paberid",
+      "bank_statement": "Pangakonto väljavõtted ja dokumendid",
+      "investment_statement": "Investeerimise ja pensionikonto väljavõtted",
+      "will_or_trust": "Testamendid, usaldused ja pärandi planeerimise dokumendid",
+      "business_document": "Äri omand ja olulised lepingud",
+      "personal_id": "Passid, litsentsid, sünnitunnistused",
+      "tax_document": "Maksudeklaratsioonid ja seotud dokumendid",
+      "medical_document": "Meditsiinilised kirjed ja tervishoiu juhised",
+      "other": "Muud olulised dokumendid"
+    },
+    "errors": {
+      "fileTypeError": "Palun laadige üles pilt või PDF fail",
+      "processingError": "Dokumendi töötlemine ebaõnnestus",
+      "uploadError": "Dokumendi üleslaadimine ebaõnnestus",
+      "classificationError": "Dokumendi klassifitseerimine ebaõnnestus"
+    }
+  },
+  "dynamicAssetForm": {
+    "propertyAddress": "Kinnisvara aadress",
+    "purchaseDate": "Ostu kuupäev",
+    "purchasePrice": "Ostu hind",
+    "currentEstimatedValue": "Praegune hinnanguline väärtus",
+    "mortgageInformation": "Hüpoteegi teave",
+    "locationOfPropertyDocuments": "Kinnisvara dokumentide asukoht",
+    "locationAddress": "Asukoht / Aadress",
+    "size": "Suurus (aakrid/jalga²)",
+    "zoningType": "Tsoonimise tüüp",
+    "currentUse": "Praegune kasutus",
+    "bankName": "Panga nimi",
+    "accountType": "Konto tüüp",
+    "selectAccountType": "Valige konto tüüp",
+    "checking": "Võlakirja",
+    "savings": "Säästud",
+    "moneyMarket": "Rahaturg",
+    "certificateOfDeposit": "Hoiuse sertifikaat",
+    "accountHolderName": "Konto omaniku nimi(d)",
+    "accountNumberLast4": "Konto number (viimased 4 numbrit)",
+    "routingNumber": "Marsruutimise number",
+    "brokerageFirm": "Maklerifirma",
+    "accountNumber": "Konto number",
+    "individual": "Individuaalne",
+    "joint": "Ühine",
+    "ira": "IRA",
+    "rothIra": "Roth IRA",
+    "401k": "401(k)",
+    "approximateValue": "Hinnanguline väärtus",
+    "financialAdvisor": "Finantsnõunik (kui on)",
+    "walletNameLabel": "Rahakoti nimi/silt",
+    "walletType": "Rahakoti tüüp",
+    "selectWalletType": "Valige rahakoti tüüp",
+    "hardwareWallet": "Riistvara rahakott",
+    "softwareWallet": "Tarkvara rahakott",
+    "exchangeWallet": "Vahetuse rahakott",
+    "paperWallet": "Paberirahakott",
+    "cryptocurrenciesHeld": "Heldetud krüptorahad",
+    "locationOfSeedPhrase": "Seed fraasi/privaatvõtmete asukoht",
+    "exchangeInformation": "Vahetuse teave (kui kohaldub)",
+    "makeAndModel": "Mark ja mudel",
+    "year": "Aasta",
+    "vinNumber": "VIN number",
+    "licensePlate": "Numbrimärk",
+    "loanInformation": "Laenu teave (kui on)",
+    "locationOfTitle": "Tiitli asukoht",
+    "platformWebsiteName": "Platvormi/veebisaidi nimi",
+    "accountEmail": "Konto e-post/kasutajanimi",
+    "accountPurpose": "Konto eesmärk/kirjeldus",
+    "recoveryInformation": "Taastamise teave",
+    "faMethod": "2FA meetod (kui lubatud)",
+    "itemDescription": "Eseme kirjeldus",
+    "appraisedValue": "Hinnatud väärtus",
+    "lastAppraisalDate": "Viimase hinnangu kuupäev",
+    "storageLocation": "Salvestamise asukoht",
+    "insuranceInformation": "Kindlustuse teave",
+    "sentimentalValue": "Sentimentaalne väärtus/ajalugu",
+    "assetName": "Vara nimi",
+    "estimatedValue": "Hinnanguline väärtus",
+    "description": "Kirjeldus",
+    "locationAccessInformation": "Asukoht/Juurdepääsu teave",
+    "addSubType": "Lisa {subType}",
+    "cancel": "Tühista",
+    "saveAsset": "Salvesta vara",
+    "placeholders": {
+      "123_main_st_city_state_zip_1": "123 Main St, City, State, ZIP",
+      "lender_name_account_number_rem_2": "Laenuandja nimi, konto number, järelejäänud saldo",
+      "e_g_safe_deposit_box_filing_ca_3": "nt Seif, failikapp",
+      "property_location_or_parcel_nu_4": "Kinnisvara asukoht või krundi number",
+      "e_g_10_acres_5": "nt 10 aakrit, 5000 jalga²",
+      "e_g_commercial_agricultural_6": "nt Kaubanduslik, Põllumajanduslik, Elamisasula",
+      "describe_current_use_of_the_pr_7": "Kirjeldage kinnisvara praegust kasutust",
+      "e_g_chase_bank_8": "nt Chase Bank, Wells Fargo",
+      "john_doe_9": "John Doe",
+      "1234_10": "1234",
+      "e_g_fidelity_vanguard_11": "nt Fidelity, Vanguard, Charles Schwab",
+      "account_number_12": "Konto number",
+      "name_and_contact_information_13": "Nimi ja kontaktandmed",
+      "e_g_main_bitcoin_wallet_14": "nt Peamine Bitcoin rahakott",
+      "e_g_bitcoin_ethereum_15": "nt Bitcoin, Ethereum, Litecoin",
+      "do_not_enter_the_actual_seed_p_16": "Ärge sisestage siia tegelikku seed fraasi",
+      "exchange_name_and_account_emai_17": "Vahetuse nimi ja konto e-post",
+      "e_g_toyota_camry_18": "nt Toyota Camry, Honda Civic",
+      "vehicle_identification_number_19": "Sõiduki identifitseerimise number",
+      "lender_account_number_payoff_a_20": "Laenuandja, konto number, tasumise summa",
+      "e_g_safe_deposit_box_21": "nt Seif, kodu seif",
+      "e_g_gmail_facebook_22": "nt Gmail, Facebook, LinkedIn",
+      "user_example_com_23": "user@example.com",
+      "what_this_account_is_used_for_24": "Milleks seda kontot kasutatakse",
+      "recovery_email_phone_or_securi_25": "Taastamise e-post, telefon või turvaküsimused",
+      "e_g_sms_to_phone_ending_in_123_26": "nt SMS telefonile, mis lõpeb 123-ga",
+      "e_g_diamond_engagement_ring_27": "nt Teemant kihlasõrmus, kuld kaelakee",
+      "e_g_home_safe_bank_deposit_box_28": "nt Kodu seif, panga seif",
+      "policy_number_and_company_29": "Poliisi number ja ettevõte",
+      "special_meaning_or_history_of__30": "Selle eseme eriline tähendus või ajalugu",
+      "name_or_description_of_asset_31": "Vara nimi või kirjeldus",
+      "detailed_description_of_the_as_32": "Vara üksikasjalik kirjeldus",
+      "where_to_find_this_asset_or_ho_33": "Kust leida seda vara või kuidas pääseda ligi"
+    }
+  },
+  "editStoryModal": {
+    "editStory": "Muuda lugu",
+    "addStory": "Lisa lugu",
+    "description": "Jagage lugu \"{{assetName}}\" taga. See isiklik puute on väärtuslik teie lähedastele.",
+    "fields": {
+      "yourStory": "Teie lugu"
+    },
+    "placeholders": {
+      "story": "nt See oli teie vanaema abielusõrmus, mis anti talle 1952. aastal, kui ta abiellus teie vanaisaga nende kodulinna väikses kirikus. Ta kandis seda iga päev 65 aastat..."
+    },
+    "hints": {
+      "shareMemories": "Jagage mälestusi, tähtsust või ajalugu"
+    },
+    "tips": {
+      "title": "Näpunäited mõtestatud loo jaoks:",
+      "explainSpecial": "Selgitage, miks see ese on teile eriline",
+      "shareMemories": "Jagage sellega seotud mälestusi",
+      "describeHistory": "Kirjeldage selle ajalugu või kuidas teie selle omandasite",
+      "mentionWishes": "Mainige soove, kuidas seda peaks kasutama või säilitama"
+    },
+    "saving": "Salvestan...",
+    "saveStory": "Salvesta lugu",
+    "messages": {
+      "saved": "Lugu edukalt salvestatud"
+    },
+    "errors": {
+      "notAuthenticated": "Loo salvestamiseks peate olema sisse logitud",
+      "saveFailed": "Loo salvestamine ebaõnnestus"
+    }
+  },
+  "dataTransparency": {
+    "loadingMessage": "Laen teie andmete läbipaistvuse teavet...",
+    "loadingError": "Läbipaistvuse andmete laadimine pole võimalik. Palun proovige hiljem uuesti.",
+    "title": "Teie andmed, teie kontroll",
+    "description": "Me usume täielikku läbipaistvusse. Siin on täpselt, kuidas me käsitleme teie teavet.",
+    "dataFlow": {
+      "whereDataLives": "Kus teie andmed asuvad",
+      "collection": "Kogumine",
+      "storage": "Salvestamine",
+      "processing": "Töötlemine",
+      "sharing": "Jagamine"
+    },
+    "recentActivity": {
+      "title": "Viimane tegevus",
+      "premiumTitle": "Avage oma püsiv jälgimise logi",
+      "premiumText": "Teie 30-päevane operatsioonilog pakub põhilist turvalisust. Maksimaalse vastutuse ja rahu saamiseks uuendage Command paketile, et säilitada täielik, muutmata auditiajalugu igast toimingust teie varamus, igavesti."
+    },
+    "dataOwnership": {
+      "title": "Andmete omand",
+      "description": "Teie omate oma andmeid, alati. Saate alla laadida täieliku koopia igal ajal.",
+      "downloadButton": "Laadi alla minu andmete arhiiv"
+    }
+  },
+  "createTimeCapsuleModal": {
+    "title": "Loo ajakapsel",
+    "titleCreate": "Loo ajakapsel",
+    "titleEdit": "Muuda ajakapslit",
+    "description": "Looge sõnum, mis saadetakse teie lähedastele tulevikus.",
+    "errors": {
+      "noTitle": "Palun sisestage oma ajakapsli pealkiri.",
+      "noRecipients": "Palun valige vähemalt üks saaja.",
+      "noUnlockDate": "Palun valige avamise kuupäev.",
+      "noMessage": "Palun sisestage oma sõnum.",
+      "noFile": "Palun laadige fail üles.",
+      "updateFailed": "Ajakapsli uuendamine ebaõnnestus.",
+      "saveFailed": "Ajakapsli salvestamine ebaõnnestus.",
+      "fileTooLarge": "Faili suurus peab olema väiksem kui 50MB.",
+      "invalidFileType": "Kehtetu faili tüüp {{messageType}} jaoks."
+    },
+    "success": {
+      "updated": "Ajakapsel uuendatud!",
+      "created": "Ajakapsel loodud!"
+    },
+    "labels": {
+      "title": "Pealkiri",
+      "messageType": "Sõnumi tüüp",
+      "recipients": "Saajad",
+      "deliveryQuestion": "Millal peaks see sõnum kohale toimetatud olema?",
+      "unlockDate": "Ava kuupäev",
+      "yourMessage": "Teie sõnum",
+      "uploadFile": "Laadi üles {{messageType}}"
+    },
+    "placeholders": {
+      "title": "nt Teie 18. sünnipäevaks",
+      "message": "Kirjutage oma südamlik sõnum siia...",
+      "selectDate": "Valige kuupäev"
+    },
+    "messageTypes": {
+      "text": "Tekstisõnum",
+      "photo": "Foto",
+      "video": "Video",
+      "audio": "Heli"
+    },
+    "recipients": {
+      "noTrustedPeople": "Teie pole veel usaldusväärseid inimesi lisatud. Lisage need esmalt oma töölaualt.",
+      "selected": "Valitud"
+    },
+    "unlockConditions": {
+      "onDate": "Konkreetsel kuupäeval",
+      "afterPassing": "Pärast minu surma"
+    },
+    "fileUpload": {
+      "clickToUpload": "Klõpsake üleslaadimiseks",
+      "dragAndDrop": " või lohistage ja kukutage",
+      "maxSize": "Maksimaalne faili suurus: 50MB",
+      "fileSizeMB": "{{size}} MB"
+    },
+    "premium": {
+      "videoMessage": "Videosõnumid on premium funktsioon.",
+      "upgradeNow": "Uuenda nüüd"
+    },
+    "buttons": {
+      "recordVideo": "Salvesta videosõnum",
+      "cancel": "Tühista",
+      "saving": "Salvestan...",
+      "update": "Uuenda ajakapslit",
+      "create": "Loo ajakapsel"
+    },
+    "characterCount": "{{count}}/{{max}} tähemärki"
+  },
+  "complexityReduction": {
+    "title": "Lihtsustage oma pärandi planeerimist",
+    "subtitle": "Jagage keerukad ülesanded lihtsateks, hallatavateks sammudeks",
+    "description": "Me mõistame, et tuleviku planeerimine võib tunduda ülekoormavana. Meie keerukuse vähendamise süsteem jagab iga ülesande lihtsateks, teostatavateks sammudeks, mis võtavad ainult minutid.",
+    "benefits": {
+      "title": "Miks keerukuse vähendamine töötab",
+      "overwhelm": {
+        "title": "Võtab ära ülekoormuse",
+        "description": "Suure to-do nimekirja asemel teete ühe väikese ülesande korraga. Iga samm on disainitud lõpetamiseks alla 5 minuti."
+      },
+      "progress": {
+        "title": "Nähtav edenemine",
+        "description": "Vaadake oma pere ettevalmistuse kasvu iga lõpetatud sammuga. Jälgige oma edenemist ja tähistage väikeseid võite mööda teed."
+      },
+      "confidence": {
+        "title": "Ehitab usaldust",
+        "description": "Iga lõpetatud sammuga tunnete end rohkem usaldusväärsena ja kontrollis. Mis kunagi tundus võimatu, muutub saavutatavaks."
+      },
+      "family": {
+        "title": "Pere kaitse",
+        "description": "Iga lõpetatud samm kaitseb otseselt teie peret. Hädaolukorra juurdepääsust pikaajalise planeerimiseni, iga tegevus on oluline."
+      }
+    },
+    "steps": {
+      "identifyBankAccount": {
+        "title": "Tuvastage oma peamine pangakonto",
+        "why": "Miks see on oluline: Kohene juurdepääs vahenditele hädaolukordades",
+        "whatYouDo": "Mida teete: Teete foto või kirjutate konto teabe üles",
+        "whatWeDo": "Mida me teeme: Salvestame teabe turvaliselt ja loome juurdepääsujuhised",
+        "timeRequired": "Vajalik aeg: 2 minutit",
+        "complexity": "Keerukuse tase: Lihtne"
+      },
+      "emergencyContacts": {
+        "title": "Loetlege hädaolukorra kontaktid",
+        "why": "Miks see on oluline: Kiire juurdepääs olulistele inimestele kriiside ajal",
+        "whatYouDo": "Mida teete: Lisate telefoninumbrid ja suhted",
+        "whatWeDo": "Mida me teeme: Korraldame kontaktid prioriteedi järgi ja loome hädaolukorra protokollid",
+        "timeRequired": "Vajalik aeg: 3 minutit",
+        "complexity": "Keerukuse tase: Lihtne"
+      },
+      "insurancePolicies": {
+        "title": "Dokumenteerige kindlustuspoliisid",
+        "why": "Miks see on oluline: Tagab, et nõuded saab esitada kiiresti ja õigesti",
+        "whatYouDo": "Mida teete: Laadige üles poliisi dokumendid või teete fotosid",
+        "whatWeDo": "Mida me teeme: Eraldame võtmeteabe ja loome nõude juhised",
+        "timeRequired": "Vajalik aeg: 5 minutit",
+        "complexity": "Keerukuse tase: Lihtne"
+      },
+      "digitalAssets": {
+        "title": "Turvalise digitaalsed varad",
+        "why": "Miks see on oluline: Kaitseb veebikontosid ja digitaalseid mälestusi",
+        "whatYouDo": "Mida teete: Loetlete olulised kontod ja paroolid",
+        "whatWeDo": "Mida me teeme: Loome turvalised juurdepääsu protokollid ja varukoopia juhised",
+        "timeRequired": "Vajalik aeg: 4 minutit",
+        "complexity": "Keerukuse tase: Lihtne"
+      },
+      "legalDocuments": {
+        "title": "Korraldage juriidilised dokumendid",
+        "why": "Miks see on oluline: Tagab, et juriidilisi soove järgitakse ja protsessid on sujuvad",
+        "whatYouDo": "Mida teete: Laadige üles testamendid, volikirjad ja muud dokumendid",
+        "whatWeDo": "Mida me teeme: Loome kokkuvõtted ja tagame õige juriidilise juurdepääsu",
+        "timeRequired": "Vajalik aeg: 6 minutit",
+        "complexity": "Keerukuse tase: Keskmine"
+      },
+      "familyInstructions": {
+        "title": "Kirjutage pere juhised",
+        "why": "Miks see on oluline: Pakub selgeid juhiseid rasketel aegadel",
+        "whatYouDo": "Mida teete: Kirjutate isiklikud sõnumid ja juhised",
+        "whatWeDo": "Mida me teeme: Korraldame sõnumid ja loome kohaletoimetamise ajakavad",
+        "timeRequired": "Vajalik aeg: 8 minutit",
+        "complexity": "Keerukuse tase: Keskmine"
+      }
+    },
+    "actions": {
+      "startThisStep": "Alusta seda sammu",
+      "showMeHow": "Näita mulle kuidas",
+      "iNeedHelp": "Vajan abi",
+      "nextStep": "Järgmine samm",
+      "previousStep": "Eelmine samm",
+      "completeStep": "Märgi lõpetatuks",
+      "skipStep": "Jäta vahele praegu"
+    },
+    "progress": {
+      "title": "Teie edenemine",
+      "completed": "Lõpetatud",
+      "inProgress": "Pooleli",
+      "notStarted": "Alustamata",
+      "totalSteps": "Sammud kokku",
+      "estimatedTime": "Hinnanguline järelejäänud aeg"
+    },
+    "features": {
+      "title": "Kuidas keerukuse vähendamine töötab",
+      "stepByStep": {
+        "title": "Sammud-sammult juhendamine",
+        "description": "Iga ülesanne on jagatud selgeteks, lihtsateks juhisteks, mida igaüks saab järgida."
+      },
+      "timeEstimation": {
+        "title": "Täpsed aja hinnangud",
+        "description": "Teate täpselt, kui kaua iga samm võtab, 2 minutist kuni 15 minutini maksimaalselt."
+      },
+      "difficultyLevels": {
+        "title": "Selged raskusastmed",
+        "description": "Lihtne, Kerge, Keskmine ja Keeruline hinnangud aitavad teil valida, mida esimesena teha."
+      },
+      "progressTracking": {
+        "title": "Edenemise jälgimine",
+        "description": "Vaadake oma pere ettevalmistuse kasvu iga lõpetatud sammuga."
+      },
+      "helpAvailable": {
+        "title": "Abi, kui seda vajate",
+        "description": "Saate abi, selgitusi ja tuge igale sammule, mis tundub väljakutse."
+      }
+    }
+  },
+  "beneficiaryCommunications": {
+    "title": "Pärija kommunikatsioon",
+    "description": "Jälgige kõiki kommunikatsioone pärijatega",
+    "logCommunication": "Logi kommunikatsioon",
+    "logAction": "Logitud kommunikatsioon {name}ga",
+    "dialog": {
+      "title": "Logi kommunikatsioon",
+      "description": "Salvestage oma kommunikatsiooni üksikasjad pärijaga"
+    },
+    "fields": {
+      "beneficiaryName": "Pärija nimi",
+      "email": "E-post",
+      "type": "Tüüp",
+      "date": "Kuupäev",
+      "subject": "Teema",
+      "summary": "Kokkuvõte"
+    },
+    "placeholders": {
+      "subject": "Kommunikatsiooni lühike teema",
+      "summary": "Üksikasjalik kokkuvõte sellest, millest räägiti"
+    },
+    "types": {
+      "email": "E-post",
+      "phone": "Telefon",
+      "letter": "Kiri",
+      "inPerson": "Isiklikult",
+      "in_person": "Isiklikult",
+      "other": "Muu"
+    },
+    "actions": {
+      "cancel": "Tühista",
+      "saving": "Salvestan...",
+      "save": "Salvesta kommunikatsioon"
+    },
+    "empty": {
+      "title": "Kommunikatsioone pole veel logitud",
+      "subtitle": "Klõpsake 'Logi kommunikatsioon', et salvestada oma esimene suhtlus"
+    }
+  },
+  "annualReview": {
+    "title": "Aastane pärandi ülevaatus",
+    "subtitle": "Hoidke oma pere kaitseplaani ajakohane ja tõhus",
+    "description": "Elu muutub kiiresti. See aastane ülevaatus tagab, et teie pärandiplaan jääb kooskõlla teie praeguse olukorra ja soovidega.",
+    "progress": {
+      "title": "Ülevaatuse edenemine",
+      "completed": "Lõpetatud",
+      "inProgress": "Pooleli",
+      "notStarted": "Alustamata",
+      "totalSteps": "Sammud kokku",
+      "estimatedTime": "Hinnanguline aeg: 15 minutit"
+    },
+    "step1": {
+      "title": "Vaadake üle oma täideviijad",
+      "description": "Kinnitage, et teie usaldusväärsed inimesed on endiselt õiged valikud teie perele"
+    },
+    "step2": {
+      "title": "Vaadake üle oma varad",
+      "description": "Kinnitage, et teie vara inventuur on ajakohane ja täielik"
+    },
+    "step3": {
+      "title": "Vaadake üle oma pärijad",
+      "description": "Veenduge, et teie pärijad on endiselt õiged inimesed"
+    },
+    "step4": {
+      "title": "Lõpeta ülevaatus",
+      "description": "Viimistlege oma aastane ülevaatus ja uuendage oma plaan"
+    },
+    "commandRoster": {
+      "title": "Käskude nimekirja ülevaatus",
+      "description": "Teie täideviijad ja usaldusväärsed inimesed on teie pere kaitseplaani alus.",
+      "executorQuestion": "Kas {name} on endiselt õige isik teie täideviijaks?",
+      "guardianQuestion": "Kas {name} on endiselt õige isik teie laste eest hoolitsema?",
+      "trustedPersonQuestion": "Kas {name} on endiselt õige isik {role} jaoks?",
+      "status": {
+        "current": "Ajakohane",
+        "needsUpdate": "Vajab uuendamist",
+        "outdated": "Aegunud",
+        "missing": "Puudub"
+      },
+      "details": {
+        "executor": "Peamine täideviija teie pärandi jaoks",
+        "guardian": "Eestkostja alaealistele lastele",
+        "trustedPerson": "Usaldusväärne isik {accessLevel} juurdepääsuga",
+        "emergencyContact": "Hädaolukorra kontaktisik"
+      }
+    },
+    "armory": {
+      "title": "Vara inventuuri ülevaatus",
+      "description": "Teie varad on see, mida teie kaitstes. Hoidke see inventuur ajakohane.",
+      "ownershipQuestion": "Kas teie endiselt omate {assetName}?",
+      "valueQuestion": "Kas {assetName} väärtus on oluliselt muutunud?",
+      "locationQuestion": "Kas {assetName} asukoht on endiselt õige?",
+      "status": {
+        "current": "Ajakohane",
+        "needsUpdate": "Vajab uuendamist",
+        "outdated": "Aegunud",
+        "missing": "Puudub"
+      },
+      "categories": {
+        "realEstate": "Kinnisvara",
+        "vehicles": "Sõidukid",
+        "bankAccounts": "Pangakontod",
+        "investments": "Investeeringud",
+        "insurance": "Kindlustus",
+        "digitalAssets": "Digitaalsed varad",
+        "personalItems": "Isiklikud esemed"
+      }
+    },
+    "beneficiaries": {
+      "title": "Pärija ülevaatus",
+      "description": "Veenduge, et õiged inimesed saavad õiged varad õigel ajal.",
+      "confirmationQuestion": "Kas need on endiselt õiged inimesed nende varade saamiseks?",
+      "distributionQuestion": "Kas jaotusprotsent on endiselt õige?",
+      "contactQuestion": "Kas {name} kontaktandmed on endiselt ajakohased?",
+      "status": {
+        "current": "Ajakohane",
+        "needsUpdate": "Vajab uuendamist",
+        "outdated": "Aegunud",
+        "missing": "Puudub"
+      },
+      "details": {
+        "primary": "Peamine pärija",
+        "contingent": "Tingimuslik pärija",
+        "percentage": "{percentage}% varadest",
+        "specific": "Konkreetse vara pärija"
+      }
+    },
+    "complete": {
+      "title": "Ülevaatus lõpetatud",
+      "description": "Teie aastane ülevaatus on edukalt lõpetatud.",
+      "message": "Teie aastane ülevaatus on lõpetatud. Teie pere kaitseplaan on nüüd ajakohane ja tõhus.",
+      "summary": "Ülevaatuse kokkuvõte",
+      "changes": "Tehtud muudatused",
+      "noChanges": "Muudatusi ei olnud vaja. Teie plaan on ajakohane.",
+      "nextReview": "Järgmine ülevaatus",
+      "reminder": "Meenutame teile, kui on aeg järgmiseks aastaseks ülevaatuseks."
+    },
+    "buttons": {
+      "confirm": "Kinnita",
+      "update": "Uuenda",
+      "back": "Tagasi",
+      "next": "Järgmine",
+      "finish": "Lõpeta ülevaatus",
+      "save": "Salvesta muudatused",
+      "skip": "Jäta vahele praegu",
+      "reviewLater": "Vaata hiljem üle"
+    },
+    "status": {
+      "title": "Ülevaatuse staatus",
+      "overdue": "Üle aja",
+      "dueSoon": "Peagi tuleb",
+      "current": "Ajakohane",
+      "completed": "Lõpetatud",
+      "lastReview": "Viimane ülevaatus",
+      "nextReview": "Järgmine ülevaatus",
+      "daysOverdue": "{days} päeva üle aja",
+      "daysUntilDue": "{days} päeva kuni tuleb"
+    },
+    "notifications": {
+      "reviewDue": "Aastane ülevaatus tuleb",
+      "reviewOverdue": "Aastane ülevaatus üle aja",
+      "reviewCompleted": "Aastane ülevaatus lõpetatud",
+      "changesSaved": "Muudatused edukalt salvestatud",
+      "errorSaving": "Muudatuste salvestamise viga",
+      "reminderSet": "Meeldetuletus seadistatud järgmiseks ülevaatuseks"
+    }
+  },
+  "addLiabilityModal": {
+    "title": "Lisa kohustus",
+    "fields": {
+      "type": "Tüüp",
+      "provider": "Pakkuja",
+      "referenceNumber": "Viitenumber",
+      "paymentFrequency": "Makse sagedus",
+      "notes": "Märkmed"
+    },
+    "placeholders": {
+      "selectType": "Valige tüüp",
+      "provider": "Pakkuja nimi",
+      "referenceNumber": "Viitenumber",
+      "paymentFrequency": "Valige sagedus",
+      "notes": "Lisateave"
+    },
+    "buttons": {
+      "cancel": "Tühista",
+      "add": "Lisa kohustus"
+    },
+    "errors": {
+      "requiredFields": "Kõik väljad on kohustuslikud"
+    },
+    "messages": {
+      "addedSuccessfully": "Kohustus edukalt lisatud"
+    },
+    "types": {
+      "insurancePolicy": "Kindlustuspoliis",
+      "utilityBill": "Kommunaalarve",
+      "propertyTax": "Kinnisvara maks",
+      "subscriptionFee": "Tellimustasu",
+      "maintenanceContract": "Hooldusleping",
+      "loan": "Laen",
+      "leaseAgreement": "Üürileping",
+      "warranty": "Garantii",
+      "other": "Muu"
+    },
+    "frequencies": {
+      "monthly": "Igakuine",
+      "quarterly": "Kvartaalne",
+      "semiAnnually": "Poolaastane",
+      "annually": "Aastane",
+      "oneTime": "Ühekordne",
+      "asNeeded": "Vajadusel"
+    }
+  },
+  "assetType": {
+    "selectType": "Valige {{mainCategory}} tüüp",
+    "primaryResidence": "Põhiline elukoht",
+    "vacationHome": "Puhkekodu",
+    "rentalProperty": "Üürikinnisvara",
+    "land": "Maa",
+    "commercialProperty": "Kaubanduskinnisvara",
+    "bankAccount": "Pangakonto",
+    "investmentPortfolio": "Investeerimisportfell",
+    "cryptocurrencyWallet": "Krüptoraha rahakott",
+    "loanMortgage": "Laen / Hüpoteek",
+    "insurancePolicy": "Kindlustuspoliis",
+    "pensionRetirement": "Pension / Pensionileminek",
+    "car": "Auto",
+    "motorcycle": "Mootorrattas",
+    "boat": "Paat",
+    "rvCamper": "Kodukäija / Kampa",
+    "aircraft": "Lennuk",
+    "onlineAccount": "Veebikonto",
+    "softwareLicense": "Tarkvaralitsents",
+    "domainName": "Domeeninimi",
+    "digitalSubscription": "Digitaalne tellimus",
+    "cryptocurrency": "Krüptoraha",
+    "nft": "NFT",
+    "jewelry": "Ehted",
+    "artCollectibles": "Kunst / Kollektsioonid",
+    "electronics": "Elektroonika",
+    "furniture": "Mööbel",
+    "toolsEquipment": "Tööriistad / Seadmed",
+    "otherValuables": "Muud väärtuslikud asjad",
+    "customAsset": "Kohandatud vara"
   },
   "errors": {
     "dataNotFound": "Nõutud andmeid ei leitud.",
@@ -1423,6 +2983,94 @@
     "errors": {
       "loadFailed": "Tegevusjuhendi laadimine ebaõnnestus.",
       "saveFailed": "Tegevusjuhendi salvestamine ebaõnnestus."
+    }
+  },
+  "notificationSettings": {
+    "notifications_not_supported_1": "Teated pole toetatud",
+    "your_browser_doesn_t_support_p_2": "Teie brauser ei toeta tõuketeateid. Proovige kasutada kaasaegset brauserit nagu Chrome, Firefox või Edge.",
+    "push_notifications_3": "Tõuketeated",
+    "get_notified_about_important_u_4": "Saate teateid olulistest uuendustest ja meeldetuletustest",
+    "enable_notifications_to_receiv_5": "Lubage teated, et saada õigeaegseid hoiatusi dokumentide aegumise, pere uuenduste ja hädaolukorra juurdepääsu katsete kohta.",
+    "notifications_are_enabled_6": "Teated on lubatud",
+    "you_ll_receive_notifications_o_7": "Saate sellel seadmel teateid, kui toimuvad olulised sündmused.",
+    "notification_preferences_8": "Teate eelistused",
+    "choose_which_types_of_notifica_9": "Valige, milliseid teateid soovite saada",
+    "document_expiration_10": "Dokumentide aegumine",
+    "get_alerts_when_important_docu_11": "Saate hoiatusi, kui olulised dokumendid aeguvad",
+    "inactivity_reminders_12": "Mitteaktiivsuse meeldetuletused",
+    "periodic_reminders_to_review_a_13": "Perioodilised meeldetuletused teie teabe ülevaatamiseks ja uuendamiseks",
+    "emergency_access_alerts_14": "Hädaolukorra juurdepääsu hoiatused",
+    "notify_me_when_someone_accesse_15": "Teatage mulle, kui keegi pääseb hädaolukorras minu varamule juurde",
+    "system_updates_16": "Süsteemi uuendused",
+    "new_features_and_important_sys_17": "Uued funktsioonid ja olulised süsteemi teated",
+    "test_notifications_18": "Testi teated",
+    "send_a_test_notification_to_ve_19": "Saadake testteade, et kontrollida, kas kõik töötab",
+    "send_test_notification_20": "Saada testteade",
+    "errors": {
+      "pleaseSignIn": "Palun logige sisse, et lubada teated",
+      "failedToEnable": "Teate lubamine ebaõnnestus",
+      "failedToDisable": "Teate keelamine ebaõnnestus"
+    },
+    "messages": {
+      "preferencesUpdated": "Teate eelistused uuendatud"
+    },
+    "buttons": {
+      "enabling": "Luban...",
+      "enableNotifications": "Luba teated",
+      "disable": "Keela"
+    },
+    "testNotification": {
+      "title": "Teated lubatud!",
+      "body": "Saate nüüd olulisi uuendusi oma pere ettevalmistuse kohta."
+    }
+  },
+  "logLifeEvent": {
+    "title": "Logi elusündmus",
+    "description": "Valige suur elumuutus, et genereerida isikupärastatud kontrollnimekiri oma pere kaitseplaani uuendamiseks.",
+    "eventTypes": {
+      "married_divorced": "Abiellusin / Lahutasin",
+      "new_child": "Sain lapse",
+      "bought_sold_home": "Ostsin / Müüsin kodu",
+      "started_business": "Alustasin ettevõtet",
+      "trusted_person_passed": "Usaldusväärne isik suri",
+      "job_change": "Vahetasin tööd",
+      "moved_location": "Kolisin uude kohta",
+      "inheritance": "Sain pärandi",
+      "retirement": "Jäin pensionile",
+      "health_change": "Oluline tervise muutus",
+      "child_graduated": "Laps lõpetas kooli / Lahkus koju",
+      "career_advancement": "Karjääri edenemine",
+      "financial_windfall": "Rahalise edu",
+      "debt_change": "Oluline võla muutus",
+      "insurance_change": "Kindlustuspoliisi muutus"
+    },
+    "form": {
+      "title": "Logi elusündmus",
+      "description": "Valige suur elumuutus, et genereerida isikupärastatud kontrollnimekiri",
+      "eventSelection": "Vali elusündmus",
+      "eventDescription": "Valige elusündmus, mis kõige paremini kirjeldab teie praegust olukorda",
+      "generateChecklist": "Genereeri kontrollnimekiri",
+      "cancel": "Tühista",
+      "submit": "Esita",
+      "close": "Sulge"
+    },
+    "checklist": {
+      "title": "Isikupärastatud kontrollnimekiri",
+      "description": "Teie elusündmuse põhjal on siin võtmeelemendid, mida peaksite üle vaatama ja uuendama:",
+      "priority": "Prioriteet",
+      "action": "Tegevus",
+      "estimatedTime": "Hinnanguline aeg",
+      "high": "Kõrge",
+      "medium": "Keskmine",
+      "low": "Madal",
+      "completed": "Lõpetatud",
+      "pending": "Ootel"
+    },
+    "notifications": {
+      "eventLogged": "Elusündmus edukalt logitud",
+      "checklistGenerated": "Isikupärastatud kontrollnimekiri genereeritud",
+      "errorLogging": "Viga elusündmuse logimisel",
+      "reminderSet": "Meeldetuletus seadistatud järgnevate tegevuste jaoks"
     }
   },
   "countryLanguage": {},

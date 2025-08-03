@@ -914,6 +914,23 @@
     "dateFormat": {
       "dateNotSet": "Date not set",
       "created": "Created"
+    },
+    "errors": {
+      "textContentRequired": "Text content is required for text messages",
+      "unlockDateRequired": "Unlock date is required when condition is date",
+      "failedToUploadAttachment": "Failed to upload attachment",
+      "failedToCreate": "Failed to create time capsule",
+      "failedToFetch": "Failed to fetch time capsules",
+      "failedToUpdate": "Failed to update time capsule",
+      "failedToDelete": "Failed to delete time capsule",
+      "notFoundOrCannotModify": "Time capsule not found or cannot be modified",
+      "notFoundOrCannotDelete": "Time capsule not found or cannot be deleted",
+      "missingUploadFields": "Missing required fields: fileName, fileType, fileSizeBytes",
+      "invalidFileType": "Invalid file type. Allowed types: webm, mp4, mov",
+      "fileSizeExceeds500MB": "File size exceeds maximum allowed size of 500MB",
+      "premiumRequired": "Premium subscription required",
+      "premiumRequiredMessage": "Video messages are a premium feature. Please upgrade your subscription to use this feature.",
+      "failedToCreateUploadUrl": "Failed to create upload URL"
     }
   },
     "executorToolkit": "Executor's Toolkit",
@@ -922,7 +939,20 @@
     "documents": "Important papers",
     "guardians": "People you trust",
     "family": "Family Hub",
-    "timeCapsule": "Time Capsules",
+    "timeCapsule": {
+      "title": "Time Capsules",
+      "notifications": {
+        "emailSubject": "{{senderName}} has left a message for you",
+        "newMessage": "You have a new message",
+        "loginToView": "Log in to LegacyGuard to view this special message.",
+        "viewMessage": "View Message",
+        "smsNotification": "You can also set notifications via SMS if preferred.",
+        "bestRegards": "Best regards,",
+        "legacyGuardTeam": "The LegacyGuard Team",
+        "inAppTitle": "New message from {{senderName}}",
+        "inAppMessage": "{{senderName}} has left you a time capsule message: \"{{capsuleTitle}}\""
+      }
+    },
     "will": "Your final wishes",
     "consultations": "Legal Consultations",
     "settings": "Settings",
@@ -989,7 +1019,12 @@
     },
     "errors": {
       "missingClerkKey": "Missing Clerk Publishable Key",
-      "errorLoadingApp": "Error loading app"
+      "errorLoadingApp": "Error loading app",
+      "unauthorized": "Unauthorized",
+      "invalidAuthentication": "Invalid authentication",
+      "internalServerError": "Internal server error",
+      "missingRequiredFields": "Missing required fields",
+      "failedToFetchProfile": "Failed to fetch user profile"
     },
     "redirect": {
       "simulationTitle": "Redirect Simulation"
@@ -4454,6 +4489,128 @@
       "checklistGenerated": "Personalized checklist generated",
       "errorLogging": "Error logging life event",
       "reminderSet": "Reminder set for follow-up actions"
+    }
+  },
+  "willGenerator": {
+    "countries": {
+      "GB": "United Kingdom",
+      "DE": "Germany",
+      "FR": "France",
+      "ES": "Spain",
+      "IT": "Italy",
+      "CZ": "Czech Republic",
+      "SK": "Slovakia",
+      "PL": "Poland",
+      "AT": "Austria",
+      "CH": "Switzerland",
+      "NL": "Netherlands",
+      "BE": "Belgium",
+      "LU": "Luxembourg",
+      "LI": "Liechtenstein",
+      "DK": "Denmark",
+      "SE": "Sweden",
+      "FI": "Finland",
+      "NO": "Norway",
+      "IS": "Iceland",
+      "IE": "Ireland",
+      "PT": "Portugal",
+      "GR": "Greece",
+      "HU": "Hungary",
+      "RO": "Romania",
+      "BG": "Bulgaria",
+      "HR": "Croatia",
+      "SI": "Slovenia",
+      "EE": "Estonia",
+      "LV": "Latvia",
+      "LT": "Lithuania",
+      "MT": "Malta",
+      "CY": "Cyprus",
+      "MD": "Moldova",
+      "UA": "Ukraine",
+      "RS": "Serbia",
+      "AL": "Albania",
+      "MK": "North Macedonia",
+      "ME": "Montenegro",
+      "BA": "Bosnia and Herzegovina"
+    },
+    "steps": {
+      "confirmJurisdiction": "Confirm Jurisdiction",
+      "personalInformation": "Personal Information",
+      "executorBeneficiaries": "Executor and Beneficiaries",
+      "reviewGenerate": "Review and Generate",
+      "signConfirm": "Sign and Confirm"
+    },
+    "no_template_found_for_this_jur_1": "No template found for this jurisdiction. Please try another selection.",
+    "failed_to_load_will_template_2": "Failed to load will template. Please check your connection and try again.",
+    "please_confirm_that_you_have_s_3": "Please confirm that you have signed the will.",
+    "console": {
+      "willGenerationCompleted": "Will generation completed successfully."
+    },
+    "confirmCountry": "Please confirm if you are creating a will for {{country}}.",
+    "changeCountry": "Change Country",
+    "select_a_country_4": "Select a country",
+    "fullName": "Full Name",
+    "executionInstructions": "Execution Instructions",
+    "confirmSigned": "Confirm you have signed the document",
+    "finalizeUpload": "Finalize and Upload"
+  },
+  "will": {
+    "title": "Will",
+    "fields": {
+      "notes": "Notes",
+      "status": "Status",
+      "physical_location": "Physical Location",
+      "executor_contact_id": "Executor Contact ID"
+    },
+    "statuses": {
+      "draft": "Draft",
+      "pending_signatures": "Pending Signatures",
+      "completed": "Completed",
+      "needs_revision": "Needs Revision"
+    },
+    "actions": {
+      "save": "Save",
+      "edit": "Edit"
+    },
+    "placeholders": {
+      "notes_placeholder": "Enter any additional notes here..."
+    },
+    "errors": {
+      "unauthorized": "Unauthorized access.",
+      "save_will_failed": "Failed to save the will. Please try again.",
+      "retrieve_will_failed": "Failed to retrieve the will.",
+      "load_template_failed": "Failed to load template.",
+      "not_found": "Will not found.",
+      "failed_to_save": "Failed to save will.",
+      "failed_to_load": "Failed to load will.",
+      "failed_to_retrieve": "Failed to retrieve will.",
+      "failed_to_fetch": "Failed to fetch wills.",
+      "failed_to_generate": "Failed to generate will.",
+      "failed_to_sign": "Failed to sign will.",
+      "failed_to_delete": "Failed to delete will.",
+      "failed_to_notarize": "Failed to notarize will.",
+      "failed_to_update_status": "Failed to update will status.",
+      "failed_to_verify": "Failed to verify notarization.",
+      "cannot_update_non_draft": "Cannot update non-draft will.",
+      "cannot_delete_non_draft": "Cannot delete non-draft will.",
+      "must_be_signed": "Will must be signed before notarization.",
+      "verification_code_required": "Verification code required.",
+      "invalid_verification_code": "Invalid verification code."
+    },
+    "messages": {
+      "will_saved": "Will saved successfully.",
+      "template_loaded": "Template loaded successfully.",
+      "backup_success": "Backup created successfully.",
+      "backup_failed": "Failed to create a backup."
+    },
+    "success": {
+      "will_saved": "Will saved successfully.",
+      "backup_created": "Backup created successfully.",
+      "notarized": "Will has been successfully notarized."
+    },
+    "instructions": {
+      "verify_info": "Verify all information before proceeding to next steps.",
+      "provide_full_details": "Please provide full details for accuracy."
     }
   }
 }

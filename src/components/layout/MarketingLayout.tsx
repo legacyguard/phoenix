@@ -6,6 +6,7 @@ import { ThemeToggle } from '@/components/common/ThemeToggle';
 import { CountrySelector } from '@/components/common/CountrySelector';
 import { LanguageSelector } from '@/components/common/LanguageSelector';
 import { useTranslation } from 'react-i18next';
+import PublicFooter from '@/components/common/PublicFooter';
 
 interface MarketingLayoutProps {
   children: React.ReactNode;
@@ -60,21 +61,7 @@ export const MarketingLayout: React.FC<MarketingLayoutProps> = ({ children }) =>
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-border bg-muted/30 py-12">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="flex items-center space-x-2 mb-4 md:mb-0">
-              <Shield className="h-6 w-6 text-primary" />
-              <span className="text-lg font-semibold text-primary">
-                {t('app.name')}
-              </span>
-            </div>
-            <div className="text-sm text-muted-foreground">{t("layout.marketingLayout.2025_legacyguard_by_codemoravi_3")}
-
-            </div>
-          </div>
-        </div>
-      </footer>
+      <PublicFooter />
     </div>);
 
 };

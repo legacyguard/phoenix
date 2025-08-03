@@ -9,6 +9,7 @@ import { useTranslation } from 'react-i18next';
 import { format } from 'date-fns';
 import type { WillContent, WillRequirements } from '@/types/will';
 import LegalConsultationModal from '@/components/LegalConsultationModal';
+import jsPDF from 'jspdf';
 
 interface WillPreviewProps {
   willContent: WillContent;

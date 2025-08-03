@@ -69,12 +69,12 @@
     "strategicSummary": {
       "initial": "Počnite graditi svoje digitalno nasljeđe dodavanjem svog prvog dokumenta.",
       "addDocument": "Dodaj Dokument",
-      "addPrimaryGuardian": "Add primary guardian",
-      "addBackupGuardian": "Add backup guardian",
-      "addHomeProperty": "Add your home property",
-      "addFinancialAccounts": "Add financial accounts",
-      "addPrimaryBeneficiary": "Add primary beneficiary",
-      "addContingentBeneficiaries": "Add contingent beneficiaries",
+      "addPrimaryGuardian": "Dodaj primarnog čuvara",
+      "addBackupGuardian": "Dodaj rezervnog čuvara",
+      "addHomeProperty": "Dodaj svoju kućnu nekretninu",
+      "addFinancialAccounts": "Dodaj financijske račune",
+      "addPrimaryBeneficiary": "Dodaj primarnog korisnika",
+      "addContingentBeneficiaries": "Dodaj rezervne korisnike",
       "minutes": "{{count}} minutes",
       "assetInventory": "<g id=\"1\">Inventar imovine.</g> ",
       "assetInventoryDesc": "Kompletan popis vaših vrijednih stvari",
@@ -82,16 +82,16 @@
       "criticalDocumentsDesc": "Najvažniji dokumenti koje vaša obitelj treba odmah",
       "guardianNetwork": "Mreža skrbnika",
       "guardianNetworkDesc": "Pouzdani ljudi koji upravljaju vašim poslovima",
-      "ifNotDone": "⚠️ If Not Done",
+      "ifNotDone": "⚠️ Ako nije učinjeno",
       "impact": {},
       "inheritancePlan": "Plan nasljeđivanja",
       "inheritancePlanDesc": "Jasne upute za raspodjelu imovine",
-      "nextAction": "⚡ Next Action",
+      "nextAction": "⚡ Sljedeća akcija",
       "nextCriticalStep": "Sljedeći kritični korak",
       "startWithNext": "Započnite sa sljedećim kritičnim korakom",
       "subtitle": "Imate {count} ključnih područja na koja treba obratiti pažnju. Ako poduzmete ove korake, osigurat ćete {percentage}% zaštite za svoju obitelj i imovinu.",
       "title": "Vaš strateški pregled",
-      "whyImportant": "🛡️ Why Important"
+      "whyImportant": "🛡️ Zašto je važno"
     },
     "stats": {
       "totalAssets": "Ukupna imovina",
@@ -159,18 +159,18 @@
       "documents": "Dokumenti",
       "greatProgress": "Odlično napredujete! Dovršili ste sljedeći broj zadataka: {count}.",
       "guardians": "Skrbnici",
-      "ifNotDone": "⚠️ If Not Done",
+      "ifNotDone": "⚠️ Ako nije učinjeno",
       "markAsComplete": "_Označi kao završeno",
       "progress": "Napredak",
       "start": "Početak",
       "title": "5-minutni zadaci",
       "wellOnWay": "Na dobrom 🎉 ste putu da osigurate budućnost svoje obitelji!",
-      "whyImportant": "🛡️ Why Important"
+      "whyImportant": "🛡️ Zašto je važno"
     },
     "familyGuide": {
-      "view": "View",
-      "subtitle": "Automatically generated guide for your family",
-      "discreteModeDesc": "Your personal notes and reminders",
+      "view": "Prikaži",
+      "subtitle": "Automatski generirani vodič za vašu obitelj",
+      "discreteModeDesc": "Vaše osobne bilješke i podsjetnici",
       "callNow": "Nazovite odmah",
       "callSoon": "Nazovi uskoro",
       "critical": "Kritično",
@@ -415,13 +415,113 @@
   },
   "navigation": {
     "dashboard": "Nadzorna ploča",
-    "assets": "Imovina",
+    "vault": "Trezor nasljeđa",
+    "trustedCircle": {
+      "title": "Vaš povjerljivi krug",
+      "subtitle": "Ljudi kojima vjerujete da će vam pomoći zaštititi i brinuti se o vašoj obitelji i nasljeđu.",
+      "responsibilities": "Njihove odgovornosti:",
+      "preparationStatus": "Status pripreme:",
+      "informedOfRole": "Obaviješten je o svojoj ulozi",
+      "acceptedResponsibility": "Prihvatio je odgovornost",
+      "hasAccessToDocuments": "Ima pristup potrebnim dokumentima",
+      "reviewedEmergencyProcedures": "Pregledao je procedure za hitne slučajeve",
+      "addTrustedPerson": "+ Dodaj povjerljivu osobu",
+      "preparednessStatus": {
+        "wellPrepared": "Dobro pripremljen",
+        "partiallyPrepared": "Djelomično pripremljen",
+        "needsAttention": "Zahtijeva pozornost"
+      },
+      "buttonText": {
+        "prepared": "✓ {{name}} je pripremljen",
+        "prepareNow": "Pripremi {{name}} sada"
+      },
+      "mockData": {
+        "sarah": {
+          "name": "Sarah Johnson",
+          "relationship": "Supruga",
+          "responsibilities": {
+            "bankAccess": "Može pristupiti svim bankovnim računima za plaćanje računa i upravljanje kućnim troškovima.",
+            "inheritAssets": "Naslijedit će obiteljsku kuću, vikendicu i svu štednju.",
+            "medicalPower": "Ima punomoć za donošenje zdravstvenih odluka."
+          }
+        },
+        "michael": {
+          "name": "Michael Johnson",
+          "relationship": "Brat",
+          "responsibilities": {
+            "childCare": "Brinut će se o našoj djeci ako oba roditelja nestanu.",
+            "estateExecution": "Izvršit će naše posljednje želje i upravljati namirenjem imovine.",
+            "businessManagement": "Može preuzeti upravljanje Johnson Contracting LLC privremeno."
+          }
+        },
+        "robert": {
+          "name": "Robert Chen",
+          "relationship": "Poslovni partner",
+          "responsibilities": {
+            "businessAuthority": "Ima ovlasti upravljati poslovnim operacijama i potpisivati ugovore.",
+            "buySellAgreement": "Kupit će moje poslovne udjele prema našem ugovoru o kupnji i prodaji."
+          }
+        },
+        "emily": {
+          "name": "Emily Thompson",
+          "relationship": "Snaha",
+          "responsibilities": {
+            "backupGuardian": "Rezervni čuvar za djecu ako primarni čuvar ne može služiti."
+          }
+        }
+      }
+    },
+    "familyHub": "Obiteljski centar",
+    "legacyBriefing": {
+      "legacy_briefing_3": "Brifing o nasljeđu",
+      "create_and_manage_sealed_messa_4": "Stvorite i upravljajte zapečaćenim porukama za vaše voljene",
+      "failed_to_load_your_time_capsu_1": "Učitavanje vaših vremenskih kapsula nije uspjelo",
+      "are_you_sure_you_want_to_delet_2": "Jeste li sigurni da želite izbrisati ovu vremensku kapsulu?",
+      "create_new_message_5": "Stvori novu poruku",
+      "no_time_capsules_yet_6": "Još nema vremenskih kapsula",
+      "create_meaningful_messages_for_7": "Stvorite smislene poruke za vaše voljene koje će primiti u budućnosti",
+      "create_your_first_message_8": "Stvorite svoju prvu poruku",
+      "to_9": "Za:",
+      "unlocks_on_10": "Otključava se:",
+      "unlocks_11": "Otključava:",
+      "after_passing_12": "Nakon smrti",
+      "statusLabels": {
+        "locked": "Zaključano",
+        "unlocked": "Otključano",
+        "delivered": "Dostavljeno",
+        "noRecipients": "Nema primatelja"
+      },
+      "messageTypes": {
+        "text": "Tekstualna poruka",
+        "photo": "Fotografska poruka",
+        "video": "Video poruka",
+        "audio": "Audio poruka"
+      },
+      "actions": {
+        "edit": "Uredi",
+        "delete": "Izbriši"
+      },
+      "toastMessages": {
+        "deleteSuccess": "Vremenska kapsula uspješno izbrisana",
+        "deleteError": "Brisanje vremenske kapsule nije uspjelo"
+      },
+      "dateFormat": {
+        "dateNotSet": "Datum nije postavljen",
+        "created": "Stvoreno"
+      }
+    },
+    "executorToolkit": "Alati izvršitelja",
+    "assets": "Ono što posjedujete i cijenite",
     "manual": "Priručnik",
-    "documents": "Trezor nasljeđa",
-    "guardians": "Mreža čuvara",
-    "will": "Oporuka",
+    "documents": "Važni dokumenti",
+    "guardians": "Ljudi kojima vjerujete",
+    "family": "Obiteljski centar",
+    "timeCapsule": "Vremenske kapsule",
+    "will": "Vaše posljednje želje",
+    "consultations": "Pravne konzultacije",
     "settings": "Postavke",
-    "help": "Pomoć i podrška"
+    "help": "Pomoć i podrška",
+    "subscriptions": "Pretplate"
   },
   "app": {
     "name": "LegacyGuard",
@@ -431,6 +531,282 @@
     "title": "{{name}} vas je pozvao/la da budete Čuvar za njegovo/njezino digitalno nasljeđe"
   },
   "common": {
+    "loading": "Učitavanje...",
+    "viewDetails": "Prikaži detalje",
+    "edit": "Uredi",
+    "delete": "Izbriši",
+    "addedOn": "Dodano {{date}}",
+    "priority": {
+      "high": "Visok",
+      "medium": "Srednji",
+      "low": "Nizak"
+    },
+    "pagination": {
+      "previous": "Prethodno",
+      "next": "Sljedeće",
+      "morePages": "Više stranica",
+      "page": "Stranica",
+      "of": "od",
+      "showing": "Prikazuje se",
+      "to": "do",
+      "results": "rezultata",
+      "perPage": "po stranici",
+      "goToPage": "Idi na stranicu",
+      "currentPage": "Trenutna stranica",
+      "totalPages": "Ukupno stranica",
+      "firstPage": "Prva stranica",
+      "lastPage": "Zadnja stranica",
+      "pageInfo": "Stranica {{current}} od {{total}}",
+      "resultsInfo": "Prikazuje se {{start}} do {{end}} od {{total}} rezultata",
+      "noResults": "Nema pronađenih rezultata",
+      "loading": "Učitavanje...",
+      "navigation": {
+        "title": "Navigacija stranicama",
+        "description": "Navigirajte kroz stranice rezultata",
+        "first": "Idi na prvu stranicu",
+        "last": "Idi na zadnju stranicu",
+        "previous": "Idi na prethodnu stranicu",
+        "next": "Idi na sljedeću stranicu",
+        "page": "Idi na stranicu {{number}}"
+      },
+      "accessibility": {
+        "pagination": "Straničenje",
+        "currentPage": "Trenutna stranica, stranica {{number}}",
+        "page": "Stranica {{number}}",
+        "previousPage": "Prethodna stranica",
+        "nextPage": "Sljedeća stranica",
+        "firstPage": "Prva stranica",
+        "lastPage": "Zadnja stranica",
+        "morePages": "Dostupne su više stranice"
+      }
+    },
+    "errors": {
+      "missingClerkKey": "Nedostaje Clerk Publishable Key",
+      "errorLoadingApp": "Greška učitavanja aplikacije"
+    },
+    "redirect": {
+      "simulationTitle": "Simulacija preusmjeravanja"
+    },
+    "ui": {
+      "close": "Zatvori",
+      "more": "Više",
+      "previousSlide": "Prethodni slajd",
+      "nextSlide": "Sljedeći slajd",
+      "toggleSidebar": "Prebacivanje bočne trake",
+      "goToPreviousPage": "Idi na prethodnu stranicu",
+      "goToNextPage": "Idi na sljedeću stranicu",
+      "carousel": {
+        "title": "Karusel",
+        "description": "Karusel slika s navigacijskim kontrolama",
+        "previousSlide": "Prethodni slajd",
+        "nextSlide": "Sljedeći slajd",
+        "currentSlide": "Trenutni slajd",
+        "slide": "Slajd",
+        "of": "od",
+        "slideInfo": "Slajd {{current}} od {{total}}",
+        "goToSlide": "Idi na slajd {{number}}",
+        "autoplay": "Automatska reprodukcija",
+        "pauseAutoplay": "Pauziraj automatsku reprodukciju",
+        "resumeAutoplay": "Nastavi automatsku reprodukciju",
+        "stopAutoplay": "Zaustavi automatsku reprodukciju",
+        "carouselNavigation": "Navigacija karusela",
+        "carouselControls": "Kontrole karusela",
+        "slideNavigation": "Navigacija slajdova",
+        "imageCarousel": "Karusel slika",
+        "contentCarousel": "Karusel sadržaja",
+        "gallery": "Galerija",
+        "photoGallery": "Fotografska galerija",
+        "imageGallery": "Galerija slika",
+        "slideshow": "Prezentacija",
+        "presentation": "Prezentacija",
+        "showcase": "Vitrina",
+        "browseImages": "Pregledaj slike",
+        "viewImages": "Prikaži slike",
+        "navigateSlides": "Navigiraj slajdove",
+        "slideCount": "{{count}} slajdova",
+        "slideCountSingular": "{{count}} slajd",
+        "slideCountPlural": "{{count}} slajdova",
+        "accessibility": {
+          "carousel": "Karusel",
+          "slide": "Slajd",
+          "currentSlide": "Trenutni slajd, slajd {{number}}",
+          "previousSlide": "Prethodni slajd",
+          "nextSlide": "Sljedeći slajd",
+          "goToSlide": "Idi na slajd {{number}}",
+          "slideCount": "Slajd {{current}} od {{total}}",
+          "carouselNavigation": "Navigacijske kontrole karusela",
+          "slideNavigation": "Navigacijske kontrole slajdova",
+          "autoplayEnabled": "Automatska reprodukcija omogućena",
+          "autoplayDisabled": "Automatska reprodukcija onemogućena",
+          "autoplayPaused": "Automatska reprodukcija pauzirana",
+          "autoplayStopped": "Automatska reprodukcija zaustavljena"
+        }
+      },
+      "form": {
+        "title": "Obrazac",
+        "description": "Obrazac s validacijom i rukovanjem greškama",
+        "label": "Oznaka",
+        "placeholder": "Zadržavanje mjesta",
+        "description": "Opis",
+        "error": "Greška",
+        "success": "Uspjeh",
+        "warning": "Upozorenje",
+        "info": "Informacija",
+        "required": "Obavezno",
+        "optional": "Opcionalno",
+        "submit": "Pošalji",
+        "cancel": "Odustani",
+        "save": "Spremi",
+        "reset": "Resetiraj",
+        "clear": "Očisti",
+        "loading": "Učitavanje...",
+        "saving": "Spremanje...",
+        "submitting": "Slanje...",
+        "validating": "Validacija...",
+        "accessibility": {
+          "form": "Obrazac",
+          "field": "Polje obrasca",
+          "required": "Obavezno polje",
+          "optional": "Opcionalno polje",
+          "error": "Polje ima grešku",
+          "success": "Polje je valjano",
+          "warning": "Polje ima upozorenje",
+          "description": "Opis polja",
+          "label": "Oznaka polja"
+        },
+        "validation": {
+          "required": "Ovo polje je obavezno",
+          "invalid": "Ovo polje je nevaljano",
+          "minLength": "Mora imati najmanje {{min}} znakova",
+          "maxLength": "Ne smije imati više od {{max}} znakova",
+          "minValue": "Mora biti najmanje {{min}}",
+          "maxValue": "Ne smije biti više od {{max}}",
+          "pattern": "Mora odgovarati potrebnom uzorku",
+          "email": "Mora biti valjana e-mail adresa",
+          "url": "Mora biti valjan URL",
+          "phone": "Mora biti valjan broj telefona",
+          "date": "Mora biti valjan datum",
+          "time": "Mora biti valjano vrijeme",
+          "number": "Mora biti valjan broj",
+          "integer": "Mora biti cijeli broj",
+          "positive": "Mora biti pozitivan broj",
+          "negative": "Mora biti negativan broj",
+          "between": "Mora biti između {{min}} i {{max}}",
+          "oneOf": "Mora biti jedna od dopuštenih vrijednosti",
+          "custom": "Nevaljana vrijednost",
+          "unknown": "Nepoznata greška validacije"
+        },
+        "errors": {
+          "general": "Molimo ispravite greške u obrascu",
+          "network": "Došlo je do mrežne greške",
+          "server": "Došlo je do greške poslužitelja",
+          "timeout": "Zahtjev je istekao",
+          "unauthorized": "Niste ovlašteni za izvršenje ove radnje",
+          "forbidden": "Pristup odbijen",
+          "notFound": "Resurs nije pronađen",
+          "conflict": "Konflikt resursa",
+          "validation": "Validacija nije uspjela",
+          "unknown": "Došlo je do nepoznate greške"
+        },
+        "messages": {
+          "saved": "Obrazac uspješno spremljen",
+          "submitted": "Obrazac uspješno poslan",
+          "updated": "Obrazac uspješno ažuriran",
+          "deleted": "Obrazac uspješno izbrisan",
+          "created": "Obrazac uspješno stvoren",
+          "loaded": "Obrazac uspješno učitan",
+          "reset": "Obrazac uspješno resetiran",
+          "cleared": "Obrazac uspješno očišćen"
+        }
+      },
+      "breadcrumb": {
+        "title": "Navigacija putem krušnih mrvica",
+        "description": "Navigacijske krušne mrvice koje pokazuju trenutnu lokaciju",
+        "separator": "Separator",
+        "ellipsis": "Više",
+        "currentPage": "Trenutna stranica",
+        "home": "Početna",
+        "back": "Natrag",
+        "previous": "Prethodno",
+        "next": "Sljedeće",
+        "navigation": "Navigacija",
+        "location": "Lokacija",
+        "path": "Putanja",
+        "breadcrumb": "Krušna mrvica",
+        "breadcrumbs": "Krušne mrvice",
+        "separatorText": "Separator",
+        "separatorDescription": "Separator između stavki krušnih mrvica",
+        "ellipsisText": "Više stavki",
+        "ellipsisDescription": "Dostupne su više stavki krušnih mrvica",
+        "accessibility": {
+          "breadcrumb": "Navigacija putem krušnih mrvica",
+          "currentPage": "Trenutna stranica",
+          "separator": "Separator",
+          "ellipsis": "Više stavki",
+          "navigation": "Navigacija putem krušnih mrvica",
+          "location": "Trenutna lokacija",
+          "path": "Navigacijska putanja",
+          "item": "Stavka krušnih mrvica",
+          "link": "Poveznica krušnih mrvica",
+          "page": "Trenutna stranica"
+        },
+        "separators": {
+          "chevron": "Strijelica",
+          "slash": "Kosa crta",
+          "arrow": "Strijelica",
+          "greaterThan": "Veće od",
+          "dash": "Crtica",
+          "dot": "Točka",
+          "pipe": "Cijev",
+          "default": "Zadani separator"
+        },
+        "messages": {
+          "navigateTo": "Navigiraj na {{item}}",
+          "currentLocation": "Trenutna lokacija: {{location}}",
+          "breadcrumbPath": "Putanja krušnih mrvica: {{path}}",
+          "moreItems": "Dostupne su više stavki",
+          "separatorBetween": "Separator između {{item1}} i {{item2}}"
+        }
+      }
+    },
+    "auth": {
+      "protectedApplication": "Zaštićena aplikacija",
+      "protectedApplicationDesc": "Ova aplikacija je zaštićena. Molimo unesite lozinku za pristup.",
+      "incorrectPassword": "Netočna lozinka. Molimo pokušajte ponovo.",
+      "password": "Lozinka",
+      "enterPassword": "Unesite svoju lozinku",
+      "accessApplication": "Pristupi aplikaciji"
+    },
+    "routeErrorBoundary": {
+      "code_1": "Kod greške: ",
+      "reload_page_2": "Ponovno učitaj stranicu",
+      "technical_details_3": "Tehnički detalji",
+      "pageNotFound": "Stranica nije pronađena",
+      "errorLoadingPage": "Greška učitavanja stranice",
+      "pageNotFoundDescription": "Tražena stranica ne postoji ili je premještena.",
+      "errorLoadingPageDescription": "Došlo je do greške tijekom učitavanja ove stranice.",
+      "unknownError": "Nepoznata greška",
+      "home": "Početna",
+      "errorDetails": "Detalji greške",
+      "errorLogging": "Detalji bilježenja grešaka",
+      "timestamp": "Vremenska oznaka",
+      "errorMessage": "Poruka o grešci",
+      "errorStatus": "Status greške",
+      "errorDetailsLabel": "Detalji greške",
+      "location": "Lokacija",
+      "consoleLog": "Greška zabilježena u konzoli",
+      "actions": {
+        "goHome": "Idi na početnu stranicu",
+        "reloadPage": "Ponovno učitaj trenutnu stranicu",
+        "viewDetails": "Prikaži tehničke detalje",
+        "hideDetails": "Sakrij tehničke detalje"
+      },
+      "messages": {
+        "errorCaught": "Greška uhvaćena od RouteErrorBoundary",
+        "errorLogged": "Detalji greške su zabilježeni",
+        "contactSupport": "Ako se ova greška nastavi, molimo kontaktirajte podršku"
+      }
+    },
     "appName": "LegacyGuard",
     "cancel": "Odustani",
     "error": "Greška",
@@ -497,6 +873,18 @@
     "success": {
       "profileUpdated": "Profil uspješno ažuriran",
       "passwordUpdated": "Lozinka uspješno ažurirana"
+    },
+    "privacySettings": {
+      "privacy_settings_1": "Postavke privatnosti",
+      "control_how_your_documents_are_2": "Kontrolirajte kako se vaši dokumenti obrađuju i pohranjuju",
+      "default_processing_mode_3": "Zadani način obrade",
+      "choose_how_documents_are_proce_4": "Odaberite kako se dokumenti obrađuju prema zadanim postavkama",
+      "hybrid_mode_recommended_5": "Hibridni način (Preporučeno)",
+      "combines_local_and_cloud_ai_fo_6": "Kombinira lokalni i oblačni AI za optimalne performanse i privatnost",
+      "local_only_privacy_mode_7": "Samo lokalni način privatnosti",
+      "processes_documents_entirely_i_8": "Obrađuje dokumente potpuno u vašem pregledniku za maksimalnu privatnost",
+      "note_9": "Napomena: ",
+      "you_can_always_override_this_s_10": "Uvijek možete nadjačati ovu postavku prilikom učitavanja pojedinačnih dokumenata"
     }
   },
   "errors": {
@@ -506,6 +894,827 @@
     "duplicateRecord": "Zapis s ovim podacima već postoji.",
     "unknown": "Došlo je do neočekivane greške."
   },
+  "assetType": {
+    "selectType": "Odaberite vrstu {{mainCategory}}",
+    "primaryResidence": "Primarna rezidencija",
+    "vacationHome": "Vikendica",
+    "rentalProperty": "Nekretnina za najam",
+    "land": "Zemljište",
+    "commercialProperty": "Komercijalna nekretnina",
+    "bankAccount": "Bankovni račun",
+    "investmentPortfolio": "Investicijski portfelj",
+    "cryptocurrencyWallet": "Novčanik za kriptovalute",
+    "loanMortgage": "Kredit / Hipoteka",
+    "insurancePolicy": "Polica osiguranja",
+    "pensionRetirement": "Mirovina / Umirovljenje",
+    "car": "Automobil",
+    "motorcycle": "Motocikl",
+    "boat": "Brod",
+    "rvCamper": "Kamp prikolica",
+    "aircraft": "Zrakoplov",
+    "onlineAccount": "Online račun",
+    "softwareLicense": "Licenca za softver",
+    "domainName": "Naziv domene",
+    "digitalSubscription": "Digitalna pretplata",
+    "cryptocurrency": "Kriptovaluta",
+    "nft": "NFT",
+    "jewelry": "Nakit",
+    "artCollectibles": "Umjetnost / Kolekcionarstvo",
+    "electronics": "Elektronika",
+    "furniture": "Namještaj",
+    "toolsEquipment": "Alati / Oprema",
+    "otherValuables": "Ostale vrijednosti",
+    "customAsset": "Prilagođeno sredstvo"
+  },
+  "addLiabilityModal": {
+    "title": "Dodaj obvezu",
+    "fields": {
+      "type": "Vrsta",
+      "provider": "Pružatelj",
+      "referenceNumber": "Referentni broj",
+      "paymentFrequency": "Učestalost plaćanja",
+      "notes": "Bilješke"
+    },
+    "placeholders": {
+      "selectType": "Odaberite vrstu",
+      "provider": "Naziv pružatelja",
+      "referenceNumber": "Referentni broj",
+      "paymentFrequency": "Odaberite učestalost",
+      "notes": "Dodatne bilješke"
+    },
+    "buttons": {
+      "cancel": "Odustani",
+      "add": "Dodaj obvezu"
+    },
+    "errors": {
+      "requiredFields": "Sva polja su obavezna"
+    },
+    "messages": {
+      "addedSuccessfully": "Obveza uspješno dodana"
+    },
+    "types": {
+      "insurancePolicy": "Polica osiguranja",
+      "utilityBill": "Račun za komunalne usluge",
+      "propertyTax": "Porez na nekretninu",
+      "subscriptionFee": "Naknada za pretplatu",
+      "maintenanceContract": "Ugovor o održavanju",
+      "loan": "Kredit",
+      "leaseAgreement": "Ugovor o najmu",
+      "warranty": "Garancija",
+      "other": "Ostalo"
+    },
+    "frequencies": {
+      "monthly": "Mjesečno",
+      "quarterly": "Kvartalno",
+      "semiAnnually": "Polugodišnje",
+      "annually": "Godišnje",
+      "oneTime": "Jednokratno",
+      "asNeeded": "Po potrebi"
+    }
+  },
+  "annualReview": {
+    "title": "Godišnji pregled nasljeđa",
+    "subtitle": "Održavajte plan zaštite svoje obitelji aktualnim i učinkovitim",
+    "description": "Život se brzo mijenja. Ovaj godišnji pregled osigurava da vaš plan nasljeđa ostane usklađen s vašom trenutnom situacijom i željama.",
+    "progress": {
+      "title": "Napredak pregleda",
+      "completed": "Dovršeno",
+      "inProgress": "U tijeku",
+      "notStarted": "Nije započeto",
+      "totalSteps": "Ukupno koraka",
+      "estimatedTime": "Procijenjeno vrijeme: 15 minuta"
+    },
+    "step1": {
+      "title": "Pregledajte svoje izvršitelje",
+      "description": "Potvrdite da su vaše povjerljive osobe i dalje pravi izbor za vašu obitelj"
+    },
+    "step2": {
+      "title": "Pregledajte svoju imovinu",
+      "description": "Provjerite je li vaš popis imovine aktualan i potpun"
+    },
+    "step3": {
+      "title": "Pregledajte svoje korisnike",
+      "description": "Osigurajte da su korisnici i dalje pravi ljudi"
+    },
+    "step4": {
+      "title": "Dovršite pregled",
+      "description": "Finalizirajte svoj godišnji pregled i ažurirajte svoj plan"
+    },
+    "commandRoster": {
+      "title": "Pregled zapovjednog sastava",
+      "description": "Vaši izvršitelji i povjerljive osobe su temelj plana zaštite vaše obitelji.",
+      "executorQuestion": "Je li {name} i dalje prava osoba da bude vaš izvršitelj?",
+      "guardianQuestion": "Je li {name} i dalje prava osoba da se brine o vašoj djeci?",
+      "trustedPersonQuestion": "Je li {name} i dalje prava osoba za {role}?",
+      "status": {
+        "current": "Aktualno",
+        "needsUpdate": "Zahtijeva ažuriranje",
+        "outdated": "Zastarjelo",
+        "missing": "Nedostaje"
+      },
+      "details": {
+        "executor": "Primarni izvršitelj za vašu imovinu",
+        "guardian": "Čuvar za maloljetnu djecu",
+        "trustedPerson": "Povjerljiva osoba s {accessLevel} pristupom",
+        "emergencyContact": "Kontakt osoba za hitne slučajeve"
+      }
+    },
+    "armory": {
+      "title": "Pregled popisa imovine",
+      "description": "Vaša imovina je ono što štitite. Održavajte ovaj popis aktualnim.",
+      "ownershipQuestion": "Posjedujete li i dalje {assetName}?",
+      "valueQuestion": "Je li se vrijednost {assetName} značajno promijenila?",
+      "locationQuestion": "Je li lokacija {assetName} i dalje točna?",
+      "status": {
+        "current": "Aktualno",
+        "needsUpdate": "Zahtijeva ažuriranje",
+        "outdated": "Zastarjelo",
+        "missing": "Nedostaje"
+      },
+      "categories": {
+        "realEstate": "Nekretnine",
+        "vehicles": "Vozila",
+        "bankAccounts": "Bankovni računi",
+        "investments": "Ulaganja",
+        "insurance": "Osiguranje",
+        "digitalAssets": "Digitalna sredstva",
+        "personalItems": "Osobne stavke"
+      }
+    },
+    "beneficiaries": {
+      "title": "Pregled korisnika",
+      "description": "Osigurajte da pravi ljudi primaju pravu imovinu u pravo vrijeme.",
+      "confirmationQuestion": "Jesu li ovo i dalje ispravni ljudi za primanje ove imovine?",
+      "distributionQuestion": "Je li postotak raspodjele i dalje točan?",
+      "contactQuestion": "Jesu li kontaktni podaci za {name} i dalje aktualni?",
+      "status": {
+        "current": "Aktualno",
+        "needsUpdate": "Zahtijeva ažuriranje",
+        "outdated": "Zastarjelo",
+        "missing": "Nedostaje"
+      },
+      "details": {
+        "primary": "Primarni korisnik",
+        "contingent": "Rezervni korisnik",
+        "percentage": "{percentage}% imovine",
+        "specific": "Korisnik specifične imovine"
+      }
+    },
+    "complete": {
+      "title": "Pregled dovršen",
+      "description": "Vaš godišnji pregled je uspješno dovršen.",
+      "message": "Vaš godišnji pregled je dovršen. Plan zaštite vaše obitelji sada je aktualan i učinkovit.",
+      "summary": "Sažetak pregleda",
+      "changes": "Napravljene promjene",
+      "noChanges": "Nisu bile potrebne promjene. Vaš plan je aktualan.",
+      "nextReview": "Sljedeći pregled",
+      "reminder": "Podsjetit ćemo vas kada dođe vrijeme za sljedeći godišnji pregled."
+    },
+    "buttons": {
+      "confirm": "Potvrdi",
+      "update": "Ažuriraj",
+      "back": "Natrag",
+      "next": "Sljedeće",
+      "finish": "Dovrši pregled",
+      "save": "Spremi promjene",
+      "skip": "Preskoči za sada",
+      "reviewLater": "Pregledaj kasnije"
+    },
+    "status": {
+      "title": "Status pregleda",
+      "overdue": "Prekoračen rok",
+      "dueSoon": "Uskoro je rok",
+      "current": "Aktualno",
+      "completed": "Dovršeno",
+      "lastReview": "Zadnji pregled",
+      "nextReview": "Sljedeći pregled",
+      "daysOverdue": "{days} dana prekoračen rok",
+      "daysUntilDue": "{days} dana do roka"
+    },
+    "notifications": {
+      "reviewDue": "Rok za godišnji pregled",
+      "reviewOverdue": "Prekoračen rok za godišnji pregled",
+      "reviewCompleted": "Godišnji pregled dovršen",
+      "changesSaved": "Promjene uspješno spremljene",
+      "errorSaving": "Greška spremanja promjena",
+      "reminderSet": "Podsjetnik postavljen za sljedeći pregled"
+    }
+  },
+  "beneficiaryCommunications": {
+    "title": "Komunikacije s korisnicima",
+    "description": "Pratite sve komunikacije s korisnicima",
+    "logCommunication": "Zabilježi komunikaciju",
+    "logAction": "Zabilježena komunikacija s {name}",
+    "dialog": {
+      "title": "Zabilježi komunikaciju",
+      "description": "Zabilježite detalje vaše komunikacije s korisnikom"
+    },
+    "fields": {
+      "beneficiaryName": "Ime korisnika",
+      "email": "E-mail",
+      "type": "Vrsta",
+      "date": "Datum",
+      "subject": "Predmet",
+      "summary": "Sažetak"
+    },
+    "placeholders": {
+      "subject": "Kratak predmet komunikacije",
+      "summary": "Detaljan sažetak onoga o čemu se raspravljalo"
+    },
+    "types": {
+      "email": "E-mail",
+      "phone": "Telefon",
+      "letter": "Pismo",
+      "inPerson": "Osobno",
+      "in_person": "Osobno",
+      "other": "Ostalo"
+    },
+    "actions": {
+      "cancel": "Odustani",
+      "saving": "Spremanje...",
+      "save": "Spremi komunikaciju"
+    },
+    "empty": {
+      "title": "Još nema zabilježenih komunikacija",
+      "subtitle": "Kliknite 'Zabilježi komunikaciju' da zabilježite svoju prvu interakciju"
+    }
+  },
+  "complexityReduction": {
+    "title": "Pojednostavite svoje planiranje nasljeđa",
+    "subtitle": "Razložite složene zadatke u jednostavne, upravljive korake",
+    "description": "Razumijemo da planiranje budućnosti može izgledati previše. Naš sustav smanjenja složenosti razlaže svaki zadatak u jednostavne, izvršne korake koji traju samo minute.",
+    "benefits": {
+      "title": "Zašto smanjenje složenosti funkcionira",
+      "overwhelm": {
+        "title": "Eliminira preopterećenje",
+        "description": "Umjesto suočavanja s masivnim popisom zadataka, rješavate jedan mali zadatak odjednom. Svaki korak je dizajniran da se dovrši za manje od 5 minuta."
+      },
+      "progress": {
+        "title": "Vidljiv napredak",
+        "description": "Vidite kako raste pripravnost vaše obitelji s svakim dovršenim korakom. Pratite svoj napredak i slavite male pobjede usput."
+      },
+      "confidence": {
+        "title": "Gradi povjerenje",
+        "description": "Kako dovršavate svaki korak, osjećat ćete se sigurniji i pod kontrolom. Ono što se činilo nemogućim postaje ostvarivo."
+      },
+      "family": {
+        "title": "Zaštita obitelji",
+        "description": "Svaki dovršeni korak izravno štiti vašu obitelj. Od hitnog pristupa do dugoročnog planiranja, svaka akcija je važna."
+      }
+    },
+    "steps": {
+      "identifyBankAccount": {
+        "title": "Identificirajte svoj primarni bankovni račun",
+        "why": "Zašto je ovo važno: Trenutni pristup sredstvima tijekom hitnih situacija",
+        "whatYouDo": "Što radite: Fotografirajte ili zapišite informacije o računu",
+        "whatWeDo": "Što mi radimo: Sigurno pohranjujemo informacije i stvaramo upute za pristup",
+        "timeRequired": "Potrebno vrijeme: 2 minute",
+        "complexity": "Razina složenosti: Jednostavno"
+      },
+      "emergencyContacts": {
+        "title": "Popis kontakata za hitne slučajeve",
+        "why": "Zašto je ovo važno: Brz pristup važnim osobama tijekom kriza",
+        "whatYouDo": "Što radite: Dodajte telefonske brojeve i odnose",
+        "whatWeDo": "Što mi radimo: Organiziramo kontakte po prioritetu i stvaramo protokole za hitne slučajeve",
+        "timeRequired": "Potrebno vrijeme: 3 minute",
+        "complexity": "Razina složenosti: Jednostavno"
+      },
+      "insurancePolicies": {
+        "title": "Dokumentiranje polica osiguranja",
+        "why": "Zašto je ovo važno: Osigurava da se zahtjevi mogu podnijeti brzo i ispravno",
+        "whatYouDo": "Što radite: Učitajte dokumente polica ili fotografirajte",
+        "whatWeDo": "Što mi radimo: Izvlačimo ključne informacije i stvaramo upute za zahtjeve",
+        "timeRequired": "Potrebno vrijeme: 5 minuta",
+        "complexity": "Razina složenosti: Lako"
+      },
+      "digitalAssets": {
+        "title": "Sigurna digitalna sredstva",
+        "why": "Zašto je ovo važno: Štiti online račune i digitalne uspomene",
+        "whatYouDo": "Što radite: Popišite važne račune i lozinke",
+        "whatWeDo": "Što mi radimo: Stvaramo sigurne protokole pristupa i upute za sigurnosne kopije",
+        "timeRequired": "Potrebno vrijeme: 4 minute",
+        "complexity": "Razina složenosti: Lako"
+      },
+      "legalDocuments": {
+        "title": "Organiziranje pravnih dokumenata",
+        "why": "Zašto je ovo važno: Osigurava da se poštuju pravne želje i da su procesi glatki",
+        "whatYouDo": "Što radite: Učitajte oporuke, punomoći i druge dokumente",
+        "whatWeDo": "Što mi radimo: Stvaramo sažetke i osiguravamo pravilan pravni pristup",
+        "timeRequired": "Potrebno vrijeme: 6 minuta",
+        "complexity": "Razina složenosti: Srednje"
+      },
+      "familyInstructions": {
+        "title": "Pisanje obiteljskih uputa",
+        "why": "Zašto je ovo važno: Pruža jasne smjernice tijekom teških vremena",
+        "whatYouDo": "Što radite: Napišite osobne poruke i upute",
+        "whatWeDo": "Što mi radimo: Organiziramo poruke i stvaramo rasporede dostave",
+        "timeRequired": "Potrebno vrijeme: 8 minuta",
+        "complexity": "Razina složenosti: Srednje"
+      }
+    },
+    "actions": {
+      "startThisStep": "Započni ovaj korak",
+      "showMeHow": "Pokaži mi kako",
+      "iNeedHelp": "Trebam pomoć",
+      "nextStep": "Sljedeći korak",
+      "previousStep": "Prethodni korak",
+      "completeStep": "Označi kao dovršeno",
+      "skipStep": "Preskoči za sada"
+    },
+    "progress": {
+      "title": "Vaš napredak",
+      "completed": "Dovršeno",
+      "inProgress": "U tijeku",
+      "notStarted": "Nije započeto",
+      "totalSteps": "Ukupno koraka",
+      "estimatedTime": "Procijenjeno preostalo vrijeme"
+    },
+    "features": {
+      "title": "Kako funkcionira smanjenje složenosti",
+      "stepByStep": {
+        "title": "Korak-po-korak smjernice",
+        "description": "Svaki zadatak je razložen u jasne, jednostavne upute koje svatko može slijediti."
+      },
+      "timeEstimation": {
+        "title": "Točne procjene vremena",
+        "description": "Znajte točno koliko će trajati svaki korak, od 2 minute do maksimalno 15 minuta."
+      },
+      "difficultyLevels": {
+        "title": "Jasne razine težine",
+        "description": "Jednostavno, Lako, Srednje i Složeno ocjene pomažu vam odabrati što prvo rješavati."
+      },
+      "progressTracking": {
+        "title": "Praćenje napretka",
+        "description": "Vidite kako raste pripravnost vaše obitelji s svakim dovršenim korakom."
+      },
+              "helpAvailable": {
+          "title": "Pomoć kada vam treba",
+          "description": "Dobijte pomoć, objašnjenja i podršku za bilo koji korak koji se čini izazovnim."
+        }
+      }
+    }
+  },
+  "createTimeCapsuleModal": {
+    "title": "Stvori vremensku kapsulu",
+    "titleCreate": "Stvori vremensku kapsulu",
+    "titleEdit": "Uredi vremensku kapsulu",
+    "description": "Stvorite poruku koja će biti dostavljena vašim voljenima u budućnosti.",
+    "errors": {
+      "noTitle": "Molimo unesite naslov za vašu vremensku kapsulu.",
+      "noRecipients": "Molimo odaberite barem jednog primatelja.",
+      "noUnlockDate": "Molimo odaberite datum otključavanja.",
+      "noMessage": "Molimo unesite vašu poruku.",
+      "noFile": "Molimo učitate datoteku.",
+      "updateFailed": "Ažuriranje vremenske kapsule nije uspjelo.",
+      "saveFailed": "Spremanje vremenske kapsule nije uspjelo.",
+      "fileTooLarge": "Veličina datoteke mora biti manja od 50MB.",
+      "invalidFileType": "Nevaljna vrsta datoteke za {{messageType}}."
+    },
+    "success": {
+      "updated": "Vremenska kapsula ažurirana!",
+      "created": "Vremenska kapsula stvorena!"
+    },
+    "labels": {
+      "title": "Naslov",
+      "messageType": "Vrsta poruke",
+      "recipients": "Primatelji",
+      "deliveryQuestion": "Kada bi ova poruka trebala biti dostavljena?",
+      "unlockDate": "Datum otključavanja",
+      "yourMessage": "Vaša poruka",
+      "uploadFile": "Učitaj {{messageType}}"
+    },
+    "placeholders": {
+      "title": "npr. Za vaš 18. rođendan",
+      "message": "Napišite svoju iskrenu poruku ovdje...",
+      "selectDate": "Odaberite datum"
+    },
+    "messageTypes": {
+      "text": "Tekstualna poruka",
+      "photo": "Fotografija",
+      "video": "Video",
+      "audio": "Audio"
+    },
+    "recipients": {
+      "noTrustedPeople": "Još niste dodali povjerljive osobe. Dodajte ih s vaše nadzorne ploče prvo.",
+      "selected": "Odabrano"
+    },
+    "unlockConditions": {
+      "onDate": "Na određeni datum",
+      "afterPassing": "Nakon moje smrti"
+    },
+    "fileUpload": {
+      "clickToUpload": "Kliknite za učitavanje",
+      "dragAndDrop": " ili povucite i ispustite",
+      "maxSize": "Maksimalna veličina datoteke: 50MB",
+      "fileSizeMB": "{{size}} MB"
+    },
+    "premium": {
+      "videoMessage": "Video poruke su premium značajka.",
+      "upgradeNow": "Nadogradi sada"
+    },
+    "buttons": {
+      "recordVideo": "Snimi video poruku",
+      "cancel": "Odustani",
+      "saving": "Spremanje...",
+      "update": "Ažuriraj vremensku kapsulu",
+      "create": "Stvori vremensku kapsulu"
+    },
+    "characterCount": "{{count}}/{{max}} znakova"
+  },
+  "dataTransparency": {
+    "loadingMessage": "Učitavanje vaših informacija o transparentnosti podataka...",
+    "loadingError": "Nije moguće učitati podatke o transparentnosti. Molimo pokušajte ponovo kasnije.",
+    "title": "Vaši podaci, vaša kontrola",
+    "description": "Vjerujemo u potpunu transparentnost. Evo točno kako rukujemo vašim informacijama.",
+    "dataFlow": {
+      "whereDataLives": "Gdje žive vaši podaci",
+      "collection": "Prikupljanje",
+      "storage": "Pohrana",
+      "processing": "Obrada",
+      "sharing": "Dijeljenje"
+    },
+    "recentActivity": {
+      "title": "Nedavna aktivnost",
+      "premiumTitle": "Otključajte svoj trajni dnevnik praćenja",
+      "premiumText": "Vaš 30-dnevni operativni dnevnik pruža osnovnu sigurnost. Za maksimalnu odgovornost i mir, nadogradite na Command paket da održavate potpunu, nepromjenjivu povijest revizije svake akcije poduzete u vašem trezoru, zauvijek."
+    },
+    "dataOwnership": {
+      "title": "Vlasništvo podataka",
+      "description": "Vi posjedujete svoje podatke, uvijek. Možete preuzeti potpunu kopiju u bilo kojem trenutku.",
+      "downloadButton": "Preuzmi moju arhivu podataka"
+    }
+  },
+  "editStoryModal": {
+    "editStory": "Uredi priču",
+    "addStory": "Dodaj priču",
+    "description": "Podijelite priču iza \"{{assetName}}\". Ova osobna nota bit će neprocjenjiva vašim voljenima.",
+    "fields": {
+      "yourStory": "Vaša priča"
+    },
+    "placeholders": {
+      "story": "npr. Ovo je prsten vaše bake, dan joj 1952. kada se udala za vašeg djeda u maloj crkvi u njihovom rodnom gradu. Nosila ga je svaki dan 65 godina..."
+    },
+    "hints": {
+      "shareMemories": "Podijelite uspomene, značaj ili povijest"
+    },
+    "tips": {
+      "title": "Savjeti za smislenu priču:",
+      "explainSpecial": "Objasnite zašto je ovaj predmet poseban za vas",
+      "shareMemories": "Podijelite uspomene povezane s njim",
+      "describeHistory": "Opišite njegovu povijest ili kako ste ga stekli",
+      "mentionWishes": "Spomenite bilo koje želje za to kako bi trebao biti korišten ili čuvan"
+    },
+    "saving": "Spremanje...",
+    "saveStory": "Spremi priču",
+    "messages": {
+      "saved": "Priča uspješno spremljena"
+    },
+    "errors": {
+      "notAuthenticated": "Morate biti prijavljeni da biste spremili priču",
+      "saveFailed": "Spremanje priče nije uspjelo"
+    }
+  },
+  "dynamicAssetForm": {
+    "propertyAddress": "Adresa nekretnine",
+    "purchaseDate": "Datum kupnje",
+    "purchasePrice": "Cijena kupnje",
+    "currentEstimatedValue": "Trenutna procijenjena vrijednost",
+    "mortgageInformation": "Informacije o hipoteci",
+    "locationOfPropertyDocuments": "Lokacija dokumenata o nekretnini",
+    "locationAddress": "Lokacija / Adresa",
+    "size": "Veličina (akri/kvadratni metar)",
+    "zoningType": "Vrsta zoniranja",
+    "currentUse": "Trenutna upotreba",
+    "bankName": "Naziv banke",
+    "accountType": "Vrsta računa",
+    "selectAccountType": "Odaberite vrstu računa",
+    "checking": "Tekući",
+    "savings": "Štedni",
+    "moneyMarket": "Tržište novca",
+    "certificateOfDeposit": "Certifikat depozita",
+    "accountHolderName": "Ime vlasnika računa",
+    "accountNumberLast4": "Broj računa (zadnja 4 znamenke)",
+    "routingNumber": "Broj usmjeravanja",
+    "brokerageFirm": "Broker tvrtka",
+    "accountNumber": "Broj računa",
+    "individual": "Pojedinačno",
+    "joint": "Zajedničko",
+    "ira": "IRA",
+    "rothIra": "Roth IRA",
+    "401k": "401(k)",
+    "approximateValue": "Približna vrijednost",
+    "financialAdvisor": "Financijski savjetnik (ako postoji)",
+    "walletNameLabel": "Naziv/Oznaka novčanika",
+    "walletType": "Vrsta novčanika",
+    "selectWalletType": "Odaberite vrstu novčanika",
+    "hardwareWallet": "Hardverski novčanik",
+    "softwareWallet": "Softverski novčanik",
+    "exchangeWallet": "Novčanik burze",
+    "paperWallet": "Papirnati novčanik",
+    "cryptocurrenciesHeld": "Držane kriptovalute",
+    "locationOfSeedPhrase": "Lokacija seed fraze/Privatnih ključeva",
+    "exchangeInformation": "Informacije o burzi (ako je primjenjivo)",
+    "makeAndModel": "Marka i model",
+    "year": "Godina",
+    "vinNumber": "VIN broj",
+    "licensePlate": "Registarska pločica",
+    "loanInformation": "Informacije o kreditu (ako postoje)",
+    "locationOfTitle": "Lokacija vlasničkog lista",
+    "platformWebsiteName": "Naziv platforme/Web stranice",
+    "accountEmail": "E-mail/Korisničko ime računa",
+    "accountPurpose": "Svrha/Opis računa",
+    "recoveryInformation": "Informacije za oporavak",
+    "faMethod": "2FA metoda (ako je omogućena)",
+    "itemDescription": "Opis stavke",
+    "appraisedValue": "Procijenjena vrijednost",
+    "lastAppraisalDate": "Datum zadnje procjene",
+    "storageLocation": "Lokacija pohrane",
+    "insuranceInformation": "Informacije o osiguranju",
+    "sentimentalValue": "Sentimentalna vrijednost/Povijest",
+    "assetName": "Naziv sredstva",
+    "estimatedValue": "Procijenjena vrijednost",
+    "description": "Opis",
+    "locationAccessInformation": "Lokacija/Informacije o pristupu",
+    "addSubType": "Dodaj {subType}",
+    "cancel": "Odustani",
+    "saveAsset": "Spremi sredstvo",
+    "placeholders": {
+      "123_main_st_city_state_zip_1": "123 Glavna ulica, Grad, Država, Poštanski broj",
+      "lender_name_account_number_rem_2": "Naziv zajmodavca, broj računa, preostali iznos",
+      "e_g_safe_deposit_box_filing_ca_3": "npr. Sef, ormarić za spise",
+      "property_location_or_parcel_nu_4": "Lokacija nekretnine ili broj parcele",
+      "e_g_10_acres_5": "npr. 10 akri, 5,000 kvadratnih stopa",
+      "e_g_commercial_agricultural_6": "npr. Komercijalno, Poljoprivredno, Stambeno",
+      "describe_current_use_of_the_pr_7": "Opišite trenutnu upotrebu nekretnine",
+      "e_g_chase_bank_8": "npr. Chase Bank, Wells Fargo",
+      "john_doe_9": "John Doe",
+      "1234_10": "1234",
+      "e_g_fidelity_vanguard_11": "npr. Fidelity, Vanguard, Charles Schwab",
+      "account_number_12": "Broj računa",
+      "name_and_contact_information_13": "Ime i kontaktne informacije",
+      "e_g_main_bitcoin_wallet_14": "npr. Glavni Bitcoin novčanik",
+      "e_g_bitcoin_ethereum_15": "npr. Bitcoin, Ethereum, Litecoin",
+      "do_not_enter_the_actual_seed_p_16": "Ne unosite stvarnu seed frazu ovdje",
+      "exchange_name_and_account_emai_17": "Naziv burze i e-mail računa",
+      "e_g_toyota_camry_18": "npr. Toyota Camry, Honda Civic",
+      "vehicle_identification_number_19": "Broj identifikacije vozila",
+      "lender_account_number_payoff_a_20": "Zajmodavac, broj računa, iznos otplate",
+      "e_g_safe_deposit_box_21": "npr. Sef, kućni sef",
+      "e_g_gmail_facebook_22": "npr. Gmail, Facebook, LinkedIn",
+      "user_example_com_23": "user@example.com",
+      "what_this_account_is_used_for_24": "Za što se koristi ovaj račun",
+      "recovery_email_phone_or_securi_25": "E-mail za oporavak, telefon ili sigurnosna pitanja",
+      "e_g_sms_to_phone_ending_in_123_26": "npr. SMS na telefon koji završava s 123",
+      "e_g_diamond_engagement_ring_27": "npr. Dijamantni prsten za zaruke, zlatna ogrlica",
+      "e_g_home_safe_bank_deposit_box_28": "npr. Kućni sef, bankovni sef",
+      "policy_number_and_company_29": "Broj police i tvrtka",
+      "special_meaning_or_history_of__30": "Posebno značenje ili povijest ovog predmeta",
+      "name_or_description_of_asset_31": "Naziv ili opis sredstva",
+      "detailed_description_of_the_as_32": "Detaljan opis sredstva",
+      "where_to_find_this_asset_or_ho_33": "Gdje pronaći ovo sredstvo ili kako mu pristupiti"
+    }
+  },
+  "documentUploader": {
+    "smart_document_upload_2": "Pametno učitavanje dokumenata",
+    "upload_any_document_and_our_ai_3": "Učitajte bilo koji dokument i naš AI će ga automatski klasificirati za vas",
+    "please_upload_an_image_or_pdf__1": "Molimo učitate sliku ili PDF datoteku",
+    "image_application_pdf_4": "image/*,application/pdf",
+    "0_0_48_48_5": "0 0 48 48",
+    "m24_12v12m0_0l_4_4m4_4l4_4m10__6": "M24 12v12m0 0l-4 4m4-4l4 4m10-6",
+    "drop_your_document_here_or_cli_7": "Ispustite svoj dokument ovdje ili kliknite za pregled",
+    "supports_images_and_pdfs_up_to_8": "Podržava slike i PDF-ove do 10MB",
+    "document_analysis_complete_10": "Analiza dokumenta dovršena",
+    "document_type_11": "Vrsta dokumenta",
+    "suggested_title_12": "Predloženi naslov",
+    "confidence": "Pouzdanost",
+    "ai_analysis_13": "AI analiza",
+    "continue_with_this_classificat_14": "Nastavi s ovom klasifikacijom",
+    "change_category_15": "Promijeni kategoriju",
+    "documents_we_can_process_16": "Dokumenti koje možemo obraditi:",
+    "insurance_policies_life_health_17": "Police osiguranja (život, zdravlje, dom, auto)",
+    "property_deeds_and_titles_18": "Vlasnički listovi i naslovi nekretnina",
+    "vehicle_ownership_documents_19": "Dokumenti o vlasništvu vozila",
+    "bank_and_investment_statements_20": "Bankovni i investicijski izvodi",
+    "wills_and_estate_planning_docu_21": "Oporuke i dokumenti planiranja imovine",
+    "business_contracts_and_ownersh_22": "Poslovni ugovori i dokumenti o vlasništvu",
+    "personal_identification_docume_23": "Osobni identifikacijski dokumenti",
+    "tax_returns_and_documents_24": "Porezne prijave i dokumenti",
+    "categoryDescriptions": {
+      "insurance_policy": "Život, zdravlje, dom, auto ili invaliditet osiguranje",
+      "property_deed": "Dokumenti o vlasništvu nekretnina i vlasnički listovi",
+      "vehicle_title": "Vlasnički listovi automobila, broda ili drugog vozila",
+      "bank_statement": "Bankovni izvodi i dokumenti",
+      "investment_statement": "Investicijski i mirovinski izvodi računa",
+      "will_or_trust": "Oporuke, trustovi i dokumenti planiranja imovine",
+      "business_document": "Poslovno vlasništvo i važni ugovori",
+      "personal_id": "Putovnice, dozvole, rodni listovi",
+      "tax_document": "Porezne prijave i povezani dokumenti",
+      "medical_document": "Medicinski zapisi i zdravstvene direktive",
+      "other": "Ostali važni dokumenti"
+    },
+    "errors": {
+      "fileTypeError": "Molimo učitate sliku ili PDF datoteku",
+      "processingError": "Obrada dokumenta nije uspjela",
+      "uploadError": "Učitavanje dokumenta nije uspjelo",
+      "classificationError": "Klasifikacija dokumenta nije uspjela"
+    }
+  },
+  "executorManagement": {
+    "failed_to_load_executors_2": "Učitavanje izvršitelja nije uspjelo",
+    "user_not_found_with_this_email_3": "Korisnik s ovim e-mailom nije pronađen",
+    "this_person_is_already_designa_4": "Ova osoba je već određena kao izvršitelj",
+    "failed_to_add_executor_5": "Dodavanje izvršitelja nije uspjelo",
+    "failed_to_remove_executor_6": "Uklanjanje izvršitelja nije uspjelo",
+    "loading_executors_7": "Učitavanje izvršitelja...",
+    "executor_management_8": "Upravljanje izvršiteljima",
+    "designate_trusted_individuals__9": "Odredite povjerljive osobe koje će vam pomoći upravljati vašim poslovima i podržati vaše voljene",
+    "add_new_executor_10": "Dodaj novog izvršitelja",
+    "email_address_11": "E-mail adresa",
+    "executor_example_com_12": "izvršitelj@primjer.com",
+    "relationship_type_13": "Vrsta odnosa",
+    "primary_executor_14": "Primarni izvršitelj",
+    "secondary_executor_15": "Sekundarni izvršitelj",
+    "emergency_contact_16": "Kontakt za hitne slučajeve",
+    "current_executors_17": "Trenutni izvršitelji",
+    "no_executors_designated_yet_ad_18": "Još nema određenih izvršitelja. Dodajte nekoga kome vjerujete da vam pomogne upravljati vašim poslovima.",
+    "important_information_19": "Važne informacije",
+    "primary_executors_receive_imme_20": "Primarni izvršitelji primaju trenutni pristup vašem trezoru kada je potreban",
+    "secondary_executors_are_notifi_21": "Sekundarni izvršitelji se obavještavaju ali imaju ograničen pristup",
+    "emergency_contacts_are_notifie_22": "Kontakti za hitne slučajeve se obavještavaju samo u hitnim situacijama",
+    "all_executors_must_have_legacy_23": "Svi izvršitelji moraju imati LegacyGuard račune za pristup vašim informacijama",
+    "successMessages": {
+      "executorAdded": "Izvršitelj uspješno dodan",
+      "executorRemoved": "Izvršitelj uspješno uklonjen"
+    },
+    "validationMessages": {
+      "emailRequired": "E-mail adresa je obavezna",
+      "invalidEmail": "Molimo unesite valjanu e-mail adresu",
+      "relationshipTypeRequired": "Vrsta odnosa je obavezna"
+    },
+    "statusLabels": {
+      "adding": "Dodavanje...",
+      "addExecutor": "Dodaj izvršitelja",
+      "unknownUser": "Nepoznati korisnik"
+    }
+  },
+  "emotionalContextSystem": {
+    "emotional_support_1": "Emocionalna podrška",
+    "advice_2": "Savjet: ",
+    "motivation_3": "Motivacija: ",
+    "next_steps_4": "Sljedeći koraci: ",
+    "contextResponses": {
+      "lowConfidence": {
+        "primaryMessage": "Rješavate ovu situaciju s brigom i uvidom.",
+        "supportingMessage": "Pokazuje da razumijete važnost zadatka.",
+        "actionableAdvice": "Nastavite svojim udobnim tempom.",
+        "motivationalElement": "Vaš promišljeni pristup je dokaz vaših vrijednosti.",
+        "nextStepGuidance": "Kada ste spremni, nastavite sa sljedećim važnim korakom za osiguranje budućnosti vaše obitelji."
+      },
+      "highOverwhelm": {
+        "primaryMessage": "Vaša predanost obitelji je hvalevrijedna.",
+        "supportingMessage": "U redu je uzeti trenutak za ponovno grupiranje.",
+        "actionableAdvice": "Razmislite o razbijanju zadatka na manje dijelove za fokus.",
+        "motivationalElement": "Znajući da vas pokreće ljubav i briga.",
+        "nextStepGuidance": "Svaka mala akcija koju poduzmete čini značajnu razliku."
+      },
+      "default": {
+        "primaryMessage": "Radite smislen posao.",
+        "supportingMessage": "Ovaj napor jača temelj vaše obitelji.",
+        "actionableAdvice": "Ostanite predani svom planu.",
+        "motivationalElement": "Svaka odluka koju donesete štiti vaše voljene.",
+        "nextStepGuidance": "Vidjeti širu sliku će vas voditi kroz sljedeće korake."
+      }
+    },
+    "emotionalStates": {
+      "confidence": {
+        "high": "Visok",
+        "medium": "Srednji",
+        "low": "Nizak"
+      },
+      "motivation": {
+        "high": "Visok",
+        "medium": "Srednji",
+        "low": "Nizak"
+      },
+      "overwhelm": {
+        "none": "Nijedan",
+        "slight": "Blag",
+        "moderate": "Umjeren",
+        "high": "Visok"
+      },
+      "urgency": {
+        "relaxed": "Opušten",
+        "focused": "Fokusiran",
+        "pressed": "Pod pritiskom",
+        "stressed": "Pod stresom"
+      }
+    }
+  },
+  "microTaskGenerator": {
+    "minutes_1": " minuta • ",
+    "family_impact_2": " utjecaj na obitelj",
+    "start_task_3": "Započni zadatak",
+    "complete_task_4": "Dovrši zadatak",
+    "skip_for_now_5": "Preskoči za sada",
+    "taskCategories": {
+      "identification": "Identifikacijski dokumenti",
+      "financial": "Financijske informacije",
+      "healthcare": "Zdravstveni dokumenti",
+      "legal": "Pravni dokumenti",
+      "digital": "Digitalna sredstva",
+      "personal": "Osobne informacije"
+    },
+    "difficultyLevels": {
+      "trivial": "Trivijalno",
+      "easy": "Lako",
+      "simple": "Jednostavno"
+    },
+    "familyImpactLevels": {
+      "high": "Visok",
+      "medium": "Srednji",
+      "low": "Nizak"
+    },
+    "taskStatus": {
+      "available": "Dostupno",
+      "in_progress": "U tijeku",
+      "completed": "Dovršeno",
+      "skipped": "Preskočeno"
+    },
+    "tasks": {
+      "driversLicense": {
+        "title": "Fotografirajte svoju vozačku dozvolu",
+        "description": "Vašoj obitelji će trebati ovo za pravne i financijske stvari. Imati jasnu fotografiju štedi im vrijeme i stres.",
+        "completionMessage": "Vaša obitelj sada ima pristup kritičnim ID informacijama."
+      },
+      "passport": {
+        "title": "Fotografirajte svoju putovnicu",
+        "description": "Bitno za međunarodne aranžmane putovanja i pravnu identifikaciju.",
+        "completionMessage": "Međunarodna dokumentacija za putovanja sada je osigurana za vašu obitelj."
+      },
+      "birthCertificate": {
+        "title": "Skenirajte svoj rodni list",
+        "description": "Potreban za mnoge pravne procese i dokumentaciju obiteljske povijesti.",
+        "completionMessage": "Rodni list je sada digitalno sačuvan za buduće potrebe."
+      },
+      "socialSecurityCard": {
+        "title": "Dokumentirajte svoju karticu socijalnog osiguranja",
+        "description": "Kritično za naknade i pravne identifikacijske procese.",
+        "completionMessage": "Informacije o socijalnom osiguranju sada su sigurno dokumentirane."
+      },
+      "bankAccounts": {
+        "title": "Popišite svoje bankovne račune",
+        "description": "Pomožite svojoj obitelji upravljati financijama i pristupiti sredstvima kada je potrebno.",
+        "completionMessage": "Informacije o bankovnim računima sada su organizirane za vašu obitelj."
+      },
+      "insurancePolicies": {
+        "title": "Sastavite detalje polica osiguranja",
+        "description": "Osigurajte da vaša obitelj zna o svim pokrićima i može podnijeti zahtjeve.",
+        "completionMessage": "Informacije o osiguranju sada su sveobuhvatne i dostupne."
+      },
+      "medicalRecords": {
+        "title": "Organizirajte medicinsku povijest",
+        "description": "Pomožite zdravstvenim pružateljima razumjeti vašu medicinsku pozadinu.",
+        "completionMessage": "Medicinska povijest sada je organizirana za bolje zdravstvene odluke."
+      },
+      "medications": {
+        "title": "Popišite trenutne lijekove",
+        "description": "Kritično za medicinske hitne slučajeve i kontinuiranu skrb.",
+        "completionMessage": "Lista lijekova sada je dostupna za medicinske stručnjake."
+      },
+      "will": {
+        "title": "Stvorite ili ažurirajte svoju oporuku",
+        "description": "Osigurajte da su vaše želje jasno dokumentirane i pravno obvezujuće.",
+        "completionMessage": "Vaša oporuka sada je aktualna i pravno zaštićena."
+      },
+      "powerOfAttorney": {
+        "title": "Odredite punomoć",
+        "description": "Ovlastite povjerljive osobe da donose odluke u vaše ime.",
+        "completionMessage": "Punomoć je sada pravilno određena."
+      },
+      "digitalPasswords": {
+        "title": "Sigurna lista digitalnih lozinki",
+        "description": "Pomožite obitelji pristupiti važnim online računima i uslugama.",
+        "completionMessage": "Digitalni pristup sada je sigurno organiziran za vašu obitelj."
+      },
+      "socialMedia": {
+        "title": "Planirajte račune društvenih mreža",
+        "description": "Odlučite kako treba rukovati vašom online prisutnošću.",
+        "completionMessage": "Nasljeđe društvenih mreža sada je planirano i dokumentirano."
+      }
+    },
+    "sessionStats": {
+      "tasksCompleted": "Dovršeni zadaci",
+      "totalTimeSpent": "Ukupno utrošeno vrijeme",
+      "momentumScore": "Rezultat zamaha",
+      "nextRecommendedTask": "Sljedeći preporučeni zadatak"
+    },
+    "scoring": {
+      "urgency": "Hitnost",
+      "impact": "Utjecaj",
+      "ease": "Lakoća",
+      "momentum": "Zamah"
+    }
+  }
   "debug": {
     "panel": {
       "title": "Panel za otklanjanje grešaka",
@@ -1296,6 +2505,190 @@
     "componentStack": "Stog komponente",
     "helpText": "Ako se problem nastavi, kontaktirajte našu podršku s ID-om greške."
   },
+  "upgradeCard": {
+    "pricing_1": "/pricing",
+    "defaultButtonText": "Nadogradi na Command paket"
+  },
+  "myPossessions": {
+    "my_possessions_1": "Moji posjedi",
+    "an_inventory_of_the_important__2": "Popis važnih stvari koje podržavaju budućnost vaše obitelji.",
+    "family_impact_3": "Utjecaj na obitelj:",
+    "edit_details_4": "Uredi detalje",
+    "link_papers_5": "Poveži dokumente (",
+    "assign_access_6": "Dodijeli pristup",
+    "add_your_first_7": "Dodaj svoj prvi ",
+    "areas": {
+      "home": {
+        "title": "Vaš dom i nekretnina",
+        "description": "Mjesta koja pružaju sklonište i stvaraju uspomene.",
+        "emptyState": "Dokumentirajte svoju nekretninu kako biste osigurali da je sklonište vaše obitelji sigurno.",
+        "addButton": "Nekretnina"
+      },
+      "savings": {
+        "title": "Vaša štednja i ulaganja",
+        "description": "Financijski temelj koji ste izgradili za budućnost vaše obitelji.",
+        "emptyState": "Zabilježite svoje financijske račune kako bi vaša obitelj mogla pristupiti sredstvima kada je potrebno.",
+        "addButton": "Račun"
+      },
+      "business": {
+        "title": "Vaš posao",
+        "description": "Posao koji podržava vašu obitelj i stvara vaše profesionalno nasljeđe.",
+        "emptyState": "Dokumentirajte detalje svog posla kako biste osigurali glatku sukcesiju i kontinuirani prihod.",
+        "addButton": "Posao"
+      },
+      "valuables": {
+        "title": "Vaše vrijednosti i kolekcije",
+        "description": "Predmeti financijske ili sentimentalne vrijednosti koji trebaju posebno razmatranje.",
+        "emptyState": "Popišite vrijedne predmete koji trebaju posebno rukovanje ili imaju sentimentalnu vrijednost.",
+        "addButton": "Vrijednost"
+      }
+    },
+    "mockData": {
+      "lakeCabin": "Vikendica na jezeru",
+      "emergencyFund": "Fond za hitne slučajeve",
+      "yourBusiness": "Vaš posao",
+      "johnsonContracting": "Johnson Contracting LLC",
+      "classicCarCollection": "Kolekcija klasičnih automobila"
+    }
+  },
+  "analytics": {
+    "testData": {
+      "dashboardTitleExperiment": "Eksperiment s naslovom nadzorne ploče",
+      "onboardingFlowSimplification": "Pojednostavljenje toka uvođenja",
+      "variation": "Varijacija",
+      "highlyEngaged": "Visoko angažiran",
+      "moderatelyEngaged": "Umjereno angažiran",
+      "atRisk": "U riziku",
+      "dormant": "Neaktivan"
+    },
+    "analyticsDashboard": {
+      "loading_analytics_data_1": "Učitavanje podataka o analitici...",
+      "analytics_dashboard_2": "Nadzorna ploča analitike",
+      "monitor_user_engagement_featur_3": "Pratite angažman korisnika, usvajanje značajki i performanse platforme",
+      "refreshing_4": "Osvježavanje...",
+      "using_cached_data_5": "Korištenje predmemoriranih podataka",
+      "from_last_month_6": "od prošlog mjeseca",
+      "user_journey_7": "Putovanje korisnika",
+      "feature_adoption_8": "Usvajanje značajki",
+      "a_b_tests_9": "A/B testovi",
+      "overview": "Pregled",
+      "user_growth_11": "Rast korisnika",
+      "active_and_new_users_over_time_12": "Aktivni i novi korisnici tijekom vremena",
+      "3_3_7": "3 3",
+      "platform_statistics_15": "Statistike platforme",
+      "key_platform_metrics_16": "Ključne metrike platforme i pokazatelji performansi",
+      "avg_session_duration_17": "Prosječno trajanje sesije",
+      "bounce_rate_18": "Stopa odbijanja",
+      "avg_documents_per_user_19": "Prosječno dokumenata po korisniku",
+      "avg_trusted_people_per_user_20": "Prosječno povjerljivih osoba po korisniku",
+      "user_journey_funnel_21": "Funnel putovanja korisnika",
+      "track_user_progression_through_22": "Pratite napredak korisnika kroz ključne prekretnice",
+      "feature_adoption_rates_23": "Stope usvajanja značajki",
+      "percentage_of_users_using_each_24": "Postotak korisnika koji koriste svaku značajku",
+      "sample_size_27": "Veličina uzorka: ",
+      "users_duration_28": " korisnika • Trajanje: ",
+      "confidence_29": "% povjerenja",
+      "user_segments_30": "Segmenti korisnika",
+      "user_distribution_by_engagemen_31": "Distribucija korisnika prema razini angažmana",
+      "chartLabels": {
+        "totalUsers": "Ukupno korisnika",
+        "activeUsers": "Aktivni korisnici",
+        "avgPreparedness": "Prosječna pripravnost",
+        "willsCreated": "Stvorene oporuke",
+        "signUp": "Registracija",
+        "completeOnboarding": "Dovršeno uvođenje",
+        "addFirstPossession": "Dodano prvo sredstvo",
+        "addTrustedPerson": "Dodana povjerljiva osoba",
+        "uploadDocument": "Učitani dokumenti",
+        "generateWill": "Generirane oporuke",
+        "localOnlyModeUsers": "Korisnici samo lokalnog načina",
+        "familyHubUsers": "Korisnici obiteljskog centra",
+        "documentScannerUsers": "Korisnici skenera dokumenata",
+        "emergencyAccessSetup": "Postavljanje hitnog pristupa",
+        "pushNotificationsEnabled": "Omogućene push obavijesti",
+        "control": "Kontrola",
+        "variation": "Varijacija",
+        "won": "Pobijedio",
+        "date": "Datum",
+        "value": "Vrijednost",
+        "percentage": "Postotak",
+        "users": "Korisnici",
+        "conversion": "Konverzija",
+        "dropoff": "Odbijanje"
+      },
+      "metrics": {
+        "totalUsers": "Ukupno korisnika",
+        "activeUsers": "Aktivni korisnici",
+        "avgPreparedness": "Prosječna pripravnost",
+        "willsCreated": "Stvorene oporuke",
+        "avgSessionDuration": "Prosječno trajanje sesije",
+        "bounceRate": "Stopa odbijanja",
+        "avgDocumentsPerUser": "Prosječno dokumenata po korisniku",
+        "avgTrustedPeoplePerUser": "Prosječno povjerljivih osoba po korisniku",
+        "onboardingCompletionRate": "Stopa dovršavanja uvođenja",
+        "firstPossessionAdded": "Dodano prvo sredstvo",
+        "firstTrustedPersonAdded": "Dodana prva povjerljiva osoba",
+        "firstDocumentUploaded": "Učitani prvi dokument",
+        "willGenerated": "Generirana oporuka"
+      },
+      "errors": {
+        "unauthorizedAccess": "Neovlašten pristup",
+        "failedToFetchAnalytics": "Dohvaćanje analitike nije uspjelo",
+        "failedToLoadAnalytics": "Učitavanje analitike nije uspjelo",
+        "networkError": "Došlo je do mrežne greške",
+        "serverError": "Došlo je do greške poslužitelja",
+        "timeoutError": "Zahtjev je istekao",
+        "unknownError": "Došlo je do nepoznate greške"
+      },
+      "messages": {
+        "dataRefreshed": "Podaci analitike osvježeni",
+        "usingCachedData": "Korištenje predmemoriranih podataka zbog problema s vezom",
+        "refreshFailed": "Osvježavanje podataka analitike nije uspjelo",
+        "noDataAvailable": "Nema dostupnih podataka analitike",
+        "loadingData": "Učitavanje podataka analitike...",
+        "refreshingData": "Osvježavanje podataka analitike..."
+      }
+    }
+  },
+  "securityStatus": {
+    "how_we_protect_your_legacy_1": "Kako štitimo vaše nasljeđe",
+    "your_trust_is_our_highest_prio_2": "Vaše povjerenje je naš najviši prioritet. Koristimo sigurnost poslovne razine da zadržimo informacije vaše obitelji sigurnima.",
+    "for_your_family_3": "Za vašu obitelj: ",
+    "your_security_status_fully_pro_4": "Vaš status sigurnosti: Potpuno zaštićeno",
+    "all_security_features_are_acti_5": "Sve sigurnosne značajke su aktivne i štite informacije vaše obitelji.",
+    "features": {
+      "endToEndEncryption": "End-to-end enkripcija",
+      "secureCloudStorage": "Sigurna pohrana u oblaku",
+      "localOnlyPrivacyMode": "Samo lokalni način privatnosti",
+      "multiFactorAuthentication": "Višefaktorska autentifikacija",
+      "europeanDataCenters": "Europski podatkovni centri",
+      "zeroKnowledgeArchitecture": "Arhitektura nultog povjerenja"
+    },
+    "explanations": {
+      "endToEndEncryption": "Vaši podaci se šifriraju u nečitljiv kod od trenutka kada napuste vaš uređaj dok ih ponovno ne pogledate.",
+      "secureCloudStorage": "Vaši šifrirani podaci pohranjeni su u podatkovnim centrima svjetske klase, fizički sigurnim.",
+      "localOnlyPrivacyMode": "Kada koristite samo lokalni način, vaši osjetljivi dokumenti se nikada ne šalju na naše poslužitelje.",
+      "multiFactorAuthentication": "Zahtijeva i vašu lozinku i kod s vašeg telefona za prijavu.",
+      "europeanDataCenters": "Svi vaši podaci pohranjeni su isključivo u sigurnim europskim podatkovnim centrima sa strogim zakonima o privatnosti.",
+      "zeroKnowledgeArchitecture": "Dizajnirali smo naš sustav tako da ne možemo vidjeti vaše podatke, čak i da smo htjeli."
+    },
+    "analogies": {
+      "endToEndEncryption": "To je poput slanja pisma u zaključanoj kutiji koju samo vi imate ključ za otvaranje.",
+      "secureCloudStorage": "To je poput držanja vaše zaključane kutije unutar bankovnog sefa s 24/7 čuvarima.",
+      "localOnlyPrivacyMode": "To je poput pisanja vaših najprivatnijih bilješki u dnevnik koji nikada ne napušta vašu kuću.",
+      "multiFactorAuthentication": "To je poput potrebe i ključa i tajnog rukovanja za ulazak u privatni klub.",
+      "europeanDataCenters": "To je poput odabira držanja vaših vrijednosti u zemlji poznatoj po snažnoj zaštiti privatnosti.",
+      "zeroKnowledgeArchitecture": "To je poput imanja sefa gdje čak ni bankovni upravitelj nema ključ."
+    },
+    "familyBenefits": {
+      "endToEndEncryption": "Osigurava da nitko—čak ni mi—ne može čitati vaše osobne informacije.",
+      "secureCloudStorage": "Štiti vaš plan od gubitka zbog požara, krađe ili kvara računala.",
+      "localOnlyPrivacyMode": "Daje vam apsolutnu sigurnost da vaši najprivatniji dokumenti ostaju pod vašom kontrolom.",
+      "multiFactorAuthentication": "Spriječava bilo koga da pristupi vašem računu, čak i ako ukradu vašu lozinku.",
+      "europeanDataCenters": "Svi vaši podaci pohranjeni su u sigurnim europskim podatkovnim centrima sa strogim zakonima o privatnosti.",
+      "zeroKnowledgeArchitecture": "Dizajnirali smo naš sustav tako da ne možemo vidjeti vaše podatke, čak i da smo htjeli."
+    }
+  }
   "errorTest": {
     "title": "Testiranje bilježenja grešaka",
     "triggerSyncError": "Pokreni sinkronu grešku (ErrorBoundary)",
@@ -1476,6 +2869,393 @@
     "errors": {
       "loadFailed": "Učitavanje priručnika nije uspjelo",
       "saveFailed": "Spremanje priručnika nije uspjelo"
+    }
+  },
+  "familyHub": {
+    "title": "Obiteljski centar",
+    "subtitle": "Upravljajte razinama pristupa i koristite alate za pripravnost kako biste osigurali da je vaša obitelj dobro pripremljena.",
+    "tabs": {
+      "familyMembers": "Članovi obitelji",
+      "members": "Članovi",
+      "preparednessTools": "Alati za pripravnost",
+      "tools": "Alati"
+    },
+    "overallPreparedness": {
+      "title": "Opća pripravnost obitelji",
+      "description": "Ovaj rezultat odražava koliko je vaša cijela obitelj spremna za hitnu situaciju.",
+      "improvementNeeded": "Pripravnost vaše obitelji može se poboljšati. Razmislite o slanju ažuriranja onima s nižim rezultatima."
+    },
+    "emergencyProtocol": {
+      "title": "Protokol za hitne slučajeve",
+      "description": "Protokol za hitne slučajeve omogućuje povjerljivim osobama s pristupom \"Samo u hitnim slučajevima\" da zatraže informacije tijekom kritičnih situacija. Zahtijeva potvrdu od druge povjerljive osobe.",
+      "configured": "Konfigurirano",
+      "configure": "Konfiguriraj",
+      "activeMessage": "Protokol za hitne slučajeve je aktivan i konfiguriran"
+    },
+    "memberManagement": {
+      "title": "Upravljajte svojim povjerljivim osobama",
+      "addTrustedPerson": "Dodaj povjerljivu osobu",
+      "addMorePeople": "Dodajte više povjerljivih osoba u svoju mrežu",
+      "informationAccessLevel": "Razina pristupa informacijama",
+      "preparedness": "Pripravnost",
+      "lastContacted": "Zadnji put kontaktirano",
+      "daysAgo": "prije {{days}} dana",
+      "sendUpdate": "Pošalji ažuriranje",
+      "sendUpdateTo": "Pošalji ažuriranje {{name}}",
+      "lastContactOver30Days": "Zadnji kontakt prije više od 30 dana"
+    },
+    "accessLevels": {
+      "none": {
+        "title": "Nijedan",
+        "description": "Ne može vidjeti nikakve informacije"
+      },
+      "emergencyOnly": {
+        "title": "Samo u hitnim slučajevima",
+        "description": "Pristup tijekom hitnih situacija",
+        "fullDescription": "Dobiva pristup samo kada se aktivira protokol za hitne slučajeve"
+      },
+      "limitedInfo": {
+        "title": "Ograničene informacije",
+        "description": "Osnovne informacije za pripremu",
+        "fullDescription": "Može vidjeti osnovne informacije sada kako bi im pomogao pripremiti se"
+      },
+      "fullAccess": {
+        "title": "Pun pristup",
+        "description": "Sve podijeljene informacije",
+        "fullDescription": "Može vidjeti sve informacije koje ste podijelili s njima"
+      }
+    },
+    "messages": {
+      "accessLevelUpdated": "Razina pristupa uspješno ažurirana",
+      "updateSentTo": "Ažuriranje poslano {{name}}",
+      "failedToSendUpdate": "Slanje ažuriranja {{name}} nije uspjelo"
+    },
+    "errors": {
+      "authenticationRequired": "Potrebna je autentifikacija",
+      "failedToFetchData": "Dohvaćanje podataka o obitelji nije uspjelo",
+      "failedToLoadMembers": "Učitavanje članova obitelji nije uspjelo"
+    }
+  },
+  "vault": {
+    "title": "Trezor",
+    "subtitle": "Vaš siguran popis svih financijskih sredstava i vrijednih posjeda.",
+    "errorLoadingAssets": "Učitavanje vaših sredstava nije uspjelo. Molimo pokušajte ponovo.",
+    "letsBuildInventory": "Izgradimo vaš popis",
+    "addProperty": "Dodaj nekretninu",
+    "addFinances": "Dodaj financije",
+    "addVehicle": "Dodaj vozilo",
+    "addDigitalAsset": "Dodaj digitalno sredstvo",
+    "addPersonalItem": "Dodaj osobnu stavku",
+    "addOther": "Dodaj nešto drugo...",
+    "confirmDeletion": "Jeste li sigurni da želite izbrisati \"{{assetName}}\"?",
+    "errorDeletingAsset": "Brisanje sredstva nije uspjelo. Molimo pokušajte ponovo.",
+    "searchPlaceholder": "Pretražite svoja sredstva...",
+    "addAsset": "Dodaj sredstvo",
+    "totalAssets": "Ukupna sredstva",
+    "totalValue": "Ukupna vrijednost",
+    "categories": "Kategorije",
+    "noAssetsFound": "Nema pronađenih sredstava koji odgovaraju \"{{searchQuery}}\"",
+    "startAddingAssets": "Započnite dodavanje sredstava za izgradnju vašeg popisa",
+    "addNewAsset": "Dodaj novo sredstvo"
+  },
+  "scenarios": {
+    "title": "Što se događa kada život uzme neočekivani obrat?",
+    "subtitle": "Prave obitelji, stvarne situacije, stvarna kontrola i pripravnost",
+    "hospitalStay": {
+      "title": "Neočekivani boravak u bolnici",
+      "before": {
+        "situation": "Sarahin suprug je imao srčani udar. Dok je bio na intenzivnoj njezi, ona je provodila dane pokušavajući pronaći njihove police osiguranja, informacije o bankovnim računima i važne kontakte. Stres je bio nepodnošljiv kada je trebala usredotočiti se na njegov oporavak.",
+        "emotion": "Stres i briga",
+        "consequence": "Dani traženja informacija i podrške."
+      },
+      "after": {
+        "situation": "Kada je Mark imao nesreću, njegova supruga Lisa otvorila je njihov obiteljski vodič i pronašla sve organizirano: detalje osiguranja, bankovne kontakte, medicinske informacije i čak popis ljudi koje treba obavijestiti. Mogla se usredotočiti na ono što je najvažnije - biti tu za Marka.",
+        "emotion": "Mir i fokus",
+        "benefit": "Trenutni pristup svemu što joj je trebalo."
+      }
+    },
+    "businessTrip": {
+      "title": "Hitna situacija na poslovnom putovanju",
+      "before": {
+        "situation": "Kada je Davidov let bio odgođen i propustio je hitnu operaciju svoje kćeri, njegova supruga nije mogla pristupiti njihovom računu štednje ili pronaći informacije o medicinskom osiguranju. Kritične odluke morale su čekati.",
+        "emotion": "Frustracija i bespomoćnost",
+        "consequence": "Važne medicinske odluke odgođene."
+      },
+      "after": {
+        "situation": "Kada je Emmin suprug putovao i trebala je hitna sredstva za operaciju njihovog sina, imala je trenutni pristup svim informacijama o računu, detaljima osiguranja i čak unaprijed napisanim pismima autorizacije. Bez kašnjenja, bez stresa.",
+        "emotion": "Olakšanje i spremnost",
+        "benefit": "Sve dostupno točno kada joj je trebalo."
+      }
+    },
+    "suddenLoss": {
+      "title": "Iznenadni gubitak",
+      "before": {
+        "situation": "Nakon što je iznenada izgubila oca, Maria je provodila mjesece pokušavajući sastaviti njegove financijske poslove. Pronašla je račune za koje nije znala da postoje i propustila važne rokove jer su dokumenti bili razbacani posvuda.",
+        "emotion": "Zbunjenost i žaljenje",
+        "consequence": "Propušteni rokovi i izgubljeno vrijeme."
+      },
+      "after": {
+        "situation": "Kada je Johnova obitelj trebala upravljati njegovim poslovima, sve je bilo jasno organizirano: potpuni popis računa, važni kontakti, korak-po-korak upute i čak osobne poruke koje je pripremio za svakog člana obitelji.",
+        "emotion": "Smirenost i jasnoća",
+        "benefit": "Jasan put za slijediti u teškim vremenima."
+      }
+    },
+    "labels": {
+      "before": "Prije LegacyGuard",
+      "after": "Nakon Heritage Vault",
+      "feeling": "Osjećaj"
+    },
+    "bottomCta": {
+      "primary": "Ne dopustite da se vaša obitelj suoči s ovim kaosom",
+      "secondary": "Započnite organiziranje za 10 minuta",
+      "urgency": "Svaki dan koji čekate je još jedan dan kada je vaša obitelj nepripremljena"
+    },
+    "testimonials": {
+      "1": "Nakon iznenadne nesreće mog brata, gledao sam kako se moja snaha bori tjednima da pronađe važne dokumente i lozinke. Tada sam znao da ne mogu dopustiti da se ista stvar dogodi mojoj obitelji.",
+      "2": "Kao samohrana majka koja vodi posao, stalno sam se brinula što bi se dogodilo ako bi se nešto dogodilo meni. Heritage Vault mi je pomogao organizirati sve.",
+      "3": "Moja supruga ima demenciju u ranoj fazi, i shvatio sam da trebam pripremiti se dok još mogu. Heritage Vault je učinio jednostavnim organiziranje naših 40 godina života zajedno."
+    }
+  },
+  "calculator": {
+    "badge": "Kalkulator pripravnosti",
+    "title": "Izračunajte rezultat pripravnosti svoje obitelji",
+    "subtitle": "Pogledajte stvarno vrijeme i novac koje vaša obitelj štedi kada je sve organizirano",
+    "inputs": {
+      "title": "Situacija vaše obitelji",
+      "description": "Recite nam malo o svojoj obitelji kako bismo personalizirali vaše rezultate",
+      "dependents": "Koliko ljudi ovisi o vama?",
+      "dependentsHelp": "Uključite supružnika, djecu, starije roditelje",
+      "income": "Koji je mjesečni prihod vaše obitelji?",
+      "incomeHelp": "Ovo pomaže izračunati potencijalne izgubljene plaće",
+      "property": "Posjedujete li nekretninu?",
+      "business": "Imate li posao?",
+      "accounts": "Koliko bankovnih računa imate?",
+      "accountsHelp": "Uključite tekući, štedni, ulaganja"
+    },
+    "calculateButton": "Izračunaj moje uštede",
+    "results": {
+      "title": "Uštede vaše obitelji",
+      "description": "Evo što pripravnost znači za vaše voljene",
+      "timeSavings": {
+        "title": "Vrijeme koje vaša obitelj štedi",
+        "without": "Bez organizacije",
+        "withoutHours": "40-120 sati traženja",
+        "with": "S Heritage Vault",
+        "withMinutes": "Manje od 5 minuta"
+      },
+      "moneySavings": {
+        "title": "Novac koji vaša obitelj štedi",
+        "legalFees": "Pravne naknade za rekonstrukciju",
+        "lostWages": "Izgubljene plaće od vremena izvan posla",
+        "penalties": "Propušteni rokovi i kazne",
+        "total": "Ukupne potencijalne uštede"
+      },
+      "emotional": {
+        "title": "Utjecaj na emocionalno blagostanje",
+        "stress": "Smanjenje razine stresa",
+        "confidence": "Povećanje povjerenja obitelji",
+        "peace": "Ocjena kontrole i pripravnosti"
+      },
+      "socialProof": "Pridružite se obiteljima koje već bolje spavaju noću",
+      "families": "15,000+ obitelji zaštićeno",
+      "ctaContext": "Većina obitelji dovršava postavljanje tijekom pauze za ručak",
+      "shareButton": "Podijeli rezultate"
+    },
+    "testimonial": {
+      "quote": "Nikad nisam shvatila koliko stresa nosim dok nisam sve organizirala. Sada znam da će mojoj obitelji biti dobro, bez obzira što se dogodi.",
+      "author": "Sarah M., majka troje djece"
+    },
+    "shareTitle": "Rezultati kalkulatora pripravnosti obitelji",
+    "shareCopied": "Rezultati kopirani u međuspremnik!"
+  },
+  "testimonials": {
+    "badge": "Prave obitelji koje preuzimaju kontrolu",
+    "title": "Povjerenje 15,000+ europskih obitelji",
+    "subtitle": "Pogledajte kako su obitelji poput vaše pronašle sigurnost i mir s Heritage Vault",
+    "verified": "Verificirana obitelj",
+    "trustedBy": "Povjerenje i preporučeno od",
+    "stats": {
+      "families": "15,000+",
+      "familiesLabel": "europskih obitelji zaštićeno",
+      "satisfaction": "99.7%",
+      "satisfactionLabel": "osjeća se pripravnije i pod kontrolom",
+      "stressReduction": "92%",
+      "stressReductionLabel": "manje obiteljskog stresa prijavljeno",
+      "timeSaved": "120 sati",
+      "timeSavedLabel": "prosječno vrijeme ušteđeno po obitelji"
+    },
+    "stories": {
+      "1": {
+        "name": "Michael K.",
+        "role": "Otac troje djece",
+        "location": "München, Njemačka",
+        "quote": "Nakon iznenadne nesreće mog brata, gledao sam kako se moja snaha bori tjednima da pronađe važne dokumente i lozinke. Tada sam znao da ne mogu dopustiti da se ista stvar dogodi mojoj obitelji. Sada je sve organizirano, i moja supruga točno zna gdje pronaći ono što joj treba. Biti pripravan i pod kontrolom je neprocjenjivo.",
+        "highlight": "✨ Postavljeno za samo 2 sata, štiteći 3 djece i supružnika"
+      },
+      "2": {
+        "name": "Anna S.",
+        "role": "Vlasnica tvrtke",
+        "location": "Beč, Austrija",
+        "quote": "Kao samohrana majka koja vodi posao, stalno sam se brinula što bi se dogodilo ako bi se nešto dogodilo meni. Heritage Vault mi je pomogao organizirati sve - od poslovnih računa do informacija o školi moje djece. Moja sestra sada ima pristup svemu što joj treba da preuzme. Spavam puno bolje znajući da su zaštićeni.",
+        "highlight": "💼 Poslovni i osobni život organiziran na jednom sigurnom mjestu"
+      },
+      "3": {
+        "name": "Thomas R.",
+        "role": "Umirovljeni učitelj",
+        "location": "Zürich, Švicarska",
+        "quote": "Moja supruga ima demenciju u ranoj fazi, i shvatio sam da trebam pripremiti se dok još mogu. Heritage Vault je učinio jednostavnim organiziranje naših 40 godina života zajedno. Naša djeca sada imaju jasne upute i pristup svemu. To je približilo našu cijelu obitelj znajući da smo pripremljeni za sve što dolazi.",
+        "highlight": "❤️ 40 godina obiteljske povijesti sačuvano i zaštićeno"
+      }
+    },
+    "authority": {
+      "advisors": "Preporučeno od financijskih savjetnika",
+      "attorneys": "Povjerenje obiteljskih odvjetnika",
+      "counselors": "Podržano od savjetnika za tugu"
+    },
+    "compliance": {
+      "gdpr": "Usklađeno s GDPR-om",
+      "dataProtection": "Certificirana zaštita podataka",
+      "iso": "ISO 27001 certificirano"
+    },
+    "bottomCta": {}
+  },
+  "executor": {
+    "dashboard": {
+      "title": "Nadzorna ploča izvršitelja",
+      "subtitle": "Korak-po-korak vodič koji će vam pomoći kroz ovo teško vrijeme",
+      "reminder": "Sjetite se da se brinete o sebi tijekom ovog teškog vremena. Ne ustručavajte se zatražiti pomoć kada je potrebna."
+    },
+    "errors": {
+      "loadTasksFailed": "Učitavanje zadataka izvršitelja nije uspjelo. Molimo pokušajte ponovo kasnije.",
+      "updateTaskFailed": "Ažuriranje statusa zadatka nije uspjelo."
+    },
+    "highPriority": "Visok prioritet",
+    "due": "Rok",
+    "completed": "Dovršeno",
+    "undo": "Poništi",
+    "markComplete": "Označi kao dovršeno",
+    "viewAccountDetails": "Prikaži detalje računa i lozinku",
+    "viewRelatedDocuments": "Prikaži povezane dokumente ({{count}})",
+    "stats": {
+      "totalTasks": "Ukupni zadaci",
+      "completed": "Dovršeno",
+      "remaining": "Preostalo"
+    },
+    "sections": {
+      "immediate": {
+        "title": "Hitni zadaci (Prvih 48 sati)",
+        "description": "Kritični zadaci koji zahtijevaju vašu trenutnu pozornost",
+        "empty": "Svi hitni zadaci dovršeni!"
+      },
+      "firstWeek": {
+        "title": "Zadaci prvog tjedna",
+        "description": "Važni zadaci za dovršetak u prvom tjednu",
+        "empty": "Svi zadaci prvog tjedna dovršeni!"
+      },
+      "ongoing": {
+        "title": "Tekuće odgovornosti",
+        "description": "Zadaci za rješavanje u nadolazećim tjednima i mjesecima",
+        "empty": "Sve tekuće odgovornosti dovršene!"
+      }
+    },
+    "communications": {
+      "title": "Komunikacije s korisnicima",
+      "description": "Pratite sve komunikacije s korisnicima kako biste održali transparentnost",
+      "logCommunication": "Zabilježi komunikaciju",
+      "logTitle": "Zabilježi komunikaciju s korisnikom",
+      "logDescription": "Zabilježite detalje vaše komunikacije s korisnicima",
+      "beneficiaryName": "Ime korisnika",
+      "beneficiaryEmail": "E-mail (opcionalno)",
+      "communicationType": "Vrsta",
+      "communicationDate": "Datum",
+      "subject": "Predmet",
+      "summary": "Sažetak",
+      "subjectPlaceholder": "npr. Početno ažuriranje imovine",
+      "summaryPlaceholder": "Kratak sažetak onoga o čemu se raspravljalo...",
+      "types": {
+        "email": "E-mail",
+        "phone": "Telefonski poziv",
+        "letter": "Pismo",
+        "in_person": "Osobno",
+        "other": "Ostalo"
+      },
+      "saving": "Spremanje...",
+      "saveCommunication": "Spremi komunikaciju",
+      "cancel": "Odustani",
+      "noCommunications": "Još nema zabilježenih komunikacija",
+      "startTracking": "Započnite praćenje vaših komunikacija s korisnicima",
+      "errors": {
+        "saveFailed": "Zabilježavanje komunikacije nije uspjelo"
+      }
+    },
+    "status": {
+      "title": "Status upravljanja imovinom",
+      "description": "Trenutni status visoke razine vidljiv autoriziranim članovima obitelji",
+      "updateStatus": "Ažuriraj status",
+      "updateTitle": "Ažuriraj status imovine",
+      "updateDescription": "Ovaj status bit će vidljiv autoriziranim članovima obitelji",
+      "statusLabel": "Status",
+      "additionalDetails": "Dodatni detalji (opcionalno)",
+      "detailsPlaceholder": "Navedite bilo koji dodatni kontekst...",
+      "selectStatus": "Odaberite status",
+      "updating": "Ažuriranje...",
+      "lastUpdated": "Zadnje ažurirano",
+      "progress": "Napredak",
+      "noStatusSet": "Status još nije postavljen. Kliknite \"Ažuriraj status\" da postavite početni status.",
+      "noStatusUpdates": "Još nema objavljenih ažuriranja statusa.",
+      "statuses": {
+        "initial_review": "Početni pregled",
+        "gathering_documents": "Prikupljanje dokumenata",
+        "probate_initiated": "Započet postupak ostavinske rasprave",
+        "assets_being_valued": "Sredstva se vrednuju",
+        "debts_being_settled": "Dugovi se namiruju",
+        "tax_preparation": "Priprema poreza",
+        "ready_for_distribution": "Spremno za raspodjelu",
+        "distribution_in_progress": "Raspodjela u tijeku",
+        "estate_closed": "Imovina zatvorena"
+      },
+      "errors": {
+        "updateFailed": "Ažuriranje statusa nije uspjelo"
+      }
+    },
+    "justInTime": {
+      "viewAccountDetails": "Prikaži detalje računa i lozinku",
+      "secureInfoAccess": "Siguran pristup informacijama",
+      "reauthenticate": "Ponovno autentificirajte se za pregled osjetljivih informacija za",
+      "securityReason": "Iz sigurnosnih razloga, molimo unesite svoju lozinku za pristup ovim informacijama.",
+      "password": "Lozinka",
+      "enterPassword": "Unesite svoju lozinku",
+      "incorrectPassword": "Netočna lozinka. Molimo pokušajte ponovo.",
+      "cancel": "Odustani",
+      "verifying": "Provjera...",
+      "verifyContinue": "Provjeri i nastavi",
+      "accountName": "Naziv računa",
+      "accountNumber": "Broj računa",
+      "username": "Korisničko ime",
+      "pin": "PIN",
+      "additionalNotes": "Dodatne bilješke",
+      "noSensitiveInfo": "Nema osjetljivih informacija povezanih s ovim zadatkom.",
+      "accessLogged": "Ovaj pristup je zabilježen iz sigurnosnih razloga.",
+      "accessTime": "Vrijeme pristupa",
+      "close": "Zatvori",
+      "errors": {
+        "reauthFailed": "Provjera vašeg identiteta nije uspjela. Molimo pokušajte ponovo.",
+        "notFound": "Nema pronađenih osjetljivih informacija za ovaj zadatak.",
+        "retrieveFailed": "Dohvaćanje osjetljivih informacija nije uspjelo."
+      }
+    },
+    "familyView": {
+      "title": "Status upravljanja imovinom",
+      "subtitle": "Ostanite informirani o napretku upravljanja imovinom",
+      "recentCommunications": "Nedavne komunikacije izvršitelja",
+      "recentCommunicationsDescription": "Nedavna ažuriranja od {{executorName}} korisnicima",
+      "to": "Za",
+      "noCommunications": "Još nema zabilježenih komunikacija.",
+      "infoMessage": "Ove informacije ažurira {{executorName}} kako bi obiteljski članovi bili informirani. Za detaljna pitanja, molimo kontaktirajte izvršitelja izravno.",
+      "defaultExecutor": "izvršitelj",
+      "errors": {
+        "loadFailed": "Učitavanje podataka nije uspjelo"
+      }
     }
   }
 }

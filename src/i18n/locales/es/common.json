@@ -1,18 +1,251 @@
 {
-  "hero": {
-    "title": "Proteja el legado digital de su familia para siempre",
-    "subtitle": "La plataforma segura e intuitiva que ayuda a las familias a organizar, proteger y transferir sus recuerdos y documentos más importantes a través de generaciones.",
-    "cta_primary": "Inicie su Plan de Legado",
-    "cta_secondary": "Ver Demo",
-    "trustSignals": {
-      "dataOwnership": "Sus datos siguen siendo suyos, nunca los vendemos",
-      "gdprCompliant": "Cumple con el RGPD por diseño",
-      "europeanFamilies": "Creado para familias europeas"
+  "familyHub": {
+    "title": "Centro Familiar",
+    "subtitle": "Gestione los niveles de acceso y use herramientas de preparación para asegurar que su familia esté bien preparada.",
+    "tabs": {
+      "familyMembers": "Miembros de la Familia",
+      "members": "Miembros",
+      "preparednessTools": "Herramientas de Preparación",
+      "tools": "Herramientas"
     },
-    "community": {
-      "growing": "Únase a {{count}} familias que ya protegen su legado",
-      "growingFallback": "Únase a nuestra creciente comunidad"
+    "overallPreparedness": {
+      "title": "Preparación Familiar General",
+      "description": "Esta puntuación refleja qué tan preparada está toda su familia para una emergencia.",
+      "improvementNeeded": "La preparación de su familia podría mejorarse. Considere enviar actualizaciones a aquellos con puntuaciones más bajas."
+    },
+    "emergencyProtocol": {
+      "title": "Protocolo de Emergencia",
+      "description": "El protocolo de emergencia permite que personas de confianza con acceso \"Solo Emergencia\" soliciten información durante situaciones críticas. Requiere confirmación de otra persona de confianza.",
+      "configured": "Configurado",
+      "configure": "Configurar",
+      "activeMessage": "El protocolo de emergencia está activo y configurado"
+    },
+    "memberManagement": {
+      "title": "Gestionar Sus Personas de Confianza",
+      "addTrustedPerson": "Añadir Persona de Confianza",
+      "addMorePeople": "Añadir más personas de confianza a su red",
+      "informationAccessLevel": "Nivel de Acceso a la Información",
+      "preparedness": "Preparación",
+      "lastContacted": "Último contacto",
+      "daysAgo": "hace {{days}} días",
+      "sendUpdate": "Enviar Actualización",
+      "sendUpdateTo": "Enviar Actualización a {{name}}",
+      "lastContactOver30Days": "Último contacto hace más de 30 días"
+    },
+    "accessLevels": {
+      "none": {
+        "title": "Ninguno",
+        "description": "No puede ver ninguna información"
+      },
+      "emergencyOnly": {
+        "title": "Solo Emergencia",
+        "description": "Acceso durante emergencias",
+        "fullDescription": "Obtiene acceso solo cuando se activa el protocolo de emergencia"
+      },
+      "limitedInfo": {
+        "title": "Información Limitada",
+        "description": "Información básica para preparación",
+        "fullDescription": "Puede ver información básica ahora para ayudarlos a prepararse"
+      },
+      "fullAccess": {
+        "title": "Acceso Completo",
+        "description": "Toda la información compartida",
+        "fullDescription": "Puede ver toda la información que ha compartido con ellos"
+      }
+    },
+    "messages": {
+      "accessLevelUpdated": "Nivel de acceso actualizado correctamente",
+      "updateSentTo": "Actualización enviada a {{name}}",
+      "failedToSendUpdate": "Error al enviar actualización a {{name}}"
+    },
+    "errors": {
+      "authenticationRequired": "Autenticación requerida",
+      "failedToFetchData": "Error al obtener datos de la familia",
+      "failedToLoadMembers": "Error al cargar miembros de la familia"
     }
+  },
+  "assetType": {
+    "selectType": "Seleccionar Tipo de {{mainCategory}}",
+    "primaryResidence": "Residencia Principal",
+    "vacationHome": "Casa de Vacaciones",
+    "rentalProperty": "Propiedad de Alquiler",
+    "land": "Terreno",
+    "commercialProperty": "Propiedad Comercial",
+    "bankAccount": "Cuenta Bancaria",
+    "investmentPortfolio": "Cartera de Inversiones",
+    "cryptocurrencyWallet": "Cartera de Criptomonedas",
+    "loanMortgage": "Préstamo / Hipoteca",
+    "insurancePolicy": "Póliza de Seguro",
+    "pensionRetirement": "Pensión / Jubilación",
+    "car": "Coche",
+    "motorcycle": "Motocicleta",
+    "boat": "Barco",
+    "rvCamper": "Caravana / Autocaravana",
+    "aircraft": "Aeronave",
+    "onlineAccount": "Cuenta en Línea",
+    "softwareLicense": "Licencia de Software",
+    "domainName": "Nombre de Dominio",
+    "digitalSubscription": "Suscripción Digital",
+    "cryptocurrency": "Criptomoneda",
+    "nft": "NFT",
+    "jewelry": "Joyería",
+    "artCollectibles": "Arte / Coleccionables",
+    "electronics": "Electrónicos",
+    "furniture": "Muebles",
+    "toolsEquipment": "Herramientas / Equipos",
+    "otherValuables": "Otros Objetos de Valor",
+    "customAsset": "Activo Personalizado"
+  },
+  "addLiabilityModal": {
+    "title": "Añadir Pasivo",
+    "fields": {
+      "type": "Tipo",
+      "provider": "Proveedor",
+      "referenceNumber": "Número de Referencia",
+      "paymentFrequency": "Frecuencia de Pago",
+      "notes": "Notas"
+    },
+    "placeholders": {
+      "selectType": "Seleccionar tipo",
+      "provider": "Nombre del proveedor",
+      "referenceNumber": "Número de referencia",
+      "paymentFrequency": "Seleccionar frecuencia",
+      "notes": "Notas adicionales"
+    },
+    "buttons": {
+      "cancel": "Cancelar",
+      "add": "Añadir Pasivo"
+    },
+    "errors": {
+      "requiredFields": "Todos los campos son obligatorios"
+    },
+    "messages": {
+      "addedSuccessfully": "Pasivo añadido exitosamente"
+    },
+    "types": {
+      "insurancePolicy": "Póliza de Seguro",
+      "utilityBill": "Factura de Servicios",
+      "propertyTax": "Impuesto de Propiedad",
+      "subscriptionFee": "Tarifa de Suscripción",
+      "maintenanceContract": "Contrato de Mantenimiento",
+      "loan": "Préstamo",
+      "leaseAgreement": "Contrato de Arrendamiento",
+      "warranty": "Garantía",
+      "other": "Otro"
+    },
+    "frequencies": {
+      "monthly": "Mensual",
+      "quarterly": "Trimestral",
+      "semiAnnually": "Semestral",
+      "annually": "Anual",
+      "oneTime": "Pago Único",
+      "asNeeded": "Según Necesidad"
+    }
+  },
+  "upgradeCard": {
+    "pricing_1": "/pricing",
+    "defaultButtonText": "Actualizar al Paquete de Comando"
+  },
+  "familyPreparednessTools": {
+    "use_these_tools_to_ensure_your_1": "Use estas herramientas para asegurar que su familia esté preparada y sepa qué hacer en situaciones de emergencia.",
+    "generate_emergency_guide_2": "Generar Guía de Emergencia",
+    "create_a_printable_guide_for_y_3": "Cree una guía imprimible para que su familia siga en situaciones de emergencia.",
+    "select_scenario_4": "Seleccionar Escenario",
+    "generate_another_5": "Generar Otro"
+  },
+  "lifeEvents": {
+    "title": "Eventos de Vida",
+    "description": "Registre cambios importantes en su vida que requieren actualización de su plan"
+  },
+  "scenarioPlanner": {
+    "title": "Planificador de Escenarios",
+    "description": "Planifique para diferentes situaciones de emergencia"
+  },
+  "will_generator": {
+    "title": "Generador de Testamento",
+    "description": "Cree un testamento básico"
+  },
+  "help": {
+    "title": "Ayuda",
+    "description": "Centro de ayuda y soporte"
+  },
+  "consent": {
+    "title": "Consentimiento",
+    "description": "Gestión de consentimientos"
+  },
+  "demo": {
+    "title": "Demostración",
+    "description": "Demostración de funciones"
+  },
+  "test": {
+    "title": "Prueba",
+    "description": "Funciones de prueba"
+  },
+  "notifications": {
+    "title": "Notificaciones",
+    "description": "Configuración de notificaciones"
+  },
+  "privacyControlPanel": {
+    "title": "Panel de Control de Privacidad",
+    "description": "Gestión de privacidad y datos"
+  },
+  "willGenerator": {
+    "title": "Generador de Testamento",
+    "description": "Cree su testamento"
+  },
+  "assetCard": {
+    "title": "Tarjeta de Activo",
+    "description": "Información del activo"
+  },
+  "familyPreparedness": {
+    "title": "Preparación Familiar",
+    "description": "Herramientas de preparación familiar"
+  },
+  "upload": {
+    "title": "Subir",
+    "description": "Subir archivos y documentos"
+  },
+  "vault": {
+    "title": "La Bóveda",
+    "subtitle": "Su inventario seguro de todos los activos financieros y posesiones valiosas.",
+    "errorLoadingAssets": "Error al cargar sus activos. Por favor, inténtelo de nuevo.",
+    "letsBuildInventory": "Construyamos Su Inventario",
+    "addProperty": "Añadir Propiedad",
+    "addFinances": "Añadir Finanzas",
+    "addVehicle": "Añadir Vehículo",
+    "addDigitalAsset": "Añadir Activo Digital",
+    "addPersonalItem": "Añadir Artículo Personal",
+    "addOther": "Añadir Algo Más...",
+    "confirmDeletion": "¿Está seguro de que desea eliminar \"{{assetName}}\"?",
+    "errorDeletingAsset": "Error al eliminar activo. Por favor, inténtelo de nuevo.",
+    "searchPlaceholder": "Buscar sus activos...",
+    "addAsset": "Añadir Activo",
+    "totalAssets": "Activos Totales",
+    "totalValue": "Valor Total",
+    "categories": "Categorías",
+    "noAssetsFound": "No se encontraron activos que coincidan con \"{{searchQuery}}\"",
+    "startAddingAssets": "Comience a añadir activos para construir su inventario",
+    "addNewAsset": "Añadir Nuevo Activo",
+    "property": "Propiedad",
+    "finances": "Finanzas",
+    "vehicle": "Vehículo",
+    "digital": "Digital",
+    "personal": "Personal",
+    "other": "Otro"
+  },
+  "hero": {
+    "title": "Duerma Tranquilo Sabiendo que Su Familia Estará Bien",
+    "subtitle": "Cuando la vida toma un giro inesperado, su familia no tendrá que buscar, adivinar o preocuparse. Todo lo que necesitan estará justo donde puedan encontrarlo.",
+    "cta_primary": "Tome el Control del Futuro de Su Familia Hoy",
+    "cta_secondary": "Vea Qué Tan Simple Es",
+    "urgencySubtitle": "La configuración toma solo 10 minutos - sea el padre preparado que su familia necesita",
+    "secondaryContext": "Video de 2 minutos mostrando familias reales",
+    "trustSignals": {
+      "dataOwnership": "Los asuntos privados de su familia permanecen privados",
+      "gdprCompliant": "Construido con valores familiares europeos",
+      "europeanFamilies": "Confiado por familias que se preocupan profundamente"
+    },
+    "community": {}
   },
   "nav": {
     "dashboard": "Panel de control",
@@ -37,35 +270,448 @@
       "description": "Asegúrese de que su legado se transmita de acuerdo con sus deseos."
     }
   },
-  "features": {
-    "title": "¿Por qué elegir LegacyGuard?",
-    "subtitle": "Construido con seguridad de nivel empresarial y diseñado para familias que valoran su patrimonio.",
-    "security": {
-      "title": "Confidencialidad y Privacidad Absolutas",
-      "description": "Diseñado para que ninguna persona no autorizada pueda acceder a sus datos. Ni siquiera nosotros. Su privacidad es nuestra máxima prioridad."
+  "scenarios": {
+    "title": "¿Qué Sucede Cuando la Vida Toma un Giro Inesperado?",
+    "subtitle": "Familias reales, situaciones reales, control real y preparación",
+    "hospitalStay": {
+      "title": "La Estancia Hospitalaria Inesperada",
+      "before": {
+        "situation": "El esposo de Sarah tuvo un ataque al corazón. Mientras estaba en cuidados intensivos, ella pasó días tratando de encontrar sus papeles de seguro, información de cuenta bancaria y contactos importantes. El estrés era abrumador cuando necesitaba enfocarse en su recuperación.",
+        "emotion": "Estrés y preocupación",
+        "consequence": "Días buscando información y apoyo."
+      },
+      "after": {
+        "situation": "Cuando Mark tuvo su accidente, su esposa Lisa abrió su guía familiar y encontró todo organizado: detalles del seguro, contactos bancarios, información médica e incluso una lista de personas a notificar. Podía enfocarse en lo que más importaba - estar ahí para Mark.",
+        "emotion": "Paz y enfoque",
+        "benefit": "Acceso inmediato a todo lo que necesitaba."
+      }
     },
-    "guardians": {
-      "title": "Red de Guardianes",
-      "description": "Designe a familiares y amigos de confianza como guardianes para asegurar la continuidad del legado."
+    "businessTrip": {
+      "title": "La Emergencia del Viaje de Negocios",
+      "before": {
+        "situation": "Cuando el vuelo de David se retrasó y perdió la cirugía de emergencia de su hija, su esposa no pudo acceder a su cuenta de ahorros o encontrar su información de seguro médico. Las decisiones críticas tuvieron que esperar.",
+        "emotion": "Frustración e impotencia",
+        "consequence": "Decisiones médicas importantes retrasadas."
+      },
+      "after": {
+        "situation": "Cuando el esposo de Emma estaba viajando y ella necesitaba fondos de emergencia para la cirugía de su hijo, tenía acceso inmediato a toda la información de la cuenta, detalles del seguro e incluso cartas de autorización pre-escritas. Sin retrasos, sin estrés.",
+        "emotion": "Alivio y preparación",
+        "benefit": "Todo accesible justo cuando lo necesitaba."
+      }
     },
-    "storage": {
-      "title": "Almacenamiento seguro en la nube",
-      "description": "Copias de seguridad redundantes en múltiples centros de datos con garantía de disponibilidad del 99.99%."
+    "suddenLoss": {
+      "title": "La Pérdida Súbita",
+      "before": {
+        "situation": "Después de perder a su padre súbitamente, Maria pasó meses tratando de reconstruir sus asuntos financieros. Encontró cuentas que no sabía que existían y perdió fechas importantes porque los documentos estaban dispersos por todas partes.",
+        "emotion": "Confusión y arrepentimiento",
+        "consequence": "Fechas perdidas y tiempo perdido."
+      },
+      "after": {
+        "situation": "Cuando la familia de John necesitaba manejar sus asuntos, todo estaba claramente organizado: una lista completa de cuentas, contactos importantes, instrucciones paso a paso e incluso mensajes personales que había preparado para cada miembro de la familia.",
+        "emotion": "Calma y claridad",
+        "benefit": "Un camino claro a seguir en tiempos difíciles."
+      }
     },
-    "timelock": {
-      "title": "Acceso con bloqueo temporal",
-      "description": "Establezca condiciones sobre cuándo y cómo los beneficiarios acceden a su patrimonio digital."
+    "labels": {
+      "before": "Antes de LegacyGuard",
+      "after": "Después de Heritage Vault",
+      "feeling": "Sentimiento"
     },
-    "stories": {
-      "title": "Historias personales",
-      "description": "Cree narrativas multimedia enriquecidas que capturen la esencia del viaje de su familia."
+    "bottomCta": {
+      "primary": "No Deje que Su Familia Enfrente Este Caos",
+      "secondary": "Comience a Organizar en 10 Minutos",
+      "urgency": "Cada día que espera es otro día que su familia no está preparada"
     },
-    "preservation": {
-      "title": "Preservación de por vida",
-      "description": "Su patrimonio se conserva indefinidamente con migración automática de formato y actualizaciones."
+    "testimonials": {
+      "1": "Después del accidente súbito de mi hermano, vi a mi cuñada luchar durante semanas para encontrar documentos importantes y contraseñas. Fue entonces cuando supe que no podía dejar que lo mismo le pasara a mi familia.",
+      "2": "Como madre soltera que dirige un negocio, me preocupaba constantemente sobre qué pasaría si algo me sucediera. Heritage Vault me ayudó a organizar todo.",
+      "3": "Mi esposa tiene demencia en etapa temprana, y me di cuenta de que necesitaba prepararme mientras aún podía. Heritage Vault hizo simple organizar nuestros 40 años de vida juntos."
     }
   },
+  "calculator": {
+    "badge": "Calculadora de Preparación",
+    "title": "Calcule la Puntuación de Preparación de Su Familia",
+    "subtitle": "Vea el tiempo y dinero real que su familia ahorra cuando todo está organizado",
+    "inputs": {
+      "title": "Su Situación Familiar",
+      "description": "Cuéntenos un poco sobre su familia para personalizar sus resultados",
+      "dependents": "¿Cuántas personas dependen de usted?",
+      "dependentsHelp": "Incluya cónyuge, hijos, padres ancianos",
+      "income": "¿Cuál es el ingreso mensual de su familia?",
+      "incomeHelp": "Esto ayuda a calcular los salarios perdidos potenciales",
+      "property": "¿Posee propiedad?",
+      "business": "¿Tiene un negocio?",
+      "accounts": "¿Cuántas cuentas bancarias tiene?",
+      "accountsHelp": "Incluya cuentas corrientes, de ahorro, inversiones"
+    },
+    "calculateButton": "Calcular Mis Ahorros",
+    "results": {
+      "title": "Los Ahorros de Su Familia",
+      "description": "Aquí está lo que significa estar preparado para sus seres queridos",
+      "timeSavings": {
+        "title": "Tiempo que Su Familia Ahorra",
+        "without": "Sin organización",
+        "withoutHours": "40-120 horas buscando",
+        "with": "Con Heritage Vault",
+        "withMinutes": "Menos de 5 minutos"
+      },
+      "moneySavings": {
+        "title": "Dinero que Su Familia Ahorra",
+        "legalFees": "Honorarios legales por reconstrucción",
+        "lostWages": "Salarios perdidos por tiempo libre",
+        "penalties": "Fechas perdidas y penalizaciones",
+        "total": "Ahorros potenciales totales"
+      },
+      "emotional": {
+        "title": "Impacto en el Bienestar Emocional",
+        "stress": "Reducción del nivel de estrés",
+        "confidence": "Aumento de la confianza familiar",
+        "peace": "Calificación de control y preparación"
+      },
+      "socialProof": "Únase a familias que ya duermen mejor por la noche",
+      "families": "15,000+ familias protegidas",
+      "ctaContext": "La mayoría de las familias completan la configuración durante su almuerzo",
+      "shareButton": "Compartir Resultados"
+    },
+    "testimonial": {
+      "quote": "Nunca me di cuenta de cuánto estrés estaba cargando hasta que organicé todo. Ahora sé que mi familia estará bien, sin importar qué pase.",
+      "author": "Sarah M., madre de tres"
+    },
+    "shareTitle": "Resultados de la Calculadora de Preparación Familiar",
+    "shareCopied": "¡Resultados copiados al portapapeles!"
+  },
+  "testimonials": {
+    "badge": "Familias Reales Tomando Control",
+    "title": "Confiado por 15,000+ Familias Europeas",
+    "subtitle": "Vea cómo familias como la suya encontraron seguridad y paz con Heritage Vault",
+    "verified": "Familia Verificada",
+    "trustedBy": "Confiado y recomendado por",
+    "stats": {
+      "families": "15,000+",
+      "familiesLabel": "Familias europeas protegidas",
+      "satisfaction": "99.7%",
+      "satisfactionLabel": "se sienten más preparadas y en control",
+      "stressReduction": "92%",
+      "stressReductionLabel": "menos estrés familiar reportado",
+      "timeSaved": "120 hrs",
+      "timeSavedLabel": "tiempo promedio ahorrado por familia"
+    },
+    "stories": {
+      "1": {
+        "name": "Michael K.",
+        "role": "Padre de tres",
+        "location": "Múnich, Alemania",
+        "quote": "Después del accidente súbito de mi hermano, vi a mi cuñada luchar durante semanas para encontrar documentos importantes y contraseñas. Fue entonces cuando supe que no podía dejar que lo mismo le pasara a mi familia. Ahora todo está organizado, y mi esposa sabe exactamente dónde encontrar lo que necesita. Estar preparado y en control no tiene precio.",
+        "highlight": "✨ Configurado en solo 2 horas, protegiendo 3 hijos y cónyuge"
+      },
+      "2": {
+        "name": "Anna S.",
+        "role": "Propietaria de negocio",
+        "location": "Viena, Austria",
+        "quote": "Como madre soltera que dirige un negocio, me preocupaba constantemente sobre qué pasaría si algo me sucediera. Heritage Vault me ayudó a organizar todo - desde cuentas de negocio hasta la información escolar de mis hijos. Mi hermana ahora tiene acceso a todo lo que necesitaría para intervenir. Duermo mucho mejor sabiendo que están protegidos.",
+        "highlight": "💼 Negocio y vida personal organizados en un lugar seguro"
+      },
+      "3": {
+        "name": "Thomas R.",
+        "role": "Maestro jubilado",
+        "location": "Zúrich, Suiza",
+        "quote": "Mi esposa tiene demencia en etapa temprana, y me di cuenta de que necesitaba prepararme mientras aún podía. Heritage Vault hizo simple organizar nuestros 40 años de vida juntos. Nuestros hijos ahora tienen instrucciones claras y acceso a todo. Ha acercado a toda nuestra familia saber que estamos preparados para lo que venga.",
+        "highlight": "❤️ 40 años de historia familiar preservada y protegida"
+      }
+    },
+    "authority": {
+      "advisors": "Recomendado por Asesores Financieros",
+      "attorneys": "Confiado por Abogados de Familia",
+      "counselors": "Respaldado por Consejeros de Duelo"
+    },
+    "compliance": {
+      "gdpr": "Cumple con RGPD",
+      "dataProtection": "Certificado de Protección de Datos",
+      "iso": "Certificado ISO 27001"
+    },
+    "bottomCta": {}
+  },
+  "executor": {
+    "dashboard": {
+      "title": "Panel de Control del Albacea",
+      "subtitle": "Una guía paso a paso para ayudarle durante este tiempo difícil",
+      "reminder": "Recuerde cuidarse durante este tiempo difícil. No dude en pedir ayuda cuando la necesite."
+    },
+    "errors": {
+      "loadTasksFailed": "Error al cargar tareas del albacea. Por favor, inténtelo más tarde.",
+      "updateTaskFailed": "Error al actualizar el estado de la tarea."
+    },
+    "highPriority": "Alta Prioridad",
+    "due": "Vencimiento",
+    "completed": "Completado",
+    "undo": "Deshacer",
+    "markComplete": "Marcar como Completado",
+    "viewAccountDetails": "Ver Detalles de Cuenta y Contraseña",
+    "viewRelatedDocuments": "Ver Documentos Relacionados ({{count}})",
+    "stats": {
+      "totalTasks": "Tareas Totales",
+      "completed": "Completadas",
+      "remaining": "Restantes"
+    },
+    "sections": {
+      "immediate": {
+        "title": "Tareas Inmediatas (Primeras 48 Horas)",
+        "description": "Tareas críticas que necesitan su atención inmediata",
+        "empty": "¡Todas las tareas inmediatas completadas!"
+      },
+      "firstWeek": {
+        "title": "Tareas de la Primera Semana",
+        "description": "Tareas importantes para completar dentro de la primera semana",
+        "empty": "¡Todas las tareas de la primera semana completadas!"
+      },
+      "ongoing": {
+        "title": "Responsabilidades Continuas",
+        "description": "Tareas para manejar en las próximas semanas y meses",
+        "empty": "¡Todas las tareas continuas completadas!"
+      }
+    },
+    "communications": {
+      "title": "Comunicaciones con Beneficiarios",
+      "description": "Rastree todas las comunicaciones con beneficiarios para mantener la transparencia",
+      "logCommunication": "Registrar Comunicación",
+      "logTitle": "Registrar Comunicación con Beneficiario",
+      "logDescription": "Registre detalles de su comunicación con beneficiarios",
+      "beneficiaryName": "Nombre del Beneficiario",
+      "beneficiaryEmail": "Correo Electrónico (opcional)",
+      "communicationType": "Tipo",
+      "communicationDate": "Fecha",
+      "subject": "Asunto",
+      "summary": "Resumen",
+      "subjectPlaceholder": "ej., Actualización inicial del patrimonio",
+      "summaryPlaceholder": "Resumen breve de lo que se discutió...",
+      "types": {
+        "email": "Correo Electrónico",
+        "phone": "Llamada Telefónica",
+        "letter": "Carta",
+        "in_person": "En Persona",
+        "other": "Otro"
+      },
+      "saving": "Guardando...",
+      "saveCommunication": "Guardar Comunicación",
+      "cancel": "Cancelar",
+      "noCommunications": "Aún no se han registrado comunicaciones",
+      "startTracking": "Comience a rastrear sus comunicaciones con beneficiarios",
+      "errors": {
+        "saveFailed": "Error al registrar comunicación"
+      }
+    },
+    "status": {
+      "title": "Estado de Administración del Patrimonio",
+      "description": "Estado actual de alto nivel visible para miembros autorizados de la familia",
+      "updateStatus": "Actualizar Estado",
+      "updateTitle": "Actualizar Estado del Patrimonio",
+      "updateDescription": "Este estado será visible para miembros autorizados de la familia",
+      "statusLabel": "Estado",
+      "additionalDetails": "Detalles Adicionales (opcional)",
+      "detailsPlaceholder": "Proporcione cualquier contexto adicional...",
+      "selectStatus": "Seleccionar un estado",
+      "updating": "Actualizando...",
+      "lastUpdated": "Última actualización",
+      "progress": "Progreso",
+      "noStatusSet": "Aún no se ha establecido ningún estado. Haga clic en \"Actualizar Estado\" para establecer el estado inicial.",
+      "noStatusUpdates": "Aún no se han publicado actualizaciones de estado.",
+      "statuses": {
+        "initial_review": "Revisión Inicial",
+        "gathering_documents": "Recopilando Documentos",
+        "probate_initiated": "Proceso de Sucesión Iniciado",
+        "assets_being_valued": "Activos Siendo Valorados",
+        "debts_being_settled": "Deudas Siendo Liquidadas",
+        "tax_preparation": "Preparación de Impuestos",
+        "ready_for_distribution": "Listo para Distribución",
+        "distribution_in_progress": "Distribución en Progreso",
+        "estate_closed": "Patrimonio Cerrado"
+      },
+      "errors": {
+        "updateFailed": "Error al actualizar estado"
+      }
+    },
+    "justInTime": {
+      "viewAccountDetails": "Ver Detalles de Cuenta y Contraseña",
+      "secureInfoAccess": "Acceso Seguro a Información",
+      "reauthenticate": "Re-autenticarse para ver información sensible para",
+      "securityReason": "Por razones de seguridad, por favor ingrese su contraseña para acceder a esta información.",
+      "password": "Contraseña",
+      "enterPassword": "Ingrese su contraseña",
+      "incorrectPassword": "Contraseña incorrecta. Por favor, inténtelo de nuevo.",
+      "cancel": "Cancelar",
+      "verifying": "Verificando...",
+      "verifyContinue": "Verificar y Continuar",
+      "accountName": "Nombre de Cuenta",
+      "accountNumber": "Número de Cuenta",
+      "username": "Nombre de Usuario",
+      "pin": "PIN",
+      "additionalNotes": "Notas Adicionales",
+      "noSensitiveInfo": "No hay información sensible asociada con esta tarea.",
+      "accessLogged": "Este acceso ha sido registrado por razones de seguridad.",
+      "accessTime": "Tiempo de acceso",
+      "close": "Cerrar",
+      "errors": {
+        "reauthFailed": "Error al verificar su identidad. Por favor, inténtelo de nuevo.",
+        "notFound": "No se encontró información sensible para esta tarea.",
+        "retrieveFailed": "Error al recuperar información sensible."
+      }
+    },
+    "familyView": {
+      "title": "Estado de Administración del Patrimonio",
+      "subtitle": "Manténgase informado sobre el progreso de la administración del patrimonio",
+      "recentCommunications": "Comunicaciones Recientes del Albacea",
+      "recentCommunicationsDescription": "Actualizaciones recientes de {{executorName}} a beneficiarios",
+      "to": "Para",
+      "noCommunications": "Aún no se han registrado comunicaciones.",
+      "infoMessage": "Esta información es actualizada por {{executorName}} para mantener informados a los miembros de la familia. Para preguntas detalladas, por favor contacte al albacea directamente.",
+      "defaultExecutor": "el albacea",
+      "errors": {
+        "loadFailed": "Error al cargar datos"
+      }
+    }
+  },
+  "features": {
+    "title": "Tres Promesas Simples que Le Hacemos",
+    "subtitle": "Todo lo que su familia necesita, nada de lo que no necesita. Simple, claro y siempre ahí cuando importa.",
+    "sleepBetter": {
+      "title": "Duerma Mejor Esta Noche",
+      "description": "Deje de preocuparse por 'qué pasaría si algo me sucede.' Su familia sabrá exactamente qué hacer, dónde encontrar todo y a quién llamar."
+    },
+    "noChaos": {
+      "title": "Sin Búsqueda Frenética",
+      "description": "Su familia no pasará días buscando en cajones, llamando a bancos o tratando de adivinar contraseñas. Todo lo importante está organizado en un lugar seguro."
+    },
+    "clearInstructions": {
+      "title": "Guía Paso a Paso",
+      "description": "Sus seres queridos obtienen instrucciones claras y simples para exactamente qué hacer y cuándo. Sin confusión, sin adivinanzas, sin estrés durante tiempos difíciles."
+    },
+    "security": {},
+    "guardians": {},
+    "storage": {},
+    "timelock": {},
+    "stories": {},
+    "preservation": {}
+  },
   "dashboard": {
+    "title": "Su Panel de Control de Legado",
+    "subtitle": "Su centro para preservar y proteger el legado de su familia",
+    "planStrength": {
+      "title": "Fuerza del Plan",
+      "description": "Nivel general de preparación y protección familiar",
+      "currentStage": "Etapa Actual: {{stage}}"
+    },
+    "nextStep": {
+      "title": "Próximo Paso Recomendado",
+      "estimatedTime": "Tiempo estimado: {{time}}"
+    },
+    "protectionJourney": {
+      "title": "Viaje de Protección",
+      "description": "Su viaje hacia la protección familiar completa",
+      "planStrengthRange": "Fuerza del Plan: {{range}}",
+      "stage": "Etapa {{number}}: {{name}}"
+    },
+    "stages": {
+      "foundation": "Etapa de Fundación",
+      "building": "Etapa de Construcción",
+      "strengthening": "Etapa de Fortalecimiento",
+      "advancedPlanning": "Planificación Avanzada",
+      "legacy": "Etapa de Legado"
+    },
+    "deepDive": {
+      "milestoneAchieved": "HITO LOGRADO"
+    },
+    "preservationMode": {
+      "lastReviewDate": "Última Fecha de Revisión: {{date}}",
+      "startAnnualCheck": "Iniciar Verificación Anual del Sistema",
+      "latestUpdates": "Últimas Actualizaciones"
+    },
+    "complexProfile": {
+      "detected": "Perfil Complejo Detectado",
+      "personalizedGuidance": "Guía Personalizada",
+      "businessSuccessionNote": "Hemos notado que su plan incluye activos comerciales. La planificación de sucesión puede ser compleja. Considere una revisión profesional para asegurar que su transición comercial sea fluida.",
+      "discussWithExpert": "Discutir con un Experto Legal"
+    },
+    "errors": {
+      "failedToFetchStatus": "Error al obtener el estado de progreso",
+      "failedToDeleteDocument": "Error al eliminar documento",
+      "failedToUpdateDocument": "Error al actualizar documento",
+      "failedToDeleteGuardian": "Error al eliminar guardián",
+      "pleaseEnterValidEmail": "Por favor, ingrese una dirección de correo electrónico válida",
+      "failedToSendInvitation": "Error al enviar invitación",
+      "guardianLimitReached": "Ha alcanzado el límite de {{limit}} guardianes en su plan actual"
+    },
+    "nudge": {
+      "progressTitle": "Su Progreso de Protección de Legado",
+      "completeNow": "Completar Ahora"
+    },
+    "sectionHeaders": {
+      "familyGuide": "Guía de Emergencia Familiar",
+      "familyGuideSubtitle": "Todo lo que su familia necesita en un lugar claro y accesible",
+      "quickTasks": "Tareas de 5 Minutos",
+      "quickTasksSubtitle": "Acciones pequeñas, gran impacto - tareas que puede completar ahora mismo"
+    },
+    "tasks": {
+      "progress": "{{completed}} de {{total}} tareas completadas"
+    },
+    "metadata": {
+      "contact": "Contacto",
+      "renewsOn": "Renueva el"
+    },
+    "invitation": {
+      "name": "Nombre",
+      "relationship": "Relación",
+      "roles": "Roles",
+      "emailLabel": "Dirección de Correo Electrónico"
+    },
+    "allocationDisplay": "{{percentage}}% asignado",
+    "header": {
+      "initial": "Su Viaje de Protección de Legado",
+      "inProgress": "¡Haciendo Gran Progreso!",
+      "complete": "¡Todo Listo!"
+    },
+    "messages": {
+      "welcomeToHeritageVault": "¡Bienvenido a Heritage Vault! Aseguremos juntos el futuro de su familia.",
+      "excellentFirstStep": "¡Excelente primer paso!",
+      "taskBringsClarity": "Cada tarea trae más claridad y seguridad a su familia.",
+      "projectOrderComplete": "¡Su Plan de Acción está completo!",
+      "successfullySecured": "Ha asegurado exitosamente el futuro de su familia. ¡Bien hecho!",
+      "progressMade": "¡Gran progreso!",
+      "anotherPieceInPlace": "Otra pieza importante en su lugar.",
+      "startingTask": "Iniciando: {{taskTitle}}",
+      "documentDeleted": "Documento eliminado exitosamente",
+      "documentMarkedAsKey": "Documento marcado como documento clave",
+      "documentRemovedFromKey": "Documento removido de documentos clave",
+      "assetDeleted": "Activo eliminado exitosamente",
+      "assetAdded": "Activo añadido exitosamente",
+      "assetUpdated": "Activo actualizado exitosamente",
+      "guardianDeleted": "Guardián eliminado exitosamente",
+      "invitationSent": "Invitación enviada a {{email}}",
+      "sendingInvitation": "Enviando invitación...",
+      "beneficiaryDeleted": "Beneficiario eliminado exitosamente",
+      "beneficiaryAdded": "Beneficiario añadido exitosamente",
+      "beneficiaryUpdated": "Beneficiario actualizado exitosamente"
+    },
+    "sheets": {
+      "editAsset": "Editar Activo",
+      "addAsset": "Añadir Activo",
+      "editAssetDescription": "Actualizar los detalles de este activo",
+      "addAssetDescription": "Añadir un nuevo activo a su portafolio",
+      "uploadDocument": "Subir Documento",
+      "uploadDocumentDescription": "Subir y organizar sus documentos importantes",
+      "editBeneficiary": "Editar Beneficiario",
+      "addBeneficiary": "Añadir Beneficiario",
+      "editBeneficiaryDescription": "Actualizar detalles del beneficiario",
+      "addBeneficiaryDescription": "Añadir a alguien que heredará de usted"
+    },
+    "addGuardian": "Añadir Guardián",
+    "addItem": "Añadir Elemento",
+    "uploadDocument": "Subir Documento",
+    "addBeneficiary": "Añadir Beneficiario",
+    "empty": {
+      "noGuardians": "Aún no se han añadido guardianes",
+      "noAssetsOrDocuments": "Aún no se han añadido activos o documentos",
+      "noBeneficiaries": "Aún no se han añadido beneficiarios"
+    },
     "strategicSummary": {
       "initial": "Comience a construir su legado digital agregando su primer documento.",
       "addDocument": "Agregar Documento",
@@ -107,8 +753,8 @@
       "needsImprovement": "Necesita Mejora"
     },
     "quickTasks": {
-      "taskCompleted": "Task completed!",
-      "taskStarted": "Starting task...",
+      "taskCompleted": "¡Tarea completada!",
+      "taskStarted": "Iniciando tarea...",
       "tasks": {
         "birthCertificate": {
           "title": "🛡️ Add Birth Certificate",
@@ -185,6 +831,287 @@
       "title": "Guía de emergencia familiar"
     },
     "sectionHeaders": {}
+  },
+  "annualReview": {
+    "title": "Revisión Anual de Legado",
+    "subtitle": "Mantenga el plan de protección de su familia actual y efectivo",
+    "description": "La vida cambia rápidamente. Esta revisión anual asegura que su plan de legado permanezca alineado con su situación actual y deseos.",
+    "progress": {
+      "title": "Progreso de Revisión",
+      "completed": "Completado",
+      "inProgress": "En Progreso",
+      "notStarted": "No Iniciado",
+      "totalSteps": "Pasos Totales",
+      "estimatedTime": "Tiempo Estimado: 15 minutos"
+    },
+    "step1": {
+      "title": "Revisar Sus Albaceas",
+      "description": "Confirme que sus personas de confianza siguen siendo las elecciones correctas para su familia"
+    },
+    "step2": {
+      "title": "Revisar Sus Activos",
+      "description": "Verifique que su inventario de activos esté actual y completo"
+    },
+    "step3": {
+      "title": "Revisar Sus Beneficiarios",
+      "description": "Asegúrese de que sus beneficiarios siguen siendo las personas correctas"
+    },
+    "step4": {
+      "title": "Completar Revisión",
+      "description": "Finalice su revisión anual y actualice su plan"
+    },
+    "commandRoster": {
+      "title": "Revisión del Roster de Comando",
+      "description": "Sus albaceas y personas de confianza son la base del plan de protección de su familia.",
+      "executorQuestion": "¿{name} sigue siendo la persona correcta para ser su albacea?",
+      "guardianQuestion": "¿{name} sigue siendo la persona correcta para cuidar de sus hijos?",
+      "trustedPersonQuestion": "¿{name} sigue siendo la persona correcta para {role}?",
+      "status": {
+        "current": "Actual",
+        "needsUpdate": "Necesita Actualización",
+        "outdated": "Desactualizado",
+        "missing": "Faltante"
+      },
+      "details": {
+        "executor": "Albacea principal para su patrimonio",
+        "guardian": "Guardián para hijos menores",
+        "trustedPerson": "Persona de confianza con acceso {accessLevel}",
+        "emergencyContact": "Persona de contacto de emergencia"
+      }
+    },
+    "armory": {
+      "title": "Revisión del Inventario de Activos",
+      "description": "Sus activos son lo que está protegiendo. Mantenga este inventario actual.",
+      "ownershipQuestion": "¿Aún posee {assetName}?",
+      "valueQuestion": "¿Ha cambiado significativamente el valor de {assetName}?",
+      "locationQuestion": "¿Sigue siendo correcta la ubicación de {assetName}?",
+      "status": {
+        "current": "Actual",
+        "needsUpdate": "Necesita Actualización",
+        "outdated": "Desactualizado",
+        "missing": "Faltante"
+      },
+      "categories": {
+        "realEstate": "Bienes Inmuebles",
+        "vehicles": "Vehículos",
+        "bankAccounts": "Cuentas Bancarias",
+        "investments": "Inversiones",
+        "insurance": "Seguros",
+        "digitalAssets": "Activos Digitales",
+        "personalItems": "Artículos Personales"
+      }
+    },
+    "beneficiaries": {
+      "title": "Revisión de Beneficiarios",
+      "description": "Asegúrese de que las personas correctas reciban los activos correctos en el momento correcto.",
+      "confirmationQuestion": "¿Estas siguen siendo las personas correctas para recibir estos activos?",
+      "distributionQuestion": "¿Sigue siendo correcto el porcentaje de distribución?",
+      "contactQuestion": "¿Siguen siendo actuales los detalles de contacto para {name}?",
+      "status": {
+        "current": "Actual",
+        "needsUpdate": "Necesita Actualización",
+        "outdated": "Desactualizado",
+        "missing": "Faltante"
+      },
+      "details": {
+        "primary": "Beneficiario principal",
+        "contingent": "Beneficiario contingente",
+        "percentage": "{percentage}% de activos",
+        "specific": "Beneficiario de activo específico"
+      }
+    },
+    "complete": {
+      "title": "Revisión Completada",
+      "description": "Su revisión anual ha sido completada exitosamente.",
+      "message": "Su revisión anual ha sido completada. El plan de protección de su familia ahora está actual y efectivo.",
+      "summary": "Resumen de Revisión",
+      "changes": "Cambios Realizados",
+      "noChanges": "No se necesitaron cambios. Su plan está actual.",
+      "nextReview": "Próxima Revisión Debida",
+      "reminder": "Le recordaremos cuando sea momento de su próxima revisión anual."
+    },
+    "buttons": {
+      "confirm": "Confirmar",
+      "update": "Actualizar",
+      "back": "Atrás",
+      "next": "Siguiente",
+      "finish": "Finalizar Revisión",
+      "save": "Guardar Cambios",
+      "skip": "Omitir por Ahora",
+      "reviewLater": "Revisar Más Tarde"
+    },
+    "status": {
+      "title": "Estado de Revisión",
+      "overdue": "Vencida",
+      "dueSoon": "Vence Pronto",
+      "current": "Actual",
+      "completed": "Completada",
+      "lastReview": "Última Revisión",
+      "nextReview": "Próxima Revisión",
+      "daysOverdue": "{days} días vencida",
+      "daysUntilDue": "{days} días hasta vencimiento"
+    },
+    "notifications": {
+      "reviewDue": "Revisión Anual Debida",
+      "reviewOverdue": "Revisión Anual Vencida",
+      "reviewCompleted": "Revisión Anual Completada",
+      "changesSaved": "Cambios guardados exitosamente",
+      "errorSaving": "Error al guardar cambios",
+      "reminderSet": "Recordatorio establecido para próxima revisión"
+    }
+  },
+  "beneficiaryCommunications": {
+    "title": "Comunicaciones con Beneficiarios",
+    "description": "Rastree todas las comunicaciones con beneficiarios",
+    "logCommunication": "Registrar Comunicación",
+    "logAction": "Comunicación registrada con {name}",
+    "dialog": {
+      "title": "Registrar Comunicación",
+      "description": "Registre detalles de su comunicación con un beneficiario"
+    },
+    "fields": {
+      "beneficiaryName": "Nombre del Beneficiario",
+      "email": "Correo Electrónico",
+      "type": "Tipo",
+      "date": "Fecha",
+      "subject": "Asunto",
+      "summary": "Resumen"
+    },
+    "placeholders": {
+      "subject": "Asunto breve de la comunicación",
+      "summary": "Resumen detallado de lo que se discutió"
+    },
+    "types": {
+      "email": "Correo Electrónico",
+      "phone": "Teléfono",
+      "letter": "Carta",
+      "inPerson": "En Persona",
+      "in_person": "En Persona",
+      "other": "Otro"
+    },
+    "actions": {
+      "cancel": "Cancelar",
+      "saving": "Guardando...",
+      "save": "Guardar Comunicación"
+    },
+    "empty": {
+      "title": "Aún no se han registrado comunicaciones",
+      "subtitle": "Haga clic en 'Registrar Comunicación' para registrar su primera interacción"
+    }
+  },
+  "complexityReduction": {
+    "title": "Simplifique Su Planificación de Legado",
+    "subtitle": "Divida tareas complejas en pasos simples y manejables",
+    "description": "Entendemos que planificar para el futuro puede sentirse abrumador. Nuestro sistema de reducción de complejidad divide cada tarea en pasos simples y accionables que toman solo minutos en completar.",
+    "benefits": {
+      "title": "Por Qué Funciona la Reducción de Complejidad",
+      "overwhelm": {
+        "title": "Elimina la Abrumación",
+        "description": "En lugar de enfrentar una lista masiva de tareas pendientes, aborda una pequeña tarea a la vez. Cada paso está diseñado para completarse en menos de 5 minutos."
+      },
+      "progress": {
+        "title": "Progreso Visible",
+        "description": "Vea crecer la preparación de su familia con cada paso completado. Rastree su progreso y celebre las pequeñas victorias en el camino."
+      },
+      "confidence": {
+        "title": "Construye Confianza",
+        "description": "A medida que completa cada paso, se sentirá más confiado y en control. Lo que una vez pareció imposible se vuelve alcanzable."
+      },
+      "family": {
+        "title": "Protección Familiar",
+        "description": "Cada paso completado protege directamente a su familia. Desde acceso de emergencia hasta planificación a largo plazo, cada acción importa."
+      }
+    },
+    "steps": {
+      "identifyBankAccount": {
+        "title": "Identificar Su Cuenta Bancaria Principal",
+        "why": "Por qué esto importa: Acceso inmediato a fondos durante emergencias",
+        "whatYouDo": "Lo que usted hace: Tome una foto o escriba la información de la cuenta",
+        "whatWeDo": "Lo que nosotros hacemos: Almacenar información de forma segura y crear instrucciones de acceso",
+        "timeRequired": "Tiempo requerido: 2 minutos",
+        "complexity": "Nivel de complejidad: Simple"
+      },
+      "emergencyContacts": {
+        "title": "Listar Contactos de Emergencia",
+        "why": "Por qué esto importa: Acceso rápido a personas importantes durante crisis",
+        "whatYouDo": "Lo que usted hace: Añada números de teléfono y relaciones",
+        "whatWeDo": "Lo que nosotros hacemos: Organizar contactos por prioridad y crear protocolos de emergencia",
+        "timeRequired": "Tiempo requerido: 3 minutos",
+        "complexity": "Nivel de complejidad: Simple"
+      },
+      "insurancePolicies": {
+        "title": "Documentar Pólizas de Seguro",
+        "why": "Por qué esto importa: Asegura que las reclamaciones puedan presentarse rápida y correctamente",
+        "whatYouDo": "Lo que usted hace: Suba documentos de póliza o tome fotos",
+        "whatWeDo": "Lo que nosotros hacemos: Extraer información clave y crear instrucciones de reclamación",
+        "timeRequired": "Tiempo requerido: 5 minutos",
+        "complexity": "Nivel de complejidad: Fácil"
+      },
+      "digitalAssets": {
+        "title": "Asegurar Activos Digitales",
+        "why": "Por qué esto importa: Protege cuentas en línea y recuerdos digitales",
+        "whatYouDo": "Lo que usted hace: Liste cuentas importantes y contraseñas",
+        "whatWeDo": "Lo que nosotros hacemos: Crear protocolos de acceso seguro e instrucciones de respaldo",
+        "timeRequired": "Tiempo requerido: 4 minutos",
+        "complexity": "Nivel de complejidad: Fácil"
+      },
+      "legalDocuments": {
+        "title": "Organizar Documentos Legales",
+        "why": "Por qué esto importa: Asegura que se sigan sus deseos legales y los procesos sean fluidos",
+        "whatYouDo": "Lo que usted hace: Suba testamentos, poderes notariales y otros documentos",
+        "whatWeDo": "Lo que nosotros hacemos: Crear resúmenes y asegurar acceso legal apropiado",
+        "timeRequired": "Tiempo requerido: 6 minutos",
+        "complexity": "Nivel de complejidad: Medio"
+      },
+      "familyInstructions": {
+        "title": "Escribir Instrucciones Familiares",
+        "why": "Por qué esto importa: Proporciona guía clara durante tiempos difíciles",
+        "whatYouDo": "Lo que usted hace: Escriba mensajes personales e instrucciones",
+        "whatWeDo": "Lo que nosotros hacemos: Organizar mensajes y crear horarios de entrega",
+        "timeRequired": "Tiempo requerido: 8 minutos",
+        "complexity": "Nivel de complejidad: Medio"
+      }
+    },
+    "actions": {
+      "startThisStep": "Comenzar Este Paso",
+      "showMeHow": "Muéstreme Cómo",
+      "iNeedHelp": "Necesito Ayuda",
+      "nextStep": "Siguiente Paso",
+      "previousStep": "Paso Anterior",
+      "completeStep": "Marcar como Completado",
+      "skipStep": "Omitir por Ahora"
+    },
+    "progress": {
+      "title": "Su Progreso",
+      "completed": "Completado",
+      "inProgress": "En Progreso",
+      "notStarted": "No Iniciado",
+      "totalSteps": "Pasos Totales",
+      "estimatedTime": "Tiempo Estimado Restante"
+    },
+    "features": {
+      "title": "Cómo Funciona la Reducción de Complejidad",
+      "stepByStep": {
+        "title": "Guía Paso a Paso",
+        "description": "Cada tarea se divide en instrucciones claras y simples que cualquiera puede seguir."
+      },
+      "timeEstimation": {
+        "title": "Estimaciones de Tiempo Precisas",
+        "description": "Sepa exactamente cuánto tiempo tomará cada paso, desde 2 minutos hasta 15 minutos máximo."
+      },
+      "difficultyLevels": {
+        "title": "Niveles de Dificultad Claros",
+        "description": "Las calificaciones Simple, Fácil, Medio y Complejo le ayudan a elegir qué abordar primero."
+      },
+      "progressTracking": {
+        "title": "Seguimiento de Progreso",
+        "description": "Vea crecer la preparación de su familia con cada paso completado."
+      },
+      "helpAvailable": {
+        "title": "Ayuda Cuando La Necesite",
+        "description": "Obtenga asistencia, explicaciones y apoyo para cualquier paso que se sienta desafiante."
+      }
+    }
   },
   "onboarding": {
     "title": "Bienvenido a LegacyGuard",
@@ -675,61 +1602,7 @@
       "trustee": "Fideicomisario"
     }
   },
-  "trustedCircle": {
-    "title": "Tu Círculo de Confianza",
-    "subtitle": "Las personas en las que confías para ayudar a proteger y cuidar de tu familia y legado.",
-    "responsibilities": "Sus Responsabilidades:",
-    "preparationStatus": "Estado de Preparación:",
-    "informedOfRole": "Ha sido informado de su rol",
-    "acceptedResponsibility": "Ha aceptado la responsabilidad",
-    "hasAccessToDocuments": "Tiene acceso a los documentos necesarios",
-    "reviewedEmergencyProcedures": "Ha revisado los procedimientos de emergencia",
-    "addTrustedPerson": "+ Añadir Persona de Confianza",
-    "preparednessStatus": {
-      "wellPrepared": "Bien Preparado",
-      "partiallyPrepared": "Parcialmente Preparado",
-      "needsAttention": "Necesita Atención"
-    },
-    "buttonText": {
-      "prepared": "✓ {{name}} está Preparado",
-      "prepareNow": "Preparar {{name}} Ahora"
-    },
-    "mockData": {
-      "sarah": {
-        "name": "Sarah Johnson",
-        "relationship": "Esposa",
-        "responsibilities": {
-          "bankAccess": "Puede acceder a todas las cuentas bancarias para pagar facturas y gestionar gastos del hogar.",
-          "inheritAssets": "Heredará la casa familiar, la cabaña y todos los ahorros.",
-          "medicalPower": "Tiene poder médico para tomar decisiones de salud."
-        }
-      },
-      "michael": {
-        "name": "Michael Johnson",
-        "relationship": "Hermano",
-        "responsibilities": {
-          "childCare": "Se ocupará de nuestros hijos si ambos padres faltan.",
-          "estateExecution": "Ejecutará nuestros últimos deseos y gestionará la liquidación del patrimonio.",
-          "businessManagement": "Puede intervenir para gestionar temporalmente Johnson Contracting LLC."
-        }
-      },
-      "robert": {
-        "name": "Robert Chen",
-        "relationship": "Socio de Negocios",
-        "responsibilities": {
-          "businessAuthority": "Tiene autoridad para gestionar operaciones comerciales y firmar contratos.",
-          "buySellAgreement": "Comprará mis acciones empresariales según nuestro acuerdo de compra-venta."
-        }
-      },
-      "emily": {
-        "name": "Emily Thompson",
-        "relationship": "Cuñada",
-        "responsibilities": {
-          "backupGuardian": "Tutora de respaldo para los niños si el tutor principal no puede servir."
-        }
-      }
-    }
-  },
+
   "documentUpload": {
     "fileUploadedSuccess": "¡Archivo subido correctamente!",
     "fileUploadFailed": "Error al subir el archivo. Por favor, inténtelo de nuevo.",
@@ -751,14 +1624,7 @@
     "uploadButton": "Subir Documento",
     "storageLimitReached": "No se puede subir el archivo. Le quedan {{remaining}} de almacenamiento, pero este archivo ocupa {{fileSize}}. Por favor, actualice su plan o elimine algunos archivos existentes."
   },
-  "auth": {
-    "noAccount": "¿No tiene una cuenta?",
-    "signUpLink": "Regístrese",
-    "hasAccount": "¿Ya tiene una cuenta?",
-    "loginLink": "Iniciar sesión",
-    "loginButton": "Iniciar sesión",
-    "signupButton": "Registrarse"
-  },
+
   "assetDetail": {
     "loading": "Cargando detalles del activo...",
     "errors": {
@@ -1552,13 +2418,735 @@
     "allProcessingLocal": "Todo el procesamiento permanece en tu dispositivo",
     "aiAssistanceEnabled": "Asistencia de IA habilitada para mejores resultados"
   },
-  "auth": {
-    "protectedApplication": "Aplicación protegida",
-    "protectedApplicationDesc": "Esta aplicación está protegida con contraseña. Por favor, introduce la contraseña para continuar.",
-    "password": "Contraseña",
-    "enterPassword": "Introduce la contraseña",
-    "accessApplication": "Acceder a la aplicación",
-    "incorrectPassword": "Contraseña incorrecta. Por favor, inténtalo de nuevo."
+
+  "createTimeCapsuleModal": {
+    "title": "Crear Cápsula del Tiempo",
+    "titleCreate": "Crear Cápsula del Tiempo",
+    "titleEdit": "Editar Cápsula del Tiempo",
+    "description": "Cree un mensaje que será entregado a sus seres queridos en el futuro.",
+    "errors": {
+      "noTitle": "Por favor, ingrese un título para su cápsula del tiempo.",
+      "noRecipients": "Por favor, seleccione al menos un destinatario.",
+      "noUnlockDate": "Por favor, seleccione una fecha de desbloqueo.",
+      "noMessage": "Por favor, ingrese su mensaje.",
+      "noFile": "Por favor, suba un archivo.",
+      "updateFailed": "Error al actualizar cápsula del tiempo.",
+      "saveFailed": "Error al guardar cápsula del tiempo.",
+      "fileTooLarge": "El tamaño del archivo debe ser menor a 50MB.",
+      "invalidFileType": "Tipo de archivo inválido para {{messageType}}."
+    },
+    "success": {
+      "updated": "¡Cápsula del tiempo actualizada!",
+      "created": "¡Cápsula del tiempo creada!"
+    },
+    "labels": {
+      "title": "Título",
+      "messageType": "Tipo de Mensaje",
+      "recipients": "Destinatarios",
+      "deliveryQuestion": "¿Cuándo debe entregarse este mensaje?",
+      "unlockDate": "Fecha de Desbloqueo",
+      "yourMessage": "Su Mensaje",
+      "uploadFile": "Subir {{messageType}}"
+    },
+    "placeholders": {
+      "title": "ej., Para Su 18º Cumpleaños",
+      "message": "Escriba su mensaje sincero aquí...",
+      "selectDate": "Seleccionar una fecha"
+    },
+    "messageTypes": {
+      "text": "Mensaje de Texto",
+      "photo": "Foto",
+      "video": "Video",
+      "audio": "Audio"
+    },
+    "recipients": {
+      "noTrustedPeople": "Aún no ha añadido personas de confianza. Añádalas desde su panel de control primero.",
+      "selected": "Seleccionado"
+    },
+    "unlockConditions": {
+      "onDate": "En una fecha específica",
+      "afterPassing": "Después de mi fallecimiento"
+    },
+    "fileUpload": {
+      "clickToUpload": "Haga clic para subir",
+      "dragAndDrop": " o arrastre y suelte",
+      "maxSize": "Tamaño máximo de archivo: 50MB",
+      "fileSizeMB": "{{size}} MB"
+    },
+    "premium": {
+      "videoMessage": "Los mensajes de video son una función premium.",
+      "upgradeNow": "Actualizar Ahora"
+    },
+    "buttons": {
+      "recordVideo": "Grabar Mensaje de Video",
+      "cancel": "Cancelar",
+      "saving": "Guardando...",
+      "update": "Actualizar Cápsula del Tiempo",
+      "create": "Crear Cápsula del Tiempo"
+    },
+    "characterCount": "{{count}}/{{max}} caracteres"
+  },
+  "dataTransparency": {
+    "loadingMessage": "Cargando su información de transparencia de datos...",
+    "loadingError": "No se pudo cargar los datos de transparencia. Por favor, inténtelo más tarde.",
+    "title": "Sus Datos, Su Control",
+    "description": "Creemos en la transparencia total. Aquí está exactamente cómo manejamos su información.",
+    "dataFlow": {
+      "whereDataLives": "Dónde Viven Sus Datos",
+      "collection": "Recopilación",
+      "storage": "Almacenamiento",
+      "processing": "Procesamiento",
+      "sharing": "Compartir"
+    },
+    "recentActivity": {
+      "title": "Actividad Reciente",
+      "premiumTitle": "Desbloquee Su Registro de Vigilancia Permanente",
+      "premiumText": "Su registro operativo de 30 días proporciona seguridad básica. Para máxima responsabilidad y tranquilidad, actualice al Paquete de Comando para mantener un historial completo e inmutable de auditoría de cada acción tomada en su bóveda, para siempre."
+    },
+    "dataOwnership": {
+      "title": "Propiedad de Datos",
+      "description": "Usted posee sus datos, siempre. Puede descargar una copia completa en cualquier momento.",
+      "downloadButton": "Descargar Mi Archivo de Datos"
+    }
+  },
+  "editStoryModal": {
+    "editStory": "Editar Historia",
+    "addStory": "Añadir una Historia",
+    "description": "Comparta la historia detrás de \"{{assetName}}\". Este toque personal será invaluable para sus seres queridos.",
+    "fields": {
+      "yourStory": "Su Historia"
+    },
+    "placeholders": {
+      "story": "ej., Este era el anillo de compromiso de su abuela, dado a ella en 1952 cuando se casó con su abuelo en la pequeña iglesia de su ciudad natal. Lo usó todos los días durante 65 años..."
+    },
+    "hints": {
+      "shareMemories": "Comparta recuerdos, significado o historia"
+    },
+    "tips": {
+      "title": "Consejos para una historia significativa:",
+      "explainSpecial": "Explique por qué este artículo es especial para usted",
+      "shareMemories": "Comparta recuerdos asociados con él",
+      "describeHistory": "Describa su historia o cómo lo adquirió",
+      "mentionWishes": "Mencione cualquier deseo sobre cómo debe usarse o mantenerse"
+    },
+    "saving": "Guardando...",
+    "saveStory": "Guardar Historia",
+    "messages": {
+      "saved": "Historia guardada exitosamente"
+    },
+    "errors": {
+      "notAuthenticated": "Debe iniciar sesión para guardar una historia",
+      "saveFailed": "Error al guardar historia"
+    }
+  },
+  "dynamicAssetForm": {
+    "propertyAddress": "Dirección de la Propiedad",
+    "purchaseDate": "Fecha de Compra",
+    "purchasePrice": "Precio de Compra",
+    "currentEstimatedValue": "Valor Estimado Actual",
+    "mortgageInformation": "Información de Hipoteca",
+    "locationOfPropertyDocuments": "Ubicación de Documentos de Propiedad",
+    "locationAddress": "Ubicación / Dirección",
+    "size": "Tamaño (acres/pies cuadrados)",
+    "zoningType": "Tipo de Zonificación",
+    "currentUse": "Uso Actual",
+    "bankName": "Nombre del Banco",
+    "accountType": "Tipo de Cuenta",
+    "selectAccountType": "Seleccionar tipo de cuenta",
+    "checking": "Corriente",
+    "savings": "Ahorro",
+    "moneyMarket": "Mercado Monetario",
+    "certificateOfDeposit": "Certificado de Depósito",
+    "accountHolderName": "Nombre(s) del Titular de la Cuenta",
+    "accountNumberLast4": "Número de Cuenta (Últimos 4 dígitos)",
+    "routingNumber": "Número de Ruta",
+    "brokerageFirm": "Firma de Corretaje",
+    "accountNumber": "Número de Cuenta",
+    "individual": "Individual",
+    "joint": "Conjunta",
+    "ira": "IRA",
+    "rothIra": "Roth IRA",
+    "401k": "401(k)",
+    "approximateValue": "Valor Aproximado",
+    "financialAdvisor": "Asesor Financiero (si lo hay)",
+    "walletNameLabel": "Nombre/Etiqueta de Cartera",
+    "walletType": "Tipo de Cartera",
+    "selectWalletType": "Seleccionar tipo de cartera",
+    "hardwareWallet": "Cartera de Hardware",
+    "softwareWallet": "Cartera de Software",
+    "exchangeWallet": "Cartera de Intercambio",
+    "paperWallet": "Cartera de Papel",
+    "cryptocurrenciesHeld": "Criptomonedas Mantenidas",
+    "locationOfSeedPhrase": "Ubicación de Frase Semilla/Claves Privadas",
+    "exchangeInformation": "Información de Intercambio (si aplica)",
+    "makeAndModel": "Marca y Modelo",
+    "year": "Año",
+    "vinNumber": "Número VIN",
+    "licensePlate": "Matrícula",
+    "loanInformation": "Información de Préstamo (si lo hay)",
+    "locationOfTitle": "Ubicación del Título",
+    "platformWebsiteName": "Nombre de Plataforma/Sitio Web",
+    "accountEmail": "Correo Electrónico/Nombre de Usuario de Cuenta",
+    "accountPurpose": "Propósito/Descripción de Cuenta",
+    "recoveryInformation": "Información de Recuperación",
+    "faMethod": "Método 2FA (si está habilitado)",
+    "itemDescription": "Descripción del Artículo",
+    "appraisedValue": "Valor Tasado",
+    "lastAppraisalDate": "Última Fecha de Tasación",
+    "storageLocation": "Ubicación de Almacenamiento",
+    "insuranceInformation": "Información de Seguro",
+    "sentimentalValue": "Valor Sentimental/Historia",
+    "assetName": "Nombre del Activo",
+    "estimatedValue": "Valor Estimado",
+    "description": "Descripción",
+    "locationAccessInformation": "Información de Ubicación/Acceso",
+    "addSubType": "Añadir {subType}",
+    "cancel": "Cancelar",
+    "saveAsset": "Guardar Activo",
+    "placeholders": {
+      "123_main_st_city_state_zip_1": "123 Main St, Ciudad, Estado, Código Postal",
+      "lender_name_account_number_rem_2": "Nombre del prestamista, número de cuenta, saldo restante",
+      "e_g_safe_deposit_box_filing_ca_3": "ej., Caja de seguridad, archivador",
+      "property_location_or_parcel_nu_4": "Ubicación de propiedad o número de parcela",
+      "e_g_10_acres_5": "ej., 10 acres, 5,000 pies cuadrados",
+      "e_g_commercial_agricultural_6": "ej., Comercial, Agrícola, Residencial",
+      "describe_current_use_of_the_pr_7": "Describa el uso actual de la propiedad",
+      "e_g_chase_bank_8": "ej., Chase Bank, Wells Fargo",
+      "john_doe_9": "John Doe",
+      "1234_10": "1234",
+      "e_g_fidelity_vanguard_11": "ej., Fidelity, Vanguard, Charles Schwab",
+      "account_number_12": "Número de cuenta",
+      "name_and_contact_information_13": "Nombre e información de contacto",
+      "e_g_main_bitcoin_wallet_14": "ej., Cartera Principal de Bitcoin",
+      "e_g_bitcoin_ethereum_15": "ej., Bitcoin, Ethereum, Litecoin",
+      "do_not_enter_the_actual_seed_p_16": "No ingrese la frase semilla real aquí",
+      "exchange_name_and_account_emai_17": "Nombre del intercambio y correo electrónico de cuenta",
+      "e_g_toyota_camry_18": "ej., Toyota Camry, Honda Civic",
+      "vehicle_identification_number_19": "Número de Identificación del Vehículo",
+      "lender_account_number_payoff_a_20": "Prestamista, número de cuenta, cantidad de pago",
+      "e_g_safe_deposit_box_21": "ej., Caja de seguridad, caja fuerte en casa",
+      "e_g_gmail_facebook_22": "ej., Gmail, Facebook, LinkedIn",
+      "user_example_com_23": "usuario@example.com",
+      "what_this_account_is_used_for_24": "Para qué se usa esta cuenta",
+      "recovery_email_phone_or_securi_25": "Correo electrónico de recuperación, teléfono o preguntas de seguridad",
+      "e_g_sms_to_phone_ending_in_123_26": "ej., SMS al teléfono que termina en 123",
+      "e_g_diamond_engagement_ring_27": "ej., Anillo de compromiso de diamante, collar de oro",
+      "e_g_home_safe_bank_deposit_box_28": "ej., Caja fuerte en casa, caja de seguridad bancaria",
+      "policy_number_and_company_29": "Número de póliza y compañía",
+      "special_meaning_or_history_of__30": "Significado especial o historia de este artículo",
+      "name_or_description_of_asset_31": "Nombre o descripción del activo",
+      "detailed_description_of_the_as_32": "Descripción detallada del activo",
+      "where_to_find_this_asset_or_ho_33": "Dónde encontrar este activo o cómo acceder a él"
+    }
+  },
+  "documentUploader": {
+    "smart_document_upload_2": "Carga Inteligente de Documentos",
+    "upload_any_document_and_our_ai_3": "Suba cualquier documento y nuestra IA lo clasificará automáticamente para usted",
+    "please_upload_an_image_or_pdf__1": "Por favor, suba un archivo de imagen o PDF",
+    "image_application_pdf_4": "image/*,application/pdf",
+    "0_0_48_48_5": "0 0 48 48",
+    "m24_12v12m0_0l_4_4m4_4l4_4m10__6": "M24 12v12m0 0l-4 4m4-4l4 4m10-6",
+    "drop_your_document_here_or_cli_7": "Suelte su documento aquí o haga clic para buscar",
+    "supports_images_and_pdfs_up_to_8": "Soporta imágenes y PDFs de hasta 10MB",
+    "document_analysis_complete_10": "Análisis de Documento Completado",
+    "document_type_11": "Tipo de Documento",
+    "suggested_title_12": "Título Sugerido",
+    "confidence": "Confianza",
+    "ai_analysis_13": "Análisis de IA",
+    "continue_with_this_classificat_14": "Continuar con esta clasificación",
+    "change_category_15": "Cambiar Categoría",
+    "documents_we_can_process_16": "Documentos que podemos procesar:",
+    "insurance_policies_life_health_17": "Pólizas de seguro (vida, salud, hogar, auto)",
+    "property_deeds_and_titles_18": "Escrituras de propiedad y títulos",
+    "vehicle_ownership_documents_19": "Documentos de propiedad de vehículos",
+    "bank_and_investment_statements_20": "Extractos bancarios y de inversión",
+    "wills_and_estate_planning_docu_21": "Testamentos y documentos de planificación patrimonial",
+    "business_contracts_and_ownersh_22": "Contratos comerciales y documentos de propiedad",
+    "personal_identification_docume_23": "Documentos de identificación personal",
+    "tax_returns_and_documents_24": "Declaraciones de impuestos y documentos",
+    "categoryDescriptions": {
+      "insurance_policy": "Seguro de vida, salud, hogar, auto o discapacidad",
+      "property_deed": "Documentos de propiedad y escrituras",
+      "vehicle_title": "Documentos de propiedad de carro, barco u otro vehículo",
+      "bank_statement": "Extractos bancarios y documentos",
+      "investment_statement": "Extractos de cuentas de inversión y jubilación",
+      "will_or_trust": "Testamentos, fideicomisos y documentos de planificación patrimonial",
+      "business_document": "Propiedad comercial y contratos importantes",
+      "personal_id": "Pasaportes, licencias, certificados de nacimiento",
+      "tax_document": "Declaraciones de impuestos y documentos relacionados",
+      "medical_document": "Registros médicos y directivas de atención médica",
+      "other": "Otros documentos importantes"
+    },
+    "errors": {
+      "fileTypeError": "Por favor, suba un archivo de imagen o PDF",
+      "processingError": "Error al procesar documento",
+      "uploadError": "Error al subir documento",
+      "classificationError": "Error al clasificar documento"
+    }
+  },
+  "executorManagement": {
+    "failed_to_load_executors_2": "Error al cargar albaceas",
+    "user_not_found_with_this_email_3": "Usuario no encontrado con este correo electrónico",
+    "this_person_is_already_designa_4": "Esta persona ya está designada como albacea",
+    "failed_to_add_executor_5": "Error al añadir albacea",
+    "failed_to_remove_executor_6": "Error al eliminar albacea",
+    "loading_executors_7": "Cargando albaceas...",
+    "executor_management_8": "Gestión de Albaceas",
+    "designate_trusted_individuals__9": "Designe individuos de confianza que le ayudarán a gestionar sus asuntos y apoyar a sus seres queridos",
+    "add_new_executor_10": "Añadir Nuevo Albacea",
+    "email_address_11": "Dirección de Correo Electrónico",
+    "executor_example_com_12": "albacea@example.com",
+    "relationship_type_13": "Tipo de Relación",
+    "primary_executor_14": "Albacea Principal",
+    "secondary_executor_15": "Albacea Secundario",
+    "emergency_contact_16": "Contacto de Emergencia",
+    "current_executors_17": "Albaceas Actuales",
+    "no_executors_designated_yet_ad_18": "Aún no se han designado albaceas. Añada a alguien en quien confíe para ayudarle a gestionar sus asuntos.",
+    "important_information_19": "Información Importante",
+    "primary_executors_receive_imme_20": "Los albaceas principales reciben acceso inmediato a su bóveda cuando sea necesario",
+    "secondary_executors_are_notifi_21": "Los albaceas secundarios son notificados pero tienen acceso limitado",
+    "emergency_contacts_are_notifie_22": "Los contactos de emergencia son notificados solo en situaciones urgentes",
+    "all_executors_must_have_legacy_23": "Todos los albaceas deben tener cuentas de LegacyGuard para acceder a su información",
+    "successMessages": {
+      "executorAdded": "Albacea añadido exitosamente",
+      "executorRemoved": "Albacea eliminado exitosamente"
+    },
+    "validationMessages": {
+      "emailRequired": "Se requiere dirección de correo electrónico",
+      "invalidEmail": "Por favor, ingrese una dirección de correo electrónico válida",
+      "relationshipTypeRequired": "Se requiere tipo de relación"
+    },
+    "statusLabels": {
+      "adding": "Añadiendo...",
+      "addExecutor": "Añadir Albacea",
+      "unknownUser": "Usuario Desconocido"
+    }
+  },
+  "emotionalContextSystem": {
+    "emotional_support_1": "Apoyo Emocional",
+    "advice_2": "Consejo: ",
+    "motivation_3": "Motivación: ",
+    "next_steps_4": "Próximos Pasos: ",
+    "contextResponses": {
+      "lowConfidence": {
+        "primaryMessage": "Está manejando esta situación con cuidado e intuición.",
+        "supportingMessage": "Muestra que entiende la importancia de la tarea.",
+        "actionableAdvice": "Continúe a su propio ritmo cómodo.",
+        "motivationalElement": "Su enfoque reflexivo es un testimonio de sus valores.",
+        "nextStepGuidance": "Cuando esté listo, proceda con el siguiente paso importante para asegurar el futuro de su familia."
+      },
+      "highOverwhelm": {
+        "primaryMessage": "Su dedicación a su familia es admirable.",
+        "supportingMessage": "Está bien tomar un momento para reagruparse.",
+        "actionableAdvice": "Considere dividir la tarea en partes más pequeñas para enfocarse.",
+        "motivationalElement": "Sabiendo que está impulsado por amor y cuidado.",
+        "nextStepGuidance": "Cada pequeña acción que toma marca una diferencia significativa."
+      },
+      "default": {
+        "primaryMessage": "Está haciendo un trabajo significativo.",
+        "supportingMessage": "Este esfuerzo fortalece la base de su familia.",
+        "actionableAdvice": "Manténgase comprometido con su plan.",
+        "motivationalElement": "Cada decisión que toma protege a sus seres queridos.",
+        "nextStepGuidance": "Ver el panorama general guiará sus próximos pasos."
+      }
+    },
+    "emotionalStates": {
+      "confidence": {
+        "high": "Alta",
+        "medium": "Media",
+        "low": "Baja"
+      },
+      "motivation": {
+        "high": "Alta",
+        "medium": "Media",
+        "low": "Baja"
+      },
+      "overwhelm": {
+        "none": "Ninguna",
+        "slight": "Ligera",
+        "moderate": "Moderada",
+        "high": "Alta"
+      },
+      "urgency": {
+        "relaxed": "Relajado",
+        "focused": "Enfocado",
+        "pressed": "Presionado",
+        "stressed": "Estresado"
+      }
+    }
+  },
+  "microTaskGenerator": {
+    "minutes_1": " minutos • ",
+    "family_impact_2": " impacto familiar",
+    "start_task_3": "Comenzar Tarea",
+    "complete_task_4": "Completar Tarea",
+    "skip_for_now_5": "Omitir por Ahora",
+    "taskCategories": {
+      "identification": "Documentos de Identificación",
+      "financial": "Información Financiera",
+      "healthcare": "Documentos de Atención Médica",
+      "legal": "Documentos Legales",
+      "digital": "Activos Digitales",
+      "personal": "Información Personal"
+    },
+    "difficultyLevels": {
+      "trivial": "Trivial",
+      "easy": "Fácil",
+      "simple": "Simple"
+    },
+    "familyImpactLevels": {
+      "high": "Alto",
+      "medium": "Medio",
+      "low": "Bajo"
+    },
+    "taskStatus": {
+      "available": "Disponible",
+      "in_progress": "En Progreso",
+      "completed": "Completado",
+      "skipped": "Omitido"
+    },
+    "tasks": {
+      "driversLicense": {
+        "title": "Tome una foto de su licencia de conducir",
+        "description": "Su familia necesitará esto para asuntos legales y financieros. Tener una foto clara les ahorra tiempo y estrés.",
+        "completionMessage": "Su familia ahora tiene acceso a información crítica de identificación."
+      },
+      "passport": {
+        "title": "Fotografíe su pasaporte",
+        "description": "Esencial para arreglos de viaje internacional e identificación legal.",
+        "completionMessage": "La documentación de viaje internacional ahora está asegurada para su familia."
+      },
+      "birthCertificate": {
+        "title": "Escanee su certificado de nacimiento",
+        "description": "Requerido para muchos procesos legales y documentación de historia familiar.",
+        "completionMessage": "El certificado de nacimiento ahora está preservado digitalmente para necesidades futuras."
+      },
+      "socialSecurityCard": {
+        "title": "Documente su tarjeta de Seguridad Social",
+        "description": "Crítico para beneficios y procesos de identificación legal.",
+        "completionMessage": "La información de Seguridad Social ahora está documentada de forma segura."
+      },
+      "bankAccounts": {
+        "title": "Liste sus cuentas bancarias",
+        "description": "Ayude a su familia a gestionar finanzas y acceder a fondos cuando sea necesario.",
+        "completionMessage": "La información de cuentas bancarias ahora está organizada para su familia."
+      },
+      "insurancePolicies": {
+        "title": "Compile detalles de pólizas de seguro",
+        "description": "Asegure que su familia sepa sobre toda la cobertura y pueda presentar reclamaciones.",
+        "completionMessage": "La información de seguro ahora está completa y accesible."
+      },
+      "medicalRecords": {
+        "title": "Organice historial médico",
+        "description": "Ayude a los proveedores de atención médica a entender su historial médico.",
+        "completionMessage": "El historial médico ahora está organizado para mejores decisiones de atención médica."
+      },
+      "medications": {
+        "title": "Liste medicamentos actuales",
+        "description": "Crítico para emergencias médicas y atención continua.",
+        "completionMessage": "La lista de medicamentos ahora está disponible para profesionales médicos."
+      },
+      "will": {
+        "title": "Cree o actualice su testamento",
+        "description": "Asegure que sus deseos estén claramente documentados y legalmente vinculantes.",
+        "completionMessage": "Su testamento ahora está actual y legalmente protegido."
+      },
+      "powerOfAttorney": {
+        "title": "Designe poder notarial",
+        "description": "Autorice a individuos de confianza para tomar decisiones en su nombre.",
+        "completionMessage": "El poder notarial ahora está designado apropiadamente."
+      },
+      "digitalPasswords": {
+        "title": "Lista segura de contraseñas digitales",
+        "description": "Ayude a la familia a acceder a cuentas en línea y servicios importantes.",
+        "completionMessage": "El acceso digital ahora está organizado de forma segura para su familia."
+      },
+      "socialMedia": {
+        "title": "Planee cuentas de redes sociales",
+        "description": "Decida cómo debe manejarse su presencia en línea.",
+        "completionMessage": "El legado de redes sociales ahora está planificado y documentado."
+      }
+    },
+    "sessionStats": {
+      "tasksCompleted": "Tareas Completadas",
+      "totalTimeSpent": "Tiempo Total Gastado",
+      "momentumScore": "Puntuación de Momentum",
+      "nextRecommendedTask": "Próxima Tarea Recomendada"
+    },
+    "scoring": {
+      "urgency": "Urgencia",
+      "impact": "Impacto",
+      "ease": "Facilidad",
+      "momentum": "Momentum"
+    }
+  },
+  "myPossessions": {
+    "my_possessions_1": "Mis Posesiones",
+    "an_inventory_of_the_important__2": "Un inventario de las cosas importantes que apoyan el futuro de su familia.",
+    "family_impact_3": "Impacto Familiar:",
+    "edit_details_4": "Editar Detalles",
+    "link_papers_5": "Vincular Documentos (",
+    "assign_access_6": "Asignar Acceso",
+    "add_your_first_7": "Añadir Su Primera ",
+    "areas": {
+      "home": {
+        "title": "Su Hogar y Propiedad",
+        "description": "Los lugares que proporcionan refugio y crean recuerdos.",
+        "emptyState": "Documente su propiedad para asegurar que el refugio de su familia esté seguro.",
+        "addButton": "Propiedad"
+      },
+      "savings": {
+        "title": "Sus Ahorros e Inversiones",
+        "description": "La base financiera que ha construido para el futuro de su familia.",
+        "emptyState": "Registre sus cuentas financieras para que su familia pueda acceder a fondos cuando sea necesario.",
+        "addButton": "Cuenta"
+      },
+      "business": {
+        "title": "Su Negocio",
+        "description": "El trabajo que apoya a su familia y crea su legado profesional.",
+        "emptyState": "Documente los detalles de su negocio para asegurar una sucesión fluida e ingresos continuos.",
+        "addButton": "Negocio"
+      },
+      "valuables": {
+        "title": "Sus Objetos de Valor y Colecciones",
+        "description": "Artículos de valor financiero o sentimental que necesitan consideración especial.",
+        "emptyState": "Liste artículos valiosos que necesitan manejo especial o tienen valor sentimental.",
+        "addButton": "Objeto de Valor"
+      }
+    },
+    "mockData": {
+      "lakeCabin": "Cabaña del Lago",
+      "emergencyFund": "Fondo de Emergencia",
+      "yourBusiness": "Su Negocio",
+      "johnsonContracting": "Johnson Contracting LLC",
+      "classicCarCollection": "Colección de Autos Clásicos"
+    }
+  },
+  "analytics": {
+    "testData": {
+      "dashboardTitleExperiment": "Experimento de Título del Panel de Control",
+      "onboardingFlowSimplification": "Simplificación del Flujo de Configuración Inicial",
+      "variation": "Variación",
+      "highlyEngaged": "Altamente Comprometido",
+      "moderatelyEngaged": "Moderadamente Comprometido",
+      "atRisk": "En Riesgo",
+      "dormant": "Inactivo"
+    },
+    "analyticsDashboard": {
+      "loading_analytics_data_1": "Cargando datos de análisis...",
+      "analytics_dashboard_2": "Panel de Control de Análisis",
+      "monitor_user_engagement_featur_3": "Monitoree el compromiso del usuario, adopción de funciones y rendimiento de la plataforma",
+      "refreshing_4": "Actualizando...",
+      "using_cached_data_5": "Usando datos en caché",
+      "from_last_month_6": "del mes pasado",
+      "user_journey_7": "Viaje del Usuario",
+      "feature_adoption_8": "Adopción de Funciones",
+      "a_b_tests_9": "Pruebas A/B",
+      "overview": "Resumen",
+      "user_growth_11": "Crecimiento de Usuarios",
+      "active_and_new_users_over_time_12": "Usuarios activos y nuevos a lo largo del tiempo",
+      "3_3_7": "3 3",
+      "platform_statistics_15": "Estadísticas de la Plataforma",
+      "key_platform_metrics_16": "Métricas clave de la plataforma e indicadores de rendimiento",
+      "avg_session_duration_17": "Duración Promedio de Sesión",
+      "bounce_rate_18": "Tasa de Rebote",
+      "avg_documents_per_user_19": "Promedio de Documentos por Usuario",
+      "avg_trusted_people_per_user_20": "Promedio de Personas de Confianza por Usuario",
+      "user_journey_funnel_21": "Embudo de Viaje del Usuario",
+      "track_user_progression_through_22": "Rastree la progresión del usuario a través de hitos clave",
+      "feature_adoption_rates_23": "Tasas de Adopción de Funciones",
+      "percentage_of_users_using_each_24": "Porcentaje de usuarios usando cada función",
+      "sample_size_27": "Tamaño de muestra: ",
+      "users_duration_28": " usuarios • Duración: ",
+      "confidence_29": "% confianza",
+      "user_segments_30": "Segmentos de Usuario",
+      "user_distribution_by_engagemen_31": "Distribución de usuarios por nivel de compromiso",
+      "chartLabels": {
+        "totalUsers": "Total de Usuarios",
+        "activeUsers": "Usuarios Activos",
+        "avgPreparedness": "Promedio de Preparación",
+        "willsCreated": "Testamentos Creados",
+        "signUp": "Registrarse",
+        "completeOnboarding": "Completar Configuración Inicial",
+        "addFirstPossession": "Añadir Primera Posesión",
+        "addTrustedPerson": "Añadir Persona de Confianza",
+        "uploadDocument": "Subir Documento",
+        "generateWill": "Generar Testamento",
+        "localOnlyModeUsers": "Usuarios de Modo Solo Local",
+        "familyHubUsers": "Usuarios del Centro Familiar",
+        "documentScannerUsers": "Usuarios del Escáner de Documentos",
+        "emergencyAccessSetup": "Configuración de Acceso de Emergencia",
+        "pushNotificationsEnabled": "Notificaciones Push Habilitadas",
+        "control": "Control",
+        "variation": "Variación",
+        "won": "Ganó",
+        "date": "Fecha",
+        "value": "Valor",
+        "percentage": "Porcentaje",
+        "users": "Usuarios",
+        "conversion": "Conversión",
+        "dropoff": "Abandono"
+      },
+      "metrics": {
+        "totalUsers": "Total de Usuarios",
+        "activeUsers": "Usuarios Activos",
+        "avgPreparedness": "Preparación Promedio",
+        "willsCreated": "Testamentos Creados",
+        "avgSessionDuration": "Duración Promedio de Sesión",
+        "bounceRate": "Tasa de Rebote",
+        "avgDocumentsPerUser": "Promedio de Documentos por Usuario",
+        "avgTrustedPeoplePerUser": "Promedio de Personas de Confianza por Usuario",
+        "onboardingCompletionRate": "Tasa de Finalización de Configuración Inicial",
+        "firstPossessionAdded": "Primera Posesión Añadida",
+        "firstTrustedPersonAdded": "Primera Persona de Confianza Añadida",
+        "firstDocumentUploaded": "Primer Documento Subido",
+        "willGenerated": "Testamento Generado"
+      },
+      "errors": {
+        "unauthorizedAccess": "Acceso no autorizado",
+        "failedToFetchAnalytics": "Error al obtener análisis",
+        "failedToLoadAnalytics": "Error al cargar análisis",
+        "networkError": "Error de red ocurrido",
+        "serverError": "Error del servidor ocurrido",
+        "timeoutError": "Solicitud agotó el tiempo de espera",
+        "unknownError": "Ocurrió un error desconocido"
+      },
+      "messages": {
+        "dataRefreshed": "Datos de análisis actualizados",
+        "usingCachedData": "Usando datos en caché debido a problemas de conexión",
+        "refreshFailed": "Error al actualizar datos de análisis",
+        "noDataAvailable": "No hay datos de análisis disponibles",
+        "loadingData": "Cargando datos de análisis...",
+        "refreshingData": "Actualizando datos de análisis..."
+      }
+    }
+  },
+  "securityStatus": {
+    "how_we_protect_your_legacy_1": "Cómo Protegemos Su Legado",
+    "your_trust_is_our_highest_prio_2": "Su confianza es nuestra máxima prioridad. Usamos seguridad de nivel empresarial para mantener segura la información de su familia.",
+    "for_your_family_3": "Para su familia: ",
+    "your_security_status_fully_pro_4": "Su Estado de Seguridad: Totalmente Protegido",
+    "all_security_features_are_acti_5": "Todas las funciones de seguridad están activas y protegiendo la información de su familia.",
+    "features": {
+      "endToEndEncryption": "Cifrado de Extremo a Extremo",
+      "secureCloudStorage": "Almacenamiento Seguro en la Nube",
+      "localOnlyPrivacyMode": "Modo de Privacidad Solo Local",
+      "multiFactorAuthentication": "Autenticación de Múltiples Factores",
+      "europeanDataCenters": "Centros de Datos Europeos",
+      "zeroKnowledgeArchitecture": "Arquitectura de Conocimiento Cero"
+    },
+    "explanations": {
+      "endToEndEncryption": "Sus datos se codifican en un código ilegible desde el momento en que salen de su dispositivo hasta que los ve de nuevo.",
+      "secureCloudStorage": "Sus datos cifrados se almacenan en centros de datos de clase mundial, físicamente seguros.",
+      "localOnlyPrivacyMode": "Cuando usa el Modo Solo Local, sus documentos sensibles nunca se envían a nuestros servidores.",
+      "multiFactorAuthentication": "Requiere tanto su contraseña como un código de su teléfono para iniciar sesión.",
+      "europeanDataCenters": "Todos sus datos se almacenan exclusivamente en centros de datos europeos seguros con leyes estrictas de privacidad.",
+      "zeroKnowledgeArchitecture": "Hemos diseñado nuestro sistema para que no podamos ver sus datos, incluso si quisiéramos."
+    },
+    "analogies": {
+      "endToEndEncryption": "Es como enviar una carta en una caja cerrada con llave que solo usted tiene la llave para abrir.",
+      "secureCloudStorage": "Es como mantener su caja cerrada dentro de una bóveda bancaria con guardias 24/7.",
+      "localOnlyPrivacyMode": "Es como escribir sus notas más privadas en un diario que nunca sale de su casa.",
+      "multiFactorAuthentication": "Es como necesitar tanto una llave como un apretón de manos secreto para entrar a un club privado.",
+      "europeanDataCenters": "Es como elegir almacenar sus objetos de valor en un país conocido por su fuerte protección de privacidad.",
+      "zeroKnowledgeArchitecture": "Es como tener una caja de seguridad donde incluso el gerente del banco no tiene la llave."
+    },
+    "familyBenefits": {
+      "endToEndEncryption": "Asegura que nadie—ni siquiera nosotros—pueda leer su información personal.",
+      "secureCloudStorage": "Protege su plan de perderse por fuego, robo o falla de computadora.",
+      "localOnlyPrivacyMode": "Le da certeza absoluta de que sus documentos más privados permanecen bajo su control.",
+      "multiFactorAuthentication": "Previene que cualquiera acceda a su cuenta, incluso si roban su contraseña.",
+      "europeanDataCenters": "Todos sus datos se almacenan en centros de datos europeos con las leyes de privacidad más estrictas del mundo.",
+      "zeroKnowledgeArchitecture": "Hemos construido nuestro sistema para que no podamos acceder a sus datos, incluso bajo coacción legal."
+    }
+  },
+  "notificationSettings": {
+    "notifications_not_supported_1": "Notificaciones No Soportadas",
+    "your_browser_doesn_t_support_p_2": "Su navegador no soporta notificaciones push. Intente usar un navegador moderno como Chrome, Firefox o Edge.",
+    "push_notifications_3": "Notificaciones Push",
+    "get_notified_about_important_u_4": "Reciba notificaciones sobre actualizaciones importantes y recordatorios",
+    "enable_notifications_to_receiv_5": "Habilite las notificaciones para recibir alertas oportunas sobre vencimientos de documentos, actualizaciones familiares e intentos de acceso de emergencia.",
+    "notifications_are_enabled_6": "Las notificaciones están habilitadas",
+    "you_ll_receive_notifications_o_7": "Recibirá notificaciones en este dispositivo cuando ocurran eventos importantes.",
+    "notification_preferences_8": "Preferencias de Notificación",
+    "choose_which_types_of_notifica_9": "Elija qué tipos de notificaciones desea recibir",
+    "document_expiration_10": "Vencimiento de Documentos",
+    "get_alerts_when_important_docu_11": "Reciba alertas cuando documentos importantes estén por vencer",
+    "inactivity_reminders_12": "Recordatorios de Inactividad",
+    "periodic_reminders_to_review_a_13": "Recordatorios periódicos para revisar y actualizar su información",
+    "emergency_access_alerts_14": "Alertas de Acceso de Emergencia",
+    "notify_me_when_someone_accesse_15": "Notifíqueme cuando alguien acceda a mi bóveda en una emergencia",
+    "system_updates_16": "Actualizaciones del Sistema",
+    "new_features_and_important_sys_17": "Nuevas funciones y anuncios importantes del sistema",
+    "test_notifications_18": "Probar Notificaciones",
+    "send_a_test_notification_to_ve_19": "Enviar una notificación de prueba para verificar que todo funciona",
+    "send_test_notification_20": "Enviar Notificación de Prueba",
+    "errors": {
+      "pleaseSignIn": "Por favor inicie sesión para habilitar las notificaciones",
+      "failedToEnable": "Error al habilitar las notificaciones",
+      "failedToDisable": "Error al deshabilitar las notificaciones"
+    },
+    "messages": {
+      "preferencesUpdated": "Preferencias de notificación actualizadas"
+    },
+    "buttons": {
+      "enabling": "Habilitando...",
+      "enableNotifications": "Habilitar Notificaciones",
+      "disable": "Deshabilitar"
+    },
+    "testNotification": {
+      "title": "¡Notificaciones Habilitadas!",
+      "body": "Ahora recibirá actualizaciones importantes sobre la preparación de su familia."
+    }
+  },
+  "logLifeEvent": {
+    "title": "Registrar un Evento de Vida",
+    "description": "Seleccione un cambio importante en la vida para generar una lista de verificación personalizada para actualizar el plan de protección de su familia.",
+    "eventTypes": {
+      "married_divorced": "Se Casó / Se Divorció",
+      "new_child": "Tuvo un Nuevo Hijo",
+      "bought_sold_home": "Compró / Vendió una Casa",
+      "started_business": "Comenzó un Negocio",
+      "trusted_person_passed": "Una Persona de Confianza Falleció",
+      "job_change": "Cambió de Trabajo",
+      "moved_location": "Se Mudó a una Nueva Ubicación",
+      "inheritance": "Recibió una Herencia",
+      "retirement": "Se Jubiló",
+      "health_change": "Cambio Significativo de Salud",
+      "child_graduated": "Hijo Se Graduó / Se Fue de Casa",
+      "career_advancement": "Avance de Carrera",
+      "financial_windfall": "Ganancia Financiera",
+      "debt_change": "Cambio Significativo de Deuda",
+      "insurance_change": "Cambio de Póliza de Seguro"
+    },
+    "form": {
+      "title": "Registrar Evento de Vida",
+      "description": "Seleccione un cambio importante en la vida para generar una lista de verificación personalizada",
+      "eventSelection": "Seleccionar Evento de Vida",
+      "eventDescription": "Elija el evento de vida que mejor describa su situación actual",
+      "generateChecklist": "Generar Lista de Verificación",
+      "cancel": "Cancelar",
+      "submit": "Enviar",
+      "close": "Cerrar"
+    },
+    "checklist": {
+      "title": "Lista de Verificación Personalizada",
+      "description": "Basado en su evento de vida, aquí están los elementos clave que debe revisar y actualizar:",
+      "priority": "Prioridad",
+      "action": "Acción",
+      "estimatedTime": "Tiempo Estimado",
+      "high": "Alta",
+      "medium": "Media",
+      "low": "Baja",
+      "completed": "Completado",
+      "pending": "Pendiente"
+    },
+    "notifications": {
+      "eventLogged": "Evento de vida registrado exitosamente",
+      "checklistGenerated": "Lista de verificación personalizada generada",
+      "errorLogging": "Error al registrar evento de vida",
+      "reminderSet": "Recordatorio configurado para acciones de seguimiento"
+    }
   },
   "common": {
     "loading": "Cargando...",

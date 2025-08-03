@@ -5,6 +5,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { SignedIn, UserProfile } from "@clerk/clerk-react";
+import { ProtectedRoute, AdminRoute } from '@/components/auth/ProtectedRoute';
 import { useTranslation } from 'react-i18next';
 import { ThemeProvider } from "@/contexts/ThemeContext";
 import { CountryProvider } from "@/contexts/CountryContext";
@@ -30,6 +31,8 @@ const Landing = React.lazy(() => import("./pages/Landing"));
 const Login = React.lazy(() => import("./pages/Login"));
 const Register = React.lazy(() => import("./pages/Register"));
 const Dashboard = React.lazy(() => import("./features/dashboard/components/Dashboard"));
+const TermsOfService = React.lazy(() => import("./pages/TermsOfService"));
+const RefundPolicy = React.lazy(() => import("./pages/RefundPolicy"));
 const AssetDetail = React.lazy(() => import("./features/assets-vault/components/AssetDetail").then(m => ({ default: m.AssetDetail })));
 const Manual = React.lazy(() => import("./pages/Manual").then(m => ({ default: m.Manual })));
 const Will = React.lazy(() => import("./features/will-generator/components/WillGenerator").then(m => ({ default: m.default })));
@@ -100,6 +103,9 @@ const AppContent = () => {
         <Route path="/register" element={<MarketingLayout><Register /></MarketingLayout>} />
         <Route path="/privacy-policy" element={<MarketingLayout><PrivacyPolicy /></MarketingLayout>} />
         <Route path="/cookies" element={<MarketingLayout><CookiePolicy /></MarketingLayout>} />
+        <Route path="/terms-of-service" element={<MarketingLayout><TermsOfService /></MarketingLayout>} />
+        <Route path="/refund-policy" element={<MarketingLayout><RefundPolicy /></MarketingLayout>} />
+        <Route path="/pricing" element={<MarketingLayout><Pricing /></MarketingLayout>} />
               
               {/* Protected Application routes with full layout */}
               <Route path="/dashboard" element={
@@ -216,7 +222,7 @@ const AppContent = () => {
                   </Route>
                 </>
               )}
-              <Route path="/analytics" element={
+            <Route path="/analytics" element={
                 <SignedIn>
                   <MainLayout />
                 </SignedIn>
@@ -226,21 +232,13 @@ const AppContent = () => {
               
               {/* Admin routes */}
               <Route path="/admin/analytics" element={
-                <SignedIn>
+                <AdminRoute>
                   <MainLayout />
-                </SignedIn>
+                </AdminRoute>
               }>
                 <Route index element={<AdminAnalytics />} />
               </Route>
               
-              {/* Pricing route */}
-              <Route path="/pricing" element={
-                <SignedIn>
-                  <MainLayout />
-                </SignedIn>
-              }>
-                <Route index element={<Pricing />} />
-              </Route>
               
               {/* Guardian routes */}
               <Route path="/invite/:inviteToken" element={<MarketingLayout><InviteAcceptance /></MarketingLayout>} />

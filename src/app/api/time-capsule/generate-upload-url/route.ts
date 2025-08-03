@@ -1,9 +1,13 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createClient } from '@/lib/supabase/server';
 import { cookies } from 'next/headers';
+import { getServerTranslation, getLocaleFromRequest } from '@/lib/server-i18n';
 
 export async function POST(request: NextRequest) {
   try {
+    const locale = getLocaleFromRequest(request);
+    const { t } = getServerTranslation(locale);
+    
     // Get the request body
     const body = await request.json();
     const { fileName, fileType, fileSizeBytes } = body;
@@ -11,7 +15,7 @@ export async function POST(request: NextRequest) {
     // Validate input
     if (!fileName || !fileType || !fileSizeBytes) {
       return NextResponse.json(
-        { error: 'Missing required fields: fileName, fileType, fileSizeBytes' },
+        { error: t('timeCapsule.errors.missingUploadFields') },
         { status: 400 }
       );
     }
@@ -20,7 +24,7 @@ export async function POST(request: NextRequest) {
     const allowedVideoTypes = ['video/webm', 'video/mp4', 'video/quicktime'];
     if (!allowedVideoTypes.includes(fileType)) {
       return NextResponse.json(
-        { error: 'Invalid file type. Allowed types: webm, mp4, mov' },
+        { error: t('timeCapsule.errors.invalidFileType') },
         { status: 400 }
       );
     }
@@ -29,7 +33,7 @@ export async function POST(request: NextRequest) {
     const maxSizeBytes = 500 * 1024 * 1024; // 500MB
     if (fileSizeBytes > maxSizeBytes) {
       return NextResponse.json(
-        { error: 'File size exceeds maximum allowed size of 500MB' },
+        { error: t('timeCapsule.errors.fileSizeExceeds500MB') },
         { status: 400 }
       );
     }
@@ -42,7 +46,7 @@ export async function POST(request: NextRequest) {
     const { data: { user }, error: authError } = await supabase.auth.getUser();
     if (authError || !user) {
       return NextResponse.json(
-        { error: 'Unauthorized' },
+        { error: t('common.errors.unauthorized') },
         { status: 401 }
       );
     }
@@ -57,7 +61,7 @@ export async function POST(request: NextRequest) {
     if (profileError || !profile) {
       console.error('Error fetching user profile:', profileError);
       return NextResponse.json(
-        { error: 'Failed to fetch user profile' },
+        { error: t('common.errors.failedToFetchProfile') },
         { status: 500 }
       );
     }
@@ -69,8 +73,8 @@ export async function POST(request: NextRequest) {
     if (!isPremium) {
       return NextResponse.json(
         { 
-          error: 'Premium subscription required',
-          message: 'Video messages are a premium feature. Please upgrade your subscription to use this feature.',
+          error: t('timeCapsule.errors.premiumRequired'),
+          message: t('timeCapsule.errors.premiumRequiredMessage'),
           requiresPremium: true
         },
         { status: 403 }
@@ -90,7 +94,7 @@ export async function POST(request: NextRequest) {
     if (uploadError || !uploadData) {
       console.error('Error creating signed upload URL:', uploadError);
       return NextResponse.json(
-        { error: 'Failed to create upload URL' },
+        { error: t('timeCapsule.errors.failedToCreateUploadUrl') },
         { status: 500 }
       );
     }
@@ -108,7 +112,7 @@ export async function POST(request: NextRequest) {
   } catch (error) {
     console.error('Error in generate-upload-url:', error);
     return NextResponse.json(
-      { error: 'Internal server error' },
+      { error: t('common.errors.internalServerError') },
       { status: 500 }
     );
   }

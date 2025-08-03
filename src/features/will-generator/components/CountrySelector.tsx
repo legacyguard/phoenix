@@ -45,7 +45,7 @@ export function CountrySelector({
         {
           id: 1,
           country_code: 'SK',
-          country_name: 'Slovakia',
+          country_name: t('willGenerator.countries.SK'),
           witness_count: 2,
           requires_handwriting: false,
           requires_notarization: false,
@@ -65,7 +65,7 @@ export function CountrySelector({
         {
           id: 2,
           country_code: 'CZ',
-          country_name: 'Czech Republic',
+          country_name: t('willGenerator.countries.CZ'),
           witness_count: 2,
           requires_handwriting: false,
           requires_notarization: false,
@@ -86,7 +86,7 @@ export function CountrySelector({
         {
           id: 3,
           country_code: 'GB',
-          country_name: 'United Kingdom',
+          country_name: t('willGenerator.countries.GB'),
           witness_count: 2,
           requires_handwriting: false,
           requires_notarization: false,
@@ -136,7 +136,7 @@ export function CountrySelector({
               }
             }}>
               <SelectTrigger id="country">
-                <SelectValue placeholder={t('will.selectCountryPlaceholder')} />
+                <SelectValue placeholder={t('willGenerator.select_a_country_4')} />
               </SelectTrigger>
               <SelectContent>
                 {countries.map((country) => (

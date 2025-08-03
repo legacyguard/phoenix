@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createClient } from '@supabase/supabase-js';
 import { UpdateTimeCapsuleDto } from '@/types/timeCapsule';
+import { getServerTranslation, getLocaleFromRequest } from '@/lib/server-i18n';
 
 // Initialize Supabase client with service role key
 const supabaseAdmin = createClient(
@@ -20,17 +21,20 @@ export async function PUT(
   { params }: { params: { id: string } }
 ) {
   try {
+    const locale = getLocaleFromRequest(request);
+    const { t } = getServerTranslation(locale);
+    
     // Get authenticated user
     const authHeader = request.headers.get('authorization');
     if (!authHeader) {
-      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+      return NextResponse.json({ error: t('common.errors.unauthorized') }, { status: 401 });
     }
 
     const token = authHeader.replace('Bearer ', '');
     const { data: { user }, error: authError } = await supabaseAdmin.auth.getUser(token);
     
     if (authError || !user) {
-      return NextResponse.json({ error: 'Invalid authentication' }, { status: 401 });
+      return NextResponse.json({ error: t('common.errors.invalidAuthentication') }, { status: 401 });
     }
 
     const capsuleId = params.id;
@@ -56,12 +60,12 @@ export async function PUT(
 
     if (error) {
       console.error('Database error:', error);
-      return NextResponse.json({ error: 'Failed to update time capsule' }, { status: 500 });
+      return NextResponse.json({ error: t('timeCapsule.errors.failedToUpdate') }, { status: 500 });
     }
 
     if (!data) {
       return NextResponse.json({ 
-        error: 'Time capsule not found or cannot be modified' 
+        error: t('timeCapsule.errors.notFoundOrCannotModify') 
       }, { status: 404 });
     }
 
@@ -87,7 +91,7 @@ export async function PUT(
 
   } catch (error) {
     console.error('Error updating time capsule:', error);
-    return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
+    return NextResponse.json({ error: t('common.errors.internalServerError') }, { status: 500 });
   }
 }
 
@@ -97,17 +101,20 @@ export async function DELETE(
   { params }: { params: { id: string } }
 ) {
   try {
+    const locale = getLocaleFromRequest(request);
+    const { t } = getServerTranslation(locale);
+    
     // Get authenticated user
     const authHeader = request.headers.get('authorization');
     if (!authHeader) {
-      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+      return NextResponse.json({ error: t('common.errors.unauthorized') }, { status: 401 });
     }
 
     const token = authHeader.replace('Bearer ', '');
     const { data: { user }, error: authError } = await supabaseAdmin.auth.getUser(token);
     
     if (authError || !user) {
-      return NextResponse.json({ error: 'Invalid authentication' }, { status: 401 });
+      return NextResponse.json({ error: t('common.errors.invalidAuthentication') }, { status: 401 });
     }
 
     const capsuleId = params.id;
@@ -123,7 +130,7 @@ export async function DELETE(
 
     if (fetchError || !capsule) {
       return NextResponse.json({ 
-        error: 'Time capsule not found or cannot be deleted' 
+        error: t('timeCapsule.errors.notFoundOrCannotDelete') 
       }, { status: 404 });
     }
 
@@ -147,13 +154,13 @@ export async function DELETE(
 
     if (error) {
       console.error('Database error:', error);
-      return NextResponse.json({ error: 'Failed to delete time capsule' }, { status: 500 });
+      return NextResponse.json({ error: t('timeCapsule.errors.failedToDelete') }, { status: 500 });
     }
 
     return new NextResponse(null, { status: 204 });
 
   } catch (error) {
     console.error('Error deleting time capsule:', error);
-    return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
+    return NextResponse.json({ error: t('common.errors.internalServerError') }, { status: 500 });
   }
 }
