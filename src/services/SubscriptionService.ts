@@ -26,6 +26,50 @@ class SubscriptionService {
     return session;
   }
 
+  async handleCheckoutSessionCompleted(session: Stripe.Checkout.Session) {
+    const customerId = session.customer as string;
+    const subscriptionId = session.subscription as string;
+    const userEmail = session.customer_email;
+
+    // Find user by email and update subscription info
+    const { data: userData } = await supabase
+      .from('auth.users')
+      .select('id')
+      .eq('email', userEmail)
+      .single();
+
+    if (userData) {
+      await supabase.from('user_subscriptions').upsert({
+        user_id: userData.id,
+        plan_type: 'premium',
+        status: 'active',
+        stripe_customer_id: customerId,
+        stripe_subscription_id: subscriptionId,
+        started_at: new Date().toISOString(),
+        expires_at: null // Will be updated by subscription webhooks
+      }, {
+        onConflict: 'user_id'
+      });
+    }
+  }
+
+  async handleSubscriptionDeleted(subscription: Stripe.Subscription) {
+    const customerId = subscription.customer as string;
+    
+    const { error } = await supabase
+      .from('user_subscriptions')
+      .update({
+        status: 'cancelled',
+        expires_at: new Date(subscription.current_period_end * 1000).toISOString()
+      })
+      .eq('stripe_customer_id', customerId);
+
+    if (error) {
+      console.error('Error updating subscription status:', error);
+      throw error;
+    }
+  }
+
   
   async createPortalSession(customerId: string) {
     const session = await this.stripe.billingPortal.sessions.create({

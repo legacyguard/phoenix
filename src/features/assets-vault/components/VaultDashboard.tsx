@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Home, Package, Landmark, Car, Laptop, Gem, PlusCircle, Search, Filter } from 'lucide-react';
+import { Home, Package, Landmark, Car, Laptop, Gem, PlusCircle, Search, Filter, Upload, FileText, Share2 } from 'lucide-react';
 import AssetTypeSelectorModal from '@/components/assets/AssetTypeSelectorModal';
 import DynamicAssetForm from '@/components/assets/DynamicAssetForm';
 import AssetCard from '@/components/assets/AssetCard';
@@ -11,6 +11,10 @@ import { supabase } from '@/lib/supabase';
 import { useAuth } from '@/hooks/useAuth';
 import { Skeleton } from '@/components/ui/skeleton';
 import { Alert, AlertDescription } from '@/components/ui/alert';
+import { AssetFileUpload } from '../components/AssetFileUpload';
+import { AssetFileList } from '../components/AssetFileList';
+import { AssetShareModal } from '../components/AssetShareModal';
+import { assetFileService } from '../services/AssetFileService';
 
 interface Asset {
   id: string;

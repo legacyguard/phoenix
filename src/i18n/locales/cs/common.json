@@ -18,7 +18,39 @@
       "description": "Nouzový protokol umožňuje důvěryhodným osobám s přístupem \"Pouze v nouzi\" požadovat informace během kritických situací. Vyžaduje potvrzení od jiné důvěryhodné osoby.",
       "configured": "Nakonfigurováno",
       "configure": "Nakonfigurovat",
-      "activeMessage": "Nouzový protokol je aktivní a nakonfigurován"
+      "activeMessage": "Nouzový protokol je aktivní a nakonfigurován",
+      "configurationModal": {
+        "title": "Nakonfigurovat nouzový protokol",
+        "description": "Nastavte, jak mohou důvěryhodné osoby přistupovat k informacím během nouzových situací",
+        "requiredApprovals": "Vyžadovaná schválení",
+        "requiredApprovalsDescription": "Počet důvěryhodných osob, které musí schválit nouzový přístup",
+        "notificationSettings": "Nastavení oznámení",
+        "notificationSettingsDescription": "Nakonfigurujte, jak budete informováni o nouzových požadavcích",
+        "saveButton": "Uložit konfiguraci",
+        "cancelButton": "Zrušit",
+        "saving": "Ukládání..."
+      },
+      "activationModal": {
+        "title": "Požadavek na nouzový přístup",
+        "description": "Požádat o nouzový přístup k informacím {{name}}",
+        "reason": "Důvod požadavku",
+        "reasonPlaceholder": "Prosím popište nouzovou situaci...",
+        "confirmText": "Potvrzuji, že se jedná o skutečnou nouzovou situaci",
+        "requestButton": "Požádat o nouzový přístup",
+        "requesting": "Žádám..."
+      },
+      "errors": {
+        "configurationFailed": "Nepodařilo se uložit konfiguraci nouzového protokolu",
+        "activationFailed": "Nepodařilo se požádat o nouzový přístup",
+        "invalidConfiguration": "Neplatné nastavení konfigurace",
+        "notAuthorized": "Nejste oprávněni konfigurovat nouzový protokol"
+      },
+      "success": {
+        "configured": "Nouzový protokol úspěšně nakonfigurován",
+        "requested": "Požadavek na nouzový přístup odeslán",
+        "approved": "Nouzový přístup schválen",
+        "denied": "Nouzový přístup zamítnut"
+      }
     },
     "memberManagement": {
       "title": "Spravujte své důvěryhodné osoby",
@@ -61,7 +93,43 @@
     "errors": {
       "authenticationRequired": "Vyžadována autentizace",
       "failedToFetchData": "Nepodařilo se načíst data rodiny",
-      "failedToLoadMembers": "Nepodařilo se načíst členy rodiny"
+      "failedToLoadMembers": "Nepodařilo se načíst členy rodiny",
+      "failedToUpdateAccessLevel": "Nepodařilo se aktualizovat úroveň přístupu",
+      "failedToSendUpdate": "Nepodařilo se odeslat aktualizaci",
+      "invalidAccessLevel": "Neplatná úroveň přístupu",
+      "memberNotFound": "Člen rodiny nebyl nalezen"
+    },
+    "api": {
+      "routes": {
+        "familyHub": {
+          "success": {
+            "dataFetched": "Data rodiny úspěšně načtena",
+            "accessLevelUpdated": "Úroveň přístupu úspěšně aktualizována",
+            "updateSent": "Aktualizace úspěšně odeslána"
+          },
+          "errors": {
+            "notAuthenticated": "Uživatel není autentizován",
+            "invalidRequest": "Neplatná data požadavku",
+            "memberNotFound": "Člen rodiny nebyl nalezen",
+            "updateFailed": "Nepodařilo se aktualizovat člena rodiny",
+            "serverError": "Interní chyba serveru"
+          }
+        },
+        "emergencyProtocol": {
+          "success": {
+            "configurationSaved": "Konfigurace nouzového protokolu uložena",
+            "protocolActivated": "Nouzový protokol aktivován",
+            "accessGranted": "Nouzový přístup udělen",
+            "notificationSent": "Nouzové oznámení odesláno"
+          },
+          "errors": {
+            "configurationInvalid": "Neplatné parametry konfigurace",
+            "activationDenied": "Aktivace nouze zamítnuta",
+            "insufficientApprovals": "Nedostatečná schválení pro nouzový přístup",
+            "notificationFailed": "Nepodařilo se odeslat nouzové oznámení"
+          }
+        }
+      }
     }
   },
   "vault": {
@@ -84,7 +152,66 @@
     "categories": "Kategorie",
     "noAssetsFound": "Nebyla nalezena žádná aktiva odpovídající \"{{searchQuery}}\"",
     "startAddingAssets": "Začněte přidávat aktiva pro vytvoření inventáře",
-    "addNewAsset": "Přidat nové aktivum"
+    "addNewAsset": "Přidat nové aktivum",
+    "fileUpload": {
+      "title": "Nahrát soubory",
+      "dragDropText": "Přetáhněte sem soubory",
+      "clickToSelect": "nebo klikněte pro procházení",
+      "maxSize": "Maximální velikost souboru: {{size}}",
+      "encryptFiles": "Šifrovat soubory",
+      "encryptDescription": "Soubory budou před nahráním zašifrovány pro maximální bezpečnost",
+      "tags": "Štítky",
+      "addTag": "Přidat štítek...",
+      "selectedFiles": "Vybrané soubory",
+      "uploading": "Nahrávání...",
+      "uploadFiles": "Nahrát soubory",
+      "uploadSuccess": "{{name}} byl úspěšně nahrán",
+      "uploadError": "Chyba při nahrávání {{name}}",
+      "maxFilesReached": "Maximálně {{max}} povolených souborů",
+      "encryptionInfo": "Vaše soubory jsou šifrovány pomocí AES-256. Jen vy je můžete dešifrovat."
+    },
+    "fileList": {
+      "title": "Soubory aktiv",
+      "noFiles": "Dosud žádné nahrané soubory",
+      "uploadFirst": "Nahrajte první soubor",
+      "searchFiles": "Hledat soubory...",
+      "filterByTag": "Filtrovat podle štítku",
+      "sortBy": "Řadit podle",
+      "sortByName": "Jméno",
+      "sortByDate": "Datum",
+      "sortBySize": "Velikost",
+      "download": "Stáhnout",
+      "share": "Sdílet",
+      "delete": "Smazat",
+      "confirmDelete": "Opravdu chcete tento soubor smazat?",
+      "deleteSuccess": "Soubor úspěšně smazán",
+      "deleteError": "Chyba při mazání souboru",
+      "downloadError": "Chyba při stahování souboru",
+      "encrypted": "Šifrováno",
+      "sharedWith": "Sdíleno s {{count}} lidmi"
+    },
+    "sharing": {
+      "title": "Sdílet soubor",
+      "shareWith": "Sdílet s",
+      "emailPlaceholder": "Zadejte e-mailovou adresu",
+      "expiresIn": "Vyprší za",
+      "hours": "hodin",
+      "days": "dní",
+      "shareButton": "Sdílet",
+      "sharing": "Sdílení...",
+      "shareSuccess": "Soubor úspěšně sdílen",
+      "shareError": "Chyba při sdílení souboru",
+      "password": "Přístupové heslo",
+      "passwordInfo": "Sdílejte toto heslo zvlášť s příjemcem",
+      "copyPassword": "Kopírovat heslo",
+      "activeShares": "Aktivní sdílení",
+      "noShares": "Žádné aktivní sdílení",
+      "revoke": "Odvolat",
+      "revokeSuccess": "Sdílení úspěšně odvoláno",
+      "revokeError": "Chyba při odvolání sdílení",
+      "expiresAt": "Vyprší {{date}}",
+      "accessCount": "Přistoupeno {{count}} krát"
+    }
   },
   "hero": {
     "title": "Chraňte digitální dědictví své rodiny napořád",
@@ -1607,7 +1734,6 @@
       "missingRequiredFields": "Chybí povinná pole",
       "failedToFetchProfile": "Nepodařilo se načíst uživatelský profil"
     },
-    },
     "categories": {
       "property": "Nemovitosti",
       "vehicle": "Vozidla",
@@ -2691,79 +2817,6 @@
       "saveFailed": "Uložení nastavení soukromí selhalo",
       "saveError": "Chyba při ukládání nastavení"
     }
-  },
-  "willGenerator": {
-    "no_template_found_for_this_jur_1": "Pro tuto jurisdikci nebyla nalezena žádná šablona",
-    "failed_to_load_will_template_2": "Načtení šablony závěti selhalo",
-    "please_confirm_that_you_have_s_3": "Prosím potvrďte, že jste dokument podepsali",
-    "select_a_country_4": "Vyberte zemi",
-    "steps": {
-      "confirmJurisdiction": "Potvrdit jurisdikci",
-      "personalInformation": "Osobní informace",
-      "executorBeneficiaries": "Vykonavatel a obdarovaní",
-      "reviewGenerate": "Kontrola a generování",
-      "signConfirm": "Podpis a potvrzení"
-    },
-    "countries": {
-      "GB": "Spojené království",
-      "DE": "Německo",
-      "FR": "Francie",
-      "ES": "Španělsko",
-      "IT": "Itálie",
-      "CZ": "Česká republika",
-      "SK": "Slovensko",
-      "PL": "Polsko",
-      "AT": "Rakousko",
-      "CH": "Švýcarsko",
-      "NL": "Nizozemsko",
-      "BE": "Belgie",
-      "LU": "Lucembursko",
-      "LI": "Lichtenštejnsko",
-      "DK": "Dánsko",
-      "SE": "Švédsko",
-      "FI": "Finsko",
-      "NO": "Norsko",
-      "IS": "Island",
-      "IE": "Irsko",
-      "PT": "Portugalsko",
-      "GR": "Řecko",
-      "HU": "Maďarsko",
-      "RO": "Rumunsko",
-      "BG": "Bulharsko",
-      "HR": "Chorvatsko",
-      "SI": "Slovinsko",
-      "EE": "Estonsko",
-      "LV": "Lotyšsko",
-      "LT": "Litva",
-      "MT": "Malta",
-      "CY": "Kypr",
-      "MD": "Moldavsko",
-      "UA": "Ukrajina",
-      "RS": "Srbsko",
-      "AL": "Albánie",
-      "MK": "Severní Makedonie",
-      "ME": "Černá Hora",
-      "BA": "Bosna a Hercegovina"
-    },
-    "alerts": {
-      "jurisdictionRequired": "Prosím vyberte jurisdikci před pokračováním",
-      "templateLoadError": "Nelze načíst šablonu závěti pro vybranou jurisdikci",
-      "generationSuccess": "Závěť byla úspěšně vygenerována",
-      "generationError": "Generování dokumentu závěti selhalo",
-      "signatureRequired": "Prosím potvrďte, že jste dokument podepsali před pokračováním"
-    },
-    "console": {
-      "willGenerationCompleted": "Generování závěti dokončeno!",
-      "templateLoaded": "Šablona závěti byla úspěšně načtena",
-      "templateLoadFailed": "Načtení šablony závěti selhalo",
-      "willGenerated": "Dokument závěti byl úspěšně vygenerován"
-    },
-    "confirmCountry": "Prosím potvrďte vaši jurisdikci: {{country}}",
-    "changeCountry": "Změnit zemi",
-    "fullName": "Celé jméno",
-    "executionInstructions": "Pokyny k vykonání",
-    "confirmSigned": "Potvrzuji, že jsem tento dokument podepsal",
-    "finalizeUpload": "Dokončit a nahrát"
   },
   "assetCard": {
     "assetTypes": {

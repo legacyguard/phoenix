@@ -18,7 +18,39 @@
       "description": "Emergency protocol allows trusted people with \"Emergency Only\" access to request information during critical situations. Requires confirmation from another trusted person.",
       "configured": "Configured",
       "configure": "Configure",
-      "activeMessage": "Emergency protocol is active and configured"
+      "activeMessage": "Emergency protocol is active and configured",
+      "configurationModal": {
+        "title": "Configure Emergency Protocol",
+        "description": "Set up how trusted people can access information during emergencies",
+        "requiredApprovals": "Required Approvals",
+        "requiredApprovalsDescription": "Number of trusted people who must approve emergency access",
+        "notificationSettings": "Notification Settings",
+        "notificationSettingsDescription": "Configure how you'll be notified of emergency requests",
+        "saveButton": "Save Configuration",
+        "cancelButton": "Cancel",
+        "saving": "Saving..."
+      },
+      "activationModal": {
+        "title": "Emergency Access Request",
+        "description": "Request emergency access to {{name}}'s information",
+        "reason": "Reason for Request",
+        "reasonPlaceholder": "Please describe the emergency situation...",
+        "confirmText": "I confirm this is a genuine emergency",
+        "requestButton": "Request Emergency Access",
+        "requesting": "Requesting..."
+      },
+      "errors": {
+        "configurationFailed": "Failed to save emergency protocol configuration",
+        "activationFailed": "Failed to request emergency access",
+        "invalidConfiguration": "Invalid configuration settings",
+        "notAuthorized": "You are not authorized to configure emergency protocol"
+      },
+      "success": {
+        "configured": "Emergency protocol configured successfully",
+        "requested": "Emergency access request sent",
+        "approved": "Emergency access approved",
+        "denied": "Emergency access denied"
+      }
     },
     "memberManagement": {
       "title": "Manage Your Trusted People",
@@ -61,7 +93,43 @@
     "errors": {
       "authenticationRequired": "Authentication required",
       "failedToFetchData": "Failed to fetch family data",
-      "failedToLoadMembers": "Failed to load family members"
+      "failedToLoadMembers": "Failed to load family members",
+      "failedToUpdateAccessLevel": "Failed to update access level",
+      "failedToSendUpdate": "Failed to send update",
+      "invalidAccessLevel": "Invalid access level",
+      "memberNotFound": "Family member not found"
+    },
+    "api": {
+      "routes": {
+        "familyHub": {
+          "success": {
+            "dataFetched": "Family data fetched successfully",
+            "accessLevelUpdated": "Access level updated successfully",
+            "updateSent": "Update sent successfully"
+          },
+          "errors": {
+            "notAuthenticated": "User not authenticated",
+            "invalidRequest": "Invalid request data",
+            "memberNotFound": "Family member not found",
+            "updateFailed": "Failed to update family member",
+            "serverError": "Internal server error"
+          }
+        },
+        "emergencyProtocol": {
+          "success": {
+            "configurationSaved": "Emergency protocol configuration saved",
+            "protocolActivated": "Emergency protocol activated",
+            "accessGranted": "Emergency access granted",
+            "notificationSent": "Emergency notification sent"
+          },
+          "errors": {
+            "configurationInvalid": "Invalid configuration parameters",
+            "activationDenied": "Emergency activation denied",
+            "insufficientApprovals": "Insufficient approvals for emergency access",
+            "notificationFailed": "Failed to send emergency notification"
+          }
+        }
+      }
     }
   },
   "vault": {
@@ -590,6 +658,143 @@
     "quickTasks": {
       "taskCompleted": "Task completed!",
       "taskStarted": "Task started"
+    },
+    "firstTimeGuide": {
+      "welcome": {
+        "title": "Welcome to Your Legacy Dashboard",
+        "description": "This is your central hub for protecting your family's future. Let us show you around the key features that will help you sleep better at night.",
+        "tip1": "This guide will only show once, but you can access help anytime",
+        "tip2": "Each section is designed to be completed in small, manageable steps",
+        "tip3": "You're in control - skip any section and come back later"
+      },
+      "progress": {
+        "title": "Your Progress Tracker",
+        "description": "This shows your overall protection level and current stage. As you complete tasks, you'll see your progress grow from Foundation through Legacy stages.",
+        "tip1": "Focus on critical tasks first - they have the biggest impact",
+        "tip2": "Each stage builds on the previous one for comprehensive protection"
+      },
+      "stages": {
+        "title": "Protection Journey Stages",
+        "description": "Your journey has five clear stages: Foundation, Buildout, Reinforcement, Advanced Planning, and Legacy. Each stage represents important milestones in securing your family's future.",
+        "tip1": "Foundation Stage (0-25%): Essential information and contacts",
+        "tip2": "Buildout Stage (25-60%): Assets, beneficiaries, and guardians",
+        "tip3": "Reinforcement Stage (60-75%): Will creation and access verification"
+      },
+      "recommendations": {
+        "title": "Personalized Recommendations",
+        "description": "Based on your progress, we'll suggest the most impactful next steps. These recommendations adapt as you complete tasks, always showing you the best path forward.",
+        "tip1": "Red badges indicate critical tasks that need immediate attention",
+        "tip2": "Each recommendation shows time estimate and impact"
+      },
+      "stepProgress": "Step {{current}} of {{total}}",
+      "helpfulTips": "Helpful Tips",
+      "importantNote": "Remember: You can always access detailed help and support from the navigation menu",
+      "previous": "Previous",
+      "next": "Next",
+      "skip": "Skip Tour",
+      "finish": "Get Started"
+    },
+    "progressTracking": {
+      "title": "Your Protection Progress",
+      "subtitle": "Track your journey to complete family protection",
+      "currentStage": "Current Stage: {{stage}}",
+      "progressDescription": "{{completed}} of {{total}} tasks completed",
+      "stages": {
+        "foundation": {
+          "name": "Foundation",
+          "description": "Essential information for immediate needs"
+        },
+        "buildout": {
+          "name": "Buildout", 
+          "description": "Expanding your protection with assets and guardians"
+        },
+        "reinforcement": {
+          "name": "Reinforcement",
+          "description": "Legal documents and access verification"
+        }
+      },
+      "tasks": {
+        "basicInfo": "Basic Information",
+        "emergencyContacts": "Emergency Contacts",
+        "keyDocuments": "Key Documents",
+        "assetInventory": "Asset Inventory",
+        "beneficiaries": "Beneficiaries",
+        "guardianNetwork": "Guardian Network",
+        "willCreation": "Will Creation",
+        "instructions": "Final Instructions",
+        "accessVerification": "Access Verification"
+      },
+      "criticalGaps": {
+        "title": "Critical Gaps",
+        "description": "Address these items to strengthen your protection"
+      },
+      "stageStatus": {
+        "completed": "Completed",
+        "current": "Current Stage",
+        "locked": "Locked"
+      }
+    },
+    "recommendations": {
+      "title": "Recommended Next Steps",
+      "subtitle": "Personalized actions to strengthen your family's protection",
+      "priority": {
+        "critical": "Critical",
+        "important": "Important", 
+        "suggested": "Suggested"
+      },
+      "impact": {
+        "label": "Impact"
+      },
+      "prerequisites": {
+        "label": "Prerequisites"
+      },
+      "moreHelp": {
+        "text": "Need help getting started?",
+        "link": "Visit our help center"
+      },
+      "emergencyContacts": {
+        "title": "Add Emergency Contacts",
+        "description": "Essential people your family should contact first",
+        "action": "Add Contacts",
+        "impact": "Your family will know exactly who to call in emergencies"
+      },
+      "keyDocuments": {
+        "title": "Upload Key Documents",
+        "description": "Insurance policies, IDs, and critical paperwork",
+        "action": "Upload Documents",
+        "impact": "Prevents days of searching for important papers"
+      },
+      "assetInventory": {
+        "title": "Create Asset Inventory",
+        "description": "List your bank accounts, properties, and valuables",
+        "action": "Add Assets",
+        "impact": "Ensures nothing is lost or forgotten"
+      },
+      "beneficiaries": {
+        "title": "Designate Beneficiaries",
+        "description": "Specify who receives your assets",
+        "action": "Add Beneficiaries",
+        "impact": "Prevents family conflicts and ensures your wishes are followed",
+        "prerequisite": "Complete asset inventory first"
+      },
+      "will": {
+        "title": "Create Your Will",
+        "description": "Make your wishes legally binding",
+        "action": "Create Will",
+        "impact": "Provides legal clarity and peace of mind for your family"
+      },
+      "accessVerification": {
+        "title": "Verify Guardian Access",
+        "description": "Test that your guardians can access information",
+        "action": "Test Access",
+        "impact": "Ensures your system works when it's needed most"
+      },
+      "annualReview": {
+        "title": "Complete Annual Review",
+        "description": "Update your information to reflect life changes",
+        "action": "Start Review",
+        "impact": "Keeps your protection plan current and effective"
+      }
     }
   },
   "onboarding": {
@@ -4401,7 +4606,66 @@
     "vehicle": "Vehicle",
     "digital": "Digital",
     "personal": "Personal",
-    "other": "Other"
+    "other": "Other",
+    "fileUpload": {
+      "title": "Upload Files",
+      "dragDropText": "Drag and drop files here",
+      "clickToSelect": "or click to browse",
+      "maxSize": "Maximum file size: {{size}}",
+      "encryptFiles": "Encrypt Files",
+      "encryptDescription": "Files will be encrypted before upload for maximum security",
+      "tags": "Tags",
+      "addTag": "Add tag...",
+      "selectedFiles": "Selected Files",
+      "uploading": "Uploading...",
+      "uploadFiles": "Upload Files",
+      "uploadSuccess": "{{name}} uploaded successfully",
+      "uploadError": "Failed to upload {{name}}",
+      "maxFilesReached": "Maximum {{max}} files allowed",
+      "encryptionInfo": "Your files are encrypted with AES-256 encryption. Only you can decrypt them."
+    },
+    "fileList": {
+      "title": "Asset Files",
+      "noFiles": "No files uploaded yet",
+      "uploadFirst": "Upload your first file",
+      "searchFiles": "Search files...",
+      "filterByTag": "Filter by tag",
+      "sortBy": "Sort by",
+      "sortByName": "Name",
+      "sortByDate": "Date",
+      "sortBySize": "Size",
+      "download": "Download",
+      "share": "Share",
+      "delete": "Delete",
+      "confirmDelete": "Are you sure you want to delete this file?",
+      "deleteSuccess": "File deleted successfully",
+      "deleteError": "Failed to delete file",
+      "downloadError": "Failed to download file",
+      "encrypted": "Encrypted",
+      "sharedWith": "Shared with {{count}} people"
+    },
+    "sharing": {
+      "title": "Share File",
+      "shareWith": "Share with",
+      "emailPlaceholder": "Enter email address",
+      "expiresIn": "Expires in",
+      "hours": "hours",
+      "days": "days",
+      "shareButton": "Share",
+      "sharing": "Sharing...",
+      "shareSuccess": "File shared successfully",
+      "shareError": "Failed to share file",
+      "password": "Access Password",
+      "passwordInfo": "Share this password separately with the recipient",
+      "copyPassword": "Copy Password",
+      "activeShares": "Active Shares",
+      "noShares": "No active shares",
+      "revoke": "Revoke",
+      "revokeSuccess": "Share revoked successfully",
+      "revokeError": "Failed to revoke share",
+      "expiresAt": "Expires {{date}}",
+      "accessCount": "Accessed {{count}} times"
+    }
   },
   "notificationSettings": {
     "notifications_not_supported_1": "Notifications Not Supported",

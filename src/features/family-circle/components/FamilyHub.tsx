@@ -89,13 +89,51 @@ export const FamilyHub: React.FC = () => {
       member.id === memberId ? { ...member, accessLevel: newLevel } : member
     ));
 
-    // TODO: Update backend
-    toast.success(t('familyHub.messages.accessLevelUpdated'));
+    try {
+      const token = await getToken();
+      if (!token) {
+        throw new Error(t('familyHub.errors.authenticationRequired'));
+      }
+
+      const response = await fetch(`/api/family-hub/access-level`, {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ memberId, newLevel })
+      });
+
+      if (!response.ok) {
+        throw new Error(t('familyHub.errors.failedToFetchData'));
+      }
+
+      toast.success(t('familyHub.messages.accessLevelUpdated'));
+    } catch (error) {
+      toast.error(t('familyHub.errors.failedToLoadMembers'));
+    }
   };
 
   const handleSendUpdate = async (member: FamilyMember) => {
     try {
-      // TODO: Implement API call to send update
+      const token = await getToken();
+      if (!token) {
+        throw new Error(t('familyHub.errors.authenticationRequired'));
+      }
+
+      const response = await fetch(`/api/family-hub/send-update`, {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ memberId: member.id })
+      });
+
+      if (!response.ok) {
+        throw new Error(t('familyHub.errors.failedToFetchData'));
+      }
+
       toast.success(t('familyHub.messages.updateSentTo', { name: member.name }));
       
       // Update last communicated date

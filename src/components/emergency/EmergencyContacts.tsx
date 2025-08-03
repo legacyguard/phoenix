@@ -202,8 +202,18 @@ export const EmergencyContacts: React.FC = () => {
 
   const handleSendTestMessage = async (contact: EmergencyContact) => {
     try {
-      // In a real implementation, this would send an actual test message
-      // For now, we'll just simulate it
+      const response = await fetch(`/api/emergency/send-test`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ contactId: contact.id })
+      });
+
+      if (!response.ok) {
+        throw new Error(t('emergency.errors.testFailed'));
+      }
+
       toast.success(t('emergency.messages.testSent', { name: contact.contact_name }));
       
       // Update last_contacted timestamp

@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { ProgressService } from '@/services/ProgressService';
 import { LifeEventService } from '@/services/LifeEventService';
+import { FirstTimeUserGuide } from '@/components/dashboard/FirstTimeUserGuide';
+import { EnhancedProgressTracking } from '@/components/dashboard/EnhancedProgressTracking';
+import { NextStepRecommendations } from '@/components/dashboard/NextStepRecommendations';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Progress } from '@/components/ui/progress';
@@ -22,6 +25,7 @@ const Dashboard = () => {
   const [error, setError] = useState(null);
   const [showAnnualReview, setShowAnnualReview] = useState(false);
   const [showLegalConsultation, setShowLegalConsultation] = useState(false);
+  const [showGuide, setShowGuide] = useState(true);
 
   const handleAnnualReview = () => {
     setShowAnnualReview(true);
@@ -101,40 +105,36 @@ const Dashboard = () => {
   }
 
   return (
-    <div className="container mx-auto px-4 py-8 max-w-7xl space-y-8">
-      {showAnnualReview ? (
-        <AnnualReview />
-      ) : (
-        <>
-          <div className="space-y-2">
-            <h1 className="text-4xl font-bold tracking-tight">{t('dashboard.title')}</h1>
-            <p className="text-muted-foreground text-lg">
-              {t('dashboard.subtitle')}
-            </p>
-          </div>
+    <>
+      {/* First Time User Guide */}
+      {showGuide && (
+        <FirstTimeUserGuide onComplete={() => setShowGuide(false)} />
+      )}
 
-      {progressStatus && (
+      <div className="container mx-auto px-4 py-8 max-w-7xl space-y-8">
+        {showAnnualReview ? (
+          <AnnualReview />
+        ) : (
+          <>
+            <div className="space-y-2">
+              <h1 className="text-4xl font-bold tracking-tight">{t('dashboard.title')}</h1>
+              <p className="text-muted-foreground text-lg">
+                {t('dashboard.subtitle')}
+              </p>
+            </div>
+
+        {progressStatus && (
         <>
-          {/* Completion Score */}
-          <Card>
-            <CardHeader>
-              <CardTitle className="text-2xl">{t('dashboard.planStrength.title')}</CardTitle>
-              <CardDescription>
-                {t('dashboard.planStrength.description')}
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <div className="space-y-2">
-                <div className="flex items-center justify-between">
-                  <span className="text-sm font-medium">{t('dashboard.planStrength.currentStage', { stage: progressStatus.currentStage })}</span>
-                  <span className="text-3xl font-bold text-primary">
-                    {progressStatus.completionScore}%
-                  </span>
-                </div>
-                <Progress value={progressStatus.completionScore} className="h-4" />
-              </div>
-            </CardContent>
-          </Card>
+          {/* Enhanced Progress Tracking */}
+          <EnhancedProgressTracking 
+            progressStatus={{
+              completionScore: progressStatus.completionScore,
+              currentStage: progressStatus.currentStage,
+              completedItems: progressStatus.completedItems || [],
+              pendingItems: progressStatus.pendingItems || [],
+              criticalGaps: progressStatus.criticalGaps || []
+            }}
+          />
 
           {/* Next Objective - Regular Task, Deep Dive, or Preservation Mode */}
           {progressStatus.nextObjective.type === 'task' ? (
@@ -253,6 +253,14 @@ const Dashboard = () => {
               </CardContent>
             </Card>
           )}
+
+          {/* Next Step Recommendations */}
+          <NextStepRecommendations 
+            completionScore={progressStatus.completionScore}
+            currentStage={progressStatus.currentStage}
+            completedItems={progressStatus.completedItems || []}
+          />
+
           {/* Special Offer for Complex Profiles */}
           {progressStatus.completionScore > 80 && user?.has_business && (
             <Card className="mb-8 border-earth-primary/20 bg-earth-primary/5">
@@ -284,69 +292,11 @@ const Dashboard = () => {
             </Card>
           )}
 
-          {/* Progress Stages Timeline */}
-          
-          <Card>
-            <CardHeader>
-              <CardTitle className="text-2xl">{t('dashboard.protectionJourney.title')}</CardTitle>
-              <CardDescription>
-                {t('dashboard.protectionJourney.description')}
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <div className="space-y-4">
-                {stages.map((stage, index) => {
-                  const isComplete = progressStatus.completionScore > parseInt(stage.range.split('-')[1]);
-                  const isCurrent = progressStatus.currentStage === stage.stage;
-                  const isLocked = !isComplete && !isCurrent;
-
-                  return (
-                    <div
-                      key={stage.name}
-                      className={cn(
-                        "flex items-center gap-4 p-4 rounded-lg transition-all",
-                        isComplete && "bg-green-50 dark:bg-green-950/20",
-                        isCurrent && "bg-primary/10 border-2 border-primary",
-                        isLocked && "opacity-50"
-                      )}
-                    >
-                      <div
-                        className={cn(
-                          "flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center",
-                          isComplete && "bg-green-600 text-white",
-                          isCurrent && "bg-primary text-primary-foreground",
-                          isLocked && "bg-gray-200 dark:bg-gray-800"
-                        )}
-                      >
-                        {isComplete ? (
-                          <CheckCircle2 className="h-6 w-6" />
-                        ) : isCurrent ? (
-                          getStageIcon(stage.stage)
-                        ) : (
-                          <Lock className="h-5 w-5" />
-                        )}
-                      </div>
-                      <div className="flex-1">
-                        <h4 className="font-semibold">
-                          {t('dashboard.protectionJourney.stage', { number: index + 1, name: stage.name })}
-                        </h4>
-                        <p className="text-sm text-muted-foreground">
-                          {t('dashboard.protectionJourney.planStrengthRange', { range: stage.range })}
-                        </p>
-                      </div>
-                      {isComplete && (
-                        <CheckCircle2 className="h-5 w-5 text-green-600" />
-                      )}
-                    </div>
-                  );
-                })}
-              </div>
-            </CardContent>
-          </Card>
         </>
       )}
-        </>
-      )}
+          </>
+        )}
+      </div>
 
       {/* Legal Consultation Modal */}
       {showLegalConsultation && (
@@ -360,7 +310,7 @@ const Dashboard = () => {
           }}
         />
       )}
-    </div>
+    </>
   );
 }
 

@@ -2,7 +2,13 @@ import React, { createContext, useContext, useState, useEffect, useCallback } fr
 import { useUser } from '@clerk/clerk-react';
 import { stripeService, SubscriptionStatus } from '@/services/stripeService';
 import { supabase } from '@/lib/supabase';
-import { SubscriptionContext } from './SubscriptionContextContext';
+export const SubscriptionContext = createContext<{
+  subscriptionStatus: SubscriptionStatus | null;
+  isLoading: boolean;
+  isPremium: boolean;
+  checkAccess: (feature: string) => boolean;
+  refreshSubscription: () => Promise<void>;
+} | undefined>(undefined);
 
 // Feature access mapping
 const FEATURE_ACCESS = {

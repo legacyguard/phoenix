@@ -10,19 +10,29 @@ import {
 
 // Document storage service
 export class DocumentStorageService {
-  // Store document based on user preferences
+  // Store document securely with client-side encryption
   async storeDocument(
     file: File,
     document: ProcessedDocument,
     options: StorageOptions
   ): Promise<{ success: boolean; error?: string }> {
     try {
+      // Generate encryption key
+      const encryptionKey = await generateKey();
+
+      // Encrypt file
+      const encryptedFile = await encryptFile(file, encryptionKey);
+
+      // Store encryption key locally
+      await storeEncryptionKey(document.id, encryptionKey);
+
+      // Determine storage location
       if (options.location === 'local' || options.location === 'both') {
-        await this.storeLocal(file, document, options.encrypt);
+        await this.storeLocalEncrypted(encryptedFile, document);
       }
 
       if (options.location === 'cloud' || options.location === 'both') {
-        await this.storeCloud(file, document, options.encrypt);
+        await this.storeCloudEncrypted(encryptedFile, document);
       }
 
       return { success: true };
@@ -33,6 +43,67 @@ export class DocumentStorageService {
         error: error instanceof Error ? error.message : 'Storage failed' 
       };
     }
+  }
+
+  // Store encrypted document locally
+  private async storeLocalEncrypted(
+    encryptedFile: EncryptedFile,
+    document: ProcessedDocument,
+  ): Promise<void> {
+    const db = await this.openDatabase();
+
+    // Store in IndexedDB
+    const transaction = db.transaction(['documents'], 'readwrite');
+    const store = transaction.objectStore('documents');
+
+    await new Promise<void>((resolve, reject) => {
+      const request = store.put({
+        id: document.id,
+        document: document,
+        fileData: encryptedFile,
+        encrypted: true,
+        storedAt: new Date(),
+      });
+      request.onsuccess = () => resolve();
+      request.onerror = () => reject(request.error);
+    });
+
+    db.close();
+  }
+
+  // Store encrypted document in Supabase
+  private async storeCloudEncrypted(
+    encryptedFile: EncryptedFile,
+    document: ProcessedDocument,
+  ): Promise<void> {
+    // Convert encrypted data to file
+    const fileToUpload = new Blob(
+      [encryptedFile.encryptedData],
+      { type: 'application/octet-stream' }
+    );
+
+    // Upload to Supabase storage
+    const { error: uploadError } = await supabase.storage
+      .from('documents')
+      .upload(`${document.id}/${document.id}.encrypted`, fileToUpload, {
+        cacheControl: '3600',
+        upsert: false,
+        contentType: 'application/octet-stream',
+      });
+
+    if (uploadError) {
+      throw new Error(`Upload failed: ${uploadError.message}`);
+    }
+
+    // Store encryption metadata
+    await this.storeCloudEncryptionMetadata(document.id, {
+      iv: Array.from(encryptedFile.iv),
+      method: encryptedFile.encryptionMethod,
+      originalName: encryptedFile.metadata.originalName,
+      originalType: encryptedFile.metadata.mimeType,
+    });
+
+    // Note: The encryption key is stored locally and never uploaded
   }
 
   // Store document locally in IndexedDB
