@@ -132,7 +132,6 @@ export class ESignatureService {
       return false;
     }
   }
-}
 
   // Request QES signature via Skribble
   async requestSkribbleSignature(willId: string, documentBase64: string): Promise<any> {

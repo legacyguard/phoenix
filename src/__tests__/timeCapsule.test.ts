@@ -349,7 +349,8 @@ describe('Time Capsule System', () => {
 
   describe('Notification System', () => {
     it('should send email notifications when capsule is unlocked', async () => {
-      const { createTransport } = require('nodemailer');
+      const nodemailer = await import('nodemailer');
+      const { createTransport } = nodemailer.default;
       const mockTransporter = createTransport();
 
       const recipientEmail = 'recipient@example.com';
