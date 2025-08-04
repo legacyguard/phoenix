@@ -5,7 +5,6 @@ import Backend from 'i18next-http-backend';
 
 // Define available namespaces
 export const namespaces = [
-  'common',
   'auth',
   'subscription',
   'dashboard',
@@ -49,8 +48,8 @@ i18n
     
     // Configure namespaces
     ns: initialNamespaces,
-    defaultNS: 'common',
-    fallbackNS: 'common',
+    defaultNS: 'ui',
+    fallbackNS: 'ui',
     
     // Configure backend to load from new structure
     backend: {

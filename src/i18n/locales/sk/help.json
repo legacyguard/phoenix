@@ -1,283 +1,101 @@
 {
-  "_comment": "Shared translations used across the application",
-  "help": {
-    "needHelp": "Potřebujete pomoc?",
-    "getHelp": "Získat pomoc",
-    "helpAndTutorials": "Nápověda a návody",
-    "recommendedForYou": "Doporučeno pro vás",
-    "basedOnProgress": "Na základě vašeho současného pokroku doporučujeme:",
-    "personalizedHelpDescription": "Získejte personalizovanou pomoc na základě toho, kde se nacházíte na své cestě",
-    "recommendedTopics": "Doporučená témata",
-    "quickTips": {
-      "title": "Rychlé tipy",
-      "tip1": "Začněte s nejdůležitějšími dokumenty",
-      "tip2": "Přidejte alespoň jednoho důvěryhodného opatrovníka",
-      "tip3": "Pravidelně aktualizujte své informace",
-      "tip4": "Ročně testujte přístup vašeho opatrovníka"
-    },
-    "topics": {
-      "uploadDocuments": {
-        "title": "Nahrajte svůj první dokument",
-        "description": "Naučte se bezpečně nahrávat a organizovat své důležité dokumenty",
-        "steps": {
-          "1": "Klikněte na tlačítko 'Nahrát dokument' v sekci Organizovat",
-          "2": "Vyberte soubor dokumentu ze svého počítače",
-          "3": "Vyberte typ dokumentu a přidejte popisný název",
-          "4": "Nastavte datum vypršení, pokud je to možné",
-          "5": "Uložte dokument do svého bezpečného trezoru"
-        }
-      },
-      "addGuardians": {
-        "title": "Přidejte svého prvního opatrovníka",
-        "description": "Nastavte důvěryhodné osoby, které mohou přistupovat k vašim informacím v nouzi",
-        "steps": {
-          "1": "Klikněte na 'Přidat opatrovníka' v sekci Zabezpečit",
-          "2": "Zadejte celé jméno opatrovníka a vztah",
-          "3": "Vyberte jejich role a odpovědnosti",
-          "4": "Přidejte jejich kontaktní informace",
-          "5": "Pošlete jim pozvánku k přijetí jejich role"
-        }
-      },
-      "listAssets": {
-        "title": "Seznam vašich aktiv",
-        "description": "Dokumentujte své nemovitosti, účty a cenné majetky",
-        "steps": {
-          "1": "Klikněte na 'Přidat položku' v sekci Organizovat",
-          "2": "Vyberte typ aktiva (nemovitost, vozidlo, účet atd.)",
-          "3": "Zadejte název aktiva a podrobnosti",
-          "4": "Přidejte odhadovanou hodnotu, pokud chcete",
-          "5": "Uložte aktivum do svého inventáře"
-        }
-      },
-      "designateBeneficiaries": {
-        "title": "Určete obmyšlené",
-        "description": "Určete, kdo by měl obdržet vaše aktiva a v jakých poměrech",
-        "steps": {
-          "1": "Klikněte na 'Přidat obmyšleného' v sekci Předat",
-          "2": "Zadejte jméno obmyšleného",
-          "3": "Nastavte jejich procento přidělení",
-          "4": "Zkontrolujte celkové přidělení (musí se rovnat 100%)",
-          "5": "Uložte seznam obmyšlených"
-        }
-      },
-      "createWill": {
-        "title": "Vytvořte svou závěť",
-        "description": "Vygenerujte základní závěť na základě vašich informací",
-        "steps": {
-          "1": "Přejděte do sekce Závěť",
-          "2": "Vyplňte všechny požadované informace",
-          "3": "Zkontrolujte své obmyšlené a aktiva",
-          "4": "Vygenerujte dokument závěti",
-          "5": "Stáhněte a nechte ji řádně ověřit"
-        }
-      }
-    },
-    "stepDetails": {
-      "description": "Popis",
-      "stepByStepInstructions": "Podrobné instrukce",
-      "videoTutorial": "Video návod",
-      "watchVideoTutorial": "Zhlédnout video návod",
-      "estimatedTime": "Odhadovaný čas",
-      "minutes": "minut",
-      "steps": "kroků",
-      "gotIt": "Rozumím!"
-    },
-    "priority": {
-      "high": "vysoká",
-      "medium": "střední",
-      "low": "nízká"
+  "_comment": "Centrum pomoci a často kladené otázky",
+  "helpCenter": {
+    "title": "Centrum pomoci",
+    "subtitle": "Nájdite odpovede, návody a podporu pre LegacyGuard",
+    "searchPlaceholder": "Hľadať v návodoch a odpovediach...",
+    "popularTopics": "Populárne témy",
+    "browseAll": "Prehľadávať všetky témy",
+    "contactSupport": "Kontaktovať podporu",
+    "contactSupportSubtitle": "Nenašli ste odpoveď? Ozvite sa nášmu tímu.",
+    "getStarted": "Začíname",
+    "gettingStartedGuide": "Sprievodca prvými krokmi",
+    "faq": "Najčastejšie otázky (FAQ)",
+    "tutorials": "Návody a tipy",
+    "securityAndPrivacy": "Bezpečnosť a súkromie",
+    "accountAndSettings": "Účet a nastavenia",
+    "emergencyAccess": "Núdzový prístup",
+    "familyAndGuardians": "Rodina a opatrovníci",
+    "documentsAndAssets": "Dokumenty a majetok",
+    "subscriptions": "Predplatné a platby",
+    "technicalSupport": "Technická podpora",
+    "back": "Späť",
+    "noResults": "Nenašli sa žiadne výsledky",
+    "loadMore": "Načítať viac",
+    "article": {
+      "lastUpdated": "Naposledy aktualizované",
+      "readTime": "Čas čítania: {{minutes}} min",
+      "relatedArticles": "Súvisiace články"
     }
   },
-  "helpPage": {
-    "title": "Centrum nápovědy a podpory",
-    "subtitle": "Jsme tu pro vás. Najděte odpovědi na své otázky nebo nás kontaktujte přímo.",
-    "faq": {
-      "title": "Často kladené otázky",
-      "q1": {
-        "question": "Je LegacyGuard bezpečný?",
-        "answer": "Ano, bezpečnost je naší nejvyšší prioritou. Používáme end-to-end šifrování a architekturu nulové důvěry, což znamená, že k vašim datům nemá přístup žádná neoprávněná osoba, ani my. Všechna data jsou uložena v zabezpečených datových centrech v Evropské unii v souladu s GDPR."
+  "faq": {
+    "title": "Najčastejšie otázky",
+    "searchPlaceholder": "Zadajte otázku...",
+    "questions": {
+      "whatIsLegacyGuard": {
+        "question": "Čo je LegacyGuard?",
+        "answer": "LegacyGuard je digitálny trezor a systém na ochranu vášho dedičstva. Umožňuje bezpečne uchovávať a spravovať dôležité dokumenty, majetok a informácie pre vašu rodinu."
       },
-      "q2": {
-        "question": "Co se stane s mými daty, pokud zruším předplatné?",
-        "answer": "Po zrušení zůstanou vaše data bezpečně uložena v režimu pouze pro čtení po dobu 90 dnů. Během této doby můžete kdykoli znovu aktivovat své předplatné a získat plný přístup. Po 90 dnech budou vaše data bezpečně a trvale smazána z našich systémů."
+      "howSecureIsMyData": {
+        "question": "Ako je zabezpečené moje dáta?",
+        "answer": "Všetky vaše údaje sú šifrované end-to-end a uložené v európskych dátových centrách. LegacyGuard používa viacvrstvové zabezpečenie vrátane dvojfaktorovej autentifikácie a zero-knowledge architektúry."
       },
-      "q3": {
-        "question": "Co je to 'Důvěrník'?",
-        "answer": "'Důvěrník' je důvěryhodná osoba (např. partner, sourozenec nebo právník), které udělíte speciální, omezený přístup k vašim informacím pro případ nouze. Důvěrník nemůže vaše data měnit; může je pouze prohlížet, aby mohl jednat podle vašich pokynů."
+      "howToAddGuardian": {
+        "question": "Ako môžem pridať opatrovníka alebo núdzový kontakt?",
+        "answer": "Opatrovníka pridáte cez sekciu Rodina alebo priamo na nástenke. Zadajte meno, vzťah a (voliteľne) e-mail. Pozvánku môžete odoslať ihneď, alebo si kontakt ponechať len pre evidenciu."
       },
-      "q4": {
-        "question": "Jaký je rozdíl mezi 'Trezorem' a 'Příručkou'?",
-        "answer": "'Trezor dědictví' je místo, kde bezpečně ukládáte všechny své důležité dokumenty a majetek. 'Příručka pro pozůstalé' je vybraná sbírka nejdůležitějších kontaktů, dokumentů a pokynů z vašeho trezoru, navržená tak, aby vaši Důvěrníci měli vše podstatné na jednom místě."
+      "whoCanSeeMyInfo": {
+        "question": "Kto vidí moje informácie?",
+        "answer": "Iba vy a osoby, ktorým výslovne pridelíte prístup (opatrovníci, dôveryhodní ľudia, príjemcovia). Vaše údaje nepredávame ani nesprístupňujeme tretím stranám."
       },
-      "q5": {
-        "question": "Je závěť vytvořená v LegacyGuard právně závazná?",
-        "answer": "LegacyGuard vám pomáhá připravit a uspořádat všechny podklady a informace pro vaši závěť. Ve většině evropských zemí však digitální dokument nenahrazuje potřebu oficiálního, podepsaného (a často notářsky ověřeného) dokumentu. Doporučujeme vždy konzultovat konečnou verzi s právníkem."
-      }
-    },
-    "contact": {
-      "title": "Nenašli jste, co jste hledali?",
-      "email": {
-        "title": "Napište nám e-mail",
-        "description": "Pro obecné dotazy a podporu.",
-        "button": "Otevřít e-mailového klienta"
+      "emergencyAccess": {
+        "question": "Ako funguje núdzový prístup?",
+        "answer": "Núdzový prístup je možný len po potvrdení viacerých dôveryhodných osôb. Všetky prístupy sú monitorované a vlastník účtu je o nich informovaný."
       },
-      "call": {
-        "title": "Naplánujte si hovor (pro Premium)",
-        "description": "Pro zákazníky s tarify Premium a Enterprise.",
-        "button": "Naplánovat hovor"
+      "howToDeleteAccount": {
+        "question": "Ako odstránim svoj účet?",
+        "answer": "Účet môžete zrušiť v nastaveniach účtu, v časti Správa účtu. Po potvrdení bude všetka vaša digitálna stopa zmazaná."
+      },
+      "paymentOptions": {
+        "question": "Aké sú možnosti platby?",
+        "answer": "Podporujeme platby kartou a niektoré lokálne platobné metódy. Môžete si vybrať mesačné, ročné alebo rodinné predplatné."
+      },
+      "changeLanguage": {
+        "question": "Ako si zmením jazyk rozhrania?",
+        "answer": "V pravom hornom rohu kliknite na jazykovú voľbu a vyberte slovenčinu, češtinu, angličtinu alebo nemčinu."
+      },
+      "helpContact": {
+        "question": "Ako kontaktovať podporu?",
+        "answer": "Kontaktovať nás môžete priamo cez Centrum pomoci alebo e-mailom na support@legacyguard.eu. Odpovedáme do 24 hodín."
       }
     }
   },
-  "manual": {
-    "title": "Příručka pro pozůstalé",
-    "subtitle": "Základní informace pro vaše blízké, když je nejvíce potřebují.",
-    "tabs": {
-      "contacts": "Důležité kontakty",
-      "documents": "Důležité dokumenty",
-      "instructions": "Pokyny"
-    },
-    "contacts": {
-      "title": "Důležité kontakty",
-      "description": "Klíčové osoby, které by vaše rodina měla kontaktovat v případě nouze.",
-      "addContact": "Přidat kontakt",
-      "addFirstContact": "Přidejte svůj první kontakt",
-      "loading": "Načítání kontaktů...",
-      "empty": {
-        "title": "Zatím nebyly přidány žádné kontakty.",
-        "description": "Začněte přidáním důležitých osob, o kterých by vaše rodina měla vědět."
-      },
-      "form": {
-        "editTitle": "Upravit kontakt",
-        "addTitle": "Přidat důležitý kontakt",
-        "description": "Přidejte osoby, které by vaše rodina měla kontaktovat v důležitých situacích.",
-        "nameLabel": "Jméno kontaktu *",
-        "namePlaceholder": "např. Jan Novák",
-        "roleLabel": "Role/Profese *",
-        "rolePlaceholder": "např. Rodinný právník, Účetní, Lékař",
-        "phoneLabel": "Telefonní číslo",
-        "phonePlaceholder": "+420 123 456 789",
-        "emailLabel": "E-mailová adresa",
-        "emailPlaceholder": "kontakt@example.com",
-        "notesLabel": "Poznámky",
-        "notesPlaceholder": "Další informace o tomto kontaktu...",
-        "updateButton": "Aktualizovat kontakt",
-        "addButton": "Přidat kontakt",
-        "saving": "Ukládám...",
-        "cancel": "Zrušit"
-      },
-      "card": {
-        "edit": "Upravit"
-      },
-      "messages": {
-        "nameAndRoleRequired": "Jméno a role jsou povinné.",
-        "loginRequired": "Pro uložení kontaktů musíte být přihlášeni.",
-        "updated": "Kontakt byl úspěšně aktualizován!",
-        "added": "Kontakt byl úspěšně přidán!",
-        "deleted": "Kontakt byl úspěšně smazán!"
-      },
-      "errors": {
-        "loadFailed": "Načtení kontaktů se nezdařilo.",
-        "saveFailed": "Uložení kontaktu se nezdařilo.",
-        "deleteFailed": "Smazání kontaktu se nezdařilo."
-      }
-    },
-    "documents": {
-      "title": "Klíčové dokumenty",
-      "description": "Kritické dokumenty, o kterých musí vaše rodina vědět.",
-      "loading": "Načítání klíčových dokumentů...",
-      "empty": {
-        "title": "Zatím nebyly přidány žádné klíčové dokumenty.",
-        "description": "Označte důležité dokumenty jako \"klíčové dokumenty\" z vašeho trezoru, aby se zde objevily.",
-        "tip": "Tip: Přejděte do svého trezoru a přepněte možnost \"Zahrnout do Příručky pro pozůstalé\" pro důležité dokumenty."
-      },
-      "card": {
-        "essentialNote": "Tento dokument je označen jako zásadní pro vaše pozůstalé."
-      },
-      "errors": {
-        "loadFailed": "Načtení klíčových dokumentů se nezdařilo."
-      },
-      "expiration": {
-        "expired": "Platnost vypršela",
-        "expiresSoon": "Platnost brzy vyprší",
-        "expiring": "Platnost končí"
-      }
-    },
-    "instructions": {
-      "title": "Poslední přání a pokyny",
-      "description": "Osobní pokyny a vzkazy pro vaše blízké.",
-      "loading": "Načítání pokynů...",
-      "autoSaveNote": "Vaše pokyny se automaticky ukládají při psaní.",
-      "sections": {
-        "funeral": {
-          "title": "Pohřební přání",
-          "description": "Vaše preference pro pohřební uspořádání a obřady.",
-          "placeholder": "např. Kremace, žádný formální obřad, přehrajte 'My Way' od Franka Sinatry..."
-        },
-        "digitalAccounts": {
-          "title": "Ukončení digitálních účtů",
-          "description": "Pokyny pro nakládání s vašimi digitálními účty a online přítomností.",
-          "placeholder": "např. Prosím, smažte můj profil na Facebooku, ale archivujte můj Gmail. Přeneste mé fotky z Google Drive na..."
-        },
-        "messages": {
-          "title": "Vzkazy pro blízké",
-          "description": "Osobní vzkazy a poslední myšlenky pro vaši rodinu a přátele.",
-          "placeholder": "Podělte se o své myšlenky, vzpomínky a poslední vzkazy s těmi, které milujete..."
-        }
-      },
-      "errors": {
-        "loadFailed": "Načtení pokynů se nezdařilo."
-      }
-    }
+  "tutorials": {
+    "title": "Návody a tipy",
+    "startTutorial": "Spustiť návod",
+    "backToTutorials": "Späť na návody",
+    "video": "Videonávod",
+    "step": "Krok {{current}} z {{total}}",
+    "completed": "Návod dokončený",
+    "allTutorials": "Všetky návody",
+    "comingSoon": "Viac návodov už čoskoro!"
   },
-  "testimonials": {
-    "badge": "Skutečné rodiny, které přebírají kontrolu",
-    "title": "Důvěřováno 15,000+ evropskými rodinami",
-    "subtitle": "Podívejte se, jak rodiny jako ta vaše našly pocit bezpečí a klidu s LegacyGuard",
-    "verified": "Ověřená rodina",
-    "trustedBy": "Důvěřováno a doporučováno",
-    "stats": {
-      "families": "15,000+",
-      "familiesLabel": "Evropských rodin chráněno",
-      "satisfaction": "99.7%",
-      "satisfactionLabel": "se cítí připravenější a kontrolovanější",
-      "stressReduction": "92%",
-      "stressReductionLabel": "méně rodinného stresu",
-      "timeSaved": "120 h",
-      "timeSavedLabel": "průměrný čas ušetřený na rodinu"
+  "contactSupport": {
+    "title": "Kontaktovať podporu",
+    "subtitle": "Potrebujete pomoc? Náš tím je tu pre vás.",
+    "form": {
+      "nameLabel": "Vaše meno",
+      "emailLabel": "Váš e-mail",
+      "messageLabel": "Správa",
+      "submitButton": "Odoslať správu",
+      "submitting": "Odosielam...",
+      "success": "Vaša správa bola odoslaná! Ozveme sa vám čo najskôr.",
+      "error": "Nepodarilo sa odoslať správu. Skúste to neskôr."
     },
-    "stories": {
-      "1": {
-        "name": "Michael K.",
-        "role": "Otec tří dětí",
-        "location": "Mnichov, Německo",
-        "quote": "Po náhlé nehodě mého bratra jsem viděl, jak se moje švagrová týdny potýká s hledáním důležitých dokumentů a hesel. Tehdy jsem pochopil, že nemohu dovolit, aby se totéž stalo mé rodině. Teď je vše organizované a moje manželka ví přesně, kde najít to, co potřebuje. Být připravený a kontrolovaný je k nezaplacení.",
-        "highlight": "✨ Nastaveno za pouhé 2 hodiny, chrání 3 děti a manžela"
-      },
-      "2": {
-        "name": "Anna S.",
-        "role": "Majitelka podniku",
-        "location": "Vídeň, Rakousko",
-        "quote": "Jako samoživitelka řídící podnik jsem se neustále obávala, co se stane, když se mi něco stane. LegacyGuard mi pomohl organizovat vše - od obchodních účtů po informace o škole mých dětí. Moje sestra má nyní přístup ke všemu, co potřebuje k zásahu. Spím mnohem lépe, když vím, že jsou chráněni.",
-        "highlight": "💼 Obchodní a osobní život organizovaný na jednom bezpečném místě"
-      },
-      "3": {
-        "name": "Thomas R.",
-        "role": "Důchodce učitel",
-        "location": "Curych, Švýcarsko",
-        "quote": "Moje manželka má ranou demenci a pochopil jsem, že se musím připravit, dokud ještě mohu. LegacyGuard udělal organizování našich 40 let života společně jednoduchým. Naše děti mají nyní jasné pokyny a přístup ke všemu. To sblížilo celou naši rodinu, když víme, že jsme připraveni na cokoliv, co přijde.",
-        "highlight": "❤️ 40 let rodinné historie zachováno a chráněno"
-      }
-    },
-    "authority": {
-      "advisors": "Doporučováno finančními poradci",
-      "attorneys": "Důvěřováno rodinnými právníky",
-      "counselors": "Schváleno poradci pro truchlení"
-    },
-    "compliance": {
-      "gdpr": "V souladu s GDPR",
-      "dataProtection": "Certifikovaná ochrana dat",
-      "iso": "Certifikováno ISO 27001"
-    },
-    "bottomCta": {}
+    "alternativeContact": {
+      "title": "Alebo nám napíšte",
+      "email": "E-mail podpory: support@legacyguard.eu"
+    }
   }
 }
+

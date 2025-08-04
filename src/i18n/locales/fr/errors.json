@@ -1,98 +1,48 @@
 {
-  "_comment": "Shared translations used across the application",
-  "errorBoundary": {
-    "title": "Oups ! Quelque chose s'est mal passé",
-    "description": "Nous nous excusons pour le désagrément. Une erreur inattendue s'est produite.",
-    "errorId": "ID d'erreur",
-    "tryAgain": "Réessayer",
-    "reloadPage": "Recharger la page",
-    "goToHomepage": "Aller à la page d'accueil",
-    "technicalDetails": "Détails techniques",
-    "hide": "Masquer",
-    "show": "Afficher",
-    "stackTrace": "Trace de la pile",
-    "componentStack": "Pile des composants",
-    "helpText": "Si le problème persiste, contactez notre support avec l'ID d'erreur."
-  },
-  "errorTest": {
-    "title": "Test de journalisation d'erreurs",
-    "description": "Test de la gestion des erreurs et de la fonctionnalité de journalisation",
-    "triggerSyncError": "Déclencher une erreur synchrone (ErrorBoundary)",
-    "triggerAsyncError": "Déclencher une erreur asynchrone",
-    "logRegularError": "Enregistrer une erreur normale",
-    "logCriticalError": "Enregistrer une erreur critique",
-    "triggerAlert": "Déclencher une alerte (6 erreurs critiques)",
-    "errorMessages": {
-      "testError": "Erreur de test du composant ErrorTest",
-      "testAsyncRejection": "Test de rejet asynchrone",
-      "manualTestError": "Erreur de test manuel",
-      "testCriticalError": "Erreur critique de test",
-      "criticalErrorWithIndex": "Erreur critique {{index}}"
-    },
-    "descriptions": {
-      "syncError": "Déclenche une erreur synchrone qui sera capturée par l'ErrorBoundary",
-      "asyncError": "Déclenche une erreur asynchrone qui sera capturée par la gestion d'erreurs",
-      "regularError": "Enregistre une erreur normale pour tester le suivi des erreurs",
-      "criticalError": "Enregistre une erreur critique pour tester la gestion des erreurs critiques",
-      "multipleErrors": "Déclenche plusieurs erreurs critiques pour tester les seuils d'alerte"
-    },
-    "context": {
-      "component": "ErrorTest",
-      "action": "button-click",
-      "severity": "high"
-    },
-    "notifications": {
-      "errorLogged": "Erreur enregistrée avec succès",
-      "criticalErrorLogged": "Erreur critique enregistrée avec succès",
-      "multipleErrorsTriggered": "Plusieurs erreurs critiques déclenchées",
-      "errorBoundaryTriggered": "Limite d'erreur déclenchée",
-      "asyncErrorCaught": "Erreur asynchrone capturée et traitée"
-    }
-  },
-  "debug": {
-    "panel": {
-      "title": "Panneau de débogage",
-      "recentErrors": "Erreurs récentes de l'application",
-      "technicalDetails": "Détails techniques",
-      "tabs": {
-        "list": "Liste",
-        "details": "Détails"
-      },
-      "errorCount": "{{count}} erreurs",
-      "actions": {
-        "downloadErrors": "Télécharger les erreurs",
-        "clearAllErrors": "Effacer toutes les erreurs"
-      },
-      "messages": {
-        "errorsCleared": "Toutes les erreurs effacées",
-        "errorCopied": "Erreur copiée dans le presse-papiers",
-        "errorsDownloaded": "Erreurs téléchargées"
-      },
-      "error": {
-        "unknownError": "Erreur inconnue",
-        "noMessage": "Aucun message",
-        "errorMessage": "Message d'erreur"
-      },
-      "sections": {
-        "stackTrace": "Trace de la pile",
-        "context": "Contexte",
-        "location": "Emplacement",
-        "browserInfo": "Informations du navigateur",
-        "time": "Heure"
-      },
-      "fields": {
-        "url": "URL:",
-        "path": "Chemin:",
-        "query": "Requête:",
-        "userAgent": "Agent utilisateur:",
-        "viewport": "Zone d'affichage:"
-      }
-    }
-  },
-  "test": {
-    "environment": {
-      "title": "Environnement de test uniquement",
-      "description": "Cette page est destinée à tester le système de journalisation d'erreurs. Supprimez cette route avant de déployer en production."
-    }
+  "_comment": "Messages d’erreur et de validation",
+  "errors": {
+    "unknown": "Une erreur inconnue s’est produite. Veuillez réessayer.",
+    "network": "Problème de connexion. Vérifiez votre réseau ou réessayez plus tard.",
+    "requiredField": "Ce champ est obligatoire.",
+    "invalidEmail": "Adresse email invalide.",
+    "invalidPhone": "Numéro de téléphone invalide.",
+    "invalidDate": "Date invalide.",
+    "tooShort": "La valeur est trop courte.",
+    "tooLong": "La valeur est trop longue.",
+    "passwordsDoNotMatch": "Les mots de passe ne correspondent pas.",
+    "emailAlreadyUsed": "Cet email est déjà utilisé.",
+    "notAuthorized": "Vous n’êtes pas autorisé à effectuer cette action.",
+    "forbidden": "Action interdite.",
+    "notFound": "Ressource non trouvée.",
+    "timeout": "La requête a expiré. Veuillez réessayer.",
+    "server": "Erreur serveur. Veuillez réessayer plus tard.",
+    "invalidFileType": "Type de fichier non supporté.",
+    "fileTooLarge": "Fichier trop volumineux.",
+    "uploadFailed": "Échec du téléversement du fichier.",
+    "saveFailed": "Échec de l’enregistrement.",
+    "deleteFailed": "Échec de la suppression.",
+    "updateFailed": "Échec de la mise à jour.",
+    "loadFailed": "Échec du chargement.",
+    "validationFailed": "Erreur de validation. Veuillez vérifier vos saisies.",
+    "inviteExpired": "Cette invitation a expiré.",
+    "inviteInvalid": "Lien d’invitation invalide ou déjà utilisé.",
+    "inviteAlreadyAccepted": "Cette invitation a déjà été acceptée.",
+    "limitReached": "Limite atteinte pour ce type d’élément.",
+    "actionNotAllowed": "Cette action n’est pas autorisée.",
+    "planUpgradeRequired": "Veuillez passer à une offre supérieure pour accéder à cette fonctionnalité.",
+    "featurePremiumOnly": "Fonctionnalité réservée aux membres premium.",
+    "accountDeleted": "Votre compte a été supprimé.",
+    "accountNotFound": "Compte non trouvé.",
+    "sessionExpired": "Votre session a expiré. Veuillez vous reconnecter.",
+    "captchaFailed": "Échec de la vérification Captcha.",
+    "passwordTooShort": "Le mot de passe doit contenir au moins 6 caractères.",
+    "passwordWeak": "Le mot de passe est trop faible.",
+    "invalidCode": "Code invalide.",
+    "codeExpired": "Le code a expiré.",
+    "multiFactorRequired": "Authentification à deux facteurs requise.",
+    "dataCorrupted": "Données corrompues ou incomplètes.",
+    "privacyConsentRequired": "Merci d’accepter la politique de confidentialité pour continuer.",
+    "unsupportedBrowser": "Navigateur non supporté. Veuillez utiliser Chrome, Firefox ou Edge.",
+    "maintenance": "Le service est en maintenance. Veuillez réessayer plus tard."
   }
 }

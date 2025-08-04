@@ -1,91 +1,91 @@
 {
-  "_comment": "Shared translations used across the application",
+  "_comment": "Sdílené překlady používané napříč aplikací",
   "errorBoundary": {
-    "title": "Oops! Something went wrong",
-    "description": "We apologize for the inconvenience. An unexpected error has occurred.",
-    "errorId": "Error ID",
-    "tryAgain": "Try Again",
-    "reloadPage": "Reload Page",
-    "goToHomepage": "Go to Homepage",
-    "technicalDetails": "Technical Details",
-    "hide": "Hide",
-    "show": "Show",
-    "stackTrace": "Stack Trace",
-    "componentStack": "Component Stack",
-    "helpText": "If the problem persists, contact our support with the error ID."
+    "title": "Jejda! Něco se pokazilo",
+    "description": "Omlouváme se za nepříjemnosti. Došlo k neočekávané chybě.",
+    "errorId": "ID chyby",
+    "tryAgain": "Zkusit znovu",
+    "reloadPage": "Obnovit stránku",
+    "goToHomepage": "Přejít na úvodní stránku",
+    "technicalDetails": "Technické detaily",
+    "hide": "Skrýt",
+    "show": "Zobrazit",
+    "stackTrace": "Sled zásobníku",
+    "componentStack": "Komponentový zásobník",
+    "helpText": "Pokud problém přetrvává, kontaktujte naši podporu s ID chyby."
   },
   "errorTest": {
-    "title": "Error Logging Test",
-    "description": "Test error handling and logging functionality",
-    "triggerSyncError": "Trigger Sync Error (ErrorBoundary)",
-    "triggerAsyncError": "Trigger Async Error",
-    "logRegularError": "Log Regular Error",
-    "logCriticalError": "Log Critical Error",
-    "triggerAlert": "Trigger Alert (6 Critical Errors)",
+    "title": "Testování logování chyb",
+    "description": "Testování funkčnosti chyb a logování",
+    "triggerSyncError": "Vyvolat synchronní chybu (ErrorBoundary)",
+    "triggerAsyncError": "Vyvolat asynchronní chybu",
+    "logRegularError": "Zalogovat běžnou chybu",
+    "logCriticalError": "Zalogovat kritickou chybu",
+    "triggerAlert": "Vyvolat upozornění (6 kritických chyb)",
     "errorMessages": {
-      "testError": "Test error from ErrorTest component",
+      "testError": "Testovací chyba z komponenty ErrorTest",
       "testAsyncRejection": "Test asynchronního odmítnutí",
       "manualTestError": "Chyba manuálního testu",
       "testCriticalError": "Test kritické chyby",
-      "criticalErrorWithIndex": "Critical error {{index}}"
+      "criticalErrorWithIndex": "Kritická chyba {{index}}"
     },
     "descriptions": {
-      "syncError": "Triggers a synchronous error that will be caught by the ErrorBoundary",
-      "asyncError": "Triggers an asynchronous error that will be caught by error handling",
-      "regularError": "Logs a regular error for testing error tracking",
-      "criticalError": "Logs a critical error for testing critical error handling",
-      "multipleErrors": "Triggers multiple critical errors to test alert thresholds"
+      "syncError": "Vyvolá synchronní chybu, kterou zachytí ErrorBoundary",
+      "asyncError": "Vyvolá asynchronní chybu, kterou zachytí zpracování chyb",
+      "regularError": "Zaloguje běžnou chybu pro testování sledování chyb",
+      "criticalError": "Zaloguje kritickou chybu pro testování zpracování kritických chyb",
+      "multipleErrors": "Vyvolá více kritických chyb pro otestování limitů upozornění"
     },
     "context": {
       "component": "ErrorTest",
-      "action": "button-click",
-      "severity": "high"
+      "action": "kliknutí na tlačítko",
+      "severity": "vysoká"
     },
     "notifications": {
       "errorLogged": "Chyba úspěšně zaznamenána",
-      "criticalErrorLogged": "Critical error logged successfully",
-      "multipleErrorsTriggered": "Multiple critical errors triggered",
-      "errorBoundaryTriggered": "Hranice chyb aktivována",
-      "asyncErrorCaught": "Async error caught and handled"
+      "criticalErrorLogged": "Kritická chyba úspěšně zaznamenána",
+      "multipleErrorsTriggered": "Vyvoláno více kritických chyb",
+      "errorBoundaryTriggered": "ErrorBoundary byla aktivována",
+      "asyncErrorCaught": "Asynchronní chyba zachycena a zpracována"
     }
   },
   "debug": {
     "panel": {
-      "title": "Debug Panel",
+      "title": "Ladící panel",
       "recentErrors": "Poslední chyby aplikace",
-      "technicalDetails": "Technical Details",
+      "technicalDetails": "Technické detaily",
       "tabs": {
-        "list": "List",
-        "details": "Details"
+        "list": "Seznam",
+        "details": "Detaily"
       },
-      "errorCount": "{{count}} errors",
+      "errorCount": "{{count}} chyb",
       "actions": {
-        "downloadErrors": "Download errors",
+        "downloadErrors": "Stáhnout chyby",
         "clearAllErrors": "Vymazat všechny chyby"
       },
       "messages": {
         "errorsCleared": "Všechny chyby vymazány",
-        "errorCopied": "Error copied to clipboard",
-        "errorsDownloaded": "Errors downloaded"
+        "errorCopied": "Chyba zkopírována do schránky",
+        "errorsDownloaded": "Chyby staženy"
       },
       "error": {
-        "unknownError": "Unknown Error",
-        "noMessage": "No message",
-        "errorMessage": "Error Message"
+        "unknownError": "Neznámá chyba",
+        "noMessage": "Žádná zpráva",
+        "errorMessage": "Zpráva o chybě"
       },
       "sections": {
-        "stackTrace": "Stack Trace",
-        "context": "Context",
-        "location": "Location",
-        "browserInfo": "Browser Information",
-        "time": "Time"
+        "stackTrace": "Sled zásobníku",
+        "context": "Kontext",
+        "location": "Umístění",
+        "browserInfo": "Informace o prohlížeči",
+        "time": "Čas"
       },
       "fields": {
         "url": "URL:",
-        "path": "Path:",
-        "query": "Query:",
+        "path": "Cesta:",
+        "query": "Dotaz:",
         "userAgent": "Uživatelský agent:",
-        "viewport": "Oblast zobrazení:"
+        "viewport": "Zobrazená oblast:"
       }
     }
   },
@@ -96,3 +96,4 @@
     }
   }
 }
+

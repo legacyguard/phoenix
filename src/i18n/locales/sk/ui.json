@@ -1,264 +1,133 @@
 {
-  "_comment": "Shared translations used across the application",
-  "navigation": {
-    "dashboard": "Přehled",
-    "vault": "Trezor",
-    "trustedCircle": {
-      "title": "Váš dôveryhodný kruh",
-      "subtitle": "Ľudia, ktorým dôverujete, aby pomohli chrániť a starať sa o vašu rodinu a dedičstvo.",
-      "responsibilities": "Ich zodpovednosti:",
-      "preparationStatus": "Stav prípravy:",
-      "informedOfRole": "Bol informovaný o svojej úlohe",
-      "acceptedResponsibility": "Prijal zodpovednosť",
-      "hasAccessToDocuments": "Má prístup k potrebným dokumentom",
-      "reviewedEmergencyProcedures": "Prezrel núdzové postupy",
-      "addTrustedPerson": "+ Pridať dôveryhodnú osobu",
-      "preparednessStatus": {
-        "wellPrepared": "Dobre pripravený",
-        "partiallyPrepared": "Čiastočne pripravený",
-        "needsAttention": "Vyžaduje pozornosť"
-      },
-      "buttonText": {
-        "prepared": "✓ {{name}} je pripravený",
-        "prepareNow": "Pripraviť {{name}} teraz"
-      },
-      "mockData": {
-        "sarah": {
-          "name": "Sarah Johnson",
-          "relationship": "Manželka",
-          "responsibilities": {
-            "bankAccess": "Môže pristúpiť ku všetkým bankovým účtom na platbu účtov a správu domácich výdavkov.",
-            "inheritAssets": "Zdedí rodinný dom, chatu a všetky úspory.",
-            "medicalPower": "Má lekárske splnomocnenie na rozhodovanie o zdravotnej starostlivosti."
-          }
-        },
-        "michael": {
-          "name": "Michael Johnson",
-          "relationship": "Brat",
-          "responsibilities": {
-            "childCare": "Postará sa o naše deti, ak obaja rodičia zomrú.",
-            "estateExecution": "Vykoná naše posledné želania a spravuje vyrovnanie majetku.",
-            "businessManagement": "Môže zasiahnuť na správu Johnson Contracting LLC dočasne."
-          }
-        },
-        "robert": {
-          "name": "Robert Chen",
-          "relationship": "Obchodný partner",
-          "responsibilities": {
-            "businessAuthority": "Má oprávnenie spravovať obchodné operácie a podpisovať zmluvy.",
-            "buySellAgreement": "Kúpi moje obchodné podiely podľa našej kúpno-predajnej dohody."
-          }
-        },
-        "emily": {
-          "name": "Emily Thompson",
-          "relationship": "Švagriná",
-          "responsibilities": {
-            "backupGuardian": "Záložný opatrovník pre deti, ak primárny opatrovník nemôže slúžiť."
-          }
-        }
-      }
-    },
-    "familyHub": "Rodinné centrum",
-    "legacyBriefing": {
-      "legacy_briefing_3": "Prehľad dedičstva",
-      "create_and_manage_sealed_messa_4": "Vytvárajte a spravujte zapečatené správy pre vašich blízkych",
-      "failed_to_load_your_time_capsu_1": "Nepodarilo sa načítať vaše časové kapsuly",
-      "are_you_sure_you_want_to_delet_2": "Ste si istý, že chcete vymazať túto časovú kapsulu?",
-      "create_new_message_5": "Vytvoriť novú správu",
-      "no_time_capsules_yet_6": "Zatiaľ žiadne časové kapsuly",
-      "create_meaningful_messages_for_7": "Vytvárajte zmysluplné správy pre vašich blízkych na prijatie v budúcnosti",
-      "create_your_first_message_8": "Vytvorte svoju prvú správu",
-      "to_9": "Pre:",
-      "unlocks_on_10": "Odomkne sa:",
-      "unlocks_11": "Odomkne sa:",
-      "after_passing_12": "Po úmrtí",
-      "statusLabels": {
-        "locked": "Zamknuté",
-        "unlocked": "Odomknuté",
-        "delivered": "Doručené",
-        "noRecipients": "Žiadni príjemcovia"
-      },
-      "messageTypes": {
-        "text": "Textová správa",
-        "photo": "Fotografická správa",
-        "video": "Videopráva",
-        "audio": "Zvuková správa"
-      },
-      "actions": {
-        "edit": "Upraviť",
-        "delete": "Vymazať"
-      },
-      "toastMessages": {
-        "deleteSuccess": "Časová kapsula úspešne vymazaná",
-        "deleteError": "Nepodarilo sa vymazať časovú kapsulu"
-      },
-      "dateFormat": {
-        "dateNotSet": "Dátum nie je nastavený",
-        "created": "Vytvorené"
-      },
-      "errors": {
-        "textContentRequired": "Text content is required for text messages",
-        "unlockDateRequired": "Unlock date is required when condition is date",
-        "failedToUploadAttachment": "Failed to upload attachment",
-        "failedToCreate": "Failed to create time capsule",
-        "failedToFetch": "Failed to fetch time capsules",
-        "failedToUpdate": "Failed to update time capsule",
-        "failedToDelete": "Failed to delete time capsule",
-        "notFoundOrCannotModify": "Time capsule not found or cannot be modified",
-        "notFoundOrCannotDelete": "Time capsule not found or cannot be deleted",
-        "missingUploadFields": "Missing required fields: fileName, fileType, fileSizeBytes",
-        "invalidFileType": "Invalid file type. Allowed types: webm, mp4, mov",
-        "fileSizeExceeds500MB": "File size exceeds maximum allowed size of 500MB",
-        "premiumRequired": "Premium subscription required",
-        "premiumRequiredMessage": "Video messages are a premium feature. Please upgrade your subscription to use this feature.",
-        "failedToCreateUploadUrl": "Failed to create upload URL"
-      }
-    },
-    "executorToolkit": "Sada nástrojov vykonávateľa",
-    "assets": "Majetek",
-    "manual": "Příručka",
-    "documents": "Trezor dědictví",
-    "guardians": "Síť důvěrníků",
-    "family": "Rodinné centrum",
-    "timeCapsule": "Časové kapsuly",
-    "will": "Závěť",
-    "consultations": "Právne konzultácie",
-    "settings": "Nastavení",
-    "help": "Nápověda a podpora",
-    "subscriptions": "Predplatné"
-  },
-  "nav": {
-    "dashboard": "Přehled",
-    "manual": "Příručka",
-    "vault": "Trezor dědictví",
-    "guardians": "Síť důvěrníků",
-    "will": "Závěť",
-    "settings": "Nastavení",
-    "help": "Nápověda a podpora"
-  },
-  "footer": {
-    "tagline": "Uchováváme vaše dědictví pro příští generace.",
-    "platform": {
-      "title": "Platforma",
-      "heritageVault": "Trezor dědictví",
-      "guardianNetwork": "Síť důvěrníků",
-      "dashboard": "Přehled",
-      "security": "Zabezpečení"
-    },
-    "support": {
-      "title": "Podpora",
-      "helpCenter": "Centrum nápovědy",
-      "userGuides": "Uživatelské příručky",
-      "contactUs": "Kontaktujte nás",
-      "community": "Komunita"
-    },
-    "legal": {
-      "title": "Právní informace",
-      "privacyPolicy": "Zásady ochrany osobních údajů",
-      "termsOfService": "Podmínky služby",
-      "dataProtection": "Ochrana dat"
-    },
-    "copyright": "© {{year}} LegacyGuard. Všechna práva vyhrazena.",
-    "description": "Správa digitálního dědictví na podnikové úrovni."
-  },
-  "hero": {
-    "title": "Chraňte digitální dědictví své rodiny napořád",
-    "subtitle": "Bezpečná a intuitivní platforma, která pomáhá rodinám organizovat, chránit a předávat jejich nejdůležitější vzpomínky a dokumenty napříč generacemi.",
-    "cta_primary": "Začněte s plánem dědictví",
-    "cta_secondary": "Zhlédnout demo",
-    "urgencySubtitle": "Nastavení trvá jen 10 minut - buďte připraveným rodičem, kterého vaše rodina potřebuje",
-    "secondaryContext": "2minutové video ukazující skutečné rodiny",
-    "trustSignals": {
-      "dataOwnership": "Vaše data zůstávají vaše – nikdy je neprodáváme",
-      "gdprCompliant": "V souladu s GDPR od počátku",
-      "europeanFamilies": "Vytvořeno pro evropské rodiny"
-    },
-    "community": {
-      "growing": "Připojte se k {{count}} rodinám, které již chrání své dědictví",
-      "growingFallback": "Připojte se k naší rostoucí komunitě"
-    }
-  },
-  "features": {
-    "title": "Proč si vybrat LegacyGuard?",
-    "subtitle": "Vytvořeno s podnikovou úrovní zabezpečení a navrženo pro rodiny, které si cení svého dědictví.",
-    "sleepBetter": {
-      "title": "Spěte lépe v noci",
-      "description": "S vědomím, že vaše rodina je chráněna a připravena na cokoliv, co přijde."
-    },
-    "noChaos": {
-      "title": "Bez chaosu a zmatku",
-      "description": "Vaši blízcí budou mít jasné pokyny a přístup ke všemu, co potřebují."
-    },
-    "clearInstructions": {
-      "title": "Jasné pokyny pro všechny",
-      "description": "Každý člen rodiny ví přesně, co dělat a kde najít to, co potřebuje."
-    },
-    "security": {
-      "title": "Absolutní důvěrnost a soukromí",
-      "description": "Navrženo tak, aby k vašim datům neměl přístup nikdo neoprávněný. Ani my. Vaše soukromí je naší nejvyšší prioritou."
-    },
-    "guardians": {
-      "title": "Síť důvěrníků",
-      "description": "Určete důvěryhodné členy rodiny a přátele jako důvěrníky, abyste zajistili kontinuitu dědictví."
-    },
-    "storage": {
-      "title": "Bezpečné cloudové úložiště",
-      "description": "Redundantní zálohy ve více datových centrech s garantovanou dostupností 99,99 %."
-    },
-    "timelock": {
-      "title": "Časově uzamčený přístup",
-      "description": "Nastavte podmínky, kdy a jak mohou oprávněné osoby přistupovat k vašemu digitálnímu dědictví."
-    },
-    "stories": {
-      "title": "Osobní příběhy",
-      "description": "Vytvářejte bohaté multimediální příběhy, které zachycují podstatu cesty vaší rodiny."
-    },
-    "preservation": {
-      "title": "Doživotní uchování",
-      "description": "Vaše dědictví je uchováno na neomezenou dobu s automatickou migrací formátů a aktualizacemi."
-    }
-  },
-  "alerts": {
-    "title": "Centrum upozornění",
-    "description": "Spravujte svá upozornění na vypršení platnosti dokumentů.",
-    "unread": "Nepřečtené",
-    "markAsRenewed": "Označit jako obnovené",
-    "snooze7Days": "Odložit o 7 dní",
-    "dismiss": "Zavřít",
-    "unsnooze": "Zrušit odložení",
-    "tabs": {
-      "active": "Aktivní",
-      "snoozed": "Odložené",
-      "dismissed": "Zavřené"
-    },
-    "noActiveAlerts": "Nemáte žádná aktivní upozornění.",
-    "noSnoozedAlerts": "Nemáte žádná odložená upozornění.",
-    "noDismissedAlerts": "Nemáte žádná zavřená upozornění.",
-    "expiresOn": "Vyprší dne {{date}}",
-    "snoozedUntil": "Odloženo do {{date}}",
-    "renewalInstructions": "Pokyny k obnovení",
-    "badges": {
-      "expired": "Vypršelo",
-      "expiring_7": "Brzy vyprší",
-      "expiring_30": "Vyprší za 30 dní",
-      "expiring_90": "Vyprší za 90 dní"
-    },
-    "types": {
-      "expired": "Platnost dokumentu {{documentName}} vypršela před {{daysAgo}} dny!",
-      "expiring7": "Pospěšte si! Platnost dokumentu {{documentName}} vyprší za {{days}} dní.",
-      "expiring30": "Připomenutí: Platnost dokumentu {{documentName}} vyprší za {{days}} dní.",
-      "expiring90": "Upozornění: Platnost dokumentu {{documentName}} vyprší za {{days}} dní."
-    },
-    "messages": {
-      "dismissed": "Upozornění bylo úspěšně zavřeno.",
-      "snoozed": "Upozornění bylo odloženo o {{days}} dní.",
-      "markedAsRenewed": "Dokument byl označen jako obnovený."
-    },
-    "errors": {
-      "loadFailed": "Načtení upozornění se nezdařilo.",
-      "dismissFailed": "Nepodařilo se zavřít upozornění.",
-      "snoozeFailed": "Nepodařilo se odložit upozornění.",
-      "renewFailed": "Nepodařilo se označit dokument jako obnovený."
-    }
+  "_comment": "Univerzálne UI texty, ovládacie prvky a prístupnosť",
+  "ui": {
+    "save": "Uložiť",
+    "saving": "Ukladám...",
+    "cancel": "Zrušiť",
+    "close": "Zavrieť",
+    "edit": "Upraviť",
+    "delete": "Vymazať",
+    "remove": "Odstrániť",
+    "confirm": "Potvrdiť",
+    "continue": "Pokračovať",
+    "back": "Späť",
+    "next": "Ďalej",
+    "yes": "Áno",
+    "no": "Nie",
+    "done": "Hotovo",
+    "add": "Pridať",
+    "create": "Vytvoriť",
+    "update": "Aktualizovať",
+    "search": "Hľadať",
+    "filter": "Filtrovať",
+    "sort": "Triediť",
+    "options": "Možnosti",
+    "actions": "Akcie",
+    "view": "Zobraziť",
+    "show": "Zobraziť",
+    "hide": "Skryť",
+    "download": "Stiahnuť",
+    "upload": "Nahrať",
+    "select": "Vybrať",
+    "selectAll": "Vybrať všetko",
+    "deselectAll": "Zrušiť výber",
+    "copy": "Kopírovať",
+    "copied": "Skopírované",
+    "paste": "Prilepiť",
+    "refresh": "Obnoviť",
+    "retry": "Skúsiť znova",
+    "details": "Podrobnosti",
+    "expand": "Rozbaliť",
+    "collapse": "Zbaliť",
+    "more": "Viac",
+    "less": "Menej",
+    "info": "Informácia",
+    "success": "Úspech",
+    "warning": "Varovanie",
+    "error": "Chyba",
+    "optional": "Voliteľné",
+    "required": "Povinné",
+    "fieldRequired": "Toto pole je povinné",
+    "fieldOptional": "Toto pole je voliteľné",
+    "actionsMenu": "Ponuka akcií",
+    "menu": "Menu",
+    "userMenu": "Používateľské menu",
+    "open": "Otvoriť",
+    "closeMenu": "Zavrieť menu",
+    "previous": "Predchádzajúci",
+    "page": "Strana",
+    "of": "z",
+    "loading": "Načítavam...",
+    "noData": "Žiadne dáta",
+    "noResults": "Žiadne výsledky",
+    "emptyState": "Zatiaľ žiadne položky",
+    "tryAgain": "Skúste to znova",
+    "clear": "Vymazať",
+    "clearAll": "Vymazať všetko",
+    "help": "Pomoc",
+    "support": "Podpora",
+    "settings": "Nastavenia",
+    "profile": "Profil",
+    "logout": "Odhlásiť sa",
+    "login": "Prihlásiť sa",
+    "signup": "Registrovať sa",
+    "language": "Jazyk",
+    "theme": "Téma",
+    "darkMode": "Tmavý režim",
+    "lightMode": "Svetlý režim",
+    "systemDefault": "Podľa systému",
+    "accept": "Prijať",
+    "decline": "Odmietnuť",
+    "agree": "Súhlasím",
+    "disagree": "Nesúhlasím",
+    "submit": "Odoslať",
+    "reset": "Resetovať",
+    "requiredField": "Povinné pole",
+    "optionalField": "Voliteľné pole",
+    "infoMessage": "Informačná správa",
+    "successMessage": "Úspešná operácia",
+    "warningMessage": "Upozornenie",
+    "errorMessage": "Došlo k chybe",
+    "privacy": "Súkromie",
+    "terms": "Podmienky",
+    "cookiePolicy": "Zásady cookies",
+    "feedback": "Spätná väzba",
+    "notifications": "Upozornenia",
+    "notification": "Upozornenie",
+    "markAsRead": "Označiť ako prečítané",
+    "markAllAsRead": "Označiť všetko ako prečítané",
+    "showMore": "Zobraziť viac",
+    "showLess": "Zobraziť menej",
+    "expandAll": "Rozbaliť všetko",
+    "collapseAll": "Zbaliť všetko",
+    "viewDetails": "Zobraziť podrobnosti",
+    "viewAll": "Zobraziť všetko",
+    "selectLanguage": "Vyberte jazyk",
+    "change": "Zmeniť",
+    "editProfile": "Upraviť profil",
+    "goToDashboard": "Prejsť na nástenku",
+    "legalNotice": "Právne upozornenie",
+    "contact": "Kontakt",
+    "contactUs": "Kontaktujte nás",
+    "saveChanges": "Uložiť zmeny",
+    "discardChanges": "Zahodiť zmeny",
+    "nextStep": "Ďalší krok",
+    "previousStep": "Predchádzajúci krok",
+    "uploadFile": "Nahrať súbor",
+    "uploadFiles": "Nahrať súbory",
+    "downloadFile": "Stiahnuť súbor",
+    "downloadFiles": "Stiahnuť súbory",
+    "processing": "Spracúvam...",
+    "successAction": "Operácia bola úspešná",
+    "errorAction": "Operácia zlyhala",
+    "welcome": "Vitajte",
+    "home": "Domov",
+    "dashboard": "Nástenka",
+    "start": "Začať",
+    "exit": "Ukončiť",
+    "acceptAll": "Prijať všetko",
+    "declineAll": "Odmietnuť všetko",
+    "requiredAsterisk": "*"
   }
 }
+

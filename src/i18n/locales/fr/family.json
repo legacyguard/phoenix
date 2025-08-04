@@ -1,133 +1,133 @@
 {
-  "_comment": "Shared translations used across the application",
+  "_comment": "Fonctionnalités du hub familial et outils de préparation",
   "familyHub": {
-    "title": "Centre Familial",
-    "subtitle": "Gérez les niveaux d'accès et utilisez les outils de préparation pour vous assurer que votre famille est bien préparée.",
+    "title": "Espace Famille",
+    "subtitle": "Gérez les niveaux d'accès et utilisez des outils de préparation pour assurer la sécurité de votre famille.",
     "tabs": {
-      "familyMembers": "Membres de la Famille",
+      "familyMembers": "Membres de la famille",
       "members": "Membres",
-      "preparednessTools": "Outils de Préparation",
+      "preparednessTools": "Outils de préparation",
       "tools": "Outils"
     },
     "overallPreparedness": {
-      "title": "Préparation Familiale Globale",
-      "description": "Ce score reflète la préparation de votre famille entière face à une urgence.",
-      "improvementNeeded": "La préparation de votre famille pourrait être améliorée. Envisagez d'envoyer des mises à jour à ceux qui ont des scores plus bas."
+      "title": "Préparation globale de la famille",
+      "description": "Ce score reflète le niveau de préparation de votre famille en cas d’urgence.",
+      "improvementNeeded": "Le niveau de préparation de votre famille peut être amélioré. Pensez à envoyer des mises à jour aux personnes ayant un score faible."
     },
     "emergencyProtocol": {
-      "title": "Protocole d'Urgence",
-      "description": "Le protocole d'urgence permet aux personnes de confiance avec un accès \"Urgence uniquement\" de demander des informations lors de situations critiques. Nécessite une confirmation d'une autre personne de confiance.",
+      "title": "Protocole d’urgence",
+      "description": "Le protocole d’urgence permet aux personnes de confiance, avec un accès « Urgence uniquement », de demander des informations en situation critique. Une confirmation d’une autre personne de confiance est requise.",
       "configured": "Configuré",
       "configure": "Configurer",
       "activeMessage": "Le protocole d'urgence est actif et configuré",
       "configurationModal": {
-        "title": "Configure Emergency Protocol",
-        "description": "Set up how trusted people can access information during emergencies",
-        "requiredApprovals": "Required Approvals",
-        "requiredApprovalsDescription": "Number of trusted people who must approve emergency access",
-        "notificationSettings": "Notification Settings",
-        "notificationSettingsDescription": "Configure how you'll be notified of emergency requests",
-        "saveButton": "Save Configuration",
-        "cancelButton": "Cancel",
-        "saving": "Saving..."
+        "title": "Configurer le protocole d’urgence",
+        "description": "Définissez comment les personnes de confiance peuvent accéder aux informations en cas d'urgence",
+        "requiredApprovals": "Approbations requises",
+        "requiredApprovalsDescription": "Nombre de personnes de confiance devant approuver l'accès d'urgence",
+        "notificationSettings": "Paramètres de notification",
+        "notificationSettingsDescription": "Configurez comment vous serez informé des demandes d'urgence",
+        "saveButton": "Enregistrer la configuration",
+        "cancelButton": "Annuler",
+        "saving": "Enregistrement…"
       },
       "activationModal": {
-        "title": "Emergency Access Request",
-        "description": "Request emergency access to {{name}}'s information",
-        "reason": "Reason for Request",
-        "reasonPlaceholder": "Please describe the emergency situation...",
-        "confirmText": "I confirm this is a genuine emergency",
-        "requestButton": "Request Emergency Access",
-        "requesting": "Requesting..."
+        "title": "Demande d’accès d’urgence",
+        "description": "Demander un accès d’urgence aux informations de {{name}}",
+        "reason": "Raison de la demande",
+        "reasonPlaceholder": "Décrivez la situation d'urgence...",
+        "confirmText": "Je confirme qu’il s’agit d’une véritable urgence",
+        "requestButton": "Demander l’accès d’urgence",
+        "requesting": "Demande en cours…"
       },
       "errors": {
-        "configurationFailed": "Failed to save emergency protocol configuration",
-        "activationFailed": "Failed to request emergency access",
-        "invalidConfiguration": "Invalid configuration settings",
-        "notAuthorized": "You are not authorized to configure emergency protocol"
+        "configurationFailed": "Échec de l’enregistrement de la configuration du protocole d’urgence",
+        "activationFailed": "Échec de la demande d’accès d’urgence",
+        "invalidConfiguration": "Paramètres de configuration invalides",
+        "notAuthorized": "Vous n’êtes pas autorisé à configurer le protocole d’urgence"
       },
       "success": {
-        "configured": "Emergency protocol configured successfully",
-        "requested": "Emergency access request sent",
-        "approved": "Emergency access approved",
-        "denied": "Emergency access denied"
+        "configured": "Protocole d’urgence configuré avec succès",
+        "requested": "Demande d’accès d’urgence envoyée",
+        "approved": "Accès d’urgence approuvé",
+        "denied": "Accès d’urgence refusé"
       }
     },
     "memberManagement": {
-      "title": "Gérez Vos Personnes de Confiance",
-      "addTrustedPerson": "Ajouter une Personne de Confiance",
-      "addMorePeople": "Ajoutez plus de personnes de confiance à votre réseau",
-      "informationAccessLevel": "Niveau d'Accès aux Informations",
+      "title": "Gérer vos personnes de confiance",
+      "addTrustedPerson": "Ajouter une personne de confiance",
+      "addMorePeople": "Ajouter d'autres personnes de confiance à votre réseau",
+      "informationAccessLevel": "Niveau d'accès aux informations",
       "preparedness": "Préparation",
       "lastContacted": "Dernier contact",
-      "daysAgo": "il y a {{days}} jours",
-      "sendUpdate": "Envoyer une Mise à Jour",
+      "daysAgo": "Il y a {{days}} jours",
+      "sendUpdate": "Envoyer une mise à jour",
       "sendUpdateTo": "Envoyer une mise à jour à {{name}}",
       "lastContactOver30Days": "Dernier contact il y a plus de 30 jours"
     },
     "accessLevels": {
       "none": {
         "title": "Aucun",
-        "description": "Ne peut voir aucune information"
+        "description": "Ne voit aucune information"
       },
       "emergencyOnly": {
-        "title": "Urgence Uniquement",
-        "description": "Accès lors des urgences",
-        "fullDescription": "Obtient l'accès uniquement lorsque le protocole d'urgence est activé"
+        "title": "Urgence uniquement",
+        "description": "Accès en situation d’urgence",
+        "fullDescription": "Accès possible uniquement lorsque le protocole d’urgence est activé"
       },
       "limitedInfo": {
-        "title": "Informations Limitées",
+        "title": "Informations limitées",
         "description": "Informations de base pour la préparation",
-        "fullDescription": "Peut voir les informations de base maintenant pour les aider à se préparer"
+        "fullDescription": "Peut voir les informations de base pour aider à la préparation"
       },
       "fullAccess": {
-        "title": "Accès Complet",
+        "title": "Accès total",
         "description": "Toutes les informations partagées",
-        "fullDescription": "Peut voir toutes les informations que vous avez partagées avec eux"
+        "fullDescription": "Peut voir toutes les informations que vous partagez"
       }
     },
     "messages": {
       "accessLevelUpdated": "Niveau d'accès mis à jour avec succès",
       "updateSentTo": "Mise à jour envoyée à {{name}}",
-      "failedToSendUpdate": "Échec de l'envoi de la mise à jour à {{name}}"
+      "failedToSendUpdate": "Échec de l’envoi de la mise à jour à {{name}}"
     },
     "errors": {
       "authenticationRequired": "Authentification requise",
       "failedToFetchData": "Échec de la récupération des données familiales",
       "failedToLoadMembers": "Échec du chargement des membres de la famille",
-      "failedToUpdateAccessLevel": "Failed to update access level",
-      "failedToSendUpdate": "Failed to send update",
-      "invalidAccessLevel": "Invalid access level",
-      "memberNotFound": "Family member not found"
+      "failedToUpdateAccessLevel": "Échec de la mise à jour du niveau d’accès",
+      "failedToSendUpdate": "Échec de l’envoi de la mise à jour",
+      "invalidAccessLevel": "Niveau d'accès invalide",
+      "memberNotFound": "Membre de la famille introuvable"
     },
     "api": {
       "routes": {
         "familyHub": {
           "success": {
-            "dataFetched": "Family data fetched successfully",
-            "accessLevelUpdated": "Access level updated successfully",
-            "updateSent": "Update sent successfully"
+            "dataFetched": "Données familiales récupérées avec succès",
+            "accessLevelUpdated": "Niveau d'accès mis à jour",
+            "updateSent": "Mise à jour envoyée"
           },
           "errors": {
-            "notAuthenticated": "User not authenticated",
-            "invalidRequest": "Invalid request data",
-            "memberNotFound": "Family member not found",
-            "updateFailed": "Failed to update family member",
-            "serverError": "Internal server error"
+            "notAuthenticated": "Utilisateur non authentifié",
+            "invalidRequest": "Données de requête invalides",
+            "memberNotFound": "Membre de la famille introuvable",
+            "updateFailed": "Échec de la mise à jour du membre de la famille",
+            "serverError": "Erreur interne du serveur"
           }
         },
         "emergencyProtocol": {
           "success": {
-            "configurationSaved": "Emergency protocol configuration saved",
-            "protocolActivated": "Emergency protocol activated",
-            "accessGranted": "Emergency access granted",
-            "notificationSent": "Emergency notification sent"
+            "configurationSaved": "Configuration du protocole d’urgence enregistrée",
+            "protocolActivated": "Protocole d’urgence activé",
+            "accessGranted": "Accès d’urgence accordé",
+            "notificationSent": "Notification d’urgence envoyée"
           },
           "errors": {
-            "configurationInvalid": "Invalid configuration parameters",
-            "activationDenied": "Emergency activation denied",
-            "insufficientApprovals": "Insufficient approvals for emergency access",
-            "notificationFailed": "Failed to send emergency notification"
+            "configurationInvalid": "Paramètres de configuration invalides",
+            "activationDenied": "Activation d’urgence refusée",
+            "insufficientApprovals": "Approbations insuffisantes pour l’accès d’urgence",
+            "notificationFailed": "Échec de l’envoi de la notification d’urgence"
           }
         }
       }
@@ -135,351 +135,351 @@
   },
   "familyPreparedness": {
     "tools": {
-      "chooseScenario": "Choose an emergency scenario",
-      "cancel": "Cancel",
-      "generateGuide": "Generate Guide",
-      "generating": "Generating...",
-      "printGuide": "Print Guide"
+      "chooseScenario": "Choisir un scénario d’urgence",
+      "cancel": "Annuler",
+      "generateGuide": "Générer un guide",
+      "generating": "Génération en cours…",
+      "printGuide": "Imprimer le guide"
     }
   },
   "familyPreparednessTools": {
-    "use_these_tools_to_ensure_your_1": "Use these tools to ensure your family is prepared and knows what to do in emergency situations.",
-    "generate_emergency_guide_2": "Generate Emergency Guide",
-    "create_a_printable_guide_for_y_3": "Create a printable guide for your family to follow in emergency situations.",
-    "select_scenario_4": "Select Scenario",
-    "generate_another_5": "Generate Another",
+    "use_these_tools_to_ensure_your_1": "Utilisez ces outils pour que votre famille soit prête et sache quoi faire en cas d'urgence.",
+    "generate_emergency_guide_2": "Générer un guide d'urgence",
+    "create_a_printable_guide_for_y_3": "Créer un guide imprimable pour que votre famille sache comment agir en cas d’urgence.",
+    "select_scenario_4": "Sélectionner un scénario",
+    "generate_another_5": "Générer un autre guide",
     "tools": {
-      "informationTreasureHunt": "Information Treasure Hunt",
-      "videoMessages": "Video Messages",
-      "emergencySimulator": "Emergency Situation Simulator",
-      "stepByStepGuides": "Step-by-Step Guides",
-      "emergencySimulatorDesc": "Run a practice drill. We'll send a test scenario to your family to see if they can find the information they need.",
-      "stepByStepGuidesDesc": "Generate printable, scenario-based guides for your family (e.g., 'What to do in the first 24 hours').",
-      "treasureHuntDesc": "A gamified quiz for your family to ensure they know key facts, like where to find the will or who your lawyer is.",
-      "videoMessagesDesc": "Record personal video messages for your loved ones to be unlocked in specific circumstances.",
-      "launch": "Launch",
-      "chooseScenario": "Choose a scenario",
-      "cancel": "Cancel",
-      "generating": "Generating...",
-      "generateGuide": "Generate Guide",
-      "printGuide": "Print Guide"
+      "informationTreasureHunt": "Chasse au trésor d’informations",
+      "videoMessages": "Messages vidéo",
+      "emergencySimulator": "Simulateur de situation d'urgence",
+      "stepByStepGuides": "Guides étape par étape",
+      "emergencySimulatorDesc": "Lancez un exercice pratique. Nous simulerons un scénario pour voir si votre famille trouve les bonnes informations.",
+      "stepByStepGuidesDesc": "Générez des guides imprimables par scénario (ex : « Que faire dans les 24 premières heures »).",
+      "treasureHuntDesc": "Un quiz ludique pour vérifier si votre famille connaît les infos-clés (emplacement du testament, nom de l’avocat, etc.).",
+      "videoMessagesDesc": "Enregistrez des messages vidéo personnels pour qu’ils soient ouverts dans des circonstances précises.",
+      "launch": "Lancer",
+      "chooseScenario": "Choisir un scénario",
+      "cancel": "Annuler",
+      "generating": "Génération…",
+      "generateGuide": "Générer le guide",
+      "printGuide": "Imprimer le guide"
     },
     "scenarios": {
       "death": {
-        "title": "In case of my death",
-        "description": "A comprehensive guide for handling immediate tasks after your passing"
+        "title": "En cas de décès",
+        "description": "Un guide complet pour gérer les tâches urgentes après votre décès"
       },
       "hospitalization": {
-        "title": "If I am hospitalized",
-        "description": "Steps to take if you are incapacitated or in medical care"
+        "title": "En cas d’hospitalisation",
+        "description": "Les étapes à suivre si vous êtes incapable d’agir ou hospitalisé"
       },
       "missing": {
-        "title": "If I go missing",
-        "description": "Critical information and contacts if you cannot be located"
+        "title": "En cas de disparition",
+        "description": "Informations et contacts essentiels si l’on ne peut pas vous localiser"
       },
       "emergency": {
-        "title": "General emergency",
-        "description": "Quick reference for any urgent situation"
+        "title": "Urgence générale",
+        "description": "Référence rapide pour toute situation critique"
       }
     },
     "guides": {
       "death": {
-        "title": "Emergency Guide: In Case of My Death",
-        "generatedOn": "Generated on",
-        "first24Hours": "🚨 First 24 Hours Checklist",
-        "contactExecutor": "Contact the Executor:",
-        "contactLawyer": "Contact the Lawyer:",
-        "locateWill": "Locate the Will:",
-        "secureResidence": "Secure the Residence:",
-        "importantDocuments": "📋 Important Documents",
-        "deathCertificate": "Death Certificate:",
-        "bankAccounts": "Bank Accounts:",
-        "investmentAccounts": "Investment Accounts:",
-        "peopleToNotify": "👥 People to Notify",
-        "employer": "Employer:",
-        "insuranceCompanies": "Insurance Companies:",
-        "financialInstitutions": "Financial Institutions:",
-        "socialSecurity": "Social Security Administration:",
-        "disclaimer": "This guide was generated based on the information you've provided. Please ensure all details are kept up to date."
+        "title": "Guide d'urgence : en cas de décès",
+        "generatedOn": "Généré le",
+        "first24Hours": "🚨 Liste des 24 premières heures",
+        "contactExecutor": "Contacter le ou la mandataire :",
+        "contactLawyer": "Contacter l’avocat·e :",
+        "locateWill": "Localiser le testament :",
+        "secureResidence": "Sécuriser la résidence :",
+        "importantDocuments": "📋 Documents importants",
+        "deathCertificate": "Acte de décès :",
+        "bankAccounts": "Comptes bancaires :",
+        "investmentAccounts": "Comptes d’investissement :",
+        "peopleToNotify": "👥 Personnes à prévenir",
+        "employer": "Employeur :",
+        "insuranceCompanies": "Compagnies d’assurance :",
+        "financialInstitutions": "Institutions financières :",
+        "socialSecurity": "Sécurité sociale :",
+        "disclaimer": "Ce guide est généré à partir des informations que vous avez fournies. Merci de le maintenir à jour."
       },
       "hospitalization": {
-        "title": "Emergency Guide: If I Am Hospitalized",
-        "medicalInformation": "🏥 Medical Information",
-        "primaryCarePhysician": "Primary Care Physician:",
-        "preferredHospital": "Preferred Hospital:",
-        "bloodType": "Blood Type:",
-        "allergies": "Allergies:",
-        "currentMedications": "Current Medications:",
-        "emergencyContacts": "📞 Emergency Contacts",
-        "legalDocuments": "📄 Legal Documents",
-        "healthcarePowerOfAttorney": "Healthcare Power of Attorney:",
-        "livingWill": "Living Will:",
-        "hipaaRelease": "HIPAA Release:"
+        "title": "Guide d'urgence : en cas d’hospitalisation",
+        "medicalInformation": "🏥 Informations médicales",
+        "primaryCarePhysician": "Médecin traitant :",
+        "preferredHospital": "Hôpital préféré :",
+        "bloodType": "Groupe sanguin :",
+        "allergies": "Allergies :",
+        "currentMedications": "Médicaments en cours :",
+        "emergencyContacts": "📞 Contacts d’urgence",
+        "legalDocuments": "📄 Documents légaux",
+        "healthcarePowerOfAttorney": "Mandat pour les soins :",
+        "livingWill": "Directives anticipées :",
+        "hipaaRelease": "Consentement médical :"
       },
       "missing": {
-        "title": "Emergency Guide: If I Go Missing",
-        "immediateActions": "🔍 Immediate Actions",
-        "contactLocalPolice": "Contact local police immediately",
-        "checkWithWorkplace": "Check with workplace:",
-        "contactCloseFriends": "Contact close friends and regular contacts",
-        "checkHospitals": "Check hospitals in the area",
-        "digitalFootprint": "📱 Digital Footprint",
-        "phoneProvider": "Phone Provider:",
-        "email": "Email:",
-        "socialMedia": "Social Media:",
-        "bankingApps": "Banking Apps:"
+        "title": "Guide d'urgence : en cas de disparition",
+        "immediateActions": "🔍 Actions immédiates",
+        "contactLocalPolice": "Prévenir immédiatement la police locale",
+        "checkWithWorkplace": "Vérifier auprès de l’employeur :",
+        "contactCloseFriends": "Contacter les proches et amis réguliers",
+        "checkHospitals": "Vérifier les hôpitaux à proximité",
+        "digitalFootprint": "📱 Empreinte numérique",
+        "phoneProvider": "Opérateur téléphonique :",
+        "email": "Email :",
+        "socialMedia": "Réseaux sociaux :",
+        "bankingApps": "Applications bancaires :"
       },
       "emergency": {
-        "title": "General Emergency Quick Reference",
-        "keyContacts": "🚨 Key Contacts",
-        "emergency": "Emergency:",
-        "spouse": "Spouse:",
-        "attorney": "Attorney:",
-        "financialAdvisor": "Financial Advisor:",
-        "insuranceAgent": "Insurance Agent:",
-        "homeInformation": "🏠 Home Information",
-        "address": "Address:",
-        "securitySystem": "Security System:",
-        "utilities": "Utilities:"
+        "title": "Référence rapide en cas d’urgence",
+        "keyContacts": "🚨 Contacts clés",
+        "emergency": "Urgence :",
+        "spouse": "Conjoint·e :",
+        "attorney": "Avocat·e :",
+        "financialAdvisor": "Conseiller·ère financier·ère :",
+        "insuranceAgent": "Agent·e d’assurance :",
+        "homeInformation": "🏠 Informations sur la maison",
+        "address": "Adresse :",
+        "securitySystem": "Système d’alarme :",
+        "utilities": "Services :"
       }
     },
     "errors": {
-      "premiumRequired": "This feature is only available for premium users. Please upgrade to access all tools.",
-      "selectScenario": "Please select a scenario",
-      "generateFailed": "Failed to generate guide",
-      "comingSoon": "feature coming soon!"
+      "premiumRequired": "Cette fonctionnalité est réservée aux membres premium. Veuillez mettre à niveau pour accéder à tous les outils.",
+      "selectScenario": "Veuillez sélectionner un scénario",
+      "generateFailed": "Échec de la génération du guide",
+      "comingSoon": "fonctionnalité à venir !"
     },
     "mockContent": {
-      "insurancePolicies": "Insurance Policies"
+      "insurancePolicies": "Polices d’assurance"
     }
   },
   "relationships": {
-    "spouse": "Spouse",
-    "child": "Child",
+    "spouse": "Conjoint·e",
+    "child": "Enfant",
     "parent": "Parent",
-    "sibling": "Sibling",
-    "friend": "Friend",
-    "other": "Other"
+    "sibling": "Frère ou sœur",
+    "friend": "Ami·e",
+    "other": "Autre"
   },
   "beneficiaryCommunications": {
-    "title": "Beneficiary Communications",
-    "description": "Track all communications with beneficiaries",
-    "logCommunication": "Log Communication",
-    "logAction": "Logged communication with {name}",
+    "title": "Communications avec les bénéficiaires",
+    "description": "Suivi de toutes les communications avec les bénéficiaires",
+    "logCommunication": "Consigner une communication",
+    "logAction": "Communication enregistrée avec {name}",
     "dialog": {
-      "title": "Log Communication",
-      "description": "Record details of your communication with a beneficiary"
+      "title": "Consigner une communication",
+      "description": "Notez les détails de votre communication avec un bénéficiaire"
     },
     "fields": {
-      "beneficiaryName": "Beneficiary Name",
+      "beneficiaryName": "Nom du bénéficiaire",
       "email": "Email",
       "type": "Type",
       "date": "Date",
-      "subject": "Subject",
-      "summary": "Summary"
+      "subject": "Sujet",
+      "summary": "Résumé"
     },
     "placeholders": {
-      "subject": "Brief subject of the communication",
-      "summary": "Detailed summary of what was discussed"
+      "subject": "Sujet de la communication",
+      "summary": "Résumé détaillé de l’échange"
     },
     "types": {
       "email": "Email",
-      "phone": "Phone",
-      "letter": "Letter",
-      "inPerson": "In Person",
-      "in_person": "In Person",
-      "other": "Other"
+      "phone": "Téléphone",
+      "letter": "Lettre",
+      "inPerson": "En personne",
+      "in_person": "En personne",
+      "other": "Autre"
     },
     "actions": {
-      "cancel": "Cancel",
-      "saving": "Saving...",
-      "save": "Save Communication"
+      "cancel": "Annuler",
+      "saving": "Enregistrement…",
+      "save": "Enregistrer la communication"
     },
     "empty": {
-      "title": "No communications logged yet",
-      "subtitle": "Click 'Log Communication' to record your first interaction"
+      "title": "Aucune communication enregistrée",
+      "subtitle": "Cliquez sur « Consigner une communication » pour enregistrer votre premier échange"
     }
   },
   "emergencyAccess": {
-    "button": "Emergency Access",
-    "modalTitle": "Emergency Contact Access",
-    "modalDescription": "This will grant you access to emergency contact information. Use this only in genuine emergency situations.",
-    "warningText": "This access is logged and the account holder will be notified.",
-    "reasonLabel": "Reason for emergency access (required)",
-    "reasonPlaceholder": "Please describe the emergency situation requiring access to contact information...",
-    "confirmCheckbox": "I confirm this is a genuine emergency situation and I need access to contact information",
-    "accessing": "Accessing...",
-    "confirmButton": "Access Emergency Contacts",
-    "pleaseConfirm": "Please confirm the emergency and provide a reason",
-    "notAuthorized": "You are not authorized for emergency access",
-    "failedToLoadContacts": "Failed to load emergency contacts",
-    "accessGranted": "Emergency access granted. Contact information is now available.",
-    "accessFailed": "Failed to access emergency contacts",
-    "contactsTitle": "Emergency Contacts",
-    "contactsDescription": "Contact these people in priority order. Click phone numbers to call or emails to send messages.",
-    "priorityOrder": "Priority Order",
-    "priority": "Priority #{{order}}",
-    "logContact": "Log Contact Attempt",
-    "contactLogged": "Contact attempt logged",
-    "lastContacted": "Last contacted: {{time}}",
-    "importantNote": "Important: Contact these individuals in the order shown. Always try the primary contact method first. Log all contact attempts for record keeping."
+    "button": "Accès d’urgence",
+    "modalTitle": "Accès aux contacts d’urgence",
+    "modalDescription": "Vous pourrez consulter les contacts d’urgence. Utilisez cette fonction uniquement en situation d’urgence réelle.",
+    "warningText": "Cet accès est enregistré et le titulaire du compte sera averti.",
+    "reasonLabel": "Raison de l’accès d’urgence (obligatoire)",
+    "reasonPlaceholder": "Expliquez brièvement pourquoi cet accès est nécessaire…",
+    "confirmCheckbox": "Je confirme qu’il s’agit d’une situation d’urgence réelle et que j’ai besoin d’accéder aux contacts",
+    "accessing": "Accès en cours…",
+    "confirmButton": "Afficher les contacts d’urgence",
+    "pleaseConfirm": "Merci de confirmer l’urgence et de fournir une raison",
+    "notAuthorized": "Vous n’êtes pas autorisé à accéder en urgence",
+    "failedToLoadContacts": "Échec du chargement des contacts d’urgence",
+    "accessGranted": "Accès d’urgence accordé. Les contacts sont maintenant disponibles.",
+    "accessFailed": "Échec de l’accès aux contacts d’urgence",
+    "contactsTitle": "Contacts d’urgence",
+    "contactsDescription": "Contactez ces personnes par ordre de priorité. Cliquez sur les numéros pour appeler ou sur les emails pour écrire.",
+    "priorityOrder": "Ordre de priorité",
+    "priority": "Priorité n°{{order}}",
+    "logContact": "Consigner la tentative de contact",
+    "contactLogged": "Tentative de contact enregistrée",
+    "lastContacted": "Dernier contact : {{time}}",
+    "importantNote": "Important : Contactez d’abord les personnes dans l’ordre affiché. Enregistrez chaque tentative pour le suivi."
   },
   "emotionalContextSystem": {
-    "emotional_support_1": "Emotional Support",
-    "advice_2": "Advice: ",
-    "motivation_3": "Motivation: ",
-    "next_steps_4": "Next Steps: ",
+    "emotional_support_1": "Soutien émotionnel",
+    "advice_2": "Conseil : ",
+    "motivation_3": "Motivation : ",
+    "next_steps_4": "Prochaines étapes : ",
     "contextResponses": {
       "lowConfidence": {
-        "primaryMessage": "You're handling this situation with care and insight.",
-        "supportingMessage": "It shows you understand the importance of the task.",
-        "actionableAdvice": "Continue at your own comfortable pace.",
-        "motivationalElement": "Your thoughtful approach is a testament to your values.",
-        "nextStepGuidance": "When ready, proceed with the next important step to secure your family's future."
+        "primaryMessage": "Vous gérez cette situation avec soin et discernement.",
+        "supportingMessage": "Cela montre que vous prenez la tâche au sérieux.",
+        "actionableAdvice": "Avancez à votre rythme.",
+        "motivationalElement": "Votre implication témoigne de vos valeurs.",
+        "nextStepGuidance": "Quand vous serez prêt, passez à l’étape suivante pour sécuriser votre famille."
       },
       "highOverwhelm": {
-        "primaryMessage": "Your dedication to your family is commendable.",
-        "supportingMessage": "It's okay to take a moment to regroup.",
-        "actionableAdvice": "Consider breaking the task into smaller parts for focus.",
-        "motivationalElement": "Knowing you're driven by love and care.",
-        "nextStepGuidance": "Each small action you take makes a significant difference."
+        "primaryMessage": "Votre engagement envers votre famille est admirable.",
+        "supportingMessage": "Il est normal de prendre une pause pour souffler.",
+        "actionableAdvice": "Découpez la tâche en petites étapes.",
+        "motivationalElement": "Votre amour et votre sens des responsabilités sont une force.",
+        "nextStepGuidance": "Chaque petit pas a un impact important."
       },
       "default": {
-        "primaryMessage": "You're doing meaningful work.",
-        "supportingMessage": "This effort strengthens your family's foundation.",
-        "actionableAdvice": "Stay committed to your plan.",
-        "motivationalElement": "Every decision you make protects your loved ones.",
-        "nextStepGuidance": "Seeing the big picture will guide your next steps."
+        "primaryMessage": "Vous faites un travail qui compte.",
+        "supportingMessage": "Votre effort renforce la sécurité de votre famille.",
+        "actionableAdvice": "Restez fidèle à votre plan.",
+        "motivationalElement": "Chaque décision protège vos proches.",
+        "nextStepGuidance": "Voir l’ensemble vous aidera à avancer."
       }
     },
     "emotionalStates": {
       "confidence": {
-        "high": "High",
-        "medium": "Medium",
-        "low": "Low"
+        "high": "Élevée",
+        "medium": "Moyenne",
+        "low": "Faible"
       },
       "motivation": {
-        "high": "High",
-        "medium": "Medium",
-        "low": "Low"
+        "high": "Élevée",
+        "medium": "Moyenne",
+        "low": "Faible"
       },
       "overwhelm": {
-        "none": "None",
-        "slight": "Slight",
-        "moderate": "Moderate",
-        "high": "High"
+        "none": "Aucun",
+        "slight": "Léger",
+        "moderate": "Modéré",
+        "high": "Important"
       },
       "urgency": {
-        "relaxed": "Relaxed",
-        "focused": "Focused",
-        "pressed": "Pressed",
-        "stressed": "Stressed"
+        "relaxed": "Détendu",
+        "focused": "Concentré",
+        "pressed": "Pressé",
+        "stressed": "Stressé"
       }
     }
   },
   "lifeEvents": {
-    "title": "Life Events",
-    "subtitle": "Update your plan when major life changes occur",
-    "addEvent": "Add Life Event",
-    "noEvents": "No life events recorded yet",
-    "addFirstEvent": "Add your first life event to get started",
+    "title": "Événements de vie",
+    "subtitle": "Mettez à jour votre plan après un changement majeur",
+    "addEvent": "Ajouter un événement de vie",
+    "noEvents": "Aucun événement enregistré pour le moment",
+    "addFirstEvent": "Ajoutez votre premier événement pour commencer",
     "events": {
-      "marriedDivorced": "Marriage/Divorce Update",
-      "newChild": "New Child Update",
-      "boughtSoldHome": "Real Estate Update",
-      "startedBusiness": "New Business Update",
-      "trustedPersonPassed": "Update Trusted Persons",
-      "unknown": "Unknown Event"
+      "marriedDivorced": "Mariage / Divorce",
+      "newChild": "Nouvel enfant",
+      "boughtSoldHome": "Achat / vente d’un bien immobilier",
+      "startedBusiness": "Création d’entreprise",
+      "trustedPersonPassed": "Modification des personnes de confiance",
+      "unknown": "Événement inconnu"
     },
-    "congratsMessage": "Congratulations on your new child! Here are the recommended updates to your plan:",
+    "congratsMessage": "Félicitations pour ce nouvel enfant ! Voici les recommandations pour mettre à jour votre plan :",
     "tasks": {
-      "updateBeneficiaries": "Update beneficiaries on all accounts",
-      "updateBeneficiariesDesc": "Review and update beneficiaries on life insurance, retirement accounts, and bank accounts.",
-      "updateWill": "Update your will",
-      "updateWillDesc": "Ensure your will reflects your new marital status and beneficiary wishes.",
-      "reviewTrusts": "Review and update any trusts",
-      "reviewTrustsDesc": "Make necessary changes to trust documents to reflect your new status.",
-      "updateEmergencyContacts": "Update emergency contacts",
-      "updateEmergencyContactsDesc": "Review and update emergency contacts in your Trusted Circle.",
-      "addChildRoster": "Add your new child to your Trusted Circle",
-      "addChildRosterDesc": "Include your child in your family information.",
-      "updateGuardian": "Review and update the \"Guardian\" designation for your children",
-      "updateGuardianDesc": "Ensure you have designated appropriate guardians for all your children.",
-      "reviewLifeInsurance": "Review your life insurance policy to ensure coverage is adequate",
-      "reviewLifeInsuranceDesc": "Consider increasing coverage to account for your growing family.",
-      "updateWillBeneficiary": "Update your will to include your new child as a beneficiary",
-      "updateWillBeneficiaryDesc": "Ensure your new child is properly included in your estate planning.",
-      "updatePropertyArmory": "Update property information in your Vault",
-      "updatePropertyArmoryDesc": "Add new property or remove sold property from your assets.",
-      "updateMortgageInfo": "Update mortgage and deed information",
-      "updateMortgageInfoDesc": "Ensure all property-related documents are current.",
-      "reviewHomeownersInsurance": "Review homeowners/property insurance",
-      "reviewHomeownersInsuranceDesc": "Update insurance policies to reflect your current properties.",
-      "updateNetWorth": "Update your net worth calculation",
-      "updateNetWorthDesc": "Reflect the change in your real estate holdings.",
-      "addBusinessAssets": "Add business to your Vault",
-      "addBusinessAssetsDesc": "Include your business as an asset with relevant details.",
-      "createSuccessionPlan": "Create a business succession plan",
-      "createSuccessionPlanDesc": "Document what should happen to your business if something happens to you.",
-      "updateInsurance": "Review insurance needs",
-      "updateInsuranceDesc": "Consider key person insurance and business liability coverage.",
-      "separatePersonalBusiness": "Ensure personal and business assets are properly separated",
-      "separatePersonalBusinessDesc": "Review the distinction between personal and business holdings.",
-      "removeDeceased": "Update your Trusted Circle",
-      "removeDeceasedDesc": "Remove the deceased person and reassign their responsibilities.",
-      "appointNewExecutor": "Appoint a new executor/trustee if needed",
-      "appointNewExecutorDesc": "If the deceased was your executor or trustee, designate a replacement.",
-      "updateBeneficiariesDesc2": "Check if the deceased was a beneficiary on any accounts.",
-      "updateEmergencyContactsDesc2": "Review all emergency contact information."
+      "updateBeneficiaries": "Mettre à jour les bénéficiaires",
+      "updateBeneficiariesDesc": "Vérifiez et mettez à jour les bénéficiaires sur vos assurances, comptes retraite et bancaires.",
+      "updateWill": "Mettre à jour le testament",
+      "updateWillDesc": "Assurez-vous que votre testament reflète vos nouveaux souhaits.",
+      "reviewTrusts": "Revoir les fiducies",
+      "reviewTrustsDesc": "Mettez à jour les documents fiduciaires si besoin.",
+      "updateEmergencyContacts": "Mettre à jour les contacts d’urgence",
+      "updateEmergencyContactsDesc": "Ajoutez ou révisez les contacts d’urgence dans votre réseau.",
+      "addChildRoster": "Ajouter l’enfant à votre espace famille",
+      "addChildRosterDesc": "Incluez votre nouvel enfant dans les informations familiales.",
+      "updateGuardian": "Revoir le gardien désigné pour les enfants",
+      "updateGuardianDesc": "Vérifiez que le bon gardien est désigné.",
+      "reviewLifeInsurance": "Vérifier l’assurance-vie",
+      "reviewLifeInsuranceDesc": "Ajustez les montants si votre famille s’agrandit.",
+      "updateWillBeneficiary": "Ajouter l’enfant comme bénéficiaire du testament",
+      "updateWillBeneficiaryDesc": "Assurez-vous que l’enfant figure dans vos documents successoraux.",
+      "updatePropertyArmory": "Mettre à jour les biens dans le coffre",
+      "updatePropertyArmoryDesc": "Ajoutez les nouveaux biens ou retirez ceux qui ont été vendus.",
+      "updateMortgageInfo": "Mettre à jour les informations hypothécaires",
+      "updateMortgageInfoDesc": "Assurez-vous que tout est à jour.",
+      "reviewHomeownersInsurance": "Vérifier l’assurance habitation",
+      "reviewHomeownersInsuranceDesc": "Ajustez la couverture pour refléter la situation actuelle.",
+      "updateNetWorth": "Mettre à jour la valeur nette",
+      "updateNetWorthDesc": "Intégrez les nouveaux biens ou modifications.",
+      "addBusinessAssets": "Ajouter l’entreprise au coffre",
+      "addBusinessAssetsDesc": "Ajoutez votre entreprise à vos actifs.",
+      "createSuccessionPlan": "Créer un plan de succession",
+      "createSuccessionPlanDesc": "Documentez ce qui doit se passer pour votre entreprise.",
+      "updateInsurance": "Revoir les assurances",
+      "updateInsuranceDesc": "Envisagez une assurance homme-clé, responsabilité civile, etc.",
+      "separatePersonalBusiness": "Séparer les biens personnels et professionnels",
+      "separatePersonalBusinessDesc": "Faites le point sur la distinction des biens.",
+      "removeDeceased": "Mettre à jour le réseau de confiance",
+      "removeDeceasedDesc": "Retirez la personne décédée et réattribuez ses responsabilités.",
+      "appointNewExecutor": "Nommer un nouvel exécuteur/trustee",
+      "appointNewExecutorDesc": "Si nécessaire, désignez un remplaçant.",
+      "updateBeneficiariesDesc2": "Vérifiez si la personne décédée était bénéficiaire.",
+      "updateEmergencyContactsDesc2": "Revoyez tous les contacts d’urgence."
     }
   },
   "logLifeEvent": {
-    "title": "Log a Life Event",
-    "description": "Select a major life change to generate a personalized checklist for updating your family's protection plan.",
+    "title": "Consigner un événement de vie",
+    "description": "Sélectionnez un changement majeur pour générer une checklist personnalisée de mise à jour de votre plan familial.",
     "eventTypes": {
-      "married_divorced": "Got Married / Divorced",
-      "new_child": "Had a New Child",
-      "bought_sold_home": "Bought / Sold a Home",
-      "started_business": "Started a Business",
-      "trusted_person_passed": "A Trusted Person Passed Away",
-      "job_change": "Changed Jobs",
-      "moved_location": "Moved to a New Location",
-      "inheritance": "Received an Inheritance",
-      "retirement": "Retired",
-      "health_change": "Significant Health Change",
-      "child_graduated": "Child Graduated / Left Home",
-      "career_advancement": "Career Advancement",
-      "financial_windfall": "Financial Windfall",
-      "debt_change": "Significant Debt Change",
-      "insurance_change": "Insurance Policy Change"
+      "married_divorced": "Mariage / Divorce",
+      "new_child": "Nouvel enfant",
+      "bought_sold_home": "Achat / vente de bien",
+      "started_business": "Création d’entreprise",
+      "trusted_person_passed": "Décès d’une personne de confiance",
+      "job_change": "Changement d’emploi",
+      "moved_location": "Déménagement",
+      "inheritance": "Héritage reçu",
+      "retirement": "Départ à la retraite",
+      "health_change": "Changement de santé majeur",
+      "child_graduated": "Enfant diplômé / parti du domicile",
+      "career_advancement": "Évolution de carrière",
+      "financial_windfall": "Gains financiers exceptionnels",
+      "debt_change": "Changement de dettes important",
+      "insurance_change": "Modification d’assurance"
     },
     "form": {
-      "title": "Log Life Event",
-      "description": "Select a major life change to generate a personalized checklist",
-      "eventSelection": "Select Life Event",
-      "eventDescription": "Choose the life event that best describes your current situation",
-      "generateChecklist": "Generate Checklist",
-      "cancel": "Cancel",
-      "submit": "Submit",
-      "close": "Close"
+      "title": "Consigner un événement de vie",
+      "description": "Choisissez un changement de vie pour générer une checklist personnalisée",
+      "eventSelection": "Sélectionner un événement",
+      "eventDescription": "Choisissez l’événement qui correspond à votre situation actuelle",
+      "generateChecklist": "Générer la checklist",
+      "cancel": "Annuler",
+      "submit": "Valider",
+      "close": "Fermer"
     },
     "checklist": {
-      "title": "Personalized Checklist",
-      "description": "Based on your life event, here are the key items you should review and update:",
-      "priority": "Priority",
+      "title": "Checklist personnalisée",
+      "description": "Voici les points à vérifier et à mettre à jour selon votre événement de vie :",
+      "priority": "Priorité",
       "action": "Action",
-      "estimatedTime": "Estimated Time",
-      "high": "High",
-      "medium": "Medium",
-      "low": "Low",
-      "completed": "Completed",
-      "pending": "Pending"
+      "estimatedTime": "Temps estimé",
+      "high": "Haute",
+      "medium": "Moyenne",
+      "low": "Faible",
+      "completed": "Terminé",
+      "pending": "En attente"
     },
     "notifications": {
-      "eventLogged": "Life event logged successfully",
-      "checklistGenerated": "Personalized checklist generated",
-      "errorLogging": "Error logging life event",
-      "reminderSet": "Reminder set for follow-up actions"
+      "eventLogged": "Événement consigné avec succès",
+      "checklistGenerated": "Checklist personnalisée générée",
+      "errorLogging": "Erreur lors de la consignation",
+      "reminderSet": "Rappel programmé pour les actions à suivre"
     }
   }
 }

@@ -1,355 +1,223 @@
 {
-  "_comment": "Shared translations used across the application",
-  "familyHub": {
-    "title": "Rodinné centrum",
-    "subtitle": "Spravujte úrovně přístupu a používejte nástroje připravenosti k zajištění, že je vaše rodina dobře připravena.",
-    "tabs": {
-      "familyMembers": "Členové rodiny",
-      "members": "Členové",
-      "preparednessTools": "Nástroje připravenosti",
-      "tools": "Nástroje"
-    },
-    "overallPreparedness": {
-      "title": "Celková připravenost rodiny",
-      "description": "Toto skóre odráží, jak je připravena celá vaše rodina na nouzovou situaci.",
-      "improvementNeeded": "Připravenost vaší rodiny by mohla být vylepšena. Zvažte odeslání aktualizací těm s nižšími skóre."
-    },
-    "emergencyProtocol": {
-      "title": "Nouzový protokol",
-      "description": "Nouzový protokol umožňuje důvěryhodným osobám s přístupem \"Pouze v nouzi\" požadovat informace během kritických situací. Vyžaduje potvrzení od jiné důvěryhodné osoby.",
-      "configured": "Nakonfigurováno",
-      "configure": "Nakonfigurovat",
-      "activeMessage": "Nouzový protokol je aktivní a nakonfigurován",
-      "configurationModal": {
-        "title": "Nakonfigurovat nouzový protokol",
-        "description": "Nastavte, jak mohou důvěryhodné osoby přistupovat k informacím během nouzových situací",
-        "requiredApprovals": "Vyžadovaná schválení",
-        "requiredApprovalsDescription": "Počet důvěryhodných osob, které musí schválit nouzový přístup",
-        "notificationSettings": "Nastavení oznámení",
-        "notificationSettingsDescription": "Nakonfigurujte, jak budete informováni o nouzových požadavcích",
-        "saveButton": "Uložit konfiguraci",
-        "cancelButton": "Zrušit",
-        "saving": "Ukládání..."
-      },
-      "activationModal": {
-        "title": "Požadavek na nouzový přístup",
-        "description": "Požádat o nouzový přístup k informacím {{name}}",
-        "reason": "Důvod požadavku",
-        "reasonPlaceholder": "Prosím popište nouzovou situaci...",
-        "confirmText": "Potvrzuji, že se jedná o skutečnou nouzovou situaci",
-        "requestButton": "Požádat o nouzový přístup",
-        "requesting": "Žádám..."
-      },
-      "errors": {
-        "configurationFailed": "Nepodařilo se uložit konfiguraci nouzového protokolu",
-        "activationFailed": "Nepodařilo se požádat o nouzový přístup",
-        "invalidConfiguration": "Neplatné nastavení konfigurace",
-        "notAuthorized": "Nejste oprávněni konfigurovat nouzový protokol"
-      },
-      "success": {
-        "configured": "Nouzový protokol úspěšně nakonfigurován",
-        "requested": "Požadavek na nouzový přístup odeslán",
-        "approved": "Nouzový přístup schválen",
-        "denied": "Nouzový přístup zamítnut"
-      }
-    },
-    "memberManagement": {
-      "title": "Spravujte své důvěryhodné osoby",
-      "addTrustedPerson": "Přidat důvěryhodnou osobu",
-      "addMorePeople": "Přidejte více důvěryhodných osob do své sítě",
-      "informationAccessLevel": "Úroveň přístupu k informacím",
-      "preparedness": "Připravenost",
-      "lastContacted": "Naposledy kontaktováno",
-      "daysAgo": "před {{days}} dny",
-      "sendUpdate": "Odeslat aktualizaci",
-      "sendUpdateTo": "Odeslat aktualizaci {{name}}",
-      "lastContactOver30Days": "Poslední kontakt před více než 30 dny"
-    },
-    "accessLevels": {
-      "none": {
-        "title": "Žádný",
-        "description": "Nemůže vidět žádné informace"
-      },
-      "emergencyOnly": {
-        "title": "Pouze v nouzi",
-        "description": "Přístup během nouzových situací",
-        "fullDescription": "Získá přístup pouze když je aktivován nouzový protokol"
-      },
-      "limitedInfo": {
-        "title": "Omezené informace",
-        "description": "Základní informace pro přípravu",
-        "fullDescription": "Může vidět základní informace nyní, aby jim pomohly se připravit"
-      },
-      "fullAccess": {
-        "title": "Plný přístup",
-        "description": "Všechny sdílené informace",
-        "fullDescription": "Může vidět všechny informace, které jste s nimi sdíleli"
-      }
-    },
-    "messages": {
-      "accessLevelUpdated": "Úroveň přístupu úspěšně aktualizována",
-      "updateSentTo": "Aktualizace odeslána {{name}}",
-      "failedToSendUpdate": "Nepodařilo se odeslat aktualizaci {{name}}"
-    },
-    "errors": {
-      "authenticationRequired": "Vyžadována autentizace",
-      "failedToFetchData": "Nepodařilo se načíst data rodiny",
-      "failedToLoadMembers": "Nepodařilo se načíst členy rodiny",
-      "failedToUpdateAccessLevel": "Nepodařilo se aktualizovat úroveň přístupu",
-      "failedToSendUpdate": "Nepodařilo se odeslat aktualizaci",
-      "invalidAccessLevel": "Neplatná úroveň přístupu",
-      "memberNotFound": "Člen rodiny nebyl nalezen"
-    },
-    "api": {
-      "routes": {
-        "familyHub": {
-          "success": {
-            "dataFetched": "Data rodiny úspěšně načtena",
-            "accessLevelUpdated": "Úroveň přístupu úspěšně aktualizována",
-            "updateSent": "Aktualizace úspěšně odeslána"
-          },
-          "errors": {
-            "notAuthenticated": "Uživatel není autentizován",
-            "invalidRequest": "Neplatná data požadavku",
-            "memberNotFound": "Člen rodiny nebyl nalezen",
-            "updateFailed": "Nepodařilo se aktualizovat člena rodiny",
-            "serverError": "Interní chyba serveru"
-          }
-        },
-        "emergencyProtocol": {
-          "success": {
-            "configurationSaved": "Konfigurace nouzového protokolu uložena",
-            "protocolActivated": "Nouzový protokol aktivován",
-            "accessGranted": "Nouzový přístup udělen",
-            "notificationSent": "Nouzové oznámení odesláno"
-          },
-          "errors": {
-            "configurationInvalid": "Neplatné parametry konfigurace",
-            "activationDenied": "Aktivace nouze zamítnuta",
-            "insufficientApprovals": "Nedostatečná schválení pro nouzový přístup",
-            "notificationFailed": "Nepodařilo se odeslat nouzové oznámení"
-          }
-        }
-      }
-    }
-  },
+  "_comment": "Sdílené překlady používané napříč aplikací",
+  "familyHub": {},
   "familyPreparedness": {
     "tools": {
-      "chooseScenario": "Choose an emergency scenario",
-      "cancel": "Cancel",
-      "generateGuide": "Generate Guide",
-      "generating": "Generating...",
-      "printGuide": "Print Guide"
+      "chooseScenario": "Zvolte nouzový scénář",
+      "cancel": "Zrušit",
+      "generateGuide": "Vytvořit průvodce",
+      "generating": "Vytvářím...",
+      "printGuide": "Vytisknout průvodce"
     }
   },
   "familyPreparednessTools": {
-    "use_these_tools_to_ensure_your_1": "Use these tools to ensure your family is prepared and knows what to do in emergency situations.",
-    "generate_emergency_guide_2": "Generate Emergency Guide",
-    "create_a_printable_guide_for_y_3": "Create a printable guide for your family to follow in emergency situations.",
-    "select_scenario_4": "Select Scenario",
-    "generate_another_5": "Generate Another",
+    "use_these_tools_to_ensure_your_1": "Použijte tyto nástroje, aby byla vaše rodina připravena a věděla, co dělat v nouzových situacích.",
+    "generate_emergency_guide_2": "Vytvořit nouzového průvodce",
+    "create_a_printable_guide_for_y_3": "Vytvořte tištěného průvodce pro svou rodinu do nouzových situací.",
+    "select_scenario_4": "Zvolte scénář",
+    "generate_another_5": "Vytvořit dalšího",
     "tools": {
-      "informationTreasureHunt": "Information Treasure Hunt",
-      "videoMessages": "Video Messages",
-      "emergencySimulator": "Emergency Situation Simulator",
-      "stepByStepGuides": "Step-by-Step Guides",
-      "emergencySimulatorDesc": "Run a practice drill. We'll send a test scenario to your family to see if they can find the information they need.",
-      "stepByStepGuidesDesc": "Generate printable, scenario-based guides for your family (e.g., 'What to do in the first 24 hours').",
-      "treasureHuntDesc": "A gamified quiz for your family to ensure they know key facts, like where to find the will or who your lawyer is.",
-      "videoMessagesDesc": "Record personal video messages for your loved ones to be unlocked in specific circumstances.",
-      "launch": "Launch",
-      "chooseScenario": "Choose a scenario",
-      "cancel": "Cancel",
-      "generating": "Generating...",
-      "generateGuide": "Generate Guide",
-      "printGuide": "Print Guide"
+      "informationTreasureHunt": "Hra na hledání informací",
+      "videoMessages": "Video zprávy",
+      "emergencySimulator": "Simulátor nouzové situace",
+      "stepByStepGuides": "Průvodci krok za krokem",
+      "emergencySimulatorDesc": "Spusťte nácvik. Pošleme vaší rodině testovací scénář, zda najdou potřebné informace.",
+      "stepByStepGuidesDesc": "Vytvořte tisknutelné, scénářové průvodce pro rodinu (např. 'Co dělat v prvních 24 hodinách').",
+      "treasureHuntDesc": "Hra-quiz pro rodinu – ověří, zda všichni znají důležitá fakta, např. kde je závěť, kdo je váš právník.",
+      "videoMessagesDesc": "Nahrajte osobní videozprávy pro své blízké, které se odemknou v určitých situacích.",
+      "launch": "Spustit",
+      "chooseScenario": "Vybrat scénář",
+      "cancel": "Zrušit",
+      "generating": "Vytvářím...",
+      "generateGuide": "Vytvořit průvodce",
+      "printGuide": "Tisknout průvodce"
     },
     "scenarios": {
       "death": {
-        "title": "In case of my death",
-        "description": "A comprehensive guide for handling immediate tasks after your passing"
+        "title": "V případě mé smrti",
+        "description": "Kompletní průvodce, co dělat ihned po vašem odchodu"
       },
       "hospitalization": {
-        "title": "If I am hospitalized",
-        "description": "Steps to take if you are incapacitated or in medical care"
+        "title": "Pokud budu hospitalizován",
+        "description": "Kroky v případě neschopnosti nebo hospitalizace"
       },
       "missing": {
-        "title": "If I go missing",
-        "description": "Critical information and contacts if you cannot be located"
+        "title": "Pokud se ztratím",
+        "description": "Klíčové informace a kontakty, pokud vás není možné najít"
       },
       "emergency": {
-        "title": "General emergency",
-        "description": "Quick reference for any urgent situation"
+        "title": "Obecná nouzová situace",
+        "description": "Rychlý přehled pro jakoukoliv urgentní situaci"
       }
     },
     "guides": {
       "death": {
-        "title": "Emergency Guide: In Case of My Death",
-        "generatedOn": "Generated on",
-        "first24Hours": "🚨 First 24 Hours Checklist",
-        "contactExecutor": "Contact the Executor:",
-        "contactLawyer": "Contact the Lawyer:",
-        "locateWill": "Locate the Will:",
-        "secureResidence": "Secure the Residence:",
-        "importantDocuments": "📋 Important Documents",
-        "deathCertificate": "Death Certificate:",
-        "bankAccounts": "Bank Accounts:",
-        "investmentAccounts": "Investment Accounts:",
-        "peopleToNotify": "👥 People to Notify",
-        "employer": "Employer:",
-        "insuranceCompanies": "Insurance Companies:",
-        "financialInstitutions": "Financial Institutions:",
-        "socialSecurity": "Social Security Administration:",
-        "disclaimer": "This guide was generated based on the information you've provided. Please ensure all details are kept up to date."
+        "title": "Nouzový průvodce: V případě mé smrti",
+        "generatedOn": "Vytvořeno dne",
+        "first24Hours": "🚨 Kontrolní seznam: Prvních 24 hodin",
+        "contactExecutor": "Kontaktujte vykonavatele:",
+        "contactLawyer": "Kontaktujte právníka:",
+        "locateWill": "Najděte závěť:",
+        "secureResidence": "Zabezpečte bydliště:",
+        "importantDocuments": "📋 Důležité dokumenty",
+        "deathCertificate": "Úmrtní list:",
+        "bankAccounts": "Bankovní účty:",
+        "investmentAccounts": "Investiční účty:",
+        "peopleToNotify": "👥 Koho informovat",
+        "employer": "Zaměstnavatel:",
+        "insuranceCompanies": "Pojišťovny:",
+        "financialInstitutions": "Finanční instituce:",
+        "socialSecurity": "Správa sociálního zabezpečení:",
+        "disclaimer": "Tento průvodce byl vygenerován podle vašich údajů. Udržujte všechny detaily aktuální."
       },
       "hospitalization": {
-        "title": "Emergency Guide: If I Am Hospitalized",
-        "medicalInformation": "🏥 Medical Information",
-        "primaryCarePhysician": "Primary Care Physician:",
-        "preferredHospital": "Preferred Hospital:",
-        "bloodType": "Blood Type:",
-        "allergies": "Allergies:",
-        "currentMedications": "Current Medications:",
-        "emergencyContacts": "📞 Emergency Contacts",
-        "legalDocuments": "📄 Legal Documents",
-        "healthcarePowerOfAttorney": "Healthcare Power of Attorney:",
-        "livingWill": "Living Will:",
-        "hipaaRelease": "HIPAA Release:"
+        "title": "Nouzový průvodce: Pokud budu hospitalizován",
+        "medicalInformation": "🏥 Zdravotní informace",
+        "primaryCarePhysician": "Praktický lékař:",
+        "preferredHospital": "Preferovaná nemocnice:",
+        "bloodType": "Krevní skupina:",
+        "allergies": "Alergie:",
+        "currentMedications": "Aktuální léky:",
+        "emergencyContacts": "📞 Kontakty pro nouzi",
+        "legalDocuments": "📄 Právní dokumenty",
+        "healthcarePowerOfAttorney": "Plná moc pro zdravotní péči:",
+        "livingWill": "Živá závěť:",
+        "hipaaRelease": "Souhlas HIPAA:"
       },
       "missing": {
-        "title": "Emergency Guide: If I Go Missing",
-        "immediateActions": "🔍 Immediate Actions",
-        "contactLocalPolice": "Contact local police immediately",
-        "checkWithWorkplace": "Check with workplace:",
-        "contactCloseFriends": "Contact close friends and regular contacts",
-        "checkHospitals": "Check hospitals in the area",
-        "digitalFootprint": "📱 Digital Footprint",
-        "phoneProvider": "Phone Provider:",
+        "title": "Nouzový průvodce: Pokud se ztratím",
+        "immediateActions": "🔍 Okamžité kroky",
+        "contactLocalPolice": "Ihned kontaktujte místní policii",
+        "checkWithWorkplace": "Ověřte na pracovišti:",
+        "contactCloseFriends": "Kontaktujte blízké přátele a pravidelné kontakty",
+        "checkHospitals": "Prověřte nemocnice v okolí",
+        "digitalFootprint": "📱 Digitální stopa",
+        "phoneProvider": "Poskytovatel telefonu:",
         "email": "Email:",
-        "socialMedia": "Social Media:",
-        "bankingApps": "Banking Apps:"
+        "socialMedia": "Sociální sítě:",
+        "bankingApps": "Bankovní aplikace:"
       },
       "emergency": {
-        "title": "General Emergency Quick Reference",
-        "keyContacts": "🚨 Key Contacts",
-        "emergency": "Emergency:",
-        "spouse": "Spouse:",
-        "attorney": "Attorney:",
-        "financialAdvisor": "Financial Advisor:",
-        "insuranceAgent": "Insurance Agent:",
-        "homeInformation": "🏠 Home Information",
-        "address": "Address:",
-        "securitySystem": "Security System:",
-        "utilities": "Utilities:"
+        "title": "Rychlý přehled pro nouzové situace",
+        "keyContacts": "🚨 Klíčové kontakty",
+        "emergency": "Nouzový kontakt:",
+        "spouse": "Manžel/ka:",
+        "attorney": "Právník:",
+        "financialAdvisor": "Finanční poradce:",
+        "insuranceAgent": "Pojišťovací agent:",
+        "homeInformation": "🏠 Informace o bydlení",
+        "address": "Adresa:",
+        "securitySystem": "Bezpečnostní systém:",
+        "utilities": "Služby:"
       }
     },
     "errors": {
-      "premiumRequired": "This feature is only available for premium users. Please upgrade to access all tools.",
-      "selectScenario": "Please select a scenario",
-      "generateFailed": "Failed to generate guide",
-      "comingSoon": "feature coming soon!"
+      "premiumRequired": "Tato funkce je pouze pro prémiové uživatele. Pro přístup k nástrojům upgradujte.",
+      "selectScenario": "Vyberte scénář",
+      "generateFailed": "Vygenerování průvodce se nezdařilo",
+      "comingSoon": "Funkce již brzy!"
     },
     "mockContent": {
-      "insurancePolicies": "Insurance Policies"
+      "insurancePolicies": "Pojistné smlouvy"
     }
   },
   "relationships": {
-    "spouse": "Spouse",
-    "child": "Child",
-    "parent": "Parent",
-    "sibling": "Sibling",
-    "friend": "Friend",
-    "other": "Other"
+    "spouse": "Manžel/ka",
+    "child": "Dítě",
+    "parent": "Rodič",
+    "sibling": "Sourozenec",
+    "friend": "Přítel",
+    "other": "Jiné"
   },
   "beneficiaryCommunications": {
-    "title": "Beneficiary Communications",
-    "description": "Track all communications with beneficiaries",
-    "logCommunication": "Log Communication",
-    "logAction": "Logged communication with {name}",
+    "title": "Komunikace s obmyšlenými",
+    "description": "Sledujte veškerou komunikaci s obmyšlenými",
+    "logCommunication": "Zaznamenat komunikaci",
+    "logAction": "Zaznamenaná komunikace s {name}",
     "dialog": {
-      "title": "Log Communication",
-      "description": "Record details of your communication with a beneficiary"
+      "title": "Zaznamenat komunikaci",
+      "description": "Zapište detaily své komunikace s obmyšleným"
     },
     "fields": {
-      "beneficiaryName": "Beneficiary Name",
+      "beneficiaryName": "Jméno obmyšleného",
       "email": "Email",
-      "type": "Type",
-      "date": "Date",
-      "subject": "Subject",
-      "summary": "Summary"
+      "type": "Typ",
+      "date": "Datum",
+      "subject": "Předmět",
+      "summary": "Shrnutí"
     },
     "placeholders": {
-      "subject": "Brief subject of the communication",
-      "summary": "Detailed summary of what was discussed"
+      "subject": "Stručný předmět komunikace",
+      "summary": "Podrobné shrnutí, o čem byla řeč"
     },
     "types": {
       "email": "Email",
-      "phone": "Phone",
-      "letter": "Letter",
-      "inPerson": "In Person",
-      "in_person": "In Person",
-      "other": "Other"
+      "phone": "Telefon",
+      "letter": "Dopis",
+      "inPerson": "Osobně",
+      "in_person": "Osobně",
+      "other": "Jiné"
     },
     "actions": {
-      "cancel": "Cancel",
-      "saving": "Saving...",
-      "save": "Save Communication"
+      "cancel": "Zrušit",
+      "saving": "Ukládání...",
+      "save": "Uložit komunikaci"
     },
     "empty": {
-      "title": "No communications logged yet",
-      "subtitle": "Click 'Log Communication' to record your first interaction"
+      "title": "Zatím není zaznamenána žádná komunikace",
+      "subtitle": "Klikněte na 'Zaznamenat komunikaci' pro první záznam"
     }
   },
   "emergencyAccess": {
-    "button": "Emergency Access",
-    "modalTitle": "Emergency Contact Access",
-    "modalDescription": "This will grant you access to emergency contact information. Use this only in genuine emergency situations.",
-    "warningText": "This access is logged and the account holder will be notified.",
-    "reasonLabel": "Reason for emergency access (required)",
-    "reasonPlaceholder": "Please describe the emergency situation requiring access to contact information...",
-    "confirmCheckbox": "I confirm this is a genuine emergency situation and I need access to contact information",
-    "accessing": "Accessing...",
-    "confirmButton": "Access Emergency Contacts",
-    "pleaseConfirm": "Please confirm the emergency and provide a reason",
-    "notAuthorized": "You are not authorized for emergency access",
-    "failedToLoadContacts": "Failed to load emergency contacts",
-    "accessGranted": "Emergency access granted. Contact information is now available.",
-    "accessFailed": "Failed to access emergency contacts",
-    "contactsTitle": "Emergency Contacts",
-    "contactsDescription": "Contact these people in priority order. Click phone numbers to call or emails to send messages.",
-    "priorityOrder": "Priority Order",
-    "priority": "Priority #{{order}}",
-    "logContact": "Log Contact Attempt",
-    "contactLogged": "Contact attempt logged",
-    "lastContacted": "Last contacted: {{time}}",
-    "importantNote": "Important: Contact these individuals in the order shown. Always try the primary contact method first. Log all contact attempts for record keeping."
+    "button": "Nouzový přístup",
+    "modalTitle": "Přístup k nouzovým kontaktům",
+    "modalDescription": "Tímto získáte přístup k nouzovým kontaktům. Používejte pouze ve skutečně naléhavých situacích.",
+    "warningText": "Tento přístup je zaznamenán a vlastník účtu bude upozorněn.",
+    "reasonLabel": "Důvod pro nouzový přístup (povinné)",
+    "reasonPlaceholder": "Popište situaci, která vyžaduje přístup ke kontaktům...",
+    "confirmCheckbox": "Potvrzuji, že jde o skutečnou nouzi a potřebuji přístup ke kontaktům",
+    "accessing": "Získávám přístup...",
+    "confirmButton": "Získat nouzové kontakty",
+    "pleaseConfirm": "Potvrďte nouzovou situaci a uveďte důvod",
+    "notAuthorized": "Nemáte oprávnění pro nouzový přístup",
+    "failedToLoadContacts": "Nepodařilo se načíst nouzové kontakty",
+    "accessGranted": "Nouzový přístup udělen. Kontaktní údaje jsou dostupné.",
+    "accessFailed": "Nepodařilo se získat nouzové kontakty",
+    "contactsTitle": "Nouzové kontakty",
+    "contactsDescription": "Volejte tyto osoby podle pořadí. Klikněte na číslo nebo email.",
+    "priorityOrder": "Pořadí priority",
+    "priority": "Priorita č.{{order}}",
+    "logContact": "Zaznamenat pokus o kontakt",
+    "contactLogged": "Pokus o kontakt zaznamenán",
+    "lastContacted": "Poslední kontakt: {{time}}",
+    "importantNote": "Důležité: Kontaktujte osoby v uvedeném pořadí. Vždy zkuste nejdřív primární kontakt. Veškeré pokusy zaznamenávejte."
   },
   "emotionalContextSystem": {
-    "emotional_support_1": "Emotional Support",
-    "advice_2": "Advice: ",
-    "motivation_3": "Motivation: ",
-    "next_steps_4": "Next Steps: ",
+    "emotional_support_1": "Emocionální podpora",
+    "advice_2": "Doporučení: ",
+    "motivation_3": "Motivace: ",
+    "next_steps_4": "Další kroky: ",
     "contextResponses": {
       "lowConfidence": {
-        "primaryMessage": "You're handling this situation with care and insight.",
-        "supportingMessage": "It shows you understand the importance of the task.",
-        "actionableAdvice": "Continue at your own comfortable pace.",
-        "motivationalElement": "Your thoughtful approach is a testament to your values.",
-        "nextStepGuidance": "When ready, proceed with the next important step to secure your family's future."
+        "primaryMessage": "Situaci zvládáte s péčí a pochopením.",
+        "supportingMessage": "Ukazuje to, že si uvědomujete důležitost úkolu.",
+        "actionableAdvice": "Pokračujte vlastním tempem.",
+        "motivationalElement": "Vaše rozvážnost je důkazem vašich hodnot.",
+        "nextStepGuidance": "Až budete připraveni, pokračujte dalším krokem k zajištění rodiny."
       },
       "highOverwhelm": {
-        "primaryMessage": "Your dedication to your family is commendable.",
-        "supportingMessage": "It's okay to take a moment to regroup.",
-        "actionableAdvice": "Consider breaking the task into smaller parts for focus.",
-        "motivationalElement": "Knowing you're driven by love and care.",
-        "nextStepGuidance": "Each small action you take makes a significant difference."
+        "primaryMessage": "Vaše oddanost rodině je obdivuhodná.",
+        "supportingMessage": "Nebojte se udělat si chvilku na oddech.",
+        "actionableAdvice": "Rozdělte úkol na menší části pro lepší přehled.",
+        "motivationalElement": "Vaše úsilí vychází z lásky a péče.",
+        "nextStepGuidance": "Každý malý krok dělá rozdíl."
       },
       "default": {
-        "primaryMessage": "You're doing meaningful work.",
-        "supportingMessage": "This effort strengthens your family's foundation.",
-        "actionableAdvice": "Stay committed to your plan.",
-        "motivationalElement": "Every decision you make protects your loved ones.",
-        "nextStepGuidance": "Seeing the big picture will guide your next steps."
+        "primaryMessage": "Děláte smysluplnou práci.",
+        "supportingMessage": "Tímto posilujete základy rodiny.",
+        "actionableAdvice": "Zůstaňte oddaní plánu.",
+        "motivationalElement": "Každé rozhodnutí chrání vaše blízké.",
+        "nextStepGuidance": "Mějte na paměti celý obraz – další kroky pak budou jasné."
       }
     },
     "emotionalStates": {
@@ -364,122 +232,123 @@
         "low": "Nízká"
       },
       "overwhelm": {
-        "none": "None",
-        "slight": "Slight",
-        "moderate": "Moderate",
+        "none": "Žádná",
+        "slight": "Mírná",
+        "moderate": "Střední",
         "high": "Vysoká"
       },
       "urgency": {
-        "relaxed": "Relaxed",
-        "focused": "Focused",
-        "pressed": "Pressed",
-        "stressed": "Stressed"
+        "relaxed": "Uvolněná",
+        "focused": "Soustředěná",
+        "pressed": "Pod tlakem",
+        "stressed": "Ve stresu"
       }
     }
   },
   "lifeEvents": {
-    "title": "Life Events",
-    "subtitle": "Update your plan when major life changes occur",
-    "addEvent": "Add Life Event",
-    "noEvents": "No life events recorded yet",
-    "addFirstEvent": "Add your first life event to get started",
+    "title": "Životní události",
+    "subtitle": "Aktualizujte svůj plán při významných životních změnách",
+    "addEvent": "Přidat životní událost",
+    "noEvents": "Zatím nejsou zaznamenány žádné události",
+    "addFirstEvent": "Přidejte první událost a začněte",
     "events": {
-      "marriedDivorced": "Marriage/Divorce Update",
-      "newChild": "New Child Update",
-      "boughtSoldHome": "Real Estate Update",
-      "startedBusiness": "New Business Update",
-      "trustedPersonPassed": "Update Trusted Persons",
-      "unknown": "Unknown Event"
+      "marriedDivorced": "Aktualizace manželství/rozvodu",
+      "newChild": "Nový člen rodiny",
+      "boughtSoldHome": "Změna nemovitosti",
+      "startedBusiness": "Založení firmy",
+      "trustedPersonPassed": "Změna důvěryhodných osob",
+      "unknown": "Neznámá událost"
     },
-    "congratsMessage": "Congratulations on your new child! Here are the recommended updates to your plan:",
+    "congratsMessage": "Gratulujeme k novému dítěti! Zde jsou doporučené aktualizace vašeho plánu:",
     "tasks": {
-      "updateBeneficiaries": "Update beneficiaries on all accounts",
-      "updateBeneficiariesDesc": "Review and update beneficiaries on life insurance, retirement accounts, and bank accounts.",
-      "updateWill": "Update your will",
-      "updateWillDesc": "Ensure your will reflects your new marital status and beneficiary wishes.",
-      "reviewTrusts": "Review and update any trusts",
-      "reviewTrustsDesc": "Make necessary changes to trust documents to reflect your new status.",
-      "updateEmergencyContacts": "Update emergency contacts",
-      "updateEmergencyContactsDesc": "Review and update emergency contacts in your Trusted Circle.",
-      "addChildRoster": "Add your new child to your Trusted Circle",
-      "addChildRosterDesc": "Include your child in your family information.",
-      "updateGuardian": "Review and update the \"Guardian\" designation for your children",
-      "updateGuardianDesc": "Ensure you have designated appropriate guardians for all your children.",
-      "reviewLifeInsurance": "Review your life insurance policy to ensure coverage is adequate",
-      "reviewLifeInsuranceDesc": "Consider increasing coverage to account for your growing family.",
-      "updateWillBeneficiary": "Update your will to include your new child as a beneficiary",
-      "updateWillBeneficiaryDesc": "Ensure your new child is properly included in your estate planning.",
-      "updatePropertyArmory": "Update property information in your Vault",
-      "updatePropertyArmoryDesc": "Add new property or remove sold property from your assets.",
-      "updateMortgageInfo": "Update mortgage and deed information",
-      "updateMortgageInfoDesc": "Ensure all property-related documents are current.",
-      "reviewHomeownersInsurance": "Review homeowners/property insurance",
-      "reviewHomeownersInsuranceDesc": "Update insurance policies to reflect your current properties.",
-      "updateNetWorth": "Update your net worth calculation",
-      "updateNetWorthDesc": "Reflect the change in your real estate holdings.",
-      "addBusinessAssets": "Add business to your Vault",
-      "addBusinessAssetsDesc": "Include your business as an asset with relevant details.",
-      "createSuccessionPlan": "Create a business succession plan",
-      "createSuccessionPlanDesc": "Document what should happen to your business if something happens to you.",
-      "updateInsurance": "Review insurance needs",
-      "updateInsuranceDesc": "Consider key person insurance and business liability coverage.",
-      "separatePersonalBusiness": "Ensure personal and business assets are properly separated",
-      "separatePersonalBusinessDesc": "Review the distinction between personal and business holdings.",
-      "removeDeceased": "Update your Trusted Circle",
-      "removeDeceasedDesc": "Remove the deceased person and reassign their responsibilities.",
-      "appointNewExecutor": "Appoint a new executor/trustee if needed",
-      "appointNewExecutorDesc": "If the deceased was your executor or trustee, designate a replacement.",
-      "updateBeneficiariesDesc2": "Check if the deceased was a beneficiary on any accounts.",
-      "updateEmergencyContactsDesc2": "Review all emergency contact information."
+      "updateBeneficiaries": "Aktualizovat obmyšlené na všech účtech",
+      "updateBeneficiariesDesc": "Zkontrolujte a aktualizujte obmyšlené u pojištění, penzijních účtů a bank.",
+      "updateWill": "Aktualizujte závěť",
+      "updateWillDesc": "Ujistěte se, že vaše závěť odráží nový stav a přání.",
+      "reviewTrusts": "Zkontrolujte a aktualizujte trusty",
+      "reviewTrustsDesc": "Proveďte změny v dokumentech trustů podle nové situace.",
+      "updateEmergencyContacts": "Aktualizujte kontakty pro nouzi",
+      "updateEmergencyContactsDesc": "Zkontrolujte a aktualizujte nouzové kontakty v okruhu důvěry.",
+      "addChildRoster": "Přidejte nové dítě do rodinného okruhu",
+      "addChildRosterDesc": "Zahrňte dítě do rodinných informací.",
+      "updateGuardian": "Zkontrolujte a aktualizujte určení \"důvěrníka\" pro děti",
+      "updateGuardianDesc": "Ujistěte se, že máte určené důvěrníky pro všechny děti.",
+      "reviewLifeInsurance": "Zkontrolujte životní pojistku",
+      "reviewLifeInsuranceDesc": "Zvažte zvýšení pojistného krytí pro rostoucí rodinu.",
+      "updateWillBeneficiary": "Přidejte nové dítě do závěti",
+      "updateWillBeneficiaryDesc": "Ujistěte se, že je dítě zahrnuto v dědickém plánu.",
+      "updatePropertyArmory": "Aktualizujte informace o majetku",
+      "updatePropertyArmoryDesc": "Přidejte novou nebo odeberte prodanou nemovitost.",
+      "updateMortgageInfo": "Aktualizujte informace o hypotéce a vlastnictví",
+      "updateMortgageInfoDesc": "Ujistěte se, že všechny dokumenty k nemovitostem jsou aktuální.",
+      "reviewHomeownersInsurance": "Zkontrolujte pojištění majetku",
+      "reviewHomeownersInsuranceDesc": "Aktualizujte pojistky podle aktuálních nemovitostí.",
+      "updateNetWorth": "Aktualizujte čisté jmění",
+      "updateNetWorthDesc": "Zahrňte změnu majetku do výpočtu čistého jmění.",
+      "addBusinessAssets": "Přidejte firmu do trezoru",
+      "addBusinessAssetsDesc": "Zahrňte firmu mezi aktiva a uveďte důležité detaily.",
+      "createSuccessionPlan": "Vytvořte plán nástupnictví firmy",
+      "createSuccessionPlanDesc": "Zapište, co se má stát s firmou v případě vašeho odchodu.",
+      "updateInsurance": "Zvažte pojištění firmy",
+      "updateInsuranceDesc": "Zvažte pojištění klíčových osob a odpovědnosti firmy.",
+      "separatePersonalBusiness": "Oddělte osobní a firemní aktiva",
+      "separatePersonalBusinessDesc": "Zkontrolujte, zda je rozdělení mezi osobním a firemním majetkem správné.",
+      "removeDeceased": "Aktualizujte okruh důvěry",
+      "removeDeceasedDesc": "Odeberte zesnulého a předejte jeho odpovědnosti jiným osobám.",
+      "appointNewExecutor": "Jmenujte nového vykonavatele/trustee",
+      "appointNewExecutorDesc": "Pokud byl zesnulý vykonavatelem/trustee, určete náhradu.",
+      "updateBeneficiariesDesc2": "Zjistěte, zda byl zesnulý obmyšleným na nějakých účtech.",
+      "updateEmergencyContactsDesc2": "Zkontrolujte všechny nouzové kontakty."
     }
   },
   "logLifeEvent": {
-    "title": "Log a Life Event",
-    "description": "Select a major life change to generate a personalized checklist for updating your family's protection plan.",
+    "title": "Zaznamenat životní událost",
+    "description": "Vyberte významnou změnu a vytvoříme kontrolní seznam pro aktualizaci ochrany rodiny.",
     "eventTypes": {
-      "married_divorced": "Got Married / Divorced",
-      "new_child": "Had a New Child",
-      "bought_sold_home": "Bought / Sold a Home",
-      "started_business": "Started a Business",
-      "trusted_person_passed": "A Trusted Person Passed Away",
-      "job_change": "Changed Jobs",
-      "moved_location": "Moved to a New Location",
-      "inheritance": "Received an Inheritance",
-      "retirement": "Retired",
-      "health_change": "Significant Health Change",
-      "child_graduated": "Child Graduated / Left Home",
-      "career_advancement": "Career Advancement",
-      "financial_windfall": "Financial Windfall",
-      "debt_change": "Significant Debt Change",
-      "insurance_change": "Insurance Policy Change"
+      "married_divorced": "Svatba / rozvod",
+      "new_child": "Narození dítěte",
+      "bought_sold_home": "Koupení / prodej domu",
+      "started_business": "Založení firmy",
+      "trusted_person_passed": "Zemřela důvěryhodná osoba",
+      "job_change": "Změna zaměstnání",
+      "moved_location": "Stěhování",
+      "inheritance": "Získání dědictví",
+      "retirement": "Odchod do důchodu",
+      "health_change": "Změna zdravotního stavu",
+      "child_graduated": "Dítě absolvovalo / odešlo z domu",
+      "career_advancement": "Postup v kariéře",
+      "financial_windfall": "Finanční výhra",
+      "debt_change": "Významná změna dluhů",
+      "insurance_change": "Změna pojistky"
     },
     "form": {
-      "title": "Log Life Event",
-      "description": "Select a major life change to generate a personalized checklist",
-      "eventSelection": "Select Life Event",
-      "eventDescription": "Choose the life event that best describes your current situation",
-      "generateChecklist": "Generate Checklist",
-      "cancel": "Cancel",
-      "submit": "Submit",
-      "close": "Close"
+      "title": "Zaznamenat životní událost",
+      "description": "Vyberte životní událost a vygenerujeme kontrolní seznam",
+      "eventSelection": "Vyberte životní událost",
+      "eventDescription": "Zvolte událost, která nejlépe odpovídá vaší situaci",
+      "generateChecklist": "Vytvořit kontrolní seznam",
+      "cancel": "Zrušit",
+      "submit": "Odeslat",
+      "close": "Zavřít"
     },
     "checklist": {
-      "title": "Personalized Checklist",
-      "description": "Based on your life event, here are the key items you should review and update:",
-      "priority": "Priority",
-      "action": "Action",
-      "estimatedTime": "Estimated Time",
+      "title": "Personalizovaný kontrolní seznam",
+      "description": "Podle vaší životní události zkontrolujte tyto body:",
+      "priority": "Priorita",
+      "action": "Krok",
+      "estimatedTime": "Odhadovaný čas",
       "high": "Vysoká",
       "medium": "Střední",
       "low": "Nízká",
       "completed": "Dokončeno",
-      "pending": "Pending"
+      "pending": "Čeká"
     },
     "notifications": {
-      "eventLogged": "Life event logged successfully",
-      "checklistGenerated": "Personalized checklist generated",
-      "errorLogging": "Error logging life event",
-      "reminderSet": "Reminder set for follow-up actions"
+      "eventLogged": "Životní událost zaznamenána",
+      "checklistGenerated": "Personalizovaný kontrolní seznam vytvořen",
+      "errorLogging": "Chyba při zaznamenání události",
+      "reminderSet": "Připomenutí nastaveno pro další kroky"
     }
   }
 }
+

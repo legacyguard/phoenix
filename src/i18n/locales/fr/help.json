@@ -1,283 +1,73 @@
 {
-  "_comment": "Shared translations used across the application",
+  "_comment": "Centre d'aide et support utilisateur",
   "help": {
-    "needHelp": "Need Help?",
-    "getHelp": "Get Help",
-    "helpAndTutorials": "Help & Tutorials",
-    "recommendedForYou": "Recommended for You",
-    "basedOnProgress": "Based on your current progress, here's what we recommend:",
-    "personalizedHelpDescription": "Get personalized help based on where you are in your journey",
-    "recommendedTopics": "Recommended topics",
-    "quickTips": {
-      "title": "Quick Tips",
-      "tip1": "Start with your most important documents first",
-      "tip2": "Add at least one trusted guardian",
-      "tip3": "Update your information regularly",
-      "tip4": "Test your guardian's access annually"
+    "title": "Aide & Support",
+    "subtitle": "Trouvez des réponses ou contactez notre équipe d’assistance",
+    "searchPlaceholder": "Rechercher une question ou un sujet…",
+    "noResults": "Aucun résultat trouvé pour « {{query}} ». Essayez d’autres mots-clés.",
+    "popularTopics": "Sujets populaires",
+    "faqs": "Questions fréquentes",
+    "gettingStarted": "Bien démarrer",
+    "accountSecurity": "Sécurité du compte",
+    "familyProtection": "Protection familiale",
+    "documentsAndVault": "Gestion des documents et du coffre-fort",
+    "subscriptions": "Abonnements et paiements",
+    "contactSupport": "Contacter le support",
+    "submitRequest": "Envoyer une demande",
+    "needMoreHelp": "Besoin d’une assistance supplémentaire ?",
+    "contactUs": "Contactez-nous",
+    "responseTime": "Notre équipe vous répond sous 24 heures.",
+    "liveChat": "Chat en direct",
+    "startChat": "Démarrer le chat",
+    "emailSupport": "Support par e-mail",
+    "submit": "Envoyer",
+    "cancel": "Annuler",
+    "back": "Retour",
+    "yourMessage": "Votre message",
+    "attachFile": "Joindre un fichier (optionnel)",
+    "loading": "Chargement de l’aide…",
+    "sending": "Envoi en cours…",
+    "successMessage": "Merci pour votre message ! Notre équipe d’assistance vous répondra bientôt.",
+    "errorMessage": "Échec de l’envoi de la demande. Veuillez réessayer.",
+    "required": "Champ obligatoire",
+    "validation": {
+      "email": "Veuillez saisir une adresse e-mail valide.",
+      "message": "Merci de préciser votre question ou demande."
     },
-    "topics": {
-      "uploadDocuments": {
-        "title": "Upload Your First Document",
-        "description": "Learn how to securely upload and organize your important documents",
-        "steps": {
-          "1": "Click the 'Upload Document' button in the Organize section",
-          "2": "Select your document file from your computer",
-          "3": "Choose the document type and add a descriptive name",
-          "4": "Set an expiration date if applicable",
-          "5": "Save the document to your secure vault"
-        }
-      },
-      "addGuardians": {
-        "title": "Add Your First Guardian",
-        "description": "Set up trusted people who can access your information in emergencies",
-        "steps": {
-          "1": "Click 'Add Guardian' in the Secure section",
-          "2": "Enter your guardian's full name and relationship",
-          "3": "Select their roles and responsibilities",
-          "4": "Add their contact information",
-          "5": "Send them an invitation to accept their role"
-        }
-      },
-      "listAssets": {
-        "title": "List Your Assets",
-        "description": "Document your properties, accounts, and valuable possessions",
-        "steps": {
-          "1": "Click 'Add Item' in the Organize section",
-          "2": "Choose the asset type (property, vehicle, account, etc.)",
-          "3": "Enter the asset name and details",
-          "4": "Add estimated value if desired",
-          "5": "Save the asset to your inventory"
-        }
-      },
-      "designateBeneficiaries": {
-        "title": "Designate Beneficiaries",
-        "description": "Specify who should receive your assets and in what proportions",
-        "steps": {
-          "1": "Click 'Add Beneficiary' in the Transfer section",
-          "2": "Enter the beneficiary's name",
-          "3": "Set their allocation percentage",
-          "4": "Review total allocations (must equal 100%)",
-          "5": "Save your beneficiary list"
-        }
-      },
-      "createWill": {
-        "title": "Create Your Will",
-        "description": "Generate a basic will document based on your information",
-        "steps": {
-          "1": "Navigate to the Will section",
-          "2": "Complete all required information",
-          "3": "Review your beneficiaries and assets",
-          "4": "Generate the will document",
-          "5": "Download and have it properly witnessed"
-        }
-      }
+    "categories": {
+      "general": "Général",
+      "security": "Sécurité & confidentialité",
+      "documents": "Documents & coffre-fort",
+      "subscriptions": "Abonnements",
+      "technical": "Assistance technique",
+      "emergency": "Accès d’urgence"
     },
-    "stepDetails": {
-      "description": "Description",
-      "stepByStepInstructions": "Step-by-Step Instructions",
-      "videoTutorial": "Video Tutorial",
-      "watchVideoTutorial": "Watch Video Tutorial",
-      "estimatedTime": "Estimated time",
-      "minutes": "minutes",
-      "steps": "steps",
-      "gotIt": "Got it!"
-    },
-    "priority": {
-      "high": "high",
-      "medium": "medium",
-      "low": "low"
-    }
-  },
-  "helpPage": {
-    "title": "Help & Support Center",
-    "subtitle": "We're here for you. Find answers to your questions or contact us directly.",
-    "faq": {
-      "title": "Frequently Asked Questions",
-      "q1": {
-        "question": "Is LegacyGuard secure?",
-        "answer": "Yes, security is our highest priority. We use end-to-end encryption and a zero-trust architecture, meaning no unauthorized person can access your data, not even us. All data is stored in secure data centers within the European Union in compliance with GDPR."
+    "faqsList": {
+      "howToAddGuardian": {
+        "q": "Comment ajouter une personne de confiance (gardien) ?",
+        "a": "Dans le tableau de bord, cliquez sur « Ajouter un gardien », remplissez ses coordonnées et envoyez l’invitation. Il ou elle recevra un email avec un lien pour accepter son rôle."
       },
-      "q2": {
-        "question": "What happens to my data if I cancel my subscription?",
-        "answer": "After canceling, your data remains securely stored in read-only mode for 90 days. You can reactivate your subscription anytime within this period to regain full access. After 90 days, your data will be securely and permanently deleted from our systems."
+      "whoCanAccessVault": {
+        "q": "Qui peut accéder à mon coffre-fort et à mes documents ?",
+        "a": "Seules les personnes que vous autorisez explicitement ont accès à votre coffre-fort. Vous contrôlez tous les niveaux d’accès via votre Espace Famille."
       },
-      "q3": {
-        "question": "What is a 'Guardian'?",
-        "answer": "A Guardian is someone you trust (e.g., a partner, sibling, or legal professional) whom you grant special, limited access to your information for emergencies. They cannot change your data; they can only view it to act on your instructions."
+      "howToUploadDocument": {
+        "q": "Comment téléverser un document ?",
+        "a": "Allez dans la section « Coffre-fort » ou « Documents », cliquez sur « Téléverser » puis sélectionnez votre fichier. Remplissez les informations associées pour un classement optimal."
       },
-      "q4": {
-        "question": "What's the difference between the 'Vault' and the 'Manual'?",
-        "answer": "The Heritage Vault is where you securely store all your important papers and things you own. The Survivor's Manual is a curated selection of the most critical contacts, papers, and instructions from your vault, designed for your trusted helpers to have everything essential in one place."
+      "howToResetPassword": {
+        "q": "J’ai oublié mon mot de passe, comment le réinitialiser ?",
+        "a": "Sur la page de connexion, cliquez sur « Mot de passe oublié » et suivez les instructions envoyées par e-mail pour réinitialiser votre mot de passe."
       },
-      "q5": {
-        "question": "Is a will created in LegacyGuard legally binding?",
-        "answer": "LegacyGuard helps you prepare and organize all the groundwork and information for your will. However, in most European countries, the digital document does not replace the need for an official, signed (and often notarized) document. We recommend always consulting the final version with a legal professional."
-      }
-    },
-    "contact": {
-      "title": "Didn't find what you were looking for?",
-      "email": {
-        "title": "Email Us",
-        "description": "For general questions and support.",
-        "button": "Open Email Client"
+      "howToChangeSubscription": {
+        "q": "Comment changer ou annuler mon abonnement ?",
+        "a": "Accédez aux paramètres d’abonnement dans votre compte et choisissez l’option de modification ou d’annulation."
       },
-      "call": {
-        "title": "Schedule a Call (For Premium)",
-        "description": "For Premium and Enterprise customers.",
-        "button": "Schedule a Call"
+      "isMyDataSecure": {
+        "q": "Mes données sont-elles vraiment protégées ?",
+        "a": "Oui. Toutes vos données sont chiffrées, stockées dans l’UE et protégées par des mesures de sécurité de niveau entreprise. Consultez la rubrique Sécurité pour plus de détails."
       }
     }
-  },
-  "manual": {
-    "title": "Guide pour les proches",
-    "subtitle": "Informations essentielles pour vos proches quand ils en ont le plus besoin",
-    "tabs": {
-      "contacts": "Contacts importants",
-      "documents": "Documents clés",
-      "instructions": "Instructions"
-    },
-    "contacts": {
-      "title": "Contacts importants",
-      "description": "Personnes clés que votre famille devrait contacter en cas d'urgence",
-      "addContact": "Ajouter un contact",
-      "addFirstContact": "Ajoutez votre premier contact",
-      "loading": "Chargement des contacts...",
-      "empty": {
-        "title": "Aucun contact n'a encore été ajouté",
-        "description": "Commencez par ajouter des personnes importantes que votre famille devrait connaître."
-      },
-      "form": {
-        "editTitle": "Modifier le contact",
-        "addTitle": "Ajouter un contact important",
-        "description": "Ajoutez des personnes que votre famille devrait contacter dans des situations importantes.",
-        "nameLabel": "Nom du contact *",
-        "namePlaceholder": "ex: Jean Dupont",
-        "roleLabel": "Rôle/Profession *",
-        "rolePlaceholder": "ex: Avocat de famille, Comptable, Médecin",
-        "phoneLabel": "Numéro de téléphone",
-        "phonePlaceholder": "+33 1 23 45 67 89",
-        "emailLabel": "Adresse e-mail",
-        "emailPlaceholder": "contact@example.com",
-        "notesLabel": "Notes",
-        "notesPlaceholder": "Informations supplémentaires sur ce contact...",
-        "updateButton": "Mettre à jour le contact",
-        "addButton": "Ajouter le contact",
-        "saving": "Enregistrement...",
-        "cancel": "Annuler"
-      },
-      "card": {
-        "edit": "Modifier"
-      },
-      "messages": {
-        "nameAndRoleRequired": "Le nom et le rôle sont requis.",
-        "loginRequired": "Vous devez être connecté pour enregistrer des contacts.",
-        "updated": "Contact mis à jour avec succès !",
-        "added": "Contact ajouté avec succès !",
-        "deleted": "Contact supprimé avec succès !"
-      },
-      "errors": {
-        "loadFailed": "Échec du chargement des contacts.",
-        "saveFailed": "Échec de l'enregistrement du contact.",
-        "deleteFailed": "Échec de la suppression du contact."
-      }
-    },
-    "documents": {
-      "title": "Documents clés",
-      "description": "Documents essentiels que votre famille doit connaître",
-      "loading": "Chargement des documents clés...",
-      "empty": {
-        "title": "Aucun document clé n'a encore été ajouté",
-        "description": "Marquez les documents importants comme \"documents clés\" depuis votre coffre-fort pour qu'ils apparaissent ici.",
-        "tip": "Astuce : Allez dans votre coffre-fort et activez \"Inclure dans le Guide pour les proches\" pour les documents importants."
-      },
-      "card": {
-        "essentialNote": "Ce document est marqué comme essentiel pour vos proches."
-      },
-      "errors": {
-        "loadFailed": "Échec du chargement des documents clés."
-      },
-      "expiration": {
-        "expired": "Expiré",
-        "expiresSoon": "Expire bientôt",
-        "expiring": "En cours d'expiration"
-      }
-    },
-    "instructions": {
-      "title": "Dernières volontés et instructions",
-      "description": "Conseils personnels et messages pour vos proches",
-      "loading": "Chargement des instructions...",
-      "autoSaveNote": "Vos instructions sont enregistrées automatiquement au fur et à mesure de votre saisie",
-      "sections": {
-        "funeral": {
-          "title": "Souhaits funéraires",
-          "description": "Vos préférences pour les arrangements funéraires et les cérémonies",
-          "placeholder": "ex: Crémation, pas de cérémonie formelle, jouer 'My Way' de Frank Sinatra..."
-        },
-        "digitalAccounts": {
-          "title": "Fermeture des comptes numériques",
-          "description": "Instructions pour la gestion de vos comptes numériques et de votre présence en ligne",
-          "placeholder": "ex: Veuillez supprimer mon profil Facebook, mais archiver mon Gmail. Transférer mes photos de Google Drive vers..."
-        },
-        "messages": {
-          "title": "Messages aux proches",
-          "description": "Messages personnels et dernières pensées pour votre famille et vos amis",
-          "placeholder": "Partagez vos pensées, souvenirs et derniers messages à ceux que vous aimez..."
-        }
-      },
-      "errors": {
-        "loadFailed": "Échec du chargement des instructions."
-      }
-    }
-  },
-  "testimonials": {
-    "badge": "Vraies Familles Prenant le Contrôle",
-    "title": "Fait Confiance par 15 000+ Familles Européennes",
-    "subtitle": "Voyez comment des familles comme la vôtre ont trouvé sécurité et paix avec le Coffre-fort Patrimonial",
-    "verified": "Famille Vérifiée",
-    "trustedBy": "Fait confiance et recommandé par",
-    "stats": {
-      "families": "15 000+",
-      "familiesLabel": "familles européennes protégées",
-      "satisfaction": "99,7%",
-      "satisfactionLabel": "se sentent plus préparées et en contrôle",
-      "stressReduction": "92%",
-      "stressReductionLabel": "moins de stress familial signalé",
-      "timeSaved": "120 h",
-      "timeSavedLabel": "temps moyen économisé par famille"
-    },
-    "stories": {
-      "1": {
-        "name": "Michael K.",
-        "role": "Père de trois enfants",
-        "location": "Munich, Allemagne",
-        "quote": "Après l'accident soudain de mon frère, j'ai regardé ma belle-sœur lutter pendant des semaines pour trouver des documents importants et des mots de passe. C'est alors que j'ai su que je ne pouvais pas laisser la même chose arriver à ma famille. Maintenant tout est organisé, et ma femme sait exactement où trouver ce dont elle a besoin. Être préparé et en contrôle est inestimable.",
-        "highlight": "✨ Configuré en seulement 2 heures, protégeant 3 enfants et conjoint"
-      },
-      "2": {
-        "name": "Anna S.",
-        "role": "Propriétaire d'entreprise",
-        "location": "Vienne, Autriche",
-        "quote": "En tant que mère célibataire dirigeant une entreprise, je m'inquiétais constamment de ce qui arriverait si quelque chose m'arrivait. Le Coffre-fort Patrimonial m'a aidée à tout organiser - des comptes d'entreprise aux informations scolaires de mes enfants. Ma sœur a maintenant accès à tout ce dont elle aurait besoin pour intervenir. Je dors tellement mieux sachant qu'ils sont protégés.",
-        "highlight": "💼 Vie professionnelle et personnelle organisée en un seul endroit sécurisé"
-      },
-      "3": {
-        "name": "Thomas R.",
-        "role": "Enseignant à la retraite",
-        "location": "Zurich, Suisse",
-        "quote": "Ma femme a une démence précoce, et j'ai réalisé que je devais me préparer pendant que je le pouvais encore. Le Coffre-fort Patrimonial a rendu simple l'organisation de nos 40 ans de vie ensemble. Nos enfants ont maintenant des instructions claires et accès à tout. Cela a rapproché toute notre famille sachant que nous sommes préparés pour tout ce qui peut arriver.",
-        "highlight": "❤️ 40 ans d'histoire familiale préservés et protégés"
-      }
-    },
-    "authority": {
-      "advisors": "Recommandé par les Conseillers Financiers",
-      "attorneys": "Fait confiance par les Avocats de Famille",
-      "counselors": "Approuvé par les Conseillers en Deuil"
-    },
-    "compliance": {
-      "gdpr": "Conforme au RGPD",
-      "dataProtection": "Certifié Protection des Données",
-      "iso": "Certifié ISO 27001"
-    },
-    "bottomCta": {}
   }
 }
+

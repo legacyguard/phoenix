@@ -1,98 +1,44 @@
 {
-  "_comment": "Shared translations used across the application",
-  "errorBoundary": {
-    "title": "Wps! Aeth rhywbeth o'i le",
-    "description": "Rydym yn ymddiheuro am yr anghyfleustra. Mae gwall annisgwyl wedi digwydd.",
-    "errorId": "ID Gwall",
-    "tryAgain": "Rhoi cynnig arall arni",
-    "reloadPage": "Ail-lwytho'r dudalen",
-    "goToHomepage": "Mynd i'r dudalen gartref",
-    "technicalDetails": "Manylion technegol",
-    "hide": "Cuddio",
-    "show": "Dangos",
-    "stackTrace": "Ôl troed y stac",
-    "componentStack": "Stac cydran",
-    "helpText": "Os yw'r broblem yn parhau, cysylltwch â'n cefnogaeth gydag ID y gwall."
-  },
-  "errorTest": {
-    "title": "Prawf cofnodi gwallau",
-    "description": "Prawf o reoli gwallau a swyddogaeth cofnodi",
-    "triggerSyncError": "Cychwyn gwall cydamserol (ErrorBoundary)",
-    "triggerAsyncError": "Cychwyn gwall anghydamserol",
-    "logRegularError": "Cofnodi gwall rheolaidd",
-    "logCriticalError": "Cofnodi gwall critigol",
-    "triggerAlert": "Cychwyn rhybudd (6 gwall critigol)",
-    "errorMessages": {
-      "testError": "Gwall prawf o gydran ErrorTest",
-      "testAsyncRejection": "Prawf o wrthod anghydamserol",
-      "manualTestError": "Gwall prawf llaw",
-      "testCriticalError": "Gwall critigol prawf",
-      "criticalErrorWithIndex": "Gwall critigol {{index}}"
-    },
-    "descriptions": {
-      "syncError": "Cychwyna gwall cydamserol a fydd yn cael ei ddal gan ErrorBoundary",
-      "asyncError": "Cychwyna gwall anghydamserol a fydd yn cael ei ddal gan reoli gwallau",
-      "regularError": "Cofnoda gwall rheolaidd ar gyfer prawf o olrhain gwallau",
-      "criticalError": "Cofnoda gwall critigol ar gyfer prawf o reoli gwallau critigol",
-      "multipleErrors": "Cychwyna nifer o wallau critigol ar gyfer prawf o derfynau rhybudd"
-    },
-    "context": {
-      "component": "ErrorTest",
-      "action": "button-click",
-      "severity": "high"
-    },
-    "notifications": {
-      "errorLogged": "Gwall wedi'i gofnodi'n llwyddiannus",
-      "criticalErrorLogged": "Gwall critigol wedi'i gofnodi'n llwyddiannus",
-      "multipleErrorsTriggered": "Nifer o wallau critigol wedi'u cychwyn",
-      "errorBoundaryTriggered": "Ffin gwall wedi'i chychwyn",
-      "asyncErrorCaught": "Gwall anghydamserol wedi'i ddal a'i drin"
-    }
-  },
-  "debug": {
-    "panel": {
-      "title": "Panel dadfygio",
-      "recentErrors": "Gwallau diweddar y cais",
-      "technicalDetails": "Manylion technegol",
-      "tabs": {
-        "list": "Rhestr",
-        "details": "Manylion"
-      },
-      "errorCount": "{{count}} gwallau",
-      "actions": {
-        "downloadErrors": "Lawrlwytho gwallau",
-        "clearAllErrors": "Clirio pob gwall"
-      },
-      "messages": {
-        "errorsCleared": "Pob gwall wedi'i glirio",
-        "errorCopied": "Gwall wedi'i gopïo i'r clipfwrdd",
-        "errorsDownloaded": "Gwallau wedi'u lawrlwytho"
-      },
-      "error": {
-        "unknownError": "Gwall anhysbys",
-        "noMessage": "Dim neges",
-        "errorMessage": "Neges gwall"
-      },
-      "sections": {
-        "stackTrace": "Ôl troed y stac",
-        "context": "Cyd-destun",
-        "location": "Lleoliad",
-        "browserInfo": "Gwybodaeth porwr",
-        "time": "Amser"
-      },
-      "fields": {
-        "url": "URL:",
-        "path": "Llwybr:",
-        "query": "Cwestiwn:",
-        "userAgent": "Asiant defnyddiwr:",
-        "viewport": "Ardal golwg:"
-      }
-    }
-  },
-  "test": {
-    "environment": {
-      "title": "Dim ond ar gyfer amgylchedd prawf",
-      "description": "Mae'r dudalen hon ar gyfer prawf o'r system cofnodi gwallau. Tynnwch y llwybr hwn cyn ei ddatblygu i gynhyrchu."
-    }
+  "_comment": "Negeseuon gwall ac hysbysiadau",
+  "errors": {
+    "networkError": "Gwall rhwydwaith – gwiriwch eich cysylltiad a cheisiwch eto.",
+    "unauthorized": "Heb awdurdod – mewngofnodwch i barhau.",
+    "forbidden": "Gwrthodwyd mynediad – nid oes gennych y caniatâd angenrheidiol.",
+    "notFound": "Heb ei ganfod – nid yw'r eitem a geisiwyd yn bodoli.",
+    "serverError": "Gwall gweinydd mewnol – ceisiwch eto yn nes ymlaen.",
+    "timeout": "Wedi dod i ben – gwiriwch eich cysylltiad a cheisiwch eto.",
+    "validationFailed": "Methwyd dilysu – gwiriwch y meysydd gofynnol.",
+    "conflict": "Gwall gwrthdaro – mae'r eitem eisoes yn bodoli neu wedi newid.",
+    "rateLimitExceeded": "Cyfyngiad cyfradd wedi'i orffen – aros cyn ceisio eto.",
+    "missingParameters": "Diffyg meini prawf angenrheidiol.",
+    "invalidParameters": "Meini prawf annilys neu anghywir.",
+    "unknownError": "Gwall anhysbys – ceisiwch eto neu cysylltwch â chefnogaeth.",
+    "fileTooLarge": "Mae’r ffeil yn rhy fawr i’w llwytho i fyny.",
+    "fileTypeNotAllowed": "Math o ffeil heb ei ganiatáu.",
+    "uploadFailed": "Methwyd llwytho’r ffeil i fyny.",
+    "downloadFailed": "Methwyd lawrlwytho’r ffeil.",
+    "saveFailed": "Methwyd cadw’r data.",
+    "deleteFailed": "Methwyd dileu’r data.",
+    "updateFailed": "Methwyd diweddaru’r data.",
+    "fetchFailed": "Methwyd nôl data.",
+    "authenticationFailed": "Methwyd dilysu – gwiriwch eich manylion mewngofnodi.",
+    "permissionDenied": "Caniatâd wedi’i wrthod ar gyfer y gweithred hon.",
+    "sessionExpired": "Mae eich sesiwn wedi dod i ben. Mewngofnodwch eto.",
+    "invalidToken": "Tocyn dilysu annilys neu wedi dod i ben.",
+    "passwordMismatch": "Mae'r cyfrineiriau’n wahanol.",
+    "passwordTooShort": "Rhaid i'r cyfrinair fod o leiaf 6 nod.",
+    "emailAlreadyInUse": "Mae’r cyfeiriad e-bost hwn eisoes yn cael ei ddefnyddio.",
+    "userNotFound": "Ni chanfuwyd y defnyddiwr gyda’r manylion hyn.",
+    "accountLocked": "Mae’ch cyfrif wedi’i gloi. Cysylltwch â chefnogaeth.",
+    "tooManyAttempts": "Rhaid aros cyn ceisio eto – gormod o ymgais mewngofnodi.",
+    "invalidCredentials": "Manylion mewngofnodi annilys.",
+    "passwordResetFailed": "Methwyd ailosod y cyfrinair.",
+    "emailSendFailed": "Methwyd anfon e-bost.",
+    "accountDeletionFailed": "Methwyd dileu’r cyfrif.",
+    "subscriptionFailed": "Methwyd prosesu tanysgrifiad.",
+    "paymentFailed": "Methwyd prosesu taliad.",
+    "upgradeFailed": "Methwyd uwchraddio’r cynllun.",
+    "contactSupport": "Os yw'r broblem yn parhau, cysylltwch â'n tîm cymorth."
   }
-} 
+}
+
