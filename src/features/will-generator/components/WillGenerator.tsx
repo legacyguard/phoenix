@@ -4,7 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 import { Progress } from '@/components/ui/progress';
 import { AlertCircle, CheckCircle2, FileText, Users, Briefcase, Eye } from 'lucide-react';
-import { useTranslation } from 'react-i18next';
+import { useGenderAwareTranslation } from '@/i18n/useGenderAwareTranslation';
 import { toast } from 'sonner';
 import { CountrySelector } from './CountrySelector';
 import { AssetAllocationWizard } from './AssetAllocationWizard';
@@ -18,7 +18,7 @@ interface WillGeneratorProps {
 }
 
 export function WillGenerator({ onComplete }: WillGeneratorProps) {
-  const { t } = useTranslation();
+  const { t } = useGenderAwareTranslation();
   const [currentStep, setCurrentStep] = useState(0);
   const [countryCode, setCountryCode] = useState<string>('');
   const [languageCode, setLanguageCode] = useState<string>('en');

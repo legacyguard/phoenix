@@ -1,5 +1,5 @@
 {
-  "_comment": "Shared translations used across the application",
+  "_comment": "Subscription, billing, and pricing related",
   "subscription": {
     "dashboard": {
       "title": "Dashboard Abbonamenti",
@@ -60,87 +60,87 @@
     "providerEmail": "Email",
     "providerWebsite": "Sito Web",
     "cancellationNoticeWarning": "Nota: La disdetta richiede un preavviso di {{days}} giorni",
-    "title": "Subscription",
-    "currentPlan": "Current Plan",
-    "active": "Active",
-    "planDescription": "Manage your subscription and billing",
-    "planName": "Plan",
+    "title": "Abbonamento",
+    "currentPlan": "Piano Attuale",
+    "active": "Attivo",
+    "planDescription": "Gestisci il tuo abbonamento e la fatturazione",
+    "planName": "Piano",
     "premium": "Premium",
-    "free": "Free",
-    "nextBilling": "Next billing date",
-    "cancelledNotice": "Your subscription will end on {{date}}",
-    "manageBilling": "Manage Billing",
-    "resume": "Resume Subscription",
-    "cancel": "Cancel Subscription",
-    "upgradeToPremium": "Upgrade to Premium",
+    "free": "Gratis",
+    "nextBilling": "Prossima data di fatturazione",
+    "cancelledNotice": "Il tuo abbonamento terminerà il {{date}}",
+    "manageBilling": "Gestisci Fatturazione",
+    "resume": "Riprendi Abbonamento",
+    "cancel": "Cancella Abbonamento",
+    "upgradeToPremium": "Passa a Premium",
     "features": {
-      "title": "Plan Features",
-      "premiumDescription": "You have access to all premium features",
-      "freeDescription": "Upgrade to unlock more features",
-      "unlimited": "Unlimited documents and assets",
-      "encryption": "Advanced encryption",
-      "priority": "Priority support",
-      "history": "Version history",
-      "basicWill": "Basic will document",
-      "limitedGuardians": "Up to 2 guardians",
-      "basicSupport": "Community support"
+      "title": "Funzionalità del Piano",
+      "premiumDescription": "Hai accesso a tutte le funzionalità premium",
+      "freeDescription": "Passa a premium per sbloccare più funzionalità",
+      "unlimited": "Documenti e beni illimitati",
+      "encryption": "Crittografia avanzata",
+      "priority": "Supporto prioritario",
+      "history": "Cronologia versioni",
+      "basicWill": "Documento di testamento base",
+      "limitedGuardians": "Fino a 2 custodi",
+      "basicSupport": "Supporto community"
     },
     "errors": {
-      "portalFailed": "Failed to open billing portal",
-      "cancelFailed": "Failed to cancel subscription",
-      "resumeFailed": "Failed to resume subscription"
+      "portalFailed": "Impossibile aprire il portale di fatturazione",
+      "cancelFailed": "Impossibile cancellare l'abbonamento",
+      "resumeFailed": "Impossibile riprendere l'abbonamento"
     },
-    "cancelSuccess": "Subscription cancelled successfully",
-    "resumeSuccess": "Subscription resumed successfully",
-    "successTitle": "Payment Successful!",
-    "successMessage": "Thank you for your purchase. Your subscription has been activated.",
-    "cancelTitle": "Payment Cancelled",
-    "cancelMessage": "It seems like your transaction was cancelled. Please try again or contact support."
+    "cancelSuccess": "Abbonamento cancellato con successo",
+    "resumeSuccess": "Abbonamento ripreso con successo",
+    "successTitle": "Pagamento Riuscito!",
+    "successMessage": "Grazie per il tuo acquisto. Il tuo abbonamento è stato attivato.",
+    "cancelTitle": "Pagamento Annullato",
+    "cancelMessage": "Sembra che la tua transazione sia stata annullata. Riprova o contatta il supporto."
   },
   "pricing": {
-    "title": "Scegli il Tuo Piano Eredità",
-    "subtitle": "Inizia con il nostro piano gratuito o passa a funzionalità premium.",
-    "mainTitle": "Scegli il Tuo Piano Eredità",
-    "mainSubtitle": "Inizia con il nostro piano gratuito o passa a funzionalità premium.",
+    "title": "Prezzi",
+    "subtitle": "Inizia gratis o passa a premium per più modi di proteggere i tuoi cari.",
+    "mainTitle": "Scegli Come Ti Prendi Cura",
+    "mainSubtitle": "Inizia gratis o aggiungi più funzionalità di protezione quando sei pronto.",
     "freePlan": {
-      "name": "Essential Protector",
-      "description": "Get started with basic features",
-      "price": "Free",
+      "name": "Protettore Essenziale",
+      "description": "Inizia con funzionalità base",
+      "price": "Gratis",
       "features": {
-        "will": "1 Will document",
-        "guardians": "2 Guardians",
-        "assets": "5 Assets",
-        "support": "Basic support"
+        "will": "1 documento di testamento",
+        "guardians": "2 Custodi",
+        "assets": "5 Beni",
+        "support": "Supporto base"
       }
     },
     "premiumPlan": {
-      "name": "Command Package",
-      "description": "Perfect for individuals and families",
-      "price": "$9.99 / month",
-      "upgradeButton": "Upgrade Now",
+      "name": "Pacchetto Command",
+      "description": "Perfetto per individui e famiglie",
+      "price": "9,99 € / mese",
+      "upgradeButton": "Passa Ora",
       "features": {
-        "will": "Unlimited Will documents",
-        "guardians": "Unlimited Guardians",
-        "assets": "Unlimited Assets",
-        "encryption": "Document encryption",
-        "access": "Emergency access",
-        "support": "Priority support",
-        "history": "Version history",
-        "templates": "Legal templates"
+        "will": "Documenti di testamento illimitati",
+        "guardians": "Custodi illimitati",
+        "assets": "Beni illimitati",
+        "encryption": "Crittografia documenti",
+        "access": "Accesso di emergenza",
+        "support": "Supporto prioritario",
+        "history": "Cronologia versioni",
+        "templates": "Modelli legali"
       }
     },
     "devMode": {
-      "title": "Developer Mode",
+      "title": "Modalità Sviluppatore",
       "button": {
-        "grant": "Dev Mode: Grant Premium Access",
-        "granting": "Granting..."
+        "grant": "Modalità Dev: Concedi Accesso Premium",
+        "granting": "Concessione..."
       },
-      "description": "This button is only visible in development mode. Click to instantly grant premium access for testing.",
-      "successMessage": "Developer premium access granted!",
-      "errorMessage": "Failed to grant developer premium access"
+      "description": "Questo pulsante è visibile solo in modalità sviluppo. Clicca per concedere istantaneamente l'accesso premium per i test.",
+      "successMessage": "Accesso premium sviluppatore concesso!",
+      "errorMessage": "Impossibile concedere l'accesso premium sviluppatore"
     },
     "errors": {
-      "checkoutFailed": "Failed to start checkout process"
+      "checkoutFailed": "Impossibile avviare il processo di checkout"
     },
     "starter": {
       "name": "Eredità Starter",
@@ -199,6 +199,6 @@
   },
   "upgradeCard": {
     "pricing_1": "/pricing",
-    "defaultButtonText": "Upgrade to Command Package"
+    "defaultButtonText": "Passa al Pacchetto Command"
   }
 }

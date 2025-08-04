@@ -16,25 +16,25 @@
   },
   "errorTest": {
     "title": "Test Logowania Błędów",
-    "description": "Test error handling and logging functionality",
+    "description": "Test funkcjonalności obsługi i logowania błędów",
     "triggerSyncError": "Wywołaj Błąd Synchroniczny (ErrorBoundary)",
     "triggerAsyncError": "Wywołaj Błąd Asynchroniczny",
     "logRegularError": "Zaloguj Zwykły Błąd",
     "logCriticalError": "Zaloguj Błąd Krytyczny",
     "triggerAlert": "Wywołaj Alert (6 Błędów Krytycznych)",
     "errorMessages": {
-      "testError": "Test error from ErrorTest component",
+      "testError": "Test błędu z komponentu ErrorTest",
       "testAsyncRejection": "Test asynchronicznego odrzucenia",
       "manualTestError": "Błąd testu ręcznego",
       "testCriticalError": "Test błędu krytycznego",
-      "criticalErrorWithIndex": "Critical error {{index}}"
+      "criticalErrorWithIndex": "Błąd krytyczny {{index}}"
     },
     "descriptions": {
-      "syncError": "Triggers a synchronous error that will be caught by the ErrorBoundary",
-      "asyncError": "Triggers an asynchronous error that will be caught by error handling",
-      "regularError": "Logs a regular error for testing error tracking",
-      "criticalError": "Logs a critical error for testing critical error handling",
-      "multipleErrors": "Triggers multiple critical errors to test alert thresholds"
+      "syncError": "Wywołuje błąd synchroniczny, który zostanie przechwycony przez ErrorBoundary",
+      "asyncError": "Wywołuje błąd asynchroniczny, który zostanie przechwycony przez obsługę błędów",
+      "regularError": "Loguje zwykły błąd do testowania śledzenia błędów",
+      "criticalError": "Loguje błąd krytyczny do testowania obsługi błędów krytycznych",
+      "multipleErrors": "Wywołuje wiele błędów krytycznych do testowania progów alertów"
     },
     "context": {
       "component": "ErrorTest",
@@ -43,10 +43,10 @@
     },
     "notifications": {
       "errorLogged": "Błąd pomyślnie zalogowany",
-      "criticalErrorLogged": "Critical error logged successfully",
-      "multipleErrorsTriggered": "Multiple critical errors triggered",
+      "criticalErrorLogged": "Błąd krytyczny pomyślnie zalogowany",
+      "multipleErrorsTriggered": "Wiele błędów krytycznych wywołanych",
       "errorBoundaryTriggered": "Granica błędu uruchomiona",
-      "asyncErrorCaught": "Async error caught and handled"
+      "asyncErrorCaught": "Błąd asynchroniczny przechwycony i obsłużony"
     }
   },
   "debug": {

@@ -1,5 +1,5 @@
 {
-  "_comment": "Shared translations used across the application",
+  "_comment": "Application settings and configuration",
   "settings": {
     "title": "Impostazioni",
     "subtitle": "Gestisci le preferenze del tuo account e le impostazioni di sicurezza",
@@ -58,42 +58,47 @@
     },
     "success": {
       "profileUpdated": "Profilo aggiornato con successo",
-      "passwordUpdated": "Password aggiornata con successo"
+      "passwordUpdated": "Password aggiornata con successo",
+      "welcome": {
+        "masculine": "Benvenuto! Le tue impostazioni sono state configurate con successo.",
+        "feminine": "Benvenuta! Le tue impostazioni sono state configurate con successo.",
+        "neutral": "Benvenut*! Le tue impostazioni sono state configurate con successo."
+      }
     },
     "privacySettings": {
-      "privacy_settings_1": "Privacy Settings",
-      "control_how_your_documents_are_2": "Control how your documents are processed and stored",
-      "default_processing_mode_3": "Default Processing Mode",
-      "choose_how_documents_are_proce_4": "Choose how documents are processed by default",
-      "hybrid_mode_recommended_5": "Hybrid Mode (Recommended)",
-      "combines_local_and_cloud_ai_fo_6": "Combines local and cloud AI for optimal performance and privacy",
-      "local_only_privacy_mode_7": "Local-Only Privacy Mode",
-      "processes_documents_entirely_i_8": "Processes documents entirely in your browser for maximum privacy",
-      "note_9": "Note: ",
-      "you_can_always_override_this_s_10": "You can always override this setting when uploading individual documents"
+      "privacy_settings_1": "Impostazioni Privacy",
+      "control_how_your_documents_are_2": "Controlla come i tuoi documenti vengono elaborati e archiviati",
+      "default_processing_mode_3": "Modalità di Elaborazione Predefinita",
+      "choose_how_documents_are_proce_4": "Scegli come i documenti vengono elaborati per impostazione predefinita",
+      "hybrid_mode_recommended_5": "Modalità Ibrida (Raccomandata)",
+      "combines_local_and_cloud_ai_fo_6": "Combina AI locale e cloud per prestazioni e privacy ottimali",
+      "local_only_privacy_mode_7": "Modalità Privacy Solo Locale",
+      "processes_documents_entirely_i_8": "Elabora i documenti interamente nel tuo browser per la massima privacy",
+      "note_9": "Nota: ",
+      "you_can_always_override_this_s_10": "Puoi sempre sovrascrivere questa impostazione quando carichi documenti individuali"
     }
   },
   "dataTransparency": {
-    "loadingMessage": "Loading your data transparency information...",
-    "loadingError": "Unable to load transparency data. Please try again later.",
-    "title": "Your Data, Your Control",
-    "description": "We believe in total transparency. Here's exactly how we handle your information.",
+    "loadingMessage": "Caricamento delle informazioni sulla trasparenza dei dati...",
+    "loadingError": "Impossibile caricare i dati di trasparenza. Riprova più tardi.",
+    "title": "I Tuoi Dati, Il Tuo Controllo",
+    "description": "Crediamo nella trasparenza totale. Ecco esattamente come gestiamo le tue informazioni.",
     "dataFlow": {
-      "whereDataLives": "Where Your Data Lives",
-      "collection": "Collection",
-      "storage": "Storage",
-      "processing": "Processing",
-      "sharing": "Sharing"
+      "whereDataLives": "Dove Vivono i Tuoi Dati",
+      "collection": "Raccolta",
+      "storage": "Archiviazione",
+      "processing": "Elaborazione",
+      "sharing": "Condivisione"
     },
     "recentActivity": {
-      "title": "Recent Activity",
-      "premiumTitle": "Unlock Your Permanent Watch Log",
-      "premiumText": "Your 30-day operational log provides basic security. For maximum accountability and peace of mind, upgrade to the Command Package to maintain a complete, unchangeable audit history of every action taken in your vault, forever."
+      "title": "Attività Recente",
+      "premiumTitle": "Sblocca il Tuo Registro di Sorveglianza Permanente",
+      "premiumText": "Il tuo registro operativo di 30 giorni fornisce sicurezza di base. Per la massima responsabilità e tranquillità, passa al Pacchetto Command per mantenere una cronologia di audit completa e immutabile di ogni azione intrapresa nella tua cassaforte, per sempre."
     },
     "dataOwnership": {
-      "title": "Data Ownership",
-      "description": "You own your data, always. You can download a complete copy at any time.",
-      "downloadButton": "Download My Data Archive"
+      "title": "Proprietà dei Dati",
+      "description": "I tuoi dati sono tuoi, sempre. Puoi scaricare una copia completa in qualsiasi momento.",
+      "downloadButton": "Scarica il Mio Archivio Dati"
     }
   },
   "cookies": {
@@ -102,81 +107,102 @@
     "acceptButton": "Accetta Tutti",
     "learnMoreLink": "Scopri di più",
     "policy": {
-      "title": "Cookie Policy",
-      "subtitle": "Understanding how we use cookies to improve your experience while respecting your privacy",
-      "lastUpdated": "Last Updated",
-      "required": "Required",
-      "purpose": "Purpose",
-      "examples": "Examples",
+      "title": "Informativa sui Cookie",
+      "subtitle": "Comprendere come utilizziamo i cookie per migliorare la tua esperienza rispettando la tua privacy",
+      "lastUpdated": "Ultimo Aggiornamento",
+      "required": "Richiesto",
+      "purpose": "Scopo",
+      "examples": "Esempi",
       "overview": {
-        "title": "Important Information",
-        "intro": "This Cookie Policy explains how LegacyGuard uses cookies and similar technologies to recognize you when you visit our website. It explains what these technologies are and why we use them, as well as your rights to control our use of them.",
-        "point1": "We use cookies to ensure the basic functionalities of our website",
-        "point2": "Some cookies are essential and cannot be disabled",
-        "point3": "You can control non-essential cookies through our consent manager",
-        "point4": "We never sell your data or use cookies for invasive tracking"
+        "title": "Informazioni Importanti",
+        "intro": "Questa Informativa sui Cookie spiega come LegacyGuard utilizza i cookie e tecnologie simili per riconoscerti quando visiti il nostro sito web. Spiega cosa sono queste tecnologie e perché le utilizziamo, nonché i tuoi diritti per controllare il nostro utilizzo.",
+        "point1": "Utilizziamo i cookie per garantire le funzionalità di base del nostro sito web",
+        "point2": "Alcuni cookie sono essenziali e non possono essere disabilitati",
+        "point3": "Puoi controllare i cookie non essenziali attraverso il nostro gestore del consenso",
+        "point4": "Non vendiamo mai i tuoi dati o utilizziamo i cookie per tracciamento invasivo"
       },
       "categories": {
-        "title": "Cookie Categories We Use"
+        "title": "Categorie di Cookie che Utilizziamo"
       },
       "necessary": {
-        "title": "Strictly Necessary Cookies",
-        "description": "These cookies are essential for the website to function properly",
-        "purpose": "Enable core functionality such as security, identity verification, and network management. These cookies cannot be disabled.",
+        "title": "Cookie Strettamente Necessari",
+        "description": "Questi cookie sono essenziali per il corretto funzionamento del sito web",
+        "purpose": "Abilita funzionalità core come sicurezza, verifica dell'identità e gestione della rete. Questi cookie non possono essere disabilitati.",
         "examples": {
-          "auth": "Keeps you logged in securely",
-          "session": "Maintains your session state",
-          "csrf": "Protects against cross-site request forgery",
-          "consent": "Remembers your cookie preferences"
+          "auth": "Ti mantiene loggato in modo sicuro",
+          "session": "Mantiene lo stato della tua sessione",
+          "csrf": "Protegge da attacchi cross-site request forgery",
+          "consent": "Ricorda le tue preferenze sui cookie"
         }
       },
       "analytics": {
-        "title": "Analytics Cookies",
-        "description": "Help us understand how visitors interact with our website",
-        "purpose": "Collect anonymous information about how you use our site, helping us improve user experience and identify issues.",
+        "title": "Cookie Analitici",
+        "description": "Ci aiutano a capire come i visitatori interagiscono con il nostro sito web",
+        "purpose": "Raccoglie informazioni anonime su come utilizzi il nostro sito, aiutandoci a migliorare l'esperienza utente e identificare problemi.",
         "examples": {
-          "ga": "Google Analytics tracking",
-          "gid": "Distinguishes users",
-          "session": "Groups activities within a session"
+          "ga": "Tracciamento Google Analytics",
+          "gid": "Distingue gli utenti",
+          "session": "Raggruppa le attività all'interno di una sessione"
         }
       },
       "marketing": {
-        "title": "Marketing Cookies",
-        "description": "Used to deliver relevant advertisements",
-        "purpose": "Track visitors across websites to display ads that are relevant and engaging for individual users.",
+        "title": "Cookie di Marketing",
+        "description": "Utilizzati per fornire pubblicità pertinenti",
+        "purpose": "Traccia i visitatori sui siti web per visualizzare annunci pertinenti e coinvolgenti per utenti individuali.",
         "examples": {
-          "facebook": "Facebook advertising",
-          "google": "Google Ads conversion tracking"
+          "facebook": "Pubblicità Facebook",
+          "google": "Tracciamento conversioni Google Ads"
         }
       },
       "preferences": {
-        "title": "Preference Cookies",
-        "description": "Remember your preferences and settings",
-        "purpose": "Allow the website to remember choices you make (such as language or region) and provide enhanced, personalized features.",
+        "title": "Cookie di Preferenze",
+        "description": "Ricorda le tue preferenze e impostazioni",
+        "purpose": "Consente al sito web di ricordare le scelte che fai (come lingua o regione) e fornisce funzionalità potenziate e personalizzate.",
         "examples": {
-          "theme": "Your chosen theme (light/dark)",
-          "language": "Your preferred language",
-          "ui": "UI customization preferences"
+          "theme": "Il tuo tema scelto (chiaro/scuro)",
+          "language": "La tua lingua preferita",
+          "ui": "Preferenze di personalizzazione UI"
         }
       },
       "yourRights": {
-        "title": "Your Rights",
-        "description": "You have full control over your cookie preferences",
-        "right1": "Access information about the cookies we use",
-        "right2": "Withdraw consent for non-essential cookies at any time",
-        "right3": "Delete cookies from your browser",
-        "right4": "Opt-out of analytics and marketing cookies"
+        "title": "I Tuoi Diritti",
+        "description": "Hai il controllo completo sulle tue preferenze sui cookie",
+        "right1": "Accedere alle informazioni sui cookie che utilizziamo",
+        "right2": "Ritirare il consenso per i cookie non essenziali in qualsiasi momento",
+        "right3": "Eliminare i cookie dal tuo browser",
+        "right4": "Rinunciare ai cookie analitici e di marketing"
       },
       "manage": {
-        "title": "Manage Your Cookie Preferences"
+        "title": "Gestisci le Tue Preferenze sui Cookie"
       },
       "contact": {
-        "title": "Contact Us About Cookies",
-        "description": "If you have any questions about our use of cookies or this Cookie Policy, please contact us:",
+        "title": "Contattaci sui Cookie",
+        "description": "Se hai domande sul nostro utilizzo dei cookie o su questa Informativa sui Cookie, contattaci:",
         "email": "Email",
-        "address": "Address",
-        "addressDetails": "LegacyGuard Ltd, Data Protection Office, 123 Privacy Street, Dublin, Ireland"
+        "address": "Indirizzo",
+        "addressDetails": "LegacyGuard Ltd, Ufficio Protezione Dati, 123 Privacy Street, Dublino, Irlanda"
       }
+    }
+  },
+  "genderPreference": {
+    "title": "Lingua e Pronomi",
+    "description": "Scegli come l'applicazione si rivolge a te. Questo ci aiuta a fornire una grammatica corretta nelle lingue che richiedono accordo di genere.",
+    "privacyNote": "Questa preferenza è memorizzata localmente e utilizzata solo per l'accuratezza grammaticale. Non viene mai condivisa o utilizzata per altri scopi.",
+    "selectLabel": "Come vorresti essere chiamato?",
+    "options": {
+      "masculine": "Forme maschili (lui)",
+      "feminine": "Forme femminili (lei)",
+      "neutral": "Forme neutre (loro)"
+    },
+    "save": "Salva Preferenza",
+    "saving": "Salvataggio...",
+    "saveSuccess": "La tua preferenza linguistica è stata salvata",
+    "saveError": "Impossibile salvare la preferenza. Riprova.",
+    "examples": {
+      "title": "Questo influisce su come il testo appare in determinate lingue:",
+      "greeting": "Saluti e messaggi di benvenuto",
+      "possessive": "Riferimenti ai tuoi documenti e beni",
+      "agreement": "Aggettivi e forme verbali che richiedono accordo di genere"
     }
   }
 }

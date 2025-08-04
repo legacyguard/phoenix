@@ -8,7 +8,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Checkbox } from '@/components/ui/checkbox';
 import { AlertTriangle, CheckCircle2, FileText, Globe } from 'lucide-react';
 import { WillTemplateService, WillTemplate } from '@/features/will-generator/api/WillTemplateService';
-import { useTranslation } from 'react-i18next';
+import { useGenderAwareTranslation } from '@/i18n/useGenderAwareTranslation';
 import { cn } from '@/lib/utils';
 
 interface WillGeneratorProps {
@@ -20,7 +20,7 @@ const WillGenerator: React.FC<WillGeneratorProps> = ({
   preselectedCountry = 'GB',
   onComplete
   }) => {
-    const { t } = useTranslation('common');
+    const { t } = useGenderAwareTranslation('common');
   const [currentStep, setCurrentStep] = useState(1);
   const [countryCode, setCountryCode] = useState(preselectedCountry);
   const [languageCode, setLanguageCode] = useState('en');

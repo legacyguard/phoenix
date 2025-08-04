@@ -2,9 +2,17 @@
   "_comment": "Shared translations used across the application",
   "onboarding": {
     "title": "Willkommen bei LegacyGuard",
-    "subtitle": "Lassen Sie uns Ihnen helfen, die Zukunft Ihrer Familie zu sichern.",
+    "subtitle": {
+      "masculine": "Lassen Sie uns Ihnen helfen, die Zukunft Ihrer Familie zu sichern.",
+      "feminine": "Lassen Sie uns Ihnen helfen, die Zukunft Ihrer Familie zu sichern.",
+      "neutral": "Lassen Sie uns Ihnen helfen, die Zukunft Ihrer Familie zu sichern."
+    },
     "mainTitle": "Aktionsplan",
-    "mainSubtitle": "Erstellen wir Ihren persönlichen Plan zum Schutz Ihres Erbes.",
+    "mainSubtitle": {
+      "masculine": "Erstellen wir Ihren persönlichen Plan zum Schutz Ihres Erbes.",
+      "feminine": "Erstellen wir Ihren persönlichen Plan zum Schutz Ihres Erbes.",
+      "neutral": "Erstellen wir Ihren persönlichen Plan zum Schutz Ihres Erbes."
+    },
     "progressText": "Aktionsplan: Schritt {{step}} von 4",
     "skipButton": "Vorerst überspringen",
     "skipConfirmTitle": "Einführung überspringen?",
@@ -95,7 +103,11 @@
       "subtitle": "Erstelle Ihren persönlichen 'Aktionsplan'...",
       "done": "Fertig!"
     },
-    "complete": "Großartiger Start! Wir haben Ihre Übersicht basierend auf Ihren Antworten personalisiert. Sie sind bereit, Ihren umfassenden Nachlassplan zu erstellen.",
+    "complete": {
+      "masculine": "Großartiger Start! Wir haben Ihre Übersicht basierend auf Ihren Antworten personalisiert. Sie sind bereit, Ihren umfassenden Nachlassplan zu erstellen.",
+      "feminine": "Großartiger Start! Wir haben Ihre Übersicht basierend auf Ihren Antworten personalisiert. Sie sind bereit, Ihren umfassenden Nachlassplan zu erstellen.",
+      "neutral": "Großartiger Start! Wir haben Ihre Übersicht basierend auf Ihren Antworten personalisiert. Sie sind bereit, Ihren umfassenden Nachlassplan zu erstellen."
+    },
     "success": {
       "stepCompleted": "Schritt {{step}} erfolgreich abgeschlossen!",
       "inventoryComplete": "Lebensinventar abgeschlossen! Ihr persönlicher Plan ist bereit.",
@@ -113,104 +125,104 @@
   },
   "demo": {
     "ai": {
-      "title": "LegacyGuard AI Integration Demo",
-      "subtitle": "Experience how AI can help organize and protect your family's legacy",
+      "title": "LegacyGuard KI-Integration Demo",
+      "subtitle": "Erleben Sie, wie KI helfen kann, das Erbe Ihrer Familie zu organisieren und zu schützen",
       "tabs": {
-        "documents": "Documents",
-        "questions": "Questions",
-        "suggestions": "Suggestions",
-        "messages": "Messages"
+        "documents": "Dokumente",
+        "questions": "Fragen",
+        "suggestions": "Vorschläge",
+        "messages": "Nachrichten"
       },
       "profile": {
-        "label": "Demo Profile:",
-        "documentsCount": "documents uploaded"
+        "label": "Demo-Profil:",
+        "documentsCount": "Dokumente hochgeladen"
       },
       "question": {
-        "category": "Category:"
+        "category": "Kategorie:"
       },
       "context": {
-        "label": "Current Context:",
-        "completion": "Completion:",
-        "recent": "Recent:",
-        "mood": "Mood:"
+        "label": "Aktueller Kontext:",
+        "completion": "Vervollständigung:",
+        "recent": "Kürzlich:",
+        "mood": "Stimmung:"
       },
       "suggestion": {
-        "priority": "Priority:"
+        "priority": "Priorität:"
       }
     },
     "upload": {
-      "title": "Magical Document Upload",
-      "subtitle": "Experience the future of secure document management",
+      "title": "Magischer Dokumenten-Upload",
+      "subtitle": "Erleben Sie die Zukunft der sicheren Dokumentenverwaltung",
       "badge": {
-        "encryption": "Auto Encrypt",
-        "aiAnalysis": "AI Analysis",
-        "familySharing": "Family Sharing"
+        "encryption": "Auto-Verschlüsselung",
+        "aiAnalysis": "KI-Analyse",
+        "familySharing": "Familien-Sharing"
       },
       "settings": {
-        "title": "Upload Settings",
-        "description": "Customize your document processing preferences",
-        "storageLocation": "Storage Location",
-        "local": "Local",
+        "title": "Upload-Einstellungen",
+        "description": "Passen Sie Ihre Dokumentenverarbeitungspräferenzen an",
+        "storageLocation": "Speicherort",
+        "local": "Lokal",
         "cloud": "Cloud"
       },
       "features": {
-        "autoCompress": "Auto Compress",
-        "autoEncrypt": "Auto Encrypt",
-        "processOCR": "Process OCR",
-        "aiAnalysis": "AI Analysis",
-        "familySharing": "Family Sharing"
+        "autoCompress": "Auto-Komprimierung",
+        "autoEncrypt": "Auto-Verschlüsselung",
+        "processOCR": "OCR-Verarbeitung",
+        "aiAnalysis": "KI-Analyse",
+        "familySharing": "Familien-Sharing"
       },
       "console": {
-        "uploadStarted": "Upload started",
-        "view": "View",
-        "download": "Download",
-        "share": "Share",
-        "delete": "Delete"
+        "uploadStarted": "Upload gestartet",
+        "view": "Ansehen",
+        "download": "Herunterladen",
+        "share": "Teilen",
+        "delete": "Löschen"
       },
       "tabs": {
         "upload": "Upload",
-        "documents": "Documents",
-        "stats": "Statistics"
+        "documents": "Dokumente",
+        "stats": "Statistiken"
       },
       "privacy": {
         "localMode": {
-          "title": "Privacy Mode Active:",
-          "description": "All documents are processed and stored exclusively on your device. No data leaves your browser."
+          "title": "Datenschutzmodus aktiv:",
+          "description": "Alle Dokumente werden ausschließlich auf Ihrem Gerät verarbeitet und gespeichert. Keine Daten verlassen Ihren Browser."
         },
         "cloudMode": {
-          "title": "Cloud Storage Active:",
-          "description": "Documents are encrypted before upload. Your encryption keys never leave your device."
+          "title": "Cloud-Speicher aktiv:",
+          "description": "Dokumente werden vor dem Upload verschlüsselt. Ihre Verschlüsselungsschlüssel verlassen niemals Ihr Gerät."
         }
       },
       "stats": {
         "localStorage": {
-          "title": "Local Storage",
-          "description": "Documents stored on device"
+          "title": "Lokaler Speicher",
+          "description": "Dokumente auf Gerät gespeichert"
         },
         "cloudStorage": {
-          "title": "Cloud Storage",
-          "description": "Documents in cloud"
+          "title": "Cloud-Speicher",
+          "description": "Dokumente in der Cloud"
         },
         "totalSize": {
-          "title": "Total Size",
-          "description": "Storage used"
+          "title": "Gesamtgröße",
+          "description": "Verwendeter Speicher"
         },
-        "successRate": "Success Rate",
-        "averageTime": "Average Upload Time"
+        "successRate": "Erfolgsrate",
+        "averageTime": "Durchschnittliche Upload-Zeit"
       },
       "progress": {
-        "title": "Upload Progress",
-        "completed": "{{count}} completed",
-        "failed": "{{count}} failed"
+        "title": "Upload-Fortschritt",
+        "completed": "{{count}} abgeschlossen",
+        "failed": "{{count}} fehlgeschlagen"
       }
     },
     "ocr": {
-      "title": "Privacy-First Document Processing",
-      "subtitle": "Extract text from documents while keeping everything on your device",
+      "title": "Datenschutzorientierte Dokumentenverarbeitung",
+      "subtitle": "Extrahieren Sie Text aus Dokumenten, während alles auf Ihrem Gerät bleibt",
       "features": {
-        "completePrivacy": "Complete Privacy",
-        "multiLanguage": "Multi-Language Support",
-        "smartDetection": "Smart Detection"
+        "completePrivacy": "Vollständiger Datenschutz",
+        "multiLanguage": "Mehrsprachige Unterstützung",
+        "smartDetection": "Intelligente Erkennung"
       }
     }
   },

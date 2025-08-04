@@ -1,103 +1,103 @@
 {
   "_comment": "Shared translations used across the application",
   "familyHub": {
-    "title": "Family Hub",
-    "subtitle": "Manage access levels and use preparedness tools to ensure your family is well-prepared.",
+    "title": "Centrum Rodzinne",
+    "subtitle": "Zarządzaj poziomami dostępu i używaj narzędzi przygotowania, aby zapewnić, że Twoja rodzina jest dobrze przygotowana.",
     "tabs": {
-      "familyMembers": "Family Members",
-      "members": "Members",
-      "preparednessTools": "Preparedness Tools",
-      "tools": "Tools"
+      "familyMembers": "Członkowie Rodziny",
+      "members": "Członkowie",
+      "preparednessTools": "Narzędzia Przygotowania",
+      "tools": "Narzędzia"
     },
     "overallPreparedness": {
-      "title": "Overall Family Preparedness",
-      "description": "This score reflects how ready your entire family is for an emergency.",
-      "improvementNeeded": "Your family's preparedness could be improved. Consider sending updates to those with lower scores."
+      "title": "Ogólne Przygotowanie Rodziny",
+      "description": "Ten wynik odzwierciedla, jak gotowa jest cała Twoja rodzina na nagły wypadek.",
+      "improvementNeeded": "Przygotowanie Twojej rodziny można poprawić. Rozważ wysłanie aktualizacji do osób z niższymi wynikami."
     },
     "emergencyProtocol": {
-      "title": "Emergency Protocol",
-      "description": "Emergency protocol allows trusted people with \"Emergency Only\" access to request information during critical situations. Requires confirmation from another trusted person.",
-      "configured": "Configured",
-      "configure": "Configure",
-      "activeMessage": "Emergency protocol is active and configured",
+      "title": "Protokół Awaryjny",
+      "description": "Protokół awaryjny pozwala zaufanym osobom z dostępem \"Tylko Awaryjny\" na żądanie informacji podczas krytycznych sytuacji. Wymaga potwierdzenia od innej zaufanej osoby.",
+      "configured": "Skonfigurowany",
+      "configure": "Skonfiguruj",
+      "activeMessage": "Protokół awaryjny jest aktywny i skonfigurowany",
       "configurationModal": {
-        "title": "Configure Emergency Protocol",
-        "description": "Set up how trusted people can access information during emergencies",
-        "requiredApprovals": "Required Approvals",
-        "requiredApprovalsDescription": "Number of trusted people who must approve emergency access",
-        "notificationSettings": "Notification Settings",
-        "notificationSettingsDescription": "Configure how you'll be notified of emergency requests",
-        "saveButton": "Save Configuration",
-        "cancelButton": "Cancel",
-        "saving": "Saving..."
+        "title": "Skonfiguruj Protokół Awaryjny",
+        "description": "Skonfiguruj, jak zaufane osoby mogą uzyskać dostęp do informacji podczas nagłych wypadków",
+        "requiredApprovals": "Wymagane Zatwierdzenia",
+        "requiredApprovalsDescription": "Liczba zaufanych osób, które muszą zatwierdzić dostęp awaryjny",
+        "notificationSettings": "Ustawienia Powiadomień",
+        "notificationSettingsDescription": "Skonfiguruj, jak będziesz powiadamiany o żądaniach awaryjnych",
+        "saveButton": "Zapisz Konfigurację",
+        "cancelButton": "Anuluj",
+        "saving": "Zapisywanie..."
       },
       "activationModal": {
-        "title": "Emergency Access Request",
-        "description": "Request emergency access to {{name}}'s information",
-        "reason": "Reason for Request",
-        "reasonPlaceholder": "Please describe the emergency situation...",
-        "confirmText": "I confirm this is a genuine emergency",
-        "requestButton": "Request Emergency Access",
-        "requesting": "Requesting..."
+        "title": "Żądanie Dostępu Awaryjnego",
+        "description": "Żądaj dostępu awaryjnego do informacji {{name}}",
+        "reason": "Powód Żądania",
+        "reasonPlaceholder": "Proszę opisać sytuację awaryjną...",
+        "confirmText": "Potwierdzam, że to prawdziwy nagły wypadek",
+        "requestButton": "Żądaj Dostępu Awaryjnego",
+        "requesting": "Żądanie..."
       },
       "errors": {
-        "configurationFailed": "Failed to save emergency protocol configuration",
-        "activationFailed": "Failed to request emergency access",
-        "invalidConfiguration": "Invalid configuration settings",
-        "notAuthorized": "You are not authorized to configure emergency protocol"
+        "configurationFailed": "Nie udało się zapisać konfiguracji protokołu awaryjnego",
+        "activationFailed": "Nie udało się żądać dostępu awaryjnego",
+        "invalidConfiguration": "Nieprawidłowe ustawienia konfiguracji",
+        "notAuthorized": "Nie masz uprawnień do konfigurowania protokołu awaryjnego"
       },
       "success": {
-        "configured": "Emergency protocol configured successfully",
-        "requested": "Emergency access request sent",
-        "approved": "Emergency access approved",
-        "denied": "Emergency access denied"
+        "configured": "Protokół awaryjny pomyślnie skonfigurowany",
+        "requested": "Żądanie dostępu awaryjnego wysłane",
+        "approved": "Dostęp awaryjny zatwierdzony",
+        "denied": "Dostęp awaryjny odrzucony"
       }
     },
     "memberManagement": {
-      "title": "Manage Your Trusted People",
-      "addTrustedPerson": "Add Trusted Person",
-      "addMorePeople": "Add more trusted people to your network",
-      "informationAccessLevel": "Information Access Level",
-      "preparedness": "Preparedness",
-      "lastContacted": "Last contacted",
-      "daysAgo": "{{days}} days ago",
-      "sendUpdate": "Send Update",
-      "sendUpdateTo": "Send Update to {{name}}",
-      "lastContactOver30Days": "Last contact over 30 days ago"
+      "title": "Zarządzaj Swoimi Zaufanymi Osobami",
+      "addTrustedPerson": "Dodaj Zaufaną Osobę",
+      "addMorePeople": "Dodaj więcej zaufanych osób do swojej sieci",
+      "informationAccessLevel": "Poziom Dostępu do Informacji",
+      "preparedness": "Przygotowanie",
+      "lastContacted": "Ostatni kontakt",
+      "daysAgo": "{{days}} dni temu",
+      "sendUpdate": "Wyślij Aktualizację",
+      "sendUpdateTo": "Wyślij Aktualizację do {{name}}",
+      "lastContactOver30Days": "Ostatni kontakt ponad 30 dni temu"
     },
     "accessLevels": {
       "none": {
-        "title": "None",
-        "description": "Cannot see any information"
+        "title": "Brak",
+        "description": "Nie może zobaczyć żadnych informacji"
       },
       "emergencyOnly": {
-        "title": "Emergency Only",
-        "description": "Access during emergencies",
-        "fullDescription": "Gains access only when emergency protocol is activated"
+        "title": "Tylko Awaryjny",
+        "description": "Dostęp podczas nagłych wypadków",
+        "fullDescription": "Uzyskuje dostęp tylko wtedy, gdy protokół awaryjny jest aktywowany"
       },
       "limitedInfo": {
-        "title": "Limited Info",
-        "description": "Basic information for preparation",
-        "fullDescription": "Can see basic information now to help them prepare"
+        "title": "Ograniczone Informacje",
+        "description": "Podstawowe informacje do przygotowania",
+        "fullDescription": "Może zobaczyć podstawowe informacje teraz, aby pomóc im się przygotować"
       },
       "fullAccess": {
-        "title": "Full Access",
-        "description": "All shared information",
-        "fullDescription": "Can see all information you've shared with them"
+        "title": "Pełny Dostęp",
+        "description": "Wszystkie udostępnione informacje",
+        "fullDescription": "Może zobaczyć wszystkie informacje, które z nimi udostępniłeś"
       }
     },
     "messages": {
-      "accessLevelUpdated": "Access level updated successfully",
-      "updateSentTo": "Update sent to {{name}}",
-      "failedToSendUpdate": "Failed to send update to {{name}}"
+      "accessLevelUpdated": "Poziom dostępu pomyślnie zaktualizowany",
+      "updateSentTo": "Aktualizacja wysłana do {{name}}",
+      "failedToSendUpdate": "Nie udało się wysłać aktualizacji do {{name}}"
     },
     "errors": {
-      "authenticationRequired": "Authentication required",
-      "failedToFetchData": "Failed to fetch family data",
-      "failedToLoadMembers": "Failed to load family members",
-      "failedToUpdateAccessLevel": "Failed to update access level",
-      "failedToSendUpdate": "Failed to send update",
-      "invalidAccessLevel": "Invalid access level",
+      "authenticationRequired": "Wymagane uwierzytelnienie",
+      "failedToFetchData": "Nie udało się pobrać danych rodzinnych",
+      "failedToLoadMembers": "Nie udało się załadować członków rodziny",
+      "failedToUpdateAccessLevel": "Nie udało się zaktualizować poziomu dostępu",
+      "failedToSendUpdate": "Nie udało się wysłać aktualizacji",
+      "invalidAccessLevel": "Nieprawidłowy poziom dostępu",
       "memberNotFound": "Family member not found"
     },
     "api": {

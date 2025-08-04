@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
+import { useGenderAwareTranslation } from '@/i18n/useGenderAwareTranslation';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -21,7 +21,7 @@ interface GuardianInvitation {
 export const InviteAcceptance: React.FC = () => {
   const { inviteToken } = useParams<{ inviteToken: string }>();
   const navigate = useNavigate();
-  const { t } = useTranslation('common');
+  const { t } = useGenderAwareTranslation('auth');
   const [invitation, setInvitation] = useState<GuardianInvitation | null>(null);
   const [loading, setLoading] = useState(true);
   const [processing, setProcessing] = useState(false);

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useTranslation } from 'react-i18next';
+import { useGenderAwareTranslation } from '@/i18n/useGenderAwareTranslation';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -28,7 +28,7 @@ interface Contact {
 }
 
 export const Will: React.FC = () => {
-  const { t } = useTranslation('common');
+  const { t } = useGenderAwareTranslation('common');
   const [will, setWill] = useState<Will | null>(null);
   const [contacts, setContacts] = useState<Contact[]>([]);
   const [isLoading, setIsLoading] = useState(true);

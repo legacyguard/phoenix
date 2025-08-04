@@ -3,72 +3,77 @@
   "will": {
     "title": "Testament",
     "fields": {
-      "notes": "Notes",
+      "notes": "Notatki",
       "status": "Status",
-      "physical_location": "Physical Location",
-      "executor_contact_id": "Executor Contact ID",
+      "physical_location": "Fizyczna Lokalizacja",
+      "executor_contact_id": "ID Kontaktu Wykonawcy",
       "currentStatus": "Obecny Status",
       "physicalLocation": "Fizyczna Lokalizacja",
       "executorContact": "Kontakt do Wykonawcy",
       "additionalNotes": "Dodatkowe Notatki"
     },
     "statuses": {
-      "draft": "Draft",
-      "pending_signatures": "Pending Signatures",
+      "draft": "Szkic",
+      "pending_signatures": "Oczekujące Podpisy",
       "completed": "Zakończone",
-      "needs_revision": "Needs Revision"
+      "needs_revision": "Wymaga Poprawy"
     },
     "actions": {
-      "save": "Save",
-      "edit": "Edit"
+      "save": "Zapisz",
+      "edit": "Edytuj"
     },
     "placeholders": {
-      "notes_placeholder": "Enter any additional notes here...",
+      "notes_placeholder": "Wprowadź tutaj wszelkie dodatkowe notatki...",
       "physicalLocation": "np. Sejf domowy, Kancelaria prawna",
       "selectContact": "Wybierz kontakt",
       "additionalNotes": "Wszelkie dodatkowe informacje..."
     },
     "errors": {
-      "unauthorized": "Unauthorized access.",
-      "save_will_failed": "Failed to save the will. Please try again.",
-      "retrieve_will_failed": "Failed to retrieve the will.",
-      "load_template_failed": "Failed to load template.",
-      "not_found": "Will not found.",
-      "failed_to_save": "Failed to save will.",
-      "failed_to_load": "Failed to load will.",
-      "failed_to_retrieve": "Failed to retrieve will.",
-      "failed_to_fetch": "Failed to fetch wills.",
-      "failed_to_generate": "Failed to generate will.",
-      "failed_to_sign": "Failed to sign will.",
-      "failed_to_delete": "Failed to delete will.",
-      "failed_to_notarize": "Failed to notarize will.",
-      "failed_to_update_status": "Failed to update will status.",
-      "failed_to_verify": "Failed to verify notarization.",
-      "cannot_update_non_draft": "Cannot update non-draft will.",
-      "cannot_delete_non_draft": "Cannot delete non-draft will.",
-      "must_be_signed": "Will must be signed before notarization.",
-      "verification_code_required": "Verification code required.",
-      "invalid_verification_code": "Invalid verification code.",
+      "unauthorized": "Nieautoryzowany dostęp.",
+      "save_will_failed": "Nie udało się zapisać testamentu. Proszę spróbować ponownie.",
+      "retrieve_will_failed": "Nie udało się pobrać testamentu.",
+      "load_template_failed": "Nie udało się załadować szablonu.",
+      "not_found": "Testament nie został znaleziony.",
+      "failed_to_save": "Nie udało się zapisać testamentu.",
+      "failed_to_load": "Nie udało się załadować testamentu.",
+      "failed_to_retrieve": "Nie udało się pobrać testamentu.",
+      "failed_to_fetch": "Nie udało się pobrać testamentów.",
+      "failed_to_generate": "Nie udało się wygenerować testamentu.",
+      "failed_to_sign": "Nie udało się podpisać testamentu.",
+      "failed_to_delete": "Nie udało się usunąć testamentu.",
+      "failed_to_notarize": "Nie udało się poświadczyć testamentu notarialnie.",
+      "failed_to_update_status": "Nie udało się zaktualizować statusu testamentu.",
+      "failed_to_verify": "Nie udało się zweryfikować poświadczenia notarialnego.",
+      "cannot_update_non_draft": "Nie można zaktualizować testamentu, który nie jest szkicem.",
+      "cannot_delete_non_draft": "Nie można usunąć testamentu, który nie jest szkicem.",
+      "must_be_signed": "Testament musi być podpisany przed poświadczeniem notarialnym.",
+      "verification_code_required": "Wymagany kod weryfikacyjny.",
+      "invalid_verification_code": "Nieprawidłowy kod weryfikacyjny.",
       "mustBeLoggedIn": "Musisz być zalogowany, aby zapisać.",
       "loadingFailed": "Nie udało się załadować testamentu.",
       "savingFailed": "Nie udało się zapisać testamentu."
     },
     "messages": {
-      "will_saved": "Will saved successfully.",
-      "template_loaded": "Template loaded successfully.",
-      "backup_success": "Backup created successfully.",
-      "backup_failed": "Failed to create a backup.",
+      "will_saved": "Testament pomyślnie zapisany.",
+      "template_loaded": "Szablon pomyślnie załadowany.",
+      "backup_success": "Kopia zapasowa pomyślnie utworzona.",
+      "backup_failed": "Nie udało się utworzyć kopii zapasowej.",
       "savedSuccessfully": "Testament pomyślnie zapisany.",
-      "documentUploaded": "Dokument pomyślnie przesłany."
+      "documentUploaded": "Dokument pomyślnie przesłany.",
+      "welcomeToWills": {
+        "masculine": "Witaj w sekcji Testamentów! Tutaj możesz tworzyć i zarządzać swoimi dokumentami testamentowymi.",
+        "feminine": "Witaj w sekcji Testamentów! Tutaj możesz tworzyć i zarządzać swoimi dokumentami testamentowymi.",
+        "neutral": "Witaj w sekcji Testamentów! Tutaj możesz tworzyć i zarządzać swoimi dokumentami testamentowymi."
+      }
     },
     "success": {
-      "will_saved": "Will saved successfully.",
-      "backup_created": "Backup created successfully.",
-      "notarized": "Will has been successfully notarized."
+      "will_saved": "Testament pomyślnie zapisany.",
+      "backup_created": "Kopia zapasowa pomyślnie utworzona.",
+      "notarized": "Testament został pomyślnie poświadczony notarialnie."
     },
     "instructions": {
-      "verify_info": "Verify all information before proceeding to next steps.",
-      "provide_full_details": "Please provide full details for accuracy."
+      "verify_info": "Zweryfikuj wszystkie informacje przed przejściem do następnych kroków.",
+      "provide_full_details": "Proszę podać pełne szczegóły dla dokładności."
     },
     "loading": "Ładowanie testamentu...",
     "subtitle": "Zarządzaj swoim testamentem i wyznacz wykonawców.",
@@ -457,7 +462,7 @@
     "generate_plan_4": "Generate Plan",
     "current_family_vulnerabilities_6": "Current Family Vulnerabilities",
     "without_proper_preparation_you_7": "Without proper preparation, you and your family could face these challenges",
-    "projected_timeline_8": "Projected Timeline",
+          "projected_timeline_8": "Przewidywany Harmonogram",
     "potential_financial_impact_9": "Potential Financial Impact",
     "these_are_estimates_of_the_pos_10": "These are estimates of the potential costs if vulnerabilities are not addressed",
     "no_will_11": "No Will: ",
@@ -521,9 +526,9 @@
       }
     },
     "labels": {
-      "before": "Before LegacyGuard",
-      "after": "After Heritage Vault",
-      "feeling": "Feeling"
+              "before": "Przed LegacyGuard",
+              "after": "Po Skarbcu Dziedzictwa",
+              "feeling": "Uczucie"
     },
     "bottomCta": {
       "primary": "Don't Let Your Family Face This Chaos",
@@ -532,8 +537,8 @@
     },
     "testimonials": {
       "1": "After my brother's sudden accident, I watched my sister-in-law struggle for weeks to find important documents and passwords. That's when I knew I couldn't let the same thing happen to my family.",
-      "2": "As a single mom running a business, I worried constantly about what would happen if something happened to me. Heritage Vault helped me organize everything.",
-      "3": "My wife has early-stage dementia, and I realized I needed to prepare while I still could. Heritage Vault made it simple to organize our 40 years of life together."
+              "2": "As a single mom running a business, I worried constantly about what would happen if something happened to me. Skarbiec Dziedzictwa helped me organize everything.",
+              "3": "My wife has early-stage dementia, and I realized I needed to prepare while I still could. Skarbiec Dziedzictwa made it simple to organize our 40 years of life together."
     }
   },
   "annualReview": {

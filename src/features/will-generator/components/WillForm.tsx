@@ -1,7 +1,7 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { useTranslation } from 'react-i18next';
+import { useGenderAwareTranslation } from '@/i18n/useGenderAwareTranslation';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -26,7 +26,7 @@ export const WillForm: React.FC<WillFormProps> = ({
   contacts = [],
   isLoading = false,
 }) => {
-  const { t } = useTranslation('common');
+  const { t } = useGenderAwareTranslation('common');
   
   const {
     register,

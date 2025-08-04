@@ -21,36 +21,36 @@
       "configure": "Konfigurieren",
       "activeMessage": "Notfallprotokoll ist aktiv und konfiguriert",
       "configurationModal": {
-        "title": "Configure Emergency Protocol",
-        "description": "Set up how trusted people can access information during emergencies",
-        "requiredApprovals": "Required Approvals",
-        "requiredApprovalsDescription": "Number of trusted people who must approve emergency access",
-        "notificationSettings": "Notification Settings",
-        "notificationSettingsDescription": "Configure how you'll be notified of emergency requests",
-        "saveButton": "Save Configuration",
-        "cancelButton": "Cancel",
-        "saving": "Saving..."
+        "title": "Notfallprotokoll konfigurieren",
+        "description": "Richten Sie ein, wie vertrauenswürdige Personen während Notfällen auf Informationen zugreifen können",
+        "requiredApprovals": "Erforderliche Genehmigungen",
+        "requiredApprovalsDescription": "Anzahl der vertrauenswürdigen Personen, die Notfallzugriff genehmigen müssen",
+        "notificationSettings": "Benachrichtigungseinstellungen",
+        "notificationSettingsDescription": "Konfigurieren Sie, wie Sie über Notfallanfragen benachrichtigt werden",
+        "saveButton": "Konfiguration speichern",
+        "cancelButton": "Abbrechen",
+        "saving": "Speichern..."
       },
       "activationModal": {
-        "title": "Emergency Access Request",
-        "description": "Request emergency access to {{name}}'s information",
-        "reason": "Reason for Request",
-        "reasonPlaceholder": "Please describe the emergency situation...",
-        "confirmText": "I confirm this is a genuine emergency",
-        "requestButton": "Request Emergency Access",
-        "requesting": "Requesting..."
+        "title": "Notfallzugriffsanfrage",
+        "description": "Notfallzugriff auf {{name}}s Informationen anfordern",
+        "reason": "Grund für die Anfrage",
+        "reasonPlaceholder": "Bitte beschreiben Sie die Notfallsituation...",
+        "confirmText": "Ich bestätige, dass dies ein echter Notfall ist",
+        "requestButton": "Notfallzugriff anfordern",
+        "requesting": "Wird angefordert..."
       },
       "errors": {
-        "configurationFailed": "Failed to save emergency protocol configuration",
-        "activationFailed": "Failed to request emergency access",
-        "invalidConfiguration": "Invalid configuration settings",
-        "notAuthorized": "You are not authorized to configure emergency protocol"
+        "configurationFailed": "Speichern der Notfallprotokoll-Konfiguration fehlgeschlagen",
+        "activationFailed": "Anforderung des Notfallzugriffs fehlgeschlagen",
+        "invalidConfiguration": "Ungültige Konfigurationseinstellungen",
+        "notAuthorized": "Sie sind nicht berechtigt, das Notfallprotokoll zu konfigurieren"
       },
       "success": {
-        "configured": "Emergency protocol configured successfully",
-        "requested": "Emergency access request sent",
-        "approved": "Emergency access approved",
-        "denied": "Emergency access denied"
+        "configured": "Notfallprotokoll erfolgreich konfiguriert",
+        "requested": "Notfallzugriffsanfrage gesendet",
+        "approved": "Notfallzugriff genehmigt",
+        "denied": "Notfallzugriff abgelehnt"
       }
     },
     "memberManagement": {
@@ -95,39 +95,39 @@
       "authenticationRequired": "Authentifizierung erforderlich",
       "failedToFetchData": "Familien-Daten konnten nicht abgerufen werden",
       "failedToLoadMembers": "Familienmitglieder konnten nicht geladen werden",
-      "failedToUpdateAccessLevel": "Failed to update access level",
-      "failedToSendUpdate": "Failed to send update",
-      "invalidAccessLevel": "Invalid access level",
-      "memberNotFound": "Family member not found"
+      "failedToUpdateAccessLevel": "Aktualisierung der Zugriffsebene fehlgeschlagen",
+      "failedToSendUpdate": "Senden des Updates fehlgeschlagen",
+      "invalidAccessLevel": "Ungültige Zugriffsebene",
+      "memberNotFound": "Familienmitglied nicht gefunden"
     },
     "api": {
       "routes": {
         "familyHub": {
           "success": {
-            "dataFetched": "Family data fetched successfully",
-            "accessLevelUpdated": "Access level updated successfully",
-            "updateSent": "Update sent successfully"
+            "dataFetched": "Familien-Daten erfolgreich abgerufen",
+            "accessLevelUpdated": "Zugriffsebene erfolgreich aktualisiert",
+            "updateSent": "Update erfolgreich gesendet"
           },
           "errors": {
-            "notAuthenticated": "User not authenticated",
-            "invalidRequest": "Invalid request data",
-            "memberNotFound": "Family member not found",
-            "updateFailed": "Failed to update family member",
-            "serverError": "Internal server error"
+            "notAuthenticated": "Benutzer nicht authentifiziert",
+            "invalidRequest": "Ungültige Anfragedaten",
+            "memberNotFound": "Familienmitglied nicht gefunden",
+            "updateFailed": "Aktualisierung des Familienmitglieds fehlgeschlagen",
+            "serverError": "Interner Serverfehler"
           }
         },
         "emergencyProtocol": {
           "success": {
-            "configurationSaved": "Emergency protocol configuration saved",
-            "protocolActivated": "Emergency protocol activated",
-            "accessGranted": "Emergency access granted",
-            "notificationSent": "Emergency notification sent"
+            "configurationSaved": "Notfallprotokoll-Konfiguration gespeichert",
+            "protocolActivated": "Notfallprotokoll aktiviert",
+            "accessGranted": "Notfallzugriff gewährt",
+            "notificationSent": "Notfallbenachrichtigung gesendet"
           },
           "errors": {
-            "configurationInvalid": "Invalid configuration parameters",
-            "activationDenied": "Emergency activation denied",
-            "insufficientApprovals": "Insufficient approvals for emergency access",
-            "notificationFailed": "Failed to send emergency notification"
+            "configurationInvalid": "Ungültige Konfigurationsparameter",
+            "activationDenied": "Notfallaktivierung abgelehnt",
+            "insufficientApprovals": "Unzureichende Genehmigungen für Notfallzugriff",
+            "notificationFailed": "Senden der Notfallbenachrichtigung fehlgeschlagen"
           }
         }
       }
@@ -135,11 +135,11 @@
   },
   "familyPreparedness": {
     "tools": {
-      "chooseScenario": "Choose an emergency scenario",
-      "cancel": "Cancel",
-      "generateGuide": "Generate Guide",
-      "generating": "Generating...",
-      "printGuide": "Print Guide"
+      "chooseScenario": "Wählen Sie ein Notfallszenario",
+      "cancel": "Abbrechen",
+      "generateGuide": "Anleitung generieren",
+      "generating": "Generiere...",
+      "printGuide": "Anleitung drucken"
     }
   },
   "familyPreparednessTools": {
@@ -378,18 +378,18 @@
     }
   },
   "lifeEvents": {
-    "title": "Life Events",
-    "subtitle": "Update your plan when major life changes occur",
-    "addEvent": "Add Life Event",
-    "noEvents": "No life events recorded yet",
-    "addFirstEvent": "Add your first life event to get started",
+    "title": "Lebensereignisse",
+    "subtitle": "Aktualisieren Sie Ihren Plan, wenn wichtige Lebensveränderungen eintreten",
+    "addEvent": "Lebensereignis hinzufügen",
+    "noEvents": "Noch keine Lebensereignisse aufgezeichnet",
+    "addFirstEvent": "Fügen Sie Ihr erstes Lebensereignis hinzu, um zu beginnen",
     "events": {
-      "marriedDivorced": "Marriage/Divorce Update",
-      "newChild": "New Child Update",
-      "boughtSoldHome": "Real Estate Update",
-      "startedBusiness": "New Business Update",
-      "trustedPersonPassed": "Update Trusted Persons",
-      "unknown": "Unknown Event"
+      "marriedDivorced": "Heirat/Scheidung Update",
+      "newChild": "Neues Kind Update",
+      "boughtSoldHome": "Immobilien Update",
+      "startedBusiness": "Neues Geschäft Update",
+      "trustedPersonPassed": "Vertrauenspersonen aktualisieren",
+      "unknown": "Unbekanntes Ereignis"
     },
     "congratsMessage": "Congratulations on your new child! Here are the recommended updates to your plan:",
     "tasks": {
