@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { useUser } from '@clerk/nextjs';
+import { useUser } from '@clerk/clerk-react';
 import { useCallback, useMemo } from 'react';
 import {
   GenderContext,
