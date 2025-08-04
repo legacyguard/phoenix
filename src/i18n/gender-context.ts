@@ -16,7 +16,7 @@ export interface GenderAwareTranslationOptions {
   // The gender of the person being referenced
   referenceGender?: GenderContext;
   // Other standard translation parameters
-  [key: string]: any;
+  [key: string]: string | number | boolean | GenderContext | undefined;
 }
 
 /**
@@ -54,7 +54,7 @@ export const requiresGenderContext = (languageCode: string): boolean => {
  * Get gender context from user profile or preferences
  * This would typically come from user settings or profile
  */
-export const getUserGenderContext = (userProfile?: any): GenderContext => {
+export const getUserGenderContext = (userProfile?: { gender?: string }): GenderContext => {
   if (!userProfile?.gender) return GenderContext.NEUTRAL;
   
   switch (userProfile.gender.toLowerCase()) {
