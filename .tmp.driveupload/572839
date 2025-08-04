@@ -1,0 +1,98 @@
+{
+  "_comment": "Shared translations used across the application",
+  "errorBoundary": {
+    "title": "Oops! Noe gikk galt",
+    "description": "Vi beklager ulempen. En uventet feil har oppstått.",
+    "errorId": "Feil-ID",
+    "tryAgain": "Prøv igjen",
+    "reloadPage": "Last siden på nytt",
+    "goToHomepage": "Gå til hjemmesiden",
+    "technicalDetails": "Tekniske detaljer",
+    "hide": "Skjul",
+    "show": "Vis",
+    "stackTrace": "Stack Trace",
+    "componentStack": "Component Stack",
+    "helpText": "Hvis problemet vedvarer, kontakt vår support med feil-ID-en."
+  },
+  "errorTest": {
+    "title": "Test av feillogging",
+    "description": "Test error handling and logging functionality",
+    "triggerSyncError": "Utløs synkron feil (ErrorBoundary)",
+    "triggerAsyncError": "Utløs asynkron feil",
+    "logRegularError": "Logg vanlig feil",
+    "logCriticalError": "Logg kritisk feil",
+    "triggerAlert": "Utløs varsel (6 kritiske feil)",
+    "errorMessages": {
+      "testError": "Test error from ErrorTest component",
+      "testAsyncRejection": "Test asynkron avvisning",
+      "manualTestError": "Manuell testfeil",
+      "testCriticalError": "Test kritisk feil",
+      "criticalErrorWithIndex": "Critical error {{index}}"
+    },
+    "descriptions": {
+      "syncError": "Triggers a synchronous error that will be caught by the ErrorBoundary",
+      "asyncError": "Triggers an asynchronous error that will be caught by error handling",
+      "regularError": "Logs a regular error for testing error tracking",
+      "criticalError": "Logs a critical error for testing critical error handling",
+      "multipleErrors": "Triggers multiple critical errors to test alert thresholds"
+    },
+    "context": {
+      "component": "ErrorTest",
+      "action": "button-click",
+      "severity": "high"
+    },
+    "notifications": {
+      "errorLogged": "Feil logget vellykket",
+      "criticalErrorLogged": "Critical error logged successfully",
+      "multipleErrorsTriggered": "Multiple critical errors triggered",
+      "errorBoundaryTriggered": "Feilgrense utløst",
+      "asyncErrorCaught": "Async error caught and handled"
+    }
+  },
+  "debug": {
+    "panel": {
+      "title": "Debug-panel",
+      "recentErrors": "Nylige applikasjonsfeil",
+      "technicalDetails": "Tekniske detaljer",
+      "tabs": {
+        "list": "Liste",
+        "details": "Detaljer"
+      },
+      "errorCount": "{{count}} feil",
+      "actions": {
+        "downloadErrors": "Last ned feil",
+        "clearAllErrors": "Slett alle feil"
+      },
+      "messages": {
+        "errorsCleared": "Alle feil slettet",
+        "errorCopied": "Feil kopiert til utklippstavlen",
+        "errorsDownloaded": "Feil lastet ned"
+      },
+      "error": {
+        "unknownError": "Ukjent feil",
+        "noMessage": "Ingen melding",
+        "errorMessage": "Feilmelding"
+      },
+      "sections": {
+        "stackTrace": "Stack Trace",
+        "context": "Kontekst",
+        "location": "Plassering",
+        "browserInfo": "Nettleserinformasjon",
+        "time": "Tid"
+      },
+      "fields": {
+        "url": "URL:",
+        "path": "Sti:",
+        "query": "Spørring:",
+        "userAgent": "Bruker-agent:",
+        "viewport": "Visningsområde:"
+      }
+    }
+  },
+  "test": {
+    "environment": {
+      "title": "Kun for testmiljø",
+      "description": "Denne siden er for testing av feilloggingssystemet. Fjern denne ruten før du ruller ut til produksjon."
+    }
+  }
+}

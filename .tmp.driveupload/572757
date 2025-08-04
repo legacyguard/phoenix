@@ -1,0 +1,253 @@
+{
+  "_comment": "Shared translations used across the application",
+  "documentTypes": {
+    "realEstateDeed": "Kiinteistön kauppakirja",
+    "birthCertificate": "Syntymätodistus",
+    "insurancePolicy": "Vakuutuskirja",
+    "lastWill": "Testamentti",
+    "employmentContract": "Työsopimus",
+    "passport": "Passi",
+    "drivingLicense": "Ajokortti",
+    "bankStatement": "Tiliote",
+    "investmentCertificate": "Sijoitustodistus",
+    "energyContract": "Energiasopimus",
+    "softwareLicense": "Ohjelmistolisenssi",
+    "subscriptionService": "Tilauspalvelu",
+    "other": "Muu"
+  },
+  "documentUpload": {
+    "fileUploadedSuccess": "Tiedosto ladattu onnistuneesti!",
+    "fileUploadFailed": "Tiedoston lataaminen epäonnistui. Yritä uudelleen.",
+    "fileTooLarge": "Valittu tiedosto on liian suuri. Enimmäiskoko on {{maxSize}} Mt.",
+    "fillRequiredFields": "Täytä kaikki vaaditut kentät.",
+    "loginToSave": "Sinun on oltava kirjautuneena sisään tallentaaksesi asiakirjoja.",
+    "saved": "Asiakirja tallennettu onnistuneesti!",
+    "failedSave": "Asiakirjan tallentaminen epäonnistui. Yritä uudelleen.",
+    "detailsTitle": "Asiakirjan tiedot",
+    "detailsSubtitle": "Lisää tietoja lataamastasi asiakirjasta.",
+    "namePlaceholder": "Syötä asiakirjan nimi",
+    "typePlaceholder": "Valitse asiakirjan tyyppi",
+    "countryPlaceholder": "Valitse maa",
+    "pickDate": "Valitse päivämäärä",
+    "title": "Lataa asiakirja",
+    "subtitle": "Lataa lailliset ja henkilökohtaiset asiakirjat turvallisesti.",
+    "browseFiles": "Selaa tiedostoja",
+    "chooseDifferent": "Valitse toinen tiedosto",
+    "uploadButton": "Lataa asiakirja",
+    "storageLimitReached": "Tiedostoa ei voi ladata. Sinulla on {{remaining}} tallennustilaa jäljellä, mutta tämä tiedosto on {{fileSize}}. Päivitä suunnitelmasi tai poista olemassa olevia tiedostoja."
+  },
+  "documentUploader": {
+    "smart_document_upload_2": "Älykäs asiakirjalataus",
+    "upload_any_document_and_our_ai_3": "Lataa mikä tahansa asiakirja ja tekoälymme luokittelee sen automaattisesti sinulle",
+    "please_upload_an_image_or_pdf__1": "Lataa kuva- tai PDF-tiedosto",
+    "image_application_pdf_4": "image/*,application/pdf",
+    "0_0_48_48_5": "0 0 48 48",
+    "m24_12v12m0_0l_4_4m4_4l4_4m10__6": "M24 12v12m0 0l-4 4m4-4l4 4m10-6",
+    "drop_your_document_here_or_cli_7": "Pudota asiakirjasi tähän tai klikkaa selataksesi",
+    "supports_images_and_pdfs_up_to_8": "Tukee kuvia ja PDF-tiedostoja jopa 10 Mt",
+    "document_analysis_complete_10": "Asiakirjan analyysi valmis",
+    "document_type_11": "Asiakirjan tyyppi",
+    "suggested_title_12": "Ehdotettu otsikko",
+    "confidence": "Luottamus",
+    "ai_analysis_13": "Tekoälyanalyysi",
+    "continue_with_this_classificat_14": "Jatka tällä luokittelulla",
+    "change_category_15": "Muuta kategoriaa",
+    "documents_we_can_process_16": "Asiakirjat, joita voimme käsitellä:",
+    "insurance_policies_life_health_17": "Vakuutuskirjat (henki-, terveys-, koti-, auto)",
+    "property_deeds_and_titles_18": "Kiinteistökauppakirjat ja omistusasiakirjat",
+    "vehicle_ownership_documents_19": "Ajoneuvon omistusasiakirjat",
+    "bank_and_investment_statements_20": "Pankki- ja sijoitustiliotteet",
+    "wills_and_estate_planning_docu_21": "Testamentit ja perintösuunnittelun asiakirjat",
+    "business_contracts_and_ownersh_22": "Yrityssopimukset ja omistusasiakirjat",
+    "personal_identification_docume_23": "Henkilöllisyystodistukset",
+    "tax_returns_and_documents_24": "Veroilmoitukset ja asiakirjat",
+    "categoryDescriptions": {
+      "insurance_policy": "Henki-, terveys-, koti-, auto- tai työkyvyttömyysvakuutus",
+      "property_deed": "Kiinteistön omistusasiakirjat ja kauppakirjat",
+      "vehicle_title": "Auton, veneen tai muun ajoneuvon omistusasiakirjat",
+      "bank_statement": "Pankkitiliotteet ja asiakirjat",
+      "investment_statement": "Sijoitus- ja eläketiliotteet",
+      "will_or_trust": "Testamentit, säätiöt ja perintösuunnittelun asiakirjat",
+      "business_document": "Yrityksen omistus ja tärkeät sopimukset",
+      "personal_id": "Passit, ajokortit, syntymätodistukset",
+      "tax_document": "Veroilmoitukset ja liittyvät asiakirjat",
+      "medical_document": "Lääketieteelliset asiakirjat ja terveydenhuolto-ohjeet",
+      "other": "Muut tärkeät asiakirjat"
+    },
+    "errors": {
+      "fileTypeError": "Lataa kuva- tai PDF-tiedosto",
+      "processingError": "Asiakirjan käsittely epäonnistui",
+      "uploadError": "Asiakirjan lataaminen epäonnistui",
+      "classificationError": "Asiakirjan luokittelu epäonnistui"
+    }
+  },
+  "vault": {
+    "title": "Holvi",
+    "subtitle": "Turvallinen inventaario kaikista taloudellisista varoistasi ja arvokkaista omaisuuseristäsi.",
+    "errorLoadingAssets": "Omaisuuseriesi lataaminen epäonnistui. Yritä uudelleen.",
+    "letsBuildInventory": "Rakennetaan inventaariosi",
+    "addProperty": "Lisää kiinteistö",
+    "addFinances": "Lisää rahoitukset",
+    "addVehicle": "Lisää ajoneuvo",
+    "addDigitalAsset": "Lisää digitaalinen omaisuuserä",
+    "addPersonalItem": "Lisää henkilökohtainen esine",
+    "addOther": "Lisää jotain muuta...",
+    "confirmDeletion": "Oletko varma, että haluat poistaa \"{{assetName}}\"?",
+    "errorDeletingAsset": "Omaisuuserän poistaminen epäonnistui. Yritä uudelleen.",
+    "searchPlaceholder": "Etsi omaisuuseriäsi...",
+    "addAsset": "Lisää omaisuuserä",
+    "totalAssets": "Omaisuuserät yhteensä",
+    "totalValue": "Kokonaisarvo",
+    "categories": "Kategoriat",
+    "noAssetsFound": "Omaisuuseriä ei löytynyt haulle \"{{searchQuery}}\"",
+    "startAddingAssets": "Aloita omaisuuserien lisääminen inventaariosi rakentamiseksi",
+    "addNewAsset": "Lisää uusi omaisuuserä",
+    "property": "Kiinteistö",
+    "finances": "Rahoitukset",
+    "vehicle": "Ajoneuvo",
+    "digital": "Digitaalinen",
+    "personal": "Henkilökohtainen",
+    "other": "Muu",
+    "fileUpload": {
+      "title": "Upload Files",
+      "dragDropText": "Drag and drop files here",
+      "clickToSelect": "or click to browse",
+      "maxSize": "Maximum file size: {{size}}",
+      "encryptFiles": "Encrypt Files",
+      "encryptDescription": "Files will be encrypted before upload for maximum security",
+      "tags": "Tags",
+      "addTag": "Add tag...",
+      "selectedFiles": "Selected Files",
+      "uploading": "Uploading...",
+      "uploadFiles": "Upload Files",
+      "uploadSuccess": "{{name}} uploaded successfully",
+      "uploadError": "Failed to upload {{name}}",
+      "maxFilesReached": "Maximum {{max}} files allowed",
+      "encryptionInfo": "Your files are encrypted with AES-256 encryption. Only you can decrypt them."
+    },
+    "fileList": {
+      "title": "Asset Files",
+      "noFiles": "No files uploaded yet",
+      "uploadFirst": "Upload your first file",
+      "searchFiles": "Search files...",
+      "filterByTag": "Filter by tag",
+      "sortBy": "Sort by",
+      "sortByName": "Name",
+      "sortByDate": "Date",
+      "sortBySize": "Size",
+      "download": "Download",
+      "share": "Share",
+      "delete": "Delete",
+      "confirmDelete": "Are you sure you want to delete this file?",
+      "deleteSuccess": "File deleted successfully",
+      "deleteError": "Failed to delete file",
+      "downloadError": "Failed to download file",
+      "encrypted": "Encrypted",
+      "sharedWith": "Shared with {{count}} people"
+    },
+    "sharing": {
+      "title": "Share File",
+      "shareWith": "Share with",
+      "emailPlaceholder": "Enter email address",
+      "expiresIn": "Expires in",
+      "hours": "hours",
+      "days": "days",
+      "shareButton": "Share",
+      "sharing": "Sharing...",
+      "shareSuccess": "File shared successfully",
+      "shareError": "Failed to share file",
+      "password": "Access Password",
+      "passwordInfo": "Share this password separately with the recipient",
+      "copyPassword": "Copy Password",
+      "activeShares": "Active Shares",
+      "noShares": "No active shares",
+      "revoke": "Revoke",
+      "revokeSuccess": "Share revoked successfully",
+      "revokeError": "Failed to revoke share",
+      "expiresAt": "Expires {{date}}",
+      "accessCount": "Accessed {{count}} times"
+    }
+  },
+  "upload": {
+    "zone": {
+      "dropHere": "Drop your important papers here",
+      "dropHereActive": "Yes! Drop them right here",
+      "description": "I'll organize everything for you - just drag files here or click to browse",
+      "descriptionActive": "I'm ready to organize everything for you",
+      "chooseFiles": "Choose Files",
+      "takePhoto": "Take Photo",
+      "processingLocally": "Processing locally on your device",
+      "dragOverlay": {
+        "title": "Drop your documents here",
+        "subtitle": "I'll take good care of them"
+      }
+    }
+  },
+  "createTimeCapsuleModal": {
+    "title": "Luo aikakapseli",
+    "titleCreate": "Luo aikakapseli",
+    "titleEdit": "Muokkaa aikakapselia",
+    "description": "Luo viesti, joka toimitetaan rakkaillesi tulevaisuudessa.",
+    "errors": {
+      "noTitle": "Syötä aikakapselillesi otsikko.",
+      "noRecipients": "Valitse vähintään yksi vastaanottaja.",
+      "noUnlockDate": "Valitse avauspäivä.",
+      "noMessage": "Syötä viestisi.",
+      "noFile": "Lataa tiedosto.",
+      "updateFailed": "Aikakapselin päivittäminen epäonnistui.",
+      "saveFailed": "Aikakapselin tallentaminen epäonnistui.",
+      "fileTooLarge": "Tiedostokoon on oltava alle 50 Mt.",
+      "invalidFileType": "Virheellinen tiedostotyyppi {{messageType}}:lle."
+    },
+    "success": {
+      "updated": "Aikakapseli päivitetty!",
+      "created": "Aikakapseli luotu!"
+    },
+    "labels": {
+      "title": "Otsikko",
+      "messageType": "Viestin tyyppi",
+      "recipients": "Vastaanottajat",
+      "deliveryQuestion": "Milloin tämän viestin pitäisi toimitetaan?",
+      "unlockDate": "Avauspäivä",
+      "yourMessage": "Viestisi",
+      "uploadFile": "Lataa {{messageType}}"
+    },
+    "placeholders": {
+      "title": "esim. 18-vuotissyntymäpäivääsi varten",
+      "message": "Kirjoita sydämellinen viestisi tähän...",
+      "selectDate": "Valitse päivämäärä"
+    },
+    "messageTypes": {
+      "text": "Tekstiviesti",
+      "photo": "Kuva",
+      "video": "Video",
+      "audio": "Ääni"
+    },
+    "recipients": {
+      "noTrustedPeople": "Et ole vielä lisännyt luotettavia henkilöitä. Lisää ne ensin työpöydältäsi.",
+      "selected": "Valittu"
+    },
+    "unlockConditions": {
+      "onDate": "Tiettynä päivänä",
+      "afterPassing": "Kuolemani jälkeen"
+    },
+    "fileUpload": {
+      "clickToUpload": "Klikkaa ladataksesi",
+      "dragAndDrop": " tai raahaa ja pudota",
+      "maxSize": "Maksimikoko: 50 Mt",
+      "fileSizeMB": "{{size}} Mt"
+    },
+    "premium": {
+      "videoMessage": "Videoviestit ovat premium-ominaisuus.",
+      "upgradeNow": "Päivitä nyt"
+    },
+    "buttons": {
+      "recordVideo": "Tallenna videoviesti",
+      "cancel": "Peruuta",
+      "saving": "Tallennetaan...",
+      "update": "Päivitä aikakapseli",
+      "create": "Luo aikakapseli"
+    },
+    "characterCount": "{{count}}/{{max}} merkkiä"
+  }
+}

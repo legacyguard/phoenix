@@ -1,0 +1,98 @@
+{
+  "_comment": "Shared translations used across the application",
+  "errorBoundary": {
+    "title": "Ups! Algo correu mal",
+    "description": "Pedimos desculpa pelo incómodo. Ocorreu um erro inesperado.",
+    "errorId": "ID do Erro",
+    "tryAgain": "Tentar Novamente",
+    "reloadPage": "Recarregar Página",
+    "goToHomepage": "Ir para a Página Inicial",
+    "technicalDetails": "Detalhes Técnicos",
+    "hide": "Esconder",
+    "show": "Mostrar",
+    "stackTrace": "Rastreio da Pilha",
+    "componentStack": "Pilha de Componentes",
+    "helpText": "Se o problema persistir, contacte o nosso suporte com o ID do erro."
+  },
+  "errorTest": {
+    "title": "Teste de Registo de Erros",
+    "description": "Test error handling and logging functionality",
+    "triggerSyncError": "Despoletar Erro Síncrono (ErrorBoundary)",
+    "triggerAsyncError": "Despoletar Erro Assíncrono",
+    "logRegularError": "Registar Erro Regular",
+    "logCriticalError": "Registar Erro Crítico",
+    "triggerAlert": "Despoletar Alerta (6 Erros Críticos)",
+    "errorMessages": {
+      "testError": "Test error from ErrorTest component",
+      "testAsyncRejection": "Teste de rejeição assíncrona",
+      "manualTestError": "Erro de teste manual",
+      "testCriticalError": "Teste de erro crítico",
+      "criticalErrorWithIndex": "Critical error {{index}}"
+    },
+    "descriptions": {
+      "syncError": "Triggers a synchronous error that will be caught by the ErrorBoundary",
+      "asyncError": "Triggers an asynchronous error that will be caught by error handling",
+      "regularError": "Logs a regular error for testing error tracking",
+      "criticalError": "Logs a critical error for testing critical error handling",
+      "multipleErrors": "Triggers multiple critical errors to test alert thresholds"
+    },
+    "context": {
+      "component": "ErrorTest",
+      "action": "button-click",
+      "severity": "high"
+    },
+    "notifications": {
+      "errorLogged": "Erro registrado com sucesso",
+      "criticalErrorLogged": "Critical error logged successfully",
+      "multipleErrorsTriggered": "Multiple critical errors triggered",
+      "errorBoundaryTriggered": "Limite de erro ativado",
+      "asyncErrorCaught": "Async error caught and handled"
+    }
+  },
+  "debug": {
+    "panel": {
+      "title": "Painel de Depuração",
+      "recentErrors": "Erros recentes da aplicação",
+      "technicalDetails": "Detalhes Técnicos",
+      "tabs": {
+        "list": "Lista",
+        "details": "Detalhes"
+      },
+      "errorCount": "{{count}} erros",
+      "actions": {
+        "downloadErrors": "Descarregar erros",
+        "clearAllErrors": "Limpar todos os erros"
+      },
+      "messages": {
+        "errorsCleared": "Todos os erros foram limpos",
+        "errorCopied": "Erro copiado para a área de transferência",
+        "errorsDownloaded": "Erros descarregados"
+      },
+      "error": {
+        "unknownError": "Erro Desconhecido",
+        "noMessage": "Sem mensagem",
+        "errorMessage": "Mensagem de Erro"
+      },
+      "sections": {
+        "stackTrace": "Rastreio da Pilha",
+        "context": "Contexto",
+        "location": "Localização",
+        "browserInfo": "Informações do Navegador",
+        "time": "Hora"
+      },
+      "fields": {
+        "url": "URL:",
+        "path": "Caminho:",
+        "query": "Consulta:",
+        "userAgent": "Agente do usuário:",
+        "viewport": "Área de visualização:"
+      }
+    }
+  },
+  "test": {
+    "environment": {
+      "title": "Apenas para ambiente de teste",
+      "description": "Esta página é para testar o sistema de registro de erros. Remova esta rota antes de implantar na produção."
+    }
+  }
+}

@@ -1,0 +1,3990 @@
+{
+  "_comment": "Shared translations used across the application",
+  "common": {
+    "loading": "Laden...",
+    "viewDetails": "View Details",
+    "edit": "Edit",
+    "delete": "Delete",
+    "addedOn": "Added {{date}}",
+    "priority": {
+      "high": "Hoch",
+      "medium": "Mittel",
+      "low": "Niedrig"
+    },
+    "pagination": {
+      "previous": "Previous",
+      "next": "Next",
+      "morePages": "More pages",
+      "page": "Page",
+      "of": "of",
+      "showing": "Showing",
+      "to": "to",
+      "results": "results",
+      "perPage": "per page",
+      "goToPage": "Go to page",
+      "currentPage": "Current page",
+      "totalPages": "Total pages",
+      "firstPage": "First page",
+      "lastPage": "Last page",
+      "pageInfo": "Page {{current}} of {{total}}",
+      "resultsInfo": "Showing {{start}} to {{end}} of {{total}} results",
+      "noResults": "No results found",
+      "loading": "Loading...",
+      "navigation": {
+        "title": "Pagination Navigation",
+        "description": "Navigate through pages of results",
+        "first": "Go to first page",
+        "last": "Go to last page",
+        "previous": "Go to previous page",
+        "next": "Go to next page",
+        "page": "Go to page {{number}}"
+      },
+      "accessibility": {
+        "pagination": "Pagination",
+        "currentPage": "Current page, page {{number}}",
+        "page": "Page {{number}}",
+        "previousPage": "Previous page",
+        "nextPage": "Next page",
+        "firstPage": "First page",
+        "lastPage": "Last page",
+        "morePages": "More pages available"
+      }
+    },
+    "errors": {
+      "missingClerkKey": "Missing Clerk Publishable Key",
+      "errorLoadingApp": "Error loading app",
+      "unauthorized": "Unauthorized",
+      "invalidAuthentication": "Invalid authentication",
+      "internalServerError": "Internal server error",
+      "missingRequiredFields": "Missing required fields",
+      "failedToFetchProfile": "Failed to fetch user profile"
+    },
+    "redirect": {
+      "simulationTitle": "Redirect Simulation"
+    },
+    "ui": {
+      "close": "Close",
+      "more": "More",
+      "previousSlide": "Previous slide",
+      "nextSlide": "Next slide",
+      "toggleSidebar": "Toggle Sidebar",
+      "goToPreviousPage": "Go to previous page",
+      "goToNextPage": "Go to next page",
+      "carousel": {
+        "title": "Carousel",
+        "description": "Image carousel with navigation controls",
+        "previousSlide": "Previous slide",
+        "nextSlide": "Next slide",
+        "currentSlide": "Current slide",
+        "slide": "Slide",
+        "of": "of",
+        "slideInfo": "Slide {{current}} of {{total}}",
+        "goToSlide": "Go to slide {{number}}",
+        "autoplay": "Autoplay",
+        "pauseAutoplay": "Pause autoplay",
+        "resumeAutoplay": "Resume autoplay",
+        "stopAutoplay": "Stop autoplay",
+        "carouselNavigation": "Carousel navigation",
+        "carouselControls": "Carousel controls",
+        "slideNavigation": "Slide navigation",
+        "imageCarousel": "Image carousel",
+        "contentCarousel": "Content carousel",
+        "gallery": "Gallery",
+        "photoGallery": "Photo gallery",
+        "imageGallery": "Image gallery",
+        "slideshow": "Slideshow",
+        "presentation": "Presentation",
+        "showcase": "Showcase",
+        "browseImages": "Browse images",
+        "viewImages": "View images",
+        "navigateSlides": "Navigate slides",
+        "slideCount": "{{count}} slides",
+        "slideCountSingular": "{{count}} slide",
+        "slideCountPlural": "{{count}} slides",
+        "accessibility": {
+          "carousel": "Carousel",
+          "slide": "Slide",
+          "currentSlide": "Current slide, slide {{number}}",
+          "previousSlide": "Previous slide",
+          "nextSlide": "Next slide",
+          "goToSlide": "Go to slide {{number}}",
+          "slideCount": "Slide {{current}} of {{total}}",
+          "carouselNavigation": "Carousel navigation controls",
+          "slideNavigation": "Slide navigation controls",
+          "autoplayEnabled": "Autoplay enabled",
+          "autoplayDisabled": "Autoplay disabled",
+          "autoplayPaused": "Autoplay paused",
+          "autoplayStopped": "Autoplay stopped"
+        }
+      },
+      "form": {
+        "title": "Form",
+        "description": "Description",
+        "label": "Label",
+        "placeholder": "Placeholder",
+        "error": "Error",
+        "success": "Success",
+        "warning": "Warning",
+        "info": "Information",
+        "required": "Required",
+        "optional": "Optional",
+        "submit": "Submit",
+        "cancel": "Cancel",
+        "save": "Save",
+        "reset": "Reset",
+        "clear": "Clear",
+        "loading": "Loading...",
+        "saving": "Saving...",
+        "submitting": "Submitting...",
+        "validating": "Validating...",
+        "accessibility": {
+          "form": "Form",
+          "field": "Form field",
+          "required": "Required field",
+          "optional": "Optional field",
+          "error": "Field has error",
+          "success": "Field is valid",
+          "warning": "Field has warning",
+          "description": "Field description",
+          "label": "Field label"
+        },
+        "validation": {
+          "required": "This field is required",
+          "invalid": "This field is invalid",
+          "minLength": "Must be at least {{min}} characters",
+          "maxLength": "Must be no more than {{max}} characters",
+          "minValue": "Must be at least {{min}}",
+          "maxValue": "Must be no more than {{max}}",
+          "pattern": "Must match the required pattern",
+          "email": "Must be a valid email address",
+          "url": "Must be a valid URL",
+          "phone": "Must be a valid phone number",
+          "date": "Must be a valid date",
+          "time": "Must be a valid time",
+          "number": "Must be a valid number",
+          "integer": "Must be a whole number",
+          "positive": "Must be a positive number",
+          "negative": "Must be a negative number",
+          "between": "Must be between {{min}} and {{max}}",
+          "oneOf": "Must be one of the allowed values",
+          "custom": "Invalid value",
+          "unknown": "Unknown validation error"
+        },
+        "errors": {
+          "general": "Please fix the errors in the form",
+          "network": "Network error occurred",
+          "server": "Server error occurred",
+          "timeout": "Request timed out",
+          "unauthorized": "You are not authorized to perform this action",
+          "forbidden": "Access denied",
+          "notFound": "Resource not found",
+          "conflict": "Resource conflict",
+          "validation": "Validation failed",
+          "unknown": "An unknown error occurred"
+        },
+        "messages": {
+          "saved": "Form saved successfully",
+          "submitted": "Form submitted successfully",
+          "updated": "Form updated successfully",
+          "deleted": "Form deleted successfully",
+          "created": "Form created successfully",
+          "loaded": "Form loaded successfully",
+          "reset": "Form reset successfully",
+          "cleared": "Form cleared successfully"
+        }
+      },
+      "breadcrumb": {
+        "title": "Breadcrumb Navigation",
+        "description": "Navigation breadcrumb showing current location",
+        "separator": "Separator",
+        "ellipsis": "More",
+        "currentPage": "Current page",
+        "home": "Home",
+        "back": "Back",
+        "previous": "Previous",
+        "next": "Next",
+        "navigation": "Navigation",
+        "location": "Location",
+        "path": "Path",
+        "breadcrumb": "Breadcrumb",
+        "breadcrumbs": "Breadcrumbs",
+        "separatorText": "Separator",
+        "separatorDescription": "Separator between breadcrumb items",
+        "ellipsisText": "More items",
+        "ellipsisDescription": "More breadcrumb items available",
+        "accessibility": {
+          "breadcrumb": "Breadcrumb navigation",
+          "currentPage": "Current page",
+          "separator": "Separator",
+          "ellipsis": "More items",
+          "navigation": "Breadcrumb navigation",
+          "location": "Current location",
+          "path": "Navigation path",
+          "item": "Breadcrumb item",
+          "link": "Breadcrumb link",
+          "page": "Current page"
+        },
+        "separators": {
+          "chevron": "Chevron",
+          "slash": "Slash",
+          "arrow": "Arrow",
+          "greaterThan": "Greater than",
+          "dash": "Dash",
+          "dot": "Dot",
+          "pipe": "Pipe",
+          "default": "Default separator"
+        },
+        "messages": {
+          "navigateTo": "Navigate to {{item}}",
+          "currentLocation": "Current location: {{location}}",
+          "breadcrumbPath": "Breadcrumb path: {{path}}",
+          "moreItems": "More items available",
+          "separatorBetween": "Separator between {{item1}} and {{item2}}"
+        }
+      }
+    },
+    "auth": {
+      "protectedApplication": "Protected Application",
+      "protectedApplicationDesc": "This application is protected. Please enter the password to access.",
+      "incorrectPassword": "Incorrect password. Please try again.",
+      "password": "Password",
+      "enterPassword": "Enter your password",
+      "accessApplication": "Access Application"
+    },
+    "routeErrorBoundary": {
+      "code_1": "Fehlercode: ",
+      "reload_page_2": "Seite neu laden",
+      "technical_details_3": "Technische Details",
+      "pageNotFound": "Seite nicht gefunden",
+      "errorLoadingPage": "Fehler beim Laden der Seite",
+      "pageNotFoundDescription": "Die angeforderte Seite existiert nicht oder wurde verschoben.",
+      "errorLoadingPageDescription": "Beim Laden dieser Seite ist ein Fehler aufgetreten.",
+      "unknownError": "Unbekannter Fehler",
+      "home": "Startseite",
+      "errorDetails": "Fehlerdetails",
+      "errorLogging": "Fehlerprotokollierung",
+      "timestamp": "Zeitstempel",
+      "errorMessage": "Fehlermeldung",
+      "errorStatus": "Fehlerstatus",
+      "errorDetailsLabel": "Fehlerdetails",
+      "location": "Standort",
+      "consoleLog": "Fehler in Konsole protokolliert",
+      "actions": {
+        "goHome": "Zur Startseite",
+        "reloadPage": "Aktuelle Seite neu laden",
+        "viewDetails": "Technische Details anzeigen",
+        "hideDetails": "Technische Details ausblenden"
+      },
+      "messages": {
+        "errorCaught": "Fehler von RouteErrorBoundary abgefangen",
+        "errorLogged": "Fehlerdetails wurden protokolliert",
+        "contactSupport": "Wenn dieser Fehler weiterhin auftritt, kontaktieren Sie bitte den Support"
+      }
+    }
+  },
+  "action": {
+    "loading": "Laden...",
+    "submit": "Absenden",
+    "cancel": "Abbrechen",
+    "save": "Speichern",
+    "delete": "Löschen",
+    "edit": "Bearbeiten",
+    "add": "Hinzufügen",
+    "remove": "Entfernen",
+    "search": "Suchen",
+    "filter": "Filtern"
+  },
+  "cta": {
+    "title": "Ihr Erbe wartet auf Schutz",
+    "subtitle": "Don't wait for 'someday' - give your family security today",
+    "description": "Schließen Sie sich Tausenden von Familien an, die LegacyGuard vertrauen, um ihre wertvollsten Erinnerungen und wichtigen Dokumente für zukünftige Generationen zu bewahren.",
+    "button": "Beginnen Sie noch heute Ihre Reise zum digitalen Erbe",
+    "secondary": "Start Free Trial",
+    "urgency": "Setup takes 10 minutes, being prepared lasts forever",
+    "gentleUrgency": {
+      "1": "Every day matters when it comes to family security",
+      "2": "The best time to prepare was yesterday, the second best time is now",
+      "3": "Your family's security and preparedness can't wait",
+      "4": "10 minutes today saves your family 40+ hours later"
+    },
+    "socialUrgency": {
+      "1": "Join the families who are already prepared",
+      "2": "Don't be the family that wishes they had organized sooner",
+      "3": "Be the parent/spouse who thought ahead"
+    },
+    "timeUrgency": {
+      "1": "Start today, sleep better tonight",
+      "2": "Complete setup this weekend",
+      "3": "Give your family this gift today"
+    }
+  },
+  "validation": {
+    "errors": {
+      "nameMinLength": "Der Name muss mindestens 2 Zeichen lang sein.",
+      "nameMaxLength": "Der Name darf höchstens {{max}} Zeichen lang sein.",
+      "fieldRequired": "Das Feld '{{field}}' ist erforderlich.",
+      "countryRequired": "Land ist erforderlich.",
+      "countryCodeLength": "Der Ländercode muss 2 Zeichen lang sein.",
+      "selectAtLeastOne": "Wählen Sie mindestens ein '{{field}}' aus.",
+      "selectUpTo": "Sie können bis zu {{max}} '{{field}}' auswählen.",
+      "invalidEmail": "Geben Sie eine gültige E-Mail-Adresse ein.",
+      "invalidPhone": "Geben Sie eine gültige Telefonnummer ein.",
+      "valueMustBeNumber": "Der Wert muss eine Zahl sein.",
+      "valueMustBePositive": "Der Wert muss positiv sein.",
+      "currencyCodeLength": "Der Währungscode muss 3 Zeichen lang sein.",
+      "maxCharacters": "Das Feld '{{field}}' darf maximal {{max}} Zeichen lang sein.",
+      "allocationRequired": "Der Zuteilungsprozentsatz ist erforderlich.",
+      "allocationMustBeNumber": "Die Zuteilung muss eine Zahl sein.",
+      "allocationRange": "Die Zuteilung muss zwischen 1 % und 100 % liegen.",
+      "expirationDateFuture": "Das Ablaufdatum muss in der Zukunft liegen.",
+      "maxTags": "Sie können maximal {{max}} Tags hinzufügen.",
+      "fileSizeTooLarge": "Die Dateigröße muss {{maxSize}} oder weniger betragen.",
+      "invalidFileType": "Nur {{types}}-Dateien sind erlaubt.",
+      "unknownError": "Unbekannter Fehler.",
+      "dataNotFound": "Erforderliche Daten wurden nicht gefunden.",
+      "connectionError": "Verbindungsfehler. Bitte überprüfen Sie Ihre Internetverbindung.",
+      "permissionDenied": "Sie haben keine Berechtigung, diese Aktion durchzuführen.",
+      "duplicateRecord": "Ein Datensatz mit diesen Informationen existiert bereits.",
+      "assetNameRequired": "Asset name is required",
+      "assetTypeRequired": "Asset type is required",
+      "addressMaxLength": "Address can be a maximum of {{max}} characters",
+      "registryNumberMaxLength": "Registry number can be a maximum of {{max}} characters",
+      "institutionNameMaxLength": "Institution name can be a maximum of {{max}} characters",
+      "accountNumberMaxLength": "Account number can be a maximum of {{max}} characters",
+      "credentialsMaxLength": "Credentials can be a maximum of {{max}} characters",
+      "relationshipRequired": "Relationship is required",
+      "beneficiaryNameRequired": "Beneficiary name is required (min. 2 characters)",
+      "notesMaxLength": "Notes can be a maximum of {{max}} characters",
+      "documentNameRequired": "Document name is required",
+      "documentTypeRequired": "Document type is required",
+      "descriptionMaxLength": "Description can be a maximum of {{max}} characters"
+    }
+  },
+  "errors": {
+    "dataNotFound": "Erforderliche Daten nicht gefunden.",
+    "networkError": "Netzwerkfehler. Bitte überprüfen Sie Ihre Internetverbindung.",
+    "permissionDenied": "Sie haben keine Berechtigung für diese Aktion.",
+    "duplicateRecord": "Ein Datensatz mit diesen Daten existiert bereits.",
+    "unknown": "Ein unerwarteter Fehler ist aufgetreten."
+  },
+  "app": {
+    "name": "LegacyGuard",
+    "comingSoon": {
+      "heritageVault": "Heritage Vault - Coming Soon",
+      "guardianNetwork": "Guardian Network - Coming Soon"
+    },
+    "tagline": "Wir schützen Ihr Erbe"
+  },
+  "index": {
+    "welcome": "Willkommen bei Ihrer leeren App",
+    "startBuilding": "Beginnen Sie hier mit dem Aufbau Ihres erstaunlichen Projekts!"
+  },
+  "notfound": {
+    "title": "Seite nicht gefunden",
+    "description": "Die gesuchte Seite existiert nicht oder wurde verschoben.",
+    "goHome": "Startseite",
+    "goBack": "Zurück"
+  },
+  "countryLanguage": {
+    "title": "Welcome to LegacyGuard",
+    "description": "Please confirm your location and language preferences",
+    "detectedLocation": "We detected you are in {{country}}",
+    "selectCountry": "Select your country",
+    "selectLanguage": "Select your language",
+    "chooseLang": "Choose a language",
+    "domainSuggestion": "Better experience available",
+    "domainSuggestionText": "We recommend using {{domain}} for the best experience in your region",
+    "privacyNote": "Your location data is only used to provide you with the best local experience and is never shared with third parties.",
+    "confirm": "Confirm",
+    "confirmAndRedirect": "Continue to {{domain}}"
+  },
+  "hero": {
+    "title": "Schlafen Sie ruhig, wissend, dass es Ihrer Familie gut gehen wird",
+    "subtitle": "Wenn das Leben eine unerwartete Wendung nimmt, muss Ihre Familie nicht suchen, raten oder sich sorgen. Alles, was sie brauchen, wird genau dort sein, wo sie es finden können.",
+    "cta_primary": "Übernehmen Sie noch heute die Kontrolle über die Zukunft Ihrer Familie",
+    "cta_secondary": "Sehen Sie, wie einfach es ist",
+    "urgencySubtitle": "Die Einrichtung dauert nur 10 Minuten - seien Sie der vorbereitete Elternteil, den Ihre Familie braucht",
+    "secondaryContext": "2-Minuten-Video mit echten Familien",
+    "trustSignals": {
+      "dataOwnership": "Die privaten Angelegenheiten Ihrer Familie bleiben privat",
+      "gdprCompliant": "Entwickelt mit europäischen Familienwerten",
+      "europeanFamilies": "Vertraut von Familien, denen es wirklich wichtig ist"
+    },
+    "community": {}
+  },
+  "nav": {
+    "dashboard": "Übersicht",
+    "manual": "Handbuch für Hinterbliebene",
+    "vault": "Erbschaftstresor",
+    "guardians": "Vertrauensnetzwerk",
+    "will": "Testament",
+    "settings": "Einstellungen",
+    "help": "Hilfe & Support"
+  },
+  "pillars": {
+    "secure": {
+      "title": "SICHERN",
+      "description": "Schützen Sie Ihre Familie und Ihr Vermögen mit proaktiven Sicherheitsmaßnahmen."
+    },
+    "organize": {
+      "title": "ORGANISIEREN",
+      "description": "Katalogisieren und verwalten Sie Ihr digitales und physisches Vermögen."
+    },
+    "transfer": {
+      "title": "ÜBERTRAGEN",
+      "description": "Stellen Sie sicher, dass Ihr Erbe gemäß Ihren Wünschen weitergegeben wird."
+    }
+  },
+  "features": {
+    "title": "Drei einfache Versprechen, die wir Ihnen geben",
+    "subtitle": "Alles, was Ihre Familie braucht, nichts, was sie nicht braucht. Einfach, klar und immer da, wenn es darauf ankommt.",
+    "sleepBetter": {
+      "title": "Schlafen Sie heute Nacht besser",
+      "description": "Hören Sie auf, sich Sorgen zu machen über 'was, wenn mir etwas passiert.' Ihre Familie wird genau wissen, was zu tun ist, wo sie alles finden können und wen sie anrufen müssen."
+    },
+    "noChaos": {
+      "title": "Kein hektisches Suchen",
+      "description": "Ihre Familie wird nicht Tage damit verbringen, in Schubladen zu suchen, Banken anzurufen oder Passwörter zu erraten. Alles Wichtige ist an einem sicheren Ort organisiert."
+    },
+    "clearInstructions": {
+      "title": "Schritt-für-Schritt-Anleitung",
+      "description": "Ihre Liebsten erhalten klare, einfache Anweisungen für genau das, was zu tun ist und wann. Keine Verwirrung, kein Rätselraten, kein Stress in schwierigen Zeiten."
+    },
+    "security": {
+      "title": "Absolute Vertraulichkeit & Datenschutz",
+      "description": "So konzipiert, dass keine unbefugte Person auf Ihre Daten zugreifen kann. Auch wir nicht. Ihre Privatsphäre ist unsere höchste Priorität."
+    },
+    "guardians": {
+      "title": "Netzwerk von Vertrauenspersonen",
+      "description": "Bestimmen Sie vertrauenswürdige Familienmitglieder und Freunde als Vertrauenspersonen, um die Kontinuität des Erbes zu gewährleisten."
+    },
+    "storage": {
+      "title": "Sicherer Cloud-Speicher",
+      "description": "Redundante Backups in mehreren Rechenzentren mit einer Verfügbarkeitsgarantie von 99,99 %."
+    },
+    "timelock": {
+      "title": "Zeitlich gesperrter Zugriff",
+      "description": "Legen Sie Bedingungen fest, wann und wie Ihre Begünstigten auf Ihr digitales Erbe zugreifen können."
+    },
+    "stories": {
+      "title": "Persönliche Geschichten",
+      "description": "Erstellen Sie reichhaltige multimediale Erzählungen, die die Essenz der Reise Ihrer Familie einfangen."
+    },
+    "preservation": {
+      "title": "Lebenslange Aufbewahrung",
+      "description": "Ihr Erbe wird durch automatische Formatmigration und Updates unbegrenzt aufbewahrt."
+    }
+  },
+  "dashboard": {
+    "title": "Ihr Legacy-Dashboard",
+    "subtitle": "Ihr zentraler Hub für die Bewahrung und den Schutz des Erbes Ihrer Familie",
+    "planStrength": {
+      "title": "Planstärke",
+      "description": "Gesamte Familienvorbereitung und Schutzebene",
+      "currentStage": "Aktuelle Phase: {{stage}}"
+    },
+    "nextStep": {
+      "title": "Nächster empfohlener Schritt",
+      "estimatedTime": "Geschätzte Zeit: {{time}}"
+    },
+    "protectionJourney": {
+      "title": "Schutzreise",
+      "description": "Ihre Reise zum vollständigen Familienschutz",
+      "planStrengthRange": "Planstärke: {{range}}",
+      "stage": "Phase {{number}}: {{name}}"
+    },
+    "stages": {
+      "foundation": "Grundlagenphase",
+      "building": "Aufbauphase",
+      "strengthening": "Stärkungsphase",
+      "advancedPlanning": "Erweiterte Planung",
+      "legacy": "Legacy-Phase"
+    },
+    "deepDive": {
+      "milestoneAchieved": "MEILENSTEIN ERREICHT"
+    },
+    "preservationMode": {
+      "lastReviewDate": "Letztes Überprüfungsdatum: {{date}}",
+      "startAnnualCheck": "Jährliche Systemprüfung starten",
+      "latestUpdates": "Neueste Updates"
+    },
+    "complexProfile": {
+      "detected": "Komplexes Profil erkannt",
+      "personalizedGuidance": "Personalisierte Anleitung",
+      "businessSuccessionNote": "Wir haben bemerkt, dass Ihr Plan Geschäftsvermögen umfasst. Nachfolgeplanung kann komplex sein. Erwägen Sie eine professionelle Überprüfung, um sicherzustellen, dass Ihr Geschäftsübergang nahtlos ist.",
+      "discussWithExpert": "Mit einem Rechtsexperten besprechen"
+    },
+    "errors": {
+      "failedToFetchStatus": "Abrufen des Fortschrittsstatus fehlgeschlagen",
+      "failedToDeleteDocument": "Löschen des Dokuments fehlgeschlagen",
+      "failedToUpdateDocument": "Aktualisieren des Dokuments fehlgeschlagen",
+      "failedToDeleteGuardian": "Löschen des Vormunds fehlgeschlagen",
+      "pleaseEnterValidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+      "failedToSendInvitation": "Senden der Einladung fehlgeschlagen",
+      "guardianLimitReached": "Sie haben das Limit von {{limit}} Vormündern in Ihrem aktuellen Plan erreicht"
+    },
+    "nudge": {
+      "progressTitle": "Ihr Legacy-Schutzfortschritt",
+      "completeNow": "Jetzt abschließen"
+    },
+    "sectionHeaders": {},
+    "tasks": {
+      "progress": "{{completed}} von {{total}} Aufgaben abgeschlossen"
+    },
+    "metadata": {
+      "contact": "Kontakt",
+      "renewsOn": "Verlängert am"
+    },
+    "invitation": {
+      "title": "Vormund-Einladung senden",
+      "description": "Laden Sie {{name}} ein, Ihr Vormund zu werden",
+      "guardianDetails": "Vormund-Details",
+      "sendButton": "Einladung senden",
+      "cancelButton": "Abbrechen"
+    },
+    "allocationDisplay": "{{percentage}}% zugewiesen",
+    "header": {
+      "initial": "Ihre Legacy-Schutzreise",
+      "inProgress": "Große Fortschritte!",
+      "complete": "Alles bereit!"
+    },
+    "messages": {
+      "welcomeToHeritageVault": "Willkommen bei Heritage Vault! Lassen Sie uns gemeinsam die Zukunft Ihrer Familie sichern.",
+      "excellentFirstStep": "Ausgezeichneter erster Schritt!",
+      "taskBringsClarity": "Jede Aufgabe bringt mehr Klarheit und Sicherheit für Ihre Familie.",
+      "projectOrderComplete": "Ihr Projektauftrag ist abgeschlossen!",
+      "successfullySecured": "Sie haben erfolgreich die Zukunft Ihrer Familie gesichert. Gut gemacht!",
+      "progressMade": "Große Fortschritte!",
+      "anotherPieceInPlace": "Ein weiteres wichtiges Teil ist an seinem Platz.",
+      "startingTask": "Starte: {{taskTitle}}",
+      "documentDeleted": "Dokument erfolgreich gelöscht",
+      "documentMarkedAsKey": "Dokument als Schlüsseldokument markiert",
+      "documentRemovedFromKey": "Dokument aus Schlüsseldokumenten entfernt",
+      "assetDeleted": "Vermögenswert erfolgreich gelöscht",
+      "assetAdded": "Vermögenswert erfolgreich hinzugefügt",
+      "assetUpdated": "Vermögenswert erfolgreich aktualisiert",
+      "guardianDeleted": "Vormund erfolgreich gelöscht",
+      "invitationSent": "Einladung an {{email}} gesendet",
+      "sendingInvitation": "Einladung wird gesendet...",
+      "beneficiaryDeleted": "Begünstigter erfolgreich gelöscht",
+      "beneficiaryAdded": "Begünstigter erfolgreich hinzugefügt",
+      "beneficiaryUpdated": "Begünstigter erfolgreich aktualisiert"
+    },
+    "sheets": {
+      "editAsset": "Vermögenswert bearbeiten",
+      "addAsset": "Vermögenswert hinzufügen",
+      "editAssetDescription": "Aktualisieren Sie die Details dieses Vermögenswerts",
+      "addAssetDescription": "Fügen Sie einen neuen Vermögenswert zu Ihrem Portfolio hinzu",
+      "uploadDocument": "Dokument hochladen",
+      "uploadDocumentDescription": "Laden Sie Ihre wichtigen Dokumente hoch und organisieren Sie sie",
+      "editBeneficiary": "Begünstigten bearbeiten",
+      "addBeneficiary": "Begünstigten hinzufügen",
+      "editBeneficiaryDescription": "Begünstigtendetails aktualisieren",
+      "addBeneficiaryDescription": "Fügen Sie jemanden hinzu, der von Ihnen erben wird"
+    },
+    "addGuardian": "Vormund hinzufügen",
+    "addItem": "Element hinzufügen",
+    "uploadDocument": "Dokument hochladen",
+    "addBeneficiary": "Begünstigten hinzufügen",
+    "empty": {
+      "noGuardians": "Noch keine Vormünder hinzugefügt",
+      "noAssetsOrDocuments": "Noch keine Vermögenswerte oder Dokumente hinzugefügt",
+      "noBeneficiaries": "Noch keine Begünstigten hinzugefügt"
+    },
+    "stats": {
+      "totalAssets": "Gesamtvermögen",
+      "activeAssetsManaged": "Aktiv verwaltete Vermögenswerte",
+      "activeGuardians": "Aktive Vormünder",
+      "trustedGuardians": "Zugewiesene vertrauenswürdige Vormünder",
+      "beneficiaries": "Begünstigte",
+      "legacyRecipients": "Benannte Erben",
+      "securityScore": "Sicherheitsbewertung",
+      "securityScoreValue": "98%",
+      "excellent": "Ausgezeichnet",
+      "good": "Gut",
+      "needsImprovement": "Benötigt Verbesserung"
+    },
+    "placeholders": {
+      "guardianEmail": "vormund@beispiel.de"
+    },
+    "quickTasks": {
+      "taskCompleted": "Aufgabe abgeschlossen!",
+      "taskStarted": "Aufgabe wird gestartet...",
+      "tasks": {
+        "birthCertificate": {
+          "title": "🛡️ Geburtsurkunde hinzufügen",
+          "description": "Ohne dieses Dokument kann Ihre Familie Erbschaftsrechte nicht nachweisen oder auf Konten zugreifen"
+        },
+        "insurancePolicy": {
+          "title": "💰 Lebensversicherungspolice hinzufügen",
+          "description": "Ihre Familie braucht sofortigen Zugang, um Leistungen zu beantragen und Verzögerungen zu vermeiden"
+        },
+        "will": {
+          "title": "⚖️ Testament hinzufügen",
+          "description": "Verhindert Familienstreitigkeiten und stellt sicher, dass Ihre Wünsche befolgt werden"
+        },
+        "spouseGuardian": {
+          "title": "👥 Ehepartner als Vormund hinzufügen",
+          "description": "Ohne Vormünder kann niemand rechtlich in Ihrem Namen handeln oder medizinische Entscheidungen treffen"
+        },
+        "backupGuardian": {
+          "title": "🤝 Backup-Vormund hinzufügen",
+          "description": "Stellt sicher, dass jemand einspringen kann, wenn Ihr primärer Vormund nicht verfügbar ist"
+        },
+        "bankAccount": {
+          "title": "🏦 Bankkonto hinzufügen",
+          "description": "Ihre Familie muss wissen, wo Ihr Geld ist, um sofort darauf zugreifen zu können"
+        },
+        "homeProperty": {
+          "title": "🏠 Hausimmobilie hinzufügen",
+          "description": "Verhindert, dass Ihre Familie Ihr wertvollstes Vermögen verliert"
+        },
+        "vehicle": {
+          "title": "🚗 Fahrzeug hinzufügen",
+          "description": "Stellt sicher, dass Ihre Familie das Eigentum übertragen kann und Komplikationen vermeidet"
+        },
+        "spouseBeneficiary": {
+          "title": "💝 Ehepartner als Begünstigten hinzufügen",
+          "description": "Ohne klare Anweisungen können Familienstreitigkeiten über das Erbe entstehen"
+        },
+        "childrenBeneficiaries": {
+          "title": "👶 Kinder als Begünstigte hinzufügen",
+          "description": "Stellt sicher, dass Ihre Kinder das erhalten, was Sie für sie vorgesehen haben"
+        }
+      },
+      "allCompleted": "Alle Aufgaben sind abgeschlossen.",
+      "allTasks": "Alle Aufgaben",
+      "assets": "Assets",
+      "beneficiaries": "Beguenstigte",
+      "completed": "abgeschlossen",
+      "documents": "Belege",
+      "greatProgress": "Tolle Fortschritte! Sie haben {count} Aufgaben erledigt.",
+      "guardians": "Vormunden",
+      "ifNotDone": "⚠️ Wenn nicht erledigt",
+      "markAsComplete": "Als abgeschlossen kennzeichnen",
+      "progress": "Fortschritt",
+      "start": "Start",
+      "title": "5-Minuten-Aufgaben",
+      "wellOnWay": "🎉 Sie sind auf dem besten Weg, die Zukunft Ihrer Familie zu sichern!",
+      "whyImportant": "🛡️ Warum wichtig"
+    },
+    "strategicSummary": {
+      "initial": "Beginnen Sie Ihr digitales Erbe zu bauen, indem Sie Ihr erstes Dokument hinzufügen.",
+      "addDocument": "Dokument Hinzufügen",
+      "addPrimaryGuardian": "Primären Vormund hinzufügen",
+      "addBackupGuardian": "Backup-Vormund hinzufügen",
+      "addHomeProperty": "Ihre Hausimmobilie hinzufügen",
+      "addFinancialAccounts": "Finanzkonten hinzufügen",
+      "addPrimaryBeneficiary": "Primären Begünstigten hinzufügen",
+      "addContingentBeneficiaries": "Nebenbegünstigte hinzufügen",
+      "minutes": "{{count}} Minuten",
+      "assetInventory": "Anlagenbestand",
+      "assetInventoryDesc": "Vollständige Liste Ihrer wertvollen Besitztümer",
+      "criticalDocuments": "Kritische Arbeitsdokumente",
+      "criticalDocumentsDesc": "Wichtige Dokumente, die Ihre Familie sofort benötigt",
+      "guardianNetwork": "Vormund-Netzwerk",
+      "guardianNetworkDesc": "Vertraute Personen, die sich um Ihre Angelegenheiten kümmern",
+      "ifNotDone": "⚠️ Wenn nicht erledigt",
+      "impact": {},
+      "inheritancePlan": "Nachfolgeplan",
+      "inheritancePlanDesc": "Klare Anweisungen für die Vermögensverteilung",
+      "nextAction": "⚡ Nächste Aktion",
+      "nextCriticalStep": "Nächster kritischer Schritt",
+      "startWithNext": "Beginnen Sie mit dem nächsten kritischen Schritt",
+      "subtitle": "Sie haben {count} Schlüsselbereiche, die Aufmerksamkeit erfordern. Wenn du diese Schritte durchführst, erhältst du {percentage}% Schutz für deine Familie und dein Vermögen.",
+      "title": "Strategischer Überblick",
+      "whyImportant": "🛡️ Warum wichtig"
+    },
+    "familyGuide": {
+      "view": "View",
+      "subtitle": "Automatisch generierter Leitfaden für Ihre Familie",
+      "discreteModeDesc": "Ihre persönlichen Notizen und Erinnerungen",
+      "callNow": "Jetzt anrufen",
+      "callSoon": "Bald anrufen",
+      "critical": "Kritisch",
+      "discreteMode": "Diskreter Modus",
+      "emergencyContacts": "Notfallkontakte",
+      "exportGuide": "Exportanleitung",
+      "generateGuide": "Leitfaden erstellen",
+      "important": "Wichtig",
+      "importantDocuments": "Wichtige Dokumente",
+      "shareWithFamily": "Mit Familie teilen",
+      "timeline": "Was tun wenn?",
+      "title": "Familien-Notfallleitfaden"
+    }
+  },
+  "onboarding": {
+    "title": "Willkommen bei LegacyGuard",
+    "subtitle": "Lassen Sie uns Ihnen helfen, die Zukunft Ihrer Familie zu sichern.",
+    "mainTitle": "Aktionsplan",
+    "mainSubtitle": "Erstellen wir Ihren persönlichen Plan zum Schutz Ihres Erbes.",
+    "progressText": "Aktionsplan: Schritt {{step}} von 4",
+    "skipButton": "Vorerst überspringen",
+    "skipConfirmTitle": "Einführung überspringen?",
+    "skipConfirmMessage": "Sie können diese Einrichtung jederzeit später in den Einstellungen neu starten.",
+    "skipConfirmYes": "Überspringen",
+    "skipConfirmNo": "Einrichtung fortsetzen",
+    "restartButton": "Einführung neu starten",
+    "welcomeBack": "Willkommen zurück! Bereit, Ihre Einrichtung abzuschließen?",
+    "resumeTitle": "Machen Sie dort weiter, wo Sie aufgehört haben",
+    "resumeMessage": "Sie waren bei Schritt {{step}} von 4.",
+    "partialProgress": "{{percentage}}% abgeschlossen",
+    "inventory": {
+      "documentAccess": {
+        "question": "Wenn Ihnen heute etwas zustoßen würde, wüsste Ihre Familie, wo sie Ihre wichtigen Dokumente finden kann?",
+        "answers": {
+          "yes": "Ja",
+          "no": "Nein",
+          "partially": "Teilweise"
+        }
+      },
+      "caretaker": {
+        "question": "Wer würde sich um Ihre Kinder/Vermögenswerte/digitalen Konten kümmern?",
+        "answers": {
+          "designated": "Ich habe eine bestimmte Person",
+          "familyFigureOut": "Die Familie würde es herausfinden",
+          "notThought": "Darüber habe ich noch nicht nachgedacht"
+        }
+      },
+      "familyClarity": {
+        "question": "Glauben Sie, Ihre Familie wüsste, was Sie sich für sie gewünscht haben?",
+        "answers": {
+          "clear": "Ja, es ist klar",
+          "somewhat": "Einigermaßen",
+          "neverDiscussed": "Nein, wir haben nie darüber gesprochen"
+        }
+      },
+      "biggestWorry": {
+        "question": "Was bereitet Ihnen die größten Sorgen für die Zukunft Ihrer Familie?",
+        "answers": {
+          "financial": "Finanzielle Sicherheit",
+          "legal": "Rechtliche Komplikationen",
+          "memories": "Verlust von Erinnerungen",
+          "conflicts": "Familienkonflikte"
+        }
+      },
+      "personalized": {
+        "documentCentralization": "Basierend auf Ihrer Antwort zum Dokumentenzugriff empfehlen wir, mit der Zentralisierung Ihrer wichtigen Dokumente zu beginnen.",
+        "guardianDesignation": "Da Sie niemanden für die Betreuung Ihres Vermögens bestimmt haben, sollte die Ernennung einer Vertrauensperson Ihre Priorität sein.",
+        "willPreparation": "Ihre Familie braucht Klarheit über Ihre Wünsche. Die Erstellung eines Testaments ist ein wesentlicher erster Schritt.",
+        "financialPlanning": "Finanzielle Sicherheit ist entscheidend. Beginnen wir mit der Dokumentation Ihrer Bankkonten und Vermögenswerte.",
+        "conflictPrevention": "Um Familienkonflikte zu vermeiden, sind klare Dokumentation und Kommunikation der Schlüssel.",
+        "memoryPreservation": "Die Bewahrung von Erinnerungen beginnt mit der Organisation Ihrer digitalen Fotos und Geschichten.",
+        "legalOrganization": "Lassen Sie uns Ihre rechtlichen Dokumente organisieren, um spätere Komplikationen zu vermeiden."
+      }
+    },
+    "q1": {
+      "title": "Wenn Ihnen heute etwas zustoßen würde, wüsste Ihre Familie, wo sie Ihre wichtigen Dokumente finden kann?",
+      "option1": "Ja",
+      "option2": "Nein",
+      "option3": "Teilweise"
+    },
+    "q2": {
+      "title": "Wer würde sich um Ihre Kinder/Vermögenswerte/digitalen Konten kümmern?",
+      "option1": "Ich habe eine bestimmte Person",
+      "option2": "Die Familie würde es herausfinden",
+      "option3": "Darüber habe ich noch nicht nachgedacht"
+    },
+    "q3": {
+      "title": "Glauben Sie, Ihre Familie wüsste, was Sie sich für sie gewünscht haben?",
+      "option1": "Ja, es ist klar",
+      "option2": "Einigermaßen",
+      "option3": "Nein, wir haben nie darüber gesprochen"
+    },
+    "q4": {
+      "title": "Was bereitet Ihnen die größten Sorgen für die Zukunft Ihrer Familie?",
+      "option1": "Finanzielle Sicherheit",
+      "option2": "Rechtliche Komplikationen",
+      "option3": "Verlust von Erinnerungen",
+      "option4": "Familienkonflikte"
+    },
+    "buttons": {
+      "previous": "Zurück",
+      "next": "Weiter",
+      "generate": "Meinen Aktionsplan erstellen"
+    },
+    "analysis": {
+      "title": "Analysiere Ihre Antworten...",
+      "subtitle": "Erstelle Ihren persönlichen 'Aktionsplan'...",
+      "done": "Fertig!"
+    },
+    "complete": "Großartiger Start! Wir haben Ihre Übersicht basierend auf Ihren Antworten personalisiert. Sie sind bereit, Ihren umfassenden Nachlassplan zu erstellen.",
+    "success": {
+      "stepCompleted": "Schritt {{step}} erfolgreich abgeschlossen!",
+      "inventoryComplete": "Lebensinventar abgeschlossen! Ihr persönlicher Plan ist bereit.",
+      "allQuestionsAnswered": "Alle Fragen beantwortet. Erstelle Ihren Aktionsplan..."
+    },
+    "errors": {
+      "questionRequired": "Bitte beantworten Sie diese Frage, um fortzufahren.",
+      "failedToSave": "Speichern Ihrer Antworten fehlgeschlagen. Bitte versuchen Sie es erneut.",
+      "loadingFailed": "Laden der Einführungsfragen fehlgeschlagen."
+    },
+    "addAnother": "Weitere hinzufügen",
+    "previous": "Zurück",
+    "next": "Weiter",
+    "continue": "Weiter zur Übersicht"
+  },
+  "manual": {
+    "title": "Handbuch für Hinterbliebene",
+    "subtitle": "Wesentliche Informationen für Ihre Angehörigen, wenn sie diese am dringendsten benötigen.",
+    "tabs": {
+      "contacts": "Wichtige Kontakte",
+      "documents": "Schlüsseldokumente",
+      "instructions": "Anweisungen"
+    },
+    "contacts": {
+      "title": "Wichtige Kontakte",
+      "description": "Schlüsselpersonen, die Ihre Familie im Notfall kontaktieren sollte.",
+      "addContact": "Kontakt hinzufügen",
+      "addFirstContact": "Fügen Sie Ihren ersten Kontakt hinzu",
+      "loading": "Lade Kontakte...",
+      "empty": {
+        "title": "Noch keine Kontakte hinzugefügt.",
+        "description": "Beginnen Sie damit, wichtige Personen hinzuzufügen, von denen Ihre Familie wissen sollte."
+      },
+      "form": {
+        "editTitle": "Kontakt bearbeiten",
+        "addTitle": "Wichtigen Kontakt hinzufügen",
+        "description": "Fügen Sie Personen hinzu, die Ihre Familie in wichtigen Situationen kontaktieren sollte.",
+        "nameLabel": "Name des Kontakts *",
+        "namePlaceholder": "z.B. Max Mustermann",
+        "roleLabel": "Rolle/Beruf *",
+        "rolePlaceholder": "z.B. Familienanwalt, Steuerberater, Arzt",
+        "phoneLabel": "Telefonnummer",
+        "phonePlaceholder": "+49 123 456789",
+        "emailLabel": "E-Mail-Adresse",
+        "emailPlaceholder": "kontakt@example.com",
+        "notesLabel": "Notizen",
+        "notesPlaceholder": "Zusätzliche Informationen zu diesem Kontakt...",
+        "updateButton": "Kontakt aktualisieren",
+        "addButton": "Kontakt hinzufügen",
+        "saving": "Speichern...",
+        "cancel": "Abbrechen"
+      },
+      "card": {
+        "edit": "Bearbeiten"
+      },
+      "messages": {
+        "nameAndRoleRequired": "Name und Rolle sind erforderlich.",
+        "loginRequired": "Sie müssen angemeldet sein, um Kontakte zu speichern.",
+        "updated": "Kontakt erfolgreich aktualisiert!",
+        "added": "Kontakt erfolgreich hinzugefügt!",
+        "deleted": "Kontakt erfolgreich gelöscht!"
+      },
+      "errors": {
+        "loadFailed": "Laden der Kontakte fehlgeschlagen.",
+        "saveFailed": "Speichern des Kontakts fehlgeschlagen.",
+        "deleteFailed": "Löschen des Kontakts fehlgeschlagen."
+      }
+    },
+    "documents": {
+      "title": "Schlüsseldokumente",
+      "description": "Kritische Dokumente, von denen Ihre Familie wissen muss.",
+      "loading": "Lade Schlüsseldokumente...",
+      "empty": {
+        "title": "Noch keine Schlüsseldokumente hinzugefügt.",
+        "description": "Markieren Sie wichtige Dokumente in Ihrem Tresor als \"Schlüsseldokumente\", damit sie hier erscheinen.",
+        "tip": "Tipp: Gehen Sie zu Ihrem Tresor und aktivieren Sie \"In Handbuch für Hinterbliebene aufnehmen\" für wichtige Dokumente."
+      },
+      "card": {
+        "essentialNote": "Dieses Dokument ist als wesentlich für Ihre Hinterbliebenen gekennzeichnet."
+      },
+      "errors": {
+        "loadFailed": "Laden der Schlüsseldokumente fehlgeschlagen."
+      },
+      "expiration": {
+        "expired": "Abgelaufen",
+        "expiresSoon": "Läuft bald ab",
+        "expiring": "Läuft ab"
+      }
+    },
+    "instructions": {
+      "title": "Letzte Wünsche & Anweisungen",
+      "description": "Persönliche Anleitungen und Nachrichten für Ihre Angehörigen.",
+      "loading": "Lade Anweisungen...",
+      "autoSaveNote": "Ihre Anweisungen werden automatisch gespeichert, während Sie tippen.",
+      "sections": {
+        "funeral": {
+          "title": "Bestattungswünsche",
+          "description": "Ihre Präferenzen für Bestattungsarrangements und Zeremonien.",
+          "placeholder": "z.B. Feuerbestattung, keine formelle Zeremonie, spielen Sie 'My Way' von Frank Sinatra..."
+        },
+        "digitalAccounts": {
+          "title": "Schließung digitaler Konten",
+          "description": "Anweisungen zur Handhabung Ihrer digitalen Konten und Ihrer Online-Präsenz.",
+          "placeholder": "z.B. Bitte löschen Sie mein Facebook-Profil, aber archivieren Sie mein Gmail. Übertragen Sie meine Fotos von Google Drive nach..."
+        },
+        "messages": {
+          "title": "Nachrichten an Angehörige",
+          "description": "Persönliche Nachrichten und letzte Gedanken für Ihre Familie und Freunde.",
+          "placeholder": "Teilen Sie Ihre Gedanken, Erinnerungen und letzten Nachrichten mit denen, die Sie lieben..."
+        }
+      },
+      "errors": {
+        "loadFailed": "Laden der Anweisungen fehlgeschlagen."
+      }
+    }
+  },
+  "documentTypes": {
+    "realEstateDeed": "Grundbuchauszug",
+    "birthCertificate": "Geburtsurkunde",
+    "insurancePolicy": "Versicherungspolice",
+    "lastWill": "Testament",
+    "employmentContract": "Arbeitsvertrag",
+    "passport": "Reisepass",
+    "drivingLicense": "Führerschein",
+    "bankStatement": "Kontoauszug",
+    "investmentCertificate": "Anlagezertifikat",
+    "energyContract": "Energievertrag",
+    "softwareLicense": "Softwarelizenz",
+    "subscriptionService": "Abonnementdienst",
+    "other": "Sonstiges"
+  },
+  "navigation": {
+    "dashboard": "Übersicht",
+    "vault": "Der Tresor",
+    "trustedCircle": {
+      "title": "Ihr vertrauenswürdiger Kreis",
+      "subtitle": "Die Menschen, denen Sie vertrauen, um Ihre Familie und Ihr Erbe zu schützen und zu betreuen.",
+      "responsibilities": "Ihre Verantwortlichkeiten:",
+      "preparationStatus": "Vorbereitungsstatus:",
+      "informedOfRole": "Wurde über ihre Rolle informiert",
+      "acceptedResponsibility": "Hat die Verantwortung akzeptiert",
+      "hasAccessToDocuments": "Hat Zugang zu notwendigen Dokumenten",
+      "reviewedEmergencyProcedures": "Hat Notfallverfahren überprüft",
+      "addTrustedPerson": "+ Vertrauenswürdige Person hinzufügen",
+      "preparednessStatus": {
+        "wellPrepared": "Gut vorbereitet",
+        "partiallyPrepared": "Teilweise vorbereitet",
+        "needsAttention": "Benötigt Aufmerksamkeit"
+      },
+      "buttonText": {
+        "prepared": "✓ {{name}} ist vorbereitet",
+        "prepareNow": "{{name}} jetzt vorbereiten"
+      },
+      "mockData": {
+        "sarah": {
+          "name": "Sarah Johnson",
+          "relationship": "Ehefrau",
+          "responsibilities": {
+            "bankAccess": "Kann auf alle Bankkonten zugreifen, um Rechnungen zu bezahlen und Haushaltsausgaben zu verwalten.",
+            "inheritAssets": "Wird das Familienhaus, die Hütte und alle Ersparnisse erben.",
+            "medicalPower": "Hat eine medizinische Vollmacht für Gesundheitsentscheidungen."
+          }
+        },
+        "michael": {
+          "name": "Michael Johnson",
+          "relationship": "Bruder",
+          "responsibilities": {
+            "childCare": "Wird sich um unsere Kinder kümmern, wenn beide Eltern weg sind.",
+            "estateExecution": "Wird unsere letzten Wünsche ausführen und die Nachlassabwicklung verwalten.",
+            "businessManagement": "Kann vorübergehend die Johnson Contracting LLC verwalten."
+          }
+        },
+        "robert": {
+          "name": "Robert Chen",
+          "relationship": "Geschäftspartner",
+          "responsibilities": {
+            "businessAuthority": "Hat die Befugnis, Geschäftsbetriebe zu verwalten und Verträge zu unterzeichnen.",
+            "buySellAgreement": "Wird meine Geschäftsanteile gemäß unserer Kauf-Verkauf-Vereinbarung kaufen."
+          }
+        },
+        "emily": {
+          "name": "Emily Thompson",
+          "relationship": "Schwägerin",
+          "responsibilities": {
+            "backupGuardian": "Ersatzvormund für Kinder, falls der primäre Vormund nicht dienen kann."
+          }
+        }
+      }
+    },
+    "familyHub": "Familien-Hub",
+    "legacyBriefing": {
+      "legacy_briefing_3": "Legacy-Briefing",
+      "create_and_manage_sealed_messa_4": "Erstellen und verwalten Sie versiegelte Nachrichten für Ihre Liebsten",
+      "failed_to_load_your_time_capsu_1": "Fehler beim Laden Ihrer Zeitkapseln",
+      "are_you_sure_you_want_to_delet_2": "Sind Sie sicher, dass Sie diese Zeitkapsel löschen möchten?",
+      "create_new_message_5": "Neue Nachricht erstellen",
+      "no_time_capsules_yet_6": "Noch keine Zeitkapseln",
+      "create_meaningful_messages_for_7": "Erstellen Sie bedeutungsvolle Nachrichten für Ihre Liebsten, die sie in der Zukunft erhalten werden",
+      "create_your_first_message_8": "Ihre erste Nachricht erstellen",
+      "to_9": "An:",
+      "unlocks_on_10": "Entsperrt am:",
+      "unlocks_11": "Entsperrt:",
+      "after_passing_12": "Nach dem Tod",
+      "statusLabels": {
+        "locked": "Verschlossen",
+        "unlocked": "Entsperrt",
+        "delivered": "Zugestellt",
+        "noRecipients": "Keine Empfänger"
+      },
+      "messageTypes": {
+        "text": "Textnachricht",
+        "photo": "Fotonachricht",
+        "video": "Videonachricht",
+        "audio": "Audionachricht"
+      },
+      "actions": {
+        "edit": "Bearbeiten",
+        "delete": "Löschen"
+      },
+      "toastMessages": {
+        "deleteSuccess": "Zeitkapsel erfolgreich gelöscht",
+        "deleteError": "Fehler beim Löschen der Zeitkapsel"
+      },
+      "dateFormat": {
+        "dateNotSet": "Datum nicht gesetzt",
+        "created": "Erstellt"
+      }
+    },
+    "executorToolkit": "Testamentsvollstrecker-Toolkit",
+    "assets": "Was Sie besitzen und schätzen",
+    "manual": "Handbuch",
+    "documents": "Wichtige Papiere",
+    "guardians": "Menschen, denen Sie vertrauen",
+    "family": "Familien-Hub",
+    "timeCapsule": "Zeitkapseln",
+    "will": "Ihre letzten Wünsche",
+    "consultations": "Rechtsberatungen",
+    "settings": "Einstellungen",
+    "help": "Hilfe & Support",
+    "subscriptions": "Abonnements"
+  },
+  "invite": {
+    "title": "{{name}} hat Sie eingeladen, eine Vertrauensperson für sein/ihr digitales Erbe zu werden."
+  },
+  "settings": {
+    "title": "Einstellungen",
+    "subtitle": "Verwalten Sie Ihre Kontoeinstellungen und Sicherheitseinstellungen.",
+    "loading": "Lade Ihre Kontoeinstellungen...",
+    "profile": {
+      "title": "Profilinformationen",
+      "description": "Aktualisieren Sie Ihre persönlichen Informationen und Einstellungen.",
+      "emailAddress": "E-Mail-Adresse",
+      "emailCannotBeChanged": "Ihre E-Mail-Adresse kann nicht geändert werden.",
+      "firstName": "Vorname",
+      "firstNamePlaceholder": "Geben Sie Ihren Vornamen ein",
+      "lastName": "Nachname",
+      "lastNamePlaceholder": "Geben Sie Ihren Nachnamen ein",
+      "saving": "Speichern...",
+      "saveChanges": "Änderungen speichern"
+    },
+    "security": {
+      "title": "Sicherheit",
+      "description": "Verwalten Sie die Sicherheit und den Zugriff auf Ihr Konto.",
+      "changePassword": "Passwort ändern",
+      "currentPassword": "Aktuelles Passwort",
+      "currentPasswordPlaceholder": "Geben Sie Ihr aktuelles Passwort ein",
+      "newPassword": "Neues Passwort",
+      "newPasswordPlaceholder": "Geben Sie ein neues Passwort ein",
+      "confirmNewPassword": "Neues Passwort bestätigen",
+      "confirmNewPasswordPlaceholder": "Bestätigen Sie das neue Passwort",
+      "updating": "Wird aktualisiert...",
+      "updatePassword": "Passwort aktualisieren",
+      "twoFactorAuth": "Zwei-Faktor-Authentifizierung",
+      "enable2FA": "2FA aktivieren",
+      "2FADescription": "Fügen Sie Ihrem Konto eine zusätzliche Sicherheitsebene hinzu. (Demnächst verfügbar)"
+    },
+    "accountManagement": {
+      "title": "Kontoverwaltung",
+      "description": "Dauerhafte Kontoaktionen - bitte gehen Sie mit Vorsicht vor.",
+      "deleteAccountTitle": "Konto löschen",
+      "deleteAccountWarning": "Diese Aktion ist unumkehrbar und löscht dauerhaft alle Ihre Daten, einschließlich hochgeladener Dokumente und vorbereiteter Anweisungen. Ihre digitalen Erbinformationen werden vollständig von unseren Systemen entfernt.",
+      "deleteMyAccount": "Mein Konto löschen",
+      "confirmTitle": "Sind Sie absolut sicher?",
+      "confirmDescription": "Diese Aktion kann nicht rückgängig gemacht werden. Dadurch wird Ihr Konto dauerhaft gelöscht und alle Ihre Daten von unseren Servern entfernt.",
+      "confirmEmailPrompt": "Bitte geben Sie Ihre E-Mail-Adresse {{email}} zur Bestätigung ein:",
+      "emailPlaceholder": "Geben Sie Ihre E-Mail-Adresse ein",
+      "deleting": "Wird gelöscht...",
+      "deleteAccount": "Konto löschen"
+    },
+    "errors": {
+      "loadProfile": "Profilinformationen konnten nicht geladen werden.",
+      "updateProfile": "Profil konnte nicht aktualisiert werden.",
+      "passwordFieldsRequired": "Bitte füllen Sie alle Passwortfelder aus.",
+      "passwordsDoNotMatch": "Die neuen Passwörter stimmen nicht überein.",
+      "passwordTooShort": "Das neue Passwort muss mindestens 6 Zeichen lang sein.",
+      "updatePassword": "Passwort konnte nicht aktualisiert werden.",
+      "emailDoesNotMatch": "Die E-Mail-Adresse stimmt nicht überein.",
+      "deleteAccountSupport": "Die Löschung des Kontos muss über den Support angefordert werden. Bitte kontaktieren Sie uns für Unterstützung.",
+      "deleteAccount": "Konto konnte nicht gelöscht werden."
+    },
+    "success": {
+      "profileUpdated": "Profil erfolgreich aktualisiert.",
+      "passwordUpdated": "Passwort erfolgreich aktualisiert."
+    },
+    "privacySettings": {
+      "privacy_settings_1": "Datenschutzeinstellungen",
+      "control_how_your_documents_are_2": "Steuern Sie, wie Ihre Dokumente verarbeitet und gespeichert werden",
+      "default_processing_mode_3": "Standard-Verarbeitungsmodus",
+      "choose_how_documents_are_proce_4": "Wählen Sie, wie Dokumente standardmäßig verarbeitet werden",
+      "hybrid_mode_recommended_5": "Hybrid-Modus (Empfohlen)",
+      "combines_local_and_cloud_ai_fo_6": "Kombiniert lokale und Cloud-KI für optimale Leistung und Datenschutz",
+      "local_only_privacy_mode_7": "Nur lokaler Datenschutzmodus",
+      "processes_documents_entirely_i_8": "Verarbeitet Dokumente vollständig in Ihrem Browser für maximalen Datenschutz",
+      "note_9": "Hinweis: ",
+      "you_can_always_override_this_s_10": "Sie können diese Einstellung beim Hochladen einzelner Dokumente immer überschreiben"
+    }
+  },
+  "will": {
+    "errors": {
+      "mustBeLoggedIn": "Sie müssen zum Speichern angemeldet sein.",
+      "loadingFailed": "Laden des Testaments fehlgeschlagen.",
+      "savingFailed": "Speichern des Testaments fehlgeschlagen."
+    },
+    "messages": {
+      "savedSuccessfully": "Testament erfolgreich gespeichert.",
+      "documentUploaded": "Dokument erfolgreich hochgeladen."
+    },
+    "loading": "Lade Testament...",
+    "title": "Testament",
+    "subtitle": "Verwalten Sie Ihr Testament und benennen Sie Ihre Testamentsvollstrecker.",
+    "sections": {
+      "statusInfo": "Status & Informationen",
+      "willDocument": "Testamentsdokument"
+    },
+    "fields": {
+      "currentStatus": "Aktueller Status",
+      "physicalLocation": "Physischer Aufbewahrungsort",
+      "executorContact": "Kontakt des Testamentsvollstreckers",
+      "additionalNotes": "Zusätzliche Anmerkungen"
+    },
+    "placeholders": {
+      "physicalLocation": "z.B. Haussafe, Anwaltskanzlei",
+      "selectContact": "Kontakt auswählen",
+      "additionalNotes": "Zusätzliche Informationen..."
+    },
+    "descriptions": {
+      "statusDescription": "Verfolgen Sie den aktuellen Status Ihres Testaments.",
+      "physicalLocationDescription": "Wo wird Ihr Testament physisch aufbewahrt?",
+      "executorDescription": "Person, die für die Vollstreckung Ihres Testaments verantwortlich ist."
+    },
+    "options": {
+      "noContactSelected": "Kein Kontakt ausgewählt"
+    },
+    "status": {
+      "notStarted": "Nicht begonnen",
+      "inPreparation": "In Vorbereitung",
+      "completedSigned": "Abgeschlossen & Unterzeichnet",
+      "withNotary": "Beim Notar",
+      "draft": "Entwurf",
+      "notarized": "Notariell beglaubigt",
+      "stored": "Gespeichert",
+      "updated": "Aktualisiert"
+    },
+    "document": {
+      "uploaded": "Testamentsdokument hochgeladen",
+      "uploadedDescription": "Ihr Testamentsdokument wurde sicher gespeichert.",
+      "noDocument": "Kein Testamentsdokument",
+      "noDocumentDescription": "Laden Sie eine Kopie Ihres Testaments zur sicheren Aufbewahrung hoch."
+    },
+    "buttons": {
+      "saveWillInfo": "Testamentsinformationen speichern",
+      "saving": "Speichern...",
+      "uploadDocument": "Dokument hochladen",
+      "uploadNewVersion": "Neue Version hochladen"
+    },
+    "steps": {
+      "countrySelection": "Länderauswahl",
+      "countrySelectionDesc": "Wählen Sie Ihr Land und geben Sie Ihre Daten ein",
+      "assetAllocation": "Vermögensaufteilung",
+      "assetAllocationDesc": "Verteilen Sie Vermögenswerte auf Begünstigte",
+      "beneficiaries": "Begünstigte",
+      "beneficiariesDesc": "Definieren Sie Ihre Begünstigten",
+      "executors": "Testamentsvollstrecker",
+      "executorsDesc": "Weisen Sie Testamentsvollstrecker zur Verwaltung Ihres Testaments zu",
+      "review": "Überprüfung",
+      "reviewDesc": "Überprüfen und finalisieren Sie Ihr Testament"
+    },
+    "progress": "Schritt {{current}} von {{total}}",
+    "validation": {
+      "selectCountry": "Bitte wählen Sie ein Land",
+      "requiredField": "Dieses Feld ist erforderlich",
+      "allocation100": "Die Gesamtzuweisung muss 100 % betragen",
+      "atLeastOneBeneficiary": "Mindestens ein Begünstigter ist erforderlich",
+      "executorRequired": "Ein Testamentsvollstrecker ist erforderlich",
+      "fixErrors": "Bitte beheben Sie die Fehler im Formular",
+      "errors": {
+        "nameMinLength": "Name muss mindestens {{min}} Zeichen lang sein",
+        "nameMaxLength": "Name darf maximal {{max}} Zeichen lang sein",
+        "relationshipRequired": "Beziehung ist erforderlich",
+        "countryRequired": "Land ist erforderlich",
+        "countryCodeLength": "Ländercode muss 2 Zeichen lang sein",
+        "selectAtLeastOne": "Bitte wählen Sie mindestens eine {{field}}",
+        "selectUpTo": "Bitte wählen Sie maximal {{max}} {{field}}",
+        "invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+        "invalidPhone": "Bitte geben Sie eine gültige Telefonnummer ein"
+      }
+    },
+    "generation": {
+      "success": "Testament erfolgreich erstellt!",
+      "error": "Erstellung des Testaments fehlgeschlagen"
+    }
+  },
+  "contacts": {
+    "errors": {
+      "loadingFailed": "Fehler beim Laden der Kontakte."
+    }
+  },
+  "will_generator": {
+    "uk_jurisdiction_title": "In welchem Teil des Vereinigten Königreichs ist Ihr Hauptwohnsitz?",
+    "jurisdiction_england": "England",
+    "jurisdiction_wales": "Wales",
+    "jurisdiction_scotland": "Schottland",
+    "jurisdiction_northern_ireland": "Nordirland",
+    "select_will_language_title": "Bitte wählen Sie die Sprache für Ihr Testament:",
+    "error_uk_jurisdiction_required": "Bitte wählen Sie eine Jurisdiktion im Vereinigten Königreich, um fortzufahren."
+  },
+  "guardianUpload": {
+    "error": "Fehler",
+    "success": "Erfolg",
+    "fillRequired": "Bitte füllen Sie alle erforderlichen Felder aus.",
+    "loginToSave": "Sie müssen angemeldet sein, um Vertrauenspersonen zu speichern.",
+    "updated": "Vertrauensperson erfolgreich aktualisiert.",
+    "added": "Vertrauensperson erfolgreich hinzugefügt.",
+    "failedSave": "Speichern der Vertrauensperson fehlgeschlagen. Bitte versuchen Sie es erneut.",
+    "editTitle": "Vertrauensperson bearbeiten",
+    "addTitle": "Vertrauensperson hinzufügen",
+    "description": "Fügen Sie jemanden hinzu, dem Sie vertrauen, um Ihr Erbe zu verwalten.",
+    "fullNameLabel": "Vollständiger Name der Vertrauensperson *",
+    "fullNamePlaceholder": "Geben Sie den vollständigen Namen der Vertrauensperson ein",
+    "relationshipLabel": "Beziehung *",
+    "relationshipPlaceholder": "Wählen Sie die Beziehung aus",
+    "countryLabel": "Wohnsitzland *",
+    "countryPlaceholder": "Wählen Sie ein Land aus",
+    "countryDescription": "Wählen Sie das Land, in dem diese Vertrauensperson wohnt.",
+    "rolesTitle": "Rollen & Verantwortlichkeiten",
+    "emailLabel": "E-Mail-Adresse",
+    "emailPlaceholder": "E-Mail-Adresse eingeben (optional)",
+    "phoneLabel": "Telefonnummer",
+    "phonePlaceholder": "Telefonnummer eingeben (optional)",
+    "saving": "Speichern...",
+    "updateButton": "Vertrauensperson aktualisieren",
+    "addButton": "Vertrauensperson hinzufügen",
+    "relationships": {
+      "spouse": "Ehepartner/in",
+      "parent": "Elternteil",
+      "sibling": "Geschwister",
+      "child": "Kind",
+      "friend": "Freund/in",
+      "legalProfessional": "Rechtsanwalt/Rechtsanwältin",
+      "other": "Andere"
+    },
+    "roles": {
+      "guardianForChildren": "Vormund für Kinder",
+      "executorOfWill": "Testamentsvollstrecker/in",
+      "healthcareProxy": "Gesundheitsbevollmächtigte/r",
+      "financialPowerOfAttorney": "Finanzielle Vollmacht",
+      "emergencyContact": "Notfallkontakt",
+      "trustee": "Treuhänder/in"
+    },
+    "errors": {
+      "saveError": "Beim Speichern der Vertrauensperson ist ein Fehler aufgetreten",
+      "requiredDataNotFound": "Erforderliche Daten wurden nicht gefunden",
+      "connectionError": "Verbindungsfehler. Bitte überprüfen Sie Ihre Internetverbindung",
+      "permissionError": "Sie haben keine Berechtigung, diese Aktion auszuführen",
+      "duplicateError": "Ein Datensatz mit diesen Informationen existiert bereits",
+      "unknownError": "Ein unbekannter Fehler ist aufgetreten"
+    }
+  },
+  "trustedCircle": {
+    "title": "Ihr vertrauenswürdiger Kreis",
+    "subtitle": "Die Menschen, denen Sie vertrauen, um Ihre Familie und Ihr Erbe zu schützen und zu betreuen.",
+    "responsibilities": "Ihre Verantwortlichkeiten:",
+    "preparationStatus": "Vorbereitungsstatus:",
+    "informedOfRole": "Wurde über ihre Rolle informiert",
+    "acceptedResponsibility": "Hat die Verantwortung akzeptiert",
+    "hasAccessToDocuments": "Hat Zugang zu notwendigen Dokumenten",
+    "reviewedEmergencyProcedures": "Hat Notfallverfahren überprüft",
+    "addTrustedPerson": "+ Vertrauenswürdige Person hinzufügen",
+    "preparednessStatus": {
+      "wellPrepared": "Gut vorbereitet",
+      "partiallyPrepared": "Teilweise vorbereitet",
+      "needsAttention": "Benötigt Aufmerksamkeit"
+    },
+    "buttonText": {
+      "prepared": "✓ {{name}} ist vorbereitet",
+      "prepareNow": "{{name}} jetzt vorbereiten"
+    },
+    "mockData": {
+      "sarah": {
+        "name": "Sarah Johnson",
+        "relationship": "Ehefrau",
+        "responsibilities": {
+          "bankAccess": "Kann auf alle Bankkonten zugreifen, um Rechnungen zu bezahlen und Haushaltsausgaben zu verwalten.",
+          "inheritAssets": "Wird das Familienhaus, die Hütte und alle Ersparnisse erben.",
+          "medicalPower": "Hat eine medizinische Vollmacht für Gesundheitsentscheidungen."
+        }
+      },
+      "michael": {
+        "name": "Michael Johnson",
+        "relationship": "Bruder",
+        "responsibilities": {
+          "childCare": "Wird sich um unsere Kinder kümmern, wenn beide Eltern weg sind.",
+          "estateExecution": "Wird unsere letzten Wünsche ausführen und die Nachlassabwicklung verwalten.",
+          "businessManagement": "Kann vorübergehend die Johnson Contracting LLC verwalten."
+        }
+      },
+      "robert": {
+        "name": "Robert Chen",
+        "relationship": "Geschäftspartner",
+        "responsibilities": {
+          "businessAuthority": "Hat die Befugnis, Geschäftsbetriebe zu verwalten und Verträge zu unterzeichnen.",
+          "buySellAgreement": "Wird meine Geschäftsanteile gemäß unserer Kauf-Verkauf-Vereinbarung kaufen."
+        }
+      },
+      "emily": {
+        "name": "Emily Thompson",
+        "relationship": "Schwägerin",
+        "responsibilities": {
+          "backupGuardian": "Ersatzvormund für Kinder, falls der primäre Vormund nicht dienen kann."
+        }
+      }
+    }
+  },
+  "documentUpload": {
+    "fileUploadedSuccess": "Datei erfolgreich hochgeladen!",
+    "fileUploadFailed": "Hochladen der Datei fehlgeschlagen. Bitte versuchen Sie es erneut.",
+    "fileTooLarge": "Die ausgewählte Datei ist zu groß. Die maximale Größe beträgt {{maxSize}} MB.",
+    "fillRequiredFields": "Bitte füllen Sie alle erforderlichen Felder aus.",
+    "loginToSave": "Sie müssen angemeldet sein, um Dokumente zu speichern.",
+    "saved": "Dokument erfolgreich gespeichert!",
+    "failedSave": "Speichern des Dokuments fehlgeschlagen. Bitte versuchen Sie es erneut.",
+    "detailsTitle": "Dokumentdetails",
+    "detailsSubtitle": "Fügen Sie Informationen zu Ihrem hochgeladenen Dokument hinzu.",
+    "namePlaceholder": "Geben Sie den Dokumentnamen ein",
+    "typePlaceholder": "Wählen Sie den Dokumenttyp",
+    "countryPlaceholder": "Wählen Sie ein Land",
+    "pickDate": "Wählen Sie ein Datum",
+    "title": "Dokument hochladen",
+    "subtitle": "Laden Sie rechtliche und persönliche Dokumente sicher hoch.",
+    "browseFiles": "Dateien durchsuchen",
+    "chooseDifferent": "Andere Datei wählen",
+    "uploadButton": "Dokument hochladen",
+    "storageLimitReached": "Datei kann nicht hochgeladen werden. Sie haben noch {{remaining}} Speicherplatz, aber diese Datei ist {{fileSize}} groß. Bitte upgraden Sie Ihren Plan oder entfernen Sie einige vorhandene Dateien."
+  },
+  "auth": {
+    "protectedApplication": "Geschützte Anwendung",
+    "protectedApplicationDesc": "Diese Anwendung ist passwortgeschützt. Bitte geben Sie das Passwort ein, um fortzufahren.",
+    "password": "Passwort",
+    "enterPassword": "Passwort eingeben",
+    "accessApplication": "Zugang zur Anwendung",
+    "incorrectPassword": "Falsches Passwort. Bitte versuchen Sie es erneut."
+  },
+  "assetDetail": {
+    "loading": "Lade Details zum Vermögenswert...",
+    "errors": {
+      "failedToLoad": "Details zum Vermögenswert konnten nicht geladen werden.",
+      "nameRequired": "Name des Vermögenswerts ist erforderlich.",
+      "failedToSave": "Speichern des Vermögenswerts fehlgeschlagen."
+    },
+    "messages": {
+      "createdSuccessfully": "Vermögenswert erfolgreich erstellt.",
+      "updatedSuccessfully": "Vermögenswert erfolgreich aktualisiert."
+    },
+    "title": {
+      "new": "Neuer {{type}}"
+    },
+    "subtitle": {
+      "new": "Füllen Sie die Details aus, um diesen Vermögenswert Ihrem Portfolio hinzuzufügen.",
+      "edit": "Aktualisieren Sie die Details dieses Vermögenswerts."
+    },
+    "sections": {
+      "assetInformation": "Informationen zum Vermögenswert",
+      "basicInformation": "Grundlegende Informationen",
+      "propertyDetails": "Immobiliendetails",
+      "accountDetails": "Kontodetails",
+      "financialDetails": "Finanzielle Details"
+    },
+    "fields": {
+      "assetName": "Name des Vermögenswerts",
+      "assetType": "Art des Vermögenswerts",
+      "propertyAddress": "Adresse der Immobilie",
+      "propertyRegistryNumber": "Grundbuchnummer",
+      "accountType": "Kontoart",
+      "financialInstitution": "Finanzinstitut",
+      "accountNumber": "Kontonummer / IBAN",
+      "loginCredentials": "Anmeldeinformationen & Notizen",
+      "estimatedValue": "Geschätzter Wert",
+      "currency": "Währung"
+    },
+    "placeholders": {
+      "assetName": "z.B. Familienhaus, Anlageportfolio",
+      "propertyAddress": "Geben Sie die vollständige Adresse der Immobilie ein",
+      "propertyRegistryNumber": "z.B. Grundbuchnummer",
+      "selectAccountType": "Wählen Sie eine Kontoart aus",
+      "financialInstitution": "z.B. Deutsche Bank, Commerzbank",
+      "accountNumber": "z.B. DE1234567890",
+      "loginCredentials": "Passwort-Manager: 1Password Tresor 'Banking'",
+      "estimatedValue": "0"
+    },
+    "descriptions": {
+      "assetName": "Geben Sie diesem Vermögenswert einen aussagekräftigen Namen zur einfachen Identifizierung.",
+      "assetType": "Wählen Sie die Art, die diesen Vermögenswert am besten beschreibt.",
+      "propertyAddress": "Vollständige Adresse inklusive Straße, Stadt, Postleitzahl und Land.",
+      "propertyRegistryNumber": "Offizielle Registrierungs- oder Katasternummer für diese Immobilie.",
+      "accountType": "Art des Finanzkontos oder der Anlage.",
+      "financialInstitution": "Name der Bank oder des Finanzinstituts.",
+      "accountNumber": "Kontonummer, IBAN oder andere identifizierende Informationen.",
+      "estimatedValue": "Aktueller Marktwert oder letzter bekannter Wert dieses Vermögenswerts.",
+      "currency": "Währung, in der der Wert ausgedrückt wird."
+    },
+    "types": {
+      "realEstate": "Immobilie",
+      "business": "Unternehmen",
+      "vehicle": "Fahrzeug",
+      "financialAccount": "Finanzkonto",
+      "asset": "Vermögenswert"
+    },
+    "accountTypes": {
+      "bankAccount": "Bankkonto",
+      "investmentPortfolio": "Anlageportfolio",
+      "pensionFund": "Pensionsfonds"
+    },
+    "securityWarning": "Sicherheitswarnung:",
+    "securityWarningText": "Speichern Sie hier keine tatsächlichen Passwörter. Verwenden Sie dieses Feld für Hinweise, Speicherorte in Passwort-Managern oder andere sichere Zugangsanweisungen.",
+    "buttons": {
+      "cancel": "Abbrechen",
+      "saving": "Speichern...",
+      "createAsset": "Vermögenswert erstellen",
+      "updateAsset": "Vermögenswert aktualisieren"
+    }
+  },
+  "assets": {
+    "overview": {
+      "title": "Vermögensportfolio",
+      "subtitle": "Verwalten und verfolgen Sie Ihre Vermögenswerte, Immobilien und Investitionen",
+      "addAsset": "Vermögenswert hinzufügen",
+      "totalPortfolioValue": "Gesamter Portfoliowert",
+      "estimatedValue": "Geschätzter Wert über alle Vermögenswerte",
+      "distribution": {
+        "title": "Vermögensaufteilung",
+        "subtitle": "Portfolioaufschlüsselung nach Kategorie"
+      },
+      "beneficiaryAllocation": {
+        "title": "Zuweisung an Begünstigte",
+        "subtitle": "Verfolgen Sie die Verteilung der Vermögenswerte an die Begünstigten",
+        "allAssigned": "Alle Vermögenswerte sind Begünstigten zugewiesen",
+        "unassignedWarning": "{{count}} Vermögenswerte benötigen eine Zuweisung an Begünstigte"
+      },
+      "viewInheritanceSummary": "Erbschaftsübersicht anzeigen",
+      "addNew": "Neu hinzufügen",
+      "errors": {
+        "loadFailed": "Laden der Vermögensdaten fehlgeschlagen"
+      }
+    },
+    "categories": {
+      "property": "Immobilien",
+      "vehicle": "Fahrzeug",
+      "financial": "Finanzen",
+      "business": "Unternehmen",
+      "personal": "Persönlich",
+      "uncategorized": "Unkategorisiert"
+    }
+  },
+  "pricing": {
+    "title": "Wählen Sie Ihren Nachlassplan",
+    "subtitle": "Beginnen Sie mit unserem kostenlosen Tarif oder upgraden Sie für Premium-Funktionen.",
+    "mainTitle": "Wählen Sie Ihren Nachlassplan",
+    "mainSubtitle": "Beginnen Sie mit unserem kostenlosen Tarif oder upgraden Sie für Premium-Funktionen.",
+    "starter": {
+      "name": "Starter",
+      "price": "Kostenlos",
+      "description": "Ideal für den Einstieg in die Sicherung Ihres digitalen Erbes.",
+      "button": "Kostenlos starten",
+      "features": {
+        "storage": "{{amount}} Speicherplatz",
+        "guardians": "Bis zu {{count}} Vertrauenspersonen",
+        "documents": "Basis-Dokumententresor",
+        "playbook": "Basis-Anleitung für Vertrauenspersonen",
+        "support": "Community-Support"
+      },
+      "limits": {
+        "storage": "500 MB",
+        "guardians": "3",
+        "fileSize": "10 MB pro Datei"
+      }
+    },
+    "premium": {
+      "name": "Premium",
+      "price": "$19",
+      "period": "/Monat",
+      "badge": "Am beliebtesten",
+      "description": "Erweiterte Funktionen für eine umfassende Nachlassverwaltung.",
+      "button": "Premium wählen",
+      "features": {
+        "storage": "{{amount}} Speicherplatz",
+        "guardians": "Bis zu {{count}} Vertrauenspersonen",
+        "manual": "Handbuch für Hinterbliebene",
+        "support": "Priorisierter E-Mail-Support"
+      },
+      "limits": {
+        "storage": "10 GB",
+        "guardians": "5",
+        "fileSize": "50 MB pro Datei"
+      }
+    },
+    "enterprise": {
+      "name": "Enterprise",
+      "price": "Individuell",
+      "description": "Für Familien und Unternehmen mit komplexen Anforderungen, die das höchste Serviceniveau benötigen.",
+      "button": "Vertrieb kontaktieren",
+      "features": {
+        "storage": "{{amount}}+ Speicherplatz",
+        "guardians": "Unbegrenzte Vertrauenspersonen",
+        "legal": "Koordination mit Rechtsexperten",
+        "support": "Dedizierter Account Manager"
+      },
+      "limits": {
+        "storage": "500 GB",
+        "guardians": "unbegrenzt",
+        "fileSize": "100 MB pro Datei"
+      }
+    }
+  },
+  "cookies": {
+    "bannerText": "Wir verwenden essentielle Cookies, um die ordnungsgemäße Funktion unserer Website zu gewährleisten. Mit Ihrer Zustimmung können wir auch analytische Cookies verwenden, um unsere Dienste zu verbessern.",
+    "declineButton": "Ablehnen",
+    "acceptButton": "Alle akzeptieren",
+    "learnMoreLink": "Mehr erfahren"
+  },
+  "guardianView": {
+    "title": "Vertrauensperson-Übersicht",
+    "subtitle": "Sicherer Zugriff auf die wesentlichen Informationen von {{userName}}",
+    "readOnlyAccess": "Nur-Lese-Zugriff",
+    "loading": "Lade Vertrauensperson-Übersicht...",
+    "errors": {
+      "loadFailed": "Laden der Notfallkontakte fehlgeschlagen.",
+      "addFailed": "Hinzufügen des Notfallkontakts fehlgeschlagen.",
+      "removeFailed": "Entfernen des Notfallkontakts fehlgeschlagen.",
+      "reorderFailed": "Aktualisieren der Kontakt-Reihenfolge fehlgeschlagen.",
+      "testFailed": "Senden der Testnachricht fehlgeschlagen.",
+      "selectContact": "Bitte wählen Sie einen Kontakt aus."
+    },
+    "sections": {
+      "keyDocuments": {
+        "title": "Schlüsseldokumente",
+        "description": "Wesentliche Dokumente, die vom Kontoinhaber als kritisch markiert wurden.",
+        "keyDocumentBadge": "Schlüsseldokument",
+        "expires": "Läuft ab am",
+        "noExpiration": "Kein Ablaufdatum",
+        "empty": "Keine Schlüsseldokumente verfügbar."
+      },
+      "importantContacts": {
+        "title": "Wichtige Kontakte",
+        "description": "Schlüsselkontakte für Notfallsituationen.",
+        "empty": "Keine wichtigen Kontakte verfügbar."
+      },
+      "finalWishes": {
+        "title": "Letzte Wünsche & Anweisungen",
+        "description": "Persönliche Anweisungen und letzte Wünsche.",
+        "funeralWishes": "Bestattungswünsche",
+        "digitalAccountsShutdown": "Schließung digitaler Konten",
+        "messagesToLovedOnes": "Nachrichten an Angehörige",
+        "empty": "Keine letzten Wünsche oder Anweisungen verfügbar."
+      }
+    },
+    "guardianInfo": {
+      "description": "Sie sehen diese Informationen als vertrauenswürdige Vertrauensperson. Dieser Zugriff wird für Notfallsituationen bereitgestellt und um Ihnen bei der Erfüllung Ihrer Aufgaben zu helfen.",
+      "securityNote": "Alle Zugriffe werden aus Sicherheitsgründen protokolliert und überwacht."
+    },
+    "defaultUserName": "Hauptkontoinhaber",
+    "description": "Verwalten Sie bis zu 3 Notfallkontakte in Prioritätsreihenfolge.",
+    "addContact": "Kontakt hinzufügen",
+    "noContacts": "Noch keine Notfallkontakte hinzugefügt. Fügen Sie Kontakte hinzu, die im Notfall benachrichtigt werden sollen.",
+    "maxContactsReached": "Sie haben das Maximum von 3 Notfallkontakten erreicht.",
+    "sendTest": "Test senden",
+    "lastContacted": "Zuletzt kontaktiert vor {{time}}",
+    "priority": {
+      "1": "Priorität 1",
+      "2": "Priorität 2",
+      "3": "Priorität 3"
+    },
+    "addContactDialog": {
+      "title": "Notfallkontakt hinzufügen",
+      "description": "Wählen Sie einen Kontakt aus Ihrer Liste aus, um ihn als Notfallkontakt hinzuzufügen.",
+      "selectContact": "Kontakt auswählen",
+      "selectPlaceholder": "Wählen Sie einen Kontakt...",
+      "relationship": "Beziehung (optional)",
+      "relationshipPlaceholder": "Beziehung auswählen...",
+      "addButton": "Notfallkontakt hinzufügen"
+    },
+    "messages": {
+      "added": "Notfallkontakt erfolgreich hinzugefügt.",
+      "removed": "Notfallkontakt entfernt.",
+      "reordered": "Kontaktpriorität aktualisiert.",
+      "testSent": "Testnachricht an {{name}} gesendet."
+    }
+  },
+  "notificationPreferences": {
+    "title": "Einstellungen für Notfallbenachrichtigungen",
+    "description": "Verwalten Sie die Benachrichtigungseinstellungen für Ihre Notfallkontakte.",
+    "noContacts": "Fügen Sie Notfallkontakte hinzu, um deren Benachrichtigungseinstellungen zu verwalten.",
+    "noEmail": "Keine E-Mail-Adresse hinterlegt.",
+    "emailRequired": "E-Mail erforderlich.",
+    "lastUpdated": "Zuletzt aktualisiert: {{date}}",
+    "info": "Wenn der Notfallzugriff gewährt wird, werden Benachrichtigungen nur an Kontakte mit aktivierten E-Mail-Benachrichtigungen gesendet.",
+    "howItWorks": {
+      "title": "Wie Notfallbenachrichtigungen funktionieren",
+      "point1": "Vertrauenspersonen können in kritischen Situationen auf Notfallkontakte zugreifen.",
+      "point2": "Alle angemeldeten Kontakte erhalten sofortige E-Mail-Benachrichtigungen.",
+      "point3": "Sie erhalten ebenfalls eine Benachrichtigung, wenn ein Zugriff erfolgt."
+    },
+    "messages": {
+      "updated": "Benachrichtigungseinstellungen aktualisiert."
+    },
+    "errors": {
+      "loadFailed": "Laden der Benachrichtigungseinstellungen fehlgeschlagen.",
+      "updateFailed": "Aktualisierung der Einstellungen fehlgeschlagen."
+    }
+  },
+  "relationships": {
+    "spouse": "Ehepartner/in",
+    "child": "Kind",
+    "parent": "Elternteil",
+    "sibling": "Geschwister",
+    "friend": "Freund/in",
+    "other": "Andere"
+  },
+  "emergencyAccess": {
+    "button": "Notfallzugriff",
+    "modalTitle": "Zugriff auf Notfallkontakte",
+    "modalDescription": "Dies gewährt Ihnen Zugriff auf Notfallkontaktinformationen. Verwenden Sie dies nur in echten Notfallsituationen.",
+    "warningText": "Dieser Zugriff wird protokolliert und der Kontoinhaber wird benachrichtigt.",
+    "reasonLabel": "Grund für den Notfallzugriff (erforderlich)",
+    "reasonPlaceholder": "Bitte beschreiben Sie die Notfallsituation, die den Zugriff auf Kontaktinformationen erfordert...",
+    "confirmCheckbox": "Ich bestätige, dass dies eine echte Notfallsituation ist und ich Zugriff auf Kontaktinformationen benötige.",
+    "accessing": "Zugriff wird hergestellt...",
+    "confirmButton": "Auf Notfallkontakte zugreifen",
+    "pleaseConfirm": "Bitte bestätigen Sie den Notfall und geben Sie einen Grund an.",
+    "notAuthorized": "Sie sind nicht zum Notfallzugriff berechtigt.",
+    "failedToLoadContacts": "Laden der Notfallkontakte fehlgeschlagen.",
+    "accessGranted": "Notfallzugriff gewährt. Kontaktinformationen sind jetzt verfügbar.",
+    "accessFailed": "Zugriff auf Notfallkontakte fehlgeschlagen.",
+    "contactsTitle": "Notfallkontakte",
+    "contactsDescription": "Kontaktieren Sie diese Personen in der Prioritätsreihenfolge. Klicken Sie auf Telefonnummern, um anzurufen, oder auf E-Mails, um Nachrichten zu senden.",
+    "priorityOrder": "Prioritätsreihenfolge",
+    "priority": "Priorität #{{order}}",
+    "logContact": "Kontaktversuch protokollieren",
+    "contactLogged": "Kontaktversuch protokolliert.",
+    "lastContacted": "Zuletzt kontaktiert: {{time}}",
+    "importantNote": "Wichtig: Kontaktieren Sie diese Personen in der angezeigten Reihenfolge. Versuchen Sie immer zuerst die primäre Kontaktmethode. Protokollieren Sie alle Kontaktversuche zur Dokumentation."
+  },
+  "helpPage": {
+    "title": "Hilfe & Support-Center",
+    "subtitle": "Wir sind für Sie da. Finden Sie Antworten auf Ihre Fragen oder kontaktieren Sie uns direkt.",
+    "faq": {
+      "title": "Häufig gestellte Fragen",
+      "q1": {
+        "question": "Ist LegacyGuard sicher?",
+        "answer": "Ja, Sicherheit hat für uns höchste Priorität. Wir verwenden Ende-zu-Ende-Verschlüsselung und eine Zero-Trust-Architektur, was bedeutet, dass keine unbefugte Person auf Ihre Daten zugreifen kann, nicht einmal wir. Alle Daten werden in sicheren Rechenzentren innerhalb der Europäischen Union gemäß der DSGVO gespeichert."
+      },
+      "q2": {
+        "question": "Was passiert mit meinen Daten, wenn ich mein Abonnement kündige?",
+        "answer": "Nach der Kündigung bleiben Ihre Daten 90 Tage lang sicher im schreibgeschützten Modus gespeichert. Sie können Ihr Abonnement innerhalb dieses Zeitraums jederzeit reaktivieren, um den vollen Zugriff wiederzuerlangen. Nach 90 Tagen werden Ihre Daten sicher und dauerhaft von unseren Systemen gelöscht."
+      },
+      "q3": {
+        "question": "Was ist eine 'Vertrauensperson'?",
+        "answer": "Eine Vertrauensperson ist eine vertrauenswürdige Person (z. B. ein Partner, ein Geschwisterteil oder ein Rechtsanwalt), der Sie für Notfälle einen speziellen, eingeschränkten Zugriff auf Ihre Informationen gewähren. Eine Vertrauensperson kann Ihre Daten nicht ändern; sie kann sie nur einsehen, um gemäß Ihren Anweisungen zu handeln."
+      },
+      "q4": {
+        "question": "Was ist der Unterschied zwischen dem 'Tresor' und dem 'Handbuch'?",
+        "answer": "Der Erbschaftstresor ist der Ort, an dem Sie alle Ihre wichtigen Dokumente und Vermögenswerte sicher aufbewahren. Das Handbuch für Hinterbliebene ist eine kuratierte Auswahl der wichtigsten Kontakte, Dokumente und Anweisungen aus Ihrem Tresor, die so konzipiert ist, dass Ihre Vertrauenspersonen alles Wesentliche an einem Ort haben."
+      },
+      "q5": {
+        "question": "Ist ein in LegacyGuard erstelltes Testament rechtsverbindlich?",
+        "answer": "LegacyGuard hilft Ihnen bei der Vorbereitung und Organisation aller Grundlagen und Informationen für Ihr Testament. In den meisten europäischen Ländern ersetzt das digitale Dokument jedoch nicht die Notwendigkeit eines offiziellen, unterzeichneten (und oft notariell beglaubigten) Dokuments. Wir empfehlen, die endgültige Version immer mit einem Rechtsanwalt zu besprechen."
+      }
+    },
+    "contact": {
+      "title": "Haben Sie nicht gefunden, wonach Sie gesucht haben?",
+      "email": {
+        "title": "Schreiben Sie uns eine E-Mail",
+        "description": "Für allgemeine Fragen und Support.",
+        "button": "E-Mail-Programm öffnen"
+      },
+      "call": {
+        "title": "Einen Anruf vereinbaren (für Premium)",
+        "description": "Für Premium- und Enterprise-Kunden.",
+        "button": "Anruf vereinbaren"
+      }
+    }
+  },
+  "inviteAcceptance": {
+    "loading": "Lade Einladung...",
+    "errors": {
+      "invalidLink": "Ungültiger Einladungslink.",
+      "notFound": "Einladung nicht gefunden.",
+      "alreadyProcessed": "Diese Einladung wurde bereits bearbeitet.",
+      "loadingFailed": "Laden der Einladung fehlgeschlagen.",
+      "acceptFailed": "Annahme der Einladung fehlgeschlagen.",
+      "declineFailed": "Ablehnung der Einladung fehlgeschlagen."
+    },
+    "messages": {
+      "accepted": "Vielen Dank. Ihre Rolle als Vertrauensperson wurde bestätigt.",
+      "declined": "Sie haben die Rolle abgelehnt. Der Absender wird benachrichtigt."
+    },
+    "notFound": {
+      "title": "Einladung nicht gefunden",
+      "description": "Dieser Einladungslink ist ungültig oder abgelaufen."
+    },
+    "subtitle": "Sie wurden eingeladen, eine Vertrauensperson für deren digitales Erbe auf LegacyGuard zu werden.",
+    "guardianRole": {
+      "title": "Ihre Rolle als Vertrauensperson",
+      "yourName": "Ihr Name:",
+      "relationship": "Beziehung:",
+      "responsibilities": "Verantwortlichkeiten:"
+    },
+    "whatThisMeans": {
+      "title": "Was das bedeutet",
+      "point1": "Sie erhalten sicheren Zugriff auf deren wichtige Dokumente und Informationen.",
+      "point2": "Sie können Informationen nur einsehen – keine Bearbeitungs- oder Löschfunktionen.",
+      "point3": "Ihr Zugriff ist für Notfallsituationen oder bei Bedarf an Unterstützung vorgesehen.",
+      "point4": "Alle Zugriffe werden protokolliert und sind sicher."
+    },
+    "buttons": {
+      "processing": "Wird verarbeitet...",
+      "acceptRole": "Rolle annehmen",
+      "decline": "Ablehnen"
+    },
+    "disclaimer": "Indem Sie diese Rolle annehmen, erkennen Sie die Verantwortung an, eine vertrauenswürdige Vertrauensperson für deren digitales Erbe zu sein.",
+    "defaultInviterName": "Ihr vertrauenswürdiger Kontakt"
+  },
+  "subscription": {
+    "dashboard": {
+      "title": "Abonnement-Übersicht",
+      "subtitle": "Verwalten Sie Ihre Abonnements, Kosten und Erinnerungen"
+    },
+    "monthlyCost": "Gesamte monatliche Kosten",
+    "yearlyCost": "Gesamte jährliche Kosten",
+    "activeSubscriptions": "Aktive Abonnements",
+    "upcomingSoon": "demnächst fällig",
+    "exportReport": "Bericht exportieren",
+    "perMonth": "pro Monat",
+    "perYear": "pro Jahr",
+    "allSubscriptions": "Alle Abonnements",
+    "allSubscriptionsDesc": "Übersicht aller aktiven Abonnements, sortiert nach Verlängerungsdatum",
+    "upcomingRenewals": "Anstehende Verlängerungen",
+    "upcomingRenewalsTitle": "Warnung vor anstehenden Verlängerungen",
+    "upcomingRenewalsDesc": "Sie haben {{count}} anstehende Verlängerungen in den nächsten 90 Tagen",
+    "next90Days": "Nächste 90 Tage",
+    "noUpcomingRenewals": "Keine anstehenden Verlängerungen in den nächsten 90 Tagen",
+    "renew": "Verlängern",
+    "review": "Überprüfen",
+    "preferences": "Abonnement-Einstellungen",
+    "preferencesDesc": "Verwalten Sie, wie Ihre Abonnements verfolgt und verwaltet werden",
+    "enableTracking": "Abonnement-Verfolgung aktivieren",
+    "enableTrackingDesc": "Automatisch abonnementbezogene Dokumente verwalten und verfolgen",
+    "costOptimization": "Vorschläge zur Kostenoptimierung aktivieren",
+    "costOptimizationDesc": "Erhalten Sie Vorschläge zur Optimierung und Reduzierung der Abonnementkosten",
+    "reminderPeriods": "Standard-Erinnerungsperioden",
+    "daysBefore": "Tage vor",
+    "loadError": "Laden der Abonnementdetails fehlgeschlagen",
+    "updateError": "Aktualisieren der Abonnement-Einstellungen fehlgeschlagen",
+    "preferencesUpdated": "Einstellungen erfolgreich aktualisiert",
+    "tabs": {
+      "overview": "Übersicht",
+      "upcoming": "Anstehend",
+      "settings": "Einstellungen"
+    },
+    "types": {
+      "monthly": "Monatlich",
+      "yearly": "Jährlich",
+      "oneTime": "Einmalig",
+      "none": "Keine"
+    },
+    "daysUntilRenewal": "Tage bis zur Verlängerung",
+    "days": "Tage",
+    "loadFailed": "Laden der Abonnementdaten fehlgeschlagen",
+    "autoRenewal": "Automatische Verlängerung: Ja",
+    "manual": "Automatische Verlängerung: Nein",
+    "trackingSuggestion": "Erwägen Sie die Aktivierung der Abonnement-Verfolgung für eine bessere Verwaltung und Erinnerungen",
+    "type": "Abonnementtyp",
+    "typePlaceholder": "Typ auswählen",
+    "renewalCost": "Verlängerungskosten",
+    "renewalCostPlaceholder": "Verlängerungskosten eingeben",
+    "cancellationNotice": "Kündigungsfrist",
+    "noNoticeRequired": "Keine Kündigungsfrist erforderlich",
+    "providerContact": "Kontaktinformationen des Anbieters",
+    "providerPhone": "Telefon",
+    "providerEmail": "E-Mail",
+    "providerWebsite": "Webseite",
+    "cancellationNoticeWarning": "Hinweis: Die Kündigung erfordert eine Frist von {{days}} Tagen"
+  },
+  "emailTemplates": {
+    "welcome": {
+      "subject": "Willkommen bei LegacyGuard - Ihre Reise zum digitalen Erbe beginnt",
+      "greeting": "Willkommen, {{name}},",
+      "body": "Vielen Dank, dass Sie sich LegacyGuard angeschlossen haben. Sie haben den ersten wichtigen Schritt zum Schutz der Zukunft Ihrer Familie getan.",
+      "cta": "Vervollständigen Sie Ihr Lebensinventar",
+      "footer": "Wenn Sie Fragen haben, steht Ihnen unser Support-Team zur Verfügung."
+    },
+    "inventoryComplete": {
+      "subject": "Lebensinventar abgeschlossen - Ihr persönlicher Plan ist bereit",
+      "greeting": "Herzlichen Glückwunsch, {{name}},",
+      "body": "Sie haben Ihr Lebensinventar abgeschlossen! Basierend auf Ihren Antworten haben wir einen personalisierten Aktionsplan erstellt, um die Zukunft Ihrer Familie zu sichern.",
+      "nextSteps": "Ihre Top 3 Prioritäten:",
+      "cta": "Ihren Aktionsplan ansehen",
+      "encouragement": "Denken Sie daran, jeder kleine Schritt, den Sie heute tun, macht einen großen Unterschied für Ihre Lieben von morgen."
+    },
+    "guardianInvite": {
+      "subject": "{{inviterName}} hat Sie eingeladen, seine/ihre Vertrauensperson bei LegacyGuard zu sein",
+      "greeting": "Hallo {{guardianName}},",
+      "body": "{{inviterName}} vertraut Ihnen eine wichtige Verantwortung an - eine Vertrauensperson für sein/ihr digitales Erbe zu sein.",
+      "whatThisMeans": "Als Vertrauensperson haben Sie im Notfall sicheren, schreibgeschützten Zugriff auf wichtige Dokumente und Anweisungen.",
+      "cta": "Einladung ansehen",
+      "expires": "Diese Einladung läuft in 7 Tagen ab."
+    },
+    "planUpgrade": {
+      "subject": "Sie haben das Limit Ihres {{planName}}-Plans erreicht",
+      "greeting": "Hallo {{name}},",
+      "body": "Sie machen große Fortschritte! Sie haben das {{limitType}}-Limit Ihres aktuellen Plans erreicht.",
+      "upgradeText": "Upgraden Sie auf {{suggestedPlan}}, um weiterhin mehr {{limitType}} hinzuzufügen und zusätzliche Funktionen freizuschalten.",
+      "cta": "Upgrade-Optionen ansehen"
+    }
+  },
+  "guardian": {
+    "invitationSent": "Einladung gesendet",
+    "accepted": "Akzeptiert",
+    "declined": "Abgelehnt",
+    "sendInvite": "Einladung senden"
+  },
+  "alerts": {
+    "title": "Benachrichtigungs-Center",
+    "description": "Verwalten Sie Ihre Benachrichtigungen über ablaufende Dokumente.",
+    "unread": "Ungelesen",
+    "markAsRenewed": "Als erneuert markieren",
+    "snooze7Days": "Für 7 Tage stummschalten",
+    "dismiss": "Schließen",
+    "unsnooze": "Stummschaltung aufheben",
+    "tabs": {
+      "active": "Aktiv",
+      "snoozed": "Stummgeschaltet",
+      "dismissed": "Geschlossen"
+    },
+    "noActiveAlerts": "Sie haben keine aktiven Benachrichtigungen.",
+    "noSnoozedAlerts": "Sie haben keine stummgeschalteten Benachrichtigungen.",
+    "noDismissedAlerts": "Sie haben keine geschlossenen Benachrichtigungen.",
+    "expiresOn": "Läuft am {{date}} ab",
+    "snoozedUntil": "Stummgeschaltet bis {{date}}",
+    "renewalInstructions": "Anweisungen zur Erneuerung",
+    "badges": {
+      "expired": "Abgelaufen",
+      "expiring_7": "Läuft bald ab",
+      "expiring_30": "Läuft in 30 Tagen ab",
+      "expiring_90": "Läuft in 90 Tagen ab"
+    },
+    "types": {
+      "expired": "Das Dokument {{documentName}} ist vor {{daysAgo}} Tagen abgelaufen!",
+      "expiring7": "Beeilen Sie sich! {{documentName}} läuft in {{days}} Tagen ab.",
+      "expiring30": "Erinnerung: {{documentName}} läuft in {{days}} Tagen ab.",
+      "expiring90": "Achtung: {{documentName}} läuft in {{days}} Tagen ab."
+    },
+    "messages": {
+      "dismissed": "Benachrichtigung erfolgreich geschlossen.",
+      "snoozed": "Benachrichtigung für {{days}} Tage stummgeschaltet.",
+      "markedAsRenewed": "Dokument als erneuert markiert."
+    },
+    "errors": {
+      "loadFailed": "Laden der Benachrichtigungen fehlgeschlagen.",
+      "dismissFailed": "Schließen der Benachrichtigung fehlgeschlagen.",
+      "snoozeFailed": "Stummschalten der Benachrichtigung fehlgeschlagen.",
+      "renewFailed": "Markieren des Dokuments als erneuert fehlgeschlagen."
+    }
+  },
+  "errorBoundary": {
+    "title": "Hoppla! Etwas ist schiefgegangen",
+    "description": "Wir entschuldigen uns für die Unannehmlichkeiten. Ein unerwarteter Fehler ist aufgetreten.",
+    "errorId": "Fehler-ID",
+    "tryAgain": "Erneut versuchen",
+    "reloadPage": "Seite neu laden",
+    "goToHomepage": "Zur Startseite",
+    "technicalDetails": "Technische Details",
+    "hide": "Ausblenden",
+    "show": "Anzeigen",
+    "stackTrace": "Stack-Trace",
+    "componentStack": "Komponenten-Stack",
+    "helpText": "Wenn das Problem weiterhin besteht, kontaktieren Sie unseren Support mit der Fehler-ID."
+  },
+  "errorTest": {
+    "title": "Fehlerprotokollierungstest",
+    "description": "Test der Fehlerbehandlung und Protokollierungsfunktionen",
+    "triggerSyncError": "Synchronen Fehler auslösen (ErrorBoundary)",
+    "triggerAsyncError": "Asynchronen Fehler auslösen",
+    "logRegularError": "Normalen Fehler protokollieren",
+    "logCriticalError": "Kritischen Fehler protokollieren",
+    "triggerAlert": "Alarm auslösen (6 kritische Fehler)",
+    "errorMessages": {
+      "testError": "Testfehler aus ErrorTest-Komponente",
+      "testAsyncRejection": "Test asynchrone Ablehnung",
+      "manualTestError": "Manueller Testfehler",
+      "testCriticalError": "Test kritischer Fehler",
+      "criticalErrorWithIndex": "Kritischer Fehler {{index}}"
+    },
+    "descriptions": {
+      "syncError": "Löst einen synchronen Fehler aus, der von der ErrorBoundary abgefangen wird",
+      "asyncError": "Löst einen asynchronen Fehler aus, der von der Fehlerbehandlung abgefangen wird",
+      "regularError": "Protokolliert einen regulären Fehler zum Testen der Fehlerverfolgung",
+      "criticalError": "Protokolliert einen kritischen Fehler zum Testen der kritischen Fehlerbehandlung",
+      "multipleErrors": "Löst mehrere kritische Fehler aus, um Warnschwellen zu testen"
+    },
+    "context": {
+      "component": "ErrorTest",
+      "action": "button-click",
+      "severity": "high"
+    },
+    "notifications": {
+      "errorLogged": "Fehler erfolgreich protokolliert",
+      "criticalErrorLogged": "Kritischer Fehler erfolgreich protokolliert",
+      "multipleErrorsTriggered": "Mehrere kritische Fehler ausgelöst",
+      "errorBoundaryTriggered": "ErrorBoundary ausgelöst",
+      "asyncErrorCaught": "Asynchroner Fehler abgefangen und behandelt"
+    }
+  },
+  "footer": {
+    "tagline": "Ihr Erbe für kommende Generationen bewahren.",
+    "platform": {
+      "title": "Plattform",
+      "heritageVault": "Erbschaftstresor",
+      "guardianNetwork": "Vertrauensnetzwerk",
+      "dashboard": "Übersicht",
+      "security": "Sicherheit"
+    },
+    "support": {
+      "title": "Support",
+      "helpCenter": "Hilfe-Center",
+      "userGuides": "Benutzerhandbücher",
+      "contactUs": "Kontaktieren Sie uns",
+      "community": "Community"
+    },
+    "legal": {
+      "title": "Rechtliches",
+      "privacyPolicy": "Datenschutzerklärung",
+      "termsOfService": "Nutzungsbedingungen",
+      "dataProtection": "Datenschutz"
+    },
+    "copyright": "© {{year}} LegacyGuard. Alle Rechte vorbehalten.",
+    "description": "Digitale Nachlassverwaltung auf Unternehmensniveau."
+  },
+  "playbook": {
+    "label": "Anleitung",
+    "create": "Anleitung erstellen",
+    "edit": "Anleitung bearbeiten",
+    "preview": "Vorschau",
+    "exitPreview": "Vorschau beenden",
+    "save": "Anleitung speichern",
+    "saving": "Speichern...",
+    "loading": "Lade Anleitung...",
+    "autoSaveNotice": "Ihre Änderungen werden beim Tippen automatisch gespeichert.",
+    "noContent": "Noch kein Inhalt hinzugefügt.",
+    "noContacts": "Noch keine Kontakte hinzugefügt.",
+    "addContact": "Kontakt hinzufügen",
+    "contact": "Kontakt",
+    "title": "Anleitung für {{name}}",
+    "titleReadOnly": "Anleitung von {{name}}",
+    "description": "Erstellen Sie persönliche Anweisungen und Informationen für Ihre Vertrauensperson.",
+    "viewTitle": "Anleitung für Vertrauensperson: {{userName}}",
+    "viewDescription": "Wesentliche Informationen und Anweisungen, die speziell für Sie vorbereitet wurden.",
+    "lastUpdated": "Zuletzt aktualisiert",
+    "viewFooter": "Diese Informationen wurden Ihnen als Vertrauensperson anvertraut. Bitte behandeln Sie sie vertraulich und sicher.",
+    "notAuthenticated": "Bitte melden Sie sich an, um diese Anleitung anzuzeigen.",
+    "accessDenied": "Sie haben keine Berechtigung, diese Anleitung anzuzeigen.",
+    "fetchError": "Laden der Anleitung fehlgeschlagen.",
+    "saveSuccess": "Anleitung erfolgreich gespeichert.",
+    "saveError": "Speichern der Anleitung fehlgeschlagen.",
+    "discardChanges": {
+      "title": "Änderungen verwerfen?",
+      "description": "Sie haben ungespeicherte Änderungen. Sind Sie sicher, dass Sie sie verwerfen möchten?",
+      "cancel": "Bearbeitung fortsetzen",
+      "confirm": "Änderungen verwerfen"
+    },
+    "importantContacts": {
+      "label": "Wichtige Kontakte",
+      "description": "Fügen Sie Schlüsselpersonen hinzu, die diese Vertrauensperson kontaktieren sollte.",
+      "viewDescription": "Kontaktieren Sie diese Personen bei Bedarf.",
+      "add": "Kontakt hinzufügen",
+      "remove": "Entfernen",
+      "empty": "Noch keine Kontakte hinzugefügt. Klicken Sie auf 'Kontakt hinzufügen', um wichtige Personen hinzuzufügen.",
+      "name": "Name",
+      "namePlaceholder": "Vollständiger Name",
+      "relationship": "Beziehung",
+      "relationshipPlaceholder": "z.B. Familienanwalt",
+      "phone": "Telefon",
+      "phonePlaceholder": "+49 123 456789",
+      "email": "E-Mail",
+      "emailPlaceholder": "email@example.com",
+      "notes": "Notizen",
+      "notesPlaceholder": "Zusätzliche Informationen"
+    },
+    "funeralWishes": {
+      "label": "Bestattungswünsche",
+      "description": "Ihre Präferenzen für Bestattungsarrangements.",
+      "placeholder": "Beschreiben Sie Ihre Wünsche für Ihre Bestattung oder Trauerfeier..."
+    },
+    "digitalAccounts": {
+      "label": "Digitale Konten",
+      "description": "Anweisungen zur Handhabung Ihrer Online-Konten.",
+      "placeholder": "Listen Sie Ihre digitalen Konten auf und wie sie behandelt werden sollen..."
+    },
+    "documentLocations": {
+      "label": "Speicherorte von Dokumenten",
+      "description": "Wo wichtige Dokumente zu finden sind.",
+      "placeholder": "Beschreiben Sie, wo sich wichtige Dokumente befinden..."
+    },
+    "personalMessages": {
+      "label": "Persönliche Nachrichten",
+      "description": "Persönliche Nachrichten für diese Vertrauensperson.",
+      "placeholder": "Schreiben Sie eine persönliche Nachricht an diese Vertrauensperson..."
+    },
+    "practicalInstructions": {
+      "label": "Praktische Anweisungen",
+      "description": "Unmittelbare Schritte und Verantwortlichkeiten.",
+      "placeholder": "Listen Sie praktische Aufgaben und unmittelbare Maßnahmen auf..."
+    },
+    "notFound": {
+      "title": "Keine Anleitung gefunden",
+      "description": "Die Anleitung, die Sie suchen, wurde noch nicht erstellt."
+    },
+    "subtitle": {
+      "edit": "Erstellen Sie persönliche Anweisungen und Informationen für diese Vertrauensperson.",
+      "view": "Wesentliche Informationen und Anweisungen, die für Sie vorbereitet wurden."
+    },
+    "status": {
+      "empty": "Nicht begonnen",
+      "draft": "In Arbeit",
+      "complete": "Abgeschlossen"
+    },
+    "tabs": {
+      "funeral": "Bestattung",
+      "digital": "Digitales",
+      "contacts": "Kontakte",
+      "documents": "Dokumente",
+      "messages": "Nachrichten",
+      "instructions": "Anweisungen"
+    },
+    "sections": {
+      "funeral": {
+        "title": "Bestattungswünsche",
+        "description": "Ihre Präferenzen für Bestattungsarrangements und Trauerfeiern.",
+        "placeholder": "Beschreiben Sie Ihre Wünsche für Ihre Bestattung oder Trauerfeier...\n\nZum Beispiel:\n- Art der Zeremonie (religiös, weltlich, Lebensfeier)\n- Präferenzen für Erd- oder Feuerbestattung\n- Ortspräferenzen\n- Musik, Lesungen oder besondere Wünsche\n- Wer sprechen oder teilnehmen soll\n- Spezifische Traditionen, die befolgt werden sollen"
+      },
+      "digital": {
+        "title": "Schließung digitaler Konten",
+        "description": "Anweisungen zur Handhabung Ihrer digitalen Präsenz und Online-Konten.",
+        "placeholder": "Listen Sie Ihre digitalen Konten und deren Handhabung auf...\n\nZum Beispiel:\n- Social-Media-Konten (Facebook, Instagram, LinkedIn)\n- E-Mail-Konten\n- Cloud-Speicher (Google Drive, Dropbox)\n- Abonnementdienste (Netflix, Spotify)\n- Online-Banking und Finanzkonten\n- Kryptowährungs-Wallets\n- Website- oder Domainnamen"
+      },
+      "contacts": {
+        "title": "Wichtige Kontakte",
+        "description": "Schlüsselpersonen, die diese Vertrauensperson kontaktieren oder benachrichtigen sollte.",
+        "placeholder": "Fügen Sie wichtige Kontakte hinzu, die für die Aufgaben dieser Vertrauensperson spezifisch sind."
+      },
+      "documents": {
+        "title": "Speicherorte von Dokumenten",
+        "description": "Wo wichtige physische und digitale Dokumente zu finden sind.",
+        "placeholder": "Beschreiben Sie, wo sich wichtige Dokumente befinden...\n\nZum Beispiel:\n- Aufbewahrungsort des Testaments\n- Versicherungspolicen\n- Eigentumsurkunden\n- Bankkontoinformationen\n- Anlagedokumente\n- Steuererklärungen\n- Passwörter und Zugangscodes\n- Standort und Schlüssel des Schließfachs"
+      },
+      "messages": {
+        "title": "Persönliche Nachrichten",
+        "description": "Persönliche Nachrichten und letzte Gedanken für diese Vertrauensperson.",
+        "placeholder": "Schreiben Sie eine persönliche Nachricht an diese Vertrauensperson...\n\nDies ist Ihre Gelegenheit, um:\n- Ihre Gefühle und Dankbarkeit auszudrücken\n- Wichtige Erinnerungen zu teilen\n- Anleitung oder Ratschläge zu geben\n- Ihre Entscheidungen zu erklären\n- Trostworte zu hinterlassen\n- Ihre Hoffnungen für die Zukunft zu teilen"
+      },
+      "practical": {
+        "title": "Praktische Anweisungen",
+        "description": "Unmittelbare praktische Schritte und Verantwortlichkeiten für diese Vertrauensperson.",
+        "placeholder": "Listen Sie praktische Aufgaben und unmittelbare Maßnahmen auf...\n\nZum Beispiel:\n- Checkliste für die ersten 24-48 Stunden\n- Wer zuerst zu benachrichtigen ist\n- Dringende Rechnungen oder Zahlungen\n- Pflegeanweisungen (Haustiere, Pflanzen, Eigentum)\n- Geschäftliche Angelegenheiten, die Aufmerksamkeit erfordern\n- Geplante Termine, die abgesagt werden müssen\n- Benötigte Schlüssel und Zugangscodes"
+      }
+    },
+    "contactFields": {
+      "name": "Name",
+      "namePlaceholder": "Vollständiger Name",
+      "role": "Rolle/Beziehung",
+      "rolePlaceholder": "z.B. Familienanwalt, Steuerberater",
+      "phone": "Telefon",
+      "phonePlaceholder": "+49 123 456789",
+      "email": "E-Mail",
+      "emailPlaceholder": "email@example.com",
+      "notes": "Notizen",
+      "notesPlaceholder": "Zusätzliche Informationen zu diesem Kontakt"
+    },
+    "messages": {
+      "autoSaved": "Gespeichert",
+      "saved": "Anleitung erfolgreich gespeichert"
+    },
+    "errors": {
+      "loadFailed": "Laden der Anleitung fehlgeschlagen.",
+      "saveFailed": "Speichern der Anleitung fehlgeschlagen."
+    }
+  },
+  "myPossessions": {
+    "my_possessions_1": "Mein Besitz",
+    "an_inventory_of_the_important__2": "Ein Inventar der wichtigen Dinge, die die Zukunft Ihrer Familie unterstützen.",
+    "family_impact_3": "Familienauswirkung:",
+    "edit_details_4": "Details bearbeiten",
+    "link_papers_5": "Papiere verknüpfen (",
+    "assign_access_6": "Zugang zuweisen",
+    "add_your_first_7": "Fügen Sie Ihre erste ",
+    "areas": {
+      "home": {
+        "title": "Ihr Zuhause & Eigentum",
+        "description": "Die Orte, die Schutz bieten und Erinnerungen schaffen.",
+        "emptyState": "Dokumentieren Sie Ihr Eigentum, um sicherzustellen, dass der Schutz Ihrer Familie gesichert ist.",
+        "addButton": "Eigentum"
+      },
+      "savings": {
+        "title": "Ihre Ersparnisse & Investitionen",
+        "description": "Das finanzielle Fundament, das Sie für die Zukunft Ihrer Familie aufgebaut haben.",
+        "emptyState": "Zeichnen Sie Ihre Finanzkonten auf, damit Ihre Familie bei Bedarf auf Mittel zugreifen kann.",
+        "addButton": "Konto"
+      },
+      "business": {
+        "title": "Ihr Geschäft",
+        "description": "Die Arbeit, die Ihre Familie unterstützt und Ihr berufliches Erbe schafft.",
+        "emptyState": "Dokumentieren Sie Ihre Geschäftsdetails, um eine reibungslose Nachfolge und kontinuierliche Einnahmen zu gewährleisten.",
+        "addButton": "Geschäft"
+      },
+      "valuables": {
+        "title": "Ihre Wertgegenstände & Sammlungen",
+        "description": "Gegenstände von finanziellem oder sentimentalem Wert, die besondere Berücksichtigung benötigen.",
+        "emptyState": "Listen Sie wertvolle Gegenstände auf, die besondere Behandlung benötigen oder sentimentalen Wert haben.",
+        "addButton": "Wertgegenstand"
+      }
+    },
+    "mockData": {
+      "lakeCabin": "Seekabine",
+      "emergencyFund": "Notfallfonds",
+      "yourBusiness": "Ihr Geschäft",
+      "johnsonContracting": "Johnson Contracting LLC",
+      "classicCarCollection": "Klassische Autosammlung"
+    }
+  },
+  "familyPreparednessTools": {
+    "use_these_tools_to_ensure_your_1": "Verwenden Sie diese Tools, um sicherzustellen, dass Ihre Familie vorbereitet ist und weiß, was in Notfallsituationen zu tun ist.",
+    "generate_emergency_guide_2": "Notfall-Anleitung generieren",
+    "create_a_printable_guide_for_y_3": "Erstellen Sie eine druckbare Anleitung für Ihre Familie, die in Notfallsituationen befolgt werden soll.",
+    "select_scenario_4": "Szenario auswählen",
+    "generate_another_5": "Weitere generieren",
+    "tools": {
+      "informationTreasureHunt": "Informations-Schatzsuche",
+      "videoMessages": "Video-Nachrichten",
+      "emergencySimulator": "Notfallsituation-Simulator",
+      "stepByStepGuides": "Schritt-für-Schritt-Anleitungen",
+      "emergencySimulatorDesc": "Führen Sie eine Übung durch. Wir senden ein Testszenario an Ihre Familie, um zu sehen, ob sie die benötigten Informationen finden können.",
+      "stepByStepGuidesDesc": "Generieren Sie druckbare, szenariobasierte Anleitungen für Ihre Familie (z.B. 'Was in den ersten 24 Stunden zu tun ist').",
+      "treasureHuntDesc": "Ein gamifiziertes Quiz für Ihre Familie, um sicherzustellen, dass sie wichtige Fakten kennen, wie wo das Testament zu finden ist oder wer Ihr Anwalt ist.",
+      "videoMessagesDesc": "Nehmen Sie persönliche Video-Nachrichten für Ihre Liebsten auf, die in bestimmten Umständen freigeschaltet werden.",
+      "launch": "Starten",
+      "chooseScenario": "Szenario auswählen",
+      "cancel": "Abbrechen",
+      "generating": "Generiere...",
+      "generateGuide": "Anleitung generieren",
+      "printGuide": "Anleitung drucken"
+    },
+    "scenarios": {
+      "death": {
+        "title": "Im Falle meines Todes",
+        "description": "Ein umfassender Leitfaden für die Bewältigung unmittelbarer Aufgaben nach Ihrem Tod"
+      },
+      "hospitalization": {
+        "title": "Wenn ich ins Krankenhaus komme",
+        "description": "Schritte, die zu unternehmen sind, wenn Sie handlungsunfähig sind oder in medizinischer Behandlung"
+      },
+      "missing": {
+        "title": "Wenn ich vermisst werde",
+        "description": "Kritische Informationen und Kontakte, wenn Sie nicht gefunden werden können"
+      },
+      "emergency": {
+        "title": "Allgemeiner Notfall",
+        "description": "Schnellreferenz für jede dringende Situation"
+      }
+    },
+    "guides": {
+      "death": {
+        "title": "Notfall-Anleitung: Im Falle meines Todes",
+        "generatedOn": "Generiert am",
+        "first24Hours": "🚨 Checkliste der ersten 24 Stunden",
+        "contactExecutor": "Testamentsvollstrecker kontaktieren:",
+        "contactLawyer": "Anwalt kontaktieren:",
+        "locateWill": "Testament lokalisieren:",
+        "secureResidence": "Wohnsitz sichern:",
+        "importantDocuments": "📋 Wichtige Dokumente",
+        "deathCertificate": "Sterbeurkunde:",
+        "bankAccounts": "Bankkonten:",
+        "investmentAccounts": "Anlagekonten:",
+        "peopleToNotify": "👥 Zu benachrichtigende Personen",
+        "employer": "Arbeitgeber:",
+        "insuranceCompanies": "Versicherungsgesellschaften:",
+        "financialInstitutions": "Finanzinstitute:",
+        "socialSecurity": "Sozialversicherungsverwaltung:",
+        "disclaimer": "Diese Anleitung wurde basierend auf den von Ihnen bereitgestellten Informationen generiert. Bitte stellen Sie sicher, dass alle Details aktuell sind."
+      },
+      "hospitalization": {
+        "title": "Notfall-Anleitung: Wenn ich ins Krankenhaus komme",
+        "medicalInformation": "🏥 Medizinische Informationen",
+        "primaryCarePhysician": "Hausarzt:",
+        "preferredHospital": "Bevorzugtes Krankenhaus:",
+        "bloodType": "Blutgruppe:",
+        "allergies": "Allergien:",
+        "currentMedications": "Aktuelle Medikamente:",
+        "emergencyContacts": "📞 Notfallkontakte",
+        "legalDocuments": "📄 Rechtliche Dokumente",
+        "healthcarePowerOfAttorney": "Vorsorgevollmacht für Gesundheitsfürsorge:",
+        "livingWill": "Patientenverfügung:",
+        "hipaaRelease": "HIPAA-Freigabe:"
+      },
+      "missing": {
+        "title": "Notfall-Anleitung: Wenn ich vermisst werde",
+        "immediateActions": "🔍 Sofortige Maßnahmen",
+        "contactLocalPolice": "Sofort örtliche Polizei kontaktieren",
+        "checkWithWorkplace": "Mit Arbeitsplatz überprüfen:",
+        "contactCloseFriends": "Nahe Freunde und regelmäßige Kontakte kontaktieren",
+        "checkHospitals": "Krankenhäuser in der Gegend überprüfen",
+        "digitalFootprint": "📱 Digitaler Fußabdruck",
+        "phoneProvider": "Telefonanbieter:",
+        "email": "E-Mail:",
+        "socialMedia": "Soziale Medien:",
+        "bankingApps": "Banking-Apps:"
+      },
+      "emergency": {
+        "title": "Allgemeine Notfall-Schnellreferenz",
+        "keyContacts": "🚨 Wichtige Kontakte",
+        "emergency": "Notfall:",
+        "spouse": "Ehepartner:",
+        "attorney": "Anwalt:",
+        "financialAdvisor": "Finanzberater:",
+        "insuranceAgent": "Versicherungsagent:",
+        "homeInformation": "🏠 Wohnungsinformationen",
+        "address": "Adresse:",
+        "securitySystem": "Sicherheitssystem:",
+        "utilities": "Versorgungsunternehmen:"
+      }
+    },
+    "errors": {
+      "premiumRequired": "Diese Funktion ist nur für Premium-Benutzer verfügbar. Bitte upgraden Sie, um Zugang zu allen Tools zu erhalten.",
+      "selectScenario": "Bitte wählen Sie ein Szenario",
+      "generateFailed": "Generierung der Anleitung fehlgeschlagen",
+      "comingSoon": "Funktion kommt bald!"
+    },
+    "mockContent": {
+      "insurancePolicies": "Versicherungspolicen"
+    }
+  },
+  "securityStatus": {
+    "how_we_protect_your_legacy_1": "Wie wir Ihr Erbe schützen",
+    "your_trust_is_our_highest_prio_2": "Ihr Vertrauen ist unsere höchste Priorität. Wir verwenden Unternehmenssicherheit, um die Informationen Ihrer Familie sicher zu halten.",
+    "for_your_family_3": "Für Ihre Familie: ",
+    "your_security_status_fully_pro_4": "Ihr Sicherheitsstatus: Vollständig geschützt",
+    "all_security_features_are_acti_5": "Alle Sicherheitsfunktionen sind aktiv und schützen die Informationen Ihrer Familie.",
+    "features": {
+      "endToEndEncryption": "End-to-End-Verschlüsselung",
+      "secureCloudStorage": "Sichere Cloud-Speicherung",
+      "localOnlyPrivacyMode": "Nur lokaler Datenschutzmodus",
+      "multiFactorAuthentication": "Multi-Faktor-Authentifizierung",
+      "europeanDataCenters": "Europäische Rechenzentren",
+      "zeroKnowledgeArchitecture": "Zero-Knowledge-Architektur"
+    },
+    "explanations": {
+      "endToEndEncryption": "Ihre Daten werden vom Moment an, in dem sie Ihr Gerät verlassen, bis Sie sie wieder anzeigen, in einen unlesbaren Code verschlüsselt.",
+      "secureCloudStorage": "Ihre verschlüsselten Daten werden in erstklassigen, physisch sicheren Rechenzentren gespeichert.",
+      "localOnlyPrivacyMode": "Wenn Sie den Nur-Lokal-Modus verwenden, werden Ihre sensiblen Dokumente niemals an unsere Server gesendet.",
+      "multiFactorAuthentication": "Erfordert sowohl Ihr Passwort als auch einen Code von Ihrem Telefon zum Anmelden.",
+      "europeanDataCenters": "Alle Ihre Daten werden ausschließlich in sicheren europäischen Rechenzentren mit strengen Datenschutzgesetzen gespeichert.",
+      "zeroKnowledgeArchitecture": "Wir haben unser System so gestaltet, dass wir Ihre Daten nicht sehen können, auch wenn wir wollten."
+    },
+    "analogies": {
+      "endToEndEncryption": "Es ist, als würde man einen Brief in einer verschlossenen Schachtel senden, zu der nur Sie den Schlüssel haben.",
+      "secureCloudStorage": "Es ist, als würde man Ihre verschlossene Schachtel in einem Banktresor mit 24/7-Wächtern aufbewahren.",
+      "localOnlyPrivacyMode": "Es ist, als würde man seine privatesten Notizen in ein Tagebuch schreiben, das niemals Ihr Haus verlässt.",
+      "multiFactorAuthentication": "Es ist, als würde man sowohl einen Schlüssel als auch einen geheimen Handschlag benötigen, um in einen privaten Club zu gelangen.",
+      "europeanDataCenters": "Es ist, als würde man sich entscheiden, seine Wertgegenstände in einem Land zu lagern, das für seinen starken Datenschutz bekannt ist.",
+      "zeroKnowledgeArchitecture": "Es ist, als würde man einen Bankschließfach haben, zu dem selbst der Bankmanager keinen Schlüssel hat."
+    },
+    "familyBenefits": {
+      "endToEndEncryption": "Stellt sicher, dass niemand – nicht einmal wir – Ihre persönlichen Informationen lesen kann.",
+      "secureCloudStorage": "Schützt Ihren Plan vor Verlust durch Feuer, Diebstahl oder Computerausfälle.",
+      "localOnlyPrivacyMode": "Gibt Ihnen absolute Gewissheit, dass Ihre privatesten Dokumente unter Ihrer Kontrolle bleiben.",
+      "multiFactorAuthentication": "Verhindert, dass jemand auf Ihr Konto zugreift, auch wenn er Ihr Passwort stiehlt.",
+      "europeanDataCenters": "Die Daten Ihrer Familie sind durch einige der strengsten Datenschutzvorschriften der Welt geschützt.",
+      "zeroKnowledgeArchitecture": "Die Geheimnisse Ihrer Familie bleiben Geheimnisse, geschützt vor allen, einschließlich uns."
+    }
+  },
+  "privacyControlPanel": {
+    "privacy_data_controls_1": "Datenschutz- und Datensteuerung",
+    "you_are_in_complete_control_of_2": "Sie haben die vollständige Kontrolle darüber, wie Ihre Daten verarbeitet und gespeichert werden.",
+    "data_processing_3": "Datenverarbeitung",
+    "default_document_processing_4": "Standard-Dokumentverarbeitung",
+    "choose_how_new_documents_are_h_5": "Wählen Sie, wie neue Dokumente standardmäßig behandelt werden.",
+    "automatic_data_deletion_6": "Automatische Datenlöschung",
+    "for_your_peace_of_mind_you_can_7": "Für Ihre Beruhigung können Sie Dokumente nach einer Zeit der Inaktivität automatisch löschen lassen.",
+    "never_delete_8": "Nie löschen",
+    "1_year_of_inactivity_9": "1 Jahr Inaktivität",
+    "3_years_of_inactivity_10": "3 Jahre Inaktivität",
+    "ai_assistant_features_11": "KI-Assistent-Funktionen",
+    "expiration_intelligence_12": "Ablauf-Intelligenz",
+    "get_alerts_for_expiring_docume_13": "Erhalten Sie Warnungen für ablaufende Dokumente und Versicherungspolicen.",
+    "granular_access_controls_for_e_14": "Granulare Zugriffskontrollen für jedes Familienmitglied (demnächst verfügbar).",
+    "save_privacy_settings_15": "Datenschutzeinstellungen speichern",
+    "saving": "Speichern...",
+    "toast": {
+      "loadFailed": "Laden der Datenschutzeinstellungen fehlgeschlagen",
+      "loadError": "Fehler beim Laden der Einstellungen",
+      "saveSuccess": "Datenschutzeinstellungen erfolgreich gespeichert",
+      "saveFailed": "Speichern der Datenschutzeinstellungen fehlgeschlagen",
+      "saveError": "Fehler beim Speichern der Einstellungen"
+    }
+  },
+  "willGenerator": {
+    "no_template_found_for_this_jur_1": "Keine Vorlage für diese Gerichtsbarkeit gefunden",
+    "failed_to_load_will_template_2": "Laden der Testamentvorlage fehlgeschlagen",
+    "please_confirm_that_you_have_s_3": "Bitte bestätigen Sie, dass Sie das Dokument unterschrieben haben",
+    "select_a_country_4": "Land auswählen",
+    "steps": {
+      "confirmJurisdiction": "Gerichtsbarkeit bestätigen",
+      "personalInformation": "Persönliche Informationen",
+      "executorBeneficiaries": "Testamentsvollstrecker & Begünstigte",
+      "reviewGenerate": "Überprüfen & Generieren",
+      "signConfirm": "Unterschreiben & Bestätigen"
+    },
+    "countries": {
+      "GB": "Vereinigtes Königreich",
+      "DE": "Deutschland",
+      "FR": "Frankreich",
+      "ES": "Spanien",
+      "IT": "Italien",
+      "CZ": "Tschechische Republik",
+      "SK": "Slowakei",
+      "PL": "Polen",
+      "AT": "Österreich",
+      "CH": "Schweiz",
+      "NL": "Niederlande",
+      "BE": "Belgien",
+      "LU": "Luxemburg",
+      "LI": "Liechtenstein",
+      "DK": "Dänemark",
+      "SE": "Schweden",
+      "FI": "Finnland",
+      "NO": "Norwegen",
+      "IS": "Island",
+      "IE": "Irland",
+      "PT": "Portugal",
+      "GR": "Griechenland",
+      "HU": "Ungarn",
+      "RO": "Rumänien",
+      "BG": "Bulgarien",
+      "HR": "Kroatien",
+      "SI": "Slowenien",
+      "EE": "Estland",
+      "LV": "Lettland",
+      "LT": "Litauen",
+      "MT": "Malta",
+      "CY": "Zypern",
+      "MD": "Moldawien",
+      "UA": "Ukraine",
+      "RS": "Serbien",
+      "AL": "Albanien",
+      "MK": "Nordmazedonien",
+      "ME": "Montenegro",
+      "BA": "Bosnien und Herzegowina"
+    },
+    "alerts": {
+      "jurisdictionRequired": "Bitte wählen Sie eine Gerichtsbarkeit vor dem Fortfahren",
+      "templateLoadError": "Testamentvorlage für ausgewählte Gerichtsbarkeit kann nicht geladen werden",
+      "generationSuccess": "Testament erfolgreich generiert",
+      "generationError": "Generierung des Testamentdokuments fehlgeschlagen",
+      "signatureRequired": "Bitte bestätigen Sie, dass Sie das Dokument unterschrieben haben, bevor Sie fortfahren"
+    },
+    "console": {
+      "willGenerationCompleted": "Testamentgenerierung abgeschlossen!",
+      "templateLoaded": "Testamentvorlage erfolgreich geladen",
+      "templateLoadFailed": "Laden der Testamentvorlage fehlgeschlagen",
+      "willGenerated": "Testamentdokument erfolgreich generiert"
+    },
+    "confirmCountry": "Bitte bestätigen Sie Ihre Gerichtsbarkeit: {{country}}",
+    "changeCountry": "Land ändern",
+    "fullName": "Vollständiger Name",
+    "executionInstructions": "Ausführungsanweisungen",
+    "confirmSigned": "Ich bestätige, dass ich dieses Dokument unterschrieben habe",
+    "finalizeUpload": "Abschließen & Hochladen"
+  },
+  "assetType": {
+    "selectType": "{{mainCategory}}-Typ auswählen",
+    "primaryResidence": "Hauptwohnsitz",
+    "vacationHome": "Ferienhaus",
+    "rentalProperty": "Mietobjekt",
+    "land": "Grundstück",
+    "commercialProperty": "Gewerbeimmobilie",
+    "bankAccount": "Bankkonto",
+    "investmentPortfolio": "Anlageportfolio",
+    "cryptocurrencyWallet": "Kryptowährungs-Wallet",
+    "loanMortgage": "Kredit / Hypothek",
+    "insurancePolicy": "Versicherungspolice",
+    "pensionRetirement": "Rente / Ruhestand",
+    "car": "Auto",
+    "motorcycle": "Motorrad",
+    "boat": "Boot",
+    "rvCamper": "Wohnmobil / Camper",
+    "aircraft": "Flugzeug",
+    "onlineAccount": "Online-Konto",
+    "softwareLicense": "Software-Lizenz",
+    "domainName": "Domain-Name",
+    "digitalSubscription": "Digitales Abonnement",
+    "cryptocurrency": "Kryptowährung",
+    "nft": "NFT",
+    "jewelry": "Schmuck",
+    "artCollectibles": "Kunst / Sammlerstücke",
+    "electronics": "Elektronik",
+    "furniture": "Möbel",
+    "toolsEquipment": "Werkzeuge / Ausrüstung",
+    "otherValuables": "Andere Wertgegenstände",
+    "customAsset": "Benutzerdefiniertes Asset"
+  },
+  "addLiabilityModal": {
+    "title": "Verbindlichkeit hinzufügen",
+    "fields": {
+      "type": "Typ",
+      "provider": "Anbieter",
+      "referenceNumber": "Referenznummer",
+      "paymentFrequency": "Zahlungshäufigkeit",
+      "notes": "Notizen"
+    },
+    "placeholders": {
+      "selectType": "Typ auswählen",
+      "provider": "Anbietername",
+      "referenceNumber": "Referenznummer",
+      "paymentFrequency": "Häufigkeit auswählen",
+      "notes": "Zusätzliche Notizen"
+    },
+    "buttons": {
+      "cancel": "Abbrechen",
+      "add": "Verbindlichkeit hinzufügen"
+    },
+    "errors": {
+      "requiredFields": "Alle Felder sind erforderlich"
+    },
+    "messages": {
+      "addedSuccessfully": "Verbindlichkeit erfolgreich hinzugefügt"
+    },
+    "types": {
+      "insurancePolicy": "Versicherungspolice",
+      "utilityBill": "Nebenkostenrechnung",
+      "propertyTax": "Grundsteuer",
+      "subscriptionFee": "Abonnementgebühr",
+      "maintenanceContract": "Wartungsvertrag",
+      "loan": "Kredit",
+      "leaseAgreement": "Mietvertrag",
+      "warranty": "Garantie",
+      "other": "Andere"
+    },
+    "frequencies": {
+      "monthly": "Monatlich",
+      "quarterly": "Vierteljährlich",
+      "semiAnnually": "Halbjährlich",
+      "annually": "Jährlich",
+      "oneTime": "Einmalig",
+      "asNeeded": "Bei Bedarf"
+    }
+  },
+  "assetCard": {
+    "assetTypes": {
+      "Primary Residence": "Hauptwohnsitz",
+      "Vacation Home": "Ferienhaus",
+      "Rental Property": "Mietobjekt",
+      "Land": "Grundstück",
+      "Commercial Property": "Gewerbeimmobilie",
+      "Bank Account": "Bankkonto",
+      "Investment Portfolio": "Anlageportfolio",
+      "Cryptocurrency Wallet": "Kryptowährungs-Wallet",
+      "Loan / Mortgage": "Kredit / Hypothek",
+      "Insurance Policy": "Versicherungspolice",
+      "Pension / Retirement Account": "Rentenkonto",
+      "Car": "Auto",
+      "Motorcycle": "Motorrad",
+      "Boat": "Boot",
+      "RV / Camper": "Wohnmobil / Wohnwagen",
+      "Aircraft": "Flugzeug",
+      "Online Account": "Online-Konto",
+      "Software License": "Software-Lizenz",
+      "Domain Name": "Domain-Name",
+      "Digital Subscription": "Digitales Abonnement",
+      "Cryptocurrency": "Kryptowährung",
+      "NFT": "NFT",
+      "Jewelry": "Schmuck",
+      "Art / Collectibles": "Kunst / Sammlerstücke",
+      "Electronics": "Elektronik",
+      "Furniture": "Möbel",
+      "Tools / Equipment": "Werkzeuge / Ausrüstung",
+      "Other Valuables": "Andere Wertgegenstände",
+      "Custom Asset": "Benutzerdefiniertes Asset"
+    },
+    "dateFormat": {
+      "addedOn": "Hinzugefügt am {{date}}",
+      "createdOn": "Erstellt am {{date}}",
+      "updatedOn": "Aktualisiert am {{date}}"
+    },
+    "labels": {
+      "estimatedValue": "Geschätzter Wert",
+      "category": "Kategorie",
+      "subType": "Typ"
+    }
+  },
+  "documentUploader": {
+    "smart_document_upload_2": "Intelligentes Dokumenten-Upload",
+    "upload_any_document_and_our_ai_3": "Laden Sie ein Dokument hoch und unsere KI klassifiziert es automatisch für Sie",
+    "please_upload_an_image_or_pdf__1": "Bitte laden Sie eine Bild- oder PDF-Datei hoch",
+    "image_application_pdf_4": "image/*,application/pdf",
+    "0_0_48_48_5": "0 0 48 48",
+    "m24_12v12m0_0l_4_4m4_4l4_4m10__6": "M24 12v12m0 0l-4 4m4-4l4 4m10-6",
+    "drop_your_document_here_or_cli_7": "Legen Sie Ihr Dokument hier ab oder klicken Sie zum Durchsuchen",
+    "supports_images_and_pdfs_up_to_8": "Unterstützt Bilder und PDFs bis zu 10MB",
+    "document_analysis_complete_10": "Dokumentenanalyse abgeschlossen",
+    "document_type_11": "Dokumententyp",
+    "suggested_title_12": "Vorgeschlagener Titel",
+    "confidence": "Vertrauen",
+    "ai_analysis_13": "KI-Analyse",
+    "continue_with_this_classificat_14": "Mit dieser Klassifizierung fortfahren",
+    "change_category_15": "Kategorie ändern",
+    "documents_we_can_process_16": "Dokumente, die wir verarbeiten können:",
+    "insurance_policies_life_health_17": "Versicherungspolicen (Lebens-, Kranken-, Haus-, Auto-)",
+    "property_deeds_and_titles_18": "Grundstücksurkunden und Titel",
+    "vehicle_ownership_documents_19": "Fahrzeugeigentumsdokumente",
+    "bank_and_investment_statements_20": "Bank- und Anlageauszüge",
+    "wills_and_estate_planning_docu_21": "Testamente und Nachlassplanungsdokumente",
+    "business_contracts_and_ownersh_22": "Geschäftsverträge und Eigentumspapiere",
+    "personal_identification_docume_23": "Persönliche Identifikationsdokumente",
+    "tax_returns_and_documents_24": "Steuererklärungen und Dokumente",
+    "categoryDescriptions": {
+      "insurance_policy": "Lebens-, Kranken-, Haus-, Auto- oder Invaliditätsversicherung",
+      "property_deed": "Grundstückseigentumsdokumente und Urkunden",
+      "vehicle_title": "Auto-, Boot- oder andere Fahrzeugeigentumspapiere",
+      "bank_statement": "Bankkontoauszüge und Dokumente",
+      "investment_statement": "Anlage- und Rentenkontoauszüge",
+      "will_or_trust": "Testamente, Trusts und Nachlassplanungsdokumente",
+      "business_document": "Geschäftseigentum und wichtige Verträge",
+      "personal_id": "Pässe, Führerscheine, Geburtsurkunden",
+      "tax_document": "Steuererklärungen und zugehörige Dokumente",
+      "medical_document": "Medizinische Aufzeichnungen und Gesundheitsrichtlinien",
+      "other": "Andere wichtige Dokumente"
+    },
+    "errors": {
+      "fileTypeError": "Bitte laden Sie eine Bild- oder PDF-Datei hoch",
+      "processingError": "Dokument konnte nicht verarbeitet werden",
+      "uploadError": "Dokument konnte nicht hochgeladen werden",
+      "classificationError": "Dokument konnte nicht klassifiziert werden"
+    }
+  },
+  "executorManagement": {
+    "failed_to_load_executors_2": "Fehler beim Laden der Testamentsvollstrecker",
+    "user_not_found_with_this_email_3": "Benutzer mit dieser E-Mail-Adresse nicht gefunden",
+    "this_person_is_already_designa_4": "Diese Person ist bereits als Testamentsvollstrecker benannt",
+    "failed_to_add_executor_5": "Fehler beim Hinzufügen des Testamentsvollstreckers",
+    "failed_to_remove_executor_6": "Fehler beim Entfernen des Testamentsvollstreckers",
+    "loading_executors_7": "Lade Testamentsvollstrecker...",
+    "executor_management_8": "Testamentsvollstrecker-Verwaltung",
+    "designate_trusted_individuals__9": "Benennen Sie vertrauenswürdige Personen, die Ihnen bei der Verwaltung Ihrer Angelegenheiten helfen und Ihre Angehörigen unterstützen",
+    "add_new_executor_10": "Neuen Testamentsvollstrecker hinzufügen",
+    "email_address_11": "E-Mail-Adresse",
+    "executor_example_com_12": "vollstrecker@beispiel.de",
+    "relationship_type_13": "Beziehungstyp",
+    "primary_executor_14": "Hauptvollstrecker",
+    "secondary_executor_15": "Nebenvollstrecker",
+    "emergency_contact_16": "Notfallkontakt",
+    "current_executors_17": "Aktuelle Testamentsvollstrecker",
+    "no_executors_designated_yet_ad_18": "Noch keine Testamentsvollstrecker benannt. Fügen Sie jemanden hinzu, dem Sie vertrauen, um Ihnen bei der Verwaltung Ihrer Angelegenheiten zu helfen.",
+    "important_information_19": "Wichtige Informationen",
+    "primary_executors_receive_imme_20": "Hauptvollstrecker erhalten sofortigen Zugang zu Ihrem Tresor, wenn nötig",
+    "secondary_executors_are_notifi_21": "Nebenvollstrecker werden benachrichtigt, haben aber eingeschränkten Zugang",
+    "emergency_contacts_are_notifie_22": "Notfallkontakte werden nur in dringenden Situationen benachrichtigt",
+    "all_executors_must_have_legacy_23": "Alle Testamentsvollstrecker müssen LegacyGuard-Konten haben, um auf Ihre Informationen zugreifen zu können",
+    "successMessages": {
+      "executorAdded": "Testamentsvollstrecker erfolgreich hinzugefügt",
+      "executorRemoved": "Testamentsvollstrecker erfolgreich entfernt"
+    },
+    "validationMessages": {
+      "emailRequired": "E-Mail-Adresse ist erforderlich",
+      "invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+      "relationshipTypeRequired": "Beziehungstyp ist erforderlich"
+    },
+    "statusLabels": {
+      "adding": "Hinzufügen...",
+      "addExecutor": "Testamentsvollstrecker hinzufügen",
+      "unknownUser": "Unbekannter Benutzer"
+    }
+  },
+  "emotionalContextSystem": {
+    "emotional_support_1": "Emotionale Unterstützung",
+    "advice_2": "Rat: ",
+    "motivation_3": "Motivation: ",
+    "next_steps_4": "Nächste Schritte: ",
+    "contextResponses": {
+      "lowConfidence": {
+        "primaryMessage": "Sie bewältigen diese Situation mit Sorgfalt und Einsicht.",
+        "supportingMessage": "Es zeigt, dass Sie die Wichtigkeit der Aufgabe verstehen.",
+        "actionableAdvice": "Fahren Sie in Ihrem eigenen angenehmen Tempo fort.",
+        "motivationalElement": "Ihr durchdachter Ansatz ist ein Zeugnis Ihrer Werte.",
+        "nextStepGuidance": "Wenn Sie bereit sind, fahren Sie mit dem nächsten wichtigen Schritt fort, um die Zukunft Ihrer Familie zu sichern."
+      },
+      "highOverwhelm": {
+        "primaryMessage": "Ihr Engagement für Ihre Familie ist lobenswert.",
+        "supportingMessage": "Es ist in Ordnung, einen Moment zu pausieren und sich neu zu sammeln.",
+        "actionableAdvice": "Erwägen Sie, die Aufgabe in kleinere Teile zu unterteilen, um sich zu konzentrieren.",
+        "motivationalElement": "Zu wissen, dass Sie von Liebe und Fürsorge angetrieben werden.",
+        "nextStepGuidance": "Jede kleine Aktion, die Sie unternehmen, macht einen bedeutenden Unterschied."
+      },
+      "default": {
+        "primaryMessage": "Sie leisten bedeutungsvolle Arbeit.",
+        "supportingMessage": "Diese Anstrengung stärkt das Fundament Ihrer Familie.",
+        "actionableAdvice": "Bleiben Sie Ihrem Plan treu.",
+        "motivationalElement": "Jede Entscheidung, die Sie treffen, schützt Ihre Liebsten.",
+        "nextStepGuidance": "Das große Ganze zu sehen, wird Ihre nächsten Schritte leiten."
+      }
+    },
+    "emotionalStates": {
+      "confidence": {
+        "high": "Hoch",
+        "medium": "Mittel",
+        "low": "Niedrig"
+      },
+      "motivation": {
+        "high": "Hoch",
+        "medium": "Mittel",
+        "low": "Niedrig"
+      },
+      "overwhelm": {
+        "none": "Keine",
+        "slight": "Leicht",
+        "moderate": "Mittel",
+        "high": "Hoch"
+      },
+      "urgency": {
+        "relaxed": "Entspannt",
+        "focused": "Fokussiert",
+        "pressed": "Unter Druck",
+        "stressed": "Gestresst"
+      }
+    }
+  },
+  "scenarioPlanner": {
+    "scenarios": {
+      "hospitalized": {
+        "title": "Was, wenn Sie 3 Monate im Krankenhaus sind?",
+        "description": "Ein unerwartetes Gesundheitsproblem bedeutet, dass Sie nicht in der Lage sind, tägliche Angelegenheiten zu verwalten. Ihre Familie muss einspringen."
+      },
+      "incapacitated": {
+        "title": "Was, wenn Sie handlungsunfähig werden?",
+        "description": "Ein schwerer Unfall lässt Sie nicht in der Lage, Entscheidungen für sich selbst zu treffen. Wer wird sie für Sie treffen?"
+      },
+      "suddenPassing": {
+        "title": "Was, wenn Ihnen morgen etwas passiert?",
+        "description": "Der ultimative Test Ihrer Vorbereitung. Ist Ihre Familie bereit, diese schwierige Zeit ohne Chaos zu bewältigen?"
+      }
+    },
+    "timeframes": {
+      "first24Hours": "Erste 24 Stunden",
+      "firstWeek": "Erste Woche",
+      "firstMonth": "Erster Monat",
+      "threeToSixMonths": "3-6 Monate"
+    },
+    "vulnerabilities": {
+      "billsGoUnpaid": "Rechnungen bleiben unbezahlt",
+      "businessDecisionsStall": "Geschäftsentscheidungen stocken",
+      "familyCannotManageFinances": "Familie kann Ihre Finanzen nicht rechtlich verwalten",
+      "familyCannotAccessBankAccount": "Familie kann nicht auf das Hauptbankkonto zugreifen",
+      "businessNoLeadership": "Geschäftsbetrieb hat keine klare Führung",
+      "noWillFound": "Kein Testament gefunden",
+      "insuranceDetailsUnknown": "Versicherungsdetails unbekannt",
+      "noWillAvailable": "Kein Testament verfügbar",
+      "unknownLifeInsurance": "Unbekannte Lebensversicherungsdetails"
+    },
+    "actions": {
+      "designatePowerOfAttorney": "Einen Bevollmächtigten für Finanzen benennen",
+      "grantSpouseAccess": "Ehepartner Zugang zu Ihrem Hauptkonto gewähren",
+      "createBusinessContinuityPlan": "Einen Geschäftskontinuitätsplan erstellen",
+      "draftWill": "Ein rechtsverbindliches Testament erstellen und speichern",
+      "compileInsuranceList": "Eine Liste aller Versicherungspolicen zusammenstellen"
+    },
+    "timelineEvents": {
+      "notifyImmediateFamily": "Unmittelbare Familie benachrichtigen",
+      "securePhysicalProperty": "Physisches Eigentum sichern",
+      "contactExecutor": "Testamentsvollstrecker kontaktieren",
+      "locateWill": "Testament lokalisieren",
+      "executorBeginsProbate": "Testamentsvollstrecker beginnt Nachlassverfahren",
+      "notifyEmployer": "Arbeitgeber benachrichtigen",
+      "activatePowerOfAttorney": "Vollmacht aktivieren",
+      "arrangeBillPayments": "Rechnungszahlungen arrangieren",
+      "fileDisabilityBenefits": "Invaliditätsleistungen beantragen"
+    },
+    "descriptions": {
+      "billsGoUnpaid": "Ihre Familie kann nicht auf Ihr Hauptgirokonto zugreifen, um die Hypothek zu bezahlen.",
+      "businessDecisionsStall": "Kunden und Mitarbeiter wissen nicht, wer berechtigt ist, Entscheidungen zu treffen.",
+      "familyCannotManageFinances": "Ihr Ehepartner kann jetzt rechtlich alle finanziellen Angelegenheiten verwalten, Rechnungen bezahlen und Investitionen schützen.",
+      "familyCannotAccessBankAccount": "Ihre Familie kann jetzt Rechnungen bezahlen und tägliche Ausgaben ohne Verzögerung oder rechtliche Komplikationen verwalten.",
+      "businessNoLeadership": "Ihr Geschäft kann mit klarer Führung und Entscheidungsprozessen reibungslos weiterlaufen.",
+      "noWillFound": "Die Familie kann das Testament nicht finden oder die Existenz bestätigen.",
+      "insuranceDetailsUnknown": "Lebensversicherungspolice-Details und Begünstigte sind unbekannt.",
+      "notifyImmediateFamily": "Stellen Sie sicher, dass alle unmittelbaren Familienmitglieder informiert sind.",
+      "securePhysicalProperty": "Stellen Sie sicher, dass Haus und Fahrzeuge sicher sind.",
+      "contactExecutor": "Kontaktieren Sie Hans Schmidt, um das Testamentverfahren zu starten.",
+      "locateWill": "Testament am angegebenen Ort lokalisieren und sichern.",
+      "executorBeginsProbate": "Der Testamentsvollstrecker wird Nachlass beantragen, um das Vermögen zu verwalten.",
+      "notifyEmployer": "Arbeitsplatz über längere Abwesenheit informieren.",
+      "activatePowerOfAttorney": "Stellen Sie sicher, dass die benannte Person Entscheidungen treffen kann.",
+      "arrangeBillPayments": "Automatische Zahlungen einrichten oder vertrauenswürdiger Person delegieren.",
+      "fileDisabilityBenefits": "Notwendige Unterlagen für Versicherungsansprüche einreichen."
+    },
+    "scenario_planner_1": "Szenario-Planer",
+    "let_s_see_how_prepared_your_fa_2": "Lassen Sie uns sehen, wie gut Ihre Familie auf verschiedene Szenarien vorbereitet ist",
+    "generate_family_action_plan_3": "Familien-Aktionsplan generieren",
+    "generate_plan_4": "Plan generieren",
+    "current_family_vulnerabilities_6": "Aktuelle Familienverwundbarkeiten",
+    "without_proper_preparation_you_7": "Ohne ordnungsgemäße Vorbereitung könnten Sie und Ihre Familie diesen Herausforderungen gegenüberstehen",
+    "projected_timeline_8": "Prognostizierter Zeitplan",
+    "potential_financial_impact_9": "Potenzielle finanzielle Auswirkungen",
+    "these_are_estimates_of_the_pos_10": "Dies sind Schätzungen der potenziellen Kosten, wenn Verwundbarkeiten nicht angegangen werden",
+    "no_will_11": "Kein Testament: ",
+    "potential_cost_of_lengthy_prob_12": "Potenzielle Kosten für langwieriges Nachlassverfahren: ",
+    "5_000_15_000_13": "5.000 - 15.000 €",
+    "estimated_14": " geschätzt",
+    "potential_loss_of_business_rev_15": "Potenzielle Verlust von Geschäftseinnahmen während des Übergangs: ",
+    "20_000_16": "20.000 €",
+    "your_preparedness_blueprint_17": "Ihr Vorbereitungsplan",
+    "your_family_is_currently_18": "Ihre Familie ist derzeit ",
+    "protected_in_this_scenario_19": "% in diesem Szenario geschützt",
+    "vulnerability_20": "Verwundbarkeit: ",
+    "action_required_21": "Erforderliche Aktion: ",
+    "resolve_this_vulnerability_22": "Diese Verwundbarkeit lösen",
+    "resolved_23": "Gelöst: ",
+    "family_action_plan_24": "Familien-Aktionsplan",
+    "a_comprehensive_guide_for_your_25": "Ein umfassender Leitfaden für Ihre Familie, der im Notfall befolgt werden soll",
+    "print_plan_26": "Plan drucken",
+    "_27": "🤕"
+  },
+  "legacyBriefing": {
+    "legacy_briefing_3": "Vermächtnis-Briefing",
+    "create_and_manage_sealed_messa_4": "Erstellen und verwalten Sie versiegelte Nachrichten für Ihre Liebsten",
+    "failed_to_load_your_time_capsu_1": "Fehler beim Laden Ihrer Zeitkapseln",
+    "are_you_sure_you_want_to_delet_2": "Sind Sie sicher, dass Sie diese Zeitkapsel löschen möchten?",
+    "create_new_message_5": "Neue Nachricht erstellen",
+    "no_time_capsules_yet_6": "Noch keine Zeitkapseln",
+    "create_meaningful_messages_for_7": "Erstellen Sie bedeutungsvolle Nachrichten für Ihre Liebsten, die sie in der Zukunft erhalten werden",
+    "create_your_first_message_8": "Ihre erste Nachricht erstellen",
+    "to_9": "An:",
+    "unlocks_on_10": "Entsperrt am:",
+    "unlocks_11": "Entsperrt:",
+    "after_passing_12": "Nach dem Tod",
+    "statusLabels": {
+      "locked": "Verschlossen",
+      "unlocked": "Entsperrt",
+      "delivered": "Zugestellt",
+      "noRecipients": "Keine Empfänger"
+    },
+    "messageTypes": {
+      "text": "Textnachricht",
+      "photo": "Fotonachricht",
+      "video": "Videonachricht",
+      "audio": "Audionachricht"
+    },
+    "actions": {
+      "edit": "Bearbeiten",
+      "delete": "Löschen"
+    },
+    "toastMessages": {
+      "deleteSuccess": "Zeitkapsel erfolgreich gelöscht",
+      "deleteError": "Fehler beim Löschen der Zeitkapsel"
+    },
+    "dateFormat": {
+      "dateNotSet": "Datum nicht gesetzt",
+      "created": "Erstellt"
+    }
+  },
+  "microTaskGenerator": {
+    "minutes_1": " Minuten • ",
+    "family_impact_2": " Familienauswirkung",
+    "start_task_3": "Aufgabe starten",
+    "complete_task_4": "Aufgabe abschließen",
+    "skip_for_now_5": "Für jetzt überspringen",
+    "taskCategories": {
+      "identification": "Identifikationsdokumente",
+      "financial": "Finanzielle Informationen",
+      "healthcare": "Gesundheitsdokumente",
+      "legal": "Rechtsdokumente",
+      "digital": "Digitale Vermögenswerte",
+      "personal": "Persönliche Informationen"
+    },
+    "difficultyLevels": {
+      "trivial": "Trivial",
+      "easy": "Einfach",
+      "simple": "Einfach"
+    },
+    "familyImpactLevels": {
+      "high": "Hoch",
+      "medium": "Mittel",
+      "low": "Niedrig"
+    },
+    "taskStatus": {
+      "available": "Verfügbar",
+      "in_progress": "In Bearbeitung",
+      "completed": "Abgeschlossen",
+      "skipped": "Übersprungen"
+    },
+    "tasks": {
+      "driversLicense": {
+        "title": "Fotografieren Sie Ihren Führerschein",
+        "description": "Ihre Familie wird dies für rechtliche und finanzielle Angelegenheiten benötigen. Ein klares Foto spart ihnen Zeit und Stress.",
+        "completionMessage": "Ihre Familie hat jetzt Zugang zu kritischen ID-Informationen."
+      },
+      "passport": {
+        "title": "Fotografieren Sie Ihren Reisepass",
+        "description": "Wesentlich für internationale Reisevereinbarungen und rechtliche Identifikation.",
+        "completionMessage": "Internationale Reisedokumentation ist jetzt für Ihre Familie gesichert."
+      },
+      "birthCertificate": {
+        "title": "Scannen Sie Ihre Geburtsurkunde",
+        "description": "Erforderlich für viele rechtliche Prozesse und Familienhistorie-Dokumentation.",
+        "completionMessage": "Geburtsurkunde ist jetzt digital für zukünftige Bedürfnisse erhalten."
+      },
+      "socialSecurityCard": {
+        "title": "Dokumentieren Sie Ihre Sozialversicherungskarte",
+        "description": "Kritisch für Leistungen und rechtliche Identifikationsprozesse.",
+        "completionMessage": "Sozialversicherungsinformationen sind jetzt sicher dokumentiert."
+      },
+      "bankAccounts": {
+        "title": "Listen Sie Ihre Bankkonten auf",
+        "description": "Helfen Sie Ihrer Familie, Finanzen zu verwalten und bei Bedarf auf Gelder zuzugreifen.",
+        "completionMessage": "Bankkontoinformationen sind jetzt für Ihre Familie organisiert."
+      },
+      "insurancePolicies": {
+        "title": "Stellen Sie Versicherungspolice-Details zusammen",
+        "description": "Stellen Sie sicher, dass Ihre Familie über alle Deckungen Bescheid weiß und Ansprüche geltend machen kann.",
+        "completionMessage": "Versicherungsinformationen sind jetzt umfassend und zugänglich."
+      },
+      "medicalRecords": {
+        "title": "Organisieren Sie die Krankengeschichte",
+        "description": "Helfen Sie Gesundheitsdienstleistern, Ihren medizinischen Hintergrund zu verstehen.",
+        "completionMessage": "Krankengeschichte ist jetzt für bessere Gesundheitsentscheidungen organisiert."
+      },
+      "medications": {
+        "title": "Listen Sie aktuelle Medikamente auf",
+        "description": "Kritisch für medizinische Notfälle und laufende Pflege.",
+        "completionMessage": "Medikamentenliste ist jetzt für medizinisches Fachpersonal verfügbar."
+      },
+      "will": {
+        "title": "Erstellen oder aktualisieren Sie Ihr Testament",
+        "description": "Stellen Sie sicher, dass Ihre Wünsche klar dokumentiert und rechtlich bindend sind.",
+        "completionMessage": "Ihr Testament ist jetzt aktuell und rechtlich geschützt."
+      },
+      "powerOfAttorney": {
+        "title": "Bestimmen Sie eine Vollmacht",
+        "description": "Autorisieren Sie vertrauenswürdige Personen, in Ihrem Namen Entscheidungen zu treffen.",
+        "completionMessage": "Vollmacht ist jetzt ordnungsgemäß bestimmt."
+      },
+      "digitalPasswords": {
+        "title": "Sichern Sie die digitale Passwortliste",
+        "description": "Helfen Sie der Familie, auf wichtige Online-Konten und -Dienste zuzugreifen.",
+        "completionMessage": "Digitaler Zugang ist jetzt sicher für Ihre Familie organisiert."
+      },
+      "socialMedia": {
+        "title": "Planen Sie Social-Media-Konten",
+        "description": "Entscheiden Sie, wie Ihre Online-Präsenz behandelt werden soll.",
+        "completionMessage": "Social-Media-Vermächtnis ist jetzt geplant und dokumentiert."
+      }
+    },
+    "sessionStats": {
+      "tasksCompleted": "Abgeschlossene Aufgaben",
+      "totalTimeSpent": "Gesamte Zeit verbracht",
+      "momentumScore": "Schwung-Score",
+      "nextRecommendedTask": "Nächste empfohlene Aufgabe"
+    },
+    "scoring": {
+      "urgency": "Dringlichkeit",
+      "impact": "Auswirkung",
+      "ease": "Einfachheit",
+      "momentum": "Schwung"
+    }
+  },
+  "dataTransparency": {
+    "loadingMessage": "Lade Ihre Datentransparenz-Informationen...",
+    "loadingError": "Transparenzdaten konnten nicht geladen werden. Bitte versuchen Sie es später erneut.",
+    "title": "Ihre Daten, Ihre Kontrolle",
+    "description": "Wir glauben an totale Transparenz. Hier ist genau, wie wir mit Ihren Informationen umgehen.",
+    "dataFlow": {
+      "whereDataLives": "Wo Ihre Daten leben",
+      "collection": "Sammlung",
+      "storage": "Speicherung",
+      "processing": "Verarbeitung",
+      "sharing": "Teilen"
+    },
+    "recentActivity": {
+      "title": "Letzte Aktivität",
+      "premiumTitle": "Entsperren Sie Ihr permanentes Überwachungsprotokoll",
+      "premiumText": "Ihr 30-tägiges Betriebsprotokoll bietet grundlegende Sicherheit. Für maximale Rechenschaftspflicht und Seelenfrieden upgraden Sie zum Command Package, um eine vollständige, unveränderliche Prüfhistorie jeder in Ihrem Tresor durchgeführten Aktion für immer zu erhalten."
+    },
+    "dataOwnership": {
+      "title": "Dateneigentum",
+      "description": "Sie besitzen Ihre Daten, immer. Sie können jederzeit eine vollständige Kopie herunterladen.",
+      "downloadButton": "Mein Datenarchiv herunterladen"
+    }
+  },
+  "complexityReduction": {
+    "title": "Vereinfachen Sie Ihre Nachlassplanung",
+    "subtitle": "Brechen Sie komplexe Aufgaben in einfache, handhabbare Schritte auf",
+    "description": "Wir verstehen, dass die Planung für die Zukunft überwältigend sein kann. Unser Komplexitätsreduktionssystem unterteilt jede Aufgabe in einfache, umsetzbare Schritte, die nur Minuten dauern.",
+    "benefits": {
+      "title": "Warum Komplexitätsreduktion funktioniert",
+      "overwhelm": {
+        "title": "Beseitigt Überforderung",
+        "description": "Anstatt einer riesigen To-Do-Liste zu begegnen, bewältigen Sie eine kleine Aufgabe nach der anderen. Jeder Schritt ist so konzipiert, dass er in weniger als 5 Minuten abgeschlossen werden kann."
+      },
+      "progress": {
+        "title": "Sichtbarer Fortschritt",
+        "description": "Sehen Sie, wie die Vorbereitung Ihrer Familie mit jedem abgeschlossenen Schritt wächst. Verfolgen Sie Ihren Fortschritt und feiern Sie kleine Erfolge."
+      },
+      "confidence": {
+        "title": "Baut Vertrauen auf",
+        "description": "Während Sie jeden Schritt abschließen, werden Sie sich selbstbewusster und kontrollierter fühlen. Was einst unmöglich schien, wird erreichbar."
+      },
+      "family": {
+        "title": "Familienschutz",
+        "description": "Jeder abgeschlossene Schritt schützt Ihre Familie direkt. Von Notfallzugang bis zur langfristigen Planung ist jede Aktion wichtig."
+      }
+    },
+    "steps": {
+      "identifyBankAccount": {
+        "title": "Identifizieren Sie Ihr Hauptbankkonto",
+        "why": "Warum das wichtig ist: Sofortiger Zugang zu Mitteln während Notfällen",
+        "whatYouDo": "Was Sie tun: Machen Sie ein Foto oder notieren Sie Kontoinformationen",
+        "whatWeDo": "Was wir tun: Sichere Speicherung von Informationen und Erstellung von Zugriffsanweisungen",
+        "timeRequired": "Benötigte Zeit: 2 Minuten",
+        "complexity": "Komplexitätsgrad: Einfach"
+      },
+      "emergencyContacts": {
+        "title": "Notfallkontakte auflisten",
+        "why": "Warum das wichtig ist: Schneller Zugang zu wichtigen Personen während Krisen",
+        "whatYouDo": "Was Sie tun: Telefonnummern und Beziehungen hinzufügen",
+        "whatWeDo": "Was wir tun: Kontakte nach Priorität organisieren und Notfallprotokolle erstellen",
+        "timeRequired": "Benötigte Zeit: 3 Minuten",
+        "complexity": "Komplexitätsgrad: Einfach"
+      },
+      "insurancePolicies": {
+        "title": "Versicherungspolicen dokumentieren",
+        "why": "Warum das wichtig ist: Stellt sicher, dass Ansprüche schnell und korrekt eingereicht werden können",
+        "whatYouDo": "Was Sie tun: Policendokumente hochladen oder Fotos machen",
+        "whatWeDo": "Was wir tun: Schlüsselinformationen extrahieren und Anweisungen für Ansprüche erstellen",
+        "timeRequired": "Benötigte Zeit: 5 Minuten",
+        "complexity": "Komplexitätsgrad: Leicht"
+      },
+      "digitalAssets": {
+        "title": "Digitale Assets sichern",
+        "why": "Warum das wichtig ist: Schützt Online-Konten und digitale Erinnerungen",
+        "whatYouDo": "Was Sie tun: Wichtige Konten und Passwörter auflisten",
+        "whatWeDo": "Was wir tun: Sichere Zugriffsprotokolle und Backup-Anweisungen erstellen",
+        "timeRequired": "Benötigte Zeit: 4 Minuten",
+        "complexity": "Komplexitätsgrad: Leicht"
+      },
+      "legalDocuments": {
+        "title": "Rechtsdokumente organisieren",
+        "why": "Warum das wichtig ist: Stellt sicher, dass rechtliche Wünsche befolgt werden und Prozesse reibungslos verlaufen",
+        "whatYouDo": "Was Sie tun: Testamente, Vollmachten und andere Dokumente hochladen",
+        "whatWeDo": "Was wir tun: Zusammenfassungen erstellen und ordnungsgemäßen rechtlichen Zugang sicherstellen",
+        "timeRequired": "Benötigte Zeit: 6 Minuten",
+        "complexity": "Komplexitätsgrad: Mittel"
+      },
+      "familyInstructions": {
+        "title": "Familienanweisungen schreiben",
+        "why": "Warum das wichtig ist: Bietet klare Anleitung in schwierigen Zeiten",
+        "whatYouDo": "Was Sie tun: Persönliche Nachrichten und Anweisungen schreiben",
+        "whatWeDo": "Was wir tun: Nachrichten organisieren und Lieferpläne erstellen",
+        "timeRequired": "Benötigte Zeit: 8 Minuten",
+        "complexity": "Komplexitätsgrad: Mittel"
+      }
+    },
+    "actions": {
+      "startThisStep": "Diesen Schritt starten",
+      "showMeHow": "Zeigen Sie mir wie",
+      "iNeedHelp": "Ich brauche Hilfe",
+      "nextStep": "Nächster Schritt",
+      "previousStep": "Vorheriger Schritt",
+      "completeStep": "Als abgeschlossen markieren",
+      "skipStep": "Überspringen für jetzt"
+    },
+    "progress": {
+      "title": "Ihr Fortschritt",
+      "completed": "Abgeschlossen",
+      "inProgress": "In Bearbeitung",
+      "notStarted": "Nicht begonnen",
+      "totalSteps": "Gesamtschritte",
+      "estimatedTime": "Geschätzte verbleibende Zeit"
+    },
+    "features": {
+      "title": "Wie Komplexitätsreduktion funktioniert",
+      "stepByStep": {
+        "title": "Schritt-für-Schritt-Anleitung",
+        "description": "Jede Aufgabe wird in klare, einfache Anweisungen unterteilt, die jeder befolgen kann."
+      },
+      "timeEstimation": {
+        "title": "Genaue Zeitschätzungen",
+        "description": "Wissen Sie genau, wie lange jeder Schritt dauern wird, von 2 Minuten bis maximal 15 Minuten."
+      },
+      "difficultyLevels": {
+        "title": "Klare Schwierigkeitsgrade",
+        "description": "Einfach, Leicht, Mittel und Komplex Bewertungen helfen Ihnen zu wählen, was Sie zuerst angehen."
+      },
+      "progressTracking": {
+        "title": "Fortschrittsverfolgung",
+        "description": "Sehen Sie, wie die Vorbereitung Ihrer Familie mit jedem abgeschlossenen Schritt wächst."
+      },
+      "helpAvailable": {
+        "title": "Hilfe, wenn Sie sie brauchen",
+        "description": "Erhalten Sie Unterstützung, Erklärungen und Hilfe für jeden Schritt, der herausfordernd erscheint."
+      }
+    }
+  },
+  "annualReview": {
+    "title": "Jährliche Nachlassprüfung",
+    "subtitle": "Halten Sie den Schutzplan Ihrer Familie aktuell und effektiv",
+    "description": "Das Leben ändert sich schnell. Diese jährliche Prüfung stellt sicher, dass Ihr Nachlassplan mit Ihrer aktuellen Situation und Ihren Wünschen übereinstimmt.",
+    "progress": {
+      "title": "Prüfungsfortschritt",
+      "completed": "Abgeschlossen",
+      "inProgress": "In Bearbeitung",
+      "notStarted": "Nicht begonnen",
+      "totalSteps": "Gesamtschritte",
+      "estimatedTime": "Geschätzte Zeit: 15 Minuten"
+    },
+    "step1": {
+      "title": "Überprüfen Sie Ihre Testamentsvollstrecker",
+      "description": "Bestätigen Sie, dass Ihre vertrauenswürdigen Personen immer noch die richtige Wahl für Ihre Familie sind"
+    },
+    "step2": {
+      "title": "Überprüfen Sie Ihre Vermögenswerte",
+      "description": "Stellen Sie sicher, dass Ihr Vermögensinventar aktuell und vollständig ist"
+    },
+    "step3": {
+      "title": "Überprüfen Sie Ihre Begünstigten",
+      "description": "Stellen Sie sicher, dass Ihre Begünstigten immer noch die richtigen Personen sind"
+    },
+    "step4": {
+      "title": "Prüfung abschließen",
+      "description": "Schließen Sie Ihre jährliche Prüfung ab und aktualisieren Sie Ihren Plan"
+    },
+    "commandRoster": {
+      "title": "Kommandostab-Überprüfung",
+      "description": "Ihre Testamentsvollstrecker und vertrauenswürdigen Personen sind die Grundlage des Schutzplans Ihrer Familie.",
+      "executorQuestion": "Ist {name} immer noch die richtige Person für Ihren Testamentsvollstrecker?",
+      "guardianQuestion": "Ist {name} immer noch die richtige Person für die Betreuung Ihrer Kinder?",
+      "trustedPersonQuestion": "Ist {name} immer noch die richtige Person für {role}?",
+      "status": {
+        "current": "Aktuell",
+        "needsUpdate": "Aktualisierung erforderlich",
+        "outdated": "Veraltet",
+        "missing": "Fehlt"
+      },
+      "details": {
+        "executor": "Haupttestamentsvollstrecker für Ihr Vermögen",
+        "guardian": "Vormund für minderjährige Kinder",
+        "trustedPerson": "Vertrauenswürdige Person mit {accessLevel} Zugang",
+        "emergencyContact": "Notfallkontaktperson"
+      }
+    },
+    "armory": {
+      "title": "Vermögensinventar-Überprüfung",
+      "description": "Ihre Vermögenswerte sind das, was Sie schützen. Halten Sie dieses Inventar aktuell.",
+      "ownershipQuestion": "Besitzen Sie {assetName} immer noch?",
+      "valueQuestion": "Hat sich der Wert von {assetName} erheblich geändert?",
+      "locationQuestion": "Ist der Standort von {assetName} immer noch korrekt?",
+      "status": {
+        "current": "Aktuell",
+        "needsUpdate": "Aktualisierung erforderlich",
+        "outdated": "Veraltet",
+        "missing": "Fehlt"
+      },
+      "categories": {
+        "realEstate": "Immobilien",
+        "vehicles": "Fahrzeuge",
+        "bankAccounts": "Bankkonten",
+        "investments": "Investitionen",
+        "insurance": "Versicherung",
+        "digitalAssets": "Digitale Vermögenswerte",
+        "personalItems": "Persönliche Gegenstände"
+      }
+    },
+    "beneficiaries": {
+      "title": "Begünstigten-Überprüfung",
+      "description": "Stellen Sie sicher, dass die richtigen Personen die richtigen Vermögenswerte zur richtigen Zeit erhalten.",
+      "confirmationQuestion": "Sind dies immer noch die richtigen Personen für den Erhalt dieser Vermögenswerte?",
+      "distributionQuestion": "Ist das Verteilungsprozent immer noch korrekt?",
+      "contactQuestion": "Sind die Kontaktdaten für {name} immer noch aktuell?",
+      "status": {
+        "current": "Aktuell",
+        "needsUpdate": "Aktualisierung erforderlich",
+        "outdated": "Veraltet",
+        "missing": "Fehlt"
+      },
+      "details": {
+        "primary": "Hauptbegünstigter",
+        "contingent": "Nebenbegünstigter",
+        "percentage": "{percentage}% der Vermögenswerte",
+        "specific": "Spezifischer Vermögensbegünstigter"
+      }
+    },
+    "complete": {
+      "title": "Prüfung abgeschlossen",
+      "description": "Ihre jährliche Prüfung wurde erfolgreich abgeschlossen.",
+      "message": "Ihre jährliche Prüfung wurde abgeschlossen. Der Schutzplan Ihrer Familie ist jetzt aktuell und effektiv.",
+      "summary": "Prüfungszusammenfassung",
+      "changes": "Vorgenommene Änderungen",
+      "noChanges": "Es waren keine Änderungen erforderlich. Ihr Plan ist aktuell.",
+      "nextReview": "Nächste Prüfung fällig",
+      "reminder": "Wir erinnern Sie daran, wenn es Zeit für Ihre nächste jährliche Prüfung ist."
+    },
+    "buttons": {
+      "confirm": "Bestätigen",
+      "update": "Aktualisieren",
+      "back": "Zurück",
+      "next": "Weiter",
+      "finish": "Prüfung abschließen",
+      "save": "Änderungen speichern",
+      "skip": "Überspringen für jetzt",
+      "reviewLater": "Später überprüfen"
+    },
+    "status": {
+      "title": "Prüfungsstatus",
+      "overdue": "Überfällig",
+      "dueSoon": "Demnächst fällig",
+      "current": "Aktuell",
+      "completed": "Abgeschlossen",
+      "lastReview": "Letzte Prüfung",
+      "nextReview": "Nächste Prüfung",
+      "daysOverdue": "{days} Tage überfällig",
+      "daysUntilDue": "{days} Tage bis zur Fälligkeit"
+    },
+    "notifications": {
+      "reviewDue": "Jährliche Prüfung fällig",
+      "reviewOverdue": "Jährliche Prüfung überfällig",
+      "reviewCompleted": "Jährliche Prüfung abgeschlossen",
+      "changesSaved": "Änderungen erfolgreich gespeichert",
+      "errorSaving": "Fehler beim Speichern der Änderungen",
+      "reminderSet": "Erinnerung für nächste Prüfung gesetzt"
+    }
+  },
+  "beneficiaryCommunications": {
+    "title": "Begünstigten-Kommunikation",
+    "description": "Verfolgen Sie alle Kommunikationen mit Begünstigten",
+    "logCommunication": "Kommunikation protokollieren",
+    "logAction": "Kommunikation mit {name} protokolliert",
+    "dialog": {
+      "title": "Kommunikation protokollieren",
+      "description": "Aufzeichnen von Details Ihrer Kommunikation mit einem Begünstigten"
+    },
+    "fields": {
+      "beneficiaryName": "Name des Begünstigten",
+      "email": "E-Mail",
+      "type": "Typ",
+      "date": "Datum",
+      "subject": "Betreff",
+      "summary": "Zusammenfassung"
+    },
+    "placeholders": {
+      "subject": "Kurzer Betreff der Kommunikation",
+      "summary": "Detaillierte Zusammenfassung dessen, was besprochen wurde"
+    },
+    "types": {
+      "email": "E-Mail",
+      "phone": "Telefon",
+      "letter": "Brief",
+      "inPerson": "Persönlich",
+      "in_person": "Persönlich",
+      "other": "Andere"
+    },
+    "actions": {
+      "cancel": "Abbrechen",
+      "saving": "Speichern...",
+      "save": "Kommunikation speichern"
+    },
+    "empty": {
+      "title": "Noch keine Kommunikationen protokolliert",
+      "subtitle": "Klicken Sie auf 'Kommunikation protokollieren', um Ihre erste Interaktion aufzuzeichnen"
+    }
+  },
+  "createTimeCapsuleModal": {
+    "title": "Zeitkapsel erstellen",
+    "titleCreate": "Zeitkapsel erstellen",
+    "titleEdit": "Zeitkapsel bearbeiten",
+    "description": "Erstellen Sie eine Nachricht, die in der Zukunft an Ihre Liebsten zugestellt wird.",
+    "errors": {
+      "noTitle": "Bitte geben Sie einen Titel für Ihre Zeitkapsel ein.",
+      "noRecipients": "Bitte wählen Sie mindestens einen Empfänger aus.",
+      "noUnlockDate": "Bitte wählen Sie ein Entsperrdatum aus.",
+      "noMessage": "Bitte geben Sie Ihre Nachricht ein.",
+      "noFile": "Bitte laden Sie eine Datei hoch.",
+      "updateFailed": "Aktualisierung der Zeitkapsel fehlgeschlagen.",
+      "saveFailed": "Speichern der Zeitkapsel fehlgeschlagen.",
+      "fileTooLarge": "Dateigröße muss weniger als 50MB betragen.",
+      "invalidFileType": "Ungültiger Dateityp für {{messageType}}."
+    },
+    "success": {
+      "updated": "Zeitkapsel aktualisiert!",
+      "created": "Zeitkapsel erstellt!"
+    },
+    "labels": {
+      "title": "Titel",
+      "messageType": "Nachrichtentyp",
+      "recipients": "Empfänger",
+      "deliveryQuestion": "Wann sollte diese Nachricht zugestellt werden?",
+      "unlockDate": "Entsperrdatum",
+      "yourMessage": "Ihre Nachricht",
+      "uploadFile": "{{messageType}} hochladen"
+    },
+    "placeholders": {
+      "title": "z.B. Für Ihren 18. Geburtstag",
+      "message": "Schreiben Sie hier Ihre herzliche Nachricht...",
+      "selectDate": "Datum auswählen"
+    },
+    "messageTypes": {
+      "text": "Textnachricht",
+      "photo": "Foto",
+      "video": "Video",
+      "audio": "Audio"
+    },
+    "recipients": {
+      "noTrustedPeople": "Sie haben noch keine vertrauenswürdigen Personen hinzugefügt. Fügen Sie sie zuerst von Ihrem Dashboard hinzu.",
+      "selected": "Ausgewählt"
+    },
+    "unlockConditions": {
+      "onDate": "An einem bestimmten Datum",
+      "afterPassing": "Nach meinem Tod"
+    },
+    "fileUpload": {
+      "clickToUpload": "Klicken zum Hochladen",
+      "dragAndDrop": " oder ziehen und ablegen",
+      "maxSize": "Maximale Dateigröße: 50MB",
+      "fileSizeMB": "{{size}} MB"
+    },
+    "premium": {
+      "videoMessage": "Videonachrichten sind eine Premium-Funktion.",
+      "upgradeNow": "Jetzt upgraden"
+    },
+    "buttons": {
+      "recordVideo": "Videonachricht aufnehmen",
+      "cancel": "Abbrechen",
+      "saving": "Speichern...",
+      "update": "Zeitkapsel aktualisieren",
+      "create": "Zeitkapsel erstellen"
+    },
+    "characterCount": "{{count}}/{{max}} Zeichen"
+  },
+  "editStoryModal": {
+    "editStory": "Geschichte bearbeiten",
+    "addStory": "Geschichte hinzufügen",
+    "description": "Teilen Sie die Geschichte hinter \"{{assetName}}\". Diese persönliche Note wird für Ihre Liebsten von unschätzbarem Wert sein.",
+    "fields": {
+      "yourStory": "Ihre Geschichte"
+    },
+    "placeholders": {
+      "story": "z.B. Das war der Verlobungsring Ihrer Großmutter, der ihr 1952 gegeben wurde, als sie Ihren Großvater in der kleinen Kirche in ihrer Heimatstadt heiratete. Sie trug ihn 65 Jahre lang jeden Tag..."
+    },
+    "hints": {
+      "shareMemories": "Teilen Sie Erinnerungen, Bedeutung oder Geschichte"
+    },
+    "tips": {
+      "title": "Tipps für eine bedeutungsvolle Geschichte:",
+      "explainSpecial": "Erklären Sie, warum dieser Gegenstand für Sie besonders ist",
+      "shareMemories": "Teilen Sie damit verbundene Erinnerungen",
+      "describeHistory": "Beschreiben Sie seine Geschichte oder wie Sie ihn erworben haben",
+      "mentionWishes": "Erwähnen Sie Wünsche, wie er verwendet oder aufbewahrt werden sollte"
+    },
+    "saving": "Speichern...",
+    "saveStory": "Geschichte speichern",
+    "messages": {
+      "saved": "Geschichte erfolgreich gespeichert"
+    },
+    "errors": {
+      "notAuthenticated": "Sie müssen angemeldet sein, um eine Geschichte zu speichern",
+      "saveFailed": "Speichern der Geschichte fehlgeschlagen"
+    }
+  },
+  "dynamicAssetForm": {
+    "propertyAddress": "Immobilienadresse",
+    "purchaseDate": "Kaufdatum",
+    "purchasePrice": "Kaufpreis",
+    "currentEstimatedValue": "Aktueller geschätzter Wert",
+    "mortgageInformation": "Hypothekeninformationen",
+    "locationOfPropertyDocuments": "Standort der Immobiliendokumente",
+    "locationAddress": "Standort / Adresse",
+    "size": "Größe (Morgen/qm)",
+    "zoningType": "Zonierungstyp",
+    "currentUse": "Aktuelle Nutzung",
+    "bankName": "Bankname",
+    "accountType": "Kontotyp",
+    "selectAccountType": "Kontotyp auswählen",
+    "checking": "Girokonto",
+    "savings": "Sparkonto",
+    "moneyMarket": "Geldmarktkonto",
+    "certificateOfDeposit": "Einlagenzertifikat",
+    "accountHolderName": "Kontoinhabername(n)",
+    "accountNumberLast4": "Kontonummer (Letzte 4 Ziffern)",
+    "routingNumber": "Routing-Nummer",
+    "brokerageFirm": "Maklerfirma",
+    "accountNumber": "Kontonummer",
+    "individual": "Einzelperson",
+    "joint": "Gemeinsam",
+    "ira": "IRA",
+    "rothIra": "Roth IRA",
+    "401k": "401(k)",
+    "approximateValue": "Ungefährer Wert",
+    "financialAdvisor": "Finanzberater (falls vorhanden)",
+    "walletNameLabel": "Wallet-Name/Bezeichnung",
+    "walletType": "Wallet-Typ",
+    "selectWalletType": "Wallet-Typ auswählen",
+    "hardwareWallet": "Hardware-Wallet",
+    "softwareWallet": "Software-Wallet",
+    "exchangeWallet": "Börsen-Wallet",
+    "paperWallet": "Papier-Wallet",
+    "cryptocurrenciesHeld": "Gehaltene Kryptowährungen",
+    "locationOfSeedPhrase": "Standort der Seed-Phrase/Private Keys",
+    "exchangeInformation": "Börseninformationen (falls zutreffend)",
+    "makeAndModel": "Marke und Modell",
+    "year": "Jahr",
+    "vinNumber": "Fahrgestellnummer",
+    "licensePlate": "Kennzeichen",
+    "loanInformation": "Kreditinformationen (falls vorhanden)",
+    "locationOfTitle": "Standort der Fahrzeugpapiere",
+    "platformWebsiteName": "Plattform/Website-Name",
+    "accountEmail": "Konto-E-Mail/Benutzername",
+    "accountPurpose": "Kontozweck/Beschreibung",
+    "recoveryInformation": "Wiederherstellungsinformationen",
+    "faMethod": "2FA-Methode (falls aktiviert)",
+    "itemDescription": "Gegenstandsbeschreibung",
+    "appraisedValue": "Bewerteter Wert",
+    "lastAppraisalDate": "Letztes Bewertungsdatum",
+    "storageLocation": "Lagerort",
+    "insuranceInformation": "Versicherungsinformationen",
+    "sentimentalValue": "Sentimentaler Wert/Geschichte",
+    "assetName": "Vermögenswertname",
+    "estimatedValue": "Geschätzter Wert",
+    "description": "Beschreibung",
+    "locationAccessInformation": "Standort/Zugangsinformationen",
+    "addSubType": "{subType} hinzufügen",
+    "cancel": "Abbrechen",
+    "saveAsset": "Vermögenswert speichern",
+    "placeholders": {
+      "123_main_st_city_state_zip_1": "123 Hauptstraße, Stadt, Bundesland, PLZ",
+      "lender_name_account_number_rem_2": "Kreditgeber-Name, Kontonummer, verbleibender Saldo",
+      "e_g_safe_deposit_box_filing_ca_3": "z.B. Bankschließfach, Aktenschrank",
+      "property_location_or_parcel_nu_4": "Immobilienstandort oder Parzellennummer",
+      "e_g_10_acres_5": "z.B. 10 Morgen, 5.000 qm",
+      "e_g_commercial_agricultural_6": "z.B. Gewerbe, Landwirtschaft, Wohnen",
+      "describe_current_use_of_the_pr_7": "Beschreiben Sie die aktuelle Nutzung der Immobilie",
+      "e_g_chase_bank_8": "z.B. Chase Bank, Wells Fargo",
+      "john_doe_9": "Max Mustermann",
+      "1234_10": "1234",
+      "e_g_fidelity_vanguard_11": "z.B. Fidelity, Vanguard, Charles Schwab",
+      "account_number_12": "Kontonummer",
+      "name_and_contact_information_13": "Name und Kontaktinformationen",
+      "e_g_main_bitcoin_wallet_14": "z.B. Haupt-Bitcoin-Wallet",
+      "e_g_bitcoin_ethereum_15": "z.B. Bitcoin, Ethereum, Litecoin",
+      "do_not_enter_the_actual_seed_p_16": "Geben Sie hier nicht die tatsächliche Seed-Phrase ein",
+      "exchange_name_and_account_emai_17": "Börsenname und Konto-E-Mail",
+      "e_g_toyota_camry_18": "z.B. Toyota Camry, Honda Civic",
+      "vehicle_identification_number_19": "Fahrzeugidentifikationsnummer",
+      "lender_account_number_payoff_a_20": "Kreditgeber, Kontonummer, Rückzahlungsbetrag",
+      "e_g_safe_deposit_box_21": "z.B. Bankschließfach, Haussafe",
+      "e_g_gmail_facebook_22": "z.B. Gmail, Facebook, LinkedIn",
+      "user_example_com_23": "benutzer@beispiel.de",
+      "what_this_account_is_used_for_24": "Wofür dieses Konto verwendet wird",
+      "recovery_email_phone_or_securi_25": "Wiederherstellungs-E-Mail, Telefon oder Sicherheitsfragen",
+      "e_g_sms_to_phone_ending_in_123_26": "z.B. SMS an Telefon mit Endung 123",
+      "e_g_diamond_engagement_ring_27": "z.B. Diamant-Verlobungsring, Goldkette",
+      "e_g_home_safe_bank_deposit_box_28": "z.B. Haussafe, Bankschließfach",
+      "policy_number_and_company_29": "Policennummer und Unternehmen",
+      "special_meaning_or_history_of__30": "Besondere Bedeutung oder Geschichte dieses Gegenstands",
+      "name_or_description_of_asset_31": "Name oder Beschreibung des Vermögenswerts",
+      "detailed_description_of_the_as_32": "Detaillierte Beschreibung des Vermögenswerts",
+      "where_to_find_this_asset_or_ho_33": "Wo dieser Vermögenswert zu finden ist oder wie darauf zuzugreifen ist"
+    }
+  },
+  "logLifeEvent": {
+    "title": "Lebensereignis protokollieren",
+    "description": "Wählen Sie eine wichtige Lebensveränderung aus, um eine personalisierte Checkliste für die Aktualisierung Ihres Familien-Schutzplans zu generieren.",
+    "eventTypes": {
+      "married_divorced": "Geheiratet / Geschieden",
+      "new_child": "Neues Kind bekommen",
+      "bought_sold_home": "Haus gekauft / Verkauft",
+      "started_business": "Geschäft gegründet",
+      "trusted_person_passed": "Vertrauensperson verstorben",
+      "job_change": "Job gewechselt",
+      "moved_location": "An neuen Ort gezogen",
+      "inheritance": "Erbschaft erhalten",
+      "retirement": "In Rente gegangen",
+      "health_change": "Signifikante Gesundheitsänderung",
+      "child_graduated": "Kind hat Schule beendet / Haus verlassen",
+      "career_advancement": "Karrierefortschritt",
+      "financial_windfall": "Finanzieller Gewinn",
+      "debt_change": "Signifikante Schuldenänderung",
+      "insurance_change": "Versicherungspolice geändert"
+    },
+    "form": {
+      "title": "Lebensereignis protokollieren",
+      "description": "Wählen Sie eine wichtige Lebensveränderung aus, um eine personalisierte Checkliste zu generieren",
+      "eventSelection": "Lebensereignis auswählen",
+      "eventDescription": "Wählen Sie das Lebensereignis, das Ihre aktuelle Situation am besten beschreibt",
+      "generateChecklist": "Checkliste generieren",
+      "cancel": "Abbrechen",
+      "submit": "Absenden",
+      "close": "Schließen"
+    },
+    "checklist": {
+      "title": "Personalisierte Checkliste",
+      "description": "Basierend auf Ihrem Lebensereignis sind hier die wichtigsten Punkte, die Sie überprüfen und aktualisieren sollten:",
+      "priority": "Priorität",
+      "action": "Aktion",
+      "estimatedTime": "Geschätzte Zeit",
+      "high": "Hoch",
+      "medium": "Mittel",
+      "low": "Niedrig",
+      "completed": "Abgeschlossen",
+      "pending": "Ausstehend"
+    },
+    "notifications": {
+      "eventLogged": "Lebensereignis erfolgreich protokolliert",
+      "checklistGenerated": "Personalisierte Checkliste generiert",
+      "errorLogging": "Fehler beim Protokollieren des Lebensereignisses",
+      "reminderSet": "Erinnerung für Folgeaktionen gesetzt"
+    }
+  },
+  "privacy": {
+    "processingLocal": "Verarbeitung auf Ihrem Gerät",
+    "enhancedWithAI": "Verbessert mit KI",
+    "privacyMode": "Datenschutzmodus",
+    "allProcessingLocal": "Alle Verarbeitung bleibt auf Ihrem Gerät",
+    "aiAssistanceEnabled": "KI-Unterstützung für bessere Ergebnisse aktiviert"
+  },
+  "analytics": {
+    "testData": {
+      "dashboardTitleExperiment": "Dashboard-Titel-Experiment",
+      "onboardingFlowSimplification": "Onboarding-Flow-Vereinfachung",
+      "variation": "Variante",
+      "highlyEngaged": "Hoch engagiert",
+      "moderatelyEngaged": "Mäßig engagiert",
+      "atRisk": "Gefährdet",
+      "dormant": "Inaktiv"
+    },
+    "analyticsDashboard": {
+      "loading_analytics_data_1": "Analytische Daten werden geladen...",
+      "analytics_dashboard_2": "Analytics-Dashboard",
+      "monitor_user_engagement_featur_3": "Überwachen Sie Benutzerengagement, Feature-Adoption und Plattformleistung",
+      "refreshing_4": "Aktualisieren...",
+      "using_cached_data_5": "Verwende zwischengespeicherte Daten",
+      "from_last_month_6": "vom letzten Monat",
+      "user_journey_7": "Benutzerreise",
+      "feature_adoption_8": "Feature-Adoption",
+      "a_b_tests_9": "A/B-Tests",
+      "overview": "Übersicht",
+      "user_growth_11": "Benutzerwachstum",
+      "active_and_new_users_over_time_12": "Aktive und neue Benutzer im Zeitverlauf",
+      "3_3_7": "3 3",
+      "platform_statistics_15": "Plattform-Statistiken",
+      "key_platform_metrics_16": "Wichtige Plattform-Metriken und Leistungsindikatoren",
+      "avg_session_duration_17": "Durchschn. Sitzungsdauer",
+      "bounce_rate_18": "Absprungrate",
+      "avg_documents_per_user_19": "Durchschn. Dokumente pro Benutzer",
+      "avg_trusted_people_per_user_20": "Durchschn. vertrauenswürdige Personen pro Benutzer",
+      "user_journey_funnel_21": "Benutzerreise-Trichter",
+      "track_user_progression_through_22": "Verfolgen Sie den Benutzerfortschritt durch wichtige Meilensteine",
+      "feature_adoption_rates_23": "Feature-Adoption-Raten",
+      "percentage_of_users_using_each_24": "Prozentsatz der Benutzer, die jedes Feature verwenden",
+      "sample_size_27": "Stichprobengröße: ",
+      "users_duration_28": " Benutzer • Dauer: ",
+      "confidence_29": "% Konfidenz",
+      "user_segments_30": "Benutzersegmente",
+      "user_distribution_by_engagemen_31": "Benutzerverteilung nach Engagement-Level",
+      "chartLabels": {
+        "totalUsers": "Gesamtbenutzer",
+        "activeUsers": "Aktive Benutzer",
+        "avgPreparedness": "Durchschn. Vorbereitung",
+        "willsCreated": "Erstellte Testamente",
+        "signUp": "Registrierung",
+        "completeOnboarding": "Onboarding abschließen",
+        "addFirstPossession": "Ersten Besitz hinzufügen",
+        "addTrustedPerson": "Vertrauenswürdige Person hinzufügen",
+        "uploadDocument": "Dokument hochladen",
+        "generateWill": "Testament erstellen",
+        "localOnlyModeUsers": "Nur lokaler Modus Benutzer",
+        "familyHubUsers": "Familien-Hub Benutzer",
+        "documentScannerUsers": "Dokumentenscanner Benutzer",
+        "emergencyAccessSetup": "Notfallzugriff einrichten",
+        "pushNotificationsEnabled": "Push-Benachrichtigungen aktiviert",
+        "control": "Kontrolle",
+        "variation": "Variante",
+        "won": "Gewonnen",
+        "date": "Datum",
+        "value": "Wert",
+        "percentage": "Prozentsatz",
+        "users": "Benutzer",
+        "conversion": "Konversion",
+        "dropoff": "Abnahme"
+      },
+      "metrics": {
+        "totalUsers": "Gesamtbenutzer",
+        "activeUsers": "Aktive Benutzer",
+        "avgPreparedness": "Durchschnittliche Vorbereitung",
+        "willsCreated": "Erstellte Testamente",
+        "avgSessionDuration": "Durchschnittliche Sitzungsdauer",
+        "bounceRate": "Absprungrate",
+        "avgDocumentsPerUser": "Durchschnittliche Dokumente pro Benutzer",
+        "avgTrustedPeoplePerUser": "Durchschnittliche vertrauenswürdige Personen pro Benutzer",
+        "onboardingCompletionRate": "Onboarding-Abschlussrate",
+        "firstPossessionAdded": "Erster Besitz hinzugefügt",
+        "firstTrustedPersonAdded": "Erste vertrauenswürdige Person hinzugefügt",
+        "firstDocumentUploaded": "Erstes Dokument hochgeladen",
+        "willGenerated": "Testament erstellt"
+      },
+      "errors": {
+        "unauthorizedAccess": "Nicht autorisierter Zugriff",
+        "failedToFetchAnalytics": "Analytische Daten konnten nicht abgerufen werden",
+        "failedToLoadAnalytics": "Analytische Daten konnten nicht geladen werden",
+        "networkError": "Netzwerkfehler aufgetreten",
+        "serverError": "Serverfehler aufgetreten",
+        "timeoutError": "Anfrage ist abgelaufen",
+        "unknownError": "Ein unbekannter Fehler ist aufgetreten"
+      },
+      "messages": {
+        "dataRefreshed": "Analytische Daten aktualisiert",
+        "usingCachedData": "Verwende zwischengespeicherte Daten aufgrund von Verbindungsproblemen",
+        "refreshFailed": "Analytische Daten konnten nicht aktualisiert werden",
+        "noDataAvailable": "Keine analytischen Daten verfügbar",
+        "loadingData": "Analytische Daten werden geladen...",
+        "refreshingData": "Analytische Daten werden aktualisiert..."
+      }
+    }
+  },
+  "debug": {
+    "panel": {
+      "title": "Debug-Panel",
+      "recentErrors": "Aktuelle Anwendungsfehler",
+      "technicalDetails": "Technische Details",
+      "tabs": {
+        "list": "Liste",
+        "details": "Details"
+      },
+      "errorCount": "{{count}} Fehler",
+      "actions": {
+        "downloadErrors": "Fehler herunterladen",
+        "clearAllErrors": "Alle Fehler löschen"
+      },
+      "messages": {
+        "errorsCleared": "Alle Fehler gelöscht",
+        "errorCopied": "Fehler in die Zwischenablage kopiert",
+        "errorsDownloaded": "Fehler heruntergeladen"
+      },
+      "error": {
+        "unknownError": "Unbekannter Fehler",
+        "noMessage": "Keine Nachricht",
+        "errorMessage": "Fehlermeldung"
+      },
+      "sections": {
+        "stackTrace": "Stack-Trace",
+        "context": "Kontext",
+        "location": "Standort",
+        "browserInfo": "Browser-Informationen",
+        "time": "Zeit"
+      },
+      "fields": {
+        "url": "URL:",
+        "path": "Pfad:",
+        "query": "Abfrage:",
+        "userAgent": "User Agent:",
+        "viewport": "Viewport:"
+      }
+    }
+  },
+  "upgradeCard": {
+    "pricing_1": "/pricing",
+    "defaultButtonText": "Zum Command Package upgraden"
+  },
+  "familyHub": {
+    "title": "Familien-Hub",
+    "subtitle": "Verwalten Sie Zugriffsebenen und verwenden Sie Vorbereitungstools, um sicherzustellen, dass Ihre Familie gut vorbereitet ist.",
+    "tabs": {
+      "familyMembers": "Familienmitglieder",
+      "members": "Mitglieder",
+      "preparednessTools": "Vorbereitungstools",
+      "tools": "Tools"
+    },
+    "overallPreparedness": {
+      "title": "Gesamte Familienvorbereitung",
+      "description": "Diese Bewertung spiegelt wider, wie gut Ihre gesamte Familie für einen Notfall vorbereitet ist.",
+      "improvementNeeded": "Die Vorbereitung Ihrer Familie könnte verbessert werden. Erwägen Sie, Updates an diejenigen mit niedrigeren Bewertungen zu senden."
+    },
+    "emergencyProtocol": {
+      "title": "Notfallprotokoll",
+      "description": "Das Notfallprotokoll ermöglicht vertrauenswürdigen Personen mit \"Nur Notfall\"-Zugriff, in kritischen Situationen Informationen anzufordern. Erfordert Bestätigung von einer anderen vertrauenswürdigen Person.",
+      "configured": "Konfiguriert",
+      "configure": "Konfigurieren",
+      "activeMessage": "Notfallprotokoll ist aktiv und konfiguriert"
+    },
+    "memberManagement": {
+      "title": "Verwalten Sie Ihre vertrauenswürdigen Personen",
+      "addTrustedPerson": "Vertrauenswürdige Person hinzufügen",
+      "addMorePeople": "Fügen Sie weitere vertrauenswürdige Personen zu Ihrem Netzwerk hinzu",
+      "informationAccessLevel": "Informationszugriffsebene",
+      "preparedness": "Vorbereitung",
+      "lastContacted": "Zuletzt kontaktiert",
+      "daysAgo": "vor {{days}} Tagen",
+      "sendUpdate": "Update senden",
+      "sendUpdateTo": "Update an {{name}} senden",
+      "lastContactOver30Days": "Letzter Kontakt vor über 30 Tagen"
+    },
+    "accessLevels": {
+      "none": {
+        "title": "Keine",
+        "description": "Kann keine Informationen sehen"
+      },
+      "emergencyOnly": {
+        "title": "Nur Notfall",
+        "description": "Zugriff während Notfällen",
+        "fullDescription": "Erhält Zugriff nur, wenn das Notfallprotokoll aktiviert wird"
+      },
+      "limitedInfo": {
+        "title": "Begrenzte Informationen",
+        "description": "Grundlegende Informationen zur Vorbereitung",
+        "fullDescription": "Kann jetzt grundlegende Informationen sehen, um bei der Vorbereitung zu helfen"
+      },
+      "fullAccess": {
+        "title": "Voller Zugriff",
+        "description": "Alle geteilten Informationen",
+        "fullDescription": "Kann alle Informationen sehen, die Sie mit ihnen geteilt haben"
+      }
+    },
+    "messages": {
+      "accessLevelUpdated": "Zugriffsebene erfolgreich aktualisiert",
+      "updateSentTo": "Update an {{name}} gesendet",
+      "failedToSendUpdate": "Update an {{name}} konnte nicht gesendet werden"
+    },
+    "errors": {
+      "authenticationRequired": "Authentifizierung erforderlich",
+      "failedToFetchData": "Familien-Daten konnten nicht abgerufen werden",
+      "failedToLoadMembers": "Familienmitglieder konnten nicht geladen werden"
+    }
+  },
+  "vault": {
+    "title": "Der Tresor",
+    "subtitle": "Ihr sicheres Inventar aller finanziellen Vermögenswerte und wertvollen Besitztümer.",
+    "errorLoadingAssets": "Laden Ihrer Vermögenswerte fehlgeschlagen. Bitte versuchen Sie es erneut.",
+    "letsBuildInventory": "Lassen Sie uns Ihr Inventar erstellen",
+    "addProperty": "Immobilie hinzufügen",
+    "addFinances": "Finanzen hinzufügen",
+    "addVehicle": "Fahrzeug hinzufügen",
+    "addDigitalAsset": "Digitalen Vermögenswert hinzufügen",
+    "addPersonalItem": "Persönlichen Gegenstand hinzufügen",
+    "addOther": "Etwas anderes hinzufügen...",
+    "confirmDeletion": "Sind Sie sicher, dass Sie \"{{assetName}}\" löschen möchten?",
+    "errorDeletingAsset": "Löschen des Vermögenswerts fehlgeschlagen. Bitte versuchen Sie es erneut.",
+    "searchPlaceholder": "Ihre Vermögenswerte durchsuchen...",
+    "addAsset": "Vermögenswert hinzufügen",
+    "totalAssets": "Gesamtvermögen",
+    "totalValue": "Gesamtwert",
+    "categories": "Kategorien",
+    "noAssetsFound": "Keine Vermögenswerte gefunden, die \"{{searchQuery}}\" entsprechen",
+    "startAddingAssets": "Beginnen Sie mit dem Hinzufügen von Vermögenswerten, um Ihr Inventar zu erstellen",
+    "addNewAsset": "Neuen Vermögenswert hinzufügen"
+  },
+  "scenarios": {
+    "title": "Was passiert, wenn das Leben eine unerwartete Wendung nimmt?",
+    "subtitle": "Echte Familien, echte Situationen, echte Kontrolle und Vorbereitung",
+    "hospitalStay": {
+      "title": "Der unerwartete Krankenhausaufenthalt",
+      "before": {
+        "situation": "Sarahs Ehemann hatte einen Herzinfarkt. Während er auf der Intensivstation war, verbrachte sie Tage damit, nach ihren Versicherungspapieren, Bankkontoinformationen und wichtigen Kontakten zu suchen. Der Stress war überwältigend, als sie sich auf seine Genesung konzentrieren musste.",
+        "emotion": "Stress und Sorge",
+        "consequence": "Tage der Suche nach Informationen und Unterstützung."
+      },
+      "after": {
+        "situation": "Als Mark seinen Unfall hatte, öffnete seine Frau Lisa ihren Familienleitfaden und fand alles organisiert: Versicherungsdetails, Bankkontakte, medizinische Informationen und sogar eine Liste von Personen, die benachrichtigt werden sollten. Sie konnte sich auf das konzentrieren, was am wichtigsten war - für Mark da zu sein.",
+        "emotion": "Frieden und Fokus",
+        "benefit": "Sofortiger Zugang zu allem, was sie brauchte."
+      }
+    },
+    "businessTrip": {
+      "title": "Der Geschäftsreise-Notfall",
+      "before": {
+        "situation": "Als Davids Flug verspätet war und er die Notoperation seiner Tochter verpasste, konnte seine Frau nicht auf ihr Sparkonto zugreifen oder ihre Krankenversicherungsinformationen finden. Kritische Entscheidungen mussten warten.",
+        "emotion": "Frustration und Hilflosigkeit",
+        "consequence": "Wichtige medizinische Entscheidungen verzögert."
+      },
+      "after": {
+        "situation": "Als Emmas Ehemann unterwegs war und sie Notfallgelder für die Operation ihres Sohnes brauchte, hatte sie sofortigen Zugang zu allen Kontoinformationen, Versicherungsdetails und sogar vorverfassten Autorisierungsschreiben. Keine Verzögerungen, kein Stress.",
+        "emotion": "Erleichterung und Bereitschaft",
+        "benefit": "Alles zugänglich, genau als sie es brauchte."
+      }
+    },
+    "suddenLoss": {
+      "title": "Der plötzliche Verlust",
+      "before": {
+        "situation": "Nach dem plötzlichen Verlust ihres Vaters verbrachte Maria Monate damit, seine finanziellen Angelegenheiten zusammenzusetzen. Sie fand Konten, von deren Existenz sie nichts wusste, und verpasste wichtige Fristen, weil Dokumente überall verstreut waren.",
+        "emotion": "Verwirrung und Bedauern",
+        "consequence": "Verpasste Fristen und verlorene Zeit."
+      },
+      "after": {
+        "situation": "Als Johns Familie seine Angelegenheiten regeln musste, war alles klar organisiert: eine vollständige Liste der Konten, wichtige Kontakte, Schritt-für-Schritt-Anweisungen und sogar persönliche Nachrichten, die er für jedes Familienmitglied vorbereitet hatte.",
+        "emotion": "Ruhe und Klarheit",
+        "benefit": "Ein klarer Weg, dem in schwierigen Zeiten zu folgen ist."
+      }
+    },
+    "labels": {
+      "before": "Vor LegacyGuard",
+      "after": "Nach Heritage Vault",
+      "feeling": "Gefühl"
+    },
+    "bottomCta": {
+      "primary": "Lassen Sie Ihre Familie nicht diesem Chaos gegenüberstehen",
+      "secondary": "Beginnen Sie mit der Organisation in 10 Minuten",
+      "urgency": "Jeder Tag, den Sie warten, ist ein weiterer Tag, an dem Ihre Familie unvorbereitet ist"
+    },
+    "testimonials": {
+      "1": "Nach dem plötzlichen Unfall meines Bruders sah ich zu, wie meine Schwägerin wochenlang damit kämpfte, wichtige Dokumente und Passwörter zu finden. Da wusste ich, dass ich nicht zulassen konnte, dass dasselbe meiner Familie passiert.",
+      "2": "Als alleinerziehende Mutter, die ein Geschäft führt, machte ich mir ständig Sorgen darüber, was passieren würde, wenn mir etwas zustoßen würde. Heritage Vault half mir, alles zu organisieren.",
+      "3": "Meine Frau hat eine Frühstadium-Demenz, und ich erkannte, dass ich mich vorbereiten musste, während ich es noch konnte. Heritage Vault machte es einfach, unsere 40 Jahre gemeinsamen Lebens zu organisieren."
+    }
+  },
+  "calculator": {
+    "badge": "Vorbereitungsrechner",
+    "title": "Berechnen Sie die Vorbereitungsbewertung Ihrer Familie",
+    "subtitle": "Sehen Sie die echte Zeit und das Geld, die Ihre Familie spart, wenn alles organisiert ist",
+    "inputs": {
+      "title": "Ihre Familiensituation",
+      "description": "Erzählen Sie uns ein wenig über Ihre Familie, um Ihre Ergebnisse zu personalisieren",
+      "dependents": "Wie viele Menschen sind von Ihnen abhängig?",
+      "dependentsHelp": "Einschließlich Ehepartner, Kinder, ältere Eltern",
+      "income": "Was ist das monatliche Einkommen Ihrer Familie?",
+      "incomeHelp": "Dies hilft bei der Berechnung potenzieller Lohnverluste",
+      "property": "Besitzen Sie Immobilien?",
+      "business": "Haben Sie ein Geschäft?",
+      "accounts": "Wie viele Bankkonten haben Sie?",
+      "accountsHelp": "Einschließlich Girokonto, Sparkonto, Investitionen"
+    },
+    "calculateButton": "Meine Einsparungen berechnen",
+    "results": {
+      "title": "Die Einsparungen Ihrer Familie",
+      "description": "Hier ist, was Vorbereitung für Ihre Liebsten bedeutet",
+      "timeSavings": {
+        "title": "Zeit, die Ihre Familie spart",
+        "without": "Ohne Organisation",
+        "withoutHours": "40-120 Stunden Suche",
+        "with": "Mit Heritage Vault",
+        "withMinutes": "Unter 5 Minuten"
+      },
+      "moneySavings": {
+        "title": "Geld, das Ihre Familie spart",
+        "legalFees": "Rechtskosten für Rekonstruktion",
+        "lostWages": "Lohnverluste durch Ausfallzeiten",
+        "penalties": "Verpasste Fristen & Strafen",
+        "total": "Gesamte potenzielle Einsparungen"
+      },
+      "emotional": {
+        "title": "Auswirkungen auf das emotionale Wohlbefinden",
+        "stress": "Stressreduktion",
+        "confidence": "Zunahme des Familienvertrauens",
+        "peace": "Kontroll- & Vorbereitungsbewertung"
+      },
+      "socialProof": "Schließen Sie sich Familien an, die bereits besser schlafen",
+      "families": "15.000+ Familien geschützt",
+      "ctaContext": "Die meisten Familien schließen die Einrichtung während ihrer Mittagspause ab",
+      "shareButton": "Ergebnisse teilen"
+    },
+    "testimonial": {
+      "quote": "Ich habe nie erkannt, wie viel Stress ich trug, bis ich alles organisiert hatte. Jetzt weiß ich, dass es meiner Familie gut gehen wird, egal was passiert.",
+      "author": "Sarah M., Mutter von drei Kindern"
+    },
+    "shareTitle": "Ergebnisse des Familienvorbereitungsrechners",
+    "shareCopied": "Ergebnisse in die Zwischenablage kopiert!"
+  },
+  "testimonials": {
+    "badge": "Echte Familien übernehmen die Kontrolle",
+    "title": "Vertraut von 15.000+ europäischen Familien",
+    "subtitle": "Sehen Sie, wie Familien wie Ihre Sicherheit und Frieden mit Heritage Vault gefunden haben",
+    "verified": "Verifizierte Familie",
+    "trustedBy": "Vertraut und empfohlen von",
+    "stats": {
+      "families": "15.000+",
+      "familiesLabel": "Europäische Familien geschützt",
+      "satisfaction": "99,7%",
+      "satisfactionLabel": "fühlen sich vorbereiteter und kontrollierter",
+      "stressReduction": "92%",
+      "stressReductionLabel": "weniger Familienstress gemeldet",
+      "timeSaved": "120 Std",
+      "timeSavedLabel": "durchschnittliche Zeit pro Familie gespart"
+    },
+    "stories": {
+      "1": {
+        "name": "Michael K.",
+        "role": "Vater von drei Kindern",
+        "location": "München, Deutschland",
+        "quote": "Nach dem plötzlichen Unfall meines Bruders sah ich zu, wie meine Schwägerin wochenlang damit kämpfte, wichtige Dokumente und Passwörter zu finden. Da wusste ich, dass ich nicht zulassen konnte, dass dasselbe meiner Familie passiert. Jetzt ist alles organisiert, und meine Frau weiß genau, wo sie finden kann, was sie braucht. Vorbereitet und kontrolliert zu sein ist unbezahlbar.",
+        "highlight": "✨ In nur 2 Stunden eingerichtet, 3 Kinder und Ehepartner geschützt"
+      },
+      "2": {
+        "name": "Anna S.",
+        "role": "Geschäftsinhaberin",
+        "location": "Wien, Österreich",
+        "quote": "Als alleinerziehende Mutter, die ein Geschäft führt, machte ich mir ständig Sorgen darüber, was passieren würde, wenn mir etwas zustoßen würde. Heritage Vault half mir, alles zu organisieren - von Geschäftskonten bis zu den Schulinformationen meiner Kinder. Meine Schwester hat jetzt Zugang zu allem, was sie brauchen würde, um einzuspringen. Ich schlafe so viel besser, wissend, dass sie geschützt sind.",
+        "highlight": "💼 Geschäfts- und Privatleben an einem sicheren Ort organisiert"
+      },
+      "3": {
+        "name": "Thomas R.",
+        "role": "Pensionierter Lehrer",
+        "location": "Zürich, Schweiz",
+        "quote": "Meine Frau hat eine Frühstadium-Demenz, und ich erkannte, dass ich mich vorbereiten musste, während ich es noch konnte. Heritage Vault machte es einfach, unsere 40 Jahre gemeinsamen Lebens zu organisieren. Unsere Kinder haben jetzt klare Anweisungen und Zugang zu allem. Es hat unsere ganze Familie näher zusammengebracht, wissend, dass wir für alles vorbereitet sind, was kommt.",
+        "highlight": "❤️ 40 Jahre Familiengeschichte bewahrt und geschützt"
+      }
+    },
+    "authority": {
+      "advisors": "Empfohlen von Finanzberatern",
+      "attorneys": "Vertraut von Familienanwälten",
+      "counselors": "Unterstützt von Trauerberatern"
+    },
+    "compliance": {
+      "gdpr": "DSGVO-konform",
+      "dataProtection": "Datenschutz-zertifiziert",
+      "iso": "ISO 27001-zertifiziert"
+    },
+    "bottomCta": {}
+  },
+  "executor": {
+    "dashboard": {
+      "title": "Dashboard des Testamentsvollstreckers",
+      "subtitle": "Eine Schritt-für-Schritt-Anleitung, um Ihnen in dieser schwierigen Zeit zu helfen",
+      "reminder": "Denken Sie daran, sich in dieser schwierigen Zeit um sich selbst zu kümmern. Zögern Sie nicht, um Hilfe zu bitten, wenn Sie sie brauchen."
+    },
+    "errors": {
+      "loadTasksFailed": "Laden der Testamentsvollstrecker-Aufgaben fehlgeschlagen. Bitte versuchen Sie es später erneut.",
+      "updateTaskFailed": "Aktualisieren des Aufgabenstatus fehlgeschlagen."
+    },
+    "highPriority": "Hohe Priorität",
+    "due": "Fällig",
+    "completed": "Abgeschlossen",
+    "undo": "Rückgängig",
+    "markComplete": "Als abgeschlossen markieren",
+    "viewAccountDetails": "Kontodetails & Passwort anzeigen",
+    "viewRelatedDocuments": "Zugehörige Dokumente anzeigen ({{count}})",
+    "stats": {
+      "totalTasks": "Gesamtaufgaben",
+      "completed": "Abgeschlossen",
+      "remaining": "Verbleibend"
+    },
+    "sections": {
+      "immediate": {
+        "title": "Sofortige Aufgaben (Erste 48 Stunden)",
+        "description": "Kritische Aufgaben, die Ihre sofortige Aufmerksamkeit benötigen",
+        "empty": "Alle sofortigen Aufgaben abgeschlossen!"
+      },
+      "firstWeek": {
+        "title": "Aufgaben der ersten Woche",
+        "description": "Wichtige Aufgaben, die in der ersten Woche abgeschlossen werden müssen",
+        "empty": "Alle Aufgaben der ersten Woche abgeschlossen!"
+      },
+      "ongoing": {
+        "title": "Laufende Verantwortlichkeiten",
+        "description": "Aufgaben, die in den kommenden Wochen und Monaten zu bewältigen sind",
+        "empty": "Alle laufenden Aufgaben abgeschlossen!"
+      }
+    },
+    "communications": {
+      "title": "Begünstigten-Kommunikation",
+      "description": "Verfolgen Sie alle Kommunikationen mit Begünstigten, um Transparenz zu gewährleisten",
+      "logCommunication": "Kommunikation protokollieren",
+      "logTitle": "Begünstigten-Kommunikation protokollieren",
+      "logDescription": "Aufzeichnen von Details Ihrer Kommunikation mit Begünstigten",
+      "beneficiaryName": "Name des Begünstigten",
+      "beneficiaryEmail": "E-Mail (optional)",
+      "communicationType": "Typ",
+      "communicationDate": "Datum",
+      "subject": "Betreff",
+      "summary": "Zusammenfassung",
+      "subjectPlaceholder": "z.B. Erste Nachlassaktualisierung",
+      "summaryPlaceholder": "Kurze Zusammenfassung dessen, was besprochen wurde...",
+      "types": {
+        "email": "E-Mail",
+        "phone": "Telefonanruf",
+        "letter": "Brief",
+        "in_person": "Persönlich",
+        "other": "Andere"
+      },
+      "saving": "Speichern...",
+      "saveCommunication": "Kommunikation speichern",
+      "cancel": "Abbrechen",
+      "noCommunications": "Noch keine Kommunikationen protokolliert",
+      "startTracking": "Beginnen Sie mit der Verfolgung Ihrer Begünstigten-Kommunikation",
+      "errors": {
+        "saveFailed": "Protokollierung der Kommunikation fehlgeschlagen"
+      }
+    },
+    "status": {
+      "title": "Status der Nachlassverwaltung",
+      "description": "Aktueller hochrangiger Status, sichtbar für autorisierte Familienmitglieder",
+      "updateStatus": "Status aktualisieren",
+      "updateTitle": "Nachlassstatus aktualisieren",
+      "updateDescription": "Dieser Status wird für autorisierte Familienmitglieder sichtbar sein",
+      "statusLabel": "Status",
+      "additionalDetails": "Zusätzliche Details (optional)",
+      "detailsPlaceholder": "Geben Sie zusätzlichen Kontext...",
+      "selectStatus": "Status auswählen",
+      "updating": "Aktualisieren...",
+      "lastUpdated": "Zuletzt aktualisiert",
+      "progress": "Fortschritt",
+      "noStatusSet": "Noch kein Status gesetzt. Klicken Sie auf \"Status aktualisieren\", um den initialen Status zu setzen.",
+      "noStatusUpdates": "Noch keine Statusaktualisierungen gepostet.",
+      "statuses": {
+        "initial_review": "Erste Überprüfung",
+        "gathering_documents": "Dokumente sammeln",
+        "probate_initiated": "Nachlassverfahren eingeleitet",
+        "assets_being_valued": "Vermögenswerte werden bewertet",
+        "debts_being_settled": "Schulden werden beglichen",
+        "tax_preparation": "Steuervorbereitung",
+        "ready_for_distribution": "Bereit für Verteilung",
+        "distribution_in_progress": "Verteilung läuft",
+        "estate_closed": "Nachlass geschlossen"
+      },
+      "errors": {
+        "updateFailed": "Statusaktualisierung fehlgeschlagen"
+      }
+    },
+    "justInTime": {
+      "viewAccountDetails": "Kontodetails & Passwort anzeigen",
+      "secureInfoAccess": "Sicherer Informationszugriff",
+      "reauthenticate": "Re-authentifizieren, um sensible Informationen für anzuzeigen",
+      "securityReason": "Aus Sicherheitsgründen geben Sie bitte Ihr Passwort ein, um auf diese Informationen zuzugreifen.",
+      "password": "Passwort",
+      "enterPassword": "Geben Sie Ihr Passwort ein",
+      "incorrectPassword": "Falsches Passwort. Bitte versuchen Sie es erneut.",
+      "cancel": "Abbrechen",
+      "verifying": "Überprüfen...",
+      "verifyContinue": "Überprüfen & Fortfahren",
+      "accountName": "Kontoname",
+      "accountNumber": "Kontonummer",
+      "username": "Benutzername",
+      "pin": "PIN",
+      "additionalNotes": "Zusätzliche Notizen",
+      "noSensitiveInfo": "Keine sensiblen Informationen sind mit dieser Aufgabe verknüpft.",
+      "accessLogged": "Dieser Zugriff wurde aus Sicherheitsgründen protokolliert.",
+      "accessTime": "Zugriffszeit",
+      "close": "Schließen",
+      "errors": {
+        "reauthFailed": "Überprüfung Ihrer Identität fehlgeschlagen. Bitte versuchen Sie es erneut.",
+        "notFound": "Keine sensiblen Informationen für diese Aufgabe gefunden.",
+        "retrieveFailed": "Abrufen der sensiblen Informationen fehlgeschlagen."
+      }
+    },
+    "familyView": {
+      "title": "Status der Nachlassverwaltung",
+      "subtitle": "Bleiben Sie über den Fortschritt der Nachlassverwaltung informiert",
+      "recentCommunications": "Aktuelle Testamentsvollstrecker-Kommunikation",
+      "recentCommunicationsDescription": "Aktuelle Updates von {{executorName}} an Begünstigte",
+      "to": "An",
+      "noCommunications": "Noch keine Kommunikationen protokolliert.",
+      "infoMessage": "Diese Informationen werden von {{executorName}} aktualisiert, um Familienmitglieder zu informieren. Für detaillierte Fragen kontaktieren Sie bitte den Testamentsvollstrecker direkt.",
+      "defaultExecutor": "der Testamentsvollstrecker",
+      "errors": {
+        "loadFailed": "Laden der Daten fehlgeschlagen"
+      }
+    }
+  }
+}

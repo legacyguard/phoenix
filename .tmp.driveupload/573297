@@ -1,0 +1,916 @@
+{
+  "_comment": "Shared translations used across the application",
+  "will": {
+    "title": "Testamente",
+    "fields": {
+      "notes": "Notes",
+      "status": "Status",
+      "physical_location": "Physical Location",
+      "executor_contact_id": "Executor Contact ID",
+      "currentStatus": "Nuværende status",
+      "physicalLocation": "Fysisk placering",
+      "executorContact": "Eksekutor kontakt",
+      "additionalNotes": "Yderligere noter"
+    },
+    "statuses": {
+      "draft": "Draft",
+      "pending_signatures": "Pending Signatures",
+      "completed": "Gennemført",
+      "needs_revision": "Needs Revision"
+    },
+    "actions": {
+      "save": "Save",
+      "edit": "Edit"
+    },
+    "placeholders": {
+      "notes_placeholder": "Enter any additional notes here...",
+      "physicalLocation": "f.eks. Hjemmeboks, Advokatkontor",
+      "selectContact": "Vælg kontakt",
+      "additionalNotes": "Eventuelle yderligere oplysninger..."
+    },
+    "errors": {
+      "unauthorized": "Unauthorized access.",
+      "save_will_failed": "Failed to save the will. Please try again.",
+      "retrieve_will_failed": "Failed to retrieve the will.",
+      "load_template_failed": "Failed to load template.",
+      "not_found": "Will not found.",
+      "failed_to_save": "Failed to save will.",
+      "failed_to_load": "Failed to load will.",
+      "failed_to_retrieve": "Failed to retrieve will.",
+      "failed_to_fetch": "Failed to fetch wills.",
+      "failed_to_generate": "Failed to generate will.",
+      "failed_to_sign": "Failed to sign will.",
+      "failed_to_delete": "Failed to delete will.",
+      "failed_to_notarize": "Failed to notarize will.",
+      "failed_to_update_status": "Failed to update will status.",
+      "failed_to_verify": "Failed to verify notarization.",
+      "cannot_update_non_draft": "Cannot update non-draft will.",
+      "cannot_delete_non_draft": "Cannot delete non-draft will.",
+      "must_be_signed": "Will must be signed before notarization.",
+      "verification_code_required": "Verification code required.",
+      "invalid_verification_code": "Invalid verification code.",
+      "mustBeLoggedIn": "Du skal være logget ind for at gemme.",
+      "loadingFailed": "Kunne ikke indlæse testamente.",
+      "savingFailed": "Kunne ikke gemme testamente."
+    },
+    "messages": {
+      "will_saved": "Will saved successfully.",
+      "template_loaded": "Template loaded successfully.",
+      "backup_success": "Backup created successfully.",
+      "backup_failed": "Failed to create a backup.",
+      "savedSuccessfully": "Testamente gemt.",
+      "documentUploaded": "Dokument uploadet."
+    },
+    "success": {
+      "will_saved": "Will saved successfully.",
+      "backup_created": "Backup created successfully.",
+      "notarized": "Will has been successfully notarized."
+    },
+    "instructions": {
+      "verify_info": "Verify all information before proceeding to next steps.",
+      "provide_full_details": "Please provide full details for accuracy."
+    },
+    "loading": "Indlæser testamente...",
+    "subtitle": "Administrer dit testamente og udpeg dine eksekutorer.",
+    "sections": {
+      "statusInfo": "Status & Information",
+      "willDocument": "Testamentedokument"
+    },
+    "descriptions": {
+      "statusDescription": "Følg den aktuelle status for dit testamente.",
+      "physicalLocationDescription": "Hvor opbevares dit testamente fysisk?",
+      "executorDescription": "Person ansvarlig for at eksekvere dit testamente."
+    },
+    "options": {
+      "noContactSelected": "Ingen kontakt valgt"
+    },
+    "status": {
+      "notStarted": "Ikke startet",
+      "inPreparation": "Under forberedelse",
+      "completedSigned": "Fuldført & underskrevet",
+      "withNotary": "Hos notar",
+      "draft": "Udkast",
+      "notarized": "Notariseret",
+      "stored": "Opbevaret",
+      "updated": "Opdateret"
+    },
+    "document": {
+      "uploaded": "Testamentedokument uploadet",
+      "uploadedDescription": "Dit testamentedokument er blevet sikkert gemt.",
+      "noDocument": "Intet testamentedokument",
+      "noDocumentDescription": "Upload en kopi af dit testamente til sikker opbevaring."
+    },
+    "buttons": {
+      "saveWillInfo": "Gem testamenteoplysninger",
+      "saving": "Gemmer...",
+      "uploadDocument": "Upload dokument",
+      "uploadNewVersion": "Upload ny version"
+    },
+    "steps": {
+      "countrySelection": "Valg af land",
+      "countrySelectionDesc": "Vælg dit land og indtast dine oplysninger",
+      "assetAllocation": "Fordeling af aktiver",
+      "assetAllocationDesc": "Fordel aktiver mellem begunstigede",
+      "beneficiaries": "Begunstigede",
+      "beneficiariesDesc": "Definer dine begunstigede",
+      "executors": "Eksekutorer",
+      "executorsDesc": "Tildel eksekutorer til at administrere dit testamente",
+      "review": "Gennemgang",
+      "reviewDesc": "Gennemgå og færdiggør dit testamente"
+    },
+    "progress": "Trin {{current}} af {{total}}",
+    "validation": {
+      "selectCountry": "Vælg venligst et land",
+      "requiredField": "Dette felt er påkrævet",
+      "allocation100": "Samlet tildeling skal være lig med 100%",
+      "atLeastOneBeneficiary": "Mindst én begunstiget er påkrævet",
+      "executorRequired": "Eksekutor er påkrævet",
+      "fixErrors": "Ret venligst fejlene i formularen"
+    },
+    "generation": {
+      "success": "Testamente genereret!",
+      "error": "Kunne ikke generere testamente"
+    }
+  },
+  "willGenerator": {
+    "countries": {
+      "GB": "United Kingdom",
+      "DE": "Germany",
+      "FR": "France",
+      "ES": "Spain",
+      "IT": "Italy",
+      "CZ": "Czech Republic",
+      "SK": "Slovakia",
+      "PL": "Poland",
+      "AT": "Austria",
+      "CH": "Switzerland",
+      "NL": "Netherlands",
+      "BE": "Belgium",
+      "LU": "Luxembourg",
+      "LI": "Liechtenstein",
+      "DK": "Denmark",
+      "SE": "Sweden",
+      "FI": "Finland",
+      "NO": "Norway",
+      "IS": "Iceland",
+      "IE": "Ireland",
+      "PT": "Portugal",
+      "GR": "Greece",
+      "HU": "Hungary",
+      "RO": "Romania",
+      "BG": "Bulgaria",
+      "HR": "Croatia",
+      "SI": "Slovenia",
+      "EE": "Estonia",
+      "LV": "Latvia",
+      "LT": "Lithuania",
+      "MT": "Malta",
+      "CY": "Cyprus",
+      "MD": "Moldova",
+      "UA": "Ukraine",
+      "RS": "Serbia",
+      "AL": "Albania",
+      "MK": "North Macedonia",
+      "ME": "Montenegro",
+      "BA": "Bosnia and Herzegovina"
+    },
+    "steps": {
+      "confirmJurisdiction": "Confirm Jurisdiction",
+      "personalInformation": "Personal Information",
+      "executorBeneficiaries": "Executor and Beneficiaries",
+      "reviewGenerate": "Review and Generate",
+      "signConfirm": "Sign and Confirm"
+    },
+    "no_template_found_for_this_jur_1": "No template found for this jurisdiction. Please try another selection.",
+    "failed_to_load_will_template_2": "Failed to load will template. Please check your connection and try again.",
+    "please_confirm_that_you_have_s_3": "Please confirm that you have signed the will.",
+    "console": {
+      "willGenerationCompleted": "Will generation completed successfully."
+    },
+    "confirmCountry": "Please confirm if you are creating a will for {{country}}.",
+    "changeCountry": "Change Country",
+    "select_a_country_4": "Select a country",
+    "fullName": "Full Name",
+    "executionInstructions": "Execution Instructions",
+    "confirmSigned": "Confirm you have signed the document",
+    "finalizeUpload": "Finalize and Upload"
+  },
+  "will_generator": {
+    "uk_jurisdiction_title": "Which part of the UK is your primary residence?",
+    "jurisdiction_england": "England",
+    "jurisdiction_wales": "Wales",
+    "jurisdiction_scotland": "Scotland",
+    "jurisdiction_northern_ireland": "Northern Ireland",
+    "select_will_language_title": "Please select the language for your will:",
+    "error_uk_jurisdiction_required": "Please select a jurisdiction within the UK to continue."
+  },
+  "playbook": {
+    "label": "Køreplan",
+    "create": "Opret køreplan",
+    "edit": "Rediger køreplan",
+    "preview": "Forhåndsvisning",
+    "exitPreview": "Afslut forhåndsvisning",
+    "save": "Gem køreplan",
+    "saving": "Gemmer...",
+    "loading": "Indlæser køreplan...",
+    "autoSaveNotice": "Dine ændringer gemmes automatisk, mens du skriver.",
+    "noContent": "Intet indhold tilføjet endnu.",
+    "noContacts": "Ingen kontakter tilføjet endnu.",
+    "addContact": "Tilføj kontakt",
+    "contact": "Kontakt",
+    "title": "Køreplan for {{name}}",
+    "titleReadOnly": "{{name}}'s køreplan",
+    "description": "Opret personlige instruktioner og information til din værge.",
+    "viewTitle": "Værges køreplan: {{userName}}",
+    "viewDescription": "Væsentlig information og instruktioner forberedt specielt til dig.",
+    "lastUpdated": "Sidst opdateret",
+    "viewFooter": "Disse oplysninger er blevet betroet dig som værge. Behandl dem fortroligt og sikkert.",
+    "notAuthenticated": "Log venligst ind for at se denne køreplan.",
+    "accessDenied": "Du har ikke tilladelse til at se denne køreplan.",
+    "fetchError": "Kunne ikke indlæse køreplan.",
+    "saveSuccess": "Køreplan gemt.",
+    "saveError": "Kunne ikke gemme køreplan.",
+    "discardChanges": {
+      "title": "Kassér ændringer?",
+      "description": "Du har ugemte ændringer. Er du sikker på, at du vil kassere dem?",
+      "cancel": "Fortsæt redigering",
+      "confirm": "Kassér ændringer"
+    },
+    "importantContacts": {
+      "label": "Vigtige kontakter",
+      "description": "Tilføj nøglepersoner, som denne værge bør kontakte.",
+      "viewDescription": "Kontakt disse personer ved behov.",
+      "add": "Tilføj kontakt",
+      "remove": "Fjern",
+      "empty": "Ingen kontakter tilføjet endnu. Klik på 'Tilføj kontakt' for at tilføje vigtige personer.",
+      "name": "Navn",
+      "namePlaceholder": "Fulde navn",
+      "relationship": "Relation",
+      "relationshipPlaceholder": "f.eks. Familieadvokat",
+      "phone": "Telefon",
+      "phonePlaceholder": "+45 12 34 56 78",
+      "email": "E-mail",
+      "emailPlaceholder": "email@example.com",
+      "notes": "Noter",
+      "notesPlaceholder": "Yderligere oplysninger"
+    },
+    "funeralWishes": {
+      "label": "Begravelsesønsker",
+      "description": "Dine præferencer for begravelsesarrangementer.",
+      "placeholder": "Beskriv dine ønsker for din begravelse eller mindehøjtidelighed..."
+    },
+    "digitalAccounts": {
+      "label": "Digitale konti",
+      "description": "Instruktioner til håndtering af dine onlinekonti.",
+      "placeholder": "Angiv dine digitale konti, og hvordan de skal håndteres..."
+    },
+    "documentLocations": {
+      "label": "Dokumentplaceringer",
+      "description": "Hvor man kan finde vigtige dokumenter.",
+      "placeholder": "Beskriv, hvor vigtige dokumenter er placeret..."
+    },
+    "personalMessages": {
+      "label": "Personlige beskeder",
+      "description": "Personlige beskeder til denne værge.",
+      "placeholder": "Skriv en personlig besked til denne værge..."
+    },
+    "practicalInstructions": {
+      "label": "Praktiske instruktioner",
+      "description": "Umiddelbare skridt og ansvarsområder.",
+      "placeholder": "Angiv praktiske opgaver og umiddelbare handlinger..."
+    },
+    "notFound": {
+      "title": "Ingen køreplan fundet",
+      "description": "Den køreplan, du leder efter, er endnu ikke oprettet."
+    },
+    "subtitle": {
+      "edit": "Opret personlige instruktioner og information til denne værge.",
+      "view": "Væsentlig information og instruktioner forberedt til dig."
+    },
+    "status": {
+      "empty": "Ikke startet",
+      "draft": "Igangværende",
+      "complete": "Fuldført"
+    },
+    "tabs": {
+      "funeral": "Begravelse",
+      "digital": "Digital",
+      "contacts": "Kontakter",
+      "documents": "Dokumenter",
+      "messages": "Beskeder",
+      "instructions": "Instruktioner"
+    },
+    "templates": {
+      "funeralWishes": {
+        "traditionalReligiousBurial": "Traditional Religious Burial",
+        "simpleCremationService": "Simple Cremation Service",
+        "ecoFriendlyNaturalBurial": "Eco-Friendly Natural Burial"
+      },
+      "digitalAccountsShutdown": {
+        "comprehensiveDigitalShutdown": "Comprehensive Digital Shutdown",
+        "minimalDigitalFootprint": "Minimal Digital Footprint",
+        "professionalBusinessAccounts": "Professional & Business Accounts"
+      },
+      "importantContacts": {
+        "essentialContactsList": "Essential Contacts List",
+        "childrenDependentsContacts": "Children & Dependents Contacts"
+      },
+      "documentLocations": {
+        "homeFilingSystem": "Home Filing System",
+        "professionalStorage": "Professional Storage"
+      },
+      "personalMessages": {
+        "letterToSpousePartner": "Letter to Spouse/Partner",
+        "letterToChildren": "Letter to Children",
+        "letterToParents": "Letter to Parents"
+      },
+      "practicalInstructions": {
+        "first48HoursChecklist": "First 48 Hours Checklist",
+        "businessContinuityPlan": "Business Continuity Plan",
+        "householdManagementGuide": "Household Management Guide"
+      }
+    },
+    "sections": {
+      "funeral": {
+        "title": "Begravelsesønsker",
+        "description": "Dine præferencer for begravelsesarrangementer og mindehøjtideligheder.",
+        "placeholder": "Beskriv dine ønsker til din begravelse eller mindehøjtidelighed...\n\nFor eksempel:\n- Type af ceremoni (religiøs, sekulær, fejring af livet)\n- Præferencer for begravelse eller kremering\n- Præferencer for placering\n- Musik, oplæsninger eller særlige ønsker\n- Hvem der skal tale eller deltage\n- Eventuelle specifikke traditioner, der skal følges"
+      },
+      "digital": {
+        "title": "Nedlukning af digitale konti",
+        "description": "Instruktioner til håndtering af din digitale tilstedeværelse og onlinekonti.",
+        "placeholder": "Angiv dine digitale konti og hvordan de skal håndteres...\n\nFor eksempel:\n- Sociale mediekonti (Facebook, Instagram, LinkedIn)\n- E-mailkonti\n- Cloud-lagring (Google Drive, Dropbox)\n- Abonnementstjenester (Netflix, Spotify)\n- Onlinebank- og finanskonti\n- Kryptovaluta-punge\n- Hjemmeside- eller domænenavne"
+      },
+      "contacts": {
+        "title": "Vigtige kontakter",
+        "description": "Nøglepersoner, som denne værge bør kontakte eller underrette.",
+        "placeholder": "Tilføj vigtige kontakter, der er specifikke for denne værges ansvarsområder."
+      },
+      "documents": {
+        "title": "Dokumentplaceringer",
+        "description": "Hvor man kan finde vigtige fysiske og digitale dokumenter.",
+        "placeholder": "Beskriv, hvor vigtige dokumenter er placeret...\n\nFor eksempel:\n- Placering af testamente\n- Forsikringspolicer\n- Skøder på ejendom\n- Oplysninger om bankkonti\n- Investeringsdokumenter\n- Selvangivelser\n- Adgangskoder og adgangskoder\n- Placering af bankboks og nøgle"
+      },
+      "messages": {
+        "title": "Personlige beskeder",
+        "description": "Personlige beskeder og sidste tanker til denne værge.",
+        "placeholder": "Skriv en personlig besked til denne værge...\n\nDette er din mulighed for at:\n- Udtrykke dine følelser og taknemmelighed\n- Dele vigtige minder\n- Give vejledning eller råd\n- Forklare dine beslutninger\n- Efterlade trøstende ord\n- Dele dine håb for fremtiden"
+      },
+      "practical": {
+        "title": "Praktiske instruktioner",
+        "description": "Umiddelbare praktiske skridt og ansvarsområder for denne værge.",
+        "placeholder": "Angiv praktiske opgaver og umiddelbare handlinger...\n\nFor eksempel:\n- Tjekliste for de første 24-48 timer\n- Hvem der skal underrettes først\n- Haste-regninger eller betalinger\n- Plejeinstruktioner (kæledyr, planter, ejendom)\n- Forretningsanliggender, der kræver opmærksomhed\n- Planlagte aftaler, der skal aflyses\n- Nødvendige nøgler og adgangskoder"
+      }
+    },
+    "contactFields": {
+      "name": "Navn",
+      "namePlaceholder": "Fulde navn",
+      "role": "Rolle/Relation",
+      "rolePlaceholder": "f.eks. Familieadvokat, Revisor",
+      "phone": "Telefon",
+      "phonePlaceholder": "+45 12 34 56 78",
+      "email": "E-mail",
+      "emailPlaceholder": "email@example.com",
+      "notes": "Noter",
+      "notesPlaceholder": "Yderligere oplysninger om denne kontakt"
+    },
+    "messages": {
+      "autoSaved": "Gemt",
+      "saved": "Køreplan gemt"
+    },
+    "errors": {
+      "loadFailed": "Kunne ikke indlæse køreplan.",
+      "saveFailed": "Kunne ikke gemme køreplan."
+    }
+  },
+  "scenarioPlanner": {
+    "scenarios": {
+      "hospitalized": {
+        "title": "What if you're in the hospital for 3 months?",
+        "description": "An unexpected health issue means you're unable to manage daily affairs. Your family needs to step in."
+      },
+      "incapacitated": {
+        "title": "What if you become incapacitated?",
+        "description": "A serious accident leaves you unable to make decisions for yourself. Who will make them for you?"
+      },
+      "suddenPassing": {
+        "title": "What if something happens to you tomorrow?",
+        "description": "The ultimate test of your preparation. Is your family ready to navigate this difficult time without chaos?"
+      }
+    },
+    "timeframes": {
+      "first24Hours": "First 24 Hours",
+      "firstWeek": "First Week",
+      "firstMonth": "First Month",
+      "threeToSixMonths": "3-6 Months"
+    },
+    "vulnerabilities": {
+      "billsGoUnpaid": "Bills Go Unpaid",
+      "businessDecisionsStall": "Business Decisions Stall",
+      "familyCannotManageFinances": "Family cannot legally manage your finances",
+      "familyCannotAccessBankAccount": "Family cannot access primary bank account",
+      "businessNoLeadership": "Business operations have no clear leadership",
+      "noWillFound": "No Will Found",
+      "insuranceDetailsUnknown": "Insurance Details Unknown",
+      "noWillAvailable": "No will available",
+      "unknownLifeInsurance": "Unknown life insurance details"
+    },
+    "actions": {
+      "designatePowerOfAttorney": "Designate a Power of Attorney for finances",
+      "grantSpouseAccess": "Grant spouse access to your primary account",
+      "createBusinessContinuityPlan": "Create a business continuity plan",
+      "draftWill": "Draft and store a legally binding will",
+      "compileInsuranceList": "Compile a list of all insurance policies"
+    },
+    "timelineEvents": {
+      "notifyImmediateFamily": "Notify immediate family",
+      "securePhysicalProperty": "Secure physical property",
+      "contactExecutor": "Contact executor",
+      "locateWill": "Locate the will",
+      "executorBeginsProbate": "Executor begins probate process",
+      "notifyEmployer": "Notify employer",
+      "activatePowerOfAttorney": "Activate Power of Attorney",
+      "arrangeBillPayments": "Arrange bill payments",
+      "fileDisabilityBenefits": "File for disability benefits"
+    },
+    "descriptions": {
+      "billsGoUnpaid": "Your family can't access your primary checking account to pay the mortgage.",
+      "businessDecisionsStall": "Clients and employees don't know who is authorized to make decisions.",
+      "familyCannotManageFinances": "Your spouse can now legally manage all financial matters, ensuring bills are paid and investments are protected.",
+      "familyCannotAccessBankAccount": "Your family can now pay bills and manage daily expenses without delay or legal complications.",
+      "businessNoLeadership": "Your business can continue operating smoothly with clear leadership and decision-making processes.",
+      "noWillFound": "The family cannot locate or confirm the existence of a will.",
+      "insuranceDetailsUnknown": "Life insurance policy details and beneficiaries are unknown.",
+      "notifyImmediateFamily": "Ensure all immediate family members are informed.",
+      "securePhysicalProperty": "Ensure that the home and vehicles are secure.",
+      "contactExecutor": "Reach out to John Smith to start will proceedings.",
+      "locateWill": "Locate and secure the will at the designated location.",
+      "executorBeginsProbate": "The executor will file for probate to manage the estate.",
+      "notifyEmployer": "Inform workplace about extended absence.",
+      "activatePowerOfAttorney": "Ensure designated person can make decisions.",
+      "arrangeBillPayments": "Set up automatic payments or delegate to trusted person.",
+      "fileDisabilityBenefits": "Submit necessary paperwork for insurance claims."
+    },
+    "scenario_planner_1": "Scenario Planner",
+    "let_s_see_how_prepared_your_fa_2": "Let's see how prepared your family is for different scenarios",
+    "generate_family_action_plan_3": "Generate Family Action Plan",
+    "generate_plan_4": "Generate Plan",
+    "current_family_vulnerabilities_6": "Current Family Vulnerabilities",
+    "without_proper_preparation_you_7": "Without proper preparation, you and your family could face these challenges",
+    "projected_timeline_8": "Projected Timeline",
+    "potential_financial_impact_9": "Potential Financial Impact",
+    "these_are_estimates_of_the_pos_10": "These are estimates of the potential costs if vulnerabilities are not addressed",
+    "no_will_11": "No Will: ",
+    "potential_cost_of_lengthy_prob_12": "Potential cost of lengthy probate process: ",
+    "5_000_15_000_13": "$5,000 - $15,000",
+    "estimated_14": " estimated",
+    "potential_loss_of_business_rev_15": "Potential loss of business revenue during transition: ",
+    "20_000_16": "$20,000",
+    "your_preparedness_blueprint_17": "Your Preparedness Blueprint",
+    "your_family_is_currently_18": "Your family is currently ",
+    "protected_in_this_scenario_19": "% protected in this scenario",
+    "vulnerability_20": "Vulnerability: ",
+    "action_required_21": "Action Required: ",
+    "resolve_this_vulnerability_22": "Resolve This Vulnerability",
+    "resolved_23": "Resolved: ",
+    "family_action_plan_24": "Family Action Plan",
+    "a_comprehensive_guide_for_your_25": "A comprehensive guide for your family to follow in case of emergency",
+    "print_plan_26": "Print Plan",
+    "_27": "🤕"
+  },
+  "scenarios": {
+    "title": "Hvad sker der, når livet tager en uventet drejning?",
+    "subtitle": "Rigtige familier, rigtige situationer, rigtig kontrol og forberedelse",
+    "hospitalStay": {
+      "title": "Den uventede hospitalsindlæggelse",
+      "before": {
+        "situation": "Sarahs mand fik et hjerteanfald. Mens han var på intensivafdelingen, brugte hun dage på at finde deres forsikringspapirer, bankkontooplysninger og vigtige kontakter. Stressen var overvældende, da hun havde brug for at fokusere på hans bedring.",
+        "emotion": "Stress og bekymring",
+        "consequence": "Dage med at søge efter information og støtte."
+      },
+      "after": {
+        "situation": "Da Mark havde sin ulykke, åbnede hans kone Lisa deres familieguide og fandt alt organiseret: forsikringsdetaljer, bankkontakter, medicinske oplysninger og endda en liste over personer, der skulle underrettes. Hun kunne fokusere på det vigtigste - at være der for Mark.",
+        "emotion": "Fred og fokus",
+        "benefit": "Øjeblikkelig adgang til alt, hun havde brug for."
+      }
+    },
+    "businessTrip": {
+      "title": "Forretningsrejsens nødsituation",
+      "before": {
+        "situation": "Da Davids fly blev forsinket og han missede sin datters akutte operation, kunne hans kone ikke få adgang til deres opsparingskonto eller finde deres sygesikringsoplysninger. Kritiske beslutninger måtte vente.",
+        "emotion": "Frustration og hjælpeløshed",
+        "consequence": "Vigtige medicinske beslutninger forsinket."
+      },
+      "after": {
+        "situation": "Da Emmas mand rejste og hun havde brug for nødfonde til deres søns operation, havde hun øjeblikkelig adgang til alle kontooplysninger, forsikringsdetaljer og endda forudskrevne autorisationsbreve. Ingen forsinkelser, ingen stress.",
+        "emotion": "Lettelse og klarhed",
+        "benefit": "Alt tilgængeligt lige når hun havde brug for det."
+      }
+    },
+    "suddenLoss": {
+      "title": "Det pludselige tab",
+      "before": {
+        "situation": "Efter at have mistet sin far pludseligt, brugte Maria måneder på at samle hans økonomiske anliggender. Hun fandt konti, hun ikke vidste eksisterede, og missede vigtige deadlines, fordi dokumenter lå spredt overalt.",
+        "emotion": "Forvirring og fortrydelse",
+        "consequence": "Missede deadlines og mistet tid."
+      },
+      "after": {
+        "situation": "Da Johns familie havde brug for at håndtere hans anliggender, var alt tydeligt organiseret: en komplet liste over konti, vigtige kontakter, trin-for-trin instruktioner og endda personlige beskeder, han havde forberedt til hvert familiemedlem.",
+        "emotion": "Rolighed og klarhed",
+        "benefit": "En klar sti at følge i svære tider."
+      }
+    },
+    "labels": {
+      "before": "Før LegacyGuard",
+      "after": "Efter Arveboks",
+      "feeling": "Følelse"
+    },
+    "bottomCta": {
+      "primary": "Lad ikke din familie stå over for denne kaos",
+      "secondary": "Start med at organisere på 10 minutter",
+      "urgency": "Hver dag du venter, er en dag mere, hvor din familie er uforberedt"
+    },
+    "testimonials": {
+      "1": "Efter min brors pludselige ulykke så jeg min svigerinde kæmpe i uger med at finde vigtige dokumenter og adgangskoder. Det var da, jeg vidste, jeg ikke kunne lade det samme ske for min familie.",
+      "2": "Som enlig mor, der driver en virksomhed, bekymrede jeg mig konstant om, hvad der ville ske, hvis der skete mig noget. Arveboks hjalp mig med at organisere alt.",
+      "3": "Min kone har tidlig demens, og jeg indså, jeg havde brug for at forberede mig, mens jeg stadig kunne. Arveboks gjorde det enkelt at organisere vores 40 års liv sammen."
+    }
+  },
+  "annualReview": {
+    "title": "Årlig arvegennemgang",
+    "subtitle": "Hold din families beskyttelsesplan aktuelt og effektiv",
+    "description": "Livet ændrer sig hurtigt. Denne årlige gennemgang sikrer, at din arveplan forbliver i overensstemmelse med din nuværende situation og ønsker.",
+    "progress": {
+      "title": "Gennemgangsfremskridt",
+      "completed": "Fuldført",
+      "inProgress": "I gang",
+      "notStarted": "Ikke startet",
+      "totalSteps": "Samlede trin",
+      "estimatedTime": "Anslået tid: 15 minutter"
+    },
+    "step1": {
+      "title": "Gennemgå dine eksekutorer",
+      "description": "Bekræft, at dine betroede personer stadig er de rigtige valg for din familie"
+    },
+    "step2": {
+      "title": "Gennemgå dine aktiver",
+      "description": "Verificer, at dit aktivinventar er aktuelt og komplet"
+    },
+    "step3": {
+      "title": "Gennemgå dine modtagere",
+      "description": "Sikr, at dine modtagere stadig er de rigtige personer"
+    },
+    "step4": {
+      "title": "Fuldfør gennemgang",
+      "description": "Færdiggør din årlige gennemgang og opdater din plan"
+    },
+    "commandRoster": {
+      "title": "Kommandostab gennemgang",
+      "description": "Dine eksekutorer og betroede personer er grundlaget for din families beskyttelsesplan.",
+      "executorQuestion": "Er {name} stadig den rigtige person til at være din eksekutor?",
+      "guardianQuestion": "Er {name} stadig den rigtige person til at tage sig af dine børn?",
+      "trustedPersonQuestion": "Er {name} stadig den rigtige person for {role}?",
+      "status": {
+        "current": "Aktuel",
+        "needsUpdate": "Kræver opdatering",
+        "outdated": "Forældet",
+        "missing": "Manglende"
+      },
+      "details": {
+        "executor": "Primær eksekutor for dit bo",
+        "guardian": "Værge for mindreårige børn",
+        "trustedPerson": "Betroet person med {accessLevel} adgang",
+        "emergencyContact": "Nødkontaktperson"
+      }
+    },
+    "armory": {
+      "title": "Aktivinventar gennemgang",
+      "description": "Dine aktiver er det, du beskytter. Hold dette inventar aktuelt.",
+      "ownershipQuestion": "Ejer du stadig {assetName}?",
+      "valueQuestion": "Har værdien af {assetName} ændret sig betydeligt?",
+      "locationQuestion": "Er placeringen af {assetName} stadig korrekt?",
+      "status": {
+        "current": "Aktuel",
+        "needsUpdate": "Kræver opdatering",
+        "outdated": "Forældet",
+        "missing": "Manglende"
+      },
+      "categories": {
+        "realEstate": "Fast ejendom",
+        "vehicles": "Køretøjer",
+        "bankAccounts": "Bankkonti",
+        "investments": "Investeringer",
+        "insurance": "Forsikring",
+        "digitalAssets": "Digitale aktiver",
+        "personalItems": "Personlige genstande"
+      }
+    },
+    "beneficiaries": {
+      "title": "Modtager gennemgang",
+      "description": "Sikr, at de rigtige personer modtager de rigtige aktiver på det rigtige tidspunkt.",
+      "confirmationQuestion": "Er disse stadig de korrekte personer til at modtage disse aktiver?",
+      "distributionQuestion": "Er fordelingen i procent stadig korrekt?",
+      "contactQuestion": "Er kontaktoplysningerne for {name} stadig aktuelle?",
+      "status": {
+        "current": "Aktuel",
+        "needsUpdate": "Kræver opdatering",
+        "outdated": "Forældet",
+        "missing": "Manglende"
+      },
+      "details": {
+        "primary": "Primær modtager",
+        "contingent": "Betinget modtager",
+        "percentage": "{percentage}% af aktiver",
+        "specific": "Specifik aktivmodtager"
+      }
+    },
+    "complete": {
+      "title": "Gennemgang fuldført",
+      "description": "Din årlige gennemgang er blevet fuldført.",
+      "message": "Din årlige gennemgang er fuldført. Din families beskyttelsesplan er nu aktuelt og effektiv.",
+      "summary": "Gennemgangssammenfatning",
+      "changes": "Ændringer foretaget",
+      "noChanges": "Ingen ændringer var nødvendige. Din plan er aktuelt.",
+      "nextReview": "Næste gennemgang forfalder",
+      "reminder": "Vi vil påminde dig, når det er tid til din næste årlige gennemgang."
+    },
+    "buttons": {
+      "confirm": "Bekræft",
+      "update": "Opdater",
+      "back": "Tilbage",
+      "next": "Næste",
+      "finish": "Afslut gennemgang",
+      "save": "Gem ændringer",
+      "skip": "Spring over for nu",
+      "reviewLater": "Gennemgå senere"
+    },
+    "status": {
+      "title": "Gennemgangsstatus",
+      "overdue": "Forfalden",
+      "dueSoon": "Forfalder snart",
+      "current": "Aktuel",
+      "completed": "Fuldført",
+      "lastReview": "Sidste gennemgang",
+      "nextReview": "Næste gennemgang",
+      "daysOverdue": "{days} dage forfalden",
+      "daysUntilDue": "{days} dage til forfalden"
+    },
+    "notifications": {
+      "reviewDue": "Årlig gennemgang forfalden",
+      "reviewOverdue": "Årlig gennemgang forfalden",
+      "reviewCompleted": "Årlig gennemgang fuldført",
+      "changesSaved": "Ændringer gemt",
+      "errorSaving": "Fejl ved gemning af ændringer",
+      "reminderSet": "Påmindelse sat til næste gennemgang"
+    }
+  },
+  "complexityReduction": {
+    "title": "Forenkl din arveplanlægning",
+    "subtitle": "Bryd komplekse opgaver ned i simple, håndterbare trin",
+    "description": "Vi forstår, at planlægning for fremtiden kan føles overvældende. Vores kompleksitetsreduktionssystem bryder hver opgave ned i simple, handlingsorienterede trin, der kun tager minutter at fuldføre.",
+    "benefits": {
+      "title": "Hvorfor kompleksitetsreduktion virker",
+      "overwhelm": {
+        "title": "Eliminerer overvældelse",
+        "description": "I stedet for at stå over for en massiv to-do liste, tackler du én lille opgave ad gangen. Hvert trin er designet til at blive fuldført på under 5 minutter."
+      },
+      "progress": {
+        "title": "Synligt fremskridt",
+        "description": "Se din families forberedelse vokse med hvert fuldført trin. Spor dit fremskridt og fejr små sejre undervejs."
+      },
+      "confidence": {
+        "title": "Bygger tillid",
+        "description": "Når du fuldfører hvert trin, vil du føle dig mere selvsikker og i kontrol. Det, der engang syntes umuligt, bliver opnåeligt."
+      },
+      "family": {
+        "title": "Familiebeskyttelse",
+        "description": "Hvert fuldført trin beskytter direkte din familie. Fra nødadgang til langsigtet planlægning betyder hver handling noget."
+      }
+    },
+    "steps": {
+      "identifyBankAccount": {
+        "title": "Identificer din primære bankkonto",
+        "why": "Hvorfor dette betyder noget: Øjeblikkelig adgang til midler under nødsituationer",
+        "whatYouDo": "Hvad du gør: Tag et foto eller skriv kontooplysninger ned",
+        "whatWeDo": "Hvad vi gør: Gemmer information sikkert og opretter adgangsinstruktioner",
+        "timeRequired": "Tid påkrævet: 2 minutter",
+        "complexity": "Kompleksitetsniveau: Simpel"
+      },
+      "emergencyContacts": {
+        "title": "Liste over nødkontakter",
+        "why": "Hvorfor dette betyder noget: Hurtig adgang til vigtige personer under kriser",
+        "whatYouDo": "Hvad du gør: Tilføj telefonnumre og relationer",
+        "whatWeDo": "Hvad vi gør: Organiserer kontakter efter prioritet og opretter nødprocedurer",
+        "timeRequired": "Tid påkrævet: 3 minutter",
+        "complexity": "Kompleksitetsniveau: Simpel"
+      },
+      "insurancePolicies": {
+        "title": "Dokumenter forsikringspolicer",
+        "why": "Hvorfor dette betyder noget: Sikrer, at krav kan indgives hurtigt og korrekt",
+        "whatYouDo": "Hvad du gør: Upload policedokumenter eller tag fotos",
+        "whatWeDo": "Hvad vi gør: Udtrækker nøgleinformation og opretter kravinstruktioner",
+        "timeRequired": "Tid påkrævet: 5 minutter",
+        "complexity": "Kompleksitetsniveau: Let"
+      },
+      "digitalAssets": {
+        "title": "Sikre digitale aktiver",
+        "why": "Hvorfor dette betyder noget: Beskytter online konti og digitale minder",
+        "whatYouDo": "Hvad du gør: List vigtige konti og adgangskoder",
+        "whatWeDo": "Hvad vi gør: Opretter sikre adgangsprotokoller og backup-instruktioner",
+        "timeRequired": "Tid påkrævet: 4 minutter",
+        "complexity": "Kompleksitetsniveau: Let"
+      },
+      "legalDocuments": {
+        "title": "Organiser juridiske dokumenter",
+        "why": "Hvorfor dette betyder noget: Sikrer, at juridiske ønsker følges og processer er problemfri",
+        "whatYouDo": "Hvad du gør: Upload testamenter, fuldmagter og andre dokumenter",
+        "whatWeDo": "Hvad vi gør: Opretter sammenfatninger og sikrer korrekt juridisk adgang",
+        "timeRequired": "Tid påkrævet: 6 minutter",
+        "complexity": "Kompleksitetsniveau: Medium"
+      },
+      "familyInstructions": {
+        "title": "Skriv familieinstruktioner",
+        "why": "Hvorfor dette betyder noget: Giver klar vejledning under svære tider",
+        "whatYouDo": "Hvad du gør: Skriv personlige beskeder og instruktioner",
+        "whatWeDo": "Hvad vi gør: Organiserer beskeder og opretter leveringsplaner",
+        "timeRequired": "Tid påkrævet: 8 minutter",
+        "complexity": "Kompleksitetsniveau: Medium"
+      }
+    },
+    "actions": {
+      "startThisStep": "Start dette trin",
+      "showMeHow": "Vis mig hvordan",
+      "iNeedHelp": "Jeg har brug for hjælp",
+      "nextStep": "Næste trin",
+      "previousStep": "Forrige trin",
+      "completeStep": "Marker som fuldført",
+      "skipStep": "Spring over for nu"
+    },
+    "progress": {
+      "title": "Dit fremskridt",
+      "completed": "Fuldført",
+      "inProgress": "I gang",
+      "notStarted": "Ikke startet",
+      "totalSteps": "Samlede trin",
+      "estimatedTime": "Anslået resterende tid"
+    },
+    "features": {
+      "title": "Hvordan kompleksitetsreduktion virker",
+      "stepByStep": {
+        "title": "Trin-for-trin vejledning",
+        "description": "Hver opgave er brudt ned i klare, simple instruktioner, som alle kan følge."
+      },
+      "timeEstimation": {
+        "title": "Præcise tidsestimater",
+        "description": "Vid præcis, hvor lang tid hvert trin vil tage, fra 2 minutter til 15 minutter maksimum."
+      },
+      "difficultyLevels": {
+        "title": "Klare sværhedsgrader",
+        "description": "Simpel, Let, Medium og Kompleks ratings hjælper dig med at vælge, hvad du skal tackle først."
+      },
+      "progressTracking": {
+        "title": "Fremskridtssporing",
+        "description": "Se din families forberedelse vokse med hvert fuldført trin."
+      },
+      "helpAvailable": {
+        "title": "Hjælp når du har brug for det",
+        "description": "Få assistance, forklaringer og støtte til ethvert trin, der føles udfordrende."
+      }
+    }
+  },
+  "microTaskGenerator": {
+    "minutes_1": " minutter • ",
+    "family_impact_2": " familieindvirkning",
+    "start_task_3": "Start opgave",
+    "complete_task_4": "Fuldfør opgave",
+    "skip_for_now_5": "Spring over for nu",
+    "taskCategories": {
+      "identification": "Identifikationsdokumenter",
+      "financial": "Finansielle oplysninger",
+      "healthcare": "Sundhedsdokumenter",
+      "legal": "Juridiske dokumenter",
+      "digital": "Digitale aktiver",
+      "personal": "Personlige oplysninger"
+    },
+    "difficultyLevels": {
+      "trivial": "Trivielt",
+      "easy": "Let",
+      "simple": "Simpel"
+    },
+    "familyImpactLevels": {
+      "high": "Høj",
+      "medium": "Medium",
+      "low": "Lav"
+    },
+    "taskStatus": {
+      "available": "Tilgængelig",
+      "in_progress": "I gang",
+      "completed": "Fuldført",
+      "skipped": "Skippet"
+    },
+    "tasks": {
+      "driversLicense": {
+        "title": "Tag et foto af dit kørekort",
+        "description": "Din familie vil have brug for dette til juridiske og finansielle anliggender. At have et klart foto sparer dem tid og stress.",
+        "completionMessage": "Din familie har nu adgang til kritiske ID-oplysninger."
+      },
+      "passport": {
+        "title": "Fotografer dit pas",
+        "description": "Essentielt til internationale rejsearrangementer og juridisk identifikation.",
+        "completionMessage": "Internationale rejsedokumenter er nu sikret for din familie."
+      },
+      "birthCertificate": {
+        "title": "Scan din fødselsattest",
+        "description": "Påkrævet til mange juridiske processer og familiehistoriedokumentation.",
+        "completionMessage": "Fødselsattest er nu digitalt bevaret til fremtidige behov."
+      },
+      "socialSecurityCard": {
+        "title": "Dokumenter dit social security kort",
+        "description": "Kritisk til ydelser og juridiske identifikationsprocesser.",
+        "completionMessage": "Social security oplysninger er nu sikkert dokumenteret."
+      },
+      "bankAccounts": {
+        "title": "List dine bankkonti",
+        "description": "Hjælp din familie med at administrere finansiering og få adgang til midler, når det er nødvendigt.",
+        "completionMessage": "Bankkontooplysninger er nu organiseret for din familie."
+      },
+      "insurancePolicies": {
+        "title": "Sammenlign forsikringspolicedetaljer",
+        "description": "Sikr, at din familie ved om al dækning og kan indgive krav.",
+        "completionMessage": "Forsikringsoplysninger er nu omfattende og tilgængelige."
+      },
+      "medicalRecords": {
+        "title": "Organiser medicinsk historie",
+        "description": "Hjælp sundhedsydere med at forstå din medicinske baggrund.",
+        "completionMessage": "Medicinsk historie er nu organiseret til bedre sundhedsbeslutninger."
+      },
+      "medications": {
+        "title": "List nuværende medicin",
+        "description": "Kritisk til medicinske nødsituationer og løbende pleje.",
+        "completionMessage": "Medicinliste er nu tilgængelig for sundhedspersonale."
+      },
+      "will": {
+        "title": "Opret eller opdater dit testamente",
+        "description": "Sikr, at dine ønsker er tydeligt dokumenteret og juridisk bindende.",
+        "completionMessage": "Dit testamente er nu aktuelt og juridisk beskyttet."
+      },
+      "powerOfAttorney": {
+        "title": "Udpeg fuldmagt",
+        "description": "Autoriser betroede personer til at træffe beslutninger på dine vegne.",
+        "completionMessage": "Fuldmagt er nu korrekt udpeget."
+      },
+      "digitalPasswords": {
+        "title": "Sikker digital adgangskodeliste",
+        "description": "Hjælp familie med at få adgang til vigtige online konti og tjenester.",
+        "completionMessage": "Digital adgang er nu sikkert organiseret for din familie."
+      },
+      "socialMedia": {
+        "title": "Planlæg sociale mediekonti",
+        "description": "Beslut, hvordan din online tilstedeværelse skal håndteres.",
+        "completionMessage": "Sociale medier arv er nu planlagt og dokumenteret."
+      }
+    },
+    "sessionStats": {
+      "tasksCompleted": "Opgaver fuldført",
+      "totalTimeSpent": "Samlet tid brugt",
+      "momentumScore": "Momentum score",
+      "nextRecommendedTask": "Næste anbefalede opgave"
+    },
+    "scoring": {
+      "urgency": "Haste",
+      "impact": "Indvirkning",
+      "ease": "Lethed",
+      "momentum": "Momentum"
+    }
+  },
+  "editStoryModal": {
+    "editStory": "Rediger historie",
+    "addStory": "Tilføj en historie",
+    "description": "Del historien bag \"{{assetName}}\". Dette personlige touch vil være uvurderligt for dine kære.",
+    "fields": {
+      "yourStory": "Din historie"
+    },
+    "placeholders": {
+      "story": "f.eks. Dette var din bedstemors vielsesring, givet til hende i 1952, da hun giftede sig med din bedstefar i den lille kirke i deres hjemby. Hun bar den hver dag i 65 år..."
+    },
+    "hints": {
+      "shareMemories": "Del minder, betydning eller historie"
+    },
+    "tips": {
+      "title": "Tips til en meningsfuld historie:",
+      "explainSpecial": "Forklar, hvorfor denne genstand er særlig for dig",
+      "shareMemories": "Del minder forbundet med den",
+      "describeHistory": "Beskriv dens historie eller hvordan du fik den",
+      "mentionWishes": "Nævn eventuelle ønsker for, hvordan den skal bruges eller bevares"
+    },
+    "saving": "Gemmer...",
+    "saveStory": "Gem historie",
+    "messages": {
+      "saved": "Historie gemt"
+    },
+    "errors": {
+      "notAuthenticated": "Du skal være logget ind for at gemme en historie",
+      "saveFailed": "Kunne ikke gemme historie"
+    }
+  }
+}

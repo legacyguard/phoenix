@@ -1,0 +1,1822 @@
+{
+  "_comment": "Shared translations used across the application",
+  "common": {
+    "loading": "Loading...",
+    "viewDetails": "View Details",
+    "edit": "Edit",
+    "delete": "Delete",
+    "addedOn": "Added {{date}}",
+    "priority": {
+      "high": "High",
+      "medium": "Medium",
+      "low": "Low"
+    },
+    "pagination": {
+      "previous": "Previous",
+      "next": "Next",
+      "morePages": "More pages",
+      "page": "Page",
+      "of": "of",
+      "showing": "Showing",
+      "to": "to",
+      "results": "results",
+      "perPage": "per page",
+      "goToPage": "Go to page",
+      "currentPage": "Current page",
+      "totalPages": "Total pages",
+      "firstPage": "First page",
+      "lastPage": "Last page",
+      "pageInfo": "Page {{current}} of {{total}}",
+      "resultsInfo": "Showing {{start}} to {{end}} of {{total}} results",
+      "noResults": "No results found",
+      "loading": "Loading...",
+      "navigation": {
+        "title": "Pagination Navigation",
+        "description": "Navigate through pages of results",
+        "first": "Go to first page",
+        "last": "Go to last page",
+        "previous": "Go to previous page",
+        "next": "Go to next page",
+        "page": "Go to page {{number}}"
+      },
+      "accessibility": {
+        "pagination": "Pagination",
+        "currentPage": "Current page, page {{number}}",
+        "page": "Page {{number}}",
+        "previousPage": "Previous page",
+        "nextPage": "Next page",
+        "firstPage": "First page",
+        "lastPage": "Last page",
+        "morePages": "More pages available"
+      }
+    },
+    "errors": {
+      "missingClerkKey": "Missing Clerk Publishable Key",
+      "errorLoadingApp": "Error loading app",
+      "unauthorized": "Unauthorized",
+      "invalidAuthentication": "Invalid authentication",
+      "internalServerError": "Internal server error",
+      "missingRequiredFields": "Missing required fields",
+      "failedToFetchProfile": "Failed to fetch user profile"
+    },
+    "redirect": {
+      "simulationTitle": "Redirect Simulation"
+    },
+    "ui": {
+      "close": "Close",
+      "more": "More",
+      "previousSlide": "Previous slide",
+      "nextSlide": "Next slide",
+      "toggleSidebar": "Toggle Sidebar",
+      "goToPreviousPage": "Go to previous page",
+      "goToNextPage": "Go to next page",
+      "carousel": {
+        "title": "Carousel",
+        "description": "Image carousel with navigation controls",
+        "previousSlide": "Previous slide",
+        "nextSlide": "Next slide",
+        "currentSlide": "Current slide",
+        "slide": "Slide",
+        "of": "of",
+        "slideInfo": "Slide {{current}} of {{total}}",
+        "goToSlide": "Go to slide {{number}}",
+        "autoplay": "Autoplay",
+        "pauseAutoplay": "Pause autoplay",
+        "resumeAutoplay": "Resume autoplay",
+        "stopAutoplay": "Stop autoplay",
+        "carouselNavigation": "Carousel navigation",
+        "carouselControls": "Carousel controls",
+        "slideNavigation": "Slide navigation",
+        "imageCarousel": "Image carousel",
+        "contentCarousel": "Content carousel",
+        "gallery": "Gallery",
+        "photoGallery": "Photo gallery",
+        "imageGallery": "Image gallery",
+        "slideshow": "Slideshow",
+        "presentation": "Presentation",
+        "showcase": "Showcase",
+        "browseImages": "Browse images",
+        "viewImages": "View images",
+        "navigateSlides": "Navigate slides",
+        "slideCount": "{{count}} slides",
+        "slideCountSingular": "{{count}} slide",
+        "slideCountPlural": "{{count}} slides",
+        "accessibility": {
+          "carousel": "Carousel",
+          "slide": "Slide",
+          "currentSlide": "Current slide, slide {{number}}",
+          "previousSlide": "Previous slide",
+          "nextSlide": "Next slide",
+          "goToSlide": "Go to slide {{number}}",
+          "slideCount": "Slide {{current}} of {{total}}",
+          "carouselNavigation": "Carousel navigation controls",
+          "slideNavigation": "Slide navigation controls",
+          "autoplayEnabled": "Autoplay enabled",
+          "autoplayDisabled": "Autoplay disabled",
+          "autoplayPaused": "Autoplay paused",
+          "autoplayStopped": "Autoplay stopped"
+        }
+      },
+      "form": {
+        "title": "Form",
+        "description": "Description",
+        "label": "Label",
+        "placeholder": "Placeholder",
+        "error": "Error",
+        "success": "Success",
+        "warning": "Warning",
+        "info": "Information",
+        "required": "Required",
+        "optional": "Optional",
+        "submit": "Submit",
+        "cancel": "Cancel",
+        "save": "Save",
+        "reset": "Reset",
+        "clear": "Clear",
+        "loading": "Loading...",
+        "saving": "Saving...",
+        "submitting": "Submitting...",
+        "validating": "Validating...",
+        "accessibility": {
+          "form": "Form",
+          "field": "Form field",
+          "required": "Required field",
+          "optional": "Optional field",
+          "error": "Field has error",
+          "success": "Field is valid",
+          "warning": "Field has warning",
+          "description": "Field description",
+          "label": "Field label"
+        },
+        "validation": {
+          "required": "This field is required",
+          "invalid": "This field is invalid",
+          "minLength": "Must be at least {{min}} characters",
+          "maxLength": "Must be no more than {{max}} characters",
+          "minValue": "Must be at least {{min}}",
+          "maxValue": "Must be no more than {{max}}",
+          "pattern": "Must match the required pattern",
+          "email": "Must be a valid email address",
+          "url": "Must be a valid URL",
+          "phone": "Must be a valid phone number",
+          "date": "Must be a valid date",
+          "time": "Must be a valid time",
+          "number": "Must be a valid number",
+          "integer": "Must be a whole number",
+          "positive": "Must be a positive number",
+          "negative": "Must be a negative number",
+          "between": "Must be between {{min}} and {{max}}",
+          "oneOf": "Must be one of the allowed values",
+          "custom": "Invalid value",
+          "unknown": "Unknown validation error"
+        },
+        "errors": {
+          "general": "Please fix the errors in the form",
+          "network": "Network error occurred",
+          "server": "Server error occurred",
+          "timeout": "Request timed out",
+          "unauthorized": "You are not authorized to perform this action",
+          "forbidden": "Access denied",
+          "notFound": "Resource not found",
+          "conflict": "Resource conflict",
+          "validation": "Validation failed",
+          "unknown": "An unknown error occurred"
+        },
+        "messages": {
+          "saved": "Form saved successfully",
+          "submitted": "Form submitted successfully",
+          "updated": "Form updated successfully",
+          "deleted": "Form deleted successfully",
+          "created": "Form created successfully",
+          "loaded": "Form loaded successfully",
+          "reset": "Form reset successfully",
+          "cleared": "Form cleared successfully"
+        }
+      },
+      "breadcrumb": {
+        "title": "Breadcrumb Navigation",
+        "description": "Navigation breadcrumb showing current location",
+        "separator": "Separator",
+        "ellipsis": "More",
+        "currentPage": "Current page",
+        "home": "Home",
+        "back": "Back",
+        "previous": "Previous",
+        "next": "Next",
+        "navigation": "Navigation",
+        "location": "Location",
+        "path": "Path",
+        "breadcrumb": "Breadcrumb",
+        "breadcrumbs": "Breadcrumbs",
+        "separatorText": "Separator",
+        "separatorDescription": "Separator between breadcrumb items",
+        "ellipsisText": "More items",
+        "ellipsisDescription": "More breadcrumb items available",
+        "accessibility": {
+          "breadcrumb": "Breadcrumb navigation",
+          "currentPage": "Current page",
+          "separator": "Separator",
+          "ellipsis": "More items",
+          "navigation": "Breadcrumb navigation",
+          "location": "Current location",
+          "path": "Navigation path",
+          "item": "Breadcrumb item",
+          "link": "Breadcrumb link",
+          "page": "Current page"
+        },
+        "separators": {
+          "chevron": "Chevron",
+          "slash": "Slash",
+          "arrow": "Arrow",
+          "greaterThan": "Greater than",
+          "dash": "Dash",
+          "dot": "Dot",
+          "pipe": "Pipe",
+          "default": "Default separator"
+        },
+        "messages": {
+          "navigateTo": "Navigate to {{item}}",
+          "currentLocation": "Current location: {{location}}",
+          "breadcrumbPath": "Breadcrumb path: {{path}}",
+          "moreItems": "More items available",
+          "separatorBetween": "Separator between {{item1}} and {{item2}}"
+        }
+      }
+    },
+    "auth": {
+      "protectedApplication": "Protected Application",
+      "protectedApplicationDesc": "This application is protected. Please enter the password to access.",
+      "incorrectPassword": "Incorrect password. Please try again.",
+      "password": "Password",
+      "enterPassword": "Enter your password",
+      "accessApplication": "Access Application"
+    },
+    "routeErrorBoundary": {
+      "code_1": "Error Code: ",
+      "reload_page_2": "Reload Page",
+      "technical_details_3": "Technical Details",
+      "pageNotFound": "Page Not Found",
+      "errorLoadingPage": "Error Loading Page",
+      "pageNotFoundDescription": "The requested page does not exist or has been moved.",
+      "errorLoadingPageDescription": "An error occurred while loading this page.",
+      "unknownError": "Unknown error",
+      "home": "Home",
+      "errorDetails": "Error Details",
+      "errorLogging": "Error logging details",
+      "timestamp": "Timestamp",
+      "errorMessage": "Error Message",
+      "errorStatus": "Error Status",
+      "errorDetailsLabel": "Error Details",
+      "location": "Location",
+      "consoleLog": "Error logged to console",
+      "actions": {
+        "goHome": "Go to Home Page",
+        "reloadPage": "Reload Current Page",
+        "viewDetails": "View Technical Details",
+        "hideDetails": "Hide Technical Details"
+      },
+      "messages": {
+        "errorCaught": "Error caught by RouteErrorBoundary",
+        "errorLogged": "Error details have been logged",
+        "contactSupport": "If this error persists, please contact support"
+      }
+    },
+    "appName": "LegacyGuard",
+    "cancel": "Prekliči",
+    "error": "Napaka",
+    "retry": "Poskusi znova",
+    "goBack": "Pojdi nazaj",
+    "goHome": "Pojdi na nadzorno ploščo"
+  },
+  "action": {
+    "loading": "Loading...",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "add": "Add",
+    "remove": "Remove",
+    "search": "Search",
+    "filter": "Filter"
+  },
+  "cta": {
+    "title": "Vaša zapuščina čaka na zaščito",
+    "subtitle": "Don't wait for 'someday' - give your family security today",
+    "description": "Pridružite se tisočim družinam, ki zaupajo LegacyGuardu, da ohrani njihove najdragocenejše spomine in pomembne dokumente za prihodnje generacije.",
+    "button": "Začnite svojo pot dediščine danes",
+    "secondary": "Start Free Trial",
+    "urgency": "Setup takes 10 minutes, being prepared lasts forever",
+    "gentleUrgency": {
+      "1": "Every day matters when it comes to family security",
+      "2": "The best time to prepare was yesterday, the second best time is now",
+      "3": "Your family's security and preparedness can't wait",
+      "4": "10 minutes today saves your family 40+ hours later"
+    },
+    "socialUrgency": {
+      "1": "Join the families who are already prepared",
+      "2": "Don't be the family that wishes they had organized sooner",
+      "3": "Be the parent/spouse who thought ahead"
+    },
+    "timeUrgency": {
+      "1": "Start today, sleep better tonight",
+      "2": "Complete setup this weekend",
+      "3": "Give your family this gift today"
+    }
+  },
+  "validation": {
+    "errors": {
+      "nameMinLength": "Ime mora imeti vsaj 2 znaka",
+      "nameMaxLength": "Ime ima lahko največ {{max}} znakov",
+      "fieldRequired": "Polje {{field}} je obvezno",
+      "countryRequired": "Država je obvezna",
+      "countryCodeLength": "Koda države mora imeti 2 znaka",
+      "selectAtLeastOne": "Izberite vsaj eno {{field}}",
+      "selectUpTo": "Izberete lahko do {{max}} {{field}}",
+      "invalidEmail": "Vnesite veljaven e-poštni naslov",
+      "invalidPhone": "Vnesite veljavno telefonsko številko",
+      "valueMustBeNumber": "Vrednost mora biti število",
+      "valueMustBePositive": "Vrednost mora biti pozitivna",
+      "currencyCodeLength": "Koda valute mora imeti 3 znake",
+      "maxCharacters": "Polje {{field}} ima lahko največ {{max}} znakov",
+      "allocationRequired": "Odstotek dodelitve je obvezen",
+      "allocationMustBeNumber": "Dodelitev mora biti število",
+      "allocationRange": "Dodelitev mora biti med 1% in 100%",
+      "expirationDateFuture": "Datum poteka mora biti v prihodnosti",
+      "maxTags": "Dodate lahko največ {{max}} oznak",
+      "fileSizeTooLarge": "Velikost datoteke mora biti {{maxSize}} ali manj",
+      "invalidFileType": "Dovoljene so samo datoteke tipa {{types}}",
+      "unknownError": "Neznana napaka",
+      "dataNotFound": "Zahtevani podatki niso bili najdeni",
+      "connectionError": "Napaka v povezavi. Prosimo, preverite svojo internetno povezavo.",
+      "permissionDenied": "Nimate dovoljenja za izvedbo tega dejanja.",
+      "duplicateRecord": "Zapis s temi informacijami že obstaja.",
+      "assetNameRequired": "Asset name is required",
+      "assetTypeRequired": "Asset type is required",
+      "addressMaxLength": "Address can be a maximum of {{max}} characters",
+      "registryNumberMaxLength": "Registry number can be a maximum of {{max}} characters",
+      "institutionNameMaxLength": "Institution name can be a maximum of {{max}} characters",
+      "accountNumberMaxLength": "Account number can be a maximum of {{max}} characters",
+      "credentialsMaxLength": "Credentials can be a maximum of {{max}} characters",
+      "relationshipRequired": "Relationship is required",
+      "beneficiaryNameRequired": "Beneficiary name is required (min. 2 characters)",
+      "notesMaxLength": "Notes can be a maximum of {{max}} characters",
+      "documentNameRequired": "Document name is required",
+      "documentTypeRequired": "Document type is required",
+      "descriptionMaxLength": "Description can be a maximum of {{max}} characters"
+    }
+  },
+  "errors": {
+    "dataNotFound": "Zahtevani podatki niso bili najdeni.",
+    "networkError": "Napaka v omrežju. Prosimo, preverite svojo internetno povezavo.",
+    "permissionDenied": "Za to dejanje nimate dovoljenja.",
+    "duplicateRecord": "Zapis s temi podatki že obstaja.",
+    "unknown": "Prišlo je do nepričakovane napake."
+  },
+  "app": {
+    "name": "LegacyGuard",
+    "comingSoon": {
+      "heritageVault": "Heritage Vault - Coming Soon",
+      "guardianNetwork": "Guardian Network - Coming Soon"
+    },
+    "tagline": "Varovanje vaše zapuščine"
+  },
+  "index": {
+    "welcome": "Dobrodošli v vaši prazni aplikaciji",
+    "startBuilding": "Začnite graditi svoj neverjeten projekt tukaj!"
+  },
+  "notfound": {
+    "title": "Stran ni najdena",
+    "description": "Stran, ki jo iščete, ne obstaja ali je bila premaknjena.",
+    "goHome": "Pojdi na domačo stran",
+    "goBack": "Pojdi nazaj"
+  },
+  "countryLanguage": {
+    "title": "Dobrodošli v LegacyGuard",
+    "description": "Prosimo, potrdite svojo lokacijo in jezikovne nastavitve",
+    "detectedLocation": "Zaznali smo, da ste v {{country}}",
+    "selectCountry": "Izberite svojo državo",
+    "selectLanguage": "Izberite svoj jezik",
+    "chooseLang": "Izberite jezik",
+    "domainSuggestion": "Na voljo je boljša izkušnja",
+    "domainSuggestionText": "Priporočamo uporabo {{domain}} za najboljšo izkušnjo v vaši regiji",
+    "privacyNote": "Vaši podatki o lokaciji se uporabljajo samo za zagotavljanje najboljše lokalne izkušnje in se nikoli ne delijo s tretjimi osebami.",
+    "confirm": "Potrdi",
+    "confirmAndRedirect": "Nadaljuj na {{domain}}"
+  },
+  "hero": {
+    "title": "Zaščitite digitalno zapuščino vaše družine za vedno",
+    "subtitle": "Varna, intuitivna platforma, ki pomaga družinam organizirati, zaščititi in prenašati najpomembnejše spomine in dokumente med generacijami.",
+    "cta_primary": "Začnite svoj načrt zapuščine",
+    "cta_secondary": "Oglejte si demo",
+    "trustSignals": {
+      "dataOwnership": "Vaši podatki ostanejo vaši - nikoli jih ne prodajamo",
+      "gdprCompliant": "Skladno z GDPR po zasnovi",
+      "europeanFamilies": "Zasnovano za evropske družine"
+    },
+    "community": {
+      "growing": "Pridružite se {{count}} družinam, ki že ščitijo svojo zapuščino",
+      "growingFallback": "Pridružite se naši rastoči skupnosti"
+    }
+  },
+  "nav": {
+    "dashboard": "Nadzorna plošča",
+    "manual": "Priročnik",
+    "vault": "Trezor dediščine",
+    "guardians": "Mreža skrbnikov",
+    "will": "Oporoka",
+    "settings": "Nastavitve",
+    "help": "Pomoč in podpora"
+  },
+  "pillars": {
+    "secure": {
+      "title": "VARNO",
+      "description": "Zaščitite svojo družino in premoženje s proaktivnimi varnostnimi ukrepi"
+    },
+    "organize": {
+      "title": "ORGANIZIRAJTE",
+      "description": "Katalogizirajte in upravljajte svoja digitalna in fizična sredstva"
+    },
+    "transfer": {
+      "title": "PRENESITE",
+      "description": "Zagotovite, da se vaša zapuščina prenese v skladu z vašimi željami"
+    }
+  },
+  "features": {
+    "title": "Zakaj izbrati LegacyGuard?",
+    "subtitle": "Zgrajeno z varnostjo poslovnega razreda in zasnovano za družine, ki cenijo svojo dediščino.",
+    "security": {
+      "title": "Absolutna zaupnost in zasebnost",
+      "description": "Zasnovano tako, da nobena nepooblaščena oseba ne more dostopati do vaših podatkov. Niti mi. Vaša zasebnost je naša najvišja prioriteta."
+    },
+    "guardians": {
+      "title": "Mreža skrbnikov",
+      "description": "Določite zaupanja vredne družinske člane in prijatelje kot skrbnike, da zagotovite kontinuiteto zapuščine."
+    },
+    "storage": {
+      "title": "Varna hramba v oblaku",
+      "description": "Redundantne varnostne kopije v več podatkovnih centrih z 99,99% garancijo delovanja."
+    },
+    "timelock": {
+      "title": "Časovno zaklenjen dostop",
+      "description": "Določite pogoje, kdaj in kako lahko upravičenci dostopajo do vaše digitalne dediščine."
+    },
+    "stories": {
+      "title": "Osebne zgodbe",
+      "description": "Ustvarite bogate večpredstavnostne pripovedi, ki ujamejo bistvo potovanja vaše družine."
+    },
+    "preservation": {
+      "title": "Vseživljenjsko ohranjanje",
+      "description": "Vaša dediščina se ohranja za nedoločen čas z avtomatsko migracijo formatov in posodobitvami."
+    }
+  },
+  "dashboard": {
+    "strategicSummary": {
+      "initial": "Začnite graditi svojo digitalno zapuščino z dodajanjem prvega dokumenta.",
+      "addDocument": "Dodaj dokument",
+      "addPrimaryGuardian": "Add primary guardian",
+      "addBackupGuardian": "Add backup guardian",
+      "addHomeProperty": "Add your home property",
+      "addFinancialAccounts": "Add financial accounts",
+      "addPrimaryBeneficiary": "Add primary beneficiary",
+      "addContingentBeneficiaries": "Add contingent beneficiaries",
+      "minutes": "{{count}} minutes",
+      "assetInventory": "Zaloga sredstev",
+      "assetInventoryDesc": "Popoln seznam vaših dragocenih stvari",
+      "criticalDocuments": "Kritični dokumenti",
+      "criticalDocumentsDesc": "Bistveni dokumenti, ki jih vaša družina potrebuje takoj",
+      "guardianNetwork": "Mreža skrbnikov",
+      "guardianNetworkDesc": "Zaupajo ljudem, ki urejajo vaše zadeve",
+      "ifNotDone": "⚠️ If Not Done",
+      "impact": {},
+      "inheritancePlan": "Načrt dedovanja",
+      "inheritancePlanDesc": "Jasna navodila za razdelitev sredstev",
+      "nextAction": "⚡ Next Action",
+      "nextCriticalStep": "Naslednji kritični korak",
+      "startWithNext": "Začnite z naslednjim kritičnim korakom",
+      "subtitle": "Imate {count} ključnih področij, ki potrebujejo pozornost. Če dokončate te korake, boste zagotovili {percentage}% zaščite za svojo družino in premoženje.",
+      "title": "Vaš strateški pregled",
+      "whyImportant": "🛡️ Why Important"
+    },
+    "stats": {
+      "totalAssets": "Skupna sredstva",
+      "activeAssetsManaged": "Aktivno upravljanje sredstev",
+      "activeGuardians": "Aktivni skrbniki",
+      "trustedGuardians": "Zaupanja vredni skrbniki",
+      "beneficiaries": "Upravičenci",
+      "legacyRecipients": "Imenovani prejemniki",
+      "securityScore": "Varnostna ocena",
+      "securityScoreValue": "98%",
+      "excellent": "Odlično",
+      "good": "Dobro",
+      "needsImprovement": "Potrebuje izboljšave"
+    },
+    "tasks": {
+      "personalMessages": {
+        "title": "Napišite osebna sporočila",
+        "description": "Pustite topla sporočila in pomembne besede za svoje ljubljene."
+      },
+      "familyMeeting": {
+        "title": "Organizirajte družinski sestanek",
+        "description": "Pogovorite se o svojih željah in načrtih z družino, da bodo vsi razumeli vaše namere."
+      }
+    },
+    "quickTasks": {
+      "taskCompleted": "Task completed!",
+      "taskStarted": "Starting task...",
+      "tasks": {
+        "birthCertificate": {
+          "title": "🛡️ Add Birth Certificate",
+          "description": "Without this document, your family cannot prove inheritance rights or access accounts"
+        },
+        "insurancePolicy": {
+          "title": "💰 Add Life Insurance Policy",
+          "description": "Your family needs immediate access to claim benefits and avoid delays"
+        },
+        "will": {
+          "title": "⚖️ Add Will or Testament",
+          "description": "Prevents family disputes and ensures your wishes are followed"
+        },
+        "spouseGuardian": {
+          "title": "👥 Add Spouse as Guardian",
+          "description": "Without guardians, no one can legally act on your behalf or make medical decisions"
+        },
+        "backupGuardian": {
+          "title": "🤝 Add Backup Guardian",
+          "description": "Ensures someone can step in if your primary guardian is unavailable"
+        },
+        "bankAccount": {
+          "title": "🏦 Add Bank Account",
+          "description": "Your family needs to know where your money is to access it immediately"
+        },
+        "homeProperty": {
+          "title": "🏠 Add Home Property",
+          "description": "Prevents your family from losing your most valuable asset"
+        },
+        "vehicle": {
+          "title": "🚗 Add Vehicle",
+          "description": "Ensures your family can transfer ownership and avoid complications"
+        },
+        "spouseBeneficiary": {
+          "title": "💝 Add Spouse as Beneficiary",
+          "description": "Without clear instructions, family disputes can arise over inheritance"
+        },
+        "childrenBeneficiaries": {
+          "title": "👶 Add Children as Beneficiaries",
+          "description": "Ensures your children receive what you intended for them"
+        }
+      },
+      "allCompleted": "Opravljenih Nalog",
+      "allTasks": "Vsa opravila",
+      "assets": "Blago",
+      "beneficiaries": "Upravičenci",
+      "completed": "izpolnjen",
+      "documents": "Dokumenti",
+      "greatProgress": "Odličen napredek! Opravili ste toliko opravil: {count}.",
+      "guardians": "Skrbniki",
+      "ifNotDone": "⚠️ If Not Done",
+      "markAsComplete": "Označi kot zaključeno",
+      "progress": "Napredek",
+      "start": "Začetek",
+      "title": "5-minutna opravila",
+      "wellOnWay": "🎉 Ste na dobri poti, da zagotovite prihodnost svoje družine!",
+      "whyImportant": "🛡️ Why Important"
+    },
+    "familyGuide": {
+      "view": "View",
+      "subtitle": "Automatically generated guide for your family",
+      "discreteModeDesc": "Your personal notes and reminders",
+      "callNow": "Pokličite zdaj",
+      "callSoon": "Kmalu pokličite",
+      "critical": "Kritična",
+      "discreteMode": "Diskretni način",
+      "emergencyContacts": "Stiki v sili",
+      "exportGuide": "Vodič za izvoz",
+      "generateGuide": "Ustvari vodnik",
+      "important": "Pomembno ",
+      "importantDocuments": "Pomembni dokumenti",
+      "shareWithFamily": "Delite z družino",
+      "timeline": "Kaj storiti?",
+      "title": "Družinski vodnik za nujne primere"
+    },
+    "sectionHeaders": {}
+  },
+  "onboarding": {
+    "title": "Dobrodošli v LegacyGuard",
+    "subtitle": "Dovolite, da vam pomagamo zavarovati prihodnost vaše družine",
+    "mainTitle": "Projektni nalog",
+    "mainSubtitle": "Ustvarimo vaš osebni načrt za zaščito zapuščine",
+    "progressText": "Projektni nalog: Korak {{step}} od 4",
+    "skipButton": "Preskoči za zdaj",
+    "skipConfirmTitle": "Preskočiti uvajanje?",
+    "skipConfirmMessage": "To nastavitev lahko vedno znova zaženete kasneje v nastavitvah",
+    "skipConfirmYes": "Preskoči",
+    "skipConfirmNo": "Nadaljuj z nastavitvijo",
+    "restartButton": "Znova zaženi uvajanje",
+    "welcomeBack": "Dobrodošli nazaj! Ste pripravljeni dokončati svojo nastavitev?",
+    "resumeTitle": "Nadaljujte tam, kjer ste ostali",
+    "resumeMessage": "Bili ste pri koraku {{step}} od 4",
+    "partialProgress": "{{percentage}}% opravljeno",
+    "inventory": {
+      "documentAccess": {
+        "question": "Če bi se vam danes kaj zgodilo, bi vaša družina vedela, kje najti vaše pomembne dokumente?",
+        "answers": {
+          "yes": "Da",
+          "no": "Ne",
+          "partially": "Delno"
+        }
+      },
+      "caretaker": {
+        "question": "Kdo bi skrbel za vaše otroke/sredstva/digitalne račune?",
+        "answers": {
+          "designated": "Imam določeno osebo",
+          "familyFigureOut": "Družina bi se znašla",
+          "notThought": "O tem nisem razmišljal/a"
+        }
+      },
+      "familyClarity": {
+        "question": "Ali menite, da bi vaša družina vedela, kaj ste si želeli zanje?",
+        "answers": {
+          "clear": "Da, jasno je",
+          "somewhat": "Nekako",
+          "neverDiscussed": "Ne, o tem se nismo nikoli pogovarjali"
+        }
+      },
+      "biggestWorry": {
+        "question": "Kaj vas najbolj skrbi glede prihodnosti vaše družine?",
+        "answers": {
+          "financial": "Finančna varnost",
+          "legal": "Pravni zapleti",
+          "memories": "Izguba spominov",
+          "conflicts": "Družinski spori"
+        }
+      },
+      "personalized": {
+        "documentCentralization": "Na podlagi vašega odgovora o dostopu do dokumentov priporočamo, da začnete s centralizacijo pomembnih dokumentov.",
+        "guardianDesignation": "Ker niste določili nikogar, ki bi skrbel za vaša sredstva, bi morala biti določitev skrbnika vaša prednostna naloga.",
+        "willPreparation": "Vaša družina potrebuje jasnost glede vaših želja. Sestava oporoke je bistven prvi korak.",
+        "financialPlanning": "Finančna varnost je ključnega pomena. Začnimo z dokumentiranjem vaših bančnih računov in sredstev.",
+        "conflictPrevention": "Za preprečevanje družinskih sporov sta ključnega pomena jasna dokumentacija in komunikacija.",
+        "memoryPreservation": "Ohranjanje spominov se začne z organizacijo vaših digitalnih fotografij in zgodb.",
+        "legalOrganization": "Organizirajmo vaše pravne dokumente, da se izognemo kasnejšim zapletom."
+      }
+    },
+    "q1": {
+      "title": "Če bi se vam danes kaj zgodilo, bi vaša družina vedela, kje najti vaše pomembne dokumente?",
+      "option1": "Da",
+      "option2": "Ne",
+      "option3": "Delno"
+    },
+    "q2": {
+      "title": "Kdo bi skrbel za vaše otroke/sredstva/digitalne račune?",
+      "option1": "Imam določeno osebo",
+      "option2": "Družina bi se znašla",
+      "option3": "O tem nisem razmišljal/a"
+    },
+    "q3": {
+      "title": "Ali menite, da bi vaša družina vedela, kaj ste si želeli zanje?",
+      "option1": "Da, jasno je",
+      "option2": "Nekako",
+      "option3": "Ne, o tem se nismo nikoli pogovarjali"
+    },
+    "q4": {
+      "title": "Kaj vas najbolj skrbi glede prihodnosti vaše družine?",
+      "option1": "Finančna varnost",
+      "option2": "Pravni zapleti",
+      "option3": "Izguba spominov",
+      "option4": "Družinski spori"
+    },
+    "buttons": {
+      "previous": "Nazaj",
+      "next": "Naprej",
+      "generate": "Ustvari moj projektni nalog"
+    },
+    "analysis": {
+      "title": "Analiziranje vaših odgovorov...",
+      "subtitle": "Priprava vašega osebnega 'Projektnega naloga'...",
+      "done": "Končano!"
+    },
+    "complete": "Odličen začetek! Vašo nadzorno ploščo smo prilagodili na podlagi vaših odgovorov. Pripravljeni ste začeti graditi svoj celovit načrt zapuščine.",
+    "success": {
+      "stepCompleted": "Korak {{step}} uspešno končan!",
+      "inventoryComplete": "Inventar življenja končan! Vaš osebni načrt je pripravljen.",
+      "allQuestionsAnswered": "Na vsa vprašanja ste odgovorili. Ustvarjanje vašega akcijskega načrta..."
+    },
+    "errors": {
+      "questionRequired": "Prosimo, odgovorite na to vprašanje, da nadaljujete",
+      "failedToSave": "Shranjevanje vaših odgovorov ni uspelo. Prosimo, poskusite znova.",
+      "loadingFailed": "Nalaganje vprašanj za uvajanje ni uspelo"
+    },
+    "addAnother": "Dodaj še enega",
+    "previous": "Nazaj",
+    "next": "Naprej",
+    "continue": "Nadaljuj na nadzorno ploščo"
+  },
+  "manual": {
+    "title": "Priročnik za preživele",
+    "subtitle": "Bistvene informacije za vaše najbližje, ko jih najbolj potrebujejo",
+    "tabs": {
+      "contacts": "Pomembni stiki",
+      "documents": "Ključni dokumenti",
+      "instructions": "Navodila"
+    },
+    "contacts": {
+      "title": "Pomembni stiki",
+      "description": "Ključne osebe, s katerimi naj vaša družina stopi v stik v primeru nujnosti",
+      "addContact": "Dodaj stik",
+      "addFirstContact": "Dodajte svoj prvi stik",
+      "loading": "Nalaganje stikov...",
+      "empty": {
+        "title": "Stikov še niste dodali",
+        "description": "Začnite z dodajanjem pomembnih oseb, za katere bi morala vaša družina vedeti."
+      },
+      "form": {
+        "editTitle": "Uredi stik",
+        "addTitle": "Dodaj pomemben stik",
+        "description": "Dodajte osebe, s katerimi naj vaša družina stopi v stik v pomembnih situacijah.",
+        "nameLabel": "Ime stika *",
+        "namePlaceholder": "npr. Janez Novak",
+        "roleLabel": "Vloga/Poklic *",
+        "rolePlaceholder": "npr. Družinski odvetnik, Računovodja, Zdravnik",
+        "phoneLabel": "Telefonska številka",
+        "phonePlaceholder": "+386 40 123 456",
+        "emailLabel": "E-poštni naslov",
+        "emailPlaceholder": "stik@primer.si",
+        "notesLabel": "Opombe",
+        "notesPlaceholder": "Dodatne informacije o tem stiku...",
+        "updateButton": "Posodobi stik",
+        "addButton": "Dodaj stik",
+        "saving": "Shranjevanje...",
+        "cancel": "Prekliči"
+      },
+      "card": {
+        "edit": "Uredi"
+      },
+      "messages": {
+        "nameAndRoleRequired": "Ime in vloga sta obvezna",
+        "loginRequired": "Za shranjevanje stikov morate biti prijavljeni",
+        "updated": "Stik uspešno posodobljen!",
+        "added": "Stik uspešno dodan!",
+        "deleted": "Stik uspešno izbrisan!"
+      },
+      "errors": {
+        "loadFailed": "Nalaganje stikov ni uspelo",
+        "saveFailed": "Shranjevanje stika ni uspelo",
+        "deleteFailed": "Brisanje stika ni uspelo"
+      }
+    },
+    "documents": {
+      "title": "Ključni dokumenti",
+      "description": "Kritični dokumenti, o katerih mora vaša družina vedeti",
+      "loading": "Nalaganje ključnih dokumentov...",
+      "empty": {
+        "title": "Ključnih dokumentov še niste dodali",
+        "description": "Označite pomembne dokumente kot \"ključne dokumente\" v svojem trezorju, da se prikažejo tukaj.",
+        "tip": "Nasvet: Pojdite v svoj trezor in vklopite \"Vključi v Priročnik za preživele\" za pomembne dokumente"
+      },
+      "card": {
+        "essentialNote": "Ta dokument je označen kot bistven za vaše preživele."
+      },
+      "errors": {
+        "loadFailed": "Nalaganje ključnih dokumentov ni uspelo"
+      },
+      "expiration": {
+        "expired": "Poteklo",
+        "expiresSoon": "Poteče kmalu",
+        "expiring": "Poteče"
+      }
+    },
+    "instructions": {
+      "title": "Zadnje želje in navodila",
+      "description": "Osebna navodila in sporočila za vaše najbližje",
+      "loading": "Nalaganje navodil...",
+      "autoSaveNote": "Vaša navodila se samodejno shranjujejo med tipkanjem",
+      "sections": {
+        "funeral": {
+          "title": "Pogrebne želje",
+          "description": "Vaše preference glede pogrebnih aranžmajev in slovesnosti",
+          "placeholder": "npr. Kremacija, brez formalne slovesnosti, predvajajte 'My Way' Franka Sinatre..."
+        },
+        "digitalAccounts": {
+          "title": "Zaprtje digitalnih računov",
+          "description": "Navodila za ravnanje z vašimi digitalnimi računi in spletno prisotnostjo",
+          "placeholder": "npr. Prosim, izbrišite moj Facebook profil, vendar arhivirajte moj Gmail. Prenesite moje fotografije iz Google Drive na..."
+        },
+        "messages": {
+          "title": "Sporočila najbližjim",
+          "description": "Osebna sporočila in zadnje misli za vašo družino in prijatelje",
+          "placeholder": "Delite svoje misli, spomine in zadnja sporočila s tistimi, ki jih imate radi..."
+        }
+      },
+      "errors": {
+        "loadFailed": "Nalaganje navodil ni uspelo"
+      }
+    }
+  },
+  "documentTypes": {
+    "realEstateDeed": "Listina o lastništvu nepremičnine",
+    "birthCertificate": "Rojstni list",
+    "insurancePolicy": "Zavarovalna polica",
+    "lastWill": "Zadnja volja in oporoka",
+    "employmentContract": "Pogodba o zaposlitvi",
+    "passport": "Potni list",
+    "drivingLicense": "Vozniško dovoljenje",
+    "bankStatement": "Bančni izpisek",
+    "investmentCertificate": "Naložbeni certifikat",
+    "energyContract": "Pogodba za energijo",
+    "softwareLicense": "Licenca za programsko opremo",
+    "subscriptionService": "Naročniška storitev",
+    "other": "Drugo"
+  },
+  "navigation": {
+    "dashboard": "Nadzorna plošča",
+    "assets": "Sredstva",
+    "manual": "Priročnik",
+    "documents": "Trezor dediščine",
+    "guardians": "Mreža skrbnikov",
+    "will": "Oporoka",
+    "settings": "Nastavitve",
+    "help": "Pomoč in podpora"
+  },
+  "invite": {
+    "title": "{{name}} vas je povabil, da postanete skrbnik njegove/njene digitalne zapuščine"
+  },
+  "settings": {
+    "title": "Nastavitve",
+    "subtitle": "Upravljajte nastavitve svojega računa in varnostne nastavitve",
+    "loading": "Nalaganje nastavitev vašega računa...",
+    "profile": {
+      "title": "Podatki o profilu",
+      "description": "Posodobite svoje osebne podatke in preference",
+      "emailAddress": "E-poštni naslov",
+      "emailCannotBeChanged": "Vašega e-poštnega naslova ni mogoče spremeniti",
+      "firstName": "Ime",
+      "firstNamePlaceholder": "Vnesite svoje ime",
+      "lastName": "Priimek",
+      "lastNamePlaceholder": "Vnesite svoj priimek",
+      "saving": "Shranjevanje...",
+      "saveChanges": "Shrani spremembe"
+    },
+    "security": {
+      "title": "Varnost",
+      "description": "Upravljajte varnost in dostop do svojega računa",
+      "changePassword": "Spremeni geslo",
+      "currentPassword": "Trenutno geslo",
+      "currentPasswordPlaceholder": "Vnesite trenutno geslo",
+      "newPassword": "Novo geslo",
+      "newPasswordPlaceholder": "Vnesite novo geslo",
+      "confirmNewPassword": "Potrdi novo geslo",
+      "confirmNewPasswordPlaceholder": "Potrdite novo geslo",
+      "updating": "Posodabljanje...",
+      "updatePassword": "Posodobi geslo",
+      "twoFactorAuth": "Dvofaktorska avtentikacija",
+      "enable2FA": "Omogoči 2FA",
+      "2FADescription": "Dodajte dodatno raven varnosti svojemu računu. (Kmalu na voljo)"
+    },
+    "accountManagement": {
+      "title": "Upravljanje računa",
+      "description": "Trajna dejanja z računom - prosimo, nadaljujte previdno",
+      "deleteAccountTitle": "Izbriši račun",
+      "deleteAccountWarning": "To dejanje je nepreklicno in bo trajno izbrisalo vse vaše podatke, vključno z naloženimi dokumenti in pripravljenimi navodili. Podatki o vaši digitalni zapuščini bodo v celoti odstranjeni iz naših sistemov.",
+      "deleteMyAccount": "Izbriši moj račun",
+      "confirmTitle": "Ste popolnoma prepričani?",
+      "confirmDescription": "Tega dejanja ni mogoče razveljaviti. To bo trajno izbrisalo vaš račun in odstranilo vse vaše podatke z naših strežnikov.",
+      "confirmEmailPrompt": "Prosimo, vnesite svoj e-poštni naslov {{email}} za potrditev:",
+      "emailPlaceholder": "Vnesite svoj e-poštni naslov",
+      "deleting": "Brisanje...",
+      "deleteAccount": "Izbriši račun"
+    },
+    "errors": {
+      "loadProfile": "Nalaganje podatkov o profilu ni uspelo",
+      "updateProfile": "Posodabljanje profila ni uspelo",
+      "passwordFieldsRequired": "Prosimo, izpolnite vsa polja za geslo",
+      "passwordsDoNotMatch": "Novi gesli se ne ujemata",
+      "passwordTooShort": "Novo geslo mora imeti vsaj 6 znakov",
+      "updatePassword": "Posodabljanje gesla ni uspelo",
+      "emailDoesNotMatch": "E-poštni naslov se ne ujema",
+      "deleteAccountSupport": "Izbris računa je treba zahtevati prek podpore. Prosimo, kontaktirajte nas za pomoč.",
+      "deleteAccount": "Brisanje računa ni uspelo"
+    },
+    "success": {
+      "profileUpdated": "Profil uspešno posodobljen",
+      "passwordUpdated": "Geslo uspešno posodobljeno"
+    }
+  },
+  "debug": {
+    "panel": {
+      "title": "Plošča za odpravljanje napak",
+      "recentErrors": "Nedavne napake aplikacije",
+      "technicalDetails": "Tehnične podrobnosti",
+      "tabs": {
+        "list": "Seznam",
+        "details": "Podrobnosti"
+      },
+      "errorCount": "{{count}} napak",
+      "actions": {
+        "downloadErrors": "Prenesi napake",
+        "clearAllErrors": "Počisti vse napake"
+      },
+      "messages": {
+        "errorsCleared": "Vse napake počiščene",
+        "errorCopied": "Napaka kopirana v odložišče",
+        "errorsDownloaded": "Napake prenesene"
+      },
+      "error": {
+        "unknownError": "Neznana napaka",
+        "noMessage": "Brez sporočila",
+        "errorMessage": "Sporočilo o napaki"
+      },
+      "sections": {
+        "stackTrace": "Sledenje sklada",
+        "context": "Kontekst",
+        "location": "Lokacija",
+        "browserInfo": "Informacije o brskalniku",
+        "time": "Čas"
+      },
+      "fields": {
+        "url": "URL:",
+        "path": "Pot:",
+        "query": "Poizvedba:",
+        "userAgent": "User Agent:",
+        "viewport": "Viewport:"
+      }
+    }
+  },
+  "will": {
+    "errors": {
+      "mustBeLoggedIn": "Za shranjevanje morate biti prijavljeni.",
+      "loadingFailed": "Nalaganje oporoke ni uspelo.",
+      "savingFailed": "Shranjevanje oporoke ni uspelo."
+    },
+    "messages": {
+      "savedSuccessfully": "Oporoka uspešno shranjena.",
+      "documentUploaded": "Dokument uspešno naložen."
+    },
+    "loading": "Nalaganje oporoke...",
+    "title": "Oporoka",
+    "subtitle": "Upravljajte svojo oporoko in določite svoje izvršitelje.",
+    "sections": {
+      "statusInfo": "Stanje in informacije",
+      "willDocument": "Dokument oporoke"
+    },
+    "fields": {
+      "currentStatus": "Trenutno stanje",
+      "physicalLocation": "Fizična lokacija",
+      "executorContact": "Kontakt izvršitelja",
+      "additionalNotes": "Dodatne opombe"
+    },
+    "placeholders": {
+      "physicalLocation": "npr. Domači sef, Odvetniška pisarna",
+      "selectContact": "Izberite stik",
+      "additionalNotes": "Morebitne dodatne informacije..."
+    },
+    "descriptions": {
+      "statusDescription": "Spremljajte trenutno stanje svoje oporoke.",
+      "physicalLocationDescription": "Kje je vaša oporoka fizično shranjena?",
+      "executorDescription": "Oseba, odgovorna za izvršitev vaše oporoke."
+    },
+    "options": {
+      "noContactSelected": "Noben stik ni izbran"
+    },
+    "status": {
+      "notStarted": "Ni začeto",
+      "inPreparation": "V pripravi",
+      "completedSigned": "Dokončano in podpisano",
+      "withNotary": "Pri notarju",
+      "draft": "Osnutek",
+      "notarized": "Notarsko overjeno",
+      "stored": "Shranjeno",
+      "updated": "Posodobljeno"
+    },
+    "document": {
+      "uploaded": "Dokument oporoke naložen",
+      "uploadedDescription": "Vaš dokument oporoke je bil varno shranjen.",
+      "noDocument": "Ni dokumenta oporoke",
+      "noDocumentDescription": "Naložite kopijo svoje oporoke za varno hrambo."
+    },
+    "buttons": {
+      "saveWillInfo": "Shrani informacije o oporoki",
+      "saving": "Shranjevanje...",
+      "uploadDocument": "Naloži dokument",
+      "uploadNewVersion": "Naloži novo različico"
+    },
+    "steps": {
+      "countrySelection": "Izbira države",
+      "countrySelectionDesc": "Izberite svojo državo in vnesite svoje podatke",
+      "assetAllocation": "Dodelitev sredstev",
+      "assetAllocationDesc": "Porazdelite sredstva med upravičence",
+      "beneficiaries": "Upravičenci",
+      "beneficiariesDesc": "Določite svoje upravičence",
+      "executors": "Izvršitelji",
+      "executorsDesc": "Dodelite izvršitelje za upravljanje vaše oporoke",
+      "review": "Pregled",
+      "reviewDesc": "Preglejte in dokončajte svojo oporoko"
+    },
+    "progress": "Korak {{current}} od {{total}}",
+    "validation": {
+      "selectCountry": "Prosimo, izberite državo",
+      "requiredField": "To polje je obvezno",
+      "allocation100": "Skupna dodelitev mora biti 100%",
+      "atLeastOneBeneficiary": "Potreben je vsaj en upravičenec",
+      "executorRequired": "Izvršitelj je obvezen",
+      "fixErrors": "Prosimo, popravite napake v obrazcu"
+    },
+    "generation": {
+      "success": "Oporoka uspešno ustvarjena!",
+      "error": "Ustvarjanje oporoke ni uspelo"
+    }
+  },
+  "contacts": {
+    "errors": {
+      "loadingFailed": "Nalaganje stikov ni uspelo."
+    }
+  },
+  "guardianUpload": {
+    "error": "Napaka",
+    "success": "Uspeh",
+    "fillRequired": "Prosimo, izpolnite vsa obvezna polja",
+    "loginToSave": "Za shranjevanje skrbnikov morate biti prijavljeni",
+    "updated": "Skrbnik uspešno posodobljen",
+    "added": "Skrbnik uspešno dodan",
+    "failedSave": "Shranjevanje skrbnika ni uspelo. Prosimo, poskusite znova.",
+    "editTitle": "Uredi skrbnika",
+    "addTitle": "Dodaj skrbnika",
+    "description": "Dodajte nekoga, ki mu zaupate, da bo pomagal upravljati vašo zapuščino",
+    "fullNameLabel": "Polno ime skrbnika *",
+    "fullNamePlaceholder": "Vnesite polno ime skrbnika",
+    "relationshipLabel": "Razmerje *",
+    "relationshipPlaceholder": "Izberite razmerje",
+    "countryLabel": "Država bivanja *",
+    "countryPlaceholder": "Izberite državo",
+    "countryDescription": "Izberite državo, v kateri ta skrbnik prebiva",
+    "rolesTitle": "Vloge in odgovornosti",
+    "saving": "Shranjevanje...",
+    "updateButton": "Posodobi skrbnika",
+    "addButton": "Dodaj skrbnika",
+    "relationships": {
+      "spouse": "Zakonca",
+      "parent": "Starš",
+      "sibling": "Brat/Sestra",
+      "child": "Otrok",
+      "friend": "Prijatelj",
+      "legalProfessional": "Pravni strokovnjak",
+      "other": "Drugo"
+    },
+    "roles": {
+      "guardianForChildren": "Skrbnik za otroke",
+      "executorOfWill": "Izvršitelj oporoke",
+      "healthcareProxy": "Pooblaščenec za zdravstveno oskrbo",
+      "financialPowerOfAttorney": "Finančno pooblastilo",
+      "emergencyContact": "Stik za nujne primere",
+      "trustee": "Skrbnik premoženja"
+    }
+  },
+  "documentUpload": {
+    "fileUploadedSuccess": "Datoteka uspešno naložena!",
+    "fileUploadFailed": "Nalaganje datoteke ni uspelo. Prosimo, poskusite znova.",
+    "fileTooLarge": "Izbrana datoteka je prevelika. Največja velikost je {{maxSize}} MB.",
+    "fillRequiredFields": "Prosimo, izpolnite vsa obvezna polja",
+    "loginToSave": "Za shranjevanje dokumentov morate biti prijavljeni",
+    "saved": "Dokument uspešno shranjen!",
+    "failedSave": "Shranjevanje dokumenta ni uspelo. Prosimo, poskusite znova.",
+    "detailsTitle": "Podrobnosti dokumenta",
+    "detailsSubtitle": "Dodajte podatke o svojem naloženem dokumentu",
+    "namePlaceholder": "Vnesite ime dokumenta",
+    "typePlaceholder": "Izberite vrsto dokumenta",
+    "countryPlaceholder": "Izberite državo",
+    "pickDate": "Izberite datum",
+    "title": "Naloži dokument",
+    "subtitle": "Varno naložite pravne in osebne dokumente",
+    "browseFiles": "Prebrskaj datoteke",
+    "chooseDifferent": "Izberi drugo datoteko",
+    "uploadButton": "Naloži dokument",
+    "storageLimitReached": "Datoteke ni mogoče naložiti. Na voljo imate še {{remaining}} prostora, ta datoteka pa je velika {{fileSize}}. Prosimo, nadgradite svoj načrt ali odstranite nekatere obstoječe datoteke."
+  },
+  "auth": {
+    "noAccount": "Nimate računa?",
+    "signUpLink": "Registrirajte se",
+    "hasAccount": "Že imate račun?",
+    "loginLink": "Prijavite se",
+    "loginButton": "Prijava",
+    "signupButton": "Registracija"
+  },
+  "assetDetail": {
+    "loading": "Nalaganje podrobnosti sredstva...",
+    "errors": {
+      "failedToLoad": "Nalaganje podrobnosti sredstva ni uspelo",
+      "nameRequired": "Ime sredstva je obvezno",
+      "failedToSave": "Shranjevanje sredstva ni uspelo"
+    },
+    "messages": {
+      "createdSuccessfully": "Sredstvo uspešno ustvarjeno",
+      "updatedSuccessfully": "Sredstvo uspešno posodobljeno"
+    },
+    "title": {
+      "new": "Novo {{type}}"
+    },
+    "subtitle": {
+      "new": "Izpolnite podrobnosti, da dodate to sredstvo v svoj portfelj",
+      "edit": "Posodobite podrobnosti tega sredstva"
+    },
+    "sections": {
+      "assetInformation": "Podatki o sredstvu",
+      "basicInformation": "Osnovni podatki",
+      "propertyDetails": "Podrobnosti o nepremičnini",
+      "accountDetails": "Podrobnosti o računu",
+      "financialDetails": "Finančne podrobnosti"
+    },
+    "fields": {
+      "assetName": "Ime sredstva",
+      "assetType": "Vrsta sredstva",
+      "propertyAddress": "Naslov nepremičnine",
+      "propertyRegistryNumber": "Zemljiškoknjižna številka",
+      "accountType": "Vrsta računa",
+      "financialInstitution": "Finančna ustanova",
+      "accountNumber": "Številka računa / IBAN",
+      "loginCredentials": "Prijavni podatki in opombe",
+      "estimatedValue": "Ocenjena vrednost",
+      "currency": "Valuta"
+    },
+    "placeholders": {
+      "assetName": "npr. Družinska hiša, Naložbeni portfelj",
+      "propertyAddress": "Vnesite polni naslov nepremičnine",
+      "propertyRegistryNumber": "npr. Številka zemljiške knjige",
+      "selectAccountType": "Izberite vrsto računa",
+      "financialInstitution": "npr. NLB, NKBM",
+      "accountNumber": "npr. SI56123456789012345",
+      "loginCredentials": "Upravitelj gesel: trezor 1Password 'Banka'",
+      "estimatedValue": "0"
+    },
+    "descriptions": {
+      "assetName": "Poimenujte to sredstvo z opisnim imenom za lažjo identifikacijo",
+      "assetType": "Izberite vrsto, ki najbolje opisuje to sredstvo",
+      "propertyAddress": "Polni naslov, vključno z ulico, mestom, poštno številko in državo",
+      "propertyRegistryNumber": "Uradna registrska ali katastrska številka za to nepremičnino",
+      "accountType": "Vrsta finančnega računa ali naložbe",
+      "financialInstitution": "Ime banke ali finančne ustanove",
+      "accountNumber": "Številka računa, IBAN ali druge identifikacijske informacije",
+      "estimatedValue": "Trenutna tržna vrednost ali zadnja znana vrednost tega sredstva",
+      "currency": "Valuta, v kateri je izražena vrednost"
+    },
+    "types": {
+      "realEstate": "Nepremičnina",
+      "business": "Podjetje",
+      "vehicle": "Vozilo",
+      "financialAccount": "Finančni račun",
+      "asset": "Sredstvo"
+    },
+    "accountTypes": {
+      "bankAccount": "Bančni račun",
+      "investmentPortfolio": "Naložbeni portfelj",
+      "pensionFund": "Pokojninski sklad"
+    },
+    "securityWarning": "Varnostno opozorilo:",
+    "securityWarningText": "Tukaj ne shranjujte dejanskih gesel. Uporabite to polje za namige, lokacije upraviteljev gesel ali druga navodila za varen dostop.",
+    "buttons": {
+      "cancel": "Prekliči",
+      "saving": "Shranjevanje...",
+      "createAsset": "Ustvari sredstvo",
+      "updateAsset": "Posodobi sredstvo"
+    }
+  },
+  "assets": {
+    "overview": {
+      "title": "Portfelj sredstev",
+      "subtitle": "Upravljajte in spremljajte svoja sredstva, nepremičnine in naložbe",
+      "addAsset": "Dodaj sredstvo",
+      "totalPortfolioValue": "Skupna vrednost portfelja",
+      "estimatedValue": "Ocenjena vrednost vseh sredstev",
+      "distribution": {
+        "title": "Porazdelitev sredstev",
+        "subtitle": "Razčlenitev portfelja po kategorijah"
+      },
+      "beneficiaryAllocation": {
+        "title": "Dodelitev upravičencem",
+        "subtitle": "Spremljajte porazdelitev sredstev upravičencem",
+        "allAssigned": "Vsa sredstva imajo dodeljene upravičence",
+        "unassignedWarning": "{{count}} sredstev potrebuje dodelitev upravičencem"
+      },
+      "viewInheritanceSummary": "Ogled povzetka dedovanja",
+      "addNew": "Dodaj novo",
+      "errors": {
+        "loadFailed": "Nalaganje podatkov o sredstvih ni uspelo"
+      }
+    },
+    "categories": {
+      "property": "Nepremičnina",
+      "vehicle": "Vozilo",
+      "financial": "Finančno",
+      "business": "Podjetje",
+      "personal": "Osebno",
+      "uncategorized": "Nekategorizirano"
+    }
+  },
+  "pricing": {
+    "title": "Izberite svoj načrt dediščine",
+    "subtitle": "Začnite z našim brezplačnim nivojem ali nadgradite za premium funkcije.",
+    "mainTitle": "Izberite svoj načrt zapuščine",
+    "mainSubtitle": "Začnite z našim brezplačnim nivojem ali nadgradite za premium funkcije.",
+    "starter": {
+      "name": "Heritage Starter",
+      "price": "Brezplačno",
+      "description": "Idealno za začetek ohranjanja vaše digitalne zapuščine.",
+      "button": "Začni brezplačno",
+      "features": {
+        "storage": "{{amount}} prostora za shranjevanje",
+        "guardians": "Do {{count}} skrbnikov",
+        "documents": "Osnovni trezor dokumentov",
+        "playbook": "Osnovni priročnik za skrbnika",
+        "support": "Podpora skupnosti"
+      },
+      "limits": {
+        "storage": "500 MB",
+        "guardians": "3",
+        "fileSize": "10 MB na datoteko"
+      }
+    },
+    "premium": {
+      "name": "Heritage Premium",
+      "price": "19 €",
+      "period": "/ mesec",
+      "badge": "Najbolj priljubljeno",
+      "description": "Napredne funkcije za celovito upravljanje zapuščine.",
+      "button": "Izberi Premium",
+      "features": {
+        "storage": "{{amount}} prostora za shranjevanje",
+        "guardians": "Do {{count}} skrbnikov",
+        "manual": "Priročnik za preživele",
+        "support": "Prednostna e-poštna podpora"
+      },
+      "limits": {
+        "storage": "10 GB",
+        "guardians": "5",
+        "fileSize": "50 MB na datoteko"
+      }
+    },
+    "enterprise": {
+      "name": "Heritage Enterprise",
+      "price": "Po meri",
+      "description": "Za družine in podjetja s kompleksnimi potrebami, ki zahtevajo najvišjo raven storitev.",
+      "button": "Kontaktirajte prodajo",
+      "features": {
+        "storage": "{{amount}}+ prostora za shranjevanje",
+        "guardians": "Neomejeno število skrbnikov",
+        "legal": "Usklajevanje s pravnim strokovnjakom",
+        "support": "Namenski skrbnik računa"
+      },
+      "limits": {
+        "storage": "500 GB",
+        "guardians": "neomejeno",
+        "fileSize": "100 MB na datoteko"
+      }
+    }
+  },
+  "cookies": {
+    "bannerText": "Uporabljamo nujne piškotke za zagotavljanje pravilnega delovanja naše strani. Z vašim soglasjem lahko uporabimo tudi analitične piškotke za izboljšanje naših storitev.",
+    "declineButton": "Zavrni",
+    "acceptButton": "Sprejmi vse",
+    "learnMoreLink": "Izvedi več"
+  },
+  "guardianView": {
+    "title": "Nadzorna plošča skrbnika",
+    "subtitle": "Varen dostop do bistvenih informacij uporabnika {{userName}}",
+    "readOnlyAccess": "Dostop samo za branje",
+    "loading": "Nalaganje nadzorne plošče skrbnika...",
+    "errors": {
+      "pleaseLogin": "Prosimo, prijavite se za dostop do pogleda skrbnika",
+      "failedToLoad": "Nalaganje informacij o skrbniku ni uspelo",
+      "loadFailed": "Nalaganje stikov za nujne primere ni uspelo",
+      "addFailed": "Dodajanje stika za nujne primere ni uspelo",
+      "removeFailed": "Odstranjevanje stika za nujne primere ni uspelo",
+      "reorderFailed": "Posodabljanje vrstnega reda stikov ni uspelo",
+      "testFailed": "Pošiljanje testnega sporočila ni uspelo",
+      "selectContact": "Prosimo, izberite stik"
+    },
+    "sections": {
+      "keyDocuments": {
+        "title": "Ključni dokumenti",
+        "description": "Bistveni dokumenti, ki jih je lastnik računa označil kot kritične",
+        "keyDocumentBadge": "Ključni dokument",
+        "expires": "Poteče",
+        "noExpiration": "Brez poteka",
+        "empty": "Ni ključnih dokumentov na voljo"
+      },
+      "importantContacts": {
+        "title": "Pomembni stiki",
+        "description": "Ključni stiki za nujne primere",
+        "empty": "Ni pomembnih stikov na voljo"
+      },
+      "finalWishes": {
+        "title": "Zadnje želje in navodila",
+        "description": "Osebna navodila in zadnje želje",
+        "funeralWishes": "Pogrebne želje",
+        "digitalAccountsShutdown": "Zaprtje digitalnih računov",
+        "messagesToLovedOnes": "Sporočila najbližjim",
+        "empty": "Ni zadnjih želja ali navodil na voljo"
+      }
+    },
+    "guardianInfo": {
+      "description": "Te informacije si ogledujete kot zaupanja vreden skrbnik. Ta dostop je na voljo za nujne primere in za pomoč pri izpolnjevanju vaših obveznosti.",
+      "securityNote": "Ves dostop se beleži in nadzoruje v varnostne namene."
+    },
+    "defaultUserName": "Glavni lastnik računa",
+    "description": "Upravljajte do 3 stike za nujne primere po prednostnem vrstnem redu",
+    "addContact": "Dodaj stik",
+    "noContacts": "Stikov za nujne primere še niste dodali. Dodajte stike, ki naj bodo obveščeni v primeru nujnosti.",
+    "maxContactsReached": "Dosegli ste največje število 3 stikov za nujne primere.",
+    "sendTest": "Pošlji test",
+    "lastContacted": "Zadnji stik pred {{time}}",
+    "priority": {
+      "1": "Prioriteta 1",
+      "2": "Prioriteta 2",
+      "3": "Prioriteta 3"
+    },
+    "addContactDialog": {
+      "title": "Dodaj stik za nujne primere",
+      "description": "Izberite stik s svojega seznama, da ga dodate kot stik za nujne primere.",
+      "selectContact": "Izberi stik",
+      "selectPlaceholder": "Izberite stik...",
+      "relationship": "Razmerje (neobvezno)",
+      "relationshipPlaceholder": "Izberite razmerje...",
+      "addButton": "Dodaj stik za nujne primere"
+    },
+    "messages": {
+      "added": "Stik za nujne primere uspešno dodan",
+      "removed": "Stik za nujne primere odstranjen",
+      "reordered": "Prioriteta stika posodobljena",
+      "testSent": "Testno sporočilo poslano {{name}}"
+    }
+  },
+  "notificationPreferences": {
+    "title": "Nastavitve obvestil za nujne primere",
+    "description": "Upravljajte nastavitve obvestil za svoje stike za nujne primere",
+    "noContacts": "Dodajte stike za nujne primere, da boste lahko upravljali njihove nastavitve obvestil.",
+    "noEmail": "Ni e-poštnega naslova v evidenci",
+    "emailRequired": "E-pošta je obvezna",
+    "lastUpdated": "Zadnja posodobitev: {{date}}",
+    "info": "Ko je odobren nujni dostop, bodo obvestila poslana samo stikom z omogočenimi e-poštnimi obvestili.",
+    "howItWorks": {
+      "title": "Kako delujejo obvestila za nujne primere",
+      "point1": "Skrbniki lahko dostopajo do stikov za nujne primere v kritičnih situacijah",
+      "point2": "Vsi prijavljeni stiki prejmejo takojšnja e-poštna obvestila",
+      "point3": "Tudi vi boste prejeli obvestilo, ko pride do dostopa"
+    },
+    "messages": {
+      "updated": "Nastavitve obvestil posodobljene"
+    },
+    "errors": {
+      "loadFailed": "Nalaganje nastavitev obvestil ni uspelo",
+      "updateFailed": "Posodabljanje nastavitev ni uspelo"
+    }
+  },
+  "relationships": {
+    "spouse": "Zakonca",
+    "child": "Otrok",
+    "parent": "Starš",
+    "sibling": "Brat/Sestra",
+    "friend": "Prijatelj",
+    "other": "Drugo"
+  },
+  "emergencyAccess": {
+    "button": "Nujni dostop",
+    "modalTitle": "Dostop do stikov za nujne primere",
+    "modalDescription": "To vam bo omogočilo dostop do kontaktnih informacij za nujne primere. Uporabite to samo v resničnih nujnih situacijah.",
+    "warningText": "Ta dostop se beleži in lastnik računa bo obveščen.",
+    "reasonLabel": "Razlog za nujni dostop (obvezno)",
+    "reasonPlaceholder": "Prosimo, opišite nujno situacijo, ki zahteva dostop do kontaktnih informacij...",
+    "confirmCheckbox": "Potrjujem, da gre za resnično nujno situacijo in potrebujem dostop do kontaktnih informacij",
+    "accessing": "Dostopanje...",
+    "confirmButton": "Dostop do stikov za nujne primere",
+    "pleaseConfirm": "Prosimo, potrdite nujno situacijo in navedite razlog",
+    "notAuthorized": "Nimate pooblastila za nujni dostop",
+    "failedToLoadContacts": "Nalaganje stikov za nujne primere ni uspelo",
+    "accessGranted": "Nujni dostop odobren. Kontaktne informacije so zdaj na voljo.",
+    "accessFailed": "Dostop do stikov za nujne primere ni uspel",
+    "contactsTitle": "Stiki za nujne primere",
+    "contactsDescription": "Stopite v stik s temi osebami v prednostnem vrstnem redu. Kliknite na telefonske številke za klicanje ali na e-pošto za pošiljanje sporočil.",
+    "priorityOrder": "Prednostni vrstni red",
+    "priority": "Prioriteta #{{order}}",
+    "logContact": "Zabeleži poskus stika",
+    "contactLogged": "Poskus stika zabeležen",
+    "lastContacted": "Zadnji stik: {{time}}",
+    "importantNote": "Pomembno: Stopite v stik s temi posamezniki v prikazanem vrstnem redu. Vedno najprej poskusite z glavno metodo stika. Zabeležite vse poskuse stika za evidenco."
+  },
+  "helpPage": {
+    "title": "Center za pomoč in podporo",
+    "subtitle": "Tukaj smo za vas. Poiščite odgovore na svoja vprašanja ali nas kontaktirajte neposredno.",
+    "faq": {
+      "title": "Pogosto zastavljena vprašanja",
+      "q1": {
+        "question": "Je LegacyGuard varen?",
+        "answer": "Da, varnost je naša najvišja prioriteta. Uporabljamo šifriranje od konca do konca in arhitekturo ničelnega zaupanja, kar pomeni, da nobena nepooblaščena oseba ne more dostopati do vaših podatkov, niti mi. Vsi podatki so shranjeni v varnih podatkovnih centrih v Evropski uniji v skladu z GDPR."
+      },
+      "q2": {
+        "question": "Kaj se zgodi z mojimi podatki, če prekličem naročnino?",
+        "answer": "Po preklicu ostanejo vaši podatki varno shranjeni v načinu samo za branje 90 dni. V tem obdobju lahko kadarkoli ponovno aktivirate svojo naročnino in si povrnete polni dostop. Po 90 dneh bodo vaši podatki varno in trajno izbrisani iz naših sistemov."
+      },
+      "q3": {
+        "question": "Kaj je 'Skrbnik'?",
+        "answer": "Skrbnik je zaupanja vredna oseba (npr. partner, brat/sestra ali pravni strokovnjak), ki ji odobrite poseben, omejen dostop do vaših informacij za nujne primere. Skrbnik ne more spreminjati vaših podatkov; lahko jih samo pregleduje, da ukrepa v skladu z vašimi navodili."
+      },
+      "q4": {
+        "question": "Kakšna je razlika med 'Trezorjem' in 'Priročnikom'?",
+        "answer": "Trezor dediščine je mesto, kjer varno shranjujete vse svoje pomembne dokumente in sredstva. Priročnik za preživele je izbran nabor najpomembnejših stikov, dokumentov in navodil iz vašega trezorja, zasnovan tako, da imajo vaši skrbniki vse bistveno na enem mestu."
+      },
+      "q5": {
+        "question": "Je oporoka, ustvarjena v LegacyGuardu, pravno zavezujoča?",
+        "answer": "LegacyGuard vam pomaga pripraviti in organizirati vse temelje in informacije za vašo oporoko. Vendar pa v večini evropskih držav digitalni dokument ne nadomešča potrebe po uradnem, podpisanem (in pogosto notarsko overjenem) dokumentu. Priporočamo, da se o končni različici vedno posvetujete s pravnim strokovnjakom."
+      }
+    },
+    "contact": {
+      "title": "Niste našli, kar ste iskali?",
+      "email": {
+        "title": "Pošljite nam e-pošto",
+        "description": "Za splošna vprašanja in podporo.",
+        "button": "Odpri e-poštni odjemalec"
+      },
+      "call": {
+        "title": "Dogovorite se za klic (za Premium)",
+        "description": "Za stranke Premium in Enterprise.",
+        "button": "Dogovorite se za klic"
+      }
+    }
+  },
+  "inviteAcceptance": {
+    "loading": "Nalaganje vabila...",
+    "errors": {
+      "invalidLink": "Neveljavna povezava za vabilo",
+      "notFound": "Vabilo ni najdeno",
+      "alreadyProcessed": "To vabilo je bilo že obdelano",
+      "loadingFailed": "Nalaganje vabila ni uspelo",
+      "acceptFailed": "Sprejem vabila ni uspel",
+      "declineFailed": "Zavrnitev vabila ni uspela"
+    },
+    "messages": {
+      "accepted": "Hvala. Vaša vloga skrbnika je bila potrjena.",
+      "declined": "Zavrnili ste vlogo. Pošiljatelj bo obveščen."
+    },
+    "notFound": {
+      "title": "Vabilo ni najdeno",
+      "description": "Ta povezava za vabilo je neveljavna ali je potekla."
+    },
+    "subtitle": "Povabljeni ste bili, da postanete skrbnik njihove digitalne zapuščine na LegacyGuardu.",
+    "guardianRole": {
+      "title": "Vaša vloga skrbnika",
+      "yourName": "Vaše ime:",
+      "relationship": "Razmerje:",
+      "responsibilities": "Odgovornosti:"
+    },
+    "whatThisMeans": {
+      "title": "Kaj to pomeni",
+      "point1": "Imeli boste varen dostop do njihovih pomembnih dokumentov in informacij",
+      "point2": "Informacije lahko samo pregledujete - brez možnosti urejanja ali brisanja",
+      "point3": "Vaš dostop je namenjen za nujne primere ali ko je potrebna pomoč",
+      "point4": "Ves dostop je zabeležen in varen"
+    },
+    "buttons": {
+      "processing": "Obdelava...",
+      "acceptRole": "Sprejmi vlogo",
+      "decline": "Zavrni"
+    },
+    "disclaimer": "S sprejemom te vloge priznavate odgovornost, da ste zaupanja vreden skrbnik njihove digitalne zapuščine.",
+    "defaultInviterName": "Vaš zaupanja vreden stik"
+  },
+  "subscription": {
+    "dashboard": {
+      "title": "Nadzorna plošča naročnin",
+      "subtitle": "Upravljajte svoje naročnine, stroške in opomnike"
+    },
+    "monthlyCost": "Skupni mesečni strošek",
+    "yearlyCost": "Skupni letni strošek",
+    "activeSubscriptions": "Aktivne naročnine",
+    "upcomingSoon": "kmalu na vrsti",
+    "exportReport": "Izvozi poročilo",
+    "perMonth": "na mesec",
+    "perYear": "na leto",
+    "allSubscriptions": "Vse naročnine",
+    "allSubscriptionsDesc": "Pregled vseh aktivnih naročnin, razvrščenih po datumu podaljšanja",
+    "upcomingRenewals": "Prihajajoča podaljšanja",
+    "upcomingRenewalsTitle": "Opozorilo o prihajajočih podaljšanjih",
+    "upcomingRenewalsDesc": "V naslednjih 90 dneh imate {{count}} prihajajočih podaljšanj",
+    "next90Days": "Naslednjih 90 dni",
+    "noUpcomingRenewals": "V naslednjih 90 dneh ni prihajajočih podaljšanj",
+    "renew": "Podaljšaj",
+    "review": "Preglej",
+    "preferences": "Nastavitve naročnin",
+    "preferencesDesc": "Upravljajte, kako se vaše naročnine sledijo in upravljajo",
+    "enableTracking": "Omogoči sledenje naročnin",
+    "enableTrackingDesc": "Samodejno upravljajte in sledite dokumente, povezane z naročninami",
+    "costOptimization": "Omogoči predloge za optimizacijo stroškov",
+    "costOptimizationDesc": "Prejemajte predloge za optimizacijo in zmanjšanje stroškov naročnin",
+    "reminderPeriods": "Privzeta obdobja opomnikov",
+    "daysBefore": "dni pred",
+    "loadError": "Nalaganje podrobnosti naročnine ni uspelo",
+    "updateError": "Posodabljanje nastavitev naročnine ni uspelo",
+    "preferencesUpdated": "Nastavitve uspešno posodobljene",
+    "tabs": {
+      "overview": "Pregled",
+      "upcoming": "Prihajajoče",
+      "settings": "Nastavitve"
+    },
+    "types": {
+      "monthly": "Mesečno",
+      "yearly": "Letno",
+      "oneTime": "Enkratno",
+      "none": "Brez"
+    },
+    "daysUntilRenewal": "dni do podaljšanja",
+    "days": "dni",
+    "loadFailed": "Nalaganje podatkov o naročnini ni uspelo",
+    "autoRenewal": "Samodejno podaljšanje: Da",
+    "manual": "Samodejno podaljšanje: Ne",
+    "trackingSuggestion": "Razmislite o omogočanju sledenja naročnin za boljše upravljanje in opomnike",
+    "type": "Vrsta naročnine",
+    "typePlaceholder": "Izberite vrsto",
+    "renewalCost": "Strošek podaljšanja",
+    "renewalCostPlaceholder": "Vnesite strošek podaljšanja",
+    "cancellationNotice": "Odpovedni rok",
+    "noNoticeRequired": "Odpovedni rok ni potreben",
+    "providerContact": "Kontaktni podatki ponudnika",
+    "providerPhone": "Telefon",
+    "providerEmail": "E-pošta",
+    "providerWebsite": "Spletna stran",
+    "cancellationNoticeWarning": "Opomba: Odpoved zahteva {{days}} dni odpovednega roka"
+  },
+  "emailTemplates": {
+    "welcome": {
+      "subject": "Dobrodošli v LegacyGuard - vaša pot digitalne zapuščine se začenja",
+      "greeting": "Dobrodošli, {{name}},",
+      "body": "Hvala, ker ste se pridružili LegacyGuardu. Naredili ste prvi pomemben korak pri zaščiti prihodnosti vaše družine.",
+      "cta": "Dokončajte svoj življenjski inventar",
+      "footer": "Če imate kakršnakoli vprašanja, je naša ekipa za podporo tukaj, da vam pomaga."
+    },
+    "inventoryComplete": {
+      "subject": "Življenjski inventar končan - vaš osebni načrt je pripravljen",
+      "greeting": "Čestitamo, {{name}},",
+      "body": "Končali ste svoj življenjski inventar! Na podlagi vaših odgovorov smo ustvarili osebni akcijski načrt, ki vam bo pomagal zavarovati prihodnost vaše družine.",
+      "nextSteps": "Vaše 3 glavne prioritete:",
+      "cta": "Oglejte si svoj akcijski načrt",
+      "encouragement": "Ne pozabite, vsak majhen korak, ki ga naredite danes, naredi veliko razliko za vaše najbližje jutri."
+    },
+    "guardianInvite": {
+      "subject": "{{inviterName}} vas je povabil, da postanete njegov/njen skrbnik na LegacyGuardu",
+      "greeting": "Pozdravljeni, {{guardianName}},",
+      "body": "{{inviterName}} vam zaupa pomembno odgovornost - da postanete skrbnik njegove/njene digitalne zapuščine.",
+      "whatThisMeans": "Kot skrbnik boste imeli varen, samo za branje dostop do njegovih/njenih pomembnih dokumentov in navodil v primeru nujnosti.",
+      "cta": "Oglejte si vabilo",
+      "expires": "To vabilo poteče čez 7 dni."
+    },
+    "planUpgrade": {
+      "subject": "Dosegli ste omejitev svojega načrta {{planName}}",
+      "greeting": "Živjo, {{name}},",
+      "body": "Odlično napredujete! Dosegli ste omejitev {{limitType}} v vašem trenutnem načrtu.",
+      "upgradeText": "Nadgradite na {{suggestedPlan}}, da boste lahko še naprej dodajali več {{limitType}} in odklenili dodatne funkcije.",
+      "cta": "Oglejte si možnosti nadgradnje"
+    }
+  },
+  "guardian": {
+    "invitationSent": "Vabilo poslano",
+    "accepted": "Sprejeto",
+    "declined": "Zavrnjeno",
+    "sendInvite": "Pošlji vabilo"
+  },
+  "alerts": {
+    "title": "Center za opozorila",
+    "description": "Upravljajte opozorila o poteku dokumentov.",
+    "unread": "Neprebrano",
+    "markAsRenewed": "Označi kot podaljšano",
+    "snooze7Days": "Odloži za 7 dni",
+    "dismiss": "Opusti",
+    "unsnooze": "Odstrani odlog",
+    "tabs": {
+      "active": "Aktivno",
+      "snoozed": "Odloženo",
+      "dismissed": "Opuščeno"
+    },
+    "noActiveAlerts": "Nimate aktivnih opozoril.",
+    "noSnoozedAlerts": "Nimate odloženih opozoril.",
+    "noDismissedAlerts": "Nimate opuščenih opozoril.",
+    "expiresOn": "Poteče {{date}}",
+    "snoozedUntil": "Odloženo do {{date}}",
+    "renewalInstructions": "Navodila za podaljšanje",
+    "badges": {
+      "expired": "Poteklo",
+      "expiring_7": "Poteče kmalu",
+      "expiring_30": "Poteče čez 30 dni",
+      "expiring_90": "Poteče čez 90 dni"
+    },
+    "types": {
+      "expired": "Dokument {{documentName}} je potekel pred {{daysAgo}} dnevi!",
+      "expiring7": "Pohitite! {{documentName}} poteče čez {{days}} dni.",
+      "expiring30": "Opomnik: {{documentName}} bo potekel čez {{days}} dni.",
+      "expiring90": "Opozorilo: {{documentName}} bo potekel čez {{days}} dni."
+    },
+    "messages": {
+      "dismissed": "Opozorilo uspešno opuščeno.",
+      "snoozed": "Opozorilo odloženo za {{days}} dni.",
+      "markedAsRenewed": "Dokument označen kot podaljšan."
+    },
+    "errors": {
+      "loadFailed": "Nalaganje opozoril ni uspelo.",
+      "dismissFailed": "Opuščanje opozorila ni uspelo.",
+      "snoozeFailed": "Odlaganje opozorila ni uspelo.",
+      "renewFailed": "Označevanje dokumenta kot podaljšanega ni uspelo."
+    }
+  },
+  "errorBoundary": {
+    "title": "Ups! Nekaj je šlo narobe",
+    "description": "Opravičujemo se za nevšečnosti. Prišlo je do nepričakovane napake.",
+    "errorId": "ID napake",
+    "tryAgain": "Poskusi znova",
+    "reloadPage": "Osveži stran",
+    "goToHomepage": "Pojdi na domačo stran",
+    "technicalDetails": "Tehnične podrobnosti",
+    "hide": "Skrij",
+    "show": "Pokaži",
+    "stackTrace": "Sledenje sklada",
+    "componentStack": "Sklad komponent",
+    "helpText": "Če se težava ponavlja, se obrnite na našo podporo z ID-jem napake."
+  },
+  "errorTest": {
+    "title": "Test beleženja napak",
+    "triggerSyncError": "Sproži sinhrono napako (ErrorBoundary)",
+    "triggerAsyncError": "Sproži asinhrono napako",
+    "logRegularError": "Zabeleži navadno napako",
+    "logCriticalError": "Zabeleži kritično napako",
+    "triggerAlert": "Sproži opozorilo (6 kritičnih napak)"
+  },
+  "footer": {
+    "tagline": "Ohranjanje vaše zapuščine za prihodnje generacije.",
+    "platform": {
+      "title": "Platforma",
+      "heritageVault": "Trezor dediščine",
+      "guardianNetwork": "Mreža skrbnikov",
+      "dashboard": "Nadzorna plošča",
+      "security": "Varnost"
+    },
+    "support": {
+      "title": "Podpora",
+      "helpCenter": "Center za pomoč",
+      "userGuides": "Uporabniški priročniki",
+      "contactUs": "Kontaktirajte nas",
+      "community": "Skupnost"
+    },
+    "legal": {
+      "title": "Pravno",
+      "privacyPolicy": "Politika zasebnosti",
+      "termsOfService": "Pogoji uporabe",
+      "dataProtection": "Varstvo podatkov"
+    },
+    "copyright": "© {{year}} LegacyGuard. Vse pravice pridržane.",
+    "description": "Upravljanje digitalne dediščine poslovnega razreda."
+  },
+  "playbook": {
+    "label": "Priročnik",
+    "create": "Ustvari priročnik",
+    "edit": "Uredi priročnik",
+    "preview": "Predogled",
+    "exitPreview": "Izhod iz predogleda",
+    "save": "Shrani priročnik",
+    "saving": "Shranjevanje...",
+    "loading": "Nalaganje priročnika...",
+    "autoSaveNotice": "Spremembe se samodejno shranjujejo med tipkanjem.",
+    "noContent": "Vsebine še niste dodali.",
+    "noContacts": "Stikov še niste dodali.",
+    "addContact": "Dodaj stik",
+    "contact": "Stik",
+    "title": "Priročnik za {{name}}",
+    "titleReadOnly": "Priročnik uporabnika {{name}}",
+    "description": "Ustvarite osebna navodila in informacije za svojega skrbnika",
+    "viewTitle": "Priročnik skrbnika: {{userName}}",
+    "viewDescription": "Bistvene informacije in navodila, pripravljena posebej za vas",
+    "lastUpdated": "Zadnja posodobitev",
+    "viewFooter": "Te informacije so vam bile zaupane kot skrbniku. Prosimo, hranite jih zaupno in varno.",
+    "notAuthenticated": "Prosimo, prijavite se za ogled tega priročnika",
+    "accessDenied": "Nimate dovoljenja za ogled tega priročnika",
+    "fetchError": "Nalaganje priročnika ni uspelo",
+    "saveSuccess": "Priročnik uspešno shranjen",
+    "saveError": "Shranjevanje priročnika ni uspelo",
+    "discardChanges": {
+      "title": "Zavreči spremembe?",
+      "description": "Imate neshranjene spremembe. Ste prepričani, da jih želite zavreči?",
+      "cancel": "Nadaljuj z urejanjem",
+      "confirm": "Zavrzi spremembe"
+    },
+    "importantContacts": {
+      "label": "Pomembni stiki",
+      "description": "Dodajte ključne osebe, s katerimi naj ta skrbnik stopi v stik",
+      "viewDescription": "Po potrebi stopite v stik s temi osebami",
+      "add": "Dodaj stik",
+      "remove": "Odstrani",
+      "empty": "Stikov še niste dodali. Kliknite 'Dodaj stik', da dodate pomembne osebe.",
+      "name": "Ime",
+      "namePlaceholder": "Polno ime",
+      "relationship": "Razmerje",
+      "relationshipPlaceholder": "npr. Družinski odvetnik",
+      "phone": "Telefon",
+      "phonePlaceholder": "+386 40 123 456",
+      "email": "E-pošta",
+      "emailPlaceholder": "email@primer.si",
+      "notes": "Opombe",
+      "notesPlaceholder": "Dodatne informacije"
+    },
+    "funeralWishes": {
+      "label": "Pogrebne želje",
+      "description": "Vaše preference glede pogrebnih aranžmajev",
+      "placeholder": "Opišite svoje želje glede pogreba ali spominske slovesnosti..."
+    },
+    "digitalAccounts": {
+      "label": "Digitalni računi",
+      "description": "Navodila za ravnanje z vašimi spletnimi računi",
+      "placeholder": "Navedite svoje digitalne račune in kako naj se z njimi ravna..."
+    },
+    "documentLocations": {
+      "label": "Lokacije dokumentov",
+      "description": "Kje najti pomembne dokumente",
+      "placeholder": "Opišite, kje se nahajajo pomembni dokumenti..."
+    },
+    "personalMessages": {
+      "label": "Osebna sporočila",
+      "description": "Osebna sporočila za tega skrbnika",
+      "placeholder": "Napišite osebno sporočilo temu skrbniku..."
+    },
+    "practicalInstructions": {
+      "label": "Praktična navodila",
+      "description": "Takojšnji koraki in odgovornosti",
+      "placeholder": "Navedite praktične naloge in takojšnje ukrepe..."
+    },
+    "notFound": {
+      "title": "Priročnik ni najden",
+      "description": "Priročnik, ki ga iščete, še ni bil ustvarjen."
+    },
+    "subtitle": {
+      "edit": "Ustvarite osebna navodila in informacije za tega skrbnika.",
+      "view": "Bistvene informacije in navodila, pripravljena za vas."
+    },
+    "status": {
+      "empty": "Ni začeto",
+      "draft": "V teku",
+      "complete": "Končano"
+    },
+    "tabs": {
+      "funeral": "Pogreb",
+      "digital": "Digitalno",
+      "contacts": "Stiki",
+      "documents": "Dokumenti",
+      "messages": "Sporočila",
+      "instructions": "Navodila"
+    },
+    "sections": {
+      "funeral": {
+        "title": "Pogrebne želje",
+        "description": "Vaše preference glede pogrebnih aranžmajev in spominskih slovesnosti.",
+        "placeholder": "Opišite svoje želje glede pogreba ali spominske slovesnosti...\n\nNa primer:\n- Vrsta slovesnosti (verska, posvetna, praznovanje življenja)\n- Preference glede pokopa ali upepelitve\n- Preference glede lokacije\n- Glasba, branja ali posebne zahteve\n- Kdo naj govori ali sodeluje\n- Morebitne posebne tradicije, ki jih je treba upoštevati"
+      },
+      "digital": {
+        "title": "Zaprtje digitalnih računov",
+        "description": "Navodila za ravnanje z vašo digitalno prisotnostjo in spletnimi računi.",
+        "placeholder": "Navedite svoje digitalne račune in kako naj se z njimi ravna...\n\nNa primer:\n- Računi na družbenih omrežjih (Facebook, Instagram, LinkedIn)\n- E-poštni računi\n- Hramba v oblaku (Google Drive, Dropbox)\n- Naročniške storitve (Netflix, Spotify)\n- Spletno bančništvo in finančni računi\n- Denarnice za kriptovalute\n- Spletne strani ali imena domen"
+      },
+      "contacts": {
+        "title": "Pomembni stiki",
+        "description": "Ključne osebe, s katerimi naj ta skrbnik stopi v stik ali jih obvesti.",
+        "placeholder": "Dodajte pomembne stike, specifične za odgovornosti tega skrbnika."
+      },
+      "documents": {
+        "title": "Lokacije dokumentov",
+        "description": "Kje najti pomembne fizične in digitalne dokumente.",
+        "placeholder": "Opišite, kje se nahajajo pomembni dokumenti...\n\nNa primer:\n- Lokacija oporoke\n- Zavarovalne police\n- Listine o lastništvu\n- Informacije o bančnem računu\n- Naložbeni dokumenti\n- Davčne napovedi\n- Gesla in kode za dostop\n- Lokacija in ključ sefa"
+      },
+      "messages": {
+        "title": "Osebna sporočila",
+        "description": "Osebna sporočila in zadnje misli za tega skrbnika.",
+        "placeholder": "Napišite osebno sporočilo temu skrbniku...\n\nTo je vaša priložnost, da:\n- Izrazite svoja čustva in hvaležnost\n- Delite pomembne spomine\n- Podate smernice ali nasvete\n- Pojasnite svoje odločitve\n- Pustite besede tolažbe\n- Delite svoja upanja za prihodnost"
+      },
+      "practical": {
+        "title": "Praktična navodila",
+        "description": "Takojšnji praktični koraki in odgovornosti za tega skrbnika.",
+        "placeholder": "Navedite praktične naloge in takojšnje ukrepe...\n\nNa primer:\n- Kontrolni seznam za prvih 24-48 ur\n- Koga obvestiti najprej\n- Nujni računi ali plačila\n- Navodila za oskrbo (hišni ljubljenčki, rastline, nepremičnine)\n- Poslovne zadeve, ki zahtevajo pozornost\n- Načrtovani sestanki za odpoved\n- Potrebni ključi in kode za dostop"
+      }
+    },
+    "contactFields": {
+      "name": "Ime",
+      "namePlaceholder": "Polno ime",
+      "role": "Vloga/Razmerje",
+      "rolePlaceholder": "npr. Družinski odvetnik, Računovodja",
+      "phone": "Telefon",
+      "phonePlaceholder": "+386 40 123 456",
+      "email": "E-pošta",
+      "emailPlaceholder": "email@primer.si",
+      "notes": "Opombe",
+      "notesPlaceholder": "Dodatne informacije o tem stiku"
+    },
+    "messages": {
+      "autoSaved": "Shranjeno",
+      "saved": "Priročnik uspešno shranjen"
+    },
+    "errors": {
+      "loadFailed": "Nalaganje priročnika ni uspelo",
+      "saveFailed": "Shranjevanje priročnika ni uspelo"
+    }
+  }
+}

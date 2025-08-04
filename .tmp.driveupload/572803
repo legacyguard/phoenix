@@ -1,0 +1,442 @@
+{
+  "_comment": "Shared translations used across the application",
+  "assets": {
+    "overview": {
+      "title": "Varade portfell",
+      "subtitle": "Hallake ja jälgige oma varasid, kinnisvara ja investeeringuid",
+      "addAsset": "Lisa vara",
+      "totalPortfolioValue": "Portfelli koguväärtus",
+      "estimatedValue": "Hinnanguline väärtus kõigi varade lõikes",
+      "distribution": {
+        "title": "Varade jaotus",
+        "subtitle": "Portfelli jaotus kategooriate kaupa"
+      },
+      "beneficiaryAllocation": {
+        "title": "Pärijate jaotus",
+        "subtitle": "Jälgige varade jaotust pärijatele",
+        "allAssigned": "Kõigile varadele on määratud pärijad",
+        "unassignedWarning": "{{count}} vara vajab pärijate määramist"
+      },
+      "viewInheritanceSummary": "Vaata pärandi kokkuvõtet",
+      "addNew": "Lisa uus",
+      "errors": {
+        "loadFailed": "Varaandmete laadimine ebaõnnestus"
+      }
+    },
+    "categories": {
+      "property": "Kinnisvara",
+      "vehicle": "Sõiduk",
+      "financial": "Finants",
+      "business": "Äri",
+      "personal": "Isiklik",
+      "uncategorized": "Kategooriata"
+    }
+  },
+  "assetCard": {
+    "assetTypes": {
+      "Primary Residence": "Primary Residence",
+      "Vacation Home": "Vacation Home",
+      "Rental Property": "Rental Property",
+      "Land": "Land",
+      "Commercial Property": "Commercial Property",
+      "Bank Account": "Bank Account",
+      "Investment Portfolio": "Investment Portfolio",
+      "Cryptocurrency Wallet": "Cryptocurrency Wallet",
+      "Loan / Mortgage": "Loan / Mortgage",
+      "Insurance Policy": "Insurance Policy",
+      "Pension / Retirement Account": "Pension / Retirement Account",
+      "Car": "Car",
+      "Motorcycle": "Motorcycle",
+      "Boat": "Boat",
+      "RV / Camper": "RV / Camper",
+      "Aircraft": "Aircraft",
+      "Online Account": "Online Account",
+      "Software License": "Software License",
+      "Domain Name": "Domain Name",
+      "Digital Subscription": "Digital Subscription",
+      "Cryptocurrency": "Cryptocurrency",
+      "NFT": "NFT",
+      "Jewelry": "Jewelry",
+      "Art / Collectibles": "Art / Collectibles",
+      "Electronics": "Electronics",
+      "Furniture": "Furniture",
+      "Tools / Equipment": "Tools / Equipment",
+      "Other Valuables": "Other Valuables",
+      "Custom Asset": "Custom Asset"
+    },
+    "dateFormat": {
+      "addedOn": "Added on {{date}}",
+      "createdOn": "Created on {{date}}",
+      "updatedOn": "Updated on {{date}}"
+    },
+    "labels": {
+      "estimatedValue": "Estimated Value",
+      "category": "Category",
+      "subType": "Type"
+    }
+  },
+  "assetDetail": {
+    "loading": "Laen vara üksikasju...",
+    "errors": {
+      "failedToLoad": "Vara üksikasjade laadimine ebaõnnestus.",
+      "nameRequired": "Vara nimi on kohustuslik.",
+      "failedToSave": "Vara salvestamine ebaõnnestus."
+    },
+    "messages": {
+      "createdSuccessfully": "Vara edukalt loodud.",
+      "updatedSuccessfully": "Vara edukalt uuendatud."
+    },
+    "title": {
+      "new": "Uus {{type}}"
+    },
+    "subtitle": {
+      "new": "Täitke üksikasjad, et lisada see vara oma portfelli.",
+      "edit": "Uuendage selle vara üksikasju."
+    },
+    "story": {
+      "title": "The Story Behind This {{type}}",
+      "editButton": "Edit Story",
+      "addButton": "Add a Story",
+      "emptyTitle": "What's the story behind this item?",
+      "emptyDescription": "Add a personal memory or explain the significance of this item for your loved ones. This intangible legacy is often the most valuable."
+    },
+    "sections": {
+      "assetInformation": "Vara teave",
+      "basicInformation": "Põhiteave",
+      "propertyDetails": "Kinnisvara üksikasjad",
+      "accountDetails": "Konto üksikasjad",
+      "financialDetails": "Finantsandmed",
+      "liabilitiesAndDocuments": "Related Liabilities & Documents"
+    },
+    "fields": {
+      "assetName": "Vara nimi",
+      "assetType": "Vara tüüp",
+      "propertyAddress": "Kinnisvara aadress",
+      "propertyRegistryNumber": "Kinnistusregistri number",
+      "accountType": "Konto tüüp",
+      "financialInstitution": "Finantsasutus",
+      "accountNumber": "Konto number / IBAN",
+      "loginCredentials": "Sisselogimisandmed ja märkmed",
+      "estimatedValue": "Hinnanguline väärtus",
+      "currency": "Valuuta",
+      "liabilityType": "Liability Type",
+      "providerName": "Provider Name",
+      "referenceNumber": "Reference Number"
+    },
+    "placeholders": {
+      "assetName": "nt Perekodu, Investeerimisportfell",
+      "propertyAddress": "Sisestage täielik kinnisvara aadress",
+      "propertyRegistryNumber": "nt Kinnistusregistri number",
+      "selectAccountType": "Valige konto tüüp",
+      "financialInstitution": "nt Swedbank, LHV Pank",
+      "accountNumber": "nt EE123456789012345678",
+      "loginCredentials": "Paroolihaldur: 1Password, varamu 'Pangandus'",
+      "estimatedValue": "0"
+    },
+    "descriptions": {
+      "assetName": "Andke sellele varale kirjeldav nimi lihtsaks tuvastamiseks.",
+      "assetType": "Valige tüüp, mis kirjeldab seda vara kõige paremini.",
+      "propertyAddress": "Täielik aadress, sealhulgas tänav, linn, postiindeks ja riik.",
+      "propertyRegistryNumber": "Selle kinnisvara ametlik registri- või katastrinumber.",
+      "accountType": "Finantskonto või investeeringu tüüp.",
+      "financialInstitution": "Panga või finantsasutuse nimi.",
+      "accountNumber": "Kontonumber, IBAN või muu identifitseeriv teave.",
+      "estimatedValue": "Selle vara praegune turuväärtus või viimane teadaolev väärtus.",
+      "currency": "Valuuta, milles väärtus väljendatakse.",
+      "noLiabilities": "No liabilities added yet"
+    },
+    "types": {
+      "realEstate": "Kinnisvara",
+      "business": "Äri",
+      "vehicle": "Sõiduk",
+      "financialAccount": "Finantskonto",
+      "asset": "Vara"
+    },
+    "accountTypes": {
+      "bankAccount": "Pangakonto",
+      "investmentPortfolio": "Investeerimisportfell",
+      "pensionFund": "Pensionifond"
+    },
+    "securityWarning": "Turvahoiatus:",
+    "securityWarningText": "Ärge salvestage siia tegelikke paroole. Kasutage seda välja vihjete, paroolihalduri asukohtade või muude turvaliste juurdepääsujuhiste jaoks.",
+    "buttons": {
+      "cancel": "Tühista",
+      "saving": "Salvestan...",
+      "createAsset": "Loo vara",
+      "updateAsset": "Uuenda vara",
+      "addLiability": "Add Liability"
+    }
+  },
+  "assetType": {
+    "selectType": "Valige {{mainCategory}} tüüp",
+    "primaryResidence": "Põhiline elukoht",
+    "vacationHome": "Puhkekodu",
+    "rentalProperty": "Üürikinnisvara",
+    "land": "Maa",
+    "commercialProperty": "Kaubanduskinnisvara",
+    "bankAccount": "Pangakonto",
+    "investmentPortfolio": "Investeerimisportfell",
+    "cryptocurrencyWallet": "Krüptoraha rahakott",
+    "loanMortgage": "Laen / Hüpoteek",
+    "insurancePolicy": "Kindlustuspoliis",
+    "pensionRetirement": "Pension / Pensionileminek",
+    "car": "Auto",
+    "motorcycle": "Mootorrattas",
+    "boat": "Paat",
+    "rvCamper": "Kodukäija / Kampa",
+    "aircraft": "Lennuk",
+    "onlineAccount": "Veebikonto",
+    "softwareLicense": "Tarkvaralitsents",
+    "domainName": "Domeeninimi",
+    "digitalSubscription": "Digitaalne tellimus",
+    "cryptocurrency": "Krüptoraha",
+    "nft": "NFT",
+    "jewelry": "Ehted",
+    "artCollectibles": "Kunst / Kollektsioonid",
+    "electronics": "Elektroonika",
+    "furniture": "Mööbel",
+    "toolsEquipment": "Tööriistad / Seadmed",
+    "otherValuables": "Muud väärtuslikud asjad",
+    "customAsset": "Kohandatud vara"
+  },
+  "dynamicAssetForm": {
+    "propertyAddress": "Kinnisvara aadress",
+    "purchaseDate": "Ostu kuupäev",
+    "purchasePrice": "Ostu hind",
+    "currentEstimatedValue": "Praegune hinnanguline väärtus",
+    "mortgageInformation": "Hüpoteegi teave",
+    "locationOfPropertyDocuments": "Kinnisvara dokumentide asukoht",
+    "locationAddress": "Asukoht / Aadress",
+    "size": "Suurus (aakrid/jalga²)",
+    "zoningType": "Tsoonimise tüüp",
+    "currentUse": "Praegune kasutus",
+    "bankName": "Panga nimi",
+    "accountType": "Konto tüüp",
+    "selectAccountType": "Valige konto tüüp",
+    "checking": "Võlakirja",
+    "savings": "Säästud",
+    "moneyMarket": "Rahaturg",
+    "certificateOfDeposit": "Hoiuse sertifikaat",
+    "accountHolderName": "Konto omaniku nimi(d)",
+    "accountNumberLast4": "Konto number (viimased 4 numbrit)",
+    "routingNumber": "Marsruutimise number",
+    "brokerageFirm": "Maklerifirma",
+    "accountNumber": "Konto number",
+    "individual": "Individuaalne",
+    "joint": "Ühine",
+    "ira": "IRA",
+    "rothIra": "Roth IRA",
+    "401k": "401(k)",
+    "approximateValue": "Hinnanguline väärtus",
+    "financialAdvisor": "Finantsnõunik (kui on)",
+    "walletNameLabel": "Rahakoti nimi/silt",
+    "walletType": "Rahakoti tüüp",
+    "selectWalletType": "Valige rahakoti tüüp",
+    "hardwareWallet": "Riistvara rahakott",
+    "softwareWallet": "Tarkvara rahakott",
+    "exchangeWallet": "Vahetuse rahakott",
+    "paperWallet": "Paberirahakott",
+    "cryptocurrenciesHeld": "Heldetud krüptorahad",
+    "locationOfSeedPhrase": "Seed fraasi/privaatvõtmete asukoht",
+    "exchangeInformation": "Vahetuse teave (kui kohaldub)",
+    "makeAndModel": "Mark ja mudel",
+    "year": "Aasta",
+    "vinNumber": "VIN number",
+    "licensePlate": "Numbrimärk",
+    "loanInformation": "Laenu teave (kui on)",
+    "locationOfTitle": "Tiitli asukoht",
+    "platformWebsiteName": "Platvormi/veebisaidi nimi",
+    "accountEmail": "Konto e-post/kasutajanimi",
+    "accountPurpose": "Konto eesmärk/kirjeldus",
+    "recoveryInformation": "Taastamise teave",
+    "faMethod": "2FA meetod (kui lubatud)",
+    "itemDescription": "Eseme kirjeldus",
+    "appraisedValue": "Hinnatud väärtus",
+    "lastAppraisalDate": "Viimase hinnangu kuupäev",
+    "storageLocation": "Salvestamise asukoht",
+    "insuranceInformation": "Kindlustuse teave",
+    "sentimentalValue": "Sentimentaalne väärtus/ajalugu",
+    "assetName": "Vara nimi",
+    "estimatedValue": "Hinnanguline väärtus",
+    "description": "Kirjeldus",
+    "locationAccessInformation": "Asukoht/Juurdepääsu teave",
+    "addSubType": "Lisa {subType}",
+    "cancel": "Tühista",
+    "saveAsset": "Salvesta vara",
+    "placeholders": {
+      "123_main_st_city_state_zip_1": "123 Main St, City, State, ZIP",
+      "lender_name_account_number_rem_2": "Laenuandja nimi, konto number, järelejäänud saldo",
+      "e_g_safe_deposit_box_filing_ca_3": "nt Seif, failikapp",
+      "property_location_or_parcel_nu_4": "Kinnisvara asukoht või krundi number",
+      "e_g_10_acres_5": "nt 10 aakrit, 5000 jalga²",
+      "e_g_commercial_agricultural_6": "nt Kaubanduslik, Põllumajanduslik, Elamisasula",
+      "describe_current_use_of_the_pr_7": "Kirjeldage kinnisvara praegust kasutust",
+      "e_g_chase_bank_8": "nt Chase Bank, Wells Fargo",
+      "john_doe_9": "John Doe",
+      "1234_10": "1234",
+      "e_g_fidelity_vanguard_11": "nt Fidelity, Vanguard, Charles Schwab",
+      "account_number_12": "Konto number",
+      "name_and_contact_information_13": "Nimi ja kontaktandmed",
+      "e_g_main_bitcoin_wallet_14": "nt Peamine Bitcoin rahakott",
+      "e_g_bitcoin_ethereum_15": "nt Bitcoin, Ethereum, Litecoin",
+      "do_not_enter_the_actual_seed_p_16": "Ärge sisestage siia tegelikku seed fraasi",
+      "exchange_name_and_account_emai_17": "Vahetuse nimi ja konto e-post",
+      "e_g_toyota_camry_18": "nt Toyota Camry, Honda Civic",
+      "vehicle_identification_number_19": "Sõiduki identifitseerimise number",
+      "lender_account_number_payoff_a_20": "Laenuandja, konto number, tasumise summa",
+      "e_g_safe_deposit_box_21": "nt Seif, kodu seif",
+      "e_g_gmail_facebook_22": "nt Gmail, Facebook, LinkedIn",
+      "user_example_com_23": "user@example.com",
+      "what_this_account_is_used_for_24": "Milleks seda kontot kasutatakse",
+      "recovery_email_phone_or_securi_25": "Taastamise e-post, telefon või turvaküsimused",
+      "e_g_sms_to_phone_ending_in_123_26": "nt SMS telefonile, mis lõpeb 123-ga",
+      "e_g_diamond_engagement_ring_27": "nt Teemant kihlasõrmus, kuld kaelakee",
+      "e_g_home_safe_bank_deposit_box_28": "nt Kodu seif, panga seif",
+      "policy_number_and_company_29": "Poliisi number ja ettevõte",
+      "special_meaning_or_history_of__30": "Selle eseme eriline tähendus või ajalugu",
+      "name_or_description_of_asset_31": "Vara nimi või kirjeldus",
+      "detailed_description_of_the_as_32": "Vara üksikasjalik kirjeldus",
+      "where_to_find_this_asset_or_ho_33": "Kust leida seda vara või kuidas pääseda ligi"
+    }
+  },
+  "myPossessions": {
+    "my_possessions_1": "My Possessions",
+    "an_inventory_of_the_important__2": "An inventory of the important things that support your family's future.",
+    "family_impact_3": "Family Impact:",
+    "edit_details_4": "Edit Details",
+    "link_papers_5": "Link Papers (",
+    "assign_access_6": "Assign Access",
+    "add_your_first_7": "Add Your First ",
+    "areas": {
+      "home": {
+        "title": "Your Home & Property",
+        "description": "The places that provide shelter and create memories.",
+        "emptyState": "Document your property to ensure your family's shelter is secure.",
+        "addButton": "Property"
+      },
+      "savings": {
+        "title": "Your Savings & Investments",
+        "description": "The financial foundation you've built for your family's future.",
+        "emptyState": "Record your financial accounts so your family can access funds when needed.",
+        "addButton": "Account"
+      },
+      "business": {
+        "title": "Your Business",
+        "description": "The work that supports your family and creates your professional legacy.",
+        "emptyState": "Document your business details to ensure smooth succession and continued income.",
+        "addButton": "Business"
+      },
+      "valuables": {
+        "title": "Your Valuables & Collections",
+        "description": "Items of financial or sentimental value that need special consideration.",
+        "emptyState": "List valuable items that need special handling or have sentimental value.",
+        "addButton": "Valuable"
+      }
+    },
+    "mockData": {
+      "lakeCabin": "Lake Cabin",
+      "emergencyFund": "Emergency Fund",
+      "yourBusiness": "Your Business",
+      "johnsonContracting": "Johnson Contracting LLC",
+      "classicCarCollection": "Classic Car Collection"
+    }
+  },
+  "addLiabilityModal": {
+    "title": "Lisa kohustus",
+    "fields": {
+      "type": "Tüüp",
+      "provider": "Pakkuja",
+      "referenceNumber": "Viitenumber",
+      "paymentFrequency": "Makse sagedus",
+      "notes": "Märkmed"
+    },
+    "placeholders": {
+      "selectType": "Valige tüüp",
+      "provider": "Pakkuja nimi",
+      "referenceNumber": "Viitenumber",
+      "paymentFrequency": "Valige sagedus",
+      "notes": "Lisateave"
+    },
+    "buttons": {
+      "cancel": "Tühista",
+      "add": "Lisa kohustus"
+    },
+    "errors": {
+      "requiredFields": "Kõik väljad on kohustuslikud"
+    },
+    "messages": {
+      "addedSuccessfully": "Kohustus edukalt lisatud"
+    },
+    "types": {
+      "insurancePolicy": "Kindlustuspoliis",
+      "utilityBill": "Kommunaalarve",
+      "propertyTax": "Kinnisvara maks",
+      "subscriptionFee": "Tellimustasu",
+      "maintenanceContract": "Hooldusleping",
+      "loan": "Laen",
+      "leaseAgreement": "Üürileping",
+      "warranty": "Garantii",
+      "other": "Muu"
+    },
+    "frequencies": {
+      "monthly": "Igakuine",
+      "quarterly": "Kvartaalne",
+      "semiAnnually": "Poolaastane",
+      "annually": "Aastane",
+      "oneTime": "Ühekordne",
+      "asNeeded": "Vajadusel"
+    }
+  },
+  "calculator": {
+    "badge": "Ettevalmistuse kalkulaator",
+    "title": "Arvutage oma pere ettevalmistuse skoor",
+    "subtitle": "Vaadake reaalne aeg ja raha, mida teie pere säästab, kui kõik on korraldatud",
+    "inputs": {
+      "title": "Teie pere olukord",
+      "description": "Rääkige meile natuke oma perest, et isikupärastada teie tulemusi",
+      "dependents": "Kui palju inimesi sõltub teist?",
+      "dependentsHelp": "Kaasa arvatud abikaasa, lapsed, vanemad vanemad",
+      "income": "Mis on teie pere kuu sissetulek?",
+      "incomeHelp": "See aitab arvutada potentsiaalset kaotatud töötasu",
+      "property": "Kas teil on kinnisvara?",
+      "business": "Kas teil on äri?",
+      "accounts": "Kui palju pangakontosid teil on?",
+      "accountsHelp": "Kaasa arvatud võlakirjad, säästud, investeeringud"
+    },
+    "calculateButton": "Arvuta minu sääst",
+    "results": {
+      "title": "Teie pere sääst",
+      "description": "Siin on, mida ettevalmistus tähendab teie lähedastele",
+      "timeSavings": {
+        "title": "Aeg, mida teie pere säästab",
+        "without": "Ilma korralduseta",
+        "withoutHours": "40-120 tundi otsimist",
+        "with": "Pärandi varamuga",
+        "withMinutes": "Alla 5 minuti"
+      },
+      "moneySavings": {
+        "title": "Raha, mida teie pere säästab",
+        "legalFees": "Juriidilised tasud rekonstrueerimiseks",
+        "lostWages": "Kaotatud töötasu vabastuse tõttu",
+        "penalties": "Möödunud tähtajad ja trahvid",
+        "total": "Kogupotentsiaalne sääst"
+      },
+      "emotional": {
+        "title": "Emotsionaalse heaolu mõju",
+        "stress": "Stressi taseme vähenemine",
+        "confidence": "Pere usalduse suurenemine",
+        "peace": "Kontrolli ja ettevalmistuse hinnang"
+      },
+      "socialProof": "Liituge peredega, kes juba magavad paremini öösel",
+      "families": "15 000+ peret kaitstud",
+      "ctaContext": "Enamik peresid lõpetab seadistamise lõunaajal",
+      "shareButton": "Jaga tulemusi"
+    },
+    "testimonial": {
+      "quote": "Ma ei teadnud kunagi, kui palju stressi kandsid, kuni sain kõike korraldada. Nüüd tean, et minu pere saab hakkama, ükskõik mis juhtub.",
+      "author": "Sarah M., kolme lapse ema"
+    },
+    "shareTitle": "Pere ettevalmistuse kalkulaatori tulemused",
+    "shareCopied": "Tulemused kopeeritud lõikelauale!"
+  }
+}

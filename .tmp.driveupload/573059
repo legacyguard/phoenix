@@ -1,0 +1,4306 @@
+{
+  "_comment": "Shared translations used across the application",
+  "common": {
+    "loading": "Loading...",
+    "viewDetails": "View Details",
+    "edit": "Edit",
+    "delete": "Delete",
+    "addedOn": "Added {{date}}",
+    "priority": {
+      "high": "High",
+      "medium": "Medium",
+      "low": "Low"
+    },
+    "pagination": {
+      "previous": "Previous",
+      "next": "Next",
+      "morePages": "More pages",
+      "page": "Page",
+      "of": "of",
+      "showing": "Showing",
+      "to": "to",
+      "results": "results",
+      "perPage": "per page",
+      "goToPage": "Go to page",
+      "currentPage": "Current page",
+      "totalPages": "Total pages",
+      "firstPage": "First page",
+      "lastPage": "Last page",
+      "pageInfo": "Page {{current}} of {{total}}",
+      "resultsInfo": "Showing {{start}} to {{end}} of {{total}} results",
+      "noResults": "No results found",
+      "loading": "Loading...",
+      "navigation": {
+        "title": "Pagination Navigation",
+        "description": "Navigate through pages of results",
+        "first": "Go to first page",
+        "last": "Go to last page",
+        "previous": "Go to previous page",
+        "next": "Go to next page",
+        "page": "Go to page {{number}}"
+      },
+      "accessibility": {
+        "pagination": "Pagination",
+        "currentPage": "Current page, page {{number}}",
+        "page": "Page {{number}}",
+        "previousPage": "Previous page",
+        "nextPage": "Next page",
+        "firstPage": "First page",
+        "lastPage": "Last page",
+        "morePages": "More pages available"
+      }
+    },
+    "errors": {
+      "missingClerkKey": "Missing Clerk Publishable Key",
+      "errorLoadingApp": "Error loading app",
+      "unauthorized": "Unauthorized",
+      "invalidAuthentication": "Invalid authentication",
+      "internalServerError": "Internal server error",
+      "missingRequiredFields": "Missing required fields",
+      "failedToFetchProfile": "Failed to fetch user profile"
+    },
+    "redirect": {
+      "simulationTitle": "Redirect Simulation"
+    },
+    "ui": {
+      "close": "Close",
+      "more": "More",
+      "previousSlide": "Previous slide",
+      "nextSlide": "Next slide",
+      "toggleSidebar": "Toggle Sidebar",
+      "goToPreviousPage": "Go to previous page",
+      "goToNextPage": "Go to next page",
+      "carousel": {
+        "title": "Carousel",
+        "description": "Image carousel with navigation controls",
+        "previousSlide": "Previous slide",
+        "nextSlide": "Next slide",
+        "currentSlide": "Current slide",
+        "slide": "Slide",
+        "of": "of",
+        "slideInfo": "Slide {{current}} of {{total}}",
+        "goToSlide": "Go to slide {{number}}",
+        "autoplay": "Autoplay",
+        "pauseAutoplay": "Pause autoplay",
+        "resumeAutoplay": "Resume autoplay",
+        "stopAutoplay": "Stop autoplay",
+        "carouselNavigation": "Carousel navigation",
+        "carouselControls": "Carousel controls",
+        "slideNavigation": "Slide navigation",
+        "imageCarousel": "Image carousel",
+        "contentCarousel": "Content carousel",
+        "gallery": "Gallery",
+        "photoGallery": "Photo gallery",
+        "imageGallery": "Image gallery",
+        "slideshow": "Slideshow",
+        "presentation": "Presentation",
+        "showcase": "Showcase",
+        "browseImages": "Browse images",
+        "viewImages": "View images",
+        "navigateSlides": "Navigate slides",
+        "slideCount": "{{count}} slides",
+        "slideCountSingular": "{{count}} slide",
+        "slideCountPlural": "{{count}} slides",
+        "accessibility": {
+          "carousel": "Carousel",
+          "slide": "Slide",
+          "currentSlide": "Current slide, slide {{number}}",
+          "previousSlide": "Previous slide",
+          "nextSlide": "Next slide",
+          "goToSlide": "Go to slide {{number}}",
+          "slideCount": "Slide {{current}} of {{total}}",
+          "carouselNavigation": "Carousel navigation controls",
+          "slideNavigation": "Slide navigation controls",
+          "autoplayEnabled": "Autoplay enabled",
+          "autoplayDisabled": "Autoplay disabled",
+          "autoplayPaused": "Autoplay paused",
+          "autoplayStopped": "Autoplay stopped"
+        }
+      },
+      "form": {
+        "title": "Form",
+        "description": "Description",
+        "label": "Label",
+        "placeholder": "Placeholder",
+        "error": "Error",
+        "success": "Success",
+        "warning": "Warning",
+        "info": "Information",
+        "required": "Required",
+        "optional": "Optional",
+        "submit": "Submit",
+        "cancel": "Cancel",
+        "save": "Save",
+        "reset": "Reset",
+        "clear": "Clear",
+        "loading": "Loading...",
+        "saving": "Saving...",
+        "submitting": "Submitting...",
+        "validating": "Validating...",
+        "accessibility": {
+          "form": "Form",
+          "field": "Form field",
+          "required": "Required field",
+          "optional": "Optional field",
+          "error": "Field has error",
+          "success": "Field is valid",
+          "warning": "Field has warning",
+          "description": "Field description",
+          "label": "Field label"
+        },
+        "validation": {
+          "required": "This field is required",
+          "invalid": "This field is invalid",
+          "minLength": "Must be at least {{min}} characters",
+          "maxLength": "Must be no more than {{max}} characters",
+          "minValue": "Must be at least {{min}}",
+          "maxValue": "Must be no more than {{max}}",
+          "pattern": "Must match the required pattern",
+          "email": "Must be a valid email address",
+          "url": "Must be a valid URL",
+          "phone": "Must be a valid phone number",
+          "date": "Must be a valid date",
+          "time": "Must be a valid time",
+          "number": "Must be a valid number",
+          "integer": "Must be a whole number",
+          "positive": "Must be a positive number",
+          "negative": "Must be a negative number",
+          "between": "Must be between {{min}} and {{max}}",
+          "oneOf": "Must be one of the allowed values",
+          "custom": "Invalid value",
+          "unknown": "Unknown validation error"
+        },
+        "errors": {
+          "general": "Please fix the errors in the form",
+          "network": "Network error occurred",
+          "server": "Server error occurred",
+          "timeout": "Request timed out",
+          "unauthorized": "You are not authorized to perform this action",
+          "forbidden": "Access denied",
+          "notFound": "Resource not found",
+          "conflict": "Resource conflict",
+          "validation": "Validation failed",
+          "unknown": "An unknown error occurred"
+        },
+        "messages": {
+          "saved": "Form saved successfully",
+          "submitted": "Form submitted successfully",
+          "updated": "Form updated successfully",
+          "deleted": "Form deleted successfully",
+          "created": "Form created successfully",
+          "loaded": "Form loaded successfully",
+          "reset": "Form reset successfully",
+          "cleared": "Form cleared successfully"
+        }
+      },
+      "breadcrumb": {
+        "title": "Breadcrumb Navigation",
+        "description": "Navigation breadcrumb showing current location",
+        "separator": "Separator",
+        "ellipsis": "More",
+        "currentPage": "Current page",
+        "home": "Home",
+        "back": "Back",
+        "previous": "Previous",
+        "next": "Next",
+        "navigation": "Navigation",
+        "location": "Location",
+        "path": "Path",
+        "breadcrumb": "Breadcrumb",
+        "breadcrumbs": "Breadcrumbs",
+        "separatorText": "Separator",
+        "separatorDescription": "Separator between breadcrumb items",
+        "ellipsisText": "More items",
+        "ellipsisDescription": "More breadcrumb items available",
+        "accessibility": {
+          "breadcrumb": "Breadcrumb navigation",
+          "currentPage": "Current page",
+          "separator": "Separator",
+          "ellipsis": "More items",
+          "navigation": "Breadcrumb navigation",
+          "location": "Current location",
+          "path": "Navigation path",
+          "item": "Breadcrumb item",
+          "link": "Breadcrumb link",
+          "page": "Current page"
+        },
+        "separators": {
+          "chevron": "Chevron",
+          "slash": "Slash",
+          "arrow": "Arrow",
+          "greaterThan": "Greater than",
+          "dash": "Dash",
+          "dot": "Dot",
+          "pipe": "Pipe",
+          "default": "Default separator"
+        },
+        "messages": {
+          "navigateTo": "Navigate to {{item}}",
+          "currentLocation": "Current location: {{location}}",
+          "breadcrumbPath": "Breadcrumb path: {{path}}",
+          "moreItems": "More items available",
+          "separatorBetween": "Separator between {{item1}} and {{item2}}"
+        }
+      }
+    },
+    "auth": {
+      "protectedApplication": "Protected Application",
+      "protectedApplicationDesc": "This application is protected. Please enter the password to access.",
+      "incorrectPassword": "Incorrect password. Please try again.",
+      "password": "Password",
+      "enterPassword": "Enter your password",
+      "accessApplication": "Access Application"
+    },
+    "routeErrorBoundary": {
+      "code_1": "Error Code: ",
+      "reload_page_2": "Reload Page",
+      "technical_details_3": "Technical Details",
+      "pageNotFound": "Page Not Found",
+      "errorLoadingPage": "Error Loading Page",
+      "pageNotFoundDescription": "The requested page does not exist or has been moved.",
+      "errorLoadingPageDescription": "An error occurred while loading this page.",
+      "unknownError": "Unknown error",
+      "home": "Home",
+      "errorDetails": "Error Details",
+      "errorLogging": "Error logging details",
+      "timestamp": "Timestamp",
+      "errorMessage": "Error Message",
+      "errorStatus": "Error Status",
+      "errorDetailsLabel": "Error Details",
+      "location": "Location",
+      "consoleLog": "Error logged to console",
+      "actions": {
+        "goHome": "Go to Home Page",
+        "reloadPage": "Reload Current Page",
+        "viewDetails": "View Technical Details",
+        "hideDetails": "Hide Technical Details"
+      },
+      "messages": {
+        "errorCaught": "Error caught by RouteErrorBoundary",
+        "errorLogged": "Error details have been logged",
+        "contactSupport": "If this error persists, please contact support"
+      }
+    }
+  },
+  "action": {
+    "loading": "Loading...",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "add": "Add",
+    "remove": "Remove",
+    "search": "Search",
+    "filter": "Filter"
+  },
+  "cta": {
+    "title": "Your Family Deserves to Be Prepared",
+    "subtitle": "Don't wait for 'someday' - give your family security today",
+    "description": "Join thousands of families who trust Heritage Vault to preserve their most precious memories and important documents for future generations.",
+    "button": "Protect My Family Now",
+    "secondary": "Start Free Trial",
+    "urgency": "Setup takes 10 minutes, being prepared lasts forever",
+    "gentleUrgency": {
+      "1": "Every day matters when it comes to family security",
+      "2": "The best time to prepare was yesterday, the second best time is now",
+      "3": "Your family's security and preparedness can't wait",
+      "4": "10 minutes today saves your family 40+ hours later"
+    },
+    "socialUrgency": {
+      "1": "Join the families who are already prepared",
+      "2": "Don't be the family that wishes they had organized sooner",
+      "3": "Be the parent/spouse who thought ahead"
+    },
+    "timeUrgency": {
+      "1": "Start today, sleep better tonight",
+      "2": "Complete setup this weekend",
+      "3": "Give your family this gift today"
+    }
+  },
+  "validation": {
+    "errors": {
+      "nameMinLength": "Name must be at least {{min}} characters",
+      "nameMaxLength": "Name must be at most {{max}} characters",
+      "fieldRequired": "{{field}} is required",
+      "countryRequired": "Country is required",
+      "countryCodeLength": "Country code must be 2 characters",
+      "selectAtLeastOne": "Select at least one {{field}}",
+      "selectUpTo": "You can select up to {{max}} {{field}}",
+      "invalidEmail": "Enter a valid email address",
+      "invalidPhone": "Enter a valid phone number",
+      "valueMustBeNumber": "Value must be a number",
+      "valueMustBePositive": "Value must be positive",
+      "currencyCodeLength": "Currency code must be 3 characters",
+      "maxCharacters": "{{field}} can be a maximum of {{max}} characters",
+      "allocationRequired": "Allocation percentage is required",
+      "allocationMustBeNumber": "Allocation must be a number",
+      "allocationRange": "Allocation must be between 1% and 100%",
+      "expirationDateFuture": "Expiration date must be in the future",
+      "maxTags": "You can add a maximum of {{max}} tags",
+      "fileSizeTooLarge": "File size must be {{maxSize}} or less",
+      "invalidFileType": "Only {{types}} files are allowed",
+      "unknownError": "Unknown error",
+      "dataNotFound": "Required data were not found",
+      "connectionError": "Connection error. Please check your internet connection.",
+      "permissionDenied": "You do not have permission to perform this action.",
+      "duplicateRecord": "A record with this information already exists.",
+      "assetNameRequired": "Asset name is required",
+      "assetTypeRequired": "Asset type is required",
+      "addressMaxLength": "Address can be a maximum of {{max}} characters",
+      "registryNumberMaxLength": "Registry number can be a maximum of {{max}} characters",
+      "institutionNameMaxLength": "Institution name can be a maximum of {{max}} characters",
+      "accountNumberMaxLength": "Account number can be a maximum of {{max}} characters",
+      "credentialsMaxLength": "Credentials can be a maximum of {{max}} characters",
+      "relationshipRequired": "Relationship is required",
+      "beneficiaryNameRequired": "Beneficiary name is required (min. 2 characters)",
+      "notesMaxLength": "Notes can be a maximum of {{max}} characters",
+      "documentNameRequired": "Document name is required",
+      "documentTypeRequired": "Document type is required",
+      "descriptionMaxLength": "Description can be a maximum of {{max}} characters"
+    }
+  },
+  "errors": {
+    "dataNotFound": "Required data not found.",
+    "networkError": "Network error. Please check your internet connection.",
+    "permissionDenied": "You don't have permission for this action.",
+    "duplicateRecord": "A record with this data already exists.",
+    "unknown": "An unexpected error occurred."
+  },
+  "app": {
+    "name": "LegacyGuard",
+    "comingSoon": {
+      "heritageVault": "Heritage Vault - Coming Soon",
+      "guardianNetwork": "Guardian Network - Coming Soon"
+    },
+    "tagline": "Secure your digital legacy"
+  },
+  "index": {
+    "welcome": "Welcome to Your Blank App",
+    "startBuilding": "Start building your amazing project here!"
+  },
+  "notfound": {
+    "title": "Page Not Found",
+    "description": "The page you're looking for doesn't exist or has been moved.",
+    "goHome": "Go Home",
+    "goBack": "Go Back"
+  },
+  "countryLanguage": {
+    "title": "Welcome to LegacyGuard",
+    "description": "Please confirm your location and language preferences",
+    "detectedLocation": "We detected you are in {{country}}",
+    "selectCountry": "Select your country",
+    "selectLanguage": "Select your language",
+    "chooseLang": "Choose a language",
+    "domainSuggestion": "Better experience available",
+    "domainSuggestionText": "We recommend using {{domain}} for the best experience in your region",
+    "privacyNote": "Your location data is only used to provide you with the best local experience and is never shared with third parties.",
+    "confirm": "Confirm",
+    "confirmAndRedirect": "Continue to {{domain}}"
+  },
+  "familyHub": {
+    "title": "Family Hub",
+    "subtitle": "Manage access levels and use preparedness tools to ensure your family is well-prepared.",
+    "tabs": {
+      "familyMembers": "Family Members",
+      "members": "Members",
+      "preparednessTools": "Preparedness Tools",
+      "tools": "Tools"
+    },
+    "overallPreparedness": {
+      "title": "Overall Family Preparedness",
+      "description": "This score reflects how ready your entire family is for an emergency.",
+      "improvementNeeded": "Your family's preparedness could be improved. Consider sending updates to those with lower scores."
+    },
+    "emergencyProtocol": {
+      "title": "Emergency Protocol",
+      "description": "Emergency protocol allows trusted people with \"Emergency Only\" access to request information during critical situations. Requires confirmation from another trusted person.",
+      "configured": "Configured",
+      "configure": "Configure",
+      "activeMessage": "Emergency protocol is active and configured"
+    },
+    "memberManagement": {
+      "title": "Manage Your Trusted People",
+      "addTrustedPerson": "Add Trusted Person",
+      "addMorePeople": "Add more trusted people to your network",
+      "informationAccessLevel": "Information Access Level",
+      "preparedness": "Preparedness",
+      "lastContacted": "Last contacted",
+      "daysAgo": "{{days}} days ago",
+      "sendUpdate": "Send Update",
+      "sendUpdateTo": "Send Update to {{name}}",
+      "lastContactOver30Days": "Last contact over 30 days ago"
+    },
+    "accessLevels": {
+      "none": {
+        "title": "None",
+        "description": "Cannot see any information"
+      },
+      "emergencyOnly": {
+        "title": "Emergency Only",
+        "description": "Access during emergencies",
+        "fullDescription": "Gains access only when emergency protocol is activated"
+      },
+      "limitedInfo": {
+        "title": "Limited Info",
+        "description": "Basic information for preparation",
+        "fullDescription": "Can see basic information now to help them prepare"
+      },
+      "fullAccess": {
+        "title": "Full Access",
+        "description": "All shared information",
+        "fullDescription": "Can see all information you've shared with them"
+      }
+    },
+    "messages": {
+      "accessLevelUpdated": "Access level updated successfully",
+      "updateSentTo": "Update sent to {{name}}",
+      "failedToSendUpdate": "Failed to send update to {{name}}"
+    },
+    "errors": {
+      "authenticationRequired": "Authentication required",
+      "failedToFetchData": "Failed to fetch family data",
+      "failedToLoadMembers": "Failed to load family members"
+    }
+  },
+  "vault": {
+    "title": "The Vault",
+    "subtitle": "Your secure inventory of all financial assets and valuable possessions.",
+    "errorLoadingAssets": "Failed to load your assets. Please try again.",
+    "letsBuildInventory": "Let's Build Your Inventory",
+    "addProperty": "Add Property",
+    "addFinances": "Add Finances",
+    "addVehicle": "Add Vehicle",
+    "addDigitalAsset": "Add Digital Asset",
+    "addPersonalItem": "Add Personal Item",
+    "addOther": "Add Something Else...",
+    "confirmDeletion": "Are you sure you want to delete \"{{assetName}}\"?",
+    "errorDeletingAsset": "Failed to delete asset. Please try again.",
+    "searchPlaceholder": "Search your assets...",
+    "addAsset": "Add Asset",
+    "totalAssets": "Total Assets",
+    "totalValue": "Total Value",
+    "categories": "Categories",
+    "noAssetsFound": "No assets found matching \"{{searchQuery}}\"",
+    "startAddingAssets": "Start adding assets to build your inventory",
+    "addNewAsset": "Add New Asset",
+    "property": "Property",
+    "finances": "Finances",
+    "vehicle": "Vehicle",
+    "digital": "Digital",
+    "personal": "Personal",
+    "other": "Other"
+  },
+  "hero": {
+    "title": "Sleep Peacefully Knowing Your Family Will Be Okay",
+    "subtitle": "When life takes an unexpected turn, your family won't have to search, guess, or worry. Everything they need will be right where they can find it.",
+    "cta_primary": "Take Control of Your Family's Future Today",
+    "cta_secondary": "See How Simple It Is",
+    "urgencySubtitle": "Setup takes just 10 minutes - be the prepared parent your family needs",
+    "secondaryContext": "2-minute video showing real families",
+    "trustSignals": {
+      "dataOwnership": "Your family's private matters stay private",
+      "gdprCompliant": "Built with European family values",
+      "europeanFamilies": "Trusted by families who care deeply"
+    },
+    "community": {}
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "manual": "Manual",
+    "vault": "Heritage Vault",
+    "guardians": "Your trusted helpers",
+    "will": "Will",
+    "settings": "Settings",
+    "help": "Help & Support"
+  },
+  "pillars": {
+    "secure": {
+      "title": "SECURE",
+      "description": "Protect your family and assets with proactive security measures"
+    },
+    "organize": {
+      "title": "ORGANIZE",
+      "description": "Catalog and manage your digital and physical assets"
+    },
+    "transfer": {
+      "title": "TRANSFER",
+      "description": "Ensure your legacy is passed on according to your wishes"
+    }
+  },
+  "scenarios": {
+    "title": "What Happens When Life Takes an Unexpected Turn?",
+    "subtitle": "Real families, real situations, real control and preparedness",
+    "hospitalStay": {
+      "title": "The Unexpected Hospital Stay",
+      "before": {
+        "situation": "Sarah's husband had a heart attack. While he was in intensive care, she spent days trying to find their insurance papers, bank account information, and important contacts. The stress was overwhelming when she needed to focus on his recovery.",
+        "emotion": "Stress and worry",
+        "consequence": "Days of searching for information and support."
+      },
+      "after": {
+        "situation": "When Mark had his accident, his wife Lisa opened their family guide and found everything organized: insurance details, bank contacts, medical information, and even a list of people to notify. She could focus on what mattered most - being there for Mark.",
+        "emotion": "Peace and focus",
+        "benefit": "Immediate access to everything she needed."
+      }
+    },
+    "businessTrip": {
+      "title": "The Business Trip Emergency",
+      "before": {
+        "situation": "When David's flight was delayed and he missed his daughter's emergency surgery, his wife couldn't access their savings account or find their medical insurance information. Critical decisions had to wait.",
+        "emotion": "Frustration and helplessness",
+        "consequence": "Important medical decisions delayed."
+      },
+      "after": {
+        "situation": "When Emma's husband was traveling and she needed emergency funds for their son's surgery, she had immediate access to all account information, insurance details, and even pre-written authorization letters. No delays, no stress.",
+        "emotion": "Relief and readiness",
+        "benefit": "Everything accessible right when she needed it."
+      }
+    },
+    "suddenLoss": {
+      "title": "The Sudden Loss",
+      "before": {
+        "situation": "After losing her father suddenly, Maria spent months trying to piece together his financial affairs. She found accounts she didn't know existed and missed important deadlines because documents were scattered everywhere.",
+        "emotion": "Confusion and regret",
+        "consequence": "Missed deadlines and lost time."
+      },
+      "after": {
+        "situation": "When John's family needed to handle his affairs, everything was clearly organized: a complete list of accounts, important contacts, step-by-step instructions, and even personal messages he'd prepared for each family member.",
+        "emotion": "Calm and clarity",
+        "benefit": "A clear path to follow in difficult times."
+      }
+    },
+    "labels": {
+      "before": "Before LegacyGuard",
+      "after": "After Heritage Vault",
+      "feeling": "Feeling"
+    },
+    "bottomCta": {
+      "primary": "Don't Let Your Family Face This Chaos",
+      "secondary": "Start Organizing in 10 Minutes",
+      "urgency": "Every day you wait is another day your family is unprepared"
+    },
+    "testimonials": {
+      "1": "After my brother's sudden accident, I watched my sister-in-law struggle for weeks to find important documents and passwords. That's when I knew I couldn't let the same thing happen to my family.",
+      "2": "As a single mom running a business, I worried constantly about what would happen if something happened to me. Heritage Vault helped me organize everything.",
+      "3": "My wife has early-stage dementia, and I realized I needed to prepare while I still could. Heritage Vault made it simple to organize our 40 years of life together."
+    }
+  },
+  "calculator": {
+    "badge": "Preparedness Calculator",
+    "title": "Calculate Your Family's Preparedness Score",
+    "subtitle": "See the real time and money your family saves when everything is organized",
+    "inputs": {
+      "title": "Your Family Situation",
+      "description": "Tell us a bit about your family to personalize your results",
+      "dependents": "How many people depend on you?",
+      "dependentsHelp": "Include spouse, children, elderly parents",
+      "income": "What's your family's monthly income?",
+      "incomeHelp": "This helps calculate potential lost wages",
+      "property": "Do you own property?",
+      "business": "Do you have a business?",
+      "accounts": "How many bank accounts do you have?",
+      "accountsHelp": "Include checking, savings, investments"
+    },
+    "calculateButton": "Calculate My Savings",
+    "results": {
+      "title": "Your Family's Savings",
+      "description": "Here's what being prepared means for your loved ones",
+      "timeSavings": {
+        "title": "Time Your Family Saves",
+        "without": "Without organization",
+        "withoutHours": "40-120 hours searching",
+        "with": "With Heritage Vault",
+        "withMinutes": "Under 5 minutes"
+      },
+      "moneySavings": {
+        "title": "Money Your Family Saves",
+        "legalFees": "Legal fees for reconstruction",
+        "lostWages": "Lost wages from time off",
+        "penalties": "Missed deadlines & penalties",
+        "total": "Total potential savings"
+      },
+      "emotional": {
+        "title": "Emotional Well-being Impact",
+        "stress": "Stress level reduction",
+        "confidence": "Family confidence increase",
+        "peace": "Control & preparedness rating"
+      },
+      "socialProof": "Join families who already sleep better at night",
+      "families": "15,000+ families protected",
+      "ctaContext": "Most families complete setup during their lunch break",
+      "shareButton": "Share Results"
+    },
+    "testimonial": {
+      "quote": "I never realized how much stress I was carrying until I got everything organized. Now I know my family will be okay, no matter what happens.",
+      "author": "Sarah M., mother of three"
+    },
+    "shareTitle": "Family Preparedness Calculator Results",
+    "shareCopied": "Results copied to clipboard!"
+  },
+  "testimonials": {
+    "badge": "Real Families Taking Control",
+    "title": "Trusted by 15,000+ European Families",
+    "subtitle": "See how families like yours found security and peace with Heritage Vault",
+    "verified": "Verified Family",
+    "trustedBy": "Trusted and recommended by",
+    "stats": {
+      "families": "15,000+",
+      "familiesLabel": "European families protected",
+      "satisfaction": "99.7%",
+      "satisfactionLabel": "feel more prepared and in control",
+      "stressReduction": "92%",
+      "stressReductionLabel": "less family stress reported",
+      "timeSaved": "120 hrs",
+      "timeSavedLabel": "average time saved per family"
+    },
+    "stories": {
+      "1": {
+        "name": "Michael K.",
+        "role": "Father of three",
+        "location": "Munich, Germany",
+        "quote": "After my brother's sudden accident, I watched my sister-in-law struggle for weeks to find important documents and passwords. That's when I knew I couldn't let the same thing happen to my family. Now everything is organized, and my wife knows exactly where to find what she needs. Being prepared and in control is priceless.",
+        "highlight": "✨ Set up in just 2 hours, protecting 3 children and spouse"
+      },
+      "2": {
+        "name": "Anna S.",
+        "role": "Business owner",
+        "location": "Vienna, Austria",
+        "quote": "As a single mom running a business, I worried constantly about what would happen if something happened to me. Heritage Vault helped me organize everything - from business accounts to my children's school information. My sister now has access to everything she'd need to step in. I sleep so much better knowing they're protected.",
+        "highlight": "💼 Business and personal life organized in one secure place"
+      },
+      "3": {
+        "name": "Thomas R.",
+        "role": "Retired teacher",
+        "location": "Zurich, Switzerland",
+        "quote": "My wife has early-stage dementia, and I realized I needed to prepare while I still could. Heritage Vault made it simple to organize our 40 years of life together. Our children now have clear instructions and access to everything. It's brought our whole family closer knowing we're prepared for whatever comes.",
+        "highlight": "❤️ 40 years of family history preserved and protected"
+      }
+    },
+    "authority": {
+      "advisors": "Recommended by Financial Advisors",
+      "attorneys": "Trusted by Family Attorneys",
+      "counselors": "Endorsed by Grief Counselors"
+    },
+    "compliance": {
+      "gdpr": "GDPR Compliant",
+      "dataProtection": "Data Protection Certified",
+      "iso": "ISO 27001 Certified"
+    },
+    "bottomCta": {}
+  },
+  "executor": {
+    "dashboard": {
+      "title": "Executor's Dashboard",
+      "subtitle": "A step-by-step guide to help you through this difficult time",
+      "reminder": "Remember to take care of yourself during this difficult time. Don't hesitate to ask for help when needed."
+    },
+    "errors": {
+      "loadTasksFailed": "Failed to load executor tasks. Please try again later.",
+      "updateTaskFailed": "Failed to update task status."
+    },
+    "highPriority": "High Priority",
+    "due": "Due",
+    "completed": "Completed",
+    "undo": "Undo",
+    "markComplete": "Mark Complete",
+    "viewAccountDetails": "View Account Details & Password",
+    "viewRelatedDocuments": "View Related Documents ({{count}})",
+    "stats": {
+      "totalTasks": "Total Tasks",
+      "completed": "Completed",
+      "remaining": "Remaining"
+    },
+    "sections": {
+      "immediate": {
+        "title": "Immediate Tasks (First 48 Hours)",
+        "description": "Critical tasks that need your immediate attention",
+        "empty": "All immediate tasks completed!"
+      },
+      "firstWeek": {
+        "title": "First Week Tasks",
+        "description": "Important tasks to complete within the first week",
+        "empty": "All first week tasks completed!"
+      },
+      "ongoing": {
+        "title": "Ongoing Responsibilities",
+        "description": "Tasks to handle over the coming weeks and months",
+        "empty": "All ongoing tasks completed!"
+      }
+    },
+    "communications": {
+      "title": "Beneficiary Communications",
+      "description": "Track all communications with beneficiaries to maintain transparency",
+      "logCommunication": "Log Communication",
+      "logTitle": "Log Beneficiary Communication",
+      "logDescription": "Record details of your communication with beneficiaries",
+      "beneficiaryName": "Beneficiary Name",
+      "beneficiaryEmail": "Email (optional)",
+      "communicationType": "Type",
+      "communicationDate": "Date",
+      "subject": "Subject",
+      "summary": "Summary",
+      "subjectPlaceholder": "e.g., Initial estate update",
+      "summaryPlaceholder": "Brief summary of what was discussed...",
+      "types": {
+        "email": "Email",
+        "phone": "Phone Call",
+        "letter": "Letter",
+        "in_person": "In Person",
+        "other": "Other"
+      },
+      "saving": "Saving...",
+      "saveCommunication": "Save Communication",
+      "cancel": "Cancel",
+      "noCommunications": "No communications logged yet",
+      "startTracking": "Start tracking your beneficiary communications",
+      "errors": {
+        "saveFailed": "Failed to log communication"
+      }
+    },
+    "status": {
+      "title": "Estate Administration Status",
+      "description": "Current high-level status visible to authorized family members",
+      "updateStatus": "Update Status",
+      "updateTitle": "Update Estate Status",
+      "updateDescription": "This status will be visible to authorized family members",
+      "statusLabel": "Status",
+      "additionalDetails": "Additional Details (optional)",
+      "detailsPlaceholder": "Provide any additional context...",
+      "selectStatus": "Select a status",
+      "updating": "Updating...",
+      "lastUpdated": "Last updated",
+      "progress": "Progress",
+      "noStatusSet": "No status set yet. Click \"Update Status\" to set the initial status.",
+      "noStatusUpdates": "No status updates have been posted yet.",
+      "statuses": {
+        "initial_review": "Initial Review",
+        "gathering_documents": "Gathering Documents",
+        "probate_initiated": "Probate Process Initiated",
+        "assets_being_valued": "Assets Being Valued",
+        "debts_being_settled": "Debts Being Settled",
+        "tax_preparation": "Tax Preparation",
+        "ready_for_distribution": "Ready for Distribution",
+        "distribution_in_progress": "Distribution in Progress",
+        "estate_closed": "Estate Closed"
+      },
+      "errors": {
+        "updateFailed": "Failed to update status"
+      }
+    },
+    "justInTime": {
+      "viewAccountDetails": "View Account Details & Password",
+      "secureInfoAccess": "Secure Information Access",
+      "reauthenticate": "Re-authenticate to view sensitive information for",
+      "securityReason": "For security reasons, please enter your password to access this information.",
+      "password": "Password",
+      "enterPassword": "Enter your password",
+      "incorrectPassword": "Incorrect password. Please try again.",
+      "cancel": "Cancel",
+      "verifying": "Verifying...",
+      "verifyContinue": "Verify & Continue",
+      "accountName": "Account Name",
+      "accountNumber": "Account Number",
+      "username": "Username",
+      "pin": "PIN",
+      "additionalNotes": "Additional Notes",
+      "noSensitiveInfo": "No sensitive information is associated with this task.",
+      "accessLogged": "This access has been logged for security purposes.",
+      "accessTime": "Access time",
+      "close": "Close",
+      "errors": {
+        "reauthFailed": "Failed to verify your identity. Please try again.",
+        "notFound": "No sensitive information found for this task.",
+        "retrieveFailed": "Failed to retrieve sensitive information."
+      }
+    },
+    "familyView": {
+      "title": "Estate Administration Status",
+      "subtitle": "Stay informed about the progress of estate administration",
+      "recentCommunications": "Recent Executor Communications",
+      "recentCommunicationsDescription": "Recent updates from {{executorName}} to beneficiaries",
+      "to": "To",
+      "noCommunications": "No communications have been logged yet.",
+      "infoMessage": "This information is updated by {{executorName}} to keep family members informed. For detailed questions, please contact the executor directly.",
+      "defaultExecutor": "the executor",
+      "errors": {
+        "loadFailed": "Failed to load data"
+      }
+    }
+  },
+  "features": {
+    "title": "Three Simple Promises We Make to You",
+    "subtitle": "Everything your family needs, nothing they don't. Simple, clear, and always there when it matters.",
+    "sleepBetter": {
+      "title": "Sleep Better Tonight",
+      "description": "Stop worrying about 'what if something happens to me.' Your family will know exactly what to do, where to find everything, and who to call."
+    },
+    "noChaos": {
+      "title": "No Frantic Searching",
+      "description": "Your family won't spend days looking through drawers, calling banks, or trying to guess passwords. Everything important is organized in one secure place."
+    },
+    "clearInstructions": {
+      "title": "Step-by-Step Guidance",
+      "description": "Your loved ones get clear, simple instructions for exactly what to do and when. No confusion, no guesswork, no stress during difficult times."
+    },
+    "security": {},
+    "guardians": {},
+    "storage": {},
+    "timelock": {},
+    "stories": {},
+    "preservation": {}
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "subtitle": "Your central hub for preserving and protecting your family's legacy",
+    "planStrength": {
+      "title": "Plan Strength",
+      "description": "Overall family preparedness and protection level",
+      "currentStage": "Current Stage: {{stage}}"
+    },
+    "nextStep": {
+      "title": "Next Recommended Step",
+      "estimatedTime": "Estimated time: {{time}}"
+    },
+    "protectionJourney": {
+      "title": "Protection Journey",
+      "description": "Your journey to complete family protection",
+      "planStrengthRange": "Plan Strength: {{range}}",
+      "stage": "Stage {{number}}: {{name}}"
+    },
+    "stages": {
+      "foundation": "Foundation Stage",
+      "building": "Building Stage",
+      "strengthening": "Strengthening Stage",
+      "advancedPlanning": "Advanced Planning",
+      "legacy": "Legacy Stage"
+    },
+    "deepDive": {
+      "milestoneAchieved": "MILESTONE ACHIEVED"
+    },
+    "preservationMode": {
+      "lastReviewDate": "Last Review Date: {{date}}",
+      "startAnnualCheck": "Start Annual System Check",
+      "latestUpdates": "Latest Updates"
+    },
+    "complexProfile": {
+      "detected": "Complex Profile Detected",
+      "personalizedGuidance": "Personalized Guidance",
+      "businessSuccessionNote": "We've noticed your plan includes business assets. Succession planning can be complex. Consider a professional review to ensure your business transition is seamless.",
+      "discussWithExpert": "Discuss with a Legal Expert"
+    },
+    "errors": {
+      "failedToFetchStatus": "Failed to fetch progress status",
+      "failedToDeleteDocument": "Failed to delete document",
+      "failedToUpdateDocument": "Failed to update document",
+      "failedToDeleteGuardian": "Failed to delete guardian",
+      "pleaseEnterValidEmail": "Please enter a valid email address",
+      "failedToSendInvitation": "Failed to send invitation",
+      "guardianLimitReached": "You've reached the limit of {{limit}} guardians on your current plan"
+    },
+    "nudge": {
+      "progressTitle": "Your Legacy Protection Progress",
+      "completeNow": "Complete Now"
+    },
+    "sectionHeaders": {
+      "familyGuide": "Family Emergency Guide",
+      "familyGuideSubtitle": "Everything your family needs in one clear, accessible place",
+      "quickTasks": "5-Minute Tasks",
+      "quickTasksSubtitle": "Small actions, big impact - tasks you can complete right now"
+    },
+    "tasks": {
+      "progress": "{{completed}} of {{total}} tasks completed"
+    },
+    "metadata": {
+      "contact": "Contact",
+      "renewsOn": "Renews on"
+    },
+    "invitation": {
+      "title": "Send Guardian Invitation",
+      "description": "Invite {{name}} to become your guardian",
+      "guardianDetails": "Guardian Details",
+      "sendButton": "Send Invitation",
+      "cancelButton": "Cancel"
+    },
+    "allocationDisplay": "{{percentage}}% allocated",
+    "header": {
+      "initial": "Your Legacy Protection Journey",
+      "inProgress": "Making Great Progress!",
+      "complete": "All Set!"
+    },
+    "messages": {
+      "welcomeToHeritageVault": "Welcome to Heritage Vault! Let's secure your family's future together.",
+      "excellentFirstStep": "Excellent first step!",
+      "taskBringsClarity": "Each task brings more clarity and security to your family.",
+      "projectOrderComplete": "Your Project Order is complete!",
+      "successfullySecured": "You've successfully secured your family's future. Well done!",
+      "progressMade": "Great progress!",
+      "anotherPieceInPlace": "Another important piece in place.",
+      "startingTask": "Starting: {{taskTitle}}",
+      "documentDeleted": "Document deleted successfully",
+      "documentMarkedAsKey": "Document marked as key document",
+      "documentRemovedFromKey": "Document removed from key documents",
+      "assetDeleted": "Asset deleted successfully",
+      "assetAdded": "Asset added successfully",
+      "assetUpdated": "Asset updated successfully",
+      "guardianDeleted": "Guardian deleted successfully",
+      "invitationSent": "Invitation sent to {{email}}",
+      "sendingInvitation": "Sending invitation...",
+      "beneficiaryDeleted": "Beneficiary deleted successfully",
+      "beneficiaryAdded": "Beneficiary added successfully",
+      "beneficiaryUpdated": "Beneficiary updated successfully",
+      "welcome": "Welcome back"
+    },
+    "sheets": {
+      "editAsset": "Edit Asset",
+      "addAsset": "Add Asset",
+      "editAssetDescription": "Update the details of this asset",
+      "addAssetDescription": "Add a new asset to your portfolio",
+      "uploadDocument": "Upload Document",
+      "uploadDocumentDescription": "Upload and organize your important documents",
+      "editBeneficiary": "Edit Beneficiary",
+      "addBeneficiary": "Add Beneficiary",
+      "editBeneficiaryDescription": "Update beneficiary details",
+      "addBeneficiaryDescription": "Add someone who will inherit from you"
+    },
+    "addGuardian": "Add Guardian",
+    "addItem": "Add Item",
+    "uploadDocument": "Upload Document",
+    "addBeneficiary": "Add Beneficiary",
+    "empty": {
+      "noGuardians": "No guardians added yet",
+      "noAssetsOrDocuments": "No assets or documents added yet",
+      "noBeneficiaries": "No beneficiaries added yet"
+    },
+    "stats": {
+      "totalAssets": "Total Assets",
+      "activeGuardians": "Active Guardians",
+      "beneficiaries": "Beneficiaries",
+      "securityScore": "Security Score",
+      "activeAssetsManaged": "Active assets managed",
+      "trustedGuardians": "Trusted guardians assigned",
+      "legacyRecipients": "Legacy recipients designated",
+      "excellent": "Excellent",
+      "good": "Good",
+      "needsImprovement": "Needs Improvement"
+    },
+    "placeholders": {
+      "guardianEmail": "guardian@example.com"
+    },
+    "quickTasks": {
+      "taskCompleted": "Task completed!",
+      "taskStarted": "Task started"
+    }
+  },
+  "onboarding": {
+    "title": "Welcome to Heritage Vault",
+    "subtitle": "Let us help you secure your family's future",
+    "mainTitle": "Project Order",
+    "mainSubtitle": "Let's create your personalized legacy protection plan",
+    "progressText": "Project Order: Step {{step}} of 4",
+    "skipButton": "Skip for now",
+    "skipConfirmTitle": "Skip onboarding?",
+    "skipConfirmMessage": "You can always restart this setup later in settings",
+    "skipConfirmYes": "Skip",
+    "skipConfirmNo": "Continue setup",
+    "restartButton": "Restart Onboarding",
+    "welcomeBack": "Welcome back! Ready to complete your setup?",
+    "resumeTitle": "Continue where you left off",
+    "resumeMessage": "You were on step {{step}} of 4",
+    "partialProgress": "{{percentage}}% complete",
+    "inventory": {
+      "documentAccess": {
+        "question": "If something happened to you today, would your family know where to find your important documents?",
+        "answers": {
+          "yes": "Yes",
+          "no": "No",
+          "partially": "Partially"
+        }
+      },
+      "caretaker": {
+        "question": "Who would take care of your children/assets/digital accounts?",
+        "answers": {
+          "designated": "Have designated person",
+          "familyFigureOut": "Family would figure it out",
+          "notThought": "Haven't thought about it"
+        }
+      },
+      "familyClarity": {
+        "question": "Do you feel your family would know what you wanted for them?",
+        "answers": {
+          "clear": "Yes, it's clear",
+          "somewhat": "Somewhat",
+          "neverDiscussed": "No, we never discussed it"
+        }
+      },
+      "biggestWorry": {
+        "question": "What worries you most about your family's future?",
+        "answers": {
+          "financial": "Financial security",
+          "legal": "Legal complications",
+          "memories": "Losing memories",
+          "conflicts": "Family conflicts"
+        }
+      },
+      "personalized": {
+        "documentCentralization": "Based on your answer about document access, we recommend starting with centralizing your important documents.",
+        "guardianDesignation": "Since you haven't designated someone to care for your assets, appointing a guardian should be your priority.",
+        "willPreparation": "Your family needs clarity about your wishes. Creating a will is an essential first step.",
+        "financialPlanning": "Financial security is crucial. Let's start by documenting your bank accounts and assets.",
+        "conflictPrevention": "To prevent family conflicts, clear documentation and communication are key.",
+        "memoryPreservation": "Preserving memories starts with organizing your digital photos and stories.",
+        "legalOrganization": "Let's organize your legal documents to avoid complications later."
+      }
+    },
+    "q1": {
+      "title": "If something happened to you today, would your family know where to find your important documents?",
+      "option1": "Yes",
+      "option2": "No",
+      "option3": "Partially"
+    },
+    "q2": {
+      "title": "Who would take care of your children/assets/digital accounts?",
+      "option1": "Have designated person",
+      "option2": "Family would figure it out",
+      "option3": "Haven't thought about it"
+    },
+    "q3": {
+      "title": "Do you feel your family would know what you wanted for them?",
+      "option1": "Yes, it's clear",
+      "option2": "Somewhat",
+      "option3": "No, we never discussed it"
+    },
+    "q4": {
+      "title": "What worries you most about your family's future?",
+      "option1": "Financial security",
+      "option2": "Legal complications",
+      "option3": "Losing memories",
+      "option4": "Family conflicts"
+    },
+    "buttons": {
+      "previous": "Previous",
+      "next": "Next",
+      "generate": "Generate My Project Order"
+    },
+    "analysis": {
+      "title": "Analyzing your answers...",
+      "subtitle": "Preparing your personal 'Project Order'...",
+      "done": "Done!"
+    },
+    "complete": "Great start! We've personalized your dashboard based on your answers. You're ready to start building your comprehensive legacy plan.",
+    "success": {
+      "stepCompleted": "Step {{step}} completed successfully!",
+      "inventoryComplete": "Life inventory completed! Your personalized plan is ready.",
+      "allQuestionsAnswered": "All questions answered. Generating your action plan..."
+    },
+    "errors": {
+      "questionRequired": "Please answer this question to continue",
+      "failedToSave": "Failed to save your answers. Please try again.",
+      "loadingFailed": "Failed to load onboarding questions"
+    },
+    "addAnother": "Add Another",
+    "previous": "Previous",
+    "next": "Next",
+    "continue": "Continue to Dashboard"
+  },
+  "manual": {
+    "title": "Survivor's Manual",
+    "subtitle": "Essential information for your loved ones when they need it most",
+    "tabs": {
+      "contacts": "Important Contacts",
+      "documents": "Important papers",
+      "instructions": "Instructions"
+    },
+    "contacts": {
+      "title": "Important Contacts",
+      "description": "Key people your family should contact in case of emergency",
+      "addContact": "Add Contact",
+      "addFirstContact": "Add Your First Contact",
+      "loading": "Loading contacts...",
+      "empty": {
+        "title": "No contacts added yet",
+        "description": "Start by adding important people your family should know about."
+      },
+      "form": {
+        "editTitle": "Edit Contact",
+        "addTitle": "Add Important Contact",
+        "description": "Add people your family should contact in important situations.",
+        "nameLabel": "Contact Name *",
+        "namePlaceholder": "e.g., John Smith",
+        "roleLabel": "Role/Profession *",
+        "rolePlaceholder": "e.g., Family Lawyer, Accountant, Doctor",
+        "phoneLabel": "Phone Number",
+        "phonePlaceholder": "+421 900 123 456",
+        "emailLabel": "Email Address",
+        "emailPlaceholder": "contact@example.com",
+        "notesLabel": "Notes",
+        "notesPlaceholder": "Additional information about this contact...",
+        "updateButton": "Update Contact",
+        "addButton": "Add Contact",
+        "saving": "Saving...",
+        "cancel": "Cancel"
+      },
+      "card": {
+        "edit": "Edit"
+      },
+      "messages": {
+        "nameAndRoleRequired": "Name and role are required",
+        "loginRequired": "You must be logged in to save contacts",
+        "updated": "Contact updated successfully!",
+        "added": "Contact added successfully!",
+        "deleted": "Contact deleted successfully!"
+      },
+      "errors": {
+        "loadFailed": "Failed to load contacts",
+        "saveFailed": "Failed to save contact",
+        "deleteFailed": "Failed to delete contact"
+      }
+    },
+    "documents": {
+      "title": "Important Papers",
+      "description": "Critical documents your family needs to know about",
+      "loading": "Loading key documents...",
+      "empty": {
+        "title": "No key documents added yet",
+        "description": "Mark important documents as \"key documents\" from your vault to have them appear here.",
+        "tip": "Tip: Go to your vault and toggle \"Include in Survivor's Manual\" for important documents"
+      },
+      "card": {
+        "essentialNote": "This document is marked as essential for your survivors."
+      },
+      "errors": {
+        "loadFailed": "Failed to load key documents"
+      },
+      "expiration": {
+        "expired": "Expired",
+        "expiresSoon": "Expires Soon",
+        "expiring": "Expiring"
+      }
+    },
+    "instructions": {
+      "title": "Final Wishes & Instructions",
+      "description": "Personal guidance and messages for your loved ones",
+      "loading": "Loading instructions...",
+      "autoSaveNote": "Your instructions are automatically saved as you type",
+      "sections": {
+        "funeral": {
+          "title": "Funeral Wishes",
+          "description": "Your preferences for funeral arrangements and ceremonies",
+          "placeholder": "e.g., Cremation, no formal ceremony, play 'My Way' by Frank Sinatra..."
+        },
+        "digitalAccounts": {
+          "title": "Digital Accounts Shutdown",
+          "description": "Instructions for handling your digital accounts and online presence",
+          "placeholder": "e.g., Please delete my Facebook profile, but archive my Gmail. Transfer my photos from Google Drive to..."
+        },
+        "messages": {
+          "title": "Messages to Loved Ones",
+          "description": "Personal messages and final thoughts for your family and friends",
+          "placeholder": "Share your thoughts, memories, and final messages to those you love..."
+        }
+      },
+      "errors": {
+        "loadFailed": "Failed to load instructions"
+      }
+    }
+  },
+  "documentTypes": {
+    "realEstateDeed": "Real Estate Deed",
+    "birthCertificate": "Birth Certificate",
+    "insurancePolicy": "Insurance Policy",
+    "lastWill": "Last Will & Testament",
+    "employmentContract": "Employment Contract",
+    "passport": "Passport",
+    "drivingLicense": "Driving License",
+    "bankStatement": "Bank Statement",
+    "investmentCertificate": "Investment Certificate",
+    "energyContract": "Energy Contract",
+    "softwareLicense": "Software License",
+    "subscriptionService": "Subscription Service",
+    "other": "Other"
+  },
+  "navigation": {
+    "dashboard": "Dashboard",
+    "vault": "The Vault",
+    "trustedCircle": {
+      "title": "Your Trusted Circle",
+      "subtitle": "The people you trust to help protect and care for your family and legacy.",
+      "responsibilities": "Their Responsibilities:",
+      "preparationStatus": "Preparation Status:",
+      "informedOfRole": "Has been informed of their role",
+      "acceptedResponsibility": "Has accepted the responsibility",
+      "hasAccessToDocuments": "Has access to necessary documents",
+      "reviewedEmergencyProcedures": "Has reviewed emergency procedures",
+      "addTrustedPerson": "+ Add a Trusted Person",
+      "preparednessStatus": {
+        "wellPrepared": "Well Prepared",
+        "partiallyPrepared": "Partially Prepared",
+        "needsAttention": "Needs Attention"
+      },
+      "buttonText": {
+        "prepared": "✓ {{name}} is Prepared",
+        "prepareNow": "Prepare {{name}} Now"
+      },
+      "mockData": {
+        "sarah": {
+          "name": "Sarah Johnson",
+          "relationship": "Wife",
+          "responsibilities": {
+            "bankAccess": "Can access all bank accounts to pay bills and manage household expenses.",
+            "inheritAssets": "Will inherit the family home, cabin, and all savings.",
+            "medicalPower": "Has medical power of attorney to make healthcare decisions."
+          }
+        },
+        "michael": {
+          "name": "Michael Johnson",
+          "relationship": "Brother",
+          "responsibilities": {
+            "childCare": "Will care for our children if both parents are gone.",
+            "estateExecution": "Will execute our final wishes and manage estate settlement.",
+            "businessManagement": "Can step in to manage Johnson Contracting LLC temporarily."
+          }
+        },
+        "robert": {
+          "name": "Robert Chen",
+          "relationship": "Business Partner",
+          "responsibilities": {
+            "businessAuthority": "Has authority to manage business operations and sign contracts.",
+            "buySellAgreement": "Will purchase my business shares per our buy-sell agreement."
+          }
+        },
+        "emily": {
+          "name": "Emily Thompson",
+          "relationship": "Sister-in-law",
+          "responsibilities": {
+            "backupGuardian": "Backup guardian for children if primary guardian cannot serve."
+          }
+        }
+      }
+    },
+    "familyHub": "Family Hub",
+    "legacyBriefing": {
+      "legacy_briefing_3": "Legacy Briefing",
+      "create_and_manage_sealed_messa_4": "Create and manage sealed messages for your loved ones",
+      "failed_to_load_your_time_capsu_1": "Failed to load your time capsules",
+      "are_you_sure_you_want_to_delet_2": "Are you sure you want to delete this time capsule?",
+      "create_new_message_5": "Create New Message",
+      "no_time_capsules_yet_6": "No time capsules yet",
+      "create_meaningful_messages_for_7": "Create meaningful messages for your loved ones to receive in the future",
+      "create_your_first_message_8": "Create Your First Message",
+      "to_9": "To:",
+      "unlocks_on_10": "Unlocks on:",
+      "unlocks_11": "Unlocks:",
+      "after_passing_12": "After passing",
+      "statusLabels": {
+        "locked": "Locked",
+        "unlocked": "Unlocked",
+        "delivered": "Delivered",
+        "noRecipients": "No recipients"
+      },
+      "messageTypes": {
+        "text": "Text message",
+        "photo": "Photo message",
+        "video": "Video message",
+        "audio": "Audio message"
+      },
+      "actions": {
+        "edit": "Edit",
+        "delete": "Delete"
+      },
+      "toastMessages": {
+        "deleteSuccess": "Time capsule deleted successfully",
+        "deleteError": "Failed to delete time capsule"
+      },
+      "dateFormat": {
+        "dateNotSet": "Date not set",
+        "created": "Created"
+      }
+    },
+    "executorToolkit": "Executor's Toolkit",
+    "assets": "What you own and cherish",
+    "manual": "Manual",
+    "documents": "Important papers",
+    "guardians": "People you trust",
+    "family": "Family Hub",
+    "timeCapsule": "Time Capsules",
+    "will": "Your final wishes",
+    "consultations": "Legal Consultations",
+    "settings": "Settings",
+    "help": "Help & Support",
+    "subscriptions": "Subscriptions"
+  },
+  "invite": {
+    "title": "{{name}} has invited you to be a trusted helper for their digital legacy"
+  },
+  "assetType": {
+    "selectType": "Select {{mainCategory}} Type",
+    "primaryResidence": "Primary Residence",
+    "vacationHome": "Vacation Home",
+    "rentalProperty": "Rental Property",
+    "land": "Land",
+    "commercialProperty": "Commercial Property",
+    "bankAccount": "Bank Account",
+    "investmentPortfolio": "Investment Portfolio",
+    "cryptocurrencyWallet": "Cryptocurrency Wallet",
+    "loanMortgage": "Loan / Mortgage",
+    "insurancePolicy": "Insurance Policy",
+    "pensionRetirement": "Pension / Retirement",
+    "car": "Car",
+    "motorcycle": "Motorcycle",
+    "boat": "Boat",
+    "rvCamper": "RV / Camper",
+    "aircraft": "Aircraft",
+    "onlineAccount": "Online Account",
+    "softwareLicense": "Software License",
+    "domainName": "Domain Name",
+    "digitalSubscription": "Digital Subscription",
+    "cryptocurrency": "Cryptocurrency",
+    "nft": "NFT",
+    "jewelry": "Jewelry",
+    "artCollectibles": "Art / Collectibles",
+    "electronics": "Electronics",
+    "furniture": "Furniture",
+    "toolsEquipment": "Tools / Equipment",
+    "otherValuables": "Other Valuables",
+    "customAsset": "Custom Asset"
+  },
+  "addLiabilityModal": {
+    "title": "Add Liability",
+    "fields": {
+      "type": "Type",
+      "provider": "Provider",
+      "referenceNumber": "Reference Number",
+      "paymentFrequency": "Payment Frequency",
+      "notes": "Notes"
+    },
+    "placeholders": {
+      "selectType": "Select type",
+      "provider": "Provider name",
+      "referenceNumber": "Reference number",
+      "paymentFrequency": "Select frequency",
+      "notes": "Additional notes"
+    },
+    "buttons": {
+      "cancel": "Cancel",
+      "add": "Add Liability"
+    },
+    "errors": {
+      "requiredFields": "All fields are required"
+    },
+    "messages": {
+      "addedSuccessfully": "Liability added successfully"
+    },
+    "types": {
+      "insurancePolicy": "Insurance Policy",
+      "utilityBill": "Utility Bill",
+      "propertyTax": "Property Tax",
+      "subscriptionFee": "Subscription Fee",
+      "maintenanceContract": "Maintenance Contract",
+      "loan": "Loan",
+      "leaseAgreement": "Lease Agreement",
+      "warranty": "Warranty",
+      "other": "Other"
+    },
+    "frequencies": {
+      "monthly": "Monthly",
+      "quarterly": "Quarterly",
+      "semiAnnually": "Semi-Annually",
+      "annually": "Annually",
+      "oneTime": "One-Time",
+      "asNeeded": "As Needed"
+    }
+  },
+  "annualReview": {
+    "title": "Annual Legacy Review",
+    "subtitle": "Keep your family's protection plan current and effective",
+    "description": "Life changes quickly. This annual review ensures your legacy plan stays aligned with your current situation and wishes.",
+    "progress": {
+      "title": "Review Progress",
+      "completed": "Completed",
+      "inProgress": "In Progress",
+      "notStarted": "Not Started",
+      "totalSteps": "Total Steps",
+      "estimatedTime": "Estimated Time: 15 minutes"
+    },
+    "step1": {
+      "title": "Review Your Executors",
+      "description": "Confirm your trusted people are still the right choices for your family"
+    },
+    "step2": {
+      "title": "Review Your Assets",
+      "description": "Verify your asset inventory is current and complete"
+    },
+    "step3": {
+      "title": "Review Your Beneficiaries",
+      "description": "Ensure your beneficiaries are still the right people"
+    },
+    "step4": {
+      "title": "Complete Review",
+      "description": "Finalize your annual review and update your plan"
+    },
+    "commandRoster": {
+      "title": "Command Roster Review",
+      "description": "Your executors and trusted people are the foundation of your family's protection plan.",
+      "executorQuestion": "Is {name} still the right person to be your executor?",
+      "guardianQuestion": "Is {name} still the right person to care for your children?",
+      "trustedPersonQuestion": "Is {name} still the right person for {role}?",
+      "status": {
+        "current": "Current",
+        "needsUpdate": "Needs Update",
+        "outdated": "Outdated",
+        "missing": "Missing"
+      },
+      "details": {
+        "executor": "Primary executor for your estate",
+        "guardian": "Guardian for minor children",
+        "trustedPerson": "Trusted person with {accessLevel} access",
+        "emergencyContact": "Emergency contact person"
+      }
+    },
+    "armory": {
+      "title": "Asset Inventory Review",
+      "description": "Your assets are what you're protecting. Keep this inventory current.",
+      "ownershipQuestion": "Do you still own {assetName}?",
+      "valueQuestion": "Has the value of {assetName} changed significantly?",
+      "locationQuestion": "Is the location of {assetName} still correct?",
+      "status": {
+        "current": "Current",
+        "needsUpdate": "Needs Update",
+        "outdated": "Outdated",
+        "missing": "Missing"
+      },
+      "categories": {
+        "realEstate": "Real Estate",
+        "vehicles": "Vehicles",
+        "bankAccounts": "Bank Accounts",
+        "investments": "Investments",
+        "insurance": "Insurance",
+        "digitalAssets": "Digital Assets",
+        "personalItems": "Personal Items"
+      }
+    },
+    "beneficiaries": {
+      "title": "Beneficiary Review",
+      "description": "Ensure the right people receive the right assets at the right time.",
+      "confirmationQuestion": "Are these still the correct people to receive these assets?",
+      "distributionQuestion": "Is the distribution percentage still correct?",
+      "contactQuestion": "Are the contact details for {name} still current?",
+      "status": {
+        "current": "Current",
+        "needsUpdate": "Needs Update",
+        "outdated": "Outdated",
+        "missing": "Missing"
+      },
+      "details": {
+        "primary": "Primary beneficiary",
+        "contingent": "Contingent beneficiary",
+        "percentage": "{percentage}% of assets",
+        "specific": "Specific asset beneficiary"
+      }
+    },
+    "complete": {
+      "title": "Review Complete",
+      "description": "Your annual review has been completed successfully.",
+      "message": "Your annual review has been completed. Your family's protection plan is now current and effective.",
+      "summary": "Review Summary",
+      "changes": "Changes Made",
+      "noChanges": "No changes were needed. Your plan is current.",
+      "nextReview": "Next Review Due",
+      "reminder": "We'll remind you when it's time for your next annual review."
+    },
+    "buttons": {
+      "confirm": "Confirm",
+      "update": "Update",
+      "back": "Back",
+      "next": "Next",
+      "finish": "Finish Review",
+      "save": "Save Changes",
+      "skip": "Skip for Now",
+      "reviewLater": "Review Later"
+    },
+    "status": {
+      "title": "Review Status",
+      "overdue": "Overdue",
+      "dueSoon": "Due Soon",
+      "current": "Current",
+      "completed": "Completed",
+      "lastReview": "Last Review",
+      "nextReview": "Next Review",
+      "daysOverdue": "{days} days overdue",
+      "daysUntilDue": "{days} days until due"
+    },
+    "notifications": {
+      "reviewDue": "Annual Review Due",
+      "reviewOverdue": "Annual Review Overdue",
+      "reviewCompleted": "Annual Review Completed",
+      "changesSaved": "Changes saved successfully",
+      "errorSaving": "Error saving changes",
+      "reminderSet": "Reminder set for next review"
+    }
+  },
+  "beneficiaryCommunications": {
+    "title": "Beneficiary Communications",
+    "description": "Track all communications with beneficiaries",
+    "logCommunication": "Log Communication",
+    "logAction": "Logged communication with {name}",
+    "dialog": {
+      "title": "Log Communication",
+      "description": "Record details of your communication with a beneficiary"
+    },
+    "fields": {
+      "beneficiaryName": "Beneficiary Name",
+      "email": "Email",
+      "type": "Type",
+      "date": "Date",
+      "subject": "Subject",
+      "summary": "Summary"
+    },
+    "placeholders": {
+      "subject": "Brief subject of the communication",
+      "summary": "Detailed summary of what was discussed"
+    },
+    "types": {
+      "email": "Email",
+      "phone": "Phone",
+      "letter": "Letter",
+      "inPerson": "In Person",
+      "in_person": "In Person",
+      "other": "Other"
+    },
+    "actions": {
+      "cancel": "Cancel",
+      "saving": "Saving...",
+      "save": "Save Communication"
+    },
+    "empty": {
+      "title": "No communications logged yet",
+      "subtitle": "Click 'Log Communication' to record your first interaction"
+    }
+  },
+  "complexityReduction": {
+    "title": "Simplify Your Legacy Planning",
+    "subtitle": "Break down complex tasks into simple, manageable steps",
+    "description": "We understand that planning for the future can feel overwhelming. Our complexity reduction system breaks down every task into simple, actionable steps that take just minutes to complete.",
+    "benefits": {
+      "title": "Why Complexity Reduction Works",
+      "overwhelm": {
+        "title": "Eliminates Overwhelm",
+        "description": "Instead of facing a massive to-do list, you tackle one small task at a time. Each step is designed to be completed in under 5 minutes."
+      },
+      "progress": {
+        "title": "Visible Progress",
+        "description": "See your family's preparedness grow with each completed step. Track your progress and celebrate small wins along the way."
+      },
+      "confidence": {
+        "title": "Builds Confidence",
+        "description": "As you complete each step, you'll feel more confident and in control. What once seemed impossible becomes achievable."
+      },
+      "family": {
+        "title": "Family Protection",
+        "description": "Every completed step directly protects your family. From emergency access to long-term planning, each action matters."
+      }
+    },
+    "steps": {
+      "identifyBankAccount": {
+        "title": "Identify Your Primary Bank Account",
+        "why": "Why this matters: Immediate access to funds during emergencies",
+        "whatYouDo": "What you do: Take a photo or write down account information",
+        "whatWeDo": "What we do: Securely store information and create access instructions",
+        "timeRequired": "Time required: 2 minutes",
+        "complexity": "Complexity level: Simple"
+      },
+      "emergencyContacts": {
+        "title": "List Emergency Contacts",
+        "why": "Why this matters: Quick access to important people during crises",
+        "whatYouDo": "What you do: Add phone numbers and relationships",
+        "whatWeDo": "What we do: Organize contacts by priority and create emergency protocols",
+        "timeRequired": "Time required: 3 minutes",
+        "complexity": "Complexity level: Simple"
+      },
+      "insurancePolicies": {
+        "title": "Document Insurance Policies",
+        "why": "Why this matters: Ensures claims can be filed quickly and correctly",
+        "whatYouDo": "What you do: Upload policy documents or take photos",
+        "whatWeDo": "What we do: Extract key information and create claim instructions",
+        "timeRequired": "Time required: 5 minutes",
+        "complexity": "Complexity level: Easy"
+      },
+      "digitalAssets": {
+        "title": "Secure Digital Assets",
+        "why": "Why this matters: Protects online accounts and digital memories",
+        "whatYouDo": "What you do: List important accounts and passwords",
+        "whatWeDo": "What we do: Create secure access protocols and backup instructions",
+        "timeRequired": "Time required: 4 minutes",
+        "complexity": "Complexity level: Easy"
+      },
+      "legalDocuments": {
+        "title": "Organize Legal Documents",
+        "why": "Why this matters: Ensures legal wishes are followed and processes are smooth",
+        "whatYouDo": "What you do: Upload wills, powers of attorney, and other documents",
+        "whatWeDo": "What we do: Create summaries and ensure proper legal access",
+        "timeRequired": "Time required: 6 minutes",
+        "complexity": "Complexity level: Medium"
+      },
+      "familyInstructions": {
+        "title": "Write Family Instructions",
+        "why": "Why this matters: Provides clear guidance during difficult times",
+        "whatYouDo": "What you do: Write personal messages and instructions",
+        "whatWeDo": "What we do: Organize messages and create delivery schedules",
+        "timeRequired": "Time required: 8 minutes",
+        "complexity": "Complexity level: Medium"
+      }
+    },
+    "actions": {
+      "startThisStep": "Start This Step",
+      "showMeHow": "Show Me How",
+      "iNeedHelp": "I Need Help",
+      "nextStep": "Next Step",
+      "previousStep": "Previous Step",
+      "completeStep": "Mark as Complete",
+      "skipStep": "Skip for Now"
+    },
+    "progress": {
+      "title": "Your Progress",
+      "completed": "Completed",
+      "inProgress": "In Progress",
+      "notStarted": "Not Started",
+      "totalSteps": "Total Steps",
+      "estimatedTime": "Estimated Time Remaining"
+    },
+    "features": {
+      "title": "How Complexity Reduction Works",
+      "stepByStep": {
+        "title": "Step-by-Step Guidance",
+        "description": "Each task is broken down into clear, simple instructions that anyone can follow."
+      },
+      "timeEstimation": {
+        "title": "Accurate Time Estimates",
+        "description": "Know exactly how long each step will take, from 2 minutes to 15 minutes maximum."
+      },
+      "difficultyLevels": {
+        "title": "Clear Difficulty Levels",
+        "description": "Simple, Easy, Medium, and Complex ratings help you choose what to tackle first."
+      },
+      "progressTracking": {
+        "title": "Progress Tracking",
+        "description": "See your family's preparedness grow with each completed step."
+      },
+      "helpAvailable": {
+        "title": "Help When You Need It",
+        "description": "Get assistance, explanations, and support for any step that feels challenging."
+      }
+    }
+  },
+  "createTimeCapsuleModal": {
+    "title": "Create Time Capsule",
+    "titleCreate": "Create Time Capsule",
+    "titleEdit": "Edit Time Capsule",
+    "description": "Create a message that will be delivered to your loved ones in the future.",
+    "errors": {
+      "noTitle": "Please enter a title for your time capsule.",
+      "noRecipients": "Please select at least one recipient.",
+      "noUnlockDate": "Please select an unlock date.",
+      "noMessage": "Please enter your message.",
+      "noFile": "Please upload a file.",
+      "updateFailed": "Failed to update time capsule.",
+      "saveFailed": "Failed to save time capsule.",
+      "fileTooLarge": "File size must be less than 50MB.",
+      "invalidFileType": "Invalid file type for {{messageType}}."
+    },
+    "success": {
+      "updated": "Time capsule updated!",
+      "created": "Time capsule created!"
+    },
+    "labels": {
+      "title": "Title",
+      "messageType": "Message Type",
+      "recipients": "Recipients",
+      "deliveryQuestion": "When should this message be delivered?",
+      "unlockDate": "Unlock Date",
+      "yourMessage": "Your Message",
+      "uploadFile": "Upload {{messageType}}"
+    },
+    "placeholders": {
+      "title": "e.g., For Your 18th Birthday",
+      "message": "Write your heartfelt message here...",
+      "selectDate": "Select a date"
+    },
+    "messageTypes": {
+      "text": "Text Message",
+      "photo": "Photo",
+      "video": "Video",
+      "audio": "Audio"
+    },
+    "recipients": {
+      "noTrustedPeople": "You haven't added any trusted people yet. Add them from your dashboard first.",
+      "selected": "Selected"
+    },
+    "unlockConditions": {
+      "onDate": "On a specific date",
+      "afterPassing": "After my passing"
+    },
+    "fileUpload": {
+      "clickToUpload": "Click to upload",
+      "dragAndDrop": " or drag and drop",
+      "maxSize": "Maximum file size: 50MB",
+      "fileSizeMB": "{{size}} MB"
+    },
+    "premium": {
+      "videoMessage": "Video messages are a premium feature.",
+      "upgradeNow": "Upgrade Now"
+    },
+    "buttons": {
+      "recordVideo": "Record Video Message",
+      "cancel": "Cancel",
+      "saving": "Saving...",
+      "update": "Update Time Capsule",
+      "create": "Create Time Capsule"
+    },
+    "characterCount": "{{count}}/{{max}} characters"
+  },
+  "dataTransparency": {
+    "loadingMessage": "Loading your data transparency information...",
+    "loadingError": "Unable to load transparency data. Please try again later.",
+    "title": "Your Data, Your Control",
+    "description": "We believe in total transparency. Here's exactly how we handle your information.",
+    "dataFlow": {
+      "whereDataLives": "Where Your Data Lives",
+      "collection": "Collection",
+      "storage": "Storage",
+      "processing": "Processing",
+      "sharing": "Sharing"
+    },
+    "recentActivity": {
+      "title": "Recent Activity",
+      "premiumTitle": "Unlock Your Permanent Watch Log",
+      "premiumText": "Your 30-day operational log provides basic security. For maximum accountability and peace of mind, upgrade to the Command Package to maintain a complete, unchangeable audit history of every action taken in your vault, forever."
+    },
+    "dataOwnership": {
+      "title": "Data Ownership",
+      "description": "You own your data, always. You can download a complete copy at any time.",
+      "downloadButton": "Download My Data Archive"
+    }
+  },
+  "editStoryModal": {
+    "editStory": "Edit Story",
+    "addStory": "Add a Story",
+    "description": "Share the story behind \"{{assetName}}\". This personal touch will be invaluable to your loved ones.",
+    "fields": {
+      "yourStory": "Your Story"
+    },
+    "placeholders": {
+      "story": "e.g., This was your grandmother's wedding ring, given to her in 1952 when she married your grandfather in the small church in their hometown. She wore it every day for 65 years..."
+    },
+    "hints": {
+      "shareMemories": "Share memories, significance, or history"
+    },
+    "tips": {
+      "title": "Tips for a meaningful story:",
+      "explainSpecial": "Explain why this item is special to you",
+      "shareMemories": "Share memories associated with it",
+      "describeHistory": "Describe its history or how you acquired it",
+      "mentionWishes": "Mention any wishes for how it should be used or kept"
+    },
+    "saving": "Saving...",
+    "saveStory": "Save Story",
+    "messages": {
+      "saved": "Story saved successfully"
+    },
+    "errors": {
+      "notAuthenticated": "You must be logged in to save a story",
+      "saveFailed": "Failed to save story"
+    }
+  },
+  "dynamicAssetForm": {
+    "propertyAddress": "Property Address",
+    "purchaseDate": "Purchase Date",
+    "purchasePrice": "Purchase Price",
+    "currentEstimatedValue": "Current Estimated Value",
+    "mortgageInformation": "Mortgage Information",
+    "locationOfPropertyDocuments": "Location of Property Documents",
+    "locationAddress": "Location / Address",
+    "size": "Size (acres/sq ft)",
+    "zoningType": "Zoning Type",
+    "currentUse": "Current Use",
+    "bankName": "Bank Name",
+    "accountType": "Account Type",
+    "selectAccountType": "Select account type",
+    "checking": "Checking",
+    "savings": "Savings",
+    "moneyMarket": "Money Market",
+    "certificateOfDeposit": "Certificate of Deposit",
+    "accountHolderName": "Account Holder Name(s)",
+    "accountNumberLast4": "Account Number (Last 4 digits)",
+    "routingNumber": "Routing Number",
+    "brokerageFirm": "Brokerage Firm",
+    "accountNumber": "Account Number",
+    "individual": "Individual",
+    "joint": "Joint",
+    "ira": "IRA",
+    "rothIra": "Roth IRA",
+    "401k": "401(k)",
+    "approximateValue": "Approximate Value",
+    "financialAdvisor": "Financial Advisor (if any)",
+    "walletNameLabel": "Wallet Name/Label",
+    "walletType": "Wallet Type",
+    "selectWalletType": "Select wallet type",
+    "hardwareWallet": "Hardware Wallet",
+    "softwareWallet": "Software Wallet",
+    "exchangeWallet": "Exchange Wallet",
+    "paperWallet": "Paper Wallet",
+    "cryptocurrenciesHeld": "Cryptocurrencies Held",
+    "locationOfSeedPhrase": "Location of Seed Phrase/Private Keys",
+    "exchangeInformation": "Exchange Information (if applicable)",
+    "makeAndModel": "Make and Model",
+    "year": "Year",
+    "vinNumber": "VIN Number",
+    "licensePlate": "License Plate",
+    "loanInformation": "Loan Information (if any)",
+    "locationOfTitle": "Location of Title",
+    "platformWebsiteName": "Platform/Website Name",
+    "accountEmail": "Account Email/Username",
+    "accountPurpose": "Account Purpose/Description",
+    "recoveryInformation": "Recovery Information",
+    "faMethod": "2FA Method (if enabled)",
+    "itemDescription": "Item Description",
+    "appraisedValue": "Appraised Value",
+    "lastAppraisalDate": "Last Appraisal Date",
+    "storageLocation": "Storage Location",
+    "insuranceInformation": "Insurance Information",
+    "sentimentalValue": "Sentimental Value/History",
+    "assetName": "Asset Name",
+    "estimatedValue": "Estimated Value",
+    "description": "Description",
+    "locationAccessInformation": "Location/Access Information",
+    "addSubType": "Add {subType}",
+    "cancel": "Cancel",
+    "saveAsset": "Save Asset",
+    "placeholders": {
+      "123_main_st_city_state_zip_1": "123 Main St, City, State, ZIP",
+      "lender_name_account_number_rem_2": "Lender name, account number, remaining balance",
+      "e_g_safe_deposit_box_filing_ca_3": "e.g., Safe deposit box, filing cabinet",
+      "property_location_or_parcel_nu_4": "Property location or parcel number",
+      "e_g_10_acres_5": "e.g., 10 acres, 5,000 sq ft",
+      "e_g_commercial_agricultural_6": "e.g., Commercial, Agricultural, Residential",
+      "describe_current_use_of_the_pr_7": "Describe current use of the property",
+      "e_g_chase_bank_8": "e.g., Chase Bank, Wells Fargo",
+      "john_doe_9": "John Doe",
+      "1234_10": "1234",
+      "e_g_fidelity_vanguard_11": "e.g., Fidelity, Vanguard, Charles Schwab",
+      "account_number_12": "Account number",
+      "name_and_contact_information_13": "Name and contact information",
+      "e_g_main_bitcoin_wallet_14": "e.g., Main Bitcoin Wallet",
+      "e_g_bitcoin_ethereum_15": "e.g., Bitcoin, Ethereum, Litecoin",
+      "do_not_enter_the_actual_seed_p_16": "Do not enter the actual seed phrase here",
+      "exchange_name_and_account_emai_17": "Exchange name and account email",
+      "e_g_toyota_camry_18": "e.g., Toyota Camry, Honda Civic",
+      "vehicle_identification_number_19": "Vehicle Identification Number",
+      "lender_account_number_payoff_a_20": "Lender, account number, payoff amount",
+      "e_g_safe_deposit_box_21": "e.g., Safe deposit box, home safe",
+      "e_g_gmail_facebook_22": "e.g., Gmail, Facebook, LinkedIn",
+      "user_example_com_23": "user@example.com",
+      "what_this_account_is_used_for_24": "What this account is used for",
+      "recovery_email_phone_or_securi_25": "Recovery email, phone, or security questions",
+      "e_g_sms_to_phone_ending_in_123_26": "e.g., SMS to phone ending in 123",
+      "e_g_diamond_engagement_ring_27": "e.g., Diamond engagement ring, gold necklace",
+      "e_g_home_safe_bank_deposit_box_28": "e.g., Home safe, bank deposit box",
+      "policy_number_and_company_29": "Policy number and company",
+      "special_meaning_or_history_of__30": "Special meaning or history of this item",
+      "name_or_description_of_asset_31": "Name or description of asset",
+      "detailed_description_of_the_as_32": "Detailed description of the asset",
+      "where_to_find_this_asset_or_ho_33": "Where to find this asset or how to access it"
+    }
+  },
+  "documentUploader": {
+    "smart_document_upload_2": "Smart Document Upload",
+    "upload_any_document_and_our_ai_3": "Upload any document and our AI will automatically classify it for you",
+    "please_upload_an_image_or_pdf__1": "Please upload an image or PDF file",
+    "image_application_pdf_4": "image/*,application/pdf",
+    "0_0_48_48_5": "0 0 48 48",
+    "m24_12v12m0_0l_4_4m4_4l4_4m10__6": "M24 12v12m0 0l-4 4m4-4l4 4m10-6",
+    "drop_your_document_here_or_cli_7": "Drop your document here or click to browse",
+    "supports_images_and_pdfs_up_to_8": "Supports images and PDFs up to 10MB",
+    "document_analysis_complete_10": "Document Analysis Complete",
+    "document_type_11": "Document Type",
+    "suggested_title_12": "Suggested Title",
+    "confidence": "Confidence",
+    "ai_analysis_13": "AI Analysis",
+    "continue_with_this_classificat_14": "Continue with this classification",
+    "change_category_15": "Change Category",
+    "documents_we_can_process_16": "Documents we can process:",
+    "insurance_policies_life_health_17": "Insurance policies (life, health, home, auto)",
+    "property_deeds_and_titles_18": "Property deeds and titles",
+    "vehicle_ownership_documents_19": "Vehicle ownership documents",
+    "bank_and_investment_statements_20": "Bank and investment statements",
+    "wills_and_estate_planning_docu_21": "Wills and estate planning documents",
+    "business_contracts_and_ownersh_22": "Business contracts and ownership papers",
+    "personal_identification_docume_23": "Personal identification documents",
+    "tax_returns_and_documents_24": "Tax returns and documents",
+    "categoryDescriptions": {
+      "insurance_policy": "Life, health, home, auto, or disability insurance",
+      "property_deed": "Property ownership documents and deeds",
+      "vehicle_title": "Car, boat, or other vehicle ownership papers",
+      "bank_statement": "Bank account statements and documents",
+      "investment_statement": "Investment and retirement account statements",
+      "will_or_trust": "Wills, trusts, and estate planning documents",
+      "business_document": "Business ownership and important contracts",
+      "personal_id": "Passports, licenses, birth certificates",
+      "tax_document": "Tax returns and related documents",
+      "medical_document": "Medical records and healthcare directives",
+      "other": "Other important documents"
+    },
+    "errors": {
+      "fileTypeError": "Please upload an image or PDF file",
+      "processingError": "Failed to process document",
+      "uploadError": "Failed to upload document",
+      "classificationError": "Failed to classify document"
+    }
+  },
+  "executorManagement": {
+    "failed_to_load_executors_2": "Failed to load executors",
+    "user_not_found_with_this_email_3": "User not found with this email",
+    "this_person_is_already_designa_4": "This person is already designated as an executor",
+    "failed_to_add_executor_5": "Failed to add executor",
+    "failed_to_remove_executor_6": "Failed to remove executor",
+    "loading_executors_7": "Loading executors...",
+    "executor_management_8": "Executor Management",
+    "designate_trusted_individuals__9": "Designate trusted individuals who will help manage your affairs and support your loved ones",
+    "add_new_executor_10": "Add New Executor",
+    "email_address_11": "Email Address",
+    "executor_example_com_12": "executor@example.com",
+    "relationship_type_13": "Relationship Type",
+    "primary_executor_14": "Primary Executor",
+    "secondary_executor_15": "Secondary Executor",
+    "emergency_contact_16": "Emergency Contact",
+    "current_executors_17": "Current Executors",
+    "no_executors_designated_yet_ad_18": "No executors designated yet. Add someone you trust to help manage your affairs.",
+    "important_information_19": "Important Information",
+    "primary_executors_receive_imme_20": "Primary executors receive immediate access to your vault when needed",
+    "secondary_executors_are_notifi_21": "Secondary executors are notified but have limited access",
+    "emergency_contacts_are_notifie_22": "Emergency contacts are notified in urgent situations only",
+    "all_executors_must_have_legacy_23": "All executors must have LegacyGuard accounts to access your information",
+    "successMessages": {
+      "executorAdded": "Executor added successfully",
+      "executorRemoved": "Executor removed successfully"
+    },
+    "validationMessages": {
+      "emailRequired": "Email address is required",
+      "invalidEmail": "Please enter a valid email address",
+      "relationshipTypeRequired": "Relationship type is required"
+    },
+    "statusLabels": {
+      "adding": "Adding...",
+      "addExecutor": "Add Executor",
+      "unknownUser": "Unknown User"
+    }
+  },
+  "emotionalContextSystem": {
+    "emotional_support_1": "Emotional Support",
+    "advice_2": "Advice: ",
+    "motivation_3": "Motivation: ",
+    "next_steps_4": "Next Steps: ",
+    "contextResponses": {
+      "lowConfidence": {
+        "primaryMessage": "You're handling this situation with care and insight.",
+        "supportingMessage": "It shows you understand the importance of the task.",
+        "actionableAdvice": "Continue at your own comfortable pace.",
+        "motivationalElement": "Your thoughtful approach is a testament to your values.",
+        "nextStepGuidance": "When ready, proceed with the next important step to secure your family's future."
+      },
+      "highOverwhelm": {
+        "primaryMessage": "Your dedication to your family is commendable.",
+        "supportingMessage": "It's okay to take a moment to regroup.",
+        "actionableAdvice": "Consider breaking the task into smaller parts for focus.",
+        "motivationalElement": "Knowing you're driven by love and care.",
+        "nextStepGuidance": "Each small action you take makes a significant difference."
+      },
+      "default": {
+        "primaryMessage": "You're doing meaningful work.",
+        "supportingMessage": "This effort strengthens your family's foundation.",
+        "actionableAdvice": "Stay committed to your plan.",
+        "motivationalElement": "Every decision you make protects your loved ones.",
+        "nextStepGuidance": "Seeing the big picture will guide your next steps."
+      }
+    },
+    "emotionalStates": {
+      "confidence": {
+        "high": "High",
+        "medium": "Medium",
+        "low": "Low"
+      },
+      "motivation": {
+        "high": "High",
+        "medium": "Medium",
+        "low": "Low"
+      },
+      "overwhelm": {
+        "none": "None",
+        "slight": "Slight",
+        "moderate": "Moderate",
+        "high": "High"
+      },
+      "urgency": {
+        "relaxed": "Relaxed",
+        "focused": "Focused",
+        "pressed": "Pressed",
+        "stressed": "Stressed"
+      }
+    }
+  },
+  "microTaskGenerator": {
+    "minutes_1": " minutes • ",
+    "family_impact_2": " family impact",
+    "start_task_3": "Start Task",
+    "complete_task_4": "Complete Task",
+    "skip_for_now_5": "Skip for Now",
+    "taskCategories": {
+      "identification": "Identification Documents",
+      "financial": "Financial Information",
+      "healthcare": "Healthcare Documents",
+      "legal": "Legal Documents",
+      "digital": "Digital Assets",
+      "personal": "Personal Information"
+    },
+    "difficultyLevels": {
+      "trivial": "Trivial",
+      "easy": "Easy",
+      "simple": "Simple"
+    },
+    "familyImpactLevels": {
+      "high": "High",
+      "medium": "Medium",
+      "low": "Low"
+    },
+    "taskStatus": {
+      "available": "Available",
+      "in_progress": "In Progress",
+      "completed": "Completed",
+      "skipped": "Skipped"
+    },
+    "tasks": {
+      "driversLicense": {
+        "title": "Take a photo of your driver's license",
+        "description": "Your family will need this for legal and financial matters. Having a clear photo saves them time and stress.",
+        "completionMessage": "Your family now has access to critical ID information."
+      },
+      "passport": {
+        "title": "Photograph your passport",
+        "description": "Essential for international travel arrangements and legal identification.",
+        "completionMessage": "International travel documentation is now secured for your family."
+      },
+      "birthCertificate": {
+        "title": "Scan your birth certificate",
+        "description": "Required for many legal processes and family history documentation.",
+        "completionMessage": "Birth certificate is now digitally preserved for future needs."
+      },
+      "socialSecurityCard": {
+        "title": "Document your Social Security card",
+        "description": "Critical for benefits and legal identification processes.",
+        "completionMessage": "Social Security information is now safely documented."
+      },
+      "bankAccounts": {
+        "title": "List your bank accounts",
+        "description": "Help your family manage finances and access funds when needed.",
+        "completionMessage": "Bank account information is now organized for your family."
+      },
+      "insurancePolicies": {
+        "title": "Compile insurance policy details",
+        "description": "Ensure your family knows about all coverage and can file claims.",
+        "completionMessage": "Insurance information is now comprehensive and accessible."
+      },
+      "medicalRecords": {
+        "title": "Organize medical history",
+        "description": "Help healthcare providers understand your medical background.",
+        "completionMessage": "Medical history is now organized for better healthcare decisions."
+      },
+      "medications": {
+        "title": "List current medications",
+        "description": "Critical for medical emergencies and ongoing care.",
+        "completionMessage": "Medication list is now available for medical professionals."
+      },
+      "will": {
+        "title": "Create or update your will",
+        "description": "Ensure your wishes are clearly documented and legally binding.",
+        "completionMessage": "Your will is now current and legally protected."
+      },
+      "powerOfAttorney": {
+        "title": "Designate power of attorney",
+        "description": "Authorize trusted individuals to make decisions on your behalf.",
+        "completionMessage": "Power of attorney is now properly designated."
+      },
+      "digitalPasswords": {
+        "title": "Secure digital password list",
+        "description": "Help family access important online accounts and services.",
+        "completionMessage": "Digital access is now safely organized for your family."
+      },
+      "socialMedia": {
+        "title": "Plan social media accounts",
+        "description": "Decide how your online presence should be handled.",
+        "completionMessage": "Social media legacy is now planned and documented."
+      }
+    },
+    "sessionStats": {
+      "tasksCompleted": "Tasks Completed",
+      "totalTimeSpent": "Total Time Spent",
+      "momentumScore": "Momentum Score",
+      "nextRecommendedTask": "Next Recommended Task"
+    },
+    "scoring": {
+      "urgency": "Urgency",
+      "impact": "Impact",
+      "ease": "Ease",
+      "momentum": "Momentum"
+    }
+  },
+  "settings": {
+    "title": "Settings",
+    "subtitle": "Manage your account preferences and security settings",
+    "loading": "Loading your account settings...",
+    "profile": {
+      "title": "Profile Information",
+      "description": "Update your personal information and preferences",
+      "emailAddress": "Email Address",
+      "emailCannotBeChanged": "Your email address cannot be changed",
+      "firstName": "First Name",
+      "firstNamePlaceholder": "Enter your first name",
+      "lastName": "Last Name",
+      "lastNamePlaceholder": "Enter your last name",
+      "saving": "Saving...",
+      "saveChanges": "Save Changes"
+    },
+    "security": {
+      "title": "Security",
+      "description": "Manage your account security and access",
+      "changePassword": "Change Password",
+      "currentPassword": "Current Password",
+      "currentPasswordPlaceholder": "Enter current password",
+      "newPassword": "New Password",
+      "newPasswordPlaceholder": "Enter new password",
+      "confirmNewPassword": "Confirm New Password",
+      "confirmNewPasswordPlaceholder": "Confirm new password",
+      "updating": "Updating...",
+      "updatePassword": "Update Password",
+      "twoFactorAuth": "Two-Factor Authentication",
+      "enable2FA": "Enable 2FA",
+      "2FADescription": "Add an extra layer of security to your account. (Coming Soon)"
+    },
+    "accountManagement": {
+      "title": "Account Management",
+      "description": "Permanent account actions - please proceed with caution",
+      "deleteAccountTitle": "Delete Account",
+      "deleteAccountWarning": "This action is irreversible and will permanently delete all your data, including uploaded documents and prepared instructions. Your digital legacy information will be completely removed from our systems.",
+      "deleteMyAccount": "Delete My Account",
+      "confirmTitle": "Are you absolutely sure?",
+      "confirmDescription": "This action cannot be undone. This will permanently delete your account and remove all your data from our servers.",
+      "confirmEmailPrompt": "Please type your email address {{email}} to confirm:",
+      "emailPlaceholder": "Enter your email address",
+      "deleting": "Deleting...",
+      "deleteAccount": "Delete Account"
+    },
+    "errors": {
+      "loadProfile": "Failed to load profile information",
+      "updateProfile": "Failed to update profile",
+      "passwordFieldsRequired": "Please fill in all password fields",
+      "passwordsDoNotMatch": "New passwords do not match",
+      "passwordTooShort": "New password must be at least 6 characters long",
+      "updatePassword": "Failed to update password",
+      "emailDoesNotMatch": "Email address does not match",
+      "deleteAccountSupport": "Account deletion must be requested through support. Please contact us for assistance.",
+      "deleteAccount": "Failed to delete account"
+    },
+    "success": {
+      "profileUpdated": "Profile updated successfully",
+      "passwordUpdated": "Password updated successfully"
+    },
+    "privacySettings": {
+      "privacy_settings_1": "Privacy Settings",
+      "control_how_your_documents_are_2": "Control how your documents are processed and stored",
+      "default_processing_mode_3": "Default Processing Mode",
+      "choose_how_documents_are_proce_4": "Choose how documents are processed by default",
+      "hybrid_mode_recommended_5": "Hybrid Mode (Recommended)",
+      "combines_local_and_cloud_ai_fo_6": "Combines local and cloud AI for optimal performance and privacy",
+      "local_only_privacy_mode_7": "Local-Only Privacy Mode",
+      "processes_documents_entirely_i_8": "Processes documents entirely in your browser for maximum privacy",
+      "note_9": "Note: ",
+      "you_can_always_override_this_s_10": "You can always override this setting when uploading individual documents"
+    }
+  },
+  "debug": {
+    "panel": {
+      "title": "Debug Panel",
+      "recentErrors": "Recent application errors",
+      "technicalDetails": "Technical Details",
+      "tabs": {
+        "list": "List",
+        "details": "Details"
+      },
+      "errorCount": "{{count}} errors",
+      "actions": {
+        "downloadErrors": "Download errors",
+        "clearAllErrors": "Clear all errors"
+      },
+      "messages": {
+        "errorsCleared": "All errors cleared",
+        "errorCopied": "Error copied to clipboard",
+        "errorsDownloaded": "Errors downloaded"
+      },
+      "error": {
+        "unknownError": "Unknown Error",
+        "noMessage": "No message",
+        "errorMessage": "Error Message"
+      },
+      "sections": {
+        "stackTrace": "Stack Trace",
+        "context": "Context",
+        "location": "Location",
+        "browserInfo": "Browser Information",
+        "time": "Time"
+      },
+      "fields": {
+        "url": "URL:",
+        "path": "Path:",
+        "query": "Query:",
+        "userAgent": "User Agent:",
+        "viewport": "Viewport:"
+      }
+    }
+  },
+  "upgradeCard": {
+    "pricing_1": "/pricing",
+    "defaultButtonText": "Upgrade to Command Package"
+  },
+  "myPossessions": {
+    "my_possessions_1": "My Possessions",
+    "an_inventory_of_the_important__2": "An inventory of the important things that support your family's future.",
+    "family_impact_3": "Family Impact:",
+    "edit_details_4": "Edit Details",
+    "link_papers_5": "Link Papers (",
+    "assign_access_6": "Assign Access",
+    "add_your_first_7": "Add Your First ",
+    "areas": {
+      "home": {
+        "title": "Your Home & Property",
+        "description": "The places that provide shelter and create memories.",
+        "emptyState": "Document your property to ensure your family's shelter is secure.",
+        "addButton": "Property"
+      },
+      "savings": {
+        "title": "Your Savings & Investments",
+        "description": "The financial foundation you've built for your family's future.",
+        "emptyState": "Record your financial accounts so your family can access funds when needed.",
+        "addButton": "Account"
+      },
+      "business": {
+        "title": "Your Business",
+        "description": "The work that supports your family and creates your professional legacy.",
+        "emptyState": "Document your business details to ensure smooth succession and continued income.",
+        "addButton": "Business"
+      },
+      "valuables": {
+        "title": "Your Valuables & Collections",
+        "description": "Items of financial or sentimental value that need special consideration.",
+        "emptyState": "List valuable items that need special handling or have sentimental value.",
+        "addButton": "Valuable"
+      }
+    },
+    "mockData": {
+      "lakeCabin": "Lake Cabin",
+      "emergencyFund": "Emergency Fund",
+      "yourBusiness": "Your Business",
+      "johnsonContracting": "Johnson Contracting LLC",
+      "classicCarCollection": "Classic Car Collection"
+    }
+  },
+  "analytics": {
+    "demo": {
+      "startTimer": "Start Timer",
+      "stopTimer": "Stop Timer"
+    }
+  },
+  "securityStatus": {
+    "how_we_protect_your_legacy_1": "How We Protect Your Legacy",
+    "your_trust_is_our_highest_prio_2": "Your trust is our highest priority. We use enterprise-grade security to keep your family's information safe.",
+    "for_your_family_3": "For your family: ",
+    "your_security_status_fully_pro_4": "Your Security Status: Fully Protected",
+    "all_security_features_are_acti_5": "All security features are active and protecting your family's information.",
+    "features": {
+      "endToEndEncryption": "End-to-End Encryption",
+      "secureCloudStorage": "Secure Cloud Storage",
+      "localOnlyPrivacyMode": "Local-Only Privacy Mode",
+      "multiFactorAuthentication": "Multi-Factor Authentication",
+      "europeanDataCenters": "European Data Centers",
+      "zeroKnowledgeArchitecture": "Zero-Knowledge Architecture"
+    },
+    "explanations": {
+      "endToEndEncryption": "Your data is scrambled into an unreadable code from the moment it leaves your device until you view it again.",
+      "secureCloudStorage": "Your encrypted data is stored in world-class, physically secure data centers.",
+      "localOnlyPrivacyMode": "When you use Local-Only Mode, your sensitive documents are never sent to our servers.",
+      "multiFactorAuthentication": "Requires both your password and a code from your phone to log in.",
+      "europeanDataCenters": "All your data is stored exclusively in secure European data centers with strict privacy laws.",
+      "zeroKnowledgeArchitecture": "We've designed our system so we can't see your data, even if we wanted to."
+    },
+    "analogies": {
+      "endToEndEncryption": "It's like sending a letter in a locked box that only you have the key to open.",
+      "secureCloudStorage": "It's like keeping your locked box inside a bank vault with 24/7 guards.",
+      "localOnlyPrivacyMode": "It's like writing your most private notes in a diary that never leaves your house.",
+      "multiFactorAuthentication": "It's like needing both a key and a secret handshake to get into a private club.",
+      "europeanDataCenters": "It's like choosing to store your valuables in a country known for its strong privacy protection.",
+      "zeroKnowledgeArchitecture": "It's like having a safety deposit box where even the bank manager doesn't have the key."
+    },
+    "familyBenefits": {
+      "endToEndEncryption": "Ensures that no one—not even us—can read your personal information.",
+      "secureCloudStorage": "Protects your plan from being lost to fire, theft, or computer failure.",
+      "localOnlyPrivacyMode": "Gives you absolute certainty that your most private documents remain in your control.",
+      "multiFactorAuthentication": "Prevents anyone from accessing your account, even if they steal your password.",
+      "europeanDataCenters": "Your family's data is protected by some of the world's strongest privacy regulations.",
+      "zeroKnowledgeArchitecture": "Your family's secrets remain secrets, protected from everyone including us."
+    }
+  },
+  "familyPreparednessTools": {
+    "use_these_tools_to_ensure_your_1": "Use these tools to ensure your family is prepared and knows what to do in emergency situations.",
+    "generate_emergency_guide_2": "Generate Emergency Guide",
+    "create_a_printable_guide_for_y_3": "Create a printable guide for your family to follow in emergency situations.",
+    "select_scenario_4": "Select Scenario",
+    "generate_another_5": "Generate Another",
+    "tools": {
+      "informationTreasureHunt": "Information Treasure Hunt",
+      "videoMessages": "Video Messages",
+      "emergencySimulator": "Emergency Situation Simulator",
+      "stepByStepGuides": "Step-by-Step Guides",
+      "emergencySimulatorDesc": "Run a practice drill. We'll send a test scenario to your family to see if they can find the information they need.",
+      "stepByStepGuidesDesc": "Generate printable, scenario-based guides for your family (e.g., 'What to do in the first 24 hours').",
+      "treasureHuntDesc": "A gamified quiz for your family to ensure they know key facts, like where to find the will or who your lawyer is.",
+      "videoMessagesDesc": "Record personal video messages for your loved ones to be unlocked in specific circumstances.",
+      "launch": "Launch",
+      "chooseScenario": "Choose a scenario",
+      "cancel": "Cancel",
+      "generating": "Generating...",
+      "generateGuide": "Generate Guide",
+      "printGuide": "Print Guide"
+    },
+    "scenarios": {
+      "death": {
+        "title": "In case of my death",
+        "description": "A comprehensive guide for handling immediate tasks after your passing"
+      },
+      "hospitalization": {
+        "title": "If I am hospitalized",
+        "description": "Steps to take if you are incapacitated or in medical care"
+      },
+      "missing": {
+        "title": "If I go missing",
+        "description": "Critical information and contacts if you cannot be located"
+      },
+      "emergency": {
+        "title": "General emergency",
+        "description": "Quick reference for any urgent situation"
+      }
+    },
+    "guides": {
+      "death": {
+        "title": "Emergency Guide: In Case of My Death",
+        "generatedOn": "Generated on",
+        "first24Hours": "🚨 First 24 Hours Checklist",
+        "contactExecutor": "Contact the Executor:",
+        "contactLawyer": "Contact the Lawyer:",
+        "locateWill": "Locate the Will:",
+        "secureResidence": "Secure the Residence:",
+        "importantDocuments": "📋 Important Documents",
+        "deathCertificate": "Death Certificate:",
+        "bankAccounts": "Bank Accounts:",
+        "investmentAccounts": "Investment Accounts:",
+        "peopleToNotify": "👥 People to Notify",
+        "employer": "Employer:",
+        "insuranceCompanies": "Insurance Companies:",
+        "financialInstitutions": "Financial Institutions:",
+        "socialSecurity": "Social Security Administration:",
+        "disclaimer": "This guide was generated based on the information you've provided. Please ensure all details are kept up to date."
+      },
+      "hospitalization": {
+        "title": "Emergency Guide: If I Am Hospitalized",
+        "medicalInformation": "🏥 Medical Information",
+        "primaryCarePhysician": "Primary Care Physician:",
+        "preferredHospital": "Preferred Hospital:",
+        "bloodType": "Blood Type:",
+        "allergies": "Allergies:",
+        "currentMedications": "Current Medications:",
+        "emergencyContacts": "📞 Emergency Contacts",
+        "legalDocuments": "📄 Legal Documents",
+        "healthcarePowerOfAttorney": "Healthcare Power of Attorney:",
+        "livingWill": "Living Will:",
+        "hipaaRelease": "HIPAA Release:"
+      },
+      "missing": {
+        "title": "Emergency Guide: If I Go Missing",
+        "immediateActions": "🔍 Immediate Actions",
+        "contactLocalPolice": "Contact local police immediately",
+        "checkWithWorkplace": "Check with workplace:",
+        "contactCloseFriends": "Contact close friends and regular contacts",
+        "checkHospitals": "Check hospitals in the area",
+        "digitalFootprint": "📱 Digital Footprint",
+        "phoneProvider": "Phone Provider:",
+        "email": "Email:",
+        "socialMedia": "Social Media:",
+        "bankingApps": "Banking Apps:"
+      },
+      "emergency": {
+        "title": "General Emergency Quick Reference",
+        "keyContacts": "🚨 Key Contacts",
+        "emergency": "Emergency:",
+        "spouse": "Spouse:",
+        "attorney": "Attorney:",
+        "financialAdvisor": "Financial Advisor:",
+        "insuranceAgent": "Insurance Agent:",
+        "homeInformation": "🏠 Home Information",
+        "address": "Address:",
+        "securitySystem": "Security System:",
+        "utilities": "Utilities:"
+      }
+    },
+    "errors": {
+      "premiumRequired": "This feature is only available for premium users. Please upgrade to access all tools.",
+      "selectScenario": "Please select a scenario",
+      "generateFailed": "Failed to generate guide",
+      "comingSoon": "feature coming soon!"
+    },
+    "mockContent": {
+      "insurancePolicies": "Insurance Policies"
+    }
+  },
+  "lifeEvents": {
+    "title": "Life Events",
+    "subtitle": "Update your plan when major life changes occur",
+    "addEvent": "Add Life Event",
+    "noEvents": "No life events recorded yet",
+    "addFirstEvent": "Add your first life event to get started",
+    "events": {
+      "marriedDivorced": "Marriage/Divorce Update",
+      "newChild": "New Child Update",
+      "boughtSoldHome": "Real Estate Update",
+      "startedBusiness": "New Business Update",
+      "trustedPersonPassed": "Update Trusted Persons",
+      "unknown": "Unknown Event"
+    },
+    "congratsMessage": "Congratulations on your new child! Here are the recommended updates to your plan:",
+    "tasks": {
+      "updateBeneficiaries": "Update beneficiaries on all accounts",
+      "updateBeneficiariesDesc": "Review and update beneficiaries on life insurance, retirement accounts, and bank accounts.",
+      "updateWill": "Update your will",
+      "updateWillDesc": "Ensure your will reflects your new marital status and beneficiary wishes.",
+      "reviewTrusts": "Review and update any trusts",
+      "reviewTrustsDesc": "Make necessary changes to trust documents to reflect your new status.",
+      "updateEmergencyContacts": "Update emergency contacts",
+      "updateEmergencyContactsDesc": "Review and update emergency contacts in your Trusted Circle.",
+      "addChildRoster": "Add your new child to your Trusted Circle",
+      "addChildRosterDesc": "Include your child in your family information.",
+      "updateGuardian": "Review and update the \"Guardian\" designation for your children",
+      "updateGuardianDesc": "Ensure you have designated appropriate guardians for all your children.",
+      "reviewLifeInsurance": "Review your life insurance policy to ensure coverage is adequate",
+      "reviewLifeInsuranceDesc": "Consider increasing coverage to account for your growing family.",
+      "updateWillBeneficiary": "Update your will to include your new child as a beneficiary",
+      "updateWillBeneficiaryDesc": "Ensure your new child is properly included in your estate planning.",
+      "updatePropertyArmory": "Update property information in your Vault",
+      "updatePropertyArmoryDesc": "Add new property or remove sold property from your assets.",
+      "updateMortgageInfo": "Update mortgage and deed information",
+      "updateMortgageInfoDesc": "Ensure all property-related documents are current.",
+      "reviewHomeownersInsurance": "Review homeowners/property insurance",
+      "reviewHomeownersInsuranceDesc": "Update insurance policies to reflect your current properties.",
+      "updateNetWorth": "Update your net worth calculation",
+      "updateNetWorthDesc": "Reflect the change in your real estate holdings.",
+      "addBusinessAssets": "Add business to your Vault",
+      "addBusinessAssetsDesc": "Include your business as an asset with relevant details.",
+      "createSuccessionPlan": "Create a business succession plan",
+      "createSuccessionPlanDesc": "Document what should happen to your business if something happens to you.",
+      "updateInsurance": "Review insurance needs",
+      "updateInsuranceDesc": "Consider key person insurance and business liability coverage.",
+      "separatePersonalBusiness": "Ensure personal and business assets are properly separated",
+      "separatePersonalBusinessDesc": "Review the distinction between personal and business holdings.",
+      "removeDeceased": "Update your Trusted Circle",
+      "removeDeceasedDesc": "Remove the deceased person and reassign their responsibilities.",
+      "appointNewExecutor": "Appoint a new executor/trustee if needed",
+      "appointNewExecutorDesc": "If the deceased was your executor or trustee, designate a replacement.",
+      "updateBeneficiariesDesc2": "Check if the deceased was a beneficiary on any accounts.",
+      "updateEmergencyContactsDesc2": "Review all emergency contact information."
+    }
+  },
+  "scenarioPlanner": {
+    "scenarios": {
+      "hospitalized": {
+        "title": "What if you're in the hospital for 3 months?",
+        "description": "An unexpected health issue means you're unable to manage daily affairs. Your family needs to step in."
+      },
+      "incapacitated": {
+        "title": "What if you become incapacitated?",
+        "description": "A serious accident leaves you unable to make decisions for yourself. Who will make them for you?"
+      },
+      "suddenPassing": {
+        "title": "What if something happens to you tomorrow?",
+        "description": "The ultimate test of your preparation. Is your family ready to navigate this difficult time without chaos?"
+      }
+    },
+    "timeframes": {
+      "first24Hours": "First 24 Hours",
+      "firstWeek": "First Week",
+      "firstMonth": "First Month",
+      "threeToSixMonths": "3-6 Months"
+    },
+    "vulnerabilities": {
+      "billsGoUnpaid": "Bills Go Unpaid",
+      "businessDecisionsStall": "Business Decisions Stall",
+      "familyCannotManageFinances": "Family cannot legally manage your finances",
+      "familyCannotAccessBankAccount": "Family cannot access primary bank account",
+      "businessNoLeadership": "Business operations have no clear leadership",
+      "noWillFound": "No Will Found",
+      "insuranceDetailsUnknown": "Insurance Details Unknown",
+      "noWillAvailable": "No will available",
+      "unknownLifeInsurance": "Unknown life insurance details"
+    },
+    "actions": {
+      "designatePowerOfAttorney": "Designate a Power of Attorney for finances",
+      "grantSpouseAccess": "Grant spouse access to your primary account",
+      "createBusinessContinuityPlan": "Create a business continuity plan",
+      "draftWill": "Draft and store a legally binding will",
+      "compileInsuranceList": "Compile a list of all insurance policies"
+    },
+    "timelineEvents": {
+      "notifyImmediateFamily": "Notify immediate family",
+      "securePhysicalProperty": "Secure physical property",
+      "contactExecutor": "Contact executor",
+      "locateWill": "Locate the will",
+      "executorBeginsProbate": "Executor begins probate process",
+      "notifyEmployer": "Notify employer",
+      "activatePowerOfAttorney": "Activate Power of Attorney",
+      "arrangeBillPayments": "Arrange bill payments",
+      "fileDisabilityBenefits": "File for disability benefits"
+    },
+    "descriptions": {
+      "billsGoUnpaid": "Your family can't access your primary checking account to pay the mortgage.",
+      "businessDecisionsStall": "Clients and employees don't know who is authorized to make decisions.",
+      "familyCannotManageFinances": "Your spouse can now legally manage all financial matters, ensuring bills are paid and investments are protected.",
+      "familyCannotAccessBankAccount": "Your family can now pay bills and manage daily expenses without delay or legal complications.",
+      "businessNoLeadership": "Your business can continue operating smoothly with clear leadership and decision-making processes.",
+      "noWillFound": "The family cannot locate or confirm the existence of a will.",
+      "insuranceDetailsUnknown": "Life insurance policy details and beneficiaries are unknown.",
+      "notifyImmediateFamily": "Ensure all immediate family members are informed.",
+      "securePhysicalProperty": "Ensure that the home and vehicles are secure.",
+      "contactExecutor": "Reach out to John Smith to start will proceedings.",
+      "locateWill": "Locate and secure the will at the designated location.",
+      "executorBeginsProbate": "The executor will file for probate to manage the estate.",
+      "notifyEmployer": "Inform workplace about extended absence.",
+      "activatePowerOfAttorney": "Ensure designated person can make decisions.",
+      "arrangeBillPayments": "Set up automatic payments or delegate to trusted person.",
+      "fileDisabilityBenefits": "Submit necessary paperwork for insurance claims."
+    },
+    "scenario_planner_1": "Scenario Planner",
+    "let_s_see_how_prepared_your_fa_2": "Let's see how prepared your family is for different scenarios",
+    "generate_family_action_plan_3": "Generate Family Action Plan",
+    "generate_plan_4": "Generate Plan",
+    "current_family_vulnerabilities_6": "Current Family Vulnerabilities",
+    "without_proper_preparation_you_7": "Without proper preparation, you and your family could face these challenges",
+    "projected_timeline_8": "Projected Timeline",
+    "potential_financial_impact_9": "Potential Financial Impact",
+    "these_are_estimates_of_the_pos_10": "These are estimates of the potential costs if vulnerabilities are not addressed",
+    "no_will_11": "No Will: ",
+    "potential_cost_of_lengthy_prob_12": "Potential cost of lengthy probate process: ",
+    "5_000_15_000_13": "$5,000 - $15,000",
+    "estimated_14": " estimated",
+    "potential_loss_of_business_rev_15": "Potential loss of business revenue during transition: ",
+    "20_000_16": "$20,000",
+    "your_preparedness_blueprint_17": "Your Preparedness Blueprint",
+    "your_family_is_currently_18": "Your family is currently ",
+    "protected_in_this_scenario_19": "% protected in this scenario",
+    "vulnerability_20": "Vulnerability: ",
+    "action_required_21": "Action Required: ",
+    "resolve_this_vulnerability_22": "Resolve This Vulnerability",
+    "resolved_23": "Resolved: ",
+    "family_action_plan_24": "Family Action Plan",
+    "a_comprehensive_guide_for_your_25": "A comprehensive guide for your family to follow in case of emergency",
+    "print_plan_26": "Print Plan",
+    "_27": "🤕"
+  },
+  "will": {
+    "title": "Create Your Will",
+    "subtitle": "Organize your final wishes and ensure your legacy is protected",
+    "loading": "Loading will information...",
+    "generateNewWill": "Generate New Will",
+    "backToManagement": "← Back to Will Management",
+    "sections": {
+      "statusInfo": "Status & Information",
+      "willDocument": "Will Document"
+    },
+    "fields": {
+      "currentStatus": "Current Status",
+      "physicalLocation": "Physical Location",
+      "executorContact": "Executor Contact",
+      "additionalNotes": "Additional Notes"
+    },
+    "status": {
+      "notStarted": "Not Started",
+      "inPreparation": "In Preparation",
+      "completedSigned": "Completed & Signed",
+      "withNotary": "With Notary"
+    },
+    "descriptions": {
+      "statusDescription": "Track the current status of your will preparation",
+      "physicalLocationDescription": "Where is the physical copy of your will stored?",
+      "executorDescription": "Select the person who will execute your will"
+    },
+    "placeholders": {
+      "physicalLocation": "e.g., Safe deposit box at Main Street Bank",
+      "selectContact": "Select a contact",
+      "additionalNotes": "Any additional notes or instructions..."
+    },
+    "options": {
+      "noContactSelected": "No contact selected"
+    },
+    "document": {
+      "uploaded": "Document uploaded successfully",
+      "uploadedDescription": "Your will document has been securely stored",
+      "noDocument": "No will document uploaded",
+      "noDocumentDescription": "Upload your will document for secure storage"
+    },
+    "buttons": {
+      "saving": "Saving...",
+      "saveWillInfo": "Save Will Information",
+      "uploadNewVersion": "Upload New Version",
+      "uploadDocument": "Upload Document"
+    },
+    "messages": {
+      "savedSuccessfully": "Will information saved successfully",
+      "documentUploaded": "Will document uploaded successfully",
+      "willGenerated": "Will generated successfully"
+    },
+    "errors": {
+      "loadingFailed": "Failed to load will information",
+      "savingFailed": "Failed to save will information",
+      "mustBeLoggedIn": "You must be logged in to save will information"
+    },
+    "steps": {
+      "countrySelection": "Where you live",
+      "countrySelectionDesc": "Tell us your country and basic details",
+      "assetAllocation": "Sharing what you have",
+      "assetAllocationDesc": "Decide how to share your treasures",
+      "beneficiaries": "People you care about",
+      "beneficiariesDesc": "Choose who receives your gifts",
+      "executors": "Who will help",
+      "executorsDesc": "Pick someone to carry out your wishes",
+      "review": "Review everything",
+      "reviewDesc": "Check and confirm your decisions"
+    },
+    "progress": "Step {{current}} of {{total}}",
+    "validation": {
+      "selectCountry": "Please select a country",
+      "requiredField": "This field is required",
+      "allocation100": "Total allocation must equal 100%",
+      "atLeastOneBeneficiary": "At least one beneficiary is required",
+      "executorRequired": "Someone to help is required",
+      "fixErrors": "Please fix the errors in the form",
+      "errors": {
+        "nameMinLength": "Name must be at least {{min}} characters long",
+        "nameMaxLength": "Name must be no more than {{max}} characters long",
+        "relationshipRequired": "Relationship is required",
+        "countryRequired": "Country is required",
+        "countryCodeLength": "Country code must be 2 characters",
+        "selectAtLeastOne": "Please select at least one {{field}}",
+        "selectUpTo": "Please select up to {{max}} {{field}}",
+        "invalidEmail": "Please enter a valid email address",
+        "invalidPhone": "Please enter a valid phone number"
+      }
+    },
+    "generation": {
+      "success": "Will generated successfully!",
+      "error": "Failed to generate will"
+    }
+  },
+  "will_generator": {
+    "uk_jurisdiction_title": "Which part of the UK is your primary residence?",
+    "jurisdiction_england": "England",
+    "jurisdiction_wales": "Wales",
+    "jurisdiction_scotland": "Scotland",
+    "jurisdiction_northern_ireland": "Northern Ireland",
+    "select_will_language_title": "Please select the language for your will:",
+    "error_uk_jurisdiction_required": "Please select a jurisdiction within the UK to continue."
+  },
+  "contacts": {
+    "errors": {
+      "loadingFailed": "Failed to load contacts."
+    }
+  },
+  "guardianUpload": {
+    "addTitle": "Add Guardian",
+    "editTitle": "Edit Guardian",
+    "description": "Add a trusted person who will help manage your affairs and support your loved ones.",
+    "fullNameLabel": "Full Name",
+    "fullNamePlaceholder": "Enter guardian's full name",
+    "relationshipLabel": "Relationship",
+    "relationshipPlaceholder": "Select relationship",
+    "countryLabel": "Country of Residence",
+    "countryPlaceholder": "Select country",
+    "countryDescription": "This helps us provide region-specific legal guidance",
+    "rolesTitle": "Roles & Responsibilities",
+    "emailLabel": "Email Address",
+    "emailPlaceholder": "Enter email address (optional)",
+    "phoneLabel": "Phone Number",
+    "phonePlaceholder": "Enter phone number (optional)",
+    "addButton": "Add Guardian",
+    "updateButton": "Update Guardian",
+    "saving": "Saving...",
+    "success": "Success",
+    "added": "Guardian added successfully",
+    "updated": "Guardian updated successfully",
+    "error": "Error",
+    "loginToSave": "You must be logged in to save guardians",
+    "relationships": {
+      "spouse": "Spouse",
+      "parent": "Parent",
+      "sibling": "Sibling",
+      "child": "Child",
+      "friend": "Friend",
+      "legalProfessional": "Legal Professional",
+      "other": "Other"
+    },
+    "roles": {
+      "guardianForChildren": "Guardian for Children",
+      "executorOfWill": "Executor of Will",
+      "healthcareProxy": "Healthcare Proxy",
+      "financialPowerOfAttorney": "Financial Power of Attorney",
+      "emergencyContact": "Emergency Contact",
+      "trustee": "Trustee"
+    },
+    "errors": {
+      "saveError": "An error occurred while saving the guardian",
+      "requiredDataNotFound": "Required data were not found",
+      "connectionError": "Connection error. Please check your internet connection",
+      "permissionError": "You do not have permission to perform this action",
+      "duplicateError": "A record with this information already exists",
+      "unknownError": "An unknown error occurred"
+    }
+  },
+  "documentUpload": {
+    "fileUploadedSuccess": "File uploaded successfully!",
+    "fileUploadFailed": "Failed to upload file. Please try again.",
+    "fileTooLarge": "Selected file is too large. Maximum size is {{maxSize}} MB.",
+    "fillRequiredFields": "Please fill in all required fields",
+    "loginToSave": "You must be logged in to save documents",
+    "saved": "Document saved successfully!",
+    "failedSave": "Failed to save document. Please try again.",
+    "detailsTitle": "Document Details",
+    "detailsSubtitle": "Add information about your uploaded document",
+    "namePlaceholder": "Enter document name",
+    "typePlaceholder": "Select document type",
+    "countryPlaceholder": "Select country",
+    "pickDate": "Pick a date",
+    "title": "Upload Document",
+    "subtitle": "Upload legal and personal documents securely",
+    "browseFiles": "Browse Files",
+    "chooseDifferent": "Choose Different File",
+    "uploadButton": "Upload Document",
+    "storageLimitReached": "Cannot upload file. You have {{remaining}} of storage remaining, but this file is {{fileSize}}. Please upgrade your plan or remove some existing files."
+  },
+  "assetDetail": {
+    "loading": "Loading asset details...",
+    "errors": {
+      "failedToLoad": "Failed to load asset details",
+      "nameRequired": "Asset name is required",
+      "failedToSave": "Failed to save asset"
+    },
+    "messages": {
+      "createdSuccessfully": "Asset created successfully",
+      "updatedSuccessfully": "Asset updated successfully"
+    },
+    "title": {
+      "new": "New {{type}}"
+    },
+    "subtitle": {
+      "new": "Fill in the details to add this asset to your portfolio",
+      "edit": "Update the details of this asset"
+    },
+    "story": {
+      "title": "The Story Behind This {{type}}",
+      "editButton": "Edit Story",
+      "addButton": "Add a Story",
+      "emptyTitle": "What's the story behind this item?",
+      "emptyDescription": "Add a personal memory or explain the significance of this item for your loved ones. This intangible legacy is often the most valuable."
+    },
+    "sections": {
+      "assetInformation": "Asset Information",
+      "basicInformation": "Basic Information",
+      "propertyDetails": "Property Details",
+      "accountDetails": "Account Details",
+      "financialDetails": "Financial Details",
+      "liabilitiesAndDocuments": "Related Liabilities & Documents"
+    },
+    "fields": {
+      "assetName": "Asset Name",
+      "assetType": "Asset Type",
+      "propertyAddress": "Property Address",
+      "propertyRegistryNumber": "Property Registry Number",
+      "accountType": "Account Type",
+      "financialInstitution": "Financial Institution",
+      "accountNumber": "Account Number / IBAN",
+      "loginCredentials": "Login Credentials & Notes",
+      "estimatedValue": "Estimated Value",
+      "currency": "Currency",
+      "liabilityType": "Liability Type",
+      "providerName": "Provider Name",
+      "referenceNumber": "Reference Number"
+    },
+    "placeholders": {
+      "assetName": "e.g., Family Home, Investment Portfolio",
+      "propertyAddress": "Enter full property address",
+      "propertyRegistryNumber": "e.g., Property registry number",
+      "selectAccountType": "Select account type",
+      "financialInstitution": "e.g., Bank of America, Chase",
+      "accountNumber": "e.g., 1234567890",
+      "loginCredentials": "Password manager: 1Password vault 'Banking'",
+      "estimatedValue": "0"
+    },
+    "descriptions": {
+      "assetName": "Give this asset a descriptive name for easy identification",
+      "assetType": "Select the type that best describes this asset",
+      "propertyAddress": "Complete address including street, city, postal code, and country",
+      "propertyRegistryNumber": "Official registry or cadastral number for this property",
+      "accountType": "Type of financial account or investment",
+      "financialInstitution": "Name of the bank or financial institution",
+      "accountNumber": "Account number, IBAN, or other identifying information",
+      "estimatedValue": "Current market value or last known value of this asset",
+      "currency": "Currency in which the value is expressed",
+      "noLiabilities": "No liabilities added yet"
+    },
+    "types": {
+      "realEstate": "Real Estate",
+      "business": "Business",
+      "vehicle": "Vehicle",
+      "financialAccount": "Financial Account",
+      "asset": "Asset"
+    },
+    "accountTypes": {
+      "bankAccount": "Bank Account",
+      "investmentPortfolio": "Investment Portfolio",
+      "pensionFund": "Pension Fund"
+    },
+    "securityWarning": "Security Warning:",
+    "securityWarningText": "Do not store actual passwords here. Use this field for hints, password manager locations, or other secure access instructions.",
+    "buttons": {
+      "cancel": "Cancel",
+      "saving": "Saving...",
+      "createAsset": "Create Asset",
+      "updateAsset": "Update Asset",
+      "addLiability": "Add Liability"
+    }
+  },
+  "assets": {
+    "overview": {
+      "title": "What You Own and Cherish",
+      "subtitle": "Manage and track your assets, properties, and investments",
+      "addAsset": "Add Asset",
+      "totalPortfolioValue": "Total Portfolio Value",
+      "estimatedValue": "Estimated value across all assets",
+      "distribution": {
+        "title": "Asset Distribution",
+        "subtitle": "Portfolio breakdown by category"
+      },
+      "beneficiaryAllocation": {
+        "title": "Sharing Your Treasures",
+        "subtitle": "Track how your treasures are shared with loved ones",
+        "allAssigned": "All treasures have loved ones assigned",
+        "unassignedWarning": "{{count}} treasures need to be assigned to loved ones"
+      },
+      "viewInheritanceSummary": "View Inheritance Summary",
+      "addNew": "Add New",
+      "errors": {
+        "loadFailed": "Failed to load asset data"
+      }
+    },
+    "categories": {
+      "property": "Property",
+      "vehicle": "Vehicle",
+      "financial": "Financial",
+      "business": "Business",
+      "personal": "Personal",
+      "uncategorized": "Uncategorized"
+    }
+  },
+  "help": {
+    "needHelp": "Need Help?",
+    "getHelp": "Get Help",
+    "helpAndTutorials": "Help & Tutorials",
+    "recommendedForYou": "Recommended for You",
+    "basedOnProgress": "Based on your current progress, here's what we recommend:",
+    "personalizedHelpDescription": "Get personalized help based on where you are in your journey",
+    "recommendedTopics": "Recommended topics",
+    "quickTips": {
+      "title": "Quick Tips",
+      "tip1": "Start with your most important documents first",
+      "tip2": "Add at least one trusted guardian",
+      "tip3": "Update your information regularly",
+      "tip4": "Test your guardian's access annually"
+    },
+    "topics": {
+      "uploadDocuments": {
+        "title": "Upload Your First Document",
+        "description": "Learn how to securely upload and organize your important documents",
+        "steps": {
+          "1": "Click the 'Upload Document' button in the Organize section",
+          "2": "Select your document file from your computer",
+          "3": "Choose the document type and add a descriptive name",
+          "4": "Set an expiration date if applicable",
+          "5": "Save the document to your secure vault"
+        }
+      },
+      "addGuardians": {
+        "title": "Add Your First Guardian",
+        "description": "Set up trusted people who can access your information in emergencies",
+        "steps": {
+          "1": "Click 'Add Guardian' in the Secure section",
+          "2": "Enter your guardian's full name and relationship",
+          "3": "Select their roles and responsibilities",
+          "4": "Add their contact information",
+          "5": "Send them an invitation to accept their role"
+        }
+      },
+      "listAssets": {
+        "title": "List Your Assets",
+        "description": "Document your properties, accounts, and valuable possessions",
+        "steps": {
+          "1": "Click 'Add Item' in the Organize section",
+          "2": "Choose the asset type (property, vehicle, account, etc.)",
+          "3": "Enter the asset name and details",
+          "4": "Add estimated value if desired",
+          "5": "Save the asset to your inventory"
+        }
+      },
+      "designateBeneficiaries": {
+        "title": "Designate Beneficiaries",
+        "description": "Specify who should receive your assets and in what proportions",
+        "steps": {
+          "1": "Click 'Add Beneficiary' in the Transfer section",
+          "2": "Enter the beneficiary's name",
+          "3": "Set their allocation percentage",
+          "4": "Review total allocations (must equal 100%)",
+          "5": "Save your beneficiary list"
+        }
+      },
+      "createWill": {
+        "title": "Create Your Will",
+        "description": "Generate a basic will document based on your information",
+        "steps": {
+          "1": "Navigate to the Will section",
+          "2": "Complete all required information",
+          "3": "Review your beneficiaries and assets",
+          "4": "Generate the will document",
+          "5": "Download and have it properly witnessed"
+        }
+      }
+    },
+    "stepDetails": {
+      "description": "Description",
+      "stepByStepInstructions": "Step-by-Step Instructions",
+      "videoTutorial": "Video Tutorial",
+      "watchVideoTutorial": "Watch Video Tutorial",
+      "estimatedTime": "Estimated time",
+      "minutes": "minutes",
+      "steps": "steps",
+      "gotIt": "Got it!"
+    },
+    "priority": {
+      "high": "high",
+      "medium": "medium",
+      "low": "low"
+    }
+  },
+  "pricing": {
+    "title": "Pricing",
+    "subtitle": "Start free or upgrade for more ways to protect your loved ones.",
+    "mainTitle": "Choose How You Care",
+    "mainSubtitle": "Start free or add more protection features when you're ready.",
+    "freePlan": {
+      "name": "Essential Protector",
+      "description": "Get started with basic features",
+      "price": "Free",
+      "features": {
+        "will": "1 Will document",
+        "guardians": "2 Guardians",
+        "assets": "5 Assets",
+        "support": "Basic support"
+      }
+    },
+    "premiumPlan": {
+      "name": "Command Package",
+      "description": "Perfect for individuals and families",
+      "price": "$9.99 / month",
+      "upgradeButton": "Upgrade Now",
+      "features": {
+        "will": "Unlimited Will documents",
+        "guardians": "Unlimited Guardians",
+        "assets": "Unlimited Assets",
+        "encryption": "Document encryption",
+        "access": "Emergency access",
+        "support": "Priority support",
+        "history": "Version history",
+        "templates": "Legal templates"
+      }
+    },
+    "devMode": {
+      "title": "Developer Mode",
+      "button": {
+        "grant": "Dev Mode: Grant Premium Access",
+        "granting": "Granting..."
+      },
+      "description": "This button is only visible in development mode. Click to instantly grant premium access for testing.",
+      "successMessage": "Developer premium access granted!",
+      "errorMessage": "Failed to grant developer premium access"
+    },
+    "errors": {
+      "checkoutFailed": "Failed to start checkout process"
+    },
+    "starter": {
+      "name": "Heritage Starter",
+      "price": "Free",
+      "description": "Ideal for getting started with preserving your digital legacy.",
+      "button": "Start for Free",
+      "features": {
+        "storage": "{{amount}} Storage",
+        "guardians": "Up to {{count}} trusted helpers",
+        "documents": "Basic Document Vault",
+        "playbook": "Basic Guardian Playbook",
+        "support": "Community Support"
+      },
+      "limits": {
+        "storage": "500 MB",
+        "guardians": "3",
+        "fileSize": "10 MB per file"
+      }
+    },
+    "premium": {
+      "name": "Heritage Premium",
+      "price": "$19",
+      "period": "/ month",
+      "badge": "Most Popular",
+      "description": "Advanced features for comprehensive legacy management.",
+      "button": "Choose Premium",
+      "features": {
+        "storage": "{{amount}} Storage",
+        "guardians": "Up to {{count}} trusted helpers",
+        "manual": "Survivor's Manual",
+        "support": "Priority Email Support"
+      },
+      "limits": {
+        "storage": "10 GB",
+        "guardians": "5",
+        "fileSize": "50 MB per file"
+      }
+    },
+    "enterprise": {
+      "name": "Heritage Enterprise",
+      "price": "Custom",
+      "description": "For families and businesses with complex needs requiring the highest level of service.",
+      "button": "Contact Sales",
+      "features": {
+        "storage": "{{amount}}+ Storage",
+        "guardians": "Unlimited trusted helpers",
+        "legal": "Legal Professional Coordination",
+        "support": "Dedicated Account Manager"
+      },
+      "limits": {
+        "storage": "500 GB",
+        "guardians": "unlimited",
+        "fileSize": "100 MB per file"
+      }
+    }
+  },
+  "consent": {
+    "banner": {
+      "title": "Cookie Preferences",
+      "description": "We use cookies to enhance your experience while respecting your privacy. Choose which cookies you'd like to allow.",
+      "acceptAll": "Accept All",
+      "customize": "Customize",
+      "rejectAll": "Reject All",
+      "privacyPolicy": "Privacy Policy",
+      "cookiePolicy": "Cookie Policy"
+    },
+    "details": {
+      "title": "Cookie Preferences",
+      "description": "Manage your cookie preferences for a personalized experience.",
+      "cancel": "Cancel",
+      "savePreferences": "Save Preferences",
+      "dataCollected": {
+        "title": "Data We Collect",
+        "item1": "Browser type and version",
+        "item2": "Pages visited and time spent",
+        "item3": "Referral sources",
+        "item4": "Device and location information"
+      },
+      "yourRights": {
+        "title": "Your Rights",
+        "item1": "Access your personal data",
+        "item2": "Request data deletion",
+        "item3": "Withdraw consent at any time",
+        "item4": "Opt-out of marketing communications"
+      }
+    },
+    "cookies": {
+      "necessary": {
+        "title": "Necessary",
+        "description": "Essential cookies required for the website to function properly.",
+        "items": {
+          "authentication": "User authentication and security",
+          "security": "Fraud prevention and security",
+          "preferences": "Remember your preferences"
+        },
+        "retention": "Retention",
+        "retentionPeriod": "Session or up to 1 year"
+      },
+      "analytics": {
+        "title": "Analytics",
+        "description": "Help us understand how you use our website to improve your experience.",
+        "items": {
+          "pageViews": "Page views and navigation paths",
+          "featureUsage": "Feature usage statistics",
+          "performance": "Site performance metrics"
+        },
+        "privacy": "Privacy Note",
+        "privacyNote": "All data is anonymized and never sold to third parties"
+      },
+      "marketing": {
+        "title": "Marketing",
+        "description": "Used to show you relevant advertisements and measure their effectiveness.",
+        "items": {
+          "retargeting": "Retargeting campaigns",
+          "campaigns": "Campaign effectiveness"
+        },
+        "partners": "Partners",
+        "partnersList": "Google Ads, Facebook"
+      },
+      "preferences": {
+        "title": "Preferences",
+        "description": "Remember your choices and settings for a better experience.",
+        "items": {
+          "language": "Language preferences",
+          "theme": "Theme preferences (light/dark)",
+          "layout": "Layout customizations"
+        }
+      }
+    },
+    "settings": {
+      "title": "Cookie Settings",
+      "description": "Manage your cookie preferences",
+      "analytics": {
+        "label": "Analytics Cookies",
+        "description": "Help us improve our services by collecting anonymous usage data"
+      },
+      "marketing": {
+        "label": "Marketing Cookies",
+        "description": "Allow personalized advertisements based on your interests"
+      },
+      "preferences": {
+        "label": "Preference Cookies",
+        "description": "Remember your settings and preferences"
+      },
+      "consentGiven": "Consent given on",
+      "lastUpdated": "Last updated",
+      "withdrawConsent": "Withdraw All Consent"
+    }
+  },
+  "cookies": {
+    "bannerText": "We use essential cookies to ensure the proper functioning of our site. With your consent, we may also use analytical cookies to improve our services.",
+    "declineButton": "Decline",
+    "acceptButton": "Accept All",
+    "learnMoreLink": "Learn More",
+    "policy": {
+      "title": "Cookie Policy",
+      "subtitle": "Understanding how we use cookies to improve your experience while respecting your privacy",
+      "lastUpdated": "Last Updated",
+      "required": "Required",
+      "purpose": "Purpose",
+      "examples": "Examples",
+      "overview": {
+        "title": "Important Information",
+        "intro": "This Cookie Policy explains how LegacyGuard uses cookies and similar technologies to recognize you when you visit our website. It explains what these technologies are and why we use them, as well as your rights to control our use of them.",
+        "point1": "We use cookies to ensure the basic functionalities of our website",
+        "point2": "Some cookies are essential and cannot be disabled",
+        "point3": "You can control non-essential cookies through our consent manager",
+        "point4": "We never sell your data or use cookies for invasive tracking"
+      },
+      "categories": {
+        "title": "Cookie Categories We Use"
+      },
+      "necessary": {
+        "title": "Strictly Necessary Cookies",
+        "description": "These cookies are essential for the website to function properly",
+        "purpose": "Enable core functionality such as security, identity verification, and network management. These cookies cannot be disabled.",
+        "examples": {
+          "auth": "Keeps you logged in securely",
+          "session": "Maintains your session state",
+          "csrf": "Protects against cross-site request forgery",
+          "consent": "Remembers your cookie preferences"
+        }
+      },
+      "analytics": {
+        "title": "Analytics Cookies",
+        "description": "Help us understand how visitors interact with our website",
+        "purpose": "Collect anonymous information about how you use our site, helping us improve user experience and identify issues.",
+        "examples": {
+          "ga": "Google Analytics tracking",
+          "gid": "Distinguishes users",
+          "session": "Groups activities within a session"
+        }
+      },
+      "marketing": {
+        "title": "Marketing Cookies",
+        "description": "Used to deliver relevant advertisements",
+        "purpose": "Track visitors across websites to display ads that are relevant and engaging for individual users.",
+        "examples": {
+          "facebook": "Facebook advertising",
+          "google": "Google Ads conversion tracking"
+        }
+      },
+      "preferences": {
+        "title": "Preference Cookies",
+        "description": "Remember your preferences and settings",
+        "purpose": "Allow the website to remember choices you make (such as language or region) and provide enhanced, personalized features.",
+        "examples": {
+          "theme": "Your chosen theme (light/dark)",
+          "language": "Your preferred language",
+          "ui": "UI customization preferences"
+        }
+      },
+      "yourRights": {
+        "title": "Your Rights",
+        "description": "You have full control over your cookie preferences",
+        "right1": "Access information about the cookies we use",
+        "right2": "Withdraw consent for non-essential cookies at any time",
+        "right3": "Delete cookies from your browser",
+        "right4": "Opt-out of analytics and marketing cookies"
+      },
+      "manage": {
+        "title": "Manage Your Cookie Preferences"
+      },
+      "contact": {
+        "title": "Contact Us About Cookies",
+        "description": "If you have any questions about our use of cookies or this Cookie Policy, please contact us:",
+        "email": "Email",
+        "address": "Address",
+        "addressDetails": "LegacyGuard Ltd, Data Protection Office, 123 Privacy Street, Dublin, Ireland"
+      }
+    }
+  },
+  "guardianView": {
+    "title": "Emergency Contacts",
+    "subtitle": "Secure access to {{userName}}'s essential information",
+    "readOnlyAccess": "Read-Only Access",
+    "loading": "Loading guardian dashboard...",
+    "errors": {
+      "pleaseLogin": "Please log in to view this information",
+      "failedToLoad": "Failed to load guardian data",
+      "loadFailed": "Failed to load emergency contacts",
+      "addFailed": "Failed to add emergency contact",
+      "removeFailed": "Failed to remove emergency contact",
+      "reorderFailed": "Failed to update contact order",
+      "testFailed": "Failed to send test message",
+      "selectContact": "Please select a contact"
+    },
+    "sections": {
+      "keyDocuments": {
+        "title": "Important Papers",
+        "description": "Essential documents marked as critical by the account holder",
+        "keyDocumentBadge": "Key Document",
+        "expires": "Expires",
+        "noExpiration": "No expiration",
+        "empty": "No key documents available"
+      },
+      "importantContacts": {
+        "title": "Important Contacts",
+        "description": "Key contacts for emergency situations",
+        "empty": "No important contacts available"
+      },
+      "finalWishes": {
+        "title": "Final Wishes & Instructions",
+        "description": "Personal instructions and final wishes",
+        "funeralWishes": "Funeral Wishes",
+        "digitalAccounts": "Digital Accounts Shutdown",
+        "digitalAccountsShutdown": "Digital Accounts Shutdown",
+        "messagesToLovedOnes": "Messages to Loved Ones",
+        "empty": "No final wishes or instructions available"
+      }
+    },
+    "guardianInfo": {
+      "description": "You are viewing this information as a trusted Guardian. This access is provided for emergency situations and to help you fulfill your responsibilities.",
+      "securityNote": "All access is logged and monitored for security purposes."
+    },
+    "defaultUserName": "Primary Account Holder",
+    "description": "Manage up to 3 emergency contacts in priority order",
+    "addContact": "Add Contact",
+    "noContacts": "No emergency contacts added yet. Add contacts that should be notified in case of emergency.",
+    "maxContactsReached": "You have reached the maximum of 3 emergency contacts.",
+    "sendTest": "Send Test",
+    "lastContacted": "Last contacted {{time}} ago",
+    "priority": {
+      "1": "Priority 1",
+      "2": "Priority 2",
+      "3": "Priority 3"
+    },
+    "addContactDialog": {
+      "title": "Add Emergency Contact",
+      "description": "Select a contact from your list to add as an emergency contact.",
+      "selectContact": "Select Contact",
+      "selectPlaceholder": "Choose a contact...",
+      "relationship": "Relationship (optional)",
+      "relationshipPlaceholder": "Select relationship...",
+      "addButton": "Add Emergency Contact"
+    },
+    "messages": {
+      "added": "Emergency contact added successfully",
+      "removed": "Emergency contact removed",
+      "reordered": "Contact priority updated",
+      "testSent": "Test message sent to {{name}}"
+    }
+  },
+  "notificationPreferences": {
+    "title": "Emergency Notification Preferences",
+    "description": "Manage notification settings for your emergency contacts",
+    "noContacts": "Add emergency contacts to manage their notification preferences.",
+    "noEmail": "No email address on file",
+    "emailRequired": "Email required",
+    "lastUpdated": "Last updated: {{date}}",
+    "info": "When emergency access is granted, notifications will only be sent to contacts with email notifications enabled.",
+    "howItWorks": {
+      "title": "How Emergency Notifications Work",
+      "point1": "Your trusted helpers can access emergency contacts during critical situations",
+      "point2": "All opted-in contacts receive immediate email notifications",
+      "point3": "You will also receive a notification when access occurs"
+    },
+    "messages": {
+      "updated": "Notification preferences updated"
+    },
+    "errors": {
+      "loadFailed": "Failed to load notification preferences",
+      "updateFailed": "Failed to update preferences"
+    }
+  },
+  "relationships": {
+    "spouse": "Spouse",
+    "child": "Child",
+    "parent": "Parent",
+    "sibling": "Sibling",
+    "friend": "Friend",
+    "other": "Other"
+  },
+  "emergencyAccess": {
+    "button": "Emergency Access",
+    "modalTitle": "Emergency Contact Access",
+    "modalDescription": "This will grant you access to emergency contact information. Use this only in genuine emergency situations.",
+    "warningText": "This access is logged and the account holder will be notified.",
+    "reasonLabel": "Reason for emergency access (required)",
+    "reasonPlaceholder": "Please describe the emergency situation requiring access to contact information...",
+    "confirmCheckbox": "I confirm this is a genuine emergency situation and I need access to contact information",
+    "accessing": "Accessing...",
+    "confirmButton": "Access Emergency Contacts",
+    "pleaseConfirm": "Please confirm the emergency and provide a reason",
+    "notAuthorized": "You are not authorized for emergency access",
+    "failedToLoadContacts": "Failed to load emergency contacts",
+    "accessGranted": "Emergency access granted. Contact information is now available.",
+    "accessFailed": "Failed to access emergency contacts",
+    "contactsTitle": "Emergency Contacts",
+    "contactsDescription": "Contact these people in priority order. Click phone numbers to call or emails to send messages.",
+    "priorityOrder": "Priority Order",
+    "priority": "Priority #{{order}}",
+    "logContact": "Log Contact Attempt",
+    "contactLogged": "Contact attempt logged",
+    "lastContacted": "Last contacted: {{time}}",
+    "importantNote": "Important: Contact these individuals in the order shown. Always try the primary contact method first. Log all contact attempts for record keeping."
+  },
+  "helpPage": {
+    "title": "Help & Support Center",
+    "subtitle": "We're here for you. Find answers to your questions or contact us directly.",
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "q1": {
+        "question": "Is LegacyGuard secure?",
+        "answer": "Yes, security is our highest priority. We use end-to-end encryption and a zero-trust architecture, meaning no unauthorized person can access your data, not even us. All data is stored in secure data centers within the European Union in compliance with GDPR."
+      },
+      "q2": {
+        "question": "What happens to my data if I cancel my subscription?",
+        "answer": "After canceling, your data remains securely stored in read-only mode for 90 days. You can reactivate your subscription anytime within this period to regain full access. After 90 days, your data will be securely and permanently deleted from our systems."
+      },
+      "q3": {
+        "question": "What is a 'Guardian'?",
+        "answer": "A Guardian is someone you trust (e.g., a partner, sibling, or legal professional) whom you grant special, limited access to your information for emergencies. They cannot change your data; they can only view it to act on your instructions."
+      },
+      "q4": {
+        "question": "What's the difference between the 'Vault' and the 'Manual'?",
+        "answer": "The Heritage Vault is where you securely store all your important papers and things you own. The Survivor's Manual is a curated selection of the most critical contacts, papers, and instructions from your vault, designed for your trusted helpers to have everything essential in one place."
+      },
+      "q5": {
+        "question": "Is a will created in LegacyGuard legally binding?",
+        "answer": "LegacyGuard helps you prepare and organize all the groundwork and information for your will. However, in most European countries, the digital document does not replace the need for an official, signed (and often notarized) document. We recommend always consulting the final version with a legal professional."
+      }
+    },
+    "contact": {
+      "title": "Didn't find what you were looking for?",
+      "email": {
+        "title": "Email Us",
+        "description": "For general questions and support.",
+        "button": "Open Email Client"
+      },
+      "call": {
+        "title": "Schedule a Call (For Premium)",
+        "description": "For Premium and Enterprise customers.",
+        "button": "Schedule a Call"
+      }
+    }
+  },
+  "inviteAcceptance": {
+    "loading": "Loading invitation...",
+    "errors": {
+      "invalidLink": "Invalid invitation link",
+      "notFound": "Invitation not found",
+      "alreadyProcessed": "This invitation has already been processed",
+      "loadingFailed": "Failed to load invitation",
+      "acceptFailed": "Failed to accept invitation",
+      "declineFailed": "Failed to decline invitation"
+    },
+    "messages": {
+      "accepted": "Thank you. Your role as a Guardian has been confirmed.",
+      "declined": "You have declined the role. The sender will be notified."
+    },
+    "notFound": {
+      "title": "Invitation Not Found",
+      "description": "This invitation link is invalid or has expired."
+    },
+    "subtitle": "You have been invited to become a Guardian for their digital legacy on LegacyGuard.",
+    "guardianRole": {
+      "title": "Your Guardian Role",
+      "yourName": "Your Name:",
+      "relationship": "Relationship:",
+      "responsibilities": "Responsibilities:"
+    },
+    "whatThisMeans": {
+      "title": "What This Means",
+      "point1": "You will have secure access to their important documents and information",
+      "point2": "You can only view information - no editing or deleting capabilities",
+      "point3": "Your access is designed for emergency situations or when assistance is needed",
+      "point4": "All access is logged and secure"
+    },
+    "buttons": {
+      "processing": "Processing...",
+      "acceptRole": "Accept Role",
+      "decline": "Decline"
+    },
+    "disclaimer": "By accepting this role, you acknowledge the responsibility of being a trusted Guardian for their digital legacy.",
+    "defaultInviterName": "Your trusted contact"
+  },
+  "subscription": {
+    "dashboard": {
+      "title": "Subscription Dashboard",
+      "subtitle": "Manage your subscriptions, costs, and reminders"
+    },
+    "monthlyCost": "Total Monthly Cost",
+    "yearlyCost": "Total Yearly Cost",
+    "activeSubscriptions": "Active Subscriptions",
+    "upcomingSoon": "upcoming soon",
+    "exportReport": "Export Report",
+    "perMonth": "per month",
+    "perYear": "per year",
+    "allSubscriptions": "All Subscriptions",
+    "allSubscriptionsDesc": "Overview of all active subscriptions sorted by renewal date",
+    "upcomingRenewals": "Upcoming Renewals",
+    "upcomingRenewalsTitle": "Upcoming Renewals Alert",
+    "upcomingRenewalsDesc": "You have {{count}} upcoming renewals in the next 90 days",
+    "next90Days": "Next 90 Days",
+    "noUpcomingRenewals": "No upcoming renewals in the next 90 days",
+    "renew": "Renew",
+    "review": "Review",
+    "preferences": "Subscription Preferences",
+    "preferencesDesc": "Manage how your subscriptions are tracked and managed",
+    "enableTracking": "Enable Subscription Tracking",
+    "enableTrackingDesc": "Automatically manage and track subscription-related documents",
+    "costOptimization": "Enable Cost Optimization Suggestions",
+    "costOptimizationDesc": "Receive suggestions to optimize and reduce subscription costs",
+    "reminderPeriods": "Default Reminder Periods",
+    "daysBefore": "days before",
+    "loadError": "Failed to load subscription details",
+    "updateError": "Failed to update subscription preferences",
+    "preferencesUpdated": "Preferences successfully updated",
+    "tabs": {
+      "overview": "Overview",
+      "upcoming": "Upcoming",
+      "settings": "Settings"
+    },
+    "types": {
+      "monthly": "Monthly",
+      "yearly": "Yearly",
+      "oneTime": "One-Time",
+      "none": "None"
+    },
+    "daysUntilRenewal": "days until renewal",
+    "days": "days",
+    "loadFailed": "Failed to load subscription data",
+    "autoRenewal": "Auto-Renew: Yes",
+    "manual": "Auto-Renew: No",
+    "trackingSuggestion": "Consider enabling subscription tracking for better management and reminders",
+    "type": "Subscription Type",
+    "typePlaceholder": "Select type",
+    "renewalCost": "Renewal Cost",
+    "renewalCostPlaceholder": "Enter renewal cost",
+    "cancellationNotice": "Cancellation Notice Period",
+    "noNoticeRequired": "No Notice Required",
+    "providerContact": "Provider Contact Info",
+    "providerPhone": "Phone",
+    "providerEmail": "Email",
+    "providerWebsite": "Website",
+    "cancellationNoticeWarning": "Note: Cancellation requires {{days}} days notice"
+  },
+  "emailTemplates": {
+    "welcome": {
+      "subject": "Welcome to LegacyGuard - Your Digital Legacy Journey Begins",
+      "greeting": "Welcome {{name}},",
+      "body": "Thank you for joining LegacyGuard. You've taken the first important step in protecting your family's future.",
+      "cta": "Complete Your Life Inventory",
+      "footer": "If you have any questions, our support team is here to help."
+    },
+    "inventoryComplete": {
+      "subject": "Life Inventory Complete - Your Personalized Plan is Ready",
+      "greeting": "Congratulations {{name}},",
+      "body": "You've completed your life inventory! Based on your answers, we've created a personalized action plan to help secure your family's future.",
+      "nextSteps": "Your top 3 priorities:",
+      "cta": "View Your Action Plan",
+      "encouragement": "Remember, every small step you take today makes a big difference for your loved ones tomorrow."
+    },
+    "guardianInvite": {
+      "subject": "{{inviterName}} has invited you to be their Guardian on LegacyGuard",
+      "greeting": "Hello {{guardianName}},",
+      "body": "{{inviterName}} trusts you with an important responsibility - to be a Guardian for their digital legacy.",
+      "whatThisMeans": "As a Guardian, you'll have secure, read-only access to their important documents and instructions in case of emergency.",
+      "cta": "View Invitation",
+      "expires": "This invitation expires in 7 days."
+    },
+    "planUpgrade": {
+      "subject": "You've Reached Your {{planName}} Plan Limit",
+      "greeting": "Hi {{name}},",
+      "body": "You're making great progress! You've reached the {{limitType}} limit on your current plan.",
+      "upgradeText": "Upgrade to {{suggestedPlan}} to continue adding more {{limitType}} and unlock additional features.",
+      "cta": "View Upgrade Options"
+    }
+  },
+  "guardian": {
+    "invitationSent": "Invitation Sent",
+    "accepted": "Accepted",
+    "declined": "Declined",
+    "sendInvite": "Send Invite"
+  },
+  "alerts": {
+    "title": "Alerts Center",
+    "description": "Manage your document expiration alerts.",
+    "unread": "Unread",
+    "markAsRenewed": "Mark as Renewed",
+    "snooze7Days": "Snooze for 7 Days",
+    "dismiss": "Dismiss",
+    "unsnooze": "Remove Snooze",
+    "tabs": {
+      "active": "Active",
+      "snoozed": "Snoozed",
+      "dismissed": "Dismissed"
+    },
+    "noActiveAlerts": "You have no active alerts.",
+    "noSnoozedAlerts": "You have no snoozed alerts.",
+    "noDismissedAlerts": "You have no dismissed alerts.",
+    "expiresOn": "Expires on {{date}}",
+    "snoozedUntil": "Snoozed until {{date}}",
+    "renewalInstructions": "Renewal Instructions",
+    "badges": {
+      "expired": "Expired",
+      "expiring_7": "Expiring Soon",
+      "expiring_30": "Expiring in 30 Days",
+      "expiring_90": "Expiring in 90 Days"
+    },
+    "types": {
+      "expired": "The document {{documentName}} expired {{daysAgo}} days ago!",
+      "expiring7": "Hurry! {{documentName}} expires in {{days}} days.",
+      "expiring30": "Reminder: {{documentName}} will expire in {{days}} days.",
+      "expiring90": "Heads up: {{documentName}} is set to expire in {{days}} days."
+    },
+    "messages": {
+      "dismissed": "Alert dismissed successfully.",
+      "snoozed": "Alert snoozed for {{days}} days.",
+      "markedAsRenewed": "Document marked as renewed."
+    },
+    "errors": {
+      "loadFailed": "Failed to load alerts.",
+      "dismissFailed": "Unable to dismiss the alert.",
+      "snoozeFailed": "Unable to snooze the alert.",
+      "renewFailed": "Unable to mark document as renewed."
+    }
+  },
+  "errorBoundary": {
+    "title": "Oops! Something went wrong",
+    "description": "We apologize for the inconvenience. An unexpected error has occurred.",
+    "errorId": "Error ID",
+    "tryAgain": "Try Again",
+    "reloadPage": "Reload Page",
+    "goToHomepage": "Go to Homepage",
+    "technicalDetails": "Technical Details",
+    "hide": "Hide",
+    "show": "Show",
+    "stackTrace": "Stack Trace",
+    "componentStack": "Component Stack",
+    "helpText": "If the problem persists, contact our support with the error ID."
+  },
+  "errorTest": {
+    "title": "Error Logging Test",
+    "description": "Test error handling and logging functionality",
+    "triggerSyncError": "Trigger Sync Error (ErrorBoundary)",
+    "triggerAsyncError": "Trigger Async Error",
+    "logRegularError": "Log Regular Error",
+    "logCriticalError": "Log Critical Error",
+    "triggerAlert": "Trigger Alert (6 Critical Errors)",
+    "errorMessages": {
+      "testError": "Test error from ErrorTest component",
+      "testAsyncRejection": "Test async rejection",
+      "manualTestError": "Manual test error",
+      "testCriticalError": "Test critical error",
+      "criticalErrorWithIndex": "Critical error {{index}}"
+    },
+    "descriptions": {
+      "syncError": "Triggers a synchronous error that will be caught by the ErrorBoundary",
+      "asyncError": "Triggers an asynchronous error that will be caught by error handling",
+      "regularError": "Logs a regular error for testing error tracking",
+      "criticalError": "Logs a critical error for testing critical error handling",
+      "multipleErrors": "Triggers multiple critical errors to test alert thresholds"
+    },
+    "context": {
+      "component": "ErrorTest",
+      "action": "button-click",
+      "severity": "high"
+    },
+    "notifications": {
+      "errorLogged": "Error logged successfully",
+      "criticalErrorLogged": "Critical error logged successfully",
+      "multipleErrorsTriggered": "Multiple critical errors triggered",
+      "errorBoundaryTriggered": "Error boundary triggered",
+      "asyncErrorCaught": "Async error caught and handled"
+    }
+  },
+  "footer": {
+    "tagline": "Preserving your legacy for generations to come.",
+    "platform": {
+      "title": "Platform",
+      "heritageVault": "Heritage Vault",
+      "guardianNetwork": "Your Trusted Helpers",
+      "dashboard": "Dashboard",
+      "security": "Security"
+    },
+    "support": {
+      "title": "Support",
+      "helpCenter": "Help Center",
+      "userGuides": "User Guides",
+      "contactUs": "Contact Us",
+      "community": "Community"
+    },
+    "legal": {
+      "title": "Legal",
+      "privacyPolicy": "Privacy Policy",
+      "termsOfService": "Terms of Service",
+      "dataProtection": "Data Protection"
+    },
+    "copyright": "© {{year}} LegacyGuard. All rights reserved.",
+    "description": "Enterprise-grade digital heritage management."
+  },
+  "playbook": {
+    "label": "Playbook",
+    "create": "Create Playbook",
+    "edit": "Edit Playbook",
+    "preview": "Preview",
+    "exitPreview": "Exit Preview",
+    "save": "Save Playbook",
+    "saving": "Saving...",
+    "loading": "Loading playbook...",
+    "autoSaveNotice": "Your changes are automatically saved as you type.",
+    "noContent": "No content added yet.",
+    "noContacts": "No contacts added yet.",
+    "addContact": "Add Contact",
+    "contact": "Contact",
+    "title": "Playbook for {{name}}",
+    "titleReadOnly": "{{name}}'s Playbook",
+    "description": "Create personalized instructions and information for your guardian",
+    "viewTitle": "Guardian Playbook: {{userName}}",
+    "viewDescription": "Essential information and instructions prepared specifically for you",
+    "lastUpdated": "Last Updated",
+    "viewFooter": "This information has been entrusted to you as a guardian. Please keep it confidential and secure.",
+    "notAuthenticated": "Please log in to view this playbook",
+    "accessDenied": "You do not have permission to view this playbook",
+    "fetchError": "Failed to load playbook",
+    "saveSuccess": "Playbook saved successfully",
+    "saveError": "Failed to save playbook",
+    "discardChanges": {
+      "title": "Discard Changes?",
+      "description": "You have unsaved changes. Are you sure you want to discard them?",
+      "cancel": "Keep Editing",
+      "confirm": "Discard Changes"
+    },
+    "importantContacts": {
+      "label": "Important Contacts",
+      "description": "Add key people this guardian should contact",
+      "viewDescription": "Contact these people when needed",
+      "add": "Add Contact",
+      "remove": "Remove",
+      "empty": "No contacts added yet. Click 'Add Contact' to add important people.",
+      "name": "Name",
+      "namePlaceholder": "Full name",
+      "relationship": "Relationship",
+      "relationshipPlaceholder": "e.g., Family lawyer",
+      "phone": "Phone",
+      "phonePlaceholder": "+1 234 567 8900",
+      "email": "Email",
+      "emailPlaceholder": "email@example.com",
+      "notes": "Notes",
+      "notesPlaceholder": "Additional information"
+    },
+    "funeralWishes": {
+      "label": "Funeral Wishes",
+      "description": "Your preferences for funeral arrangements",
+      "placeholder": "Describe your wishes for your funeral or memorial service..."
+    },
+    "digitalAccounts": {
+      "label": "Digital Accounts",
+      "description": "Instructions for handling your online accounts",
+      "placeholder": "List your digital accounts and how they should be handled..."
+    },
+    "documentLocations": {
+      "label": "Document Locations",
+      "description": "Where to find important documents",
+      "placeholder": "Describe where important documents are located..."
+    },
+    "personalMessages": {
+      "label": "Personal Messages",
+      "description": "Personal messages for this guardian",
+      "placeholder": "Write a personal message to this guardian..."
+    },
+    "practicalInstructions": {
+      "label": "Practical Instructions",
+      "description": "Immediate steps and responsibilities",
+      "placeholder": "List practical tasks and immediate actions..."
+    },
+    "notFound": {
+      "title": "No Playbook Found",
+      "description": "The playbook you're looking for hasn't been created yet."
+    },
+    "subtitle": {
+      "edit": "Create personalized instructions and information for this guardian.",
+      "view": "Essential information and instructions prepared for you."
+    },
+    "status": {
+      "empty": "Not Started",
+      "draft": "In Progress",
+      "complete": "Complete"
+    },
+    "tabs": {
+      "funeral": "Funeral",
+      "digital": "Digital",
+      "contacts": "Contacts",
+      "documents": "Important Papers",
+      "messages": "Messages",
+      "instructions": "Instructions"
+    },
+    "templates": {
+      "funeralWishes": {
+        "traditionalReligiousBurial": "Traditional Religious Burial",
+        "simpleCremationService": "Simple Cremation Service",
+        "ecoFriendlyNaturalBurial": "Eco-Friendly Natural Burial"
+      },
+      "digitalAccountsShutdown": {
+        "comprehensiveDigitalShutdown": "Comprehensive Digital Shutdown",
+        "minimalDigitalFootprint": "Minimal Digital Footprint",
+        "professionalBusinessAccounts": "Professional & Business Accounts"
+      },
+      "importantContacts": {
+        "essentialContactsList": "Essential Contacts List",
+        "childrenDependentsContacts": "Children & Dependents Contacts"
+      },
+      "documentLocations": {
+        "homeFilingSystem": "Home Filing System",
+        "professionalStorage": "Professional Storage"
+      },
+      "personalMessages": {
+        "letterToSpousePartner": "Letter to Spouse/Partner",
+        "letterToChildren": "Letter to Children",
+        "letterToParents": "Letter to Parents"
+      },
+      "practicalInstructions": {
+        "first48HoursChecklist": "First 48 Hours Checklist",
+        "businessContinuityPlan": "Business Continuity Plan",
+        "householdManagementGuide": "Household Management Guide"
+      }
+    },
+    "sections": {
+      "funeral": {
+        "title": "Funeral Wishes",
+        "description": "Your preferences for funeral arrangements and memorial services.",
+        "placeholder": "Describe your wishes for your funeral or memorial service...\n\nFor example:\n- Type of service (religious, secular, celebration of life)\n- Burial or cremation preferences\n- Location preferences\n- Music, readings, or special requests\n- Who should speak or participate\n- Any specific traditions to follow"
+      },
+      "digital": {
+        "title": "Digital Accounts Shutdown",
+        "description": "Instructions for handling your digital presence and online accounts.",
+        "placeholder": "List your digital accounts and how they should be handled...\n\nFor example:\n- Social media accounts (Facebook, Instagram, LinkedIn)\n- Email accounts\n- Cloud storage (Google Drive, Dropbox)\n- Subscription services (Netflix, Spotify)\n- Online banking and financial accounts\n- Cryptocurrency wallets\n- Website or domain names"
+      },
+      "contacts": {
+        "title": "Important Contacts",
+        "description": "Key people this guardian should contact or notify.",
+        "placeholder": "Add important contacts specific to this guardian's responsibilities."
+      },
+      "documents": {
+        "title": "Document Locations",
+        "description": "Where to find important physical and digital documents.",
+        "placeholder": "Describe where important documents are located...\n\nFor example:\n- Will and testament location\n- Insurance policies\n- Property deeds\n- Bank account information\n- Investment documents\n- Tax returns\n- Passwords and access codes\n- Safety deposit box location and key"
+      },
+      "messages": {
+        "title": "Personal Messages",
+        "description": "Personal messages and final thoughts for this guardian.",
+        "placeholder": "Write a personal message to this guardian...\n\nThis is your opportunity to:\n- Express your feelings and gratitude\n- Share important memories\n- Provide guidance or advice\n- Explain your decisions\n- Leave words of comfort\n- Share your hopes for the future"
+      },
+      "practical": {
+        "title": "Practical Instructions",
+        "description": "Immediate practical steps and responsibilities for this guardian.",
+        "placeholder": "List practical tasks and immediate actions...\n\nFor example:\n- First 24-48 hours checklist\n- Who to notify first\n- Urgent bills or payments\n- Care instructions (pets, plants, property)\n- Business matters requiring attention\n- Scheduled appointments to cancel\n- Keys and access codes needed"
+      }
+    },
+    "contactFields": {
+      "name": "Name",
+      "namePlaceholder": "Full name",
+      "role": "Role/Relationship",
+      "rolePlaceholder": "e.g., Family lawyer, Accountant",
+      "phone": "Phone",
+      "phonePlaceholder": "+1 234 567 8900",
+      "email": "Email",
+      "emailPlaceholder": "email@example.com",
+      "notes": "Notes",
+      "notesPlaceholder": "Additional information about this contact"
+    },
+    "messages": {
+      "autoSaved": "Saved",
+      "saved": "Playbook saved successfully"
+    },
+    "errors": {
+      "loadFailed": "Failed to load playbook",
+      "saveFailed": "Failed to save playbook"
+    }
+  },
+  "privacy": {
+    "familyAccess": "Family Access Management (Coming Soon)",
+    "processingLocal": "Processing Locally",
+    "enhancedWithAI": "Enhanced with AI",
+    "privacyMode": "Privacy Mode",
+    "allProcessingLocal": "All processing local",
+    "aiAssistanceEnabled": "AI assistance enabled",
+    "localProcessing": {
+      "title": "Local Processing",
+      "description": "Your data is processed entirely on your device",
+      "benefits": "Enhanced privacy and security",
+      "status": "Processing locally"
+    },
+    "cloudProcessing": {
+      "title": "Cloud Processing",
+      "description": "Your data is processed using AI assistance",
+      "benefits": "Enhanced features and accuracy",
+      "status": "Enhanced with AI"
+    },
+    "status": {
+      "local": "Local Processing Active",
+      "cloud": "Cloud Processing Active",
+      "switching": "Switching processing mode...",
+      "error": "Error switching processing mode"
+    },
+    "indicators": {
+      "local": "Local processing mode",
+      "cloud": "Cloud processing mode",
+      "secure": "Secure processing",
+      "private": "Private processing"
+    }
+  },
+  "demo": {
+    "ai": {
+      "title": "LegacyGuard AI Integration Demo",
+      "subtitle": "Experience how AI can help organize and protect your family's legacy",
+      "tabs": {
+        "documents": "Documents",
+        "questions": "Questions",
+        "suggestions": "Suggestions",
+        "messages": "Messages"
+      },
+      "profile": {
+        "label": "Demo Profile:",
+        "documentsCount": "documents uploaded"
+      },
+      "question": {
+        "category": "Category:"
+      },
+      "context": {
+        "label": "Current Context:",
+        "completion": "Completion:",
+        "recent": "Recent:",
+        "mood": "Mood:"
+      },
+      "suggestion": {
+        "priority": "Priority:"
+      }
+    },
+    "upload": {
+      "title": "Magical Document Upload",
+      "subtitle": "Experience the future of secure document management",
+      "badge": {
+        "encryption": "Auto Encrypt",
+        "aiAnalysis": "AI Analysis",
+        "familySharing": "Family Sharing"
+      },
+      "settings": {
+        "title": "Upload Settings",
+        "description": "Customize your document processing preferences",
+        "storageLocation": "Storage Location",
+        "local": "Local",
+        "cloud": "Cloud"
+      },
+      "features": {
+        "autoCompress": "Auto Compress",
+        "autoEncrypt": "Auto Encrypt",
+        "processOCR": "Process OCR",
+        "aiAnalysis": "AI Analysis",
+        "familySharing": "Family Sharing"
+      },
+      "console": {
+        "uploadStarted": "Upload started",
+        "view": "View",
+        "download": "Download",
+        "share": "Share",
+        "delete": "Delete"
+      },
+      "tabs": {
+        "upload": "Upload",
+        "documents": "Documents",
+        "stats": "Statistics"
+      },
+      "privacy": {
+        "localMode": {
+          "title": "Privacy Mode Active:",
+          "description": "All documents are processed and stored exclusively on your device. No data leaves your browser."
+        },
+        "cloudMode": {
+          "title": "Cloud Storage Active:",
+          "description": "Documents are encrypted before upload. Your encryption keys never leave your device."
+        }
+      },
+      "stats": {
+        "localStorage": {
+          "title": "Local Storage",
+          "description": "Documents stored on device"
+        },
+        "cloudStorage": {
+          "title": "Cloud Storage",
+          "description": "Documents in cloud"
+        },
+        "totalSize": {
+          "title": "Total Size",
+          "description": "Storage used"
+        },
+        "successRate": "Success Rate",
+        "averageTime": "Average Upload Time"
+      },
+      "progress": {
+        "title": "Upload Progress",
+        "completed": "{{count}} completed",
+        "failed": "{{count}} failed"
+      }
+    },
+    "ocr": {
+      "title": "Privacy-First Document Processing",
+      "subtitle": "Extract text from documents while keeping everything on your device",
+      "features": {
+        "completePrivacy": "Complete Privacy",
+        "multiLanguage": "Multi-Language Support",
+        "smartDetection": "Smart Detection"
+      }
+    }
+  },
+  "test": {
+    "environment": {
+      "title": "Test Environment Only",
+      "description": "This page is for testing the error logging system. Remove this route before deploying to production."
+    }
+  },
+  "notifications": {
+    "title": "Notifications",
+    "loading": "Loading notifications...",
+    "empty": "No notifications",
+    "justNow": "Just now",
+    "hoursAgo": "{{hours}} hours ago",
+    "yesterday": "Yesterday",
+    "daysAgo": "{{days}} days ago",
+    "viewAll": "View all notifications",
+    "markAsRead": "Mark as read",
+    "markAllAsRead": "Mark all as read",
+    "clear": "Clear",
+    "clearAll": "Clear all",
+    "severity": {
+      "info": "Info",
+      "warning": "Warning",
+      "critical": "Critical"
+    },
+    "types": {
+      "document_expiration": "Document Expiration",
+      "system": "System",
+      "reminder": "Reminder"
+    }
+  },
+  "privacyControlPanel": {
+    "privacy_data_controls_1": "Privacy & Data Controls",
+    "you_are_in_complete_control_of_2": "You are in complete control of how your data is processed and stored.",
+    "data_processing_3": "Data Processing",
+    "default_document_processing_4": "Default Document Processing",
+    "choose_how_new_documents_are_h_5": "Choose how new documents are handled by default.",
+    "automatic_data_deletion_6": "Automatic Data Deletion",
+    "for_your_peace_of_mind_you_can_7": "For your peace of mind, you can set documents to be automatically deleted after a period of inactivity.",
+    "never_delete_8": "Never delete",
+    "1_year_of_inactivity_9": "1 year of inactivity",
+    "3_years_of_inactivity_10": "3 years of inactivity",
+    "ai_assistant_features_11": "AI Assistant Features",
+    "expiration_intelligence_12": "Expiration Intelligence",
+    "get_alerts_for_expiring_docume_13": "Get alerts for expiring documents and insurance policies.",
+    "granular_access_controls_for_e_14": "Granular access controls for each family member (coming soon).",
+    "save_privacy_settings_15": "Save Privacy Settings",
+    "saving": "Saving...",
+    "toast": {
+      "loadFailed": "Failed to load privacy settings",
+      "loadError": "Error loading settings",
+      "saveSuccess": "Privacy settings saved successfully",
+      "saveFailed": "Failed to save privacy settings",
+      "saveError": "Error saving settings"
+    }
+  },
+  "willGenerator": {
+    "no_template_found_for_this_jur_1": "No template found for this jurisdiction",
+    "failed_to_load_will_template_2": "Failed to load will template",
+    "please_confirm_that_you_have_s_3": "Please confirm that you have signed the document",
+    "select_a_country_4": "Select a country",
+    "steps": {
+      "confirmJurisdiction": "Confirm Jurisdiction",
+      "personalInformation": "Personal Information",
+      "executorBeneficiaries": "Executor & Beneficiaries",
+      "reviewGenerate": "Review & Generate",
+      "signConfirm": "Sign & Confirm"
+    },
+    "countries": {
+      "GB": "United Kingdom",
+      "DE": "Germany",
+      "FR": "France",
+      "ES": "Spain",
+      "IT": "Italy",
+      "CZ": "Czech Republic",
+      "SK": "Slovakia",
+      "PL": "Poland",
+      "AT": "Austria",
+      "CH": "Switzerland",
+      "NL": "Netherlands",
+      "BE": "Belgium",
+      "LU": "Luxembourg",
+      "LI": "Liechtenstein",
+      "DK": "Denmark",
+      "SE": "Sweden",
+      "FI": "Finland",
+      "NO": "Norway",
+      "IS": "Iceland",
+      "IE": "Ireland",
+      "PT": "Portugal",
+      "GR": "Greece",
+      "HU": "Hungary",
+      "RO": "Romania",
+      "BG": "Bulgaria",
+      "HR": "Croatia",
+      "SI": "Slovenia",
+      "EE": "Estonia",
+      "LV": "Latvia",
+      "LT": "Lithuania",
+      "MT": "Malta",
+      "CY": "Cyprus",
+      "MD": "Moldova",
+      "UA": "Ukraine",
+      "RS": "Serbia",
+      "AL": "Albania",
+      "MK": "North Macedonia",
+      "ME": "Montenegro",
+      "BA": "Bosnia and Herzegovina"
+    },
+    "alerts": {
+      "jurisdictionRequired": "Please select a jurisdiction before proceeding",
+      "templateLoadError": "Unable to load will template for selected jurisdiction",
+      "generationSuccess": "Will generated successfully",
+      "generationError": "Failed to generate will document",
+      "signatureRequired": "Please confirm that you have signed the document before proceeding"
+    },
+    "console": {
+      "willGenerationCompleted": "Will generation completed!",
+      "templateLoaded": "Will template loaded successfully",
+      "templateLoadFailed": "Failed to load will template",
+      "willGenerated": "Will document generated successfully"
+    },
+    "confirmCountry": "Please confirm your jurisdiction: {{country}}",
+    "changeCountry": "Change Country",
+    "fullName": "Full Name",
+    "executionInstructions": "Execution Instructions",
+    "confirmSigned": "I confirm that I have signed this document",
+    "finalizeUpload": "Finalize & Upload"
+  },
+  "assetCard": {
+    "assetTypes": {
+      "Primary Residence": "Primary Residence",
+      "Vacation Home": "Vacation Home",
+      "Rental Property": "Rental Property",
+      "Land": "Land",
+      "Commercial Property": "Commercial Property",
+      "Bank Account": "Bank Account",
+      "Investment Portfolio": "Investment Portfolio",
+      "Cryptocurrency Wallet": "Cryptocurrency Wallet",
+      "Loan / Mortgage": "Loan / Mortgage",
+      "Insurance Policy": "Insurance Policy",
+      "Pension / Retirement Account": "Pension / Retirement Account",
+      "Car": "Car",
+      "Motorcycle": "Motorcycle",
+      "Boat": "Boat",
+      "RV / Camper": "RV / Camper",
+      "Aircraft": "Aircraft",
+      "Online Account": "Online Account",
+      "Software License": "Software License",
+      "Domain Name": "Domain Name",
+      "Digital Subscription": "Digital Subscription",
+      "Cryptocurrency": "Cryptocurrency",
+      "NFT": "NFT",
+      "Jewelry": "Jewelry",
+      "Art / Collectibles": "Art / Collectibles",
+      "Electronics": "Electronics",
+      "Furniture": "Furniture",
+      "Tools / Equipment": "Tools / Equipment",
+      "Other Valuables": "Other Valuables",
+      "Custom Asset": "Custom Asset"
+    },
+    "dateFormat": {
+      "addedOn": "Added on {{date}}",
+      "createdOn": "Created on {{date}}",
+      "updatedOn": "Updated on {{date}}"
+    },
+    "labels": {
+      "estimatedValue": "Estimated Value",
+      "category": "Category",
+      "subType": "Type"
+    }
+  },
+  "familyPreparedness": {
+    "tools": {
+      "chooseScenario": "Choose an emergency scenario",
+      "cancel": "Cancel",
+      "generateGuide": "Generate Guide",
+      "generating": "Generating...",
+      "printGuide": "Print Guide"
+    }
+  },
+  "upload": {
+    "zone": {
+      "dropHere": "Drop your important papers here",
+      "dropHereActive": "Yes! Drop them right here",
+      "description": "I'll organize everything for you - just drag files here or click to browse",
+      "descriptionActive": "I'm ready to organize everything for you",
+      "chooseFiles": "Choose Files",
+      "takePhoto": "Take Photo",
+      "processingLocally": "Processing locally on your device",
+      "dragOverlay": {
+        "title": "Drop your documents here",
+        "subtitle": "I'll take good care of them"
+      }
+    }
+  },
+  "notificationSettings": {
+    "notifications_not_supported_1": "Notifications Not Supported",
+    "your_browser_doesn_t_support_p_2": "Your browser doesn't support push notifications. Try using a modern browser like Chrome, Firefox, or Edge.",
+    "push_notifications_3": "Push Notifications",
+    "get_notified_about_important_u_4": "Get notified about important updates and reminders",
+    "enable_notifications_to_receiv_5": "Enable notifications to receive timely alerts about document expirations, family updates, and emergency access attempts.",
+    "notifications_are_enabled_6": "Notifications are enabled",
+    "you_ll_receive_notifications_o_7": "You'll receive notifications on this device when important events occur.",
+    "notification_preferences_8": "Notification Preferences",
+    "choose_which_types_of_notifica_9": "Choose which types of notifications you want to receive",
+    "document_expiration_10": "Document Expiration",
+    "get_alerts_when_important_docu_11": "Get alerts when important documents are about to expire",
+    "inactivity_reminders_12": "Inactivity Reminders",
+    "periodic_reminders_to_review_a_13": "Periodic reminders to review and update your information",
+    "emergency_access_alerts_14": "Emergency Access Alerts",
+    "notify_me_when_someone_accesse_15": "Notify me when someone accesses my vault in an emergency",
+    "system_updates_16": "System Updates",
+    "new_features_and_important_sys_17": "New features and important system announcements",
+    "test_notifications_18": "Test Notifications",
+    "send_a_test_notification_to_ve_19": "Send a test notification to verify everything is working",
+    "send_test_notification_20": "Send Test Notification",
+    "errors": {
+      "pleaseSignIn": "Please sign in to enable notifications",
+      "failedToEnable": "Failed to enable notifications",
+      "failedToDisable": "Failed to disable notifications"
+    },
+    "messages": {
+      "preferencesUpdated": "Notification preferences updated"
+    },
+    "buttons": {
+      "enabling": "Enabling...",
+      "enableNotifications": "Enable Notifications",
+      "disable": "Disable"
+    },
+    "testNotification": {
+      "title": "Notifications Enabled!",
+      "body": "You will now receive important updates about your family preparedness."
+    }
+  },
+  "logLifeEvent": {
+    "title": "Log a Life Event",
+    "description": "Select a major life change to generate a personalized checklist for updating your family's protection plan.",
+    "eventTypes": {
+      "married_divorced": "Got Married / Divorced",
+      "new_child": "Had a New Child",
+      "bought_sold_home": "Bought / Sold a Home",
+      "started_business": "Started a Business",
+      "trusted_person_passed": "A Trusted Person Passed Away",
+      "job_change": "Changed Jobs",
+      "moved_location": "Moved to a New Location",
+      "inheritance": "Received an Inheritance",
+      "retirement": "Retired",
+      "health_change": "Significant Health Change",
+      "child_graduated": "Child Graduated / Left Home",
+      "career_advancement": "Career Advancement",
+      "financial_windfall": "Financial Windfall",
+      "debt_change": "Significant Debt Change",
+      "insurance_change": "Insurance Policy Change"
+    },
+    "form": {
+      "title": "Log Life Event",
+      "description": "Select a major life change to generate a personalized checklist",
+      "eventSelection": "Select Life Event",
+      "eventDescription": "Choose the life event that best describes your current situation",
+      "generateChecklist": "Generate Checklist",
+      "cancel": "Cancel",
+      "submit": "Submit",
+      "close": "Close"
+    },
+    "checklist": {
+      "title": "Personalized Checklist",
+      "description": "Based on your life event, here are the key items you should review and update:",
+      "priority": "Priority",
+      "action": "Action",
+      "estimatedTime": "Estimated Time",
+      "high": "High",
+      "medium": "Medium",
+      "low": "Low",
+      "completed": "Completed",
+      "pending": "Pending"
+    },
+    "notifications": {
+      "eventLogged": "Life event logged successfully",
+      "checklistGenerated": "Personalized checklist generated",
+      "errorLogging": "Error logging life event",
+      "reminderSet": "Reminder set for follow-up actions"
+    }
+  }
+}

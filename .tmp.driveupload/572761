@@ -1,0 +1,485 @@
+{
+  "_comment": "Shared translations used across the application",
+  "familyHub": {
+    "title": "Perhekeskus",
+    "subtitle": "Hallinnoi pääsytasoja ja käytä valmistautumistyökaluja varmistaaksesi, että perheesi on hyvin valmistautunut.",
+    "tabs": {
+      "familyMembers": "Perheenjäsenet",
+      "members": "Jäsenet",
+      "preparednessTools": "Valmistautumistyökalut",
+      "tools": "Työkalut"
+    },
+    "overallPreparedness": {
+      "title": "Perheen kokonaisvalmistautuminen",
+      "description": "Tämä pistemäärä kuvastaa, kuinka valmistautunut koko perheesi on hätätilanteeseen.",
+      "improvementNeeded": "Perheesi valmistautuminen voidaan parantaa. Harkitse päivitysten lähettämistä niille, joilla on alhaisemmat pisteet."
+    },
+    "emergencyProtocol": {
+      "title": "Hätäprotokolla",
+      "description": "Hätäprotokolla sallii luotettujen henkilöiden, joilla on \"Vain hätätilanteissa\" -pääsy, pyytää tietoja kriittisissä tilanteissa. Vaatii vahvistuksen toiselta luotetulta henkilöltä.",
+      "configured": "Määritetty",
+      "configure": "Määritä",
+      "activeMessage": "Hätäprotokolla on aktiivinen ja määritetty",
+      "configurationModal": {
+        "title": "Configure Emergency Protocol",
+        "description": "Set up how trusted people can access information during emergencies",
+        "requiredApprovals": "Required Approvals",
+        "requiredApprovalsDescription": "Number of trusted people who must approve emergency access",
+        "notificationSettings": "Notification Settings",
+        "notificationSettingsDescription": "Configure how you'll be notified of emergency requests",
+        "saveButton": "Save Configuration",
+        "cancelButton": "Cancel",
+        "saving": "Saving..."
+      },
+      "activationModal": {
+        "title": "Emergency Access Request",
+        "description": "Request emergency access to {{name}}'s information",
+        "reason": "Reason for Request",
+        "reasonPlaceholder": "Please describe the emergency situation...",
+        "confirmText": "I confirm this is a genuine emergency",
+        "requestButton": "Request Emergency Access",
+        "requesting": "Requesting..."
+      },
+      "errors": {
+        "configurationFailed": "Failed to save emergency protocol configuration",
+        "activationFailed": "Failed to request emergency access",
+        "invalidConfiguration": "Invalid configuration settings",
+        "notAuthorized": "You are not authorized to configure emergency protocol"
+      },
+      "success": {
+        "configured": "Emergency protocol configured successfully",
+        "requested": "Emergency access request sent",
+        "approved": "Emergency access approved",
+        "denied": "Emergency access denied"
+      }
+    },
+    "memberManagement": {
+      "title": "Hallinnoi luotettavia henkilöitäsi",
+      "addTrustedPerson": "Lisää luotettu henkilö",
+      "addMorePeople": "Lisää enemmän luotettavia henkilöitä verkostoosi",
+      "informationAccessLevel": "Tietojen pääsytaso",
+      "preparedness": "Valmistautuminen",
+      "lastContacted": "Viimeksi yhteydessä",
+      "daysAgo": "{{days}} päivää sitten",
+      "sendUpdate": "Lähetä päivitys",
+      "sendUpdateTo": "Lähetä päivitys henkilölle {{name}}",
+      "lastContactOver30Days": "Viimeisin yhteys yli 30 päivää sitten"
+    },
+    "accessLevels": {
+      "none": {
+        "title": "Ei mitään",
+        "description": "Ei voi nähdä mitään tietoja"
+      },
+      "emergencyOnly": {
+        "title": "Vain hätätilanteissa",
+        "description": "Pääsy hätätilanteissa",
+        "fullDescription": "Saa pääsyn vain kun hätäprotokolla aktivoidaan"
+      },
+      "limitedInfo": {
+        "title": "Rajoitettu tieto",
+        "description": "Perustiedot valmistautumista varten",
+        "fullDescription": "Voi nähdä perustiedot nyt auttaakseen heitä valmistautumaan"
+      },
+      "fullAccess": {
+        "title": "Täysi pääsy",
+        "description": "Kaikki jaetut tiedot",
+        "fullDescription": "Voi nähdä kaikki tiedot, jotka olet heidän kanssaan jakanut"
+      }
+    },
+    "messages": {
+      "accessLevelUpdated": "Pääsytaso päivitetty onnistuneesti",
+      "updateSentTo": "Päivitys lähetetty henkilölle {{name}}",
+      "failedToSendUpdate": "Päivityksen lähettäminen henkilölle {{name}} epäonnistui"
+    },
+    "errors": {
+      "authenticationRequired": "Todennus vaaditaan",
+      "failedToFetchData": "Perhetietojen hakeminen epäonnistui",
+      "failedToLoadMembers": "Perheenjäsenten lataaminen epäonnistui",
+      "failedToUpdateAccessLevel": "Failed to update access level",
+      "failedToSendUpdate": "Failed to send update",
+      "invalidAccessLevel": "Invalid access level",
+      "memberNotFound": "Family member not found"
+    },
+    "api": {
+      "routes": {
+        "familyHub": {
+          "success": {
+            "dataFetched": "Family data fetched successfully",
+            "accessLevelUpdated": "Access level updated successfully",
+            "updateSent": "Update sent successfully"
+          },
+          "errors": {
+            "notAuthenticated": "User not authenticated",
+            "invalidRequest": "Invalid request data",
+            "memberNotFound": "Family member not found",
+            "updateFailed": "Failed to update family member",
+            "serverError": "Internal server error"
+          }
+        },
+        "emergencyProtocol": {
+          "success": {
+            "configurationSaved": "Emergency protocol configuration saved",
+            "protocolActivated": "Emergency protocol activated",
+            "accessGranted": "Emergency access granted",
+            "notificationSent": "Emergency notification sent"
+          },
+          "errors": {
+            "configurationInvalid": "Invalid configuration parameters",
+            "activationDenied": "Emergency activation denied",
+            "insufficientApprovals": "Insufficient approvals for emergency access",
+            "notificationFailed": "Failed to send emergency notification"
+          }
+        }
+      }
+    }
+  },
+  "familyPreparedness": {
+    "tools": {
+      "chooseScenario": "Choose an emergency scenario",
+      "cancel": "Cancel",
+      "generateGuide": "Generate Guide",
+      "generating": "Generating...",
+      "printGuide": "Print Guide"
+    }
+  },
+  "familyPreparednessTools": {
+    "use_these_tools_to_ensure_your_1": "Use these tools to ensure your family is prepared and knows what to do in emergency situations.",
+    "generate_emergency_guide_2": "Generate Emergency Guide",
+    "create_a_printable_guide_for_y_3": "Create a printable guide for your family to follow in emergency situations.",
+    "select_scenario_4": "Select Scenario",
+    "generate_another_5": "Generate Another",
+    "tools": {
+      "informationTreasureHunt": "Information Treasure Hunt",
+      "videoMessages": "Video Messages",
+      "emergencySimulator": "Emergency Situation Simulator",
+      "stepByStepGuides": "Step-by-Step Guides",
+      "emergencySimulatorDesc": "Run a practice drill. We'll send a test scenario to your family to see if they can find the information they need.",
+      "stepByStepGuidesDesc": "Generate printable, scenario-based guides for your family (e.g., 'What to do in the first 24 hours').",
+      "treasureHuntDesc": "A gamified quiz for your family to ensure they know key facts, like where to find the will or who your lawyer is.",
+      "videoMessagesDesc": "Record personal video messages for your loved ones to be unlocked in specific circumstances.",
+      "launch": "Launch",
+      "chooseScenario": "Choose a scenario",
+      "cancel": "Cancel",
+      "generating": "Generating...",
+      "generateGuide": "Generate Guide",
+      "printGuide": "Print Guide"
+    },
+    "scenarios": {
+      "death": {
+        "title": "In case of my death",
+        "description": "A comprehensive guide for handling immediate tasks after your passing"
+      },
+      "hospitalization": {
+        "title": "If I am hospitalized",
+        "description": "Steps to take if you are incapacitated or in medical care"
+      },
+      "missing": {
+        "title": "If I go missing",
+        "description": "Critical information and contacts if you cannot be located"
+      },
+      "emergency": {
+        "title": "General emergency",
+        "description": "Quick reference for any urgent situation"
+      }
+    },
+    "guides": {
+      "death": {
+        "title": "Emergency Guide: In Case of My Death",
+        "generatedOn": "Generated on",
+        "first24Hours": "🚨 First 24 Hours Checklist",
+        "contactExecutor": "Contact the Executor:",
+        "contactLawyer": "Contact the Lawyer:",
+        "locateWill": "Locate the Will:",
+        "secureResidence": "Secure the Residence:",
+        "importantDocuments": "📋 Important Documents",
+        "deathCertificate": "Death Certificate:",
+        "bankAccounts": "Bank Accounts:",
+        "investmentAccounts": "Investment Accounts:",
+        "peopleToNotify": "👥 People to Notify",
+        "employer": "Employer:",
+        "insuranceCompanies": "Insurance Companies:",
+        "financialInstitutions": "Financial Institutions:",
+        "socialSecurity": "Social Security Administration:",
+        "disclaimer": "This guide was generated based on the information you've provided. Please ensure all details are kept up to date."
+      },
+      "hospitalization": {
+        "title": "Emergency Guide: If I Am Hospitalized",
+        "medicalInformation": "🏥 Medical Information",
+        "primaryCarePhysician": "Primary Care Physician:",
+        "preferredHospital": "Preferred Hospital:",
+        "bloodType": "Blood Type:",
+        "allergies": "Allergies:",
+        "currentMedications": "Current Medications:",
+        "emergencyContacts": "📞 Emergency Contacts",
+        "legalDocuments": "📄 Legal Documents",
+        "healthcarePowerOfAttorney": "Healthcare Power of Attorney:",
+        "livingWill": "Living Will:",
+        "hipaaRelease": "HIPAA Release:"
+      },
+      "missing": {
+        "title": "Emergency Guide: If I Go Missing",
+        "immediateActions": "🔍 Immediate Actions",
+        "contactLocalPolice": "Contact local police immediately",
+        "checkWithWorkplace": "Check with workplace:",
+        "contactCloseFriends": "Contact close friends and regular contacts",
+        "checkHospitals": "Check hospitals in the area",
+        "digitalFootprint": "📱 Digital Footprint",
+        "phoneProvider": "Phone Provider:",
+        "email": "Email:",
+        "socialMedia": "Social Media:",
+        "bankingApps": "Banking Apps:"
+      },
+      "emergency": {
+        "title": "General Emergency Quick Reference",
+        "keyContacts": "🚨 Key Contacts",
+        "emergency": "Emergency:",
+        "spouse": "Spouse:",
+        "attorney": "Attorney:",
+        "financialAdvisor": "Financial Advisor:",
+        "insuranceAgent": "Insurance Agent:",
+        "homeInformation": "🏠 Home Information",
+        "address": "Address:",
+        "securitySystem": "Security System:",
+        "utilities": "Utilities:"
+      }
+    },
+    "errors": {
+      "premiumRequired": "This feature is only available for premium users. Please upgrade to access all tools.",
+      "selectScenario": "Please select a scenario",
+      "generateFailed": "Failed to generate guide",
+      "comingSoon": "feature coming soon!"
+    },
+    "mockContent": {
+      "insurancePolicies": "Insurance Policies"
+    }
+  },
+  "relationships": {
+    "spouse": "Puoliso",
+    "child": "Lapsi",
+    "parent": "Vanhempi",
+    "sibling": "Sisar",
+    "friend": "Ystävä",
+    "other": "Muu"
+  },
+  "beneficiaryCommunications": {
+    "title": "Edunsaajien viestintä",
+    "description": "Seuraa kaikkea viestintää edunsaajien kanssa",
+    "logCommunication": "Kirjaa viestintä",
+    "logAction": "Kirjattu viestintä henkilön {name} kanssa",
+    "dialog": {
+      "title": "Kirjaa viestintä",
+      "description": "Tallenna yksityiskohdat viestinnästäsi edunsaajan kanssa"
+    },
+    "fields": {
+      "beneficiaryName": "Edunsaajan nimi",
+      "email": "Sähköposti",
+      "type": "Tyyppi",
+      "date": "Päivämäärä",
+      "subject": "Aihe",
+      "summary": "Yhteenveto"
+    },
+    "placeholders": {
+      "subject": "Lyhyt aihe viestinnästä",
+      "summary": "Yksityiskohtainen yhteenveto siitä, mitä keskusteltiin"
+    },
+    "types": {
+      "email": "Sähköposti",
+      "phone": "Puhelu",
+      "letter": "Kirje",
+      "inPerson": "Henkilökohtaisesti",
+      "in_person": "Henkilökohtaisesti",
+      "other": "Muu"
+    },
+    "actions": {
+      "cancel": "Peruuta",
+      "saving": "Tallennetaan...",
+      "save": "Tallenna viestintä"
+    },
+    "empty": {
+      "title": "Viestintää ei ole vielä kirjattu",
+      "subtitle": "Klikkaa 'Kirjaa viestintä' tallentaaksesi ensimmäisen vuorovaikutuksesi"
+    }
+  },
+  "emergencyAccess": {
+    "button": "Hätäpääsy",
+    "modalTitle": "Pääsy hätäyhteystietoihin",
+    "modalDescription": "Tämä antaa sinulle pääsyn hätäyhteystietoihin. Käytä tätä vain todellisissa hätätilanteissa.",
+    "warningText": "Tämä pääsy kirjataan ja tilin omistajalle ilmoitetaan.",
+    "reasonLabel": "Syy hätäpääsyyn (pakollinen)",
+    "reasonPlaceholder": "Kuvaile hätätilanne, joka vaatii pääsyä yhteystietoihin...",
+    "confirmCheckbox": "Vahvistan, että tämä on todellinen hätätilanne ja tarvitsen pääsyn yhteystietoihin",
+    "accessing": "Haetaan pääsyä...",
+    "confirmButton": "Pääsy hätäyhteystietoihin",
+    "pleaseConfirm": "Vahvista hätätilanne ja anna syy.",
+    "notAuthorized": "Sinulla ei ole lupaa hätäpääsyyn.",
+    "failedToLoadContacts": "Hätäyhteystietojen lataaminen epäonnistui.",
+    "accessGranted": "Hätäpääsy myönnetty. Yhteystiedot ovat nyt saatavilla.",
+    "accessFailed": "Pääsy hätäyhteystietoihin epäonnistui.",
+    "contactsTitle": "Hätäyhteystiedot",
+    "contactsDescription": "Ota yhteyttä näihin henkilöihin tärkeysjärjestyksessä. Soita napsauttamalla puhelinnumeroita tai lähetä viestejä sähköpostitse.",
+    "priorityOrder": "Tärkeysjärjestys",
+    "priority": "Prioriteetti #{{order}}",
+    "logContact": "Kirjaa yhteydenottoyritys",
+    "contactLogged": "Yhteydenottoyritys kirjattu",
+    "lastContacted": "Viimeksi yhteydessä: {{time}}",
+    "importantNote": "Tärkeää: Ota yhteyttä näihin henkilöihin näytetyssä järjestyksessä. Kokeile aina ensin ensisijaista yhteydenottotapaa. Kirjaa kaikki yhteydenottoyritykset muistiin."
+  },
+  "emotionalContextSystem": {
+    "emotional_support_1": "Tunteellinen tuki",
+    "advice_2": "Neuvo: ",
+    "motivation_3": "Motivaatio: ",
+    "next_steps_4": "Seuraavat vaiheet: ",
+    "contextResponses": {
+      "lowConfidence": {
+        "primaryMessage": "Käsittelet tätä tilannetta huolellisesti ja oivaltavasti.",
+        "supportingMessage": "Se osoittaa, että ymmärrät tehtävän tärkeyden.",
+        "actionableAdvice": "Jatka omalla mukavalla tahdillasi.",
+        "motivationalElement": "Ajatteleva lähestymistapasi on testamentti arvoillesi.",
+        "nextStepGuidance": "Kun olet valmis, etene seuraavaan tärkeään vaiheeseen turvataksesi perheesi tulevaisuuden."
+      },
+      "highOverwhelm": {
+        "primaryMessage": "Sitoutumisesi perheeseesi on kiitettävää.",
+        "supportingMessage": "On hyvä ottaa hetki koota itsensä.",
+        "actionableAdvice": "Harkitse tehtävän jakamista pienempiin osiin keskittymistä varten.",
+        "motivationalElement": "Tietäen, että sinua ohjaa rakkaus ja huolenpito.",
+        "nextStepGuidance": "Jokainen pieni toimenpide, jonka teet, tekee merkittävän eron."
+      },
+      "default": {
+        "primaryMessage": "Teet merkityksellistä työtä.",
+        "supportingMessage": "Tämä ponnistus vahvistaa perheesi perustaa.",
+        "actionableAdvice": "Pysy sitoutuneena suunnitelmaasi.",
+        "motivationalElement": "Jokainen päätös, jonka teet, suojaa rakkaasi.",
+        "nextStepGuidance": "Kokonaiskuvan näkeminen ohjaa seuraavia vaiheitasi."
+      }
+    },
+    "emotionalStates": {
+      "confidence": {
+        "high": "Korkea",
+        "medium": "Keskitaso",
+        "low": "Matala"
+      },
+      "motivation": {
+        "high": "Korkea",
+        "medium": "Keskitaso",
+        "low": "Matala"
+      },
+      "overwhelm": {
+        "none": "Ei mitään",
+        "slight": "Hieman",
+        "moderate": "Keskitaso",
+        "high": "Korkea"
+      },
+      "urgency": {
+        "relaxed": "Rentoutunut",
+        "focused": "Keskittynyt",
+        "pressed": "Painostettu",
+        "stressed": "Stressaantunut"
+      }
+    }
+  },
+  "lifeEvents": {
+    "title": "Life Events",
+    "subtitle": "Update your plan when major life changes occur",
+    "addEvent": "Add Life Event",
+    "noEvents": "No life events recorded yet",
+    "addFirstEvent": "Add your first life event to get started",
+    "events": {
+      "marriedDivorced": "Marriage/Divorce Update",
+      "newChild": "New Child Update",
+      "boughtSoldHome": "Real Estate Update",
+      "startedBusiness": "New Business Update",
+      "trustedPersonPassed": "Update Trusted Persons",
+      "unknown": "Unknown Event"
+    },
+    "congratsMessage": "Congratulations on your new child! Here are the recommended updates to your plan:",
+    "tasks": {
+      "updateBeneficiaries": "Update beneficiaries on all accounts",
+      "updateBeneficiariesDesc": "Review and update beneficiaries on life insurance, retirement accounts, and bank accounts.",
+      "updateWill": "Update your will",
+      "updateWillDesc": "Ensure your will reflects your new marital status and beneficiary wishes.",
+      "reviewTrusts": "Review and update any trusts",
+      "reviewTrustsDesc": "Make necessary changes to trust documents to reflect your new status.",
+      "updateEmergencyContacts": "Update emergency contacts",
+      "updateEmergencyContactsDesc": "Review and update emergency contacts in your Trusted Circle.",
+      "addChildRoster": "Add your new child to your Trusted Circle",
+      "addChildRosterDesc": "Include your child in your family information.",
+      "updateGuardian": "Review and update the \"Guardian\" designation for your children",
+      "updateGuardianDesc": "Ensure you have designated appropriate guardians for all your children.",
+      "reviewLifeInsurance": "Review your life insurance policy to ensure coverage is adequate",
+      "reviewLifeInsuranceDesc": "Consider increasing coverage to account for your growing family.",
+      "updateWillBeneficiary": "Update your will to include your new child as a beneficiary",
+      "updateWillBeneficiaryDesc": "Ensure your new child is properly included in your estate planning.",
+      "updatePropertyArmory": "Update property information in your Vault",
+      "updatePropertyArmoryDesc": "Add new property or remove sold property from your assets.",
+      "updateMortgageInfo": "Update mortgage and deed information",
+      "updateMortgageInfoDesc": "Ensure all property-related documents are current.",
+      "reviewHomeownersInsurance": "Review homeowners/property insurance",
+      "reviewHomeownersInsuranceDesc": "Update insurance policies to reflect your current properties.",
+      "updateNetWorth": "Update your net worth calculation",
+      "updateNetWorthDesc": "Reflect the change in your real estate holdings.",
+      "addBusinessAssets": "Add business to your Vault",
+      "addBusinessAssetsDesc": "Include your business as an asset with relevant details.",
+      "createSuccessionPlan": "Create a business succession plan",
+      "createSuccessionPlanDesc": "Document what should happen to your business if something happens to you.",
+      "updateInsurance": "Review insurance needs",
+      "updateInsuranceDesc": "Consider key person insurance and business liability coverage.",
+      "separatePersonalBusiness": "Ensure personal and business assets are properly separated",
+      "separatePersonalBusinessDesc": "Review the distinction between personal and business holdings.",
+      "removeDeceased": "Update your Trusted Circle",
+      "removeDeceasedDesc": "Remove the deceased person and reassign their responsibilities.",
+      "appointNewExecutor": "Appoint a new executor/trustee if needed",
+      "appointNewExecutorDesc": "If the deceased was your executor or trustee, designate a replacement.",
+      "updateBeneficiariesDesc2": "Check if the deceased was a beneficiary on any accounts.",
+      "updateEmergencyContactsDesc2": "Review all emergency contact information."
+    }
+  },
+  "logLifeEvent": {
+    "title": "Kirjaa elämän tapahtuma",
+    "description": "Valitse merkittävä elämänmuutos luodaksesi henkilökohtaisen tarkistuslistan perheesi suojelusuunnitelman päivittämiseksi.",
+    "eventTypes": {
+      "married_divorced": "Menin naimisiin / Erosin",
+      "new_child": "Sain uuden lapsen",
+      "bought_sold_home": "Ostin / Myin kodin",
+      "started_business": "Perustin yrityksen",
+      "trusted_person_passed": "Luotettu henkilö kuoli",
+      "job_change": "Vaihdoin työtä",
+      "moved_location": "Muutin uuteen paikkaan",
+      "inheritance": "Sain perinnön",
+      "retirement": "Jäin eläkkeelle",
+      "health_change": "Merkittävä terveyden muutos",
+      "child_graduated": "Lapsi valmistui / Muutti pois kotoa",
+      "career_advancement": "Urakehitys",
+      "financial_windfall": "Taloudellinen yllätys",
+      "debt_change": "Merkittävä velan muutos",
+      "insurance_change": "Vakuutuskirjan muutos"
+    },
+    "form": {
+      "title": "Kirjaa elämän tapahtuma",
+      "description": "Valitse merkittävä elämänmuutos luodaksesi henkilökohtaisen tarkistuslistan",
+      "eventSelection": "Valitse elämän tapahtuma",
+      "eventDescription": "Valitse elämän tapahtuma, joka parhaiten kuvaa nykyistä tilannettasi",
+      "generateChecklist": "Luo tarkistuslista",
+      "cancel": "Peruuta",
+      "submit": "Lähetä",
+      "close": "Sulje"
+    },
+    "checklist": {
+      "title": "Henkilökohtainen tarkistuslista",
+      "description": "Elämän tapahtumasi perusteella tässä ovat tärkeimmät kohteet, joita sinun tulisi tarkistaa ja päivittää:",
+      "priority": "Prioriteetti",
+      "action": "Toimenpide",
+      "estimatedTime": "Arvioitu aika",
+      "high": "Korkea",
+      "medium": "Keskitaso",
+      "low": "Matala",
+      "completed": "Suoritettu",
+      "pending": "Odottaa"
+    },
+    "notifications": {
+      "eventLogged": "Elämän tapahtuma kirjattu onnistuneesti",
+      "checklistGenerated": "Henkilökohtainen tarkistuslista luotu",
+      "errorLogging": "Virhe elämän tapahtuman kirjaamisessa",
+      "reminderSet": "Muistutus asetettu seurantatoimenpiteille"
+    }
+  }
+}

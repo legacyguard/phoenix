@@ -1,0 +1,916 @@
+{
+  "_comment": "Shared translations used across the application",
+  "will": {
+    "title": "Testament",
+    "fields": {
+      "notes": "Notes",
+      "status": "Status",
+      "physical_location": "Physical Location",
+      "executor_contact_id": "Executor Contact ID",
+      "currentStatus": "Praegune staatus",
+      "physicalLocation": "Füüsiline asukoht",
+      "executorContact": "Täideviija kontakt",
+      "additionalNotes": "Lisamärkused"
+    },
+    "statuses": {
+      "draft": "Draft",
+      "pending_signatures": "Pending Signatures",
+      "completed": "Lõpetatud",
+      "needs_revision": "Needs Revision"
+    },
+    "actions": {
+      "save": "Save",
+      "edit": "Edit"
+    },
+    "placeholders": {
+      "notes_placeholder": "Enter any additional notes here...",
+      "physicalLocation": "nt kodune seif, advokaadibüroo",
+      "selectContact": "Valige kontakt",
+      "additionalNotes": "Igasugune lisateave..."
+    },
+    "errors": {
+      "unauthorized": "Unauthorized access.",
+      "save_will_failed": "Failed to save the will. Please try again.",
+      "retrieve_will_failed": "Failed to retrieve the will.",
+      "load_template_failed": "Failed to load template.",
+      "not_found": "Will not found.",
+      "failed_to_save": "Failed to save will.",
+      "failed_to_load": "Failed to load will.",
+      "failed_to_retrieve": "Failed to retrieve will.",
+      "failed_to_fetch": "Failed to fetch wills.",
+      "failed_to_generate": "Failed to generate will.",
+      "failed_to_sign": "Failed to sign will.",
+      "failed_to_delete": "Failed to delete will.",
+      "failed_to_notarize": "Failed to notarize will.",
+      "failed_to_update_status": "Failed to update will status.",
+      "failed_to_verify": "Failed to verify notarization.",
+      "cannot_update_non_draft": "Cannot update non-draft will.",
+      "cannot_delete_non_draft": "Cannot delete non-draft will.",
+      "must_be_signed": "Will must be signed before notarization.",
+      "verification_code_required": "Verification code required.",
+      "invalid_verification_code": "Invalid verification code.",
+      "mustBeLoggedIn": "Salvestamiseks peate olema sisse logitud.",
+      "loadingFailed": "Testamendi laadimine ebaõnnestus.",
+      "savingFailed": "Testamendi salvestamine ebaõnnestus."
+    },
+    "messages": {
+      "will_saved": "Will saved successfully.",
+      "template_loaded": "Template loaded successfully.",
+      "backup_success": "Backup created successfully.",
+      "backup_failed": "Failed to create a backup.",
+      "savedSuccessfully": "Testament edukalt salvestatud.",
+      "documentUploaded": "Dokument edukalt üles laaditud."
+    },
+    "success": {
+      "will_saved": "Will saved successfully.",
+      "backup_created": "Backup created successfully.",
+      "notarized": "Will has been successfully notarized."
+    },
+    "instructions": {
+      "verify_info": "Verify all information before proceeding to next steps.",
+      "provide_full_details": "Please provide full details for accuracy."
+    },
+    "loading": "Laen testamenti...",
+    "subtitle": "Hallake oma testamenti ja määrake täideviijad.",
+    "sections": {
+      "statusInfo": "Staatus ja teave",
+      "willDocument": "Testamendi dokument"
+    },
+    "descriptions": {
+      "statusDescription": "Jälgige oma testamendi hetkeseisu.",
+      "physicalLocationDescription": "Kus teie testament füüsiliselt asub?",
+      "executorDescription": "Isik, kes vastutab teie testamendi täitmise eest."
+    },
+    "options": {
+      "noContactSelected": "Kontakti pole valitud"
+    },
+    "status": {
+      "notStarted": "Alustamata",
+      "inPreparation": "Ettevalmistamisel",
+      "completedSigned": "Valmis ja allkirjastatud",
+      "withNotary": "Notari juures",
+      "draft": "Mustand",
+      "notarized": "Notariaalselt tõestatud",
+      "stored": "Salvestatud",
+      "updated": "Uuendatud"
+    },
+    "document": {
+      "uploaded": "Testamendi dokument üles laaditud",
+      "uploadedDescription": "Teie testamendi dokument on turvaliselt salvestatud.",
+      "noDocument": "Testamendi dokumenti pole",
+      "noDocumentDescription": "Laadige oma testamendi koopia turvaliseks säilitamiseks üles."
+    },
+    "buttons": {
+      "saveWillInfo": "Salvesta testamendi teave",
+      "saving": "Salvestan...",
+      "uploadDocument": "Laadi dokument üles",
+      "uploadNewVersion": "Laadi üles uus versioon"
+    },
+    "steps": {
+      "countrySelection": "Riigi valik",
+      "countrySelectionDesc": "Valige oma riik ja sisestage andmed",
+      "assetAllocation": "Varade jaotus",
+      "assetAllocationDesc": "Jagage varad pärijate vahel",
+      "beneficiaries": "Pärijad",
+      "beneficiariesDesc": "Määratlege oma pärijad",
+      "executors": "Testamenditäitjad",
+      "executorsDesc": "Määrake testamenditäitjad oma testamenti haldama",
+      "review": "Ülevaatus",
+      "reviewDesc": "Vaadake üle ja viimistlege oma testament"
+    },
+    "progress": "{{current}}. samm {{total}}-st",
+    "validation": {
+      "selectCountry": "Palun valige riik",
+      "requiredField": "See väli on kohustuslik",
+      "allocation100": "Kogu jaotus peab olema 100%",
+      "atLeastOneBeneficiary": "Vähemalt üks pärija on vajalik",
+      "executorRequired": "Testamenditäitja on vajalik",
+      "fixErrors": "Palun parandage vormis olevad vead"
+    },
+    "generation": {
+      "success": "Testament edukalt loodud!",
+      "error": "Testamendi loomine ebaõnnestus"
+    }
+  },
+  "willGenerator": {
+    "countries": {
+      "GB": "United Kingdom",
+      "DE": "Germany",
+      "FR": "France",
+      "ES": "Spain",
+      "IT": "Italy",
+      "CZ": "Czech Republic",
+      "SK": "Slovakia",
+      "PL": "Poland",
+      "AT": "Austria",
+      "CH": "Switzerland",
+      "NL": "Netherlands",
+      "BE": "Belgium",
+      "LU": "Luxembourg",
+      "LI": "Liechtenstein",
+      "DK": "Denmark",
+      "SE": "Sweden",
+      "FI": "Finland",
+      "NO": "Norway",
+      "IS": "Iceland",
+      "IE": "Ireland",
+      "PT": "Portugal",
+      "GR": "Greece",
+      "HU": "Hungary",
+      "RO": "Romania",
+      "BG": "Bulgaria",
+      "HR": "Croatia",
+      "SI": "Slovenia",
+      "EE": "Estonia",
+      "LV": "Latvia",
+      "LT": "Lithuania",
+      "MT": "Malta",
+      "CY": "Cyprus",
+      "MD": "Moldova",
+      "UA": "Ukraine",
+      "RS": "Serbia",
+      "AL": "Albania",
+      "MK": "North Macedonia",
+      "ME": "Montenegro",
+      "BA": "Bosnia and Herzegovina"
+    },
+    "steps": {
+      "confirmJurisdiction": "Confirm Jurisdiction",
+      "personalInformation": "Personal Information",
+      "executorBeneficiaries": "Executor and Beneficiaries",
+      "reviewGenerate": "Review and Generate",
+      "signConfirm": "Sign and Confirm"
+    },
+    "no_template_found_for_this_jur_1": "No template found for this jurisdiction. Please try another selection.",
+    "failed_to_load_will_template_2": "Failed to load will template. Please check your connection and try again.",
+    "please_confirm_that_you_have_s_3": "Please confirm that you have signed the will.",
+    "console": {
+      "willGenerationCompleted": "Will generation completed successfully."
+    },
+    "confirmCountry": "Please confirm if you are creating a will for {{country}}.",
+    "changeCountry": "Change Country",
+    "select_a_country_4": "Select a country",
+    "fullName": "Full Name",
+    "executionInstructions": "Execution Instructions",
+    "confirmSigned": "Confirm you have signed the document",
+    "finalizeUpload": "Finalize and Upload"
+  },
+  "will_generator": {
+    "uk_jurisdiction_title": "Which part of the UK is your primary residence?",
+    "jurisdiction_england": "England",
+    "jurisdiction_wales": "Wales",
+    "jurisdiction_scotland": "Scotland",
+    "jurisdiction_northern_ireland": "Northern Ireland",
+    "select_will_language_title": "Please select the language for your will:",
+    "error_uk_jurisdiction_required": "Please select a jurisdiction within the UK to continue."
+  },
+  "playbook": {
+    "label": "Tegevusjuhend",
+    "create": "Loo tegevusjuhend",
+    "edit": "Muuda tegevusjuhendit",
+    "preview": "Eelvaade",
+    "exitPreview": "Välju eelvaatest",
+    "save": "Salvesta tegevusjuhend",
+    "saving": "Salvestan...",
+    "loading": "Laen tegevusjuhendit...",
+    "autoSaveNotice": "Teie muudatused salvestatakse automaatselt kirjutamise ajal.",
+    "noContent": "Sisu pole veel lisatud.",
+    "noContacts": "Kontakte pole veel lisatud.",
+    "addContact": "Lisa kontakt",
+    "contact": "Kontakt",
+    "title": "Tegevusjuhend isikule {{name}}",
+    "titleReadOnly": "Isiku {{name}} tegevusjuhend",
+    "description": "Looge oma eestkostjale isikupärastatud juhised ja teave.",
+    "viewTitle": "Eestkostja tegevusjuhend: {{userName}}",
+    "viewDescription": "Oluline teave ja juhised, mis on spetsiaalselt teile ette valmistatud.",
+    "lastUpdated": "Viimati uuendatud",
+    "viewFooter": "See teave on teile kui eestkostjale usaldatud. Palun hoidke seda konfidentsiaalsena ja turvaliselt.",
+    "notAuthenticated": "Selle tegevusjuhendi vaatamiseks palun logige sisse.",
+    "accessDenied": "Teil pole luba seda tegevusjuhendit vaadata.",
+    "fetchError": "Tegevusjuhendi laadimine ebaõnnestus.",
+    "saveSuccess": "Tegevusjuhend edukalt salvestatud.",
+    "saveError": "Tegevusjuhendi salvestamine ebaõnnestus.",
+    "discardChanges": {
+      "title": "Kas loobuda muudatustest?",
+      "description": "Teil on salvestamata muudatusi. Kas olete kindel, et soovite neist loobuda?",
+      "cancel": "Jätka redigeerimist",
+      "confirm": "Loobu muudatustest"
+    },
+    "importantContacts": {
+      "label": "Tähtsad kontaktid",
+      "description": "Lisage olulised isikud, kellega see eestkostja peaks ühendust võtma.",
+      "viewDescription": "Vajadusel võtke nende inimestega ühendust.",
+      "add": "Lisa kontakt",
+      "remove": "Eemalda",
+      "empty": "Kontakte pole veel lisatud. Oluliste inimeste lisamiseks klõpsake 'Lisa kontakt'.",
+      "name": "Nimi",
+      "namePlaceholder": "Täisnimi",
+      "relationship": "Suhe",
+      "relationshipPlaceholder": "nt Pereadvokaat",
+      "phone": "Telefon",
+      "phonePlaceholder": "+372 123 4567",
+      "email": "E-post",
+      "emailPlaceholder": "email@example.com",
+      "notes": "Märkmed",
+      "notesPlaceholder": "Lisateave"
+    },
+    "funeralWishes": {
+      "label": "Matusesoovid",
+      "description": "Teie eelistused matusekorralduseks.",
+      "placeholder": "Kirjeldage oma soove matuseks või mälestusteenistuseks..."
+    },
+    "digitalAccounts": {
+      "label": "Digikontod",
+      "description": "Juhised teie veebikontode haldamiseks.",
+      "placeholder": "Loetlege oma digikontod ja kuidas neid tuleks hallata..."
+    },
+    "documentLocations": {
+      "label": "Dokumentide asukohad",
+      "description": "Kust leida olulisi dokumente.",
+      "placeholder": "Kirjeldage, kus asuvad olulised dokumendid..."
+    },
+    "personalMessages": {
+      "label": "Isiklikud sõnumid",
+      "description": "Isiklikud sõnumid sellele eestkostjale.",
+      "placeholder": "Kirjutage sellele eestkostjale isiklik sõnum..."
+    },
+    "practicalInstructions": {
+      "label": "Praktilised juhised",
+      "description": "Kohesed sammud ja kohustused.",
+      "placeholder": "Loetlege praktilised ülesanded ja kohesed tegevused..."
+    },
+    "notFound": {
+      "title": "Tegevusjuhendit ei leitud",
+      "description": "Otsitavat tegevusjuhendit pole veel loodud."
+    },
+    "subtitle": {
+      "edit": "Looge sellele eestkostjale isikupärastatud juhised ja teave.",
+      "view": "Teie jaoks koostatud oluline teave ja juhised."
+    },
+    "status": {
+      "empty": "Alustamata",
+      "draft": "Pooleli",
+      "complete": "Valmis"
+    },
+    "tabs": {
+      "funeral": "Matus",
+      "digital": "Digitaalne",
+      "contacts": "Kontaktid",
+      "documents": "Dokumendid",
+      "messages": "Sõnumid",
+      "instructions": "Juhised"
+    },
+    "templates": {
+      "funeralWishes": {
+        "traditionalReligiousBurial": "Traditional Religious Burial",
+        "simpleCremationService": "Simple Cremation Service",
+        "ecoFriendlyNaturalBurial": "Eco-Friendly Natural Burial"
+      },
+      "digitalAccountsShutdown": {
+        "comprehensiveDigitalShutdown": "Comprehensive Digital Shutdown",
+        "minimalDigitalFootprint": "Minimal Digital Footprint",
+        "professionalBusinessAccounts": "Professional & Business Accounts"
+      },
+      "importantContacts": {
+        "essentialContactsList": "Essential Contacts List",
+        "childrenDependentsContacts": "Children & Dependents Contacts"
+      },
+      "documentLocations": {
+        "homeFilingSystem": "Home Filing System",
+        "professionalStorage": "Professional Storage"
+      },
+      "personalMessages": {
+        "letterToSpousePartner": "Letter to Spouse/Partner",
+        "letterToChildren": "Letter to Children",
+        "letterToParents": "Letter to Parents"
+      },
+      "practicalInstructions": {
+        "first48HoursChecklist": "First 48 Hours Checklist",
+        "businessContinuityPlan": "Business Continuity Plan",
+        "householdManagementGuide": "Household Management Guide"
+      }
+    },
+    "sections": {
+      "funeral": {
+        "title": "Matusesoovid",
+        "description": "Teie eelistused matusekorralduseks ja mälestusteenistusteks.",
+        "placeholder": "Kirjeldage oma soove matuseks või mälestusteenistuseks...\n\nNäiteks:\n- Teenuse tüüp (religioosne, ilmalik, elu tähistamine)\n- Matus- või tuhastamiseelistused\n- Asukohaeelistused\n- Muusika, ettelugemised või erisoovid\n- Kes peaks kõnelema või osalema\n- Järgitavad spetsiifilised traditsioonid"
+      },
+      "digital": {
+        "title": "Digikontode sulgemine",
+        "description": "Juhised teie digitaalse kohaloleku ja veebikontode haldamiseks.",
+        "placeholder": "Loetlege oma digikontod ja kuidas neid tuleks hallata...\n\nNäiteks:\n- Sotsiaalmeedia kontod (Facebook, Instagram, LinkedIn)\n- E-posti kontod\n- Pilvesalvestus (Google Drive, Dropbox)\n- Tellimusteenused (Netflix, Spotify)\n- Veebipangandus ja finantskontod\n- Krüptoraha rahakotid\n- Veebisaidi või domeeninimed"
+      },
+      "contacts": {
+        "title": "Tähtsad kontaktid",
+        "description": "Olulised isikud, kellega see eestkostja peaks ühendust võtma või keda teavitama.",
+        "placeholder": "Lisage selle eestkostja kohustustega seotud olulised kontaktid."
+      },
+      "documents": {
+        "title": "Dokumentide asukohad",
+        "description": "Kust leida olulisi füüsilisi ja digitaalseid dokumente.",
+        "placeholder": "Kirjeldage, kus asuvad olulised dokumendid...\n\nNäiteks:\n- Testamendi asukoht\n- Kindlustuspoliisid\n- Kinnisvara dokumendid\n- Pangakonto teave\n- Investeerimisdokumendid\n- Maksudeklaratsioonid\n- Paroolid ja juurdepääsukoodid\n- Hoiulaeka asukoht ja võti"
+      },
+      "messages": {
+        "title": "Isiklikud sõnumid",
+        "description": "Isiklikud sõnumid ja viimased mõtted sellele eestkostjale.",
+        "placeholder": "Kirjutage sellele eestkostjale isiklik sõnum...\n\nSee on teie võimalus:\n- Väljendada oma tundeid ja tänu\n- Jagada olulisi mälestusi\n- Anda juhiseid või nõu\n- Selgitada oma otsuseid\n- Jätta lohutussõnu\n- Jagada oma tulevikulootusi"
+      },
+      "practical": {
+        "title": "Praktilised juhised",
+        "description": "Selle eestkostja jaoks kohesed praktilised sammud ja kohustused.",
+        "placeholder": "Loetlege praktilised ülesanded ja kohesed tegevused...\n\nNäiteks:\n- Esimese 24-48 tunni kontrollnimekiri\n- Keda esimesena teavitada\n- Kiireloomulised arved või maksed\n- Hooldusjuhised (lemmikloomad, taimed, vara)\n- Tähelepanu nõudvad äriküsimused\n- Tühistatavad planeeritud kohtumised\n- Vajalikud võtmed ja juurdepääsukoodid"
+      }
+    },
+    "contactFields": {
+      "name": "Nimi",
+      "namePlaceholder": "Täisnimi",
+      "role": "Roll/Suhe",
+      "rolePlaceholder": "nt Pereadvokaat, Raamatupidaja",
+      "phone": "Telefon",
+      "phonePlaceholder": "+372 123 4567",
+      "email": "E-post",
+      "emailPlaceholder": "email@example.com",
+      "notes": "Märkmed",
+      "notesPlaceholder": "Lisateave selle kontakti kohta"
+    },
+    "messages": {
+      "autoSaved": "Salvestatud",
+      "saved": "Tegevusjuhend edukalt salvestatud"
+    },
+    "errors": {
+      "loadFailed": "Tegevusjuhendi laadimine ebaõnnestus.",
+      "saveFailed": "Tegevusjuhendi salvestamine ebaõnnestus."
+    }
+  },
+  "scenarioPlanner": {
+    "scenarios": {
+      "hospitalized": {
+        "title": "What if you're in the hospital for 3 months?",
+        "description": "An unexpected health issue means you're unable to manage daily affairs. Your family needs to step in."
+      },
+      "incapacitated": {
+        "title": "What if you become incapacitated?",
+        "description": "A serious accident leaves you unable to make decisions for yourself. Who will make them for you?"
+      },
+      "suddenPassing": {
+        "title": "What if something happens to you tomorrow?",
+        "description": "The ultimate test of your preparation. Is your family ready to navigate this difficult time without chaos?"
+      }
+    },
+    "timeframes": {
+      "first24Hours": "First 24 Hours",
+      "firstWeek": "First Week",
+      "firstMonth": "First Month",
+      "threeToSixMonths": "3-6 Months"
+    },
+    "vulnerabilities": {
+      "billsGoUnpaid": "Bills Go Unpaid",
+      "businessDecisionsStall": "Business Decisions Stall",
+      "familyCannotManageFinances": "Family cannot legally manage your finances",
+      "familyCannotAccessBankAccount": "Family cannot access primary bank account",
+      "businessNoLeadership": "Business operations have no clear leadership",
+      "noWillFound": "No Will Found",
+      "insuranceDetailsUnknown": "Insurance Details Unknown",
+      "noWillAvailable": "No will available",
+      "unknownLifeInsurance": "Unknown life insurance details"
+    },
+    "actions": {
+      "designatePowerOfAttorney": "Designate a Power of Attorney for finances",
+      "grantSpouseAccess": "Grant spouse access to your primary account",
+      "createBusinessContinuityPlan": "Create a business continuity plan",
+      "draftWill": "Draft and store a legally binding will",
+      "compileInsuranceList": "Compile a list of all insurance policies"
+    },
+    "timelineEvents": {
+      "notifyImmediateFamily": "Notify immediate family",
+      "securePhysicalProperty": "Secure physical property",
+      "contactExecutor": "Contact executor",
+      "locateWill": "Locate the will",
+      "executorBeginsProbate": "Executor begins probate process",
+      "notifyEmployer": "Notify employer",
+      "activatePowerOfAttorney": "Activate Power of Attorney",
+      "arrangeBillPayments": "Arrange bill payments",
+      "fileDisabilityBenefits": "File for disability benefits"
+    },
+    "descriptions": {
+      "billsGoUnpaid": "Your family can't access your primary checking account to pay the mortgage.",
+      "businessDecisionsStall": "Clients and employees don't know who is authorized to make decisions.",
+      "familyCannotManageFinances": "Your spouse can now legally manage all financial matters, ensuring bills are paid and investments are protected.",
+      "familyCannotAccessBankAccount": "Your family can now pay bills and manage daily expenses without delay or legal complications.",
+      "businessNoLeadership": "Your business can continue operating smoothly with clear leadership and decision-making processes.",
+      "noWillFound": "The family cannot locate or confirm the existence of a will.",
+      "insuranceDetailsUnknown": "Life insurance policy details and beneficiaries are unknown.",
+      "notifyImmediateFamily": "Ensure all immediate family members are informed.",
+      "securePhysicalProperty": "Ensure that the home and vehicles are secure.",
+      "contactExecutor": "Reach out to John Smith to start will proceedings.",
+      "locateWill": "Locate and secure the will at the designated location.",
+      "executorBeginsProbate": "The executor will file for probate to manage the estate.",
+      "notifyEmployer": "Inform workplace about extended absence.",
+      "activatePowerOfAttorney": "Ensure designated person can make decisions.",
+      "arrangeBillPayments": "Set up automatic payments or delegate to trusted person.",
+      "fileDisabilityBenefits": "Submit necessary paperwork for insurance claims."
+    },
+    "scenario_planner_1": "Scenario Planner",
+    "let_s_see_how_prepared_your_fa_2": "Let's see how prepared your family is for different scenarios",
+    "generate_family_action_plan_3": "Generate Family Action Plan",
+    "generate_plan_4": "Generate Plan",
+    "current_family_vulnerabilities_6": "Current Family Vulnerabilities",
+    "without_proper_preparation_you_7": "Without proper preparation, you and your family could face these challenges",
+    "projected_timeline_8": "Projected Timeline",
+    "potential_financial_impact_9": "Potential Financial Impact",
+    "these_are_estimates_of_the_pos_10": "These are estimates of the potential costs if vulnerabilities are not addressed",
+    "no_will_11": "No Will: ",
+    "potential_cost_of_lengthy_prob_12": "Potential cost of lengthy probate process: ",
+    "5_000_15_000_13": "$5,000 - $15,000",
+    "estimated_14": " estimated",
+    "potential_loss_of_business_rev_15": "Potential loss of business revenue during transition: ",
+    "20_000_16": "$20,000",
+    "your_preparedness_blueprint_17": "Your Preparedness Blueprint",
+    "your_family_is_currently_18": "Your family is currently ",
+    "protected_in_this_scenario_19": "% protected in this scenario",
+    "vulnerability_20": "Vulnerability: ",
+    "action_required_21": "Action Required: ",
+    "resolve_this_vulnerability_22": "Resolve This Vulnerability",
+    "resolved_23": "Resolved: ",
+    "family_action_plan_24": "Family Action Plan",
+    "a_comprehensive_guide_for_your_25": "A comprehensive guide for your family to follow in case of emergency",
+    "print_plan_26": "Print Plan",
+    "_27": "🤕"
+  },
+  "scenarios": {
+    "title": "Mis juhtub, kui elu võtab ootamatu pöörde?",
+    "subtitle": "Päris pered, päris olukorrad, päris kontroll ja ettevalmistus",
+    "hospitalStay": {
+      "title": "Ootamatu haiglasviibimine",
+      "before": {
+        "situation": "Sarah abikaasal oli südameatakk. Kui ta oli intensiivravis, veetis ta päevi, püüdes leida nende kindlustuspabereid, pangakonto teavet ja olulisi kontakte. Stress oli ülekoormav, kui ta pidi keskenduma tema taastumisele.",
+        "emotion": "Stress ja mure",
+        "consequence": "Päevi teabe otsimiseks ja toe leidmiseks."
+      },
+      "after": {
+        "situation": "Kui Markil oli õnnetus, avas tema abikaasa Lisa nende pere juhendi ja leidis kõik korraldatud: kindlustuse üksikasjad, pangakontaktid, meditsiiniteave ja isegi nimekiri teavitada vajavatest inimestest. Ta võis keskenduda kõige olulisemale - Marki toetamisele.",
+        "emotion": "Rahu ja keskendus",
+        "benefit": "Kohene juurdepääs kõigele, mida ta vajas."
+      }
+    },
+    "businessTrip": {
+      "title": "Ärireisi hädaolukord",
+      "before": {
+        "situation": "Kui Davidi lennuk viibis ja ta jäi oma tütre kiireloomulise operatsiooni vahele, ei saanud tema abikaasa juurdepääsu nende säästukontole ega leidnud nende meditsiini kindlustuse teavet. Kriitilised otsused pidid ootama.",
+        "emotion": "Frustratsioon ja abituses",
+        "consequence": "Olulised meditsiinilised otsused viivitati."
+      },
+      "after": {
+        "situation": "Kui Emma abikaasa reisis ja ta vajas kiireloomulisi vahendeid oma poja operatsiooni jaoks, oli tal kohene juurdepääs kõigile kontoteabele, kindlustuse üksikasjadele ja isegi eelnevalt kirjutatud volituskirjadele. Ei viivitust, ei stressi.",
+        "emotion": "Kergendus ja valmisolek",
+        "benefit": "Kõik saadaval täpselt siis, kui ta seda vajas."
+      }
+    },
+    "suddenLoss": {
+      "title": "Ootamatu kaotus",
+      "before": {
+        "situation": "Pärast oma isa ootamatut kaotamist veetis Maria kuud, püüdes kokku panna tema rahalisi asju. Ta leidis kontod, millest ta ei teadnud, ja jäi ilma olulistest tähtaegadest, kuna dokumendid olid kõikjal laiali.",
+        "emotion": "Segadus ja kahetsus",
+        "consequence": "Tähtaegade möödumine ja aja kaotus."
+      },
+      "after": {
+        "situation": "Kui Johni pere pidi tegelema tema asjadega, oli kõik selgelt korraldatud: täielik kontode nimekiri, olulised kontaktid, sammud-sammult juhised ja isegi isiklikud sõnumid, mida ta oli iga pereliikme jaoks ette valmistanud.",
+        "emotion": "Rahu ja selgus",
+        "benefit": "Selge tee, mida järgida rasketel aegadel."
+      }
+    },
+    "labels": {
+      "before": "Enne LegacyGuard",
+      "after": "Pärast Pärandi varamut",
+      "feeling": "Tunne"
+    },
+    "bottomCta": {
+      "primary": "Ärge laske oma perel silmitsi seista selle kaosega",
+      "secondary": "Alustage korraldamist 10 minutiga",
+      "urgency": "Iga päev, mida ootate, on teine päev, mil teie pere pole ettevalmistatud"
+    },
+    "testimonials": {
+      "1": "Pärast oma venna ootamatut õnnetust nägin, kuidas mu õde-õde nädalaid püüdis leida olulisi dokumente ja paroole. Siis teadsin, et ei saa lasta samal asjal juhtuda minu perega.",
+      "2": "Kui üksikema, kes juhib äri, muretsesin pidevalt, mis juhtuks, kui minuga midagi juhtuks. Pärandi varamu aitas mul kõike korraldada.",
+      "3": "Mu abikaasal on varajane dementsus ja mõistsin, et pean ette valmistama, kui veel suudan. Pärandi varamu tegi lihtsaks meie 40-aastase kooselu korraldamise."
+    }
+  },
+  "annualReview": {
+    "title": "Aastane pärandi ülevaatus",
+    "subtitle": "Hoidke oma pere kaitseplaani ajakohane ja tõhus",
+    "description": "Elu muutub kiiresti. See aastane ülevaatus tagab, et teie pärandiplaan jääb kooskõlla teie praeguse olukorra ja soovidega.",
+    "progress": {
+      "title": "Ülevaatuse edenemine",
+      "completed": "Lõpetatud",
+      "inProgress": "Pooleli",
+      "notStarted": "Alustamata",
+      "totalSteps": "Sammud kokku",
+      "estimatedTime": "Hinnanguline aeg: 15 minutit"
+    },
+    "step1": {
+      "title": "Vaadake üle oma täideviijad",
+      "description": "Kinnitage, et teie usaldusväärsed inimesed on endiselt õiged valikud teie perele"
+    },
+    "step2": {
+      "title": "Vaadake üle oma varad",
+      "description": "Kinnitage, et teie vara inventuur on ajakohane ja täielik"
+    },
+    "step3": {
+      "title": "Vaadake üle oma pärijad",
+      "description": "Veenduge, et teie pärijad on endiselt õiged inimesed"
+    },
+    "step4": {
+      "title": "Lõpeta ülevaatus",
+      "description": "Viimistlege oma aastane ülevaatus ja uuendage oma plaan"
+    },
+    "commandRoster": {
+      "title": "Käskude nimekirja ülevaatus",
+      "description": "Teie täideviijad ja usaldusväärsed inimesed on teie pere kaitseplaani alus.",
+      "executorQuestion": "Kas {name} on endiselt õige isik teie täideviijaks?",
+      "guardianQuestion": "Kas {name} on endiselt õige isik teie laste eest hoolitsema?",
+      "trustedPersonQuestion": "Kas {name} on endiselt õige isik {role} jaoks?",
+      "status": {
+        "current": "Ajakohane",
+        "needsUpdate": "Vajab uuendamist",
+        "outdated": "Aegunud",
+        "missing": "Puudub"
+      },
+      "details": {
+        "executor": "Peamine täideviija teie pärandi jaoks",
+        "guardian": "Eestkostja alaealistele lastele",
+        "trustedPerson": "Usaldusväärne isik {accessLevel} juurdepääsuga",
+        "emergencyContact": "Hädaolukorra kontaktisik"
+      }
+    },
+    "armory": {
+      "title": "Vara inventuuri ülevaatus",
+      "description": "Teie varad on see, mida teie kaitstes. Hoidke see inventuur ajakohane.",
+      "ownershipQuestion": "Kas teie endiselt omate {assetName}?",
+      "valueQuestion": "Kas {assetName} väärtus on oluliselt muutunud?",
+      "locationQuestion": "Kas {assetName} asukoht on endiselt õige?",
+      "status": {
+        "current": "Ajakohane",
+        "needsUpdate": "Vajab uuendamist",
+        "outdated": "Aegunud",
+        "missing": "Puudub"
+      },
+      "categories": {
+        "realEstate": "Kinnisvara",
+        "vehicles": "Sõidukid",
+        "bankAccounts": "Pangakontod",
+        "investments": "Investeeringud",
+        "insurance": "Kindlustus",
+        "digitalAssets": "Digitaalsed varad",
+        "personalItems": "Isiklikud esemed"
+      }
+    },
+    "beneficiaries": {
+      "title": "Pärija ülevaatus",
+      "description": "Veenduge, et õiged inimesed saavad õiged varad õigel ajal.",
+      "confirmationQuestion": "Kas need on endiselt õiged inimesed nende varade saamiseks?",
+      "distributionQuestion": "Kas jaotusprotsent on endiselt õige?",
+      "contactQuestion": "Kas {name} kontaktandmed on endiselt ajakohased?",
+      "status": {
+        "current": "Ajakohane",
+        "needsUpdate": "Vajab uuendamist",
+        "outdated": "Aegunud",
+        "missing": "Puudub"
+      },
+      "details": {
+        "primary": "Peamine pärija",
+        "contingent": "Tingimuslik pärija",
+        "percentage": "{percentage}% varadest",
+        "specific": "Konkreetse vara pärija"
+      }
+    },
+    "complete": {
+      "title": "Ülevaatus lõpetatud",
+      "description": "Teie aastane ülevaatus on edukalt lõpetatud.",
+      "message": "Teie aastane ülevaatus on lõpetatud. Teie pere kaitseplaan on nüüd ajakohane ja tõhus.",
+      "summary": "Ülevaatuse kokkuvõte",
+      "changes": "Tehtud muudatused",
+      "noChanges": "Muudatusi ei olnud vaja. Teie plaan on ajakohane.",
+      "nextReview": "Järgmine ülevaatus",
+      "reminder": "Meenutame teile, kui on aeg järgmiseks aastaseks ülevaatuseks."
+    },
+    "buttons": {
+      "confirm": "Kinnita",
+      "update": "Uuenda",
+      "back": "Tagasi",
+      "next": "Järgmine",
+      "finish": "Lõpeta ülevaatus",
+      "save": "Salvesta muudatused",
+      "skip": "Jäta vahele praegu",
+      "reviewLater": "Vaata hiljem üle"
+    },
+    "status": {
+      "title": "Ülevaatuse staatus",
+      "overdue": "Üle aja",
+      "dueSoon": "Peagi tuleb",
+      "current": "Ajakohane",
+      "completed": "Lõpetatud",
+      "lastReview": "Viimane ülevaatus",
+      "nextReview": "Järgmine ülevaatus",
+      "daysOverdue": "{days} päeva üle aja",
+      "daysUntilDue": "{days} päeva kuni tuleb"
+    },
+    "notifications": {
+      "reviewDue": "Aastane ülevaatus tuleb",
+      "reviewOverdue": "Aastane ülevaatus üle aja",
+      "reviewCompleted": "Aastane ülevaatus lõpetatud",
+      "changesSaved": "Muudatused edukalt salvestatud",
+      "errorSaving": "Muudatuste salvestamise viga",
+      "reminderSet": "Meeldetuletus seadistatud järgmiseks ülevaatuseks"
+    }
+  },
+  "complexityReduction": {
+    "title": "Lihtsustage oma pärandi planeerimist",
+    "subtitle": "Jagage keerukad ülesanded lihtsateks, hallatavateks sammudeks",
+    "description": "Me mõistame, et tuleviku planeerimine võib tunduda ülekoormavana. Meie keerukuse vähendamise süsteem jagab iga ülesande lihtsateks, teostatavateks sammudeks, mis võtavad ainult minutid.",
+    "benefits": {
+      "title": "Miks keerukuse vähendamine töötab",
+      "overwhelm": {
+        "title": "Võtab ära ülekoormuse",
+        "description": "Suure to-do nimekirja asemel teete ühe väikese ülesande korraga. Iga samm on disainitud lõpetamiseks alla 5 minuti."
+      },
+      "progress": {
+        "title": "Nähtav edenemine",
+        "description": "Vaadake oma pere ettevalmistuse kasvu iga lõpetatud sammuga. Jälgige oma edenemist ja tähistage väikeseid võite mööda teed."
+      },
+      "confidence": {
+        "title": "Ehitab usaldust",
+        "description": "Iga lõpetatud sammuga tunnete end rohkem usaldusväärsena ja kontrollis. Mis kunagi tundus võimatu, muutub saavutatavaks."
+      },
+      "family": {
+        "title": "Pere kaitse",
+        "description": "Iga lõpetatud samm kaitseb otseselt teie peret. Hädaolukorra juurdepääsust pikaajalise planeerimiseni, iga tegevus on oluline."
+      }
+    },
+    "steps": {
+      "identifyBankAccount": {
+        "title": "Tuvastage oma peamine pangakonto",
+        "why": "Miks see on oluline: Kohene juurdepääs vahenditele hädaolukordades",
+        "whatYouDo": "Mida teete: Teete foto või kirjutate konto teabe üles",
+        "whatWeDo": "Mida me teeme: Salvestame teabe turvaliselt ja loome juurdepääsujuhised",
+        "timeRequired": "Vajalik aeg: 2 minutit",
+        "complexity": "Keerukuse tase: Lihtne"
+      },
+      "emergencyContacts": {
+        "title": "Loetlege hädaolukorra kontaktid",
+        "why": "Miks see on oluline: Kiire juurdepääs olulistele inimestele kriiside ajal",
+        "whatYouDo": "Mida teete: Lisate telefoninumbrid ja suhted",
+        "whatWeDo": "Mida me teeme: Korraldame kontaktid prioriteedi järgi ja loome hädaolukorra protokollid",
+        "timeRequired": "Vajalik aeg: 3 minutit",
+        "complexity": "Keerukuse tase: Lihtne"
+      },
+      "insurancePolicies": {
+        "title": "Dokumenteerige kindlustuspoliisid",
+        "why": "Miks see on oluline: Tagab, et nõuded saab esitada kiiresti ja õigesti",
+        "whatYouDo": "Mida teete: Laadige üles poliisi dokumendid või teete fotosid",
+        "whatWeDo": "Mida me teeme: Eraldame võtmeteabe ja loome nõude juhised",
+        "timeRequired": "Vajalik aeg: 5 minutit",
+        "complexity": "Keerukuse tase: Lihtne"
+      },
+      "digitalAssets": {
+        "title": "Turvalise digitaalsed varad",
+        "why": "Miks see on oluline: Kaitseb veebikontosid ja digitaalseid mälestusi",
+        "whatYouDo": "Mida teete: Loetlete olulised kontod ja paroolid",
+        "whatWeDo": "Mida me teeme: Loome turvalised juurdepääsu protokollid ja varukoopia juhised",
+        "timeRequired": "Vajalik aeg: 4 minutit",
+        "complexity": "Keerukuse tase: Lihtne"
+      },
+      "legalDocuments": {
+        "title": "Korraldage juriidilised dokumendid",
+        "why": "Miks see on oluline: Tagab, et juriidilisi soove järgitakse ja protsessid on sujuvad",
+        "whatYouDo": "Mida teete: Laadige üles testamendid, volikirjad ja muud dokumendid",
+        "whatWeDo": "Mida me teeme: Loome kokkuvõtted ja tagame õige juriidilise juurdepääsu",
+        "timeRequired": "Vajalik aeg: 6 minutit",
+        "complexity": "Keerukuse tase: Keskmine"
+      },
+      "familyInstructions": {
+        "title": "Kirjutage pere juhised",
+        "why": "Miks see on oluline: Pakub selgeid juhiseid rasketel aegadel",
+        "whatYouDo": "Mida teete: Kirjutate isiklikud sõnumid ja juhised",
+        "whatWeDo": "Mida me teeme: Korraldame sõnumid ja loome kohaletoimetamise ajakavad",
+        "timeRequired": "Vajalik aeg: 8 minutit",
+        "complexity": "Keerukuse tase: Keskmine"
+      }
+    },
+    "actions": {
+      "startThisStep": "Alusta seda sammu",
+      "showMeHow": "Näita mulle kuidas",
+      "iNeedHelp": "Vajan abi",
+      "nextStep": "Järgmine samm",
+      "previousStep": "Eelmine samm",
+      "completeStep": "Märgi lõpetatuks",
+      "skipStep": "Jäta vahele praegu"
+    },
+    "progress": {
+      "title": "Teie edenemine",
+      "completed": "Lõpetatud",
+      "inProgress": "Pooleli",
+      "notStarted": "Alustamata",
+      "totalSteps": "Sammud kokku",
+      "estimatedTime": "Hinnanguline järelejäänud aeg"
+    },
+    "features": {
+      "title": "Kuidas keerukuse vähendamine töötab",
+      "stepByStep": {
+        "title": "Sammud-sammult juhendamine",
+        "description": "Iga ülesanne on jagatud selgeteks, lihtsateks juhisteks, mida igaüks saab järgida."
+      },
+      "timeEstimation": {
+        "title": "Täpsed aja hinnangud",
+        "description": "Teate täpselt, kui kaua iga samm võtab, 2 minutist kuni 15 minutini maksimaalselt."
+      },
+      "difficultyLevels": {
+        "title": "Selged raskusastmed",
+        "description": "Lihtne, Kerge, Keskmine ja Keeruline hinnangud aitavad teil valida, mida esimesena teha."
+      },
+      "progressTracking": {
+        "title": "Edenemise jälgimine",
+        "description": "Vaadake oma pere ettevalmistuse kasvu iga lõpetatud sammuga."
+      },
+      "helpAvailable": {
+        "title": "Abi, kui seda vajate",
+        "description": "Saate abi, selgitusi ja tuge igale sammule, mis tundub väljakutse."
+      }
+    }
+  },
+  "microTaskGenerator": {
+    "minutes_1": " minutes • ",
+    "family_impact_2": " family impact",
+    "start_task_3": "Start Task",
+    "complete_task_4": "Complete Task",
+    "skip_for_now_5": "Skip for Now",
+    "taskCategories": {
+      "identification": "Identification Documents",
+      "financial": "Financial Information",
+      "healthcare": "Healthcare Documents",
+      "legal": "Legal Documents",
+      "digital": "Digital Assets",
+      "personal": "Personal Information"
+    },
+    "difficultyLevels": {
+      "trivial": "Trivial",
+      "easy": "Easy",
+      "simple": "Simple"
+    },
+    "familyImpactLevels": {
+      "high": "Kõrge",
+      "medium": "Keskmine",
+      "low": "Madal"
+    },
+    "taskStatus": {
+      "available": "Saadaval",
+      "in_progress": "Pooleli",
+      "completed": "Lõpetatud",
+      "skipped": "Vahele jäetud"
+    },
+    "tasks": {
+      "driversLicense": {
+        "title": "Take a photo of your driver's license",
+        "description": "Your family will need this for legal and financial matters. Having a clear photo saves them time and stress.",
+        "completionMessage": "Your family now has access to critical ID information."
+      },
+      "passport": {
+        "title": "Photograph your passport",
+        "description": "Essential for international travel arrangements and legal identification.",
+        "completionMessage": "International travel documentation is now secured for your family."
+      },
+      "birthCertificate": {
+        "title": "Scan your birth certificate",
+        "description": "Required for many legal processes and family history documentation.",
+        "completionMessage": "Birth certificate is now digitally preserved for future needs."
+      },
+      "socialSecurityCard": {
+        "title": "Document your Social Security card",
+        "description": "Critical for benefits and legal identification processes.",
+        "completionMessage": "Social Security information is now safely documented."
+      },
+      "bankAccounts": {
+        "title": "List your bank accounts",
+        "description": "Help your family manage finances and access funds when needed.",
+        "completionMessage": "Bank account information is now organized for your family."
+      },
+      "insurancePolicies": {
+        "title": "Compile insurance policy details",
+        "description": "Ensure your family knows about all coverage and can file claims.",
+        "completionMessage": "Insurance information is now comprehensive and accessible."
+      },
+      "medicalRecords": {
+        "title": "Organize medical history",
+        "description": "Help healthcare providers understand your medical background.",
+        "completionMessage": "Medical history is now organized for better healthcare decisions."
+      },
+      "medications": {
+        "title": "List current medications",
+        "description": "Critical for medical emergencies and ongoing care.",
+        "completionMessage": "Medication list is now available for medical professionals."
+      },
+      "will": {
+        "title": "Create or update your will",
+        "description": "Ensure your wishes are clearly documented and legally binding.",
+        "completionMessage": "Your will is now current and legally protected."
+      },
+      "powerOfAttorney": {
+        "title": "Designate power of attorney",
+        "description": "Authorize trusted individuals to make decisions on your behalf.",
+        "completionMessage": "Power of attorney is now properly designated."
+      },
+      "digitalPasswords": {
+        "title": "Secure digital password list",
+        "description": "Help family access important online accounts and services.",
+        "completionMessage": "Digital access is now safely organized for your family."
+      },
+      "socialMedia": {
+        "title": "Plan social media accounts",
+        "description": "Decide how your online presence should be handled.",
+        "completionMessage": "Social media legacy is now planned and documented."
+      }
+    },
+    "sessionStats": {
+      "tasksCompleted": "Tasks Completed",
+      "totalTimeSpent": "Total Time Spent",
+      "momentumScore": "Momentum Score",
+      "nextRecommendedTask": "Next Recommended Task"
+    },
+    "scoring": {
+      "urgency": "Urgency",
+      "impact": "Impact",
+      "ease": "Ease",
+      "momentum": "Momentum"
+    }
+  },
+  "editStoryModal": {
+    "editStory": "Muuda lugu",
+    "addStory": "Lisa lugu",
+    "description": "Jagage lugu \"{{assetName}}\" taga. See isiklik puute on väärtuslik teie lähedastele.",
+    "fields": {
+      "yourStory": "Teie lugu"
+    },
+    "placeholders": {
+      "story": "nt See oli teie vanaema abielusõrmus, mis anti talle 1952. aastal, kui ta abiellus teie vanaisaga nende kodulinna väikses kirikus. Ta kandis seda iga päev 65 aastat..."
+    },
+    "hints": {
+      "shareMemories": "Jagage mälestusi, tähtsust või ajalugu"
+    },
+    "tips": {
+      "title": "Näpunäited mõtestatud loo jaoks:",
+      "explainSpecial": "Selgitage, miks see ese on teile eriline",
+      "shareMemories": "Jagage sellega seotud mälestusi",
+      "describeHistory": "Kirjeldage selle ajalugu või kuidas teie selle omandasite",
+      "mentionWishes": "Mainige soove, kuidas seda peaks kasutama või säilitama"
+    },
+    "saving": "Salvestan...",
+    "saveStory": "Salvesta lugu",
+    "messages": {
+      "saved": "Lugu edukalt salvestatud"
+    },
+    "errors": {
+      "notAuthenticated": "Loo salvestamiseks peate olema sisse logitud",
+      "saveFailed": "Loo salvestamine ebaõnnestus"
+    }
+  }
+}

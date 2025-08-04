@@ -1,0 +1,309 @@
+{
+  "_comment": "Shared translations used across the application",
+  "guardian": {
+    "invitationSent": "Pozivnica poslana",
+    "accepted": "Prihvaćeno",
+    "declined": "Odbijeno",
+    "sendInvite": "Pošalji pozivnicu"
+  },
+  "guardianUpload": {
+    "addTitle": "Dodaj čuvara",
+    "editTitle": "Uredi čuvara",
+    "description": "Dodajte nekoga kome vjerujete da će vam pomoći upravljati vašim nasljeđem",
+    "fullNameLabel": "Puno ime čuvara *",
+    "fullNamePlaceholder": "Unesite puno ime čuvara",
+    "relationshipLabel": "Odnos *",
+    "relationshipPlaceholder": "Odaberite odnos",
+    "countryLabel": "Zemlja prebivališta *",
+    "countryPlaceholder": "Odaberite zemlju",
+    "countryDescription": "Odaberite zemlju u kojoj ovaj čuvar prebiva",
+    "rolesTitle": "Uloge i odgovornosti",
+    "emailLabel": "Email Address",
+    "emailPlaceholder": "Enter email address (optional)",
+    "phoneLabel": "Phone Number",
+    "phonePlaceholder": "Enter phone number (optional)",
+    "addButton": "Dodaj čuvara",
+    "updateButton": "Ažuriraj čuvara",
+    "saving": "Spremanje...",
+    "success": "Uspjeh",
+    "added": "Čuvar uspješno dodan",
+    "updated": "Čuvar uspješno ažuriran",
+    "error": "Greška",
+    "loginToSave": "Morate biti prijavljeni da biste spremili čuvare",
+    "relationships": {
+      "spouse": "Supružnik/a",
+      "parent": "Roditelj",
+      "sibling": "Brat/sestra",
+      "child": "Dijete",
+      "friend": "Prijatelj/ica",
+      "legalProfessional": "Pravni stručnjak",
+      "other": "Ostalo"
+    },
+    "roles": {
+      "guardianForChildren": "Skrbnik za djecu",
+      "executorOfWill": "Izvršitelj oporuke",
+      "healthcareProxy": "Punomoćnik za zdravstvenu skrb",
+      "financialPowerOfAttorney": "Financijska punomoć",
+      "emergencyContact": "Kontakt za hitne slučajeve",
+      "trustee": "Povjerenik"
+    },
+    "errors": {
+      "saveError": "An error occurred while saving the guardian",
+      "requiredDataNotFound": "Required data were not found",
+      "connectionError": "Connection error. Please check your internet connection",
+      "permissionError": "You do not have permission to perform this action",
+      "duplicateError": "A record with this information already exists",
+      "unknownError": "An unknown error occurred"
+    },
+    "fillRequired": "Molimo ispunite sva obavezna polja",
+    "failedSave": "Spremanje čuvara nije uspjelo. Molimo pokušajte ponovo."
+  },
+  "guardianView": {
+    "title": "Nadzorna ploča čuvara",
+    "subtitle": "Siguran pristup bitnim informacijama korisnika {{userName}}",
+    "readOnlyAccess": "Pristup samo za čitanje",
+    "loading": "Učitavanje nadzorne ploče čuvara...",
+    "errors": {
+      "pleaseLogin": "Please log in to view this information",
+      "failedToLoad": "Failed to load guardian data",
+      "loadFailed": "Učitavanje kontakata za hitne slučajeve nije uspjelo",
+      "addFailed": "Dodavanje kontakta za hitne slučajeve nije uspjelo",
+      "removeFailed": "Uklanjanje kontakta za hitne slučajeve nije uspjelo",
+      "reorderFailed": "Ažuriranje redoslijeda kontakata nije uspjelo",
+      "testFailed": "Slanje testne poruke nije uspjelo",
+      "selectContact": "Molimo odaberite kontakt"
+    },
+    "sections": {
+      "keyDocuments": {
+        "title": "Ključni dokumenti",
+        "description": "Bitni dokumenti koje je vlasnik računa označio kao kritične",
+        "keyDocumentBadge": "Ključni dokument",
+        "expires": "Istječe",
+        "noExpiration": "Nema isteka",
+        "empty": "Nema dostupnih ključnih dokumenata"
+      },
+      "importantContacts": {
+        "title": "Važni kontakti",
+        "description": "Ključni kontakti za hitne situacije",
+        "empty": "Nema dostupnih važnih kontakata"
+      },
+      "finalWishes": {
+        "title": "Posljednje želje i upute",
+        "description": "Osobne upute i posljednje želje",
+        "funeralWishes": "Želje za sprovod",
+        "digitalAccounts": "Digital Accounts Shutdown",
+        "digitalAccountsShutdown": "Gašenje digitalnih računa",
+        "messagesToLovedOnes": "Poruke bližnjima",
+        "empty": "Nema dostupnih posljednjih želja ili uputa"
+      }
+    },
+    "guardianInfo": {
+      "description": "Ove informacije pregledavate kao povjerljivi Čuvar. Ovaj pristup je omogućen za hitne situacije i kako bi vam pomogao u ispunjavanju vaših odgovornosti.",
+      "securityNote": "Svaki pristup se bilježi i nadzire iz sigurnosnih razloga."
+    },
+    "defaultUserName": "Glavni vlasnik računa",
+    "description": "Upravljajte s do 3 kontakta za hitne slučajeve po prioritetu",
+    "addContact": "Dodaj kontakt",
+    "noContacts": "Još nema dodanih kontakata za hitne slučajeve. Dodajte kontakte koje treba obavijestiti u slučaju nužde.",
+    "maxContactsReached": "Dosegli ste maksimalan broj od 3 kontakta za hitne slučajeve.",
+    "sendTest": "Pošalji test",
+    "lastContacted": "Zadnji put kontaktirano prije {{time}}",
+    "priority": {
+      "1": "Prioritet 1",
+      "2": "Prioritet 2",
+      "3": "Prioritet 3"
+    },
+    "addContactDialog": {
+      "title": "Dodaj kontakt za hitne slučajeve",
+      "description": "Odaberite kontakt s vašeg popisa da biste ga dodali kao kontakt za hitne slučajeve.",
+      "selectContact": "Odaberi kontakt",
+      "selectPlaceholder": "Odaberite kontakt...",
+      "relationship": "Odnos (opcionalno)",
+      "relationshipPlaceholder": "Odaberite odnos...",
+      "addButton": "Dodaj kontakt za hitne slučajeve"
+    },
+    "messages": {
+      "added": "Kontakt za hitne slučajeve uspješno dodan",
+      "removed": "Kontakt za hitne slučajeve uklonjen",
+      "reordered": "Prioritet kontakta ažuriran",
+      "testSent": "Testna poruka poslana {{name}}"
+    }
+  },
+  "executor": {
+    "dashboard": {
+      "title": "Nadzorna ploča izvršitelja",
+      "subtitle": "Korak-po-korak vodič koji će vam pomoći kroz ovo teško vrijeme",
+      "reminder": "Sjetite se da se brinete o sebi tijekom ovog teškog vremena. Ne ustručavajte se zatražiti pomoć kada je potrebna."
+    },
+    "errors": {
+      "loadTasksFailed": "Učitavanje zadataka izvršitelja nije uspjelo. Molimo pokušajte ponovo kasnije.",
+      "updateTaskFailed": "Ažuriranje statusa zadatka nije uspjelo."
+    },
+    "highPriority": "Visok prioritet",
+    "due": "Rok",
+    "completed": "Dovršeno",
+    "undo": "Poništi",
+    "markComplete": "Označi kao dovršeno",
+    "viewAccountDetails": "Prikaži detalje računa i lozinku",
+    "viewRelatedDocuments": "Prikaži povezane dokumente ({{count}})",
+    "stats": {
+      "totalTasks": "Ukupni zadaci",
+      "completed": "Dovršeno",
+      "remaining": "Preostalo"
+    },
+    "sections": {
+      "immediate": {
+        "title": "Hitni zadaci (Prvih 48 sati)",
+        "description": "Kritični zadaci koji zahtijevaju vašu trenutnu pozornost",
+        "empty": "Svi hitni zadaci dovršeni!"
+      },
+      "firstWeek": {
+        "title": "Zadaci prvog tjedna",
+        "description": "Važni zadaci za dovršetak u prvom tjednu",
+        "empty": "Svi zadaci prvog tjedna dovršeni!"
+      },
+      "ongoing": {
+        "title": "Tekuće odgovornosti",
+        "description": "Zadaci za rješavanje u nadolazećim tjednima i mjesecima",
+        "empty": "Sve tekuće odgovornosti dovršene!"
+      }
+    },
+    "communications": {
+      "title": "Komunikacije s korisnicima",
+      "description": "Pratite sve komunikacije s korisnicima kako biste održali transparentnost",
+      "logCommunication": "Zabilježi komunikaciju",
+      "logTitle": "Zabilježi komunikaciju s korisnikom",
+      "logDescription": "Zabilježite detalje vaše komunikacije s korisnicima",
+      "beneficiaryName": "Ime korisnika",
+      "beneficiaryEmail": "E-mail (opcionalno)",
+      "communicationType": "Vrsta",
+      "communicationDate": "Datum",
+      "subject": "Predmet",
+      "summary": "Sažetak",
+      "subjectPlaceholder": "npr. Početno ažuriranje imovine",
+      "summaryPlaceholder": "Kratak sažetak onoga o čemu se raspravljalo...",
+      "types": {
+        "email": "E-mail",
+        "phone": "Telefonski poziv",
+        "letter": "Pismo",
+        "in_person": "Osobno",
+        "other": "Ostalo"
+      },
+      "saving": "Spremanje...",
+      "saveCommunication": "Spremi komunikaciju",
+      "cancel": "Odustani",
+      "noCommunications": "Još nema zabilježenih komunikacija",
+      "startTracking": "Započnite praćenje vaših komunikacija s korisnicima",
+      "errors": {
+        "saveFailed": "Zabilježavanje komunikacije nije uspjelo"
+      }
+    },
+    "status": {
+      "title": "Status upravljanja imovinom",
+      "description": "Trenutni status visoke razine vidljiv autoriziranim članovima obitelji",
+      "updateStatus": "Ažuriraj status",
+      "updateTitle": "Ažuriraj status imovine",
+      "updateDescription": "Ovaj status bit će vidljiv autoriziranim članovima obitelji",
+      "statusLabel": "Status",
+      "additionalDetails": "Dodatni detalji (opcionalno)",
+      "detailsPlaceholder": "Navedite bilo koji dodatni kontekst...",
+      "selectStatus": "Odaberite status",
+      "updating": "Ažuriranje...",
+      "lastUpdated": "Zadnje ažurirano",
+      "progress": "Napredak",
+      "noStatusSet": "Status još nije postavljen. Kliknite \"Ažuriraj status\" da postavite početni status.",
+      "noStatusUpdates": "Još nema objavljenih ažuriranja statusa.",
+      "statuses": {
+        "initial_review": "Početni pregled",
+        "gathering_documents": "Prikupljanje dokumenata",
+        "probate_initiated": "Započet postupak ostavinske rasprave",
+        "assets_being_valued": "Sredstva se vrednuju",
+        "debts_being_settled": "Dugovi se namiruju",
+        "tax_preparation": "Priprema poreza",
+        "ready_for_distribution": "Spremno za raspodjelu",
+        "distribution_in_progress": "Raspodjela u tijeku",
+        "estate_closed": "Imovina zatvorena"
+      },
+      "errors": {
+        "updateFailed": "Ažuriranje statusa nije uspjelo"
+      }
+    },
+    "justInTime": {
+      "viewAccountDetails": "Prikaži detalje računa i lozinku",
+      "secureInfoAccess": "Siguran pristup informacijama",
+      "reauthenticate": "Ponovno autentificirajte se za pregled osjetljivih informacija za",
+      "securityReason": "Iz sigurnosnih razloga, molimo unesite svoju lozinku za pristup ovim informacijama.",
+      "password": "Lozinka",
+      "enterPassword": "Unesite svoju lozinku",
+      "incorrectPassword": "Netočna lozinka. Molimo pokušajte ponovo.",
+      "cancel": "Odustani",
+      "verifying": "Provjera...",
+      "verifyContinue": "Provjeri i nastavi",
+      "accountName": "Naziv računa",
+      "accountNumber": "Broj računa",
+      "username": "Korisničko ime",
+      "pin": "PIN",
+      "additionalNotes": "Dodatne bilješke",
+      "noSensitiveInfo": "Nema osjetljivih informacija povezanih s ovim zadatkom.",
+      "accessLogged": "Ovaj pristup je zabilježen iz sigurnosnih razloga.",
+      "accessTime": "Vrijeme pristupa",
+      "close": "Zatvori",
+      "errors": {
+        "reauthFailed": "Provjera vašeg identiteta nije uspjela. Molimo pokušajte ponovo.",
+        "notFound": "Nema pronađenih osjetljivih informacija za ovaj zadatak.",
+        "retrieveFailed": "Dohvaćanje osjetljivih informacija nije uspjelo."
+      }
+    },
+    "familyView": {
+      "title": "Status upravljanja imovinom",
+      "subtitle": "Ostanite informirani o napretku upravljanja imovinom",
+      "recentCommunications": "Nedavne komunikacije izvršitelja",
+      "recentCommunicationsDescription": "Nedavna ažuriranja od {{executorName}} korisnicima",
+      "to": "Za",
+      "noCommunications": "Još nema zabilježenih komunikacija.",
+      "infoMessage": "Ove informacije ažurira {{executorName}} kako bi obiteljski članovi bili informirani. Za detaljna pitanja, molimo kontaktirajte izvršitelja izravno.",
+      "defaultExecutor": "izvršitelj",
+      "errors": {
+        "loadFailed": "Učitavanje podataka nije uspjelo"
+      }
+    }
+  },
+  "executorManagement": {
+    "failed_to_load_executors_2": "Učitavanje izvršitelja nije uspjelo",
+    "user_not_found_with_this_email_3": "Korisnik s ovim e-mailom nije pronađen",
+    "this_person_is_already_designa_4": "Ova osoba je već određena kao izvršitelj",
+    "failed_to_add_executor_5": "Dodavanje izvršitelja nije uspjelo",
+    "failed_to_remove_executor_6": "Uklanjanje izvršitelja nije uspjelo",
+    "loading_executors_7": "Učitavanje izvršitelja...",
+    "executor_management_8": "Upravljanje izvršiteljima",
+    "designate_trusted_individuals__9": "Odredite povjerljive osobe koje će vam pomoći upravljati vašim poslovima i podržati vaše voljene",
+    "add_new_executor_10": "Dodaj novog izvršitelja",
+    "email_address_11": "E-mail adresa",
+    "executor_example_com_12": "izvršitelj@primjer.com",
+    "relationship_type_13": "Vrsta odnosa",
+    "primary_executor_14": "Primarni izvršitelj",
+    "secondary_executor_15": "Sekundarni izvršitelj",
+    "emergency_contact_16": "Kontakt za hitne slučajeve",
+    "current_executors_17": "Trenutni izvršitelji",
+    "no_executors_designated_yet_ad_18": "Još nema određenih izvršitelja. Dodajte nekoga kome vjerujete da vam pomogne upravljati vašim poslovima.",
+    "important_information_19": "Važne informacije",
+    "primary_executors_receive_imme_20": "Primarni izvršitelji primaju trenutni pristup vašem trezoru kada je potreban",
+    "secondary_executors_are_notifi_21": "Sekundarni izvršitelji se obavještavaju ali imaju ograničen pristup",
+    "emergency_contacts_are_notifie_22": "Kontakti za hitne slučajeve se obavještavaju samo u hitnim situacijama",
+    "all_executors_must_have_legacy_23": "Svi izvršitelji moraju imati LegacyGuard račune za pristup vašim informacijama",
+    "successMessages": {
+      "executorAdded": "Izvršitelj uspješno dodan",
+      "executorRemoved": "Izvršitelj uspješno uklonjen"
+    },
+    "validationMessages": {
+      "emailRequired": "E-mail adresa je obavezna",
+      "invalidEmail": "Molimo unesite valjanu e-mail adresu",
+      "relationshipTypeRequired": "Vrsta odnosa je obavezna"
+    },
+    "statusLabels": {
+      "adding": "Dodavanje...",
+      "addExecutor": "Dodaj izvršitelja",
+      "unknownUser": "Nepoznati korisnik"
+    }
+  }
+}

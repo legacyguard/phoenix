@@ -1,0 +1,98 @@
+{
+  "_comment": "Shared translations used across the application",
+  "errorBoundary": {
+    "title": "Ωχ! Κάτι πήγε στραβά",
+    "description": "Ζητούμε συγγνώμη για την ταλαιπωρία. Παρουσιάστηκε ένα μη αναμενόμενο σφάλμα.",
+    "errorId": "Αναγνωριστικό Σφάλματος",
+    "tryAgain": "Προσπαθήστε ξανά",
+    "reloadPage": "Επαναφόρτωση Σελίδας",
+    "goToHomepage": "Μετάβαση στην Αρχική Σελίδα",
+    "technicalDetails": "Τεχνικές Λεπτομέρειες",
+    "hide": "Απόκρυψη",
+    "show": "Εμφάνιση",
+    "stackTrace": "Stack Trace",
+    "componentStack": "Component Stack",
+    "helpText": "Εάν το πρόβλημα παραμένει, επικοινωνήστε με την υποστήριξή μας με το αναγνωριστικό σφάλματος."
+  },
+  "errorTest": {
+    "title": "Δοκιμή Καταγραφής Σφαλμάτων",
+    "description": "Test error handling and logging functionality",
+    "triggerSyncError": "Ενεργοποίηση Σύγχρονου Σφάλματος (ErrorBoundary)",
+    "triggerAsyncError": "Ενεργοποίηση Ασύγχρονου Σφάλματος",
+    "logRegularError": "Καταγραφή Κανονικού Σφάλματος",
+    "logCriticalError": "Καταγραφή Κρίσιμου Σφάλματος",
+    "triggerAlert": "Ενεργοποίηση Ειδοποίησης (6 Κρίσιμα Σφάλματα)",
+    "errorMessages": {
+      "testError": "Test error from ErrorTest component",
+      "testAsyncRejection": "Δοκιμή ασύγχρονης απόρριψης",
+      "manualTestError": "Χειροκίνητη δοκιμαστική σφάλμα",
+      "testCriticalError": "Δοκιμή κρίσιμου σφάλματος",
+      "criticalErrorWithIndex": "Critical error {{index}}"
+    },
+    "descriptions": {
+      "syncError": "Triggers a synchronous error that will be caught by the ErrorBoundary",
+      "asyncError": "Triggers an asynchronous error that will be caught by error handling",
+      "regularError": "Logs a regular error for testing error tracking",
+      "criticalError": "Logs a critical error for testing critical error handling",
+      "multipleErrors": "Triggers multiple critical errors to test alert thresholds"
+    },
+    "context": {
+      "component": "ErrorTest",
+      "action": "button-click",
+      "severity": "high"
+    },
+    "notifications": {
+      "errorLogged": "Το σφάλμα καταγράφηκε επιτυχώς",
+      "criticalErrorLogged": "Critical error logged successfully",
+      "multipleErrorsTriggered": "Multiple critical errors triggered",
+      "errorBoundaryTriggered": "Ενεργοποιήθηκε το όριο σφάλματος",
+      "asyncErrorCaught": "Async error caught and handled"
+    }
+  },
+  "debug": {
+    "panel": {
+      "title": "Debug Panel",
+      "recentErrors": "Πρόσφατα σφάλματα εφαρμογής",
+      "technicalDetails": "Technical Details",
+      "tabs": {
+        "list": "List",
+        "details": "Details"
+      },
+      "errorCount": "{{count}} errors",
+      "actions": {
+        "downloadErrors": "Download errors",
+        "clearAllErrors": "Διαγραφή όλων των σφαλμάτων"
+      },
+      "messages": {
+        "errorsCleared": "Όλα τα σφάλματα διαγράφηκαν",
+        "errorCopied": "Error copied to clipboard",
+        "errorsDownloaded": "Errors downloaded"
+      },
+      "error": {
+        "unknownError": "Unknown Error",
+        "noMessage": "No message",
+        "errorMessage": "Error Message"
+      },
+      "sections": {
+        "stackTrace": "Stack Trace",
+        "context": "Context",
+        "location": "Location",
+        "browserInfo": "Browser Information",
+        "time": "Time"
+      },
+      "fields": {
+        "url": "URL:",
+        "path": "Path:",
+        "query": "Query:",
+        "userAgent": "Πράκτορας χρήστη:",
+        "viewport": "Περιοχή προβολής:"
+      }
+    }
+  },
+  "test": {
+    "environment": {
+      "title": "Μόνο για περιβάλλον δοκιμών",
+      "description": "Αυτή η σελίδα είναι για τη δοκιμή του συστήματος καταγραφής σφαλμάτων. Αφαιρέστε αυτή τη διαδρομή πριν από την ανάπτυξη στην παραγωγή."
+    }
+  }
+}

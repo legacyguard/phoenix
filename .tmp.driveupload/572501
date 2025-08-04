@@ -1,0 +1,485 @@
+{
+  "_comment": "Centro familiar y funciones de preparación",
+  "familyHub": {
+    "title": "Centro familiar",
+    "subtitle": "Gestiona los niveles de acceso y usa las herramientas de preparación para asegurar que tu familia esté bien preparada.",
+    "tabs": {
+      "familyMembers": "Miembros de la familia",
+      "members": "Miembros",
+      "preparednessTools": "Herramientas de preparación",
+      "tools": "Herramientas"
+    },
+    "overallPreparedness": {
+      "title": "Preparación familiar general",
+      "description": "Esta puntuación refleja cuán preparada está tu familia ante una emergencia.",
+      "improvementNeeded": "La preparación de tu familia podría mejorar. Considera enviar actualizaciones a quienes tengan puntuaciones bajas."
+    },
+    "emergencyProtocol": {
+      "title": "Protocolo de emergencia",
+      "description": "El protocolo de emergencia permite que personas de confianza con acceso \"Solo en emergencias\" soliciten información en situaciones críticas. Requiere confirmación de otra persona de confianza.",
+      "configured": "Configurado",
+      "configure": "Configurar",
+      "activeMessage": "El protocolo de emergencia está activo y configurado",
+      "configurationModal": {
+        "title": "Configurar protocolo de emergencia",
+        "description": "Configura cómo pueden acceder a la información las personas de confianza en emergencias",
+        "requiredApprovals": "Aprobaciones requeridas",
+        "requiredApprovalsDescription": "Número de personas de confianza que deben aprobar el acceso de emergencia",
+        "notificationSettings": "Ajustes de notificación",
+        "notificationSettingsDescription": "Configura cómo recibirás avisos de solicitudes de emergencia",
+        "saveButton": "Guardar configuración",
+        "cancelButton": "Cancelar",
+        "saving": "Guardando..."
+      },
+      "activationModal": {
+        "title": "Solicitud de acceso de emergencia",
+        "description": "Solicita acceso de emergencia a la información de {{name}}",
+        "reason": "Motivo de la solicitud",
+        "reasonPlaceholder": "Describe la situación de emergencia...",
+        "confirmText": "Confirmo que esto es una emergencia real",
+        "requestButton": "Solicitar acceso de emergencia",
+        "requesting": "Solicitando..."
+      },
+      "errors": {
+        "configurationFailed": "No se pudo guardar la configuración del protocolo de emergencia",
+        "activationFailed": "No se pudo solicitar acceso de emergencia",
+        "invalidConfiguration": "Configuración no válida",
+        "notAuthorized": "No tienes autorización para configurar el protocolo de emergencia"
+      },
+      "success": {
+        "configured": "Protocolo de emergencia configurado correctamente",
+        "requested": "Solicitud de acceso de emergencia enviada",
+        "approved": "Acceso de emergencia aprobado",
+        "denied": "Acceso de emergencia denegado"
+      }
+    },
+    "memberManagement": {
+      "title": "Gestiona tus personas de confianza",
+      "addTrustedPerson": "Agregar persona de confianza",
+      "addMorePeople": "Agrega más personas de confianza a tu red",
+      "informationAccessLevel": "Nivel de acceso a la información",
+      "preparedness": "Preparación",
+      "lastContacted": "Último contacto",
+      "daysAgo": "Hace {{days}} días",
+      "sendUpdate": "Enviar actualización",
+      "sendUpdateTo": "Enviar actualización a {{name}}",
+      "lastContactOver30Days": "Último contacto hace más de 30 días"
+    },
+    "accessLevels": {
+      "none": {
+        "title": "Ninguno",
+        "description": "No puede ver ninguna información"
+      },
+      "emergencyOnly": {
+        "title": "Solo en emergencias",
+        "description": "Acceso solo en emergencias",
+        "fullDescription": "Obtiene acceso solo cuando se activa el protocolo de emergencia"
+      },
+      "limitedInfo": {
+        "title": "Información limitada",
+        "description": "Información básica para preparación",
+        "fullDescription": "Puede ver información básica para ayudarle a prepararse"
+      },
+      "fullAccess": {
+        "title": "Acceso completo",
+        "description": "Toda la información compartida",
+        "fullDescription": "Puede ver toda la información que has compartido"
+      }
+    },
+    "messages": {
+      "accessLevelUpdated": "Nivel de acceso actualizado correctamente",
+      "updateSentTo": "Actualización enviada a {{name}}",
+      "failedToSendUpdate": "No se pudo enviar la actualización a {{name}}"
+    },
+    "errors": {
+      "authenticationRequired": "Se requiere autenticación",
+      "failedToFetchData": "No se pudo obtener la información familiar",
+      "failedToLoadMembers": "No se pudieron cargar los miembros de la familia",
+      "failedToUpdateAccessLevel": "No se pudo actualizar el nivel de acceso",
+      "failedToSendUpdate": "No se pudo enviar la actualización",
+      "invalidAccessLevel": "Nivel de acceso no válido",
+      "memberNotFound": "Miembro de la familia no encontrado"
+    },
+    "api": {
+      "routes": {
+        "familyHub": {
+          "success": {
+            "dataFetched": "Datos familiares obtenidos correctamente",
+            "accessLevelUpdated": "Nivel de acceso actualizado correctamente",
+            "updateSent": "Actualización enviada correctamente"
+          },
+          "errors": {
+            "notAuthenticated": "Usuario no autenticado",
+            "invalidRequest": "Datos de solicitud no válidos",
+            "memberNotFound": "Miembro de la familia no encontrado",
+            "updateFailed": "No se pudo actualizar el miembro de la familia",
+            "serverError": "Error interno del servidor"
+          }
+        },
+        "emergencyProtocol": {
+          "success": {
+            "configurationSaved": "Configuración de protocolo de emergencia guardada",
+            "protocolActivated": "Protocolo de emergencia activado",
+            "accessGranted": "Acceso de emergencia concedido",
+            "notificationSent": "Notificación de emergencia enviada"
+          },
+          "errors": {
+            "configurationInvalid": "Parámetros de configuración no válidos",
+            "activationDenied": "Activación de emergencia denegada",
+            "insufficientApprovals": "Aprobaciones insuficientes para acceso de emergencia",
+            "notificationFailed": "No se pudo enviar la notificación de emergencia"
+          }
+        }
+      }
+    }
+  },
+  "familyPreparedness": {
+    "tools": {
+      "chooseScenario": "Elige un escenario de emergencia",
+      "cancel": "Cancelar",
+      "generateGuide": "Generar guía",
+      "generating": "Generando...",
+      "printGuide": "Imprimir guía"
+    }
+  },
+  "familyPreparednessTools": {
+    "use_these_tools_to_ensure_your_1": "Usa estas herramientas para asegurarte de que tu familia esté preparada y sepa qué hacer en situaciones de emergencia.",
+    "generate_emergency_guide_2": "Generar guía de emergencia",
+    "create_a_printable_guide_for_y_3": "Crea una guía imprimible para que tu familia la siga en emergencias.",
+    "select_scenario_4": "Seleccionar escenario",
+    "generate_another_5": "Generar otra",
+    "tools": {
+      "informationTreasureHunt": "Búsqueda del tesoro informativa",
+      "videoMessages": "Mensajes de video",
+      "emergencySimulator": "Simulador de situaciones de emergencia",
+      "stepByStepGuides": "Guías paso a paso",
+      "emergencySimulatorDesc": "Haz un simulacro. Enviaremos un escenario de prueba a tu familia para ver si pueden encontrar la información que necesitan.",
+      "stepByStepGuidesDesc": "Genera guías imprimibles basadas en escenarios (ej: 'Qué hacer en las primeras 24 horas').",
+      "treasureHuntDesc": "Un cuestionario gamificado para tu familia, para asegurarse de que saben datos clave, como dónde está el testamento o quién es tu abogado.",
+      "videoMessagesDesc": "Graba mensajes personales en video para tus seres queridos que se desbloquearán en situaciones específicas.",
+      "launch": "Iniciar",
+      "chooseScenario": "Elegir escenario",
+      "cancel": "Cancelar",
+      "generating": "Generando...",
+      "generateGuide": "Generar guía",
+      "printGuide": "Imprimir guía"
+    },
+    "scenarios": {
+      "death": {
+        "title": "En caso de mi fallecimiento",
+        "description": "Guía completa para manejar tareas inmediatas tras tu partida"
+      },
+      "hospitalization": {
+        "title": "Si estoy hospitalizado",
+        "description": "Pasos a seguir si estás incapacitado o en cuidados médicos"
+      },
+      "missing": {
+        "title": "Si desaparezco",
+        "description": "Información y contactos críticos si no puedes ser localizado"
+      },
+      "emergency": {
+        "title": "Emergencia general",
+        "description": "Referencia rápida para cualquier situación urgente"
+      }
+    },
+    "guides": {
+      "death": {
+        "title": "Guía de emergencia: En caso de mi fallecimiento",
+        "generatedOn": "Generado el",
+        "first24Hours": "🚨 Lista de tareas: primeras 24 horas",
+        "contactExecutor": "Contactar al albacea:",
+        "contactLawyer": "Contactar al abogado:",
+        "locateWill": "Localizar el testamento:",
+        "secureResidence": "Asegurar la residencia:",
+        "importantDocuments": "📋 Documentos importantes",
+        "deathCertificate": "Certificado de defunción:",
+        "bankAccounts": "Cuentas bancarias:",
+        "investmentAccounts": "Cuentas de inversión:",
+        "peopleToNotify": "👥 Personas a notificar",
+        "employer": "Empleador:",
+        "insuranceCompanies": "Compañías de seguros:",
+        "financialInstitutions": "Instituciones financieras:",
+        "socialSecurity": "Administración de la Seguridad Social:",
+        "disclaimer": "Esta guía fue generada según la información que has proporcionado. Por favor, mantén todos los datos actualizados."
+      },
+      "hospitalization": {
+        "title": "Guía de emergencia: Si estoy hospitalizado",
+        "medicalInformation": "🏥 Información médica",
+        "primaryCarePhysician": "Médico de cabecera:",
+        "preferredHospital": "Hospital preferido:",
+        "bloodType": "Grupo sanguíneo:",
+        "allergies": "Alergias:",
+        "currentMedications": "Medicamentos actuales:",
+        "emergencyContacts": "📞 Contactos de emergencia",
+        "legalDocuments": "📄 Documentos legales",
+        "healthcarePowerOfAttorney": "Poder de representación médica:",
+        "livingWill": "Testamento vital:",
+        "hipaaRelease": "Autorización HIPAA:"
+      },
+      "missing": {
+        "title": "Guía de emergencia: Si desaparezco",
+        "immediateActions": "🔍 Acciones inmediatas",
+        "contactLocalPolice": "Contactar a la policía local de inmediato",
+        "checkWithWorkplace": "Verificar con el trabajo:",
+        "contactCloseFriends": "Contactar amigos y contactos habituales",
+        "checkHospitals": "Consultar hospitales de la zona",
+        "digitalFootprint": "📱 Huella digital",
+        "phoneProvider": "Proveedor de teléfono:",
+        "email": "Correo:",
+        "socialMedia": "Redes sociales:",
+        "bankingApps": "Apps bancarias:"
+      },
+      "emergency": {
+        "title": "Referencia rápida de emergencia general",
+        "keyContacts": "🚨 Contactos clave",
+        "emergency": "Emergencia:",
+        "spouse": "Cónyuge:",
+        "attorney": "Abogado:",
+        "financialAdvisor": "Asesor financiero:",
+        "insuranceAgent": "Agente de seguros:",
+        "homeInformation": "🏠 Información del hogar",
+        "address": "Dirección:",
+        "securitySystem": "Sistema de seguridad:",
+        "utilities": "Servicios:"
+      }
+    },
+    "errors": {
+      "premiumRequired": "Esta función solo está disponible para usuarios premium. Por favor, actualiza tu plan para acceder a todas las herramientas.",
+      "selectScenario": "Por favor, selecciona un escenario",
+      "generateFailed": "No se pudo generar la guía",
+      "comingSoon": "¡Función próximamente!"
+    },
+    "mockContent": {
+      "insurancePolicies": "Pólizas de seguro"
+    }
+  },
+  "relationships": {
+    "spouse": "Cónyuge",
+    "child": "Hijo/a",
+    "parent": "Padre/Madre",
+    "sibling": "Hermano/a",
+    "friend": "Amigo/a",
+    "other": "Otro"
+  },
+  "beneficiaryCommunications": {
+    "title": "Comunicaciones con beneficiarios",
+    "description": "Haz seguimiento de todas las comunicaciones con beneficiarios",
+    "logCommunication": "Registrar comunicación",
+    "logAction": "Comunicación registrada con {name}",
+    "dialog": {
+      "title": "Registrar comunicación",
+      "description": "Anota los detalles de tu comunicación con un beneficiario"
+    },
+    "fields": {
+      "beneficiaryName": "Nombre del beneficiario",
+      "email": "Correo",
+      "type": "Tipo",
+      "date": "Fecha",
+      "subject": "Asunto",
+      "summary": "Resumen"
+    },
+    "placeholders": {
+      "subject": "Asunto breve de la comunicación",
+      "summary": "Resumen detallado de lo que se habló"
+    },
+    "types": {
+      "email": "Correo",
+      "phone": "Teléfono",
+      "letter": "Carta",
+      "inPerson": "En persona",
+      "in_person": "En persona",
+      "other": "Otro"
+    },
+    "actions": {
+      "cancel": "Cancelar",
+      "saving": "Guardando...",
+      "save": "Guardar comunicación"
+    },
+    "empty": {
+      "title": "Aún no hay comunicaciones registradas",
+      "subtitle": "Haz clic en 'Registrar comunicación' para anotar tu primera interacción"
+    }
+  },
+  "emergencyAccess": {
+    "button": "Acceso de emergencia",
+    "modalTitle": "Acceso a contactos de emergencia",
+    "modalDescription": "Esto te dará acceso a la información de contactos de emergencia. Usa esto solo en situaciones de verdadera emergencia.",
+    "warningText": "Este acceso quedará registrado y el titular de la cuenta será notificado.",
+    "reasonLabel": "Motivo para acceder a la información de emergencia (obligatorio)",
+    "reasonPlaceholder": "Describe la situación de emergencia que requiere acceso...",
+    "confirmCheckbox": "Confirmo que esta es una verdadera situación de emergencia y necesito acceder a la información de contacto",
+    "accessing": "Accediendo...",
+    "confirmButton": "Acceder a contactos de emergencia",
+    "pleaseConfirm": "Por favor, confirma la emergencia y proporciona un motivo",
+    "notAuthorized": "No tienes autorización para el acceso de emergencia",
+    "failedToLoadContacts": "No se pudieron cargar los contactos de emergencia",
+    "accessGranted": "Acceso de emergencia concedido. Ahora la información de contacto está disponible.",
+    "accessFailed": "No se pudo acceder a los contactos de emergencia",
+    "contactsTitle": "Contactos de emergencia",
+    "contactsDescription": "Contacta a estas personas en el orden de prioridad. Haz clic en los teléfonos para llamar o en los correos para escribir.",
+    "priorityOrder": "Orden de prioridad",
+    "priority": "Prioridad #{{order}}",
+    "logContact": "Registrar intento de contacto",
+    "contactLogged": "Intento de contacto registrado",
+    "lastContacted": "Último contacto: {{time}}",
+    "importantNote": "Importante: Contacta a estos individuos en el orden mostrado. Siempre intenta primero el método principal. Registra todos los intentos de contacto para tener constancia."
+  },
+  "emotionalContextSystem": {
+    "emotional_support_1": "Apoyo emocional",
+    "advice_2": "Consejo: ",
+    "motivation_3": "Motivación: ",
+    "next_steps_4": "Próximos pasos: ",
+    "contextResponses": {
+      "lowConfidence": {
+        "primaryMessage": "Estás gestionando esta situación con cuidado y perspectiva.",
+        "supportingMessage": "Demuestras que entiendes la importancia de la tarea.",
+        "actionableAdvice": "Continúa a tu propio ritmo.",
+        "motivationalElement": "Tu enfoque reflexivo es un reflejo de tus valores.",
+        "nextStepGuidance": "Cuando estés listo, pasa al siguiente paso importante para proteger el futuro de tu familia."
+      },
+      "highOverwhelm": {
+        "primaryMessage": "Tu dedicación a tu familia es admirable.",
+        "supportingMessage": "Está bien tomarse un momento para reagruparse.",
+        "actionableAdvice": "Considera dividir la tarea en partes pequeñas.",
+        "motivationalElement": "Saber que te mueve el amor y el cuidado.",
+        "nextStepGuidance": "Cada pequeña acción hace una gran diferencia."
+      },
+      "default": {
+        "primaryMessage": "Estás haciendo un trabajo significativo.",
+        "supportingMessage": "Este esfuerzo refuerza la base de tu familia.",
+        "actionableAdvice": "Sigue comprometido con tu plan.",
+        "motivationalElement": "Cada decisión protege a tus seres queridos.",
+        "nextStepGuidance": "Ver el panorama completo te guiará en los próximos pasos."
+      }
+    },
+    "emotionalStates": {
+      "confidence": {
+        "high": "Alta",
+        "medium": "Media",
+        "low": "Baja"
+      },
+      "motivation": {
+        "high": "Alta",
+        "medium": "Media",
+        "low": "Baja"
+      },
+      "overwhelm": {
+        "none": "Ninguna",
+        "slight": "Leve",
+        "moderate": "Moderada",
+        "high": "Alta"
+      },
+      "urgency": {
+        "relaxed": "Relajado",
+        "focused": "Enfocado",
+        "pressed": "Presionado",
+        "stressed": "Estresado"
+      }
+    }
+  },
+  "lifeEvents": {
+    "title": "Eventos de vida",
+    "subtitle": "Actualiza tu plan cuando ocurran grandes cambios",
+    "addEvent": "Agregar evento de vida",
+    "noEvents": "Aún no hay eventos registrados",
+    "addFirstEvent": "Agrega tu primer evento de vida para empezar",
+    "events": {
+      "marriedDivorced": "Actualización de matrimonio/divorcio",
+      "newChild": "Actualización por nuevo hijo/a",
+      "boughtSoldHome": "Actualización de bienes raíces",
+      "startedBusiness": "Actualización de nuevo negocio",
+      "trustedPersonPassed": "Actualizar personas de confianza",
+      "unknown": "Evento desconocido"
+    },
+    "congratsMessage": "¡Felicidades por tu nuevo hijo/a! Aquí tienes las actualizaciones recomendadas para tu plan:",
+    "tasks": {
+      "updateBeneficiaries": "Actualizar beneficiarios en todas las cuentas",
+      "updateBeneficiariesDesc": "Revisa y actualiza beneficiarios en seguros de vida, cuentas de retiro y bancarias.",
+      "updateWill": "Actualiza tu testamento",
+      "updateWillDesc": "Asegúrate de que tu testamento refleje tu nuevo estado y deseos.",
+      "reviewTrusts": "Revisa y actualiza fideicomisos",
+      "reviewTrustsDesc": "Haz los cambios necesarios en los documentos de fideicomiso.",
+      "updateEmergencyContacts": "Actualizar contactos de emergencia",
+      "updateEmergencyContactsDesc": "Revisa y actualiza los contactos de emergencia en tu círculo de confianza.",
+      "addChildRoster": "Añadir a tu nuevo hijo/a a tu círculo de confianza",
+      "addChildRosterDesc": "Incluye a tu hijo/a en la información familiar.",
+      "updateGuardian": "Revisa la designación de guardián para tus hijos",
+      "updateGuardianDesc": "Asegúrate de haber designado los guardianes adecuados.",
+      "reviewLifeInsurance": "Revisa tu seguro de vida",
+      "reviewLifeInsuranceDesc": "Considera aumentar la cobertura para tu familia en crecimiento.",
+      "updateWillBeneficiary": "Actualiza tu testamento para incluir a tu nuevo hijo/a",
+      "updateWillBeneficiaryDesc": "Asegúrate de que tu hijo/a esté incluido/a en tu planificación patrimonial.",
+      "updatePropertyArmory": "Actualiza la información de propiedades en tu bóveda",
+      "updatePropertyArmoryDesc": "Agrega nuevas propiedades o elimina las vendidas.",
+      "updateMortgageInfo": "Actualiza información de hipotecas y escrituras",
+      "updateMortgageInfoDesc": "Asegúrate de que todos los documentos estén actualizados.",
+      "reviewHomeownersInsurance": "Revisa seguro de propiedad",
+      "reviewHomeownersInsuranceDesc": "Actualiza pólizas según tus propiedades actuales.",
+      "updateNetWorth": "Actualiza el cálculo de tu patrimonio",
+      "updateNetWorthDesc": "Refleja los cambios en tus bienes raíces.",
+      "addBusinessAssets": "Agrega tu negocio a la bóveda",
+      "addBusinessAssetsDesc": "Incluye tu empresa como activo con los detalles relevantes.",
+      "createSuccessionPlan": "Crear plan de sucesión empresarial",
+      "createSuccessionPlanDesc": "Documenta qué debe pasar con tu negocio si te sucede algo.",
+      "updateInsurance": "Revisa tus necesidades de seguro",
+      "updateInsuranceDesc": "Considera seguros para personas clave y responsabilidad empresarial.",
+      "separatePersonalBusiness": "Separa correctamente bienes personales y empresariales",
+      "separatePersonalBusinessDesc": "Revisa la distinción entre lo personal y lo profesional.",
+      "removeDeceased": "Actualiza tu círculo de confianza",
+      "removeDeceasedDesc": "Elimina a la persona fallecida y reasigna sus responsabilidades.",
+      "appointNewExecutor": "Nombra un nuevo albacea/trustee si es necesario",
+      "appointNewExecutorDesc": "Si el fallecido era tu albacea, designa un reemplazo.",
+      "updateBeneficiariesDesc2": "Verifica si el fallecido era beneficiario en alguna cuenta.",
+      "updateEmergencyContactsDesc2": "Revisa toda la información de contactos de emergencia."
+    }
+  },
+  "logLifeEvent": {
+    "title": "Registrar un evento de vida",
+    "description": "Selecciona un gran cambio de vida para generar una lista personalizada de acciones para proteger a tu familia.",
+    "eventTypes": {
+      "married_divorced": "Me casé / Me divorcié",
+      "new_child": "Tuve un/a nuevo/a hijo/a",
+      "bought_sold_home": "Compré / Vendí una propiedad",
+      "started_business": "Inicié un negocio",
+      "trusted_person_passed": "Falleció una persona de confianza",
+      "job_change": "Cambio de trabajo",
+      "moved_location": "Mudanza",
+      "inheritance": "Recibí una herencia",
+      "retirement": "Me jubilé",
+      "health_change": "Cambio importante de salud",
+      "child_graduated": "Hijo/a se graduó o se independizó",
+      "career_advancement": "Avance de carrera",
+      "financial_windfall": "Ganancia financiera inesperada",
+      "debt_change": "Cambio importante en deudas",
+      "insurance_change": "Cambio en póliza de seguro"
+    },
+    "form": {
+      "title": "Registrar evento de vida",
+      "description": "Selecciona un cambio importante para generar una lista personalizada",
+      "eventSelection": "Seleccionar evento",
+      "eventDescription": "Elige el evento que mejor describe tu situación",
+      "generateChecklist": "Generar lista de acciones",
+      "cancel": "Cancelar",
+      "submit": "Enviar",
+      "close": "Cerrar"
+    },
+    "checklist": {
+      "title": "Lista de acciones personalizada",
+      "description": "Según tu evento de vida, aquí tienes los puntos clave a revisar y actualizar:",
+      "priority": "Prioridad",
+      "action": "Acción",
+      "estimatedTime": "Tiempo estimado",
+      "high": "Alta",
+      "medium": "Media",
+      "low": "Baja",
+      "completed": "Completado",
+      "pending": "Pendiente"
+    },
+    "notifications": {
+      "eventLogged": "Evento de vida registrado correctamente",
+      "checklistGenerated": "Lista personalizada generada",
+      "errorLogging": "Error al registrar evento de vida",
+      "reminderSet": "Recordatorio establecido para acciones de seguimiento"
+    }
+  }
+}
