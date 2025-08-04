@@ -1,100 +1,42 @@
 {
-  "_comment": "Shared translations used across the application",
-  "errorBoundary": {
-    "title": "¡Vaya! Algo ha salido mal",
-    "description": "Lamentamos las molestias. Se ha producido un error inesperado.",
-    "errorId": "ID del Error",
-    "tryAgain": "Intentar de nuevo",
-    "reloadPage": "Recargar Página",
-    "goToHomepage": "Ir a la Página Principal",
-    "technicalDetails": "Detalles Técnicos",
-    "hide": "Ocultar",
-    "show": "Mostrar",
-    "stackTrace": "Seguimiento de Pila",
-    "componentStack": "Pila de Componentes",
-    "helpText": "Si el problema persiste, contacte con nuestro soporte e indique el ID del error."
-  },
-  "errorTest": {
-    "title": "Prueba de Registro de Errores",
-    "description": "Prueba de manejo de errores y funcionalidad de registro",
-    "triggerSyncError": "Provocar Error Síncrono (ErrorBoundary)",
-    "triggerAsyncError": "Provocar Error Asíncrono",
-    "logRegularError": "Registrar Error Normal",
-    "logCriticalError": "Registrar Error Crítico",
-    "triggerAlert": "Provocar Alerta (6 Errores Críticos)",
-    "errorMessages": {
-      "testError": "Error de prueba del componente ErrorTest",
-      "testAsyncRejection": "Prueba de rechazo asíncrono",
-      "manualTestError": "Error de prueba manual",
-      "testCriticalError": "Error crítico de prueba",
-      "criticalErrorWithIndex": "Error crítico {{index}}"
-    },
-    "descriptions": {
-      "syncError": "Provoca un error síncrono que será capturado por el ErrorBoundary",
-      "asyncError": "Provoca un error asíncrono que será capturado por el manejo de errores",
-      "regularError": "Registra un error normal para probar el seguimiento de errores",
-      "criticalError": "Registra un error crítico para probar el manejo de errores críticos",
-      "multipleErrors": "Provoca múltiples errores críticos para probar los umbrales de alerta"
-    },
-    "context": {
-      "component": "ErrorTest",
-      "action": "button-click",
-      "severity": "high"
-    },
-    "notifications": {
-      "errorLogged": "Error registrado exitosamente",
-      "criticalErrorLogged": "Error crítico registrado exitosamente",
-      "multipleErrorsTriggered": "Múltiples errores críticos provocados",
-      "errorBoundaryTriggered": "Límite de error activado",
-      "asyncErrorCaught": "Error asíncrono capturado y manejado"
-    }
-  },
-  "debug": {
-    "panel": {
-      "title": "Panel de Depuración",
-      "recentErrors": "Errores recientes de la aplicación",
-      "technicalDetails": "Detalles Técnicos",
-      "tabs": {
-        "list": "Lista",
-        "details": "Detalles"
-      },
-      "errorCount": "{{count}} errores",
-      "actions": {
-        "downloadErrors": "Descargar errores",
-        "clearAllErrors": "Limpiar todos los errores"
-      },
-      "messages": {
-        "errorsCleared": "Todos los errores han sido limpiados",
-        "errorCopied": "Error copiado al portapapeles",
-        "errorsDownloaded": "Errores descargados"
-      },
-      "error": {
-        "unknownError": "Error Desconocido",
-        "noMessage": "Sin mensaje",
-        "errorMessage": "Mensaje de Error"
-      },
-      "sections": {
-        "stackTrace": "Seguimiento de Pila",
-        "context": "Contexto",
-        "location": "Ubicación",
-        "browserInfo": "Información del Navegador",
-        "time": "Hora"
-      },
-      "fields": {
-        "url": "URL:",
-        "path": "Ruta:",
-        "query": "Consulta:",
-        "userAgent": "Agente de usuario:",
-        "viewport": "Área de visualización:"
-      }
-    }
-  },
-  "test": {
-    "environment": {
-      "title": "Solo para entorno de prueba",
-      "description": "Esta página es para probar el sistema de registro de errores. Elimine esta ruta antes de implementar en producción."
-    },
-    "title": "Prueba",
-    "description": "Funciones de prueba"
+  "_comment": "Mensajes y códigos de error de la aplicación",
+  "errors": {
+    "unknown": "Ha ocurrido un error desconocido. Por favor, inténtalo de nuevo.",
+    "network": "No se pudo conectar al servidor. Por favor, revisa tu conexión a internet.",
+    "forbidden": "No tienes permiso para realizar esta acción.",
+    "notFound": "No se encontró el recurso solicitado.",
+    "validation": "Algunos campos contienen errores. Por favor, revisa tu información.",
+    "requiredField": "Este campo es obligatorio.",
+    "invalidEmail": "Por favor, introduce una dirección de correo válida.",
+    "emailExists": "Ya existe una cuenta con este correo electrónico.",
+    "weakPassword": "La contraseña es demasiado débil.",
+    "passwordMismatch": "Las contraseñas no coinciden.",
+    "tooShort": "El valor es demasiado corto.",
+    "tooLong": "El valor es demasiado largo.",
+    "incorrectPassword": "Contraseña incorrecta.",
+    "accountLocked": "Tu cuenta ha sido bloqueada temporalmente por múltiples intentos fallidos.",
+    "sessionExpired": "Tu sesión ha expirado. Por favor, inicia sesión de nuevo.",
+    "notAuthenticated": "Debes iniciar sesión para acceder a esta función.",
+    "actionFailed": "No se pudo completar la acción. Por favor, intenta de nuevo.",
+    "fileTooLarge": "El archivo es demasiado grande.",
+    "unsupportedFileType": "Tipo de archivo no soportado.",
+    "uploadFailed": "Error al subir el archivo.",
+    "downloadFailed": "Error al descargar el archivo.",
+    "deleteFailed": "No se pudo eliminar el elemento.",
+    "saveFailed": "No se pudo guardar. Por favor, inténtalo de nuevo.",
+    "updateFailed": "No se pudo actualizar la información.",
+    "fetchFailed": "Error al cargar los datos.",
+    "inviteFailed": "No se pudo enviar la invitación.",
+    "inviteExpired": "La invitación ha expirado o ya fue utilizada.",
+    "notAllowed": "No tienes permiso para acceder a este recurso.",
+    "invalidToken": "Token inválido o expirado.",
+    "captchaFailed": "No se pudo verificar el captcha.",
+    "limitReached": "Has alcanzado el límite permitido en tu plan.",
+    "planUpgradeRequired": "Actualiza tu plan para acceder a esta función.",
+    "alreadyExists": "El elemento ya existe.",
+    "notSupported": "Esta función aún no está soportada.",
+    "maintenance": "La aplicación está en mantenimiento. Por favor, vuelve más tarde.",
+    "serverError": "Error interno del servidor. Por favor, intenta más tarde.",
+    "contactSupport": "Si el problema persiste, contacta con soporte."
   }
 }

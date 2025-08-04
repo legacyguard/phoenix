@@ -1,256 +1,86 @@
 {
-  "_comment": "Shared translations used across the application",
-  "navigation": {
-    "dashboard": "Panel de control",
-    "vault": "Bóveda",
-    "trustedCircle": {
-      "title": "Su Círculo de Confianza",
-      "subtitle": "The people you trust to help protect and care for your family and legacy.",
-      "responsibilities": "Their Responsibilities:",
-      "preparationStatus": "Preparation Status:",
-      "informedOfRole": "Has been informed of their role",
-      "acceptedResponsibility": "Has accepted the responsibility",
-      "hasAccessToDocuments": "Has access to necessary documents",
-      "reviewedEmergencyProcedures": "Has reviewed emergency procedures",
-      "addTrustedPerson": "+ Add a Trusted Person",
-      "preparednessStatus": {
-        "wellPrepared": "Bien Preparado",
-        "partiallyPrepared": "Parcialmente Preparado",
-        "needsAttention": "Necesita Atención"
-      },
-      "buttonText": {
-        "prepared": "✓ {{name}} is Prepared",
-        "prepareNow": "Prepare {{name}} Now"
-      },
-      "mockData": {
-        "sarah": {
-          "name": "Sarah Johnson",
-          "relationship": "Wife",
-          "responsibilities": {
-            "bankAccess": "Can access all bank accounts to pay bills and manage household expenses.",
-            "inheritAssets": "Will inherit the family home, cabin, and all savings.",
-            "medicalPower": "Has medical power of attorney to make healthcare decisions."
-          }
-        },
-        "michael": {
-          "name": "Michael Johnson",
-          "relationship": "Brother",
-          "responsibilities": {
-            "childCare": "Will care for our children if both parents are gone.",
-            "estateExecution": "Will execute our final wishes and manage estate settlement.",
-            "businessManagement": "Can step in to manage Johnson Contracting LLC temporarily."
-          }
-        },
-        "robert": {
-          "name": "Robert Chen",
-          "relationship": "Socio Comercial",
-          "responsibilities": {
-            "businessAuthority": "Has authority to manage business operations and sign contracts.",
-            "buySellAgreement": "Will purchase my business shares per our buy-sell agreement."
-          }
-        },
-        "emily": {
-          "name": "Emily Thompson",
-          "relationship": "Sister-in-law",
-          "responsibilities": {
-            "backupGuardian": "Backup guardian for children if primary guardian cannot serve."
-          }
-        }
-      }
-    },
-    "familyHub": "Centro Familiar",
-    "legacyBriefing": {
-      "legacy_briefing_3": "Informe de Legado",
-      "create_and_manage_sealed_messa_4": "Create and manage sealed messages for your loved ones",
-      "failed_to_load_your_time_capsu_1": "Failed to load your time capsules",
-      "are_you_sure_you_want_to_delet_2": "Are you sure you want to delete this time capsule?",
-      "create_new_message_5": "Crear Nuevo Mensaje",
-      "no_time_capsules_yet_6": "No time capsules yet",
-      "create_meaningful_messages_for_7": "Create meaningful messages for your loved ones to receive in the future",
-      "create_your_first_message_8": "Create Your First Message",
-      "to_9": "To:",
-      "unlocks_on_10": "Unlocks on:",
-      "unlocks_11": "Unlocks:",
-      "after_passing_12": "Después del fallecimiento",
-      "statusLabels": {
-        "locked": "Locked",
-        "unlocked": "Unlocked",
-        "delivered": "Delivered",
-        "noRecipients": "Sin destinatarios"
-      },
-      "messageTypes": {
-        "text": "Mensaje de texto",
-        "photo": "Mensaje de foto",
-        "video": "Mensaje de video",
-        "audio": "Mensaje de audio"
-      },
-      "actions": {
-        "edit": "Edit",
-        "delete": "Delete"
-      },
-      "toastMessages": {
-        "deleteSuccess": "Time capsule deleted successfully",
-        "deleteError": "Failed to delete time capsule"
-      },
-      "dateFormat": {
-        "dateNotSet": "Fecha no establecida",
-        "created": "Created"
-      },
-      "errors": {
-        "textContentRequired": "Text content is required for text messages",
-        "unlockDateRequired": "Unlock date is required when condition is date",
-        "failedToUploadAttachment": "Failed to upload attachment",
-        "failedToCreate": "Failed to create time capsule",
-        "failedToFetch": "Failed to fetch time capsules",
-        "failedToUpdate": "Failed to update time capsule",
-        "failedToDelete": "Failed to delete time capsule",
-        "notFoundOrCannotModify": "Time capsule not found or cannot be modified",
-        "notFoundOrCannotDelete": "Time capsule not found or cannot be deleted",
-        "missingUploadFields": "Missing required fields: fileName, fileType, fileSizeBytes",
-        "invalidFileType": "Invalid file type. Allowed types: webm, mp4, mov",
-        "fileSizeExceeds500MB": "File size exceeds maximum allowed size of 500MB",
-        "premiumRequired": "Se requiere suscripción premium",
-        "premiumRequiredMessage": "Video messages are a premium feature. Please upgrade your subscription to use this feature.",
-        "failedToCreateUploadUrl": "Failed to create upload URL"
-      }
-    },
-    "executorToolkit": "Executor's Toolkit",
-    "assets": "Activos",
-    "manual": "Manual",
-    "documents": "Bóveda del Legado",
-    "guardians": "Red de Guardianes",
-    "family": "Centro Familiar",
-    "timeCapsule": {
-      "title": "Cápsulas de Tiempo",
-      "notifications": {
-        "emailSubject": "{{senderName}} has left a message for you",
-        "newMessage": "You have a new message",
-        "loginToView": "Log in to LegacyGuard to view this special message.",
-        "viewMessage": "Ver Mensaje",
-        "smsNotification": "You can also set notifications via SMS if preferred.",
-        "bestRegards": "Best regards,",
-        "legacyGuardTeam": "El Equipo de LegacyGuard",
-        "inAppTitle": "New message from {{senderName}}",
-        "inAppMessage": "{{senderName}} has left you a time capsule message: \"{{capsuleTitle}}\""
-      }
-    },
-    "will": "Testamento",
-    "consultations": "Consultas Legales",
+  "_comment": "Textos generales y de la interfaz de usuario",
+  "ui": {
+    "loading": "Cargando...",
+    "saving": "Guardando...",
+    "updating": "Actualizando...",
+    "deleting": "Eliminando...",
+    "cancel": "Cancelar",
+    "close": "Cerrar",
+    "edit": "Editar",
+    "save": "Guardar",
+    "update": "Actualizar",
+    "delete": "Eliminar",
+    "confirm": "Confirmar",
+    "continue": "Continuar",
+    "next": "Siguiente",
+    "back": "Atrás",
+    "yes": "Sí",
+    "no": "No",
+    "done": "Listo",
+    "skip": "Saltar",
+    "add": "Agregar",
+    "remove": "Quitar",
+    "search": "Buscar",
+    "filter": "Filtrar",
+    "reset": "Restablecer",
+    "submit": "Enviar",
+    "optional": "Opcional",
+    "required": "Obligatorio",
+    "actions": "Acciones",
+    "more": "Más",
+    "expand": "Expandir",
+    "collapse": "Contraer",
+    "select": "Seleccionar",
+    "deselect": "Deseleccionar",
+    "none": "Ninguno",
+    "all": "Todos",
+    "show": "Mostrar",
+    "hide": "Ocultar",
+    "copy": "Copiar",
+    "copied": "¡Copiado!",
+    "download": "Descargar",
+    "upload": "Subir",
+    "view": "Ver",
+    "details": "Detalles",
+    "preview": "Vista previa",
+    "refresh": "Actualizar",
+    "info": "Información",
+    "warning": "Advertencia",
+    "error": "Error",
+    "success": "Éxito",
+    "empty": "Vacío",
+    "open": "Abrir",
+    "accept": "Aceptar",
+    "decline": "Rechazar",
+    "enable": "Habilitar",
+    "disable": "Deshabilitar",
+    "start": "Comenzar",
+    "stop": "Detener",
+    "pause": "Pausar",
+    "resume": "Reanudar",
+    "tryAgain": "Intentar de nuevo",
+    "clear": "Limpiar",
+    "exit": "Salir",
     "settings": "Configuración",
-    "help": "Ayuda y Soporte",
-    "subscriptions": "Subscriptions"
-  },
-  "nav": {
-    "dashboard": "Panel de control",
-    "manual": "Manual",
-    "vault": "Bóveda del Legado",
-    "guardians": "Red de Guardianes",
-    "will": "Testamento",
-    "settings": "Configuración",
-    "help": "Ayuda y Soporte"
-  },
-  "footer": {
-    "tagline": "Preservando su legado para las generaciones venideras.",
-    "platform": {
-      "title": "Plataforma",
-      "heritageVault": "Bóveda del Legado",
-      "guardianNetwork": "Red de Guardianes",
-      "dashboard": "Panel de control",
-      "security": "Seguridad"
-    },
-    "support": {
-      "title": "Soporte",
-      "helpCenter": "Centro de Ayuda",
-      "userGuides": "Guías de Usuario",
-      "contactUs": "Contáctenos",
-      "community": "Comunidad"
-    },
-    "legal": {
-      "title": "Legal",
-      "privacyPolicy": "Política de Privacidad",
-      "termsOfService": "Términos de Servicio",
-      "dataProtection": "Protección de Datos"
-    },
-    "copyright": "© {{year}} LegacyGuard. Todos los derechos reservados.",
-    "description": "Gestión de patrimonio digital de nivel empresarial."
-  },
-  "hero": {
-    "title": "Duerma Tranquilo Sabiendo que Su Familia Estará Bien",
-    "subtitle": "Cuando la vida toma un giro inesperado, su familia no tendrá que buscar, adivinar o preocuparse. Todo lo que necesitan estará justo donde puedan encontrarlo.",
-    "cta_primary": "Tome el Control del Futuro de Su Familia Hoy",
-    "cta_secondary": "Vea Qué Tan Simple Es",
-    "urgencySubtitle": "La configuración toma solo 10 minutos - sea el padre preparado que su familia necesita",
-    "secondaryContext": "Video de 2 minutos mostrando familias reales",
-    "trustSignals": {
-      "dataOwnership": "Los asuntos privados de su familia permanecen privados",
-      "gdprCompliant": "Construido con valores familiares europeos",
-      "europeanFamilies": "Confiado por familias que se preocupan profundamente"
-    },
-    "community": {}
-  },
-  "features": {
-    "title": "Tres Promesas Simples que Le Hacemos",
-    "subtitle": "Todo lo que su familia necesita, nada de lo que no necesita. Simple, claro y siempre ahí cuando importa.",
-    "sleepBetter": {
-      "title": "Duerma Mejor Esta Noche",
-      "description": "Deje de preocuparse por 'qué pasaría si algo me sucede.' Su familia sabrá exactamente qué hacer, dónde encontrar todo y a quién llamar."
-    },
-    "noChaos": {
-      "title": "Sin Búsqueda Frenética",
-      "description": "Su familia no pasará días buscando en cajones, llamando a bancos o tratando de adivinar contraseñas. Todo lo importante está organizado en un lugar seguro."
-    },
-    "clearInstructions": {
-      "title": "Guía Paso a Paso",
-      "description": "Sus seres queridos obtienen instrucciones claras y simples para exactamente qué hacer y cuándo. Sin confusión, sin adivinanzas, sin estrés durante tiempos difíciles."
-    },
-    "security": {},
-    "guardians": {},
-    "storage": {},
-    "timelock": {},
-    "stories": {},
-    "preservation": {}
-  },
-  "alerts": {
-    "title": "Centro de Alertas",
-    "description": "Gestione las alertas de vencimiento de sus documentos.",
-    "unread": "No leídas",
-    "markAsRenewed": "Marcar como Renovado",
-    "snooze7Days": "Posponer 7 días",
-    "dismiss": "Descartar",
-    "unsnooze": "Quitar Posposición",
-    "tabs": {
-      "active": "Activas",
-      "snoozed": "Pospuestas",
-      "dismissed": "Descartadas"
-    },
-    "noActiveAlerts": "No tiene alertas activas.",
-    "noSnoozedAlerts": "No tiene alertas pospuestas.",
-    "noDismissedAlerts": "No tiene alertas descartadas.",
-    "expiresOn": "Vence el {{date}}",
-    "snoozedUntil": "Pospuesto hasta el {{date}}",
-    "renewalInstructions": "Instrucciones de Renovación",
-    "badges": {
-      "expired": "Vencido",
-      "expiring_7": "Vence Pronto",
-      "expiring_30": "Vence en 30 Días",
-      "expiring_90": "Vence en 90 Días"
-    },
-    "types": {
-      "expired": "¡El documento {{documentName}} venció hace {{daysAgo}} días!",
-      "expiring7": "¡Atención! El documento {{documentName}} vence en {{days}} días.",
-      "expiring30": "Recordatorio: El documento {{documentName}} vencerá en {{days}} días.",
-      "expiring90": "Aviso: El documento {{documentName}} vencerá en {{days}} días."
-    },
-    "messages": {
-      "dismissed": "Alerta descartada con éxito.",
-      "snoozed": "Alerta pospuesta por {{days}} días.",
-      "markedAsRenewed": "Documento marcado como renovado."
-    },
-    "errors": {
-      "loadFailed": "Error al cargar las alertas.",
-      "dismissFailed": "No se pudo descartar la alerta.",
-      "snoozeFailed": "No se pudo posponer la alerta.",
-      "renewFailed": "No se pudo marcar el documento como renovado."
-    }
+    "profile": "Perfil",
+    "menu": "Menú",
+    "home": "Inicio",
+    "dashboard": "Panel",
+    "logout": "Cerrar sesión",
+    "login": "Iniciar sesión",
+    "signUp": "Registrarse",
+    "language": "Idioma",
+    "help": "Ayuda",
+    "support": "Soporte",
+    "contact": "Contacto",
+    "faq": "Preguntas frecuentes",
+    "feedback": "Comentarios",
+    "legal": "Legal",
+    "terms": "Términos",
+    "privacy": "Privacidad",
+    "backToHome": "Volver al inicio",
+    "unknown": "Desconocido",
+    "example": "Ejemplo"
   }
 }
