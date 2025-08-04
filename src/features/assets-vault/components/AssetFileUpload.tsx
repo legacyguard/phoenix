@@ -46,7 +46,7 @@ export const AssetFileUpload: React.FC<AssetFileUploadProps> = ({
   maxFiles = 5,
   acceptedTypes = ['*/*']
 }) => {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation('assets');
   const [files, setFiles] = useState<FileUploadItem[]>([]);
   const [isDragging, setIsDragging] = useState(false);
   const [encrypt, setEncrypt] = useState(true);
@@ -270,7 +270,7 @@ export const AssetFileUpload: React.FC<AssetFileUploadProps> = ({
             />
             <Button type="button" onClick={addTag} size="sm">
               <Tag className="h-4 w-4 mr-1" />
-              {t('common.add')}
+              {t('ui:common.add')}
             </Button>
           </div>
           {tags.length > 0 && (
@@ -348,7 +348,7 @@ export const AssetFileUpload: React.FC<AssetFileUploadProps> = ({
         <div className="flex justify-end gap-3">
           {onClose && (
             <Button variant="outline" onClick={onClose}>
-              {t('common.cancel')}
+              {t('ui:common.cancel')}
             </Button>
           )}
           <Button

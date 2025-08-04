@@ -39,7 +39,7 @@ const mobileNavItems = [
 
 export const MobileNav: React.FC = () => {
   const location = useLocation();
-  const { t } = useTranslation('common');
+  const { t } = useTranslation('ui');
 
   const isActive = (href: string) => location.pathname === href;
 

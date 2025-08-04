@@ -29,7 +29,7 @@ interface Asset {
 }
 
 export const Vault: React.FC = () => {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation('assets');
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(true);
   const [assets, setAssets] = useState<Asset[]>([]);

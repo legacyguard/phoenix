@@ -28,7 +28,7 @@ interface TransparencyData {
 }
 
 const DataTransparency: React.FC = () => {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation('ui');
   const { getToken } = useAuth();
   const { isPremium, isLoading: subscriptionLoading } = useSubscription();
   const [data, setData] = useState<TransparencyData | null>(null);

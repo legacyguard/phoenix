@@ -16,7 +16,7 @@ interface UseUsageNudgeReturn {
 }
 
 export const useUsageNudge = ({ tasks }: UseUsageNudgeProps): UseUsageNudgeReturn => {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation('ui');
   const [shouldShowNudge, setShouldShowNudge] = useState(false);
   const [shouldShowToast, setShouldShowToast] = useState(false);
   const [timeSinceLastVisit, setTimeSinceLastVisit] = useState<number | null>(null);

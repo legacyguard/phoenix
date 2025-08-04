@@ -16,7 +16,7 @@ interface AddLiabilityModalProps {
 }
 
 export const AddLiabilityModal: React.FC<AddLiabilityModalProps> = ({ assetId, onClose, onLiabilityAdded }) => {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation('assets');
   const [formData, setFormData] = useState({
     liability_type: '',
     provider_name: '',

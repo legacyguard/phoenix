@@ -36,7 +36,7 @@ export const WhatIfScenarios: React.FC<WhatIfScenariosProps> = ({
   userGuardians = [],
   userBeneficiaries = []
 }) => {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation('ui');
 
   // Define scenarios
   const scenarios: Scenario[] = useMemo(() => [

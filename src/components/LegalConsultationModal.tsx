@@ -67,7 +67,7 @@ const LegalConsultationModal: React.FC<LegalConsultationModalProps> = ({
   onProceed,
   userCountry = 'GB'
 }) => {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation('ui');
   const [consultationType, setConsultationType] = useState<string>('');
   const [userQuestion, setUserQuestion] = useState<string>('');
   const [error, setError] = useState<string>('');

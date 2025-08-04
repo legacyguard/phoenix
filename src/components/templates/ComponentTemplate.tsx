@@ -65,7 +65,7 @@ export const ComponentName: React.FC<ComponentProps> = ({
   className = ''
 }) => {
   // Translation hook
-  const { t } = useTranslation('common');
+  const { t } = useTranslation('ui');
   
   // Authentication hook
   const { getToken } = useAuth();
@@ -86,7 +86,7 @@ export const ComponentName: React.FC<ComponentProps> = ({
      
     console.error('[ComponentName] Error:', error);
     setError(error.message);
-    toast.error(t('common.errors.generic'));
+    toast.error(t('ui.common.errors.generic'));
   }, [t]);
   
   // Data loading function
@@ -158,7 +158,7 @@ export const ComponentName: React.FC<ComponentProps> = ({
         throw new Error(`Failed to save: ${response.status}`);
       }
       
-      toast.success(t('common.messages.saved'));
+      toast.success(t('ui.common.messages.saved'));
       
     } catch (error) {
       handleError(error as Error);
@@ -184,7 +184,7 @@ export const ComponentName: React.FC<ComponentProps> = ({
           <div className="text-center">
             <p className="text-red-600 mb-4">{error}</p>
             <Button onClick={loadData} variant="outline">
-              {t('common.actions.retry')}
+              {t('ui.common.actions.retry')}
             </Button>
           </div>
         </CardContent>
@@ -204,7 +204,7 @@ export const ComponentName: React.FC<ComponentProps> = ({
             size="sm"
           >
             <Plus className="h-4 w-4 mr-2" />
-            {t('common.actions.save')}
+            {t('ui.common.actions.save')}
           </Button>
         </CardTitle>
       </CardHeader>

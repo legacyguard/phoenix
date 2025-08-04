@@ -20,7 +20,7 @@ const WillGenerator: React.FC<WillGeneratorProps> = ({
   preselectedCountry = 'GB',
   onComplete
   }) => {
-    const { t } = useGenderAwareTranslation('common');
+    const { t } = useGenderAwareTranslation('legal');
   const [currentStep, setCurrentStep] = useState(1);
   const [countryCode, setCountryCode] = useState(preselectedCountry);
   const [languageCode, setLanguageCode] = useState('en');
@@ -247,7 +247,7 @@ const WillGenerator: React.FC<WillGeneratorProps> = ({
           <h2>{t('willGenerator.steps.confirmJurisdiction')}</h2>
           <p>{t('willGenerator.confirmCountry', { country: availableCountries.find(c => c.code === countryCode)?.name || countryCode })}</p>
           <div className="mt-4">
-            <Button onClick={() => handleJurisdictionConfirm(true)}>{t('common.confirm')}</Button>
+            <Button onClick={() => handleJurisdictionConfirm(true)}>{t('legal.common.confirm')}</Button>
             <Button variant="outline" onClick={() => setChangeCountry(true)}>{t('willGenerator.changeCountry')}</Button>
             {changeCountry && (
               <Select value={countryCode} onValueChange={handleCountryChange} className="mt-4">
@@ -279,7 +279,7 @@ const WillGenerator: React.FC<WillGeneratorProps> = ({
               className="mt-2" 
               required 
             />
-            <Button type="submit" className="mt-4">{t('common.next')}</Button>
+            <Button type="submit" className="mt-4">{t('legal.common.next')}</Button>
           </form>
         </div>
       )}

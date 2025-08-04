@@ -28,7 +28,7 @@ interface EmergencyProtocolSettings {
 }
 
 export const EmergencyProtocolConfig: React.FC = () => {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation('family');
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [settings, setSettings] = useState<EmergencyProtocolSettings>({

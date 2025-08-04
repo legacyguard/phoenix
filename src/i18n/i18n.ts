@@ -32,7 +32,7 @@ const supportedLanguages = [
 ];
 
 // Initial namespaces to load (essential for app startup)
-const initialNamespaces: Namespace[] = ['common', 'ui', 'errors'];
+const initialNamespaces: Namespace[] = ['ui', 'errors'];
 
 i18n
   // Load translation using http backend
@@ -59,6 +59,11 @@ i18n
       // Parse JSON responses
       parse: (data: string) => {
         try {
+          // Check if the response is HTML (404 page)
+          if (data.trim().startsWith('<!DOCTYPE') || data.trim().startsWith('<html')) {
+            console.warn('Received HTML instead of JSON for translation file, returning empty object');
+            return {};
+          }
           const parsed = JSON.parse(data);
           // Remove _comment field if it exists
           delete parsed._comment;

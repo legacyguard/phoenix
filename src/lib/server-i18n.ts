@@ -1,22 +1,36 @@
 import { NextRequest } from 'next/server';
-import enTranslations from '@/i18n/locales/en/common.json';
-import csTranslations from '@/i18n/locales/cs/common.json';
-import skTranslations from '@/i18n/locales/sk/common.json';
 
-type Translations = typeof enTranslations;
+// Import translations from the modular structure
+import enUI from '@/i18n/locales/en/ui.json';
+import enErrors from '@/i18n/locales/en/errors.json';
+import csUI from '@/i18n/locales/cs/ui.json';
+import csErrors from '@/i18n/locales/cs/errors.json';
+import skUI from '@/i18n/locales/sk/ui.json';
+import skErrors from '@/i18n/locales/sk/errors.json';
+
+type Translations = {
+  ui: typeof enUI;
+  errors: typeof enErrors;
+};
 
 const translations: Record<string, Translations> = {
-  en: enTranslations,
-  cs: csTranslations,
-  sk: skTranslations,
+  en: { ui: enUI, errors: enErrors },
+  cs: { ui: csUI, errors: csErrors },
+  sk: { ui: skUI, errors: skErrors },
 };
 
 export function getServerTranslation(locale: string = 'en') {
   const t = (key: string): string => {
     const keys = key.split('.');
-    let value: unknown = translations[locale] || translations.en;
+    const namespace = keys[0] as keyof Translations;
+    const translationKeys = keys.slice(1);
     
-    for (const k of keys) {
+    const translation = translations[locale]?.[namespace] || translations.en[namespace];
+    if (!translation) return key;
+    
+    let value: unknown = translation;
+    
+    for (const k of translationKeys) {
       if (value && typeof value === 'object' && k in value) {
         value = (value as Record<string, unknown>)[k];
       } else {

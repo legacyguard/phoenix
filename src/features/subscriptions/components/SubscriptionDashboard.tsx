@@ -52,7 +52,7 @@ interface SubscriptionPreferences {
 }
 
 export const SubscriptionDashboard: React.FC = () => {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation('subscription');
   const [loading, setLoading] = useState(true);
   const [subscriptions, setSubscriptions] = useState<Subscription[]>([]);
   const [preferences, setPreferences] = useState<SubscriptionPreferences | null>(null);
@@ -188,7 +188,7 @@ export const SubscriptionDashboard: React.FC = () => {
       <div className="flex items-center justify-center h-64">
         <div className="text-center space-y-2">
           <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary mx-auto" />
-          <p className="text-sm text-muted-foreground">{t('common.loading')}</p>
+          <p className="text-sm text-muted-foreground">{t('ui:common.loading')}</p>
         </div>
       </div>);
 

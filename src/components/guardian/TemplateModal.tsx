@@ -69,7 +69,7 @@ export const TemplateModal: React.FC<TemplateModalProps> = ({
   onInsert,
   existingContent
 }) => {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation('family');
   const [selectedTemplate, setSelectedTemplate] = useState<PlaybookTemplate | null>(null);
   const [variables, setVariables] = useState<Record<string, string>>({});
   const [insertMode, setInsertMode] = useState<'replace' | 'append'>('replace');

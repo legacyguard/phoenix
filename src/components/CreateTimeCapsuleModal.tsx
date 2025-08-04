@@ -54,7 +54,7 @@ export const CreateTimeCapsuleModal: React.FC<CreateTimeCapsuleModalProps> = ({
   onSuccess,
   editingCapsule
 }) => {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation('ui');
   const { user } = useUser();
   const { isPremium } = useSubscription();
   const [loading, setLoading] = useState(false);

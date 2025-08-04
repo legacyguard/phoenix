@@ -39,7 +39,7 @@ export const BeneficiaryCommunicationLog: React.FC<BeneficiaryCommunicationLogPr
   deceasedUserId
 }) => {
   const { user } = useAuth();
-  const { t } = useTranslation('common');
+  const { t } = useTranslation('family');
   const [communications, setCommunications] = useState<Communication[]>([]);
   const [isOpen, setIsOpen] = useState(false);
   const [loading, setLoading] = useState(false);

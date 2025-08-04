@@ -42,7 +42,7 @@ export const JustInTimeAccess: React.FC<JustInTimeAccessProps> = ({
   trigger
 }) => {
   const { user } = useAuth();
-  const { t } = useTranslation('common');
+  const { t } = useTranslation('ui');
   const [isOpen, setIsOpen] = useState(false);
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [password, setPassword] = useState('');

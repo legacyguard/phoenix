@@ -31,7 +31,7 @@ interface GuideStep {
 }
 
 export const FirstTimeUserGuide: React.FC<FirstTimeUserGuideProps> = ({ onComplete }) => {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation('dashboard');
   const [currentStep, setCurrentStep] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
 

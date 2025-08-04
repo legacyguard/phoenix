@@ -13,7 +13,7 @@ interface MarketingLayoutProps {
 }
 
 export const MarketingLayout: React.FC<MarketingLayoutProps> = ({ children }) => {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation('ui');
 
   return (
     <div className="min-h-screen bg-background">

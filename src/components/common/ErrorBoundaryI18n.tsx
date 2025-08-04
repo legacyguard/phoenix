@@ -278,4 +278,4 @@ class ErrorBoundaryComponent extends Component<Props, State> {
   }
 }
 
-export const ErrorBoundary = withTranslation('common')(ErrorBoundaryComponent);
+export const ErrorBoundary = withTranslation('ui')(ErrorBoundaryComponent);

@@ -29,7 +29,7 @@ const DocumentConfirmation: React.FC<DocumentConfirmationProps> = ({
   people,
   onSave
 }) => {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation('assets');
   
   // Local states for user edits
   const [category, setCategory] = useState(documentData.category);

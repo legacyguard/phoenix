@@ -2,7 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 export const TranslationTest: React.FC = () => {
-  const { t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation('ui');
 
   const statsKeys = [
   'dashboard.stats.totalAssets',

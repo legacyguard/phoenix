@@ -43,7 +43,7 @@ export const CountryLanguageModal: React.FC<CountryLanguageModalProps> = ({
   detectedLanguage,
   onConfirm,
 }) => {
-  const { t, i18n } = useTranslation('common');
+  const { t, i18n } = useTranslation('ui');
   // Use detected country or let user choose from the list
   const [selectedCountry, setSelectedCountry] = useState<CountryCode | ''>(
     detectedCountry || 'CZ'
@@ -275,7 +275,7 @@ export const CountryLanguageModal: React.FC<CountryLanguageModalProps> = ({
 
         <div className="flex justify-end gap-3">
           <Button variant="outline" onClick={onClose}>
-            {t('common.cancel', 'Cancel')}
+            {t('ui.common.cancel', 'Cancel')}
           </Button>
           <Button onClick={handleConfirm} disabled={!selectedCountry || !selectedLanguage}>
             {showDomainSuggestion && selectedCountry

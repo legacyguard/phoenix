@@ -31,7 +31,7 @@ interface FamilyMember {
 }
 
 export const FamilyHub: React.FC = () => {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation('family');
   const { getToken } = useAuth();
   const [familyMembers, setFamilyMembers] = useState<FamilyMember[]>([]);
   const [loading, setLoading] = useState(true);

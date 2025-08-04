@@ -31,7 +31,7 @@ export const GuardianCard: React.FC<GuardianCardProps> = ({
   onSendInvite,
   onCreatePlaybook
 }) => {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation('dashboard');
   const [playbookStatus, setPlaybookStatus] = useState<'empty' | 'draft' | 'complete' | null>(null);
 
   const countryConfig = Object.values(COUNTRY_CONFIGS).find(

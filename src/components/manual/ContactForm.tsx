@@ -23,7 +23,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
   isLoading = false,
   isEditing = false,
 }) => {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation('family');
   
   const {
     register,

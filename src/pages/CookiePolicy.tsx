@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router-dom';
 import { ConsentSettings } from '@/components/privacy/ConsentManager';
 
 const CookiePolicy: React.FC = () => {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation('ui');
   const navigate = useNavigate();
 
   const cookieCategories = [

@@ -41,7 +41,7 @@ const CURRENCIES = [
 ];
 
 export const AssetDetail: React.FC = () => {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation('assets');
   const { assetId } = useParams<{ assetId: string }>();
   const [searchParams] = useSearchParams();
   const navigate = useNavigate();

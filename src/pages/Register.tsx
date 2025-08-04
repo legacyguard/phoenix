@@ -5,7 +5,7 @@ import { SignUp } from '@clerk/clerk-react';
 import { Shield } from 'lucide-react';
 
 export const Register: React.FC = () => {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation('auth');
 
   return (
     <div className="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">

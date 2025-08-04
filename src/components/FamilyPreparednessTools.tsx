@@ -24,31 +24,10 @@ interface GuideScenario {
   description: string;
 }
 
-const guideScenarios: GuideScenario[] = [
-{
-  id: 'death',
-  title: t("familyPreparednessTools.scenarios.death.title"),
-  description: t("familyPreparednessTools.scenarios.death.description")
-},
-{
-  id: 'hospitalization',
-  title: t("familyPreparednessTools.scenarios.hospitalization.title"),
-  description: t("familyPreparednessTools.scenarios.hospitalization.description")
-},
-{
-  id: 'missing',
-  title: t("familyPreparednessTools.scenarios.missing.title"),
-  description: t("familyPreparednessTools.scenarios.missing.description")
-},
-{
-  id: 'emergency',
-  title: t("familyPreparednessTools.scenarios.emergency.title"),
-  description: t("familyPreparednessTools.scenarios.emergency.description")
-}];
 
 
 const FamilyPreparednessTools: React.FC = () => {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation('family');
   const { getToken } = useAuth();
   const [showGuideModal, setShowGuideModal] = useState(false);
   const [selectedScenario, setSelectedScenario] = useState<string>('');
@@ -56,6 +35,29 @@ const FamilyPreparednessTools: React.FC = () => {
   const [isGenerating, setIsGenerating] = useState(false);
 
   const { isPremium } = useSubscription();
+
+  const guideScenarios: GuideScenario[] = [
+    {
+      id: 'death',
+      title: t("familyPreparednessTools.scenarios.death.title"),
+      description: t("familyPreparednessTools.scenarios.death.description")
+    },
+    {
+      id: 'hospitalization',
+      title: t("familyPreparednessTools.scenarios.hospitalization.title"),
+      description: t("familyPreparednessTools.scenarios.hospitalization.description")
+    },
+    {
+      id: 'missing',
+      title: t("familyPreparednessTools.scenarios.missing.title"),
+      description: t("familyPreparednessTools.scenarios.missing.description")
+    },
+    {
+      id: 'emergency',
+      title: t("familyPreparednessTools.scenarios.emergency.title"),
+      description: t("familyPreparednessTools.scenarios.emergency.description")
+    }
+  ];
 
   const handleToolClick = (toolId: string) => {
     if (!isPremium) {

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -48,7 +48,7 @@ export const QuickTasks: React.FC<QuickTasksProps> = ({
   onTaskComplete,
   onTaskStart
 }) => {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation('dashboard');
   const [tasks, setTasks] = useState<QuickTask[]>([]);
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
 
@@ -388,7 +388,7 @@ export const QuickTasks: React.FC<QuickTasksProps> = ({
                           variant="outline" 
                           className={`text-xs ${getPriorityColor(task.priority)}`}
                         >
-                          {t(`common.priority.${task.priority}`)}
+                          {t(`ui:common.priority.${task.priority}`)}
                         </Badge>
                       </div>
                       

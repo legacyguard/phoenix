@@ -15,7 +15,7 @@ interface PasswordWallProps {
 }
 
 export default function PasswordWall({ children }: PasswordWallProps) {
-  const { t, ready } = useTranslation();
+  const { t, ready } = useTranslation('ui');
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');

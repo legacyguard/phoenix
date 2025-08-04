@@ -20,7 +20,7 @@ interface PrivacySettings {
 }
 
 const PrivacyControlPanel: React.FC = () => {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation('ui');
   const { getToken } = useAuth();
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);

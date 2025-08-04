@@ -54,7 +54,7 @@ export const FamilyCrisisAssessment: React.FC<FamilyCrisisAssessmentProps> = ({
   userGuardians = [],
   userBeneficiaries = []
 }) => {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation('family');
 
   // Define family capabilities based on concrete abilities
   const capabilities = useMemo<FamilyCapability[]>(() => {

@@ -27,7 +27,7 @@ export const GuardianUpload: React.FC<GuardianUploadProps> = ({
   onCancel,
   editingGuardian
 }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('ui');
   const [isLoading, setIsLoading] = useState(false);
   
   const guardianFormSchema = createGuardianFormSchema(t);

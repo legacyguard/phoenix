@@ -28,7 +28,7 @@ const CONSENT_KEY = 'legacyguard-consent-preferences';
 const CONSENT_SHOWN_KEY = 'legacyguard-consent-shown';
 
 export const ConsentManager: React.FC<ConsentManagerProps> = ({ onConsentUpdate }) => {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation('ui');
   const { enableTracking, disableTracking } = useAnalytics({ componentName: 'ConsentManager' });
   
   const [showBanner, setShowBanner] = useState(false);
@@ -404,7 +404,7 @@ export const ConsentManager: React.FC<ConsentManagerProps> = ({ onConsentUpdate 
 
 // Settings Panel Component for User Profile
 export const ConsentSettings: React.FC = () => {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation('ui');
   const { enableTracking, disableTracking } = useAnalytics({ componentName: 'ConsentSettings' });
   const [preferences, setPreferences] = useState<ConsentPreferences>({
     necessary: true,

@@ -93,7 +93,7 @@ const BreadcrumbEllipsis = ({
   className,
   ...props
 }: React.ComponentProps<"span">) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('ui');
   return (
     <span
       role="presentation"

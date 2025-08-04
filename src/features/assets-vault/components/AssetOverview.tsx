@@ -59,7 +59,7 @@ const CATEGORY_COLORS = {
 };
 
 export const AssetOverview: React.FC = () => {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation('assets');
   const navigate = useNavigate();
   const [loading, setLoading] = useState(true);
   const [statistics, setStatistics] = useState<AssetStatistics[]>([]);

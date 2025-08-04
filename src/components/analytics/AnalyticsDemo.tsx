@@ -61,7 +61,7 @@ const DEMO_ACTIONS = [
 
 
 export const AnalyticsDemo: React.FC = () => {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation('ui');
   const { trackAction, trackMilestone, startTimer, endTimer, isTrackingEnabled } = useAnalytics({
     componentName: 'AnalyticsDemo',
     userJourneyStage: 'testing'

@@ -7,7 +7,7 @@ import { Mail, Calendar } from 'lucide-react';
 import { API_URLS } from '@/utils/constants';
 
 const Help: React.FC = () => {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation('ui');
 
   const faqItems = [
     {

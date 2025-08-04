@@ -1,9 +1,10 @@
 import React, { Component, ReactNode } from 'react';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { Button } from '@/components/ui/button';
-import { AlertCircle, RefreshCw } from 'lucide-react';import { useTranslation } from "react-i18next";
+import { AlertCircle, RefreshCw } from 'lucide-react';
+import { withTranslation, WithTranslation } from 'react-i18next';
 
-interface Props {
+interface Props extends WithTranslation {
   children: ReactNode;
   onError?: (error: Error, errorInfo: React.ErrorInfo) => void;
   resetOnError?: boolean;
@@ -15,7 +16,7 @@ interface State {
   error: Error | null;
 }
 
-export class FormErrorBoundary extends Component<Props, State> {
+class FormErrorBoundaryComponent extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = { hasError: false, error: null };
@@ -52,9 +53,9 @@ export class FormErrorBoundary extends Component<Props, State> {
       return (
         <Alert variant="destructive" className="my-4">
           <AlertCircle className="h-4 w-4" />
-          <AlertTitle>{t("common.formErrorBoundary.form_error_1")}</AlertTitle>
+          <AlertTitle>{this.props.t("ui.common.formErrorBoundary.form_error_1")}</AlertTitle>
           <AlertDescription className="mt-2 space-y-2">
-            <p>{t("common.formErrorBoundary.an_unexpected_error_occurred_w_2")}</p>
+            <p>{this.props.t("ui.common.formErrorBoundary.an_unexpected_error_occurred_w_2")}</p>
             {process.env.NODE_ENV === 'development' && this.state.error &&
             <p className="text-xs font-mono bg-destructive/10 p-2 rounded">
                 {this.state.error.message}
@@ -79,3 +80,5 @@ export class FormErrorBoundary extends Component<Props, State> {
     return this.props.children;
   }
 }
+
+export const FormErrorBoundary = withTranslation('ui')(FormErrorBoundaryComponent);

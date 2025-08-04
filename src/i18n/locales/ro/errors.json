@@ -16,25 +16,25 @@
   },
   "errorTest": {
     "title": "Test de Înregistrare a Erorilor",
-    "description": "Test error handling and logging functionality",
+    "description": "Testează funcționalitatea de gestionare și înregistrare a erorilor",
     "triggerSyncError": "Declanșează Eroare Sincronă (ErrorBoundary)",
     "triggerAsyncError": "Declanșează Eroare Asincronă",
     "logRegularError": "Înregistrează Eroare Obișnuită",
     "logCriticalError": "Înregistrează Eroare Critică",
     "triggerAlert": "Declanșează Alertă (6 Erori Critice)",
     "errorMessages": {
-      "testError": "Test error from ErrorTest component",
+      "testError": "Eroare de test din componenta ErrorTest",
       "testAsyncRejection": "Test respingere asincronă",
       "manualTestError": "Eroare de test manual",
       "testCriticalError": "Test eroare critică",
-      "criticalErrorWithIndex": "Critical error {{index}}"
+      "criticalErrorWithIndex": "Eroare critică {{index}}"
     },
     "descriptions": {
-      "syncError": "Triggers a synchronous error that will be caught by the ErrorBoundary",
-      "asyncError": "Triggers an asynchronous error that will be caught by error handling",
-      "regularError": "Logs a regular error for testing error tracking",
-      "criticalError": "Logs a critical error for testing critical error handling",
-      "multipleErrors": "Triggers multiple critical errors to test alert thresholds"
+      "syncError": "Declanșează o eroare sincronă care va fi prinsă de ErrorBoundary",
+      "asyncError": "Declanșează o eroare asincronă care va fi prinsă de gestionarea erorilor",
+      "regularError": "Înregistrează o eroare obișnuită pentru testarea urmăririi erorilor",
+      "criticalError": "Înregistrează o eroare critică pentru testarea gestionării erorilor critice",
+      "multipleErrors": "Declanșează multiple erori critice pentru testarea pragurilor de alertă"
     },
     "context": {
       "component": "ErrorTest",
@@ -43,10 +43,10 @@
     },
     "notifications": {
       "errorLogged": "Eroare înregistrată cu succes",
-      "criticalErrorLogged": "Critical error logged successfully",
-      "multipleErrorsTriggered": "Multiple critical errors triggered",
+      "criticalErrorLogged": "Eroare critică înregistrată cu succes",
+      "multipleErrorsTriggered": "Multiple erori critice declanșate",
       "errorBoundaryTriggered": "Limita de eroare declanșată",
-      "asyncErrorCaught": "Async error caught and handled"
+      "asyncErrorCaught": "Eroare asincronă prinsă și gestionată"
     }
   },
   "debug": {

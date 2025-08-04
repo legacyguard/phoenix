@@ -23,7 +23,7 @@ export const EditStoryModal: React.FC<EditStoryModalProps> = ({
   onClose,
   onStorySaved,
 }) => {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation('assets');
   const [story, setStory] = useState(currentStory);
   const [isSaving, setIsSaving] = useState(false);
   const [characterCount, setCharacterCount] = useState(currentStory.length);

@@ -123,7 +123,7 @@ const navigationSections: NavigationSection[] = [
 
 export const Sidebar: React.FC<SidebarProps> = ({ isCollapsed, onToggle }) => {
   const location = useLocation();
-  const { t } = useTranslation('common');
+  const { t } = useTranslation('ui');
   const { isPremium, isLoading } = useSubscription();
 
   const isActive = (href: string) => location.pathname === href;

@@ -71,7 +71,7 @@ interface EmergencyContact {
 }
 
 export const GuardianView: React.FC = () => {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation('family');
   const [documents, setDocuments] = useState<Document[]>([]);
   const [contacts, setContacts] = useState<Contact[]>([]);
   const [instructions, setInstructions] = useState<Instructions | null>(null);

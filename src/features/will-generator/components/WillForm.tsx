@@ -26,7 +26,7 @@ export const WillForm: React.FC<WillFormProps> = ({
   contacts = [],
   isLoading = false,
 }) => {
-  const { t } = useGenderAwareTranslation('common');
+  const { t } = useGenderAwareTranslation('legal');
   
   const {
     register,
@@ -161,7 +161,7 @@ export const WillForm: React.FC<WillFormProps> = ({
       <div className="flex gap-3">
         {onCancel && (
           <Button type="button" variant="outline" onClick={onCancel} disabled={isLoading}>
-            {t('common.cancel')}
+            {t('legal.common.cancel')}
           </Button>
         )}
         <Button type="submit" disabled={isLoading} className="flex-1">

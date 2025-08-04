@@ -65,7 +65,7 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
   onClose,
   isReadOnly = false
 }) => {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation('family');
   const [activeTab, setActiveTab] = useState('funeral');
   const [isLoading, setIsLoading] = useState(true);
   const [isSaving, setIsSaving] = useState(false);

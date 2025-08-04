@@ -7,6 +7,7 @@ import { AlertTriangle, Home, RefreshCw } from 'lucide-react';import { useTransl
 export function RouteErrorBoundary() {
   const error = useRouteError();
   const navigate = useNavigate();
+  const { t } = useTranslation('ui');
 
   let errorMessage: string;
   let errorStatus: number | undefined;

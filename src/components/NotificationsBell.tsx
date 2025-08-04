@@ -33,7 +33,7 @@ export const NotificationsBell: React.FC = () => {
   const dropdownRef = useRef<HTMLDivElement>(null);
   const { user } = useUser();
   const navigate = useNavigate();
-  const { t } = useTranslation('common');
+  const { t } = useTranslation('ui');
 
   const fetchNotifications = useCallback(async () => {
     if (!user?.id) return;

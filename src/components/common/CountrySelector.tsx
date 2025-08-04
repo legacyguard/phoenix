@@ -13,7 +13,7 @@ import { Input } from '@/components/ui/input';
 import { ChevronDown, Search, Loader2 } from 'lucide-react';
 
 export const CountrySelector: React.FC = () => {
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation();
   const { selectedCountryCode, setSelectedCountryCode, isDetecting } = useCountry();
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -60,7 +60,7 @@ export const CountrySelector: React.FC = () => {
           <div className="relative">
             <Search className="absolute left-2 top-2.5 h-4 w-4 text-muted-foreground" />
             <Input
-              placeholder={t("common.countrySelector.search_countries_1")}
+              placeholder={t("ui.countrySelector.search_countries")}
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               className="pl-8" />

@@ -3,9 +3,10 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 import { AlertCircle, RefreshCw, Home, ChevronDown, ChevronUp } from 'lucide-react';
 import { toast } from 'sonner';
-import { logErrorToSupabase } from '@/utils/errorTracking';import { useTranslation } from "react-i18next";
+import { logErrorToSupabase } from '@/utils/errorTracking';
+import { withTranslation, WithTranslation } from 'react-i18next';
 
-interface Props {
+interface Props extends WithTranslation {
   children: ReactNode;
   fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
@@ -20,7 +21,7 @@ interface State {
   showStackTrace: boolean;
 }
 
-export class ErrorBoundary extends Component<Props, State> {
+class ErrorBoundaryComponent extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = {
@@ -163,8 +164,8 @@ export class ErrorBoundary extends Component<Props, State> {
               <div className="flex items-center space-x-2">
                 <AlertCircle className="h-8 w-8 text-destructive" />
                 <div>
-                  <CardTitle className="text-2xl">{t("common.errorBoundary.oops_something_went_wrong_1")}</CardTitle>
-                  <CardDescription>{t("common.errorBoundary.we_apologize_for_the_inconveni_2")}
+                  <CardTitle className="text-2xl">{this.props.t("ui.errorBoundary.oops_something_went_wrong")}</CardTitle>
+                  <CardDescription>{this.props.t("ui.errorBoundary.we_apologize_for_the_inconvenience")}
 
                   </CardDescription>
                 </div>
@@ -173,7 +174,7 @@ export class ErrorBoundary extends Component<Props, State> {
             <CardContent className="space-y-4">
               {/* Error ID for support */}
               <div className="bg-muted/50 p-3 rounded-md">
-                <p className="text-sm text-muted-foreground">{t("common.errorBoundary.error_id_3")}
+                <p className="text-sm text-muted-foreground">{this.props.t("ui.errorBoundary.error_id")}
                   <code className="text-xs bg-background px-2 py-1 rounded">{errorId}</code>
                 </p>
               </div>
@@ -181,15 +182,15 @@ export class ErrorBoundary extends Component<Props, State> {
               {/* Action buttons */}
               <div className="flex flex-wrap gap-2">
                 <Button onClick={this.handleReset} variant="default">
-                  <RefreshCw className="mr-2 h-4 w-4" />{t("common.errorBoundary.try_again_4")}
+                  <RefreshCw className="mr-2 h-4 w-4" />{this.props.t("ui.errorBoundary.try_again")}
 
                 </Button>
                 <Button onClick={this.handleReload} variant="secondary">
-                  <RefreshCw className="mr-2 h-4 w-4" />{t("common.routeErrorBoundary.reload_page_2")}
+                  <RefreshCw className="mr-2 h-4 w-4" />{this.props.t("ui.routeErrorBoundary.reload_page")}
 
                 </Button>
                 <Button onClick={this.handleGoHome} variant="outline">
-                  <Home className="mr-2 h-4 w-4" />{t("common.errorBoundary.go_to_homepage_6")}
+                  <Home className="mr-2 h-4 w-4" />{this.props.t("ui.errorBoundary.go_to_homepage")}
 
                 </Button>
               </div>
@@ -198,7 +199,7 @@ export class ErrorBoundary extends Component<Props, State> {
               {showDetails && error &&
               <div className="space-y-3 pt-4 border-t">
                   <div className="space-y-2">
-                    <h4 className="font-semibold text-sm flex items-center justify-between">{t("common.routeErrorBoundary.technical_details_3")}
+                    <h4 className="font-semibold text-sm flex items-center justify-between">{this.props.t("ui.routeErrorBoundary.technical_details")}
 
                     <Button
                       size="sm"
@@ -232,7 +233,7 @@ export class ErrorBoundary extends Component<Props, State> {
                   <div className="space-y-2">
                         {error.stack &&
                     <div>
-                            <p className="text-xs font-semibold text-muted-foreground mb-1">{t("common.errorBoundary.stack_trace_8")}
+                            <p className="text-xs font-semibold text-muted-foreground mb-1">{this.props.t("ui.errorBoundary.stack_trace")}
 
                       </p>
                             <div className="bg-muted/30 p-3 rounded-md max-h-48 overflow-y-auto">
@@ -247,7 +248,7 @@ export class ErrorBoundary extends Component<Props, State> {
 
                         {errorInfo?.componentStack &&
                     <div>
-                            <p className="text-xs font-semibold text-muted-foreground mb-1">{t("common.errorBoundary.component_stack_9")}
+                            <p className="text-xs font-semibold text-muted-foreground mb-1">{this.props.t("ui.errorBoundary.component_stack")}
 
                       </p>
                             <div className="bg-muted/30 p-3 rounded-md max-h-48 overflow-y-auto">
@@ -264,7 +265,7 @@ export class ErrorBoundary extends Component<Props, State> {
               }
 
               {/* Help text */}
-              <p className="text-sm text-muted-foreground pt-4">{t("common.errorBoundary.if_the_problem_persists_contac_10")}
+              <p className="text-sm text-muted-foreground pt-4">{this.props.t("ui.errorBoundary.if_the_problem_persists_contact_support")}
 
               </p>
             </CardContent>
@@ -276,3 +277,5 @@ export class ErrorBoundary extends Component<Props, State> {
     return this.props.children;
   }
 }
+
+export const ErrorBoundary = withTranslation('ui')(ErrorBoundaryComponent);

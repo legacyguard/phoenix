@@ -37,7 +37,7 @@ export const ExecutorStatusReporting: React.FC<ExecutorStatusReportingProps> = (
   isReadOnly = false
 }) => {
   const { user } = useAuth();
-  const { t } = useTranslation('common');
+  const { t } = useTranslation('family');
   
   const STATUS_OPTIONS = [
     { value: 'initial_review', label: t('estateStatus.statuses.initialReview'), color: 'bg-gray-500' },
