@@ -111,7 +111,7 @@ jobs:
       - name: Health check
         run: |
           sleep 30
-          curl -f https://app.legacyguard.com/api/health || exit 1
+          curl -f https://app.legacyguard.com/health || exit 1
 
       - name: Notify deployment
         uses: 8398a7/action-slack@v3

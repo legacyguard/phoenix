@@ -21,36 +21,24 @@ RUN if [ -f yarn.lock ]; then yarn install --frozen-lockfile; \
 COPY . .
 
 # Build the application
-ENV NODE_ENV production
-ENV NEXT_TELEMETRY_DISABLED 1
+ENV NODE_ENV=production
 
 RUN npm run build
 
 # Production stage
-FROM node:18-alpine AS runner
+FROM nginx:alpine AS runner
 
-WORKDIR /app
+# Copy built application from builder stage
+COPY --from=builder /app/dist /usr/share/nginx/html
 
-ENV NODE_ENV production
-ENV NEXT_TELEMETRY_DISABLED 1
+# Copy nginx configuration
+COPY nginx.conf /etc/nginx/nginx.conf
 
-# Create non-root user
-RUN addgroup --system --gid 1001 nodejs
-RUN adduser --system --uid 1001 nextjs
+# Create non-root user for nginx
+RUN addgroup -g 1001 -S nodejs
+RUN adduser -S nextjs -u 1001
 
-# Copy built application
-COPY --from=builder /app/public ./public
-COPY --from=builder /app/.next/standalone ./
-COPY --from=builder /app/.next/static ./.next/static
+EXPOSE 80
 
-# Set correct permissions
-RUN chown -R nextjs:nodejs /app
-
-USER nextjs
-
-EXPOSE 3000
-
-ENV PORT 3000
-ENV HOSTNAME "0.0.0.0"
-
-CMD ["node", "server.js"]
+# Start nginx
+CMD ["nginx", "-g", "daemon off;"]
