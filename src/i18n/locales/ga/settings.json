@@ -1,182 +1,118 @@
 {
-  "_comment": "Shared translations used across the application",
-  "settings": {
-    "title": "Socruithe",
-    "subtitle": "Bainistigh sainroghanna do chuntais agus socruithe slándála",
-    "loading": "Socruithe do chuntais á lódáil...",
-    "profile": {
-      "title": "Faisnéis Próifíle",
-      "description": "Nuashonraigh d'fhaisnéis phearsanta agus do shainroghanna",
-      "emailAddress": "Seoladh Ríomhphoist",
-      "emailCannotBeChanged": "Ní féidir do sheoladh ríomhphoist a athrú.",
-      "firstName": "Céadainm",
-      "firstNamePlaceholder": "Iontráil do chéadainm",
-      "lastName": "Sloinne",
-      "lastNamePlaceholder": "Iontráil do shloinne",
-      "saving": "Á shábháil...",
-      "saveChanges": "Sábháil Athruithe"
-    },
-    "security": {
-      "title": "Slándáil",
-      "description": "Bainistigh slándáil agus rochtain do chuntais",
-      "changePassword": "Athraigh an Pasfhocal",
-      "currentPassword": "Pasfhocal Reatha",
-      "currentPasswordPlaceholder": "Iontráil an pasfhocal reatha",
-      "newPassword": "Pasfhocal Nua",
-      "newPasswordPlaceholder": "Iontráil an pasfhocal nua",
-      "confirmNewPassword": "Deimhnigh an Pasfhocal Nua",
-      "confirmNewPasswordPlaceholder": "Deimhnigh an pasfhocal nua",
-      "updating": "Á nuashonrú...",
-      "updatePassword": "Nuashonraigh an Pasfhocal",
-      "twoFactorAuth": "Fíordheimhniú Dhá Fhachtóir",
-      "enable2FA": "Cumasaigh 2FA",
-      "2FADescription": "Cuir sraith bhreise slándála le do chuntas. (Ag teacht go luath)"
-    },
-    "accountManagement": {
-      "title": "Bainistíocht Cuntais",
-      "description": "Gníomhartha buana cuntais - lean ar aghaidh go cúramach le do thoil",
-      "deleteAccountTitle": "Scrios an Cuntas",
-      "deleteAccountWarning": "Tá an gníomh seo do-aisiompaithe agus scriosfaidh sé go buan do chuid sonraí go léir, lena n-áirítear doiciméid uaslódáilte agus treoracha ullmhaithe. Bainfear d'fhaisnéis oidhreachta digití go hiomlán dár gcórais.",
-      "deleteMyAccount": "Scrios mo Chuntas",
-      "confirmTitle": "An bhfuil tú cinnte dearfa?",
-      "confirmDescription": "Ní féidir an gníomh seo a chealú. Scriosfaidh sé seo do chuntas go buan agus bainfidh sé do chuid sonraí go léir dár bhfreastalaithe.",
-      "confirmEmailPrompt": "Clóscríobh do sheoladh ríomhphoist {{email}} le do thoil chun deimhniú:",
-      "emailPlaceholder": "Iontráil do sheoladh ríomhphoist",
-      "deleting": "Á scriosadh...",
-      "deleteAccount": "Scrios an Cuntas"
-    },
-    "errors": {
-      "loadProfile": "Theip ar fhaisnéis na próifíle a lódáil.",
-      "updateProfile": "Theip ar an bpróifíl a nuashonrú.",
-      "passwordFieldsRequired": "Líon isteach na réimsí pasfhocail go léir, le do thoil.",
-      "passwordsDoNotMatch": "Ní hionann na pasfhocail nua.",
-      "passwordTooShort": "Caithfidh an pasfhocal nua a bheith 6 charachtar ar a laghad.",
-      "updatePassword": "Theip ar an bpasfhocal a nuashonrú.",
-      "emailDoesNotMatch": "Ní hionann an seoladh ríomhphoist.",
-      "deleteAccountSupport": "Ní mór scriosadh cuntais a iarraidh tríd an tacaíocht. Déan teagmháil linn le haghaidh cúnaimh, le do thoil.",
-      "deleteAccount": "Theip ar an gcuntas a scriosadh."
-    },
-    "success": {
-      "profileUpdated": "Nuashonraíodh an phróifíl go rathúil.",
-      "passwordUpdated": "Nuashonraíodh an pasfhocal go rathúil."
-    },
-    "privacySettings": {
-      "privacy_settings_1": "Privacy Settings",
-      "control_how_your_documents_are_2": "Control how your documents are processed and stored",
-      "default_processing_mode_3": "Default Processing Mode",
-      "choose_how_documents_are_proce_4": "Choose how documents are processed by default",
-      "hybrid_mode_recommended_5": "Hybrid Mode (Recommended)",
-      "combines_local_and_cloud_ai_fo_6": "Combines local and cloud AI for optimal performance and privacy",
-      "local_only_privacy_mode_7": "Local-Only Privacy Mode",
-      "processes_documents_entirely_i_8": "Processes documents entirely in your browser for maximum privacy",
-      "note_9": "Note: ",
-      "you_can_always_override_this_s_10": "You can always override this setting when uploading individual documents"
-    }
-  },
-  "dataTransparency": {
-    "loadingMessage": "Á lódáil do chuid faisnéise trédhearcachta sonraí...",
-    "loadingError": "Níorbh fhéidir sonraí trédhearcachta a lódáil. Bain triail eile as níos déanaí, le do thoil.",
-    "title": "Do Shonraí, Do Smacht",
-    "description": "Creidimid i dtrédhearcacht iomlán. Seo díreach conas mar a láimhseáilimid d'fhaisnéis.",
-    "dataFlow": {
-      "whereDataLives": "Cá bhfuil Do Shonraí",
-      "collection": "Bailiú",
-      "storage": "Stóráil",
-      "processing": "Próiseáil",
-      "sharing": "Roinn"
-    },
-    "recentActivity": {
-      "title": "Gníomhaíocht Le Déanaí",
-      "premiumTitle": "Díghlasáil do Logáil Faire Buan",
-      "premiumText": "Soláthraíonn do logáil oibríochta 30 lá slándáil bhunúsach. Le haghaidh cuntasacht uasta agus síocháin intinne, uasghrádaigh go dtí an Pacáiste Orduithe chun stór a choinneáil, stair iniúchta do-ghéillte de gach gníomh a rinneadh i do chruinneachán, go deo."
-    },
-    "dataOwnership": {
-      "title": "Úinéireacht Sonraí",
-      "description": "Is leatsa do chuid sonraí, i gcónaí. Is féidir leat cóip iomlán a íoslódáil am ar bith.",
-      "downloadButton": "Íoslódáil mo Chartlann Sonraí"
-    }
-  },
   "cookies": {
-    "bannerText": "Bainimid úsáid as fianáin riachtanacha chun feidhmiú ceart ár suímh a chinntiú. Le do thoilú, féadfaimid fianáin anailíse a úsáid freisin chun ár seirbhísí a fheabhsú.",
-    "declineButton": "Diúltaigh",
-    "acceptButton": "Glac le Gach Rud",
-    "learnMoreLink": "Foghlaim Níos Mó",
     "policy": {
-      "title": "Polasaí Fianán",
-      "subtitle": "Tuiscint ar conas a bhainimid úsáid as fianáin chun do thaithí a fheabhsú agus meas a bheith againn ar do phríobháideacht",
-      "lastUpdated": "Nuashonraíodh go Deireanach",
-      "required": "Riachtanach",
-      "purpose": "Cuspóir",
-      "examples": "Samplaí",
-      "overview": {
-        "title": "Faisnéis Thábhachtach",
-        "intro": "Míníonn an Polasaí Fianán seo conas a úsáideann LegacyGuard fianáin agus teicneolaíochtaí cosúla chun tú a aithint nuair a thugann tú cuairt ar ár suíomh gréasáin. Míníonn sé cad iad na teicneolaíochtaí seo agus cén fáth a mbainimid úsáid astu, chomh maith le do chearta chun smacht a bheith agat ar ár n-úsáid díobh.",
-        "point1": "Bainimid úsáid as fianáin chun feidhmeanna bunúsacha ár suímh gréasáin a chinntiú",
-        "point2": "Tá roinnt fianán riachtanach agus ní féidir iad a dhíchumasú",
-        "point3": "Is féidir leat smacht a bheith agat ar fhianáin neamhriachtanacha trínár mbainisteoir toiliú",
-        "point4": "Ní dhíolaimid do chuid sonraí choíche nó ní bhainimid úsáid as fianáin le haghaidh rianú ionsáitheach"
-      },
-      "categories": {
-        "title": "Catagóirí Fianán a Úsáidimid"
-      },
-      "necessary": {
-        "title": "Fianáin Riachtanacha go Docht",
-        "description": "Tá na fianáin seo riachtanach chun an suíomh gréasáin a fheidhmiú i gceart",
-        "purpose": "Cumasaigh feidhmiúlacht lárnach cosúil le slándáil, fíordheimhniú aitheantais, agus bainistíocht líonra. Ní féidir na fianáin seo a dhíchumasú.",
-        "examples": {
-          "auth": "Coinníonn tú logáilte isteach go slán",
-          "session": "Coinníonn do staid seisiún",
-          "csrf": "Cosnaíonn i gcoinne bréagachta iarratais tras-shuímh",
-          "consent": "Cuimhníonn do roghanna fianán"
-        }
-      },
       "analytics": {
-        "title": "Fianáin Anailíse",
         "description": "Cabhraigh linn a thuiscint conas a idirghníomhaíonn cuairteoirí lenár suíomh gréasáin",
-        "purpose": "Bailigh faisnéis anaithnidithe faoi conas a bhaineann tú úsáid as ár suíomh, ag cabhrú linn taithí úsáideora a fheabhsú agus saincheisteanna a aithint.",
         "examples": {
           "ga": "Rianú Google Analytics",
           "gid": "Idirdhealú úsáideoirí",
           "session": "Grúpáil gníomhaíochtaí laistigh de sheisiún"
-        }
+        },
+        "purpose": "Bailigh faisnéis anaithnidithe faoi conas a bhaineann tú úsáid as ár suíomh, ag cabhrú linn taithí úsáideora a fheabhsú agus saincheisteanna a aithint.",
+        "title": "Fianáin Anailíse"
+      },
+      "categories": {
+        "title": "Catagóirí Fianán a Úsáidimid"
+      },
+      "contact": {
+        "address": "Seoladh",
+        "addressDetails": "LegacyGuard Ltd, Oifig Cosanta Sonraí, 123 Sráid Príobháideachta, Baile Átha Cliath, Éire",
+        "description": "Má tá aon cheist agat faoinár n-úsáid fianán nó an Polasaí Fianán seo, teagmháil linn:",
+        "email": "Ríomhphost",
+        "title": "Teagmháil Linn faoi Fhianáin"
+      },
+      "examples": "Samplaí",
+      "lastUpdated": "Nuashonraíodh go Deireanach",
+      "manage": {
+        "title": "Bainistigh do Roghanna Fianán"
       },
       "marketing": {
-        "title": "Fianáin Margaíochta",
         "description": "Úsáidtear chun fógraí ábhartha a sheachadadh",
-        "purpose": "Rianaigh cuairteoirí trasna suíomhanna gréasáin chun fógraí a thaispeáint atá ábhartha agus tarraingteach d'úsáideoirí aonair.",
         "examples": {
           "facebook": "Fógraíocht Facebook",
           "google": "Rianú tiontaithe Google Ads"
-        }
+        },
+        "purpose": "Rianaigh cuairteoirí trasna suíomhanna gréasáin chun fógraí a thaispeáint atá ábhartha agus tarraingteach d'úsáideoirí aonair.",
+        "title": "Fianáin Margaíochta"
+      },
+      "necessary": {
+        "description": "Tá na fianáin seo riachtanach chun an suíomh gréasáin a fheidhmiú i gceart",
+        "examples": {
+          "auth": "Coinníonn tú logáilte isteach go slán",
+          "consent": "Cuimhníonn do roghanna fianán",
+          "csrf": "Cosnaíonn i gcoinne bréagachta iarratais tras-shuímh",
+          "session": "Coinníonn do staid seisiún"
+        },
+        "purpose": "Cumasaigh feidhmiúlacht lárnach cosúil le slándáil, fíordheimhniú aitheantais, agus bainistíocht líonra. Ní féidir na fianáin seo a dhíchumasú.",
+        "title": "Fianáin Riachtanacha go Docht"
+      },
+      "overview": {
+        "intro": "Míníonn an Polasaí Fianán seo conas a úsáideann LegacyGuard fianáin agus teicneolaíochtaí cosúla chun tú a aithint nuair a thugann tú cuairt ar ár suíomh gréasáin. Míníonn sé cad iad na teicneolaíochtaí seo agus cén fáth a mbainimid úsáid astu, chomh maith le do chearta chun smacht a bheith agat ar ár n-úsáid díobh.",
+        "point1": "Bainimid úsáid as fianáin chun feidhmeanna bunúsacha ár suímh gréasáin a chinntiú",
+        "point2": "Tá roinnt fianán riachtanach agus ní féidir iad a dhíchumasú",
+        "point3": "Is féidir leat smacht a bheith agat ar fhianáin neamhriachtanacha trínár mbainisteoir toiliú",
+        "point4": "Ní dhíolaimid do chuid sonraí choíche nó ní bhainimid úsáid as fianáin le haghaidh rianú ionsáitheach",
+        "title": "Faisnéis Thábhachtach"
       },
       "preferences": {
-        "title": "Fianáin Roghanna",
         "description": "Cuimhnigh do roghanna agus socruithe",
-        "purpose": "Lig don suíomh gréasáin roghanna a dhéanann tú a chuimhneamh (cosúil le teanga nó réigiún) agus gnéithe feabhsaithe, pearsantaithe a sholáthar.",
         "examples": {
-          "theme": "Do théama roghnaithe (solas/dorcha)",
           "language": "Do theanga roghnaithe",
+          "theme": "Do théama roghnaithe (solas/dorcha)",
           "ui": "Roghanna saincheaptha UI"
-        }
+        },
+        "purpose": "Lig don suíomh gréasáin roghanna a dhéanann tú a chuimhneamh (cosúil le teanga nó réigiún) agus gnéithe feabhsaithe, pearsantaithe a sholáthar.",
+        "title": "Fianáin Roghanna"
       },
+      "purpose": "Cuspóir",
+      "required": "Riachtanach",
+      "subtitle": "Tuiscint ar conas a bhainimid úsáid as fianáin chun do thaithí a fheabhsú agus meas a bheith againn ar do phríobháideacht",
+      "title": "Polasaí Fianán",
       "yourRights": {
-        "title": "Do Chearta",
         "description": "Tá smacht iomlán agat ar do roghanna fianán",
         "right1": "Rochtain ar fhaisnéis faoi na fianáin a úsáidimid",
         "right2": "Tarraing siar toiliú do fhianáin neamhriachtanacha ag am ar bith",
         "right3": "Scrios fianáin ó do bhrabhsálaí",
-        "right4": "Seachain fianáin anailíse agus margaíochta"
-      },
-      "manage": {
-        "title": "Bainistigh do Roghanna Fianán"
-      },
-      "contact": {
-        "title": "Teagmháil Linn faoi Fhianáin",
-        "description": "Má tá aon cheist agat faoinár n-úsáid fianán nó an Polasaí Fianán seo, teagmháil linn:",
-        "email": "Ríomhphost",
-        "address": "Seoladh",
-        "addressDetails": "LegacyGuard Ltd, Oifig Cosanta Sonraí, 123 Sráid Príobháideachta, Baile Átha Cliath, Éire"
+        "right4": "Seachain fianáin anailíse agus margaíochta",
+        "title": "Do Chearta"
       }
+    }
+  },
+  "dataTransparency": {
+    "dataFlow": {
+      "collection": "Bailiú",
+      "processing": "Próiseáil",
+      "sharing": "Roinn",
+      "storage": "Stóráil",
+      "whereDataLives": "Cá bhfuil Do Shonraí"
+    },
+    "dataOwnership": {
+      "description": "Is leatsa do chuid sonraí, i gcónaí. Is féidir leat cóip iomlán a íoslódáil am ar bith.",
+      "downloadButton": "Íoslódáil mo Chartlann Sonraí",
+      "title": "Úinéireacht Sonraí"
+    },
+    "description": "Creidimid i dtrédhearcacht iomlán. Seo díreach conas mar a láimhseáilimid d'fhaisnéis.",
+    "loadingError": "Níorbh fhéidir sonraí trédhearcachta a lódáil. Bain triail eile as níos déanaí, le do thoil.",
+    "loadingMessage": "Á lódáil do chuid faisnéise trédhearcachta sonraí...",
+    "recentActivity": {
+      "premiumText": "Soláthraíonn do logáil oibríochta 30 lá slándáil bhunúsach. Le haghaidh cuntasacht uasta agus síocháin intinne, uasghrádaigh go dtí an Pacáiste Orduithe chun stór a choinneáil, stair iniúchta do-ghéillte de gach gníomh a rinneadh i do chruinneachán, go deo.",
+      "premiumTitle": "Díghlasáil do Logáil Faire Buan",
+      "title": "Gníomhaíocht Le Déanaí"
+    },
+    "title": "Do Shonraí, Do Smacht"
+  },
+  "settings": {
+    "privacySettings": {
+      "choose_how_documents_are_proce_4": "Choose how documents are processed by default",
+      "combines_local_and_cloud_ai_fo_6": "Combines local and cloud AI for optimal performance and privacy",
+      "control_how_your_documents_are_2": "Control how your documents are processed and stored",
+      "default_processing_mode_3": "Default Processing Mode",
+      "hybrid_mode_recommended_5": "Hybrid Mode (Recommended)",
+      "local_only_privacy_mode_7": "Local-Only Privacy Mode",
+      "note_9": "Note: ",
+      "privacy_settings_1": "Privacy Settings",
+      "processes_documents_entirely_i_8": "Processes documents entirely in your browser for maximum privacy",
+      "you_can_always_override_this_s_10": "You can always override this setting when uploading individual documents"
     }
   }
 }

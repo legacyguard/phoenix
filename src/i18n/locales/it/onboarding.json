@@ -1,239 +1,146 @@
 {
-  "_comment": "User onboarding and demo",
-  "onboarding": {
-    "title": "Benvenuto in LegacyGuard",
-    "subtitle": "Lascia che ti aiutiamo a garantire il futuro della tua famiglia",
-    "mainTitle": "Piano per l'Eredità",
-    "mainSubtitle": "Creiamo il tuo piano personalizzato di protezione dell'eredità",
-    "progressText": "Piano per l'Eredità: Passo {{step}} di 4",
-    "skipButton": "Salta per ora",
-    "skipConfirmTitle": "Saltare l'onboarding?",
-    "skipConfirmMessage": "Puoi sempre riavviare questa configurazione in seguito nelle impostazioni",
-    "skipConfirmYes": "Salta",
-    "skipConfirmNo": "Continua la configurazione",
-    "restartButton": "Riavvia l'Onboarding",
-    "welcomeBack": {
-      "masculine": "Bentornato! Pronto a completare la tua configurazione?",
-      "feminine": "Bentornata! Pronta a completare la tua configurazione?",
-      "neutral": "Bentornato/a! Pronto/a a completare la tua configurazione?"
-    },
-    "resumeTitle": "Continua da dove hai lasciato",
-    "resumeMessage": "Eri al passo {{step}} di 4",
-    "partialProgress": "{{percentage}}% completo",
-    "inventory": {
-      "documentAccess": {
-        "question": "Se ti succedesse qualcosa oggi, la tua famiglia saprebbe dove trovare i tuoi documenti importanti?",
-        "answers": {
-          "yes": "Sì",
-          "no": "No",
-          "partially": "In parte"
-        }
-      },
-      "caretaker": {
-        "question": "Chi si prenderebbe cura dei tuoi figli/beni/account digitali?",
-        "answers": {
-          "designated": "Ho una persona designata",
-          "familyFigureOut": "La famiglia se la caverebbe",
-          "notThought": "Non ci ho pensato"
-        }
-      },
-      "familyClarity": {
-        "question": "Pensi che la tua famiglia saprebbe cosa volevi per loro?",
-        "answers": {
-          "clear": "Sì, è chiaro",
-          "somewhat": "In qualche modo",
-          "neverDiscussed": "No, non ne abbiamo mai parlato"
-        }
-      },
-      "biggestWorry": {
-        "question": "Cosa ti preoccupa di più per il futuro della tua famiglia?",
-        "answers": {
-          "financial": "Sicurezza finanziaria",
-          "legal": "Complicazioni legali",
-          "memories": "Perdere i ricordi",
-          "conflicts": "Conflitti familiari"
-        }
-      },
-      "personalized": {
-        "documentCentralization": "In base alla tua risposta sull'accesso ai documenti, ti consigliamo di iniziare centralizzando i tuoi documenti importanti.",
-        "guardianDesignation": "Dato che non hai designato qualcuno che si prenda cura dei tuoi beni, nominare un custode dovrebbe essere la tua priorità.",
-        "willPreparation": "La tua famiglia ha bisogno di chiarezza sui tuoi desideri. Creare un testamento è un primo passo essenziale.",
-        "financialPlanning": "La sicurezza finanziaria è cruciale. Iniziamo documentando i tuoi conti bancari e i tuoi beni.",
-        "conflictPrevention": "Per prevenire conflitti familiari, una documentazione e una comunicazione chiare sono fondamentali.",
-        "memoryPreservation": "La conservazione dei ricordi inizia con l'organizzazione delle tue foto e storie digitali.",
-        "legalOrganization": "Organizziamo i tuoi documenti legali per evitare complicazioni in seguito."
-      }
-    },
-    "q1": {
-      "title": "Se ti succedesse qualcosa oggi, la tua famiglia saprebbe dove trovare i tuoi documenti importanti?",
-      "option1": "Sì",
-      "option2": "No",
-      "option3": "In parte"
-    },
-    "q2": {
-      "title": "Chi si prenderebbe cura dei tuoi figli/beni/account digitali?",
-      "option1": "Ho una persona designata",
-      "option2": "La famiglia se la caverebbe",
-      "option3": "Non ci ho pensato"
-    },
-    "q3": {
-      "title": "Pensi che la tua famiglia saprebbe cosa volevi per loro?",
-      "option1": "Sì, è chiaro",
-      "option2": "In qualche modo",
-      "option3": "No, non ne abbiamo mai parlato"
-    },
-    "q4": {
-      "title": "Cosa ti preoccupa di più per il futuro della tua famiglia?",
-      "option1": "Sicurezza finanziaria",
-      "option2": "Complicazioni legali",
-      "option3": "Perdere i ricordi",
-      "option4": "Conflitti familiari"
-    },
-    "buttons": {
-      "previous": "Precedente",
-      "next": "Successivo",
-      "generate": "Genera il Mio Piano per l'Eredità"
-    },
-    "analysis": {
-      "title": "Analisi delle tue risposte...",
-      "subtitle": "Preparazione del tuo 'Piano per l'Eredità' personale...",
-      "done": "Fatto!"
-    },
-    "complete": {
-      "masculine": "Ottimo inizio! Abbiamo personalizzato la tua dashboard in base alle tue risposte. Sei pronto per iniziare a costruire il tuo piano di eredità completo.",
-      "feminine": "Ottimo inizio! Abbiamo personalizzato la tua dashboard in base alle tue risposte. Sei pronta per iniziare a costruire il tuo piano di eredità completo.",
-      "neutral": "Ottimo inizio! Abbiamo personalizzato la tua dashboard in base alle tue risposte. Sei pront* per iniziare a costruire il tuo piano di eredità completo."
-    },
-    "success": {
-      "stepCompleted": "Passo {{step}} completato con successo!",
-      "inventoryComplete": "Inventario di vita completato! Il tuo piano personalizzato è pronto.",
-      "allQuestionsAnswered": "Tutte le domande sono state risposte. Generazione del tuo piano d'azione..."
-    },
-    "errors": {
-      "questionRequired": "Per favore, rispondi a questa domanda per continuare",
-      "failedToSave": "Impossibile salvare le tue risposte. Per favore, riprova.",
-      "loadingFailed": "Impossibile caricare le domande di onboarding"
-    },
-    "addAnother": "Aggiungi un Altro",
-    "previous": "Precedente",
-    "next": "Successivo",
-    "continue": "Continua alla Dashboard"
-  },
   "demo": {
     "ai": {
-      "title": "Demo Integrazione AI LegacyGuard",
-      "subtitle": "Sperimenta come l'AI può aiutare a organizzare e proteggere l'eredità della tua famiglia",
-      "tabs": {
-        "documents": "Documenti",
-        "questions": "Domande",
-        "suggestions": "Suggerimenti",
-        "messages": "Messaggi"
+      "context": {
+        "completion": "Completamento:",
+        "label": "Contesto Attuale:",
+        "mood": "Umore:",
+        "recent": "Recente:"
       },
       "profile": {
-        "label": "Profilo Demo:",
-        "documentsCount": "documenti caricati"
+        "documentsCount": "documenti caricati",
+        "label": "Profilo Demo:"
       },
       "question": {
         "category": "Categoria:"
       },
-      "context": {
-        "label": "Contesto Attuale:",
-        "completion": "Completamento:",
-        "recent": "Recente:",
-        "mood": "Umore:"
-      },
+      "subtitle": "Sperimenta come l'AI può aiutare a organizzare e proteggere l'eredità della tua famiglia",
       "suggestion": {
         "priority": "Priorità:"
-      }
-    },
-    "upload": {
-      "title": "Caricamento Documenti Magico",
-      "subtitle": "Sperimenta il futuro della gestione sicura dei documenti",
-      "badge": {
-        "encryption": "Crittografia Auto",
-        "aiAnalysis": "Analisi AI",
-        "familySharing": "Condivisione Famiglia"
-      },
-      "settings": {
-        "title": "Impostazioni Caricamento",
-        "description": "Personalizza le tue preferenze di elaborazione documenti",
-        "storageLocation": "Posizione Archiviazione",
-        "local": "Locale",
-        "cloud": "Cloud"
-      },
-      "features": {
-        "autoCompress": "Compressione Auto",
-        "autoEncrypt": "Crittografia Auto",
-        "processOCR": "Elaborazione OCR",
-        "aiAnalysis": "Analisi AI",
-        "familySharing": "Condivisione Famiglia"
-      },
-      "console": {
-        "uploadStarted": "Caricamento iniziato",
-        "view": "Visualizza",
-        "download": "Scarica",
-        "share": "Condividi",
-        "delete": "Elimina"
       },
       "tabs": {
-        "upload": "Caricamento",
         "documents": "Documenti",
-        "stats": "Statistiche"
+        "messages": "Messaggi",
+        "questions": "Domande",
+        "suggestions": "Suggerimenti"
       },
-      "privacy": {
-        "localMode": {
-          "title": "Modalità Privacy Attiva:",
-          "description": "Tutti i documenti vengono elaborati e archiviati esclusivamente sul tuo dispositivo. Nessun dato lascia il tuo browser."
-        },
-        "cloudMode": {
-          "title": "Archiviazione Cloud Attiva:",
-          "description": "I documenti vengono crittografati prima del caricamento. Le tue chiavi di crittografia non lasciano mai il tuo dispositivo."
-        }
-      },
-      "stats": {
-        "localStorage": {
-          "title": "Archiviazione Locale",
-          "description": "Documenti archiviati sul dispositivo"
-        },
-        "cloudStorage": {
-          "title": "Archiviazione Cloud",
-          "description": "Documenti nel cloud"
-        },
-        "totalSize": {
-          "title": "Dimensione Totale",
-          "description": "Archiviazione utilizzata"
-        },
-        "successRate": "Tasso di Successo",
-        "averageTime": "Tempo Medio di Caricamento"
-      },
-      "progress": {
-        "title": "Progresso Caricamento",
-        "completed": "{{count}} completati",
-        "failed": "{{count}} falliti"
-      }
+      "title": "Demo Integrazione AI LegacyGuard"
     },
     "ocr": {
-      "title": "Elaborazione Documenti Privacy-First",
-      "subtitle": "Estrai testo dai documenti mantenendo tutto sul tuo dispositivo",
       "features": {
         "completePrivacy": "Privacy Completa",
         "multiLanguage": "Supporto Multi-Lingua",
         "smartDetection": "Rilevamento Intelligente"
-      }
+      },
+      "subtitle": "Estrai testo dai documenti mantenendo tutto sul tuo dispositivo",
+      "title": "Elaborazione Documenti Privacy-First"
+    },
+    "upload": {
+      "badge": {
+        "aiAnalysis": "Analisi AI",
+        "encryption": "Crittografia Auto",
+        "familySharing": "Condivisione Famiglia"
+      },
+      "console": {
+        "delete": "Elimina",
+        "download": "Scarica",
+        "share": "Condividi",
+        "uploadStarted": "Caricamento iniziato",
+        "view": "Visualizza"
+      },
+      "features": {
+        "aiAnalysis": "Analisi AI",
+        "autoCompress": "Compressione Auto",
+        "autoEncrypt": "Crittografia Auto",
+        "familySharing": "Condivisione Famiglia",
+        "processOCR": "Elaborazione OCR"
+      },
+      "privacy": {
+        "cloudMode": {
+          "description": "I documenti vengono crittografati prima del caricamento. Le tue chiavi di crittografia non lasciano mai il tuo dispositivo.",
+          "title": "Archiviazione Cloud Attiva:"
+        },
+        "localMode": {
+          "description": "Tutti i documenti vengono elaborati e archiviati esclusivamente sul tuo dispositivo. Nessun dato lascia il tuo browser.",
+          "title": "Modalità Privacy Attiva:"
+        }
+      },
+      "progress": {
+        "title": "Progresso Caricamento"
+      },
+      "settings": {
+        "cloud": "Cloud",
+        "description": "Personalizza le tue preferenze di elaborazione documenti",
+        "local": "Locale",
+        "storageLocation": "Posizione Archiviazione",
+        "title": "Impostazioni Caricamento"
+      },
+      "stats": {
+        "averageTime": "Tempo Medio di Caricamento",
+        "cloudStorage": {
+          "description": "Documenti nel cloud",
+          "title": "Archiviazione Cloud"
+        },
+        "localStorage": {
+          "description": "Documenti archiviati sul dispositivo",
+          "title": "Archiviazione Locale"
+        },
+        "successRate": "Tasso di Successo",
+        "totalSize": {
+          "description": "Archiviazione utilizzata",
+          "title": "Dimensione Totale"
+        }
+      },
+      "subtitle": "Sperimenta il futuro della gestione sicura dei documenti",
+      "tabs": {
+        "documents": "Documenti",
+        "stats": "Statistiche",
+        "upload": "Caricamento"
+      },
+      "title": "Caricamento Documenti Magico"
     }
   },
-  "pillars": {
-    "secure": {
-      "title": "SICUREZZA",
-      "description": "Proteggi la tua famiglia e i tuoi beni con misure di sicurezza proattive"
+  "onboarding": {
+    "analysis": {
+      "subtitle": "Preparazione del tuo 'Piano per l'Eredità' personale...",
+      "title": "Analisi delle tue risposte..."
     },
-    "organize": {
-      "title": "ORGANIZZAZIONE",
-      "description": "Cataloga e gestisci i tuoi beni digitali e fisici"
+    "buttons": {
+      "generate": "Genera il Mio Piano per l'Eredità",
+      "next": "Successivo",
+      "previous": "Precedente"
     },
-    "transfer": {
-      "title": "TRASFERIMENTO",
-      "description": "Assicurati che la tua eredità venga trasmessa secondo i tuoi desideri"
-    }
+    "mainSubtitle": "Creiamo il tuo piano personalizzato di protezione dell'eredità",
+    "mainTitle": "Piano per l'Eredità",
+    "q1": {
+      "option1": "Sì",
+      "option2": "No",
+      "option3": "In parte",
+      "title": "Se ti succedesse qualcosa oggi, la tua famiglia saprebbe dove trovare i tuoi documenti importanti?"
+    },
+    "q2": {
+      "option1": "Ho una persona designata",
+      "option2": "La famiglia se la caverebbe",
+      "option3": "Non ci ho pensato",
+      "title": "Chi si prenderebbe cura dei tuoi figli/beni/account digitali?"
+    },
+    "q3": {
+      "option1": "Sì, è chiaro",
+      "option2": "In qualche modo",
+      "option3": "No, non ne abbiamo mai parlato",
+      "title": "Pensi che la tua famiglia saprebbe cosa volevi per loro?"
+    },
+    "q4": {
+      "option1": "Sicurezza finanziaria",
+      "option2": "Complicazioni legali",
+      "option3": "Perdere i ricordi",
+      "option4": "Conflitti familiari",
+      "title": "Cosa ti preoccupa di più per il futuro della tua famiglia?"
+    },
+    "skipButton": "Salta per ora",
+    "skipConfirmMessage": "Puoi sempre riavviare questa configurazione in seguito nelle impostazioni",
+    "skipConfirmNo": "Continua la configurazione",
+    "skipConfirmTitle": "Saltare l'onboarding?",
+    "skipConfirmYes": "Salta"
   }
 }

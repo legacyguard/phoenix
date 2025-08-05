@@ -1,208 +1,146 @@
 {
-  "_comment": "Application settings and configuration",
-  "settings": {
-    "title": "Impostazioni",
-    "subtitle": "Gestisci le preferenze del tuo account e le impostazioni di sicurezza",
-    "loading": "Caricamento delle impostazioni del tuo account...",
-    "profile": {
-      "title": "Informazioni del Profilo",
-      "description": "Aggiorna le tue informazioni personali e preferenze",
-      "emailAddress": "Indirizzo Email",
-      "emailCannotBeChanged": "Il tuo indirizzo email non può essere modificato",
-      "firstName": "Nome",
-      "firstNamePlaceholder": "Inserisci il tuo nome",
-      "lastName": "Cognome",
-      "lastNamePlaceholder": "Inserisci il tuo cognome",
-      "saving": "Salvataggio...",
-      "saveChanges": "Salva Modifiche"
-    },
-    "security": {
-      "title": "Sicurezza",
-      "description": "Gestisci la sicurezza e l'accesso al tuo account",
-      "changePassword": "Cambia Password",
-      "currentPassword": "Password Attuale",
-      "currentPasswordPlaceholder": "Inserisci la password attuale",
-      "newPassword": "Nuova Password",
-      "newPasswordPlaceholder": "Inserisci la nuova password",
-      "confirmNewPassword": "Conferma Nuova Password",
-      "confirmNewPasswordPlaceholder": "Conferma la nuova password",
-      "updating": "Aggiornamento...",
-      "updatePassword": "Aggiorna Password",
-      "twoFactorAuth": "Autenticazione a Due Fattori",
-      "enable2FA": "Abilita 2FA",
-      "2FADescription": "Aggiungi un ulteriore livello di sicurezza al tuo account. (Prossimamente)"
-    },
-    "accountManagement": {
-      "title": "Gestione Account",
-      "description": "Azioni permanenti sull'account - procedere con cautela",
-      "deleteAccountTitle": "Elimina Account",
-      "deleteAccountWarning": "Questa azione è irreversibile e cancellerà permanentemente tutti i tuoi dati, inclusi i documenti caricati e le istruzioni preparate. Le tue informazioni sull'eredità digitale saranno completamente rimosse dai nostri sistemi.",
-      "deleteMyAccount": "Elimina il Mio Account",
-      "confirmTitle": "Sei assolutamente sicuro?",
-      "confirmDescription": "Questa azione non può essere annullata. Eliminerà permanentemente il tuo account e rimuoverà tutti i tuoi dati dai nostri server.",
-      "confirmEmailPrompt": "Per favore, digita il tuo indirizzo email {{email}} per confermare:",
-      "emailPlaceholder": "Inserisci il tuo indirizzo email",
-      "deleting": "Eliminazione...",
-      "deleteAccount": "Elimina Account"
-    },
-    "errors": {
-      "loadProfile": "Impossibile caricare le informazioni del profilo",
-      "updateProfile": "Impossibile aggiornare il profilo",
-      "passwordFieldsRequired": "Per favore, compila tutti i campi della password",
-      "passwordsDoNotMatch": "Le nuove password non corrispondono",
-      "passwordTooShort": "La nuova password deve essere lunga almeno 6 caratteri",
-      "updatePassword": "Impossibile aggiornare la password",
-      "emailDoesNotMatch": "L'indirizzo email non corrisponde",
-      "deleteAccountSupport": "L'eliminazione dell'account deve essere richiesta tramite il supporto. Per favore, contattaci per assistenza.",
-      "deleteAccount": "Impossibile eliminare l'account"
-    },
-    "success": {
-      "profileUpdated": "Profilo aggiornato con successo",
-      "passwordUpdated": "Password aggiornata con successo",
-      "welcome": {
-        "masculine": "Benvenuto! Le tue impostazioni sono state configurate con successo.",
-        "feminine": "Benvenuta! Le tue impostazioni sono state configurate con successo.",
-        "neutral": "Benvenut*! Le tue impostazioni sono state configurate con successo."
-      }
-    },
-    "privacySettings": {
-      "privacy_settings_1": "Impostazioni Privacy",
-      "control_how_your_documents_are_2": "Controlla come i tuoi documenti vengono elaborati e archiviati",
-      "default_processing_mode_3": "Modalità di Elaborazione Predefinita",
-      "choose_how_documents_are_proce_4": "Scegli come i documenti vengono elaborati per impostazione predefinita",
-      "hybrid_mode_recommended_5": "Modalità Ibrida (Raccomandata)",
-      "combines_local_and_cloud_ai_fo_6": "Combina AI locale e cloud per prestazioni e privacy ottimali",
-      "local_only_privacy_mode_7": "Modalità Privacy Solo Locale",
-      "processes_documents_entirely_i_8": "Elabora i documenti interamente nel tuo browser per la massima privacy",
-      "note_9": "Nota: ",
-      "you_can_always_override_this_s_10": "Puoi sempre sovrascrivere questa impostazione quando carichi documenti individuali"
-    }
-  },
-  "dataTransparency": {
-    "loadingMessage": "Caricamento delle informazioni sulla trasparenza dei dati...",
-    "loadingError": "Impossibile caricare i dati di trasparenza. Riprova più tardi.",
-    "title": "I Tuoi Dati, Il Tuo Controllo",
-    "description": "Crediamo nella trasparenza totale. Ecco esattamente come gestiamo le tue informazioni.",
-    "dataFlow": {
-      "whereDataLives": "Dove Vivono i Tuoi Dati",
-      "collection": "Raccolta",
-      "storage": "Archiviazione",
-      "processing": "Elaborazione",
-      "sharing": "Condivisione"
-    },
-    "recentActivity": {
-      "title": "Attività Recente",
-      "premiumTitle": "Sblocca il Tuo Registro di Sorveglianza Permanente",
-      "premiumText": "Il tuo registro operativo di 30 giorni fornisce sicurezza di base. Per la massima responsabilità e tranquillità, passa al Pacchetto Command per mantenere una cronologia di audit completa e immutabile di ogni azione intrapresa nella tua cassaforte, per sempre."
-    },
-    "dataOwnership": {
-      "title": "Proprietà dei Dati",
-      "description": "I tuoi dati sono tuoi, sempre. Puoi scaricare una copia completa in qualsiasi momento.",
-      "downloadButton": "Scarica il Mio Archivio Dati"
-    }
-  },
   "cookies": {
-    "bannerText": "Utilizziamo cookie essenziali per garantire il corretto funzionamento del nostro sito. Con il tuo consenso, potremmo anche utilizzare cookie analitici per migliorare i nostri servizi.",
-    "declineButton": "Rifiuta",
-    "acceptButton": "Accetta Tutti",
-    "learnMoreLink": "Scopri di più",
     "policy": {
-      "title": "Informativa sui Cookie",
-      "subtitle": "Comprendere come utilizziamo i cookie per migliorare la tua esperienza rispettando la tua privacy",
-      "lastUpdated": "Ultimo Aggiornamento",
-      "required": "Richiesto",
-      "purpose": "Scopo",
-      "examples": "Esempi",
-      "overview": {
-        "title": "Informazioni Importanti",
-        "intro": "Questa Informativa sui Cookie spiega come LegacyGuard utilizza i cookie e tecnologie simili per riconoscerti quando visiti il nostro sito web. Spiega cosa sono queste tecnologie e perché le utilizziamo, nonché i tuoi diritti per controllare il nostro utilizzo.",
-        "point1": "Utilizziamo i cookie per garantire le funzionalità di base del nostro sito web",
-        "point2": "Alcuni cookie sono essenziali e non possono essere disabilitati",
-        "point3": "Puoi controllare i cookie non essenziali attraverso il nostro gestore del consenso",
-        "point4": "Non vendiamo mai i tuoi dati o utilizziamo i cookie per tracciamento invasivo"
-      },
-      "categories": {
-        "title": "Categorie di Cookie che Utilizziamo"
-      },
-      "necessary": {
-        "title": "Cookie Strettamente Necessari",
-        "description": "Questi cookie sono essenziali per il corretto funzionamento del sito web",
-        "purpose": "Abilita funzionalità core come sicurezza, verifica dell'identità e gestione della rete. Questi cookie non possono essere disabilitati.",
-        "examples": {
-          "auth": "Ti mantiene loggato in modo sicuro",
-          "session": "Mantiene lo stato della tua sessione",
-          "csrf": "Protegge da attacchi cross-site request forgery",
-          "consent": "Ricorda le tue preferenze sui cookie"
-        }
-      },
       "analytics": {
-        "title": "Cookie Analitici",
         "description": "Ci aiutano a capire come i visitatori interagiscono con il nostro sito web",
-        "purpose": "Raccoglie informazioni anonime su come utilizzi il nostro sito, aiutandoci a migliorare l'esperienza utente e identificare problemi.",
         "examples": {
           "ga": "Tracciamento Google Analytics",
           "gid": "Distingue gli utenti",
           "session": "Raggruppa le attività all'interno di una sessione"
-        }
+        },
+        "purpose": "Raccoglie informazioni anonime su come utilizzi il nostro sito, aiutandoci a migliorare l'esperienza utente e identificare problemi.",
+        "title": "Cookie Analitici"
+      },
+      "categories": {
+        "title": "Categorie di Cookie che Utilizziamo"
+      },
+      "contact": {
+        "address": "Indirizzo",
+        "addressDetails": "LegacyGuard Ltd, Ufficio Protezione Dati, 123 Privacy Street, Dublino, Irlanda",
+        "description": "Se hai domande sul nostro utilizzo dei cookie o su questa Informativa sui Cookie, contattaci:",
+        "email": "Email",
+        "title": "Contattaci sui Cookie"
+      },
+      "examples": "Esempi",
+      "lastUpdated": "Ultimo Aggiornamento",
+      "manage": {
+        "title": "Gestisci le Tue Preferenze sui Cookie"
       },
       "marketing": {
-        "title": "Cookie di Marketing",
         "description": "Utilizzati per fornire pubblicità pertinenti",
-        "purpose": "Traccia i visitatori sui siti web per visualizzare annunci pertinenti e coinvolgenti per utenti individuali.",
         "examples": {
           "facebook": "Pubblicità Facebook",
           "google": "Tracciamento conversioni Google Ads"
-        }
+        },
+        "purpose": "Traccia i visitatori sui siti web per visualizzare annunci pertinenti e coinvolgenti per utenti individuali.",
+        "title": "Cookie di Marketing"
+      },
+      "necessary": {
+        "description": "Questi cookie sono essenziali per il corretto funzionamento del sito web",
+        "examples": {
+          "auth": "Ti mantiene loggato in modo sicuro",
+          "consent": "Ricorda le tue preferenze sui cookie",
+          "csrf": "Protegge da attacchi cross-site request forgery",
+          "session": "Mantiene lo stato della tua sessione"
+        },
+        "purpose": "Abilita funzionalità core come sicurezza, verifica dell'identità e gestione della rete. Questi cookie non possono essere disabilitati.",
+        "title": "Cookie Strettamente Necessari"
+      },
+      "overview": {
+        "intro": "Questa Informativa sui Cookie spiega come LegacyGuard utilizza i cookie e tecnologie simili per riconoscerti quando visiti il nostro sito web. Spiega cosa sono queste tecnologie e perché le utilizziamo, nonché i tuoi diritti per controllare il nostro utilizzo.",
+        "point1": "Utilizziamo i cookie per garantire le funzionalità di base del nostro sito web",
+        "point2": "Alcuni cookie sono essenziali e non possono essere disabilitati",
+        "point3": "Puoi controllare i cookie non essenziali attraverso il nostro gestore del consenso",
+        "point4": "Non vendiamo mai i tuoi dati o utilizziamo i cookie per tracciamento invasivo",
+        "title": "Informazioni Importanti"
       },
       "preferences": {
-        "title": "Cookie di Preferenze",
         "description": "Ricorda le tue preferenze e impostazioni",
-        "purpose": "Consente al sito web di ricordare le scelte che fai (come lingua o regione) e fornisce funzionalità potenziate e personalizzate.",
         "examples": {
-          "theme": "Il tuo tema scelto (chiaro/scuro)",
           "language": "La tua lingua preferita",
+          "theme": "Il tuo tema scelto (chiaro/scuro)",
           "ui": "Preferenze di personalizzazione UI"
-        }
+        },
+        "purpose": "Consente al sito web di ricordare le scelte che fai (come lingua o regione) e fornisce funzionalità potenziate e personalizzate.",
+        "title": "Cookie di Preferenze"
       },
+      "purpose": "Scopo",
+      "required": "Richiesto",
+      "subtitle": "Comprendere come utilizziamo i cookie per migliorare la tua esperienza rispettando la tua privacy",
+      "title": "Informativa sui Cookie",
       "yourRights": {
-        "title": "I Tuoi Diritti",
         "description": "Hai il controllo completo sulle tue preferenze sui cookie",
         "right1": "Accedere alle informazioni sui cookie che utilizziamo",
         "right2": "Ritirare il consenso per i cookie non essenziali in qualsiasi momento",
         "right3": "Eliminare i cookie dal tuo browser",
-        "right4": "Rinunciare ai cookie analitici e di marketing"
-      },
-      "manage": {
-        "title": "Gestisci le Tue Preferenze sui Cookie"
-      },
-      "contact": {
-        "title": "Contattaci sui Cookie",
-        "description": "Se hai domande sul nostro utilizzo dei cookie o su questa Informativa sui Cookie, contattaci:",
-        "email": "Email",
-        "address": "Indirizzo",
-        "addressDetails": "LegacyGuard Ltd, Ufficio Protezione Dati, 123 Privacy Street, Dublino, Irlanda"
+        "right4": "Rinunciare ai cookie analitici e di marketing",
+        "title": "I Tuoi Diritti"
       }
     }
   },
-  "genderPreference": {
-    "title": "Lingua e Pronomi",
-    "description": "Scegli come l'applicazione si rivolge a te. Questo ci aiuta a fornire una grammatica corretta nelle lingue che richiedono accordo di genere.",
-    "privacyNote": "Questa preferenza è memorizzata localmente e utilizzata solo per l'accuratezza grammaticale. Non viene mai condivisa o utilizzata per altri scopi.",
-    "selectLabel": "Come vorresti essere chiamato?",
-    "options": {
-      "masculine": "Forme maschili (lui)",
-      "feminine": "Forme femminili (lei)",
-      "neutral": "Forme neutre (loro)"
+  "dataTransparency": {
+    "dataFlow": {
+      "collection": "Raccolta",
+      "processing": "Elaborazione",
+      "sharing": "Condivisione",
+      "storage": "Archiviazione",
+      "whereDataLives": "Dove Vivono i Tuoi Dati"
     },
-    "save": "Salva Preferenza",
-    "saving": "Salvataggio...",
-    "saveSuccess": "La tua preferenza linguistica è stata salvata",
-    "saveError": "Impossibile salvare la preferenza. Riprova.",
+    "dataOwnership": {
+      "description": "I tuoi dati sono tuoi, sempre. Puoi scaricare una copia completa in qualsiasi momento.",
+      "downloadButton": "Scarica il Mio Archivio Dati",
+      "title": "Proprietà dei Dati"
+    },
+    "description": "Crediamo nella trasparenza totale. Ecco esattamente come gestiamo le tue informazioni.",
+    "loadingError": "Impossibile caricare i dati di trasparenza. Riprova più tardi.",
+    "loadingMessage": "Caricamento delle informazioni sulla trasparenza dei dati...",
+    "recentActivity": {
+      "premiumText": "Il tuo registro operativo di 30 giorni fornisce sicurezza di base. Per la massima responsabilità e tranquillità, passa al Pacchetto Command per mantenere una cronologia di audit completa e immutabile di ogni azione intrapresa nella tua cassaforte, per sempre.",
+      "premiumTitle": "Sblocca il Tuo Registro di Sorveglianza Permanente",
+      "title": "Attività Recente"
+    },
+    "title": "I Tuoi Dati, Il Tuo Controllo"
+  },
+  "genderPreference": {
+    "description": "Scegli come l'applicazione si rivolge a te. Questo ci aiuta a fornire una grammatica corretta nelle lingue che richiedono accordo di genere.",
     "examples": {
-      "title": "Questo influisce su come il testo appare in determinate lingue:",
+      "agreement": "Aggettivi e forme verbali che richiedono accordo di genere",
       "greeting": "Saluti e messaggi di benvenuto",
       "possessive": "Riferimenti ai tuoi documenti e beni",
-      "agreement": "Aggettivi e forme verbali che richiedono accordo di genere"
+      "title": "Questo influisce su come il testo appare in determinate lingue:"
+    },
+    "options": {
+      "feminine": "Forme femminili (lei)",
+      "masculine": "Forme maschili (lui)",
+      "neutral": "Forme neutre (loro)"
+    },
+    "privacyNote": "Questa preferenza è memorizzata localmente e utilizzata solo per l'accuratezza grammaticale. Non viene mai condivisa o utilizzata per altri scopi.",
+    "save": "Salva Preferenza",
+    "saveError": "Impossibile salvare la preferenza. Riprova.",
+    "saveSuccess": "La tua preferenza linguistica è stata salvata",
+    "saving": "Salvataggio...",
+    "selectLabel": "Come vorresti essere chiamato?",
+    "title": "Lingua e Pronomi"
+  },
+  "settings": {
+    "privacySettings": {
+      "choose_how_documents_are_proce_4": "Scegli come i documenti vengono elaborati per impostazione predefinita",
+      "combines_local_and_cloud_ai_fo_6": "Combina AI locale e cloud per prestazioni e privacy ottimali",
+      "control_how_your_documents_are_2": "Controlla come i tuoi documenti vengono elaborati e archiviati",
+      "default_processing_mode_3": "Modalità di Elaborazione Predefinita",
+      "hybrid_mode_recommended_5": "Modalità Ibrida (Raccomandata)",
+      "local_only_privacy_mode_7": "Modalità Privacy Solo Locale",
+      "note_9": "Nota: ",
+      "privacy_settings_1": "Impostazioni Privacy",
+      "processes_documents_entirely_i_8": "Elabora i documenti interamente nel tuo browser per la massima privacy",
+      "you_can_always_override_this_s_10": "Puoi sempre sovrascrivere questa impostazione quando carichi documenti individuali"
+    },
+    "success": {
+      "welcome": {
+        "feminine": "Benvenuta! Le tue impostazioni sono state configurate con successo.",
+        "masculine": "Benvenuto! Le tue impostazioni sono state configurate con successo.",
+        "neutral": "Benvenut*! Le tue impostazioni sono state configurate con successo."
+      }
     }
   }
 }

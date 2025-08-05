@@ -1,79 +1,78 @@
 {
-  "_comment": "Gwybodaeth a rheoli tanysgrifiadau",
   "subscription": {
-    "title": "Tanysgrifiad",
-    "currentPlan": "Cynllun Presennol",
-    "upgradeButton": "Uwchraddio Cynllun",
-    "downgradeButton": "Lleihau Cynllun",
+    "billing": {
+      "billingHistory": "Hanes Bilio",
+      "nextBillingDate": "Dyddiad Bilio Nesaf",
+      "paymentMethod": "Dull Taliad",
+      "updatePaymentMethod": "Diweddaru Dull Taliad"
+    },
     "cancelButton": "Canslo Tanysgrifiad",
-    "renewButton": "Adnewyddu Tanysgrifiad",
+    "cancelSubscription": {
+      "cancelButton": "Canslo Tanysgrifiad",
+      "cancelledMessage": "Mae eich tanysgrifiad wedi’i ganslo.",
+      "confirmCancel": "Ydych chi’n siŵr eich bod am ganslo eich tanysgrifiad?",
+      "description": "Os byddwch yn canslo, bydd eich tanysgrifiad yn parhau hyd at ddiwedd y cyfnod talu presennol.",
+      "title": "Canslo Tanysgrifiad"
+    },
+    "currentPlan": "Cynllun Presennol",
+    "downgradeButton": "Lleihau Cynllun",
+    "errors": {
+      "failedToCancelSubscription": "Methwyd canslo tanysgrifiad",
+      "failedToLoadPlans": "Methwyd llwytho cynlluniau tanysgrifiad",
+      "failedToRenewSubscription": "Methwyd adnewyddu tanysgrifiad",
+      "failedToUpdatePayment": "Methwyd diweddaru dull talu"
+    },
     "plans": {
-      "free": {
-        "name": "Am Ddim",
-        "description": "Gwasanaeth sylfaenol gyda mynediad cyfyngedig",
-        "features": [
-          "Creu proffil sylfaenol",
-          "Storfa ddigidol cyfyngedig",
-          "Cymorth sylfaenol"
-        ]
-      },
-      "small": {
-        "name": "Bach",
-        "description": "Cynllun sylweddol gyda mwy o nodweddion",
-        "price": "€1 y mis",
-        "features": [
-          "Storfa ffeiliau uwch",
-          "Cefnogaeth flaengar",
-          "Mynediad at rai nodweddion premiwm"
-        ]
-      },
-      "medium": {
-        "name": "Canolig",
-        "description": "Cynllun cyflawn ar gyfer defnyddwyr rheolaidd",
-        "price": "€2 y mis",
-        "features": [
-          "Storfa ffeiliau helaeth",
-          "Cefnogaeth flaengar gyda blaenoriaeth",
-          "Mynediad llawn at nodweddion premiwm",
-          "Cyngor cyfreithiol sylfaenol"
-        ]
-      },
       "big": {
-        "name": "Mawr",
         "description": "Y cynllun mwyaf cyflawn gyda gwasanaethau ychwanegol",
-        "price": "€5 y mis",
         "features": [
           "Storfa ffeiliau diderfyn",
           "Cefnogaeth flaengar gyda cefnogaeth bersonol",
           "Mynediad i bob nodwedd premiwm",
           "Cynllunio cyfreithiol a gwasanaethau archifau corfforol"
-        ]
+        ],
+        "name": "Mawr",
+        "price": "€5 y mis"
+      },
+      "free": {
+        "description": "Gwasanaeth sylfaenol gyda mynediad cyfyngedig",
+        "features": [
+          "Creu proffil sylfaenol",
+          "Storfa ddigidol cyfyngedig",
+          "Cymorth sylfaenol"
+        ],
+        "name": "Am Ddim"
+      },
+      "medium": {
+        "description": "Cynllun cyflawn ar gyfer defnyddwyr rheolaidd",
+        "features": [
+          "Storfa ffeiliau helaeth",
+          "Cefnogaeth flaengar gyda blaenoriaeth",
+          "Mynediad llawn at nodweddion premiwm",
+          "Cyngor cyfreithiol sylfaenol"
+        ],
+        "name": "Canolig",
+        "price": "€2 y mis"
+      },
+      "small": {
+        "description": "Cynllun sylweddol gyda mwy o nodweddion",
+        "features": [
+          "Storfa ffeiliau uwch",
+          "Cefnogaeth flaengar",
+          "Mynediad at rai nodweddion premiwm"
+        ],
+        "name": "Bach",
+        "price": "€1 y mis"
       }
     },
-    "billing": {
-      "nextBillingDate": "Dyddiad Bilio Nesaf",
-      "paymentMethod": "Dull Taliad",
-      "updatePaymentMethod": "Diweddaru Dull Taliad",
-      "billingHistory": "Hanes Bilio"
-    },
-    "cancelSubscription": {
-      "title": "Canslo Tanysgrifiad",
-      "description": "Os byddwch yn canslo, bydd eich tanysgrifiad yn parhau hyd at ddiwedd y cyfnod talu presennol.",
-      "confirmCancel": "Ydych chi’n siŵr eich bod am ganslo eich tanysgrifiad?",
-      "cancelButton": "Canslo Tanysgrifiad",
-      "cancelledMessage": "Mae eich tanysgrifiad wedi’i ganslo."
-    },
-    "errors": {
-      "failedToLoadPlans": "Methwyd llwytho cynlluniau tanysgrifiad",
-      "failedToUpdatePayment": "Methwyd diweddaru dull talu",
-      "failedToCancelSubscription": "Methwyd canslo tanysgrifiad",
-      "failedToRenewSubscription": "Methwyd adnewyddu tanysgrifiad"
-    },
+    "renewButton": "Adnewyddu Tanysgrifiad",
     "success": {
-      "planUpdated": "Diweddarwyd cynllun tanysgrifiad yn llwyddiannus",
       "paymentUpdated": "Diweddarwyd dull talu yn llwyddiannus",
+      "planUpdated": "Diweddarwyd cynllun tanysgrifiad yn llwyddiannus",
       "subscriptionCancelled": "Canslwyd tanysgrifiad yn llwyddiannus",
       "subscriptionRenewed": "Adnewyddwyd tanysgrifiad yn llwyddiannus"
-    }
+    },
+    "title": "Tanysgrifiad",
+    "upgradeButton": "Uwchraddio Cynllun"
   }
 }

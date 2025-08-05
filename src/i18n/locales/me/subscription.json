@@ -1,204 +1,177 @@
 {
-  "_comment": "Shared translations used across the application",
-  "subscription": {
-    "dashboard": {
-      "title": "Kontrolna tabla pretplata",
-      "subtitle": "Upravljajte svojim pretplatama, troškovima i podsjetnicima"
-    },
-    "monthlyCost": "Ukupni mjesečni trošak",
-    "yearlyCost": "Ukupni godišnji trošak",
-    "activeSubscriptions": "Aktivne pretplate",
-    "upcomingSoon": "uskoro",
-    "exportReport": "Izvezi izvještaj",
-    "perMonth": "mjesečno",
-    "perYear": "godišnje",
-    "allSubscriptions": "Sve pretplate",
-    "allSubscriptionsDesc": "Pregled svih aktivnih pretplata sortiranih po datumu obnove",
-    "upcomingRenewals": "Nadolazeće obnove",
-    "upcomingRenewalsTitle": "Upozorenje o nadolazećim obnovama",
-    "upcomingRenewalsDesc": "Imate {{count}} nadolazećih obnova u sljedećih 90 dana",
-    "next90Days": "Sljedećih 90 dana",
-    "noUpcomingRenewals": "Nema nadolazećih obnova u sljedećih 90 dana",
-    "renew": "Obnovi",
-    "review": "Pregledaj",
-    "preferences": "Podešavanja pretplata",
-    "preferencesDesc": "Upravljajte načinom na koji se vaše pretplate prate i vode",
-    "enableTracking": "Omogući praćenje pretplata",
-    "enableTrackingDesc": "Automatski upravljajte i pratite dokumente vezane za pretplate",
-    "costOptimization": "Omogući predloge za optimizaciju troškova",
-    "costOptimizationDesc": "Primajte predloge za optimizaciju i smanjenje troškova pretplata",
-    "reminderPeriods": "Zadani periodi podsjetnika",
-    "daysBefore": "dana prije",
-    "loadError": "Učitavanje detalja pretplate nije uspjelo",
-    "updateError": "Ažuriranje podešavanja pretplate nije uspjelo",
-    "preferencesUpdated": "Podešavanja uspješno ažurirana",
-    "tabs": {
-      "overview": "Pregled",
-      "upcoming": "Nadolazeće",
-      "settings": "Podešavanja"
-    },
-    "types": {
-      "monthly": "Mjesečno",
-      "yearly": "Godišnje",
-      "oneTime": "Jednokratno",
-      "none": "Nijedno"
-    },
-    "daysUntilRenewal": "dana do obnove",
-    "days": "dana",
-    "loadFailed": "Učitavanje podataka o pretplati nije uspjelo",
-    "autoRenewal": "Automatska obnova: Da",
-    "manual": "Automatska obnova: Ne",
-    "trackingSuggestion": "Razmislite o omogućavanju praćenja pretplata za bolje upravljanje i podsjetnike",
-    "type": "Vrsta pretplate",
-    "typePlaceholder": "Odaberite vrstu",
-    "renewalCost": "Trošak obnove",
-    "renewalCostPlaceholder": "Unesite trošak obnove",
-    "cancellationNotice": "Otkazni rok",
-    "noNoticeRequired": "Nije potreban otkazni rok",
-    "providerContact": "Kontakt podaci pružaoca",
-    "providerPhone": "Telefon",
-    "providerEmail": "Email",
-    "providerWebsite": "Web stranica",
-    "cancellationNoticeWarning": "Napomena: Otkazivanje zahtijeva otkazni rok od {{days}} dana",
-    "title": "Subscription",
-    "currentPlan": "Current Plan",
-    "active": "Active",
-    "planDescription": "Manage your subscription and billing",
-    "planName": "Plan",
-    "premium": "Premium",
-    "free": "Free",
-    "nextBilling": "Next billing date",
-    "cancelledNotice": "Your subscription will end on {{date}}",
-    "manageBilling": "Manage Billing",
-    "resume": "Resume Subscription",
-    "cancel": "Cancel Subscription",
-    "upgradeToPremium": "Upgrade to Premium",
-    "features": {
-      "title": "Plan Features",
-      "premiumDescription": "You have access to all premium features",
-      "freeDescription": "Upgrade to unlock more features",
-      "unlimited": "Unlimited documents and assets",
-      "encryption": "Advanced encryption",
-      "priority": "Priority support",
-      "history": "Version history",
-      "basicWill": "Basic will document",
-      "limitedGuardians": "Up to 2 guardians",
-      "basicSupport": "Community support"
-    },
-    "errors": {
-      "portalFailed": "Failed to open billing portal",
-      "cancelFailed": "Failed to cancel subscription",
-      "resumeFailed": "Failed to resume subscription"
-    },
-    "cancelSuccess": "Subscription cancelled successfully",
-    "resumeSuccess": "Subscription resumed successfully",
-    "successTitle": "Payment Successful!",
-    "successMessage": "Thank you for your purchase. Your subscription has been activated.",
-    "cancelTitle": "Payment Cancelled",
-    "cancelMessage": "It seems like your transaction was cancelled. Please try again or contact support."
-  },
   "pricing": {
-    "title": "Odaberite svoj plan nasljeđa",
-    "subtitle": "Započnite sa našim besplatnim nivoom ili nadogradite za premium funkcije.",
-    "mainTitle": "Odaberite svoj plan nasljeđa",
-    "mainSubtitle": "Započnite sa našim besplatnim nivoom ili nadogradite za premium funkcije.",
-    "freePlan": {
-      "name": "Essential Protector",
-      "description": "Get started with basic features",
-      "price": "Free",
-      "features": {
-        "will": "1 Will document",
-        "guardians": "2 Guardians",
-        "assets": "5 Assets",
-        "support": "Basic support"
-      }
-    },
-    "premiumPlan": {
-      "name": "Command Package",
-      "description": "Perfect for individuals and families",
-      "price": "$9.99 / month",
-      "upgradeButton": "Upgrade Now",
-      "features": {
-        "will": "Unlimited Will documents",
-        "guardians": "Unlimited Guardians",
-        "assets": "Unlimited Assets",
-        "encryption": "Document encryption",
-        "access": "Emergency access",
-        "support": "Priority support",
-        "history": "Version history",
-        "templates": "Legal templates"
-      }
-    },
     "devMode": {
-      "title": "Developer Mode",
       "button": {
         "grant": "Dev Mode: Grant Premium Access",
         "granting": "Granting..."
       },
       "description": "This button is only visible in development mode. Click to instantly grant premium access for testing.",
+      "errorMessage": "Failed to grant developer premium access",
       "successMessage": "Developer premium access granted!",
-      "errorMessage": "Failed to grant developer premium access"
-    },
-    "errors": {
-      "checkoutFailed": "Failed to start checkout process"
-    },
-    "starter": {
-      "name": "Nasljeđe Starter",
-      "price": "Besplatno",
-      "description": "Idealno za početak očuvanja vašeg digitalnog nasljeđa.",
-      "button": "Započnite besplatno",
-      "features": {
-        "storage": "{{amount}} skladišta",
-        "guardians": "Do {{count}} čuvara",
-        "documents": "Osnovni trezor dokumenata",
-        "playbook": "Osnovni priručnik za čuvare",
-        "support": "Podrška zajednice"
-      },
-      "limits": {
-        "storage": "500 MB",
-        "guardians": "3",
-        "fileSize": "10 MB po fajlu"
-      }
-    },
-    "premium": {
-      "name": "Nasljeđe Premium",
-      "price": "19 €",
-      "period": "/ mjesečno",
-      "badge": "Najpopularnije",
-      "description": "Napredne funkcije za sveobuhvatno upravljanje nasljeđem.",
-      "button": "Odaberite Premium",
-      "features": {
-        "storage": "{{amount}} skladišta",
-        "guardians": "Do {{count}} čuvara",
-        "manual": "Priručnik za nasljednike",
-        "support": "Prioritetna podrška putem emaila"
-      },
-      "limits": {
-        "storage": "10 GB",
-        "guardians": "5",
-        "fileSize": "50 MB po fajlu"
-      }
+      "title": "Developer Mode"
     },
     "enterprise": {
-      "name": "Nasljeđe Enterprise",
-      "price": "Prilagođeno",
-      "description": "Za porodice i preduzeća sa složenim potrebama koje zahtijevaju najviši nivo usluge.",
       "button": "Kontaktirajte prodaju",
+      "description": "Za porodice i preduzeća sa složenim potrebama koje zahtijevaju najviši nivo usluge.",
       "features": {
-        "storage": "{{amount}}+ skladišta",
         "guardians": "Neograničeno čuvara",
         "legal": "Koordinacija sa pravnim stručnjacima",
         "support": "Posvećeni menadžer naloga"
       },
       "limits": {
-        "storage": "500 GB",
-        "guardians": "neograničeno",
-        "fileSize": "100 MB po fajlu"
-      }
-    }
+        "storage": "500 GB"
+      },
+      "name": "Nasljeđe Enterprise",
+      "price": "Prilagođeno"
+    },
+    "errors": {
+      "checkoutFailed": "Failed to start checkout process"
+    },
+    "freePlan": {
+      "description": "Get started with basic features",
+      "features": {
+        "assets": "5 Assets",
+        "guardians": "2 Guardians",
+        "support": "Basic support",
+        "will": "1 Will document"
+      },
+      "name": "Essential Protector",
+      "price": "Free"
+    },
+    "mainSubtitle": "Započnite sa našim besplatnim nivoom ili nadogradite za premium funkcije.",
+    "mainTitle": "Odaberite svoj plan nasljeđa",
+    "premium": {
+      "badge": "Najpopularnije",
+      "button": "Odaberite Premium",
+      "description": "Napredne funkcije za sveobuhvatno upravljanje nasljeđem.",
+      "features": {
+        "manual": "Priručnik za nasljednike",
+        "support": "Prioritetna podrška putem emaila"
+      },
+      "limits": {
+        "guardians": "5",
+        "storage": "10 GB"
+      },
+      "name": "Nasljeđe Premium",
+      "period": "/ mjesečno",
+      "price": "19 €"
+    },
+    "premiumPlan": {
+      "description": "Perfect for individuals and families",
+      "features": {
+        "access": "Emergency access",
+        "assets": "Unlimited Assets",
+        "encryption": "Document encryption",
+        "guardians": "Unlimited Guardians",
+        "history": "Version history",
+        "support": "Priority support",
+        "templates": "Legal templates",
+        "will": "Unlimited Will documents"
+      },
+      "name": "Command Package",
+      "price": "$9.99 / month",
+      "upgradeButton": "Upgrade Now"
+    },
+    "starter": {
+      "button": "Započnite besplatno",
+      "description": "Idealno za početak očuvanja vašeg digitalnog nasljeđa.",
+      "features": {
+        "documents": "Osnovni trezor dokumenata",
+        "playbook": "Osnovni priručnik za čuvare",
+        "support": "Podrška zajednice"
+      },
+      "limits": {
+        "guardians": "3",
+        "storage": "500 MB"
+      },
+      "name": "Nasljeđe Starter",
+      "price": "Besplatno"
+    },
+    "title": "Odaberite svoj plan nasljeđa"
+  },
+  "subscription": {
+    "active": "Active",
+    "activeSubscriptions": "Aktivne pretplate",
+    "allSubscriptions": "Sve pretplate",
+    "allSubscriptionsDesc": "Pregled svih aktivnih pretplata sortiranih po datumu obnove",
+    "autoRenewal": "Automatska obnova: Da",
+    "cancel": "Cancel Subscription",
+    "cancelMessage": "It seems like your transaction was cancelled. Please try again or contact support.",
+    "cancelSuccess": "Subscription cancelled successfully",
+    "cancelTitle": "Payment Cancelled",
+    "cancellationNotice": "Otkazni rok",
+    "costOptimization": "Omogući predloge za optimizaciju troškova",
+    "costOptimizationDesc": "Primajte predloge za optimizaciju i smanjenje troškova pretplata",
+    "currentPlan": "Current Plan",
+    "dashboard": {
+      "subtitle": "Upravljajte svojim pretplatama, troškovima i podsjetnicima",
+      "title": "Kontrolna tabla pretplata"
+    },
+    "days": "dana",
+    "daysBefore": "dana prije",
+    "daysUntilRenewal": "dana do obnove",
+    "enableTracking": "Omogući praćenje pretplata",
+    "enableTrackingDesc": "Automatski upravljajte i pratite dokumente vezane za pretplate",
+    "errors": {
+      "cancelFailed": "Failed to cancel subscription",
+      "portalFailed": "Failed to open billing portal",
+      "resumeFailed": "Failed to resume subscription"
+    },
+    "exportReport": "Izvezi izvještaj",
+    "features": {
+      "basicSupport": "Community support",
+      "basicWill": "Basic will document",
+      "encryption": "Advanced encryption",
+      "freeDescription": "Upgrade to unlock more features",
+      "history": "Version history",
+      "limitedGuardians": "Up to 2 guardians",
+      "premiumDescription": "You have access to all premium features",
+      "priority": "Priority support",
+      "title": "Plan Features",
+      "unlimited": "Unlimited documents and assets"
+    },
+    "free": "Free",
+    "loadError": "Učitavanje detalja pretplate nije uspjelo",
+    "manageBilling": "Manage Billing",
+    "manual": "Automatska obnova: Ne",
+    "monthlyCost": "Ukupni mjesečni trošak",
+    "next90Days": "Sljedećih 90 dana",
+    "nextBilling": "Next billing date",
+    "noUpcomingRenewals": "Nema nadolazećih obnova u sljedećih 90 dana",
+    "perMonth": "mjesečno",
+    "perYear": "godišnje",
+    "planDescription": "Manage your subscription and billing",
+    "planName": "Plan",
+    "preferences": "Podešavanja pretplata",
+    "preferencesDesc": "Upravljajte načinom na koji se vaše pretplate prate i vode",
+    "preferencesUpdated": "Podešavanja uspješno ažurirana",
+    "premium": "Premium",
+    "reminderPeriods": "Zadani periodi podsjetnika",
+    "renew": "Obnovi",
+    "resume": "Resume Subscription",
+    "resumeSuccess": "Subscription resumed successfully",
+    "review": "Pregledaj",
+    "successMessage": "Thank you for your purchase. Your subscription has been activated.",
+    "successTitle": "Payment Successful!",
+    "tabs": {
+      "overview": "Pregled",
+      "settings": "Podešavanja",
+      "upcoming": "Nadolazeće"
+    },
+    "title": "Subscription",
+    "types": {
+      "monthly": "Mjesečno",
+      "yearly": "Godišnje"
+    },
+    "upcomingRenewals": "Nadolazeće obnove",
+    "upcomingRenewalsTitle": "Upozorenje o nadolazećim obnovama",
+    "upcomingSoon": "uskoro",
+    "updateError": "Ažuriranje podešavanja pretplate nije uspjelo",
+    "upgradeToPremium": "Upgrade to Premium",
+    "yearlyCost": "Ukupni godišnji trošak"
   },
   "upgradeCard": {
-    "pricing_1": "/pricing",
-    "defaultButtonText": "Upgrade to Command Package"
+    "defaultButtonText": "Upgrade to Command Package",
+    "pricing_1": "/pricing"
   }
 }

@@ -1,295 +1,158 @@
 {
-  "_comment": "Správa opatrovníkov a vykonávateľov",
-  "guardian": {
-    "invitationSent": "Pozvánka odoslaná",
-    "accepted": "Prijaté",
-    "declined": "Odmietnuté",
-    "sendInvite": "Odoslať pozvánku"
-  },
-  "guardianUpload": {
-    "addTitle": "Pridať opatrovníka",
-    "editTitle": "Upraviť opatrovníka",
-    "description": "Pridajte dôveryhodnú osobu, ktorá vám pomôže spravovať záležitosti a podporí vašich blízkych.",
-    "fullNameLabel": "Celé meno",
-    "fullNamePlaceholder": "Zadajte celé meno opatrovníka",
-    "relationshipLabel": "Vzťah",
-    "relationshipPlaceholder": "Vyberte vzťah",
-    "countryLabel": "Krajina pobytu",
-    "countryPlaceholder": "Vyberte krajinu",
-    "countryDescription": "Pomáha nám poskytovať právne odporúčania podľa regiónu",
-    "rolesTitle": "Roly a zodpovednosti",
-    "emailLabel": "E-mailová adresa",
-    "emailPlaceholder": "Zadajte e-mail (nepovinné)",
-    "phoneLabel": "Telefónne číslo",
-    "phonePlaceholder": "Zadajte telefón (nepovinné)",
-    "addButton": "Pridať opatrovníka",
-    "updateButton": "Aktualizovať opatrovníka",
-    "saving": "Ukladám...",
-    "success": "Úspech",
-    "added": "Opatrovník bol úspešne pridaný",
-    "updated": "Opatrovník bol úspešne aktualizovaný",
-    "error": "Chyba",
-    "loginToSave": "Na uloženie opatrovníkov musíte byť prihlásený",
-    "relationships": {
-      "spouse": "Manžel/ka",
-      "parent": "Rodič",
-      "sibling": "Súrodenec",
-      "child": "Dieťa",
-      "friend": "Priateľ",
-      "legalProfessional": "Právny profesionál",
-      "other": "Iné"
-    },
-    "roles": {
-      "guardianForChildren": "Opatrovník detí",
-      "executorOfWill": "Vykonávateľ závetu",
-      "healthcareProxy": "Zdravotný zástupca",
-      "financialPowerOfAttorney": "Finančný splnomocnenec",
-      "emergencyContact": "Núdzový kontakt",
-      "trustee": "Správca trustu"
-    },
-    "errors": {
-      "saveError": "Pri ukladaní opatrovníka nastala chyba",
-      "requiredDataNotFound": "Požadované údaje neboli nájdené",
-      "connectionError": "Chyba pripojenia. Skontrolujte svoje internetové pripojenie",
-      "permissionError": "Nemáte oprávnenie na túto akciu",
-      "duplicateError": "Záznam s týmito údajmi už existuje",
-      "unknownError": "Vyskytla sa neznáma chyba"
-    }
-  },
-  "guardianView": {
-    "title": "Núdzové kontakty",
-    "subtitle": "Bezpečný prístup k dôležitým informáciám o {{userName}}",
-    "readOnlyAccess": "Len na čítanie",
-    "loading": "Načítavam nástenku opatrovníka...",
-    "errors": {
-      "pleaseLogin": "Na zobrazenie týchto informácií sa prihláste",
-      "failedToLoad": "Nepodarilo sa načítať údaje o opatrovníkovi",
-      "loadFailed": "Nepodarilo sa načítať núdzové kontakty",
-      "addFailed": "Nepodarilo sa pridať núdzový kontakt",
-      "removeFailed": "Nepodarilo sa odstrániť núdzový kontakt",
-      "reorderFailed": "Nepodarilo sa aktualizovať poradie kontaktov",
-      "testFailed": "Nepodarilo sa odoslať testovaciu správu",
-      "selectContact": "Vyberte kontakt"
-    },
-    "sections": {
-      "keyDocuments": {
-        "title": "Kľúčové dokumenty",
-        "description": "Kritické dokumenty označené majiteľom účtu",
-        "keyDocumentBadge": "Kľúčový dokument",
-        "expires": "Platnosť do",
-        "noExpiration": "Bez obmedzenia",
-        "empty": "Žiadne kľúčové dokumenty nie sú dostupné"
-      },
-      "importantContacts": {
-        "title": "Dôležité kontakty",
-        "description": "Kľúčové kontakty pre núdzové situácie",
-        "empty": "Žiadne dôležité kontakty nie sú dostupné"
-      },
-      "finalWishes": {
-        "title": "Záverečné priania a pokyny",
-        "description": "Osobné inštrukcie a záverečné priania",
-        "funeralWishes": "Priania k pohrebu",
-        "digitalAccounts": "Zrušenie digitálnych účtov",
-        "digitalAccountsShutdown": "Zrušenie digitálnych účtov",
-        "messagesToLovedOnes": "Odkazy blízkym",
-        "empty": "Žiadne záverečné priania alebo pokyny nie sú dostupné"
-      }
-    },
-    "guardianInfo": {
-      "description": "Tieto informácie si prezeráte ako dôveryhodný opatrovník. Prístup je určený na núdzové situácie a splnenie vašich povinností.",
-      "securityNote": "Všetky prístupy sú zaznamenávané a monitorované kvôli bezpečnosti."
-    },
-    "defaultUserName": "Primárny držiteľ účtu",
-    "description": "Spravujte až 3 núdzové kontakty podľa priority",
-    "addContact": "Pridať kontakt",
-    "noContacts": "Zatiaľ neboli pridané žiadne núdzové kontakty. Pridajte kontakty, ktoré treba kontaktovať v prípade núdze.",
-    "maxContactsReached": "Dosiahli ste maximálny počet 3 núdzových kontaktov.",
-    "sendTest": "Odoslať test",
-    "lastContacted": "Naposledy kontaktované pred {{time}}",
-    "priority": {
-      "1": "Priorita 1",
-      "2": "Priorita 2",
-      "3": "Priorita 3"
-    },
-    "addContactDialog": {
-      "title": "Pridať núdzový kontakt",
-      "description": "Vyberte kontakt zo zoznamu pre pridanie medzi núdzové kontakty.",
-      "selectContact": "Vyberte kontakt",
-      "selectPlaceholder": "Vyberte...",
-      "relationship": "Vzťah (nepovinné)",
-      "relationshipPlaceholder": "Vyberte vzťah...",
-      "addButton": "Pridať núdzový kontakt"
-    },
-    "messages": {
-      "added": "Núdzový kontakt bol úspešne pridaný",
-      "removed": "Núdzový kontakt bol odstránený",
-      "reordered": "Poradie kontaktov bolo aktualizované",
-      "testSent": "Testovacia správa odoslaná pre {{name}}"
-    }
-  },
   "executor": {
+    "completed": "Splnené",
     "dashboard": {
-      "title": "Nástenka vykonávateľa",
+      "reminder": "Nezabudnite sa postarať aj o seba. Ak potrebujete pomoc, neváhajte ju požiadať.",
       "subtitle": "Podrobný sprievodca krok za krokom v ťažkom období",
-      "reminder": "Nezabudnite sa postarať aj o seba. Ak potrebujete pomoc, neváhajte ju požiadať."
+      "title": "Nástenka vykonávateľa"
     },
+    "due": "Termín",
     "errors": {
       "loadTasksFailed": "Nepodarilo sa načítať úlohy vykonávateľa. Skúste to znova neskôr.",
       "updateTaskFailed": "Nepodarilo sa aktualizovať stav úlohy."
     },
     "highPriority": "Vysoká priorita",
-    "due": "Termín",
-    "completed": "Splnené",
-    "undo": "Späť",
     "markComplete": "Označiť ako splnené",
-    "viewAccountDetails": "Zobraziť údaje o účte a heslo",
-    "viewRelatedDocuments": "Zobraziť súvisiace dokumenty ({{count}})",
-    "stats": {
-      "totalTasks": "Celkový počet úloh",
-      "completed": "Splnené",
-      "remaining": "Zostáva"
-    },
     "sections": {
-      "immediate": {
-        "title": "Okamžité úlohy (prvých 48 hodín)",
-        "description": "Kritické úlohy, ktoré vyžadujú okamžitú pozornosť",
-        "empty": "Všetky okamžité úlohy sú splnené!"
-      },
       "firstWeek": {
-        "title": "Úlohy prvého týždňa",
         "description": "Dôležité úlohy, ktoré je potrebné splniť počas prvého týždňa",
-        "empty": "Všetky úlohy prvého týždňa sú splnené!"
+        "empty": "Všetky úlohy prvého týždňa sú splnené!",
+        "title": "Úlohy prvého týždňa"
+      },
+      "immediate": {
+        "description": "Kritické úlohy, ktoré vyžadujú okamžitú pozornosť",
+        "empty": "Všetky okamžité úlohy sú splnené!",
+        "title": "Okamžité úlohy (prvých 48 hodín)"
       },
       "ongoing": {
-        "title": "Priebežné povinnosti",
         "description": "Úlohy, ktoré je potrebné riešiť v priebehu nasledujúcich týždňov a mesiacov",
-        "empty": "Všetky priebežné úlohy sú splnené!"
+        "empty": "Všetky priebežné úlohy sú splnené!",
+        "title": "Priebežné povinnosti"
       }
     },
-    "communications": {
-      "title": "Komunikácia s príjemcami",
-      "description": "Evidujte všetku komunikáciu s príjemcami pre transparentnosť",
-      "logCommunication": "Zaznamenať komunikáciu",
-      "logTitle": "Zaznamenať komunikáciu s príjemcom",
-      "logDescription": "Zaznamenajte detaily o komunikácii s príjemcami",
-      "beneficiaryName": "Meno príjemcu",
-      "beneficiaryEmail": "E-mail (nepovinné)",
-      "communicationType": "Typ",
-      "communicationDate": "Dátum",
-      "subject": "Predmet",
-      "summary": "Zhrnutie",
-      "subjectPlaceholder": "napr. Prvá informácia o dedičstve",
-      "summaryPlaceholder": "Stručné zhrnutie komunikácie...",
-      "types": {
-        "email": "E-mail",
-        "phone": "Telefónny hovor",
-        "letter": "List",
-        "in_person": "Osobne",
-        "other": "Iné"
-      },
-      "saving": "Ukladám...",
-      "saveCommunication": "Uložiť komunikáciu",
-      "cancel": "Zrušiť",
-      "noCommunications": "Zatiaľ nebola zaznamenaná žiadna komunikácia",
-      "startTracking": "Začnite evidovať komunikáciu s príjemcami",
-      "errors": {
-        "saveFailed": "Nepodarilo sa uložiť komunikáciu"
-      }
+    "stats": {
+      "completed": "Splnené",
+      "remaining": "Zostáva",
+      "totalTasks": "Celkový počet úloh"
     },
-    "status": {
-      "title": "Stav správy dedičstva",
-      "description": "Aktuálny stav viditeľný pre oprávnených členov rodiny",
-      "updateStatus": "Aktualizovať stav",
-      "updateTitle": "Aktualizovať stav dedičstva",
-      "updateDescription": "Tento stav budú vidieť oprávnení členovia rodiny",
-      "statusLabel": "Stav",
-      "additionalDetails": "Ďalšie podrobnosti (nepovinné)",
-      "detailsPlaceholder": "Doplňujúce informácie...",
-      "selectStatus": "Vyberte stav",
-      "updating": "Aktualizujem...",
-      "lastUpdated": "Naposledy aktualizované",
-      "progress": "Postup",
-      "noStatusSet": "Stav ešte nebol nastavený. Kliknite na „Aktualizovať stav“ pre prvé nastavenie.",
-      "noStatusUpdates": "Zatiaľ neboli pridané žiadne aktualizácie stavu.",
-      "statuses": {
-        "initial_review": "Počiatočná kontrola",
-        "gathering_documents": "Zber dokumentov",
-        "probate_initiated": "Zahájené dedičské konanie",
-        "assets_being_valued": "Oceňovanie majetku",
-        "debts_being_settled": "Vyrovnávanie dlhov",
-        "tax_preparation": "Príprava daní",
-        "ready_for_distribution": "Pripravené na rozdelenie",
-        "distribution_in_progress": "Prebieha rozdeľovanie",
-        "estate_closed": "Dedičstvo uzavreté"
-      },
-      "errors": {
-        "updateFailed": "Nepodarilo sa aktualizovať stav"
-      }
-    },
-    "justInTime": {
-      "viewAccountDetails": "Zobraziť údaje o účte a heslo",
-      "secureInfoAccess": "Bezpečný prístup k informáciám",
-      "reauthenticate": "Pre zobrazenie citlivých údajov sa znova prihláste k",
-      "securityReason": "Z bezpečnostných dôvodov zadajte heslo pre prístup k týmto informáciám.",
-      "password": "Heslo",
-      "enterPassword": "Zadajte svoje heslo",
-      "incorrectPassword": "Nesprávne heslo. Skúste to znova.",
-      "cancel": "Zrušiť",
-      "verifying": "Overujem...",
-      "verifyContinue": "Overiť a pokračovať",
-      "accountName": "Názov účtu",
-      "accountNumber": "Číslo účtu",
-      "username": "Používateľské meno",
-      "pin": "PIN",
-      "additionalNotes": "Doplňujúce poznámky",
-      "noSensitiveInfo": "Pre túto úlohu nie sú priradené žiadne citlivé informácie.",
-      "accessLogged": "Tento prístup bol zaznamenaný z bezpečnostných dôvodov.",
-      "accessTime": "Čas prístupu",
-      "close": "Zavrieť",
-      "errors": {
-        "reauthFailed": "Nepodarilo sa overiť vašu identitu. Skúste to znova.",
-        "notFound": "Pre túto úlohu sa nenašli citlivé údaje.",
-        "retrieveFailed": "Nepodarilo sa načítať citlivé informácie."
-      }
-    },
-    "familyView": {
-      "title": "Stav správy dedičstva",
-      "subtitle": "Buďte informovaní o postupe správy dedičstva",
-      "recentCommunications": "Nedávna komunikácia vykonávateľa",
-      "recentCommunicationsDescription": "Nedávne správy od {{executorName}} príjemcom",
-      "to": "Komu",
-      "noCommunications": "Zatiaľ nebola zaznamenaná žiadna komunikácia.",
-      "infoMessage": "Tieto informácie pridáva {{executorName}} pre informovanosť rodiny. Pre detailné otázky kontaktujte vykonávateľa.",
-      "defaultExecutor": "vykonávateľ",
-      "errors": {
-        "loadFailed": "Nepodarilo sa načítať údaje"
-      }
-    }
+    "undo": "Späť",
+    "viewAccountDetails": "Zobraziť údaje o účte a heslo"
   },
   "executorManagement": {
-    "failed_to_load_executors_2": "Nepodarilo sa načítať vykonávateľov",
-    "user_not_found_with_this_email_3": "Používateľ s touto e-mailovou adresou nebol nájdený",
-    "this_person_is_already_designa_4": "Táto osoba už je určená ako vykonávateľ",
-    "failed_to_add_executor_5": "Nepodarilo sa pridať vykonávateľa",
-    "failed_to_remove_executor_6": "Nepodarilo sa odstrániť vykonávateľa",
-    "loading_executors_7": "Načítavam vykonávateľov...",
-    "executor_management_8": "Správa vykonávateľov",
-    "designate_trusted_individuals__9": "Určte dôveryhodných ľudí, ktorí pomôžu spravovať vaše záležitosti a podporia vašich blízkych",
     "add_new_executor_10": "Pridať nového vykonávateľa",
-    "email_address_11": "E-mailová adresa",
-    "executor_example_com_12": "vykonavatel@example.com",
-    "relationship_type_13": "Typ vzťahu",
-    "primary_executor_14": "Hlavný vykonávateľ",
-    "secondary_executor_15": "Záložný vykonávateľ",
-    "emergency_contact_16": "Núdzový kontakt",
-    "current_executors_17": "Aktuálni vykonávatelia",
-    "no_executors_designated_yet_ad_18": "Zatiaľ nie sú určení žiadni vykonávatelia. Pridajte dôveryhodnú osobu, ktorá vám pomôže.",
-    "important_information_19": "Dôležité informácie",
-    "primary_executors_receive_imme_20": "Hlavní vykonávatelia získajú okamžitý prístup k vašim údajom, keď to bude potrebné",
-    "secondary_executors_are_notifi_21": "Záložní vykonávatelia sú len informovaní a majú obmedzený prístup",
-    "emergency_contacts_are_notifie_22": "Núdzové kontakty sú informované len pri urgentných situáciách",
     "all_executors_must_have_uniq_23": "Každý vykonávateľ musí mať jedinečný e-mail",
-    "remove_24": "Odstrániť"
+    "current_executors_17": "Aktuálni vykonávatelia",
+    "designate_trusted_individuals__9": "Určte dôveryhodných ľudí, ktorí pomôžu spravovať vaše záležitosti a podporia vašich blízkych",
+    "email_address_11": "E-mailová adresa",
+    "emergency_contact_16": "Núdzový kontakt",
+    "emergency_contacts_are_notifie_22": "Núdzové kontakty sú informované len pri urgentných situáciách",
+    "executor_example_com_12": "vykonavatel@example.com",
+    "executor_management_8": "Správa vykonávateľov",
+    "failed_to_add_executor_5": "Nepodarilo sa pridať vykonávateľa",
+    "failed_to_load_executors_2": "Nepodarilo sa načítať vykonávateľov",
+    "failed_to_remove_executor_6": "Nepodarilo sa odstrániť vykonávateľa",
+    "important_information_19": "Dôležité informácie",
+    "loading_executors_7": "Načítavam vykonávateľov...",
+    "no_executors_designated_yet_ad_18": "Zatiaľ nie sú určení žiadni vykonávatelia. Pridajte dôveryhodnú osobu, ktorá vám pomôže.",
+    "primary_executor_14": "Hlavný vykonávateľ",
+    "primary_executors_receive_imme_20": "Hlavní vykonávatelia získajú okamžitý prístup k vašim údajom, keď to bude potrebné",
+    "relationship_type_13": "Typ vzťahu",
+    "remove_24": "Odstrániť",
+    "secondary_executor_15": "Záložný vykonávateľ",
+    "secondary_executors_are_notifi_21": "Záložní vykonávatelia sú len informovaní a majú obmedzený prístup",
+    "this_person_is_already_designa_4": "Táto osoba už je určená ako vykonávateľ",
+    "user_not_found_with_this_email_3": "Používateľ s touto e-mailovou adresou nebol nájdený"
+  },
+  "guardian": {
+    "accepted": "Prijaté",
+    "declined": "Odmietnuté",
+    "invitationSent": "Pozvánka odoslaná",
+    "sendInvite": "Odoslať pozvánku"
+  },
+  "guardianUpload": {
+    "addButton": "Pridať opatrovníka",
+    "addTitle": "Pridať opatrovníka",
+    "added": "Opatrovník bol úspešne pridaný",
+    "countryDescription": "Pomáha nám poskytovať právne odporúčania podľa regiónu",
+    "countryLabel": "Krajina pobytu",
+    "countryPlaceholder": "Vyberte krajinu",
+    "description": "Pridajte dôveryhodnú osobu, ktorá vám pomôže spravovať záležitosti a podporí vašich blízkych.",
+    "editTitle": "Upraviť opatrovníka",
+    "emailLabel": "E-mailová adresa",
+    "emailPlaceholder": "Zadajte e-mail (nepovinné)",
+    "error": "Chyba",
+    "errors": {
+      "connectionError": "Chyba pripojenia. Skontrolujte svoje internetové pripojenie",
+      "duplicateError": "Záznam s týmito údajmi už existuje",
+      "permissionError": "Nemáte oprávnenie na túto akciu",
+      "requiredDataNotFound": "Požadované údaje neboli nájdené",
+      "saveError": "Pri ukladaní opatrovníka nastala chyba",
+      "unknownError": "Vyskytla sa neznáma chyba"
+    },
+    "fullNameLabel": "Celé meno",
+    "fullNamePlaceholder": "Zadajte celé meno opatrovníka",
+    "loginToSave": "Na uloženie opatrovníkov musíte byť prihlásený",
+    "phoneLabel": "Telefónne číslo",
+    "phonePlaceholder": "Zadajte telefón (nepovinné)",
+    "relationshipLabel": "Vzťah",
+    "relationshipPlaceholder": "Vyberte vzťah",
+    "relationships": {
+      "child": "Dieťa",
+      "friend": "Priateľ",
+      "legalProfessional": "Právny profesionál",
+      "other": "Iné",
+      "parent": "Rodič",
+      "sibling": "Súrodenec",
+      "spouse": "Manžel/ka"
+    },
+    "roles": {
+      "emergencyContact": "Núdzový kontakt",
+      "executorOfWill": "Vykonávateľ závetu",
+      "financialPowerOfAttorney": "Finančný splnomocnenec",
+      "guardianForChildren": "Opatrovník detí",
+      "healthcareProxy": "Zdravotný zástupca",
+      "trustee": "Správca trustu"
+    },
+    "rolesTitle": "Roly a zodpovednosti",
+    "saving": "Ukladám...",
+    "success": "Úspech",
+    "updateButton": "Aktualizovať opatrovníka",
+    "updated": "Opatrovník bol úspešne aktualizovaný"
+  },
+  "guardianView": {
+    "defaultUserName": "Primárny držiteľ účtu",
+    "errors": {
+      "failedToLoad": "Nepodarilo sa načítať údaje o opatrovníkovi",
+      "pleaseLogin": "Na zobrazenie týchto informácií sa prihláste"
+    },
+    "guardianInfo": {
+      "description": "Tieto informácie si prezeráte ako dôveryhodný opatrovník. Prístup je určený na núdzové situácie a splnenie vašich povinností.",
+      "securityNote": "Všetky prístupy sú zaznamenávané a monitorované kvôli bezpečnosti."
+    },
+    "readOnlyAccess": "Len na čítanie",
+    "sections": {
+      "finalWishes": {
+        "description": "Osobné inštrukcie a záverečné priania",
+        "digitalAccounts": "Zrušenie digitálnych účtov",
+        "empty": "Žiadne záverečné priania alebo pokyny nie sú dostupné",
+        "funeralWishes": "Priania k pohrebu",
+        "messagesToLovedOnes": "Odkazy blízkym",
+        "title": "Záverečné priania a pokyny"
+      },
+      "importantContacts": {
+        "description": "Kľúčové kontakty pre núdzové situácie",
+        "empty": "Žiadne dôležité kontakty nie sú dostupné",
+        "title": "Dôležité kontakty"
+      },
+      "keyDocuments": {
+        "description": "Kritické dokumenty označené majiteľom účtu",
+        "empty": "Žiadne kľúčové dokumenty nie sú dostupné",
+        "expires": "Platnosť do",
+        "keyDocumentBadge": "Kľúčový dokument",
+        "noExpiration": "Bez obmedzenia",
+        "title": "Kľúčové dokumenty"
+      }
+    },
+    "title": "Núdzové kontakty"
   }
 }
-

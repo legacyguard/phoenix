@@ -1,231 +1,146 @@
 {
-  "_comment": "Shared translations used across the application",
-  "onboarding": {
-    "title": "Velkommen til LegacyGuard",
-    "subtitle": "Lad os hjælpe dig med at sikre din families fremtid",
-    "mainTitle": "Handlingsplan",
-    "mainSubtitle": "Lad os skabe din personlige plan for arvebeskyttelse.",
-    "progressText": "Handlingsplan: Trin {{step}} af 4",
-    "skipButton": "Spring over for nu",
-    "skipConfirmTitle": "Spring onboarding over?",
-    "skipConfirmMessage": "Du kan altid genstarte denne opsætning senere i indstillingerne.",
-    "skipConfirmYes": "Spring over",
-    "skipConfirmNo": "Fortsæt opsætning",
-    "restartButton": "Genstart Onboarding",
-    "welcomeBack": "Velkommen tilbage! Klar til at fuldføre din opsætning?",
-    "resumeTitle": "Fortsæt hvor du slap",
-    "resumeMessage": "Du var på trin {{step}} af 4.",
-    "partialProgress": "{{percentage}}% fuldført",
-    "inventory": {
-      "documentAccess": {
-        "question": "Hvis der skete dig noget i dag, ville din familie så vide, hvor de skulle finde dine vigtige dokumenter?",
-        "answers": {
-          "yes": "Ja",
-          "no": "Nej",
-          "partially": "Delvist"
-        }
-      },
-      "caretaker": {
-        "question": "Hvem ville tage sig af dine børn/aktiver/digitale konti?",
-        "answers": {
-          "designated": "Jeg har en udpeget person",
-          "familyFigureOut": "Familien ville finde ud af det",
-          "notThought": "Det har jeg ikke tænkt over"
-        }
-      },
-      "familyClarity": {
-        "question": "Føler du, at din familie ville vide, hvad du ønskede for dem?",
-        "answers": {
-          "clear": "Ja, det er helt klart",
-          "somewhat": "Til en vis grad",
-          "neverDiscussed": "Nej, det har vi aldrig talt om"
-        }
-      },
-      "biggestWorry": {
-        "question": "Hvad bekymrer dig mest for din families fremtid?",
-        "answers": {
-          "financial": "Økonomisk sikkerhed",
-          "legal": "Juridiske komplikationer",
-          "memories": "At miste minder",
-          "conflicts": "Familiekonflikter"
-        }
-      },
-      "personalized": {
-        "documentCentralization": "Baseret på dit svar om dokumentadgang, anbefaler vi at starte med at centralisere dine vigtige dokumenter.",
-        "guardianDesignation": "Da du ikke har udpeget nogen til at tage sig af dine aktiver, bør udpegning af en værge være din prioritet.",
-        "willPreparation": "Din familie har brug for klarhed om dine ønsker. At oprette et testamente er et essentielt første skridt.",
-        "financialPlanning": "Økonomisk sikkerhed er afgørende. Lad os starte med at dokumentere dine bankkonti og aktiver.",
-        "conflictPrevention": "For at forhindre familiekonflikter er klar dokumentation og kommunikation nøglen.",
-        "memoryPreservation": "Bevarelse af minder starter med at organisere dine digitale fotos og historier.",
-        "legalOrganization": "Lad os organisere dine juridiske dokumenter for at undgå komplikationer senere."
-      }
-    },
-    "q1": {
-      "title": "Hvis der skete dig noget i dag, ville din familie så vide, hvor de skulle finde dine vigtige dokumenter?",
-      "option1": "Ja",
-      "option2": "Nej",
-      "option3": "Delvist"
-    },
-    "q2": {
-      "title": "Hvem ville tage sig af dine børn/aktiver/digitale konti?",
-      "option1": "Jeg har en udpeget person",
-      "option2": "Familien ville finde ud af det",
-      "option3": "Det har jeg ikke tænkt over"
-    },
-    "q3": {
-      "title": "Føler du, at din familie ville vide, hvad du ønskede for dem?",
-      "option1": "Ja, det er helt klart",
-      "option2": "Til en vis grad",
-      "option3": "Nej, det har vi aldrig talt om"
-    },
-    "q4": {
-      "title": "Hvad bekymrer dig mest for din families fremtid?",
-      "option1": "Økonomisk sikkerhed",
-      "option2": "Juridiske komplikationer",
-      "option3": "At miste minder",
-      "option4": "Familiekonflikter"
-    },
-    "buttons": {
-      "previous": "Forrige",
-      "next": "Næste",
-      "generate": "Generer min handlingsplan"
-    },
-    "analysis": {
-      "title": "Analyserer dine svar...",
-      "subtitle": "Forbereder din personlige 'Handlingsplan'...",
-      "done": "Færdig!"
-    },
-    "complete": "God start! Vi har tilpasset din oversigt baseret på dine svar. Du er klar til at begynde at opbygge din omfattende arveplan.",
-    "success": {
-      "stepCompleted": "Trin {{step}} fuldført!",
-      "inventoryComplete": "Livsinventar fuldført! Din personlige plan er klar.",
-      "allQuestionsAnswered": "Alle spørgsmål er besvaret. Genererer din handlingsplan..."
-    },
-    "errors": {
-      "questionRequired": "Besvar venligst dette spørgsmål for at fortsætte.",
-      "failedToSave": "Kunne ikke gemme dine svar. Prøv venligst igen.",
-      "loadingFailed": "Kunne ikke indlæse onboarding-spørgsmål."
-    },
-    "addAnother": "Tilføj en til",
-    "previous": "Forrige",
-    "next": "Næste",
-    "continue": "Fortsæt til oversigt"
-  },
   "demo": {
     "ai": {
-      "title": "LegacyGuard AI Integration Demo",
-      "subtitle": "Experience how AI can help organize and protect your family's legacy",
-      "tabs": {
-        "documents": "Documents",
-        "questions": "Questions",
-        "suggestions": "Suggestions",
-        "messages": "Messages"
+      "context": {
+        "completion": "Completion:",
+        "label": "Current Context:",
+        "mood": "Mood:",
+        "recent": "Recent:"
       },
       "profile": {
-        "label": "Demo Profile:",
-        "documentsCount": "documents uploaded"
+        "documentsCount": "documents uploaded",
+        "label": "Demo Profile:"
       },
       "question": {
         "category": "Category:"
       },
-      "context": {
-        "label": "Current Context:",
-        "completion": "Completion:",
-        "recent": "Recent:",
-        "mood": "Mood:"
-      },
+      "subtitle": "Experience how AI can help organize and protect your family's legacy",
       "suggestion": {
         "priority": "Priority:"
-      }
-    },
-    "upload": {
-      "title": "Magical Document Upload",
-      "subtitle": "Experience the future of secure document management",
-      "badge": {
-        "encryption": "Auto Encrypt",
-        "aiAnalysis": "AI Analysis",
-        "familySharing": "Family Sharing"
-      },
-      "settings": {
-        "title": "Upload Settings",
-        "description": "Customize your document processing preferences",
-        "storageLocation": "Storage Location",
-        "local": "Local",
-        "cloud": "Cloud"
-      },
-      "features": {
-        "autoCompress": "Auto Compress",
-        "autoEncrypt": "Auto Encrypt",
-        "processOCR": "Process OCR",
-        "aiAnalysis": "AI Analysis",
-        "familySharing": "Family Sharing"
-      },
-      "console": {
-        "uploadStarted": "Upload started",
-        "view": "View",
-        "download": "Download",
-        "share": "Share",
-        "delete": "Delete"
       },
       "tabs": {
-        "upload": "Upload",
         "documents": "Documents",
-        "stats": "Statistics"
+        "messages": "Messages",
+        "questions": "Questions",
+        "suggestions": "Suggestions"
       },
-      "privacy": {
-        "localMode": {
-          "title": "Privacy Mode Active:",
-          "description": "All documents are processed and stored exclusively on your device. No data leaves your browser."
-        },
-        "cloudMode": {
-          "title": "Cloud Storage Active:",
-          "description": "Documents are encrypted before upload. Your encryption keys never leave your device."
-        }
-      },
-      "stats": {
-        "localStorage": {
-          "title": "Local Storage",
-          "description": "Documents stored on device"
-        },
-        "cloudStorage": {
-          "title": "Cloud Storage",
-          "description": "Documents in cloud"
-        },
-        "totalSize": {
-          "title": "Total Size",
-          "description": "Storage used"
-        },
-        "successRate": "Success Rate",
-        "averageTime": "Average Upload Time"
-      },
-      "progress": {
-        "title": "Upload Progress",
-        "completed": "{{count}} completed",
-        "failed": "{{count}} failed"
-      }
+      "title": "LegacyGuard AI Integration Demo"
     },
     "ocr": {
-      "title": "Privacy-First Document Processing",
-      "subtitle": "Extract text from documents while keeping everything on your device",
       "features": {
         "completePrivacy": "Complete Privacy",
         "multiLanguage": "Multi-Language Support",
         "smartDetection": "Smart Detection"
-      }
+      },
+      "subtitle": "Extract text from documents while keeping everything on your device",
+      "title": "Privacy-First Document Processing"
+    },
+    "upload": {
+      "badge": {
+        "aiAnalysis": "AI Analysis",
+        "encryption": "Auto Encrypt",
+        "familySharing": "Family Sharing"
+      },
+      "console": {
+        "delete": "Delete",
+        "download": "Download",
+        "share": "Share",
+        "uploadStarted": "Upload started",
+        "view": "View"
+      },
+      "features": {
+        "aiAnalysis": "AI Analysis",
+        "autoCompress": "Auto Compress",
+        "autoEncrypt": "Auto Encrypt",
+        "familySharing": "Family Sharing",
+        "processOCR": "Process OCR"
+      },
+      "privacy": {
+        "cloudMode": {
+          "description": "Documents are encrypted before upload. Your encryption keys never leave your device.",
+          "title": "Cloud Storage Active:"
+        },
+        "localMode": {
+          "description": "All documents are processed and stored exclusively on your device. No data leaves your browser.",
+          "title": "Privacy Mode Active:"
+        }
+      },
+      "progress": {
+        "title": "Upload Progress"
+      },
+      "settings": {
+        "cloud": "Cloud",
+        "description": "Customize your document processing preferences",
+        "local": "Local",
+        "storageLocation": "Storage Location",
+        "title": "Upload Settings"
+      },
+      "stats": {
+        "averageTime": "Average Upload Time",
+        "cloudStorage": {
+          "description": "Documents in cloud",
+          "title": "Cloud Storage"
+        },
+        "localStorage": {
+          "description": "Documents stored on device",
+          "title": "Local Storage"
+        },
+        "successRate": "Success Rate",
+        "totalSize": {
+          "description": "Storage used",
+          "title": "Total Size"
+        }
+      },
+      "subtitle": "Experience the future of secure document management",
+      "tabs": {
+        "documents": "Documents",
+        "stats": "Statistics",
+        "upload": "Upload"
+      },
+      "title": "Magical Document Upload"
     }
   },
-  "pillars": {
-    "secure": {
-      "title": "BESKYT",
-      "description": "Beskyt din familie og dine aktiver med proaktive sikkerhedsforanstaltninger."
+  "onboarding": {
+    "analysis": {
+      "subtitle": "Forbereder din personlige 'Handlingsplan'...",
+      "title": "Analyserer dine svar..."
     },
-    "organize": {
-      "title": "ORGANISER",
-      "description": "Katalogiser og administrer dine digitale og fysiske aktiver."
+    "buttons": {
+      "generate": "Generer min handlingsplan",
+      "next": "Næste",
+      "previous": "Forrige"
     },
-    "transfer": {
-      "title": "OVERFØR",
-      "description": "Sørg for, at din arv bliver givet videre i overensstemmelse med dine ønsker."
-    }
+    "mainSubtitle": "Lad os skabe din personlige plan for arvebeskyttelse.",
+    "mainTitle": "Handlingsplan",
+    "q1": {
+      "option1": "Ja",
+      "option2": "Nej",
+      "option3": "Delvist",
+      "title": "Hvis der skete dig noget i dag, ville din familie så vide, hvor de skulle finde dine vigtige dokumenter?"
+    },
+    "q2": {
+      "option1": "Jeg har en udpeget person",
+      "option2": "Familien ville finde ud af det",
+      "option3": "Det har jeg ikke tænkt over",
+      "title": "Hvem ville tage sig af dine børn/aktiver/digitale konti?"
+    },
+    "q3": {
+      "option1": "Ja, det er helt klart",
+      "option2": "Til en vis grad",
+      "option3": "Nej, det har vi aldrig talt om",
+      "title": "Føler du, at din familie ville vide, hvad du ønskede for dem?"
+    },
+    "q4": {
+      "option1": "Økonomisk sikkerhed",
+      "option2": "Juridiske komplikationer",
+      "option3": "At miste minder",
+      "option4": "Familiekonflikter",
+      "title": "Hvad bekymrer dig mest for din families fremtid?"
+    },
+    "skipButton": "Spring over for nu",
+    "skipConfirmMessage": "Du kan altid genstarte denne opsætning senere i indstillingerne.",
+    "skipConfirmNo": "Fortsæt opsætning",
+    "skipConfirmTitle": "Spring onboarding over?",
+    "skipConfirmYes": "Spring over"
   }
 }

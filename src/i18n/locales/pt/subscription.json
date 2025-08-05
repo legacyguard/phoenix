@@ -1,204 +1,177 @@
 {
-  "_comment": "Shared translations used across the application",
-  "subscription": {
-    "dashboard": {
-      "title": "Painel de Controlo de Assinaturas",
-      "subtitle": "Gira as suas assinaturas, custos e lembretes"
-    },
-    "monthlyCost": "Custo Mensal Total",
-    "yearlyCost": "Custo Anual Total",
-    "activeSubscriptions": "Assinaturas Ativas",
-    "upcomingSoon": "em breve",
-    "exportReport": "Exportar Relatório",
-    "perMonth": "por mês",
-    "perYear": "por ano",
-    "allSubscriptions": "Todas as Assinaturas",
-    "allSubscriptionsDesc": "Visão geral de todas as assinaturas ativas ordenadas por data de renovação",
-    "upcomingRenewals": "Renovações Próximas",
-    "upcomingRenewalsTitle": "Alerta de Renovações Próximas",
-    "upcomingRenewalsDesc": "Tem {{count}} renovações próximas nos próximos 90 dias",
-    "next90Days": "Próximos 90 Dias",
-    "noUpcomingRenewals": "Nenhuma renovação próxima nos próximos 90 dias",
-    "renew": "Renovar",
-    "review": "Rever",
-    "preferences": "Preferências de Assinatura",
-    "preferencesDesc": "Gira como as suas assinaturas são rastreadas e geridas",
-    "enableTracking": "Ativar Rastreio de Assinaturas",
-    "enableTrackingDesc": "Gira e rastreie automaticamente documentos relacionados com assinaturas",
-    "costOptimization": "Ativar Sugestões de Otimização de Custos",
-    "costOptimizationDesc": "Receba sugestões para otimizar e reduzir os custos de assinatura",
-    "reminderPeriods": "Períodos de Lembrete Padrão",
-    "daysBefore": "dias antes",
-    "loadError": "Falha ao carregar os detalhes da assinatura",
-    "updateError": "Falha ao atualizar as preferências da assinatura",
-    "preferencesUpdated": "Preferências atualizadas com sucesso",
-    "tabs": {
-      "overview": "Visão Geral",
-      "upcoming": "Próximas",
-      "settings": "Configurações"
-    },
-    "types": {
-      "monthly": "Mensal",
-      "yearly": "Anual",
-      "oneTime": "Única",
-      "none": "Nenhuma"
-    },
-    "daysUntilRenewal": "dias até à renovação",
-    "days": "dias",
-    "loadFailed": "Falha ao carregar os dados da assinatura",
-    "autoRenewal": "Renovação Automática: Sim",
-    "manual": "Renovação Automática: Não",
-    "trackingSuggestion": "Considere ativar o rastreio de assinaturas para uma melhor gestão e lembretes",
-    "type": "Tipo de Assinatura",
-    "typePlaceholder": "Selecione o tipo",
-    "renewalCost": "Custo de Renovação",
-    "renewalCostPlaceholder": "Introduza o custo de renovação",
-    "cancellationNotice": "Período de Aviso de Cancelamento",
-    "noNoticeRequired": "Nenhum Aviso Necessário",
-    "providerContact": "Informações de Contacto do Fornecedor",
-    "providerPhone": "Telefone",
-    "providerEmail": "E-mail",
-    "providerWebsite": "Website",
-    "cancellationNoticeWarning": "Nota: O cancelamento requer um aviso de {{days}} dias",
-    "title": "Subscription",
-    "currentPlan": "Current Plan",
-    "active": "Active",
-    "planDescription": "Manage your subscription and billing",
-    "planName": "Plan",
-    "premium": "Premium",
-    "free": "Free",
-    "nextBilling": "Next billing date",
-    "cancelledNotice": "Your subscription will end on {{date}}",
-    "manageBilling": "Manage Billing",
-    "resume": "Resume Subscription",
-    "cancel": "Cancel Subscription",
-    "upgradeToPremium": "Upgrade to Premium",
-    "features": {
-      "title": "Plan Features",
-      "premiumDescription": "You have access to all premium features",
-      "freeDescription": "Upgrade to unlock more features",
-      "unlimited": "Unlimited documents and assets",
-      "encryption": "Advanced encryption",
-      "priority": "Priority support",
-      "history": "Version history",
-      "basicWill": "Basic will document",
-      "limitedGuardians": "Up to 2 guardians",
-      "basicSupport": "Community support"
-    },
-    "errors": {
-      "portalFailed": "Failed to open billing portal",
-      "cancelFailed": "Failed to cancel subscription",
-      "resumeFailed": "Failed to resume subscription"
-    },
-    "cancelSuccess": "Subscription cancelled successfully",
-    "resumeSuccess": "Subscription resumed successfully",
-    "successTitle": "Payment Successful!",
-    "successMessage": "Thank you for your purchase. Your subscription has been activated.",
-    "cancelTitle": "Payment Cancelled",
-    "cancelMessage": "It seems like your transaction was cancelled. Please try again or contact support."
-  },
   "pricing": {
-    "title": "Escolha o Seu Plano de Herança",
-    "subtitle": "Comece com o nosso nível gratuito ou atualize para funcionalidades premium.",
-    "mainTitle": "Escolha o Seu Plano de Legado",
-    "mainSubtitle": "Comece com o nosso nível gratuito ou atualize para funcionalidades premium.",
-    "freePlan": {
-      "name": "Essential Protector",
-      "description": "Get started with basic features",
-      "price": "Free",
-      "features": {
-        "will": "1 Will document",
-        "guardians": "2 Guardians",
-        "assets": "5 Assets",
-        "support": "Basic support"
-      }
-    },
-    "premiumPlan": {
-      "name": "Command Package",
-      "description": "Perfect for individuals and families",
-      "price": "$9.99 / month",
-      "upgradeButton": "Upgrade Now",
-      "features": {
-        "will": "Unlimited Will documents",
-        "guardians": "Unlimited Guardians",
-        "assets": "Unlimited Assets",
-        "encryption": "Document encryption",
-        "access": "Emergency access",
-        "support": "Priority support",
-        "history": "Version history",
-        "templates": "Legal templates"
-      }
-    },
     "devMode": {
-      "title": "Developer Mode",
       "button": {
         "grant": "Dev Mode: Grant Premium Access",
         "granting": "Granting..."
       },
       "description": "This button is only visible in development mode. Click to instantly grant premium access for testing.",
+      "errorMessage": "Failed to grant developer premium access",
       "successMessage": "Developer premium access granted!",
-      "errorMessage": "Failed to grant developer premium access"
-    },
-    "errors": {
-      "checkoutFailed": "Failed to start checkout process"
-    },
-    "starter": {
-      "name": "Heritage Starter",
-      "price": "Grátis",
-      "description": "Ideal para começar a preservar o seu legado digital.",
-      "button": "Começar Gratuitamente",
-      "features": {
-        "storage": "{{amount}} de Armazenamento",
-        "guardians": "Até {{count}} Guardiões",
-        "documents": "Cofre de Documentos Básico",
-        "playbook": "Manual Básico do Guardião",
-        "support": "Suporte da Comunidade"
-      },
-      "limits": {
-        "storage": "500 MB",
-        "guardians": "3",
-        "fileSize": "10 MB por ficheiro"
-      }
-    },
-    "premium": {
-      "name": "Heritage Premium",
-      "price": "€19",
-      "period": "/ mês",
-      "badge": "Mais Popular",
-      "description": "Funcionalidades avançadas para uma gestão de legado abrangente.",
-      "button": "Escolher Premium",
-      "features": {
-        "storage": "{{amount}} de Armazenamento",
-        "guardians": "Até {{count}} Guardiões",
-        "manual": "Manual do Sobrevivente",
-        "support": "Suporte Prioritário por E-mail"
-      },
-      "limits": {
-        "storage": "10 GB",
-        "guardians": "5",
-        "fileSize": "50 MB por ficheiro"
-      }
+      "title": "Developer Mode"
     },
     "enterprise": {
-      "name": "Heritage Enterprise",
-      "price": "Personalizado",
-      "description": "Para famílias e empresas com necessidades complexas que exigem o mais alto nível de serviço.",
       "button": "Contactar Vendas",
+      "description": "Para famílias e empresas com necessidades complexas que exigem o mais alto nível de serviço.",
       "features": {
-        "storage": "{{amount}}+ de Armazenamento",
         "guardians": "Guardiões Ilimitados",
         "legal": "Coordenação com Profissional Jurídico",
         "support": "Gestor de Conta Dedicado"
       },
       "limits": {
-        "storage": "500 GB",
-        "guardians": "ilimitados",
-        "fileSize": "100 MB por ficheiro"
-      }
-    }
+        "storage": "500 GB"
+      },
+      "name": "Heritage Enterprise",
+      "price": "Personalizado"
+    },
+    "errors": {
+      "checkoutFailed": "Failed to start checkout process"
+    },
+    "freePlan": {
+      "description": "Get started with basic features",
+      "features": {
+        "assets": "5 Assets",
+        "guardians": "2 Guardians",
+        "support": "Basic support",
+        "will": "1 Will document"
+      },
+      "name": "Essential Protector",
+      "price": "Free"
+    },
+    "mainSubtitle": "Comece com o nosso nível gratuito ou atualize para funcionalidades premium.",
+    "mainTitle": "Escolha o Seu Plano de Legado",
+    "premium": {
+      "badge": "Mais Popular",
+      "button": "Escolher Premium",
+      "description": "Funcionalidades avançadas para uma gestão de legado abrangente.",
+      "features": {
+        "manual": "Manual do Sobrevivente",
+        "support": "Suporte Prioritário por E-mail"
+      },
+      "limits": {
+        "guardians": "5",
+        "storage": "10 GB"
+      },
+      "name": "Heritage Premium",
+      "period": "/ mês",
+      "price": "€19"
+    },
+    "premiumPlan": {
+      "description": "Perfect for individuals and families",
+      "features": {
+        "access": "Emergency access",
+        "assets": "Unlimited Assets",
+        "encryption": "Document encryption",
+        "guardians": "Unlimited Guardians",
+        "history": "Version history",
+        "support": "Priority support",
+        "templates": "Legal templates",
+        "will": "Unlimited Will documents"
+      },
+      "name": "Command Package",
+      "price": "$9.99 / month",
+      "upgradeButton": "Upgrade Now"
+    },
+    "starter": {
+      "button": "Começar Gratuitamente",
+      "description": "Ideal para começar a preservar o seu legado digital.",
+      "features": {
+        "documents": "Cofre de Documentos Básico",
+        "playbook": "Manual Básico do Guardião",
+        "support": "Suporte da Comunidade"
+      },
+      "limits": {
+        "guardians": "3",
+        "storage": "500 MB"
+      },
+      "name": "Heritage Starter",
+      "price": "Grátis"
+    },
+    "title": "Escolha o Seu Plano de Herança"
+  },
+  "subscription": {
+    "active": "Active",
+    "activeSubscriptions": "Assinaturas Ativas",
+    "allSubscriptions": "Todas as Assinaturas",
+    "allSubscriptionsDesc": "Visão geral de todas as assinaturas ativas ordenadas por data de renovação",
+    "autoRenewal": "Renovação Automática: Sim",
+    "cancel": "Cancel Subscription",
+    "cancelMessage": "It seems like your transaction was cancelled. Please try again or contact support.",
+    "cancelSuccess": "Subscription cancelled successfully",
+    "cancelTitle": "Payment Cancelled",
+    "cancellationNotice": "Período de Aviso de Cancelamento",
+    "costOptimization": "Ativar Sugestões de Otimização de Custos",
+    "costOptimizationDesc": "Receba sugestões para otimizar e reduzir os custos de assinatura",
+    "currentPlan": "Current Plan",
+    "dashboard": {
+      "subtitle": "Gira as suas assinaturas, custos e lembretes",
+      "title": "Painel de Controlo de Assinaturas"
+    },
+    "days": "dias",
+    "daysBefore": "dias antes",
+    "daysUntilRenewal": "dias até à renovação",
+    "enableTracking": "Ativar Rastreio de Assinaturas",
+    "enableTrackingDesc": "Gira e rastreie automaticamente documentos relacionados com assinaturas",
+    "errors": {
+      "cancelFailed": "Failed to cancel subscription",
+      "portalFailed": "Failed to open billing portal",
+      "resumeFailed": "Failed to resume subscription"
+    },
+    "exportReport": "Exportar Relatório",
+    "features": {
+      "basicSupport": "Community support",
+      "basicWill": "Basic will document",
+      "encryption": "Advanced encryption",
+      "freeDescription": "Upgrade to unlock more features",
+      "history": "Version history",
+      "limitedGuardians": "Up to 2 guardians",
+      "premiumDescription": "You have access to all premium features",
+      "priority": "Priority support",
+      "title": "Plan Features",
+      "unlimited": "Unlimited documents and assets"
+    },
+    "free": "Free",
+    "loadError": "Falha ao carregar os detalhes da assinatura",
+    "manageBilling": "Manage Billing",
+    "manual": "Renovação Automática: Não",
+    "monthlyCost": "Custo Mensal Total",
+    "next90Days": "Próximos 90 Dias",
+    "nextBilling": "Next billing date",
+    "noUpcomingRenewals": "Nenhuma renovação próxima nos próximos 90 dias",
+    "perMonth": "por mês",
+    "perYear": "por ano",
+    "planDescription": "Manage your subscription and billing",
+    "planName": "Plan",
+    "preferences": "Preferências de Assinatura",
+    "preferencesDesc": "Gira como as suas assinaturas são rastreadas e geridas",
+    "preferencesUpdated": "Preferências atualizadas com sucesso",
+    "premium": "Premium",
+    "reminderPeriods": "Períodos de Lembrete Padrão",
+    "renew": "Renovar",
+    "resume": "Resume Subscription",
+    "resumeSuccess": "Subscription resumed successfully",
+    "review": "Rever",
+    "successMessage": "Thank you for your purchase. Your subscription has been activated.",
+    "successTitle": "Payment Successful!",
+    "tabs": {
+      "overview": "Visão Geral",
+      "settings": "Configurações",
+      "upcoming": "Próximas"
+    },
+    "title": "Subscription",
+    "types": {
+      "monthly": "Mensal",
+      "yearly": "Anual"
+    },
+    "upcomingRenewals": "Renovações Próximas",
+    "upcomingRenewalsTitle": "Alerta de Renovações Próximas",
+    "upcomingSoon": "em breve",
+    "updateError": "Falha ao atualizar as preferências da assinatura",
+    "upgradeToPremium": "Upgrade to Premium",
+    "yearlyCost": "Custo Anual Total"
   },
   "upgradeCard": {
-    "pricing_1": "/pricing",
-    "defaultButtonText": "Upgrade to Command Package"
+    "defaultButtonText": "Upgrade to Command Package",
+    "pricing_1": "/pricing"
   }
 }

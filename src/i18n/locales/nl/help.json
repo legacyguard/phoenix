@@ -1,34 +1,31 @@
 {
-  "_comment": "Shared translations used across the application",
   "help": {
-    "needHelp": "Need Help?",
+    "basedOnProgress": "Based on your current progress, here's what we recommend:",
     "getHelp": "Get Help",
     "helpAndTutorials": "Help & Tutorials",
-    "recommendedForYou": "Recommended for You",
-    "basedOnProgress": "Based on your current progress, here's what we recommend:",
+    "needHelp": "Need Help?",
     "personalizedHelpDescription": "Get personalized help based on where you are in your journey",
-    "recommendedTopics": "Recommended topics",
     "quickTips": {
-      "title": "Quick Tips",
       "tip1": "Start with your most important documents first",
       "tip2": "Add at least one trusted guardian",
       "tip3": "Update your information regularly",
-      "tip4": "Test your guardian's access annually"
+      "tip4": "Test your guardian's access annually",
+      "title": "Quick Tips"
+    },
+    "recommendedForYou": "Recommended for You",
+    "recommendedTopics": "Recommended topics",
+    "stepDetails": {
+      "description": "Description",
+      "estimatedTime": "Estimated time",
+      "gotIt": "Got it!",
+      "minutes": "minutes",
+      "stepByStepInstructions": "Step-by-Step Instructions",
+      "steps": "steps",
+      "videoTutorial": "Video Tutorial",
+      "watchVideoTutorial": "Watch Video Tutorial"
     },
     "topics": {
-      "uploadDocuments": {
-        "title": "Upload Your First Document",
-        "description": "Learn how to securely upload and organize your important documents",
-        "steps": {
-          "1": "Click the 'Upload Document' button in the Organize section",
-          "2": "Select your document file from your computer",
-          "3": "Choose the document type and add a descriptive name",
-          "4": "Set an expiration date if applicable",
-          "5": "Save the document to your secure vault"
-        }
-      },
       "addGuardians": {
-        "title": "Add Your First Guardian",
         "description": "Set up trusted people who can access your information in emergencies",
         "steps": {
           "1": "Click 'Add Guardian' in the Secure section",
@@ -36,32 +33,10 @@
           "3": "Select their roles and responsibilities",
           "4": "Add their contact information",
           "5": "Send them an invitation to accept their role"
-        }
-      },
-      "listAssets": {
-        "title": "List Your Assets",
-        "description": "Document your properties, accounts, and valuable possessions",
-        "steps": {
-          "1": "Click 'Add Item' in the Organize section",
-          "2": "Choose the asset type (property, vehicle, account, etc.)",
-          "3": "Enter the asset name and details",
-          "4": "Add estimated value if desired",
-          "5": "Save the asset to your inventory"
-        }
-      },
-      "designateBeneficiaries": {
-        "title": "Designate Beneficiaries",
-        "description": "Specify who should receive your assets and in what proportions",
-        "steps": {
-          "1": "Click 'Add Beneficiary' in the Transfer section",
-          "2": "Enter the beneficiary's name",
-          "3": "Set their allocation percentage",
-          "4": "Review total allocations (must equal 100%)",
-          "5": "Save your beneficiary list"
-        }
+        },
+        "title": "Add Your First Guardian"
       },
       "createWill": {
-        "title": "Create Your Will",
         "description": "Generate a basic will document based on your information",
         "steps": {
           "1": "Navigate to the Will section",
@@ -69,172 +44,169 @@
           "3": "Review your beneficiaries and assets",
           "4": "Generate the will document",
           "5": "Download and have it properly witnessed"
-        }
+        },
+        "title": "Create Your Will"
+      },
+      "designateBeneficiaries": {
+        "description": "Specify who should receive your assets and in what proportions",
+        "steps": {
+          "1": "Click 'Add Beneficiary' in the Transfer section",
+          "2": "Enter the beneficiary's name",
+          "3": "Set their allocation percentage",
+          "4": "Review total allocations (must equal 100%)",
+          "5": "Save your beneficiary list"
+        },
+        "title": "Designate Beneficiaries"
+      },
+      "listAssets": {
+        "description": "Document your properties, accounts, and valuable possessions",
+        "steps": {
+          "1": "Click 'Add Item' in the Organize section",
+          "2": "Choose the asset type (property, vehicle, account, etc.)",
+          "3": "Enter the asset name and details",
+          "4": "Add estimated value if desired",
+          "5": "Save the asset to your inventory"
+        },
+        "title": "List Your Assets"
+      },
+      "uploadDocuments": {
+        "description": "Learn how to securely upload and organize your important documents",
+        "steps": {
+          "1": "Click the 'Upload Document' button in the Organize section",
+          "2": "Select your document file from your computer",
+          "3": "Choose the document type and add a descriptive name",
+          "4": "Set an expiration date if applicable",
+          "5": "Save the document to your secure vault"
+        },
+        "title": "Upload Your First Document"
       }
-    },
-    "stepDetails": {
-      "description": "Description",
-      "stepByStepInstructions": "Step-by-Step Instructions",
-      "videoTutorial": "Video Tutorial",
-      "watchVideoTutorial": "Watch Video Tutorial",
-      "estimatedTime": "Estimated time",
-      "minutes": "minutes",
-      "steps": "steps",
-      "gotIt": "Got it!"
-    },
-    "priority": {
-      "high": "high",
-      "medium": "medium",
-      "low": "low"
     }
   },
   "helpPage": {
-    "title": "Hulp- & Ondersteuningscentrum",
-    "subtitle": "We zijn er voor u. Vind antwoorden op uw vragen of neem direct contact met ons op.",
+    "contact": {
+      "call": {
+        "button": "Plan een Gesprek",
+        "description": "Voor Premium- en Enterprise-klanten.",
+        "title": "Plan een Gesprek (Voor Premium)"
+      },
+      "email": {
+        "button": "Open E-mail Client",
+        "description": "Voor algemene vragen en ondersteuning.",
+        "title": "E-mail Ons"
+      },
+      "title": "Niet gevonden wat u zocht?"
+    },
     "faq": {
-      "title": "Veelgestelde Vragen",
       "q1": {
-        "question": "Is LegacyGuard veilig?",
-        "answer": "Ja, veiligheid is onze hoogste prioriteit. We gebruiken end-to-end encryptie en een zero-trust architectuur, wat betekent dat geen onbevoegde persoon toegang heeft tot uw gegevens, zelfs wij niet. Alle gegevens worden opgeslagen in beveiligde datacenters binnen de Europese Unie in overeenstemming met de GDPR."
+        "answer": "Ja, veiligheid is onze hoogste prioriteit. We gebruiken end-to-end encryptie en een zero-trust architectuur, wat betekent dat geen onbevoegde persoon toegang heeft tot uw gegevens, zelfs wij niet. Alle gegevens worden opgeslagen in beveiligde datacenters binnen de Europese Unie in overeenstemming met de GDPR.",
+        "question": "Is LegacyGuard veilig?"
       },
       "q2": {
-        "question": "Wat gebeurt er met mijn gegevens als ik mijn abonnement opzeg?",
-        "answer": "Na opzegging blijven uw gegevens veilig opgeslagen in alleen-lezen modus gedurende 90 dagen. U kunt uw abonnement binnen deze periode op elk moment opnieuw activeren om volledige toegang terug te krijgen. Na 90 dagen worden uw gegevens veilig en permanent uit onze systemen verwijderd."
+        "answer": "Na opzegging blijven uw gegevens veilig opgeslagen in alleen-lezen modus gedurende 90 dagen. U kunt uw abonnement binnen deze periode op elk moment opnieuw activeren om volledige toegang terug te krijgen. Na 90 dagen worden uw gegevens veilig en permanent uit onze systemen verwijderd.",
+        "question": "Wat gebeurt er met mijn gegevens als ik mijn abonnement opzeg?"
       },
       "q3": {
-        "question": "Wat is een 'Voogd'?",
-        "answer": "Een Voogd is een vertrouwd persoon (bijv. een partner, broer/zus of juridisch professional) aan wie u speciale, beperkte toegang tot uw informatie verleent voor noodgevallen. Een Voogd kan uw gegevens niet wijzigen; hij/zij kan ze alleen bekijken om op basis van uw instructies te handelen."
+        "answer": "Een Voogd is een vertrouwd persoon (bijv. een partner, broer/zus of juridisch professional) aan wie u speciale, beperkte toegang tot uw informatie verleent voor noodgevallen. Een Voogd kan uw gegevens niet wijzigen; hij/zij kan ze alleen bekijken om op basis van uw instructies te handelen.",
+        "question": "Wat is een 'Voogd'?"
       },
       "q4": {
-        "question": "Wat is het verschil tussen de 'Kluis' en het 'Handboek'?",
-        "answer": "De Nalatenschapskluis is waar u al uw belangrijke documenten en bezittingen veilig opslaat. Het Handboek voor Nabestaanden is een samengestelde selectie van de meest kritieke contacten, documenten en instructies uit uw kluis, ontworpen zodat uw Voogden alles wat essentieel is op één plek hebben."
+        "answer": "De Nalatenschapskluis is waar u al uw belangrijke documenten en bezittingen veilig opslaat. Het Handboek voor Nabestaanden is een samengestelde selectie van de meest kritieke contacten, documenten en instructies uit uw kluis, ontworpen zodat uw Voogden alles wat essentieel is op één plek hebben.",
+        "question": "Wat is het verschil tussen de 'Kluis' en het 'Handboek'?"
       },
       "q5": {
-        "question": "Is een testament gemaakt in LegacyGuard wettelijk bindend?",
-        "answer": "LegacyGuard helpt u bij het voorbereiden en organiseren van al het voorwerk en de informatie voor uw testament. In de meeste Europese landen vervangt het digitale document echter niet de noodzaak van een officieel, ondertekend (en vaak notarieel bekrachtigd) document. We raden aan om de definitieve versie altijd te overleggen met een juridisch professional."
-      }
-    },
-    "contact": {
-      "title": "Niet gevonden wat u zocht?",
-      "email": {
-        "title": "E-mail Ons",
-        "description": "Voor algemene vragen en ondersteuning.",
-        "button": "Open E-mail Client"
+        "answer": "LegacyGuard helpt u bij het voorbereiden en organiseren van al het voorwerk en de informatie voor uw testament. In de meeste Europese landen vervangt het digitale document echter niet de noodzaak van een officieel, ondertekend (en vaak notarieel bekrachtigd) document. We raden aan om de definitieve versie altijd te overleggen met een juridisch professional.",
+        "question": "Is een testament gemaakt in LegacyGuard wettelijk bindend?"
       },
-      "call": {
-        "title": "Plan een Gesprek (Voor Premium)",
-        "description": "Voor Premium- en Enterprise-klanten.",
-        "button": "Plan een Gesprek"
-      }
-    }
+      "title": "Veelgestelde Vragen"
+    },
+    "subtitle": "We zijn er voor u. Vind antwoorden op uw vragen of neem direct contact met ons op.",
+    "title": "Hulp- & Ondersteuningscentrum"
   },
   "manual": {
-    "title": "Handboek voor Nabestaanden",
+    "contacts": {
+      "addContact": "Contact Toevoegen",
+      "addFirstContact": "Voeg Uw Eerste Contact Toe",
+      "card": {
+        "edit": "Bewerken"
+      },
+      "description": "Belangrijke personen die uw gezin moet contacteren in geval van nood",
+      "empty": {
+        "description": "Begin met het toevoegen van belangrijke personen waar uw gezin van op de hoogte moet zijn.",
+        "title": "Nog geen contacten toegevoegd"
+      },
+      "form": {
+        "addButton": "Contact Toevoegen",
+        "addTitle": "Belangrijk Contact Toevoegen",
+        "cancel": "Annuleren",
+        "description": "Voeg personen toe die uw gezin in belangrijke situaties moet contacteren.",
+        "editTitle": "Contact Bewerken",
+        "emailLabel": "E-mailadres",
+        "emailPlaceholder": "contact@example.nl",
+        "nameLabel": "Naam Contactpersoon *",
+        "namePlaceholder": "bijv. Jan Jansen",
+        "notesLabel": "Notities",
+        "notesPlaceholder": "Aanvullende informatie over dit contact...",
+        "phoneLabel": "Telefoonnummer",
+        "phonePlaceholder": "+31 6 12345678",
+        "roleLabel": "Rol/Beroep *",
+        "rolePlaceholder": "bijv. Familieadvocaat, Accountant, Arts",
+        "saving": "Opslaan...",
+        "updateButton": "Contact Bijwerken"
+      },
+      "loading": "Contacten laden...",
+      "messages": {
+        "added": "Contact succesvol toegevoegd!",
+        "deleted": "Contact succesvol verwijderd!",
+        "loginRequired": "U moet ingelogd zijn om contacten op te slaan",
+        "nameAndRoleRequired": "Naam en rol zijn verplicht",
+        "updated": "Contact succesvol bijgewerkt!"
+      },
+      "title": "Belangrijke Contacten"
+    },
+    "documents": {
+      "card": {
+        "essentialNote": "Dit document is gemarkeerd als essentieel voor uw nabestaanden."
+      },
+      "description": "Kritieke documenten waar uw gezin van op de hoogte moet zijn",
+      "empty": {
+        "description": "Markeer belangrijke documenten als \"sleuteldocumenten\" vanuit uw kluis om ze hier te laten verschijnen.",
+        "tip": "Tip: Ga naar uw kluis en schakel \"Opnemen in Handboek voor Nabestaanden\" in voor belangrijke documenten",
+        "title": "Nog geen sleuteldocumenten toegevoegd"
+      },
+      "expiration": {
+        "expired": "Verlopen",
+        "expiresSoon": "Vervalt Binnenkort",
+        "expiring": "Vervalt"
+      },
+      "loading": "Sleuteldocumenten laden...",
+      "title": "Sleuteldocumenten"
+    },
+    "instructions": {
+      "autoSaveNote": "Uw instructies worden automatisch opgeslagen terwijl u typt",
+      "description": "Persoonlijke begeleiding en berichten voor uw dierbaren",
+      "loading": "Instructies laden...",
+      "title": "Laatste Wensen & Instructies"
+    },
     "subtitle": "Essentiële informatie voor uw dierbaren wanneer ze die het meest nodig hebben",
     "tabs": {
       "contacts": "Belangrijke Contacten",
       "documents": "Sleuteldocumenten",
       "instructions": "Instructies"
     },
-    "contacts": {
-      "title": "Belangrijke Contacten",
-      "description": "Belangrijke personen die uw gezin moet contacteren in geval van nood",
-      "addContact": "Contact Toevoegen",
-      "addFirstContact": "Voeg Uw Eerste Contact Toe",
-      "loading": "Contacten laden...",
-      "empty": {
-        "title": "Nog geen contacten toegevoegd",
-        "description": "Begin met het toevoegen van belangrijke personen waar uw gezin van op de hoogte moet zijn."
-      },
-      "form": {
-        "editTitle": "Contact Bewerken",
-        "addTitle": "Belangrijk Contact Toevoegen",
-        "description": "Voeg personen toe die uw gezin in belangrijke situaties moet contacteren.",
-        "nameLabel": "Naam Contactpersoon *",
-        "namePlaceholder": "bijv. Jan Jansen",
-        "roleLabel": "Rol/Beroep *",
-        "rolePlaceholder": "bijv. Familieadvocaat, Accountant, Arts",
-        "phoneLabel": "Telefoonnummer",
-        "phonePlaceholder": "+31 6 12345678",
-        "emailLabel": "E-mailadres",
-        "emailPlaceholder": "contact@example.nl",
-        "notesLabel": "Notities",
-        "notesPlaceholder": "Aanvullende informatie over dit contact...",
-        "updateButton": "Contact Bijwerken",
-        "addButton": "Contact Toevoegen",
-        "saving": "Opslaan...",
-        "cancel": "Annuleren"
-      },
-      "card": {
-        "edit": "Bewerken"
-      },
-      "messages": {
-        "nameAndRoleRequired": "Naam en rol zijn verplicht",
-        "loginRequired": "U moet ingelogd zijn om contacten op te slaan",
-        "updated": "Contact succesvol bijgewerkt!",
-        "added": "Contact succesvol toegevoegd!",
-        "deleted": "Contact succesvol verwijderd!"
-      },
-      "errors": {
-        "loadFailed": "Laden van contacten mislukt",
-        "saveFailed": "Opslaan van contact mislukt",
-        "deleteFailed": "Verwijderen van contact mislukt"
-      }
-    },
-    "documents": {
-      "title": "Sleuteldocumenten",
-      "description": "Kritieke documenten waar uw gezin van op de hoogte moet zijn",
-      "loading": "Sleuteldocumenten laden...",
-      "empty": {
-        "title": "Nog geen sleuteldocumenten toegevoegd",
-        "description": "Markeer belangrijke documenten als \"sleuteldocumenten\" vanuit uw kluis om ze hier te laten verschijnen.",
-        "tip": "Tip: Ga naar uw kluis en schakel \"Opnemen in Handboek voor Nabestaanden\" in voor belangrijke documenten"
-      },
-      "card": {
-        "essentialNote": "Dit document is gemarkeerd als essentieel voor uw nabestaanden."
-      },
-      "errors": {
-        "loadFailed": "Laden van sleuteldocumenten mislukt"
-      },
-      "expiration": {
-        "expired": "Verlopen",
-        "expiresSoon": "Vervalt Binnenkort",
-        "expiring": "Vervalt"
-      }
-    },
-    "instructions": {
-      "title": "Laatste Wensen & Instructies",
-      "description": "Persoonlijke begeleiding en berichten voor uw dierbaren",
-      "loading": "Instructies laden...",
-      "autoSaveNote": "Uw instructies worden automatisch opgeslagen terwijl u typt",
-      "sections": {
-        "funeral": {
-          "title": "Uitvaartwensen",
-          "description": "Uw voorkeuren voor uitvaartarrangementen en ceremonies",
-          "placeholder": "bijv. Crematie, geen formele ceremonie, speel 'My Way' van Frank Sinatra..."
-        },
-        "digitalAccounts": {
-          "title": "Afsluiten van Digitale Accounts",
-          "description": "Instructies voor het afhandelen van uw digitale accounts en online aanwezigheid",
-          "placeholder": "bijv. Verwijder mijn Facebook-profiel, maar archiveer mijn Gmail. Zet mijn foto's van Google Drive over naar..."
-        },
-        "messages": {
-          "title": "Berichten aan Dierbaren",
-          "description": "Persoonlijke berichten en laatste gedachten voor uw familie en vrienden",
-          "placeholder": "Deel uw gedachten, herinneringen en laatste berichten met degenen die u liefheeft..."
-        }
-      },
-      "errors": {
-        "loadFailed": "Laden van instructies mislukt"
-      }
-    }
+    "title": "Handboek voor Nabestaanden"
   },
   "testimonials": {
+    "authority": {
+      "advisors": "Recommended by Financial Advisors",
+      "attorneys": "Trusted by Family Attorneys",
+      "counselors": "Endorsed by Grief Counselors"
+    },
     "badge": "Real Families Taking Control",
-    "title": "Trusted by 15,000+ European Families",
-    "subtitle": "See how families like yours found security and peace with Heritage Vault",
-    "verified": "Verified Family",
-    "trustedBy": "Trusted and recommended by",
+    "compliance": {
+      "dataProtection": "Data Protection Certified",
+      "gdpr": "GDPR Compliant",
+      "iso": "ISO 27001 Certified"
+    },
     "stats": {
       "families": "15,000+",
       "familiesLabel": "European families protected",
@@ -247,37 +219,30 @@
     },
     "stories": {
       "1": {
-        "name": "Michael K.",
-        "role": "Father of three",
+        "highlight": "✨ Set up in just 2 hours, protecting 3 children and spouse",
         "location": "Munich, Germany",
+        "name": "Michael K.",
         "quote": "After my brother's sudden accident, I watched my sister-in-law struggle for weeks to find important documents and passwords. That's when I knew I couldn't let the same thing happen to my family. Now everything is organized, and my wife knows exactly where to find what she needs. Being prepared and in control is priceless.",
-        "highlight": "✨ Set up in just 2 hours, protecting 3 children and spouse"
+        "role": "Father of three"
       },
       "2": {
-        "name": "Anna S.",
-        "role": "Business owner",
+        "highlight": "💼 Business and personal life organized in one secure place",
         "location": "Vienna, Austria",
+        "name": "Anna S.",
         "quote": "As a single mom running a business, I worried constantly about what would happen if something happened to me. Heritage Vault helped me organize everything - from business accounts to my children's school information. My sister now has access to everything she'd need to step in. I sleep so much better knowing they're protected.",
-        "highlight": "💼 Business and personal life organized in one secure place"
+        "role": "Business owner"
       },
       "3": {
-        "name": "Thomas R.",
-        "role": "Retired teacher",
+        "highlight": "❤️ 40 years of family history preserved and protected",
         "location": "Zurich, Switzerland",
+        "name": "Thomas R.",
         "quote": "My wife has early-stage dementia, and I realized I needed to prepare while I still could. Heritage Vault made it simple to organize our 40 years of life together. Our children now have clear instructions and access to everything. It's brought our whole family closer knowing we're prepared for whatever comes.",
-        "highlight": "❤️ 40 years of family history preserved and protected"
+        "role": "Retired teacher"
       }
     },
-    "authority": {
-      "advisors": "Recommended by Financial Advisors",
-      "attorneys": "Trusted by Family Attorneys",
-      "counselors": "Endorsed by Grief Counselors"
-    },
-    "compliance": {
-      "gdpr": "GDPR Compliant",
-      "dataProtection": "Data Protection Certified",
-      "iso": "ISO 27001 Certified"
-    },
-    "bottomCta": {}
+    "subtitle": "See how families like yours found security and peace with Heritage Vault",
+    "title": "Trusted by 15,000+ European Families",
+    "trustedBy": "Trusted and recommended by",
+    "verified": "Verified Family"
   }
 }

@@ -6,7 +6,11 @@ import i18n from './i18n/index'
 import App from './App.tsx'
 import PasswordWall from './components/PasswordWall'
 import { AuthSyncProvider } from './components/auth/AuthSyncProvider'
+import { validateSecurityConfig } from './utils/security'
 import './index.css'
+
+// Initialize security configuration
+validateSecurityConfig()
 
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY
 

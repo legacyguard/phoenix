@@ -1,98 +1,68 @@
 {
-  "_comment": "Shared translations used across the application",
-  "errorBoundary": {
-    "title": "Ой! Щось пішло не так",
-    "description": "Вибачте за незручності. Сталася неочікувана помилка.",
-    "errorId": "ID помилки",
-    "tryAgain": "Спробувати ще раз",
-    "reloadPage": "Перезавантажити сторінку",
-    "goToHomepage": "На головну",
-    "technicalDetails": "Технічні деталі",
-    "hide": "Приховати",
-    "show": "Показати",
-    "stackTrace": "Трасування стека",
-    "componentStack": "Стек компонентів",
-    "helpText": "Якщо проблема не зникає, зв'яжіться з нашою службою підтримки, вказавши ID помилки."
-  },
-  "errorTest": {
-    "title": "Тест логування помилок",
-    "description": "Test error handling and logging functionality",
-    "triggerSyncError": "Викликати синхронну помилку (ErrorBoundary)",
-    "triggerAsyncError": "Викликати асинхронну помилку",
-    "logRegularError": "Залогувати звичайну помилку",
-    "logCriticalError": "Залогувати критичну помилку",
-    "triggerAlert": "Викликати сповіщення (6 критичних помилок)",
-    "errorMessages": {
-      "testError": "Test error from ErrorTest component",
-      "testAsyncRejection": "Тест асинхронного відхилення",
-      "manualTestError": "Помилка ручного тесту",
-      "testCriticalError": "Тест критичної помилки",
-      "criticalErrorWithIndex": "Critical error {{index}}"
-    },
-    "descriptions": {
-      "syncError": "Triggers a synchronous error that will be caught by the ErrorBoundary",
-      "asyncError": "Triggers an asynchronous error that will be caught by error handling",
-      "regularError": "Logs a regular error for testing error tracking",
-      "criticalError": "Logs a critical error for testing critical error handling",
-      "multipleErrors": "Triggers multiple critical errors to test alert thresholds"
-    },
-    "context": {
-      "component": "ErrorTest",
-      "action": "button-click",
-      "severity": "high"
-    },
-    "notifications": {
-      "errorLogged": "Помилка успішно зареєстрована",
-      "criticalErrorLogged": "Critical error logged successfully",
-      "multipleErrorsTriggered": "Multiple critical errors triggered",
-      "errorBoundaryTriggered": "Межа помилок спрацювала",
-      "asyncErrorCaught": "Async error caught and handled"
-    }
-  },
   "debug": {
     "panel": {
-      "title": "Панель налагодження",
-      "recentErrors": "Останні помилки програми",
-      "technicalDetails": "Технічні деталі",
-      "tabs": {
-        "list": "Список",
-        "details": "Деталі"
-      },
-      "errorCount": "{{count}} помилок",
       "actions": {
-        "downloadErrors": "Завантажити помилки",
-        "clearAllErrors": "Очистити всі помилки"
-      },
-      "messages": {
-        "errorsCleared": "Всі помилки очищено",
-        "errorCopied": "Помилку скопійовано до буфера обміну",
-        "errorsDownloaded": "Помилки завантажено"
+        "clearAllErrors": "Очистити всі помилки",
+        "downloadErrors": "Завантажити помилки"
       },
       "error": {
-        "unknownError": "Невідома помилка",
+        "errorMessage": "Повідомлення про помилку",
         "noMessage": "Немає повідомлення",
-        "errorMessage": "Повідомлення про помилку"
-      },
-      "sections": {
-        "stackTrace": "Трасування стека",
-        "context": "Контекст",
-        "location": "Місцезнаходження",
-        "browserInfo": "Інформація про браузер",
-        "time": "Час"
+        "unknownError": "Невідома помилка"
       },
       "fields": {
-        "url": "URL:",
         "path": "Шлях:",
         "query": "Запит:",
+        "url": "URL:",
         "userAgent": "Агент користувача:",
         "viewport": "Область перегляду:"
-      }
+      },
+      "messages": {
+        "errorCopied": "Помилку скопійовано до буфера обміну",
+        "errorsCleared": "Всі помилки очищено",
+        "errorsDownloaded": "Помилки завантажено"
+      },
+      "recentErrors": "Останні помилки програми",
+      "sections": {
+        "browserInfo": "Інформація про браузер",
+        "context": "Контекст",
+        "location": "Місцезнаходження",
+        "stackTrace": "Трасування стека",
+        "time": "Час"
+      },
+      "tabs": {
+        "details": "Деталі",
+        "list": "Список"
+      },
+      "title": "Панель налагодження"
     }
+  },
+  "errorBoundary": {
+    "componentStack": "Стек компонентів",
+    "description": "Вибачте за незручності. Сталася неочікувана помилка.",
+    "errorId": "ID помилки",
+    "goToHomepage": "На головну",
+    "helpText": "Якщо проблема не зникає, зв'яжіться з нашою службою підтримки, вказавши ID помилки.",
+    "hide": "Приховати",
+    "reloadPage": "Перезавантажити сторінку",
+    "show": "Показати",
+    "stackTrace": "Трасування стека",
+    "technicalDetails": "Технічні деталі",
+    "title": "Ой! Щось пішло не так",
+    "tryAgain": "Спробувати ще раз"
+  },
+  "errorTest": {
+    "logCriticalError": "Залогувати критичну помилку",
+    "logRegularError": "Залогувати звичайну помилку",
+    "title": "Тест логування помилок",
+    "triggerAlert": "Викликати сповіщення (6 критичних помилок)",
+    "triggerAsyncError": "Викликати асинхронну помилку",
+    "triggerSyncError": "Викликати синхронну помилку (ErrorBoundary)"
   },
   "test": {
     "environment": {
-      "title": "Тільки для тестового середовища",
-      "description": "Ця сторінка призначена для тестування системи логування помилок. Видаліть цей маршрут перед розгортанням у продакшні."
+      "description": "Ця сторінка призначена для тестування системи логування помилок. Видаліть цей маршрут перед розгортанням у продакшні.",
+      "title": "Тільки для тестового середовища"
     }
   }
 }

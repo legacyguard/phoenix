@@ -1,307 +1,166 @@
 {
-  "_comment": "Gestión de guardianes y albaceas",
-  "guardian": {
-    "invitationSent": "Invitación enviada",
-    "accepted": "Aceptado",
-    "declined": "Rechazado",
-    "sendInvite": "Enviar invitación"
-  },
-  "guardianUpload": {
-    "addTitle": "Agregar guardián",
-    "editTitle": "Editar guardián",
-    "description": "Agrega a una persona de confianza que te ayudará a gestionar tus asuntos y apoyará a tus seres queridos.",
-    "fullNameLabel": "Nombre completo",
-    "fullNamePlaceholder": "Introduce el nombre completo del guardián",
-    "relationshipLabel": "Relación",
-    "relationshipPlaceholder": "Selecciona la relación",
-    "countryLabel": "País de residencia",
-    "countryPlaceholder": "Selecciona el país",
-    "countryDescription": "Esto nos ayuda a darte orientación legal específica según la región",
-    "rolesTitle": "Roles y responsabilidades",
-    "emailLabel": "Correo electrónico",
-    "emailPlaceholder": "Introduce el correo electrónico (opcional)",
-    "phoneLabel": "Número de teléfono",
-    "phonePlaceholder": "Introduce el número de teléfono (opcional)",
-    "addButton": "Agregar guardián",
-    "updateButton": "Actualizar guardián",
-    "saving": "Guardando...",
-    "success": "Éxito",
-    "added": "Guardián agregado correctamente",
-    "updated": "Guardián actualizado correctamente",
-    "error": "Error",
-    "loginToSave": "Debes iniciar sesión para guardar guardianes",
-    "relationships": {
-      "spouse": "Cónyuge",
-      "parent": "Padre/Madre",
-      "sibling": "Hermano/a",
-      "child": "Hijo/a",
-      "friend": "Amigo/a",
-      "legalProfessional": "Profesional legal",
-      "other": "Otro"
-    },
-    "roles": {
-      "guardianForChildren": "Guardián de niños",
-      "executorOfWill": "Albacea del testamento",
-      "healthcareProxy": "Apoderado sanitario",
-      "financialPowerOfAttorney": "Poder financiero",
-      "emergencyContact": "Contacto de emergencia",
-      "trustee": "Fideicomisario"
-    },
-    "errors": {
-      "saveError": "Ocurrió un error al guardar el guardián",
-      "requiredDataNotFound": "Faltan datos obligatorios",
-      "connectionError": "Error de conexión. Por favor, revisa tu conexión a internet",
-      "permissionError": "No tienes permiso para realizar esta acción",
-      "duplicateError": "Ya existe un registro con esta información",
-      "unknownError": "Ocurrió un error desconocido"
-    }
-  },
-  "guardianView": {
-    "title": "Contactos de emergencia",
-    "subtitle": "Acceso seguro a la información esencial de {{userName}}",
-    "readOnlyAccess": "Acceso solo de lectura",
-    "loading": "Cargando panel de guardianes...",
-    "errors": {
-      "pleaseLogin": "Inicia sesión para ver esta información",
-      "failedToLoad": "No se pudo cargar la información de guardianes",
-      "loadFailed": "No se pudieron cargar los contactos de emergencia",
-      "addFailed": "No se pudo agregar el contacto de emergencia",
-      "removeFailed": "No se pudo eliminar el contacto de emergencia",
-      "reorderFailed": "No se pudo actualizar el orden de los contactos",
-      "testFailed": "No se pudo enviar el mensaje de prueba",
-      "selectContact": "Por favor selecciona un contacto"
-    },
-    "sections": {
-      "keyDocuments": {
-        "title": "Documentos importantes",
-        "description": "Documentos esenciales marcados como críticos por el titular de la cuenta",
-        "keyDocumentBadge": "Documento clave",
-        "expires": "Vence",
-        "noExpiration": "Sin vencimiento",
-        "empty": "No hay documentos clave disponibles"
-      },
-      "importantContacts": {
-        "title": "Contactos importantes",
-        "description": "Contactos clave para situaciones de emergencia",
-        "empty": "No hay contactos importantes disponibles"
-      },
-      "finalWishes": {
-        "title": "Deseos e instrucciones finales",
-        "description": "Instrucciones personales y deseos finales",
-        "funeralWishes": "Deseos funerarios",
-        "digitalAccounts": "Cierre de cuentas digitales",
-        "digitalAccountsShutdown": "Cierre de cuentas digitales",
-        "messagesToLovedOnes": "Mensajes a seres queridos",
-        "empty": "No hay deseos o instrucciones finales disponibles"
-      }
-    },
-    "guardianInfo": {
-      "description": "Estás viendo esta información como Guardián de confianza. Este acceso es para emergencias y para ayudarte a cumplir tus responsabilidades.",
-      "securityNote": "Todos los accesos quedan registrados y son monitoreados por seguridad."
-    },
-    "defaultUserName": "Titular principal de la cuenta",
-    "description": "Gestiona hasta 3 contactos de emergencia en orden de prioridad",
-    "addContact": "Agregar contacto",
-    "noContacts": "Aún no se han añadido contactos de emergencia. Agrega contactos que deban ser notificados en caso de emergencia.",
-    "maxContactsReached": "Has alcanzado el máximo de 3 contactos de emergencia.",
-    "sendTest": "Enviar prueba",
-    "lastContacted": "Último contacto hace {{time}}",
-    "priority": {
-      "1": "Prioridad 1",
-      "2": "Prioridad 2",
-      "3": "Prioridad 3"
-    },
-    "addContactDialog": {
-      "title": "Agregar contacto de emergencia",
-      "description": "Selecciona un contacto de tu lista para agregarlo como contacto de emergencia.",
-      "selectContact": "Seleccionar contacto",
-      "selectPlaceholder": "Elige un contacto...",
-      "relationship": "Relación (opcional)",
-      "relationshipPlaceholder": "Selecciona relación...",
-      "addButton": "Agregar contacto de emergencia"
-    },
-    "messages": {
-      "added": "Contacto de emergencia agregado correctamente",
-      "removed": "Contacto de emergencia eliminado",
-      "reordered": "Prioridad de contacto actualizada",
-      "testSent": "Mensaje de prueba enviado a {{name}}"
-    }
-  },
   "executor": {
+    "completed": "Completado",
     "dashboard": {
-      "title": "Panel del albacea",
+      "reminder": "Recuerda cuidarte durante este proceso. No dudes en pedir ayuda si la necesitas.",
       "subtitle": "Una guía paso a paso para ayudarte en este momento difícil",
-      "reminder": "Recuerda cuidarte durante este proceso. No dudes en pedir ayuda si la necesitas."
+      "title": "Panel del albacea"
     },
+    "due": "Vence",
     "errors": {
       "loadTasksFailed": "No se pudieron cargar las tareas del albacea. Inténtalo más tarde.",
       "updateTaskFailed": "No se pudo actualizar el estado de la tarea."
     },
     "highPriority": "Alta prioridad",
-    "due": "Vence",
-    "completed": "Completado",
-    "undo": "Deshacer",
     "markComplete": "Marcar como completado",
-    "viewAccountDetails": "Ver detalles y contraseña de la cuenta",
-    "viewRelatedDocuments": "Ver documentos relacionados ({{count}})",
-    "stats": {
-      "totalTasks": "Tareas totales",
-      "completed": "Completadas",
-      "remaining": "Pendientes"
-    },
     "sections": {
-      "immediate": {
-        "title": "Tareas inmediatas (primeras 48 horas)",
-        "description": "Tareas críticas que requieren tu atención inmediata",
-        "empty": "¡Todas las tareas inmediatas completadas!"
-      },
       "firstWeek": {
-        "title": "Tareas de la primera semana",
         "description": "Tareas importantes para completar en la primera semana",
-        "empty": "¡Todas las tareas de la primera semana completadas!"
+        "empty": "¡Todas las tareas de la primera semana completadas!",
+        "title": "Tareas de la primera semana"
+      },
+      "immediate": {
+        "description": "Tareas críticas que requieren tu atención inmediata",
+        "empty": "¡Todas las tareas inmediatas completadas!",
+        "title": "Tareas inmediatas (primeras 48 horas)"
       },
       "ongoing": {
-        "title": "Responsabilidades en curso",
         "description": "Tareas para gestionar en las próximas semanas y meses",
-        "empty": "¡Todas las tareas en curso completadas!"
+        "empty": "¡Todas las tareas en curso completadas!",
+        "title": "Responsabilidades en curso"
       }
     },
-    "communications": {
-      "title": "Comunicaciones con beneficiarios",
-      "description": "Haz seguimiento de todas las comunicaciones con beneficiarios para mantener la transparencia",
-      "logCommunication": "Registrar comunicación",
-      "logTitle": "Registrar comunicación con beneficiario",
-      "logDescription": "Anota los detalles de tu comunicación con los beneficiarios",
-      "beneficiaryName": "Nombre del beneficiario",
-      "beneficiaryEmail": "Correo (opcional)",
-      "communicationType": "Tipo",
-      "communicationDate": "Fecha",
-      "subject": "Asunto",
-      "summary": "Resumen",
-      "subjectPlaceholder": "Ej: Actualización inicial del patrimonio",
-      "summaryPlaceholder": "Breve resumen de lo hablado...",
-      "types": {
-        "email": "Correo",
-        "phone": "Llamada telefónica",
-        "letter": "Carta",
-        "in_person": "En persona",
-        "other": "Otro"
-      },
-      "saving": "Guardando...",
-      "saveCommunication": "Guardar comunicación",
-      "cancel": "Cancelar",
-      "noCommunications": "Aún no hay comunicaciones registradas",
-      "startTracking": "Comienza a registrar tus comunicaciones con los beneficiarios",
-      "errors": {
-        "saveFailed": "No se pudo registrar la comunicación"
-      }
+    "stats": {
+      "completed": "Completadas",
+      "remaining": "Pendientes",
+      "totalTasks": "Tareas totales"
     },
-    "status": {
-      "title": "Estado de la administración del patrimonio",
-      "description": "Estado general visible para familiares autorizados",
-      "updateStatus": "Actualizar estado",
-      "updateTitle": "Actualizar estado del patrimonio",
-      "updateDescription": "Este estado será visible para los familiares autorizados",
-      "statusLabel": "Estado",
-      "additionalDetails": "Detalles adicionales (opcional)",
-      "detailsPlaceholder": "Proporciona contexto adicional...",
-      "selectStatus": "Selecciona un estado",
-      "updating": "Actualizando...",
-      "lastUpdated": "Última actualización",
-      "progress": "Progreso",
-      "noStatusSet": "Aún no se ha definido estado. Haz clic en \"Actualizar estado\" para establecerlo.",
-      "noStatusUpdates": "Aún no se han publicado actualizaciones de estado.",
-      "statuses": {
-        "initial_review": "Revisión inicial",
-        "gathering_documents": "Recopilando documentos",
-        "probate_initiated": "Proceso de sucesión iniciado",
-        "assets_being_valued": "Activos en valoración",
-        "debts_being_settled": "Deudas en liquidación",
-        "tax_preparation": "Preparación de impuestos",
-        "ready_for_distribution": "Listo para distribuir",
-        "distribution_in_progress": "Distribución en curso",
-        "estate_closed": "Patrimonio cerrado"
-      },
-      "errors": {
-        "updateFailed": "No se pudo actualizar el estado"
-      }
-    },
-    "justInTime": {
-      "viewAccountDetails": "Ver detalles y contraseña de la cuenta",
-      "secureInfoAccess": "Acceso seguro a la información",
-      "reauthenticate": "Reautentícate para ver información sensible de",
-      "securityReason": "Por seguridad, introduce tu contraseña para acceder a esta información.",
-      "password": "Contraseña",
-      "enterPassword": "Introduce tu contraseña",
-      "incorrectPassword": "Contraseña incorrecta. Inténtalo de nuevo.",
-      "cancel": "Cancelar",
-      "verifying": "Verificando...",
-      "verifyContinue": "Verificar y continuar",
-      "accountName": "Nombre de la cuenta",
-      "accountNumber": "Número de cuenta",
-      "username": "Usuario",
-      "pin": "PIN",
-      "additionalNotes": "Notas adicionales",
-      "noSensitiveInfo": "No hay información sensible asociada a esta tarea.",
-      "accessLogged": "Este acceso ha sido registrado por motivos de seguridad.",
-      "accessTime": "Hora de acceso",
-      "close": "Cerrar",
-      "errors": {
-        "reauthFailed": "No se pudo verificar tu identidad. Inténtalo de nuevo.",
-        "notFound": "No se encontró información sensible para esta tarea.",
-        "retrieveFailed": "No se pudo obtener la información sensible."
-      }
-    },
-    "familyView": {
-      "title": "Estado de la administración del patrimonio",
-      "subtitle": "Mantente informado sobre el progreso de la administración del patrimonio",
-      "recentCommunications": "Actualizaciones recientes del albacea",
-      "recentCommunicationsDescription": "Actualizaciones recientes de {{executorName}} para los beneficiarios",
-      "to": "Para",
-      "noCommunications": "Aún no hay comunicaciones registradas.",
-      "infoMessage": "Esta información la actualiza {{executorName}} para mantener informada a la familia. Para dudas específicas, contacta directamente con el albacea.",
-      "defaultExecutor": "el albacea",
-      "errors": {
-        "loadFailed": "No se pudo cargar la información"
-      }
-    }
+    "undo": "Deshacer",
+    "viewAccountDetails": "Ver detalles y contraseña de la cuenta"
   },
   "executorManagement": {
-    "failed_to_load_executors_2": "No se pudieron cargar los albaceas",
-    "user_not_found_with_this_email_3": "No se encontró usuario con este correo",
-    "this_person_is_already_designa_4": "Esta persona ya está designada como albacea",
-    "failed_to_add_executor_5": "No se pudo agregar el albacea",
-    "failed_to_remove_executor_6": "No se pudo eliminar el albacea",
-    "loading_executors_7": "Cargando albaceas...",
-    "executor_management_8": "Gestión de albaceas",
-    "designate_trusted_individuals__9": "Designa personas de confianza que te ayuden a gestionar tus asuntos y apoyen a tus seres queridos",
     "add_new_executor_10": "Agregar nuevo albacea",
-    "email_address_11": "Correo electrónico",
-    "executor_example_com_12": "albacea@ejemplo.com",
-    "relationship_type_13": "Tipo de relación",
-    "primary_executor_14": "Albacea principal",
-    "secondary_executor_15": "Albacea secundario",
-    "emergency_contact_16": "Contacto de emergencia",
-    "current_executors_17": "Albaceas actuales",
-    "no_executors_designated_yet_ad_18": "Aún no se han designado albaceas. Agrega a alguien de confianza para que te ayude a gestionar tus asuntos.",
-    "important_information_19": "Información importante",
-    "primary_executors_receive_imme_20": "Los albaceas principales reciben acceso inmediato a tu bóveda cuando sea necesario",
-    "secondary_executors_are_notifi_21": "Los albaceas secundarios son notificados pero tienen acceso limitado",
-    "emergency_contacts_are_notifie_22": "Los contactos de emergencia son avisados solo en situaciones urgentes",
     "all_executors_must_have_legacy_23": "Todos los albaceas deben tener cuenta en LegacyGuard para acceder a tu información",
+    "current_executors_17": "Albaceas actuales",
+    "designate_trusted_individuals__9": "Designa personas de confianza que te ayuden a gestionar tus asuntos y apoyen a tus seres queridos",
+    "email_address_11": "Correo electrónico",
+    "emergency_contact_16": "Contacto de emergencia",
+    "emergency_contacts_are_notifie_22": "Los contactos de emergencia son avisados solo en situaciones urgentes",
+    "executor_example_com_12": "albacea@ejemplo.com",
+    "executor_management_8": "Gestión de albaceas",
+    "failed_to_add_executor_5": "No se pudo agregar el albacea",
+    "failed_to_load_executors_2": "No se pudieron cargar los albaceas",
+    "failed_to_remove_executor_6": "No se pudo eliminar el albacea",
+    "important_information_19": "Información importante",
+    "loading_executors_7": "Cargando albaceas...",
+    "no_executors_designated_yet_ad_18": "Aún no se han designado albaceas. Agrega a alguien de confianza para que te ayude a gestionar tus asuntos.",
+    "primary_executor_14": "Albacea principal",
+    "primary_executors_receive_imme_20": "Los albaceas principales reciben acceso inmediato a tu bóveda cuando sea necesario",
+    "relationship_type_13": "Tipo de relación",
+    "secondary_executor_15": "Albacea secundario",
+    "secondary_executors_are_notifi_21": "Los albaceas secundarios son notificados pero tienen acceso limitado",
+    "statusLabels": {
+      "addExecutor": "Agregar albacea",
+      "adding": "Agregando...",
+      "unknownUser": "Usuario desconocido"
+    },
     "successMessages": {
       "executorAdded": "Albacea agregado correctamente",
       "executorRemoved": "Albacea eliminado correctamente"
     },
-    "validationMessages": {
-      "emailRequired": "El correo electrónico es obligatorio",
-      "invalidEmail": "Introduce un correo electrónico válido",
-      "relationshipTypeRequired": "El tipo de relación es obligatorio"
+    "this_person_is_already_designa_4": "Esta persona ya está designada como albacea",
+    "user_not_found_with_this_email_3": "No se encontró usuario con este correo"
+  },
+  "guardian": {
+    "accepted": "Aceptado",
+    "declined": "Rechazado",
+    "invitationSent": "Invitación enviada",
+    "sendInvite": "Enviar invitación"
+  },
+  "guardianUpload": {
+    "addButton": "Agregar guardián",
+    "addTitle": "Agregar guardián",
+    "added": "Guardián agregado correctamente",
+    "countryDescription": "Esto nos ayuda a darte orientación legal específica según la región",
+    "countryLabel": "País de residencia",
+    "countryPlaceholder": "Selecciona el país",
+    "description": "Agrega a una persona de confianza que te ayudará a gestionar tus asuntos y apoyará a tus seres queridos.",
+    "editTitle": "Editar guardián",
+    "emailLabel": "Correo electrónico",
+    "emailPlaceholder": "Introduce el correo electrónico (opcional)",
+    "error": "Error",
+    "errors": {
+      "connectionError": "Error de conexión. Por favor, revisa tu conexión a internet",
+      "duplicateError": "Ya existe un registro con esta información",
+      "permissionError": "No tienes permiso para realizar esta acción",
+      "requiredDataNotFound": "Faltan datos obligatorios",
+      "saveError": "Ocurrió un error al guardar el guardián",
+      "unknownError": "Ocurrió un error desconocido"
     },
-    "statusLabels": {
-      "adding": "Agregando...",
-      "addExecutor": "Agregar albacea",
-      "unknownUser": "Usuario desconocido"
-    }
+    "fullNameLabel": "Nombre completo",
+    "fullNamePlaceholder": "Introduce el nombre completo del guardián",
+    "loginToSave": "Debes iniciar sesión para guardar guardianes",
+    "phoneLabel": "Número de teléfono",
+    "phonePlaceholder": "Introduce el número de teléfono (opcional)",
+    "relationshipLabel": "Relación",
+    "relationshipPlaceholder": "Selecciona la relación",
+    "relationships": {
+      "child": "Hijo/a",
+      "friend": "Amigo/a",
+      "legalProfessional": "Profesional legal",
+      "other": "Otro",
+      "parent": "Padre/Madre",
+      "sibling": "Hermano/a",
+      "spouse": "Cónyuge"
+    },
+    "roles": {
+      "emergencyContact": "Contacto de emergencia",
+      "executorOfWill": "Albacea del testamento",
+      "financialPowerOfAttorney": "Poder financiero",
+      "guardianForChildren": "Guardián de niños",
+      "healthcareProxy": "Apoderado sanitario",
+      "trustee": "Fideicomisario"
+    },
+    "rolesTitle": "Roles y responsabilidades",
+    "saving": "Guardando...",
+    "success": "Éxito",
+    "updateButton": "Actualizar guardián",
+    "updated": "Guardián actualizado correctamente"
+  },
+  "guardianView": {
+    "defaultUserName": "Titular principal de la cuenta",
+    "errors": {
+      "failedToLoad": "No se pudo cargar la información de guardianes",
+      "pleaseLogin": "Inicia sesión para ver esta información"
+    },
+    "guardianInfo": {
+      "description": "Estás viendo esta información como Guardián de confianza. Este acceso es para emergencias y para ayudarte a cumplir tus responsabilidades.",
+      "securityNote": "Todos los accesos quedan registrados y son monitoreados por seguridad."
+    },
+    "readOnlyAccess": "Acceso solo de lectura",
+    "sections": {
+      "finalWishes": {
+        "description": "Instrucciones personales y deseos finales",
+        "digitalAccounts": "Cierre de cuentas digitales",
+        "empty": "No hay deseos o instrucciones finales disponibles",
+        "funeralWishes": "Deseos funerarios",
+        "messagesToLovedOnes": "Mensajes a seres queridos",
+        "title": "Deseos e instrucciones finales"
+      },
+      "importantContacts": {
+        "description": "Contactos clave para situaciones de emergencia",
+        "empty": "No hay contactos importantes disponibles",
+        "title": "Contactos importantes"
+      },
+      "keyDocuments": {
+        "description": "Documentos esenciales marcados como críticos por el titular de la cuenta",
+        "empty": "No hay documentos clave disponibles",
+        "expires": "Vence",
+        "keyDocumentBadge": "Documento clave",
+        "noExpiration": "Sin vencimiento",
+        "title": "Documentos importantes"
+      }
+    },
+    "title": "Contactos de emergencia"
   }
 }

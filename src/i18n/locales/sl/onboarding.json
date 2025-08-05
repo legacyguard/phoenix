@@ -1,231 +1,146 @@
 {
-  "_comment": "Shared translations used across the application",
-  "onboarding": {
-    "title": "Dobrodošli v LegacyGuard",
-    "subtitle": "Dovolite, da vam pomagamo zavarovati prihodnost vaše družine",
-    "mainTitle": "Projektni nalog",
-    "mainSubtitle": "Ustvarimo vaš osebni načrt za zaščito zapuščine",
-    "progressText": "Projektni nalog: Korak {{step}} od 4",
-    "skipButton": "Preskoči za zdaj",
-    "skipConfirmTitle": "Preskočiti uvajanje?",
-    "skipConfirmMessage": "To nastavitev lahko vedno znova zaženete kasneje v nastavitvah",
-    "skipConfirmYes": "Preskoči",
-    "skipConfirmNo": "Nadaljuj z nastavitvijo",
-    "restartButton": "Znova zaženi uvajanje",
-    "welcomeBack": "Dobrodošli nazaj! Ste pripravljeni dokončati svojo nastavitev?",
-    "resumeTitle": "Nadaljujte tam, kjer ste ostali",
-    "resumeMessage": "Bili ste pri koraku {{step}} od 4",
-    "partialProgress": "{{percentage}}% opravljeno",
-    "inventory": {
-      "documentAccess": {
-        "question": "Če bi se vam danes kaj zgodilo, bi vaša družina vedela, kje najti vaše pomembne dokumente?",
-        "answers": {
-          "yes": "Da",
-          "no": "Ne",
-          "partially": "Delno"
-        }
-      },
-      "caretaker": {
-        "question": "Kdo bi skrbel za vaše otroke/sredstva/digitalne račune?",
-        "answers": {
-          "designated": "Imam določeno osebo",
-          "familyFigureOut": "Družina bi se znašla",
-          "notThought": "O tem nisem razmišljal/a"
-        }
-      },
-      "familyClarity": {
-        "question": "Ali menite, da bi vaša družina vedela, kaj ste si želeli zanje?",
-        "answers": {
-          "clear": "Da, jasno je",
-          "somewhat": "Nekako",
-          "neverDiscussed": "Ne, o tem se nismo nikoli pogovarjali"
-        }
-      },
-      "biggestWorry": {
-        "question": "Kaj vas najbolj skrbi glede prihodnosti vaše družine?",
-        "answers": {
-          "financial": "Finančna varnost",
-          "legal": "Pravni zapleti",
-          "memories": "Izguba spominov",
-          "conflicts": "Družinski spori"
-        }
-      },
-      "personalized": {
-        "documentCentralization": "Na podlagi vašega odgovora o dostopu do dokumentov priporočamo, da začnete s centralizacijo pomembnih dokumentov.",
-        "guardianDesignation": "Ker niste določili nikogar, ki bi skrbel za vaša sredstva, bi morala biti določitev skrbnika vaša prednostna naloga.",
-        "willPreparation": "Vaša družina potrebuje jasnost glede vaših želja. Sestava oporoke je bistven prvi korak.",
-        "financialPlanning": "Finančna varnost je ključnega pomena. Začnimo z dokumentiranjem vaših bančnih računov in sredstev.",
-        "conflictPrevention": "Za preprečevanje družinskih sporov sta ključnega pomena jasna dokumentacija in komunikacija.",
-        "memoryPreservation": "Ohranjanje spominov se začne z organizacijo vaših digitalnih fotografij in zgodb.",
-        "legalOrganization": "Organizirajmo vaše pravne dokumente, da se izognemo kasnejšim zapletom."
-      }
-    },
-    "q1": {
-      "title": "Če bi se vam danes kaj zgodilo, bi vaša družina vedela, kje najti vaše pomembne dokumente?",
-      "option1": "Da",
-      "option2": "Ne",
-      "option3": "Delno"
-    },
-    "q2": {
-      "title": "Kdo bi skrbel za vaše otroke/sredstva/digitalne račune?",
-      "option1": "Imam določeno osebo",
-      "option2": "Družina bi se znašla",
-      "option3": "O tem nisem razmišljal/a"
-    },
-    "q3": {
-      "title": "Ali menite, da bi vaša družina vedela, kaj ste si želeli zanje?",
-      "option1": "Da, jasno je",
-      "option2": "Nekako",
-      "option3": "Ne, o tem se nismo nikoli pogovarjali"
-    },
-    "q4": {
-      "title": "Kaj vas najbolj skrbi glede prihodnosti vaše družine?",
-      "option1": "Finančna varnost",
-      "option2": "Pravni zapleti",
-      "option3": "Izguba spominov",
-      "option4": "Družinski spori"
-    },
-    "buttons": {
-      "previous": "Nazaj",
-      "next": "Naprej",
-      "generate": "Ustvari moj projektni nalog"
-    },
-    "analysis": {
-      "title": "Analiziranje vaših odgovorov...",
-      "subtitle": "Priprava vašega osebnega 'Projektnega naloga'...",
-      "done": "Končano!"
-    },
-    "complete": "Odličen začetek! Vašo nadzorno ploščo smo prilagodili na podlagi vaših odgovorov. Pripravljeni ste začeti graditi svoj celovit načrt zapuščine.",
-    "success": {
-      "stepCompleted": "Korak {{step}} uspešno končan!",
-      "inventoryComplete": "Inventar življenja končan! Vaš osebni načrt je pripravljen.",
-      "allQuestionsAnswered": "Na vsa vprašanja ste odgovorili. Ustvarjanje vašega akcijskega načrta..."
-    },
-    "errors": {
-      "questionRequired": "Prosimo, odgovorite na to vprašanje, da nadaljujete",
-      "failedToSave": "Shranjevanje vaših odgovorov ni uspelo. Prosimo, poskusite znova.",
-      "loadingFailed": "Nalaganje vprašanj za uvajanje ni uspelo"
-    },
-    "addAnother": "Dodaj še enega",
-    "previous": "Nazaj",
-    "next": "Naprej",
-    "continue": "Nadaljuj na nadzorno ploščo"
-  },
   "demo": {
     "ai": {
-      "title": "LegacyGuard AI Integration Demo",
-      "subtitle": "Experience how AI can help organize and protect your family's legacy",
-      "tabs": {
-        "documents": "Documents",
-        "questions": "Questions",
-        "suggestions": "Suggestions",
-        "messages": "Messages"
+      "context": {
+        "completion": "Completion:",
+        "label": "Current Context:",
+        "mood": "Mood:",
+        "recent": "Recent:"
       },
       "profile": {
-        "label": "Demo Profile:",
-        "documentsCount": "documents uploaded"
+        "documentsCount": "documents uploaded",
+        "label": "Demo Profile:"
       },
       "question": {
         "category": "Category:"
       },
-      "context": {
-        "label": "Current Context:",
-        "completion": "Completion:",
-        "recent": "Recent:",
-        "mood": "Mood:"
-      },
+      "subtitle": "Experience how AI can help organize and protect your family's legacy",
       "suggestion": {
         "priority": "Priority:"
-      }
-    },
-    "upload": {
-      "title": "Magical Document Upload",
-      "subtitle": "Experience the future of secure document management",
-      "badge": {
-        "encryption": "Auto Encrypt",
-        "aiAnalysis": "AI Analysis",
-        "familySharing": "Family Sharing"
-      },
-      "settings": {
-        "title": "Upload Settings",
-        "description": "Customize your document processing preferences",
-        "storageLocation": "Storage Location",
-        "local": "Local",
-        "cloud": "Cloud"
-      },
-      "features": {
-        "autoCompress": "Auto Compress",
-        "autoEncrypt": "Auto Encrypt",
-        "processOCR": "Process OCR",
-        "aiAnalysis": "AI Analysis",
-        "familySharing": "Family Sharing"
-      },
-      "console": {
-        "uploadStarted": "Upload started",
-        "view": "View",
-        "download": "Download",
-        "share": "Share",
-        "delete": "Delete"
       },
       "tabs": {
-        "upload": "Upload",
         "documents": "Documents",
-        "stats": "Statistics"
+        "messages": "Messages",
+        "questions": "Questions",
+        "suggestions": "Suggestions"
       },
-      "privacy": {
-        "localMode": {
-          "title": "Privacy Mode Active:",
-          "description": "All documents are processed and stored exclusively on your device. No data leaves your browser."
-        },
-        "cloudMode": {
-          "title": "Cloud Storage Active:",
-          "description": "Documents are encrypted before upload. Your encryption keys never leave your device."
-        }
-      },
-      "stats": {
-        "localStorage": {
-          "title": "Local Storage",
-          "description": "Documents stored on device"
-        },
-        "cloudStorage": {
-          "title": "Cloud Storage",
-          "description": "Documents in cloud"
-        },
-        "totalSize": {
-          "title": "Total Size",
-          "description": "Storage used"
-        },
-        "successRate": "Success Rate",
-        "averageTime": "Average Upload Time"
-      },
-      "progress": {
-        "title": "Upload Progress",
-        "completed": "{{count}} completed",
-        "failed": "{{count}} failed"
-      }
+      "title": "LegacyGuard AI Integration Demo"
     },
     "ocr": {
-      "title": "Privacy-First Document Processing",
-      "subtitle": "Extract text from documents while keeping everything on your device",
       "features": {
         "completePrivacy": "Complete Privacy",
         "multiLanguage": "Multi-Language Support",
         "smartDetection": "Smart Detection"
-      }
+      },
+      "subtitle": "Extract text from documents while keeping everything on your device",
+      "title": "Privacy-First Document Processing"
+    },
+    "upload": {
+      "badge": {
+        "aiAnalysis": "AI Analysis",
+        "encryption": "Auto Encrypt",
+        "familySharing": "Family Sharing"
+      },
+      "console": {
+        "delete": "Delete",
+        "download": "Download",
+        "share": "Share",
+        "uploadStarted": "Upload started",
+        "view": "View"
+      },
+      "features": {
+        "aiAnalysis": "AI Analysis",
+        "autoCompress": "Auto Compress",
+        "autoEncrypt": "Auto Encrypt",
+        "familySharing": "Family Sharing",
+        "processOCR": "Process OCR"
+      },
+      "privacy": {
+        "cloudMode": {
+          "description": "Documents are encrypted before upload. Your encryption keys never leave your device.",
+          "title": "Cloud Storage Active:"
+        },
+        "localMode": {
+          "description": "All documents are processed and stored exclusively on your device. No data leaves your browser.",
+          "title": "Privacy Mode Active:"
+        }
+      },
+      "progress": {
+        "title": "Upload Progress"
+      },
+      "settings": {
+        "cloud": "Cloud",
+        "description": "Customize your document processing preferences",
+        "local": "Local",
+        "storageLocation": "Storage Location",
+        "title": "Upload Settings"
+      },
+      "stats": {
+        "averageTime": "Average Upload Time",
+        "cloudStorage": {
+          "description": "Documents in cloud",
+          "title": "Cloud Storage"
+        },
+        "localStorage": {
+          "description": "Documents stored on device",
+          "title": "Local Storage"
+        },
+        "successRate": "Success Rate",
+        "totalSize": {
+          "description": "Storage used",
+          "title": "Total Size"
+        }
+      },
+      "subtitle": "Experience the future of secure document management",
+      "tabs": {
+        "documents": "Documents",
+        "stats": "Statistics",
+        "upload": "Upload"
+      },
+      "title": "Magical Document Upload"
     }
   },
-  "pillars": {
-    "secure": {
-      "title": "VARNO",
-      "description": "Zaščitite svojo družino in premoženje s proaktivnimi varnostnimi ukrepi"
+  "onboarding": {
+    "analysis": {
+      "subtitle": "Priprava vašega osebnega 'Projektnega naloga'...",
+      "title": "Analiziranje vaših odgovorov..."
     },
-    "organize": {
-      "title": "ORGANIZIRAJTE",
-      "description": "Katalogizirajte in upravljajte svoja digitalna in fizična sredstva"
+    "buttons": {
+      "generate": "Ustvari moj projektni nalog",
+      "next": "Naprej",
+      "previous": "Nazaj"
     },
-    "transfer": {
-      "title": "PRENESITE",
-      "description": "Zagotovite, da se vaša zapuščina prenese v skladu z vašimi željami"
-    }
+    "mainSubtitle": "Ustvarimo vaš osebni načrt za zaščito zapuščine",
+    "mainTitle": "Projektni nalog",
+    "q1": {
+      "option1": "Da",
+      "option2": "Ne",
+      "option3": "Delno",
+      "title": "Če bi se vam danes kaj zgodilo, bi vaša družina vedela, kje najti vaše pomembne dokumente?"
+    },
+    "q2": {
+      "option1": "Imam določeno osebo",
+      "option2": "Družina bi se znašla",
+      "option3": "O tem nisem razmišljal/a",
+      "title": "Kdo bi skrbel za vaše otroke/sredstva/digitalne račune?"
+    },
+    "q3": {
+      "option1": "Da, jasno je",
+      "option2": "Nekako",
+      "option3": "Ne, o tem se nismo nikoli pogovarjali",
+      "title": "Ali menite, da bi vaša družina vedela, kaj ste si želeli zanje?"
+    },
+    "q4": {
+      "option1": "Finančna varnost",
+      "option2": "Pravni zapleti",
+      "option3": "Izguba spominov",
+      "option4": "Družinski spori",
+      "title": "Kaj vas najbolj skrbi glede prihodnosti vaše družine?"
+    },
+    "skipButton": "Preskoči za zdaj",
+    "skipConfirmMessage": "To nastavitev lahko vedno znova zaženete kasneje v nastavitvah",
+    "skipConfirmNo": "Nadaljuj z nastavitvijo",
+    "skipConfirmTitle": "Preskočiti uvajanje?",
+    "skipConfirmYes": "Preskoči"
   }
 }

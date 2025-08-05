@@ -1,204 +1,177 @@
 {
-  "_comment": "Shared translations used across the application",
-  "subscription": {
-    "dashboard": {
-      "title": "Tellimuste töölaud",
-      "subtitle": "Hallake oma tellimusi, kulusid ja meeldetuletusi"
-    },
-    "monthlyCost": "Kuu kogukulu",
-    "yearlyCost": "Aasta kogukulu",
-    "activeSubscriptions": "Aktiivsed tellimused",
-    "upcomingSoon": "tulekul",
-    "exportReport": "Ekspordi aruanne",
-    "perMonth": "kuus",
-    "perYear": "aastas",
-    "allSubscriptions": "Kõik tellimused",
-    "allSubscriptionsDesc": "Ülevaade kõigist aktiivsetest tellimustest, sorteeritud uuendamiskuupäeva järgi",
-    "upcomingRenewals": "Tulevased uuendamised",
-    "upcomingRenewalsTitle": "Tulevaste uuendamiste teavitus",
-    "upcomingRenewalsDesc": "Teil on järgmise 90 päeva jooksul {{count}} tulevast uuendamist",
-    "next90Days": "Järgmised 90 päeva",
-    "noUpcomingRenewals": "Järgmise 90 päeva jooksul pole tulevasi uuendamisi",
-    "renew": "Uuenda",
-    "review": "Vaata üle",
-    "preferences": "Tellimuse eelistused",
-    "preferencesDesc": "Hallake, kuidas teie tellimusi jälgitakse ja hallatakse",
-    "enableTracking": "Luba tellimuste jälgimine",
-    "enableTrackingDesc": "Hallake ja jälgige automaatselt tellimustega seotud dokumente",
-    "costOptimization": "Luba kulude optimeerimise soovitused",
-    "costOptimizationDesc": "Saate soovitusi tellimiskulude optimeerimiseks ja vähendamiseks",
-    "reminderPeriods": "Vaikimisi meeldetuletusperioodid",
-    "daysBefore": "päeva enne",
-    "loadError": "Tellimuse üksikasjade laadimine ebaõnnestus",
-    "updateError": "Tellimuse eelistuste uuendamine ebaõnnestus",
-    "preferencesUpdated": "Eelistused edukalt uuendatud",
-    "tabs": {
-      "overview": "Ülevaade",
-      "upcoming": "Tulevased",
-      "settings": "Seaded"
-    },
-    "types": {
-      "monthly": "Igakuine",
-      "yearly": "Aastane",
-      "oneTime": "Ühekordne",
-      "none": "Puudub"
-    },
-    "daysUntilRenewal": "päeva uuendamiseni",
-    "days": "päeva",
-    "loadFailed": "Tellimuse andmete laadimine ebaõnnestus",
-    "autoRenewal": "Automaatne uuendamine: Jah",
-    "manual": "Automaatne uuendamine: Ei",
-    "trackingSuggestion": "Parema haldamise ja meeldetuletuste saamiseks kaaluge tellimuste jälgimise lubamist",
-    "type": "Tellimuse tüüp",
-    "typePlaceholder": "Vali tüüp",
-    "renewalCost": "Uuendamiskulu",
-    "renewalCostPlaceholder": "Sisesta uuendamiskulu",
-    "cancellationNotice": "Tühistamisteate periood",
-    "noNoticeRequired": "Teatist pole vaja",
-    "providerContact": "Pakkuja kontaktinfo",
-    "providerPhone": "Telefon",
-    "providerEmail": "E-post",
-    "providerWebsite": "Veebisait",
-    "cancellationNoticeWarning": "Märkus: Tühistamine nõuab {{days}}-päevast etteteatamist",
-    "title": "Subscription",
-    "currentPlan": "Current Plan",
-    "active": "Active",
-    "planDescription": "Manage your subscription and billing",
-    "planName": "Plan",
-    "premium": "Premium",
-    "free": "Free",
-    "nextBilling": "Next billing date",
-    "cancelledNotice": "Your subscription will end on {{date}}",
-    "manageBilling": "Manage Billing",
-    "resume": "Resume Subscription",
-    "cancel": "Cancel Subscription",
-    "upgradeToPremium": "Upgrade to Premium",
-    "features": {
-      "title": "Plan Features",
-      "premiumDescription": "You have access to all premium features",
-      "freeDescription": "Upgrade to unlock more features",
-      "unlimited": "Unlimited documents and assets",
-      "encryption": "Advanced encryption",
-      "priority": "Priority support",
-      "history": "Version history",
-      "basicWill": "Basic will document",
-      "limitedGuardians": "Up to 2 guardians",
-      "basicSupport": "Community support"
-    },
-    "errors": {
-      "portalFailed": "Failed to open billing portal",
-      "cancelFailed": "Failed to cancel subscription",
-      "resumeFailed": "Failed to resume subscription"
-    },
-    "cancelSuccess": "Subscription cancelled successfully",
-    "resumeSuccess": "Subscription resumed successfully",
-    "successTitle": "Payment Successful!",
-    "successMessage": "Thank you for your purchase. Your subscription has been activated.",
-    "cancelTitle": "Payment Cancelled",
-    "cancelMessage": "It seems like your transaction was cancelled. Please try again or contact support."
-  },
   "pricing": {
-    "title": "Valige oma pärandiplaan",
-    "subtitle": "Alustage meie tasuta paketiga või uuendage premium-funktsioonide saamiseks.",
-    "mainTitle": "Valige oma pärandiplaan",
-    "mainSubtitle": "Alustage meie tasuta paketiga või uuendage premium-funktsioonide saamiseks.",
-    "freePlan": {
-      "name": "Essential Protector",
-      "description": "Get started with basic features",
-      "price": "Free",
-      "features": {
-        "will": "1 Will document",
-        "guardians": "2 Guardians",
-        "assets": "5 Assets",
-        "support": "Basic support"
-      }
-    },
-    "premiumPlan": {
-      "name": "Command Package",
-      "description": "Perfect for individuals and families",
-      "price": "$9.99 / month",
-      "upgradeButton": "Upgrade Now",
-      "features": {
-        "will": "Unlimited Will documents",
-        "guardians": "Unlimited Guardians",
-        "assets": "Unlimited Assets",
-        "encryption": "Document encryption",
-        "access": "Emergency access",
-        "support": "Priority support",
-        "history": "Version history",
-        "templates": "Legal templates"
-      }
-    },
     "devMode": {
-      "title": "Developer Mode",
       "button": {
         "grant": "Dev Mode: Grant Premium Access",
         "granting": "Granting..."
       },
       "description": "This button is only visible in development mode. Click to instantly grant premium access for testing.",
+      "errorMessage": "Failed to grant developer premium access",
       "successMessage": "Developer premium access granted!",
-      "errorMessage": "Failed to grant developer premium access"
-    },
-    "errors": {
-      "checkoutFailed": "Failed to start checkout process"
-    },
-    "starter": {
-      "name": "Heritage Starter",
-      "price": "Tasuta",
-      "description": "Ideaalne alustamiseks oma digitaalse pärandi säilitamisel.",
-      "button": "Alusta tasuta",
-      "features": {
-        "storage": "{{amount}} salvestusruumi",
-        "guardians": "Kuni {{count}} eestkostjat",
-        "documents": "Põhiline dokumendivaramu",
-        "playbook": "Põhiline eestkostja tegevusjuhend",
-        "support": "Kogukonna tugi"
-      },
-      "limits": {
-        "storage": "500 MB",
-        "guardians": "3",
-        "fileSize": "10 MB faili kohta"
-      }
-    },
-    "premium": {
-      "name": "Heritage Premium",
-      "price": "€19",
-      "period": "/ kuu",
-      "badge": "Kõige populaarsem",
-      "description": "Täiustatud funktsioonid põhjalikuks pärandihalduseks.",
-      "button": "Vali Premium",
-      "features": {
-        "storage": "{{amount}} salvestusruumi",
-        "guardians": "Kuni {{count}} eestkostjat",
-        "manual": "Käsiraamat pärijatele",
-        "support": "E-posti teel eelisjärjekorras tugi"
-      },
-      "limits": {
-        "storage": "10 GB",
-        "guardians": "5",
-        "fileSize": "50 MB faili kohta"
-      }
+      "title": "Developer Mode"
     },
     "enterprise": {
-      "name": "Heritage Enterprise",
-      "price": "Kohandatud",
-      "description": "Peredele ja ettevõtetele, kellel on keerukad vajadused, mis nõuavad kõrgeimat teenindustaset.",
       "button": "Võta ühendust müügiga",
+      "description": "Peredele ja ettevõtetele, kellel on keerukad vajadused, mis nõuavad kõrgeimat teenindustaset.",
       "features": {
-        "storage": "{{amount}}+ salvestusruumi",
         "guardians": "Piiramatult eestkostjaid",
         "legal": "Koordineerimine õigusala spetsialistidega",
         "support": "Pühendatud kontohaldur"
       },
       "limits": {
-        "storage": "500 GB",
-        "guardians": "piiramatult",
-        "fileSize": "100 MB faili kohta"
-      }
-    }
+        "storage": "500 GB"
+      },
+      "name": "Heritage Enterprise",
+      "price": "Kohandatud"
+    },
+    "errors": {
+      "checkoutFailed": "Failed to start checkout process"
+    },
+    "freePlan": {
+      "description": "Get started with basic features",
+      "features": {
+        "assets": "5 Assets",
+        "guardians": "2 Guardians",
+        "support": "Basic support",
+        "will": "1 Will document"
+      },
+      "name": "Essential Protector",
+      "price": "Free"
+    },
+    "mainSubtitle": "Alustage meie tasuta paketiga või uuendage premium-funktsioonide saamiseks.",
+    "mainTitle": "Valige oma pärandiplaan",
+    "premium": {
+      "badge": "Kõige populaarsem",
+      "button": "Vali Premium",
+      "description": "Täiustatud funktsioonid põhjalikuks pärandihalduseks.",
+      "features": {
+        "manual": "Käsiraamat pärijatele",
+        "support": "E-posti teel eelisjärjekorras tugi"
+      },
+      "limits": {
+        "guardians": "5",
+        "storage": "10 GB"
+      },
+      "name": "Heritage Premium",
+      "period": "/ kuu",
+      "price": "€19"
+    },
+    "premiumPlan": {
+      "description": "Perfect for individuals and families",
+      "features": {
+        "access": "Emergency access",
+        "assets": "Unlimited Assets",
+        "encryption": "Document encryption",
+        "guardians": "Unlimited Guardians",
+        "history": "Version history",
+        "support": "Priority support",
+        "templates": "Legal templates",
+        "will": "Unlimited Will documents"
+      },
+      "name": "Command Package",
+      "price": "$9.99 / month",
+      "upgradeButton": "Upgrade Now"
+    },
+    "starter": {
+      "button": "Alusta tasuta",
+      "description": "Ideaalne alustamiseks oma digitaalse pärandi säilitamisel.",
+      "features": {
+        "documents": "Põhiline dokumendivaramu",
+        "playbook": "Põhiline eestkostja tegevusjuhend",
+        "support": "Kogukonna tugi"
+      },
+      "limits": {
+        "guardians": "3",
+        "storage": "500 MB"
+      },
+      "name": "Heritage Starter",
+      "price": "Tasuta"
+    },
+    "title": "Valige oma pärandiplaan"
+  },
+  "subscription": {
+    "active": "Active",
+    "activeSubscriptions": "Aktiivsed tellimused",
+    "allSubscriptions": "Kõik tellimused",
+    "allSubscriptionsDesc": "Ülevaade kõigist aktiivsetest tellimustest, sorteeritud uuendamiskuupäeva järgi",
+    "autoRenewal": "Automaatne uuendamine: Jah",
+    "cancel": "Cancel Subscription",
+    "cancelMessage": "It seems like your transaction was cancelled. Please try again or contact support.",
+    "cancelSuccess": "Subscription cancelled successfully",
+    "cancelTitle": "Payment Cancelled",
+    "cancellationNotice": "Tühistamisteate periood",
+    "costOptimization": "Luba kulude optimeerimise soovitused",
+    "costOptimizationDesc": "Saate soovitusi tellimiskulude optimeerimiseks ja vähendamiseks",
+    "currentPlan": "Current Plan",
+    "dashboard": {
+      "subtitle": "Hallake oma tellimusi, kulusid ja meeldetuletusi",
+      "title": "Tellimuste töölaud"
+    },
+    "days": "päeva",
+    "daysBefore": "päeva enne",
+    "daysUntilRenewal": "päeva uuendamiseni",
+    "enableTracking": "Luba tellimuste jälgimine",
+    "enableTrackingDesc": "Hallake ja jälgige automaatselt tellimustega seotud dokumente",
+    "errors": {
+      "cancelFailed": "Failed to cancel subscription",
+      "portalFailed": "Failed to open billing portal",
+      "resumeFailed": "Failed to resume subscription"
+    },
+    "exportReport": "Ekspordi aruanne",
+    "features": {
+      "basicSupport": "Community support",
+      "basicWill": "Basic will document",
+      "encryption": "Advanced encryption",
+      "freeDescription": "Upgrade to unlock more features",
+      "history": "Version history",
+      "limitedGuardians": "Up to 2 guardians",
+      "premiumDescription": "You have access to all premium features",
+      "priority": "Priority support",
+      "title": "Plan Features",
+      "unlimited": "Unlimited documents and assets"
+    },
+    "free": "Free",
+    "loadError": "Tellimuse üksikasjade laadimine ebaõnnestus",
+    "manageBilling": "Manage Billing",
+    "manual": "Automaatne uuendamine: Ei",
+    "monthlyCost": "Kuu kogukulu",
+    "next90Days": "Järgmised 90 päeva",
+    "nextBilling": "Next billing date",
+    "noUpcomingRenewals": "Järgmise 90 päeva jooksul pole tulevasi uuendamisi",
+    "perMonth": "kuus",
+    "perYear": "aastas",
+    "planDescription": "Manage your subscription and billing",
+    "planName": "Plan",
+    "preferences": "Tellimuse eelistused",
+    "preferencesDesc": "Hallake, kuidas teie tellimusi jälgitakse ja hallatakse",
+    "preferencesUpdated": "Eelistused edukalt uuendatud",
+    "premium": "Premium",
+    "reminderPeriods": "Vaikimisi meeldetuletusperioodid",
+    "renew": "Uuenda",
+    "resume": "Resume Subscription",
+    "resumeSuccess": "Subscription resumed successfully",
+    "review": "Vaata üle",
+    "successMessage": "Thank you for your purchase. Your subscription has been activated.",
+    "successTitle": "Payment Successful!",
+    "tabs": {
+      "overview": "Ülevaade",
+      "settings": "Seaded",
+      "upcoming": "Tulevased"
+    },
+    "title": "Subscription",
+    "types": {
+      "monthly": "Igakuine",
+      "yearly": "Aastane"
+    },
+    "upcomingRenewals": "Tulevased uuendamised",
+    "upcomingRenewalsTitle": "Tulevaste uuendamiste teavitus",
+    "upcomingSoon": "tulekul",
+    "updateError": "Tellimuse eelistuste uuendamine ebaõnnestus",
+    "upgradeToPremium": "Upgrade to Premium",
+    "yearlyCost": "Aasta kogukulu"
   },
   "upgradeCard": {
-    "pricing_1": "/pricing",
-    "defaultButtonText": "Upgrade to Command Package"
+    "defaultButtonText": "Upgrade to Command Package",
+    "pricing_1": "/pricing"
   }
 }

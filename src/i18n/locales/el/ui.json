@@ -1,261 +1,120 @@
 {
-  "_comment": "Shared translations used across the application",
-  "navigation": {
-    "dashboard": "Πίνακας Ελέγχου",
-    "vault": "Το Θησαυροφυλάκιο",
-    "trustedCircle": {
-      "title": "Ο Κύκλος Εμπιστοσύνης σας",
-      "subtitle": "Τα άτομα που εμπιστεύεστε να βοηθήσουν στην προστασία και φροντίδα της οικογένειάς και κληρονομιάς σας.",
-      "responsibilities": "Οι Ευθύνες τους:",
-      "preparationStatus": "Κατάσταση Προετοιμασίας:",
-      "informedOfRole": "Έχει ενημερωθεί για τον ρόλο του/της",
-      "acceptedResponsibility": "Έχει αποδεχτεί την ευθύνη",
-      "hasAccessToDocuments": "Έχει πρόσβαση στα απαραίτητα έγγραφα",
-      "reviewedEmergencyProcedures": "Έχει εξετάσει τις διαδικασίες έκτακτης ανάγκης",
-      "addTrustedPerson": "+ Προσθήκη Εμπιστευμένου Ατόμου",
-      "preparednessStatus": {
-        "wellPrepared": "Καλά Προετοιμασμένο",
-        "partiallyPrepared": "Μερικώς Προετοιμασμένο",
-        "needsAttention": "Χρειάζεται Προσοχή"
-      },
-      "buttonText": {
-        "prepared": "✓ Ο/Η {{name}} είναι Προετοιμασμένος/η",
-        "prepareNow": "Προετοιμάστε τον/την {{name}} Τώρα"
-      },
-      "mockData": {
-        "sarah": {
-          "name": "Σάρα Τζόνσον",
-          "relationship": "Σύζυγος",
-          "responsibilities": {
-            "bankAccess": "Μπορεί να προσπελάσει όλους τους τραπεζικούς λογαριασμούς για να πληρώσει λογαριασμούς και να διαχειριστεί τα οικιακά έξοδα.",
-            "inheritAssets": "Θα κληρονομήσει το οικογενειακό σπίτι, το εξοχικό και όλες τις αποταμιεύσεις.",
-            "medicalPower": "Έχει ιατρικό πληρεξούσιο για να λαμβάνει αποφάσεις υγείας."
-          }
-        },
-        "michael": {
-          "name": "Μιχαήλ Τζόνσον",
-          "relationship": "Αδελφός",
-          "responsibilities": {
-            "childCare": "Θα φροντίσει τα παιδιά μας αν λείψουν και οι δύο γονείς.",
-            "estateExecution": "Θα εκτελέσει τις τελικές μας επιθυμίες και θα διαχειριστεί τη διακανονιστική διαδικασία.",
-            "businessManagement": "Μπορεί να αναλάβει τη διαχείριση της Johnson Contracting LLC προσωρινά."
-          }
-        },
-        "robert": {
-          "name": "Ρόμπερτ Τσεν",
-          "relationship": "Επιχειρηματικός Συνεργάτης",
-          "responsibilities": {
-            "businessAuthority": "Έχει εξουσία να διαχειριστεί τις επιχειρηματικές λειτουργίες και να υπογράφει συμβόλαια.",
-            "buySellAgreement": "Θα αγοράσει τις μετοχές της επιχείρησής μου σύμφωνα με τη συμφωνία αγοράς-πώλησης μας."
-          }
-        },
-        "emily": {
-          "name": "Έμιλυ Τόμπσον",
-          "relationship": "Κουνιάδα",
-          "responsibilities": {
-            "backupGuardian": "Εφεδρικός κηδεμόνας για τα παιδιά αν ο κύριος κηδεμόνας δεν μπορεί να υπηρετήσει."
-          }
-        }
-      }
-    },
-    "familyHub": "Κέντρο Οικογένειας",
-    "legacyBriefing": {
-      "legacy_briefing_3": "Ενημέρωση Κληρονομιάς",
-      "create_and_manage_sealed_messa_4": "Δημιουργήστε και διαχειριστείτε σφραγισμένα μηνύματα για τους αγαπημένους σας",
-      "failed_to_load_your_time_capsu_1": "Η φόρτωση των χρονοκάψουλων σας απέτυχε",
-      "are_you_sure_you_want_to_delet_2": "Είστε σίγουροι ότι θέλετε να διαγράψετε αυτή τη χρονοκάψουλα;",
-      "create_new_message_5": "Δημιουργία Νέου Μηνύματος",
-      "no_time_capsules_yet_6": "Δεν υπάρχουν ακόμη χρονοκάψουλες",
-      "create_meaningful_messages_for_7": "Δημιουργήστε ουσιαστικά μηνύματα για τους αγαπημένους σας να λάβουν στο μέλλον",
-      "create_your_first_message_8": "Δημιουργήστε το Πρώτο σας Μήνυμα",
-      "to_9": "Προς:",
-      "unlocks_on_10": "Ξεκλειδώνει στις:",
-      "unlocks_11": "Ξεκλειδώνει:",
-      "after_passing_12": "Μετά το θάνατο",
-      "statusLabels": {
-        "locked": "Κλειδωμένο",
-        "unlocked": "Ξεκλειδωμένο",
-        "delivered": "Παραδομένο",
-        "noRecipients": "Δεν υπάρχουν αποδέκτες"
-      },
-      "messageTypes": {
-        "text": "Μήνυμα κειμένου",
-        "photo": "Μήνυμα φωτογραφίας",
-        "video": "Μήνυμα βίντεο",
-        "audio": "Μήνυμα ήχου"
-      },
-      "actions": {
-        "edit": "Επεξεργασία",
-        "delete": "Διαγραφή"
-      },
-      "toastMessages": {
-        "deleteSuccess": "Η χρονοκάψουλα διαγράφηκε με επιτυχία",
-        "deleteError": "Η διαγραφή της χρονοκάψουλας απέτυχε"
-      },
-      "dateFormat": {
-        "dateNotSet": "Η ημερομηνία δεν έχει οριστεί",
-        "created": "Δημιουργήθηκε"
-      },
-      "errors": {
-        "textContentRequired": "Text content is required for text messages",
-        "unlockDateRequired": "Unlock date is required when condition is date",
-        "failedToUploadAttachment": "Failed to upload attachment",
-        "failedToCreate": "Failed to create time capsule",
-        "failedToFetch": "Failed to fetch time capsules",
-        "failedToUpdate": "Failed to update time capsule",
-        "failedToDelete": "Failed to delete time capsule",
-        "notFoundOrCannotModify": "Time capsule not found or cannot be modified",
-        "notFoundOrCannotDelete": "Time capsule not found or cannot be deleted",
-        "missingUploadFields": "Missing required fields: fileName, fileType, fileSizeBytes",
-        "invalidFileType": "Invalid file type. Allowed types: webm, mp4, mov",
-        "fileSizeExceeds500MB": "File size exceeds maximum allowed size of 500MB",
-        "premiumRequired": "Premium subscription required",
-        "premiumRequiredMessage": "Video messages are a premium feature. Please upgrade your subscription to use this feature.",
-        "failedToCreateUploadUrl": "Failed to create upload URL"
-      }
-    },
-    "executorToolkit": "Εργαλειοθήκη Εκτελεστή",
-    "assets": "Τι κατέχετε και αγαπάτε",
-    "manual": "Εγχειρίδιο",
-    "documents": "Σημαντικά έγγραφα",
-    "guardians": "Άτομα που εμπιστεύεστε",
-    "family": "Κέντρο Οικογένειας",
-    "timeCapsule": "Χρονοκάψουλες",
-    "will": "Οι τελικές σας επιθυμίες",
-    "consultations": "Νομικές Συμβουλές",
-    "settings": "Ρυθμίσεις",
-    "help": "Βοήθεια & Υποστήριξη",
-    "subscriptions": "Συνδρομές"
-  },
-  "nav": {
-    "dashboard": "Πίνακας Ελέγχου",
-    "manual": "Εγχειρίδιο",
-    "vault": "Θησαυροφυλάκιο Κληρονομιάς",
-    "guardians": "Οι έμπιστοι βοηθοί σας",
-    "will": "Διαθήκη",
-    "settings": "Ρυθμίσεις",
-    "help": "Βοήθεια & Υποστήριξη"
-  },
-  "footer": {
-    "tagline": "Διατηρώντας την κληρονομιά σας για τις επόμενες γενιές.",
-    "platform": {
-      "title": "Πλατφόρμα",
-      "heritageVault": "Θησαυροφυλάκιο Κληρονομιάς",
-      "guardianNetwork": "Δίκτυο Κηδεμόνων",
-      "dashboard": "Πίνακας Ελέγχου",
-      "security": "Ασφάλεια"
-    },
-    "support": {
-      "title": "Υποστήριξη",
-      "helpCenter": "Κέντρο Βοήθειας",
-      "userGuides": "Οδηγοί Χρήστη",
-      "contactUs": "Επικοινωνήστε μαζί μας",
-      "community": "Κοινότητα"
-    },
-    "legal": {
-      "title": "Νομικά",
-      "privacyPolicy": "Πολιτική Απορρήτου",
-      "termsOfService": "Όροι Παροχής Υπηρεσιών",
-      "dataProtection": "Προστασία Δεδομένων"
-    },
-    "copyright": "© {{year}} LegacyGuard. Με επιφύλαξη παντός δικαιώματος.",
-    "description": "Διαχείριση ψηφιακής κληρονομιάς επιπέδου enterprise."
-  },
-  "hero": {
-    "title": "Κοιμηθείτε Ήρεμα Γνωρίζοντας ότι η Οικογένειά σας Θα Είναι Εντάξει",
-    "subtitle": "Όταν η ζωή παίρνει μια απρόσμενη τροπή, η οικογένειά σας δεν θα χρειαστεί να αναζητήσει, να μαντέψει ή να ανησυχήσει. Όλα όσα χρειάζονται θα είναι ακριβώς εκεί όπου μπορούν να τα βρουν.",
-    "cta_primary": "Πάρτε τον Έλεγχο του Μέλλοντος της Οικογένειάς σας Σήμερα",
-    "cta_secondary": "Δείτε Πόσο Απλό Είναι",
-    "urgencySubtitle": "Η ρύθμιση διαρκεί μόνο 10 λεπτά - γίνετε ο προετοιμασμένος γονέας που χρειάζεται η οικογένειά σας",
-    "secondaryContext": "2-λεπτο βίντεο που δείχνει πραγματικές οικογένειες",
-    "trustSignals": {
-      "dataOwnership": "Τα ιδιωτικά θέματα της οικογένειάς σας παραμένουν ιδιωτικά",
-      "gdprCompliant": "Χτισμένο με ευρωπαϊκές οικογενειακές αξίες",
-      "europeanFamilies": "Εμπιστεύονται οικογένειες που νοιάζονται βαθιά"
-    },
-    "community": {}
-  },
-  "features": {
-    "title": "Γιατί να επιλέξετε το LegacyGuard;",
-    "subtitle": "Σχεδιασμένο με ασφάλεια επιπέδου enterprise για οικογένειες που εκτιμούν την κληρονομιά τους.",
-    "sleepBetter": {
-      "title": "Sleep Better Tonight",
-      "description": "Stop worrying about 'what if something happens to me.' Your family will know exactly what to do, where to find everything, and who to call."
-    },
-    "noChaos": {
-      "title": "No Frantic Searching",
-      "description": "Your family won't spend days looking through drawers, calling banks, or trying to guess passwords. Everything important is organized in one secure place."
-    },
-    "clearInstructions": {
-      "title": "Step-by-Step Guidance",
-      "description": "Your loved ones get clear, simple instructions for exactly what to do and when. No confusion, no guesswork, no stress during difficult times."
-    },
-    "security": {
-      "title": "Απόλυτη Εμπιστευτικότητα & Απόρρητο",
-      "description": "Σχεδιασμένο έτσι ώστε κανένα μη εξουσιοδοτημένο άτομο να μην έχει πρόσβαση στα δεδομένα σας. Ούτε καν εμείς. Το απόρρητό σας είναι η ύψιστη προτεραιότητά μας."
-    },
-    "guardians": {
-      "title": "Δίκτυο Κηδεμόνων",
-      "description": "Ορίστε έμπιστα μέλη της οικογένειας και φίλους ως κηδεμόνες για να διασφαλίσετε τη συνέχεια της κληρονομιάς."
-    },
-    "storage": {
-      "title": "Ασφαλής Αποθήκευση στο Cloud",
-      "description": "Πολλαπλά αντίγραφα ασφαλείας σε διάφορα κέντρα δεδομένων με εγγύηση διαθεσιμότητας 99,99%."
-    },
-    "timelock": {
-      "title": "Χρονοκλειδωμένη Πρόσβαση",
-      "description": "Ορίστε προϋποθέσεις για το πότε και πώς οι δικαιούχοι θα έχουν πρόσβαση στην ψηφιακή σας κληρονομιά."
-    },
-    "stories": {
-      "title": "Προσωπικές Ιστορίες",
-      "description": "Δημιουργήστε πλούσιες αφηγήσεις πολυμέσων που αποτυπώνουν την ουσία του ταξιδιού της οικογένειάς σας."
-    },
-    "preservation": {
-      "title": "Δια βίου Διατήρηση",
-      "description": "Η κληρονομιά σας διατηρείται επ' αόριστον με αυτόματη μετατροπή μορφότυπων και ενημερώσεις."
-    }
-  },
   "alerts": {
-    "title": "Κέντρο Ειδοποιήσεων",
     "description": "Διαχειριστείτε τις ειδοποιήσεις λήξης των εγγράφων σας.",
-    "unread": "Μη αναγνωσμένες",
-    "markAsRenewed": "Σήμανση ως Ανανεωμένο",
-    "snooze7Days": "Αναβολή για 7 ημέρες",
     "dismiss": "Παράβλεψη",
-    "unsnooze": "Ακύρωση Αναβολής",
-    "tabs": {
-      "active": "Ενεργές",
-      "snoozed": "Σε Αναβολή",
-      "dismissed": "Παραβλεφθείσες"
+    "errors": {
+      "dismissFailed": "Δεν ήταν δυνατή η παράβλεψη της ειδοποίησης.",
+      "loadFailed": "Η φόρτωση των ειδοποιήσεων απέτυχε.",
+      "renewFailed": "Δεν ήταν δυνατή η σήμανση του εγγράφου ως ανανεωμένο.",
+      "snoozeFailed": "Δεν ήταν δυνατή η αναβολή της ειδοποίησης."
     },
-    "noActiveAlerts": "Δεν έχετε ενεργές ειδοποιήσεις.",
-    "noSnoozedAlerts": "Δεν έχετε ειδοποιήσεις σε αναβολή.",
-    "noDismissedAlerts": "Δεν έχετε παραβλεφθείσες ειδοποιήσεις.",
-    "expiresOn": "Λήγει στις {{date}}",
-    "snoozedUntil": "Σε αναβολή έως {{date}}",
-    "renewalInstructions": "Οδηγίες Ανανέωσης",
-    "badges": {
-      "expired": "Έληξε",
-      "expiring_7": "Λήγει Σύντομα",
-      "expiring_30": "Λήγει σε 30 Ημέρες",
-      "expiring_90": "Λήγει σε 90 Ημέρες"
-    },
-    "types": {
-      "expired": "Το έγγραφο {{documentName}} έληξε πριν από {{daysAgo}} ημέρες!",
-      "expiring7": "Προσοχή! Το έγγραφο {{documentName}} λήγει σε {{days}} ημέρες.",
-      "expiring30": "Υπενθύμιση: Το έγγραφο {{documentName}} θα λήξει σε {{days}} ημέρες.",
-      "expiring90": "Ενημέρωση: Το έγγραφο {{documentName}} πρόκειται να λήξει σε {{days}} ημέρες."
-    },
+    "markAsRenewed": "Σήμανση ως Ανανεωμένο",
     "messages": {
       "dismissed": "Η ειδοποίηση παραβλέφθηκε με επιτυχία.",
-      "snoozed": "Η ειδοποίηση τέθηκε σε αναβολή για {{days}} ημέρες.",
       "markedAsRenewed": "Το έγγραφο επισημάνθηκε ως ανανεωμένο."
     },
-    "errors": {
-      "loadFailed": "Η φόρτωση των ειδοποιήσεων απέτυχε.",
-      "dismissFailed": "Δεν ήταν δυνατή η παράβλεψη της ειδοποίησης.",
-      "snoozeFailed": "Δεν ήταν δυνατή η αναβολή της ειδοποίησης.",
-      "renewFailed": "Δεν ήταν δυνατή η σήμανση του εγγράφου ως ανανεωμένο."
-    }
+    "noActiveAlerts": "Δεν έχετε ενεργές ειδοποιήσεις.",
+    "noDismissedAlerts": "Δεν έχετε παραβλεφθείσες ειδοποιήσεις.",
+    "noSnoozedAlerts": "Δεν έχετε ειδοποιήσεις σε αναβολή.",
+    "renewalInstructions": "Οδηγίες Ανανέωσης",
+    "snooze7Days": "Αναβολή για 7 ημέρες",
+    "tabs": {
+      "active": "Ενεργές",
+      "dismissed": "Παραβλεφθείσες",
+      "snoozed": "Σε Αναβολή"
+    },
+    "title": "Κέντρο Ειδοποιήσεων",
+    "unread": "Μη αναγνωσμένες",
+    "unsnooze": "Ακύρωση Αναβολής"
+  },
+  "auth": {
+    "accessApplication": "Πρόσβαση στην εφαρμογή",
+    "enterPassword": "Εισάγετε κωδικό πρόσβασης",
+    "incorrectPassword": "Λάθος κωδικός πρόσβασης",
+    "logout": "Αποσύνδεση",
+    "password": "Κωδικός πρόσβασης",
+    "protectedApplication": "Προστατευμένη εφαρμογή",
+    "protectedApplicationDesc": "Αυτή η εφαρμογή προστατεύεται με κωδικό πρόσβασης. Παρακαλώ εισάγετε τον κωδικό πρόσβασης για να συνεχίσετε."
+  },
+  "features": {
+    "clearInstructions": {
+      "description": "Your loved ones get clear, simple instructions for exactly what to do and when. No confusion, no guesswork, no stress during difficult times.",
+      "title": "Step-by-Step Guidance"
+    },
+    "guardians": {
+      "description": "Ορίστε έμπιστα μέλη της οικογένειας και φίλους ως κηδεμόνες για να διασφαλίσετε τη συνέχεια της κληρονομιάς.",
+      "title": "Δίκτυο Κηδεμόνων"
+    },
+    "noChaos": {
+      "description": "Your family won't spend days looking through drawers, calling banks, or trying to guess passwords. Everything important is organized in one secure place.",
+      "title": "No Frantic Searching"
+    },
+    "preservation": {
+      "description": "Η κληρονομιά σας διατηρείται επ' αόριστον με αυτόματη μετατροπή μορφότυπων και ενημερώσεις.",
+      "title": "Δια βίου Διατήρηση"
+    },
+    "security": {
+      "description": "Σχεδιασμένο έτσι ώστε κανένα μη εξουσιοδοτημένο άτομο να μην έχει πρόσβαση στα δεδομένα σας. Ούτε καν εμείς. Το απόρρητό σας είναι η ύψιστη προτεραιότητά μας.",
+      "title": "Απόλυτη Εμπιστευτικότητα & Απόρρητο"
+    },
+    "sleepBetter": {
+      "description": "Stop worrying about 'what if something happens to me.' Your family will know exactly what to do, where to find everything, and who to call.",
+      "title": "Sleep Better Tonight"
+    },
+    "storage": {
+      "description": "Πολλαπλά αντίγραφα ασφαλείας σε διάφορα κέντρα δεδομένων με εγγύηση διαθεσιμότητας 99,99%.",
+      "title": "Ασφαλής Αποθήκευση στο Cloud"
+    },
+    "stories": {
+      "description": "Δημιουργήστε πλούσιες αφηγήσεις πολυμέσων που αποτυπώνουν την ουσία του ταξιδιού της οικογένειάς σας.",
+      "title": "Προσωπικές Ιστορίες"
+    },
+    "subtitle": "Σχεδιασμένο με ασφάλεια επιπέδου enterprise για οικογένειες που εκτιμούν την κληρονομιά τους.",
+    "timelock": {
+      "description": "Ορίστε προϋποθέσεις για το πότε και πώς οι δικαιούχοι θα έχουν πρόσβαση στην ψηφιακή σας κληρονομιά.",
+      "title": "Χρονοκλειδωμένη Πρόσβαση"
+    },
+    "title": "Γιατί να επιλέξετε το LegacyGuard;"
+  },
+  "footer": {
+    "description": "Διαχείριση ψηφιακής κληρονομιάς επιπέδου enterprise.",
+    "legal": {
+      "dataProtection": "Προστασία Δεδομένων",
+      "privacyPolicy": "Πολιτική Απορρήτου",
+      "termsOfService": "Όροι Παροχής Υπηρεσιών",
+      "title": "Νομικά"
+    },
+    "platform": {
+      "dashboard": "Πίνακας Ελέγχου",
+      "guardianNetwork": "Δίκτυο Κηδεμόνων",
+      "heritageVault": "Θησαυροφυλάκιο Κληρονομιάς",
+      "security": "Ασφάλεια",
+      "title": "Πλατφόρμα"
+    },
+    "support": {
+      "community": "Κοινότητα",
+      "contactUs": "Επικοινωνήστε μαζί μας",
+      "helpCenter": "Κέντρο Βοήθειας",
+      "title": "Υποστήριξη",
+      "userGuides": "Οδηγοί Χρήστη"
+    },
+    "tagline": "Διατηρώντας την κληρονομιά σας για τις επόμενες γενιές."
+  },
+  "hero": {
+    "cta_primary": "Πάρτε τον Έλεγχο του Μέλλοντος της Οικογένειάς σας Σήμερα",
+    "cta_secondary": "Δείτε Πόσο Απλό Είναι",
+    "secondaryContext": "2-λεπτο βίντεο που δείχνει πραγματικές οικογένειες",
+    "subtitle": "Όταν η ζωή παίρνει μια απρόσμενη τροπή, η οικογένειά σας δεν θα χρειαστεί να αναζητήσει, να μαντέψει ή να ανησυχήσει. Όλα όσα χρειάζονται θα είναι ακριβώς εκεί όπου μπορούν να τα βρουν.",
+    "title": "Κοιμηθείτε Ήρεμα Γνωρίζοντας ότι η Οικογένειά σας Θα Είναι Εντάξει",
+    "trustSignals": {
+      "dataOwnership": "Τα ιδιωτικά θέματα της οικογένειάς σας παραμένουν ιδιωτικά",
+      "europeanFamilies": "Εμπιστεύονται οικογένειες που νοιάζονται βαθιά",
+      "gdprCompliant": "Χτισμένο με ευρωπαϊκές οικογενειακές αξίες"
+    },
+    "urgencySubtitle": "Η ρύθμιση διαρκεί μόνο 10 λεπτά - γίνετε ο προετοιμασμένος γονέας που χρειάζεται η οικογένειά σας"
+  },
+  "loadMore": "Load More",
+  "navigation": {
+    "timeCapsule": "Χρονοκάψουλες"
   }
 }

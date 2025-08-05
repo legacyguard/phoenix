@@ -1,204 +1,177 @@
 {
-  "_comment": "Shared translations used across the application",
-  "subscription": {
-    "dashboard": {
-      "title": "Panel Subskrypcji",
-      "subtitle": "Zarządzaj swoimi subskrypcjami, kosztami i przypomnieniami"
-    },
-    "monthlyCost": "Całkowity Miesięczny Koszt",
-    "yearlyCost": "Całkowity Roczny Koszt",
-    "activeSubscriptions": "Aktywne Subskrypcje",
-    "upcomingSoon": "wkrótce",
-    "exportReport": "Eksportuj Raport",
-    "perMonth": "miesięcznie",
-    "perYear": "rocznie",
-    "allSubscriptions": "Wszystkie Subskrypcje",
-    "allSubscriptionsDesc": "Przegląd wszystkich aktywnych subskrypcji posortowanych według daty odnowienia",
-    "upcomingRenewals": "Nadchodzące Odnowienia",
-    "upcomingRenewalsTitle": "Alert o Nadchodzących Odnowieniach",
-    "upcomingRenewalsDesc": "Masz {{count}} nadchodzących odnowień w ciągu najbliższych 90 dni",
-    "next90Days": "Następne 90 Dni",
-    "noUpcomingRenewals": "Brak nadchodzących odnowień w ciągu najbliższych 90 dni",
-    "renew": "Odnów",
-    "review": "Przejrzyj",
-    "preferences": "Preferencje Subskrypcji",
-    "preferencesDesc": "Zarządzaj sposobem śledzenia i zarządzania subskrypcjami",
-    "enableTracking": "Włącz Śledzenie Subskrypcji",
-    "enableTrackingDesc": "Automatycznie zarządzaj i śledź dokumenty związane z subskrypcjami",
-    "costOptimization": "Włącz Sugestie Optymalizacji Kosztów",
-    "costOptimizationDesc": "Otrzymuj sugestie dotyczące optymalizacji i redukcji kosztów subskrypcji",
-    "reminderPeriods": "Domyślne Okresy Przypomnień",
-    "daysBefore": "dni przed",
-    "loadError": "Nie udało się załadować szczegółów subskrypcji",
-    "updateError": "Nie udało się zaktualizować preferencji subskrypcji",
-    "preferencesUpdated": "Preferencje pomyślnie zaktualizowane",
-    "tabs": {
-      "overview": "Przegląd",
-      "upcoming": "Nadchodzące",
-      "settings": "Ustawienia"
-    },
-    "types": {
-      "monthly": "Miesięcznie",
-      "yearly": "Rocznie",
-      "oneTime": "Jednorazowo",
-      "none": "Brak"
-    },
-    "daysUntilRenewal": "dni do odnowienia",
-    "days": "dni",
-    "loadFailed": "Nie udało się załadować danych subskrypcji",
-    "autoRenewal": "Automatyczne Odnawianie: Tak",
-    "manual": "Automatyczne Odnawianie: Nie",
-    "trackingSuggestion": "Rozważ włączenie śledzenia subskrypcji dla lepszego zarządzania i przypomnień",
-    "type": "Typ Subskrypcji",
-    "typePlaceholder": "Wybierz typ",
-    "renewalCost": "Koszt Odnowienia",
-    "renewalCostPlaceholder": "Wpisz koszt odnowienia",
-    "cancellationNotice": "Okres Wypowiedzenia",
-    "noNoticeRequired": "Brak Wymaganego Wypowiedzenia",
-    "providerContact": "Dane Kontaktowe Dostawcy",
-    "providerPhone": "Telefon",
-    "providerEmail": "E-mail",
-    "providerWebsite": "Strona Internetowa",
-    "cancellationNoticeWarning": "Uwaga: Anulowanie wymaga {{days}} dni wypowiedzenia",
-    "title": "Subskrypcja",
-    "currentPlan": "Obecny Plan",
-    "active": "Aktywna",
-    "planDescription": "Zarządzaj swoją subskrypcją i rozliczeniami",
-    "planName": "Plan",
-    "premium": "Premium",
-    "free": "Darmowa",
-    "nextBilling": "Następna data rozliczenia",
-    "cancelledNotice": "Twoja subskrypcja zakończy się {{date}}",
-    "manageBilling": "Zarządzaj Rozliczeniami",
-    "resume": "Wznów Subskrypcję",
-    "cancel": "Anuluj Subskrypcję",
-    "upgradeToPremium": "Uaktualnij do Premium",
-    "features": {
-      "title": "Funkcje Planu",
-      "premiumDescription": "Masz dostęp do wszystkich funkcji premium",
-      "freeDescription": "Uaktualnij, aby odblokować więcej funkcji",
-      "unlimited": "Nieograniczone dokumenty i aktywa",
-      "encryption": "Zaawansowane szyfrowanie",
-      "priority": "Priorytetowe wsparcie",
-      "history": "Historia wersji",
-      "basicWill": "Podstawowy dokument testamentu",
-      "limitedGuardians": "Do 2 opiekunów",
-      "basicSupport": "Wsparcie społeczności"
-    },
-    "errors": {
-      "portalFailed": "Nie udało się otworzyć portalu rozliczeniowego",
-      "cancelFailed": "Nie udało się anulować subskrypcji",
-      "resumeFailed": "Nie udało się wznowić subskrypcji"
-    },
-    "cancelSuccess": "Subskrypcja pomyślnie anulowana",
-    "resumeSuccess": "Subskrypcja pomyślnie wznowiona",
-    "successTitle": "Płatność Pomyślna!",
-    "successMessage": "Dziękujemy za zakup. Twoja subskrypcja została aktywowana.",
-    "cancelTitle": "Płatność Anulowana",
-    "cancelMessage": "Wygląda na to, że Twoja transakcja została anulowana. Spróbuj ponownie lub skontaktuj się z pomocą."
-  },
   "pricing": {
-    "title": "Wybierz Swój Plan Dziedzictwa",
-    "subtitle": "Zacznij od naszej darmowej opcji lub uaktualnij, aby uzyskać funkcje premium.",
-    "mainTitle": "Wybierz Swój Plan Dziedzictwa",
-    "mainSubtitle": "Zacznij od naszej darmowej opcji lub uaktualnij, aby uzyskać funkcje premium.",
-    "freePlan": {
-      "name": "Essential Protector",
-      "description": "Get started with basic features",
-      "price": "Free",
-      "features": {
-        "will": "1 Will document",
-        "guardians": "2 Guardians",
-        "assets": "5 Assets",
-        "support": "Basic support"
-      }
-    },
-    "premiumPlan": {
-      "name": "Pakiet Dowodzenia",
-      "description": "Perfect for individuals and families",
-      "price": "$9.99 / month",
-      "upgradeButton": "Upgrade Now",
-      "features": {
-        "will": "Unlimited Will documents",
-        "guardians": "Unlimited Guardians",
-        "assets": "Unlimited Assets",
-        "encryption": "Document encryption",
-        "access": "Emergency access",
-        "support": "Priority support",
-        "history": "Version history",
-        "templates": "Legal templates"
-      }
-    },
     "devMode": {
-      "title": "Developer Mode",
       "button": {
         "grant": "Tryb Deweloperski: Przyznaj Dostęp Premium",
         "granting": "Granting..."
       },
       "description": "Ten przycisk jest widoczny tylko w trybie deweloperskim. Kliknij, aby natychmiast przyznać dostęp premium do testowania.",
+      "errorMessage": "Nie udało się przyznać deweloperskiego dostępu premium",
       "successMessage": "Deweloperski dostęp premium przyznany!",
-      "errorMessage": "Nie udało się przyznać deweloperskiego dostępu premium"
-    },
-    "errors": {
-      "checkoutFailed": "Failed to start checkout process"
-    },
-    "starter": {
-      "name": "Heritage Starter",
-      "price": "Darmowy",
-      "description": "Idealny na początek ochrony Twojego cyfrowego dziedzictwa.",
-      "button": "Zacznij za Darmo",
-      "features": {
-        "storage": "{{amount}} Pamięci",
-        "guardians": "Do {{count}} Opiekunów",
-        "documents": "Podstawowy Skarbiec Dokumentów",
-        "playbook": "Podstawowy Playbook Opiekuna",
-        "support": "Wsparcie Społeczności"
-      },
-      "limits": {
-        "storage": "500 MB",
-        "guardians": "3",
-        "fileSize": "10 MB na plik"
-      }
-    },
-    "premium": {
-      "name": "Skarbiec Premium",
-      "price": "89 zł",
-      "period": "/ miesiąc",
-      "badge": "Najpopularniejszy",
-      "description": "Zaawansowane funkcje do kompleksowego zarządzania dziedzictwem.",
-      "button": "Wybierz Premium",
-      "features": {
-        "storage": "{{amount}} Pamięci",
-        "guardians": "Do {{count}} Opiekunów",
-        "manual": "Instrukcja dla Ocalałych",
-        "support": "Priorytetowe Wsparcie E-mail"
-      },
-      "limits": {
-        "storage": "10 GB",
-        "guardians": "5",
-        "fileSize": "50 MB na plik"
-      }
+      "title": "Developer Mode"
     },
     "enterprise": {
-      "name": "Heritage Enterprise",
-      "price": "Niestandardowy",
-      "description": "Dla rodzin i firm o złożonych potrzebach, wymagających najwyższego poziomu usług.",
       "button": "Skontaktuj się ze Sprzedażą",
+      "description": "Dla rodzin i firm o złożonych potrzebach, wymagających najwyższego poziomu usług.",
       "features": {
-        "storage": "{{amount}}+ Pamięci",
         "guardians": "Nieograniczona Liczba Opiekunów",
         "legal": "Koordynacja z Prawnikiem",
         "support": "Dedykowany Menedżer Konta"
       },
       "limits": {
-        "storage": "500 GB",
-        "guardians": "nieograniczona",
-        "fileSize": "100 MB na plik"
-      }
-    }
+        "storage": "500 GB"
+      },
+      "name": "Heritage Enterprise",
+      "price": "Niestandardowy"
+    },
+    "errors": {
+      "checkoutFailed": "Failed to start checkout process"
+    },
+    "freePlan": {
+      "description": "Get started with basic features",
+      "features": {
+        "assets": "5 Assets",
+        "guardians": "2 Guardians",
+        "support": "Basic support",
+        "will": "1 Will document"
+      },
+      "name": "Essential Protector",
+      "price": "Free"
+    },
+    "mainSubtitle": "Zacznij od naszej darmowej opcji lub uaktualnij, aby uzyskać funkcje premium.",
+    "mainTitle": "Wybierz Swój Plan Dziedzictwa",
+    "premium": {
+      "badge": "Najpopularniejszy",
+      "button": "Wybierz Premium",
+      "description": "Zaawansowane funkcje do kompleksowego zarządzania dziedzictwem.",
+      "features": {
+        "manual": "Instrukcja dla Ocalałych",
+        "support": "Priorytetowe Wsparcie E-mail"
+      },
+      "limits": {
+        "guardians": "5",
+        "storage": "10 GB"
+      },
+      "name": "Skarbiec Premium",
+      "period": "/ miesiąc",
+      "price": "89 zł"
+    },
+    "premiumPlan": {
+      "description": "Perfect for individuals and families",
+      "features": {
+        "access": "Emergency access",
+        "assets": "Unlimited Assets",
+        "encryption": "Document encryption",
+        "guardians": "Unlimited Guardians",
+        "history": "Version history",
+        "support": "Priority support",
+        "templates": "Legal templates",
+        "will": "Unlimited Will documents"
+      },
+      "name": "Pakiet Dowodzenia",
+      "price": "$9.99 / month",
+      "upgradeButton": "Upgrade Now"
+    },
+    "starter": {
+      "button": "Zacznij za Darmo",
+      "description": "Idealny na początek ochrony Twojego cyfrowego dziedzictwa.",
+      "features": {
+        "documents": "Podstawowy Skarbiec Dokumentów",
+        "playbook": "Podstawowy Playbook Opiekuna",
+        "support": "Wsparcie Społeczności"
+      },
+      "limits": {
+        "guardians": "3",
+        "storage": "500 MB"
+      },
+      "name": "Heritage Starter",
+      "price": "Darmowy"
+    },
+    "title": "Wybierz Swój Plan Dziedzictwa"
+  },
+  "subscription": {
+    "active": "Aktywna",
+    "activeSubscriptions": "Aktywne Subskrypcje",
+    "allSubscriptions": "Wszystkie Subskrypcje",
+    "allSubscriptionsDesc": "Przegląd wszystkich aktywnych subskrypcji posortowanych według daty odnowienia",
+    "autoRenewal": "Automatyczne Odnawianie: Tak",
+    "cancel": "Anuluj Subskrypcję",
+    "cancelMessage": "Wygląda na to, że Twoja transakcja została anulowana. Spróbuj ponownie lub skontaktuj się z pomocą.",
+    "cancelSuccess": "Subskrypcja pomyślnie anulowana",
+    "cancelTitle": "Płatność Anulowana",
+    "cancellationNotice": "Okres Wypowiedzenia",
+    "costOptimization": "Włącz Sugestie Optymalizacji Kosztów",
+    "costOptimizationDesc": "Otrzymuj sugestie dotyczące optymalizacji i redukcji kosztów subskrypcji",
+    "currentPlan": "Obecny Plan",
+    "dashboard": {
+      "subtitle": "Zarządzaj swoimi subskrypcjami, kosztami i przypomnieniami",
+      "title": "Panel Subskrypcji"
+    },
+    "days": "dni",
+    "daysBefore": "dni przed",
+    "daysUntilRenewal": "dni do odnowienia",
+    "enableTracking": "Włącz Śledzenie Subskrypcji",
+    "enableTrackingDesc": "Automatycznie zarządzaj i śledź dokumenty związane z subskrypcjami",
+    "errors": {
+      "cancelFailed": "Nie udało się anulować subskrypcji",
+      "portalFailed": "Nie udało się otworzyć portalu rozliczeniowego",
+      "resumeFailed": "Nie udało się wznowić subskrypcji"
+    },
+    "exportReport": "Eksportuj Raport",
+    "features": {
+      "basicSupport": "Wsparcie społeczności",
+      "basicWill": "Podstawowy dokument testamentu",
+      "encryption": "Zaawansowane szyfrowanie",
+      "freeDescription": "Uaktualnij, aby odblokować więcej funkcji",
+      "history": "Historia wersji",
+      "limitedGuardians": "Do 2 opiekunów",
+      "premiumDescription": "Masz dostęp do wszystkich funkcji premium",
+      "priority": "Priorytetowe wsparcie",
+      "title": "Funkcje Planu",
+      "unlimited": "Nieograniczone dokumenty i aktywa"
+    },
+    "free": "Darmowa",
+    "loadError": "Nie udało się załadować szczegółów subskrypcji",
+    "manageBilling": "Zarządzaj Rozliczeniami",
+    "manual": "Automatyczne Odnawianie: Nie",
+    "monthlyCost": "Całkowity Miesięczny Koszt",
+    "next90Days": "Następne 90 Dni",
+    "nextBilling": "Następna data rozliczenia",
+    "noUpcomingRenewals": "Brak nadchodzących odnowień w ciągu najbliższych 90 dni",
+    "perMonth": "miesięcznie",
+    "perYear": "rocznie",
+    "planDescription": "Zarządzaj swoją subskrypcją i rozliczeniami",
+    "planName": "Plan",
+    "preferences": "Preferencje Subskrypcji",
+    "preferencesDesc": "Zarządzaj sposobem śledzenia i zarządzania subskrypcjami",
+    "preferencesUpdated": "Preferencje pomyślnie zaktualizowane",
+    "premium": "Premium",
+    "reminderPeriods": "Domyślne Okresy Przypomnień",
+    "renew": "Odnów",
+    "resume": "Wznów Subskrypcję",
+    "resumeSuccess": "Subskrypcja pomyślnie wznowiona",
+    "review": "Przejrzyj",
+    "successMessage": "Dziękujemy za zakup. Twoja subskrypcja została aktywowana.",
+    "successTitle": "Płatność Pomyślna!",
+    "tabs": {
+      "overview": "Przegląd",
+      "settings": "Ustawienia",
+      "upcoming": "Nadchodzące"
+    },
+    "title": "Subskrypcja",
+    "types": {
+      "monthly": "Miesięcznie",
+      "yearly": "Rocznie"
+    },
+    "upcomingRenewals": "Nadchodzące Odnowienia",
+    "upcomingRenewalsTitle": "Alert o Nadchodzących Odnowieniach",
+    "upcomingSoon": "wkrótce",
+    "updateError": "Nie udało się zaktualizować preferencji subskrypcji",
+    "upgradeToPremium": "Uaktualnij do Premium",
+    "yearlyCost": "Całkowity Roczny Koszt"
   },
   "upgradeCard": {
-    "pricing_1": "/pricing",
-    "defaultButtonText": "Uaktualnij do Pakietu Dowodzenia"
+    "defaultButtonText": "Uaktualnij do Pakietu Dowodzenia",
+    "pricing_1": "/pricing"
   }
 }

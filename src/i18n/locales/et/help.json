@@ -1,34 +1,31 @@
 {
-  "_comment": "Shared translations used across the application",
   "help": {
-    "needHelp": "Need Help?",
+    "basedOnProgress": "Based on your current progress, here's what we recommend:",
     "getHelp": "Get Help",
     "helpAndTutorials": "Help & Tutorials",
-    "recommendedForYou": "Recommended for You",
-    "basedOnProgress": "Based on your current progress, here's what we recommend:",
+    "needHelp": "Need Help?",
     "personalizedHelpDescription": "Get personalized help based on where you are in your journey",
-    "recommendedTopics": "Recommended topics",
     "quickTips": {
-      "title": "Quick Tips",
       "tip1": "Start with your most important documents first",
       "tip2": "Add at least one trusted guardian",
       "tip3": "Update your information regularly",
-      "tip4": "Test your guardian's access annually"
+      "tip4": "Test your guardian's access annually",
+      "title": "Quick Tips"
+    },
+    "recommendedForYou": "Recommended for You",
+    "recommendedTopics": "Recommended topics",
+    "stepDetails": {
+      "description": "Description",
+      "estimatedTime": "Estimated time",
+      "gotIt": "Got it!",
+      "minutes": "minutes",
+      "stepByStepInstructions": "Step-by-Step Instructions",
+      "steps": "steps",
+      "videoTutorial": "Video Tutorial",
+      "watchVideoTutorial": "Watch Video Tutorial"
     },
     "topics": {
-      "uploadDocuments": {
-        "title": "Upload Your First Document",
-        "description": "Learn how to securely upload and organize your important documents",
-        "steps": {
-          "1": "Click the 'Upload Document' button in the Organize section",
-          "2": "Select your document file from your computer",
-          "3": "Choose the document type and add a descriptive name",
-          "4": "Set an expiration date if applicable",
-          "5": "Save the document to your secure vault"
-        }
-      },
       "addGuardians": {
-        "title": "Add Your First Guardian",
         "description": "Set up trusted people who can access your information in emergencies",
         "steps": {
           "1": "Click 'Add Guardian' in the Secure section",
@@ -36,32 +33,10 @@
           "3": "Select their roles and responsibilities",
           "4": "Add their contact information",
           "5": "Send them an invitation to accept their role"
-        }
-      },
-      "listAssets": {
-        "title": "List Your Assets",
-        "description": "Document your properties, accounts, and valuable possessions",
-        "steps": {
-          "1": "Click 'Add Item' in the Organize section",
-          "2": "Choose the asset type (property, vehicle, account, etc.)",
-          "3": "Enter the asset name and details",
-          "4": "Add estimated value if desired",
-          "5": "Save the asset to your inventory"
-        }
-      },
-      "designateBeneficiaries": {
-        "title": "Designate Beneficiaries",
-        "description": "Specify who should receive your assets and in what proportions",
-        "steps": {
-          "1": "Click 'Add Beneficiary' in the Transfer section",
-          "2": "Enter the beneficiary's name",
-          "3": "Set their allocation percentage",
-          "4": "Review total allocations (must equal 100%)",
-          "5": "Save your beneficiary list"
-        }
+        },
+        "title": "Add Your First Guardian"
       },
       "createWill": {
-        "title": "Create Your Will",
         "description": "Generate a basic will document based on your information",
         "steps": {
           "1": "Navigate to the Will section",
@@ -69,172 +44,169 @@
           "3": "Review your beneficiaries and assets",
           "4": "Generate the will document",
           "5": "Download and have it properly witnessed"
-        }
+        },
+        "title": "Create Your Will"
+      },
+      "designateBeneficiaries": {
+        "description": "Specify who should receive your assets and in what proportions",
+        "steps": {
+          "1": "Click 'Add Beneficiary' in the Transfer section",
+          "2": "Enter the beneficiary's name",
+          "3": "Set their allocation percentage",
+          "4": "Review total allocations (must equal 100%)",
+          "5": "Save your beneficiary list"
+        },
+        "title": "Designate Beneficiaries"
+      },
+      "listAssets": {
+        "description": "Document your properties, accounts, and valuable possessions",
+        "steps": {
+          "1": "Click 'Add Item' in the Organize section",
+          "2": "Choose the asset type (property, vehicle, account, etc.)",
+          "3": "Enter the asset name and details",
+          "4": "Add estimated value if desired",
+          "5": "Save the asset to your inventory"
+        },
+        "title": "List Your Assets"
+      },
+      "uploadDocuments": {
+        "description": "Learn how to securely upload and organize your important documents",
+        "steps": {
+          "1": "Click the 'Upload Document' button in the Organize section",
+          "2": "Select your document file from your computer",
+          "3": "Choose the document type and add a descriptive name",
+          "4": "Set an expiration date if applicable",
+          "5": "Save the document to your secure vault"
+        },
+        "title": "Upload Your First Document"
       }
-    },
-    "stepDetails": {
-      "description": "Description",
-      "stepByStepInstructions": "Step-by-Step Instructions",
-      "videoTutorial": "Video Tutorial",
-      "watchVideoTutorial": "Watch Video Tutorial",
-      "estimatedTime": "Estimated time",
-      "minutes": "minutes",
-      "steps": "steps",
-      "gotIt": "Got it!"
-    },
-    "priority": {
-      "high": "high",
-      "medium": "medium",
-      "low": "low"
     }
   },
   "helpPage": {
-    "title": "Abi- ja tugikeskus",
-    "subtitle": "Oleme siin teie jaoks. Leidke vastused oma küsimustele või võtke meiega otse ühendust.",
+    "contact": {
+      "call": {
+        "button": "Leppige kokku kõne",
+        "description": "Premium- ja Enterprise-klientidele.",
+        "title": "Leppige kokku kõne (Premiumi klientidele)"
+      },
+      "email": {
+        "button": "Ava e-posti klient",
+        "description": "Üldiste küsimuste ja toe saamiseks.",
+        "title": "Saatke meile e-kiri"
+      },
+      "title": "Ei leidnud, mida otsisite?"
+    },
     "faq": {
-      "title": "Korduma kippuvad küsimused",
       "q1": {
-        "question": "Kas LegacyGuard on turvaline?",
-        "answer": "Jah, turvalisus on meie kõrgeim prioriteet. Me kasutame täielikku krüpteerimist ja null-usalduse arhitektuuri, mis tähendab, et ükski volitamata isik ei pääse teie andmetele juurde, isegi mitte meie. Kõik andmed salvestatakse turvalistes andmekeskustes Euroopa Liidus vastavalt GDPR-ile."
+        "answer": "Jah, turvalisus on meie kõrgeim prioriteet. Me kasutame täielikku krüpteerimist ja null-usalduse arhitektuuri, mis tähendab, et ükski volitamata isik ei pääse teie andmetele juurde, isegi mitte meie. Kõik andmed salvestatakse turvalistes andmekeskustes Euroopa Liidus vastavalt GDPR-ile.",
+        "question": "Kas LegacyGuard on turvaline?"
       },
       "q2": {
-        "question": "Mis juhtub minu andmetega, kui tühistan oma tellimuse?",
-        "answer": "Pärast tühistamist säilitatakse teie andmeid 90 päeva jooksul turvaliselt ainult lugemisrežiimis. Saate oma tellimuse igal ajal selle perioodi jooksul uuesti aktiveerida, et taastada täielik juurdepääs. 90 päeva pärast kustutatakse teie andmed meie süsteemidest turvaliselt ja jäädavalt."
+        "answer": "Pärast tühistamist säilitatakse teie andmeid 90 päeva jooksul turvaliselt ainult lugemisrežiimis. Saate oma tellimuse igal ajal selle perioodi jooksul uuesti aktiveerida, et taastada täielik juurdepääs. 90 päeva pärast kustutatakse teie andmed meie süsteemidest turvaliselt ja jäädavalt.",
+        "question": "Mis juhtub minu andmetega, kui tühistan oma tellimuse?"
       },
       "q3": {
-        "question": "Mis on 'eestkostja'?",
-        "answer": "Eestkostja on usaldusväärne isik (nt partner, õde-vend või õigusala professionaal), kellele annate erilise, piiratud juurdepääsu oma teabele hädaolukordadeks. Eestkostja ei saa teie andmeid muuta; ta saab neid ainult vaadata, et tegutseda teie juhiste järgi."
+        "answer": "Eestkostja on usaldusväärne isik (nt partner, õde-vend või õigusala professionaal), kellele annate erilise, piiratud juurdepääsu oma teabele hädaolukordadeks. Eestkostja ei saa teie andmeid muuta; ta saab neid ainult vaadata, et tegutseda teie juhiste järgi.",
+        "question": "Mis on 'eestkostja'?"
       },
       "q4": {
-        "question": "Mis vahe on 'varamul' ja 'käsiraamatul'?",
-        "answer": "Pärandi varamu on koht, kus te turvaliselt hoiate kõiki oma olulisi dokumente ja varasid. Käsiraamat pärijatele on hoolikalt valitud kogum kõige kriitilisematest kontaktidest, dokumentidest ja juhistest teie varamust, mis on loodud selleks, et teie eestkostjatel oleks kõik oluline ühes kohas."
+        "answer": "Pärandi varamu on koht, kus te turvaliselt hoiate kõiki oma olulisi dokumente ja varasid. Käsiraamat pärijatele on hoolikalt valitud kogum kõige kriitilisematest kontaktidest, dokumentidest ja juhistest teie varamust, mis on loodud selleks, et teie eestkostjatel oleks kõik oluline ühes kohas.",
+        "question": "Mis vahe on 'varamul' ja 'käsiraamatul'?"
       },
       "q5": {
-        "question": "Kas LegacyGuardis loodud testament on õiguslikult siduv?",
-        "answer": "LegacyGuard aitab teil ette valmistada ja korraldada kogu alustöö ja teabe oma testamendi jaoks. Enamikus Euroopa riikides ei asenda digitaalne dokument siiski vajadust ametliku, allkirjastatud (ja sageli notariaalselt tõestatud) dokumendi järele. Soovitame alati konsulteerida lõpliku versiooni osas õigusala spetsialistiga."
-      }
-    },
-    "contact": {
-      "title": "Ei leidnud, mida otsisite?",
-      "email": {
-        "title": "Saatke meile e-kiri",
-        "description": "Üldiste küsimuste ja toe saamiseks.",
-        "button": "Ava e-posti klient"
+        "answer": "LegacyGuard aitab teil ette valmistada ja korraldada kogu alustöö ja teabe oma testamendi jaoks. Enamikus Euroopa riikides ei asenda digitaalne dokument siiski vajadust ametliku, allkirjastatud (ja sageli notariaalselt tõestatud) dokumendi järele. Soovitame alati konsulteerida lõpliku versiooni osas õigusala spetsialistiga.",
+        "question": "Kas LegacyGuardis loodud testament on õiguslikult siduv?"
       },
-      "call": {
-        "title": "Leppige kokku kõne (Premiumi klientidele)",
-        "description": "Premium- ja Enterprise-klientidele.",
-        "button": "Leppige kokku kõne"
-      }
-    }
+      "title": "Korduma kippuvad küsimused"
+    },
+    "subtitle": "Oleme siin teie jaoks. Leidke vastused oma küsimustele või võtke meiega otse ühendust.",
+    "title": "Abi- ja tugikeskus"
   },
   "manual": {
-    "title": "Käsiraamat pärijatele",
+    "contacts": {
+      "addContact": "Lisa kontakt",
+      "addFirstContact": "Lisa oma esimene kontakt",
+      "card": {
+        "edit": "Muuda"
+      },
+      "description": "Olulised isikud, kellega teie pere peaks hädaolukorras ühendust võtma",
+      "empty": {
+        "description": "Alustage oluliste inimeste lisamisest, kellest teie pere peaks teadma.",
+        "title": "Kontakte pole veel lisatud"
+      },
+      "form": {
+        "addButton": "Lisa kontakt",
+        "addTitle": "Lisa tähtis kontakt",
+        "cancel": "Tühista",
+        "description": "Lisage inimesi, kellega teie pere peaks olulistes olukordades ühendust võtma.",
+        "editTitle": "Muuda kontakti",
+        "emailLabel": "E-posti aadress",
+        "emailPlaceholder": "kontakt@example.com",
+        "nameLabel": "Kontakti nimi *",
+        "namePlaceholder": "nt Jaan Tamm",
+        "notesLabel": "Märkmed",
+        "notesPlaceholder": "Lisateave selle kontakti kohta...",
+        "phoneLabel": "Telefoninumber",
+        "phonePlaceholder": "+372 123 4567",
+        "roleLabel": "Roll/amet *",
+        "rolePlaceholder": "nt pereadvokaat, raamatupidaja, arst",
+        "saving": "Salvestan...",
+        "updateButton": "Uuenda kontakt"
+      },
+      "loading": "Laen kontakte...",
+      "messages": {
+        "added": "Kontakt edukalt lisatud!",
+        "deleted": "Kontakt edukalt kustutatud!",
+        "loginRequired": "Kontaktide salvestamiseks peate olema sisse logitud.",
+        "nameAndRoleRequired": "Nimi ja roll on kohustuslikud.",
+        "updated": "Kontakt edukalt uuendatud!"
+      },
+      "title": "Tähtsad kontaktid"
+    },
+    "documents": {
+      "card": {
+        "essentialNote": "See dokument on märgitud teie pärijate jaoks oluliseks."
+      },
+      "description": "Kriitilised dokumendid, millest teie pere peab teadma",
+      "empty": {
+        "description": "Märkige olulised dokumendid oma varamus kui \"võtmedokumendid\", et need siin ilmuksid.",
+        "tip": "Vihje: minge oma varamusse ja lülitage oluliste dokumentide puhul sisse \"Kaasa käsiraamatusse pärijatele\".",
+        "title": "Võtmedokumente pole veel lisatud"
+      },
+      "expiration": {
+        "expired": "Aegunud",
+        "expiresSoon": "Aegub varsti",
+        "expiring": "Aegumas"
+      },
+      "loading": "Laen võtmedokumente...",
+      "title": "Võtmedokumendid"
+    },
+    "instructions": {
+      "autoSaveNote": "Teie juhised salvestatakse automaatselt kirjutamise ajal",
+      "description": "Isiklikud juhised ja sõnumid teie lähedastele",
+      "loading": "Laen juhiseid...",
+      "title": "Viimased soovid ja juhised"
+    },
     "subtitle": "Oluline teave teie lähedastele, kui nad seda kõige rohkem vajavad",
     "tabs": {
       "contacts": "Tähtsad kontaktid",
       "documents": "Võtmedokumendid",
       "instructions": "Juhised"
     },
-    "contacts": {
-      "title": "Tähtsad kontaktid",
-      "description": "Olulised isikud, kellega teie pere peaks hädaolukorras ühendust võtma",
-      "addContact": "Lisa kontakt",
-      "addFirstContact": "Lisa oma esimene kontakt",
-      "loading": "Laen kontakte...",
-      "empty": {
-        "title": "Kontakte pole veel lisatud",
-        "description": "Alustage oluliste inimeste lisamisest, kellest teie pere peaks teadma."
-      },
-      "form": {
-        "editTitle": "Muuda kontakti",
-        "addTitle": "Lisa tähtis kontakt",
-        "description": "Lisage inimesi, kellega teie pere peaks olulistes olukordades ühendust võtma.",
-        "nameLabel": "Kontakti nimi *",
-        "namePlaceholder": "nt Jaan Tamm",
-        "roleLabel": "Roll/amet *",
-        "rolePlaceholder": "nt pereadvokaat, raamatupidaja, arst",
-        "phoneLabel": "Telefoninumber",
-        "phonePlaceholder": "+372 123 4567",
-        "emailLabel": "E-posti aadress",
-        "emailPlaceholder": "kontakt@example.com",
-        "notesLabel": "Märkmed",
-        "notesPlaceholder": "Lisateave selle kontakti kohta...",
-        "updateButton": "Uuenda kontakt",
-        "addButton": "Lisa kontakt",
-        "saving": "Salvestan...",
-        "cancel": "Tühista"
-      },
-      "card": {
-        "edit": "Muuda"
-      },
-      "messages": {
-        "nameAndRoleRequired": "Nimi ja roll on kohustuslikud.",
-        "loginRequired": "Kontaktide salvestamiseks peate olema sisse logitud.",
-        "updated": "Kontakt edukalt uuendatud!",
-        "added": "Kontakt edukalt lisatud!",
-        "deleted": "Kontakt edukalt kustutatud!"
-      },
-      "errors": {
-        "loadFailed": "Kontaktide laadimine ebaõnnestus.",
-        "saveFailed": "Kontakti salvestamine ebaõnnestus.",
-        "deleteFailed": "Kontakti kustutamine ebaõnnestus."
-      }
-    },
-    "documents": {
-      "title": "Võtmedokumendid",
-      "description": "Kriitilised dokumendid, millest teie pere peab teadma",
-      "loading": "Laen võtmedokumente...",
-      "empty": {
-        "title": "Võtmedokumente pole veel lisatud",
-        "description": "Märkige olulised dokumendid oma varamus kui \"võtmedokumendid\", et need siin ilmuksid.",
-        "tip": "Vihje: minge oma varamusse ja lülitage oluliste dokumentide puhul sisse \"Kaasa käsiraamatusse pärijatele\"."
-      },
-      "card": {
-        "essentialNote": "See dokument on märgitud teie pärijate jaoks oluliseks."
-      },
-      "errors": {
-        "loadFailed": "Võtmedokumentide laadimine ebaõnnestus."
-      },
-      "expiration": {
-        "expired": "Aegunud",
-        "expiresSoon": "Aegub varsti",
-        "expiring": "Aegumas"
-      }
-    },
-    "instructions": {
-      "title": "Viimased soovid ja juhised",
-      "description": "Isiklikud juhised ja sõnumid teie lähedastele",
-      "loading": "Laen juhiseid...",
-      "autoSaveNote": "Teie juhised salvestatakse automaatselt kirjutamise ajal",
-      "sections": {
-        "funeral": {
-          "title": "Matusesoovid",
-          "description": "Teie eelistused matusekorralduseks ja tseremooniateks",
-          "placeholder": "nt tuhastamine, ilma ametliku tseremooniata, mängida Frank Sinatra laulu 'My Way'..."
-        },
-        "digitalAccounts": {
-          "title": "Digikontode sulgemine",
-          "description": "Juhised teie digikontode ja veebikohalolu haldamiseks",
-          "placeholder": "nt palun kustutage minu Facebooki profiil, kuid arhiveerige minu Gmail. Kandke minu fotod Google Drive'ist üle..."
-        },
-        "messages": {
-          "title": "Sõnumid lähedastele",
-          "description": "Isiklikud sõnumid ja viimased mõtted teie perele ja sõpradele",
-          "placeholder": "Jagage oma mõtteid, mälestusi ja viimaseid sõnumeid neile, keda armastate..."
-        }
-      },
-      "errors": {
-        "loadFailed": "Juhiste laadimine ebaõnnestus."
-      }
-    }
+    "title": "Käsiraamat pärijatele"
   },
   "testimonials": {
+    "authority": {
+      "advisors": "Soovitatud finantsnõunike poolt",
+      "attorneys": "Usaldatud pereadvokaatide poolt",
+      "counselors": "Toetatud leinakonsultantide poolt"
+    },
     "badge": "Päris pered võtavad kontrolli",
-    "title": "15 000+ Euroopa pere usaldab",
-    "subtitle": "Vaadake, kuidas pered nagu teie leidsid turvalisuse ja rahu Pärandi varamuga",
-    "verified": "Kinnitatud pere",
-    "trustedBy": "Usaldatud ja soovitatud",
+    "compliance": {
+      "dataProtection": "Andmekaitse sertifitseeritud",
+      "gdpr": "GDPR-nõuetele vastav",
+      "iso": "ISO 27001 sertifitseeritud"
+    },
     "stats": {
       "families": "15 000+",
       "familiesLabel": "Euroopa peret kaitstud",
@@ -247,37 +219,30 @@
     },
     "stories": {
       "1": {
-        "name": "Michael K.",
-        "role": "Kolmekordne isa",
+        "highlight": "✨ Seadistatud ainult 2 tunniga, kaitstes 3 last ja abikaasat",
         "location": "München, Saksamaa",
+        "name": "Michael K.",
         "quote": "Pärast oma venna ootamatut õnnetust nägin, kuidas mu õde-õde nädalaid püüdis leida olulisi dokumente ja paroole. Siis teadsin, et ei saa lasta samal asjal juhtuda minu perega. Nüüd on kõik korraldatud ja mu abikaasa teab täpselt, kust leida, mida ta vajab. Olla ettevalmistatud ja kontrollis on hindamatu.",
-        "highlight": "✨ Seadistatud ainult 2 tunniga, kaitstes 3 last ja abikaasat"
+        "role": "Kolmekordne isa"
       },
       "2": {
-        "name": "Anna S.",
-        "role": "Äriomanik",
+        "highlight": "💼 Äri ja isiklik elu korraldatud ühes turvalises kohas",
         "location": "Viin, Austria",
+        "name": "Anna S.",
         "quote": "Kui üksikema, kes juhib äri, muretsesin pidevalt, mis juhtuks, kui minuga midagi juhtuks. Pärandi varamu aitas mul kõike korraldada - alates ärikontodest kuni laste kooliteateni. Mu õde nüüd juurdepääs kõigele, mida ta vajaks, et astuda minu asemele. Ma magan nii palju paremini, teades, et nad on kaitstud.",
-        "highlight": "💼 Äri ja isiklik elu korraldatud ühes turvalises kohas"
+        "role": "Äriomanik"
       },
       "3": {
-        "name": "Thomas R.",
-        "role": "Pensionil õpetaja",
+        "highlight": "❤️ 40 aastat pere ajalugu säilitatud ja kaitstud",
         "location": "Zürich, Šveits",
+        "name": "Thomas R.",
         "quote": "Mu abikaasal on varajane dementsus ja mõistsin, et pean ette valmistama, kui veel suudan. Pärandi varamu tegi lihtsaks meie 40-aastase kooselu korraldamise. Meie lapsed nüüd selged juhised ja juurdepääs kõigele. See on tõonud kogu meie pere lähemale, teades, et oleme ettevalmistatud ükskõik mis juhtuks.",
-        "highlight": "❤️ 40 aastat pere ajalugu säilitatud ja kaitstud"
+        "role": "Pensionil õpetaja"
       }
     },
-    "authority": {
-      "advisors": "Soovitatud finantsnõunike poolt",
-      "attorneys": "Usaldatud pereadvokaatide poolt",
-      "counselors": "Toetatud leinakonsultantide poolt"
-    },
-    "compliance": {
-      "gdpr": "GDPR-nõuetele vastav",
-      "dataProtection": "Andmekaitse sertifitseeritud",
-      "iso": "ISO 27001 sertifitseeritud"
-    },
-    "bottomCta": {}
+    "subtitle": "Vaadake, kuidas pered nagu teie leidsid turvalisuse ja rahu Pärandi varamuga",
+    "title": "15 000+ Euroopa pere usaldab",
+    "trustedBy": "Usaldatud ja soovitatud",
+    "verified": "Kinnitatud pere"
   }
 }

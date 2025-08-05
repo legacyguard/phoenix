@@ -1,34 +1,31 @@
 {
-  "_comment": "Sdílené překlady používané napříč aplikací",
   "help": {
-    "needHelp": "Potřebujete pomoc?",
+    "basedOnProgress": "Na základě vašeho aktuálního postupu doporučujeme:",
     "getHelp": "Získat pomoc",
     "helpAndTutorials": "Nápověda a návody",
-    "recommendedForYou": "Doporučeno pro vás",
-    "basedOnProgress": "Na základě vašeho aktuálního postupu doporučujeme:",
+    "needHelp": "Potřebujete pomoc?",
     "personalizedHelpDescription": "Získejte personalizovanou pomoc podle toho, kde se právě nacházíte",
-    "recommendedTopics": "Doporučená témata",
     "quickTips": {
-      "title": "Rychlé tipy",
       "tip1": "Začněte nejdůležitějšími dokumenty",
       "tip2": "Přidejte alespoň jednoho důvěrníka",
       "tip3": "Pravidelně aktualizujte své informace",
-      "tip4": "Testujte přístup důvěrníka každý rok"
+      "tip4": "Testujte přístup důvěrníka každý rok",
+      "title": "Rychlé tipy"
+    },
+    "recommendedForYou": "Doporučeno pro vás",
+    "recommendedTopics": "Doporučená témata",
+    "stepDetails": {
+      "description": "Popis",
+      "estimatedTime": "Odhadovaný čas",
+      "gotIt": "Rozumím!",
+      "minutes": "minut",
+      "stepByStepInstructions": "Podrobný návod",
+      "steps": "kroky",
+      "videoTutorial": "Videonávod",
+      "watchVideoTutorial": "Sledovat videonávod"
     },
     "topics": {
-      "uploadDocuments": {
-        "title": "Nahrajte svůj první dokument",
-        "description": "Naučte se bezpečně nahrávat a organizovat důležité dokumenty",
-        "steps": {
-          "1": "Klikněte na tlačítko 'Nahrát dokument' v sekci Organizace",
-          "2": "Vyberte soubor dokumentu z počítače",
-          "3": "Zvolte typ dokumentu a přidejte popisný název",
-          "4": "Nastavte datum vypršení platnosti, pokud je to relevantní",
-          "5": "Uložte dokument do svého zabezpečeného trezoru"
-        }
-      },
       "addGuardians": {
-        "title": "Přidejte svého prvního důvěrníka",
         "description": "Nastavte důvěryhodné osoby, které mají v nouzi přístup k vašim informacím",
         "steps": {
           "1": "Klikněte na 'Přidat důvěrníka' v sekci Zabezpečení",
@@ -36,32 +33,10 @@
           "3": "Zvolte jeho role a odpovědnosti",
           "4": "Přidejte kontaktní informace",
           "5": "Odešlete mu pozvánku k přijetí role"
-        }
-      },
-      "listAssets": {
-        "title": "Seznamte svůj majetek",
-        "description": "Evidujte své nemovitosti, účty a cenné věci",
-        "steps": {
-          "1": "Klikněte na 'Přidat položku' v sekci Organizace",
-          "2": "Vyberte typ aktiva (nemovitost, vozidlo, účet atd.)",
-          "3": "Zadejte název a detaily aktiva",
-          "4": "Přidejte odhadovanou hodnotu, pokud chcete",
-          "5": "Uložte aktivum do svého inventáře"
-        }
-      },
-      "designateBeneficiaries": {
-        "title": "Určete obmyšlené",
-        "description": "Určete, kdo má obdržet váš majetek a v jakých podílech",
-        "steps": {
-          "1": "Klikněte na 'Přidat obmyšleného' v sekci Převod",
-          "2": "Zadejte jméno obmyšleného",
-          "3": "Nastavte jeho procentuální podíl",
-          "4": "Zkontrolujte celkové rozdělení (musí být 100 %)",
-          "5": "Uložte seznam obmyšlených"
-        }
+        },
+        "title": "Přidejte svého prvního důvěrníka"
       },
       "createWill": {
-        "title": "Vytvořte svou závěť",
         "description": "Vygenerujte základní dokument závěti podle vašich údajů",
         "steps": {
           "1": "Přejděte do sekce Závěť",
@@ -69,172 +44,169 @@
           "3": "Zkontrolujte obmyšlené a majetek",
           "4": "Vygenerujte dokument závěti",
           "5": "Stáhněte a nechte řádně podepsat svědky"
-        }
+        },
+        "title": "Vytvořte svou závěť"
+      },
+      "designateBeneficiaries": {
+        "description": "Určete, kdo má obdržet váš majetek a v jakých podílech",
+        "steps": {
+          "1": "Klikněte na 'Přidat obmyšleného' v sekci Převod",
+          "2": "Zadejte jméno obmyšleného",
+          "3": "Nastavte jeho procentuální podíl",
+          "4": "Zkontrolujte celkové rozdělení (musí být 100 %)",
+          "5": "Uložte seznam obmyšlených"
+        },
+        "title": "Určete obmyšlené"
+      },
+      "listAssets": {
+        "description": "Evidujte své nemovitosti, účty a cenné věci",
+        "steps": {
+          "1": "Klikněte na 'Přidat položku' v sekci Organizace",
+          "2": "Vyberte typ aktiva (nemovitost, vozidlo, účet atd.)",
+          "3": "Zadejte název a detaily aktiva",
+          "4": "Přidejte odhadovanou hodnotu, pokud chcete",
+          "5": "Uložte aktivum do svého inventáře"
+        },
+        "title": "Seznamte svůj majetek"
+      },
+      "uploadDocuments": {
+        "description": "Naučte se bezpečně nahrávat a organizovat důležité dokumenty",
+        "steps": {
+          "1": "Klikněte na tlačítko 'Nahrát dokument' v sekci Organizace",
+          "2": "Vyberte soubor dokumentu z počítače",
+          "3": "Zvolte typ dokumentu a přidejte popisný název",
+          "4": "Nastavte datum vypršení platnosti, pokud je to relevantní",
+          "5": "Uložte dokument do svého zabezpečeného trezoru"
+        },
+        "title": "Nahrajte svůj první dokument"
       }
-    },
-    "stepDetails": {
-      "description": "Popis",
-      "stepByStepInstructions": "Podrobný návod",
-      "videoTutorial": "Videonávod",
-      "watchVideoTutorial": "Sledovat videonávod",
-      "estimatedTime": "Odhadovaný čas",
-      "minutes": "minut",
-      "steps": "kroky",
-      "gotIt": "Rozumím!"
-    },
-    "priority": {
-      "high": "vysoká",
-      "medium": "střední",
-      "low": "nízká"
     }
   },
   "helpPage": {
-    "title": "Centrum nápovědy a podpory",
-    "subtitle": "Jsme tu pro vás. Najděte odpovědi na své otázky nebo nás kontaktujte přímo.",
+    "contact": {
+      "call": {
+        "button": "Naplánovat hovor",
+        "description": "Pro Premium a Enterprise zákazníky.",
+        "title": "Domluvit hovor (pro Premium)"
+      },
+      "email": {
+        "button": "Otevřít e-mailového klienta",
+        "description": "Pro obecné dotazy a podporu.",
+        "title": "Napište nám e-mail"
+      },
+      "title": "Nenašli jste, co jste hledali?"
+    },
     "faq": {
-      "title": "Často kladené otázky",
       "q1": {
-        "question": "Je LegacyGuard bezpečný?",
-        "answer": "Ano, bezpečnost je naší nejvyšší prioritou. Používáme end-to-end šifrování a architekturu nulové důvěry, což znamená, že k vašim datům nemá přístup žádná neoprávněná osoba, ani my. Všechna data jsou uložena v zabezpečených datových centrech v EU v souladu s GDPR."
+        "answer": "Ano, bezpečnost je naší nejvyšší prioritou. Používáme end-to-end šifrování a architekturu nulové důvěry, což znamená, že k vašim datům nemá přístup žádná neoprávněná osoba, ani my. Všechna data jsou uložena v zabezpečených datových centrech v EU v souladu s GDPR.",
+        "question": "Je LegacyGuard bezpečný?"
       },
       "q2": {
-        "question": "Co se stane s mými daty, když zruším předplatné?",
-        "answer": "Po zrušení předplatného zůstávají vaše data bezpečně uložena v režimu pouze pro čtení po dobu 90 dnů. Během této doby můžete předplatné kdykoliv obnovit. Po 90 dnech budou vaše data bezpečně a trvale smazána z našich systémů."
+        "answer": "Po zrušení předplatného zůstávají vaše data bezpečně uložena v režimu pouze pro čtení po dobu 90 dnů. Během této doby můžete předplatné kdykoliv obnovit. Po 90 dnech budou vaše data bezpečně a trvale smazána z našich systémů.",
+        "question": "Co se stane s mými daty, když zruším předplatné?"
       },
       "q3": {
-        "question": "Co je to \"Důvěrník\"?",
-        "answer": "Důvěrník je osoba, které důvěřujete (např. partner, sourozenec, právník), které dáte speciální, omezený přístup k vašim informacím pro případy nouze. Nemůže měnit vaše data, pouze je vidí a může podle nich jednat."
+        "answer": "Důvěrník je osoba, které důvěřujete (např. partner, sourozenec, právník), které dáte speciální, omezený přístup k vašim informacím pro případy nouze. Nemůže měnit vaše data, pouze je vidí a může podle nich jednat.",
+        "question": "Co je to \"Důvěrník\"?"
       },
       "q4": {
-        "question": "Jaký je rozdíl mezi \"Trezorem\" a \"Příručkou\"?",
-        "answer": "Heritage Vault je místo, kde bezpečně uchováváte všechny důležité dokumenty a svůj majetek. Survivor's Manual je výběr nejdůležitějších kontaktů, dokumentů a instrukcí z vašeho trezoru, aby je měli důvěrníci vždy po ruce na jednom místě."
+        "answer": "Heritage Vault je místo, kde bezpečně uchováváte všechny důležité dokumenty a svůj majetek. Survivor's Manual je výběr nejdůležitějších kontaktů, dokumentů a instrukcí z vašeho trezoru, aby je měli důvěrníci vždy po ruce na jednom místě.",
+        "question": "Jaký je rozdíl mezi \"Trezorem\" a \"Příručkou\"?"
       },
       "q5": {
-        "question": "Je závěť vytvořená v LegacyGuard právně závazná?",
-        "answer": "LegacyGuard vám pomůže připravit a zorganizovat všechny podklady a informace pro závěť. Ve většině evropských zemí však digitální dokument nenahrazuje oficiální, podepsaný (a často notářsky ověřený) dokument. Doporučujeme vždy finální verzi konzultovat s právníkem."
-      }
-    },
-    "contact": {
-      "title": "Nenašli jste, co jste hledali?",
-      "email": {
-        "title": "Napište nám e-mail",
-        "description": "Pro obecné dotazy a podporu.",
-        "button": "Otevřít e-mailového klienta"
+        "answer": "LegacyGuard vám pomůže připravit a zorganizovat všechny podklady a informace pro závěť. Ve většině evropských zemí však digitální dokument nenahrazuje oficiální, podepsaný (a často notářsky ověřený) dokument. Doporučujeme vždy finální verzi konzultovat s právníkem.",
+        "question": "Je závěť vytvořená v LegacyGuard právně závazná?"
       },
-      "call": {
-        "title": "Domluvit hovor (pro Premium)",
-        "description": "Pro Premium a Enterprise zákazníky.",
-        "button": "Naplánovat hovor"
-      }
-    }
+      "title": "Často kladené otázky"
+    },
+    "subtitle": "Jsme tu pro vás. Najděte odpovědi na své otázky nebo nás kontaktujte přímo.",
+    "title": "Centrum nápovědy a podpory"
   },
   "manual": {
-    "title": "Příručka pro pozůstalé",
+    "contacts": {
+      "addContact": "Přidat kontakt",
+      "addFirstContact": "Přidejte svůj první kontakt",
+      "card": {
+        "edit": "Upravit"
+      },
+      "description": "Klíčové osoby, které by vaše rodina měla kontaktovat v případě nouze.",
+      "empty": {
+        "description": "Začněte přidáním důležitých osob, o kterých by vaše rodina měla vědět.",
+        "title": "Zatím nebyly přidány žádné kontakty."
+      },
+      "form": {
+        "addButton": "Přidat kontakt",
+        "addTitle": "Přidat důležitý kontakt",
+        "cancel": "Zrušit",
+        "description": "Přidejte osoby, které by vaše rodina měla kontaktovat v důležitých situacích.",
+        "editTitle": "Upravit kontakt",
+        "emailLabel": "E-mailová adresa",
+        "emailPlaceholder": "kontakt@example.com",
+        "nameLabel": "Jméno kontaktu *",
+        "namePlaceholder": "např. Jan Novák",
+        "notesLabel": "Poznámky",
+        "notesPlaceholder": "Další informace o tomto kontaktu...",
+        "phoneLabel": "Telefonní číslo",
+        "phonePlaceholder": "+420 123 456 789",
+        "roleLabel": "Role/Profese *",
+        "rolePlaceholder": "např. Rodinný právník, Účetní, Lékař",
+        "saving": "Ukládám...",
+        "updateButton": "Aktualizovat kontakt"
+      },
+      "loading": "Načítání kontaktů...",
+      "messages": {
+        "added": "Kontakt byl úspěšně přidán!",
+        "deleted": "Kontakt byl úspěšně smazán!",
+        "loginRequired": "Pro uložení kontaktů musíte být přihlášeni.",
+        "nameAndRoleRequired": "Jméno a role jsou povinné.",
+        "updated": "Kontakt byl úspěšně aktualizován!"
+      },
+      "title": "Důležité kontakty"
+    },
+    "documents": {
+      "card": {
+        "essentialNote": "Tento dokument je označen jako zásadní pro vaše pozůstalé."
+      },
+      "description": "Kritické dokumenty, o kterých musí vaše rodina vědět.",
+      "empty": {
+        "description": "Označte důležité dokumenty jako \"klíčové dokumenty\" z vašeho trezoru, aby se zde objevily.",
+        "tip": "Tip: Přejděte do svého trezoru a přepněte možnost \"Zahrnout do Příručky pro pozůstalé\" pro důležité dokumenty.",
+        "title": "Zatím nebyly přidány žádné klíčové dokumenty."
+      },
+      "expiration": {
+        "expired": "Platnost vypršela",
+        "expiresSoon": "Platnost brzy vyprší",
+        "expiring": "Platnost končí"
+      },
+      "loading": "Načítání klíčových dokumentů...",
+      "title": "Klíčové dokumenty"
+    },
+    "instructions": {
+      "autoSaveNote": "Vaše pokyny se automaticky ukládají při psaní.",
+      "description": "Osobní pokyny a vzkazy pro vaše blízké.",
+      "loading": "Načítání pokynů...",
+      "title": "Poslední přání a pokyny"
+    },
     "subtitle": "Základní informace pro vaše blízké, když je nejvíce potřebují.",
     "tabs": {
       "contacts": "Důležité kontakty",
       "documents": "Důležité dokumenty",
       "instructions": "Pokyny"
     },
-    "contacts": {
-      "title": "Důležité kontakty",
-      "description": "Klíčové osoby, které by vaše rodina měla kontaktovat v případě nouze.",
-      "addContact": "Přidat kontakt",
-      "addFirstContact": "Přidejte svůj první kontakt",
-      "loading": "Načítání kontaktů...",
-      "empty": {
-        "title": "Zatím nebyly přidány žádné kontakty.",
-        "description": "Začněte přidáním důležitých osob, o kterých by vaše rodina měla vědět."
-      },
-      "form": {
-        "editTitle": "Upravit kontakt",
-        "addTitle": "Přidat důležitý kontakt",
-        "description": "Přidejte osoby, které by vaše rodina měla kontaktovat v důležitých situacích.",
-        "nameLabel": "Jméno kontaktu *",
-        "namePlaceholder": "např. Jan Novák",
-        "roleLabel": "Role/Profese *",
-        "rolePlaceholder": "např. Rodinný právník, Účetní, Lékař",
-        "phoneLabel": "Telefonní číslo",
-        "phonePlaceholder": "+420 123 456 789",
-        "emailLabel": "E-mailová adresa",
-        "emailPlaceholder": "kontakt@example.com",
-        "notesLabel": "Poznámky",
-        "notesPlaceholder": "Další informace o tomto kontaktu...",
-        "updateButton": "Aktualizovat kontakt",
-        "addButton": "Přidat kontakt",
-        "saving": "Ukládám...",
-        "cancel": "Zrušit"
-      },
-      "card": {
-        "edit": "Upravit"
-      },
-      "messages": {
-        "nameAndRoleRequired": "Jméno a role jsou povinné.",
-        "loginRequired": "Pro uložení kontaktů musíte být přihlášeni.",
-        "updated": "Kontakt byl úspěšně aktualizován!",
-        "added": "Kontakt byl úspěšně přidán!",
-        "deleted": "Kontakt byl úspěšně smazán!"
-      },
-      "errors": {
-        "loadFailed": "Načtení kontaktů se nezdařilo.",
-        "saveFailed": "Uložení kontaktu se nezdařilo.",
-        "deleteFailed": "Smazání kontaktu se nezdařilo."
-      }
-    },
-    "documents": {
-      "title": "Klíčové dokumenty",
-      "description": "Kritické dokumenty, o kterých musí vaše rodina vědět.",
-      "loading": "Načítání klíčových dokumentů...",
-      "empty": {
-        "title": "Zatím nebyly přidány žádné klíčové dokumenty.",
-        "description": "Označte důležité dokumenty jako \"klíčové dokumenty\" z vašeho trezoru, aby se zde objevily.",
-        "tip": "Tip: Přejděte do svého trezoru a přepněte možnost \"Zahrnout do Příručky pro pozůstalé\" pro důležité dokumenty."
-      },
-      "card": {
-        "essentialNote": "Tento dokument je označen jako zásadní pro vaše pozůstalé."
-      },
-      "errors": {
-        "loadFailed": "Načtení klíčových dokumentů se nezdařilo."
-      },
-      "expiration": {
-        "expired": "Platnost vypršela",
-        "expiresSoon": "Platnost brzy vyprší",
-        "expiring": "Platnost končí"
-      }
-    },
-    "instructions": {
-      "title": "Poslední přání a pokyny",
-      "description": "Osobní pokyny a vzkazy pro vaše blízké.",
-      "loading": "Načítání pokynů...",
-      "autoSaveNote": "Vaše pokyny se automaticky ukládají při psaní.",
-      "sections": {
-        "funeral": {
-          "title": "Pohřební přání",
-          "description": "Vaše preference pro pohřební uspořádání a obřady.",
-          "placeholder": "např. Kremace, žádný formální obřad, přehrajte 'My Way' od Franka Sinatry..."
-        },
-        "digitalAccounts": {
-          "title": "Ukončení digitálních účtů",
-          "description": "Pokyny pro nakládání s vašimi digitálními účty a online přítomností.",
-          "placeholder": "např. Prosím, smažte můj profil na Facebooku, ale archivujte můj Gmail. Přeneste mé fotky z Google Drive na..."
-        },
-        "messages": {
-          "title": "Vzkazy pro blízké",
-          "description": "Osobní vzkazy a poslední myšlenky pro vaši rodinu a přátele.",
-          "placeholder": "Podělte se o své myšlenky, vzpomínky a poslední vzkazy s těmi, které milujete..."
-        }
-      },
-      "errors": {
-        "loadFailed": "Načtení pokynů se nezdařilo."
-      }
-    }
+    "title": "Příručka pro pozůstalé"
   },
   "testimonials": {
+    "authority": {
+      "advisors": "Doporučováno finančními poradci",
+      "attorneys": "Důvěřováno rodinnými právníky",
+      "counselors": "Schváleno poradci pro truchlení"
+    },
     "badge": "Skutečné rodiny, které přebírají kontrolu",
-    "title": "Důvěřuje více než 15 000 evropských rodin",
-    "subtitle": "Podívejte se, jak rodiny jako ta vaše našly pocit bezpečí a klidu s Trezorem dědictví",
-    "verified": "Ověřená rodina",
-    "trustedBy": "Důvěřováno a doporučováno",
+    "compliance": {
+      "dataProtection": "Certifikovaná ochrana dat",
+      "gdpr": "V souladu s GDPR",
+      "iso": "Certifikováno ISO 27001"
+    },
     "stats": {
       "families": "15 000+",
       "familiesLabel": "Evropských rodin chráněno",
@@ -247,38 +219,30 @@
     },
     "stories": {
       "1": {
-        "name": "Michael K.",
-        "role": "Otec tří dětí",
+        "highlight": "✨ Nastaveno za pouhé 2 hodiny, chrání 3 děti a manžela",
         "location": "Mnichov, Německo",
+        "name": "Michael K.",
         "quote": "Po náhlé nehodě mého bratra jsem viděl, jak se moje švagrová týdny potýká s hledáním důležitých dokumentů a hesel. Tehdy jsem pochopil, že nemohu dovolit, aby se totéž stalo mé rodině. Teď je vše organizované a moje manželka ví přesně, kde najít to, co potřebuje. Být připravený a kontrolovaný je k nezaplacení.",
-        "highlight": "✨ Nastaveno za pouhé 2 hodiny, chrání 3 děti a manžela"
+        "role": "Otec tří dětí"
       },
       "2": {
-        "name": "Anna S.",
-        "role": "Majitelka podniku",
+        "highlight": "💼 Obchodní a osobní život organizovaný na jednom bezpečném místě",
         "location": "Vídeň, Rakousko",
+        "name": "Anna S.",
         "quote": "Jako samoživitelka řídící podnik jsem se neustále obávala, co se stane, když se mi něco stane. Trezor dědictví mi pomohl organizovat vše - od obchodních účtů po informace o škole mých dětí. Moje sestra má nyní přístup ke všemu, co potřebuje k zásahu. Spím mnohem lépe, když vím, že jsou chráněni.",
-        "highlight": "💼 Obchodní a osobní život organizovaný na jednom bezpečném místě"
+        "role": "Majitelka podniku"
       },
       "3": {
-        "name": "Thomas R.",
-        "role": "Důchodce učitel",
+        "highlight": "❤️ 40 let rodinné historie zachováno a chráněno",
         "location": "Curych, Švýcarsko",
+        "name": "Thomas R.",
         "quote": "Moje manželka má ranou demenci a pochopil jsem, že se musím připravit, dokud ještě mohu. Trezor dědictví udělal organizování našich 40 let života společně jednoduchým. Naše děti mají nyní jasné pokyny a přístup ke všemu. To sblížilo celou naši rodinu, když víme, že jsme připraveni na cokoliv, co přijde.",
-        "highlight": "❤️ 40 let rodinné historie zachováno a chráněno"
+        "role": "Důchodce učitel"
       }
     },
-    "authority": {
-      "advisors": "Doporučováno finančními poradci",
-      "attorneys": "Důvěřováno rodinnými právníky",
-      "counselors": "Schváleno poradci pro truchlení"
-    },
-    "compliance": {
-      "gdpr": "V souladu s GDPR",
-      "dataProtection": "Certifikovaná ochrana dat",
-      "iso": "Certifikováno ISO 27001"
-    },
-    "bottomCta": {}
+    "subtitle": "Podívejte se, jak rodiny jako ta vaše našly pocit bezpečí a klidu s Trezorem dědictví",
+    "title": "Důvěřuje více než 15 000 evropských rodin",
+    "trustedBy": "Důvěřováno a doporučováno",
+    "verified": "Ověřená rodina"
   }
 }
-

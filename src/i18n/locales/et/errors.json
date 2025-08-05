@@ -1,98 +1,68 @@
 {
-  "_comment": "Shared translations used across the application",
-  "errorBoundary": {
-    "title": "Vabandust! Midagi läks valesti",
-    "description": "Vabandame ebamugavuste pärast. Ilmnes ootamatu viga.",
-    "errorId": "Vea ID",
-    "tryAgain": "Proovi uuesti",
-    "reloadPage": "Laadi leht uuesti",
-    "goToHomepage": "Mine avalehele",
-    "technicalDetails": "Tehnilised üksikasjad",
-    "hide": "Peida",
-    "show": "Näita",
-    "stackTrace": "Stack Trace",
-    "componentStack": "Component Stack",
-    "helpText": "Kui probleem püsib, võtke ühendust meie toega ja edastage vea ID."
-  },
-  "errorTest": {
-    "title": "Vigade logimise test",
-    "description": "Test error handling and logging functionality",
-    "triggerSyncError": "Käivita sünkroonimisviga (ErrorBoundary)",
-    "triggerAsyncError": "Käivita asünkroonimisviga",
-    "logRegularError": "Logi tavaline viga",
-    "logCriticalError": "Logi kriitiline viga",
-    "triggerAlert": "Käivita teavitus (6 kriitilist viga)",
-    "errorMessages": {
-      "testError": "Test error from ErrorTest component",
-      "testAsyncRejection": "Test asünkroonset tagasilükkamist",
-      "manualTestError": "Käsitsi testi viga",
-      "testCriticalError": "Kriitilise vea test",
-      "criticalErrorWithIndex": "Critical error {{index}}"
-    },
-    "descriptions": {
-      "syncError": "Triggers a synchronous error that will be caught by the ErrorBoundary",
-      "asyncError": "Triggers an asynchronous error that will be caught by error handling",
-      "regularError": "Logs a regular error for testing error tracking",
-      "criticalError": "Logs a critical error for testing critical error handling",
-      "multipleErrors": "Triggers multiple critical errors to test alert thresholds"
-    },
-    "context": {
-      "component": "ErrorTest",
-      "action": "button-click",
-      "severity": "high"
-    },
-    "notifications": {
-      "errorLogged": "Viga edukalt logitud",
-      "criticalErrorLogged": "Critical error logged successfully",
-      "multipleErrorsTriggered": "Multiple critical errors triggered",
-      "errorBoundaryTriggered": "Vigade piir aktiveeritud",
-      "asyncErrorCaught": "Async error caught and handled"
-    }
-  },
   "debug": {
     "panel": {
-      "title": "Debug Panel",
-      "recentErrors": "Hiljutised rakenduse vead",
-      "technicalDetails": "Technical Details",
-      "tabs": {
-        "list": "List",
-        "details": "Details"
-      },
-      "errorCount": "{{count}} errors",
       "actions": {
-        "downloadErrors": "Download errors",
-        "clearAllErrors": "Tühjenda kõik vead"
-      },
-      "messages": {
-        "errorsCleared": "Kõik vead tühjendatud",
-        "errorCopied": "Error copied to clipboard",
-        "errorsDownloaded": "Errors downloaded"
+        "clearAllErrors": "Tühjenda kõik vead",
+        "downloadErrors": "Download errors"
       },
       "error": {
-        "unknownError": "Unknown Error",
+        "errorMessage": "Error Message",
         "noMessage": "No message",
-        "errorMessage": "Error Message"
-      },
-      "sections": {
-        "stackTrace": "Stack Trace",
-        "context": "Context",
-        "location": "Location",
-        "browserInfo": "Browser Information",
-        "time": "Time"
+        "unknownError": "Unknown Error"
       },
       "fields": {
-        "url": "URL:",
         "path": "Path:",
         "query": "Query:",
+        "url": "URL:",
         "userAgent": "Kasutaja agent:",
         "viewport": "Vaateala:"
-      }
+      },
+      "messages": {
+        "errorCopied": "Error copied to clipboard",
+        "errorsCleared": "Kõik vead tühjendatud",
+        "errorsDownloaded": "Errors downloaded"
+      },
+      "recentErrors": "Hiljutised rakenduse vead",
+      "sections": {
+        "browserInfo": "Browser Information",
+        "context": "Context",
+        "location": "Location",
+        "stackTrace": "Stack Trace",
+        "time": "Time"
+      },
+      "tabs": {
+        "details": "Details",
+        "list": "List"
+      },
+      "title": "Debug Panel"
     }
+  },
+  "errorBoundary": {
+    "componentStack": "Component Stack",
+    "description": "Vabandame ebamugavuste pärast. Ilmnes ootamatu viga.",
+    "errorId": "Vea ID",
+    "goToHomepage": "Mine avalehele",
+    "helpText": "Kui probleem püsib, võtke ühendust meie toega ja edastage vea ID.",
+    "hide": "Peida",
+    "reloadPage": "Laadi leht uuesti",
+    "show": "Näita",
+    "stackTrace": "Stack Trace",
+    "technicalDetails": "Tehnilised üksikasjad",
+    "title": "Vabandust! Midagi läks valesti",
+    "tryAgain": "Proovi uuesti"
+  },
+  "errorTest": {
+    "logCriticalError": "Logi kriitiline viga",
+    "logRegularError": "Logi tavaline viga",
+    "title": "Vigade logimise test",
+    "triggerAlert": "Käivita teavitus (6 kriitilist viga)",
+    "triggerAsyncError": "Käivita asünkroonimisviga",
+    "triggerSyncError": "Käivita sünkroonimisviga (ErrorBoundary)"
   },
   "test": {
     "environment": {
-      "title": "Ainult testkeskkond",
-      "description": "See leht on veateate süsteemi testimiseks. Eemaldage see marsruut enne tootmiskeskkonda juurutamist."
+      "description": "See leht on veateate süsteemi testimiseks. Eemaldage see marsruut enne tootmiskeskkonda juurutamist.",
+      "title": "Ainult testkeskkond"
     }
   }
 }

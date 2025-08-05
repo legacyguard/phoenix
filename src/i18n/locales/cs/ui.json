@@ -1,398 +1,179 @@
 {
-  "_comment": "Sdílené překlady používané napříč aplikací",
-  "navigation": {
-    "dashboard": "Přehled",
-    "vault": "Trezor",
-    "trustedCircle": {
-      "title": "Váš důvěryhodný kruh",
-      "subtitle": "Lidé, kterým důvěřujete a kteří pomáhají chránit a pečovat o vaši rodinu a dědictví.",
-      "responsibilities": "Jejich odpovědnosti:",
-      "preparationStatus": "Stav připravenosti:",
-      "informedOfRole": "Byl informován o své roli",
-      "acceptedResponsibility": "Přijal odpovědnost",
-      "hasAccessToDocuments": "Má přístup k potřebným dokumentům",
-      "reviewedEmergencyProcedures": "Prošel nouzové postupy",
-      "addTrustedPerson": "+ Přidat důvěryhodnou osobu",
-      "preparednessStatus": {
-        "wellPrepared": "Dobře připraveno",
-        "partiallyPrepared": "Částečně připraveno",
-        "needsAttention": "Vyžaduje pozornost"
-      },
-      "buttonText": {
-        "prepared": "✓ {{name}} je připraven(a)",
-        "prepareNow": "Připravit {{name}} nyní"
-      },
-      "mockData": {
-        "sarah": {
-          "name": "Sarah Johnson",
-          "relationship": "Manželka",
-          "responsibilities": {
-            "bankAccess": "Může přistupovat ke všem bankovním účtům kvůli placení účtů a správě domácnosti.",
-            "inheritAssets": "Dědí rodinný dům, chatu a všechny úspory.",
-            "medicalPower": "Má plnou moc v oblasti zdravotní péče."
-          }
-        },
-        "michael": {
-          "name": "Michael Johnson",
-          "relationship": "Bratr",
-          "responsibilities": {
-            "childCare": "Postará se o naše děti, pokud oba rodiče odejdou.",
-            "estateExecution": "Zajistí realizaci poslední vůle a správu pozůstalosti.",
-            "businessManagement": "Může dočasně řídit Johnson Contracting LLC."
-          }
-        },
-        "robert": {
-          "name": "Robert Chen",
-          "relationship": "Obchodní partner",
-          "responsibilities": {
-            "businessAuthority": "Má oprávnění řídit podnik a podepisovat smlouvy.",
-            "buySellAgreement": "Odkoupí můj podíl ve firmě podle naší smlouvy."
-          }
-        },
-        "emily": {
-          "name": "Emily Thompson",
-          "relationship": "Švagrová",
-          "responsibilities": {
-            "backupGuardian": "Záložní opatrovník dětí, pokud primární nemůže sloužit."
-          }
-        }
-      }
-    },
-    "familyHub": "Rodinné Centrum",
-    "legacyBriefing": {
-      "legacy_briefing_3": "Briefing Dědictví",
-      "create_and_manage_sealed_messa_4": "Vytvářejte a spravujte zapečetěné zprávy pro své blízké",
-      "failed_to_load_your_time_capsu_1": "Nepodařilo se načíst vaše časové kapsle",
-      "are_you_sure_you_want_to_delet_2": "Opravdu chcete tuto časovou kapsli smazat?",
-      "create_new_message_5": "Vytvořit novou zprávu",
-      "no_time_capsules_yet_6": "Zatím žádné časové kapsle",
-      "create_meaningful_messages_for_7": "Vytvářejte smysluplné zprávy pro své blízké do budoucna",
-      "create_your_first_message_8": "Vytvořte svou první zprávu",
-      "to_9": "Komu:",
-      "unlocks_on_10": "Odemkne se:",
-      "unlocks_11": "Odemkne:",
-      "after_passing_12": "Po úmrtí",
-      "statusLabels": {
-        "locked": "Zamčeno",
-        "unlocked": "Odemčeno",
-        "delivered": "Doručeno",
-        "noRecipients": "Žádní příjemci"
-      },
-      "messageTypes": {
-        "text": "Textová zpráva",
-        "photo": "Fotografie",
-        "video": "Video zpráva",
-        "audio": "Audio zpráva"
-      },
-      "actions": {
-        "edit": "Upravit",
-        "delete": "Smazat"
-      },
-      "toastMessages": {
-        "deleteSuccess": "Časová kapsle byla úspěšně smazána",
-        "deleteError": "Nepodařilo se smazat časovou kapsli"
-      },
-      "dateFormat": {
-        "dateNotSet": "Datum není nastaveno",
-        "created": "Vytvořeno"
-      },
-      "errors": {
-        "textContentRequired": "Textová zpráva je povinná",
-        "unlockDateRequired": "Datum odemčení je povinné, pokud je zvolen typ datum",
-        "failedToUploadAttachment": "Nepodařilo se nahrát přílohu",
-        "failedToCreate": "Nepodařilo se vytvořit časovou kapsli",
-        "failedToFetch": "Nepodařilo se načíst časové kapsle",
-        "failedToUpdate": "Nepodařilo se aktualizovat časovou kapsli",
-        "failedToDelete": "Nepodařilo se smazat časovou kapsli",
-        "notFoundOrCannotModify": "Časová kapsle nenalezena nebo ji nelze upravit",
-        "notFoundOrCannotDelete": "Časová kapsle nenalezena nebo ji nelze smazat",
-        "missingUploadFields": "Chybí povinná pole: název souboru, typ souboru, velikost souboru",
-        "invalidFileType": "Neplatný typ souboru. Povolené typy: webm, mp4, mov",
-        "fileSizeExceeds500MB": "Velikost souboru přesahuje maximální limit 500 MB",
-        "premiumRequired": "Vyžaduje se prémiové předplatné",
-        "premiumRequiredMessage": "Videozprávy jsou prémiová funkce. Pro využití této funkce upgradujte své předplatné.",
-        "failedToCreateUploadUrl": "Nepodařilo se vytvořit URL pro nahrání"
-      }
-    },
-    "executorToolkit": "Nástroje vykonavatele",
-    "assets": "Majetek",
-    "manual": "Příručka",
-    "documents": "Trezor dědictví",
-    "guardians": "Síť důvěrníků",
-    "family": "Rodinné Centrum",
-    "timeCapsule": {
-      "title": "Časové kapsle",
-      "notifications": {
-        "emailSubject": "{{senderName}} vám zanechal(a) zprávu",
-        "newMessage": "Máte novou zprávu",
-        "loginToView": "Přihlaste se do LegacyGuard a zobrazte si tuto speciální zprávu.",
-        "viewMessage": "Zobrazit zprávu",
-        "smsNotification": "Oznámení můžete také nastavit prostřednictvím SMS.",
-        "bestRegards": "S pozdravem,",
-        "legacyGuardTeam": "Tým LegacyGuard",
-        "inAppTitle": "Nová zpráva od {{senderName}}",
-        "inAppMessage": "{{senderName}} vám zanechal(a) časovou kapsli: \"{{capsuleTitle}}\""
-      }
-    },
-    "will": "Závěť",
-    "consultations": "Právní konzultace",
-    "settings": "Nastavení",
-    "help": "Nápověda a podpora",
-    "subscriptions": "Předplatná"
-  },
-  "nav": {
-    "dashboard": "Přehled",
-    "manual": "Příručka",
-    "vault": "Trezor dědictví",
-    "guardians": "Síť důvěrníků",
-    "will": "Závěť",
-    "settings": "Nastavení",
-    "help": "Nápověda a podpora"
-  },
-  "footer": {
-    "tagline": "Chraňte své dědictví pro další generace.",
-    "platform": {
-      "title": "Platforma",
-      "heritageVault": "Trezor dědictví",
-      "guardianNetwork": "Síť důvěrníků",
-      "dashboard": "Přehled",
-      "security": "Zabezpečení"
-    },
-    "support": {
-      "title": "Podpora",
-      "helpCenter": "Centrum nápovědy",
-      "userGuides": "Uživatelské příručky",
-      "contactUs": "Kontaktujte nás",
-      "community": "Komunita"
-    },
-    "legal": {
-      "title": "Právní informace",
-      "privacyPolicy": "Zásady ochrany osobních údajů",
-      "termsOfService": "Podmínky služby",
-      "dataProtection": "Ochrana dat"
-    },
-    "copyright": "© {{year}} LegacyGuard. Všechna práva vyhrazena.",
-    "description": "Správa digitálního dědictví na podnikové úrovni."
-  },
-  "hero": {
-    "title": "Chraňte digitální dědictví své rodiny napořád",
-    "subtitle": "Bezpečná a intuitivní platforma, která pomáhá rodinám organizovat, chránit a předávat jejich nejdůležitější vzpomínky a dokumenty napříč generacemi.",
-    "cta_primary": "Začněte s plánem dědictví",
-    "cta_secondary": "Zhlédnout demo",
-    "urgencySubtitle": "Nastavení trvá jen 10 minut – buďte připraveným rodičem, kterého vaše rodina potřebuje",
-    "secondaryContext": "2minutové video ukazující skutečné rodiny",
-    "trustSignals": {
-      "dataOwnership": "Vaše data zůstávají vaše – nikdy je neprodáváme",
-      "gdprCompliant": "V souladu s GDPR od počátku",
-      "europeanFamilies": "Vytvořeno pro evropské rodiny"
-    },
-    "community": {
-      "growing": "Připojte se k {{count}} rodinám, které již chrání své dědictví",
-      "growingFallback": "Připojte se k naší rostoucí komunitě"
-    }
-  },
-  "features": {
-    "title": "Proč si vybrat LegacyGuard?",
-    "subtitle": "Vytvořeno s podnikovou úrovní zabezpečení a navrženo pro rodiny, které si cení svého dědictví.",
-    "sleepBetter": {
-      "title": "Spěte lépe v noci",
-      "description": "S vědomím, že vaše rodina je chráněna a připravena na cokoliv, co přijde."
-    },
-    "noChaos": {
-      "title": "Bez chaosu a zmatku",
-      "description": "Vaši blízcí budou mít jasné pokyny a přístup ke všemu, co potřebují."
-    },
-    "clearInstructions": {
-      "title": "Jasné pokyny pro všechny",
-      "description": "Každý člen rodiny ví přesně, co dělat a kde najít to, co potřebuje."
-    },
-    "security": {
-      "title": "Absolutní důvěrnost a soukromí",
-      "description": "Navrženo tak, aby k vašim datům neměl přístup nikdo neoprávněný. Ani my. Vaše soukromí je naší nejvyšší prioritou."
-    },
-    "guardians": {
-      "title": "Síť důvěrníků",
-      "description": "Určete důvěryhodné členy rodiny a přátele jako důvěrníky, abyste zajistili kontinuitu dědictví."
-    },
-    "storage": {
-      "title": "Bezpečné cloudové úložiště",
-      "description": "Redundantní zálohy ve více datových centrech s garantovanou dostupností 99,99 %."
-    },
-    "timelock": {
-      "title": "Časově uzamčený přístup",
-      "description": "Nastavte podmínky, kdy a jak mohou oprávněné osoby přistupovat k vašemu digitálnímu dědictví."
-    },
-    "stories": {
-      "title": "Osobní příběhy",
-      "description": "Vytvářejte bohaté multimediální příběhy, které zachycují podstatu cesty vaší rodiny."
-    },
-    "preservation": {
-      "title": "Doživotní uchování",
-      "description": "Vaše dědictví je uchováno na neomezenou dobu s automatickou migrací formátů a aktualizacemi."
-    }
-  },
   "alerts": {
-    "title": "Centrum upozornění",
     "description": "Spravujte upozornění na expiraci dokumentů.",
-    "unread": "Nepřečteno",
-    "markAsRenewed": "Označit jako obnovené",
-    "snooze7Days": "Odložit na 7 dní",
     "dismiss": "Zavřít",
-    "unsnooze": "Zrušit odložení",
-    "tabs": {
-      "active": "Aktivní",
-      "snoozed": "Odložené",
-      "dismissed": "Zavřené"
+    "errors": {
+      "dismissFailed": "Upozornění se nepodařilo zavřít.",
+      "loadFailed": "Nepodařilo se načíst upozornění.",
+      "renewFailed": "Dokument se nepodařilo označit jako obnovený.",
+      "snoozeFailed": "Upozornění se nepodařilo odložit."
     },
-    "noActiveAlerts": "Nemáte žádná aktivní upozornění.",
-    "noSnoozedAlerts": "Nemáte žádná odložená upozornění.",
-    "noDismissedAlerts": "Nemáte žádná zavřená upozornění.",
-    "expiresOn": "Platnost vyprší {{date}}",
-    "snoozedUntil": "Odloženo do {{date}}",
-    "renewalInstructions": "Instrukce pro obnovení",
-    "badges": {
-      "expired": "Expirace",
-      "expiring_7": "Brzy vyprší",
-      "expiring_30": "Vyprší za 30 dní",
-      "expiring_90": "Vyprší za 90 dní"
-    },
-    "types": {
-      "expired": "Dokument {{documentName}} expiroval před {{daysAgo}} dny!",
-      "expiring7": "Pozor! {{documentName}} vyprší za {{days}} dní.",
-      "expiring30": "Připomínka: {{documentName}} vyprší za {{days}} dní.",
-      "expiring90": "Upozornění: {{documentName}} má vypršet za {{days}} dní."
-    },
+    "markAsRenewed": "Označit jako obnovené",
     "messages": {
       "dismissed": "Upozornění bylo úspěšně zavřeno.",
-      "snoozed": "Upozornění odloženo o {{days}} dní.",
       "markedAsRenewed": "Dokument označen jako obnovený."
     },
-    "errors": {
-      "loadFailed": "Nepodařilo se načíst upozornění.",
-      "dismissFailed": "Upozornění se nepodařilo zavřít.",
-      "snoozeFailed": "Upozornění se nepodařilo odložit.",
-      "renewFailed": "Dokument se nepodařilo označit jako obnovený."
-    }
-  },
-  "countrySelector": {
-    "search_countries": "Hledat země..."
-  },
-  "errorBoundary": {
-    "oops_something_went_wrong": "Ups! Něco se pokazilo",
-    "we_apologize_for_the_inconvenience": "Omlouváme se za nepříjemnosti. Došlo k neočekávané chybě.",
-    "error_id": "ID chyby:",
-    "try_again": "Zkusit znovu",
-    "go_to_homepage": "Přejít na hlavní stránku",
-    "stack_trace": "Stack trace:",
-    "component_stack": "Stack komponenty:",
-    "if_the_problem_persists_contact_support": "Pokud problém přetrvává, kontaktujte naši podporu s ID chyby."
-  },
-  "routeErrorBoundary": {
-    "reload_page": "Obnovit stránku",
-    "technical_details": "Technické detaily"
+    "noActiveAlerts": "Nemáte žádná aktivní upozornění.",
+    "noDismissedAlerts": "Nemáte žádná zavřená upozornění.",
+    "noSnoozedAlerts": "Nemáte žádná odložená upozornění.",
+    "renewalInstructions": "Instrukce pro obnovení",
+    "snooze7Days": "Odložit na 7 dní",
+    "tabs": {
+      "active": "Aktivní",
+      "dismissed": "Zavřené",
+      "snoozed": "Odložené"
+    },
+    "title": "Centrum upozornění",
+    "unread": "Nepřečteno",
+    "unsnooze": "Zrušit odložení"
   },
   "common": {
-    "loading": "Načítání...",
-    "saving": "Ukládání...",
-    "saveChanges": "Uložit změny",
-    "cancel": "Zrušit",
-    "confirm": "Potvrdit",
-    "back": "Zpět",
-    "next": "Další",
-    "previous": "Předchozí",
-    "add": "Přidat",
-    "remove": "Odebrat",
-    "edit": "Upravit",
-    "delete": "Smazat",
-    "viewDetails": "Zobrazit detaily",
-    "done": "Hotovo",
-    "retry": "Zkusit znovu",
-    "goBack": "Zpět",
-    "goHome": "Domů",
-    "start": "Začít",
-    "fix": "Opravit",
-    "minutes": "minut",
-    "improveReadiness": "Zlepšit připravenost",
-    "addedOn": "Přidáno {{date}}",
-    "error": "Chyba",
-    "success": "Úspěch",
     "auth": {
-      "incorrectPassword": "Nesprávné heslo",
-      "protectedApplication": "Chráněná aplikace",
-      "protectedApplicationDesc": "Tato aplikace je chráněna heslem. Zadejte heslo pro pokračování.",
-      "password": "Heslo",
+      "accessApplication": "Přístup k aplikaci",
       "enterPassword": "Zadejte heslo",
-      "accessApplication": "Přístup k aplikaci"
+      "incorrectPassword": "Nesprávné heslo",
+      "logout": "Odhlásit se",
+      "password": "Heslo",
+      "protectedApplication": "Chráněná aplikace",
+      "protectedApplicationDesc": "Tato aplikace je chráněna heslem. Zadejte heslo pro pokračování."
     },
-    "errors": {
-      "generic": "Došlo k chybě"
-    },
-    "messages": {
-      "saved": "Úspěšně uloženo"
-    },
-    "actions": {
-      "retry": "Zkusit znovu",
-      "save": "Uložit"
-    },
-    "priority": {
-      "high": "Vysoká",
-      "medium": "Střední",
-      "low": "Nízká"
-    },
-    "pagination": {
-      "previous": "Předchozí",
-      "next": "Další",
-      "morePages": "Více stránek",
-      "page": "Stránka",
-      "of": "z",
-      "showing": "Zobrazuji",
-      "to": "do",
-      "results": "výsledků",
-      "perPage": "na stránku",
-      "goToPage": "Přejít na stránku",
-      "currentPage": "Aktuální stránka",
-      "totalPages": "Celkem stránek",
-      "firstPage": "První stránka",
-      "lastPage": "Poslední stránka",
-      "pageInfo": "Stránka {{current}} z {{total}}",
-      "resultsInfo": "Zobrazuji {{start}} až {{end}} z {{total}} výsledků",
-      "noResults": "Nebyly nalezeny žádné výsledky"
-    },
-    "ui": {
-      "close": "Zavřít",
-      "more": "Více",
-      "previousSlide": "Předchozí snímek",
-      "nextSlide": "Další snímek",
-      "toggleSidebar": "Přepnout postranní panel",
-      "goToPreviousPage": "Přejít na předchozí stránku",
-      "goToNextPage": "Přejít na další stránku"
-    },
-    "footer": {
-      "vault_1": "/vault",
-      "guardians_2": "/guardians",
-      "dashboard_3": "/dashboard",
-      "security_4": "/security",
-      "help_5": "/help",
-      "guides_6": "/guides",
-      "contact_7": "/contact",
-      "community_8": "/community",
-      "privacy_policy_9": "/privacy-policy",
-      "terms_10": "/terms",
-      "data_protection_11": "/data-protection"
-    },
-    "formErrorBoundary": {
-      "form_error_1": "Chyba formuláře",
-      "an_unexpected_error_occurred_w_2": "Při zpracování formuláře došlo k neočekávané chybě."
-    },
-    "themeToggle": {
-      "toggle_theme_1": "Přepnout motiv"
-    },
+    "back": "Zpět",
+    "cancel": "Zrušit",
     "countryLanguageSelector": {
       "country_language_1": "Země a jazyk",
       "select_country_2": "Vybrat zemi",
       "select_language_3": "Vybrat jazyk"
-    }
+    },
+    "delete": "Smazat",
+    "done": "Hotovo",
+    "edit": "Upravit",
+    "error": "Chyba",
+    "fix": "Opravit",
+    "footer": {
+      "community_8": "/community",
+      "contact_7": "/contact",
+      "dashboard_3": "/dashboard",
+      "data_protection_11": "/data-protection",
+      "guardians_2": "/guardians",
+      "guides_6": "/guides",
+      "help_5": "/help",
+      "privacy_policy_9": "/privacy-policy",
+      "security_4": "/security",
+      "terms_10": "/terms",
+      "vault_1": "/vault"
+    },
+    "goBack": "Zpět",
+    "goHome": "Domů",
+    "improveReadiness": "Zlepšit připravenost",
+    "minutes": "minut",
+    "next": "Další",
+    "pagination": {
+      "morePages": "Více stránek",
+      "next": "Další",
+      "previous": "Předchozí"
+    },
+    "previous": "Předchozí",
+    "remove": "Odebrat",
+    "retry": "Zkusit znovu",
+    "saveChanges": "Uložit změny",
+    "saving": "Ukládání...",
+    "start": "Začít",
+    "themeToggle": {
+      "toggle_theme_1": "Přepnout motiv"
+    },
+    "ui": {
+      "close": "Zavřít",
+      "goToNextPage": "Přejít na další stránku",
+      "goToPreviousPage": "Přejít na předchozí stránku",
+      "more": "Více",
+      "nextSlide": "Další snímek",
+      "previousSlide": "Předchozí snímek",
+      "toggleSidebar": "Přepnout postranní panel"
+    },
+    "viewDetails": "Zobrazit detaily"
   },
+  "features": {
+    "clearInstructions": {
+      "description": "Každý člen rodiny ví přesně, co dělat a kde najít to, co potřebuje.",
+      "title": "Jasné pokyny pro všechny"
+    },
+    "guardians": {
+      "description": "Určete důvěryhodné členy rodiny a přátele jako důvěrníky, abyste zajistili kontinuitu dědictví.",
+      "title": "Síť důvěrníků"
+    },
+    "noChaos": {
+      "description": "Vaši blízcí budou mít jasné pokyny a přístup ke všemu, co potřebují.",
+      "title": "Bez chaosu a zmatku"
+    },
+    "preservation": {
+      "description": "Vaše dědictví je uchováno na neomezenou dobu s automatickou migrací formátů a aktualizacemi.",
+      "title": "Doživotní uchování"
+    },
+    "security": {
+      "description": "Navrženo tak, aby k vašim datům neměl přístup nikdo neoprávněný. Ani my. Vaše soukromí je naší nejvyšší prioritou.",
+      "title": "Absolutní důvěrnost a soukromí"
+    },
+    "sleepBetter": {
+      "description": "S vědomím, že vaše rodina je chráněna a připravena na cokoliv, co přijde.",
+      "title": "Spěte lépe v noci"
+    },
+    "storage": {
+      "description": "Redundantní zálohy ve více datových centrech s garantovanou dostupností 99,99 %.",
+      "title": "Bezpečné cloudové úložiště"
+    },
+    "stories": {
+      "description": "Vytvářejte bohaté multimediální příběhy, které zachycují podstatu cesty vaší rodiny.",
+      "title": "Osobní příběhy"
+    },
+    "subtitle": "Vytvořeno s podnikovou úrovní zabezpečení a navrženo pro rodiny, které si cení svého dědictví.",
+    "timelock": {
+      "description": "Nastavte podmínky, kdy a jak mohou oprávněné osoby přistupovat k vašemu digitálnímu dědictví.",
+      "title": "Časově uzamčený přístup"
+    },
+    "title": "Proč si vybrat LegacyGuard?"
+  },
+  "footer": {
+    "description": "Správa digitálního dědictví na podnikové úrovni.",
+    "legal": {
+      "dataProtection": "Ochrana dat",
+      "privacyPolicy": "Zásady ochrany osobních údajů",
+      "termsOfService": "Podmínky služby",
+      "title": "Právní informace"
+    },
+    "platform": {
+      "dashboard": "Přehled",
+      "guardianNetwork": "Síť důvěrníků",
+      "heritageVault": "Trezor dědictví",
+      "security": "Zabezpečení",
+      "title": "Platforma"
+    },
+    "support": {
+      "community": "Komunita",
+      "contactUs": "Kontaktujte nás",
+      "helpCenter": "Centrum nápovědy",
+      "title": "Podpora",
+      "userGuides": "Uživatelské příručky"
+    },
+    "tagline": "Chraňte své dědictví pro další generace."
+  },
+  "hero": {
+    "community": {
+      "growing": "Připojte se k {{count}} rodinám, které již chrání své dědictví",
+      "growingFallback": "Připojte se k naší rostoucí komunitě"
+    },
+    "cta_primary": "Začněte s plánem dědictví",
+    "cta_secondary": "Zhlédnout demo",
+    "secondaryContext": "2minutové video ukazující skutečné rodiny",
+    "subtitle": "Bezpečná a intuitivní platforma, která pomáhá rodinám organizovat, chránit a předávat jejich nejdůležitější vzpomínky a dokumenty napříč generacemi.",
+    "title": "Chraňte digitální dědictví své rodiny napořád",
+    "trustSignals": {
+      "dataOwnership": "Vaše data zůstávají vaše – nikdy je neprodáváme",
+      "europeanFamilies": "Vytvořeno pro evropské rodiny",
+      "gdprCompliant": "V souladu s GDPR od počátku"
+    },
+    "urgencySubtitle": "Nastavení trvá jen 10 minut – buďte připraveným rodičem, kterého vaše rodina potřebuje"
+  },
+  "loadMore": "Load More",
   "passwordWall": {
     "loading_1": "Načítání..."
   }

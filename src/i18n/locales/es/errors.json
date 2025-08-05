@@ -1,98 +1,68 @@
 {
-  "_comment": "Manejo de errores y depuración",
-  "errorBoundary": {
-    "title": "¡Ups! Algo salió mal",
-    "description": "Nos disculpamos por la molestia. Ha ocurrido un error inesperado.",
-    "errorId": "ID del Error",
-    "tryAgain": "Intentar de Nuevo",
-    "reloadPage": "Recargar Página",
-    "goToHomepage": "Ir a la Página Principal",
-    "technicalDetails": "Detalles Técnicos",
-    "hide": "Ocultar",
-    "show": "Mostrar",
-    "stackTrace": "Rastro de Pila",
-    "componentStack": "Pila de Componentes",
-    "helpText": "Si el problema persiste, contacta nuestro soporte con el ID del error."
-  },
-  "errorTest": {
-    "title": "Prueba de Registro de Errores",
-    "description": "Prueba la funcionalidad de manejo y registro de errores",
-    "triggerSyncError": "Disparar Error Síncrono (ErrorBoundary)",
-    "triggerAsyncError": "Disparar Error Asíncrono",
-    "logRegularError": "Registrar Error Regular",
-    "logCriticalError": "Registrar Error Crítico",
-    "triggerAlert": "Disparar Alerta (6 Errores Críticos)",
-    "errorMessages": {
-      "testError": "Error de prueba del componente ErrorTest",
-      "testAsyncRejection": "Rechazo asíncrono de prueba",
-      "manualTestError": "Error de prueba manual",
-      "testCriticalError": "Error crítico de prueba",
-      "criticalErrorWithIndex": "Error crítico {{index}}"
-    },
-    "descriptions": {
-      "syncError": "Dispara un error síncrono que será capturado por el ErrorBoundary",
-      "asyncError": "Dispara un error asíncrono que será capturado por el manejo de errores",
-      "regularError": "Registra un error regular para probar el seguimiento de errores",
-      "criticalError": "Registra un error crítico para probar el manejo de errores críticos",
-      "multipleErrors": "Dispara múltiples errores críticos para probar umbrales de alerta"
-    },
-    "context": {
-      "component": "ErrorTest",
-      "action": "button-click",
-      "severity": "high"
-    },
-    "notifications": {
-      "errorLogged": "Error registrado exitosamente",
-      "criticalErrorLogged": "Error crítico registrado exitosamente",
-      "multipleErrorsTriggered": "Múltiples errores críticos disparados",
-      "errorBoundaryTriggered": "Error boundary disparado",
-      "asyncErrorCaught": "Error asíncrono capturado y manejado"
-    }
-  },
   "debug": {
     "panel": {
-      "title": "Panel de Depuración",
-      "recentErrors": "Errores recientes de la aplicación",
-      "technicalDetails": "Detalles Técnicos",
-      "tabs": {
-        "list": "Lista",
-        "details": "Detalles"
-      },
-      "errorCount": "{{count}} errores",
       "actions": {
-        "downloadErrors": "Descargar errores",
-        "clearAllErrors": "Limpiar todos los errores"
-      },
-      "messages": {
-        "errorsCleared": "Todos los errores limpiados",
-        "errorCopied": "Error copiado al portapapeles",
-        "errorsDownloaded": "Errores descargados"
+        "clearAllErrors": "Limpiar todos los errores",
+        "downloadErrors": "Descargar errores"
       },
       "error": {
-        "unknownError": "Error Desconocido",
+        "errorMessage": "Mensaje de Error",
         "noMessage": "Sin mensaje",
-        "errorMessage": "Mensaje de Error"
-      },
-      "sections": {
-        "stackTrace": "Rastro de Pila",
-        "context": "Contexto",
-        "location": "Ubicación",
-        "browserInfo": "Información del Navegador",
-        "time": "Tiempo"
+        "unknownError": "Error Desconocido"
       },
       "fields": {
-        "url": "URL:",
         "path": "Ruta:",
         "query": "Consulta:",
+        "url": "URL:",
         "userAgent": "Agente de Usuario:",
         "viewport": "Vista:"
-      }
+      },
+      "messages": {
+        "errorCopied": "Error copiado al portapapeles",
+        "errorsCleared": "Todos los errores limpiados",
+        "errorsDownloaded": "Errores descargados"
+      },
+      "recentErrors": "Errores recientes de la aplicación",
+      "sections": {
+        "browserInfo": "Información del Navegador",
+        "context": "Contexto",
+        "location": "Ubicación",
+        "stackTrace": "Rastro de Pila",
+        "time": "Tiempo"
+      },
+      "tabs": {
+        "details": "Detalles",
+        "list": "Lista"
+      },
+      "title": "Panel de Depuración"
     }
+  },
+  "errorBoundary": {
+    "componentStack": "Pila de Componentes",
+    "description": "Nos disculpamos por la molestia. Ha ocurrido un error inesperado.",
+    "errorId": "ID del Error",
+    "goToHomepage": "Ir a la Página Principal",
+    "helpText": "Si el problema persiste, contacta nuestro soporte con el ID del error.",
+    "hide": "Ocultar",
+    "reloadPage": "Recargar Página",
+    "show": "Mostrar",
+    "stackTrace": "Rastro de Pila",
+    "technicalDetails": "Detalles Técnicos",
+    "title": "¡Ups! Algo salió mal",
+    "tryAgain": "Intentar de Nuevo"
+  },
+  "errorTest": {
+    "logCriticalError": "Registrar Error Crítico",
+    "logRegularError": "Registrar Error Regular",
+    "title": "Prueba de Registro de Errores",
+    "triggerAlert": "Disparar Alerta (6 Errores Críticos)",
+    "triggerAsyncError": "Disparar Error Asíncrono",
+    "triggerSyncError": "Disparar Error Síncrono (ErrorBoundary)"
   },
   "test": {
     "environment": {
-      "title": "Solo Entorno de Prueba",
-      "description": "Esta página es para probar el sistema de registro de errores. Elimina esta ruta antes de desplegar a producción."
+      "description": "Esta página es para probar el sistema de registro de errores. Elimina esta ruta antes de desplegar a producción.",
+      "title": "Solo Entorno de Prueba"
     }
   }
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { cn } from '@/lib/utils';
 
 // Base loading spinner
@@ -24,22 +25,30 @@ export const LoadingSpinner: React.FC<{
 };
 
 // Full page loading state
-export const FullPageLoading: React.FC = () => (
-  <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-    <div className="text-center">
-      <LoadingSpinner size="lg" className="mx-auto mb-4" />
-      <p className="text-gray-600">Loading...</p>
+export const FullPageLoading: React.FC = () => {
+  const { t } = useTranslation('ui');
+  
+  return (
+    <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+      <div className="text-center">
+        <LoadingSpinner size="lg" className="mx-auto mb-4" />
+        <p className="text-gray-600">{t('loading')}</p>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 // Button loading state
-export const ButtonLoading: React.FC = () => (
-  <div className="flex items-center justify-center">
-    <LoadingSpinner size="sm" className="mr-2" />
-    <span>Loading...</span>
-  </div>
-);
+export const ButtonLoading: React.FC = () => {
+  const { t } = useTranslation('ui');
+  
+  return (
+    <div className="flex items-center justify-center">
+      <LoadingSpinner size="sm" className="mr-2" />
+      <span>{t('loading')}</span>
+    </div>
+  );
+};
 
 // Skeleton components for different content types
 export const Skeleton: React.FC<{
@@ -175,6 +184,8 @@ export const ProgressiveLoading: React.FC<{
   onLoadMore: () => void;
   children: React.ReactNode;
 }> = ({ isLoading, hasMore, onLoadMore, children }) => {
+  const { t } = useTranslation('ui');
+  
   return (
     <div>
       {children}
@@ -189,7 +200,7 @@ export const ProgressiveLoading: React.FC<{
             onClick={onLoadMore}
             className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
           >
-            Load More
+            {t('loadMore')}
           </button>
         </div>
       )}

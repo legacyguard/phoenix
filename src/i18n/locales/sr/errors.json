@@ -1,98 +1,68 @@
 {
-  "_comment": "Shared translations used across the application",
-  "errorBoundary": {
-    "title": "Ups! Nešto je pošlo po zlu",
-    "description": "Izvinjavamo se zbog neprijatnosti. Došlo je do neočekivane greške.",
-    "errorId": "ID greške",
-    "tryAgain": "Pokušaj ponovo",
-    "reloadPage": "Osveži stranicu",
-    "goToHomepage": "Idi na početnu stranicu",
-    "technicalDetails": "Tehnički detalji",
-    "hide": "Sakrij",
-    "show": "Prikaži",
-    "stackTrace": "Trag steka",
-    "componentStack": "Stek komponenti",
-    "helpText": "Ako se problem nastavi, kontaktirajte našu podršku sa ID-om greške."
-  },
-  "errorTest": {
-    "title": "Test evidentiranja grešaka",
-    "description": "Test error handling and logging functionality",
-    "triggerSyncError": "Pokreni sinhronu grešku (ErrorBoundary)",
-    "triggerAsyncError": "Pokreni asinhronu grešku",
-    "logRegularError": "Evidentiraj redovnu grešku",
-    "logCriticalError": "Evidentiraj kritičnu grešku",
-    "triggerAlert": "Pokreni upozorenje (6 kritičnih grešaka)",
-    "errorMessages": {
-      "testError": "Test error from ErrorTest component",
-      "testAsyncRejection": "Тест асинхроног одбијања",
-      "manualTestError": "Грешка ручног теста",
-      "testCriticalError": "Тест критичне грешке",
-      "criticalErrorWithIndex": "Critical error {{index}}"
-    },
-    "descriptions": {
-      "syncError": "Triggers a synchronous error that will be caught by the ErrorBoundary",
-      "asyncError": "Triggers an asynchronous error that will be caught by error handling",
-      "regularError": "Logs a regular error for testing error tracking",
-      "criticalError": "Logs a critical error for testing critical error handling",
-      "multipleErrors": "Triggers multiple critical errors to test alert thresholds"
-    },
-    "context": {
-      "component": "ErrorTest",
-      "action": "button-click",
-      "severity": "high"
-    },
-    "notifications": {
-      "errorLogged": "Грешка успешно забележена",
-      "criticalErrorLogged": "Critical error logged successfully",
-      "multipleErrorsTriggered": "Multiple critical errors triggered",
-      "errorBoundaryTriggered": "Граница грешака активирана",
-      "asyncErrorCaught": "Async error caught and handled"
-    }
-  },
   "debug": {
     "panel": {
-      "title": "Panel za otklanjanje grešaka",
-      "recentErrors": "Nedavne greške u aplikaciji",
-      "technicalDetails": "Tehnički detalji",
-      "tabs": {
-        "list": "Lista",
-        "details": "Detalji"
-      },
-      "errorCount": "{{count}} grešaka",
       "actions": {
-        "downloadErrors": "Preuzmi greške",
-        "clearAllErrors": "Obriši sve greške"
-      },
-      "messages": {
-        "errorsCleared": "Sve greške obrisane",
-        "errorCopied": "Greška kopirana u klipbord",
-        "errorsDownloaded": "Greške preuzete"
+        "clearAllErrors": "Obriši sve greške",
+        "downloadErrors": "Preuzmi greške"
       },
       "error": {
-        "unknownError": "Nepoznata greška",
+        "errorMessage": "Poruka o grešci",
         "noMessage": "Nema poruke",
-        "errorMessage": "Poruka o grešci"
-      },
-      "sections": {
-        "stackTrace": "Trag steka",
-        "context": "Kontekst",
-        "location": "Lokacija",
-        "browserInfo": "Informacije o pregledaču",
-        "time": "Vreme"
+        "unknownError": "Nepoznata greška"
       },
       "fields": {
-        "url": "URL:",
         "path": "Putanja:",
         "query": "Upit:",
+        "url": "URL:",
         "userAgent": "Кориснички агент:",
         "viewport": "Подручје приказа:"
-      }
+      },
+      "messages": {
+        "errorCopied": "Greška kopirana u klipbord",
+        "errorsCleared": "Sve greške obrisane",
+        "errorsDownloaded": "Greške preuzete"
+      },
+      "recentErrors": "Nedavne greške u aplikaciji",
+      "sections": {
+        "browserInfo": "Informacije o pregledaču",
+        "context": "Kontekst",
+        "location": "Lokacija",
+        "stackTrace": "Trag steka",
+        "time": "Vreme"
+      },
+      "tabs": {
+        "details": "Detalji",
+        "list": "Lista"
+      },
+      "title": "Panel za otklanjanje grešaka"
     }
+  },
+  "errorBoundary": {
+    "componentStack": "Stek komponenti",
+    "description": "Izvinjavamo se zbog neprijatnosti. Došlo je do neočekivane greške.",
+    "errorId": "ID greške",
+    "goToHomepage": "Idi na početnu stranicu",
+    "helpText": "Ako se problem nastavi, kontaktirajte našu podršku sa ID-om greške.",
+    "hide": "Sakrij",
+    "reloadPage": "Osveži stranicu",
+    "show": "Prikaži",
+    "stackTrace": "Trag steka",
+    "technicalDetails": "Tehnički detalji",
+    "title": "Ups! Nešto je pošlo po zlu",
+    "tryAgain": "Pokušaj ponovo"
+  },
+  "errorTest": {
+    "logCriticalError": "Evidentiraj kritičnu grešku",
+    "logRegularError": "Evidentiraj redovnu grešku",
+    "title": "Test evidentiranja grešaka",
+    "triggerAlert": "Pokreni upozorenje (6 kritičnih grešaka)",
+    "triggerAsyncError": "Pokreni asinhronu grešku",
+    "triggerSyncError": "Pokreni sinhronu grešku (ErrorBoundary)"
   },
   "test": {
     "environment": {
-      "title": "Само за тестно окружење",
-      "description": "Ова страница је за тестирање система за бележење грешака. Уклоните ову руту пре имплементације у продукцију."
+      "description": "Ова страница је за тестирање система за бележење грешака. Уклоните ову руту пре имплементације у продукцију.",
+      "title": "Само за тестно окружење"
     }
   }
 }

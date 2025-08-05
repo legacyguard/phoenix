@@ -1,253 +1,195 @@
 {
-  "_comment": "Shared translations used across the application",
-  "documentTypes": {
-    "realEstateDeed": "Ugovor o vlasništvu nad nekretninom",
-    "birthCertificate": "Izvod iz matične knjige rođenih",
-    "insurancePolicy": "Polisa osiguranja",
-    "lastWill": "Poslednja volja i testament",
-    "employmentContract": "Ugovor o radu",
-    "passport": "Pasoš",
-    "drivingLicense": "Vozačka dozvola",
-    "bankStatement": "Izvod iz banke",
-    "investmentCertificate": "Investicioni sertifikat",
-    "energyContract": "Ugovor o snabdevanju energijom",
-    "softwareLicense": "Licenca za softver",
-    "subscriptionService": "Usluga pretplate",
-    "other": "Drugo"
-  },
-  "documentUpload": {
-    "fileUploadedSuccess": "Datoteka je uspešno otpremljena!",
-    "fileUploadFailed": "Otpremanje datoteke nije uspelo. Molimo pokušajte ponovo.",
-    "fileTooLarge": "Izabrana datoteka je prevelika. Maksimalna veličina je {{maxSize}} MB.",
-    "fillRequiredFields": "Molimo popunite sva obavezna polja",
-    "loginToSave": "Morate biti prijavljeni da biste sačuvali dokumente",
-    "saved": "Dokument je uspešno sačuvan!",
-    "failedSave": "Čuvanje dokumenta nije uspelo. Molimo pokušajte ponovo.",
-    "detailsTitle": "Detalji dokumenta",
-    "detailsSubtitle": "Dodajte informacije o vašem otpremljenom dokumentu",
-    "namePlaceholder": "Unesite naziv dokumenta",
-    "typePlaceholder": "Izaberite vrstu dokumenta",
-    "countryPlaceholder": "Izaberite zemlju",
-    "pickDate": "Izaberite datum",
-    "title": "Otpremi dokument",
-    "subtitle": "Bezbedno otpremite pravne i lične dokumente",
-    "browseFiles": "Pretraži datoteke",
-    "chooseDifferent": "Izaberi drugu datoteku",
-    "uploadButton": "Otpremi dokument",
-    "storageLimitReached": "Nije moguće otpremiti datoteku. Preostalo vam je {{remaining}} prostora, a ova datoteka je veličine {{fileSize}}. Molimo nadogradite svoj plan ili uklonite neke postojeće datoteke."
-  },
-  "documentUploader": {
-    "smart_document_upload_2": "Smart Document Upload",
-    "upload_any_document_and_our_ai_3": "Upload any document and our AI will automatically classify it for you",
-    "please_upload_an_image_or_pdf__1": "Please upload an image or PDF file",
-    "image_application_pdf_4": "image/*,application/pdf",
-    "0_0_48_48_5": "0 0 48 48",
-    "m24_12v12m0_0l_4_4m4_4l4_4m10__6": "M24 12v12m0 0l-4 4m4-4l4 4m10-6",
-    "drop_your_document_here_or_cli_7": "Drop your document here or click to browse",
-    "supports_images_and_pdfs_up_to_8": "Supports images and PDFs up to 10MB",
-    "document_analysis_complete_10": "Document Analysis Complete",
-    "document_type_11": "Document Type",
-    "suggested_title_12": "Suggested Title",
-    "confidence": "Confidence",
-    "ai_analysis_13": "AI Analysis",
-    "continue_with_this_classificat_14": "Continue with this classification",
-    "change_category_15": "Change Category",
-    "documents_we_can_process_16": "Documents we can process:",
-    "insurance_policies_life_health_17": "Insurance policies (life, health, home, auto)",
-    "property_deeds_and_titles_18": "Property deeds and titles",
-    "vehicle_ownership_documents_19": "Vehicle ownership documents",
-    "bank_and_investment_statements_20": "Bank and investment statements",
-    "wills_and_estate_planning_docu_21": "Wills and estate planning documents",
-    "business_contracts_and_ownersh_22": "Business contracts and ownership papers",
-    "personal_identification_docume_23": "Personal identification documents",
-    "tax_returns_and_documents_24": "Tax returns and documents",
-    "categoryDescriptions": {
-      "insurance_policy": "Life, health, home, auto, or disability insurance",
-      "property_deed": "Property ownership documents and deeds",
-      "vehicle_title": "Car, boat, or other vehicle ownership papers",
-      "bank_statement": "Bank account statements and documents",
-      "investment_statement": "Investment and retirement account statements",
-      "will_or_trust": "Wills, trusts, and estate planning documents",
-      "business_document": "Business ownership and important contracts",
-      "personal_id": "Passports, licenses, birth certificates",
-      "tax_document": "Tax returns and related documents",
-      "medical_document": "Medical records and healthcare directives",
-      "other": "Other important documents"
-    },
-    "errors": {
-      "fileTypeError": "Please upload an image or PDF file",
-      "processingError": "Failed to process document",
-      "uploadError": "Failed to upload document",
-      "classificationError": "Failed to classify document"
-    }
-  },
-  "vault": {
-    "title": "The Vault",
-    "subtitle": "Your secure inventory of all financial assets and valuable possessions.",
-    "errorLoadingAssets": "Failed to load your assets. Please try again.",
-    "letsBuildInventory": "Let's Build Your Inventory",
-    "addProperty": "Add Property",
-    "addFinances": "Add Finances",
-    "addVehicle": "Add Vehicle",
-    "addDigitalAsset": "Add Digital Asset",
-    "addPersonalItem": "Add Personal Item",
-    "addOther": "Add Something Else...",
-    "confirmDeletion": "Are you sure you want to delete \"{{assetName}}\"?",
-    "errorDeletingAsset": "Failed to delete asset. Please try again.",
-    "searchPlaceholder": "Search your assets...",
-    "addAsset": "Add Asset",
-    "totalAssets": "Total Assets",
-    "totalValue": "Total Value",
-    "categories": "Categories",
-    "noAssetsFound": "No assets found matching \"{{searchQuery}}\"",
-    "startAddingAssets": "Start adding assets to build your inventory",
-    "addNewAsset": "Add New Asset",
-    "property": "Property",
-    "finances": "Finances",
-    "vehicle": "Vehicle",
-    "digital": "Digital",
-    "personal": "Personal",
-    "other": "Other",
-    "fileUpload": {
-      "title": "Upload Files",
-      "dragDropText": "Drag and drop files here",
-      "clickToSelect": "or click to browse",
-      "maxSize": "Maximum file size: {{size}}",
-      "encryptFiles": "Encrypt Files",
-      "encryptDescription": "Files will be encrypted before upload for maximum security",
-      "tags": "Tags",
-      "addTag": "Add tag...",
-      "selectedFiles": "Selected Files",
-      "uploading": "Uploading...",
-      "uploadFiles": "Upload Files",
-      "uploadSuccess": "{{name}} uploaded successfully",
-      "uploadError": "Failed to upload {{name}}",
-      "maxFilesReached": "Maximum {{max}} files allowed",
-      "encryptionInfo": "Your files are encrypted with AES-256 encryption. Only you can decrypt them."
-    },
-    "fileList": {
-      "title": "Asset Files",
-      "noFiles": "No files uploaded yet",
-      "uploadFirst": "Upload your first file",
-      "searchFiles": "Search files...",
-      "filterByTag": "Filter by tag",
-      "sortBy": "Sort by",
-      "sortByName": "Name",
-      "sortByDate": "Date",
-      "sortBySize": "Size",
-      "download": "Download",
-      "share": "Share",
-      "delete": "Delete",
-      "confirmDelete": "Are you sure you want to delete this file?",
-      "deleteSuccess": "File deleted successfully",
-      "deleteError": "Failed to delete file",
-      "downloadError": "Failed to download file",
-      "encrypted": "Encrypted",
-      "sharedWith": "Shared with {{count}} people"
-    },
-    "sharing": {
-      "title": "Share File",
-      "shareWith": "Share with",
-      "emailPlaceholder": "Enter email address",
-      "expiresIn": "Expires in",
-      "hours": "hours",
-      "days": "days",
-      "shareButton": "Share",
-      "sharing": "Sharing...",
-      "shareSuccess": "File shared successfully",
-      "shareError": "Failed to share file",
-      "password": "Access Password",
-      "passwordInfo": "Share this password separately with the recipient",
-      "copyPassword": "Copy Password",
-      "activeShares": "Active Shares",
-      "noShares": "No active shares",
-      "revoke": "Revoke",
-      "revokeSuccess": "Share revoked successfully",
-      "revokeError": "Failed to revoke share",
-      "expiresAt": "Expires {{date}}",
-      "accessCount": "Accessed {{count}} times"
-    }
-  },
-  "upload": {
-    "zone": {
-      "dropHere": "Drop your important papers here",
-      "dropHereActive": "Yes! Drop them right here",
-      "description": "I'll organize everything for you - just drag files here or click to browse",
-      "descriptionActive": "I'm ready to organize everything for you",
-      "chooseFiles": "Choose Files",
-      "takePhoto": "Take Photo",
-      "processingLocally": "Processing locally on your device",
-      "dragOverlay": {
-        "title": "Drop your documents here",
-        "subtitle": "I'll take good care of them"
-      }
-    }
-  },
   "createTimeCapsuleModal": {
-    "title": "Create Time Capsule",
-    "titleCreate": "Create Time Capsule",
-    "titleEdit": "Edit Time Capsule",
+    "buttons": {
+      "cancel": "Cancel",
+      "create": "Create Time Capsule",
+      "recordVideo": "Record Video Message",
+      "saving": "Saving...",
+      "update": "Update Time Capsule"
+    },
     "description": "Create a message that will be delivered to your loved ones in the future.",
     "errors": {
-      "noTitle": "Please enter a title for your time capsule.",
-      "noRecipients": "Please select at least one recipient.",
-      "noUnlockDate": "Please select an unlock date.",
-      "noMessage": "Please enter your message.",
-      "noFile": "Please upload a file.",
-      "updateFailed": "Failed to update time capsule.",
-      "saveFailed": "Failed to save time capsule.",
       "fileTooLarge": "File size must be less than 50MB.",
-      "invalidFileType": "Invalid file type for {{messageType}}."
+      "noFile": "Please upload a file.",
+      "noMessage": "Please enter your message.",
+      "noRecipients": "Please select at least one recipient.",
+      "noTitle": "Please enter a title for your time capsule.",
+      "noUnlockDate": "Please select an unlock date.",
+      "saveFailed": "Failed to save time capsule.",
+      "updateFailed": "Failed to update time capsule."
     },
-    "success": {
-      "updated": "Time capsule updated!",
-      "created": "Time capsule created!"
+    "fileUpload": {
+      "clickToUpload": "Click to upload",
+      "dragAndDrop": " or drag and drop",
+      "maxSize": "Maximum file size: 50MB"
     },
     "labels": {
-      "title": "Title",
+      "deliveryQuestion": "When should this message be delivered?",
       "messageType": "Message Type",
       "recipients": "Recipients",
-      "deliveryQuestion": "When should this message be delivered?",
+      "title": "Title",
       "unlockDate": "Unlock Date",
-      "yourMessage": "Your Message",
-      "uploadFile": "Upload {{messageType}}"
-    },
-    "placeholders": {
-      "title": "e.g., For Your 18th Birthday",
-      "message": "Write your heartfelt message here...",
-      "selectDate": "Select a date"
+      "yourMessage": "Your Message"
     },
     "messageTypes": {
-      "text": "Text Message",
+      "audio": "Audio",
       "photo": "Photo",
-      "video": "Video",
-      "audio": "Audio"
+      "text": "Text Message",
+      "video": "Video"
+    },
+    "placeholders": {
+      "message": "Write your heartfelt message here...",
+      "selectDate": "Select a date",
+      "title": "e.g., For Your 18th Birthday"
+    },
+    "premium": {
+      "upgradeNow": "Upgrade Now",
+      "videoMessage": "Video messages are a premium feature."
     },
     "recipients": {
       "noTrustedPeople": "You haven't added any trusted people yet. Add them from your dashboard first.",
       "selected": "Selected"
     },
+    "success": {
+      "created": "Time capsule created!",
+      "updated": "Time capsule updated!"
+    },
+    "titleCreate": "Create Time Capsule",
+    "titleEdit": "Edit Time Capsule",
     "unlockConditions": {
-      "onDate": "On a specific date",
-      "afterPassing": "After my passing"
+      "afterPassing": "After my passing",
+      "onDate": "On a specific date"
+    }
+  },
+  "documentTypes": {
+    "bankStatement": "Izvod iz banke",
+    "birthCertificate": "Izvod iz matične knjige rođenih",
+    "drivingLicense": "Vozačka dozvola",
+    "employmentContract": "Ugovor o radu",
+    "energyContract": "Ugovor o snabdevanju energijom",
+    "insurancePolicy": "Polisa osiguranja",
+    "investmentCertificate": "Investicioni sertifikat",
+    "lastWill": "Poslednja volja i testament",
+    "other": "Drugo",
+    "passport": "Pasoš",
+    "realEstateDeed": "Ugovor o vlasništvu nad nekretninom",
+    "softwareLicense": "Licenca za softver",
+    "subscriptionService": "Usluga pretplate"
+  },
+  "documentUpload": {
+    "browseFiles": "Pretraži datoteke",
+    "chooseDifferent": "Izaberi drugu datoteku",
+    "countryPlaceholder": "Izaberite zemlju",
+    "detailsSubtitle": "Dodajte informacije o vašem otpremljenom dokumentu",
+    "detailsTitle": "Detalji dokumenta",
+    "failedSave": "Čuvanje dokumenta nije uspelo. Molimo pokušajte ponovo.",
+    "fileUploadFailed": "Otpremanje datoteke nije uspelo. Molimo pokušajte ponovo.",
+    "fileUploadedSuccess": "Datoteka je uspešno otpremljena!",
+    "fillRequiredFields": "Molimo popunite sva obavezna polja",
+    "loginToSave": "Morate biti prijavljeni da biste sačuvali dokumente",
+    "namePlaceholder": "Unesite naziv dokumenta",
+    "pickDate": "Izaberite datum",
+    "saved": "Dokument je uspešno sačuvan!",
+    "subtitle": "Bezbedno otpremite pravne i lične dokumente",
+    "title": "Otpremi dokument",
+    "typePlaceholder": "Izaberite vrstu dokumenta",
+    "uploadButton": "Otpremi dokument"
+  },
+  "documentUploader": {
+    "0_0_48_48_5": "0 0 48 48",
+    "ai_analysis_13": "AI Analysis",
+    "bank_and_investment_statements_20": "Bank and investment statements",
+    "business_contracts_and_ownersh_22": "Business contracts and ownership papers",
+    "categoryDescriptions": {
+      "bank_statement": "Bank account statements and documents",
+      "business_document": "Business ownership and important contracts",
+      "insurance_policy": "Life, health, home, auto, or disability insurance",
+      "investment_statement": "Investment and retirement account statements",
+      "medical_document": "Medical records and healthcare directives",
+      "other": "Other important documents",
+      "personal_id": "Passports, licenses, birth certificates",
+      "property_deed": "Property ownership documents and deeds",
+      "tax_document": "Tax returns and related documents",
+      "vehicle_title": "Car, boat, or other vehicle ownership papers",
+      "will_or_trust": "Wills, trusts, and estate planning documents"
     },
+    "change_category_15": "Change Category",
+    "confidence": "Confidence",
+    "continue_with_this_classificat_14": "Continue with this classification",
+    "document_analysis_complete_10": "Document Analysis Complete",
+    "document_type_11": "Document Type",
+    "documents_we_can_process_16": "Documents we can process:",
+    "drop_your_document_here_or_cli_7": "Drop your document here or click to browse",
+    "errors": {
+      "fileTypeError": "Please upload an image or PDF file",
+      "processingError": "Failed to process document"
+    },
+    "image_application_pdf_4": "image/*,application/pdf",
+    "insurance_policies_life_health_17": "Insurance policies (life, health, home, auto)",
+    "m24_12v12m0_0l_4_4m4_4l4_4m10__6": "M24 12v12m0 0l-4 4m4-4l4 4m10-6",
+    "personal_identification_docume_23": "Personal identification documents",
+    "please_upload_an_image_or_pdf__1": "Please upload an image or PDF file",
+    "property_deeds_and_titles_18": "Property deeds and titles",
+    "smart_document_upload_2": "Smart Document Upload",
+    "suggested_title_12": "Suggested Title",
+    "supports_images_and_pdfs_up_to_8": "Supports images and PDFs up to 10MB",
+    "tax_returns_and_documents_24": "Tax returns and documents",
+    "upload_any_document_and_our_ai_3": "Upload any document and our AI will automatically classify it for you",
+    "vehicle_ownership_documents_19": "Vehicle ownership documents",
+    "wills_and_estate_planning_docu_21": "Wills and estate planning documents"
+  },
+  "upload": {
+    "zone": {
+      "chooseFiles": "Choose Files",
+      "description": "I'll organize everything for you - just drag files here or click to browse",
+      "descriptionActive": "I'm ready to organize everything for you",
+      "dragOverlay": {
+        "subtitle": "I'll take good care of them",
+        "title": "Drop your documents here"
+      },
+      "dropHere": "Drop your important papers here",
+      "dropHereActive": "Yes! Drop them right here",
+      "processingLocally": "Processing locally on your device",
+      "takePhoto": "Take Photo"
+    }
+  },
+  "vault": {
+    "addAsset": "Add Asset",
+    "addDigitalAsset": "Add Digital Asset",
+    "addFinances": "Add Finances",
+    "addNewAsset": "Add New Asset",
+    "addOther": "Add Something Else...",
+    "addPersonalItem": "Add Personal Item",
+    "addProperty": "Add Property",
+    "addVehicle": "Add Vehicle",
+    "categories": "Categories",
+    "digital": "Digital",
+    "errorDeletingAsset": "Failed to delete asset. Please try again.",
+    "errorLoadingAssets": "Failed to load your assets. Please try again.",
     "fileUpload": {
-      "clickToUpload": "Click to upload",
-      "dragAndDrop": " or drag and drop",
-      "maxSize": "Maximum file size: 50MB",
-      "fileSizeMB": "{{size}} MB"
+      "addTag": "Add tag...",
+      "clickToSelect": "or click to browse",
+      "dragDropText": "Drag and drop files here",
+      "encryptDescription": "Files will be encrypted before upload for maximum security",
+      "encryptFiles": "Encrypt Files",
+      "encryptionInfo": "Your files are encrypted with AES-256 encryption. Only you can decrypt them.",
+      "selectedFiles": "Selected Files",
+      "tags": "Tags",
+      "title": "Upload Files",
+      "uploadFiles": "Upload Files",
+      "uploading": "Uploading..."
     },
-    "premium": {
-      "videoMessage": "Video messages are a premium feature.",
-      "upgradeNow": "Upgrade Now"
-    },
-    "buttons": {
-      "recordVideo": "Record Video Message",
-      "cancel": "Cancel",
-      "saving": "Saving...",
-      "update": "Update Time Capsule",
-      "create": "Create Time Capsule"
-    },
-    "characterCount": "{{count}}/{{max}} characters"
+    "finances": "Finances",
+    "letsBuildInventory": "Let's Build Your Inventory",
+    "other": "Other",
+    "personal": "Personal",
+    "property": "Property",
+    "searchPlaceholder": "Search your assets...",
+    "startAddingAssets": "Start adding assets to build your inventory",
+    "subtitle": "Your secure inventory of all financial assets and valuable possessions.",
+    "title": "The Vault",
+    "totalAssets": "Total Assets",
+    "totalValue": "Total Value",
+    "vehicle": "Vehicle"
   }
 }

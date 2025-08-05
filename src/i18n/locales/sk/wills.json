@@ -1,599 +1,523 @@
 {
-  "_comment": "Nástroje pre generovanie a plánovanie závetu",
-  "will": {
-    "title": "Závet",
-    "fields": {
-      "notes": "Poznámky",
-      "status": "Stav",
-      "physical_location": "Fyzické umiestnenie",
-      "executor_contact_id": "ID správcu kontaktu"
-    },
-    "statuses": {
-      "draft": "Návrh",
-      "pending_signatures": "Čaká na podpisy",
-      "completed": "Dokončené",
-      "needs_revision": "Vyžaduje revíziu"
-    },
-    "actions": {
-      "save": "Uložiť",
-      "edit": "Upraviť"
-    },
-    "placeholders": {
-      "notes_placeholder": "Zadajte všetky dodatočné poznámky sem..."
-    },
-    "errors": {
-      "unauthorized": "Neautorizovaný prístup.",
-      "save_will_failed": "Nepodarilo sa uložiť závet. Skúste to prosím znovu.",
-      "retrieve_will_failed": "Nepodarilo sa načítať závet.",
-      "load_template_failed": "Nepodarilo sa načítať šablónu.",
-      "not_found": "Závet nebol nájdený.",
-      "failed_to_save": "Nepodarilo sa uložiť závet.",
-      "failed_to_load": "Nepodarilo sa načítať závet.",
-      "failed_to_retrieve": "Nepodarilo sa získať závet.",
-      "failed_to_fetch": "Nepodarilo sa získať závety.",
-      "failed_to_generate": "Nepodarilo sa vygenerovať závet.",
-      "failed_to_sign": "Nepodarilo sa podpísať závet.",
-      "failed_to_delete": "Nepodarilo sa vymazať závet.",
-      "failed_to_notarize": "Nepodarilo sa notársky overiť závet.",
-      "failed_to_update_status": "Nepodarilo sa aktualizovať stav závetu.",
-      "failed_to_verify": "Nepodarilo sa overiť notárske overenie.",
-      "cannot_update_non_draft": "Nemožno aktualizovať ne-návrh závetu.",
-      "cannot_delete_non_draft": "Nemožno vymazať ne-návrh závetu.",
-      "must_be_signed": "Závet musí byť pred notárskym overením podpísaný.",
-      "verification_code_required": "Je vyžadovaný overovací kód.",
-      "invalid_verification_code": "Neplatný overovací kód."
-    },
-    "messages": {
-      "will_saved_masculine": "Váš závet bol úspešne uložený.",
-      "will_saved_feminine": "Váš závet bol úspešne uložený.",
-      "will_saved": "Závet bol úspěšne uložený.",
-      "template_loaded": "Šablóna bola úspešne načítaná.",
-      "backup_success": "Záloha prebehla úspešne.",
-      "backup_failed": "Nepodarilo sa vytvoriť zálohu."
-    },
-    "success": {
-      "will_saved_masculine": "Váš závet bol úspešne uložený.",
-      "will_saved_feminine": "Váš závet bol úspešne uložený.",
-      "will_saved": "Závet bol úspěšne uložený.",
-      "backup_created": "Záloha bola úspešne vytvorená.",
-      "notarized": "Závet bol úspešne notársky overený."
-    },
-    "instructions": {
-      "verify_info": "Pred pokračovaním do ďalších krokov skontrolujte všetky informácie.",
-      "provide_full_details": "Pre presnosť prosím poskytnite všetky detaily."
-    }
-  },
-  "willGenerator": {
-    "countries": {
-      "GB": "Spojené kráľovstvo",
-      "DE": "Nemecko",
-      "FR": "Francúzsko",
-      "ES": "Španielsko",
-      "IT": "Taliansko",
-      "CZ": "Česká republika",
-      "SK": "Slovensko",
-      "PL": "Poľsko",
-      "AT": "Rakúsko",
-      "CH": "Švajčiarsko",
-      "NL": "Holandsko",
-      "BE": "Belgicko",
-      "LU": "Luxembursko",
-      "LI": "Lichtenštajnsko",
-      "DK": "Dánsko",
-      "SE": "Švédsko",
-      "FI": "Fínsko",
-      "NO": "Nórsko",
-      "IS": "Island",
-      "IE": "Írsko",
-      "PT": "Portugalsko",
-      "GR": "Grécko",
-      "HU": "Maďarsko",
-      "RO": "Rumunsko",
-      "BG": "Bulharsko",
-      "HR": "Chorvátsko",
-      "SI": "Slovinsko",
-      "EE": "Estónsko",
-      "LV": "Lotyšsko",
-      "LT": "Litva",
-      "MT": "Malta",
-      "CY": "Cyprus",
-      "MD": "Moldavsko",
-      "UA": "Ukrajina",
-      "RS": "Srbsko",
-      "AL": "Albánsko",
-      "MK": "Severné Macedónsko",
-      "ME": "Čierna Hora",
-      "BA": "Bosna a Hercegovina",
-      "XK": "Kosovo",
-      "TR": "Turecko",
-      "GE": "Gruzínsko",
-      "AM": "Arménsko",
-      "AZ": "Azerbajdžan",
-      "BY": "Bielorusko",
-      "RU": "Rusko",
-      "KZ": "Kazachstan",
-      "UZ": "Uzbekistan",
-      "KG": "Kirgizsko",
-      "TJ": "Tadžikistan",
-      "TM": "Turkménsko",
-      "AF": "Afganistan",
-      "PK": "Pakistan",
-      "IN": "India",
-      "BD": "Bangladéš",
-      "LK": "Srí Lanka",
-      "NP": "Nepál",
-      "BT": "Bhután",
-      "MV": "Maldivy",
-      "MM": "Mjanmarsko",
-      "TH": "Thajsko",
-      "LA": "Laos",
-      "VN": "Vietnam",
-      "KH": "Kambodža",
-      "MY": "Malajzia",
-      "SG": "Singapur",
-      "BN": "Brunej",
-      "ID": "Indonézia",
-      "PH": "Filipíny",
-      "TL": "Východný Timor",
-      "CN": "Čína",
-      "TW": "Taiwan",
-      "HK": "Hong Kong",
-      "MO": "Macao",
-      "JP": "Japonsko",
-      "KR": "Južná Kórea",
-      "KP": "Severná Kórea",
-      "MN": "Mongolsko",
-      "US": "Spojené štáty americké",
-      "CA": "Kanada",
-      "MX": "Mexiko",
-      "GT": "Guatemala",
-      "BZ": "Belize",
-      "SV": "Salvádor",
-      "HN": "Honduras",
-      "NI": "Nikaragua",
-      "CR": "Kostarika",
-      "PA": "Panama",
-      "CU": "Kuba",
-      "JM": "Jamajka",
-      "HT": "Haiti",
-      "DO": "Dominikánska republika",
-      "PR": "Portoriko",
-      "TT": "Trinidad a Tobago",
-      "BB": "Barbados",
-      "GD": "Grenada",
-      "LC": "Svätá Lucia",
-      "VC": "Svätý Vincent a Grenadíny",
-      "AG": "Antigua a Barbuda",
-      "KN": "Svätý Krištof a Nevis",
-      "DM": "Dominika",
-      "BS": "Bahamy",
-      "CO": "Kolumbia",
-      "VE": "Venezuela",
-      "GY": "Guyana",
-      "SR": "Surinam",
-      "GF": "Francúzska Guyana",
-      "BR": "Brazília",
-      "EC": "Ekvádor",
-      "PE": "Peru",
-      "BO": "Bolívia",
-      "PY": "Paraguaj",
-      "UY": "Uruguaj",
-      "AR": "Argentína",
-      "CL": "Čile",
-      "FK": "Falklandské ostrovy",
-      "AU": "Austrália",
-      "NZ": "Nový Zéland",
-      "PG": "Papua-Nová Guinea",
-      "FJ": "Fidži",
-      "NC": "Nová Kaledónia",
-      "VU": "Vanuatu",
-      "SB": "Šalamúnove ostrovy",
-      "TO": "Tonga",
-      "WS": "Samoa",
-      "KI": "Kiribati",
-      "TV": "Tuvalu",
-      "NR": "Nauru",
-      "PW": "Palau",
-      "MH": "Marshallove ostrovy",
-      "FM": "Mikronézia",
-      "CK": "Cookove ostrovy",
-      "NU": "Niue",
-      "TK": "Tokelau",
-      "AS": "Americká Samoa",
-      "GU": "Guam",
-      "MP": "Severné Mariány",
-      "PF": "Francúzska Polynézia",
-      "WF": "Wallis a Futuna",
-      "AI": "Anguilla",
-      "VG": "Britské Panenské ostrovy",
-      "VI": "Americké Panenské ostrovy",
-      "AW": "Aruba",
-      "CW": "Curaçao",
-      "SX": "Svätý Martin (Holandsko)",
-      "BL": "Svätý Bartolomej",
-      "MF": "Svätý Martin (Francúzsko)",
-      "GP": "Guadeloupe",
-      "MQ": "Martinik",
-      "RE": "Réunion",
-      "YT": "Mayotte",
-      "KM": "Komory",
-      "MG": "Madagaskar",
-      "MU": "Maurícius",
-      "SC": "Seychely",
-      "DJ": "Džibuti",
-      "SO": "Somálsko",
-      "ET": "Etiópia",
-      "ER": "Eritrea",
-      "SD": "Sudán",
-      "SS": "Južný Sudán",
-      "EG": "Egypt",
-      "LY": "Líbya",
-      "TN": "Tunisko",
-      "DZ": "Alžírsko",
-      "MA": "Maroko",
-      "EH": "Západná Sahara",
-      "MR": "Mauritánia",
-      "ML": "Mali",
-      "BF": "Burkina Faso",
-      "NE": "Niger",
-      "TD": "Čad",
-      "CF": "Stredoafrická republika",
-      "CM": "Kamerun",
-      "NG": "Nigéria",
-      "BJ": "Benin",
-      "TG": "Togo",
-      "GH": "Ghana",
-      "CI": "Pobrežie Slonoviny",
-      "LR": "Libéria",
-      "SL": "Sierra Leone",
-      "GN": "Guinea",
-      "GW": "Guinea-Bissau",
-      "SN": "Senegal",
-      "GM": "Gambia",
-      "CV": "Kapverdy",
-      "MR": "Mauritánia",
-      "ML": "Mali",
-      "BF": "Burkina Faso",
-      "NE": "Niger",
-      "TD": "Čad",
-      "CF": "Stredoafrická republika",
-      "CM": "Kamerun",
-      "NG": "Nigéria",
-      "BJ": "Benin",
-      "TG": "Togo",
-      "GH": "Ghana",
-      "CI": "Pobrežie Slonoviny",
-      "LR": "Libéria",
-      "SL": "Sierra Leone",
-      "GN": "Guinea",
-      "GW": "Guinea-Bissau",
-      "SN": "Senegal",
-      "GM": "Gambia",
-      "CV": "Kapverdy"
-    },
-    "title": "Generátor závetu",
-    "subtitle": "Vytvorte si závet krok za krokom",
-    "description": "Pomôžeme vám vytvoriť závet, ktorý bude zodpovedať právnym požiadavkám vašej krajiny.",
-    "steps": {
-      "personalInfo": {
-        "title": "Osobné informácie",
-        "description": "Základné informácie o testátorovi"
-      },
-      "beneficiaries": {
-        "title": "Oprávnené osoby",
-        "description": "Kto zdedí váš majetok"
-      },
-      "assets": {
-        "title": "Majetok",
-        "description": "Čo máte k rozdaniu"
-      },
-      "executor": {
-        "title": "Správca pozostatku",
-        "description": "Kto bude spravovať váš pozostatok"
-      },
-      "guardian": {
-        "title": "Opatrovník",
-        "description": "Kto sa postará o vaše deti"
-      },
-      "review": {
-        "title": "Kontrola",
-        "description": "Skontrolujte a dokončite"
-      }
-    },
-    "form": {
-      "personalInfo": {
-        "fullName": "Celé meno",
-        "fullNamePlaceholder": "Zadajte svoje celé meno",
-        "dateOfBirth": "Dátum narodenia",
-        "dateOfBirthPlaceholder": "DD/MM/RRRR",
-        "nationality": "Národnosť",
-        "nationalityPlaceholder": "Vyberte svoju národnosť",
-        "address": "Adresa",
-        "addressPlaceholder": "Zadajte svoju adresu",
-        "city": "Mesto",
-        "cityPlaceholder": "Zadajte mesto",
-        "postalCode": "PSČ",
-        "postalCodePlaceholder": "Zadajte PSČ",
-        "country": "Krajina",
-        "countryPlaceholder": "Vyberte krajinu"
-      },
-      "beneficiaries": {
-        "title": "Oprávnené osoby",
-        "description": "Pridajte osoby, ktoré zdedia váš majetok",
-        "addBeneficiary": "Pridať oprávnenú osobu",
-        "name": "Meno",
-        "namePlaceholder": "Celé meno",
-        "relationship": "Vzťah",
-        "relationshipPlaceholder": "napr. manžel/ka, dieťa, rodič",
-        "percentage": "Percento",
-        "percentagePlaceholder": "Zadajte percento (1-100)",
-        "remove": "Odobrať"
-      },
-      "assets": {
-        "title": "Majetok",
-        "description": "Zoznam vášho majetku",
-        "addAsset": "Pridať majetok",
-        "name": "Názov",
-        "namePlaceholder": "Názov majetku",
-        "type": "Typ",
-        "typePlaceholder": "Vyberte typ majetku",
-        "value": "Hodnota",
-        "valuePlaceholder": "Odhadovaná hodnota",
-        "description": "Popis",
-        "descriptionPlaceholder": "Popis majetku",
-        "remove": "Odobrať",
-        "types": {
-          "realEstate": "Nehnuteľnosť",
-          "vehicle": "Vozidlo",
-          "bankAccount": "Bankový účet",
-          "investment": "Investícia",
-          "personalProperty": "Osobný majetok",
-          "business": "Podnikanie",
-          "other": "Iné"
-        }
-      },
-      "executor": {
-        "title": "Správca pozostatku",
-        "description": "Osoba, ktorá bude spravovať váš pozostatok",
-        "name": "Meno",
-        "namePlaceholder": "Celé meno správcu",
-        "relationship": "Vzťah",
-        "relationshipPlaceholder": "napr. manžel/ka, dieťa, právnik",
-        "address": "Adresa",
-        "addressPlaceholder": "Adresa správcu",
-        "phone": "Telefón",
-        "phonePlaceholder": "Telefónne číslo",
-        "email": "E-mail",
-        "emailPlaceholder": "E-mailová adresa"
-      },
-      "guardian": {
-        "title": "Opatrovník",
-        "description": "Osoba, ktorá sa postará o vaše deti",
-        "name": "Meno",
-        "namePlaceholder": "Celé meno opatrovníka",
-        "relationship": "Vzťah",
-        "relationshipPlaceholder": "napr. súrodenec, rodič, priateľ",
-        "address": "Adresa",
-        "addressPlaceholder": "Adresa opatrovníka",
-        "phone": "Telefón",
-        "phonePlaceholder": "Telefónne číslo",
-        "email": "E-mail",
-        "emailPlaceholder": "E-mailová adresa"
-      }
-    },
-    "actions": {
-      "previous": "Predchádzajúci",
-      "next": "Ďalší",
-      "save": "Uložiť",
-      "generate": "Vygenerovať závet",
-      "download": "Stiahnuť PDF"
-    },
-    "messages": {
-      "saved": "Závet bol uložený",
-      "generated": "Závet bol vygenerovaný",
-      "error": "Došlo k chybe"
-    }
-  },
   "complexityReducer": {
-    "title": "Zníženie zložitosti",
-    "subtitle": "Rozdeľujeme zložité úlohy na jednoduché kroky",
-    "description": "Každá úloha je rozdelená na menšie, zvládnuteľné kroky s jasnými inštrukciami.",
-    "tasks": {
-      "emergencyContacts": {
-        "title": "Pridajte kontakty pre núdzové situácie",
-        "why": "Prečo je to dôležité: rýchly prístup k kľúčovým osobám v kríze",
-        "whatYouDo": "Vaša časť: pridajte telefónne čísla a vzťah",
-        "whatWeDo": "Naša časť: zoradíme ich a vygenerujeme núdzové protokoly",
-        "timeRequired": "Potrebný čas: 3 minúty",
-        "complexity": "Úroveň: Jednoduché"
-      },
-      "insurancePolicies": {
-        "title": "Dokumentujte poistné zmluvy",
-        "why": "Prečo je to dôležité: uľahčuje rýchle a správne nároky",
-        "whatYouDo": "Vaša časť: nahrajte zmluvy alebo urobte fotky",
-        "whatWeDo": "Naša časť: extrahujeme kľúčové dáta a vygenerujeme inštrukcie",
-        "timeRequired": "Potrebný čas: 5 minút",
-        "complexity": "Úroveň: Ľahké"
-      },
-      "digitalAssets": {
-        "title": "Zabezpečte svoje digitálne majetky",
-        "why": "Prečo je to dôležité: chráni online účty a digitálne spomienky",
-        "whatYouDo": "Vaša časť: vypíšte účty a heslá",
-        "whatWeDo": "Naša časť: vytvoríme protokoly a bezpečné zálohy",
-        "timeRequired": "Potrebný čas: 4 minúty",
-        "complexity": "Úroveň: Ľahké"
-      },
-      "legalDocuments": {
-        "title": "Organizujte právne dokumenty",
-        "why": "Prečo je to dôležité: zabezpečuje, že sa splnia vaše právne priania",
-        "whatYouDo": "Vaša časť: nahrajte závety, plné moci a ďalšie dokumenty",
-        "whatWeDo": "Naša časť: vytvoríme zhrnutie a zabezpečíme správny prístup",
-        "timeRequired": "Potrebný čas: 6 minút",
-        "complexity": "Úroveň: Stredné"
-      },
-      "familyInstructions": {
-        "title": "Napíšte rodinné inštrukcie",
-        "why": "Prečo je to dôležité: jasne stanoví, čo robiť v ťažkých časoch",
-        "whatYouDo": "Vaša časť: napíšte osobné správy a inštrukcie",
-        "whatWeDo": "Naša časť: organizujeme správy a plánujeme doručenie",
-        "timeRequired": "Potrebný čas: 8 minút",
-        "complexity": "Úroveň: Stredné"
-      },
-      "passport": {
-        "title": "Vyfoťte svoj pas",
-        "description": "Nevyhnutné pre medzinárodné cestovné opatrenia a právnu identifikáciu.",
-        "completionMessage": "Medzinárodná cestovná dokumentácia je teraz zabezpečená pre vašu rodinu."
-      },
-      "birthCertificate": {
-        "title": "Naskenujte rodný list",
-        "description": "Vyžadované pre mnoho právnych procesov a dokumentáciu rodinnej histórie.",
-        "completionMessage": "Rodný list je teraz digitálne zachovaný pre budúce potreby."
-      },
-      "socialSecurityCard": {
-        "title": "Dokumentujte kartu sociálneho zabezpečenia",
-        "description": "Kritické pre dávky a procesy právnej identifikácie.",
-        "completionMessage": "Informácie o sociálnom zabezpečení sú teraz bezpečne dokumentované."
-      },
-      "bankAccounts": {
-        "title": "Vypíšte svoje bankové účty",
-        "description": "Pomôžte svojej rodine spravovať financie a pristupovať k prostriedkom, keď je to potrebné.",
-        "completionMessage": "Informácie o bankových účtoch sú teraz organizované pre vašu rodinu."
-      },
-      "insurancePolicies": {
-        "title": "Zostavte detaily poistných zmlúv",
-        "description": "Zabezpečte, aby vaša rodina vedela o všetkom krytí a mohla podať nároky.",
-        "completionMessage": "Informácie o poistení sú teraz komplexné a prístupné."
-      },
-      "medicalRecords": {
-        "title": "Organizujte lekársku anamnézu",
-        "description": "Pomôžte poskytovateľom zdravotnej starostlivosti pochopiť vašu lekársku anamnézu.",
-        "completionMessage": "Lekárska anamnéza je teraz organizovaná pre lepšie rozhodovanie o zdravotnej starostlivosti."
-      },
-      "medications": {
-        "title": "Vypíšte súčasné lieky",
-        "description": "Kritické pre lekárske pohotovosti a pokračujúcu starostlivosť.",
-        "completionMessage": "Zoznam liekov je teraz k dispozícii pre zdravotníckych pracovníkov."
-      },
-      "will": {
-        "title": "Vytvorte alebo aktualizujte svoj závet",
-        "description": "Zabezpečte, aby vaše priania boli jasne dokumentované a právne záväzné.",
-        "completionMessage": "Váš závet je teraz aktuálny a právne chránený."
-      },
-      "powerOfAttorney": {
-        "title": "Vymenujte plnú moc",
-        "description": "Autorizujte dôveryhodné osoby k rozhodovaniu vaším menom.",
-        "completionMessage": "Plná moc je teraz správne vymenovaná."
-      },
-      "digitalPasswords": {
-        "title": "Zabezpečený zoznam digitálnych hesiel",
-        "description": "Pomôžte rodine pristupovať k dôležitým online účtom a službám.",
-        "completionMessage": "Digitálny prístup je teraz bezpečne organizovaný pre vašu rodinu."
-      },
-      "socialMedia": {
-        "title": "Naplánujte účty na sociálnych sieťach",
-        "description": "Rozhodnite, ako má byť spravovaná vaša online prítomnosť.",
-        "completionMessage": "Dedičstvo sociálnych sietí je teraz naplánované a dokumentované."
-      }
-    },
     "actions": {
-      "startThisStep": "Začať tento krok",
-      "showMeHow": "Ukážte mi ako",
+      "completeStep": "Označiť ako dokončené",
       "iNeedHelp": "Potrebujem pomoc",
       "nextStep": "Ďalší krok",
       "previousStep": "Predchádzajúci krok",
-      "completeStep": "Označiť ako dokončené",
-      "skipStep": "Preskočiť zatiaľ"
+      "showMeHow": "Ukážte mi ako",
+      "skipStep": "Preskočiť zatiaľ",
+      "startThisStep": "Začať tento krok"
     },
-    "progress": {
-      "title": "Váš pokrok",
-      "completed": "Dokončené",
-      "inProgress": "Prebieha",
-      "notStarted": "Nezahájené",
-      "totalSteps": "Celkom krokov",
-      "estimatedTime": "Odhadovaný zostávajúci čas"
-    },
+    "description": "Každá úloha je rozdelená na menšie, zvládnuteľné kroky s jasnými inštrukciami.",
     "features": {
-      "title": "Ako funguje zníženie zložitosti",
-      "stepByStep": {
-        "title": "Sprievodca krok za krokom",
-        "description": "Každá úloha je rozdelená na jednoduché a jasné inštrukcie."
-      },
-      "timeEstimation": {
-        "title": "Presné časy",
-        "description": "Budete vedieť presne, ako dlho trvá každý krok, maximálne 2 až 15 minút."
-      },
       "difficultyLevels": {
-        "title": "Jasné úrovne obtiažnosti",
-        "description": "Klasifikácia Jednoduché, Ľahké, Stredné a Zložité, aby ste si vybrali, kde začať."
-      },
-      "progressTracking": {
-        "title": "Sledovanie pokroku",
-        "description": "Pozrite sa, ako sa zvyšuje rodinná pripravenosť s každým dokončeným krokom."
+        "description": "Klasifikácia Jednoduché, Ľahké, Stredné a Zložité, aby ste si vybrali, kde začať.",
+        "title": "Jasné úrovne obtiažnosti"
       },
       "helpAvailable": {
-        "title": "Pomoc, keď ju potrebujete",
-        "description": "Získajte podporu a vysvetlenie pre akýkoľvek krok, ktorý vám robí ťažkosti."
-      }
+        "description": "Získajte podporu a vysvetlenie pre akýkoľvek krok, ktorý vám robí ťažkosti.",
+        "title": "Pomoc, keď ju potrebujete"
+      },
+      "progressTracking": {
+        "description": "Pozrite sa, ako sa zvyšuje rodinná pripravenosť s každým dokončeným krokom.",
+        "title": "Sledovanie pokroku"
+      },
+      "stepByStep": {
+        "description": "Každá úloha je rozdelená na jednoduché a jasné inštrukcie.",
+        "title": "Sprievodca krok za krokom"
+      },
+      "timeEstimation": {
+        "description": "Budete vedieť presne, ako dlho trvá každý krok, maximálne 2 až 15 minút.",
+        "title": "Presné časy"
+      },
+      "title": "Ako funguje zníženie zložitosti"
     },
-    "sessionStats": {
-      "tasksCompleted": "Dokončené úlohy",
-      "totalTimeSpent": "Celkový strávený čas",
-      "momentumScore": "Skóre momentum",
-      "nextRecommendedTask": "Ďalšia odporúčaná úloha"
+    "progress": {
+      "completed": "Dokončené",
+      "estimatedTime": "Odhadovaný zostávajúci čas",
+      "inProgress": "Prebieha",
+      "notStarted": "Nezahájené",
+      "title": "Váš pokrok",
+      "totalSteps": "Celkom krokov"
     },
     "scoring": {
-      "urgency": "Naliehavosť",
-      "impact": "Dopad",
       "ease": "Ľahkosť",
-      "momentum": "Momentum"
-    }
-  },
-  "microTaskGenerator": {
-    "minutes_1": " minút • ",
-    "family_impact_2": " dopad na rodinu",
-    "start_task_3": "Začať úlohu",
-    "complete_task_4": "Dokončiť úlohu",
-    "skip_for_now_5": "Preskočiť zatiaľ",
-    "taskCategories": {
-      "identification": "Doklady totožnosti",
-      "financial": "Finančné informácie",
-      "healthcare": "Zdravotné dokumenty",
-      "legal": "Právne dokumenty",
-      "family": "Rodinné informácie",
-      "emergency": "Núdzové kontakty",
-      "digital": "Digitálne účty",
-      "instructions": "Inštrukcie a správy",
-      "insurance": "Poistné zmluvy"
-    }
+      "impact": "Dopad",
+      "momentum": "Momentum",
+      "urgency": "Naliehavosť"
+    },
+    "sessionStats": {
+      "momentumScore": "Skóre momentum",
+      "nextRecommendedTask": "Ďalšia odporúčaná úloha",
+      "tasksCompleted": "Dokončené úlohy",
+      "totalTimeSpent": "Celkový strávený čas"
+    },
+    "subtitle": "Rozdeľujeme zložité úlohy na jednoduché kroky",
+    "tasks": {
+      "bankAccounts": {
+        "completionMessage": "Informácie o bankových účtoch sú teraz organizované pre vašu rodinu.",
+        "description": "Pomôžte svojej rodine spravovať financie a pristupovať k prostriedkom, keď je to potrebné.",
+        "title": "Vypíšte svoje bankové účty"
+      },
+      "birthCertificate": {
+        "completionMessage": "Rodný list je teraz digitálne zachovaný pre budúce potreby.",
+        "description": "Vyžadované pre mnoho právnych procesov a dokumentáciu rodinnej histórie.",
+        "title": "Naskenujte rodný list"
+      },
+      "digitalAssets": {
+        "complexity": "Úroveň: Ľahké",
+        "timeRequired": "Potrebný čas: 4 minúty",
+        "title": "Zabezpečte svoje digitálne majetky",
+        "whatWeDo": "Naša časť: vytvoríme protokoly a bezpečné zálohy",
+        "whatYouDo": "Vaša časť: vypíšte účty a heslá",
+        "why": "Prečo je to dôležité: chráni online účty a digitálne spomienky"
+      },
+      "digitalPasswords": {
+        "completionMessage": "Digitálny prístup je teraz bezpečne organizovaný pre vašu rodinu.",
+        "description": "Pomôžte rodine pristupovať k dôležitým online účtom a službám.",
+        "title": "Zabezpečený zoznam digitálnych hesiel"
+      },
+      "emergencyContacts": {
+        "complexity": "Úroveň: Jednoduché",
+        "timeRequired": "Potrebný čas: 3 minúty",
+        "title": "Pridajte kontakty pre núdzové situácie",
+        "whatWeDo": "Naša časť: zoradíme ich a vygenerujeme núdzové protokoly",
+        "whatYouDo": "Vaša časť: pridajte telefónne čísla a vzťah",
+        "why": "Prečo je to dôležité: rýchly prístup k kľúčovým osobám v kríze"
+      },
+      "familyInstructions": {
+        "complexity": "Úroveň: Stredné",
+        "timeRequired": "Potrebný čas: 8 minút",
+        "title": "Napíšte rodinné inštrukcie",
+        "whatWeDo": "Naša časť: organizujeme správy a plánujeme doručenie",
+        "whatYouDo": "Vaša časť: napíšte osobné správy a inštrukcie",
+        "why": "Prečo je to dôležité: jasne stanoví, čo robiť v ťažkých časoch"
+      },
+      "insurancePolicies": {
+        "completionMessage": "Informácie o poistení sú teraz komplexné a prístupné.",
+        "description": "Zabezpečte, aby vaša rodina vedela o všetkom krytí a mohla podať nároky.",
+        "title": "Zostavte detaily poistných zmlúv"
+      },
+      "legalDocuments": {
+        "complexity": "Úroveň: Stredné",
+        "timeRequired": "Potrebný čas: 6 minút",
+        "title": "Organizujte právne dokumenty",
+        "whatWeDo": "Naša časť: vytvoríme zhrnutie a zabezpečíme správny prístup",
+        "whatYouDo": "Vaša časť: nahrajte závety, plné moci a ďalšie dokumenty",
+        "why": "Prečo je to dôležité: zabezpečuje, že sa splnia vaše právne priania"
+      },
+      "medicalRecords": {
+        "completionMessage": "Lekárska anamnéza je teraz organizovaná pre lepšie rozhodovanie o zdravotnej starostlivosti.",
+        "description": "Pomôžte poskytovateľom zdravotnej starostlivosti pochopiť vašu lekársku anamnézu.",
+        "title": "Organizujte lekársku anamnézu"
+      },
+      "medications": {
+        "completionMessage": "Zoznam liekov je teraz k dispozícii pre zdravotníckych pracovníkov.",
+        "description": "Kritické pre lekárske pohotovosti a pokračujúcu starostlivosť.",
+        "title": "Vypíšte súčasné lieky"
+      },
+      "passport": {
+        "completionMessage": "Medzinárodná cestovná dokumentácia je teraz zabezpečená pre vašu rodinu.",
+        "description": "Nevyhnutné pre medzinárodné cestovné opatrenia a právnu identifikáciu.",
+        "title": "Vyfoťte svoj pas"
+      },
+      "powerOfAttorney": {
+        "completionMessage": "Plná moc je teraz správne vymenovaná.",
+        "description": "Autorizujte dôveryhodné osoby k rozhodovaniu vaším menom.",
+        "title": "Vymenujte plnú moc"
+      },
+      "socialMedia": {
+        "completionMessage": "Dedičstvo sociálnych sietí je teraz naplánované a dokumentované.",
+        "description": "Rozhodnite, ako má byť spravovaná vaša online prítomnosť.",
+        "title": "Naplánujte účty na sociálnych sieťach"
+      },
+      "socialSecurityCard": {
+        "completionMessage": "Informácie o sociálnom zabezpečení sú teraz bezpečne dokumentované.",
+        "description": "Kritické pre dávky a procesy právnej identifikácie.",
+        "title": "Dokumentujte kartu sociálneho zabezpečenia"
+      },
+      "will": {
+        "completionMessage": "Váš závet je teraz aktuálny a právne chránený.",
+        "description": "Zabezpečte, aby vaše priania boli jasne dokumentované a právne záväzné.",
+        "title": "Vytvorte alebo aktualizujte svoj závet"
+      }
+    },
+    "title": "Zníženie zložitosti"
   },
   "editStoryModal": {
-    "editStory": "Upraviť príbeh",
     "addStory": "Pridať príbeh",
-    "description": "Zdieľajte príbeh za \"{{assetName}}\". Tento osobný dotyk bude neoceniteľný pre vašich blízkych.",
+    "editStory": "Upraviť príbeh",
+    "errors": {
+      "notAuthenticated": "Pre uloženie príbehu musíte byť prihlásený",
+      "saveFailed": "Nepodarilo sa uložiť príbeh"
+    },
     "fields": {
       "yourStory": "Váš príbeh"
-    },
-    "placeholders": {
-      "story": "napr. Tento bol svadobný prsteň vašej babičky, darovaný jej v roku 1952, keď sa vydala za vašeho dedka v malom kostole v ich rodnom meste. Nosila ho každý deň po dobu 65 rokov..."
     },
     "hints": {
       "shareMemories": "Zdieľajte spomienky, význam alebo históriu"
     },
-    "tips": {
-      "title": "Tipy pre zmysluplný príbeh:",
-      "explainSpecial": "Vysvetlite, prečo je táto vec pre vás zvláštna",
-      "shareMemories": "Zdieľajte spomienky spojené s ňou",
-      "describeHistory": "Popíšte jej históriu alebo ako ste ju získali",
-      "mentionWishes": "Spomeňte akékoľvek priania ohľadom toho, ako by mala byť použitá alebo zachovaná"
-    },
-    "saving": "Ukladám...",
-    "saveStory": "Uložiť príbeh",
     "messages": {
       "saved": "Príbeh bol úspešne uložený"
     },
-    "errors": {
-      "notAuthenticated": "Pre uloženie príbehu musíte byť prihlásený",
-      "saveFailed": "Nepodarilo sa uložiť príbeh"
+    "placeholders": {
+      "story": "napr. Tento bol svadobný prsteň vašej babičky, darovaný jej v roku 1952, keď sa vydala za vašeho dedka v malom kostole v ich rodnom meste. Nosila ho každý deň po dobu 65 rokov..."
+    },
+    "saveStory": "Uložiť príbeh",
+    "saving": "Ukladám...",
+    "tips": {
+      "describeHistory": "Popíšte jej históriu alebo ako ste ju získali",
+      "explainSpecial": "Vysvetlite, prečo je táto vec pre vás zvláštna",
+      "mentionWishes": "Spomeňte akékoľvek priania ohľadom toho, ako by mala byť použitá alebo zachovaná",
+      "shareMemories": "Zdieľajte spomienky spojené s ňou",
+      "title": "Tipy pre zmysluplný príbeh:"
     }
+  },
+  "microTaskGenerator": {
+    "complete_task_4": "Dokončiť úlohu",
+    "family_impact_2": " dopad na rodinu",
+    "minutes_1": " minút • ",
+    "skip_for_now_5": "Preskočiť zatiaľ",
+    "start_task_3": "Začať úlohu",
+    "taskCategories": {
+      "emergency": "Núdzové kontakty",
+      "family": "Rodinné informácie",
+      "instructions": "Inštrukcie a správy",
+      "insurance": "Poistné zmluvy"
+    }
+  },
+  "will": {
+    "errors": {
+      "cannot_delete_non_draft": "Nemožno vymazať ne-návrh závetu.",
+      "cannot_update_non_draft": "Nemožno aktualizovať ne-návrh závetu.",
+      "failed_to_delete": "Nepodarilo sa vymazať závet.",
+      "failed_to_fetch": "Nepodarilo sa získať závety.",
+      "failed_to_generate": "Nepodarilo sa vygenerovať závet.",
+      "failed_to_load": "Nepodarilo sa načítať závet.",
+      "failed_to_save": "Nepodarilo sa uložiť závet.",
+      "failed_to_sign": "Nepodarilo sa podpísať závet.",
+      "not_found": "Závet nebol nájdený.",
+      "unauthorized": "Neautorizovaný prístup."
+    },
+    "messages": {
+      "will_saved_feminine": "Váš závet bol úspešne uložený.",
+      "will_saved_masculine": "Váš závet bol úspešne uložený."
+    },
+    "success": {
+      "will_saved_feminine": "Váš závet bol úspešne uložený.",
+      "will_saved_masculine": "Váš závet bol úspešne uložený."
+    }
+  },
+  "willGenerator": {
+    "actions": {
+      "download": "Stiahnuť PDF",
+      "generate": "Vygenerovať závet",
+      "next": "Ďalší",
+      "previous": "Predchádzajúci",
+      "save": "Uložiť"
+    },
+    "countries": {
+      "AF": "Afganistan",
+      "AG": "Antigua a Barbuda",
+      "AI": "Anguilla",
+      "AL": "Albánsko",
+      "AM": "Arménsko",
+      "AR": "Argentína",
+      "AS": "Americká Samoa",
+      "AT": "Rakúsko",
+      "AU": "Austrália",
+      "AW": "Aruba",
+      "AZ": "Azerbajdžan",
+      "BA": "Bosna a Hercegovina",
+      "BB": "Barbados",
+      "BD": "Bangladéš",
+      "BE": "Belgicko",
+      "BF": "Burkina Faso",
+      "BG": "Bulharsko",
+      "BJ": "Benin",
+      "BL": "Svätý Bartolomej",
+      "BN": "Brunej",
+      "BO": "Bolívia",
+      "BR": "Brazília",
+      "BS": "Bahamy",
+      "BT": "Bhután",
+      "BY": "Bielorusko",
+      "BZ": "Belize",
+      "CA": "Kanada",
+      "CF": "Stredoafrická republika",
+      "CH": "Švajčiarsko",
+      "CI": "Pobrežie Slonoviny",
+      "CK": "Cookove ostrovy",
+      "CL": "Čile",
+      "CM": "Kamerun",
+      "CN": "Čína",
+      "CO": "Kolumbia",
+      "CR": "Kostarika",
+      "CU": "Kuba",
+      "CV": "Kapverdy",
+      "CW": "Curaçao",
+      "CY": "Cyprus",
+      "CZ": "Česká republika",
+      "DE": "Nemecko",
+      "DJ": "Džibuti",
+      "DK": "Dánsko",
+      "DM": "Dominika",
+      "DO": "Dominikánska republika",
+      "DZ": "Alžírsko",
+      "EC": "Ekvádor",
+      "EE": "Estónsko",
+      "EG": "Egypt",
+      "EH": "Západná Sahara",
+      "ER": "Eritrea",
+      "ES": "Španielsko",
+      "ET": "Etiópia",
+      "FI": "Fínsko",
+      "FJ": "Fidži",
+      "FK": "Falklandské ostrovy",
+      "FM": "Mikronézia",
+      "FR": "Francúzsko",
+      "GB": "Spojené kráľovstvo",
+      "GD": "Grenada",
+      "GE": "Gruzínsko",
+      "GF": "Francúzska Guyana",
+      "GH": "Ghana",
+      "GM": "Gambia",
+      "GN": "Guinea",
+      "GP": "Guadeloupe",
+      "GR": "Grécko",
+      "GT": "Guatemala",
+      "GU": "Guam",
+      "GW": "Guinea-Bissau",
+      "GY": "Guyana",
+      "HK": "Hong Kong",
+      "HN": "Honduras",
+      "HR": "Chorvátsko",
+      "HT": "Haiti",
+      "HU": "Maďarsko",
+      "ID": "Indonézia",
+      "IE": "Írsko",
+      "IN": "India",
+      "IS": "Island",
+      "IT": "Taliansko",
+      "JM": "Jamajka",
+      "JP": "Japonsko",
+      "KG": "Kirgizsko",
+      "KH": "Kambodža",
+      "KI": "Kiribati",
+      "KM": "Komory",
+      "KN": "Svätý Krištof a Nevis",
+      "KP": "Severná Kórea",
+      "KR": "Južná Kórea",
+      "KZ": "Kazachstan",
+      "LA": "Laos",
+      "LC": "Svätá Lucia",
+      "LI": "Lichtenštajnsko",
+      "LK": "Srí Lanka",
+      "LR": "Libéria",
+      "LT": "Litva",
+      "LU": "Luxembursko",
+      "LV": "Lotyšsko",
+      "LY": "Líbya",
+      "MA": "Maroko",
+      "MD": "Moldavsko",
+      "ME": "Čierna Hora",
+      "MF": "Svätý Martin (Francúzsko)",
+      "MG": "Madagaskar",
+      "MH": "Marshallove ostrovy",
+      "MK": "Severné Macedónsko",
+      "ML": "Mali",
+      "MM": "Mjanmarsko",
+      "MN": "Mongolsko",
+      "MO": "Macao",
+      "MP": "Severné Mariány",
+      "MQ": "Martinik",
+      "MR": "Mauritánia",
+      "MT": "Malta",
+      "MU": "Maurícius",
+      "MV": "Maldivy",
+      "MX": "Mexiko",
+      "MY": "Malajzia",
+      "NC": "Nová Kaledónia",
+      "NE": "Niger",
+      "NG": "Nigéria",
+      "NI": "Nikaragua",
+      "NL": "Holandsko",
+      "NO": "Nórsko",
+      "NP": "Nepál",
+      "NR": "Nauru",
+      "NU": "Niue",
+      "NZ": "Nový Zéland",
+      "PA": "Panama",
+      "PE": "Peru",
+      "PF": "Francúzska Polynézia",
+      "PG": "Papua-Nová Guinea",
+      "PH": "Filipíny",
+      "PK": "Pakistan",
+      "PL": "Poľsko",
+      "PR": "Portoriko",
+      "PT": "Portugalsko",
+      "PW": "Palau",
+      "PY": "Paraguaj",
+      "RE": "Réunion",
+      "RO": "Rumunsko",
+      "RS": "Srbsko",
+      "RU": "Rusko",
+      "SB": "Šalamúnove ostrovy",
+      "SC": "Seychely",
+      "SD": "Sudán",
+      "SE": "Švédsko",
+      "SG": "Singapur",
+      "SI": "Slovinsko",
+      "SK": "Slovensko",
+      "SL": "Sierra Leone",
+      "SN": "Senegal",
+      "SO": "Somálsko",
+      "SR": "Surinam",
+      "SS": "Južný Sudán",
+      "SV": "Salvádor",
+      "SX": "Svätý Martin (Holandsko)",
+      "TD": "Čad",
+      "TG": "Togo",
+      "TH": "Thajsko",
+      "TJ": "Tadžikistan",
+      "TK": "Tokelau",
+      "TL": "Východný Timor",
+      "TM": "Turkménsko",
+      "TN": "Tunisko",
+      "TO": "Tonga",
+      "TR": "Turecko",
+      "TT": "Trinidad a Tobago",
+      "TV": "Tuvalu",
+      "TW": "Taiwan",
+      "UA": "Ukrajina",
+      "US": "Spojené štáty americké",
+      "UY": "Uruguaj",
+      "UZ": "Uzbekistan",
+      "VC": "Svätý Vincent a Grenadíny",
+      "VE": "Venezuela",
+      "VG": "Britské Panenské ostrovy",
+      "VI": "Americké Panenské ostrovy",
+      "VN": "Vietnam",
+      "VU": "Vanuatu",
+      "WF": "Wallis a Futuna",
+      "WS": "Samoa",
+      "XK": "Kosovo",
+      "YT": "Mayotte"
+    },
+    "description": "Pomôžeme vám vytvoriť závet, ktorý bude zodpovedať právnym požiadavkám vašej krajiny.",
+    "form": {
+      "assets": {
+        "addAsset": "Pridať majetok",
+        "description": "Popis",
+        "descriptionPlaceholder": "Popis majetku",
+        "name": "Názov",
+        "namePlaceholder": "Názov majetku",
+        "remove": "Odobrať",
+        "title": "Majetok",
+        "type": "Typ",
+        "typePlaceholder": "Vyberte typ majetku",
+        "types": {
+          "bankAccount": "Bankový účet",
+          "business": "Podnikanie",
+          "investment": "Investícia",
+          "other": "Iné",
+          "personalProperty": "Osobný majetok",
+          "realEstate": "Nehnuteľnosť",
+          "vehicle": "Vozidlo"
+        },
+        "value": "Hodnota",
+        "valuePlaceholder": "Odhadovaná hodnota"
+      },
+      "beneficiaries": {
+        "addBeneficiary": "Pridať oprávnenú osobu",
+        "description": "Pridajte osoby, ktoré zdedia váš majetok",
+        "name": "Meno",
+        "namePlaceholder": "Celé meno",
+        "percentage": "Percento",
+        "percentagePlaceholder": "Zadajte percento (1-100)",
+        "relationship": "Vzťah",
+        "relationshipPlaceholder": "napr. manžel/ka, dieťa, rodič",
+        "remove": "Odobrať",
+        "title": "Oprávnené osoby"
+      },
+      "executor": {
+        "address": "Adresa",
+        "addressPlaceholder": "Adresa správcu",
+        "description": "Osoba, ktorá bude spravovať váš pozostatok",
+        "email": "E-mail",
+        "emailPlaceholder": "E-mailová adresa",
+        "name": "Meno",
+        "namePlaceholder": "Celé meno správcu",
+        "phone": "Telefón",
+        "phonePlaceholder": "Telefónne číslo",
+        "relationship": "Vzťah",
+        "relationshipPlaceholder": "napr. manžel/ka, dieťa, právnik",
+        "title": "Správca pozostatku"
+      },
+      "guardian": {
+        "address": "Adresa",
+        "addressPlaceholder": "Adresa opatrovníka",
+        "description": "Osoba, ktorá sa postará o vaše deti",
+        "email": "E-mail",
+        "emailPlaceholder": "E-mailová adresa",
+        "name": "Meno",
+        "namePlaceholder": "Celé meno opatrovníka",
+        "phone": "Telefón",
+        "phonePlaceholder": "Telefónne číslo",
+        "relationship": "Vzťah",
+        "relationshipPlaceholder": "napr. súrodenec, rodič, priateľ",
+        "title": "Opatrovník"
+      },
+      "personalInfo": {
+        "address": "Adresa",
+        "addressPlaceholder": "Zadajte svoju adresu",
+        "city": "Mesto",
+        "cityPlaceholder": "Zadajte mesto",
+        "country": "Krajina",
+        "countryPlaceholder": "Vyberte krajinu",
+        "dateOfBirth": "Dátum narodenia",
+        "dateOfBirthPlaceholder": "DD/MM/RRRR",
+        "fullName": "Celé meno",
+        "fullNamePlaceholder": "Zadajte svoje celé meno",
+        "nationality": "Národnosť",
+        "nationalityPlaceholder": "Vyberte svoju národnosť",
+        "postalCode": "PSČ",
+        "postalCodePlaceholder": "Zadajte PSČ"
+      }
+    },
+    "messages": {
+      "error": "Došlo k chybe",
+      "generated": "Závet bol vygenerovaný",
+      "saved": "Závet bol uložený"
+    },
+    "steps": {
+      "assets": {
+        "description": "Čo máte k rozdaniu",
+        "title": "Majetok"
+      },
+      "beneficiaries": {
+        "description": "Kto zdedí váš majetok",
+        "title": "Oprávnené osoby"
+      },
+      "executor": {
+        "description": "Kto bude spravovať váš pozostatok",
+        "title": "Správca pozostatku"
+      },
+      "guardian": {
+        "description": "Kto sa postará o vaše deti",
+        "title": "Opatrovník"
+      },
+      "personalInfo": {
+        "description": "Základné informácie o testátorovi",
+        "title": "Osobné informácie"
+      },
+      "review": {
+        "description": "Skontrolujte a dokončite",
+        "title": "Kontrola"
+      }
+    },
+    "subtitle": "Vytvorte si závet krok za krokom",
+    "title": "Generátor závetu"
   }
 }

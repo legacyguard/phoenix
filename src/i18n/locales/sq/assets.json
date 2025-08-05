@@ -1,442 +1,367 @@
 {
-  "_comment": "Shared translations used across the application",
-  "assets": {
-    "overview": {
-      "title": "Portofoli i Pasurive",
-      "subtitle": "Menaxhoni dhe ndiqni pasuritë, pronat dhe investimet tuaja",
-      "addAsset": "Shto Aset",
-      "totalPortfolioValue": "Vlera Totale e Portofolit",
-      "estimatedValue": "Vlera e përllogaritur për të gjitha pasuritë",
-      "distribution": {
-        "title": "Shpërndarja e Pasurive",
-        "subtitle": "Ndarja e portofolit sipas kategorisë"
-      },
-      "beneficiaryAllocation": {
-        "title": "Ndarja e Përfituesve",
-        "subtitle": "Ndjekni shpërndarjen e pasurive te përfituesit",
-        "allAssigned": "Të gjitha pasuritë kanë përfitues të caktuar",
-        "unassignedWarning": "{{count}} pasuri kanë nevojë për ndarje të përfituesve"
-      },
-      "viewInheritanceSummary": "Shiko Përmbledhjen e Trashëgimisë",
-      "addNew": "Shto të Ri",
-      "errors": {
-        "loadFailed": "Ngarkimi i të dhënave të pasurive dështoi"
-      }
+  "addLiabilityModal": {
+    "buttons": {
+      "add": "Add Liability",
+      "cancel": "Cancel"
     },
-    "categories": {
-      "property": "Pronë",
-      "vehicle": "Mjet",
-      "financial": "Financiare",
-      "business": "Biznes",
-      "personal": "Personale",
-      "uncategorized": "E pakategorizuar"
-    }
-  },
-  "assetCard": {
-    "assetTypes": {
-      "Primary Residence": "Primary Residence",
-      "Vacation Home": "Vacation Home",
-      "Rental Property": "Rental Property",
-      "Land": "Land",
-      "Commercial Property": "Commercial Property",
-      "Bank Account": "Bank Account",
-      "Investment Portfolio": "Investment Portfolio",
-      "Cryptocurrency Wallet": "Cryptocurrency Wallet",
-      "Loan / Mortgage": "Loan / Mortgage",
-      "Insurance Policy": "Insurance Policy",
-      "Pension / Retirement Account": "Pension / Retirement Account",
-      "Car": "Car",
-      "Motorcycle": "Motorcycle",
-      "Boat": "Boat",
-      "RV / Camper": "RV / Camper",
-      "Aircraft": "Aircraft",
-      "Online Account": "Online Account",
-      "Software License": "Software License",
-      "Domain Name": "Domain Name",
-      "Digital Subscription": "Digital Subscription",
-      "Cryptocurrency": "Cryptocurrency",
-      "NFT": "NFT",
-      "Jewelry": "Jewelry",
-      "Art / Collectibles": "Art / Collectibles",
-      "Electronics": "Electronics",
-      "Furniture": "Furniture",
-      "Tools / Equipment": "Tools / Equipment",
-      "Other Valuables": "Other Valuables",
-      "Custom Asset": "Custom Asset"
-    },
-    "dateFormat": {
-      "addedOn": "Added on {{date}}",
-      "createdOn": "Created on {{date}}",
-      "updatedOn": "Updated on {{date}}"
-    },
-    "labels": {
-      "estimatedValue": "Estimated Value",
-      "category": "Category",
-      "subType": "Type"
-    }
-  },
-  "assetDetail": {
-    "loading": "Duke ngarkuar detajet e asetit...",
     "errors": {
-      "failedToLoad": "Ngarkimi i detajeve të asetit dështoi",
-      "nameRequired": "Emri i asetit është i detyrueshëm",
-      "failedToSave": "Ruajtja e asetit dështoi"
-    },
-    "messages": {
-      "createdSuccessfully": "Aseti u krijua me sukses",
-      "updatedSuccessfully": "Aseti u përditësua me sukses"
-    },
-    "title": {
-      "new": "{{type}} i Ri"
-    },
-    "subtitle": {
-      "new": "Plotësoni detajet për të shtuar këtë aset në portofolin tuaj",
-      "edit": "Përditësoni detajet e këtij aseti"
-    },
-    "story": {
-      "title": "The Story Behind This {{type}}",
-      "editButton": "Edit Story",
-      "addButton": "Add a Story",
-      "emptyTitle": "What's the story behind this item?",
-      "emptyDescription": "Add a personal memory or explain the significance of this item for your loved ones. This intangible legacy is often the most valuable."
-    },
-    "sections": {
-      "assetInformation": "Informacioni i Asetit",
-      "basicInformation": "Informacioni Bazë",
-      "propertyDetails": "Detajet e Pronës",
-      "accountDetails": "Detajet e Llogarisë",
-      "financialDetails": "Detajet Financiare",
-      "liabilitiesAndDocuments": "Related Liabilities & Documents"
+      "requiredFields": "All fields are required"
     },
     "fields": {
-      "assetName": "Emri i Asetit",
-      "assetType": "Lloji i Asetit",
-      "propertyAddress": "Adresa e Pronës",
-      "propertyRegistryNumber": "Numri i Regjistrimit të Pronës",
-      "accountType": "Lloji i Llogarisë",
-      "financialInstitution": "Institucioni Financiar",
-      "accountNumber": "Numri i Llogarisë / IBAN",
-      "loginCredentials": "Kredencialet e Hyrjes & Shënimet",
-      "estimatedValue": "Vlera e Përllogaritur",
-      "currency": "Monedha",
-      "liabilityType": "Liability Type",
-      "providerName": "Provider Name",
-      "referenceNumber": "Reference Number"
+      "notes": "Notes",
+      "paymentFrequency": "Payment Frequency",
+      "provider": "Provider",
+      "referenceNumber": "Reference Number",
+      "type": "Type"
+    },
+    "frequencies": {
+      "monthly": "Monthly"
+    },
+    "messages": {
+      "addedSuccessfully": "Liability added successfully"
     },
     "placeholders": {
-      "assetName": "p.sh., Shtëpia Familjare, Portofoli Investimesh",
-      "propertyAddress": "Vendosni adresën e plotë të pronës",
-      "propertyRegistryNumber": "p.sh., Numri i regjistrimit të pronës",
-      "selectAccountType": "Zgjidhni llojin e llogarisë",
-      "financialInstitution": "p.sh., Banka e Shqipërisë, Raiffeisen Bank",
-      "accountNumber": "p.sh., 1234567890",
-      "loginCredentials": "Menaxheri i fjalëkalimeve: kasaforta 'Banka' e 1Password",
-      "estimatedValue": "0"
+      "notes": "Additional notes",
+      "paymentFrequency": "Select frequency",
+      "provider": "Provider name",
+      "referenceNumber": "Reference number",
+      "selectType": "Select type"
     },
-    "descriptions": {
-      "assetName": "Jepini këtij aseti një emër përshkrues për identifikim të lehtë",
-      "assetType": "Zgjidhni llojin që përshkruan më mirë këtë aset",
-      "propertyAddress": "Adresa e plotë përfshirë rrugën, qytetin, kodin postar dhe vendin",
-      "propertyRegistryNumber": "Numri zyrtar i regjistrit ose kadastral për këtë pronë",
-      "accountType": "Lloji i llogarisë financiare ose investimit",
-      "financialInstitution": "Emri i bankës ose institucionit financiar",
-      "accountNumber": "Numri i llogarisë, IBAN, ose informacion tjetër identifikues",
-      "estimatedValue": "Vlera aktuale e tregut ose vlera e fundit e njohur e këtij aseti",
-      "currency": "Monedha në të cilën shprehet vlera",
-      "noLiabilities": "No liabilities added yet"
-    },
-    "types": {
-      "realEstate": "Pasuri e Paluajtshme",
-      "business": "Biznes",
-      "vehicle": "Mjet",
-      "financialAccount": "Llogari Financiare",
-      "asset": "Aset"
-    },
+    "title": "Add Liability"
+  },
+  "assetDetail": {
     "accountTypes": {
       "bankAccount": "Llogari Bankare",
       "investmentPortfolio": "Portofol Investimesh",
       "pensionFund": "Fond Pensioni"
     },
+    "buttons": {
+      "addLiability": "Add Liability",
+      "cancel": "Anulo",
+      "createAsset": "Krijo Aset",
+      "saving": "Duke ruajtur...",
+      "updateAsset": "Përditëso Asetin"
+    },
+    "descriptions": {
+      "accountNumber": "Numri i llogarisë, IBAN, ose informacion tjetër identifikues",
+      "accountType": "Lloji i llogarisë financiare ose investimit",
+      "assetName": "Jepini këtij aseti një emër përshkrues për identifikim të lehtë",
+      "assetType": "Zgjidhni llojin që përshkruan më mirë këtë aset",
+      "currency": "Monedha në të cilën shprehet vlera",
+      "estimatedValue": "Vlera aktuale e tregut ose vlera e fundit e njohur e këtij aseti",
+      "financialInstitution": "Emri i bankës ose institucionit financiar",
+      "noLiabilities": "No liabilities added yet",
+      "propertyAddress": "Adresa e plotë përfshirë rrugën, qytetin, kodin postar dhe vendin",
+      "propertyRegistryNumber": "Numri zyrtar i regjistrit ose kadastral për këtë pronë"
+    },
+    "errors": {
+      "nameRequired": "Emri i asetit është i detyrueshëm"
+    },
+    "fields": {
+      "accountNumber": "Numri i Llogarisë / IBAN",
+      "accountType": "Lloji i Llogarisë",
+      "assetName": "Emri i Asetit",
+      "assetType": "Lloji i Asetit",
+      "currency": "Monedha",
+      "estimatedValue": "Vlera e Përllogaritur",
+      "financialInstitution": "Institucioni Financiar",
+      "liabilityType": "Liability Type",
+      "loginCredentials": "Kredencialet e Hyrjes & Shënimet",
+      "propertyAddress": "Adresa e Pronës",
+      "propertyRegistryNumber": "Numri i Regjistrimit të Pronës",
+      "providerName": "Provider Name",
+      "referenceNumber": "Reference Number"
+    },
+    "loading": "Duke ngarkuar detajet e asetit...",
+    "messages": {
+      "createdSuccessfully": "Aseti u krijua me sukses",
+      "updatedSuccessfully": "Aseti u përditësua me sukses"
+    },
+    "placeholders": {
+      "accountNumber": "p.sh., 1234567890",
+      "assetName": "p.sh., Shtëpia Familjare, Portofoli Investimesh",
+      "estimatedValue": "0",
+      "financialInstitution": "p.sh., Banka e Shqipërisë, Raiffeisen Bank",
+      "loginCredentials": "Menaxheri i fjalëkalimeve: kasaforta 'Banka' e 1Password",
+      "propertyAddress": "Vendosni adresën e plotë të pronës",
+      "propertyRegistryNumber": "p.sh., Numri i regjistrimit të pronës",
+      "selectAccountType": "Zgjidhni llojin e llogarisë"
+    },
+    "sections": {
+      "accountDetails": "Detajet e Llogarisë",
+      "assetInformation": "Informacioni i Asetit",
+      "basicInformation": "Informacioni Bazë",
+      "financialDetails": "Detajet Financiare",
+      "liabilitiesAndDocuments": "Related Liabilities & Documents",
+      "propertyDetails": "Detajet e Pronës"
+    },
     "securityWarning": "Kujdes Sigurie:",
     "securityWarningText": "Mos ruani fjalëkalime aktuale këtu. Përdorni këtë fushë për sugjerime, vendndodhje të menaxherëve të fjalëkalimeve, ose udhëzime të tjera për akses të sigurt.",
-    "buttons": {
-      "cancel": "Anulo",
-      "saving": "Duke ruajtur...",
-      "createAsset": "Krijo Aset",
-      "updateAsset": "Përditëso Asetin",
-      "addLiability": "Add Liability"
+    "story": {
+      "addButton": "Add a Story",
+      "editButton": "Edit Story",
+      "emptyDescription": "Add a personal memory or explain the significance of this item for your loved ones. This intangible legacy is often the most valuable.",
+      "emptyTitle": "What's the story behind this item?"
+    },
+    "subtitle": {
+      "edit": "Përditësoni detajet e këtij aseti",
+      "new": "Plotësoni detajet për të shtuar këtë aset në portofolin tuaj"
+    },
+    "types": {
+      "asset": "Aset",
+      "business": "Biznes",
+      "financialAccount": "Llogari Financiare",
+      "realEstate": "Pasuri e Paluajtshme",
+      "vehicle": "Mjet"
     }
   },
   "assetType": {
-    "selectType": "Select {{mainCategory}} Type",
-    "primaryResidence": "Primary Residence",
-    "vacationHome": "Vacation Home",
-    "rentalProperty": "Rental Property",
-    "land": "Land",
-    "commercialProperty": "Commercial Property",
-    "bankAccount": "Bank Account",
-    "investmentPortfolio": "Investment Portfolio",
-    "cryptocurrencyWallet": "Cryptocurrency Wallet",
-    "loanMortgage": "Loan / Mortgage",
-    "insurancePolicy": "Insurance Policy",
-    "pensionRetirement": "Pension / Retirement",
-    "car": "Car",
-    "motorcycle": "Motorcycle",
-    "boat": "Boat",
-    "rvCamper": "RV / Camper",
     "aircraft": "Aircraft",
-    "onlineAccount": "Online Account",
-    "softwareLicense": "Software License",
-    "domainName": "Domain Name",
-    "digitalSubscription": "Digital Subscription",
-    "cryptocurrency": "Cryptocurrency",
-    "nft": "NFT",
-    "jewelry": "Jewelry",
     "artCollectibles": "Art / Collectibles",
+    "bankAccount": "Bank Account",
+    "boat": "Boat",
+    "car": "Car",
+    "commercialProperty": "Commercial Property",
+    "cryptocurrency": "Cryptocurrency",
+    "cryptocurrencyWallet": "Cryptocurrency Wallet",
+    "customAsset": "Custom Asset",
+    "digitalSubscription": "Digital Subscription",
+    "domainName": "Domain Name",
     "electronics": "Electronics",
     "furniture": "Furniture",
-    "toolsEquipment": "Tools / Equipment",
+    "insurancePolicy": "Insurance Policy",
+    "investmentPortfolio": "Investment Portfolio",
+    "jewelry": "Jewelry",
+    "land": "Land",
+    "loanMortgage": "Loan / Mortgage",
+    "motorcycle": "Motorcycle",
+    "nft": "NFT",
+    "onlineAccount": "Online Account",
     "otherValuables": "Other Valuables",
-    "customAsset": "Custom Asset"
+    "pensionRetirement": "Pension / Retirement",
+    "primaryResidence": "Primary Residence",
+    "rentalProperty": "Rental Property",
+    "rvCamper": "RV / Camper",
+    "softwareLicense": "Software License",
+    "toolsEquipment": "Tools / Equipment",
+    "vacationHome": "Vacation Home"
   },
-  "dynamicAssetForm": {
-    "propertyAddress": "Property Address",
-    "purchaseDate": "Purchase Date",
-    "purchasePrice": "Purchase Price",
-    "currentEstimatedValue": "Current Estimated Value",
-    "mortgageInformation": "Mortgage Information",
-    "locationOfPropertyDocuments": "Location of Property Documents",
-    "locationAddress": "Location / Address",
-    "size": "Size (acres/sq ft)",
-    "zoningType": "Zoning Type",
-    "currentUse": "Current Use",
-    "bankName": "Bank Name",
-    "accountType": "Account Type",
-    "selectAccountType": "Select account type",
-    "checking": "Checking",
-    "savings": "Savings",
-    "moneyMarket": "Money Market",
-    "certificateOfDeposit": "Certificate of Deposit",
-    "accountHolderName": "Account Holder Name(s)",
-    "accountNumberLast4": "Account Number (Last 4 digits)",
-    "routingNumber": "Routing Number",
-    "brokerageFirm": "Brokerage Firm",
-    "accountNumber": "Account Number",
-    "individual": "Individual",
-    "joint": "Joint",
-    "ira": "IRA",
-    "rothIra": "Roth IRA",
-    "401k": "401(k)",
-    "approximateValue": "Approximate Value",
-    "financialAdvisor": "Financial Advisor (if any)",
-    "walletNameLabel": "Wallet Name/Label",
-    "walletType": "Wallet Type",
-    "selectWalletType": "Select wallet type",
-    "hardwareWallet": "Hardware Wallet",
-    "softwareWallet": "Software Wallet",
-    "exchangeWallet": "Exchange Wallet",
-    "paperWallet": "Paper Wallet",
-    "cryptocurrenciesHeld": "Cryptocurrencies Held",
-    "locationOfSeedPhrase": "Location of Seed Phrase/Private Keys",
-    "exchangeInformation": "Exchange Information (if applicable)",
-    "makeAndModel": "Make and Model",
-    "year": "Year",
-    "vinNumber": "VIN Number",
-    "licensePlate": "License Plate",
-    "loanInformation": "Loan Information (if any)",
-    "locationOfTitle": "Location of Title",
-    "platformWebsiteName": "Platform/Website Name",
-    "accountEmail": "Account Email/Username",
-    "accountPurpose": "Account Purpose/Description",
-    "recoveryInformation": "Recovery Information",
-    "faMethod": "2FA Method (if enabled)",
-    "itemDescription": "Item Description",
-    "appraisedValue": "Appraised Value",
-    "lastAppraisalDate": "Last Appraisal Date",
-    "storageLocation": "Storage Location",
-    "insuranceInformation": "Insurance Information",
-    "sentimentalValue": "Sentimental Value/History",
-    "assetName": "Asset Name",
-    "estimatedValue": "Estimated Value",
-    "description": "Description",
-    "locationAccessInformation": "Location/Access Information",
-    "addSubType": "Add {subType}",
-    "cancel": "Cancel",
-    "saveAsset": "Save Asset",
-    "placeholders": {
-      "123_main_st_city_state_zip_1": "123 Main St, City, State, ZIP",
-      "lender_name_account_number_rem_2": "Lender name, account number, remaining balance",
-      "e_g_safe_deposit_box_filing_ca_3": "e.g., Safe deposit box, filing cabinet",
-      "property_location_or_parcel_nu_4": "Property location or parcel number",
-      "e_g_10_acres_5": "e.g., 10 acres, 5,000 sq ft",
-      "e_g_commercial_agricultural_6": "e.g., Commercial, Agricultural, Residential",
-      "describe_current_use_of_the_pr_7": "Describe current use of the property",
-      "e_g_chase_bank_8": "e.g., Chase Bank, Wells Fargo",
-      "john_doe_9": "John Doe",
-      "1234_10": "1234",
-      "e_g_fidelity_vanguard_11": "e.g., Fidelity, Vanguard, Charles Schwab",
-      "account_number_12": "Account number",
-      "name_and_contact_information_13": "Name and contact information",
-      "e_g_main_bitcoin_wallet_14": "e.g., Main Bitcoin Wallet",
-      "e_g_bitcoin_ethereum_15": "e.g., Bitcoin, Ethereum, Litecoin",
-      "do_not_enter_the_actual_seed_p_16": "Do not enter the actual seed phrase here",
-      "exchange_name_and_account_emai_17": "Exchange name and account email",
-      "e_g_toyota_camry_18": "e.g., Toyota Camry, Honda Civic",
-      "vehicle_identification_number_19": "Vehicle Identification Number",
-      "lender_account_number_payoff_a_20": "Lender, account number, payoff amount",
-      "e_g_safe_deposit_box_21": "e.g., Safe deposit box, home safe",
-      "e_g_gmail_facebook_22": "e.g., Gmail, Facebook, LinkedIn",
-      "user_example_com_23": "user@example.com",
-      "what_this_account_is_used_for_24": "What this account is used for",
-      "recovery_email_phone_or_securi_25": "Recovery email, phone, or security questions",
-      "e_g_sms_to_phone_ending_in_123_26": "e.g., SMS to phone ending in 123",
-      "e_g_diamond_engagement_ring_27": "e.g., Diamond engagement ring, gold necklace",
-      "e_g_home_safe_bank_deposit_box_28": "e.g., Home safe, bank deposit box",
-      "policy_number_and_company_29": "Policy number and company",
-      "special_meaning_or_history_of__30": "Special meaning or history of this item",
-      "name_or_description_of_asset_31": "Name or description of asset",
-      "detailed_description_of_the_as_32": "Detailed description of the asset",
-      "where_to_find_this_asset_or_ho_33": "Where to find this asset or how to access it"
-    }
-  },
-  "myPossessions": {
-    "my_possessions_1": "My Possessions",
-    "an_inventory_of_the_important__2": "An inventory of the important things that support your family's future.",
-    "family_impact_3": "Family Impact:",
-    "edit_details_4": "Edit Details",
-    "link_papers_5": "Link Papers (",
-    "assign_access_6": "Assign Access",
-    "add_your_first_7": "Add Your First ",
-    "areas": {
-      "home": {
-        "title": "Your Home & Property",
-        "description": "The places that provide shelter and create memories.",
-        "emptyState": "Document your property to ensure your family's shelter is secure.",
-        "addButton": "Property"
+  "assets": {
+    "categories": {
+      "uncategorized": "E pakategorizuar"
+    },
+    "overview": {
+      "addAsset": "Shto Aset",
+      "addNew": "Shto të Ri",
+      "beneficiaryAllocation": {
+        "allAssigned": "Të gjitha pasuritë kanë përfitues të caktuar",
+        "subtitle": "Ndjekni shpërndarjen e pasurive te përfituesit",
+        "title": "Ndarja e Përfituesve"
       },
-      "savings": {
-        "title": "Your Savings & Investments",
-        "description": "The financial foundation you've built for your family's future.",
-        "emptyState": "Record your financial accounts so your family can access funds when needed.",
-        "addButton": "Account"
+      "distribution": {
+        "subtitle": "Ndarja e portofolit sipas kategorisë",
+        "title": "Shpërndarja e Pasurive"
       },
-      "business": {
-        "title": "Your Business",
-        "description": "The work that supports your family and creates your professional legacy.",
-        "emptyState": "Document your business details to ensure smooth succession and continued income.",
-        "addButton": "Business"
+      "errors": {
+        "loadFailed": "Ngarkimi i të dhënave të pasurive dështoi"
       },
-      "valuables": {
-        "title": "Your Valuables & Collections",
-        "description": "Items of financial or sentimental value that need special consideration.",
-        "emptyState": "List valuable items that need special handling or have sentimental value.",
-        "addButton": "Valuable"
-      }
-    },
-    "mockData": {
-      "lakeCabin": "Lake Cabin",
-      "emergencyFund": "Emergency Fund",
-      "yourBusiness": "Your Business",
-      "johnsonContracting": "Johnson Contracting LLC",
-      "classicCarCollection": "Classic Car Collection"
-    }
-  },
-  "addLiabilityModal": {
-    "title": "Add Liability",
-    "fields": {
-      "type": "Type",
-      "provider": "Provider",
-      "referenceNumber": "Reference Number",
-      "paymentFrequency": "Payment Frequency",
-      "notes": "Notes"
-    },
-    "placeholders": {
-      "selectType": "Select type",
-      "provider": "Provider name",
-      "referenceNumber": "Reference number",
-      "paymentFrequency": "Select frequency",
-      "notes": "Additional notes"
-    },
-    "buttons": {
-      "cancel": "Cancel",
-      "add": "Add Liability"
-    },
-    "errors": {
-      "requiredFields": "All fields are required"
-    },
-    "messages": {
-      "addedSuccessfully": "Liability added successfully"
-    },
-    "types": {
-      "insurancePolicy": "Insurance Policy",
-      "utilityBill": "Utility Bill",
-      "propertyTax": "Property Tax",
-      "subscriptionFee": "Subscription Fee",
-      "maintenanceContract": "Maintenance Contract",
-      "loan": "Loan",
-      "leaseAgreement": "Lease Agreement",
-      "warranty": "Warranty",
-      "other": "Other"
-    },
-    "frequencies": {
-      "monthly": "Monthly",
-      "quarterly": "Quarterly",
-      "semiAnnually": "Semi-Annually",
-      "annually": "Annually",
-      "oneTime": "One-Time",
-      "asNeeded": "As Needed"
+      "estimatedValue": "Vlera e përllogaritur për të gjitha pasuritë",
+      "subtitle": "Menaxhoni dhe ndiqni pasuritë, pronat dhe investimet tuaja",
+      "title": "Portofoli i Pasurive",
+      "totalPortfolioValue": "Vlera Totale e Portofolit",
+      "viewInheritanceSummary": "Shiko Përmbledhjen e Trashëgimisë"
     }
   },
   "calculator": {
     "badge": "Preparedness Calculator",
-    "title": "Calculate Your Family's Preparedness Score",
-    "subtitle": "See the real time and money your family saves when everything is organized",
+    "calculateButton": "Calculate My Savings",
     "inputs": {
-      "title": "Your Family Situation",
-      "description": "Tell us a bit about your family to personalize your results",
+      "accounts": "How many bank accounts do you have?",
+      "accountsHelp": "Include checking, savings, investments",
+      "business": "Do you have a business?",
       "dependents": "How many people depend on you?",
       "dependentsHelp": "Include spouse, children, elderly parents",
+      "description": "Tell us a bit about your family to personalize your results",
       "income": "What's your family's monthly income?",
       "incomeHelp": "This helps calculate potential lost wages",
       "property": "Do you own property?",
-      "business": "Do you have a business?",
-      "accounts": "How many bank accounts do you have?",
-      "accountsHelp": "Include checking, savings, investments"
+      "title": "Your Family Situation"
     },
-    "calculateButton": "Calculate My Savings",
     "results": {
-      "title": "Your Family's Savings",
+      "ctaContext": "Most families complete setup during their lunch break",
       "description": "Here's what being prepared means for your loved ones",
-      "timeSavings": {
-        "title": "Time Your Family Saves",
-        "without": "Without organization",
-        "withoutHours": "40-120 hours searching",
-        "with": "With Heritage Vault",
-        "withMinutes": "Under 5 minutes"
+      "emotional": {
+        "confidence": "Family confidence increase",
+        "peace": "Control & preparedness rating",
+        "stress": "Stress level reduction",
+        "title": "Emotional Well-being Impact"
       },
+      "families": "15,000+ families protected",
       "moneySavings": {
-        "title": "Money Your Family Saves",
         "legalFees": "Legal fees for reconstruction",
         "lostWages": "Lost wages from time off",
         "penalties": "Missed deadlines & penalties",
+        "title": "Money Your Family Saves",
         "total": "Total potential savings"
       },
-      "emotional": {
-        "title": "Emotional Well-being Impact",
-        "stress": "Stress level reduction",
-        "confidence": "Family confidence increase",
-        "peace": "Control & preparedness rating"
-      },
+      "shareButton": "Share Results",
       "socialProof": "Join families who already sleep better at night",
-      "families": "15,000+ families protected",
-      "ctaContext": "Most families complete setup during their lunch break",
-      "shareButton": "Share Results"
+      "timeSavings": {
+        "title": "Time Your Family Saves",
+        "with": "With Heritage Vault",
+        "withMinutes": "Under 5 minutes",
+        "without": "Without organization",
+        "withoutHours": "40-120 hours searching"
+      },
+      "title": "Your Family's Savings"
     },
-    "testimonial": {
-      "quote": "I never realized how much stress I was carrying until I got everything organized. Now I know my family will be okay, no matter what happens.",
-      "author": "Sarah M., mother of three"
-    },
+    "shareCopied": "Results copied to clipboard!",
     "shareTitle": "Family Preparedness Calculator Results",
-    "shareCopied": "Results copied to clipboard!"
+    "subtitle": "See the real time and money your family saves when everything is organized",
+    "testimonial": {
+      "author": "Sarah M., mother of three",
+      "quote": "I never realized how much stress I was carrying until I got everything organized. Now I know my family will be okay, no matter what happens."
+    },
+    "title": "Calculate Your Family's Preparedness Score"
+  },
+  "dynamicAssetForm": {
+    "401k": "401(k)",
+    "accountEmail": "Account Email/Username",
+    "accountHolderName": "Account Holder Name(s)",
+    "accountNumber": "Account Number",
+    "accountNumberLast4": "Account Number (Last 4 digits)",
+    "accountPurpose": "Account Purpose/Description",
+    "accountType": "Account Type",
+    "appraisedValue": "Appraised Value",
+    "approximateValue": "Approximate Value",
+    "assetName": "Asset Name",
+    "bankName": "Bank Name",
+    "brokerageFirm": "Brokerage Firm",
+    "cancel": "Cancel",
+    "certificateOfDeposit": "Certificate of Deposit",
+    "checking": "Checking",
+    "cryptocurrenciesHeld": "Cryptocurrencies Held",
+    "currentEstimatedValue": "Current Estimated Value",
+    "currentUse": "Current Use",
+    "description": "Description",
+    "estimatedValue": "Estimated Value",
+    "exchangeInformation": "Exchange Information (if applicable)",
+    "exchangeWallet": "Exchange Wallet",
+    "faMethod": "2FA Method (if enabled)",
+    "financialAdvisor": "Financial Advisor (if any)",
+    "hardwareWallet": "Hardware Wallet",
+    "individual": "Individual",
+    "insuranceInformation": "Insurance Information",
+    "ira": "IRA",
+    "itemDescription": "Item Description",
+    "joint": "Joint",
+    "lastAppraisalDate": "Last Appraisal Date",
+    "licensePlate": "License Plate",
+    "loanInformation": "Loan Information (if any)",
+    "locationAccessInformation": "Location/Access Information",
+    "locationAddress": "Location / Address",
+    "locationOfPropertyDocuments": "Location of Property Documents",
+    "locationOfSeedPhrase": "Location of Seed Phrase/Private Keys",
+    "locationOfTitle": "Location of Title",
+    "makeAndModel": "Make and Model",
+    "moneyMarket": "Money Market",
+    "mortgageInformation": "Mortgage Information",
+    "paperWallet": "Paper Wallet",
+    "placeholders": {
+      "1234_10": "1234",
+      "123_main_st_city_state_zip_1": "123 Main St, City, State, ZIP",
+      "account_number_12": "Account number",
+      "describe_current_use_of_the_pr_7": "Describe current use of the property",
+      "detailed_description_of_the_as_32": "Detailed description of the asset",
+      "do_not_enter_the_actual_seed_p_16": "Do not enter the actual seed phrase here",
+      "e_g_10_acres_5": "e.g., 10 acres, 5,000 sq ft",
+      "e_g_bitcoin_ethereum_15": "e.g., Bitcoin, Ethereum, Litecoin",
+      "e_g_chase_bank_8": "e.g., Chase Bank, Wells Fargo",
+      "e_g_commercial_agricultural_6": "e.g., Commercial, Agricultural, Residential",
+      "e_g_diamond_engagement_ring_27": "e.g., Diamond engagement ring, gold necklace",
+      "e_g_fidelity_vanguard_11": "e.g., Fidelity, Vanguard, Charles Schwab",
+      "e_g_gmail_facebook_22": "e.g., Gmail, Facebook, LinkedIn",
+      "e_g_home_safe_bank_deposit_box_28": "e.g., Home safe, bank deposit box",
+      "e_g_main_bitcoin_wallet_14": "e.g., Main Bitcoin Wallet",
+      "e_g_safe_deposit_box_21": "e.g., Safe deposit box, home safe",
+      "e_g_safe_deposit_box_filing_ca_3": "e.g., Safe deposit box, filing cabinet",
+      "e_g_sms_to_phone_ending_in_123_26": "e.g., SMS to phone ending in 123",
+      "e_g_toyota_camry_18": "e.g., Toyota Camry, Honda Civic",
+      "exchange_name_and_account_emai_17": "Exchange name and account email",
+      "john_doe_9": "John Doe",
+      "lender_account_number_payoff_a_20": "Lender, account number, payoff amount",
+      "lender_name_account_number_rem_2": "Lender name, account number, remaining balance",
+      "name_and_contact_information_13": "Name and contact information",
+      "name_or_description_of_asset_31": "Name or description of asset",
+      "policy_number_and_company_29": "Policy number and company",
+      "property_location_or_parcel_nu_4": "Property location or parcel number",
+      "recovery_email_phone_or_securi_25": "Recovery email, phone, or security questions",
+      "special_meaning_or_history_of__30": "Special meaning or history of this item",
+      "user_example_com_23": "user@example.com",
+      "vehicle_identification_number_19": "Vehicle Identification Number",
+      "what_this_account_is_used_for_24": "What this account is used for",
+      "where_to_find_this_asset_or_ho_33": "Where to find this asset or how to access it"
+    },
+    "platformWebsiteName": "Platform/Website Name",
+    "propertyAddress": "Property Address",
+    "purchaseDate": "Purchase Date",
+    "purchasePrice": "Purchase Price",
+    "recoveryInformation": "Recovery Information",
+    "rothIra": "Roth IRA",
+    "routingNumber": "Routing Number",
+    "saveAsset": "Save Asset",
+    "savings": "Savings",
+    "selectAccountType": "Select account type",
+    "selectWalletType": "Select wallet type",
+    "sentimentalValue": "Sentimental Value/History",
+    "size": "Size (acres/sq ft)",
+    "softwareWallet": "Software Wallet",
+    "storageLocation": "Storage Location",
+    "vinNumber": "VIN Number",
+    "walletNameLabel": "Wallet Name/Label",
+    "walletType": "Wallet Type",
+    "year": "Year",
+    "zoningType": "Zoning Type"
+  },
+  "myPossessions": {
+    "add_your_first_7": "Add Your First ",
+    "an_inventory_of_the_important__2": "An inventory of the important things that support your family's future.",
+    "areas": {
+      "business": {
+        "addButton": "Business",
+        "description": "The work that supports your family and creates your professional legacy.",
+        "emptyState": "Document your business details to ensure smooth succession and continued income.",
+        "title": "Your Business"
+      },
+      "home": {
+        "addButton": "Property",
+        "description": "The places that provide shelter and create memories.",
+        "emptyState": "Document your property to ensure your family's shelter is secure.",
+        "title": "Your Home & Property"
+      },
+      "savings": {
+        "addButton": "Account",
+        "description": "The financial foundation you've built for your family's future.",
+        "emptyState": "Record your financial accounts so your family can access funds when needed.",
+        "title": "Your Savings & Investments"
+      },
+      "valuables": {
+        "addButton": "Valuable",
+        "description": "Items of financial or sentimental value that need special consideration.",
+        "emptyState": "List valuable items that need special handling or have sentimental value.",
+        "title": "Your Valuables & Collections"
+      }
+    },
+    "assign_access_6": "Assign Access",
+    "edit_details_4": "Edit Details",
+    "family_impact_3": "Family Impact:",
+    "link_papers_5": "Link Papers (",
+    "mockData": {
+      "classicCarCollection": "Classic Car Collection",
+      "emergencyFund": "Emergency Fund",
+      "johnsonContracting": "Johnson Contracting LLC",
+      "lakeCabin": "Lake Cabin"
+    },
+    "my_possessions_1": "My Possessions"
   }
 }

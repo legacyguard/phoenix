@@ -1,239 +1,146 @@
 {
-  "_comment": "Shared translations used across the application",
-  "onboarding": {
-    "title": "Witaj w LegacyGuard",
-    "subtitle": "Pozwól nam pomóc Ci zabezpieczyć przyszłość Twojej rodziny",
-    "mainTitle": "Kolejność Projektu",
-    "mainSubtitle": "Stwórzmy Twój spersonalizowany plan ochrony dziedzictwa",
-    "progressText": "Kolejność Projektu: Krok {{step}} z 4",
-    "skipButton": "Pomiń na razie",
-    "skipConfirmTitle": "Pominąć onboarding?",
-    "skipConfirmMessage": "Zawsze możesz ponownie uruchomić to ustawienie później w ustawieniach",
-    "skipConfirmYes": "Pomiń",
-    "skipConfirmNo": "Kontynuuj ustawianie",
-    "restartButton": "Uruchom Ponownie Onboarding",
-    "welcomeBack": {
-      "masculine": "Witamy Pana ponownie! Czy jest Pan gotowy do ukończenia konfiguracji?",
-      "feminine": "Witamy Panią ponownie! Czy jest Pani gotowa do ukończenia konfiguracji?",
-      "neutral": "Witamy ponownie! Czy są Państwo gotowi do ukończenia konfiguracji?"
-    },
-    "resumeTitle": "Kontynuuj tam, gdzie skończyłeś",
-    "resumeMessage": "Byłeś na kroku {{step}} z 4",
-    "partialProgress": "{{percentage}}% ukończone",
-    "inventory": {
-      "documentAccess": {
-        "question": "Gdyby coś Ci się dzisiaj stało, czy Twoja rodzina wiedziałaby, gdzie znaleźć Twoje ważne dokumenty?",
-        "answers": {
-          "yes": "Tak",
-          "no": "Nie",
-          "partially": "Częściowo"
-        }
-      },
-      "caretaker": {
-        "question": "Kto zająłby się Twoimi dziećmi/majątkiem/kontami cyfrowymi?",
-        "answers": {
-          "designated": "Mam wyznaczoną osobę",
-          "familyFigureOut": "Rodzina by sobie poradziła",
-          "notThought": "Nie myślałem/am o tym"
-        }
-      },
-      "familyClarity": {
-        "question": "Czy czujesz, że Twoja rodzina wiedziałaby, czego dla nich chciałeś?",
-        "answers": {
-          "clear": "Tak, to jest jasne",
-          "somewhat": "W pewnym stopniu",
-          "neverDiscussed": "Nie, nigdy o tym nie rozmawialiśmy"
-        }
-      },
-      "biggestWorry": {
-        "question": "Co najbardziej martwi Cię o przyszłość Twojej rodziny?",
-        "answers": {
-          "financial": "Bezpieczeństwo finansowe",
-          "legal": "Komplikacje prawne",
-          "memories": "Utrata wspomnień",
-          "conflicts": "Konflikty rodzinne"
-        }
-      },
-      "personalized": {
-        "documentCentralization": "Na podstawie Twojej odpowiedzi dotyczącej dostępu do dokumentów, zalecamy rozpoczęcie od centralizacji ważnych dokumentów.",
-        "guardianDesignation": "Ponieważ nie wyznaczyłeś nikogo do opieki nad swoim majątkiem, wyznaczenie opiekuna powinno być Twoim priorytetem.",
-        "willPreparation": "Twoja rodzina potrzebuje jasności co do Twoich życzeń. Stworzenie testamentu jest kluczowym pierwszym krokiem.",
-        "financialPlanning": "Bezpieczeństwo finansowe jest kluczowe. Zacznijmy od udokumentowania Twoich kont bankowych i majątku.",
-        "conflictPrevention": "Aby zapobiec konfliktom rodzinnym, kluczowa jest jasna dokumentacja i komunikacja.",
-        "memoryPreservation": "Ochrona wspomnień zaczyna się od uporządkowania Twoich cyfrowych zdjęć i historii.",
-        "legalOrganization": "Uporządkujmy Twoje dokumenty prawne, aby uniknąć późniejszych komplikacji."
-      }
-    },
-    "q1": {
-      "title": "Gdyby coś Ci się dzisiaj stało, czy Twoja rodzina wiedziałaby, gdzie znaleźć Twoje ważne dokumenty?",
-      "option1": "Tak",
-      "option2": "Nie",
-      "option3": "Częściowo"
-    },
-    "q2": {
-      "title": "Kto zająłby się Twoimi dziećmi/majątkiem/kontami cyfrowymi?",
-      "option1": "Mam wyznaczoną osobę",
-      "option2": "Rodzina by sobie poradziła",
-      "option3": "Nie myślałem/am o tym"
-    },
-    "q3": {
-      "title": "Czy czujesz, że Twoja rodzina wiedziałaby, czego dla nich chciałeś?",
-      "option1": "Tak, to jest jasne",
-      "option2": "W pewnym stopniu",
-      "option3": "Nie, nigdy o tym nie rozmawialiśmy"
-    },
-    "q4": {
-      "title": "Co najbardziej martwi Cię o przyszłość Twojej rodziny?",
-      "option1": "Bezpieczeństwo finansowe",
-      "option2": "Komplikacje prawne",
-      "option3": "Utrata wspomnień",
-      "option4": "Konflikty rodzinne"
-    },
-    "buttons": {
-      "previous": "Poprzedni",
-      "next": "Następny",
-      "generate": "Wygeneruj Moją Kolejność Projektu"
-    },
-    "analysis": {
-      "title": "Analizowanie Twoich odpowiedzi...",
-      "subtitle": "Przygotowywanie Twojej osobistej 'Kolejności Projektu'...",
-      "done": "Gotowe!"
-    },
-    "complete": {
-      "masculine": "Świetny początek! Spersonalizowaliśmy Pański panel na podstawie Pańskich odpowiedzi. Jest Pan gotowy, aby zacząć budować swój kompleksowy plan dziedzictwa.",
-      "feminine": "Świetny początek! Spersonalizowaliśmy Pański panel na podstawie Pańskich odpowiedzi. Jest Pani gotowa, aby zacząć budować swój kompleksowy plan dziedzictwa.",
-      "neutral": "Świetny początek! Spersonalizowaliśmy Pański panel na podstawie Pańskich odpowiedzi. Są Państwo gotowi, aby zacząć budować swój kompleksowy plan dziedzictwa."
-    },
-    "success": {
-      "stepCompleted": "Krok {{step}} pomyślnie ukończony!",
-      "inventoryComplete": "Inwentarz życia ukończony! Twój spersonalizowany plan jest gotowy.",
-      "allQuestionsAnswered": "Wszystkie pytania odpowiedziane. Generowanie Twojego planu działania..."
-    },
-    "errors": {
-      "questionRequired": "Proszę odpowiedzieć na to pytanie, aby kontynuować",
-      "failedToSave": "Nie udało się zapisać Twoich odpowiedzi. Proszę spróbować ponownie.",
-      "loadingFailed": "Nie udało się załadować pytań onboardingowych"
-    },
-    "addAnother": "Dodaj Kolejny",
-    "previous": "Poprzedni",
-    "next": "Następny",
-    "continue": "Kontynuuj do Panelu"
-  },
   "demo": {
     "ai": {
-      "title": "Demo Integracji AI LegacyGuard",
-      "subtitle": "Experience how AI can help organize and protect your family's legacy",
-      "tabs": {
-        "documents": "Documents",
-        "questions": "Questions",
-        "suggestions": "Suggestions",
-        "messages": "Messages"
+      "context": {
+        "completion": "Completion:",
+        "label": "Current Context:",
+        "mood": "Mood:",
+        "recent": "Recent:"
       },
       "profile": {
-        "label": "Demo Profile:",
-        "documentsCount": "documents uploaded"
+        "documentsCount": "documents uploaded",
+        "label": "Demo Profile:"
       },
       "question": {
         "category": "Category:"
       },
-      "context": {
-        "label": "Current Context:",
-        "completion": "Completion:",
-        "recent": "Recent:",
-        "mood": "Mood:"
-      },
+      "subtitle": "Experience how AI can help organize and protect your family's legacy",
       "suggestion": {
         "priority": "Priority:"
-      }
-    },
-    "upload": {
-      "title": "Magical Document Upload",
-      "subtitle": "Experience the future of secure document management",
-      "badge": {
-        "encryption": "Auto Encrypt",
-        "aiAnalysis": "AI Analysis",
-        "familySharing": "Family Sharing"
-      },
-      "settings": {
-        "title": "Upload Settings",
-        "description": "Customize your document processing preferences",
-        "storageLocation": "Storage Location",
-        "local": "Local",
-        "cloud": "Cloud"
-      },
-      "features": {
-        "autoCompress": "Auto Compress",
-        "autoEncrypt": "Auto Encrypt",
-        "processOCR": "Process OCR",
-        "aiAnalysis": "AI Analysis",
-        "familySharing": "Family Sharing"
-      },
-      "console": {
-        "uploadStarted": "Upload started",
-        "view": "View",
-        "download": "Download",
-        "share": "Share",
-        "delete": "Delete"
       },
       "tabs": {
-        "upload": "Upload",
         "documents": "Documents",
-        "stats": "Statistics"
+        "messages": "Messages",
+        "questions": "Questions",
+        "suggestions": "Suggestions"
       },
-      "privacy": {
-        "localMode": {
-          "title": "Privacy Mode Active:",
-          "description": "All documents are processed and stored exclusively on your device. No data leaves your browser."
-        },
-        "cloudMode": {
-          "title": "Cloud Storage Active:",
-          "description": "Documents are encrypted before upload. Your encryption keys never leave your device."
-        }
-      },
-      "stats": {
-        "localStorage": {
-          "title": "Local Storage",
-          "description": "Documents stored on device"
-        },
-        "cloudStorage": {
-          "title": "Cloud Storage",
-          "description": "Documents in cloud"
-        },
-        "totalSize": {
-          "title": "Total Size",
-          "description": "Storage used"
-        },
-        "successRate": "Success Rate",
-        "averageTime": "Average Upload Time"
-      },
-      "progress": {
-        "title": "Upload Progress",
-        "completed": "{{count}} completed",
-        "failed": "{{count}} failed"
-      }
+      "title": "Demo Integracji AI LegacyGuard"
     },
     "ocr": {
-      "title": "Privacy-First Document Processing",
-      "subtitle": "Extract text from documents while keeping everything on your device",
       "features": {
         "completePrivacy": "Complete Privacy",
         "multiLanguage": "Multi-Language Support",
         "smartDetection": "Smart Detection"
-      }
+      },
+      "subtitle": "Extract text from documents while keeping everything on your device",
+      "title": "Privacy-First Document Processing"
+    },
+    "upload": {
+      "badge": {
+        "aiAnalysis": "AI Analysis",
+        "encryption": "Auto Encrypt",
+        "familySharing": "Family Sharing"
+      },
+      "console": {
+        "delete": "Delete",
+        "download": "Download",
+        "share": "Share",
+        "uploadStarted": "Upload started",
+        "view": "View"
+      },
+      "features": {
+        "aiAnalysis": "AI Analysis",
+        "autoCompress": "Auto Compress",
+        "autoEncrypt": "Auto Encrypt",
+        "familySharing": "Family Sharing",
+        "processOCR": "Process OCR"
+      },
+      "privacy": {
+        "cloudMode": {
+          "description": "Documents are encrypted before upload. Your encryption keys never leave your device.",
+          "title": "Cloud Storage Active:"
+        },
+        "localMode": {
+          "description": "All documents are processed and stored exclusively on your device. No data leaves your browser.",
+          "title": "Privacy Mode Active:"
+        }
+      },
+      "progress": {
+        "title": "Upload Progress"
+      },
+      "settings": {
+        "cloud": "Cloud",
+        "description": "Customize your document processing preferences",
+        "local": "Local",
+        "storageLocation": "Storage Location",
+        "title": "Upload Settings"
+      },
+      "stats": {
+        "averageTime": "Average Upload Time",
+        "cloudStorage": {
+          "description": "Documents in cloud",
+          "title": "Cloud Storage"
+        },
+        "localStorage": {
+          "description": "Documents stored on device",
+          "title": "Local Storage"
+        },
+        "successRate": "Success Rate",
+        "totalSize": {
+          "description": "Storage used",
+          "title": "Total Size"
+        }
+      },
+      "subtitle": "Experience the future of secure document management",
+      "tabs": {
+        "documents": "Documents",
+        "stats": "Statistics",
+        "upload": "Upload"
+      },
+      "title": "Magical Document Upload"
     }
   },
-  "pillars": {
-    "secure": {
-      "title": "BEZPIECZNIE",
-      "description": "Chroń swoją rodzinę i majątek za pomocą proaktywnych środków bezpieczeństwa"
+  "onboarding": {
+    "analysis": {
+      "subtitle": "Przygotowywanie Twojej osobistej 'Kolejności Projektu'...",
+      "title": "Analizowanie Twoich odpowiedzi..."
     },
-    "organize": {
-      "title": "ORGANIZUJ",
-      "description": "Kataloguj i zarządzaj swoimi cyfrowymi i fizycznymi aktywami"
+    "buttons": {
+      "generate": "Wygeneruj Moją Kolejność Projektu",
+      "next": "Następny",
+      "previous": "Poprzedni"
     },
-    "transfer": {
-      "title": "PRZEKAŻ",
-      "description": "Upewnij się, że Twoje dziedzictwo zostanie przekazane zgodnie z Twoją wolą"
-    }
+    "mainSubtitle": "Stwórzmy Twój spersonalizowany plan ochrony dziedzictwa",
+    "mainTitle": "Kolejność Projektu",
+    "q1": {
+      "option1": "Tak",
+      "option2": "Nie",
+      "option3": "Częściowo",
+      "title": "Gdyby coś Ci się dzisiaj stało, czy Twoja rodzina wiedziałaby, gdzie znaleźć Twoje ważne dokumenty?"
+    },
+    "q2": {
+      "option1": "Mam wyznaczoną osobę",
+      "option2": "Rodzina by sobie poradziła",
+      "option3": "Nie myślałem/am o tym",
+      "title": "Kto zająłby się Twoimi dziećmi/majątkiem/kontami cyfrowymi?"
+    },
+    "q3": {
+      "option1": "Tak, to jest jasne",
+      "option2": "W pewnym stopniu",
+      "option3": "Nie, nigdy o tym nie rozmawialiśmy",
+      "title": "Czy czujesz, że Twoja rodzina wiedziałaby, czego dla nich chciałeś?"
+    },
+    "q4": {
+      "option1": "Bezpieczeństwo finansowe",
+      "option2": "Komplikacje prawne",
+      "option3": "Utrata wspomnień",
+      "option4": "Konflikty rodzinne",
+      "title": "Co najbardziej martwi Cię o przyszłość Twojej rodziny?"
+    },
+    "skipButton": "Pomiń na razie",
+    "skipConfirmMessage": "Zawsze możesz ponownie uruchomić to ustawienie później w ustawieniach",
+    "skipConfirmNo": "Kontynuuj ustawianie",
+    "skipConfirmTitle": "Pominąć onboarding?",
+    "skipConfirmYes": "Pomiń"
   }
 }

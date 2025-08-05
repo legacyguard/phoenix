@@ -1,99 +1,68 @@
 {
-  "_comment": "Shared translations used across the application",
-  "errorBoundary": {
-    "title": "Упс! Нещо се обърка",
-    "description": "Извиняваме се за неудобството. Възникна неочаквана грешка.",
-    "errorId": "ID на грешката",
-    "tryAgain": "Опитайте отново",
-    "reloadPage": "Презареди страницата",
-    "goToHomepage": "Отидете на началната страница",
-    "technicalDetails": "Технически подробности",
-    "hide": "Скрий",
-    "show": "Покажи",
-    "stackTrace": "Стек на грешките",
-    "componentStack": "Стек на компонентите",
-    "helpText": "Ако проблемът продължава, свържете се с нашата поддръжка с ID на грешката."
-  },
-  "errorTest": {
-    "title": "Тест за регистриране на грешки",
-    "description": "Тествайте обработката и регистрирането на грешки",
-    "triggerSyncError": "Предизвикай синхронна грешка (ErrorBoundary)",
-    "triggerAsyncError": "Предизвикай асинхронна грешка",
-    "logRegularError": "Логни обикновена грешка",
-    "logCriticalError": "Логни критична грешка",
-    "triggerAlert": "Предизвикай аларма (6 критични грешки)",
-    "errorMessages": {
-      "testError": "Тестова грешка от ErrorTest компонент",
-      "testAsyncRejection": "Тест на асинхронно отхвърляне",
-      "manualTestError": "Ръчна грешка при тест",
-      "testCriticalError": "Тест на критична грешка",
-      "criticalErrorWithIndex": "Критична грешка {{index}}"
-    },
-    "descriptions": {
-      "syncError": "Предизвиква синхронна грешка, която ще бъде засечена от ErrorBoundary",
-      "asyncError": "Предизвиква асинхронна грешка, която ще бъде засечена от обработката на грешки",
-      "regularError": "Логва обикновена грешка за тест на регистрирането",
-      "criticalError": "Логва критична грешка за тест на обработката на критични грешки",
-      "multipleErrors": "Предизвиква няколко критични грешки за тест на алармите"
-    },
-    "context": {
-      "component": "ErrorTest",
-      "action": "button-click",
-      "severity": "високо"
-    },
-    "notifications": {
-      "errorLogged": "Грешката е записана успешно",
-      "criticalErrorLogged": "Критичната грешка е записана успешно",
-      "multipleErrorsTriggered": "Предизвикани са няколко критични грешки",
-      "errorBoundaryTriggered": "Границата на грешки е активирана",
-      "asyncErrorCaught": "Асинхронната грешка е уловена и обработена"
-    }
-  },
   "debug": {
     "panel": {
-      "title": "Дебъг панел",
-      "recentErrors": "Последни грешки в приложението",
-      "technicalDetails": "Технически подробности",
-      "tabs": {
-        "list": "Списък",
-        "details": "Детайли"
-      },
-      "errorCount": "{{count}} грешки",
       "actions": {
-        "downloadErrors": "Изтегли грешките",
-        "clearAllErrors": "Изчисти всички грешки"
-      },
-      "messages": {
-        "errorsCleared": "Всички грешки са изчистени",
-        "errorCopied": "Грешката е копирана",
-        "errorsDownloaded": "Грешките са изтеглени"
+        "clearAllErrors": "Изчисти всички грешки",
+        "downloadErrors": "Изтегли грешките"
       },
       "error": {
-        "unknownError": "Неизвестна грешка",
+        "errorMessage": "Съобщение за грешка",
         "noMessage": "Няма съобщение",
-        "errorMessage": "Съобщение за грешка"
-      },
-      "sections": {
-        "stackTrace": "Стек на грешките",
-        "context": "Контекст",
-        "location": "Местоположение",
-        "browserInfo": "Информация за браузъра",
-        "time": "Време"
+        "unknownError": "Неизвестна грешка"
       },
       "fields": {
-        "url": "URL:",
         "path": "Път:",
         "query": "Заявка:",
+        "url": "URL:",
         "userAgent": "Потребителски агент:",
         "viewport": "Област на изгледа:"
-      }
+      },
+      "messages": {
+        "errorCopied": "Грешката е копирана",
+        "errorsCleared": "Всички грешки са изчистени",
+        "errorsDownloaded": "Грешките са изтеглени"
+      },
+      "recentErrors": "Последни грешки в приложението",
+      "sections": {
+        "browserInfo": "Информация за браузъра",
+        "context": "Контекст",
+        "location": "Местоположение",
+        "stackTrace": "Стек на грешките",
+        "time": "Време"
+      },
+      "tabs": {
+        "details": "Детайли",
+        "list": "Списък"
+      },
+      "title": "Дебъг панел"
     }
+  },
+  "errorBoundary": {
+    "componentStack": "Стек на компонентите",
+    "description": "Извиняваме се за неудобството. Възникна неочаквана грешка.",
+    "errorId": "ID на грешката",
+    "goToHomepage": "Отидете на началната страница",
+    "helpText": "Ако проблемът продължава, свържете се с нашата поддръжка с ID на грешката.",
+    "hide": "Скрий",
+    "reloadPage": "Презареди страницата",
+    "show": "Покажи",
+    "stackTrace": "Стек на грешките",
+    "technicalDetails": "Технически подробности",
+    "title": "Упс! Нещо се обърка",
+    "tryAgain": "Опитайте отново"
+  },
+  "errorTest": {
+    "logCriticalError": "Логни критична грешка",
+    "logRegularError": "Логни обикновена грешка",
+    "title": "Тест за регистриране на грешки",
+    "triggerAlert": "Предизвикай аларма (6 критични грешки)",
+    "triggerAsyncError": "Предизвикай асинхронна грешка",
+    "triggerSyncError": "Предизвикай синхронна грешка (ErrorBoundary)"
   },
   "test": {
     "environment": {
-      "title": "Само за тестова среда",
-      "description": "Тази страница е за тестване на системата за регистриране на грешки. Премахнете този маршрут преди да го разположите в продукция."
+      "description": "Тази страница е за тестване на системата за регистриране на грешки. Премахнете този маршрут преди да го разположите в продукция.",
+      "title": "Само за тестова среда"
     }
   }
 }
-

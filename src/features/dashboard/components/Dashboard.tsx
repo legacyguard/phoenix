@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { ProgressService } from '@/services/ProgressService';
 import { LifeEventService } from '@/services/LifeEventService';
+import { OnboardingWizard } from '@/components/onboarding/OnboardingWizard';
 import { FirstTimeUserGuide } from '@/components/dashboard/FirstTimeUserGuide';
 import { EnhancedProgressTracking } from '@/components/dashboard/EnhancedProgressTracking';
 import { NextStepRecommendations } from '@/components/dashboard/NextStepRecommendations';
@@ -25,16 +26,67 @@ const Dashboard = () => {
   const [error, setError] = useState(null);
   const [showAnnualReview, setShowAnnualReview] = useState(false);
   const [showLegalConsultation, setShowLegalConsultation] = useState(false);
-  const [showGuide, setShowGuide] = useState(true);
+  const [showOnboarding, setShowOnboarding] = useState(false);
+  const [showFirstTimeGuide, setShowFirstTimeGuide] = useState(false);
+  const [onboardingTasks, setOnboardingTasks] = useState([]);
 
   const handleAnnualReview = () => {
     setShowAnnualReview(true);
   };
 
   useEffect(() => {
-    const fetchProgressStatus = async () => {
+    const initializeDashboard = async () => {
       try {
-        const status = await ProgressService.getProgressStatus('user-id');
+        // Wait for user data to be loaded
+        if (!user) {
+          return;
+        }
+
+        // Create a unique key for this user's onboarding status
+        const userOnboardingKey = `legacyguard-onboarding-completed-${user.id}`;
+        const userGuideKey = `legacyguard-dashboard-guide-completed-${user.id}`;
+        
+        // Check if user has completed onboarding
+        const hasCompletedOnboarding = localStorage.getItem(userOnboardingKey);
+        const hasSeenGuide = localStorage.getItem(userGuideKey);
+        
+        // Check if user was created recently (within last 5 minutes)
+        const userCreatedAt = user.createdAt ? new Date(user.createdAt).getTime() : 0;
+        const fiveMinutesAgo = Date.now() - (5 * 60 * 1000);
+        const isRecentlyCreated = userCreatedAt > fiveMinutesAgo;
+        
+        // Check for force onboarding parameter (for testing)
+        const urlParams = new URLSearchParams(window.location.search);
+        const forceOnboarding = urlParams.get('onboarding') === 'true';
+        
+        // Debug logging
+        console.log('Dashboard Debug:', {
+          userId: user.id,
+          userCreatedAt: user.createdAt,
+          isRecentlyCreated,
+          hasCompletedOnboarding,
+          hasSeenGuide,
+          forceOnboarding,
+          publicMetadata: user.publicMetadata
+        });
+        
+        // Determine if this is a new user
+        const isNewUser = forceOnboarding || (!hasCompletedOnboarding && (isRecentlyCreated || !user.publicMetadata?.onboardingCompleted));
+        
+        console.log('Is new user?', isNewUser);
+        
+        if (isNewUser) {
+          // New user: show onboarding wizard
+          setShowOnboarding(true);
+          setLoading(false);
+          return; // Don't fetch progress status yet
+        } else if (!hasSeenGuide && hasCompletedOnboarding) {
+          // User completed onboarding but hasn't seen the guide
+          setShowFirstTimeGuide(true);
+        }
+        
+        // Fetch progress status only for users who have completed onboarding
+        const status = await ProgressService.getProgressStatus(user.id);
         setProgressStatus(status);
       } catch (err) {
         setError(t('dashboard.errors.failedToFetchStatus'));
@@ -42,9 +94,12 @@ const Dashboard = () => {
         setLoading(false);
       }
     };
-    fetchProgressStatus();
+    
+    if (user) {
+      initializeDashboard();
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [user]);
 
   const getStageIcon = (stage) => {
     switch (stage) {
@@ -104,14 +159,71 @@ const Dashboard = () => {
     );
   }
 
+  const handleOnboardingComplete = (tasks) => {
+    // Store the generated tasks
+    setOnboardingTasks(tasks);
+    const userOnboardingKey = `legacyguard-onboarding-completed-${user?.id}`;
+    localStorage.setItem(userOnboardingKey, 'true');
+    setShowOnboarding(false);
+    // Show the first time guide after onboarding
+    setShowFirstTimeGuide(true);
+  };
+
+  const handleFirstTimeGuideComplete = async () => {
+    const userGuideKey = `legacyguard-dashboard-guide-completed-${user?.id}`;
+    localStorage.setItem(userGuideKey, 'true');
+    setShowFirstTimeGuide(false);
+    
+    // Apply the onboarding tasks to the user's progress
+    // In a real implementation, this would update the backend
+    console.log('Applying onboarding tasks:', onboardingTasks);
+    
+    // Fetch the initial progress status after onboarding is complete
+    try {
+      const status = await ProgressService.getProgressStatus(user?.id || 'user-id');
+      setProgressStatus(status);
+    } catch (err) {
+      console.error('Failed to fetch progress status after onboarding:', err);
+    }
+  };
+
   return (
     <>
-      {/* First Time User Guide */}
-      {showGuide && (
-        <FirstTimeUserGuide onComplete={() => setShowGuide(false)} />
+      {/* Onboarding Wizard - 5 minute questions */}
+      {showOnboarding && (
+        <OnboardingWizard 
+          isOpen={showOnboarding}
+          onComplete={handleOnboardingComplete}
+          onClose={() => setShowOnboarding(false)}
+        />
+      )}
+
+      {/* First Time User Guide - shown after onboarding */}
+      {showFirstTimeGuide && (
+        <FirstTimeUserGuide onComplete={handleFirstTimeGuideComplete} />
       )}
 
       <div className="container mx-auto px-4 py-8 max-w-7xl space-y-8">
+        {/* Development only: Reset onboarding button */}
+        {import.meta.env.DEV && user && (
+          <div className="fixed bottom-4 right-4 z-50">
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => {
+                const userOnboardingKey = `legacyguard-onboarding-completed-${user.id}`;
+                const userGuideKey = `legacyguard-dashboard-guide-completed-${user.id}`;
+                localStorage.removeItem(userOnboardingKey);
+                localStorage.removeItem(userGuideKey);
+                window.location.reload();
+              }}
+              className="bg-yellow-500 text-black hover:bg-yellow-600"
+            >
+              🔄 Reset Onboarding (Dev)
+            </Button>
+          </div>
+        )}
+        
         {showAnnualReview ? (
           <AnnualReview />
         ) : (

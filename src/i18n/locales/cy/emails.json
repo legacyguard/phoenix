@@ -1,66 +1,64 @@
 {
-  "_comment": "Templedi e-bost a negeseuon system",
   "emails": {
-    "welcome": {
-      "subject": "Croeso i LegacyGuard – Diogelu Dyfodol Eich Teulu",
-      "greeting": "Annwyl {{name}},",
-      "body": "Diolch am ymuno â LegacyGuard. Rydym yn falch eich bod chi gyda ni wrth i ni eich helpu i gadw a diogelu etifeddiaeth eich teulu.",
-      "nextSteps": "I ddechrau, ewch i’ch dangosfwrdd personol a chwblhewch eich proffil.",
-      "thanks": "Diolch yn fawr,",
-      "signature": "Tîm LegacyGuard"
-    },
-    "passwordReset": {
-      "subject": "Ceisiwch Ailosod Eich Cyfrinair LegacyGuard",
-      "greeting": "Annwyl {{name}},",
-      "body": "Derbyniwyd cais i ailosod eich cyfrinair. Cliciwch y ddolen isod i barhau:",
-      "resetLinkText": "Ailosod Eich Cyfrinair",
-      "linkExpires": "Bydd y ddolen hon yn dod i ben mewn 24 awr.",
-      "ignoreMessage": "Os na wnaethoch chi wneud y cais hwn, gallwch anwybyddu’r e-bost hwn.",
-      "thanks": "Diolch,",
-      "signature": "Tîm LegacyGuard"
-    },
-    "invitation": {
-      "subject": "Gwahoddiad i fod yn Warcheidwad Ddibynadwy ar LegacyGuard",
-      "greeting": "Annwyl {{name}},",
-      "body": "Rydych wedi cael eich gwahodd gan {{inviterName}} i fod yn warcheidwad ar gyfer eu hetifeddiaeth ddigidol. Mae’r rôl hon yn rhoi mynediad diogel i wybodaeth bwysig yn ystod argyfyngau.",
-      "acceptLinkText": "Derbynwch y Gwahoddiad",
-      "declineLinkText": "Gwrthodwch y Gwahoddiad",
-      "thanks": "Diolch,",
-      "signature": "Tîm LegacyGuard"
-    },
-    "notification": {
-      "subject": "Hysbysiad o {{eventType}}",
-      "greeting": "Annwyl {{name}},",
-      "body": "Rydym eisiau eich hysbysu am ddigwyddiad pwysig: {{eventDescription}}.",
-      "viewDetailsText": "Gweld Manylion",
-      "thanks": "Diolch,",
-      "signature": "Tîm LegacyGuard"
-    },
-    "reminder": {
-      "subject": "Atgoffa o Dasg i'w Gwblhau ar LegacyGuard",
-      "greeting": "Annwyl {{name}},",
-      "body": "Dim ond atgoffa gyfeillgar yw hwn i’ch helpu i gwblhau’r dasg: {{taskTitle}}.",
-      "completeNowText": "Cwblhewch Nawr",
-      "thanks": "Diolch am eich sylw,",
-      "signature": "Tîm LegacyGuard"
-    },
-    "securityAlert": {
-      "subject": "Rhybudd Diogelwch ar Eich Cyfrif LegacyGuard",
-      "greeting": "Annwyl {{name}},",
-      "body": "Rydym wedi sylwi gweithgaredd amheus ar eich cyfrif. Os nad ydych chi’n ei adnabod, cysylltwch â ni’n syth.",
-      "reviewAccountText": "Adolygu Cyfrif",
-      "thanks": "Diolch am eich cydweithrediad,",
-      "signature": "Tîm LegacyGuard"
-    },
-    "general": {
-      "greeting": "Annwyl {{name}},",
-      "thanks": "Diolch yn fawr,",
-      "signature": "Tîm LegacyGuard"
-    },
     "footer": {
       "contactInfo": "Os oes gennych unrhyw gwestiynau, cysylltwch â ni ar {{supportEmail}}.",
       "unsubscribe": "Os ydych chi am ddad-danysgrifio o’r e-byst hyn, cliciwch yma: {{unsubscribeLink}}."
+    },
+    "general": {
+      "greeting": "Annwyl {{name}},",
+      "signature": "Tîm LegacyGuard",
+      "thanks": "Diolch yn fawr,"
+    },
+    "invitation": {
+      "acceptLinkText": "Derbynwch y Gwahoddiad",
+      "body": "Rydych wedi cael eich gwahodd gan {{inviterName}} i fod yn warcheidwad ar gyfer eu hetifeddiaeth ddigidol. Mae’r rôl hon yn rhoi mynediad diogel i wybodaeth bwysig yn ystod argyfyngau.",
+      "declineLinkText": "Gwrthodwch y Gwahoddiad",
+      "greeting": "Annwyl {{name}},",
+      "signature": "Tîm LegacyGuard",
+      "subject": "Gwahoddiad i fod yn Warcheidwad Ddibynadwy ar LegacyGuard",
+      "thanks": "Diolch,"
+    },
+    "notification": {
+      "body": "Rydym eisiau eich hysbysu am ddigwyddiad pwysig: {{eventDescription}}.",
+      "greeting": "Annwyl {{name}},",
+      "signature": "Tîm LegacyGuard",
+      "subject": "Hysbysiad o {{eventType}}",
+      "thanks": "Diolch,",
+      "viewDetailsText": "Gweld Manylion"
+    },
+    "passwordReset": {
+      "body": "Derbyniwyd cais i ailosod eich cyfrinair. Cliciwch y ddolen isod i barhau:",
+      "greeting": "Annwyl {{name}},",
+      "ignoreMessage": "Os na wnaethoch chi wneud y cais hwn, gallwch anwybyddu’r e-bost hwn.",
+      "linkExpires": "Bydd y ddolen hon yn dod i ben mewn 24 awr.",
+      "resetLinkText": "Ailosod Eich Cyfrinair",
+      "signature": "Tîm LegacyGuard",
+      "subject": "Ceisiwch Ailosod Eich Cyfrinair LegacyGuard",
+      "thanks": "Diolch,"
+    },
+    "reminder": {
+      "body": "Dim ond atgoffa gyfeillgar yw hwn i’ch helpu i gwblhau’r dasg: {{taskTitle}}.",
+      "completeNowText": "Cwblhewch Nawr",
+      "greeting": "Annwyl {{name}},",
+      "signature": "Tîm LegacyGuard",
+      "subject": "Atgoffa o Dasg i'w Gwblhau ar LegacyGuard",
+      "thanks": "Diolch am eich sylw,"
+    },
+    "securityAlert": {
+      "body": "Rydym wedi sylwi gweithgaredd amheus ar eich cyfrif. Os nad ydych chi’n ei adnabod, cysylltwch â ni’n syth.",
+      "greeting": "Annwyl {{name}},",
+      "reviewAccountText": "Adolygu Cyfrif",
+      "signature": "Tîm LegacyGuard",
+      "subject": "Rhybudd Diogelwch ar Eich Cyfrif LegacyGuard",
+      "thanks": "Diolch am eich cydweithrediad,"
+    },
+    "welcome": {
+      "body": "Diolch am ymuno â LegacyGuard. Rydym yn falch eich bod chi gyda ni wrth i ni eich helpu i gadw a diogelu etifeddiaeth eich teulu.",
+      "greeting": "Annwyl {{name}},",
+      "nextSteps": "I ddechrau, ewch i’ch dangosfwrdd personol a chwblhewch eich proffil.",
+      "signature": "Tîm LegacyGuard",
+      "subject": "Croeso i LegacyGuard – Diogelu Dyfodol Eich Teulu",
+      "thanks": "Diolch yn fawr,"
     }
   }
 }
-

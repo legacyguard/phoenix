@@ -1,253 +1,195 @@
 {
-  "_comment": "Shared translations used across the application",
-  "documentTypes": {
-    "realEstateDeed": "Kinnisvara omandiõiguse tunnistus",
-    "birthCertificate": "Sünnitunnistus",
-    "insurancePolicy": "Kindlustuspoliis",
-    "lastWill": "Testament",
-    "employmentContract": "Tööleping",
-    "passport": "Pass",
-    "drivingLicense": "Juhiluba",
-    "bankStatement": "Konto väljavõte",
-    "investmentCertificate": "Investeerimistunnistus",
-    "energyContract": "Energialeping",
-    "softwareLicense": "Tarkvaralitsents",
-    "subscriptionService": "Tellimusteenus",
-    "other": "Muu"
-  },
-  "documentUpload": {
-    "fileUploadedSuccess": "Fail edukalt üles laaditud!",
-    "fileUploadFailed": "Faili üleslaadimine ebaõnnestus. Palun proovige uuesti.",
-    "fileTooLarge": "Valitud fail on liiga suur. Maksimaalne suurus on {{maxSize}} MB.",
-    "fillRequiredFields": "Palun täitke kõik nõutud väljad.",
-    "loginToSave": "Dokumentide salvestamiseks peate olema sisse logitud.",
-    "saved": "Dokument edukalt salvestatud!",
-    "failedSave": "Dokumendi salvestamine ebaõnnestus. Palun proovige uuesti.",
-    "detailsTitle": "Dokumendi üksikasjad",
-    "detailsSubtitle": "Lisage teavet oma üleslaaditud dokumendi kohta.",
-    "namePlaceholder": "Sisestage dokumendi nimi",
-    "typePlaceholder": "Valige dokumendi tüüp",
-    "countryPlaceholder": "Valige riik",
-    "pickDate": "Valige kuupäev",
-    "title": "Laadi dokument üles",
-    "subtitle": "Laadige turvaliselt üles juriidilisi ja isiklikke dokumente.",
-    "browseFiles": "Sirvi faile",
-    "chooseDifferent": "Vali teine fail",
-    "uploadButton": "Laadi dokument üles",
-    "storageLimitReached": "Faili ei saa üles laadida. Teil on {{remaining}} vaba ruumi, kuid see fail on {{fileSize}}. Palun uuendage oma plaani või eemaldage mõned olemasolevad failid."
-  },
-  "documentUploader": {
-    "smart_document_upload_2": "Tark dokumendi üleslaadimine",
-    "upload_any_document_and_our_ai_3": "Laadige üles mis tahes dokument ja meie AI klassifitseerib selle automaatselt teie jaoks",
-    "please_upload_an_image_or_pdf__1": "Palun laadige üles pilt või PDF fail",
-    "image_application_pdf_4": "image/*,application/pdf",
-    "0_0_48_48_5": "0 0 48 48",
-    "m24_12v12m0_0l_4_4m4_4l4_4m10__6": "M24 12v12m0 0l-4 4m4-4l4 4m10-6",
-    "drop_your_document_here_or_cli_7": "Kukutage oma dokument siia või klõpsake sirvimiseks",
-    "supports_images_and_pdfs_up_to_8": "Toetab pilte ja PDF-e kuni 10MB",
-    "document_analysis_complete_10": "Dokumendi analüüs lõpetatud",
-    "document_type_11": "Dokumendi tüüp",
-    "suggested_title_12": "Soovituslik pealkiri",
-    "confidence": "Usaldusväärsus",
-    "ai_analysis_13": "AI analüüs",
-    "continue_with_this_classificat_14": "Jätka selle klassifitseerimisega",
-    "change_category_15": "Muuda kategooriat",
-    "documents_we_can_process_16": "Dokumendid, mida saame töödelda:",
-    "insurance_policies_life_health_17": "Kindlustuspoliisid (elu, tervis, kodu, auto)",
-    "property_deeds_and_titles_18": "Kinnisvara omandiõiguse tunnistused ja tiitlid",
-    "vehicle_ownership_documents_19": "Sõiduki omandiõiguse dokumendid",
-    "bank_and_investment_statements_20": "Panga ja investeerimise väljavõtted",
-    "wills_and_estate_planning_docu_21": "Testamendid ja pärandi planeerimise dokumendid",
-    "business_contracts_and_ownersh_22": "Ärilepingud ja omandiõiguse paberid",
-    "personal_identification_docume_23": "Isiklikud identifitseerimisdokumendid",
-    "tax_returns_and_documents_24": "Maksudeklaratsioonid ja dokumendid",
-    "categoryDescriptions": {
-      "insurance_policy": "Elu, tervis, kodu, auto või puude kindlustus",
-      "property_deed": "Kinnisvara omandiõiguse dokumendid ja omandiõiguse tunnistused",
-      "vehicle_title": "Auto, paadi või muu sõiduki omandiõiguse paberid",
-      "bank_statement": "Pangakonto väljavõtted ja dokumendid",
-      "investment_statement": "Investeerimise ja pensionikonto väljavõtted",
-      "will_or_trust": "Testamendid, usaldused ja pärandi planeerimise dokumendid",
-      "business_document": "Äri omand ja olulised lepingud",
-      "personal_id": "Passid, litsentsid, sünnitunnistused",
-      "tax_document": "Maksudeklaratsioonid ja seotud dokumendid",
-      "medical_document": "Meditsiinilised kirjed ja tervishoiu juhised",
-      "other": "Muud olulised dokumendid"
-    },
-    "errors": {
-      "fileTypeError": "Palun laadige üles pilt või PDF fail",
-      "processingError": "Dokumendi töötlemine ebaõnnestus",
-      "uploadError": "Dokumendi üleslaadimine ebaõnnestus",
-      "classificationError": "Dokumendi klassifitseerimine ebaõnnestus"
-    }
-  },
-  "vault": {
-    "title": "Varamu",
-    "subtitle": "Teie turvaline inventuur kõigist finantsvaradest ja väärtuslikest omanditest.",
-    "errorLoadingAssets": "Teie varade laadimine ebaõnnestus. Palun proovige uuesti.",
-    "letsBuildInventory": "Ehitame teie inventuuri",
-    "addProperty": "Lisa kinnisvara",
-    "addFinances": "Lisa rahandus",
-    "addVehicle": "Lisa sõiduk",
-    "addDigitalAsset": "Lisa digivara",
-    "addPersonalItem": "Lisa isiklik ese",
-    "addOther": "Lisa midagi muud...",
-    "confirmDeletion": "Kas olete kindel, et soovite kustutada \"{{assetName}}\"?",
-    "errorDeletingAsset": "Vara kustutamine ebaõnnestus. Palun proovige uuesti.",
-    "searchPlaceholder": "Otsige oma varasid...",
-    "addAsset": "Lisa vara",
-    "totalAssets": "Varad kokku",
-    "totalValue": "Koguväärtus",
-    "categories": "Kategooriad",
-    "noAssetsFound": "Varasid ei leitud, mis vastaks \"{{searchQuery}}\"",
-    "startAddingAssets": "Alustage varade lisamist oma inventuuri ehitamiseks",
-    "addNewAsset": "Lisa uus vara",
-    "property": "Property",
-    "finances": "Finances",
-    "vehicle": "Vehicle",
-    "digital": "Digital",
-    "personal": "Personal",
-    "other": "Other",
-    "fileUpload": {
-      "title": "Upload Files",
-      "dragDropText": "Drag and drop files here",
-      "clickToSelect": "or click to browse",
-      "maxSize": "Maximum file size: {{size}}",
-      "encryptFiles": "Encrypt Files",
-      "encryptDescription": "Files will be encrypted before upload for maximum security",
-      "tags": "Tags",
-      "addTag": "Add tag...",
-      "selectedFiles": "Selected Files",
-      "uploading": "Uploading...",
-      "uploadFiles": "Upload Files",
-      "uploadSuccess": "{{name}} uploaded successfully",
-      "uploadError": "Failed to upload {{name}}",
-      "maxFilesReached": "Maximum {{max}} files allowed",
-      "encryptionInfo": "Your files are encrypted with AES-256 encryption. Only you can decrypt them."
-    },
-    "fileList": {
-      "title": "Asset Files",
-      "noFiles": "No files uploaded yet",
-      "uploadFirst": "Upload your first file",
-      "searchFiles": "Search files...",
-      "filterByTag": "Filter by tag",
-      "sortBy": "Sort by",
-      "sortByName": "Name",
-      "sortByDate": "Date",
-      "sortBySize": "Size",
-      "download": "Download",
-      "share": "Share",
-      "delete": "Delete",
-      "confirmDelete": "Are you sure you want to delete this file?",
-      "deleteSuccess": "File deleted successfully",
-      "deleteError": "Failed to delete file",
-      "downloadError": "Failed to download file",
-      "encrypted": "Encrypted",
-      "sharedWith": "Shared with {{count}} people"
-    },
-    "sharing": {
-      "title": "Share File",
-      "shareWith": "Share with",
-      "emailPlaceholder": "Enter email address",
-      "expiresIn": "Expires in",
-      "hours": "hours",
-      "days": "days",
-      "shareButton": "Share",
-      "sharing": "Sharing...",
-      "shareSuccess": "File shared successfully",
-      "shareError": "Failed to share file",
-      "password": "Access Password",
-      "passwordInfo": "Share this password separately with the recipient",
-      "copyPassword": "Copy Password",
-      "activeShares": "Active Shares",
-      "noShares": "No active shares",
-      "revoke": "Revoke",
-      "revokeSuccess": "Share revoked successfully",
-      "revokeError": "Failed to revoke share",
-      "expiresAt": "Expires {{date}}",
-      "accessCount": "Accessed {{count}} times"
-    }
-  },
-  "upload": {
-    "zone": {
-      "dropHere": "Drop your important papers here",
-      "dropHereActive": "Yes! Drop them right here",
-      "description": "I'll organize everything for you - just drag files here or click to browse",
-      "descriptionActive": "I'm ready to organize everything for you",
-      "chooseFiles": "Choose Files",
-      "takePhoto": "Take Photo",
-      "processingLocally": "Processing locally on your device",
-      "dragOverlay": {
-        "title": "Drop your documents here",
-        "subtitle": "I'll take good care of them"
-      }
-    }
-  },
   "createTimeCapsuleModal": {
-    "title": "Loo ajakapsel",
-    "titleCreate": "Loo ajakapsel",
-    "titleEdit": "Muuda ajakapslit",
+    "buttons": {
+      "cancel": "Tühista",
+      "create": "Loo ajakapsel",
+      "recordVideo": "Salvesta videosõnum",
+      "saving": "Salvestan...",
+      "update": "Uuenda ajakapslit"
+    },
     "description": "Looge sõnum, mis saadetakse teie lähedastele tulevikus.",
     "errors": {
-      "noTitle": "Palun sisestage oma ajakapsli pealkiri.",
-      "noRecipients": "Palun valige vähemalt üks saaja.",
-      "noUnlockDate": "Palun valige avamise kuupäev.",
-      "noMessage": "Palun sisestage oma sõnum.",
-      "noFile": "Palun laadige fail üles.",
-      "updateFailed": "Ajakapsli uuendamine ebaõnnestus.",
-      "saveFailed": "Ajakapsli salvestamine ebaõnnestus.",
       "fileTooLarge": "Faili suurus peab olema väiksem kui 50MB.",
-      "invalidFileType": "Kehtetu faili tüüp {{messageType}} jaoks."
+      "noFile": "Palun laadige fail üles.",
+      "noMessage": "Palun sisestage oma sõnum.",
+      "noRecipients": "Palun valige vähemalt üks saaja.",
+      "noTitle": "Palun sisestage oma ajakapsli pealkiri.",
+      "noUnlockDate": "Palun valige avamise kuupäev.",
+      "saveFailed": "Ajakapsli salvestamine ebaõnnestus.",
+      "updateFailed": "Ajakapsli uuendamine ebaõnnestus."
     },
-    "success": {
-      "updated": "Ajakapsel uuendatud!",
-      "created": "Ajakapsel loodud!"
+    "fileUpload": {
+      "clickToUpload": "Klõpsake üleslaadimiseks",
+      "dragAndDrop": " või lohistage ja kukutage",
+      "maxSize": "Maksimaalne faili suurus: 50MB"
     },
     "labels": {
-      "title": "Pealkiri",
+      "deliveryQuestion": "Millal peaks see sõnum kohale toimetatud olema?",
       "messageType": "Sõnumi tüüp",
       "recipients": "Saajad",
-      "deliveryQuestion": "Millal peaks see sõnum kohale toimetatud olema?",
+      "title": "Pealkiri",
       "unlockDate": "Ava kuupäev",
-      "yourMessage": "Teie sõnum",
-      "uploadFile": "Laadi üles {{messageType}}"
-    },
-    "placeholders": {
-      "title": "nt Teie 18. sünnipäevaks",
-      "message": "Kirjutage oma südamlik sõnum siia...",
-      "selectDate": "Valige kuupäev"
+      "yourMessage": "Teie sõnum"
     },
     "messageTypes": {
-      "text": "Tekstisõnum",
+      "audio": "Heli",
       "photo": "Foto",
-      "video": "Video",
-      "audio": "Heli"
+      "text": "Tekstisõnum",
+      "video": "Video"
+    },
+    "placeholders": {
+      "message": "Kirjutage oma südamlik sõnum siia...",
+      "selectDate": "Valige kuupäev",
+      "title": "nt Teie 18. sünnipäevaks"
+    },
+    "premium": {
+      "upgradeNow": "Uuenda nüüd",
+      "videoMessage": "Videosõnumid on premium funktsioon."
     },
     "recipients": {
       "noTrustedPeople": "Teie pole veel usaldusväärseid inimesi lisatud. Lisage need esmalt oma töölaualt.",
       "selected": "Valitud"
     },
+    "success": {
+      "created": "Ajakapsel loodud!",
+      "updated": "Ajakapsel uuendatud!"
+    },
+    "titleCreate": "Loo ajakapsel",
+    "titleEdit": "Muuda ajakapslit",
     "unlockConditions": {
-      "onDate": "Konkreetsel kuupäeval",
-      "afterPassing": "Pärast minu surma"
+      "afterPassing": "Pärast minu surma",
+      "onDate": "Konkreetsel kuupäeval"
+    }
+  },
+  "documentTypes": {
+    "bankStatement": "Konto väljavõte",
+    "birthCertificate": "Sünnitunnistus",
+    "drivingLicense": "Juhiluba",
+    "employmentContract": "Tööleping",
+    "energyContract": "Energialeping",
+    "insurancePolicy": "Kindlustuspoliis",
+    "investmentCertificate": "Investeerimistunnistus",
+    "lastWill": "Testament",
+    "other": "Muu",
+    "passport": "Pass",
+    "realEstateDeed": "Kinnisvara omandiõiguse tunnistus",
+    "softwareLicense": "Tarkvaralitsents",
+    "subscriptionService": "Tellimusteenus"
+  },
+  "documentUpload": {
+    "browseFiles": "Sirvi faile",
+    "chooseDifferent": "Vali teine fail",
+    "countryPlaceholder": "Valige riik",
+    "detailsSubtitle": "Lisage teavet oma üleslaaditud dokumendi kohta.",
+    "detailsTitle": "Dokumendi üksikasjad",
+    "failedSave": "Dokumendi salvestamine ebaõnnestus. Palun proovige uuesti.",
+    "fileUploadFailed": "Faili üleslaadimine ebaõnnestus. Palun proovige uuesti.",
+    "fileUploadedSuccess": "Fail edukalt üles laaditud!",
+    "fillRequiredFields": "Palun täitke kõik nõutud väljad.",
+    "loginToSave": "Dokumentide salvestamiseks peate olema sisse logitud.",
+    "namePlaceholder": "Sisestage dokumendi nimi",
+    "pickDate": "Valige kuupäev",
+    "saved": "Dokument edukalt salvestatud!",
+    "subtitle": "Laadige turvaliselt üles juriidilisi ja isiklikke dokumente.",
+    "title": "Laadi dokument üles",
+    "typePlaceholder": "Valige dokumendi tüüp",
+    "uploadButton": "Laadi dokument üles"
+  },
+  "documentUploader": {
+    "0_0_48_48_5": "0 0 48 48",
+    "ai_analysis_13": "AI analüüs",
+    "bank_and_investment_statements_20": "Panga ja investeerimise väljavõtted",
+    "business_contracts_and_ownersh_22": "Ärilepingud ja omandiõiguse paberid",
+    "categoryDescriptions": {
+      "bank_statement": "Pangakonto väljavõtted ja dokumendid",
+      "business_document": "Äri omand ja olulised lepingud",
+      "insurance_policy": "Elu, tervis, kodu, auto või puude kindlustus",
+      "investment_statement": "Investeerimise ja pensionikonto väljavõtted",
+      "medical_document": "Meditsiinilised kirjed ja tervishoiu juhised",
+      "other": "Muud olulised dokumendid",
+      "personal_id": "Passid, litsentsid, sünnitunnistused",
+      "property_deed": "Kinnisvara omandiõiguse dokumendid ja omandiõiguse tunnistused",
+      "tax_document": "Maksudeklaratsioonid ja seotud dokumendid",
+      "vehicle_title": "Auto, paadi või muu sõiduki omandiõiguse paberid",
+      "will_or_trust": "Testamendid, usaldused ja pärandi planeerimise dokumendid"
     },
+    "change_category_15": "Muuda kategooriat",
+    "confidence": "Usaldusväärsus",
+    "continue_with_this_classificat_14": "Jätka selle klassifitseerimisega",
+    "document_analysis_complete_10": "Dokumendi analüüs lõpetatud",
+    "document_type_11": "Dokumendi tüüp",
+    "documents_we_can_process_16": "Dokumendid, mida saame töödelda:",
+    "drop_your_document_here_or_cli_7": "Kukutage oma dokument siia või klõpsake sirvimiseks",
+    "errors": {
+      "fileTypeError": "Palun laadige üles pilt või PDF fail",
+      "processingError": "Dokumendi töötlemine ebaõnnestus"
+    },
+    "image_application_pdf_4": "image/*,application/pdf",
+    "insurance_policies_life_health_17": "Kindlustuspoliisid (elu, tervis, kodu, auto)",
+    "m24_12v12m0_0l_4_4m4_4l4_4m10__6": "M24 12v12m0 0l-4 4m4-4l4 4m10-6",
+    "personal_identification_docume_23": "Isiklikud identifitseerimisdokumendid",
+    "please_upload_an_image_or_pdf__1": "Palun laadige üles pilt või PDF fail",
+    "property_deeds_and_titles_18": "Kinnisvara omandiõiguse tunnistused ja tiitlid",
+    "smart_document_upload_2": "Tark dokumendi üleslaadimine",
+    "suggested_title_12": "Soovituslik pealkiri",
+    "supports_images_and_pdfs_up_to_8": "Toetab pilte ja PDF-e kuni 10MB",
+    "tax_returns_and_documents_24": "Maksudeklaratsioonid ja dokumendid",
+    "upload_any_document_and_our_ai_3": "Laadige üles mis tahes dokument ja meie AI klassifitseerib selle automaatselt teie jaoks",
+    "vehicle_ownership_documents_19": "Sõiduki omandiõiguse dokumendid",
+    "wills_and_estate_planning_docu_21": "Testamendid ja pärandi planeerimise dokumendid"
+  },
+  "upload": {
+    "zone": {
+      "chooseFiles": "Choose Files",
+      "description": "I'll organize everything for you - just drag files here or click to browse",
+      "descriptionActive": "I'm ready to organize everything for you",
+      "dragOverlay": {
+        "subtitle": "I'll take good care of them",
+        "title": "Drop your documents here"
+      },
+      "dropHere": "Drop your important papers here",
+      "dropHereActive": "Yes! Drop them right here",
+      "processingLocally": "Processing locally on your device",
+      "takePhoto": "Take Photo"
+    }
+  },
+  "vault": {
+    "addAsset": "Lisa vara",
+    "addDigitalAsset": "Lisa digivara",
+    "addFinances": "Lisa rahandus",
+    "addNewAsset": "Lisa uus vara",
+    "addOther": "Lisa midagi muud...",
+    "addPersonalItem": "Lisa isiklik ese",
+    "addProperty": "Lisa kinnisvara",
+    "addVehicle": "Lisa sõiduk",
+    "categories": "Kategooriad",
+    "digital": "Digital",
+    "errorDeletingAsset": "Vara kustutamine ebaõnnestus. Palun proovige uuesti.",
+    "errorLoadingAssets": "Teie varade laadimine ebaõnnestus. Palun proovige uuesti.",
     "fileUpload": {
-      "clickToUpload": "Klõpsake üleslaadimiseks",
-      "dragAndDrop": " või lohistage ja kukutage",
-      "maxSize": "Maksimaalne faili suurus: 50MB",
-      "fileSizeMB": "{{size}} MB"
+      "addTag": "Add tag...",
+      "clickToSelect": "or click to browse",
+      "dragDropText": "Drag and drop files here",
+      "encryptDescription": "Files will be encrypted before upload for maximum security",
+      "encryptFiles": "Encrypt Files",
+      "encryptionInfo": "Your files are encrypted with AES-256 encryption. Only you can decrypt them.",
+      "selectedFiles": "Selected Files",
+      "tags": "Tags",
+      "title": "Upload Files",
+      "uploadFiles": "Upload Files",
+      "uploading": "Uploading..."
     },
-    "premium": {
-      "videoMessage": "Videosõnumid on premium funktsioon.",
-      "upgradeNow": "Uuenda nüüd"
-    },
-    "buttons": {
-      "recordVideo": "Salvesta videosõnum",
-      "cancel": "Tühista",
-      "saving": "Salvestan...",
-      "update": "Uuenda ajakapslit",
-      "create": "Loo ajakapsel"
-    },
-    "characterCount": "{{count}}/{{max}} tähemärki"
+    "finances": "Finances",
+    "letsBuildInventory": "Ehitame teie inventuuri",
+    "other": "Other",
+    "personal": "Personal",
+    "property": "Property",
+    "searchPlaceholder": "Otsige oma varasid...",
+    "startAddingAssets": "Alustage varade lisamist oma inventuuri ehitamiseks",
+    "subtitle": "Teie turvaline inventuur kõigist finantsvaradest ja väärtuslikest omanditest.",
+    "title": "Varamu",
+    "totalAssets": "Varad kokku",
+    "totalValue": "Koguväärtus",
+    "vehicle": "Vehicle"
   }
 }

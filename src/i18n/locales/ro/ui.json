@@ -1,398 +1,179 @@
 {
-  "_comment": "Shared translations used across the application",
-  "navigation": {
-    "dashboard": "Panou de control",
-    "vault": "Seif",
-    "trustedCircle": {
-      "title": "Cercul tău de încredere",
-      "subtitle": "Persoanele în care ai încredere pentru a ajuta la protejarea și îngrijirea familiei și moștenirii tale.",
-      "responsibilities": "Responsabilitățile lor:",
-      "preparationStatus": "Statusul de pregătire:",
-      "informedOfRole": "A fost informat despre rolul său",
-      "acceptedResponsibility": "A acceptat responsabilitatea",
-      "hasAccessToDocuments": "Are acces la documentele necesare",
-      "reviewedEmergencyProcedures": "A revizuit procedurile de urgență",
-      "addTrustedPerson": "+ Adaugă o persoană de încredere",
-      "preparednessStatus": {
-        "wellPrepared": "Bine Pregătit",
-        "partiallyPrepared": "Parcial Pregătit",
-        "needsAttention": "Necesită Atenție"
-      },
-      "buttonText": {
-        "prepared": "✓ {{name}} este pregătit",
-        "prepareNow": "Pregătește {{name}} acum"
-      },
-      "mockData": {
-        "sarah": {
-          "name": "Sarah Johnson",
-          "relationship": "Soție",
-          "responsibilities": {
-            "bankAccess": "Poate accesa toate conturile bancare pentru a plăti facturile și gestiona cheltuielile gospodăriei.",
-            "inheritAssets": "Va moșteni casa familiei, cabana și toate economiile.",
-            "medicalPower": "Are puterea medicală de avocat pentru a lua decizii de sănătate."
-          }
-        },
-        "michael": {
-          "name": "Michael Johnson",
-          "relationship": "Frate",
-          "responsibilities": {
-            "childCare": "Va avea grijă de copiii noștri dacă ambii părinți dispar.",
-            "estateExecution": "Va executa dorințele noastre finale și va gestiona lichidarea moștenirii.",
-            "businessManagement": "Poate interveni pentru a gestiona Johnson Contracting LLC temporar."
-          }
-        },
-        "robert": {
-          "name": "Robert Chen",
-          "relationship": "Partener de afaceri",
-          "responsibilities": {
-            "businessAuthority": "Are autoritatea de a gestiona operațiunile de afaceri și de a semna contracte.",
-            "buySellAgreement": "Va cumpăra acțiunile mele de afaceri conform acordului nostru de cumpărare-vânzare."
-          }
-        },
-        "emily": {
-          "name": "Emily Thompson",
-          "relationship": "Cumnată",
-          "responsibilities": {
-            "backupGuardian": "Gardian de rezervă pentru copii dacă gardianul principal nu poate servi."
-          }
-        }
-      }
-    },
-    "familyHub": "Centrul Familiei",
-    "legacyBriefing": {
-      "legacy_briefing_3": "Briefing Moștenire",
-      "create_and_manage_sealed_messa_4": "Creează și gestionează mesaje sigilate pentru cei dragi",
-      "failed_to_load_your_time_capsu_1": "Nu s-au putut încărca capsulele tale de timp",
-      "are_you_sure_you_want_to_delet_2": "Ești sigur că vrei să ștergi această capsulă de timp?",
-      "create_new_message_5": "Creează mesaj nou",
-      "no_time_capsules_yet_6": "Încă nu există capsule de timp",
-      "create_meaningful_messages_for_7": "Creează mesaje semnificative pentru cei dragi să primească în viitor",
-      "create_your_first_message_8": "Creează primul tău mesaj",
-      "to_9": "Către:",
-      "unlocks_on_10": "Se deblochează la:",
-      "unlocks_11": "Se deblochează:",
-      "after_passing_12": "După deces",
-      "statusLabels": {
-        "locked": "Blocat",
-        "unlocked": "Deblocat",
-        "delivered": "Livrat",
-        "noRecipients": "Fără destinatari"
-      },
-      "messageTypes": {
-        "text": "Mesaj text",
-        "photo": "Mesaj foto",
-        "video": "Mesaj video",
-        "audio": "Mesaj audio"
-      },
-      "actions": {
-        "edit": "Editează",
-        "delete": "Șterge"
-      },
-      "toastMessages": {
-        "deleteSuccess": "Capsula de timp ștearsă cu succes",
-        "deleteError": "Nu s-a putut șterge capsula de timp"
-      },
-      "dateFormat": {
-        "dateNotSet": "Data nu este setată",
-        "created": "Creat"
-      },
-      "errors": {
-        "textContentRequired": "Conținutul text este obligatoriu pentru mesajele text",
-        "unlockDateRequired": "Data de deblocare este obligatorie când condiția este dată",
-        "failedToUploadAttachment": "Nu s-a putut încărca atașamentul",
-        "failedToCreate": "Nu s-a putut crea capsula de timp",
-        "failedToFetch": "Nu s-au putut prelua capsulele de timp",
-        "failedToUpdate": "Nu s-a putut actualiza capsula de timp",
-        "failedToDelete": "Nu s-a putut șterge capsula de timp",
-        "notFoundOrCannotModify": "Capsula de timp nu a fost găsită sau nu poate fi modificată",
-        "notFoundOrCannotDelete": "Capsula de timp nu a fost găsită sau nu poate fi ștearsă",
-        "missingUploadFields": "Câmpuri obligatorii lipsă: fileName, fileType, fileSizeBytes",
-        "invalidFileType": "Tip de fișier invalid. Tipuri permise: webm, mp4, mov",
-        "fileSizeExceeds500MB": "Dimensiunea fișierului depășește dimensiunea maximă permisă de 500MB",
-        "premiumRequired": "Abonament premium necesar",
-        "premiumRequiredMessage": "Mesajele video sunt o funcție premium. Vă rugăm să vă actualizați abonamentul pentru a folosi această funcție.",
-        "failedToCreateUploadUrl": "Nu s-a putut crea URL-ul de încărcare"
-      }
-    },
-    "executorToolkit": "Setul Executorului",
-    "assets": "Bunuri",
-    "manual": "Manual",
-    "documents": "Seif de Moștenire",
-    "guardians": "Rețea de Gardieni",
-    "family": "Centrul Familiei",
-    "timeCapsule": {
-      "title": "Capsule de Timp",
-      "notifications": {
-        "emailSubject": "{{senderName}} ți-a lăsat un mesaj",
-        "newMessage": "Ai un mesaj nou",
-        "loginToView": "Conectează-te la LegacyGuard pentru a vizualiza acest mesaj special.",
-        "viewMessage": "Vizualizare Mesaj",
-        "smsNotification": "Poți seta și notificări prin SMS dacă preferi.",
-        "bestRegards": "Cu stimă,",
-        "legacyGuardTeam": "Echipa LegacyGuard",
-        "inAppTitle": "Mesaj nou de la {{senderName}}",
-        "inAppMessage": "{{senderName}} ți-a lăsat un mesaj capsulă de timp: \"{{capsuleTitle}}\""
-      }
-    },
-    "will": "Testament",
-    "consultations": "Consultanțe Juridice",
-    "settings": "Setări",
-    "help": "Ajutor și Suport",
-    "subscriptions": "Abonamente"
-  },
-  "nav": {
-    "dashboard": "Panou de control",
-    "manual": "Manual",
-    "vault": "Seif de Moștenire",
-    "guardians": "Rețea de Gardieni",
-    "will": "Testament",
-    "settings": "Setări",
-    "help": "Ajutor și Suport"
-  },
-  "footer": {
-    "tagline": "Conservarea moștenirii dvs. pentru generațiile viitoare.",
-    "platform": {
-      "title": "Platformă",
-      "heritageVault": "Seif de Moștenire",
-      "guardianNetwork": "Rețea de Gardieni",
-      "dashboard": "Panou de control",
-      "security": "Securitate"
-    },
-    "support": {
-      "title": "Suport",
-      "helpCenter": "Centru de Ajutor",
-      "userGuides": "Ghiduri Utilizator",
-      "contactUs": "Contactați-ne",
-      "community": "Comunitate"
-    },
-    "legal": {
-      "title": "Legal",
-      "privacyPolicy": "Politică de Confidențialitate",
-      "termsOfService": "Termeni și Condiții",
-      "dataProtection": "Protecția Datelor"
-    },
-    "copyright": "© {{year}} LegacyGuard. Toate drepturile rezervate.",
-    "description": "Gestionarea moștenirii digitale la nivel de întreprindere."
-  },
-  "hero": {
-    "title": "Dormi liniștit știind că familia ta va fi bine",
-    "subtitle": "Când viața ia o întorsătură neașteptată, familia ta nu va trebui să caute, să ghicească sau să se îngrijoreze. Tot ce au nevoie va fi exact unde îl pot găsi.",
-    "cta_primary": "Preia controlul viitorului familiei tale astăzi",
-    "cta_secondary": "Vezi cât de simplu este",
-    "urgencySubtitle": "Configurarea durează doar 10 minute - fii părintele pregătit de care familia ta are nevoie",
-    "secondaryContext": "Video de 2 minute arătând familii reale",
-    "trustSignals": {
-      "dataOwnership": "Afacerile private ale familiei tale rămân private",
-      "gdprCompliant": "Construit cu valorile familiei europene",
-      "europeanFamilies": "De încredere pentru familiile care își pasă profund"
-    },
-    "community": {
-      "growing": "Alăturați-vă celor {{count}} de familii care își protejează deja moștenirea",
-      "growingFallback": "Alăturați-vă comunității noastre în creștere"
-    }
-  },
-  "features": {
-    "title": "Trei promisiuni simple pe care le facem",
-    "subtitle": "Tot ce familia ta are nevoie, nimic ce nu are. Simplu, clar și întotdeauna acolo când contează.",
-    "sleepBetter": {
-      "title": "Dormi mai bine în seara aceasta",
-      "description": "Nu te mai îngrijora de 'ce se întâmplă dacă ceva mi se întâmplă mie.' Familia ta va ști exact ce să facă, unde să găsească totul și pe cine să sune."
-    },
-    "noChaos": {
-      "title": "Fără căutări frenetice",
-      "description": "Familia ta nu va petrece zile căutând prin sertare, sunând la bănci sau încercând să ghicească parolele. Tot ce este important este organizat într-un loc sigur."
-    },
-    "clearInstructions": {
-      "title": "Ghidare pas cu pas",
-      "description": "Cei dragi primesc instrucțiuni clare și simple pentru exact ce să facă și când. Fără confuzie, fără ghicituri, fără stres în timpuri dificile."
-    },
-    "security": {
-      "title": "Confidențialitate și Intimitate Absolute",
-      "description": "Proiectat astfel încât nicio persoană neautorizată să nu vă poată accesa datele. Nici măcar noi. Intimitatea dvs. este prioritatea noastră principală."
-    },
-    "guardians": {
-      "title": "Rețea de Gardieni",
-      "description": "Desemnați membri de încredere ai familiei și prieteni ca gardieni pentru a asigura continuitatea moștenirii."
-    },
-    "storage": {
-      "title": "Stocare Sigură în Cloud",
-      "description": "Backup-uri redundante în mai multe centre de date, cu o garanție de funcționare de 99,99%."
-    },
-    "timelock": {
-      "title": "Acces Blocat în Timp",
-      "description": "Setați condiții pentru când și cum moștenirea dvs. digitală este accesată de beneficiari."
-    },
-    "stories": {
-      "title": "Povești Personale",
-      "description": "Creați narațiuni multimedia bogate care surprind esența călătoriei familiei dvs."
-    },
-    "preservation": {
-      "title": "Conservare pe Viață",
-      "description": "Moștenirea dvs. este conservată pe termen nelimitat cu migrare automată a formatului și actualizări."
-    }
-  },
   "alerts": {
-    "title": "Centru de Alerte",
     "description": "Gestionați alertele de expirare a documentelor.",
-    "unread": "Necitite",
-    "markAsRenewed": "Marchează ca Reînnoit",
-    "snooze7Days": "Amână 7 Zile",
     "dismiss": "Respinge",
-    "unsnooze": "Anulează Amânarea",
-    "tabs": {
-      "active": "Active",
-      "snoozed": "Amânate",
-      "dismissed": "Respinse"
+    "errors": {
+      "dismissFailed": "Nu s-a putut respinge alerta.",
+      "loadFailed": "Nu s-au putut încărca alertele.",
+      "renewFailed": "Nu s-a putut marca documentul ca reînnoit.",
+      "snoozeFailed": "Nu s-a putut amâna alerta."
     },
-    "noActiveAlerts": "Nu aveți alerte active.",
-    "noSnoozedAlerts": "Nu aveți alerte amânate.",
-    "noDismissedAlerts": "Nu aveți alerte respinse.",
-    "expiresOn": "Expiră la {{date}}",
-    "snoozedUntil": "Amânat până la {{date}}",
-    "renewalInstructions": "Instrucțiuni de Reînnoire",
-    "badges": {
-      "expired": "Expirat",
-      "expiring_7": "Expiră în Curând",
-      "expiring_30": "Expiră în 30 de Zile",
-      "expiring_90": "Expiră în 90 de Zile"
-    },
-    "types": {
-      "expired": "Documentul {{documentName}} a expirat acum {{daysAgo}} zile!",
-      "expiring7": "Grăbiți-vă! {{documentName}} expiră în {{days}} zile.",
-      "expiring30": "Memento: {{documentName}} va expira în {{days}} zile.",
-      "expiring90": "Atenție: {{documentName}} urmează să expire în {{days}} zile."
-    },
+    "markAsRenewed": "Marchează ca Reînnoit",
     "messages": {
       "dismissed": "Alertă respinsă cu succes.",
-      "snoozed": "Alertă amânată pentru {{days}} zile.",
       "markedAsRenewed": "Document marcat ca reînnoit."
     },
-    "errors": {
-      "loadFailed": "Nu s-au putut încărca alertele.",
-      "dismissFailed": "Nu s-a putut respinge alerta.",
-      "snoozeFailed": "Nu s-a putut amâna alerta.",
-      "renewFailed": "Nu s-a putut marca documentul ca reînnoit."
-    }
-  },
-  "countrySelector": {
-    "search_countries": "Caută țări..."
-  },
-  "errorBoundary": {
-    "oops_something_went_wrong": "Oops! Ceva nu a mers bine",
-    "we_apologize_for_the_inconvenience": "Ne cerem scuze pentru inconvenient. A apărut o eroare neașteptată.",
-    "error_id": "ID Eroare:",
-    "try_again": "Încearcă Din Nou",
-    "go_to_homepage": "Mergi la Pagina Principală",
-    "stack_trace": "Urmărire Stivă:",
-    "component_stack": "Stivă Componente:",
-    "if_the_problem_persists_contact_support": "Dacă problema persistă, contactați suportul nostru cu ID-ul erorii."
-  },
-  "routeErrorBoundary": {
-    "reload_page": "Reîncarcă Pagina",
-    "technical_details": "Detalii Tehnice"
+    "noActiveAlerts": "Nu aveți alerte active.",
+    "noDismissedAlerts": "Nu aveți alerte respinse.",
+    "noSnoozedAlerts": "Nu aveți alerte amânate.",
+    "renewalInstructions": "Instrucțiuni de Reînnoire",
+    "snooze7Days": "Amână 7 Zile",
+    "tabs": {
+      "active": "Active",
+      "dismissed": "Respinse",
+      "snoozed": "Amânate"
+    },
+    "title": "Centru de Alerte",
+    "unread": "Necitite",
+    "unsnooze": "Anulează Amânarea"
   },
   "common": {
-    "loading": "Se încarcă...",
-    "saving": "Se salvează...",
-    "saveChanges": "Salvează Modificările",
-    "cancel": "Anulează",
-    "confirm": "Confirmă",
-    "back": "Înapoi",
-    "next": "Următorul",
-    "previous": "Anterior",
-    "add": "Adaugă",
-    "remove": "Elimină",
-    "edit": "Editează",
-    "delete": "Șterge",
-    "viewDetails": "Vezi Detaliile",
-    "done": "Gata",
-    "retry": "Încearcă Din Nou",
-    "goBack": "Mergi Înapoi",
-    "goHome": "Mergi Acasă",
-    "start": "Începe",
-    "fix": "Repară",
-    "minutes": "minute",
-    "improveReadiness": "Îmbunătățește Pregătirea",
-    "addedOn": "Adăugat {{date}}",
-    "error": "Eroare",
-    "success": "Succes",
     "auth": {
-      "incorrectPassword": "Parolă incorectă",
-      "protectedApplication": "Aplicație Protejată",
-      "protectedApplicationDesc": "Această aplicație este protejată cu parolă. Vă rugăm să introduceți parola pentru a continua.",
-      "password": "Parolă",
+      "accessApplication": "Accesează Aplicația",
       "enterPassword": "Introduceți parola",
-      "accessApplication": "Accesează Aplicația"
+      "incorrectPassword": "Parolă incorectă",
+      "logout": "Deconectare",
+      "password": "Parolă",
+      "protectedApplication": "Aplicație Protejată",
+      "protectedApplicationDesc": "Această aplicație este protejată cu parolă. Vă rugăm să introduceți parola pentru a continua."
     },
-    "errors": {
-      "generic": "A apărut o eroare"
-    },
-    "messages": {
-      "saved": "Salvat cu succes"
-    },
-    "actions": {
-      "retry": "Încearcă Din Nou",
-      "save": "Salvează"
-    },
-    "priority": {
-      "high": "Ridicată",
-      "medium": "Medie",
-      "low": "Scăzută"
-    },
-    "pagination": {
-      "previous": "Anterior",
-      "next": "Următorul",
-      "morePages": "Mai multe pagini",
-      "page": "Pagina",
-      "of": "din",
-      "showing": "Se afișează",
-      "to": "până la",
-      "results": "rezultate",
-      "perPage": "pe pagină",
-      "goToPage": "Mergi la pagina",
-      "currentPage": "Pagina curentă",
-      "totalPages": "Total pagini",
-      "firstPage": "Prima pagină",
-      "lastPage": "Ultima pagină",
-      "pageInfo": "Pagina {{current}} din {{total}}",
-      "resultsInfo": "Se afișează {{start}} până la {{end}} din {{total}} rezultate",
-      "noResults": "Nu s-au găsit rezultate"
-    },
-    "ui": {
-      "close": "Închide",
-      "more": "Mai mult",
-      "previousSlide": "Slide anterior",
-      "nextSlide": "Slide următor",
-      "toggleSidebar": "Comută bara laterală",
-      "goToPreviousPage": "Mergi la pagina anterioară",
-      "goToNextPage": "Mergi la pagina următoare"
-    },
-    "footer": {
-      "vault_1": "/vault",
-      "guardians_2": "/guardians",
-      "dashboard_3": "/dashboard",
-      "security_4": "/security",
-      "help_5": "/help",
-      "guides_6": "/guides",
-      "contact_7": "/contact",
-      "community_8": "/community",
-      "privacy_policy_9": "/privacy-policy",
-      "terms_10": "/terms",
-      "data_protection_11": "/data-protection"
-    },
-    "formErrorBoundary": {
-      "form_error_1": "Eroare de Formular",
-      "an_unexpected_error_occurred_w_2": "A apărut o eroare neașteptată în timpul procesării formularului."
-    },
-    "themeToggle": {
-      "toggle_theme_1": "Comută tema"
-    },
+    "back": "Înapoi",
+    "cancel": "Anulează",
     "countryLanguageSelector": {
       "country_language_1": "Țară și Limbă",
       "select_country_2": "Selectează Țara",
       "select_language_3": "Selectează Limba"
-    }
+    },
+    "delete": "Șterge",
+    "done": "Gata",
+    "edit": "Editează",
+    "error": "Eroare",
+    "fix": "Repară",
+    "footer": {
+      "community_8": "/community",
+      "contact_7": "/contact",
+      "dashboard_3": "/dashboard",
+      "data_protection_11": "/data-protection",
+      "guardians_2": "/guardians",
+      "guides_6": "/guides",
+      "help_5": "/help",
+      "privacy_policy_9": "/privacy-policy",
+      "security_4": "/security",
+      "terms_10": "/terms",
+      "vault_1": "/vault"
+    },
+    "goBack": "Mergi Înapoi",
+    "goHome": "Mergi Acasă",
+    "improveReadiness": "Îmbunătățește Pregătirea",
+    "minutes": "minute",
+    "next": "Următorul",
+    "pagination": {
+      "morePages": "Mai multe pagini",
+      "next": "Următorul",
+      "previous": "Anterior"
+    },
+    "previous": "Anterior",
+    "remove": "Elimină",
+    "retry": "Încearcă Din Nou",
+    "saveChanges": "Salvează Modificările",
+    "saving": "Se salvează...",
+    "start": "Începe",
+    "themeToggle": {
+      "toggle_theme_1": "Comută tema"
+    },
+    "ui": {
+      "close": "Închide",
+      "goToNextPage": "Mergi la pagina următoare",
+      "goToPreviousPage": "Mergi la pagina anterioară",
+      "more": "Mai mult",
+      "nextSlide": "Slide următor",
+      "previousSlide": "Slide anterior",
+      "toggleSidebar": "Comută bara laterală"
+    },
+    "viewDetails": "Vezi Detaliile"
   },
+  "features": {
+    "clearInstructions": {
+      "description": "Cei dragi primesc instrucțiuni clare și simple pentru exact ce să facă și când. Fără confuzie, fără ghicituri, fără stres în timpuri dificile.",
+      "title": "Ghidare pas cu pas"
+    },
+    "guardians": {
+      "description": "Desemnați membri de încredere ai familiei și prieteni ca gardieni pentru a asigura continuitatea moștenirii.",
+      "title": "Rețea de Gardieni"
+    },
+    "noChaos": {
+      "description": "Familia ta nu va petrece zile căutând prin sertare, sunând la bănci sau încercând să ghicească parolele. Tot ce este important este organizat într-un loc sigur.",
+      "title": "Fără căutări frenetice"
+    },
+    "preservation": {
+      "description": "Moștenirea dvs. este conservată pe termen nelimitat cu migrare automată a formatului și actualizări.",
+      "title": "Conservare pe Viață"
+    },
+    "security": {
+      "description": "Proiectat astfel încât nicio persoană neautorizată să nu vă poată accesa datele. Nici măcar noi. Intimitatea dvs. este prioritatea noastră principală.",
+      "title": "Confidențialitate și Intimitate Absolute"
+    },
+    "sleepBetter": {
+      "description": "Nu te mai îngrijora de 'ce se întâmplă dacă ceva mi se întâmplă mie.' Familia ta va ști exact ce să facă, unde să găsească totul și pe cine să sune.",
+      "title": "Dormi mai bine în seara aceasta"
+    },
+    "storage": {
+      "description": "Backup-uri redundante în mai multe centre de date, cu o garanție de funcționare de 99,99%.",
+      "title": "Stocare Sigură în Cloud"
+    },
+    "stories": {
+      "description": "Creați narațiuni multimedia bogate care surprind esența călătoriei familiei dvs.",
+      "title": "Povești Personale"
+    },
+    "subtitle": "Tot ce familia ta are nevoie, nimic ce nu are. Simplu, clar și întotdeauna acolo când contează.",
+    "timelock": {
+      "description": "Setați condiții pentru când și cum moștenirea dvs. digitală este accesată de beneficiari.",
+      "title": "Acces Blocat în Timp"
+    },
+    "title": "Trei promisiuni simple pe care le facem"
+  },
+  "footer": {
+    "description": "Gestionarea moștenirii digitale la nivel de întreprindere.",
+    "legal": {
+      "dataProtection": "Protecția Datelor",
+      "privacyPolicy": "Politică de Confidențialitate",
+      "termsOfService": "Termeni și Condiții",
+      "title": "Legal"
+    },
+    "platform": {
+      "dashboard": "Panou de control",
+      "guardianNetwork": "Rețea de Gardieni",
+      "heritageVault": "Seif de Moștenire",
+      "security": "Securitate",
+      "title": "Platformă"
+    },
+    "support": {
+      "community": "Comunitate",
+      "contactUs": "Contactați-ne",
+      "helpCenter": "Centru de Ajutor",
+      "title": "Suport",
+      "userGuides": "Ghiduri Utilizator"
+    },
+    "tagline": "Conservarea moștenirii dvs. pentru generațiile viitoare."
+  },
+  "hero": {
+    "community": {
+      "growing": "Alăturați-vă celor {{count}} de familii care își protejează deja moștenirea",
+      "growingFallback": "Alăturați-vă comunității noastre în creștere"
+    },
+    "cta_primary": "Preia controlul viitorului familiei tale astăzi",
+    "cta_secondary": "Vezi cât de simplu este",
+    "secondaryContext": "Video de 2 minute arătând familii reale",
+    "subtitle": "Când viața ia o întorsătură neașteptată, familia ta nu va trebui să caute, să ghicească sau să se îngrijoreze. Tot ce au nevoie va fi exact unde îl pot găsi.",
+    "title": "Dormi liniștit știind că familia ta va fi bine",
+    "trustSignals": {
+      "dataOwnership": "Afacerile private ale familiei tale rămân private",
+      "europeanFamilies": "De încredere pentru familiile care își pasă profund",
+      "gdprCompliant": "Construit cu valorile familiei europene"
+    },
+    "urgencySubtitle": "Configurarea durează doar 10 minute - fii părintele pregătit de care familia ta are nevoie"
+  },
+  "loadMore": "Load More",
   "passwordWall": {
     "loading_1": "Se încarcă..."
   }

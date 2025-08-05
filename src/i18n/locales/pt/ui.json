@@ -1,277 +1,121 @@
 {
-  "_comment": "Shared translations used across the application",
-  "navigation": {
-    "dashboard": "Painel de Controlo",
-    "vault": "Cofre",
-    "trustedCircle": {
-      "title": "Seu Círculo de Confiança",
-      "subtitle": "The people you trust to help protect and care for your family and legacy.",
-      "responsibilities": "Their Responsibilities:",
-      "preparationStatus": "Preparation Status:",
-      "informedOfRole": "Has been informed of their role",
-      "acceptedResponsibility": "Has accepted the responsibility",
-      "hasAccessToDocuments": "Has access to necessary documents",
-      "reviewedEmergencyProcedures": "Has reviewed emergency procedures",
-      "addTrustedPerson": "+ Add a Trusted Person",
-      "preparednessStatus": {
-        "wellPrepared": "Well Prepared",
-        "partiallyPrepared": "Partially Prepared",
-        "needsAttention": "Needs Attention"
-      },
-      "buttonText": {
-        "prepared": "✓ {{name}} is Prepared",
-        "prepareNow": "Prepare {{name}} Now"
-      },
-      "mockData": {
-        "sarah": {
-          "name": "Sarah Johnson",
-          "relationship": "Wife",
-          "responsibilities": {
-            "bankAccess": "Can access all bank accounts to pay bills and manage household expenses.",
-            "inheritAssets": "Will inherit the family home, cabin, and all savings.",
-            "medicalPower": "Has medical power of attorney to make healthcare decisions."
-          }
-        },
-        "michael": {
-          "name": "Michael Johnson",
-          "relationship": "Brother",
-          "responsibilities": {
-            "childCare": "Will care for our children if both parents are gone.",
-            "estateExecution": "Will execute our final wishes and manage estate settlement.",
-            "businessManagement": "Can step in to manage Johnson Contracting LLC temporarily."
-          }
-        },
-        "robert": {
-          "name": "Robert Chen",
-          "relationship": "Business Partner",
-          "responsibilities": {
-            "businessAuthority": "Has authority to manage business operations and sign contracts.",
-            "buySellAgreement": "Will purchase my business shares per our buy-sell agreement."
-          }
-        },
-        "emily": {
-          "name": "Emily Thompson",
-          "relationship": "Sister-in-law",
-          "responsibilities": {
-            "backupGuardian": "Backup guardian for children if primary guardian cannot serve."
-          }
-        }
-      }
+  "alerts": {
+    "description": "Gira os seus alertas de expiração de documentos.",
+    "dismiss": "Dispensar",
+    "errors": {
+      "dismissFailed": "Não foi possível dispensar o alerta.",
+      "loadFailed": "Falha ao carregar os alertas.",
+      "renewFailed": "Não foi possível marcar o documento como renovado.",
+      "snoozeFailed": "Não foi possível adiar o alerta."
     },
-    "familyHub": "Centro Familiar",
-    "legacyBriefing": {
-      "legacy_briefing_3": "Briefing de Legado",
-      "create_and_manage_sealed_messa_4": "Create and manage sealed messages for your loved ones",
-      "failed_to_load_your_time_capsu_1": "Failed to load your time capsules",
-      "are_you_sure_you_want_to_delet_2": "Are you sure you want to delete this time capsule?",
-      "create_new_message_5": "Criar Nova Mensagem",
-      "no_time_capsules_yet_6": "No time capsules yet",
-      "create_meaningful_messages_for_7": "Create meaningful messages for your loved ones to receive in the future",
-      "create_your_first_message_8": "Create Your First Message",
-      "to_9": "To:",
-      "unlocks_on_10": "Unlocks on:",
-      "unlocks_11": "Unlocks:",
-      "after_passing_12": "After passing",
-      "statusLabels": {
-        "locked": "Locked",
-        "unlocked": "Unlocked",
-        "delivered": "Delivered",
-        "noRecipients": "No recipients"
-      },
-      "messageTypes": {
-        "text": "Text message",
-        "photo": "Photo message",
-        "video": "Video message",
-        "audio": "Audio message"
-      },
-      "actions": {
-        "edit": "Edit",
-        "delete": "Delete"
-      },
-      "toastMessages": {
-        "deleteSuccess": "Time capsule deleted successfully",
-        "deleteError": "Failed to delete time capsule"
-      },
-      "dateFormat": {
-        "dateNotSet": "Data não definida",
-        "created": "Created"
-      },
-      "errors": {
-        "textContentRequired": "Text content is required for text messages",
-        "unlockDateRequired": "Unlock date is required when condition is date",
-        "failedToUploadAttachment": "Failed to upload attachment",
-        "failedToCreate": "Failed to create time capsule",
-        "failedToFetch": "Failed to fetch time capsules",
-        "failedToUpdate": "Failed to update time capsule",
-        "failedToDelete": "Failed to delete time capsule",
-        "notFoundOrCannotModify": "Time capsule not found or cannot be modified",
-        "notFoundOrCannotDelete": "Time capsule not found or cannot be deleted",
-        "missingUploadFields": "Missing required fields: fileName, fileType, fileSizeBytes",
-        "invalidFileType": "Invalid file type. Allowed types: webm, mp4, mov",
-        "fileSizeExceeds500MB": "File size exceeds maximum allowed size of 500MB",
-        "premiumRequired": "Assinatura premium necessária",
-        "premiumRequiredMessage": "Video messages are a premium feature. Please upgrade your subscription to use this feature.",
-        "failedToCreateUploadUrl": "Failed to create upload URL"
-      }
+    "markAsRenewed": "Marcar como Renovado",
+    "messages": {
+      "dismissed": "Alerta dispensado com sucesso.",
+      "markedAsRenewed": "Documento marcado como renovado."
     },
-    "executorToolkit": "Executor's Toolkit",
-    "assets": "Ativos",
-    "manual": "Manual",
-    "documents": "Cofre de Herança",
-    "guardians": "Rede de Guardiões",
-    "family": "Centro Familiar",
-    "timeCapsule": {
-      "title": "Time Capsules",
-      "notifications": {
-        "emailSubject": "{{senderName}} has left a message for you",
-        "newMessage": "You have a new message",
-        "loginToView": "Log in to LegacyGuard to view this special message.",
-        "viewMessage": "View Message",
-        "smsNotification": "You can also set notifications via SMS if preferred.",
-        "bestRegards": "Best regards,",
-        "legacyGuardTeam": "A Equipe LegacyGuard",
-        "inAppTitle": "New message from {{senderName}}",
-        "inAppMessage": "{{senderName}} has left you a time capsule message: \"{{capsuleTitle}}\""
-      }
+    "noActiveAlerts": "Não tem alertas ativos.",
+    "noDismissedAlerts": "Não tem alertas dispensados.",
+    "noSnoozedAlerts": "Não tem alertas adiados.",
+    "renewalInstructions": "Instruções de Renovação",
+    "snooze7Days": "Adiar por 7 Dias",
+    "tabs": {
+      "active": "Ativos",
+      "dismissed": "Dispensados",
+      "snoozed": "Adiados"
     },
-    "will": "Testamento",
-    "consultations": "Legal Consultations",
-    "settings": "Configurações",
-    "help": "Ajuda e Suporte",
-    "subscriptions": "Subscriptions"
+    "title": "Centro de Alertas",
+    "unread": "Não Lidos",
+    "unsnooze": "Remover Adiamento"
   },
-  "nav": {
-    "dashboard": "Painel de Controlo",
-    "manual": "Manual",
-    "vault": "Cofre de Herança",
-    "guardians": "Rede de Guardiões",
-    "will": "Testamento",
-    "settings": "Configurações",
-    "help": "Ajuda e Suporte"
+  "auth": {
+    "accessApplication": "Acessar aplicação",
+    "enterPassword": "Digite a senha",
+    "incorrectPassword": "Senha incorreta",
+    "logout": "Sair",
+    "password": "Senha",
+    "protectedApplication": "Aplicação protegida",
+    "protectedApplicationDesc": "Esta aplicação é protegida por senha. Por favor, digite a senha para continuar."
+  },
+  "features": {
+    "clearInstructions": {
+      "description": "Your loved ones get clear, simple instructions for exactly what to do and when. No confusion, no guesswork, no stress during difficult times.",
+      "title": "Step-by-Step Guidance"
+    },
+    "guardians": {
+      "description": "Designe membros da família e amigos de confiança como guardiões para garantir a continuidade do legado.",
+      "title": "Rede de Guardiões"
+    },
+    "noChaos": {
+      "description": "Your family won't spend days looking through drawers, calling banks, or trying to guess passwords. Everything important is organized in one secure place.",
+      "title": "Sem Buscas Frenéticas"
+    },
+    "preservation": {
+      "description": "O seu património é preservado indefinidamente com migração automática de formato e atualizações.",
+      "title": "Preservação Vitalícia"
+    },
+    "security": {
+      "description": "Projetado para que nenhuma pessoa não autorizada possa aceder aos seus dados. Nem mesmo nós. A sua privacidade é a nossa maior prioridade.",
+      "title": "Confidencialidade e Privacidade Absolutas"
+    },
+    "sleepBetter": {
+      "description": "Stop worrying about 'what if something happens to me.' Your family will know exactly what to do, where to find everything, and who to call.",
+      "title": "Durma Melhor Esta Noite"
+    },
+    "storage": {
+      "description": "Cópias de segurança redundantes em vários centros de dados com garantia de 99,99% de tempo de atividade.",
+      "title": "Armazenamento Seguro na Nuvem"
+    },
+    "stories": {
+      "description": "Crie narrativas multimédia ricas que capturam a essência da jornada da sua família.",
+      "title": "Histórias Pessoais"
+    },
+    "subtitle": "Construído com segurança de nível empresarial e projetado para famílias que valorizam o seu património.",
+    "timelock": {
+      "description": "Defina condições para quando e como o seu património digital é acedido pelos beneficiários.",
+      "title": "Acesso com Bloqueio de Tempo"
+    },
+    "title": "Porquê escolher o LegacyGuard?"
   },
   "footer": {
-    "tagline": "A preservar o seu legado para as gerações vindouras.",
-    "platform": {
-      "title": "Plataforma",
-      "heritageVault": "Cofre de Herança",
-      "guardianNetwork": "Rede de Guardiões",
-      "dashboard": "Painel de Controlo",
-      "security": "Segurança"
-    },
-    "support": {
-      "title": "Suporte",
-      "helpCenter": "Centro de Ajuda",
-      "userGuides": "Guias do Utilizador",
-      "contactUs": "Contacte-nos",
-      "community": "Comunidade"
-    },
+    "description": "Gestão de património digital de nível empresarial.",
     "legal": {
-      "title": "Legal",
+      "dataProtection": "Proteção de Dados",
       "privacyPolicy": "Política de Privacidade",
       "termsOfService": "Termos de Serviço",
-      "dataProtection": "Proteção de Dados"
+      "title": "Legal"
     },
-    "copyright": "© {{year}} LegacyGuard. Todos os direitos reservados.",
-    "description": "Gestão de património digital de nível empresarial."
+    "platform": {
+      "dashboard": "Painel de Controlo",
+      "guardianNetwork": "Rede de Guardiões",
+      "heritageVault": "Cofre de Herança",
+      "security": "Segurança",
+      "title": "Plataforma"
+    },
+    "support": {
+      "community": "Comunidade",
+      "contactUs": "Contacte-nos",
+      "helpCenter": "Centro de Ajuda",
+      "title": "Suporte",
+      "userGuides": "Guias do Utilizador"
+    },
+    "tagline": "A preservar o seu legado para as gerações vindouras."
   },
   "hero": {
-    "title": "Proteja o Legado Digital da Sua Família Para Sempre",
-    "subtitle": "A plataforma segura e intuitiva que ajuda as famílias a organizar, proteger e transferir as suas memórias e documentos mais importantes através de gerações.",
-    "cta_primary": "Comece o Seu Plano de Legado",
-    "cta_secondary": "Ver Demonstração",
-    "urgencySubtitle": "Setup takes just 10 minutes - be the prepared parent your family needs",
-    "secondaryContext": "2-minute video showing real families",
-    "trustSignals": {
-      "dataOwnership": "Os seus dados continuam a ser seus - nunca os vendemos",
-      "gdprCompliant": "Conformidade com o RGPD por defeito",
-      "europeanFamilies": "Criado para famílias europeias"
-    },
     "community": {
       "growing": "Junte-se a {{count}} famílias que já estão a proteger o seu legado",
       "growingFallback": "Junte-se à nossa comunidade em crescimento"
-    }
+    },
+    "cta_primary": "Comece o Seu Plano de Legado",
+    "cta_secondary": "Ver Demonstração",
+    "secondaryContext": "2-minute video showing real families",
+    "subtitle": "A plataforma segura e intuitiva que ajuda as famílias a organizar, proteger e transferir as suas memórias e documentos mais importantes através de gerações.",
+    "title": "Proteja o Legado Digital da Sua Família Para Sempre",
+    "trustSignals": {
+      "dataOwnership": "Os seus dados continuam a ser seus - nunca os vendemos",
+      "europeanFamilies": "Criado para famílias europeias",
+      "gdprCompliant": "Conformidade com o RGPD por defeito"
+    },
+    "urgencySubtitle": "Setup takes just 10 minutes - be the prepared parent your family needs"
   },
-  "features": {
-    "title": "Porquê escolher o LegacyGuard?",
-    "subtitle": "Construído com segurança de nível empresarial e projetado para famílias que valorizam o seu património.",
-    "sleepBetter": {
-      "title": "Durma Melhor Esta Noite",
-      "description": "Stop worrying about 'what if something happens to me.' Your family will know exactly what to do, where to find everything, and who to call."
-    },
-    "noChaos": {
-      "title": "Sem Buscas Frenéticas",
-      "description": "Your family won't spend days looking through drawers, calling banks, or trying to guess passwords. Everything important is organized in one secure place."
-    },
-    "clearInstructions": {
-      "title": "Step-by-Step Guidance",
-      "description": "Your loved ones get clear, simple instructions for exactly what to do and when. No confusion, no guesswork, no stress during difficult times."
-    },
-    "security": {
-      "title": "Confidencialidade e Privacidade Absolutas",
-      "description": "Projetado para que nenhuma pessoa não autorizada possa aceder aos seus dados. Nem mesmo nós. A sua privacidade é a nossa maior prioridade."
-    },
-    "guardians": {
-      "title": "Rede de Guardiões",
-      "description": "Designe membros da família e amigos de confiança como guardiões para garantir a continuidade do legado."
-    },
-    "storage": {
-      "title": "Armazenamento Seguro na Nuvem",
-      "description": "Cópias de segurança redundantes em vários centros de dados com garantia de 99,99% de tempo de atividade."
-    },
-    "timelock": {
-      "title": "Acesso com Bloqueio de Tempo",
-      "description": "Defina condições para quando e como o seu património digital é acedido pelos beneficiários."
-    },
-    "stories": {
-      "title": "Histórias Pessoais",
-      "description": "Crie narrativas multimédia ricas que capturam a essência da jornada da sua família."
-    },
-    "preservation": {
-      "title": "Preservação Vitalícia",
-      "description": "O seu património é preservado indefinidamente com migração automática de formato e atualizações."
-    }
-  },
-  "alerts": {
-    "title": "Centro de Alertas",
-    "description": "Gira os seus alertas de expiração de documentos.",
-    "unread": "Não Lidos",
-    "markAsRenewed": "Marcar como Renovado",
-    "snooze7Days": "Adiar por 7 Dias",
-    "dismiss": "Dispensar",
-    "unsnooze": "Remover Adiamento",
-    "tabs": {
-      "active": "Ativos",
-      "snoozed": "Adiados",
-      "dismissed": "Dispensados"
-    },
-    "noActiveAlerts": "Não tem alertas ativos.",
-    "noSnoozedAlerts": "Não tem alertas adiados.",
-    "noDismissedAlerts": "Não tem alertas dispensados.",
-    "expiresOn": "Expira em {{date}}",
-    "snoozedUntil": "Adiado até {{date}}",
-    "renewalInstructions": "Instruções de Renovação",
-    "badges": {
-      "expired": "Expirado",
-      "expiring_7": "A Expirar em Breve",
-      "expiring_30": "A Expirar em 30 Dias",
-      "expiring_90": "A Expirar em 90 Dias"
-    },
-    "types": {
-      "expired": "O documento {{documentName}} expirou há {{daysAgo}} dias!",
-      "expiring7": "Apresse-se! O {{documentName}} expira em {{days}} dias.",
-      "expiring30": "Lembrete: O {{documentName}} irá expirar em {{days}} dias.",
-      "expiring90": "Atenção: O {{documentName}} está previsto para expirar em {{days}} dias."
-    },
-    "messages": {
-      "dismissed": "Alerta dispensado com sucesso.",
-      "snoozed": "Alerta adiado por {{days}} dias.",
-      "markedAsRenewed": "Documento marcado como renovado."
-    },
-    "errors": {
-      "loadFailed": "Falha ao carregar os alertas.",
-      "dismissFailed": "Não foi possível dispensar o alerta.",
-      "snoozeFailed": "Não foi possível adiar o alerta.",
-      "renewFailed": "Não foi possível marcar o documento como renovado."
-    }
-  }
+  "loadMore": "Load More"
 }

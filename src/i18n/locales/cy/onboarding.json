@@ -1,15 +1,28 @@
 {
-  "_comment": "Canllawiau cychwyn a gosodiad defnyddiwr",
   "onboarding": {
-    "welcomeScreen": {
-      "title": "Croeso i LegacyGuard",
-      "subtitle": "Helpwch i ddiogelu dyfodol eich teulu mewn camau syml",
-      "getStartedButton": "Dechrau"
+    "addAssets": {
+      "addButton": "Ychwanegu Ased",
+      "description": "Cadwch olwg ar eich eiddo, cyfrifon a gwerthfawr",
+      "skipButton": "Neidio",
+      "title": "Ychwanegu Eich Asedau"
+    },
+    "addTrustedPeople": {
+      "addButton": "Ychwanegu Person",
+      "description": "Ychwanegwch aelodau teulu a ffrindiau y gallwch eu dibynnu arnynt",
+      "skipButton": "Neidio",
+      "title": "Ychwanegu Pobl Ddibynadwy"
+    },
+    "errors": {
+      "invalidEmail": "Rhowch gyfeiriad e-bost dilys",
+      "missingFields": "Llenwch bob maes gofynnol i barhau"
     },
     "profileSetup": {
-      "title": "Sefydlu Eich Proffil",
       "description": "Rhowch wybodaeth sylfaenol i bersonoli eich profiad",
       "fields": {
+        "email": {
+          "label": "E-bost",
+          "placeholder": "Nodwch eich cyfeiriad e-bost"
+        },
         "firstName": {
           "label": "Enw Cyntaf",
           "placeholder": "Nodwch eich enw cyntaf"
@@ -17,34 +30,20 @@
         "lastName": {
           "label": "Cyfenw",
           "placeholder": "Nodwch eich cyfenw"
-        },
-        "email": {
-          "label": "E-bost",
-          "placeholder": "Nodwch eich cyfeiriad e-bost"
         }
       },
-      "nextButton": "Nesaf"
-    },
-    "addTrustedPeople": {
-      "title": "Ychwanegu Pobl Ddibynadwy",
-      "description": "Ychwanegwch aelodau teulu a ffrindiau y gallwch eu dibynnu arnynt",
-      "addButton": "Ychwanegu Person",
-      "skipButton": "Neidio"
-    },
-    "addAssets": {
-      "title": "Ychwanegu Eich Asedau",
-      "description": "Cadwch olwg ar eich eiddo, cyfrifon a gwerthfawr",
-      "addButton": "Ychwanegu Ased",
-      "skipButton": "Neidio"
+      "nextButton": "Nesaf",
+      "title": "Sefydlu Eich Proffil"
     },
     "tourComplete": {
-      "title": "Wedi Gorffen!",
       "description": "Rydych wedi cwblhau’r daith gychwynnol. Gallwch ychwanegu mwy o wybodaeth neu ddechrau defnyddio’r platfform.",
-      "startButton": "Dechrau Defnyddio LegacyGuard"
+      "startButton": "Dechrau Defnyddio LegacyGuard",
+      "title": "Wedi Gorffen!"
     },
-    "errors": {
-      "missingFields": "Llenwch bob maes gofynnol i barhau",
-      "invalidEmail": "Rhowch gyfeiriad e-bost dilys"
+    "welcomeScreen": {
+      "getStartedButton": "Dechrau",
+      "subtitle": "Helpwch i ddiogelu dyfodol eich teulu mewn camau syml",
+      "title": "Croeso i LegacyGuard"
     }
   }
 }

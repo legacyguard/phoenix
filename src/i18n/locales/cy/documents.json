@@ -1,254 +1,195 @@
 {
-  "_comment": "Nodweddion rheoli dogfennau a vault",
-  "documentTypes": {
-    "realEstateDeed": "Gweithred Eiddo Tiriog",
-    "birthCertificate": "Tystysgrif Geni",
-    "insurancePolicy": "Polisi Yswiriant",
-    "lastWill": "Ewyllys Olaf a Testament",
-    "employmentContract": "Contract Cyflogaeth",
-    "passport": "Pasbort",
-    "drivingLicense": "Trwydded Yrru",
-    "bankStatement": "Datganiad Banc",
-    "investmentCertificate": "Tystysgrif Buddsoddi",
-    "energyContract": "Contract Ynni",
-    "softwareLicense": "Trwydded Meddalwedd",
-    "subscriptionService": "Gwasanaeth Tanysgrifio",
-    "other": "Arall"
-  },
-  "documentUpload": {
-    "fileUploadedSuccess": "Ffeil wedi’i llwytho i fyny’n llwyddiannus!",
-    "fileUploadFailed": "Methwyd llwytho’r ffeil. Rhowch gynnig arall arni.",
-    "fileTooLarge": "Mae’r ffeil a ddewiswyd yn rhy fawr. Uchafswm maint yw {{maxSize}} MB.",
-    "fillRequiredFields": "Llenwch bob maes gofynnol",
-    "loginToSave": "Mae’n rhaid i chi fewngofnodi i gadw dogfennau",
-    "saved": "Dogfen wedi’i chadw’n llwyddiannus!",
-    "failedSave": "Methwyd cadw’r ddogfen. Rhowch gynnig arall arni.",
-    "detailsTitle": "Manylion Dogfen",
-    "detailsSubtitle": "Ychwanegu gwybodaeth am y ddogfen a lwythwyd i fyny",
-    "namePlaceholder": "Rhowch enw’r ddogfen",
-    "typePlaceholder": "Dewiswch fath o ddogfen",
-    "countryPlaceholder": "Dewiswch wlad",
-    "pickDate": "Dewiswch ddyddiad",
-    "title": "Llwytho Dogfen",
-    "subtitle": "Llwythwch ddogfennau cyfreithiol a phersonol yn ddiogel",
-    "browseFiles": "Pori Ffeiliau",
-    "chooseDifferent": "Dewis Ffeil wahanol",
-    "uploadButton": "Llwytho Dogfen",
-    "storageLimitReached": "Methwyd llwytho’r ffeil. Mae gennych {{remaining}} o storfa ar ôl, ond mae’r ffeil hon yn {{fileSize}}. Uwchlewch eich cynllun neu tynnwch rai ffeiliau."
-  },
-  "documentUploader": {
-    "smart_document_upload_2": "Llwytho Dogfen Clyfar",
-    "upload_any_document_and_our_ai_3": "Llwythwch unrhyw ddogfen ac mi fydd ein AI yn ei dosbarthu’n awtomatig i chi",
-    "please_upload_an_image_or_pdf__1": "Llwythwch ddelwedd neu ffeil PDF",
-    "image_application_pdf_4": "image/*,application/pdf",
-    "0_0_48_48_5": "0 0 48 48",
-    "m24_12v12m0_0l_4_4m4_4l4_4m10__6": "M24 12v12m0 0l-4 4m4-4l4 4m10-6",
-    "drop_your_document_here_or_cli_7": "Gollyngwch eich dogfen yma neu cliciwch i bori",
-    "supports_images_and_pdfs_up_to_8": "Yn cefnogi delweddau a PDFs hyd at 10MB",
-    "document_analysis_complete_10": "Dadansoddiad Dogfen Wedi'i Gwblhau",
-    "document_type_11": "Math o Ddogfen",
-    "suggested_title_12": "Teitl Awgrymedig",
-    "confidence": "Hyder",
-    "ai_analysis_13": "Dadansoddiad AI",
-    "continue_with_this_classificat_14": "Parhau gyda’r dosbarthiad hwn",
-    "change_category_15": "Newid Categori",
-    "documents_we_can_process_16": "Dogfennau y gallwn eu prosesu:",
-    "insurance_policies_life_health_17": "Polisïau yswiriant (bywyd, iechyd, cartref, ceir)",
-    "property_deeds_and_titles_18": "Gweithredoedd eiddo a theitlau",
-    "vehicle_ownership_documents_19": "Dogfennau perchnogaeth cerbydau",
-    "bank_and_investment_statements_20": "Datganiadau banc a buddsoddiad",
-    "wills_and_estate_planning_docu_21": "Ewyllysiau a dogfennau cynllunio etifeddiaeth",
-    "business_contracts_and_ownersh_22": "Contractau busnes a phapurau perchnogaeth",
-    "personal_identification_docume_23": "Dogfennau adnabod personol",
-    "tax_returns_and_documents_24": "Ffurflenni a dogfennau treth",
-    "categoryDescriptions": {
-      "insurance_policy": "Bywyd, iechyd, cartref, ceir neu anabledd",
-      "property_deed": "Dogfennau perchnogaeth eiddo a gweithredoedd",
-      "vehicle_title": "Papuroedd perchnogaeth car, cwch neu gerbyd arall",
-      "bank_statement": "Datganiadau a dogfennau cyfrif banc",
-      "investment_statement": "Datganiadau buddsoddi a phensiwn",
-      "will_or_trust": "Ewyllysiau, trystiau a dogfennau cynllunio etifeddiaeth",
-      "business_document": "Papurau perchnogaeth busnes a chontractau pwysig",
-      "personal_id": "Pasbortau, trwyddedau, tystysgrifau geni",
-      "tax_document": "Ffurflenni treth a dogfennau cysylltiedig",
-      "medical_document": "Cofnodion meddygol a chyfarwyddiadau iechyd",
-      "other": "Dogfennau pwysig eraill"
-    },
-    "errors": {
-      "fileTypeError": "Llwythwch ddelwedd neu ffeil PDF",
-      "processingError": "Methwyd prosesu’r ddogfen",
-      "uploadError": "Methwyd llwytho’r ddogfen",
-      "classificationError": "Methwyd dosbarthu’r ddogfen"
-    }
-  },
-  "vault": {
-    "title": "Y Vault",
-    "subtitle": "Eich rhestr ddiogel o asedau ariannol a meddiannau gwerthfawr.",
-    "errorLoadingAssets": "Methwyd llwytho eich asedau. Rhowch gynnig arall arni.",
-    "letsBuildInventory": "Gadewch i ni adeiladu eich rhestr",
-    "addProperty": "Ychwanegu Eiddo",
-    "addFinances": "Ychwanegu Cyllid",
-    "addVehicle": "Ychwanegu Cerbyd",
-    "addDigitalAsset": "Ychwanegu Ased Digidol",
-    "addPersonalItem": "Ychwanegu Eitem Bersonol",
-    "addOther": "Ychwanegu Rhywbeth Arall...",
-    "confirmDeletion": "Ydych chi’n siŵr eich bod eisiau dileu \"{{assetName}}\"?",
-    "errorDeletingAsset": "Methwyd dileu’r ased. Rhowch gynnig arall arni.",
-    "searchPlaceholder": "Chwiliwch eich asedau...",
-    "addAsset": "Ychwanegu Ased",
-    "totalAssets": "Cyfanswm yr Asedau",
-    "totalValue": "Cyfanswm y Gwerth",
-    "categories": "Categorïau",
-    "noAssetsFound": "Dim asedau yn cyfateb i \"{{searchQuery}}\"",
-    "startAddingAssets": "Dechreuwch ychwanegu asedau i adeiladu eich rhestr",
-    "addNewAsset": "Ychwanegu Ased Newydd",
-    "property": "Eiddo",
-    "finances": "Ariannol",
-    "vehicle": "Cerbyd",
-    "digital": "Digidol",
-    "personal": "Personol",
-    "other": "Arall",
-    "fileUpload": {
-      "title": "Llwytho Ffeiliau",
-      "dragDropText": "Llusgwch a gollyngwch ffeiliau yma",
-      "clickToSelect": "neu cliciwch i bori",
-      "maxSize": "Uchafswm maint ffeil: {{size}}",
-      "encryptFiles": "Amgryptio Ffeiliau",
-      "encryptDescription": "Bydd ffeiliau’n cael eu hamgryptio cyn llwytho i fyny ar gyfer uchafswm diogelwch",
-      "tags": "Tagiau",
-      "addTag": "Ychwanegu tag...",
-      "selectedFiles": "Ffeiliau Wedi’u Dewis",
-      "uploading": "Yn llwytho...",
-      "uploadFiles": "Llwytho Ffeiliau",
-      "uploadSuccess": "{{name}} wedi’i lwytho’n llwyddiannus",
-      "uploadError": "Methwyd llwytho {{name}}",
-      "maxFilesReached": "Uchafswm {{max}} ffeiliau",
-      "encryptionInfo": "Mae eich ffeiliau’n cael eu hamgryptio gydag AES-256. Dim ond chi all eu dadgryptio."
-    },
-    "fileList": {
-      "title": "Ffeiliau Ased",
-      "noFiles": "Dim ffeiliau wedi’u llwytho eto",
-      "uploadFirst": "Llwythwch eich ffeil gyntaf",
-      "searchFiles": "Chwilio ffeiliau...",
-      "filterByTag": "Hidlo yn ôl tag",
-      "sortBy": "Trefnu yn ôl",
-      "sortByName": "Enw",
-      "sortByDate": "Dyddiad",
-      "sortBySize": "Maint",
-      "download": "Llwytho i lawr",
-      "share": "Rhannu",
-      "delete": "Dileu",
-      "confirmDelete": "Ydych chi’n siŵr eich bod eisiau dileu’r ffeil hon?",
-      "deleteSuccess": "Ffeil wedi’i dileu’n llwyddiannus",
-      "deleteError": "Methwyd dileu’r ffeil",
-      "downloadError": "Methwyd lawrlwytho’r ffeil",
-      "encrypted": "Wedi’i hamgryptio",
-      "sharedWith": "Wedi’i rhannu gyda {{count}} o bobl"
-    },
-    "sharing": {
-      "title": "Rhannu Ffeil",
-      "shareWith": "Rhannu gyda",
-      "emailPlaceholder": "Rhowch gyfeiriad e-bost",
-      "expiresIn": "Yn dod i ben mewn",
-      "hours": "awr",
-      "days": "diwrnod",
-      "shareButton": "Rhannu",
-      "sharing": "Yn rhannu...",
-      "shareSuccess": "Ffeil wedi’i rhannu’n llwyddiannus",
-      "shareError": "Methwyd rhannu’r ffeil",
-      "password": "Cyfrinair Mynediad",
-      "passwordInfo": "Rhannwch y cyfrinair hwn ar wahân i’r derbynnydd",
-      "copyPassword": "Copïo Cyfrinair",
-      "activeShares": "Rhannu Gweithredol",
-      "noShares": "Dim rhannu gweithredol",
-      "revoke": "Cymryd yn ôl",
-      "revokeSuccess": "Rhannu wedi’i gymryd yn ôl yn llwyddiannus",
-      "revokeError": "Methwyd cymryd rhannu yn ôl",
-      "expiresAt": "Yn dod i ben {{date}}",
-      "accessCount": "Wedi’i gyrchu {{count}} o weithiau"
-    }
-  },
-  "upload": {
-    "zone": {
-      "dropHere": "Gollyngwch eich papurau pwysig yma",
-      "dropHereActive": "Ie! Gollyngwch nhw yma",
-      "description": "Mi drefnaf bopeth i chi – llusgwch ffeiliau yma neu cliciwch i bori",
-      "descriptionActive": "Rwy’n barod i drefnu popeth i chi",
-      "chooseFiles": "Dewis Ffeiliau",
-      "takePhoto": "Tynnu Llun",
-      "processingLocally": "Yn prosesu’n lleol ar eich dyfais",
-      "dragOverlay": {
-        "title": "Gollyngwch eich dogfennau yma",
-        "subtitle": "Mi wnaf ofal am bopeth"
-      }
-    }
-  },
   "createTimeCapsuleModal": {
-    "title": "Creu Capsiwl Amser",
-    "titleCreate": "Creu Capsiwl Amser",
-    "titleEdit": "Golygu Capsiwl Amser",
+    "buttons": {
+      "cancel": "Canslo",
+      "create": "Creu Capsiwl Amser",
+      "recordVideo": "Recordio Neges Fideo",
+      "saving": "Yn cadw...",
+      "update": "Diweddaru Capsiwl Amser"
+    },
     "description": "Creu neges a fydd yn cael ei danfon at eich anwyliaid yn y dyfodol.",
     "errors": {
-      "noTitle": "Rhowch deitl ar gyfer eich capsiwl amser.",
-      "noRecipients": "Dewiswch o leiaf un derbynnydd.",
-      "noUnlockDate": "Dewiswch ddyddiad datgloi.",
-      "noMessage": "Rhowch eich neges.",
-      "noFile": "Llwythwch ffeil i fyny.",
-      "updateFailed": "Methwyd diweddaru capsiwl amser.",
-      "saveFailed": "Methwyd cadw capsiwl amser.",
       "fileTooLarge": "Rhaid i ffeil fod yn llai na 50MB.",
-      "invalidFileType": "Math ffeil annilys ar gyfer {{messageType}}."
+      "noFile": "Llwythwch ffeil i fyny.",
+      "noMessage": "Rhowch eich neges.",
+      "noRecipients": "Dewiswch o leiaf un derbynnydd.",
+      "noTitle": "Rhowch deitl ar gyfer eich capsiwl amser.",
+      "noUnlockDate": "Dewiswch ddyddiad datgloi.",
+      "saveFailed": "Methwyd cadw capsiwl amser.",
+      "updateFailed": "Methwyd diweddaru capsiwl amser."
     },
-    "success": {
-      "updated": "Diweddarwyd y capsiwl amser!",
-      "created": "Crëwyd capsiwl amser!"
+    "fileUpload": {
+      "clickToUpload": "Cliciwch i lwytho i fyny",
+      "dragAndDrop": " neu lusgwch a gollyngwch",
+      "maxSize": "Uchafswm maint ffeil: 50MB"
     },
     "labels": {
-      "title": "Teitl",
+      "deliveryQuestion": "Pryd ddylai’r neges hon gael ei danfon?",
       "messageType": "Math Neges",
       "recipients": "Derbynwyr",
-      "deliveryQuestion": "Pryd ddylai’r neges hon gael ei danfon?",
+      "title": "Teitl",
       "unlockDate": "Dyddiad Datgloi",
-      "yourMessage": "Eich Neges",
-      "uploadFile": "Llwytho {{messageType}}"
-    },
-    "placeholders": {
-      "title": "e.e., Ar Gyfer eich 18fed Pen-blwydd",
-      "message": "Ysgrifennwch eich neges yma...",
-      "selectDate": "Dewiswch ddyddiad"
+      "yourMessage": "Eich Neges"
     },
     "messageTypes": {
-      "text": "Neges Testun",
+      "audio": "Sain",
       "photo": "Llun",
-      "video": "Fideo",
-      "audio": "Sain"
+      "text": "Neges Testun",
+      "video": "Fideo"
+    },
+    "placeholders": {
+      "message": "Ysgrifennwch eich neges yma...",
+      "selectDate": "Dewiswch ddyddiad",
+      "title": "e.e., Ar Gyfer eich 18fed Pen-blwydd"
+    },
+    "premium": {
+      "upgradeNow": "Uwchraddio Nawr",
+      "videoMessage": "Mae negeseuon fideo yn nodwedd premiwm."
     },
     "recipients": {
       "noTrustedPeople": "Nid ydych wedi ychwanegu unrhyw berson dibynadwy eto. Ychwanegwch nhw o’ch dangosfwrdd yn gyntaf.",
       "selected": "Wedi’u dewis"
     },
+    "success": {
+      "created": "Crëwyd capsiwl amser!",
+      "updated": "Diweddarwyd y capsiwl amser!"
+    },
+    "titleCreate": "Creu Capsiwl Amser",
+    "titleEdit": "Golygu Capsiwl Amser",
     "unlockConditions": {
-      "onDate": "Ar ddyddiad penodol",
-      "afterPassing": "Ar ôl i mi fynd heibio"
+      "afterPassing": "Ar ôl i mi fynd heibio",
+      "onDate": "Ar ddyddiad penodol"
+    }
+  },
+  "documentTypes": {
+    "bankStatement": "Datganiad Banc",
+    "birthCertificate": "Tystysgrif Geni",
+    "drivingLicense": "Trwydded Yrru",
+    "employmentContract": "Contract Cyflogaeth",
+    "energyContract": "Contract Ynni",
+    "insurancePolicy": "Polisi Yswiriant",
+    "investmentCertificate": "Tystysgrif Buddsoddi",
+    "lastWill": "Ewyllys Olaf a Testament",
+    "other": "Arall",
+    "passport": "Pasbort",
+    "realEstateDeed": "Gweithred Eiddo Tiriog",
+    "softwareLicense": "Trwydded Meddalwedd",
+    "subscriptionService": "Gwasanaeth Tanysgrifio"
+  },
+  "documentUpload": {
+    "browseFiles": "Pori Ffeiliau",
+    "chooseDifferent": "Dewis Ffeil wahanol",
+    "countryPlaceholder": "Dewiswch wlad",
+    "detailsSubtitle": "Ychwanegu gwybodaeth am y ddogfen a lwythwyd i fyny",
+    "detailsTitle": "Manylion Dogfen",
+    "failedSave": "Methwyd cadw’r ddogfen. Rhowch gynnig arall arni.",
+    "fileUploadFailed": "Methwyd llwytho’r ffeil. Rhowch gynnig arall arni.",
+    "fileUploadedSuccess": "Ffeil wedi’i llwytho i fyny’n llwyddiannus!",
+    "fillRequiredFields": "Llenwch bob maes gofynnol",
+    "loginToSave": "Mae’n rhaid i chi fewngofnodi i gadw dogfennau",
+    "namePlaceholder": "Rhowch enw’r ddogfen",
+    "pickDate": "Dewiswch ddyddiad",
+    "saved": "Dogfen wedi’i chadw’n llwyddiannus!",
+    "subtitle": "Llwythwch ddogfennau cyfreithiol a phersonol yn ddiogel",
+    "title": "Llwytho Dogfen",
+    "typePlaceholder": "Dewiswch fath o ddogfen",
+    "uploadButton": "Llwytho Dogfen"
+  },
+  "documentUploader": {
+    "0_0_48_48_5": "0 0 48 48",
+    "ai_analysis_13": "Dadansoddiad AI",
+    "bank_and_investment_statements_20": "Datganiadau banc a buddsoddiad",
+    "business_contracts_and_ownersh_22": "Contractau busnes a phapurau perchnogaeth",
+    "categoryDescriptions": {
+      "bank_statement": "Datganiadau a dogfennau cyfrif banc",
+      "business_document": "Papurau perchnogaeth busnes a chontractau pwysig",
+      "insurance_policy": "Bywyd, iechyd, cartref, ceir neu anabledd",
+      "investment_statement": "Datganiadau buddsoddi a phensiwn",
+      "medical_document": "Cofnodion meddygol a chyfarwyddiadau iechyd",
+      "other": "Dogfennau pwysig eraill",
+      "personal_id": "Pasbortau, trwyddedau, tystysgrifau geni",
+      "property_deed": "Dogfennau perchnogaeth eiddo a gweithredoedd",
+      "tax_document": "Ffurflenni treth a dogfennau cysylltiedig",
+      "vehicle_title": "Papuroedd perchnogaeth car, cwch neu gerbyd arall",
+      "will_or_trust": "Ewyllysiau, trystiau a dogfennau cynllunio etifeddiaeth"
     },
+    "change_category_15": "Newid Categori",
+    "confidence": "Hyder",
+    "continue_with_this_classificat_14": "Parhau gyda’r dosbarthiad hwn",
+    "document_analysis_complete_10": "Dadansoddiad Dogfen Wedi'i Gwblhau",
+    "document_type_11": "Math o Ddogfen",
+    "documents_we_can_process_16": "Dogfennau y gallwn eu prosesu:",
+    "drop_your_document_here_or_cli_7": "Gollyngwch eich dogfen yma neu cliciwch i bori",
+    "errors": {
+      "fileTypeError": "Llwythwch ddelwedd neu ffeil PDF",
+      "processingError": "Methwyd prosesu’r ddogfen"
+    },
+    "image_application_pdf_4": "image/*,application/pdf",
+    "insurance_policies_life_health_17": "Polisïau yswiriant (bywyd, iechyd, cartref, ceir)",
+    "m24_12v12m0_0l_4_4m4_4l4_4m10__6": "M24 12v12m0 0l-4 4m4-4l4 4m10-6",
+    "personal_identification_docume_23": "Dogfennau adnabod personol",
+    "please_upload_an_image_or_pdf__1": "Llwythwch ddelwedd neu ffeil PDF",
+    "property_deeds_and_titles_18": "Gweithredoedd eiddo a theitlau",
+    "smart_document_upload_2": "Llwytho Dogfen Clyfar",
+    "suggested_title_12": "Teitl Awgrymedig",
+    "supports_images_and_pdfs_up_to_8": "Yn cefnogi delweddau a PDFs hyd at 10MB",
+    "tax_returns_and_documents_24": "Ffurflenni a dogfennau treth",
+    "upload_any_document_and_our_ai_3": "Llwythwch unrhyw ddogfen ac mi fydd ein AI yn ei dosbarthu’n awtomatig i chi",
+    "vehicle_ownership_documents_19": "Dogfennau perchnogaeth cerbydau",
+    "wills_and_estate_planning_docu_21": "Ewyllysiau a dogfennau cynllunio etifeddiaeth"
+  },
+  "upload": {
+    "zone": {
+      "chooseFiles": "Dewis Ffeiliau",
+      "description": "Mi drefnaf bopeth i chi – llusgwch ffeiliau yma neu cliciwch i bori",
+      "descriptionActive": "Rwy’n barod i drefnu popeth i chi",
+      "dragOverlay": {
+        "subtitle": "Mi wnaf ofal am bopeth",
+        "title": "Gollyngwch eich dogfennau yma"
+      },
+      "dropHere": "Gollyngwch eich papurau pwysig yma",
+      "dropHereActive": "Ie! Gollyngwch nhw yma",
+      "processingLocally": "Yn prosesu’n lleol ar eich dyfais",
+      "takePhoto": "Tynnu Llun"
+    }
+  },
+  "vault": {
+    "addAsset": "Ychwanegu Ased",
+    "addDigitalAsset": "Ychwanegu Ased Digidol",
+    "addFinances": "Ychwanegu Cyllid",
+    "addNewAsset": "Ychwanegu Ased Newydd",
+    "addOther": "Ychwanegu Rhywbeth Arall...",
+    "addPersonalItem": "Ychwanegu Eitem Bersonol",
+    "addProperty": "Ychwanegu Eiddo",
+    "addVehicle": "Ychwanegu Cerbyd",
+    "categories": "Categorïau",
+    "digital": "Digidol",
+    "errorDeletingAsset": "Methwyd dileu’r ased. Rhowch gynnig arall arni.",
+    "errorLoadingAssets": "Methwyd llwytho eich asedau. Rhowch gynnig arall arni.",
     "fileUpload": {
-      "clickToUpload": "Cliciwch i lwytho i fyny",
-      "dragAndDrop": " neu lusgwch a gollyngwch",
-      "maxSize": "Uchafswm maint ffeil: 50MB",
-      "fileSizeMB": "{{size}} MB"
+      "addTag": "Ychwanegu tag...",
+      "clickToSelect": "neu cliciwch i bori",
+      "dragDropText": "Llusgwch a gollyngwch ffeiliau yma",
+      "encryptDescription": "Bydd ffeiliau’n cael eu hamgryptio cyn llwytho i fyny ar gyfer uchafswm diogelwch",
+      "encryptFiles": "Amgryptio Ffeiliau",
+      "encryptionInfo": "Mae eich ffeiliau’n cael eu hamgryptio gydag AES-256. Dim ond chi all eu dadgryptio.",
+      "selectedFiles": "Ffeiliau Wedi’u Dewis",
+      "tags": "Tagiau",
+      "title": "Llwytho Ffeiliau",
+      "uploadFiles": "Llwytho Ffeiliau",
+      "uploading": "Yn llwytho..."
     },
-    "premium": {
-      "videoMessage": "Mae negeseuon fideo yn nodwedd premiwm.",
-      "upgradeNow": "Uwchraddio Nawr"
-    },
-    "buttons": {
-      "recordVideo": "Recordio Neges Fideo",
-      "cancel": "Canslo",
-      "saving": "Yn cadw...",
-      "update": "Diweddaru Capsiwl Amser",
-      "create": "Creu Capsiwl Amser"
-    },
-    "characterCount": "{{count}}/{{max}} nod"
+    "finances": "Ariannol",
+    "letsBuildInventory": "Gadewch i ni adeiladu eich rhestr",
+    "other": "Arall",
+    "personal": "Personol",
+    "property": "Eiddo",
+    "searchPlaceholder": "Chwiliwch eich asedau...",
+    "startAddingAssets": "Dechreuwch ychwanegu asedau i adeiladu eich rhestr",
+    "subtitle": "Eich rhestr ddiogel o asedau ariannol a meddiannau gwerthfawr.",
+    "title": "Y Vault",
+    "totalAssets": "Cyfanswm yr Asedau",
+    "totalValue": "Cyfanswm y Gwerth",
+    "vehicle": "Cerbyd"
   }
 }
-

@@ -1,98 +1,68 @@
 {
-  "_comment": "Shared translations used across the application",
-  "errorBoundary": {
-    "title": "Oops! Ceva nu a mers bine",
-    "description": "Ne cerem scuze pentru inconvenient. A apărut o eroare neașteptată.",
-    "errorId": "ID Eroare",
-    "tryAgain": "Încearcă Din Nou",
-    "reloadPage": "Reîncarcă Pagina",
-    "goToHomepage": "Mergi la Pagina Principală",
-    "technicalDetails": "Detalii Tehnice",
-    "hide": "Ascunde",
-    "show": "Arată",
-    "stackTrace": "Urmărire Stivă",
-    "componentStack": "Stivă Componente",
-    "helpText": "Dacă problema persistă, contactați suportul nostru cu ID-ul erorii."
-  },
-  "errorTest": {
-    "title": "Test de Înregistrare a Erorilor",
-    "description": "Testează funcționalitatea de gestionare și înregistrare a erorilor",
-    "triggerSyncError": "Declanșează Eroare Sincronă (ErrorBoundary)",
-    "triggerAsyncError": "Declanșează Eroare Asincronă",
-    "logRegularError": "Înregistrează Eroare Obișnuită",
-    "logCriticalError": "Înregistrează Eroare Critică",
-    "triggerAlert": "Declanșează Alertă (6 Erori Critice)",
-    "errorMessages": {
-      "testError": "Eroare de test din componenta ErrorTest",
-      "testAsyncRejection": "Test respingere asincronă",
-      "manualTestError": "Eroare de test manual",
-      "testCriticalError": "Test eroare critică",
-      "criticalErrorWithIndex": "Eroare critică {{index}}"
-    },
-    "descriptions": {
-      "syncError": "Declanșează o eroare sincronă care va fi prinsă de ErrorBoundary",
-      "asyncError": "Declanșează o eroare asincronă care va fi prinsă de gestionarea erorilor",
-      "regularError": "Înregistrează o eroare obișnuită pentru testarea urmăririi erorilor",
-      "criticalError": "Înregistrează o eroare critică pentru testarea gestionării erorilor critice",
-      "multipleErrors": "Declanșează multiple erori critice pentru testarea pragurilor de alertă"
-    },
-    "context": {
-      "component": "ErrorTest",
-      "action": "button-click",
-      "severity": "high"
-    },
-    "notifications": {
-      "errorLogged": "Eroare înregistrată cu succes",
-      "criticalErrorLogged": "Eroare critică înregistrată cu succes",
-      "multipleErrorsTriggered": "Multiple erori critice declanșate",
-      "errorBoundaryTriggered": "Limita de eroare declanșată",
-      "asyncErrorCaught": "Eroare asincronă prinsă și gestionată"
-    }
-  },
   "debug": {
     "panel": {
-      "title": "Panou de Depanare",
-      "recentErrors": "Erori recente ale aplicației",
-      "technicalDetails": "Detalii Tehnice",
-      "tabs": {
-        "list": "Listă",
-        "details": "Detalii"
-      },
-      "errorCount": "{{count}} erori",
       "actions": {
-        "downloadErrors": "Descarcă erori",
-        "clearAllErrors": "Șterge toate erorile"
-      },
-      "messages": {
-        "errorsCleared": "Toate erorile au fost șterse",
-        "errorCopied": "Eroare copiată în clipboard",
-        "errorsDownloaded": "Erori descărcate"
+        "clearAllErrors": "Șterge toate erorile",
+        "downloadErrors": "Descarcă erori"
       },
       "error": {
-        "unknownError": "Eroare Necunoscută",
+        "errorMessage": "Mesaj de Eroare",
         "noMessage": "Niciun mesaj",
-        "errorMessage": "Mesaj de Eroare"
-      },
-      "sections": {
-        "stackTrace": "Urmărire Stivă",
-        "context": "Context",
-        "location": "Locație",
-        "browserInfo": "Informații Browser",
-        "time": "Oră"
+        "unknownError": "Eroare Necunoscută"
       },
       "fields": {
-        "url": "URL:",
         "path": "Cale:",
         "query": "Interogare:",
+        "url": "URL:",
         "userAgent": "Agent utilizator:",
         "viewport": "Zona de vizualizare:"
-      }
+      },
+      "messages": {
+        "errorCopied": "Eroare copiată în clipboard",
+        "errorsCleared": "Toate erorile au fost șterse",
+        "errorsDownloaded": "Erori descărcate"
+      },
+      "recentErrors": "Erori recente ale aplicației",
+      "sections": {
+        "browserInfo": "Informații Browser",
+        "context": "Context",
+        "location": "Locație",
+        "stackTrace": "Urmărire Stivă",
+        "time": "Oră"
+      },
+      "tabs": {
+        "details": "Detalii",
+        "list": "Listă"
+      },
+      "title": "Panou de Depanare"
     }
+  },
+  "errorBoundary": {
+    "componentStack": "Stivă Componente",
+    "description": "Ne cerem scuze pentru inconvenient. A apărut o eroare neașteptată.",
+    "errorId": "ID Eroare",
+    "goToHomepage": "Mergi la Pagina Principală",
+    "helpText": "Dacă problema persistă, contactați suportul nostru cu ID-ul erorii.",
+    "hide": "Ascunde",
+    "reloadPage": "Reîncarcă Pagina",
+    "show": "Arată",
+    "stackTrace": "Urmărire Stivă",
+    "technicalDetails": "Detalii Tehnice",
+    "title": "Oops! Ceva nu a mers bine",
+    "tryAgain": "Încearcă Din Nou"
+  },
+  "errorTest": {
+    "logCriticalError": "Înregistrează Eroare Critică",
+    "logRegularError": "Înregistrează Eroare Obișnuită",
+    "title": "Test de Înregistrare a Erorilor",
+    "triggerAlert": "Declanșează Alertă (6 Erori Critice)",
+    "triggerAsyncError": "Declanșează Eroare Asincronă",
+    "triggerSyncError": "Declanșează Eroare Sincronă (ErrorBoundary)"
   },
   "test": {
     "environment": {
-      "title": "Doar pentru mediu de test",
-      "description": "Această pagină este pentru testarea sistemului de înregistrare a erorilor. Eliminați această rută înainte de a implementa în producție."
+      "description": "Această pagină este pentru testarea sistemului de înregistrare a erorilor. Eliminați această rută înainte de a implementa în producție.",
+      "title": "Doar pentru mediu de test"
     }
   }
 }

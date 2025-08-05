@@ -1,7 +1,122 @@
 {
-  "_comment": "Shared translations used across the application",
+  "beneficiaryCommunications": {
+    "actions": {
+      "cancel": "Odustani",
+      "save": "Spremi komunikaciju",
+      "saving": "Spremanje..."
+    },
+    "description": "Pratite sve komunikacije s korisnicima",
+    "dialog": {
+      "description": "Zabilježite detalje vaše komunikacije s korisnikom",
+      "title": "Zabilježi komunikaciju"
+    },
+    "empty": {
+      "subtitle": "Kliknite 'Zabilježi komunikaciju' da zabilježite svoju prvu interakciju",
+      "title": "Još nema zabilježenih komunikacija"
+    },
+    "fields": {
+      "beneficiaryName": "Ime korisnika",
+      "date": "Datum",
+      "email": "E-mail",
+      "subject": "Predmet",
+      "summary": "Sažetak",
+      "type": "Vrsta"
+    },
+    "logCommunication": "Zabilježi komunikaciju",
+    "placeholders": {
+      "subject": "Kratak predmet komunikacije",
+      "summary": "Detaljan sažetak onoga o čemu se raspravljalo"
+    },
+    "title": "Komunikacije s korisnicima",
+    "types": {
+      "email": "E-mail",
+      "inPerson": "Osobno",
+      "letter": "Pismo",
+      "other": "Ostalo",
+      "phone": "Telefon"
+    }
+  },
+  "emotionalContextSystem": {
+    "advice_2": "Savjet: ",
+    "contextResponses": {
+      "default": {
+        "actionableAdvice": "Ostanite predani svom planu.",
+        "motivationalElement": "Svaka odluka koju donesete štiti vaše voljene.",
+        "nextStepGuidance": "Vidjeti širu sliku će vas voditi kroz sljedeće korake.",
+        "primaryMessage": "Radite smislen posao.",
+        "supportingMessage": "Ovaj napor jača temelj vaše obitelji."
+      },
+      "highOverwhelm": {
+        "actionableAdvice": "Razmislite o razbijanju zadatka na manje dijelove za fokus.",
+        "motivationalElement": "Znajući da vas pokreće ljubav i briga.",
+        "nextStepGuidance": "Svaka mala akcija koju poduzmete čini značajnu razliku.",
+        "primaryMessage": "Vaša predanost obitelji je hvalevrijedna.",
+        "supportingMessage": "U redu je uzeti trenutak za ponovno grupiranje."
+      },
+      "lowConfidence": {
+        "actionableAdvice": "Nastavite svojim udobnim tempom.",
+        "motivationalElement": "Vaš promišljeni pristup je dokaz vaših vrijednosti.",
+        "nextStepGuidance": "Kada ste spremni, nastavite sa sljedećim važnim korakom za osiguranje budućnosti vaše obitelji.",
+        "primaryMessage": "Rješavate ovu situaciju s brigom i uvidom.",
+        "supportingMessage": "Pokazuje da razumijete važnost zadatka."
+      }
+    },
+    "emotional_support_1": "Emocionalna podrška",
+    "motivation_3": "Motivacija: ",
+    "next_steps_4": "Sljedeći koraci: "
+  },
   "familyHub": {
-    "title": "Obiteljski centar",
+    "accessLevels": {
+      "emergencyOnly": {
+        "description": "Pristup tijekom hitnih situacija",
+        "fullDescription": "Dobiva pristup samo kada se aktivira protokol za hitne slučajeve",
+        "title": "Samo u hitnim slučajevima"
+      },
+      "fullAccess": {
+        "description": "Sve podijeljene informacije",
+        "fullDescription": "Može vidjeti sve informacije koje ste podijelili s njima",
+        "title": "Pun pristup"
+      },
+      "limitedInfo": {
+        "description": "Osnovne informacije za pripremu",
+        "fullDescription": "Može vidjeti osnovne informacije sada kako bi im pomogao pripremiti se",
+        "title": "Ograničene informacije"
+      },
+      "none": {
+        "description": "Ne može vidjeti nikakve informacije",
+        "title": "Nijedan"
+      }
+    },
+    "emergencyProtocol": {
+      "activeMessage": "Protokol za hitne slučajeve je aktivan i konfiguriran",
+      "configure": "Konfiguriraj",
+      "configured": "Konfigurirano",
+      "description": "Protokol za hitne slučajeve omogućuje povjerljivim osobama s pristupom \"Samo u hitnim slučajevima\" da zatraže informacije tijekom kritičnih situacija. Zahtijeva potvrdu od druge povjerljive osobe.",
+      "title": "Protokol za hitne slučajeve"
+    },
+    "errors": {
+      "authenticationRequired": "Potrebna je autentifikacija",
+      "failedToFetchData": "Dohvaćanje podataka o obitelji nije uspjelo",
+      "failedToLoadMembers": "Učitavanje članova obitelji nije uspjelo"
+    },
+    "memberManagement": {
+      "addMorePeople": "Dodajte više povjerljivih osoba u svoju mrežu",
+      "addTrustedPerson": "Dodaj povjerljivu osobu",
+      "informationAccessLevel": "Razina pristupa informacijama",
+      "lastContactOver30Days": "Zadnji kontakt prije više od 30 dana",
+      "lastContacted": "Zadnji put kontaktirano",
+      "preparedness": "Pripravnost",
+      "sendUpdate": "Pošalji ažuriranje",
+      "title": "Upravljajte svojim povjerljivim osobama"
+    },
+    "messages": {
+      "accessLevelUpdated": "Razina pristupa uspješno ažurirana"
+    },
+    "overallPreparedness": {
+      "description": "Ovaj rezultat odražava koliko je vaša cijela obitelj spremna za hitnu situaciju.",
+      "improvementNeeded": "Pripravnost vaše obitelji može se poboljšati. Razmislite o slanju ažuriranja onima s nižim rezultatima.",
+      "title": "Opća pripravnost obitelji"
+    },
     "subtitle": "Upravljajte razinama pristupa i koristite alate za pripravnost kako biste osigurali da je vaša obitelj dobro pripremljena.",
     "tabs": {
       "familyMembers": "Članovi obitelji",
@@ -9,477 +124,152 @@
       "preparednessTools": "Alati za pripravnost",
       "tools": "Alati"
     },
-    "overallPreparedness": {
-      "title": "Opća pripravnost obitelji",
-      "description": "Ovaj rezultat odražava koliko je vaša cijela obitelj spremna za hitnu situaciju.",
-      "improvementNeeded": "Pripravnost vaše obitelji može se poboljšati. Razmislite o slanju ažuriranja onima s nižim rezultatima."
-    },
-    "emergencyProtocol": {
-      "title": "Protokol za hitne slučajeve",
-      "description": "Protokol za hitne slučajeve omogućuje povjerljivim osobama s pristupom \"Samo u hitnim slučajevima\" da zatraže informacije tijekom kritičnih situacija. Zahtijeva potvrdu od druge povjerljive osobe.",
-      "configured": "Konfigurirano",
-      "configure": "Konfiguriraj",
-      "activeMessage": "Protokol za hitne slučajeve je aktivan i konfiguriran",
-      "configurationModal": {
-        "title": "Configure Emergency Protocol",
-        "description": "Set up how trusted people can access information during emergencies",
-        "requiredApprovals": "Required Approvals",
-        "requiredApprovalsDescription": "Number of trusted people who must approve emergency access",
-        "notificationSettings": "Notification Settings",
-        "notificationSettingsDescription": "Configure how you'll be notified of emergency requests",
-        "saveButton": "Save Configuration",
-        "cancelButton": "Cancel",
-        "saving": "Saving..."
-      },
-      "activationModal": {
-        "title": "Emergency Access Request",
-        "description": "Request emergency access to {{name}}'s information",
-        "reason": "Reason for Request",
-        "reasonPlaceholder": "Please describe the emergency situation...",
-        "confirmText": "I confirm this is a genuine emergency",
-        "requestButton": "Request Emergency Access",
-        "requesting": "Requesting..."
-      },
-      "errors": {
-        "configurationFailed": "Failed to save emergency protocol configuration",
-        "activationFailed": "Failed to request emergency access",
-        "invalidConfiguration": "Invalid configuration settings",
-        "notAuthorized": "You are not authorized to configure emergency protocol"
-      },
-      "success": {
-        "configured": "Emergency protocol configured successfully",
-        "requested": "Emergency access request sent",
-        "approved": "Emergency access approved",
-        "denied": "Emergency access denied"
-      }
-    },
-    "memberManagement": {
-      "title": "Upravljajte svojim povjerljivim osobama",
-      "addTrustedPerson": "Dodaj povjerljivu osobu",
-      "addMorePeople": "Dodajte više povjerljivih osoba u svoju mrežu",
-      "informationAccessLevel": "Razina pristupa informacijama",
-      "preparedness": "Pripravnost",
-      "lastContacted": "Zadnji put kontaktirano",
-      "daysAgo": "prije {{days}} dana",
-      "sendUpdate": "Pošalji ažuriranje",
-      "sendUpdateTo": "Pošalji ažuriranje {{name}}",
-      "lastContactOver30Days": "Zadnji kontakt prije više od 30 dana"
-    },
-    "accessLevels": {
-      "none": {
-        "title": "Nijedan",
-        "description": "Ne može vidjeti nikakve informacije"
-      },
-      "emergencyOnly": {
-        "title": "Samo u hitnim slučajevima",
-        "description": "Pristup tijekom hitnih situacija",
-        "fullDescription": "Dobiva pristup samo kada se aktivira protokol za hitne slučajeve"
-      },
-      "limitedInfo": {
-        "title": "Ograničene informacije",
-        "description": "Osnovne informacije za pripremu",
-        "fullDescription": "Može vidjeti osnovne informacije sada kako bi im pomogao pripremiti se"
-      },
-      "fullAccess": {
-        "title": "Pun pristup",
-        "description": "Sve podijeljene informacije",
-        "fullDescription": "Može vidjeti sve informacije koje ste podijelili s njima"
-      }
-    },
-    "messages": {
-      "accessLevelUpdated": "Razina pristupa uspješno ažurirana",
-      "updateSentTo": "Ažuriranje poslano {{name}}",
-      "failedToSendUpdate": "Slanje ažuriranja {{name}} nije uspjelo"
-    },
-    "errors": {
-      "authenticationRequired": "Potrebna je autentifikacija",
-      "failedToFetchData": "Dohvaćanje podataka o obitelji nije uspjelo",
-      "failedToLoadMembers": "Učitavanje članova obitelji nije uspjelo",
-      "failedToUpdateAccessLevel": "Failed to update access level",
-      "failedToSendUpdate": "Failed to send update",
-      "invalidAccessLevel": "Invalid access level",
-      "memberNotFound": "Family member not found"
-    },
-    "api": {
-      "routes": {
-        "familyHub": {
-          "success": {
-            "dataFetched": "Family data fetched successfully",
-            "accessLevelUpdated": "Access level updated successfully",
-            "updateSent": "Update sent successfully"
-          },
-          "errors": {
-            "notAuthenticated": "User not authenticated",
-            "invalidRequest": "Invalid request data",
-            "memberNotFound": "Family member not found",
-            "updateFailed": "Failed to update family member",
-            "serverError": "Internal server error"
-          }
-        },
-        "emergencyProtocol": {
-          "success": {
-            "configurationSaved": "Emergency protocol configuration saved",
-            "protocolActivated": "Emergency protocol activated",
-            "accessGranted": "Emergency access granted",
-            "notificationSent": "Emergency notification sent"
-          },
-          "errors": {
-            "configurationInvalid": "Invalid configuration parameters",
-            "activationDenied": "Emergency activation denied",
-            "insufficientApprovals": "Insufficient approvals for emergency access",
-            "notificationFailed": "Failed to send emergency notification"
-          }
-        }
-      }
-    }
-  },
-  "familyPreparedness": {
-    "tools": {
-      "chooseScenario": "Choose an emergency scenario",
-      "cancel": "Cancel",
-      "generateGuide": "Generate Guide",
-      "generating": "Generating...",
-      "printGuide": "Print Guide"
-    }
+    "title": "Obiteljski centar"
   },
   "familyPreparednessTools": {
-    "use_these_tools_to_ensure_your_1": "Use these tools to ensure your family is prepared and knows what to do in emergency situations.",
-    "generate_emergency_guide_2": "Generate Emergency Guide",
     "create_a_printable_guide_for_y_3": "Create a printable guide for your family to follow in emergency situations.",
-    "select_scenario_4": "Select Scenario",
+    "errors": {
+      "comingSoon": "feature coming soon!",
+      "generateFailed": "Failed to generate guide",
+      "premiumRequired": "This feature is only available for premium users. Please upgrade to access all tools.",
+      "selectScenario": "Please select a scenario"
+    },
     "generate_another_5": "Generate Another",
-    "tools": {
-      "informationTreasureHunt": "Information Treasure Hunt",
-      "videoMessages": "Video Messages",
-      "emergencySimulator": "Emergency Situation Simulator",
-      "stepByStepGuides": "Step-by-Step Guides",
-      "emergencySimulatorDesc": "Run a practice drill. We'll send a test scenario to your family to see if they can find the information they need.",
-      "stepByStepGuidesDesc": "Generate printable, scenario-based guides for your family (e.g., 'What to do in the first 24 hours').",
-      "treasureHuntDesc": "A gamified quiz for your family to ensure they know key facts, like where to find the will or who your lawyer is.",
-      "videoMessagesDesc": "Record personal video messages for your loved ones to be unlocked in specific circumstances.",
-      "launch": "Launch",
-      "chooseScenario": "Choose a scenario",
-      "cancel": "Cancel",
-      "generating": "Generating...",
-      "generateGuide": "Generate Guide",
-      "printGuide": "Print Guide"
-    },
-    "scenarios": {
-      "death": {
-        "title": "In case of my death",
-        "description": "A comprehensive guide for handling immediate tasks after your passing"
-      },
-      "hospitalization": {
-        "title": "If I am hospitalized",
-        "description": "Steps to take if you are incapacitated or in medical care"
-      },
-      "missing": {
-        "title": "If I go missing",
-        "description": "Critical information and contacts if you cannot be located"
-      },
-      "emergency": {
-        "title": "General emergency",
-        "description": "Quick reference for any urgent situation"
-      }
-    },
+    "generate_emergency_guide_2": "Generate Emergency Guide",
     "guides": {
       "death": {
-        "title": "Emergency Guide: In Case of My Death",
-        "generatedOn": "Generated on",
-        "first24Hours": "🚨 First 24 Hours Checklist",
+        "bankAccounts": "Bank Accounts:",
         "contactExecutor": "Contact the Executor:",
         "contactLawyer": "Contact the Lawyer:",
-        "locateWill": "Locate the Will:",
-        "secureResidence": "Secure the Residence:",
-        "importantDocuments": "📋 Important Documents",
         "deathCertificate": "Death Certificate:",
-        "bankAccounts": "Bank Accounts:",
-        "investmentAccounts": "Investment Accounts:",
-        "peopleToNotify": "👥 People to Notify",
+        "disclaimer": "This guide was generated based on the information you've provided. Please ensure all details are kept up to date.",
         "employer": "Employer:",
-        "insuranceCompanies": "Insurance Companies:",
         "financialInstitutions": "Financial Institutions:",
+        "first24Hours": "🚨 First 24 Hours Checklist",
+        "generatedOn": "Generated on",
+        "importantDocuments": "📋 Important Documents",
+        "insuranceCompanies": "Insurance Companies:",
+        "investmentAccounts": "Investment Accounts:",
+        "locateWill": "Locate the Will:",
+        "peopleToNotify": "👥 People to Notify",
+        "secureResidence": "Secure the Residence:",
         "socialSecurity": "Social Security Administration:",
-        "disclaimer": "This guide was generated based on the information you've provided. Please ensure all details are kept up to date."
-      },
-      "hospitalization": {
-        "title": "Emergency Guide: If I Am Hospitalized",
-        "medicalInformation": "🏥 Medical Information",
-        "primaryCarePhysician": "Primary Care Physician:",
-        "preferredHospital": "Preferred Hospital:",
-        "bloodType": "Blood Type:",
-        "allergies": "Allergies:",
-        "currentMedications": "Current Medications:",
-        "emergencyContacts": "📞 Emergency Contacts",
-        "legalDocuments": "📄 Legal Documents",
-        "healthcarePowerOfAttorney": "Healthcare Power of Attorney:",
-        "livingWill": "Living Will:",
-        "hipaaRelease": "HIPAA Release:"
-      },
-      "missing": {
-        "title": "Emergency Guide: If I Go Missing",
-        "immediateActions": "🔍 Immediate Actions",
-        "contactLocalPolice": "Contact local police immediately",
-        "checkWithWorkplace": "Check with workplace:",
-        "contactCloseFriends": "Contact close friends and regular contacts",
-        "checkHospitals": "Check hospitals in the area",
-        "digitalFootprint": "📱 Digital Footprint",
-        "phoneProvider": "Phone Provider:",
-        "email": "Email:",
-        "socialMedia": "Social Media:",
-        "bankingApps": "Banking Apps:"
+        "title": "Emergency Guide: In Case of My Death"
       },
       "emergency": {
-        "title": "General Emergency Quick Reference",
-        "keyContacts": "🚨 Key Contacts",
-        "emergency": "Emergency:",
-        "spouse": "Spouse:",
-        "attorney": "Attorney:",
-        "financialAdvisor": "Financial Advisor:",
-        "insuranceAgent": "Insurance Agent:",
-        "homeInformation": "🏠 Home Information",
         "address": "Address:",
+        "attorney": "Attorney:",
+        "emergency": "Emergency:",
+        "financialAdvisor": "Financial Advisor:",
+        "homeInformation": "🏠 Home Information",
+        "insuranceAgent": "Insurance Agent:",
+        "keyContacts": "🚨 Key Contacts",
         "securitySystem": "Security System:",
+        "spouse": "Spouse:",
+        "title": "General Emergency Quick Reference",
         "utilities": "Utilities:"
+      },
+      "hospitalization": {
+        "allergies": "Allergies:",
+        "bloodType": "Blood Type:",
+        "currentMedications": "Current Medications:",
+        "emergencyContacts": "📞 Emergency Contacts",
+        "healthcarePowerOfAttorney": "Healthcare Power of Attorney:",
+        "hipaaRelease": "HIPAA Release:",
+        "legalDocuments": "📄 Legal Documents",
+        "livingWill": "Living Will:",
+        "medicalInformation": "🏥 Medical Information",
+        "preferredHospital": "Preferred Hospital:",
+        "primaryCarePhysician": "Primary Care Physician:",
+        "title": "Emergency Guide: If I Am Hospitalized"
+      },
+      "missing": {
+        "bankingApps": "Banking Apps:",
+        "checkHospitals": "Check hospitals in the area",
+        "checkWithWorkplace": "Check with workplace:",
+        "contactCloseFriends": "Contact close friends and regular contacts",
+        "contactLocalPolice": "Contact local police immediately",
+        "digitalFootprint": "📱 Digital Footprint",
+        "email": "Email:",
+        "immediateActions": "🔍 Immediate Actions",
+        "phoneProvider": "Phone Provider:",
+        "socialMedia": "Social Media:",
+        "title": "Emergency Guide: If I Go Missing"
       }
-    },
-    "errors": {
-      "premiumRequired": "This feature is only available for premium users. Please upgrade to access all tools.",
-      "selectScenario": "Please select a scenario",
-      "generateFailed": "Failed to generate guide",
-      "comingSoon": "feature coming soon!"
     },
     "mockContent": {
       "insurancePolicies": "Insurance Policies"
+    },
+    "scenarios": {
+      "death": {
+        "description": "A comprehensive guide for handling immediate tasks after your passing",
+        "title": "In case of my death"
+      },
+      "emergency": {
+        "description": "Quick reference for any urgent situation",
+        "title": "General emergency"
+      },
+      "hospitalization": {
+        "description": "Steps to take if you are incapacitated or in medical care",
+        "title": "If I am hospitalized"
+      },
+      "missing": {
+        "description": "Critical information and contacts if you cannot be located",
+        "title": "If I go missing"
+      }
+    },
+    "select_scenario_4": "Select Scenario",
+    "tools": {
+      "cancel": "Cancel",
+      "chooseScenario": "Choose a scenario",
+      "emergencySimulator": "Emergency Situation Simulator",
+      "emergencySimulatorDesc": "Run a practice drill. We'll send a test scenario to your family to see if they can find the information they need.",
+      "generateGuide": "Generate Guide",
+      "generating": "Generating...",
+      "informationTreasureHunt": "Information Treasure Hunt",
+      "launch": "Launch",
+      "printGuide": "Print Guide",
+      "stepByStepGuides": "Step-by-Step Guides",
+      "stepByStepGuidesDesc": "Generate printable, scenario-based guides for your family (e.g., 'What to do in the first 24 hours').",
+      "treasureHuntDesc": "A gamified quiz for your family to ensure they know key facts, like where to find the will or who your lawyer is.",
+      "videoMessages": "Video Messages",
+      "videoMessagesDesc": "Record personal video messages for your loved ones to be unlocked in specific circumstances."
+    },
+    "use_these_tools_to_ensure_your_1": "Use these tools to ensure your family is prepared and knows what to do in emergency situations."
+  },
+  "logLifeEvent": {
+    "eventTypes": {
+      "bought_sold_home": "Bought / Sold a Home",
+      "career_advancement": "Career Advancement",
+      "child_graduated": "Child Graduated / Left Home",
+      "debt_change": "Significant Debt Change",
+      "financial_windfall": "Financial Windfall",
+      "health_change": "Significant Health Change",
+      "inheritance": "Received an Inheritance",
+      "insurance_change": "Insurance Policy Change",
+      "job_change": "Changed Jobs",
+      "married_divorced": "Got Married / Divorced",
+      "moved_location": "Moved to a New Location",
+      "new_child": "Had a New Child",
+      "retirement": "Retired",
+      "started_business": "Started a Business",
+      "trusted_person_passed": "A Trusted Person Passed Away"
+    },
+    "form": {
+      "cancel": "Cancel",
+      "description": "Select a major life change to generate a personalized checklist",
+      "eventDescription": "Choose the life event that best describes your current situation",
+      "eventSelection": "Select Life Event",
+      "generateChecklist": "Generate Checklist",
+      "title": "Log Life Event"
     }
   },
   "relationships": {
-    "spouse": "Supružnik/a",
     "child": "Dijete",
+    "friend": "Prijatelj/ica",
+    "other": "Ostalo",
     "parent": "Roditelj",
     "sibling": "Brat/sestra",
-    "friend": "Prijatelj/ica",
-    "other": "Ostalo"
-  },
-  "beneficiaryCommunications": {
-    "title": "Komunikacije s korisnicima",
-    "description": "Pratite sve komunikacije s korisnicima",
-    "logCommunication": "Zabilježi komunikaciju",
-    "logAction": "Zabilježena komunikacija s {name}",
-    "dialog": {
-      "title": "Zabilježi komunikaciju",
-      "description": "Zabilježite detalje vaše komunikacije s korisnikom"
-    },
-    "fields": {
-      "beneficiaryName": "Ime korisnika",
-      "email": "E-mail",
-      "type": "Vrsta",
-      "date": "Datum",
-      "subject": "Predmet",
-      "summary": "Sažetak"
-    },
-    "placeholders": {
-      "subject": "Kratak predmet komunikacije",
-      "summary": "Detaljan sažetak onoga o čemu se raspravljalo"
-    },
-    "types": {
-      "email": "E-mail",
-      "phone": "Telefon",
-      "letter": "Pismo",
-      "inPerson": "Osobno",
-      "in_person": "Osobno",
-      "other": "Ostalo"
-    },
-    "actions": {
-      "cancel": "Odustani",
-      "saving": "Spremanje...",
-      "save": "Spremi komunikaciju"
-    },
-    "empty": {
-      "title": "Još nema zabilježenih komunikacija",
-      "subtitle": "Kliknite 'Zabilježi komunikaciju' da zabilježite svoju prvu interakciju"
-    }
-  },
-  "emergencyAccess": {
-    "button": "Pristup u hitnim slučajevima",
-    "modalTitle": "Pristup kontaktima za hitne slučajeve",
-    "modalDescription": "Ovo će vam omogućiti pristup informacijama o kontaktima za hitne slučajeve. Koristite ovo samo u stvarnim hitnim situacijama.",
-    "warningText": "Ovaj pristup se bilježi i vlasnik računa će biti obaviješten.",
-    "reasonLabel": "Razlog za pristup u hitnim slučajevima (obavezno)",
-    "reasonPlaceholder": "Molimo opišite hitnu situaciju koja zahtijeva pristup kontaktnim informacijama...",
-    "confirmCheckbox": "Potvrđujem da je ovo stvarna hitna situacija i da mi je potreban pristup kontaktnim informacijama",
-    "accessing": "Pristupanje...",
-    "confirmButton": "Pristupi kontaktima za hitne slučajeve",
-    "pleaseConfirm": "Molimo potvrdite hitnu situaciju i navedite razlog",
-    "notAuthorized": "Niste ovlašteni za pristup u hitnim slučajevima",
-    "failedToLoadContacts": "Učitavanje kontakata za hitne slučajeve nije uspjelo",
-    "accessGranted": "Pristup u hitnim slučajevima odobren. Kontaktne informacije su sada dostupne.",
-    "accessFailed": "Pristup kontaktima za hitne slučajeve nije uspio",
-    "contactsTitle": "Kontakti za hitne slučajeve",
-    "contactsDescription": "Kontaktirajte ove osobe po prioritetu. Kliknite na brojeve telefona za poziv ili e-mailove za slanje poruka.",
-    "priorityOrder": "Prioritetni redoslijed",
-    "priority": "Prioritet #{{order}}",
-    "logContact": "Zabilježi pokušaj kontakta",
-    "contactLogged": "Pokušaj kontakta zabilježen",
-    "lastContacted": "Zadnji put kontaktirano: {{time}}",
-    "importantNote": "Važno: Kontaktirajte ove osobe redoslijedom kako je prikazano. Uvijek prvo pokušajte primarnom metodom kontakta. Zabilježite sve pokušaje kontakta radi evidencije."
-  },
-  "emotionalContextSystem": {
-    "emotional_support_1": "Emocionalna podrška",
-    "advice_2": "Savjet: ",
-    "motivation_3": "Motivacija: ",
-    "next_steps_4": "Sljedeći koraci: ",
-    "contextResponses": {
-      "lowConfidence": {
-        "primaryMessage": "Rješavate ovu situaciju s brigom i uvidom.",
-        "supportingMessage": "Pokazuje da razumijete važnost zadatka.",
-        "actionableAdvice": "Nastavite svojim udobnim tempom.",
-        "motivationalElement": "Vaš promišljeni pristup je dokaz vaših vrijednosti.",
-        "nextStepGuidance": "Kada ste spremni, nastavite sa sljedećim važnim korakom za osiguranje budućnosti vaše obitelji."
-      },
-      "highOverwhelm": {
-        "primaryMessage": "Vaša predanost obitelji je hvalevrijedna.",
-        "supportingMessage": "U redu je uzeti trenutak za ponovno grupiranje.",
-        "actionableAdvice": "Razmislite o razbijanju zadatka na manje dijelove za fokus.",
-        "motivationalElement": "Znajući da vas pokreće ljubav i briga.",
-        "nextStepGuidance": "Svaka mala akcija koju poduzmete čini značajnu razliku."
-      },
-      "default": {
-        "primaryMessage": "Radite smislen posao.",
-        "supportingMessage": "Ovaj napor jača temelj vaše obitelji.",
-        "actionableAdvice": "Ostanite predani svom planu.",
-        "motivationalElement": "Svaka odluka koju donesete štiti vaše voljene.",
-        "nextStepGuidance": "Vidjeti širu sliku će vas voditi kroz sljedeće korake."
-      }
-    },
-    "emotionalStates": {
-      "confidence": {
-        "high": "Visok",
-        "medium": "Srednji",
-        "low": "Nizak"
-      },
-      "motivation": {
-        "high": "Visok",
-        "medium": "Srednji",
-        "low": "Nizak"
-      },
-      "overwhelm": {
-        "none": "Nijedan",
-        "slight": "Blag",
-        "moderate": "Umjeren",
-        "high": "Visok"
-      },
-      "urgency": {
-        "relaxed": "Opušten",
-        "focused": "Fokusiran",
-        "pressed": "Pod pritiskom",
-        "stressed": "Pod stresom"
-      }
-    }
-  },
-  "lifeEvents": {
-    "title": "Life Events",
-    "subtitle": "Update your plan when major life changes occur",
-    "addEvent": "Add Life Event",
-    "noEvents": "No life events recorded yet",
-    "addFirstEvent": "Add your first life event to get started",
-    "events": {
-      "marriedDivorced": "Marriage/Divorce Update",
-      "newChild": "New Child Update",
-      "boughtSoldHome": "Real Estate Update",
-      "startedBusiness": "New Business Update",
-      "trustedPersonPassed": "Update Trusted Persons",
-      "unknown": "Unknown Event"
-    },
-    "congratsMessage": "Congratulations on your new child! Here are the recommended updates to your plan:",
-    "tasks": {
-      "updateBeneficiaries": "Update beneficiaries on all accounts",
-      "updateBeneficiariesDesc": "Review and update beneficiaries on life insurance, retirement accounts, and bank accounts.",
-      "updateWill": "Update your will",
-      "updateWillDesc": "Ensure your will reflects your new marital status and beneficiary wishes.",
-      "reviewTrusts": "Review and update any trusts",
-      "reviewTrustsDesc": "Make necessary changes to trust documents to reflect your new status.",
-      "updateEmergencyContacts": "Update emergency contacts",
-      "updateEmergencyContactsDesc": "Review and update emergency contacts in your Trusted Circle.",
-      "addChildRoster": "Add your new child to your Trusted Circle",
-      "addChildRosterDesc": "Include your child in your family information.",
-      "updateGuardian": "Review and update the \"Guardian\" designation for your children",
-      "updateGuardianDesc": "Ensure you have designated appropriate guardians for all your children.",
-      "reviewLifeInsurance": "Review your life insurance policy to ensure coverage is adequate",
-      "reviewLifeInsuranceDesc": "Consider increasing coverage to account for your growing family.",
-      "updateWillBeneficiary": "Update your will to include your new child as a beneficiary",
-      "updateWillBeneficiaryDesc": "Ensure your new child is properly included in your estate planning.",
-      "updatePropertyArmory": "Update property information in your Vault",
-      "updatePropertyArmoryDesc": "Add new property or remove sold property from your assets.",
-      "updateMortgageInfo": "Update mortgage and deed information",
-      "updateMortgageInfoDesc": "Ensure all property-related documents are current.",
-      "reviewHomeownersInsurance": "Review homeowners/property insurance",
-      "reviewHomeownersInsuranceDesc": "Update insurance policies to reflect your current properties.",
-      "updateNetWorth": "Update your net worth calculation",
-      "updateNetWorthDesc": "Reflect the change in your real estate holdings.",
-      "addBusinessAssets": "Add business to your Vault",
-      "addBusinessAssetsDesc": "Include your business as an asset with relevant details.",
-      "createSuccessionPlan": "Create a business succession plan",
-      "createSuccessionPlanDesc": "Document what should happen to your business if something happens to you.",
-      "updateInsurance": "Review insurance needs",
-      "updateInsuranceDesc": "Consider key person insurance and business liability coverage.",
-      "separatePersonalBusiness": "Ensure personal and business assets are properly separated",
-      "separatePersonalBusinessDesc": "Review the distinction between personal and business holdings.",
-      "removeDeceased": "Update your Trusted Circle",
-      "removeDeceasedDesc": "Remove the deceased person and reassign their responsibilities.",
-      "appointNewExecutor": "Appoint a new executor/trustee if needed",
-      "appointNewExecutorDesc": "If the deceased was your executor or trustee, designate a replacement.",
-      "updateBeneficiariesDesc2": "Check if the deceased was a beneficiary on any accounts.",
-      "updateEmergencyContactsDesc2": "Review all emergency contact information."
-    }
-  },
-  "logLifeEvent": {
-    "title": "Log a Life Event",
-    "description": "Select a major life change to generate a personalized checklist for updating your family's protection plan.",
-    "eventTypes": {
-      "married_divorced": "Got Married / Divorced",
-      "new_child": "Had a New Child",
-      "bought_sold_home": "Bought / Sold a Home",
-      "started_business": "Started a Business",
-      "trusted_person_passed": "A Trusted Person Passed Away",
-      "job_change": "Changed Jobs",
-      "moved_location": "Moved to a New Location",
-      "inheritance": "Received an Inheritance",
-      "retirement": "Retired",
-      "health_change": "Significant Health Change",
-      "child_graduated": "Child Graduated / Left Home",
-      "career_advancement": "Career Advancement",
-      "financial_windfall": "Financial Windfall",
-      "debt_change": "Significant Debt Change",
-      "insurance_change": "Insurance Policy Change"
-    },
-    "form": {
-      "title": "Log Life Event",
-      "description": "Select a major life change to generate a personalized checklist",
-      "eventSelection": "Select Life Event",
-      "eventDescription": "Choose the life event that best describes your current situation",
-      "generateChecklist": "Generate Checklist",
-      "cancel": "Cancel",
-      "submit": "Submit",
-      "close": "Close"
-    },
-    "checklist": {
-      "title": "Personalized Checklist",
-      "description": "Based on your life event, here are the key items you should review and update:",
-      "priority": "Priority",
-      "action": "Action",
-      "estimatedTime": "Estimated Time",
-      "high": "Visoko",
-      "medium": "Srednje",
-      "low": "Nisko",
-      "completed": "Završeno",
-      "pending": "Pending"
-    },
-    "notifications": {
-      "eventLogged": "Life event logged successfully",
-      "checklistGenerated": "Personalized checklist generated",
-      "errorLogging": "Error logging life event",
-      "reminderSet": "Reminder set for follow-up actions"
-    }
+    "spouse": "Supružnik/a"
   }
 }

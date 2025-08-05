@@ -1,98 +1,68 @@
 {
-  "_comment": "Shared translations used across the application",
-  "errorBoundary": {
-    "title": "Ой! Что-то пошло не так",
-    "description": "Приносим извинения за неудобства. Произошла непредвиденная ошибка.",
-    "errorId": "ID ошибки",
-    "tryAgain": "Попробовать еще раз",
-    "reloadPage": "Перезагрузить страницу",
-    "goToHomepage": "На главную",
-    "technicalDetails": "Технические детали",
-    "hide": "Скрыть",
-    "show": "Показать",
-    "stackTrace": "Трассировка стека",
-    "componentStack": "Стек компонентов",
-    "helpText": "Если проблема не устраняется, свяжитесь с нашей службой поддержки, указав ID ошибки."
-  },
-  "errorTest": {
-    "title": "Тест логирования ошибок",
-    "description": "Тестирование обработки ошибок и функциональности логирования",
-    "triggerSyncError": "Вызвать синхронную ошибку (ErrorBoundary)",
-    "triggerAsyncError": "Вызвать асинхронную ошибку",
-    "logRegularError": "Залогировать обычную ошибку",
-    "logCriticalError": "Залогировать критическую ошибку",
-    "triggerAlert": "Вызвать оповещение (6 критических ошибок)",
-    "errorMessages": {
-      "testError": "Тестовая ошибка из компонента ErrorTest",
-      "testAsyncRejection": "Тест асинхронного отклонения",
-      "manualTestError": "Ошибка ручного теста",
-      "testCriticalError": "Тест критической ошибки",
-      "criticalErrorWithIndex": "Критическая ошибка {{index}}"
-    },
-          "descriptions": {
-        "syncError": "Вызывает синхронную ошибку, которая будет перехвачена ErrorBoundary",
-        "asyncError": "Вызывает асинхронную ошибку, которая будет перехвачена обработкой ошибок",
-        "regularError": "Логирует обычную ошибку для тестирования отслеживания ошибок",
-        "criticalError": "Логирует критическую ошибку для тестирования обработки критических ошибок",
-        "multipleErrors": "Вызывает несколько критических ошибок для тестирования порогов оповещений"
-      },
-    "context": {
-      "component": "ErrorTest",
-      "action": "button-click",
-      "severity": "high"
-    },
-    "notifications": {
-      "errorLogged": "Ошибка успешно зарегистрирована",
-      "criticalErrorLogged": "Критическая ошибка успешно зарегистрирована",
-      "multipleErrorsTriggered": "Несколько критических ошибок вызвано",
-      "errorBoundaryTriggered": "Граница ошибок сработала",
-      "asyncErrorCaught": "Асинхронная ошибка перехвачена и обработана"
-    }
-  },
   "debug": {
     "panel": {
-      "title": "Панель отладки",
-      "recentErrors": "Последние ошибки приложения",
-      "technicalDetails": "Технические детали",
-      "tabs": {
-        "list": "Список",
-        "details": "Детали"
-      },
-      "errorCount": "{{count}} ошибок",
       "actions": {
-        "downloadErrors": "Скачать ошибки",
-        "clearAllErrors": "Очистить все ошибки"
-      },
-      "messages": {
-        "errorsCleared": "Все ошибки очищены",
-        "errorCopied": "Ошибка скопирована в буфер обмена",
-        "errorsDownloaded": "Ошибки скачаны"
+        "clearAllErrors": "Очистить все ошибки",
+        "downloadErrors": "Скачать ошибки"
       },
       "error": {
-        "unknownError": "Неизвестная ошибка",
+        "errorMessage": "Сообщение об ошибке",
         "noMessage": "Нет сообщения",
-        "errorMessage": "Сообщение об ошибке"
-      },
-      "sections": {
-        "stackTrace": "Трассировка стека",
-        "context": "Контекст",
-        "location": "Местоположение",
-        "browserInfo": "Информация о браузере",
-        "time": "Время"
+        "unknownError": "Неизвестная ошибка"
       },
       "fields": {
-        "url": "URL:",
         "path": "Путь:",
         "query": "Запрос:",
+        "url": "URL:",
         "userAgent": "Пользовательский агент:",
         "viewport": "Область просмотра:"
-      }
+      },
+      "messages": {
+        "errorCopied": "Ошибка скопирована в буфер обмена",
+        "errorsCleared": "Все ошибки очищены",
+        "errorsDownloaded": "Ошибки скачаны"
+      },
+      "recentErrors": "Последние ошибки приложения",
+      "sections": {
+        "browserInfo": "Информация о браузере",
+        "context": "Контекст",
+        "location": "Местоположение",
+        "stackTrace": "Трассировка стека",
+        "time": "Время"
+      },
+      "tabs": {
+        "details": "Детали",
+        "list": "Список"
+      },
+      "title": "Панель отладки"
     }
+  },
+  "errorBoundary": {
+    "componentStack": "Стек компонентов",
+    "description": "Приносим извинения за неудобства. Произошла непредвиденная ошибка.",
+    "errorId": "ID ошибки",
+    "goToHomepage": "На главную",
+    "helpText": "Если проблема не устраняется, свяжитесь с нашей службой поддержки, указав ID ошибки.",
+    "hide": "Скрыть",
+    "reloadPage": "Перезагрузить страницу",
+    "show": "Показать",
+    "stackTrace": "Трассировка стека",
+    "technicalDetails": "Технические детали",
+    "title": "Ой! Что-то пошло не так",
+    "tryAgain": "Попробовать еще раз"
+  },
+  "errorTest": {
+    "logCriticalError": "Залогировать критическую ошибку",
+    "logRegularError": "Залогировать обычную ошибку",
+    "title": "Тест логирования ошибок",
+    "triggerAlert": "Вызвать оповещение (6 критических ошибок)",
+    "triggerAsyncError": "Вызвать асинхронную ошибку",
+    "triggerSyncError": "Вызвать синхронную ошибку (ErrorBoundary)"
   },
   "test": {
     "environment": {
-      "title": "Только для тестовой среды",
-      "description": "Эта страница предназначена для тестирования системы логирования ошибок. Удалите этот маршрут перед развертыванием в продакшене."
+      "description": "Эта страница предназначена для тестирования системы логирования ошибок. Удалите этот маршрут перед развертыванием в продакшене.",
+      "title": "Только для тестовой среды"
     }
   }
 }

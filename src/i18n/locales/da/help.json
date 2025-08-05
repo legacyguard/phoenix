@@ -1,34 +1,31 @@
 {
-  "_comment": "Shared translations used across the application",
   "help": {
-    "needHelp": "Need Help?",
+    "basedOnProgress": "Based on your current progress, here's what we recommend:",
     "getHelp": "Get Help",
     "helpAndTutorials": "Help & Tutorials",
-    "recommendedForYou": "Recommended for You",
-    "basedOnProgress": "Based on your current progress, here's what we recommend:",
+    "needHelp": "Need Help?",
     "personalizedHelpDescription": "Get personalized help based on where you are in your journey",
-    "recommendedTopics": "Recommended topics",
     "quickTips": {
-      "title": "Quick Tips",
       "tip1": "Start with your most important documents first",
       "tip2": "Add at least one trusted guardian",
       "tip3": "Update your information regularly",
-      "tip4": "Test your guardian's access annually"
+      "tip4": "Test your guardian's access annually",
+      "title": "Quick Tips"
+    },
+    "recommendedForYou": "Recommended for You",
+    "recommendedTopics": "Recommended topics",
+    "stepDetails": {
+      "description": "Description",
+      "estimatedTime": "Estimated time",
+      "gotIt": "Got it!",
+      "minutes": "minutes",
+      "stepByStepInstructions": "Step-by-Step Instructions",
+      "steps": "steps",
+      "videoTutorial": "Video Tutorial",
+      "watchVideoTutorial": "Watch Video Tutorial"
     },
     "topics": {
-      "uploadDocuments": {
-        "title": "Upload Your First Document",
-        "description": "Learn how to securely upload and organize your important documents",
-        "steps": {
-          "1": "Click the 'Upload Document' button in the Organize section",
-          "2": "Select your document file from your computer",
-          "3": "Choose the document type and add a descriptive name",
-          "4": "Set an expiration date if applicable",
-          "5": "Save the document to your secure vault"
-        }
-      },
       "addGuardians": {
-        "title": "Add Your First Guardian",
         "description": "Set up trusted people who can access your information in emergencies",
         "steps": {
           "1": "Click 'Add Guardian' in the Secure section",
@@ -36,32 +33,10 @@
           "3": "Select their roles and responsibilities",
           "4": "Add their contact information",
           "5": "Send them an invitation to accept their role"
-        }
-      },
-      "listAssets": {
-        "title": "List Your Assets",
-        "description": "Document your properties, accounts, and valuable possessions",
-        "steps": {
-          "1": "Click 'Add Item' in the Organize section",
-          "2": "Choose the asset type (property, vehicle, account, etc.)",
-          "3": "Enter the asset name and details",
-          "4": "Add estimated value if desired",
-          "5": "Save the asset to your inventory"
-        }
-      },
-      "designateBeneficiaries": {
-        "title": "Designate Beneficiaries",
-        "description": "Specify who should receive your assets and in what proportions",
-        "steps": {
-          "1": "Click 'Add Beneficiary' in the Transfer section",
-          "2": "Enter the beneficiary's name",
-          "3": "Set their allocation percentage",
-          "4": "Review total allocations (must equal 100%)",
-          "5": "Save your beneficiary list"
-        }
+        },
+        "title": "Add Your First Guardian"
       },
       "createWill": {
-        "title": "Create Your Will",
         "description": "Generate a basic will document based on your information",
         "steps": {
           "1": "Navigate to the Will section",
@@ -69,172 +44,169 @@
           "3": "Review your beneficiaries and assets",
           "4": "Generate the will document",
           "5": "Download and have it properly witnessed"
-        }
+        },
+        "title": "Create Your Will"
+      },
+      "designateBeneficiaries": {
+        "description": "Specify who should receive your assets and in what proportions",
+        "steps": {
+          "1": "Click 'Add Beneficiary' in the Transfer section",
+          "2": "Enter the beneficiary's name",
+          "3": "Set their allocation percentage",
+          "4": "Review total allocations (must equal 100%)",
+          "5": "Save your beneficiary list"
+        },
+        "title": "Designate Beneficiaries"
+      },
+      "listAssets": {
+        "description": "Document your properties, accounts, and valuable possessions",
+        "steps": {
+          "1": "Click 'Add Item' in the Organize section",
+          "2": "Choose the asset type (property, vehicle, account, etc.)",
+          "3": "Enter the asset name and details",
+          "4": "Add estimated value if desired",
+          "5": "Save the asset to your inventory"
+        },
+        "title": "List Your Assets"
+      },
+      "uploadDocuments": {
+        "description": "Learn how to securely upload and organize your important documents",
+        "steps": {
+          "1": "Click the 'Upload Document' button in the Organize section",
+          "2": "Select your document file from your computer",
+          "3": "Choose the document type and add a descriptive name",
+          "4": "Set an expiration date if applicable",
+          "5": "Save the document to your secure vault"
+        },
+        "title": "Upload Your First Document"
       }
-    },
-    "stepDetails": {
-      "description": "Description",
-      "stepByStepInstructions": "Step-by-Step Instructions",
-      "videoTutorial": "Video Tutorial",
-      "watchVideoTutorial": "Watch Video Tutorial",
-      "estimatedTime": "Estimated time",
-      "minutes": "minutes",
-      "steps": "steps",
-      "gotIt": "Got it!"
-    },
-    "priority": {
-      "high": "high",
-      "medium": "medium",
-      "low": "low"
     }
   },
   "helpPage": {
-    "title": "Hjælp & Support Center",
-    "subtitle": "Vi er her for dig. Find svar på dine spørgsmål eller kontakt os direkte.",
+    "contact": {
+      "call": {
+        "button": "Planlæg et opkald",
+        "description": "For Premium- og Enterprise-kunder.",
+        "title": "Planlæg et opkald (for Premium)"
+      },
+      "email": {
+        "button": "Åbn e-mail-klient",
+        "description": "For generelle spørgsmål og support.",
+        "title": "Send os en e-mail"
+      },
+      "title": "Fandt du ikke, hvad du ledte efter?"
+    },
     "faq": {
-      "title": "Ofte stillede spørgsmål",
       "q1": {
-        "question": "Er LegacyGuard sikkert?",
-        "answer": "Ja, sikkerhed er vores højeste prioritet. Vi bruger ende-til-ende-kryptering og en nul-tillids-arkitektur, hvilket betyder, at ingen uautoriseret person kan få adgang til dine data, heller ikke os. Alle data opbevares i sikre datacentre inden for EU i overensstemmelse med GDPR."
+        "answer": "Ja, sikkerhed er vores højeste prioritet. Vi bruger ende-til-ende-kryptering og en nul-tillids-arkitektur, hvilket betyder, at ingen uautoriseret person kan få adgang til dine data, heller ikke os. Alle data opbevares i sikre datacentre inden for EU i overensstemmelse med GDPR.",
+        "question": "Er LegacyGuard sikkert?"
       },
       "q2": {
-        "question": "Hvad sker der med mine data, hvis jeg opsiger mit abonnement?",
-        "answer": "Efter opsigelse forbliver dine data sikkert opbevaret i skrivebeskyttet tilstand i 90 dage. Du kan genaktivere dit abonnement når som helst inden for denne periode for at få fuld adgang igen. Efter 90 dage vil dine data blive sikkert og permanent slettet fra vores systemer."
+        "answer": "Efter opsigelse forbliver dine data sikkert opbevaret i skrivebeskyttet tilstand i 90 dage. Du kan genaktivere dit abonnement når som helst inden for denne periode for at få fuld adgang igen. Efter 90 dage vil dine data blive sikkert og permanent slettet fra vores systemer.",
+        "question": "Hvad sker der med mine data, hvis jeg opsiger mit abonnement?"
       },
       "q3": {
-        "question": "Hvad er en 'Værge'?",
-        "answer": "En Værge er en betroet person (f.eks. en partner, søskende eller jurist), som du giver særlig, begrænset adgang til dine oplysninger i nødstilfælde. En Værge kan ikke ændre dine data; de kan kun se dem for at handle på dine instruktioner."
+        "answer": "En Værge er en betroet person (f.eks. en partner, søskende eller jurist), som du giver særlig, begrænset adgang til dine oplysninger i nødstilfælde. En Værge kan ikke ændre dine data; de kan kun se dem for at handle på dine instruktioner.",
+        "question": "Hvad er en 'Værge'?"
       },
       "q4": {
-        "question": "Hvad er forskellen på 'Boksen' og 'Vejledningen'?",
-        "answer": "Arveboksen er, hvor du sikkert opbevarer alle dine vigtige dokumenter og aktiver. Vejledningen for efterladte er et kurateret udvalg af de mest kritiske kontakter, dokumenter og instruktioner fra din boks, designet til at dine Værger har alt det essentielle på ét sted."
+        "answer": "Arveboksen er, hvor du sikkert opbevarer alle dine vigtige dokumenter og aktiver. Vejledningen for efterladte er et kurateret udvalg af de mest kritiske kontakter, dokumenter og instruktioner fra din boks, designet til at dine Værger har alt det essentielle på ét sted.",
+        "question": "Hvad er forskellen på 'Boksen' og 'Vejledningen'?"
       },
       "q5": {
-        "question": "Er et testamente oprettet i LegacyGuard juridisk bindende?",
-        "answer": "LegacyGuard hjælper dig med at forberede og organisere alt forarbejdet og informationen til dit testamente. I de fleste europæiske lande erstatter det digitale dokument dog ikke behovet for et officielt, underskrevet (og ofte notariseret) dokument. Vi anbefaler altid at konsultere den endelige version med en jurist."
-      }
-    },
-    "contact": {
-      "title": "Fandt du ikke, hvad du ledte efter?",
-      "email": {
-        "title": "Send os en e-mail",
-        "description": "For generelle spørgsmål og support.",
-        "button": "Åbn e-mail-klient"
+        "answer": "LegacyGuard hjælper dig med at forberede og organisere alt forarbejdet og informationen til dit testamente. I de fleste europæiske lande erstatter det digitale dokument dog ikke behovet for et officielt, underskrevet (og ofte notariseret) dokument. Vi anbefaler altid at konsultere den endelige version med en jurist.",
+        "question": "Er et testamente oprettet i LegacyGuard juridisk bindende?"
       },
-      "call": {
-        "title": "Planlæg et opkald (for Premium)",
-        "description": "For Premium- og Enterprise-kunder.",
-        "button": "Planlæg et opkald"
-      }
-    }
+      "title": "Ofte stillede spørgsmål"
+    },
+    "subtitle": "Vi er her for dig. Find svar på dine spørgsmål eller kontakt os direkte.",
+    "title": "Hjælp & Support Center"
   },
   "manual": {
-    "title": "Vejledning for efterladte",
+    "contacts": {
+      "addContact": "Tilføj kontakt",
+      "addFirstContact": "Tilføj din første kontakt",
+      "card": {
+        "edit": "Rediger"
+      },
+      "description": "Nøglepersoner din familie bør kontakte i tilfælde af en nødsituation.",
+      "empty": {
+        "description": "Start med at tilføje vigtige personer, som din familie bør kende til.",
+        "title": "Ingen kontakter tilføjet endnu."
+      },
+      "form": {
+        "addButton": "Tilføj kontakt",
+        "addTitle": "Tilføj vigtig kontakt",
+        "cancel": "Annuller",
+        "description": "Tilføj personer, som din familie bør kontakte i vigtige situationer.",
+        "editTitle": "Rediger kontakt",
+        "emailLabel": "E-mailadresse",
+        "emailPlaceholder": "kontakt@example.com",
+        "nameLabel": "Kontaktnavn *",
+        "namePlaceholder": "f.eks. Jens Hansen",
+        "notesLabel": "Noter",
+        "notesPlaceholder": "Yderligere oplysninger om denne kontakt...",
+        "phoneLabel": "Telefonnummer",
+        "phonePlaceholder": "+45 12 34 56 78",
+        "roleLabel": "Rolle/Profession *",
+        "rolePlaceholder": "f.eks. Familieadvokat, Revisor, Læge",
+        "saving": "Gemmer...",
+        "updateButton": "Opdater kontakt"
+      },
+      "loading": "Indlæser kontakter...",
+      "messages": {
+        "added": "Kontakt tilføjet!",
+        "deleted": "Kontakt slettet!",
+        "loginRequired": "Du skal være logget ind for at gemme kontakter.",
+        "nameAndRoleRequired": "Navn og rolle er påkrævet.",
+        "updated": "Kontakt opdateret!"
+      },
+      "title": "Vigtige kontakter"
+    },
+    "documents": {
+      "card": {
+        "essentialNote": "Dette dokument er markeret som værende essentielt for dine efterladte."
+      },
+      "description": "Kritiske dokumenter, som din familie har brug for at kende til.",
+      "empty": {
+        "description": "Marker vigtige dokumenter som \"nøgledokumenter\" fra din boks for at få dem vist her.",
+        "tip": "Tip: Gå til din boks og slå \"Inkluder i Vejledning for efterladte\" til for vigtige dokumenter.",
+        "title": "Ingen nøgledokumenter tilføjet endnu."
+      },
+      "expiration": {
+        "expired": "Udløbet",
+        "expiresSoon": "Udløber snart",
+        "expiring": "Udløber"
+      },
+      "loading": "Indlæser nøgledokumenter...",
+      "title": "Nøgledokumenter"
+    },
+    "instructions": {
+      "autoSaveNote": "Dine instruktioner gemmes automatisk, mens du skriver.",
+      "description": "Personlig vejledning og beskeder til dine kære.",
+      "loading": "Indlæser instruktioner...",
+      "title": "Sidste ønsker & instruktioner"
+    },
     "subtitle": "Væsentlig information til dine kære, når de har mest brug for det.",
     "tabs": {
       "contacts": "Vigtige kontakter",
       "documents": "Nøgledokumenter",
       "instructions": "Instruktioner"
     },
-    "contacts": {
-      "title": "Vigtige kontakter",
-      "description": "Nøglepersoner din familie bør kontakte i tilfælde af en nødsituation.",
-      "addContact": "Tilføj kontakt",
-      "addFirstContact": "Tilføj din første kontakt",
-      "loading": "Indlæser kontakter...",
-      "empty": {
-        "title": "Ingen kontakter tilføjet endnu.",
-        "description": "Start med at tilføje vigtige personer, som din familie bør kende til."
-      },
-      "form": {
-        "editTitle": "Rediger kontakt",
-        "addTitle": "Tilføj vigtig kontakt",
-        "description": "Tilføj personer, som din familie bør kontakte i vigtige situationer.",
-        "nameLabel": "Kontaktnavn *",
-        "namePlaceholder": "f.eks. Jens Hansen",
-        "roleLabel": "Rolle/Profession *",
-        "rolePlaceholder": "f.eks. Familieadvokat, Revisor, Læge",
-        "phoneLabel": "Telefonnummer",
-        "phonePlaceholder": "+45 12 34 56 78",
-        "emailLabel": "E-mailadresse",
-        "emailPlaceholder": "kontakt@example.com",
-        "notesLabel": "Noter",
-        "notesPlaceholder": "Yderligere oplysninger om denne kontakt...",
-        "updateButton": "Opdater kontakt",
-        "addButton": "Tilføj kontakt",
-        "saving": "Gemmer...",
-        "cancel": "Annuller"
-      },
-      "card": {
-        "edit": "Rediger"
-      },
-      "messages": {
-        "nameAndRoleRequired": "Navn og rolle er påkrævet.",
-        "loginRequired": "Du skal være logget ind for at gemme kontakter.",
-        "updated": "Kontakt opdateret!",
-        "added": "Kontakt tilføjet!",
-        "deleted": "Kontakt slettet!"
-      },
-      "errors": {
-        "loadFailed": "Kunne ikke indlæse kontakter.",
-        "saveFailed": "Kunne ikke gemme kontakt.",
-        "deleteFailed": "Kunne ikke slette kontakt."
-      }
-    },
-    "documents": {
-      "title": "Nøgledokumenter",
-      "description": "Kritiske dokumenter, som din familie har brug for at kende til.",
-      "loading": "Indlæser nøgledokumenter...",
-      "empty": {
-        "title": "Ingen nøgledokumenter tilføjet endnu.",
-        "description": "Marker vigtige dokumenter som \"nøgledokumenter\" fra din boks for at få dem vist her.",
-        "tip": "Tip: Gå til din boks og slå \"Inkluder i Vejledning for efterladte\" til for vigtige dokumenter."
-      },
-      "card": {
-        "essentialNote": "Dette dokument er markeret som værende essentielt for dine efterladte."
-      },
-      "errors": {
-        "loadFailed": "Kunne ikke indlæse nøgledokumenter."
-      },
-      "expiration": {
-        "expired": "Udløbet",
-        "expiresSoon": "Udløber snart",
-        "expiring": "Udløber"
-      }
-    },
-    "instructions": {
-      "title": "Sidste ønsker & instruktioner",
-      "description": "Personlig vejledning og beskeder til dine kære.",
-      "loading": "Indlæser instruktioner...",
-      "autoSaveNote": "Dine instruktioner gemmes automatisk, mens du skriver.",
-      "sections": {
-        "funeral": {
-          "title": "Begravelsesønsker",
-          "description": "Dine præferencer for begravelsesarrangementer og ceremonier.",
-          "placeholder": "f.eks. Kremering, ingen formel ceremoni, spil 'My Way' af Frank Sinatra..."
-        },
-        "digitalAccounts": {
-          "title": "Nedlukning af digitale konti",
-          "description": "Instruktioner til håndtering af dine digitale konti og online tilstedeværelse.",
-          "placeholder": "f.eks. Slet venligst min Facebook-profil, men arkiver min Gmail. Overfør mine billeder fra Google Drive til..."
-        },
-        "messages": {
-          "title": "Beskeder til kære",
-          "description": "Personlige beskeder og sidste tanker til din familie og venner.",
-          "placeholder": "Del dine tanker, minder og sidste beskeder til dem, du elsker..."
-        }
-      },
-      "errors": {
-        "loadFailed": "Kunne ikke indlæse instruktioner."
-      }
-    }
+    "title": "Vejledning for efterladte"
   },
   "testimonials": {
+    "authority": {
+      "advisors": "Anbefalet af finansielle rådgivere",
+      "attorneys": "Betroet af familieadvokater",
+      "counselors": "Støttet af sorgrådgivere"
+    },
     "badge": "Rigtige familier tager kontrol",
-    "title": "Betroet af 15.000+ europæiske familier",
-    "subtitle": "Se hvordan familier som din fandt sikkerhed og fred med Arveboks",
-    "verified": "Verificeret familie",
-    "trustedBy": "Betroet og anbefalet af",
+    "compliance": {
+      "dataProtection": "Databeskyttelse certificeret",
+      "gdpr": "GDPR-kompatibel",
+      "iso": "ISO 27001 certificeret"
+    },
     "stats": {
       "families": "15.000+",
       "familiesLabel": "europæiske familier beskyttet",
@@ -247,37 +219,30 @@
     },
     "stories": {
       "1": {
-        "name": "Michael K.",
-        "role": "Far til tre",
+        "highlight": "✨ Sat op på kun 2 timer, beskytter 3 børn og ægtefælle",
         "location": "München, Tyskland",
+        "name": "Michael K.",
         "quote": "Efter min brors pludselige ulykke så jeg min svigerinde kæmpe i uger med at finde vigtige dokumenter og adgangskoder. Det var da, jeg vidste, jeg ikke kunne lade det samme ske for min familie. Nu er alt organiseret, og min kone ved præcis, hvor hun skal finde, hvad hun har brug for. At være forberedt og i kontrol er uvurderligt.",
-        "highlight": "✨ Sat op på kun 2 timer, beskytter 3 børn og ægtefælle"
+        "role": "Far til tre"
       },
       "2": {
-        "name": "Anna S.",
-        "role": "Virksomhedsejer",
+        "highlight": "💼 Virksomhed og privatliv organiseret på ét sikkert sted",
         "location": "Wien, Østrig",
+        "name": "Anna S.",
         "quote": "Som enlig mor, der driver en virksomhed, bekymrede jeg mig konstant om, hvad der ville ske, hvis der skete mig noget. Arveboks hjalp mig med at organisere alt - fra virksomhedskonti til mine børns skoleoplysninger. Min søster har nu adgang til alt, hun har brug for at træde til. Jeg sover så meget bedre ved at vide, at de er beskyttet.",
-        "highlight": "💼 Virksomhed og privatliv organiseret på ét sikkert sted"
+        "role": "Virksomhedsejer"
       },
       "3": {
-        "name": "Thomas R.",
-        "role": "Pensioneret lærer",
+        "highlight": "❤️ 40 års familiehistorie bevaret og beskyttet",
         "location": "Zürich, Schweiz",
+        "name": "Thomas R.",
         "quote": "Min kone har tidlig demens, og jeg indså, jeg havde brug for at forberede mig, mens jeg stadig kunne. Arveboks gjorde det enkelt at organisere vores 40 års liv sammen. Vores børn har nu klare instruktioner og adgang til alt. Det har bragt hele vores familie tættere sammen ved at vide, at vi er forberedt på hvad som helst, der kommer.",
-        "highlight": "❤️ 40 års familiehistorie bevaret og beskyttet"
+        "role": "Pensioneret lærer"
       }
     },
-    "authority": {
-      "advisors": "Anbefalet af finansielle rådgivere",
-      "attorneys": "Betroet af familieadvokater",
-      "counselors": "Støttet af sorgrådgivere"
-    },
-    "compliance": {
-      "gdpr": "GDPR-kompatibel",
-      "dataProtection": "Databeskyttelse certificeret",
-      "iso": "ISO 27001 certificeret"
-    },
-    "bottomCta": {}
+    "subtitle": "Se hvordan familier som din fandt sikkerhed og fred med Arveboks",
+    "title": "Betroet af 15.000+ europæiske familier",
+    "trustedBy": "Betroet og anbefalet af",
+    "verified": "Verificeret familie"
   }
 }

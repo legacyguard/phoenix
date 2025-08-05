@@ -1,261 +1,124 @@
 {
-  "_comment": "Shared translations used across the application",
-  "navigation": {
-    "dashboard": "Übersicht",
-    "vault": "Der Tresor",
-    "trustedCircle": {
-      "title": "Ihr vertrauenswürdiger Kreis",
-      "subtitle": "Die Menschen, denen Sie vertrauen, um Ihre Familie und Ihr Erbe zu schützen und zu betreuen.",
-      "responsibilities": "Ihre Verantwortlichkeiten:",
-      "preparationStatus": "Vorbereitungsstatus:",
-      "informedOfRole": "Wurde über ihre Rolle informiert",
-      "acceptedResponsibility": "Hat die Verantwortung akzeptiert",
-      "hasAccessToDocuments": "Hat Zugang zu notwendigen Dokumenten",
-      "reviewedEmergencyProcedures": "Hat Notfallverfahren überprüft",
-      "addTrustedPerson": "+ Vertrauenswürdige Person hinzufügen",
-      "preparednessStatus": {
-        "wellPrepared": "Gut vorbereitet",
-        "partiallyPrepared": "Teilweise vorbereitet",
-        "needsAttention": "Benötigt Aufmerksamkeit"
-      },
-      "buttonText": {
-        "prepared": "✓ {{name}} ist vorbereitet",
-        "prepareNow": "{{name}} jetzt vorbereiten"
-      },
-      "mockData": {
-        "sarah": {
-          "name": "Sarah Johnson",
-          "relationship": "Ehefrau",
-          "responsibilities": {
-            "bankAccess": "Kann auf alle Bankkonten zugreifen, um Rechnungen zu bezahlen und Haushaltsausgaben zu verwalten.",
-            "inheritAssets": "Wird das Familienhaus, die Hütte und alle Ersparnisse erben.",
-            "medicalPower": "Hat eine medizinische Vollmacht für Gesundheitsentscheidungen."
-          }
-        },
-        "michael": {
-          "name": "Michael Johnson",
-          "relationship": "Bruder",
-          "responsibilities": {
-            "childCare": "Wird sich um unsere Kinder kümmern, wenn beide Eltern weg sind.",
-            "estateExecution": "Wird unsere letzten Wünsche ausführen und die Nachlassabwicklung verwalten.",
-            "businessManagement": "Kann vorübergehend die Johnson Contracting LLC verwalten."
-          }
-        },
-        "robert": {
-          "name": "Robert Chen",
-          "relationship": "Geschäftspartner",
-          "responsibilities": {
-            "businessAuthority": "Hat die Befugnis, Geschäftsbetriebe zu verwalten und Verträge zu unterzeichnen.",
-            "buySellAgreement": "Wird meine Geschäftsanteile gemäß unserer Kauf-Verkauf-Vereinbarung kaufen."
-          }
-        },
-        "emily": {
-          "name": "Emily Thompson",
-          "relationship": "Schwägerin",
-          "responsibilities": {
-            "backupGuardian": "Ersatzvormund für Kinder, falls der primäre Vormund nicht dienen kann."
-          }
-        }
-      }
-    },
-    "familyHub": "Familien-Hub",
-    "legacyBriefing": {
-      "legacy_briefing_3": "Legacy-Briefing",
-      "create_and_manage_sealed_messa_4": "Erstellen und verwalten Sie versiegelte Nachrichten für Ihre Liebsten",
-      "failed_to_load_your_time_capsu_1": "Fehler beim Laden Ihrer Zeitkapseln",
-      "are_you_sure_you_want_to_delet_2": "Sind Sie sicher, dass Sie diese Zeitkapsel löschen möchten?",
-      "create_new_message_5": "Neue Nachricht erstellen",
-      "no_time_capsules_yet_6": "Noch keine Zeitkapseln",
-      "create_meaningful_messages_for_7": "Erstellen Sie bedeutungsvolle Nachrichten für Ihre Liebsten, die sie in der Zukunft erhalten werden",
-      "create_your_first_message_8": "Ihre erste Nachricht erstellen",
-      "to_9": "An:",
-      "unlocks_on_10": "Entsperrt am:",
-      "unlocks_11": "Entsperrt:",
-      "after_passing_12": "Nach dem Tod",
-      "statusLabels": {
-        "locked": "Verschlossen",
-        "unlocked": "Entsperrt",
-        "delivered": "Zugestellt",
-        "noRecipients": "Keine Empfänger"
-      },
-      "messageTypes": {
-        "text": "Textnachricht",
-        "photo": "Fotonachricht",
-        "video": "Videonachricht",
-        "audio": "Audionachricht"
-      },
-      "actions": {
-        "edit": "Bearbeiten",
-        "delete": "Löschen"
-      },
-      "toastMessages": {
-        "deleteSuccess": "Zeitkapsel erfolgreich gelöscht",
-        "deleteError": "Fehler beim Löschen der Zeitkapsel"
-      },
-      "dateFormat": {
-        "dateNotSet": "Datum nicht gesetzt",
-        "created": "Erstellt"
-      },
-      "errors": {
-        "textContentRequired": "Textinhalt ist für Textnachrichten erforderlich",
-        "unlockDateRequired": "Entsperrdatum ist erforderlich, wenn die Bedingung ein Datum ist",
-        "failedToUploadAttachment": "Hochladen des Anhangs fehlgeschlagen",
-        "failedToCreate": "Erstellen der Zeitkapsel fehlgeschlagen",
-        "failedToFetch": "Abrufen der Zeitkapseln fehlgeschlagen",
-        "failedToUpdate": "Aktualisieren der Zeitkapsel fehlgeschlagen",
-        "failedToDelete": "Löschen der Zeitkapsel fehlgeschlagen",
-        "notFoundOrCannotModify": "Zeitkapsel nicht gefunden oder kann nicht geändert werden",
-        "notFoundOrCannotDelete": "Zeitkapsel nicht gefunden oder kann nicht gelöscht werden",
-        "missingUploadFields": "Fehlende erforderliche Felder: fileName, fileType, fileSizeBytes",
-        "invalidFileType": "Ungültiger Dateityp. Erlaubte Typen: webm, mp4, mov",
-        "fileSizeExceeds500MB": "Dateigröße überschreitet die maximal erlaubte Größe von 500MB",
-        "premiumRequired": "Premium-Abonnement erforderlich",
-        "premiumRequiredMessage": "Videonachrichten sind eine Premium-Funktion. Bitte upgraden Sie Ihr Abonnement, um diese Funktion zu nutzen.",
-        "failedToCreateUploadUrl": "Erstellen der Upload-URL fehlgeschlagen"
-      }
-    },
-    "executorToolkit": "Testamentsvollstrecker-Toolkit",
-    "assets": "Was Sie besitzen und schätzen",
-    "manual": "Handbuch",
-    "documents": "Wichtige Papiere",
-    "guardians": "Menschen, denen Sie vertrauen",
-    "family": "Familien-Hub",
-    "timeCapsule": "Zeitkapseln",
-    "will": "Ihre letzten Wünsche",
-    "consultations": "Rechtsberatungen",
-    "settings": "Einstellungen",
-    "help": "Hilfe & Support",
-    "subscriptions": "Abonnements"
-  },
-  "nav": {
-    "dashboard": "Übersicht",
-    "manual": "Handbuch für Hinterbliebene",
-    "vault": "Erbschaftstresor",
-    "guardians": "Vertrauensnetzwerk",
-    "will": "Testament",
-    "settings": "Einstellungen",
-    "help": "Hilfe & Support"
-  },
-  "footer": {
-    "tagline": "Ihr Erbe für kommende Generationen bewahren.",
-    "platform": {
-      "title": "Plattform",
-      "heritageVault": "Erbschaftstresor",
-      "guardianNetwork": "Vertrauensnetzwerk",
-      "dashboard": "Übersicht",
-      "security": "Sicherheit"
-    },
-    "support": {
-      "title": "Support",
-      "helpCenter": "Hilfe-Center",
-      "userGuides": "Benutzerhandbücher",
-      "contactUs": "Kontaktieren Sie uns",
-      "community": "Community"
-    },
-    "legal": {
-      "title": "Rechtliches",
-      "privacyPolicy": "Datenschutzerklärung",
-      "termsOfService": "Nutzungsbedingungen",
-      "dataProtection": "Datenschutz"
-    },
-    "copyright": "© {{year}} LegacyGuard. Alle Rechte vorbehalten.",
-    "description": "Digitale Nachlassverwaltung auf Unternehmensniveau."
-  },
-  "hero": {
-    "title": "Schlafen Sie ruhig, wissend, dass es Ihrer Familie gut gehen wird",
-    "subtitle": "Wenn das Leben eine unerwartete Wendung nimmt, muss Ihre Familie nicht suchen, raten oder sich sorgen. Alles, was sie brauchen, wird genau dort sein, wo sie es finden können.",
-    "cta_primary": "Übernehmen Sie noch heute die Kontrolle über die Zukunft Ihrer Familie",
-    "cta_secondary": "Sehen Sie, wie einfach es ist",
-    "urgencySubtitle": "Die Einrichtung dauert nur 10 Minuten - seien Sie der vorbereitete Elternteil, den Ihre Familie braucht",
-    "secondaryContext": "2-Minuten-Video mit echten Familien",
-    "trustSignals": {
-      "dataOwnership": "Die privaten Angelegenheiten Ihrer Familie bleiben privat",
-      "gdprCompliant": "Entwickelt mit europäischen Familienwerten",
-      "europeanFamilies": "Vertraut von Familien, denen es wirklich wichtig ist"
-    },
-    "community": {}
-  },
-  "features": {
-    "title": "Drei einfache Versprechen, die wir Ihnen geben",
-    "subtitle": "Alles, was Ihre Familie braucht, nichts, was sie nicht braucht. Einfach, klar und immer da, wenn es darauf ankommt.",
-    "sleepBetter": {
-      "title": "Schlafen Sie heute Nacht besser",
-      "description": "Hören Sie auf, sich Sorgen zu machen über 'was, wenn mir etwas passiert.' Ihre Familie wird genau wissen, was zu tun ist, wo sie alles finden können und wen sie anrufen müssen."
-    },
-    "noChaos": {
-      "title": "Kein hektisches Suchen",
-      "description": "Ihre Familie wird nicht Tage damit verbringen, in Schubladen zu suchen, Banken anzurufen oder Passwörter zu erraten. Alles Wichtige ist an einem sicheren Ort organisiert."
-    },
-    "clearInstructions": {
-      "title": "Schritt-für-Schritt-Anleitung",
-      "description": "Ihre Liebsten erhalten klare, einfache Anweisungen für genau das, was zu tun ist und wann. Keine Verwirrung, kein Rätselraten, kein Stress in schwierigen Zeiten."
-    },
-    "security": {
-      "title": "Absolute Vertraulichkeit & Datenschutz",
-      "description": "So konzipiert, dass keine unbefugte Person auf Ihre Daten zugreifen kann. Auch wir nicht. Ihre Privatsphäre ist unsere höchste Priorität."
-    },
-    "guardians": {
-      "title": "Netzwerk von Vertrauenspersonen",
-      "description": "Bestimmen Sie vertrauenswürdige Familienmitglieder und Freunde als Vertrauenspersonen, um die Kontinuität des Erbes zu gewährleisten."
-    },
-    "storage": {
-      "title": "Sicherer Cloud-Speicher",
-      "description": "Redundante Backups in mehreren Rechenzentren mit einer Verfügbarkeitsgarantie von 99,99 %."
-    },
-    "timelock": {
-      "title": "Zeitlich gesperrter Zugriff",
-      "description": "Legen Sie Bedingungen fest, wann und wie Ihre Begünstigten auf Ihr digitales Erbe zugreifen können."
-    },
-    "stories": {
-      "title": "Persönliche Geschichten",
-      "description": "Erstellen Sie reichhaltige multimediale Erzählungen, die die Essenz der Reise Ihrer Familie einfangen."
-    },
-    "preservation": {
-      "title": "Lebenslange Aufbewahrung",
-      "description": "Ihr Erbe wird durch automatische Formatmigration und Updates unbegrenzt aufbewahrt."
-    }
-  },
   "alerts": {
-    "title": "Benachrichtigungs-Center",
     "description": "Verwalten Sie Ihre Benachrichtigungen über ablaufende Dokumente.",
-    "unread": "Ungelesen",
-    "markAsRenewed": "Als erneuert markieren",
-    "snooze7Days": "Für 7 Tage stummschalten",
     "dismiss": "Schließen",
-    "unsnooze": "Stummschaltung aufheben",
-    "tabs": {
-      "active": "Aktiv",
-      "snoozed": "Stummgeschaltet",
-      "dismissed": "Geschlossen"
+    "errors": {
+      "dismissFailed": "Schließen der Benachrichtigung fehlgeschlagen.",
+      "loadFailed": "Laden der Benachrichtigungen fehlgeschlagen.",
+      "renewFailed": "Markieren des Dokuments als erneuert fehlgeschlagen.",
+      "snoozeFailed": "Stummschalten der Benachrichtigung fehlgeschlagen."
     },
-    "noActiveAlerts": "Sie haben keine aktiven Benachrichtigungen.",
-    "noSnoozedAlerts": "Sie haben keine stummgeschalteten Benachrichtigungen.",
-    "noDismissedAlerts": "Sie haben keine geschlossenen Benachrichtigungen.",
-    "expiresOn": "Läuft am {{date}} ab",
-    "snoozedUntil": "Stummgeschaltet bis {{date}}",
-    "renewalInstructions": "Anweisungen zur Erneuerung",
-    "badges": {
-      "expired": "Abgelaufen",
-      "expiring_7": "Läuft bald ab",
-      "expiring_30": "Läuft in 30 Tagen ab",
-      "expiring_90": "Läuft in 90 Tagen ab"
-    },
-    "types": {
-      "expired": "Das Dokument {{documentName}} ist vor {{daysAgo}} Tagen abgelaufen!",
-      "expiring7": "Beeilen Sie sich! {{documentName}} läuft in {{days}} Tagen ab.",
-      "expiring30": "Erinnerung: {{documentName}} läuft in {{days}} Tagen ab.",
-      "expiring90": "Achtung: {{documentName}} läuft in {{days}} Tagen ab."
-    },
+    "markAsRenewed": "Als erneuert markieren",
     "messages": {
       "dismissed": "Benachrichtigung erfolgreich geschlossen.",
-      "snoozed": "Benachrichtigung für {{days}} Tage stummgeschaltet.",
       "markedAsRenewed": "Dokument als erneuert markiert."
     },
-    "errors": {
-      "loadFailed": "Laden der Benachrichtigungen fehlgeschlagen.",
-      "dismissFailed": "Schließen der Benachrichtigung fehlgeschlagen.",
-      "snoozeFailed": "Stummschalten der Benachrichtigung fehlgeschlagen.",
-      "renewFailed": "Markieren des Dokuments als erneuert fehlgeschlagen."
-    }
+    "noActiveAlerts": "Sie haben keine aktiven Benachrichtigungen.",
+    "noDismissedAlerts": "Sie haben keine geschlossenen Benachrichtigungen.",
+    "noSnoozedAlerts": "Sie haben keine stummgeschalteten Benachrichtigungen.",
+    "renewalInstructions": "Anweisungen zur Erneuerung",
+    "snooze7Days": "Für 7 Tage stummschalten",
+    "tabs": {
+      "active": "Aktiv",
+      "dismissed": "Geschlossen",
+      "snoozed": "Stummgeschaltet"
+    },
+    "title": "Benachrichtigungs-Center",
+    "unread": "Ungelesen",
+    "unsnooze": "Stummschaltung aufheben"
+  },
+  "app": {
+    "name": "LegacyGuard",
+    "tagline": "Ihr Erbe für kommende Generationen bewahren."
+  },
+  "auth": {
+    "accessApplication": "Anwendung zugreifen",
+    "enterPassword": "Passwort eingeben",
+    "incorrectPassword": "Falsches Passwort",
+    "logout": "Abmelden",
+    "password": "Passwort",
+    "protectedApplication": "Geschützte Anwendung",
+    "protectedApplicationDesc": "Diese Anwendung ist passwortgeschützt. Bitte geben Sie das Passwort ein, um fortzufahren."
+  },
+  "features": {
+    "clearInstructions": {
+      "description": "Ihre Liebsten erhalten klare, einfache Anweisungen für genau das, was zu tun ist und wann. Keine Verwirrung, kein Rätselraten, kein Stress in schwierigen Zeiten.",
+      "title": "Schritt-für-Schritt-Anleitung"
+    },
+    "guardians": {
+      "description": "Bestimmen Sie vertrauenswürdige Familienmitglieder und Freunde als Vertrauenspersonen, um die Kontinuität des Erbes zu gewährleisten.",
+      "title": "Netzwerk von Vertrauenspersonen"
+    },
+    "noChaos": {
+      "description": "Ihre Familie wird nicht Tage damit verbringen, in Schubladen zu suchen, Banken anzurufen oder Passwörter zu erraten. Alles Wichtige ist an einem sicheren Ort organisiert.",
+      "title": "Kein hektisches Suchen"
+    },
+    "preservation": {
+      "description": "Ihr Erbe wird durch automatische Formatmigration und Updates unbegrenzt aufbewahrt.",
+      "title": "Lebenslange Aufbewahrung"
+    },
+    "security": {
+      "description": "So konzipiert, dass keine unbefugte Person auf Ihre Daten zugreifen kann. Auch wir nicht. Ihre Privatsphäre ist unsere höchste Priorität.",
+      "title": "Absolute Vertraulichkeit & Datenschutz"
+    },
+    "sleepBetter": {
+      "description": "Hören Sie auf, sich Sorgen zu machen über 'was, wenn mir etwas passiert.' Ihre Familie wird genau wissen, was zu tun ist, wo sie alles finden können und wen sie anrufen müssen.",
+      "title": "Schlafen Sie heute Nacht besser"
+    },
+    "storage": {
+      "description": "Redundante Backups in mehreren Rechenzentren mit einer Verfügbarkeitsgarantie von 99,99 %.",
+      "title": "Sicherer Cloud-Speicher"
+    },
+    "stories": {
+      "description": "Erstellen Sie reichhaltige multimediale Erzählungen, die die Essenz der Reise Ihrer Familie einfangen.",
+      "title": "Persönliche Geschichten"
+    },
+    "subtitle": "Alles, was Ihre Familie braucht, nichts, was sie nicht braucht. Einfach, klar und immer da, wenn es darauf ankommt.",
+    "timelock": {
+      "description": "Legen Sie Bedingungen fest, wann und wie Ihre Begünstigten auf Ihr digitales Erbe zugreifen können.",
+      "title": "Zeitlich gesperrter Zugriff"
+    },
+    "title": "Drei einfache Versprechen, die wir Ihnen geben"
+  },
+  "footer": {
+    "description": "Digitale Nachlassverwaltung auf Unternehmensniveau.",
+    "legal": {
+      "dataProtection": "Datenschutz",
+      "privacyPolicy": "Datenschutzerklärung",
+      "termsOfService": "Nutzungsbedingungen",
+      "title": "Rechtliches"
+    },
+    "platform": {
+      "dashboard": "Übersicht",
+      "guardianNetwork": "Vertrauensnetzwerk",
+      "heritageVault": "Erbschaftstresor",
+      "security": "Sicherheit",
+      "title": "Plattform"
+    },
+    "support": {
+      "community": "Community",
+      "contactUs": "Kontaktieren Sie uns",
+      "helpCenter": "Hilfe-Center",
+      "title": "Support",
+      "userGuides": "Benutzerhandbücher"
+    },
+    "tagline": "Ihr Erbe für kommende Generationen bewahren."
+  },
+  "hero": {
+    "cta_primary": "Übernehmen Sie noch heute die Kontrolle über die Zukunft Ihrer Familie",
+    "cta_secondary": "Sehen Sie, wie einfach es ist",
+    "secondaryContext": "2-Minuten-Video mit echten Familien",
+    "subtitle": "Wenn das Leben eine unerwartete Wendung nimmt, muss Ihre Familie nicht suchen, raten oder sich sorgen. Alles, was sie brauchen, wird genau dort sein, wo sie es finden können.",
+    "title": "Schlafen Sie ruhig, wissend, dass es Ihrer Familie gut gehen wird",
+    "trustSignals": {
+      "dataOwnership": "Die privaten Angelegenheiten Ihrer Familie bleiben privat",
+      "europeanFamilies": "Vertraut von Familien, denen es wirklich wichtig ist",
+      "gdprCompliant": "Entwickelt mit europäischen Familienwerten"
+    },
+    "urgencySubtitle": "Die Einrichtung dauert nur 10 Minuten - seien Sie der vorbereitete Elternteil, den Ihre Familie braucht"
+  },
+  "loadMore": "Load More",
+  "navigation": {
+    "timeCapsule": "Zeitkapseln"
   }
 }

@@ -4,11 +4,10 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Alert, AlertDescription } from '@/components/ui/alert';
-import { Lock, AlertCircle } from 'lucide-react';
+import { Lock, AlertCircle, LogOut } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 const PASSWORD = 'legacy1guard';
-const STORAGE_KEY = 'legacyguard_auth';
 
 interface PasswordWallProps {
   children: React.ReactNode;
@@ -24,12 +23,8 @@ export default function PasswordWall({ children }: PasswordWallProps) {
   console.log('PasswordWall render - ready:', ready, 'isLoading:', isLoading, 'isAuthenticated:', isAuthenticated);
 
   useEffect(() => {
-     
-    // Check if user was previously authenticated
-    const storedAuth = localStorage.getItem(STORAGE_KEY);
-    if (storedAuth === 'true') {
-      setIsAuthenticated(true);
-    }
+    // Always start with authentication required
+    // No localStorage persistence for security
     setIsLoading(false);
   }, []);
 
@@ -39,26 +34,46 @@ export default function PasswordWall({ children }: PasswordWallProps) {
 
     if (password === PASSWORD) {
       setIsAuthenticated(true);
-      // Store authentication state
-      localStorage.setItem(STORAGE_KEY, 'true');
+      // Don't store authentication state - session only
     } else {
       setError(t('common.auth.incorrectPassword'));
       setPassword('');
     }
   };
 
-  // Show loading state while checking auth or i18n not ready
-  if (isLoading || !ready) {
+  const handleLogout = () => {
+    setIsAuthenticated(false);
+    setPassword('');
+    setError('');
+  };
+
+  // Show loading state while i18n not ready
+  if (!ready) {
     return (
       <div className="flex items-center justify-center min-h-screen bg-background">
         <div className="animate-pulse">{t("passwordWall.loading_1")}</div>
       </div>);
-
   }
 
   // Show protected content if authenticated
   if (isAuthenticated) {
-    return <>{children}</>;
+    return (
+      <>
+        {/* Logout button positioned in top-right corner */}
+        <div className="fixed top-4 right-4 z-50">
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={handleLogout}
+            className="flex items-center gap-2"
+          >
+            <LogOut className="h-4 w-4" />
+            {t('common.auth.logout')}
+          </Button>
+        </div>
+        {children}
+      </>
+    );
   }
 
   // Show password form
@@ -105,5 +120,4 @@ export default function PasswordWall({ children }: PasswordWallProps) {
         </CardContent>
       </Card>
     </div>);
-
 }

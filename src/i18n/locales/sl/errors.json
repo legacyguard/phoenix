@@ -1,98 +1,68 @@
 {
-  "_comment": "Shared translations used across the application",
-  "errorBoundary": {
-    "title": "Ups! Nekaj je šlo narobe",
-    "description": "Opravičujemo se za nevšečnosti. Prišlo je do nepričakovane napake.",
-    "errorId": "ID napake",
-    "tryAgain": "Poskusi znova",
-    "reloadPage": "Osveži stran",
-    "goToHomepage": "Pojdi na domačo stran",
-    "technicalDetails": "Tehnične podrobnosti",
-    "hide": "Skrij",
-    "show": "Pokaži",
-    "stackTrace": "Sledenje sklada",
-    "componentStack": "Sklad komponent",
-    "helpText": "Če se težava ponavlja, se obrnite na našo podporo z ID-jem napake."
-  },
-  "errorTest": {
-    "title": "Test beleženja napak",
-    "description": "Test error handling and logging functionality",
-    "triggerSyncError": "Sproži sinhrono napako (ErrorBoundary)",
-    "triggerAsyncError": "Sproži asinhrono napako",
-    "logRegularError": "Zabeleži navadno napako",
-    "logCriticalError": "Zabeleži kritično napako",
-    "triggerAlert": "Sproži opozorilo (6 kritičnih napak)",
-    "errorMessages": {
-      "testError": "Test error from ErrorTest component",
-      "testAsyncRejection": "Test asinhronnega zavrnitve",
-      "manualTestError": "Napaka ročnega testa",
-      "testCriticalError": "Test kritične napake",
-      "criticalErrorWithIndex": "Critical error {{index}}"
-    },
-    "descriptions": {
-      "syncError": "Triggers a synchronous error that will be caught by the ErrorBoundary",
-      "asyncError": "Triggers an asynchronous error that will be caught by error handling",
-      "regularError": "Logs a regular error for testing error tracking",
-      "criticalError": "Logs a critical error for testing critical error handling",
-      "multipleErrors": "Triggers multiple critical errors to test alert thresholds"
-    },
-    "context": {
-      "component": "ErrorTest",
-      "action": "button-click",
-      "severity": "high"
-    },
-    "notifications": {
-      "errorLogged": "Napaka uspešno zabeležena",
-      "criticalErrorLogged": "Critical error logged successfully",
-      "multipleErrorsTriggered": "Multiple critical errors triggered",
-      "errorBoundaryTriggered": "Meja napak aktivirana",
-      "asyncErrorCaught": "Async error caught and handled"
-    }
-  },
   "debug": {
     "panel": {
-      "title": "Plošča za odpravljanje napak",
-      "recentErrors": "Nedavne napake aplikacije",
-      "technicalDetails": "Tehnične podrobnosti",
-      "tabs": {
-        "list": "Seznam",
-        "details": "Podrobnosti"
-      },
-      "errorCount": "{{count}} napak",
       "actions": {
-        "downloadErrors": "Prenesi napake",
-        "clearAllErrors": "Počisti vse napake"
-      },
-      "messages": {
-        "errorsCleared": "Vse napake počiščene",
-        "errorCopied": "Napaka kopirana v odložišče",
-        "errorsDownloaded": "Napake prenesene"
+        "clearAllErrors": "Počisti vse napake",
+        "downloadErrors": "Prenesi napake"
       },
       "error": {
-        "unknownError": "Neznana napaka",
+        "errorMessage": "Sporočilo o napaki",
         "noMessage": "Brez sporočila",
-        "errorMessage": "Sporočilo o napaki"
-      },
-      "sections": {
-        "stackTrace": "Sledenje sklada",
-        "context": "Kontekst",
-        "location": "Lokacija",
-        "browserInfo": "Informacije o brskalniku",
-        "time": "Čas"
+        "unknownError": "Neznana napaka"
       },
       "fields": {
-        "url": "URL:",
         "path": "Pot:",
         "query": "Poizvedba:",
+        "url": "URL:",
         "userAgent": "Uporabniški agent:",
         "viewport": "Območje pogleda:"
-      }
+      },
+      "messages": {
+        "errorCopied": "Napaka kopirana v odložišče",
+        "errorsCleared": "Vse napake počiščene",
+        "errorsDownloaded": "Napake prenesene"
+      },
+      "recentErrors": "Nedavne napake aplikacije",
+      "sections": {
+        "browserInfo": "Informacije o brskalniku",
+        "context": "Kontekst",
+        "location": "Lokacija",
+        "stackTrace": "Sledenje sklada",
+        "time": "Čas"
+      },
+      "tabs": {
+        "details": "Podrobnosti",
+        "list": "Seznam"
+      },
+      "title": "Plošča za odpravljanje napak"
     }
+  },
+  "errorBoundary": {
+    "componentStack": "Sklad komponent",
+    "description": "Opravičujemo se za nevšečnosti. Prišlo je do nepričakovane napake.",
+    "errorId": "ID napake",
+    "goToHomepage": "Pojdi na domačo stran",
+    "helpText": "Če se težava ponavlja, se obrnite na našo podporo z ID-jem napake.",
+    "hide": "Skrij",
+    "reloadPage": "Osveži stran",
+    "show": "Pokaži",
+    "stackTrace": "Sledenje sklada",
+    "technicalDetails": "Tehnične podrobnosti",
+    "title": "Ups! Nekaj je šlo narobe",
+    "tryAgain": "Poskusi znova"
+  },
+  "errorTest": {
+    "logCriticalError": "Zabeleži kritično napako",
+    "logRegularError": "Zabeleži navadno napako",
+    "title": "Test beleženja napak",
+    "triggerAlert": "Sproži opozorilo (6 kritičnih napak)",
+    "triggerAsyncError": "Sproži asinhrono napako",
+    "triggerSyncError": "Sproži sinhrono napako (ErrorBoundary)"
   },
   "test": {
     "environment": {
-      "title": "Samo za testno okolje",
-      "description": "Ta stran je za testiranje sistema za beleženje napak. Odstranite to pot pred uvajanjem v produkcijo."
+      "description": "Ta stran je za testiranje sistema za beleženje napak. Odstranite to pot pred uvajanjem v produkcijo.",
+      "title": "Samo za testno okolje"
     }
   }
 }

@@ -1,331 +1,273 @@
 {
-  "_comment": "Správa majetku a cenností",
-  "assets": {
-    "overview": {
-      "title": "Co vlastníte a čeho si ceníte",
-      "subtitle": "Spravujte a sledujte svůj majetek, nemovitosti a investice",
-      "addAsset": "Přidat majetek",
-      "totalPortfolioValue": "Celková hodnota portfolia",
-      "estimatedValue": "Odhadovaná hodnota všech aktiv",
-      "distribution": {
-        "title": "Rozdělení majetku",
-        "subtitle": "Rozdělení portfolia podle kategorií"
-      },
-      "beneficiaryAllocation": {
-        "title": "Sdílení vašich pokladů",
-        "subtitle": "Sledujte, jak jsou vaše poklady rozděleny mezi blízké",
-        "allAssigned": "Všechny poklady mají přiřazené blízké osoby",
-        "unassignedWarning": "{{count}} pokladů je potřeba přiřadit blízkým osobám"
-      },
-      "viewInheritanceSummary": "Zobrazit souhrn dědictví",
-      "addNew": "Přidat nový",
-      "errors": {
-        "loadFailed": "Nepodařilo se načíst data o majetku"
-      }
-    },
-    "categories": {
-      "property": "Nemovitost",
-      "vehicle": "Vozidlo",
-      "financial": "Finanční",
-      "business": "Podnikání",
-      "personal": "Osobní",
-      "uncategorized": "Nezařazeno"
-    }
-  },
-  "assetCard": {
-    "assetTypes": {
-      "Primary Residence": "Hlavní bydliště",
-      "Vacation Home": "Rekreační nemovitost",
-      "Rental Property": "Pronajímaná nemovitost",
-      "Land": "Pozemek",
-      "Commercial Property": "Komerční nemovitost",
-      "Bank Account": "Bankovní účet",
-      "Investment Portfolio": "Investiční portfolio",
-      "Cryptocurrency Wallet": "Kryptoměnová peněženka",
-      "Loan / Mortgage": "Půjčka / Hypotéka",
-      "Insurance Policy": "Pojištění",
-      "Pension / Retirement Account": "Penzijní / Důchodový účet",
-      "Car": "Auto",
-      "Motorcycle": "Motocykl",
-      "Boat": "Loď",
-      "RV / Camper": "Karavan",
-      "Aircraft": "Letadlo",
-      "Online Account": "Online účet",
-      "Software License": "Softwarová licence",
-      "Domain Name": "Doménové jméno",
-      "Digital Subscription": "Digitální předplatné",
-      "Cryptocurrency": "Kryptoměna",
-      "NFT": "NFT",
-      "Jewelry": "Šperky",
-      "Art / Collectibles": "Umění / Sbírky",
-      "Electronics": "Elektronika",
-      "Furniture": "Nábytek",
-      "Tools / Equipment": "Nástroje / Vybavení",
-      "Other Valuables": "Jiné cennosti",
-      "Custom Asset": "Vlastní majetek"
-    },
-    "dateFormat": {
-      "addedOn": "Přidáno dne {{date}}",
-      "createdOn": "Vytvořeno dne {{date}}",
-      "updatedOn": "Aktualizováno dne {{date}}"
-    },
-    "labels": {
-      "estimatedValue": "Odhadovaná hodnota",
-      "category": "Kategorie",
-      "subType": "Typ"
-    }
-  },
   "assetDetail": {
-    "loading": "Načítání detailů majetku...",
-    "errors": {
-      "failedToLoad": "Nepodařilo se načíst detaily majetku",
-      "nameRequired": "Název majetku je povinný",
-      "failedToSave": "Nepodařilo se uložit majetek"
-    },
-    "messages": {
-      "createdSuccessfully": "Majetek úspěšně vytvořen",
-      "updatedSuccessfully": "Majetek úspěšně aktualizován"
-    },
-    "title": {
-      "new": "Nový {{type}}"
-    },
-    "subtitle": {
-      "new": "Vyplňte detaily pro přidání tohoto majetku do svého portfolia",
-      "edit": "Aktualizujte detaily tohoto majetku"
-    },
-    "story": {
-      "title": "Příběh tohoto {{type}}",
-      "editButton": "Upravit příběh",
-      "addButton": "Přidat příběh",
-      "emptyTitle": "Jaký je příběh tohoto předmětu?",
-      "emptyDescription": "Sdílejte příběh za tímto předmětem. Tento osobní dotek bude neocenitelný pro vaše blízké.",
-      "placeholder": "např. Tento byl svatební prsten vaší babičky, darovaný jí v roce 1952, když se vdala za vašeho dědečka v malém kostele v jejich rodném městě. Nosila ho každý den po dobu 65 let...",
-      "hints": {
-        "shareMemories": "Sdílejte vzpomínky, význam nebo historii"
-      },
-      "tips": {
-        "title": "Tipy pro smysluplný příběh:",
-        "explainSpecial": "Vysvětlete, proč je tato věc pro vás zvláštní",
-        "shareMemories": "Sdílejte vzpomínky spojené s ní",
-        "describeHistory": "Popište její historii nebo jak jste ji získali",
-        "mentionWishes": "Zmiňte jakákoli přání ohledně toho, jak by měla být použita nebo zachována"
-      },
-      "saving": "Ukládání...",
-      "saveStory": "Uložit příběh",
-      "messages": {
-        "saved": "Příběh úspěšně uložen"
-      },
-      "errors": {
-        "notAuthenticated": "Pro uložení příběhu musíte být přihlášeni",
-        "saveFailed": "Nepodařilo se uložit příběh"
-      }
-    },
-    "sections": {
-      "basicInformation": "Základní informace",
-      "propertyDetails": "Detaily nemovitosti",
-      "accountDetails": "Detaily účtu",
-      "financialDetails": "Finanční detaily",
-      "liabilitiesAndDocuments": "Související závazky a dokumenty"
-    },
-    "fields": {
-      "assetName": "Název majetku",
-      "assetType": "Typ majetku",
-      "propertyAddress": "Adresa nemovitosti",
-      "propertyRegistryNumber": "Číslo v katastru",
-      "accountType": "Typ účtu",
-      "financialInstitution": "Finanční instituce",
-      "accountNumber": "Číslo účtu / IBAN",
-      "loginCredentials": "Přístupové údaje a poznámky",
-      "estimatedValue": "Odhadovaná hodnota",
-      "currency": "Měna",
-      "liabilityType": "Typ závazku",
-      "providerName": "Poskytovatel",
-      "referenceNumber": "Referenční číslo"
-    },
-    "placeholders": {
-      "assetName": "např. Rodinný dům, investiční portfolio",
-      "propertyAddress": "Zadejte úplnou adresu nemovitosti",
-      "propertyRegistryNumber": "např. číslo v katastru nemovitostí",
-      "selectAccountType": "Vyberte typ účtu",
-      "financialInstitution": "např. Česká spořitelna, Komerční banka",
-      "accountNumber": "např. 1234567890",
-      "loginCredentials": "Správce hesel: 1Password trezor 'Bankovnictví'",
-      "estimatedValue": "0"
-    },
-    "descriptions": {
-      "assetName": "Pojmenujte majetek pro snadnou identifikaci",
-      "assetType": "Vyberte typ, který nejlépe vystihuje tento majetek",
-      "propertyAddress": "Úplná adresa včetně ulice, města, PSČ a země",
-      "propertyRegistryNumber": "Oficiální číslo v katastru nebo listu vlastnictví",
-      "accountType": "Typ finančního účtu nebo investice",
-      "financialInstitution": "Název banky nebo finanční instituce",
-      "accountNumber": "Číslo účtu, IBAN nebo jiné identifikační údaje",
-      "estimatedValue": "Aktuální tržní nebo poslední známá hodnota tohoto majetku",
-      "currency": "Měna, ve které je hodnota uvedena",
-      "noLiabilities": "Zatím nejsou přidány žádné závazky"
-    },
-    "types": {
-      "realEstate": "Nemovitost",
-      "business": "Podnikání",
-      "vehicle": "Vozidlo",
-      "financialAccount": "Finanční účet",
-      "asset": "Majetek"
-    },
     "accountTypes": {
       "bankAccount": "Bankovní účet",
       "investmentPortfolio": "Investiční portfolio",
       "pensionFund": "Penzijní fond"
     },
+    "buttons": {
+      "addLiability": "Přidat závazek",
+      "cancel": "Zrušit",
+      "createAsset": "Vytvořit majetek",
+      "saving": "Ukládám...",
+      "updateAsset": "Aktualizovat majetek"
+    },
+    "descriptions": {
+      "accountNumber": "Číslo účtu, IBAN nebo jiné identifikační údaje",
+      "accountType": "Typ finančního účtu nebo investice",
+      "assetName": "Pojmenujte majetek pro snadnou identifikaci",
+      "assetType": "Vyberte typ, který nejlépe vystihuje tento majetek",
+      "currency": "Měna, ve které je hodnota uvedena",
+      "estimatedValue": "Aktuální tržní nebo poslední známá hodnota tohoto majetku",
+      "financialInstitution": "Název banky nebo finanční instituce",
+      "noLiabilities": "Zatím nejsou přidány žádné závazky",
+      "propertyAddress": "Úplná adresa včetně ulice, města, PSČ a země",
+      "propertyRegistryNumber": "Oficiální číslo v katastru nebo listu vlastnictví"
+    },
+    "errors": {
+      "nameRequired": "Název majetku je povinný"
+    },
+    "fields": {
+      "accountNumber": "Číslo účtu / IBAN",
+      "accountType": "Typ účtu",
+      "assetName": "Název majetku",
+      "assetType": "Typ majetku",
+      "currency": "Měna",
+      "estimatedValue": "Odhadovaná hodnota",
+      "financialInstitution": "Finanční instituce",
+      "liabilityType": "Typ závazku",
+      "loginCredentials": "Přístupové údaje a poznámky",
+      "propertyAddress": "Adresa nemovitosti",
+      "propertyRegistryNumber": "Číslo v katastru",
+      "providerName": "Poskytovatel",
+      "referenceNumber": "Referenční číslo"
+    },
+    "loading": "Načítání detailů majetku...",
+    "messages": {
+      "createdSuccessfully": "Majetek úspěšně vytvořen",
+      "updatedSuccessfully": "Majetek úspěšně aktualizován"
+    },
+    "placeholders": {
+      "accountNumber": "např. 1234567890",
+      "assetName": "např. Rodinný dům, investiční portfolio",
+      "estimatedValue": "0",
+      "financialInstitution": "např. Česká spořitelna, Komerční banka",
+      "loginCredentials": "Správce hesel: 1Password trezor 'Bankovnictví'",
+      "propertyAddress": "Zadejte úplnou adresu nemovitosti",
+      "propertyRegistryNumber": "např. číslo v katastru nemovitostí",
+      "selectAccountType": "Vyberte typ účtu"
+    },
+    "sections": {
+      "accountDetails": "Detaily účtu",
+      "basicInformation": "Základní informace",
+      "financialDetails": "Finanční detaily",
+      "liabilitiesAndDocuments": "Související závazky a dokumenty",
+      "propertyDetails": "Detaily nemovitosti"
+    },
     "securityWarning": "Bezpečnostní upozornění:",
     "securityWarningText": "Nikdy zde neukládejte skutečná hesla. Toto pole použijte jen pro nápovědu, kde heslo najít, nebo instrukce k bezpečnému přístupu.",
-    "buttons": {
-      "cancel": "Zrušit",
-      "saving": "Ukládám...",
-      "createAsset": "Vytvořit majetek",
-      "updateAsset": "Aktualizovat majetek",
-      "addLiability": "Přidat závazek"
+    "story": {
+      "addButton": "Přidat příběh",
+      "editButton": "Upravit příběh",
+      "emptyDescription": "Sdílejte příběh za tímto předmětem. Tento osobní dotek bude neocenitelný pro vaše blízké.",
+      "emptyTitle": "Jaký je příběh tohoto předmětu?",
+      "errors": {
+        "notAuthenticated": "Pro uložení příběhu musíte být přihlášeni",
+        "saveFailed": "Nepodařilo se uložit příběh"
+      },
+      "hints": {
+        "shareMemories": "Sdílejte vzpomínky, význam nebo historii"
+      },
+      "messages": {
+        "saved": "Příběh úspěšně uložen"
+      },
+      "placeholder": "např. Tento byl svatební prsten vaší babičky, darovaný jí v roce 1952, když se vdala za vašeho dědečka v malém kostele v jejich rodném městě. Nosila ho každý den po dobu 65 let...",
+      "saveStory": "Uložit příběh",
+      "saving": "Ukládání...",
+      "tips": {
+        "describeHistory": "Popište její historii nebo jak jste ji získali",
+        "explainSpecial": "Vysvětlete, proč je tato věc pro vás zvláštní",
+        "mentionWishes": "Zmiňte jakákoli přání ohledně toho, jak by měla být použita nebo zachována",
+        "shareMemories": "Sdílejte vzpomínky spojené s ní",
+        "title": "Tipy pro smysluplný příběh:"
+      }
+    },
+    "subtitle": {
+      "edit": "Aktualizujte detaily tohoto majetku",
+      "new": "Vyplňte detaily pro přidání tohoto majetku do svého portfolia"
+    },
+    "types": {
+      "asset": "Majetek",
+      "business": "Podnikání",
+      "financialAccount": "Finanční účet",
+      "realEstate": "Nemovitost",
+      "vehicle": "Vozidlo"
     }
   },
   "assetType": {
-    "selectType": "Vyberte typ {{mainCategory}}",
-    "primaryResidence": "Hlavní bydliště",
-    "vacationHome": "Rekreační nemovitost",
-    "rentalProperty": "Pronajímaná nemovitost",
-    "land": "Pozemek",
-    "commercialProperty": "Komerční nemovitost",
-    "bankAccount": "Bankovní účet",
-    "investmentPortfolio": "Investiční portfolio",
-    "cryptocurrencyWallet": "Kryptoměnová peněženka",
-    "loanMortgage": "Půjčka / Hypotéka",
-    "insurancePolicy": "Pojištění",
-    "pensionRetirement": "Penzijní / Důchodový účet",
-    "car": "Auto",
-    "motorcycle": "Motocykl",
-    "boat": "Loď",
-    "rvCamper": "Karavan",
     "aircraft": "Letadlo",
-    "onlineAccount": "Online účet",
-    "softwareLicense": "Softwarová licence",
-    "domainName": "Doménové jméno",
-    "digitalSubscription": "Digitální předplatné",
-    "cryptocurrency": "Kryptoměna",
-    "nft": "NFT",
-    "jewelry": "Šperky",
     "artCollectibles": "Umění / Sbírky",
+    "bankAccount": "Bankovní účet",
+    "boat": "Loď",
+    "car": "Auto",
+    "commercialProperty": "Komerční nemovitost",
+    "cryptocurrency": "Kryptoměna",
+    "cryptocurrencyWallet": "Kryptoměnová peněženka",
+    "customAsset": "Vlastní majetek",
+    "digitalSubscription": "Digitální předplatné",
+    "domainName": "Doménové jméno",
     "electronics": "Elektronika",
     "furniture": "Nábytek",
-    "toolsEquipment": "Nástroje / Vybavení",
+    "insurancePolicy": "Pojištění",
+    "investmentPortfolio": "Investiční portfolio",
+    "jewelry": "Šperky",
+    "land": "Pozemek",
+    "loanMortgage": "Půjčka / Hypotéka",
+    "motorcycle": "Motocykl",
+    "nft": "NFT",
+    "onlineAccount": "Online účet",
     "otherValuables": "Jiné cennosti",
-    "customAsset": "Vlastní majetek"
+    "pensionRetirement": "Penzijní / Důchodový účet",
+    "primaryResidence": "Hlavní bydliště",
+    "rentalProperty": "Pronajímaná nemovitost",
+    "rvCamper": "Karavan",
+    "softwareLicense": "Softwarová licence",
+    "toolsEquipment": "Nástroje / Vybavení",
+    "vacationHome": "Rekreační nemovitost"
+  },
+  "assets": {
+    "categories": {
+      "uncategorized": "Nezařazeno"
+    },
+    "overview": {
+      "addAsset": "Přidat majetek",
+      "addNew": "Přidat nový",
+      "beneficiaryAllocation": {
+        "allAssigned": "Všechny poklady mají přiřazené blízké osoby",
+        "subtitle": "Sledujte, jak jsou vaše poklady rozděleny mezi blízké",
+        "title": "Sdílení vašich pokladů"
+      },
+      "distribution": {
+        "subtitle": "Rozdělení portfolia podle kategorií",
+        "title": "Rozdělení majetku"
+      },
+      "errors": {
+        "loadFailed": "Nepodařilo se načíst data o majetku"
+      },
+      "estimatedValue": "Odhadovaná hodnota všech aktiv",
+      "subtitle": "Spravujte a sledujte svůj majetek, nemovitosti a investice",
+      "title": "Co vlastníte a čeho si ceníte",
+      "totalPortfolioValue": "Celková hodnota portfolia",
+      "viewInheritanceSummary": "Zobrazit souhrn dědictví"
+    }
   },
   "dynamicAssetForm": {
-    "title": "Přidat nový majetek",
-    "subtitle": "Vyberte typ majetku a vyplňte potřebné informace",
-    "selectAssetType": "Vyberte typ majetku",
+    "actions": {
+      "cancel": "Zrušit",
+      "finish": "Dokončit",
+      "next": "Další",
+      "previous": "Předchozí",
+      "save": "Uložit"
+    },
     "assetTypePlaceholder": "Začněte psát pro vyhledávání...",
-    "formSections": {
-      "basicInfo": "Základní informace",
-      "details": "Detaily",
-      "value": "Hodnota",
-      "documents": "Dokumenty",
-      "story": "Příběh"
+    "businessFields": {
+      "annualRevenue": "Roční příjmy",
+      "businessAddress": "Adresa podniku",
+      "businessName": "Název podniku",
+      "businessType": "Typ podniku",
+      "employees": "Počet zaměstnanců",
+      "industry": "Odvětví",
+      "ownershipPercentage": "Procento vlastnictví",
+      "partnership": "Partnerství",
+      "profitMargin": "Zisková marže",
+      "taxId": "DIČ"
     },
     "fields": {
-      "name": "Název",
-      "namePlaceholder": "Pojmenujte svůj majetek",
+      "currency": "Měna",
+      "currentValue": "Současná hodnota",
       "description": "Popis",
       "descriptionPlaceholder": "Krátký popis majetku",
       "estimatedValue": "Odhadovaná hodnota",
-      "currency": "Měna",
       "location": "Umístění",
       "locationPlaceholder": "Kde se majetek nachází",
-      "purchaseDate": "Datum nákupu",
-      "purchasePrice": "Nákupní cena",
-      "currentValue": "Současná hodnota",
+      "name": "Název",
+      "namePlaceholder": "Pojmenujte svůj majetek",
       "notes": "Poznámky",
-      "notesPlaceholder": "Další informace o majetku"
+      "notesPlaceholder": "Další informace o majetku",
+      "purchaseDate": "Datum nákupu",
+      "purchasePrice": "Nákupní cena"
+    },
+    "financialFields": {
+      "accountNumber": "Číslo účtu",
+      "accountType": "Typ účtu",
+      "balance": "Zůstatek",
+      "beneficiary": "Oprávněná osoba",
+      "dueDate": "Datum splatnosti",
+      "institution": "Instituce",
+      "interestRate": "Úroková sazba",
+      "monthlyPayment": "Měsíční splátka",
+      "routingNumber": "Směrovací číslo"
+    },
+    "formSections": {
+      "basicInfo": "Základní informace",
+      "details": "Detaily",
+      "documents": "Dokumenty",
+      "story": "Příběh",
+      "value": "Hodnota"
+    },
+    "messages": {
+      "error": "Chyba při ukládání",
+      "saved": "Majetek úspěšně uložen",
+      "saving": "Ukládání..."
+    },
+    "personalFields": {
+      "brand": "Značka",
+      "color": "Barva",
+      "condition": "Stav",
+      "itemType": "Typ předmětu",
+      "material": "Materiál",
+      "model": "Model",
+      "purchaseLocation": "Místo nákupu",
+      "serialNumber": "Sériové číslo",
+      "size": "Velikost",
+      "warranty": "Záruka"
     },
     "propertyFields": {
       "address": "Adresa",
       "addressPlaceholder": "Úplná adresa nemovitosti",
-      "propertyType": "Typ nemovitosti",
-      "squareMeters": "Čtvereční metry",
-      "bedrooms": "Počet ložnic",
       "bathrooms": "Počet koupelen",
-      "yearBuilt": "Rok výstavby",
-      "propertyTax": "Daň z nemovitosti",
+      "bedrooms": "Počet ložnic",
       "insurance": "Pojištění",
       "mortgage": "Hypotéka",
-      "rentalIncome": "Příjem z pronájmu"
+      "propertyTax": "Daň z nemovitosti",
+      "propertyType": "Typ nemovitosti",
+      "rentalIncome": "Příjem z pronájmu",
+      "squareMeters": "Čtvereční metry",
+      "yearBuilt": "Rok výstavby"
     },
-    "vehicleFields": {
-      "make": "Značka",
-      "model": "Model",
-      "year": "Rok",
-      "vin": "VIN",
-      "licensePlate": "SPZ",
-      "mileage": "Najeto km",
-      "fuelType": "Typ paliva",
-      "transmission": "Převodovka",
-      "color": "Barva",
-      "insurance": "Pojištění",
-      "registration": "Registrace"
-    },
-    "financialFields": {
-      "accountType": "Typ účtu",
-      "institution": "Instituce",
-      "accountNumber": "Číslo účtu",
-      "routingNumber": "Směrovací číslo",
-      "balance": "Zůstatek",
-      "interestRate": "Úroková sazba",
-      "monthlyPayment": "Měsíční splátka",
-      "dueDate": "Datum splatnosti",
-      "beneficiary": "Oprávněná osoba"
-    },
-    "businessFields": {
-      "businessName": "Název podniku",
-      "businessType": "Typ podniku",
-      "industry": "Odvětví",
-      "employees": "Počet zaměstnanců",
-      "annualRevenue": "Roční příjmy",
-      "profitMargin": "Zisková marže",
-      "businessAddress": "Adresa podniku",
-      "taxId": "DIČ",
-      "partnership": "Partnerství",
-      "ownershipPercentage": "Procento vlastnictví"
-    },
-    "personalFields": {
-      "itemType": "Typ předmětu",
-      "condition": "Stav",
-      "purchaseLocation": "Místo nákupu",
-      "warranty": "Záruka",
-      "serialNumber": "Sériové číslo",
-      "brand": "Značka",
-      "model": "Model",
-      "size": "Velikost",
-      "material": "Materiál",
-      "color": "Barva"
-    },
+    "selectAssetType": "Vyberte typ majetku",
+    "subtitle": "Vyberte typ majetku a vyplňte potřebné informace",
+    "title": "Přidat nový majetek",
     "validation": {
-      "nameRequired": "Název je povinný",
-      "valueRequired": "Hodnota je povinná",
-      "invalidValue": "Neplatná hodnota",
       "invalidDate": "Neplatné datum",
       "invalidEmail": "Neplatný e-mail",
-      "invalidPhone": "Neplatné telefonní číslo"
+      "invalidPhone": "Neplatné telefonní číslo",
+      "invalidValue": "Neplatná hodnota",
+      "nameRequired": "Název je povinný",
+      "valueRequired": "Hodnota je povinná"
     },
-    "actions": {
-      "save": "Uložit",
-      "cancel": "Zrušit",
-      "next": "Další",
-      "previous": "Předchozí",
-      "finish": "Dokončit"
-    },
-    "messages": {
-      "saving": "Ukládání...",
-      "saved": "Majetek úspěšně uložen",
-      "error": "Chyba při ukládání"
+    "vehicleFields": {
+      "color": "Barva",
+      "fuelType": "Typ paliva",
+      "insurance": "Pojištění",
+      "licensePlate": "SPZ",
+      "make": "Značka",
+      "mileage": "Najeto km",
+      "model": "Model",
+      "registration": "Registrace",
+      "transmission": "Převodovka",
+      "vin": "VIN",
+      "year": "Rok"
     }
   }
 }
-

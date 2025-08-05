@@ -1,182 +1,118 @@
 {
-  "_comment": "Gosodiadau a ffurfweddiad y cymhwysiad",
-  "settings": {
-    "title": "Gosodiadau",
-    "subtitle": "Rheoli dewisiadau eich cyfrif a gosodiadau diogelwch",
-    "loading": "Yn llwytho gosodiadau eich cyfrif...",
-    "profile": {
-      "title": "Gwybodaeth Proffil",
-      "description": "Diweddaru eich gwybodaeth bersonol a’ch dewisiadau",
-      "emailAddress": "Cyfeiriad E-bost",
-      "emailCannotBeChanged": "Ni ellir newid eich cyfeiriad e-bost",
-      "firstName": "Enw Cyntaf",
-      "firstNamePlaceholder": "Nodwch eich enw cyntaf",
-      "lastName": "Cyfenw",
-      "lastNamePlaceholder": "Nodwch eich cyfenw",
-      "saving": "Yn cadw...",
-      "saveChanges": "Cadw Newidiadau"
-    },
-    "security": {
-      "title": "Diogelwch",
-      "description": "Rheoli diogelwch eich cyfrif a mynediad",
-      "changePassword": "Newid Cyfrinair",
-      "currentPassword": "Cyfrinair Cyfredol",
-      "currentPasswordPlaceholder": "Nodwch y cyfrinair cyfredol",
-      "newPassword": "Cyfrinair Newydd",
-      "newPasswordPlaceholder": "Nodwch gyfrinair newydd",
-      "confirmNewPassword": "Cadarnhau Cyfrinair Newydd",
-      "confirmNewPasswordPlaceholder": "Cadarnhewch gyfrinair newydd",
-      "updating": "Yn diweddaru...",
-      "updatePassword": "Diweddaru Cyfrinair",
-      "twoFactorAuth": "Dilysiad Dwy Ffactor",
-      "enable2FA": "Galluogi 2FA",
-      "2FADescription": "Ychwanegwch haen ychwanegol o ddiogelwch i’ch cyfrif. (Yn dod yn fuan)"
-    },
-    "accountManagement": {
-      "title": "Rheoli Cyfrif",
-      "description": "Camau parhaol ar gyfrif – dewch ymlaen gyda gofal",
-      "deleteAccountTitle": "Dileu Cyfrif",
-      "deleteAccountWarning": "Mae’r cam hwn yn irreversible ac yn dileu’ch holl ddata yn barhaol, gan gynnwys dogfennau a chanllawiau a lwythwyd i fyny. Bydd gwybodaeth eich etifeddiaeth ddigidol wedi’i dileu o’n systemau.",
-      "deleteMyAccount": "Dileu Fy Nghyfrif",
-      "confirmTitle": "Ydych chi’n siŵr?",
-      "confirmDescription": "Ni ellir dadwneud y cam hwn. Bydd eich cyfrif yn cael ei ddileu’n barhaol a bydd eich holl ddata yn cael ei dynnu o’n gweinyddion.",
-      "confirmEmailPrompt": "Teipiwch eich cyfeiriad e-bost {{email}} i gadarnhau:",
-      "emailPlaceholder": "Nodwch eich cyfeiriad e-bost",
-      "deleting": "Yn dileu...",
-      "deleteAccount": "Dileu Cyfrif"
-    },
-    "errors": {
-      "loadProfile": "Methwyd llwytho gwybodaeth proffil",
-      "updateProfile": "Methwyd diweddaru proffil",
-      "passwordFieldsRequired": "Llenwch bob maes cyfrinair",
-      "passwordsDoNotMatch": "Nid yw’r cyfrineiriau newydd yn cyfateb",
-      "passwordTooShort": "Rhaid i’r cyfrinair newydd fod o leiaf 6 nod",
-      "updatePassword": "Methwyd diweddaru cyfrinair",
-      "emailDoesNotMatch": "Nid yw’r cyfeiriad e-bost yn cyfateb",
-      "deleteAccountSupport": "Mae dileu cyfrif yn cael ei ofyn drwy gefnogaeth. Cysylltwch â ni am gymorth.",
-      "deleteAccount": "Methwyd dileu cyfrif"
-    },
-    "success": {
-      "profileUpdated": "Proffil wedi’i ddiweddaru’n llwyddiannus",
-      "passwordUpdated": "Cyfrinair wedi’i ddiweddaru’n llwyddiannus"
-    },
-    "privacySettings": {
-      "privacy_settings_1": "Gosodiadau Preifatrwydd",
-      "control_how_your_documents_are_2": "Rheoli sut mae eich dogfennau yn cael eu prosesu a’u storio",
-      "default_processing_mode_3": "Modd Prosesu Rhagosodedig",
-      "choose_how_documents_are_proce_4": "Dewiswch sut mae dogfennau’n cael eu prosesu’n ddiofyn",
-      "hybrid_mode_recommended_5": "Modd Hybrid (Argymhellir)",
-      "combines_local_and_cloud_ai_fo_6": "Cyfunir AI lleol a chwmwl i gyflawni perfformiad a phreifatrwydd gorau",
-      "local_only_privacy_mode_7": "Modd Preifatrwydd Lleol yn Unig",
-      "processes_documents_entirely_i_8": "Prosesu dogfennau’n llwyr yn eich porwr i sicrhau preifatrwydd mwyaf",
-      "note_9": "Nodyn: ",
-      "you_can_always_override_this_s_10": "Gallwch bob amser oresgyn y gosodiad hwn wrth lwytho dogfennau unigol"
-    }
-  },
-  "dataTransparency": {
-    "loadingMessage": "Yn llwytho gwybodaeth tryloywder eich data...",
-    "loadingError": "Methwyd llwytho data tryloywder. Ceisiwch eto yn nes ymlaen.",
-    "title": "Eich Data, Eich Rheolaeth",
-    "description": "Credwn mewn tryloywder llwyr. Dyma sut rydym yn trin eich gwybodaeth yn fanwl.",
-    "dataFlow": {
-      "whereDataLives": "Lle mae Eich Data’n byw",
-      "collection": "Casglu",
-      "storage": "Storfa",
-      "processing": "Prosesu",
-      "sharing": "Rhannu"
-    },
-    "recentActivity": {
-      "title": "Gweithgaredd Diweddar",
-      "premiumTitle": "Datgloi’ch Log Gwylio Parhaol",
-      "premiumText": "Mae eich log gweithredu 30 diwrnod yn darparu diogelwch sylfaenol. Ar gyfer cyfrifoldeb a thangnefedd meddwl mwyaf, uwchraddiwch i’r Pecyn Gorchymyn i gadw hanes awdit am byth o bob gweithred yn eich vault."
-    },
-    "dataOwnership": {
-      "title": "Perchnogaeth Data",
-      "description": "Yr ydych yn berchen ar eich data, bob amser. Gallwch lawrlwytho copi cyflawn pryd bynnag y dymunwch.",
-      "downloadButton": "Lawrlwytho Archif Data"
-    }
-  },
   "cookies": {
-    "bannerText": "Rydym yn defnyddio cwcis hanfodol i sicrhau bod ein safle’n gweithio’n iawn. Gyda’ch caniatâd, gallwn hefyd ddefnyddio cwcis dadansoddeg i wella ein gwasanaethau.",
-    "declineButton": "Gwrthod",
-    "acceptButton": "Derbyn Pob Un",
-    "learnMoreLink": "Dysgu Mwy",
     "policy": {
-      "title": "Polisi Cwcis",
-      "subtitle": "Deall sut rydym yn defnyddio cwcis i wella eich profiad tra’n parchu’ch preifatrwydd",
-      "lastUpdated": "Diweddarwyd ddiwethaf",
-      "required": "Angenrheidiol",
-      "purpose": "Diben",
-      "examples": "Enghreifftiau",
-      "overview": {
-        "title": "Gwybodaeth Bwysig",
-        "intro": "Mae’r Polisi Cwcis hwn yn esbonio sut mae LegacyGuard yn defnyddio cwcis a thechnolegau tebyg i’ch adnabod pan fyddwch yn ymweld â’n gwefan. Mae’n egluro beth yw’r technolegau hyn, pam ein bod yn eu defnyddio, a’ch hawliau i reoli ein defnydd ohonynt.",
-        "point1": "Rydym yn defnyddio cwcis i sicrhau nodweddion sylfaenol ein gwefan",
-        "point2": "Mae rhai cwcis yn hanfodol ac ni ellir eu diffodd",
-        "point3": "Gallwch reoli cwcis nad ydynt yn hanfodol drwy ein rheolwr caniatâd",
-        "point4": "Ni fyddwn byth yn gwerthu eich data na defnyddio cwcis ar gyfer olrhain ymosodol"
-      },
-      "categories": {
-        "title": "Categori Cwcis Rydym yn eu Defnyddio"
-      },
-      "necessary": {
-        "title": "Cwcis Angenrheidiol yn Unig",
-        "description": "Mae’r cwcis hyn yn hanfodol i weithredu’r wefan yn iawn",
-        "purpose": "Yn galluogi swyddogaethau craidd fel diogelwch, dilysu, a rheoli rhwydwaith. Ni ellir diffodd y cwcis hyn.",
-        "examples": {
-          "auth": "Yn cadw chi wedi’ch mewngofnodi’n ddiogel",
-          "session": "Yn cynnal cyflwr eich sesiwn",
-          "csrf": "Yn amddiffyn rhag ymosodiadau croes-safle",
-          "consent": "Yn cofio eich dewisiadau cwci"
-        }
-      },
       "analytics": {
-        "title": "Cwcis Dadansoddeg",
         "description": "Yn helpu ni i ddeall sut mae ymwelyddion yn rhyngweithio â’n gwefan",
-        "purpose": "Yn casglu gwybodaeth anhysbys am sut rydych yn defnyddio’r safle, gan ein helpu i wella profiad y defnyddiwr a nodi problemau.",
         "examples": {
           "ga": "Olrhain Google Analytics",
           "gid": "Yn gwahanu defnyddwyr",
           "session": "Yn grwpio gweithgareddau mewn sesiwn"
-        }
+        },
+        "purpose": "Yn casglu gwybodaeth anhysbys am sut rydych yn defnyddio’r safle, gan ein helpu i wella profiad y defnyddiwr a nodi problemau.",
+        "title": "Cwcis Dadansoddeg"
+      },
+      "categories": {
+        "title": "Categori Cwcis Rydym yn eu Defnyddio"
+      },
+      "contact": {
+        "address": "Cyfeiriad",
+        "addressDetails": "LegacyGuard Ltd, Swyddfa Diogelu Data, 123 Stryd Preifatrwydd, Dulyn, Iwerddon",
+        "description": "Os oes gennych gwestiynau am ein defnydd o gwcis neu’r Polisi Cwcis hwn, cysylltwch â ni:",
+        "email": "E-bost",
+        "title": "Cysylltwch â Ni am Gwcis"
+      },
+      "examples": "Enghreifftiau",
+      "lastUpdated": "Diweddarwyd ddiwethaf",
+      "manage": {
+        "title": "Rheoli Eich Dewisiadau Cwci"
       },
       "marketing": {
-        "title": "Cwcis Marchnata",
         "description": "Defnyddir i ddangos hysbysebion perthnasol",
-        "purpose": "Yn olrhain ymwelyddion ar draws gwefannau i ddangos hysbysebion sy’n berthnasol ac yn apelio at ddefnyddwyr unigol.",
         "examples": {
           "facebook": "Hysbysebion Facebook",
           "google": "Olrhain trosi Google Ads"
-        }
+        },
+        "purpose": "Yn olrhain ymwelyddion ar draws gwefannau i ddangos hysbysebion sy’n berthnasol ac yn apelio at ddefnyddwyr unigol.",
+        "title": "Cwcis Marchnata"
+      },
+      "necessary": {
+        "description": "Mae’r cwcis hyn yn hanfodol i weithredu’r wefan yn iawn",
+        "examples": {
+          "auth": "Yn cadw chi wedi’ch mewngofnodi’n ddiogel",
+          "consent": "Yn cofio eich dewisiadau cwci",
+          "csrf": "Yn amddiffyn rhag ymosodiadau croes-safle",
+          "session": "Yn cynnal cyflwr eich sesiwn"
+        },
+        "purpose": "Yn galluogi swyddogaethau craidd fel diogelwch, dilysu, a rheoli rhwydwaith. Ni ellir diffodd y cwcis hyn.",
+        "title": "Cwcis Angenrheidiol yn Unig"
+      },
+      "overview": {
+        "intro": "Mae’r Polisi Cwcis hwn yn esbonio sut mae LegacyGuard yn defnyddio cwcis a thechnolegau tebyg i’ch adnabod pan fyddwch yn ymweld â’n gwefan. Mae’n egluro beth yw’r technolegau hyn, pam ein bod yn eu defnyddio, a’ch hawliau i reoli ein defnydd ohonynt.",
+        "point1": "Rydym yn defnyddio cwcis i sicrhau nodweddion sylfaenol ein gwefan",
+        "point2": "Mae rhai cwcis yn hanfodol ac ni ellir eu diffodd",
+        "point3": "Gallwch reoli cwcis nad ydynt yn hanfodol drwy ein rheolwr caniatâd",
+        "point4": "Ni fyddwn byth yn gwerthu eich data na defnyddio cwcis ar gyfer olrhain ymosodol",
+        "title": "Gwybodaeth Bwysig"
       },
       "preferences": {
-        "title": "Cwcis Dewisiadau",
         "description": "Yn cofio eich dewisiadau a gosodiadau",
-        "purpose": "Yn caniatáu i’r wefan gofio’r dewisiadau a wnewch (megis iaith neu ranbarth) a darparu nodweddion personol gwell.",
         "examples": {
-          "theme": "Y thema a ddewiswyd gennych (golau/tywyll)",
           "language": "Eich iaith ddethol",
+          "theme": "Y thema a ddewiswyd gennych (golau/tywyll)",
           "ui": "Dewisiadau addasu rhyngwyneb"
-        }
+        },
+        "purpose": "Yn caniatáu i’r wefan gofio’r dewisiadau a wnewch (megis iaith neu ranbarth) a darparu nodweddion personol gwell.",
+        "title": "Cwcis Dewisiadau"
       },
+      "purpose": "Diben",
+      "required": "Angenrheidiol",
+      "subtitle": "Deall sut rydym yn defnyddio cwcis i wella eich profiad tra’n parchu’ch preifatrwydd",
+      "title": "Polisi Cwcis",
       "yourRights": {
-        "title": "Eich Hawliau",
         "description": "Mae gennych reolaeth lawn dros eich dewisiadau cwci",
         "right1": "Mynediad i wybodaeth am y cwcis rydym yn eu defnyddio",
         "right2": "Tynnu caniatâd ar gyfer cwcis nad ydynt yn angenrheidiol ar unrhyw adeg",
         "right3": "Dileu cwcis o’ch porwr",
-        "right4": "Gwrthod cwcis dadansoddeg a marchnata"
-      },
-      "manage": {
-        "title": "Rheoli Eich Dewisiadau Cwci"
-      },
-      "contact": {
-        "title": "Cysylltwch â Ni am Gwcis",
-        "description": "Os oes gennych gwestiynau am ein defnydd o gwcis neu’r Polisi Cwcis hwn, cysylltwch â ni:",
-        "email": "E-bost",
-        "address": "Cyfeiriad",
-        "addressDetails": "LegacyGuard Ltd, Swyddfa Diogelu Data, 123 Stryd Preifatrwydd, Dulyn, Iwerddon"
+        "right4": "Gwrthod cwcis dadansoddeg a marchnata",
+        "title": "Eich Hawliau"
       }
+    }
+  },
+  "dataTransparency": {
+    "dataFlow": {
+      "collection": "Casglu",
+      "processing": "Prosesu",
+      "sharing": "Rhannu",
+      "storage": "Storfa",
+      "whereDataLives": "Lle mae Eich Data’n byw"
+    },
+    "dataOwnership": {
+      "description": "Yr ydych yn berchen ar eich data, bob amser. Gallwch lawrlwytho copi cyflawn pryd bynnag y dymunwch.",
+      "downloadButton": "Lawrlwytho Archif Data",
+      "title": "Perchnogaeth Data"
+    },
+    "description": "Credwn mewn tryloywder llwyr. Dyma sut rydym yn trin eich gwybodaeth yn fanwl.",
+    "loadingError": "Methwyd llwytho data tryloywder. Ceisiwch eto yn nes ymlaen.",
+    "loadingMessage": "Yn llwytho gwybodaeth tryloywder eich data...",
+    "recentActivity": {
+      "premiumText": "Mae eich log gweithredu 30 diwrnod yn darparu diogelwch sylfaenol. Ar gyfer cyfrifoldeb a thangnefedd meddwl mwyaf, uwchraddiwch i’r Pecyn Gorchymyn i gadw hanes awdit am byth o bob gweithred yn eich vault.",
+      "premiumTitle": "Datgloi’ch Log Gwylio Parhaol",
+      "title": "Gweithgaredd Diweddar"
+    },
+    "title": "Eich Data, Eich Rheolaeth"
+  },
+  "settings": {
+    "privacySettings": {
+      "choose_how_documents_are_proce_4": "Dewiswch sut mae dogfennau’n cael eu prosesu’n ddiofyn",
+      "combines_local_and_cloud_ai_fo_6": "Cyfunir AI lleol a chwmwl i gyflawni perfformiad a phreifatrwydd gorau",
+      "control_how_your_documents_are_2": "Rheoli sut mae eich dogfennau yn cael eu prosesu a’u storio",
+      "default_processing_mode_3": "Modd Prosesu Rhagosodedig",
+      "hybrid_mode_recommended_5": "Modd Hybrid (Argymhellir)",
+      "local_only_privacy_mode_7": "Modd Preifatrwydd Lleol yn Unig",
+      "note_9": "Nodyn: ",
+      "privacy_settings_1": "Gosodiadau Preifatrwydd",
+      "processes_documents_entirely_i_8": "Prosesu dogfennau’n llwyr yn eich porwr i sicrhau preifatrwydd mwyaf",
+      "you_can_always_override_this_s_10": "Gallwch bob amser oresgyn y gosodiad hwn wrth lwytho dogfennau unigol"
     }
   }
 }

@@ -1,98 +1,68 @@
 {
-  "_comment": "Shared translations used across the application",
-  "errorBoundary": {
-    "title": "Ups! Coś poszło nie tak",
-    "description": "Przepraszamy za niedogodności. Wystąpił nieoczekiwany błąd.",
-    "errorId": "ID Błędu",
-    "tryAgain": "Spróbuj Ponownie",
-    "reloadPage": "Odśwież Stronę",
-    "goToHomepage": "Przejdź na Stronę Główną",
-    "technicalDetails": "Szczegóły Techniczne",
-    "hide": "Ukryj",
-    "show": "Pokaż",
-    "stackTrace": "Ślad Stosu",
-    "componentStack": "Stos Komponentów",
-    "helpText": "Jeśli problem będzie się powtarzał, skontaktuj się z naszym wsparciem, podając ID błędu."
-  },
-  "errorTest": {
-    "title": "Test Logowania Błędów",
-    "description": "Test funkcjonalności obsługi i logowania błędów",
-    "triggerSyncError": "Wywołaj Błąd Synchroniczny (ErrorBoundary)",
-    "triggerAsyncError": "Wywołaj Błąd Asynchroniczny",
-    "logRegularError": "Zaloguj Zwykły Błąd",
-    "logCriticalError": "Zaloguj Błąd Krytyczny",
-    "triggerAlert": "Wywołaj Alert (6 Błędów Krytycznych)",
-    "errorMessages": {
-      "testError": "Test błędu z komponentu ErrorTest",
-      "testAsyncRejection": "Test asynchronicznego odrzucenia",
-      "manualTestError": "Błąd testu ręcznego",
-      "testCriticalError": "Test błędu krytycznego",
-      "criticalErrorWithIndex": "Błąd krytyczny {{index}}"
-    },
-    "descriptions": {
-      "syncError": "Wywołuje błąd synchroniczny, który zostanie przechwycony przez ErrorBoundary",
-      "asyncError": "Wywołuje błąd asynchroniczny, który zostanie przechwycony przez obsługę błędów",
-      "regularError": "Loguje zwykły błąd do testowania śledzenia błędów",
-      "criticalError": "Loguje błąd krytyczny do testowania obsługi błędów krytycznych",
-      "multipleErrors": "Wywołuje wiele błędów krytycznych do testowania progów alertów"
-    },
-    "context": {
-      "component": "ErrorTest",
-      "action": "button-click",
-      "severity": "high"
-    },
-    "notifications": {
-      "errorLogged": "Błąd pomyślnie zalogowany",
-      "criticalErrorLogged": "Błąd krytyczny pomyślnie zalogowany",
-      "multipleErrorsTriggered": "Wiele błędów krytycznych wywołanych",
-      "errorBoundaryTriggered": "Granica błędu uruchomiona",
-      "asyncErrorCaught": "Błąd asynchroniczny przechwycony i obsłużony"
-    }
-  },
   "debug": {
     "panel": {
-      "title": "Panel Debugowania",
-      "recentErrors": "Ostatnie błędy aplikacji",
-      "technicalDetails": "Szczegóły Techniczne",
-      "tabs": {
-        "list": "Lista",
-        "details": "Szczegóły"
-      },
-      "errorCount": "{{count}} błędów",
       "actions": {
-        "downloadErrors": "Pobierz błędy",
-        "clearAllErrors": "Wyczyść wszystkie błędy"
-      },
-      "messages": {
-        "errorsCleared": "Wszystkie błędy wyczyszczone",
-        "errorCopied": "Błąd skopiowany do schowka",
-        "errorsDownloaded": "Błędy pobrane"
+        "clearAllErrors": "Wyczyść wszystkie błędy",
+        "downloadErrors": "Pobierz błędy"
       },
       "error": {
-        "unknownError": "Nieznany Błąd",
+        "errorMessage": "Wiadomość o Błędzie",
         "noMessage": "Brak wiadomości",
-        "errorMessage": "Wiadomość o Błędzie"
-      },
-      "sections": {
-        "stackTrace": "Ślad Stosu",
-        "context": "Kontekst",
-        "location": "Lokalizacja",
-        "browserInfo": "Informacje o Przeglądarce",
-        "time": "Czas"
+        "unknownError": "Nieznany Błąd"
       },
       "fields": {
-        "url": "URL:",
         "path": "Ścieżka:",
         "query": "Zapytanie:",
+        "url": "URL:",
         "userAgent": "Agent użytkownika:",
         "viewport": "Obszar widoku:"
-      }
+      },
+      "messages": {
+        "errorCopied": "Błąd skopiowany do schowka",
+        "errorsCleared": "Wszystkie błędy wyczyszczone",
+        "errorsDownloaded": "Błędy pobrane"
+      },
+      "recentErrors": "Ostatnie błędy aplikacji",
+      "sections": {
+        "browserInfo": "Informacje o Przeglądarce",
+        "context": "Kontekst",
+        "location": "Lokalizacja",
+        "stackTrace": "Ślad Stosu",
+        "time": "Czas"
+      },
+      "tabs": {
+        "details": "Szczegóły",
+        "list": "Lista"
+      },
+      "title": "Panel Debugowania"
     }
+  },
+  "errorBoundary": {
+    "componentStack": "Stos Komponentów",
+    "description": "Przepraszamy za niedogodności. Wystąpił nieoczekiwany błąd.",
+    "errorId": "ID Błędu",
+    "goToHomepage": "Przejdź na Stronę Główną",
+    "helpText": "Jeśli problem będzie się powtarzał, skontaktuj się z naszym wsparciem, podając ID błędu.",
+    "hide": "Ukryj",
+    "reloadPage": "Odśwież Stronę",
+    "show": "Pokaż",
+    "stackTrace": "Ślad Stosu",
+    "technicalDetails": "Szczegóły Techniczne",
+    "title": "Ups! Coś poszło nie tak",
+    "tryAgain": "Spróbuj Ponownie"
+  },
+  "errorTest": {
+    "logCriticalError": "Zaloguj Błąd Krytyczny",
+    "logRegularError": "Zaloguj Zwykły Błąd",
+    "title": "Test Logowania Błędów",
+    "triggerAlert": "Wywołaj Alert (6 Błędów Krytycznych)",
+    "triggerAsyncError": "Wywołaj Błąd Asynchroniczny",
+    "triggerSyncError": "Wywołaj Błąd Synchroniczny (ErrorBoundary)"
   },
   "test": {
     "environment": {
-      "title": "Tylko dla środowiska testowego",
-      "description": "Ta strona służy do testowania systemu logowania błędów. Usuń tę trasę przed wdrożeniem do produkcji."
+      "description": "Ta strona służy do testowania systemu logowania błędów. Usuń tę trasę przed wdrożeniem do produkcji.",
+      "title": "Tylko dla środowiska testowego"
     }
   }
 }

@@ -1,204 +1,177 @@
 {
-  "_comment": "Shared translations used across the application",
-  "subscription": {
-    "dashboard": {
-      "title": "Abonementu informācijas panelis",
-      "subtitle": "Pārvaldiet savus abonementus, izmaksas un atgādinājumus"
-    },
-    "monthlyCost": "Kopējās mēneša izmaksas",
-    "yearlyCost": "Kopējās gada izmaksas",
-    "activeSubscriptions": "Aktīvie abonementi",
-    "upcomingSoon": "drīzumā",
-    "exportReport": "Eksportēt pārskatu",
-    "perMonth": "mēnesī",
-    "perYear": "gadā",
-    "allSubscriptions": "Visi abonementi",
-    "allSubscriptionsDesc": "Pārskats par visiem aktīvajiem abonementiem, sakārtoti pēc atjaunošanas datuma",
-    "upcomingRenewals": "Gaidāmie atjaunojumi",
-    "upcomingRenewalsTitle": "Brīdinājums par gaidāmajiem atjaunojumiem",
-    "upcomingRenewalsDesc": "Jums ir {{count}} gaidāmo atjaunojumu nākamo 90 dienu laikā",
-    "next90Days": "Nākamās 90 dienas",
-    "noUpcomingRenewals": "Nākamo 90 dienu laikā nav gaidāmu atjaunojumu",
-    "renew": "Atjaunot",
-    "review": "Pārskatīt",
-    "preferences": "Abonementu preferences",
-    "preferencesDesc": "Pārvaldiet, kā tiek izsekoti un pārvaldīti jūsu abonementi",
-    "enableTracking": "Iespējot abonementu izsekošanu",
-    "enableTrackingDesc": "Automātiski pārvaldiet un izsekojiet ar abonementiem saistītos dokumentus",
-    "costOptimization": "Iespējot izmaksu optimizācijas ieteikumus",
-    "costOptimizationDesc": "Saņemiet ieteikumus, lai optimizētu un samazinātu abonementu izmaksas",
-    "reminderPeriods": "Noklusējuma atgādinājumu periodi",
-    "daysBefore": "dienas pirms",
-    "loadError": "Neizdevās ielādēt abonementa datus",
-    "updateError": "Neizdevās atjaunināt abonementa preferences",
-    "preferencesUpdated": "Preferences veiksmīgi atjauninātas",
-    "tabs": {
-      "overview": "Pārskats",
-      "upcoming": "Gaidāmie",
-      "settings": "Iestatījumi"
-    },
-    "types": {
-      "monthly": "Mēneša",
-      "yearly": "Gada",
-      "oneTime": "Vienreizējs",
-      "none": "Nav"
-    },
-    "daysUntilRenewal": "dienas līdz atjaunošanai",
-    "days": "dienas",
-    "loadFailed": "Neizdevās ielādēt abonementu datus",
-    "autoRenewal": "Automātiskā atjaunošana: Jā",
-    "manual": "Automātiskā atjaunošana: Nē",
-    "trackingSuggestion": "Apsveriet iespēju iespējot abonementu izsekošanu labākai pārvaldībai un atgādinājumiem",
-    "type": "Abonementa veids",
-    "typePlaceholder": "Izvēlieties veidu",
-    "renewalCost": "Atjaunošanas izmaksas",
-    "renewalCostPlaceholder": "Ievadiet atjaunošanas izmaksas",
-    "cancellationNotice": "Atcelšanas paziņojuma periods",
-    "noNoticeRequired": "Paziņojums nav nepieciešams",
-    "providerContact": "Pakalpojumu sniedzēja kontaktinformācija",
-    "providerPhone": "Tālrunis",
-    "providerEmail": "E-pasts",
-    "providerWebsite": "Tīmekļa vietne",
-    "cancellationNoticeWarning": "Piezīme: Atcelšanai nepieciešams {{days}} dienu paziņojuma periods",
-    "title": "Subscription",
-    "currentPlan": "Current Plan",
-    "active": "Active",
-    "planDescription": "Manage your subscription and billing",
-    "planName": "Plan",
-    "premium": "Premium",
-    "free": "Free",
-    "nextBilling": "Next billing date",
-    "cancelledNotice": "Your subscription will end on {{date}}",
-    "manageBilling": "Manage Billing",
-    "resume": "Resume Subscription",
-    "cancel": "Cancel Subscription",
-    "upgradeToPremium": "Upgrade to Premium",
-    "features": {
-      "title": "Plan Features",
-      "premiumDescription": "You have access to all premium features",
-      "freeDescription": "Upgrade to unlock more features",
-      "unlimited": "Unlimited documents and assets",
-      "encryption": "Advanced encryption",
-      "priority": "Priority support",
-      "history": "Version history",
-      "basicWill": "Basic will document",
-      "limitedGuardians": "Up to 2 guardians",
-      "basicSupport": "Community support"
-    },
-    "errors": {
-      "portalFailed": "Failed to open billing portal",
-      "cancelFailed": "Failed to cancel subscription",
-      "resumeFailed": "Failed to resume subscription"
-    },
-    "cancelSuccess": "Subscription cancelled successfully",
-    "resumeSuccess": "Subscription resumed successfully",
-    "successTitle": "Payment Successful!",
-    "successMessage": "Thank you for your purchase. Your subscription has been activated.",
-    "cancelTitle": "Payment Cancelled",
-    "cancelMessage": "It seems like your transaction was cancelled. Please try again or contact support."
-  },
   "pricing": {
-    "title": "Izvēlieties savu mantojuma plānu",
-    "subtitle": "Sāciet ar mūsu bezmaksas līmeni vai jauniniet, lai iegūtu premium funkcijas.",
-    "mainTitle": "Izvēlieties savu mantojuma plānu",
-    "mainSubtitle": "Sāciet ar mūsu bezmaksas līmeni vai jauniniet, lai iegūtu premium funkcijas.",
-    "freePlan": {
-      "name": "Essential Protector",
-      "description": "Get started with basic features",
-      "price": "Free",
-      "features": {
-        "will": "1 Will document",
-        "guardians": "2 Guardians",
-        "assets": "5 Assets",
-        "support": "Basic support"
-      }
-    },
-    "premiumPlan": {
-      "name": "Command Package",
-      "description": "Perfect for individuals and families",
-      "price": "$9.99 / month",
-      "upgradeButton": "Upgrade Now",
-      "features": {
-        "will": "Unlimited Will documents",
-        "guardians": "Unlimited Guardians",
-        "assets": "Unlimited Assets",
-        "encryption": "Document encryption",
-        "access": "Emergency access",
-        "support": "Priority support",
-        "history": "Version history",
-        "templates": "Legal templates"
-      }
-    },
     "devMode": {
-      "title": "Developer Mode",
       "button": {
         "grant": "Dev Mode: Grant Premium Access",
         "granting": "Granting..."
       },
       "description": "This button is only visible in development mode. Click to instantly grant premium access for testing.",
+      "errorMessage": "Failed to grant developer premium access",
       "successMessage": "Developer premium access granted!",
-      "errorMessage": "Failed to grant developer premium access"
-    },
-    "errors": {
-      "checkoutFailed": "Failed to start checkout process"
-    },
-    "starter": {
-      "name": "Mantojums Starteris",
-      "price": "Bezmaksas",
-      "description": "Ideāli piemērots, lai sāktu saglabāt savu digitālo mantojumu.",
-      "button": "Sākt bez maksas",
-      "features": {
-        "storage": "{{amount}} krātuve",
-        "guardians": "Līdz {{count}} sargiem",
-        "documents": "Pamata dokumentu glabātava",
-        "playbook": "Pamata sargu rokasgrāmata",
-        "support": "Kopienas atbalsts"
-      },
-      "limits": {
-        "storage": "500 MB",
-        "guardians": "3",
-        "fileSize": "10 MB par failu"
-      }
-    },
-    "premium": {
-      "name": "Mantojums Premium",
-      "price": "19 €",
-      "period": "/ mēnesī",
-      "badge": "Populārākais",
-      "description": "Papildu funkcijas visaptverošai mantojuma pārvaldībai.",
-      "button": "Izvēlēties Premium",
-      "features": {
-        "storage": "{{amount}} krātuve",
-        "guardians": "Līdz {{count}} sargiem",
-        "manual": "Rokasgrāmata pārdzīvojušajiem",
-        "support": "Prioritārs e-pasta atbalsts"
-      },
-      "limits": {
-        "storage": "10 GB",
-        "guardians": "5",
-        "fileSize": "50 MB par failu"
-      }
+      "title": "Developer Mode"
     },
     "enterprise": {
-      "name": "Mantojums Uzņēmumiem",
-      "price": "Pielāgots",
-      "description": "Ģimenēm un uzņēmumiem ar sarežģītām vajadzībām, kas prasa augstāko apkalpošanas līmeni.",
       "button": "Sazināties ar pārdošanas nodaļu",
+      "description": "Ģimenēm un uzņēmumiem ar sarežģītām vajadzībām, kas prasa augstāko apkalpošanas līmeni.",
       "features": {
-        "storage": "{{amount}}+ krātuve",
         "guardians": "Neierobežots sargu skaits",
         "legal": "Juridiskā speciālista koordinācija",
         "support": "Veltīts konta pārvaldnieks"
       },
       "limits": {
-        "storage": "500 GB",
-        "guardians": "neierobežots",
-        "fileSize": "100 MB par failu"
-      }
-    }
+        "storage": "500 GB"
+      },
+      "name": "Mantojums Uzņēmumiem",
+      "price": "Pielāgots"
+    },
+    "errors": {
+      "checkoutFailed": "Failed to start checkout process"
+    },
+    "freePlan": {
+      "description": "Get started with basic features",
+      "features": {
+        "assets": "5 Assets",
+        "guardians": "2 Guardians",
+        "support": "Basic support",
+        "will": "1 Will document"
+      },
+      "name": "Essential Protector",
+      "price": "Free"
+    },
+    "mainSubtitle": "Sāciet ar mūsu bezmaksas līmeni vai jauniniet, lai iegūtu premium funkcijas.",
+    "mainTitle": "Izvēlieties savu mantojuma plānu",
+    "premium": {
+      "badge": "Populārākais",
+      "button": "Izvēlēties Premium",
+      "description": "Papildu funkcijas visaptverošai mantojuma pārvaldībai.",
+      "features": {
+        "manual": "Rokasgrāmata pārdzīvojušajiem",
+        "support": "Prioritārs e-pasta atbalsts"
+      },
+      "limits": {
+        "guardians": "5",
+        "storage": "10 GB"
+      },
+      "name": "Mantojums Premium",
+      "period": "/ mēnesī",
+      "price": "19 €"
+    },
+    "premiumPlan": {
+      "description": "Perfect for individuals and families",
+      "features": {
+        "access": "Emergency access",
+        "assets": "Unlimited Assets",
+        "encryption": "Document encryption",
+        "guardians": "Unlimited Guardians",
+        "history": "Version history",
+        "support": "Priority support",
+        "templates": "Legal templates",
+        "will": "Unlimited Will documents"
+      },
+      "name": "Command Package",
+      "price": "$9.99 / month",
+      "upgradeButton": "Upgrade Now"
+    },
+    "starter": {
+      "button": "Sākt bez maksas",
+      "description": "Ideāli piemērots, lai sāktu saglabāt savu digitālo mantojumu.",
+      "features": {
+        "documents": "Pamata dokumentu glabātava",
+        "playbook": "Pamata sargu rokasgrāmata",
+        "support": "Kopienas atbalsts"
+      },
+      "limits": {
+        "guardians": "3",
+        "storage": "500 MB"
+      },
+      "name": "Mantojums Starteris",
+      "price": "Bezmaksas"
+    },
+    "title": "Izvēlieties savu mantojuma plānu"
+  },
+  "subscription": {
+    "active": "Active",
+    "activeSubscriptions": "Aktīvie abonementi",
+    "allSubscriptions": "Visi abonementi",
+    "allSubscriptionsDesc": "Pārskats par visiem aktīvajiem abonementiem, sakārtoti pēc atjaunošanas datuma",
+    "autoRenewal": "Automātiskā atjaunošana: Jā",
+    "cancel": "Cancel Subscription",
+    "cancelMessage": "It seems like your transaction was cancelled. Please try again or contact support.",
+    "cancelSuccess": "Subscription cancelled successfully",
+    "cancelTitle": "Payment Cancelled",
+    "cancellationNotice": "Atcelšanas paziņojuma periods",
+    "costOptimization": "Iespējot izmaksu optimizācijas ieteikumus",
+    "costOptimizationDesc": "Saņemiet ieteikumus, lai optimizētu un samazinātu abonementu izmaksas",
+    "currentPlan": "Current Plan",
+    "dashboard": {
+      "subtitle": "Pārvaldiet savus abonementus, izmaksas un atgādinājumus",
+      "title": "Abonementu informācijas panelis"
+    },
+    "days": "dienas",
+    "daysBefore": "dienas pirms",
+    "daysUntilRenewal": "dienas līdz atjaunošanai",
+    "enableTracking": "Iespējot abonementu izsekošanu",
+    "enableTrackingDesc": "Automātiski pārvaldiet un izsekojiet ar abonementiem saistītos dokumentus",
+    "errors": {
+      "cancelFailed": "Failed to cancel subscription",
+      "portalFailed": "Failed to open billing portal",
+      "resumeFailed": "Failed to resume subscription"
+    },
+    "exportReport": "Eksportēt pārskatu",
+    "features": {
+      "basicSupport": "Community support",
+      "basicWill": "Basic will document",
+      "encryption": "Advanced encryption",
+      "freeDescription": "Upgrade to unlock more features",
+      "history": "Version history",
+      "limitedGuardians": "Up to 2 guardians",
+      "premiumDescription": "You have access to all premium features",
+      "priority": "Priority support",
+      "title": "Plan Features",
+      "unlimited": "Unlimited documents and assets"
+    },
+    "free": "Free",
+    "loadError": "Neizdevās ielādēt abonementa datus",
+    "manageBilling": "Manage Billing",
+    "manual": "Automātiskā atjaunošana: Nē",
+    "monthlyCost": "Kopējās mēneša izmaksas",
+    "next90Days": "Nākamās 90 dienas",
+    "nextBilling": "Next billing date",
+    "noUpcomingRenewals": "Nākamo 90 dienu laikā nav gaidāmu atjaunojumu",
+    "perMonth": "mēnesī",
+    "perYear": "gadā",
+    "planDescription": "Manage your subscription and billing",
+    "planName": "Plan",
+    "preferences": "Abonementu preferences",
+    "preferencesDesc": "Pārvaldiet, kā tiek izsekoti un pārvaldīti jūsu abonementi",
+    "preferencesUpdated": "Preferences veiksmīgi atjauninātas",
+    "premium": "Premium",
+    "reminderPeriods": "Noklusējuma atgādinājumu periodi",
+    "renew": "Atjaunot",
+    "resume": "Resume Subscription",
+    "resumeSuccess": "Subscription resumed successfully",
+    "review": "Pārskatīt",
+    "successMessage": "Thank you for your purchase. Your subscription has been activated.",
+    "successTitle": "Payment Successful!",
+    "tabs": {
+      "overview": "Pārskats",
+      "settings": "Iestatījumi",
+      "upcoming": "Gaidāmie"
+    },
+    "title": "Subscription",
+    "types": {
+      "monthly": "Mēneša",
+      "yearly": "Gada"
+    },
+    "upcomingRenewals": "Gaidāmie atjaunojumi",
+    "upcomingRenewalsTitle": "Brīdinājums par gaidāmajiem atjaunojumiem",
+    "upcomingSoon": "drīzumā",
+    "updateError": "Neizdevās atjaunināt abonementa preferences",
+    "upgradeToPremium": "Upgrade to Premium",
+    "yearlyCost": "Kopējās gada izmaksas"
   },
   "upgradeCard": {
-    "pricing_1": "/pricing",
-    "defaultButtonText": "Upgrade to Command Package"
+    "defaultButtonText": "Upgrade to Command Package",
+    "pricing_1": "/pricing"
   }
 }

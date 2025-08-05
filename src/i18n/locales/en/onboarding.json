@@ -1,231 +1,146 @@
 {
-  "_comment": "User onboarding and demo",
-  "onboarding": {
-    "title": "Welcome to Heritage Vault",
-    "subtitle": "Let us help you secure your family's future",
-    "mainTitle": "Project Order",
-    "mainSubtitle": "Let's create your personalized legacy protection plan",
-    "progressText": "Project Order: Step {{step}} of 4",
-    "skipButton": "Skip for now",
-    "skipConfirmTitle": "Skip onboarding?",
-    "skipConfirmMessage": "You can always restart this setup later in settings",
-    "skipConfirmYes": "Skip",
-    "skipConfirmNo": "Continue setup",
-    "restartButton": "Restart Onboarding",
-    "welcomeBack": "Welcome back! Ready to complete your setup?",
-    "resumeTitle": "Continue where you left off",
-    "resumeMessage": "You were on step {{step}} of 4",
-    "partialProgress": "{{percentage}}% complete",
-    "inventory": {
-      "documentAccess": {
-        "question": "If something happened to you today, would your family know where to find your important documents?",
-        "answers": {
-          "yes": "Yes",
-          "no": "No",
-          "partially": "Partially"
-        }
-      },
-      "caretaker": {
-        "question": "Who would take care of your children/assets/digital accounts?",
-        "answers": {
-          "designated": "Have designated person",
-          "familyFigureOut": "Family would figure it out",
-          "notThought": "Haven't thought about it"
-        }
-      },
-      "familyClarity": {
-        "question": "Do you feel your family would know what you wanted for them?",
-        "answers": {
-          "clear": "Yes, it's clear",
-          "somewhat": "Somewhat",
-          "neverDiscussed": "No, we never discussed it"
-        }
-      },
-      "biggestWorry": {
-        "question": "What worries you most about your family's future?",
-        "answers": {
-          "financial": "Financial security",
-          "legal": "Legal complications",
-          "memories": "Losing memories",
-          "conflicts": "Family conflicts"
-        }
-      },
-      "personalized": {
-        "documentCentralization": "Based on your answer about document access, we recommend starting with centralizing your important documents.",
-        "guardianDesignation": "Since you haven't designated someone to care for your assets, appointing a guardian should be your priority.",
-        "willPreparation": "Your family needs clarity about your wishes. Creating a will is an essential first step.",
-        "financialPlanning": "Financial security is crucial. Let's start by documenting your bank accounts and assets.",
-        "conflictPrevention": "To prevent family conflicts, clear documentation and communication are key.",
-        "memoryPreservation": "Preserving memories starts with organizing your digital photos and stories.",
-        "legalOrganization": "Let's organize your legal documents to avoid complications later."
-      }
-    },
-    "q1": {
-      "title": "If something happened to you today, would your family know where to find your important documents?",
-      "option1": "Yes",
-      "option2": "No",
-      "option3": "Partially"
-    },
-    "q2": {
-      "title": "Who would take care of your children/assets/digital accounts?",
-      "option1": "Have designated person",
-      "option2": "Family would figure it out",
-      "option3": "Haven't thought about it"
-    },
-    "q3": {
-      "title": "Do you feel your family would know what you wanted for them?",
-      "option1": "Yes, it's clear",
-      "option2": "Somewhat",
-      "option3": "No, we never discussed it"
-    },
-    "q4": {
-      "title": "What worries you most about your family's future?",
-      "option1": "Financial security",
-      "option2": "Legal complications",
-      "option3": "Losing memories",
-      "option4": "Family conflicts"
-    },
-    "buttons": {
-      "previous": "Previous",
-      "next": "Next",
-      "generate": "Generate My Project Order"
-    },
-    "analysis": {
-      "title": "Analyzing your answers...",
-      "subtitle": "Preparing your personal 'Project Order'...",
-      "done": "Done!"
-    },
-    "complete": "Great start! We've personalized your dashboard based on your answers. You're ready to start building your comprehensive legacy plan.",
-    "success": {
-      "stepCompleted": "Step {{step}} completed successfully!",
-      "inventoryComplete": "Life inventory completed! Your personalized plan is ready.",
-      "allQuestionsAnswered": "All questions answered. Generating your action plan..."
-    },
-    "errors": {
-      "questionRequired": "Please answer this question to continue",
-      "failedToSave": "Failed to save your answers. Please try again.",
-      "loadingFailed": "Failed to load onboarding questions"
-    },
-    "addAnother": "Add Another",
-    "previous": "Previous",
-    "next": "Next",
-    "continue": "Continue to Dashboard"
-  },
   "demo": {
     "ai": {
-      "title": "LegacyGuard AI Integration Demo",
-      "subtitle": "Experience how AI can help organize and protect your family's legacy",
-      "tabs": {
-        "documents": "Documents",
-        "questions": "Questions",
-        "suggestions": "Suggestions",
-        "messages": "Messages"
+      "context": {
+        "completion": "Completion:",
+        "label": "Current Context:",
+        "mood": "Mood:",
+        "recent": "Recent:"
       },
       "profile": {
-        "label": "Demo Profile:",
-        "documentsCount": "documents uploaded"
+        "documentsCount": "documents uploaded",
+        "label": "Demo Profile:"
       },
       "question": {
         "category": "Category:"
       },
-      "context": {
-        "label": "Current Context:",
-        "completion": "Completion:",
-        "recent": "Recent:",
-        "mood": "Mood:"
-      },
+      "subtitle": "Experience how AI can help organize and protect your family's legacy",
       "suggestion": {
         "priority": "Priority:"
-      }
-    },
-    "upload": {
-      "title": "Magical Document Upload",
-      "subtitle": "Experience the future of secure document management",
-      "badge": {
-        "encryption": "Auto Encrypt",
-        "aiAnalysis": "AI Analysis",
-        "familySharing": "Family Sharing"
-      },
-      "settings": {
-        "title": "Upload Settings",
-        "description": "Customize your document processing preferences",
-        "storageLocation": "Storage Location",
-        "local": "Local",
-        "cloud": "Cloud"
-      },
-      "features": {
-        "autoCompress": "Auto Compress",
-        "autoEncrypt": "Auto Encrypt",
-        "processOCR": "Process OCR",
-        "aiAnalysis": "AI Analysis",
-        "familySharing": "Family Sharing"
-      },
-      "console": {
-        "uploadStarted": "Upload started",
-        "view": "View",
-        "download": "Download",
-        "share": "Share",
-        "delete": "Delete"
       },
       "tabs": {
-        "upload": "Upload",
         "documents": "Documents",
-        "stats": "Statistics"
+        "messages": "Messages",
+        "questions": "Questions",
+        "suggestions": "Suggestions"
       },
-      "privacy": {
-        "localMode": {
-          "title": "Privacy Mode Active:",
-          "description": "All documents are processed and stored exclusively on your device. No data leaves your browser."
-        },
-        "cloudMode": {
-          "title": "Cloud Storage Active:",
-          "description": "Documents are encrypted before upload. Your encryption keys never leave your device."
-        }
-      },
-      "stats": {
-        "localStorage": {
-          "title": "Local Storage",
-          "description": "Documents stored on device"
-        },
-        "cloudStorage": {
-          "title": "Cloud Storage",
-          "description": "Documents in cloud"
-        },
-        "totalSize": {
-          "title": "Total Size",
-          "description": "Storage used"
-        },
-        "successRate": "Success Rate",
-        "averageTime": "Average Upload Time"
-      },
-      "progress": {
-        "title": "Upload Progress",
-        "completed": "{{count}} completed",
-        "failed": "{{count}} failed"
-      }
+      "title": "LegacyGuard AI Integration Demo"
     },
     "ocr": {
-      "title": "Privacy-First Document Processing",
-      "subtitle": "Extract text from documents while keeping everything on your device",
       "features": {
         "completePrivacy": "Complete Privacy",
         "multiLanguage": "Multi-Language Support",
         "smartDetection": "Smart Detection"
-      }
+      },
+      "subtitle": "Extract text from documents while keeping everything on your device",
+      "title": "Privacy-First Document Processing"
+    },
+    "upload": {
+      "badge": {
+        "aiAnalysis": "AI Analysis",
+        "encryption": "Auto Encrypt",
+        "familySharing": "Family Sharing"
+      },
+      "console": {
+        "delete": "Delete",
+        "download": "Download",
+        "share": "Share",
+        "uploadStarted": "Upload started",
+        "view": "View"
+      },
+      "features": {
+        "aiAnalysis": "AI Analysis",
+        "autoCompress": "Auto Compress",
+        "autoEncrypt": "Auto Encrypt",
+        "familySharing": "Family Sharing",
+        "processOCR": "Process OCR"
+      },
+      "privacy": {
+        "cloudMode": {
+          "description": "Documents are encrypted before upload. Your encryption keys never leave your device.",
+          "title": "Cloud Storage Active:"
+        },
+        "localMode": {
+          "description": "All documents are processed and stored exclusively on your device. No data leaves your browser.",
+          "title": "Privacy Mode Active:"
+        }
+      },
+      "progress": {
+        "title": "Upload Progress"
+      },
+      "settings": {
+        "cloud": "Cloud",
+        "description": "Customize your document processing preferences",
+        "local": "Local",
+        "storageLocation": "Storage Location",
+        "title": "Upload Settings"
+      },
+      "stats": {
+        "averageTime": "Average Upload Time",
+        "cloudStorage": {
+          "description": "Documents in cloud",
+          "title": "Cloud Storage"
+        },
+        "localStorage": {
+          "description": "Documents stored on device",
+          "title": "Local Storage"
+        },
+        "successRate": "Success Rate",
+        "totalSize": {
+          "description": "Storage used",
+          "title": "Total Size"
+        }
+      },
+      "subtitle": "Experience the future of secure document management",
+      "tabs": {
+        "documents": "Documents",
+        "stats": "Statistics",
+        "upload": "Upload"
+      },
+      "title": "Magical Document Upload"
     }
   },
-  "pillars": {
-    "secure": {
-      "title": "SECURE",
-      "description": "Protect your family and assets with proactive security measures"
+  "onboarding": {
+    "analysis": {
+      "subtitle": "Preparing your personal 'Project Order'...",
+      "title": "Analyzing your answers..."
     },
-    "organize": {
-      "title": "ORGANIZE",
-      "description": "Catalog and manage your digital and physical assets"
+    "buttons": {
+      "generate": "Generate My Project Order",
+      "next": "Next",
+      "previous": "Previous"
     },
-    "transfer": {
-      "title": "TRANSFER",
-      "description": "Ensure your legacy is passed on according to your wishes"
-    }
+    "mainSubtitle": "Let's create your personalized legacy protection plan",
+    "mainTitle": "Project Order",
+    "q1": {
+      "option1": "Yes",
+      "option2": "No",
+      "option3": "Partially",
+      "title": "If something happened to you today, would your family know where to find your important documents?"
+    },
+    "q2": {
+      "option1": "Have designated person",
+      "option2": "Family would figure it out",
+      "option3": "Haven't thought about it",
+      "title": "Who would take care of your children/assets/digital accounts?"
+    },
+    "q3": {
+      "option1": "Yes, it's clear",
+      "option2": "Somewhat",
+      "option3": "No, we never discussed it",
+      "title": "Do you feel your family would know what you wanted for them?"
+    },
+    "q4": {
+      "option1": "Financial security",
+      "option2": "Legal complications",
+      "option3": "Losing memories",
+      "option4": "Family conflicts",
+      "title": "What worries you most about your family's future?"
+    },
+    "skipButton": "Skip for now",
+    "skipConfirmMessage": "You can always restart this setup later in settings",
+    "skipConfirmNo": "Continue setup",
+    "skipConfirmTitle": "Skip onboarding?",
+    "skipConfirmYes": "Skip"
   }
 }

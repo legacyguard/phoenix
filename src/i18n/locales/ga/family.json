@@ -1,7 +1,122 @@
 {
-  "_comment": "Shared translations used across the application",
+  "beneficiaryCommunications": {
+    "actions": {
+      "cancel": "Cealaigh",
+      "save": "Sábháil Cumarsáid",
+      "saving": "Á shábháil..."
+    },
+    "description": "Rianaigh gach cumarsáid le tairbhí",
+    "dialog": {
+      "description": "Taifead sonraí do chumarsáide le tairbhí",
+      "title": "Logáil Cumarsáid"
+    },
+    "empty": {
+      "subtitle": "Cliceáil 'Logáil Cumarsáid' chun do chéad idirghníomhú a thaifead",
+      "title": "Níl aon chumarsáid logáilte go fóill"
+    },
+    "fields": {
+      "beneficiaryName": "Ainm an Tairbhí",
+      "date": "Dáta",
+      "email": "Ríomhphost",
+      "subject": "Ábhar",
+      "summary": "Achoimre",
+      "type": "Cineál"
+    },
+    "logCommunication": "Logáil Cumarsáid",
+    "placeholders": {
+      "subject": "Ábhar gearr den chumarsáid",
+      "summary": "Achoimre mionsonraithe ar cad a pléadh"
+    },
+    "title": "Cumarsáid Tairbhí",
+    "types": {
+      "email": "Ríomhphost",
+      "inPerson": "Go Pearsanta",
+      "letter": "Litir",
+      "other": "Eile",
+      "phone": "Guthán"
+    }
+  },
+  "emotionalContextSystem": {
+    "advice_2": "Comhairle: ",
+    "contextResponses": {
+      "default": {
+        "actionableAdvice": "Fan dílis do do phlean.",
+        "motivationalElement": "Cosnaíonn gach cinneadh a dhéanann tú do mhuintir.",
+        "nextStepGuidance": "Beidh an pictiúr mór ag treorú do chéad chéim eile.",
+        "primaryMessage": "Tá tú ag déanamh obair bríúil.",
+        "supportingMessage": "Neartaíonn an iarracht seo bunús do theaghlaigh."
+      },
+      "highOverwhelm": {
+        "actionableAdvice": "Smaoinigh ar an tasc a bhriseadh síos ina chodanna níos lú le haghaidh fócais.",
+        "motivationalElement": "Ag fios agam go bhfuil grá agus cúram ag spreagadh duit.",
+        "nextStepGuidance": "Bíonn tionchar suntasach ag gach gníomh beag a dhéanann tú.",
+        "primaryMessage": "Is fiú moladh do thiomantas do do theaghlach.",
+        "supportingMessage": "Tá sé ceart go leor nóiméad a thógáil chun athghrúpáil."
+      },
+      "lowConfidence": {
+        "actionableAdvice": "Lean ar aghaidh ag do luas compordach féin.",
+        "motivationalElement": "Is fianaise ar do luachanna é do chur chuige machnamhach.",
+        "nextStepGuidance": "Nuair a bheidh tú réidh, lean ar aghaidh leis an gcéad chéim thábhachtach eile chun todhchaí do theaghlaigh a dhaingniú.",
+        "primaryMessage": "Tá tú ag láimhseáil na staid seo le cúram agus léargas.",
+        "supportingMessage": "Léiríonn sé go dtuigeann tú tábhachtacht an tasc."
+      }
+    },
+    "emotional_support_1": "Tacaíocht Mothúchánach",
+    "motivation_3": "Spreagadh: ",
+    "next_steps_4": "An Chéad Chéim Eile: "
+  },
   "familyHub": {
-    "title": "Ionad Teaghlaigh",
+    "accessLevels": {
+      "emergencyOnly": {
+        "description": "Rochtain le linn éigeandálacha",
+        "fullDescription": "Faigheann rochtain ach nuair a ghníomhaítear prótacal éigeandála",
+        "title": "Éigeandála Amháin"
+      },
+      "fullAccess": {
+        "description": "Gach faisnéis roinnte",
+        "fullDescription": "Is féidir leo gach faisnéis a roinneadh tú leo a fheiceáil",
+        "title": "Rochtain Iomlán"
+      },
+      "limitedInfo": {
+        "description": "Faisnéis bhunúsach le haghaidh ullmhachta",
+        "fullDescription": "Is féidir leo faisnéis bhunúsach a fheiceáil anois chun cabhrú leo ullmhú",
+        "title": "Faisnéis Theoranta"
+      },
+      "none": {
+        "description": "Ní féidir aon fhaisnéis a fheiceáil",
+        "title": "Dada"
+      }
+    },
+    "emergencyProtocol": {
+      "activeMessage": "Tá prótacal éigeandála gníomhach agus cumraithe",
+      "configure": "Cumraigh",
+      "configured": "Cumraithe",
+      "description": "Ligeann prótacal éigeandála do dhaoine iontaofa le rochtain \"Éigeandála Amháin\" iarratas a dhéanamh ar fhaisnéis le linn staidí criticiúla. Teastaíonn deimhniú ó dhuine iontaofa eile.",
+      "title": "Prótacal Éigeandála"
+    },
+    "errors": {
+      "authenticationRequired": "Teastaíonn fíordheimhniú",
+      "failedToFetchData": "Theip ar shonraí teaghlaigh a fháil",
+      "failedToLoadMembers": "Theip ar bhaill teaghlaigh a lódáil"
+    },
+    "memberManagement": {
+      "addMorePeople": "Cuir níos mó daoine iontaofa le do líonra",
+      "addTrustedPerson": "Cuir Duine Iontaofa Leis",
+      "informationAccessLevel": "Leibhéal Rochtain Faisnéise",
+      "lastContactOver30Days": "Teagmháil dhéanta go deireanach níos mó ná 30 lá ó shin",
+      "lastContacted": "Teagmháil dhéanta go deireanach",
+      "preparedness": "Ullmhacht",
+      "sendUpdate": "Seol Nuashonrú",
+      "title": "Bainistigh do Dhaoine Iontaofa"
+    },
+    "messages": {
+      "accessLevelUpdated": "Nuashonraíodh leibhéal rochtana go rathúil"
+    },
+    "overallPreparedness": {
+      "description": "Léiríonn an scór seo cé chomh réidh is atá do theaghlach iomlán do éigeandáil.",
+      "improvementNeeded": "D'fhéadfaí ullmhacht do theaghlaigh a fheabhsú. Smaoinigh ar nuashonruithe a sheoladh chuig daoine a bhfuil scóir níos ísle acu.",
+      "title": "Ullmhacht Iomlán Teaghlaigh"
+    },
     "subtitle": "Bainistigh leibhéil rochtana agus bain úsáid as uirlisí ullmhachta chun a chinntiú go bhfuil do theaghlach ullamh go maith.",
     "tabs": {
       "familyMembers": "Baill Teaghlaigh",
@@ -9,477 +124,152 @@
       "preparednessTools": "Uirlisí Ullmhachta",
       "tools": "Uirlisí"
     },
-    "overallPreparedness": {
-      "title": "Ullmhacht Iomlán Teaghlaigh",
-      "description": "Léiríonn an scór seo cé chomh réidh is atá do theaghlach iomlán do éigeandáil.",
-      "improvementNeeded": "D'fhéadfaí ullmhacht do theaghlaigh a fheabhsú. Smaoinigh ar nuashonruithe a sheoladh chuig daoine a bhfuil scóir níos ísle acu."
-    },
-    "emergencyProtocol": {
-      "title": "Prótacal Éigeandála",
-      "description": "Ligeann prótacal éigeandála do dhaoine iontaofa le rochtain \"Éigeandála Amháin\" iarratas a dhéanamh ar fhaisnéis le linn staidí criticiúla. Teastaíonn deimhniú ó dhuine iontaofa eile.",
-      "configured": "Cumraithe",
-      "configure": "Cumraigh",
-      "activeMessage": "Tá prótacal éigeandála gníomhach agus cumraithe",
-      "configurationModal": {
-        "title": "Configure Emergency Protocol",
-        "description": "Set up how trusted people can access information during emergencies",
-        "requiredApprovals": "Required Approvals",
-        "requiredApprovalsDescription": "Number of trusted people who must approve emergency access",
-        "notificationSettings": "Notification Settings",
-        "notificationSettingsDescription": "Configure how you'll be notified of emergency requests",
-        "saveButton": "Save Configuration",
-        "cancelButton": "Cancel",
-        "saving": "Saving..."
-      },
-      "activationModal": {
-        "title": "Emergency Access Request",
-        "description": "Request emergency access to {{name}}'s information",
-        "reason": "Reason for Request",
-        "reasonPlaceholder": "Please describe the emergency situation...",
-        "confirmText": "I confirm this is a genuine emergency",
-        "requestButton": "Request Emergency Access",
-        "requesting": "Requesting..."
-      },
-      "errors": {
-        "configurationFailed": "Failed to save emergency protocol configuration",
-        "activationFailed": "Failed to request emergency access",
-        "invalidConfiguration": "Invalid configuration settings",
-        "notAuthorized": "You are not authorized to configure emergency protocol"
-      },
-      "success": {
-        "configured": "Emergency protocol configured successfully",
-        "requested": "Emergency access request sent",
-        "approved": "Emergency access approved",
-        "denied": "Emergency access denied"
-      }
-    },
-    "memberManagement": {
-      "title": "Bainistigh do Dhaoine Iontaofa",
-      "addTrustedPerson": "Cuir Duine Iontaofa Leis",
-      "addMorePeople": "Cuir níos mó daoine iontaofa le do líonra",
-      "informationAccessLevel": "Leibhéal Rochtain Faisnéise",
-      "preparedness": "Ullmhacht",
-      "lastContacted": "Teagmháil dhéanta go deireanach",
-      "daysAgo": "{{days}} lá ó shin",
-      "sendUpdate": "Seol Nuashonrú",
-      "sendUpdateTo": "Seol Nuashonrú chuig {{name}}",
-      "lastContactOver30Days": "Teagmháil dhéanta go deireanach níos mó ná 30 lá ó shin"
-    },
-    "accessLevels": {
-      "none": {
-        "title": "Dada",
-        "description": "Ní féidir aon fhaisnéis a fheiceáil"
-      },
-      "emergencyOnly": {
-        "title": "Éigeandála Amháin",
-        "description": "Rochtain le linn éigeandálacha",
-        "fullDescription": "Faigheann rochtain ach nuair a ghníomhaítear prótacal éigeandála"
-      },
-      "limitedInfo": {
-        "title": "Faisnéis Theoranta",
-        "description": "Faisnéis bhunúsach le haghaidh ullmhachta",
-        "fullDescription": "Is féidir leo faisnéis bhunúsach a fheiceáil anois chun cabhrú leo ullmhú"
-      },
-      "fullAccess": {
-        "title": "Rochtain Iomlán",
-        "description": "Gach faisnéis roinnte",
-        "fullDescription": "Is féidir leo gach faisnéis a roinneadh tú leo a fheiceáil"
-      }
-    },
-    "messages": {
-      "accessLevelUpdated": "Nuashonraíodh leibhéal rochtana go rathúil",
-      "updateSentTo": "Seoladh nuashonrú chuig {{name}}",
-      "failedToSendUpdate": "Theip ar nuashonrú a sheoladh chuig {{name}}"
-    },
-    "errors": {
-      "authenticationRequired": "Teastaíonn fíordheimhniú",
-      "failedToFetchData": "Theip ar shonraí teaghlaigh a fháil",
-      "failedToLoadMembers": "Theip ar bhaill teaghlaigh a lódáil",
-      "failedToUpdateAccessLevel": "Failed to update access level",
-      "failedToSendUpdate": "Failed to send update",
-      "invalidAccessLevel": "Invalid access level",
-      "memberNotFound": "Family member not found"
-    },
-    "api": {
-      "routes": {
-        "familyHub": {
-          "success": {
-            "dataFetched": "Family data fetched successfully",
-            "accessLevelUpdated": "Access level updated successfully",
-            "updateSent": "Update sent successfully"
-          },
-          "errors": {
-            "notAuthenticated": "User not authenticated",
-            "invalidRequest": "Invalid request data",
-            "memberNotFound": "Family member not found",
-            "updateFailed": "Failed to update family member",
-            "serverError": "Internal server error"
-          }
-        },
-        "emergencyProtocol": {
-          "success": {
-            "configurationSaved": "Emergency protocol configuration saved",
-            "protocolActivated": "Emergency protocol activated",
-            "accessGranted": "Emergency access granted",
-            "notificationSent": "Emergency notification sent"
-          },
-          "errors": {
-            "configurationInvalid": "Invalid configuration parameters",
-            "activationDenied": "Emergency activation denied",
-            "insufficientApprovals": "Insufficient approvals for emergency access",
-            "notificationFailed": "Failed to send emergency notification"
-          }
-        }
-      }
-    }
-  },
-  "familyPreparedness": {
-    "tools": {
-      "chooseScenario": "Roghnaigh cás éigeandála",
-      "cancel": "Cealaigh",
-      "generateGuide": "Gin Treoir",
-      "generating": "Ag giniúint...",
-      "printGuide": "Priontáil Treoir"
-    }
+    "title": "Ionad Teaghlaigh"
   },
   "familyPreparednessTools": {
-    "use_these_tools_to_ensure_your_1": "Bain úsáid as na huirlisí seo chun a chinntiú go bhfuil do theaghlach ullamh agus go bhfuil a fhios acu cad le déanamh i staidí éigeandála.",
-    "generate_emergency_guide_2": "Gin Treoir Éigeandála",
     "create_a_printable_guide_for_y_3": "Cruthaigh treoir inphriontáilte do do theaghlach le leanúint i staidí éigeandála.",
-    "select_scenario_4": "Roghnaigh Cás",
+    "errors": {
+      "comingSoon": "gné ag teacht go luath!",
+      "generateFailed": "Theip ar threoir a ghiniúint",
+      "premiumRequired": "Níl an ghné seo ar fáil ach d'úsáideoirí préimhe. Uasghrádaigh le do thoil chun rochtain a fháil ar gach uirlis.",
+      "selectScenario": "Roghnaigh cás le do thoil"
+    },
     "generate_another_5": "Gin Ceann Eile",
-    "tools": {
-      "informationTreasureHunt": "Tóraíocht Faisnéise",
-      "videoMessages": "Teachtaireachtaí Físe",
-      "emergencySimulator": "Simléadóir Staid Éigeandála",
-      "stepByStepGuides": "Treoracha Céim ar Chéim",
-      "emergencySimulatorDesc": "Rith cleachtadh. Seolfaimid cás tástála chuig do theaghlach chun a fheiceáil an féidir leo an fhaisnéis a theastaíonn uathu a aimsiú.",
-      "stepByStepGuidesDesc": "Gin treoracha inphriontáilte, bunaithe ar chásanna do do theaghlach (m.sh., 'Cad le déanamh sa chéad 24 uair an chloig').",
-      "treasureHuntDesc": "Tráth na gceist cluichithe do do theaghlach chun a chinntiú go bhfuil a fhios acu fíricí príomha, cosúil le cá bhfaighfidh siad an uacht nó cé hé do dhlíodóir.",
-      "videoMessagesDesc": "Taifead teachtaireachtaí físe pearsanta do do mhuintir le díghlasáil i gcúinsí ar leith.",
-      "launch": "Seol",
-      "chooseScenario": "Roghnaigh cás",
-      "cancel": "Cealaigh",
-      "generating": "Ag giniúint...",
-      "generateGuide": "Gin Treoir",
-      "printGuide": "Priontáil Treoir"
-    },
-    "scenarios": {
-      "death": {
-        "title": "I gcás mo bháis",
-        "description": "Treoir chuimsitheach chun tascanna láithreacha a láimhseáil tar éis do bhás"
-      },
-      "hospitalization": {
-        "title": "Má táim san ospidéal",
-        "description": "Céimeanna le glacadh má tá tú neamhchumasach nó i gcúram míochaine"
-      },
-      "missing": {
-        "title": "Má imím ar strae",
-        "description": "Faisnéis chriticiúil agus teagmhálaithe má ní féidir tú a aimsiú"
-      },
-      "emergency": {
-        "title": "Éigeandáil ghinearálta",
-        "description": "Tagairt gasta do aon staid phráinneach"
-      }
-    },
+    "generate_emergency_guide_2": "Gin Treoir Éigeandála",
     "guides": {
       "death": {
-        "title": "Treoir Éigeandála: I gcás mo Bháis",
-        "generatedOn": "Ginte ar",
-        "first24Hours": "🚨 Seicliosta na Chéad 24 Uaire an Chloig",
+        "bankAccounts": "Cuntais Bainc:",
         "contactExecutor": "Teagmháil leis an bhForghníomhóir:",
         "contactLawyer": "Teagmháil leis an Dlíodóir:",
-        "locateWill": "Aimsigh an tUacht:",
-        "secureResidence": "Daingnigh an Áit Chónaithe:",
-        "importantDocuments": "📋 Doiciméid Thábhachtacha",
         "deathCertificate": "Teastas Báis:",
-        "bankAccounts": "Cuntais Bainc:",
-        "investmentAccounts": "Cuntais Infheistíochta:",
-        "peopleToNotify": "👥 Daoine le Fógra a Thabhairt Dóibh",
+        "disclaimer": "Gineadh an treoir seo bunaithe ar an bhfaisnéis a sholáthraigh tú. Déan cinnte go bhfuil gach sonra cothrom le dáta.",
         "employer": "Fostóir:",
-        "insuranceCompanies": "Cuideachtaí Árachais:",
         "financialInstitutions": "Institiúidí Airgeadais:",
+        "first24Hours": "🚨 Seicliosta na Chéad 24 Uaire an Chloig",
+        "generatedOn": "Ginte ar",
+        "importantDocuments": "📋 Doiciméid Thábhachtacha",
+        "insuranceCompanies": "Cuideachtaí Árachais:",
+        "investmentAccounts": "Cuntais Infheistíochta:",
+        "locateWill": "Aimsigh an tUacht:",
+        "peopleToNotify": "👥 Daoine le Fógra a Thabhairt Dóibh",
+        "secureResidence": "Daingnigh an Áit Chónaithe:",
         "socialSecurity": "Riarachán Slándála Sóisialaigh:",
-        "disclaimer": "Gineadh an treoir seo bunaithe ar an bhfaisnéis a sholáthraigh tú. Déan cinnte go bhfuil gach sonra cothrom le dáta."
-      },
-      "hospitalization": {
-        "title": "Treoir Éigeandála: Má Táim san Ospidéal",
-        "medicalInformation": "🏥 Faisnéis Mhíochaine",
-        "primaryCarePhysician": "Príomhdhochtúir Cúraim:",
-        "preferredHospital": "Ospidéal Roghnaithe:",
-        "bloodType": "Cineál Fola:",
-        "allergies": "Ailléirgí:",
-        "currentMedications": "Cógais Reatha:",
-        "emergencyContacts": "📞 Teagmhálaithe Éigeandála",
-        "legalDocuments": "📄 Doiciméid Dlíthiúla",
-        "healthcarePowerOfAttorney": "Cumhacht Aturnae Cúraim Sláinte:",
-        "livingWill": "Uacht Beo:",
-        "hipaaRelease": "Scaoileadh HIPAA:"
-      },
-      "missing": {
-        "title": "Treoir Éigeandála: Má Imím ar Strae",
-        "immediateActions": "🔍 Gníomhartha Láithreacha",
-        "contactLocalPolice": "Teagmháil leis na póilíní áitiúla láithreach",
-        "checkWithWorkplace": "Seiceáil leis an ionad oibre:",
-        "contactCloseFriends": "Teagmháil le cairde dlútha agus teagmhálaithe rialta",
-        "checkHospitals": "Seiceáil ospidéil sa cheantar",
-        "digitalFootprint": "📱 Lorg Digiteach",
-        "phoneProvider": "Soláthraí Gutháin:",
-        "email": "Ríomhphost:",
-        "socialMedia": "Meáin Shóisialta:",
-        "bankingApps": "Aipeanna Baincéireachta:"
+        "title": "Treoir Éigeandála: I gcás mo Bháis"
       },
       "emergency": {
-        "title": "Tagairt Gasta Éigeandála Ghinearálta",
-        "keyContacts": "🚨 Teagmhálaithe Príomha",
-        "emergency": "Éigeandáil:",
-        "spouse": "Céile:",
-        "attorney": "Aturnae:",
-        "financialAdvisor": "Comhairleoir Airgeadais:",
-        "insuranceAgent": "Gníomhaire Árachais:",
-        "homeInformation": "🏠 Faisnéis Tí",
         "address": "Seoladh:",
+        "attorney": "Aturnae:",
+        "emergency": "Éigeandáil:",
+        "financialAdvisor": "Comhairleoir Airgeadais:",
+        "homeInformation": "🏠 Faisnéis Tí",
+        "insuranceAgent": "Gníomhaire Árachais:",
+        "keyContacts": "🚨 Teagmhálaithe Príomha",
         "securitySystem": "Córas Slándála:",
+        "spouse": "Céile:",
+        "title": "Tagairt Gasta Éigeandála Ghinearálta",
         "utilities": "Seirbhísí:"
+      },
+      "hospitalization": {
+        "allergies": "Ailléirgí:",
+        "bloodType": "Cineál Fola:",
+        "currentMedications": "Cógais Reatha:",
+        "emergencyContacts": "📞 Teagmhálaithe Éigeandála",
+        "healthcarePowerOfAttorney": "Cumhacht Aturnae Cúraim Sláinte:",
+        "hipaaRelease": "Scaoileadh HIPAA:",
+        "legalDocuments": "📄 Doiciméid Dlíthiúla",
+        "livingWill": "Uacht Beo:",
+        "medicalInformation": "🏥 Faisnéis Mhíochaine",
+        "preferredHospital": "Ospidéal Roghnaithe:",
+        "primaryCarePhysician": "Príomhdhochtúir Cúraim:",
+        "title": "Treoir Éigeandála: Má Táim san Ospidéal"
+      },
+      "missing": {
+        "bankingApps": "Aipeanna Baincéireachta:",
+        "checkHospitals": "Seiceáil ospidéil sa cheantar",
+        "checkWithWorkplace": "Seiceáil leis an ionad oibre:",
+        "contactCloseFriends": "Teagmháil le cairde dlútha agus teagmhálaithe rialta",
+        "contactLocalPolice": "Teagmháil leis na póilíní áitiúla láithreach",
+        "digitalFootprint": "📱 Lorg Digiteach",
+        "email": "Ríomhphost:",
+        "immediateActions": "🔍 Gníomhartha Láithreacha",
+        "phoneProvider": "Soláthraí Gutháin:",
+        "socialMedia": "Meáin Shóisialta:",
+        "title": "Treoir Éigeandála: Má Imím ar Strae"
       }
-    },
-    "errors": {
-      "premiumRequired": "Níl an ghné seo ar fáil ach d'úsáideoirí préimhe. Uasghrádaigh le do thoil chun rochtain a fháil ar gach uirlis.",
-      "selectScenario": "Roghnaigh cás le do thoil",
-      "generateFailed": "Theip ar threoir a ghiniúint",
-      "comingSoon": "gné ag teacht go luath!"
     },
     "mockContent": {
       "insurancePolicies": "Polasaithe Árachais"
+    },
+    "scenarios": {
+      "death": {
+        "description": "Treoir chuimsitheach chun tascanna láithreacha a láimhseáil tar éis do bhás",
+        "title": "I gcás mo bháis"
+      },
+      "emergency": {
+        "description": "Tagairt gasta do aon staid phráinneach",
+        "title": "Éigeandáil ghinearálta"
+      },
+      "hospitalization": {
+        "description": "Céimeanna le glacadh má tá tú neamhchumasach nó i gcúram míochaine",
+        "title": "Má táim san ospidéal"
+      },
+      "missing": {
+        "description": "Faisnéis chriticiúil agus teagmhálaithe má ní féidir tú a aimsiú",
+        "title": "Má imím ar strae"
+      }
+    },
+    "select_scenario_4": "Roghnaigh Cás",
+    "tools": {
+      "cancel": "Cealaigh",
+      "chooseScenario": "Roghnaigh cás",
+      "emergencySimulator": "Simléadóir Staid Éigeandála",
+      "emergencySimulatorDesc": "Rith cleachtadh. Seolfaimid cás tástála chuig do theaghlach chun a fheiceáil an féidir leo an fhaisnéis a theastaíonn uathu a aimsiú.",
+      "generateGuide": "Gin Treoir",
+      "generating": "Ag giniúint...",
+      "informationTreasureHunt": "Tóraíocht Faisnéise",
+      "launch": "Seol",
+      "printGuide": "Priontáil Treoir",
+      "stepByStepGuides": "Treoracha Céim ar Chéim",
+      "stepByStepGuidesDesc": "Gin treoracha inphriontáilte, bunaithe ar chásanna do do theaghlach (m.sh., 'Cad le déanamh sa chéad 24 uair an chloig').",
+      "treasureHuntDesc": "Tráth na gceist cluichithe do do theaghlach chun a chinntiú go bhfuil a fhios acu fíricí príomha, cosúil le cá bhfaighfidh siad an uacht nó cé hé do dhlíodóir.",
+      "videoMessages": "Teachtaireachtaí Físe",
+      "videoMessagesDesc": "Taifead teachtaireachtaí físe pearsanta do do mhuintir le díghlasáil i gcúinsí ar leith."
+    },
+    "use_these_tools_to_ensure_your_1": "Bain úsáid as na huirlisí seo chun a chinntiú go bhfuil do theaghlach ullamh agus go bhfuil a fhios acu cad le déanamh i staidí éigeandála."
+  },
+  "logLifeEvent": {
+    "eventTypes": {
+      "bought_sold_home": "Cheannaigh / Dhíol teach",
+      "career_advancement": "Dul chun cinn gairme",
+      "child_graduated": "Bhain leanbh céim amach / D'fhág baile",
+      "debt_change": "Athrú Fiacha Suntasach",
+      "financial_windfall": "Buíochas airgeadais",
+      "health_change": "Athrú Sláinte Suntasach",
+      "inheritance": "Fuair oidhreacht",
+      "insurance_change": "Athrú Polasaí Árachais",
+      "job_change": "D'athraigh post",
+      "married_divorced": "Phós / D'éirigh le colscaradh",
+      "moved_location": "Bhog go suíomh nua",
+      "new_child": "Bhí leanbh nua agam",
+      "retirement": "D'imigh ar scor",
+      "started_business": "Thosaigh gnó",
+      "trusted_person_passed": "Fuair Duine Iontaofa Bás"
+    },
+    "form": {
+      "cancel": "Cealaigh",
+      "description": "Roghnaigh athrú mór saol chun liosta seiceála pearsantaithe a ghiniúint",
+      "eventDescription": "Roghnaigh an t-imeacht saoil a chuireann síos is fearr ar do staid reatha",
+      "eventSelection": "Roghnaigh Imeacht Saoil",
+      "generateChecklist": "Gin Liosta Seiceála",
+      "title": "Logáil Imeacht Saoil"
     }
   },
   "relationships": {
-    "spouse": "Céile",
     "child": "Páiste",
+    "friend": "Cara",
+    "other": "Eile",
     "parent": "Tuismitheoir",
     "sibling": "Deartháir/Deirfiúr",
-    "friend": "Cara",
-    "other": "Eile"
-  },
-  "beneficiaryCommunications": {
-    "title": "Cumarsáid Tairbhí",
-    "description": "Rianaigh gach cumarsáid le tairbhí",
-    "logCommunication": "Logáil Cumarsáid",
-    "logAction": "Cumarsáid logáilte le {name}",
-    "dialog": {
-      "title": "Logáil Cumarsáid",
-      "description": "Taifead sonraí do chumarsáide le tairbhí"
-    },
-    "fields": {
-      "beneficiaryName": "Ainm an Tairbhí",
-      "email": "Ríomhphost",
-      "type": "Cineál",
-      "date": "Dáta",
-      "subject": "Ábhar",
-      "summary": "Achoimre"
-    },
-    "placeholders": {
-      "subject": "Ábhar gearr den chumarsáid",
-      "summary": "Achoimre mionsonraithe ar cad a pléadh"
-    },
-    "types": {
-      "email": "Ríomhphost",
-      "phone": "Guthán",
-      "letter": "Litir",
-      "inPerson": "Go Pearsanta",
-      "in_person": "Go Pearsanta",
-      "other": "Eile"
-    },
-    "actions": {
-      "cancel": "Cealaigh",
-      "saving": "Á shábháil...",
-      "save": "Sábháil Cumarsáid"
-    },
-    "empty": {
-      "title": "Níl aon chumarsáid logáilte go fóill",
-      "subtitle": "Cliceáil 'Logáil Cumarsáid' chun do chéad idirghníomhú a thaifead"
-    }
-  },
-  "emergencyAccess": {
-    "button": "Rochtain Éigeandála",
-    "modalTitle": "Rochtain ar Theagmhálaithe Éigeandála",
-    "modalDescription": "Tabharfaidh sé seo rochtain duit ar fhaisnéis teagmhála éigeandála. Ná húsáid é seo ach i gcásanna fíor-éigeandála.",
-    "warningText": "Déantar an rochtain seo a logáil agus tabharfar fógra do shealbhóir an chuntais.",
-    "reasonLabel": "Cúis leis an rochtain éigeandála (riachtanach)",
-    "reasonPlaceholder": "Déan cur síos ar an staid éigeandála a dteastaíonn rochtain ar fhaisnéis teagmhála ina leith...",
-    "confirmCheckbox": "Deimhním gur fíor-staid éigeandála í seo agus go dteastaíonn rochtain ar fhaisnéis teagmhála uaim",
-    "accessing": "Rochtain á fáil...",
-    "confirmButton": "Rochtain ar Theagmhálaithe Éigeandála",
-    "pleaseConfirm": "Deimhnigh an éigeandáil agus tabhair cúis, le do thoil.",
-    "notAuthorized": "Níl tú údaraithe le haghaidh rochtana éigeandála.",
-    "failedToLoadContacts": "Theip ar na teagmhálaithe éigeandála a lódáil.",
-    "accessGranted": "Tugadh rochtain éigeandála. Tá faisnéis teagmhála ar fáil anois.",
-    "accessFailed": "Theip ar rochtain a fháil ar theagmhálaithe éigeandála.",
-    "contactsTitle": "Teagmhálaithe Éigeandála",
-    "contactsDescription": "Déan teagmháil leis na daoine seo in ord tosaíochta. Cliceáil ar uimhreacha gutháin chun glaoch nó ar ríomhphoist chun teachtaireachtaí a sheoladh.",
-    "priorityOrder": "Ord Tosaíochta",
-    "priority": "Tosaíocht #{{order}}",
-    "logContact": "Logáil Iarracht Teagmhála",
-    "contactLogged": "Logáladh iarracht teagmhála.",
-    "lastContacted": "Teagmháil déanta go deireanach: {{time}}",
-    "importantNote": "Tábhachtach: Déan teagmháil leis na daoine aonair seo san ord a thaispeántar. Bain triail as an modh teagmhála príomhúil ar dtús i gcónaí. Logáil gach iarracht teagmhála le haghaidh taifead a choinneáil."
-  },
-  "emotionalContextSystem": {
-    "emotional_support_1": "Tacaíocht Mothúchánach",
-    "advice_2": "Comhairle: ",
-    "motivation_3": "Spreagadh: ",
-    "next_steps_4": "An Chéad Chéim Eile: ",
-    "contextResponses": {
-      "lowConfidence": {
-        "primaryMessage": "Tá tú ag láimhseáil na staid seo le cúram agus léargas.",
-        "supportingMessage": "Léiríonn sé go dtuigeann tú tábhachtacht an tasc.",
-        "actionableAdvice": "Lean ar aghaidh ag do luas compordach féin.",
-        "motivationalElement": "Is fianaise ar do luachanna é do chur chuige machnamhach.",
-        "nextStepGuidance": "Nuair a bheidh tú réidh, lean ar aghaidh leis an gcéad chéim thábhachtach eile chun todhchaí do theaghlaigh a dhaingniú."
-      },
-      "highOverwhelm": {
-        "primaryMessage": "Is fiú moladh do thiomantas do do theaghlach.",
-        "supportingMessage": "Tá sé ceart go leor nóiméad a thógáil chun athghrúpáil.",
-        "actionableAdvice": "Smaoinigh ar an tasc a bhriseadh síos ina chodanna níos lú le haghaidh fócais.",
-        "motivationalElement": "Ag fios agam go bhfuil grá agus cúram ag spreagadh duit.",
-        "nextStepGuidance": "Bíonn tionchar suntasach ag gach gníomh beag a dhéanann tú."
-      },
-      "default": {
-        "primaryMessage": "Tá tú ag déanamh obair bríúil.",
-        "supportingMessage": "Neartaíonn an iarracht seo bunús do theaghlaigh.",
-        "actionableAdvice": "Fan dílis do do phlean.",
-        "motivationalElement": "Cosnaíonn gach cinneadh a dhéanann tú do mhuintir.",
-        "nextStepGuidance": "Beidh an pictiúr mór ag treorú do chéad chéim eile."
-      }
-    },
-    "emotionalStates": {
-      "confidence": {
-        "high": "Ard",
-        "medium": "Meánach",
-        "low": "Íseal"
-      },
-      "motivation": {
-        "high": "Ard",
-        "medium": "Meánach",
-        "low": "Íseal"
-      },
-      "overwhelm": {
-        "none": "Dada",
-        "slight": "Beag",
-        "moderate": "Measartha",
-        "high": "Ard"
-      },
-      "urgency": {
-        "relaxed": "Socair",
-        "focused": "Fócais",
-        "pressed": "Brúite",
-        "stressed": "Struasach"
-      }
-    }
-  },
-  "lifeEvents": {
-    "title": "Imeachtaí Saoil",
-    "subtitle": "Nuashonraigh do phlean nuair a tharlaíonn athruithe móra saol",
-    "addEvent": "Cuir Imeacht Saoil Leis",
-    "noEvents": "Níl aon imeacht saoil taifeadta go fóill",
-    "addFirstEvent": "Cuir do chéad imeacht saoil leis chun tosú",
-    "events": {
-      "marriedDivorced": "Nuashonrú Pósadh/Colscaradh",
-      "newChild": "Nuashonrú Leanbh Nua",
-      "boughtSoldHome": "Nuashonrú Eastát Réadach",
-      "startedBusiness": "Nuashonrú Gnó Nua",
-      "trustedPersonPassed": "Nuashonrú Daoine Iontaofa",
-      "unknown": "Imeacht Anaithnid"
-    },
-    "congratsMessage": "Comhghairdeas ar do leanbh nua! Seo iad na nuashonruithe molta do do phlean:",
-    "tasks": {
-      "updateBeneficiaries": "Nuashonraigh tairbhithe ar gach cuntas",
-      "updateBeneficiariesDesc": "Athbhreithnigh agus nuashonraigh tairbhithe ar árachas saoil, cuntais scoir, agus cuntais bainc.",
-      "updateWill": "Nuashonraigh do uacht",
-      "updateWillDesc": "Cinntigh go léiríonn do uacht do stádas pósta nua agus mianta tairbhí.",
-      "reviewTrusts": "Athbhreithnigh agus nuashonraigh aon iontaobhais",
-      "reviewTrustsDesc": "Déan athruithe riachtanacha ar dhoiciméid iontaobhais chun do stádas nua a léiriú.",
-      "updateEmergencyContacts": "Nuashonraigh teagmhálaithe éigeandála",
-      "updateEmergencyContactsDesc": "Athbhreithnigh agus nuashonraigh teagmhálaithe éigeandála i do Chiorcal Iontaofa.",
-      "addChildRoster": "Cuir do leanbh nua le do Chiorcal Iontaofa",
-      "addChildRosterDesc": "Cuir do leanbh san áireamh i do chuid faisnéise teaghlaigh.",
-      "updateGuardian": "Athbhreithnigh agus nuashonraigh an t-ainmniú \"Caomhnóir\" do do leanaí",
-      "updateGuardianDesc": "Cinntigh go bhfuil caomhnóirí cuí ainmnithe agat do gach ceann de do leanaí.",
-      "reviewLifeInsurance": "Athbhreithnigh do pholasaí árachais saoil chun a chinntiú go bhfuil clúdach leordhóthanach",
-      "reviewLifeInsuranceDesc": "Smaoinigh ar chlúdach a mhéadú chun cuntas a choinneáil ar do theaghlach atá ag fás.",
-      "updateWillBeneficiary": "Nuashonraigh do uacht chun do leanbh nua a áireamh mar thairbhí",
-      "updateWillBeneficiaryDesc": "Cinntigh go bhfuil do leanbh nua san áireamh i gceart i do phleanáil eastáit.",
-      "updatePropertyArmory": "Nuashonraigh faisnéis maoine i do Chruinneachán",
-      "updatePropertyArmoryDesc": "Cuir maoiniú nua leis nó bain maoiniú díolta de do shócmhainní.",
-      "updateMortgageInfo": "Nuashonraigh faisnéis morgáiste agus gníomhais",
-      "updateMortgageInfoDesc": "Cinntigh go bhfuil gach doiciméad a bhaineann le maoiniú cothrom le dáta.",
-      "reviewHomeownersInsurance": "Athbhreithnigh árachas úinéir tí/mhaoine",
-      "reviewHomeownersInsuranceDesc": "Nuashonraigh polasaithe árachais chun do mhaoin reatha a léiriú.",
-      "updateNetWorth": "Nuashonraigh do ríomh luach glan",
-      "updateNetWorthDesc": "Léirigh an t-athrú i do shealbhú eastáit réadach.",
-      "addBusinessAssets": "Cuir gnó le do Chruinneachán",
-      "addBusinessAssetsDesc": "Cuir do ghnó san áireamh mar shócmhainn le sonraí ábhartha.",
-      "createSuccessionPlan": "Cruthaigh plean comharbais gnó",
-      "createSuccessionPlanDesc": "Doiciméadaigh cad ba cheart a tharlú do do ghnó má tharlaíonn rud éigin duit.",
-      "updateInsurance": "Athbhreithnigh riachtanais árachais",
-      "updateInsuranceDesc": "Smaoinigh ar árachas duine príomha agus clúdach dliteanas gnó.",
-      "separatePersonalBusiness": "Cinntigh go bhfuil sócmhainní pearsanta agus gnó scartha i gceart",
-      "separatePersonalBusinessDesc": "Athbhreithnigh an difríocht idir sealbhú pearsanta agus gnó.",
-      "removeDeceased": "Nuashonraigh do Chiorcal Iontaofa",
-      "removeDeceasedDesc": "Bain an duine nach maireann agus athshann a bhfreagrachtaí.",
-      "appointNewExecutor": "Ainmnigh forghníomhóir/iontaobhaí nua más gá",
-      "appointNewExecutorDesc": "Má ba é an duine nach maireann do fhorghníomhóir nó iontaobhaí, ainmnigh ionadach.",
-      "updateBeneficiariesDesc2": "Seiceáil an raibh an duine nach maireann ina thairbhí ar aon chuntas.",
-      "updateEmergencyContactsDesc2": "Athbhreithnigh gach faisnéis teagmhála éigeandála."
-    }
-  },
-  "logLifeEvent": {
-    "title": "Logáil Imeacht Saoil",
-    "description": "Roghnaigh athrú mór saol chun liosta seiceála pearsantaithe a ghiniúint chun plean cosanta do theaghlaigh a nuashonrú.",
-    "eventTypes": {
-      "married_divorced": "Phós / D'éirigh le colscaradh",
-      "new_child": "Bhí leanbh nua agam",
-      "bought_sold_home": "Cheannaigh / Dhíol teach",
-      "started_business": "Thosaigh gnó",
-      "trusted_person_passed": "Fuair Duine Iontaofa Bás",
-      "job_change": "D'athraigh post",
-      "moved_location": "Bhog go suíomh nua",
-      "inheritance": "Fuair oidhreacht",
-      "retirement": "D'imigh ar scor",
-      "health_change": "Athrú Sláinte Suntasach",
-      "child_graduated": "Bhain leanbh céim amach / D'fhág baile",
-      "career_advancement": "Dul chun cinn gairme",
-      "financial_windfall": "Buíochas airgeadais",
-      "debt_change": "Athrú Fiacha Suntasach",
-      "insurance_change": "Athrú Polasaí Árachais"
-    },
-    "form": {
-      "title": "Logáil Imeacht Saoil",
-      "description": "Roghnaigh athrú mór saol chun liosta seiceála pearsantaithe a ghiniúint",
-      "eventSelection": "Roghnaigh Imeacht Saoil",
-      "eventDescription": "Roghnaigh an t-imeacht saoil a chuireann síos is fearr ar do staid reatha",
-      "generateChecklist": "Gin Liosta Seiceála",
-      "cancel": "Cealaigh",
-      "submit": "Cuir isteach",
-      "close": "Dún"
-    },
-    "checklist": {
-      "title": "Liosta Seiceála Pearsantaithe",
-      "description": "Bunaithe ar d'imeacht saoil, seo iad na míreanna príomha ar cheart duit athbhreithniú a dhéanamh orthu agus iad a nuashonrú:",
-      "priority": "Tosaíocht",
-      "action": "Gníomh",
-      "estimatedTime": "Am Measta",
-      "high": "Ard",
-      "medium": "Measartha",
-      "low": "Íseal",
-      "completed": "Críochnaithe",
-      "pending": "Ar feitheamh"
-    },
-    "notifications": {
-      "eventLogged": "Logáladh imeacht saoil go rathúil",
-      "checklistGenerated": "Gineadh liosta seiceála pearsantaithe",
-      "errorLogging": "Earráid ag logáil imeacht saoil",
-      "reminderSet": "Socraíodh cuimhneachán le haghaidh gníomhartha leanúna"
-    }
+    "spouse": "Céile"
   }
 }

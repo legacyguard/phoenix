@@ -1,98 +1,68 @@
 {
-  "_comment": "Shared translations used across the application",
-  "errorBoundary": {
-    "title": "Ak vai! Kaut kas nogāja greizi",
-    "description": "Atvainojamies par sagādātajām neērtībām. Radās neparedzēta kļūda.",
-    "errorId": "Kļūdas ID",
-    "tryAgain": "Mēģināt vēlreiz",
-    "reloadPage": "Pārlādēt lapu",
-    "goToHomepage": "Doties uz sākumlapu",
-    "technicalDetails": "Tehniskā informācija",
-    "hide": "Paslēpt",
-    "show": "Rādīt",
-    "stackTrace": "Steka izsekošana",
-    "componentStack": "Komponentu steks",
-    "helpText": "Ja problēma atkārtojas, sazinieties ar mūsu atbalsta dienestu, norādot kļūdas ID."
-  },
-  "errorTest": {
-    "title": "Kļūdu reģistrēšanas tests",
-    "description": "Test error handling and logging functionality",
-    "triggerSyncError": "Izraisīt sinhrono kļūdu (ErrorBoundary)",
-    "triggerAsyncError": "Izraisīt asinhrono kļūdu",
-    "logRegularError": "Reģistrēt parasto kļūdu",
-    "logCriticalError": "Reģistrēt kritisko kļūdu",
-    "triggerAlert": "Izraisīt brīdinājumu (6 kritiskās kļūdas)",
-    "errorMessages": {
-      "testError": "Test error from ErrorTest component",
-      "testAsyncRejection": "Testēt asinhrono noraidījumu",
-      "manualTestError": "Manuāla testa kļūda",
-      "testCriticalError": "Testēt kritisku kļūdu",
-      "criticalErrorWithIndex": "Critical error {{index}}"
-    },
-    "descriptions": {
-      "syncError": "Triggers a synchronous error that will be caught by the ErrorBoundary",
-      "asyncError": "Triggers an asynchronous error that will be caught by error handling",
-      "regularError": "Logs a regular error for testing error tracking",
-      "criticalError": "Logs a critical error for testing critical error handling",
-      "multipleErrors": "Triggers multiple critical errors to test alert thresholds"
-    },
-    "context": {
-      "component": "ErrorTest",
-      "action": "button-click",
-      "severity": "high"
-    },
-    "notifications": {
-      "errorLogged": "Kļūda veiksmīgi reģistrēta",
-      "criticalErrorLogged": "Critical error logged successfully",
-      "multipleErrorsTriggered": "Multiple critical errors triggered",
-      "errorBoundaryTriggered": "Kļūdu robeža aktivizēta",
-      "asyncErrorCaught": "Async error caught and handled"
-    }
-  },
   "debug": {
     "panel": {
-      "title": "Atkļūdošanas panelis",
-      "recentErrors": "Nesenās lietojumprogrammas kļūdas",
-      "technicalDetails": "Tehniskā informācija",
-      "tabs": {
-        "list": "Saraksts",
-        "details": "Detaļas"
-      },
-      "errorCount": "{{count}} kļūdas",
       "actions": {
-        "downloadErrors": "Lejupielādēt kļūdas",
-        "clearAllErrors": "Notīrīt visas kļūdas"
-      },
-      "messages": {
-        "errorsCleared": "Visas kļūdas notīrītas",
-        "errorCopied": "Kļūda nokopēta starpliktuvē",
-        "errorsDownloaded": "Kļūdas lejupielādētas"
+        "clearAllErrors": "Notīrīt visas kļūdas",
+        "downloadErrors": "Lejupielādēt kļūdas"
       },
       "error": {
-        "unknownError": "Nezināma kļūda",
+        "errorMessage": "Kļūdas ziņojums",
         "noMessage": "Nav ziņojuma",
-        "errorMessage": "Kļūdas ziņojums"
-      },
-      "sections": {
-        "stackTrace": "Steka izsekošana",
-        "context": "Konteksts",
-        "location": "Atrašanās vieta",
-        "browserInfo": "Pārlūkprogrammas informācija",
-        "time": "Laiks"
+        "unknownError": "Nezināma kļūda"
       },
       "fields": {
-        "url": "URL:",
         "path": "Ceļš:",
         "query": "Vaicājums:",
+        "url": "URL:",
         "userAgent": "Lietotāja aģents:",
         "viewport": "Skata logs:"
-      }
+      },
+      "messages": {
+        "errorCopied": "Kļūda nokopēta starpliktuvē",
+        "errorsCleared": "Visas kļūdas notīrītas",
+        "errorsDownloaded": "Kļūdas lejupielādētas"
+      },
+      "recentErrors": "Nesenās lietojumprogrammas kļūdas",
+      "sections": {
+        "browserInfo": "Pārlūkprogrammas informācija",
+        "context": "Konteksts",
+        "location": "Atrašanās vieta",
+        "stackTrace": "Steka izsekošana",
+        "time": "Laiks"
+      },
+      "tabs": {
+        "details": "Detaļas",
+        "list": "Saraksts"
+      },
+      "title": "Atkļūdošanas panelis"
     }
+  },
+  "errorBoundary": {
+    "componentStack": "Komponentu steks",
+    "description": "Atvainojamies par sagādātajām neērtībām. Radās neparedzēta kļūda.",
+    "errorId": "Kļūdas ID",
+    "goToHomepage": "Doties uz sākumlapu",
+    "helpText": "Ja problēma atkārtojas, sazinieties ar mūsu atbalsta dienestu, norādot kļūdas ID.",
+    "hide": "Paslēpt",
+    "reloadPage": "Pārlādēt lapu",
+    "show": "Rādīt",
+    "stackTrace": "Steka izsekošana",
+    "technicalDetails": "Tehniskā informācija",
+    "title": "Ak vai! Kaut kas nogāja greizi",
+    "tryAgain": "Mēģināt vēlreiz"
+  },
+  "errorTest": {
+    "logCriticalError": "Reģistrēt kritisko kļūdu",
+    "logRegularError": "Reģistrēt parasto kļūdu",
+    "title": "Kļūdu reģistrēšanas tests",
+    "triggerAlert": "Izraisīt brīdinājumu (6 kritiskās kļūdas)",
+    "triggerAsyncError": "Izraisīt asinhrono kļūdu",
+    "triggerSyncError": "Izraisīt sinhrono kļūdu (ErrorBoundary)"
   },
   "test": {
     "environment": {
-      "title": "Tikai testēšanas videi",
-      "description": "Šī lapa ir paredzēta kļūdu reģistrēšanas sistēmas testēšanai. Noņemiet šo maršrutu pirms izvietošanas ražošanā."
+      "description": "Šī lapa ir paredzēta kļūdu reģistrēšanas sistēmas testēšanai. Noņemiet šo maršrutu pirms izvietošanas ražošanā.",
+      "title": "Tikai testēšanas videi"
     }
   }
 }

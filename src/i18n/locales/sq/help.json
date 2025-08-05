@@ -1,34 +1,31 @@
 {
-  "_comment": "Shared translations used across the application",
   "help": {
-    "needHelp": "Need Help?",
+    "basedOnProgress": "Based on your current progress, here's what we recommend:",
     "getHelp": "Get Help",
     "helpAndTutorials": "Help & Tutorials",
-    "recommendedForYou": "Recommended for You",
-    "basedOnProgress": "Based on your current progress, here's what we recommend:",
+    "needHelp": "Need Help?",
     "personalizedHelpDescription": "Get personalized help based on where you are in your journey",
-    "recommendedTopics": "Recommended topics",
     "quickTips": {
-      "title": "Quick Tips",
       "tip1": "Start with your most important documents first",
       "tip2": "Add at least one trusted guardian",
       "tip3": "Update your information regularly",
-      "tip4": "Test your guardian's access annually"
+      "tip4": "Test your guardian's access annually",
+      "title": "Quick Tips"
+    },
+    "recommendedForYou": "Recommended for You",
+    "recommendedTopics": "Recommended topics",
+    "stepDetails": {
+      "description": "Description",
+      "estimatedTime": "Estimated time",
+      "gotIt": "Got it!",
+      "minutes": "minutes",
+      "stepByStepInstructions": "Step-by-Step Instructions",
+      "steps": "steps",
+      "videoTutorial": "Video Tutorial",
+      "watchVideoTutorial": "Watch Video Tutorial"
     },
     "topics": {
-      "uploadDocuments": {
-        "title": "Upload Your First Document",
-        "description": "Learn how to securely upload and organize your important documents",
-        "steps": {
-          "1": "Click the 'Upload Document' button in the Organize section",
-          "2": "Select your document file from your computer",
-          "3": "Choose the document type and add a descriptive name",
-          "4": "Set an expiration date if applicable",
-          "5": "Save the document to your secure vault"
-        }
-      },
       "addGuardians": {
-        "title": "Add Your First Guardian",
         "description": "Set up trusted people who can access your information in emergencies",
         "steps": {
           "1": "Click 'Add Guardian' in the Secure section",
@@ -36,32 +33,10 @@
           "3": "Select their roles and responsibilities",
           "4": "Add their contact information",
           "5": "Send them an invitation to accept their role"
-        }
-      },
-      "listAssets": {
-        "title": "List Your Assets",
-        "description": "Document your properties, accounts, and valuable possessions",
-        "steps": {
-          "1": "Click 'Add Item' in the Organize section",
-          "2": "Choose the asset type (property, vehicle, account, etc.)",
-          "3": "Enter the asset name and details",
-          "4": "Add estimated value if desired",
-          "5": "Save the asset to your inventory"
-        }
-      },
-      "designateBeneficiaries": {
-        "title": "Designate Beneficiaries",
-        "description": "Specify who should receive your assets and in what proportions",
-        "steps": {
-          "1": "Click 'Add Beneficiary' in the Transfer section",
-          "2": "Enter the beneficiary's name",
-          "3": "Set their allocation percentage",
-          "4": "Review total allocations (must equal 100%)",
-          "5": "Save your beneficiary list"
-        }
+        },
+        "title": "Add Your First Guardian"
       },
       "createWill": {
-        "title": "Create Your Will",
         "description": "Generate a basic will document based on your information",
         "steps": {
           "1": "Navigate to the Will section",
@@ -69,172 +44,169 @@
           "3": "Review your beneficiaries and assets",
           "4": "Generate the will document",
           "5": "Download and have it properly witnessed"
-        }
+        },
+        "title": "Create Your Will"
+      },
+      "designateBeneficiaries": {
+        "description": "Specify who should receive your assets and in what proportions",
+        "steps": {
+          "1": "Click 'Add Beneficiary' in the Transfer section",
+          "2": "Enter the beneficiary's name",
+          "3": "Set their allocation percentage",
+          "4": "Review total allocations (must equal 100%)",
+          "5": "Save your beneficiary list"
+        },
+        "title": "Designate Beneficiaries"
+      },
+      "listAssets": {
+        "description": "Document your properties, accounts, and valuable possessions",
+        "steps": {
+          "1": "Click 'Add Item' in the Organize section",
+          "2": "Choose the asset type (property, vehicle, account, etc.)",
+          "3": "Enter the asset name and details",
+          "4": "Add estimated value if desired",
+          "5": "Save the asset to your inventory"
+        },
+        "title": "List Your Assets"
+      },
+      "uploadDocuments": {
+        "description": "Learn how to securely upload and organize your important documents",
+        "steps": {
+          "1": "Click the 'Upload Document' button in the Organize section",
+          "2": "Select your document file from your computer",
+          "3": "Choose the document type and add a descriptive name",
+          "4": "Set an expiration date if applicable",
+          "5": "Save the document to your secure vault"
+        },
+        "title": "Upload Your First Document"
       }
-    },
-    "stepDetails": {
-      "description": "Description",
-      "stepByStepInstructions": "Step-by-Step Instructions",
-      "videoTutorial": "Video Tutorial",
-      "watchVideoTutorial": "Watch Video Tutorial",
-      "estimatedTime": "Estimated time",
-      "minutes": "minutes",
-      "steps": "steps",
-      "gotIt": "Got it!"
-    },
-    "priority": {
-      "high": "high",
-      "medium": "medium",
-      "low": "low"
     }
   },
   "helpPage": {
-    "title": "Qendra e Ndihmës & Mbështetjes",
-    "subtitle": "Ne jemi këtu për ju. Gjeni përgjigje për pyetjet tuaja ose na kontaktoni direkt.",
+    "contact": {
+      "call": {
+        "button": "Caktoni një Telefonatë",
+        "description": "Për klientët Premium dhe Enterprise.",
+        "title": "Caktoni një Telefonatë (Për Premium)"
+      },
+      "email": {
+        "button": "Hap Klientin Email",
+        "description": "Për pyetje të përgjithshme dhe mbështetje.",
+        "title": "Na Dërgoni Email"
+      },
+      "title": "Nuk e gjetët atë që kërkonit?"
+    },
     "faq": {
-      "title": "Pyetje të Shpeshta",
       "q1": {
-        "question": "A është LegacyGuard i sigurt?",
-        "answer": "Po, siguria është prioriteti ynë më i lartë. Ne përdorim enkriptim fund-më-fund dhe një arkitekturë me besim zero, që do të thotë se asnjë person i paautorizuar nuk mund të ketë akses në të dhënat tuaja, madje as ne. Të gjitha të dhënat ruhen në qendra të dhënash të sigurta brenda Bashkimit Evropian në përputhje me GDPR."
+        "answer": "Po, siguria është prioriteti ynë më i lartë. Ne përdorim enkriptim fund-më-fund dhe një arkitekturë me besim zero, që do të thotë se asnjë person i paautorizuar nuk mund të ketë akses në të dhënat tuaja, madje as ne. Të gjitha të dhënat ruhen në qendra të dhënash të sigurta brenda Bashkimit Evropian në përputhje me GDPR.",
+        "question": "A është LegacyGuard i sigurt?"
       },
       "q2": {
-        "question": "Çfarë ndodh me të dhënat e mia nëse anuloj abonimin tim?",
-        "answer": "Pas anulimit, të dhënat tuaja mbeten të ruajtura në mënyrë të sigurt në modalitetin vetëm për lexim për 90 ditë. Mund ta riaktivizoni abonimin tuaj në çdo kohë brenda kësaj periudhe për të rifituar aksesin e plotë. Pas 90 ditësh, të dhënat tuaja do të fshihen në mënyrë të sigurt dhe të përhershme nga sistemet tona."
+        "answer": "Pas anulimit, të dhënat tuaja mbeten të ruajtura në mënyrë të sigurt në modalitetin vetëm për lexim për 90 ditë. Mund ta riaktivizoni abonimin tuaj në çdo kohë brenda kësaj periudhe për të rifituar aksesin e plotë. Pas 90 ditësh, të dhënat tuaja do të fshihen në mënyrë të sigurt dhe të përhershme nga sistemet tona.",
+        "question": "Çfarë ndodh me të dhënat e mia nëse anuloj abonimin tim?"
       },
       "q3": {
-        "question": "Çfarë është një 'Kujdestar'?",
-        "answer": "Një Kujdestar është një person i besuar (p.sh., partner, vëlla/motër, ose profesionist ligjor) të cilit i jepni akses të veçantë dhe të kufizuar në informacionin tuaj për raste urgjente. Një Kujdestar nuk mund të ndryshojë të dhënat tuaja; ai mund t'i shikojë ato vetëm për të vepruar sipas udhëzimeve tuaja."
+        "answer": "Një Kujdestar është një person i besuar (p.sh., partner, vëlla/motër, ose profesionist ligjor) të cilit i jepni akses të veçantë dhe të kufizuar në informacionin tuaj për raste urgjente. Një Kujdestar nuk mund të ndryshojë të dhënat tuaja; ai mund t'i shikojë ato vetëm për të vepruar sipas udhëzimeve tuaja.",
+        "question": "Çfarë është një 'Kujdestar'?"
       },
       "q4": {
-        "question": "Cila është ndryshimi midis 'Kutisë së Sigurisë' dhe 'Manualit'?",
-        "answer": "Kutija e Trashëgimisë është vendi ku ruani në mënyrë të sigurt të gjitha dokumentet dhe pasuritë tuaja të rëndësishme. Manuali i të Mbijetuarit është një përzgjedhje e kuruar e kontakteve, dokumenteve dhe udhëzimeve më kritike nga kutia juaj e sigurisë, e projektuar që Kujdestarët tuaj të kenë gjithçka thelbësore në një vend."
+        "answer": "Kutija e Trashëgimisë është vendi ku ruani në mënyrë të sigurt të gjitha dokumentet dhe pasuritë tuaja të rëndësishme. Manuali i të Mbijetuarit është një përzgjedhje e kuruar e kontakteve, dokumenteve dhe udhëzimeve më kritike nga kutia juaj e sigurisë, e projektuar që Kujdestarët tuaj të kenë gjithçka thelbësore në një vend.",
+        "question": "Cila është ndryshimi midis 'Kutisë së Sigurisë' dhe 'Manualit'?"
       },
       "q5": {
-        "question": "A është një testament i krijuar në LegacyGuard ligjërisht i detyrueshëm?",
-        "answer": "LegacyGuard ju ndihmon të përgatisni dhe organizoni të gjithë punën themelore dhe informacionin për testamentin tuaj. Megjithatë, në shumicën e vendeve evropiane, dokumenti dixhital nuk zëvendëson nevojën për një dokument zyrtar, të nënshkruar (dhe shpesh të noterizuar). Ne rekomandojmë gjithmonë të konsultoheni për versionin final me një profesionist ligjor."
-      }
-    },
-    "contact": {
-      "title": "Nuk e gjetët atë që kërkonit?",
-      "email": {
-        "title": "Na Dërgoni Email",
-        "description": "Për pyetje të përgjithshme dhe mbështetje.",
-        "button": "Hap Klientin Email"
+        "answer": "LegacyGuard ju ndihmon të përgatisni dhe organizoni të gjithë punën themelore dhe informacionin për testamentin tuaj. Megjithatë, në shumicën e vendeve evropiane, dokumenti dixhital nuk zëvendëson nevojën për një dokument zyrtar, të nënshkruar (dhe shpesh të noterizuar). Ne rekomandojmë gjithmonë të konsultoheni për versionin final me një profesionist ligjor.",
+        "question": "A është një testament i krijuar në LegacyGuard ligjërisht i detyrueshëm?"
       },
-      "call": {
-        "title": "Caktoni një Telefonatë (Për Premium)",
-        "description": "Për klientët Premium dhe Enterprise.",
-        "button": "Caktoni një Telefonatë"
-      }
-    }
+      "title": "Pyetje të Shpeshta"
+    },
+    "subtitle": "Ne jemi këtu për ju. Gjeni përgjigje për pyetjet tuaja ose na kontaktoni direkt.",
+    "title": "Qendra e Ndihmës & Mbështetjes"
   },
   "manual": {
-    "title": "Manuali i të Mbijetuarit",
+    "contacts": {
+      "addContact": "Shto Kontakt",
+      "addFirstContact": "Shtoni Kontaktin Tuaj të Parë",
+      "card": {
+        "edit": "Redakto"
+      },
+      "description": "Njerëz kyç që familja juaj duhet të kontaktojë në rast urgjence",
+      "empty": {
+        "description": "Filloni duke shtuar njerëz të rëndësishëm për të cilët familja juaj duhet të dijë.",
+        "title": "Ende nuk janë shtuar kontakte"
+      },
+      "form": {
+        "addButton": "Shto Kontakt",
+        "addTitle": "Shto Kontakt të Rëndësishëm",
+        "cancel": "Anulo",
+        "description": "Shtoni njerëz që familja juaj duhet të kontaktojë në situata të rëndësishme.",
+        "editTitle": "Redakto Kontaktin",
+        "emailLabel": "Adresa Email",
+        "emailPlaceholder": "kontakti@shembull.com",
+        "nameLabel": "Emri i Kontaktit *",
+        "namePlaceholder": "p.sh., Gjon Gjoni",
+        "notesLabel": "Shënime",
+        "notesPlaceholder": "Informacion shtesë për këtë kontakt...",
+        "phoneLabel": "Numri i Telefonit",
+        "phonePlaceholder": "+355 69 123 4567",
+        "roleLabel": "Roli/Profesioni *",
+        "rolePlaceholder": "p.sh., Avokati i Familjes, Kontabilisti, Mjeku",
+        "saving": "Duke ruajtur...",
+        "updateButton": "Përditëso Kontaktin"
+      },
+      "loading": "Duke ngarkuar kontaktet...",
+      "messages": {
+        "added": "Kontakti u shtua me sukses!",
+        "deleted": "Kontakti u fshi me sukses!",
+        "loginRequired": "Duhet të jeni i identifikuar për të ruajtur kontaktet",
+        "nameAndRoleRequired": "Emri dhe roli janë të detyrueshëm",
+        "updated": "Kontakti u përditësua me sukses!"
+      },
+      "title": "Kontaktet e Rëndësishme"
+    },
+    "documents": {
+      "card": {
+        "essentialNote": "Ky dokument është shënuar si thelbësor për të mbijetuarit tuaj."
+      },
+      "description": "Dokumente kritike për të cilat familja juaj duhet të dijë",
+      "empty": {
+        "description": "Shënoni dokumentet e rëndësishme si \"dokumente kyçe\" nga kutia juaj e sigurisë për t'i shfaqur këtu.",
+        "tip": "Këshillë: Shkoni te kutia juaj e sigurisë dhe aktivizoni \"Përfshi në Manualin e të Mbijetuarit\" për dokumentet e rëndësishme",
+        "title": "Ende nuk janë shtuar dokumente kyçe"
+      },
+      "expiration": {
+        "expired": "Skaduar",
+        "expiresSoon": "Skadon Së Shpejti",
+        "expiring": "Duke skaduar"
+      },
+      "loading": "Duke ngarkuar dokumentet kyçe...",
+      "title": "Dokumentet Kyçe"
+    },
+    "instructions": {
+      "autoSaveNote": "Udhëzimet tuaja ruhen automatikisht ndërsa shkruani",
+      "description": "Udhëzime personale dhe mesazhe për të dashurit tuaj",
+      "loading": "Duke ngarkuar udhëzimet...",
+      "title": "Dëshirat e Fundit & Udhëzimet"
+    },
     "subtitle": "Informacion thelbësor për të dashurit tuaj kur ata kanë më shumë nevojë",
     "tabs": {
       "contacts": "Kontaktet e Rëndësishme",
       "documents": "Dokumentet Kyçe",
       "instructions": "Udhëzimet"
     },
-    "contacts": {
-      "title": "Kontaktet e Rëndësishme",
-      "description": "Njerëz kyç që familja juaj duhet të kontaktojë në rast urgjence",
-      "addContact": "Shto Kontakt",
-      "addFirstContact": "Shtoni Kontaktin Tuaj të Parë",
-      "loading": "Duke ngarkuar kontaktet...",
-      "empty": {
-        "title": "Ende nuk janë shtuar kontakte",
-        "description": "Filloni duke shtuar njerëz të rëndësishëm për të cilët familja juaj duhet të dijë."
-      },
-      "form": {
-        "editTitle": "Redakto Kontaktin",
-        "addTitle": "Shto Kontakt të Rëndësishëm",
-        "description": "Shtoni njerëz që familja juaj duhet të kontaktojë në situata të rëndësishme.",
-        "nameLabel": "Emri i Kontaktit *",
-        "namePlaceholder": "p.sh., Gjon Gjoni",
-        "roleLabel": "Roli/Profesioni *",
-        "rolePlaceholder": "p.sh., Avokati i Familjes, Kontabilisti, Mjeku",
-        "phoneLabel": "Numri i Telefonit",
-        "phonePlaceholder": "+355 69 123 4567",
-        "emailLabel": "Adresa Email",
-        "emailPlaceholder": "kontakti@shembull.com",
-        "notesLabel": "Shënime",
-        "notesPlaceholder": "Informacion shtesë për këtë kontakt...",
-        "updateButton": "Përditëso Kontaktin",
-        "addButton": "Shto Kontakt",
-        "saving": "Duke ruajtur...",
-        "cancel": "Anulo"
-      },
-      "card": {
-        "edit": "Redakto"
-      },
-      "messages": {
-        "nameAndRoleRequired": "Emri dhe roli janë të detyrueshëm",
-        "loginRequired": "Duhet të jeni i identifikuar për të ruajtur kontaktet",
-        "updated": "Kontakti u përditësua me sukses!",
-        "added": "Kontakti u shtua me sukses!",
-        "deleted": "Kontakti u fshi me sukses!"
-      },
-      "errors": {
-        "loadFailed": "Ngarkimi i kontakteve dështoi",
-        "saveFailed": "Ruajtja e kontaktit dështoi",
-        "deleteFailed": "Fshirja e kontaktit dështoi"
-      }
-    },
-    "documents": {
-      "title": "Dokumentet Kyçe",
-      "description": "Dokumente kritike për të cilat familja juaj duhet të dijë",
-      "loading": "Duke ngarkuar dokumentet kyçe...",
-      "empty": {
-        "title": "Ende nuk janë shtuar dokumente kyçe",
-        "description": "Shënoni dokumentet e rëndësishme si \"dokumente kyçe\" nga kutia juaj e sigurisë për t'i shfaqur këtu.",
-        "tip": "Këshillë: Shkoni te kutia juaj e sigurisë dhe aktivizoni \"Përfshi në Manualin e të Mbijetuarit\" për dokumentet e rëndësishme"
-      },
-      "card": {
-        "essentialNote": "Ky dokument është shënuar si thelbësor për të mbijetuarit tuaj."
-      },
-      "errors": {
-        "loadFailed": "Ngarkimi i dokumenteve kyçe dështoi"
-      },
-      "expiration": {
-        "expired": "Skaduar",
-        "expiresSoon": "Skadon Së Shpejti",
-        "expiring": "Duke skaduar"
-      }
-    },
-    "instructions": {
-      "title": "Dëshirat e Fundit & Udhëzimet",
-      "description": "Udhëzime personale dhe mesazhe për të dashurit tuaj",
-      "loading": "Duke ngarkuar udhëzimet...",
-      "autoSaveNote": "Udhëzimet tuaja ruhen automatikisht ndërsa shkruani",
-      "sections": {
-        "funeral": {
-          "title": "Dëshirat për Varrim",
-          "description": "Preferencat tuaja për rregullimet e varrimit dhe ceremonitë",
-          "placeholder": "p.sh., Kremimi, pa ceremoni formale, luani 'My Way' nga Frank Sinatra..."
-        },
-        "digitalAccounts": {
-          "title": "Mbyllja e Llogarive Dixhitale",
-          "description": "Udhëzime për trajtimin e llogarive tuaja dixhitale dhe pranisë online",
-          "placeholder": "p.sh., Ju lutemi fshini profilin tim në Facebook, por arkivoni Gmail-in tim. Transferoni fotot e mia nga Google Drive te..."
-        },
-        "messages": {
-          "title": "Mesazhe për të Dashurit",
-          "description": "Mesazhe personale dhe mendime të fundit për familjen dhe miqtë tuaj",
-          "placeholder": "Ndani mendimet, kujtimet dhe mesazhet tuaja të fundit me ata që doni..."
-        }
-      },
-      "errors": {
-        "loadFailed": "Ngarkimi i udhëzimeve dështoi"
-      }
-    }
+    "title": "Manuali i të Mbijetuarit"
   },
   "testimonials": {
+    "authority": {
+      "advisors": "Recommended by Financial Advisors",
+      "attorneys": "Trusted by Family Attorneys",
+      "counselors": "Endorsed by Grief Counselors"
+    },
     "badge": "Real Families Taking Control",
-    "title": "Trusted by 15,000+ European Families",
-    "subtitle": "See how families like yours found security and peace with Heritage Vault",
-    "verified": "Verified Family",
-    "trustedBy": "Trusted and recommended by",
+    "compliance": {
+      "dataProtection": "Data Protection Certified",
+      "gdpr": "GDPR Compliant",
+      "iso": "ISO 27001 Certified"
+    },
     "stats": {
       "families": "15,000+",
       "familiesLabel": "European families protected",
@@ -247,37 +219,30 @@
     },
     "stories": {
       "1": {
-        "name": "Michael K.",
-        "role": "Father of three",
+        "highlight": "✨ Set up in just 2 hours, protecting 3 children and spouse",
         "location": "Munich, Germany",
+        "name": "Michael K.",
         "quote": "After my brother's sudden accident, I watched my sister-in-law struggle for weeks to find important documents and passwords. That's when I knew I couldn't let the same thing happen to my family. Now everything is organized, and my wife knows exactly where to find what she needs. Being prepared and in control is priceless.",
-        "highlight": "✨ Set up in just 2 hours, protecting 3 children and spouse"
+        "role": "Father of three"
       },
       "2": {
-        "name": "Anna S.",
-        "role": "Business owner",
+        "highlight": "💼 Business and personal life organized in one secure place",
         "location": "Vienna, Austria",
+        "name": "Anna S.",
         "quote": "As a single mom running a business, I worried constantly about what would happen if something happened to me. Heritage Vault helped me organize everything - from business accounts to my children's school information. My sister now has access to everything she'd need to step in. I sleep so much better knowing they're protected.",
-        "highlight": "💼 Business and personal life organized in one secure place"
+        "role": "Business owner"
       },
       "3": {
-        "name": "Thomas R.",
-        "role": "Retired teacher",
+        "highlight": "❤️ 40 years of family history preserved and protected",
         "location": "Zurich, Switzerland",
+        "name": "Thomas R.",
         "quote": "My wife has early-stage dementia, and I realized I needed to prepare while I still could. Heritage Vault made it simple to organize our 40 years of life together. Our children now have clear instructions and access to everything. It's brought our whole family closer knowing we're prepared for whatever comes.",
-        "highlight": "❤️ 40 years of family history preserved and protected"
+        "role": "Retired teacher"
       }
     },
-    "authority": {
-      "advisors": "Recommended by Financial Advisors",
-      "attorneys": "Trusted by Family Attorneys",
-      "counselors": "Endorsed by Grief Counselors"
-    },
-    "compliance": {
-      "gdpr": "GDPR Compliant",
-      "dataProtection": "Data Protection Certified",
-      "iso": "ISO 27001 Certified"
-    },
-    "bottomCta": {}
+    "subtitle": "See how families like yours found security and peace with Heritage Vault",
+    "title": "Trusted by 15,000+ European Families",
+    "trustedBy": "Trusted and recommended by",
+    "verified": "Verified Family"
   }
 }

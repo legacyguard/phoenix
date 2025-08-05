@@ -1,278 +1,250 @@
 {
-  "_comment": "Gestion des abonnements et offres",
-  "subscription": {
-    "title": "Abonnement",
-    "subtitle": "Choisissez l’offre adaptée à votre famille et gérez votre abonnement",
-    "currentPlan": "Offre actuelle",
-    "changePlan": "Changer d’offre",
-    "upgrade": "Mettre à niveau",
-    "downgrade": "Rétrograder",
-    "manage": "Gérer l’abonnement",
-    "cancel": "Annuler l’abonnement",
-    "renew": "Renouveler",
-    "nextBillingDate": "Prochaine facturation : {{date}}",
-    "expiresOn": "Expire le {{date}}",
-    "trial": "Essai gratuit",
-    "trialEnds": "L’essai gratuit se termine le {{date}}",
-    "premium": "Premium",
-    "family": "Famille",
-    "personal": "Personnel",
-    "pricePerMonth": "{{price}} / mois",
-    "pricePerYear": "{{price}} / an",
-    "saveWithAnnual": "Économisez {{amount}} avec l’abonnement annuel",
-    "features": {
-      "basic": {
-        "title": "Fonctionnalités de base",
-        "feature1": "Coffre-fort numérique sécurisé",
-        "feature2": "Ajout de 3 documents",
-        "feature3": "1 personne de confiance maximum",
-        "feature4": "1 an d’accès"
-      },
-      "family": {
-        "title": "Offre famille",
-        "feature1": "Nombre illimité de documents",
-        "feature2": "Jusqu’à 10 personnes de confiance",
-        "feature3": "Support prioritaire",
-        "feature4": "Guides et modèles personnalisés"
-      },
-      "premium": {
-        "title": "Offre premium",
-        "feature1": "Archivage physique de vos testaments signés",
-        "feature2": "Accès à toutes les fonctionnalités premium",
-        "feature3": "Conseiller·e juridique en ligne",
-        "feature4": "Accès prioritaire au support"
-      },
-      "title": "Fonctionnalités du plan",
-      "premiumDescription": "Vous avez accès à toutes les fonctionnalités premium",
-      "freeDescription": "Passez à une offre supérieure pour débloquer plus de fonctionnalités",
-      "unlimited": "Documents et actifs illimités",
-      "encryption": "Chiffrement avancé",
-      "priority": "Support prioritaire",
-      "history": "Historique des versions",
-      "basicWill": "Document testamentaire basique",
-      "limitedGuardians": "Jusqu’à 2 tuteurs",
-      "basicSupport": "Support communautaire"
-    },
-    "selectPlan": "Sélectionner cette offre",
-    "selected": "Sélectionné",
-    "perMonth": "/mois",
-    "perYear": "/an",
-    "mostPopular": "Le plus populaire",
-    "recommended": "Recommandé",
-    "cancelled": "Abonnement annulé",
-    "cancelling": "Annulation en cours…",
-    "cancelConfirmTitle": "Confirmer l’annulation",
-    "cancelConfirmDesc": "Voulez-vous vraiment annuler votre abonnement ? Vous conserverez l’accès jusqu’à la fin de la période payée.",
-    "confirmCancel": "Confirmer l’annulation",
-    "keepSubscription": "Garder l’abonnement",
-    "success": {
-      "planChanged": "Offre changée avec succès",
-      "planCancelled": "Abonnement annulé avec succès",
-      "subscriptionRenewed": "Abonnement renouvelé avec succès"
-    },
-    "errors": {
-      "loadFailed": "Échec du chargement des informations d’abonnement",
-      "changeFailed": "Échec du changement d’offre",
-      "cancelFailed": "Échec de l’annulation de l’abonnement",
-      "renewFailed": "Échec du renouvellement de l’abonnement",
-      "upgradeRequired": "Veuillez passer à une offre supérieure pour accéder à cette fonctionnalité",
-      "portalFailed": "Échec de l’ouverture du portail de facturation",
-      "resumeFailed": "Échec de la reprise de l’abonnement"
-    },
-    "payment": {
-      "title": "Paiement",
-      "addPaymentMethod": "Ajouter un moyen de paiement",
-      "managePaymentMethods": "Gérer les moyens de paiement",
-      "cardNumber": "Numéro de carte",
-      "expiryDate": "Date d’expiration",
-      "cvc": "CVC",
-      "nameOnCard": "Nom sur la carte",
-      "saveCard": "Enregistrer la carte",
-      "payNow": "Payer maintenant",
-      "paymentSuccess": "Paiement effectué avec succès",
-      "paymentFailed": "Échec du paiement. Veuillez vérifier vos informations bancaires.",
-      "securePayment": "Paiement sécurisé"
-    },
-    "invoices": {
-      "title": "Factures",
-      "noInvoices": "Aucune facture disponible",
-      "download": "Télécharger"
-    },
-    "dashboard": {
-      "title": "Tableau de bord des abonnements",
-      "subtitle": "Gérez vos abonnements, coûts et rappels"
-    },
-    "monthlyCost": "Coût mensuel total",
-    "yearlyCost": "Coût annuel total",
-    "activeSubscriptions": "Abonnements actifs",
-    "upcomingSoon": "À venir bientôt",
-    "exportReport": "Exporter le rapport",
-    "allSubscriptions": "Tous les abonnements",
-    "allSubscriptionsDesc": "Vue d’ensemble de tous les abonnements actifs triés par date de renouvellement",
-    "upcomingRenewals": "Renouvellements à venir",
-    "upcomingRenewalsTitle": "Alerte renouvellements à venir",
-    "upcomingRenewalsDesc": "Vous avez {{count}} renouvellements à venir dans les 90 prochains jours",
-    "next90Days": "Prochains 90 jours",
-    "noUpcomingRenewals": "Aucun renouvellement à venir dans les 90 prochains jours",
-    "review": "Revoir",
-    "preferences": "Préférences d’abonnement",
-    "preferencesDesc": "Gérez la façon dont vos abonnements sont suivis et gérés",
-    "enableTracking": "Activer le suivi des abonnements",
-    "enableTrackingDesc": "Gérer et suivre automatiquement les documents liés aux abonnements",
-    "costOptimization": "Activer les suggestions d’optimisation des coûts",
-    "costOptimizationDesc": "Recevoir des suggestions pour optimiser et réduire les coûts d’abonnement",
-    "reminderPeriods": "Périodes de rappel par défaut",
-    "daysBefore": "jours avant",
-    "loadError": "Échec du chargement des détails de l’abonnement",
-    "updateError": "Échec de la mise à jour des préférences d’abonnement",
-    "preferencesUpdated": "Préférences mises à jour avec succès",
-    "tabs": {
-      "overview": "Aperçu",
-      "upcoming": "À venir",
-      "settings": "Paramètres"
-    },
-    "types": {
-      "monthly": "Mensuel",
-      "yearly": "Annuel",
-      "oneTime": "Unique",
-      "none": "Aucun"
-    },
-    "daysUntilRenewal": "jours avant renouvellement",
-    "days": "jours",
-    "loadFailed": "Échec du chargement des données d’abonnement",
-    "autoRenewal": "Renouvellement auto : Oui",
-    "manual": "Renouvellement auto : Non",
-    "trackingSuggestion": "Pensez à activer le suivi des abonnements pour une meilleure gestion et des rappels",
-    "type": "Type d’abonnement",
-    "typePlaceholder": "Sélectionner le type",
-    "renewalCost": "Coût du renouvellement",
-    "renewalCostPlaceholder": "Entrer le coût du renouvellement",
-    "cancellationNotice": "Délai de préavis pour l’annulation",
-    "noNoticeRequired": "Aucun préavis requis",
-    "providerContact": "Coordonnées du fournisseur",
-    "providerPhone": "Téléphone",
-    "providerEmail": "Email",
-    "providerWebsite": "Site web",
-    "cancellationNoticeWarning": "Remarque : L’annulation nécessite un préavis de {{days}} jours",
-    "active": "Actif",
-    "planDescription": "Gérez votre abonnement et votre facturation",
-    "planName": "Formule",
-    "free": "Gratuit",
-    "nextBilling": "Prochaine date de facturation",
-    "cancelledNotice": "Votre abonnement prendra fin le {{date}}",
-    "manageBilling": "Gérer la facturation",
-    "resume": "Reprendre l’abonnement",
-    "upgradeToPremium": "Passer à Premium",
-    "cancelSuccess": "Abonnement annulé avec succès",
-    "resumeSuccess": "Abonnement repris avec succès",
-    "successTitle": "Paiement réussi !",
-    "successMessage": "Merci pour votre achat. Votre abonnement a été activé.",
-    "cancelTitle": "Paiement annulé",
-    "cancelMessage": "Il semble que votre transaction ait été annulée. Veuillez réessayer ou contacter le support."
-  },
   "pricing": {
-    "title": "Tarifs",
-    "subtitle": "Commencez gratuitement ou passez à une formule supérieure pour protéger vos proches.",
-    "mainTitle": "Choisissez comment protéger",
-    "mainSubtitle": "Commencez gratuitement ou ajoutez plus de fonctionnalités de protection quand vous le souhaitez.",
-    "freePlan": {
-      "name": "Protecteur Essentiel",
-      "description": "Commencez avec les fonctionnalités de base",
-      "price": "Gratuit",
-      "features": {
-        "will": "1 document de testament",
-        "guardians": "2 tuteurs",
-        "assets": "5 actifs",
-        "support": "Support de base"
-      }
-    },
-    "premiumPlan": {
-      "name": "Pack Commande",
-      "description": "Parfait pour les particuliers et les familles",
-      "price": "9,99 € / mois",
-      "upgradeButton": "Passer à l’offre supérieure",
-      "features": {
-        "will": "Documents de testament illimités",
-        "guardians": "Tuteurs illimités",
-        "assets": "Actifs illimités",
-        "encryption": "Chiffrement des documents",
-        "access": "Accès d’urgence",
-        "support": "Support prioritaire",
-        "history": "Historique des versions",
-        "templates": "Modèles juridiques"
-      }
-    },
     "devMode": {
-      "title": "Mode développeur",
       "button": {
         "grant": "Mode dev : accorder l’accès Premium",
         "granting": "Attribution en cours…"
       },
       "description": "Ce bouton n’est visible qu’en mode développement. Cliquez pour accorder instantanément l’accès Premium pour les tests.",
+      "errorMessage": "Échec de l’attribution de l’accès développeur premium",
       "successMessage": "Accès développeur premium accordé !",
-      "errorMessage": "Échec de l’attribution de l’accès développeur premium"
-    },
-    "errors": {
-      "checkoutFailed": "Échec du lancement du processus de paiement"
-    },
-    "starter": {
-      "name": "Héritage Starter",
-      "price": "Gratuit",
-      "description": "Idéal pour commencer à préserver votre héritage numérique.",
-      "button": "Commencer gratuitement",
-      "features": {
-        "storage": "{{amount}} de stockage",
-        "guardians": "Jusqu’à {{count}} aidants de confiance",
-        "documents": "Coffre-fort de documents basique",
-        "playbook": "Guide de base du tuteur",
-        "support": "Support communautaire"
-      },
-      "limits": {
-        "storage": "500 Mo",
-        "guardians": "3",
-        "fileSize": "10 Mo par fichier"
-      }
-    },
-    "premium": {
-      "name": "Héritage Premium",
-      "price": "19 €",
-      "period": "/ mois",
-      "badge": "Le plus populaire",
-      "description": "Fonctionnalités avancées pour une gestion complète de votre héritage.",
-      "button": "Choisir Premium",
-      "features": {
-        "storage": "{{amount}} de stockage",
-        "guardians": "Jusqu’à {{count}} aidants de confiance",
-        "manual": "Manuel du survivant",
-        "support": "Support e-mail prioritaire"
-      },
-      "limits": {
-        "storage": "10 Go",
-        "guardians": "5",
-        "fileSize": "50 Mo par fichier"
-      }
+      "title": "Mode développeur"
     },
     "enterprise": {
-      "name": "Héritage Entreprise",
-      "price": "Personnalisé",
-      "description": "Pour les familles et entreprises avec des besoins complexes nécessitant le niveau de service le plus élevé.",
       "button": "Contacter le service commercial",
+      "description": "Pour les familles et entreprises avec des besoins complexes nécessitant le niveau de service le plus élevé.",
       "features": {
-        "storage": "{{amount}}+ de stockage",
         "guardians": "Aidants de confiance illimités",
         "legal": "Coordination avec un professionnel du droit",
         "support": "Gestionnaire de compte dédié"
       },
       "limits": {
-        "storage": "500 Go",
-        "guardians": "illimité",
-        "fileSize": "100 Mo par fichier"
-      }
-    }
+        "storage": "500 Go"
+      },
+      "name": "Héritage Entreprise",
+      "price": "Personnalisé"
+    },
+    "errors": {
+      "checkoutFailed": "Échec du lancement du processus de paiement"
+    },
+    "freePlan": {
+      "description": "Commencez avec les fonctionnalités de base",
+      "features": {
+        "assets": "5 actifs",
+        "guardians": "2 tuteurs",
+        "support": "Support de base",
+        "will": "1 document de testament"
+      },
+      "name": "Protecteur Essentiel",
+      "price": "Gratuit"
+    },
+    "mainSubtitle": "Commencez gratuitement ou ajoutez plus de fonctionnalités de protection quand vous le souhaitez.",
+    "mainTitle": "Choisissez comment protéger",
+    "premium": {
+      "badge": "Le plus populaire",
+      "button": "Choisir Premium",
+      "description": "Fonctionnalités avancées pour une gestion complète de votre héritage.",
+      "features": {
+        "manual": "Manuel du survivant",
+        "support": "Support e-mail prioritaire"
+      },
+      "limits": {
+        "guardians": "5",
+        "storage": "10 Go"
+      },
+      "name": "Héritage Premium",
+      "period": "/ mois",
+      "price": "19 €"
+    },
+    "premiumPlan": {
+      "description": "Parfait pour les particuliers et les familles",
+      "features": {
+        "access": "Accès d’urgence",
+        "assets": "Actifs illimités",
+        "encryption": "Chiffrement des documents",
+        "guardians": "Tuteurs illimités",
+        "history": "Historique des versions",
+        "support": "Support prioritaire",
+        "templates": "Modèles juridiques",
+        "will": "Documents de testament illimités"
+      },
+      "name": "Pack Commande",
+      "price": "9,99 € / mois",
+      "upgradeButton": "Passer à l’offre supérieure"
+    },
+    "starter": {
+      "button": "Commencer gratuitement",
+      "description": "Idéal pour commencer à préserver votre héritage numérique.",
+      "features": {
+        "documents": "Coffre-fort de documents basique",
+        "playbook": "Guide de base du tuteur",
+        "support": "Support communautaire"
+      },
+      "limits": {
+        "guardians": "3",
+        "storage": "500 Mo"
+      },
+      "name": "Héritage Starter",
+      "price": "Gratuit"
+    },
+    "title": "Tarifs"
+  },
+  "subscription": {
+    "active": "Actif",
+    "activeSubscriptions": "Abonnements actifs",
+    "allSubscriptions": "Tous les abonnements",
+    "allSubscriptionsDesc": "Vue d’ensemble de tous les abonnements actifs triés par date de renouvellement",
+    "autoRenewal": "Renouvellement auto : Oui",
+    "cancel": "Annuler l’abonnement",
+    "cancelConfirmDesc": "Voulez-vous vraiment annuler votre abonnement ? Vous conserverez l’accès jusqu’à la fin de la période payée.",
+    "cancelConfirmTitle": "Confirmer l’annulation",
+    "cancelMessage": "Il semble que votre transaction ait été annulée. Veuillez réessayer ou contacter le support.",
+    "cancelSuccess": "Abonnement annulé avec succès",
+    "cancelTitle": "Paiement annulé",
+    "cancellationNotice": "Délai de préavis pour l’annulation",
+    "cancelled": "Abonnement annulé",
+    "cancelling": "Annulation en cours…",
+    "changePlan": "Changer d’offre",
+    "confirmCancel": "Confirmer l’annulation",
+    "costOptimization": "Activer les suggestions d’optimisation des coûts",
+    "costOptimizationDesc": "Recevoir des suggestions pour optimiser et réduire les coûts d’abonnement",
+    "currentPlan": "Offre actuelle",
+    "dashboard": {
+      "subtitle": "Gérez vos abonnements, coûts et rappels",
+      "title": "Tableau de bord des abonnements"
+    },
+    "days": "jours",
+    "daysBefore": "jours avant",
+    "daysUntilRenewal": "jours avant renouvellement",
+    "downgrade": "Rétrograder",
+    "enableTracking": "Activer le suivi des abonnements",
+    "enableTrackingDesc": "Gérer et suivre automatiquement les documents liés aux abonnements",
+    "errors": {
+      "cancelFailed": "Échec de l’annulation de l’abonnement",
+      "changeFailed": "Échec du changement d’offre",
+      "loadFailed": "Échec du chargement des informations d’abonnement",
+      "portalFailed": "Échec de l’ouverture du portail de facturation",
+      "renewFailed": "Échec du renouvellement de l’abonnement",
+      "resumeFailed": "Échec de la reprise de l’abonnement",
+      "upgradeRequired": "Veuillez passer à une offre supérieure pour accéder à cette fonctionnalité"
+    },
+    "expiresOn": "Expire le {{date}}",
+    "exportReport": "Exporter le rapport",
+    "family": "Famille",
+    "features": {
+      "basic": {
+        "feature1": "Coffre-fort numérique sécurisé",
+        "feature2": "Ajout de 3 documents",
+        "feature3": "1 personne de confiance maximum",
+        "feature4": "1 an d’accès",
+        "title": "Fonctionnalités de base"
+      },
+      "basicSupport": "Support communautaire",
+      "basicWill": "Document testamentaire basique",
+      "encryption": "Chiffrement avancé",
+      "family": {
+        "feature1": "Nombre illimité de documents",
+        "feature2": "Jusqu’à 10 personnes de confiance",
+        "feature3": "Support prioritaire",
+        "feature4": "Guides et modèles personnalisés",
+        "title": "Offre famille"
+      },
+      "freeDescription": "Passez à une offre supérieure pour débloquer plus de fonctionnalités",
+      "history": "Historique des versions",
+      "limitedGuardians": "Jusqu’à 2 tuteurs",
+      "premium": {
+        "feature1": "Archivage physique de vos testaments signés",
+        "feature2": "Accès à toutes les fonctionnalités premium",
+        "feature3": "Conseiller·e juridique en ligne",
+        "feature4": "Accès prioritaire au support",
+        "title": "Offre premium"
+      },
+      "premiumDescription": "Vous avez accès à toutes les fonctionnalités premium",
+      "priority": "Support prioritaire",
+      "title": "Fonctionnalités du plan",
+      "unlimited": "Documents et actifs illimités"
+    },
+    "free": "Gratuit",
+    "invoices": {
+      "download": "Télécharger",
+      "noInvoices": "Aucune facture disponible",
+      "title": "Factures"
+    },
+    "keepSubscription": "Garder l’abonnement",
+    "loadError": "Échec du chargement des détails de l’abonnement",
+    "manage": "Gérer l’abonnement",
+    "manageBilling": "Gérer la facturation",
+    "manual": "Renouvellement auto : Non",
+    "monthlyCost": "Coût mensuel total",
+    "mostPopular": "Le plus populaire",
+    "next90Days": "Prochains 90 jours",
+    "nextBilling": "Prochaine date de facturation",
+    "nextBillingDate": "Prochaine facturation : {{date}}",
+    "noUpcomingRenewals": "Aucun renouvellement à venir dans les 90 prochains jours",
+    "payment": {
+      "addPaymentMethod": "Ajouter un moyen de paiement",
+      "cardNumber": "Numéro de carte",
+      "cvc": "CVC",
+      "expiryDate": "Date d’expiration",
+      "managePaymentMethods": "Gérer les moyens de paiement",
+      "nameOnCard": "Nom sur la carte",
+      "payNow": "Payer maintenant",
+      "paymentFailed": "Échec du paiement. Veuillez vérifier vos informations bancaires.",
+      "paymentSuccess": "Paiement effectué avec succès",
+      "saveCard": "Enregistrer la carte",
+      "securePayment": "Paiement sécurisé",
+      "title": "Paiement"
+    },
+    "perMonth": "/mois",
+    "perYear": "/an",
+    "personal": "Personnel",
+    "planDescription": "Gérez votre abonnement et votre facturation",
+    "planName": "Formule",
+    "preferences": "Préférences d’abonnement",
+    "preferencesDesc": "Gérez la façon dont vos abonnements sont suivis et gérés",
+    "preferencesUpdated": "Préférences mises à jour avec succès",
+    "premium": "Premium",
+    "pricePerMonth": "{{price}} / mois",
+    "pricePerYear": "{{price}} / an",
+    "recommended": "Recommandé",
+    "reminderPeriods": "Périodes de rappel par défaut",
+    "renew": "Renouveler",
+    "resume": "Reprendre l’abonnement",
+    "resumeSuccess": "Abonnement repris avec succès",
+    "review": "Revoir",
+    "saveWithAnnual": "Économisez {{amount}} avec l’abonnement annuel",
+    "selectPlan": "Sélectionner cette offre",
+    "selected": "Sélectionné",
+    "subtitle": "Choisissez l’offre adaptée à votre famille et gérez votre abonnement",
+    "success": {
+      "planCancelled": "Abonnement annulé avec succès",
+      "planChanged": "Offre changée avec succès",
+      "subscriptionRenewed": "Abonnement renouvelé avec succès"
+    },
+    "successMessage": "Merci pour votre achat. Votre abonnement a été activé.",
+    "successTitle": "Paiement réussi !",
+    "tabs": {
+      "overview": "Aperçu",
+      "settings": "Paramètres",
+      "upcoming": "À venir"
+    },
+    "title": "Abonnement",
+    "trial": "Essai gratuit",
+    "trialEnds": "L’essai gratuit se termine le {{date}}",
+    "types": {
+      "monthly": "Mensuel",
+      "yearly": "Annuel"
+    },
+    "upcomingRenewals": "Renouvellements à venir",
+    "upcomingRenewalsTitle": "Alerte renouvellements à venir",
+    "upcomingSoon": "À venir bientôt",
+    "updateError": "Échec de la mise à jour des préférences d’abonnement",
+    "upgrade": "Mettre à niveau",
+    "upgradeToPremium": "Passer à Premium",
+    "yearlyCost": "Coût annuel total"
   },
   "upgradeCard": {
-    "pricing_1": "/pricing",
-    "defaultButtonText": "Passer au Pack Commande"
+    "defaultButtonText": "Passer au Pack Commande",
+    "pricing_1": "/pricing"
   }
 }
-

@@ -1,443 +1,367 @@
 {
-  "_comment": "Správa majetku a vlastníctva",
-  "assets": {
-    "overview": {
-      "title": "Čo vlastníte a na čom vám záleží",
-      "subtitle": "Spravujte a sledujte svoj majetok, nehnuteľnosti a investície",
-      "addAsset": "Pridať majetok",
-      "totalPortfolioValue": "Celková hodnota portfólia",
-      "estimatedValue": "Odhadovaná hodnota všetkých aktív",
-      "distribution": {
-        "title": "Distribúcia majetku",
-        "subtitle": "Prehľad portfólia podľa kategórie"
-      },
-      "beneficiaryAllocation": {
-        "title": "Zdieľanie vašich pokladov",
-        "subtitle": "Sledujte, ako sú vaše poklady rozdelené medzi blízkych",
-        "allAssigned": "Všetky poklady majú priradených blízkych",
-        "unassignedWarning": "{{count}} pokladov nemá priradených blízkych"
-      },
-      "viewInheritanceSummary": "Zobraziť súhrn dedičstva",
-      "addNew": "Pridať nový",
-      "errors": {
-        "loadFailed": "Nepodarilo sa načítať údaje o majetku"
-      }
+  "addLiabilityModal": {
+    "buttons": {
+      "add": "Pridať záväzok",
+      "cancel": "Zrušiť"
     },
-    "categories": {
-      "property": "Nehnuteľnosť",
-      "vehicle": "Vozidlo",
-      "financial": "Financie",
-      "business": "Podnikanie",
-      "personal": "Osobné",
-      "uncategorized": "Nekategorizované"
-    }
-  },
-  "assetCard": {
-    "assetTypes": {
-      "Primary Residence": "Hlavné bydlisko",
-      "Vacation Home": "Rekreačný dom",
-      "Rental Property": "Prenajímaná nehnuteľnosť",
-      "Land": "Pozemok",
-      "Commercial Property": "Komerčná nehnuteľnosť",
-      "Bank Account": "Bankový účet",
-      "Investment Portfolio": "Investičné portfólio",
-      "Cryptocurrency Wallet": "Kryptomenová peňaženka",
-      "Loan / Mortgage": "Úver / Hypotéka",
-      "Insurance Policy": "Poistka",
-      "Pension / Retirement Account": "Dôchodkový účet",
-      "Car": "Auto",
-      "Motorcycle": "Motorka",
-      "Boat": "Loď",
-      "RV / Camper": "Karavan",
-      "Aircraft": "Lietadlo",
-      "Online Account": "Online účet",
-      "Software License": "Softvérová licencia",
-      "Domain Name": "Doména",
-      "Digital Subscription": "Digitálne predplatné",
-      "Cryptocurrency": "Kryptomena",
-      "NFT": "NFT",
-      "Jewelry": "Šperky",
-      "Art / Collectibles": "Umenie / Zberateľské predmety",
-      "Electronics": "Elektronika",
-      "Furniture": "Nábytok",
-      "Tools / Equipment": "Náradie / Vybavenie",
-      "Other Valuables": "Ostatné cennosti",
-      "Custom Asset": "Vlastné aktívum"
-    },
-    "dateFormat": {
-      "addedOn": "Pridané dňa {{date}}",
-      "createdOn": "Vytvorené dňa {{date}}",
-      "updatedOn": "Aktualizované dňa {{date}}"
-    },
-    "labels": {
-      "estimatedValue": "Odhadovaná hodnota",
-      "category": "Kategória",
-      "subType": "Typ"
-    }
-  },
-  "assetDetail": {
-    "loading": "Načítavam detaily majetku...",
     "errors": {
-      "failedToLoad": "Nepodarilo sa načítať detaily majetku",
-      "nameRequired": "Názov majetku je povinný",
-      "failedToSave": "Nepodarilo sa uložiť majetok"
-    },
-    "messages": {
-      "createdSuccessfully": "Majetok bol úspešne vytvorený",
-      "updatedSuccessfully": "Majetok bol úspešne aktualizovaný"
-    },
-    "title": {
-      "new": "Nový {{type}}"
-    },
-    "subtitle": {
-      "new": "Vyplňte údaje, aby ste pridali tento majetok do svojho portfólia",
-      "edit": "Aktualizujte údaje o tomto majetku"
-    },
-    "story": {
-      "title": "Príbeh za týmto {{type}}",
-      "editButton": "Upraviť príbeh",
-      "addButton": "Pridať príbeh",
-      "emptyTitle": "Aký je príbeh tohto predmetu?",
-      "emptyDescription": "Pridajte osobnú spomienku alebo vysvetlite význam tejto veci pre vašich blízkych. Táto nehmotná hodnota je často najcennejšia."
-    },
-    "sections": {
-      "assetInformation": "Informácie o majetku",
-      "basicInformation": "Základné informácie",
-      "propertyDetails": "Detaily nehnuteľnosti",
-      "accountDetails": "Detaily účtu",
-      "financialDetails": "Finančné detaily",
-      "liabilitiesAndDocuments": "Súvisiace záväzky a dokumenty"
+      "requiredFields": "Všetky polia sú povinné"
     },
     "fields": {
-      "assetName": "Názov majetku",
-      "assetType": "Typ majetku",
-      "propertyAddress": "Adresa nehnuteľnosti",
-      "propertyRegistryNumber": "Číslo listu vlastníctva",
-      "accountType": "Typ účtu",
-      "financialInstitution": "Finančná inštitúcia",
-      "accountNumber": "Číslo účtu / IBAN",
-      "loginCredentials": "Prihlasovacie údaje a poznámky",
-      "estimatedValue": "Odhadovaná hodnota",
-      "currency": "Mena",
-      "liabilityType": "Typ záväzku",
-      "providerName": "Poskytovateľ",
-      "referenceNumber": "Referenčné číslo"
+      "notes": "Poznámky",
+      "paymentFrequency": "Frekvencia platieb",
+      "provider": "Poskytovateľ",
+      "referenceNumber": "Referenčné číslo",
+      "type": "Typ"
+    },
+    "frequencies": {
+      "monthly": "Mesačne"
+    },
+    "messages": {
+      "addedSuccessfully": "Záväzok bol úspešne pridaný"
     },
     "placeholders": {
-      "assetName": "napr. Rodinný dom, Investičné portfólio",
-      "propertyAddress": "Zadajte celú adresu nehnuteľnosti",
-      "propertyRegistryNumber": "napr. číslo listu vlastníctva",
-      "selectAccountType": "Vyberte typ účtu",
-      "financialInstitution": "napr. Slovenská sporiteľňa, Tatra banka",
-      "accountNumber": "napr. 1234567890",
-      "loginCredentials": "Správca hesiel: 1Password - trezor 'Banky'",
-      "estimatedValue": "0"
+      "notes": "Doplňujúce poznámky",
+      "paymentFrequency": "Vyberte frekvenciu",
+      "provider": "Názov poskytovateľa",
+      "referenceNumber": "Referenčné číslo",
+      "selectType": "Vyberte typ"
     },
-    "descriptions": {
-      "assetName": "Pomenujte tento majetok pre jednoduchú identifikáciu",
-      "assetType": "Vyberte typ, ktorý najlepšie vystihuje tento majetok",
-      "propertyAddress": "Úplná adresa vrátane ulice, mesta, PSČ a krajiny",
-      "propertyRegistryNumber": "Oficiálne registračné číslo nehnuteľnosti",
-      "accountType": "Typ finančného účtu alebo investície",
-      "financialInstitution": "Názov banky alebo finančnej inštitúcie",
-      "accountNumber": "Číslo účtu, IBAN alebo iné identifikačné údaje",
-      "estimatedValue": "Aktuálna trhová hodnota alebo posledná známa hodnota tohto majetku",
-      "currency": "Mena, v ktorej je hodnota vyjadrená",
-      "noLiabilities": "Zatiaľ neboli pridané žiadne záväzky"
-    },
-    "types": {
-      "realEstate": "Nehnuteľnosť",
-      "business": "Podnikanie",
-      "vehicle": "Vozidlo",
-      "financialAccount": "Finančný účet",
-      "asset": "Majetok"
-    },
+    "title": "Pridať záväzok"
+  },
+  "assetDetail": {
     "accountTypes": {
       "bankAccount": "Bankový účet",
       "investmentPortfolio": "Investičné portfólio",
       "pensionFund": "Dôchodkový fond"
     },
+    "buttons": {
+      "addLiability": "Pridať záväzok",
+      "cancel": "Zrušiť",
+      "createAsset": "Vytvoriť majetok",
+      "saving": "Ukladám...",
+      "updateAsset": "Aktualizovať majetok"
+    },
+    "descriptions": {
+      "accountNumber": "Číslo účtu, IBAN alebo iné identifikačné údaje",
+      "accountType": "Typ finančného účtu alebo investície",
+      "assetName": "Pomenujte tento majetok pre jednoduchú identifikáciu",
+      "assetType": "Vyberte typ, ktorý najlepšie vystihuje tento majetok",
+      "currency": "Mena, v ktorej je hodnota vyjadrená",
+      "estimatedValue": "Aktuálna trhová hodnota alebo posledná známa hodnota tohto majetku",
+      "financialInstitution": "Názov banky alebo finančnej inštitúcie",
+      "noLiabilities": "Zatiaľ neboli pridané žiadne záväzky",
+      "propertyAddress": "Úplná adresa vrátane ulice, mesta, PSČ a krajiny",
+      "propertyRegistryNumber": "Oficiálne registračné číslo nehnuteľnosti"
+    },
+    "errors": {
+      "nameRequired": "Názov majetku je povinný"
+    },
+    "fields": {
+      "accountNumber": "Číslo účtu / IBAN",
+      "accountType": "Typ účtu",
+      "assetName": "Názov majetku",
+      "assetType": "Typ majetku",
+      "currency": "Mena",
+      "estimatedValue": "Odhadovaná hodnota",
+      "financialInstitution": "Finančná inštitúcia",
+      "liabilityType": "Typ záväzku",
+      "loginCredentials": "Prihlasovacie údaje a poznámky",
+      "propertyAddress": "Adresa nehnuteľnosti",
+      "propertyRegistryNumber": "Číslo listu vlastníctva",
+      "providerName": "Poskytovateľ",
+      "referenceNumber": "Referenčné číslo"
+    },
+    "loading": "Načítavam detaily majetku...",
+    "messages": {
+      "createdSuccessfully": "Majetok bol úspešne vytvorený",
+      "updatedSuccessfully": "Majetok bol úspešne aktualizovaný"
+    },
+    "placeholders": {
+      "accountNumber": "napr. 1234567890",
+      "assetName": "napr. Rodinný dom, Investičné portfólio",
+      "estimatedValue": "0",
+      "financialInstitution": "napr. Slovenská sporiteľňa, Tatra banka",
+      "loginCredentials": "Správca hesiel: 1Password - trezor 'Banky'",
+      "propertyAddress": "Zadajte celú adresu nehnuteľnosti",
+      "propertyRegistryNumber": "napr. číslo listu vlastníctva",
+      "selectAccountType": "Vyberte typ účtu"
+    },
+    "sections": {
+      "accountDetails": "Detaily účtu",
+      "assetInformation": "Informácie o majetku",
+      "basicInformation": "Základné informácie",
+      "financialDetails": "Finančné detaily",
+      "liabilitiesAndDocuments": "Súvisiace záväzky a dokumenty",
+      "propertyDetails": "Detaily nehnuteľnosti"
+    },
     "securityWarning": "Bezpečnostné upozornenie:",
     "securityWarningText": "Nevkladajte sem skutočné heslá. Použite toto pole len na nápovedy, informácie o umiestnení v správcovi hesiel alebo inštrukcie k prístupu.",
-    "buttons": {
-      "cancel": "Zrušiť",
-      "saving": "Ukladám...",
-      "createAsset": "Vytvoriť majetok",
-      "updateAsset": "Aktualizovať majetok",
-      "addLiability": "Pridať záväzok"
+    "story": {
+      "addButton": "Pridať príbeh",
+      "editButton": "Upraviť príbeh",
+      "emptyDescription": "Pridajte osobnú spomienku alebo vysvetlite význam tejto veci pre vašich blízkych. Táto nehmotná hodnota je často najcennejšia.",
+      "emptyTitle": "Aký je príbeh tohto predmetu?"
+    },
+    "subtitle": {
+      "edit": "Aktualizujte údaje o tomto majetku",
+      "new": "Vyplňte údaje, aby ste pridali tento majetok do svojho portfólia"
+    },
+    "types": {
+      "asset": "Majetok",
+      "business": "Podnikanie",
+      "financialAccount": "Finančný účet",
+      "realEstate": "Nehnuteľnosť",
+      "vehicle": "Vozidlo"
     }
   },
   "assetType": {
-    "selectType": "Vyberte typ {{mainCategory}}",
-    "primaryResidence": "Hlavné bydlisko",
-    "vacationHome": "Rekreačný dom",
-    "rentalProperty": "Prenajímaná nehnuteľnosť",
-    "land": "Pozemok",
-    "commercialProperty": "Komerčná nehnuteľnosť",
-    "bankAccount": "Bankový účet",
-    "investmentPortfolio": "Investičné portfólio",
-    "cryptocurrencyWallet": "Kryptomenová peňaženka",
-    "loanMortgage": "Úver / Hypotéka",
-    "insurancePolicy": "Poistka",
-    "pensionRetirement": "Dôchodok / Penziový účet",
-    "car": "Auto",
-    "motorcycle": "Motorka",
-    "boat": "Loď",
-    "rvCamper": "Karavan",
     "aircraft": "Lietadlo",
-    "onlineAccount": "Online účet",
-    "softwareLicense": "Softvérová licencia",
-    "domainName": "Doména",
-    "digitalSubscription": "Digitálne predplatné",
-    "cryptocurrency": "Kryptomena",
-    "nft": "NFT",
-    "jewelry": "Šperky",
     "artCollectibles": "Umenie / Zberateľstvo",
+    "bankAccount": "Bankový účet",
+    "boat": "Loď",
+    "car": "Auto",
+    "commercialProperty": "Komerčná nehnuteľnosť",
+    "cryptocurrency": "Kryptomena",
+    "cryptocurrencyWallet": "Kryptomenová peňaženka",
+    "customAsset": "Vlastné aktívum",
+    "digitalSubscription": "Digitálne predplatné",
+    "domainName": "Doména",
     "electronics": "Elektronika",
     "furniture": "Nábytok",
-    "toolsEquipment": "Náradie / Vybavenie",
+    "insurancePolicy": "Poistka",
+    "investmentPortfolio": "Investičné portfólio",
+    "jewelry": "Šperky",
+    "land": "Pozemok",
+    "loanMortgage": "Úver / Hypotéka",
+    "motorcycle": "Motorka",
+    "nft": "NFT",
+    "onlineAccount": "Online účet",
     "otherValuables": "Ostatné cennosti",
-    "customAsset": "Vlastné aktívum"
+    "pensionRetirement": "Dôchodok / Penziový účet",
+    "primaryResidence": "Hlavné bydlisko",
+    "rentalProperty": "Prenajímaná nehnuteľnosť",
+    "rvCamper": "Karavan",
+    "softwareLicense": "Softvérová licencia",
+    "toolsEquipment": "Náradie / Vybavenie",
+    "vacationHome": "Rekreačný dom"
   },
-  "dynamicAssetForm": {
-    "propertyAddress": "Adresa nehnuteľnosti",
-    "purchaseDate": "Dátum nadobudnutia",
-    "purchasePrice": "Nákupná cena",
-    "currentEstimatedValue": "Aktuálna odhadovaná hodnota",
-    "mortgageInformation": "Informácie o hypotéke",
-    "locationOfPropertyDocuments": "Umiestnenie dokladov o nehnuteľnosti",
-    "locationAddress": "Miesto / Adresa",
-    "size": "Rozloha (áre/m²)",
-    "zoningType": "Druh územia",
-    "currentUse": "Súčasné využitie",
-    "bankName": "Názov banky",
-    "accountType": "Typ účtu",
-    "selectAccountType": "Vyberte typ účtu",
-    "checking": "Bežný účet",
-    "savings": "Sporiaci účet",
-    "moneyMarket": "Peňažný trh",
-    "certificateOfDeposit": "Vkladový certifikát",
-    "accountHolderName": "Meno majiteľa účtu",
-    "accountNumberLast4": "Posledné 4 číslice účtu",
-    "routingNumber": "Smerové číslo",
-    "brokerageFirm": "Maklérska spoločnosť",
-    "accountNumber": "Číslo účtu",
-    "individual": "Individuálny",
-    "joint": "Spoločný",
-    "ira": "IRA",
-    "rothIra": "Roth IRA",
-    "401k": "401(k)",
-    "approximateValue": "Približná hodnota",
-    "financialAdvisor": "Finančný poradca (ak je)",
-    "walletNameLabel": "Názov/označenie peňaženky",
-    "walletType": "Typ peňaženky",
-    "selectWalletType": "Vyberte typ peňaženky",
-    "hardwareWallet": "Hardvérová peňaženka",
-    "softwareWallet": "Softvérová peňaženka",
-    "exchangeWallet": "Peňaženka na burze",
-    "paperWallet": "Papierová peňaženka",
-    "cryptocurrenciesHeld": "Držané kryptomeny",
-    "locationOfSeedPhrase": "Umiestnenie seed frázy / privátnych kľúčov",
-    "exchangeInformation": "Informácie o burze (ak platí)",
-    "makeAndModel": "Značka a model",
-    "year": "Rok",
-    "vinNumber": "VIN číslo",
-    "licensePlate": "ŠPZ",
-    "loanInformation": "Informácie o úvere (ak existuje)",
-    "locationOfTitle": "Umiestnenie dokladu o vlastníctve",
-    "platformWebsiteName": "Názov platformy / webu",
-    "accountEmail": "E-mail / používateľské meno",
-    "accountPurpose": "Účel / popis účtu",
-    "recoveryInformation": "Informácie na obnovu",
-    "faMethod": "Metóda 2FA (ak je aktivovaná)",
-    "itemDescription": "Popis položky",
-    "appraisedValue": "Odhadovaná hodnota",
-    "lastAppraisalDate": "Dátum posledného ocenenia",
-    "storageLocation": "Umiestnenie / sklad",
-    "insuranceInformation": "Informácie o poistke",
-    "sentimentalValue": "Sentimentálna hodnota / história",
-    "assetName": "Názov majetku",
-    "estimatedValue": "Odhadovaná hodnota",
-    "description": "Popis",
-    "locationAccessInformation": "Umiestnenie / prístupové informácie",
-    "addSubType": "Pridať {subType}",
-    "cancel": "Zrušiť",
-    "saveAsset": "Uložiť majetok",
-    "placeholders": {
-      "123_main_st_city_state_zip_1": "Hlavná 123, Mesto, PSČ",
-      "lender_name_account_number_rem_2": "Poskytovateľ, číslo účtu, zostávajúci zostatok",
-      "e_g_safe_deposit_box_filing_ca_3": "napr. Bezpečnostná schránka, spisovňa",
-      "property_location_or_parcel_nu_4": "Poloha nehnuteľnosti alebo číslo parcely",
-      "e_g_10_acres_5": "napr. 10 árov, 500 m²",
-      "e_g_commercial_agricultural_6": "napr. Komerčné, Poľnohospodárske, Obytné",
-      "describe_current_use_of_the_pr_7": "Popíšte aktuálne využitie nehnuteľnosti",
-      "e_g_chase_bank_8": "napr. Tatra banka, Slovenská sporiteľňa",
-      "john_doe_9": "Ján Novák",
-      "1234_10": "1234",
-      "e_g_fidelity_vanguard_11": "napr. Fidelity, Vanguard, XTB",
-      "account_number_12": "Číslo účtu",
-      "name_and_contact_information_13": "Meno a kontaktné údaje",
-      "e_g_main_bitcoin_wallet_14": "napr. Hlavná Bitcoin peňaženka",
-      "e_g_bitcoin_ethereum_15": "napr. Bitcoin, Ethereum, Litecoin",
-      "do_not_enter_the_actual_seed_p_16": "Nevkladajte sem skutočnú seed frázu",
-      "exchange_name_and_account_emai_17": "Názov burzy a e-mail účtu",
-      "e_g_toyota_camry_18": "napr. Toyota Camry, Škoda Octavia",
-      "vehicle_identification_number_19": "Identifikačné číslo vozidla (VIN)",
-      "lender_account_number_payoff_a_20": "Poskytovateľ, číslo účtu, suma na vyrovnanie",
-      "e_g_safe_deposit_box_21": "napr. Bezpečnostná schránka, domáci trezor",
-      "e_g_gmail_facebook_22": "napr. Gmail, Facebook, LinkedIn",
-      "user_example_com_23": "uzivatel@example.com",
-      "what_this_account_is_used_for_24": "Na čo sa tento účet používa",
-      "recovery_email_phone_or_securi_25": "Obnovovací e-mail, telefón alebo bezpečnostné otázky",
-      "e_g_sms_to_phone_ending_in_123_26": "napr. SMS na číslo končiace 123",
-      "e_g_diamond_engagement_ring_27": "napr. Diamantový zásnubný prsteň, zlatý náhrdelník",
-      "e_g_home_safe_bank_deposit_box_28": "napr. Domáci trezor, bezpečnostná schránka v banke",
-      "policy_number_and_company_29": "Číslo poistky a poisťovňa",
-      "special_meaning_or_history_of__30": "Špeciálny význam alebo história predmetu",
-      "name_or_description_of_asset_31": "Názov alebo popis majetku",
-      "detailed_description_of_the_as_32": "Podrobný popis majetku",
-      "where_to_find_this_asset_or_ho_33": "Kde tento majetok nájdete alebo ako k nemu získať prístup"
-    }
-  },
-  "myPossessions": {
-    "my_possessions_1": "Môj majetok",
-    "an_inventory_of_the_important__2": "Inventár dôležitých vecí, ktoré podporujú budúcnosť vašej rodiny.",
-    "family_impact_3": "Vplyv na rodinu:",
-    "edit_details_4": "Upraviť detaily",
-    "link_papers_5": "Prepojiť dokumenty (",
-    "assign_access_6": "Priradiť prístup",
-    "add_your_first_7": "Pridať prvý ",
-    "areas": {
-      "home": {
-        "title": "Domov a nehnuteľnosti",
-        "description": "Miesta, ktoré poskytujú útočisko a vytvárajú spomienky.",
-        "emptyState": "Zaevidujte svoje nehnuteľnosti, aby ste zabezpečili strechu nad hlavou vašej rodiny.",
-        "addButton": "Nehnuteľnosť"
+  "assets": {
+    "categories": {
+      "uncategorized": "Nekategorizované"
+    },
+    "overview": {
+      "addAsset": "Pridať majetok",
+      "addNew": "Pridať nový",
+      "beneficiaryAllocation": {
+        "allAssigned": "Všetky poklady majú priradených blízkych",
+        "subtitle": "Sledujte, ako sú vaše poklady rozdelené medzi blízkych",
+        "title": "Zdieľanie vašich pokladov"
       },
-      "savings": {
-        "title": "Úspory a investície",
-        "description": "Finančný základ, ktorý ste vybudovali pre svoju rodinu.",
-        "emptyState": "Evidujte si finančné účty, aby vaša rodina mala prístup k financiám, keď to bude potrebné.",
-        "addButton": "Účet"
+      "distribution": {
+        "subtitle": "Prehľad portfólia podľa kategórie",
+        "title": "Distribúcia majetku"
       },
-      "business": {
-        "title": "Vaše podnikanie",
-        "description": "Práca, ktorá podporuje vašu rodinu a vytvára váš profesijný odkaz.",
-        "emptyState": "Zaevidujte si detaily o podnikaní pre hladké odovzdanie a pokračovanie príjmu.",
-        "addButton": "Podnikanie"
+      "errors": {
+        "loadFailed": "Nepodarilo sa načítať údaje o majetku"
       },
-      "valuables": {
-        "title": "Cennosti a zbierky",
-        "description": "Predmety s finančnou alebo sentimentálnou hodnotou, ktoré si vyžadujú osobitnú pozornosť.",
-        "emptyState": "Zaznamenajte hodnotné predmety, ktoré si zaslúžia zvláštne zaobchádzanie alebo majú pre vás hodnotu.",
-        "addButton": "Cennosť"
-      }
-    },
-    "mockData": {
-      "lakeCabin": "Chata pri jazere",
-      "emergencyFund": "Rezervný fond",
-      "yourBusiness": "Vaše podnikanie",
-      "johnsonContracting": "Johnson Contracting s.r.o.",
-      "classicCarCollection": "Zbierka veteránov"
-    }
-  },
-  "addLiabilityModal": {
-    "title": "Pridať záväzok",
-    "fields": {
-      "type": "Typ",
-      "provider": "Poskytovateľ",
-      "referenceNumber": "Referenčné číslo",
-      "paymentFrequency": "Frekvencia platieb",
-      "notes": "Poznámky"
-    },
-    "placeholders": {
-      "selectType": "Vyberte typ",
-      "provider": "Názov poskytovateľa",
-      "referenceNumber": "Referenčné číslo",
-      "paymentFrequency": "Vyberte frekvenciu",
-      "notes": "Doplňujúce poznámky"
-    },
-    "buttons": {
-      "cancel": "Zrušiť",
-      "add": "Pridať záväzok"
-    },
-    "errors": {
-      "requiredFields": "Všetky polia sú povinné"
-    },
-    "messages": {
-      "addedSuccessfully": "Záväzok bol úspešne pridaný"
-    },
-    "types": {
-      "insurancePolicy": "Poistka",
-      "utilityBill": "Služby / Energie",
-      "propertyTax": "Daň z nehnuteľnosti",
-      "subscriptionFee": "Poplatok za predplatné",
-      "maintenanceContract": "Servisná zmluva",
-      "loan": "Pôžička / Úver",
-      "leaseAgreement": "Nájomná zmluva",
-      "warranty": "Záruka",
-      "other": "Iné"
-    },
-    "frequencies": {
-      "monthly": "Mesačne",
-      "quarterly": "Štvrťročne",
-      "semiAnnually": "Položročne",
-      "annually": "Ročne",
-      "oneTime": "Jednorazovo",
-      "asNeeded": "Podľa potreby"
+      "estimatedValue": "Odhadovaná hodnota všetkých aktív",
+      "subtitle": "Spravujte a sledujte svoj majetok, nehnuteľnosti a investície",
+      "title": "Čo vlastníte a na čom vám záleží",
+      "totalPortfolioValue": "Celková hodnota portfólia",
+      "viewInheritanceSummary": "Zobraziť súhrn dedičstva"
     }
   },
   "calculator": {
     "badge": "Kalkulačka pripravenosti",
-    "title": "Vypočítajte skóre pripravenosti vašej rodiny",
-    "subtitle": "Zistite, koľko času a peňazí vaša rodina ušetrí, keď je všetko usporiadané",
+    "calculateButton": "Vypočítať úsporu",
     "inputs": {
-      "title": "Vaša rodinná situácia",
-      "description": "Povedzte nám niečo o svojej rodine, aby sme výsledky personalizovali",
+      "accounts": "Koľko máte bankových účtov?",
+      "accountsHelp": "Započítajte bežné, sporiace a investičné účty",
+      "business": "Máte podnikanie?",
       "dependents": "Koľko ľudí je na vás závislých?",
       "dependentsHelp": "Zahrňte partnera, deti, starších rodičov",
+      "description": "Povedzte nám niečo o svojej rodine, aby sme výsledky personalizovali",
       "income": "Aký je váš mesačný príjem?",
       "incomeHelp": "To pomôže vypočítať možné straty na príjmoch",
       "property": "Vlastníte nehnuteľnosť?",
-      "business": "Máte podnikanie?",
-      "accounts": "Koľko máte bankových účtov?",
-      "accountsHelp": "Započítajte bežné, sporiace a investičné účty"
+      "title": "Vaša rodinná situácia"
     },
-    "calculateButton": "Vypočítať úsporu",
     "results": {
-      "title": "Úspory vašej rodiny",
+      "ctaContext": "Väčšina rodín dokončí nastavenie počas obedovej prestávky",
       "description": "Čo znamená pripravenosť pre vašich blízkych",
-      "timeSavings": {
-        "title": "Časová úspora vašej rodiny",
-        "without": "Bez organizácie",
-        "withoutHours": "40-120 hodín hľadania",
-        "with": "S Dedičným trezorom",
-        "withMinutes": "Menej ako 5 minút"
+      "emotional": {
+        "confidence": "Nárast istoty v rodine",
+        "peace": "Hodnotenie pripravenosti",
+        "stress": "Zníženie stresu",
+        "title": "Emocionálny dopad"
       },
+      "families": "15 000+ rodín chránených",
       "moneySavings": {
-        "title": "Finančná úspora vašej rodiny",
         "legalFees": "Právne poplatky za rekonštrukciu",
         "lostWages": "Stratené mzdy kvôli voľnu",
         "penalties": "Zmeškané termíny a pokuty",
+        "title": "Finančná úspora vašej rodiny",
         "total": "Celková možná úspora"
       },
-      "emotional": {
-        "title": "Emocionálny dopad",
-        "stress": "Zníženie stresu",
-        "confidence": "Nárast istoty v rodine",
-        "peace": "Hodnotenie pripravenosti"
-      },
+      "shareButton": "Zdieľať výsledky",
       "socialProof": "Pridajte sa k rodinám, ktoré už spia pokojnejšie",
-      "families": "15 000+ rodín chránených",
-      "ctaContext": "Väčšina rodín dokončí nastavenie počas obedovej prestávky",
-      "shareButton": "Zdieľať výsledky"
+      "timeSavings": {
+        "title": "Časová úspora vašej rodiny",
+        "with": "S Dedičným trezorom",
+        "withMinutes": "Menej ako 5 minút",
+        "without": "Bez organizácie",
+        "withoutHours": "40-120 hodín hľadania"
+      },
+      "title": "Úspory vašej rodiny"
     },
-    "testimonial": {
-      "quote": "Ani som si neuvedomila, koľko stresu som nosila, kým som nemala všetko zorganizované. Teraz viem, že moja rodina to zvládne, nech sa stane čokoľvek.",
-      "author": "Sarah M., mama troch detí"
-    },
+    "shareCopied": "Výsledky skopírované do schránky!",
     "shareTitle": "Výsledky kalkulačky pripravenosti rodiny",
-    "shareCopied": "Výsledky skopírované do schránky!"
+    "subtitle": "Zistite, koľko času a peňazí vaša rodina ušetrí, keď je všetko usporiadané",
+    "testimonial": {
+      "author": "Sarah M., mama troch detí",
+      "quote": "Ani som si neuvedomila, koľko stresu som nosila, kým som nemala všetko zorganizované. Teraz viem, že moja rodina to zvládne, nech sa stane čokoľvek."
+    },
+    "title": "Vypočítajte skóre pripravenosti vašej rodiny"
+  },
+  "dynamicAssetForm": {
+    "401k": "401(k)",
+    "accountEmail": "E-mail / používateľské meno",
+    "accountHolderName": "Meno majiteľa účtu",
+    "accountNumber": "Číslo účtu",
+    "accountNumberLast4": "Posledné 4 číslice účtu",
+    "accountPurpose": "Účel / popis účtu",
+    "accountType": "Typ účtu",
+    "appraisedValue": "Odhadovaná hodnota",
+    "approximateValue": "Približná hodnota",
+    "assetName": "Názov majetku",
+    "bankName": "Názov banky",
+    "brokerageFirm": "Maklérska spoločnosť",
+    "cancel": "Zrušiť",
+    "certificateOfDeposit": "Vkladový certifikát",
+    "checking": "Bežný účet",
+    "cryptocurrenciesHeld": "Držané kryptomeny",
+    "currentEstimatedValue": "Aktuálna odhadovaná hodnota",
+    "currentUse": "Súčasné využitie",
+    "description": "Popis",
+    "estimatedValue": "Odhadovaná hodnota",
+    "exchangeInformation": "Informácie o burze (ak platí)",
+    "exchangeWallet": "Peňaženka na burze",
+    "faMethod": "Metóda 2FA (ak je aktivovaná)",
+    "financialAdvisor": "Finančný poradca (ak je)",
+    "hardwareWallet": "Hardvérová peňaženka",
+    "individual": "Individuálny",
+    "insuranceInformation": "Informácie o poistke",
+    "ira": "IRA",
+    "itemDescription": "Popis položky",
+    "joint": "Spoločný",
+    "lastAppraisalDate": "Dátum posledného ocenenia",
+    "licensePlate": "ŠPZ",
+    "loanInformation": "Informácie o úvere (ak existuje)",
+    "locationAccessInformation": "Umiestnenie / prístupové informácie",
+    "locationAddress": "Miesto / Adresa",
+    "locationOfPropertyDocuments": "Umiestnenie dokladov o nehnuteľnosti",
+    "locationOfSeedPhrase": "Umiestnenie seed frázy / privátnych kľúčov",
+    "locationOfTitle": "Umiestnenie dokladu o vlastníctve",
+    "makeAndModel": "Značka a model",
+    "moneyMarket": "Peňažný trh",
+    "mortgageInformation": "Informácie o hypotéke",
+    "paperWallet": "Papierová peňaženka",
+    "placeholders": {
+      "1234_10": "1234",
+      "123_main_st_city_state_zip_1": "Hlavná 123, Mesto, PSČ",
+      "account_number_12": "Číslo účtu",
+      "describe_current_use_of_the_pr_7": "Popíšte aktuálne využitie nehnuteľnosti",
+      "detailed_description_of_the_as_32": "Podrobný popis majetku",
+      "do_not_enter_the_actual_seed_p_16": "Nevkladajte sem skutočnú seed frázu",
+      "e_g_10_acres_5": "napr. 10 árov, 500 m²",
+      "e_g_bitcoin_ethereum_15": "napr. Bitcoin, Ethereum, Litecoin",
+      "e_g_chase_bank_8": "napr. Tatra banka, Slovenská sporiteľňa",
+      "e_g_commercial_agricultural_6": "napr. Komerčné, Poľnohospodárske, Obytné",
+      "e_g_diamond_engagement_ring_27": "napr. Diamantový zásnubný prsteň, zlatý náhrdelník",
+      "e_g_fidelity_vanguard_11": "napr. Fidelity, Vanguard, XTB",
+      "e_g_gmail_facebook_22": "napr. Gmail, Facebook, LinkedIn",
+      "e_g_home_safe_bank_deposit_box_28": "napr. Domáci trezor, bezpečnostná schránka v banke",
+      "e_g_main_bitcoin_wallet_14": "napr. Hlavná Bitcoin peňaženka",
+      "e_g_safe_deposit_box_21": "napr. Bezpečnostná schránka, domáci trezor",
+      "e_g_safe_deposit_box_filing_ca_3": "napr. Bezpečnostná schránka, spisovňa",
+      "e_g_sms_to_phone_ending_in_123_26": "napr. SMS na číslo končiace 123",
+      "e_g_toyota_camry_18": "napr. Toyota Camry, Škoda Octavia",
+      "exchange_name_and_account_emai_17": "Názov burzy a e-mail účtu",
+      "john_doe_9": "Ján Novák",
+      "lender_account_number_payoff_a_20": "Poskytovateľ, číslo účtu, suma na vyrovnanie",
+      "lender_name_account_number_rem_2": "Poskytovateľ, číslo účtu, zostávajúci zostatok",
+      "name_and_contact_information_13": "Meno a kontaktné údaje",
+      "name_or_description_of_asset_31": "Názov alebo popis majetku",
+      "policy_number_and_company_29": "Číslo poistky a poisťovňa",
+      "property_location_or_parcel_nu_4": "Poloha nehnuteľnosti alebo číslo parcely",
+      "recovery_email_phone_or_securi_25": "Obnovovací e-mail, telefón alebo bezpečnostné otázky",
+      "special_meaning_or_history_of__30": "Špeciálny význam alebo história predmetu",
+      "user_example_com_23": "uzivatel@example.com",
+      "vehicle_identification_number_19": "Identifikačné číslo vozidla (VIN)",
+      "what_this_account_is_used_for_24": "Na čo sa tento účet používa",
+      "where_to_find_this_asset_or_ho_33": "Kde tento majetok nájdete alebo ako k nemu získať prístup"
+    },
+    "platformWebsiteName": "Názov platformy / webu",
+    "propertyAddress": "Adresa nehnuteľnosti",
+    "purchaseDate": "Dátum nadobudnutia",
+    "purchasePrice": "Nákupná cena",
+    "recoveryInformation": "Informácie na obnovu",
+    "rothIra": "Roth IRA",
+    "routingNumber": "Smerové číslo",
+    "saveAsset": "Uložiť majetok",
+    "savings": "Sporiaci účet",
+    "selectAccountType": "Vyberte typ účtu",
+    "selectWalletType": "Vyberte typ peňaženky",
+    "sentimentalValue": "Sentimentálna hodnota / história",
+    "size": "Rozloha (áre/m²)",
+    "softwareWallet": "Softvérová peňaženka",
+    "storageLocation": "Umiestnenie / sklad",
+    "vinNumber": "VIN číslo",
+    "walletNameLabel": "Názov/označenie peňaženky",
+    "walletType": "Typ peňaženky",
+    "year": "Rok",
+    "zoningType": "Druh územia"
+  },
+  "myPossessions": {
+    "add_your_first_7": "Pridať prvý ",
+    "an_inventory_of_the_important__2": "Inventár dôležitých vecí, ktoré podporujú budúcnosť vašej rodiny.",
+    "areas": {
+      "business": {
+        "addButton": "Podnikanie",
+        "description": "Práca, ktorá podporuje vašu rodinu a vytvára váš profesijný odkaz.",
+        "emptyState": "Zaevidujte si detaily o podnikaní pre hladké odovzdanie a pokračovanie príjmu.",
+        "title": "Vaše podnikanie"
+      },
+      "home": {
+        "addButton": "Nehnuteľnosť",
+        "description": "Miesta, ktoré poskytujú útočisko a vytvárajú spomienky.",
+        "emptyState": "Zaevidujte svoje nehnuteľnosti, aby ste zabezpečili strechu nad hlavou vašej rodiny.",
+        "title": "Domov a nehnuteľnosti"
+      },
+      "savings": {
+        "addButton": "Účet",
+        "description": "Finančný základ, ktorý ste vybudovali pre svoju rodinu.",
+        "emptyState": "Evidujte si finančné účty, aby vaša rodina mala prístup k financiám, keď to bude potrebné.",
+        "title": "Úspory a investície"
+      },
+      "valuables": {
+        "addButton": "Cennosť",
+        "description": "Predmety s finančnou alebo sentimentálnou hodnotou, ktoré si vyžadujú osobitnú pozornosť.",
+        "emptyState": "Zaznamenajte hodnotné predmety, ktoré si zaslúžia zvláštne zaobchádzanie alebo majú pre vás hodnotu.",
+        "title": "Cennosti a zbierky"
+      }
+    },
+    "assign_access_6": "Priradiť prístup",
+    "edit_details_4": "Upraviť detaily",
+    "family_impact_3": "Vplyv na rodinu:",
+    "link_papers_5": "Prepojiť dokumenty (",
+    "mockData": {
+      "classicCarCollection": "Zbierka veteránov",
+      "emergencyFund": "Rezervný fond",
+      "johnsonContracting": "Johnson Contracting s.r.o.",
+      "lakeCabin": "Chata pri jazere"
+    },
+    "my_possessions_1": "Môj majetok"
   }
 }
-

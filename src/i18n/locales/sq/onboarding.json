@@ -1,231 +1,146 @@
 {
-  "_comment": "Shared translations used across the application",
-  "onboarding": {
-    "title": "Mirë se vini në LegacyGuard",
-    "subtitle": "Le t'ju ndihmojmë të siguroni të ardhmen e familjes suaj",
-    "mainTitle": "Rendi i Projektit",
-    "mainSubtitle": "Le të krijojmë planin tuaj të personalizuar për mbrojtjen e trashëgimisë",
-    "progressText": "Rendi i Projektit: Hapi {{step}} nga 4",
-    "skipButton": "Kalo për tani",
-    "skipConfirmTitle": "Të kalohet hyrja?",
-    "skipConfirmMessage": "Mund ta rinisni gjithmonë këtë konfigurim më vonë në cilësime",
-    "skipConfirmYes": "Kalo",
-    "skipConfirmNo": "Vazhdo konfigurimin",
-    "restartButton": "Rinis Hyrjen",
-    "welcomeBack": "Mirë se u kthyet! Gati për të përfunduar konfigurimin tuaj?",
-    "resumeTitle": "Vazhdoni aty ku e latë",
-    "resumeMessage": "Ishit në hapin {{step}} nga 4",
-    "partialProgress": "{{percentage}}% e përfunduar",
-    "inventory": {
-      "documentAccess": {
-        "question": "Nëse ju ndodhte diçka sot, a do ta dinte familja juaj ku t'i gjente dokumentet tuaja të rëndësishme?",
-        "answers": {
-          "yes": "Po",
-          "no": "Jo",
-          "partially": "Pjesërisht"
-        }
-      },
-      "caretaker": {
-        "question": "Kush do të kujdesej për fëmijët/pasuritë/llogaritë tuaja dixhitale?",
-        "answers": {
-          "designated": "Kam një person të caktuar",
-          "familyFigureOut": "Familja do ta zgjidhte vetë",
-          "notThought": "Nuk e kam menduar"
-        }
-      },
-      "familyClarity": {
-        "question": "A mendoni se familja juaj do ta dinte se çfarë dëshironit për ta?",
-        "answers": {
-          "clear": "Po, është e qartë",
-          "somewhat": "Diku",
-          "neverDiscussed": "Jo, nuk e kemi diskutuar kurrë"
-        }
-      },
-      "biggestWorry": {
-        "question": "Çfarë ju shqetëson më shumë për të ardhmen e familjes suaj?",
-        "answers": {
-          "financial": "Siguria financiare",
-          "legal": "Komplikime ligjore",
-          "memories": "Humbja e kujtimeve",
-          "conflicts": "Konflikte familjare"
-        }
-      },
-      "personalized": {
-        "documentCentralization": "Bazuar në përgjigjen tuaj për aksesin e dokumenteve, ne rekomandojmë të filloni me centralizimin e dokumenteve tuaja të rëndësishme.",
-        "guardianDesignation": "Meqenëse nuk keni caktuar dikë për t'u kujdesur për pasuritë tuaja, caktimi i një kujdestari duhet të jetë prioriteti juaj.",
-        "willPreparation": "Familja juaj ka nevojë për qartësi në lidhje me dëshirat tuaja. Krijimi i një testamenti është një hap i parë thelbësor.",
-        "financialPlanning": "Siguria financiare është thelbësore. Le të fillojmë duke dokumentuar llogaritë tuaja bankare dhe pasuritë.",
-        "conflictPrevention": "Për të parandaluar konfliktet familjare, dokumentacioni dhe komunikimi i qartë janë kyçe.",
-        "memoryPreservation": "Ruajtja e kujtimeve fillon me organizimin e fotove dhe historive tuaja dixhitale.",
-        "legalOrganization": "Le të organizojmë dokumentet tuaja ligjore për të shmangur komplikimet më vonë."
-      }
-    },
-    "q1": {
-      "title": "Nëse ju ndodhte diçka sot, a do ta dinte familja juaj ku t'i gjente dokumentet tuaja të rëndësishme?",
-      "option1": "Po",
-      "option2": "Jo",
-      "option3": "Pjesërisht"
-    },
-    "q2": {
-      "title": "Kush do të kujdesej për fëmijët/pasuritë/llogaritë tuaja dixhitale?",
-      "option1": "Kam një person të caktuar",
-      "option2": "Familja do ta zgjidhte vetë",
-      "option3": "Nuk e kam menduar"
-    },
-    "q3": {
-      "title": "A mendoni se familja juaj do ta dinte se çfarë dëshironit për ta?",
-      "option1": "Po, është e qartë",
-      "option2": "Diku",
-      "option3": "Jo, nuk e kemi diskutuar kurrë"
-    },
-    "q4": {
-      "title": "Çfarë ju shqetëson më shumë për të ardhmen e familjes suaj?",
-      "option1": "Siguria financiare",
-      "option2": "Komplikime ligjore",
-      "option3": "Humbja e kujtimeve",
-      "option4": "Konflikte familjare"
-    },
-    "buttons": {
-      "previous": "Mëparshëm",
-      "next": "Tjetri",
-      "generate": "Gjenero Rendin Tim të Projektit"
-    },
-    "analysis": {
-      "title": "Duke analizuar përgjigjet tuaja...",
-      "subtitle": "Duke përgatitur 'Rendin e Projektit' tuaj personal...",
-      "done": "U krye!"
-    },
-    "complete": "Fillim i mbarë! Ne kemi personalizuar panelin tuaj bazuar në përgjigjet tuaja. Jeni gati të filloni ndërtimin e planit tuaj të plotë të trashëgimisë.",
-    "success": {
-      "stepCompleted": "Hapi {{step}} u përfundua me sukses!",
-      "inventoryComplete": "Inventari i jetës u përfundua! Plani juaj i personalizuar është gati.",
-      "allQuestionsAnswered": "Të gjitha pyetjet u përgjigjën. Duke gjeneruar planin tuaj të veprimit..."
-    },
-    "errors": {
-      "questionRequired": "Ju lutemi përgjigjuni kësaj pyetjeje për të vazhduar",
-      "failedToSave": "Ruajtja e përgjigjeve tuaja dështoi. Ju lutemi provoni përsëri.",
-      "loadingFailed": "Ngarkimi i pyetjeve të hyrjes dështoi"
-    },
-    "addAnother": "Shto një tjetër",
-    "previous": "Mëparshëm",
-    "next": "Tjetri",
-    "continue": "Vazhdo te Paneli"
-  },
   "demo": {
     "ai": {
-      "title": "LegacyGuard AI Integration Demo",
-      "subtitle": "Experience how AI can help organize and protect your family's legacy",
-      "tabs": {
-        "documents": "Documents",
-        "questions": "Questions",
-        "suggestions": "Suggestions",
-        "messages": "Messages"
+      "context": {
+        "completion": "Completion:",
+        "label": "Current Context:",
+        "mood": "Mood:",
+        "recent": "Recent:"
       },
       "profile": {
-        "label": "Demo Profile:",
-        "documentsCount": "documents uploaded"
+        "documentsCount": "documents uploaded",
+        "label": "Demo Profile:"
       },
       "question": {
         "category": "Category:"
       },
-      "context": {
-        "label": "Current Context:",
-        "completion": "Completion:",
-        "recent": "Recent:",
-        "mood": "Mood:"
-      },
+      "subtitle": "Experience how AI can help organize and protect your family's legacy",
       "suggestion": {
         "priority": "Priority:"
-      }
-    },
-    "upload": {
-      "title": "Magical Document Upload",
-      "subtitle": "Experience the future of secure document management",
-      "badge": {
-        "encryption": "Auto Encrypt",
-        "aiAnalysis": "AI Analysis",
-        "familySharing": "Family Sharing"
-      },
-      "settings": {
-        "title": "Upload Settings",
-        "description": "Customize your document processing preferences",
-        "storageLocation": "Storage Location",
-        "local": "Local",
-        "cloud": "Cloud"
-      },
-      "features": {
-        "autoCompress": "Auto Compress",
-        "autoEncrypt": "Auto Encrypt",
-        "processOCR": "Process OCR",
-        "aiAnalysis": "AI Analysis",
-        "familySharing": "Family Sharing"
-      },
-      "console": {
-        "uploadStarted": "Upload started",
-        "view": "View",
-        "download": "Download",
-        "share": "Share",
-        "delete": "Delete"
       },
       "tabs": {
-        "upload": "Upload",
         "documents": "Documents",
-        "stats": "Statistics"
+        "messages": "Messages",
+        "questions": "Questions",
+        "suggestions": "Suggestions"
       },
-      "privacy": {
-        "localMode": {
-          "title": "Privacy Mode Active:",
-          "description": "All documents are processed and stored exclusively on your device. No data leaves your browser."
-        },
-        "cloudMode": {
-          "title": "Cloud Storage Active:",
-          "description": "Documents are encrypted before upload. Your encryption keys never leave your device."
-        }
-      },
-      "stats": {
-        "localStorage": {
-          "title": "Local Storage",
-          "description": "Documents stored on device"
-        },
-        "cloudStorage": {
-          "title": "Cloud Storage",
-          "description": "Documents in cloud"
-        },
-        "totalSize": {
-          "title": "Total Size",
-          "description": "Storage used"
-        },
-        "successRate": "Success Rate",
-        "averageTime": "Average Upload Time"
-      },
-      "progress": {
-        "title": "Upload Progress",
-        "completed": "{{count}} completed",
-        "failed": "{{count}} failed"
-      }
+      "title": "LegacyGuard AI Integration Demo"
     },
     "ocr": {
-      "title": "Privacy-First Document Processing",
-      "subtitle": "Extract text from documents while keeping everything on your device",
       "features": {
         "completePrivacy": "Complete Privacy",
         "multiLanguage": "Multi-Language Support",
         "smartDetection": "Smart Detection"
-      }
+      },
+      "subtitle": "Extract text from documents while keeping everything on your device",
+      "title": "Privacy-First Document Processing"
+    },
+    "upload": {
+      "badge": {
+        "aiAnalysis": "AI Analysis",
+        "encryption": "Auto Encrypt",
+        "familySharing": "Family Sharing"
+      },
+      "console": {
+        "delete": "Delete",
+        "download": "Download",
+        "share": "Share",
+        "uploadStarted": "Upload started",
+        "view": "View"
+      },
+      "features": {
+        "aiAnalysis": "AI Analysis",
+        "autoCompress": "Auto Compress",
+        "autoEncrypt": "Auto Encrypt",
+        "familySharing": "Family Sharing",
+        "processOCR": "Process OCR"
+      },
+      "privacy": {
+        "cloudMode": {
+          "description": "Documents are encrypted before upload. Your encryption keys never leave your device.",
+          "title": "Cloud Storage Active:"
+        },
+        "localMode": {
+          "description": "All documents are processed and stored exclusively on your device. No data leaves your browser.",
+          "title": "Privacy Mode Active:"
+        }
+      },
+      "progress": {
+        "title": "Upload Progress"
+      },
+      "settings": {
+        "cloud": "Cloud",
+        "description": "Customize your document processing preferences",
+        "local": "Local",
+        "storageLocation": "Storage Location",
+        "title": "Upload Settings"
+      },
+      "stats": {
+        "averageTime": "Average Upload Time",
+        "cloudStorage": {
+          "description": "Documents in cloud",
+          "title": "Cloud Storage"
+        },
+        "localStorage": {
+          "description": "Documents stored on device",
+          "title": "Local Storage"
+        },
+        "successRate": "Success Rate",
+        "totalSize": {
+          "description": "Storage used",
+          "title": "Total Size"
+        }
+      },
+      "subtitle": "Experience the future of secure document management",
+      "tabs": {
+        "documents": "Documents",
+        "stats": "Statistics",
+        "upload": "Upload"
+      },
+      "title": "Magical Document Upload"
     }
   },
-  "pillars": {
-    "secure": {
-      "title": "SIGURT",
-      "description": "Mbroni familjen dhe pasuritë tuaja me masa sigurie proaktive"
+  "onboarding": {
+    "analysis": {
+      "subtitle": "Duke përgatitur 'Rendin e Projektit' tuaj personal...",
+      "title": "Duke analizuar përgjigjet tuaja..."
     },
-    "organize": {
-      "title": "ORGANIZONI",
-      "description": "Katalogoni dhe menaxhoni pasuritë tuaja dixhitale dhe fizike"
+    "buttons": {
+      "generate": "Gjenero Rendin Tim të Projektit",
+      "next": "Tjetri",
+      "previous": "Mëparshëm"
     },
-    "transfer": {
-      "title": "TRANSFERONI",
-      "description": "Sigurohuni që trashëgimia juaj të kalojë sipas dëshirave tuaja"
-    }
+    "mainSubtitle": "Le të krijojmë planin tuaj të personalizuar për mbrojtjen e trashëgimisë",
+    "mainTitle": "Rendi i Projektit",
+    "q1": {
+      "option1": "Po",
+      "option2": "Jo",
+      "option3": "Pjesërisht",
+      "title": "Nëse ju ndodhte diçka sot, a do ta dinte familja juaj ku t'i gjente dokumentet tuaja të rëndësishme?"
+    },
+    "q2": {
+      "option1": "Kam një person të caktuar",
+      "option2": "Familja do ta zgjidhte vetë",
+      "option3": "Nuk e kam menduar",
+      "title": "Kush do të kujdesej për fëmijët/pasuritë/llogaritë tuaja dixhitale?"
+    },
+    "q3": {
+      "option1": "Po, është e qartë",
+      "option2": "Diku",
+      "option3": "Jo, nuk e kemi diskutuar kurrë",
+      "title": "A mendoni se familja juaj do ta dinte se çfarë dëshironit për ta?"
+    },
+    "q4": {
+      "option1": "Siguria financiare",
+      "option2": "Komplikime ligjore",
+      "option3": "Humbja e kujtimeve",
+      "option4": "Konflikte familjare",
+      "title": "Çfarë ju shqetëson më shumë për të ardhmen e familjes suaj?"
+    },
+    "skipButton": "Kalo për tani",
+    "skipConfirmMessage": "Mund ta rinisni gjithmonë këtë konfigurim më vonë në cilësime",
+    "skipConfirmNo": "Vazhdo konfigurimin",
+    "skipConfirmTitle": "Të kalohet hyrja?",
+    "skipConfirmYes": "Kalo"
   }
 }

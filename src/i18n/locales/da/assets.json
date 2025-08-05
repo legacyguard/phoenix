@@ -1,442 +1,367 @@
 {
-  "_comment": "Shared translations used across the application",
-  "assets": {
-    "overview": {
-      "title": "Aktiv-portfolio",
-      "subtitle": "Administrer og spor dine aktiver, ejendomme og investeringer",
-      "addAsset": "Tilføj aktiv",
-      "totalPortfolioValue": "Samlet porteføljeværdi",
-      "estimatedValue": "Anslået værdi på tværs af alle aktiver",
-      "distribution": {
-        "title": "Fordeling af aktiver",
-        "subtitle": "Porteføljeopdeling efter kategori"
-      },
-      "beneficiaryAllocation": {
-        "title": "Fordeling til begunstigede",
-        "subtitle": "Spor fordeling af aktiver til begunstigede",
-        "allAssigned": "Alle aktiver er tildelt begunstigede",
-        "unassignedWarning": "{{count}} aktiver mangler tildeling til begunstigede"
-      },
-      "viewInheritanceSummary": "Se arveoversigt",
-      "addNew": "Tilføj ny",
-      "errors": {
-        "loadFailed": "Kunne ikke indlæse data om aktiver"
-      }
+  "addLiabilityModal": {
+    "buttons": {
+      "add": "Tilføj forpligtelse",
+      "cancel": "Annuller"
     },
-    "categories": {
-      "property": "Ejendom",
-      "vehicle": "Køretøj",
-      "financial": "Finansiel",
-      "business": "Virksomhed",
-      "personal": "Personlig",
-      "uncategorized": "Ukategoriseret"
-    }
-  },
-  "assetCard": {
-    "assetTypes": {
-      "Primary Residence": "Primary Residence",
-      "Vacation Home": "Vacation Home",
-      "Rental Property": "Rental Property",
-      "Land": "Land",
-      "Commercial Property": "Commercial Property",
-      "Bank Account": "Bank Account",
-      "Investment Portfolio": "Investment Portfolio",
-      "Cryptocurrency Wallet": "Cryptocurrency Wallet",
-      "Loan / Mortgage": "Loan / Mortgage",
-      "Insurance Policy": "Insurance Policy",
-      "Pension / Retirement Account": "Pension / Retirement Account",
-      "Car": "Car",
-      "Motorcycle": "Motorcycle",
-      "Boat": "Boat",
-      "RV / Camper": "RV / Camper",
-      "Aircraft": "Aircraft",
-      "Online Account": "Online Account",
-      "Software License": "Software License",
-      "Domain Name": "Domain Name",
-      "Digital Subscription": "Digital Subscription",
-      "Cryptocurrency": "Cryptocurrency",
-      "NFT": "NFT",
-      "Jewelry": "Jewelry",
-      "Art / Collectibles": "Art / Collectibles",
-      "Electronics": "Electronics",
-      "Furniture": "Furniture",
-      "Tools / Equipment": "Tools / Equipment",
-      "Other Valuables": "Other Valuables",
-      "Custom Asset": "Custom Asset"
-    },
-    "dateFormat": {
-      "addedOn": "Added on {{date}}",
-      "createdOn": "Created on {{date}}",
-      "updatedOn": "Updated on {{date}}"
-    },
-    "labels": {
-      "estimatedValue": "Estimated Value",
-      "category": "Category",
-      "subType": "Type"
-    }
-  },
-  "assetDetail": {
-    "loading": "Indlæser aktivdetaljer...",
     "errors": {
-      "failedToLoad": "Kunne ikke indlæse aktivdetaljer.",
-      "nameRequired": "Navn på aktiv er påkrævet.",
-      "failedToSave": "Kunne ikke gemme aktiv."
-    },
-    "messages": {
-      "createdSuccessfully": "Aktiv oprettet.",
-      "updatedSuccessfully": "Aktiv opdateret."
-    },
-    "title": {
-      "new": "Nyt {{type}}"
-    },
-    "subtitle": {
-      "new": "Udfyld detaljerne for at føje dette aktiv til din portefølje.",
-      "edit": "Opdater detaljerne for dette aktiv."
-    },
-    "story": {
-      "title": "The Story Behind This {{type}}",
-      "editButton": "Edit Story",
-      "addButton": "Add a Story",
-      "emptyTitle": "What's the story behind this item?",
-      "emptyDescription": "Add a personal memory or explain the significance of this item for your loved ones. This intangible legacy is often the most valuable."
-    },
-    "sections": {
-      "assetInformation": "Aktivoplysninger",
-      "basicInformation": "Grundlæggende oplysninger",
-      "propertyDetails": "Ejendomsdetaljer",
-      "accountDetails": "Kontodetaljer",
-      "financialDetails": "Finansielle detaljer",
-      "liabilitiesAndDocuments": "Related Liabilities & Documents"
+      "requiredFields": "Alle felter er påkrævet"
     },
     "fields": {
-      "assetName": "Navn på aktiv",
-      "assetType": "Type af aktiv",
-      "propertyAddress": "Ejendommens adresse",
-      "propertyRegistryNumber": "Matrikelnummer",
-      "accountType": "Kontotype",
-      "financialInstitution": "Finansiel institution",
-      "accountNumber": "Kontonummer / IBAN",
-      "loginCredentials": "Loginoplysninger & noter",
-      "estimatedValue": "Anslået værdi",
-      "currency": "Valuta",
-      "liabilityType": "Liability Type",
-      "providerName": "Provider Name",
-      "referenceNumber": "Reference Number"
+      "notes": "Noter",
+      "paymentFrequency": "Betalingsfrekvens",
+      "provider": "Udbyder",
+      "referenceNumber": "Referencenummer",
+      "type": "Type"
+    },
+    "frequencies": {
+      "monthly": "Månedlig"
+    },
+    "messages": {
+      "addedSuccessfully": "Forpligtelse tilføjet"
     },
     "placeholders": {
-      "assetName": "f.eks. Familiebolig, Investeringsportefølje",
-      "propertyAddress": "Indtast fuld ejendomsadresse",
-      "propertyRegistryNumber": "f.eks. Matrikelnummer",
-      "selectAccountType": "Vælg kontotype",
-      "financialInstitution": "f.eks. Danske Bank, Nordea",
-      "accountNumber": "f.eks. 1234567890",
-      "loginCredentials": "Adgangskode-manager: 1Password boks 'Bank'",
-      "estimatedValue": "0"
+      "notes": "Yderligere noter",
+      "paymentFrequency": "Vælg frekvens",
+      "provider": "Udbydernavn",
+      "referenceNumber": "Referencenummer",
+      "selectType": "Vælg type"
     },
-    "descriptions": {
-      "assetName": "Giv dette aktiv et beskrivende navn for nem identifikation.",
-      "assetType": "Vælg den type, der bedst beskriver dette aktiv.",
-      "propertyAddress": "Fuld adresse inklusive gade, by, postnummer og land.",
-      "propertyRegistryNumber": "Officielt matrikel- eller tingbogsnummer for denne ejendom.",
-      "accountType": "Type af finansiel konto eller investering.",
-      "financialInstitution": "Navn på banken eller den finansielle institution.",
-      "accountNumber": "Kontonummer, IBAN eller anden identificerende information.",
-      "estimatedValue": "Nuværende markedsværdi eller senest kendte værdi af dette aktiv.",
-      "currency": "Valuta, som værdien er udtrykt i.",
-      "noLiabilities": "No liabilities added yet"
-    },
-    "types": {
-      "realEstate": "Ejendom",
-      "business": "Virksomhed",
-      "vehicle": "Køretøj",
-      "financialAccount": "Finansiel konto",
-      "asset": "Aktiv"
-    },
+    "title": "Tilføj forpligtelse"
+  },
+  "assetDetail": {
     "accountTypes": {
       "bankAccount": "Bankkonto",
       "investmentPortfolio": "Investeringsportefølje",
       "pensionFund": "Pensionsfond"
     },
+    "buttons": {
+      "addLiability": "Add Liability",
+      "cancel": "Annuller",
+      "createAsset": "Opret aktiv",
+      "saving": "Gemmer...",
+      "updateAsset": "Opdater aktiv"
+    },
+    "descriptions": {
+      "accountNumber": "Kontonummer, IBAN eller anden identificerende information.",
+      "accountType": "Type af finansiel konto eller investering.",
+      "assetName": "Giv dette aktiv et beskrivende navn for nem identifikation.",
+      "assetType": "Vælg den type, der bedst beskriver dette aktiv.",
+      "currency": "Valuta, som værdien er udtrykt i.",
+      "estimatedValue": "Nuværende markedsværdi eller senest kendte værdi af dette aktiv.",
+      "financialInstitution": "Navn på banken eller den finansielle institution.",
+      "noLiabilities": "No liabilities added yet",
+      "propertyAddress": "Fuld adresse inklusive gade, by, postnummer og land.",
+      "propertyRegistryNumber": "Officielt matrikel- eller tingbogsnummer for denne ejendom."
+    },
+    "errors": {
+      "nameRequired": "Navn på aktiv er påkrævet."
+    },
+    "fields": {
+      "accountNumber": "Kontonummer / IBAN",
+      "accountType": "Kontotype",
+      "assetName": "Navn på aktiv",
+      "assetType": "Type af aktiv",
+      "currency": "Valuta",
+      "estimatedValue": "Anslået værdi",
+      "financialInstitution": "Finansiel institution",
+      "liabilityType": "Liability Type",
+      "loginCredentials": "Loginoplysninger & noter",
+      "propertyAddress": "Ejendommens adresse",
+      "propertyRegistryNumber": "Matrikelnummer",
+      "providerName": "Provider Name",
+      "referenceNumber": "Reference Number"
+    },
+    "loading": "Indlæser aktivdetaljer...",
+    "messages": {
+      "createdSuccessfully": "Aktiv oprettet.",
+      "updatedSuccessfully": "Aktiv opdateret."
+    },
+    "placeholders": {
+      "accountNumber": "f.eks. 1234567890",
+      "assetName": "f.eks. Familiebolig, Investeringsportefølje",
+      "estimatedValue": "0",
+      "financialInstitution": "f.eks. Danske Bank, Nordea",
+      "loginCredentials": "Adgangskode-manager: 1Password boks 'Bank'",
+      "propertyAddress": "Indtast fuld ejendomsadresse",
+      "propertyRegistryNumber": "f.eks. Matrikelnummer",
+      "selectAccountType": "Vælg kontotype"
+    },
+    "sections": {
+      "accountDetails": "Kontodetaljer",
+      "assetInformation": "Aktivoplysninger",
+      "basicInformation": "Grundlæggende oplysninger",
+      "financialDetails": "Finansielle detaljer",
+      "liabilitiesAndDocuments": "Related Liabilities & Documents",
+      "propertyDetails": "Ejendomsdetaljer"
+    },
     "securityWarning": "Sikkerhedsadvarsel:",
     "securityWarningText": "Gem ikke faktiske adgangskoder her. Brug dette felt til hints, placeringer i adgangskode-managere eller andre sikre adgangsinstruktioner.",
-    "buttons": {
-      "cancel": "Annuller",
-      "saving": "Gemmer...",
-      "createAsset": "Opret aktiv",
-      "updateAsset": "Opdater aktiv",
-      "addLiability": "Add Liability"
+    "story": {
+      "addButton": "Add a Story",
+      "editButton": "Edit Story",
+      "emptyDescription": "Add a personal memory or explain the significance of this item for your loved ones. This intangible legacy is often the most valuable.",
+      "emptyTitle": "What's the story behind this item?"
+    },
+    "subtitle": {
+      "edit": "Opdater detaljerne for dette aktiv.",
+      "new": "Udfyld detaljerne for at føje dette aktiv til din portefølje."
+    },
+    "types": {
+      "asset": "Aktiv",
+      "business": "Virksomhed",
+      "financialAccount": "Finansiel konto",
+      "realEstate": "Ejendom",
+      "vehicle": "Køretøj"
     }
   },
   "assetType": {
-    "selectType": "Vælg {{mainCategory}} type",
-    "primaryResidence": "Primær bolig",
-    "vacationHome": "Sommerhus",
-    "rentalProperty": "Lejeejendom",
-    "land": "Jord",
-    "commercialProperty": "Erhvervsejendom",
-    "bankAccount": "Bankkonto",
-    "investmentPortfolio": "Investeringsportefølje",
-    "cryptocurrencyWallet": "Kryptovaluta-pung",
-    "loanMortgage": "Lån / realkredit",
-    "insurancePolicy": "Forsikringspolice",
-    "pensionRetirement": "Pension / pensionering",
-    "car": "Bil",
-    "motorcycle": "Motorcykel",
-    "boat": "Båd",
-    "rvCamper": "Campingvogn / camper",
     "aircraft": "Luftfartøj",
-    "onlineAccount": "Online konto",
-    "softwareLicense": "Softwarelicens",
-    "domainName": "Domænenavn",
-    "digitalSubscription": "Digitalt abonnement",
-    "cryptocurrency": "Kryptovaluta",
-    "nft": "NFT",
-    "jewelry": "Smykker",
     "artCollectibles": "Kunst / samleobjekter",
+    "bankAccount": "Bankkonto",
+    "boat": "Båd",
+    "car": "Bil",
+    "commercialProperty": "Erhvervsejendom",
+    "cryptocurrency": "Kryptovaluta",
+    "cryptocurrencyWallet": "Kryptovaluta-pung",
+    "customAsset": "Tilpasset aktiv",
+    "digitalSubscription": "Digitalt abonnement",
+    "domainName": "Domænenavn",
     "electronics": "Elektronik",
     "furniture": "Møbler",
-    "toolsEquipment": "Værktøj / udstyr",
+    "insurancePolicy": "Forsikringspolice",
+    "investmentPortfolio": "Investeringsportefølje",
+    "jewelry": "Smykker",
+    "land": "Jord",
+    "loanMortgage": "Lån / realkredit",
+    "motorcycle": "Motorcykel",
+    "nft": "NFT",
+    "onlineAccount": "Online konto",
     "otherValuables": "Andre værdigenstande",
-    "customAsset": "Tilpasset aktiv"
+    "pensionRetirement": "Pension / pensionering",
+    "primaryResidence": "Primær bolig",
+    "rentalProperty": "Lejeejendom",
+    "rvCamper": "Campingvogn / camper",
+    "softwareLicense": "Softwarelicens",
+    "toolsEquipment": "Værktøj / udstyr",
+    "vacationHome": "Sommerhus"
   },
-  "dynamicAssetForm": {
-    "propertyAddress": "Ejendommens adresse",
-    "purchaseDate": "Købsdato",
-    "purchasePrice": "Købspris",
-    "currentEstimatedValue": "Nuværende anslåede værdi",
-    "mortgageInformation": "Realkreditoplysninger",
-    "locationOfPropertyDocuments": "Placering af ejendomsdokumenter",
-    "locationAddress": "Placering / adresse",
-    "size": "Størrelse (acre/kvadratfod)",
-    "zoningType": "Zoneringstype",
-    "currentUse": "Nuværende brug",
-    "bankName": "Banknavn",
-    "accountType": "Kontotype",
-    "selectAccountType": "Vælg kontotype",
-    "checking": "Lønkonto",
-    "savings": "Opsparing",
-    "moneyMarket": "Pengemarked",
-    "certificateOfDeposit": "Indlånsbevis",
-    "accountHolderName": "Kontoholders navn(e)",
-    "accountNumberLast4": "Kontonummer (sidste 4 cifre)",
-    "routingNumber": "Routingnummer",
-    "brokerageFirm": "Mæglerfirma",
-    "accountNumber": "Kontonummer",
-    "individual": "Individuel",
-    "joint": "Fælles",
-    "ira": "IRA",
-    "rothIra": "Roth IRA",
-    "401k": "401(k)",
-    "approximateValue": "Anslået værdi",
-    "financialAdvisor": "Finansiel rådgiver (hvis nogen)",
-    "walletNameLabel": "Pungnavn/etiket",
-    "walletType": "Pungtype",
-    "selectWalletType": "Vælg pungtype",
-    "hardwareWallet": "Hardware-pung",
-    "softwareWallet": "Software-pung",
-    "exchangeWallet": "Børs-pung",
-    "paperWallet": "Papir-pung",
-    "cryptocurrenciesHeld": "Kryptovalutaer holdt",
-    "locationOfSeedPhrase": "Placering af seed-frase/private nøgler",
-    "exchangeInformation": "Børsoplysninger (hvis relevant)",
-    "makeAndModel": "Mærke og model",
-    "year": "År",
-    "vinNumber": "VIN-nummer",
-    "licensePlate": "Nummerplade",
-    "loanInformation": "Låneoplysninger (hvis nogen)",
-    "locationOfTitle": "Placering af titel",
-    "platformWebsiteName": "Platform/hjemmesidenavn",
-    "accountEmail": "Konto e-mail/brugernavn",
-    "accountPurpose": "Kontoformål/beskrivelse",
-    "recoveryInformation": "Gendannelsesoplysninger",
-    "faMethod": "2FA-metode (hvis aktiveret)",
-    "itemDescription": "Genstandbeskrivelse",
-    "appraisedValue": "Vurderet værdi",
-    "lastAppraisalDate": "Sidste vurderingsdato",
-    "storageLocation": "Lagringsplacering",
-    "insuranceInformation": "Forsikringsoplysninger",
-    "sentimentalValue": "Følelsesmæssig værdi/historie",
-    "assetName": "Aktivnavn",
-    "estimatedValue": "Anslået værdi",
-    "description": "Beskrivelse",
-    "locationAccessInformation": "Placering/adgangsoplysninger",
-    "addSubType": "Tilføj {subType}",
-    "cancel": "Annuller",
-    "saveAsset": "Gem aktiv",
-    "placeholders": {
-      "123_main_st_city_state_zip_1": "123 Hovedgade, By, Stat, Postnummer",
-      "lender_name_account_number_rem_2": "Långiver navn, kontonummer, resterende saldo",
-      "e_g_safe_deposit_box_filing_ca_3": "f.eks. Bankboks, arkivskab",
-      "property_location_or_parcel_nu_4": "Ejendomsplacering eller matrikelnummer",
-      "e_g_10_acres_5": "f.eks. 10 acre, 5.000 kvadratfod",
-      "e_g_commercial_agricultural_6": "f.eks. Erhverv, landbrug, bolig",
-      "describe_current_use_of_the_pr_7": "Beskriv nuværende brug af ejendommen",
-      "e_g_chase_bank_8": "f.eks. Chase Bank, Wells Fargo",
-      "john_doe_9": "John Doe",
-      "1234_10": "1234",
-      "e_g_fidelity_vanguard_11": "f.eks. Fidelity, Vanguard, Charles Schwab",
-      "account_number_12": "Kontonummer",
-      "name_and_contact_information_13": "Navn og kontaktoplysninger",
-      "e_g_main_bitcoin_wallet_14": "f.eks. Hovedbitcoin-pung",
-      "e_g_bitcoin_ethereum_15": "f.eks. Bitcoin, Ethereum, Litecoin",
-      "do_not_enter_the_actual_seed_p_16": "Indtast ikke den faktiske seed-frase her",
-      "exchange_name_and_account_emai_17": "Børsnavn og konto e-mail",
-      "e_g_toyota_camry_18": "f.eks. Toyota Camry, Honda Civic",
-      "vehicle_identification_number_19": "Køretøjets identifikationsnummer",
-      "lender_account_number_payoff_a_20": "Långiver, kontonummer, indfrielsesbeløb",
-      "e_g_safe_deposit_box_21": "f.eks. Bankboks, hjemmesafe",
-      "e_g_gmail_facebook_22": "f.eks. Gmail, Facebook, LinkedIn",
-      "user_example_com_23": "bruger@example.com",
-      "what_this_account_is_used_for_24": "Hvad denne konto bruges til",
-      "recovery_email_phone_or_securi_25": "Gendannelses e-mail, telefon eller sikkerhedsspørgsmål",
-      "e_g_sms_to_phone_ending_in_123_26": "f.eks. SMS til telefon der slutter på 123",
-      "e_g_diamond_engagement_ring_27": "f.eks. Diamant forlovelsesring, guldhalskæde",
-      "e_g_home_safe_bank_deposit_box_28": "f.eks. Hjemmesafe, bankboks",
-      "policy_number_and_company_29": "Policenummer og selskab",
-      "special_meaning_or_history_of__30": "Særlig betydning eller historie for denne genstand",
-      "name_or_description_of_asset_31": "Navn eller beskrivelse af aktiv",
-      "detailed_description_of_the_as_32": "Detaljeret beskrivelse af aktivet",
-      "where_to_find_this_asset_or_ho_33": "Hvor man kan finde dette aktiv eller hvordan man får adgang til det"
-    }
-  },
-  "myPossessions": {
-    "my_possessions_1": "My Possessions",
-    "an_inventory_of_the_important__2": "An inventory of the important things that support your family's future.",
-    "family_impact_3": "Family Impact:",
-    "edit_details_4": "Edit Details",
-    "link_papers_5": "Link Papers (",
-    "assign_access_6": "Assign Access",
-    "add_your_first_7": "Add Your First ",
-    "areas": {
-      "home": {
-        "title": "Your Home & Property",
-        "description": "The places that provide shelter and create memories.",
-        "emptyState": "Document your property to ensure your family's shelter is secure.",
-        "addButton": "Property"
+  "assets": {
+    "categories": {
+      "uncategorized": "Ukategoriseret"
+    },
+    "overview": {
+      "addAsset": "Tilføj aktiv",
+      "addNew": "Tilføj ny",
+      "beneficiaryAllocation": {
+        "allAssigned": "Alle aktiver er tildelt begunstigede",
+        "subtitle": "Spor fordeling af aktiver til begunstigede",
+        "title": "Fordeling til begunstigede"
       },
-      "savings": {
-        "title": "Your Savings & Investments",
-        "description": "The financial foundation you've built for your family's future.",
-        "emptyState": "Record your financial accounts so your family can access funds when needed.",
-        "addButton": "Account"
+      "distribution": {
+        "subtitle": "Porteføljeopdeling efter kategori",
+        "title": "Fordeling af aktiver"
       },
-      "business": {
-        "title": "Your Business",
-        "description": "The work that supports your family and creates your professional legacy.",
-        "emptyState": "Document your business details to ensure smooth succession and continued income.",
-        "addButton": "Business"
+      "errors": {
+        "loadFailed": "Kunne ikke indlæse data om aktiver"
       },
-      "valuables": {
-        "title": "Your Valuables & Collections",
-        "description": "Items of financial or sentimental value that need special consideration.",
-        "emptyState": "List valuable items that need special handling or have sentimental value.",
-        "addButton": "Valuable"
-      }
-    },
-    "mockData": {
-      "lakeCabin": "Lake Cabin",
-      "emergencyFund": "Emergency Fund",
-      "yourBusiness": "Your Business",
-      "johnsonContracting": "Johnson Contracting LLC",
-      "classicCarCollection": "Classic Car Collection"
-    }
-  },
-  "addLiabilityModal": {
-    "title": "Tilføj forpligtelse",
-    "fields": {
-      "type": "Type",
-      "provider": "Udbyder",
-      "referenceNumber": "Referencenummer",
-      "paymentFrequency": "Betalingsfrekvens",
-      "notes": "Noter"
-    },
-    "placeholders": {
-      "selectType": "Vælg type",
-      "provider": "Udbydernavn",
-      "referenceNumber": "Referencenummer",
-      "paymentFrequency": "Vælg frekvens",
-      "notes": "Yderligere noter"
-    },
-    "buttons": {
-      "cancel": "Annuller",
-      "add": "Tilføj forpligtelse"
-    },
-    "errors": {
-      "requiredFields": "Alle felter er påkrævet"
-    },
-    "messages": {
-      "addedSuccessfully": "Forpligtelse tilføjet"
-    },
-    "types": {
-      "insurancePolicy": "Forsikringspolice",
-      "utilityBill": "Forsyningsregning",
-      "propertyTax": "Ejendomsskat",
-      "subscriptionFee": "Abonnementsgebyr",
-      "maintenanceContract": "Vedligeholdelseskontrakt",
-      "loan": "Lån",
-      "leaseAgreement": "Lejeaftale",
-      "warranty": "Garanti",
-      "other": "Andet"
-    },
-    "frequencies": {
-      "monthly": "Månedlig",
-      "quarterly": "Kvartalsvis",
-      "semiAnnually": "Halvårlig",
-      "annually": "Årlig",
-      "oneTime": "Engangs",
-      "asNeeded": "Efter behov"
+      "estimatedValue": "Anslået værdi på tværs af alle aktiver",
+      "subtitle": "Administrer og spor dine aktiver, ejendomme og investeringer",
+      "title": "Aktiv-portfolio",
+      "totalPortfolioValue": "Samlet porteføljeværdi",
+      "viewInheritanceSummary": "Se arveoversigt"
     }
   },
   "calculator": {
     "badge": "Forberedelsesberegner",
-    "title": "Beregn din families forberedelsesscore",
-    "subtitle": "Se den rigtige tid og penge, din familie sparer, når alt er organiseret",
+    "calculateButton": "Beregn mine besparelser",
     "inputs": {
-      "title": "Din families situation",
-      "description": "Fortæl os lidt om din familie for at tilpasse dine resultater",
+      "accounts": "Hvor mange bankkonti har du?",
+      "accountsHelp": "Inkluder lønkonto, opsparing, investeringer",
+      "business": "Har du en virksomhed?",
       "dependents": "Hvor mange mennesker er afhængige af dig?",
       "dependentsHelp": "Inkluder ægtefælle, børn, ældre forældre",
+      "description": "Fortæl os lidt om din familie for at tilpasse dine resultater",
       "income": "Hvad er din families månedlige indkomst?",
       "incomeHelp": "Dette hjælper med at beregne potentielle tabte lønninger",
       "property": "Ejer du ejendom?",
-      "business": "Har du en virksomhed?",
-      "accounts": "Hvor mange bankkonti har du?",
-      "accountsHelp": "Inkluder lønkonto, opsparing, investeringer"
+      "title": "Din families situation"
     },
-    "calculateButton": "Beregn mine besparelser",
     "results": {
-      "title": "Din families besparelser",
+      "ctaContext": "De fleste familier fuldfører opsætning under deres frokostpause",
       "description": "Her er hvad det betyder at være forberedt for dine kære",
-      "timeSavings": {
-        "title": "Tid din familie sparer",
-        "without": "Uden organisation",
-        "withoutHours": "40-120 timer med søgning",
-        "with": "Med Arveboks",
-        "withMinutes": "Under 5 minutter"
+      "emotional": {
+        "confidence": "Families tillidsstigning",
+        "peace": "Kontrol og forberedelsesrating",
+        "stress": "Stressniveau reduktion",
+        "title": "Påvirkning på følelsesmæssig velvære"
       },
+      "families": "15.000+ familier beskyttet",
       "moneySavings": {
-        "title": "Penge din familie sparer",
         "legalFees": "Advokatomkostninger til rekonstruktion",
         "lostWages": "Tabte lønninger fra fridage",
         "penalties": "Missede deadlines og bøder",
+        "title": "Penge din familie sparer",
         "total": "Samlede potentielle besparelser"
       },
-      "emotional": {
-        "title": "Påvirkning på følelsesmæssig velvære",
-        "stress": "Stressniveau reduktion",
-        "confidence": "Families tillidsstigning",
-        "peace": "Kontrol og forberedelsesrating"
-      },
+      "shareButton": "Del resultater",
       "socialProof": "Slut dig til familier, der allerede sover bedre om natten",
-      "families": "15.000+ familier beskyttet",
-      "ctaContext": "De fleste familier fuldfører opsætning under deres frokostpause",
-      "shareButton": "Del resultater"
+      "timeSavings": {
+        "title": "Tid din familie sparer",
+        "with": "Med Arveboks",
+        "withMinutes": "Under 5 minutter",
+        "without": "Uden organisation",
+        "withoutHours": "40-120 timer med søgning"
+      },
+      "title": "Din families besparelser"
     },
-    "testimonial": {
-      "quote": "Jeg vidste aldrig, hvor meget stress jeg bar på, før jeg fik alt organiseret. Nu ved jeg, at min familie vil være okay, uanset hvad der sker.",
-      "author": "Sarah M., mor til tre"
-    },
+    "shareCopied": "Resultater kopieret til udklipsholder!",
     "shareTitle": "Families forberedelsesberegner resultater",
-    "shareCopied": "Resultater kopieret til udklipsholder!"
+    "subtitle": "Se den rigtige tid og penge, din familie sparer, når alt er organiseret",
+    "testimonial": {
+      "author": "Sarah M., mor til tre",
+      "quote": "Jeg vidste aldrig, hvor meget stress jeg bar på, før jeg fik alt organiseret. Nu ved jeg, at min familie vil være okay, uanset hvad der sker."
+    },
+    "title": "Beregn din families forberedelsesscore"
+  },
+  "dynamicAssetForm": {
+    "401k": "401(k)",
+    "accountEmail": "Konto e-mail/brugernavn",
+    "accountHolderName": "Kontoholders navn(e)",
+    "accountNumber": "Kontonummer",
+    "accountNumberLast4": "Kontonummer (sidste 4 cifre)",
+    "accountPurpose": "Kontoformål/beskrivelse",
+    "accountType": "Kontotype",
+    "appraisedValue": "Vurderet værdi",
+    "approximateValue": "Anslået værdi",
+    "assetName": "Aktivnavn",
+    "bankName": "Banknavn",
+    "brokerageFirm": "Mæglerfirma",
+    "cancel": "Annuller",
+    "certificateOfDeposit": "Indlånsbevis",
+    "checking": "Lønkonto",
+    "cryptocurrenciesHeld": "Kryptovalutaer holdt",
+    "currentEstimatedValue": "Nuværende anslåede værdi",
+    "currentUse": "Nuværende brug",
+    "description": "Beskrivelse",
+    "estimatedValue": "Anslået værdi",
+    "exchangeInformation": "Børsoplysninger (hvis relevant)",
+    "exchangeWallet": "Børs-pung",
+    "faMethod": "2FA-metode (hvis aktiveret)",
+    "financialAdvisor": "Finansiel rådgiver (hvis nogen)",
+    "hardwareWallet": "Hardware-pung",
+    "individual": "Individuel",
+    "insuranceInformation": "Forsikringsoplysninger",
+    "ira": "IRA",
+    "itemDescription": "Genstandbeskrivelse",
+    "joint": "Fælles",
+    "lastAppraisalDate": "Sidste vurderingsdato",
+    "licensePlate": "Nummerplade",
+    "loanInformation": "Låneoplysninger (hvis nogen)",
+    "locationAccessInformation": "Placering/adgangsoplysninger",
+    "locationAddress": "Placering / adresse",
+    "locationOfPropertyDocuments": "Placering af ejendomsdokumenter",
+    "locationOfSeedPhrase": "Placering af seed-frase/private nøgler",
+    "locationOfTitle": "Placering af titel",
+    "makeAndModel": "Mærke og model",
+    "moneyMarket": "Pengemarked",
+    "mortgageInformation": "Realkreditoplysninger",
+    "paperWallet": "Papir-pung",
+    "placeholders": {
+      "1234_10": "1234",
+      "123_main_st_city_state_zip_1": "123 Hovedgade, By, Stat, Postnummer",
+      "account_number_12": "Kontonummer",
+      "describe_current_use_of_the_pr_7": "Beskriv nuværende brug af ejendommen",
+      "detailed_description_of_the_as_32": "Detaljeret beskrivelse af aktivet",
+      "do_not_enter_the_actual_seed_p_16": "Indtast ikke den faktiske seed-frase her",
+      "e_g_10_acres_5": "f.eks. 10 acre, 5.000 kvadratfod",
+      "e_g_bitcoin_ethereum_15": "f.eks. Bitcoin, Ethereum, Litecoin",
+      "e_g_chase_bank_8": "f.eks. Chase Bank, Wells Fargo",
+      "e_g_commercial_agricultural_6": "f.eks. Erhverv, landbrug, bolig",
+      "e_g_diamond_engagement_ring_27": "f.eks. Diamant forlovelsesring, guldhalskæde",
+      "e_g_fidelity_vanguard_11": "f.eks. Fidelity, Vanguard, Charles Schwab",
+      "e_g_gmail_facebook_22": "f.eks. Gmail, Facebook, LinkedIn",
+      "e_g_home_safe_bank_deposit_box_28": "f.eks. Hjemmesafe, bankboks",
+      "e_g_main_bitcoin_wallet_14": "f.eks. Hovedbitcoin-pung",
+      "e_g_safe_deposit_box_21": "f.eks. Bankboks, hjemmesafe",
+      "e_g_safe_deposit_box_filing_ca_3": "f.eks. Bankboks, arkivskab",
+      "e_g_sms_to_phone_ending_in_123_26": "f.eks. SMS til telefon der slutter på 123",
+      "e_g_toyota_camry_18": "f.eks. Toyota Camry, Honda Civic",
+      "exchange_name_and_account_emai_17": "Børsnavn og konto e-mail",
+      "john_doe_9": "John Doe",
+      "lender_account_number_payoff_a_20": "Långiver, kontonummer, indfrielsesbeløb",
+      "lender_name_account_number_rem_2": "Långiver navn, kontonummer, resterende saldo",
+      "name_and_contact_information_13": "Navn og kontaktoplysninger",
+      "name_or_description_of_asset_31": "Navn eller beskrivelse af aktiv",
+      "policy_number_and_company_29": "Policenummer og selskab",
+      "property_location_or_parcel_nu_4": "Ejendomsplacering eller matrikelnummer",
+      "recovery_email_phone_or_securi_25": "Gendannelses e-mail, telefon eller sikkerhedsspørgsmål",
+      "special_meaning_or_history_of__30": "Særlig betydning eller historie for denne genstand",
+      "user_example_com_23": "bruger@example.com",
+      "vehicle_identification_number_19": "Køretøjets identifikationsnummer",
+      "what_this_account_is_used_for_24": "Hvad denne konto bruges til",
+      "where_to_find_this_asset_or_ho_33": "Hvor man kan finde dette aktiv eller hvordan man får adgang til det"
+    },
+    "platformWebsiteName": "Platform/hjemmesidenavn",
+    "propertyAddress": "Ejendommens adresse",
+    "purchaseDate": "Købsdato",
+    "purchasePrice": "Købspris",
+    "recoveryInformation": "Gendannelsesoplysninger",
+    "rothIra": "Roth IRA",
+    "routingNumber": "Routingnummer",
+    "saveAsset": "Gem aktiv",
+    "savings": "Opsparing",
+    "selectAccountType": "Vælg kontotype",
+    "selectWalletType": "Vælg pungtype",
+    "sentimentalValue": "Følelsesmæssig værdi/historie",
+    "size": "Størrelse (acre/kvadratfod)",
+    "softwareWallet": "Software-pung",
+    "storageLocation": "Lagringsplacering",
+    "vinNumber": "VIN-nummer",
+    "walletNameLabel": "Pungnavn/etiket",
+    "walletType": "Pungtype",
+    "year": "År",
+    "zoningType": "Zoneringstype"
+  },
+  "myPossessions": {
+    "add_your_first_7": "Add Your First ",
+    "an_inventory_of_the_important__2": "An inventory of the important things that support your family's future.",
+    "areas": {
+      "business": {
+        "addButton": "Business",
+        "description": "The work that supports your family and creates your professional legacy.",
+        "emptyState": "Document your business details to ensure smooth succession and continued income.",
+        "title": "Your Business"
+      },
+      "home": {
+        "addButton": "Property",
+        "description": "The places that provide shelter and create memories.",
+        "emptyState": "Document your property to ensure your family's shelter is secure.",
+        "title": "Your Home & Property"
+      },
+      "savings": {
+        "addButton": "Account",
+        "description": "The financial foundation you've built for your family's future.",
+        "emptyState": "Record your financial accounts so your family can access funds when needed.",
+        "title": "Your Savings & Investments"
+      },
+      "valuables": {
+        "addButton": "Valuable",
+        "description": "Items of financial or sentimental value that need special consideration.",
+        "emptyState": "List valuable items that need special handling or have sentimental value.",
+        "title": "Your Valuables & Collections"
+      }
+    },
+    "assign_access_6": "Assign Access",
+    "edit_details_4": "Edit Details",
+    "family_impact_3": "Family Impact:",
+    "link_papers_5": "Link Papers (",
+    "mockData": {
+      "classicCarCollection": "Classic Car Collection",
+      "emergencyFund": "Emergency Fund",
+      "johnsonContracting": "Johnson Contracting LLC",
+      "lakeCabin": "Lake Cabin"
+    },
+    "my_possessions_1": "My Possessions"
   }
 }

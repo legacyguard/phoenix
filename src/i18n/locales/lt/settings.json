@@ -1,182 +1,118 @@
 {
-  "_comment": "Shared translations used across the application",
-  "settings": {
-    "title": "Nustatymai",
-    "subtitle": "Valdykite savo paskyros nuostatas ir saugumo nustatymus",
-    "loading": "Įkeliami jūsų paskyros nustatymai...",
-    "profile": {
-      "title": "Profilio Informacija",
-      "description": "Atnaujinkite savo asmeninę informaciją ir nuostatas",
-      "emailAddress": "El. Pašto Adresas",
-      "emailCannotBeChanged": "Jūsų el. pašto adreso negalima keisti",
-      "firstName": "Vardas",
-      "firstNamePlaceholder": "Įveskite savo vardą",
-      "lastName": "Pavardė",
-      "lastNamePlaceholder": "Įveskite savo pavardę",
-      "saving": "Išsaugoma...",
-      "saveChanges": "Išsaugoti Pakeitimus"
-    },
-    "security": {
-      "title": "Saugumas",
-      "description": "Valdykite savo paskyros saugumą ir prieigą",
-      "changePassword": "Keisti Slaptažodį",
-      "currentPassword": "Dabartinis Slaptažodis",
-      "currentPasswordPlaceholder": "Įveskite dabartinį slaptažodį",
-      "newPassword": "Naujas Slaptažodis",
-      "newPasswordPlaceholder": "Įveskite naują slaptažodį",
-      "confirmNewPassword": "Patvirtinti Naują Slaptažodį",
-      "confirmNewPasswordPlaceholder": "Patvirtinkite naują slaptažodį",
-      "updating": "Atnaujinama...",
-      "updatePassword": "Atnaujinti Slaptažodį",
-      "twoFactorAuth": "Dviejų Veiksnių Autentifikavimas",
-      "enable2FA": "Įjungti 2FA",
-      "2FADescription": "Pridėkite papildomą saugumo lygį savo paskyrai. (Netrukus)"
-    },
-    "accountManagement": {
-      "title": "Paskyros Valdymas",
-      "description": "Nuolatiniai paskyros veiksmai - prašome elgtis atsargiai",
-      "deleteAccountTitle": "Ištrinti Paskyrą",
-      "deleteAccountWarning": "Šis veiksmas yra negrįžtamas ir visam laikui ištrins visus jūsų duomenis, įskaitant įkeltus dokumentus ir paruoštas instrukcijas. Jūsų skaitmeninio palikimo informacija bus visiškai pašalinta iš mūsų sistemų.",
-      "deleteMyAccount": "Ištrinti Mano Paskyrą",
-      "confirmTitle": "Ar esate visiškai tikri?",
-      "confirmDescription": "Šio veiksmo negalima atšaukti. Tai visam laikui ištrins jūsų paskyrą ir pašalins visus jūsų duomenis iš mūsų serverių.",
-      "confirmEmailPrompt": "Prašome įvesti savo el. pašto adresą {{email}}, kad patvirtintumėte:",
-      "emailPlaceholder": "Įveskite savo el. pašto adresą",
-      "deleting": "Trinama...",
-      "deleteAccount": "Ištrinti Paskyrą"
-    },
-    "errors": {
-      "loadProfile": "Nepavyko įkelti profilio informacijos",
-      "updateProfile": "Nepavyko atnaujinti profilio",
-      "passwordFieldsRequired": "Prašome užpildyti visus slaptažodžio laukus",
-      "passwordsDoNotMatch": "Nauji slaptažodžiai nesutampa",
-      "passwordTooShort": "Naujas slaptažodis turi būti bent 6 simbolių ilgio",
-      "updatePassword": "Nepavyko atnaujinti slaptažodžio",
-      "emailDoesNotMatch": "El. pašto adresas nesutampa",
-      "deleteAccountSupport": "Paskyros ištrynimas turi būti prašomas per palaikymo tarnybą. Prašome susisiekti su mumis dėl pagalbos.",
-      "deleteAccount": "Nepavyko ištrinti paskyros"
-    },
-    "success": {
-      "profileUpdated": "Profilis sėkmingai atnaujintas",
-      "passwordUpdated": "Slaptažodis sėkmingai atnaujintas"
-    },
-    "privacySettings": {
-      "privacy_settings_1": "Privacy Settings",
-      "control_how_your_documents_are_2": "Control how your documents are processed and stored",
-      "default_processing_mode_3": "Default Processing Mode",
-      "choose_how_documents_are_proce_4": "Choose how documents are processed by default",
-      "hybrid_mode_recommended_5": "Hybrid Mode (Recommended)",
-      "combines_local_and_cloud_ai_fo_6": "Combines local and cloud AI for optimal performance and privacy",
-      "local_only_privacy_mode_7": "Local-Only Privacy Mode",
-      "processes_documents_entirely_i_8": "Processes documents entirely in your browser for maximum privacy",
-      "note_9": "Note: ",
-      "you_can_always_override_this_s_10": "You can always override this setting when uploading individual documents"
-    }
-  },
-  "dataTransparency": {
-    "loadingMessage": "Loading your data transparency information...",
-    "loadingError": "Unable to load transparency data. Please try again later.",
-    "title": "Your Data, Your Control",
-    "description": "We believe in total transparency. Here's exactly how we handle your information.",
-    "dataFlow": {
-      "whereDataLives": "Where Your Data Lives",
-      "collection": "Collection",
-      "storage": "Storage",
-      "processing": "Processing",
-      "sharing": "Sharing"
-    },
-    "recentActivity": {
-      "title": "Recent Activity",
-      "premiumTitle": "Unlock Your Permanent Watch Log",
-      "premiumText": "Your 30-day operational log provides basic security. For maximum accountability and peace of mind, upgrade to the Command Package to maintain a complete, unchangeable audit history of every action taken in your vault, forever."
-    },
-    "dataOwnership": {
-      "title": "Data Ownership",
-      "description": "You own your data, always. You can download a complete copy at any time.",
-      "downloadButton": "Download My Data Archive"
-    }
-  },
   "cookies": {
-    "bannerText": "Mes naudojame būtinus slapukus, kad užtikrintume tinkamą mūsų svetainės veikimą. Su jūsų sutikimu, mes taip pat galime naudoti analitinius slapukus, kad pagerintume savo paslaugas.",
-    "declineButton": "Atmesti",
-    "acceptButton": "Priimti Visus",
-    "learnMoreLink": "Sužinoti Daugiau",
     "policy": {
-      "title": "Cookie Policy",
-      "subtitle": "Understanding how we use cookies to improve your experience while respecting your privacy",
-      "lastUpdated": "Last Updated",
-      "required": "Required",
-      "purpose": "Purpose",
-      "examples": "Examples",
-      "overview": {
-        "title": "Important Information",
-        "intro": "This Cookie Policy explains how LegacyGuard uses cookies and similar technologies to recognize you when you visit our website. It explains what these technologies are and why we use them, as well as your rights to control our use of them.",
-        "point1": "We use cookies to ensure the basic functionalities of our website",
-        "point2": "Some cookies are essential and cannot be disabled",
-        "point3": "You can control non-essential cookies through our consent manager",
-        "point4": "We never sell your data or use cookies for invasive tracking"
-      },
-      "categories": {
-        "title": "Cookie Categories We Use"
-      },
-      "necessary": {
-        "title": "Strictly Necessary Cookies",
-        "description": "These cookies are essential for the website to function properly",
-        "purpose": "Enable core functionality such as security, identity verification, and network management. These cookies cannot be disabled.",
-        "examples": {
-          "auth": "Keeps you logged in securely",
-          "session": "Maintains your session state",
-          "csrf": "Protects against cross-site request forgery",
-          "consent": "Remembers your cookie preferences"
-        }
-      },
       "analytics": {
-        "title": "Analytics Cookies",
         "description": "Help us understand how visitors interact with our website",
-        "purpose": "Collect anonymous information about how you use our site, helping us improve user experience and identify issues.",
         "examples": {
           "ga": "Google Analytics tracking",
           "gid": "Distinguishes users",
           "session": "Groups activities within a session"
-        }
+        },
+        "purpose": "Collect anonymous information about how you use our site, helping us improve user experience and identify issues.",
+        "title": "Analytics Cookies"
+      },
+      "categories": {
+        "title": "Cookie Categories We Use"
+      },
+      "contact": {
+        "address": "Address",
+        "addressDetails": "LegacyGuard Ltd, Data Protection Office, 123 Privacy Street, Dublin, Ireland",
+        "description": "If you have any questions about our use of cookies or this Cookie Policy, please contact us:",
+        "email": "Email",
+        "title": "Contact Us About Cookies"
+      },
+      "examples": "Examples",
+      "lastUpdated": "Last Updated",
+      "manage": {
+        "title": "Manage Your Cookie Preferences"
       },
       "marketing": {
-        "title": "Marketing Cookies",
         "description": "Used to deliver relevant advertisements",
-        "purpose": "Track visitors across websites to display ads that are relevant and engaging for individual users.",
         "examples": {
           "facebook": "Facebook advertising",
           "google": "Google Ads conversion tracking"
-        }
+        },
+        "purpose": "Track visitors across websites to display ads that are relevant and engaging for individual users.",
+        "title": "Marketing Cookies"
+      },
+      "necessary": {
+        "description": "These cookies are essential for the website to function properly",
+        "examples": {
+          "auth": "Keeps you logged in securely",
+          "consent": "Remembers your cookie preferences",
+          "csrf": "Protects against cross-site request forgery",
+          "session": "Maintains your session state"
+        },
+        "purpose": "Enable core functionality such as security, identity verification, and network management. These cookies cannot be disabled.",
+        "title": "Strictly Necessary Cookies"
+      },
+      "overview": {
+        "intro": "This Cookie Policy explains how LegacyGuard uses cookies and similar technologies to recognize you when you visit our website. It explains what these technologies are and why we use them, as well as your rights to control our use of them.",
+        "point1": "We use cookies to ensure the basic functionalities of our website",
+        "point2": "Some cookies are essential and cannot be disabled",
+        "point3": "You can control non-essential cookies through our consent manager",
+        "point4": "We never sell your data or use cookies for invasive tracking",
+        "title": "Important Information"
       },
       "preferences": {
-        "title": "Preference Cookies",
         "description": "Remember your preferences and settings",
-        "purpose": "Allow the website to remember choices you make (such as language or region) and provide enhanced, personalized features.",
         "examples": {
-          "theme": "Your chosen theme (light/dark)",
           "language": "Your preferred language",
+          "theme": "Your chosen theme (light/dark)",
           "ui": "UI customization preferences"
-        }
+        },
+        "purpose": "Allow the website to remember choices you make (such as language or region) and provide enhanced, personalized features.",
+        "title": "Preference Cookies"
       },
+      "purpose": "Purpose",
+      "required": "Required",
+      "subtitle": "Understanding how we use cookies to improve your experience while respecting your privacy",
+      "title": "Cookie Policy",
       "yourRights": {
-        "title": "Your Rights",
         "description": "You have full control over your cookie preferences",
         "right1": "Access information about the cookies we use",
         "right2": "Withdraw consent for non-essential cookies at any time",
         "right3": "Delete cookies from your browser",
-        "right4": "Opt-out of analytics and marketing cookies"
-      },
-      "manage": {
-        "title": "Manage Your Cookie Preferences"
-      },
-      "contact": {
-        "title": "Contact Us About Cookies",
-        "description": "If you have any questions about our use of cookies or this Cookie Policy, please contact us:",
-        "email": "Email",
-        "address": "Address",
-        "addressDetails": "LegacyGuard Ltd, Data Protection Office, 123 Privacy Street, Dublin, Ireland"
+        "right4": "Opt-out of analytics and marketing cookies",
+        "title": "Your Rights"
       }
+    }
+  },
+  "dataTransparency": {
+    "dataFlow": {
+      "collection": "Collection",
+      "processing": "Processing",
+      "sharing": "Sharing",
+      "storage": "Storage",
+      "whereDataLives": "Where Your Data Lives"
+    },
+    "dataOwnership": {
+      "description": "You own your data, always. You can download a complete copy at any time.",
+      "downloadButton": "Download My Data Archive",
+      "title": "Data Ownership"
+    },
+    "description": "We believe in total transparency. Here's exactly how we handle your information.",
+    "loadingError": "Unable to load transparency data. Please try again later.",
+    "loadingMessage": "Loading your data transparency information...",
+    "recentActivity": {
+      "premiumText": "Your 30-day operational log provides basic security. For maximum accountability and peace of mind, upgrade to the Command Package to maintain a complete, unchangeable audit history of every action taken in your vault, forever.",
+      "premiumTitle": "Unlock Your Permanent Watch Log",
+      "title": "Recent Activity"
+    },
+    "title": "Your Data, Your Control"
+  },
+  "settings": {
+    "privacySettings": {
+      "choose_how_documents_are_proce_4": "Choose how documents are processed by default",
+      "combines_local_and_cloud_ai_fo_6": "Combines local and cloud AI for optimal performance and privacy",
+      "control_how_your_documents_are_2": "Control how your documents are processed and stored",
+      "default_processing_mode_3": "Default Processing Mode",
+      "hybrid_mode_recommended_5": "Hybrid Mode (Recommended)",
+      "local_only_privacy_mode_7": "Local-Only Privacy Mode",
+      "note_9": "Note: ",
+      "privacy_settings_1": "Privacy Settings",
+      "processes_documents_entirely_i_8": "Processes documents entirely in your browser for maximum privacy",
+      "you_can_always_override_this_s_10": "You can always override this setting when uploading individual documents"
     }
   }
 }

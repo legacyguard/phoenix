@@ -1,82 +1,81 @@
 {
-  "_comment": "Emailové šablóny a upozornenia",
-  "inviteGuardian": {
-    "subject": "{{inviterName}} vás pozval stať sa opatrovníkom",
-    "greeting": "Dobrý deň {{recipientName}},",
-    "body": "{{inviterName}} vás pozýva stať sa opatrovníkom ich digitálneho dedičstva na platforme LegacyGuard.",
-    "action": "Prijať úlohu opatrovníka",
-    "note": "Ak nechcete túto úlohu prijať, môžete pozvanie ignorovať alebo odmietnuť.",
-    "footer": "S pozdravom,\nTím LegacyGuard"
-  },
-  "guardianAccepted": {
-    "subject": "{{guardianName}} prijal vašu pozvánku",
-    "greeting": "Dobrý deň {{inviterName}},",
-    "body": "{{guardianName}} prijal(a) vašu pozvánku stať sa opatrovníkom pre vaše digitálne dedičstvo.",
-    "footer": "Tím LegacyGuard"
-  },
-  "guardianDeclined": {
-    "subject": "{{guardianName}} odmietol vašu pozvánku",
-    "greeting": "Dobrý deň {{inviterName}},",
-    "body": "{{guardianName}} odmietol(a) vašu pozvánku stať sa opatrovníkom pre vaše digitálne dedičstvo.",
-    "footer": "Tím LegacyGuard"
-  },
-  "emergencyAccessRequest": {
-    "subject": "Núdzová žiadosť o prístup k údajom",
-    "greeting": "Dobrý deň {{guardianName}},",
-    "body": "{{requestorName}} požiadal(a) o núdzový prístup k informáciám spojeným s účtom {{accountOwner}}.",
-    "details": "Dôvod žiadosti: {{reason}}",
-    "action": "Zobraziť žiadosť o núdzový prístup",
-    "footer": "Ak túto žiadosť nepoznáte alebo máte pochybnosti, prosím, kontaktujte tím podpory LegacyGuard.\nTím LegacyGuard"
-  },
-  "emergencyAccessApproved": {
-    "subject": "Núdzový prístup schválený",
-    "greeting": "Dobrý deň {{requestorName}},",
-    "body": "Vaša žiadosť o núdzový prístup k informáciám pre {{accountOwner}} bola schválená.",
-    "footer": "Tím LegacyGuard"
-  },
-  "emergencyAccessDenied": {
-    "subject": "Núdzový prístup zamietnutý",
-    "greeting": "Dobrý deň {{requestorName}},",
-    "body": "Vaša žiadosť o núdzový prístup k informáciám pre {{accountOwner}} bola zamietnutá.",
-    "footer": "Tím LegacyGuard"
-  },
-  "reminder": {
-    "subject": "Pripomienka: Skontrolujte svoj plán ochrany dedičstva",
-    "greeting": "Dobrý deň {{userName}},",
-    "body": "Pripomíname vám, aby ste skontrolovali svoj plán dedičstva a aktualizovali dôležité informácie pre svoju rodinu.",
-    "action": "Prejsť na nástenku",
-    "footer": "Tím LegacyGuard"
-  },
-  "documentExpiration": {
-    "subject": "Upozornenie: Blíži sa koniec platnosti dokumentu",
-    "greeting": "Dobrý deň {{userName}},",
-    "body": "Platnosť dokumentu {{documentName}} skončí dňa {{expirationDate}}. Prosím, zabezpečte jeho obnovenie alebo aktualizáciu.",
-    "action": "Spravovať dokumenty",
-    "footer": "Tím LegacyGuard"
-  },
   "accountDeletion": {
-    "subject": "Váš účet bol odstránený",
-    "greeting": "Dobrý deň {{userName}},",
     "body": "Váš účet na platforme LegacyGuard bol úspešne odstránený. Ak ste túto akciu nevyžadovali, ihneď nás kontaktujte.",
-    "footer": "Tím LegacyGuard"
+    "footer": "Tím LegacyGuard",
+    "greeting": "Dobrý deň {{userName}},",
+    "subject": "Váš účet bol odstránený"
   },
   "accountRecovery": {
-    "subject": "Obnovenie účtu LegacyGuard",
-    "greeting": "Dobrý deň {{userName}},",
-    "body": "Požiadali ste o obnovenie účtu. Na pokračovanie kliknite na nasledujúci odkaz:",
     "action": "Obnoviť účet",
-    "footer": "Ak ste o obnovenie nepožiadali, kontaktujte našu podporu.\nTím LegacyGuard"
-  },
-  "subscriptionRenewal": {
-    "subject": "Obnovenie predplatného",
+    "body": "Požiadali ste o obnovenie účtu. Na pokračovanie kliknite na nasledujúci odkaz:",
+    "footer": "Ak ste o obnovenie nepožiadali, kontaktujte našu podporu.\nTím LegacyGuard",
     "greeting": "Dobrý deň {{userName}},",
-    "body": "Vaše predplatné na LegacyGuard bolo obnovené. Ďakujeme za dôveru.",
-    "footer": "Tím LegacyGuard"
+    "subject": "Obnovenie účtu LegacyGuard"
+  },
+  "documentExpiration": {
+    "action": "Spravovať dokumenty",
+    "body": "Platnosť dokumentu {{documentName}} skončí dňa {{expirationDate}}. Prosím, zabezpečte jeho obnovenie alebo aktualizáciu.",
+    "footer": "Tím LegacyGuard",
+    "greeting": "Dobrý deň {{userName}},",
+    "subject": "Upozornenie: Blíži sa koniec platnosti dokumentu"
+  },
+  "emergencyAccessApproved": {
+    "body": "Vaša žiadosť o núdzový prístup k informáciám pre {{accountOwner}} bola schválená.",
+    "footer": "Tím LegacyGuard",
+    "greeting": "Dobrý deň {{requestorName}},",
+    "subject": "Núdzový prístup schválený"
+  },
+  "emergencyAccessDenied": {
+    "body": "Vaša žiadosť o núdzový prístup k informáciám pre {{accountOwner}} bola zamietnutá.",
+    "footer": "Tím LegacyGuard",
+    "greeting": "Dobrý deň {{requestorName}},",
+    "subject": "Núdzový prístup zamietnutý"
+  },
+  "emergencyAccessRequest": {
+    "action": "Zobraziť žiadosť o núdzový prístup",
+    "body": "{{requestorName}} požiadal(a) o núdzový prístup k informáciám spojeným s účtom {{accountOwner}}.",
+    "details": "Dôvod žiadosti: {{reason}}",
+    "footer": "Ak túto žiadosť nepoznáte alebo máte pochybnosti, prosím, kontaktujte tím podpory LegacyGuard.\nTím LegacyGuard",
+    "greeting": "Dobrý deň {{guardianName}},",
+    "subject": "Núdzová žiadosť o prístup k údajom"
+  },
+  "guardianAccepted": {
+    "body": "{{guardianName}} prijal(a) vašu pozvánku stať sa opatrovníkom pre vaše digitálne dedičstvo.",
+    "footer": "Tím LegacyGuard",
+    "greeting": "Dobrý deň {{inviterName}},",
+    "subject": "{{guardianName}} prijal vašu pozvánku"
+  },
+  "guardianDeclined": {
+    "body": "{{guardianName}} odmietol(a) vašu pozvánku stať sa opatrovníkom pre vaše digitálne dedičstvo.",
+    "footer": "Tím LegacyGuard",
+    "greeting": "Dobrý deň {{inviterName}},",
+    "subject": "{{guardianName}} odmietol vašu pozvánku"
+  },
+  "inviteGuardian": {
+    "action": "Prijať úlohu opatrovníka",
+    "body": "{{inviterName}} vás pozýva stať sa opatrovníkom ich digitálneho dedičstva na platforme LegacyGuard.",
+    "footer": "S pozdravom,\nTím LegacyGuard",
+    "greeting": "Dobrý deň {{recipientName}},",
+    "note": "Ak nechcete túto úlohu prijať, môžete pozvanie ignorovať alebo odmietnuť.",
+    "subject": "{{inviterName}} vás pozval stať sa opatrovníkom"
+  },
+  "reminder": {
+    "action": "Prejsť na nástenku",
+    "body": "Pripomíname vám, aby ste skontrolovali svoj plán dedičstva a aktualizovali dôležité informácie pre svoju rodinu.",
+    "footer": "Tím LegacyGuard",
+    "greeting": "Dobrý deň {{userName}},",
+    "subject": "Pripomienka: Skontrolujte svoj plán ochrany dedičstva"
   },
   "subscriptionCancellation": {
-    "subject": "Zrušenie predplatného",
-    "greeting": "Dobrý deň {{userName}},",
     "body": "Vaše predplatné na LegacyGuard bolo zrušené. Ak ste túto akciu nevyžadovali, kontaktujte nás.",
-    "footer": "Tím LegacyGuard"
+    "footer": "Tím LegacyGuard",
+    "greeting": "Dobrý deň {{userName}},",
+    "subject": "Zrušenie predplatného"
+  },
+  "subscriptionRenewal": {
+    "body": "Vaše predplatné na LegacyGuard bolo obnovené. Ďakujeme za dôveru.",
+    "footer": "Tím LegacyGuard",
+    "greeting": "Dobrý deň {{userName}},",
+    "subject": "Obnovenie predplatného"
   }
 }

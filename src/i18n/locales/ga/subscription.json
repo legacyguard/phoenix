@@ -1,204 +1,177 @@
 {
-  "_comment": "Shared translations used across the application",
-  "subscription": {
-    "dashboard": {
-      "title": "Painéal na Síntiús",
-      "subtitle": "Bainistigh do shíntiúis, do chostais agus do mheabhrúcháin"
-    },
-    "monthlyCost": "Costas Iomlán Míosúil",
-    "yearlyCost": "Costas Iomlán Bliantúil",
-    "activeSubscriptions": "Síntiúis Ghníomhacha",
-    "upcomingSoon": "ag teacht go luath",
-    "exportReport": "Easpórtáil Tuarascáil",
-    "perMonth": "in aghaidh na míosa",
-    "perYear": "in aghaidh na bliana",
-    "allSubscriptions": "Gach Síntiús",
-    "allSubscriptionsDesc": "Forbhreathnú ar na síntiúis ghníomhacha go léir, sórtáilte de réir dáta athnuachana",
-    "upcomingRenewals": "Athnuachana atá le Teacht",
-    "upcomingRenewalsTitle": "Foláireamh faoi Athnuachana atá le Teacht",
-    "upcomingRenewalsDesc": "Tá {{count}} athnuachan le teacht agat sna 90 lá amach romhainn",
-    "next90Days": "Na 90 Lá amach Romhainn",
-    "noUpcomingRenewals": "Níl aon athnuachan le teacht sna 90 lá amach romhainn",
-    "renew": "Athnuaigh",
-    "review": "Athbhreithnigh",
-    "preferences": "Sainroghanna Síntiúis",
-    "preferencesDesc": "Bainistigh an chaoi a ndéantar do shíntiúis a rianú agus a bhainistiú",
-    "enableTracking": "Cumasaigh Rianú Síntiúis",
-    "enableTrackingDesc": "Bainistigh agus rianaigh go huathoibríoch doiciméid a bhaineann le síntiúis",
-    "costOptimization": "Cumasaigh Moltaí Optamaithe Costas",
-    "costOptimizationDesc": "Faigh moltaí chun costais síntiúis a bharrfheabhsú agus a laghdú",
-    "reminderPeriods": "Tréimhsí Meabhrúcháin Réamhshocraithe",
-    "daysBefore": "lá roimh",
-    "loadError": "Theip ar shonraí an tsíntiúis a lódáil",
-    "updateError": "Theip ar na sainroghanna síntiúis a nuashonrú",
-    "preferencesUpdated": "D'éirigh le nuashonrú na sainroghanna",
-    "tabs": {
-      "overview": "Forbhreathnú",
-      "upcoming": "Le Teacht",
-      "settings": "Socruithe"
-    },
-    "types": {
-      "monthly": "Míosúil",
-      "yearly": "Bliantúil",
-      "oneTime": "Aonuaire",
-      "none": "Dada"
-    },
-    "daysUntilRenewal": "lá go dtí an athnuachan",
-    "days": "lá",
-    "loadFailed": "Theip ar shonraí an tsíntiúis a lódáil",
-    "autoRenewal": "Athnuachan Uathoibríoch: Tá",
-    "manual": "Athnuachan Uathoibríoch: Níl",
-    "trackingSuggestion": "Smaoinigh ar rianú síntiúis a chumasú le haghaidh bainistíocht agus meabhrúcháin níos fearr",
-    "type": "Cineál Síntiúis",
-    "typePlaceholder": "Roghnaigh an cineál",
-    "renewalCost": "Costas Athnuachana",
-    "renewalCostPlaceholder": "Iontráil costas athnuachana",
-    "cancellationNotice": "Tréimhse Fógra Cealúcháin",
-    "noNoticeRequired": "Níl Fógra ag teastáil",
-    "providerContact": "Eolas Teagmhála an tSoláthraí",
-    "providerPhone": "Guthán",
-    "providerEmail": "Ríomhphost",
-    "providerWebsite": "Suíomh Gréasáin",
-    "cancellationNoticeWarning": "Nóta: Teastaíonn fógra {{days}} lá le haghaidh cealúcháin",
-    "title": "Subscription",
-    "currentPlan": "Current Plan",
-    "active": "Active",
-    "planDescription": "Manage your subscription and billing",
-    "planName": "Plan",
-    "premium": "Premium",
-    "free": "Free",
-    "nextBilling": "Next billing date",
-    "cancelledNotice": "Your subscription will end on {{date}}",
-    "manageBilling": "Manage Billing",
-    "resume": "Resume Subscription",
-    "cancel": "Cancel Subscription",
-    "upgradeToPremium": "Upgrade to Premium",
-    "features": {
-      "title": "Plan Features",
-      "premiumDescription": "You have access to all premium features",
-      "freeDescription": "Upgrade to unlock more features",
-      "unlimited": "Unlimited documents and assets",
-      "encryption": "Advanced encryption",
-      "priority": "Priority support",
-      "history": "Version history",
-      "basicWill": "Basic will document",
-      "limitedGuardians": "Up to 2 guardians",
-      "basicSupport": "Community support"
-    },
-    "errors": {
-      "portalFailed": "Failed to open billing portal",
-      "cancelFailed": "Failed to cancel subscription",
-      "resumeFailed": "Failed to resume subscription"
-    },
-    "cancelSuccess": "Subscription cancelled successfully",
-    "resumeSuccess": "Subscription resumed successfully",
-    "successTitle": "Payment Successful!",
-    "successMessage": "Thank you for your purchase. Your subscription has been activated.",
-    "cancelTitle": "Payment Cancelled",
-    "cancelMessage": "It seems like your transaction was cancelled. Please try again or contact support."
-  },
   "pricing": {
-    "title": "Praghsáil",
-    "subtitle": "Tosaigh saor in aisce nó uasghrádaigh le haghaidh níos mó bealaí chun do mhuintir a chosaint.",
-    "mainTitle": "Roghnaigh Conas a Chaireann Tú",
-    "mainSubtitle": "Tosaigh saor in aisce nó cuir gnéithe cosanta breise leis nuair a bhíonn tú réidh.",
-    "freePlan": {
-      "name": "Cosantóir Bunúsach",
-      "description": "Tosaigh le gnéithe bunúsacha",
-      "price": "Saor in Aisce",
-      "features": {
-        "will": "1 doiciméad uacht",
-        "guardians": "2 Chaomhnóir",
-        "assets": "5 Sócmhainn",
-        "support": "Tacaíocht bhunúsach"
-      }
-    },
-    "premiumPlan": {
-      "name": "Pacáiste Ceannais",
-      "description": "Foirfe do dhaoine aonair agus teaghlaigh",
-      "price": "$9.99 / mí",
-      "upgradeButton": "Uasghrádaigh Anois",
-      "features": {
-        "will": "Doiciméid uacht gan teorainn",
-        "guardians": "Caomhnóirí gan teorainn",
-        "assets": "Sócmhainní gan teorainn",
-        "encryption": "Criptiú doiciméad",
-        "access": "Rochtain éigeandála",
-        "support": "Tacaíocht tosaíochta",
-        "history": "Stair leagan",
-        "templates": "Teimpléid dlíthiúla"
-      }
-    },
     "devMode": {
-      "title": "Mód Forbróra",
       "button": {
         "grant": "Mód Forbróra: Tabhair Rochtain Prémiam",
         "granting": "Ag Tabhairt..."
       },
       "description": "Níl an cnaipe seo le feiceáil ach i mód forbartha. Cliceáil chun rochtain phrémiam a thabhairt láithreach le haghaidh tástála.",
+      "errorMessage": "Theip ar rochtain phrémiam forbróra a thabhairt",
       "successMessage": "Tabhradh rochtain phrémiam forbróra!",
-      "errorMessage": "Theip ar rochtain phrémiam forbróra a thabhairt"
-    },
-    "errors": {
-      "checkoutFailed": "Theip ar phróiseas seiceála a thosú"
-    },
-    "starter": {
-      "name": "Tosaitheoir Oidhreachta",
-      "price": "Saor in Aisce",
-      "description": "Ideal chun tosú le do oidhreacht dhigiteach a chaomhnú.",
-      "button": "Tosaigh Saor in Aisce",
-      "features": {
-        "storage": "{{amount}} Stóráil",
-        "guardians": "Suas le {{count}} cúntóir iontaofa",
-        "documents": "Cruinneachán Doiciméad Bunúsach",
-        "playbook": "Leabhar Oibre Caomhnóra Bunúsach",
-        "support": "Tacaíocht Pobail"
-      },
-      "limits": {
-        "storage": "500 MB",
-        "guardians": "3",
-        "fileSize": "10 MB in aghaidh an chomhaid"
-      }
-    },
-    "premium": {
-      "name": "Prémiam Oidhreachta",
-      "price": "$19",
-      "period": "/ mí",
-      "badge": "Is Mó a Thaitníonn",
-      "description": "Gnéithe casta le haghaidh bainistíocht oidhreachta chuimsitheach.",
-      "button": "Roghnaigh Prémiam",
-      "features": {
-        "storage": "{{amount}} Stóráil",
-        "guardians": "Suas le {{count}} cúntóir iontaofa",
-        "manual": "Lámhleabhar an Mharthanóra",
-        "support": "Tacaíocht Ríomhphoist Tosaíochta"
-      },
-      "limits": {
-        "storage": "10 GB",
-        "guardians": "5",
-        "fileSize": "50 MB in aghaidh an chomhaid"
-      }
+      "title": "Mód Forbróra"
     },
     "enterprise": {
-      "name": "Fiontar Oidhreachta",
-      "price": "Saincheaptha",
-      "description": "Do theaghlaigh agus gnóthais le riachtanais chasta a theastaíonn an leibhéal seirbhíse is airde.",
       "button": "Teagmháil Díolacháin",
+      "description": "Do theaghlaigh agus gnóthais le riachtanais chasta a theastaíonn an leibhéal seirbhíse is airde.",
       "features": {
-        "storage": "{{amount}}+ Stóráil",
         "guardians": "Cúntóirí iontaofa gan teorainn",
         "legal": "Comhordú Gairmiúil Dlíthiúil",
         "support": "Bainisteoir Cuntais Tiomnaithe"
       },
       "limits": {
-        "storage": "500 GB",
-        "guardians": "gan teorainn",
-        "fileSize": "100 MB in aghaidh an chomhaid"
-      }
-    }
+        "storage": "500 GB"
+      },
+      "name": "Fiontar Oidhreachta",
+      "price": "Saincheaptha"
+    },
+    "errors": {
+      "checkoutFailed": "Theip ar phróiseas seiceála a thosú"
+    },
+    "freePlan": {
+      "description": "Tosaigh le gnéithe bunúsacha",
+      "features": {
+        "assets": "5 Sócmhainn",
+        "guardians": "2 Chaomhnóir",
+        "support": "Tacaíocht bhunúsach",
+        "will": "1 doiciméad uacht"
+      },
+      "name": "Cosantóir Bunúsach",
+      "price": "Saor in Aisce"
+    },
+    "mainSubtitle": "Tosaigh saor in aisce nó cuir gnéithe cosanta breise leis nuair a bhíonn tú réidh.",
+    "mainTitle": "Roghnaigh Conas a Chaireann Tú",
+    "premium": {
+      "badge": "Is Mó a Thaitníonn",
+      "button": "Roghnaigh Prémiam",
+      "description": "Gnéithe casta le haghaidh bainistíocht oidhreachta chuimsitheach.",
+      "features": {
+        "manual": "Lámhleabhar an Mharthanóra",
+        "support": "Tacaíocht Ríomhphoist Tosaíochta"
+      },
+      "limits": {
+        "guardians": "5",
+        "storage": "10 GB"
+      },
+      "name": "Prémiam Oidhreachta",
+      "period": "/ mí",
+      "price": "$19"
+    },
+    "premiumPlan": {
+      "description": "Foirfe do dhaoine aonair agus teaghlaigh",
+      "features": {
+        "access": "Rochtain éigeandála",
+        "assets": "Sócmhainní gan teorainn",
+        "encryption": "Criptiú doiciméad",
+        "guardians": "Caomhnóirí gan teorainn",
+        "history": "Stair leagan",
+        "support": "Tacaíocht tosaíochta",
+        "templates": "Teimpléid dlíthiúla",
+        "will": "Doiciméid uacht gan teorainn"
+      },
+      "name": "Pacáiste Ceannais",
+      "price": "$9.99 / mí",
+      "upgradeButton": "Uasghrádaigh Anois"
+    },
+    "starter": {
+      "button": "Tosaigh Saor in Aisce",
+      "description": "Ideal chun tosú le do oidhreacht dhigiteach a chaomhnú.",
+      "features": {
+        "documents": "Cruinneachán Doiciméad Bunúsach",
+        "playbook": "Leabhar Oibre Caomhnóra Bunúsach",
+        "support": "Tacaíocht Pobail"
+      },
+      "limits": {
+        "guardians": "3",
+        "storage": "500 MB"
+      },
+      "name": "Tosaitheoir Oidhreachta",
+      "price": "Saor in Aisce"
+    },
+    "title": "Praghsáil"
+  },
+  "subscription": {
+    "active": "Active",
+    "activeSubscriptions": "Síntiúis Ghníomhacha",
+    "allSubscriptions": "Gach Síntiús",
+    "allSubscriptionsDesc": "Forbhreathnú ar na síntiúis ghníomhacha go léir, sórtáilte de réir dáta athnuachana",
+    "autoRenewal": "Athnuachan Uathoibríoch: Tá",
+    "cancel": "Cancel Subscription",
+    "cancelMessage": "It seems like your transaction was cancelled. Please try again or contact support.",
+    "cancelSuccess": "Subscription cancelled successfully",
+    "cancelTitle": "Payment Cancelled",
+    "cancellationNotice": "Tréimhse Fógra Cealúcháin",
+    "costOptimization": "Cumasaigh Moltaí Optamaithe Costas",
+    "costOptimizationDesc": "Faigh moltaí chun costais síntiúis a bharrfheabhsú agus a laghdú",
+    "currentPlan": "Current Plan",
+    "dashboard": {
+      "subtitle": "Bainistigh do shíntiúis, do chostais agus do mheabhrúcháin",
+      "title": "Painéal na Síntiús"
+    },
+    "days": "lá",
+    "daysBefore": "lá roimh",
+    "daysUntilRenewal": "lá go dtí an athnuachan",
+    "enableTracking": "Cumasaigh Rianú Síntiúis",
+    "enableTrackingDesc": "Bainistigh agus rianaigh go huathoibríoch doiciméid a bhaineann le síntiúis",
+    "errors": {
+      "cancelFailed": "Failed to cancel subscription",
+      "portalFailed": "Failed to open billing portal",
+      "resumeFailed": "Failed to resume subscription"
+    },
+    "exportReport": "Easpórtáil Tuarascáil",
+    "features": {
+      "basicSupport": "Community support",
+      "basicWill": "Basic will document",
+      "encryption": "Advanced encryption",
+      "freeDescription": "Upgrade to unlock more features",
+      "history": "Version history",
+      "limitedGuardians": "Up to 2 guardians",
+      "premiumDescription": "You have access to all premium features",
+      "priority": "Priority support",
+      "title": "Plan Features",
+      "unlimited": "Unlimited documents and assets"
+    },
+    "free": "Free",
+    "loadError": "Theip ar shonraí an tsíntiúis a lódáil",
+    "manageBilling": "Manage Billing",
+    "manual": "Athnuachan Uathoibríoch: Níl",
+    "monthlyCost": "Costas Iomlán Míosúil",
+    "next90Days": "Na 90 Lá amach Romhainn",
+    "nextBilling": "Next billing date",
+    "noUpcomingRenewals": "Níl aon athnuachan le teacht sna 90 lá amach romhainn",
+    "perMonth": "in aghaidh na míosa",
+    "perYear": "in aghaidh na bliana",
+    "planDescription": "Manage your subscription and billing",
+    "planName": "Plan",
+    "preferences": "Sainroghanna Síntiúis",
+    "preferencesDesc": "Bainistigh an chaoi a ndéantar do shíntiúis a rianú agus a bhainistiú",
+    "preferencesUpdated": "D'éirigh le nuashonrú na sainroghanna",
+    "premium": "Premium",
+    "reminderPeriods": "Tréimhsí Meabhrúcháin Réamhshocraithe",
+    "renew": "Athnuaigh",
+    "resume": "Resume Subscription",
+    "resumeSuccess": "Subscription resumed successfully",
+    "review": "Athbhreithnigh",
+    "successMessage": "Thank you for your purchase. Your subscription has been activated.",
+    "successTitle": "Payment Successful!",
+    "tabs": {
+      "overview": "Forbhreathnú",
+      "settings": "Socruithe",
+      "upcoming": "Le Teacht"
+    },
+    "title": "Subscription",
+    "types": {
+      "monthly": "Míosúil",
+      "yearly": "Bliantúil"
+    },
+    "upcomingRenewals": "Athnuachana atá le Teacht",
+    "upcomingRenewalsTitle": "Foláireamh faoi Athnuachana atá le Teacht",
+    "upcomingSoon": "ag teacht go luath",
+    "updateError": "Theip ar na sainroghanna síntiúis a nuashonrú",
+    "upgradeToPremium": "Upgrade to Premium",
+    "yearlyCost": "Costas Iomlán Bliantúil"
   },
   "upgradeCard": {
-    "pricing_1": "/pricing",
-    "defaultButtonText": "Upgrade to Command Package"
+    "defaultButtonText": "Upgrade to Command Package",
+    "pricing_1": "/pricing"
   }
 }

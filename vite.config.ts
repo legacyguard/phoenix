@@ -6,10 +6,25 @@ import { visualizer } from "rollup-plugin-visualizer";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
+  // Define CSP based on environment
+  define: {
+    'import.meta.env.CSP_SCRIPT_SRC': JSON.stringify(
+      mode === 'development' 
+        ? "'self' 'unsafe-inline' 'unsafe-eval' https://clerk.legacyguard.com"
+        : "'self' 'unsafe-inline' https://clerk.legacyguard.com"
+    ),
+  },
   base: "/",
   server: {
     host: "::",
     port: 8080,
+    headers: {
+      'X-Frame-Options': 'DENY',
+      'X-Content-Type-Options': 'nosniff',
+      'X-XSS-Protection': '1; mode=block',
+      'Referrer-Policy': 'strict-origin-when-cross-origin',
+      'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
+    },
   },
   plugins: [
     react(),

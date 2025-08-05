@@ -1,98 +1,68 @@
 {
-  "_comment": "Shared translations used across the application",
-  "errorBoundary": {
-    "title": "Hups! Jotain meni pieleen",
-    "description": "Pahoittelemme häiriötä. Tapahtui odottamaton virhe.",
-    "errorId": "Virhetunniste",
-    "tryAgain": "Yritä uudelleen",
-    "reloadPage": "Lataa sivu uudelleen",
-    "goToHomepage": "Mene etusivulle",
-    "technicalDetails": "Tekniset tiedot",
-    "hide": "Piilota",
-    "show": "Näytä",
-    "stackTrace": "Pinon jäljitys",
-    "componentStack": "Komponenttipino",
-    "helpText": "Jos ongelma jatkuu, ota yhteyttä tukeemme virhetunnisteen kanssa."
-  },
-  "errorTest": {
-    "title": "Virheiden kirjaustesti",
-    "description": "Test error handling and logging functionality",
-    "triggerSyncError": "Laukaise synkroninen virhe (ErrorBoundary)",
-    "triggerAsyncError": "Laukaise asynkroninen virhe",
-    "logRegularError": "Kirjaa normaali virhe",
-    "logCriticalError": "Kirjaa kriittinen virhe",
-    "triggerAlert": "Laukaise hälytys (6 kriittistä virhettä)",
-    "errorMessages": {
-      "testError": "Test error from ErrorTest component",
-      "testAsyncRejection": "Testaa asynkroninen hylkäys",
-      "manualTestError": "Manuaalinen testivirhe",
-      "testCriticalError": "Testaa kriittinen virhe",
-      "criticalErrorWithIndex": "Critical error {{index}}"
-    },
-    "descriptions": {
-      "syncError": "Triggers a synchronous error that will be caught by the ErrorBoundary",
-      "asyncError": "Triggers an asynchronous error that will be caught by error handling",
-      "regularError": "Logs a regular error for testing error tracking",
-      "criticalError": "Logs a critical error for testing critical error handling",
-      "multipleErrors": "Triggers multiple critical errors to test alert thresholds"
-    },
-    "context": {
-      "component": "ErrorTest",
-      "action": "button-click",
-      "severity": "high"
-    },
-    "notifications": {
-      "errorLogged": "Virhe kirjattu onnistuneesti",
-      "criticalErrorLogged": "Critical error logged successfully",
-      "multipleErrorsTriggered": "Multiple critical errors triggered",
-      "errorBoundaryTriggered": "Virheraja laukaistu",
-      "asyncErrorCaught": "Async error caught and handled"
-    }
-  },
   "debug": {
     "panel": {
-      "title": "Virheenkorjauspaneeli",
-      "recentErrors": "Sovelluksen viimeisimmät virheet",
-      "technicalDetails": "Tekniset tiedot",
-      "tabs": {
-        "list": "Lista",
-        "details": "Tiedot"
-      },
-      "errorCount": "{{count}} virhettä",
       "actions": {
-        "downloadErrors": "Lataa virheet",
-        "clearAllErrors": "Tyhjennä kaikki virheet"
-      },
-      "messages": {
-        "errorsCleared": "Kaikki virheet tyhjennetty",
-        "errorCopied": "Virhe kopioitu leikepöydälle",
-        "errorsDownloaded": "Virheet ladattu"
+        "clearAllErrors": "Tyhjennä kaikki virheet",
+        "downloadErrors": "Lataa virheet"
       },
       "error": {
-        "unknownError": "Tuntematon virhe",
+        "errorMessage": "Virheilmoitus",
         "noMessage": "Ei viestiä",
-        "errorMessage": "Virheilmoitus"
-      },
-      "sections": {
-        "stackTrace": "Pinon jäljitys",
-        "context": "Konteksti",
-        "location": "Sijainti",
-        "browserInfo": "Selaimen tiedot",
-        "time": "Aika"
+        "unknownError": "Tuntematon virhe"
       },
       "fields": {
-        "url": "URL:",
         "path": "Polku:",
         "query": "Kysely:",
+        "url": "URL:",
         "userAgent": "Käyttäjäagentti:",
         "viewport": "Näkymä:"
-      }
+      },
+      "messages": {
+        "errorCopied": "Virhe kopioitu leikepöydälle",
+        "errorsCleared": "Kaikki virheet tyhjennetty",
+        "errorsDownloaded": "Virheet ladattu"
+      },
+      "recentErrors": "Sovelluksen viimeisimmät virheet",
+      "sections": {
+        "browserInfo": "Selaimen tiedot",
+        "context": "Konteksti",
+        "location": "Sijainti",
+        "stackTrace": "Pinon jäljitys",
+        "time": "Aika"
+      },
+      "tabs": {
+        "details": "Tiedot",
+        "list": "Lista"
+      },
+      "title": "Virheenkorjauspaneeli"
     }
+  },
+  "errorBoundary": {
+    "componentStack": "Komponenttipino",
+    "description": "Pahoittelemme häiriötä. Tapahtui odottamaton virhe.",
+    "errorId": "Virhetunniste",
+    "goToHomepage": "Mene etusivulle",
+    "helpText": "Jos ongelma jatkuu, ota yhteyttä tukeemme virhetunnisteen kanssa.",
+    "hide": "Piilota",
+    "reloadPage": "Lataa sivu uudelleen",
+    "show": "Näytä",
+    "stackTrace": "Pinon jäljitys",
+    "technicalDetails": "Tekniset tiedot",
+    "title": "Hups! Jotain meni pieleen",
+    "tryAgain": "Yritä uudelleen"
+  },
+  "errorTest": {
+    "logCriticalError": "Kirjaa kriittinen virhe",
+    "logRegularError": "Kirjaa normaali virhe",
+    "title": "Virheiden kirjaustesti",
+    "triggerAlert": "Laukaise hälytys (6 kriittistä virhettä)",
+    "triggerAsyncError": "Laukaise asynkroninen virhe",
+    "triggerSyncError": "Laukaise synkroninen virhe (ErrorBoundary)"
   },
   "test": {
     "environment": {
-      "title": "Vain testiympäristö",
-      "description": "Tämä sivu on virheiden kirjaamisen testaamiseen. Poista tämä reitti ennen tuotantoon viemistä."
+      "description": "Tämä sivu on virheiden kirjaamisen testaamiseen. Poista tämä reitti ennen tuotantoon viemistä.",
+      "title": "Vain testiympäristö"
     }
   }
 }

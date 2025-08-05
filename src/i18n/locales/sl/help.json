@@ -1,34 +1,31 @@
 {
-  "_comment": "Shared translations used across the application",
   "help": {
-    "needHelp": "Need Help?",
+    "basedOnProgress": "Based on your current progress, here's what we recommend:",
     "getHelp": "Get Help",
     "helpAndTutorials": "Help & Tutorials",
-    "recommendedForYou": "Recommended for You",
-    "basedOnProgress": "Based on your current progress, here's what we recommend:",
+    "needHelp": "Need Help?",
     "personalizedHelpDescription": "Get personalized help based on where you are in your journey",
-    "recommendedTopics": "Recommended topics",
     "quickTips": {
-      "title": "Quick Tips",
       "tip1": "Start with your most important documents first",
       "tip2": "Add at least one trusted guardian",
       "tip3": "Update your information regularly",
-      "tip4": "Test your guardian's access annually"
+      "tip4": "Test your guardian's access annually",
+      "title": "Quick Tips"
+    },
+    "recommendedForYou": "Recommended for You",
+    "recommendedTopics": "Recommended topics",
+    "stepDetails": {
+      "description": "Description",
+      "estimatedTime": "Estimated time",
+      "gotIt": "Got it!",
+      "minutes": "minutes",
+      "stepByStepInstructions": "Step-by-Step Instructions",
+      "steps": "steps",
+      "videoTutorial": "Video Tutorial",
+      "watchVideoTutorial": "Watch Video Tutorial"
     },
     "topics": {
-      "uploadDocuments": {
-        "title": "Upload Your First Document",
-        "description": "Learn how to securely upload and organize your important documents",
-        "steps": {
-          "1": "Click the 'Upload Document' button in the Organize section",
-          "2": "Select your document file from your computer",
-          "3": "Choose the document type and add a descriptive name",
-          "4": "Set an expiration date if applicable",
-          "5": "Save the document to your secure vault"
-        }
-      },
       "addGuardians": {
-        "title": "Add Your First Guardian",
         "description": "Set up trusted people who can access your information in emergencies",
         "steps": {
           "1": "Click 'Add Guardian' in the Secure section",
@@ -36,32 +33,10 @@
           "3": "Select their roles and responsibilities",
           "4": "Add their contact information",
           "5": "Send them an invitation to accept their role"
-        }
-      },
-      "listAssets": {
-        "title": "List Your Assets",
-        "description": "Document your properties, accounts, and valuable possessions",
-        "steps": {
-          "1": "Click 'Add Item' in the Organize section",
-          "2": "Choose the asset type (property, vehicle, account, etc.)",
-          "3": "Enter the asset name and details",
-          "4": "Add estimated value if desired",
-          "5": "Save the asset to your inventory"
-        }
-      },
-      "designateBeneficiaries": {
-        "title": "Designate Beneficiaries",
-        "description": "Specify who should receive your assets and in what proportions",
-        "steps": {
-          "1": "Click 'Add Beneficiary' in the Transfer section",
-          "2": "Enter the beneficiary's name",
-          "3": "Set their allocation percentage",
-          "4": "Review total allocations (must equal 100%)",
-          "5": "Save your beneficiary list"
-        }
+        },
+        "title": "Add Your First Guardian"
       },
       "createWill": {
-        "title": "Create Your Will",
         "description": "Generate a basic will document based on your information",
         "steps": {
           "1": "Navigate to the Will section",
@@ -69,172 +44,169 @@
           "3": "Review your beneficiaries and assets",
           "4": "Generate the will document",
           "5": "Download and have it properly witnessed"
-        }
+        },
+        "title": "Create Your Will"
+      },
+      "designateBeneficiaries": {
+        "description": "Specify who should receive your assets and in what proportions",
+        "steps": {
+          "1": "Click 'Add Beneficiary' in the Transfer section",
+          "2": "Enter the beneficiary's name",
+          "3": "Set their allocation percentage",
+          "4": "Review total allocations (must equal 100%)",
+          "5": "Save your beneficiary list"
+        },
+        "title": "Designate Beneficiaries"
+      },
+      "listAssets": {
+        "description": "Document your properties, accounts, and valuable possessions",
+        "steps": {
+          "1": "Click 'Add Item' in the Organize section",
+          "2": "Choose the asset type (property, vehicle, account, etc.)",
+          "3": "Enter the asset name and details",
+          "4": "Add estimated value if desired",
+          "5": "Save the asset to your inventory"
+        },
+        "title": "List Your Assets"
+      },
+      "uploadDocuments": {
+        "description": "Learn how to securely upload and organize your important documents",
+        "steps": {
+          "1": "Click the 'Upload Document' button in the Organize section",
+          "2": "Select your document file from your computer",
+          "3": "Choose the document type and add a descriptive name",
+          "4": "Set an expiration date if applicable",
+          "5": "Save the document to your secure vault"
+        },
+        "title": "Upload Your First Document"
       }
-    },
-    "stepDetails": {
-      "description": "Description",
-      "stepByStepInstructions": "Step-by-Step Instructions",
-      "videoTutorial": "Video Tutorial",
-      "watchVideoTutorial": "Watch Video Tutorial",
-      "estimatedTime": "Estimated time",
-      "minutes": "minutes",
-      "steps": "steps",
-      "gotIt": "Got it!"
-    },
-    "priority": {
-      "high": "high",
-      "medium": "medium",
-      "low": "low"
     }
   },
   "helpPage": {
-    "title": "Center za pomoč in podporo",
-    "subtitle": "Tukaj smo za vas. Poiščite odgovore na svoja vprašanja ali nas kontaktirajte neposredno.",
+    "contact": {
+      "call": {
+        "button": "Dogovorite se za klic",
+        "description": "Za stranke Premium in Enterprise.",
+        "title": "Dogovorite se za klic (za Premium)"
+      },
+      "email": {
+        "button": "Odpri e-poštni odjemalec",
+        "description": "Za splošna vprašanja in podporo.",
+        "title": "Pošljite nam e-pošto"
+      },
+      "title": "Niste našli, kar ste iskali?"
+    },
     "faq": {
-      "title": "Pogosto zastavljena vprašanja",
       "q1": {
-        "question": "Je LegacyGuard varen?",
-        "answer": "Da, varnost je naša najvišja prioriteta. Uporabljamo šifriranje od konca do konca in arhitekturo ničelnega zaupanja, kar pomeni, da nobena nepooblaščena oseba ne more dostopati do vaših podatkov, niti mi. Vsi podatki so shranjeni v varnih podatkovnih centrih v Evropski uniji v skladu z GDPR."
+        "answer": "Da, varnost je naša najvišja prioriteta. Uporabljamo šifriranje od konca do konca in arhitekturo ničelnega zaupanja, kar pomeni, da nobena nepooblaščena oseba ne more dostopati do vaših podatkov, niti mi. Vsi podatki so shranjeni v varnih podatkovnih centrih v Evropski uniji v skladu z GDPR.",
+        "question": "Je LegacyGuard varen?"
       },
       "q2": {
-        "question": "Kaj se zgodi z mojimi podatki, če prekličem naročnino?",
-        "answer": "Po preklicu ostanejo vaši podatki varno shranjeni v načinu samo za branje 90 dni. V tem obdobju lahko kadarkoli ponovno aktivirate svojo naročnino in si povrnete polni dostop. Po 90 dneh bodo vaši podatki varno in trajno izbrisani iz naših sistemov."
+        "answer": "Po preklicu ostanejo vaši podatki varno shranjeni v načinu samo za branje 90 dni. V tem obdobju lahko kadarkoli ponovno aktivirate svojo naročnino in si povrnete polni dostop. Po 90 dneh bodo vaši podatki varno in trajno izbrisani iz naših sistemov.",
+        "question": "Kaj se zgodi z mojimi podatki, če prekličem naročnino?"
       },
       "q3": {
-        "question": "Kaj je 'Skrbnik'?",
-        "answer": "Skrbnik je zaupanja vredna oseba (npr. partner, brat/sestra ali pravni strokovnjak), ki ji odobrite poseben, omejen dostop do vaših informacij za nujne primere. Skrbnik ne more spreminjati vaših podatkov; lahko jih samo pregleduje, da ukrepa v skladu z vašimi navodili."
+        "answer": "Skrbnik je zaupanja vredna oseba (npr. partner, brat/sestra ali pravni strokovnjak), ki ji odobrite poseben, omejen dostop do vaših informacij za nujne primere. Skrbnik ne more spreminjati vaših podatkov; lahko jih samo pregleduje, da ukrepa v skladu z vašimi navodili.",
+        "question": "Kaj je 'Skrbnik'?"
       },
       "q4": {
-        "question": "Kakšna je razlika med 'Trezorjem' in 'Priročnikom'?",
-        "answer": "Trezor dediščine je mesto, kjer varno shranjujete vse svoje pomembne dokumente in sredstva. Priročnik za preživele je izbran nabor najpomembnejših stikov, dokumentov in navodil iz vašega trezorja, zasnovan tako, da imajo vaši skrbniki vse bistveno na enem mestu."
+        "answer": "Trezor dediščine je mesto, kjer varno shranjujete vse svoje pomembne dokumente in sredstva. Priročnik za preživele je izbran nabor najpomembnejših stikov, dokumentov in navodil iz vašega trezorja, zasnovan tako, da imajo vaši skrbniki vse bistveno na enem mestu.",
+        "question": "Kakšna je razlika med 'Trezorjem' in 'Priročnikom'?"
       },
       "q5": {
-        "question": "Je oporoka, ustvarjena v LegacyGuardu, pravno zavezujoča?",
-        "answer": "LegacyGuard vam pomaga pripraviti in organizirati vse temelje in informacije za vašo oporoko. Vendar pa v večini evropskih držav digitalni dokument ne nadomešča potrebe po uradnem, podpisanem (in pogosto notarsko overjenem) dokumentu. Priporočamo, da se o končni različici vedno posvetujete s pravnim strokovnjakom."
-      }
-    },
-    "contact": {
-      "title": "Niste našli, kar ste iskali?",
-      "email": {
-        "title": "Pošljite nam e-pošto",
-        "description": "Za splošna vprašanja in podporo.",
-        "button": "Odpri e-poštni odjemalec"
+        "answer": "LegacyGuard vam pomaga pripraviti in organizirati vse temelje in informacije za vašo oporoko. Vendar pa v večini evropskih držav digitalni dokument ne nadomešča potrebe po uradnem, podpisanem (in pogosto notarsko overjenem) dokumentu. Priporočamo, da se o končni različici vedno posvetujete s pravnim strokovnjakom.",
+        "question": "Je oporoka, ustvarjena v LegacyGuardu, pravno zavezujoča?"
       },
-      "call": {
-        "title": "Dogovorite se za klic (za Premium)",
-        "description": "Za stranke Premium in Enterprise.",
-        "button": "Dogovorite se za klic"
-      }
-    }
+      "title": "Pogosto zastavljena vprašanja"
+    },
+    "subtitle": "Tukaj smo za vas. Poiščite odgovore na svoja vprašanja ali nas kontaktirajte neposredno.",
+    "title": "Center za pomoč in podporo"
   },
   "manual": {
-    "title": "Priročnik za preživele",
+    "contacts": {
+      "addContact": "Dodaj stik",
+      "addFirstContact": "Dodajte svoj prvi stik",
+      "card": {
+        "edit": "Uredi"
+      },
+      "description": "Ključne osebe, s katerimi naj vaša družina stopi v stik v primeru nujnosti",
+      "empty": {
+        "description": "Začnite z dodajanjem pomembnih oseb, za katere bi morala vaša družina vedeti.",
+        "title": "Stikov še niste dodali"
+      },
+      "form": {
+        "addButton": "Dodaj stik",
+        "addTitle": "Dodaj pomemben stik",
+        "cancel": "Prekliči",
+        "description": "Dodajte osebe, s katerimi naj vaša družina stopi v stik v pomembnih situacijah.",
+        "editTitle": "Uredi stik",
+        "emailLabel": "E-poštni naslov",
+        "emailPlaceholder": "stik@primer.si",
+        "nameLabel": "Ime stika *",
+        "namePlaceholder": "npr. Janez Novak",
+        "notesLabel": "Opombe",
+        "notesPlaceholder": "Dodatne informacije o tem stiku...",
+        "phoneLabel": "Telefonska številka",
+        "phonePlaceholder": "+386 40 123 456",
+        "roleLabel": "Vloga/Poklic *",
+        "rolePlaceholder": "npr. Družinski odvetnik, Računovodja, Zdravnik",
+        "saving": "Shranjevanje...",
+        "updateButton": "Posodobi stik"
+      },
+      "loading": "Nalaganje stikov...",
+      "messages": {
+        "added": "Stik uspešno dodan!",
+        "deleted": "Stik uspešno izbrisan!",
+        "loginRequired": "Za shranjevanje stikov morate biti prijavljeni",
+        "nameAndRoleRequired": "Ime in vloga sta obvezna",
+        "updated": "Stik uspešno posodobljen!"
+      },
+      "title": "Pomembni stiki"
+    },
+    "documents": {
+      "card": {
+        "essentialNote": "Ta dokument je označen kot bistven za vaše preživele."
+      },
+      "description": "Kritični dokumenti, o katerih mora vaša družina vedeti",
+      "empty": {
+        "description": "Označite pomembne dokumente kot \"ključne dokumente\" v svojem trezorju, da se prikažejo tukaj.",
+        "tip": "Nasvet: Pojdite v svoj trezor in vklopite \"Vključi v Priročnik za preživele\" za pomembne dokumente",
+        "title": "Ključnih dokumentov še niste dodali"
+      },
+      "expiration": {
+        "expired": "Poteklo",
+        "expiresSoon": "Poteče kmalu",
+        "expiring": "Poteče"
+      },
+      "loading": "Nalaganje ključnih dokumentov...",
+      "title": "Ključni dokumenti"
+    },
+    "instructions": {
+      "autoSaveNote": "Vaša navodila se samodejno shranjujejo med tipkanjem",
+      "description": "Osebna navodila in sporočila za vaše najbližje",
+      "loading": "Nalaganje navodil...",
+      "title": "Zadnje želje in navodila"
+    },
     "subtitle": "Bistvene informacije za vaše najbližje, ko jih najbolj potrebujejo",
     "tabs": {
       "contacts": "Pomembni stiki",
       "documents": "Ključni dokumenti",
       "instructions": "Navodila"
     },
-    "contacts": {
-      "title": "Pomembni stiki",
-      "description": "Ključne osebe, s katerimi naj vaša družina stopi v stik v primeru nujnosti",
-      "addContact": "Dodaj stik",
-      "addFirstContact": "Dodajte svoj prvi stik",
-      "loading": "Nalaganje stikov...",
-      "empty": {
-        "title": "Stikov še niste dodali",
-        "description": "Začnite z dodajanjem pomembnih oseb, za katere bi morala vaša družina vedeti."
-      },
-      "form": {
-        "editTitle": "Uredi stik",
-        "addTitle": "Dodaj pomemben stik",
-        "description": "Dodajte osebe, s katerimi naj vaša družina stopi v stik v pomembnih situacijah.",
-        "nameLabel": "Ime stika *",
-        "namePlaceholder": "npr. Janez Novak",
-        "roleLabel": "Vloga/Poklic *",
-        "rolePlaceholder": "npr. Družinski odvetnik, Računovodja, Zdravnik",
-        "phoneLabel": "Telefonska številka",
-        "phonePlaceholder": "+386 40 123 456",
-        "emailLabel": "E-poštni naslov",
-        "emailPlaceholder": "stik@primer.si",
-        "notesLabel": "Opombe",
-        "notesPlaceholder": "Dodatne informacije o tem stiku...",
-        "updateButton": "Posodobi stik",
-        "addButton": "Dodaj stik",
-        "saving": "Shranjevanje...",
-        "cancel": "Prekliči"
-      },
-      "card": {
-        "edit": "Uredi"
-      },
-      "messages": {
-        "nameAndRoleRequired": "Ime in vloga sta obvezna",
-        "loginRequired": "Za shranjevanje stikov morate biti prijavljeni",
-        "updated": "Stik uspešno posodobljen!",
-        "added": "Stik uspešno dodan!",
-        "deleted": "Stik uspešno izbrisan!"
-      },
-      "errors": {
-        "loadFailed": "Nalaganje stikov ni uspelo",
-        "saveFailed": "Shranjevanje stika ni uspelo",
-        "deleteFailed": "Brisanje stika ni uspelo"
-      }
-    },
-    "documents": {
-      "title": "Ključni dokumenti",
-      "description": "Kritični dokumenti, o katerih mora vaša družina vedeti",
-      "loading": "Nalaganje ključnih dokumentov...",
-      "empty": {
-        "title": "Ključnih dokumentov še niste dodali",
-        "description": "Označite pomembne dokumente kot \"ključne dokumente\" v svojem trezorju, da se prikažejo tukaj.",
-        "tip": "Nasvet: Pojdite v svoj trezor in vklopite \"Vključi v Priročnik za preživele\" za pomembne dokumente"
-      },
-      "card": {
-        "essentialNote": "Ta dokument je označen kot bistven za vaše preživele."
-      },
-      "errors": {
-        "loadFailed": "Nalaganje ključnih dokumentov ni uspelo"
-      },
-      "expiration": {
-        "expired": "Poteklo",
-        "expiresSoon": "Poteče kmalu",
-        "expiring": "Poteče"
-      }
-    },
-    "instructions": {
-      "title": "Zadnje želje in navodila",
-      "description": "Osebna navodila in sporočila za vaše najbližje",
-      "loading": "Nalaganje navodil...",
-      "autoSaveNote": "Vaša navodila se samodejno shranjujejo med tipkanjem",
-      "sections": {
-        "funeral": {
-          "title": "Pogrebne želje",
-          "description": "Vaše preference glede pogrebnih aranžmajev in slovesnosti",
-          "placeholder": "npr. Kremacija, brez formalne slovesnosti, predvajajte 'My Way' Franka Sinatre..."
-        },
-        "digitalAccounts": {
-          "title": "Zaprtje digitalnih računov",
-          "description": "Navodila za ravnanje z vašimi digitalnimi računi in spletno prisotnostjo",
-          "placeholder": "npr. Prosim, izbrišite moj Facebook profil, vendar arhivirajte moj Gmail. Prenesite moje fotografije iz Google Drive na..."
-        },
-        "messages": {
-          "title": "Sporočila najbližjim",
-          "description": "Osebna sporočila in zadnje misli za vašo družino in prijatelje",
-          "placeholder": "Delite svoje misli, spomine in zadnja sporočila s tistimi, ki jih imate radi..."
-        }
-      },
-      "errors": {
-        "loadFailed": "Nalaganje navodil ni uspelo"
-      }
-    }
+    "title": "Priročnik za preživele"
   },
   "testimonials": {
+    "authority": {
+      "advisors": "Recommended by Financial Advisors",
+      "attorneys": "Trusted by Family Attorneys",
+      "counselors": "Endorsed by Grief Counselors"
+    },
     "badge": "Real Families Taking Control",
-    "title": "Trusted by 15,000+ European Families",
-    "subtitle": "See how families like yours found security and peace with Heritage Vault",
-    "verified": "Verified Family",
-    "trustedBy": "Trusted and recommended by",
+    "compliance": {
+      "dataProtection": "Data Protection Certified",
+      "gdpr": "GDPR Compliant",
+      "iso": "ISO 27001 Certified"
+    },
     "stats": {
       "families": "15,000+",
       "familiesLabel": "European families protected",
@@ -247,37 +219,30 @@
     },
     "stories": {
       "1": {
-        "name": "Michael K.",
-        "role": "Father of three",
+        "highlight": "✨ Set up in just 2 hours, protecting 3 children and spouse",
         "location": "Munich, Germany",
+        "name": "Michael K.",
         "quote": "After my brother's sudden accident, I watched my sister-in-law struggle for weeks to find important documents and passwords. That's when I knew I couldn't let the same thing happen to my family. Now everything is organized, and my wife knows exactly where to find what she needs. Being prepared and in control is priceless.",
-        "highlight": "✨ Set up in just 2 hours, protecting 3 children and spouse"
+        "role": "Father of three"
       },
       "2": {
-        "name": "Anna S.",
-        "role": "Business owner",
+        "highlight": "💼 Business and personal life organized in one secure place",
         "location": "Vienna, Austria",
+        "name": "Anna S.",
         "quote": "As a single mom running a business, I worried constantly about what would happen if something happened to me. Heritage Vault helped me organize everything - from business accounts to my children's school information. My sister now has access to everything she'd need to step in. I sleep so much better knowing they're protected.",
-        "highlight": "💼 Business and personal life organized in one secure place"
+        "role": "Business owner"
       },
       "3": {
-        "name": "Thomas R.",
-        "role": "Retired teacher",
+        "highlight": "❤️ 40 years of family history preserved and protected",
         "location": "Zurich, Switzerland",
+        "name": "Thomas R.",
         "quote": "My wife has early-stage dementia, and I realized I needed to prepare while I still could. Heritage Vault made it simple to organize our 40 years of life together. Our children now have clear instructions and access to everything. It's brought our whole family closer knowing we're prepared for whatever comes.",
-        "highlight": "❤️ 40 years of family history preserved and protected"
+        "role": "Retired teacher"
       }
     },
-    "authority": {
-      "advisors": "Recommended by Financial Advisors",
-      "attorneys": "Trusted by Family Attorneys",
-      "counselors": "Endorsed by Grief Counselors"
-    },
-    "compliance": {
-      "gdpr": "GDPR Compliant",
-      "dataProtection": "Data Protection Certified",
-      "iso": "ISO 27001 Certified"
-    },
-    "bottomCta": {}
+    "subtitle": "See how families like yours found security and peace with Heritage Vault",
+    "title": "Trusted by 15,000+ European Families",
+    "trustedBy": "Trusted and recommended by",
+    "verified": "Verified Family"
   }
 }

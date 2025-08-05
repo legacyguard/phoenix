@@ -1,442 +1,367 @@
 {
-  "_comment": "Shared translations used across the application",
-  "assets": {
-    "overview": {
-      "title": "Omaisuusportfolio",
-      "subtitle": "Hallinnoi ja seuraa omaisuuttasi, kiinteistöjäsi ja sijoituksiasi",
-      "addAsset": "Lisää omaisuuserä",
-      "totalPortfolioValue": "Portfolion kokonaisarvo",
-      "estimatedValue": "Arvioitu arvo kaikista omaisuuseristä",
-      "distribution": {
-        "title": "Omaisuuden jakautuminen",
-        "subtitle": "Portfolion erittely kategorioittain"
-      },
-      "beneficiaryAllocation": {
-        "title": "Jako edunsaajille",
-        "subtitle": "Seuraa omaisuuden jakautumista edunsaajille",
-        "allAssigned": "Kaikille omaisuuserille on määritetty edunsaajat",
-        "unassignedWarning": "{{count}} omaisuuserää vaatii edunsaajien määrittelyn"
-      },
-      "viewInheritanceSummary": "Näytä perinnön yhteenveto",
-      "addNew": "Lisää uusi",
-      "errors": {
-        "loadFailed": "Omaisuustietojen lataaminen epäonnistui"
-      }
+  "addLiabilityModal": {
+    "buttons": {
+      "add": "Lisää velka",
+      "cancel": "Peruuta"
     },
-    "categories": {
-      "property": "Kiinteistö",
-      "vehicle": "Ajoneuvo",
-      "financial": "Rahoitus",
-      "business": "Yritys",
-      "personal": "Henkilökohtainen",
-      "uncategorized": "Luokittelematon"
-    }
-  },
-  "assetCard": {
-    "assetTypes": {
-      "Primary Residence": "Primary Residence",
-      "Vacation Home": "Vacation Home",
-      "Rental Property": "Rental Property",
-      "Land": "Land",
-      "Commercial Property": "Commercial Property",
-      "Bank Account": "Bank Account",
-      "Investment Portfolio": "Investment Portfolio",
-      "Cryptocurrency Wallet": "Cryptocurrency Wallet",
-      "Loan / Mortgage": "Loan / Mortgage",
-      "Insurance Policy": "Insurance Policy",
-      "Pension / Retirement Account": "Pension / Retirement Account",
-      "Car": "Car",
-      "Motorcycle": "Motorcycle",
-      "Boat": "Boat",
-      "RV / Camper": "RV / Camper",
-      "Aircraft": "Aircraft",
-      "Online Account": "Online Account",
-      "Software License": "Software License",
-      "Domain Name": "Domain Name",
-      "Digital Subscription": "Digital Subscription",
-      "Cryptocurrency": "Cryptocurrency",
-      "NFT": "NFT",
-      "Jewelry": "Jewelry",
-      "Art / Collectibles": "Art / Collectibles",
-      "Electronics": "Electronics",
-      "Furniture": "Furniture",
-      "Tools / Equipment": "Tools / Equipment",
-      "Other Valuables": "Other Valuables",
-      "Custom Asset": "Custom Asset"
-    },
-    "dateFormat": {
-      "addedOn": "Added on {{date}}",
-      "createdOn": "Created on {{date}}",
-      "updatedOn": "Updated on {{date}}"
-    },
-    "labels": {
-      "estimatedValue": "Estimated Value",
-      "category": "Category",
-      "subType": "Type"
-    }
-  },
-  "assetDetail": {
-    "loading": "Ladataan omaisuuserän tietoja...",
     "errors": {
-      "failedToLoad": "Omaisuuserän tietojen lataaminen epäonnistui.",
-      "nameRequired": "Omaisuuserän nimi vaaditaan.",
-      "failedToSave": "Omaisuuserän tallentaminen epäonnistui."
-    },
-    "messages": {
-      "createdSuccessfully": "Omaisuuserä luotu onnistuneesti.",
-      "updatedSuccessfully": "Omaisuuserä päivitetty onnistuneesti."
-    },
-    "title": {
-      "new": "Uusi {{type}}"
-    },
-    "subtitle": {
-      "new": "Täytä tiedot lisätäksesi tämän omaisuuserän portfolioosi.",
-      "edit": "Päivitä tämän omaisuuserän tiedot."
-    },
-    "story": {
-      "title": "The Story Behind This {{type}}",
-      "editButton": "Edit Story",
-      "addButton": "Add a Story",
-      "emptyTitle": "What's the story behind this item?",
-      "emptyDescription": "Add a personal memory or explain the significance of this item for your loved ones. This intangible legacy is often the most valuable."
-    },
-    "sections": {
-      "assetInformation": "Omaisuuserän tiedot",
-      "basicInformation": "Perustiedot",
-      "propertyDetails": "Kiinteistön tiedot",
-      "accountDetails": "Tilin tiedot",
-      "financialDetails": "Taloudelliset tiedot",
-      "liabilitiesAndDocuments": "Related Liabilities & Documents"
+      "requiredFields": "Kaikki kentät ovat pakollisia"
     },
     "fields": {
-      "assetName": "Omaisuuserän nimi",
-      "assetType": "Omaisuuserän tyyppi",
-      "propertyAddress": "Kiinteistön osoite",
-      "propertyRegistryNumber": "Kiinteistötunnus",
-      "accountType": "Tilin tyyppi",
-      "financialInstitution": "Rahoituslaitos",
-      "accountNumber": "Tilinumero / IBAN",
-      "loginCredentials": "Kirjautumistiedot ja muistiinpanot",
-      "estimatedValue": "Arvioitu arvo",
-      "currency": "Valuutta",
-      "liabilityType": "Liability Type",
-      "providerName": "Provider Name",
-      "referenceNumber": "Reference Number"
+      "notes": "Muistiinpanot",
+      "paymentFrequency": "Maksutaajuus",
+      "provider": "Palveluntarjoaja",
+      "referenceNumber": "Viitenumero",
+      "type": "Tyyppi"
+    },
+    "frequencies": {
+      "monthly": "Kuukausittain"
+    },
+    "messages": {
+      "addedSuccessfully": "Velka lisätty onnistuneesti"
     },
     "placeholders": {
-      "assetName": "esim. Perheen koti, Sijoitussalkku",
-      "propertyAddress": "Syötä kiinteistön koko osoite",
-      "propertyRegistryNumber": "esim. Kiinteistötunnus",
-      "selectAccountType": "Valitse tilin tyyppi",
-      "financialInstitution": "esim. Nordea, Osuuspankki",
-      "accountNumber": "esim. FI2112345678901234",
-      "loginCredentials": "Salasananhallinta: 1Password, holvi 'Pankkiasiat'",
-      "estimatedValue": "0"
+      "notes": "Lisämuistiinpanot",
+      "paymentFrequency": "Valitse taajuus",
+      "provider": "Palveluntarjoajan nimi",
+      "referenceNumber": "Viitenumero",
+      "selectType": "Valitse tyyppi"
     },
-    "descriptions": {
-      "assetName": "Anna tälle omaisuuserälle kuvaava nimi helppoa tunnistamista varten.",
-      "assetType": "Valitse tyyppi, joka parhaiten kuvaa tätä omaisuuserää.",
-      "propertyAddress": "Täydellinen osoite, mukaan lukien katu, kaupunki, postinumero ja maa.",
-      "propertyRegistryNumber": "Tämän kiinteistön virallinen rekisteri- tai kiinteistötunnus.",
-      "accountType": "Rahoitustilin tai sijoituksen tyyppi.",
-      "financialInstitution": "Pankin tai rahoituslaitoksen nimi.",
-      "accountNumber": "Tilinumero, IBAN tai muu tunniste.",
-      "estimatedValue": "Tämän omaisuuserän nykyinen markkina-arvo tai viimeisin tiedossa oleva arvo.",
-      "currency": "Valuutta, jossa arvo ilmaistaan.",
-      "noLiabilities": "No liabilities added yet"
-    },
-    "types": {
-      "realEstate": "Kiinteistö",
-      "business": "Yritys",
-      "vehicle": "Ajoneuvo",
-      "financialAccount": "Rahoitustili",
-      "asset": "Omaisuuserä"
-    },
+    "title": "Lisää velka"
+  },
+  "assetDetail": {
     "accountTypes": {
       "bankAccount": "Pankkitili",
       "investmentPortfolio": "Sijoitussalkku",
       "pensionFund": "Eläkerahasto"
     },
+    "buttons": {
+      "addLiability": "Add Liability",
+      "cancel": "Peruuta",
+      "createAsset": "Luo omaisuuserä",
+      "saving": "Tallennetaan...",
+      "updateAsset": "Päivitä omaisuuserä"
+    },
+    "descriptions": {
+      "accountNumber": "Tilinumero, IBAN tai muu tunniste.",
+      "accountType": "Rahoitustilin tai sijoituksen tyyppi.",
+      "assetName": "Anna tälle omaisuuserälle kuvaava nimi helppoa tunnistamista varten.",
+      "assetType": "Valitse tyyppi, joka parhaiten kuvaa tätä omaisuuserää.",
+      "currency": "Valuutta, jossa arvo ilmaistaan.",
+      "estimatedValue": "Tämän omaisuuserän nykyinen markkina-arvo tai viimeisin tiedossa oleva arvo.",
+      "financialInstitution": "Pankin tai rahoituslaitoksen nimi.",
+      "noLiabilities": "No liabilities added yet",
+      "propertyAddress": "Täydellinen osoite, mukaan lukien katu, kaupunki, postinumero ja maa.",
+      "propertyRegistryNumber": "Tämän kiinteistön virallinen rekisteri- tai kiinteistötunnus."
+    },
+    "errors": {
+      "nameRequired": "Omaisuuserän nimi vaaditaan."
+    },
+    "fields": {
+      "accountNumber": "Tilinumero / IBAN",
+      "accountType": "Tilin tyyppi",
+      "assetName": "Omaisuuserän nimi",
+      "assetType": "Omaisuuserän tyyppi",
+      "currency": "Valuutta",
+      "estimatedValue": "Arvioitu arvo",
+      "financialInstitution": "Rahoituslaitos",
+      "liabilityType": "Liability Type",
+      "loginCredentials": "Kirjautumistiedot ja muistiinpanot",
+      "propertyAddress": "Kiinteistön osoite",
+      "propertyRegistryNumber": "Kiinteistötunnus",
+      "providerName": "Provider Name",
+      "referenceNumber": "Reference Number"
+    },
+    "loading": "Ladataan omaisuuserän tietoja...",
+    "messages": {
+      "createdSuccessfully": "Omaisuuserä luotu onnistuneesti.",
+      "updatedSuccessfully": "Omaisuuserä päivitetty onnistuneesti."
+    },
+    "placeholders": {
+      "accountNumber": "esim. FI2112345678901234",
+      "assetName": "esim. Perheen koti, Sijoitussalkku",
+      "estimatedValue": "0",
+      "financialInstitution": "esim. Nordea, Osuuspankki",
+      "loginCredentials": "Salasananhallinta: 1Password, holvi 'Pankkiasiat'",
+      "propertyAddress": "Syötä kiinteistön koko osoite",
+      "propertyRegistryNumber": "esim. Kiinteistötunnus",
+      "selectAccountType": "Valitse tilin tyyppi"
+    },
+    "sections": {
+      "accountDetails": "Tilin tiedot",
+      "assetInformation": "Omaisuuserän tiedot",
+      "basicInformation": "Perustiedot",
+      "financialDetails": "Taloudelliset tiedot",
+      "liabilitiesAndDocuments": "Related Liabilities & Documents",
+      "propertyDetails": "Kiinteistön tiedot"
+    },
     "securityWarning": "Turvallisuusvaroitus:",
     "securityWarningText": "Älä tallenna tänne todellisia salasanoja. Käytä tätä kenttää vihjeisiin, salasananhallinnan sijainteihin tai muihin turvallisiin pääsyohjeisiin.",
-    "buttons": {
-      "cancel": "Peruuta",
-      "saving": "Tallennetaan...",
-      "createAsset": "Luo omaisuuserä",
-      "updateAsset": "Päivitä omaisuuserä",
-      "addLiability": "Add Liability"
+    "story": {
+      "addButton": "Add a Story",
+      "editButton": "Edit Story",
+      "emptyDescription": "Add a personal memory or explain the significance of this item for your loved ones. This intangible legacy is often the most valuable.",
+      "emptyTitle": "What's the story behind this item?"
+    },
+    "subtitle": {
+      "edit": "Päivitä tämän omaisuuserän tiedot.",
+      "new": "Täytä tiedot lisätäksesi tämän omaisuuserän portfolioosi."
+    },
+    "types": {
+      "asset": "Omaisuuserä",
+      "business": "Yritys",
+      "financialAccount": "Rahoitustili",
+      "realEstate": "Kiinteistö",
+      "vehicle": "Ajoneuvo"
     }
   },
   "assetType": {
-    "selectType": "Valitse {{mainCategory}}-tyyppi",
-    "primaryResidence": "Pääasunto",
-    "vacationHome": "Lomakoti",
-    "rentalProperty": "Vuokrakiinteistö",
-    "land": "Maa",
-    "commercialProperty": "Liikekiinteistö",
-    "bankAccount": "Pankkitili",
-    "investmentPortfolio": "Sijoitussalkku",
-    "cryptocurrencyWallet": "Kryptovaluuttalompakko",
-    "loanMortgage": "Laina / Asuntolaina",
-    "insurancePolicy": "Vakuutuskirja",
-    "pensionRetirement": "Eläke / Eläkevakuutus",
-    "car": "Auto",
-    "motorcycle": "Moottoripyörä",
-    "boat": "Vene",
-    "rvCamper": "Asuntovaunu / Matkailuauto",
     "aircraft": "Lentokone",
-    "onlineAccount": "Verkkotili",
-    "softwareLicense": "Ohjelmistolisenssi",
-    "domainName": "Verkkotunnus",
-    "digitalSubscription": "Digitaalinen tilaus",
-    "cryptocurrency": "Kryptovaluutta",
-    "nft": "NFT",
-    "jewelry": "Korut",
     "artCollectibles": "Taide / Keräilyesineet",
+    "bankAccount": "Pankkitili",
+    "boat": "Vene",
+    "car": "Auto",
+    "commercialProperty": "Liikekiinteistö",
+    "cryptocurrency": "Kryptovaluutta",
+    "cryptocurrencyWallet": "Kryptovaluuttalompakko",
+    "customAsset": "Mukautettu omaisuuserä",
+    "digitalSubscription": "Digitaalinen tilaus",
+    "domainName": "Verkkotunnus",
     "electronics": "Elektroniikka",
     "furniture": "Huonekalut",
-    "toolsEquipment": "Työkalut / Laitteet",
+    "insurancePolicy": "Vakuutuskirja",
+    "investmentPortfolio": "Sijoitussalkku",
+    "jewelry": "Korut",
+    "land": "Maa",
+    "loanMortgage": "Laina / Asuntolaina",
+    "motorcycle": "Moottoripyörä",
+    "nft": "NFT",
+    "onlineAccount": "Verkkotili",
     "otherValuables": "Muut arvoesineet",
-    "customAsset": "Mukautettu omaisuuserä"
+    "pensionRetirement": "Eläke / Eläkevakuutus",
+    "primaryResidence": "Pääasunto",
+    "rentalProperty": "Vuokrakiinteistö",
+    "rvCamper": "Asuntovaunu / Matkailuauto",
+    "softwareLicense": "Ohjelmistolisenssi",
+    "toolsEquipment": "Työkalut / Laitteet",
+    "vacationHome": "Lomakoti"
   },
-  "dynamicAssetForm": {
-    "propertyAddress": "Kiinteistön osoite",
-    "purchaseDate": "Ostopäivä",
-    "purchasePrice": "Ostohinta",
-    "currentEstimatedValue": "Nykyinen arvioitu arvo",
-    "mortgageInformation": "Asuntolainatiedot",
-    "locationOfPropertyDocuments": "Kiinteistöasiakirjojen sijainti",
-    "locationAddress": "Sijainti / Osoite",
-    "size": "Koko (eekkerit/m²)",
-    "zoningType": "Kaavoituksen tyyppi",
-    "currentUse": "Nykyinen käyttö",
-    "bankName": "Pankin nimi",
-    "accountType": "Tilin tyyppi",
-    "selectAccountType": "Valitse tilin tyyppi",
-    "checking": "Käyttötili",
-    "savings": "Säästötili",
-    "moneyMarket": "Rahamarkkinatili",
-    "certificateOfDeposit": "Talletustodistus",
-    "accountHolderName": "Tilin haltijan nimi(t)",
-    "accountNumberLast4": "Tilinumero (viimeiset 4 numeroa)",
-    "routingNumber": "Reititysnumero",
-    "brokerageFirm": "Arvopaperiyhtiö",
-    "accountNumber": "Tilinumero",
-    "individual": "Yksityishenkilö",
-    "joint": "Yhteinen",
-    "ira": "IRA",
-    "rothIra": "Roth IRA",
-    "401k": "401(k)",
-    "approximateValue": "Arvioitu arvo",
-    "financialAdvisor": "Rahoitusneuvoja (jos on)",
-    "walletNameLabel": "Lompakon nimi/Otsikko",
-    "walletType": "Lompakon tyyppi",
-    "selectWalletType": "Valitse lompakon tyyppi",
-    "hardwareWallet": "Laitelompakko",
-    "softwareWallet": "Ohjelmistolompakko",
-    "exchangeWallet": "Pörssilompakko",
-    "paperWallet": "Paperilompakko",
-    "cryptocurrenciesHeld": "Hallitut kryptovaluutat",
-    "locationOfSeedPhrase": "Siemenlauseen/Yksityisavainten sijainti",
-    "exchangeInformation": "Pörssitiedot (jos soveltuu)",
-    "makeAndModel": "Merkki ja malli",
-    "year": "Vuosi",
-    "vinNumber": "VIN-numero",
-    "licensePlate": "Rekisterikilpi",
-    "loanInformation": "Lainatiedot (jos on)",
-    "locationOfTitle": "Omistusasiakirjan sijainti",
-    "platformWebsiteName": "Alustan/verkkosivuston nimi",
-    "accountEmail": "Tilin sähköposti/Käyttäjänimi",
-    "accountPurpose": "Tilin tarkoitus/Kuvaus",
-    "recoveryInformation": "Palautustiedot",
-    "faMethod": "2FA-menetelmä (jos käytössä)",
-    "itemDescription": "Kohteen kuvaus",
-    "appraisedValue": "Arvioitu arvo",
-    "lastAppraisalDate": "Viimeisin arviointipäivä",
-    "storageLocation": "Tallennussijainti",
-    "insuranceInformation": "Vakuutustiedot",
-    "sentimentalValue": "Tunteellinen arvo/Historia",
-    "assetName": "Omaisuuserän nimi",
-    "estimatedValue": "Arvioitu arvo",
-    "description": "Kuvaus",
-    "locationAccessInformation": "Sijainti/Pääsytiedot",
-    "addSubType": "Lisää {subType}",
-    "cancel": "Peruuta",
-    "saveAsset": "Tallenna omaisuuserä",
-    "placeholders": {
-      "123_main_st_city_state_zip_1": "123 Main St, City, State, ZIP",
-      "lender_name_account_number_rem_2": "Lainanantajan nimi, tilinumero, jäljellä oleva saldo",
-      "e_g_safe_deposit_box_filing_ca_3": "esim. Tallelokero, arkistokaappi",
-      "property_location_or_parcel_nu_4": "Kiinteistön sijainti tai tontin numero",
-      "e_g_10_acres_5": "esim. 10 eekkeriä, 5 000 m²",
-      "e_g_commercial_agricultural_6": "esim. Liike-, maatalous-, asuin",
-      "describe_current_use_of_the_pr_7": "Kuvaile kiinteistön nykyinen käyttö",
-      "e_g_chase_bank_8": "esim. Chase Bank, Wells Fargo",
-      "john_doe_9": "John Doe",
-      "1234_10": "1234",
-      "e_g_fidelity_vanguard_11": "esim. Fidelity, Vanguard, Charles Schwab",
-      "account_number_12": "Tilinumero",
-      "name_and_contact_information_13": "Nimi ja yhteystiedot",
-      "e_g_main_bitcoin_wallet_14": "esim. Pääasiallinen Bitcoin-lompakko",
-      "e_g_bitcoin_ethereum_15": "esim. Bitcoin, Ethereum, Litecoin",
-      "do_not_enter_the_actual_seed_p_16": "Älä syötä todellista siemenlausetta tähän",
-      "exchange_name_and_account_emai_17": "Pörssin nimi ja tilin sähköposti",
-      "e_g_toyota_camry_18": "esim. Toyota Camry, Honda Civic",
-      "vehicle_identification_number_19": "Ajoneuvon tunnistenumero",
-      "lender_account_number_payoff_a_20": "Lainanantaja, tilinumero, takaisinmaksusumma",
-      "e_g_safe_deposit_box_21": "esim. Tallelokero, kotiarkku",
-      "e_g_gmail_facebook_22": "esim. Gmail, Facebook, LinkedIn",
-      "user_example_com_23": "user@example.com",
-      "what_this_account_is_used_for_24": "Mitä tätä tiliä käytetään",
-      "recovery_email_phone_or_securi_25": "Palautussähköposti, puhelin tai turvakysymykset",
-      "e_g_sms_to_phone_ending_in_123_26": "esim. SMS puhelimeen, joka päättyy 123",
-      "e_g_diamond_engagement_ring_27": "esim. Timanttikihlasormus, kultaketju",
-      "e_g_home_safe_bank_deposit_box_28": "esim. Kotiarkku, pankin tallelokero",
-      "policy_number_and_company_29": "Vakuutuskirjan numero ja yhtiö",
-      "special_meaning_or_history_of__30": "Erityinen merkitys tai tämä esineen historia",
-      "name_or_description_of_asset_31": "Omaisuuserän nimi tai kuvaus",
-      "detailed_description_of_the_as_32": "Yksityiskohtainen kuvaus omaisuuserästä",
-      "where_to_find_this_asset_or_ho_33": "Mistä löytää tämän omaisuuserän tai miten päästä käsiksi siihen"
-    }
-  },
-  "myPossessions": {
-    "my_possessions_1": "Omat omaisuuseräni",
-    "an_inventory_of_the_important__2": "Tärkeiden asioiden inventaario, jotka tukevat perheesi tulevaisuutta.",
-    "family_impact_3": "Perhevaikutus:",
-    "edit_details_4": "Muokkaa tietoja",
-    "link_papers_5": "Linkitä asiakirjat (",
-    "assign_access_6": "Määritä pääsy",
-    "add_your_first_7": "Lisää ensimmäinen ",
-    "areas": {
-      "home": {
-        "title": "Kotisi ja kiinteistösi",
-        "description": "Paikat, jotka tarjoavat suojaa ja luovat muistoja.",
-        "emptyState": "Dokumentoi kiinteistösi varmistaaksesi, että perheesi suoja on turvattu.",
-        "addButton": "Kiinteistö"
+  "assets": {
+    "categories": {
+      "uncategorized": "Luokittelematon"
+    },
+    "overview": {
+      "addAsset": "Lisää omaisuuserä",
+      "addNew": "Lisää uusi",
+      "beneficiaryAllocation": {
+        "allAssigned": "Kaikille omaisuuserille on määritetty edunsaajat",
+        "subtitle": "Seuraa omaisuuden jakautumista edunsaajille",
+        "title": "Jako edunsaajille"
       },
-      "savings": {
-        "title": "Säästösi ja sijoituksesi",
-        "description": "Taloudellinen perusta, jonka olet rakentanut perheesi tulevaisuutta varten.",
-        "emptyState": "Tallenna taloudelliset tilisi, jotta perheesi pääsee käsiksi varoihin tarvittaessa.",
-        "addButton": "Tili"
+      "distribution": {
+        "subtitle": "Portfolion erittely kategorioittain",
+        "title": "Omaisuuden jakautuminen"
       },
-      "business": {
-        "title": "Yrityksesi",
-        "description": "Työ, joka tukee perhettäsi ja luo ammatillisen perintösi.",
-        "emptyState": "Dokumentoi yritystietosi varmistaaksesi sujuvan siirtymän ja jatkuvat tulot.",
-        "addButton": "Yritys"
+      "errors": {
+        "loadFailed": "Omaisuustietojen lataaminen epäonnistui"
       },
-      "valuables": {
-        "title": "Arvoesineesi ja kokoelmat",
-        "description": "Taloudellisesti tai tunteellisesti arvokkaita esineitä, jotka vaativat erityishuomiota.",
-        "emptyState": "Listaa arvokkaat esineet, jotka vaativat erityiskäsittelyä tai joilla on tunteellista arvoa.",
-        "addButton": "Arvoesine"
-      }
-    },
-    "mockData": {
-      "lakeCabin": "Järvimökki",
-      "emergencyFund": "Hätävarat",
-      "yourBusiness": "Yrityksesi",
-      "johnsonContracting": "Johnson Contracting LLC",
-      "classicCarCollection": "Klassikkoautojen kokoelma"
-    }
-  },
-  "addLiabilityModal": {
-    "title": "Lisää velka",
-    "fields": {
-      "type": "Tyyppi",
-      "provider": "Palveluntarjoaja",
-      "referenceNumber": "Viitenumero",
-      "paymentFrequency": "Maksutaajuus",
-      "notes": "Muistiinpanot"
-    },
-    "placeholders": {
-      "selectType": "Valitse tyyppi",
-      "provider": "Palveluntarjoajan nimi",
-      "referenceNumber": "Viitenumero",
-      "paymentFrequency": "Valitse taajuus",
-      "notes": "Lisämuistiinpanot"
-    },
-    "buttons": {
-      "cancel": "Peruuta",
-      "add": "Lisää velka"
-    },
-    "errors": {
-      "requiredFields": "Kaikki kentät ovat pakollisia"
-    },
-    "messages": {
-      "addedSuccessfully": "Velka lisätty onnistuneesti"
-    },
-    "types": {
-      "insurancePolicy": "Vakuutuskirja",
-      "utilityBill": "Lasku",
-      "propertyTax": "Kiinteistövero",
-      "subscriptionFee": "Tilausmaksu",
-      "maintenanceContract": "Huoltosopimus",
-      "loan": "Laina",
-      "leaseAgreement": "Vuokrasopimus",
-      "warranty": "Takuu",
-      "other": "Muu"
-    },
-    "frequencies": {
-      "monthly": "Kuukausittain",
-      "quarterly": "Neljännesvuosittain",
-      "semiAnnually": "Puolivuosittain",
-      "annually": "Vuosittain",
-      "oneTime": "Kertamaksu",
-      "asNeeded": "Tarpeen mukaan"
+      "estimatedValue": "Arvioitu arvo kaikista omaisuuseristä",
+      "subtitle": "Hallinnoi ja seuraa omaisuuttasi, kiinteistöjäsi ja sijoituksiasi",
+      "title": "Omaisuusportfolio",
+      "totalPortfolioValue": "Portfolion kokonaisarvo",
+      "viewInheritanceSummary": "Näytä perinnön yhteenveto"
     }
   },
   "calculator": {
     "badge": "Valmistautumislaskuri",
-    "title": "Laske perheesi valmistautumispistemäärä",
-    "subtitle": "Katso todellinen aika ja raha, jonka perheesi säästää, kun kaikki on järjestetty",
+    "calculateButton": "Laske säästöni",
     "inputs": {
-      "title": "Perheesi tilanne",
-      "description": "Kerro meille hieman perheestäsi henkilökohtaistaaksesi tulokset",
+      "accounts": "Kuinka monta pankkitiliä sinulla on?",
+      "accountsHelp": "Sisältää käyttötilit, säästötilit, sijoitukset",
+      "business": "Onko sinulla yritys?",
       "dependents": "Kuinka monta henkilöä on sinusta riippuvainen?",
       "dependentsHelp": "Sisältää puolison, lapset, vanhemmat",
+      "description": "Kerro meille hieman perheestäsi henkilökohtaistaaksesi tulokset",
       "income": "Mikä on perheesi kuukausitulot?",
       "incomeHelp": "Tämä auttaa laskemaan mahdolliset menetetyt tulot",
       "property": "Omistatko kiinteistöä?",
-      "business": "Onko sinulla yritys?",
-      "accounts": "Kuinka monta pankkitiliä sinulla on?",
-      "accountsHelp": "Sisältää käyttötilit, säästötilit, sijoitukset"
+      "title": "Perheesi tilanne"
     },
-    "calculateButton": "Laske säästöni",
     "results": {
-      "title": "Perheesi säästöt",
+      "ctaContext": "Useimmat perheet suorittavat asennuksen lounastauon aikana",
       "description": "Tässä on, mitä valmistautuminen tarkoittaa rakkaillesi",
-      "timeSavings": {
-        "title": "Aika, jonka perheesi säästää",
-        "without": "Ilman järjestelyä",
-        "withoutHours": "40-120 tuntia etsimistä",
-        "with": "Perintöholvilla",
-        "withMinutes": "Alle 5 minuuttia"
+      "emotional": {
+        "confidence": "Perheen luottamuksen lisäys",
+        "peace": "Valvonta ja valmistautuminen",
+        "stress": "Stressin vähennys",
+        "title": "Tunteellisen hyvinvoinnin vaikutus"
       },
+      "families": "15 000+ perhettä suojattu",
       "moneySavings": {
-        "title": "Raha, jonka perheesi säästää",
         "legalFees": "Lakimaksut rekonstruktiota varten",
         "lostWages": "Menetetyt tulot poissaolosta",
         "penalties": "Menetyt määräajat ja sakot",
+        "title": "Raha, jonka perheesi säästää",
         "total": "Kokonaissäästöt"
       },
-      "emotional": {
-        "title": "Tunteellisen hyvinvoinnin vaikutus",
-        "stress": "Stressin vähennys",
-        "confidence": "Perheen luottamuksen lisäys",
-        "peace": "Valvonta ja valmistautuminen"
-      },
+      "shareButton": "Jaa tulokset",
       "socialProof": "Liity perheisiin, jotka jo nukkuvat paremmin yöllä",
-      "families": "15 000+ perhettä suojattu",
-      "ctaContext": "Useimmat perheet suorittavat asennuksen lounastauon aikana",
-      "shareButton": "Jaa tulokset"
+      "timeSavings": {
+        "title": "Aika, jonka perheesi säästää",
+        "with": "Perintöholvilla",
+        "withMinutes": "Alle 5 minuuttia",
+        "without": "Ilman järjestelyä",
+        "withoutHours": "40-120 tuntia etsimistä"
+      },
+      "title": "Perheesi säästöt"
     },
-    "testimonial": {
-      "quote": "En koskaan tajunnut, kuinka paljon stressiä kannoin, ennen kuin sain kaiken järjestettyä. Nyt tiedän, että perheeni pärjää, mitä tahansa tapahtuu.",
-      "author": "Sarah M., kolmen lapsen äiti"
-    },
+    "shareCopied": "Tulokset kopioitu leikepöydälle!",
     "shareTitle": "Perheen valmistautumislaskurin tulokset",
-    "shareCopied": "Tulokset kopioitu leikepöydälle!"
+    "subtitle": "Katso todellinen aika ja raha, jonka perheesi säästää, kun kaikki on järjestetty",
+    "testimonial": {
+      "author": "Sarah M., kolmen lapsen äiti",
+      "quote": "En koskaan tajunnut, kuinka paljon stressiä kannoin, ennen kuin sain kaiken järjestettyä. Nyt tiedän, että perheeni pärjää, mitä tahansa tapahtuu."
+    },
+    "title": "Laske perheesi valmistautumispistemäärä"
+  },
+  "dynamicAssetForm": {
+    "401k": "401(k)",
+    "accountEmail": "Tilin sähköposti/Käyttäjänimi",
+    "accountHolderName": "Tilin haltijan nimi(t)",
+    "accountNumber": "Tilinumero",
+    "accountNumberLast4": "Tilinumero (viimeiset 4 numeroa)",
+    "accountPurpose": "Tilin tarkoitus/Kuvaus",
+    "accountType": "Tilin tyyppi",
+    "appraisedValue": "Arvioitu arvo",
+    "approximateValue": "Arvioitu arvo",
+    "assetName": "Omaisuuserän nimi",
+    "bankName": "Pankin nimi",
+    "brokerageFirm": "Arvopaperiyhtiö",
+    "cancel": "Peruuta",
+    "certificateOfDeposit": "Talletustodistus",
+    "checking": "Käyttötili",
+    "cryptocurrenciesHeld": "Hallitut kryptovaluutat",
+    "currentEstimatedValue": "Nykyinen arvioitu arvo",
+    "currentUse": "Nykyinen käyttö",
+    "description": "Kuvaus",
+    "estimatedValue": "Arvioitu arvo",
+    "exchangeInformation": "Pörssitiedot (jos soveltuu)",
+    "exchangeWallet": "Pörssilompakko",
+    "faMethod": "2FA-menetelmä (jos käytössä)",
+    "financialAdvisor": "Rahoitusneuvoja (jos on)",
+    "hardwareWallet": "Laitelompakko",
+    "individual": "Yksityishenkilö",
+    "insuranceInformation": "Vakuutustiedot",
+    "ira": "IRA",
+    "itemDescription": "Kohteen kuvaus",
+    "joint": "Yhteinen",
+    "lastAppraisalDate": "Viimeisin arviointipäivä",
+    "licensePlate": "Rekisterikilpi",
+    "loanInformation": "Lainatiedot (jos on)",
+    "locationAccessInformation": "Sijainti/Pääsytiedot",
+    "locationAddress": "Sijainti / Osoite",
+    "locationOfPropertyDocuments": "Kiinteistöasiakirjojen sijainti",
+    "locationOfSeedPhrase": "Siemenlauseen/Yksityisavainten sijainti",
+    "locationOfTitle": "Omistusasiakirjan sijainti",
+    "makeAndModel": "Merkki ja malli",
+    "moneyMarket": "Rahamarkkinatili",
+    "mortgageInformation": "Asuntolainatiedot",
+    "paperWallet": "Paperilompakko",
+    "placeholders": {
+      "1234_10": "1234",
+      "123_main_st_city_state_zip_1": "123 Main St, City, State, ZIP",
+      "account_number_12": "Tilinumero",
+      "describe_current_use_of_the_pr_7": "Kuvaile kiinteistön nykyinen käyttö",
+      "detailed_description_of_the_as_32": "Yksityiskohtainen kuvaus omaisuuserästä",
+      "do_not_enter_the_actual_seed_p_16": "Älä syötä todellista siemenlausetta tähän",
+      "e_g_10_acres_5": "esim. 10 eekkeriä, 5 000 m²",
+      "e_g_bitcoin_ethereum_15": "esim. Bitcoin, Ethereum, Litecoin",
+      "e_g_chase_bank_8": "esim. Chase Bank, Wells Fargo",
+      "e_g_commercial_agricultural_6": "esim. Liike-, maatalous-, asuin",
+      "e_g_diamond_engagement_ring_27": "esim. Timanttikihlasormus, kultaketju",
+      "e_g_fidelity_vanguard_11": "esim. Fidelity, Vanguard, Charles Schwab",
+      "e_g_gmail_facebook_22": "esim. Gmail, Facebook, LinkedIn",
+      "e_g_home_safe_bank_deposit_box_28": "esim. Kotiarkku, pankin tallelokero",
+      "e_g_main_bitcoin_wallet_14": "esim. Pääasiallinen Bitcoin-lompakko",
+      "e_g_safe_deposit_box_21": "esim. Tallelokero, kotiarkku",
+      "e_g_safe_deposit_box_filing_ca_3": "esim. Tallelokero, arkistokaappi",
+      "e_g_sms_to_phone_ending_in_123_26": "esim. SMS puhelimeen, joka päättyy 123",
+      "e_g_toyota_camry_18": "esim. Toyota Camry, Honda Civic",
+      "exchange_name_and_account_emai_17": "Pörssin nimi ja tilin sähköposti",
+      "john_doe_9": "John Doe",
+      "lender_account_number_payoff_a_20": "Lainanantaja, tilinumero, takaisinmaksusumma",
+      "lender_name_account_number_rem_2": "Lainanantajan nimi, tilinumero, jäljellä oleva saldo",
+      "name_and_contact_information_13": "Nimi ja yhteystiedot",
+      "name_or_description_of_asset_31": "Omaisuuserän nimi tai kuvaus",
+      "policy_number_and_company_29": "Vakuutuskirjan numero ja yhtiö",
+      "property_location_or_parcel_nu_4": "Kiinteistön sijainti tai tontin numero",
+      "recovery_email_phone_or_securi_25": "Palautussähköposti, puhelin tai turvakysymykset",
+      "special_meaning_or_history_of__30": "Erityinen merkitys tai tämä esineen historia",
+      "user_example_com_23": "user@example.com",
+      "vehicle_identification_number_19": "Ajoneuvon tunnistenumero",
+      "what_this_account_is_used_for_24": "Mitä tätä tiliä käytetään",
+      "where_to_find_this_asset_or_ho_33": "Mistä löytää tämän omaisuuserän tai miten päästä käsiksi siihen"
+    },
+    "platformWebsiteName": "Alustan/verkkosivuston nimi",
+    "propertyAddress": "Kiinteistön osoite",
+    "purchaseDate": "Ostopäivä",
+    "purchasePrice": "Ostohinta",
+    "recoveryInformation": "Palautustiedot",
+    "rothIra": "Roth IRA",
+    "routingNumber": "Reititysnumero",
+    "saveAsset": "Tallenna omaisuuserä",
+    "savings": "Säästötili",
+    "selectAccountType": "Valitse tilin tyyppi",
+    "selectWalletType": "Valitse lompakon tyyppi",
+    "sentimentalValue": "Tunteellinen arvo/Historia",
+    "size": "Koko (eekkerit/m²)",
+    "softwareWallet": "Ohjelmistolompakko",
+    "storageLocation": "Tallennussijainti",
+    "vinNumber": "VIN-numero",
+    "walletNameLabel": "Lompakon nimi/Otsikko",
+    "walletType": "Lompakon tyyppi",
+    "year": "Vuosi",
+    "zoningType": "Kaavoituksen tyyppi"
+  },
+  "myPossessions": {
+    "add_your_first_7": "Lisää ensimmäinen ",
+    "an_inventory_of_the_important__2": "Tärkeiden asioiden inventaario, jotka tukevat perheesi tulevaisuutta.",
+    "areas": {
+      "business": {
+        "addButton": "Yritys",
+        "description": "Työ, joka tukee perhettäsi ja luo ammatillisen perintösi.",
+        "emptyState": "Dokumentoi yritystietosi varmistaaksesi sujuvan siirtymän ja jatkuvat tulot.",
+        "title": "Yrityksesi"
+      },
+      "home": {
+        "addButton": "Kiinteistö",
+        "description": "Paikat, jotka tarjoavat suojaa ja luovat muistoja.",
+        "emptyState": "Dokumentoi kiinteistösi varmistaaksesi, että perheesi suoja on turvattu.",
+        "title": "Kotisi ja kiinteistösi"
+      },
+      "savings": {
+        "addButton": "Tili",
+        "description": "Taloudellinen perusta, jonka olet rakentanut perheesi tulevaisuutta varten.",
+        "emptyState": "Tallenna taloudelliset tilisi, jotta perheesi pääsee käsiksi varoihin tarvittaessa.",
+        "title": "Säästösi ja sijoituksesi"
+      },
+      "valuables": {
+        "addButton": "Arvoesine",
+        "description": "Taloudellisesti tai tunteellisesti arvokkaita esineitä, jotka vaativat erityishuomiota.",
+        "emptyState": "Listaa arvokkaat esineet, jotka vaativat erityiskäsittelyä tai joilla on tunteellista arvoa.",
+        "title": "Arvoesineesi ja kokoelmat"
+      }
+    },
+    "assign_access_6": "Määritä pääsy",
+    "edit_details_4": "Muokkaa tietoja",
+    "family_impact_3": "Perhevaikutus:",
+    "link_papers_5": "Linkitä asiakirjat (",
+    "mockData": {
+      "classicCarCollection": "Klassikkoautojen kokoelma",
+      "emergencyFund": "Hätävarat",
+      "johnsonContracting": "Johnson Contracting LLC",
+      "lakeCabin": "Järvimökki"
+    },
+    "my_possessions_1": "Omat omaisuuseräni"
   }
 }

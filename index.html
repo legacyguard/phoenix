@@ -6,6 +6,31 @@
     <title>Heritage Vault - Safeguarding Your Family's Future</title>
     <meta name="description" content="Preserve your legacy for generations with secure digital heritage management. Safe storage, trusted helpers, and lifetime preservation." />
     <meta name="author" content="Heritage Vault" />
+    
+    <!-- Security: Prevent indexing and crawling -->
+    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex" />
+    <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex" />
+    <meta name="bingbot" content="noindex, nofollow, noarchive, nosnippet, noimageindex" />
+    <meta name="slurp" content="noindex, nofollow, noarchive, nosnippet, noimageindex" />
+    <meta name="crawler" content="noindex, nofollow, noarchive, nosnippet, noimageindex" />
+    <meta name="spider" content="noindex, nofollow, noarchive, nosnippet, noimageindex" />
+    <meta name="bot" content="noindex, nofollow, noarchive, nosnippet, noimageindex" />
+
+    <!-- Security: Clear authentication data immediately -->
+    <script>
+      // Immediately clear any existing authentication data
+      (function() {
+        try {
+          localStorage.removeItem('legacyguard_auth');
+          localStorage.removeItem('auth_token');
+          localStorage.removeItem('user_session');
+          localStorage.removeItem('app_authenticated');
+          sessionStorage.clear();
+        } catch (e) {
+          // Silently fail if localStorage is not available
+        }
+      })();
+    </script>
 
     <!-- Favicons -->
     <link rel="icon" type="image/svg+xml" href="/shield-icon.svg" />

@@ -1,204 +1,177 @@
 {
-  "_comment": "Subscription, billing, and pricing related",
-  "subscription": {
-    "dashboard": {
-      "title": "Dashboard Abbonamenti",
-      "subtitle": "Gestisci i tuoi abbonamenti, costi e promemoria"
-    },
-    "monthlyCost": "Costo Mensile Totale",
-    "yearlyCost": "Costo Annuale Totale",
-    "activeSubscriptions": "Abbonamenti Attivi",
-    "upcomingSoon": "in arrivo",
-    "exportReport": "Esporta Report",
-    "perMonth": "al mese",
-    "perYear": "all'anno",
-    "allSubscriptions": "Tutti gli Abbonamenti",
-    "allSubscriptionsDesc": "Panoramica di tutti gli abbonamenti attivi ordinati per data di rinnovo",
-    "upcomingRenewals": "Rinnovi in Arrivo",
-    "upcomingRenewalsTitle": "Avviso Rinnovi in Arrivo",
-    "upcomingRenewalsDesc": "Hai {{count}} rinnovi in arrivo nei prossimi 90 giorni",
-    "next90Days": "Prossimi 90 Giorni",
-    "noUpcomingRenewals": "Nessun rinnovo in arrivo nei prossimi 90 giorni",
-    "renew": "Rinnova",
-    "review": "Rivedi",
-    "preferences": "Preferenze Abbonamenti",
-    "preferencesDesc": "Gestisci come vengono tracciati e gestiti i tuoi abbonamenti",
-    "enableTracking": "Abilita Tracciamento Abbonamenti",
-    "enableTrackingDesc": "Gestisci e traccia automaticamente i documenti relativi agli abbonamenti",
-    "costOptimization": "Abilita Suggerimenti di Ottimizzazione dei Costi",
-    "costOptimizationDesc": "Ricevi suggerimenti per ottimizzare e ridurre i costi degli abbonamenti",
-    "reminderPeriods": "Periodi di Promemoria Predefiniti",
-    "daysBefore": "giorni prima",
-    "loadError": "Impossibile caricare i dettagli dell'abbonamento",
-    "updateError": "Impossibile aggiornare le preferenze dell'abbonamento",
-    "preferencesUpdated": "Preferenze aggiornate con successo",
-    "tabs": {
-      "overview": "Panoramica",
-      "upcoming": "In arrivo",
-      "settings": "Impostazioni"
-    },
-    "types": {
-      "monthly": "Mensile",
-      "yearly": "Annuale",
-      "oneTime": "Una Tantum",
-      "none": "Nessuno"
-    },
-    "daysUntilRenewal": "giorni al rinnovo",
-    "days": "giorni",
-    "loadFailed": "Impossibile caricare i dati dell'abbonamento",
-    "autoRenewal": "Rinnovo Automatico: Sì",
-    "manual": "Rinnovo Automatico: No",
-    "trackingSuggestion": "Considera di abilitare il tracciamento degli abbonamenti per una migliore gestione e promemoria",
-    "type": "Tipo di Abbonamento",
-    "typePlaceholder": "Seleziona tipo",
-    "renewalCost": "Costo di Rinnovo",
-    "renewalCostPlaceholder": "Inserisci il costo di rinnovo",
-    "cancellationNotice": "Periodo di preavviso per la disdetta",
-    "noNoticeRequired": "Nessun Preavviso Richiesto",
-    "providerContact": "Info Contatto Fornitore",
-    "providerPhone": "Telefono",
-    "providerEmail": "Email",
-    "providerWebsite": "Sito Web",
-    "cancellationNoticeWarning": "Nota: La disdetta richiede un preavviso di {{days}} giorni",
-    "title": "Abbonamento",
-    "currentPlan": "Piano Attuale",
-    "active": "Attivo",
-    "planDescription": "Gestisci il tuo abbonamento e la fatturazione",
-    "planName": "Piano",
-    "premium": "Premium",
-    "free": "Gratis",
-    "nextBilling": "Prossima data di fatturazione",
-    "cancelledNotice": "Il tuo abbonamento terminerà il {{date}}",
-    "manageBilling": "Gestisci Fatturazione",
-    "resume": "Riprendi Abbonamento",
-    "cancel": "Cancella Abbonamento",
-    "upgradeToPremium": "Passa a Premium",
-    "features": {
-      "title": "Funzionalità del Piano",
-      "premiumDescription": "Hai accesso a tutte le funzionalità premium",
-      "freeDescription": "Passa a premium per sbloccare più funzionalità",
-      "unlimited": "Documenti e beni illimitati",
-      "encryption": "Crittografia avanzata",
-      "priority": "Supporto prioritario",
-      "history": "Cronologia versioni",
-      "basicWill": "Documento di testamento base",
-      "limitedGuardians": "Fino a 2 custodi",
-      "basicSupport": "Supporto community"
-    },
-    "errors": {
-      "portalFailed": "Impossibile aprire il portale di fatturazione",
-      "cancelFailed": "Impossibile cancellare l'abbonamento",
-      "resumeFailed": "Impossibile riprendere l'abbonamento"
-    },
-    "cancelSuccess": "Abbonamento cancellato con successo",
-    "resumeSuccess": "Abbonamento ripreso con successo",
-    "successTitle": "Pagamento Riuscito!",
-    "successMessage": "Grazie per il tuo acquisto. Il tuo abbonamento è stato attivato.",
-    "cancelTitle": "Pagamento Annullato",
-    "cancelMessage": "Sembra che la tua transazione sia stata annullata. Riprova o contatta il supporto."
-  },
   "pricing": {
-    "title": "Prezzi",
-    "subtitle": "Inizia gratis o passa a premium per più modi di proteggere i tuoi cari.",
-    "mainTitle": "Scegli Come Ti Prendi Cura",
-    "mainSubtitle": "Inizia gratis o aggiungi più funzionalità di protezione quando sei pronto.",
-    "freePlan": {
-      "name": "Protettore Essenziale",
-      "description": "Inizia con funzionalità base",
-      "price": "Gratis",
-      "features": {
-        "will": "1 documento di testamento",
-        "guardians": "2 Custodi",
-        "assets": "5 Beni",
-        "support": "Supporto base"
-      }
-    },
-    "premiumPlan": {
-      "name": "Pacchetto Command",
-      "description": "Perfetto per individui e famiglie",
-      "price": "9,99 € / mese",
-      "upgradeButton": "Passa Ora",
-      "features": {
-        "will": "Documenti di testamento illimitati",
-        "guardians": "Custodi illimitati",
-        "assets": "Beni illimitati",
-        "encryption": "Crittografia documenti",
-        "access": "Accesso di emergenza",
-        "support": "Supporto prioritario",
-        "history": "Cronologia versioni",
-        "templates": "Modelli legali"
-      }
-    },
     "devMode": {
-      "title": "Modalità Sviluppatore",
       "button": {
         "grant": "Modalità Dev: Concedi Accesso Premium",
         "granting": "Concessione..."
       },
       "description": "Questo pulsante è visibile solo in modalità sviluppo. Clicca per concedere istantaneamente l'accesso premium per i test.",
+      "errorMessage": "Impossibile concedere l'accesso premium sviluppatore",
       "successMessage": "Accesso premium sviluppatore concesso!",
-      "errorMessage": "Impossibile concedere l'accesso premium sviluppatore"
-    },
-    "errors": {
-      "checkoutFailed": "Impossibile avviare il processo di checkout"
-    },
-    "starter": {
-      "name": "Eredità Starter",
-      "price": "Gratis",
-      "description": "Ideale per iniziare a preservare la tua eredità digitale.",
-      "button": "Inizia Gratis",
-      "features": {
-        "storage": "{{amount}} di Archiviazione",
-        "guardians": "Fino a {{count}} Custodi",
-        "documents": "Cassaforte Documenti Base",
-        "playbook": "Manuale Operativo Base per Custodi",
-        "support": "Supporto della Community"
-      },
-      "limits": {
-        "storage": "500 MB",
-        "guardians": "3",
-        "fileSize": "10 MB per file"
-      }
-    },
-    "premium": {
-      "name": "Eredità Premium",
-      "price": "19 €",
-      "period": "/ mese",
-      "badge": "Il più Popolare",
-      "description": "Funzionalità avanzate per una gestione completa dell'eredità.",
-      "button": "Scegli Premium",
-      "features": {
-        "storage": "{{amount}} di Archiviazione",
-        "guardians": "Fino a {{count}} Custodi",
-        "manual": "Manuale per i Superstiti",
-        "support": "Supporto Email Prioritario"
-      },
-      "limits": {
-        "storage": "10 GB",
-        "guardians": "5",
-        "fileSize": "50 MB per file"
-      }
+      "title": "Modalità Sviluppatore"
     },
     "enterprise": {
-      "name": "Eredità Enterprise",
-      "price": "Personalizzato",
-      "description": "Per famiglie e aziende con esigenze complesse che richiedono il massimo livello di servizio.",
       "button": "Contatta le Vendite",
+      "description": "Per famiglie e aziende con esigenze complesse che richiedono il massimo livello di servizio.",
       "features": {
-        "storage": "{{amount}}+ di Archiviazione",
         "guardians": "Custodi Illimitati",
         "legal": "Coordinamento con Professionisti Legali",
         "support": "Account Manager Dedicato"
       },
       "limits": {
-        "storage": "500 GB",
-        "guardians": "illimitati",
-        "fileSize": "100 MB per file"
-      }
-    }
+        "storage": "500 GB"
+      },
+      "name": "Eredità Enterprise",
+      "price": "Personalizzato"
+    },
+    "errors": {
+      "checkoutFailed": "Impossibile avviare il processo di checkout"
+    },
+    "freePlan": {
+      "description": "Inizia con funzionalità base",
+      "features": {
+        "assets": "5 Beni",
+        "guardians": "2 Custodi",
+        "support": "Supporto base",
+        "will": "1 documento di testamento"
+      },
+      "name": "Protettore Essenziale",
+      "price": "Gratis"
+    },
+    "mainSubtitle": "Inizia gratis o aggiungi più funzionalità di protezione quando sei pronto.",
+    "mainTitle": "Scegli Come Ti Prendi Cura",
+    "premium": {
+      "badge": "Il più Popolare",
+      "button": "Scegli Premium",
+      "description": "Funzionalità avanzate per una gestione completa dell'eredità.",
+      "features": {
+        "manual": "Manuale per i Superstiti",
+        "support": "Supporto Email Prioritario"
+      },
+      "limits": {
+        "guardians": "5",
+        "storage": "10 GB"
+      },
+      "name": "Eredità Premium",
+      "period": "/ mese",
+      "price": "19 €"
+    },
+    "premiumPlan": {
+      "description": "Perfetto per individui e famiglie",
+      "features": {
+        "access": "Accesso di emergenza",
+        "assets": "Beni illimitati",
+        "encryption": "Crittografia documenti",
+        "guardians": "Custodi illimitati",
+        "history": "Cronologia versioni",
+        "support": "Supporto prioritario",
+        "templates": "Modelli legali",
+        "will": "Documenti di testamento illimitati"
+      },
+      "name": "Pacchetto Command",
+      "price": "9,99 € / mese",
+      "upgradeButton": "Passa Ora"
+    },
+    "starter": {
+      "button": "Inizia Gratis",
+      "description": "Ideale per iniziare a preservare la tua eredità digitale.",
+      "features": {
+        "documents": "Cassaforte Documenti Base",
+        "playbook": "Manuale Operativo Base per Custodi",
+        "support": "Supporto della Community"
+      },
+      "limits": {
+        "guardians": "3",
+        "storage": "500 MB"
+      },
+      "name": "Eredità Starter",
+      "price": "Gratis"
+    },
+    "title": "Prezzi"
+  },
+  "subscription": {
+    "active": "Attivo",
+    "activeSubscriptions": "Abbonamenti Attivi",
+    "allSubscriptions": "Tutti gli Abbonamenti",
+    "allSubscriptionsDesc": "Panoramica di tutti gli abbonamenti attivi ordinati per data di rinnovo",
+    "autoRenewal": "Rinnovo Automatico: Sì",
+    "cancel": "Cancella Abbonamento",
+    "cancelMessage": "Sembra che la tua transazione sia stata annullata. Riprova o contatta il supporto.",
+    "cancelSuccess": "Abbonamento cancellato con successo",
+    "cancelTitle": "Pagamento Annullato",
+    "cancellationNotice": "Periodo di preavviso per la disdetta",
+    "costOptimization": "Abilita Suggerimenti di Ottimizzazione dei Costi",
+    "costOptimizationDesc": "Ricevi suggerimenti per ottimizzare e ridurre i costi degli abbonamenti",
+    "currentPlan": "Piano Attuale",
+    "dashboard": {
+      "subtitle": "Gestisci i tuoi abbonamenti, costi e promemoria",
+      "title": "Dashboard Abbonamenti"
+    },
+    "days": "giorni",
+    "daysBefore": "giorni prima",
+    "daysUntilRenewal": "giorni al rinnovo",
+    "enableTracking": "Abilita Tracciamento Abbonamenti",
+    "enableTrackingDesc": "Gestisci e traccia automaticamente i documenti relativi agli abbonamenti",
+    "errors": {
+      "cancelFailed": "Impossibile cancellare l'abbonamento",
+      "portalFailed": "Impossibile aprire il portale di fatturazione",
+      "resumeFailed": "Impossibile riprendere l'abbonamento"
+    },
+    "exportReport": "Esporta Report",
+    "features": {
+      "basicSupport": "Supporto community",
+      "basicWill": "Documento di testamento base",
+      "encryption": "Crittografia avanzata",
+      "freeDescription": "Passa a premium per sbloccare più funzionalità",
+      "history": "Cronologia versioni",
+      "limitedGuardians": "Fino a 2 custodi",
+      "premiumDescription": "Hai accesso a tutte le funzionalità premium",
+      "priority": "Supporto prioritario",
+      "title": "Funzionalità del Piano",
+      "unlimited": "Documenti e beni illimitati"
+    },
+    "free": "Gratis",
+    "loadError": "Impossibile caricare i dettagli dell'abbonamento",
+    "manageBilling": "Gestisci Fatturazione",
+    "manual": "Rinnovo Automatico: No",
+    "monthlyCost": "Costo Mensile Totale",
+    "next90Days": "Prossimi 90 Giorni",
+    "nextBilling": "Prossima data di fatturazione",
+    "noUpcomingRenewals": "Nessun rinnovo in arrivo nei prossimi 90 giorni",
+    "perMonth": "al mese",
+    "perYear": "all'anno",
+    "planDescription": "Gestisci il tuo abbonamento e la fatturazione",
+    "planName": "Piano",
+    "preferences": "Preferenze Abbonamenti",
+    "preferencesDesc": "Gestisci come vengono tracciati e gestiti i tuoi abbonamenti",
+    "preferencesUpdated": "Preferenze aggiornate con successo",
+    "premium": "Premium",
+    "reminderPeriods": "Periodi di Promemoria Predefiniti",
+    "renew": "Rinnova",
+    "resume": "Riprendi Abbonamento",
+    "resumeSuccess": "Abbonamento ripreso con successo",
+    "review": "Rivedi",
+    "successMessage": "Grazie per il tuo acquisto. Il tuo abbonamento è stato attivato.",
+    "successTitle": "Pagamento Riuscito!",
+    "tabs": {
+      "overview": "Panoramica",
+      "settings": "Impostazioni",
+      "upcoming": "In arrivo"
+    },
+    "title": "Abbonamento",
+    "types": {
+      "monthly": "Mensile",
+      "yearly": "Annuale"
+    },
+    "upcomingRenewals": "Rinnovi in Arrivo",
+    "upcomingRenewalsTitle": "Avviso Rinnovi in Arrivo",
+    "upcomingSoon": "in arrivo",
+    "updateError": "Impossibile aggiornare le preferenze dell'abbonamento",
+    "upgradeToPremium": "Passa a Premium",
+    "yearlyCost": "Costo Annuale Totale"
   },
   "upgradeCard": {
-    "pricing_1": "/pricing",
-    "defaultButtonText": "Passa al Pacchetto Command"
+    "defaultButtonText": "Passa al Pacchetto Command",
+    "pricing_1": "/pricing"
   }
 }

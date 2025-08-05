@@ -1,211 +1,143 @@
 {
-  "_comment": "Shared translations used across the application",
-  "settings": {
-    "title": "Einstellungen",
-    "subtitle": "Verwalten Sie Ihre Kontoeinstellungen und Sicherheitseinstellungen.",
-    "loading": {
-      "masculine": "Lade Ihre Kontoeinstellungen...",
-      "feminine": "Lade Ihre Kontoeinstellungen...",
-      "neutral": "Lade Ihre Kontoeinstellungen..."
-    },
-    "profile": {
-      "title": "Profilinformationen",
-      "description": "Aktualisieren Sie Ihre persönlichen Informationen und Einstellungen.",
-      "emailAddress": "E-Mail-Adresse",
-      "emailCannotBeChanged": "Ihre E-Mail-Adresse kann nicht geändert werden.",
-      "firstName": "Vorname",
-      "firstNamePlaceholder": "Geben Sie Ihren Vornamen ein",
-      "lastName": "Nachname",
-      "lastNamePlaceholder": "Geben Sie Ihren Nachnamen ein",
-      "saving": "Speichern...",
-      "saveChanges": "Änderungen speichern"
-    },
-    "security": {
-      "title": "Sicherheit",
-      "description": "Verwalten Sie die Sicherheit und den Zugriff auf Ihr Konto.",
-      "changePassword": "Passwort ändern",
-      "currentPassword": "Aktuelles Passwort",
-      "currentPasswordPlaceholder": "Geben Sie Ihr aktuelles Passwort ein",
-      "newPassword": "Neues Passwort",
-      "newPasswordPlaceholder": "Geben Sie ein neues Passwort ein",
-      "confirmNewPassword": "Neues Passwort bestätigen",
-      "confirmNewPasswordPlaceholder": "Bestätigen Sie das neue Passwort",
-      "updating": "Wird aktualisiert...",
-      "updatePassword": "Passwort aktualisieren",
-      "twoFactorAuth": "Zwei-Faktor-Authentifizierung",
-      "enable2FA": "2FA aktivieren",
-      "2FADescription": "Fügen Sie Ihrem Konto eine zusätzliche Sicherheitsebene hinzu. (Demnächst verfügbar)"
-    },
-    "accountManagement": {
-      "title": "Kontoverwaltung",
-      "description": "Dauerhafte Kontoaktionen - bitte gehen Sie mit Vorsicht vor.",
-      "deleteAccountTitle": "Konto löschen",
-      "deleteAccountWarning": "Diese Aktion ist unumkehrbar und löscht dauerhaft alle Ihre Daten, einschließlich hochgeladener Dokumente und vorbereiteter Anweisungen. Ihre digitalen Erbinformationen werden vollständig von unseren Systemen entfernt.",
-      "deleteMyAccount": "Mein Konto löschen",
-      "confirmTitle": "Sind Sie absolut sicher?",
-      "confirmDescription": "Diese Aktion kann nicht rückgängig gemacht werden. Dadurch wird Ihr Konto dauerhaft gelöscht und alle Ihre Daten von unseren Servern entfernt.",
-      "confirmEmailPrompt": "Bitte geben Sie Ihre E-Mail-Adresse {{email}} zur Bestätigung ein:",
-      "emailPlaceholder": "Geben Sie Ihre E-Mail-Adresse ein",
-      "deleting": "Wird gelöscht...",
-      "deleteAccount": "Konto löschen"
-    },
-    "errors": {
-      "loadProfile": "Profilinformationen konnten nicht geladen werden.",
-      "updateProfile": "Profil konnte nicht aktualisiert werden.",
-      "passwordFieldsRequired": "Bitte füllen Sie alle Passwortfelder aus.",
-      "passwordsDoNotMatch": "Die neuen Passwörter stimmen nicht überein.",
-      "passwordTooShort": "Das neue Passwort muss mindestens 6 Zeichen lang sein.",
-      "updatePassword": "Passwort konnte nicht aktualisiert werden.",
-      "emailDoesNotMatch": "Die E-Mail-Adresse stimmt nicht überein.",
-      "deleteAccountSupport": "Die Löschung des Kontos muss über den Support angefordert werden. Bitte kontaktieren Sie uns für Unterstützung.",
-      "deleteAccount": "Konto konnte nicht gelöscht werden."
-    },
-    "success": {
-      "profileUpdated": "Profil erfolgreich aktualisiert.",
-      "passwordUpdated": "Passwort erfolgreich aktualisiert."
-    },
-    "privacySettings": {
-      "privacy_settings_1": "Datenschutzeinstellungen",
-      "control_how_your_documents_are_2": "Steuern Sie, wie Ihre Dokumente verarbeitet und gespeichert werden",
-      "default_processing_mode_3": "Standard-Verarbeitungsmodus",
-      "choose_how_documents_are_proce_4": "Wählen Sie, wie Dokumente standardmäßig verarbeitet werden",
-      "hybrid_mode_recommended_5": "Hybrid-Modus (Empfohlen)",
-      "combines_local_and_cloud_ai_fo_6": "Kombiniert lokale und Cloud-KI für optimale Leistung und Datenschutz",
-      "local_only_privacy_mode_7": "Nur lokaler Datenschutzmodus",
-      "processes_documents_entirely_i_8": "Verarbeitet Dokumente vollständig in Ihrem Browser für maximalen Datenschutz",
-      "note_9": "Hinweis: ",
-      "you_can_always_override_this_s_10": "Sie können diese Einstellung beim Hochladen einzelner Dokumente immer überschreiben"
-    }
-  },
-  "dataTransparency": {
-    "loadingMessage": "Lade Ihre Datentransparenz-Informationen...",
-    "loadingError": "Transparenzdaten konnten nicht geladen werden. Bitte versuchen Sie es später erneut.",
-    "title": "Ihre Daten, Ihre Kontrolle",
-    "description": "Wir glauben an totale Transparenz. Hier ist genau, wie wir mit Ihren Informationen umgehen.",
-    "dataFlow": {
-      "whereDataLives": "Wo Ihre Daten leben",
-      "collection": "Sammlung",
-      "storage": "Speicherung",
-      "processing": "Verarbeitung",
-      "sharing": "Teilen"
-    },
-    "recentActivity": {
-      "title": "Letzte Aktivität",
-      "premiumTitle": "Entsperren Sie Ihr permanentes Überwachungsprotokoll",
-      "premiumText": "Ihr 30-tägiges Betriebsprotokoll bietet grundlegende Sicherheit. Für maximale Rechenschaftspflicht und Seelenfrieden upgraden Sie zum Command Package, um eine vollständige, unveränderliche Prüfhistorie jeder in Ihrem Tresor durchgeführten Aktion für immer zu erhalten."
-    },
-    "dataOwnership": {
-      "title": "Dateneigentum",
-      "description": "Sie besitzen Ihre Daten, immer. Sie können jederzeit eine vollständige Kopie herunterladen.",
-      "downloadButton": {
-        "masculine": "Mein Datenarchiv herunterladen",
-        "feminine": "Mein Datenarchiv herunterladen",
-        "neutral": "Mein Datenarchiv herunterladen"
-      }
-    }
-  },
   "cookies": {
-    "bannerText": "Wir verwenden essentielle Cookies, um die ordnungsgemäße Funktion unserer Website zu gewährleisten. Mit Ihrer Zustimmung können wir auch analytische Cookies verwenden, um unsere Dienste zu verbessern.",
-    "declineButton": "Ablehnen",
-    "acceptButton": "Alle akzeptieren",
-    "learnMoreLink": "Mehr erfahren",
     "policy": {
-      "title": "Cookie-Richtlinie",
-      "subtitle": "Verstehen Sie, wie wir Cookies verwenden, um Ihre Erfahrung zu verbessern und dabei Ihre Privatsphäre zu respektieren",
-      "lastUpdated": "Zuletzt aktualisiert",
-      "required": "Erforderlich",
-      "purpose": "Zweck",
-      "examples": "Beispiele",
-      "overview": {
-        "title": "Wichtige Informationen",
-        "intro": "Diese Cookie-Richtlinie erklärt, wie LegacyGuard Cookies und ähnliche Technologien verwendet, um Sie zu erkennen, wenn Sie unsere Website besuchen. Sie erklärt, was diese Technologien sind und warum wir sie verwenden, sowie Ihre Rechte zur Kontrolle unserer Nutzung.",
-        "point1": "Wir verwenden Cookies, um die grundlegenden Funktionen unserer Website zu gewährleisten",
-        "point2": "Einige Cookies sind essentiell und können nicht deaktiviert werden",
-        "point3": "Sie können nicht-essentielle Cookies über unseren Zustimmungsmanager kontrollieren",
-        "point4": "Wir verkaufen niemals Ihre Daten oder verwenden Cookies für invasive Verfolgung"
-      },
-      "categories": {
-        "title": "Cookie-Kategorien, die wir verwenden"
-      },
-      "necessary": {
-        "title": "Strikt notwendige Cookies",
-        "description": "Diese Cookies sind für die ordnungsgemäße Funktion der Website erforderlich",
-        "purpose": "Ermöglichen Kernfunktionen wie Sicherheit, Identitätsverifizierung und Netzwerkverwaltung. Diese Cookies können nicht deaktiviert werden.",
-        "examples": {
-          "auth": "Hält Sie sicher angemeldet",
-          "session": "Behält Ihren Sitzungsstatus bei",
-          "csrf": "Schützt vor Cross-Site-Request-Forgery",
-          "consent": "Merkt sich Ihre Cookie-Einstellungen"
-        }
-      },
       "analytics": {
-        "title": "Analyse-Cookies",
         "description": "Helfen uns zu verstehen, wie Besucher mit unserer Website interagieren",
-        "purpose": "Sammeln anonyme Informationen darüber, wie Sie unsere Website nutzen, um die Benutzererfahrung zu verbessern und Probleme zu identifizieren.",
         "examples": {
           "ga": "Google Analytics-Verfolgung",
           "gid": "Unterscheidet Benutzer",
           "session": "Gruppiert Aktivitäten innerhalb einer Sitzung"
-        }
+        },
+        "purpose": "Sammeln anonyme Informationen darüber, wie Sie unsere Website nutzen, um die Benutzererfahrung zu verbessern und Probleme zu identifizieren.",
+        "title": "Analyse-Cookies"
+      },
+      "categories": {
+        "title": "Cookie-Kategorien, die wir verwenden"
+      },
+      "contact": {
+        "address": "Adresse",
+        "addressDetails": "LegacyGuard Ltd, Data Protection Office, 123 Privacy Street, Dublin, Ireland",
+        "description": "Wenn Sie Fragen zu unserer Verwendung von Cookies oder dieser Cookie-Richtlinie haben, kontaktieren Sie uns bitte:",
+        "email": "E-Mail",
+        "title": "Kontaktieren Sie uns bezüglich Cookies"
+      },
+      "examples": "Beispiele",
+      "lastUpdated": "Zuletzt aktualisiert",
+      "manage": {
+        "title": "Ihre Cookie-Einstellungen verwalten"
       },
       "marketing": {
-        "title": "Marketing-Cookies",
         "description": "Werden verwendet, um relevante Werbung zu liefern",
-        "purpose": "Verfolgen Besucher über Websites hinweg, um Anzeigen anzuzeigen, die relevant und ansprechend für einzelne Benutzer sind.",
         "examples": {
           "facebook": "Facebook-Werbung",
           "google": "Google Ads Conversion-Tracking"
-        }
+        },
+        "purpose": "Verfolgen Besucher über Websites hinweg, um Anzeigen anzuzeigen, die relevant und ansprechend für einzelne Benutzer sind.",
+        "title": "Marketing-Cookies"
+      },
+      "necessary": {
+        "description": "Diese Cookies sind für die ordnungsgemäße Funktion der Website erforderlich",
+        "examples": {
+          "auth": "Hält Sie sicher angemeldet",
+          "consent": "Merkt sich Ihre Cookie-Einstellungen",
+          "csrf": "Schützt vor Cross-Site-Request-Forgery",
+          "session": "Behält Ihren Sitzungsstatus bei"
+        },
+        "purpose": "Ermöglichen Kernfunktionen wie Sicherheit, Identitätsverifizierung und Netzwerkverwaltung. Diese Cookies können nicht deaktiviert werden.",
+        "title": "Strikt notwendige Cookies"
+      },
+      "overview": {
+        "intro": "Diese Cookie-Richtlinie erklärt, wie LegacyGuard Cookies und ähnliche Technologien verwendet, um Sie zu erkennen, wenn Sie unsere Website besuchen. Sie erklärt, was diese Technologien sind und warum wir sie verwenden, sowie Ihre Rechte zur Kontrolle unserer Nutzung.",
+        "point1": "Wir verwenden Cookies, um die grundlegenden Funktionen unserer Website zu gewährleisten",
+        "point2": "Einige Cookies sind essentiell und können nicht deaktiviert werden",
+        "point3": "Sie können nicht-essentielle Cookies über unseren Zustimmungsmanager kontrollieren",
+        "point4": "Wir verkaufen niemals Ihre Daten oder verwenden Cookies für invasive Verfolgung",
+        "title": "Wichtige Informationen"
       },
       "preferences": {
-        "title": "Präferenz-Cookies",
         "description": "Merken sich Ihre Präferenzen und Einstellungen",
-        "purpose": "Ermöglichen es der Website, sich an Ihre Entscheidungen zu erinnern (wie Sprache oder Region) und erweiterte, personalisierte Funktionen bereitzustellen.",
         "examples": {
-          "theme": "Ihr gewähltes Theme (hell/dunkel)",
           "language": "Ihre bevorzugte Sprache",
+          "theme": "Ihr gewähltes Theme (hell/dunkel)",
           "ui": "UI-Anpassungspräferenzen"
-        }
+        },
+        "purpose": "Ermöglichen es der Website, sich an Ihre Entscheidungen zu erinnern (wie Sprache oder Region) und erweiterte, personalisierte Funktionen bereitzustellen.",
+        "title": "Präferenz-Cookies"
       },
+      "purpose": "Zweck",
+      "required": "Erforderlich",
+      "subtitle": "Verstehen Sie, wie wir Cookies verwenden, um Ihre Erfahrung zu verbessern und dabei Ihre Privatsphäre zu respektieren",
+      "title": "Cookie-Richtlinie",
       "yourRights": {
-        "title": "Ihre Rechte",
         "description": "Sie haben volle Kontrolle über Ihre Cookie-Einstellungen",
         "right1": "Zugang zu Informationen über die von uns verwendeten Cookies",
         "right2": "Zustimmung für nicht-essentielle Cookies jederzeit widerrufen",
         "right3": "Cookies aus Ihrem Browser löschen",
-        "right4": "Abmeldung von Analyse- und Marketing-Cookies"
-      },
-      "manage": {
-        "title": "Ihre Cookie-Einstellungen verwalten"
-      },
-      "contact": {
-        "title": "Kontaktieren Sie uns bezüglich Cookies",
-        "description": "Wenn Sie Fragen zu unserer Verwendung von Cookies oder dieser Cookie-Richtlinie haben, kontaktieren Sie uns bitte:",
-        "email": "E-Mail",
-        "address": "Adresse",
-        "addressDetails": "LegacyGuard Ltd, Data Protection Office, 123 Privacy Street, Dublin, Ireland"
+        "right4": "Abmeldung von Analyse- und Marketing-Cookies",
+        "title": "Ihre Rechte"
       }
     }
   },
-  "genderPreference": {
-    "title": "Sprache & Pronomen",
-    "description": "Wählen Sie, wie die Anwendung Sie anspricht. Dies hilft uns, korrekte Grammatik in Sprachen zu verwenden, die Geschlechtsübereinstimmung erfordern.",
-    "privacyNote": "Diese Einstellung wird lokal gespeichert und nur für grammatikalische Genauigkeit verwendet. Sie wird niemals geteilt oder für andere Zwecke verwendet.",
-    "selectLabel": "Wie möchten Sie angesprochen werden?",
-    "options": {
-      "masculine": "Männliche Formen (er/ihm)",
-      "feminine": "Weibliche Formen (sie/ihr)",
-      "neutral": "Neutrale Formen (sie/ihnen)"
+  "dataTransparency": {
+    "dataFlow": {
+      "collection": "Sammlung",
+      "processing": "Verarbeitung",
+      "sharing": "Teilen",
+      "storage": "Speicherung",
+      "whereDataLives": "Wo Ihre Daten leben"
     },
-    "save": "Einstellung speichern",
-    "saving": "Speichern...",
-    "saveSuccess": "Ihre Spracheinstellung wurde gespeichert",
-    "saveError": "Speichern der Einstellung fehlgeschlagen. Bitte versuchen Sie es erneut.",
+    "dataOwnership": {
+      "description": "Sie besitzen Ihre Daten, immer. Sie können jederzeit eine vollständige Kopie herunterladen.",
+      "downloadButton": {
+        "feminine": "Mein Datenarchiv herunterladen",
+        "masculine": "Mein Datenarchiv herunterladen",
+        "neutral": "Mein Datenarchiv herunterladen"
+      },
+      "title": "Dateneigentum"
+    },
+    "description": "Wir glauben an totale Transparenz. Hier ist genau, wie wir mit Ihren Informationen umgehen.",
+    "loadingError": "Transparenzdaten konnten nicht geladen werden. Bitte versuchen Sie es später erneut.",
+    "loadingMessage": "Lade Ihre Datentransparenz-Informationen...",
+    "recentActivity": {
+      "premiumText": "Ihr 30-tägiges Betriebsprotokoll bietet grundlegende Sicherheit. Für maximale Rechenschaftspflicht und Seelenfrieden upgraden Sie zum Command Package, um eine vollständige, unveränderliche Prüfhistorie jeder in Ihrem Tresor durchgeführten Aktion für immer zu erhalten.",
+      "premiumTitle": "Entsperren Sie Ihr permanentes Überwachungsprotokoll",
+      "title": "Letzte Aktivität"
+    },
+    "title": "Ihre Daten, Ihre Kontrolle"
+  },
+  "genderPreference": {
+    "description": "Wählen Sie, wie die Anwendung Sie anspricht. Dies hilft uns, korrekte Grammatik in Sprachen zu verwenden, die Geschlechtsübereinstimmung erfordern.",
     "examples": {
-      "title": "Dies beeinflusst, wie Text in bestimmten Sprachen erscheint:",
+      "agreement": "Adjektive und Verbformen, die Geschlechtsübereinstimmung erfordern",
       "greeting": "Begrüßungen und Willkommensnachrichten",
       "possessive": "Verweise auf Ihre Dokumente und Vermögenswerte",
-      "agreement": "Adjektive und Verbformen, die Geschlechtsübereinstimmung erfordern"
+      "title": "Dies beeinflusst, wie Text in bestimmten Sprachen erscheint:"
+    },
+    "options": {
+      "feminine": "Weibliche Formen (sie/ihr)",
+      "masculine": "Männliche Formen (er/ihm)",
+      "neutral": "Neutrale Formen (sie/ihnen)"
+    },
+    "privacyNote": "Diese Einstellung wird lokal gespeichert und nur für grammatikalische Genauigkeit verwendet. Sie wird niemals geteilt oder für andere Zwecke verwendet.",
+    "save": "Einstellung speichern",
+    "saveError": "Speichern der Einstellung fehlgeschlagen. Bitte versuchen Sie es erneut.",
+    "saveSuccess": "Ihre Spracheinstellung wurde gespeichert",
+    "saving": "Speichern...",
+    "selectLabel": "Wie möchten Sie angesprochen werden?",
+    "title": "Sprache & Pronomen"
+  },
+  "settings": {
+    "privacySettings": {
+      "choose_how_documents_are_proce_4": "Wählen Sie, wie Dokumente standardmäßig verarbeitet werden",
+      "combines_local_and_cloud_ai_fo_6": "Kombiniert lokale und Cloud-KI für optimale Leistung und Datenschutz",
+      "control_how_your_documents_are_2": "Steuern Sie, wie Ihre Dokumente verarbeitet und gespeichert werden",
+      "default_processing_mode_3": "Standard-Verarbeitungsmodus",
+      "hybrid_mode_recommended_5": "Hybrid-Modus (Empfohlen)",
+      "local_only_privacy_mode_7": "Nur lokaler Datenschutzmodus",
+      "note_9": "Hinweis: ",
+      "privacy_settings_1": "Datenschutzeinstellungen",
+      "processes_documents_entirely_i_8": "Verarbeitet Dokumente vollständig in Ihrem Browser für maximalen Datenschutz",
+      "you_can_always_override_this_s_10": "Sie können diese Einstellung beim Hochladen einzelner Dokumente immer überschreiben"
     }
   }
 }

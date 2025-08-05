@@ -1,253 +1,195 @@
 {
-  "_comment": "Shared translations used across the application",
-  "documentTypes": {
-    "realEstateDeed": "Grundbuchauszug",
-    "birthCertificate": "Geburtsurkunde",
-    "insurancePolicy": "Versicherungspolice",
-    "lastWill": "Testament",
-    "employmentContract": "Arbeitsvertrag",
-    "passport": "Reisepass",
-    "drivingLicense": "Führerschein",
-    "bankStatement": "Kontoauszug",
-    "investmentCertificate": "Anlagezertifikat",
-    "energyContract": "Energievertrag",
-    "softwareLicense": "Softwarelizenz",
-    "subscriptionService": "Abonnementdienst",
-    "other": "Sonstiges"
-  },
-  "documentUpload": {
-    "fileUploadedSuccess": "Datei erfolgreich hochgeladen!",
-    "fileUploadFailed": "Hochladen der Datei fehlgeschlagen. Bitte versuchen Sie es erneut.",
-    "fileTooLarge": "Die ausgewählte Datei ist zu groß. Die maximale Größe beträgt {{maxSize}} MB.",
-    "fillRequiredFields": "Bitte füllen Sie alle erforderlichen Felder aus.",
-    "loginToSave": "Sie müssen angemeldet sein, um Dokumente zu speichern.",
-    "saved": "Dokument erfolgreich gespeichert!",
-    "failedSave": "Speichern des Dokuments fehlgeschlagen. Bitte versuchen Sie es erneut.",
-    "detailsTitle": "Dokumentdetails",
-    "detailsSubtitle": "Fügen Sie Informationen zu Ihrem hochgeladenen Dokument hinzu.",
-    "namePlaceholder": "Geben Sie den Dokumentnamen ein",
-    "typePlaceholder": "Wählen Sie den Dokumenttyp",
-    "countryPlaceholder": "Wählen Sie ein Land",
-    "pickDate": "Wählen Sie ein Datum",
-    "title": "Dokument hochladen",
-    "subtitle": "Laden Sie rechtliche und persönliche Dokumente sicher hoch.",
-    "browseFiles": "Dateien durchsuchen",
-    "chooseDifferent": "Andere Datei wählen",
-    "uploadButton": "Dokument hochladen",
-    "storageLimitReached": "Datei kann nicht hochgeladen werden. Sie haben noch {{remaining}} Speicherplatz, aber diese Datei ist {{fileSize}} groß. Bitte upgraden Sie Ihren Plan oder entfernen Sie einige vorhandene Dateien."
-  },
-  "documentUploader": {
-    "smart_document_upload_2": "Intelligentes Dokumenten-Upload",
-    "upload_any_document_and_our_ai_3": "Laden Sie ein Dokument hoch und unsere KI klassifiziert es automatisch für Sie",
-    "please_upload_an_image_or_pdf__1": "Bitte laden Sie eine Bild- oder PDF-Datei hoch",
-    "image_application_pdf_4": "image/*,application/pdf",
-    "0_0_48_48_5": "0 0 48 48",
-    "m24_12v12m0_0l_4_4m4_4l4_4m10__6": "M24 12v12m0 0l-4 4m4-4l4 4m10-6",
-    "drop_your_document_here_or_cli_7": "Legen Sie Ihr Dokument hier ab oder klicken Sie zum Durchsuchen",
-    "supports_images_and_pdfs_up_to_8": "Unterstützt Bilder und PDFs bis zu 10MB",
-    "document_analysis_complete_10": "Dokumentenanalyse abgeschlossen",
-    "document_type_11": "Dokumententyp",
-    "suggested_title_12": "Vorgeschlagener Titel",
-    "confidence": "Vertrauen",
-    "ai_analysis_13": "KI-Analyse",
-    "continue_with_this_classificat_14": "Mit dieser Klassifizierung fortfahren",
-    "change_category_15": "Kategorie ändern",
-    "documents_we_can_process_16": "Dokumente, die wir verarbeiten können:",
-    "insurance_policies_life_health_17": "Versicherungspolicen (Lebens-, Kranken-, Haus-, Auto-)",
-    "property_deeds_and_titles_18": "Grundstücksurkunden und Titel",
-    "vehicle_ownership_documents_19": "Fahrzeugeigentumsdokumente",
-    "bank_and_investment_statements_20": "Bank- und Anlageauszüge",
-    "wills_and_estate_planning_docu_21": "Testamente und Nachlassplanungsdokumente",
-    "business_contracts_and_ownersh_22": "Geschäftsverträge und Eigentumspapiere",
-    "personal_identification_docume_23": "Persönliche Identifikationsdokumente",
-    "tax_returns_and_documents_24": "Steuererklärungen und Dokumente",
-    "categoryDescriptions": {
-      "insurance_policy": "Lebens-, Kranken-, Haus-, Auto- oder Invaliditätsversicherung",
-      "property_deed": "Grundstückseigentumsdokumente und Urkunden",
-      "vehicle_title": "Auto-, Boot- oder andere Fahrzeugeigentumspapiere",
-      "bank_statement": "Bankkontoauszüge und Dokumente",
-      "investment_statement": "Anlage- und Rentenkontoauszüge",
-      "will_or_trust": "Testamente, Trusts und Nachlassplanungsdokumente",
-      "business_document": "Geschäftseigentum und wichtige Verträge",
-      "personal_id": "Pässe, Führerscheine, Geburtsurkunden",
-      "tax_document": "Steuererklärungen und zugehörige Dokumente",
-      "medical_document": "Medizinische Aufzeichnungen und Gesundheitsrichtlinien",
-      "other": "Andere wichtige Dokumente"
-    },
-    "errors": {
-      "fileTypeError": "Bitte laden Sie eine Bild- oder PDF-Datei hoch",
-      "processingError": "Dokument konnte nicht verarbeitet werden",
-      "uploadError": "Dokument konnte nicht hochgeladen werden",
-      "classificationError": "Dokument konnte nicht klassifiziert werden"
-    }
-  },
-  "vault": {
-    "title": "Der Tresor",
-    "subtitle": "Ihr sicheres Inventar aller finanziellen Vermögenswerte und wertvollen Besitztümer.",
-    "errorLoadingAssets": "Laden Ihrer Vermögenswerte fehlgeschlagen. Bitte versuchen Sie es erneut.",
-    "letsBuildInventory": "Lassen Sie uns Ihr Inventar erstellen",
-    "addProperty": "Immobilie hinzufügen",
-    "addFinances": "Finanzen hinzufügen",
-    "addVehicle": "Fahrzeug hinzufügen",
-    "addDigitalAsset": "Digitalen Vermögenswert hinzufügen",
-    "addPersonalItem": "Persönlichen Gegenstand hinzufügen",
-    "addOther": "Etwas anderes hinzufügen...",
-    "confirmDeletion": "Sind Sie sicher, dass Sie \"{{assetName}}\" löschen möchten?",
-    "errorDeletingAsset": "Löschen des Vermögenswerts fehlgeschlagen. Bitte versuchen Sie es erneut.",
-    "searchPlaceholder": "Ihre Vermögenswerte durchsuchen...",
-    "addAsset": "Vermögenswert hinzufügen",
-    "totalAssets": "Gesamtvermögen",
-    "totalValue": "Gesamtwert",
-    "categories": "Kategorien",
-    "noAssetsFound": "Keine Vermögenswerte gefunden, die \"{{searchQuery}}\" entsprechen",
-    "startAddingAssets": "Beginnen Sie mit dem Hinzufügen von Vermögenswerten, um Ihr Inventar zu erstellen",
-    "addNewAsset": "Neuen Vermögenswert hinzufügen",
-    "property": "Immobilie",
-    "finances": "Finanzen",
-    "vehicle": "Fahrzeug",
-    "digital": "Digital",
-    "personal": "Persönlich",
-    "other": "Sonstiges",
-    "fileUpload": {
-      "title": "Dateien hochladen",
-      "dragDropText": "Dateien hier ziehen und ablegen",
-      "clickToSelect": "oder klicken zum Durchsuchen",
-      "maxSize": "Maximale Dateigröße: {{size}}",
-      "encryptFiles": "Dateien verschlüsseln",
-      "encryptDescription": "Dateien werden vor dem Upload verschlüsselt für maximale Sicherheit",
-      "tags": "Tags",
-      "addTag": "Tag hinzufügen...",
-      "selectedFiles": "Ausgewählte Dateien",
-      "uploading": "Wird hochgeladen...",
-      "uploadFiles": "Dateien hochladen",
-      "uploadSuccess": "{{name}} erfolgreich hochgeladen",
-      "uploadError": "Hochladen von {{name}} fehlgeschlagen",
-      "maxFilesReached": "Maximal {{max}} Dateien erlaubt",
-      "encryptionInfo": "Ihre Dateien werden mit AES-256-Verschlüsselung verschlüsselt. Nur Sie können sie entschlüsseln."
-    },
-    "fileList": {
-      "title": "Vermögensdateien",
-      "noFiles": "Noch keine Dateien hochgeladen",
-      "uploadFirst": "Laden Sie Ihre erste Datei hoch",
-      "searchFiles": "Dateien durchsuchen...",
-      "filterByTag": "Nach Tag filtern",
-      "sortBy": "Sortieren nach",
-      "sortByName": "Name",
-      "sortByDate": "Datum",
-      "sortBySize": "Größe",
-      "download": "Herunterladen",
-      "share": "Teilen",
-      "delete": "Löschen",
-      "confirmDelete": "Sind Sie sicher, dass Sie diese Datei löschen möchten?",
-      "deleteSuccess": "Datei erfolgreich gelöscht",
-      "deleteError": "Löschen der Datei fehlgeschlagen",
-      "downloadError": "Herunterladen der Datei fehlgeschlagen",
-      "encrypted": "Verschlüsselt",
-      "sharedWith": "Geteilt mit {{count}} Personen"
-    },
-    "sharing": {
-      "title": "Datei teilen",
-      "shareWith": "Teilen mit",
-      "emailPlaceholder": "E-Mail-Adresse eingeben",
-      "expiresIn": "Läuft ab in",
-      "hours": "Stunden",
-      "days": "Tagen",
-      "shareButton": "Teilen",
-      "sharing": "Wird geteilt...",
-      "shareSuccess": "Datei erfolgreich geteilt",
-      "shareError": "Teilen der Datei fehlgeschlagen",
-      "password": "Zugriffspasswort",
-      "passwordInfo": "Teilen Sie dieses Passwort separat mit dem Empfänger",
-      "copyPassword": "Passwort kopieren",
-      "activeShares": "Aktive Shares",
-      "noShares": "Keine aktiven Shares",
-      "revoke": "Widerrufen",
-      "revokeSuccess": "Share erfolgreich widerrufen",
-      "revokeError": "Widerrufen des Shares fehlgeschlagen",
-      "expiresAt": "Läuft ab am {{date}}",
-      "accessCount": "{{count}} mal aufgerufen"
-    }
-  },
-  "upload": {
-    "zone": {
-      "dropHere": "Legen Sie Ihre wichtigen Papiere hier ab",
-      "dropHereActive": "Ja! Legen Sie sie genau hier ab",
-      "description": "Ich organisiere alles für Sie - ziehen Sie einfach Dateien hierher oder klicken Sie zum Durchsuchen",
-      "descriptionActive": "Ich bin bereit, alles für Sie zu organisieren",
-      "chooseFiles": "Dateien wählen",
-      "takePhoto": "Foto aufnehmen",
-      "processingLocally": "Verarbeitung lokal auf Ihrem Gerät",
-      "dragOverlay": {
-        "title": "Legen Sie Ihre Dokumente hier ab",
-        "subtitle": "Ich kümmere mich gut um sie"
-      }
-    }
-  },
   "createTimeCapsuleModal": {
-    "title": "Zeitkapsel erstellen",
-    "titleCreate": "Zeitkapsel erstellen",
-    "titleEdit": "Zeitkapsel bearbeiten",
+    "buttons": {
+      "cancel": "Abbrechen",
+      "create": "Zeitkapsel erstellen",
+      "recordVideo": "Videonachricht aufnehmen",
+      "saving": "Speichern...",
+      "update": "Zeitkapsel aktualisieren"
+    },
     "description": "Erstellen Sie eine Nachricht, die in der Zukunft an Ihre Liebsten zugestellt wird.",
     "errors": {
-      "noTitle": "Bitte geben Sie einen Titel für Ihre Zeitkapsel ein.",
-      "noRecipients": "Bitte wählen Sie mindestens einen Empfänger aus.",
-      "noUnlockDate": "Bitte wählen Sie ein Entsperrdatum aus.",
-      "noMessage": "Bitte geben Sie Ihre Nachricht ein.",
-      "noFile": "Bitte laden Sie eine Datei hoch.",
-      "updateFailed": "Aktualisierung der Zeitkapsel fehlgeschlagen.",
-      "saveFailed": "Speichern der Zeitkapsel fehlgeschlagen.",
       "fileTooLarge": "Dateigröße muss weniger als 50MB betragen.",
-      "invalidFileType": "Ungültiger Dateityp für {{messageType}}."
+      "noFile": "Bitte laden Sie eine Datei hoch.",
+      "noMessage": "Bitte geben Sie Ihre Nachricht ein.",
+      "noRecipients": "Bitte wählen Sie mindestens einen Empfänger aus.",
+      "noTitle": "Bitte geben Sie einen Titel für Ihre Zeitkapsel ein.",
+      "noUnlockDate": "Bitte wählen Sie ein Entsperrdatum aus.",
+      "saveFailed": "Speichern der Zeitkapsel fehlgeschlagen.",
+      "updateFailed": "Aktualisierung der Zeitkapsel fehlgeschlagen."
     },
-    "success": {
-      "updated": "Zeitkapsel aktualisiert!",
-      "created": "Zeitkapsel erstellt!"
+    "fileUpload": {
+      "clickToUpload": "Klicken zum Hochladen",
+      "dragAndDrop": " oder ziehen und ablegen",
+      "maxSize": "Maximale Dateigröße: 50MB"
     },
     "labels": {
-      "title": "Titel",
+      "deliveryQuestion": "Wann sollte diese Nachricht zugestellt werden?",
       "messageType": "Nachrichtentyp",
       "recipients": "Empfänger",
-      "deliveryQuestion": "Wann sollte diese Nachricht zugestellt werden?",
+      "title": "Titel",
       "unlockDate": "Entsperrdatum",
-      "yourMessage": "Ihre Nachricht",
-      "uploadFile": "{{messageType}} hochladen"
-    },
-    "placeholders": {
-      "title": "z.B. Für Ihren 18. Geburtstag",
-      "message": "Schreiben Sie hier Ihre herzliche Nachricht...",
-      "selectDate": "Datum auswählen"
+      "yourMessage": "Ihre Nachricht"
     },
     "messageTypes": {
-      "text": "Textnachricht",
+      "audio": "Audio",
       "photo": "Foto",
-      "video": "Video",
-      "audio": "Audio"
+      "text": "Textnachricht",
+      "video": "Video"
+    },
+    "placeholders": {
+      "message": "Schreiben Sie hier Ihre herzliche Nachricht...",
+      "selectDate": "Datum auswählen",
+      "title": "z.B. Für Ihren 18. Geburtstag"
+    },
+    "premium": {
+      "upgradeNow": "Jetzt upgraden",
+      "videoMessage": "Videonachrichten sind eine Premium-Funktion."
     },
     "recipients": {
       "noTrustedPeople": "Sie haben noch keine vertrauenswürdigen Personen hinzugefügt. Fügen Sie sie zuerst von Ihrem Dashboard hinzu.",
       "selected": "Ausgewählt"
     },
+    "success": {
+      "created": "Zeitkapsel erstellt!",
+      "updated": "Zeitkapsel aktualisiert!"
+    },
+    "titleCreate": "Zeitkapsel erstellen",
+    "titleEdit": "Zeitkapsel bearbeiten",
     "unlockConditions": {
-      "onDate": "An einem bestimmten Datum",
-      "afterPassing": "Nach meinem Tod"
+      "afterPassing": "Nach meinem Tod",
+      "onDate": "An einem bestimmten Datum"
+    }
+  },
+  "documentTypes": {
+    "bankStatement": "Kontoauszug",
+    "birthCertificate": "Geburtsurkunde",
+    "drivingLicense": "Führerschein",
+    "employmentContract": "Arbeitsvertrag",
+    "energyContract": "Energievertrag",
+    "insurancePolicy": "Versicherungspolice",
+    "investmentCertificate": "Anlagezertifikat",
+    "lastWill": "Testament",
+    "other": "Sonstiges",
+    "passport": "Reisepass",
+    "realEstateDeed": "Grundbuchauszug",
+    "softwareLicense": "Softwarelizenz",
+    "subscriptionService": "Abonnementdienst"
+  },
+  "documentUpload": {
+    "browseFiles": "Dateien durchsuchen",
+    "chooseDifferent": "Andere Datei wählen",
+    "countryPlaceholder": "Wählen Sie ein Land",
+    "detailsSubtitle": "Fügen Sie Informationen zu Ihrem hochgeladenen Dokument hinzu.",
+    "detailsTitle": "Dokumentdetails",
+    "failedSave": "Speichern des Dokuments fehlgeschlagen. Bitte versuchen Sie es erneut.",
+    "fileUploadFailed": "Hochladen der Datei fehlgeschlagen. Bitte versuchen Sie es erneut.",
+    "fileUploadedSuccess": "Datei erfolgreich hochgeladen!",
+    "fillRequiredFields": "Bitte füllen Sie alle erforderlichen Felder aus.",
+    "loginToSave": "Sie müssen angemeldet sein, um Dokumente zu speichern.",
+    "namePlaceholder": "Geben Sie den Dokumentnamen ein",
+    "pickDate": "Wählen Sie ein Datum",
+    "saved": "Dokument erfolgreich gespeichert!",
+    "subtitle": "Laden Sie rechtliche und persönliche Dokumente sicher hoch.",
+    "title": "Dokument hochladen",
+    "typePlaceholder": "Wählen Sie den Dokumenttyp",
+    "uploadButton": "Dokument hochladen"
+  },
+  "documentUploader": {
+    "0_0_48_48_5": "0 0 48 48",
+    "ai_analysis_13": "KI-Analyse",
+    "bank_and_investment_statements_20": "Bank- und Anlageauszüge",
+    "business_contracts_and_ownersh_22": "Geschäftsverträge und Eigentumspapiere",
+    "categoryDescriptions": {
+      "bank_statement": "Bankkontoauszüge und Dokumente",
+      "business_document": "Geschäftseigentum und wichtige Verträge",
+      "insurance_policy": "Lebens-, Kranken-, Haus-, Auto- oder Invaliditätsversicherung",
+      "investment_statement": "Anlage- und Rentenkontoauszüge",
+      "medical_document": "Medizinische Aufzeichnungen und Gesundheitsrichtlinien",
+      "other": "Andere wichtige Dokumente",
+      "personal_id": "Pässe, Führerscheine, Geburtsurkunden",
+      "property_deed": "Grundstückseigentumsdokumente und Urkunden",
+      "tax_document": "Steuererklärungen und zugehörige Dokumente",
+      "vehicle_title": "Auto-, Boot- oder andere Fahrzeugeigentumspapiere",
+      "will_or_trust": "Testamente, Trusts und Nachlassplanungsdokumente"
     },
+    "change_category_15": "Kategorie ändern",
+    "confidence": "Vertrauen",
+    "continue_with_this_classificat_14": "Mit dieser Klassifizierung fortfahren",
+    "document_analysis_complete_10": "Dokumentenanalyse abgeschlossen",
+    "document_type_11": "Dokumententyp",
+    "documents_we_can_process_16": "Dokumente, die wir verarbeiten können:",
+    "drop_your_document_here_or_cli_7": "Legen Sie Ihr Dokument hier ab oder klicken Sie zum Durchsuchen",
+    "errors": {
+      "fileTypeError": "Bitte laden Sie eine Bild- oder PDF-Datei hoch",
+      "processingError": "Dokument konnte nicht verarbeitet werden"
+    },
+    "image_application_pdf_4": "image/*,application/pdf",
+    "insurance_policies_life_health_17": "Versicherungspolicen (Lebens-, Kranken-, Haus-, Auto-)",
+    "m24_12v12m0_0l_4_4m4_4l4_4m10__6": "M24 12v12m0 0l-4 4m4-4l4 4m10-6",
+    "personal_identification_docume_23": "Persönliche Identifikationsdokumente",
+    "please_upload_an_image_or_pdf__1": "Bitte laden Sie eine Bild- oder PDF-Datei hoch",
+    "property_deeds_and_titles_18": "Grundstücksurkunden und Titel",
+    "smart_document_upload_2": "Intelligentes Dokumenten-Upload",
+    "suggested_title_12": "Vorgeschlagener Titel",
+    "supports_images_and_pdfs_up_to_8": "Unterstützt Bilder und PDFs bis zu 10MB",
+    "tax_returns_and_documents_24": "Steuererklärungen und Dokumente",
+    "upload_any_document_and_our_ai_3": "Laden Sie ein Dokument hoch und unsere KI klassifiziert es automatisch für Sie",
+    "vehicle_ownership_documents_19": "Fahrzeugeigentumsdokumente",
+    "wills_and_estate_planning_docu_21": "Testamente und Nachlassplanungsdokumente"
+  },
+  "upload": {
+    "zone": {
+      "chooseFiles": "Dateien wählen",
+      "description": "Ich organisiere alles für Sie - ziehen Sie einfach Dateien hierher oder klicken Sie zum Durchsuchen",
+      "descriptionActive": "Ich bin bereit, alles für Sie zu organisieren",
+      "dragOverlay": {
+        "subtitle": "Ich kümmere mich gut um sie",
+        "title": "Legen Sie Ihre Dokumente hier ab"
+      },
+      "dropHere": "Legen Sie Ihre wichtigen Papiere hier ab",
+      "dropHereActive": "Ja! Legen Sie sie genau hier ab",
+      "processingLocally": "Verarbeitung lokal auf Ihrem Gerät",
+      "takePhoto": "Foto aufnehmen"
+    }
+  },
+  "vault": {
+    "addAsset": "Vermögenswert hinzufügen",
+    "addDigitalAsset": "Digitalen Vermögenswert hinzufügen",
+    "addFinances": "Finanzen hinzufügen",
+    "addNewAsset": "Neuen Vermögenswert hinzufügen",
+    "addOther": "Etwas anderes hinzufügen...",
+    "addPersonalItem": "Persönlichen Gegenstand hinzufügen",
+    "addProperty": "Immobilie hinzufügen",
+    "addVehicle": "Fahrzeug hinzufügen",
+    "categories": "Kategorien",
+    "digital": "Digital",
+    "errorDeletingAsset": "Löschen des Vermögenswerts fehlgeschlagen. Bitte versuchen Sie es erneut.",
+    "errorLoadingAssets": "Laden Ihrer Vermögenswerte fehlgeschlagen. Bitte versuchen Sie es erneut.",
     "fileUpload": {
-      "clickToUpload": "Klicken zum Hochladen",
-      "dragAndDrop": " oder ziehen und ablegen",
-      "maxSize": "Maximale Dateigröße: 50MB",
-      "fileSizeMB": "{{size}} MB"
+      "addTag": "Tag hinzufügen...",
+      "clickToSelect": "oder klicken zum Durchsuchen",
+      "dragDropText": "Dateien hier ziehen und ablegen",
+      "encryptDescription": "Dateien werden vor dem Upload verschlüsselt für maximale Sicherheit",
+      "encryptFiles": "Dateien verschlüsseln",
+      "encryptionInfo": "Ihre Dateien werden mit AES-256-Verschlüsselung verschlüsselt. Nur Sie können sie entschlüsseln.",
+      "selectedFiles": "Ausgewählte Dateien",
+      "tags": "Tags",
+      "title": "Dateien hochladen",
+      "uploadFiles": "Dateien hochladen",
+      "uploading": "Wird hochgeladen..."
     },
-    "premium": {
-      "videoMessage": "Videonachrichten sind eine Premium-Funktion.",
-      "upgradeNow": "Jetzt upgraden"
-    },
-    "buttons": {
-      "recordVideo": "Videonachricht aufnehmen",
-      "cancel": "Abbrechen",
-      "saving": "Speichern...",
-      "update": "Zeitkapsel aktualisieren",
-      "create": "Zeitkapsel erstellen"
-    },
-    "characterCount": "{{count}}/{{max}} Zeichen"
+    "finances": "Finanzen",
+    "letsBuildInventory": "Lassen Sie uns Ihr Inventar erstellen",
+    "other": "Sonstiges",
+    "personal": "Persönlich",
+    "property": "Immobilie",
+    "searchPlaceholder": "Ihre Vermögenswerte durchsuchen...",
+    "startAddingAssets": "Beginnen Sie mit dem Hinzufügen von Vermögenswerten, um Ihr Inventar zu erstellen",
+    "subtitle": "Ihr sicheres Inventar aller finanziellen Vermögenswerte und wertvollen Besitztümer.",
+    "title": "Der Tresor",
+    "totalAssets": "Gesamtvermögen",
+    "totalValue": "Gesamtwert",
+    "vehicle": "Fahrzeug"
   }
 }

@@ -1,916 +1,698 @@
 {
-  "_comment": "Shared translations used across the application",
-  "will": {
-    "title": "Testamentti",
-    "fields": {
-      "notes": "Notes",
-      "status": "Status",
-      "physical_location": "Physical Location",
-      "executor_contact_id": "Executor Contact ID",
-      "currentStatus": "Nykyinen tila",
-      "physicalLocation": "Fyysinen sijainti",
-      "executorContact": "Toimeenpanijan yhteystieto",
-      "additionalNotes": "Lisähuomautukset"
+  "annualReview": {
+    "armory": {
+      "categories": {
+        "bankAccounts": "Pankkitilit",
+        "realEstate": "Kiinteistö"
+      },
+      "description": "Omaisuuseräsi ovat mitä suojaat. Pidä tämä luettelo ajantasaisena.",
+      "status": {
+        "current": "Ajantasainen",
+        "needsUpdate": "Vaati päivitystä"
+      },
+      "title": "Omaisuuseräluettelon tarkistus"
     },
-    "statuses": {
-      "draft": "Draft",
-      "pending_signatures": "Pending Signatures",
-      "completed": "Valmis",
-      "needs_revision": "Needs Revision"
+    "beneficiaries": {
+      "confirmationQuestion": "Ovatko nämä edelleen oikeita henkilöitä saamaan nämä omaisuuserät?",
+      "description": "Varmista, että oikeat henkilöt saavat oikeat omaisuuserät oikeaan aikaan.",
+      "details": {
+        "primary": "Ensisijainen edunsaaja"
+      },
+      "status": {
+        "current": "Ajantasainen"
+      },
+      "title": "Edunsaajien tarkistus"
     },
-    "actions": {
-      "save": "Save",
-      "edit": "Edit"
+    "buttons": {
+      "back": "Takaisin",
+      "confirm": "Vahvista",
+      "finish": "Viimeistele tarkistus",
+      "next": "Seuraava",
+      "save": "Tallenna muutokset",
+      "update": "Päivitä"
     },
-    "placeholders": {
-      "notes_placeholder": "Enter any additional notes here...",
-      "physicalLocation": "esim. Kotitallelokero, Lakitoimisto",
-      "selectContact": "Valitse yhteystieto",
-      "additionalNotes": "Mahdolliset lisätiedot..."
+    "commandRoster": {
+      "description": "Toimeenpanijasi ja luotettavat henkilösi ovat perheesi suojelusuunnitelman perusta.",
+      "details": {
+        "executor": "Ensisijainen toimeenpanija perintötilallesi",
+        "guardian": "Huoltaja alaikäisille lapsille"
+      },
+      "status": {
+        "current": "Ajantasainen",
+        "needsUpdate": "Vaati päivitystä"
+      },
+      "title": "Komentoluettelon tarkistus"
     },
-    "errors": {
-      "unauthorized": "Unauthorized access.",
-      "save_will_failed": "Failed to save the will. Please try again.",
-      "retrieve_will_failed": "Failed to retrieve the will.",
-      "load_template_failed": "Failed to load template.",
-      "not_found": "Will not found.",
-      "failed_to_save": "Failed to save will.",
-      "failed_to_load": "Failed to load will.",
-      "failed_to_retrieve": "Failed to retrieve will.",
-      "failed_to_fetch": "Failed to fetch wills.",
-      "failed_to_generate": "Failed to generate will.",
-      "failed_to_sign": "Failed to sign will.",
-      "failed_to_delete": "Failed to delete will.",
-      "failed_to_notarize": "Failed to notarize will.",
-      "failed_to_update_status": "Failed to update will status.",
-      "failed_to_verify": "Failed to verify notarization.",
-      "cannot_update_non_draft": "Cannot update non-draft will.",
-      "cannot_delete_non_draft": "Cannot delete non-draft will.",
-      "must_be_signed": "Will must be signed before notarization.",
-      "verification_code_required": "Verification code required.",
-      "invalid_verification_code": "Invalid verification code.",
-      "mustBeLoggedIn": "Sinun on oltava kirjautuneena sisään tallentaaksesi.",
-      "loadingFailed": "Testamentin lataaminen epäonnistui.",
-      "savingFailed": "Testamentin tallentaminen epäonnistui."
+    "complete": {
+      "changes": "Tehdyt muutokset",
+      "description": "Vuosittainen tarkistuksesi on suoritettu onnistuneesti.",
+      "message": "Vuosittainen tarkistuksesi on suoritettu. Perheesi suojelusuunnitelma on nyt ajantasainen ja tehokas.",
+      "nextReview": "Seuraava tarkistus",
+      "noChanges": "Muutoksia ei tarvittu. Suunnitelmasi on ajantasainen.",
+      "reminder": "Muistutamme sinua, kun on aika seuraavalle vuosittaiselle tarkistukselle.",
+      "summary": "Tarkistuksen yhteenveto",
+      "title": "Tarkistus valmis"
     },
-    "messages": {
-      "will_saved": "Will saved successfully.",
-      "template_loaded": "Template loaded successfully.",
-      "backup_success": "Backup created successfully.",
-      "backup_failed": "Failed to create a backup.",
-      "savedSuccessfully": "Testamentti tallennettu onnistuneesti.",
-      "documentUploaded": "Asiakirja ladattu onnistuneesti."
-    },
-    "success": {
-      "will_saved": "Will saved successfully.",
-      "backup_created": "Backup created successfully.",
-      "notarized": "Will has been successfully notarized."
-    },
-    "instructions": {
-      "verify_info": "Verify all information before proceeding to next steps.",
-      "provide_full_details": "Please provide full details for accuracy."
-    },
-    "loading": "Ladataan testamenttia...",
-    "subtitle": "Hallinnoi testamenttiasi ja nimeä sen toimeenpanijat.",
-    "sections": {
-      "statusInfo": "Tila ja tiedot",
-      "willDocument": "Testamenttiasiakirja"
-    },
-    "descriptions": {
-      "statusDescription": "Seuraa testamenttisi nykyistä tilaa.",
-      "physicalLocationDescription": "Missä testamenttisi on fyysisesti säilytetty?",
-      "executorDescription": "Henkilö, joka vastaa testamenttisi toimeenpanosta."
-    },
-    "options": {
-      "noContactSelected": "Yhteystietoa ei ole valittu"
+    "description": "Elämä muuttuu nopeasti. Tämä vuosittainen tarkistus varmistaa, että perintösuunnitelmasi pysyy linjassa nykyisen tilanteesi ja toiveidesi kanssa.",
+    "progress": {
+      "completed": "Suoritettu",
+      "estimatedTime": "Arvioitu aika: 15 minuuttia",
+      "title": "Tarkistuksen edistyminen",
+      "totalSteps": "Vaiheet yhteensä"
     },
     "status": {
-      "notStarted": "Ei aloitettu",
-      "inPreparation": "Valmistelussa",
-      "completedSigned": "Valmis ja allekirjoitettu",
-      "withNotary": "Notaarin hallussa",
-      "draft": "Luonnos",
-      "notarized": "Notaarin vahvistama",
-      "stored": "Tallennettu",
-      "updated": "Päivitetty"
+      "completed": "Suoritettu"
     },
-    "document": {
-      "uploaded": "Testamenttiasiakirja ladattu",
-      "uploadedDescription": "Testamenttiasiakirjasi on tallennettu turvallisesti.",
-      "noDocument": "Ei testamenttiasiakirjaa",
-      "noDocumentDescription": "Lataa kopio testamentistasi säilytettäväksi."
+    "step1": {
+      "description": "Vahvista, että luotettavat henkilösi ovat edelleen oikeita valintoja perheellesi",
+      "title": "Tarkista toimeenpanijasi"
     },
+    "step2": {
+      "description": "Vahvista, että omaisuuseräluettelosi on ajantasainen ja täydellinen",
+      "title": "Tarkista omaisuuseräsi"
+    },
+    "step3": {
+      "description": "Varmista, että edunsaajasi ovat edelleen oikeita henkilöitä",
+      "title": "Tarkista edunsaajasi"
+    },
+    "step4": {
+      "description": "Viimeistele vuosittainen tarkistuksesi ja päivitä suunnitelmasi",
+      "title": "Viimeistele tarkistus"
+    },
+    "subtitle": "Pidä perheesi suojelusuunnitelma ajantasaisena ja tehokkaana",
+    "title": "Vuosittainen perintötarkistus"
+  },
+  "complexityReduction": {
+    "actions": {
+      "completeStep": "Merkitse suoritetuksi",
+      "iNeedHelp": "Tarvitsen apua",
+      "nextStep": "Seuraava vaihe",
+      "previousStep": "Edellinen vaihe",
+      "showMeHow": "Näytä miten",
+      "skipStep": "Ohita toistaiseksi"
+    },
+    "benefits": {
+      "confidence": {
+        "description": "Kun suoritat jokaisen vaiheen, tunnet olosi luottavaisemmaksi ja hallitsevammaksi. Mikä kerran tuntui mahdottomalta, tulee saavutettavaksi.",
+        "title": "Rakentaa luottamusta"
+      },
+      "family": {
+        "description": "Jokainen suoritettu vaihe suojaa suoraan perhettäsi. Hätäpääsystä pitkän aikavälin suunnitteluun, jokainen toimenpide on tärkeä.",
+        "title": "Perheensuoja"
+      },
+      "overwhelm": {
+        "description": "Massiivisen tehtävälistan sijaan käsittelet yhtä pientä tehtävää kerrallaan. Jokainen vaihe on suunniteltu suoritettavaksi alle 5 minuutissa.",
+        "title": "Poistaa ylivoiman"
+      },
+      "progress": {
+        "description": "Katso perheesi valmistautumisen kasvavan jokaisen suoritetun vaiheen myötä. Seuraa edistymistäsi ja juhli pieniä voittoja matkan varrella.",
+        "title": "Näkyvä edistyminen"
+      },
+      "title": "Miksi monimutkaisuuden vähentäminen toimii"
+    },
+    "description": "Ymmärrämme, että tulevaisuuden suunnittelu voi tuntua ylivoimaiselta. Monimutkaisuuden vähentämisjärjestelmämme jakaa jokaisen tehtävän yksinkertaisiksi, toiminnallisiksi vaiheiksi, jotka vievät vain minuutteja suorittaa.",
+    "features": {
+      "difficultyLevels": {
+        "description": "Yksinkertainen, Helppo, Keskitaso ja Monimutkainen arviot auttavat sinua valitsemaan, mitä käsitellä ensin.",
+        "title": "Selkeät vaikeustasot"
+      },
+      "helpAvailable": {
+        "description": "Saa apua, selityksiä ja tukea mille tahansa vaiheelle, joka tuntuu haastavalta.",
+        "title": "Apua tarvittaessa"
+      },
+      "progressTracking": {
+        "description": "Katso perheesi valmistautumisen kasvavan jokaisen suoritetun vaiheen myötä.",
+        "title": "Edistymisen seuranta"
+      },
+      "stepByStep": {
+        "description": "Jokainen tehtävä jaetaan selkeiksi, yksinkertaisiksi ohjeiksi, joita kuka tahansa voi seurata.",
+        "title": "Askel-askeleelta-ohjeet"
+      },
+      "timeEstimation": {
+        "description": "Tiedä täsmälleen, kuinka kauan jokainen vaihe vie, 2 minuutista 15 minuuttiin enimmillään.",
+        "title": "Tarkat aikakestot"
+      },
+      "title": "Miten monimutkaisuuden vähentäminen toimii"
+    },
+    "progress": {
+      "completed": "Suoritettu",
+      "title": "Edistymisesi",
+      "totalSteps": "Vaiheet yhteensä"
+    },
+    "steps": {
+      "digitalAssets": {
+        "complexity": "Monimutkaisuustaso: Helppo",
+        "timeRequired": "Tarvittava aika: 4 minuuttia",
+        "title": "Turvaa digitaaliset omaisuuserät",
+        "whatWeDo": "Mitä teemme: Luomme turvalliset pääsyprotokollat ja varmuuskopiointiohjeet",
+        "whatYouDo": "Mitä teet: Listaa tärkeät tilit ja salasanat",
+        "why": "Miksi tämä on tärkeää: Suojaa verkkotilit ja digitaaliset muistot"
+      },
+      "emergencyContacts": {
+        "complexity": "Monimutkaisuustaso: Yksinkertainen",
+        "timeRequired": "Tarvittava aika: 3 minuuttia",
+        "title": "Listaa hätäyhteystiedot",
+        "whatWeDo": "Mitä teemme: Järjestämme yhteystiedot prioriteetin mukaan ja luomme hätäprotokollat",
+        "whatYouDo": "Mitä teet: Lisää puhelinnumeroita ja suhteita",
+        "why": "Miksi tämä on tärkeää: Nopea pääsy tärkeisiin henkilöihin kriiseissä"
+      },
+      "familyInstructions": {
+        "complexity": "Monimutkaisuustaso: Keskitaso",
+        "timeRequired": "Tarvittava aika: 8 minuuttia",
+        "title": "Kirjoita perheohjeet",
+        "whatWeDo": "Mitä teemme: Järjestämme viestit ja luomme toimitusaikataulut",
+        "whatYouDo": "Mitä teet: Kirjoita henkilökohtaisia viestejä ja ohjeita",
+        "why": "Miksi tämä on tärkeää: Tarjoaa selkeät ohjeet vaikeina aikoina"
+      },
+      "identifyBankAccount": {
+        "complexity": "Monimutkaisuustaso: Yksinkertainen",
+        "timeRequired": "Tarvittava aika: 2 minuuttia",
+        "title": "Tunnista ensisijainen pankkitilisi",
+        "whatWeDo": "Mitä teemme: Tallennamme tiedot turvallisesti ja luomme pääsyohjeet",
+        "whatYouDo": "Mitä teet: Ota kuva tai kirjoita ylös tilitiedot",
+        "why": "Miksi tämä on tärkeää: Välitön pääsy varoihin hätätilanteissa"
+      },
+      "insurancePolicies": {
+        "complexity": "Monimutkaisuustaso: Helppo",
+        "timeRequired": "Tarvittava aika: 5 minuuttia",
+        "title": "Dokumentoi vakuutuskirjat",
+        "whatWeDo": "Mitä teemme: Poimimme tärkeät tiedot ja luomme hakuehdot",
+        "whatYouDo": "Mitä teet: Lataa vakuutuskirjat tai ota kuvia",
+        "why": "Miksi tämä on tärkeää: Varmistaa, että korvaukset voidaan hakea nopeasti ja oikein"
+      },
+      "legalDocuments": {
+        "complexity": "Monimutkaisuustaso: Keskitaso",
+        "timeRequired": "Tarvittava aika: 6 minuuttia",
+        "title": "Järjestä oikeudelliset asiakirjat",
+        "whatWeDo": "Mitä teemme: Luomme yhteenvedot ja varmistamme oikean oikeudellisen pääsyn",
+        "whatYouDo": "Mitä teet: Lataa testamentit, valtakirjat ja muut asiakirjat",
+        "why": "Miksi tämä on tärkeää: Varmistaa, että oikeudelliset toiveet noudatetaan ja prosessit ovat sujuvia"
+      }
+    },
+    "subtitle": "Jaa monimutkaiset tehtävät yksinkertaisiksi, hallittaviksi vaiheiksi",
+    "title": "Yksinkertaista perintösuunnitelmasi"
+  },
+  "editStoryModal": {
+    "addStory": "Lisää tarina",
+    "editStory": "Muokkaa tarinaa",
+    "errors": {
+      "notAuthenticated": "Sinun on oltava kirjautuneena sisään tallentaaksesi tarinan",
+      "saveFailed": "Tarinan tallentaminen epäonnistui"
+    },
+    "fields": {
+      "yourStory": "Tarinasi"
+    },
+    "hints": {
+      "shareMemories": "Jaa muistoja, merkitystä tai historiaa"
+    },
+    "messages": {
+      "saved": "Tarina tallennettu onnistuneesti"
+    },
+    "placeholders": {
+      "story": "esim. Tämä oli isoäitisi kihlasormus, joka annettiin hänelle vuonna 1952, kun hän meni naimisiin isoisäsi kanssa pienen kirkon kanssa kotikaupungissaan. Hän käytti sitä joka päivä 65 vuoden ajan..."
+    },
+    "saveStory": "Tallenna tarina",
+    "saving": "Tallennetaan...",
+    "tips": {
+      "describeHistory": "Kuvaile sen historiaa tai miten sen sai",
+      "explainSpecial": "Selitä, miksi tämä esine on sinulle erityinen",
+      "mentionWishes": "Mainitse toiveet siitä, miten sitä pitäisi käyttää tai säilyttää",
+      "shareMemories": "Jaa siihen liittyvät muistot",
+      "title": "Vinkkejä merkitykselliseen tarinaan:"
+    }
+  },
+  "microTaskGenerator": {
+    "complete_task_4": "Suorita tehtävä",
+    "familyImpactLevels": {
+      "high": "Korkea"
+    },
+    "family_impact_2": " perhevaikutus",
+    "minutes_1": " minuuttia • ",
+    "skip_for_now_5": "Ohita toistaiseksi",
+    "start_task_3": "Aloita tehtävä",
+    "tasks": {
+      "driversLicense": {
+        "completionMessage": "Perheellasi on nyt pääsy kriittisiin henkilöllisyystietoihin.",
+        "description": "Perheesi tarvitsee tämän oikeudellisiin ja taloudellisiin asioihin. Selkeän kuvan saaminen säästää heiltä aikaa ja stressiä.",
+        "title": "Ota kuva ajokortistasi"
+      }
+    }
+  },
+  "playbook": {
+    "accessDenied": "Sinulla ei ole lupaa tarkastella näitä toimintaohjeita.",
+    "addContact": "Lisää yhteystieto",
+    "autoSaveNotice": "Muutoksesi tallennetaan automaattisesti kirjoittaessasi.",
+    "contact": "Yhteystieto",
+    "contactFields": {
+      "email": "Sähköposti",
+      "emailPlaceholder": "sahkoposti@example.com",
+      "name": "Nimi",
+      "namePlaceholder": "Koko nimi",
+      "notes": "Muistiinpanot",
+      "notesPlaceholder": "Lisätietoja tästä yhteystiedosta",
+      "phone": "Puhelin",
+      "phonePlaceholder": "+358 40 123 4567",
+      "role": "Rooli/Suhde",
+      "rolePlaceholder": "esim. Perhejuristi, Kirjanpitäjä"
+    },
+    "create": "Luo toimintaohjeet",
+    "description": "Luo henkilökohtaiset ohjeet ja tiedot huoltajallesi.",
+    "digitalAccounts": {
+      "description": "Ohjeet verkkotiliesi käsittelyyn.",
+      "label": "Digitaaliset tilit",
+      "placeholder": "Listaa digitaaliset tilisi ja miten niitä tulisi käsitellä..."
+    },
+    "discardChanges": {
+      "cancel": "Jatka muokkaamista",
+      "confirm": "Hylkää muutokset",
+      "description": "Sinulla on tallentamattomia muutoksia. Oletko varma, että haluat hylätä ne?",
+      "title": "Hylätäänkö muutokset?"
+    },
+    "documentLocations": {
+      "description": "Mistä löytää tärkeät asiakirjat.",
+      "label": "Asiakirjojen sijainnit",
+      "placeholder": "Kuvaile, missä tärkeät asiakirjat sijaitsevat..."
+    },
+    "edit": "Muokkaa toimintaohjeita",
+    "errors": {
+      "loadFailed": "Toimintaohjeiden lataaminen epäonnistui.",
+      "saveFailed": "Toimintaohjeiden tallentaminen epäonnistui."
+    },
+    "exitPreview": "Poistu esikatselusta",
+    "fetchError": "Toimintaohjeiden lataaminen epäonnistui.",
+    "funeralWishes": {
+      "description": "Toiveesi hautajaisjärjestelyistä.",
+      "label": "Hautajaistoiveet",
+      "placeholder": "Kuvaile toiveesi hautajaisiasi tai muistotilaisuuttasi varten..."
+    },
+    "importantContacts": {
+      "add": "Lisää yhteystieto",
+      "description": "Lisää avainhenkilöitä, joihin tämän huoltajan tulisi ottaa yhteyttä.",
+      "email": "Sähköposti",
+      "emailPlaceholder": "sahkoposti@example.com",
+      "empty": "Yhteystietoja ei ole vielä lisätty. Lisää tärkeitä henkilöitä napsauttamalla 'Lisää yhteystieto'.",
+      "label": "Tärkeät yhteystiedot",
+      "name": "Nimi",
+      "namePlaceholder": "Koko nimi",
+      "notes": "Muistiinpanot",
+      "notesPlaceholder": "Lisätietoja",
+      "phone": "Puhelin",
+      "phonePlaceholder": "+358 40 123 4567",
+      "relationship": "Suhde",
+      "relationshipPlaceholder": "esim. Perhejuristi",
+      "remove": "Poista",
+      "viewDescription": "Ota yhteyttä näihin henkilöihin tarvittaessa."
+    },
+    "label": "Toimintaohjeet",
+    "lastUpdated": "Viimeksi päivitetty",
+    "loading": "Ladataan toimintaohjeita...",
+    "messages": {
+      "autoSaved": "Tallennettu",
+      "saved": "Toimintaohjeet tallennettu onnistuneesti"
+    },
+    "noContacts": "Yhteystietoja ei ole vielä lisätty.",
+    "noContent": "Sisältöä ei ole vielä lisätty.",
+    "notAuthenticated": "Kirjaudu sisään nähdäksesi nämä toimintaohjeet.",
+    "notFound": {
+      "description": "Etsimiäsi toimintaohjeita ei ole vielä luotu.",
+      "title": "Toimintaohjeita ei löytynyt"
+    },
+    "personalMessages": {
+      "description": "Henkilökohtaiset viestit tälle huoltajalle.",
+      "label": "Henkilökohtaiset viestit",
+      "placeholder": "Kirjoita henkilökohtainen viesti tälle huoltajalle..."
+    },
+    "practicalInstructions": {
+      "description": "Välittömät toimet ja vastuut.",
+      "label": "Käytännön ohjeet",
+      "placeholder": "Listaa käytännön tehtävät ja välittömät toimet..."
+    },
+    "preview": "Esikatselu",
+    "save": "Tallenna toimintaohjeet",
+    "saveError": "Toimintaohjeiden tallentaminen epäonnistui.",
+    "saveSuccess": "Toimintaohjeet tallennettu onnistuneesti.",
+    "saving": "Tallennetaan...",
+    "sections": {
+      "contacts": {
+        "description": "Avainhenkilöt, joihin tämän huoltajan tulisi ottaa yhteyttä tai ilmoittaa.",
+        "title": "Tärkeät yhteystiedot"
+      },
+      "digital": {
+        "description": "Ohjeet digitaalisen läsnäolosi ja verkkotiliesi käsittelyyn.",
+        "placeholder": "Listaa digitaaliset tilisi ja miten niitä tulisi käsitellä...\n\nEsimerkiksi:\n- Sosiaalisen median tilit (Facebook, Instagram, LinkedIn)\n- Sähköpostitilit\n- Pilvitallennus (Google Drive, Dropbox)\n- Tilauspalvelut (Netflix, Spotify)\n- Verkkopankki- ja rahoitustilit\n- Kryptovaluuttalompakot\n- Verkkosivustot tai verkkotunnukset",
+        "title": "Digitaalisten tilien sulkeminen"
+      },
+      "documents": {
+        "description": "Mistä löytää tärkeät fyysiset ja digitaaliset asiakirjat.",
+        "placeholder": "Kuvaile, missä tärkeät asiakirjat sijaitsevat...\n\nEsimerkiksi:\n- Testamentin sijainti\n- Vakuutuskirjat\n- Kiinteistöjen omistusasiakirjat\n- Pankkitilin tiedot\n- Sijoitusasiakirjat\n- Veroilmoitukset\n- Salasanat ja pääsykoodit\n- Tallelokeron sijainti ja avain",
+        "title": "Asiakirjojen sijainnit"
+      },
+      "funeral": {
+        "description": "Toiveesi hautajaisjärjestelyistä ja muistotilaisuuksista.",
+        "placeholder": "Kuvaile toiveesi hautajaisiasi tai muistotilaisuuttasi varten...\n\nEsimerkiksi:\n- Tilaisuuden tyyppi (uskonnollinen, maallinen, elämänjuhla)\n- Hautaus- tai tuhkaustoiveet\n- Sijaintitoiveet\n- Musiikki, lukukappaleet tai erityistoiveet\n- Kenen tulisi puhua tai osallistua\n- Noudatettavat erityiset perinteet",
+        "title": "Hautajaistoiveet"
+      },
+      "messages": {
+        "description": "Henkilökohtaiset viestit ja viimeiset ajatukset tälle huoltajalle.",
+        "placeholder": "Kirjoita henkilökohtainen viesti tälle huoltajalle...\n\nTämä on tilaisuutesi:\n- Ilmaista tunteitasi ja kiitollisuuttasi\n- Jakaa tärkeitä muistoja\n- Antaa ohjeita tai neuvoja\n- Selittää päätöksiäsi\n- Jättää lohdun sanoja\n- Jakaa toiveesi tulevaisuudesta",
+        "title": "Henkilökohtaiset viestit"
+      },
+      "practical": {
+        "description": "Välittömät käytännön toimet ja vastuut tälle huoltajalle.",
+        "placeholder": "Listaa käytännön tehtävät ja välittömät toimet...\n\nEsimerkiksi:\n- Ensimmäisten 24-48 tunnin tarkistuslista\n- Kenelle ilmoittaa ensin\n- Kiireelliset laskut tai maksut\n- Hoito-ohjeet (lemmikit, kasvit, omaisuus)\n- Huomiota vaativat liikeasiat\n- Peruutettavat sovitut tapaamiset\n- Tarvittavat avaimet ja pääsykoodit",
+        "title": "Käytännön ohjeet"
+      }
+    },
+    "status": {
+      "complete": "Valmis",
+      "draft": "Keskeneräinen",
+      "empty": "Ei aloitettu"
+    },
+    "subtitle": {
+      "edit": "Luo henkilökohtaiset ohjeet ja tiedot tälle huoltajalle.",
+      "view": "Sinulle valmisteltu olennainen tieto ja ohjeet."
+    },
+    "tabs": {
+      "contacts": "Yhteystiedot",
+      "digital": "Digitaalinen",
+      "documents": "Asiakirjat",
+      "funeral": "Hautajaiset",
+      "instructions": "Ohjeet",
+      "messages": "Viestit"
+    },
+    "viewDescription": "Olennainen tieto ja ohjeet, jotka on valmisteltu erityisesti sinulle.",
+    "viewFooter": "Nämä tiedot on uskottu sinulle huoltajana. Pidä ne luottamuksellisina ja turvassa."
+  },
+  "scenarioPlanner": {
+    "20_000_16": "$20,000",
+    "5_000_15_000_13": "$5,000 - $15,000",
+    "_27": "🤕",
+    "a_comprehensive_guide_for_your_25": "A comprehensive guide for your family to follow in case of emergency",
+    "action_required_21": "Action Required: ",
+    "actions": {
+      "compileInsuranceList": "Compile a list of all insurance policies",
+      "createBusinessContinuityPlan": "Create a business continuity plan",
+      "designatePowerOfAttorney": "Designate a Power of Attorney for finances",
+      "draftWill": "Draft and store a legally binding will",
+      "grantSpouseAccess": "Grant spouse access to your primary account"
+    },
+    "current_family_vulnerabilities_6": "Current Family Vulnerabilities",
+    "descriptions": {
+      "activatePowerOfAttorney": "Ensure designated person can make decisions.",
+      "arrangeBillPayments": "Set up automatic payments or delegate to trusted person.",
+      "billsGoUnpaid": "Your family can't access your primary checking account to pay the mortgage.",
+      "businessDecisionsStall": "Clients and employees don't know who is authorized to make decisions.",
+      "businessNoLeadership": "Your business can continue operating smoothly with clear leadership and decision-making processes.",
+      "contactExecutor": "Reach out to John Smith to start will proceedings.",
+      "executorBeginsProbate": "The executor will file for probate to manage the estate.",
+      "familyCannotAccessBankAccount": "Your family can now pay bills and manage daily expenses without delay or legal complications.",
+      "familyCannotManageFinances": "Your spouse can now legally manage all financial matters, ensuring bills are paid and investments are protected.",
+      "fileDisabilityBenefits": "Submit necessary paperwork for insurance claims.",
+      "insuranceDetailsUnknown": "Life insurance policy details and beneficiaries are unknown.",
+      "locateWill": "Locate and secure the will at the designated location.",
+      "noWillFound": "The family cannot locate or confirm the existence of a will.",
+      "notifyEmployer": "Inform workplace about extended absence.",
+      "notifyImmediateFamily": "Ensure all immediate family members are informed.",
+      "securePhysicalProperty": "Ensure that the home and vehicles are secure."
+    },
+    "estimated_14": " estimated",
+    "family_action_plan_24": "Family Action Plan",
+    "generate_family_action_plan_3": "Generate Family Action Plan",
+    "generate_plan_4": "Generate Plan",
+    "let_s_see_how_prepared_your_fa_2": "Let's see how prepared your family is for different scenarios",
+    "no_will_11": "No Will: ",
+    "potential_cost_of_lengthy_prob_12": "Potential cost of lengthy probate process: ",
+    "potential_financial_impact_9": "Potential Financial Impact",
+    "potential_loss_of_business_rev_15": "Potential loss of business revenue during transition: ",
+    "print_plan_26": "Print Plan",
+    "projected_timeline_8": "Projected Timeline",
+    "protected_in_this_scenario_19": "% protected in this scenario",
+    "resolve_this_vulnerability_22": "Resolve This Vulnerability",
+    "resolved_23": "Resolved: ",
+    "scenario_planner_1": "Scenario Planner",
+    "scenarios": {
+      "hospitalized": {
+        "description": "An unexpected health issue means you're unable to manage daily affairs. Your family needs to step in.",
+        "title": "What if you're in the hospital for 3 months?"
+      },
+      "incapacitated": {
+        "description": "A serious accident leaves you unable to make decisions for yourself. Who will make them for you?",
+        "title": "What if you become incapacitated?"
+      },
+      "suddenPassing": {
+        "description": "The ultimate test of your preparation. Is your family ready to navigate this difficult time without chaos?",
+        "title": "What if something happens to you tomorrow?"
+      }
+    },
+    "these_are_estimates_of_the_pos_10": "These are estimates of the potential costs if vulnerabilities are not addressed",
+    "timeframes": {
+      "first24Hours": "First 24 Hours",
+      "firstMonth": "First Month",
+      "firstWeek": "First Week",
+      "threeToSixMonths": "3-6 Months"
+    },
+    "timelineEvents": {
+      "activatePowerOfAttorney": "Activate Power of Attorney",
+      "arrangeBillPayments": "Arrange bill payments",
+      "contactExecutor": "Contact executor",
+      "executorBeginsProbate": "Executor begins probate process",
+      "fileDisabilityBenefits": "File for disability benefits",
+      "locateWill": "Locate the will",
+      "notifyEmployer": "Notify employer",
+      "notifyImmediateFamily": "Notify immediate family",
+      "securePhysicalProperty": "Secure physical property"
+    },
+    "vulnerabilities": {
+      "billsGoUnpaid": "Bills Go Unpaid",
+      "businessDecisionsStall": "Business Decisions Stall",
+      "businessNoLeadership": "Business operations have no clear leadership",
+      "familyCannotAccessBankAccount": "Family cannot access primary bank account",
+      "familyCannotManageFinances": "Family cannot legally manage your finances",
+      "insuranceDetailsUnknown": "Insurance Details Unknown",
+      "noWillAvailable": "No will available",
+      "noWillFound": "No Will Found",
+      "unknownLifeInsurance": "Unknown life insurance details"
+    },
+    "vulnerability_20": "Vulnerability: ",
+    "without_proper_preparation_you_7": "Without proper preparation, you and your family could face these challenges",
+    "your_family_is_currently_18": "Your family is currently ",
+    "your_preparedness_blueprint_17": "Your Preparedness Blueprint"
+  },
+  "scenarios": {
+    "bottomCta": {
+      "primary": "Älä anna perheesi kohdata tätä kaaosta",
+      "secondary": "Aloita järjestäminen 10 minuutissa",
+      "urgency": "Jokainen päivä, jona odotat, on toinen päivä, jona perheesi on valmistautumaton"
+    },
+    "businessTrip": {
+      "after": {
+        "benefit": "Kaikki saatavilla juuri kun hän sitä tarvitsi.",
+        "emotion": "Helpotus ja valmistautuminen",
+        "situation": "Kun Emman mies matkusti ja hän tarvitsi hätävaroja poikansa leikkauksen vuoksi, hänellä oli välitön pääsy kaikkiin tilitietoihin, vakuutustietoihin ja jopa ennalta kirjoitettuihin valtuutuskirjeisiin. Ei viivästyksiä, ei stressiä."
+      },
+      "before": {
+        "consequence": "Tärkeät lääketieteelliset päätökset viivästyivät.",
+        "emotion": "Turhautuminen ja avuttomuus",
+        "situation": "Kun Davidin lento viivästyi ja hän jätti tyttärensä hätäleikkauksen väliin, hänen vaimonsa ei päässyt käsiksi säästötiliinsä tai löytänyt lääketieteellisiä vakuutustietojaan. Kriittiset päätökset joutuivat odottamaan."
+      },
+      "title": "Työmatkan hätätilanne"
+    },
+    "hospitalStay": {
+      "after": {
+        "benefit": "Välitön pääsy kaikkeen, mitä hän tarvitsi.",
+        "emotion": "Rauha ja keskittyminen",
+        "situation": "Kun Markilla oli onnettomuutensa, hänen vaimonsa Lisa avasi perheoppaansa ja löysi kaiken järjestettynä: vakuutustiedot, pankkiyhteystiedot, lääketieteelliset tiedot ja jopa listan ilmoitettavista henkilöistä. Hän saattoi keskittyä siihen, mikä oli tärkeintä - olla Markin rinnalla."
+      },
+      "before": {
+        "consequence": "Päiviä tietojen etsimistä ja tukea.",
+        "emotion": "Stressi ja huoli",
+        "situation": "Saran miehellä oli sydänkohtaus. Kun hän oli tehohoidossa, Saran vietti päiviä yrittäessään löytää vakuutuskirjat, pankkitilitiedot ja tärkeät yhteystiedot. Stressi oli ylivoimainen, kun hänen piti keskittyä miehensä toipumiseen."
+      },
+      "title": "Odottamaton sairaalassaolo"
+    },
+    "labels": {
+      "after": "Perintöholvin jälkeen",
+      "before": "Ennen LegacyGuardia",
+      "feeling": "Tunne"
+    },
+    "subtitle": "Oikeita perheitä, oikeita tilanteita, oikeaa valvontaa ja valmistautumista",
+    "suddenLoss": {
+      "after": {
+        "benefit": "Selkeä polku seurattavaksi vaikeina aikoina.",
+        "emotion": "Rauha ja selkeys",
+        "situation": "Kun Johnin perhe tarvitsi hoitaa hänen asioitaan, kaikki oli selkeästi järjestetty: täydellinen luettelo tileistä, tärkeät yhteystiedot, askel-askeleelta-ohjeet ja jopa henkilökohtaiset viestit, jotka hän oli valmistellut jokaiselle perheenjäsenelle."
+      },
+      "before": {
+        "consequence": "Menetetyt määräajat ja aikaa.",
+        "emotion": "Hämmingi ja katumus",
+        "situation": "Isänsä äkillisen kuoleman jälkeen Maria vietti kuukausia yrittäessään koota hänen talousasioitaan. Hän löysi tilejä, joista ei tiennyt olevan olemassa, ja menetti tärkeitä määräaikoja, koska asiakirjat olivat hajallaan kaikkialla."
+      },
+      "title": "Äkillinen menetys"
+    },
+    "title": "Mitä tapahtuu, kun elämä ottaa odottamattoman käänteen?"
+  },
+  "will": {
     "buttons": {
       "saveWillInfo": "Tallenna testamentin tiedot",
       "saving": "Tallennetaan...",
       "uploadDocument": "Lataa asiakirja",
       "uploadNewVersion": "Lataa uusi versio"
     },
+    "descriptions": {
+      "executorDescription": "Henkilö, joka vastaa testamenttisi toimeenpanosta.",
+      "physicalLocationDescription": "Missä testamenttisi on fyysisesti säilytetty?",
+      "statusDescription": "Seuraa testamenttisi nykyistä tilaa."
+    },
+    "document": {
+      "noDocument": "Ei testamenttiasiakirjaa",
+      "noDocumentDescription": "Lataa kopio testamentistasi säilytettäväksi.",
+      "uploaded": "Testamenttiasiakirja ladattu",
+      "uploadedDescription": "Testamenttiasiakirjasi on tallennettu turvallisesti."
+    },
+    "errors": {
+      "cannot_delete_non_draft": "Cannot delete non-draft will.",
+      "cannot_update_non_draft": "Cannot update non-draft will.",
+      "failed_to_delete": "Failed to delete will.",
+      "failed_to_fetch": "Failed to fetch wills.",
+      "failed_to_generate": "Failed to generate will.",
+      "failed_to_load": "Failed to load will.",
+      "failed_to_save": "Failed to save will.",
+      "failed_to_sign": "Failed to sign will.",
+      "loadingFailed": "Testamentin lataaminen epäonnistui.",
+      "mustBeLoggedIn": "Sinun on oltava kirjautuneena sisään tallentaaksesi.",
+      "not_found": "Will not found.",
+      "savingFailed": "Testamentin tallentaminen epäonnistui.",
+      "unauthorized": "Unauthorized access."
+    },
+    "fields": {
+      "additionalNotes": "Lisähuomautukset",
+      "currentStatus": "Nykyinen tila",
+      "executorContact": "Toimeenpanijan yhteystieto",
+      "physicalLocation": "Fyysinen sijainti"
+    },
+    "generation": {
+      "error": "Testamentin luominen epäonnistui",
+      "success": "Testamentti luotu onnistuneesti!"
+    },
+    "loading": "Ladataan testamenttia...",
+    "messages": {
+      "documentUploaded": "Asiakirja ladattu onnistuneesti.",
+      "savedSuccessfully": "Testamentti tallennettu onnistuneesti."
+    },
+    "options": {
+      "noContactSelected": "Yhteystietoa ei ole valittu"
+    },
+    "placeholders": {
+      "additionalNotes": "Mahdolliset lisätiedot...",
+      "physicalLocation": "esim. Kotitallelokero, Lakitoimisto",
+      "selectContact": "Valitse yhteystieto"
+    },
+    "progress": "Askel {{current}}/{{total}}",
+    "sections": {
+      "statusInfo": "Tila ja tiedot",
+      "willDocument": "Testamenttiasiakirja"
+    },
+    "status": {
+      "completedSigned": "Valmis ja allekirjoitettu",
+      "draft": "Luonnos",
+      "inPreparation": "Valmistelussa",
+      "notStarted": "Ei aloitettu",
+      "notarized": "Notaarin vahvistama",
+      "stored": "Tallennettu",
+      "updated": "Päivitetty",
+      "withNotary": "Notaarin hallussa"
+    },
     "steps": {
-      "countrySelection": "Maan valinta",
-      "countrySelectionDesc": "Valitse maasi ja syötä tietosi",
       "assetAllocation": "Omaisuuden jako",
       "assetAllocationDesc": "Jaa omaisuus edunsaajien kesken",
       "beneficiaries": "Edunsaajat",
       "beneficiariesDesc": "Määrittele edunsaajasi",
+      "countrySelection": "Maan valinta",
+      "countrySelectionDesc": "Valitse maasi ja syötä tietosi",
       "executors": "Toimeenpanijat",
       "executorsDesc": "Nimeä toimeenpanijat hallinnoimaan testamenttiasi",
       "review": "Tarkistus",
       "reviewDesc": "Tarkista ja viimeistele testamenttisi"
     },
-    "progress": "Askel {{current}}/{{total}}",
+    "subtitle": "Hallinnoi testamenttiasi ja nimeä sen toimeenpanijat.",
     "validation": {
-      "selectCountry": "Valitse maa",
-      "requiredField": "Tämä kenttä on pakollinen",
       "allocation100": "Kokonaisjaon on oltava 100 %",
       "atLeastOneBeneficiary": "Vähintään yksi edunsaaja vaaditaan",
       "executorRequired": "Toimeenpanija vaaditaan",
-      "fixErrors": "Korjaa lomakkeen virheet"
-    },
-    "generation": {
-      "success": "Testamentti luotu onnistuneesti!",
-      "error": "Testamentin luominen epäonnistui"
+      "fixErrors": "Korjaa lomakkeen virheet",
+      "requiredField": "Tämä kenttä on pakollinen",
+      "selectCountry": "Valitse maa"
     }
   },
   "willGenerator": {
-    "countries": {
-      "GB": "United Kingdom",
-      "DE": "Germany",
-      "FR": "France",
-      "ES": "Spain",
-      "IT": "Italy",
-      "CZ": "Czech Republic",
-      "SK": "Slovakia",
-      "PL": "Poland",
-      "AT": "Austria",
-      "CH": "Switzerland",
-      "NL": "Netherlands",
-      "BE": "Belgium",
-      "LU": "Luxembourg",
-      "LI": "Liechtenstein",
-      "DK": "Denmark",
-      "SE": "Sweden",
-      "FI": "Finland",
-      "NO": "Norway",
-      "IS": "Iceland",
-      "IE": "Ireland",
-      "PT": "Portugal",
-      "GR": "Greece",
-      "HU": "Hungary",
-      "RO": "Romania",
-      "BG": "Bulgaria",
-      "HR": "Croatia",
-      "SI": "Slovenia",
-      "EE": "Estonia",
-      "LV": "Latvia",
-      "LT": "Lithuania",
-      "MT": "Malta",
-      "CY": "Cyprus",
-      "MD": "Moldova",
-      "UA": "Ukraine",
-      "RS": "Serbia",
-      "AL": "Albania",
-      "MK": "North Macedonia",
-      "ME": "Montenegro",
-      "BA": "Bosnia and Herzegovina"
-    },
-    "steps": {
-      "confirmJurisdiction": "Confirm Jurisdiction",
-      "personalInformation": "Personal Information",
-      "executorBeneficiaries": "Executor and Beneficiaries",
-      "reviewGenerate": "Review and Generate",
-      "signConfirm": "Sign and Confirm"
-    },
-    "no_template_found_for_this_jur_1": "No template found for this jurisdiction. Please try another selection.",
-    "failed_to_load_will_template_2": "Failed to load will template. Please check your connection and try again.",
-    "please_confirm_that_you_have_s_3": "Please confirm that you have signed the will.",
+    "changeCountry": "Change Country",
+    "confirmSigned": "Confirm you have signed the document",
     "console": {
       "willGenerationCompleted": "Will generation completed successfully."
     },
-    "confirmCountry": "Please confirm if you are creating a will for {{country}}.",
-    "changeCountry": "Change Country",
-    "select_a_country_4": "Select a country",
-    "fullName": "Full Name",
+    "countries": {
+      "AL": "Albania",
+      "AT": "Austria",
+      "BA": "Bosnia and Herzegovina",
+      "BE": "Belgium",
+      "BG": "Bulgaria",
+      "CH": "Switzerland",
+      "CY": "Cyprus",
+      "CZ": "Czech Republic",
+      "DE": "Germany",
+      "DK": "Denmark",
+      "EE": "Estonia",
+      "ES": "Spain",
+      "FI": "Finland",
+      "FR": "France",
+      "GB": "United Kingdom",
+      "GR": "Greece",
+      "HR": "Croatia",
+      "HU": "Hungary",
+      "IE": "Ireland",
+      "IS": "Iceland",
+      "IT": "Italy",
+      "LI": "Liechtenstein",
+      "LT": "Lithuania",
+      "LU": "Luxembourg",
+      "LV": "Latvia",
+      "MD": "Moldova",
+      "ME": "Montenegro",
+      "MK": "North Macedonia",
+      "MT": "Malta",
+      "NL": "Netherlands",
+      "NO": "Norway",
+      "PL": "Poland",
+      "PT": "Portugal",
+      "RO": "Romania",
+      "RS": "Serbia",
+      "SE": "Sweden",
+      "SI": "Slovenia",
+      "SK": "Slovakia",
+      "UA": "Ukraine"
+    },
     "executionInstructions": "Execution Instructions",
-    "confirmSigned": "Confirm you have signed the document",
-    "finalizeUpload": "Finalize and Upload"
+    "failed_to_load_will_template_2": "Failed to load will template. Please check your connection and try again.",
+    "finalizeUpload": "Finalize and Upload",
+    "fullName": "Full Name",
+    "no_template_found_for_this_jur_1": "No template found for this jurisdiction. Please try another selection.",
+    "please_confirm_that_you_have_s_3": "Please confirm that you have signed the will.",
+    "select_a_country_4": "Select a country",
+    "steps": {
+      "confirmJurisdiction": "Confirm Jurisdiction",
+      "executorBeneficiaries": "Executor and Beneficiaries",
+      "personalInformation": "Personal Information",
+      "reviewGenerate": "Review and Generate",
+      "signConfirm": "Sign and Confirm"
+    }
   },
   "will_generator": {
-    "uk_jurisdiction_title": "Which part of the UK is your primary residence?",
+    "error_uk_jurisdiction_required": "Please select a jurisdiction within the UK to continue.",
     "jurisdiction_england": "England",
-    "jurisdiction_wales": "Wales",
-    "jurisdiction_scotland": "Scotland",
     "jurisdiction_northern_ireland": "Northern Ireland",
+    "jurisdiction_scotland": "Scotland",
+    "jurisdiction_wales": "Wales",
     "select_will_language_title": "Please select the language for your will:",
-    "error_uk_jurisdiction_required": "Please select a jurisdiction within the UK to continue."
-  },
-  "playbook": {
-    "label": "Toimintaohjeet",
-    "create": "Luo toimintaohjeet",
-    "edit": "Muokkaa toimintaohjeita",
-    "preview": "Esikatselu",
-    "exitPreview": "Poistu esikatselusta",
-    "save": "Tallenna toimintaohjeet",
-    "saving": "Tallennetaan...",
-    "loading": "Ladataan toimintaohjeita...",
-    "autoSaveNotice": "Muutoksesi tallennetaan automaattisesti kirjoittaessasi.",
-    "noContent": "Sisältöä ei ole vielä lisätty.",
-    "noContacts": "Yhteystietoja ei ole vielä lisätty.",
-    "addContact": "Lisää yhteystieto",
-    "contact": "Yhteystieto",
-    "title": "Toimintaohjeet henkilölle {{name}}",
-    "titleReadOnly": "Henkilön {{name}} toimintaohjeet",
-    "description": "Luo henkilökohtaiset ohjeet ja tiedot huoltajallesi.",
-    "viewTitle": "Huoltajan toimintaohjeet: {{userName}}",
-    "viewDescription": "Olennainen tieto ja ohjeet, jotka on valmisteltu erityisesti sinulle.",
-    "lastUpdated": "Viimeksi päivitetty",
-    "viewFooter": "Nämä tiedot on uskottu sinulle huoltajana. Pidä ne luottamuksellisina ja turvassa.",
-    "notAuthenticated": "Kirjaudu sisään nähdäksesi nämä toimintaohjeet.",
-    "accessDenied": "Sinulla ei ole lupaa tarkastella näitä toimintaohjeita.",
-    "fetchError": "Toimintaohjeiden lataaminen epäonnistui.",
-    "saveSuccess": "Toimintaohjeet tallennettu onnistuneesti.",
-    "saveError": "Toimintaohjeiden tallentaminen epäonnistui.",
-    "discardChanges": {
-      "title": "Hylätäänkö muutokset?",
-      "description": "Sinulla on tallentamattomia muutoksia. Oletko varma, että haluat hylätä ne?",
-      "cancel": "Jatka muokkaamista",
-      "confirm": "Hylkää muutokset"
-    },
-    "importantContacts": {
-      "label": "Tärkeät yhteystiedot",
-      "description": "Lisää avainhenkilöitä, joihin tämän huoltajan tulisi ottaa yhteyttä.",
-      "viewDescription": "Ota yhteyttä näihin henkilöihin tarvittaessa.",
-      "add": "Lisää yhteystieto",
-      "remove": "Poista",
-      "empty": "Yhteystietoja ei ole vielä lisätty. Lisää tärkeitä henkilöitä napsauttamalla 'Lisää yhteystieto'.",
-      "name": "Nimi",
-      "namePlaceholder": "Koko nimi",
-      "relationship": "Suhde",
-      "relationshipPlaceholder": "esim. Perhejuristi",
-      "phone": "Puhelin",
-      "phonePlaceholder": "+358 40 123 4567",
-      "email": "Sähköposti",
-      "emailPlaceholder": "sahkoposti@example.com",
-      "notes": "Muistiinpanot",
-      "notesPlaceholder": "Lisätietoja"
-    },
-    "funeralWishes": {
-      "label": "Hautajaistoiveet",
-      "description": "Toiveesi hautajaisjärjestelyistä.",
-      "placeholder": "Kuvaile toiveesi hautajaisiasi tai muistotilaisuuttasi varten..."
-    },
-    "digitalAccounts": {
-      "label": "Digitaaliset tilit",
-      "description": "Ohjeet verkkotiliesi käsittelyyn.",
-      "placeholder": "Listaa digitaaliset tilisi ja miten niitä tulisi käsitellä..."
-    },
-    "documentLocations": {
-      "label": "Asiakirjojen sijainnit",
-      "description": "Mistä löytää tärkeät asiakirjat.",
-      "placeholder": "Kuvaile, missä tärkeät asiakirjat sijaitsevat..."
-    },
-    "personalMessages": {
-      "label": "Henkilökohtaiset viestit",
-      "description": "Henkilökohtaiset viestit tälle huoltajalle.",
-      "placeholder": "Kirjoita henkilökohtainen viesti tälle huoltajalle..."
-    },
-    "practicalInstructions": {
-      "label": "Käytännön ohjeet",
-      "description": "Välittömät toimet ja vastuut.",
-      "placeholder": "Listaa käytännön tehtävät ja välittömät toimet..."
-    },
-    "notFound": {
-      "title": "Toimintaohjeita ei löytynyt",
-      "description": "Etsimiäsi toimintaohjeita ei ole vielä luotu."
-    },
-    "subtitle": {
-      "edit": "Luo henkilökohtaiset ohjeet ja tiedot tälle huoltajalle.",
-      "view": "Sinulle valmisteltu olennainen tieto ja ohjeet."
-    },
-    "status": {
-      "empty": "Ei aloitettu",
-      "draft": "Keskeneräinen",
-      "complete": "Valmis"
-    },
-    "tabs": {
-      "funeral": "Hautajaiset",
-      "digital": "Digitaalinen",
-      "contacts": "Yhteystiedot",
-      "documents": "Asiakirjat",
-      "messages": "Viestit",
-      "instructions": "Ohjeet"
-    },
-    "templates": {
-      "funeralWishes": {
-        "traditionalReligiousBurial": "Traditional Religious Burial",
-        "simpleCremationService": "Simple Cremation Service",
-        "ecoFriendlyNaturalBurial": "Eco-Friendly Natural Burial"
-      },
-      "digitalAccountsShutdown": {
-        "comprehensiveDigitalShutdown": "Comprehensive Digital Shutdown",
-        "minimalDigitalFootprint": "Minimal Digital Footprint",
-        "professionalBusinessAccounts": "Professional & Business Accounts"
-      },
-      "importantContacts": {
-        "essentialContactsList": "Essential Contacts List",
-        "childrenDependentsContacts": "Children & Dependents Contacts"
-      },
-      "documentLocations": {
-        "homeFilingSystem": "Home Filing System",
-        "professionalStorage": "Professional Storage"
-      },
-      "personalMessages": {
-        "letterToSpousePartner": "Letter to Spouse/Partner",
-        "letterToChildren": "Letter to Children",
-        "letterToParents": "Letter to Parents"
-      },
-      "practicalInstructions": {
-        "first48HoursChecklist": "First 48 Hours Checklist",
-        "businessContinuityPlan": "Business Continuity Plan",
-        "householdManagementGuide": "Household Management Guide"
-      }
-    },
-    "sections": {
-      "funeral": {
-        "title": "Hautajaistoiveet",
-        "description": "Toiveesi hautajaisjärjestelyistä ja muistotilaisuuksista.",
-        "placeholder": "Kuvaile toiveesi hautajaisiasi tai muistotilaisuuttasi varten...\n\nEsimerkiksi:\n- Tilaisuuden tyyppi (uskonnollinen, maallinen, elämänjuhla)\n- Hautaus- tai tuhkaustoiveet\n- Sijaintitoiveet\n- Musiikki, lukukappaleet tai erityistoiveet\n- Kenen tulisi puhua tai osallistua\n- Noudatettavat erityiset perinteet"
-      },
-      "digital": {
-        "title": "Digitaalisten tilien sulkeminen",
-        "description": "Ohjeet digitaalisen läsnäolosi ja verkkotiliesi käsittelyyn.",
-        "placeholder": "Listaa digitaaliset tilisi ja miten niitä tulisi käsitellä...\n\nEsimerkiksi:\n- Sosiaalisen median tilit (Facebook, Instagram, LinkedIn)\n- Sähköpostitilit\n- Pilvitallennus (Google Drive, Dropbox)\n- Tilauspalvelut (Netflix, Spotify)\n- Verkkopankki- ja rahoitustilit\n- Kryptovaluuttalompakot\n- Verkkosivustot tai verkkotunnukset"
-      },
-      "contacts": {
-        "title": "Tärkeät yhteystiedot",
-        "description": "Avainhenkilöt, joihin tämän huoltajan tulisi ottaa yhteyttä tai ilmoittaa.",
-        "placeholder": "Lisää tärkeitä yhteystietoja, jotka liittyvät tämän huoltajan vastuisiin."
-      },
-      "documents": {
-        "title": "Asiakirjojen sijainnit",
-        "description": "Mistä löytää tärkeät fyysiset ja digitaaliset asiakirjat.",
-        "placeholder": "Kuvaile, missä tärkeät asiakirjat sijaitsevat...\n\nEsimerkiksi:\n- Testamentin sijainti\n- Vakuutuskirjat\n- Kiinteistöjen omistusasiakirjat\n- Pankkitilin tiedot\n- Sijoitusasiakirjat\n- Veroilmoitukset\n- Salasanat ja pääsykoodit\n- Tallelokeron sijainti ja avain"
-      },
-      "messages": {
-        "title": "Henkilökohtaiset viestit",
-        "description": "Henkilökohtaiset viestit ja viimeiset ajatukset tälle huoltajalle.",
-        "placeholder": "Kirjoita henkilökohtainen viesti tälle huoltajalle...\n\nTämä on tilaisuutesi:\n- Ilmaista tunteitasi ja kiitollisuuttasi\n- Jakaa tärkeitä muistoja\n- Antaa ohjeita tai neuvoja\n- Selittää päätöksiäsi\n- Jättää lohdun sanoja\n- Jakaa toiveesi tulevaisuudesta"
-      },
-      "practical": {
-        "title": "Käytännön ohjeet",
-        "description": "Välittömät käytännön toimet ja vastuut tälle huoltajalle.",
-        "placeholder": "Listaa käytännön tehtävät ja välittömät toimet...\n\nEsimerkiksi:\n- Ensimmäisten 24-48 tunnin tarkistuslista\n- Kenelle ilmoittaa ensin\n- Kiireelliset laskut tai maksut\n- Hoito-ohjeet (lemmikit, kasvit, omaisuus)\n- Huomiota vaativat liikeasiat\n- Peruutettavat sovitut tapaamiset\n- Tarvittavat avaimet ja pääsykoodit"
-      }
-    },
-    "contactFields": {
-      "name": "Nimi",
-      "namePlaceholder": "Koko nimi",
-      "role": "Rooli/Suhde",
-      "rolePlaceholder": "esim. Perhejuristi, Kirjanpitäjä",
-      "phone": "Puhelin",
-      "phonePlaceholder": "+358 40 123 4567",
-      "email": "Sähköposti",
-      "emailPlaceholder": "sahkoposti@example.com",
-      "notes": "Muistiinpanot",
-      "notesPlaceholder": "Lisätietoja tästä yhteystiedosta"
-    },
-    "messages": {
-      "autoSaved": "Tallennettu",
-      "saved": "Toimintaohjeet tallennettu onnistuneesti"
-    },
-    "errors": {
-      "loadFailed": "Toimintaohjeiden lataaminen epäonnistui.",
-      "saveFailed": "Toimintaohjeiden tallentaminen epäonnistui."
-    }
-  },
-  "scenarioPlanner": {
-    "scenarios": {
-      "hospitalized": {
-        "title": "What if you're in the hospital for 3 months?",
-        "description": "An unexpected health issue means you're unable to manage daily affairs. Your family needs to step in."
-      },
-      "incapacitated": {
-        "title": "What if you become incapacitated?",
-        "description": "A serious accident leaves you unable to make decisions for yourself. Who will make them for you?"
-      },
-      "suddenPassing": {
-        "title": "What if something happens to you tomorrow?",
-        "description": "The ultimate test of your preparation. Is your family ready to navigate this difficult time without chaos?"
-      }
-    },
-    "timeframes": {
-      "first24Hours": "First 24 Hours",
-      "firstWeek": "First Week",
-      "firstMonth": "First Month",
-      "threeToSixMonths": "3-6 Months"
-    },
-    "vulnerabilities": {
-      "billsGoUnpaid": "Bills Go Unpaid",
-      "businessDecisionsStall": "Business Decisions Stall",
-      "familyCannotManageFinances": "Family cannot legally manage your finances",
-      "familyCannotAccessBankAccount": "Family cannot access primary bank account",
-      "businessNoLeadership": "Business operations have no clear leadership",
-      "noWillFound": "No Will Found",
-      "insuranceDetailsUnknown": "Insurance Details Unknown",
-      "noWillAvailable": "No will available",
-      "unknownLifeInsurance": "Unknown life insurance details"
-    },
-    "actions": {
-      "designatePowerOfAttorney": "Designate a Power of Attorney for finances",
-      "grantSpouseAccess": "Grant spouse access to your primary account",
-      "createBusinessContinuityPlan": "Create a business continuity plan",
-      "draftWill": "Draft and store a legally binding will",
-      "compileInsuranceList": "Compile a list of all insurance policies"
-    },
-    "timelineEvents": {
-      "notifyImmediateFamily": "Notify immediate family",
-      "securePhysicalProperty": "Secure physical property",
-      "contactExecutor": "Contact executor",
-      "locateWill": "Locate the will",
-      "executorBeginsProbate": "Executor begins probate process",
-      "notifyEmployer": "Notify employer",
-      "activatePowerOfAttorney": "Activate Power of Attorney",
-      "arrangeBillPayments": "Arrange bill payments",
-      "fileDisabilityBenefits": "File for disability benefits"
-    },
-    "descriptions": {
-      "billsGoUnpaid": "Your family can't access your primary checking account to pay the mortgage.",
-      "businessDecisionsStall": "Clients and employees don't know who is authorized to make decisions.",
-      "familyCannotManageFinances": "Your spouse can now legally manage all financial matters, ensuring bills are paid and investments are protected.",
-      "familyCannotAccessBankAccount": "Your family can now pay bills and manage daily expenses without delay or legal complications.",
-      "businessNoLeadership": "Your business can continue operating smoothly with clear leadership and decision-making processes.",
-      "noWillFound": "The family cannot locate or confirm the existence of a will.",
-      "insuranceDetailsUnknown": "Life insurance policy details and beneficiaries are unknown.",
-      "notifyImmediateFamily": "Ensure all immediate family members are informed.",
-      "securePhysicalProperty": "Ensure that the home and vehicles are secure.",
-      "contactExecutor": "Reach out to John Smith to start will proceedings.",
-      "locateWill": "Locate and secure the will at the designated location.",
-      "executorBeginsProbate": "The executor will file for probate to manage the estate.",
-      "notifyEmployer": "Inform workplace about extended absence.",
-      "activatePowerOfAttorney": "Ensure designated person can make decisions.",
-      "arrangeBillPayments": "Set up automatic payments or delegate to trusted person.",
-      "fileDisabilityBenefits": "Submit necessary paperwork for insurance claims."
-    },
-    "scenario_planner_1": "Scenario Planner",
-    "let_s_see_how_prepared_your_fa_2": "Let's see how prepared your family is for different scenarios",
-    "generate_family_action_plan_3": "Generate Family Action Plan",
-    "generate_plan_4": "Generate Plan",
-    "current_family_vulnerabilities_6": "Current Family Vulnerabilities",
-    "without_proper_preparation_you_7": "Without proper preparation, you and your family could face these challenges",
-    "projected_timeline_8": "Projected Timeline",
-    "potential_financial_impact_9": "Potential Financial Impact",
-    "these_are_estimates_of_the_pos_10": "These are estimates of the potential costs if vulnerabilities are not addressed",
-    "no_will_11": "No Will: ",
-    "potential_cost_of_lengthy_prob_12": "Potential cost of lengthy probate process: ",
-    "5_000_15_000_13": "$5,000 - $15,000",
-    "estimated_14": " estimated",
-    "potential_loss_of_business_rev_15": "Potential loss of business revenue during transition: ",
-    "20_000_16": "$20,000",
-    "your_preparedness_blueprint_17": "Your Preparedness Blueprint",
-    "your_family_is_currently_18": "Your family is currently ",
-    "protected_in_this_scenario_19": "% protected in this scenario",
-    "vulnerability_20": "Vulnerability: ",
-    "action_required_21": "Action Required: ",
-    "resolve_this_vulnerability_22": "Resolve This Vulnerability",
-    "resolved_23": "Resolved: ",
-    "family_action_plan_24": "Family Action Plan",
-    "a_comprehensive_guide_for_your_25": "A comprehensive guide for your family to follow in case of emergency",
-    "print_plan_26": "Print Plan",
-    "_27": "🤕"
-  },
-  "scenarios": {
-    "title": "Mitä tapahtuu, kun elämä ottaa odottamattoman käänteen?",
-    "subtitle": "Oikeita perheitä, oikeita tilanteita, oikeaa valvontaa ja valmistautumista",
-    "hospitalStay": {
-      "title": "Odottamaton sairaalassaolo",
-      "before": {
-        "situation": "Saran miehellä oli sydänkohtaus. Kun hän oli tehohoidossa, Saran vietti päiviä yrittäessään löytää vakuutuskirjat, pankkitilitiedot ja tärkeät yhteystiedot. Stressi oli ylivoimainen, kun hänen piti keskittyä miehensä toipumiseen.",
-        "emotion": "Stressi ja huoli",
-        "consequence": "Päiviä tietojen etsimistä ja tukea."
-      },
-      "after": {
-        "situation": "Kun Markilla oli onnettomuutensa, hänen vaimonsa Lisa avasi perheoppaansa ja löysi kaiken järjestettynä: vakuutustiedot, pankkiyhteystiedot, lääketieteelliset tiedot ja jopa listan ilmoitettavista henkilöistä. Hän saattoi keskittyä siihen, mikä oli tärkeintä - olla Markin rinnalla.",
-        "emotion": "Rauha ja keskittyminen",
-        "benefit": "Välitön pääsy kaikkeen, mitä hän tarvitsi."
-      }
-    },
-    "businessTrip": {
-      "title": "Työmatkan hätätilanne",
-      "before": {
-        "situation": "Kun Davidin lento viivästyi ja hän jätti tyttärensä hätäleikkauksen väliin, hänen vaimonsa ei päässyt käsiksi säästötiliinsä tai löytänyt lääketieteellisiä vakuutustietojaan. Kriittiset päätökset joutuivat odottamaan.",
-        "emotion": "Turhautuminen ja avuttomuus",
-        "consequence": "Tärkeät lääketieteelliset päätökset viivästyivät."
-      },
-      "after": {
-        "situation": "Kun Emman mies matkusti ja hän tarvitsi hätävaroja poikansa leikkauksen vuoksi, hänellä oli välitön pääsy kaikkiin tilitietoihin, vakuutustietoihin ja jopa ennalta kirjoitettuihin valtuutuskirjeisiin. Ei viivästyksiä, ei stressiä.",
-        "emotion": "Helpotus ja valmistautuminen",
-        "benefit": "Kaikki saatavilla juuri kun hän sitä tarvitsi."
-      }
-    },
-    "suddenLoss": {
-      "title": "Äkillinen menetys",
-      "before": {
-        "situation": "Isänsä äkillisen kuoleman jälkeen Maria vietti kuukausia yrittäessään koota hänen talousasioitaan. Hän löysi tilejä, joista ei tiennyt olevan olemassa, ja menetti tärkeitä määräaikoja, koska asiakirjat olivat hajallaan kaikkialla.",
-        "emotion": "Hämmingi ja katumus",
-        "consequence": "Menetetyt määräajat ja aikaa."
-      },
-      "after": {
-        "situation": "Kun Johnin perhe tarvitsi hoitaa hänen asioitaan, kaikki oli selkeästi järjestetty: täydellinen luettelo tileistä, tärkeät yhteystiedot, askel-askeleelta-ohjeet ja jopa henkilökohtaiset viestit, jotka hän oli valmistellut jokaiselle perheenjäsenelle.",
-        "emotion": "Rauha ja selkeys",
-        "benefit": "Selkeä polku seurattavaksi vaikeina aikoina."
-      }
-    },
-    "labels": {
-      "before": "Ennen LegacyGuardia",
-      "after": "Perintöholvin jälkeen",
-      "feeling": "Tunne"
-    },
-    "bottomCta": {
-      "primary": "Älä anna perheesi kohdata tätä kaaosta",
-      "secondary": "Aloita järjestäminen 10 minuutissa",
-      "urgency": "Jokainen päivä, jona odotat, on toinen päivä, jona perheesi on valmistautumaton"
-    },
-    "testimonials": {
-      "1": "Veljeni äkillisen onnettomuuden jälkeen katsoin, kuinka miniäni kamppaili viikkoja löytääkseen tärkeitä asiakirjoja ja salasanoja. Silloin tiesin, etten voinut antaa saman tapahtua perheelleni.",
-      "2": "Yksinhuoltajana ja yrittäjänä huolestuin jatkuvasti siitä, mitä tapahtuisi, jos minulle sattuisi jotain. Perintöholvi auttoi minua järjestämään kaiken.",
-      "3": "Vaimollani on varhaisvaiheen dementia, ja tajusin tarvitsevani valmistautua, kun vielä pystyin. Perintöholvi teki siitä yksinkertaista järjestää 40 vuoden yhteinen elämämme."
-    }
-  },
-  "annualReview": {
-    "title": "Vuosittainen perintötarkistus",
-    "subtitle": "Pidä perheesi suojelusuunnitelma ajantasaisena ja tehokkaana",
-    "description": "Elämä muuttuu nopeasti. Tämä vuosittainen tarkistus varmistaa, että perintösuunnitelmasi pysyy linjassa nykyisen tilanteesi ja toiveidesi kanssa.",
-    "progress": {
-      "title": "Tarkistuksen edistyminen",
-      "completed": "Suoritettu",
-      "inProgress": "Käynnissä",
-      "notStarted": "Ei aloitettu",
-      "totalSteps": "Vaiheet yhteensä",
-      "estimatedTime": "Arvioitu aika: 15 minuuttia"
-    },
-    "step1": {
-      "title": "Tarkista toimeenpanijasi",
-      "description": "Vahvista, että luotettavat henkilösi ovat edelleen oikeita valintoja perheellesi"
-    },
-    "step2": {
-      "title": "Tarkista omaisuuseräsi",
-      "description": "Vahvista, että omaisuuseräluettelosi on ajantasainen ja täydellinen"
-    },
-    "step3": {
-      "title": "Tarkista edunsaajasi",
-      "description": "Varmista, että edunsaajasi ovat edelleen oikeita henkilöitä"
-    },
-    "step4": {
-      "title": "Viimeistele tarkistus",
-      "description": "Viimeistele vuosittainen tarkistuksesi ja päivitä suunnitelmasi"
-    },
-    "commandRoster": {
-      "title": "Komentoluettelon tarkistus",
-      "description": "Toimeenpanijasi ja luotettavat henkilösi ovat perheesi suojelusuunnitelman perusta.",
-      "executorQuestion": "Onko {name} edelleen oikea henkilö toimeenpanijaksesi?",
-      "guardianQuestion": "Onko {name} edelleen oikea henkilö huolehtimaan lapsistasi?",
-      "trustedPersonQuestion": "Onko {name} edelleen oikea henkilö rooliin {role}?",
-      "status": {
-        "current": "Ajantasainen",
-        "needsUpdate": "Vaati päivitystä",
-        "outdated": "Vanhentunut",
-        "missing": "Puuttuu"
-      },
-      "details": {
-        "executor": "Ensisijainen toimeenpanija perintötilallesi",
-        "guardian": "Huoltaja alaikäisille lapsille",
-        "trustedPerson": "Luotettu henkilö {accessLevel} pääsyllä",
-        "emergencyContact": "Hätäyhteyshenkilö"
-      }
-    },
-    "armory": {
-      "title": "Omaisuuseräluettelon tarkistus",
-      "description": "Omaisuuseräsi ovat mitä suojaat. Pidä tämä luettelo ajantasaisena.",
-      "ownershipQuestion": "Omistatko edelleen {assetName}?",
-      "valueQuestion": "Onko {assetName} arvo muuttunut merkittävästi?",
-      "locationQuestion": "Onko {assetName} sijainti edelleen oikein?",
-      "status": {
-        "current": "Ajantasainen",
-        "needsUpdate": "Vaati päivitystä",
-        "outdated": "Vanhentunut",
-        "missing": "Puuttuu"
-      },
-      "categories": {
-        "realEstate": "Kiinteistö",
-        "vehicles": "Ajoneuvot",
-        "bankAccounts": "Pankkitilit",
-        "investments": "Sijoitukset",
-        "insurance": "Vakuutukset",
-        "digitalAssets": "Digitaaliset omaisuuserät",
-        "personalItems": "Henkilökohtaiset esineet"
-      }
-    },
-    "beneficiaries": {
-      "title": "Edunsaajien tarkistus",
-      "description": "Varmista, että oikeat henkilöt saavat oikeat omaisuuserät oikeaan aikaan.",
-      "confirmationQuestion": "Ovatko nämä edelleen oikeita henkilöitä saamaan nämä omaisuuserät?",
-      "distributionQuestion": "Onko jakoprosentti edelleen oikein?",
-      "contactQuestion": "Ovatko {name} yhteystiedot edelleen ajantasaiset?",
-      "status": {
-        "current": "Ajantasainen",
-        "needsUpdate": "Vaati päivitystä",
-        "outdated": "Vanhentunut",
-        "missing": "Puuttuu"
-      },
-      "details": {
-        "primary": "Ensisijainen edunsaaja",
-        "contingent": "Varaedunsaaja",
-        "percentage": "{percentage}% omaisuuseristä",
-        "specific": "Tietyn omaisuuserän edunsaaja"
-      }
-    },
-    "complete": {
-      "title": "Tarkistus valmis",
-      "description": "Vuosittainen tarkistuksesi on suoritettu onnistuneesti.",
-      "message": "Vuosittainen tarkistuksesi on suoritettu. Perheesi suojelusuunnitelma on nyt ajantasainen ja tehokas.",
-      "summary": "Tarkistuksen yhteenveto",
-      "changes": "Tehdyt muutokset",
-      "noChanges": "Muutoksia ei tarvittu. Suunnitelmasi on ajantasainen.",
-      "nextReview": "Seuraava tarkistus",
-      "reminder": "Muistutamme sinua, kun on aika seuraavalle vuosittaiselle tarkistukselle."
-    },
-    "buttons": {
-      "confirm": "Vahvista",
-      "update": "Päivitä",
-      "back": "Takaisin",
-      "next": "Seuraava",
-      "finish": "Viimeistele tarkistus",
-      "save": "Tallenna muutokset",
-      "skip": "Ohita toistaiseksi",
-      "reviewLater": "Tarkista myöhemmin"
-    },
-    "status": {
-      "title": "Tarkistuksen tila",
-      "overdue": "Myöhässä",
-      "dueSoon": "Erääntyy pian",
-      "current": "Ajantasainen",
-      "completed": "Suoritettu",
-      "lastReview": "Viimeisin tarkistus",
-      "nextReview": "Seuraava tarkistus",
-      "daysOverdue": "{days} päivää myöhässä",
-      "daysUntilDue": "{days} päivää erääntymiseen"
-    },
-    "notifications": {
-      "reviewDue": "Vuosittainen tarkistus erääntyy",
-      "reviewOverdue": "Vuosittainen tarkistus myöhässä",
-      "reviewCompleted": "Vuosittainen tarkistus suoritettu",
-      "changesSaved": "Muutokset tallennettu onnistuneesti",
-      "errorSaving": "Virhe muutosten tallentamisessa",
-      "reminderSet": "Muistutus asetettu seuraavalle tarkistukselle"
-    }
-  },
-  "complexityReduction": {
-    "title": "Yksinkertaista perintösuunnitelmasi",
-    "subtitle": "Jaa monimutkaiset tehtävät yksinkertaisiksi, hallittaviksi vaiheiksi",
-    "description": "Ymmärrämme, että tulevaisuuden suunnittelu voi tuntua ylivoimaiselta. Monimutkaisuuden vähentämisjärjestelmämme jakaa jokaisen tehtävän yksinkertaisiksi, toiminnallisiksi vaiheiksi, jotka vievät vain minuutteja suorittaa.",
-    "benefits": {
-      "title": "Miksi monimutkaisuuden vähentäminen toimii",
-      "overwhelm": {
-        "title": "Poistaa ylivoiman",
-        "description": "Massiivisen tehtävälistan sijaan käsittelet yhtä pientä tehtävää kerrallaan. Jokainen vaihe on suunniteltu suoritettavaksi alle 5 minuutissa."
-      },
-      "progress": {
-        "title": "Näkyvä edistyminen",
-        "description": "Katso perheesi valmistautumisen kasvavan jokaisen suoritetun vaiheen myötä. Seuraa edistymistäsi ja juhli pieniä voittoja matkan varrella."
-      },
-      "confidence": {
-        "title": "Rakentaa luottamusta",
-        "description": "Kun suoritat jokaisen vaiheen, tunnet olosi luottavaisemmaksi ja hallitsevammaksi. Mikä kerran tuntui mahdottomalta, tulee saavutettavaksi."
-      },
-      "family": {
-        "title": "Perheensuoja",
-        "description": "Jokainen suoritettu vaihe suojaa suoraan perhettäsi. Hätäpääsystä pitkän aikavälin suunnitteluun, jokainen toimenpide on tärkeä."
-      }
-    },
-    "steps": {
-      "identifyBankAccount": {
-        "title": "Tunnista ensisijainen pankkitilisi",
-        "why": "Miksi tämä on tärkeää: Välitön pääsy varoihin hätätilanteissa",
-        "whatYouDo": "Mitä teet: Ota kuva tai kirjoita ylös tilitiedot",
-        "whatWeDo": "Mitä teemme: Tallennamme tiedot turvallisesti ja luomme pääsyohjeet",
-        "timeRequired": "Tarvittava aika: 2 minuuttia",
-        "complexity": "Monimutkaisuustaso: Yksinkertainen"
-      },
-      "emergencyContacts": {
-        "title": "Listaa hätäyhteystiedot",
-        "why": "Miksi tämä on tärkeää: Nopea pääsy tärkeisiin henkilöihin kriiseissä",
-        "whatYouDo": "Mitä teet: Lisää puhelinnumeroita ja suhteita",
-        "whatWeDo": "Mitä teemme: Järjestämme yhteystiedot prioriteetin mukaan ja luomme hätäprotokollat",
-        "timeRequired": "Tarvittava aika: 3 minuuttia",
-        "complexity": "Monimutkaisuustaso: Yksinkertainen"
-      },
-      "insurancePolicies": {
-        "title": "Dokumentoi vakuutuskirjat",
-        "why": "Miksi tämä on tärkeää: Varmistaa, että korvaukset voidaan hakea nopeasti ja oikein",
-        "whatYouDo": "Mitä teet: Lataa vakuutuskirjat tai ota kuvia",
-        "whatWeDo": "Mitä teemme: Poimimme tärkeät tiedot ja luomme hakuehdot",
-        "timeRequired": "Tarvittava aika: 5 minuuttia",
-        "complexity": "Monimutkaisuustaso: Helppo"
-      },
-      "digitalAssets": {
-        "title": "Turvaa digitaaliset omaisuuserät",
-        "why": "Miksi tämä on tärkeää: Suojaa verkkotilit ja digitaaliset muistot",
-        "whatYouDo": "Mitä teet: Listaa tärkeät tilit ja salasanat",
-        "whatWeDo": "Mitä teemme: Luomme turvalliset pääsyprotokollat ja varmuuskopiointiohjeet",
-        "timeRequired": "Tarvittava aika: 4 minuuttia",
-        "complexity": "Monimutkaisuustaso: Helppo"
-      },
-      "legalDocuments": {
-        "title": "Järjestä oikeudelliset asiakirjat",
-        "why": "Miksi tämä on tärkeää: Varmistaa, että oikeudelliset toiveet noudatetaan ja prosessit ovat sujuvia",
-        "whatYouDo": "Mitä teet: Lataa testamentit, valtakirjat ja muut asiakirjat",
-        "whatWeDo": "Mitä teemme: Luomme yhteenvedot ja varmistamme oikean oikeudellisen pääsyn",
-        "timeRequired": "Tarvittava aika: 6 minuuttia",
-        "complexity": "Monimutkaisuustaso: Keskitaso"
-      },
-      "familyInstructions": {
-        "title": "Kirjoita perheohjeet",
-        "why": "Miksi tämä on tärkeää: Tarjoaa selkeät ohjeet vaikeina aikoina",
-        "whatYouDo": "Mitä teet: Kirjoita henkilökohtaisia viestejä ja ohjeita",
-        "whatWeDo": "Mitä teemme: Järjestämme viestit ja luomme toimitusaikataulut",
-        "timeRequired": "Tarvittava aika: 8 minuuttia",
-        "complexity": "Monimutkaisuustaso: Keskitaso"
-      }
-    },
-    "actions": {
-      "startThisStep": "Aloita tämä vaihe",
-      "showMeHow": "Näytä miten",
-      "iNeedHelp": "Tarvitsen apua",
-      "nextStep": "Seuraava vaihe",
-      "previousStep": "Edellinen vaihe",
-      "completeStep": "Merkitse suoritetuksi",
-      "skipStep": "Ohita toistaiseksi"
-    },
-    "progress": {
-      "title": "Edistymisesi",
-      "completed": "Suoritettu",
-      "inProgress": "Käynnissä",
-      "notStarted": "Ei aloitettu",
-      "totalSteps": "Vaiheet yhteensä",
-      "estimatedTime": "Arvioitu jäljellä oleva aika"
-    },
-    "features": {
-      "title": "Miten monimutkaisuuden vähentäminen toimii",
-      "stepByStep": {
-        "title": "Askel-askeleelta-ohjeet",
-        "description": "Jokainen tehtävä jaetaan selkeiksi, yksinkertaisiksi ohjeiksi, joita kuka tahansa voi seurata."
-      },
-      "timeEstimation": {
-        "title": "Tarkat aikakestot",
-        "description": "Tiedä täsmälleen, kuinka kauan jokainen vaihe vie, 2 minuutista 15 minuuttiin enimmillään."
-      },
-      "difficultyLevels": {
-        "title": "Selkeät vaikeustasot",
-        "description": "Yksinkertainen, Helppo, Keskitaso ja Monimutkainen arviot auttavat sinua valitsemaan, mitä käsitellä ensin."
-      },
-      "progressTracking": {
-        "title": "Edistymisen seuranta",
-        "description": "Katso perheesi valmistautumisen kasvavan jokaisen suoritetun vaiheen myötä."
-      },
-      "helpAvailable": {
-        "title": "Apua tarvittaessa",
-        "description": "Saa apua, selityksiä ja tukea mille tahansa vaiheelle, joka tuntuu haastavalta."
-      }
-    }
-  },
-  "microTaskGenerator": {
-    "minutes_1": " minuuttia • ",
-    "family_impact_2": " perhevaikutus",
-    "start_task_3": "Aloita tehtävä",
-    "complete_task_4": "Suorita tehtävä",
-    "skip_for_now_5": "Ohita toistaiseksi",
-    "taskCategories": {
-      "identification": "Henkilöllisyystodistukset",
-      "financial": "Taloudelliset tiedot",
-      "healthcare": "Terveydenhuoltoasiakirjat",
-      "legal": "Oikeudelliset asiakirjat",
-      "digital": "Digitaaliset omaisuuserät",
-      "personal": "Henkilökohtaiset tiedot"
-    },
-    "difficultyLevels": {
-      "trivial": "Merkityksetön",
-      "easy": "Helppo",
-      "simple": "Yksinkertainen"
-    },
-    "familyImpactLevels": {
-      "high": "Korkea",
-      "medium": "Keskitaso",
-      "low": "Matala"
-    },
-    "taskStatus": {
-      "available": "Saatavilla",
-      "in_progress": "Käynnissä",
-      "completed": "Suoritettu",
-      "skipped": "Ohitettu"
-    },
-    "tasks": {
-      "driversLicense": {
-        "title": "Ota kuva ajokortistasi",
-        "description": "Perheesi tarvitsee tämän oikeudellisiin ja taloudellisiin asioihin. Selkeän kuvan saaminen säästää heiltä aikaa ja stressiä.",
-        "completionMessage": "Perheellasi on nyt pääsy kriittisiin henkilöllisyystietoihin."
-      },
-      "passport": {
-        "title": "Valokuvat passisi",
-        "description": "Välttämätön kansainvälisiä matkajärjestelyjä ja oikeudellista henkilöllisyystodistusta varten.",
-        "completionMessage": "Kansainväliset matkaasiakirjat on nyt turvattu perheellesi."
-      },
-      "birthCertificate": {
-        "title": "Skannaa syntymätodistuksesi",
-        "description": "Vaaditaan moniin oikeudellisiin prosesseihin ja perhehistoriadokumentaatioon.",
-        "completionMessage": "Syntymätodistus on nyt digitaalisesti säilytetty tulevia tarpeita varten."
-      },
-      "socialSecurityCard": {
-        "title": "Dokumentoi sosiaaliturvakorttisi",
-        "description": "Kriittinen etuuksia ja oikeudellisia henkilöllisyysprosesseja varten.",
-        "completionMessage": "Sosiaaliturvatiedot on nyt turvallisesti dokumentoitu."
-      },
-      "bankAccounts": {
-        "title": "Listaa pankkitilisi",
-        "description": "Auttaa perhettäsi hallitsemaan taloutta ja pääsemään käsiksi varoihin tarvittaessa.",
-        "completionMessage": "Pankkitilitiedot on nyt järjestetty perheellesi."
-      },
-      "insurancePolicies": {
-        "title": "Koota vakuutuskirjatiedot",
-        "description": "Varmistaa, että perheesi tietää kaikista vakuutusturvasta ja voi hakea korvauksia.",
-        "completionMessage": "Vakuutustiedot on nyt kattavat ja saavutettavat."
-      },
-      "medicalRecords": {
-        "title": "Järjestä lääketieteellinen historia",
-        "description": "Auttaa terveydenhuoltotarjoajia ymmärtämään lääketieteellisen taustasi.",
-        "completionMessage": "Lääketieteellinen historia on nyt järjestetty parempia terveydenhuoltopäätöksiä varten."
-      },
-      "medications": {
-        "title": "Listaa nykyiset lääkkeet",
-        "description": "Kriittinen lääketieteellisiin hätätilanteisiin ja jatkuvaan hoitoon.",
-        "completionMessage": "Lääkelista on nyt saatavilla lääketieteellisille ammattilaisille."
-      },
-      "will": {
-        "title": "Luo tai päivitä testamenttisi",
-        "description": "Varmistaa, että toiveesi on selkeästi dokumentoitu ja oikeudellisesti sitova.",
-        "completionMessage": "Testamenttisi on nyt ajantasainen ja oikeudellisesti suojattu."
-      },
-      "powerOfAttorney": {
-        "title": "Nimeä valtakirja",
-        "description": "Valtuuta luotettavat henkilöt tekemään päätöksiä puolestasi.",
-        "completionMessage": "Valtakirja on nyt oikein nimetty."
-      },
-      "digitalPasswords": {
-        "title": "Turvaa digitaalinen salasanaluettelo",
-        "description": "Auttaa perhettä pääsemään käsiksi tärkeisiin verkkotileihin ja palveluihin.",
-        "completionMessage": "Digitaalinen pääsy on nyt turvallisesti järjestetty perheellesi."
-      },
-      "socialMedia": {
-        "title": "Suunnittele sosiaalisen median tilit",
-        "description": "Päätä, miten verkkoläsnäolosi pitäisi käsitellä.",
-        "completionMessage": "Sosiaalisen median perintö on nyt suunniteltu ja dokumentoitu."
-      }
-    },
-    "sessionStats": {
-      "tasksCompleted": "Suoritetut tehtävät",
-      "totalTimeSpent": "Käytetty aika yhteensä",
-      "momentumScore": "Vauhtipistemäärä",
-      "nextRecommendedTask": "Seuraava suositeltu tehtävä"
-    },
-    "scoring": {
-      "urgency": "Kiireellisyys",
-      "impact": "Vaikutus",
-      "ease": "Helppous",
-      "momentum": "Vauhti"
-    }
-  },
-  "editStoryModal": {
-    "editStory": "Muokkaa tarinaa",
-    "addStory": "Lisää tarina",
-    "description": "Jaa tarina \"{{assetName}}\" takana. Tämä henkilökohtainen kosketus on korvaamaton rakkaillesi.",
-    "fields": {
-      "yourStory": "Tarinasi"
-    },
-    "placeholders": {
-      "story": "esim. Tämä oli isoäitisi kihlasormus, joka annettiin hänelle vuonna 1952, kun hän meni naimisiin isoisäsi kanssa pienen kirkon kanssa kotikaupungissaan. Hän käytti sitä joka päivä 65 vuoden ajan..."
-    },
-    "hints": {
-      "shareMemories": "Jaa muistoja, merkitystä tai historiaa"
-    },
-    "tips": {
-      "title": "Vinkkejä merkitykselliseen tarinaan:",
-      "explainSpecial": "Selitä, miksi tämä esine on sinulle erityinen",
-      "shareMemories": "Jaa siihen liittyvät muistot",
-      "describeHistory": "Kuvaile sen historiaa tai miten sen sai",
-      "mentionWishes": "Mainitse toiveet siitä, miten sitä pitäisi käyttää tai säilyttää"
-    },
-    "saving": "Tallennetaan...",
-    "saveStory": "Tallenna tarina",
-    "messages": {
-      "saved": "Tarina tallennettu onnistuneesti"
-    },
-    "errors": {
-      "notAuthenticated": "Sinun on oltava kirjautuneena sisään tallentaaksesi tarinan",
-      "saveFailed": "Tarinan tallentaminen epäonnistui"
-    }
+    "uk_jurisdiction_title": "Which part of the UK is your primary residence?"
   }
 }

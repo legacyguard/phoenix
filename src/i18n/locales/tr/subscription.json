@@ -1,204 +1,177 @@
 {
-  "_comment": "Shared translations used across the application",
-  "subscription": {
-    "dashboard": {
-      "title": "Abonelik Paneli",
-      "subtitle": "Aboneliklerinizi, maliyetlerinizi ve hatırlatıcılarınızı yönetin"
-    },
-    "monthlyCost": "Toplam Aylık Maliyet",
-    "yearlyCost": "Toplam Yıllık Maliyet",
-    "activeSubscriptions": "Aktif Abonelikler",
-    "upcomingSoon": "yakında",
-    "exportReport": "Raporu Dışa Aktar",
-    "perMonth": "aylık",
-    "perYear": "yıllık",
-    "allSubscriptions": "Tüm Abonelikler",
-    "allSubscriptionsDesc": "Yenileme tarihine göre sıralanmış tüm aktif aboneliklerin genel görünümü",
-    "upcomingRenewals": "Yaklaşan Yenilemeler",
-    "upcomingRenewalsTitle": "Yaklaşan Yenileme Uyarısı",
-    "upcomingRenewalsDesc": "Önümüzdeki 90 gün içinde {{count}} adet yaklaşan yenilemeniz var",
-    "next90Days": "Sonraki 90 Gün",
-    "noUpcomingRenewals": "Önümüzdeki 90 gün içinde yaklaşan yenileme yok",
-    "renew": "Yenile",
-    "review": "Gözden Geçir",
-    "preferences": "Abonelik Tercihleri",
-    "preferencesDesc": "Aboneliklerinizin nasıl izlendiğini ve yönetildiğini yönetin",
-    "enableTracking": "Abonelik Takibini Etkinleştir",
-    "enableTrackingDesc": "Abonelikle ilgili belgeleri otomatik olarak yönetin ve izleyin",
-    "costOptimization": "Maliyet Optimizasyonu Önerilerini Etkinleştir",
-    "costOptimizationDesc": "Abonelik maliyetlerini optimize etmek ve azaltmak için öneriler alın",
-    "reminderPeriods": "Varsayılan Hatırlatma Süreleri",
-    "daysBefore": "gün önce",
-    "loadError": "Abonelik detayları yüklenemedi",
-    "updateError": "Abonelik tercihleri güncellenemedi",
-    "preferencesUpdated": "Tercihler başarıyla güncellendi",
-    "tabs": {
-      "overview": "Genel Bakış",
-      "upcoming": "Yaklaşan",
-      "settings": "Ayarlar"
-    },
-    "types": {
-      "monthly": "Aylık",
-      "yearly": "Yıllık",
-      "oneTime": "Tek Seferlik",
-      "none": "Hiçbiri"
-    },
-    "daysUntilRenewal": "yenilemeye kalan gün",
-    "days": "gün",
-    "loadFailed": "Abonelik verileri yüklenemedi",
-    "autoRenewal": "Otomatik Yenileme: Evet",
-    "manual": "Otomatik Yenileme: Hayır",
-    "trackingSuggestion": "Daha iyi yönetim ve hatırlatıcılar için abonelik takibini etkinleştirmeyi düşünün",
-    "type": "Abonelik Türü",
-    "typePlaceholder": "Tür seçin",
-    "renewalCost": "Yenileme Maliyeti",
-    "renewalCostPlaceholder": "Yenileme maliyetini girin",
-    "cancellationNotice": "İptal Bildirim Süresi",
-    "noNoticeRequired": "Bildirim Gerekmiyor",
-    "providerContact": "Sağlayıcı İletişim Bilgileri",
-    "providerPhone": "Telefon",
-    "providerEmail": "E-posta",
-    "providerWebsite": "Web Sitesi",
-    "cancellationNoticeWarning": "Not: İptal için {{days}} gün önceden bildirim gereklidir",
-    "title": "Subscription",
-    "currentPlan": "Current Plan",
-    "active": "Active",
-    "planDescription": "Manage your subscription and billing",
-    "planName": "Plan",
-    "premium": "Premium",
-    "free": "Free",
-    "nextBilling": "Next billing date",
-    "cancelledNotice": "Your subscription will end on {{date}}",
-    "manageBilling": "Manage Billing",
-    "resume": "Resume Subscription",
-    "cancel": "Cancel Subscription",
-    "upgradeToPremium": "Upgrade to Premium",
-    "features": {
-      "title": "Plan Features",
-      "premiumDescription": "You have access to all premium features",
-      "freeDescription": "Upgrade to unlock more features",
-      "unlimited": "Unlimited documents and assets",
-      "encryption": "Advanced encryption",
-      "priority": "Priority support",
-      "history": "Version history",
-      "basicWill": "Basic will document",
-      "limitedGuardians": "Up to 2 guardians",
-      "basicSupport": "Community support"
-    },
-    "errors": {
-      "portalFailed": "Failed to open billing portal",
-      "cancelFailed": "Failed to cancel subscription",
-      "resumeFailed": "Failed to resume subscription"
-    },
-    "cancelSuccess": "Subscription cancelled successfully",
-    "resumeSuccess": "Subscription resumed successfully",
-    "successTitle": "Payment Successful!",
-    "successMessage": "Thank you for your purchase. Your subscription has been activated.",
-    "cancelTitle": "Payment Cancelled",
-    "cancelMessage": "It seems like your transaction was cancelled. Please try again or contact support."
-  },
   "pricing": {
-    "title": "Miras Planınızı Seçin",
-    "subtitle": "Ücretsiz katmanımızla başlayın veya premium özellikler için yükseltin.",
-    "mainTitle": "Miras Planınızı Seçin",
-    "mainSubtitle": "Ücretsiz katmanımızla başlayın veya premium özellikler için yükseltin.",
-    "freePlan": {
-      "name": "Essential Protector",
-      "description": "Get started with basic features",
-      "price": "Free",
-      "features": {
-        "will": "1 Will document",
-        "guardians": "2 Guardians",
-        "assets": "5 Assets",
-        "support": "Basic support"
-      }
-    },
-    "premiumPlan": {
-      "name": "Command Package",
-      "description": "Perfect for individuals and families",
-      "price": "$9.99 / month",
-      "upgradeButton": "Upgrade Now",
-      "features": {
-        "will": "Unlimited Will documents",
-        "guardians": "Unlimited Guardians",
-        "assets": "Unlimited Assets",
-        "encryption": "Document encryption",
-        "access": "Emergency access",
-        "support": "Priority support",
-        "history": "Version history",
-        "templates": "Legal templates"
-      }
-    },
     "devMode": {
-      "title": "Developer Mode",
       "button": {
         "grant": "Dev Mode: Grant Premium Access",
         "granting": "Granting..."
       },
       "description": "This button is only visible in development mode. Click to instantly grant premium access for testing.",
+      "errorMessage": "Failed to grant developer premium access",
       "successMessage": "Developer premium access granted!",
-      "errorMessage": "Failed to grant developer premium access"
-    },
-    "errors": {
-      "checkoutFailed": "Failed to start checkout process"
-    },
-    "starter": {
-      "name": "Heritage Starter",
-      "price": "Ücretsiz",
-      "description": "Dijital mirasınızı korumaya başlamak için ideal.",
-      "button": "Ücretsiz Başlayın",
-      "features": {
-        "storage": "{{amount}} Depolama",
-        "guardians": "{{count}} Vasiye Kadar",
-        "documents": "Temel Belge Kasası",
-        "playbook": "Temel Vasi Kılavuzu",
-        "support": "Topluluk Desteği"
-      },
-      "limits": {
-        "storage": "500 MB",
-        "guardians": "3",
-        "fileSize": "Dosya başına 10 MB"
-      }
-    },
-    "premium": {
-      "name": "Heritage Premium",
-      "price": "199 ₺",
-      "period": "/ ay",
-      "badge": "En Popüler",
-      "description": "Kapsamlı miras yönetimi için gelişmiş özellikler.",
-      "button": "Premium'u Seçin",
-      "features": {
-        "storage": "{{amount}} Depolama",
-        "guardians": "{{count}} Vasiye Kadar",
-        "manual": "Hayatta Kalanlar için Kılavuz",
-        "support": "Öncelikli E-posta Desteği"
-      },
-      "limits": {
-        "storage": "10 GB",
-        "guardians": "5",
-        "fileSize": "Dosya başına 50 MB"
-      }
+      "title": "Developer Mode"
     },
     "enterprise": {
-      "name": "Heritage Enterprise",
-      "price": "Özel",
-      "description": "En üst düzeyde hizmet gerektiren karmaşık ihtiyaçları olan aileler ve işletmeler için.",
       "button": "Satış ile İletişime Geçin",
+      "description": "En üst düzeyde hizmet gerektiren karmaşık ihtiyaçları olan aileler ve işletmeler için.",
       "features": {
-        "storage": "{{amount}}+ Depolama",
         "guardians": "Sınırsız Vasi",
         "legal": "Hukuk Profesyoneli Koordinasyonu",
         "support": "Özel Hesap Yöneticisi"
       },
       "limits": {
-        "storage": "500 GB",
-        "guardians": "sınırsız",
-        "fileSize": "Dosya başına 100 MB"
-      }
-    }
+        "storage": "500 GB"
+      },
+      "name": "Heritage Enterprise",
+      "price": "Özel"
+    },
+    "errors": {
+      "checkoutFailed": "Failed to start checkout process"
+    },
+    "freePlan": {
+      "description": "Get started with basic features",
+      "features": {
+        "assets": "5 Assets",
+        "guardians": "2 Guardians",
+        "support": "Basic support",
+        "will": "1 Will document"
+      },
+      "name": "Essential Protector",
+      "price": "Free"
+    },
+    "mainSubtitle": "Ücretsiz katmanımızla başlayın veya premium özellikler için yükseltin.",
+    "mainTitle": "Miras Planınızı Seçin",
+    "premium": {
+      "badge": "En Popüler",
+      "button": "Premium'u Seçin",
+      "description": "Kapsamlı miras yönetimi için gelişmiş özellikler.",
+      "features": {
+        "manual": "Hayatta Kalanlar için Kılavuz",
+        "support": "Öncelikli E-posta Desteği"
+      },
+      "limits": {
+        "guardians": "5",
+        "storage": "10 GB"
+      },
+      "name": "Heritage Premium",
+      "period": "/ ay",
+      "price": "199 ₺"
+    },
+    "premiumPlan": {
+      "description": "Perfect for individuals and families",
+      "features": {
+        "access": "Emergency access",
+        "assets": "Unlimited Assets",
+        "encryption": "Document encryption",
+        "guardians": "Unlimited Guardians",
+        "history": "Version history",
+        "support": "Priority support",
+        "templates": "Legal templates",
+        "will": "Unlimited Will documents"
+      },
+      "name": "Command Package",
+      "price": "$9.99 / month",
+      "upgradeButton": "Upgrade Now"
+    },
+    "starter": {
+      "button": "Ücretsiz Başlayın",
+      "description": "Dijital mirasınızı korumaya başlamak için ideal.",
+      "features": {
+        "documents": "Temel Belge Kasası",
+        "playbook": "Temel Vasi Kılavuzu",
+        "support": "Topluluk Desteği"
+      },
+      "limits": {
+        "guardians": "3",
+        "storage": "500 MB"
+      },
+      "name": "Heritage Starter",
+      "price": "Ücretsiz"
+    },
+    "title": "Miras Planınızı Seçin"
+  },
+  "subscription": {
+    "active": "Active",
+    "activeSubscriptions": "Aktif Abonelikler",
+    "allSubscriptions": "Tüm Abonelikler",
+    "allSubscriptionsDesc": "Yenileme tarihine göre sıralanmış tüm aktif aboneliklerin genel görünümü",
+    "autoRenewal": "Otomatik Yenileme: Evet",
+    "cancel": "Cancel Subscription",
+    "cancelMessage": "It seems like your transaction was cancelled. Please try again or contact support.",
+    "cancelSuccess": "Subscription cancelled successfully",
+    "cancelTitle": "Payment Cancelled",
+    "cancellationNotice": "İptal Bildirim Süresi",
+    "costOptimization": "Maliyet Optimizasyonu Önerilerini Etkinleştir",
+    "costOptimizationDesc": "Abonelik maliyetlerini optimize etmek ve azaltmak için öneriler alın",
+    "currentPlan": "Current Plan",
+    "dashboard": {
+      "subtitle": "Aboneliklerinizi, maliyetlerinizi ve hatırlatıcılarınızı yönetin",
+      "title": "Abonelik Paneli"
+    },
+    "days": "gün",
+    "daysBefore": "gün önce",
+    "daysUntilRenewal": "yenilemeye kalan gün",
+    "enableTracking": "Abonelik Takibini Etkinleştir",
+    "enableTrackingDesc": "Abonelikle ilgili belgeleri otomatik olarak yönetin ve izleyin",
+    "errors": {
+      "cancelFailed": "Failed to cancel subscription",
+      "portalFailed": "Failed to open billing portal",
+      "resumeFailed": "Failed to resume subscription"
+    },
+    "exportReport": "Raporu Dışa Aktar",
+    "features": {
+      "basicSupport": "Community support",
+      "basicWill": "Basic will document",
+      "encryption": "Advanced encryption",
+      "freeDescription": "Upgrade to unlock more features",
+      "history": "Version history",
+      "limitedGuardians": "Up to 2 guardians",
+      "premiumDescription": "You have access to all premium features",
+      "priority": "Priority support",
+      "title": "Plan Features",
+      "unlimited": "Unlimited documents and assets"
+    },
+    "free": "Free",
+    "loadError": "Abonelik detayları yüklenemedi",
+    "manageBilling": "Manage Billing",
+    "manual": "Otomatik Yenileme: Hayır",
+    "monthlyCost": "Toplam Aylık Maliyet",
+    "next90Days": "Sonraki 90 Gün",
+    "nextBilling": "Next billing date",
+    "noUpcomingRenewals": "Önümüzdeki 90 gün içinde yaklaşan yenileme yok",
+    "perMonth": "aylık",
+    "perYear": "yıllık",
+    "planDescription": "Manage your subscription and billing",
+    "planName": "Plan",
+    "preferences": "Abonelik Tercihleri",
+    "preferencesDesc": "Aboneliklerinizin nasıl izlendiğini ve yönetildiğini yönetin",
+    "preferencesUpdated": "Tercihler başarıyla güncellendi",
+    "premium": "Premium",
+    "reminderPeriods": "Varsayılan Hatırlatma Süreleri",
+    "renew": "Yenile",
+    "resume": "Resume Subscription",
+    "resumeSuccess": "Subscription resumed successfully",
+    "review": "Gözden Geçir",
+    "successMessage": "Thank you for your purchase. Your subscription has been activated.",
+    "successTitle": "Payment Successful!",
+    "tabs": {
+      "overview": "Genel Bakış",
+      "settings": "Ayarlar",
+      "upcoming": "Yaklaşan"
+    },
+    "title": "Subscription",
+    "types": {
+      "monthly": "Aylık",
+      "yearly": "Yıllık"
+    },
+    "upcomingRenewals": "Yaklaşan Yenilemeler",
+    "upcomingRenewalsTitle": "Yaklaşan Yenileme Uyarısı",
+    "upcomingSoon": "yakında",
+    "updateError": "Abonelik tercihleri güncellenemedi",
+    "upgradeToPremium": "Upgrade to Premium",
+    "yearlyCost": "Toplam Yıllık Maliyet"
   },
   "upgradeCard": {
-    "pricing_1": "/pricing",
-    "defaultButtonText": "Upgrade to Command Package"
+    "defaultButtonText": "Upgrade to Command Package",
+    "pricing_1": "/pricing"
   }
 }

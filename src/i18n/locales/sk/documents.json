@@ -1,253 +1,195 @@
 {
-  "_comment": "Správa dokumentov a funkcie trezoru",
-  "documentTypes": {
-    "realEstateDeed": "List vlastníctva nehnuteľnosti",
-    "birthCertificate": "Rodný list",
-    "insurancePolicy": "Poistná zmluva",
-    "lastWill": "Závet",
-    "employmentContract": "Pracovná zmluva",
-    "passport": "Cestovný pas",
-    "drivingLicense": "Vodičský preukaz",
-    "bankStatement": "Výpis z účtu",
-    "investmentCertificate": "Investičný certifikát",
-    "energyContract": "Zmluva o energii",
-    "softwareLicense": "Licencia na softvér",
-    "subscriptionService": "Predplatné služby",
-    "other": "Iné"
-  },
-  "documentUpload": {
-    "fileUploadedSuccess": "Súbor bol úspešne nahraný!",
-    "fileUploadFailed": "Nepodarilo sa nahrať súbor. Skúste to znova.",
-    "fileTooLarge": "Vybraný súbor je príliš veľký. Maximálna veľkosť je {{maxSize}} MB.",
-    "fillRequiredFields": "Vyplňte všetky povinné polia",
-    "loginToSave": "Pre uloženie dokumentov sa musíte prihlásiť",
-    "saved": "Dokument bol úspešne uložený!",
-    "failedSave": "Nepodarilo sa uložiť dokument. Skúste to znova.",
-    "detailsTitle": "Detaily dokumentu",
-    "detailsSubtitle": "Pridajte informácie o nahranom dokumente",
-    "namePlaceholder": "Zadajte názov dokumentu",
-    "typePlaceholder": "Vyberte typ dokumentu",
-    "countryPlaceholder": "Vyberte krajinu",
-    "pickDate": "Vyberte dátum",
-    "title": "Nahrať dokument",
-    "subtitle": "Nahrajte právne a osobné dokumenty bezpečne",
-    "browseFiles": "Prehľadávať súbory",
-    "chooseDifferent": "Vybrať iný súbor",
-    "uploadButton": "Nahrať dokument",
-    "storageLimitReached": "Nie je možné nahrať súbor. Máte zostávajúcu kapacitu {{remaining}}, ale tento súbor má {{fileSize}}. Upgradujte svoj plán alebo odstráňte existujúce súbory."
-  },
-  "documentUploader": {
-    "smart_document_upload_2": "Inteligentné nahrávanie dokumentov",
-    "upload_any_document_and_our_ai_3": "Nahrajte akýkoľvek dokument a naša AI ho automaticky zaradí",
-    "please_upload_an_image_or_pdf__1": "Nahrajte obrázok alebo PDF súbor",
-    "image_application_pdf_4": "obrázok/*,aplikácia/pdf",
-    "0_0_48_48_5": "0 0 48 48",
-    "m24_12v12m0_0l_4_4m4_4l4_4m10__6": "M24 12v12m0 0l-4 4m4-4l4 4m10-6",
-    "drop_your_document_here_or_cli_7": "Pretiahnite dokument sem alebo kliknite pre výber",
-    "supports_images_and_pdfs_up_to_8": "Podporované obrázky a PDF do 10 MB",
-    "document_analysis_complete_10": "Analýza dokumentu dokončená",
-    "document_type_11": "Typ dokumentu",
-    "suggested_title_12": "Navrhovaný názov",
-    "confidence": "Dôvera AI",
-    "ai_analysis_13": "AI analýza",
-    "continue_with_this_classificat_14": "Pokračovať s týmto zaradením",
-    "change_category_15": "Zmeniť kategóriu",
-    "documents_we_can_process_16": "Dokumenty, ktoré vieme spracovať:",
-    "insurance_policies_life_health_17": "Poistné zmluvy (životné, zdravotné, majetkové, auto)",
-    "property_deeds_and_titles_18": "Listy vlastníctva a tituly k majetku",
-    "vehicle_ownership_documents_19": "Doklady k vlastníctvu vozidiel",
-    "bank_and_investment_statements_20": "Bankové a investičné výpisy",
-    "wills_and_estate_planning_docu_21": "Závet a dokumenty o dedičstve",
-    "business_contracts_and_ownersh_22": "Obchodné zmluvy a listiny vlastníctva",
-    "personal_identification_docume_23": "Osobné doklady totožnosti",
-    "tax_returns_and_documents_24": "Daňové priznania a dokumenty",
-    "categoryDescriptions": {
-      "insurance_policy": "Životné, zdravotné, majetkové alebo invalidné poistenie",
-      "property_deed": "Listy vlastníctva a doklady o majetku",
-      "vehicle_title": "Doklady o vlastníctve auta, lode alebo iného vozidla",
-      "bank_statement": "Výpisy z bankových účtov a dokumenty",
-      "investment_statement": "Výpisy z investičných a dôchodkových účtov",
-      "will_or_trust": "Závet, trust a dokumenty o dedičstve",
-      "business_document": "Obchodné vlastníctvo a dôležité zmluvy",
-      "personal_id": "Cestovné pasy, preukazy, rodné listy",
-      "tax_document": "Daňové priznania a súvisiace dokumenty",
-      "medical_document": "Zdravotná dokumentácia a pokyny",
-      "other": "Iné dôležité dokumenty"
-    },
-    "errors": {
-      "fileTypeError": "Nahrajte obrázok alebo PDF súbor",
-      "processingError": "Nepodarilo sa spracovať dokument",
-      "uploadError": "Nepodarilo sa nahrať dokument",
-      "classificationError": "Nepodarilo sa zaradiť dokument"
-    }
-  },
-  "vault": {
-    "title": "Trezor",
-    "subtitle": "Váš bezpečný inventár všetkých finančných aktív a cenností.",
-    "errorLoadingAssets": "Nepodarilo sa načítať majetok. Skúste to znova.",
-    "letsBuildInventory": "Začnime budovať váš inventár",
-    "addProperty": "Pridať nehnuteľnosť",
-    "addFinances": "Pridať financie",
-    "addVehicle": "Pridať vozidlo",
-    "addDigitalAsset": "Pridať digitálne aktívum",
-    "addPersonalItem": "Pridať osobný predmet",
-    "addOther": "Pridať niečo iné...",
-    "confirmDeletion": "Naozaj chcete odstrániť \"{{assetName}}\"?",
-    "errorDeletingAsset": "Nepodarilo sa odstrániť majetok. Skúste to znova.",
-    "searchPlaceholder": "Hľadať vo svojom majetku...",
-    "addAsset": "Pridať majetok",
-    "totalAssets": "Celkový majetok",
-    "totalValue": "Celková hodnota",
-    "categories": "Kategórie",
-    "noAssetsFound": "Nenašli sa žiadne aktíva pre \"{{searchQuery}}\"",
-    "startAddingAssets": "Začnite pridávať majetok a vytvorte si inventár",
-    "addNewAsset": "Pridať nové aktívum",
-    "property": "Nehnuteľnosť",
-    "finances": "Financie",
-    "vehicle": "Vozidlo",
-    "digital": "Digitálne",
-    "personal": "Osobné",
-    "other": "Iné",
-    "fileUpload": {
-      "title": "Nahrať súbory",
-      "dragDropText": "Pretiahnite súbory sem",
-      "clickToSelect": "alebo kliknite pre výber",
-      "maxSize": "Maximálna veľkosť súboru: {{size}}",
-      "encryptFiles": "Zašifrovať súbory",
-      "encryptDescription": "Súbory budú pred nahraním zašifrované pre maximálnu bezpečnosť",
-      "tags": "Tagy",
-      "addTag": "Pridať tag...",
-      "selectedFiles": "Vybrané súbory",
-      "uploading": "Nahrávam...",
-      "uploadFiles": "Nahrať súbory",
-      "uploadSuccess": "{{name}} úspešne nahraný",
-      "uploadError": "Nepodarilo sa nahrať {{name}}",
-      "maxFilesReached": "Maximálny počet súborov: {{max}}",
-      "encryptionInfo": "Vaše súbory sú šifrované algoritmom AES-256. K dešifrovaniu máte prístup len vy."
-    },
-    "fileList": {
-      "title": "Súbory k majetku",
-      "noFiles": "Zatiaľ neboli nahrané žiadne súbory",
-      "uploadFirst": "Nahrajte svoj prvý súbor",
-      "searchFiles": "Hľadať súbory...",
-      "filterByTag": "Filtrovať podľa tagu",
-      "sortBy": "Triediť podľa",
-      "sortByName": "Názov",
-      "sortByDate": "Dátum",
-      "sortBySize": "Veľkosť",
-      "download": "Stiahnuť",
-      "share": "Zdieľať",
-      "delete": "Vymazať",
-      "confirmDelete": "Naozaj chcete tento súbor vymazať?",
-      "deleteSuccess": "Súbor úspešne vymazaný",
-      "deleteError": "Nepodarilo sa vymazať súbor",
-      "downloadError": "Nepodarilo sa stiahnuť súbor",
-      "encrypted": "Šifrované",
-      "sharedWith": "Zdieľané s {{count}} osobami"
-    },
-    "sharing": {
-      "title": "Zdieľať súbor",
-      "shareWith": "Zdieľať s",
-      "emailPlaceholder": "Zadajte e-mailovú adresu",
-      "expiresIn": "Platí ešte",
-      "hours": "hodín",
-      "days": "dní",
-      "shareButton": "Zdieľať",
-      "sharing": "Zdieľam...",
-      "shareSuccess": "Súbor úspešne zdieľaný",
-      "shareError": "Nepodarilo sa zdieľať súbor",
-      "password": "Prístupové heslo",
-      "passwordInfo": "Heslo odošlite príjemcovi samostatne",
-      "copyPassword": "Kopírovať heslo",
-      "activeShares": "Aktívne zdieľania",
-      "noShares": "Žiadne aktívne zdieľania",
-      "revoke": "Odvolať",
-      "revokeSuccess": "Zdieľanie bolo zrušené",
-      "revokeError": "Nepodarilo sa zrušiť zdieľanie",
-      "expiresAt": "Platnosť do {{date}}",
-      "accessCount": "Prístupov: {{count}}"
-    }
-  },
-  "upload": {
-    "zone": {
-      "dropHere": "Pretiahnite sem dôležité papiere",
-      "dropHereActive": "Áno! Pustite ich sem",
-      "description": "Všetko zorganizujem za vás – stačí pretiahnuť alebo vybrať súbory",
-      "descriptionActive": "Som pripravený zorganizovať všetko za vás",
-      "chooseFiles": "Vybrať súbory",
-      "takePhoto": "Odfoťte dokument",
-      "processingLocally": "Spracúvam lokálne vo vašom zariadení",
-      "dragOverlay": {
-        "title": "Pustite dokumenty sem",
-        "subtitle": "Dám na ne dobrý pozor"
-      }
-    }
-  },
   "createTimeCapsuleModal": {
-    "title": "Vytvoriť časovú kapsulu",
-    "titleCreate": "Vytvoriť časovú kapsulu",
-    "titleEdit": "Upraviť časovú kapsulu",
+    "buttons": {
+      "cancel": "Zrušiť",
+      "create": "Vytvoriť kapsulu",
+      "recordVideo": "Nahrať video odkaz",
+      "saving": "Ukladám...",
+      "update": "Aktualizovať kapsulu"
+    },
     "description": "Vytvorte správu, ktorá bude doručená vašim blízkym v budúcnosti.",
     "errors": {
-      "noTitle": "Zadajte názov časovej kapsuly.",
-      "noRecipients": "Vyberte aspoň jedného príjemcu.",
-      "noUnlockDate": "Vyberte dátum odomknutia.",
-      "noMessage": "Napíšte svoju správu.",
-      "noFile": "Nahrajte súbor.",
-      "updateFailed": "Nepodarilo sa aktualizovať časovú kapsulu.",
-      "saveFailed": "Nepodarilo sa uložiť časovú kapsulu.",
       "fileTooLarge": "Súbor musí mať menej ako 50MB.",
-      "invalidFileType": "Neplatný typ súboru pre {{messageType}}."
+      "noFile": "Nahrajte súbor.",
+      "noMessage": "Napíšte svoju správu.",
+      "noRecipients": "Vyberte aspoň jedného príjemcu.",
+      "noTitle": "Zadajte názov časovej kapsuly.",
+      "noUnlockDate": "Vyberte dátum odomknutia.",
+      "saveFailed": "Nepodarilo sa uložiť časovú kapsulu.",
+      "updateFailed": "Nepodarilo sa aktualizovať časovú kapsulu."
     },
-    "success": {
-      "updated": "Časová kapsula aktualizovaná!",
-      "created": "Časová kapsula vytvorená!"
+    "fileUpload": {
+      "clickToUpload": "Kliknite pre nahratie",
+      "dragAndDrop": " alebo pretiahnite",
+      "maxSize": "Maximálna veľkosť: 50MB"
     },
     "labels": {
-      "title": "Názov",
+      "deliveryQuestion": "Kedy má byť správa doručená?",
       "messageType": "Typ správy",
       "recipients": "Príjemcovia",
-      "deliveryQuestion": "Kedy má byť správa doručená?",
+      "title": "Názov",
       "unlockDate": "Dátum odomknutia",
-      "yourMessage": "Vaša správa",
-      "uploadFile": "Nahrať {{messageType}}"
-    },
-    "placeholders": {
-      "title": "napr. K tvojim 18. narodeninám",
-      "message": "Napíšte svoju srdečnú správu sem...",
-      "selectDate": "Vyberte dátum"
+      "yourMessage": "Vaša správa"
     },
     "messageTypes": {
-      "text": "Textová správa",
+      "audio": "Audio",
       "photo": "Fotka",
-      "video": "Video",
-      "audio": "Audio"
+      "text": "Textová správa",
+      "video": "Video"
+    },
+    "placeholders": {
+      "message": "Napíšte svoju srdečnú správu sem...",
+      "selectDate": "Vyberte dátum",
+      "title": "napr. K tvojim 18. narodeninám"
+    },
+    "premium": {
+      "upgradeNow": "Prejsť na prémiový účet",
+      "videoMessage": "Videoodkazy sú prémiová funkcia."
     },
     "recipients": {
       "noTrustedPeople": "Zatiaľ ste nepridali žiadne dôveryhodné osoby. Pridajte ich najskôr cez nástenku.",
       "selected": "Vybraní"
     },
+    "success": {
+      "created": "Časová kapsula vytvorená!",
+      "updated": "Časová kapsula aktualizovaná!"
+    },
+    "titleCreate": "Vytvoriť časovú kapsulu",
+    "titleEdit": "Upraviť časovú kapsulu",
     "unlockConditions": {
-      "onDate": "V konkrétny dátum",
-      "afterPassing": "Po mojom úmrtí"
+      "afterPassing": "Po mojom úmrtí",
+      "onDate": "V konkrétny dátum"
+    }
+  },
+  "documentTypes": {
+    "bankStatement": "Výpis z účtu",
+    "birthCertificate": "Rodný list",
+    "drivingLicense": "Vodičský preukaz",
+    "employmentContract": "Pracovná zmluva",
+    "energyContract": "Zmluva o energii",
+    "insurancePolicy": "Poistná zmluva",
+    "investmentCertificate": "Investičný certifikát",
+    "lastWill": "Závet",
+    "other": "Iné",
+    "passport": "Cestovný pas",
+    "realEstateDeed": "List vlastníctva nehnuteľnosti",
+    "softwareLicense": "Licencia na softvér",
+    "subscriptionService": "Predplatné služby"
+  },
+  "documentUpload": {
+    "browseFiles": "Prehľadávať súbory",
+    "chooseDifferent": "Vybrať iný súbor",
+    "countryPlaceholder": "Vyberte krajinu",
+    "detailsSubtitle": "Pridajte informácie o nahranom dokumente",
+    "detailsTitle": "Detaily dokumentu",
+    "failedSave": "Nepodarilo sa uložiť dokument. Skúste to znova.",
+    "fileUploadFailed": "Nepodarilo sa nahrať súbor. Skúste to znova.",
+    "fileUploadedSuccess": "Súbor bol úspešne nahraný!",
+    "fillRequiredFields": "Vyplňte všetky povinné polia",
+    "loginToSave": "Pre uloženie dokumentov sa musíte prihlásiť",
+    "namePlaceholder": "Zadajte názov dokumentu",
+    "pickDate": "Vyberte dátum",
+    "saved": "Dokument bol úspešne uložený!",
+    "subtitle": "Nahrajte právne a osobné dokumenty bezpečne",
+    "title": "Nahrať dokument",
+    "typePlaceholder": "Vyberte typ dokumentu",
+    "uploadButton": "Nahrať dokument"
+  },
+  "documentUploader": {
+    "0_0_48_48_5": "0 0 48 48",
+    "ai_analysis_13": "AI analýza",
+    "bank_and_investment_statements_20": "Bankové a investičné výpisy",
+    "business_contracts_and_ownersh_22": "Obchodné zmluvy a listiny vlastníctva",
+    "categoryDescriptions": {
+      "bank_statement": "Výpisy z bankových účtov a dokumenty",
+      "business_document": "Obchodné vlastníctvo a dôležité zmluvy",
+      "insurance_policy": "Životné, zdravotné, majetkové alebo invalidné poistenie",
+      "investment_statement": "Výpisy z investičných a dôchodkových účtov",
+      "medical_document": "Zdravotná dokumentácia a pokyny",
+      "other": "Iné dôležité dokumenty",
+      "personal_id": "Cestovné pasy, preukazy, rodné listy",
+      "property_deed": "Listy vlastníctva a doklady o majetku",
+      "tax_document": "Daňové priznania a súvisiace dokumenty",
+      "vehicle_title": "Doklady o vlastníctve auta, lode alebo iného vozidla",
+      "will_or_trust": "Závet, trust a dokumenty o dedičstve"
     },
+    "change_category_15": "Zmeniť kategóriu",
+    "confidence": "Dôvera AI",
+    "continue_with_this_classificat_14": "Pokračovať s týmto zaradením",
+    "document_analysis_complete_10": "Analýza dokumentu dokončená",
+    "document_type_11": "Typ dokumentu",
+    "documents_we_can_process_16": "Dokumenty, ktoré vieme spracovať:",
+    "drop_your_document_here_or_cli_7": "Pretiahnite dokument sem alebo kliknite pre výber",
+    "errors": {
+      "fileTypeError": "Nahrajte obrázok alebo PDF súbor",
+      "processingError": "Nepodarilo sa spracovať dokument"
+    },
+    "image_application_pdf_4": "obrázok/*,aplikácia/pdf",
+    "insurance_policies_life_health_17": "Poistné zmluvy (životné, zdravotné, majetkové, auto)",
+    "m24_12v12m0_0l_4_4m4_4l4_4m10__6": "M24 12v12m0 0l-4 4m4-4l4 4m10-6",
+    "personal_identification_docume_23": "Osobné doklady totožnosti",
+    "please_upload_an_image_or_pdf__1": "Nahrajte obrázok alebo PDF súbor",
+    "property_deeds_and_titles_18": "Listy vlastníctva a tituly k majetku",
+    "smart_document_upload_2": "Inteligentné nahrávanie dokumentov",
+    "suggested_title_12": "Navrhovaný názov",
+    "supports_images_and_pdfs_up_to_8": "Podporované obrázky a PDF do 10 MB",
+    "tax_returns_and_documents_24": "Daňové priznania a dokumenty",
+    "upload_any_document_and_our_ai_3": "Nahrajte akýkoľvek dokument a naša AI ho automaticky zaradí",
+    "vehicle_ownership_documents_19": "Doklady k vlastníctvu vozidiel",
+    "wills_and_estate_planning_docu_21": "Závet a dokumenty o dedičstve"
+  },
+  "upload": {
+    "zone": {
+      "chooseFiles": "Vybrať súbory",
+      "description": "Všetko zorganizujem za vás – stačí pretiahnuť alebo vybrať súbory",
+      "descriptionActive": "Som pripravený zorganizovať všetko za vás",
+      "dragOverlay": {
+        "subtitle": "Dám na ne dobrý pozor",
+        "title": "Pustite dokumenty sem"
+      },
+      "dropHere": "Pretiahnite sem dôležité papiere",
+      "dropHereActive": "Áno! Pustite ich sem",
+      "processingLocally": "Spracúvam lokálne vo vašom zariadení",
+      "takePhoto": "Odfoťte dokument"
+    }
+  },
+  "vault": {
+    "addAsset": "Pridať majetok",
+    "addDigitalAsset": "Pridať digitálne aktívum",
+    "addFinances": "Pridať financie",
+    "addNewAsset": "Pridať nové aktívum",
+    "addOther": "Pridať niečo iné...",
+    "addPersonalItem": "Pridať osobný predmet",
+    "addProperty": "Pridať nehnuteľnosť",
+    "addVehicle": "Pridať vozidlo",
+    "categories": "Kategórie",
+    "digital": "Digitálne",
+    "errorDeletingAsset": "Nepodarilo sa odstrániť majetok. Skúste to znova.",
+    "errorLoadingAssets": "Nepodarilo sa načítať majetok. Skúste to znova.",
     "fileUpload": {
-      "clickToUpload": "Kliknite pre nahratie",
-      "dragAndDrop": " alebo pretiahnite",
-      "maxSize": "Maximálna veľkosť: 50MB",
-      "fileSizeMB": "{{size}} MB"
+      "addTag": "Pridať tag...",
+      "clickToSelect": "alebo kliknite pre výber",
+      "dragDropText": "Pretiahnite súbory sem",
+      "encryptDescription": "Súbory budú pred nahraním zašifrované pre maximálnu bezpečnosť",
+      "encryptFiles": "Zašifrovať súbory",
+      "encryptionInfo": "Vaše súbory sú šifrované algoritmom AES-256. K dešifrovaniu máte prístup len vy.",
+      "selectedFiles": "Vybrané súbory",
+      "tags": "Tagy",
+      "title": "Nahrať súbory",
+      "uploadFiles": "Nahrať súbory",
+      "uploading": "Nahrávam..."
     },
-    "premium": {
-      "videoMessage": "Videoodkazy sú prémiová funkcia.",
-      "upgradeNow": "Prejsť na prémiový účet"
-    },
-    "buttons": {
-      "recordVideo": "Nahrať video odkaz",
-      "cancel": "Zrušiť",
-      "saving": "Ukladám...",
-      "update": "Aktualizovať kapsulu",
-      "create": "Vytvoriť kapsulu"
-    },
-    "characterCount": "{{count}}/{{max}} znakov"
+    "finances": "Financie",
+    "letsBuildInventory": "Začnime budovať váš inventár",
+    "other": "Iné",
+    "personal": "Osobné",
+    "property": "Nehnuteľnosť",
+    "searchPlaceholder": "Hľadať vo svojom majetku...",
+    "startAddingAssets": "Začnite pridávať majetok a vytvorte si inventár",
+    "subtitle": "Váš bezpečný inventár všetkých finančných aktív a cenností.",
+    "title": "Trezor",
+    "totalAssets": "Celkový majetok",
+    "totalValue": "Celková hodnota",
+    "vehicle": "Vozidlo"
   }
 }

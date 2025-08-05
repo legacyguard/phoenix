@@ -1,309 +1,168 @@
 {
-  "_comment": "Shared translations used across the application",
-  "guardian": {
-    "invitationSent": "Η Πρόσκληση Στάλθηκε",
-    "accepted": "Αποδεκτή",
-    "declined": "Απορρίφθηκε",
-    "sendInvite": "Αποστολή Πρόσκλησης"
-  },
-  "guardianUpload": {
-    "addTitle": "Προσθήκη Κηδεμόνα",
-    "editTitle": "Επεξεργασία Κηδεμόνα",
-    "description": "Προσθέστε κάποιον που εμπιστεύεστε για να σας βοηθήσει να διαχειριστείτε την κληρονομιά σας.",
-    "fullNameLabel": "Πλήρες Όνομα Κηδεμόνα *",
-    "fullNamePlaceholder": "Εισαγάγετε το πλήρες όνομα του κηδεμόνα",
-    "relationshipLabel": "Σχέση *",
-    "relationshipPlaceholder": "Επιλέξτε σχέση",
-    "countryLabel": "Χώρα Διαμονής *",
-    "countryPlaceholder": "Επιλέξτε χώρα",
-    "countryDescription": "Επιλέξτε τη χώρα όπου διαμένει αυτός ο κηδεμόνας.",
-    "rolesTitle": "Ρόλοι & Αρμοδιότητες",
-    "emailLabel": "Email Address",
-    "emailPlaceholder": "Enter email address (optional)",
-    "phoneLabel": "Phone Number",
-    "phonePlaceholder": "Enter phone number (optional)",
-    "addButton": "Προσθήκη Κηδεμόνα",
-    "updateButton": "Ενημέρωση Κηδεμόνα",
-    "saving": "Αποθήκευση...",
-    "success": "Επιτυχία",
-    "added": "Ο κηδεμόνας προστέθηκε με επιτυχία.",
-    "updated": "Ο κηδεμόνας ενημερώθηκε με επιτυχία.",
-    "error": "Σφάλμα",
-    "loginToSave": "Πρέπει να είστε συνδεδεμένοι για να αποθηκεύσετε κηδεμόνες.",
-    "relationships": {
-      "spouse": "Σύζυγος",
-      "parent": "Γονέας",
-      "sibling": "Αδελφός/ή",
-      "child": "Παιδί",
-      "friend": "Φίλος/η",
-      "legalProfessional": "Νομικός Επαγγελματίας",
-      "other": "Άλλο"
-    },
-    "roles": {
-      "guardianForChildren": "Κηδεμόνας για Παιδιά",
-      "executorOfWill": "Εκτελεστής Διαθήκης",
-      "healthcareProxy": "Πληρεξούσιος Υγείας",
-      "financialPowerOfAttorney": "Οικονομικό Πληρεξούσιο",
-      "emergencyContact": "Επαφή Έκτακτης Ανάγκης",
-      "trustee": "Καταπιστευματοδόχος"
-    },
-    "errors": {
-      "saveError": "An error occurred while saving the guardian",
-      "requiredDataNotFound": "Required data were not found",
-      "connectionError": "Connection error. Please check your internet connection",
-      "permissionError": "You do not have permission to perform this action",
-      "duplicateError": "A record with this information already exists",
-      "unknownError": "An unknown error occurred"
-    },
-    "fillRequired": "Παρακαλώ συμπληρώστε όλα τα υποχρεωτικά πεδία.",
-    "failedSave": "Η αποθήκευση του κηδεμόνα απέτυχε. Παρακαλώ προσπαθήστε ξανά."
-  },
-  "guardianView": {
-    "title": "Πίνακας Ελέγχου Κηδεμόνα",
-    "subtitle": "Ασφαλής πρόσβαση στις βασικές πληροφορίες του/της {{userName}}",
-    "readOnlyAccess": "Πρόσβαση μόνο για ανάγνωση",
-    "loading": "Φόρτωση πίνακα ελέγχου κηδεμόνα...",
-    "errors": {
-      "pleaseLogin": "Please log in to view this information",
-      "failedToLoad": "Failed to load guardian data",
-      "loadFailed": "Η φόρτωση των επαφών έκτακτης ανάγκης απέτυχε.",
-      "addFailed": "Η προσθήκη της επαφής έκτακτης ανάγκης απέτυχε.",
-      "removeFailed": "Η αφαίρεση της επαφής έκτακτης ανάγκης απέτυχε.",
-      "reorderFailed": "Η ενημέρωση της σειράς των επαφών απέτυχε.",
-      "testFailed": "Η αποστολή του δοκιμαστικού μηνύματος απέτυχε.",
-      "selectContact": "Παρακαλώ επιλέξτε μια επαφή."
-    },
-    "sections": {
-      "keyDocuments": {
-        "title": "Έγγραφα-Κλειδιά",
-        "description": "Βασικά έγγραφα που έχουν επισημανθεί ως κρίσιμα από τον κάτοχο του λογαριασμού.",
-        "keyDocumentBadge": "Έγγραφο-Κλειδί",
-        "expires": "Λήγει",
-        "noExpiration": "Χωρίς ημερομηνία λήξης",
-        "empty": "Δεν υπάρχουν διαθέσιμα έγγραφα-κλειδιά."
-      },
-      "importantContacts": {
-        "title": "Σημαντικές Επαφές",
-        "description": "Βασικές επαφές για καταστάσεις έκτακτης ανάγκης.",
-        "empty": "Δεν υπάρχουν διαθέσιμες σημαντικές επαφές."
-      },
-      "finalWishes": {
-        "title": "Τελευταίες Επιθυμίες & Οδηγίες",
-        "description": "Προσωπικές οδηγίες και τελευταίες επιθυμίες.",
-        "funeralWishes": "Επιθυμίες για την Κηδεία",
-        "digitalAccounts": "Digital Accounts Shutdown",
-        "digitalAccountsShutdown": "Κλείσιμο Ψηφιακών Λογαριασμών",
-        "messagesToLovedOnes": "Μηνύματα προς Αγαπημένους",
-        "empty": "Δεν υπάρχουν διαθέσιμες τελευταίες επιθυμίες ή οδηγίες."
-      }
-    },
-    "guardianInfo": {
-      "description": "Βλέπετε αυτές τις πληροφορίες ως έμπιστος Κηδεμόνας. Αυτή η πρόσβαση παρέχεται για καταστάσεις έκτακτης ανάγκης και για να σας βοηθήσει να εκπληρώσετε τις ευθύνες σας.",
-      "securityNote": "Κάθε πρόσβαση καταγράφεται και παρακολουθείται για λόγους ασφαλείας."
-    },
-    "defaultUserName": "Κύριος Κάτοχος Λογαριασμού",
-    "description": "Διαχειριστείτε έως και 3 επαφές έκτακτης ανάγκης με σειρά προτεραιότητας.",
-    "addContact": "Προσθήκη Επαφής",
-    "noContacts": "Δεν έχουν προστεθεί ακόμη επαφές έκτακτης ανάγκης. Προσθέστε επαφές που πρέπει να ειδοποιηθούν σε περίπτωση έκτακτης ανάγκης.",
-    "maxContactsReached": "Έχετε φτάσει το μέγιστο όριο των 3 επαφών έκτακτης ανάγκης.",
-    "sendTest": "Αποστολή Δοκιμής",
-    "lastContacted": "Τελευταία επικοινωνία πριν από {{time}}",
-    "priority": {
-      "1": "Προτεραιότητα 1",
-      "2": "Προτεραιότητα 2",
-      "3": "Προτεραιότητα 3"
-    },
-    "addContactDialog": {
-      "title": "Προσθήκη Επαφής Έκτακτης Ανάγκης",
-      "description": "Επιλέξτε μια επαφή από τη λίστα σας για να την προσθέσετε ως επαφή έκτακτης ανάγκης.",
-      "selectContact": "Επιλογή Επαφής",
-      "selectPlaceholder": "Επιλέξτε μια επαφή...",
-      "relationship": "Σχέση (προαιρετικό)",
-      "relationshipPlaceholder": "Επιλέξτε σχέση...",
-      "addButton": "Προσθήκη Επαφής Έκτακτης Ανάγκης"
-    },
-    "messages": {
-      "added": "Η επαφή έκτακτης ανάγκης προστέθηκε με επιτυχία.",
-      "removed": "Η επαφή έκτακτης ανάγκης αφαιρέθηκε.",
-      "reordered": "Η προτεραιότητα της επαφής ενημερώθηκε.",
-      "testSent": "Το δοκιμαστικό μήνυμα στάλθηκε στον/στην {{name}}."
-    }
-  },
   "executor": {
+    "completed": "Ολοκληρώθηκε",
     "dashboard": {
-      "title": "Πίνακας Ελέγχου Εκτελεστή",
+      "reminder": "Θυμηθείτε να φροντίζετε τον εαυτό σας κατά τη διάρκεια αυτού του δύσκολου καιρού. Μην διστάσετε να ζητήσετε βοήθεια όταν χρειάζεται.",
       "subtitle": "Ένας βήμα-προς-βήμα οδηγός για να σας βοηθήσει σε αυτόν τον δύσκολο καιρό",
-      "reminder": "Θυμηθείτε να φροντίζετε τον εαυτό σας κατά τη διάρκεια αυτού του δύσκολου καιρού. Μην διστάσετε να ζητήσετε βοήθεια όταν χρειάζεται."
+      "title": "Πίνακας Ελέγχου Εκτελεστή"
     },
+    "due": "Λήγει",
     "errors": {
       "loadTasksFailed": "Η φόρτωση των εργασιών εκτελεστή απέτυχε. Παρακαλώ προσπαθήστε ξανά αργότερα.",
       "updateTaskFailed": "Η ενημέρωση της κατάστασης εργασίας απέτυχε."
     },
     "highPriority": "Υψηλή Προτεραιότητα",
-    "due": "Λήγει",
-    "completed": "Ολοκληρώθηκε",
-    "undo": "Αναίρεση",
     "markComplete": "Σήμανση ως Ολοκληρωμένη",
-    "viewAccountDetails": "Προβολή Λεπτομερειών Λογαριασμού & Κωδικού Πρόσβασης",
-    "viewRelatedDocuments": "Προβολή Σχετικών Εγγράφων ({{count}})",
-    "stats": {
-      "totalTasks": "Συνολικές Εργασίες",
-      "completed": "Ολοκληρωμένες",
-      "remaining": "Απομένουσες"
-    },
     "sections": {
-      "immediate": {
-        "title": "Άμεσες Εργασίες (Πρώτες 48 Ώρες)",
-        "description": "Κρίσιμες εργασίες που χρειάζονται την άμεση προσοχή σας",
-        "empty": "Όλες οι άμεσες εργασίες ολοκληρώθηκαν!"
-      },
       "firstWeek": {
-        "title": "Εργασίες Πρώτης Εβδομάδας",
         "description": "Σημαντικές εργασίες για ολοκλήρωση εντός της πρώτης εβδομάδας",
-        "empty": "Όλες οι εργασίες πρώτης εβδομάδας ολοκληρώθηκαν!"
+        "empty": "Όλες οι εργασίες πρώτης εβδομάδας ολοκληρώθηκαν!",
+        "title": "Εργασίες Πρώτης Εβδομάδας"
+      },
+      "immediate": {
+        "description": "Κρίσιμες εργασίες που χρειάζονται την άμεση προσοχή σας",
+        "empty": "Όλες οι άμεσες εργασίες ολοκληρώθηκαν!",
+        "title": "Άμεσες Εργασίες (Πρώτες 48 Ώρες)"
       },
       "ongoing": {
-        "title": "Συνεχείς Ευθύνες",
         "description": "Εργασίες για διαχείριση τις επόμενες εβδομάδες και μήνες",
-        "empty": "Όλες οι συνεχείς εργασίες ολοκληρώθηκαν!"
+        "empty": "Όλες οι συνεχείς εργασίες ολοκληρώθηκαν!",
+        "title": "Συνεχείς Ευθύνες"
       }
     },
-    "communications": {
-      "title": "Επικοινωνίες με Δικαιούχους",
-      "description": "Παρακολουθήστε όλες τις επικοινωνίες με δικαιούχους για διατήρηση διαφάνειας",
-      "logCommunication": "Καταγραφή Επικοινωνίας",
-      "logTitle": "Καταγραφή Επικοινωνίας με Δικαιούχο",
-      "logDescription": "Καταγράψτε λεπτομέρειες της επικοινωνίας σας με δικαιούχους",
-      "beneficiaryName": "Όνομα Δικαιούχου",
-      "beneficiaryEmail": "Email (προαιρετικό)",
-      "communicationType": "Τύπος",
-      "communicationDate": "Ημερομηνία",
-      "subject": "Θέμα",
-      "summary": "Περίληψη",
-      "subjectPlaceholder": "π.χ., Αρχική ενημέρωση κληρονομιάς",
-      "summaryPlaceholder": "Σύντομη περίληψη του τι συζητήθηκε...",
-      "types": {
-        "email": "Email",
-        "phone": "Τηλεφωνική Κλήση",
-        "letter": "Επιστολή",
-        "in_person": "Προσωπικά",
-        "other": "Άλλο"
-      },
-      "saving": "Αποθήκευση...",
-      "saveCommunication": "Αποθήκευση Επικοινωνίας",
-      "cancel": "Ακύρωση",
-      "noCommunications": "Δεν έχουν καταγραφεί ακόμη επικοινωνίες",
-      "startTracking": "Ξεκινήστε την παρακολούθηση των επικοινωνιών σας με δικαιούχους",
-      "errors": {
-        "saveFailed": "Η καταγραφή της επικοινωνίας απέτυχε"
-      }
+    "stats": {
+      "completed": "Ολοκληρωμένες",
+      "remaining": "Απομένουσες",
+      "totalTasks": "Συνολικές Εργασίες"
     },
-    "status": {
-      "title": "Κατάσταση Διαχείρισης Κληρονομιάς",
-      "description": "Τρέχουσα κατάσταση υψηλού επιπέδου ορατή σε εξουσιοδοτημένα μέλη οικογένειας",
-      "updateStatus": "Ενημέρωση Κατάστασης",
-      "updateTitle": "Ενημέρωση Κατάστασης Κληρονομιάς",
-      "updateDescription": "Αυτή η κατάσταση θα είναι ορατή σε εξουσιοδοτημένα μέλη οικογένειας",
-      "statusLabel": "Κατάσταση",
-      "additionalDetails": "Πρόσθετες Λεπτομέρειες (προαιρετικό)",
-      "detailsPlaceholder": "Παροχή οποιουδήποτε πρόσθετου περιεχομένου...",
-      "selectStatus": "Επιλογή κατάστασης",
-      "updating": "Ενημέρωση...",
-      "lastUpdated": "Τελευταία ενημέρωση",
-      "progress": "Πρόοδος",
-      "noStatusSet": "Δεν έχει οριστεί ακόμη κατάσταση. Κάντε κλικ στο \"Ενημέρωση Κατάστασης\" για να ορίσετε την αρχική κατάσταση.",
-      "noStatusUpdates": "Δεν έχουν δημοσιευτεί ακόμη ενημερώσεις κατάστασης.",
-      "statuses": {
-        "initial_review": "Αρχική Επισκόπηση",
-        "gathering_documents": "Συλλογή Εγγράφων",
-        "probate_initiated": "Εκκίνηση Διαδικασίας Διακανονισμού",
-        "assets_being_valued": "Αποτίμηση Περιουσιακών Στοιχείων",
-        "debts_being_settled": "Εξόφληση Χρεών",
-        "tax_preparation": "Προετοιμασία Φορολογίας",
-        "ready_for_distribution": "Έτοιμο για Διανομή",
-        "distribution_in_progress": "Διανομή σε Εξέλιξη",
-        "estate_closed": "Κληρονομιά Κλειστή"
-      },
-      "errors": {
-        "updateFailed": "Η ενημέρωση της κατάστασης απέτυχε"
-      }
-    },
-    "justInTime": {
-      "viewAccountDetails": "Προβολή Λεπτομερειών Λογαριασμού & Κωδικού Πρόσβασης",
-      "secureInfoAccess": "Ασφαλής Πρόσβαση Πληροφοριών",
-      "reauthenticate": "Επαν-πιστοποίηση για προβολή ευαίσθητων πληροφοριών για",
-      "securityReason": "Για λόγους ασφαλείας, παρακαλώ εισάγετε τον κωδικό πρόσβασής σας για πρόσβαση σε αυτές τις πληροφορίες.",
-      "password": "Κωδικός Πρόσβασης",
-      "enterPassword": "Εισάγετε τον κωδικό πρόσβασής σας",
-      "incorrectPassword": "Λάθος κωδικός πρόσβασης. Παρακαλώ προσπαθήστε ξανά.",
-      "cancel": "Ακύρωση",
-      "verifying": "Επιβεβαίωση...",
-      "verifyContinue": "Επιβεβαίωση & Συνέχεια",
-      "accountName": "Όνομα Λογαριασμού",
-      "accountNumber": "Αριθμός Λογαριασμού",
-      "username": "Όνομα Χρήστη",
-      "pin": "PIN",
-      "additionalNotes": "Πρόσθετες Σημειώσεις",
-      "noSensitiveInfo": "Δεν υπάρχουν ευαίσθητες πληροφορίες συνδεδεμένες με αυτή την εργασία.",
-      "accessLogged": "Αυτή η πρόσβαση έχει καταγραφεί για λόγους ασφαλείας.",
-      "accessTime": "Χρόνος πρόσβασης",
-      "close": "Κλείσιμο",
-      "errors": {
-        "reauthFailed": "Η επιβεβαίωση της ταυτότητάς σας απέτυχε. Παρακαλώ προσπαθήστε ξανά.",
-        "notFound": "Δεν βρέθηκαν ευαίσθητες πληροφορίες για αυτή την εργασία.",
-        "retrieveFailed": "Η ανάκτηση ευαίσθητων πληροφοριών απέτυχε."
-      }
-    },
-    "familyView": {
-      "title": "Κατάσταση Διαχείρισης Κληρονομιάς",
-      "subtitle": "Μείνετε ενημερωμένοι για την πρόοδο της διαχείρισης κληρονομιάς",
-      "recentCommunications": "Πρόσφατες Επικοινωνίες Εκτελεστή",
-      "recentCommunicationsDescription": "Πρόσφατες ενημερώσεις από τον/την {{executorName}} προς δικαιούχους",
-      "to": "Προς",
-      "noCommunications": "Δεν έχουν καταγραφεί ακόμη επικοινωνίες.",
-      "infoMessage": "Αυτές οι πληροφορίες ενημερώνονται από τον/την {{executorName}} για να κρατούν τα μέλη της οικογένειας ενημερωμένα. Για λεπτομερείς ερωτήσεις, παρακαλώ επικοινωνήστε απευθείας με τον εκτελεστή.",
-      "defaultExecutor": "τον εκτελεστή",
-      "errors": {
-        "loadFailed": "Η φόρτωση δεδομένων απέτυχε"
-      }
-    }
+    "undo": "Αναίρεση",
+    "viewAccountDetails": "Προβολή Λεπτομερειών Λογαριασμού & Κωδικού Πρόσβασης"
   },
   "executorManagement": {
-    "failed_to_load_executors_2": "Η φόρτωση των εκτελεστών απέτυχε",
-    "user_not_found_with_this_email_3": "Ο χρήστης δεν βρέθηκε με αυτό το email",
-    "this_person_is_already_designa_4": "Αυτό το άτομο έχει ήδη οριστεί ως εκτελεστής",
-    "failed_to_add_executor_5": "Η προσθήκη εκτελεστή απέτυχε",
-    "failed_to_remove_executor_6": "Η αφαίρεση εκτελεστή απέτυχε",
-    "loading_executors_7": "Φόρτωση εκτελεστών...",
-    "executor_management_8": "Διαχείριση Εκτελεστών",
-    "designate_trusted_individuals__9": "Ορίστε έμπιστα άτομα που θα βοηθήσουν στη διαχείριση των υποθέσεών σας και θα υποστηρίξουν τους αγαπημένους σας",
     "add_new_executor_10": "Προσθήκη Νέου Εκτελεστή",
-    "email_address_11": "Διεύθυνση Email",
-    "executor_example_com_12": "executor@example.com",
-    "relationship_type_13": "Τύπος Σχέσης",
-    "primary_executor_14": "Κύριος Εκτελεστής",
-    "secondary_executor_15": "Δευτερεύων Εκτελεστής",
-    "emergency_contact_16": "Επαφή Έκτακτης Ανάγκης",
-    "current_executors_17": "Τρέχοντες Εκτελεστές",
-    "no_executors_designated_yet_ad_18": "Δεν έχουν οριστεί ακόμη εκτελεστές. Προσθέστε κάποιον που εμπιστεύεστε για να βοηθήσει στη διαχείριση των υποθέσεών σας.",
-    "important_information_19": "Σημαντικές Πληροφορίες",
-    "primary_executors_receive_imme_20": "Οι κύριοι εκτελεστές λαμβάνουν άμεση πρόσβαση στο θησαυροφυλάκιό σας όταν χρειάζεται",
-    "secondary_executors_are_notifi_21": "Οι δευτερεύοντες εκτελεστές ειδοποιούνται αλλά έχουν περιορισμένη πρόσβαση",
-    "emergency_contacts_are_notifie_22": "Οι επαφές έκτακτης ανάγκης ειδοποιούνται μόνο σε επείγουσες καταστάσεις",
     "all_executors_must_have_legacy_23": "Όλοι οι εκτελεστές πρέπει να έχουν λογαριασμούς LegacyGuard για πρόσβαση στις πληροφορίες σας",
+    "current_executors_17": "Τρέχοντες Εκτελεστές",
+    "designate_trusted_individuals__9": "Ορίστε έμπιστα άτομα που θα βοηθήσουν στη διαχείριση των υποθέσεών σας και θα υποστηρίξουν τους αγαπημένους σας",
+    "email_address_11": "Διεύθυνση Email",
+    "emergency_contact_16": "Επαφή Έκτακτης Ανάγκης",
+    "emergency_contacts_are_notifie_22": "Οι επαφές έκτακτης ανάγκης ειδοποιούνται μόνο σε επείγουσες καταστάσεις",
+    "executor_example_com_12": "executor@example.com",
+    "executor_management_8": "Διαχείριση Εκτελεστών",
+    "failed_to_add_executor_5": "Η προσθήκη εκτελεστή απέτυχε",
+    "failed_to_load_executors_2": "Η φόρτωση των εκτελεστών απέτυχε",
+    "failed_to_remove_executor_6": "Η αφαίρεση εκτελεστή απέτυχε",
+    "important_information_19": "Σημαντικές Πληροφορίες",
+    "loading_executors_7": "Φόρτωση εκτελεστών...",
+    "no_executors_designated_yet_ad_18": "Δεν έχουν οριστεί ακόμη εκτελεστές. Προσθέστε κάποιον που εμπιστεύεστε για να βοηθήσει στη διαχείριση των υποθέσεών σας.",
+    "primary_executor_14": "Κύριος Εκτελεστής",
+    "primary_executors_receive_imme_20": "Οι κύριοι εκτελεστές λαμβάνουν άμεση πρόσβαση στο θησαυροφυλάκιό σας όταν χρειάζεται",
+    "relationship_type_13": "Τύπος Σχέσης",
+    "secondary_executor_15": "Δευτερεύων Εκτελεστής",
+    "secondary_executors_are_notifi_21": "Οι δευτερεύοντες εκτελεστές ειδοποιούνται αλλά έχουν περιορισμένη πρόσβαση",
+    "statusLabels": {
+      "addExecutor": "Προσθήκη Εκτελεστή",
+      "adding": "Προσθήκη...",
+      "unknownUser": "Άγνωστος Χρήστης"
+    },
     "successMessages": {
       "executorAdded": "Ο εκτελεστής προστέθηκε με επιτυχία",
       "executorRemoved": "Ο εκτελεστής αφαιρέθηκε με επιτυχία"
     },
-    "validationMessages": {
-      "emailRequired": "Η διεύθυνση email είναι υποχρεωτική",
-      "invalidEmail": "Παρακαλώ εισάγετε μια έγκυρη διεύθυνση email",
-      "relationshipTypeRequired": "Ο τύπος σχέσης είναι υποχρεωτικός"
+    "this_person_is_already_designa_4": "Αυτό το άτομο έχει ήδη οριστεί ως εκτελεστής",
+    "user_not_found_with_this_email_3": "Ο χρήστης δεν βρέθηκε με αυτό το email"
+  },
+  "guardian": {
+    "accepted": "Αποδεκτή",
+    "declined": "Απορρίφθηκε",
+    "invitationSent": "Η Πρόσκληση Στάλθηκε",
+    "sendInvite": "Αποστολή Πρόσκλησης"
+  },
+  "guardianUpload": {
+    "addButton": "Προσθήκη Κηδεμόνα",
+    "addTitle": "Προσθήκη Κηδεμόνα",
+    "added": "Ο κηδεμόνας προστέθηκε με επιτυχία.",
+    "countryDescription": "Επιλέξτε τη χώρα όπου διαμένει αυτός ο κηδεμόνας.",
+    "countryLabel": "Χώρα Διαμονής *",
+    "countryPlaceholder": "Επιλέξτε χώρα",
+    "description": "Προσθέστε κάποιον που εμπιστεύεστε για να σας βοηθήσει να διαχειριστείτε την κληρονομιά σας.",
+    "editTitle": "Επεξεργασία Κηδεμόνα",
+    "emailLabel": "Email Address",
+    "emailPlaceholder": "Enter email address (optional)",
+    "error": "Σφάλμα",
+    "errors": {
+      "connectionError": "Connection error. Please check your internet connection",
+      "duplicateError": "A record with this information already exists",
+      "permissionError": "You do not have permission to perform this action",
+      "requiredDataNotFound": "Required data were not found",
+      "saveError": "An error occurred while saving the guardian",
+      "unknownError": "An unknown error occurred"
     },
-    "statusLabels": {
-      "adding": "Προσθήκη...",
-      "addExecutor": "Προσθήκη Εκτελεστή",
-      "unknownUser": "Άγνωστος Χρήστης"
-    }
+    "failedSave": "Η αποθήκευση του κηδεμόνα απέτυχε. Παρακαλώ προσπαθήστε ξανά.",
+    "fillRequired": "Παρακαλώ συμπληρώστε όλα τα υποχρεωτικά πεδία.",
+    "fullNameLabel": "Πλήρες Όνομα Κηδεμόνα *",
+    "fullNamePlaceholder": "Εισαγάγετε το πλήρες όνομα του κηδεμόνα",
+    "loginToSave": "Πρέπει να είστε συνδεδεμένοι για να αποθηκεύσετε κηδεμόνες.",
+    "phoneLabel": "Phone Number",
+    "phonePlaceholder": "Enter phone number (optional)",
+    "relationshipLabel": "Σχέση *",
+    "relationshipPlaceholder": "Επιλέξτε σχέση",
+    "relationships": {
+      "child": "Παιδί",
+      "friend": "Φίλος/η",
+      "legalProfessional": "Νομικός Επαγγελματίας",
+      "other": "Άλλο",
+      "parent": "Γονέας",
+      "sibling": "Αδελφός/ή",
+      "spouse": "Σύζυγος"
+    },
+    "roles": {
+      "emergencyContact": "Επαφή Έκτακτης Ανάγκης",
+      "executorOfWill": "Εκτελεστής Διαθήκης",
+      "financialPowerOfAttorney": "Οικονομικό Πληρεξούσιο",
+      "guardianForChildren": "Κηδεμόνας για Παιδιά",
+      "healthcareProxy": "Πληρεξούσιος Υγείας",
+      "trustee": "Καταπιστευματοδόχος"
+    },
+    "rolesTitle": "Ρόλοι & Αρμοδιότητες",
+    "saving": "Αποθήκευση...",
+    "success": "Επιτυχία",
+    "updateButton": "Ενημέρωση Κηδεμόνα",
+    "updated": "Ο κηδεμόνας ενημερώθηκε με επιτυχία."
+  },
+  "guardianView": {
+    "defaultUserName": "Κύριος Κάτοχος Λογαριασμού",
+    "errors": {
+      "failedToLoad": "Failed to load guardian data",
+      "pleaseLogin": "Please log in to view this information"
+    },
+    "guardianInfo": {
+      "description": "Βλέπετε αυτές τις πληροφορίες ως έμπιστος Κηδεμόνας. Αυτή η πρόσβαση παρέχεται για καταστάσεις έκτακτης ανάγκης και για να σας βοηθήσει να εκπληρώσετε τις ευθύνες σας.",
+      "securityNote": "Κάθε πρόσβαση καταγράφεται και παρακολουθείται για λόγους ασφαλείας."
+    },
+    "readOnlyAccess": "Πρόσβαση μόνο για ανάγνωση",
+    "sections": {
+      "finalWishes": {
+        "description": "Προσωπικές οδηγίες και τελευταίες επιθυμίες.",
+        "digitalAccounts": "Digital Accounts Shutdown",
+        "empty": "Δεν υπάρχουν διαθέσιμες τελευταίες επιθυμίες ή οδηγίες.",
+        "funeralWishes": "Επιθυμίες για την Κηδεία",
+        "messagesToLovedOnes": "Μηνύματα προς Αγαπημένους",
+        "title": "Τελευταίες Επιθυμίες & Οδηγίες"
+      },
+      "importantContacts": {
+        "description": "Βασικές επαφές για καταστάσεις έκτακτης ανάγκης.",
+        "empty": "Δεν υπάρχουν διαθέσιμες σημαντικές επαφές.",
+        "title": "Σημαντικές Επαφές"
+      },
+      "keyDocuments": {
+        "description": "Βασικά έγγραφα που έχουν επισημανθεί ως κρίσιμα από τον κάτοχο του λογαριασμού.",
+        "empty": "Δεν υπάρχουν διαθέσιμα έγγραφα-κλειδιά.",
+        "expires": "Λήγει",
+        "keyDocumentBadge": "Έγγραφο-Κλειδί",
+        "noExpiration": "Χωρίς ημερομηνία λήξης",
+        "title": "Έγγραφα-Κλειδιά"
+      }
+    },
+    "title": "Πίνακας Ελέγχου Κηδεμόνα"
   }
 }

@@ -1,916 +1,698 @@
 {
-  "_comment": "Shared translations used across the application",
-  "will": {
-    "title": "Testament",
-    "fields": {
-      "notes": "Notes",
-      "status": "Status",
-      "physical_location": "Physical Location",
-      "executor_contact_id": "Executor Contact ID",
-      "currentStatus": "Status Curent",
-      "physicalLocation": "Locație Fizică",
-      "executorContact": "Contact Executor",
-      "additionalNotes": "Notițe Suplimentare"
+  "annualReview": {
+    "armory": {
+      "categories": {
+        "bankAccounts": "Bank Accounts",
+        "realEstate": "Real Estate"
+      },
+      "description": "Your assets are what you're protecting. Keep this inventory current.",
+      "status": {
+        "current": "Current",
+        "needsUpdate": "Needs Update"
+      },
+      "title": "Asset Inventory Review"
     },
-    "statuses": {
-      "draft": "Draft",
-      "pending_signatures": "Pending Signatures",
+    "beneficiaries": {
+      "confirmationQuestion": "Are these still the correct people to receive these assets?",
+      "description": "Ensure the right people receive the right assets at the right time.",
+      "details": {
+        "primary": "Primary beneficiary"
+      },
+      "status": {
+        "current": "Current"
+      },
+      "title": "Beneficiary Review"
+    },
+    "buttons": {
+      "back": "Back",
+      "confirm": "Confirm",
+      "finish": "Finish Review",
+      "next": "Next",
+      "save": "Save Changes",
+      "update": "Update"
+    },
+    "commandRoster": {
+      "description": "Your executors and trusted people are the foundation of your family's protection plan.",
+      "details": {
+        "executor": "Primary executor for your estate",
+        "guardian": "Guardian for minor children"
+      },
+      "status": {
+        "current": "Current",
+        "needsUpdate": "Needs Update"
+      },
+      "title": "Command Roster Review"
+    },
+    "complete": {
+      "changes": "Changes Made",
+      "description": "Your annual review has been completed successfully.",
+      "message": "Your annual review has been completed. Your family's protection plan is now current and effective.",
+      "nextReview": "Next Review Due",
+      "noChanges": "No changes were needed. Your plan is current.",
+      "reminder": "We'll remind you when it's time for your next annual review.",
+      "summary": "Review Summary",
+      "title": "Review Complete"
+    },
+    "description": "Life changes quickly. This annual review ensures your legacy plan stays aligned with your current situation and wishes.",
+    "progress": {
       "completed": "Finalizat",
-      "needs_revision": "Needs Revision"
-    },
-    "actions": {
-      "save": "Save",
-      "edit": "Edit"
-    },
-    "placeholders": {
-      "notes_placeholder": "Enter any additional notes here...",
-      "physicalLocation": "ex. Seif acasă, Birou de avocatură",
-      "selectContact": "Selectați contactul",
-      "additionalNotes": "Orice informații suplimentare..."
-    },
-    "errors": {
-      "unauthorized": "Unauthorized access.",
-      "save_will_failed": "Failed to save the will. Please try again.",
-      "retrieve_will_failed": "Failed to retrieve the will.",
-      "load_template_failed": "Failed to load template.",
-      "not_found": "Will not found.",
-      "failed_to_save": "Failed to save will.",
-      "failed_to_load": "Failed to load will.",
-      "failed_to_retrieve": "Failed to retrieve will.",
-      "failed_to_fetch": "Failed to fetch wills.",
-      "failed_to_generate": "Failed to generate will.",
-      "failed_to_sign": "Failed to sign will.",
-      "failed_to_delete": "Failed to delete will.",
-      "failed_to_notarize": "Failed to notarize will.",
-      "failed_to_update_status": "Failed to update will status.",
-      "failed_to_verify": "Failed to verify notarization.",
-      "cannot_update_non_draft": "Cannot update non-draft will.",
-      "cannot_delete_non_draft": "Cannot delete non-draft will.",
-      "must_be_signed": "Will must be signed before notarization.",
-      "verification_code_required": "Verification code required.",
-      "invalid_verification_code": "Invalid verification code.",
-      "mustBeLoggedIn": "Trebuie să fiți autentificat pentru a salva.",
-      "loadingFailed": "Nu s-a putut încărca testamentul.",
-      "savingFailed": "Nu s-a putut salva testamentul."
-    },
-    "messages": {
-      "will_saved": "Will saved successfully.",
-      "template_loaded": "Template loaded successfully.",
-      "backup_success": "Backup created successfully.",
-      "backup_failed": "Failed to create a backup.",
-      "savedSuccessfully": "Testament salvat cu succes.",
-      "documentUploaded": "Document încărcat cu succes."
-    },
-    "success": {
-      "will_saved": "Will saved successfully.",
-      "backup_created": "Backup created successfully.",
-      "notarized": "Will has been successfully notarized."
-    },
-    "instructions": {
-      "verify_info": "Verify all information before proceeding to next steps.",
-      "provide_full_details": "Please provide full details for accuracy."
-    },
-    "loading": "Se încarcă testamentul...",
-    "subtitle": "Gestionați-vă testamentul și desemnați-vă executorii.",
-    "sections": {
-      "statusInfo": "Status și Informații",
-      "willDocument": "Documentul Testamentului"
-    },
-    "descriptions": {
-      "statusDescription": "Urmăriți statusul curent al testamentului dvs.",
-      "physicalLocationDescription": "Unde este stocat fizic testamentul dvs.?",
-      "executorDescription": "Persoana responsabilă de executarea testamentului dvs."
-    },
-    "options": {
-      "noContactSelected": "Niciun contact selectat"
+      "estimatedTime": "Estimated Time: 15 minutes",
+      "title": "Review Progress",
+      "totalSteps": "Total Steps"
     },
     "status": {
-      "notStarted": "Neînceput",
-      "inPreparation": "În Pregătire",
-      "completedSigned": "Finalizat și Semnat",
-      "withNotary": "La Notar",
-      "draft": "Ciornă",
-      "notarized": "Autentificat Notarial",
-      "stored": "Stocat",
-      "updated": "Actualizat"
+      "completed": "Finalizat"
     },
-    "document": {
-      "uploaded": "Documentul testamentului a fost încărcat",
-      "uploadedDescription": "Documentul testamentului dvs. a fost stocat în siguranță.",
-      "noDocument": "Niciun document de testament",
-      "noDocumentDescription": "Încărcați o copie a testamentului dvs. pentru păstrare în siguranță."
+    "step1": {
+      "description": "Confirm your trusted people are still the right choices for your family",
+      "title": "Review Your Executors"
     },
+    "step2": {
+      "description": "Verify your asset inventory is current and complete",
+      "title": "Review Your Assets"
+    },
+    "step3": {
+      "description": "Ensure your beneficiaries are still the right people",
+      "title": "Review Your Beneficiaries"
+    },
+    "step4": {
+      "description": "Finalize your annual review and update your plan",
+      "title": "Complete Review"
+    },
+    "subtitle": "Keep your family's protection plan current and effective",
+    "title": "Annual Legacy Review"
+  },
+  "complexityReduction": {
+    "actions": {
+      "completeStep": "Mark as Complete",
+      "iNeedHelp": "I Need Help",
+      "nextStep": "Next Step",
+      "previousStep": "Previous Step",
+      "showMeHow": "Show Me How",
+      "skipStep": "Skip for Now"
+    },
+    "benefits": {
+      "confidence": {
+        "description": "As you complete each step, you'll feel more confident and in control. What once seemed impossible becomes achievable.",
+        "title": "Builds Confidence"
+      },
+      "family": {
+        "description": "Every completed step directly protects your family. From emergency access to long-term planning, each action matters.",
+        "title": "Family Protection"
+      },
+      "overwhelm": {
+        "description": "Instead of facing a massive to-do list, you tackle one small task at a time. Each step is designed to be completed in under 5 minutes.",
+        "title": "Eliminates Overwhelm"
+      },
+      "progress": {
+        "description": "See your family's preparedness grow with each completed step. Track your progress and celebrate small wins along the way.",
+        "title": "Visible Progress"
+      },
+      "title": "Why Complexity Reduction Works"
+    },
+    "description": "We understand that planning for the future can feel overwhelming. Our complexity reduction system breaks down every task into simple, actionable steps that take just minutes to complete.",
+    "features": {
+      "difficultyLevels": {
+        "description": "Simple, Easy, Medium, and Complex ratings help you choose what to tackle first.",
+        "title": "Clear Difficulty Levels"
+      },
+      "helpAvailable": {
+        "description": "Get assistance, explanations, and support for any step that feels challenging.",
+        "title": "Help When You Need It"
+      },
+      "progressTracking": {
+        "description": "See your family's preparedness grow with each completed step.",
+        "title": "Progress Tracking"
+      },
+      "stepByStep": {
+        "description": "Each task is broken down into clear, simple instructions that anyone can follow.",
+        "title": "Step-by-Step Guidance"
+      },
+      "timeEstimation": {
+        "description": "Know exactly how long each step will take, from 2 minutes to 15 minutes maximum.",
+        "title": "Accurate Time Estimates"
+      },
+      "title": "How Complexity Reduction Works"
+    },
+    "progress": {
+      "completed": "Finalizat",
+      "title": "Your Progress",
+      "totalSteps": "Total Steps"
+    },
+    "steps": {
+      "digitalAssets": {
+        "complexity": "Complexity level: Easy",
+        "timeRequired": "Time required: 4 minutes",
+        "title": "Secure Digital Assets",
+        "whatWeDo": "What we do: Create secure access protocols and backup instructions",
+        "whatYouDo": "What you do: List important accounts and passwords",
+        "why": "Why this matters: Protects online accounts and digital memories"
+      },
+      "emergencyContacts": {
+        "complexity": "Complexity level: Simple",
+        "timeRequired": "Time required: 3 minutes",
+        "title": "List Emergency Contacts",
+        "whatWeDo": "What we do: Organize contacts by priority and create emergency protocols",
+        "whatYouDo": "What you do: Add phone numbers and relationships",
+        "why": "Why this matters: Quick access to important people during crises"
+      },
+      "familyInstructions": {
+        "complexity": "Complexity level: Medium",
+        "timeRequired": "Time required: 8 minutes",
+        "title": "Write Family Instructions",
+        "whatWeDo": "What we do: Organize messages and create delivery schedules",
+        "whatYouDo": "What you do: Write personal messages and instructions",
+        "why": "Why this matters: Provides clear guidance during difficult times"
+      },
+      "identifyBankAccount": {
+        "complexity": "Complexity level: Simple",
+        "timeRequired": "Time required: 2 minutes",
+        "title": "Identify Your Primary Bank Account",
+        "whatWeDo": "What we do: Securely store information and create access instructions",
+        "whatYouDo": "What you do: Take a photo or write down account information",
+        "why": "Why this matters: Immediate access to funds during emergencies"
+      },
+      "insurancePolicies": {
+        "complexity": "Complexity level: Easy",
+        "timeRequired": "Time required: 5 minutes",
+        "title": "Document Insurance Policies",
+        "whatWeDo": "What we do: Extract key information and create claim instructions",
+        "whatYouDo": "What you do: Upload policy documents or take photos",
+        "why": "Why this matters: Ensures claims can be filed quickly and correctly"
+      },
+      "legalDocuments": {
+        "complexity": "Complexity level: Medium",
+        "timeRequired": "Time required: 6 minutes",
+        "title": "Organize Legal Documents",
+        "whatWeDo": "What we do: Create summaries and ensure proper legal access",
+        "whatYouDo": "What you do: Upload wills, powers of attorney, and other documents",
+        "why": "Why this matters: Ensures legal wishes are followed and processes are smooth"
+      }
+    },
+    "subtitle": "Break down complex tasks into simple, manageable steps",
+    "title": "Simplify Your Legacy Planning"
+  },
+  "editStoryModal": {
+    "addStory": "Add a Story",
+    "editStory": "Edit Story",
+    "errors": {
+      "notAuthenticated": "You must be logged in to save a story",
+      "saveFailed": "Failed to save story"
+    },
+    "fields": {
+      "yourStory": "Your Story"
+    },
+    "hints": {
+      "shareMemories": "Share memories, significance, or history"
+    },
+    "messages": {
+      "saved": "Story saved successfully"
+    },
+    "placeholders": {
+      "story": "e.g., This was your grandmother's wedding ring, given to her in 1952 when she married your grandfather in the small church in their hometown. She wore it every day for 65 years..."
+    },
+    "saveStory": "Save Story",
+    "saving": "Saving...",
+    "tips": {
+      "describeHistory": "Describe its history or how you acquired it",
+      "explainSpecial": "Explain why this item is special to you",
+      "mentionWishes": "Mention any wishes for how it should be used or kept",
+      "shareMemories": "Share memories associated with it",
+      "title": "Tips for a meaningful story:"
+    }
+  },
+  "microTaskGenerator": {
+    "complete_task_4": "Complete Task",
+    "familyImpactLevels": {
+      "high": "Ridicat"
+    },
+    "family_impact_2": " family impact",
+    "minutes_1": " minutes • ",
+    "skip_for_now_5": "Skip for Now",
+    "start_task_3": "Start Task",
+    "tasks": {
+      "driversLicense": {
+        "completionMessage": "Your family now has access to critical ID information.",
+        "description": "Your family will need this for legal and financial matters. Having a clear photo saves them time and stress.",
+        "title": "Take a photo of your driver's license"
+      }
+    }
+  },
+  "playbook": {
+    "accessDenied": "Nu aveți permisiunea de a vizualiza acest manual de acțiune",
+    "addContact": "Adaugă Contact",
+    "autoSaveNotice": "Modificările dvs. sunt salvate automat pe măsură ce scrieți.",
+    "contact": "Contact",
+    "contactFields": {
+      "email": "E-mail",
+      "emailPlaceholder": "email@exemplu.ro",
+      "name": "Nume",
+      "namePlaceholder": "Nume complet",
+      "notes": "Notițe",
+      "notesPlaceholder": "Informații suplimentare despre acest contact",
+      "phone": "Telefon",
+      "phonePlaceholder": "+40 722 123 456",
+      "role": "Rol/Relație",
+      "rolePlaceholder": "ex. Avocat de familie, Contabil"
+    },
+    "create": "Creează Manual de Acțiune",
+    "description": "Creați instrucțiuni și informații personalizate pentru gardianul dvs.",
+    "digitalAccounts": {
+      "description": "Instrucțiuni pentru gestionarea conturilor dvs. online",
+      "label": "Conturi Digitale",
+      "placeholder": "Enumerați conturile dvs. digitale și cum ar trebui gestionate..."
+    },
+    "discardChanges": {
+      "cancel": "Continuă Editarea",
+      "confirm": "Renunță la Modificări",
+      "description": "Aveți modificări nesalvate. Sunteți sigur că doriți să renunțați la ele?",
+      "title": "Renunțați la Modificări?"
+    },
+    "documentLocations": {
+      "description": "Unde se găsesc documentele importante",
+      "label": "Locațiile Documentelor",
+      "placeholder": "Descrieți unde se află documentele importante..."
+    },
+    "edit": "Editează Manual de Acțiune",
+    "errors": {
+      "loadFailed": "Nu s-a putut încărca manualul de acțiune",
+      "saveFailed": "Nu s-a putut salva manualul de acțiune"
+    },
+    "exitPreview": "Ieși din Previzualizare",
+    "fetchError": "Nu s-a putut încărca manualul de acțiune",
+    "funeralWishes": {
+      "description": "Preferințele dvs. pentru aranjamentele funerare",
+      "label": "Dorințe Funerare",
+      "placeholder": "Descrieți dorințele dvs. pentru funeraliile sau slujba de pomenire..."
+    },
+    "importantContacts": {
+      "add": "Adaugă Contact",
+      "description": "Adăugați persoane cheie pe care acest gardian ar trebui să le contacteze",
+      "email": "E-mail",
+      "emailPlaceholder": "email@exemplu.ro",
+      "empty": "Niciun contact adăugat încă. Faceți clic pe 'Adaugă Contact' pentru a adăuga persoane importante.",
+      "label": "Contacte Importante",
+      "name": "Nume",
+      "namePlaceholder": "Nume complet",
+      "notes": "Notițe",
+      "notesPlaceholder": "Informații suplimentare",
+      "phone": "Telefon",
+      "phonePlaceholder": "+40 722 123 456",
+      "relationship": "Relație",
+      "relationshipPlaceholder": "ex. Avocat de familie",
+      "remove": "Elimină",
+      "viewDescription": "Contactați aceste persoane atunci când este necesar"
+    },
+    "label": "Manual de Acțiune",
+    "lastUpdated": "Ultima Actualizare",
+    "loading": "Se încarcă manualul de acțiune...",
+    "messages": {
+      "autoSaved": "Salvat",
+      "saved": "Manualul de acțiune a fost salvat cu succes"
+    },
+    "noContacts": "Niciun contact adăugat încă.",
+    "noContent": "Niciun conținut adăugat încă.",
+    "notAuthenticated": "Vă rugăm să vă autentificați pentru a vizualiza acest manual de acțiune",
+    "notFound": {
+      "description": "Manualul de acțiune pe care îl căutați nu a fost încă creat.",
+      "title": "Manual de Acțiune Negăsit"
+    },
+    "personalMessages": {
+      "description": "Mesaje personale pentru acest gardian",
+      "label": "Mesaje Personale",
+      "placeholder": "Scrieți un mesaj personal acestui gardian..."
+    },
+    "practicalInstructions": {
+      "description": "Pași imediați și responsabilități",
+      "label": "Instrucțiuni Practice",
+      "placeholder": "Enumerați sarcinile practice și acțiunile imediate..."
+    },
+    "preview": "Previzualizare",
+    "save": "Salvează Manualul de Acțiune",
+    "saveError": "Nu s-a putut salva manualul de acțiune",
+    "saveSuccess": "Manualul de acțiune a fost salvat cu succes",
+    "saving": "Se salvează...",
+    "sections": {
+      "contacts": {
+        "description": "Persoane cheie pe care acest gardian ar trebui să le contacteze sau să le notifice.",
+        "title": "Contacte Importante"
+      },
+      "digital": {
+        "description": "Instrucțiuni pentru gestionarea prezenței dvs. digitale și a conturilor online.",
+        "placeholder": "Enumerați conturile dvs. digitale și cum ar trebui gestionate...\n\nDe exemplu:\n- Conturi de social media (Facebook, Instagram, LinkedIn)\n- Conturi de e-mail\n- Stocare în cloud (Google Drive, Dropbox)\n- Servicii de abonament (Netflix, Spotify)\n- Conturi bancare și financiare online\n- Portofele de criptomonede\n- Site-uri web sau nume de domenii",
+        "title": "Închiderea Conturilor Digitale"
+      },
+      "documents": {
+        "description": "Unde se găsesc documentele importante fizice și digitale.",
+        "placeholder": "Descrieți unde se află documentele importante...\n\nDe exemplu:\n- Locația testamentului\n- Polițe de asigurare\n- Acte de proprietate\n- Informații despre contul bancar\n- Documente de investiții\n- Declarații fiscale\n- Parole și coduri de acces\n- Locația și cheia seifului",
+        "title": "Locațiile Documentelor"
+      },
+      "funeral": {
+        "description": "Preferințele dvs. pentru aranjamentele funerare și slujbele de pomenire.",
+        "placeholder": "Descrieți dorințele dvs. pentru funeraliile sau slujba de pomenire...\n\nDe exemplu:\n- Tipul slujbei (religioasă, laică, celebrarea vieții)\n- Preferințe de înmormântare sau incinerare\n- Preferințe de locație\n- Muzică, lecturi sau cereri speciale\n- Cine ar trebui să vorbească sau să participe\n- Orice tradiții specifice de urmat",
+        "title": "Dorințe Funerare"
+      },
+      "messages": {
+        "description": "Mesaje personale și gânduri finale pentru acest gardian.",
+        "placeholder": "Scrieți un mesaj personal acestui gardian...\n\nAceasta este oportunitatea dvs. de a:\n- Vă exprima sentimentele și recunoștința\n- Împărtăși amintiri importante\n- Oferi îndrumare sau sfaturi\n- Explica deciziile luate\n- Lăsa cuvinte de mângâiere\n- Împărtăși speranțele pentru viitor",
+        "title": "Mesaje Personale"
+      },
+      "practical": {
+        "description": "Pași practici imediați și responsabilități pentru acest gardian.",
+        "placeholder": "Enumerați sarcinile practice și acțiunile imediate...\n\nDe exemplu:\n- Listă de verificare pentru primele 24-48 de ore\n- Pe cine să notificați primul\n- Facturi sau plăți urgente\n- Instrucțiuni de îngrijire (animale de companie, plante, proprietate)\n- Probleme de afaceri care necesită atenție\n- Întâlniri programate de anulat\n- Chei și coduri de acces necesare",
+        "title": "Instrucțiuni Practice"
+      }
+    },
+    "status": {
+      "complete": "Finalizat",
+      "draft": "În Curs",
+      "empty": "Neînceput"
+    },
+    "subtitle": {
+      "edit": "Creați instrucțiuni și informații personalizate pentru acest gardian.",
+      "view": "Informații și instrucțiuni esențiale pregătite pentru dvs."
+    },
+    "tabs": {
+      "contacts": "Contacte",
+      "digital": "Digital",
+      "documents": "Documente",
+      "funeral": "Funeralii",
+      "instructions": "Instrucțiuni",
+      "messages": "Mesaje"
+    },
+    "viewDescription": "Informații și instrucțiuni esențiale pregătite special pentru dvs.",
+    "viewFooter": "Aceste informații v-au fost încredințate în calitate de gardian. Vă rugăm să le păstrați confidențiale și în siguranță."
+  },
+  "scenarioPlanner": {
+    "20_000_16": "$20,000",
+    "5_000_15_000_13": "$5,000 - $15,000",
+    "_27": "🤕",
+    "a_comprehensive_guide_for_your_25": "A comprehensive guide for your family to follow in case of emergency",
+    "action_required_21": "Action Required: ",
+    "actions": {
+      "compileInsuranceList": "Compile a list of all insurance policies",
+      "createBusinessContinuityPlan": "Create a business continuity plan",
+      "designatePowerOfAttorney": "Designate a Power of Attorney for finances",
+      "draftWill": "Draft and store a legally binding will",
+      "grantSpouseAccess": "Grant spouse access to your primary account"
+    },
+    "current_family_vulnerabilities_6": "Current Family Vulnerabilities",
+    "descriptions": {
+      "activatePowerOfAttorney": "Ensure designated person can make decisions.",
+      "arrangeBillPayments": "Set up automatic payments or delegate to trusted person.",
+      "billsGoUnpaid": "Your family can't access your primary checking account to pay the mortgage.",
+      "businessDecisionsStall": "Clients and employees don't know who is authorized to make decisions.",
+      "businessNoLeadership": "Your business can continue operating smoothly with clear leadership and decision-making processes.",
+      "contactExecutor": "Reach out to John Smith to start will proceedings.",
+      "executorBeginsProbate": "The executor will file for probate to manage the estate.",
+      "familyCannotAccessBankAccount": "Your family can now pay bills and manage daily expenses without delay or legal complications.",
+      "familyCannotManageFinances": "Your spouse can now legally manage all financial matters, ensuring bills are paid and investments are protected.",
+      "fileDisabilityBenefits": "Submit necessary paperwork for insurance claims.",
+      "insuranceDetailsUnknown": "Life insurance policy details and beneficiaries are unknown.",
+      "locateWill": "Locate and secure the will at the designated location.",
+      "noWillFound": "The family cannot locate or confirm the existence of a will.",
+      "notifyEmployer": "Inform workplace about extended absence.",
+      "notifyImmediateFamily": "Ensure all immediate family members are informed.",
+      "securePhysicalProperty": "Ensure that the home and vehicles are secure."
+    },
+    "estimated_14": " estimated",
+    "family_action_plan_24": "Family Action Plan",
+    "generate_family_action_plan_3": "Generate Family Action Plan",
+    "generate_plan_4": "Generate Plan",
+    "let_s_see_how_prepared_your_fa_2": "Let's see how prepared your family is for different scenarios",
+    "no_will_11": "No Will: ",
+    "potential_cost_of_lengthy_prob_12": "Potential cost of lengthy probate process: ",
+    "potential_financial_impact_9": "Potential Financial Impact",
+    "potential_loss_of_business_rev_15": "Potential loss of business revenue during transition: ",
+    "print_plan_26": "Print Plan",
+    "projected_timeline_8": "Projected Timeline",
+    "protected_in_this_scenario_19": "% protected in this scenario",
+    "resolve_this_vulnerability_22": "Resolve This Vulnerability",
+    "resolved_23": "Resolved: ",
+    "scenario_planner_1": "Scenario Planner",
+    "scenarios": {
+      "hospitalized": {
+        "description": "An unexpected health issue means you're unable to manage daily affairs. Your family needs to step in.",
+        "title": "What if you're in the hospital for 3 months?"
+      },
+      "incapacitated": {
+        "description": "A serious accident leaves you unable to make decisions for yourself. Who will make them for you?",
+        "title": "What if you become incapacitated?"
+      },
+      "suddenPassing": {
+        "description": "The ultimate test of your preparation. Is your family ready to navigate this difficult time without chaos?",
+        "title": "What if something happens to you tomorrow?"
+      }
+    },
+    "these_are_estimates_of_the_pos_10": "These are estimates of the potential costs if vulnerabilities are not addressed",
+    "timeframes": {
+      "first24Hours": "First 24 Hours",
+      "firstMonth": "First Month",
+      "firstWeek": "First Week",
+      "threeToSixMonths": "3-6 Months"
+    },
+    "timelineEvents": {
+      "activatePowerOfAttorney": "Activate Power of Attorney",
+      "arrangeBillPayments": "Arrange bill payments",
+      "contactExecutor": "Contact executor",
+      "executorBeginsProbate": "Executor begins probate process",
+      "fileDisabilityBenefits": "File for disability benefits",
+      "locateWill": "Locate the will",
+      "notifyEmployer": "Notify employer",
+      "notifyImmediateFamily": "Notify immediate family",
+      "securePhysicalProperty": "Secure physical property"
+    },
+    "vulnerabilities": {
+      "billsGoUnpaid": "Bills Go Unpaid",
+      "businessDecisionsStall": "Business Decisions Stall",
+      "businessNoLeadership": "Business operations have no clear leadership",
+      "familyCannotAccessBankAccount": "Family cannot access primary bank account",
+      "familyCannotManageFinances": "Family cannot legally manage your finances",
+      "insuranceDetailsUnknown": "Insurance Details Unknown",
+      "noWillAvailable": "No will available",
+      "noWillFound": "No Will Found",
+      "unknownLifeInsurance": "Unknown life insurance details"
+    },
+    "vulnerability_20": "Vulnerability: ",
+    "without_proper_preparation_you_7": "Without proper preparation, you and your family could face these challenges",
+    "your_family_is_currently_18": "Your family is currently ",
+    "your_preparedness_blueprint_17": "Your Preparedness Blueprint"
+  },
+  "scenarios": {
+    "bottomCta": {
+      "primary": "Don't Let Your Family Face This Chaos",
+      "secondary": "Start Organizing in 10 Minutes",
+      "urgency": "Every day you wait is another day your family is unprepared"
+    },
+    "businessTrip": {
+      "after": {
+        "benefit": "Everything accessible right when she needed it.",
+        "emotion": "Relief and readiness",
+        "situation": "When Emma's husband was traveling and she needed emergency funds for their son's surgery, she had immediate access to all account information, insurance details, and even pre-written authorization letters. No delays, no stress."
+      },
+      "before": {
+        "consequence": "Important medical decisions delayed.",
+        "emotion": "Frustration and helplessness",
+        "situation": "When David's flight was delayed and he missed his daughter's emergency surgery, his wife couldn't access their savings account or find their medical insurance information. Critical decisions had to wait."
+      },
+      "title": "The Business Trip Emergency"
+    },
+    "hospitalStay": {
+      "after": {
+        "benefit": "Immediate access to everything she needed.",
+        "emotion": "Peace and focus",
+        "situation": "When Mark had his accident, his wife Lisa opened their family guide and found everything organized: insurance details, bank contacts, medical information, and even a list of people to notify. She could focus on what mattered most - being there for Mark."
+      },
+      "before": {
+        "consequence": "Days of searching for information and support.",
+        "emotion": "Stress and worry",
+        "situation": "Sarah's husband had a heart attack. While he was in intensive care, she spent days trying to find their insurance papers, bank account information, and important contacts. The stress was overwhelming when she needed to focus on his recovery."
+      },
+      "title": "The Unexpected Hospital Stay"
+    },
+    "labels": {
+      "after": "After Heritage Vault",
+      "before": "Before LegacyGuard",
+      "feeling": "Feeling"
+    },
+    "subtitle": "Real families, real situations, real control and preparedness",
+    "suddenLoss": {
+      "after": {
+        "benefit": "A clear path to follow in difficult times.",
+        "emotion": "Calm and clarity",
+        "situation": "When John's family needed to handle his affairs, everything was clearly organized: a complete list of accounts, important contacts, step-by-step instructions, and even personal messages he'd prepared for each family member."
+      },
+      "before": {
+        "consequence": "Missed deadlines and lost time.",
+        "emotion": "Confusion and regret",
+        "situation": "After losing her father suddenly, Maria spent months trying to piece together his financial affairs. She found accounts she didn't know existed and missed important deadlines because documents were scattered everywhere."
+      },
+      "title": "The Sudden Loss"
+    },
+    "title": "What Happens When Life Takes an Unexpected Turn?"
+  },
+  "will": {
     "buttons": {
       "saveWillInfo": "Salvează Informațiile Testamentului",
       "saving": "Se salvează...",
       "uploadDocument": "Încarcă Document",
       "uploadNewVersion": "Încarcă Versiune Nouă"
     },
+    "descriptions": {
+      "executorDescription": "Persoana responsabilă de executarea testamentului dvs.",
+      "physicalLocationDescription": "Unde este stocat fizic testamentul dvs.?",
+      "statusDescription": "Urmăriți statusul curent al testamentului dvs."
+    },
+    "document": {
+      "noDocument": "Niciun document de testament",
+      "noDocumentDescription": "Încărcați o copie a testamentului dvs. pentru păstrare în siguranță.",
+      "uploaded": "Documentul testamentului a fost încărcat",
+      "uploadedDescription": "Documentul testamentului dvs. a fost stocat în siguranță."
+    },
+    "errors": {
+      "cannot_delete_non_draft": "Cannot delete non-draft will.",
+      "cannot_update_non_draft": "Cannot update non-draft will.",
+      "failed_to_delete": "Failed to delete will.",
+      "failed_to_fetch": "Failed to fetch wills.",
+      "failed_to_generate": "Failed to generate will.",
+      "failed_to_load": "Failed to load will.",
+      "failed_to_save": "Failed to save will.",
+      "failed_to_sign": "Failed to sign will.",
+      "loadingFailed": "Nu s-a putut încărca testamentul.",
+      "mustBeLoggedIn": "Trebuie să fiți autentificat pentru a salva.",
+      "not_found": "Will not found.",
+      "savingFailed": "Nu s-a putut salva testamentul.",
+      "unauthorized": "Unauthorized access."
+    },
+    "fields": {
+      "additionalNotes": "Notițe Suplimentare",
+      "currentStatus": "Status Curent",
+      "executorContact": "Contact Executor",
+      "physicalLocation": "Locație Fizică"
+    },
+    "generation": {
+      "error": "Nu s-a putut genera testamentul",
+      "success": "Testament generat cu succes!"
+    },
+    "loading": "Se încarcă testamentul...",
+    "messages": {
+      "documentUploaded": "Document încărcat cu succes.",
+      "savedSuccessfully": "Testament salvat cu succes."
+    },
+    "options": {
+      "noContactSelected": "Niciun contact selectat"
+    },
+    "placeholders": {
+      "additionalNotes": "Orice informații suplimentare...",
+      "physicalLocation": "ex. Seif acasă, Birou de avocatură",
+      "selectContact": "Selectați contactul"
+    },
+    "progress": "Pasul {{current}} din {{total}}",
+    "sections": {
+      "statusInfo": "Status și Informații",
+      "willDocument": "Documentul Testamentului"
+    },
+    "status": {
+      "completedSigned": "Finalizat și Semnat",
+      "draft": "Ciornă",
+      "inPreparation": "În Pregătire",
+      "notStarted": "Neînceput",
+      "notarized": "Autentificat Notarial",
+      "stored": "Stocat",
+      "updated": "Actualizat",
+      "withNotary": "La Notar"
+    },
     "steps": {
-      "countrySelection": "Selecția Țării",
-      "countrySelectionDesc": "Selectați țara și introduceți detaliile dvs.",
       "assetAllocation": "Alocarea Bunurilor",
       "assetAllocationDesc": "Distribuiți bunurile între beneficiari",
       "beneficiaries": "Beneficiari",
       "beneficiariesDesc": "Definiți-vă beneficiarii",
+      "countrySelection": "Selecția Țării",
+      "countrySelectionDesc": "Selectați țara și introduceți detaliile dvs.",
       "executors": "Executori",
       "executorsDesc": "Desemnați executori pentru a gestiona testamentul dvs.",
       "review": "Revizuire",
       "reviewDesc": "Revizuiți și finalizați testamentul dvs."
     },
-    "progress": "Pasul {{current}} din {{total}}",
+    "subtitle": "Gestionați-vă testamentul și desemnați-vă executorii.",
     "validation": {
-      "selectCountry": "Vă rugăm să selectați o țară",
-      "requiredField": "Acest câmp este obligatoriu",
       "allocation100": "Alocarea totală trebuie să fie 100%",
       "atLeastOneBeneficiary": "Este necesar cel puțin un beneficiar",
       "executorRequired": "Executorul este obligatoriu",
-      "fixErrors": "Vă rugăm să corectați erorile din formular"
-    },
-    "generation": {
-      "success": "Testament generat cu succes!",
-      "error": "Nu s-a putut genera testamentul"
+      "fixErrors": "Vă rugăm să corectați erorile din formular",
+      "requiredField": "Acest câmp este obligatoriu",
+      "selectCountry": "Vă rugăm să selectați o țară"
     }
   },
   "willGenerator": {
-    "countries": {
-      "GB": "United Kingdom",
-      "DE": "Germany",
-      "FR": "France",
-      "ES": "Spain",
-      "IT": "Italy",
-      "CZ": "Czech Republic",
-      "SK": "Slovakia",
-      "PL": "Poland",
-      "AT": "Austria",
-      "CH": "Switzerland",
-      "NL": "Netherlands",
-      "BE": "Belgium",
-      "LU": "Luxembourg",
-      "LI": "Liechtenstein",
-      "DK": "Denmark",
-      "SE": "Sweden",
-      "FI": "Finland",
-      "NO": "Norway",
-      "IS": "Iceland",
-      "IE": "Ireland",
-      "PT": "Portugal",
-      "GR": "Greece",
-      "HU": "Hungary",
-      "RO": "Romania",
-      "BG": "Bulgaria",
-      "HR": "Croatia",
-      "SI": "Slovenia",
-      "EE": "Estonia",
-      "LV": "Latvia",
-      "LT": "Lithuania",
-      "MT": "Malta",
-      "CY": "Cyprus",
-      "MD": "Moldova",
-      "UA": "Ukraine",
-      "RS": "Serbia",
-      "AL": "Albania",
-      "MK": "North Macedonia",
-      "ME": "Montenegro",
-      "BA": "Bosnia and Herzegovina"
-    },
-    "steps": {
-      "confirmJurisdiction": "Confirm Jurisdiction",
-      "personalInformation": "Personal Information",
-      "executorBeneficiaries": "Executor and Beneficiaries",
-      "reviewGenerate": "Review and Generate",
-      "signConfirm": "Sign and Confirm"
-    },
-    "no_template_found_for_this_jur_1": "No template found for this jurisdiction. Please try another selection.",
-    "failed_to_load_will_template_2": "Failed to load will template. Please check your connection and try again.",
-    "please_confirm_that_you_have_s_3": "Please confirm that you have signed the will.",
+    "changeCountry": "Change Country",
+    "confirmSigned": "Confirm you have signed the document",
     "console": {
       "willGenerationCompleted": "Will generation completed successfully."
     },
-    "confirmCountry": "Please confirm if you are creating a will for {{country}}.",
-    "changeCountry": "Change Country",
-    "select_a_country_4": "Select a country",
-    "fullName": "Full Name",
+    "countries": {
+      "AL": "Albania",
+      "AT": "Austria",
+      "BA": "Bosnia and Herzegovina",
+      "BE": "Belgium",
+      "BG": "Bulgaria",
+      "CH": "Switzerland",
+      "CY": "Cyprus",
+      "CZ": "Czech Republic",
+      "DE": "Germany",
+      "DK": "Denmark",
+      "EE": "Estonia",
+      "ES": "Spain",
+      "FI": "Finland",
+      "FR": "France",
+      "GB": "United Kingdom",
+      "GR": "Greece",
+      "HR": "Croatia",
+      "HU": "Hungary",
+      "IE": "Ireland",
+      "IS": "Iceland",
+      "IT": "Italy",
+      "LI": "Liechtenstein",
+      "LT": "Lithuania",
+      "LU": "Luxembourg",
+      "LV": "Latvia",
+      "MD": "Moldova",
+      "ME": "Montenegro",
+      "MK": "North Macedonia",
+      "MT": "Malta",
+      "NL": "Netherlands",
+      "NO": "Norway",
+      "PL": "Poland",
+      "PT": "Portugal",
+      "RO": "Romania",
+      "RS": "Serbia",
+      "SE": "Sweden",
+      "SI": "Slovenia",
+      "SK": "Slovakia",
+      "UA": "Ukraine"
+    },
     "executionInstructions": "Execution Instructions",
-    "confirmSigned": "Confirm you have signed the document",
-    "finalizeUpload": "Finalize and Upload"
+    "failed_to_load_will_template_2": "Failed to load will template. Please check your connection and try again.",
+    "finalizeUpload": "Finalize and Upload",
+    "fullName": "Full Name",
+    "no_template_found_for_this_jur_1": "No template found for this jurisdiction. Please try another selection.",
+    "please_confirm_that_you_have_s_3": "Please confirm that you have signed the will.",
+    "select_a_country_4": "Select a country",
+    "steps": {
+      "confirmJurisdiction": "Confirm Jurisdiction",
+      "executorBeneficiaries": "Executor and Beneficiaries",
+      "personalInformation": "Personal Information",
+      "reviewGenerate": "Review and Generate",
+      "signConfirm": "Sign and Confirm"
+    }
   },
   "will_generator": {
-    "uk_jurisdiction_title": "Which part of the UK is your primary residence?",
+    "error_uk_jurisdiction_required": "Please select a jurisdiction within the UK to continue.",
     "jurisdiction_england": "England",
-    "jurisdiction_wales": "Wales",
-    "jurisdiction_scotland": "Scotland",
     "jurisdiction_northern_ireland": "Northern Ireland",
+    "jurisdiction_scotland": "Scotland",
+    "jurisdiction_wales": "Wales",
     "select_will_language_title": "Please select the language for your will:",
-    "error_uk_jurisdiction_required": "Please select a jurisdiction within the UK to continue."
-  },
-  "playbook": {
-    "label": "Manual de Acțiune",
-    "create": "Creează Manual de Acțiune",
-    "edit": "Editează Manual de Acțiune",
-    "preview": "Previzualizare",
-    "exitPreview": "Ieși din Previzualizare",
-    "save": "Salvează Manualul de Acțiune",
-    "saving": "Se salvează...",
-    "loading": "Se încarcă manualul de acțiune...",
-    "autoSaveNotice": "Modificările dvs. sunt salvate automat pe măsură ce scrieți.",
-    "noContent": "Niciun conținut adăugat încă.",
-    "noContacts": "Niciun contact adăugat încă.",
-    "addContact": "Adaugă Contact",
-    "contact": "Contact",
-    "title": "Manual de Acțiune pentru {{name}}",
-    "titleReadOnly": "Manualul de Acțiune al lui {{name}}",
-    "description": "Creați instrucțiuni și informații personalizate pentru gardianul dvs.",
-    "viewTitle": "Manualul de Acțiune al Gardianului: {{userName}}",
-    "viewDescription": "Informații și instrucțiuni esențiale pregătite special pentru dvs.",
-    "lastUpdated": "Ultima Actualizare",
-    "viewFooter": "Aceste informații v-au fost încredințate în calitate de gardian. Vă rugăm să le păstrați confidențiale și în siguranță.",
-    "notAuthenticated": "Vă rugăm să vă autentificați pentru a vizualiza acest manual de acțiune",
-    "accessDenied": "Nu aveți permisiunea de a vizualiza acest manual de acțiune",
-    "fetchError": "Nu s-a putut încărca manualul de acțiune",
-    "saveSuccess": "Manualul de acțiune a fost salvat cu succes",
-    "saveError": "Nu s-a putut salva manualul de acțiune",
-    "discardChanges": {
-      "title": "Renunțați la Modificări?",
-      "description": "Aveți modificări nesalvate. Sunteți sigur că doriți să renunțați la ele?",
-      "cancel": "Continuă Editarea",
-      "confirm": "Renunță la Modificări"
-    },
-    "importantContacts": {
-      "label": "Contacte Importante",
-      "description": "Adăugați persoane cheie pe care acest gardian ar trebui să le contacteze",
-      "viewDescription": "Contactați aceste persoane atunci când este necesar",
-      "add": "Adaugă Contact",
-      "remove": "Elimină",
-      "empty": "Niciun contact adăugat încă. Faceți clic pe 'Adaugă Contact' pentru a adăuga persoane importante.",
-      "name": "Nume",
-      "namePlaceholder": "Nume complet",
-      "relationship": "Relație",
-      "relationshipPlaceholder": "ex. Avocat de familie",
-      "phone": "Telefon",
-      "phonePlaceholder": "+40 722 123 456",
-      "email": "E-mail",
-      "emailPlaceholder": "email@exemplu.ro",
-      "notes": "Notițe",
-      "notesPlaceholder": "Informații suplimentare"
-    },
-    "funeralWishes": {
-      "label": "Dorințe Funerare",
-      "description": "Preferințele dvs. pentru aranjamentele funerare",
-      "placeholder": "Descrieți dorințele dvs. pentru funeraliile sau slujba de pomenire..."
-    },
-    "digitalAccounts": {
-      "label": "Conturi Digitale",
-      "description": "Instrucțiuni pentru gestionarea conturilor dvs. online",
-      "placeholder": "Enumerați conturile dvs. digitale și cum ar trebui gestionate..."
-    },
-    "documentLocations": {
-      "label": "Locațiile Documentelor",
-      "description": "Unde se găsesc documentele importante",
-      "placeholder": "Descrieți unde se află documentele importante..."
-    },
-    "personalMessages": {
-      "label": "Mesaje Personale",
-      "description": "Mesaje personale pentru acest gardian",
-      "placeholder": "Scrieți un mesaj personal acestui gardian..."
-    },
-    "practicalInstructions": {
-      "label": "Instrucțiuni Practice",
-      "description": "Pași imediați și responsabilități",
-      "placeholder": "Enumerați sarcinile practice și acțiunile imediate..."
-    },
-    "notFound": {
-      "title": "Manual de Acțiune Negăsit",
-      "description": "Manualul de acțiune pe care îl căutați nu a fost încă creat."
-    },
-    "subtitle": {
-      "edit": "Creați instrucțiuni și informații personalizate pentru acest gardian.",
-      "view": "Informații și instrucțiuni esențiale pregătite pentru dvs."
-    },
-    "status": {
-      "empty": "Neînceput",
-      "draft": "În Curs",
-      "complete": "Finalizat"
-    },
-    "tabs": {
-      "funeral": "Funeralii",
-      "digital": "Digital",
-      "contacts": "Contacte",
-      "documents": "Documente",
-      "messages": "Mesaje",
-      "instructions": "Instrucțiuni"
-    },
-    "templates": {
-      "funeralWishes": {
-        "traditionalReligiousBurial": "Traditional Religious Burial",
-        "simpleCremationService": "Simple Cremation Service",
-        "ecoFriendlyNaturalBurial": "Eco-Friendly Natural Burial"
-      },
-      "digitalAccountsShutdown": {
-        "comprehensiveDigitalShutdown": "Comprehensive Digital Shutdown",
-        "minimalDigitalFootprint": "Minimal Digital Footprint",
-        "professionalBusinessAccounts": "Professional & Business Accounts"
-      },
-      "importantContacts": {
-        "essentialContactsList": "Essential Contacts List",
-        "childrenDependentsContacts": "Children & Dependents Contacts"
-      },
-      "documentLocations": {
-        "homeFilingSystem": "Home Filing System",
-        "professionalStorage": "Professional Storage"
-      },
-      "personalMessages": {
-        "letterToSpousePartner": "Letter to Spouse/Partner",
-        "letterToChildren": "Letter to Children",
-        "letterToParents": "Letter to Parents"
-      },
-      "practicalInstructions": {
-        "first48HoursChecklist": "First 48 Hours Checklist",
-        "businessContinuityPlan": "Business Continuity Plan",
-        "householdManagementGuide": "Household Management Guide"
-      }
-    },
-    "sections": {
-      "funeral": {
-        "title": "Dorințe Funerare",
-        "description": "Preferințele dvs. pentru aranjamentele funerare și slujbele de pomenire.",
-        "placeholder": "Descrieți dorințele dvs. pentru funeraliile sau slujba de pomenire...\n\nDe exemplu:\n- Tipul slujbei (religioasă, laică, celebrarea vieții)\n- Preferințe de înmormântare sau incinerare\n- Preferințe de locație\n- Muzică, lecturi sau cereri speciale\n- Cine ar trebui să vorbească sau să participe\n- Orice tradiții specifice de urmat"
-      },
-      "digital": {
-        "title": "Închiderea Conturilor Digitale",
-        "description": "Instrucțiuni pentru gestionarea prezenței dvs. digitale și a conturilor online.",
-        "placeholder": "Enumerați conturile dvs. digitale și cum ar trebui gestionate...\n\nDe exemplu:\n- Conturi de social media (Facebook, Instagram, LinkedIn)\n- Conturi de e-mail\n- Stocare în cloud (Google Drive, Dropbox)\n- Servicii de abonament (Netflix, Spotify)\n- Conturi bancare și financiare online\n- Portofele de criptomonede\n- Site-uri web sau nume de domenii"
-      },
-      "contacts": {
-        "title": "Contacte Importante",
-        "description": "Persoane cheie pe care acest gardian ar trebui să le contacteze sau să le notifice.",
-        "placeholder": "Adăugați contacte importante specifice responsabilităților acestui gardian."
-      },
-      "documents": {
-        "title": "Locațiile Documentelor",
-        "description": "Unde se găsesc documentele importante fizice și digitale.",
-        "placeholder": "Descrieți unde se află documentele importante...\n\nDe exemplu:\n- Locația testamentului\n- Polițe de asigurare\n- Acte de proprietate\n- Informații despre contul bancar\n- Documente de investiții\n- Declarații fiscale\n- Parole și coduri de acces\n- Locația și cheia seifului"
-      },
-      "messages": {
-        "title": "Mesaje Personale",
-        "description": "Mesaje personale și gânduri finale pentru acest gardian.",
-        "placeholder": "Scrieți un mesaj personal acestui gardian...\n\nAceasta este oportunitatea dvs. de a:\n- Vă exprima sentimentele și recunoștința\n- Împărtăși amintiri importante\n- Oferi îndrumare sau sfaturi\n- Explica deciziile luate\n- Lăsa cuvinte de mângâiere\n- Împărtăși speranțele pentru viitor"
-      },
-      "practical": {
-        "title": "Instrucțiuni Practice",
-        "description": "Pași practici imediați și responsabilități pentru acest gardian.",
-        "placeholder": "Enumerați sarcinile practice și acțiunile imediate...\n\nDe exemplu:\n- Listă de verificare pentru primele 24-48 de ore\n- Pe cine să notificați primul\n- Facturi sau plăți urgente\n- Instrucțiuni de îngrijire (animale de companie, plante, proprietate)\n- Probleme de afaceri care necesită atenție\n- Întâlniri programate de anulat\n- Chei și coduri de acces necesare"
-      }
-    },
-    "contactFields": {
-      "name": "Nume",
-      "namePlaceholder": "Nume complet",
-      "role": "Rol/Relație",
-      "rolePlaceholder": "ex. Avocat de familie, Contabil",
-      "phone": "Telefon",
-      "phonePlaceholder": "+40 722 123 456",
-      "email": "E-mail",
-      "emailPlaceholder": "email@exemplu.ro",
-      "notes": "Notițe",
-      "notesPlaceholder": "Informații suplimentare despre acest contact"
-    },
-    "messages": {
-      "autoSaved": "Salvat",
-      "saved": "Manualul de acțiune a fost salvat cu succes"
-    },
-    "errors": {
-      "loadFailed": "Nu s-a putut încărca manualul de acțiune",
-      "saveFailed": "Nu s-a putut salva manualul de acțiune"
-    }
-  },
-  "scenarioPlanner": {
-    "scenarios": {
-      "hospitalized": {
-        "title": "What if you're in the hospital for 3 months?",
-        "description": "An unexpected health issue means you're unable to manage daily affairs. Your family needs to step in."
-      },
-      "incapacitated": {
-        "title": "What if you become incapacitated?",
-        "description": "A serious accident leaves you unable to make decisions for yourself. Who will make them for you?"
-      },
-      "suddenPassing": {
-        "title": "What if something happens to you tomorrow?",
-        "description": "The ultimate test of your preparation. Is your family ready to navigate this difficult time without chaos?"
-      }
-    },
-    "timeframes": {
-      "first24Hours": "First 24 Hours",
-      "firstWeek": "First Week",
-      "firstMonth": "First Month",
-      "threeToSixMonths": "3-6 Months"
-    },
-    "vulnerabilities": {
-      "billsGoUnpaid": "Bills Go Unpaid",
-      "businessDecisionsStall": "Business Decisions Stall",
-      "familyCannotManageFinances": "Family cannot legally manage your finances",
-      "familyCannotAccessBankAccount": "Family cannot access primary bank account",
-      "businessNoLeadership": "Business operations have no clear leadership",
-      "noWillFound": "No Will Found",
-      "insuranceDetailsUnknown": "Insurance Details Unknown",
-      "noWillAvailable": "No will available",
-      "unknownLifeInsurance": "Unknown life insurance details"
-    },
-    "actions": {
-      "designatePowerOfAttorney": "Designate a Power of Attorney for finances",
-      "grantSpouseAccess": "Grant spouse access to your primary account",
-      "createBusinessContinuityPlan": "Create a business continuity plan",
-      "draftWill": "Draft and store a legally binding will",
-      "compileInsuranceList": "Compile a list of all insurance policies"
-    },
-    "timelineEvents": {
-      "notifyImmediateFamily": "Notify immediate family",
-      "securePhysicalProperty": "Secure physical property",
-      "contactExecutor": "Contact executor",
-      "locateWill": "Locate the will",
-      "executorBeginsProbate": "Executor begins probate process",
-      "notifyEmployer": "Notify employer",
-      "activatePowerOfAttorney": "Activate Power of Attorney",
-      "arrangeBillPayments": "Arrange bill payments",
-      "fileDisabilityBenefits": "File for disability benefits"
-    },
-    "descriptions": {
-      "billsGoUnpaid": "Your family can't access your primary checking account to pay the mortgage.",
-      "businessDecisionsStall": "Clients and employees don't know who is authorized to make decisions.",
-      "familyCannotManageFinances": "Your spouse can now legally manage all financial matters, ensuring bills are paid and investments are protected.",
-      "familyCannotAccessBankAccount": "Your family can now pay bills and manage daily expenses without delay or legal complications.",
-      "businessNoLeadership": "Your business can continue operating smoothly with clear leadership and decision-making processes.",
-      "noWillFound": "The family cannot locate or confirm the existence of a will.",
-      "insuranceDetailsUnknown": "Life insurance policy details and beneficiaries are unknown.",
-      "notifyImmediateFamily": "Ensure all immediate family members are informed.",
-      "securePhysicalProperty": "Ensure that the home and vehicles are secure.",
-      "contactExecutor": "Reach out to John Smith to start will proceedings.",
-      "locateWill": "Locate and secure the will at the designated location.",
-      "executorBeginsProbate": "The executor will file for probate to manage the estate.",
-      "notifyEmployer": "Inform workplace about extended absence.",
-      "activatePowerOfAttorney": "Ensure designated person can make decisions.",
-      "arrangeBillPayments": "Set up automatic payments or delegate to trusted person.",
-      "fileDisabilityBenefits": "Submit necessary paperwork for insurance claims."
-    },
-    "scenario_planner_1": "Scenario Planner",
-    "let_s_see_how_prepared_your_fa_2": "Let's see how prepared your family is for different scenarios",
-    "generate_family_action_plan_3": "Generate Family Action Plan",
-    "generate_plan_4": "Generate Plan",
-    "current_family_vulnerabilities_6": "Current Family Vulnerabilities",
-    "without_proper_preparation_you_7": "Without proper preparation, you and your family could face these challenges",
-    "projected_timeline_8": "Projected Timeline",
-    "potential_financial_impact_9": "Potential Financial Impact",
-    "these_are_estimates_of_the_pos_10": "These are estimates of the potential costs if vulnerabilities are not addressed",
-    "no_will_11": "No Will: ",
-    "potential_cost_of_lengthy_prob_12": "Potential cost of lengthy probate process: ",
-    "5_000_15_000_13": "$5,000 - $15,000",
-    "estimated_14": " estimated",
-    "potential_loss_of_business_rev_15": "Potential loss of business revenue during transition: ",
-    "20_000_16": "$20,000",
-    "your_preparedness_blueprint_17": "Your Preparedness Blueprint",
-    "your_family_is_currently_18": "Your family is currently ",
-    "protected_in_this_scenario_19": "% protected in this scenario",
-    "vulnerability_20": "Vulnerability: ",
-    "action_required_21": "Action Required: ",
-    "resolve_this_vulnerability_22": "Resolve This Vulnerability",
-    "resolved_23": "Resolved: ",
-    "family_action_plan_24": "Family Action Plan",
-    "a_comprehensive_guide_for_your_25": "A comprehensive guide for your family to follow in case of emergency",
-    "print_plan_26": "Print Plan",
-    "_27": "🤕"
-  },
-  "scenarios": {
-    "title": "What Happens When Life Takes an Unexpected Turn?",
-    "subtitle": "Real families, real situations, real control and preparedness",
-    "hospitalStay": {
-      "title": "The Unexpected Hospital Stay",
-      "before": {
-        "situation": "Sarah's husband had a heart attack. While he was in intensive care, she spent days trying to find their insurance papers, bank account information, and important contacts. The stress was overwhelming when she needed to focus on his recovery.",
-        "emotion": "Stress and worry",
-        "consequence": "Days of searching for information and support."
-      },
-      "after": {
-        "situation": "When Mark had his accident, his wife Lisa opened their family guide and found everything organized: insurance details, bank contacts, medical information, and even a list of people to notify. She could focus on what mattered most - being there for Mark.",
-        "emotion": "Peace and focus",
-        "benefit": "Immediate access to everything she needed."
-      }
-    },
-    "businessTrip": {
-      "title": "The Business Trip Emergency",
-      "before": {
-        "situation": "When David's flight was delayed and he missed his daughter's emergency surgery, his wife couldn't access their savings account or find their medical insurance information. Critical decisions had to wait.",
-        "emotion": "Frustration and helplessness",
-        "consequence": "Important medical decisions delayed."
-      },
-      "after": {
-        "situation": "When Emma's husband was traveling and she needed emergency funds for their son's surgery, she had immediate access to all account information, insurance details, and even pre-written authorization letters. No delays, no stress.",
-        "emotion": "Relief and readiness",
-        "benefit": "Everything accessible right when she needed it."
-      }
-    },
-    "suddenLoss": {
-      "title": "The Sudden Loss",
-      "before": {
-        "situation": "After losing her father suddenly, Maria spent months trying to piece together his financial affairs. She found accounts she didn't know existed and missed important deadlines because documents were scattered everywhere.",
-        "emotion": "Confusion and regret",
-        "consequence": "Missed deadlines and lost time."
-      },
-      "after": {
-        "situation": "When John's family needed to handle his affairs, everything was clearly organized: a complete list of accounts, important contacts, step-by-step instructions, and even personal messages he'd prepared for each family member.",
-        "emotion": "Calm and clarity",
-        "benefit": "A clear path to follow in difficult times."
-      }
-    },
-    "labels": {
-      "before": "Before LegacyGuard",
-      "after": "After Heritage Vault",
-      "feeling": "Feeling"
-    },
-    "bottomCta": {
-      "primary": "Don't Let Your Family Face This Chaos",
-      "secondary": "Start Organizing in 10 Minutes",
-      "urgency": "Every day you wait is another day your family is unprepared"
-    },
-    "testimonials": {
-      "1": "After my brother's sudden accident, I watched my sister-in-law struggle for weeks to find important documents and passwords. That's when I knew I couldn't let the same thing happen to my family.",
-      "2": "As a single mom running a business, I worried constantly about what would happen if something happened to me. Heritage Vault helped me organize everything.",
-      "3": "My wife has early-stage dementia, and I realized I needed to prepare while I still could. Heritage Vault made it simple to organize our 40 years of life together."
-    }
-  },
-  "annualReview": {
-    "title": "Annual Legacy Review",
-    "subtitle": "Keep your family's protection plan current and effective",
-    "description": "Life changes quickly. This annual review ensures your legacy plan stays aligned with your current situation and wishes.",
-    "progress": {
-      "title": "Review Progress",
-      "completed": "Finalizat",
-      "inProgress": "În curs",
-      "notStarted": "Not Started",
-      "totalSteps": "Total Steps",
-      "estimatedTime": "Estimated Time: 15 minutes"
-    },
-    "step1": {
-      "title": "Review Your Executors",
-      "description": "Confirm your trusted people are still the right choices for your family"
-    },
-    "step2": {
-      "title": "Review Your Assets",
-      "description": "Verify your asset inventory is current and complete"
-    },
-    "step3": {
-      "title": "Review Your Beneficiaries",
-      "description": "Ensure your beneficiaries are still the right people"
-    },
-    "step4": {
-      "title": "Complete Review",
-      "description": "Finalize your annual review and update your plan"
-    },
-    "commandRoster": {
-      "title": "Command Roster Review",
-      "description": "Your executors and trusted people are the foundation of your family's protection plan.",
-      "executorQuestion": "Is {name} still the right person to be your executor?",
-      "guardianQuestion": "Is {name} still the right person to care for your children?",
-      "trustedPersonQuestion": "Is {name} still the right person for {role}?",
-      "status": {
-        "current": "Current",
-        "needsUpdate": "Needs Update",
-        "outdated": "Outdated",
-        "missing": "Missing"
-      },
-      "details": {
-        "executor": "Primary executor for your estate",
-        "guardian": "Guardian for minor children",
-        "trustedPerson": "Trusted person with {accessLevel} access",
-        "emergencyContact": "Emergency contact person"
-      }
-    },
-    "armory": {
-      "title": "Asset Inventory Review",
-      "description": "Your assets are what you're protecting. Keep this inventory current.",
-      "ownershipQuestion": "Do you still own {assetName}?",
-      "valueQuestion": "Has the value of {assetName} changed significantly?",
-      "locationQuestion": "Is the location of {assetName} still correct?",
-      "status": {
-        "current": "Current",
-        "needsUpdate": "Needs Update",
-        "outdated": "Outdated",
-        "missing": "Missing"
-      },
-      "categories": {
-        "realEstate": "Real Estate",
-        "vehicles": "Vehicles",
-        "bankAccounts": "Bank Accounts",
-        "investments": "Investments",
-        "insurance": "Insurance",
-        "digitalAssets": "Digital Assets",
-        "personalItems": "Personal Items"
-      }
-    },
-    "beneficiaries": {
-      "title": "Beneficiary Review",
-      "description": "Ensure the right people receive the right assets at the right time.",
-      "confirmationQuestion": "Are these still the correct people to receive these assets?",
-      "distributionQuestion": "Is the distribution percentage still correct?",
-      "contactQuestion": "Are the contact details for {name} still current?",
-      "status": {
-        "current": "Current",
-        "needsUpdate": "Needs Update",
-        "outdated": "Outdated",
-        "missing": "Missing"
-      },
-      "details": {
-        "primary": "Primary beneficiary",
-        "contingent": "Contingent beneficiary",
-        "percentage": "{percentage}% of assets",
-        "specific": "Specific asset beneficiary"
-      }
-    },
-    "complete": {
-      "title": "Review Complete",
-      "description": "Your annual review has been completed successfully.",
-      "message": "Your annual review has been completed. Your family's protection plan is now current and effective.",
-      "summary": "Review Summary",
-      "changes": "Changes Made",
-      "noChanges": "No changes were needed. Your plan is current.",
-      "nextReview": "Next Review Due",
-      "reminder": "We'll remind you when it's time for your next annual review."
-    },
-    "buttons": {
-      "confirm": "Confirm",
-      "update": "Update",
-      "back": "Back",
-      "next": "Next",
-      "finish": "Finish Review",
-      "save": "Save Changes",
-      "skip": "Skip for Now",
-      "reviewLater": "Review Later"
-    },
-    "status": {
-      "title": "Review Status",
-      "overdue": "Overdue",
-      "dueSoon": "Due Soon",
-      "current": "Current",
-      "completed": "Finalizat",
-      "lastReview": "Last Review",
-      "nextReview": "Next Review",
-      "daysOverdue": "{days} days overdue",
-      "daysUntilDue": "{days} days until due"
-    },
-    "notifications": {
-      "reviewDue": "Annual Review Due",
-      "reviewOverdue": "Annual Review Overdue",
-      "reviewCompleted": "Annual Review Completed",
-      "changesSaved": "Changes saved successfully",
-      "errorSaving": "Error saving changes",
-      "reminderSet": "Reminder set for next review"
-    }
-  },
-  "complexityReduction": {
-    "title": "Simplify Your Legacy Planning",
-    "subtitle": "Break down complex tasks into simple, manageable steps",
-    "description": "We understand that planning for the future can feel overwhelming. Our complexity reduction system breaks down every task into simple, actionable steps that take just minutes to complete.",
-    "benefits": {
-      "title": "Why Complexity Reduction Works",
-      "overwhelm": {
-        "title": "Eliminates Overwhelm",
-        "description": "Instead of facing a massive to-do list, you tackle one small task at a time. Each step is designed to be completed in under 5 minutes."
-      },
-      "progress": {
-        "title": "Visible Progress",
-        "description": "See your family's preparedness grow with each completed step. Track your progress and celebrate small wins along the way."
-      },
-      "confidence": {
-        "title": "Builds Confidence",
-        "description": "As you complete each step, you'll feel more confident and in control. What once seemed impossible becomes achievable."
-      },
-      "family": {
-        "title": "Family Protection",
-        "description": "Every completed step directly protects your family. From emergency access to long-term planning, each action matters."
-      }
-    },
-    "steps": {
-      "identifyBankAccount": {
-        "title": "Identify Your Primary Bank Account",
-        "why": "Why this matters: Immediate access to funds during emergencies",
-        "whatYouDo": "What you do: Take a photo or write down account information",
-        "whatWeDo": "What we do: Securely store information and create access instructions",
-        "timeRequired": "Time required: 2 minutes",
-        "complexity": "Complexity level: Simple"
-      },
-      "emergencyContacts": {
-        "title": "List Emergency Contacts",
-        "why": "Why this matters: Quick access to important people during crises",
-        "whatYouDo": "What you do: Add phone numbers and relationships",
-        "whatWeDo": "What we do: Organize contacts by priority and create emergency protocols",
-        "timeRequired": "Time required: 3 minutes",
-        "complexity": "Complexity level: Simple"
-      },
-      "insurancePolicies": {
-        "title": "Document Insurance Policies",
-        "why": "Why this matters: Ensures claims can be filed quickly and correctly",
-        "whatYouDo": "What you do: Upload policy documents or take photos",
-        "whatWeDo": "What we do: Extract key information and create claim instructions",
-        "timeRequired": "Time required: 5 minutes",
-        "complexity": "Complexity level: Easy"
-      },
-      "digitalAssets": {
-        "title": "Secure Digital Assets",
-        "why": "Why this matters: Protects online accounts and digital memories",
-        "whatYouDo": "What you do: List important accounts and passwords",
-        "whatWeDo": "What we do: Create secure access protocols and backup instructions",
-        "timeRequired": "Time required: 4 minutes",
-        "complexity": "Complexity level: Easy"
-      },
-      "legalDocuments": {
-        "title": "Organize Legal Documents",
-        "why": "Why this matters: Ensures legal wishes are followed and processes are smooth",
-        "whatYouDo": "What you do: Upload wills, powers of attorney, and other documents",
-        "whatWeDo": "What we do: Create summaries and ensure proper legal access",
-        "timeRequired": "Time required: 6 minutes",
-        "complexity": "Complexity level: Medium"
-      },
-      "familyInstructions": {
-        "title": "Write Family Instructions",
-        "why": "Why this matters: Provides clear guidance during difficult times",
-        "whatYouDo": "What you do: Write personal messages and instructions",
-        "whatWeDo": "What we do: Organize messages and create delivery schedules",
-        "timeRequired": "Time required: 8 minutes",
-        "complexity": "Complexity level: Medium"
-      }
-    },
-    "actions": {
-      "startThisStep": "Start This Step",
-      "showMeHow": "Show Me How",
-      "iNeedHelp": "I Need Help",
-      "nextStep": "Next Step",
-      "previousStep": "Previous Step",
-      "completeStep": "Mark as Complete",
-      "skipStep": "Skip for Now"
-    },
-    "progress": {
-      "title": "Your Progress",
-      "completed": "Finalizat",
-      "inProgress": "În curs",
-      "notStarted": "Not Started",
-      "totalSteps": "Total Steps",
-      "estimatedTime": "Estimated Time Remaining"
-    },
-    "features": {
-      "title": "How Complexity Reduction Works",
-      "stepByStep": {
-        "title": "Step-by-Step Guidance",
-        "description": "Each task is broken down into clear, simple instructions that anyone can follow."
-      },
-      "timeEstimation": {
-        "title": "Accurate Time Estimates",
-        "description": "Know exactly how long each step will take, from 2 minutes to 15 minutes maximum."
-      },
-      "difficultyLevels": {
-        "title": "Clear Difficulty Levels",
-        "description": "Simple, Easy, Medium, and Complex ratings help you choose what to tackle first."
-      },
-      "progressTracking": {
-        "title": "Progress Tracking",
-        "description": "See your family's preparedness grow with each completed step."
-      },
-      "helpAvailable": {
-        "title": "Help When You Need It",
-        "description": "Get assistance, explanations, and support for any step that feels challenging."
-      }
-    }
-  },
-  "microTaskGenerator": {
-    "minutes_1": " minutes • ",
-    "family_impact_2": " family impact",
-    "start_task_3": "Start Task",
-    "complete_task_4": "Complete Task",
-    "skip_for_now_5": "Skip for Now",
-    "taskCategories": {
-      "identification": "Identification Documents",
-      "financial": "Financial Information",
-      "healthcare": "Healthcare Documents",
-      "legal": "Legal Documents",
-      "digital": "Digital Assets",
-      "personal": "Personal Information"
-    },
-    "difficultyLevels": {
-      "trivial": "Trivial",
-      "easy": "Easy",
-      "simple": "Simple"
-    },
-    "familyImpactLevels": {
-      "high": "Ridicat",
-      "medium": "Mediu",
-      "low": "Scăzut"
-    },
-    "taskStatus": {
-      "available": "Disponibil",
-      "in_progress": "În curs",
-      "completed": "Finalizat",
-      "skipped": "Sărit"
-    },
-    "tasks": {
-      "driversLicense": {
-        "title": "Take a photo of your driver's license",
-        "description": "Your family will need this for legal and financial matters. Having a clear photo saves them time and stress.",
-        "completionMessage": "Your family now has access to critical ID information."
-      },
-      "passport": {
-        "title": "Photograph your passport",
-        "description": "Essential for international travel arrangements and legal identification.",
-        "completionMessage": "International travel documentation is now secured for your family."
-      },
-      "birthCertificate": {
-        "title": "Scan your birth certificate",
-        "description": "Required for many legal processes and family history documentation.",
-        "completionMessage": "Birth certificate is now digitally preserved for future needs."
-      },
-      "socialSecurityCard": {
-        "title": "Document your Social Security card",
-        "description": "Critical for benefits and legal identification processes.",
-        "completionMessage": "Social Security information is now safely documented."
-      },
-      "bankAccounts": {
-        "title": "List your bank accounts",
-        "description": "Help your family manage finances and access funds when needed.",
-        "completionMessage": "Bank account information is now organized for your family."
-      },
-      "insurancePolicies": {
-        "title": "Compile insurance policy details",
-        "description": "Ensure your family knows about all coverage and can file claims.",
-        "completionMessage": "Insurance information is now comprehensive and accessible."
-      },
-      "medicalRecords": {
-        "title": "Organize medical history",
-        "description": "Help healthcare providers understand your medical background.",
-        "completionMessage": "Medical history is now organized for better healthcare decisions."
-      },
-      "medications": {
-        "title": "List current medications",
-        "description": "Critical for medical emergencies and ongoing care.",
-        "completionMessage": "Medication list is now available for medical professionals."
-      },
-      "will": {
-        "title": "Create or update your will",
-        "description": "Ensure your wishes are clearly documented and legally binding.",
-        "completionMessage": "Your will is now current and legally protected."
-      },
-      "powerOfAttorney": {
-        "title": "Designate power of attorney",
-        "description": "Authorize trusted individuals to make decisions on your behalf.",
-        "completionMessage": "Power of attorney is now properly designated."
-      },
-      "digitalPasswords": {
-        "title": "Secure digital password list",
-        "description": "Help family access important online accounts and services.",
-        "completionMessage": "Digital access is now safely organized for your family."
-      },
-      "socialMedia": {
-        "title": "Plan social media accounts",
-        "description": "Decide how your online presence should be handled.",
-        "completionMessage": "Social media legacy is now planned and documented."
-      }
-    },
-    "sessionStats": {
-      "tasksCompleted": "Tasks Completed",
-      "totalTimeSpent": "Total Time Spent",
-      "momentumScore": "Momentum Score",
-      "nextRecommendedTask": "Next Recommended Task"
-    },
-    "scoring": {
-      "urgency": "Urgency",
-      "impact": "Impact",
-      "ease": "Ease",
-      "momentum": "Momentum"
-    }
-  },
-  "editStoryModal": {
-    "editStory": "Edit Story",
-    "addStory": "Add a Story",
-    "description": "Share the story behind \"{{assetName}}\". This personal touch will be invaluable to your loved ones.",
-    "fields": {
-      "yourStory": "Your Story"
-    },
-    "placeholders": {
-      "story": "e.g., This was your grandmother's wedding ring, given to her in 1952 when she married your grandfather in the small church in their hometown. She wore it every day for 65 years..."
-    },
-    "hints": {
-      "shareMemories": "Share memories, significance, or history"
-    },
-    "tips": {
-      "title": "Tips for a meaningful story:",
-      "explainSpecial": "Explain why this item is special to you",
-      "shareMemories": "Share memories associated with it",
-      "describeHistory": "Describe its history or how you acquired it",
-      "mentionWishes": "Mention any wishes for how it should be used or kept"
-    },
-    "saving": "Saving...",
-    "saveStory": "Save Story",
-    "messages": {
-      "saved": "Story saved successfully"
-    },
-    "errors": {
-      "notAuthenticated": "You must be logged in to save a story",
-      "saveFailed": "Failed to save story"
-    }
+    "uk_jurisdiction_title": "Which part of the UK is your primary residence?"
   }
 }

@@ -1,277 +1,121 @@
 {
-  "_comment": "Shared translations used across the application",
-  "navigation": {
-    "dashboard": "Panel",
-    "vault": "Skarbiec",
-    "trustedCircle": {
-      "title": "Twój zaufany krąg",
-      "subtitle": "Osoby, którym ufasz, aby pomóc chronić i dbać o Twoją rodzinę i dziedzictwo.",
-      "responsibilities": "Ich Odpowiedzialności:",
-      "preparationStatus": "Status Przygotowania:",
-      "informedOfRole": "Został poinformowany o swojej roli",
-      "acceptedResponsibility": "Zaakceptował odpowiedzialność",
-      "hasAccessToDocuments": "Ma dostęp do niezbędnych dokumentów",
-      "reviewedEmergencyProcedures": "Przejrzał procedury awaryjne",
-      "addTrustedPerson": "+ Dodaj Zaufaną Osobę",
-      "preparednessStatus": {
-        "wellPrepared": "Dobrze Przygotowany",
-        "partiallyPrepared": "Częściowo Przygotowany",
-        "needsAttention": "Wymaga Uwagi"
-      },
-      "buttonText": {
-        "prepared": "✓ {{name}} jest Przygotowany",
-        "prepareNow": "Przygotuj {{name}} Teraz"
-      },
-      "mockData": {
-        "sarah": {
-          "name": "Sarah Johnson",
-          "relationship": "Żona",
-          "responsibilities": {
-            "bankAccess": "Może uzyskać dostęp do wszystkich kont bankowych, aby płacić rachunki i zarządzać wydatkami domowymi.",
-            "inheritAssets": "Odziedziczy dom rodzinny, domek letniskowy i wszystkie oszczędności.",
-            "medicalPower": "Ma pełnomocnictwo medyczne do podejmowania decyzji zdrowotnych."
-          }
-        },
-        "michael": {
-          "name": "Michael Johnson",
-          "relationship": "Brat",
-          "responsibilities": {
-            "childCare": "Będzie opiekował się naszymi dziećmi, jeśli oboje rodzice odejdą.",
-            "estateExecution": "Wykona nasze ostatnie życzenia i zarządzi rozliczeniem majątku.",
-            "businessManagement": "Może przejąć zarządzanie Johnson Contracting LLC tymczasowo."
-          }
-        },
-        "robert": {
-          "name": "Robert Chen",
-          "relationship": "Partner Biznesowy",
-          "responsibilities": {
-            "businessAuthority": "Ma uprawnienia do zarządzania operacjami biznesowymi i podpisywania umów.",
-            "buySellAgreement": "Kupi moje udziały w firmie zgodnie z naszą umową kupna-sprzedaży."
-          }
-        },
-        "emily": {
-          "name": "Emily Thompson",
-          "relationship": "Szwagierka",
-          "responsibilities": {
-            "backupGuardian": "Zapasowy opiekun dla dzieci, jeśli główny opiekun nie może pełnić funkcji."
-          }
-        }
-      }
+  "alerts": {
+    "description": "Zarządzaj alertami o wygasających dokumentach.",
+    "dismiss": "Odrzuć",
+    "errors": {
+      "dismissFailed": "Nie można odrzucić alertu.",
+      "loadFailed": "Nie udało się załadować alertów.",
+      "renewFailed": "Nie można oznaczyć dokumentu jako odnowionego.",
+      "snoozeFailed": "Nie można wstrzymać alertu."
     },
-    "familyHub": "Centrum Rodzinne",
-    "legacyBriefing": {
-      "legacy_briefing_3": "Briefing Dziedzictwa",
-      "create_and_manage_sealed_messa_4": "Twórz i zarządzaj zapieczętowanymi wiadomościami dla swoich bliskich",
-      "failed_to_load_your_time_capsu_1": "Nie udało się załadować Twoich kapsuł czasu",
-      "are_you_sure_you_want_to_delet_2": "Czy na pewno chcesz usunąć tę kapsułę czasu?",
-      "create_new_message_5": "Utwórz nową wiadomość",
-      "no_time_capsules_yet_6": "Brak kapsuł czasu",
-      "create_meaningful_messages_for_7": "Twórz znaczące wiadomości dla swoich bliskich, które otrzymają w przyszłości",
-      "create_your_first_message_8": "Utwórz Swoją Pierwszą Wiadomość",
-      "to_9": "Do:",
-      "unlocks_on_10": "Odblokowuje się:",
-      "unlocks_11": "Odblokowuje:",
-      "after_passing_12": "Po śmierci",
-      "statusLabels": {
-        "locked": "Zablokowane",
-        "unlocked": "Odblokowane",
-        "delivered": "Dostarczone",
-        "noRecipients": "Brak odbiorców"
-      },
-      "messageTypes": {
-        "text": "Wiadomość tekstowa",
-        "photo": "Wiadomość ze zdjęciem",
-        "video": "Wiadomość wideo",
-        "audio": "Wiadomość audio"
-      },
-      "actions": {
-        "edit": "Edytuj",
-        "delete": "Usuń"
-      },
-      "toastMessages": {
-        "deleteSuccess": "Kapsuła czasu pomyślnie usunięta",
-        "deleteError": "Nie udało się usunąć kapsuły czasu"
-      },
-      "dateFormat": {
-        "dateNotSet": "Data nie ustawiona",
-        "created": "Utworzono"
-      },
-      "errors": {
-        "textContentRequired": "Treść tekstowa jest wymagana dla wiadomości tekstowych",
-        "unlockDateRequired": "Data odblokowania jest wymagana, gdy warunek to data",
-        "failedToUploadAttachment": "Nie udało się przesłać załącznika",
-        "failedToCreate": "Nie udało się utworzyć kapsuły czasu",
-        "failedToFetch": "Nie udało się pobrać kapsuł czasu",
-        "failedToUpdate": "Nie udało się zaktualizować kapsuły czasu",
-        "failedToDelete": "Nie udało się usunąć kapsuły czasu",
-        "notFoundOrCannotModify": "Kapsuła czasu nie została znaleziona lub nie może być zmodyfikowana",
-        "notFoundOrCannotDelete": "Kapsuła czasu nie została znaleziona lub nie może być usunięta",
-        "missingUploadFields": "Brak wymaganych pól: fileName, fileType, fileSizeBytes",
-        "invalidFileType": "Nieprawidłowy typ pliku. Dozwolone typy: webm, mp4, mov",
-        "fileSizeExceeds500MB": "Rozmiar pliku przekracza maksymalny dozwolony rozmiar 500MB",
-        "premiumRequired": "Wymagana subskrypcja premium",
-        "premiumRequiredMessage": "Wiadomości wideo to funkcja premium. Proszę uaktualnić swoją subskrypcję, aby używać tej funkcji.",
-        "failedToCreateUploadUrl": "Nie udało się utworzyć URL do przesyłania"
-      }
+    "markAsRenewed": "Oznacz jako Odnowione",
+    "messages": {
+      "dismissed": "Alert pomyślnie odrzucony.",
+      "markedAsRenewed": "Dokument oznaczony jako odnowiony."
     },
-    "executorToolkit": "Zestaw Narzędzi Egzekutora",
-    "assets": "Aktywa",
-    "manual": "Instrukcja",
-    "documents": "Skarbiec Dziedzictwa",
-    "guardians": "Sieć Opiekunów",
-    "family": "Centrum Rodzinne",
-    "timeCapsule": {
-      "title": "Kapsuły Czasu",
-      "notifications": {
-        "emailSubject": "{{senderName}} zostawił dla Ciebie wiadomość",
-        "newMessage": "Masz nową wiadomość",
-        "loginToView": "Zaloguj się do LegacyGuard, aby zobaczyć tę specjalną wiadomość.",
-        "viewMessage": "Zobacz Wiadomość",
-        "smsNotification": "Możesz również ustawić powiadomienia przez SMS, jeśli wolisz.",
-        "bestRegards": "Z poważaniem,",
-        "legacyGuardTeam": "Zespół LegacyGuard",
-        "inAppTitle": "Nowa wiadomość od {{senderName}}",
-        "inAppMessage": "{{senderName}} zostawił Ci wiadomość w kapsule czasu: \"{{capsuleTitle}}\""
-      }
+    "noActiveAlerts": "Nie masz aktywnych alertów.",
+    "noDismissedAlerts": "Nie masz odrzuconych alertów.",
+    "noSnoozedAlerts": "Nie masz wstrzymanych alertów.",
+    "renewalInstructions": "Instrukcje Odnowienia",
+    "snooze7Days": "Drzemka na 7 Dni",
+    "tabs": {
+      "active": "Aktywne",
+      "dismissed": "Odrzucone",
+      "snoozed": "Wstrzymane"
     },
-    "will": "Testament",
-    "consultations": "Konsultacje Prawne",
-    "settings": "Ustawienia",
-    "help": "Pomoc i Wsparcie",
-    "subscriptions": "Subskrypcje"
+    "title": "Centrum Alertów",
+    "unread": "Nieprzeczytane",
+    "unsnooze": "Usuń Drzemkę"
   },
-  "nav": {
-    "dashboard": "Panel",
-    "manual": "Instrukcja",
-    "vault": "Skarbiec Dziedzictwa",
-    "guardians": "Sieć Opiekunów",
-    "will": "Testament",
-    "settings": "Ustawienia",
-    "help": "Pomoc i Wsparcie"
+  "auth": {
+    "accessApplication": "Dostęp do aplikacji",
+    "enterPassword": "Wprowadź hasło",
+    "incorrectPassword": "Nieprawidłowe hasło",
+    "logout": "Wyloguj",
+    "password": "Hasło",
+    "protectedApplication": "Chroniona aplikacja",
+    "protectedApplicationDesc": "Ta aplikacja jest chroniona hasłem. Proszę wprowadzić hasło, aby kontynuować."
+  },
+  "features": {
+    "clearInstructions": {
+      "description": "Twoi bliscy otrzymują jasne, proste instrukcje dotyczące dokładnie tego, co robić i kiedy. Brak zamieszania, brak zgadywania, brak stresu w trudnych czasach.",
+      "title": "Wskazówki Krok po Kroku"
+    },
+    "guardians": {
+      "description": "Wyznacz zaufanych członków rodziny i przyjaciół jako opiekunów, aby zapewnić ciągłość dziedzictwa.",
+      "title": "Sieć Opiekunów"
+    },
+    "noChaos": {
+      "description": "Twoja rodzina nie spędzi dni przeszukując szuflady, dzwoniąc do banków lub próbując zgadywać hasła. Wszystko ważne jest zorganizowane w jednym bezpiecznym miejscu.",
+      "title": "Bez desperackiego szukania"
+    },
+    "preservation": {
+      "description": "Twoje dziedzictwo jest chronione na czas nieokreślony dzięki automatycznej migracji formatów i aktualizacjom.",
+      "title": "Dożywotnia Ochrona"
+    },
+    "security": {
+      "description": "Zaprojektowany tak, aby żadna nieautoryzowana osoba nie mogła uzyskać dostępu do Twoich danych. Nawet my. Twoja prywatność jest naszym najwyższym priorytetem.",
+      "title": "Absolutna Poufność i Prywatność"
+    },
+    "sleepBetter": {
+      "description": "Przestań martwić się o 'co jeśli coś mi się stanie'. Twoja rodzina będzie wiedziała dokładnie, co robić, gdzie znaleźć wszystko i kogo wezwać.",
+      "title": "Śpij lepiej dziś w nocy"
+    },
+    "storage": {
+      "description": "Redundantne kopie zapasowe w wielu centrach danych z gwarancją dostępności na poziomie 99,99%.",
+      "title": "Bezpieczne Przechowywanie w Chmurze"
+    },
+    "stories": {
+      "description": "Twórz bogate narracje multimedialne, które uchwycą esencję podróży Twojej rodziny.",
+      "title": "Historie Osobiste"
+    },
+    "subtitle": "Zbudowany z bezpieczeństwem klasy korporacyjnej i zaprojektowany dla rodzin, które cenią swoje dziedzictwo.",
+    "timelock": {
+      "description": "Ustaw warunki, kiedy i jak Twoje cyfrowe dziedzictwo będzie dostępne dla beneficjentów.",
+      "title": "Dostęp Blokowany Czasowo"
+    },
+    "title": "Dlaczego warto wybrać LegacyGuard?"
   },
   "footer": {
-    "tagline": "Zachowując Twoje dziedzictwo dla przyszłych pokoleń.",
-    "platform": {
-      "title": "Platforma",
-      "heritageVault": "Skarbiec Dziedzictwa",
-      "guardianNetwork": "Sieć Opiekunów",
-      "dashboard": "Panel",
-      "security": "Bezpieczeństwo"
-    },
-    "support": {
-      "title": "Wsparcie",
-      "helpCenter": "Centrum Pomocy",
-      "userGuides": "Poradniki Użytkownika",
-      "contactUs": "Skontaktuj się z Nami",
-      "community": "Społeczność"
-    },
+    "description": "Zarządzanie cyfrowym dziedzictwem klasy korporacyjnej.",
     "legal": {
-      "title": "Prawne",
+      "dataProtection": "Ochrona Danych",
       "privacyPolicy": "Polityka Prywatności",
       "termsOfService": "Warunki Świadczenia Usług",
-      "dataProtection": "Ochrona Danych"
+      "title": "Prawne"
     },
-    "copyright": "© {{year}} LegacyGuard. Wszelkie prawa zastrzeżone.",
-    "description": "Zarządzanie cyfrowym dziedzictwem klasy korporacyjnej."
+    "platform": {
+      "dashboard": "Panel",
+      "guardianNetwork": "Sieć Opiekunów",
+      "heritageVault": "Skarbiec Dziedzictwa",
+      "security": "Bezpieczeństwo",
+      "title": "Platforma"
+    },
+    "support": {
+      "community": "Społeczność",
+      "contactUs": "Skontaktuj się z Nami",
+      "helpCenter": "Centrum Pomocy",
+      "title": "Wsparcie",
+      "userGuides": "Poradniki Użytkownika"
+    },
+    "tagline": "Zachowując Twoje dziedzictwo dla przyszłych pokoleń."
   },
   "hero": {
-    "title": "Chroń Cyfrowe Dziedzictwo Swojej Rodziny na Zawsze",
-    "subtitle": "Bezpieczna, intuicyjna platforma, która pomaga rodzinom organizować, chronić i przekazywać najważniejsze wspomnienia i dokumenty z pokolenia na pokolenie.",
-    "cta_primary": "Rozpocznij Swój Plan Dziedzictwa",
-    "cta_secondary": "Obejrzyj Demo",
-    "urgencySubtitle": "Konfiguracja zajmuje tylko 10 minut - bądź przygotowanym rodzicem, którego potrzebuje Twoja rodzina",
-    "secondaryContext": "2-minutowe wideo pokazujące prawdziwe rodziny",
-    "trustSignals": {
-      "dataOwnership": "Twoje dane pozostają Twoje - nigdy ich nie sprzedajemy",
-      "gdprCompliant": "Zgodność z RODO z założenia",
-      "europeanFamilies": "Stworzone dla europejskich rodzin"
-    },
     "community": {
       "growing": "Dołącz do {{count}} rodzin, które już chronią swoje dziedzictwo",
       "growingFallback": "Dołącz do naszej rosnącej społeczności"
-    }
+    },
+    "cta_primary": "Rozpocznij Swój Plan Dziedzictwa",
+    "cta_secondary": "Obejrzyj Demo",
+    "secondaryContext": "2-minutowe wideo pokazujące prawdziwe rodziny",
+    "subtitle": "Bezpieczna, intuicyjna platforma, która pomaga rodzinom organizować, chronić i przekazywać najważniejsze wspomnienia i dokumenty z pokolenia na pokolenie.",
+    "title": "Chroń Cyfrowe Dziedzictwo Swojej Rodziny na Zawsze",
+    "trustSignals": {
+      "dataOwnership": "Twoje dane pozostają Twoje - nigdy ich nie sprzedajemy",
+      "europeanFamilies": "Stworzone dla europejskich rodzin",
+      "gdprCompliant": "Zgodność z RODO z założenia"
+    },
+    "urgencySubtitle": "Konfiguracja zajmuje tylko 10 minut - bądź przygotowanym rodzicem, którego potrzebuje Twoja rodzina"
   },
-  "features": {
-    "title": "Dlaczego warto wybrać LegacyGuard?",
-    "subtitle": "Zbudowany z bezpieczeństwem klasy korporacyjnej i zaprojektowany dla rodzin, które cenią swoje dziedzictwo.",
-    "sleepBetter": {
-      "title": "Śpij lepiej dziś w nocy",
-      "description": "Przestań martwić się o 'co jeśli coś mi się stanie'. Twoja rodzina będzie wiedziała dokładnie, co robić, gdzie znaleźć wszystko i kogo wezwać."
-    },
-    "noChaos": {
-      "title": "Bez desperackiego szukania",
-      "description": "Twoja rodzina nie spędzi dni przeszukując szuflady, dzwoniąc do banków lub próbując zgadywać hasła. Wszystko ważne jest zorganizowane w jednym bezpiecznym miejscu."
-    },
-    "clearInstructions": {
-      "title": "Wskazówki Krok po Kroku",
-      "description": "Twoi bliscy otrzymują jasne, proste instrukcje dotyczące dokładnie tego, co robić i kiedy. Brak zamieszania, brak zgadywania, brak stresu w trudnych czasach."
-    },
-    "security": {
-      "title": "Absolutna Poufność i Prywatność",
-      "description": "Zaprojektowany tak, aby żadna nieautoryzowana osoba nie mogła uzyskać dostępu do Twoich danych. Nawet my. Twoja prywatność jest naszym najwyższym priorytetem."
-    },
-    "guardians": {
-      "title": "Sieć Opiekunów",
-      "description": "Wyznacz zaufanych członków rodziny i przyjaciół jako opiekunów, aby zapewnić ciągłość dziedzictwa."
-    },
-    "storage": {
-      "title": "Bezpieczne Przechowywanie w Chmurze",
-      "description": "Redundantne kopie zapasowe w wielu centrach danych z gwarancją dostępności na poziomie 99,99%."
-    },
-    "timelock": {
-      "title": "Dostęp Blokowany Czasowo",
-      "description": "Ustaw warunki, kiedy i jak Twoje cyfrowe dziedzictwo będzie dostępne dla beneficjentów."
-    },
-    "stories": {
-      "title": "Historie Osobiste",
-      "description": "Twórz bogate narracje multimedialne, które uchwycą esencję podróży Twojej rodziny."
-    },
-    "preservation": {
-      "title": "Dożywotnia Ochrona",
-      "description": "Twoje dziedzictwo jest chronione na czas nieokreślony dzięki automatycznej migracji formatów i aktualizacjom."
-    }
-  },
-  "alerts": {
-    "title": "Centrum Alertów",
-    "description": "Zarządzaj alertami o wygasających dokumentach.",
-    "unread": "Nieprzeczytane",
-    "markAsRenewed": "Oznacz jako Odnowione",
-    "snooze7Days": "Drzemka na 7 Dni",
-    "dismiss": "Odrzuć",
-    "unsnooze": "Usuń Drzemkę",
-    "tabs": {
-      "active": "Aktywne",
-      "snoozed": "Wstrzymane",
-      "dismissed": "Odrzucone"
-    },
-    "noActiveAlerts": "Nie masz aktywnych alertów.",
-    "noSnoozedAlerts": "Nie masz wstrzymanych alertów.",
-    "noDismissedAlerts": "Nie masz odrzuconych alertów.",
-    "expiresOn": "Wygasa {{date}}",
-    "snoozedUntil": "Wstrzymane do {{date}}",
-    "renewalInstructions": "Instrukcje Odnowienia",
-    "badges": {
-      "expired": "Wygasł",
-      "expiring_7": "Wygasa Wkrótce",
-      "expiring_30": "Wygasa za 30 Dni",
-      "expiring_90": "Wygasa za 90 Dni"
-    },
-    "types": {
-      "expired": "Dokument {{documentName}} wygasł {{daysAgo}} dni temu!",
-      "expiring7": "Pospiesz się! {{documentName}} wygasa za {{days}} dni.",
-      "expiring30": "Przypomnienie: {{documentName}} wygaśnie za {{days}} dni.",
-      "expiring90": "Uwaga: {{documentName}} ma wygasnąć za {{days}} dni."
-    },
-    "messages": {
-      "dismissed": "Alert pomyślnie odrzucony.",
-      "snoozed": "Alert wstrzymany na {{days}} dni.",
-      "markedAsRenewed": "Dokument oznaczony jako odnowiony."
-    },
-    "errors": {
-      "loadFailed": "Nie udało się załadować alertów.",
-      "dismissFailed": "Nie można odrzucić alertu.",
-      "snoozeFailed": "Nie można wstrzymać alertu.",
-      "renewFailed": "Nie można oznaczyć dokumentu jako odnowionego."
-    }
-  }
+  "loadMore": "Load More"
 }

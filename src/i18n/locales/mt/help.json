@@ -1,34 +1,31 @@
 {
-  "_comment": "Shared translations used across the application",
   "help": {
-    "needHelp": "Need Help?",
+    "basedOnProgress": "Based on your current progress, here's what we recommend:",
     "getHelp": "Get Help",
     "helpAndTutorials": "Help & Tutorials",
-    "recommendedForYou": "Recommended for You",
-    "basedOnProgress": "Based on your current progress, here's what we recommend:",
+    "needHelp": "Need Help?",
     "personalizedHelpDescription": "Get personalized help based on where you are in your journey",
-    "recommendedTopics": "Recommended topics",
     "quickTips": {
-      "title": "Quick Tips",
       "tip1": "Start with your most important documents first",
       "tip2": "Add at least one trusted guardian",
       "tip3": "Update your information regularly",
-      "tip4": "Test your guardian's access annually"
+      "tip4": "Test your guardian's access annually",
+      "title": "Quick Tips"
+    },
+    "recommendedForYou": "Recommended for You",
+    "recommendedTopics": "Recommended topics",
+    "stepDetails": {
+      "description": "Description",
+      "estimatedTime": "Estimated time",
+      "gotIt": "Got it!",
+      "minutes": "minutes",
+      "stepByStepInstructions": "Step-by-Step Instructions",
+      "steps": "steps",
+      "videoTutorial": "Video Tutorial",
+      "watchVideoTutorial": "Watch Video Tutorial"
     },
     "topics": {
-      "uploadDocuments": {
-        "title": "Upload Your First Document",
-        "description": "Learn how to securely upload and organize your important documents",
-        "steps": {
-          "1": "Click the 'Upload Document' button in the Organize section",
-          "2": "Select your document file from your computer",
-          "3": "Choose the document type and add a descriptive name",
-          "4": "Set an expiration date if applicable",
-          "5": "Save the document to your secure vault"
-        }
-      },
       "addGuardians": {
-        "title": "Add Your First Guardian",
         "description": "Set up trusted people who can access your information in emergencies",
         "steps": {
           "1": "Click 'Add Guardian' in the Secure section",
@@ -36,32 +33,10 @@
           "3": "Select their roles and responsibilities",
           "4": "Add their contact information",
           "5": "Send them an invitation to accept their role"
-        }
-      },
-      "listAssets": {
-        "title": "List Your Assets",
-        "description": "Document your properties, accounts, and valuable possessions",
-        "steps": {
-          "1": "Click 'Add Item' in the Organize section",
-          "2": "Choose the asset type (property, vehicle, account, etc.)",
-          "3": "Enter the asset name and details",
-          "4": "Add estimated value if desired",
-          "5": "Save the asset to your inventory"
-        }
-      },
-      "designateBeneficiaries": {
-        "title": "Designate Beneficiaries",
-        "description": "Specify who should receive your assets and in what proportions",
-        "steps": {
-          "1": "Click 'Add Beneficiary' in the Transfer section",
-          "2": "Enter the beneficiary's name",
-          "3": "Set their allocation percentage",
-          "4": "Review total allocations (must equal 100%)",
-          "5": "Save your beneficiary list"
-        }
+        },
+        "title": "Add Your First Guardian"
       },
       "createWill": {
-        "title": "Create Your Will",
         "description": "Generate a basic will document based on your information",
         "steps": {
           "1": "Navigate to the Will section",
@@ -69,172 +44,169 @@
           "3": "Review your beneficiaries and assets",
           "4": "Generate the will document",
           "5": "Download and have it properly witnessed"
-        }
+        },
+        "title": "Create Your Will"
+      },
+      "designateBeneficiaries": {
+        "description": "Specify who should receive your assets and in what proportions",
+        "steps": {
+          "1": "Click 'Add Beneficiary' in the Transfer section",
+          "2": "Enter the beneficiary's name",
+          "3": "Set their allocation percentage",
+          "4": "Review total allocations (must equal 100%)",
+          "5": "Save your beneficiary list"
+        },
+        "title": "Designate Beneficiaries"
+      },
+      "listAssets": {
+        "description": "Document your properties, accounts, and valuable possessions",
+        "steps": {
+          "1": "Click 'Add Item' in the Organize section",
+          "2": "Choose the asset type (property, vehicle, account, etc.)",
+          "3": "Enter the asset name and details",
+          "4": "Add estimated value if desired",
+          "5": "Save the asset to your inventory"
+        },
+        "title": "List Your Assets"
+      },
+      "uploadDocuments": {
+        "description": "Learn how to securely upload and organize your important documents",
+        "steps": {
+          "1": "Click the 'Upload Document' button in the Organize section",
+          "2": "Select your document file from your computer",
+          "3": "Choose the document type and add a descriptive name",
+          "4": "Set an expiration date if applicable",
+          "5": "Save the document to your secure vault"
+        },
+        "title": "Upload Your First Document"
       }
-    },
-    "stepDetails": {
-      "description": "Description",
-      "stepByStepInstructions": "Step-by-Step Instructions",
-      "videoTutorial": "Video Tutorial",
-      "watchVideoTutorial": "Watch Video Tutorial",
-      "estimatedTime": "Estimated time",
-      "minutes": "minutes",
-      "steps": "steps",
-      "gotIt": "Got it!"
-    },
-    "priority": {
-      "high": "high",
-      "medium": "medium",
-      "low": "low"
     }
   },
   "helpPage": {
-    "title": "Ċentru tal-Għajnuna u l-Appoġġ",
-    "subtitle": "Aħna hawn għalik. Sib tweġibiet għall-mistoqsijiet tiegħek jew ikkuntattjana direttament.",
+    "contact": {
+      "call": {
+        "button": "Skeda Sejħa",
+        "description": "Għal klijenti Premium u Enterprise.",
+        "title": "Skeda Sejħa (Għall-Premium)"
+      },
+      "email": {
+        "button": "Iftaħ il-Klijent tal-Email",
+        "description": "Għal mistoqsijiet ġenerali u appoġġ.",
+        "title": "Ibgħatilna Email"
+      },
+      "title": "Ma sibtx dak li kont qed tfittex?"
+    },
     "faq": {
-      "title": "Mistoqsijiet Frekwenti",
       "q1": {
-        "question": "Huwa LegacyGuard sigur?",
-        "answer": "Iva, is-sigurtà hija l-ogħla prijorità tagħna. Aħna nużaw encryption minn tarf sa tarf u arkitettura ta' fiduċja żero, li jfisser li l-ebda persuna mhux awtorizzata ma tista' taċċessa d-data tiegħek, lanqas aħna. Id-data kollha tinħażen f'ċentri tad-data siguri fl-Unjoni Ewropea f'konformità mal-GDPR."
+        "answer": "Iva, is-sigurtà hija l-ogħla prijorità tagħna. Aħna nużaw encryption minn tarf sa tarf u arkitettura ta' fiduċja żero, li jfisser li l-ebda persuna mhux awtorizzata ma tista' taċċessa d-data tiegħek, lanqas aħna. Id-data kollha tinħażen f'ċentri tad-data siguri fl-Unjoni Ewropea f'konformità mal-GDPR.",
+        "question": "Huwa LegacyGuard sigur?"
       },
       "q2": {
-        "question": "X'jiġri mid-data tiegħi jekk nikkanċella l-abbonament tiegħi?",
-        "answer": "Wara li tikkanċella, id-data tiegħek tibqa' maħżuna b'mod sigur f'modalità ta' qari biss għal 90 jum. Tista' terġa' tattiva l-abbonament tiegħek f'kull ħin f'dan il-perjodu biex terġa' tikseb aċċess sħiħ. Wara 90 jum, id-data tiegħek titħassar b'mod sigur u permanenti mis-sistemi tagħna."
+        "answer": "Wara li tikkanċella, id-data tiegħek tibqa' maħżuna b'mod sigur f'modalità ta' qari biss għal 90 jum. Tista' terġa' tattiva l-abbonament tiegħek f'kull ħin f'dan il-perjodu biex terġa' tikseb aċċess sħiħ. Wara 90 jum, id-data tiegħek titħassar b'mod sigur u permanenti mis-sistemi tagħna.",
+        "question": "X'jiġri mid-data tiegħi jekk nikkanċella l-abbonament tiegħi?"
       },
       "q3": {
-        "question": "X'inhu 'Gwardjan'?",
-        "answer": "Gwardjan huwa persuna fdata (eż., sieħeb/sieħba, aħwa, jew professjonist legali) li tagħtiha aċċess speċjali u limitat għall-informazzjoni tiegħek għal emerġenzi. Gwardjan ma jistax ibiddel id-data tiegħek; jista' biss jaraha biex jaġixxi skont l-istruzzjonijiet tiegħek."
+        "answer": "Gwardjan huwa persuna fdata (eż., sieħeb/sieħba, aħwa, jew professjonist legali) li tagħtiha aċċess speċjali u limitat għall-informazzjoni tiegħek għal emerġenzi. Gwardjan ma jistax ibiddel id-data tiegħek; jista' biss jaraha biex jaġixxi skont l-istruzzjonijiet tiegħek.",
+        "question": "X'inhu 'Gwardjan'?"
       },
       "q4": {
-        "question": "X'inhi d-differenza bejn il-'Kaxxaforti' u l-'Manwal'?",
-        "answer": "Il-Kaxxaforti tal-Wirt hija fejn taħżen b'mod sigur id-dokumenti u l-assi importanti kollha tiegħek. Il-Manwal għas-Superstiti huwa għażla kkurata tal-aktar kuntatti, dokumenti, u struzzjonijiet kritiċi mill-kaxxaforti tiegħek, iddisinjat biex il-Gwardjani tiegħek ikollhom dak kollu essenzjali f'post wieħed."
+        "answer": "Il-Kaxxaforti tal-Wirt hija fejn taħżen b'mod sigur id-dokumenti u l-assi importanti kollha tiegħek. Il-Manwal għas-Superstiti huwa għażla kkurata tal-aktar kuntatti, dokumenti, u struzzjonijiet kritiċi mill-kaxxaforti tiegħek, iddisinjat biex il-Gwardjani tiegħek ikollhom dak kollu essenzjali f'post wieħed.",
+        "question": "X'inhi d-differenza bejn il-'Kaxxaforti' u l-'Manwal'?"
       },
       "q5": {
-        "question": "Huwa testment maħluq f'LegacyGuard legalment vinkolanti?",
-        "answer": "LegacyGuard jgħinek tipprepara u torganizza l-bażi u l-informazzjoni kollha għat-testment tiegħek. Madankollu, f'ħafna pajjiżi Ewropej, id-dokument diġitali ma jissostitwixxix il-ħtieġa għal dokument uffiċjali, iffirmat (u spiss innutat). Nirrakkomandaw li dejjem tikkonsulta l-verżjoni finali ma' professjonist legali."
-      }
-    },
-    "contact": {
-      "title": "Ma sibtx dak li kont qed tfittex?",
-      "email": {
-        "title": "Ibgħatilna Email",
-        "description": "Għal mistoqsijiet ġenerali u appoġġ.",
-        "button": "Iftaħ il-Klijent tal-Email"
+        "answer": "LegacyGuard jgħinek tipprepara u torganizza l-bażi u l-informazzjoni kollha għat-testment tiegħek. Madankollu, f'ħafna pajjiżi Ewropej, id-dokument diġitali ma jissostitwixxix il-ħtieġa għal dokument uffiċjali, iffirmat (u spiss innutat). Nirrakkomandaw li dejjem tikkonsulta l-verżjoni finali ma' professjonist legali.",
+        "question": "Huwa testment maħluq f'LegacyGuard legalment vinkolanti?"
       },
-      "call": {
-        "title": "Skeda Sejħa (Għall-Premium)",
-        "description": "Għal klijenti Premium u Enterprise.",
-        "button": "Skeda Sejħa"
-      }
-    }
+      "title": "Mistoqsijiet Frekwenti"
+    },
+    "subtitle": "Aħna hawn għalik. Sib tweġibiet għall-mistoqsijiet tiegħek jew ikkuntattjana direttament.",
+    "title": "Ċentru tal-Għajnuna u l-Appoġġ"
   },
   "manual": {
-    "title": "Manwal għas-Superstiti",
+    "contacts": {
+      "addContact": "Żid Kuntatt",
+      "addFirstContact": "Żid l-Ewwel Kuntatt Tiegħek",
+      "card": {
+        "edit": "Editja"
+      },
+      "description": "Persuni ewlenin li l-familja tiegħek għandha tikkuntattja f'każ ta' emerġenza",
+      "empty": {
+        "description": "Ibda billi żżid persuni importanti li l-familja tiegħek għandha tkun taf bihom.",
+        "title": "Għad m'hemm l-ebda kuntatt miżjud"
+      },
+      "form": {
+        "addButton": "Żid Kuntatt",
+        "addTitle": "Żid Kuntatt Importanti",
+        "cancel": "Ikkanċella",
+        "description": "Żid persuni li l-familja tiegħek għandha tikkuntattja f'sitwazzjonijiet importanti.",
+        "editTitle": "Editja l-Kuntatt",
+        "emailLabel": "Indirizz Elettroniku",
+        "emailPlaceholder": "kuntatt@example.com",
+        "nameLabel": "Isem tal-Kuntatt *",
+        "namePlaceholder": "eż., John Smith",
+        "notesLabel": "Noti",
+        "notesPlaceholder": "Informazzjoni addizzjonali dwar dan il-kuntatt...",
+        "phoneLabel": "Numru tat-Telefon",
+        "phonePlaceholder": "+356 2123 4567",
+        "roleLabel": "Rwol/Professjoni *",
+        "rolePlaceholder": "eż., Avukat tal-Familja, Accountant, Tabib",
+        "saving": "Qed jissejvja...",
+        "updateButton": "Aġġorna l-Kuntatt"
+      },
+      "loading": "Qed jitgħabbew il-kuntatti...",
+      "messages": {
+        "added": "Kuntatt miżjud b'suċċess!",
+        "deleted": "Kuntatt imħassar b'suċċess!",
+        "loginRequired": "Trid tkun illoggjat biex issalva l-kuntatti",
+        "nameAndRoleRequired": "L-isem u r-rwol huma meħtieġa",
+        "updated": "Kuntatt aġġornat b'suċċess!"
+      },
+      "title": "Kuntatti Importanti"
+    },
+    "documents": {
+      "card": {
+        "essentialNote": "Dan id-dokument huwa mmarkat bħala essenzjali għas-superstiti tiegħek."
+      },
+      "description": "Dokumenti kritiċi li l-familja tiegħek teħtieġ tkun taf dwarhom",
+      "empty": {
+        "description": "Immarka dokumenti importanti bħala \"dokumenti ewlenin\" mill-kaxxaforti tiegħek biex jidhru hawn.",
+        "tip": "Suġġeriment: Mur fil-kaxxaforti tiegħek u attiva \"Inkludi fil-Manwal għas-Superstiti\" għal dokumenti importanti",
+        "title": "Għad m'hemm l-ebda dokument ewlieni miżjud"
+      },
+      "expiration": {
+        "expired": "Skadut",
+        "expiresSoon": "Jiskadi Dalwaqt",
+        "expiring": "Qed Jiskadi"
+      },
+      "loading": "Qed jitgħabbew id-dokumenti ewlenin...",
+      "title": "Dokumenti Ewlenin"
+    },
+    "instructions": {
+      "autoSaveNote": "L-istruzzjonijiet tiegħek jiġu ssejvjati awtomatikament hekk kif tittajpja",
+      "description": "Gwida personali u messaġġi għall-maħbubin tiegħek",
+      "loading": "Qed jitgħabbew l-istruzzjonijiet...",
+      "title": "Xewqat Finali u Istruzzjonijiet"
+    },
     "subtitle": "Informazzjoni essenzjali għall-maħbubin tiegħek meta l-aktar ikollhom bżonnha",
     "tabs": {
       "contacts": "Kuntatti Importanti",
       "documents": "Dokumenti Ewlenin",
       "instructions": "Istruzzjonijiet"
     },
-    "contacts": {
-      "title": "Kuntatti Importanti",
-      "description": "Persuni ewlenin li l-familja tiegħek għandha tikkuntattja f'każ ta' emerġenza",
-      "addContact": "Żid Kuntatt",
-      "addFirstContact": "Żid l-Ewwel Kuntatt Tiegħek",
-      "loading": "Qed jitgħabbew il-kuntatti...",
-      "empty": {
-        "title": "Għad m'hemm l-ebda kuntatt miżjud",
-        "description": "Ibda billi żżid persuni importanti li l-familja tiegħek għandha tkun taf bihom."
-      },
-      "form": {
-        "editTitle": "Editja l-Kuntatt",
-        "addTitle": "Żid Kuntatt Importanti",
-        "description": "Żid persuni li l-familja tiegħek għandha tikkuntattja f'sitwazzjonijiet importanti.",
-        "nameLabel": "Isem tal-Kuntatt *",
-        "namePlaceholder": "eż., John Smith",
-        "roleLabel": "Rwol/Professjoni *",
-        "rolePlaceholder": "eż., Avukat tal-Familja, Accountant, Tabib",
-        "phoneLabel": "Numru tat-Telefon",
-        "phonePlaceholder": "+356 2123 4567",
-        "emailLabel": "Indirizz Elettroniku",
-        "emailPlaceholder": "kuntatt@example.com",
-        "notesLabel": "Noti",
-        "notesPlaceholder": "Informazzjoni addizzjonali dwar dan il-kuntatt...",
-        "updateButton": "Aġġorna l-Kuntatt",
-        "addButton": "Żid Kuntatt",
-        "saving": "Qed jissejvja...",
-        "cancel": "Ikkanċella"
-      },
-      "card": {
-        "edit": "Editja"
-      },
-      "messages": {
-        "nameAndRoleRequired": "L-isem u r-rwol huma meħtieġa",
-        "loginRequired": "Trid tkun illoggjat biex issalva l-kuntatti",
-        "updated": "Kuntatt aġġornat b'suċċess!",
-        "added": "Kuntatt miżjud b'suċċess!",
-        "deleted": "Kuntatt imħassar b'suċċess!"
-      },
-      "errors": {
-        "loadFailed": "Ma rnexxilux jgħabbi l-kuntatti",
-        "saveFailed": "Ma rnexxilux isalva l-kuntatt",
-        "deleteFailed": "Ma rnexxilux iħassar il-kuntatt"
-      }
-    },
-    "documents": {
-      "title": "Dokumenti Ewlenin",
-      "description": "Dokumenti kritiċi li l-familja tiegħek teħtieġ tkun taf dwarhom",
-      "loading": "Qed jitgħabbew id-dokumenti ewlenin...",
-      "empty": {
-        "title": "Għad m'hemm l-ebda dokument ewlieni miżjud",
-        "description": "Immarka dokumenti importanti bħala \"dokumenti ewlenin\" mill-kaxxaforti tiegħek biex jidhru hawn.",
-        "tip": "Suġġeriment: Mur fil-kaxxaforti tiegħek u attiva \"Inkludi fil-Manwal għas-Superstiti\" għal dokumenti importanti"
-      },
-      "card": {
-        "essentialNote": "Dan id-dokument huwa mmarkat bħala essenzjali għas-superstiti tiegħek."
-      },
-      "errors": {
-        "loadFailed": "Ma rnexxilux jgħabbi d-dokumenti ewlenin"
-      },
-      "expiration": {
-        "expired": "Skadut",
-        "expiresSoon": "Jiskadi Dalwaqt",
-        "expiring": "Qed Jiskadi"
-      }
-    },
-    "instructions": {
-      "title": "Xewqat Finali u Istruzzjonijiet",
-      "description": "Gwida personali u messaġġi għall-maħbubin tiegħek",
-      "loading": "Qed jitgħabbew l-istruzzjonijiet...",
-      "autoSaveNote": "L-istruzzjonijiet tiegħek jiġu ssejvjati awtomatikament hekk kif tittajpja",
-      "sections": {
-        "funeral": {
-          "title": "Xewqat għall-Funeral",
-          "description": "Il-preferenzi tiegħek għall-arranġamenti tal-funeral u ċ-ċerimonji",
-          "placeholder": "eż., Kremazzjoni, l-ebda ċerimonja formali, idoqq 'My Way' ta' Frank Sinatra..."
-        },
-        "digitalAccounts": {
-          "title": "Għeluq ta' Kontijiet Diġitali",
-          "description": "Istruzzjonijiet għall-immaniġġjar tal-kontijiet diġitali u l-preżenza online tiegħek",
-          "placeholder": "eż., Jekk jogħġbok ħassar il-profil tiegħi ta' Facebook, imma arkivja l-Gmail tiegħi. Ittrasferixxi r-ritratti tiegħi minn Google Drive għal..."
-        },
-        "messages": {
-          "title": "Messaġġi lill-Maħbubin",
-          "description": "Messaġġi personali u ħsibijiet finali għall-familja u l-ħbieb tiegħek",
-          "placeholder": "Aqsam il-ħsibijiet, il-memorji, u l-messaġġi finali tiegħek ma' dawk li tħobb..."
-        }
-      },
-      "errors": {
-        "loadFailed": "Ma rnexxilux jgħabbi l-istruzzjonijiet"
-      }
-    }
+    "title": "Manwal għas-Superstiti"
   },
   "testimonials": {
+    "authority": {
+      "advisors": "Recommended by Financial Advisors",
+      "attorneys": "Trusted by Family Attorneys",
+      "counselors": "Endorsed by Grief Counselors"
+    },
     "badge": "Real Families Taking Control",
-    "title": "Trusted by 15,000+ European Families",
-    "subtitle": "See how families like yours found security and peace with Heritage Vault",
-    "verified": "Verified Family",
-    "trustedBy": "Trusted and recommended by",
+    "compliance": {
+      "dataProtection": "Data Protection Certified",
+      "gdpr": "GDPR Compliant",
+      "iso": "ISO 27001 Certified"
+    },
     "stats": {
       "families": "15,000+",
       "familiesLabel": "European families protected",
@@ -247,37 +219,30 @@
     },
     "stories": {
       "1": {
-        "name": "Michael K.",
-        "role": "Father of three",
+        "highlight": "✨ Set up in just 2 hours, protecting 3 children and spouse",
         "location": "Munich, Germany",
+        "name": "Michael K.",
         "quote": "After my brother's sudden accident, I watched my sister-in-law struggle for weeks to find important documents and passwords. That's when I knew I couldn't let the same thing happen to my family. Now everything is organized, and my wife knows exactly where to find what she needs. Being prepared and in control is priceless.",
-        "highlight": "✨ Set up in just 2 hours, protecting 3 children and spouse"
+        "role": "Father of three"
       },
       "2": {
-        "name": "Anna S.",
-        "role": "Business owner",
+        "highlight": "💼 Business and personal life organized in one secure place",
         "location": "Vienna, Austria",
+        "name": "Anna S.",
         "quote": "As a single mom running a business, I worried constantly about what would happen if something happened to me. Heritage Vault helped me organize everything - from business accounts to my children's school information. My sister now has access to everything she'd need to step in. I sleep so much better knowing they're protected.",
-        "highlight": "💼 Business and personal life organized in one secure place"
+        "role": "Business owner"
       },
       "3": {
-        "name": "Thomas R.",
-        "role": "Retired teacher",
+        "highlight": "❤️ 40 years of family history preserved and protected",
         "location": "Zurich, Switzerland",
+        "name": "Thomas R.",
         "quote": "My wife has early-stage dementia, and I realized I needed to prepare while I still could. Heritage Vault made it simple to organize our 40 years of life together. Our children now have clear instructions and access to everything. It's brought our whole family closer knowing we're prepared for whatever comes.",
-        "highlight": "❤️ 40 years of family history preserved and protected"
+        "role": "Retired teacher"
       }
     },
-    "authority": {
-      "advisors": "Recommended by Financial Advisors",
-      "attorneys": "Trusted by Family Attorneys",
-      "counselors": "Endorsed by Grief Counselors"
-    },
-    "compliance": {
-      "gdpr": "GDPR Compliant",
-      "dataProtection": "Data Protection Certified",
-      "iso": "ISO 27001 Certified"
-    },
-    "bottomCta": {}
+    "subtitle": "See how families like yours found security and peace with Heritage Vault",
+    "title": "Trusted by 15,000+ European Families",
+    "trustedBy": "Trusted and recommended by",
+    "verified": "Verified Family"
   }
 }

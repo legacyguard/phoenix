@@ -1,855 +1,631 @@
 {
-  "_comment": "Shared translations used across the application",
-  "will": {
-    "title": "Cruthaigh nó nuashonraigh do uacht",
-    "fields": {
-      "notes": "Notes",
-      "status": "Status",
-      "physical_location": "Physical Location",
-      "executor_contact_id": "Executor Contact ID"
+  "annualReview": {
+    "armory": {
+      "categories": {
+        "bankAccounts": "Cuntais Bainc",
+        "realEstate": "Eastát Réadach"
+      },
+      "description": "Is iad do shócmhainní an méid atá tú ag cosaint. Coinnigh an fardal seo reatha.",
+      "status": {
+        "current": "Reatha",
+        "needsUpdate": "Teastaíonn Nuashonrú"
+      },
+      "title": "Athbhreithniú Fardal Sócmhainní"
     },
-    "statuses": {
-      "draft": "Draft",
-      "pending_signatures": "Pending Signatures",
+    "beneficiaries": {
+      "confirmationQuestion": "An iad seo fós na daoine cearta chun na sócmhainní seo a fháil?",
+      "description": "Cinntigh go bhfaigheann na daoine cearta na sócmhainní cearta ag an am ceart.",
+      "details": {
+        "primary": "Tairbhí príomha"
+      },
+      "status": {
+        "current": "Reatha"
+      },
+      "title": "Athbhreithniú Tairbhí"
+    },
+    "buttons": {
+      "back": "Siar",
+      "confirm": "Deimhnigh",
+      "finish": "Críochnaigh an tAthbhreithniú",
+      "next": "Ar Aghaidh",
+      "save": "Sábháil Athruithe",
+      "update": "Nuashonraigh"
+    },
+    "commandRoster": {
+      "description": "Is iad do sheiceadóirí agus do dhaoine iontaofa bunús plean cosanta do theaghlaigh.",
+      "details": {
+        "executor": "Seiceadóir príomha do d'eastát",
+        "guardian": "Caomhnóir do leanaí óga"
+      },
+      "status": {
+        "current": "Reatha",
+        "needsUpdate": "Teastaíonn Nuashonrú"
+      },
+      "title": "Athbhreithniú Rósta Orduithe"
+    },
+    "complete": {
+      "changes": "Athruithe Déanta",
+      "description": "Críochnaíodh d'athbhreithniú bliantúil go rathúil.",
+      "message": "Críochnaíodh d'athbhreithniú bliantúil. Tá plean cosanta do theaghlaigh reatha agus éifeachtach anois.",
+      "nextReview": "An Chéad Athbhreithniú Eile",
+      "noChanges": "Ní raibh aon athrú de dhíth. Tá do phlean reatha.",
+      "reminder": "Meabhróimid duit nuair a bheidh sé in am do d'athbhreithniú bliantúil eile.",
+      "summary": "Achoimre Athbhreithnithe",
+      "title": "Athbhreithniú Críochnaithe"
+    },
+    "description": "Athraíonn an saol go tapa. Cinntíonn an t-athbhreithniú bliantúil seo go bhfanann do phlean oidhreachta ailínithe le do staid reatha agus do mhianta.",
+    "progress": {
       "completed": "Críochnaithe",
-      "needs_revision": "Needs Revision"
+      "estimatedTime": "Am Measta: 15 nóiméad",
+      "title": "Dul Chun Cinn Athbhreithnithe",
+      "totalSteps": "Céimeanna Iomlána"
     },
-    "actions": {
-      "save": "Save",
-      "edit": "Edit"
+    "status": {
+      "completed": "Críochnaithe"
     },
-    "placeholders": {
-      "notes_placeholder": "Enter any additional notes here..."
+    "step1": {
+      "description": "Deimhnigh go bhfuil do dhaoine iontaofa fós na roghanna cearta do do theaghlach",
+      "title": "Athbhreithnigh do Sheiceadóirí"
     },
-    "errors": {
-      "unauthorized": "Unauthorized access.",
-      "save_will_failed": "Failed to save the will. Please try again.",
-      "retrieve_will_failed": "Failed to retrieve the will.",
-      "load_template_failed": "Failed to load template.",
-      "not_found": "Will not found.",
-      "failed_to_save": "Failed to save will.",
-      "failed_to_load": "Failed to load will.",
-      "failed_to_retrieve": "Failed to retrieve will.",
-      "failed_to_fetch": "Failed to fetch wills.",
-      "failed_to_generate": "Failed to generate will.",
-      "failed_to_sign": "Failed to sign will.",
-      "failed_to_delete": "Failed to delete will.",
-      "failed_to_notarize": "Failed to notarize will.",
-      "failed_to_update_status": "Failed to update will status.",
-      "failed_to_verify": "Failed to verify notarization.",
-      "cannot_update_non_draft": "Cannot update non-draft will.",
-      "cannot_delete_non_draft": "Cannot delete non-draft will.",
-      "must_be_signed": "Will must be signed before notarization.",
-      "verification_code_required": "Verification code required.",
-      "invalid_verification_code": "Invalid verification code."
+    "step2": {
+      "description": "Fíordheimhnigh go bhfuil do fhardal sócmhainní reatha agus iomlán",
+      "title": "Athbhreithnigh do Shócmhainní"
     },
-    "messages": {
-      "will_saved": "Will saved successfully.",
-      "template_loaded": "Template loaded successfully.",
-      "backup_success": "Backup created successfully.",
-      "backup_failed": "Failed to create a backup."
+    "step3": {
+      "description": "Cinntigh go bhfuil do thairbhí fós na daoine cearta",
+      "title": "Athbhreithnigh do Thairbhí"
     },
-    "success": {
-      "will_saved": "Will saved successfully.",
-      "backup_created": "Backup created successfully.",
-      "notarized": "Will has been successfully notarized."
+    "step4": {
+      "description": "Críochnaigh d'athbhreithniú bliantúil agus nuashonraigh do phlean",
+      "title": "Críochnaigh an tAthbhreithniú"
     },
-    "instructions": {
-      "verify_info": "Verify all information before proceeding to next steps.",
-      "provide_full_details": "Please provide full details for accuracy."
-    },
-    "description": "Cinntigh go bhfuil do mhianta doiciméadaithe go soiléir agus dlíthiúil.",
-    "completionMessage": "Tá do uacht cothrom le dáta anois agus cosanta go dlíthiúil."
+    "subtitle": "Coinnigh plean cosanta do theaghlaigh reatha agus éifeachtach",
+    "title": "Athbhreithniú Bliantúil Oidhreachta"
   },
-  "willGenerator": {
-    "countries": {
-      "GB": "An Ríocht Aontaithe",
-      "DE": "An Ghearmáin",
-      "FR": "An Fhrainc",
-      "ES": "An Spáinn",
-      "IT": "An Iodáil",
-      "CZ": "Poblacht na Seice",
-      "SK": "An tSlóvaic",
-      "PL": "An Pholainn",
-      "AT": "An Ostair",
-      "CH": "An Eilvéis",
-      "NL": "An Ísiltír",
-      "BE": "An Bheilg",
-      "LU": "Lucsamburg",
-      "LI": "Lichtinstéin",
-      "DK": "An Danmhairg",
-      "SE": "An tSualainn",
-      "FI": "An Fhionlainn",
-      "NO": "An Iorua",
-      "IS": "An Íoslainn",
-      "IE": "Éire",
-      "PT": "An Phortaingéil",
-      "GR": "An Ghréig",
-      "HU": "An Ungáir",
-      "RO": "An Rómáin",
-      "BG": "An Bhulgáir",
-      "HR": "An Chróit",
-      "SI": "An tSlóivéin",
-      "EE": "An Eastóin",
-      "LV": "An Laitvia",
-      "LT": "An Liotuáin",
-      "MT": "Málta",
-      "CY": "An Chipir",
-      "MD": "An Mholdóiv",
-      "UA": "An Úcráin",
-      "RS": "An tSeirbia",
-      "AL": "An Albáin",
-      "MK": "An Mhacadóin Thuaidh",
-      "ME": "Montainéagró",
-      "BA": "An Bhoisnia agus an Heirseagaivéin"
+  "complexityReduction": {
+    "actions": {
+      "completeStep": "Marcáil mar Críochnaithe",
+      "iNeedHelp": "Teastaíonn Cabhair Uaim",
+      "nextStep": "An Chéad Chéim Eile",
+      "previousStep": "An Chéim Roimhe Seo",
+      "showMeHow": "Taispeáin Dom Conas",
+      "skipStep": "Scipeáil anois"
+    },
+    "benefits": {
+      "confidence": {
+        "description": "De réir mar a chríochnaíonn tú gach céim, braithfidh tú níos mó muiníne agus i smacht. An rud a bhí neamh-inrochtana cheana bíonn sé inrochtana.",
+        "title": "Tógann sé Muinín"
+      },
+      "family": {
+        "description": "Bíonn tionchar díreach ag gach céim críochnaithe ar do theaghlach. Ó rochtain éigeandála go pleanáil fadtéarmach, tá gach gníomh tábhachtach.",
+        "title": "Cosaint Teaghlaigh"
+      },
+      "overwhelm": {
+        "description": "In ionad aghaidh a thabhairt ar liosta ollmhór le déanamh, déanann tú tasc beag amháin ag an am. Tá gach céim deartha le bheith críochnaithe i bhfad níos lú ná 5 nóiméad.",
+        "title": "Cuireann sé deireadh le hécras"
+      },
+      "progress": {
+        "description": "Féach ullmhacht do theaghlaigh ag fás le gach céim críochnaithe. Rianaigh do dhul chun cinn agus ceiliúir buanna beaga ar an mbealach.",
+        "title": "Dul Chun Cinn Infheicthe"
+      },
+      "title": "Cén Fáth a Oibríonn Laghdú Castachta"
+    },
+    "description": "Tuigimid gur féidir pleanáil don todhchaí a bheith écrasach. Bíonn ár gcóras laghdú castachta ag briseadh síos gach tasc ina chéimeanna simplí, gníomhacha a thógann ach nóiméad chun a chríochnú.",
+    "features": {
+      "difficultyLevels": {
+        "description": "Cuidíonn rátálacha Simplí, Éasca, Meánach, agus Casta leat roghnú cad le tabhairt faoi ar dtús.",
+        "title": "Leibhéil Castachta Soiléire"
+      },
+      "helpAvailable": {
+        "description": "Faigh cúnamh, míniúcháin, agus tacaíocht do aon chéim a bhraitheann dúshlánach.",
+        "title": "Cabhair Nuair a Theastaíonn Sé"
+      },
+      "progressTracking": {
+        "description": "Féach ullmhacht do theaghlaigh ag fás le gach céim críochnaithe.",
+        "title": "Rianú Dul Chun Cinn"
+      },
+      "stepByStep": {
+        "description": "Bristear síos gach tasc ina threoracha soiléire, simplí ar féidir le duine ar bith a leanúint.",
+        "title": "Treoir Céim ar Chéim"
+      },
+      "timeEstimation": {
+        "description": "Bíodh a fhios agat díreach cé mhéad ama a thógann gach céim, ó 2 nóiméad go 15 nóiméad uasta.",
+        "title": "Meastacháin Ama Cruinne"
+      },
+      "title": "Conas a Oibríonn Laghdú Castachta"
+    },
+    "progress": {
+      "completed": "Críochnaithe",
+      "title": "Do Dhul Chun Cinn",
+      "totalSteps": "Céimeanna Iomlána"
     },
     "steps": {
-      "confirmJurisdiction": "Deimhnigh Dlínsí",
-      "personalInformation": "Faisnéis Phearsanta",
-      "executorBeneficiaries": "Forghníomhóir & Tairbhithe",
-      "reviewGenerate": "Athbhreithnigh & Gin",
-      "signConfirm": "Sínigh & Deimhnigh"
+      "digitalAssets": {
+        "complexity": "Leibhéal castachta: Éasca",
+        "timeRequired": "Am riachtanach: 4 nóiméad",
+        "title": "Daingnigh Sócmhainní Digiteacha",
+        "whatWeDo": "Cad a dhéanaimid: Cruthaímid nósanna imeachta rochtana sláine agus treoracha cúltaca",
+        "whatYouDo": "Cad a dhéanann tú: Liosta cuntais thábhachtacha agus pasfhocail",
+        "why": "Cén fáth a bhfuil sé tábhachtach: Cosnaíonn cuntais ar líne agus cuimhní digiteacha"
+      },
+      "emergencyContacts": {
+        "complexity": "Leibhéal castachta: Simplí",
+        "timeRequired": "Am riachtanach: 3 nóiméad",
+        "title": "Liosta Teagmhálacha Éigeandála",
+        "whatWeDo": "Cad a dhéanaimid: Eagraímid teagmhálacha de réir tosaíochta agus cruthaímid nósanna imeachta éigeandála",
+        "whatYouDo": "Cad a dhéanann tú: Cuir uimhreacha gutháin agus gaolta leis",
+        "why": "Cén fáth a bhfuil sé tábhachtach: Rochtain tapa ar dhaoine tábhachtacha le linn géarchéimeanna"
+      },
+      "familyInstructions": {
+        "complexity": "Leibhéal castachta: Meánach",
+        "timeRequired": "Am riachtanach: 8 nóiméad",
+        "title": "Scríobh Treoracha Teaghlaigh",
+        "whatWeDo": "Cad a dhéanaimid: Eagraímid teachtaireachtaí agus cruthaímid sceidil seachadta",
+        "whatYouDo": "Cad a dhéanann tú: Scríobh teachtaireachtaí pearsanta agus treoracha",
+        "why": "Cén fáth a bhfuil sé tábhachtach: Soláthraíonn treoir soiléir le linn amanna deacra"
+      },
+      "identifyBankAccount": {
+        "complexity": "Leibhéal castachta: Simplí",
+        "timeRequired": "Am riachtanach: 2 nóiméad",
+        "title": "Aithin do Chuntas Bainc Príomha",
+        "whatWeDo": "Cad a dhéanaimid: Stórálaimid faisnéis go slán agus cruthaímid treoracha rochtana",
+        "whatYouDo": "Cad a dhéanann tú: Tóg grianghraf nó scríobh síos faisnéis chuntais",
+        "why": "Cén fáth a bhfuil sé tábhachtach: Rochtain láithreach ar chistí le linn éigeandálacha"
+      },
+      "insurancePolicies": {
+        "complexity": "Leibhéal castachta: Éasca",
+        "timeRequired": "Am riachtanach: 5 nóiméad",
+        "title": "Doiciméad Polasaithe Árachais",
+        "whatWeDo": "Cad a dhéanaimid: Bainimid faisnéis lárnach agus cruthaímid treoracha éilimhe",
+        "whatYouDo": "Cad a dhéanann tú: Uaslódáil doiciméid polasaí nó tóg grianghraif",
+        "why": "Cén fáth a bhfuil sé tábhachtach: Cinntíonn sé gur féidir éilimh a chomhdú go tapa agus go ceart"
+      },
+      "legalDocuments": {
+        "complexity": "Leibhéal castachta: Meánach",
+        "timeRequired": "Am riachtanach: 6 nóiméad",
+        "title": "Eagraigh Doiciméid Dlíthiúla",
+        "whatWeDo": "Cad a dhéanaimid: Cruthaímid achoimrí agus cinntímid rochtain dlíthiúil cheart",
+        "whatYouDo": "Cad a dhéanann tú: Uaslódáil uachta, cumhachtaí aturnae, agus doiciméid eile",
+        "why": "Cén fáth a bhfuil sé tábhachtach: Cinntíonn sé go leanfar do mhianta dlíthiúla agus go mbeidh próisis réidh"
+      }
     },
-    "no_template_found_for_this_jur_1": "Níor aimsíodh teimpléad don dlínse seo",
-    "failed_to_load_will_template_2": "Theip ar theimpléad uacht a lódáil",
-    "please_confirm_that_you_have_s_3": "Déan cinnte le do thoil go bhfuil tú tar éis an doiciméad a shíniú",
-    "console": {
-      "willGenerationCompleted": "Críochnaíodh giniúint uacht!",
-      "templateLoaded": "Lódáladh teimpléad uacht go rathúil",
-      "templateLoadFailed": "Theip ar theimpléad uacht a lódáil",
-      "willGenerated": "Gineadh doiciméad uacht go rathúil"
+    "subtitle": "Bris síos tascanna casta ina chéimeanna simplí, inbhainistithe",
+    "title": "Simpligh do Phleanáil Oidhreachta"
+  },
+  "editStoryModal": {
+    "addStory": "Cuir Scéal Leis",
+    "editStory": "Cuir an Scéal in Eagar",
+    "errors": {
+      "notAuthenticated": "Caithfidh tú a bheith logáilte isteach chun scéal a shábháil",
+      "saveFailed": "Theip ar an scéal a shábháil"
     },
-    "confirmCountry": "Déan cinnte de do dhlínse le do thoil: {{country}}",
-    "changeCountry": "Athraigh Tír",
-    "select_a_country_4": "Roghnaigh tír",
-    "fullName": "Ainm Iomlán",
-    "executionInstructions": "Treoracha Forghníomhaithe",
-    "confirmSigned": "Deimhním go bhfuil mé tar éis an doiciméad seo a shíniú",
-    "finalizeUpload": "Críochnaigh & Uaslódáil",
-    "alerts": {
-      "jurisdictionRequired": "Roghnaigh dlínse le do thoil sula leanann tú",
-      "templateLoadError": "Ní féidir teimpléad uacht a lódáil don dlínse roghnaithe",
-      "generationSuccess": "Gineadh an t-uacht go rathúil",
-      "generationError": "Theip ar dhoiciméad uacht a ghiniúint",
-      "signatureRequired": "Déan cinnte le do thoil go bhfuil tú tar éis an doiciméad a shíniú sula leanann tú"
+    "fields": {
+      "yourStory": "Do Scéal"
+    },
+    "hints": {
+      "shareMemories": "Roinn cuimhní, tábhacht, nó stair"
+    },
+    "messages": {
+      "saved": "Sábháladh an scéal go rathúil"
+    },
+    "placeholders": {
+      "story": "m.sh., Ba é seo fáinne pósta do sheanmháthar, tugtha di i 1952 nuair a phós sí do sheanathair sa séipéal beag ina mbaile dúchais. Chaith sí é gach lá ar feadh 65 bliain..."
+    },
+    "saveStory": "Sábháil Scéal",
+    "saving": "Á shábháil...",
+    "tips": {
+      "describeHistory": "Déan cur síos ar a stair nó conas mar a fuair tú é",
+      "explainSpecial": "Mínigh cén fáth a bhfuil an mír seo speisialta duit",
+      "mentionWishes": "Luaigh aon mhianta maidir le conas ba cheart é a úsáid nó a choinneáil",
+      "shareMemories": "Roinn cuimhní a bhaineann leis",
+      "title": "Leideanna le haghaidh scéal bríúil:"
     }
   },
-  "will_generator": {
-    "uk_jurisdiction_title": "Which part of the UK is your primary residence?",
-    "jurisdiction_england": "England",
-    "jurisdiction_wales": "Wales",
-    "jurisdiction_scotland": "Scotland",
-    "jurisdiction_northern_ireland": "Northern Ireland",
-    "select_will_language_title": "Please select the language for your will:",
-    "error_uk_jurisdiction_required": "Please select a jurisdiction within the UK to continue."
+  "microTaskGenerator": {
+    "complete_task_4": "Críochnaigh Tasc",
+    "familyImpactLevels": {
+      "high": "Ard"
+    },
+    "family_impact_2": " tionchar teaghlaigh",
+    "minutes_1": " nóiméad • ",
+    "skip_for_now_5": "Scipeáil anois",
+    "start_task_3": "Tosaigh Tasc",
+    "tasks": {
+      "driversLicense": {
+        "completionMessage": "Tá rochtain ag do theaghlach anois ar fhaisnéis aitheantais chriticiúil.",
+        "description": "Beidh gá ag do theaghlach leis seo le haghaidh gnóthaí dlíthiúla agus airgeadais. Bíonn grianghraf soiléir á shábháil acu am agus strus.",
+        "title": "Tóg grianghraf de do cheadúnas tiomána"
+      }
+    }
   },
   "playbook": {
-    "label": "Leabhar Oibre",
-    "create": "Cruthaigh Leabhar Oibre",
-    "edit": "Cuir Leabhar Oibre in Eagar",
-    "preview": "Réamhamharc",
-    "exitPreview": "Scoir Réamhamharc",
-    "save": "Sábháil Leabhar Oibre",
-    "saving": "Ag sábháil...",
-    "loading": "Ag lódáil leabhar oibre...",
-    "autoSaveNotice": "Sábháiltear do chuid athruithe go huathoibríoch agus tú ag clóscríobh.",
-    "noContent": "Níl aon ábhar curtha leis go fóill.",
-    "noContacts": "Níl aon teagmháil curtha leis go fóill.",
-    "addContact": "Cuir Teagmháil Leis",
-    "contact": "Teagmháil",
-    "title": "Leabhar Oibre do {{name}}",
-    "titleReadOnly": "Leabhar Oibre {{name}}",
-    "description": "Cruthaigh treoracha agus faisnéis pearsantaithe do do chaomhnóir",
-    "viewTitle": "Leabhar Oibre Caomhnóra: {{userName}}",
-    "viewDescription": "Faisnéis agus treoracha riachtanacha ullmhaithe go speisialta duit",
-    "lastUpdated": "Nuashonraíodh go Deireanach",
-    "viewFooter": "Cuireadh an fhaisnéis seo ar iontaoibh agat mar chaomhnóir. Coinnigh í rúnda agus slán, le do thoil.",
-    "notAuthenticated": "Logáil isteach le haghaidh an leabhar oibre seo a fheiceáil",
     "accessDenied": "Níl cead agat an leabhar oibre seo a fheiceáil",
-    "fetchError": "Theip ar leabhar oibre a lódáil",
-    "saveSuccess": "Sábháladh leabhar oibre go rathúil",
-    "saveError": "Theip ar leabhar oibre a shábháil",
-    "discardChanges": {
-      "title": "Diúltaigh d'Athruithe?",
-      "description": "Tá athruithe neamhshábháilte agat. An bhfuil tú cinnte gur mian leat iad a dhíúltaigh?",
-      "cancel": "Lean ag Eagrú",
-      "confirm": "Diúltaigh d'Athruithe"
-    },
-    "importantContacts": {
-      "label": "Teagmhálaithe Tábhachtacha",
-      "description": "Cuir daoine príomha leis ar cheart don chaomhnóir seo teagmháil a dhéanamh leo",
-      "viewDescription": "Déan teagmháil leis na daoine seo nuair a theastaíonn",
-      "add": "Cuir Teagmháil Leis",
-      "remove": "Bain",
-      "empty": "Níl aon teagmháil curtha leis go fóill. Cliceáil 'Cuir Teagmháil Leis' chun daoine tábhachtacha a chur leis.",
-      "name": "Ainm",
-      "namePlaceholder": "Ainm iomlán",
-      "relationship": "Gaol",
-      "relationshipPlaceholder": "m.sh., dlíodóir teaghlaigh",
-      "phone": "Fón",
-      "phonePlaceholder": "+1 234 567 8900",
+    "addContact": "Cuir Teagmháil Leis",
+    "autoSaveNotice": "Sábháiltear do chuid athruithe go huathoibríoch agus tú ag clóscríobh.",
+    "contact": "Teagmháil",
+    "contactFields": {
       "email": "Ríomhphost",
       "emailPlaceholder": "email@example.com",
+      "name": "Ainm",
+      "namePlaceholder": "Ainm iomlán",
       "notes": "Nótaí",
-      "notesPlaceholder": "Faisnéis bhreise"
+      "notesPlaceholder": "Faisnéis bhreise faoin teagmháil seo",
+      "phone": "Fón",
+      "phonePlaceholder": "+1 234 567 8900",
+      "role": "Ról/Gaol",
+      "rolePlaceholder": "m.sh., Dlíodóir teaghlaigh, Cuntasóir"
     },
-    "funeralWishes": {
-      "label": "Mianta Sochraide",
-      "description": "Do roghanna le haghaidh socruithe sochraide",
-      "placeholder": "Cuir síos ar do mhianta do do shochraid nó seirbhís cuimhneacháin..."
-    },
+    "create": "Cruthaigh Leabhar Oibre",
+    "description": "Cruthaigh treoracha agus faisnéis pearsantaithe do do chaomhnóir",
     "digitalAccounts": {
-      "label": "Cuntais Dhigiteacha",
       "description": "Treoracha le haghaidh láimhseáil do chuntais ar líne",
+      "label": "Cuntais Dhigiteacha",
       "placeholder": "Liostáil do chuntais dhigiteacha agus conas ba cheart iad a láimhseáil..."
     },
+    "discardChanges": {
+      "cancel": "Lean ag Eagrú",
+      "confirm": "Diúltaigh d'Athruithe",
+      "description": "Tá athruithe neamhshábháilte agat. An bhfuil tú cinnte gur mian leat iad a dhíúltaigh?",
+      "title": "Diúltaigh d'Athruithe?"
+    },
     "documentLocations": {
-      "label": "Suíomhanna Doiciméad",
       "description": "Cá háit a bhfuil doiciméid thábhachtacha",
+      "label": "Suíomhanna Doiciméad",
       "placeholder": "Cuir síos ar cá háit a bhfuil doiciméid thábhachtacha suite..."
     },
+    "edit": "Cuir Leabhar Oibre in Eagar",
+    "errors": {
+      "loadFailed": "Theip ar leabhar oibre a lódáil",
+      "saveFailed": "Theip ar leabhar oibre a shábháil"
+    },
+    "exitPreview": "Scoir Réamhamharc",
+    "fetchError": "Theip ar leabhar oibre a lódáil",
+    "funeralWishes": {
+      "description": "Do roghanna le haghaidh socruithe sochraide",
+      "label": "Mianta Sochraide",
+      "placeholder": "Cuir síos ar do mhianta do do shochraid nó seirbhís cuimhneacháin..."
+    },
+    "importantContacts": {
+      "add": "Cuir Teagmháil Leis",
+      "description": "Cuir daoine príomha leis ar cheart don chaomhnóir seo teagmháil a dhéanamh leo",
+      "email": "Ríomhphost",
+      "emailPlaceholder": "email@example.com",
+      "empty": "Níl aon teagmháil curtha leis go fóill. Cliceáil 'Cuir Teagmháil Leis' chun daoine tábhachtacha a chur leis.",
+      "label": "Teagmhálaithe Tábhachtacha",
+      "name": "Ainm",
+      "namePlaceholder": "Ainm iomlán",
+      "notes": "Nótaí",
+      "notesPlaceholder": "Faisnéis bhreise",
+      "phone": "Fón",
+      "phonePlaceholder": "+1 234 567 8900",
+      "relationship": "Gaol",
+      "relationshipPlaceholder": "m.sh., dlíodóir teaghlaigh",
+      "remove": "Bain",
+      "viewDescription": "Déan teagmháil leis na daoine seo nuair a theastaíonn"
+    },
+    "label": "Leabhar Oibre",
+    "lastUpdated": "Nuashonraíodh go Deireanach",
+    "loading": "Ag lódáil leabhar oibre...",
+    "messages": {
+      "autoSaved": "Sábháilte",
+      "saved": "Sábháladh leabhar oibre go rathúil"
+    },
+    "noContacts": "Níl aon teagmháil curtha leis go fóill.",
+    "noContent": "Níl aon ábhar curtha leis go fóill.",
+    "notAuthenticated": "Logáil isteach le haghaidh an leabhar oibre seo a fheiceáil",
+    "notFound": {
+      "description": "Níor cruthaíodh an leabhar oibre atá á lorg agat go fóill.",
+      "title": "Níor Aimsíodh Leabhar Oibre"
+    },
     "personalMessages": {
-      "label": "Teachtaireachtaí Pearsanta",
       "description": "Teachtaireachtaí pearsanta don chaomhnóir seo",
+      "label": "Teachtaireachtaí Pearsanta",
       "placeholder": "Scríobh teachtaireacht pearsanta don chaomhnóir seo..."
     },
     "practicalInstructions": {
-      "label": "Treoracha Praicticiúla",
       "description": "Céimeanna láithreacha agus freagrachtaí",
+      "label": "Treoracha Praicticiúla",
       "placeholder": "Liostáil tascanna praicticiúla agus gníomhaíochtaí láithreacha..."
     },
-    "notFound": {
-      "title": "Níor Aimsíodh Leabhar Oibre",
-      "description": "Níor cruthaíodh an leabhar oibre atá á lorg agat go fóill."
+    "preview": "Réamhamharc",
+    "save": "Sábháil Leabhar Oibre",
+    "saveError": "Theip ar leabhar oibre a shábháil",
+    "saveSuccess": "Sábháladh leabhar oibre go rathúil",
+    "saving": "Ag sábháil...",
+    "sections": {
+      "contacts": {
+        "description": "Daoine príomha ar cheart don chaomhnóir seo teagmháil a dhéanamh leo nó iad a chur ar an eolas.",
+        "title": "Teagmhálaithe Tábhachtacha"
+      },
+      "digital": {
+        "description": "Treoracha le haghaidh láimhseáil do láithreacht dhigiteach agus cuntais ar líne.",
+        "placeholder": "Liostáil do chuntais dhigiteacha agus conas ba cheart iad a láimhseáil...\n\nMar shampla:\n- Cuntais meáin shóisialta (Facebook, Instagram, LinkedIn)\n- Cuntais ríomhphoist\n- Stóráil scamall (Google Drive, Dropbox)\n- Seirbhísí síntiús (Netflix, Spotify)\n- Cuntais bainc agus airgeadais ar líne\n- Sparáin criptiúrra\n- Suíomhanna gréasáin nó ainmneacha fearainn",
+        "title": "Dúnadh Cuntais Dhigiteacha"
+      },
+      "documents": {
+        "description": "Cá háit a bhfuil doiciméid fhisiciúla agus dhigiteacha tábhachtacha.",
+        "placeholder": "Cuir síos ar cá háit a bhfuil doiciméid thábhachtacha suite...\n\nMar shampla:\n- Suíomh uacht agus tiomna\n- Polasaithe árachais\n- Gníomhais mhaoine\n- Faisnéis cuntas bainc\n- Doiciméid infheistíochta\n- Tuarascálacha cánach\n- Pasfhocail agus cóid rochtana\n- Suíomh agus eochair bhosca taisce slándála",
+        "title": "Suíomhanna Doiciméad"
+      },
+      "funeral": {
+        "description": "Do roghanna le haghaidh socruithe sochraide agus seirbhísí cuimhneacháin.",
+        "placeholder": "Cuir síos ar do mhianta do do shochraid nó seirbhís cuimhneacháin...\n\nMar shampla:\n- Cineál seirbhíse (reiligiúnach, saolta, ceiliúradh saoil)\n- Roghanna adhlactha nó créamála\n- Roghanna suíomha\n- Ceol, léamha, nó iarratais speisialta\n- Cé ba cheart a labhródh nó a ghlacfadh páirt\n- Aon traidisiúin shonracha le leanúint",
+        "title": "Mianta Sochraide"
+      },
+      "messages": {
+        "description": "Teachtaireachtaí pearsanta agus smaointe deiridh don chaomhnóir seo.",
+        "placeholder": "Scríobh teachtaireacht pearsanta don chaomhnóir seo...\n\nSeo do dheis chun:\n- Do mhothúcháin agus buíochas a chur in iúl\n- Cuimhní tábhachtacha a roinnt\n- Treoir nó comhairle a sholáthar\n- Do chinntí a mhíniú\n- Focail suaimhnis a fhágáil\n- Do dhóchas don todhchaí a roinnt",
+        "title": "Teachtaireachtaí Pearsanta"
+      },
+      "practical": {
+        "description": "Céimeanna praicticiúla láithreacha agus freagrachtaí don chaomhnóir seo.",
+        "placeholder": "Liostáil tascanna praicticiúla agus gníomhaíochtaí láithreacha...\n\nMar shampla:\n- Seicliosta chéad 24-48 uair\n- Cé ba cheart a chur ar an eolas ar dtús\n- Billí nó íocaíochtaí práinneacha\n- Treoracha cúraim (peataí, plandaí, maoiniú)\n- Gnóthais a theastaíonn aird orthu\n- Coinneálacha socraithe le cealú\n- Eochracha agus cóid rochtana a theastaíonn",
+        "title": "Treoracha Praicticiúla"
+      }
+    },
+    "status": {
+      "complete": "Comhlánaithe",
+      "draft": "Ar Siúl",
+      "empty": "Níor Thosaigh"
     },
     "subtitle": {
       "edit": "Cruthaigh treoracha agus faisnéis pearsantaithe don chaomhnóir seo.",
       "view": "Faisnéis agus treoracha riachtanacha ullmhaithe duit."
     },
-    "status": {
-      "empty": "Níor Thosaigh",
-      "draft": "Ar Siúl",
-      "complete": "Comhlánaithe"
-    },
     "tabs": {
-      "funeral": "Sochraid",
-      "digital": "Digiteach",
       "contacts": "Teagmhálaithe",
+      "digital": "Digiteach",
       "documents": "Páipéir Thábhachtacha",
-      "messages": "Teachtaireachtaí",
-      "instructions": "Treoracha"
+      "funeral": "Sochraid",
+      "instructions": "Treoracha",
+      "messages": "Teachtaireachtaí"
     },
-    "templates": {
-      "funeralWishes": {
-        "traditionalReligiousBurial": "Adhlacadh Reiligiúnach Traidisiúnta",
-        "simpleCremationService": "Seirbhís Créamála Simplí",
-        "ecoFriendlyNaturalBurial": "Adhlacadh Nádúrtha Éiceabhách"
-      },
-      "digitalAccountsShutdown": {
-        "comprehensiveDigitalShutdown": "Dúnadh Digiteach Cuimsitheach",
-        "minimalDigitalFootprint": "Lorg Digiteach Íosta",
-        "professionalBusinessAccounts": "Cuntais Ghairmiúla & Gnó"
-      },
-      "importantContacts": {
-        "essentialContactsList": "Liosta Teagmhálaithe Riachtanacha",
-        "childrenDependentsContacts": "Teagmhálaithe Leanaí & Spéis"
-      },
-      "documentLocations": {
-        "homeFilingSystem": "Córas Comhadúcháin Baile",
-        "professionalStorage": "Stóráil Ghairmiúil"
-      },
-      "personalMessages": {
-        "letterToSpousePartner": "Litir chuig Céile/Comhpháirtí",
-        "letterToChildren": "Litir chuig Leanaí",
-        "letterToParents": "Litir chuig Tuismitheoirí"
-      },
-      "practicalInstructions": {
-        "first48HoursChecklist": "Seicliosta Chéad 48 Uair",
-        "businessContinuityPlan": "Plean Leanúnachais Gnó",
-        "householdManagementGuide": "Treoir Bainistíochta Teaghlaigh"
-      }
-    },
-    "sections": {
-      "funeral": {
-        "title": "Mianta Sochraide",
-        "description": "Do roghanna le haghaidh socruithe sochraide agus seirbhísí cuimhneacháin.",
-        "placeholder": "Cuir síos ar do mhianta do do shochraid nó seirbhís cuimhneacháin...\n\nMar shampla:\n- Cineál seirbhíse (reiligiúnach, saolta, ceiliúradh saoil)\n- Roghanna adhlactha nó créamála\n- Roghanna suíomha\n- Ceol, léamha, nó iarratais speisialta\n- Cé ba cheart a labhródh nó a ghlacfadh páirt\n- Aon traidisiúin shonracha le leanúint"
-      },
-      "digital": {
-        "title": "Dúnadh Cuntais Dhigiteacha",
-        "description": "Treoracha le haghaidh láimhseáil do láithreacht dhigiteach agus cuntais ar líne.",
-        "placeholder": "Liostáil do chuntais dhigiteacha agus conas ba cheart iad a láimhseáil...\n\nMar shampla:\n- Cuntais meáin shóisialta (Facebook, Instagram, LinkedIn)\n- Cuntais ríomhphoist\n- Stóráil scamall (Google Drive, Dropbox)\n- Seirbhísí síntiús (Netflix, Spotify)\n- Cuntais bainc agus airgeadais ar líne\n- Sparáin criptiúrra\n- Suíomhanna gréasáin nó ainmneacha fearainn"
-      },
-      "contacts": {
-        "title": "Teagmhálaithe Tábhachtacha",
-        "description": "Daoine príomha ar cheart don chaomhnóir seo teagmháil a dhéanamh leo nó iad a chur ar an eolas.",
-        "placeholder": "Cuir teagmhálaithe tábhachtacha leis a bhaineann go speisialta le freagrachtaí an chaomhnóra seo."
-      },
-      "documents": {
-        "title": "Suíomhanna Doiciméad",
-        "description": "Cá háit a bhfuil doiciméid fhisiciúla agus dhigiteacha tábhachtacha.",
-        "placeholder": "Cuir síos ar cá háit a bhfuil doiciméid thábhachtacha suite...\n\nMar shampla:\n- Suíomh uacht agus tiomna\n- Polasaithe árachais\n- Gníomhais mhaoine\n- Faisnéis cuntas bainc\n- Doiciméid infheistíochta\n- Tuarascálacha cánach\n- Pasfhocail agus cóid rochtana\n- Suíomh agus eochair bhosca taisce slándála"
-      },
-      "messages": {
-        "title": "Teachtaireachtaí Pearsanta",
-        "description": "Teachtaireachtaí pearsanta agus smaointe deiridh don chaomhnóir seo.",
-        "placeholder": "Scríobh teachtaireacht pearsanta don chaomhnóir seo...\n\nSeo do dheis chun:\n- Do mhothúcháin agus buíochas a chur in iúl\n- Cuimhní tábhachtacha a roinnt\n- Treoir nó comhairle a sholáthar\n- Do chinntí a mhíniú\n- Focail suaimhnis a fhágáil\n- Do dhóchas don todhchaí a roinnt"
-      },
-      "practical": {
-        "title": "Treoracha Praicticiúla",
-        "description": "Céimeanna praicticiúla láithreacha agus freagrachtaí don chaomhnóir seo.",
-        "placeholder": "Liostáil tascanna praicticiúla agus gníomhaíochtaí láithreacha...\n\nMar shampla:\n- Seicliosta chéad 24-48 uair\n- Cé ba cheart a chur ar an eolas ar dtús\n- Billí nó íocaíochtaí práinneacha\n- Treoracha cúraim (peataí, plandaí, maoiniú)\n- Gnóthais a theastaíonn aird orthu\n- Coinneálacha socraithe le cealú\n- Eochracha agus cóid rochtana a theastaíonn"
-      }
-    },
-    "contactFields": {
-      "name": "Ainm",
-      "namePlaceholder": "Ainm iomlán",
-      "role": "Ról/Gaol",
-      "rolePlaceholder": "m.sh., Dlíodóir teaghlaigh, Cuntasóir",
-      "phone": "Fón",
-      "phonePlaceholder": "+1 234 567 8900",
-      "email": "Ríomhphost",
-      "emailPlaceholder": "email@example.com",
-      "notes": "Nótaí",
-      "notesPlaceholder": "Faisnéis bhreise faoin teagmháil seo"
-    },
-    "messages": {
-      "autoSaved": "Sábháilte",
-      "saved": "Sábháladh leabhar oibre go rathúil"
-    },
-    "errors": {
-      "loadFailed": "Theip ar leabhar oibre a lódáil",
-      "saveFailed": "Theip ar leabhar oibre a shábháil"
-    }
+    "viewDescription": "Faisnéis agus treoracha riachtanacha ullmhaithe go speisialta duit",
+    "viewFooter": "Cuireadh an fhaisnéis seo ar iontaoibh agat mar chaomhnóir. Coinnigh í rúnda agus slán, le do thoil."
   },
   "scenarioPlanner": {
+    "20_000_16": "$20,000",
+    "5_000_15_000_13": "$5,000 - $15,000",
+    "_27": "🤕",
+    "a_comprehensive_guide_for_your_25": "Treoir chuimsitheach do do theaghlach le leanúint i gcás éigeandála",
+    "action_required_21": "Gníomh Riachtanach: ",
+    "actions": {
+      "compileInsuranceList": "Cuir liosta de gach polasaí árachais le chéile",
+      "createBusinessContinuityPlan": "Cruthaigh plean leanúnachais gnó",
+      "designatePowerOfAttorney": "Ainmnigh Cumhacht Aturnae d'airgeadais",
+      "draftWill": "Dreachtáil agus stóráil uacht dlíthiúil",
+      "grantSpouseAccess": "Tabhair rochtain do do chéile ar do chuntas príomha"
+    },
+    "current_family_vulnerabilities_6": "Laigí Reatha Teaghlaigh",
+    "descriptions": {
+      "activatePowerOfAttorney": "Cinntigh gur féidir leis an duine ainmnithe cinntí a dhéanamh.",
+      "arrangeBillPayments": "Socraigh íocaíochtaí uathoibríocha nó tabhair do dhuine iontaofa.",
+      "billsGoUnpaid": "Ní féidir le do theaghlach rochtain a fháil ar do chuntas seiceála príomha chun an morgáiste a íoc.",
+      "businessDecisionsStall": "Níl a fhios ag cliaint agus fostaithe cé atá údaraithe chun cinntí a dhéanamh.",
+      "businessNoLeadership": "Is féidir le do ghnó leanúint ag oibriú go réidh le ceannaireacht shoiléir agus próisis chinntithe.",
+      "contactExecutor": "Teagmháil le John Smith chun tosú ar imeachtaí uacht.",
+      "executorBeginsProbate": "Comhdóidh an forghníomhóir chun eastát a bhainistiú.",
+      "familyCannotAccessBankAccount": "Is féidir le do theaghlach billí a íoc agus costais laethúla a bhainistiú gan mhoill nó castachtaí dlíthiúla.",
+      "familyCannotManageFinances": "Is féidir le do chéile d'airgeadais a bhainistiú go dlíthiúil anois, ag cinntiú go n-íoctar billí agus go gcosantar infheistíochtaí.",
+      "fileDisabilityBenefits": "Cuir isteach páipéarachas riachtanach do éilimh árachais.",
+      "insuranceDetailsUnknown": "Níl sonraí polasaí árachais saoil agus tairbhí anaithnid.",
+      "locateWill": "Aimsigh agus daingnigh an t-uacht ag an suíomh ainmnithe.",
+      "noWillFound": "Ní féidir leis an teaghlach uacht a aimsiú nó a bhfuil ann a dhearbhú.",
+      "notifyEmployer": "Cuir an fhostóir ar an eolas faoi neamhláithreacht fhada.",
+      "notifyImmediateFamily": "Cinntigh go bhfuil gach ball dlúth teaghlaigh ar an eolas.",
+      "securePhysicalProperty": "Cinntigh go bhfuil an teach agus feithiclí slán."
+    },
+    "estimated_14": " measta",
+    "family_action_plan_24": "Plean Gníomhaíochta Teaghlaigh",
+    "generate_family_action_plan_3": "Gin Plean Gníomhaíochta Teaghlaigh",
+    "generate_plan_4": "Gin Plean",
+    "let_s_see_how_prepared_your_fa_2": "Féachaimis cé chomh ullamh is atá do theaghlach do chásanna éagsúla",
+    "no_will_11": "Gan Uacht: ",
+    "potential_cost_of_lengthy_prob_12": "Costas féideartha próiseas fada eastáit: ",
+    "potential_financial_impact_9": "Tionchar Airgeadais Féideartha",
+    "potential_loss_of_business_rev_15": "Caillteanas féideartha ioncaim ghnó le linn aistrithe: ",
+    "print_plan_26": "Priontáil Plean",
+    "projected_timeline_8": "Amlíne Measta",
+    "protected_in_this_scenario_19": "% cosanta sa chás seo",
+    "resolve_this_vulnerability_22": "Réitigh an Laige Seo",
+    "resolved_23": "Réitithe: ",
+    "scenario_planner_1": "Pleanálaí Cásanna",
     "scenarios": {
       "hospitalized": {
-        "title": "Cad má tá tú san ospidéal ar feadh 3 mhí?",
-        "description": "Cúrsa sláinte gan choinne a chiallaíonn nach féidir leat gnóthaí laethúla a bhainistiú. Teastaíonn ó do theaghlach dul isteach."
+        "description": "Cúrsa sláinte gan choinne a chiallaíonn nach féidir leat gnóthaí laethúla a bhainistiú. Teastaíonn ó do theaghlach dul isteach.",
+        "title": "Cad má tá tú san ospidéal ar feadh 3 mhí?"
       },
       "incapacitated": {
-        "title": "Cad má éiríonn tú neamhchumasach?",
-        "description": "Timpiste throm a fhágann tú nach féidir leat cinntí a dhéanamh duit féin. Cé a dhéanfaidh iad duit?"
+        "description": "Timpiste throm a fhágann tú nach féidir leat cinntí a dhéanamh duit féin. Cé a dhéanfaidh iad duit?",
+        "title": "Cad má éiríonn tú neamhchumasach?"
       },
       "suddenPassing": {
-        "title": "Cad má tharlaíonn rud éigin duit amárach?",
-        "description": "An tástáil deiridh ar d'ullmhacht. An bhfuil do theaghlach réidh chun an tréimhse dheacair seo a shiúl gan caos?"
+        "description": "An tástáil deiridh ar d'ullmhacht. An bhfuil do theaghlach réidh chun an tréimhse dheacair seo a shiúl gan caos?",
+        "title": "Cad má tharlaíonn rud éigin duit amárach?"
       }
     },
+    "these_are_estimates_of_the_pos_10": "Is meastacháin iad seo ar na costais fhéideartha má ní dhéantar na laigí a réiteach",
     "timeframes": {
       "first24Hours": "Chéad 24 Uaire an Chloig",
-      "firstWeek": "Chéad Seachtain",
       "firstMonth": "Chéad Mí",
+      "firstWeek": "Chéad Seachtain",
       "threeToSixMonths": "3-6 Mí"
+    },
+    "timelineEvents": {
+      "activatePowerOfAttorney": "Gníomhaigh Cumhacht Aturnae",
+      "arrangeBillPayments": "Socraigh íocaíochtaí billí",
+      "contactExecutor": "Teagmháil leis an bhforghníomhóir",
+      "executorBeginsProbate": "Tosaíonn an forghníomhóir próiseas eastáit",
+      "fileDisabilityBenefits": "Comhdaigh do bhuntáistí míchumais",
+      "locateWill": "Aimsigh an t-uacht",
+      "notifyEmployer": "Fógra don fhostóir",
+      "notifyImmediateFamily": "Fógra do theaghlach dlúth",
+      "securePhysicalProperty": "Daingnigh maoiniú fisiceach"
     },
     "vulnerabilities": {
       "billsGoUnpaid": "Ní Íoctar Billí",
       "businessDecisionsStall": "Stad Cinntí Gnó",
-      "familyCannotManageFinances": "Ní féidir leis an teaghlach d'airgeadais a bhainistiú go dlíthiúil",
-      "familyCannotAccessBankAccount": "Ní féidir leis an teaghlach rochtain a fháil ar phríomhchuntas bainc",
       "businessNoLeadership": "Níl ceannaireacht shoiléir ag oibríochtaí gnó",
-      "noWillFound": "Níor Aimsíodh Uacht",
+      "familyCannotAccessBankAccount": "Ní féidir leis an teaghlach rochtain a fháil ar phríomhchuntas bainc",
+      "familyCannotManageFinances": "Ní féidir leis an teaghlach d'airgeadais a bhainistiú go dlíthiúil",
       "insuranceDetailsUnknown": "Sonraí Árachais Anaithnid",
       "noWillAvailable": "Níl uacht ar fáil",
+      "noWillFound": "Níor Aimsíodh Uacht",
       "unknownLifeInsurance": "Sonraí árachais saoil anaithnid"
     },
-    "actions": {
-      "designatePowerOfAttorney": "Ainmnigh Cumhacht Aturnae d'airgeadais",
-      "grantSpouseAccess": "Tabhair rochtain do do chéile ar do chuntas príomha",
-      "createBusinessContinuityPlan": "Cruthaigh plean leanúnachais gnó",
-      "draftWill": "Dreachtáil agus stóráil uacht dlíthiúil",
-      "compileInsuranceList": "Cuir liosta de gach polasaí árachais le chéile"
-    },
-    "timelineEvents": {
-      "notifyImmediateFamily": "Fógra do theaghlach dlúth",
-      "securePhysicalProperty": "Daingnigh maoiniú fisiceach",
-      "contactExecutor": "Teagmháil leis an bhforghníomhóir",
-      "locateWill": "Aimsigh an t-uacht",
-      "executorBeginsProbate": "Tosaíonn an forghníomhóir próiseas eastáit",
-      "notifyEmployer": "Fógra don fhostóir",
-      "activatePowerOfAttorney": "Gníomhaigh Cumhacht Aturnae",
-      "arrangeBillPayments": "Socraigh íocaíochtaí billí",
-      "fileDisabilityBenefits": "Comhdaigh do bhuntáistí míchumais"
-    },
-    "descriptions": {
-      "billsGoUnpaid": "Ní féidir le do theaghlach rochtain a fháil ar do chuntas seiceála príomha chun an morgáiste a íoc.",
-      "businessDecisionsStall": "Níl a fhios ag cliaint agus fostaithe cé atá údaraithe chun cinntí a dhéanamh.",
-      "familyCannotManageFinances": "Is féidir le do chéile d'airgeadais a bhainistiú go dlíthiúil anois, ag cinntiú go n-íoctar billí agus go gcosantar infheistíochtaí.",
-      "familyCannotAccessBankAccount": "Is féidir le do theaghlach billí a íoc agus costais laethúla a bhainistiú gan mhoill nó castachtaí dlíthiúla.",
-      "businessNoLeadership": "Is féidir le do ghnó leanúint ag oibriú go réidh le ceannaireacht shoiléir agus próisis chinntithe.",
-      "noWillFound": "Ní féidir leis an teaghlach uacht a aimsiú nó a bhfuil ann a dhearbhú.",
-      "insuranceDetailsUnknown": "Níl sonraí polasaí árachais saoil agus tairbhí anaithnid.",
-      "notifyImmediateFamily": "Cinntigh go bhfuil gach ball dlúth teaghlaigh ar an eolas.",
-      "securePhysicalProperty": "Cinntigh go bhfuil an teach agus feithiclí slán.",
-      "contactExecutor": "Teagmháil le John Smith chun tosú ar imeachtaí uacht.",
-      "locateWill": "Aimsigh agus daingnigh an t-uacht ag an suíomh ainmnithe.",
-      "executorBeginsProbate": "Comhdóidh an forghníomhóir chun eastát a bhainistiú.",
-      "notifyEmployer": "Cuir an fhostóir ar an eolas faoi neamhláithreacht fhada.",
-      "activatePowerOfAttorney": "Cinntigh gur féidir leis an duine ainmnithe cinntí a dhéanamh.",
-      "arrangeBillPayments": "Socraigh íocaíochtaí uathoibríocha nó tabhair do dhuine iontaofa.",
-      "fileDisabilityBenefits": "Cuir isteach páipéarachas riachtanach do éilimh árachais."
-    },
-    "scenario_planner_1": "Pleanálaí Cásanna",
-    "let_s_see_how_prepared_your_fa_2": "Féachaimis cé chomh ullamh is atá do theaghlach do chásanna éagsúla",
-    "generate_family_action_plan_3": "Gin Plean Gníomhaíochta Teaghlaigh",
-    "generate_plan_4": "Gin Plean",
-    "current_family_vulnerabilities_6": "Laigí Reatha Teaghlaigh",
-    "without_proper_preparation_you_7": "Gan ullmhacht chuí, d'fhéadfadh tú féin agus do theaghlach na dúshláin seo a aghaidh",
-    "projected_timeline_8": "Amlíne Measta",
-    "potential_financial_impact_9": "Tionchar Airgeadais Féideartha",
-    "these_are_estimates_of_the_pos_10": "Is meastacháin iad seo ar na costais fhéideartha má ní dhéantar na laigí a réiteach",
-    "no_will_11": "Gan Uacht: ",
-    "potential_cost_of_lengthy_prob_12": "Costas féideartha próiseas fada eastáit: ",
-    "5_000_15_000_13": "$5,000 - $15,000",
-    "estimated_14": " measta",
-    "potential_loss_of_business_rev_15": "Caillteanas féideartha ioncaim ghnó le linn aistrithe: ",
-    "20_000_16": "$20,000",
-    "your_preparedness_blueprint_17": "Do Phlean Ullmhachta",
-    "your_family_is_currently_18": "Tá do theaghlach faoi láthair ",
-    "protected_in_this_scenario_19": "% cosanta sa chás seo",
     "vulnerability_20": "Laige: ",
-    "action_required_21": "Gníomh Riachtanach: ",
-    "resolve_this_vulnerability_22": "Réitigh an Laige Seo",
-    "resolved_23": "Réitithe: ",
-    "family_action_plan_24": "Plean Gníomhaíochta Teaghlaigh",
-    "a_comprehensive_guide_for_your_25": "Treoir chuimsitheach do do theaghlach le leanúint i gcás éigeandála",
-    "print_plan_26": "Priontáil Plean",
-    "_27": "🤕"
+    "without_proper_preparation_you_7": "Gan ullmhacht chuí, d'fhéadfadh tú féin agus do theaghlach na dúshláin seo a aghaidh",
+    "your_family_is_currently_18": "Tá do theaghlach faoi láthair ",
+    "your_preparedness_blueprint_17": "Do Phlean Ullmhachta"
   },
   "scenarios": {
-    "title": "Cad a Tharlaíonn Nuair a Thógann an Saol Cas Gan Choinne?",
-    "subtitle": "Teaghlaigh fíoracha, staidí fíoracha, smacht fíorach agus ullmhacht",
-    "hospitalStay": {
-      "title": "An Fanacht Ospidéil Gan Choinne",
-      "before": {
-        "situation": "Bhí taom croí ag fear Sarah. Le linn dó a bheith sa chúram déine, chaith sí laethanta ag iarraidh a gcuid páipéar árachais, faisnéis chuntais bhainc, agus teagmhálacha tábhachtacha a fháil. Bhí an strus ró-throm nuair a bhí gá aici díriú ar a theacht chun feabhais.",
-        "emotion": "Strus agus imní",
-        "consequence": "Laethanta ag cuardach faisnéise agus tacaíochta."
-      },
-      "after": {
-        "situation": "Nuair a bhí timpiste ag Mark, d'oscail a bhean Lisa a dtreoir teaghlaigh agus fuair sí gach rud eagraithe: sonraí árachais, teagmhálacha bainc, faisnéis mhíochaine, agus fiú liosta daoine le fógra a thabhairt dóibh. Bhí sí in ann díriú ar an rud ba thábhachtaí - a bheith ann do Mark.",
-        "emotion": "Síocháin agus fócas",
-        "benefit": "Rochtain láithreach ar gach rud a bhí de dhíth uirthi."
-      }
-    },
-    "businessTrip": {
-      "title": "Éigeandáil Turas Gnó",
-      "before": {
-        "situation": "Nuair a bhí eitleán David moillithe agus chaill sé máinliacht éigeandála a iníne, ní raibh a bhean in ann rochtain a fháil ar a gcuntas taisce nó faisnéis árachais míochaine a fháil. Bhí gá le cinntí criticiúla a chur ar fionraí.",
-        "emotion": "Frustration agus helplessness",
-        "consequence": "Cinntí míochaine tábhachtacha moillithe."
-      },
-      "after": {
-        "situation": "Nuair a bhí fear Emma ag taisteal agus bhí gá aici le cistí éigeandála do mháinliacht a mic, bhí rochtain láithreach aici ar fhaisnéis chuntais go léir, sonraí árachais, agus fiú litreacha údaraithe réamhscríofa. Gan moill, gan strus.",
-        "emotion": "Faoiseamh agus ullmhacht",
-        "benefit": "Gach rud inrochtana díreach nuair a bhí gá aici leis."
-      }
-    },
-    "suddenLoss": {
-      "title": "An Caillteanas Tobann",
-      "before": {
-        "situation": "Tar éis di a hathair a chailleadh go tobann, chaith Maria míonna ag iarraidh a chuid gnóthaí airgeadais a phíosa le chéile. Fuair sí cuntais nach raibh a fhios aici a bhí ann agus chaill sí spriocdhátaí tábhachtacha toisc go raibh doiciméid scaipthe i ngach áit.",
-        "emotion": "Confusion agus regret",
-        "consequence": "Spriocdhátaí caillte agus am caillte."
-      },
-      "after": {
-        "situation": "Nuair a bhí gá ag teaghlach John a gcuid gnóthaí a láimhseáil, bhí gach rud soiléir eagraithe: liosta iomlán cuntais, teagmhálacha tábhachtacha, treoracha céim ar chéim, agus fiú teachtaireachtaí pearsanta a bhí ullmhaithe aige do gach ball teaghlaigh.",
-        "emotion": "Calm agus clarity",
-        "benefit": "Cosán soiléir le leanúint in amanna deacra."
-      }
-    },
-    "labels": {
-      "before": "Roimh LegacyGuard",
-      "after": "Tar éis Cruinneachán Oidhreachta",
-      "feeling": "Mothúchán"
-    },
     "bottomCta": {
       "primary": "Ná Lig do do Theaghlach Aghaidh a Thabhairt ar an gCaoithiúlacht Seo",
       "secondary": "Tosaigh ag Eagrú i 10 Nóiméad",
       "urgency": "Gach lá a bhfanann tú is lá eile é nach bhfuil do theaghlach ullamh"
     },
-    "testimonials": {
-      "1": "Tar éis timpiste tobann mo dhearthár, chonaic mé mo dheirfiúr ag streachailt ar feadh seachtainí chun doiciméid thábhachtacha agus pasfhocail a fháil. Sin nuair a bhí a fhios agam nach bhféadfainn ligean don rud céanna tarlú do mo theaghlach.",
-      "2": "Mar mháthair aonair ag rith gnó, bhí imní orm i gcónaí faoi cad a tharlódh dá dtarlódh rud éigin domsa. Chuidigh Cruinneachán Oidhreachta liom gach rud a eagrú.",
-      "3": "Tá dementia luathchéime ag mo bhean, agus thuig mé go raibh gá agam ullmhú fad is a bhí mé fós in ann. Rinne Cruinneachán Oidhreachta é simplí chun ár 40 bliain saoil le chéile a eagrú."
-    }
+    "businessTrip": {
+      "after": {
+        "benefit": "Gach rud inrochtana díreach nuair a bhí gá aici leis.",
+        "emotion": "Faoiseamh agus ullmhacht",
+        "situation": "Nuair a bhí fear Emma ag taisteal agus bhí gá aici le cistí éigeandála do mháinliacht a mic, bhí rochtain láithreach aici ar fhaisnéis chuntais go léir, sonraí árachais, agus fiú litreacha údaraithe réamhscríofa. Gan moill, gan strus."
+      },
+      "before": {
+        "consequence": "Cinntí míochaine tábhachtacha moillithe.",
+        "emotion": "Frustration agus helplessness",
+        "situation": "Nuair a bhí eitleán David moillithe agus chaill sé máinliacht éigeandála a iníne, ní raibh a bhean in ann rochtain a fháil ar a gcuntas taisce nó faisnéis árachais míochaine a fháil. Bhí gá le cinntí criticiúla a chur ar fionraí."
+      },
+      "title": "Éigeandáil Turas Gnó"
+    },
+    "hospitalStay": {
+      "after": {
+        "benefit": "Rochtain láithreach ar gach rud a bhí de dhíth uirthi.",
+        "emotion": "Síocháin agus fócas",
+        "situation": "Nuair a bhí timpiste ag Mark, d'oscail a bhean Lisa a dtreoir teaghlaigh agus fuair sí gach rud eagraithe: sonraí árachais, teagmhálacha bainc, faisnéis mhíochaine, agus fiú liosta daoine le fógra a thabhairt dóibh. Bhí sí in ann díriú ar an rud ba thábhachtaí - a bheith ann do Mark."
+      },
+      "before": {
+        "consequence": "Laethanta ag cuardach faisnéise agus tacaíochta.",
+        "emotion": "Strus agus imní",
+        "situation": "Bhí taom croí ag fear Sarah. Le linn dó a bheith sa chúram déine, chaith sí laethanta ag iarraidh a gcuid páipéar árachais, faisnéis chuntais bhainc, agus teagmhálacha tábhachtacha a fháil. Bhí an strus ró-throm nuair a bhí gá aici díriú ar a theacht chun feabhais."
+      },
+      "title": "An Fanacht Ospidéil Gan Choinne"
+    },
+    "labels": {
+      "after": "Tar éis Cruinneachán Oidhreachta",
+      "before": "Roimh LegacyGuard",
+      "feeling": "Mothúchán"
+    },
+    "subtitle": "Teaghlaigh fíoracha, staidí fíoracha, smacht fíorach agus ullmhacht",
+    "suddenLoss": {
+      "after": {
+        "benefit": "Cosán soiléir le leanúint in amanna deacra.",
+        "emotion": "Calm agus clarity",
+        "situation": "Nuair a bhí gá ag teaghlach John a gcuid gnóthaí a láimhseáil, bhí gach rud soiléir eagraithe: liosta iomlán cuntais, teagmhálacha tábhachtacha, treoracha céim ar chéim, agus fiú teachtaireachtaí pearsanta a bhí ullmhaithe aige do gach ball teaghlaigh."
+      },
+      "before": {
+        "consequence": "Spriocdhátaí caillte agus am caillte.",
+        "emotion": "Confusion agus regret",
+        "situation": "Tar éis di a hathair a chailleadh go tobann, chaith Maria míonna ag iarraidh a chuid gnóthaí airgeadais a phíosa le chéile. Fuair sí cuntais nach raibh a fhios aici a bhí ann agus chaill sí spriocdhátaí tábhachtacha toisc go raibh doiciméid scaipthe i ngach áit."
+      },
+      "title": "An Caillteanas Tobann"
+    },
+    "title": "Cad a Tharlaíonn Nuair a Thógann an Saol Cas Gan Choinne?"
   },
-  "annualReview": {
-    "title": "Athbhreithniú Bliantúil Oidhreachta",
-    "subtitle": "Coinnigh plean cosanta do theaghlaigh reatha agus éifeachtach",
-    "description": "Athraíonn an saol go tapa. Cinntíonn an t-athbhreithniú bliantúil seo go bhfanann do phlean oidhreachta ailínithe le do staid reatha agus do mhianta.",
-    "progress": {
-      "title": "Dul Chun Cinn Athbhreithnithe",
-      "completed": "Críochnaithe",
-      "inProgress": "Ar Siúl",
-      "notStarted": "Gan Tús",
-      "totalSteps": "Céimeanna Iomlána",
-      "estimatedTime": "Am Measta: 15 nóiméad"
-    },
-    "step1": {
-      "title": "Athbhreithnigh do Sheiceadóirí",
-      "description": "Deimhnigh go bhfuil do dhaoine iontaofa fós na roghanna cearta do do theaghlach"
-    },
-    "step2": {
-      "title": "Athbhreithnigh do Shócmhainní",
-      "description": "Fíordheimhnigh go bhfuil do fhardal sócmhainní reatha agus iomlán"
-    },
-    "step3": {
-      "title": "Athbhreithnigh do Thairbhí",
-      "description": "Cinntigh go bhfuil do thairbhí fós na daoine cearta"
-    },
-    "step4": {
-      "title": "Críochnaigh an tAthbhreithniú",
-      "description": "Críochnaigh d'athbhreithniú bliantúil agus nuashonraigh do phlean"
-    },
-    "commandRoster": {
-      "title": "Athbhreithniú Rósta Orduithe",
-      "description": "Is iad do sheiceadóirí agus do dhaoine iontaofa bunús plean cosanta do theaghlaigh.",
-      "executorQuestion": "An bhfuil {name} fós an duine ceart le bheith mar sheiceadóir agat?",
-      "guardianQuestion": "An bhfuil {name} fós an duine ceart chun aire a thabhairt do do leanaí?",
-      "trustedPersonQuestion": "An bhfuil {name} fós an duine ceart do {role}?",
-      "status": {
-        "current": "Reatha",
-        "needsUpdate": "Teastaíonn Nuashonrú",
-        "outdated": "As Dáta",
-        "missing": "Ar Iarraidh"
-      },
-      "details": {
-        "executor": "Seiceadóir príomha do d'eastát",
-        "guardian": "Caomhnóir do leanaí óga",
-        "trustedPerson": "Duine iontaofa le rochtain {accessLevel}",
-        "emergencyContact": "Duine teagmhála éigeandála"
-      }
-    },
-    "armory": {
-      "title": "Athbhreithniú Fardal Sócmhainní",
-      "description": "Is iad do shócmhainní an méid atá tú ag cosaint. Coinnigh an fardal seo reatha.",
-      "ownershipQuestion": "An bhfuil {assetName} fós agat?",
-      "valueQuestion": "An bhfuil luach {assetName} athraithe go suntasach?",
-      "locationQuestion": "An bhfuil suíomh {assetName} fós ceart?",
-      "status": {
-        "current": "Reatha",
-        "needsUpdate": "Teastaíonn Nuashonrú",
-        "outdated": "As Dáta",
-        "missing": "Ar Iarraidh"
-      },
-      "categories": {
-        "realEstate": "Eastát Réadach",
-        "vehicles": "Feithiclí",
-        "bankAccounts": "Cuntais Bainc",
-        "investments": "Infheistíochtaí",
-        "insurance": "Árachas",
-        "digitalAssets": "Sócmhainní Digiteacha",
-        "personalItems": "Míreanna Pearsanta"
-      }
-    },
-    "beneficiaries": {
-      "title": "Athbhreithniú Tairbhí",
-      "description": "Cinntigh go bhfaigheann na daoine cearta na sócmhainní cearta ag an am ceart.",
-      "confirmationQuestion": "An iad seo fós na daoine cearta chun na sócmhainní seo a fháil?",
-      "distributionQuestion": "An bhfuil an céatadán dáilte fós ceart?",
-      "contactQuestion": "An bhfuil sonraí teagmhála {name} fós reatha?",
-      "status": {
-        "current": "Reatha",
-        "needsUpdate": "Teastaíonn Nuashonrú",
-        "outdated": "As Dáta",
-        "missing": "Ar Iarraidh"
-      },
-      "details": {
-        "primary": "Tairbhí príomha",
-        "contingent": "Tairbhí coinníollach",
-        "percentage": "{percentage}% de shócmhainní",
-        "specific": "Tairbhí sócmhainne ar leith"
-      }
-    },
-    "complete": {
-      "title": "Athbhreithniú Críochnaithe",
-      "description": "Críochnaíodh d'athbhreithniú bliantúil go rathúil.",
-      "message": "Críochnaíodh d'athbhreithniú bliantúil. Tá plean cosanta do theaghlaigh reatha agus éifeachtach anois.",
-      "summary": "Achoimre Athbhreithnithe",
-      "changes": "Athruithe Déanta",
-      "noChanges": "Ní raibh aon athrú de dhíth. Tá do phlean reatha.",
-      "nextReview": "An Chéad Athbhreithniú Eile",
-      "reminder": "Meabhróimid duit nuair a bheidh sé in am do d'athbhreithniú bliantúil eile."
-    },
-    "buttons": {
-      "confirm": "Deimhnigh",
-      "update": "Nuashonraigh",
-      "back": "Siar",
-      "next": "Ar Aghaidh",
-      "finish": "Críochnaigh an tAthbhreithniú",
-      "save": "Sábháil Athruithe",
-      "skip": "Scipeáil anois",
-      "reviewLater": "Athbhreithnigh níos déanaí"
-    },
-    "status": {
-      "title": "Stádas Athbhreithnithe",
-      "overdue": "As Dáta",
-      "dueSoon": "Le híoc go Luath",
-      "current": "Reatha",
-      "completed": "Críochnaithe",
-      "lastReview": "An tAthbhreithniú Deireanach",
-      "nextReview": "An Chéad Athbhreithniú Eile",
-      "daysOverdue": "{days} lá as dáta",
-      "daysUntilDue": "{days} lá go dtí an dáta"
-    },
-    "notifications": {
-      "reviewDue": "Athbhreithniú Bliantúil Le hÍoc",
-      "reviewOverdue": "Athbhreithniú Bliantúil As Dáta",
-      "reviewCompleted": "Athbhreithniú Bliantúil Críochnaithe",
-      "changesSaved": "Sábháladh athruithe go rathúil",
-      "errorSaving": "Earráid ag sábháil athruithe",
-      "reminderSet": "Socraíodh meabhrúchán don athbhreithniú eile"
-    }
-  },
-  "complexityReduction": {
-    "title": "Simpligh do Phleanáil Oidhreachta",
-    "subtitle": "Bris síos tascanna casta ina chéimeanna simplí, inbhainistithe",
-    "description": "Tuigimid gur féidir pleanáil don todhchaí a bheith écrasach. Bíonn ár gcóras laghdú castachta ag briseadh síos gach tasc ina chéimeanna simplí, gníomhacha a thógann ach nóiméad chun a chríochnú.",
-    "benefits": {
-      "title": "Cén Fáth a Oibríonn Laghdú Castachta",
-      "overwhelm": {
-        "title": "Cuireann sé deireadh le hécras",
-        "description": "In ionad aghaidh a thabhairt ar liosta ollmhór le déanamh, déanann tú tasc beag amháin ag an am. Tá gach céim deartha le bheith críochnaithe i bhfad níos lú ná 5 nóiméad."
-      },
-      "progress": {
-        "title": "Dul Chun Cinn Infheicthe",
-        "description": "Féach ullmhacht do theaghlaigh ag fás le gach céim críochnaithe. Rianaigh do dhul chun cinn agus ceiliúir buanna beaga ar an mbealach."
-      },
-      "confidence": {
-        "title": "Tógann sé Muinín",
-        "description": "De réir mar a chríochnaíonn tú gach céim, braithfidh tú níos mó muiníne agus i smacht. An rud a bhí neamh-inrochtana cheana bíonn sé inrochtana."
-      },
-      "family": {
-        "title": "Cosaint Teaghlaigh",
-        "description": "Bíonn tionchar díreach ag gach céim críochnaithe ar do theaghlach. Ó rochtain éigeandála go pleanáil fadtéarmach, tá gach gníomh tábhachtach."
-      }
-    },
-    "steps": {
-      "identifyBankAccount": {
-        "title": "Aithin do Chuntas Bainc Príomha",
-        "why": "Cén fáth a bhfuil sé tábhachtach: Rochtain láithreach ar chistí le linn éigeandálacha",
-        "whatYouDo": "Cad a dhéanann tú: Tóg grianghraf nó scríobh síos faisnéis chuntais",
-        "whatWeDo": "Cad a dhéanaimid: Stórálaimid faisnéis go slán agus cruthaímid treoracha rochtana",
-        "timeRequired": "Am riachtanach: 2 nóiméad",
-        "complexity": "Leibhéal castachta: Simplí"
-      },
-      "emergencyContacts": {
-        "title": "Liosta Teagmhálacha Éigeandála",
-        "why": "Cén fáth a bhfuil sé tábhachtach: Rochtain tapa ar dhaoine tábhachtacha le linn géarchéimeanna",
-        "whatYouDo": "Cad a dhéanann tú: Cuir uimhreacha gutháin agus gaolta leis",
-        "whatWeDo": "Cad a dhéanaimid: Eagraímid teagmhálacha de réir tosaíochta agus cruthaímid nósanna imeachta éigeandála",
-        "timeRequired": "Am riachtanach: 3 nóiméad",
-        "complexity": "Leibhéal castachta: Simplí"
-      },
-      "insurancePolicies": {
-        "title": "Doiciméad Polasaithe Árachais",
-        "why": "Cén fáth a bhfuil sé tábhachtach: Cinntíonn sé gur féidir éilimh a chomhdú go tapa agus go ceart",
-        "whatYouDo": "Cad a dhéanann tú: Uaslódáil doiciméid polasaí nó tóg grianghraif",
-        "whatWeDo": "Cad a dhéanaimid: Bainimid faisnéis lárnach agus cruthaímid treoracha éilimhe",
-        "timeRequired": "Am riachtanach: 5 nóiméad",
-        "complexity": "Leibhéal castachta: Éasca"
-      },
-      "digitalAssets": {
-        "title": "Daingnigh Sócmhainní Digiteacha",
-        "why": "Cén fáth a bhfuil sé tábhachtach: Cosnaíonn cuntais ar líne agus cuimhní digiteacha",
-        "whatYouDo": "Cad a dhéanann tú: Liosta cuntais thábhachtacha agus pasfhocail",
-        "whatWeDo": "Cad a dhéanaimid: Cruthaímid nósanna imeachta rochtana sláine agus treoracha cúltaca",
-        "timeRequired": "Am riachtanach: 4 nóiméad",
-        "complexity": "Leibhéal castachta: Éasca"
-      },
-      "legalDocuments": {
-        "title": "Eagraigh Doiciméid Dlíthiúla",
-        "why": "Cén fáth a bhfuil sé tábhachtach: Cinntíonn sé go leanfar do mhianta dlíthiúla agus go mbeidh próisis réidh",
-        "whatYouDo": "Cad a dhéanann tú: Uaslódáil uachta, cumhachtaí aturnae, agus doiciméid eile",
-        "whatWeDo": "Cad a dhéanaimid: Cruthaímid achoimrí agus cinntímid rochtain dlíthiúil cheart",
-        "timeRequired": "Am riachtanach: 6 nóiméad",
-        "complexity": "Leibhéal castachta: Meánach"
-      },
-      "familyInstructions": {
-        "title": "Scríobh Treoracha Teaghlaigh",
-        "why": "Cén fáth a bhfuil sé tábhachtach: Soláthraíonn treoir soiléir le linn amanna deacra",
-        "whatYouDo": "Cad a dhéanann tú: Scríobh teachtaireachtaí pearsanta agus treoracha",
-        "whatWeDo": "Cad a dhéanaimid: Eagraímid teachtaireachtaí agus cruthaímid sceidil seachadta",
-        "timeRequired": "Am riachtanach: 8 nóiméad",
-        "complexity": "Leibhéal castachta: Meánach"
-      }
-    },
-    "actions": {
-      "startThisStep": "Tosaigh an Chéim Seo",
-      "showMeHow": "Taispeáin Dom Conas",
-      "iNeedHelp": "Teastaíonn Cabhair Uaim",
-      "nextStep": "An Chéad Chéim Eile",
-      "previousStep": "An Chéim Roimhe Seo",
-      "completeStep": "Marcáil mar Críochnaithe",
-      "skipStep": "Scipeáil anois"
-    },
-    "progress": {
-      "title": "Do Dhul Chun Cinn",
-      "completed": "Críochnaithe",
-      "inProgress": "Ar Siúl",
-      "notStarted": "Gan Tús",
-      "totalSteps": "Céimeanna Iomlána",
-      "estimatedTime": "Am Measta Fágtha"
-    },
-    "features": {
-      "title": "Conas a Oibríonn Laghdú Castachta",
-      "stepByStep": {
-        "title": "Treoir Céim ar Chéim",
-        "description": "Bristear síos gach tasc ina threoracha soiléire, simplí ar féidir le duine ar bith a leanúint."
-      },
-      "timeEstimation": {
-        "title": "Meastacháin Ama Cruinne",
-        "description": "Bíodh a fhios agat díreach cé mhéad ama a thógann gach céim, ó 2 nóiméad go 15 nóiméad uasta."
-      },
-      "difficultyLevels": {
-        "title": "Leibhéil Castachta Soiléire",
-        "description": "Cuidíonn rátálacha Simplí, Éasca, Meánach, agus Casta leat roghnú cad le tabhairt faoi ar dtús."
-      },
-      "progressTracking": {
-        "title": "Rianú Dul Chun Cinn",
-        "description": "Féach ullmhacht do theaghlaigh ag fás le gach céim críochnaithe."
-      },
-      "helpAvailable": {
-        "title": "Cabhair Nuair a Theastaíonn Sé",
-        "description": "Faigh cúnamh, míniúcháin, agus tacaíocht do aon chéim a bhraitheann dúshlánach."
-      }
-    }
-  },
-  "microTaskGenerator": {
-    "minutes_1": " nóiméad • ",
-    "family_impact_2": " tionchar teaghlaigh",
-    "start_task_3": "Tosaigh Tasc",
-    "complete_task_4": "Críochnaigh Tasc",
-    "skip_for_now_5": "Scipeáil anois",
-    "taskCategories": {
-      "identification": "Doiciméid Aitheantais",
-      "financial": "Faisnéis Airgeadais",
-      "healthcare": "Doiciméid Cúraim Sláinte",
-      "legal": "Doiciméid Dlíthiúla",
-      "digital": "Sócmhainní Digiteacha",
-      "personal": "Faisnéis Phearsanta"
-    },
-    "difficultyLevels": {
-      "trivial": "Fánach",
-      "easy": "Éasca",
-      "simple": "Simplí"
-    },
-    "familyImpactLevels": {
-      "high": "Ard",
-      "medium": "Meánach",
-      "low": "Íseal"
-    },
-    "taskStatus": {
-      "available": "Ar Fáil",
-      "in_progress": "Ar Siúl",
-      "completed": "Críochnaithe",
-      "skipped": "Scipeáilte"
-    },
-    "tasks": {
-      "driversLicense": {
-        "title": "Tóg grianghraf de do cheadúnas tiomána",
-        "description": "Beidh gá ag do theaghlach leis seo le haghaidh gnóthaí dlíthiúla agus airgeadais. Bíonn grianghraf soiléir á shábháil acu am agus strus.",
-        "completionMessage": "Tá rochtain ag do theaghlach anois ar fhaisnéis aitheantais chriticiúil."
-      },
-      "passport": {
-        "title": "Grianghraf do phas",
-        "description": "Riachtanach le haghaidh socruithe taistil idirnáisiúnta agus aitheantas dlíthiúil.",
-        "completionMessage": "Tá doiciméadú taistil idirnáisiúnta daingnithe anois do do theaghlach."
-      },
-      "birthCertificate": {
-        "title": "Scan do theastas breithe",
-        "description": "Riachtanach le haghaidh go leor próiseas dlíthiúil agus doiciméadú stair teaghlaigh.",
-        "completionMessage": "Tá teastas breithe caomhnaithe go digiteach anois le haghaidh riachtanais sa todhchaí."
-      },
-      "socialSecurityCard": {
-        "title": "Doiciméad do chárta Sochais Shóisialta",
-        "description": "Criticiúil le haghaidh sochair agus próiseas aitheantais dlíthiúil.",
-        "completionMessage": "Tá faisnéis Sochais Shóisialta doiciméadú go slán anois."
-      },
-      "bankAccounts": {
-        "title": "Liosta do chuntais bhainc",
-        "description": "Cuidigh le do theaghlach airgeadais a bhainistiú agus rochtain a fháil ar chistí nuair a theastaíonn.",
-        "completionMessage": "Tá faisnéis chuntais bhainc eagraithe anois do do theaghlach."
-      },
-      "insurancePolicies": {
-        "title": "Cruinnigh sonraí polasaí árachais",
-        "description": "Cinntigh go bhfuil a fhios ag do theaghlach faoi gach clúdach agus gur féidir leo éilimh a chomhdú.",
-        "completionMessage": "Tá faisnéis árachais cuimsitheach agus inrochtana anois."
-      },
-      "medicalRecords": {
-        "title": "Eagraigh stair mhíochaine",
-        "description": "Cuidigh le soláthraithe cúraim sláinte stair mhíochaine a thuiscint.",
-        "completionMessage": "Tá stair mhíochaine eagraithe anois le haghaidh cinntí cúraim sláinte níos fearr."
-      },
-      "medications": {
-        "title": "Liosta drugaí reatha",
-        "description": "Criticiúil le haghaidh éigeandálacha míochaine agus cúram leanúnach.",
-        "completionMessage": "Tá liosta drugaí ar fáil anois do ghairmithe míochaine."
-      },
-      "will": {
-        "title": "Cruthaigh nó nuashonraigh do uacht",
-        "description": "Cinntigh go bhfuil do mhianta doiciméadú go soiléir agus ceangal dlíthiúil.",
-        "completionMessage": "Tá do uacht reatha agus cosanta go dlíthiúil anois."
-      },
-      "powerOfAttorney": {
-        "title": "Ainmnigh cumhacht aturnae",
-        "description": "Údaraigh daoine iontaofa chun cinntí a dhéanamh ar do shon.",
-        "completionMessage": "Tá cumhacht aturnae ainmnithe go ceart anois."
-      },
-      "digitalPasswords": {
-        "title": "Liosta pasfhocal digiteach slán",
-        "description": "Cuidigh le teaghlach rochtain a fháil ar chuntais ar líne agus seirbhísí tábhachtacha.",
-        "completionMessage": "Tá rochtain digiteach eagraithe go slán anois do do theaghlach."
-      },
-      "socialMedia": {
-        "title": "Plean cuntais meán sóisialta",
-        "description": "Cinntigh conas ba cheart do láithreacht ar líne a láimhseáil.",
-        "completionMessage": "Tá oidhreacht meán sóisialta pleanáilte agus doiciméadú anois."
-      }
-    },
-    "sessionStats": {
-      "tasksCompleted": "Tascanna Críochnaithe",
-      "totalTimeSpent": "Am Iomlán Caite",
-      "momentumScore": "Scór Moiminteam",
-      "nextRecommendedTask": "An Chéad Tasc Molta Eile"
-    },
-    "scoring": {
-      "urgency": "Práinn",
-      "impact": "Tionchar",
-      "ease": "Éasca",
-      "momentum": "Moiminteam"
-    }
-  },
-  "editStoryModal": {
-    "editStory": "Cuir an Scéal in Eagar",
-    "addStory": "Cuir Scéal Leis",
-    "description": "Roinn scéal taobh thiar de \"{{assetName}}\". Beidh an teagmháil phearsanta seo luachmhar do do mhuintir.",
-    "fields": {
-      "yourStory": "Do Scéal"
-    },
-    "placeholders": {
-      "story": "m.sh., Ba é seo fáinne pósta do sheanmháthar, tugtha di i 1952 nuair a phós sí do sheanathair sa séipéal beag ina mbaile dúchais. Chaith sí é gach lá ar feadh 65 bliain..."
-    },
-    "hints": {
-      "shareMemories": "Roinn cuimhní, tábhacht, nó stair"
-    },
-    "tips": {
-      "title": "Leideanna le haghaidh scéal bríúil:",
-      "explainSpecial": "Mínigh cén fáth a bhfuil an mír seo speisialta duit",
-      "shareMemories": "Roinn cuimhní a bhaineann leis",
-      "describeHistory": "Déan cur síos ar a stair nó conas mar a fuair tú é",
-      "mentionWishes": "Luaigh aon mhianta maidir le conas ba cheart é a úsáid nó a choinneáil"
-    },
-    "saving": "Á shábháil...",
-    "saveStory": "Sábháil Scéal",
-    "messages": {
-      "saved": "Sábháladh an scéal go rathúil"
-    },
+  "will": {
+    "completionMessage": "Tá do uacht cothrom le dáta anois agus cosanta go dlíthiúil.",
+    "description": "Cinntigh go bhfuil do mhianta doiciméadaithe go soiléir agus dlíthiúil.",
     "errors": {
-      "notAuthenticated": "Caithfidh tú a bheith logáilte isteach chun scéal a shábháil",
-      "saveFailed": "Theip ar an scéal a shábháil"
+      "cannot_delete_non_draft": "Cannot delete non-draft will.",
+      "cannot_update_non_draft": "Cannot update non-draft will.",
+      "failed_to_delete": "Failed to delete will.",
+      "failed_to_fetch": "Failed to fetch wills.",
+      "failed_to_generate": "Failed to generate will.",
+      "failed_to_load": "Failed to load will.",
+      "failed_to_save": "Failed to save will.",
+      "failed_to_sign": "Failed to sign will.",
+      "not_found": "Will not found.",
+      "unauthorized": "Unauthorized access."
     }
+  },
+  "willGenerator": {
+    "alerts": {
+      "generationError": "Theip ar dhoiciméad uacht a ghiniúint",
+      "generationSuccess": "Gineadh an t-uacht go rathúil",
+      "jurisdictionRequired": "Roghnaigh dlínse le do thoil sula leanann tú",
+      "signatureRequired": "Déan cinnte le do thoil go bhfuil tú tar éis an doiciméad a shíniú sula leanann tú",
+      "templateLoadError": "Ní féidir teimpléad uacht a lódáil don dlínse roghnaithe"
+    },
+    "changeCountry": "Athraigh Tír",
+    "confirmSigned": "Deimhním go bhfuil mé tar éis an doiciméad seo a shíniú",
+    "console": {
+      "templateLoadFailed": "Theip ar theimpléad uacht a lódáil",
+      "templateLoaded": "Lódáladh teimpléad uacht go rathúil",
+      "willGenerated": "Gineadh doiciméad uacht go rathúil",
+      "willGenerationCompleted": "Críochnaíodh giniúint uacht!"
+    },
+    "countries": {
+      "AL": "An Albáin",
+      "AT": "An Ostair",
+      "BA": "An Bhoisnia agus an Heirseagaivéin",
+      "BE": "An Bheilg",
+      "BG": "An Bhulgáir",
+      "CH": "An Eilvéis",
+      "CY": "An Chipir",
+      "CZ": "Poblacht na Seice",
+      "DE": "An Ghearmáin",
+      "DK": "An Danmhairg",
+      "EE": "An Eastóin",
+      "ES": "An Spáinn",
+      "FI": "An Fhionlainn",
+      "FR": "An Fhrainc",
+      "GB": "An Ríocht Aontaithe",
+      "GR": "An Ghréig",
+      "HR": "An Chróit",
+      "HU": "An Ungáir",
+      "IE": "Éire",
+      "IS": "An Íoslainn",
+      "IT": "An Iodáil",
+      "LI": "Lichtinstéin",
+      "LT": "An Liotuáin",
+      "LU": "Lucsamburg",
+      "LV": "An Laitvia",
+      "MD": "An Mholdóiv",
+      "ME": "Montainéagró",
+      "MK": "An Mhacadóin Thuaidh",
+      "MT": "Málta",
+      "NL": "An Ísiltír",
+      "NO": "An Iorua",
+      "PL": "An Pholainn",
+      "PT": "An Phortaingéil",
+      "RO": "An Rómáin",
+      "RS": "An tSeirbia",
+      "SE": "An tSualainn",
+      "SI": "An tSlóivéin",
+      "SK": "An tSlóvaic",
+      "UA": "An Úcráin"
+    },
+    "executionInstructions": "Treoracha Forghníomhaithe",
+    "failed_to_load_will_template_2": "Theip ar theimpléad uacht a lódáil",
+    "finalizeUpload": "Críochnaigh & Uaslódáil",
+    "fullName": "Ainm Iomlán",
+    "no_template_found_for_this_jur_1": "Níor aimsíodh teimpléad don dlínse seo",
+    "please_confirm_that_you_have_s_3": "Déan cinnte le do thoil go bhfuil tú tar éis an doiciméad a shíniú",
+    "select_a_country_4": "Roghnaigh tír",
+    "steps": {
+      "confirmJurisdiction": "Deimhnigh Dlínsí",
+      "executorBeneficiaries": "Forghníomhóir & Tairbhithe",
+      "personalInformation": "Faisnéis Phearsanta",
+      "reviewGenerate": "Athbhreithnigh & Gin",
+      "signConfirm": "Sínigh & Deimhnigh"
+    }
+  },
+  "will_generator": {
+    "error_uk_jurisdiction_required": "Please select a jurisdiction within the UK to continue.",
+    "jurisdiction_england": "England",
+    "jurisdiction_northern_ireland": "Northern Ireland",
+    "jurisdiction_scotland": "Scotland",
+    "jurisdiction_wales": "Wales",
+    "select_will_language_title": "Please select the language for your will:",
+    "uk_jurisdiction_title": "Which part of the UK is your primary residence?"
   }
 }
