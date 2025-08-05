@@ -86,11 +86,11 @@ export const DocumentUpload: React.FC<DocumentUploadProps> = ({ onDocumentUpload
   // Debounced validation for document name
   const validateDocumentName = useDebouncedCallback((name: string) => {
     if (!name.trim()) {
-      setNameError(t('validation.errors.fieldRequired', { field: t('dashboard.documentName') }));
+      setNameError(t('validation.nameRequired'));
     } else if (name.trim().length < 2) {
-      setNameError(t('validation.errors.nameMinLength'));
+      setNameError(t('validation.nameMinLength'));
     } else if (name.trim().length > 255) {
-      setNameError(t('validation.errors.nameMaxLength', { max: 255 }));
+      setNameError(t('validation.nameMaxLength', { max: 255 }));
     } else {
       setNameError('');
     }
@@ -109,19 +109,19 @@ export const DocumentUpload: React.FC<DocumentUploadProps> = ({ onDocumentUpload
   }, [isUploading]);
 
   const documentTypes = [
-  { key: 'realEstateDeed', value: t('documentTypes.realEstateDeed'), suggestContact: true },
-  { key: 'birthCertificate', value: t('documentTypes.birthCertificate') },
-  { key: 'insurancePolicy', value: t('documentTypes.insurancePolicy'), suggestContact: true, suggestRenewal: true, suggestSubscription: true },
-  { key: 'lastWill', value: t('documentTypes.lastWill'), suggestContact: true },
-  { key: 'employmentContract', value: t('documentTypes.employmentContract'), suggestContact: true },
-  { key: 'passport', value: t('documentTypes.passport'), suggestRenewal: true },
-  { key: 'drivingLicense', value: t('documentTypes.drivingLicense'), suggestRenewal: true },
-  { key: 'bankStatement', value: t('documentTypes.bankStatement'), suggestContact: true, suggestSubscription: true },
-  { key: 'investmentCertificate', value: t('documentTypes.investmentCertificate'), suggestContact: true },
-  { key: 'energyContract', value: t('documentTypes.energyContract'), suggestContact: true, suggestRenewal: true, suggestSubscription: true },
-  { key: 'softwareLicense', value: t('documentTypes.softwareLicense'), suggestRenewal: true, suggestSubscription: true },
-  { key: 'subscriptionService', value: t('documentTypes.subscriptionService'), suggestContact: true, suggestRenewal: true, suggestSubscription: true },
-  { key: 'other', value: t('documentTypes.other') }];
+  { key: 'realEstateDeed', value: t('types.deed'), suggestContact: true },
+  { key: 'birthCertificate', value: t('types.birthCertificate') },
+  { key: 'insurancePolicy', value: t('types.policy'), suggestContact: true, suggestRenewal: true, suggestSubscription: true },
+  { key: 'lastWill', value: t('types.will'), suggestContact: true },
+  { key: 'employmentContract', value: t('types.contract'), suggestContact: true },
+  { key: 'passport', value: t('types.passport'), suggestRenewal: true },
+  { key: 'drivingLicense', value: t('types.license'), suggestRenewal: true },
+  { key: 'bankStatement', value: t('types.bankStatement'), suggestContact: true, suggestSubscription: true },
+  { key: 'investmentCertificate', value: t('types.certificate'), suggestContact: true },
+  { key: 'energyContract', value: t('types.contract'), suggestContact: true, suggestRenewal: true, suggestSubscription: true },
+  { key: 'softwareLicense', value: t('types.license'), suggestRenewal: true, suggestSubscription: true },
+  { key: 'subscriptionService', value: t('types.contract'), suggestContact: true, suggestRenewal: true, suggestSubscription: true },
+  { key: 'other', value: t('types.other') }];
 
 
   // Get metadata suggestions based on document type
@@ -142,13 +142,13 @@ export const DocumentUpload: React.FC<DocumentUploadProps> = ({ onDocumentUpload
     // Check file size
     if (selectedFile.size > maxFileSize) {
       const maxSizeMB = maxFileSize / (1024 * 1024);
-      toast.error(t('documentUpload.fileTooLarge', { maxSize: maxSizeMB }));
+      toast.error(t('errors.fileTooLarge', { size: maxSizeMB }));
       return;
     }
 
     // Check if adding this file would exceed storage limit
     if (storageUsage && !canAddFile(storageUsage.used, selectedFile.size, plan)) {
-      toast.error(t('documentUpload.storageLimitReached', {
+      toast.error(t('errors.storageLimitReached', {
         remaining: formatBytes(storageUsage.remaining),
         fileSize: formatBytes(selectedFile.size)
       }));
@@ -229,523 +229,278 @@ export const DocumentUpload: React.FC<DocumentUploadProps> = ({ onDocumentUpload
       await new Promise((resolve) => setTimeout(resolve, 300));
 
       setShowForm(true);
-      toast.success(t('documentUpload.fileUploadedSuccess'));
+      toast.success(t('notifications.uploaded'));
 
       return data.path;
     } catch (error: Record<string, unknown>) {
-      const timestamp = new Date().toISOString();
-      const errorDetails = error?.message || 'Unknown error';
-      const errorCode = error?.code || 'UNKNOWN_ERROR';
-
-      // Detailed logging for debugging
-      console.error('[DocumentUpload] Error during file upload:', {
-        timestamp,
-        operation: 'uploadFile',
-        errorCode,
-        errorMessage: errorDetails,
-        errorDetails: error,
-        stack: error?.stack
-      });
-
-      let errorMessage = t('documentUpload.fileUploadFailed');
-      if (error instanceof Error) {
-        if (error.message.includes('storage')) {
-          errorMessage = t('documentUpload.fileUploadFailed');
-        } else if (error.message.includes('network')) {
-          errorMessage = t('documentUpload.fileUploadFailed');
-        }
-      }
-
-      toast.error(errorMessage);
+      console.error('Upload error:', error);
+      toast.error(t('errors.uploadFailed'));
       return null;
     } finally {
       setIsUploading(false);
+      setUploadProgress(0);
     }
   };
 
   const handleSaveDocument = async () => {
-    if (!uploadedFilePath || !documentName.trim() || !documentType) {
-      toast.error(t('documentUpload.fillRequiredFields'));
+    if (!uploadedFilePath || !documentName.trim()) {
+      toast.error(t('validation.nameRequired'));
       return;
     }
 
     try {
       const { data: { user } } = await supabaseWithRetry.auth.getUser();
       if (!user) {
-        toast.error(t('documentUpload.loginToSave'));
+        toast.error(t('errors.accessDenied'));
         return;
       }
 
-      const { data, error } = await supabaseWithRetry.
-      from('documents').
-      insert({
+      const documentData = {
         user_id: user.id,
         name: documentName.trim(),
-        type: documentType,
-        country_code: countryCode,
+        original_name: file?.name || '',
         file_path: uploadedFilePath,
         file_size: file?.size || 0,
-        mime_type: file?.type || '',
-        expiration_date: expirationDate ? format(expirationDate, 'yyyy-MM-dd') : null,
+        document_type: documentType,
+        country_code: countryCode,
+        expiration_date: expirationDate?.toISOString() || null,
         contract_number: contractNumber || null,
         contact_person: contactPerson || null,
         contact_phone: contactPhone || null,
         contact_email: contactEmail || null,
-        renewal_date: renewalDate ? format(renewalDate, 'yyyy-MM-dd') : null,
+        renewal_date: renewalDate?.toISOString() || null,
         renewal_action: renewalAction || null,
         importance_level: importanceLevel,
-        related_assets: relatedAssets.length > 0 ? relatedAssets : null,
-        // Subscription tracking fields
+        related_assets: relatedAssets,
         subscription_type: subscriptionType,
         renewal_cost: renewalCost ? parseFloat(renewalCost) : null,
         auto_renewal: autoRenewal,
-        provider_contact_info: providerContactInfo.phone || providerContactInfo.email || providerContactInfo.website ?
-        providerContactInfo :
-        null,
-        cancellation_notice_period: cancellationNoticePeriod || null
-      }).
-      select().
-      single();
+        provider_contact_info: providerContactInfo,
+        cancellation_notice_period: cancellationNoticePeriod,
+        metadata: {
+          uploaded_at: new Date().toISOString(),
+          file_type: file?.type || '',
+          processing_status: 'completed'
+        }
+      };
 
-      if (error) {
-        throw error;
-      }
+      const { error } = await supabaseWithRetry
+        .from('documents')
+        .insert([documentData]);
 
-      toast.success(t('documentUpload.saved'));
-      onDocumentUploaded(data);
+      if (error) throw error;
+
+      toast.success(t('notifications.uploaded'));
+      onDocumentUploaded(documentData);
     } catch (error: Record<string, unknown>) {
-      const timestamp = new Date().toISOString();
-      const errorMessage = error?.message || 'Unknown error';
-      const errorCode = error?.code || 'UNKNOWN_ERROR';
+      console.error('Save document error:', error);
+      toast.error(t('errors.uploadFailed'));
+    }
+  };
 
-      // Detailed logging for debugging
-      console.error('[DocumentUpload] Error saving document:', {
-        timestamp,
-        operation: 'handleSaveDocument',
-        errorCode,
-        errorMessage,
-        errorDetails: error,
-        stack: error?.stack
-      });
-
-      toast.error(t('documentUpload.failedSave'));
+  const handleCancel = () => {
+    if (isUploading) {
+      // If currently uploading, just stop the upload
+      setIsUploading(false);
+      setUploadProgress(0);
+    } else {
+      onCancel();
     }
   };
 
   if (showForm) {
     return (
-      <AsyncErrorBoundary>
       <div className="space-y-6">
-        <div className="text-center">
-          <FileText className="mx-auto h-12 w-12 text-primary mb-4" />
-          <h3 className="text-lg font-semibold">{t('documentUpload.detailsTitle')}</h3>
-          <p className="text-sm text-muted-foreground">{t('documentUpload.detailsSubtitle')}</p>
+        <div className="flex items-center justify-between">
+          <h2 className="text-xl font-semibold">{t('upload.title')}</h2>
+          <Button variant="outline" onClick={handleCancel}>
+            {tCommon('common.buttons.cancel')}
+          </Button>
         </div>
 
         <div className="space-y-4">
-          <div className="space-y-2">
-            <Label htmlFor="documentName">{t('dashboard.documentName')}</Label>
+          <div>
+            <Label htmlFor="documentName">{t('details.fileName')} *</Label>
             <Input
-                id="documentName"
-                placeholder={t('documentUpload.namePlaceholder')}
-                value={documentName}
-                onChange={(e) => {
-                  const value = e.target.value;
-                  setDocumentName(value);
-                  validateDocumentName(value);
-                }}
-                className={nameError ? 'border-red-500' : ''} />
-
-            {nameError &&
-              <p className="text-sm text-red-500">{nameError}</p>
-              }
+              id="documentName"
+              value={documentName}
+              onChange={(e) => {
+                setDocumentName(e.target.value);
+                validateDocumentName(e.target.value);
+              }}
+              placeholder={t('details.fileName')}
+              className={cn(nameError && 'border-red-500')}
+            />
+            {nameError && (
+              <p className="text-sm text-red-500 mt-1">{nameError}</p>
+            )}
           </div>
 
-          <div className="space-y-2">
-            <Label htmlFor="documentType">{t('dashboard.documentType')}</Label>
+          <div>
+            <Label htmlFor="documentType">{t('details.documentType')}</Label>
             <Select value={documentType} onValueChange={setDocumentType}>
               <SelectTrigger>
-                <SelectValue placeholder={t('documentUpload.typePlaceholder')} />
+                <SelectValue placeholder={t('details.documentType')} />
               </SelectTrigger>
               <SelectContent>
-                {documentTypes.map((type) =>
+                {documentTypes.map((type) => (
                   <SelectItem key={type.key} value={type.value}>
                     {type.value}
                   </SelectItem>
-                  )}
+                ))}
               </SelectContent>
             </Select>
           </div>
-          
-          {/* Importance Level */}
-          <div className="space-y-2">
-            <Label>{t('dashboard.metadata.importanceLevel')}</Label>
-            <RadioGroup value={importanceLevel} onValueChange={(value) => setImportanceLevel(value as 'critical' | 'important' | 'reference')}>
+
+          <div>
+            <Label htmlFor="countryCode">{t('details.jurisdiction')}</Label>
+            <Select value={countryCode} onValueChange={setCountryCode}>
+              <SelectTrigger>
+                <SelectValue />
+              </SelectTrigger>
+              <SelectContent>
+                {supportedCountries.map((country) => (
+                  <SelectItem key={country.code} value={country.code}>
+                    <div className="flex items-center gap-2">
+                      <span className="text-lg">{country.flag}</span>
+                      <span>{country.name}</span>
+                    </div>
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+          </div>
+
+          <div>
+            <Label htmlFor="expirationDate">{t('details.expirationDate')}</Label>
+            <Popover>
+              <PopoverTrigger asChild>
+                <Button
+                  variant="outline"
+                  className={cn(
+                    'w-full justify-start text-left font-normal',
+                    !expirationDate && 'text-muted-foreground'
+                  )}
+                >
+                  <CalendarIcon className="mr-2 h-4 w-4" />
+                  {expirationDate ? format(expirationDate, 'PPP') : t('details.expirationDate')}
+                </Button>
+              </PopoverTrigger>
+              <PopoverContent className="w-auto p-0">
+                <Calendar
+                  mode="single"
+                  selected={expirationDate}
+                  onSelect={setExpirationDate}
+                  initialFocus
+                />
+              </PopoverContent>
+            </Popover>
+          </div>
+
+          <div>
+            <Label>{t('details.importanceLevel')}</Label>
+            <RadioGroup value={importanceLevel} onValueChange={(value: 'critical' | 'important' | 'reference') => setImportanceLevel(value)}>
               <div className="flex items-center space-x-2">
                 <RadioGroupItem value="critical" id="critical" />
-                <Label htmlFor="critical" className="font-normal cursor-pointer">
-                  {t('dashboard.metadata.importance.critical')}
-                </Label>
+                <Label htmlFor="critical">{t('actions.markImportant')}</Label>
               </div>
               <div className="flex items-center space-x-2">
                 <RadioGroupItem value="important" id="important" />
-                <Label htmlFor="important" className="font-normal cursor-pointer">
-                  {t('dashboard.metadata.importance.important')}
-                </Label>
+                <Label htmlFor="important">{t('details.important')}</Label>
               </div>
               <div className="flex items-center space-x-2">
                 <RadioGroupItem value="reference" id="reference" />
-                <Label htmlFor="reference" className="font-normal cursor-pointer">
-                  {t('dashboard.metadata.importance.reference')}
-                </Label>
+                <Label htmlFor="reference">{t('details.reference')}</Label>
               </div>
             </RadioGroup>
           </div>
 
-          <div className="space-y-2">
-            <Label htmlFor="countryCode">{t('dashboard.countryOfRelevance')}</Label>
-            <Select value={countryCode} onValueChange={setCountryCode}>
-              <SelectTrigger>
-                <SelectValue placeholder={t('documentUpload.countryPlaceholder')} />
-              </SelectTrigger>
-              <SelectContent>
-                {supportedCountries.map((country) =>
-                  <SelectItem key={country.code} value={country.code}>
-                    <div className="flex items-center gap-2">
-                      <span>{country.flag}</span>
-                      <span>{country.name}</span>
-                    </div>
-                  </SelectItem>
-                  )}
-              </SelectContent>
-            </Select>
+          <div className="flex gap-4">
+            <Button onClick={handleSaveDocument} className="flex-1">
+              {t('actions.upload')}
+            </Button>
+            <Button variant="outline" onClick={handleCancel}>
+              {tCommon('common.buttons.cancel')}
+            </Button>
           </div>
-
-          <div className="space-y-2">
-            <Label>{t('dashboard.expirationDate')}</Label>
-            <Popover>
-              <PopoverTrigger asChild>
-                <Button
-                    variant="outline"
-                    className={cn(
-                      "w-full justify-start text-left font-normal",
-                      !expirationDate && "text-muted-foreground"
-                    )}>
-
-                  <CalendarIcon className="mr-2 h-4 w-4" />
-                  {expirationDate ? format(expirationDate, "PPP") : <span>{t('documentUpload.pickDate')}</span>}
-                </Button>
-              </PopoverTrigger>
-              <PopoverContent className="w-auto p-0" align="start">
-                <Calendar
-                    mode="single"
-                    selected={expirationDate}
-                    onSelect={setExpirationDate}
-                    initialFocus
-                    className={cn("p-3 pointer-events-auto")} />
-
-              </PopoverContent>
-            </Popover>
-          </div>
-          
-          {/* Contract Number */}
-          <div className="space-y-2">
-            <Label htmlFor="contractNumber">{t('dashboard.metadata.contractNumber')}</Label>
-            <Input
-                id="contractNumber"
-                placeholder={t('dashboard.metadata.contractNumberPlaceholder')}
-                value={contractNumber}
-                onChange={(e) => setContractNumber(e.target.value)} />
-
-          </div>
-          
-          {/* Contact Information Section */}
-          {getMetadataSuggestions(documentType).showContact &&
-            <>
-              <Alert className="border-primary/20 bg-primary/5">
-                <AlertCircle className="h-4 w-4" />
-                <AlertDescription>
-                  {t('dashboard.metadata.contactSuggestion')}
-                </AlertDescription>
-              </Alert>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <Label htmlFor="contactPerson">
-                    <User className="inline h-3 w-3 mr-1" />
-                    {t('dashboard.metadata.contactPerson')}
-                  </Label>
-                  <Input
-                    id="contactPerson"
-                    placeholder={t('dashboard.metadata.contactPersonPlaceholder')}
-                    value={contactPerson}
-                    onChange={(e) => setContactPerson(e.target.value)} />
-
-                </div>
-                
-                <div className="space-y-2">
-                  <Label htmlFor="contactPhone">
-                    <Phone className="inline h-3 w-3 mr-1" />
-                    {t('dashboard.metadata.contactPhone')}
-                  </Label>
-                  <Input
-                    id="contactPhone"
-                    placeholder={t('dashboard.metadata.contactPhonePlaceholder')}
-                    value={contactPhone}
-                    onChange={(e) => setContactPhone(e.target.value)} />
-
-                </div>
-              </div>
-              
-              <div className="space-y-2">
-                <Label htmlFor="contactEmail">
-                  <Mail className="inline h-3 w-3 mr-1" />
-                  {t('dashboard.metadata.contactEmail')}
-                </Label>
-                <Input
-                  id="contactEmail"
-                  type="email"
-                  placeholder={t('dashboard.metadata.contactEmailPlaceholder')}
-                  value={contactEmail}
-                  onChange={(e) => setContactEmail(e.target.value)} />
-
-              </div>
-            </>
-            }
-          
-          {/* Renewal Section */}
-          {getMetadataSuggestions(documentType).showRenewal &&
-            <>
-              <Alert className="border-primary/20 bg-primary/5">
-                <AlertCircle className="h-4 w-4" />
-                <AlertDescription>
-                  {t('dashboard.metadata.renewalSuggestion')}
-                </AlertDescription>
-              </Alert>
-              
-              <div className="space-y-2">
-                <Label>{t('dashboard.metadata.renewalDate')}</Label>
-                <Popover>
-                  <PopoverTrigger asChild>
-                    <Button
-                      variant="outline"
-                      className={cn(
-                        "w-full justify-start text-left font-normal",
-                        !renewalDate && "text-muted-foreground"
-                      )}>
-
-                      <CalendarIcon className="mr-2 h-4 w-4" />
-                      {renewalDate ? format(renewalDate, "PPP") : <span>{t('dashboard.metadata.pickRenewalDate')}</span>}
-                    </Button>
-                  </PopoverTrigger>
-                  <PopoverContent className="w-auto p-0" align="start">
-                    <Calendar
-                      mode="single"
-                      selected={renewalDate}
-                      onSelect={setRenewalDate}
-                      initialFocus
-                      disabled={(date) => date < new Date()}
-                      className={cn("p-3 pointer-events-auto")} />
-
-                  </PopoverContent>
-                </Popover>
-              </div>
-              
-              <div className="space-y-2">
-                <Label htmlFor="renewalAction">{t('dashboard.metadata.renewalAction')}</Label>
-                <Textarea
-                  id="renewalAction"
-                  placeholder={t('dashboard.metadata.renewalActionPlaceholder')}
-                  value={renewalAction}
-                  onChange={(e) => setRenewalAction(e.target.value)}
-                  rows={2} />
-
-              </div>
-            </>
-            }
-          
-          {/* Subscription Tracking Section */}
-          {getMetadataSuggestions(documentType).showSubscription &&
-            <>
-              <Alert className="border-primary/20 bg-primary/5">
-                <DollarSign className="h-4 w-4" />
-                <AlertDescription>
-                  {t('dashboard.subscription.trackingSuggestion')}
-                </AlertDescription>
-              </Alert>
-              
-              <div className="space-y-4">
-                <div className="space-y-2">
-                  <Label>{t('dashboard.subscription.type')}</Label>
-                  <Select value={subscriptionType} onValueChange={(value) => setSubscriptionType(value as 'none' | 'monthly' | 'yearly' | 'one-time')}>
-                    <SelectTrigger>
-                      <SelectValue placeholder={t('dashboard.subscription.typePlaceholder')} />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="none">{t('dashboard.subscription.types.none')}</SelectItem>
-                      <SelectItem value="monthly">{t('dashboard.subscription.types.monthly')}</SelectItem>
-                      <SelectItem value="yearly">{t('dashboard.subscription.types.yearly')}</SelectItem>
-                      <SelectItem value="one-time">{t('dashboard.subscription.types.oneTime')}</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-                
-                {subscriptionType !== 'none' && subscriptionType !== 'one-time' &&
-                <>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div className="space-y-2">
-                        <Label htmlFor="renewalCost">
-                          <DollarSign className="inline h-3 w-3 mr-1" />
-                          {t('dashboard.subscription.renewalCost')}
-                        </Label>
-                        <Input
-                        id="renewalCost"
-                        type="number"
-                        step={t("documents.documentEditModal.0_01_1")}
-                        placeholder={t('dashboard.subscription.renewalCostPlaceholder')}
-                        value={renewalCost}
-                        onChange={(e) => setRenewalCost(e.target.value)} />
-
-                      </div>
-                      
-                      <div className="space-y-2">
-                        <Label>{t('dashboard.subscription.cancellationNotice')}</Label>
-                        <Select value={cancellationNoticePeriod.toString()} onValueChange={(value) => setCancellationNoticePeriod(parseInt(value))}>
-                          <SelectTrigger>
-                            <SelectValue />
-                          </SelectTrigger>
-                          <SelectContent>
-                            <SelectItem value="0">{t('dashboard.subscription.noNoticeRequired')}</SelectItem>
-                            <SelectItem value="30">{t('dashboard.subscription.days', { count: 30 })}</SelectItem>
-                            <SelectItem value="60">{t('dashboard.subscription.days', { count: 60 })}</SelectItem>
-                            <SelectItem value="90">{t('dashboard.subscription.days', { count: 90 })}</SelectItem>
-                          </SelectContent>
-                        </Select>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-center space-x-2">
-                      <Switch
-                      id="auto-renewal"
-                      checked={autoRenewal}
-                      onCheckedChange={setAutoRenewal} />
-
-                      <Label htmlFor="auto-renewal" className="font-normal cursor-pointer">
-                        <RotateCw className="inline h-3 w-3 mr-1" />
-                        {t('dashboard.subscription.autoRenewal')}
-                      </Label>
-                    </div>
-                    
-                    <div className="space-y-2">
-                      <Label className="flex items-center gap-1">
-                        <Globe className="h-3 w-3" />
-                        {t('dashboard.subscription.providerContact')}
-                      </Label>
-                      
-                      <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
-                        <Input
-                        placeholder={t('dashboard.subscription.providerPhone')}
-                        value={providerContactInfo.phone}
-                        onChange={(e) => setProviderContactInfo({ ...providerContactInfo, phone: e.target.value })} />
-
-                        <Input
-                        type="email"
-                        placeholder={t('dashboard.subscription.providerEmail')}
-                        value={providerContactInfo.email}
-                        onChange={(e) => setProviderContactInfo({ ...providerContactInfo, email: e.target.value })} />
-
-                        <Input
-                        type="url"
-                        placeholder={t('dashboard.subscription.providerWebsite')}
-                        value={providerContactInfo.website}
-                        onChange={(e) => setProviderContactInfo({ ...providerContactInfo, website: e.target.value })} />
-
-                      </div>
-                    </div>
-                  </>
-                }
-              </div>
-            </>
-            }
-        </div>
-
-        <div className="flex gap-3 pt-4">
-          <Button variant="outline" onClick={onCancel} className="flex-1">
-            {t('common.cancel')}
-          </Button>
-          <Button onClick={handleSaveDocument} className="flex-1">
-            {t('dashboard.saveDocument')}
-          </Button>
         </div>
       </div>
-    </AsyncErrorBoundary>);
-
+    );
   }
 
   return (
     <div className="space-y-6">
-      <div className="text-center">
-        <Upload className="mx-auto h-12 w-12 text-primary mb-4" />
-        <h3 className="text-lg font-semibold">{t('documentUpload.title')}</h3>
-        <p className="text-sm text-muted-foreground">{t('documentUpload.subtitle')}</p>
+      <div className="flex items-center justify-between">
+        <h2 className="text-xl font-semibold">{t('upload.title')}</h2>
+        <Button variant="outline" onClick={handleCancel}>
+          {tCommon('common.buttons.cancel')}
+        </Button>
       </div>
 
-      {!file &&
-      <div
-        className="border-2 border-dashed border-primary/20 rounded-lg p-8 text-center cursor-pointer hover:border-primary/40 transition-colors"
-        onDrop={handleDrop}
-        onDragOver={handleDragOver}
-        onClick={() => document.getElementById('file-input')?.click()}>
-
-          <Upload className="mx-auto h-8 w-8 text-muted-foreground mb-4" />
-          <p className="text-sm text-muted-foreground mb-2">
-            {t('dashboard.dragDropZone')}
+      {!file ? (
+        <div
+          className="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center hover:border-gray-400 transition-colors cursor-pointer"
+          onDrop={handleDrop}
+          onDragOver={handleDragOver}
+          onClick={() => document.getElementById('fileInput')?.click()}
+        >
+          <Upload className="mx-auto h-12 w-12 text-gray-400 mb-4" />
+          <h3 className="text-lg font-medium text-gray-900 mb-2">
+            {t('upload.dragDrop')}
+          </h3>
+          <p className="text-sm text-gray-500 mb-4">
+            {t('upload.supportedFormats')}
           </p>
-          <Button variant="outline" size="sm">
-            {t('documentUpload.browseFiles')}
-          </Button>
+          <p className="text-xs text-gray-400">
+            {t('upload.maxSize', { size: MAX_FILE_SIZES[plan] / (1024 * 1024) })}
+          </p>
           <input
-          id="file-input"
-          type="file"
-          className="hidden"
-          onChange={handleFileInputChange}
-          accept={t("dashboard.documentUpload.pdf_doc_docx_jpg_jpeg_png_txt_2")} />
-
+            id="fileInput"
+            type="file"
+            className="hidden"
+            accept=".pdf,.jpg,.jpeg,.png,.doc,.docx"
+            onChange={handleFileInputChange}
+          />
         </div>
-      }
-
-      {file && !isUploading && !uploadedFilePath &&
-      <div className="space-y-4">
-          <div className="flex items-center gap-3 p-3 border rounded-lg">
-            <FileText className="h-8 w-8 text-primary" />
+      ) : (
+        <div className="space-y-4">
+          <div className="flex items-center gap-4 p-4 border rounded-lg">
+            <FileText className="h-8 w-8 text-blue-500" />
             <div className="flex-1">
-              <p className="font-medium text-sm">{file.name}</p>
-              <p className="text-xs text-muted-foreground">
-                {(file.size / 1024 / 1024).toFixed(2)} MB
+              <h3 className="font-medium">{file.name}</h3>
+              <p className="text-sm text-gray-500">
+                {formatBytes(file.size)} • {file.type || 'Unknown type'}
               </p>
             </div>
-          </div>
-          
-          <div className="flex gap-3">
-            <Button variant="outline" onClick={() => setFile(null)} className="flex-1">
-              {t('documentUpload.chooseDifferent')}
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => {
+                setFile(null);
+                setDocumentName('');
+                setDocumentType('');
+              }}
+            >
+              {tCommon('common.buttons.remove')}
             </Button>
-            <Button onClick={uploadFile} className="flex-1">
-              {t('documentUpload.uploadButton')}
+          </div>
+
+          {isUploading ? (
+            <div className="space-y-2">
+              <div className="flex items-center justify-between text-sm">
+                <span>{t('upload.processing')}</span>
+                <span>{uploadProgress}%</span>
+              </div>
+              <Progress value={uploadProgress} className="w-full" />
+            </div>
+          ) : (
+            <Button onClick={uploadFile} className="w-full">
+              <Upload className="mr-2 h-4 w-4" />
+              {t('upload.title')}
             </Button>
-          </div>
+          )}
         </div>
-      }
-
-      {isUploading &&
-      <div className="space-y-4">
-          <div className="text-center">
-            <p className="text-sm font-medium">{t('dashboard.fileUploading')}</p>
-            <p className="text-xs text-muted-foreground">{file?.name}</p>
-          </div>
-          <Progress value={uploadProgress} className="w-full" />
-        </div>
-      }
-    </div>);
-
+      )}
+    </div>
+  );
 };

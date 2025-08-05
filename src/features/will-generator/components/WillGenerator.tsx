@@ -3,6 +3,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Progress } from '@/components/ui/progress';
+import { Alert, AlertDescription } from '@/components/ui/alert';
 import { AlertCircle, CheckCircle2, FileText, Users, Briefcase, Eye } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { toast } from 'sonner';
@@ -115,10 +116,10 @@ export function WillGenerator({ onComplete }: WillGeneratorProps) {
         }, 0) || 0;
 
         if (totalAllocation !== 100 && totalAllocation > 0) {
-          errors.allocation = t('will.validation.allocation100');
+          errors.allocation = t('validation.allocationError');
         }
         if (!willContent.beneficiaries || willContent.beneficiaries.length === 0) {
-          errors.beneficiaries = t('will.validation.atLeastOneBeneficiary');
+          errors.beneficiaries = t('validation.beneficiaryRequired');
         }
         break;
       }
@@ -126,10 +127,10 @@ export function WillGenerator({ onComplete }: WillGeneratorProps) {
       case 2: { // Beneficiaries
         willContent.beneficiaries?.forEach((b, index) => {
           if (!b.name) {
-            errors[`beneficiary_${index}_name`] = t('will.validation.requiredField');
+            errors[`beneficiary_${index}_name`] = t('validation.nameRequired');
           }
           if (!b.relationship) {
-            errors[`beneficiary_${index}_relationship`] = t('will.validation.requiredField');
+            errors[`beneficiary_${index}_relationship`] = t('validation.requiredField');
           }
         });
         break;
@@ -137,7 +138,7 @@ export function WillGenerator({ onComplete }: WillGeneratorProps) {
 
       case 3: { // Executors
         if (!willContent.executor?.name) {
-          errors.executor = t('will.validation.executorRequired');
+          errors.executor = t('validation.executorRequired');
         }
         break;
       }
@@ -153,7 +154,7 @@ export function WillGenerator({ onComplete }: WillGeneratorProps) {
         setCurrentStep(currentStep + 1);
       }
     } else {
-      toast.error(t('will.validation.fixErrors'));
+      toast.error(t('errors.validationFailed'));
     }
   };
 
@@ -185,7 +186,7 @@ export function WillGenerator({ onComplete }: WillGeneratorProps) {
 
   const handleGenerateWill = async () => {
     if (!validateCurrentStep()) {
-      toast.error(t('will.validation.fixErrors'));
+      toast.error(t('errors.validationFailed'));
       return;
     }
 
@@ -193,167 +194,140 @@ export function WillGenerator({ onComplete }: WillGeneratorProps) {
       // TODO: Call API to generate will with country code and language code
       // The API call should include both countryCode and languageCode
       // fetch(`/api/will/get-template?country=${countryCode}&language=${languageCode}`)
-      toast.success(t('will.generation.success'));
+      toast.success(t('notifications.willGenerated'));
       onComplete?.('generated-will-id');
     } catch (error) {
-      toast.error(t('will.generation.error'));
+      toast.error(t('errors.generationFailed'));
     }
   };
 
   return (
-    <div className="max-w-4xl mx-auto space-y-6">
-      {/* Progress bar */}
+    <div className="max-w-4xl mx-auto p-6 space-y-6">
+      {/* Header */}
+      <div className="text-center space-y-2">
+        <h1 className="text-3xl font-bold">{t('generator.title')}</h1>
+        <p className="text-muted-foreground">{t('generator.subtitle')}</p>
+        <p className="text-sm text-muted-foreground">{t('generator.description')}</p>
+      </div>
+
+      {/* Progress Bar */}
       <div className="space-y-2">
-        <div className="flex items-center justify-between text-sm">
-          <span className="text-muted-foreground">
-            {t('will.progress', { current: currentStep + 1, total: steps.length })}
-          </span>
-          <span className="font-medium">{calculateProgress().toFixed(0)}%</span>
+        <div className="flex justify-between text-sm">
+          <span>{t('generator.step')} {currentStep + 1} {t('generator.of')} {steps.length}</span>
+          <span>{Math.round(calculateProgress())}%</span>
         </div>
-        <Progress value={calculateProgress()} className="h-2" />
+        <Progress value={calculateProgress()} className="w-full" />
       </div>
 
-      {/* Step indicators */}
-      <div className="flex items-center justify-between">
-        {steps.map((step, index) => {
-          const Icon = step.icon;
-          const isActive = index === currentStep;
-          const isCompleted = index < currentStep;
-          
-          return (
-            <div
-              key={step.id}
-              className={`flex items-center ${index < steps.length - 1 ? 'flex-1' : ''}`}
-            >
-              <div className="flex flex-col items-center">
-                <div
-                  className={`
-                    w-10 h-10 rounded-full flex items-center justify-center transition-colors
-                    ${isActive ? 'bg-primary text-primary-foreground' : ''}
-                    ${isCompleted ? 'bg-primary/20 text-primary' : ''}
-                    ${!isActive && !isCompleted ? 'bg-muted text-muted-foreground' : ''}
-                  `}
-                >
-                  {isCompleted ? (
-                    <CheckCircle2 className="h-5 w-5" />
-                  ) : (
-                    <Icon className="h-5 w-5" />
-                  )}
-                </div>
-                <span className={`
-                  text-xs mt-1 text-center max-w-[80px]
-                  ${isActive ? 'font-medium' : 'text-muted-foreground'}
-                `}>
-                  {step.title}
-                </span>
-              </div>
-              {index < steps.length - 1 && (
-                <div className={`
-                  flex-1 h-[2px] mx-2 transition-colors
-                  ${isCompleted ? 'bg-primary/20' : 'bg-muted'}
-                `} />
-              )}
-            </div>
-          );
-        })}
-      </div>
-
-      {/* Main content */}
+      {/* Step Content */}
       <Card>
         <CardHeader>
-          <CardTitle>{steps[currentStep].title}</CardTitle>
+          <CardTitle className="flex items-center gap-2">
+            {React.createElement(steps[currentStep].icon, { className: 'h-5 w-5' })}
+            {steps[currentStep].title}
+          </CardTitle>
           <CardDescription>{steps[currentStep].description}</CardDescription>
         </CardHeader>
         <CardContent>
-          <Tabs value={steps[currentStep].id} className="w-full">
-            <TabsContent value="country" className="mt-0">
+          {currentStep === 0 && (
+            <div className="space-y-4">
               <CountrySelector
+                onCountrySelect={handleCountrySelect}
                 selectedCountry={countryCode}
-                onSelect={handleCountrySelect}
-                testator={willContent.testator!}
-                onTestatorUpdate={handleTestatorUpdate}
-                errors={validationErrors}
               />
-            </TabsContent>
+              {Object.keys(validationErrors).length > 0 && (
+                <div className="space-y-2">
+                  {Object.entries(validationErrors).map(([key, error]) => (
+                    <div key={key} className="flex items-center gap-2 text-sm text-red-600">
+                      <AlertCircle className="h-4 w-4" />
+                      <span>{error}</span>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          )}
 
-            <TabsContent value="allocation" className="mt-0">
-              <AssetAllocationWizard
-                beneficiaries={willContent.beneficiaries || []}
-                onUpdate={handleBeneficiariesUpdate}
-                errors={validationErrors}
-              />
-            </TabsContent>
+          {currentStep === 1 && (
+            <AssetAllocationWizard
+              beneficiaries={willContent.beneficiaries || []}
+              onUpdate={handleBeneficiariesUpdate}
+              errors={validationErrors}
+            />
+          )}
 
-            <TabsContent value="beneficiaries" className="mt-0">
-              <BeneficiariesForm
-                beneficiaries={willContent.beneficiaries || []}
-                onUpdate={handleBeneficiariesUpdate}
-                errors={validationErrors}
-              />
-            </TabsContent>
+          {currentStep === 2 && (
+            <BeneficiariesForm
+              beneficiaries={willContent.beneficiaries || []}
+              onUpdate={handleBeneficiariesUpdate}
+              errors={validationErrors}
+            />
+          )}
 
-            <TabsContent value="executors" className="mt-0">
-              <ExecutorSelector
-                executor={willContent.executor}
-                onUpdate={handleExecutorUpdate}
-                errors={validationErrors}
-              />
-            </TabsContent>
+          {currentStep === 3 && (
+            <div className="space-y-4">
+              <h3 className="text-lg font-semibold">{t('form.guardianship.minorChildren')}</h3>
+              <p className="text-muted-foreground">{t('form.guardianship.guardianInstructions')}</p>
+              {/* Guardian selection component would go here */}
+            </div>
+          )}
 
-            <TabsContent value="review" className="mt-0">
-              <WillPreview
-                willContent={willContent as WillContent}
-                requirements={requirements!}
-                countryCode={countryCode}
-                onGenerate={handleGenerateWill}
-              />
-            </TabsContent>
-          </Tabs>
+          {currentStep === 4 && (
+            <ExecutorSelector
+              executor={willContent.executor}
+              onUpdate={handleExecutorUpdate}
+              errors={validationErrors}
+            />
+          )}
+
+          {currentStep === 5 && (
+            <div className="space-y-4">
+              <h3 className="text-lg font-semibold">{t('form.provisions.funeralWishes')}</h3>
+              <p className="text-muted-foreground">{t('form.provisions.specialInstructions')}</p>
+              {/* Special provisions form would go here */}
+            </div>
+          )}
+
+          {currentStep === 6 && (
+            <WillPreview
+              willContent={willContent}
+              requirements={requirements}
+              countryCode={countryCode}
+            />
+          )}
         </CardContent>
       </Card>
 
-      {/* Navigation buttons */}
-      <div className="flex items-center justify-between">
+      {/* Navigation */}
+      <div className="flex justify-between">
         <Button
           variant="outline"
           onClick={handlePrevious}
           disabled={currentStep === 0}
         >
-          {t('common.previous')}
+          {t('actions.previous')}
         </Button>
-        
-        {currentStep === steps.length - 1 ? (
-          <Button onClick={handleGenerateWill}>
-            <FileText className="mr-2 h-4 w-4" />
-            {t('will.generate')}
-          </Button>
-        ) : (
-          <Button onClick={handleNext}>
-            {t('common.next')}
-          </Button>
-        )}
+
+        <div className="flex gap-2">
+          {currentStep < steps.length - 1 ? (
+            <Button onClick={handleNext}>
+              {t('actions.next')}
+            </Button>
+          ) : (
+            <Button onClick={handleGenerateWill}>
+              {t('actions.generateWill')}
+            </Button>
+          )}
+        </div>
       </div>
 
-      {/* Validation errors */}
-      {Object.keys(validationErrors).length > 0 && (
-        <Card className="border-destructive">
-          <CardContent className="pt-6">
-            <div className="flex items-start gap-2">
-              <AlertCircle className="h-5 w-5 text-destructive mt-0.5" />
-              <div className="space-y-1">
-                <p className="text-sm font-medium text-destructive">
-                  {t('will.validation.errorsFound')}
-                </p>
-                <ul className="text-sm text-muted-foreground space-y-1">
-                  {Object.values(validationErrors).map((error, index) => (
-                    <li key={index}>• {error}</li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-      )}
+      {/* Legal Disclaimer */}
+      <Alert>
+        <AlertCircle className="h-4 w-4" />
+        <AlertDescription>
+          {t('legal.disclaimer')} {t('legal.notLegalAdvice')} {t('legal.professionalGuidance')}
+        </AlertDescription>
+      </Alert>
     </div>
   );
 }

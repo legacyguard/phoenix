@@ -192,7 +192,12 @@ export const Sidebar: React.FC<SidebarProps> = ({ isCollapsed, onToggle }) => {
                     {!isCollapsed && (
                       <div className="flex items-center gap-2 flex-1">
                         <span className="transition-opacity duration-200">
-                          {t(`navigation.${item.label}`)}
+                          {item.label === 'trustedCircle' ? t('trustedCircle.title', { ns: 'family' }) :
+                           item.label === 'familyHub' ? t('trustedCircle.title', { ns: 'family' }) :
+                           item.label === 'subscriptions' ? t('plans.title', { ns: 'subscription' }) :
+                           item.label === 'settings' ? t('general.title', { ns: 'settings' }) :
+                           item.label === 'help' ? t('support.title', { ns: 'help' }) :
+                           t(`navigation.${item.label}`)}
                         </span>
                         {isLocked && (
                           <Crown className="h-4 w-4 text-yellow-600" />

@@ -135,7 +135,7 @@ const [showEditStoryModal, setShowEditStoryModal] = useState(false);
 
   const handleSave = async () => {
     if (!formData.name.trim()) {
-      toast.error(t('assetDetail.errors.nameRequired'));
+      toast.error(t('validation.nameRequired'));
       return;
     }
 
@@ -170,7 +170,7 @@ const [showEditStoryModal, setShowEditStoryModal] = useState(false);
 
         if (error) throw error;
         
-        toast.success(t('assetDetail.messages.createdSuccessfully'));
+        toast.success(t('notifications.assetAdded'));
       } else {
         const { error } = await supabaseWithRetry
           .from('assets')
@@ -180,7 +180,7 @@ const [showEditStoryModal, setShowEditStoryModal] = useState(false);
 
         if (error) throw error;
         
-        toast.success(t('assetDetail.messages.updatedSuccessfully'));
+        toast.success(t('notifications.assetUpdated'));
       }
 
       navigate('/dashboard');
@@ -214,15 +214,15 @@ const [showEditStoryModal, setShowEditStoryModal] = useState(false);
   const getAssetTypeLabel = (type: string) => {
     switch (type) {
       case 'RealEstate':
-        return t('assetDetail.types.realEstate');
+        return t('types.primaryResidence');
       case 'Business':
-        return t('assetDetail.types.business');
+        return t('types.businessOwnership');
       case 'Vehicle':
-        return t('assetDetail.types.vehicle');
+        return t('types.automobile');
       case 'FinancialAccount':
-        return t('assetDetail.types.financialAccount');
+        return t('types.checkingAccount');
       default:
-        return t('assetDetail.types.asset');
+        return t('form.name');
     }
   };
 
@@ -262,7 +262,7 @@ if (isLoading) {
         <div className="flex items-center justify-center min-h-[400px]">
           <div className="text-center">
             <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary mx-auto mb-4"></div>
-            <p className="text-muted-foreground">{t('assetDetail.loading')}</p>
+            <p className="text-muted-foreground">{t('errors.loadingAssets')}</p>
           </div>
         </div>
       </div>
@@ -285,10 +285,10 @@ if (isLoading) {
           {getAssetIcon(formData.type)}
           <div>
             <h1 className="text-2xl font-bold">
-              {isNewAsset ? t('assetDetail.title.new', { type: getAssetTypeLabel(formData.type) }) : formData.name}
+              {isNewAsset ? t('form.addAsset') : formData.name}
             </h1>
             <p className="text-muted-foreground">
-              {isNewAsset ? t('assetDetail.subtitle.new') : t('assetDetail.subtitle.edit')}
+              {isNewAsset ? t('form.assetDetails') : t('form.editAsset')}
             </p>
           </div>
         </div>
@@ -309,7 +309,7 @@ if (isLoading) {
                 </div>
                 <div className="flex justify-end">
                   <Button variant="ghost" size="sm" onClick={handleStoryEdit}>
-                    {t('actions.editAsset')}
+                    {t('actions.addNote')}
                   </Button>
                 </div>
               </div>
@@ -349,7 +349,7 @@ if (isLoading) {
                   onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
                 />
                 <p className="text-xs text-muted-foreground">
-                  {t('form.descriptionPlaceholder')}
+                  {t('form.nameHelper')}
                 </p>
               </div>
 
@@ -363,14 +363,14 @@ if (isLoading) {
                     <SelectValue placeholder={t('form.selectType')} />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="RealEstate">{t('types.home')}</SelectItem>
-                    <SelectItem value="Business">{t('types.business')}</SelectItem>
-                    <SelectItem value="Vehicle">{t('types.vehicle')}</SelectItem>
-                    <SelectItem value="FinancialAccount">{t('types.checking')}</SelectItem>
+                    <SelectItem value="RealEstate">{t('types.primaryResidence')}</SelectItem>
+                    <SelectItem value="Business">{t('types.businessOwnership')}</SelectItem>
+                    <SelectItem value="Vehicle">{t('types.automobile')}</SelectItem>
+                    <SelectItem value="FinancialAccount">{t('types.checkingAccount')}</SelectItem>
                   </SelectContent>
                 </Select>
                 <p className="text-xs text-muted-foreground">
-                  {t('form.descriptionPlaceholder')}
+                  {t('form.descriptionHelper')}
                 </p>
               </div>
             </div>
@@ -379,32 +379,32 @@ if (isLoading) {
           {/* Real Estate Specific Fields */}
           {formData.type === 'RealEstate' && (
             <div className="space-y-4">
-              <h3 className="text-lg font-semibold border-b pb-2">{t('assetDetail.sections.propertyDetails')}</h3>
+              <h3 className="text-lg font-semibold border-b pb-2">{t('form.locationInfo')}</h3>
               <div className="space-y-4">
                 <div className="space-y-2">
-                  <Label htmlFor="address">{t('assetDetail.fields.propertyAddress')}</Label>
+                  <Label htmlFor="address">{t('form.location')}</Label>
                   <Textarea
                     id="address"
-                    placeholder={t('assetDetail.placeholders.propertyAddress')}
+                    placeholder={t('form.locationPlaceholder')}
                     value={formData.address}
                     onChange={(e) => setFormData(prev => ({ ...prev, address: e.target.value }))}
                     rows={3}
                   />
                   <p className="text-xs text-muted-foreground">
-                    {t('assetDetail.descriptions.propertyAddress')}
+                    {t('form.locationHelper')}
                   </p>
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="registry">{t('assetDetail.fields.propertyRegistryNumber')}</Label>
+                  <Label htmlFor="registry">{t('form.property_registry_number')}</Label>
                   <Input
                     id="registry"
-                    placeholder={t('assetDetail.placeholders.propertyRegistryNumber')}
+                    placeholder={t('form.property_registry_number')}
                     value={formData.property_registry_number}
                     onChange={(e) => setFormData(prev => ({ ...prev, property_registry_number: e.target.value }))}
                   />
                   <p className="text-xs text-muted-foreground">
-                    {t('assetDetail.descriptions.propertyRegistryNumber')}
+                    {t('form.descriptionHelper')}
                   </p>
                 </div>
               </div>
@@ -414,67 +414,67 @@ if (isLoading) {
           {/* Financial Account Specific Fields */}
           {formData.type === 'FinancialAccount' && (
             <div className="space-y-4">
-              <h3 className="text-lg font-semibold border-b pb-2">{t('assetDetail.sections.accountDetails')}</h3>
+              <h3 className="text-lg font-semibold border-b pb-2">{t('form.financialInfo')}</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <Label htmlFor="accountType">{t('assetDetail.fields.accountType')}</Label>
+                  <Label htmlFor="accountType">{t('form.account_type')}</Label>
                   <Select
                     value={formData.account_type}
                     onValueChange={(value) => setFormData(prev => ({ ...prev, account_type: value }))}
                   >
                     <SelectTrigger>
-                      <SelectValue placeholder={t('assetDetail.placeholders.selectAccountType')} />
+                      <SelectValue placeholder={t('form.selectType')} />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="Bank Account">{t('assetDetail.accountTypes.bankAccount')}</SelectItem>
-                      <SelectItem value="Investment Portfolio">{t('assetDetail.accountTypes.investmentPortfolio')}</SelectItem>
-                      <SelectItem value="Pension Fund">{t('assetDetail.accountTypes.pensionFund')}</SelectItem>
+                      <SelectItem value="Bank Account">{t('types.checkingAccount')}</SelectItem>
+                      <SelectItem value="Investment Portfolio">{t('types.investmentAccount')}</SelectItem>
+                      <SelectItem value="Pension Fund">{t('types.retirementAccount')}</SelectItem>
                     </SelectContent>
                   </Select>
                   <p className="text-xs text-muted-foreground">
-                    {t('assetDetail.descriptions.accountType')}
+                    {t('form.descriptionHelper')}
                   </p>
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="institution">{t('assetDetail.fields.financialInstitution')}</Label>
+                  <Label htmlFor="institution">{t('form.institution')}</Label>
                   <Input
                     id="institution"
-                    placeholder={t('assetDetail.placeholders.financialInstitution')}
+                    placeholder={t('form.institutionPlaceholder')}
                     value={formData.financial_institution}
                     onChange={(e) => setFormData(prev => ({ ...prev, financial_institution: e.target.value }))}
                   />
                   <p className="text-xs text-muted-foreground">
-                    {t('assetDetail.descriptions.financialInstitution')}
+                    {t('form.descriptionHelper')}
                   </p>
                 </div>
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="accountNumber">{t('assetDetail.fields.accountNumber')}</Label>
+                <Label htmlFor="accountNumber">{t('form.accountNumber')}</Label>
                 <Input
                   id="accountNumber"
-                  placeholder={t('assetDetail.placeholders.accountNumber')}
+                  placeholder={t('form.accountPlaceholder')}
                   value={formData.account_number}
                   onChange={(e) => setFormData(prev => ({ ...prev, account_number: e.target.value }))}
                 />
                 <p className="text-xs text-muted-foreground">
-                  {t('assetDetail.descriptions.accountNumber')}
+                  {t('form.accountHelper')}
                 </p>
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="credentials">{t('assetDetail.fields.loginCredentials')}</Label>
+                <Label htmlFor="credentials">{t('form.login_credentials')}</Label>
                 <Textarea
                   id="credentials"
-                  placeholder={t('assetDetail.placeholders.loginCredentials')}
+                  placeholder={t('form.contactPlaceholder')}
                   value={formData.login_credentials}
                   onChange={(e) => setFormData(prev => ({ ...prev, login_credentials: e.target.value }))}
                   rows={3}
                 />
                 <div className="bg-yellow-50 border border-yellow-200 rounded-md p-3">
                   <p className="text-xs text-yellow-800">
-                    ⚠️ <strong>{t('assetDetail.securityWarning')}</strong> {t('assetDetail.securityWarningText')}
+                    ⚠️ <strong>{t('form.securityNote')}</strong> {t('form.accountHelper')}
                   </p>
                 </div>
               </div>
@@ -483,24 +483,24 @@ if (isLoading) {
 
           {/* Financial Details Section */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold border-b pb-2">{t('assetDetail.sections.financialDetails')}</h3>
+            <h3 className="text-lg font-semibold border-b pb-2">{t('form.financialInfo')}</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
-                <Label htmlFor="value">{t('assetDetail.fields.estimatedValue')}</Label>
+                <Label htmlFor="value">{t('form.estimatedValue')}</Label>
                 <Input
                   id="value"
                   type="number"
-                  placeholder={t('assetDetail.placeholders.estimatedValue')}
+                  placeholder={t('form.valuePlaceholder')}
                   value={formData.estimated_value}
                   onChange={(e) => setFormData(prev => ({ ...prev, estimated_value: e.target.value }))}
                 />
                 <p className="text-xs text-muted-foreground">
-                  {t('assetDetail.descriptions.estimatedValue')}
+                  {t('form.valueHelper')}
                 </p>
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="currency">{t('assetDetail.fields.currency')}</Label>
+                <Label htmlFor="currency">{t('form.currency')}</Label>
                 <Select
                   value={formData.currency_code}
                   onValueChange={(value) => setFormData(prev => ({ ...prev, currency_code: value }))}
@@ -517,7 +517,7 @@ if (isLoading) {
                   </SelectContent>
                 </Select>
                 <p className="text-xs text-muted-foreground">
-                  {t('assetDetail.descriptions.currency')}
+                  {t('form.descriptionHelper')}
                 </p>
               </div>
             </div>
@@ -530,7 +530,7 @@ if (isLoading) {
               onClick={() => navigate('/dashboard')}
               disabled={isSaving}
             >
-              {t('assetDetail.buttons.cancel')}
+              {t('actions.cancel')}
             </Button>
             <Button
               onClick={handleSave}
@@ -539,12 +539,12 @@ if (isLoading) {
             {isSaving ? (
               <>
                 <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
-                {t('assetDetail.buttons.saving')}
+                {t('actions.saving')}
               </>
             ) : (
               <>
                 <Save className="mr-2 h-4 w-4" />
-                {isNewAsset ? t('assetDetail.buttons.createAsset') : t('assetDetail.buttons.updateAsset')}
+                {isNewAsset ? t('actions.saveAsset') : t('actions.updateAsset')}
               </>
             )}
           </Button>
@@ -556,23 +556,23 @@ if (isLoading) {
     {!isNewAsset && assetId && assetId !== 'new' && (
       <Card>
       <CardHeader>
-        <CardTitle>{t('assetDetail.sections.liabilitiesAndDocuments')}</CardTitle>
+        <CardTitle>{t('details.documents')}</CardTitle>
       </CardHeader>
       <CardContent className="space-y-8">
         <Button onClick={() => setShowAddLiabilityModal(true)} variant="outline">
-          + {t('assetDetail.buttons.addLiability')}
+          + {t('actions.addLiability')}
         </Button>
 
         {/* Placeholder for rendering related liabilities */}
         <div>
           {liabilities.length === 0 ? (
-            <p className="text-muted-foreground">{t('assetDetail.descriptions.noLiabilities')}</p>
+            <p className="text-muted-foreground">{t('details.noLiabilities')}</p>
           ) : (
             liabilities.map((liability) => (
               <div key={liability.id} className="p-4 border rounded-md mb-4">
-                <p><strong>{t('assetDetail.fields.liabilityType')}:</strong> {liability.liability_type}</p>
-                <p><strong>{t('assetDetail.fields.providerName')}:</strong> {liability.provider_name}</p>
-                <p><strong>{t('assetDetail.fields.referenceNumber')}:</strong> {liability.reference_number}</p>
+                <p><strong>{t('form.liens')}:</strong> {liability.liability_type}</p>
+                <p><strong>{t('form.institution')}:</strong> {liability.provider_name}</p>
+                <p><strong>{t('form.accountNumber')}:</strong> {liability.reference_number}</p>
               </div>
             ))
           )}

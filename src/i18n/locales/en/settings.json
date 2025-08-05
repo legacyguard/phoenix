@@ -1,18 +1,151 @@
 {
-  "settings.GenderPreferenceSettings.className.spacey6": "space-y-6",
-  "settings.GenderPreferenceSettings.className.spacey4": "space-y-4",
-  "settings.GenderPreferenceSettings.className.spacey3": "space-y-3",
-  "settings.GenderPreferenceSettings.className.flex_itemscenter_spacex3": "flex items-center space-x-3",
-  "settings.GenderPreferenceSettings.className.fontnormal_cursorpointer": "font-normal cursor-pointer",
-  "settings.GenderPreferenceSettings.className.pt4": "pt-4",
-  "settings.GenderPreferenceSettings.className.listdisc_listinside_spacey1_ml2": "list-disc list-inside space-y-1 ml-2",
-  "settings.PrivacySettings.className.flex_itemscenter_gap2": "flex items-center gap-2",
-  "settings.PrivacySettings.className.spacey6": "space-y-6",
-  "settings.PrivacySettings.className.spacey4": "space-y-4",
-  "settings.PrivacySettings.className.flex_itemscenter_justifybetween_spacex4": "flex items-center justify-between space-x-4",
-  "settings.PrivacySettings.className.flex1_spacey1": "flex-1 space-y-1",
-  "settings.PrivacySettings.className.grid_gap4_mt4": "grid gap-4 mt-4",
-  "settings.PrivacySettings.className.flex_itemsstart_gap3": "flex items-start gap-3",
-  "settings.PrivacySettings.className.fontmedium_textsm": "font-medium text-sm",
-  "settings.PrivacySettings.className.mt4_p3_bggray50_roundedlg": "mt-4 p-3 bg-gray-50 rounded-lg"
+  "general": {
+    "title": "Account Settings",
+    "subtitle": "Manage your account preferences and security",
+    "profile": "Profile Information",
+    "security": "Security & Privacy",
+    "notifications": "Notification Preferences",
+    "accessibility": "Accessibility Options",
+    "language": "Language & Region",
+    "subscription": "Subscription Management",
+    "dataManagement": "Data Management",
+    "support": "Support & Help"
+  },
+  "profile": {
+    "personalInfo": "Personal Information",
+    "contactInfo": "Contact Information",
+    "fullName": "Full Name",
+    "emailAddress": "Email Address",
+    "phoneNumber": "Phone Number",
+    "address": "Address",
+    "dateOfBirth": "Date of Birth",
+    "profilePhoto": "Profile Photo",
+    "changePhoto": "Change Photo",
+    "removePhoto": "Remove Photo",
+    "timezone": "Time Zone",
+    "preferredLanguage": "Preferred Language",
+    "updateProfile": "Update Profile Information",
+    "profileUpdated": "Your profile has been updated successfully"
+  },
+  "security": {
+    "passwordSecurity": "Password Security",
+    "currentPassword": "Current Password",
+    "newPassword": "New Password",
+    "confirmPassword": "Confirm New Password",
+    "changePassword": "Change Password",
+    "passwordRequirements": "Password Requirements",
+    "passwordStrength": "Password Strength",
+    "twoFactorAuth": "Two-Factor Authentication",
+    "enableTwoFactor": "Enable Two-Factor Authentication",
+    "disableTwoFactor": "Disable Two-Factor Authentication",
+    "backupCodes": "Backup Codes",
+    "generateBackupCodes": "Generate New Backup Codes",
+    "loginHistory": "Recent Login Activity",
+    "activeSessions": "Active Sessions",
+    "terminateSession": "End Session",
+    "terminateAllSessions": "End All Other Sessions",
+    "securityQuestions": "Security Questions",
+    "updateSecurityQuestions": "Update Security Questions"
+  },
+  "notifications": {
+    "emailNotifications": "Email Notifications",
+    "pushNotifications": "Push Notifications",
+    "smsNotifications": "SMS Notifications",
+    "notificationTypes": {
+      "security": "Security Alerts",
+      "updates": "Account Updates",
+      "reminders": "Task Reminders",
+      "family": "Family Activity",
+      "documents": "Document Changes",
+      "system": "System Announcements",
+      "marketing": "Product Updates & Tips"
+    },
+    "frequency": {
+      "immediate": "Immediate",
+      "daily": "Daily Summary",
+      "weekly": "Weekly Summary",
+      "never": "Never"
+    },
+    "deliveryMethod": "Delivery Method",
+    "testNotification": "Send Test Notification",
+    "notificationsSaved": "Notification preferences have been saved"
+  },
+  "accessibility": {
+    "visualSettings": "Visual Settings",
+    "fontSize": "Text Size",
+    "fontSizes": {
+      "small": "Small",
+      "medium": "Medium",
+      "large": "Large",
+      "extraLarge": "Extra Large"
+    },
+    "contrast": "Color Contrast",
+    "contrastLevels": {
+      "normal": "Normal",
+      "high": "High Contrast",
+      "extraHigh": "Extra High Contrast"
+    },
+    "animations": "Animations",
+    "reduceMotion": "Reduce Motion",
+    "screenReader": "Screen Reader Support",
+    "keyboardNavigation": "Keyboard Navigation",
+    "focusIndicators": "Enhanced Focus Indicators",
+    "accessibilityMode": "Accessibility Mode",
+    "enableAccessibilityMode": "Enable Enhanced Accessibility"
+  },
+  "language": {
+    "interfaceLanguage": "Interface Language",
+    "selectLanguage": "Select Language",
+    "dateFormat": "Date Format",
+    "timeFormat": "Time Format",
+    "numberFormat": "Number Format",
+    "currencyFormat": "Currency Format",
+    "region": "Region/Country",
+    "languageChanged": "Language settings have been updated"
+  },
+  "dataManagement": {
+    "exportData": "Export Your Data",
+    "exportDescription": "Download a complete copy of your information",
+    "exportFormats": "Available Formats",
+    "requestExport": "Request Data Export",
+    "deleteAccount": "Delete Account",
+    "deleteWarning": "This action cannot be undone",
+    "deleteConfirmation": "Type 'DELETE' to confirm account deletion",
+    "dataRetention": "Data Retention Policy",
+    "privacySettings": "Privacy Settings",
+    "dataSharing": "Data Sharing Preferences"
+  },
+  "actions": {
+    "save": "Save Changes",
+    "cancel": "Cancel Changes",
+    "reset": "Reset to Default",
+    "update": "Update Settings",
+    "confirm": "Confirm Changes",
+    "export": "Export Data",
+    "delete": "Delete Account",
+    "enable": "Enable",
+    "disable": "Disable",
+    "test": "Test Settings"
+  },
+  "notifications_system": {
+    "settingsSaved": "Your settings have been saved successfully",
+    "passwordChanged": "Your password has been changed successfully",
+    "twoFactorEnabled": "Two-factor authentication has been enabled",
+    "twoFactorDisabled": "Two-factor authentication has been disabled",
+    "sessionTerminated": "Session has been terminated",
+    "exportRequested": "Data export has been requested and will be emailed to you",
+    "accountDeleted": "Your account has been permanently deleted"
+  },
+  "errors": {
+    "savingSettings": "We could not save your settings. Please try again.",
+    "loadingSettings": "We could not load your settings. Please refresh the page.",
+    "invalidPassword": "Current password is incorrect",
+    "passwordMismatch": "New passwords do not match",
+    "weakPassword": "Password does not meet security requirements",
+    "emailInUse": "This email address is already in use",
+    "invalidEmail": "Please enter a valid email address",
+    "uploadFailed": "Photo upload failed. Please try again.",
+    "exportFailed": "Data export failed. Please try again later.",
+    "deleteFailed": "Account deletion failed. Please contact support."
+  }
 }

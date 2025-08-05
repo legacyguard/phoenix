@@ -20,7 +20,7 @@ interface PrivacySettings {
 }
 
 const PrivacyControlPanel: React.FC = () => {
-  const { t } = useTranslation('ui');
+  const { t } = useTranslation('settings');
   const { getToken } = useAuth();
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
@@ -50,11 +50,11 @@ const PrivacyControlPanel: React.FC = () => {
           const settings = await response.json();
           setUserSettings(settings);
         } else {
-          toast.error(t("privacyControlPanel.toast.loadFailed"));
+          toast.error(t("errors.loadingSettings"));
         }
       } catch (error) {
         console.error('Error fetching privacy settings:', error);
-        toast.error(t("privacyControlPanel.toast.loadError"));
+        toast.error(t("errors.loadingSettings"));
       } finally {
         setLoading(false);
       }
@@ -97,14 +97,14 @@ const PrivacyControlPanel: React.FC = () => {
       });
 
       if (response.ok) {
-        toast.success(t("privacyControlPanel.toast.saveSuccess"));
+        toast.success(t("notifications_system.settingsSaved"));
       } else {
         const error = await response.json();
-        toast.error(error.error || t("privacyControlPanel.toast.saveFailed"));
+        toast.error(error.error || t("errors.savingSettings"));
       }
     } catch (error) {
       console.error('Error saving privacy settings:', error);
-      toast.error(t("privacyControlPanel.toast.saveError"));
+      toast.error(t("errors.savingSettings"));
     } finally {
       setSaving(false);
     }
@@ -120,31 +120,31 @@ const PrivacyControlPanel: React.FC = () => {
 
   return (
     <div className="p-6 font-sans max-w-3xl mx-auto">
-      <h2 className="text-2xl font-bold text-gray-800">{t("privacyControlPanel.privacy_data_controls_1")}</h2>
-      <p className="text-gray-600 mt-1">{t("privacyControlPanel.you_are_in_complete_control_of_2")}</p>
+      <h2 className="text-2xl font-bold text-gray-800">{t("general.title")}</h2>
+      <p className="text-gray-600 mt-1">{t("general.subtitle")}</p>
 
       {/* Data Processing Card */}
       <Card className="mt-6">
         <CardHeader>
-          <CardTitle>{t("privacyControlPanel.data_processing_3")}</CardTitle>
+          <CardTitle>{t("dataManagement.exportData")}</CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
           <div>
-            <Label>{t("privacyControlPanel.default_document_processing_4")}</Label>
-            <p className="text-sm text-gray-500">{t("privacyControlPanel.choose_how_new_documents_are_h_5")}</p>
+            <Label>{t("dataManagement.exportDescription")}</Label>
+            <p className="text-sm text-gray-500">{t("dataManagement.exportDescription")}</p>
             {/* Default Processing Mode Toggle Here */}
           </div>
           <div>
-            <Label>{t("privacyControlPanel.automatic_data_deletion_6")}</Label>
-            <p className="text-sm text-gray-500">{t("privacyControlPanel.for_your_peace_of_mind_you_can_7")}</p>
+            <Label>{t("dataManagement.dataRetention")}</Label>
+            <p className="text-sm text-gray-500">{t("dataManagement.dataRetention")}</p>
             <Select value={(userSettings.autoDeleteAfter ?? 0).toString()} onValueChange={(value) => handleSettingChange('autoDeleteAfter', parseInt(value))}>
               <SelectTrigger>
                 <SelectValue />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="0">{t("privacyControlPanel.never_delete_8")}</SelectItem>
-                <SelectItem value="1">{t("privacyControlPanel.1_year_of_inactivity_9")}</SelectItem>
-                <SelectItem value="3">{t("privacyControlPanel.3_years_of_inactivity_10")}</SelectItem>
+                              <SelectItem value="0">{t("dataManagement.dataRetention")}</SelectItem>
+              <SelectItem value="1">{t("dataManagement.dataRetention")}</SelectItem>
+              <SelectItem value="3">{t("dataManagement.dataRetention")}</SelectItem>
               </SelectContent>
             </Select>
           </div>
@@ -154,13 +154,13 @@ const PrivacyControlPanel: React.FC = () => {
       {/* AI Features Card */}
       <Card className="mt-6">
         <CardHeader>
-          <CardTitle>{t("privacyControlPanel.ai_assistant_features_11")}</CardTitle>
+          <CardTitle>{t("accessibility.visualSettings")}</CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="flex items-center justify-between">
             <div>
-              <Label>{t("privacyControlPanel.expiration_intelligence_12")}</Label>
-              <p className="text-sm text-gray-500">{t("privacyControlPanel.get_alerts_for_expiring_docume_13")}</p>
+              <Label>{t("accessibility.fontSize")}</Label>
+              <p className="text-sm text-gray-500">{t("accessibility.fontSize")}</p>
             </div>
             <Switch 
               checked={userSettings.aiFeatureToggles?.expirationIntelligence ?? true} 
@@ -174,10 +174,10 @@ const PrivacyControlPanel: React.FC = () => {
       {/* Family Access Management (Preview) */}
       <Card className="mt-6 opacity-50">
         <CardHeader>
-          <CardTitle>{t('privacy.familyAccess')}</CardTitle>
+          <CardTitle>{t('dataManagement.privacySettings')}</CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
-          <p className="text-sm text-gray-500">{t("privacyControlPanel.granular_access_controls_for_e_14")}</p>
+          <p className="text-sm text-gray-500">{t("dataManagement.privacySettings")}</p>
         </CardContent>
       </Card>
 
@@ -189,10 +189,10 @@ const PrivacyControlPanel: React.FC = () => {
         {saving ? (
           <>
             <Loader2 className="w-4 h-4 mr-2 animate-spin" />
-            {t("privacyControlPanel.saving")}
+            {t("actions.save")}
           </>
         ) : (
-          t("privacyControlPanel.save_privacy_settings_15")
+          t("actions.save")
         )}
       </Button>
     </div>);

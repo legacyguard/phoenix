@@ -105,7 +105,7 @@ export const AssetOverview: React.FC = () => {
 
     } catch (error) {
       console.error('[AssetOverview] Error loading data:', error);
-      toast.error(t('assets.overview.errors.loadFailed'));
+      toast.error(t('errors.loadingAssets'));
     } finally {
       setLoading(false);
     }
@@ -136,7 +136,7 @@ export const AssetOverview: React.FC = () => {
   const chartData = statistics.
   filter((stat) => stat.count > 0).
   map((stat) => ({
-    name: t(`assets.categories.${stat.category}`),
+    name: t(`categories.${stat.category}`),
     value: stat.total_value || 0,
     count: stat.count
   }));
@@ -182,7 +182,7 @@ export const AssetOverview: React.FC = () => {
           <CardHeader className="pb-3">
             <CardTitle className="flex items-center gap-2">
               <TrendingUp className="h-5 w-5" />
-              {t('vault.totalValue')}
+              {t('vault.estimatedWorth')}
             </CardTitle>
           </CardHeader>
           <CardContent>
@@ -290,12 +290,12 @@ export const AssetOverview: React.FC = () => {
             </CardHeader>
             <CardContent>
               <div className="h-64">
-                <ResponsiveContainer width={t("assets.assetOverview.100_2")} height={t("assets.assetOverview.100_2")}>
+                <ResponsiveContainer width="100%" height="100%">
                   <RechartsChart>
                     <Pie
                     data={chartData}
-                    cx={t("assets.assetOverview.50_4")}
-                    cy={t("assets.assetOverview.50_4")}
+                    cx="50%"
+                    cy="50%"
                     labelLine={false}
                     label={({ percent }) => `${(percent * 100).toFixed(0)}%`}
                     outerRadius={80}

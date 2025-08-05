@@ -7,33 +7,33 @@ import { Mail, Calendar } from 'lucide-react';
 import { API_URLS } from '@/utils/constants';
 
 const Help: React.FC = () => {
-  const { t } = useTranslation('ui');
+  const { t } = useTranslation('help');
 
   const faqItems = [
     {
       id: 'q1',
-      question: t('helpPage.faq.q1.question'),
-      answer: t('helpPage.faq.q1.answer'),
+      question: t('faq.frequentlyAsked'),
+      answer: t('faq.frequentlyAsked'),
     },
     {
       id: 'q2',
-      question: t('helpPage.faq.q2.question'),
-      answer: t('helpPage.faq.q2.answer'),
+      question: t('faq.frequentlyAsked'),
+      answer: t('faq.frequentlyAsked'),
     },
     {
       id: 'q3',
-      question: t('helpPage.faq.q3.question'),
-      answer: t('helpPage.faq.q3.answer'),
+      question: t('faq.frequentlyAsked'),
+      answer: t('faq.frequentlyAsked'),
     },
     {
       id: 'q4',
-      question: t('helpPage.faq.q4.question'),
-      answer: t('helpPage.faq.q4.answer'),
+      question: t('faq.frequentlyAsked'),
+      answer: t('faq.frequentlyAsked'),
     },
     {
       id: 'q5',
-      question: t('helpPage.faq.q5.question'),
-      answer: t('helpPage.faq.q5.answer'),
+      question: t('faq.frequentlyAsked'),
+      answer: t('faq.frequentlyAsked'),
     },
   ];
 
@@ -49,16 +49,16 @@ const Help: React.FC = () => {
     <div className="container mx-auto px-4 lg:px-8 py-8 max-w-4xl">
       <div className="mb-8">
         <h1 className="text-4xl font-bold text-primary mb-3">
-          {t('helpPage.title')}
+          {t('support.title')}
         </h1>
         <p className="text-lg text-muted-foreground">
-          {t('helpPage.subtitle')}
+          {t('support.subtitle')}
         </p>
       </div>
 
       <div className="mb-12">
         <h2 className="text-2xl font-semibold text-primary mb-6">
-          {t('helpPage.faq.title')}
+          {t('faq.frequentlyAsked')}
         </h2>
         <Accordion type="single" collapsible className="w-full">
           {faqItems.map((item) => (
@@ -78,7 +78,7 @@ const Help: React.FC = () => {
 
       <div className="mt-16">
         <h2 className="text-2xl font-semibold text-primary mb-2">
-          {t('helpPage.contact.title')}
+          {t('contact.contactForm')}
         </h2>
         
         <div className="grid md:grid-cols-2 gap-6">
@@ -87,18 +87,18 @@ const Help: React.FC = () => {
               <div className="mx-auto w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
                 <Mail className="h-8 w-8 text-primary" />
               </div>
-              <CardTitle className="text-xl">{t('helpPage.contact.email.title')}</CardTitle>
+              <CardTitle className="text-xl">{t('contact.emailSupport')}</CardTitle>
             </CardHeader>
             <CardContent className="text-center">
               <p className="text-muted-foreground mb-6">
-                {t('helpPage.contact.email.description')}
+                {t('contact.emailSupport')}
               </p>
               <Button 
                 onClick={handleEmailClick}
                 className="w-full"
                 variant="default"
               >
-                {t('helpPage.contact.email.button')}
+                {t('contact.emailSupport')}
               </Button>
             </CardContent>
           </Card>
@@ -108,18 +108,18 @@ const Help: React.FC = () => {
               <div className="mx-auto w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
                 <Calendar className="h-8 w-8 text-primary" />
               </div>
-              <CardTitle className="text-xl">{t('helpPage.contact.call.title')}</CardTitle>
+              <CardTitle className="text-xl">{t('contact.callSupport')}</CardTitle>
             </CardHeader>
             <CardContent className="text-center">
               <p className="text-muted-foreground mb-6">
-                {t('helpPage.contact.call.description')}
+                {t('contact.callSupport')}
               </p>
               <Button 
                 onClick={handleScheduleClick}
                 className="w-full"
                 variant="outline"
               >
-                {t('helpPage.contact.call.button')}
+                {t('contact.callSupport')}
               </Button>
             </CardContent>
           </Card>
