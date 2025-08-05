@@ -45,7 +45,8 @@ interface OnboardingWizardProps {
 }
 
 export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({ isOpen, onClose, onComplete, useLifeQuestions = true }) => {
-  const { t } = useTranslation('ui');
+  const { t } = useTranslation('onboarding');
+  const { t: tCommon } = useTranslation('ui');
   const { trackAction, trackFormInteraction, startTimer, endTimer } = useAnalytics({ componentName: 'OnboardingWizard', userJourneyStage: 'onboarding' });
   const [currentStep, setCurrentStep] = useState(0); // 0 for BasicLifeQuestions
   const [isLoading, setIsLoading] = useState(false);
@@ -327,8 +328,8 @@ export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({ isOpen, onCl
           <div className="space-y-6">
             <Loader2 className="h-12 w-12 text-primary mx-auto animate-spin" />
             <div className="space-y-2">
-              <h3 className="text-xl font-bold">{t('onboarding.analysis.title')}</h3>
-              <p className="text-muted-foreground">{t('onboarding.analysis.subtitle')}</p>
+              <h3 className="text-xl font-bold">{t('analysis.title')}</h3>
+              <p className="text-muted-foreground">{t('analysis.subtitle')}</p>
             </div>
           </div>
         </div>
@@ -350,7 +351,7 @@ export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({ isOpen, onCl
         return (
           <div className="space-y-8">
             <div className="text-center space-y-6">
-              <h3 className="text-2xl font-bold">{t('onboarding.q1.title')}</h3>
+              <h3 className="text-2xl font-bold">{t('questions.q1.title')}</h3>
               <div className="flex flex-col gap-4 max-w-md mx-auto">
                 <Button 
                   variant={answers.documentAccess === 'yes' ? "default" : "outline"}
@@ -361,7 +362,7 @@ export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({ isOpen, onCl
                   size="lg"
                   className="w-full text-left justify-start"
                 >
-                  {t('onboarding.q1.option1')}
+                  {t('questions.q1.option1')}
                 </Button>
                 <Button 
                   variant={answers.documentAccess === 'no' ? "default" : "outline"}
@@ -372,7 +373,7 @@ export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({ isOpen, onCl
                   size="lg"
                   className="w-full text-left justify-start"
                 >
-                  {t('onboarding.q1.option2')}
+                  {t('questions.q1.option2')}
                 </Button>
                 <Button 
                   variant={answers.documentAccess === 'partially' ? "default" : "outline"}
@@ -383,7 +384,7 @@ export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({ isOpen, onCl
                   size="lg"
                   className="w-full text-left justify-start"
                 >
-                  {t('onboarding.q1.option3')}
+                  {t('questions.q1.option3')}
                 </Button>
               </div>
             </div>
@@ -394,7 +395,7 @@ export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({ isOpen, onCl
         return (
           <div className="space-y-8">
             <div className="text-center space-y-6">
-              <h3 className="text-2xl font-bold">{t('onboarding.q2.title')}</h3>
+              <h3 className="text-2xl font-bold">{t('questions.q2.title')}</h3>
               <div className="flex flex-col gap-4 max-w-md mx-auto">
                 <Button 
                   variant={answers.caretaker === 'designated' ? "default" : "outline"}
@@ -405,7 +406,7 @@ export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({ isOpen, onCl
                   size="lg"
                   className="w-full text-left justify-start"
                 >
-                  {t('onboarding.q2.option1')}
+                  {t('questions.q2.option1')}
                 </Button>
                 <Button 
                   variant={answers.caretaker === 'family_figure_out' ? "default" : "outline"}
@@ -416,7 +417,7 @@ export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({ isOpen, onCl
                   size="lg"
                   className="w-full text-left justify-start"
                 >
-                  {t('onboarding.q2.option2')}
+                  {t('questions.q2.option2')}
                 </Button>
                 <Button 
                   variant={answers.caretaker === 'not_thought' ? "default" : "outline"}
@@ -427,7 +428,7 @@ export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({ isOpen, onCl
                   size="lg"
                   className="w-full text-left justify-start"
                 >
-                  {t('onboarding.q2.option3')}
+                  {t('questions.q2.option3')}
                 </Button>
               </div>
             </div>
@@ -438,7 +439,7 @@ export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({ isOpen, onCl
         return (
           <div className="space-y-8">
             <div className="text-center space-y-6">
-              <h3 className="text-2xl font-bold">{t('onboarding.q3.title')}</h3>
+              <h3 className="text-2xl font-bold">{t('questions.q3.title')}</h3>
               <div className="flex flex-col gap-4 max-w-md mx-auto">
                 <Button 
                   variant={answers.familyClarity === 'yes_clear' ? "default" : "outline"}
@@ -449,7 +450,7 @@ export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({ isOpen, onCl
                   size="lg"
                   className="w-full text-left justify-start"
                 >
-                  {t('onboarding.q3.option1')}
+                  {t('questions.q3.option1')}
                 </Button>
                 <Button 
                   variant={answers.familyClarity === 'somewhat' ? "default" : "outline"}
@@ -460,7 +461,7 @@ export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({ isOpen, onCl
                   size="lg"
                   className="w-full text-left justify-start"
                 >
-                  {t('onboarding.q3.option2')}
+                  {t('questions.q3.option2')}
                 </Button>
                 <Button 
                   variant={answers.familyClarity === 'never_discussed' ? "default" : "outline"}
@@ -471,7 +472,7 @@ export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({ isOpen, onCl
                   size="lg"
                   className="w-full text-left justify-start"
                 >
-                  {t('onboarding.q3.option3')}
+                  {t('questions.q3.option3')}
                 </Button>
               </div>
             </div>
@@ -482,7 +483,7 @@ export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({ isOpen, onCl
         return (
           <div className="space-y-8">
             <div className="text-center space-y-6">
-              <h3 className="text-2xl font-bold">{t('onboarding.q4.title')}</h3>
+              <h3 className="text-2xl font-bold">{t('questions.q4.title')}</h3>
               <div className="flex flex-col gap-4 max-w-md mx-auto">
                 <Button 
                   variant={answers.biggestWorry === 'financial' ? "default" : "outline"}
@@ -493,7 +494,7 @@ export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({ isOpen, onCl
                   size="lg"
                   className="w-full text-left justify-start"
                 >
-                  {t('onboarding.q4.option1')}
+                  {t('questions.q4.option1')}
                 </Button>
                 <Button 
                   variant={answers.biggestWorry === 'legal' ? "default" : "outline"}
@@ -504,7 +505,7 @@ export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({ isOpen, onCl
                   size="lg"
                   className="w-full text-left justify-start"
                 >
-                  {t('onboarding.q4.option2')}
+                  {t('questions.q4.option2')}
                 </Button>
                 <Button 
                   variant={answers.biggestWorry === 'memories' ? "default" : "outline"}
@@ -515,7 +516,7 @@ export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({ isOpen, onCl
                   size="lg"
                   className="w-full text-left justify-start"
                 >
-                  {t('onboarding.q4.option3')}
+                  {t('questions.q4.option3')}
                 </Button>
                 <Button 
                   variant={answers.biggestWorry === 'conflicts' ? "default" : "outline"}
@@ -526,7 +527,7 @@ export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({ isOpen, onCl
                   size="lg"
                   className="w-full text-left justify-start"
                 >
-                  {t('onboarding.q4.option4')}
+                  {t('questions.q4.option4')}
                 </Button>
               </div>
             </div>
@@ -550,10 +551,10 @@ export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({ isOpen, onCl
               <div className="flex items-start justify-between">
                 <div className="flex-1">
                   <DialogTitle className="text-center text-3xl font-bold">
-                    {t('onboarding.mainTitle')}
+                    {t('welcome.title')}
                   </DialogTitle>
                   <p className="text-center text-muted-foreground mt-2 text-lg">
-                    {t('onboarding.mainSubtitle')}
+                    {t('welcome.subtitle')}
                   </p>
                 </div>
                 <Button
@@ -563,7 +564,7 @@ export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({ isOpen, onCl
                   className="ml-4"
                 >
                   <SkipForward className="mr-2 h-4 w-4" />
-                  {t('onboarding.skipButton')}
+                  {t('welcome.skipForNow')}
                 </Button>
               </div>
             </DialogHeader>
@@ -574,7 +575,7 @@ export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({ isOpen, onCl
           {!showLifeQuestions && (
             <div className="space-y-3">
               <div className="flex justify-between text-sm text-muted-foreground">
-                <span>{t('onboarding.progressText', { step: currentStep })}</span>
+                <span>{t('progress.step', { current: currentStep, total: totalSteps })}</span>
                 <span>{Math.round((currentStep / totalSteps) * 100)}%</span>
               </div>
               <Progress value={(currentStep / totalSteps) * 100} className="w-full h-2" />
@@ -598,7 +599,7 @@ export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({ isOpen, onCl
                 disabled={currentStep === 1}
                 size="lg"
               >
-                {t('onboarding.buttons.previous')}
+                {tCommon('common.back')}
               </Button>
               
               {currentStep < totalSteps ? (
@@ -607,7 +608,7 @@ export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({ isOpen, onCl
                   disabled={!canProceed()}
                   size="lg"
                 >
-                  {t('onboarding.buttons.next')}
+                  {tCommon('common.next')}
                   <ChevronRight className="ml-2 h-4 w-4" />
                 </Button>
               ) : (
@@ -615,11 +616,11 @@ export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({ isOpen, onCl
                   {isLoading ? (
                     <>
                       <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                      {t('onboarding.analysis.title')}
+                      {t('analysis.title')}
                     </>
                   ) : (
                     <>
-                      {t('onboarding.buttons.generate')}
+                      {t('completion.viewPlan')}
                       <ChevronRight className="ml-2 h-4 w-4" />
                     </>
                   )}
@@ -635,17 +636,17 @@ export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({ isOpen, onCl
     <AlertDialog open={showSkipConfirm} onOpenChange={setShowSkipConfirm}>
       <AlertDialogContent>
         <AlertDialogHeader>
-          <AlertDialogTitle>{t('onboarding.skipConfirmTitle')}</AlertDialogTitle>
+          <AlertDialogTitle>{t('skip.title')}</AlertDialogTitle>
           <AlertDialogDescription>
-            {t('onboarding.skipConfirmMessage')}
+            {t('skip.description')}
           </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>
           <AlertDialogCancel onClick={() => setShowSkipConfirm(false)}>
-            {t('onboarding.skipConfirmNo')}
+            {t('skip.continueSetup')}
           </AlertDialogCancel>
           <AlertDialogAction onClick={handleSkipConfirm}>
-            {t('onboarding.skipConfirmYes')}
+            {t('skip.skipConfirm')}
           </AlertDialogAction>
         </AlertDialogFooter>
       </AlertDialogContent>

@@ -13,7 +13,7 @@ export const Login: React.FC = () => {
         <div className="text-center">
           <div className="flex justify-center items-center space-x-2 mb-6">
             <Shield className="h-8 w-8 text-primary" />
-            <span className="text-2xl font-bold text-primary">{t('app.name')}</span>
+            <span className="text-2xl font-bold text-primary">{t('login.title')}</span>
           </div>
         </div>
 
@@ -36,13 +36,13 @@ export const Login: React.FC = () => {
 
         <div className="text-center text-sm">
           <span className="text-muted-foreground">
-            {t('auth.noAccount')}{' '}
+            {t('login.noAccount')}{' '}
           </span>
           <Link 
             to="/register" 
             className="text-primary hover:text-primary/80 font-medium"
           >
-            {t('auth.signUpLink')}
+            {t('login.createAccount')}
           </Link>
         </div>
       </div>

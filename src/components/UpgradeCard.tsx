@@ -32,7 +32,7 @@ const UpgradeCard: React.FC<UpgradeCardProps> = ({
           {text}
         </CardDescription>
         <Button asChild className="w-full sm:w-auto">
-          <Link to={t("upgradeCard.pricing_1")}>
+          <Link to={t("upgradeCard.pricing")}>
             {buttonText || defaultButtonText}
             <ArrowRight className="ml-2 h-4 w-4" />
           </Link>

@@ -3,10 +3,12 @@
 import React, { useState, useEffect } from 'react';
 import { X, Download, Smartphone, Shield } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { usePWA } from '@/hooks/usePWA';import { useTranslation } from "react-i18next";
+import { usePWA } from '@/hooks/usePWA';
+import { useTranslation } from "react-i18next";
 
 export function PWAInstallBanner() {
   const { isInstallable, isInstalled, installApp } = usePWA();
+  const { t } = useTranslation('ui');
   const [isDismissed, setIsDismissed] = useState(false);
 
   // Check if banner was previously dismissed
@@ -39,7 +41,7 @@ export function PWAInstallBanner() {
         <button
           onClick={handleDismiss}
           className="absolute top-2 right-2 text-gray-400 hover:text-gray-600"
-          aria-label="Dismiss">
+          aria-label={t("pwaInstallBanner.dismiss")}>
 
           <X className="h-5 w-5" />
         </button>
@@ -52,36 +54,26 @@ export function PWAInstallBanner() {
           </div>
 
           <div className="flex-1">
-            <h3 className="text-lg font-semibold text-gray-900 mb-1">{t("pWAInstallBanner.install_legacyguard_1")}
-
-            </h3>
-            <p className="text-sm text-gray-600 mb-3">{t("pWAInstallBanner.access_your_family_information_2")}
-
-            </p>
+            <h3 className="text-lg font-semibold text-gray-900 mb-1">{t("pwaInstallBanner.installLegacyGuard")}</h3>
+            <p className="text-sm text-gray-600 mb-3">{t("pwaInstallBanner.accessFamilyInformation")}</p>
 
             <div className="flex items-center space-x-2 text-xs text-gray-500 mb-4">
               <Shield className="h-4 w-4" />
-              <span>{t("pWAInstallBanner.secure_offline_access_3")}</span>
+              <span>{t("pwaInstallBanner.secureOfflineAccess")}</span>
               <span className="text-gray-300">•</span>
               <Download className="h-4 w-4" />
-              <span>{t("pWAInstallBanner.quick_access_from_home_screen_4")}</span>
+              <span>{t("pwaInstallBanner.quickAccessFromHomeScreen")}</span>
             </div>
 
             <div className="flex space-x-2">
               <Button
                 onClick={handleInstall}
                 size="sm"
-                className="bg-purple-600 hover:bg-purple-700">{t("pWAInstallBanner.install_now_5")}
-
-
-              </Button>
+                className="bg-purple-600 hover:bg-purple-700">{t("pwaInstallBanner.installNow")}</Button>
               <Button
                 onClick={handleDismiss}
                 size="sm"
-                variant="outline">{t("pWAInstallBanner.maybe_later_6")}
-
-
-              </Button>
+                variant="outline">{t("pwaInstallBanner.maybeLater")}</Button>
             </div>
           </div>
         </div>

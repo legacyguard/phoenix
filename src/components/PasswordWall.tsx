@@ -14,7 +14,7 @@ interface PasswordWallProps {
 }
 
 export default function PasswordWall({ children }: PasswordWallProps) {
-  const { t, ready } = useTranslation('ui');
+const { t, ready } = useTranslation();
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -36,7 +36,7 @@ export default function PasswordWall({ children }: PasswordWallProps) {
       setIsAuthenticated(true);
       // Don't store authentication state - session only
     } else {
-      setError(t('common.auth.incorrectPassword'));
+      setError(t('passwordWall.incorrectPassword'));
       setPassword('');
     }
   };
@@ -51,7 +51,7 @@ export default function PasswordWall({ children }: PasswordWallProps) {
   if (!ready) {
     return (
       <div className="flex items-center justify-center min-h-screen bg-background">
-        <div className="animate-pulse">{t("passwordWall.loading_1")}</div>
+        <div className="animate-pulse">{t("passwordWall.loading")}</div>
       </div>);
   }
 
@@ -68,7 +68,7 @@ export default function PasswordWall({ children }: PasswordWallProps) {
             className="flex items-center gap-2"
           >
             <LogOut className="h-4 w-4" />
-            {t('common.auth.logout')}
+            {t('passwordWall.logout')}
           </Button>
         </div>
         {children}
@@ -86,21 +86,21 @@ export default function PasswordWall({ children }: PasswordWallProps) {
               <Lock className="h-6 w-6 text-primary" />
             </div>
           </div>
-      <CardTitle className="text-2xl">{t('common.auth.protectedApplication')}</CardTitle>
+      <CardTitle className="text-2xl">{t('passwordWall.title')}</CardTitle>
       <CardDescription>
-        {t('common.auth.protectedApplicationDesc')}
+        {t('passwordWall.description')}
       </CardDescription>
         </CardHeader>
         <CardContent>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="space-y-2">
-              <Label htmlFor="password">{t('common.auth.password')}</Label>
+              <Label htmlFor="password">{t('passwordWall.password')}</Label>
               <Input
                 id="password"
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                placeholder={t('common.auth.enterPassword')}
+                placeholder={t('passwordWall.enterPassword')}
                 autoFocus
                 required />
 
@@ -114,7 +114,7 @@ export default function PasswordWall({ children }: PasswordWallProps) {
             }
             
             <Button type="submit" className="w-full" size="lg">
-              {t('common.auth.accessApplication')}
+              {t('passwordWall.accessApplication')}
             </Button>
           </form>
         </CardContent>

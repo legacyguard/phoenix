@@ -61,7 +61,7 @@ export const Vault: React.FC = () => {
       setFilteredAssets(data || []);
     } catch (err) {
       console.error('Error fetching assets:', err);
-      setError(t('vault.errorLoadingAssets'));
+      setError(t('errors.loadingAssets'));
     } finally {
       setIsLoading(false);
     }
@@ -177,7 +177,7 @@ export const Vault: React.FC = () => {
           <div className="text-center max-w-4xl mx-auto space-y-8">
             {/* Large Headline */}
             <h2 className="text-4xl font-bold text-foreground">
-              {t('vault.letsBuildInventory')}
+              {t('vault.addFirst')}
             </h2>
             
             {/* Asset Type Grid */}
@@ -191,7 +191,7 @@ export const Vault: React.FC = () => {
                   <div className="p-4 bg-primary/10 rounded-full">
                     <Home className="h-12 w-12 text-primary" />
                   </div>
-                  <h3 className="text-lg font-semibold">{t('vault.addProperty')}</h3>
+                  <h3 className="text-lg font-semibold">{t('categories.realEstate')}</h3>
                 </CardContent>
               </Card>
 
@@ -204,7 +204,7 @@ export const Vault: React.FC = () => {
                   <div className="p-4 bg-primary/10 rounded-full">
                     <Landmark className="h-12 w-12 text-primary" />
                   </div>
-                  <h3 className="text-lg font-semibold">{t('vault.addFinances')}</h3>
+                  <h3 className="text-lg font-semibold">{t('categories.financial')}</h3>
                 </CardContent>
               </Card>
 
@@ -217,7 +217,7 @@ export const Vault: React.FC = () => {
                   <div className="p-4 bg-primary/10 rounded-full">
                     <Car className="h-12 w-12 text-primary" />
                   </div>
-                  <h3 className="text-lg font-semibold">{t('vault.addVehicle')}</h3>
+                  <h3 className="text-lg font-semibold">{t('categories.vehicles')}</h3>
                 </CardContent>
               </Card>
 
@@ -230,7 +230,7 @@ export const Vault: React.FC = () => {
                   <div className="p-4 bg-primary/10 rounded-full">
                     <Laptop className="h-12 w-12 text-primary" />
                   </div>
-                  <h3 className="text-lg font-semibold">{t('vault.addDigitalAsset')}</h3>
+                  <h3 className="text-lg font-semibold">{t('categories.digital')}</h3>
                 </CardContent>
               </Card>
 
@@ -243,7 +243,7 @@ export const Vault: React.FC = () => {
                   <div className="p-4 bg-primary/10 rounded-full">
                     <Gem className="h-12 w-12 text-primary" />
                   </div>
-                  <h3 className="text-lg font-semibold">{t('vault.addPersonalItem')}</h3>
+                  <h3 className="text-lg font-semibold">{t('categories.personal')}</h3>
                 </CardContent>
               </Card>
 

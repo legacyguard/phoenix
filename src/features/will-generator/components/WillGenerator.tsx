@@ -4,7 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 import { Progress } from '@/components/ui/progress';
 import { AlertCircle, CheckCircle2, FileText, Users, Briefcase, Eye } from 'lucide-react';
-import { useGenderAwareTranslation } from '@/i18n/useGenderAwareTranslation';
+import { useTranslation } from 'react-i18next';
 import { toast } from 'sonner';
 import { CountrySelector } from './CountrySelector';
 import { AssetAllocationWizard } from './AssetAllocationWizard';
@@ -18,7 +18,7 @@ interface WillGeneratorProps {
 }
 
 export function WillGenerator({ onComplete }: WillGeneratorProps) {
-  const { t } = useGenderAwareTranslation();
+  const { t } = useTranslation('wills');
   const [currentStep, setCurrentStep] = useState(0);
   const [countryCode, setCountryCode] = useState<string>('');
   const [languageCode, setLanguageCode] = useState<string>('en');
@@ -36,34 +36,46 @@ export function WillGenerator({ onComplete }: WillGeneratorProps) {
 
   const steps = [
     {
-      id: 'country',
-      title: t('will.steps.country'),
+      id: 'personal',
+      title: t('steps.personal.title'),
       icon: FileText,
-      description: t('will.steps.countryDesc')
+      description: t('steps.personal.description')
     },
     {
-      id: 'allocation',
-      title: t('will.steps.allocation'),
+      id: 'assets',
+      title: t('steps.assets.title'),
       icon: Users,
-      description: t('will.steps.allocationDesc')
+      description: t('steps.assets.description')
     },
     {
       id: 'beneficiaries',
-      title: t('will.steps.beneficiaries'),
+      title: t('steps.beneficiaries.title'),
       icon: Users,
-      description: t('will.steps.beneficiariesDesc')
+      description: t('steps.beneficiaries.description')
     },
     {
-      id: 'executors',
-      title: t('will.steps.executors'),
+      id: 'guardians',
+      title: t('steps.guardians.title'),
       icon: Briefcase,
-      description: t('will.steps.executorsDesc')
+      description: t('steps.guardians.description')
+    },
+    {
+      id: 'executor',
+      title: t('steps.executor.title'),
+      icon: Briefcase,
+      description: t('steps.executor.description')
+    },
+    {
+      id: 'preferences',
+      title: t('steps.preferences.title'),
+      icon: Eye,
+      description: t('steps.preferences.description')
     },
     {
       id: 'review',
-      title: t('will.steps.review'),
+      title: t('steps.review.title'),
       icon: Eye,
-      description: t('will.steps.reviewDesc')
+      description: t('steps.review.description')
     }
   ];
 
@@ -77,20 +89,20 @@ export function WillGenerator({ onComplete }: WillGeneratorProps) {
     switch (currentStep) {
       case 0: // Country selection
         if (!countryCode) {
-          errors.country = t('will.validation.selectCountry');
+          errors.country = t('validation.jurisdictionRequired');
         }
         // Add UK jurisdiction validation
         if (countryCode === 'GB' && !countryCode.includes('-')) {
-          errors.ukJurisdiction = t('will_generator.error_uk_jurisdiction_required');
+          errors.ukJurisdiction = t('validation.jurisdictionRequired');
         }
         if (!willContent.testator?.name) {
-          errors.name = t('will.validation.requiredField');
+          errors.name = t('validation.nameRequired');
         }
         if (!willContent.testator?.birthDate) {
-          errors.birthDate = t('will.validation.requiredField');
+          errors.birthDate = t('validation.dobRequired');
         }
         if (!willContent.testator?.address) {
-          errors.address = t('will.validation.requiredField');
+          errors.address = t('validation.addressRequired');
         }
         break;
 

@@ -18,6 +18,8 @@ import { ErrorDebugPanel } from "@/components/debug/ErrorDebugPanel";
 import { ConsentManager } from "./components/privacy/ConsentManager";
 import { Loader2 } from "lucide-react";
 import { usePerformanceMonitoring } from "@/hooks/usePerformanceMonitoring";
+import PasswordWall from "@/components/PasswordWall";
+import { UserFlowManager } from "@/components/auth/UserFlowManager";
 
 // Loading component for lazy loaded routes
 const PageLoader = () => (
@@ -93,10 +95,12 @@ const AppContent = () => {
   const { t } = useTranslation();
 
   return (
-    <GeoLocationProvider>
-      <>
-      <Suspense fallback={<PageLoader />}>
-      <Routes>
+    <PasswordWall>
+      <UserFlowManager>
+        <GeoLocationProvider>
+          <>
+          <Suspense fallback={<PageLoader />}>
+          <Routes>
         {/* Public routes with marketing layout */}
         <Route path="/" element={<MarketingLayout><Landing /></MarketingLayout>} />
         <Route path="/login" element={<MarketingLayout><Login /></MarketingLayout>} />
@@ -262,6 +266,8 @@ const AppContent = () => {
       <ErrorDebugPanel />
     </>
     </GeoLocationProvider>
+      </UserFlowManager>
+    </PasswordWall>
   );
 };
 

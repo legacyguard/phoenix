@@ -1,166 +1,52 @@
 {
-  "executor": {
-    "completed": "Completed",
-    "dashboard": {
-      "reminder": "Remember to take care of yourself during this difficult time. Don't hesitate to ask for help when needed.",
-      "subtitle": "A step-by-step guide to help you through this difficult time",
-      "title": "Executor's Dashboard"
-    },
-    "due": "Due",
-    "errors": {
-      "loadTasksFailed": "Failed to load executor tasks. Please try again later.",
-      "updateTaskFailed": "Failed to update task status."
-    },
-    "highPriority": "High Priority",
-    "markComplete": "Mark Complete",
-    "sections": {
-      "firstWeek": {
-        "description": "Important tasks to complete within the first week",
-        "empty": "All first week tasks completed!",
-        "title": "First Week Tasks"
-      },
-      "immediate": {
-        "description": "Critical tasks that need your immediate attention",
-        "empty": "All immediate tasks completed!",
-        "title": "Immediate Tasks (First 48 Hours)"
-      },
-      "ongoing": {
-        "description": "Tasks to handle over the coming weeks and months",
-        "empty": "All ongoing tasks completed!",
-        "title": "Ongoing Responsibilities"
-      }
-    },
-    "stats": {
-      "completed": "Completed",
-      "remaining": "Remaining",
-      "totalTasks": "Total Tasks"
-    },
-    "undo": "Undo",
-    "viewAccountDetails": "View Account Details & Password"
-  },
-  "executorManagement": {
-    "add_new_executor_10": "Add New Executor",
-    "all_executors_must_have_legacy_23": "All executors must have LegacyGuard accounts to access your information",
-    "current_executors_17": "Current Executors",
-    "designate_trusted_individuals__9": "Designate trusted individuals who will help manage your affairs and support your loved ones",
-    "email_address_11": "Email Address",
-    "emergency_contact_16": "Emergency Contact",
-    "emergency_contacts_are_notifie_22": "Emergency contacts are notified in urgent situations only",
-    "executor_example_com_12": "executor@example.com",
-    "executor_management_8": "Executor Management",
-    "failed_to_add_executor_5": "Failed to add executor",
-    "failed_to_load_executors_2": "Failed to load executors",
-    "failed_to_remove_executor_6": "Failed to remove executor",
-    "important_information_19": "Important Information",
-    "loading_executors_7": "Loading executors...",
-    "no_executors_designated_yet_ad_18": "No executors designated yet. Add someone you trust to help manage your affairs.",
-    "primary_executor_14": "Primary Executor",
-    "primary_executors_receive_imme_20": "Primary executors receive immediate access to your vault when needed",
-    "relationship_type_13": "Relationship Type",
-    "secondary_executor_15": "Secondary Executor",
-    "secondary_executors_are_notifi_21": "Secondary executors are notified but have limited access",
-    "statusLabels": {
-      "addExecutor": "Add Executor",
-      "adding": "Adding...",
-      "unknownUser": "Unknown User"
-    },
-    "successMessages": {
-      "executorAdded": "Executor added successfully",
-      "executorRemoved": "Executor removed successfully"
-    },
-    "this_person_is_already_designa_4": "This person is already designated as an executor",
-    "user_not_found_with_this_email_3": "User not found with this email"
-  },
-  "guardian": {
-    "accepted": "Accepted",
-    "declined": "Declined",
-    "invitationSent": "Invitation Sent",
-    "sendInvite": "Send Invite"
-  },
-  "guardianUpload": {
-    "addButton": "Add Guardian",
-    "addTitle": "Add Guardian",
-    "added": "Guardian added successfully",
-    "countryDescription": "This helps us provide region-specific legal guidance",
-    "countryLabel": "Country of Residence",
-    "countryPlaceholder": "Select country",
-    "description": "Add a trusted person who will help manage your affairs and support your loved ones.",
-    "editTitle": "Edit Guardian",
-    "emailLabel": "Email Address",
-    "emailPlaceholder": "Enter email address (optional)",
-    "error": "Error",
-    "errors": {
-      "connectionError": "Connection error. Please check your internet connection",
-      "duplicateError": "A record with this information already exists",
-      "permissionError": "You do not have permission to perform this action",
-      "requiredDataNotFound": "Required data were not found",
-      "saveError": "An error occurred while saving the guardian",
-      "unknownError": "An unknown error occurred"
-    },
-    "fullNameLabel": "Full Name",
-    "fullNamePlaceholder": "Enter guardian's full name",
-    "loginToSave": "You must be logged in to save guardians",
-    "phoneLabel": "Phone Number",
-    "phonePlaceholder": "Enter phone number (optional)",
-    "relationshipLabel": "Relationship",
-    "relationshipPlaceholder": "Select relationship",
-    "relationships": {
-      "child": "Child",
-      "friend": "Friend",
-      "legalProfessional": "Legal Professional",
-      "other": "Other",
-      "parent": "Parent",
-      "sibling": "Sibling",
-      "spouse": "Spouse"
-    },
-    "roles": {
-      "emergencyContact": "Emergency Contact",
-      "executorOfWill": "Executor of Will",
-      "financialPowerOfAttorney": "Financial Power of Attorney",
-      "guardianForChildren": "Guardian for Children",
-      "healthcareProxy": "Healthcare Proxy",
-      "trustee": "Trustee"
-    },
-    "rolesTitle": "Roles & Responsibilities",
-    "saving": "Saving...",
-    "success": "Success",
-    "updateButton": "Update Guardian",
-    "updated": "Guardian updated successfully"
-  },
-  "guardianView": {
-    "defaultUserName": "Primary Account Holder",
-    "errors": {
-      "failedToLoad": "Failed to load guardian data",
-      "pleaseLogin": "Please log in to view this information"
-    },
-    "guardianInfo": {
-      "description": "You are viewing this information as a trusted Guardian. This access is provided for emergency situations and to help you fulfill your responsibilities.",
-      "securityNote": "All access is logged and monitored for security purposes."
-    },
-    "readOnlyAccess": "Read-Only Access",
-    "sections": {
-      "finalWishes": {
-        "description": "Personal instructions and final wishes",
-        "digitalAccounts": "Digital Accounts Shutdown",
-        "empty": "No final wishes or instructions available",
-        "funeralWishes": "Funeral Wishes",
-        "messagesToLovedOnes": "Messages to Loved Ones",
-        "title": "Final Wishes & Instructions"
-      },
-      "importantContacts": {
-        "description": "Key contacts for emergency situations",
-        "empty": "No important contacts available",
-        "title": "Important Contacts"
-      },
-      "keyDocuments": {
-        "description": "Essential documents marked as critical by the account holder",
-        "empty": "No key documents available",
-        "expires": "Expires",
-        "keyDocumentBadge": "Key Document",
-        "noExpiration": "No expiration",
-        "title": "Important Papers"
-      }
-    },
-    "title": "Emergency Contacts"
-  }
+  "guardians.GuardianPlaybook.className.flex_itemscenter_justifycenter_h64": "flex items-center justify-center h-64",
+  "guardians.GuardianPlaybook.className.grid_gridcols6_wfull": "grid grid-cols-6 w-full",
+  "guardians.GuardianPlaybook.className.flex_itemscenter_gap2": "flex items-center gap-2",
+  "guardians.GuardianPlaybook.className.hidden_sminline": "hidden sm:inline",
+  "guardians.GuardianPlaybook.className.spacey4": "space-y-4",
+  "guardians.GuardianPlaybook.htmlFor.funeral_wishes": "funeral_wishes",
+  "guardians.GuardianPlaybook.id.funeral_wishes": "funeral_wishes",
+  "guardians.GuardianPlaybook.className.minh200px": "min-h-[200px]",
+  "guardians.GuardianPlaybook.htmlFor.digital_accounts": "digital_accounts",
+  "guardians.GuardianPlaybook.id.digital_accounts": "digital_accounts",
+  "guardians.GuardianPlaybook.className.flex_justifybetween_itemscenter_mb4": "flex justify-between items-center mb-4",
+  "guardians.GuardianPlaybook.className.grid_gridcols1_mdgridcols2_gap4": "grid grid-cols-1 md:grid-cols-2 gap-4",
+  "guardians.GuardianPlaybook.className.mdcolspan2": "md:col-span-2",
+  "guardians.GuardianPlaybook.className.minh80px": "min-h-[80px]",
+  "guardians.GuardianPlaybook.className.mt2": "mt-2",
+  "guardians.GuardianPlaybook.htmlFor.document_locations": "document_locations",
+  "guardians.GuardianPlaybook.id.document_locations": "document_locations",
+  "guardians.GuardianPlaybook.htmlFor.personal_messages": "personal_messages",
+  "guardians.GuardianPlaybook.id.personal_messages": "personal_messages",
+  "guardians.GuardianPlaybook.htmlFor.practical_instructions": "practical_instructions",
+  "guardians.GuardianPlaybook.id.practical_instructions": "practical_instructions",
+  "guardians.GuardianPlaybook.className.flex_itemscenter_justifybetween": "flex items-center justify-between",
+  "guardians.GuardianPlaybook.playbooktabskey": "playbook.tabs.${key}",
+  "guardians.GuardianPlaybook.contactnameindex": "contact-name-${index}",
+  "guardians.GuardianPlaybook.contactrelationshipindex": "contact-relationship-${index}",
+  "guardians.GuardianPlaybook.contactphoneindex": "contact-phone-${index}",
+  "guardians.GuardianPlaybook.contactemailindex": "contact-email-${index}",
+  "guardians.GuardianPlaybook.contactnotesindex": "contact-notes-${index}",
+  "guardians.GuardianPlaybook.playbookstatusstatus": "playbook.status.${status}",
+  "guardians.GuardianPlaybookView.className.minhscreen_flex_itemscenter_justifycenter": "min-h-screen flex items-center justify-center",
+  "guardians.GuardianPlaybookView.className.animatepulse_textcenter": "animate-pulse text-center",
+  "guardians.GuardianPlaybookView.className.maxwmd": "max-w-md",
+  "guardians.GuardianPlaybookView.className.minhscreen_bggradienttobr_frombackground_tomuted20": "min-h-screen bg-gradient-to-br from-background to-muted/20",
+  "guardians.GuardianPlaybookView.className.container_mxauto_px4_py8_maxw4xl": "container mx-auto px-4 py-8 max-w-4xl",
+  "guardians.GuardianPlaybookView.className.flex_itemscenter_justifycenter_w20_h20_roundedfull": "flex items-center justify-center w-20 h-20 rounded-full bg-primary/10 mx-auto mb-4",
+  "guardians.GuardianPlaybookView.className.mt4": "mt-4",
+  "guardians.GuardianPlaybookView.className.mb8": "mb-8",
+  "guardians.GuardianPlaybookView.className.flex_itemscenter_gap2": "flex items-center gap-2",
+  "guardians.GuardianPlaybookView.className.grid_gap4_mdgridcols2": "grid gap-4 md:grid-cols-2",
+  "guardians.GuardianPlaybookView.className.spacey2": "space-y-2",
+  "guardians.GuardianPlaybookView.className.flex_itemsstart_justifybetween": "flex items-start justify-between",
+  "guardians.GuardianPlaybookView.className.fontsemibold": "font-semibold",
+  "guardians.GuardianPlaybookView.className.spacey1": "space-y-1",
+  "guardians.GuardianPlaybookView.className.flex_itemscenter_gap2_textsm_textprimary_hoverunde": "flex items-center gap-2 text-sm text-primary hover:underline",
+  "guardians.GuardianPlaybookView.className.spacey6": "space-y-6",
+  "guardians.GuardianPlaybookView.className.prose_prosesm_maxwnone": "prose prose-sm max-w-none",
+  "guardians.GuardianPlaybookView.className.whitespaceprewrap": "whitespace-pre-wrap",
+  "guardians.GuardianPlaybookView.className.mt12_textcenter_textsm_textmutedforeground": "mt-12 text-center text-sm text-muted-foreground",
+  "guardians.GuardianPlaybookView.telcontactphone": "tel:${contact.phone}",
+  "guardians.GuardianPlaybookView.mailtocontactemail": "mailto:${contact.email}"
 }

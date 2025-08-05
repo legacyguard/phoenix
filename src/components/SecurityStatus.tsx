@@ -11,7 +11,7 @@ interface SecurityFeature {
 }
 
 const SecurityStatus: React.FC = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('ui');
   const securityFeatures: SecurityFeature[] = [
   {
     title: t("securityStatus.features.endToEndEncryption"),
@@ -59,8 +59,8 @@ const SecurityStatus: React.FC = () => {
 
   return (
     <div className="p-6 font-sans">
-      <h2 className="text-2xl font-bold text-gray-800">{t("securityStatus.how_we_protect_your_legacy_1")}</h2>
-      <p className="text-gray-600 mt-1">{t("securityStatus.your_trust_is_our_highest_prio_2")}</p>
+      <h2 className="text-2xl font-bold text-gray-800">{t("securityStatus.howWeProtectYourLegacy")}</h2>
+      <p className="text-gray-600 mt-1">{t("securityStatus.yourTrustIsOurHighestPriority")}</p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
         {securityFeatures.map((feature, index) =>
@@ -81,7 +81,7 @@ const SecurityStatus: React.FC = () => {
             </CardContent>
             <CardFooter className="bg-green-50 px-4 py-3 rounded-b-lg">
               <p className="text-sm">
-                <span className="font-semibold text-green-800">{t("securityStatus.for_your_family_3")}</span>{' '}
+                <span className="font-semibold text-green-800">{t("securityStatus.forYourFamily")}</span>{' '}
                 <span className="text-green-700">{feature.familyBenefit}</span>
               </p>
             </CardFooter>
@@ -98,11 +98,8 @@ const SecurityStatus: React.FC = () => {
             </div>
           </div>
           <div>
-            <h3 className="text-lg font-semibold text-gray-800">{t("securityStatus.your_security_status_fully_pro_4")}</h3>
-            <p className="text-sm text-gray-600 mt-1">{t("securityStatus.all_security_features_are_acti_5")}
-
-
-            </p>
+            <h3 className="text-lg font-semibold text-gray-800">{t("securityStatus.yourSecurityStatusFullyProtected")}</h3>
+            <p className="text-sm text-gray-600 mt-1">{t("securityStatus.allSecurityFeaturesAreActive")}</p>
           </div>
         </div>
       </div>

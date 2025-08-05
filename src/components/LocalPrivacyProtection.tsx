@@ -2,21 +2,21 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 const LocalPrivacyProtection = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('ui');
 
   const privacyData = [
     {
-      title: t('bankAccountInfo'),
-      storage: t('storedLocally'),
-      encryption: t('encryptedMasterPassword'),
-      access: t('emergencyAccessSpouse'),
-      trigger: t('trigger30DaysInactivity')
+      title: t('localPrivacyProtection.bankAccountInfo'),
+      storage: t('localPrivacyProtection.storedLocally'),
+      encryption: t('localPrivacyProtection.encryptedMasterPassword'),
+      access: t('localPrivacyProtection.emergencyAccessSpouse'),
+      trigger: t('localPrivacyProtection.trigger30DaysInactivity')
     }
   ];
 
   return (
     <div>
-      <h1>{t('privacyProtectionTitle')}</h1>
+      <h1>{t('localPrivacyProtection.title')}</h1>
       <div>
         {privacyData.map((item, index) => (
           <div key={index}>
@@ -26,14 +26,14 @@ const LocalPrivacyProtection = () => {
             <p>{item.access}</p>
             <p>{item.trigger}</p>
             {/* Action Buttons */}
-            <button>{t('changeStorage')}</button>
-            <button>{t('modifyAccess')}</button>
-            <button>{t('viewFamilyAccess')}</button>
+            <button>{t('localPrivacyProtection.changeStorage')}</button>
+            <button>{t('localPrivacyProtection.modifyAccess')}</button>
+            <button>{t('localPrivacyProtection.viewFamilyAccess')}</button>
           </div>
         ))}
       </div>
-      <p>{t('privacyStatus')}</p>
-      <p>{t('familyAccessConfigured')}</p>
+      <p>{t('localPrivacyProtection.privacyStatus')}</p>
+      <p>{t('localPrivacyProtection.familyAccessConfigured')}</p>
     </div>
   );
 };

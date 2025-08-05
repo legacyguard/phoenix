@@ -34,7 +34,7 @@ export const ThemeToggle: React.FC = () => {
             "absolute h-5 w-5 transition-all duration-300 ease-in-out",
             actualTheme === 'dark' ? 'scale-100 rotate-0' : 'scale-0 -rotate-90'
           )} />
-          <span className="sr-only">{t("common.themeToggle.toggle_theme_1")}</span>
+          <span className="sr-only">{t("themeToggle.toggleTheme")}</span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="w-44">
@@ -46,7 +46,7 @@ export const ThemeToggle: React.FC = () => {
           )}>
 
           <Sun className="mr-2 h-4 w-4" />
-          <span>Light</span>
+          <span>{t("themeToggle.light")}</span>
         </DropdownMenuItem>
         <DropdownMenuItem
           onClick={() => setTheme('dark')}
@@ -56,7 +56,7 @@ export const ThemeToggle: React.FC = () => {
           )}>
 
           <Moon className="mr-2 h-4 w-4" />
-          <span>Dark</span>
+          <span>{t("themeToggle.dark")}</span>
         </DropdownMenuItem>
         <DropdownMenuItem
           onClick={() => setTheme('system')}
@@ -66,7 +66,7 @@ export const ThemeToggle: React.FC = () => {
           )}>
 
           <Monitor className="mr-2 h-4 w-4" />
-          <span>System</span>
+          <span>{t("themeToggle.system")}</span>
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>);

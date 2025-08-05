@@ -19,7 +19,7 @@ import AnnualReview from '@/components/AnnualReview';
 import LegalConsultationModal from '@/components/LegalConsultationModal';
 
 const Dashboard = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('dashboard');
   const { user } = useAuth();
   const [progressStatus, setProgressStatus] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -89,7 +89,7 @@ const Dashboard = () => {
         const status = await ProgressService.getProgressStatus(user.id);
         setProgressStatus(status);
       } catch (err) {
-        setError(t('dashboard.errors.failedToFetchStatus'));
+        setError(t('errors.failedToFetchStatus'));
       } finally {
         setLoading(false);
       }
@@ -219,7 +219,7 @@ const Dashboard = () => {
               }}
               className="bg-yellow-500 text-black hover:bg-yellow-600"
             >
-              🔄 Reset Onboarding (Dev)
+              {t('development.resetOnboarding')}
             </Button>
           </div>
         )}
@@ -228,12 +228,12 @@ const Dashboard = () => {
           <AnnualReview />
         ) : (
           <>
-            <div className="space-y-2">
-              <h1 className="text-4xl font-bold tracking-tight">{t('dashboard.title')}</h1>
-              <p className="text-muted-foreground text-lg">
-                {t('dashboard.subtitle')}
-              </p>
-            </div>
+                    <div className="space-y-2">
+          <h1 className="text-4xl font-bold tracking-tight">{t('title')}</h1>
+          <p className="text-muted-foreground text-lg">
+            {t('subtitle')}
+          </p>
+        </div>
 
         {progressStatus && (
         <>
@@ -254,7 +254,7 @@ const Dashboard = () => {
               <CardHeader>
                 <CardTitle className="text-2xl flex items-center gap-2">
                   <Target className="h-6 w-6" />
-                  {t('dashboard.nextStep.title')}
+                  {t('nextStep.title')}
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
@@ -268,7 +268,7 @@ const Dashboard = () => {
                   {progressStatus.nextObjective.estimatedTime && (
                     <div className="flex items-center gap-2 text-sm text-muted-foreground">
                       <Clock className="h-4 w-4" />
-                      <span>{t('dashboard.nextStep.estimatedTime', { time: progressStatus.nextObjective.estimatedTime })}</span>
+                      <span>{t('nextStep.estimatedTime', { time: progressStatus.nextObjective.estimatedTime })}</span>
                     </div>
                   )}
                 </div>
@@ -284,7 +284,7 @@ const Dashboard = () => {
             <Card className="border-2 border-primary bg-primary/5">
               <CardHeader className="text-center space-y-4 pb-8">
                 <Badge variant="default" className="mx-auto text-sm px-4 py-1">
-                  {t('dashboard.deepDive.milestoneAchieved')}
+                  {t('deepDive.milestoneAchieved')}
                 </Badge>
                 <CardTitle className="text-3xl font-bold">
                   {progressStatus.nextObjective.title}
@@ -334,17 +334,17 @@ const Dashboard = () => {
               </CardHeader>
               <CardContent className="pb-8">
                 <div className="text-center mt-4">
-                  <Calendar className="inline-block h-5 w-5" /> <span>{t('dashboard.preservationMode.lastReviewDate', { date: progressStatus.nextObjective.lastReviewDate })}</span>
+                  <Calendar className="inline-block h-5 w-5" /> <span>{t('preservationMode.lastReviewDate', { date: progressStatus.nextObjective.lastReviewDate })}</span>
                 </div>
                 <Button asChild size="lg" className="w-full md:w-auto mt-8">
                   <Link to="/annual-review">
-                    {t('dashboard.preservationMode.startAnnualCheck')}
+                    {t('preservationMode.startAnnualCheck')}
                   </Link>
                 </Button>
 
                 <div className="text-left mt-8">
                   <Badge variant="secondary" className="text-sm px-4 py-1">
-                    {t('dashboard.preservationMode.latestUpdates')}
+                    {t('preservationMode.latestUpdates')}
                   </Badge>
                   <ul className="space-y-2 mt-4">
                     {progressStatus.nextObjective.notifications.map(notification => (
@@ -384,11 +384,11 @@ const Dashboard = () => {
                     </div>
                     <div className="flex-1">
                       <h3 className="font-semibold text-lg mb-1 flex items-center gap-2">
-                        {t('dashboard.complexProfile.detected')}
-                        <Badge variant="secondary">{t('dashboard.complexProfile.personalizedGuidance')}</Badge>
+                        {t('complexProfile.detected')}
+                        <Badge variant="secondary">{t('complexProfile.personalizedGuidance')}</Badge>
                       </h3>
                       <p className="text-muted-foreground">
-                        {t('dashboard.complexProfile.businessSuccessionNote')}
+                        {t('complexProfile.businessSuccessionNote')}
                       </p>
                     </div>
                   </div>
@@ -397,7 +397,7 @@ const Dashboard = () => {
                     className="bg-earth-primary hover:bg-earth-primary/90"
                   >
                     <Book className="mr-2 h-4 w-4" />
-                    {t('dashboard.complexProfile.discussWithExpert')}
+                    {t('complexProfile.discussWithExpert')}
                   </Button>
                 </div>
               </CardContent>

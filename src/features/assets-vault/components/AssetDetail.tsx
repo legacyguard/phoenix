@@ -303,26 +303,26 @@ if (isLoading) {
                 <div className="flex items-start gap-3">
                   <ScrollText className="h-5 w-5 text-accent-green mt-1" />
                   <div className="flex-1">
-                    <h3 className="font-semibold text-lg mb-2">{t('assetDetail.story.title', { type: getAssetTypeLabel(asset.type) })}</h3>
+                    <h3 className="font-semibold text-lg mb-2">{t('details.familyNotes')}</h3>
                     <p className="text-text-body italic leading-relaxed">{asset.asset_story}</p>
                   </div>
                 </div>
                 <div className="flex justify-end">
                   <Button variant="ghost" size="sm" onClick={handleStoryEdit}>
-                    {t('assetDetail.story.editButton')}
+                    {t('actions.editAsset')}
                   </Button>
                 </div>
               </div>
             ) : (
               <div className="flex flex-col items-center justify-center py-8 px-4 border-2 border-dashed border-gray-200 rounded-lg bg-gray-50/50">
                 <Feather className="h-8 w-8 text-accent-green mb-3" />
-                <h3 className="text-lg font-semibold text-text-heading mb-2">{t('assetDetail.story.emptyTitle')}</h3>
+                <h3 className="text-lg font-semibold text-text-heading mb-2">{t('vault.empty')}</h3>
                 <p className="text-sm text-text-body text-center max-w-md mb-4">
-                  {t('assetDetail.story.emptyDescription')}
+                  {t('vault.description')}
                 </p>
                 <Button variant="default" size="sm" onClick={handleStoryEdit}>
                   <Feather className="h-4 w-4 mr-2" />
-                  {t('assetDetail.story.addButton')}
+                  {t('actions.addNote')}
                 </Button>
               </div>
             )}
@@ -333,44 +333,44 @@ if (isLoading) {
       {/* Asset Form */}
       <Card>
         <CardHeader>
-          <CardTitle>{t('assetDetail.sections.assetInformation')}</CardTitle>
+          <CardTitle>{t('form.assetDetails')}</CardTitle>
         </CardHeader>
         <CardContent className="space-y-8">
           {/* Basic Information Section */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold border-b pb-2">{t('assetDetail.sections.basicInformation')}</h3>
+            <h3 className="text-lg font-semibold border-b pb-2">{t('form.basicInfo')}</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
-                <Label htmlFor="name">{t('assetDetail.fields.assetName')} *</Label>
+                <Label htmlFor="name">{t('form.name')} *</Label>
                 <Input
                   id="name"
-                  placeholder={t('assetDetail.placeholders.assetName')}
+                  placeholder={t('form.namePlaceholder')}
                   value={formData.name}
                   onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
                 />
                 <p className="text-xs text-muted-foreground">
-                  {t('assetDetail.descriptions.assetName')}
+                  {t('form.descriptionPlaceholder')}
                 </p>
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="type">{t('assetDetail.fields.assetType')}</Label>
+                <Label htmlFor="type">{t('form.type')}</Label>
                 <Select
                   value={formData.type}
                   onValueChange={(value) => setFormData(prev => ({ ...prev, type: value }))}
                 >
                   <SelectTrigger>
-                    <SelectValue />
+                    <SelectValue placeholder={t('form.selectType')} />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="RealEstate">{t('assetDetail.types.realEstate')}</SelectItem>
-                    <SelectItem value="Business">{t('assetDetail.types.business')}</SelectItem>
-                    <SelectItem value="Vehicle">{t('assetDetail.types.vehicle')}</SelectItem>
-                    <SelectItem value="FinancialAccount">{t('assetDetail.types.financialAccount')}</SelectItem>
+                    <SelectItem value="RealEstate">{t('types.home')}</SelectItem>
+                    <SelectItem value="Business">{t('types.business')}</SelectItem>
+                    <SelectItem value="Vehicle">{t('types.vehicle')}</SelectItem>
+                    <SelectItem value="FinancialAccount">{t('types.checking')}</SelectItem>
                   </SelectContent>
                 </Select>
                 <p className="text-xs text-muted-foreground">
-                  {t('assetDetail.descriptions.assetType')}
+                  {t('form.descriptionPlaceholder')}
                 </p>
               </div>
             </div>

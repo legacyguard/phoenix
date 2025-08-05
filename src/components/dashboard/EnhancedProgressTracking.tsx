@@ -55,34 +55,34 @@ export const EnhancedProgressTracking: React.FC<EnhancedProgressTrackingProps> =
   progressStatus, 
   className 
 }) => {
-  const { t } = useTranslation('ui');
+  const { t } = useTranslation('dashboard');
 
   const stages: StageDetails[] = [
     {
-      name: t('dashboard.progressTracking.stages.foundation.name'),
+      name: t('progressTracking.stages.foundation.name'),
       key: 'Foundation',
-      description: t('dashboard.progressTracking.stages.foundation.description'),
+      description: t('progressTracking.stages.foundation.description'),
       range: [0, 25],
       icon: <Shield className="h-5 w-5" />,
       color: 'text-blue-600',
       keyTasks: [
         {
           id: 'basic-info',
-          name: t('dashboard.progressTracking.tasks.basicInfo'),
+          name: t('progressTracking.tasks.basicInfo'),
           completed: progressStatus.completedItems.includes('basic-info'),
           priority: 'critical',
           link: '/profile'
         },
         {
           id: 'emergency-contacts',
-          name: t('dashboard.progressTracking.tasks.emergencyContacts'),
+          name: t('progressTracking.tasks.emergencyContacts'),
           completed: progressStatus.completedItems.includes('emergency-contacts'),
           priority: 'critical',
           link: '/manual'
         },
         {
           id: 'key-documents',
-          name: t('dashboard.progressTracking.tasks.keyDocuments'),
+          name: t('progressTracking.tasks.keyDocuments'),
           completed: progressStatus.completedItems.includes('key-documents'),
           priority: 'important',
           link: '/vault'
@@ -90,30 +90,30 @@ export const EnhancedProgressTracking: React.FC<EnhancedProgressTrackingProps> =
       ]
     },
     {
-      name: t('dashboard.progressTracking.stages.buildout.name'),
+      name: t('progressTracking.stages.buildout.name'),
       key: 'Buildout',
-      description: t('dashboard.progressTracking.stages.buildout.description'),
+      description: t('progressTracking.stages.buildout.description'),
       range: [25, 60],
       icon: <Target className="h-5 w-5" />,
       color: 'text-orange-600',
       keyTasks: [
         {
           id: 'asset-inventory',
-          name: t('dashboard.progressTracking.tasks.assetInventory'),
+          name: t('progressTracking.tasks.assetInventory'),
           completed: progressStatus.completedItems.includes('asset-inventory'),
           priority: 'important',
           link: '/assets'
         },
         {
           id: 'beneficiaries',
-          name: t('dashboard.progressTracking.tasks.beneficiaries'),
+          name: t('progressTracking.tasks.beneficiaries'),
           completed: progressStatus.completedItems.includes('beneficiaries'),
           priority: 'critical',
           link: '/beneficiaries'
         },
         {
           id: 'guardian-network',
-          name: t('dashboard.progressTracking.tasks.guardianNetwork'),
+          name: t('progressTracking.tasks.guardianNetwork'),
           completed: progressStatus.completedItems.includes('guardian-network'),
           priority: 'important',
           link: '/guardians'
@@ -121,30 +121,30 @@ export const EnhancedProgressTracking: React.FC<EnhancedProgressTrackingProps> =
       ]
     },
     {
-      name: t('dashboard.progressTracking.stages.reinforcement.name'),
+      name: t('progressTracking.stages.reinforcement.name'),
       key: 'Reinforcement',
-      description: t('dashboard.progressTracking.stages.reinforcement.description'),
+      description: t('progressTracking.stages.reinforcement.description'),
       range: [60, 75],
       icon: <Lock className="h-5 w-5" />,
       color: 'text-purple-600',
       keyTasks: [
         {
           id: 'will-creation',
-          name: t('dashboard.progressTracking.tasks.willCreation'),
+          name: t('progressTracking.tasks.willCreation'),
           completed: progressStatus.completedItems.includes('will-creation'),
           priority: 'critical',
           link: '/will'
         },
         {
           id: 'instructions',
-          name: t('dashboard.progressTracking.tasks.instructions'),
+          name: t('progressTracking.tasks.instructions'),
           completed: progressStatus.completedItems.includes('instructions'),
           priority: 'important',
           link: '/manual#instructions'
         },
         {
           id: 'access-verification',
-          name: t('dashboard.progressTracking.tasks.accessVerification'),
+          name: t('progressTracking.tasks.accessVerification'),
           completed: progressStatus.completedItems.includes('access-verification'),
           priority: 'recommended',
           link: '/settings/security'
@@ -175,10 +175,10 @@ export const EnhancedProgressTracking: React.FC<EnhancedProgressTrackingProps> =
         <CardHeader>
           <CardTitle className="text-2xl flex items-center gap-2">
             {currentStageData.icon}
-            {t('dashboard.progressTracking.title')}
+            {t('progressTracking.title')}
           </CardTitle>
           <CardDescription>
-            {t('dashboard.progressTracking.subtitle')}
+            {t('progressTracking.subtitle')}
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-6">
@@ -186,7 +186,7 @@ export const EnhancedProgressTracking: React.FC<EnhancedProgressTrackingProps> =
           <div className="space-y-2">
             <div className="flex items-center justify-between">
               <span className="text-sm font-medium">
-                {t('dashboard.progressTracking.currentStage', { stage: currentStageData.name })}
+                {t('progressTracking.currentStage', { stage: currentStageData.name })}
               </span>
               <span className="text-2xl font-bold text-primary">
                 {progressStatus.completionScore}%
@@ -194,9 +194,9 @@ export const EnhancedProgressTracking: React.FC<EnhancedProgressTrackingProps> =
             </div>
             <Progress value={progressStatus.completionScore} className="h-3" />
             <p className="text-xs text-muted-foreground mt-1">
-              {t('dashboard.progressTracking.progressDescription', { 
+                            {t('progressTracking.progressDescription', { 
                 completed: progressStatus.completedItems.length,
-                total: progressStatus.completedItems.length + progressStatus.pendingItems.length 
+                total: progressStatus.completedItems.length + progressStatus.pendingItems.length
               })}
             </p>
           </div>
@@ -207,7 +207,7 @@ export const EnhancedProgressTracking: React.FC<EnhancedProgressTrackingProps> =
               <AlertCircle className="h-4 w-4 text-red-600" />
               <AlertDescription className="space-y-2">
                 <p className="font-medium text-red-900 dark:text-red-100">
-                  {t('dashboard.progressTracking.criticalGaps.title')}
+                  {t('progressTracking.criticalGaps.title')}
                 </p>
                 <ul className="list-disc list-inside space-y-1 text-sm">
                   {progressStatus.criticalGaps.map((gap, index) => (
@@ -246,7 +246,7 @@ export const EnhancedProgressTracking: React.FC<EnhancedProgressTrackingProps> =
                       </div>
                       {isCurrent && (
                         <Badge variant="default" className="text-xs">
-                          {t('dashboard.progressTracking.current')}
+                          {t('progressTracking.current')}
                         </Badge>
                       )}
                     </div>
@@ -257,7 +257,7 @@ export const EnhancedProgressTracking: React.FC<EnhancedProgressTrackingProps> =
                       {stage.description}
                     </p>
                     <div className="text-xs font-medium text-muted-foreground">
-                      {t('dashboard.progressTracking.completionRange', { 
+                      {t('progressTracking.completionRange', { 
                         min: stage.range[0], 
                         max: stage.range[1] 
                       })}
@@ -273,7 +273,7 @@ export const EnhancedProgressTracking: React.FC<EnhancedProgressTrackingProps> =
             <div className="mt-6">
               <h4 className="font-semibold mb-3 flex items-center gap-2">
                 {currentStageData.icon}
-                {t('dashboard.progressTracking.currentTasks', { stage: currentStageData.name })}
+                {t('progressTracking.currentTasks', { stage: currentStageData.name })}
               </h4>
               <div className="space-y-2">
                 {currentStageData.keyTasks.map((task) => (
@@ -295,14 +295,14 @@ export const EnhancedProgressTracking: React.FC<EnhancedProgressTrackingProps> =
                       </span>
                       {!task.completed && task.priority === 'critical' && (
                         <Badge variant="destructive" className="text-xs">
-                          {t('dashboard.progressTracking.critical')}
+                          {t('progressTracking.critical')}
                         </Badge>
                       )}
                     </div>
                     {!task.completed && (
                       <Button asChild size="sm" variant="outline">
                         <Link to={task.link} className="flex items-center gap-1">
-                          {t('dashboard.progressTracking.complete')}
+                          {t('progressTracking.complete')}
                           <ArrowRight className="h-3 w-3" />
                         </Link>
                       </Button>

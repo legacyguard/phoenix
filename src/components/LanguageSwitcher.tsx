@@ -9,13 +9,13 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 
-const languages = [
-  { code: 'en', name: 'English', flag: '🇬🇧' },
-  { code: 'sk', name: 'Slovenčina', flag: '🇸🇰' },
-];
-
 const LanguageSwitcher = () => {
-  const { i18n } = useTranslation();
+  const { i18n, t } = useTranslation('ui');
+
+  const languages = [
+    { code: 'en', name: t('languages.en'), flag: '🇬🇧' },
+    { code: 'sk', name: t('languages.sk'), flag: '🇸🇰' },
+  ];
 
   const changeLanguage = (lng: string) => {
     i18n.changeLanguage(lng);

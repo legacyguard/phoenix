@@ -167,12 +167,12 @@ export const AssetOverview: React.FC = () => {
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>
-          <h2 className="text-2xl font-bold">{t('assets.overview.title')}</h2>
-          <p className="text-muted-foreground">{t('assets.overview.subtitle')}</p>
+          <h2 className="text-2xl font-bold">{t('vault.title')}</h2>
+          <p className="text-muted-foreground">{t('vault.subtitle')}</p>
         </div>
         <Button onClick={() => handleAddAsset()}>
           <Plus className="h-4 w-4 mr-2" />
-          {t('assets.overview.addAsset')}
+          {t('actions.addAsset')}
         </Button>
       </div>
 
@@ -182,7 +182,7 @@ export const AssetOverview: React.FC = () => {
           <CardHeader className="pb-3">
             <CardTitle className="flex items-center gap-2">
               <TrendingUp className="h-5 w-5" />
-              {t('assets.overview.totalPortfolioValue')}
+              {t('vault.totalValue')}
             </CardTitle>
           </CardHeader>
           <CardContent>
@@ -190,7 +190,7 @@ export const AssetOverview: React.FC = () => {
               {formatCurrency(totalValue)}
             </div>
             <p className="text-sm text-muted-foreground mt-1">
-              {t('assets.overview.estimatedValue')}
+              {t('vault.lastUpdated', { date: new Date().toLocaleDateString() })}
             </p>
           </CardContent>
         </Card>
@@ -219,7 +219,7 @@ export const AssetOverview: React.FC = () => {
                       <Icon className="h-5 w-5" style={{ color }} />
                     </div>
                     <CardTitle className="text-base">
-                      {t(`assets.categories.${category}`)}
+                      {t(`categories.${category}`)}
                     </CardTitle>
                   </div>
                   <Badge variant="secondary">{stat.count}</Badge>
@@ -242,7 +242,7 @@ export const AssetOverview: React.FC = () => {
                     }}>
 
                     <Plus className="h-3 w-3 mr-1" />
-                    {t('assets.overview.addNew')}
+                    {t('actions.addAsset')}
                   </Button>
                 </div>
               </CardContent>
@@ -263,7 +263,7 @@ export const AssetOverview: React.FC = () => {
                     <FileText className="h-5 w-5 text-gray-600" />
                   </div>
                   <CardTitle className="text-base">
-                    {t('assets.categories.uncategorized')}
+                    {t('categories.other')}
                   </CardTitle>
                 </div>
                 <Badge variant="secondary">
@@ -282,10 +282,10 @@ export const AssetOverview: React.FC = () => {
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <PieChart className="h-5 w-5" />
-                {t('assets.overview.distribution.title')}
+                {t('vault.categories')}
               </CardTitle>
               <CardDescription>
-                {t('assets.overview.distribution.subtitle')}
+                {t('vault.description')}
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -333,10 +333,10 @@ export const AssetOverview: React.FC = () => {
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <Users className="h-5 w-5" />
-              {t('assets.overview.beneficiaryAllocation.title')}
+              {t('vault.recentlyAdded')}
             </CardTitle>
             <CardDescription>
-              {t('assets.overview.beneficiaryAllocation.subtitle')}
+              {t('vault.description')}
             </CardDescription>
           </CardHeader>
           <CardContent>
@@ -344,7 +344,7 @@ export const AssetOverview: React.FC = () => {
             <Alert>
                 <AlertDescription className="flex items-center gap-2">
                   <Badge variant="outline" className="bg-green-50">
-                    ✓ {t('assets.overview.beneficiaryAllocation.allAssigned')}
+                    ✓ {t('vault.empty')}
                   </Badge>
                 </AlertDescription>
               </Alert> :
@@ -353,9 +353,7 @@ export const AssetOverview: React.FC = () => {
                 <Alert variant="destructive">
                   <AlertTriangle className="h-4 w-4" />
                   <AlertDescription>
-                    {t('assets.overview.beneficiaryAllocation.unassignedWarning', {
-                    count: unassignedAssets.length
-                  })}
+                    {t('errors.loadingAssets')}
                   </AlertDescription>
                 </Alert>
                 
@@ -391,7 +389,7 @@ export const AssetOverview: React.FC = () => {
                 onClick={() => navigate('/dashboard/inheritance-summary')}>
 
                   <BarChart3 className="h-4 w-4 mr-2" />
-                  {t('assets.overview.viewInheritanceSummary')}
+                  {t('actions.viewDetails')}
                 </Button>
               </div>
             }

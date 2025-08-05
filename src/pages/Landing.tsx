@@ -179,7 +179,7 @@ export const Landing: React.FC = () => {
             size="xl"
             className="bg-background text-primary hover:bg-background/90 border-2 border-background font-semibold shadow-lg"
           >
-            <Link to="/dashboard">
+            <Link to="/register">
               {t('cta.button')}
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>

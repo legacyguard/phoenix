@@ -200,7 +200,8 @@ export const BasicLifeQuestions: React.FC<BasicLifeQuestionsProps> = ({
   onBack,
   initialAnswers = {}
 }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('onboarding');
+  const { t: tCommon } = useTranslation('ui');
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [answers, setAnswers] = useState<Partial<LifeAnswers>>(initialAnswers);
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
@@ -256,10 +257,10 @@ export const BasicLifeQuestions: React.FC<BasicLifeQuestionsProps> = ({
       <div className="space-y-4">
         <div className="flex items-center justify-between text-sm text-muted-foreground">
           <span className="font-medium">
-            Step {currentQuestionIndex + 1} of {questions.length}
+            {t('progress.step', { current: currentQuestionIndex + 1, total: questions.length })}
           </span>
           <span className="text-xs">
-            {Math.round(progress)}{t("onboarding.basicLifeQuestions.complete_1")}
+            {Math.round(progress)}% complete
           </span>
         </div>
         <Progress value={progress} className="h-2" />
@@ -345,7 +346,7 @@ export const BasicLifeQuestions: React.FC<BasicLifeQuestionsProps> = ({
           className="min-w-[120px]">
 
           <ChevronLeft className="mr-2 h-4 w-4" />
-          {currentQuestionIndex === 0 ? 'Back' : 'Previous'}
+          {currentQuestionIndex === 0 ? tCommon('common.back') : tCommon('common.previous')}
         </Button>
 
         <Button
@@ -358,7 +359,7 @@ export const BasicLifeQuestions: React.FC<BasicLifeQuestionsProps> = ({
             selectedOption && "animate-pulse"
           )}>
 
-          {currentQuestionIndex === questions.length - 1 ? 'Complete' : 'Next'}
+          {currentQuestionIndex === questions.length - 1 ? t('completion.viewPlan') : tCommon('common.next')}
           <ChevronRight className="ml-2 h-4 w-4" />
         </Button>
       </div>

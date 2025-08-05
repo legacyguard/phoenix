@@ -78,9 +78,7 @@ export const TaskCard: React.FC<TaskCardProps> = ({ task, onToggleComplete, onSt
           {task.description}
         </CardDescription>
         <p className="text-sm italic text-muted-foreground mb-4">
-          {t(`dashboard.tasks.pillarContext.${task.pillar}`, { 
-            pillar: t(`pillars.${task.pillar}.title`).toUpperCase() 
-          })}
+          {t(`tasks.categories.${task.pillar}`)}
         </p>
         {!task.completed && (
           <Button 
@@ -90,7 +88,7 @@ export const TaskCard: React.FC<TaskCardProps> = ({ task, onToggleComplete, onSt
             className="w-full"
           >
             <ArrowRight className="mr-2 h-4 w-4" />
-            {t('dashboard.tasks.startPreparation')}
+            {t('tasks.actions.start')}
           </Button>
         )}
       </CardContent>

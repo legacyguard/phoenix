@@ -1,232 +1,460 @@
 {
-  "analytics": {
-    "demo": {
-      "startTimer": "Start Timer",
-      "stopTimer": "Stop Timer"
+  "title": "Dashboard",
+  "subtitle": "Your family protection command center",
+  "header": {
+    "welcome": "Welcome back, {{name}}",
+    "welcomeDefault": "Welcome back",
+    "subtitle": "Here's your family protection progress",
+    "lastUpdated": "Last updated {{date}}",
+    "quickActions": "Quick Actions"
+  },
+  "stats": {
+    "planStrength": "Plan Strength",
+    "planStrengthDescription": "Overall completeness of your family protection plan",
+    "tasksCompleted": "Tasks Completed",
+    "tasksCompletedDescription": "{{completed}} of {{total}} priority tasks finished",
+    "documentsStored": "Documents Stored",
+    "documentsStoredDescription": "Important documents safely organized",
+    "trustedPeople": "Trusted People",
+    "trustedPeopleDescription": "People designated to help your family",
+    "protectionLevel": "Protection Level",
+    "protectionLevelDescription": "How prepared your family is for emergencies",
+    "completionRate": "{{percentage}}% Complete",
+    "excellent": "Excellent",
+    "good": "Good", 
+    "needsWork": "Needs Work",
+    "gettingStarted": "Getting Started"
+  },
+  "sections": {
+    "nextSteps": {
+      "title": "Your Next Steps",
+      "subtitle": "Priority tasks to strengthen your family's protection",
+      "noTasks": "Great job! You've completed all priority tasks.",
+      "viewAll": "View All Tasks",
+      "markComplete": "Mark Complete",
+      "startTask": "Start Task",
+      "estimatedTime": "{{minutes}} min",
+      "highPriority": "High Priority",
+      "mediumPriority": "Medium Priority",
+      "lowPriority": "Low Priority"
+    },
+    "recentActivity": {
+      "title": "Recent Activity",
+      "subtitle": "Your latest updates and changes",
+      "noActivity": "No recent activity",
+      "viewAll": "View All Activity",
+      "documentAdded": "Document added",
+      "assetUpdated": "Asset updated",
+      "personAdded": "Trusted person added",
+      "taskCompleted": "Task completed",
+      "willUpdated": "Will updated",
+      "today": "Today",
+      "yesterday": "Yesterday",
+      "daysAgo": "{{days}} days ago"
+    },
+    "quickStart": {
+      "title": "Quick Start Guide",
+      "subtitle": "Essential first steps to protect your family",
+      "step1": {
+        "title": "Add Your Most Important Asset",
+        "description": "Start with your home, primary bank account, or business",
+        "action": "Add Asset"
+      },
+      "step2": {
+        "title": "Designate a Trusted Person",
+        "description": "Choose someone who can help your family in an emergency",
+        "action": "Add Person"
+      },
+      "step3": {
+        "title": "Upload Key Documents",
+        "description": "Store insurance policies, deeds, or important contracts",
+        "action": "Upload Documents"
+      },
+      "step4": {
+        "title": "Create Your Will",
+        "description": "Generate a legally valid will based on your information",
+        "action": "Start Will"
+      },
+      "completed": "Completed",
+      "inProgress": "In Progress",
+      "notStarted": "Not Started"
+    },
+    "insights": {
+      "title": "Protection Insights",
+      "subtitle": "Personalized recommendations for your situation",
+      "noInsights": "No insights available yet. Complete more tasks to get personalized recommendations.",
+      "recommendation": "Recommendation",
+      "warning": "Attention Needed",
+      "tip": "Pro Tip",
+      "viewDetails": "View Details",
+      "dismiss": "Dismiss"
     }
   },
-  "dashboard": {
-    "complexProfile": {
-      "businessSuccessionNote": "We've noticed your plan includes business assets. Succession planning can be complex. Consider a professional review to ensure your business transition is seamless.",
-      "detected": "Complex Profile Detected",
-      "discussWithExpert": "Discuss with a Legal Expert",
-      "personalizedGuidance": "Personalized Guidance"
+  "tasks": {
+    "categories": {
+      "secure": "Secure",
+      "organize": "Organize", 
+      "transfer": "Transfer"
     },
-    "deepDive": {
-      "milestoneAchieved": "MILESTONE ACHIEVED"
-    },
-    "errors": {
-      "failedToFetchStatus": "Failed to fetch progress status"
-    },
-    "firstTimeGuide": {
-      "finish": "Get Started",
-      "helpfulTips": "Helpful Tips",
-      "importantNote": "Remember: You can always access detailed help and support from the navigation menu",
-      "next": "Next",
-      "previous": "Previous",
-      "progress": {
-        "description": "This shows your overall protection level and current stage. As you complete tasks, you'll see your progress grow from Foundation through Legacy stages.",
-        "tip1": "Focus on critical tasks first - they have the biggest impact",
-        "tip2": "Each stage builds on the previous one for comprehensive protection",
-        "title": "Your Progress Tracker"
-      },
-      "recommendations": {
-        "description": "Based on your progress, we'll suggest the most impactful next steps. These recommendations adapt as you complete tasks, always showing you the best path forward.",
-        "tip1": "Red badges indicate critical tasks that need immediate attention",
-        "tip2": "Each recommendation shows time estimate and impact",
-        "title": "Personalized Recommendations"
-      },
-      "stages": {
-        "description": "Your journey has five clear stages: Foundation, Buildout, Reinforcement, Advanced Planning, and Legacy. Each stage represents important milestones in securing your family's future.",
-        "tip1": "Foundation Stage (0-25%): Essential information and contacts",
-        "tip2": "Buildout Stage (25-60%): Assets, beneficiaries, and guardians",
-        "tip3": "Reinforcement Stage (60-75%): Will creation and access verification",
-        "title": "Protection Journey Stages"
-      },
-      "welcome": {
-        "description": "This is your central hub for protecting your family's future. Let us show you around the key features that will help you sleep better at night.",
-        "tip1": "This guide will only show once, but you can access help anytime",
-        "tip2": "Each section is designed to be completed in small, manageable steps",
-        "tip3": "You're in control - skip any section and come back later",
-        "title": "Welcome to Your Legacy Dashboard"
-      }
-    },
-    "metadata": {
-      "contact": "Contact",
-      "renewsOn": "Renews on"
-    },
-    "nextStep": {
-      "title": "Next Recommended Step"
-    },
-    "nudge": {
-      "completeNow": "Complete Now"
-    },
-    "preservationMode": {
-      "latestUpdates": "Latest Updates",
-      "startAnnualCheck": "Start Annual System Check"
-    },
-    "progressTracking": {
-      "criticalGaps": {
-        "title": "Critical Gaps"
-      },
-      "stages": {
-        "buildout": {
-          "description": "Expanding your protection with assets and guardians",
-          "name": "Buildout"
-        },
-        "foundation": {
-          "description": "Essential information for immediate needs",
-          "name": "Foundation"
-        },
-        "reinforcement": {
-          "description": "Legal documents and access verification",
-          "name": "Reinforcement"
-        }
-      },
-      "subtitle": "Track your journey to complete family protection",
-      "tasks": {
-        "accessVerification": "Access Verification",
-        "assetInventory": "Asset Inventory",
-        "basicInfo": "Basic Information",
-        "beneficiaries": "Beneficiaries",
-        "emergencyContacts": "Emergency Contacts",
-        "guardianNetwork": "Guardian Network",
-        "instructions": "Final Instructions",
-        "keyDocuments": "Key Documents",
-        "willCreation": "Will Creation"
-      },
-      "title": "Your Protection Progress"
-    },
-    "recommendations": {
-      "accessVerification": {
-        "action": "Test Access",
-        "description": "Test that your guardians can access information",
-        "impact": "Ensures your system works when it's needed most",
-        "title": "Verify Guardian Access"
-      },
-      "annualReview": {
-        "action": "Start Review",
-        "description": "Update your information to reflect life changes",
-        "impact": "Keeps your protection plan current and effective",
-        "title": "Complete Annual Review"
+    "types": {
+      "documentCentralization": {
+        "title": "Organize Important Documents",
+        "description": "Gather and digitize your most critical paperwork so your family can find everything in one place."
       },
       "assetInventory": {
-        "action": "Add Assets",
-        "description": "List your bank accounts, properties, and valuables",
-        "impact": "Ensures nothing is lost or forgotten",
-        "title": "Create Asset Inventory"
+        "title": "Create Asset Inventory",
+        "description": "Document your valuable possessions so nothing gets overlooked or lost."
       },
-      "beneficiaries": {
-        "action": "Add Beneficiaries",
-        "description": "Specify who receives your assets",
-        "impact": "Prevents family conflicts and ensures your wishes are followed",
-        "prerequisite": "Complete asset inventory first",
-        "title": "Designate Beneficiaries"
+      "guardianInstructions": {
+        "title": "Designate Emergency Contacts",
+        "description": "Choose trusted people who can step in and help your family during difficult times."
       },
       "emergencyContacts": {
-        "action": "Add Contacts",
-        "description": "Essential people your family should contact first",
-        "impact": "Your family will know exactly who to call in emergencies",
-        "title": "Add Emergency Contacts"
+        "title": "Set Up Emergency Access",
+        "description": "Ensure the right people can access critical information when they need it most."
       },
-      "impact": {
-        "label": "Impact"
+      "willPreparation": {
+        "title": "Prepare Your Will",
+        "description": "Create a legally valid document that clearly states your wishes for your assets and family."
       },
-      "keyDocuments": {
-        "action": "Upload Documents",
-        "description": "Insurance policies, IDs, and critical paperwork",
-        "impact": "Prevents days of searching for important papers",
-        "title": "Upload Key Documents"
+      "bankAccount": {
+        "title": "Document Financial Accounts",
+        "description": "Record your banking and investment information so your family can manage finances."
       },
-      "moreHelp": {
-        "link": "Visit our help center",
-        "text": "Need help getting started?"
+      "inheritanceEducation": {
+        "title": "Learn About Inheritance Laws",
+        "description": "Understand the legal requirements in your area to avoid complications for your family."
       },
-      "prerequisites": {
-        "label": "Prerequisites"
+      "personalMessages": {
+        "title": "Record Personal Messages",
+        "description": "Leave heartfelt messages and important instructions for your loved ones."
       },
-      "priority": {
-        "critical": "Critical",
-        "important": "Important",
-        "suggested": "Suggested"
+      "familyMeeting": {
+        "title": "Hold Family Discussion",
+        "description": "Have an open conversation with your family about your plans and their roles."
       },
-      "subtitle": "Personalized actions to strengthen your family's protection",
-      "title": "Recommended Next Steps",
-      "will": {
-        "action": "Create Will",
-        "description": "Make your wishes legally binding",
-        "impact": "Provides legal clarity and peace of mind for your family",
-        "title": "Create Your Will"
+      "digitalAssetPlan": {
+        "title": "Plan for Digital Assets",
+        "description": "Organize your online accounts, passwords, and digital property for easy access."
       }
     },
+    "status": {
+      "notStarted": "Not Started",
+      "inProgress": "In Progress", 
+      "completed": "Completed",
+      "blocked": "Blocked",
+      "skipped": "Skipped"
+    },
+    "actions": {
+      "start": "Start Task",
+      "continue": "Continue",
+      "complete": "Mark Complete",
+      "skip": "Skip Task",
+      "viewDetails": "View Details",
+      "editTask": "Edit Task"
+    }
+  },
+  "widgets": {
+    "planStrengthMeter": {
+      "title": "Plan Strength Meter",
+      "description": "Visual indicator of your overall preparation level",
+      "needsAttention": "Needs Attention",
+      "onTrack": "On Track",
+      "wellProtected": "Well Protected",
+      "fullySecured": "Fully Secured"
+    },
+    "upcomingDeadlines": {
+      "title": "Upcoming Deadlines",
+      "description": "Important dates and renewals to remember",
+      "noDeadlines": "No upcoming deadlines",
+      "dueToday": "Due Today",
+      "dueTomorrow": "Due Tomorrow",
+      "dueThisWeek": "Due This Week",
+      "overdue": "Overdue"
+    },
+    "familyAccess": {
+      "title": "Family Access Status",
+      "description": "Who has access to what information",
+      "noAccess": "No family access configured",
+      "viewPermissions": "View Permissions",
+      "manageAccess": "Manage Access"
+    }
+  },
+  "notifications": {
+    "taskCompleted": "Task completed successfully!",
+    "documentUploaded": "Document uploaded and processed",
+    "assetAdded": "Asset added to your vault",
+    "personAdded": "Trusted person added to your circle",
+    "willGenerated": "Will generated successfully",
+    "planUpdated": "Your protection plan has been updated",
+    "reminderSet": "Reminder set for {{date}}",
+    "accessGranted": "Access granted to {{name}}",
+    "accessRevoked": "Access revoked from {{name}}"
+  },
+  "errors": {
+    "loadingDashboard": "Failed to load dashboard. Please refresh the page.",
+    "loadingTasks": "Failed to load tasks. Please try again.",
+    "loadingStats": "Failed to load statistics. Please refresh.",
+    "savingProgress": "Failed to save progress. Please try again.",
+    "markingComplete": "Failed to mark task as complete. Please try again.",
+    "genericError": "Something went wrong. Please refresh and try again.",
+    "failedToFetchStatus": "Failed to fetch progress status"
+  },
+  "empty": {
+    "noTasks": "No tasks available",
+    "noActivity": "No recent activity to display",
+    "noDocuments": "No documents uploaded yet",
+    "noAssets": "No assets added yet",
+    "noPeople": "No trusted people added yet"
+  },
+  "nextStep": {
+    "title": "Your Next Priority",
+    "estimatedTime": "Estimated time: {{time}}"
+  },
+  "deepDive": {
+    "milestoneAchieved": "Milestone Achieved",
+    "advancedPlanning": "Advanced Planning",
+    "deepDiveDescription": "You've completed the basics! Now let's dive deeper into advanced protection strategies."
+  },
+  "preservationMode": {
+    "title": "Preservation Mode Active",
+    "description": "Your family protection plan is comprehensive and well-maintained. Regular reviews ensure everything stays current.",
+    "lastReviewDate": "Last review: {{date}}",
+    "startAnnualCheck": "Start Annual Review",
+    "latestUpdates": "Latest Updates"
+  },
+  "complexProfile": {
+    "detected": "Complex Profile Detected",
+    "personalizedGuidance": "Personalized Guidance",
+    "businessSuccessionNote": "Your business assets require specialized planning. Our experts can help with succession planning and business continuity.",
+    "discussWithExpert": "Discuss with Expert"
+  },
+  "quickTasks": {
+    "title": "Quick Tasks",
+    "allTasks": "All Tasks",
+    "documents": "Documents",
+    "guardians": "Guardians",
+    "assets": "Assets",
+    "beneficiaries": "Beneficiaries",
+    "completed": "completed",
+    "progress": "Progress",
+    "allCompleted": "All tasks completed! Great job!",
+    "whyImportant": "Why this matters:",
+    "ifNotDone": "If not done:",
+    "minutes": "{{count}} min",
+    "start": "Start Task",
+    "markAsComplete": "Mark as Complete",
+    "greatProgress": "Great progress! {{count}} tasks completed.",
+    "wellOnWay": "You're well on your way to protecting your family.",
+    "tasks": {
+      "birthCertificate": {
+        "title": "Upload Birth Certificate",
+        "description": "Store your birth certificate for easy access"
+      },
+      "insurancePolicy": {
+        "title": "Upload Insurance Policy",
+        "description": "Keep your insurance documents organized"
+      },
+      "will": {
+        "title": "Upload Will",
+        "description": "Store your current will document"
+      },
+      "spouseGuardian": {
+        "title": "Add Spouse as Guardian",
+        "description": "Designate your spouse as primary guardian"
+      },
+      "backupGuardian": {
+        "title": "Add Backup Guardian",
+        "description": "Choose a trusted friend as backup guardian"
+      },
+      "bankAccount": {
+        "title": "Add Bank Account",
+        "description": "Document your primary bank account"
+      },
+      "homeProperty": {
+        "title": "Add Home Property",
+        "description": "Record your home ownership details"
+      },
+      "vehicle": {
+        "title": "Add Vehicle",
+        "description": "Document your vehicle information"
+      },
+      "spouseBeneficiary": {
+        "title": "Add Spouse as Beneficiary",
+        "description": "Designate your spouse as primary beneficiary"
+      },
+      "childrenBeneficiaries": {
+        "title": "Add Children as Beneficiaries",
+        "description": "List your children as beneficiaries"
+      }
+    },
+    "whyImportant": {
+      "birthCertificate": "Essential for identity verification and legal processes",
+      "insurancePolicy": "Critical for claims processing and family protection",
+      "will": "Ensures your wishes are legally documented",
+      "spouseGuardian": "Provides immediate decision-making authority",
+      "trustedFriend": "Offers backup support when primary guardian is unavailable",
+      "bankAccount": "Enables family to manage finances during difficult times",
+      "homeProperty": "Protects your most valuable asset",
+      "vehicle": "Ensures proper ownership transfer",
+      "spouseBeneficiary": "Secures your spouse's financial future",
+      "childrenBeneficiaries": "Protects your children's inheritance",
+      "default": "This task helps strengthen your family's protection plan"
+    },
+    "ifNotDone": {
+      "birthCertificate": "Delays in legal processes and identity verification",
+      "insurancePolicy": "Difficulties in filing claims and accessing benefits",
+      "will": "Your wishes may not be legally recognized",
+      "spouseGuardian": "No clear decision-making authority in emergencies",
+      "trustedFriend": "No backup support if primary guardian is unavailable",
+      "bankAccount": "Family may struggle to access needed funds",
+      "homeProperty": "Risk of asset loss or complications",
+      "vehicle": "Ownership transfer may be delayed or complicated",
+      "spouseBeneficiary": "Spouse may face financial hardship",
+      "childrenBeneficiaries": "Children may not receive intended inheritance",
+      "default": "Your family may face unnecessary complications"
+    }
+  },
+  "progressTracking": {
+    "title": "Progress Overview",
+    "subtitle": "Track your family protection journey",
+    "currentStage": "Current Stage: {{stage}}",
+    "progressDescription": "You're making great progress! {{completed}} of {{total}} critical items completed.",
+    "completionRange": "{{min}}-{{max}}% Complete",
+    "currentTasks": "Key Tasks for {{stage}}",
+    "critical": "Critical",
+    "complete": "Complete",
     "stages": {
-      "advancedPlanning": "Advanced Planning",
-      "building": "Building Stage",
-      "foundation": "Foundation Stage",
-      "legacy": "Legacy Stage",
-      "strengthening": "Strengthening Stage"
+      "foundation": {
+        "name": "Foundation",
+        "description": "Essential basics for family protection"
+      },
+      "buildout": {
+        "name": "Buildout", 
+        "description": "Expanding your protection network"
+      },
+      "reinforcement": {
+        "name": "Reinforcement",
+        "description": "Strengthening and securing your plan"
+      },
+      "advancedPlanning": {
+        "name": "Advanced Planning",
+        "description": "Sophisticated protection strategies"
+      },
+      "legacy": {
+        "name": "Legacy",
+        "description": "Preserving your family's future"
+      }
     },
-    "subtitle": "Your central hub for preserving and protecting your family's legacy",
-    "title": "Your Legacy Dashboard"
+    "tasks": {
+      "basicInfo": "Basic Information",
+      "emergencyContacts": "Emergency Contacts",
+      "keyDocuments": "Key Documents",
+      "assetInventory": "Asset Inventory",
+      "beneficiaries": "Beneficiaries",
+      "guardianNetwork": "Guardian Network",
+      "willCreation": "Will Creation",
+      "instructions": "Personal Instructions",
+      "accessVerification": "Access Verification"
+    },
+    "criticalGaps": {
+      "title": "Critical Gaps",
+      "description": "These items need immediate attention"
+    }
   },
-  "notificationPreferences": {
-    "description": "Manage notification settings for your emergency contacts",
-    "emailRequired": "Email required",
-    "errors": {
-      "loadFailed": "Failed to load notification preferences",
-      "updateFailed": "Failed to update preferences"
-    },
-    "howItWorks": {
-      "point1": "Your trusted helpers can access emergency contacts during critical situations",
-      "point2": "All opted-in contacts receive immediate email notifications",
-      "point3": "You will also receive a notification when access occurs",
-      "title": "How Emergency Notifications Work"
-    },
-    "info": "When emergency access is granted, notifications will only be sent to contacts with email notifications enabled.",
-    "messages": {
-      "updated": "Notification preferences updated"
-    },
-    "noContacts": "Add emergency contacts to manage their notification preferences.",
-    "noEmail": "No email address on file",
-    "title": "Emergency Notification Preferences"
+  "annualReview": {
+    "title": "Annual Review",
+    "description": "Review and update your family protection plan",
+    "startReview": "Start Review",
+    "lastReview": "Last reviewed: {{date}}"
   },
-  "notificationSettings": {
-    "buttons": {
-      "disable": "Disable",
-      "enableNotifications": "Enable Notifications",
-      "enabling": "Enabling..."
+  "recommendations": {
+    "title": "Next Step Recommendations",
+    "subtitle": "Personalized suggestions based on your progress",
+    "emergencyContacts": {
+      "title": "Add Emergency Contacts",
+      "description": "Designate trusted people who can help your family in emergencies",
+      "action": "Add Contacts",
+      "impact": "Immediate family protection in crisis situations"
     },
-    "choose_which_types_of_notifica_9": "Choose which types of notifications you want to receive",
-    "document_expiration_10": "Document Expiration",
-    "emergency_access_alerts_14": "Emergency Access Alerts",
-    "enable_notifications_to_receiv_5": "Enable notifications to receive timely alerts about document expirations, family updates, and emergency access attempts.",
-    "errors": {
-      "failedToDisable": "Failed to disable notifications",
-      "failedToEnable": "Failed to enable notifications",
-      "pleaseSignIn": "Please sign in to enable notifications"
+    "keyDocuments": {
+      "title": "Upload Key Documents",
+      "description": "Store important documents for easy family access",
+      "action": "Upload Documents",
+      "impact": "Ensures family can access critical information"
     },
-    "get_alerts_when_important_docu_11": "Get alerts when important documents are about to expire",
-    "get_notified_about_important_u_4": "Get notified about important updates and reminders",
-    "inactivity_reminders_12": "Inactivity Reminders",
-    "messages": {
-      "preferencesUpdated": "Notification preferences updated"
+    "assetInventory": {
+      "title": "Create Asset Inventory",
+      "description": "Document all your valuable possessions and accounts",
+      "action": "Add Assets",
+      "impact": "Protects your family's financial future"
     },
-    "new_features_and_important_sys_17": "New features and important system announcements",
-    "notification_preferences_8": "Notification Preferences",
-    "notifications_are_enabled_6": "Notifications are enabled",
-    "notifications_not_supported_1": "Notifications Not Supported",
-    "notify_me_when_someone_accesse_15": "Notify me when someone accesses my vault in an emergency",
-    "periodic_reminders_to_review_a_13": "Periodic reminders to review and update your information",
-    "push_notifications_3": "Push Notifications",
-    "send_a_test_notification_to_ve_19": "Send a test notification to verify everything is working",
-    "send_test_notification_20": "Send Test Notification",
-    "system_updates_16": "System Updates",
-    "testNotification": {
-      "body": "You will now receive important updates about your family preparedness.",
-      "title": "Notifications Enabled!"
+    "beneficiaries": {
+      "title": "Designate Beneficiaries",
+      "description": "Choose who will inherit your assets and property",
+      "action": "Add Beneficiaries",
+      "impact": "Ensures your wishes are carried out"
     },
-    "test_notifications_18": "Test Notifications",
-    "you_ll_receive_notifications_o_7": "You'll receive notifications on this device when important events occur.",
-    "your_browser_doesn_t_support_p_2": "Your browser doesn't support push notifications. Try using a modern browser like Chrome, Firefox, or Edge."
+    "guardianNetwork": {
+      "title": "Build Guardian Network",
+      "description": "Create a support system for your family",
+      "action": "Add Guardians",
+      "impact": "Provides backup support and guidance"
+    },
+    "willCreation": {
+      "title": "Create Your Will",
+      "description": "Generate a legally valid will document",
+      "action": "Start Will",
+      "impact": "Legally protects your family's inheritance"
+    },
+    "personalInstructions": {
+      "title": "Add Personal Instructions",
+      "description": "Leave important messages and guidance for your family",
+      "action": "Add Instructions",
+      "impact": "Provides emotional and practical guidance"
+    },
+    "will": {
+      "title": "Create Your Will",
+      "description": "Generate a legally valid will document",
+      "action": "Start Will",
+      "impact": "Legally protects your family's inheritance"
+    },
+    "accessVerification": {
+      "title": "Verify Access Permissions",
+      "description": "Ensure family members can access critical information",
+      "action": "Check Access",
+      "impact": "Guarantees family can access needed information"
+    },
+    "annualReview": {
+      "title": "Schedule Annual Review",
+      "description": "Set up regular reviews of your protection plan",
+      "action": "Schedule Review",
+      "impact": "Keeps your plan current and effective"
+    },
+    "beneficiaries": {
+      "title": "Designate Beneficiaries",
+      "description": "Choose who will inherit your assets and property",
+      "action": "Add Beneficiaries",
+      "impact": "Ensures your wishes are carried out",
+      "prerequisite": "Complete asset inventory first"
+    },
+    "priority": {
+      "critical": "Critical",
+      "important": "Important",
+      "suggested": "Suggested"
+    },
+    "impact": {
+      "label": "Impact"
+    },
+    "prerequisites": {
+      "label": "Prerequisites"
+    },
+    "moreHelp": {
+      "text": "Need more guidance?",
+      "link": "View Help Center"
+    }
+  },
+  "development": {
+    "resetOnboarding": "🔄 Reset Onboarding (Dev)"
   }
 }

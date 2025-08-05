@@ -62,8 +62,8 @@ export const QuickTasks: React.FC<QuickTasksProps> = ({
       // Document tasks
       {
         id: 'upload-birth-certificate',
-        title: t('dashboard.quickTasks.tasks.birthCertificate.title'),
-        description: t('dashboard.quickTasks.tasks.birthCertificate.description'),
+        title: t('quickTasks.tasks.birthCertificate.title'),
+        description: t('quickTasks.tasks.birthCertificate.description'),
         estimatedTime: 3,
         category: 'documents',
         priority: 'high',
@@ -74,8 +74,8 @@ export const QuickTasks: React.FC<QuickTasksProps> = ({
       },
       {
         id: 'upload-insurance-policy',
-        title: t('dashboard.quickTasks.tasks.insurancePolicy.title'),
-        description: t('dashboard.quickTasks.tasks.insurancePolicy.description'),
+        title: t('quickTasks.tasks.insurancePolicy.title'),
+        description: t('quickTasks.tasks.insurancePolicy.description'),
         estimatedTime: 5,
         category: 'documents',
         priority: 'high',
@@ -85,8 +85,8 @@ export const QuickTasks: React.FC<QuickTasksProps> = ({
       },
       {
         id: 'upload-will',
-        title: t('dashboard.quickTasks.tasks.will.title'),
-        description: t('dashboard.quickTasks.tasks.will.description'),
+        title: t('quickTasks.tasks.will.title'),
+        description: t('quickTasks.tasks.will.description'),
         estimatedTime: 4,
         category: 'documents',
         priority: 'medium',
@@ -98,8 +98,8 @@ export const QuickTasks: React.FC<QuickTasksProps> = ({
       // Guardian tasks
       {
         id: 'add-spouse-guardian',
-        title: t('dashboard.quickTasks.tasks.spouseGuardian.title'),
-        description: t('dashboard.quickTasks.tasks.spouseGuardian.description'),
+        title: t('quickTasks.tasks.spouseGuardian.title'),
+        description: t('quickTasks.tasks.spouseGuardian.description'),
         estimatedTime: 2,
         category: 'guardians',
         priority: 'high',
@@ -109,8 +109,8 @@ export const QuickTasks: React.FC<QuickTasksProps> = ({
       },
       {
         id: 'add-trusted-friend',
-        title: t('dashboard.quickTasks.tasks.backupGuardian.title'),
-        description: t('dashboard.quickTasks.tasks.backupGuardian.description'),
+        title: t('quickTasks.tasks.backupGuardian.title'),
+        description: t('quickTasks.tasks.backupGuardian.description'),
         estimatedTime: 3,
         category: 'guardians',
         priority: 'medium',
@@ -122,8 +122,8 @@ export const QuickTasks: React.FC<QuickTasksProps> = ({
       // Asset tasks
       {
         id: 'add-bank-account',
-        title: t('dashboard.quickTasks.tasks.bankAccount.title'),
-        description: t('dashboard.quickTasks.tasks.bankAccount.description'),
+        title: t('quickTasks.tasks.bankAccount.title'),
+        description: t('quickTasks.tasks.bankAccount.description'),
         estimatedTime: 2,
         category: 'assets',
         priority: 'high',
@@ -133,8 +133,8 @@ export const QuickTasks: React.FC<QuickTasksProps> = ({
       },
       {
         id: 'add-home-property',
-        title: t('dashboard.quickTasks.tasks.homeProperty.title'),
-        description: t('dashboard.quickTasks.tasks.homeProperty.description'),
+        title: t('quickTasks.tasks.homeProperty.title'),
+        description: t('quickTasks.tasks.homeProperty.description'),
         estimatedTime: 3,
         category: 'assets',
         priority: 'high',
@@ -144,8 +144,8 @@ export const QuickTasks: React.FC<QuickTasksProps> = ({
       },
       {
         id: 'add-vehicle',
-        title: t('dashboard.quickTasks.tasks.vehicle.title'),
-        description: t('dashboard.quickTasks.tasks.vehicle.description'),
+        title: t('quickTasks.tasks.vehicle.title'),
+        description: t('quickTasks.tasks.vehicle.description'),
         estimatedTime: 2,
         category: 'assets',
         priority: 'medium',
@@ -157,8 +157,8 @@ export const QuickTasks: React.FC<QuickTasksProps> = ({
       // Beneficiary tasks
       {
         id: 'add-spouse-beneficiary',
-        title: t('dashboard.quickTasks.tasks.spouseBeneficiary.title'),
-        description: t('dashboard.quickTasks.tasks.spouseBeneficiary.description'),
+        title: t('quickTasks.tasks.spouseBeneficiary.title'),
+        description: t('quickTasks.tasks.spouseBeneficiary.description'),
         estimatedTime: 2,
         category: 'beneficiaries',
         priority: 'high',
@@ -168,8 +168,8 @@ export const QuickTasks: React.FC<QuickTasksProps> = ({
       },
       {
         id: 'add-children-beneficiaries',
-        title: t('dashboard.quickTasks.tasks.childrenBeneficiaries.title'),
-        description: t('dashboard.quickTasks.tasks.childrenBeneficiaries.description'),
+        title: t('quickTasks.tasks.childrenBeneficiaries.title'),
+        description: t('quickTasks.tasks.childrenBeneficiaries.description'),
         estimatedTime: 3,
         category: 'beneficiaries',
         priority: 'high',
@@ -223,54 +223,54 @@ export const QuickTasks: React.FC<QuickTasksProps> = ({
   const getWhyImportant = (taskId: string) => {
     switch (taskId) {
       case 'upload-birth-certificate':
-        return t('dashboard.quickTasks.whyImportant.birthCertificate');
+        return t('quickTasks.whyImportant.birthCertificate');
       case 'upload-insurance-policy':
-        return t('dashboard.quickTasks.whyImportant.insurancePolicy');
+        return t('quickTasks.whyImportant.insurancePolicy');
       case 'upload-will':
-        return t('dashboard.quickTasks.whyImportant.will');
+        return t('quickTasks.whyImportant.will');
       case 'add-spouse-guardian':
-        return t('dashboard.quickTasks.whyImportant.spouseGuardian');
+        return t('quickTasks.whyImportant.spouseGuardian');
       case 'add-trusted-friend':
-        return t('dashboard.quickTasks.whyImportant.trustedFriend');
+        return t('quickTasks.whyImportant.trustedFriend');
       case 'add-bank-account':
-        return t('dashboard.quickTasks.whyImportant.bankAccount');
+        return t('quickTasks.whyImportant.bankAccount');
       case 'add-home-property':
-        return t('dashboard.quickTasks.whyImportant.homeProperty');
+        return t('quickTasks.whyImportant.homeProperty');
       case 'add-vehicle':
-        return t('dashboard.quickTasks.whyImportant.vehicle');
+        return t('quickTasks.whyImportant.vehicle');
       case 'add-spouse-beneficiary':
-        return t('dashboard.quickTasks.whyImportant.spouseBeneficiary');
+        return t('quickTasks.whyImportant.spouseBeneficiary');
       case 'add-children-beneficiaries':
-        return t('dashboard.quickTasks.whyImportant.childrenBeneficiaries');
+        return t('quickTasks.whyImportant.childrenBeneficiaries');
       default:
-        return t('dashboard.quickTasks.whyImportant.default');
+        return t('quickTasks.whyImportant.default');
     }
   };
 
   const getWhatHappensIfNot = (taskId: string) => {
     switch (taskId) {
       case 'upload-birth-certificate':
-        return t('dashboard.quickTasks.ifNotDone.birthCertificate');
+        return t('quickTasks.ifNotDone.birthCertificate');
       case 'upload-insurance-policy':
-        return t('dashboard.quickTasks.ifNotDone.insurancePolicy');
+        return t('quickTasks.ifNotDone.insurancePolicy');
       case 'upload-will':
-        return t('dashboard.quickTasks.ifNotDone.will');
+        return t('quickTasks.ifNotDone.will');
       case 'add-spouse-guardian':
-        return t('dashboard.quickTasks.ifNotDone.spouseGuardian');
+        return t('quickTasks.ifNotDone.spouseGuardian');
       case 'add-trusted-friend':
-        return t('dashboard.quickTasks.ifNotDone.trustedFriend');
+        return t('quickTasks.ifNotDone.trustedFriend');
       case 'add-bank-account':
-        return t('dashboard.quickTasks.ifNotDone.bankAccount');
+        return t('quickTasks.ifNotDone.bankAccount');
       case 'add-home-property':
-        return t('dashboard.quickTasks.ifNotDone.homeProperty');
+        return t('quickTasks.ifNotDone.homeProperty');
       case 'add-vehicle':
-        return t('dashboard.quickTasks.ifNotDone.vehicle');
+        return t('quickTasks.ifNotDone.vehicle');
       case 'add-spouse-beneficiary':
-        return t('dashboard.quickTasks.ifNotDone.spouseBeneficiary');
+        return t('quickTasks.ifNotDone.spouseBeneficiary');
       case 'add-children-beneficiaries':
-        return t('dashboard.quickTasks.ifNotDone.childrenBeneficiaries');
+        return t('quickTasks.ifNotDone.childrenBeneficiaries');
       default:
-        return t('dashboard.quickTasks.ifNotDone.default');
+        return t('quickTasks.ifNotDone.default');
     }
   };
 
@@ -287,11 +287,11 @@ export const QuickTasks: React.FC<QuickTasksProps> = ({
   };
 
   const categories = [
-    { id: 'all', name: t('dashboard.quickTasks.allTasks'), icon: <Circle className="h-4 w-4" /> },
-    { id: 'documents', name: t('dashboard.quickTasks.documents'), icon: <FileText className="h-4 w-4" /> },
-    { id: 'guardians', name: t('dashboard.quickTasks.guardians'), icon: <Users className="h-4 w-4" /> },
-    { id: 'assets', name: t('dashboard.quickTasks.assets'), icon: <Building className="h-4 w-4" /> },
-    { id: 'beneficiaries', name: t('dashboard.quickTasks.beneficiaries'), icon: <Heart className="h-4 w-4" /> }
+    { id: 'all', name: t('quickTasks.allTasks'), icon: <Circle className="h-4 w-4" /> },
+    { id: 'documents', name: t('quickTasks.documents'), icon: <FileText className="h-4 w-4" /> },
+    { id: 'guardians', name: t('quickTasks.guardians'), icon: <Users className="h-4 w-4" /> },
+    { id: 'assets', name: t('quickTasks.assets'), icon: <Building className="h-4 w-4" /> },
+    { id: 'beneficiaries', name: t('quickTasks.beneficiaries'), icon: <Heart className="h-4 w-4" /> }
   ];
 
   return (
@@ -300,17 +300,17 @@ export const QuickTasks: React.FC<QuickTasksProps> = ({
         <div className="flex items-center justify-between">
           <CardTitle className="flex items-center gap-2">
             <Clock className="h-5 w-5" />
-            {t('dashboard.quickTasks.title')}
+            {t('quickTasks.title')}
           </CardTitle>
           <Badge variant="outline">
-            {completedTasks}/{totalTasks} {t('dashboard.quickTasks.completed')}
+            {completedTasks}/{totalTasks} {t('quickTasks.completed')}
           </Badge>
         </div>
         
         {/* Progress Bar */}
         <div className="space-y-2">
           <div className="flex items-center justify-between text-sm">
-            <span>{t('dashboard.quickTasks.progress')}</span>
+            <span>{t('quickTasks.progress')}</span>
             <span>{Math.round(progressPercentage)}%</span>
           </div>
           <Progress value={progressPercentage} className="h-2" />
@@ -338,7 +338,7 @@ export const QuickTasks: React.FC<QuickTasksProps> = ({
           {filteredTasks.length === 0 ? (
             <div className="text-center py-8 text-muted-foreground">
               <CheckCircle2 className="h-12 w-12 mx-auto mb-3 text-green-600" />
-              <p className="text-sm">{t('dashboard.quickTasks.allCompleted')}</p>
+              <p className="text-sm">{t('quickTasks.allCompleted')}</p>
             </div>
           ) : (
             filteredTasks.map(task => (
@@ -376,9 +376,9 @@ export const QuickTasks: React.FC<QuickTasksProps> = ({
                             </TooltipTrigger>
                             <TooltipContent className="max-w-xs">
                               <div className="space-y-2">
-                                <div className="font-medium">{t('dashboard.quickTasks.whyImportant')}</div>
+                                <div className="font-medium">{t('quickTasks.whyImportant')}</div>
                                 <p className="text-sm">{getWhyImportant(task.id)}</p>
-                                <div className="font-medium text-orange-600">{t('dashboard.quickTasks.ifNotDone')}</div>
+                                                                  <div className="font-medium text-orange-600">{t('quickTasks.ifNotDone')}</div>
                                 <p className="text-sm">{getWhatHappensIfNot(task.id)}</p>
                               </div>
                             </TooltipContent>
@@ -398,7 +398,7 @@ export const QuickTasks: React.FC<QuickTasksProps> = ({
                       
                       <div className="flex items-center gap-2 text-xs text-muted-foreground">
                         <Clock className="h-3 w-3" />
-                        {t('dashboard.quickTasks.minutes', { count: task.estimatedTime })}
+                        {t('quickTasks.minutes', { count: task.estimatedTime })}
                       </div>
                     </div>
                   </div>
@@ -412,7 +412,7 @@ export const QuickTasks: React.FC<QuickTasksProps> = ({
                         onClick={() => handleTaskStart(task.id)}
                         className="h-8 px-3"
                       >
-                        {t('dashboard.quickTasks.start')}
+                        {t('quickTasks.start')}
                         <ArrowRight className="ml-1 h-3 w-3" />
                       </Button>
                     )}
@@ -427,7 +427,7 @@ export const QuickTasks: React.FC<QuickTasksProps> = ({
                       onClick={() => handleTaskComplete(task.id)}
                       className="text-xs"
                     >
-                      {t('dashboard.quickTasks.markAsComplete')}
+                      {t('quickTasks.markAsComplete')}
                     </Button>
                   </div>
                 )}
@@ -440,11 +440,11 @@ export const QuickTasks: React.FC<QuickTasksProps> = ({
           <div className="mt-4 pt-4 border-t">
             <div className="text-center">
               <p className="text-sm text-muted-foreground">
-                {t('dashboard.quickTasks.greatProgress', { count: completedTasks })}
+                {t('quickTasks.greatProgress', { count: completedTasks })}
               </p>
               {completedTasks >= 5 && (
                 <p className="text-xs text-green-600 mt-1">
-                  {t('dashboard.quickTasks.wellOnWay')}
+                  {t('quickTasks.wellOnWay')}
                 </p>
               )}
             </div>
