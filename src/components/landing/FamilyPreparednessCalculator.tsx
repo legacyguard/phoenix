@@ -20,7 +20,7 @@ import {
 'lucide-react';
 
 export const FamilyPreparednessCalculator: React.FC = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('dashboard');
   const [dependents, setDependents] = useState(2);
   const [income, setIncome] = useState(3000);
   const [hasProperty, setHasProperty] = useState(false);
@@ -74,14 +74,14 @@ export const FamilyPreparednessCalculator: React.FC = () => {
     });
     if (navigator.share) {
       navigator.share({
-        title: t('calculator.shareTitle'),
+        title: t('dashboard.shareTitle'),
         text: shareText,
         url: window.location.href
       });
     } else {
       // Fallback to copying to clipboard
       navigator.clipboard.writeText(shareText);
-      alert(t('calculator.shareCopied'));
+      alert(t('dashboard.shareCopied'));
     }
   };
 
@@ -91,13 +91,13 @@ export const FamilyPreparednessCalculator: React.FC = () => {
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full mb-4">
             <Calculator className="h-4 w-4" />
-            <span className="text-sm font-medium">{t('calculator.badge')}</span>
+            <span className="text-sm font-medium">{t('dashboard.badge')}</span>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            {t('calculator.title')}
+            {t('dashboard.title')}
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            {t('calculator.subtitle')}
+            {t('dashboard.subtitle')}
           </p>
         </div>
         
@@ -107,10 +107,10 @@ export const FamilyPreparednessCalculator: React.FC = () => {
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Users className="h-5 w-5 text-primary" />
-                {t('calculator.inputs.title')}
+                {t('dashboard.inputs.title')}
               </CardTitle>
               <CardDescription>
-                {t('calculator.inputs.description')}
+                {t('dashboard.inputs.description')}
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-6">
@@ -118,7 +118,7 @@ export const FamilyPreparednessCalculator: React.FC = () => {
               <div className="space-y-2">
                 <Label htmlFor="dependents" className="flex items-center gap-2">
                   <Users className="h-4 w-4 text-muted-foreground" />
-                  {t('calculator.inputs.dependents')}
+                  {t('dashboard.inputs.dependents')}
                 </Label>
                 <Input
                   id="dependents"
@@ -130,7 +130,7 @@ export const FamilyPreparednessCalculator: React.FC = () => {
                   className="text-lg" />
 
                 <p className="text-sm text-muted-foreground">
-                  {t('calculator.inputs.dependentsHelp')}
+                  {t('dashboard.inputs.dependentsHelp')}
                 </p>
               </div>
 
@@ -138,7 +138,7 @@ export const FamilyPreparednessCalculator: React.FC = () => {
               <div className="space-y-2">
                 <Label htmlFor="income" className="flex items-center gap-2">
                   <Euro className="h-4 w-4 text-muted-foreground" />
-                  {t('calculator.inputs.income')}
+                  {t('dashboard.inputs.income')}
                 </Label>
                 <div className="relative">
                   <span className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground">€</span>
@@ -152,7 +152,7 @@ export const FamilyPreparednessCalculator: React.FC = () => {
 
                 </div>
                 <p className="text-sm text-muted-foreground">
-                  {t('calculator.inputs.incomeHelp')}
+                  {t('dashboard.inputs.incomeHelp')}
                 </p>
               </div>
 
@@ -165,7 +165,7 @@ export const FamilyPreparednessCalculator: React.FC = () => {
 
                 <Label htmlFor="property" className="flex items-center gap-2 cursor-pointer">
                   <HomeIcon className="h-4 w-4 text-muted-foreground" />
-                  {t('calculator.inputs.property')}
+                  {t('dashboard.inputs.property')}
                 </Label>
               </div>
 
@@ -178,7 +178,7 @@ export const FamilyPreparednessCalculator: React.FC = () => {
 
                 <Label htmlFor="business" className="flex items-center gap-2 cursor-pointer">
                   <Building className="h-4 w-4 text-muted-foreground" />
-                  {t('calculator.inputs.business')}
+                  {t('dashboard.inputs.business')}
                 </Label>
               </div>
 
@@ -186,7 +186,7 @@ export const FamilyPreparednessCalculator: React.FC = () => {
               <div className="space-y-2">
                 <Label htmlFor="accounts" className="flex items-center gap-2">
                   <Wallet className="h-4 w-4 text-muted-foreground" />
-                  {t('calculator.inputs.accounts')}
+                  {t('dashboard.inputs.accounts')}
                 </Label>
                 <Input
                   id="accounts"
@@ -198,7 +198,7 @@ export const FamilyPreparednessCalculator: React.FC = () => {
                   className="text-lg" />
 
                 <p className="text-sm text-muted-foreground">
-                  {t('calculator.inputs.accountsHelp')}
+                  {t('dashboard.inputs.accountsHelp')}
                 </p>
               </div>
 
@@ -208,7 +208,7 @@ export const FamilyPreparednessCalculator: React.FC = () => {
                 className="w-full">
 
                 <Calculator className="mr-2 h-4 w-4" />
-                {t('calculator.calculateButton')}
+                {t('dashboard.calculateButton')}
               </Button>
             </CardContent>
           </Card>
@@ -218,10 +218,10 @@ export const FamilyPreparednessCalculator: React.FC = () => {
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Heart className="h-5 w-5 text-primary" />
-                {t('calculator.results.title')}
+                {t('dashboard.results.title')}
               </CardTitle>
               <CardDescription>
-                {t('calculator.results.description')}
+                {t('dashboard.results.description')}
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-6">
@@ -229,16 +229,16 @@ export const FamilyPreparednessCalculator: React.FC = () => {
               <div className="space-y-4">
                 <div className="flex items-center gap-2">
                   <Clock className="h-5 w-5 text-primary" />
-                  <h3 className="font-semibold text-lg">{t('calculator.results.timeSavings.title')}</h3>
+                  <h3 className="font-semibold text-lg">{t('dashboard.results.timeSavings.title')}</h3>
                 </div>
                 <div className="space-y-2 pl-7">
                   <div className="flex justify-between items-center">
-                    <span className="text-sm text-muted-foreground">{t('calculator.results.timeSavings.without')}</span>
-                    <span className="font-medium text-red-600">{t('calculator.results.timeSavings.withoutHours')}</span>
+                    <span className="text-sm text-muted-foreground">{t('dashboard.results.timeSavings.without')}</span>
+                    <span className="font-medium text-red-600">{t('dashboard.results.timeSavings.withoutHours')}</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-sm text-muted-foreground">{t('calculator.results.timeSavings.with')}</span>
-                    <span className="font-medium text-green-600">{t('calculator.results.timeSavings.withMinutes')}</span>
+                    <span className="text-sm text-muted-foreground">{t('dashboard.results.timeSavings.with')}</span>
+                    <span className="font-medium text-green-600">{t('dashboard.results.timeSavings.withMinutes')}</span>
                   </div>
                   <div className="pt-2 border-t">
                     <p className="text-primary font-semibold">
@@ -252,24 +252,24 @@ export const FamilyPreparednessCalculator: React.FC = () => {
               <div className="space-y-4">
                 <div className="flex items-center gap-2">
                   <Euro className="h-5 w-5 text-primary" />
-                  <h3 className="font-semibold text-lg">{t('calculator.results.moneySavings.title')}</h3>
+                  <h3 className="font-semibold text-lg">{t('dashboard.results.moneySavings.title')}</h3>
                 </div>
                 <div className="space-y-2 pl-7">
                   <div className="flex justify-between items-center">
-                    <span className="text-sm text-muted-foreground">{t('calculator.results.moneySavings.legalFees')}</span>
+                    <span className="text-sm text-muted-foreground">{t('dashboard.results.moneySavings.legalFees')}</span>
                     <span className="font-medium">{t("landing.familyPreparednessCalculator.2_000_8_000_1")}</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-sm text-muted-foreground">{t('calculator.results.moneySavings.lostWages')}</span>
+                    <span className="text-sm text-muted-foreground">{t('dashboard.results.moneySavings.lostWages')}</span>
                     <span className="font-medium">€{(income / 160 * timeSaved).toFixed(0)}</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-sm text-muted-foreground">{t('calculator.results.moneySavings.penalties')}</span>
+                    <span className="text-sm text-muted-foreground">{t('dashboard.results.moneySavings.penalties')}</span>
                     <span className="font-medium">{t("landing.familyPreparednessCalculator.1_000_5_000_2")}</span>
                   </div>
                   <div className="pt-2 border-t">
                     <div className="flex justify-between items-center">
-                      <span className="text-primary font-semibold">{t('calculator.results.moneySavings.total')}</span>
+                      <span className="text-primary font-semibold">{t('dashboard.results.moneySavings.total')}</span>
                       <span className="text-2xl font-bold text-primary">€{moneySaved.toLocaleString('en-EU')}</span>
                     </div>
                   </div>
@@ -280,26 +280,26 @@ export const FamilyPreparednessCalculator: React.FC = () => {
               <div className="space-y-4">
                 <div className="flex items-center gap-2">
                   <Heart className="h-5 w-5 text-primary" />
-                  <h3 className="font-semibold text-lg">{t('calculator.results.emotional.title')}</h3>
+                  <h3 className="font-semibold text-lg">{t('dashboard.results.emotional.title')}</h3>
                 </div>
                 <div className="space-y-3 pl-7">
                   <div>
                     <div className="flex justify-between items-center mb-1">
-                      <span className="text-sm text-muted-foreground">{t('calculator.results.emotional.stress')}</span>
+                      <span className="text-sm text-muted-foreground">{t('dashboard.results.emotional.stress')}</span>
                       <span className="text-sm font-medium">{stressReduction}%</span>
                     </div>
                     <Progress value={stressReduction} className="h-2" />
                   </div>
                   <div>
                     <div className="flex justify-between items-center mb-1">
-                      <span className="text-sm text-muted-foreground">{t('calculator.results.emotional.confidence')}</span>
+                      <span className="text-sm text-muted-foreground">{t('dashboard.results.emotional.confidence')}</span>
                       <span className="text-sm font-medium">{confidenceIncrease}%</span>
                     </div>
                     <Progress value={confidenceIncrease} className="h-2" />
                   </div>
                   <div>
                     <div className="flex justify-between items-center mb-1">
-                      <span className="text-sm text-muted-foreground">{t('calculator.results.emotional.peace')}</span>
+                      <span className="text-sm text-muted-foreground">{t('dashboard.results.emotional.peace')}</span>
                       <span className="text-sm font-medium">{controlRating}{t("landing.familyPreparednessCalculator.10_3")}</span>
                     </div>
                     <Progress value={controlRating * 10} className="h-2" />
@@ -310,17 +310,17 @@ export const FamilyPreparednessCalculator: React.FC = () => {
               {/* Social Proof */}
               <div className="bg-primary/5 rounded-lg p-4 text-center">
                 <p className="text-sm text-muted-foreground mb-1">
-                  {t('calculator.results.socialProof')}
+                  {t('dashboard.results.socialProof')}
                 </p>
                 <p className="font-semibold text-primary">
-                  {t('calculator.results.families')}
+                  {t('dashboard.results.families')}
                 </p>
               </div>
 
               {/* Context */}
               <div className="text-center py-3">
                 <p className="text-sm text-muted-foreground">
-                  {t('calculator.results.ctaContext')}
+                  {t('dashboard.results.ctaContext')}
                 </p>
               </div>
 
@@ -346,7 +346,7 @@ export const FamilyPreparednessCalculator: React.FC = () => {
                   onClick={handleShare}>
 
                   <Share2 className="mr-2 h-4 w-4" />
-                  {t('calculator.results.shareButton')}
+                  {t('dashboard.results.shareButton')}
                 </Button>
               </div>
             </CardContent>
@@ -356,10 +356,10 @@ export const FamilyPreparednessCalculator: React.FC = () => {
         {/* Testimonial */}
         <div className="mt-12 max-w-4xl mx-auto text-center">
           <blockquote className="text-lg text-muted-foreground italic">
-            "{t('calculator.testimonial.quote')}"
+            "{t('dashboard.testimonial.quote')}"
           </blockquote>
           <p className="mt-2 text-sm font-medium">
-            — {t('calculator.testimonial.author')}
+            — {t('dashboard.testimonial.author')}
           </p>
         </div>
       </div>

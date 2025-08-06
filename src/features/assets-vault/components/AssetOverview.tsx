@@ -167,8 +167,8 @@ export const AssetOverview: React.FC = () => {
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>
-          <h2 className="text-2xl font-bold">{t('vault.title')}</h2>
-          <p className="text-muted-foreground">{t('vault.subtitle')}</p>
+          <h2 className="text-2xl font-bold">{t('assets.title')}</h2>
+          <p className="text-muted-foreground">{t('assets.subtitle')}</p>
         </div>
         <Button onClick={() => handleAddAsset()}>
           <Plus className="h-4 w-4 mr-2" />
@@ -182,7 +182,7 @@ export const AssetOverview: React.FC = () => {
           <CardHeader className="pb-3">
             <CardTitle className="flex items-center gap-2">
               <TrendingUp className="h-5 w-5" />
-              {t('vault.estimatedWorth')}
+              {t('assets.estimatedWorth')}
             </CardTitle>
           </CardHeader>
           <CardContent>
@@ -282,10 +282,10 @@ export const AssetOverview: React.FC = () => {
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <PieChart className="h-5 w-5" />
-                {t('vault.categories')}
+                {t('assets.categories')}
               </CardTitle>
               <CardDescription>
-                {t('vault.description')}
+                {t('assets.description')}
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -333,10 +333,10 @@ export const AssetOverview: React.FC = () => {
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <Users className="h-5 w-5" />
-              {t('vault.recentlyAdded')}
+              {t('assets.recentlyAdded')}
             </CardTitle>
             <CardDescription>
-              {t('vault.description')}
+              {t('assets.description')}
             </CardDescription>
           </CardHeader>
           <CardContent>
@@ -344,7 +344,7 @@ export const AssetOverview: React.FC = () => {
             <Alert>
                 <AlertDescription className="flex items-center gap-2">
                   <Badge variant="outline" className="bg-green-50">
-                    ✓ {t('vault.empty')}
+                    ✓ {t('assets.empty')}
                   </Badge>
                 </AlertDescription>
               </Alert> :

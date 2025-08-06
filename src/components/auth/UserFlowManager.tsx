@@ -78,7 +78,7 @@ export const UserFlowManager: React.FC<UserFlowManagerProps> = ({ children }) =>
   if (flowState === 'loading') {
     return (
       <div className="flex items-center justify-center min-h-screen bg-background">
-        <div className="animate-pulse text-muted-foreground">{t('common.loading')}</div>
+        <div className="animate-pulse text-muted-foreground">{t('ui.loading')}</div>
       </div>
     );
   }

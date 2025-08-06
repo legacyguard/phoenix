@@ -19,7 +19,7 @@ export function BeneficiariesForm({
   onUpdate,
   errors
 }: BeneficiariesFormProps) {
-  const { t } = useTranslation();
+  const { t } = useTranslation('wills');
 
   const handleBeneficiaryUpdate = (id: string, updates: Partial<Beneficiary>) => {
     onUpdate(beneficiaries.map(b => 
@@ -33,17 +33,17 @@ export function BeneficiariesForm({
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             <Users className="h-5 w-5" />
-            {t('will.beneficiaries.title')}
+            {t('wills.beneficiaries.title')}
           </CardTitle>
           <CardDescription>
-            {t('will.beneficiaries.description')}
+            {t('wills.beneficiaries.description')}
           </CardDescription>
         </CardHeader>
         <CardContent>
           {beneficiaries.length === 0 ? (
             <div className="text-center py-8 text-muted-foreground">
               <Users className="h-12 w-12 mx-auto mb-3 text-muted-foreground/50" />
-              <p>{t('will.beneficiaries.noBeneficiaries')}</p>
+              <p>{t('wills.beneficiaries.noBeneficiaries')}</p>
             </div>
           ) : (
             <div className="space-y-6">
@@ -58,7 +58,7 @@ export function BeneficiariesForm({
                       <div className="grid grid-cols-2 gap-4">
                         <div className="space-y-2">
                           <Label htmlFor={`id-${beneficiary.id}`}>
-                            {t('will.beneficiaries.identification')}
+                            {t('wills.beneficiaries.identification')}
                           </Label>
                           <Input
                             id={`id-${beneficiary.id}`}
@@ -67,13 +67,13 @@ export function BeneficiariesForm({
                               beneficiary.id,
                               { identification: e.target.value }
                             )}
-                            placeholder={t('will.beneficiaries.identificationPlaceholder')}
+                            placeholder={t('wills.beneficiaries.identificationPlaceholder')}
                           />
                         </div>
                         
                         <div className="space-y-2">
                           <Label htmlFor={`alt-${beneficiary.id}`}>
-                            {t('will.beneficiaries.alternativeBeneficiary')}
+                            {t('wills.beneficiaries.alternativeBeneficiary')}
                           </Label>
                           <Input
                             id={`alt-${beneficiary.id}`}
@@ -82,7 +82,7 @@ export function BeneficiariesForm({
                               beneficiary.id,
                               { alternativeBeneficiary: e.target.value }
                             )}
-                            placeholder={t('will.beneficiaries.alternativePlaceholder')}
+                            placeholder={t('wills.beneficiaries.alternativePlaceholder')}
                           />
                         </div>
                       </div>
@@ -90,12 +90,12 @@ export function BeneficiariesForm({
                       {/* Display current allocation */}
                       <div className="bg-muted/50 rounded-lg p-4">
                         <p className="text-sm font-medium mb-2">
-                          {t('will.beneficiaries.currentAllocation')}
+                          {t('wills.beneficiaries.currentAllocation')}
                         </p>
                         {beneficiary.allocation.map((alloc, allocIndex) => (
                           <div key={allocIndex} className="text-sm text-muted-foreground">
                             {alloc.assetType === 'percentage' ? (
-                              <span>{alloc.value}% {t('will.beneficiaries.ofEstate')}</span>
+                              <span>{alloc.value}% {t('wills.beneficiaries.ofEstate')}</span>
                             ) : (
                               <span>{alloc.description}</span>
                             )}
@@ -128,11 +128,11 @@ export function BeneficiariesForm({
       {/* Additional instructions */}
       <Card>
         <CardContent className="pt-6">
-          <h4 className="font-medium mb-2">{t('will.beneficiaries.importantNotes')}</h4>
+          <h4 className="font-medium mb-2">{t('wills.beneficiaries.importantNotes')}</h4>
           <ul className="text-sm text-muted-foreground space-y-1">
-            <li>• {t('will.beneficiaries.note1')}</li>
-            <li>• {t('will.beneficiaries.note2')}</li>
-            <li>• {t('will.beneficiaries.note3')}</li>
+            <li>• {t('wills.beneficiaries.note1')}</li>
+            <li>• {t('wills.beneficiaries.note2')}</li>
+            <li>• {t('wills.beneficiaries.note3')}</li>
           </ul>
         </CardContent>
       </Card>

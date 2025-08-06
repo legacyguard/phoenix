@@ -110,7 +110,7 @@ export const AlertCenter: React.FC<AlertCenterProps> = ({
 
     } catch (error) {
       console.error('[AlertCenter] Error loading alerts:', error);
-      toast.error(t('alerts.errors.loadFailed'));
+      toast.error(t('ui.errors.loadFailed'));
     } finally {
       setLoading(false);
     }
@@ -149,11 +149,11 @@ export const AlertCenter: React.FC<AlertCenterProps> = ({
 
       if (error) throw error;
 
-      toast.success(t('alerts.messages.dismissed'));
+      toast.success(t('ui.messages.dismissed'));
       loadAlerts();
     } catch (error) {
       console.error('[AlertCenter] Error dismissing alert:', error);
-      toast.error(t('alerts.errors.dismissFailed'));
+      toast.error(t('ui.errors.dismissFailed'));
     }
   };
 
@@ -172,7 +172,7 @@ export const AlertCenter: React.FC<AlertCenterProps> = ({
       loadAlerts();
     } catch (error) {
       console.error('[AlertCenter] Error snoozing alert:', error);
-      toast.error(t('alerts.errors.snoozeFailed'));
+      toast.error(t('ui.errors.snoozeFailed'));
     }
   };
 
@@ -187,11 +187,11 @@ export const AlertCenter: React.FC<AlertCenterProps> = ({
 
       if (error) throw error;
 
-      toast.success(t('alerts.messages.markedAsRenewed'));
+      toast.success(t('ui.messages.markedAsRenewed'));
       loadAlerts();
     } catch (error) {
       console.error('[AlertCenter] Error marking as renewed:', error);
-      toast.error(t('alerts.errors.renewFailed'));
+      toast.error(t('ui.errors.renewFailed'));
     }
   };
 
@@ -266,7 +266,7 @@ export const AlertCenter: React.FC<AlertCenterProps> = ({
               <span className="font-medium">{getAlertMessage(alert)}</span>
               {!alert.is_read && (
                 <Badge variant="secondary" className="ml-2">
-                  {t('alerts.unread')}
+                  {t('ui.unread')}
                 </Badge>
               )}
             </div>
@@ -285,7 +285,7 @@ export const AlertCenter: React.FC<AlertCenterProps> = ({
             {alert.document.renewal_action && (
               <Alert className="mt-2">
                 <AlertDescription className="text-sm">
-                  <strong>{t('alerts.renewalInstructions')}:</strong> {alert.document.renewal_action}
+                  <strong>{t('ui.renewalInstructions')}:</strong> {alert.document.renewal_action}
                 </AlertDescription>
               </Alert>
             )}
@@ -299,7 +299,7 @@ export const AlertCenter: React.FC<AlertCenterProps> = ({
           </div>
 
           <Badge variant={getAlertBadgeVariant(alert.alert_type)}>
-            {t(`alerts.badges.${alert.alert_type}`)}
+            {t('ui.badges.${alert.alert_type}')}
           </Badge>
         </div>
 
@@ -315,7 +315,7 @@ export const AlertCenter: React.FC<AlertCenterProps> = ({
                 }}
               >
                 <CheckCircle className="h-3 w-3 mr-1" />
-                {t('alerts.markAsRenewed')}
+                {t('ui.markAsRenewed')}
               </Button>
               
               {!alert.snooze_until || new Date(alert.snooze_until) <= new Date() ? (
@@ -329,7 +329,7 @@ export const AlertCenter: React.FC<AlertCenterProps> = ({
                     }}
                   >
                     <Clock className="h-3 w-3 mr-1" />
-                    {t('alerts.snooze7Days')}
+                    {t('ui.snooze7Days')}
                   </Button>
                   
                   <Button
@@ -341,7 +341,7 @@ export const AlertCenter: React.FC<AlertCenterProps> = ({
                     }}
                   >
                     <X className="h-3 w-3 mr-1" />
-                    {t('alerts.dismiss')}
+                    {t('ui.dismiss')}
                   </Button>
                 </>
               ) : (
@@ -354,7 +354,7 @@ export const AlertCenter: React.FC<AlertCenterProps> = ({
                   }}
                 >
                   <RotateCcw className="h-3 w-3 mr-1" />
-                  {t('alerts.unsnooze')}
+                  {t('ui.unsnooze')}
                 </Button>
               )}
             </>
@@ -375,10 +375,10 @@ export const AlertCenter: React.FC<AlertCenterProps> = ({
               <div>
                 <CardTitle className="flex items-center gap-2">
                   <Bell className="h-5 w-5" />
-                  {t('alerts.title')}
+                  {t('ui.title')}
                 </CardTitle>
                 <CardDescription>
-                  {t('alerts.description')}
+                  {t('ui.description')}
                 </CardDescription>
               </div>
               <Button
@@ -395,13 +395,13 @@ export const AlertCenter: React.FC<AlertCenterProps> = ({
             <Tabs value={activeTab} onValueChange={(v) => setActiveTab(v as 'active' | 'snoozed' | 'dismissed')}>
               <TabsList className="w-full rounded-none">
                 <TabsTrigger value="active" className="flex-1">
-                  {t('alerts.tabs.active')}
+                  {t('ui.tabs.active')}
                 </TabsTrigger>
                 <TabsTrigger value="snoozed" className="flex-1">
-                  {t('alerts.tabs.snoozed')}
+                  {t('ui.tabs.snoozed')}
                 </TabsTrigger>
                 <TabsTrigger value="dismissed" className="flex-1">
-                  {t('alerts.tabs.dismissed')}
+                  {t('ui.tabs.dismissed')}
                 </TabsTrigger>
               </TabsList>
 
@@ -415,7 +415,7 @@ export const AlertCenter: React.FC<AlertCenterProps> = ({
                     <div className="text-center py-8">
                       <Bell className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
                       <p className="text-muted-foreground">
-                        {t('alerts.noActiveAlerts')}
+                        {t('ui.noActiveAlerts')}
                       </p>
                     </div>
                   ) : (
@@ -434,7 +434,7 @@ export const AlertCenter: React.FC<AlertCenterProps> = ({
                     <div className="text-center py-8">
                       <BellOff className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
                       <p className="text-muted-foreground">
-                        {t('alerts.noSnoozedAlerts')}
+                        {t('ui.noSnoozedAlerts')}
                       </p>
                     </div>
                   ) : (
@@ -453,7 +453,7 @@ export const AlertCenter: React.FC<AlertCenterProps> = ({
                     <div className="text-center py-8">
                       <CheckCircle className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
                       <p className="text-muted-foreground">
-                        {t('alerts.noDismissedAlerts')}
+                        {t('ui.noDismissedAlerts')}
                       </p>
                     </div>
                   ) : (

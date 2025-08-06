@@ -16,7 +16,7 @@ export const Footer: React.FC = () => {
           <div className="space-y-3">
             <div className="flex items-center space-x-2">
               <Shield className="h-6 w-6 text-primary" />
-              <span className="text-lg font-bold text-primary">{t('app.name')}</span>
+              <span className="text-lg font-bold text-primary">{t('ui.name')}</span>
             </div>
             <p className="text-sm text-muted-foreground font-heritage italic">
               "{t('footer.tagline')}"
@@ -27,10 +27,10 @@ export const Footer: React.FC = () => {
           <div>
             <h3 className="font-semibold mb-3">{t('footer.platform.title')}</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><Link to={t("common.footer.vault_1")} className="hover:text-primary transition-colors">{t('footer.platform.heritageVault')}</Link></li>
-              <li><Link to={t("common.footer.guardians_2")} className="hover:text-primary transition-colors">{t('footer.platform.guardianNetwork')}</Link></li>
-              <li><Link to={t("common.footer.dashboard_3")} className="hover:text-primary transition-colors">{t('footer.platform.dashboard')}</Link></li>
-              <li><Link to={t("common.footer.security_4")} className="hover:text-primary transition-colors">{t('footer.platform.security')}</Link></li>
+              <li><Link to={t('ui.footer.vault_1')} className="hover:text-primary transition-colors">{t('footer.platform.heritageVault')}</Link></li>
+              <li><Link to={t('ui.footer.guardians_2')} className="hover:text-primary transition-colors">{t('footer.platform.guardianNetwork')}</Link></li>
+              <li><Link to={t('ui.footer.dashboard_3')} className="hover:text-primary transition-colors">{t('footer.platform.dashboard')}</Link></li>
+              <li><Link to={t('ui.footer.security_4')} className="hover:text-primary transition-colors">{t('footer.platform.security')}</Link></li>
             </ul>
           </div>
 
@@ -38,10 +38,10 @@ export const Footer: React.FC = () => {
           <div>
             <h3 className="font-semibold mb-3">{t('footer.support.title')}</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><Link to={t("common.footer.help_5")} className="hover:text-primary transition-colors">{t('footer.support.helpCenter')}</Link></li>
-              <li><Link to={t("common.footer.guides_6")} className="hover:text-primary transition-colors">{t('footer.support.userGuides')}</Link></li>
-              <li><Link to={t("common.footer.contact_7")} className="hover:text-primary transition-colors">{t('footer.support.contactUs')}</Link></li>
-              <li><Link to={t("common.footer.community_8")} className="hover:text-primary transition-colors">{t('footer.support.community')}</Link></li>
+              <li><Link to={t('ui.footer.help_5')} className="hover:text-primary transition-colors">{t('footer.support.helpCenter')}</Link></li>
+              <li><Link to={t('ui.footer.guides_6')} className="hover:text-primary transition-colors">{t('footer.support.userGuides')}</Link></li>
+              <li><Link to={t('ui.footer.contact_7')} className="hover:text-primary transition-colors">{t('footer.support.contactUs')}</Link></li>
+              <li><Link to={t('ui.footer.community_8')} className="hover:text-primary transition-colors">{t('footer.support.community')}</Link></li>
             </ul>
           </div>
 
@@ -49,9 +49,9 @@ export const Footer: React.FC = () => {
           <div>
             <h3 className="font-semibold mb-3">{t('footer.legal.title')}</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><Link to={t("common.footer.privacy_policy_9")} className="hover:text-primary transition-colors">{t('footer.legal.privacyPolicy')}</Link></li>
-              <li><Link to={t("common.footer.terms_10")} className="hover:text-primary transition-colors">{t('footer.legal.termsOfService')}</Link></li>
-              <li><Link to={t("common.footer.data_protection_11")} className="hover:text-primary transition-colors">{t('footer.legal.dataProtection')}</Link></li>
+              <li><Link to={t('ui.footer.privacy_policy_9')} className="hover:text-primary transition-colors">{t('footer.legal.privacyPolicy')}</Link></li>
+              <li><Link to={t('ui.footer.terms_10')} className="hover:text-primary transition-colors">{t('footer.legal.termsOfService')}</Link></li>
+              <li><Link to={t('ui.footer.data_protection_11')} className="hover:text-primary transition-colors">{t('footer.legal.dataProtection')}</Link></li>
             </ul>
           </div>
         </div>

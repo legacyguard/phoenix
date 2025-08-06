@@ -73,26 +73,26 @@ const App = () => {
 
   return (
     <ErrorProvider>
-      <ErrorBoundary showDetails={import.meta.env.DEV}>
-        <QueryClientProvider client={queryClient}>
-          <CountryProvider>
-            <ThemeProvider>
-              <TooltipProvider>
-                <Toaster />
-                <BrowserRouter>
+      <QueryClientProvider client={queryClient}>
+        <CountryProvider>
+          <ThemeProvider>
+            <TooltipProvider>
+              <Toaster />
+              <BrowserRouter>
+                <ErrorBoundary showDetails={import.meta.env.DEV}>
                   <AppContent />
-                </BrowserRouter>
-              </TooltipProvider>
-            </ThemeProvider>
-          </CountryProvider>
-        </QueryClientProvider>
-      </ErrorBoundary>
+                </ErrorBoundary>
+              </BrowserRouter>
+            </TooltipProvider>
+          </ThemeProvider>
+        </CountryProvider>
+      </QueryClientProvider>
     </ErrorProvider>
   );
 };
 
 const AppContent = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('ui');
 
   return (
     <PasswordWall>

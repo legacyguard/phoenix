@@ -1,1 +1,683 @@
-{}
+{
+  "beneficiaryCommunications": {
+    "actions": {
+      "cancel": "[SQ] Cancel",
+      "save": "[SQ] Save",
+      "saving": "[SQ] Saving"
+    },
+    "description": "[SQ] Description",
+    "dialog": {
+      "description": "[SQ] Description",
+      "title": "[SQ] Title"
+    },
+    "empty": {
+      "subtitle": "[SQ] Subtitle",
+      "title": "[SQ] Title"
+    },
+    "fields": {
+      "beneficiaryName": "[SQ] Beneficiary name",
+      "date": "[SQ] Date",
+      "email": "[SQ] Email",
+      "subject": "[SQ] Subject",
+      "summary": "[SQ] Summary",
+      "type": "[SQ] Type"
+    },
+    "logAction": "[SQ] Log action",
+    "logCommunication": "[SQ] Log communication",
+    "placeholders": {
+      "subject": "[SQ] Subject",
+      "summary": "[SQ] Summary"
+    },
+    "title": "[SQ] Title",
+    "types": {
+      "email": "[SQ] Email",
+      "inPerson": "[SQ] In person",
+      "letter": "[SQ] Letter",
+      "other": "[SQ] Other",
+      "phone": "[SQ] Phone"
+    }
+  },
+  "common": {
+    "cancel": "[SQ] Cancel",
+    "fix": "[SQ] Fix",
+    "minutes": "[SQ] Minutes",
+    "start": "[SQ] Start"
+  },
+  "crisisAssessment": {
+    "criticalVulnerabilities": "[SQ] Critical vulnerabilities",
+    "familyCapabilities": "[SQ] Family capabilities",
+    "familyDiscussion": "[SQ] Family discussion",
+    "familyDiscussionDescription": "[SQ] Family discussion description",
+    "fixCapability": "[SQ] Fix capability",
+    "fixNow": "[SQ] Fix now",
+    "missing": "[SQ] Missing",
+    "mostUrgent": "[SQ] Most urgent",
+    "nextCriticalAction": "[SQ] Next critical action",
+    "notPrepared": "[SQ] Not prepared",
+    "partial": "[SQ] Partial",
+    "prepared": "[SQ] Prepared",
+    "printReport": "[SQ] Print report",
+    "protected": "[SQ] Protected",
+    "scheduleReview": "[SQ] Schedule review",
+    "situationReadiness": "[SQ] Situation readiness",
+    "subtitle": "[SQ] Subtitle",
+    "timeEstimate": "[SQ] Time estimate",
+    "title": "[SQ] Title",
+    "vulnerable": "[SQ] Vulnerable"
+  },
+  "crisisSituations": {
+    "businessEmergency": {
+      "description": "[SQ] Description",
+      "title": "[SQ] Title"
+    },
+    "emergencyHospital": {
+      "description": "[SQ] Description",
+      "title": "[SQ] Title"
+    },
+    "extendedTravel": {
+      "description": "[SQ] Description",
+      "title": "[SQ] Title"
+    },
+    "suddenDeath": {
+      "description": "[SQ] Description",
+      "title": "[SQ] Title"
+    }
+  },
+  "dashboard": {
+    "familyGuide": {
+      "discreteMode": "[SQ] Discrete mode",
+      "discreteModeDesc": "[SQ] Discrete mode desc",
+      "emergency_contacts_1": "[SQ] Emergency contacts 1",
+      "export_guide_4": "[SQ] Export guide 4",
+      "generateGuide": "[SQ] Generate guide",
+      "important_documents_2": "[SQ] Important documents 2",
+      "last_updated_6": "[SQ] Last updated 6",
+      "share_with_family_5": "[SQ] Share with family 5",
+      "subtitle": "[SQ] Subtitle",
+      "title": "[SQ] Title",
+      "view": "[SQ] View",
+      "what_to_do_when_3": "[SQ] What to do when 3"
+    }
+  },
+  "emergency": {
+    "addContact": "[SQ] Add contact",
+    "addContactDialog": {
+      "addButton": "[SQ] Add button",
+      "description": "[SQ] Description",
+      "relationship": "[SQ] Relationship",
+      "relationshipPlaceholder": "[SQ] Relationship placeholder",
+      "selectContact": "[SQ] Select contact",
+      "selectPlaceholder": "[SQ] Select placeholder",
+      "title": "[SQ] Title"
+    },
+    "description": "[SQ] Description",
+    "errors": {
+      "addFailed": "[SQ] Add failed",
+      "loadFailed": "[SQ] Load failed",
+      "removeFailed": "[SQ] Remove failed",
+      "reorderFailed": "[SQ] Reorder failed",
+      "selectContact": "[SQ] Select contact",
+      "testFailed": "[SQ] Test failed"
+    },
+    "lastContacted": "[SQ] Last contacted",
+    "maxContactsReached": "[SQ] Max contacts reached",
+    "messages": {
+      "added": "[SQ] Added",
+      "removed": "[SQ] Removed",
+      "reordered": "[SQ] Reordered",
+      "testSent": "[SQ] Test sent"
+    },
+    "noContacts": "[SQ] No contacts",
+    "sendTest": "[SQ] Send test",
+    "title": "[SQ] Title"
+  },
+  "errors": {
+    "dataNotFound": "[SQ] Data not found",
+    "duplicateRecord": "[SQ] Duplicate record",
+    "networkError": "[SQ] Network error",
+    "permissionDenied": "[SQ] Permission denied",
+    "unknown": "[SQ] Unknown"
+  },
+  "estateStatus": {
+    "actions": {
+      "cancel": "[SQ] Cancel",
+      "update": "[SQ] Update",
+      "updating": "[SQ] Updating"
+    },
+    "description": "[SQ] Description",
+    "dialog": {
+      "description": "[SQ] Description",
+      "title": "[SQ] Title"
+    },
+    "empty": {
+      "noStatus": "[SQ] No status",
+      "readOnly": "[SQ] Read only"
+    },
+    "fields": {
+      "additionalDetails": "[SQ] Additional details",
+      "status": "[SQ] Status"
+    },
+    "lastUpdated": "[SQ] Last updated",
+    "logAction": "[SQ] Log action",
+    "placeholders": {
+      "additionalContext": "[SQ] Additional context",
+      "selectStatus": "[SQ] Select status"
+    },
+    "progress": "[SQ] Progress",
+    "statuses": {
+      "assetsBeingValued": "[SQ] Assets being valued",
+      "debtsBeingSettled": "[SQ] Debts being settled",
+      "distributionInProgress": "[SQ] Distribution in progress",
+      "estateClosed": "[SQ] Estate closed",
+      "gatheringDocuments": "[SQ] Gathering documents",
+      "initialReview": "[SQ] Initial review",
+      "probateInitiated": "[SQ] Probate initiated",
+      "readyForDistribution": "[SQ] Ready for distribution",
+      "taxPreparation": "[SQ] Tax preparation"
+    },
+    "title": "[SQ] Title",
+    "updateStatus": "[SQ] Update status"
+  },
+  "familyCapabilities": {
+    "businessOperations": "[SQ] Business operations",
+    "canAccessBankAccounts": "[SQ] Can access bank accounts",
+    "canAccessDigitalAccounts": "[SQ] Can access digital accounts",
+    "canFileInsuranceClaims": "[SQ] Can file insurance claims",
+    "canManageBusiness": "[SQ] Can manage business",
+    "cannotAccessBankAccounts": "[SQ] Cannot access bank accounts",
+    "cannotAccessDigitalAccounts": "[SQ] Cannot access digital accounts",
+    "cannotFileInsuranceClaims": "[SQ] Cannot file insurance claims",
+    "clearInheritancePlan": "[SQ] Clear inheritance plan",
+    "digitalAccess": "[SQ] Digital access",
+    "digitalAccounts": "[SQ] Digital accounts",
+    "immediateFinancialNeeds": "[SQ] Immediate financial needs",
+    "inheritance": "[SQ] Inheritance",
+    "insuranceClaims": "[SQ] Insurance claims",
+    "knowsLegalContacts": "[SQ] Knows legal contacts",
+    "knowsMedicalWishes": "[SQ] Knows medical wishes",
+    "legalMatters": "[SQ] Legal matters",
+    "medicalDecisions": "[SQ] Medical decisions",
+    "noBusinessInfo": "[SQ] No business info",
+    "noInheritancePlan": "[SQ] No inheritance plan",
+    "noLegalContacts": "[SQ] No legal contacts",
+    "noMedicalInfo": "[SQ] No medical info",
+    "partialBusinessInfo": "[SQ] Partial business info",
+    "partialInheritancePlan": "[SQ] Partial inheritance plan",
+    "partialMedicalInfo": "[SQ] Partial medical info",
+    "payBills": "[SQ] Pay bills"
+  },
+  "familyCrisisAssessment": {
+    "15_1": "[SQ] 15 1"
+  },
+  "familyExecutorView": {
+    "communications": {
+      "description": "[SQ] Description",
+      "empty": "[SQ] Empty",
+      "title": "[SQ] Title",
+      "to": "[SQ] To"
+    },
+    "executor": "[SQ] Executor",
+    "footer": "[SQ] Footer",
+    "subtitle": "[SQ] Subtitle",
+    "theExecutor": "[SQ] The executor",
+    "title": "[SQ] Title"
+  },
+  "familyHub": {
+    "accessLevels": {
+      "emergencyOnly": {
+        "description": "[SQ] Description",
+        "fullDescription": "[SQ] Full description",
+        "title": "[SQ] Title"
+      },
+      "fullAccess": {
+        "description": "[SQ] Description",
+        "fullDescription": "[SQ] Full description",
+        "title": "[SQ] Title"
+      },
+      "limitedInfo": {
+        "description": "[SQ] Description",
+        "fullDescription": "[SQ] Full description",
+        "title": "[SQ] Title"
+      },
+      "none": {
+        "description": "[SQ] Description",
+        "title": "[SQ] Title"
+      }
+    },
+    "emergencyProtocol": {
+      "activeMessage": "[SQ] Active message",
+      "configure": "[SQ] Configure",
+      "configured": "[SQ] Configured",
+      "description": "[SQ] Description",
+      "title": "[SQ] Title"
+    },
+    "errors": {
+      "authenticationRequired": "[SQ] Authentication required",
+      "failedToFetchData": "[SQ] Failed to fetch data",
+      "failedToLoadMembers": "[SQ] Failed to load members"
+    },
+    "memberManagement": {
+      "addMorePeople": "[SQ] Add more people",
+      "addTrustedPerson": "[SQ] Add trusted person",
+      "daysAgo": "[SQ] Days ago",
+      "informationAccessLevel": "[SQ] Information access level",
+      "lastContactOver30Days": "[SQ] Last contact over30 days",
+      "lastContacted": "[SQ] Last contacted",
+      "preparedness": "[SQ] Preparedness",
+      "sendUpdate": "[SQ] Send update",
+      "sendUpdateTo": "[SQ] Send update to",
+      "title": "[SQ] Title"
+    },
+    "messages": {
+      "accessLevelUpdated": "[SQ] Access level updated",
+      "failedToSendUpdate": "[SQ] Failed to send update",
+      "updateSentTo": "[SQ] Update sent to"
+    },
+    "overallPreparedness": {
+      "description": "[SQ] Description",
+      "improvementNeeded": "[SQ] Improvement needed",
+      "title": "[SQ] Title"
+    },
+    "subtitle": "[SQ] Subtitle",
+    "tabs": {
+      "familyMembers": "[SQ] Family members",
+      "members": "[SQ] Members",
+      "preparednessTools": "[SQ] Preparedness tools",
+      "tools": "[SQ] Tools"
+    },
+    "title": "[SQ] Title"
+  },
+  "familyPreparednessTools": {
+    "create_a_printable_guide_for_y_3": "[SQ] Create a printable guide for y 3",
+    "errors": {
+      "comingSoon": "[SQ] Coming soon",
+      "generateFailed": "[SQ] Generate failed",
+      "premiumRequired": "[SQ] Premium required",
+      "selectScenario": "[SQ] Select scenario"
+    },
+    "generate_another_5": "[SQ] Generate another 5",
+    "generate_emergency_guide_2": "[SQ] Generate emergency guide 2",
+    "guides": {
+      "death": {
+        "bankAccounts": "[SQ] Bank accounts",
+        "contactExecutor": "[SQ] Contact executor",
+        "contactLawyer": "[SQ] Contact lawyer",
+        "deathCertificate": "[SQ] Death certificate",
+        "disclaimer": "[SQ] Disclaimer",
+        "employer": "[SQ] Employer",
+        "financialInstitutions": "[SQ] Financial institutions",
+        "first24Hours": "[SQ] First24 hours",
+        "generatedOn": "[SQ] Generated on",
+        "importantDocuments": "[SQ] Important documents",
+        "insuranceCompanies": "[SQ] Insurance companies",
+        "investmentAccounts": "[SQ] Investment accounts",
+        "locateWill": "[SQ] Locate will",
+        "peopleToNotify": "[SQ] People to notify",
+        "secureResidence": "[SQ] Secure residence",
+        "socialSecurity": "[SQ] Social security",
+        "title": "[SQ] Title"
+      },
+      "emergency": {
+        "address": "[SQ] Address",
+        "attorney": "[SQ] Attorney",
+        "emergency": "[SQ] Emergency",
+        "financialAdvisor": "[SQ] Financial advisor",
+        "homeInformation": "[SQ] Home information",
+        "insuranceAgent": "[SQ] Insurance agent",
+        "keyContacts": "[SQ] Key contacts",
+        "securitySystem": "[SQ] Security system",
+        "spouse": "[SQ] Spouse",
+        "title": "[SQ] Title",
+        "utilities": "[SQ] Utilities"
+      },
+      "hospitalization": {
+        "allergies": "[SQ] Allergies",
+        "bloodType": "[SQ] Blood type",
+        "currentMedications": "[SQ] Current medications",
+        "emergencyContacts": "[SQ] Emergency contacts",
+        "healthcarePowerOfAttorney": "[SQ] Healthcare power of attorney",
+        "hipaaRelease": "[SQ] Hipaa release",
+        "legalDocuments": "[SQ] Legal documents",
+        "livingWill": "[SQ] Living will",
+        "medicalInformation": "[SQ] Medical information",
+        "preferredHospital": "[SQ] Preferred hospital",
+        "primaryCarePhysician": "[SQ] Primary care physician",
+        "title": "[SQ] Title"
+      },
+      "missing": {
+        "bankingApps": "[SQ] Banking apps",
+        "checkHospitals": "[SQ] Check hospitals",
+        "checkWithWorkplace": "[SQ] Check with workplace",
+        "contactCloseFriends": "[SQ] Contact close friends",
+        "contactLocalPolice": "[SQ] Contact local police",
+        "digitalFootprint": "[SQ] Digital footprint",
+        "email": "[SQ] Email",
+        "immediateActions": "[SQ] Immediate actions",
+        "phoneProvider": "[SQ] Phone provider",
+        "socialMedia": "[SQ] Social media",
+        "title": "[SQ] Title"
+      }
+    },
+    "mockContent": {
+      "insurancePolicies": "[SQ] Insurance policies"
+    },
+    "scenarios": {
+      "death": {
+        "description": "[SQ] Description",
+        "title": "[SQ] Title"
+      },
+      "emergency": {
+        "description": "[SQ] Description",
+        "title": "[SQ] Title"
+      },
+      "hospitalization": {
+        "description": "[SQ] Description",
+        "title": "[SQ] Title"
+      },
+      "missing": {
+        "description": "[SQ] Description",
+        "title": "[SQ] Title"
+      }
+    },
+    "select_scenario_4": "[SQ] Select scenario 4",
+    "tools": {
+      "cancel": "[SQ] Cancel",
+      "chooseScenario": "[SQ] Choose scenario",
+      "emergencySimulator": "[SQ] Emergency simulator",
+      "emergencySimulatorDesc": "[SQ] Emergency simulator desc",
+      "generateGuide": "[SQ] Generate guide",
+      "generating": "[SQ] Generating",
+      "informationTreasureHunt": "[SQ] Information treasure hunt",
+      "launch": "[SQ] Launch",
+      "printGuide": "[SQ] Print guide",
+      "stepByStepGuides": "[SQ] Step by step guides",
+      "stepByStepGuidesDesc": "[SQ] Step by step guides desc",
+      "treasureHuntDesc": "[SQ] Treasure hunt desc",
+      "videoMessages": "[SQ] Video messages",
+      "videoMessagesDesc": "[SQ] Video messages desc"
+    },
+    "use_these_tools_to_ensure_your_1": "[SQ] Use these tools to ensure your 1"
+  },
+  "guardian": {
+    "templateModal": {
+      "_1": "[SQ] 1"
+    }
+  },
+  "guardianView": {
+    "defaultUserName": "[SQ] Default user name",
+    "emergencyAccess": {
+      "accessFailed": "[SQ] Access failed",
+      "accessGranted": "[SQ] Access granted",
+      "accessing": "[SQ] Accessing",
+      "button": "[SQ] Button",
+      "confirmButton": "[SQ] Confirm button",
+      "confirmCheckbox": "[SQ] Confirm checkbox",
+      "contactLogged": "[SQ] Contact logged",
+      "contactsDescription": "[SQ] Contacts description",
+      "contactsTitle": "[SQ] Contacts title",
+      "failedToLoadContacts": "[SQ] Failed to load contacts",
+      "importantNote": "[SQ] Important note",
+      "lastContacted": "[SQ] Last contacted",
+      "logContact": "[SQ] Log contact",
+      "modalDescription": "[SQ] Modal description",
+      "modalTitle": "[SQ] Modal title",
+      "notAuthorized": "[SQ] Not authorized",
+      "pleaseConfirm": "[SQ] Please confirm",
+      "priority": "[SQ] Priority",
+      "priorityOrder": "[SQ] Priority order",
+      "reasonLabel": "[SQ] Reason label",
+      "reasonPlaceholder": "[SQ] Reason placeholder",
+      "warningText": "[SQ] Warning text"
+    },
+    "errors": {
+      "failedToLoad": "[SQ] Failed to load",
+      "pleaseLogin": "[SQ] Please login"
+    },
+    "guardianInfo": {
+      "description": "[SQ] Description",
+      "securityNote": "[SQ] Security note"
+    },
+    "readOnlyAccess": "[SQ] Read only access",
+    "sections": {
+      "finalWishes": {
+        "description": "[SQ] Description",
+        "digitalAccounts": "[SQ] Digital accounts",
+        "empty": "[SQ] Empty",
+        "funeralWishes": "[SQ] Funeral wishes",
+        "messagesToLovedOnes": "[SQ] Messages to loved ones",
+        "title": "[SQ] Title"
+      },
+      "importantContacts": {
+        "description": "[SQ] Description",
+        "empty": "[SQ] Empty",
+        "title": "[SQ] Title"
+      },
+      "keyDocuments": {
+        "description": "[SQ] Description",
+        "empty": "[SQ] Empty",
+        "expires": "[SQ] Expires",
+        "keyDocumentBadge": "[SQ] Key document badge",
+        "noExpiration": "[SQ] No expiration",
+        "title": "[SQ] Title"
+      }
+    },
+    "subtitle": "[SQ] Subtitle",
+    "title": "[SQ] Title"
+  },
+  "manual": {
+    "contacts": {
+      "form": {
+        "addButton": "[SQ] Add button",
+        "cancel": "[SQ] Cancel",
+        "emailLabel": "[SQ] Email label",
+        "emailPlaceholder": "[SQ] Email placeholder",
+        "nameLabel": "[SQ] Name label",
+        "namePlaceholder": "[SQ] Name placeholder",
+        "notesLabel": "[SQ] Notes label",
+        "notesPlaceholder": "[SQ] Notes placeholder",
+        "phoneLabel": "[SQ] Phone label",
+        "phonePlaceholder": "[SQ] Phone placeholder",
+        "roleLabel": "[SQ] Role label",
+        "rolePlaceholder": "[SQ] Role placeholder",
+        "saving": "[SQ] Saving",
+        "updateButton": "[SQ] Update button"
+      }
+    }
+  },
+  "notificationPreferences": {
+    "description": "[SQ] Description",
+    "emailRequired": "[SQ] Email required",
+    "errors": {
+      "loadFailed": "[SQ] Load failed",
+      "updateFailed": "[SQ] Update failed"
+    },
+    "howItWorks": {
+      "point1": "[SQ] Point1",
+      "point2": "[SQ] Point2",
+      "point3": "[SQ] Point3",
+      "title": "[SQ] Title"
+    },
+    "info": "[SQ] Info",
+    "lastUpdated": "[SQ] Last updated",
+    "messages": {
+      "updated": "[SQ] Updated"
+    },
+    "noContacts": "[SQ] No contacts",
+    "noEmail": "[SQ] No email",
+    "title": "[SQ] Title"
+  },
+  "playbook": {
+    "addContact": "[SQ] Add contact",
+    "autoSaveNotice": "[SQ] Auto save notice",
+    "contact": "[SQ] Contact",
+    "contactFields": {
+      "email": "[SQ] Email",
+      "emailPlaceholder": "[SQ] Email placeholder",
+      "name": "[SQ] Name",
+      "namePlaceholder": "[SQ] Name placeholder",
+      "notes": "[SQ] Notes",
+      "notesPlaceholder": "[SQ] Notes placeholder",
+      "phone": "[SQ] Phone",
+      "phonePlaceholder": "[SQ] Phone placeholder",
+      "role": "[SQ] Role",
+      "rolePlaceholder": "[SQ] Role placeholder"
+    },
+    "edit": "[SQ] Edit",
+    "errors": {
+      "loadFailed": "[SQ] Load failed",
+      "saveFailed": "[SQ] Save failed"
+    },
+    "loading": "[SQ] Loading",
+    "messages": {
+      "autoSaved": "[SQ] Auto saved",
+      "saved": "[SQ] Saved"
+    },
+    "noContacts": "[SQ] No contacts",
+    "noContent": "[SQ] No content",
+    "preview": "[SQ] Preview",
+    "save": "[SQ] Save",
+    "saving": "[SQ] Saving",
+    "sections": {
+      "contacts": {
+        "description": "[SQ] Description",
+        "title": "[SQ] Title"
+      },
+      "digital": {
+        "description": "[SQ] Description",
+        "placeholder": "[SQ] Placeholder",
+        "title": "[SQ] Title"
+      },
+      "documents": {
+        "description": "[SQ] Description",
+        "placeholder": "[SQ] Placeholder",
+        "title": "[SQ] Title"
+      },
+      "funeral": {
+        "description": "[SQ] Description",
+        "placeholder": "[SQ] Placeholder",
+        "title": "[SQ] Title"
+      },
+      "messages": {
+        "description": "[SQ] Description",
+        "placeholder": "[SQ] Placeholder",
+        "title": "[SQ] Title"
+      },
+      "practical": {
+        "description": "[SQ] Description",
+        "placeholder": "[SQ] Placeholder",
+        "title": "[SQ] Title"
+      }
+    },
+    "status": {
+      "complete": "[SQ] Complete",
+      "draft": "[SQ] Draft",
+      "empty": "[SQ] Empty"
+    },
+    "subtitle": {
+      "edit": "[SQ] Edit",
+      "view": "[SQ] View"
+    },
+    "tabs": {
+      "contacts": "[SQ] Contacts",
+      "digital": "[SQ] Digital",
+      "documents": "[SQ] Documents",
+      "funeral": "[SQ] Funeral",
+      "messages": "[SQ] Messages",
+      "practical": "[SQ] Practical"
+    },
+    "templates": {
+      "append": "[SQ] Append",
+      "backToTemplates": "[SQ] Back to templates",
+      "description": "[SQ] Description",
+      "existingContent": "[SQ] Existing content",
+      "fillInVariables": "[SQ] Fill in variables",
+      "insertTemplate": "[SQ] Insert template",
+      "preview": "[SQ] Preview",
+      "replace": "[SQ] Replace",
+      "title": "[SQ] Title",
+      "variableCount": "[SQ] Variable count",
+      "variablePlaceholder": "[SQ] Variable placeholder"
+    },
+    "title": {
+      "edit": "[SQ] Edit",
+      "view": "[SQ] View"
+    },
+    "useTemplate": "[SQ] Use template"
+  },
+  "preparedness": {
+    "assessments": {
+      "decisionMaking": {
+        "good": "[SQ] Good",
+        "needsWork": "[SQ] Needs work"
+      },
+      "immediateAccess": {
+        "good": "[SQ] Good",
+        "needsWork": "[SQ] Needs work"
+      },
+      "longTermSecurity": {
+        "good": "[SQ] Good",
+        "needsWork": "[SQ] Needs work"
+      }
+    },
+    "dimensions": {
+      "decisionMaking": "[SQ] Decision making",
+      "immediateAccess": "[SQ] Immediate access",
+      "longTermSecurity": "[SQ] Long term security"
+    },
+    "familyBenefit": "[SQ] Family benefit",
+    "familyCommunication": {
+      "description": "[SQ] Description",
+      "scheduleReview": "[SQ] Schedule review",
+      "shareReport": "[SQ] Share report",
+      "title": "[SQ] Title"
+    },
+    "gaps": {
+      "addMedicalPreferences": "[SQ] Add medical preferences",
+      "basicAccessInfo": "[SQ] Basic access info",
+      "completeFinancialAccess": "[SQ] Complete financial access",
+      "documentBusinessOperations": "[SQ] Document business operations",
+      "improveImmediateAccess": "[SQ] Improve immediate access",
+      "updateWillAndTrust": "[SQ] Update will and trust"
+    },
+    "impact": "[SQ] Impact",
+    "improvements": {
+      "addBankAccounts": "[SQ] Add bank accounts",
+      "documentMedicalWishes": "[SQ] Document medical wishes",
+      "uploadLegalDocuments": "[SQ] Upload legal documents"
+    },
+    "levels": {
+      "fullyPrepared": "[SQ] Fully prepared",
+      "goodBasic": "[SQ] Good basic",
+      "minimalPreparation": "[SQ] Minimal preparation",
+      "needsImmediate": "[SQ] Needs immediate",
+      "somePreparation": "[SQ] Some preparation",
+      "wellPrepared": "[SQ] Well prepared"
+    },
+    "nextStep": "[SQ] Next step",
+    "scenarioReadiness": "[SQ] Scenario readiness",
+    "scenarios": {
+      "emergencyHospital": {
+        "description": "[SQ] Description",
+        "title": "[SQ] Title"
+      },
+      "extendedTravel": {
+        "description": "[SQ] Description",
+        "title": "[SQ] Title"
+      },
+      "suddenDeath": {
+        "description": "[SQ] Description",
+        "title": "[SQ] Title"
+      }
+    },
+    "title": "[SQ] Title",
+    "toImprove": "[SQ] To improve"
+  },
+  "relationships": {
+    "child": "[SQ] Child",
+    "friend": "[SQ] Friend",
+    "other": "[SQ] Other",
+    "parent": "[SQ] Parent",
+    "sibling": "[SQ] Sibling",
+    "spouse": "[SQ] Spouse"
+  }
+}

@@ -38,7 +38,7 @@ export function ReminderSettings({
   preferences: initialPreferences, 
   onSave 
 }: ReminderSettingsProps) {
-  const { t } = useTranslation();
+  const { t } = useTranslation('dashboard');
   const [preferences, setPreferences] = useState<ReminderPreferences>(initialPreferences);
   const [saving, setSaving] = useState(false);
 
@@ -46,9 +46,9 @@ export function ReminderSettings({
     setSaving(true);
     try {
       await onSave(preferences);
-      toast.success(t('reminders.settings.saved'));
+      toast.success(t('dashboard.settings.saved'));
     } catch (error) {
-      toast.error(t('reminders.settings.saveError'));
+      toast.error(t('dashboard.settings.saveError'));
     } finally {
       setSaving(false);
     }
@@ -57,26 +57,26 @@ export function ReminderSettings({
   const reminderTypes = [
     {
       id: 'document_expiry',
-      label: t('reminders.types.documentExpiry'),
-      description: t('reminders.types.documentExpiryDesc'),
+      label: t('dashboard.types.documentExpiry'),
+      description: t('dashboard.types.documentExpiryDesc'),
       icon: FileText,
     },
     {
       id: 'content_update',
-      label: t('reminders.types.contentUpdate'),
-      description: t('reminders.types.contentUpdateDesc'),
+      label: t('dashboard.types.contentUpdate'),
+      description: t('dashboard.types.contentUpdateDesc'),
       icon: Calendar,
     },
     {
       id: 'review',
-      label: t('reminders.types.review'),
-      description: t('reminders.types.reviewDesc'),
+      label: t('dashboard.types.review'),
+      description: t('dashboard.types.reviewDesc'),
       icon: Shield,
     },
     {
       id: 'life_event',
-      label: t('reminders.types.lifeEvent'),
-      description: t('reminders.types.lifeEventDesc'),
+      label: t('dashboard.types.lifeEvent'),
+      description: t('dashboard.types.lifeEventDesc'),
       icon: Users,
     },
   ] as const;
@@ -85,17 +85,17 @@ export function ReminderSettings({
     <div className="space-y-6">
       <Card>
         <CardHeader>
-          <CardTitle>{t('reminders.settings.general')}</CardTitle>
+          <CardTitle>{t('dashboard.settings.general')}</CardTitle>
           <CardDescription>
-            {t('reminders.settings.generalDesc')}
+            {t('dashboard.settings.generalDesc')}
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-6">
           <div className="flex items-center justify-between">
             <div className="space-y-0.5">
-              <Label htmlFor="enabled">{t('reminders.settings.enableReminders')}</Label>
+              <Label htmlFor="enabled">{t('dashboard.settings.enableReminders')}</Label>
               <p className="text-sm text-muted-foreground">
-                {t('reminders.settings.enableRemindersDesc')}
+                {t('dashboard.settings.enableRemindersDesc')}
               </p>
             </div>
             <Switch
@@ -110,7 +110,7 @@ export function ReminderSettings({
           <Separator />
 
           <div className="space-y-2">
-            <Label htmlFor="frequency">{t('reminders.settings.defaultFrequency')}</Label>
+            <Label htmlFor="frequency">{t('dashboard.settings.defaultFrequency')}</Label>
             <Select
               value={preferences.frequency}
               onValueChange={(value) =>
@@ -125,10 +125,10 @@ export function ReminderSettings({
                 <SelectValue />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="monthly">{t('reminders.frequency.monthly')}</SelectItem>
-                <SelectItem value="quarterly">{t('reminders.frequency.quarterly')}</SelectItem>
-                <SelectItem value="semi-annually">{t('reminders.frequency.semiAnnually')}</SelectItem>
-                <SelectItem value="annually">{t('reminders.frequency.annually')}</SelectItem>
+                <SelectItem value="monthly">{t('dashboard.frequency.monthly')}</SelectItem>
+                <SelectItem value="quarterly">{t('dashboard.frequency.quarterly')}</SelectItem>
+                <SelectItem value="semi-annually">{t('dashboard.frequency.semiAnnually')}</SelectItem>
+                <SelectItem value="annually">{t('dashboard.frequency.annually')}</SelectItem>
               </SelectContent>
             </Select>
           </div>
@@ -137,9 +137,9 @@ export function ReminderSettings({
 
       <Card>
         <CardHeader>
-          <CardTitle>{t('reminders.settings.reminderTypes')}</CardTitle>
+          <CardTitle>{t('dashboard.settings.reminderTypes')}</CardTitle>
           <CardDescription>
-            {t('reminders.settings.reminderTypesDesc')}
+            {t('dashboard.settings.reminderTypesDesc')}
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
@@ -175,17 +175,17 @@ export function ReminderSettings({
 
       <Card>
         <CardHeader>
-          <CardTitle>{t('reminders.settings.channels')}</CardTitle>
+          <CardTitle>{t('dashboard.settings.channels')}</CardTitle>
           <CardDescription>
-            {t('reminders.settings.channelsDesc')}
+            {t('dashboard.settings.channelsDesc')}
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="flex items-center justify-between">
             <div className="space-y-0.5">
-              <Label htmlFor="email">{t('reminders.channels.email')}</Label>
+              <Label htmlFor="email">{t('dashboard.channels.email')}</Label>
               <p className="text-sm text-muted-foreground">
-                {t('reminders.channels.emailDesc')}
+                {t('dashboard.channels.emailDesc')}
               </p>
             </div>
             <Switch
@@ -203,9 +203,9 @@ export function ReminderSettings({
 
           <div className="flex items-center justify-between">
             <div className="space-y-0.5">
-              <Label htmlFor="in_app">{t('reminders.channels.inApp')}</Label>
+              <Label htmlFor="in_app">{t('dashboard.channels.inApp')}</Label>
               <p className="text-sm text-muted-foreground">
-                {t('reminders.channels.inAppDesc')}
+                {t('dashboard.channels.inAppDesc')}
               </p>
             </div>
             <Switch
@@ -229,7 +229,7 @@ export function ReminderSettings({
           disabled={saving || (!preferences.channels.email && !preferences.channels.in_app && preferences.enabled)}
         >
           <Bell className="h-4 w-4 mr-2" />
-          {saving ? t('common.saving') : t('common.saveChanges')}
+          {saving ? t('ui.saving') : t('ui.saveChanges')}
         </Button>
       </div>
     </div>

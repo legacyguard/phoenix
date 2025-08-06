@@ -20,7 +20,7 @@ export function AssetAllocationWizard({
   onUpdate,
   errors
 }: AssetAllocationWizardProps) {
-  const { t } = useTranslation();
+  const { t } = useTranslation('wills');
   const [allocationType, setAllocationType] = useState<'percentage' | 'specific'>('percentage');
 
   const getTotalAllocation = () => {
@@ -39,7 +39,7 @@ export function AssetAllocationWizard({
       relationship: '',
       allocation: [{
         assetType: 'percentage',
-        description: t('will.allocation.generalEstate'),
+        description: t('wills.allocation.generalEstate'),
         value: 0
       }]
     };
@@ -77,16 +77,16 @@ export function AssetAllocationWizard({
     <div className="space-y-6">
       <Card>
         <CardHeader>
-          <CardTitle>{t('will.allocation.title')}</CardTitle>
+          <CardTitle>{t('wills.allocation.title')}</CardTitle>
           <CardDescription>
-            {t('will.allocation.description')}
+            {t('wills.allocation.description')}
           </CardDescription>
         </CardHeader>
         <CardContent>
           {/* Allocation progress */}
           <div className="mb-6 space-y-2">
             <div className="flex items-center justify-between text-sm">
-              <span>{t('will.allocation.total')}</span>
+              <span>{t('wills.allocation.total')}</span>
               <span className={`font-medium ${isValid ? 'text-green-600' : 'text-destructive'}`}>
                 {totalAllocation}%
               </span>
@@ -98,7 +98,7 @@ export function AssetAllocationWizard({
             {!isValid && totalAllocation > 0 && (
               <p className="text-sm text-destructive flex items-center gap-1">
                 <AlertCircle className="h-3 w-3" />
-                {errors.allocation || t('will.validation.allocation100')}
+                {errors.allocation || t('wills.validation.allocation100')}
               </p>
             )}
           </div>
@@ -114,7 +114,7 @@ export function AssetAllocationWizard({
                         <div className="grid grid-cols-2 gap-4">
                           <div className="space-y-2">
                             <Label htmlFor={`name-${beneficiary.id}`}>
-                              {t('will.beneficiary.name')}
+                              {t('wills.beneficiary.name')}
                             </Label>
                             <Input
                               id={`name-${beneficiary.id}`}
@@ -123,12 +123,12 @@ export function AssetAllocationWizard({
                                 beneficiary.id, 
                                 { name: e.target.value }
                               )}
-                              placeholder={t('will.beneficiary.namePlaceholder')}
+                              placeholder={t('wills.beneficiary.namePlaceholder')}
                             />
                           </div>
                           <div className="space-y-2">
                             <Label htmlFor={`relationship-${beneficiary.id}`}>
-                              {t('will.beneficiary.relationship')}
+                              {t('wills.beneficiary.relationship')}
                             </Label>
                             <Input
                               id={`relationship-${beneficiary.id}`}
@@ -137,7 +137,7 @@ export function AssetAllocationWizard({
                                 beneficiary.id, 
                                 { relationship: e.target.value }
                               )}
-                              placeholder={t('will.beneficiary.relationshipPlaceholder')}
+                              placeholder={t('wills.beneficiary.relationshipPlaceholder')}
                             />
                           </div>
                         </div>
@@ -145,7 +145,7 @@ export function AssetAllocationWizard({
                         {allocationType === 'percentage' && (
                           <div className="space-y-2">
                             <Label htmlFor={`allocation-${beneficiary.id}`}>
-                              {t('will.allocation.percentage')}
+                              {t('wills.allocation.percentage')}
                             </Label>
                             <div className="flex items-center gap-4">
                               <Slider
@@ -197,7 +197,7 @@ export function AssetAllocationWizard({
             className="w-full mt-4"
           >
             <Plus className="mr-2 h-4 w-4" />
-            {t('will.allocation.addBeneficiary')}
+            {t('wills.allocation.addBeneficiary')}
           </Button>
 
           {errors.beneficiaries && (
@@ -212,11 +212,11 @@ export function AssetAllocationWizard({
       {/* Allocation tips */}
       <Card>
         <CardContent className="pt-6">
-          <h4 className="font-medium mb-2">{t('will.allocation.tips.title')}</h4>
+          <h4 className="font-medium mb-2">{t('wills.allocation.tips.title')}</h4>
           <ul className="text-sm text-muted-foreground space-y-1">
-            <li>• {t('will.allocation.tips.tip1')}</li>
-            <li>• {t('will.allocation.tips.tip2')}</li>
-            <li>• {t('will.allocation.tips.tip3')}</li>
+            <li>• {t('wills.allocation.tips.tip1')}</li>
+            <li>• {t('wills.allocation.tips.tip2')}</li>
+            <li>• {t('wills.allocation.tips.tip3')}</li>
           </ul>
         </CardContent>
       </Card>

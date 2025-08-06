@@ -17,7 +17,7 @@ const UpgradeCard: React.FC<UpgradeCardProps> = ({
   buttonText,
   className = ""
 }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('subscription');
   const defaultButtonText = t("upgradeCard.defaultButtonText");
   return (
     <Card className={`border-2 border-yellow-500/20 bg-gradient-to-br from-yellow-50/50 to-transparent dark:from-yellow-900/10 ${className}`}>

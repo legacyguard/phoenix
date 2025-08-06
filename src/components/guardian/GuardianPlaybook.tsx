@@ -113,7 +113,7 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
       }
     } catch (error) {
       console.error('[GuardianPlaybook] Error loading playbook:', error);
-      toast.error(t('playbook.errors.loadFailed'));
+      toast.error(t('family.errors.loadFailed'));
     } finally {
       setIsLoading(false);
     }
@@ -162,7 +162,7 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
       }
 
       // Show subtle save indicator
-      toast.success(t('playbook.messages.autoSaved'), { duration: 1000 });
+      toast.success(t('family.messages.autoSaved'), { duration: 1000 });
     } catch (error) {
       console.error('[GuardianPlaybook] Error auto-saving:', error);
     }
@@ -241,10 +241,10 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
     setIsSaving(true);
     try {
       await autoSave.flush();
-      toast.success(t('playbook.messages.saved'));
+      toast.success(t('family.messages.saved'));
       onClose();
     } catch (error) {
-      toast.error(t('playbook.errors.saveFailed'));
+      toast.error(t('family.errors.saveFailed'));
     } finally {
       setIsSaving(false);
     }
@@ -254,11 +254,11 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
     const status = calculateStatus();
     switch (status) {
       case 'complete':
-        return <Badge variant="default" className="gap-1"><CheckCircle className="h-3 w-3" /> {t('playbook.status.complete')}</Badge>;
+        return <Badge variant="default" className="gap-1"><CheckCircle className="h-3 w-3" /> {t('family.status.complete')}</Badge>;
       case 'draft':
-        return <Badge variant="secondary">{t('playbook.status.draft')}</Badge>;
+        return <Badge variant="secondary">{t('family.status.draft')}</Badge>;
       default:
-        return <Badge variant="outline">{t('playbook.status.empty')}</Badge>;
+        return <Badge variant="outline">{t('family.status.empty')}</Badge>;
     }
   };
 
@@ -267,7 +267,7 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
       <div className="flex items-center justify-center py-12">
         <div className="text-center space-y-2">
           <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary mx-auto"></div>
-          <p className="text-sm text-muted-foreground">{t('playbook.loading')}</p>
+          <p className="text-sm text-muted-foreground">{t('family.loading')}</p>
         </div>
       </div>
     );
@@ -287,8 +287,8 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
             </h2>
             <p className="text-muted-foreground mt-1">
               {isReadOnly 
-                ? t('playbook.subtitle.view')
-                : t('playbook.subtitle.edit')
+                ? t('family.subtitle.view')
+                : t('family.subtitle.edit')
               }
             </p>
           </div>
@@ -301,7 +301,7 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
                 onClick={() => setIsPreview(!isPreview)}
               >
                 <Eye className="h-4 w-4 mr-2" />
-                {isPreview ? t('playbook.edit') : t('playbook.preview')}
+                {isPreview ? t('family.edit') : t('family.preview')}
               </Button>
             )}
           </div>
@@ -311,7 +311,7 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
           <Alert className="border-primary/20 bg-primary/5">
             <AlertCircle className="h-4 w-4" />
             <AlertDescription>
-              {t('playbook.autoSaveNotice')}
+              {t('family.autoSaveNotice')}
             </AlertDescription>
           </Alert>
         )}
@@ -322,27 +322,27 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
         <TabsList className="grid w-full grid-cols-3 lg:grid-cols-6">
           <TabsTrigger value="funeral" className="text-xs">
             <Heart className="h-3 w-3 mr-1" />
-            {t('playbook.tabs.funeral')}
+            {t('family.tabs.funeral')}
           </TabsTrigger>
           <TabsTrigger value="digital" className="text-xs">
             <FileText className="h-3 w-3 mr-1" />
-            {t('playbook.tabs.digital')}
+            {t('family.tabs.digital')}
           </TabsTrigger>
           <TabsTrigger value="contacts" className="text-xs">
             <Users className="h-3 w-3 mr-1" />
-            {t('playbook.tabs.contacts')}
+            {t('family.tabs.contacts')}
           </TabsTrigger>
           <TabsTrigger value="documents" className="text-xs">
             <MapPin className="h-3 w-3 mr-1" />
-            {t('playbook.tabs.documents')}
+            {t('family.tabs.documents')}
           </TabsTrigger>
           <TabsTrigger value="messages" className="text-xs">
             <MessageSquare className="h-3 w-3 mr-1" />
-            {t('playbook.tabs.messages')}
+            {t('family.tabs.messages')}
           </TabsTrigger>
           <TabsTrigger value="practical" className="text-xs">
             <Briefcase className="h-3 w-3 mr-1" />
-            {t('playbook.tabs.practical')}
+            {t('family.tabs.practical')}
           </TabsTrigger>
         </TabsList>
 
@@ -351,7 +351,7 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center justify-between">
-                <span>{t('playbook.sections.funeral.title')}</span>
+                <span>{t('family.sections.funeral.title')}</span>
                 {!isReadOnly && !isPreview && (
                   <Button
                     variant="outline"
@@ -359,22 +359,22 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
                     onClick={() => handleUseTemplate('funeral_wishes')}
                   >
                     <Sparkles className="h-4 w-4 mr-2" />
-                    {t('playbook.useTemplate')}
+                    {t('family.useTemplate')}
                   </Button>
                 )}
               </CardTitle>
-              <CardDescription>{t('playbook.sections.funeral.description')}</CardDescription>
+              <CardDescription>{t('family.sections.funeral.description')}</CardDescription>
             </CardHeader>
             <CardContent>
               {isReadOnly || isPreview ? (
                 <div className="prose prose-sm max-w-none">
-                  {playbook.funeral_wishes || <p className="text-muted-foreground italic">{t('playbook.noContent')}</p>}
+                  {playbook.funeral_wishes || <p className="text-muted-foreground italic">{t('family.noContent')}</p>}
                 </div>
               ) : (
                 <Textarea
                   value={playbook.funeral_wishes}
                   onChange={(e) => handleTextChange('funeral_wishes', e.target.value)}
-                  placeholder={t('playbook.sections.funeral.placeholder')}
+                  placeholder={t('family.sections.funeral.placeholder')}
                   rows={8}
                   className="font-mono text-sm"
                 />
@@ -388,7 +388,7 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center justify-between">
-                <span>{t('playbook.sections.digital.title')}</span>
+                <span>{t('family.sections.digital.title')}</span>
                 {!isReadOnly && !isPreview && (
                   <Button
                     variant="outline"
@@ -396,22 +396,22 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
                     onClick={() => handleUseTemplate('digital_accounts_shutdown')}
                   >
                     <Sparkles className="h-4 w-4 mr-2" />
-                    {t('playbook.useTemplate')}
+                    {t('family.useTemplate')}
                   </Button>
                 )}
               </CardTitle>
-              <CardDescription>{t('playbook.sections.digital.description')}</CardDescription>
+              <CardDescription>{t('family.sections.digital.description')}</CardDescription>
             </CardHeader>
             <CardContent>
               {isReadOnly || isPreview ? (
                 <div className="prose prose-sm max-w-none">
-                  {playbook.digital_accounts_shutdown || <p className="text-muted-foreground italic">{t('playbook.noContent')}</p>}
+                  {playbook.digital_accounts_shutdown || <p className="text-muted-foreground italic">{t('family.noContent')}</p>}
                 </div>
               ) : (
                 <Textarea
                   value={playbook.digital_accounts_shutdown}
                   onChange={(e) => handleTextChange('digital_accounts_shutdown', e.target.value)}
-                  placeholder={t('playbook.sections.digital.placeholder')}
+                  placeholder={t('family.sections.digital.placeholder')}
                   rows={8}
                   className="font-mono text-sm"
                 />
@@ -425,7 +425,7 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center justify-between">
-                <span>{t('playbook.sections.contacts.title')}</span>
+                <span>{t('family.sections.contacts.title')}</span>
                 {!isReadOnly && !isPreview && (
                   <Button
                     variant="outline"
@@ -433,11 +433,11 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
                     onClick={() => handleUseTemplate('important_contacts')}
                   >
                     <Sparkles className="h-4 w-4 mr-2" />
-                    {t('playbook.useTemplate')}
+                    {t('family.useTemplate')}
                   </Button>
                 )}
               </CardTitle>
-              <CardDescription>{t('playbook.sections.contacts.description')}</CardDescription>
+              <CardDescription>{t('family.sections.contacts.description')}</CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
               {(isReadOnly || isPreview) ? (
@@ -477,7 +477,7 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
                       </Card>
                     ))
                   ) : (
-                    <p className="text-muted-foreground italic">{t('playbook.noContacts')}</p>
+                    <p className="text-muted-foreground italic">{t('family.noContacts')}</p>
                   )}
                 </div>
               ) : (
@@ -487,7 +487,7 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
                       <Card key={contact.id} className="p-4">
                         <div className="space-y-3">
                           <div className="flex items-start justify-between">
-                            <Label>{t('playbook.contact')} {index + 1}</Label>
+                            <Label>{t('family.contact')} {index + 1}</Label>
                             <Button
                               variant="ghost"
                               size="sm"
@@ -500,63 +500,63 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
                           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                             <div className="space-y-1">
                               <Label htmlFor={`name-${contact.id}`}>
-                                {t('playbook.contactFields.name')}
+                                {t('family.contactFields.name')}
                               </Label>
                               <Input
                                 id={`name-${contact.id}`}
                                 value={contact.name}
                                 onChange={(e) => handleUpdateContact(contact.id, 'name', e.target.value)}
-                                placeholder={t('playbook.contactFields.namePlaceholder')}
+                                placeholder={t('family.contactFields.namePlaceholder')}
                               />
                             </div>
                             
                             <div className="space-y-1">
                               <Label htmlFor={`role-${contact.id}`}>
-                                {t('playbook.contactFields.role')}
+                                {t('family.contactFields.role')}
                               </Label>
                               <Input
                                 id={`role-${contact.id}`}
                                 value={contact.role}
                                 onChange={(e) => handleUpdateContact(contact.id, 'role', e.target.value)}
-                                placeholder={t('playbook.contactFields.rolePlaceholder')}
+                                placeholder={t('family.contactFields.rolePlaceholder')}
                               />
                             </div>
                             
                             <div className="space-y-1">
                               <Label htmlFor={`phone-${contact.id}`}>
-                                {t('playbook.contactFields.phone')}
+                                {t('family.contactFields.phone')}
                               </Label>
                               <Input
                                 id={`phone-${contact.id}`}
                                 value={contact.phone}
                                 onChange={(e) => handleUpdateContact(contact.id, 'phone', e.target.value)}
-                                placeholder={t('playbook.contactFields.phonePlaceholder')}
+                                placeholder={t('family.contactFields.phonePlaceholder')}
                               />
                             </div>
                             
                             <div className="space-y-1">
                               <Label htmlFor={`email-${contact.id}`}>
-                                {t('playbook.contactFields.email')}
+                                {t('family.contactFields.email')}
                               </Label>
                               <Input
                                 id={`email-${contact.id}`}
                                 type="email"
                                 value={contact.email}
                                 onChange={(e) => handleUpdateContact(contact.id, 'email', e.target.value)}
-                                placeholder={t('playbook.contactFields.emailPlaceholder')}
+                                placeholder={t('family.contactFields.emailPlaceholder')}
                               />
                             </div>
                           </div>
                           
                           <div className="space-y-1">
                             <Label htmlFor={`notes-${contact.id}`}>
-                              {t('playbook.contactFields.notes')}
+                              {t('family.contactFields.notes')}
                             </Label>
                             <Textarea
                               id={`notes-${contact.id}`}
                               value={contact.notes}
                               onChange={(e) => handleUpdateContact(contact.id, 'notes', e.target.value)}
-                              placeholder={t('playbook.contactFields.notesPlaceholder')}
+                              placeholder={t('family.contactFields.notesPlaceholder')}
                               rows={2}
                             />
                           </div>
@@ -571,7 +571,7 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
                     className="w-full"
                   >
                     <Plus className="h-4 w-4 mr-2" />
-                    {t('playbook.addContact')}
+                    {t('family.addContact')}
                   </Button>
                 </>
               )}
@@ -584,7 +584,7 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center justify-between">
-                <span>{t('playbook.sections.documents.title')}</span>
+                <span>{t('family.sections.documents.title')}</span>
                 {!isReadOnly && !isPreview && (
                   <Button
                     variant="outline"
@@ -592,22 +592,22 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
                     onClick={() => handleUseTemplate('document_locations')}
                   >
                     <Sparkles className="h-4 w-4 mr-2" />
-                    {t('playbook.useTemplate')}
+                    {t('family.useTemplate')}
                   </Button>
                 )}
               </CardTitle>
-              <CardDescription>{t('playbook.sections.documents.description')}</CardDescription>
+              <CardDescription>{t('family.sections.documents.description')}</CardDescription>
             </CardHeader>
             <CardContent>
               {isReadOnly || isPreview ? (
                 <div className="prose prose-sm max-w-none">
-                  {playbook.document_locations || <p className="text-muted-foreground italic">{t('playbook.noContent')}</p>}
+                  {playbook.document_locations || <p className="text-muted-foreground italic">{t('family.noContent')}</p>}
                 </div>
               ) : (
                 <Textarea
                   value={playbook.document_locations}
                   onChange={(e) => handleTextChange('document_locations', e.target.value)}
-                  placeholder={t('playbook.sections.documents.placeholder')}
+                  placeholder={t('family.sections.documents.placeholder')}
                   rows={8}
                   className="font-mono text-sm"
                 />
@@ -621,7 +621,7 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center justify-between">
-                <span>{t('playbook.sections.messages.title')}</span>
+                <span>{t('family.sections.messages.title')}</span>
                 {!isReadOnly && !isPreview && (
                   <Button
                     variant="outline"
@@ -629,22 +629,22 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
                     onClick={() => handleUseTemplate('personal_messages')}
                   >
                     <Sparkles className="h-4 w-4 mr-2" />
-                    {t('playbook.useTemplate')}
+                    {t('family.useTemplate')}
                   </Button>
                 )}
               </CardTitle>
-              <CardDescription>{t('playbook.sections.messages.description')}</CardDescription>
+              <CardDescription>{t('family.sections.messages.description')}</CardDescription>
             </CardHeader>
             <CardContent>
               {isReadOnly || isPreview ? (
                 <div className="prose prose-sm max-w-none">
-                  {playbook.personal_messages || <p className="text-muted-foreground italic">{t('playbook.noContent')}</p>}
+                  {playbook.personal_messages || <p className="text-muted-foreground italic">{t('family.noContent')}</p>}
                 </div>
               ) : (
                 <Textarea
                   value={playbook.personal_messages}
                   onChange={(e) => handleTextChange('personal_messages', e.target.value)}
-                  placeholder={t('playbook.sections.messages.placeholder')}
+                  placeholder={t('family.sections.messages.placeholder')}
                   rows={10}
                   className="font-mono text-sm"
                 />
@@ -658,7 +658,7 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center justify-between">
-                <span>{t('playbook.sections.practical.title')}</span>
+                <span>{t('family.sections.practical.title')}</span>
                 {!isReadOnly && !isPreview && (
                   <Button
                     variant="outline"
@@ -666,22 +666,22 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
                     onClick={() => handleUseTemplate('practical_instructions')}
                   >
                     <Sparkles className="h-4 w-4 mr-2" />
-                    {t('playbook.useTemplate')}
+                    {t('family.useTemplate')}
                   </Button>
                 )}
               </CardTitle>
-              <CardDescription>{t('playbook.sections.practical.description')}</CardDescription>
+              <CardDescription>{t('family.sections.practical.description')}</CardDescription>
             </CardHeader>
             <CardContent>
               {isReadOnly || isPreview ? (
                 <div className="prose prose-sm max-w-none">
-                  {playbook.practical_instructions || <p className="text-muted-foreground italic">{t('playbook.noContent')}</p>}
+                  {playbook.practical_instructions || <p className="text-muted-foreground italic">{t('family.noContent')}</p>}
                 </div>
               ) : (
                 <Textarea
                   value={playbook.practical_instructions}
                   onChange={(e) => handleTextChange('practical_instructions', e.target.value)}
-                  placeholder={t('playbook.sections.practical.placeholder')}
+                  placeholder={t('family.sections.practical.placeholder')}
                   rows={8}
                   className="font-mono text-sm"
                 />
@@ -695,11 +695,11 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
       {!isReadOnly && (
         <div className="flex justify-end gap-3">
           <Button variant="outline" onClick={onClose}>
-            {t('common.cancel')}
+            {t('ui.cancel')}
           </Button>
           <Button onClick={handleSave} disabled={isSaving}>
             <Save className="h-4 w-4 mr-2" />
-            {isSaving ? t('playbook.saving') : t('playbook.save')}
+            {isSaving ? t('family.saving') : t('family.save')}
           </Button>
         </div>
       )}

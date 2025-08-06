@@ -1,1 +1,683 @@
-{}
+{
+  "beneficiaryCommunications": {
+    "actions": {
+      "cancel": "[SV] Cancel",
+      "save": "[SV] Save",
+      "saving": "[SV] Saving"
+    },
+    "description": "[SV] Description",
+    "dialog": {
+      "description": "[SV] Description",
+      "title": "[SV] Title"
+    },
+    "empty": {
+      "subtitle": "[SV] Subtitle",
+      "title": "[SV] Title"
+    },
+    "fields": {
+      "beneficiaryName": "[SV] Beneficiary name",
+      "date": "[SV] Date",
+      "email": "[SV] Email",
+      "subject": "[SV] Subject",
+      "summary": "[SV] Summary",
+      "type": "[SV] Type"
+    },
+    "logAction": "[SV] Log action",
+    "logCommunication": "[SV] Log communication",
+    "placeholders": {
+      "subject": "[SV] Subject",
+      "summary": "[SV] Summary"
+    },
+    "title": "[SV] Title",
+    "types": {
+      "email": "[SV] Email",
+      "inPerson": "[SV] In person",
+      "letter": "[SV] Letter",
+      "other": "[SV] Other",
+      "phone": "[SV] Phone"
+    }
+  },
+  "common": {
+    "cancel": "[SV] Cancel",
+    "fix": "[SV] Fix",
+    "minutes": "[SV] Minutes",
+    "start": "[SV] Start"
+  },
+  "crisisAssessment": {
+    "criticalVulnerabilities": "[SV] Critical vulnerabilities",
+    "familyCapabilities": "[SV] Family capabilities",
+    "familyDiscussion": "[SV] Family discussion",
+    "familyDiscussionDescription": "[SV] Family discussion description",
+    "fixCapability": "[SV] Fix capability",
+    "fixNow": "[SV] Fix now",
+    "missing": "[SV] Missing",
+    "mostUrgent": "[SV] Most urgent",
+    "nextCriticalAction": "[SV] Next critical action",
+    "notPrepared": "[SV] Not prepared",
+    "partial": "[SV] Partial",
+    "prepared": "[SV] Prepared",
+    "printReport": "[SV] Print report",
+    "protected": "[SV] Protected",
+    "scheduleReview": "[SV] Schedule review",
+    "situationReadiness": "[SV] Situation readiness",
+    "subtitle": "[SV] Subtitle",
+    "timeEstimate": "[SV] Time estimate",
+    "title": "[SV] Title",
+    "vulnerable": "[SV] Vulnerable"
+  },
+  "crisisSituations": {
+    "businessEmergency": {
+      "description": "[SV] Description",
+      "title": "[SV] Title"
+    },
+    "emergencyHospital": {
+      "description": "[SV] Description",
+      "title": "[SV] Title"
+    },
+    "extendedTravel": {
+      "description": "[SV] Description",
+      "title": "[SV] Title"
+    },
+    "suddenDeath": {
+      "description": "[SV] Description",
+      "title": "[SV] Title"
+    }
+  },
+  "dashboard": {
+    "familyGuide": {
+      "discreteMode": "[SV] Discrete mode",
+      "discreteModeDesc": "[SV] Discrete mode desc",
+      "emergency_contacts_1": "[SV] Emergency contacts 1",
+      "export_guide_4": "[SV] Export guide 4",
+      "generateGuide": "[SV] Generate guide",
+      "important_documents_2": "[SV] Important documents 2",
+      "last_updated_6": "[SV] Last updated 6",
+      "share_with_family_5": "[SV] Share with family 5",
+      "subtitle": "[SV] Subtitle",
+      "title": "[SV] Title",
+      "view": "[SV] View",
+      "what_to_do_when_3": "[SV] What to do when 3"
+    }
+  },
+  "emergency": {
+    "addContact": "[SV] Add contact",
+    "addContactDialog": {
+      "addButton": "[SV] Add button",
+      "description": "[SV] Description",
+      "relationship": "[SV] Relationship",
+      "relationshipPlaceholder": "[SV] Relationship placeholder",
+      "selectContact": "[SV] Select contact",
+      "selectPlaceholder": "[SV] Select placeholder",
+      "title": "[SV] Title"
+    },
+    "description": "[SV] Description",
+    "errors": {
+      "addFailed": "[SV] Add failed",
+      "loadFailed": "[SV] Load failed",
+      "removeFailed": "[SV] Remove failed",
+      "reorderFailed": "[SV] Reorder failed",
+      "selectContact": "[SV] Select contact",
+      "testFailed": "[SV] Test failed"
+    },
+    "lastContacted": "[SV] Last contacted",
+    "maxContactsReached": "[SV] Max contacts reached",
+    "messages": {
+      "added": "[SV] Added",
+      "removed": "[SV] Removed",
+      "reordered": "[SV] Reordered",
+      "testSent": "[SV] Test sent"
+    },
+    "noContacts": "[SV] No contacts",
+    "sendTest": "[SV] Send test",
+    "title": "[SV] Title"
+  },
+  "errors": {
+    "dataNotFound": "[SV] Data not found",
+    "duplicateRecord": "[SV] Duplicate record",
+    "networkError": "[SV] Network error",
+    "permissionDenied": "[SV] Permission denied",
+    "unknown": "[SV] Unknown"
+  },
+  "estateStatus": {
+    "actions": {
+      "cancel": "[SV] Cancel",
+      "update": "[SV] Update",
+      "updating": "[SV] Updating"
+    },
+    "description": "[SV] Description",
+    "dialog": {
+      "description": "[SV] Description",
+      "title": "[SV] Title"
+    },
+    "empty": {
+      "noStatus": "[SV] No status",
+      "readOnly": "[SV] Read only"
+    },
+    "fields": {
+      "additionalDetails": "[SV] Additional details",
+      "status": "[SV] Status"
+    },
+    "lastUpdated": "[SV] Last updated",
+    "logAction": "[SV] Log action",
+    "placeholders": {
+      "additionalContext": "[SV] Additional context",
+      "selectStatus": "[SV] Select status"
+    },
+    "progress": "[SV] Progress",
+    "statuses": {
+      "assetsBeingValued": "[SV] Assets being valued",
+      "debtsBeingSettled": "[SV] Debts being settled",
+      "distributionInProgress": "[SV] Distribution in progress",
+      "estateClosed": "[SV] Estate closed",
+      "gatheringDocuments": "[SV] Gathering documents",
+      "initialReview": "[SV] Initial review",
+      "probateInitiated": "[SV] Probate initiated",
+      "readyForDistribution": "[SV] Ready for distribution",
+      "taxPreparation": "[SV] Tax preparation"
+    },
+    "title": "[SV] Title",
+    "updateStatus": "[SV] Update status"
+  },
+  "familyCapabilities": {
+    "businessOperations": "[SV] Business operations",
+    "canAccessBankAccounts": "[SV] Can access bank accounts",
+    "canAccessDigitalAccounts": "[SV] Can access digital accounts",
+    "canFileInsuranceClaims": "[SV] Can file insurance claims",
+    "canManageBusiness": "[SV] Can manage business",
+    "cannotAccessBankAccounts": "[SV] Cannot access bank accounts",
+    "cannotAccessDigitalAccounts": "[SV] Cannot access digital accounts",
+    "cannotFileInsuranceClaims": "[SV] Cannot file insurance claims",
+    "clearInheritancePlan": "[SV] Clear inheritance plan",
+    "digitalAccess": "[SV] Digital access",
+    "digitalAccounts": "[SV] Digital accounts",
+    "immediateFinancialNeeds": "[SV] Immediate financial needs",
+    "inheritance": "[SV] Inheritance",
+    "insuranceClaims": "[SV] Insurance claims",
+    "knowsLegalContacts": "[SV] Knows legal contacts",
+    "knowsMedicalWishes": "[SV] Knows medical wishes",
+    "legalMatters": "[SV] Legal matters",
+    "medicalDecisions": "[SV] Medical decisions",
+    "noBusinessInfo": "[SV] No business info",
+    "noInheritancePlan": "[SV] No inheritance plan",
+    "noLegalContacts": "[SV] No legal contacts",
+    "noMedicalInfo": "[SV] No medical info",
+    "partialBusinessInfo": "[SV] Partial business info",
+    "partialInheritancePlan": "[SV] Partial inheritance plan",
+    "partialMedicalInfo": "[SV] Partial medical info",
+    "payBills": "[SV] Pay bills"
+  },
+  "familyCrisisAssessment": {
+    "15_1": "[SV] 15 1"
+  },
+  "familyExecutorView": {
+    "communications": {
+      "description": "[SV] Description",
+      "empty": "[SV] Empty",
+      "title": "[SV] Title",
+      "to": "[SV] To"
+    },
+    "executor": "[SV] Executor",
+    "footer": "[SV] Footer",
+    "subtitle": "[SV] Subtitle",
+    "theExecutor": "[SV] The executor",
+    "title": "[SV] Title"
+  },
+  "familyHub": {
+    "accessLevels": {
+      "emergencyOnly": {
+        "description": "[SV] Description",
+        "fullDescription": "[SV] Full description",
+        "title": "[SV] Title"
+      },
+      "fullAccess": {
+        "description": "[SV] Description",
+        "fullDescription": "[SV] Full description",
+        "title": "[SV] Title"
+      },
+      "limitedInfo": {
+        "description": "[SV] Description",
+        "fullDescription": "[SV] Full description",
+        "title": "[SV] Title"
+      },
+      "none": {
+        "description": "[SV] Description",
+        "title": "[SV] Title"
+      }
+    },
+    "emergencyProtocol": {
+      "activeMessage": "[SV] Active message",
+      "configure": "[SV] Configure",
+      "configured": "[SV] Configured",
+      "description": "[SV] Description",
+      "title": "[SV] Title"
+    },
+    "errors": {
+      "authenticationRequired": "[SV] Authentication required",
+      "failedToFetchData": "[SV] Failed to fetch data",
+      "failedToLoadMembers": "[SV] Failed to load members"
+    },
+    "memberManagement": {
+      "addMorePeople": "[SV] Add more people",
+      "addTrustedPerson": "[SV] Add trusted person",
+      "daysAgo": "[SV] Days ago",
+      "informationAccessLevel": "[SV] Information access level",
+      "lastContactOver30Days": "[SV] Last contact over30 days",
+      "lastContacted": "[SV] Last contacted",
+      "preparedness": "[SV] Preparedness",
+      "sendUpdate": "[SV] Send update",
+      "sendUpdateTo": "[SV] Send update to",
+      "title": "[SV] Title"
+    },
+    "messages": {
+      "accessLevelUpdated": "[SV] Access level updated",
+      "failedToSendUpdate": "[SV] Failed to send update",
+      "updateSentTo": "[SV] Update sent to"
+    },
+    "overallPreparedness": {
+      "description": "[SV] Description",
+      "improvementNeeded": "[SV] Improvement needed",
+      "title": "[SV] Title"
+    },
+    "subtitle": "[SV] Subtitle",
+    "tabs": {
+      "familyMembers": "[SV] Family members",
+      "members": "[SV] Members",
+      "preparednessTools": "[SV] Preparedness tools",
+      "tools": "[SV] Tools"
+    },
+    "title": "[SV] Title"
+  },
+  "familyPreparednessTools": {
+    "create_a_printable_guide_for_y_3": "[SV] Create a printable guide for y 3",
+    "errors": {
+      "comingSoon": "[SV] Coming soon",
+      "generateFailed": "[SV] Generate failed",
+      "premiumRequired": "[SV] Premium required",
+      "selectScenario": "[SV] Select scenario"
+    },
+    "generate_another_5": "[SV] Generate another 5",
+    "generate_emergency_guide_2": "[SV] Generate emergency guide 2",
+    "guides": {
+      "death": {
+        "bankAccounts": "[SV] Bank accounts",
+        "contactExecutor": "[SV] Contact executor",
+        "contactLawyer": "[SV] Contact lawyer",
+        "deathCertificate": "[SV] Death certificate",
+        "disclaimer": "[SV] Disclaimer",
+        "employer": "[SV] Employer",
+        "financialInstitutions": "[SV] Financial institutions",
+        "first24Hours": "[SV] First24 hours",
+        "generatedOn": "[SV] Generated on",
+        "importantDocuments": "[SV] Important documents",
+        "insuranceCompanies": "[SV] Insurance companies",
+        "investmentAccounts": "[SV] Investment accounts",
+        "locateWill": "[SV] Locate will",
+        "peopleToNotify": "[SV] People to notify",
+        "secureResidence": "[SV] Secure residence",
+        "socialSecurity": "[SV] Social security",
+        "title": "[SV] Title"
+      },
+      "emergency": {
+        "address": "[SV] Address",
+        "attorney": "[SV] Attorney",
+        "emergency": "[SV] Emergency",
+        "financialAdvisor": "[SV] Financial advisor",
+        "homeInformation": "[SV] Home information",
+        "insuranceAgent": "[SV] Insurance agent",
+        "keyContacts": "[SV] Key contacts",
+        "securitySystem": "[SV] Security system",
+        "spouse": "[SV] Spouse",
+        "title": "[SV] Title",
+        "utilities": "[SV] Utilities"
+      },
+      "hospitalization": {
+        "allergies": "[SV] Allergies",
+        "bloodType": "[SV] Blood type",
+        "currentMedications": "[SV] Current medications",
+        "emergencyContacts": "[SV] Emergency contacts",
+        "healthcarePowerOfAttorney": "[SV] Healthcare power of attorney",
+        "hipaaRelease": "[SV] Hipaa release",
+        "legalDocuments": "[SV] Legal documents",
+        "livingWill": "[SV] Living will",
+        "medicalInformation": "[SV] Medical information",
+        "preferredHospital": "[SV] Preferred hospital",
+        "primaryCarePhysician": "[SV] Primary care physician",
+        "title": "[SV] Title"
+      },
+      "missing": {
+        "bankingApps": "[SV] Banking apps",
+        "checkHospitals": "[SV] Check hospitals",
+        "checkWithWorkplace": "[SV] Check with workplace",
+        "contactCloseFriends": "[SV] Contact close friends",
+        "contactLocalPolice": "[SV] Contact local police",
+        "digitalFootprint": "[SV] Digital footprint",
+        "email": "[SV] Email",
+        "immediateActions": "[SV] Immediate actions",
+        "phoneProvider": "[SV] Phone provider",
+        "socialMedia": "[SV] Social media",
+        "title": "[SV] Title"
+      }
+    },
+    "mockContent": {
+      "insurancePolicies": "[SV] Insurance policies"
+    },
+    "scenarios": {
+      "death": {
+        "description": "[SV] Description",
+        "title": "[SV] Title"
+      },
+      "emergency": {
+        "description": "[SV] Description",
+        "title": "[SV] Title"
+      },
+      "hospitalization": {
+        "description": "[SV] Description",
+        "title": "[SV] Title"
+      },
+      "missing": {
+        "description": "[SV] Description",
+        "title": "[SV] Title"
+      }
+    },
+    "select_scenario_4": "[SV] Select scenario 4",
+    "tools": {
+      "cancel": "[SV] Cancel",
+      "chooseScenario": "[SV] Choose scenario",
+      "emergencySimulator": "[SV] Emergency simulator",
+      "emergencySimulatorDesc": "[SV] Emergency simulator desc",
+      "generateGuide": "[SV] Generate guide",
+      "generating": "[SV] Generating",
+      "informationTreasureHunt": "[SV] Information treasure hunt",
+      "launch": "[SV] Launch",
+      "printGuide": "[SV] Print guide",
+      "stepByStepGuides": "[SV] Step by step guides",
+      "stepByStepGuidesDesc": "[SV] Step by step guides desc",
+      "treasureHuntDesc": "[SV] Treasure hunt desc",
+      "videoMessages": "[SV] Video messages",
+      "videoMessagesDesc": "[SV] Video messages desc"
+    },
+    "use_these_tools_to_ensure_your_1": "[SV] Use these tools to ensure your 1"
+  },
+  "guardian": {
+    "templateModal": {
+      "_1": "[SV] 1"
+    }
+  },
+  "guardianView": {
+    "defaultUserName": "[SV] Default user name",
+    "emergencyAccess": {
+      "accessFailed": "[SV] Access failed",
+      "accessGranted": "[SV] Access granted",
+      "accessing": "[SV] Accessing",
+      "button": "[SV] Button",
+      "confirmButton": "[SV] Confirm button",
+      "confirmCheckbox": "[SV] Confirm checkbox",
+      "contactLogged": "[SV] Contact logged",
+      "contactsDescription": "[SV] Contacts description",
+      "contactsTitle": "[SV] Contacts title",
+      "failedToLoadContacts": "[SV] Failed to load contacts",
+      "importantNote": "[SV] Important note",
+      "lastContacted": "[SV] Last contacted",
+      "logContact": "[SV] Log contact",
+      "modalDescription": "[SV] Modal description",
+      "modalTitle": "[SV] Modal title",
+      "notAuthorized": "[SV] Not authorized",
+      "pleaseConfirm": "[SV] Please confirm",
+      "priority": "[SV] Priority",
+      "priorityOrder": "[SV] Priority order",
+      "reasonLabel": "[SV] Reason label",
+      "reasonPlaceholder": "[SV] Reason placeholder",
+      "warningText": "[SV] Warning text"
+    },
+    "errors": {
+      "failedToLoad": "[SV] Failed to load",
+      "pleaseLogin": "[SV] Please login"
+    },
+    "guardianInfo": {
+      "description": "[SV] Description",
+      "securityNote": "[SV] Security note"
+    },
+    "readOnlyAccess": "[SV] Read only access",
+    "sections": {
+      "finalWishes": {
+        "description": "[SV] Description",
+        "digitalAccounts": "[SV] Digital accounts",
+        "empty": "[SV] Empty",
+        "funeralWishes": "[SV] Funeral wishes",
+        "messagesToLovedOnes": "[SV] Messages to loved ones",
+        "title": "[SV] Title"
+      },
+      "importantContacts": {
+        "description": "[SV] Description",
+        "empty": "[SV] Empty",
+        "title": "[SV] Title"
+      },
+      "keyDocuments": {
+        "description": "[SV] Description",
+        "empty": "[SV] Empty",
+        "expires": "[SV] Expires",
+        "keyDocumentBadge": "[SV] Key document badge",
+        "noExpiration": "[SV] No expiration",
+        "title": "[SV] Title"
+      }
+    },
+    "subtitle": "[SV] Subtitle",
+    "title": "[SV] Title"
+  },
+  "manual": {
+    "contacts": {
+      "form": {
+        "addButton": "[SV] Add button",
+        "cancel": "[SV] Cancel",
+        "emailLabel": "[SV] Email label",
+        "emailPlaceholder": "[SV] Email placeholder",
+        "nameLabel": "[SV] Name label",
+        "namePlaceholder": "[SV] Name placeholder",
+        "notesLabel": "[SV] Notes label",
+        "notesPlaceholder": "[SV] Notes placeholder",
+        "phoneLabel": "[SV] Phone label",
+        "phonePlaceholder": "[SV] Phone placeholder",
+        "roleLabel": "[SV] Role label",
+        "rolePlaceholder": "[SV] Role placeholder",
+        "saving": "[SV] Saving",
+        "updateButton": "[SV] Update button"
+      }
+    }
+  },
+  "notificationPreferences": {
+    "description": "[SV] Description",
+    "emailRequired": "[SV] Email required",
+    "errors": {
+      "loadFailed": "[SV] Load failed",
+      "updateFailed": "[SV] Update failed"
+    },
+    "howItWorks": {
+      "point1": "[SV] Point1",
+      "point2": "[SV] Point2",
+      "point3": "[SV] Point3",
+      "title": "[SV] Title"
+    },
+    "info": "[SV] Info",
+    "lastUpdated": "[SV] Last updated",
+    "messages": {
+      "updated": "[SV] Updated"
+    },
+    "noContacts": "[SV] No contacts",
+    "noEmail": "[SV] No email",
+    "title": "[SV] Title"
+  },
+  "playbook": {
+    "addContact": "[SV] Add contact",
+    "autoSaveNotice": "[SV] Auto save notice",
+    "contact": "[SV] Contact",
+    "contactFields": {
+      "email": "[SV] Email",
+      "emailPlaceholder": "[SV] Email placeholder",
+      "name": "[SV] Name",
+      "namePlaceholder": "[SV] Name placeholder",
+      "notes": "[SV] Notes",
+      "notesPlaceholder": "[SV] Notes placeholder",
+      "phone": "[SV] Phone",
+      "phonePlaceholder": "[SV] Phone placeholder",
+      "role": "[SV] Role",
+      "rolePlaceholder": "[SV] Role placeholder"
+    },
+    "edit": "[SV] Edit",
+    "errors": {
+      "loadFailed": "[SV] Load failed",
+      "saveFailed": "[SV] Save failed"
+    },
+    "loading": "[SV] Loading",
+    "messages": {
+      "autoSaved": "[SV] Auto saved",
+      "saved": "[SV] Saved"
+    },
+    "noContacts": "[SV] No contacts",
+    "noContent": "[SV] No content",
+    "preview": "[SV] Preview",
+    "save": "[SV] Save",
+    "saving": "[SV] Saving",
+    "sections": {
+      "contacts": {
+        "description": "[SV] Description",
+        "title": "[SV] Title"
+      },
+      "digital": {
+        "description": "[SV] Description",
+        "placeholder": "[SV] Placeholder",
+        "title": "[SV] Title"
+      },
+      "documents": {
+        "description": "[SV] Description",
+        "placeholder": "[SV] Placeholder",
+        "title": "[SV] Title"
+      },
+      "funeral": {
+        "description": "[SV] Description",
+        "placeholder": "[SV] Placeholder",
+        "title": "[SV] Title"
+      },
+      "messages": {
+        "description": "[SV] Description",
+        "placeholder": "[SV] Placeholder",
+        "title": "[SV] Title"
+      },
+      "practical": {
+        "description": "[SV] Description",
+        "placeholder": "[SV] Placeholder",
+        "title": "[SV] Title"
+      }
+    },
+    "status": {
+      "complete": "[SV] Complete",
+      "draft": "[SV] Draft",
+      "empty": "[SV] Empty"
+    },
+    "subtitle": {
+      "edit": "[SV] Edit",
+      "view": "[SV] View"
+    },
+    "tabs": {
+      "contacts": "[SV] Contacts",
+      "digital": "[SV] Digital",
+      "documents": "[SV] Documents",
+      "funeral": "[SV] Funeral",
+      "messages": "[SV] Messages",
+      "practical": "[SV] Practical"
+    },
+    "templates": {
+      "append": "[SV] Append",
+      "backToTemplates": "[SV] Back to templates",
+      "description": "[SV] Description",
+      "existingContent": "[SV] Existing content",
+      "fillInVariables": "[SV] Fill in variables",
+      "insertTemplate": "[SV] Insert template",
+      "preview": "[SV] Preview",
+      "replace": "[SV] Replace",
+      "title": "[SV] Title",
+      "variableCount": "[SV] Variable count",
+      "variablePlaceholder": "[SV] Variable placeholder"
+    },
+    "title": {
+      "edit": "[SV] Edit",
+      "view": "[SV] View"
+    },
+    "useTemplate": "[SV] Use template"
+  },
+  "preparedness": {
+    "assessments": {
+      "decisionMaking": {
+        "good": "[SV] Good",
+        "needsWork": "[SV] Needs work"
+      },
+      "immediateAccess": {
+        "good": "[SV] Good",
+        "needsWork": "[SV] Needs work"
+      },
+      "longTermSecurity": {
+        "good": "[SV] Good",
+        "needsWork": "[SV] Needs work"
+      }
+    },
+    "dimensions": {
+      "decisionMaking": "[SV] Decision making",
+      "immediateAccess": "[SV] Immediate access",
+      "longTermSecurity": "[SV] Long term security"
+    },
+    "familyBenefit": "[SV] Family benefit",
+    "familyCommunication": {
+      "description": "[SV] Description",
+      "scheduleReview": "[SV] Schedule review",
+      "shareReport": "[SV] Share report",
+      "title": "[SV] Title"
+    },
+    "gaps": {
+      "addMedicalPreferences": "[SV] Add medical preferences",
+      "basicAccessInfo": "[SV] Basic access info",
+      "completeFinancialAccess": "[SV] Complete financial access",
+      "documentBusinessOperations": "[SV] Document business operations",
+      "improveImmediateAccess": "[SV] Improve immediate access",
+      "updateWillAndTrust": "[SV] Update will and trust"
+    },
+    "impact": "[SV] Impact",
+    "improvements": {
+      "addBankAccounts": "[SV] Add bank accounts",
+      "documentMedicalWishes": "[SV] Document medical wishes",
+      "uploadLegalDocuments": "[SV] Upload legal documents"
+    },
+    "levels": {
+      "fullyPrepared": "[SV] Fully prepared",
+      "goodBasic": "[SV] Good basic",
+      "minimalPreparation": "[SV] Minimal preparation",
+      "needsImmediate": "[SV] Needs immediate",
+      "somePreparation": "[SV] Some preparation",
+      "wellPrepared": "[SV] Well prepared"
+    },
+    "nextStep": "[SV] Next step",
+    "scenarioReadiness": "[SV] Scenario readiness",
+    "scenarios": {
+      "emergencyHospital": {
+        "description": "[SV] Description",
+        "title": "[SV] Title"
+      },
+      "extendedTravel": {
+        "description": "[SV] Description",
+        "title": "[SV] Title"
+      },
+      "suddenDeath": {
+        "description": "[SV] Description",
+        "title": "[SV] Title"
+      }
+    },
+    "title": "[SV] Title",
+    "toImprove": "[SV] To improve"
+  },
+  "relationships": {
+    "child": "[SV] Child",
+    "friend": "[SV] Friend",
+    "other": "[SV] Other",
+    "parent": "[SV] Parent",
+    "sibling": "[SV] Sibling",
+    "spouse": "[SV] Spouse"
+  }
+}

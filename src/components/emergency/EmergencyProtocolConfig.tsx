@@ -29,6 +29,7 @@ interface EmergencyProtocolSettings {
 
 export const EmergencyProtocolConfig: React.FC = () => {
   const { t } = useTranslation('family');
+  const { t: tMicro } = useTranslation('micro-copy');
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [settings, setSettings] = useState<EmergencyProtocolSettings>({
@@ -207,7 +208,7 @@ export const EmergencyProtocolConfig: React.FC = () => {
                   onValueChange={(value) => setSettings({ ...settings, approverIds: [value] })}
                 >
                   <SelectTrigger id="approvers">
-                    <SelectValue placeholder="Select an approver..." />
+                    <SelectValue placeholder={tMicro('placeholders.forms.name')} />
                   </SelectTrigger>
                   <SelectContent>
                     {availableApprovers.map(person => (

@@ -46,7 +46,7 @@ export async function POST(request: NextRequest) {
     const { data: { user }, error: authError } = await supabase.auth.getUser();
     if (authError || !user) {
       return NextResponse.json(
-        { error: t('common.errors.unauthorized') },
+        { error: t('ui.errors.unauthorized') },
         { status: 401 }
       );
     }
@@ -61,7 +61,7 @@ export async function POST(request: NextRequest) {
     if (profileError || !profile) {
       console.error('Error fetching user profile:', profileError);
       return NextResponse.json(
-        { error: t('common.errors.failedToFetchProfile') },
+        { error: t('ui.errors.failedToFetchProfile') },
         { status: 500 }
       );
     }
@@ -112,7 +112,7 @@ export async function POST(request: NextRequest) {
   } catch (error) {
     console.error('Error in generate-upload-url:', error);
     return NextResponse.json(
-      { error: t('common.errors.internalServerError') },
+      { error: t('ui.errors.internalServerError') },
       { status: 500 }
     );
   }

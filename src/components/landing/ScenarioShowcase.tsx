@@ -15,7 +15,7 @@ import {
 } from 'lucide-react';
 
 export const ScenarioShowcase: React.FC = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('time-capsule');
 
   const scenarios = [
     {

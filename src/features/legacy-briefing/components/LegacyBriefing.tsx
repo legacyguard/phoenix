@@ -28,7 +28,7 @@ import { supabase } from '@/lib/supabase';
 import { toast } from 'sonner';
 
 export const LegacyBriefing: React.FC = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('time-capsule');
   const { user } = useUser();
   const [capsules, setCapsules] = useState<TimeCapsuleMessage[]>([]);
   const [loading, setLoading] = useState(true);

@@ -200,7 +200,7 @@ export const BasicLifeQuestions: React.FC<BasicLifeQuestionsProps> = ({
   onBack,
   initialAnswers = {}
 }) => {
-  const { t } = useTranslation('onboarding');
+  const { t } = useTranslation('help');
   const { t: tCommon } = useTranslation('ui');
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [answers, setAnswers] = useState<Partial<LifeAnswers>>(initialAnswers);

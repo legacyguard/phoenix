@@ -170,7 +170,7 @@ const [showEditStoryModal, setShowEditStoryModal] = useState(false);
 
         if (error) throw error;
         
-        toast.success(t('notifications.assetAdded'));
+        toast.success(t('ui.assetAdded'));
       } else {
         const { error } = await supabaseWithRetry
           .from('assets')
@@ -180,7 +180,7 @@ const [showEditStoryModal, setShowEditStoryModal] = useState(false);
 
         if (error) throw error;
         
-        toast.success(t('notifications.assetUpdated'));
+        toast.success(t('ui.assetUpdated'));
       }
 
       navigate('/dashboard');
@@ -316,9 +316,9 @@ if (isLoading) {
             ) : (
               <div className="flex flex-col items-center justify-center py-8 px-4 border-2 border-dashed border-gray-200 rounded-lg bg-gray-50/50">
                 <Feather className="h-8 w-8 text-accent-green mb-3" />
-                <h3 className="text-lg font-semibold text-text-heading mb-2">{t('vault.empty')}</h3>
+                <h3 className="text-lg font-semibold text-text-heading mb-2">{t('assets.empty')}</h3>
                 <p className="text-sm text-text-body text-center max-w-md mb-4">
-                  {t('vault.description')}
+                  {t('assets.description')}
                 </p>
                 <Button variant="default" size="sm" onClick={handleStoryEdit}>
                   <Feather className="h-4 w-4 mr-2" />

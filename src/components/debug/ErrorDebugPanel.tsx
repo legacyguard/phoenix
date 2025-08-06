@@ -82,13 +82,13 @@ export const ErrorDebugPanel: React.FC = () => {
     localStorage.removeItem('app_errors');
     setErrors([]);
     setSelectedError(null);
-    toast.success(t('debug.panel.messages.errorsCleared'));
+    toast.success(t('help.panel.messages.errorsCleared'));
   };
 
   const copyError = (error: StoredError) => {
     const errorText = JSON.stringify(error, null, 2);
     navigator.clipboard.writeText(errorText);
-    toast.success(t('debug.panel.messages.errorCopied'));
+    toast.success(t('help.panel.messages.errorCopied'));
   };
 
   const downloadErrors = () => {
@@ -100,7 +100,7 @@ export const ErrorDebugPanel: React.FC = () => {
     a.download = `errors-${new Date().toISOString()}.json`;
     a.click();
     URL.revokeObjectURL(url);
-    toast.success(t('debug.panel.messages.errorsDownloaded'));
+    toast.success(t('help.panel.messages.errorsDownloaded'));
   };
 
   const toggleSection = (section: string) => {
@@ -145,7 +145,7 @@ export const ErrorDebugPanel: React.FC = () => {
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-2">
                   <AlertCircle className="h-5 w-5 text-destructive" />
-                  <CardTitle>{t('debug.panel.title')}</CardTitle>
+                  <CardTitle>{t('help.panel.title')}</CardTitle>
                   <Badge variant="destructive">{errors.length}</Badge>
                 </div>
                 <div className="flex items-center space-x-2">
@@ -153,7 +153,7 @@ export const ErrorDebugPanel: React.FC = () => {
                     size="icon"
                     variant="ghost"
                     onClick={downloadErrors}
-                    title={t('debug.panel.actions.downloadErrors')}
+                    title={t('help.panel.actions.downloadErrors')}
                   >
                     <Download className="h-4 w-4" />
                   </Button>
@@ -161,7 +161,7 @@ export const ErrorDebugPanel: React.FC = () => {
                     size="icon"
                     variant="ghost"
                     onClick={clearErrors}
-                    title={t('debug.panel.actions.clearAllErrors')}
+                    title={t('help.panel.actions.clearAllErrors')}
                   >
                     <Trash2 className="h-4 w-4" />
                   </Button>
@@ -175,16 +175,16 @@ export const ErrorDebugPanel: React.FC = () => {
                 </div>
               </div>
               <CardDescription>
-                {t('debug.panel.recentErrors')}
+                {t('help.panel.recentErrors')}
               </CardDescription>
             </CardHeader>
 
             <CardContent className="flex-1 overflow-hidden p-0">
               <Tabs defaultValue="list" className="h-full flex flex-col">
                 <TabsList className="mx-4">
-                  <TabsTrigger value="list">{t('debug.panel.tabs.list')}</TabsTrigger>
+                  <TabsTrigger value="list">{t('help.panel.tabs.list')}</TabsTrigger>
                   <TabsTrigger value="details" disabled={selectedError === null}>
-                    {t('debug.panel.tabs.details')}
+                    {t('help.panel.tabs.details')}
                   </TabsTrigger>
                 </TabsList>
 
@@ -206,10 +206,10 @@ export const ErrorDebugPanel: React.FC = () => {
                           <div className="flex items-start justify-between">
                             <div className="space-y-1">
                               <div className="font-medium text-sm">
-                                {error.error?.name || t('debug.panel.error.unknownError')}
+                                {error.error?.name || t('help.panel.error.unknownError')}
                               </div>
                               <div className="text-xs text-muted-foreground line-clamp-2">
-                                {error.error?.message || t('debug.panel.error.noMessage')}
+                                {error.error?.message || t('help.panel.error.noMessage')}
                               </div>
                               <div className="flex items-center space-x-3 text-xs text-muted-foreground">
                                 <span className="flex items-center">
@@ -248,7 +248,7 @@ export const ErrorDebugPanel: React.FC = () => {
                       <div className="p-4 space-y-4">
                         {/* Error message */}
                         <div>
-                          <h4 className="font-semibold text-sm mb-2">{t('debug.panel.error.errorMessage')}</h4>
+                          <h4 className="font-semibold text-sm mb-2">{t('help.panel.error.errorMessage')}</h4>
                           <div className="bg-destructive/10 p-3 rounded-md">
                             <p className="text-sm font-mono">
                               {selectedErrorData.error?.name}: {selectedErrorData.error?.message}
@@ -263,7 +263,7 @@ export const ErrorDebugPanel: React.FC = () => {
                               onClick={() => toggleSection('stack')}
                               className="flex items-center justify-between w-full text-left"
                             >
-                              <h4 className="font-semibold text-sm">{t('debug.panel.sections.stackTrace')}</h4>
+                              <h4 className="font-semibold text-sm">{t('help.panel.sections.stackTrace')}</h4>
                               {expandedSections.has('stack') ? (
                                 <ChevronUp className="h-4 w-4" />
                               ) : (
@@ -291,7 +291,7 @@ export const ErrorDebugPanel: React.FC = () => {
                               onClick={() => toggleSection('context')}
                               className="flex items-center justify-between w-full text-left"
                             >
-                              <h4 className="font-semibold text-sm">{t('debug.panel.sections.context')}</h4>
+                              <h4 className="font-semibold text-sm">{t('help.panel.sections.context')}</h4>
                               {expandedSections.has('context') ? (
                                 <ChevronUp className="h-4 w-4" />
                               ) : (
@@ -311,17 +311,17 @@ export const ErrorDebugPanel: React.FC = () => {
                         {/* Location */}
                         {selectedErrorData.location && (
                           <div>
-                            <h4 className="font-semibold text-sm mb-2">{t('debug.panel.sections.location')}</h4>
+                            <h4 className="font-semibold text-sm mb-2">{t('help.panel.sections.location')}</h4>
                             <div className="bg-muted/30 p-3 rounded-md space-y-1">
                               <p className="text-xs">
-                                <span className="font-medium">{t('debug.panel.fields.url')}</span> {selectedErrorData.location.href}
+                                <span className="font-medium">{t('help.panel.fields.url')}</span> {selectedErrorData.location.href}
                               </p>
                               <p className="text-xs">
-                                <span className="font-medium">{t('debug.panel.fields.path')}</span> {selectedErrorData.location.pathname}
+                                <span className="font-medium">{t('help.panel.fields.path')}</span> {selectedErrorData.location.pathname}
                               </p>
                               {selectedErrorData.location.search && (
                                 <p className="text-xs">
-                                  <span className="font-medium">{t('debug.panel.fields.query')}</span> {selectedErrorData.location.search}
+                                  <span className="font-medium">{t('help.panel.fields.query')}</span> {selectedErrorData.location.search}
                                 </p>
                               )}
                             </div>
@@ -334,7 +334,7 @@ export const ErrorDebugPanel: React.FC = () => {
                             onClick={() => toggleSection('browser')}
                             className="flex items-center justify-between w-full text-left"
                           >
-                            <h4 className="font-semibold text-sm">{t('debug.panel.sections.browserInfo')}</h4>
+                            <h4 className="font-semibold text-sm">{t('help.panel.sections.browserInfo')}</h4>
                             {expandedSections.has('browser') ? (
                               <ChevronUp className="h-4 w-4" />
                             ) : (
@@ -344,11 +344,11 @@ export const ErrorDebugPanel: React.FC = () => {
                           {expandedSections.has('browser') && (
                             <div className="mt-2 bg-muted/30 p-3 rounded-md space-y-1">
                               <p className="text-xs">
-                                <span className="font-medium">{t('debug.panel.fields.userAgent')}</span> {selectedErrorData.userAgent}
+                                <span className="font-medium">{t('help.panel.fields.userAgent')}</span> {selectedErrorData.userAgent}
                               </p>
                               {selectedErrorData.viewport && (
                                 <p className="text-xs">
-                                  <span className="font-medium">{t('debug.panel.fields.viewport')}</span> {selectedErrorData.viewport.width} x {selectedErrorData.viewport.height}
+                                  <span className="font-medium">{t('help.panel.fields.viewport')}</span> {selectedErrorData.viewport.width} x {selectedErrorData.viewport.height}
                                 </p>
                               )}
                             </div>
@@ -357,7 +357,7 @@ export const ErrorDebugPanel: React.FC = () => {
 
                         {/* Timestamp */}
                         <div>
-                          <h4 className="font-semibold text-sm mb-2">{t('debug.panel.sections.time')}</h4>
+                          <h4 className="font-semibold text-sm mb-2">{t('help.panel.sections.time')}</h4>
                           <div className="bg-muted/30 p-3 rounded-md">
                             <p className="text-xs">
                               {new Date(selectedErrorData.timestamp).toLocaleString()}

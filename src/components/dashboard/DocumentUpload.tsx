@@ -38,7 +38,7 @@ interface DocumentUploadProps {
 
 export const DocumentUpload: React.FC<DocumentUploadProps> = ({ onDocumentUploaded, onCancel }) => {
   // Translation hook for internationalization
-  const { t } = useTranslation('documents');
+  const { t } = useTranslation('assets');
   const { t: tCommon } = useTranslation('ui');
   const { selectedCountryCode } = useCountry();
 
@@ -229,7 +229,7 @@ export const DocumentUpload: React.FC<DocumentUploadProps> = ({ onDocumentUpload
       await new Promise((resolve) => setTimeout(resolve, 300));
 
       setShowForm(true);
-      toast.success(t('notifications.uploaded'));
+      toast.success(t('ui.uploaded'));
 
       return data.path;
     } catch (error: Record<string, unknown>) {
@@ -290,7 +290,7 @@ export const DocumentUpload: React.FC<DocumentUploadProps> = ({ onDocumentUpload
 
       if (error) throw error;
 
-      toast.success(t('notifications.uploaded'));
+      toast.success(t('ui.uploaded'));
       onDocumentUploaded(documentData);
     } catch (error: Record<string, unknown>) {
       console.error('Save document error:', error);
@@ -312,7 +312,7 @@ export const DocumentUpload: React.FC<DocumentUploadProps> = ({ onDocumentUpload
     return (
       <div className="space-y-6">
         <div className="flex items-center justify-between">
-          <h2 className="text-xl font-semibold">{t('upload.title')}</h2>
+          <h2 className="text-xl font-semibold">{t('assets.title')}</h2>
           <Button variant="outline" onClick={handleCancel}>
             {tCommon('common.buttons.cancel')}
           </Button>
@@ -431,7 +431,7 @@ export const DocumentUpload: React.FC<DocumentUploadProps> = ({ onDocumentUpload
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between">
-        <h2 className="text-xl font-semibold">{t('upload.title')}</h2>
+        <h2 className="text-xl font-semibold">{t('assets.title')}</h2>
         <Button variant="outline" onClick={handleCancel}>
           {tCommon('common.buttons.cancel')}
         </Button>
@@ -446,10 +446,10 @@ export const DocumentUpload: React.FC<DocumentUploadProps> = ({ onDocumentUpload
         >
           <Upload className="mx-auto h-12 w-12 text-gray-400 mb-4" />
           <h3 className="text-lg font-medium text-gray-900 mb-2">
-            {t('upload.dragDrop')}
+            {t('assets.dragDrop')}
           </h3>
           <p className="text-sm text-gray-500 mb-4">
-            {t('upload.supportedFormats')}
+            {t('assets.supportedFormats')}
           </p>
           <p className="text-xs text-gray-400">
             {t('upload.maxSize', { size: MAX_FILE_SIZES[plan] / (1024 * 1024) })}
@@ -488,7 +488,7 @@ export const DocumentUpload: React.FC<DocumentUploadProps> = ({ onDocumentUpload
           {isUploading ? (
             <div className="space-y-2">
               <div className="flex items-center justify-between text-sm">
-                <span>{t('upload.processing')}</span>
+                <span>{t('assets.processing')}</span>
                 <span>{uploadProgress}%</span>
               </div>
               <Progress value={uploadProgress} className="w-full" />
@@ -496,7 +496,7 @@ export const DocumentUpload: React.FC<DocumentUploadProps> = ({ onDocumentUpload
           ) : (
             <Button onClick={uploadFile} className="w-full">
               <Upload className="mr-2 h-4 w-4" />
-              {t('upload.title')}
+              {t('assets.title')}
             </Button>
           )}
         </div>

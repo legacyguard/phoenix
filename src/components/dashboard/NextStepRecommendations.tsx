@@ -57,28 +57,28 @@ export const NextStepRecommendations: React.FC<NextStepRecommendationsProps> = (
       if (!completedItems.includes('emergency-contacts')) {
         recommendations.push({
           id: 'add-emergency-contacts',
-          title: t('recommendations.emergencyContacts.title'),
-          description: t('recommendations.emergencyContacts.description'),
+          title: t('dashboard.emergencyContacts.title'),
+          description: t('dashboard.emergencyContacts.description'),
           category: 'critical',
           estimatedTime: '5 minutes',
           icon: <Users className="h-5 w-5" />,
           actionUrl: '/manual',
-          actionLabel: t('recommendations.emergencyContacts.action'),
-          impact: t('recommendations.emergencyContacts.impact')
+          actionLabel: t('dashboard.emergencyContacts.action'),
+          impact: t('dashboard.emergencyContacts.impact')
         });
       }
 
       if (!completedItems.includes('key-documents')) {
         recommendations.push({
           id: 'upload-key-documents',
-          title: t('recommendations.keyDocuments.title'),
-          description: t('recommendations.keyDocuments.description'),
+          title: t('dashboard.keyDocuments.title'),
+          description: t('dashboard.keyDocuments.description'),
           category: 'critical',
           estimatedTime: '10 minutes',
           icon: <FileText className="h-5 w-5" />,
           actionUrl: '/vault',
-          actionLabel: t('recommendations.keyDocuments.action'),
-          impact: t('recommendations.keyDocuments.impact')
+          actionLabel: t('dashboard.keyDocuments.action'),
+          impact: t('dashboard.keyDocuments.impact')
         });
       }
     }
@@ -88,31 +88,31 @@ export const NextStepRecommendations: React.FC<NextStepRecommendationsProps> = (
       if (!completedItems.includes('asset-inventory')) {
         recommendations.push({
           id: 'create-asset-inventory',
-          title: t('recommendations.assetInventory.title'),
-          description: t('recommendations.assetInventory.description'),
+          title: t('dashboard.assetInventory.title'),
+          description: t('dashboard.assetInventory.description'),
           category: 'important',
           estimatedTime: '15 minutes',
           icon: <Wallet className="h-5 w-5" />,
           actionUrl: '/assets',
-          actionLabel: t('recommendations.assetInventory.action'),
-          impact: t('recommendations.assetInventory.impact')
+          actionLabel: t('dashboard.assetInventory.action'),
+          impact: t('dashboard.assetInventory.impact')
         });
       }
 
       if (!completedItems.includes('beneficiaries')) {
         recommendations.push({
           id: 'designate-beneficiaries',
-          title: t('recommendations.beneficiaries.title'),
-          description: t('recommendations.beneficiaries.description'),
+          title: t('dashboard.beneficiaries.title'),
+          description: t('dashboard.beneficiaries.description'),
           category: 'critical',
           estimatedTime: '10 minutes',
           icon: <Users className="h-5 w-5" />,
           actionUrl: '/beneficiaries',
-          actionLabel: t('recommendations.beneficiaries.action'),
-          impact: t('recommendations.beneficiaries.impact'),
+          actionLabel: t('dashboard.beneficiaries.action'),
+          impact: t('dashboard.beneficiaries.impact'),
           prerequisites: completedItems.includes('asset-inventory') 
             ? undefined 
-            : [t('recommendations.beneficiaries.prerequisite')]
+            : [t('dashboard.beneficiaries.prerequisite')]
         });
       }
     }
@@ -122,28 +122,28 @@ export const NextStepRecommendations: React.FC<NextStepRecommendationsProps> = (
       if (!completedItems.includes('will-creation')) {
         recommendations.push({
           id: 'create-will',
-          title: t('recommendations.will.title'),
-          description: t('recommendations.will.description'),
+          title: t('dashboard.will.title'),
+          description: t('dashboard.will.description'),
           category: 'critical',
           estimatedTime: '30 minutes',
           icon: <Shield className="h-5 w-5" />,
           actionUrl: '/will',
-          actionLabel: t('recommendations.will.action'),
-          impact: t('recommendations.will.impact')
+          actionLabel: t('dashboard.will.action'),
+          impact: t('dashboard.will.impact')
         });
       }
 
       if (!completedItems.includes('access-verification')) {
         recommendations.push({
           id: 'verify-access',
-          title: t('recommendations.accessVerification.title'),
-          description: t('recommendations.accessVerification.description'),
+          title: t('dashboard.accessVerification.title'),
+          description: t('dashboard.accessVerification.description'),
           category: 'suggested',
           estimatedTime: '15 minutes',
           icon: <CheckCircle className="h-5 w-5" />,
           actionUrl: '/settings/security',
-          actionLabel: t('recommendations.accessVerification.action'),
-          impact: t('recommendations.accessVerification.impact')
+          actionLabel: t('dashboard.accessVerification.action'),
+          impact: t('dashboard.accessVerification.impact')
         });
       }
     }
@@ -152,14 +152,14 @@ export const NextStepRecommendations: React.FC<NextStepRecommendationsProps> = (
     if (completionScore >= 75) {
       recommendations.push({
         id: 'annual-review',
-                  title: t('recommendations.annualReview.title'),
-          description: t('recommendations.annualReview.description'),
+                  title: t('dashboard.annualReview.title'),
+          description: t('dashboard.annualReview.description'),
         category: 'important',
         estimatedTime: '20 minutes',
         icon: <Target className="h-5 w-5" />,
         actionUrl: '/annual-review',
-                  actionLabel: t('recommendations.annualReview.action'),
-          impact: t('recommendations.annualReview.impact')
+                  actionLabel: t('dashboard.annualReview.action'),
+          impact: t('dashboard.annualReview.impact')
       });
     }
 
@@ -171,11 +171,11 @@ export const NextStepRecommendations: React.FC<NextStepRecommendationsProps> = (
   const getCategoryBadge = (category: string) => {
     switch (category) {
       case 'critical':
-        return <Badge variant="destructive" className="text-xs">{t('recommendations.priority.critical')}</Badge>;
+        return <Badge variant="destructive" className="text-xs">{t('dashboard.priority.critical')}</Badge>;
       case 'important':
-        return <Badge variant="default" className="text-xs">{t('recommendations.priority.important')}</Badge>;
+        return <Badge variant="default" className="text-xs">{t('dashboard.priority.important')}</Badge>;
       default:
-        return <Badge variant="secondary" className="text-xs">{t('recommendations.priority.suggested')}</Badge>;
+        return <Badge variant="secondary" className="text-xs">{t('dashboard.priority.suggested')}</Badge>;
     }
   };
 
@@ -200,10 +200,10 @@ export const NextStepRecommendations: React.FC<NextStepRecommendationsProps> = (
         <CardHeader>
           <CardTitle className="text-2xl flex items-center gap-2">
             <Target className="h-6 w-6" />
-            {t('recommendations.title')}
+            {t('dashboard.title')}
           </CardTitle>
           <CardDescription>
-            {t('recommendations.subtitle')}
+            {t('dashboard.subtitle')}
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
@@ -243,7 +243,7 @@ export const NextStepRecommendations: React.FC<NextStepRecommendationsProps> = (
                   <Alert className="border-0 bg-muted/50">
                     <Info className="h-4 w-4" />
                     <AlertDescription className="text-sm">
-                      <span className="font-medium">{t('recommendations.impact.label')}: </span>
+                      <span className="font-medium">{t('dashboard.impact.label')}: </span>
                       {recommendation.impact}
                     </AlertDescription>
                   </Alert>
@@ -253,7 +253,7 @@ export const NextStepRecommendations: React.FC<NextStepRecommendationsProps> = (
                     <Alert className="border-0 bg-yellow-50 dark:bg-yellow-950/20">
                       <AlertCircle className="h-4 w-4 text-yellow-600" />
                       <AlertDescription className="text-sm">
-                        <span className="font-medium">{t('recommendations.prerequisites.label')}: </span>
+                        <span className="font-medium">{t('dashboard.prerequisites.label')}: </span>
                         {recommendation.prerequisites.join(', ')}
                       </AlertDescription>
                     </Alert>
@@ -283,9 +283,9 @@ export const NextStepRecommendations: React.FC<NextStepRecommendationsProps> = (
           <Alert className="mt-4">
             <Info className="h-4 w-4" />
             <AlertDescription>
-              {t('recommendations.moreHelp.text')}
+              {t('dashboard.moreHelp.text')}
               <Link to="/help" className="font-medium underline ml-1">
-                {t('recommendations.moreHelp.link')}
+                {t('dashboard.moreHelp.link')}
               </Link>
             </AlertDescription>
           </Alert>

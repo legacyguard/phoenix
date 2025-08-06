@@ -13,51 +13,51 @@ export const PricingSection: React.FC = () => {
   const plans = [
   {
     id: 'starter',
-    name: t('pricing.starter.name'),
-    price: t('pricing.starter.price'),
+    name: t('landing.starter.name'),
+    price: t('landing.starter.price'),
     period: '',
-    description: t('pricing.starter.description'),
+    description: t('landing.starter.description'),
     features: [
-    t('pricing.starter.features.storage', { amount: t('pricing.starter.limits.storage') }),
-    t('pricing.starter.features.guardians', { count: t('pricing.starter.limits.guardians') }),
-    t('pricing.starter.features.documents'),
-    t('pricing.starter.features.playbook'),
-    t('pricing.starter.features.support')],
+    t('pricing.starter.features.storage', { amount: t('landing.starter.limits.storage') }),
+    t('pricing.starter.features.guardians', { count: t('landing.starter.limits.guardians') }),
+    t('landing.starter.features.documents'),
+    t('landing.starter.features.playbook'),
+    t('landing.starter.features.support')],
 
-    buttonText: t('pricing.starter.button'),
+    buttonText: t('landing.starter.button'),
     buttonLink: '/register',
     highlighted: false
   },
   {
     id: 'premium',
-    name: t('pricing.premium.name'),
-    price: t('pricing.premium.price'),
-    period: t('pricing.premium.period'),
-    description: t('pricing.premium.description'),
+    name: t('landing.premium.name'),
+    price: t('landing.premium.price'),
+    period: t('landing.premium.period'),
+    description: t('landing.premium.description'),
     features: [
-    t('pricing.premium.features.storage', { amount: t('pricing.premium.limits.storage') }),
-    t('pricing.premium.features.guardians', { count: t('pricing.premium.limits.guardians') }),
-    t('pricing.premium.features.manual'),
-    t('pricing.premium.features.support')],
+    t('pricing.premium.features.storage', { amount: t('landing.premium.limits.storage') }),
+    t('pricing.premium.features.guardians', { count: t('landing.premium.limits.guardians') }),
+    t('landing.premium.features.manual'),
+    t('landing.premium.features.support')],
 
-    buttonText: t('pricing.premium.button'),
+    buttonText: t('landing.premium.button'),
     buttonLink: '/register',
     highlighted: true,
-    badge: t('pricing.premium.badge')
+    badge: t('landing.premium.badge')
   },
   {
     id: 'enterprise',
-    name: t('pricing.enterprise.name'),
-    price: t('pricing.enterprise.price'),
+    name: t('landing.enterprise.name'),
+    price: t('landing.enterprise.price'),
     period: '',
-    description: t('pricing.enterprise.description'),
+    description: t('landing.enterprise.description'),
     features: [
-    t('pricing.enterprise.features.storage', { amount: t('pricing.enterprise.limits.storage') }),
-    t('pricing.enterprise.features.guardians'),
-    t('pricing.enterprise.features.legal'),
-    t('pricing.enterprise.features.support')],
+    t('pricing.enterprise.features.storage', { amount: t('landing.enterprise.limits.storage') }),
+    t('landing.enterprise.features.guardians'),
+    t('landing.enterprise.features.legal'),
+    t('landing.enterprise.features.support')],
 
-    buttonText: t('pricing.enterprise.button'),
+    buttonText: t('landing.enterprise.button'),
     buttonLink: 'mailto:sales@legacyguard.com',
     highlighted: false
   }];
@@ -68,10 +68,10 @@ export const PricingSection: React.FC = () => {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-4xl font-bold tracking-tight text-foreground">
-            {t('pricing.mainTitle')}
+            {t('landing.mainTitle')}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            {t('pricing.mainSubtitle')}
+            {t('landing.mainSubtitle')}
           </p>
         </div>
 

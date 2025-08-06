@@ -22,7 +22,7 @@ export function ShareModal({
   contentTitle,
   onShare 
 }: ShareModalProps) {
-  const { t } = useTranslation();
+  const { t } = useTranslation('sharing');
   const { toast } = useToast();
   const [isLoading, setIsLoading] = useState(false);
   const [shareLink, setShareLink] = useState<string>('');
@@ -74,7 +74,7 @@ export function ShareModal({
     } catch (error) {
       console.error('Error generating share link:', error);
       toast({
-        title: t('common.error'),
+        title: t('ui.error'),
         description: t('sharing.generateError'),
         variant: 'destructive',
       });
@@ -94,7 +94,7 @@ export function ShareModal({
       });
     } catch (error) {
       toast({
-        title: t('common.error'),
+        title: t('ui.error'),
         description: t('sharing.copyError'),
         variant: 'destructive',
       });
@@ -285,7 +285,7 @@ export function ShareModal({
                 {t('sharing.newLink')}
               </Button>
               <Button onClick={onClose} className="flex-1">
-                {t('common.done')}
+                {t('ui.done')}
               </Button>
             </div>
           </div>

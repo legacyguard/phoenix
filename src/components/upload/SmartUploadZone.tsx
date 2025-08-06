@@ -151,7 +151,7 @@ export function SmartUploadZone({
         accept={acceptedTypes.join(',')}
         onChange={handleFileSelect}
         className="hidden"
-        aria-label={t("upload.smartUploadZone.file_upload_1")} />
+        aria-label={t('assets.smartUploadZone.file_upload_1')} />
 
 
       <div className="p-8 sm:p-12 text-center">
@@ -174,15 +174,15 @@ export function SmartUploadZone({
         {/* Main message */}
         <h3 className="text-lg font-semibold mb-2">
           {isDragging ?
-          t('upload.zone.dropHereActive') :
-          t('upload.zone.dropHere')
+          t('assets.zone.dropHereActive') :
+          t('assets.zone.dropHere')
           }
         </h3>
         
         <p className="text-sm text-muted-foreground mb-6 max-w-sm mx-auto">
           {isDragging ?
-          t('upload.zone.descriptionActive') :
-          t('upload.zone.description')
+          t('assets.zone.descriptionActive') :
+          t('assets.zone.description')
           }
         </p>
 
@@ -194,7 +194,7 @@ export function SmartUploadZone({
             className="gap-2">
 
             <FileText className="h-4 w-4" />
-            {t('upload.zone.chooseFiles')}
+            {t('assets.zone.chooseFiles')}
           </Button>
           
           {/* Show camera button on mobile */}
@@ -204,20 +204,20 @@ export function SmartUploadZone({
             className="gap-2 sm:hidden">
 
             <Camera className="h-4 w-4" />
-            {t('upload.zone.takePhoto')}
+            {t('assets.zone.takePhoto')}
           </Button>
         </div>
 
         {/* Supported types */}
-        <p className="text-xs text-muted-foreground mt-6">{t("upload.smartUploadZone.supports_images_jpeg_png_and_p_2")}
-          {maxFiles}{t("upload.smartUploadZone.files_at_once_3")}
+        <p className="text-xs text-muted-foreground mt-6">{t('assets.smartUploadZone.supports_images_jpeg_png_and_p_2')}
+          {maxFiles}{t('assets.smartUploadZone.files_at_once_3')}
         </p>
 
         {/* Privacy indicator */}
         {preferences.privacy === 'local' &&
         <div className="mt-4 inline-flex items-center gap-2 px-3 py-1 bg-green-100 text-green-800 rounded-full text-xs font-medium">
             <div className="w-2 h-2 bg-green-600 rounded-full" />
-            {t('upload.zone.processingLocally')}
+            {t('assets.zone.processingLocally')}
           </div>
         }
       </div>
@@ -228,10 +228,10 @@ export function SmartUploadZone({
           <div className="text-center">
             <Upload className="h-12 w-12 text-primary mx-auto mb-3 animate-bounce" />
             <p className="text-lg font-semibold text-primary">
-              {t('upload.zone.dragOverlay.title')}
+              {t('assets.zone.dragOverlay.title')}
             </p>
             <p className="text-sm text-primary/70">
-              {t('upload.zone.dragOverlay.subtitle')}
+              {t('assets.zone.dragOverlay.subtitle')}
             </p>
           </div>
         </div>

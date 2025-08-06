@@ -24,7 +24,7 @@ interface PossessionArea {
 }
 
 const MyPossessions: React.FC = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('assets');
   const gb = useGrowthBook();
 
   // Track goal conversion when a possession is added

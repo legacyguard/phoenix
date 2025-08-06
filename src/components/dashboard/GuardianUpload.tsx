@@ -318,7 +318,7 @@ export const GuardianUpload: React.FC<GuardianUploadProps> = ({
             {isLoading ? t('guardianUpload.saving') : (editingGuardian ? t('guardianUpload.updateButton') : t('guardianUpload.addButton'))}
           </Button>
           <Button type="button" variant="outline" onClick={onCancel}>
-            {t('common.cancel')}
+            {t('ui.cancel')}
           </Button>
         </div>
       </form>

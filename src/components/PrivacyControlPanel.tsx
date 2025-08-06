@@ -120,8 +120,8 @@ const PrivacyControlPanel: React.FC = () => {
 
   return (
     <div className="p-6 font-sans max-w-3xl mx-auto">
-      <h2 className="text-2xl font-bold text-gray-800">{t("general.title")}</h2>
-      <p className="text-gray-600 mt-1">{t("general.subtitle")}</p>
+      <h2 className="text-2xl font-bold text-gray-800">{t('ui.title')}</h2>
+      <p className="text-gray-600 mt-1">{t('ui.subtitle')}</p>
 
       {/* Data Processing Card */}
       <Card className="mt-6">
@@ -154,13 +154,13 @@ const PrivacyControlPanel: React.FC = () => {
       {/* AI Features Card */}
       <Card className="mt-6">
         <CardHeader>
-          <CardTitle>{t("accessibility.visualSettings")}</CardTitle>
+          <CardTitle>{t('ui.visualSettings')}</CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="flex items-center justify-between">
             <div>
-              <Label>{t("accessibility.fontSize")}</Label>
-              <p className="text-sm text-gray-500">{t("accessibility.fontSize")}</p>
+              <Label>{t('ui.fontSize')}</Label>
+              <p className="text-sm text-gray-500">{t('ui.fontSize')}</p>
             </div>
             <Switch 
               checked={userSettings.aiFeatureToggles?.expirationIntelligence ?? true} 

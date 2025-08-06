@@ -25,18 +25,18 @@ export function ReminderToast({
   onSnooze,
   onDismiss,
 }: ReminderToastProps) {
-  const { t } = useTranslation();
+  const { t } = useTranslation('dashboard');
 
   const handleComplete = () => {
     onComplete(reminder.id);
     toast.dismiss(toastId);
-    toast.success(t('reminders.completedSuccess'));
+    toast.success(t('dashboard.completedSuccess'));
   };
 
   const handleSnooze = () => {
     onSnooze(reminder.id, 'week');
     toast.dismiss(toastId);
-    toast.info(t('reminders.snoozedSuccess', { duration: t('reminders.duration.week') }));
+    toast.info(t('reminders.snoozedSuccess', { duration: t('dashboard.duration.week') }));
   };
 
   const handleDismiss = () => {
@@ -61,7 +61,7 @@ export function ReminderToast({
               className="h-7 text-xs"
             >
               <CheckCircle className="h-3 w-3 mr-1" />
-              {t('reminders.complete')}
+              {t('dashboard.complete')}
             </Button>
             <Button
               size="sm"
@@ -70,7 +70,7 @@ export function ReminderToast({
               className="h-7 text-xs"
             >
               <SnoozeIcon className="h-3 w-3 mr-1" />
-              {t('reminders.snoozeWeek')}
+              {t('dashboard.snoozeWeek')}
             </Button>
             <Button
               size="sm"

@@ -504,7 +504,7 @@ export const GuardianView: React.FC = () => {
                     setEmergencyNotes('');
                   }}
                 >
-                  {t('common.cancel')}
+                  {t('ui.cancel')}
                 </Button>
                 <Button
                   variant="destructive"

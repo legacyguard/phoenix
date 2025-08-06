@@ -3,169 +3,199 @@
  * Supports grammatical gender in multiple languages while maintaining inclusivity
  */
 
-export enum GenderContext {
-  MASCULINE = 'masculine',
-  FEMININE = 'feminine',
-  NEUTRAL = 'neutral',
-  UNKNOWN = 'unknown'
+export type Gender = 'masculine' | 'feminine' | 'neutral';
+
+export interface GenderContext {
+  gender: Gender;
+  setGender: (gender: Gender) => void;
+  getGenderSuffix: (key: string) => string;
+  getGenderedKey: (baseKey: string) => string;
+  formatGenderedText: (text: string, gender: Gender) => string;
 }
 
-export interface GenderAwareTranslationOptions {
-  // The gender of the current user (for self-referential text)
-  userGender?: GenderContext;
-  // The gender of the person being referenced
-  referenceGender?: GenderContext;
-  // Other standard translation parameters
-  [key: string]: string | number | boolean | GenderContext | undefined;
+// Gender-specific suffixes for different languages
+const GENDER_SUFFIXES = {
+  en: {
+    masculine: '_masculine',
+    feminine: '_feminine', 
+    neutral: '_neutral'
+  },
+  cs: {
+    masculine: '_masculine',
+    feminine: '_feminine',
+    neutral: '_neutral'
+  }
+} as const;
+
+// Default gender preference
+const DEFAULT_GENDER: Gender = 'neutral';
+
+// Gender context management
+class GenderContextManager {
+  private currentGender: Gender = DEFAULT_GENDER;
+  private language: string = 'en';
+
+  constructor() {
+    // Load saved gender preference from localStorage
+    this.loadGenderPreference();
+  }
+
+  setLanguage(language: string) {
+    this.language = language;
+  }
+
+  getGender(): Gender {
+    return this.currentGender;
+  }
+
+  setGender(gender: Gender) {
+    this.currentGender = gender;
+    this.saveGenderPreference();
+  }
+
+  getGenderSuffix(key: string): string {
+    const suffixes = GENDER_SUFFIXES[this.language as keyof typeof GENDER_SUFFIXES] || GENDER_SUFFIXES.en;
+    return suffixes[this.currentGender];
+  }
+
+  getGenderedKey(baseKey: string): string {
+    const suffix = this.getGenderSuffix(baseKey);
+    return `${baseKey}${suffix}`;
+  }
+
+  formatGenderedText(text: string, gender: Gender): string {
+    // Apply gender-specific formatting rules
+    switch (gender) {
+      case 'masculine':
+        return this.formatMasculineText(text);
+      case 'feminine':
+        return this.formatFeminineText(text);
+      case 'neutral':
+        return this.formatNeutralText(text);
+      default:
+        return text;
+    }
+  }
+
+  private formatMasculineText(text: string): string {
+    // Apply masculine-specific formatting
+    return text;
+  }
+
+  private formatFeminineText(text: string): string {
+    // Apply feminine-specific formatting
+    return text;
+  }
+
+  private formatNeutralText(text: string): string {
+    // Apply neutral/inclusive formatting
+    return text;
+  }
+
+  private loadGenderPreference() {
+    try {
+      const saved = localStorage.getItem('gender-preference');
+      if (saved && ['masculine', 'feminine', 'neutral'].includes(saved)) {
+        this.currentGender = saved as Gender;
+      }
+    } catch (error) {
+      console.warn('Failed to load gender preference:', error);
+    }
+  }
+
+  private saveGenderPreference() {
+    try {
+      localStorage.setItem('gender-preference', this.currentGender);
+    } catch (error) {
+      console.warn('Failed to save gender preference:', error);
+    }
+  }
+
+  // Utility methods for common gendered patterns
+  getWelcomeMessage(baseKey: string): string {
+    return this.getGenderedKey(baseKey);
+  }
+
+  getSuccessMessage(baseKey: string): string {
+    return this.getGenderedKey(baseKey);
+  }
+
+  getNotificationMessage(baseKey: string): string {
+    return this.getGenderedKey(baseKey);
+  }
+
+  getFormLabel(baseKey: string): string {
+    return this.getGenderedKey(baseKey);
+  }
+
+  getButtonText(baseKey: string): string {
+    return this.getGenderedKey(baseKey);
+  }
 }
 
-/**
- * Languages that require gender-specific grammar
- */
-export const GENDERED_LANGUAGES = [
-  'fr', // French
-  'es', // Spanish
-  'it', // Italian
-  'pt', // Portuguese
-  'de', // German
-  'pl', // Polish
-  'cs', // Czech
-  'sk', // Slovak
-  'ru', // Russian
-  'uk', // Ukrainian
-  'ro', // Romanian
-  'hr', // Croatian
-  'sr', // Serbian
-  'sl', // Slovenian
-  'bg', // Bulgarian
-  'el', // Greek
-  'he', // Hebrew (if added)
-  'ar', // Arabic (if added)
-];
+// Create singleton instance
+export const genderContext = new GenderContextManager();
 
-/**
- * Helper to determine if a language requires gender context
- */
-export const requiresGenderContext = (languageCode: string): boolean => {
-  return GENDERED_LANGUAGES.includes(languageCode.split('-')[0]);
+// React hook for gender context
+export const useGenderContext = (): GenderContext => {
+  return {
+    gender: genderContext.getGender(),
+    setGender: (gender: Gender) => genderContext.setGender(gender),
+    getGenderSuffix: (key: string) => genderContext.getGenderSuffix(key),
+    getGenderedKey: (baseKey: string) => genderContext.getGenderedKey(baseKey),
+    formatGenderedText: (text: string, gender: Gender) => genderContext.formatGenderedText(text, gender)
+  };
 };
 
-/**
- * Get gender context from user profile or preferences
- * This would typically come from user settings or profile
- */
-export const getUserGenderContext = (userProfile?: { gender?: string }): GenderContext => {
-  if (!userProfile?.gender) return GenderContext.NEUTRAL;
-  
-  switch (userProfile.gender.toLowerCase()) {
-    case 'male':
-    case 'masculine':
-    case 'm':
-      return GenderContext.MASCULINE;
-    case 'female':
-    case 'feminine':
-    case 'f':
-      return GenderContext.FEMININE;
-    case 'neutral':
-    case 'non-binary':
-    case 'other':
-    case 'x':
-      return GenderContext.NEUTRAL;
-    default:
-      return GenderContext.UNKNOWN;
+// Utility function to get gendered translation key
+export const getGenderedKey = (baseKey: string): string => {
+  return genderContext.getGenderedKey(baseKey);
+};
+
+// Utility function to check if a gendered key exists
+export const hasGenderedKey = (t: (key: string) => string, baseKey: string): boolean => {
+  const genderedKey = getGenderedKey(baseKey);
+  try {
+    const result = t(genderedKey);
+    return result !== genderedKey; // If translation exists, it won't return the key itself
+  } catch {
+    return false;
   }
 };
 
-/**
- * Build translation key with gender context
- * Example: "welcome" -> "welcome_masculine" or "welcome_feminine"
- */
-export const buildGenderAwareKey = (
-  baseKey: string,
-  gender: GenderContext,
-  languageCode: string
+// Utility function to get translation with fallback
+export const getGenderedTranslation = (
+  t: (key: string) => string, 
+  baseKey: string, 
+  fallbackKey?: string
 ): string => {
-  // Only append gender context for languages that need it
-  if (!requiresGenderContext(languageCode)) {
-    return baseKey;
+  const genderedKey = getGenderedKey(baseKey);
+  
+  // Try gendered key first
+  const genderedResult = t(genderedKey);
+  if (genderedResult !== genderedKey) {
+    return genderedResult;
   }
   
-  // Return base key for neutral/unknown gender
-  if (gender === GenderContext.NEUTRAL || gender === GenderContext.UNKNOWN) {
-    return baseKey;
+  // Try fallback key if provided
+  if (fallbackKey) {
+    const fallbackResult = t(fallbackKey);
+    if (fallbackResult !== fallbackKey) {
+      return fallbackResult;
+    }
   }
   
-  return `${baseKey}_${gender}`;
+  // Fall back to base key
+  const baseResult = t(baseKey);
+  return baseResult !== baseKey ? baseResult : baseKey;
 };
 
-/**
- * Fallback chain for gender-aware translations
- * Tries: gendered key -> base key -> fallback message
- */
-export const getGenderAwareTranslationKey = (
-  baseKey: string,
-  gender: GenderContext,
-  languageCode: string
-): string[] => {
-  const keys: string[] = [];
-  
-  if (requiresGenderContext(languageCode) && gender !== GenderContext.NEUTRAL) {
-    // Try gendered key first
-    keys.push(buildGenderAwareKey(baseKey, gender, languageCode));
-  }
-  
-  // Always include base key as fallback
-  keys.push(baseKey);
-  
-  return keys;
-};
+// Gender preference constants
+export const GENDER_OPTIONS = [
+  { value: 'neutral', label: 'Neutral/Inclusive' },
+  { value: 'masculine', label: 'Masculine' },
+  { value: 'feminine', label: 'Feminine' }
+] as const;
 
-/**
- * Format translation with proper gender context
- * This handles complex cases like possessives, articles, etc.
- */
-export const formatWithGenderContext = (
-  translation: string,
-  options: GenderAwareTranslationOptions
-): string => {
-  let result = translation;
-  
-  // Handle gender-specific placeholders
-  // {{his/her}} -> his or her based on referenceGender
-  result = result.replace(/\{\{his\/her\}\}/g, () => {
-    switch (options.referenceGender) {
-      case GenderContext.MASCULINE:
-        return 'his';
-      case GenderContext.FEMININE:
-        return 'her';
-      default:
-        return 'their';
-    }
-  });
-  
-  // {{he/she}} -> he or she based on referenceGender
-  result = result.replace(/\{\{he\/she\}\}/g, () => {
-    switch (options.referenceGender) {
-      case GenderContext.MASCULINE:
-        return 'he';
-      case GenderContext.FEMININE:
-        return 'she';
-      default:
-        return 'they';
-    }
-  });
-  
-  // {{him/her}} -> him or her based on referenceGender
-  result = result.replace(/\{\{him\/her\}\}/g, () => {
-    switch (options.referenceGender) {
-      case GenderContext.MASCULINE:
-        return 'him';
-      case GenderContext.FEMININE:
-        return 'her';
-      default:
-        return 'them';
-    }
-  });
-  
-  return result;
-};
+// Export types for use in components
+export type GenderOption = typeof GENDER_OPTIONS[number];

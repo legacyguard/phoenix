@@ -15,7 +15,7 @@ export async function GET(
     
     const { data: { user }, error: authError } = await supabase.auth.getUser();
     if (authError || !user) {
-      return NextResponse.json({ error: t('will.errors.unauthorized') }, { status: 401 });
+      return NextResponse.json({ error: t('wills.errors.unauthorized') }, { status: 401 });
     }
 
     const { data: will, error } = await supabase
@@ -32,13 +32,13 @@ export async function GET(
       .single();
 
     if (error || !will) {
-      return NextResponse.json({ error: t('will.errors.not_found') }, { status: 404 });
+      return NextResponse.json({ error: t('wills.errors.not_found') }, { status: 404 });
     }
 
     return NextResponse.json(will);
   } catch (error) {
     console.error('Error fetching will:', error);
-    return NextResponse.json({ error: t('will.errors.failed_to_load') }, { status: 500 });
+    return NextResponse.json({ error: t('wills.errors.failed_to_load') }, { status: 500 });
   }
 }
 
@@ -55,7 +55,7 @@ export async function PUT(
 
     const { data: { user }, error: authError } = await supabase.auth.getUser();
     if (authError || !user) {
-      return NextResponse.json({ error: t('will.errors.unauthorized') }, { status: 401 });
+      return NextResponse.json({ error: t('wills.errors.unauthorized') }, { status: 401 });
     }
 
     // Check if will exists and user owns it
@@ -67,12 +67,12 @@ export async function PUT(
       .single();
 
     if (!existingWill) {
-      return NextResponse.json({ error: t('will.errors.not_found') }, { status: 404 });
+      return NextResponse.json({ error: t('wills.errors.not_found') }, { status: 404 });
     }
 
     // Only allow updates to draft wills
     if (existingWill.status !== 'draft') {
-      return NextResponse.json({ error: t('will.errors.cannot_update_non_draft') }, { status: 400 });
+      return NextResponse.json({ error: t('wills.errors.cannot_update_non_draft') }, { status: 400 });
     }
 
     // Create a new version before updating
@@ -98,13 +98,13 @@ export async function PUT(
       .single();
 
     if (updateError) {
-      return NextResponse.json({ error: t('will.errors.failed_to_save') }, { status: 500 });
+      return NextResponse.json({ error: t('wills.errors.failed_to_save') }, { status: 500 });
     }
 
     return NextResponse.json(updatedWill);
   } catch (error) {
     console.error('Error updating will:', error);
-    return NextResponse.json({ error: t('will.errors.failed_to_save') }, { status: 500 });
+    return NextResponse.json({ error: t('wills.errors.failed_to_save') }, { status: 500 });
   }
 }
 
@@ -120,7 +120,7 @@ export async function DELETE(
 
     const { data: { user }, error: authError } = await supabase.auth.getUser();
     if (authError || !user) {
-      return NextResponse.json({ error: t('will.errors.unauthorized') }, { status: 401 });
+      return NextResponse.json({ error: t('wills.errors.unauthorized') }, { status: 401 });
     }
 
     // Check if will exists and user owns it
@@ -132,12 +132,12 @@ export async function DELETE(
       .single();
 
     if (!existingWill) {
-      return NextResponse.json({ error: t('will.errors.not_found') }, { status: 404 });
+      return NextResponse.json({ error: t('wills.errors.not_found') }, { status: 404 });
     }
 
     // Only allow deletion of draft wills
     if (existingWill.status !== 'draft') {
-      return NextResponse.json({ error: t('will.errors.cannot_delete_non_draft') }, { status: 400 });
+      return NextResponse.json({ error: t('wills.errors.cannot_delete_non_draft') }, { status: 400 });
     }
 
     const { error: deleteError } = await supabase
@@ -147,12 +147,12 @@ export async function DELETE(
       .eq('user_id', user.id);
 
     if (deleteError) {
-      return NextResponse.json({ error: t('will.errors.failed_to_delete') }, { status: 500 });
+      return NextResponse.json({ error: t('wills.errors.failed_to_delete') }, { status: 500 });
     }
 
     return NextResponse.json({ success: true });
   } catch (error) {
     console.error('Error deleting will:', error);
-    return NextResponse.json({ error: t('will.errors.failed_to_delete') }, { status: 500 });
+    return NextResponse.json({ error: t('wills.errors.failed_to_delete') }, { status: 500 });
   }
 }

@@ -8,7 +8,7 @@ import { ButtonProps, buttonVariants } from "@/components/ui/button"
 const Pagination = ({ className, ...props }: React.ComponentProps<"nav">) => (
   <nav
     role="navigation"
-    aria-label="pagination"
+          aria-label="Page navigation"
     className={cn("mx-auto flex w-full justify-center", className)}
     {...props}
   />
@@ -67,13 +67,13 @@ const PaginationPrevious = ({
   const { t } = useTranslation('ui');
   return (
     <PaginationLink
-      aria-label={t("common.ui.goToPreviousPage")}
+      aria-label={t('ui.ui.goToPreviousPage')}
       size="default"
       className={cn("gap-1 pl-2.5", className)}
       {...props}
     >
       <ChevronLeft className="h-4 w-4" />
-      <span>{t("common.pagination.previous")}</span>
+      <span>{t('ui.pagination.previous')}</span>
     </PaginationLink>
   );
 }
@@ -86,12 +86,12 @@ const PaginationNext = ({
   const { t } = useTranslation('ui');
   return (
     <PaginationLink
-      aria-label={t("common.ui.goToNextPage")}
+      aria-label={t('ui.ui.goToNextPage')}
       size="default"
       className={cn("gap-1 pr-2.5", className)}
       {...props}
     >
-      <span>{t("common.pagination.next")}</span>
+      <span>{t('ui.pagination.next')}</span>
       <ChevronRight className="h-4 w-4" />
     </PaginationLink>
   );
@@ -110,7 +110,7 @@ const PaginationEllipsis = ({
       {...props}
     >
       <MoreHorizontal className="h-4 w-4" />
-      <span className="sr-only">{t("common.pagination.morePages")}</span>
+      <span className="sr-only">{t('ui.pagination.morePages')}</span>
     </span>
   );
 }

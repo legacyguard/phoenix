@@ -464,7 +464,7 @@ export const EmergencyContacts: React.FC = () => {
 
           <DialogFooter>
             <Button variant="outline" onClick={() => setShowAddDialog(false)}>
-              {t('common.cancel')}
+              {t('ui.cancel')}
             </Button>
             <Button onClick={handleAddEmergencyContact}>
               {t('emergency.addContactDialog.addButton')}

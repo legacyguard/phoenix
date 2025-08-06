@@ -35,7 +35,7 @@ interface GroupedTasks {
 
 const ExecutorDashboard: React.FC = () => {
   const { user } = useAuth();
-  const { t } = useTranslation();
+  const { t } = useTranslation('family');
   const [tasks, setTasks] = useState<GroupedTasks>({
     immediate: [],
     first_week: [],
@@ -86,7 +86,7 @@ const ExecutorDashboard: React.FC = () => {
       await checkSensitiveInfoAvailability(taskList);
     } catch (err) {
       console.error('Failed to fetch tasks:', err);
-      setError(t('executor.errors.loadTasksFailed'));
+      setError(t('family.errors.loadTasksFailed'));
     } finally {
       setLoading(false);
     }
@@ -124,7 +124,7 @@ const ExecutorDashboard: React.FC = () => {
       await fetchTasks();
     } catch (err) {
       console.error('Failed to update task:', err);
-      setError(t('executor.errors.updateTaskFailed'));
+      setError(t('family.errors.updateTaskFailed'));
     }
   };
 
@@ -163,7 +163,7 @@ const ExecutorDashboard: React.FC = () => {
                     </h4>
                     {task.priority <= 3 && task.status === 'pending' &&
                   <Badge variant="destructive" className="text-xs">
-                        {t('executor.highPriority')}
+                        {t('family.highPriority')}
                       </Badge>
                   }
                   </div>
@@ -177,14 +177,14 @@ const ExecutorDashboard: React.FC = () => {
                   {task.due_date && task.status === 'pending' &&
                 <div className="flex items-center gap-2 text-xs text-muted-foreground">
                       <Clock className="h-3 w-3" />
-                      <span>{t('executor.due')}: {new Date(task.due_date).toLocaleDateString()}</span>
+                      <span>{t('family.due')}: {new Date(task.due_date).toLocaleDateString()}</span>
                     </div>
                 }
                   
                   {task.completed_at &&
                 <div className="flex items-center gap-2 text-xs text-green-600">
                       <CheckCircle2 className="h-3 w-3" />
-                      <span>{t('executor.completed')}: {new Date(task.completed_at).toLocaleDateString()}</span>
+                      <span>{t('family.completed')}: {new Date(task.completed_at).toLocaleDateString()}</span>
                     </div>
                 }
                 </div>
@@ -196,9 +196,9 @@ const ExecutorDashboard: React.FC = () => {
                 className="flex-shrink-0">
 
                   {task.status === 'completed' ?
-                <>{t('executor.undo')}</> :
+                <>{t('family.undo')}</> :
 
-                <>{t('executor.markComplete')}</>
+                <>{t('family.markComplete')}</>
                 }
                 </Button>
               </div>
@@ -213,7 +213,7 @@ const ExecutorDashboard: React.FC = () => {
                 trigger={
                 <Button variant="link" size="sm" className="text-xs p-0 h-auto flex items-center gap-1">
                         <Key className="h-3 w-3" />
-                        {t('executor.viewAccountDetails')}
+                        {t('family.viewAccountDetails')}
                       </Button>
                 } />
 
@@ -259,9 +259,9 @@ const ExecutorDashboard: React.FC = () => {
   return (
     <div className="p-6 max-w-6xl mx-auto">
       <div className="mb-8">
-        <h1 className="text-3xl font-bold mb-2">{t('executor.dashboard.title')}</h1>
+        <h1 className="text-3xl font-bold mb-2">{t('family.dashboard.title')}</h1>
         <p className="text-muted-foreground">
-          {t('executor.dashboard.subtitle')}
+          {t('family.dashboard.subtitle')}
         </p>
       </div>
 
@@ -306,19 +306,19 @@ const ExecutorDashboard: React.FC = () => {
         <Card className="flex-1">
           <CardContent className="p-4">
             <div className="text-2xl font-bold">{stats.total}</div>
-            <div className="text-sm text-muted-foreground">{t('executor.stats.totalTasks')}</div>
+            <div className="text-sm text-muted-foreground">{t('family.stats.totalTasks')}</div>
           </CardContent>
         </Card>
         <Card className="flex-1">
           <CardContent className="p-4">
             <div className="text-2xl font-bold text-green-600">{stats.completed}</div>
-            <div className="text-sm text-muted-foreground">{t('executor.stats.completed')}</div>
+            <div className="text-sm text-muted-foreground">{t('family.stats.completed')}</div>
           </CardContent>
         </Card>
         <Card className="flex-1">
           <CardContent className="p-4">
             <div className="text-2xl font-bold text-orange-600">{stats.pending}</div>
-            <div className="text-sm text-muted-foreground">{t('executor.stats.remaining')}</div>
+            <div className="text-sm text-muted-foreground">{t('family.stats.remaining')}</div>
           </CardContent>
         </Card>
       </div>
@@ -334,10 +334,10 @@ const ExecutorDashboard: React.FC = () => {
               <div>
                 <CardTitle className="flex items-center gap-2">
                   <AlertCircle className="h-5 w-5 text-red-500" />
-                  {t('executor.sections.immediate.title')}
+                  {t('family.sections.immediate.title')}
                 </CardTitle>
                 <CardDescription>
-                  {t('executor.sections.immediate.description')}
+                  {t('family.sections.immediate.description')}
                 </CardDescription>
               </div>
               {expandedSections.has('immediate') ?
@@ -349,7 +349,7 @@ const ExecutorDashboard: React.FC = () => {
           </CardHeader>
           {expandedSections.has('immediate') &&
           <CardContent>
-              {renderTaskList(tasks.immediate, t('executor.sections.immediate.empty'))}
+              {renderTaskList(tasks.immediate, t('family.sections.immediate.empty'))}
             </CardContent>
           }
         </Card>
@@ -364,10 +364,10 @@ const ExecutorDashboard: React.FC = () => {
               <div>
                 <CardTitle className="flex items-center gap-2">
                   <Clock className="h-5 w-5 text-orange-500" />
-                  {t('executor.sections.firstWeek.title')}
+                  {t('family.sections.firstWeek.title')}
                 </CardTitle>
                 <CardDescription>
-                  {t('executor.sections.firstWeek.description')}
+                  {t('family.sections.firstWeek.description')}
                 </CardDescription>
               </div>
               {expandedSections.has('first_week') ?
@@ -379,7 +379,7 @@ const ExecutorDashboard: React.FC = () => {
           </CardHeader>
           {expandedSections.has('first_week') &&
           <CardContent>
-              {renderTaskList(tasks.first_week, t('executor.sections.firstWeek.empty'))}
+              {renderTaskList(tasks.first_week, t('family.sections.firstWeek.empty'))}
             </CardContent>
           }
         </Card>
@@ -392,9 +392,9 @@ const ExecutorDashboard: React.FC = () => {
 
             <div className="flex items-center justify-between">
               <div>
-                <CardTitle>{t('executor.sections.ongoing.title')}</CardTitle>
+                <CardTitle>{t('family.sections.ongoing.title')}</CardTitle>
                 <CardDescription>
-                  {t('executor.sections.ongoing.description')}
+                  {t('family.sections.ongoing.description')}
                 </CardDescription>
               </div>
               {expandedSections.has('ongoing') ?
@@ -406,7 +406,7 @@ const ExecutorDashboard: React.FC = () => {
           </CardHeader>
           {expandedSections.has('ongoing') &&
           <CardContent>
-              {renderTaskList(tasks.ongoing, t('executor.sections.ongoing.empty'))}
+              {renderTaskList(tasks.ongoing, t('family.sections.ongoing.empty'))}
             </CardContent>
           }
         </Card>
@@ -421,7 +421,7 @@ const ExecutorDashboard: React.FC = () => {
 
       <div className="mt-8 p-4 bg-muted rounded-lg">
         <p className="text-sm text-muted-foreground text-center">
-          {t('executor.dashboard.reminder')}
+          {t('family.dashboard.reminder')}
         </p>
       </div>
 

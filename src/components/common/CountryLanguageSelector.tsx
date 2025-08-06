@@ -15,7 +15,7 @@ import {
 import { ChevronDown, Globe, Loader2 } from 'lucide-react';
 
 export const CountryLanguageSelector: React.FC = () => {
-  const { i18n, t } = useTranslation();
+  const { i18n, t } = useTranslation('ui');
   const { selectedCountryCode, setSelectedCountryCode, isDetecting } = useCountry();
 
   const currentCountry = getCurrentCountryConfig();
@@ -135,13 +135,13 @@ export const CountryLanguageSelector: React.FC = () => {
       <DropdownMenuContent align="start" className="w-80 max-h-96 overflow-y-auto">
         <DropdownMenuLabel className="flex items-center space-x-2">
           <Globe className="h-4 w-4" />
-          <span>{t("common.countryLanguageSelector.country_language_1")}</span>
+          <span>{t('ui.countryLanguageSelector.country_language_1')}</span>
         </DropdownMenuLabel>
         <DropdownMenuSeparator />
         
         {/* Country Selection */}
         <div className="px-2 py-1">
-          <div className="text-xs font-medium text-muted-foreground mb-2">{t("common.countryLanguageSelector.select_country_2")}</div>
+          <div className="text-xs font-medium text-muted-foreground mb-2">{t('ui.countryLanguageSelector.select_country_2')}</div>
           <div className="grid grid-cols-2 gap-1 max-h-48 overflow-y-auto">
             {Object.values(COUNTRY_CONFIGS).
             sort((a, b) => a.name.localeCompare(b.name)).
@@ -166,7 +166,7 @@ export const CountryLanguageSelector: React.FC = () => {
         
         {/* Language Selection */}
         <div className="px-2 py-1">
-          <div className="text-xs font-medium text-muted-foreground mb-2">{t("common.countryLanguageSelector.select_language_3")}</div>
+          <div className="text-xs font-medium text-muted-foreground mb-2">{t('ui.countryLanguageSelector.select_language_3')}</div>
           <div className="grid grid-cols-1 gap-1 max-h-48 overflow-y-auto">
             {selectedCountryConfig.supportedLanguages.map((lang) =>
             <DropdownMenuItem

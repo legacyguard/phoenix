@@ -30,7 +30,7 @@ interface EmotionalJourney {
 }
 
 const EmotionalContextSystem: React.FC = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('ui');
 
   const getEmotionalResponse = (state: EmotionalState): ContextualResponse => {
     if (state.confidence === 'low') {

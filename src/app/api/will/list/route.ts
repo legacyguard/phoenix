@@ -12,7 +12,7 @@ export async function GET(request: NextRequest) {
     
     const { data: { user }, error: authError } = await supabase.auth.getUser();
     if (authError || !user) {
-      return NextResponse.json({ error: t('will.errors.unauthorized') }, { status: 401 });
+      return NextResponse.json({ error: t('wills.errors.unauthorized') }, { status: 401 });
     }
 
     const { data: wills, error } = await supabase
@@ -39,12 +39,12 @@ export async function GET(request: NextRequest) {
 
     if (error) {
       console.error('Error fetching wills:', error);
-      return NextResponse.json({ error: t('will.errors.failed_to_fetch') }, { status: 500 });
+      return NextResponse.json({ error: t('wills.errors.failed_to_fetch') }, { status: 500 });
     }
 
     return NextResponse.json(wills || []);
   } catch (error) {
     console.error('Error in will list:', error);
-    return NextResponse.json({ error: t('will.errors.failed_to_fetch') }, { status: 500 });
+    return NextResponse.json({ error: t('wills.errors.failed_to_fetch') }, { status: 500 });
   }
 }

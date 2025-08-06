@@ -6,7 +6,7 @@ import { Card } from '@/components/ui/card';
 import { AlertCircle } from 'lucide-react';
 
 export default function TestError() {
-  const { t } = useTranslation();
+  const { t } = useTranslation('errors');
   return (
     <div className="container mx-auto px-4 py-8">
       <Card className="mb-4 border-yellow-500 bg-yellow-50 dark:bg-yellow-900/20">

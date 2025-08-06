@@ -37,7 +37,7 @@ export const DocumentEditModal: React.FC<DocumentEditModalProps> = ({
   isOpen,
   onClose
 }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('assets');
   const queryClient = useQueryClient();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -168,12 +168,12 @@ export const DocumentEditModal: React.FC<DocumentEditModalProps> = ({
 
         if (updateError) throw updateError;
 
-        toast.success(t('documents.updateSuccess'));
+        toast.success(t('assets.updateSuccess'));
         queryClient.invalidateQueries({ queryKey: ['documents'] });
         onClose();
       } catch (error) {
         console.error('Error updating document:', error);
-        toast.error(t('documents.updateError'));
+        toast.error(t('assets.updateError'));
       } finally {
         setIsLoading(false);
       }
@@ -183,7 +183,7 @@ export const DocumentEditModal: React.FC<DocumentEditModalProps> = ({
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!title || !category) {
-      toast.error(t('documents.validation.requiredFields'));
+      toast.error(t('assets.validation.requiredFields'));
       return;
     }
     updateDocumentMutation.mutate();
@@ -202,9 +202,9 @@ export const DocumentEditModal: React.FC<DocumentEditModalProps> = ({
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
         <DialogHeader>
-          <DialogTitle>{t('documents.edit.title')}</DialogTitle>
+          <DialogTitle>{t('assets.edit.title')}</DialogTitle>
           <DialogDescription>
-            {t('documents.edit.description')}
+            {t('assets.edit.description')}
           </DialogDescription>
         </DialogHeader>
 
@@ -212,37 +212,37 @@ export const DocumentEditModal: React.FC<DocumentEditModalProps> = ({
           {/* Basic Information */}
           <div className="space-y-4">
             <div>
-              <Label htmlFor="title">{t('documents.fields.title')}</Label>
+              <Label htmlFor="title">{t('assets.fields.title')}</Label>
               <Input
                 id="title"
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
-                placeholder={t('documents.placeholders.title')}
+                placeholder={t('assets.placeholders.title')}
                 required />
 
             </div>
 
             <div>
-              <Label htmlFor="description">{t('documents.fields.description')}</Label>
+              <Label htmlFor="description">{t('assets.fields.description')}</Label>
               <Textarea
                 id="description"
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
-                placeholder={t('documents.placeholders.description')}
+                placeholder={t('assets.placeholders.description')}
                 rows={3} />
 
             </div>
 
             <div>
-              <Label htmlFor="category">{t('documents.fields.category')}</Label>
+              <Label htmlFor="category">{t('assets.fields.category')}</Label>
               <Select value={category} onValueChange={setCategory}>
                 <SelectTrigger>
-                  <SelectValue placeholder={t('documents.placeholders.category')} />
+                  <SelectValue placeholder={t('assets.placeholders.category')} />
                 </SelectTrigger>
                 <SelectContent>
                   {documentCategories.map((cat) =>
                   <SelectItem key={cat.value} value={cat.value}>
-                      {t(`documents.categories.${cat.value}`)}
+                      {t('assets.categories.${cat.value}')}
                     </SelectItem>
                   )}
                 </SelectContent>
@@ -250,17 +250,17 @@ export const DocumentEditModal: React.FC<DocumentEditModalProps> = ({
             </div>
 
             <div>
-              <Label htmlFor="tags">{t('documents.fields.tags')}</Label>
+              <Label htmlFor="tags">{t('assets.fields.tags')}</Label>
               <Input
                 id="tags"
                 value={tags}
                 onChange={(e) => setTags(e.target.value)}
-                placeholder={t('documents.placeholders.tags')} />
+                placeholder={t('assets.placeholders.tags')} />
 
             </div>
 
             <div>
-              <Label htmlFor="file">{t('documents.edit.replaceFile')}</Label>
+              <Label htmlFor="file">{t('assets.edit.replaceFile')}</Label>
               <div className="flex items-center gap-2">
                 <Input
                   id="file"
@@ -281,12 +281,12 @@ export const DocumentEditModal: React.FC<DocumentEditModalProps> = ({
               </div>
               {file &&
               <p className="text-sm text-muted-foreground mt-1">
-                  {t('documents.edit.newFile')}: {file.name}
+                  {t('assets.edit.newFile')}: {file.name}
                 </p>
               }
               {!file &&
               <p className="text-sm text-muted-foreground mt-1">
-                  {t('documents.edit.currentFile')}: {document.file_name}
+                  {t('assets.edit.currentFile')}: {document.file_name}
                 </p>
               }
             </div>
@@ -295,68 +295,68 @@ export const DocumentEditModal: React.FC<DocumentEditModalProps> = ({
           {/* Metadata Fields */}
           {showMetadataFields &&
           <div className="space-y-4 border-t pt-4">
-              <h3 className="font-medium">{t('documents.metadata.title')}</h3>
+              <h3 className="font-medium">{t('assets.metadata.title')}</h3>
               
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <Label htmlFor="contractNumber">{t('documents.metadata.contractNumber')}</Label>
+                  <Label htmlFor="contractNumber">{t('assets.metadata.contractNumber')}</Label>
                   <Input
                   id="contractNumber"
                   value={contractNumber}
                   onChange={(e) => setContractNumber(e.target.value)}
-                  placeholder={t('documents.metadata.contractNumberPlaceholder')} />
+                  placeholder={t('assets.metadata.contractNumberPlaceholder')} />
 
                 </div>
 
                 <div>
-                  <Label htmlFor="importanceLevel">{t('documents.metadata.importanceLevel')}</Label>
+                  <Label htmlFor="importanceLevel">{t('assets.metadata.importanceLevel')}</Label>
                   <Select value={importanceLevel} onValueChange={setImportanceLevel}>
                     <SelectTrigger>
                       <SelectValue />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="low">{t('documents.metadata.importance.low')}</SelectItem>
-                      <SelectItem value="medium">{t('documents.metadata.importance.medium')}</SelectItem>
-                      <SelectItem value="high">{t('documents.metadata.importance.high')}</SelectItem>
-                      <SelectItem value="critical">{t('documents.metadata.importance.critical')}</SelectItem>
+                      <SelectItem value="low">{t('assets.metadata.importance.low')}</SelectItem>
+                      <SelectItem value="medium">{t('assets.metadata.importance.medium')}</SelectItem>
+                      <SelectItem value="high">{t('assets.metadata.importance.high')}</SelectItem>
+                      <SelectItem value="critical">{t('assets.metadata.importance.critical')}</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
 
                 <div>
-                  <Label htmlFor="contactPerson">{t('documents.metadata.contactPerson')}</Label>
+                  <Label htmlFor="contactPerson">{t('assets.metadata.contactPerson')}</Label>
                   <Input
                   id="contactPerson"
                   value={contactPerson}
                   onChange={(e) => setContactPerson(e.target.value)}
-                  placeholder={t('documents.metadata.contactPersonPlaceholder')} />
+                  placeholder={t('assets.metadata.contactPersonPlaceholder')} />
 
                 </div>
 
                 <div>
-                  <Label htmlFor="contactPhone">{t('documents.metadata.contactPhone')}</Label>
+                  <Label htmlFor="contactPhone">{t('assets.metadata.contactPhone')}</Label>
                   <Input
                   id="contactPhone"
                   type="tel"
                   value={contactPhone}
                   onChange={(e) => setContactPhone(e.target.value)}
-                  placeholder={t('documents.metadata.contactPhonePlaceholder')} />
+                  placeholder={t('assets.metadata.contactPhonePlaceholder')} />
 
                 </div>
 
                 <div>
-                  <Label htmlFor="contactEmail">{t('documents.metadata.contactEmail')}</Label>
+                  <Label htmlFor="contactEmail">{t('assets.metadata.contactEmail')}</Label>
                   <Input
                   id="contactEmail"
                   type="email"
                   value={contactEmail}
                   onChange={(e) => setContactEmail(e.target.value)}
-                  placeholder={t('documents.metadata.contactEmailPlaceholder')} />
+                  placeholder={t('assets.metadata.contactEmailPlaceholder')} />
 
                 </div>
 
                 <div>
-                  <Label htmlFor="renewalDate">{t('documents.metadata.renewalDate')}</Label>
+                  <Label htmlFor="renewalDate">{t('assets.metadata.renewalDate')}</Label>
                   <Input
                   id="renewalDate"
                   type="date"
@@ -366,22 +366,22 @@ export const DocumentEditModal: React.FC<DocumentEditModalProps> = ({
                 </div>
 
                 <div className="col-span-2">
-                  <Label htmlFor="renewalAction">{t('documents.metadata.renewalAction')}</Label>
+                  <Label htmlFor="renewalAction">{t('assets.metadata.renewalAction')}</Label>
                   <Input
                   id="renewalAction"
                   value={renewalAction}
                   onChange={(e) => setRenewalAction(e.target.value)}
-                  placeholder={t('documents.metadata.renewalActionPlaceholder')} />
+                  placeholder={t('assets.metadata.renewalActionPlaceholder')} />
 
                 </div>
 
                 <div className="col-span-2">
-                  <Label htmlFor="relatedAssets">{t('documents.metadata.relatedAssets')}</Label>
+                  <Label htmlFor="relatedAssets">{t('assets.metadata.relatedAssets')}</Label>
                   <Input
                   id="relatedAssets"
                   value={relatedAssets}
                   onChange={(e) => setRelatedAssets(e.target.value)}
-                  placeholder={t('documents.metadata.relatedAssetsPlaceholder')} />
+                  placeholder={t('assets.metadata.relatedAssetsPlaceholder')} />
 
                 </div>
               </div>
@@ -391,33 +391,33 @@ export const DocumentEditModal: React.FC<DocumentEditModalProps> = ({
           {/* Subscription Fields */}
           {showSubscriptionFields &&
           <div className="space-y-4 border-t pt-4">
-              <h3 className="font-medium">{t('documents.subscription.title')}</h3>
+              <h3 className="font-medium">{t('assets.subscription.title')}</h3>
               
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <Label htmlFor="subscriptionType">{t('documents.subscription.type')}</Label>
+                  <Label htmlFor="subscriptionType">{t('assets.subscription.type')}</Label>
                   <Select value={subscriptionType} onValueChange={setSubscriptionType}>
                     <SelectTrigger>
-                      <SelectValue placeholder={t('documents.subscription.typePlaceholder')} />
+                      <SelectValue placeholder={t('assets.subscription.typePlaceholder')} />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="monthly">{t('documents.subscription.types.monthly')}</SelectItem>
-                      <SelectItem value="yearly">{t('documents.subscription.types.yearly')}</SelectItem>
-                      <SelectItem value="lifetime">{t('documents.subscription.types.lifetime')}</SelectItem>
-                      <SelectItem value="payPerUse">{t('documents.subscription.types.payPerUse')}</SelectItem>
+                      <SelectItem value="monthly">{t('assets.subscription.types.monthly')}</SelectItem>
+                      <SelectItem value="yearly">{t('assets.subscription.types.yearly')}</SelectItem>
+                      <SelectItem value="lifetime">{t('assets.subscription.types.lifetime')}</SelectItem>
+                      <SelectItem value="payPerUse">{t('assets.subscription.types.payPerUse')}</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
 
                 <div>
-                  <Label htmlFor="renewalCost">{t('documents.subscription.renewalCost')}</Label>
+                  <Label htmlFor="renewalCost">{t('assets.subscription.renewalCost')}</Label>
                   <Input
                   id="renewalCost"
                   type="number"
-                  step={t("documents.documentEditModal.0_01_1")}
+                  step={t('assets.documentEditModal.0_01_1')}
                   value={renewalCost}
                   onChange={(e) => setRenewalCost(e.target.value)}
-                  placeholder={t('documents.subscription.renewalCostPlaceholder')} />
+                  placeholder={t('assets.subscription.renewalCostPlaceholder')} />
 
                 </div>
 
@@ -427,52 +427,52 @@ export const DocumentEditModal: React.FC<DocumentEditModalProps> = ({
                   checked={autoRenewal}
                   onCheckedChange={setAutoRenewal} />
 
-                  <Label htmlFor="autoRenewal">{t('documents.subscription.autoRenewal')}</Label>
+                  <Label htmlFor="autoRenewal">{t('assets.subscription.autoRenewal')}</Label>
                 </div>
 
                 <div>
-                  <Label htmlFor="providerPhone">{t('documents.subscription.providerPhone')}</Label>
+                  <Label htmlFor="providerPhone">{t('assets.subscription.providerPhone')}</Label>
                   <Input
                   id="providerPhone"
                   type="tel"
                   value={providerPhone}
                   onChange={(e) => setProviderPhone(e.target.value)}
-                  placeholder={t('documents.subscription.providerPhonePlaceholder')} />
+                  placeholder={t('assets.subscription.providerPhonePlaceholder')} />
 
                 </div>
 
                 <div>
-                  <Label htmlFor="providerEmail">{t('documents.subscription.providerEmail')}</Label>
+                  <Label htmlFor="providerEmail">{t('assets.subscription.providerEmail')}</Label>
                   <Input
                   id="providerEmail"
                   type="email"
                   value={providerEmail}
                   onChange={(e) => setProviderEmail(e.target.value)}
-                  placeholder={t('documents.subscription.providerEmailPlaceholder')} />
+                  placeholder={t('assets.subscription.providerEmailPlaceholder')} />
 
                 </div>
 
                 <div>
-                  <Label htmlFor="providerWebsite">{t('documents.subscription.providerWebsite')}</Label>
+                  <Label htmlFor="providerWebsite">{t('assets.subscription.providerWebsite')}</Label>
                   <Input
                   id="providerWebsite"
                   type="url"
                   value={providerWebsite}
                   onChange={(e) => setProviderWebsite(e.target.value)}
-                  placeholder={t('documents.subscription.providerWebsitePlaceholder')} />
+                  placeholder={t('assets.subscription.providerWebsitePlaceholder')} />
 
                 </div>
 
                 <div>
                   <Label htmlFor="cancellationNoticePeriod">
-                    {t('documents.subscription.cancellationNoticePeriod')}
+                    {t('assets.subscription.cancellationNoticePeriod')}
                   </Label>
                   <Input
                   id="cancellationNoticePeriod"
                   type="number"
                   value={cancellationNoticePeriod}
                   onChange={(e) => setCancellationNoticePeriod(e.target.value)}
-                  placeholder={t('documents.subscription.cancellationNoticePlaceholder')} />
+                  placeholder={t('assets.subscription.cancellationNoticePlaceholder')} />
 
                 </div>
               </div>
@@ -482,18 +482,18 @@ export const DocumentEditModal: React.FC<DocumentEditModalProps> = ({
           {/* Actions */}
           <div className="flex justify-end gap-2 pt-4 border-t">
             <Button type="button" variant="outline" onClick={onClose}>
-              {t('common.cancel')}
+              {t('ui.cancel')}
             </Button>
             <Button type="submit" disabled={isLoading}>
               {isLoading ?
               <>
                   <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                  {t('common.saving')}
+                  {t('ui.saving')}
                 </> :
 
               <>
                   <Upload className="mr-2 h-4 w-4" />
-                  {t('documents.edit.save')}
+                  {t('assets.edit.save')}
                 </>
               }
             </Button>

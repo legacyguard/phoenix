@@ -20,7 +20,7 @@ export function ReminderDashboard({
   overdueCount,
   className
 }: ReminderDashboardProps) {
-  const { t } = useTranslation();
+  const { t } = useTranslation('dashboard');
   const upcomingReminders = reminders.slice(0, 3);
 
   return (
@@ -29,23 +29,23 @@ export function ReminderDashboard({
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <Bell className="h-5 w-5 text-primary" />
-            <CardTitle>{t('reminders.title')}</CardTitle>
+            <CardTitle>{t('dashboard.title')}</CardTitle>
           </div>
           {overdueCount > 0 &&
           <Badge variant="destructive" className="animate-pulse">
-              {overdueCount} {t('reminders.overdue')}
+              {overdueCount} {t('dashboard.overdue')}
             </Badge>
           }
         </div>
         <CardDescription>
-          {t('reminders.dashboardDescription')}
+          {t('dashboard.dashboardDescription')}
         </CardDescription>
       </CardHeader>
       <CardContent>
         {upcomingReminders.length === 0 ?
         <div className="text-center py-6 text-muted-foreground">
             <Clock className="h-12 w-12 mx-auto mb-3 text-muted-foreground/50" />
-            <p className="text-sm">{t('reminders.noUpcoming')}</p>
+            <p className="text-sm">{t('dashboard.noUpcoming')}</p>
           </div> :
 
         <div className="space-y-3">
@@ -77,8 +77,8 @@ export function ReminderDashboard({
             className="w-full justify-between group hover:bg-transparent"
             asChild>
 
-            <Link to={t("reminders.reminderDashboard.reminders_1")}>
-              <span>{t('reminders.viewAll')}</span>
+            <Link to={t('dashboard.reminderDashboard.reminders_1')}>
+              <span>{t('dashboard.viewAll')}</span>
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </Link>
           </Button>

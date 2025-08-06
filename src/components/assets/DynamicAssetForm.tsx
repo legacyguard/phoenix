@@ -18,6 +18,7 @@ interface DynamicAssetFormProps {
 const DynamicAssetForm: React.FC<DynamicAssetFormProps> = ({ mainCategory, subType, onClose, isOpen }) => {
   // Translation hook for internationalization
   const { t } = useTranslation('assets');
+  const { t: tMicro } = useTranslation('micro-copy');
   
   // Form state management
   const [formData, setFormData] = useState<Record<string, unknown>>({});
@@ -226,7 +227,7 @@ const DynamicAssetForm: React.FC<DynamicAssetFormProps> = ({ mainCategory, subTy
               </div>
               <div>
                 <Label htmlFor="license_plate">{t('dynamicAssetForm.licensePlate')}</Label>
-                <Input id="license_plate" placeholder="ABC123" />
+                <Input id="license_plate" placeholder={tMicro('placeholders.specific.assetName')} />
               </div>
               <div>
                 <Label htmlFor="loan_info">{t('dynamicAssetForm.loanInformation')}</Label>

@@ -45,7 +45,7 @@ interface OnboardingWizardProps {
 }
 
 export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({ isOpen, onClose, onComplete, useLifeQuestions = true }) => {
-  const { t } = useTranslation('onboarding');
+  const { t } = useTranslation('help');
   const { t: tCommon } = useTranslation('ui');
   const { trackAction, trackFormInteraction, startTimer, endTimer } = useAnalytics({ componentName: 'OnboardingWizard', userJourneyStage: 'onboarding' });
   const [currentStep, setCurrentStep] = useState(0); // 0 for BasicLifeQuestions
@@ -351,7 +351,7 @@ export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({ isOpen, onCl
         return (
           <div className="space-y-8">
             <div className="text-center space-y-6">
-              <h3 className="text-2xl font-bold">{t('questions.q1.title')}</h3>
+              <h3 className="text-2xl font-bold">{t('help.q1.title')}</h3>
               <div className="flex flex-col gap-4 max-w-md mx-auto">
                 <Button 
                   variant={answers.documentAccess === 'yes' ? "default" : "outline"}
@@ -362,7 +362,7 @@ export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({ isOpen, onCl
                   size="lg"
                   className="w-full text-left justify-start"
                 >
-                  {t('questions.q1.option1')}
+                  {t('help.q1.option1')}
                 </Button>
                 <Button 
                   variant={answers.documentAccess === 'no' ? "default" : "outline"}
@@ -373,7 +373,7 @@ export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({ isOpen, onCl
                   size="lg"
                   className="w-full text-left justify-start"
                 >
-                  {t('questions.q1.option2')}
+                  {t('help.q1.option2')}
                 </Button>
                 <Button 
                   variant={answers.documentAccess === 'partially' ? "default" : "outline"}
@@ -384,7 +384,7 @@ export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({ isOpen, onCl
                   size="lg"
                   className="w-full text-left justify-start"
                 >
-                  {t('questions.q1.option3')}
+                  {t('help.q1.option3')}
                 </Button>
               </div>
             </div>
@@ -395,7 +395,7 @@ export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({ isOpen, onCl
         return (
           <div className="space-y-8">
             <div className="text-center space-y-6">
-              <h3 className="text-2xl font-bold">{t('questions.q2.title')}</h3>
+              <h3 className="text-2xl font-bold">{t('help.q2.title')}</h3>
               <div className="flex flex-col gap-4 max-w-md mx-auto">
                 <Button 
                   variant={answers.caretaker === 'designated' ? "default" : "outline"}
@@ -406,7 +406,7 @@ export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({ isOpen, onCl
                   size="lg"
                   className="w-full text-left justify-start"
                 >
-                  {t('questions.q2.option1')}
+                  {t('help.q2.option1')}
                 </Button>
                 <Button 
                   variant={answers.caretaker === 'family_figure_out' ? "default" : "outline"}
@@ -417,7 +417,7 @@ export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({ isOpen, onCl
                   size="lg"
                   className="w-full text-left justify-start"
                 >
-                  {t('questions.q2.option2')}
+                  {t('help.q2.option2')}
                 </Button>
                 <Button 
                   variant={answers.caretaker === 'not_thought' ? "default" : "outline"}
@@ -428,7 +428,7 @@ export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({ isOpen, onCl
                   size="lg"
                   className="w-full text-left justify-start"
                 >
-                  {t('questions.q2.option3')}
+                  {t('help.q2.option3')}
                 </Button>
               </div>
             </div>
@@ -439,7 +439,7 @@ export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({ isOpen, onCl
         return (
           <div className="space-y-8">
             <div className="text-center space-y-6">
-              <h3 className="text-2xl font-bold">{t('questions.q3.title')}</h3>
+              <h3 className="text-2xl font-bold">{t('help.q3.title')}</h3>
               <div className="flex flex-col gap-4 max-w-md mx-auto">
                 <Button 
                   variant={answers.familyClarity === 'yes_clear' ? "default" : "outline"}
@@ -450,7 +450,7 @@ export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({ isOpen, onCl
                   size="lg"
                   className="w-full text-left justify-start"
                 >
-                  {t('questions.q3.option1')}
+                  {t('help.q3.option1')}
                 </Button>
                 <Button 
                   variant={answers.familyClarity === 'somewhat' ? "default" : "outline"}
@@ -461,7 +461,7 @@ export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({ isOpen, onCl
                   size="lg"
                   className="w-full text-left justify-start"
                 >
-                  {t('questions.q3.option2')}
+                  {t('help.q3.option2')}
                 </Button>
                 <Button 
                   variant={answers.familyClarity === 'never_discussed' ? "default" : "outline"}
@@ -472,7 +472,7 @@ export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({ isOpen, onCl
                   size="lg"
                   className="w-full text-left justify-start"
                 >
-                  {t('questions.q3.option3')}
+                  {t('help.q3.option3')}
                 </Button>
               </div>
             </div>
@@ -483,7 +483,7 @@ export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({ isOpen, onCl
         return (
           <div className="space-y-8">
             <div className="text-center space-y-6">
-              <h3 className="text-2xl font-bold">{t('questions.q4.title')}</h3>
+              <h3 className="text-2xl font-bold">{t('help.q4.title')}</h3>
               <div className="flex flex-col gap-4 max-w-md mx-auto">
                 <Button 
                   variant={answers.biggestWorry === 'financial' ? "default" : "outline"}
@@ -494,7 +494,7 @@ export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({ isOpen, onCl
                   size="lg"
                   className="w-full text-left justify-start"
                 >
-                  {t('questions.q4.option1')}
+                  {t('help.q4.option1')}
                 </Button>
                 <Button 
                   variant={answers.biggestWorry === 'legal' ? "default" : "outline"}
@@ -505,7 +505,7 @@ export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({ isOpen, onCl
                   size="lg"
                   className="w-full text-left justify-start"
                 >
-                  {t('questions.q4.option2')}
+                  {t('help.q4.option2')}
                 </Button>
                 <Button 
                   variant={answers.biggestWorry === 'memories' ? "default" : "outline"}
@@ -516,7 +516,7 @@ export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({ isOpen, onCl
                   size="lg"
                   className="w-full text-left justify-start"
                 >
-                  {t('questions.q4.option3')}
+                  {t('help.q4.option3')}
                 </Button>
                 <Button 
                   variant={answers.biggestWorry === 'conflicts' ? "default" : "outline"}
@@ -527,7 +527,7 @@ export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({ isOpen, onCl
                   size="lg"
                   className="w-full text-left justify-start"
                 >
-                  {t('questions.q4.option4')}
+                  {t('help.q4.option4')}
                 </Button>
               </div>
             </div>

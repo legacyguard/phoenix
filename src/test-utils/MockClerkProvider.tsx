@@ -21,8 +21,7 @@ interface MockClerkProviderProps {
 // Mock ClerkProvider
 export const ClerkProvider: React.FC<MockClerkProviderProps & { 
   publishableKey?: string;
-  afterSignInUrl?: string;
-  afterSignUpUrl?: string;
+  fallbackRedirectUrl?: string;
   signInUrl?: string;
   signUpUrl?: string;
   afterSignOutUrl?: string;

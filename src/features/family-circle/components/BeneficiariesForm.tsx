@@ -55,7 +55,7 @@ export const BeneficiariesForm: React.FC<BeneficiariesFormProps> = ({
   initialDataSingle,
   isEditingSingle = false,
 }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('wills');
 
   // Always initialize both forms to avoid conditional hook calls
   const singleForm = useForm<Beneficiary>({
@@ -97,7 +97,7 @@ export const BeneficiariesForm: React.FC<BeneficiariesFormProps> = ({
           <Button type="submit" disabled={isSubmitting} className="flex-1">
             {isEditingSingle ? t('dashboard.updateBeneficiary') : t('dashboard.saveBeneficiary')}
           </Button>
-          <Button type="button" variant="outline" onClick={onCancelSingle} disabled={isSubmitting}>{t('common.cancel')}</Button>
+          <Button type="button" variant="outline" onClick={onCancelSingle} disabled={isSubmitting}>{t('ui.cancel')}</Button>
         </div>
       </form>
     );
@@ -120,15 +120,15 @@ export const BeneficiariesForm: React.FC<BeneficiariesFormProps> = ({
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <Users className="h-5 w-5" />
-              {t('will.beneficiaries.title')}
+              {t('wills.beneficiaries.title')}
             </CardTitle>
-            <CardDescription>{t('will.beneficiaries.description')}</CardDescription>
+            <CardDescription>{t('wills.beneficiaries.description')}</CardDescription>
           </CardHeader>
           <CardContent>
             {fields.length === 0 ? (
               <div className="text-center py-8 text-muted-foreground">
                 <Users className="h-12 w-12 mx-auto mb-3 text-muted-foreground/50" />
-                <p>{t('will.beneficiaries.noBeneficiaries')}</p>
+                <p>{t('wills.beneficiaries.noBeneficiaries')}</p>
               </div>
             ) : (
               <div className="space-y-6">
@@ -142,7 +142,7 @@ export const BeneficiariesForm: React.FC<BeneficiariesFormProps> = ({
                         <div className="grid grid-cols-2 gap-4">
                           <div className="space-y-2">
                             <Label htmlFor={`beneficiaries.${index}.name`}>
-                              {t('will.beneficiaries.name')}
+                              {t('wills.beneficiaries.name')}
                             </Label>
                             <Input
                               id={`beneficiaries.${index}.name`}
@@ -159,7 +159,7 @@ export const BeneficiariesForm: React.FC<BeneficiariesFormProps> = ({
                           </div>
                           <div className="space-y-2">
                             <Label htmlFor={`beneficiaries.${index}.allocation`}>
-                              {t('will.beneficiaries.allocation')}
+                              {t('wills.beneficiaries.allocation')}
                             </Label>
                             <Input
                               id={`beneficiaries.${index}.allocation`}
@@ -178,7 +178,7 @@ export const BeneficiariesForm: React.FC<BeneficiariesFormProps> = ({
                             )}
                           </div>
                         </div>
-                        <Button type="button" variant="destructive" onClick={() => remove(index)}>{t('common.remove')}</Button>
+                        <Button type="button" variant="destructive" onClick={() => remove(index)}>{t('ui.remove')}</Button>
                       </div>
                     </CardContent>
                   </Card>
@@ -186,7 +186,7 @@ export const BeneficiariesForm: React.FC<BeneficiariesFormProps> = ({
               </div>
             )}
             <Button type="button" onClick={() => append({ id: Date.now().toString(), name: '', allocation: 0 })} className="mt-4">
-              {t('will.beneficiaries.addBeneficiary')}
+              {t('wills.beneficiaries.addBeneficiary')}
             </Button>
           </CardContent>
         </Card>

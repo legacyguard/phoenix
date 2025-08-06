@@ -34,7 +34,7 @@ export function ReminderCard({
   onDismiss,
   className 
 }: ReminderCardProps) {
-  const { t } = useTranslation();
+  const { t } = useTranslation('dashboard');
   
   const getStatusColor = () => {
     if (isPast(reminder.due_date)) {
@@ -78,7 +78,7 @@ export function ReminderCard({
             onClick={() => onDismiss(reminder.id)}
           >
             <X className="h-4 w-4" />
-            <span className="sr-only">{t('reminders.dismiss')}</span>
+            <span className="sr-only">{t('dashboard.dismiss')}</span>
           </Button>
         </div>
       </CardHeader>
@@ -106,7 +106,7 @@ export function ReminderCard({
               onClick={() => onSnooze(reminder.id, 'week')}
             >
               <SnoozeIcon className="h-4 w-4 mr-1" />
-              {t('reminders.snooze')}
+              {t('dashboard.snooze')}
             </Button>
             <Button
               size="sm"
@@ -114,7 +114,7 @@ export function ReminderCard({
               onClick={() => onComplete(reminder.id)}
             >
               <CheckCircle className="h-4 w-4 mr-1" />
-              {t('reminders.complete')}
+              {t('dashboard.complete')}
             </Button>
           </div>
         </div>

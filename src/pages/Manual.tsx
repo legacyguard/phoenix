@@ -87,7 +87,7 @@ export const Manual: React.FC = () => {
       setContacts(data || []);
         } catch (error: Record<string, unknown>) {
       const timestamp = new Date().toISOString();
-const errorMessage = error?.message || t('manual.errors.unknown');
+const errorMessage = error?.message || t('help.errors.unknown');
       const errorCode = error?.code || 'UNKNOWN_ERROR';
       
       // Detailné logovanie pre debugging
@@ -101,17 +101,17 @@ const errorMessage = error?.message || t('manual.errors.unknown');
       });
       
       // Používateľsky prívetivá správa
-let userMessage = t('manual.errors.loadContacts');
+let userMessage = t('help.errors.loadContacts');
       
       // Špecifické správy podľa typu chyby
       if (error?.code === 'PGRST116') {
-userMessage = t('manual.errors.dataNotFound');
+userMessage = t('help.errors.dataNotFound');
       } else if (error?.message?.includes('network')) {
-userMessage = t('manual.errors.network');
+userMessage = t('help.errors.network');
       } else if (error?.message?.includes('permission')) {
-userMessage = t('manual.errors.noPermission');
+userMessage = t('help.errors.noPermission');
       } else if (error?.message?.includes('duplicate')) {
-userMessage = t('manual.errors.duplicateEntry');
+userMessage = t('help.errors.duplicateEntry');
       }
       
       toast.error(userMessage);
@@ -150,7 +150,7 @@ userMessage = t('manual.errors.duplicateEntry');
 
   const handleSaveContact = async () => {
     if (!formData.name.trim() || !formData.role.trim()) {
-      toast.error(t('manual.contacts.messages.nameAndRoleRequired'));
+      toast.error(t('help.contacts.messages.nameAndRoleRequired'));
       return;
     }
 
@@ -158,7 +158,7 @@ userMessage = t('manual.errors.duplicateEntry');
     try {
       const { data: { user } } = await supabaseWithRetry.auth.getUser();
       if (!user) {
-        toast.error(t('manual.contacts.messages.loginRequired'));
+        toast.error(t('help.contacts.messages.loginRequired'));
         return;
       }
 
@@ -179,14 +179,14 @@ userMessage = t('manual.errors.duplicateEntry');
           .eq('user_id', user.id);
 
         if (error) throw error;
-        toast.success(t('manual.contacts.messages.updated'));
+        toast.success(t('help.contacts.messages.updated'));
       } else {
         const { error } = await supabaseWithRetry
           .from('contacts')
           .insert([contactData]);
 
         if (error) throw error;
-        toast.success(t('manual.contacts.messages.added'));
+        toast.success(t('help.contacts.messages.added'));
       }
 
       setIsContactSheetOpen(false);
@@ -194,7 +194,7 @@ userMessage = t('manual.errors.duplicateEntry');
       loadContacts();
         } catch (error: Record<string, unknown>) {
       const timestamp = new Date().toISOString();
-const errorMessage = error?.message || t('manual.errors.unknown');
+const errorMessage = error?.message || t('help.errors.unknown');
       const errorCode = error?.code || 'UNKNOWN_ERROR';
       
       // Detailné logovanie pre debugging
@@ -208,17 +208,17 @@ const errorMessage = error?.message || t('manual.errors.unknown');
       });
       
       // Používateľsky prívetivá správa
-let userMessage = t('manual.errors.saveContact');
+let userMessage = t('help.errors.saveContact');
       
       // Špecifické správy podľa typu chyby
       if (error?.code === 'PGRST116') {
-userMessage = t('manual.errors.dataNotFound');
+userMessage = t('help.errors.dataNotFound');
       } else if (error?.message?.includes('network')) {
-userMessage = t('manual.errors.network');
+userMessage = t('help.errors.network');
       } else if (error?.message?.includes('permission')) {
-userMessage = t('manual.errors.noPermission');
+userMessage = t('help.errors.noPermission');
       } else if (error?.message?.includes('duplicate')) {
-userMessage = t('manual.errors.duplicateEntry');
+userMessage = t('help.errors.duplicateEntry');
       }
       
       toast.error(userMessage);
@@ -237,10 +237,10 @@ userMessage = t('manual.errors.duplicateEntry');
       if (error) throw error;
 
       setContacts(prev => prev.filter(contact => contact.id !== id));
-      toast.success(t('manual.contacts.messages.deleted'));
+      toast.success(t('help.contacts.messages.deleted'));
         } catch (error: Record<string, unknown>) {
       const timestamp = new Date().toISOString();
-const errorMessage = error?.message || t('manual.errors.unknown');
+const errorMessage = error?.message || t('help.errors.unknown');
       const errorCode = error?.code || 'UNKNOWN_ERROR';
       
       // Detailné logovanie pre debugging
@@ -254,17 +254,17 @@ const errorMessage = error?.message || t('manual.errors.unknown');
       });
       
       // Používateľsky prívetivá správa
-let userMessage = t('manual.errors.deleteContact');
+let userMessage = t('help.errors.deleteContact');
       
       // Špecifické správy podľa typu chyby
       if (error?.code === 'PGRST116') {
-userMessage = t('manual.errors.dataNotFound');
+userMessage = t('help.errors.dataNotFound');
       } else if (error?.message?.includes('network')) {
-userMessage = t('manual.errors.network');
+userMessage = t('help.errors.network');
       } else if (error?.message?.includes('permission')) {
-userMessage = t('manual.errors.noPermission');
+userMessage = t('help.errors.noPermission');
       } else if (error?.message?.includes('duplicate')) {
-userMessage = t('manual.errors.duplicateEntry');
+userMessage = t('help.errors.duplicateEntry');
       }
       
       toast.error(userMessage);
@@ -290,7 +290,7 @@ userMessage = t('manual.errors.duplicateEntry');
       setDocuments(data || []);
         } catch (error: Record<string, unknown>) {
       const timestamp = new Date().toISOString();
-const errorMessage = error?.message || t('manual.errors.unknown');
+const errorMessage = error?.message || t('help.errors.unknown');
       const errorCode = error?.code || 'UNKNOWN_ERROR';
       
       // Detailné logovanie pre debugging
@@ -304,17 +304,17 @@ const errorMessage = error?.message || t('manual.errors.unknown');
       });
       
       // Používateľsky prívetivá správa
-let userMessage = t('manual.errors.loadKeyDocuments');
+let userMessage = t('help.errors.loadKeyDocuments');
       
       // Špecifické správy podľa typu chyby
       if (error?.code === 'PGRST116') {
-userMessage = t('manual.errors.dataNotFound');
+userMessage = t('help.errors.dataNotFound');
       } else if (error?.message?.includes('network')) {
-userMessage = t('manual.errors.network');
+userMessage = t('help.errors.network');
       } else if (error?.message?.includes('permission')) {
-userMessage = t('manual.errors.noPermission');
+userMessage = t('help.errors.noPermission');
       } else if (error?.message?.includes('duplicate')) {
-userMessage = t('manual.errors.duplicateEntry');
+userMessage = t('help.errors.duplicateEntry');
       }
       
       toast.error(userMessage);
@@ -351,7 +351,7 @@ userMessage = t('manual.errors.duplicateEntry');
       setInstructions(data);
         } catch (error: Record<string, unknown>) {
       const timestamp = new Date().toISOString();
-const errorMessage = error?.message || t('manual.errors.unknown');
+const errorMessage = error?.message || t('help.errors.unknown');
       const errorCode = error?.code || 'UNKNOWN_ERROR';
       
       // Detailné logovanie pre debugging
@@ -365,17 +365,17 @@ const errorMessage = error?.message || t('manual.errors.unknown');
       });
       
       // Používateľsky prívetivá správa
-let userMessage = t('manual.errors.loadInstructions');
+let userMessage = t('help.errors.loadInstructions');
       
       // Špecifické správy podľa typu chyby
       if (error?.code === 'PGRST116') {
-userMessage = t('manual.errors.dataNotFound');
+userMessage = t('help.errors.dataNotFound');
       } else if (error?.message?.includes('network')) {
-userMessage = t('manual.errors.network');
+userMessage = t('help.errors.network');
       } else if (error?.message?.includes('permission')) {
-userMessage = t('manual.errors.noPermission');
+userMessage = t('help.errors.noPermission');
       } else if (error?.message?.includes('duplicate')) {
-userMessage = t('manual.errors.duplicateEntry');
+userMessage = t('help.errors.duplicateEntry');
       }
       
       toast.error(userMessage);
@@ -414,7 +414,7 @@ userMessage = t('manual.errors.duplicateEntry');
         }
             } catch (error: Record<string, unknown>) {
         const timestamp = new Date().toISOString();
-const errorMessage = error?.message || t('manual.errors.unknown');
+const errorMessage = error?.message || t('help.errors.unknown');
         const errorCode = error?.code || 'UNKNOWN_ERROR';
         
         // Detailné logovanie pre debugging
@@ -428,17 +428,17 @@ const errorMessage = error?.message || t('manual.errors.unknown');
         });
         
         // Používateľsky prívetivá správa
-let userMessage = t('manual.errors.saveInstructions');
+let userMessage = t('help.errors.saveInstructions');
         
         // Špecifické správy podľa typu chyby
         if (error?.code === 'PGRST116') {
-userMessage = t('manual.errors.dataNotFound');
+userMessage = t('help.errors.dataNotFound');
         } else if (error?.message?.includes('network')) {
-userMessage = t('manual.errors.network');
+userMessage = t('help.errors.network');
         } else if (error?.message?.includes('permission')) {
-userMessage = t('manual.errors.noPermission');
+userMessage = t('help.errors.noPermission');
         } else if (error?.message?.includes('duplicate')) {
-userMessage = t('manual.errors.duplicateEntry');
+userMessage = t('help.errors.duplicateEntry');
         }
         
         toast.error(userMessage);
@@ -456,11 +456,11 @@ userMessage = t('manual.errors.duplicateEntry');
     const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
     
     if (diffDays < 0) {
-      return { text: t('manual.documents.expiration.expired'), variant: 'destructive' as const };
+      return { text: t('help.documents.expiration.expired'), variant: 'destructive' as const };
     } else if (diffDays <= 30) {
-      return { text: t('manual.documents.expiration.expiresSoon'), variant: 'destructive' as const };
+      return { text: t('help.documents.expiration.expiresSoon'), variant: 'destructive' as const };
     } else if (diffDays <= 90) {
-      return { text: t('manual.documents.expiration.expiring'), variant: 'secondary' as const };
+      return { text: t('help.documents.expiration.expiring'), variant: 'secondary' as const };
     }
     return null;
   };
@@ -472,9 +472,9 @@ userMessage = t('manual.errors.duplicateEntry');
       <div className="flex items-center gap-3">
         <BookUser className="h-8 w-8 text-primary" />
         <div>
-          <h1 className="text-3xl font-bold">{t('manual.title')}</h1>
+          <h1 className="text-3xl font-bold">{t('help.title')}</h1>
           <p className="text-muted-foreground">
-            {t('manual.subtitle')}
+            {t('help.subtitle')}
           </p>
         </div>
       </div>
@@ -482,84 +482,84 @@ userMessage = t('manual.errors.duplicateEntry');
       {/* Main Content */}
       <Tabs defaultValue="contacts" className="space-y-6">
         <TabsList className="grid w-full grid-cols-3">
-          <TabsTrigger value="contacts">{t('manual.tabs.contacts')}</TabsTrigger>
-          <TabsTrigger value="documents">{t('manual.tabs.documents')}</TabsTrigger>
-          <TabsTrigger value="instructions">{t('manual.tabs.instructions')}</TabsTrigger>
+          <TabsTrigger value="contacts">{t('help.tabs.contacts')}</TabsTrigger>
+          <TabsTrigger value="documents">{t('help.tabs.documents')}</TabsTrigger>
+          <TabsTrigger value="instructions">{t('help.tabs.instructions')}</TabsTrigger>
         </TabsList>
 
         <TabsContent value="contacts" className="space-y-6">
           {/* Add Contact Button */}
           <div className="flex justify-between items-center">
             <div>
-              <h2 className="text-xl font-semibold">{t('manual.contacts.title')}</h2>
+              <h2 className="text-xl font-semibold">{t('help.contacts.title')}</h2>
               <p className="text-muted-foreground">
-                {t('manual.contacts.description')}
+                {t('help.contacts.description')}
               </p>
             </div>
             <Sheet open={isContactSheetOpen} onOpenChange={setIsContactSheetOpen}>
               <SheetTrigger asChild>
                 <Button onClick={handleAddContact}>
                   <Plus className="mr-2 h-4 w-4" />
-                  {t('manual.contacts.addContact')}
+                  {t('help.contacts.addContact')}
                 </Button>
               </SheetTrigger>
               <SheetContent>
                 <SheetHeader>
                   <SheetTitle>
-                    {editingContact ? t('manual.contacts.form.editTitle') : t('manual.contacts.form.addTitle')}
+                    {editingContact ? t('help.contacts.form.editTitle') : t('help.contacts.form.addTitle')}
                   </SheetTitle>
                   <SheetDescription>
-                    {t('manual.contacts.form.description')}
+                    {t('help.contacts.form.description')}
                   </SheetDescription>
                 </SheetHeader>
 
                 <div className="space-y-4">
                   <div className="space-y-2">
-                    <Label htmlFor="contactName">{t('manual.contacts.form.nameLabel')}</Label>
+                    <Label htmlFor="contactName">{t('help.contacts.form.nameLabel')}</Label>
                     <Input
                       id="contactName"
-                      placeholder={t('manual.contacts.form.namePlaceholder')}
+                      placeholder={t('help.contacts.form.namePlaceholder')}
                       value={formData.name}
                       onChange={(e) => setFormData(prev => ({ ...prev, name: e.target.value }))}
                     />
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="role">{t('manual.contacts.form.roleLabel')}</Label>
+                    <Label htmlFor="role">{t('help.contacts.form.roleLabel')}</Label>
                     <Input
                       id="role"
-                      placeholder={t('manual.contacts.form.rolePlaceholder')}
+                      placeholder={t('help.contacts.form.rolePlaceholder')}
                       value={formData.role}
                       onChange={(e) => setFormData(prev => ({ ...prev, role: e.target.value }))}
                     />
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="phone">{t('manual.contacts.form.phoneLabel')}</Label>
+                    <Label htmlFor="phone">{t('help.contacts.form.phoneLabel')}</Label>
                     <Input
                       id="phone"
-                      placeholder={t('manual.contacts.form.phonePlaceholder')}
+                      placeholder={t('help.contacts.form.phonePlaceholder')}
                       value={formData.phone_number}
                       onChange={(e) => setFormData(prev => ({ ...prev, phone_number: e.target.value }))}
                     />
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="email">{t('manual.contacts.form.emailLabel')}</Label>
+                    <Label htmlFor="email">{t('help.contacts.form.emailLabel')}</Label>
                     <Input
                       id="email"
                       type="email"
-                      placeholder={t('manual.contacts.form.emailPlaceholder')}
+                      placeholder={t('help.contacts.form.emailPlaceholder')}
                       value={formData.email}
                       onChange={(e) => setFormData(prev => ({ ...prev, email: e.target.value }))}
                     />
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="notes">{t('manual.contacts.form.notesLabel')}</Label>
+                    <Label htmlFor="notes">{t('help.contacts.form.notesLabel')}</Label>
                     <Textarea
                       id="notes"
-                      placeholder={t('manual.contacts.form.notesPlaceholder')}
+                      placeholder={t('help.contacts.form.notesPlaceholder')}
                       value={formData.notes}
                       onChange={(e) => setFormData(prev => ({ ...prev, notes: e.target.value }))}
                       rows={3}
@@ -573,7 +573,7 @@ userMessage = t('manual.errors.duplicateEntry');
                       className="flex-1"
                       disabled={isSaving}
                     >
-                      {t('manual.contacts.form.cancel')}
+                      {t('help.contacts.form.cancel')}
                     </Button>
                     <Button
                       onClick={handleSaveContact}
@@ -583,10 +583,10 @@ userMessage = t('manual.errors.duplicateEntry');
                       {isSaving ? (
                         <>
                           <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
-                          {t('manual.contacts.form.saving')}
+                          {t('help.contacts.form.saving')}
                         </>
                       ) : (
-                        editingContact ? t('manual.contacts.form.updateButton') : t('manual.contacts.form.addButton')
+                        editingContact ? t('help.contacts.form.updateButton') : t('help.contacts.form.addButton')
                       )}
                     </Button>
                   </div>
@@ -600,20 +600,20 @@ userMessage = t('manual.errors.duplicateEntry');
             <div className="flex items-center justify-center py-12">
               <div className="text-center">
                 <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary mx-auto mb-4"></div>
-                <p className="text-muted-foreground">{t('manual.contacts.loading')}</p>
+                <p className="text-muted-foreground">{t('help.contacts.loading')}</p>
               </div>
             </div>
           ) : contacts.length === 0 ? (
             <Card>
               <CardContent className="py-12 text-center">
                 <User className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
-                <h3 className="text-lg font-semibold mb-2">{t('manual.contacts.empty.title')}</h3>
+                <h3 className="text-lg font-semibold mb-2">{t('help.contacts.empty.title')}</h3>
                 <p className="text-muted-foreground mb-4">
-                  {t('manual.contacts.empty.description')}
+                  {t('help.contacts.empty.description')}
                 </p>
                 <Button onClick={handleAddContact}>
                   <Plus className="mr-2 h-4 w-4" />
-                  {t('manual.contacts.addFirstContact')}
+                  {t('help.contacts.addFirstContact')}
                 </Button>
               </CardContent>
             </Card>
@@ -663,7 +663,7 @@ userMessage = t('manual.errors.duplicateEntry');
                         className="flex-1"
                       >
                         <Edit className="mr-1 h-3 w-3" />
-                        {t('manual.contacts.card.edit')}
+                        {t('help.contacts.card.edit')}
                       </Button>
                       <Button
                         variant="outline"
@@ -684,9 +684,9 @@ userMessage = t('manual.errors.duplicateEntry');
         <TabsContent value="documents" className="space-y-6">
           <div className="flex justify-between items-center">
             <div>
-              <h2 className="text-xl font-semibold">{t('manual.documents.title')}</h2>
+              <h2 className="text-xl font-semibold">{t('help.documents.title')}</h2>
               <p className="text-muted-foreground">
-                {t('manual.documents.description')}
+                {t('help.documents.description')}
               </p>
             </div>
           </div>
@@ -696,20 +696,20 @@ userMessage = t('manual.errors.duplicateEntry');
             <div className="flex items-center justify-center py-12">
               <div className="text-center">
                 <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary mx-auto mb-4"></div>
-                <p className="text-muted-foreground">{t('manual.documents.loading')}</p>
+                <p className="text-muted-foreground">{t('help.documents.loading')}</p>
               </div>
             </div>
           ) : documents.length === 0 ? (
             <Card>
               <CardContent className="py-12 text-center">
                 <FileText className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
-                <h3 className="text-lg font-semibold mb-2">{t('manual.documents.empty.title')}</h3>
+                <h3 className="text-lg font-semibold mb-2">{t('help.documents.empty.title')}</h3>
                 <p className="text-muted-foreground mb-4">
-                  {t('manual.documents.empty.description')}
+                  {t('help.documents.empty.description')}
                 </p>
                 <Badge variant="outline" className="text-xs">
                   <Star className="mr-1 h-3 w-3" />
-                  {t('manual.documents.empty.tip')}
+                  {t('help.documents.empty.tip')}
                 </Badge>
               </CardContent>
             </Card>
@@ -746,7 +746,7 @@ userMessage = t('manual.errors.duplicateEntry');
                       </Badge>
                     )}
                     <p className="text-xs text-muted-foreground">
-                      {t('manual.documents.card.essentialNote')}
+                      {t('help.documents.card.essentialNote')}
                     </p>
                   </CardContent>
                 </Card>
@@ -758,9 +758,9 @@ userMessage = t('manual.errors.duplicateEntry');
         <TabsContent value="instructions" className="space-y-6">
           <div className="flex justify-between items-center">
             <div>
-              <h2 className="text-xl font-semibold">{t('manual.instructions.title')}</h2>
+              <h2 className="text-xl font-semibold">{t('help.instructions.title')}</h2>
               <p className="text-muted-foreground">
-                {t('manual.instructions.description')}
+                {t('help.instructions.description')}
               </p>
             </div>
           </div>
@@ -769,7 +769,7 @@ userMessage = t('manual.errors.duplicateEntry');
             <div className="flex items-center justify-center py-12">
               <div className="text-center">
                 <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary mx-auto mb-4"></div>
-                <p className="text-muted-foreground">{t('manual.instructions.loading')}</p>
+                <p className="text-muted-foreground">{t('help.instructions.loading')}</p>
               </div>
             </div>
           ) : (
@@ -779,15 +779,15 @@ userMessage = t('manual.errors.duplicateEntry');
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Heart className="h-5 w-5 text-primary" />
-                    {t('manual.instructions.funeral.title')}
+                    {t('help.instructions.funeral.title')}
                   </CardTitle>
                   <CardDescription>
-                    {t('manual.instructions.funeral.description')}
+                    {t('help.instructions.funeral.description')}
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <Textarea
-                    placeholder={t('manual.instructions.funeral.placeholder')}
+                    placeholder={t('help.instructions.funeral.placeholder')}
                     value={instructions?.funeral_wishes || ''}
                     onChange={(e) => {
                       const value = e.target.value;
@@ -805,15 +805,15 @@ userMessage = t('manual.errors.duplicateEntry');
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Trash className="h-5 w-5 text-primary" />
-                    {t('manual.instructions.digitalAccounts.title')}
+                    {t('help.instructions.digitalAccounts.title')}
                   </CardTitle>
                   <CardDescription>
-                    {t('manual.instructions.digitalAccounts.description')}
+                    {t('help.instructions.digitalAccounts.description')}
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <Textarea
-                    placeholder={t('manual.instructions.digitalAccounts.placeholder')}
+                    placeholder={t('help.instructions.digitalAccounts.placeholder')}
                     value={instructions?.digital_accounts_shutdown || ''}
                     onChange={(e) => {
                       const value = e.target.value;
@@ -831,15 +831,15 @@ userMessage = t('manual.errors.duplicateEntry');
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <MessageSquare className="h-5 w-5 text-primary" />
-                    {t('manual.instructions.messages.title')}
+                    {t('help.instructions.messages.title')}
                   </CardTitle>
                   <CardDescription>
-                    {t('manual.instructions.messages.description')}
+                    {t('help.instructions.messages.description')}
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <Textarea
-                    placeholder={t('manual.instructions.messages.placeholder')}
+                    placeholder={t('help.instructions.messages.placeholder')}
                     value={instructions?.messages_to_loved_ones || ''}
                     onChange={(e) => {
                       const value = e.target.value;
@@ -855,7 +855,7 @@ userMessage = t('manual.errors.duplicateEntry');
               <div className="text-center py-4">
                 <Badge variant="outline" className="text-xs">
                   <Star className="mr-1 h-3 w-3" />
-                  {t('manual.instructions.autoSaveNote')}
+                  {t('help.instructions.autoSaveNote')}
                 </Badge>
               </div>
             </div>

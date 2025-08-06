@@ -22,7 +22,7 @@ export function WillSyncNotification({
   onDismiss,
   onViewChanges
 }: WillSyncNotificationProps) {
-  const { t } = useTranslation();
+  const { t } = useTranslation('wills');
 
   const getStatusIcon = () => {
     switch (syncLog.status) {

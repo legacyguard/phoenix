@@ -16,7 +16,7 @@ export async function POST(request: NextRequest) {
     // Get current user
     const { data: { user }, error: authError } = await supabase.auth.getUser();
     if (authError || !user) {
-      return NextResponse.json({ error: t('will.errors.unauthorized') }, { status: 401 });
+      return NextResponse.json({ error: t('wills.errors.unauthorized') }, { status: 401 });
     }
 
     // Generate PDF
@@ -47,7 +47,7 @@ export async function POST(request: NextRequest) {
 
     if (saveError) {
       console.error('Error saving will:', saveError);
-      return NextResponse.json({ error: t('will.errors.failed_to_save') }, { status: 500 });
+      return NextResponse.json({ error: t('wills.errors.failed_to_save') }, { status: 500 });
     }
 
     // Create backup
@@ -70,7 +70,7 @@ export async function POST(request: NextRequest) {
   } catch (error) {
     console.error('Will generation error:', error);
     return NextResponse.json(
-      { error: t('will.errors.failed_to_generate') },
+      { error: t('wills.errors.failed_to_generate') },
       { status: 500 }
     );
   }

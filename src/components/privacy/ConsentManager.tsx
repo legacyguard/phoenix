@@ -121,37 +121,37 @@ export const ConsentManager: React.FC<ConsentManagerProps> = ({ onConsentUpdate 
   const CookieDetails = () => (
     <Tabs defaultValue="necessary" className="w-full">
       <TabsList className="grid w-full grid-cols-4">
-        <TabsTrigger value="necessary">{t('consent.cookies.necessary.title')}</TabsTrigger>
-        <TabsTrigger value="analytics">{t('consent.cookies.analytics.title')}</TabsTrigger>
-        <TabsTrigger value="marketing">{t('consent.cookies.marketing.title')}</TabsTrigger>
-        <TabsTrigger value="preferences">{t('consent.cookies.preferences.title')}</TabsTrigger>
+        <TabsTrigger value="necessary">{t('ui.cookies.necessary.title')}</TabsTrigger>
+        <TabsTrigger value="analytics">{t('ui.cookies.analytics.title')}</TabsTrigger>
+        <TabsTrigger value="marketing">{t('ui.cookies.marketing.title')}</TabsTrigger>
+        <TabsTrigger value="preferences">{t('ui.cookies.preferences.title')}</TabsTrigger>
       </TabsList>
       
       <TabsContent value="necessary" className="space-y-4">
         <div className="flex items-start space-x-3">
           <Shield className="h-5 w-5 text-primary mt-0.5" />
           <div className="flex-1">
-            <h4 className="font-medium">{t('consent.cookies.necessary.title')}</h4>
+            <h4 className="font-medium">{t('ui.cookies.necessary.title')}</h4>
             <p className="text-sm text-muted-foreground mt-1">
-              {t('consent.cookies.necessary.description')}
+              {t('ui.cookies.necessary.description')}
             </p>
             <div className="mt-3 space-y-2">
               <div className="flex items-center space-x-2 text-sm">
                 <Check className="h-3 w-3 text-green-600" />
-                <span>{t('consent.cookies.necessary.items.authentication')}</span>
+                <span>{t('ui.cookies.necessary.items.authentication')}</span>
               </div>
               <div className="flex items-center space-x-2 text-sm">
                 <Check className="h-3 w-3 text-green-600" />
-                <span>{t('consent.cookies.necessary.items.security')}</span>
+                <span>{t('ui.cookies.necessary.items.security')}</span>
               </div>
               <div className="flex items-center space-x-2 text-sm">
                 <Check className="h-3 w-3 text-green-600" />
-                <span>{t('consent.cookies.necessary.items.preferences')}</span>
+                <span>{t('ui.cookies.necessary.items.preferences')}</span>
               </div>
             </div>
             <div className="mt-4 p-3 bg-muted rounded-lg">
               <p className="text-xs text-muted-foreground">
-                <strong>{t('consent.cookies.necessary.retention')}:</strong> {t('consent.cookies.necessary.retentionPeriod')}
+                <strong>{t('ui.cookies.necessary.retention')}:</strong> {t('ui.cookies.necessary.retentionPeriod')}
               </p>
             </div>
           </div>
@@ -167,27 +167,27 @@ export const ConsentManager: React.FC<ConsentManagerProps> = ({ onConsentUpdate 
         <div className="flex items-start space-x-3">
           <BarChart3 className="h-5 w-5 text-primary mt-0.5" />
           <div className="flex-1">
-            <h4 className="font-medium">{t('consent.cookies.analytics.title')}</h4>
+            <h4 className="font-medium">{t('ui.cookies.analytics.title')}</h4>
             <p className="text-sm text-muted-foreground mt-1">
-              {t('consent.cookies.analytics.description')}
+              {t('ui.cookies.analytics.description')}
             </p>
             <div className="mt-3 space-y-2">
               <div className="flex items-center space-x-2 text-sm">
                 <Eye className="h-3 w-3 text-blue-600" />
-                <span>{t('consent.cookies.analytics.items.pageViews')}</span>
+                <span>{t('ui.cookies.analytics.items.pageViews')}</span>
               </div>
               <div className="flex items-center space-x-2 text-sm">
                 <Eye className="h-3 w-3 text-blue-600" />
-                <span>{t('consent.cookies.analytics.items.featureUsage')}</span>
+                <span>{t('ui.cookies.analytics.items.featureUsage')}</span>
               </div>
               <div className="flex items-center space-x-2 text-sm">
                 <Eye className="h-3 w-3 text-blue-600" />
-                <span>{t('consent.cookies.analytics.items.performance')}</span>
+                <span>{t('ui.cookies.analytics.items.performance')}</span>
               </div>
             </div>
             <div className="mt-4 p-3 bg-blue-50 dark:bg-blue-950 rounded-lg">
               <p className="text-xs">
-                <strong>{t('consent.cookies.analytics.privacy')}:</strong> {t('consent.cookies.analytics.privacyNote')}
+                <strong>{t('ui.cookies.analytics.privacy')}:</strong> {t('ui.cookies.analytics.privacyNote')}
               </p>
             </div>
           </div>
@@ -202,23 +202,23 @@ export const ConsentManager: React.FC<ConsentManagerProps> = ({ onConsentUpdate 
         <div className="flex items-start space-x-3">
           <Globe className="h-5 w-5 text-primary mt-0.5" />
           <div className="flex-1">
-            <h4 className="font-medium">{t('consent.cookies.marketing.title')}</h4>
+            <h4 className="font-medium">{t('ui.cookies.marketing.title')}</h4>
             <p className="text-sm text-muted-foreground mt-1">
-              {t('consent.cookies.marketing.description')}
+              {t('ui.cookies.marketing.description')}
             </p>
             <div className="mt-3 space-y-2">
               <div className="flex items-center space-x-2 text-sm">
                 <Database className="h-3 w-3 text-purple-600" />
-                <span>{t('consent.cookies.marketing.items.retargeting')}</span>
+                <span>{t('ui.cookies.marketing.items.retargeting')}</span>
               </div>
               <div className="flex items-center space-x-2 text-sm">
                 <Database className="h-3 w-3 text-purple-600" />
-                <span>{t('consent.cookies.marketing.items.campaigns')}</span>
+                <span>{t('ui.cookies.marketing.items.campaigns')}</span>
               </div>
             </div>
             <div className="mt-4 p-3 bg-purple-50 dark:bg-purple-950 rounded-lg">
               <p className="text-xs">
-                <strong>{t('consent.cookies.marketing.partners')}:</strong> {t('consent.cookies.marketing.partnersList')}
+                <strong>{t('ui.cookies.marketing.partners')}:</strong> {t('ui.cookies.marketing.partnersList')}
               </p>
             </div>
           </div>
@@ -233,22 +233,22 @@ export const ConsentManager: React.FC<ConsentManagerProps> = ({ onConsentUpdate 
         <div className="flex items-start space-x-3">
           <Cookie className="h-5 w-5 text-primary mt-0.5" />
           <div className="flex-1">
-            <h4 className="font-medium">{t('consent.cookies.preferences.title')}</h4>
+            <h4 className="font-medium">{t('ui.cookies.preferences.title')}</h4>
             <p className="text-sm text-muted-foreground mt-1">
-              {t('consent.cookies.preferences.description')}
+              {t('ui.cookies.preferences.description')}
             </p>
             <div className="mt-3 space-y-2">
               <div className="flex items-center space-x-2 text-sm">
                 <Check className="h-3 w-3 text-orange-600" />
-                <span>{t('consent.cookies.preferences.items.language')}</span>
+                <span>{t('ui.cookies.preferences.items.language')}</span>
               </div>
               <div className="flex items-center space-x-2 text-sm">
                 <Check className="h-3 w-3 text-orange-600" />
-                <span>{t('consent.cookies.preferences.items.theme')}</span>
+                <span>{t('ui.cookies.preferences.items.theme')}</span>
               </div>
               <div className="flex items-center space-x-2 text-sm">
                 <Check className="h-3 w-3 text-orange-600" />
-                <span>{t('consent.cookies.preferences.items.layout')}</span>
+                <span>{t('ui.cookies.preferences.items.layout')}</span>
               </div>
             </div>
           </div>
@@ -278,7 +278,7 @@ export const ConsentManager: React.FC<ConsentManagerProps> = ({ onConsentUpdate 
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex items-center space-x-3">
                     <Cookie className="h-6 w-6 text-primary" />
-                    <h3 className="text-lg font-semibold">{t('consent.banner.title')}</h3>
+                    <h3 className="text-lg font-semibold">{t('ui.banner.title')}</h3>
                   </div>
                   <Button
                     variant="ghost"
@@ -291,7 +291,7 @@ export const ConsentManager: React.FC<ConsentManagerProps> = ({ onConsentUpdate 
                 </div>
                 
                 <p className="text-sm text-muted-foreground mb-6">
-                  {t('consent.banner.description')}
+                  {t('ui.banner.description')}
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-3">
@@ -299,31 +299,31 @@ export const ConsentManager: React.FC<ConsentManagerProps> = ({ onConsentUpdate 
                     onClick={handleAcceptAll}
                     className="flex-1"
                   >
-                    {t('consent.banner.acceptAll')}
+                    {t('ui.banner.acceptAll')}
                   </Button>
                   <Button
                     variant="outline"
                     onClick={() => setShowDetails(true)}
                     className="flex-1"
                   >
-                    {t('consent.banner.customize')}
+                    {t('ui.banner.customize')}
                   </Button>
                   <Button
                     variant="ghost"
                     onClick={handleRejectAll}
                     className="flex-1"
                   >
-                    {t('consent.banner.rejectAll')}
+                    {t('ui.banner.rejectAll')}
                   </Button>
                 </div>
                 
                 <div className="mt-4 flex items-center space-x-4 text-xs text-muted-foreground">
                   <a href="/privacy" className="hover:underline">
-                    {t('consent.banner.privacyPolicy')}
+                    {t('ui.banner.privacyPolicy')}
                   </a>
                   <span>•</span>
                   <a href="/cookies" className="hover:underline">
-                    {t('consent.banner.cookiePolicy')}
+                    {t('ui.banner.cookiePolicy')}
                   </a>
                 </div>
               </CardContent>
@@ -338,10 +338,10 @@ export const ConsentManager: React.FC<ConsentManagerProps> = ({ onConsentUpdate 
           <DialogHeader>
             <DialogTitle className="flex items-center space-x-2">
               <Shield className="h-5 w-5 text-primary" />
-              <span>{t('consent.details.title')}</span>
+              <span>{t('ui.details.title')}</span>
             </DialogTitle>
             <DialogDescription>
-              {t('consent.details.description')}
+              {t('ui.details.description')}
             </DialogDescription>
           </DialogHeader>
           
@@ -354,12 +354,12 @@ export const ConsentManager: React.FC<ConsentManagerProps> = ({ onConsentUpdate 
               <div className="flex items-start space-x-2">
                 <AlertCircle className="h-5 w-5 text-amber-600 mt-0.5" />
                 <div className="flex-1">
-                  <h4 className="font-medium text-sm">{t('consent.details.dataCollected.title')}</h4>
+                  <h4 className="font-medium text-sm">{t('ui.details.dataCollected.title')}</h4>
                   <ul className="mt-2 space-y-1 text-xs text-muted-foreground">
-                    <li>• {t('consent.details.dataCollected.item1')}</li>
-                    <li>• {t('consent.details.dataCollected.item2')}</li>
-                    <li>• {t('consent.details.dataCollected.item3')}</li>
-                    <li>• {t('consent.details.dataCollected.item4')}</li>
+                    <li>• {t('ui.details.dataCollected.item1')}</li>
+                    <li>• {t('ui.details.dataCollected.item2')}</li>
+                    <li>• {t('ui.details.dataCollected.item3')}</li>
+                    <li>• {t('ui.details.dataCollected.item4')}</li>
                   </ul>
                 </div>
               </div>
@@ -369,12 +369,12 @@ export const ConsentManager: React.FC<ConsentManagerProps> = ({ onConsentUpdate 
               <div className="flex items-start space-x-2">
                 <Shield className="h-5 w-5 text-green-600 mt-0.5" />
                 <div className="flex-1">
-                  <h4 className="font-medium text-sm">{t('consent.details.yourRights.title')}</h4>
+                  <h4 className="font-medium text-sm">{t('ui.details.yourRights.title')}</h4>
                   <ul className="mt-2 space-y-1 text-xs text-muted-foreground">
-                    <li>• {t('consent.details.yourRights.item1')}</li>
-                    <li>• {t('consent.details.yourRights.item2')}</li>
-                    <li>• {t('consent.details.yourRights.item3')}</li>
-                    <li>• {t('consent.details.yourRights.item4')}</li>
+                    <li>• {t('ui.details.yourRights.item1')}</li>
+                    <li>• {t('ui.details.yourRights.item2')}</li>
+                    <li>• {t('ui.details.yourRights.item3')}</li>
+                    <li>• {t('ui.details.yourRights.item4')}</li>
                   </ul>
                 </div>
               </div>
@@ -387,13 +387,13 @@ export const ConsentManager: React.FC<ConsentManagerProps> = ({ onConsentUpdate 
               onClick={() => setShowDetails(false)}
               className="flex-1"
             >
-              {t('consent.details.cancel')}
+              {t('ui.details.cancel')}
             </Button>
             <Button
               onClick={handleAcceptSelected}
               className="flex-1"
             >
-              {t('consent.details.savePreferences')}
+              {t('ui.details.savePreferences')}
             </Button>
           </DialogFooter>
         </DialogContent>
@@ -462,19 +462,19 @@ export const ConsentSettings: React.FC = () => {
       <CardHeader>
         <CardTitle className="flex items-center space-x-2">
           <Cookie className="h-5 w-5" />
-          <span>{t('consent.settings.title')}</span>
+          <span>{t('ui.settings.title')}</span>
         </CardTitle>
         <CardDescription>
-          {t('consent.settings.description')}
+          {t('ui.settings.description')}
         </CardDescription>
       </CardHeader>
       <CardContent className="space-y-6">
         <div className="space-y-4">
           <div className="flex items-center justify-between">
             <div className="space-y-0.5">
-              <Label htmlFor="analytics-toggle">{t('consent.settings.analytics.label')}</Label>
+              <Label htmlFor="analytics-toggle">{t('ui.settings.analytics.label')}</Label>
               <p className="text-sm text-muted-foreground">
-                {t('consent.settings.analytics.description')}
+                {t('ui.settings.analytics.description')}
               </p>
             </div>
             <Switch
@@ -486,9 +486,9 @@ export const ConsentSettings: React.FC = () => {
           
           <div className="flex items-center justify-between">
             <div className="space-y-0.5">
-              <Label htmlFor="marketing-toggle">{t('consent.settings.marketing.label')}</Label>
+              <Label htmlFor="marketing-toggle">{t('ui.settings.marketing.label')}</Label>
               <p className="text-sm text-muted-foreground">
-                {t('consent.settings.marketing.description')}
+                {t('ui.settings.marketing.description')}
               </p>
             </div>
             <Switch
@@ -500,9 +500,9 @@ export const ConsentSettings: React.FC = () => {
           
           <div className="flex items-center justify-between">
             <div className="space-y-0.5">
-              <Label htmlFor="preferences-toggle">{t('consent.settings.preferences.label')}</Label>
+              <Label htmlFor="preferences-toggle">{t('ui.settings.preferences.label')}</Label>
               <p className="text-sm text-muted-foreground">
-                {t('consent.settings.preferences.description')}
+                {t('ui.settings.preferences.description')}
               </p>
             </div>
             <Switch
@@ -515,10 +515,10 @@ export const ConsentSettings: React.FC = () => {
         
         {preferences.consentDate && (
           <div className="text-xs text-muted-foreground">
-            {t('consent.settings.consentGiven')}: {new Date(preferences.consentDate).toLocaleDateString()}
+            {t('ui.settings.consentGiven')}: {new Date(preferences.consentDate).toLocaleDateString()}
             {preferences.lastUpdated && (
               <span className="block">
-                {t('consent.settings.lastUpdated')}: {new Date(preferences.lastUpdated).toLocaleDateString()}
+                {t('ui.settings.lastUpdated')}: {new Date(preferences.lastUpdated).toLocaleDateString()}
               </span>
             )}
           </div>
@@ -530,7 +530,7 @@ export const ConsentSettings: React.FC = () => {
             onClick={handleWithdrawConsent}
             className="w-full"
           >
-            {t('consent.settings.withdrawConsent')}
+            {t('ui.settings.withdrawConsent')}
           </Button>
         </div>
       </CardContent>

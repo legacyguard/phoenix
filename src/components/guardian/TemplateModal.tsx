@@ -117,9 +117,9 @@ export const TemplateModal: React.FC<TemplateModalProps> = ({
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="max-w-4xl max-h-[90vh]">
         <DialogHeader>
-          <DialogTitle>{t('playbook.templates.title')}</DialogTitle>
+          <DialogTitle>{t('family.templates.title')}</DialogTitle>
           <DialogDescription>
-            {t('playbook.templates.description')}
+            {t('family.templates.description')}
           </DialogDescription>
         </DialogHeader>
 
@@ -158,13 +158,13 @@ export const TemplateModal: React.FC<TemplateModalProps> = ({
                           <CardTitle className="text-base">{template.title}</CardTitle>
                         </div>
                         <Badge variant={toneColors[template.tone]}>
-                          {t(`playbook.templates.tone.${template.tone}`)}
+                          {t('family.templates.tone.${template.tone}')}
                         </Badge>
                       </div>
                     </CardHeader>
                     <CardContent>
                       <p className="text-sm text-muted-foreground line-clamp-2">
-                        {template.content.substring(0, 150)}{t("guardian.templateModal._1")}
+                        {template.content.substring(0, 150)}{t('family.templateModal._1')}
                   </p>
                       {template.variables && template.variables.length > 0 &&
                   <div className="mt-2 flex items-center gap-1">
@@ -190,13 +190,13 @@ export const TemplateModal: React.FC<TemplateModalProps> = ({
               size="sm"
               onClick={() => setSelectedTemplate(null)}>
 
-                {t('playbook.templates.backToTemplates')}
+                {t('family.templates.backToTemplates')}
               </Button>
             </div>
 
             {selectedTemplate.variables && selectedTemplate.variables.length > 0 &&
           <div className="space-y-3">
-                <Label>{t('playbook.templates.fillInVariables')}</Label>
+                <Label>{t('family.templates.fillInVariables')}</Label>
                 <ScrollArea className="h-[200px] pr-4">
                   <div className="space-y-3">
                     {selectedTemplate.variables.map((variable) =>
@@ -211,7 +211,7 @@ export const TemplateModal: React.FC<TemplateModalProps> = ({
                       ...prev,
                       [variable]: e.target.value
                     }))}
-                    placeholder={t('playbook.templates.variablePlaceholder')} />
+                    placeholder={t('family.templates.variablePlaceholder')} />
 
                       </div>
                 )}
@@ -221,7 +221,7 @@ export const TemplateModal: React.FC<TemplateModalProps> = ({
           }
 
             <div className="space-y-2">
-              <Label>{t('playbook.templates.preview')}</Label>
+              <Label>{t('family.templates.preview')}</Label>
               <ScrollArea className="h-[200px] border rounded-md p-3">
                 <pre className="text-sm whitespace-pre-wrap font-sans">
                   {getPreview()}
@@ -234,21 +234,21 @@ export const TemplateModal: React.FC<TemplateModalProps> = ({
                 <AlertCircle className="h-4 w-4" />
                 <AlertDescription>
                   <div className="space-y-2">
-                    <p>{t('playbook.templates.existingContent')}</p>
+                    <p>{t('family.templates.existingContent')}</p>
                     <div className="flex gap-2">
                       <Button
                     size="sm"
                     variant={insertMode === 'replace' ? 'default' : 'outline'}
                     onClick={() => setInsertMode('replace')}>
 
-                        {t('playbook.templates.replace')}
+                        {t('family.templates.replace')}
                       </Button>
                       <Button
                     size="sm"
                     variant={insertMode === 'append' ? 'default' : 'outline'}
                     onClick={() => setInsertMode('append')}>
 
-                        {t('playbook.templates.append')}
+                        {t('family.templates.append')}
                       </Button>
                     </div>
                   </div>
@@ -260,11 +260,11 @@ export const TemplateModal: React.FC<TemplateModalProps> = ({
 
         <DialogFooter>
           <Button variant="outline" onClick={onClose}>
-            {t('common.cancel')}
+            {t('ui.cancel')}
           </Button>
           {selectedTemplate &&
           <Button onClick={handleInsert}>
-              {t('playbook.templates.insertTemplate')}
+              {t('family.templates.insertTemplate')}
             </Button>
           }
         </DialogFooter>

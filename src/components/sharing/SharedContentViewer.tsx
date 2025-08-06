@@ -16,7 +16,7 @@ interface SharedContentViewerProps {
 }
 
 export function SharedContentViewer({ token, password }: SharedContentViewerProps) {
-  const { t } = useTranslation();
+  const { t } = useTranslation('sharing');
   const { token: routeToken } = useParams<{token: string;}>();
   const [sharedLink, setSharedLink] = useState<SharedLink | null>(null);
   const [content, setContent] = useState<Record<string, unknown> | null>(null);
@@ -288,7 +288,7 @@ export function SharedContentViewer({ token, password }: SharedContentViewerProp
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
               <Shield className="h-6 w-6 text-primary" />
-              <span className="font-semibold">{t('app.name')}</span>
+              <span className="font-semibold">{t('ui.name')}</span>
             </div>
             {sharedLink?.settings?.watermark &&
             <span className="text-sm text-muted-foreground">

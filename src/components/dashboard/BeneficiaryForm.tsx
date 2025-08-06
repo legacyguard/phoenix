@@ -45,7 +45,7 @@ export const BeneficiaryForm: React.FC<BeneficiaryFormProps> = ({
   initialData,
   isEditing = false
 }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('errors');
   
   const beneficiaryFormSchema = createBeneficiaryFormSchema(t);
   
@@ -104,7 +104,7 @@ export const BeneficiaryForm: React.FC<BeneficiaryFormProps> = ({
       <div className="flex gap-3 pt-4">
         <Button type="submit" disabled={isSubmitting} className="flex-1">
           {isSubmitting 
-            ? t('common.saving') 
+            ? t('ui.saving') 
             : (isEditing ? t('dashboard.updateBeneficiary') : t('dashboard.saveBeneficiary'))
           }
         </Button>
@@ -114,7 +114,7 @@ export const BeneficiaryForm: React.FC<BeneficiaryFormProps> = ({
           onClick={onCancel}
           disabled={isSubmitting}
         >
-          {t('common.cancel')}
+          {t('ui.cancel')}
         </Button>
       </div>
     </form>

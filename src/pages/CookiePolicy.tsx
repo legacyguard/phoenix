@@ -14,52 +14,52 @@ const CookiePolicy: React.FC = () => {
   const cookieCategories = [
     {
       icon: Shield,
-      title: t('cookies.policy.necessary.title'),
-      description: t('cookies.policy.necessary.description'),
-      purpose: t('cookies.policy.necessary.purpose'),
+      title: t('wills.policy.necessary.title'),
+      description: t('wills.policy.necessary.description'),
+      purpose: t('wills.policy.necessary.purpose'),
       examples: [
-        { name: 'auth_token', duration: '7 days', description: t('cookies.policy.necessary.examples.auth') },
-        { name: 'session_id', duration: 'Session', description: t('cookies.policy.necessary.examples.session') },
-        { name: 'security_csrf', duration: '1 hour', description: t('cookies.policy.necessary.examples.csrf') },
-        { name: 'consent_preferences', duration: '1 year', description: t('cookies.policy.necessary.examples.consent') }
+        { name: 'auth_token', duration: '7 days', description: t('wills.policy.necessary.examples.auth') },
+        { name: 'session_id', duration: 'Session', description: t('wills.policy.necessary.examples.session') },
+        { name: 'security_csrf', duration: '1 hour', description: t('wills.policy.necessary.examples.csrf') },
+        { name: 'consent_preferences', duration: '1 year', description: t('wills.policy.necessary.examples.consent') }
       ],
       required: true,
       color: 'text-green-600'
     },
     {
       icon: BarChart3,
-      title: t('cookies.policy.analytics.title'),
-      description: t('cookies.policy.analytics.description'),
-      purpose: t('cookies.policy.analytics.purpose'),
+      title: t('wills.policy.analytics.title'),
+      description: t('wills.policy.analytics.description'),
+      purpose: t('wills.policy.analytics.purpose'),
       examples: [
-        { name: '_ga', duration: '2 years', description: t('cookies.policy.analytics.examples.ga') },
-        { name: '_gid', duration: '24 hours', description: t('cookies.policy.analytics.examples.gid') },
-        { name: 'analytics_session', duration: '30 minutes', description: t('cookies.policy.analytics.examples.session') }
+        { name: '_ga', duration: '2 years', description: t('wills.policy.analytics.examples.ga') },
+        { name: '_gid', duration: '24 hours', description: t('wills.policy.analytics.examples.gid') },
+        { name: 'analytics_session', duration: '30 minutes', description: t('wills.policy.analytics.examples.session') }
       ],
       required: false,
       color: 'text-blue-600'
     },
     {
       icon: Globe,
-      title: t('cookies.policy.marketing.title'),
-      description: t('cookies.policy.marketing.description'),
-      purpose: t('cookies.policy.marketing.purpose'),
+      title: t('wills.policy.marketing.title'),
+      description: t('wills.policy.marketing.description'),
+      purpose: t('wills.policy.marketing.purpose'),
       examples: [
-        { name: 'fbp', duration: '3 months', description: t('cookies.policy.marketing.examples.facebook') },
-        { name: '_gcl_au', duration: '3 months', description: t('cookies.policy.marketing.examples.google') }
+        { name: 'fbp', duration: '3 months', description: t('wills.policy.marketing.examples.facebook') },
+        { name: '_gcl_au', duration: '3 months', description: t('wills.policy.marketing.examples.google') }
       ],
       required: false,
       color: 'text-purple-600'
     },
     {
       icon: Cookie,
-      title: t('cookies.policy.preferences.title'),
-      description: t('cookies.policy.preferences.description'),
-      purpose: t('cookies.policy.preferences.purpose'),
+      title: t('wills.policy.preferences.title'),
+      description: t('wills.policy.preferences.description'),
+      purpose: t('wills.policy.preferences.purpose'),
       examples: [
-        { name: 'theme_preference', duration: '1 year', description: t('cookies.policy.preferences.examples.theme') },
-        { name: 'language', duration: '1 year', description: t('cookies.policy.preferences.examples.language') },
-        { name: 'ui_settings', duration: '1 year', description: t('cookies.policy.preferences.examples.ui') }
+        { name: 'theme_preference', duration: '1 year', description: t('wills.policy.preferences.examples.theme') },
+        { name: 'language', duration: '1 year', description: t('wills.policy.preferences.examples.language') },
+        { name: 'ui_settings', duration: '1 year', description: t('wills.policy.preferences.examples.ui') }
       ],
       required: false,
       color: 'text-orange-600'
@@ -75,7 +75,7 @@ const CookiePolicy: React.FC = () => {
           className="mb-6"
         >
           <ArrowLeft className="mr-2 h-4 w-4" />
-          {t('common.back')}
+          {t('ui.back')}
         </Button>
 
         <div className="space-y-8">
@@ -85,12 +85,12 @@ const CookiePolicy: React.FC = () => {
                 <Cookie className="h-8 w-8 text-primary" />
               </div>
             </div>
-            <h1 className="text-4xl font-bold">{t('cookies.policy.title')}</h1>
+            <h1 className="text-4xl font-bold">{t('wills.policy.title')}</h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              {t('cookies.policy.subtitle')}
+              {t('wills.policy.subtitle')}
             </p>
             <p className="text-sm text-muted-foreground">
-              {t('cookies.policy.lastUpdated')}: {new Date().toLocaleDateString()}
+              {t('wills.policy.lastUpdated')}: {new Date().toLocaleDateString()}
             </p>
           </div>
 
@@ -98,22 +98,22 @@ const CookiePolicy: React.FC = () => {
             <CardHeader>
               <CardTitle className="flex items-center space-x-2">
                 <AlertCircle className="h-5 w-5 text-amber-600" />
-                <span>{t('cookies.policy.overview.title')}</span>
+                <span>{t('wills.policy.overview.title')}</span>
               </CardTitle>
             </CardHeader>
             <CardContent className="prose prose-sm max-w-none">
-              <p>{t('cookies.policy.overview.intro')}</p>
+              <p>{t('wills.policy.overview.intro')}</p>
               <ul className="space-y-2">
-                <li>{t('cookies.policy.overview.point1')}</li>
-                <li>{t('cookies.policy.overview.point2')}</li>
-                <li>{t('cookies.policy.overview.point3')}</li>
-                <li>{t('cookies.policy.overview.point4')}</li>
+                <li>{t('wills.policy.overview.point1')}</li>
+                <li>{t('wills.policy.overview.point2')}</li>
+                <li>{t('wills.policy.overview.point3')}</li>
+                <li>{t('wills.policy.overview.point4')}</li>
               </ul>
             </CardContent>
           </Card>
 
           <div className="space-y-6">
-            <h2 className="text-2xl font-semibold">{t('cookies.policy.categories.title')}</h2>
+            <h2 className="text-2xl font-semibold">{t('wills.policy.categories.title')}</h2>
             
             {cookieCategories.map((category, index) => (
               <Card key={index}>
@@ -125,7 +125,7 @@ const CookiePolicy: React.FC = () => {
                         <CardTitle className="text-lg">{category.title}</CardTitle>
                         {category.required && (
                           <Badge variant="secondary" className="mt-1">
-                            {t('cookies.policy.required')}
+                            {t('wills.policy.required')}
                           </Badge>
                         )}
                       </div>
@@ -137,12 +137,12 @@ const CookiePolicy: React.FC = () => {
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div>
-                    <h4 className="font-medium mb-2">{t('cookies.policy.purpose')}:</h4>
+                    <h4 className="font-medium mb-2">{t('wills.policy.purpose')}:</h4>
                     <p className="text-sm text-muted-foreground">{category.purpose}</p>
                   </div>
                   
                   <div>
-                    <h4 className="font-medium mb-2">{t('cookies.policy.examples')}:</h4>
+                    <h4 className="font-medium mb-2">{t('wills.policy.examples')}:</h4>
                     <div className="space-y-2">
                       {category.examples.map((example, idx) => (
                         <div key={idx} className="bg-muted/50 p-3 rounded-lg">
@@ -168,52 +168,52 @@ const CookiePolicy: React.FC = () => {
 
           <Card className="bg-muted/50">
             <CardHeader>
-              <CardTitle>{t('cookies.policy.yourRights.title')}</CardTitle>
+              <CardTitle>{t('wills.policy.yourRights.title')}</CardTitle>
               <CardDescription>
-                {t('cookies.policy.yourRights.description')}
+                {t('wills.policy.yourRights.description')}
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-3">
               <div className="flex items-start space-x-2">
                 <Check className="h-4 w-4 text-green-600 mt-0.5" />
-                <p className="text-sm">{t('cookies.policy.yourRights.right1')}</p>
+                <p className="text-sm">{t('wills.policy.yourRights.right1')}</p>
               </div>
               <div className="flex items-start space-x-2">
                 <Check className="h-4 w-4 text-green-600 mt-0.5" />
-                <p className="text-sm">{t('cookies.policy.yourRights.right2')}</p>
+                <p className="text-sm">{t('wills.policy.yourRights.right2')}</p>
               </div>
               <div className="flex items-start space-x-2">
                 <Check className="h-4 w-4 text-green-600 mt-0.5" />
-                <p className="text-sm">{t('cookies.policy.yourRights.right3')}</p>
+                <p className="text-sm">{t('wills.policy.yourRights.right3')}</p>
               </div>
               <div className="flex items-start space-x-2">
                 <Check className="h-4 w-4 text-green-600 mt-0.5" />
-                <p className="text-sm">{t('cookies.policy.yourRights.right4')}</p>
+                <p className="text-sm">{t('wills.policy.yourRights.right4')}</p>
               </div>
             </CardContent>
           </Card>
 
           <div className="space-y-6">
-            <h2 className="text-2xl font-semibold">{t('cookies.policy.manage.title')}</h2>
+            <h2 className="text-2xl font-semibold">{t('wills.policy.manage.title')}</h2>
             <ConsentSettings />
           </div>
 
           <Card>
             <CardHeader>
-              <CardTitle>{t('cookies.policy.contact.title')}</CardTitle>
+              <CardTitle>{t('wills.policy.contact.title')}</CardTitle>
             </CardHeader>
             <CardContent className="space-y-2">
-              <p className="text-sm">{t('cookies.policy.contact.description')}</p>
+              <p className="text-sm">{t('wills.policy.contact.description')}</p>
               <div className="space-y-1">
                 <p className="text-sm">
-                  <strong>{t('cookies.policy.contact.email')}:</strong>{' '}
+                  <strong>{t('wills.policy.contact.email')}:</strong>{' '}
                   <a href="mailto:privacy@legacyguard.app" className="text-primary hover:underline">
                     privacy@legacyguard.app
                   </a>
                 </p>
                 <p className="text-sm">
-                  <strong>{t('cookies.policy.contact.address')}:</strong>{' '}
-                  {t('cookies.policy.contact.addressDetails')}
+                  <strong>{t('wills.policy.contact.address')}:</strong>{' '}
+                  {t('wills.policy.contact.addressDetails')}
                 </p>
               </div>
             </CardContent>

@@ -41,7 +41,7 @@ interface ScenarioImpactAnalysis {
 }
 
 const ScenarioPlanner: React.FC = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('time-capsule');
   
   // Mock data for now; this will come from a central store later.
   const scenarios: Scenario[] = [
@@ -271,7 +271,7 @@ const ScenarioPlanner: React.FC = () => {
 
             <span className="text-base md:text-lg">{scenario.icon}</span>
             <span className="hidden md:inline">{scenario.title}</span>
-            <span className="md:hidden">{scenario.title.split(' ').slice(0, 3).join(' ')}{t("guardian.templateModal._1")}</span>
+            <span className="md:hidden">{scenario.title.split(' ').slice(0, 3).join(' ')}{t('family.templateModal._1')}</span>
           </button>
         )}
       </div>

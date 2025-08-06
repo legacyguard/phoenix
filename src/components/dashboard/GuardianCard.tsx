@@ -130,19 +130,19 @@ export const GuardianCard: React.FC<GuardianCardProps> = ({
           {onCreatePlaybook &&
             <div className="flex items-center justify-between pt-2 border-t">
               <div className="flex items-center gap-2">
-                <span className="text-sm font-medium">{t('playbook.label')}:</span>
+                <span className="text-sm font-medium">{t('family.label')}:</span>
                 {playbookStatus === 'complete' ?
                 <Badge variant="default" className="text-xs gap-1">
                     <CheckCircle className="h-3 w-3" />
-                    {t('playbook.status.complete')}
+                    {t('family.status.complete')}
                   </Badge> :
                 playbookStatus === 'draft' ?
                 <Badge variant="secondary" className="text-xs">
-                    {t('playbook.status.draft')}
+                    {t('family.status.draft')}
                   </Badge> :
 
                 <Badge variant="outline" className="text-xs">
-                    {t('playbook.status.empty')}
+                    {t('family.status.empty')}
                   </Badge>
                 }
               </div>
@@ -153,7 +153,7 @@ export const GuardianCard: React.FC<GuardianCardProps> = ({
                 className="text-xs">
 
                 <BookOpen className="h-3 w-3 mr-1" />
-                {playbookStatus === 'empty' ? t('playbook.create') : t('playbook.edit')}
+                {playbookStatus === 'empty' ? t('family.create') : t('family.edit')}
               </Button>
             </div>
             }
@@ -162,15 +162,15 @@ export const GuardianCard: React.FC<GuardianCardProps> = ({
           <div className="flex items-center justify-between pt-2">
             {guardian.invitation_status === 'sent' ?
               <Badge variant="secondary" className="text-xs">
-                {t('guardian.invitationSent')}
+                {t('family.invitationSent')}
               </Badge> :
               guardian.invitation_status === 'accepted' ?
               <Badge variant="heritage" className="text-xs">
-                {t('guardian.accepted')}
+                {t('family.accepted')}
               </Badge> :
               guardian.invitation_status === 'declined' ?
               <Badge variant="destructive" className="text-xs">
-                {t('guardian.declined')}
+                {t('family.declined')}
               </Badge> :
 
               onSendInvite &&
@@ -181,7 +181,7 @@ export const GuardianCard: React.FC<GuardianCardProps> = ({
                 className="text-xs">
 
                   <Mail className="h-3 w-3 mr-1" />
-                  {t('guardian.sendInvite')}
+                  {t('family.sendInvite')}
                 </Button>
 
               }

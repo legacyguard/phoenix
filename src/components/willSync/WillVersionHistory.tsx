@@ -33,7 +33,7 @@ export function WillVersionHistory({
   onExport,
   onViewDiff
 }: WillVersionHistoryProps) {
-  const { t } = useTranslation();
+  const { t } = useTranslation('wills');
   const [selectedVersions, setSelectedVersions] = useState<[string?, string?]>([]);
 
   const getCreatedByIcon = (createdBy: WillVersion['created_by']) => {

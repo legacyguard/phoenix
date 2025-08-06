@@ -11,7 +11,7 @@ import { Badge } from '@/components/ui/badge';
 export const TranslationExample: React.FC = () => {
   // Import translations for different features
   const { t: tAssets } = useTranslation('assets');
-  const { t: tDocuments } = useTranslation('documents');
+  const { t: tDocuments } = useTranslation('assets');
   const { t: tWills } = useTranslation('wills');
   const { t: tCommon } = useTranslation('ui');
 

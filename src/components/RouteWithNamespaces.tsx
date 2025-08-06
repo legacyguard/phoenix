@@ -14,7 +14,7 @@ export const RouteWithNamespaces: React.FC<RouteWithNamespacesProps> = ({
   children,
   fallback 
 }) => {
-  const { i18n } = useTranslation();
+  const { i18n } = useTranslation('ui');
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 

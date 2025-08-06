@@ -22,7 +22,7 @@ const AssetTypeSelectorModal: React.FC<AssetTypeSelectorModalProps> = ({
   mainCategory,
   onSelectSubType 
 }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('assets');
   const getSubTypes = () => {
     switch (mainCategory) {
       case 'Property':

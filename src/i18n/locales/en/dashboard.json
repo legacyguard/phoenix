@@ -1,460 +1,1167 @@
 {
-  "title": "Dashboard",
-  "subtitle": "Your family protection command center",
-  "header": {
-    "welcome": "Welcome back, {{name}}",
-    "welcomeDefault": "Welcome back",
-    "subtitle": "Here's your family protection progress",
-    "lastUpdated": "Last updated {{date}}",
-    "quickActions": "Quick Actions"
-  },
-  "stats": {
-    "planStrength": "Plan Strength",
-    "planStrengthDescription": "Overall completeness of your family protection plan",
-    "tasksCompleted": "Tasks Completed",
-    "tasksCompletedDescription": "{{completed}} of {{total}} priority tasks finished",
-    "documentsStored": "Documents Stored",
-    "documentsStoredDescription": "Important documents safely organized",
-    "trustedPeople": "Trusted People",
-    "trustedPeopleDescription": "People designated to help your family",
-    "protectionLevel": "Protection Level",
-    "protectionLevelDescription": "How prepared your family is for emergencies",
-    "completionRate": "{{percentage}}% Complete",
-    "excellent": "Excellent",
-    "good": "Good", 
-    "needsWork": "Needs Work",
-    "gettingStarted": "Getting Started"
-  },
-  "sections": {
-    "nextSteps": {
-      "title": "Your Next Steps",
-      "subtitle": "Priority tasks to strengthen your family's protection",
-      "noTasks": "Great job! You've completed all priority tasks.",
-      "viewAll": "View All Tasks",
-      "markComplete": "Mark Complete",
-      "startTask": "Start Task",
-      "estimatedTime": "{{minutes}} min",
-      "highPriority": "High Priority",
-      "mediumPriority": "Medium Priority",
-      "lowPriority": "Low Priority"
+  "annualReview": {
+    "description": "Review and update your family protection plan annually",
+    "lastReview": "Last reviewed: {{date}}",
+    "startReview": "Start Review",
+    "title": "Annual Review",
+    "step1": {
+      "title": "Command Roster Review",
+      "description": "Review and update your trusted circle of executors and guardians"
     },
-    "recentActivity": {
-      "title": "Recent Activity",
-      "subtitle": "Your latest updates and changes",
-      "noActivity": "No recent activity",
-      "viewAll": "View All Activity",
-      "documentAdded": "Document added",
-      "assetUpdated": "Asset updated",
-      "personAdded": "Trusted person added",
-      "taskCompleted": "Task completed",
-      "willUpdated": "Will updated",
-      "today": "Today",
-      "yesterday": "Yesterday",
-      "daysAgo": "{{days}} days ago"
+    "step2": {
+      "title": "Asset Armory Review",
+      "description": "Review and update your asset inventory and documentation"
     },
-    "quickStart": {
-      "title": "Quick Start Guide",
-      "subtitle": "Essential first steps to protect your family",
-      "step1": {
-        "title": "Add Your Most Important Asset",
-        "description": "Start with your home, primary bank account, or business",
-        "action": "Add Asset"
-      },
-      "step2": {
-        "title": "Designate a Trusted Person",
-        "description": "Choose someone who can help your family in an emergency",
-        "action": "Add Person"
-      },
-      "step3": {
-        "title": "Upload Key Documents",
-        "description": "Store insurance policies, deeds, or important contracts",
-        "action": "Upload Documents"
-      },
-      "step4": {
-        "title": "Create Your Will",
-        "description": "Generate a legally valid will based on your information",
-        "action": "Start Will"
-      },
-      "completed": "Completed",
-      "inProgress": "In Progress",
-      "notStarted": "Not Started"
+    "step3": {
+      "title": "Beneficiary Review",
+      "description": "Review and update your beneficiary designations"
     },
-    "insights": {
-      "title": "Protection Insights",
-      "subtitle": "Personalized recommendations for your situation",
-      "noInsights": "No insights available yet. Complete more tasks to get personalized recommendations.",
-      "recommendation": "Recommendation",
-      "warning": "Attention Needed",
-      "tip": "Pro Tip",
-      "viewDetails": "View Details",
-      "dismiss": "Dismiss"
-    }
-  },
-  "tasks": {
-    "categories": {
-      "secure": "Secure",
-      "organize": "Organize", 
-      "transfer": "Transfer"
+    "step4": {
+      "title": "Complete Review",
+      "description": "Finalize your annual review"
     },
-    "types": {
-      "documentCentralization": {
-        "title": "Organize Important Documents",
-        "description": "Gather and digitize your most critical paperwork so your family can find everything in one place."
+    "commandRoster": {
+      "title": "Command Roster",
+      "description": "Your trusted circle of executors and guardians",
+      "details": {
+        "executor": "Executor",
+        "guardian": "Guardian"
       },
-      "assetInventory": {
-        "title": "Create Asset Inventory",
-        "description": "Document your valuable possessions so nothing gets overlooked or lost."
-      },
-      "guardianInstructions": {
-        "title": "Designate Emergency Contacts",
-        "description": "Choose trusted people who can step in and help your family during difficult times."
-      },
-      "emergencyContacts": {
-        "title": "Set Up Emergency Access",
-        "description": "Ensure the right people can access critical information when they need it most."
-      },
-      "willPreparation": {
-        "title": "Prepare Your Will",
-        "description": "Create a legally valid document that clearly states your wishes for your assets and family."
-      },
-      "bankAccount": {
-        "title": "Document Financial Accounts",
-        "description": "Record your banking and investment information so your family can manage finances."
-      },
-      "inheritanceEducation": {
-        "title": "Learn About Inheritance Laws",
-        "description": "Understand the legal requirements in your area to avoid complications for your family."
-      },
-      "personalMessages": {
-        "title": "Record Personal Messages",
-        "description": "Leave heartfelt messages and important instructions for your loved ones."
-      },
-      "familyMeeting": {
-        "title": "Hold Family Discussion",
-        "description": "Have an open conversation with your family about your plans and their roles."
-      },
-      "digitalAssetPlan": {
-        "title": "Plan for Digital Assets",
-        "description": "Organize your online accounts, passwords, and digital property for easy access."
+      "status": {
+        "current": "Current",
+        "needsUpdate": "Needs Update"
       }
+    },
+    "armory": {
+      "title": "Asset Armory",
+      "description": "Your asset inventory and documentation",
+      "categories": {
+        "realEstate": "Real Estate",
+        "bankAccounts": "Bank Accounts"
+      },
+      "status": {
+        "current": "Current",
+        "needsUpdate": "Needs Update"
+      }
+    },
+    "beneficiaries": {
+      "title": "Beneficiaries",
+      "description": "Your beneficiary designations",
+      "details": {
+        "primary": "Primary Beneficiary"
+      },
+      "status": {
+        "current": "Current"
+      },
+      "confirmationQuestion": "Are all beneficiary designations current?"
+    },
+    "complete": {
+      "title": "Review Complete",
+      "description": "Your annual review has been completed successfully",
+      "summary": "Review Summary",
+      "changes": "Changes Made",
+      "noChanges": "No changes were needed",
+      "nextReview": "Next Review Date",
+      "message": "Your family protection plan is up to date",
+      "reminder": "We'll remind you to review again next year"
     },
     "status": {
-      "notStarted": "Not Started",
-      "inProgress": "In Progress", 
-      "completed": "Completed",
-      "blocked": "Blocked",
-      "skipped": "Skipped"
+      "completed": "Completed"
     },
-    "actions": {
-      "start": "Start Task",
-      "continue": "Continue",
-      "complete": "Mark Complete",
-      "skip": "Skip Task",
-      "viewDetails": "View Details",
-      "editTask": "Edit Task"
-    }
-  },
-  "widgets": {
-    "planStrengthMeter": {
-      "title": "Plan Strength Meter",
-      "description": "Visual indicator of your overall preparation level",
-      "needsAttention": "Needs Attention",
-      "onTrack": "On Track",
-      "wellProtected": "Well Protected",
-      "fullySecured": "Fully Secured"
+    "progress": {
+      "title": "Review Progress",
+      "completed": "Completed Steps",
+      "totalSteps": "Total Steps",
+      "estimatedTime": "Estimated Time"
     },
-    "upcomingDeadlines": {
-      "title": "Upcoming Deadlines",
-      "description": "Important dates and renewals to remember",
-      "noDeadlines": "No upcoming deadlines",
-      "dueToday": "Due Today",
-      "dueTomorrow": "Due Tomorrow",
-      "dueThisWeek": "Due This Week",
-      "overdue": "Overdue"
+    "buttons": {
+      "confirm": "Confirm",
+      "update": "Update",
+      "finish": "Finish Review",
+      "save": "Save Progress",
+      "back": "Back",
+      "next": "Next"
     },
-    "familyAccess": {
-      "title": "Family Access Status",
-      "description": "Who has access to what information",
-      "noAccess": "No family access configured",
-      "viewPermissions": "View Permissions",
-      "manageAccess": "Manage Access"
-    }
-  },
-  "notifications": {
-    "taskCompleted": "Task completed successfully!",
-    "documentUploaded": "Document uploaded and processed",
-    "assetAdded": "Asset added to your vault",
-    "personAdded": "Trusted person added to your circle",
-    "willGenerated": "Will generated successfully",
-    "planUpdated": "Your protection plan has been updated",
-    "reminderSet": "Reminder set for {{date}}",
-    "accessGranted": "Access granted to {{name}}",
-    "accessRevoked": "Access revoked from {{name}}"
-  },
-  "errors": {
-    "loadingDashboard": "Failed to load dashboard. Please refresh the page.",
-    "loadingTasks": "Failed to load tasks. Please try again.",
-    "loadingStats": "Failed to load statistics. Please refresh.",
-    "savingProgress": "Failed to save progress. Please try again.",
-    "markingComplete": "Failed to mark task as complete. Please try again.",
-    "genericError": "Something went wrong. Please refresh and try again.",
-    "failedToFetchStatus": "Failed to fetch progress status"
-  },
-  "empty": {
-    "noTasks": "No tasks available",
-    "noActivity": "No recent activity to display",
-    "noDocuments": "No documents uploaded yet",
-    "noAssets": "No assets added yet",
-    "noPeople": "No trusted people added yet"
-  },
-  "nextStep": {
-    "title": "Your Next Priority",
-    "estimatedTime": "Estimated time: {{time}}"
-  },
-  "deepDive": {
-    "milestoneAchieved": "Milestone Achieved",
-    "advancedPlanning": "Advanced Planning",
-    "deepDiveDescription": "You've completed the basics! Now let's dive deeper into advanced protection strategies."
-  },
-  "preservationMode": {
-    "title": "Preservation Mode Active",
-    "description": "Your family protection plan is comprehensive and well-maintained. Regular reviews ensure everything stays current.",
-    "lastReviewDate": "Last review: {{date}}",
-    "startAnnualCheck": "Start Annual Review",
-    "latestUpdates": "Latest Updates"
+    "subtitle": "Keep your family protection plan current"
   },
   "complexProfile": {
-    "detected": "Complex Profile Detected",
-    "personalizedGuidance": "Personalized Guidance",
-    "businessSuccessionNote": "Your business assets require specialized planning. Our experts can help with succession planning and business continuity.",
-    "discussWithExpert": "Discuss with Expert"
+    "businessSuccessionNote": "Business succession note",
+    "detected": "Detected",
+    "discussWithExpert": "Discuss with expert",
+    "personalizedGuidance": "Personalized guidance"
   },
-  "quickTasks": {
-    "title": "Quick Tasks",
-    "allTasks": "All Tasks",
-    "documents": "Documents",
-    "guardians": "Guardians",
-    "assets": "Assets",
-    "beneficiaries": "Beneficiaries",
-    "completed": "completed",
-    "progress": "Progress",
-    "allCompleted": "All tasks completed! Great job!",
-    "whyImportant": "Why this matters:",
-    "ifNotDone": "If not done:",
-    "minutes": "{{count}} min",
-    "start": "Start Task",
-    "markAsComplete": "Mark as Complete",
-    "greatProgress": "Great progress! {{count}} tasks completed.",
-    "wellOnWay": "You're well on your way to protecting your family.",
+  "dashboard": {
+    "welcome": {
+      "title": "Welcome back!"
+    },
+    "notifications": {
+      "success": {
+        "assetAdded": "Asset added successfully",
+        "profileUpdated": "Profile updated successfully",
+        "settingsSaved": "Settings saved successfully"
+      },
+      "info": {
+        "reviewDue": "Annual review due soon",
+        "documentsExpiring": "Some documents are expiring soon"
+      }
+    },
+    "documentCard": {
+      "include_in_survivor_s_manual_1": "Include in survivor s manual 1"
+    },
+    "expired": "Expired",
+    "expiresSoon": "Expires soon",
+    "firstTimeGuide": {
+      "finish": "Finish",
+      "helpfulTips": "Helpful tips",
+      "importantNote": "Important note",
+      "next": "Next",
+      "previous": "Previous",
+      "progress": {
+        "description": "Description",
+        "tip1": "Tip1",
+        "tip2": "Tip2",
+        "title": "Title"
+      },
+      "recommendations": {
+        "description": "Description",
+        "tip1": "Tip1",
+        "tip2": "Tip2",
+        "title": "Title"
+      },
+      "skipTour": "Skip tour",
+      "stages": {
+        "description": "Description",
+        "tip1": "Tip1",
+        "tip2": "Tip2",
+        "tip3": "Tip3",
+        "title": "Title"
+      },
+      "stepProgress": "Step progress",
+      "welcome": {
+        "description": "Description",
+        "tip1": "Tip1",
+        "tip2": "Tip2",
+        "tip3": "Tip3",
+        "title": "Title"
+      }
+    },
+    "guardianCard": {
+      "country_1": "Country 1",
+      "roles_2": "Roles 2"
+    },
+    "metadata": {
+      "contact": "Contact",
+      "renewsOn": "Renews on"
+    },
+    "nudge": {
+      "completeNow": "Complete now",
+      "continueSecuring": "Continue securing",
+      "dismiss": "Dismiss",
+      "finishToday": "Finish today",
+      "oneTaskLeft": "One task left",
+      "progressTitle": "Progress title",
+      "tasksRemaining": "Tasks remaining",
+      "welcomeBack": "Welcome back"
+    },
+    "stages": {
+      "advancedPlanning": "Advanced planning",
+      "building": "Building",
+      "foundation": "Foundation",
+      "legacy": "Legacy",
+      "strengthening": "Strengthening"
+    },
+    "strategicSummary": {
+      "addBackupGuardian": "Add backup guardian",
+      "addContingentBeneficiaries": "Add contingent beneficiaries",
+      "addFinancialAccounts": "Add financial accounts",
+      "addHomeProperty": "Add home property",
+      "addPrimaryBeneficiary": "Add primary beneficiary",
+      "addPrimaryGuardian": "Add primary guardian",
+      "assetInventory": "Asset inventory",
+      "assetInventoryDesc": "Asset inventory desc",
+      "criticalDocuments": "Critical documents",
+      "criticalDocumentsDesc": "Critical documents desc",
+      "guardianNetwork": "Guardian network",
+      "guardianNetworkDesc": "Guardian network desc",
+      "ifNotDone": "If not done",
+      "impact": {
+        "familyProtection": "Family protection",
+        "immediateDecision": "Immediate decision",
+        "preventsAssetLoss": "Prevents asset loss",
+        "preventsConflicts": "Prevents conflicts"
+      },
+      "inheritancePlan": "Inheritance plan",
+      "inheritancePlanDesc": "Inheritance plan desc",
+      "minutes": "Minutes",
+      "nextAction": "Next action",
+      "nextCriticalStep": "Next critical step",
+      "startWithNext": "Start with next",
+      "subtitle": "Subtitle",
+      "title": "Title",
+      "whyImportant": "Why important"
+    },
+    "allocation": "Allocation",
+    "assetName": "Asset name",
+    "assetType": "Asset type",
+    "beneficiaryName": "Beneficiary name",
+    "errors": {
+      "failedToSaveAsset": "Failed to save asset",
+      "failedToSaveBeneficiary": "Failed to save beneficiary"
+    },
+    "familyGuide": {
+      "discreteMode": "Discrete mode",
+      "discreteModeDesc": "Discrete mode desc",
+      "emergency_contacts_1": "Emergency contacts 1",
+      "export_guide_4": "Export guide 4",
+      "generateGuide": "Generate guide",
+      "important_documents_2": "Important documents 2",
+      "last_updated_6": "Last updated 6",
+      "share_with_family_5": "Share with family 5",
+      "subtitle": "Subtitle",
+      "title": "Title",
+      "view": "View",
+      "what_to_do_when_3": "What to do when 3"
+    },
+    "placeholders": {
+      "allocationPercentage": "Allocation percentage",
+      "assetName": "Asset name",
+      "assetType": "Asset type",
+      "beneficiaryName": "Beneficiary name"
+    },
+    "saveAsset": "Save asset",
+    "saveBeneficiary": "Save beneficiary",
     "tasks": {
-      "birthCertificate": {
-        "title": "Upload Birth Certificate",
-        "description": "Store your birth certificate for easy access"
-      },
-      "insurancePolicy": {
-        "title": "Upload Insurance Policy",
-        "description": "Keep your insurance documents organized"
-      },
-      "will": {
-        "title": "Upload Will",
-        "description": "Store your current will document"
-      },
-      "spouseGuardian": {
-        "title": "Add Spouse as Guardian",
-        "description": "Designate your spouse as primary guardian"
-      },
-      "backupGuardian": {
-        "title": "Add Backup Guardian",
-        "description": "Choose a trusted friend as backup guardian"
+      "assetInventory": {
+        "description": "Description",
+        "title": "Title"
       },
       "bankAccount": {
-        "title": "Add Bank Account",
-        "description": "Document your primary bank account"
+        "description": "Description",
+        "title": "Title"
       },
-      "homeProperty": {
-        "title": "Add Home Property",
-        "description": "Record your home ownership details"
+      "digitalAssetPlan": {
+        "description": "Description",
+        "title": "Title"
       },
-      "vehicle": {
-        "title": "Add Vehicle",
-        "description": "Document your vehicle information"
+      "documentCentralization": {
+        "description": "Description",
+        "title": "Title"
       },
-      "spouseBeneficiary": {
-        "title": "Add Spouse as Beneficiary",
-        "description": "Designate your spouse as primary beneficiary"
+      "emergencyContacts": {
+        "description": "Description",
+        "title": "Title"
       },
-      "childrenBeneficiaries": {
-        "title": "Add Children as Beneficiaries",
-        "description": "List your children as beneficiaries"
+      "familyMeeting": {
+        "description": "Description",
+        "title": "Title"
+      },
+      "guardianInstructions": {
+        "description": "Description",
+        "title": "Title"
+      },
+      "inheritanceEducation": {
+        "description": "Description",
+        "title": "Title"
+      },
+      "personalMessages": {
+        "description": "Description",
+        "title": "Title"
+      },
+      "willPreparation": {
+        "description": "Description",
+        "title": "Title"
       }
     },
-    "whyImportant": {
-      "birthCertificate": "Essential for identity verification and legal processes",
-      "insurancePolicy": "Critical for claims processing and family protection",
-      "will": "Ensures your wishes are legally documented",
-      "spouseGuardian": "Provides immediate decision-making authority",
-      "trustedFriend": "Offers backup support when primary guardian is unavailable",
-      "bankAccount": "Enables family to manage finances during difficult times",
-      "homeProperty": "Protects your most valuable asset",
-      "vehicle": "Ensures proper ownership transfer",
-      "spouseBeneficiary": "Secures your spouse's financial future",
-      "childrenBeneficiaries": "Protects your children's inheritance",
-      "default": "This task helps strengthen your family's protection plan"
+    "updateAsset": "Update asset",
+    "updateBeneficiary": "Update beneficiary"
+  },
+  "deepDive": {
+    "advancedPlanning": "Advanced Planning",
+    "deepDiveDescription": "You've completed the basics! Now let's dive deeper into advanced protection strategies.",
+    "milestoneAchieved": "Milestone Achieved"
+  },
+  "development": {
+    "resetOnboarding": "🔄 Reset Onboarding (Dev)"
+  },
+  "empty": {
+    "noActivity": "No recent activity to display",
+    "noAssets": "No assets added yet",
+    "noDocuments": "No documents uploaded yet",
+    "noPeople": "No trusted people added yet",
+    "noTasks": "No tasks available"
+  },
+  "errors": {
+    "failedToFetchStatus": "Failed to fetch progress status",
+    "genericError": "Something went wrong. Please refresh and try again.",
+    "loadingDashboard": "Failed to load dashboard. Please refresh the page.",
+    "loadingStats": "Failed to load statistics. Please refresh.",
+    "loadingTasks": "Failed to load tasks. Please try again.",
+    "markingComplete": "Failed to mark task as complete. Please try again.",
+    "savingProgress": "Failed to save progress. Please try again."
+  },
+  "guardian": {
+    "accepted": "Accepted",
+    "declined": "Declined",
+    "invitationSent": "Invitation sent",
+    "sendInvite": "Send invite"
+  },
+  "header": {
+    "lastUpdated": "Last updated {{date}}",
+    "quickActions": "Quick Actions",
+    "subtitle": "Here's your family protection progress",
+    "welcome": "Welcome back, {{name}}",
+    "welcomeDefault": "Welcome back"
+  },
+  "help": {
+    "basedOnProgress": "Based on progress",
+    "getHelp": "Get help",
+    "helpAndTutorials": "Help and tutorials",
+    "needHelp": "Need help",
+    "personalizedHelpDescription": "Personalized help description",
+    "quickTips": {
+      "tip1": "Tip1",
+      "tip2": "Tip2",
+      "tip3": "Tip3",
+      "tip4": "Tip4",
+      "title": "Title"
     },
-    "ifNotDone": {
-      "birthCertificate": "Delays in legal processes and identity verification",
-      "insurancePolicy": "Difficulties in filing claims and accessing benefits",
-      "will": "Your wishes may not be legally recognized",
-      "spouseGuardian": "No clear decision-making authority in emergencies",
-      "trustedFriend": "No backup support if primary guardian is unavailable",
-      "bankAccount": "Family may struggle to access needed funds",
-      "homeProperty": "Risk of asset loss or complications",
-      "vehicle": "Ownership transfer may be delayed or complicated",
-      "spouseBeneficiary": "Spouse may face financial hardship",
-      "childrenBeneficiaries": "Children may not receive intended inheritance",
-      "default": "Your family may face unnecessary complications"
+    "recommendedForYou": "Recommended for you",
+    "recommendedTopics": "Recommended topics",
+    "stepDetails": {
+      "description": "Description",
+      "estimatedTime": "Estimated time",
+      "gotIt": "Got it",
+      "minutes": "Minutes",
+      "stepByStepInstructions": "Step by step instructions",
+      "steps": "Steps",
+      "videoTutorial": "Video tutorial",
+      "watchVideoTutorial": "Watch video tutorial"
+    },
+    "topics": {
+      "addGuardians": {
+        "description": "Description",
+        "steps": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5"
+        },
+        "title": "Title"
+      },
+      "createWill": {
+        "description": "Description",
+        "steps": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5"
+        },
+        "title": "Title"
+      },
+      "designateBeneficiaries": {
+        "description": "Description",
+        "steps": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5"
+        },
+        "title": "Title"
+      },
+      "listAssets": {
+        "description": "Description",
+        "steps": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5"
+        },
+        "title": "Title"
+      },
+      "uploadDocuments": {
+        "description": "Description",
+        "steps": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5"
+        },
+        "title": "Title"
+      }
     }
+  },
+  "nextStep": {
+    "estimatedTime": "Estimated time: {{time}}",
+    "title": "Your Next Priority"
+  },
+  "notifications": {
+    "accessGranted": "Access granted to {{name}}",
+    "accessRevoked": "Access revoked from {{name}}",
+    "assetAdded": "Asset added to your vault",
+    "documentUploaded": "Document uploaded and processed",
+    "personAdded": "Trusted person added to your circle",
+    "planUpdated": "Your protection plan has been updated",
+    "reminderSet": "Reminder set for {{date}}",
+    "taskCompleted": "Task completed successfully!",
+    "willGenerated": "Will generated successfully"
+  },
+  "playbook": {
+    "create": "Create",
+    "edit": "Edit",
+    "label": "Label",
+    "status": {
+      "complete": "Complete",
+      "draft": "Draft",
+      "empty": "Empty"
+    }
+  },
+  "preservationMode": {
+    "description": "Your family protection plan is comprehensive and well-maintained. Regular reviews ensure everything stays current.",
+    "lastReviewDate": "Last review: {{date}}",
+    "latestUpdates": "Latest Updates",
+    "startAnnualCheck": "Start Annual Review",
+    "title": "Preservation Mode Active"
   },
   "progressTracking": {
-    "title": "Progress Overview",
-    "subtitle": "Track your family protection journey",
-    "currentStage": "Current Stage: {{stage}}",
-    "progressDescription": "You're making great progress! {{completed}} of {{total}} critical items completed.",
-    "completionRange": "{{min}}-{{max}}% Complete",
-    "currentTasks": "Key Tasks for {{stage}}",
-    "critical": "Critical",
     "complete": "Complete",
+    "completionRange": "Completion range",
+    "critical": "Critical",
+    "criticalGaps": {
+      "title": "Title"
+    },
+    "current": "Current",
+    "currentStage": "Current stage",
+    "currentTasks": "Current tasks",
+    "progressDescription": "Progress description",
     "stages": {
-      "foundation": {
-        "name": "Foundation",
-        "description": "Essential basics for family protection"
-      },
       "buildout": {
-        "name": "Buildout", 
-        "description": "Expanding your protection network"
+        "description": "Description",
+        "name": "Name"
+      },
+      "foundation": {
+        "description": "Description",
+        "name": "Name"
       },
       "reinforcement": {
-        "name": "Reinforcement",
-        "description": "Strengthening and securing your plan"
-      },
-      "advancedPlanning": {
-        "name": "Advanced Planning",
-        "description": "Sophisticated protection strategies"
-      },
-      "legacy": {
-        "name": "Legacy",
-        "description": "Preserving your family's future"
+        "description": "Description",
+        "name": "Name"
       }
     },
+    "subtitle": "Subtitle",
     "tasks": {
-      "basicInfo": "Basic Information",
-      "emergencyContacts": "Emergency Contacts",
-      "keyDocuments": "Key Documents",
-      "assetInventory": "Asset Inventory",
+      "accessVerification": "Access verification",
+      "assetInventory": "Asset inventory",
+      "basicInfo": "Basic info",
       "beneficiaries": "Beneficiaries",
-      "guardianNetwork": "Guardian Network",
-      "willCreation": "Will Creation",
-      "instructions": "Personal Instructions",
-      "accessVerification": "Access Verification"
+      "emergencyContacts": "Emergency contacts",
+      "guardianNetwork": "Guardian network",
+      "instructions": "Instructions",
+      "keyDocuments": "Key documents",
+      "willCreation": "Will creation"
     },
-    "criticalGaps": {
-      "title": "Critical Gaps",
-      "description": "These items need immediate attention"
-    }
+    "title": "Title"
   },
-  "annualReview": {
-    "title": "Annual Review",
-    "description": "Review and update your family protection plan",
-    "startReview": "Start Review",
-    "lastReview": "Last reviewed: {{date}}"
+  "quickTasks": {
+    "allCompleted": "All completed",
+    "allTasks": "All tasks",
+    "assets": "Assets",
+    "beneficiaries": "Beneficiaries",
+    "completed": "Completed",
+    "documents": "Documents",
+    "greatProgress": "Great progress",
+    "guardians": "Guardians",
+    "ifNotDone": "If not done",
+    "markAsComplete": "Mark as complete",
+    "minutes": "Minutes",
+    "progress": "Progress",
+    "start": "Start",
+    "tasks": {
+      "backupGuardian": {
+        "description": "Description",
+        "title": "Title"
+      },
+      "bankAccount": {
+        "description": "Description",
+        "title": "Title"
+      },
+      "birthCertificate": {
+        "description": "Description",
+        "title": "Title"
+      },
+      "childrenBeneficiaries": {
+        "description": "Description",
+        "title": "Title"
+      },
+      "homeProperty": {
+        "description": "Description",
+        "title": "Title"
+      },
+      "insurancePolicy": {
+        "description": "Description",
+        "title": "Title"
+      },
+      "spouseBeneficiary": {
+        "description": "Description",
+        "title": "Title"
+      },
+      "spouseGuardian": {
+        "description": "Description",
+        "title": "Title"
+      },
+      "vehicle": {
+        "description": "Description",
+        "title": "Title"
+      },
+      "will": {
+        "description": "Description",
+        "title": "Title"
+      }
+    },
+    "title": "Title",
+    "wellOnWay": "Well on way",
+    "whyImportant": "Why important"
   },
   "recommendations": {
-    "title": "Next Step Recommendations",
-    "subtitle": "Personalized suggestions based on your progress",
-    "emergencyContacts": {
-      "title": "Add Emergency Contacts",
-      "description": "Designate trusted people who can help your family in emergencies",
-      "action": "Add Contacts",
-      "impact": "Immediate family protection in crisis situations"
-    },
-    "keyDocuments": {
-      "title": "Upload Key Documents",
-      "description": "Store important documents for easy family access",
-      "action": "Upload Documents",
-      "impact": "Ensures family can access critical information"
-    },
-    "assetInventory": {
-      "title": "Create Asset Inventory",
-      "description": "Document all your valuable possessions and accounts",
-      "action": "Add Assets",
-      "impact": "Protects your family's financial future"
-    },
-    "beneficiaries": {
-      "title": "Designate Beneficiaries",
-      "description": "Choose who will inherit your assets and property",
-      "action": "Add Beneficiaries",
-      "impact": "Ensures your wishes are carried out"
-    },
-    "guardianNetwork": {
-      "title": "Build Guardian Network",
-      "description": "Create a support system for your family",
-      "action": "Add Guardians",
-      "impact": "Provides backup support and guidance"
-    },
-    "willCreation": {
-      "title": "Create Your Will",
-      "description": "Generate a legally valid will document",
-      "action": "Start Will",
-      "impact": "Legally protects your family's inheritance"
-    },
-    "personalInstructions": {
-      "title": "Add Personal Instructions",
-      "description": "Leave important messages and guidance for your family",
-      "action": "Add Instructions",
-      "impact": "Provides emotional and practical guidance"
-    },
-    "will": {
-      "title": "Create Your Will",
-      "description": "Generate a legally valid will document",
-      "action": "Start Will",
-      "impact": "Legally protects your family's inheritance"
-    },
     "accessVerification": {
-      "title": "Verify Access Permissions",
-      "description": "Ensure family members can access critical information",
-      "action": "Check Access",
-      "impact": "Guarantees family can access needed information"
+      "action": "Action",
+      "description": "Description",
+      "impact": "Impact",
+      "title": "Title"
     },
     "annualReview": {
-      "title": "Schedule Annual Review",
-      "description": "Set up regular reviews of your protection plan",
-      "action": "Schedule Review",
-      "impact": "Keeps your plan current and effective"
+      "action": "Action",
+      "description": "Description",
+      "impact": "Impact",
+      "title": "Title"
+    },
+    "assetInventory": {
+      "action": "Action",
+      "description": "Description",
+      "impact": "Impact",
+      "title": "Title"
     },
     "beneficiaries": {
-      "title": "Designate Beneficiaries",
-      "description": "Choose who will inherit your assets and property",
-      "action": "Add Beneficiaries",
-      "impact": "Ensures your wishes are carried out",
-      "prerequisite": "Complete asset inventory first"
+      "action": "Action",
+      "description": "Description",
+      "impact": "Impact",
+      "prerequisite": "Prerequisite",
+      "title": "Title"
+    },
+    "emergencyContacts": {
+      "action": "Action",
+      "description": "Description",
+      "impact": "Impact",
+      "title": "Title"
+    },
+    "guardianNetwork": {
+      "action": "Add Guardians",
+      "description": "Create a support system for your family",
+      "impact": "Provides backup support and guidance",
+      "title": "Build Guardian Network"
+    },
+    "impact": {
+      "label": "Label"
+    },
+    "keyDocuments": {
+      "action": "Action",
+      "description": "Description",
+      "impact": "Impact",
+      "title": "Title"
+    },
+    "moreHelp": {
+      "link": "Link",
+      "text": "Text"
+    },
+    "personalInstructions": {
+      "action": "Add Instructions",
+      "description": "Leave important messages and guidance for your family",
+      "impact": "Provides emotional and practical guidance",
+      "title": "Add Personal Instructions"
+    },
+    "prerequisites": {
+      "label": "Label"
     },
     "priority": {
       "critical": "Critical",
       "important": "Important",
       "suggested": "Suggested"
     },
-    "impact": {
-      "label": "Impact"
+    "subtitle": "Subtitle",
+    "title": "Title",
+    "will": {
+      "action": "Action",
+      "description": "Description",
+      "impact": "Impact",
+      "title": "Title"
     },
-    "prerequisites": {
-      "label": "Prerequisites"
-    },
-    "moreHelp": {
-      "text": "Need more guidance?",
-      "link": "View Help Center"
+    "willCreation": {
+      "action": "Start Will",
+      "description": "Generate a legally valid will document",
+      "impact": "Legally protects your family's inheritance",
+      "title": "Create Your Will"
     }
   },
-  "development": {
-    "resetOnboarding": "🔄 Reset Onboarding (Dev)"
+  "sections": {
+    "insights": {
+      "dismiss": "Dismiss",
+      "noInsights": "No insights available yet. Complete more tasks to get personalized recommendations.",
+      "recommendation": "Recommendation",
+      "subtitle": "Personalized recommendations for your situation",
+      "tip": "Pro Tip",
+      "title": "Protection Insights",
+      "viewDetails": "View Details",
+      "warning": "Attention Needed"
+    },
+    "nextSteps": {
+      "estimatedTime": "{{minutes}} min",
+      "highPriority": "High Priority",
+      "lowPriority": "Low Priority",
+      "markComplete": "Mark Complete",
+      "mediumPriority": "Medium Priority",
+      "noTasks": "Great job! You've completed all priority tasks.",
+      "startTask": "Start Task",
+      "subtitle": "Priority tasks to strengthen your family's protection",
+      "title": "Your Next Steps",
+      "viewAll": "View All Tasks"
+    },
+    "quickStart": {
+      "completed": "Completed",
+      "inProgress": "In Progress",
+      "notStarted": "Not Started",
+      "step1": {
+        "action": "Add Asset",
+        "description": "Start with your home, primary bank account, or business",
+        "title": "Add Your Most Important Asset"
+      },
+      "step2": {
+        "action": "Add Person",
+        "description": "Choose someone who can help your family in an emergency",
+        "title": "Designate a Trusted Person"
+      },
+      "step3": {
+        "action": "Upload Documents",
+        "description": "Store insurance policies, deeds, or important contracts",
+        "title": "Upload Key Documents"
+      },
+      "step4": {
+        "action": "Start Will",
+        "description": "Generate a legally valid will based on your information",
+        "title": "Create Your Will"
+      },
+      "subtitle": "Essential first steps to protect your family",
+      "title": "Quick Start Guide"
+    },
+    "recentActivity": {
+      "assetUpdated": "Asset updated",
+      "daysAgo": "{{days}} days ago",
+      "documentAdded": "Document added",
+      "noActivity": "No recent activity",
+      "personAdded": "Trusted person added",
+      "subtitle": "Your latest updates and changes",
+      "taskCompleted": "Task completed",
+      "title": "Recent Activity",
+      "today": "Today",
+      "viewAll": "View All Activity",
+      "willUpdated": "Will updated",
+      "yesterday": "Yesterday"
+    }
+  },
+  "stats": {
+    "completionRate": "{{percentage}}% Complete",
+    "documentsStored": "Documents Stored",
+    "documentsStoredDescription": "Important documents safely organized",
+    "excellent": "Excellent",
+    "gettingStarted": "Getting Started",
+    "good": "Good",
+    "needsWork": "Needs Work",
+    "planStrength": "Plan Strength",
+    "planStrengthDescription": "Overall completeness of your family protection plan",
+    "protectionLevel": "Protection Level",
+    "protectionLevelDescription": "How prepared your family is for emergencies",
+    "tasksCompleted": "Tasks Completed",
+    "tasksCompletedDescription": "{{completed}} of {{total}} priority tasks finished",
+    "trustedPeople": "Trusted People",
+    "trustedPeopleDescription": "People designated to help your family"
+  },
+  "subscription": {
+    "autoRenewal": "Auto renewal",
+    "cancellationNotice": "Cancellation notice",
+    "days": "Days",
+    "manual": "Manual",
+    "types": {
+      "monthly": "Monthly",
+      "yearly": "Yearly"
+    }
+  },
+  "subtitle": "Your family protection command center",
+  "tasks": {
+    "actions": {
+      "start": "Start"
+    },
+    "categories": {
+      "organize": "Organize",
+      "secure": "Secure",
+      "transfer": "Transfer"
+    },
+    "status": {
+      "blocked": "Blocked",
+      "completed": "Completed",
+      "inProgress": "In Progress",
+      "notStarted": "Not Started",
+      "skipped": "Skipped"
+    },
+    "types": {
+      "assetInventory": {
+        "description": "Document your valuable possessions so nothing gets overlooked or lost.",
+        "title": "Create Asset Inventory"
+      },
+      "bankAccount": {
+        "description": "Record your banking and investment information so your family can manage finances.",
+        "title": "Document Financial Accounts"
+      },
+      "digitalAssetPlan": {
+        "description": "Organize your online accounts, passwords, and digital property for easy access.",
+        "title": "Plan for Digital Assets"
+      },
+      "documentCentralization": {
+        "description": "Gather and digitize your most critical paperwork so your family can find everything in one place.",
+        "title": "Organize Important Documents"
+      },
+      "emergencyContacts": {
+        "description": "Ensure the right people can access critical information when they need it most.",
+        "title": "Set Up Emergency Access"
+      },
+      "familyMeeting": {
+        "description": "Have an open conversation with your family about your plans and their roles.",
+        "title": "Hold Family Discussion"
+      },
+      "guardianInstructions": {
+        "description": "Choose trusted people who can step in and help your family during difficult times.",
+        "title": "Designate Emergency Contacts"
+      },
+      "inheritanceEducation": {
+        "description": "Understand the legal requirements in your area to avoid complications for your family.",
+        "title": "Learn About Inheritance Laws"
+      },
+      "personalMessages": {
+        "description": "Leave heartfelt messages and important instructions for your loved ones.",
+        "title": "Record Personal Messages"
+      },
+      "willPreparation": {
+        "description": "Create a legally valid document that clearly states your wishes for your assets and family.",
+        "title": "Prepare Your Will"
+      }
+    }
+  },
+  "title": "Dashboard",
+  "widgets": {
+    "familyAccess": {
+      "description": "Who has access to what information",
+      "manageAccess": "Manage Access",
+      "noAccess": "No family access configured",
+      "title": "Family Access Status",
+      "viewPermissions": "View Permissions"
+    },
+    "planStrengthMeter": {
+      "description": "Visual indicator of your overall preparation level",
+      "fullySecured": "Fully Secured",
+      "needsAttention": "Needs Attention",
+      "onTrack": "On Track",
+      "title": "Plan Strength Meter",
+      "wellProtected": "Well Protected"
+    },
+    "upcomingDeadlines": {
+      "description": "Important dates and renewals to remember",
+      "dueThisWeek": "Due This Week",
+      "dueToday": "Due Today",
+      "dueTomorrow": "Due Tomorrow",
+      "noDeadlines": "No upcoming deadlines",
+      "overdue": "Overdue",
+      "title": "Upcoming Deadlines"
+    }
+  },
+  "progress": {
+    "step": "Step"
+  },
+  "completion": {
+    "viewPlan": "View plan"
+  },
+  "push": {
+    "taskReminder": {
+      "title": "Family Protection Reminder",
+      "body": "You have {{count}} pending tasks to strengthen your family's protection plan.",
+      "action": "Review Tasks"
+    },
+    "documentExpiry": {
+      "title": "Document Renewal Needed",
+      "body": "{{documentName}} expires on {{date}}. Please review and update.",
+      "action": "Update Document"
+    },
+    "familyAccess": {
+      "title": "Family Access Update",
+      "body": "{{memberName}} has been granted access to your family protection information.",
+      "action": "Manage Access"
+    },
+    "securityAlert": {
+      "title": "Security Alert",
+      "body": "New login detected from {{location}}. If this wasn't you, secure your account immediately.",
+      "action": "Review Activity"
+    },
+    "willGenerated": {
+      "title": "Will Document Ready",
+      "body": "Your will has been generated. Review execution requirements to make it legally binding.",
+      "action": "View Will"
+    },
+    "paymentIssue": {
+      "title": "Payment Issue",
+      "body": "We couldn't process your payment. Please update your payment method.",
+      "action": "Update Payment"
+    },
+    "trialExpiring": {
+      "title": "Trial Ending Soon",
+      "body": "Your LegacyGuard trial expires in {{days}} days. Choose a plan to continue protection.",
+      "action": "View Plans"
+    }
+  },
+  "sms": {
+    "securityCode": {
+      "message": "Your LegacyGuard security code is: {{code}}. This code expires in 10 minutes. Never share this code with anyone."
+    },
+    "loginAlert": {
+      "message": "LegacyGuard: New login detected from {{location}} at {{time}}. If this wasn't you, secure your account immediately: {{secureUrl}}"
+    },
+    "emergencyAccess": {
+      "message": "LegacyGuard: Emergency access has been activated for {{familyName}}'s account. Login to view important information: {{loginUrl}}"
+    },
+    "criticalReminder": {
+      "message": "LegacyGuard: Important family protection tasks need your attention. Complete them when convenient: {{dashboardUrl}}"
+    }
+  },
+  "inApp": {
+    "welcome": {
+      "title": "Welcome to LegacyGuard",
+      "message": "Let's start building your family protection plan. Begin with our 5-minute assessment.",
+      "action": "Start Assessment"
+    },
+    "firstAsset": {
+      "title": "Add Your First Asset",
+      "message": "Protect your family by documenting your most important asset.",
+      "action": "Add Asset"
+    },
+    "inviteTrusted": {
+      "title": "Invite Trusted Person",
+      "message": "Designate someone who can help your family during emergencies.",
+      "action": "Add Person"
+    },
+    "createWill": {
+      "title": "Create Your Will",
+      "message": "Generate a legally valid will based on your assets and wishes.",
+      "action": "Start Will"
+    },
+    "reviewProgress": {
+      "title": "Review Your Progress",
+      "message": "See how your family protection plan is developing.",
+      "action": "View Progress"
+    }
+  },
+  "alerts": {
+    "description": "Description",
+    "dismiss": "Dismiss",
+    "errors": {
+      "dismissFailed": "Dismiss failed",
+      "loadFailed": "Load failed",
+      "renewFailed": "Renew failed",
+      "snoozeFailed": "Snooze failed"
+    },
+    "expiresOn": "Expires on",
+    "markAsRenewed": "Mark as renewed",
+    "messages": {
+      "dismissed": "Dismissed",
+      "markedAsRenewed": "Marked as renewed",
+      "snoozed": "Snoozed"
+    },
+    "noActiveAlerts": "No active alerts",
+    "noDismissedAlerts": "No dismissed alerts",
+    "noSnoozedAlerts": "No snoozed alerts",
+    "renewalInstructions": "Renewal instructions",
+    "snooze7Days": "Snooze7 days",
+    "snoozedUntil": "Snoozed until",
+    "tabs": {
+      "active": "Active",
+      "dismissed": "Dismissed",
+      "snoozed": "Snoozed"
+    },
+    "title": "Title",
+    "types": {
+      "expired": "Expired",
+      "expiring30": "Expiring30",
+      "expiring7": "Expiring7",
+      "expiring90": "Expiring90"
+    },
+    "unread": "Unread",
+    "unsnooze": "Unsnooze"
+  },
+  "admin": {
+    "accessDenied": {
+      "description": "You don't have permission to access this area",
+      "title": "Access Denied"
+    },
+    "analyticsDashboard": {
+      "a_b_tests_9": "A/B Tests",
+      "active_and_new_users_over_time_12": "Active and new users over time",
+      "analytics_dashboard_2": "Analytics Dashboard",
+      "avg_documents_per_user_19": "Average documents per user",
+      "avg_session_duration_17": "Average session duration",
+      "avg_trusted_people_per_user_20": "Average trusted people per user",
+      "bounce_rate_18": "Bounce rate",
+      "confidence_29": "Confidence",
+      "feature_adoption_8": "Feature adoption",
+      "feature_adoption_rates_23": "Feature adoption rates",
+      "from_last_month_6": "From last month",
+      "key_platform_metrics_16": "Key platform metrics",
+      "loading_analytics_data_1": "Loading analytics data...",
+      "monitor_user_engagement_featur_3": "Monitor user engagement features",
+      "percentage_of_users_using_each_24": "Percentage of users using each feature",
+      "platform_statistics_15": "Platform statistics",
+      "refreshing_4": "Refreshing..."
+    }
+  },
+  "analytics": {
+    "description": "View platform analytics and insights",
+    "title": "Analytics"
+  },
+  "analysis": {
+    "description": "Data analysis and insights",
+    "title": "Analysis"
+  },
+  "calculator": {
+    "badge": "Badge",
+    "calculateButton": "Calculate button",
+    "inputs": {
+      "accounts": "Accounts",
+      "accountsHelp": "Accounts help",
+      "business": "Business",
+      "dependents": "Dependents",
+      "dependentsHelp": "Dependents help",
+      "description": "Description",
+      "income": "Income",
+      "incomeHelp": "Income help",
+      "property": "Property",
+      "title": "Title"
+    },
+    "results": {
+      "ctaButton": "Cta button",
+      "ctaContext": "Cta context",
+      "description": "Description",
+      "emotional": {
+        "confidence": "Confidence",
+        "peace": "Peace",
+        "stress": "Stress",
+        "title": "Title"
+      },
+      "families": "Families",
+      "moneySavings": {
+        "legalFees": "Legal fees",
+        "lostWages": "Lost wages",
+        "penalties": "Penalties",
+        "title": "Title",
+        "total": "Total"
+      },
+      "shareButton": "Share button",
+      "socialProof": "Social proof",
+      "timeSavings": {
+        "saved": "Saved",
+        "title": "Title",
+        "with": "With",
+        "withMinutes": "With minutes",
+        "without": "Without",
+        "withoutHours": "Without hours"
+      },
+      "title": "Title"
+    },
+    "shareCopied": "Share copied",
+    "shareText": "Share text",
+    "shareTitle": "Share title",
+    "subtitle": "Subtitle",
+    "testimonial": {
+      "author": "Author",
+      "quote": "Quote"
+    },
+    "title": "Title"
+  },
+  "benefits": {
+    "sectionSubtitle": "Section subtitle",
+    "sectionTitle": "Section title"
+  },
+  "complexityReduction": {
+    "actions": {
+      "completeStep": "Complete step",
+      "iNeedHelp": "I need help",
+      "nextStep": "Next step",
+      "previousStep": "Previous step",
+      "showMeHow": "Show me how",
+      "skipStep": "Skip step"
+    },
+    "benefits": {
+      "confidence": {
+        "description": "Description",
+        "title": "Title"
+      },
+      "family": {
+        "description": "Description",
+        "title": "Title"
+      },
+      "overwhelm": {
+        "description": "Description",
+        "title": "Title"
+      },
+      "progress": {
+        "description": "Description",
+        "title": "Title"
+      },
+      "title": "Title"
+    },
+    "description": "Description",
+    "features": {
+      "difficultyLevels": {
+        "description": "Description",
+        "title": "Title"
+      },
+      "helpAvailable": {
+        "description": "Description",
+        "title": "Title"
+      },
+      "progressTracking": {
+        "description": "Description",
+        "title": "Title"
+      },
+      "stepByStep": {
+        "description": "Description",
+        "title": "Title"
+      },
+      "timeEstimation": {
+        "description": "Description",
+        "title": "Title"
+      },
+      "title": "Title"
+    },
+    "progress": {
+      "completed": "Completed",
+      "title": "Title",
+      "totalSteps": "Total steps"
+    },
+    "steps": {
+      "digitalAssets": {
+        "complexity": "Complexity",
+        "timeRequired": "Time required",
+        "title": "Title",
+        "whatWeDo": "What we do",
+        "whatYouDo": "What you do",
+        "why": "Why"
+      },
+      "emergencyContacts": {
+        "complexity": "Complexity",
+        "timeRequired": "Time required",
+        "title": "Title",
+        "whatWeDo": "What we do",
+        "whatYouDo": "What you do",
+        "why": "Why"
+      },
+      "familyInstructions": {
+        "complexity": "Complexity",
+        "timeRequired": "Time required",
+        "title": "Title",
+        "whatWeDo": "What we do",
+        "whatYouDo": "What you do",
+        "why": "Why"
+      },
+      "identifyBankAccount": {
+        "complexity": "Complexity",
+        "timeRequired": "Time required",
+        "title": "Title",
+        "whatWeDo": "What we do",
+        "whatYouDo": "What you do",
+        "why": "Why"
+      },
+      "insurancePolicies": {
+        "complexity": "Complexity",
+        "timeRequired": "Time required",
+        "title": "Title",
+        "whatWeDo": "What we do",
+        "whatYouDo": "What you do",
+        "why": "Why"
+      },
+      "legalDocuments": {
+        "complexity": "Complexity",
+        "timeRequired": "Time required",
+        "title": "Title",
+        "whatWeDo": "What we do",
+        "whatYouDo": "What you do",
+        "why": "Why"
+      }
+    },
+    "subtitle": "Subtitle",
+    "title": "Title"
+  },
+  "reminders": {
+    "channels": {
+      "email": "Email",
+      "emailDesc": "Email desc",
+      "inApp": "In app",
+      "inAppDesc": "In app desc"
+    },
+    "complete": "Complete",
+    "completedSuccess": "Completed success",
+    "dashboardDescription": "Dashboard description",
+    "dismiss": "Dismiss",
+    "due": "Due",
+    "dueOn": "Due on",
+    "duration": {
+      "week": "Week"
+    },
+    "frequency": {
+      "annually": "Annually",
+      "monthly": "Monthly",
+      "quarterly": "Quarterly",
+      "semiAnnually": "Semi annually"
+    },
+    "noUpcoming": "No upcoming",
+    "overdue": "Overdue",
+    "reminderDashboard": {
+      "reminders_1": "Reminders 1"
+    },
+    "settings": {
+      "channels": "Channels",
+      "channelsDesc": "Channels desc",
+      "defaultFrequency": "Default frequency",
+      "enableReminders": "Enable reminders",
+      "enableRemindersDesc": "Enable reminders desc",
+      "general": "General",
+      "generalDesc": "General desc",
+      "reminderTypes": "Reminder types",
+      "reminderTypesDesc": "Reminder types desc",
+      "saveError": "Save error",
+      "saved": "Saved"
+    },
+    "snooze": "Snooze",
+    "snoozeWeek": "Snooze week",
+    "snoozedSuccess": "Snoozed success",
+    "title": "Title",
+    "types": {
+      "contentUpdate": "Content update",
+      "contentUpdateDesc": "Content update desc",
+      "documentExpiry": "Document expiry",
+      "documentExpiryDesc": "Document expiry desc",
+      "lifeEvent": "Life event",
+      "lifeEventDesc": "Life event desc",
+      "review": "Review",
+      "reviewDesc": "Review desc"
+    },
+    "viewAll": "View all"
   }
 }

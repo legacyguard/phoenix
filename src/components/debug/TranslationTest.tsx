@@ -20,17 +20,17 @@ export const TranslationTest: React.FC = () => {
 
   return (
     <div className="p-4 bg-gray-100 rounded-lg">
-      <h2 className="text-xl font-bold mb-4">{t("debug.translationTest.translation_debug_test_1")}</h2>
-      <p className="mb-2">{t("debug.translationTest.current_language_2")}{i18n.language}</p>
-      <p className="mb-4">{t("debug.translationTest.available_languages_3")}{Object.keys(i18n.store.data).join(', ')}</p>
+      <h2 className="text-xl font-bold mb-4">{t('help.translationTest.translation_debug_test_1')}</h2>
+      <p className="mb-2">{t('help.translationTest.current_language_2')}{i18n.language}</p>
+      <p className="mb-4">{t('help.translationTest.available_languages_3')}{Object.keys(i18n.store.data).join(', ')}</p>
       
-      <h3 className="text-lg font-semibold mb-2">{t("debug.translationTest.dashboard_stats_translations_4")}</h3>
+      <h3 className="text-lg font-semibold mb-2">{t('help.translationTest.dashboard_stats_translations_4')}</h3>
       <table className="w-full">
         <thead>
           <tr className="border-b">
             <th className="text-left p-2">Key</th>
             <th className="text-left p-2">Translation</th>
-            <th className="text-left p-2">{t("debug.translationTest.exists_5")}</th>
+            <th className="text-left p-2">{t('help.translationTest.exists_5')}</th>
           </tr>
         </thead>
         <tbody>
@@ -44,7 +44,7 @@ export const TranslationTest: React.FC = () => {
         </tbody>
       </table>
       
-      <h3 className="text-lg font-semibold mt-4 mb-2">{t("debug.translationTest.raw_resource_check_6")}</h3>
+      <h3 className="text-lg font-semibold mt-4 mb-2">{t('help.translationTest.raw_resource_check_6')}</h3>
       <pre className="bg-white p-2 rounded text-xs overflow-auto">
         {JSON.stringify(i18n.store.data[i18n.language]?.common?.dashboard?.stats, null, 2)}
       </pre>

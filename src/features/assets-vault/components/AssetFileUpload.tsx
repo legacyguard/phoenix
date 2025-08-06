@@ -196,7 +196,7 @@ export const AssetFileUpload: React.FC<AssetFileUploadProps> = ({
     <Card className="w-full max-w-2xl">
       <CardHeader>
         <div className="flex items-center justify-between">
-          <CardTitle>{t('vault.fileUpload.title')}</CardTitle>
+          <CardTitle>{t('assets.fileUpload.title')}</CardTitle>
           {onClose && (
             <Button variant="ghost" size="icon" onClick={onClose}>
               <X className="h-4 w-4" />
@@ -228,10 +228,10 @@ export const AssetFileUpload: React.FC<AssetFileUploadProps> = ({
           
           <Upload className="h-12 w-12 mx-auto mb-4 text-gray-400" />
           <p className="text-lg font-medium mb-2">
-            {t('vault.fileUpload.dragDropText')}
+            {t('assets.fileUpload.dragDropText')}
           </p>
           <p className="text-sm text-gray-500">
-            {t('vault.fileUpload.clickToSelect')}
+            {t('assets.fileUpload.clickToSelect')}
           </p>
           <p className="text-xs text-gray-400 mt-2">
             {t('vault.fileUpload.maxSize', { size: '100MB' })}
@@ -244,10 +244,10 @@ export const AssetFileUpload: React.FC<AssetFileUploadProps> = ({
             <Lock className="h-5 w-5 text-gray-600" />
             <div>
               <Label htmlFor="encrypt-toggle" className="font-medium">
-                {t('vault.fileUpload.encryptFiles')}
+                {t('assets.fileUpload.encryptFiles')}
               </Label>
               <p className="text-sm text-gray-500">
-                {t('vault.fileUpload.encryptDescription')}
+                {t('assets.fileUpload.encryptDescription')}
               </p>
             </div>
           </div>
@@ -260,10 +260,10 @@ export const AssetFileUpload: React.FC<AssetFileUploadProps> = ({
 
         {/* Tags */}
         <div className="space-y-3">
-          <Label>{t('vault.fileUpload.tags')}</Label>
+          <Label>{t('assets.fileUpload.tags')}</Label>
           <div className="flex gap-2">
             <Input
-              placeholder={t('vault.fileUpload.addTag')}
+              placeholder={t('assets.fileUpload.addTag')}
               value={tagInput}
               onChange={(e) => setTagInput(e.target.value)}
               onKeyPress={(e) => e.key === 'Enter' && (e.preventDefault(), addTag())}
@@ -291,7 +291,7 @@ export const AssetFileUpload: React.FC<AssetFileUploadProps> = ({
         {/* File List */}
         {files.length > 0 && (
           <div className="space-y-3">
-            <Label>{t('vault.fileUpload.selectedFiles')}</Label>
+            <Label>{t('assets.fileUpload.selectedFiles')}</Label>
             <div className="space-y-2">
               {files.map(fileItem => (
                 <div
@@ -358,12 +358,12 @@ export const AssetFileUpload: React.FC<AssetFileUploadProps> = ({
             {uploading ? (
               <>
                 <Loader2 className="h-4 w-4 mr-2 animate-spin" />
-                {t('vault.fileUpload.uploading')}
+                {t('assets.fileUpload.uploading')}
               </>
             ) : (
               <>
                 <Upload className="h-4 w-4 mr-2" />
-                {t('vault.fileUpload.uploadFiles')}
+                {t('assets.fileUpload.uploadFiles')}
               </>
             )}
           </Button>
@@ -374,7 +374,7 @@ export const AssetFileUpload: React.FC<AssetFileUploadProps> = ({
           <Alert>
             <Lock className="h-4 w-4" />
             <AlertDescription>
-              {t('vault.fileUpload.encryptionInfo')}
+              {t('assets.fileUpload.encryptionInfo')}
             </AlertDescription>
           </Alert>
         )}

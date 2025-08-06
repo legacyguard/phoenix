@@ -81,7 +81,7 @@ const getIconForAsset = (subType: string) => {
 };
 
 const AssetCard: React.FC<AssetCardProps> = ({ asset, onView, onEdit, onDelete }) => {
-  const { t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation('ui');
   
   const formatCurrency = (value: number | undefined, currency: string = 'USD') => {
     if (!value) return null;
@@ -125,18 +125,18 @@ const AssetCard: React.FC<AssetCardProps> = ({ asset, onView, onEdit, onDelete }
             <DropdownMenuContent align="end">
               <DropdownMenuItem onClick={() => onView(asset)}>
                 <Eye className="mr-2 h-4 w-4" />
-                {t('common.viewDetails')}
+                {t('ui.viewDetails')}
               </DropdownMenuItem>
               <DropdownMenuItem onClick={() => onEdit(asset)}>
                 <Edit className="mr-2 h-4 w-4" />
-                {t('common.edit')}
+                {t('ui.edit')}
               </DropdownMenuItem>
               <DropdownMenuItem 
                 onClick={() => onDelete(asset)}
                 className="text-destructive"
               >
                 <Trash2 className="mr-2 h-4 w-4" />
-                {t('common.delete')}
+                {t('ui.delete')}
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>

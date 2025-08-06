@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Progress } from '@/components/ui/progress';
 import { AlertCircle, RefreshCw, WifiOff } from 'lucide-react';
 import { useOnlineStatus } from '@/hooks/useOnlineStatus';
+import { useTranslation } from 'react-i18next';
 
 interface RetryStatusProps {
   isRetrying: boolean;
@@ -25,6 +26,7 @@ export const RetryStatus: React.FC<RetryStatusProps> = ({
   showOfflineStatus = true
 }) => {
   const isOnline = useOnlineStatus();
+  const { t: tMicro } = useTranslation('micro-copy');
   
   if (!isRetrying && !error && (showOfflineStatus ? isOnline : true)) {
     return null;
@@ -39,7 +41,7 @@ export const RetryStatus: React.FC<RetryStatusProps> = ({
         <Alert variant="destructive">
           <WifiOff className="h-4 w-4" />
           <AlertDescription className="flex items-center justify-between">
-            <span>You are offline. Operations will continue when connection is restored.</span>
+            <span>{tMicro('statusMessages.loading.connecting')}</span>
           </AlertDescription>
         </Alert>
       )}
@@ -51,14 +53,14 @@ export const RetryStatus: React.FC<RetryStatusProps> = ({
           <AlertDescription>
             <div className="space-y-2">
               <div className="flex items-center justify-between">
-                <span>Retrying request... (attempt {attemptCount} of {maxAttempts})</span>
+                <span>{tMicro('statusMessages.progress.step', { current: attemptCount, total: maxAttempts })}</span>
                 {onCancel && (
                   <Button
                     size="sm"
                     variant="ghost"
                     onClick={onCancel}
                   >
-                    Cancel
+                    {tMicro('tooltips.general.cancel')}
                   </Button>
                 )}
               </div>
@@ -74,7 +76,7 @@ export const RetryStatus: React.FC<RetryStatusProps> = ({
           <AlertCircle className="h-4 w-4" />
           <AlertDescription>
             <div className="space-y-2">
-              <span>{error.message || 'Operation failed'}</span>
+              <span>{error.message || tMicro('statusMessages.empty.noData')}</span>
               {onRetry && (
                 <Button
                   size="sm"
@@ -83,7 +85,7 @@ export const RetryStatus: React.FC<RetryStatusProps> = ({
                   className="mt-2"
                 >
                   <RefreshCw className="mr-2 h-3 w-3" />
-                  Try Again
+                  {tMicro('tooltips.general.retry')}
                 </Button>
               )}
             </div>

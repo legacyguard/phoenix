@@ -78,7 +78,7 @@ const Help: React.FC = () => {
 
       <div className="mt-16">
         <h2 className="text-2xl font-semibold text-primary mb-2">
-          {t('contact.contactForm')}
+          {t('help.contactForm')}
         </h2>
         
         <div className="grid md:grid-cols-2 gap-6">
@@ -87,18 +87,18 @@ const Help: React.FC = () => {
               <div className="mx-auto w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
                 <Mail className="h-8 w-8 text-primary" />
               </div>
-              <CardTitle className="text-xl">{t('contact.emailSupport')}</CardTitle>
+              <CardTitle className="text-xl">{t('help.emailSupport')}</CardTitle>
             </CardHeader>
             <CardContent className="text-center">
               <p className="text-muted-foreground mb-6">
-                {t('contact.emailSupport')}
+                {t('help.emailSupport')}
               </p>
               <Button 
                 onClick={handleEmailClick}
                 className="w-full"
                 variant="default"
               >
-                {t('contact.emailSupport')}
+                {t('help.emailSupport')}
               </Button>
             </CardContent>
           </Card>
@@ -108,18 +108,18 @@ const Help: React.FC = () => {
               <div className="mx-auto w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4">
                 <Calendar className="h-8 w-8 text-primary" />
               </div>
-              <CardTitle className="text-xl">{t('contact.callSupport')}</CardTitle>
+              <CardTitle className="text-xl">{t('help.callSupport')}</CardTitle>
             </CardHeader>
             <CardContent className="text-center">
               <p className="text-muted-foreground mb-6">
-                {t('contact.callSupport')}
+                {t('help.callSupport')}
               </p>
               <Button 
                 onClick={handleScheduleClick}
                 className="w-full"
                 variant="outline"
               >
-                {t('contact.callSupport')}
+                {t('help.callSupport')}
               </Button>
             </CardContent>
           </Card>

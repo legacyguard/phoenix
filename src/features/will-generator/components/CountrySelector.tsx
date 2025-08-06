@@ -23,7 +23,7 @@ export function CountrySelector({
   onTestatorUpdate,
   errors
 }: CountrySelectorProps) {
-  const { t } = useTranslation();
+  const { t } = useTranslation('wills');
   const [countries, setCountries] = useState<WillRequirements[]>([]);
   const [ukJurisdiction, setUkJurisdiction] = useState<string>('');
   const [selectedLanguage, setSelectedLanguage] = useState<string>('en');
@@ -115,14 +115,14 @@ export function CountrySelector({
     <div className="space-y-6">
       <Card>
         <CardHeader>
-          <CardTitle>{t('will.countryRequirements')}</CardTitle>
+          <CardTitle>{t('wills.countryRequirements')}</CardTitle>
           <CardDescription>
-            {selectedCountry ? t('will.selectedCountryDetails', { country: selectedCountry }) : t('will.selectCountry')}
+            {selectedCountry ? t('will.selectedCountryDetails', { country: selectedCountry }) : t('wills.selectCountry')}
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="space-y-2">
-            <Label>{t('will.selectCountry')}</Label>
+            <Label>{t('wills.selectCountry')}</Label>
             <Select value={selectedCountry} onValueChange={(value) => {
               const countryReqs = countries.find(c => c.country_code === value);
               if (countryReqs) {
@@ -221,39 +221,39 @@ export function CountrySelector({
           )}
 
           <div className="space-y-4">
-            <Label>{t('will.testatorInfo')}</Label>
+            <Label>{t('wills.testatorInfo')}</Label>
             <div className="space-y-2">
-              <Label htmlFor="name">{t('will.name')}</Label>
+              <Label htmlFor="name">{t('wills.name')}</Label>
               <Input
                 id="name"
                 value={testator.name}
                 onChange={(e) => onTestatorUpdate({ ...testator, name: e.target.value })}
-                placeholder={t('will.namePlaceholder')}
+                placeholder={t('wills.namePlaceholder')}
               />
               {errors.name && (
                 <p className="text-sm text-destructive">{errors.name}</p>
               )}
             </div>
             <div className="space-y-2">
-              <Label htmlFor="birthDate">{t('will.birthDate')}</Label>
+              <Label htmlFor="birthDate">{t('wills.birthDate')}</Label>
               <Input
                 id="birthDate"
                 type="date"
                 value={testator.birthDate}
                 onChange={(e) => onTestatorUpdate({ ...testator, birthDate: e.target.value })}
-                placeholder={t('will.birthDatePlaceholder')}
+                placeholder={t('wills.birthDatePlaceholder')}
               />
               {errors.birthDate && (
                 <p className="text-sm text-destructive">{errors.birthDate}</p>
               )}
             </div>
             <div className="space-y-2">
-              <Label htmlFor="address">{t('will.address')}</Label>
+              <Label htmlFor="address">{t('wills.address')}</Label>
               <Input
                 id="address"
                 value={testator.address}
                 onChange={(e) => onTestatorUpdate({ ...testator, address: e.target.value })}
-                placeholder={t('will.addressPlaceholder')}
+                placeholder={t('wills.addressPlaceholder')}
               />
               {errors.address && (
                 <p className="text-sm text-destructive">{errors.address}</p>

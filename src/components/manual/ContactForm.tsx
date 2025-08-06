@@ -43,10 +43,10 @@ export const ContactForm: React.FC<ContactFormProps> = ({
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
       <div className="space-y-2">
-        <Label htmlFor="contactName">{t('manual.contacts.form.nameLabel')}</Label>
+        <Label htmlFor="contactName">{t('help.contacts.form.nameLabel')}</Label>
         <Input
           id="contactName"
-          placeholder={t('manual.contacts.form.namePlaceholder')}
+          placeholder={t('help.contacts.form.namePlaceholder')}
           {...register('name')}
           className={errors.name ? 'border-destructive' : ''}
         />
@@ -56,10 +56,10 @@ export const ContactForm: React.FC<ContactFormProps> = ({
       </div>
 
       <div className="space-y-2">
-        <Label htmlFor="role">{t('manual.contacts.form.roleLabel')}</Label>
+        <Label htmlFor="role">{t('help.contacts.form.roleLabel')}</Label>
         <Input
           id="role"
-          placeholder={t('manual.contacts.form.rolePlaceholder')}
+          placeholder={t('help.contacts.form.rolePlaceholder')}
           {...register('role')}
           className={errors.role ? 'border-destructive' : ''}
         />
@@ -69,10 +69,10 @@ export const ContactForm: React.FC<ContactFormProps> = ({
       </div>
 
       <div className="space-y-2">
-        <Label htmlFor="phone">{t('manual.contacts.form.phoneLabel')}</Label>
+        <Label htmlFor="phone">{t('help.contacts.form.phoneLabel')}</Label>
         <Input
           id="phone"
-          placeholder={t('manual.contacts.form.phonePlaceholder')}
+          placeholder={t('help.contacts.form.phonePlaceholder')}
           {...register('phone_number')}
           className={errors.phone_number ? 'border-destructive' : ''}
         />
@@ -82,11 +82,11 @@ export const ContactForm: React.FC<ContactFormProps> = ({
       </div>
 
       <div className="space-y-2">
-        <Label htmlFor="email">{t('manual.contacts.form.emailLabel')}</Label>
+        <Label htmlFor="email">{t('help.contacts.form.emailLabel')}</Label>
         <Input
           id="email"
           type="email"
-          placeholder={t('manual.contacts.form.emailPlaceholder')}
+          placeholder={t('help.contacts.form.emailPlaceholder')}
           {...register('email')}
           className={errors.email ? 'border-destructive' : ''}
         />
@@ -96,10 +96,10 @@ export const ContactForm: React.FC<ContactFormProps> = ({
       </div>
 
       <div className="space-y-2">
-        <Label htmlFor="notes">{t('manual.contacts.form.notesLabel')}</Label>
+        <Label htmlFor="notes">{t('help.contacts.form.notesLabel')}</Label>
         <Textarea
           id="notes"
-          placeholder={t('manual.contacts.form.notesPlaceholder')}
+          placeholder={t('help.contacts.form.notesPlaceholder')}
           {...register('notes')}
           rows={3}
           className={errors.notes ? 'border-destructive' : ''}
@@ -117,7 +117,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
           className="flex-1"
           disabled={isLoading}
         >
-          {t('manual.contacts.form.cancel')}
+          {t('help.contacts.form.cancel')}
         </Button>
         <Button
           type="submit"
@@ -127,10 +127,10 @@ export const ContactForm: React.FC<ContactFormProps> = ({
           {isLoading ? (
             <>
               <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
-              {t('manual.contacts.form.saving')}
+              {t('help.contacts.form.saving')}
             </>
           ) : (
-            isEditing ? t('manual.contacts.form.updateButton') : t('manual.contacts.form.addButton')
+            isEditing ? t('help.contacts.form.updateButton') : t('help.contacts.form.addButton')
           )}
         </Button>
       </div>

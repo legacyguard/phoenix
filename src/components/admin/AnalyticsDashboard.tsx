@@ -99,7 +99,7 @@ const mockAnalyticsData = {
 };
 
 const AnalyticsDashboard: React.FC = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('dashboard');
   const [selectedTimeRange, setSelectedTimeRange] = useState('30d');
   const [isLoading, setIsLoading] = useState(true);
   const [analyticsData, setAnalyticsData] = useState(mockAnalyticsData);
@@ -189,7 +189,7 @@ const AnalyticsDashboard: React.FC = () => {
       <div className="p-4 md:p-6 font-sans bg-gray-50 min-h-screen flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-600 mx-auto mb-4"></div>
-          <p className="text-gray-600">{t("admin.analyticsDashboard.loading_analytics_data_1")}</p>
+          <p className="text-gray-600">{t('dashboard.analyticsDashboard.loading_analytics_data_1')}</p>
         </div>
       </div>);
 
@@ -202,18 +202,18 @@ const AnalyticsDashboard: React.FC = () => {
         <div className="mb-8">
           <div className="flex items-center justify-between">
             <div>
-              <h1 className="text-3xl font-bold text-gray-900 mb-2">{t("admin.analyticsDashboard.analytics_dashboard_2")}</h1>
-              <p className="text-gray-600">{t("admin.analyticsDashboard.monitor_user_engagement_featur_3")}</p>
+              <h1 className="text-3xl font-bold text-gray-900 mb-2">{t('dashboard.analyticsDashboard.analytics_dashboard_2')}</h1>
+              <p className="text-gray-600">{t('dashboard.analyticsDashboard.monitor_user_engagement_featur_3')}</p>
             </div>
             <div className="flex items-center space-x-2">
               {isLoading &&
               <div className="flex items-center text-sm text-gray-500">
-                  <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-purple-600 mr-2"></div>{t("admin.analyticsDashboard.refreshing_4")}
+                  <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-purple-600 mr-2"></div>{t('dashboard.analyticsDashboard.refreshing_4')}
 
               </div>
               }
               {error &&
-              <Badge variant="outline" className="text-red-600">{t("admin.analyticsDashboard.using_cached_data_5")}
+              <Badge variant="outline" className="text-red-600">{t('dashboard.analyticsDashboard.using_cached_data_5')}
 
               </Badge>
               }
@@ -240,7 +240,7 @@ const AnalyticsDashboard: React.FC = () => {
                   <span className={metric.trend === 'up' ? 'text-green-600' : 'text-red-600'}>
                     {Math.abs(metric.change)}%
                   </span>
-                  <span className="text-gray-500 ml-1">{t("admin.analyticsDashboard.from_last_month_6")}</span>
+                  <span className="text-gray-500 ml-1">{t('dashboard.analyticsDashboard.from_last_month_6')}</span>
                 </p>
               </CardContent>
             </Card>
@@ -251,10 +251,10 @@ const AnalyticsDashboard: React.FC = () => {
         <Tabs defaultValue="overview" className="space-y-4">
           <TabsList>
             <TabsTrigger value="overview">Overview</TabsTrigger>
-            <TabsTrigger value="funnel">{t("admin.analyticsDashboard.user_journey_7")}</TabsTrigger>
-            <TabsTrigger value="features">{t("admin.analyticsDashboard.feature_adoption_8")}</TabsTrigger>
-            <TabsTrigger value="experiments">{t("admin.analyticsDashboard.a_b_tests_9")}</TabsTrigger>
-            <TabsTrigger value="segments">{t("admin.analyticsDashboard.user_segments_30")}</TabsTrigger>
+            <TabsTrigger value="funnel">{t('dashboard.analyticsDashboard.user_journey_7')}</TabsTrigger>
+            <TabsTrigger value="features">{t('dashboard.analyticsDashboard.feature_adoption_8')}</TabsTrigger>
+            <TabsTrigger value="experiments">{t('dashboard.analyticsDashboard.a_b_tests_9')}</TabsTrigger>
+            <TabsTrigger value="segments">{t('dashboard.analyticsDashboard.user_segments_30')}</TabsTrigger>
           </TabsList>
 
           {/* Overview Tab */}
@@ -262,8 +262,8 @@ const AnalyticsDashboard: React.FC = () => {
             <div className="grid gap-4 md:grid-cols-2">
               <Card>
                 <CardHeader>
-                  <CardTitle>{t("admin.analyticsDashboard.user_growth_11")}</CardTitle>
-                  <CardDescription>{t("admin.analyticsDashboard.active_and_new_users_over_time_12")}</CardDescription>
+                  <CardTitle>{t('dashboard.analyticsDashboard.user_growth_11')}</CardTitle>
+                  <CardDescription>{t('dashboard.analyticsDashboard.active_and_new_users_over_time_12')}</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <ResponsiveContainer width={t("assets.assetOverview.100_2")} height={300}>
@@ -282,24 +282,24 @@ const AnalyticsDashboard: React.FC = () => {
 
               <Card>
                 <CardHeader>
-                  <CardTitle>{t("admin.analyticsDashboard.platform_statistics_15")}</CardTitle>
-                  <CardDescription>{t("admin.analyticsDashboard.key_platform_metrics_16")}</CardDescription>
+                  <CardTitle>{t('dashboard.analyticsDashboard.platform_statistics_15')}</CardTitle>
+                  <CardDescription>{t('dashboard.analyticsDashboard.key_platform_metrics_16')}</CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="flex justify-between items-center">
-                    <span className="text-sm font-medium">{t("admin.analyticsDashboard.avg_session_duration_17")}</span>
+                    <span className="text-sm font-medium">{t('dashboard.analyticsDashboard.avg_session_duration_17')}</span>
                     <span className="text-2xl font-bold">{analyticsData.overview.avgSessionDuration}</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-sm font-medium">{t("admin.analyticsDashboard.bounce_rate_18")}</span>
+                    <span className="text-sm font-medium">{t('dashboard.analyticsDashboard.bounce_rate_18')}</span>
                     <span className="text-2xl font-bold">{analyticsData.overview.bounceRate}%</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-sm font-medium">{t("admin.analyticsDashboard.avg_documents_per_user_19")}</span>
+                    <span className="text-sm font-medium">{t('dashboard.analyticsDashboard.avg_documents_per_user_19')}</span>
                     <span className="text-2xl font-bold">{analyticsData.preparednessStats.documentsUploaded}</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-sm font-medium">{t("admin.analyticsDashboard.avg_trusted_people_per_user_20")}</span>
+                    <span className="text-sm font-medium">{t('dashboard.analyticsDashboard.avg_trusted_people_per_user_20')}</span>
                     <span className="text-2xl font-bold">{analyticsData.preparednessStats.trustedPeopleAdded}</span>
                   </div>
                 </CardContent>
@@ -311,8 +311,8 @@ const AnalyticsDashboard: React.FC = () => {
           <TabsContent value="funnel" className="space-y-4">
             <Card>
               <CardHeader>
-                <CardTitle>{t("admin.analyticsDashboard.user_journey_funnel_21")}</CardTitle>
-                <CardDescription>{t("admin.analyticsDashboard.track_user_progression_through_22")}</CardDescription>
+                <CardTitle>{t('dashboard.analyticsDashboard.user_journey_funnel_21')}</CardTitle>
+                <CardDescription>{t('dashboard.analyticsDashboard.track_user_progression_through_22')}</CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
@@ -341,8 +341,8 @@ const AnalyticsDashboard: React.FC = () => {
           <TabsContent value="features" className="space-y-4">
             <Card>
               <CardHeader>
-                <CardTitle>{t("admin.analyticsDashboard.feature_adoption_rates_23")}</CardTitle>
-                <CardDescription>{t("admin.analyticsDashboard.percentage_of_users_using_each_24")}</CardDescription>
+                <CardTitle>{t('dashboard.analyticsDashboard.feature_adoption_rates_23')}</CardTitle>
+                <CardDescription>{t('dashboard.analyticsDashboard.percentage_of_users_using_each_24')}</CardDescription>
               </CardHeader>
               <CardContent>
                 <ResponsiveContainer width={t("assets.assetOverview.100_2")} height={400}>
@@ -378,8 +378,8 @@ const AnalyticsDashboard: React.FC = () => {
                         {test.winner} Won
                       </Badge>
                     </div>
-                    <CardDescription>{t("admin.analyticsDashboard.sample_size_27")}
-                    {test.sampleSize.toLocaleString()}{t("admin.analyticsDashboard.users_duration_28")}{test.duration} days
+                    <CardDescription>{t('dashboard.analyticsDashboard.sample_size_27')}
+                    {test.sampleSize.toLocaleString()}{t('dashboard.analyticsDashboard.users_duration_28')}{test.duration} days
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
@@ -395,7 +395,7 @@ const AnalyticsDashboard: React.FC = () => {
                     </div>
                     <div className="mt-4 flex items-center justify-center">
                       <Badge variant="outline">
-                        {test.confidence}{t("admin.analyticsDashboard.confidence_29")}
+                        {test.confidence}{t('dashboard.analyticsDashboard.confidence_29')}
                     </Badge>
                     </div>
                   </CardContent>
@@ -408,8 +408,8 @@ const AnalyticsDashboard: React.FC = () => {
           <TabsContent value="segments" className="space-y-4">
             <Card>
               <CardHeader>
-                <CardTitle>{t("admin.analyticsDashboard.user_segments_30")}</CardTitle>
-                <CardDescription>{t("admin.analyticsDashboard.user_distribution_by_engagemen_31")}</CardDescription>
+                <CardTitle>{t('dashboard.analyticsDashboard.user_segments_30')}</CardTitle>
+                <CardDescription>{t('dashboard.analyticsDashboard.user_distribution_by_engagemen_31')}</CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">

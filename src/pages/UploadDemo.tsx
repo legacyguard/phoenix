@@ -17,7 +17,7 @@ import { documentStorage } from '../../lib/services/document-storage.service';
 import type { ProcessedDocument } from '../../lib/services/document-upload.types';
 
 export function UploadDemo() {
-  const { t } = useTranslation();
+  const { t } = useTranslation('ui');
   const {
     upload,
     uploadQueue,

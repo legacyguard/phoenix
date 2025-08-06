@@ -38,10 +38,10 @@ const ErrorBoundary: React.FC<ErrorBoundaryProps> = ({ error, resetError }) => {
             <AlertTriangle className="h-8 w-8 text-red-600" />
           </div>
           <CardTitle className="text-xl text-red-600">
-            {t('general.somethingWrong')}
+            {t('ui.somethingWrong')}
           </CardTitle>
           <CardDescription className="text-muted-foreground">
-            {t('general.unknownError')}
+            {t('ui.unknownError')}
           </CardDescription>
         </CardHeader>
         
@@ -85,7 +85,7 @@ const ErrorBoundary: React.FC<ErrorBoundaryProps> = ({ error, resetError }) => {
           
           <div className="text-center">
             <p className="text-sm text-muted-foreground">
-              {t('general.unknownError')}
+              {t('ui.unknownError')}
             </p>
             <Button 
               variant="link" 
@@ -102,3 +102,4 @@ const ErrorBoundary: React.FC<ErrorBoundaryProps> = ({ error, resetError }) => {
 };
 
 export default ErrorBoundary;
+export { ErrorBoundary };

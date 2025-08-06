@@ -111,7 +111,7 @@ export const EditStoryModal: React.FC<EditStoryModalProps> = ({
               onClick={onClose}
               disabled={isSaving}
             >
-              {t('common.cancel')}
+              {t('ui.cancel')}
             </Button>
             <Button
               onClick={handleSave}

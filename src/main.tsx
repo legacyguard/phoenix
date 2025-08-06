@@ -29,8 +29,7 @@ try {
             <ClerkProvider 
               publishableKey={PUBLISHABLE_KEY} 
               afterSignOutUrl="/"
-              afterSignInUrl="/dashboard"
-              afterSignUpUrl="/dashboard"
+              fallbackRedirectUrl="/dashboard"
               signInUrl="/login"
               signUpUrl="/register"
             >

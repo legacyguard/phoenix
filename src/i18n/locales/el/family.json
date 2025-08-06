@@ -1,1 +1,683 @@
-{}
+{
+  "beneficiaryCommunications": {
+    "actions": {
+      "cancel": "[EL] Cancel",
+      "save": "[EL] Save",
+      "saving": "[EL] Saving"
+    },
+    "description": "[EL] Description",
+    "dialog": {
+      "description": "[EL] Description",
+      "title": "[EL] Title"
+    },
+    "empty": {
+      "subtitle": "[EL] Subtitle",
+      "title": "[EL] Title"
+    },
+    "fields": {
+      "beneficiaryName": "[EL] Beneficiary name",
+      "date": "[EL] Date",
+      "email": "[EL] Email",
+      "subject": "[EL] Subject",
+      "summary": "[EL] Summary",
+      "type": "[EL] Type"
+    },
+    "logAction": "[EL] Log action",
+    "logCommunication": "[EL] Log communication",
+    "placeholders": {
+      "subject": "[EL] Subject",
+      "summary": "[EL] Summary"
+    },
+    "title": "[EL] Title",
+    "types": {
+      "email": "[EL] Email",
+      "inPerson": "[EL] In person",
+      "letter": "[EL] Letter",
+      "other": "[EL] Other",
+      "phone": "[EL] Phone"
+    }
+  },
+  "common": {
+    "cancel": "[EL] Cancel",
+    "fix": "[EL] Fix",
+    "minutes": "[EL] Minutes",
+    "start": "[EL] Start"
+  },
+  "crisisAssessment": {
+    "criticalVulnerabilities": "[EL] Critical vulnerabilities",
+    "familyCapabilities": "[EL] Family capabilities",
+    "familyDiscussion": "[EL] Family discussion",
+    "familyDiscussionDescription": "[EL] Family discussion description",
+    "fixCapability": "[EL] Fix capability",
+    "fixNow": "[EL] Fix now",
+    "missing": "[EL] Missing",
+    "mostUrgent": "[EL] Most urgent",
+    "nextCriticalAction": "[EL] Next critical action",
+    "notPrepared": "[EL] Not prepared",
+    "partial": "[EL] Partial",
+    "prepared": "[EL] Prepared",
+    "printReport": "[EL] Print report",
+    "protected": "[EL] Protected",
+    "scheduleReview": "[EL] Schedule review",
+    "situationReadiness": "[EL] Situation readiness",
+    "subtitle": "[EL] Subtitle",
+    "timeEstimate": "[EL] Time estimate",
+    "title": "[EL] Title",
+    "vulnerable": "[EL] Vulnerable"
+  },
+  "crisisSituations": {
+    "businessEmergency": {
+      "description": "[EL] Description",
+      "title": "[EL] Title"
+    },
+    "emergencyHospital": {
+      "description": "[EL] Description",
+      "title": "[EL] Title"
+    },
+    "extendedTravel": {
+      "description": "[EL] Description",
+      "title": "[EL] Title"
+    },
+    "suddenDeath": {
+      "description": "[EL] Description",
+      "title": "[EL] Title"
+    }
+  },
+  "dashboard": {
+    "familyGuide": {
+      "discreteMode": "[EL] Discrete mode",
+      "discreteModeDesc": "[EL] Discrete mode desc",
+      "emergency_contacts_1": "[EL] Emergency contacts 1",
+      "export_guide_4": "[EL] Export guide 4",
+      "generateGuide": "[EL] Generate guide",
+      "important_documents_2": "[EL] Important documents 2",
+      "last_updated_6": "[EL] Last updated 6",
+      "share_with_family_5": "[EL] Share with family 5",
+      "subtitle": "[EL] Subtitle",
+      "title": "[EL] Title",
+      "view": "[EL] View",
+      "what_to_do_when_3": "[EL] What to do when 3"
+    }
+  },
+  "emergency": {
+    "addContact": "[EL] Add contact",
+    "addContactDialog": {
+      "addButton": "[EL] Add button",
+      "description": "[EL] Description",
+      "relationship": "[EL] Relationship",
+      "relationshipPlaceholder": "[EL] Relationship placeholder",
+      "selectContact": "[EL] Select contact",
+      "selectPlaceholder": "[EL] Select placeholder",
+      "title": "[EL] Title"
+    },
+    "description": "[EL] Description",
+    "errors": {
+      "addFailed": "[EL] Add failed",
+      "loadFailed": "[EL] Load failed",
+      "removeFailed": "[EL] Remove failed",
+      "reorderFailed": "[EL] Reorder failed",
+      "selectContact": "[EL] Select contact",
+      "testFailed": "[EL] Test failed"
+    },
+    "lastContacted": "[EL] Last contacted",
+    "maxContactsReached": "[EL] Max contacts reached",
+    "messages": {
+      "added": "[EL] Added",
+      "removed": "[EL] Removed",
+      "reordered": "[EL] Reordered",
+      "testSent": "[EL] Test sent"
+    },
+    "noContacts": "[EL] No contacts",
+    "sendTest": "[EL] Send test",
+    "title": "[EL] Title"
+  },
+  "errors": {
+    "dataNotFound": "[EL] Data not found",
+    "duplicateRecord": "[EL] Duplicate record",
+    "networkError": "[EL] Network error",
+    "permissionDenied": "[EL] Permission denied",
+    "unknown": "[EL] Unknown"
+  },
+  "estateStatus": {
+    "actions": {
+      "cancel": "[EL] Cancel",
+      "update": "[EL] Update",
+      "updating": "[EL] Updating"
+    },
+    "description": "[EL] Description",
+    "dialog": {
+      "description": "[EL] Description",
+      "title": "[EL] Title"
+    },
+    "empty": {
+      "noStatus": "[EL] No status",
+      "readOnly": "[EL] Read only"
+    },
+    "fields": {
+      "additionalDetails": "[EL] Additional details",
+      "status": "[EL] Status"
+    },
+    "lastUpdated": "[EL] Last updated",
+    "logAction": "[EL] Log action",
+    "placeholders": {
+      "additionalContext": "[EL] Additional context",
+      "selectStatus": "[EL] Select status"
+    },
+    "progress": "[EL] Progress",
+    "statuses": {
+      "assetsBeingValued": "[EL] Assets being valued",
+      "debtsBeingSettled": "[EL] Debts being settled",
+      "distributionInProgress": "[EL] Distribution in progress",
+      "estateClosed": "[EL] Estate closed",
+      "gatheringDocuments": "[EL] Gathering documents",
+      "initialReview": "[EL] Initial review",
+      "probateInitiated": "[EL] Probate initiated",
+      "readyForDistribution": "[EL] Ready for distribution",
+      "taxPreparation": "[EL] Tax preparation"
+    },
+    "title": "[EL] Title",
+    "updateStatus": "[EL] Update status"
+  },
+  "familyCapabilities": {
+    "businessOperations": "[EL] Business operations",
+    "canAccessBankAccounts": "[EL] Can access bank accounts",
+    "canAccessDigitalAccounts": "[EL] Can access digital accounts",
+    "canFileInsuranceClaims": "[EL] Can file insurance claims",
+    "canManageBusiness": "[EL] Can manage business",
+    "cannotAccessBankAccounts": "[EL] Cannot access bank accounts",
+    "cannotAccessDigitalAccounts": "[EL] Cannot access digital accounts",
+    "cannotFileInsuranceClaims": "[EL] Cannot file insurance claims",
+    "clearInheritancePlan": "[EL] Clear inheritance plan",
+    "digitalAccess": "[EL] Digital access",
+    "digitalAccounts": "[EL] Digital accounts",
+    "immediateFinancialNeeds": "[EL] Immediate financial needs",
+    "inheritance": "[EL] Inheritance",
+    "insuranceClaims": "[EL] Insurance claims",
+    "knowsLegalContacts": "[EL] Knows legal contacts",
+    "knowsMedicalWishes": "[EL] Knows medical wishes",
+    "legalMatters": "[EL] Legal matters",
+    "medicalDecisions": "[EL] Medical decisions",
+    "noBusinessInfo": "[EL] No business info",
+    "noInheritancePlan": "[EL] No inheritance plan",
+    "noLegalContacts": "[EL] No legal contacts",
+    "noMedicalInfo": "[EL] No medical info",
+    "partialBusinessInfo": "[EL] Partial business info",
+    "partialInheritancePlan": "[EL] Partial inheritance plan",
+    "partialMedicalInfo": "[EL] Partial medical info",
+    "payBills": "[EL] Pay bills"
+  },
+  "familyCrisisAssessment": {
+    "15_1": "[EL] 15 1"
+  },
+  "familyExecutorView": {
+    "communications": {
+      "description": "[EL] Description",
+      "empty": "[EL] Empty",
+      "title": "[EL] Title",
+      "to": "[EL] To"
+    },
+    "executor": "[EL] Executor",
+    "footer": "[EL] Footer",
+    "subtitle": "[EL] Subtitle",
+    "theExecutor": "[EL] The executor",
+    "title": "[EL] Title"
+  },
+  "familyHub": {
+    "accessLevels": {
+      "emergencyOnly": {
+        "description": "[EL] Description",
+        "fullDescription": "[EL] Full description",
+        "title": "[EL] Title"
+      },
+      "fullAccess": {
+        "description": "[EL] Description",
+        "fullDescription": "[EL] Full description",
+        "title": "[EL] Title"
+      },
+      "limitedInfo": {
+        "description": "[EL] Description",
+        "fullDescription": "[EL] Full description",
+        "title": "[EL] Title"
+      },
+      "none": {
+        "description": "[EL] Description",
+        "title": "[EL] Title"
+      }
+    },
+    "emergencyProtocol": {
+      "activeMessage": "[EL] Active message",
+      "configure": "[EL] Configure",
+      "configured": "[EL] Configured",
+      "description": "[EL] Description",
+      "title": "[EL] Title"
+    },
+    "errors": {
+      "authenticationRequired": "[EL] Authentication required",
+      "failedToFetchData": "[EL] Failed to fetch data",
+      "failedToLoadMembers": "[EL] Failed to load members"
+    },
+    "memberManagement": {
+      "addMorePeople": "[EL] Add more people",
+      "addTrustedPerson": "[EL] Add trusted person",
+      "daysAgo": "[EL] Days ago",
+      "informationAccessLevel": "[EL] Information access level",
+      "lastContactOver30Days": "[EL] Last contact over30 days",
+      "lastContacted": "[EL] Last contacted",
+      "preparedness": "[EL] Preparedness",
+      "sendUpdate": "[EL] Send update",
+      "sendUpdateTo": "[EL] Send update to",
+      "title": "[EL] Title"
+    },
+    "messages": {
+      "accessLevelUpdated": "[EL] Access level updated",
+      "failedToSendUpdate": "[EL] Failed to send update",
+      "updateSentTo": "[EL] Update sent to"
+    },
+    "overallPreparedness": {
+      "description": "[EL] Description",
+      "improvementNeeded": "[EL] Improvement needed",
+      "title": "[EL] Title"
+    },
+    "subtitle": "[EL] Subtitle",
+    "tabs": {
+      "familyMembers": "[EL] Family members",
+      "members": "[EL] Members",
+      "preparednessTools": "[EL] Preparedness tools",
+      "tools": "[EL] Tools"
+    },
+    "title": "[EL] Title"
+  },
+  "familyPreparednessTools": {
+    "create_a_printable_guide_for_y_3": "[EL] Create a printable guide for y 3",
+    "errors": {
+      "comingSoon": "[EL] Coming soon",
+      "generateFailed": "[EL] Generate failed",
+      "premiumRequired": "[EL] Premium required",
+      "selectScenario": "[EL] Select scenario"
+    },
+    "generate_another_5": "[EL] Generate another 5",
+    "generate_emergency_guide_2": "[EL] Generate emergency guide 2",
+    "guides": {
+      "death": {
+        "bankAccounts": "[EL] Bank accounts",
+        "contactExecutor": "[EL] Contact executor",
+        "contactLawyer": "[EL] Contact lawyer",
+        "deathCertificate": "[EL] Death certificate",
+        "disclaimer": "[EL] Disclaimer",
+        "employer": "[EL] Employer",
+        "financialInstitutions": "[EL] Financial institutions",
+        "first24Hours": "[EL] First24 hours",
+        "generatedOn": "[EL] Generated on",
+        "importantDocuments": "[EL] Important documents",
+        "insuranceCompanies": "[EL] Insurance companies",
+        "investmentAccounts": "[EL] Investment accounts",
+        "locateWill": "[EL] Locate will",
+        "peopleToNotify": "[EL] People to notify",
+        "secureResidence": "[EL] Secure residence",
+        "socialSecurity": "[EL] Social security",
+        "title": "[EL] Title"
+      },
+      "emergency": {
+        "address": "[EL] Address",
+        "attorney": "[EL] Attorney",
+        "emergency": "[EL] Emergency",
+        "financialAdvisor": "[EL] Financial advisor",
+        "homeInformation": "[EL] Home information",
+        "insuranceAgent": "[EL] Insurance agent",
+        "keyContacts": "[EL] Key contacts",
+        "securitySystem": "[EL] Security system",
+        "spouse": "[EL] Spouse",
+        "title": "[EL] Title",
+        "utilities": "[EL] Utilities"
+      },
+      "hospitalization": {
+        "allergies": "[EL] Allergies",
+        "bloodType": "[EL] Blood type",
+        "currentMedications": "[EL] Current medications",
+        "emergencyContacts": "[EL] Emergency contacts",
+        "healthcarePowerOfAttorney": "[EL] Healthcare power of attorney",
+        "hipaaRelease": "[EL] Hipaa release",
+        "legalDocuments": "[EL] Legal documents",
+        "livingWill": "[EL] Living will",
+        "medicalInformation": "[EL] Medical information",
+        "preferredHospital": "[EL] Preferred hospital",
+        "primaryCarePhysician": "[EL] Primary care physician",
+        "title": "[EL] Title"
+      },
+      "missing": {
+        "bankingApps": "[EL] Banking apps",
+        "checkHospitals": "[EL] Check hospitals",
+        "checkWithWorkplace": "[EL] Check with workplace",
+        "contactCloseFriends": "[EL] Contact close friends",
+        "contactLocalPolice": "[EL] Contact local police",
+        "digitalFootprint": "[EL] Digital footprint",
+        "email": "[EL] Email",
+        "immediateActions": "[EL] Immediate actions",
+        "phoneProvider": "[EL] Phone provider",
+        "socialMedia": "[EL] Social media",
+        "title": "[EL] Title"
+      }
+    },
+    "mockContent": {
+      "insurancePolicies": "[EL] Insurance policies"
+    },
+    "scenarios": {
+      "death": {
+        "description": "[EL] Description",
+        "title": "[EL] Title"
+      },
+      "emergency": {
+        "description": "[EL] Description",
+        "title": "[EL] Title"
+      },
+      "hospitalization": {
+        "description": "[EL] Description",
+        "title": "[EL] Title"
+      },
+      "missing": {
+        "description": "[EL] Description",
+        "title": "[EL] Title"
+      }
+    },
+    "select_scenario_4": "[EL] Select scenario 4",
+    "tools": {
+      "cancel": "[EL] Cancel",
+      "chooseScenario": "[EL] Choose scenario",
+      "emergencySimulator": "[EL] Emergency simulator",
+      "emergencySimulatorDesc": "[EL] Emergency simulator desc",
+      "generateGuide": "[EL] Generate guide",
+      "generating": "[EL] Generating",
+      "informationTreasureHunt": "[EL] Information treasure hunt",
+      "launch": "[EL] Launch",
+      "printGuide": "[EL] Print guide",
+      "stepByStepGuides": "[EL] Step by step guides",
+      "stepByStepGuidesDesc": "[EL] Step by step guides desc",
+      "treasureHuntDesc": "[EL] Treasure hunt desc",
+      "videoMessages": "[EL] Video messages",
+      "videoMessagesDesc": "[EL] Video messages desc"
+    },
+    "use_these_tools_to_ensure_your_1": "[EL] Use these tools to ensure your 1"
+  },
+  "guardian": {
+    "templateModal": {
+      "_1": "[EL] 1"
+    }
+  },
+  "guardianView": {
+    "defaultUserName": "[EL] Default user name",
+    "emergencyAccess": {
+      "accessFailed": "[EL] Access failed",
+      "accessGranted": "[EL] Access granted",
+      "accessing": "[EL] Accessing",
+      "button": "[EL] Button",
+      "confirmButton": "[EL] Confirm button",
+      "confirmCheckbox": "[EL] Confirm checkbox",
+      "contactLogged": "[EL] Contact logged",
+      "contactsDescription": "[EL] Contacts description",
+      "contactsTitle": "[EL] Contacts title",
+      "failedToLoadContacts": "[EL] Failed to load contacts",
+      "importantNote": "[EL] Important note",
+      "lastContacted": "[EL] Last contacted",
+      "logContact": "[EL] Log contact",
+      "modalDescription": "[EL] Modal description",
+      "modalTitle": "[EL] Modal title",
+      "notAuthorized": "[EL] Not authorized",
+      "pleaseConfirm": "[EL] Please confirm",
+      "priority": "[EL] Priority",
+      "priorityOrder": "[EL] Priority order",
+      "reasonLabel": "[EL] Reason label",
+      "reasonPlaceholder": "[EL] Reason placeholder",
+      "warningText": "[EL] Warning text"
+    },
+    "errors": {
+      "failedToLoad": "[EL] Failed to load",
+      "pleaseLogin": "[EL] Please login"
+    },
+    "guardianInfo": {
+      "description": "[EL] Description",
+      "securityNote": "[EL] Security note"
+    },
+    "readOnlyAccess": "[EL] Read only access",
+    "sections": {
+      "finalWishes": {
+        "description": "[EL] Description",
+        "digitalAccounts": "[EL] Digital accounts",
+        "empty": "[EL] Empty",
+        "funeralWishes": "[EL] Funeral wishes",
+        "messagesToLovedOnes": "[EL] Messages to loved ones",
+        "title": "[EL] Title"
+      },
+      "importantContacts": {
+        "description": "[EL] Description",
+        "empty": "[EL] Empty",
+        "title": "[EL] Title"
+      },
+      "keyDocuments": {
+        "description": "[EL] Description",
+        "empty": "[EL] Empty",
+        "expires": "[EL] Expires",
+        "keyDocumentBadge": "[EL] Key document badge",
+        "noExpiration": "[EL] No expiration",
+        "title": "[EL] Title"
+      }
+    },
+    "subtitle": "[EL] Subtitle",
+    "title": "[EL] Title"
+  },
+  "manual": {
+    "contacts": {
+      "form": {
+        "addButton": "[EL] Add button",
+        "cancel": "[EL] Cancel",
+        "emailLabel": "[EL] Email label",
+        "emailPlaceholder": "[EL] Email placeholder",
+        "nameLabel": "[EL] Name label",
+        "namePlaceholder": "[EL] Name placeholder",
+        "notesLabel": "[EL] Notes label",
+        "notesPlaceholder": "[EL] Notes placeholder",
+        "phoneLabel": "[EL] Phone label",
+        "phonePlaceholder": "[EL] Phone placeholder",
+        "roleLabel": "[EL] Role label",
+        "rolePlaceholder": "[EL] Role placeholder",
+        "saving": "[EL] Saving",
+        "updateButton": "[EL] Update button"
+      }
+    }
+  },
+  "notificationPreferences": {
+    "description": "[EL] Description",
+    "emailRequired": "[EL] Email required",
+    "errors": {
+      "loadFailed": "[EL] Load failed",
+      "updateFailed": "[EL] Update failed"
+    },
+    "howItWorks": {
+      "point1": "[EL] Point1",
+      "point2": "[EL] Point2",
+      "point3": "[EL] Point3",
+      "title": "[EL] Title"
+    },
+    "info": "[EL] Info",
+    "lastUpdated": "[EL] Last updated",
+    "messages": {
+      "updated": "[EL] Updated"
+    },
+    "noContacts": "[EL] No contacts",
+    "noEmail": "[EL] No email",
+    "title": "[EL] Title"
+  },
+  "playbook": {
+    "addContact": "[EL] Add contact",
+    "autoSaveNotice": "[EL] Auto save notice",
+    "contact": "[EL] Contact",
+    "contactFields": {
+      "email": "[EL] Email",
+      "emailPlaceholder": "[EL] Email placeholder",
+      "name": "[EL] Name",
+      "namePlaceholder": "[EL] Name placeholder",
+      "notes": "[EL] Notes",
+      "notesPlaceholder": "[EL] Notes placeholder",
+      "phone": "[EL] Phone",
+      "phonePlaceholder": "[EL] Phone placeholder",
+      "role": "[EL] Role",
+      "rolePlaceholder": "[EL] Role placeholder"
+    },
+    "edit": "[EL] Edit",
+    "errors": {
+      "loadFailed": "[EL] Load failed",
+      "saveFailed": "[EL] Save failed"
+    },
+    "loading": "[EL] Loading",
+    "messages": {
+      "autoSaved": "[EL] Auto saved",
+      "saved": "[EL] Saved"
+    },
+    "noContacts": "[EL] No contacts",
+    "noContent": "[EL] No content",
+    "preview": "[EL] Preview",
+    "save": "[EL] Save",
+    "saving": "[EL] Saving",
+    "sections": {
+      "contacts": {
+        "description": "[EL] Description",
+        "title": "[EL] Title"
+      },
+      "digital": {
+        "description": "[EL] Description",
+        "placeholder": "[EL] Placeholder",
+        "title": "[EL] Title"
+      },
+      "documents": {
+        "description": "[EL] Description",
+        "placeholder": "[EL] Placeholder",
+        "title": "[EL] Title"
+      },
+      "funeral": {
+        "description": "[EL] Description",
+        "placeholder": "[EL] Placeholder",
+        "title": "[EL] Title"
+      },
+      "messages": {
+        "description": "[EL] Description",
+        "placeholder": "[EL] Placeholder",
+        "title": "[EL] Title"
+      },
+      "practical": {
+        "description": "[EL] Description",
+        "placeholder": "[EL] Placeholder",
+        "title": "[EL] Title"
+      }
+    },
+    "status": {
+      "complete": "[EL] Complete",
+      "draft": "[EL] Draft",
+      "empty": "[EL] Empty"
+    },
+    "subtitle": {
+      "edit": "[EL] Edit",
+      "view": "[EL] View"
+    },
+    "tabs": {
+      "contacts": "[EL] Contacts",
+      "digital": "[EL] Digital",
+      "documents": "[EL] Documents",
+      "funeral": "[EL] Funeral",
+      "messages": "[EL] Messages",
+      "practical": "[EL] Practical"
+    },
+    "templates": {
+      "append": "[EL] Append",
+      "backToTemplates": "[EL] Back to templates",
+      "description": "[EL] Description",
+      "existingContent": "[EL] Existing content",
+      "fillInVariables": "[EL] Fill in variables",
+      "insertTemplate": "[EL] Insert template",
+      "preview": "[EL] Preview",
+      "replace": "[EL] Replace",
+      "title": "[EL] Title",
+      "variableCount": "[EL] Variable count",
+      "variablePlaceholder": "[EL] Variable placeholder"
+    },
+    "title": {
+      "edit": "[EL] Edit",
+      "view": "[EL] View"
+    },
+    "useTemplate": "[EL] Use template"
+  },
+  "preparedness": {
+    "assessments": {
+      "decisionMaking": {
+        "good": "[EL] Good",
+        "needsWork": "[EL] Needs work"
+      },
+      "immediateAccess": {
+        "good": "[EL] Good",
+        "needsWork": "[EL] Needs work"
+      },
+      "longTermSecurity": {
+        "good": "[EL] Good",
+        "needsWork": "[EL] Needs work"
+      }
+    },
+    "dimensions": {
+      "decisionMaking": "[EL] Decision making",
+      "immediateAccess": "[EL] Immediate access",
+      "longTermSecurity": "[EL] Long term security"
+    },
+    "familyBenefit": "[EL] Family benefit",
+    "familyCommunication": {
+      "description": "[EL] Description",
+      "scheduleReview": "[EL] Schedule review",
+      "shareReport": "[EL] Share report",
+      "title": "[EL] Title"
+    },
+    "gaps": {
+      "addMedicalPreferences": "[EL] Add medical preferences",
+      "basicAccessInfo": "[EL] Basic access info",
+      "completeFinancialAccess": "[EL] Complete financial access",
+      "documentBusinessOperations": "[EL] Document business operations",
+      "improveImmediateAccess": "[EL] Improve immediate access",
+      "updateWillAndTrust": "[EL] Update will and trust"
+    },
+    "impact": "[EL] Impact",
+    "improvements": {
+      "addBankAccounts": "[EL] Add bank accounts",
+      "documentMedicalWishes": "[EL] Document medical wishes",
+      "uploadLegalDocuments": "[EL] Upload legal documents"
+    },
+    "levels": {
+      "fullyPrepared": "[EL] Fully prepared",
+      "goodBasic": "[EL] Good basic",
+      "minimalPreparation": "[EL] Minimal preparation",
+      "needsImmediate": "[EL] Needs immediate",
+      "somePreparation": "[EL] Some preparation",
+      "wellPrepared": "[EL] Well prepared"
+    },
+    "nextStep": "[EL] Next step",
+    "scenarioReadiness": "[EL] Scenario readiness",
+    "scenarios": {
+      "emergencyHospital": {
+        "description": "[EL] Description",
+        "title": "[EL] Title"
+      },
+      "extendedTravel": {
+        "description": "[EL] Description",
+        "title": "[EL] Title"
+      },
+      "suddenDeath": {
+        "description": "[EL] Description",
+        "title": "[EL] Title"
+      }
+    },
+    "title": "[EL] Title",
+    "toImprove": "[EL] To improve"
+  },
+  "relationships": {
+    "child": "[EL] Child",
+    "friend": "[EL] Friend",
+    "other": "[EL] Other",
+    "parent": "[EL] Parent",
+    "sibling": "[EL] Sibling",
+    "spouse": "[EL] Spouse"
+  }
+}

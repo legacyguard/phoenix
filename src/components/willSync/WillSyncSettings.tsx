@@ -14,7 +14,7 @@ interface WillSyncSettingsProps {
 }
 
 export function WillSyncSettings({ preferences: initialPreferences, onSave }: WillSyncSettingsProps) {
-  const { t } = useTranslation();
+  const { t } = useTranslation('wills');
   const [preferences, setPreferences] = useState<WillSyncPreferences>(initialPreferences);
   const [saving, setSaving] = useState(false);
 

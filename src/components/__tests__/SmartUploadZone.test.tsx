@@ -48,9 +48,9 @@ describe('SmartUploadZone', () => {
   it('should render the upload zone', () => {
     render(<SmartUploadZone onUploadStart={mockOnUploadStart} />);
 
-    expect(screen.getByText('upload.zone.dropHere')).toBeInTheDocument();
-    expect(screen.getByText('upload.zone.description')).toBeInTheDocument();
-    expect(screen.getByText('upload.zone.chooseFiles')).toBeInTheDocument();
+    expect(screen.getByText('assets.zone.dropHere')).toBeInTheDocument();
+    expect(screen.getByText('assets.zone.description')).toBeInTheDocument();
+    expect(screen.getByText('assets.zone.chooseFiles')).toBeInTheDocument();
   });
 
   it('should show active state when dragging over', async () => {
@@ -68,8 +68,8 @@ describe('SmartUploadZone', () => {
     });
     
     await waitFor(() => {
-      expect(screen.getByText('upload.zone.dropHereActive')).toBeInTheDocument();
-      expect(screen.getByText('upload.zone.descriptionActive')).toBeInTheDocument();
+      expect(screen.getByText('assets.zone.dropHereActive')).toBeInTheDocument();
+      expect(screen.getByText('assets.zone.descriptionActive')).toBeInTheDocument();
     }, { timeout: 3000 });
   });
 
@@ -78,7 +78,7 @@ describe('SmartUploadZone', () => {
     render(<SmartUploadZone onUploadStart={mockOnUploadStart} />);
 
     const fileInput = screen.getByTestId('file-input');
-    const chooseFilesButton = screen.getByText('upload.zone.chooseFiles');
+    const chooseFilesButton = screen.getByText('assets.zone.chooseFiles');
 
     // Mock file input change
     fireEvent.change(fileInput, {
@@ -120,13 +120,13 @@ describe('SmartUploadZone', () => {
 
     render(<SmartUploadZone onUploadStart={mockOnUploadStart} />);
 
-    expect(screen.getByText('upload.zone.takePhoto')).toBeInTheDocument();
+    expect(screen.getByText('assets.zone.takePhoto')).toBeInTheDocument();
   });
 
   it('should show privacy indicator for local processing', () => {
     render(<SmartUploadZone onUploadStart={mockOnUploadStart} />);
 
-    expect(screen.getByText('upload.zone.processingLocally')).toBeInTheDocument();
+    expect(screen.getByText('assets.zone.processingLocally')).toBeInTheDocument();
   });
 
   it('should handle multiple file uploads', async () => {
@@ -178,7 +178,7 @@ describe('SmartUploadZone', () => {
     fireEvent.dragLeave(uploadZone);
     
     await waitFor(() => {
-      expect(screen.getByText('upload.zone.dropHere')).toBeInTheDocument();
+      expect(screen.getByText('assets.zone.dropHere')).toBeInTheDocument();
     });
   });
 
@@ -191,7 +191,7 @@ describe('SmartUploadZone', () => {
     fireEvent.dragEnter(uploadZone);
     
     await waitFor(() => {
-      expect(screen.getByText('upload.zone.dropHere')).toBeInTheDocument();
+      expect(screen.getByText('assets.zone.dropHere')).toBeInTheDocument();
     });
   });
 
@@ -199,7 +199,7 @@ describe('SmartUploadZone', () => {
     const user = userEvent.setup();
     render(<SmartUploadZone onUploadStart={mockOnUploadStart} />);
 
-    const cameraButton = screen.getByText('upload.zone.takePhoto');
+    const cameraButton = screen.getByText('assets.zone.takePhoto');
     await user.click(cameraButton);
 
     // Should trigger camera/file input - the component uses the same file input for both

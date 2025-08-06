@@ -32,7 +32,7 @@ export const AssetForm: React.FC<AssetFormProps> = ({
   initialData,
   isEditing = false
 }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('errors');
   
   // Create a simplified asset form schema for Dashboard
   const assetFormSchema = z.object({
@@ -97,7 +97,7 @@ export const AssetForm: React.FC<AssetFormProps> = ({
       <div className="flex gap-3 pt-4">
         <Button type="submit" disabled={isSubmitting} className="flex-1">
           {isSubmitting 
-            ? t('common.saving') 
+            ? t('ui.saving') 
             : (isEditing ? t('dashboard.updateAsset') : t('dashboard.saveAsset'))
           }
         </Button>
@@ -107,7 +107,7 @@ export const AssetForm: React.FC<AssetFormProps> = ({
           onClick={onCancel}
           disabled={isSubmitting}
         >
-          {t('common.cancel')}
+          {t('ui.cancel')}
         </Button>
       </div>
     </form>

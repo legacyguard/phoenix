@@ -62,9 +62,9 @@ export function NotificationSettings() {
 
           // Test notification
           await pushNotifications.showLocalNotification(
-            t('notifications.testNotification'),
+            t('ui.testNotification'),
             {
-              body: t('notifications.testNotification'),
+              body: t('ui.testNotification'),
               icon: '/icons/icon-192x192.png'
             }
           );
@@ -108,10 +108,10 @@ export function NotificationSettings() {
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <BellOff className="h-5 w-5" />{t("notifications.pushNotifications")}
+            <BellOff className="h-5 w-5" />{t('ui.pushNotifications')}
 
           </CardTitle>
-          <CardDescription>{t("notifications.pushNotifications")}
+          <CardDescription>{t('ui.pushNotifications')}
 
           </CardDescription>
         </CardHeader>
@@ -125,10 +125,10 @@ export function NotificationSettings() {
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            <Bell className="h-5 w-5" />{t("notifications.pushNotifications")}
+            <Bell className="h-5 w-5" />{t('ui.pushNotifications')}
 
           </CardTitle>
-          <CardDescription>{t("notifications.pushNotifications")}
+          <CardDescription>{t('ui.pushNotifications')}
 
           </CardDescription>
         </CardHeader>
@@ -138,7 +138,7 @@ export function NotificationSettings() {
             <>
                 <div className="flex items-start space-x-3 text-sm text-muted-foreground">
                   <Shield className="h-4 w-4 mt-0.5 flex-shrink-0" />
-                  <p>{t("notifications.pushNotifications")}</p>
+                  <p>{t('ui.pushNotifications')}</p>
                 </div>
                 <Button
                 onClick={handleEnableNotifications}
@@ -153,7 +153,7 @@ export function NotificationSettings() {
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-3">
                     <div className="h-2 w-2 bg-green-500 rounded-full animate-pulse" />
-                    <span className="font-medium">{t("notifications.pushNotifications")}</span>
+                    <span className="font-medium">{t('ui.pushNotifications')}</span>
                   </div>
                   <Button
                   variant="outline"
@@ -167,7 +167,7 @@ export function NotificationSettings() {
 
                 <div className="flex items-start space-x-3 text-sm text-muted-foreground">
                   <Smartphone className="h-4 w-4 mt-0.5 flex-shrink-0" />
-                  <p>{t("notifications.pushNotifications")}</p>
+                  <p>{t('ui.pushNotifications')}</p>
                 </div>
               </>
             }
@@ -179,8 +179,8 @@ export function NotificationSettings() {
       {isEnabled &&
       <Card>
           <CardHeader>
-            <CardTitle>{t("notifications.emailNotifications")}</CardTitle>
-            <CardDescription>{t("notifications.emailNotifications")}
+            <CardTitle>{t('ui.emailNotifications')}</CardTitle>
+            <CardDescription>{t('ui.emailNotifications')}
 
           </CardDescription>
           </CardHeader>
@@ -189,10 +189,10 @@ export function NotificationSettings() {
               <div className="flex items-center justify-between">
                 <div className="space-y-0.5">
                   <Label htmlFor="doc-expiry" className="text-base flex items-center gap-2">
-                    <FileText className="h-4 w-4" />{t("notifications.notificationTypes.documents")}
+                    <FileText className="h-4 w-4" />{t('ui.notificationTypes.documents')}
 
                 </Label>
-                  <p className="text-sm text-muted-foreground">{t("notifications.notificationTypes.documents")}
+                  <p className="text-sm text-muted-foreground">{t('ui.notificationTypes.documents')}
 
                 </p>
                 </div>
@@ -206,10 +206,10 @@ export function NotificationSettings() {
               <div className="flex items-center justify-between">
                 <div className="space-y-0.5">
                   <Label htmlFor="inactivity" className="text-base flex items-center gap-2">
-                    <Clock className="h-4 w-4" />{t("notifications.notificationTypes.reminders")}
+                    <Clock className="h-4 w-4" />{t('ui.notificationTypes.reminders')}
 
                 </Label>
-                  <p className="text-sm text-muted-foreground">{t("notifications.notificationTypes.reminders")}
+                  <p className="text-sm text-muted-foreground">{t('ui.notificationTypes.reminders')}
 
                 </p>
                 </div>
@@ -223,10 +223,10 @@ export function NotificationSettings() {
               <div className="flex items-center justify-between">
                 <div className="space-y-0.5">
                   <Label htmlFor="emergency" className="text-base flex items-center gap-2">
-                    <Shield className="h-4 w-4" />{t("notifications.notificationTypes.security")}
+                    <Shield className="h-4 w-4" />{t('ui.notificationTypes.security')}
 
                 </Label>
-                  <p className="text-sm text-muted-foreground">{t("notifications.notificationTypes.security")}
+                  <p className="text-sm text-muted-foreground">{t('ui.notificationTypes.security')}
 
                 </p>
                 </div>
@@ -239,10 +239,10 @@ export function NotificationSettings() {
 
               <div className="flex items-center justify-between">
                 <div className="space-y-0.5">
-                  <Label htmlFor="updates" className="text-base">{t("notifications.notificationTypes.system")}
+                  <Label htmlFor="updates" className="text-base">{t('ui.notificationTypes.system')}
 
                 </Label>
-                  <p className="text-sm text-muted-foreground">{t("notifications.notificationTypes.system")}
+                  <p className="text-sm text-muted-foreground">{t('ui.notificationTypes.system')}
 
                 </p>
                 </div>
@@ -261,8 +261,8 @@ export function NotificationSettings() {
       {isEnabled &&
       <Card>
           <CardHeader>
-            <CardTitle>{t("notifications.testNotification")}</CardTitle>
-            <CardDescription>{t("notifications.testNotification")}
+            <CardTitle>{t('ui.testNotification')}</CardTitle>
+            <CardDescription>{t('ui.testNotification')}
 
           </CardDescription>
           </CardHeader>
@@ -272,9 +272,9 @@ export function NotificationSettings() {
             onClick={async () => {
               try {
                 await pushNotifications.showLocalNotification(
-                  t('notifications.testNotification'),
+                  t('ui.testNotification'),
                   {
-                    body: t('notifications.testNotification'),
+                    body: t('ui.testNotification'),
                     icon: '/icons/icon-192x192.png',
                     tag: 'test-notification'
                   }
@@ -283,7 +283,7 @@ export function NotificationSettings() {
               } catch (error) {
                 toast.error(t('errors.savingSettings'));
               }
-                          }}>{t("notifications.testNotification")}
+                          }}>{t('ui.testNotification')}
 
 
           </Button>

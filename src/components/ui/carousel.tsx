@@ -217,7 +217,7 @@ const CarouselPrevious = React.forwardRef<
       {...props}
     >
       <ArrowLeft className="h-4 w-4" />
-      <span className="sr-only">{t("common.ui.previousSlide")}</span>
+      <span className="sr-only">{t('ui.ui.previousSlide')}</span>
     </Button>
   )
 })
@@ -247,7 +247,7 @@ const CarouselNext = React.forwardRef<
       {...props}
     >
       <ArrowRight className="h-4 w-4" />
-      <span className="sr-only">{t("common.ui.nextSlide")}</span>
+      <span className="sr-only">{t('ui.ui.nextSlide')}</span>
     </Button>
   )
 })

@@ -10,7 +10,7 @@ import { useTranslation } from 'react-i18next';
 const AnalyticsDashboard = lazy(() => import('@/components/admin/AnalyticsDashboard'));
 
 const AdminAnalyticsPage: React.FC = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('dashboard');
   const { user } = useUser();
   const [isAuthorized, setIsAuthorized] = useState<boolean | null>(null);
 
@@ -33,7 +33,7 @@ const AdminAnalyticsPage: React.FC = () => {
       <div className="min-h-screen flex items-center justify-center bg-gray-50">
         <div className="text-center">
           <Loader2 className="h-8 w-8 animate-spin mx-auto mb-4 text-purple-600" />
-          <p className="text-gray-600">{t('admin.verifyingAuthorization')}</p>
+          <p className="text-gray-600">{t('dashboard.verifyingAuthorization')}</p>
         </div>
       </div>
     );
@@ -45,9 +45,9 @@ const AdminAnalyticsPage: React.FC = () => {
       <div className="min-h-screen flex items-center justify-center bg-gray-50">
         <div className="text-center max-w-md">
           <Shield className="h-16 w-16 mx-auto mb-4 text-red-500" />
-          <h1 className="text-2xl font-bold text-gray-900 mb-2">{t('admin.accessDenied.title')}</h1>
+          <h1 className="text-2xl font-bold text-gray-900 mb-2">{t('dashboard.accessDenied.title')}</h1>
           <p className="text-gray-600 mb-6">
-            {t('admin.accessDenied.description')}
+            {t('dashboard.accessDenied.description')}
           </p>
           <Navigate to="/dashboard" replace />
         </div>
@@ -61,7 +61,7 @@ const AdminAnalyticsPage: React.FC = () => {
       <div className="min-h-screen flex items-center justify-center bg-gray-50">
         <div className="text-center">
           <Loader2 className="h-8 w-8 animate-spin mx-auto mb-4 text-purple-600" />
-          <p className="text-gray-600">{t('admin.loadingAnalytics')}</p>
+          <p className="text-gray-600">{t('dashboard.loadingAnalytics')}</p>
         </div>
       </div>
     }>

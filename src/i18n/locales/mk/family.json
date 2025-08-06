@@ -1,1 +1,683 @@
-{}
+{
+  "beneficiaryCommunications": {
+    "actions": {
+      "cancel": "[MK] Cancel",
+      "save": "[MK] Save",
+      "saving": "[MK] Saving"
+    },
+    "description": "[MK] Description",
+    "dialog": {
+      "description": "[MK] Description",
+      "title": "[MK] Title"
+    },
+    "empty": {
+      "subtitle": "[MK] Subtitle",
+      "title": "[MK] Title"
+    },
+    "fields": {
+      "beneficiaryName": "[MK] Beneficiary name",
+      "date": "[MK] Date",
+      "email": "[MK] Email",
+      "subject": "[MK] Subject",
+      "summary": "[MK] Summary",
+      "type": "[MK] Type"
+    },
+    "logAction": "[MK] Log action",
+    "logCommunication": "[MK] Log communication",
+    "placeholders": {
+      "subject": "[MK] Subject",
+      "summary": "[MK] Summary"
+    },
+    "title": "[MK] Title",
+    "types": {
+      "email": "[MK] Email",
+      "inPerson": "[MK] In person",
+      "letter": "[MK] Letter",
+      "other": "[MK] Other",
+      "phone": "[MK] Phone"
+    }
+  },
+  "common": {
+    "cancel": "[MK] Cancel",
+    "fix": "[MK] Fix",
+    "minutes": "[MK] Minutes",
+    "start": "[MK] Start"
+  },
+  "crisisAssessment": {
+    "criticalVulnerabilities": "[MK] Critical vulnerabilities",
+    "familyCapabilities": "[MK] Family capabilities",
+    "familyDiscussion": "[MK] Family discussion",
+    "familyDiscussionDescription": "[MK] Family discussion description",
+    "fixCapability": "[MK] Fix capability",
+    "fixNow": "[MK] Fix now",
+    "missing": "[MK] Missing",
+    "mostUrgent": "[MK] Most urgent",
+    "nextCriticalAction": "[MK] Next critical action",
+    "notPrepared": "[MK] Not prepared",
+    "partial": "[MK] Partial",
+    "prepared": "[MK] Prepared",
+    "printReport": "[MK] Print report",
+    "protected": "[MK] Protected",
+    "scheduleReview": "[MK] Schedule review",
+    "situationReadiness": "[MK] Situation readiness",
+    "subtitle": "[MK] Subtitle",
+    "timeEstimate": "[MK] Time estimate",
+    "title": "[MK] Title",
+    "vulnerable": "[MK] Vulnerable"
+  },
+  "crisisSituations": {
+    "businessEmergency": {
+      "description": "[MK] Description",
+      "title": "[MK] Title"
+    },
+    "emergencyHospital": {
+      "description": "[MK] Description",
+      "title": "[MK] Title"
+    },
+    "extendedTravel": {
+      "description": "[MK] Description",
+      "title": "[MK] Title"
+    },
+    "suddenDeath": {
+      "description": "[MK] Description",
+      "title": "[MK] Title"
+    }
+  },
+  "dashboard": {
+    "familyGuide": {
+      "discreteMode": "[MK] Discrete mode",
+      "discreteModeDesc": "[MK] Discrete mode desc",
+      "emergency_contacts_1": "[MK] Emergency contacts 1",
+      "export_guide_4": "[MK] Export guide 4",
+      "generateGuide": "[MK] Generate guide",
+      "important_documents_2": "[MK] Important documents 2",
+      "last_updated_6": "[MK] Last updated 6",
+      "share_with_family_5": "[MK] Share with family 5",
+      "subtitle": "[MK] Subtitle",
+      "title": "[MK] Title",
+      "view": "[MK] View",
+      "what_to_do_when_3": "[MK] What to do when 3"
+    }
+  },
+  "emergency": {
+    "addContact": "[MK] Add contact",
+    "addContactDialog": {
+      "addButton": "[MK] Add button",
+      "description": "[MK] Description",
+      "relationship": "[MK] Relationship",
+      "relationshipPlaceholder": "[MK] Relationship placeholder",
+      "selectContact": "[MK] Select contact",
+      "selectPlaceholder": "[MK] Select placeholder",
+      "title": "[MK] Title"
+    },
+    "description": "[MK] Description",
+    "errors": {
+      "addFailed": "[MK] Add failed",
+      "loadFailed": "[MK] Load failed",
+      "removeFailed": "[MK] Remove failed",
+      "reorderFailed": "[MK] Reorder failed",
+      "selectContact": "[MK] Select contact",
+      "testFailed": "[MK] Test failed"
+    },
+    "lastContacted": "[MK] Last contacted",
+    "maxContactsReached": "[MK] Max contacts reached",
+    "messages": {
+      "added": "[MK] Added",
+      "removed": "[MK] Removed",
+      "reordered": "[MK] Reordered",
+      "testSent": "[MK] Test sent"
+    },
+    "noContacts": "[MK] No contacts",
+    "sendTest": "[MK] Send test",
+    "title": "[MK] Title"
+  },
+  "errors": {
+    "dataNotFound": "[MK] Data not found",
+    "duplicateRecord": "[MK] Duplicate record",
+    "networkError": "[MK] Network error",
+    "permissionDenied": "[MK] Permission denied",
+    "unknown": "[MK] Unknown"
+  },
+  "estateStatus": {
+    "actions": {
+      "cancel": "[MK] Cancel",
+      "update": "[MK] Update",
+      "updating": "[MK] Updating"
+    },
+    "description": "[MK] Description",
+    "dialog": {
+      "description": "[MK] Description",
+      "title": "[MK] Title"
+    },
+    "empty": {
+      "noStatus": "[MK] No status",
+      "readOnly": "[MK] Read only"
+    },
+    "fields": {
+      "additionalDetails": "[MK] Additional details",
+      "status": "[MK] Status"
+    },
+    "lastUpdated": "[MK] Last updated",
+    "logAction": "[MK] Log action",
+    "placeholders": {
+      "additionalContext": "[MK] Additional context",
+      "selectStatus": "[MK] Select status"
+    },
+    "progress": "[MK] Progress",
+    "statuses": {
+      "assetsBeingValued": "[MK] Assets being valued",
+      "debtsBeingSettled": "[MK] Debts being settled",
+      "distributionInProgress": "[MK] Distribution in progress",
+      "estateClosed": "[MK] Estate closed",
+      "gatheringDocuments": "[MK] Gathering documents",
+      "initialReview": "[MK] Initial review",
+      "probateInitiated": "[MK] Probate initiated",
+      "readyForDistribution": "[MK] Ready for distribution",
+      "taxPreparation": "[MK] Tax preparation"
+    },
+    "title": "[MK] Title",
+    "updateStatus": "[MK] Update status"
+  },
+  "familyCapabilities": {
+    "businessOperations": "[MK] Business operations",
+    "canAccessBankAccounts": "[MK] Can access bank accounts",
+    "canAccessDigitalAccounts": "[MK] Can access digital accounts",
+    "canFileInsuranceClaims": "[MK] Can file insurance claims",
+    "canManageBusiness": "[MK] Can manage business",
+    "cannotAccessBankAccounts": "[MK] Cannot access bank accounts",
+    "cannotAccessDigitalAccounts": "[MK] Cannot access digital accounts",
+    "cannotFileInsuranceClaims": "[MK] Cannot file insurance claims",
+    "clearInheritancePlan": "[MK] Clear inheritance plan",
+    "digitalAccess": "[MK] Digital access",
+    "digitalAccounts": "[MK] Digital accounts",
+    "immediateFinancialNeeds": "[MK] Immediate financial needs",
+    "inheritance": "[MK] Inheritance",
+    "insuranceClaims": "[MK] Insurance claims",
+    "knowsLegalContacts": "[MK] Knows legal contacts",
+    "knowsMedicalWishes": "[MK] Knows medical wishes",
+    "legalMatters": "[MK] Legal matters",
+    "medicalDecisions": "[MK] Medical decisions",
+    "noBusinessInfo": "[MK] No business info",
+    "noInheritancePlan": "[MK] No inheritance plan",
+    "noLegalContacts": "[MK] No legal contacts",
+    "noMedicalInfo": "[MK] No medical info",
+    "partialBusinessInfo": "[MK] Partial business info",
+    "partialInheritancePlan": "[MK] Partial inheritance plan",
+    "partialMedicalInfo": "[MK] Partial medical info",
+    "payBills": "[MK] Pay bills"
+  },
+  "familyCrisisAssessment": {
+    "15_1": "[MK] 15 1"
+  },
+  "familyExecutorView": {
+    "communications": {
+      "description": "[MK] Description",
+      "empty": "[MK] Empty",
+      "title": "[MK] Title",
+      "to": "[MK] To"
+    },
+    "executor": "[MK] Executor",
+    "footer": "[MK] Footer",
+    "subtitle": "[MK] Subtitle",
+    "theExecutor": "[MK] The executor",
+    "title": "[MK] Title"
+  },
+  "familyHub": {
+    "accessLevels": {
+      "emergencyOnly": {
+        "description": "[MK] Description",
+        "fullDescription": "[MK] Full description",
+        "title": "[MK] Title"
+      },
+      "fullAccess": {
+        "description": "[MK] Description",
+        "fullDescription": "[MK] Full description",
+        "title": "[MK] Title"
+      },
+      "limitedInfo": {
+        "description": "[MK] Description",
+        "fullDescription": "[MK] Full description",
+        "title": "[MK] Title"
+      },
+      "none": {
+        "description": "[MK] Description",
+        "title": "[MK] Title"
+      }
+    },
+    "emergencyProtocol": {
+      "activeMessage": "[MK] Active message",
+      "configure": "[MK] Configure",
+      "configured": "[MK] Configured",
+      "description": "[MK] Description",
+      "title": "[MK] Title"
+    },
+    "errors": {
+      "authenticationRequired": "[MK] Authentication required",
+      "failedToFetchData": "[MK] Failed to fetch data",
+      "failedToLoadMembers": "[MK] Failed to load members"
+    },
+    "memberManagement": {
+      "addMorePeople": "[MK] Add more people",
+      "addTrustedPerson": "[MK] Add trusted person",
+      "daysAgo": "[MK] Days ago",
+      "informationAccessLevel": "[MK] Information access level",
+      "lastContactOver30Days": "[MK] Last contact over30 days",
+      "lastContacted": "[MK] Last contacted",
+      "preparedness": "[MK] Preparedness",
+      "sendUpdate": "[MK] Send update",
+      "sendUpdateTo": "[MK] Send update to",
+      "title": "[MK] Title"
+    },
+    "messages": {
+      "accessLevelUpdated": "[MK] Access level updated",
+      "failedToSendUpdate": "[MK] Failed to send update",
+      "updateSentTo": "[MK] Update sent to"
+    },
+    "overallPreparedness": {
+      "description": "[MK] Description",
+      "improvementNeeded": "[MK] Improvement needed",
+      "title": "[MK] Title"
+    },
+    "subtitle": "[MK] Subtitle",
+    "tabs": {
+      "familyMembers": "[MK] Family members",
+      "members": "[MK] Members",
+      "preparednessTools": "[MK] Preparedness tools",
+      "tools": "[MK] Tools"
+    },
+    "title": "[MK] Title"
+  },
+  "familyPreparednessTools": {
+    "create_a_printable_guide_for_y_3": "[MK] Create a printable guide for y 3",
+    "errors": {
+      "comingSoon": "[MK] Coming soon",
+      "generateFailed": "[MK] Generate failed",
+      "premiumRequired": "[MK] Premium required",
+      "selectScenario": "[MK] Select scenario"
+    },
+    "generate_another_5": "[MK] Generate another 5",
+    "generate_emergency_guide_2": "[MK] Generate emergency guide 2",
+    "guides": {
+      "death": {
+        "bankAccounts": "[MK] Bank accounts",
+        "contactExecutor": "[MK] Contact executor",
+        "contactLawyer": "[MK] Contact lawyer",
+        "deathCertificate": "[MK] Death certificate",
+        "disclaimer": "[MK] Disclaimer",
+        "employer": "[MK] Employer",
+        "financialInstitutions": "[MK] Financial institutions",
+        "first24Hours": "[MK] First24 hours",
+        "generatedOn": "[MK] Generated on",
+        "importantDocuments": "[MK] Important documents",
+        "insuranceCompanies": "[MK] Insurance companies",
+        "investmentAccounts": "[MK] Investment accounts",
+        "locateWill": "[MK] Locate will",
+        "peopleToNotify": "[MK] People to notify",
+        "secureResidence": "[MK] Secure residence",
+        "socialSecurity": "[MK] Social security",
+        "title": "[MK] Title"
+      },
+      "emergency": {
+        "address": "[MK] Address",
+        "attorney": "[MK] Attorney",
+        "emergency": "[MK] Emergency",
+        "financialAdvisor": "[MK] Financial advisor",
+        "homeInformation": "[MK] Home information",
+        "insuranceAgent": "[MK] Insurance agent",
+        "keyContacts": "[MK] Key contacts",
+        "securitySystem": "[MK] Security system",
+        "spouse": "[MK] Spouse",
+        "title": "[MK] Title",
+        "utilities": "[MK] Utilities"
+      },
+      "hospitalization": {
+        "allergies": "[MK] Allergies",
+        "bloodType": "[MK] Blood type",
+        "currentMedications": "[MK] Current medications",
+        "emergencyContacts": "[MK] Emergency contacts",
+        "healthcarePowerOfAttorney": "[MK] Healthcare power of attorney",
+        "hipaaRelease": "[MK] Hipaa release",
+        "legalDocuments": "[MK] Legal documents",
+        "livingWill": "[MK] Living will",
+        "medicalInformation": "[MK] Medical information",
+        "preferredHospital": "[MK] Preferred hospital",
+        "primaryCarePhysician": "[MK] Primary care physician",
+        "title": "[MK] Title"
+      },
+      "missing": {
+        "bankingApps": "[MK] Banking apps",
+        "checkHospitals": "[MK] Check hospitals",
+        "checkWithWorkplace": "[MK] Check with workplace",
+        "contactCloseFriends": "[MK] Contact close friends",
+        "contactLocalPolice": "[MK] Contact local police",
+        "digitalFootprint": "[MK] Digital footprint",
+        "email": "[MK] Email",
+        "immediateActions": "[MK] Immediate actions",
+        "phoneProvider": "[MK] Phone provider",
+        "socialMedia": "[MK] Social media",
+        "title": "[MK] Title"
+      }
+    },
+    "mockContent": {
+      "insurancePolicies": "[MK] Insurance policies"
+    },
+    "scenarios": {
+      "death": {
+        "description": "[MK] Description",
+        "title": "[MK] Title"
+      },
+      "emergency": {
+        "description": "[MK] Description",
+        "title": "[MK] Title"
+      },
+      "hospitalization": {
+        "description": "[MK] Description",
+        "title": "[MK] Title"
+      },
+      "missing": {
+        "description": "[MK] Description",
+        "title": "[MK] Title"
+      }
+    },
+    "select_scenario_4": "[MK] Select scenario 4",
+    "tools": {
+      "cancel": "[MK] Cancel",
+      "chooseScenario": "[MK] Choose scenario",
+      "emergencySimulator": "[MK] Emergency simulator",
+      "emergencySimulatorDesc": "[MK] Emergency simulator desc",
+      "generateGuide": "[MK] Generate guide",
+      "generating": "[MK] Generating",
+      "informationTreasureHunt": "[MK] Information treasure hunt",
+      "launch": "[MK] Launch",
+      "printGuide": "[MK] Print guide",
+      "stepByStepGuides": "[MK] Step by step guides",
+      "stepByStepGuidesDesc": "[MK] Step by step guides desc",
+      "treasureHuntDesc": "[MK] Treasure hunt desc",
+      "videoMessages": "[MK] Video messages",
+      "videoMessagesDesc": "[MK] Video messages desc"
+    },
+    "use_these_tools_to_ensure_your_1": "[MK] Use these tools to ensure your 1"
+  },
+  "guardian": {
+    "templateModal": {
+      "_1": "[MK] 1"
+    }
+  },
+  "guardianView": {
+    "defaultUserName": "[MK] Default user name",
+    "emergencyAccess": {
+      "accessFailed": "[MK] Access failed",
+      "accessGranted": "[MK] Access granted",
+      "accessing": "[MK] Accessing",
+      "button": "[MK] Button",
+      "confirmButton": "[MK] Confirm button",
+      "confirmCheckbox": "[MK] Confirm checkbox",
+      "contactLogged": "[MK] Contact logged",
+      "contactsDescription": "[MK] Contacts description",
+      "contactsTitle": "[MK] Contacts title",
+      "failedToLoadContacts": "[MK] Failed to load contacts",
+      "importantNote": "[MK] Important note",
+      "lastContacted": "[MK] Last contacted",
+      "logContact": "[MK] Log contact",
+      "modalDescription": "[MK] Modal description",
+      "modalTitle": "[MK] Modal title",
+      "notAuthorized": "[MK] Not authorized",
+      "pleaseConfirm": "[MK] Please confirm",
+      "priority": "[MK] Priority",
+      "priorityOrder": "[MK] Priority order",
+      "reasonLabel": "[MK] Reason label",
+      "reasonPlaceholder": "[MK] Reason placeholder",
+      "warningText": "[MK] Warning text"
+    },
+    "errors": {
+      "failedToLoad": "[MK] Failed to load",
+      "pleaseLogin": "[MK] Please login"
+    },
+    "guardianInfo": {
+      "description": "[MK] Description",
+      "securityNote": "[MK] Security note"
+    },
+    "readOnlyAccess": "[MK] Read only access",
+    "sections": {
+      "finalWishes": {
+        "description": "[MK] Description",
+        "digitalAccounts": "[MK] Digital accounts",
+        "empty": "[MK] Empty",
+        "funeralWishes": "[MK] Funeral wishes",
+        "messagesToLovedOnes": "[MK] Messages to loved ones",
+        "title": "[MK] Title"
+      },
+      "importantContacts": {
+        "description": "[MK] Description",
+        "empty": "[MK] Empty",
+        "title": "[MK] Title"
+      },
+      "keyDocuments": {
+        "description": "[MK] Description",
+        "empty": "[MK] Empty",
+        "expires": "[MK] Expires",
+        "keyDocumentBadge": "[MK] Key document badge",
+        "noExpiration": "[MK] No expiration",
+        "title": "[MK] Title"
+      }
+    },
+    "subtitle": "[MK] Subtitle",
+    "title": "[MK] Title"
+  },
+  "manual": {
+    "contacts": {
+      "form": {
+        "addButton": "[MK] Add button",
+        "cancel": "[MK] Cancel",
+        "emailLabel": "[MK] Email label",
+        "emailPlaceholder": "[MK] Email placeholder",
+        "nameLabel": "[MK] Name label",
+        "namePlaceholder": "[MK] Name placeholder",
+        "notesLabel": "[MK] Notes label",
+        "notesPlaceholder": "[MK] Notes placeholder",
+        "phoneLabel": "[MK] Phone label",
+        "phonePlaceholder": "[MK] Phone placeholder",
+        "roleLabel": "[MK] Role label",
+        "rolePlaceholder": "[MK] Role placeholder",
+        "saving": "[MK] Saving",
+        "updateButton": "[MK] Update button"
+      }
+    }
+  },
+  "notificationPreferences": {
+    "description": "[MK] Description",
+    "emailRequired": "[MK] Email required",
+    "errors": {
+      "loadFailed": "[MK] Load failed",
+      "updateFailed": "[MK] Update failed"
+    },
+    "howItWorks": {
+      "point1": "[MK] Point1",
+      "point2": "[MK] Point2",
+      "point3": "[MK] Point3",
+      "title": "[MK] Title"
+    },
+    "info": "[MK] Info",
+    "lastUpdated": "[MK] Last updated",
+    "messages": {
+      "updated": "[MK] Updated"
+    },
+    "noContacts": "[MK] No contacts",
+    "noEmail": "[MK] No email",
+    "title": "[MK] Title"
+  },
+  "playbook": {
+    "addContact": "[MK] Add contact",
+    "autoSaveNotice": "[MK] Auto save notice",
+    "contact": "[MK] Contact",
+    "contactFields": {
+      "email": "[MK] Email",
+      "emailPlaceholder": "[MK] Email placeholder",
+      "name": "[MK] Name",
+      "namePlaceholder": "[MK] Name placeholder",
+      "notes": "[MK] Notes",
+      "notesPlaceholder": "[MK] Notes placeholder",
+      "phone": "[MK] Phone",
+      "phonePlaceholder": "[MK] Phone placeholder",
+      "role": "[MK] Role",
+      "rolePlaceholder": "[MK] Role placeholder"
+    },
+    "edit": "[MK] Edit",
+    "errors": {
+      "loadFailed": "[MK] Load failed",
+      "saveFailed": "[MK] Save failed"
+    },
+    "loading": "[MK] Loading",
+    "messages": {
+      "autoSaved": "[MK] Auto saved",
+      "saved": "[MK] Saved"
+    },
+    "noContacts": "[MK] No contacts",
+    "noContent": "[MK] No content",
+    "preview": "[MK] Preview",
+    "save": "[MK] Save",
+    "saving": "[MK] Saving",
+    "sections": {
+      "contacts": {
+        "description": "[MK] Description",
+        "title": "[MK] Title"
+      },
+      "digital": {
+        "description": "[MK] Description",
+        "placeholder": "[MK] Placeholder",
+        "title": "[MK] Title"
+      },
+      "documents": {
+        "description": "[MK] Description",
+        "placeholder": "[MK] Placeholder",
+        "title": "[MK] Title"
+      },
+      "funeral": {
+        "description": "[MK] Description",
+        "placeholder": "[MK] Placeholder",
+        "title": "[MK] Title"
+      },
+      "messages": {
+        "description": "[MK] Description",
+        "placeholder": "[MK] Placeholder",
+        "title": "[MK] Title"
+      },
+      "practical": {
+        "description": "[MK] Description",
+        "placeholder": "[MK] Placeholder",
+        "title": "[MK] Title"
+      }
+    },
+    "status": {
+      "complete": "[MK] Complete",
+      "draft": "[MK] Draft",
+      "empty": "[MK] Empty"
+    },
+    "subtitle": {
+      "edit": "[MK] Edit",
+      "view": "[MK] View"
+    },
+    "tabs": {
+      "contacts": "[MK] Contacts",
+      "digital": "[MK] Digital",
+      "documents": "[MK] Documents",
+      "funeral": "[MK] Funeral",
+      "messages": "[MK] Messages",
+      "practical": "[MK] Practical"
+    },
+    "templates": {
+      "append": "[MK] Append",
+      "backToTemplates": "[MK] Back to templates",
+      "description": "[MK] Description",
+      "existingContent": "[MK] Existing content",
+      "fillInVariables": "[MK] Fill in variables",
+      "insertTemplate": "[MK] Insert template",
+      "preview": "[MK] Preview",
+      "replace": "[MK] Replace",
+      "title": "[MK] Title",
+      "variableCount": "[MK] Variable count",
+      "variablePlaceholder": "[MK] Variable placeholder"
+    },
+    "title": {
+      "edit": "[MK] Edit",
+      "view": "[MK] View"
+    },
+    "useTemplate": "[MK] Use template"
+  },
+  "preparedness": {
+    "assessments": {
+      "decisionMaking": {
+        "good": "[MK] Good",
+        "needsWork": "[MK] Needs work"
+      },
+      "immediateAccess": {
+        "good": "[MK] Good",
+        "needsWork": "[MK] Needs work"
+      },
+      "longTermSecurity": {
+        "good": "[MK] Good",
+        "needsWork": "[MK] Needs work"
+      }
+    },
+    "dimensions": {
+      "decisionMaking": "[MK] Decision making",
+      "immediateAccess": "[MK] Immediate access",
+      "longTermSecurity": "[MK] Long term security"
+    },
+    "familyBenefit": "[MK] Family benefit",
+    "familyCommunication": {
+      "description": "[MK] Description",
+      "scheduleReview": "[MK] Schedule review",
+      "shareReport": "[MK] Share report",
+      "title": "[MK] Title"
+    },
+    "gaps": {
+      "addMedicalPreferences": "[MK] Add medical preferences",
+      "basicAccessInfo": "[MK] Basic access info",
+      "completeFinancialAccess": "[MK] Complete financial access",
+      "documentBusinessOperations": "[MK] Document business operations",
+      "improveImmediateAccess": "[MK] Improve immediate access",
+      "updateWillAndTrust": "[MK] Update will and trust"
+    },
+    "impact": "[MK] Impact",
+    "improvements": {
+      "addBankAccounts": "[MK] Add bank accounts",
+      "documentMedicalWishes": "[MK] Document medical wishes",
+      "uploadLegalDocuments": "[MK] Upload legal documents"
+    },
+    "levels": {
+      "fullyPrepared": "[MK] Fully prepared",
+      "goodBasic": "[MK] Good basic",
+      "minimalPreparation": "[MK] Minimal preparation",
+      "needsImmediate": "[MK] Needs immediate",
+      "somePreparation": "[MK] Some preparation",
+      "wellPrepared": "[MK] Well prepared"
+    },
+    "nextStep": "[MK] Next step",
+    "scenarioReadiness": "[MK] Scenario readiness",
+    "scenarios": {
+      "emergencyHospital": {
+        "description": "[MK] Description",
+        "title": "[MK] Title"
+      },
+      "extendedTravel": {
+        "description": "[MK] Description",
+        "title": "[MK] Title"
+      },
+      "suddenDeath": {
+        "description": "[MK] Description",
+        "title": "[MK] Title"
+      }
+    },
+    "title": "[MK] Title",
+    "toImprove": "[MK] To improve"
+  },
+  "relationships": {
+    "child": "[MK] Child",
+    "friend": "[MK] Friend",
+    "other": "[MK] Other",
+    "parent": "[MK] Parent",
+    "sibling": "[MK] Sibling",
+    "spouse": "[MK] Spouse"
+  }
+}

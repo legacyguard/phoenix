@@ -1,589 +1,2245 @@
 {
+  "actions": {
+    "addAsset": "Add asset",
+    "addLiability": "Add liability",
+    "addNote": "Add note",
+    "cancel": "Cancel",
+    "contactSupport": "Contact support",
+    "disable": "Disable",
+    "enable": "Enable",
+    "generateWill": "Generate will",
+    "goBack": "Go back",
+    "markImportant": "Mark important",
+    "next": "Next",
+    "previous": "Previous",
+    "refresh": "Refresh",
+    "save": "Save",
+    "saveAsset": "Save asset",
+    "saving": "Saving",
+    "updateAsset": "Update asset",
+    "upload": "Upload",
+    "viewDetails": "View details",
+    "accept": "Accept",
+    "accepted": "Accepted",
+    "account": "Account",
+    "activate": "Activate",
+    "add": "Add",
+    "additional": "Additional",
+    "adjust": "Adjust",
+    "advanced": "Advanced",
+    "align": "Align",
+    "allowed": "Allowed",
+    "alter": "Alter",
+    "approve": "Approve",
+    "approved": "Approved",
+    "archive": "Archive",
+    "arrange": "Arrange",
+    "authenticate": "Authenticate",
+    "authenticated": "Authenticated",
+    "authorize": "Authorize",
+    "authorized": "Authorized",
+    "automatic": "Automatic",
+    "auxiliary": "Auxiliary",
+    "available": "Available",
+    "backedUp": "Backed up",
+    "basic": "Basic",
+    "begin": "Begin",
+    "blocked": "Blocked",
+    "bonus": "Bonus",
+    "bottom": "Bottom",
+    "browse": "Browse",
+    "center": "Center",
+    "change": "Change",
+    "choose": "Choose",
+    "clear": "Clear",
+    "clone": "Clone",
+    "close": "Close",
+    "collapse": "Collapse",
+    "compatible": "Compatible",
+    "complete": "Complete",
+    "configuration": "Configuration",
+    "configure": "Configure",
+    "confirm": "Confirm",
+    "confirmed": "Confirmed",
+    "content": "Content",
+    "convert": "Convert",
+    "copy": "Copy",
+    "create": "Create",
+    "crop": "Crop",
+    "current": "Current",
+    "custom": "Custom",
+    "customize": "Customize",
+    "cut": "Cut",
+    "deactivate": "Deactivate",
+    "decline": "Decline",
+    "declined": "Declined",
+    "decode": "Decode",
+    "decrypt": "Decrypt",
+    "default": "Default",
+    "delete": "Delete",
+    "denied": "Denied",
+    "deny": "Deny",
+    "deselect": "Deselect",
+    "disabled": "Disabled",
+    "done": "Done",
+    "downgrade": "Downgrade",
+    "download": "Download",
+    "drag": "Drag",
+    "drop": "Drop",
+    "duplicate": "Duplicate",
+    "edit": "Edit",
+    "editable": "Editable",
+    "enabled": "Enabled",
+    "encode": "Encode",
+    "encrypt": "Encrypt",
+    "encrypted": "Encrypted",
+    "end": "End",
+    "enhance": "Enhance",
+    "enterprise": "Enterprise",
+    "exitFullscreen": "Exit fullscreen",
+    "expand": "Expand",
+    "expert": "Expert",
+    "export": "Export",
+    "extra": "Extra",
+    "filter": "Filter",
+    "find": "Find",
+    "finish": "Finish",
+    "flip": "Flip",
+    "footer": "Footer",
+    "forbidden": "Forbidden",
+    "format": "Format",
+    "full": "Full",
+    "fullscreen": "Fullscreen",
+    "grant": "Grant",
+    "granted": "Granted",
+    "group": "Group",
+    "hash": "Hash",
+    "header": "Header",
+    "hide": "Hide",
+    "historical": "Historical",
+    "import": "Import",
+    "improve": "Improve",
+    "incompatible": "Incompatible",
+    "incomplete": "Incomplete",
+    "insecure": "Insecure",
+    "internationalize": "Internationalize",
+    "invalid": "Invalid",
+    "justify": "Justify",
+    "latest": "Latest",
+    "left": "Left",
+    "localize": "Localize",
+    "lock": "Lock",
+    "login": "Login",
+    "logout": "Logout",
+    "main": "Main",
+    "mandatory": "Mandatory",
+    "manual": "Manual",
+    "maximize": "Maximize",
+    "menu": "Menu",
+    "middle": "Middle",
+    "minimize": "Minimize",
+    "modify": "Modify",
+    "move": "Move",
+    "navigation": "Navigation",
+    "newest": "Newest",
+    "nonEditable": "Non-editable",
+    "notBackedUp": "Not backed up",
+    "notSynced": "Not synced",
+    "oldest": "Oldest",
+    "open": "Open",
+    "optimize": "Optimize",
+    "optional": "Optional",
+    "options": "Options",
+    "organize": "Organize",
+    "outdated": "Outdated",
+    "parse": "Parse",
+    "partial": "Partial",
+    "paste": "Paste",
+    "pause": "Pause",
+    "permanent": "Permanent",
+    "permitted": "Permitted",
+    "personalize": "Personalize",
+    "pick": "Pick",
+    "play": "Play",
+    "preferences": "Preferences",
+    "premium": "Premium",
+    "prepare": "Prepare",
+    "primary": "Primary",
+    "professional": "Professional",
+    "profile": "Profile",
+    "publish": "Publish",
+    "read": "Read",
+    "readOnly": "Read only",
+    "readWrite": "Read/write",
+    "ready": "Ready",
+    "recent": "Recent",
+    "recommended": "Recommended",
+    "register": "Register",
+    "reject": "Reject",
+    "rejected": "Rejected",
+    "reload": "Reload",
+    "remove": "Remove",
+    "required": "Required",
+    "reset": "Reset",
+    "resize": "Resize",
+    "restart": "Restart",
+    "restore": "Restore",
+    "resume": "Resume",
+    "retry": "Retry",
+    "right": "Right",
+    "rotate": "Rotate",
+    "scale": "Scale",
+    "search": "Search",
+    "secondary": "Secondary",
+    "secure": "Secure",
+    "select": "Select",
+    "semiAutomatic": "Semi-automatic",
+    "settings": "Settings",
+    "setup": "Setup",
+    "show": "Show",
+    "sidebar": "Sidebar",
+    "sign": "Sign",
+    "signin": "Sign in",
+    "signout": "Sign out",
+    "signup": "Sign up",
+    "sort": "Sort",
+    "standard": "Standard",
+    "start": "Start",
+    "stop": "Stop",
+    "submit": "Submit",
+    "suggested": "Suggested",
+    "supplementary": "Supplementary",
+    "supported": "Supported",
+    "synced": "Synced",
+    "temporary": "Temporary",
+    "tertiary": "Tertiary",
+    "top": "Top",
+    "transform": "Transform",
+    "translate": "Translate",
+    "unarchive": "Unarchive",
+    "unauthenticated": "Unauthenticated",
+    "unauthorized": "Unauthorized",
+    "unavailable": "Unavailable",
+    "unconfirmed": "Unconfirmed",
+    "unencrypted": "Unencrypted",
+    "ungroup": "Ungroup",
+    "unlock": "Unlock",
+    "unpublish": "Unpublish",
+    "unsupported": "Unsupported",
+    "unvalidated": "Unvalidated",
+    "unverified": "Unverified",
+    "upToDate": "Up to date",
+    "update": "Update",
+    "upgrade": "Upgrade",
+    "valid": "Valid",
+    "validate": "Validate",
+    "validated": "Validated",
+    "verified": "Verified",
+    "verify": "Verify",
+    "view": "View",
+    "viewOnly": "View only",
+    "zoomIn": "Zoom in",
+    "zoomOut": "Zoom out"
+  },
+  "alerts": {
+    "description": "Description",
+    "dismiss": "Dismiss",
+    "errors": {
+      "dismissFailed": "Dismiss failed",
+      "loadFailed": "Load failed",
+      "renewFailed": "Renew failed",
+      "snoozeFailed": "Snooze failed"
+    },
+    "expiresOn": "Expires on",
+    "markAsRenewed": "Mark as renewed",
+    "messages": {
+      "dismissed": "Dismissed",
+      "markedAsRenewed": "Marked as renewed",
+      "snoozed": "Snoozed"
+    },
+    "noActiveAlerts": "No active alerts",
+    "noDismissedAlerts": "No dismissed alerts",
+    "noSnoozedAlerts": "No snoozed alerts",
+    "renewalInstructions": "Renewal instructions",
+    "snooze7Days": "Snooze7 days",
+    "snoozedUntil": "Snoozed until",
+    "tabs": {
+      "active": "Active",
+      "dismissed": "Dismissed",
+      "snoozed": "Snoozed"
+    },
+    "title": "Title",
+    "types": {
+      "expired": "Expired",
+      "expiring30": "Expiring30",
+      "expiring7": "Expiring7",
+      "expiring90": "Expiring90"
+    },
+    "unread": "Unread",
+    "unsnooze": "Unsnooze"
+  },
+  "analytics": {
+    "analyticsDashboard": {
+      "3_3_7": "3 3 7",
+      "drop_off_8": "Drop off 8",
+      "from_last_period_1": "From last period 1"
+    },
+    "analyticsDemo": {
+      "analytics_demo_tracking_disabl_1": "Analytics demo tracking disabl 1",
+      "analytics_event_generator_3": "Analytics event generator 3",
+      "enable_analytics_tracking_in_y_2": "Enable analytics tracking in y 2",
+      "events_are_only_sent_when_anal_9": "Events are only sent when anal 9",
+      "events_sent_5": "Events sent 5",
+      "generate_random_events_6": "Generate random events 6",
+      "generate_test_events_to_see_re_4": "Generate test events to see re 4",
+      "open_the_analytics_dashboard_i_8": "Open the analytics dashboard i 8",
+      "track_milestone_7": "Track milestone 7"
+    },
+    "charts": {
+      "emotionalJourney": {
+        "description": "Description",
+        "title": "Title"
+      },
+      "featureUsage": {
+        "adoption": "Adoption",
+        "description": "Description",
+        "title": "Title",
+        "usage": "Usage"
+      },
+      "onboardingFunnel": {
+        "description": "Description",
+        "title": "Title"
+      },
+      "userActivity": {
+        "active": "Active",
+        "description": "Description",
+        "new": "New",
+        "title": "Title"
+      }
+    },
+    "demo": {
+      "startTimer": "Start timer",
+      "stopTimer": "Stop timer"
+    },
+    "disabled": {
+      "alert": {
+        "description": "Description",
+        "title": "Title"
+      },
+      "privacy": {
+        "description": "Description",
+        "item1": "Item1",
+        "item2": "Item2",
+        "item3": "Item3",
+        "item4": "Item4",
+        "learnMore": "Learn more",
+        "manageConsent": "Manage consent",
+        "noItem1": "No item1",
+        "noItem2": "No item2",
+        "noItem3": "No item3",
+        "title": "Title",
+        "whatWeDontTrack": "What we dont track",
+        "whatWeTrack": "What we track"
+      },
+      "subtitle": "Subtitle",
+      "title": "Title"
+    },
+    "emotions": {
+      "insights": "Insights"
+    },
+    "eventStream": {
+      "description": "Description",
+      "empty": "Empty",
+      "pause": "Pause",
+      "resume": "Resume",
+      "title": "Title"
+    },
+    "insights": {
+      "highEngagement": {
+        "description": "Description",
+        "title": "Title"
+      },
+      "lowCompletion": {
+        "action": "Action",
+        "description": "Description",
+        "title": "Title"
+      },
+      "opportunity": {
+        "action": "Action",
+        "description": "Description",
+        "title": "Title"
+      },
+      "title": "Title"
+    },
+    "metrics": {
+      "dailyActiveUsers": "Daily active users",
+      "onboardingCompletion": "Onboarding completion",
+      "taskCompletion": "Task completion",
+      "timeToFirstAction": "Time to first action"
+    },
+    "subtitle": "Subtitle",
+    "tabs": {
+      "emotions": "Emotions",
+      "events": "Events",
+      "funnel": "Funnel",
+      "insights": "Insights"
+    },
+    "timeRange": {
+      "24h": "24h",
+      "30d": "30d",
+      "7d": "7d"
+    },
+    "title": "Title"
+  },
+  "annualReview": {
+    "armory": {
+      "categories": {
+        "bankAccounts": "Bank accounts",
+        "realEstate": "Real estate"
+      },
+      "description": "Description",
+      "ownershipQuestion": "Ownership question",
+      "status": {
+        "current": "Current",
+        "needsUpdate": "Needs update"
+      },
+      "title": "Title"
+    },
+    "beneficiaries": {
+      "confirmationQuestion": "Confirmation question",
+      "description": "Description",
+      "details": {
+        "percentage": "Percentage",
+        "primary": "Primary"
+      },
+      "status": {
+        "current": "Current"
+      },
+      "title": "Title"
+    },
+    "buttons": {
+      "back": "Back",
+      "confirm": "Confirm",
+      "finish": "Finish",
+      "next": "Next",
+      "save": "Save",
+      "update": "Update"
+    },
+    "commandRoster": {
+      "description": "Description",
+      "details": {
+        "executor": "Executor",
+        "guardian": "Guardian"
+      },
+      "executorQuestion": "Executor question",
+      "status": {
+        "current": "Current",
+        "needsUpdate": "Needs update"
+      },
+      "title": "Title"
+    },
+    "complete": {
+      "changes": "Changes",
+      "description": "Description",
+      "message": "Message",
+      "nextReview": "Next review",
+      "noChanges": "No changes",
+      "reminder": "Reminder",
+      "summary": "Summary",
+      "title": "Title"
+    },
+    "description": "Description",
+    "progress": {
+      "completed": "Completed",
+      "estimatedTime": "Estimated time",
+      "title": "Title",
+      "totalSteps": "Total steps"
+    },
+    "status": {
+      "completed": "Completed"
+    },
+    "step1": {
+      "description": "Description",
+      "title": "Title"
+    },
+    "step2": {
+      "description": "Description",
+      "title": "Title"
+    },
+    "step3": {
+      "description": "Description",
+      "title": "Title"
+    },
+    "step4": {
+      "description": "Description",
+      "title": "Title"
+    },
+    "subtitle": "Subtitle",
+    "title": "Title"
+  },
   "app": {
-    "name": "LegacyGuard",
-    "tagline": "Secure your legacy, protect your family"
+    "name": "Name",
+    "tagline": "Tagline"
+  },
+  "assets": {
+    "assetOverview": {
+      "100_2": "100 2",
+      "50_4": "50 4"
+    }
+  },
+  "auth": {
+    "loginButton": "Login button",
+    "signUpLink": "Sign up link",
+    "signupButton": "Signup button"
   },
   "common": {
-    "loading": "Loading...",
-    "error": "Error",
-    "success": "Success",
-    "cancel": "Cancel",
-    "save": "Save",
-    "delete": "Delete",
-    "edit": "Edit",
+    "active": "Active",
     "add": "Add",
-    "remove": "Remove",
-    "close": "Close",
+    "address": "Address",
+    "all": "All",
+    "approved": "Approved",
+    "archived": "Archived",
+    "authenticated": "Authenticated",
+    "authorized": "Authorized",
+    "automatic": "Automatic",
+    "available": "Available",
     "back": "Back",
-    "next": "Next",
-    "continue": "Continue",
-    "submit": "Submit",
+    "backedUp": "Backed up",
+    "browse": "Browse",
+    "cancel": "Cancel",
+    "cancelled": "Cancelled",
+    "choose": "Choose",
+    "city": "City",
+    "clickToUpload": "Click to upload",
+    "close": "Close",
+    "compatible": "Compatible",
+    "complete": "Complete",
+    "completed": "Completed",
     "confirm": "Confirm",
-    "yes": "Yes",
-    "no": "No",
-    "ok": "OK",
-    "retry": "Retry",
-    "refresh": "Refresh",
-    "search": "Search",
-    "filter": "Filter",
-    "view": "View",
-    "download": "Download",
-    "upload": "Upload",
-    "settings": "Settings",
-    "help": "Help",
-    "logout": "Logout",
-    "login": "Login",
-    "register": "Register",
-    "profile": "Profile",
+    "confirmPassword": "Confirm password",
+    "connected": "Connected",
+    "connecting": "Connecting...",
+    "connectionError": "Connection error",
+    "connectionFailed": "Connection failed",
+    "continue": "Continue",
+    "copied": "Copied to clipboard",
+    "copyFailed": "Copy failed",
+    "copying": "Copying...",
+    "country": "Country",
+    "createFailed": "Create failed",
+    "created": "Created successfully",
+    "creating": "Creating...",
+    "critical": "Critical",
+    "current": "Current",
+    "custom": "Custom",
     "dashboard": "Dashboard",
+    "date": "Date",
+    "default": "Default",
+    "delete": "Delete",
+    "deleteFailed": "Delete failed",
+    "deleted": "Deleted successfully",
+    "deleting": "Deleting...",
+    "disabled": "Disabled",
+    "disconnected": "Disconnected",
+    "download": "Download",
+    "draft": "Draft",
+    "dragAndDrop": "Drag and drop files here",
+    "edit": "Edit",
+    "editable": "Editable",
+    "email": "Please enter a valid email address",
+    "empty": "No data available",
+    "enabled": "Enabled",
+    "encrypted": "Encrypted",
+    "error": "Error",
+    "errorLoading": "Error loading data",
+    "expired": "Expired",
+    "filter": "Filter",
+    "firstName": "First name",
+    "footer": {
+      "community_8": "Community 8",
+      "contact_7": "Contact 7",
+      "dashboard_3": "Dashboard 3",
+      "data_protection_11": "Data protection 11",
+      "guardians_2": "Guardians 2",
+      "guides_6": "Guides 6",
+      "help_5": "Help 5",
+      "privacy_policy_9": "Privacy policy 9",
+      "security_4": "Security 4",
+      "terms_10": "Terms 10",
+      "vault_1": "Vault 1"
+    },
+    "full": "Full",
+    "fullName": "Full name",
+    "goBack": "Go back",
+    "goHome": "Go home",
+    "help": "Help",
+    "hidden": "Hidden",
+    "high": "High",
+    "historical": "Historical",
     "home": "Home",
+    "important": "Important",
+    "improveReadiness": "Improve readiness",
+    "inProgress": "In progress",
+    "inactive": "Inactive",
+    "incompatible": "Incompatible",
+    "incomplete": "Incomplete",
+    "info": "Information",
+    "insecure": "Insecure",
+    "invalid": "Invalid",
+    "lastName": "Last name",
+    "latest": "Latest",
+    "loading": "Loading",
+    "loadingData": "Loading data...",
+    "login": "Login",
+    "logout": "Logout",
+    "low": "Low",
+    "mandatory": "Mandatory",
+    "manual": "Manual",
     "menu": "Menu",
     "navigation": "Navigation",
-    "empty": "No data available",
+    "newest": "Newest",
+    "next": "Next",
+    "no": "No",
     "noResults": "No results found",
-    "loadingData": "Loading data...",
-    "errorLoading": "Error loading data",
-    "tryAgain": "Please try again",
-    "connectionError": "Connection error",
-    "serverError": "Server error",
+    "nonEditable": "Non-editable",
+    "none": "None",
+    "normal": "Normal",
+    "notBackedUp": "Not backed up",
     "notFound": "Page not found",
-    "required": "This field is required",
-    "invalid": "Invalid value",
-    "email": "Please enter a valid email address",
-    "password": "Password",
-    "confirmPassword": "Confirm password",
-    "passwordsDoNotMatch": "Passwords do not match",
-    "firstName": "First name",
-    "lastName": "Last name",
-    "fullName": "Full name",
-    "phone": "Phone number",
-    "address": "Address",
-    "city": "City",
-    "state": "State",
-    "country": "Country",
-    "zipCode": "ZIP code",
-    "date": "Date",
-    "time": "Time",
-    "select": "Select",
-    "choose": "Choose",
-    "browse": "Browse",
-    "dragAndDrop": "Drag and drop files here",
+    "notSynced": "Not synced",
+    "offline": "Offline",
+    "ok": "OK",
+    "oldest": "Oldest",
+    "online": "Online",
+    "optional": "Optional",
     "or": "or",
-    "clickToUpload": "Click to upload",
-    "uploading": "Uploading...",
-    "uploadComplete": "Upload complete",
-    "uploadFailed": "Upload failed",
+    "outdated": "Outdated",
+    "overdue": "Overdue",
+    "pagination": {
+      "morePages": "More pages",
+      "next": "Next",
+      "previous": "Previous"
+    },
+    "partial": "Partial",
+    "password": "Password",
+    "passwordsDoNotMatch": "Passwords do not match",
+    "pending": "Pending",
+    "permanent": "Permanent",
+    "phone": "Phone number",
+    "previous": "Previous",
+    "private": "Private",
     "processing": "Processing...",
     "processingComplete": "Processing complete",
     "processingFailed": "Processing failed",
-    "saving": "Saving...",
-    "saved": "Saved successfully",
-    "saveFailed": "Save failed",
-    "deleting": "Deleting...",
-    "deleted": "Deleted successfully",
-    "deleteFailed": "Delete failed",
-    "updating": "Updating...",
-    "updated": "Updated successfully",
-    "updateFailed": "Update failed",
-    "creating": "Creating...",
-    "created": "Created successfully",
-    "createFailed": "Create failed",
-    "copying": "Copying...",
-    "copied": "Copied to clipboard",
-    "copyFailed": "Copy failed",
-    "sharing": "Sharing...",
-    "shared": "Shared successfully",
-    "shareFailed": "Share failed",
-    "sending": "Sending...",
-    "sent": "Sent successfully",
-    "sendFailed": "Send failed",
-    "connecting": "Connecting...",
-    "connected": "Connected",
-    "connectionFailed": "Connection failed",
-    "disconnected": "Disconnected",
-    "reconnecting": "Reconnecting...",
-    "online": "Online",
-    "offline": "Offline",
-    "status": "Status",
-    "active": "Active",
-    "inactive": "Inactive",
-    "enabled": "Enabled",
-    "disabled": "Disabled",
-    "visible": "Visible",
-    "hidden": "Hidden",
+    "profile": "Profile",
     "public": "Public",
-    "private": "Private",
-    "draft": "Draft",
     "published": "Published",
-    "archived": "Archived",
-    "pending": "Pending",
-    "approved": "Approved",
-    "rejected": "Rejected",
-    "completed": "Completed",
-    "inProgress": "In progress",
-    "cancelled": "Cancelled",
-    "expired": "Expired",
-    "scheduled": "Scheduled",
-    "overdue": "Overdue",
-    "urgent": "Urgent",
-    "important": "Important",
-    "normal": "Normal",
-    "low": "Low",
-    "high": "High",
-    "critical": "Critical",
-    "warning": "Warning",
-    "info": "Information",
-    "all": "All",
-    "none": "None",
-    "custom": "Custom",
-    "default": "Default",
-    "automatic": "Automatic",
-    "manual": "Manual",
-    "full": "Full",
-    "partial": "Partial",
-    "complete": "Complete",
-    "incomplete": "Incomplete",
-    "valid": "Valid",
-    "invalid": "Invalid",
-    "verified": "Verified",
-    "unverified": "Unverified",
-    "authenticated": "Authenticated",
-    "unauthenticated": "Unauthenticated",
-    "authorized": "Authorized",
-    "unauthorized": "Unauthorized",
-    "secure": "Secure",
-    "insecure": "Insecure",
-    "encrypted": "Encrypted",
-    "unencrypted": "Unencrypted",
-    "backedUp": "Backed up",
-    "notBackedUp": "Not backed up",
-    "synced": "Synced",
-    "notSynced": "Not synced",
-    "upToDate": "Up to date",
-    "outdated": "Outdated",
-    "current": "Current",
-    "previous": "Previous",
-    "next": "Next",
-    "latest": "Latest",
-    "oldest": "Oldest",
-    "newest": "Newest",
-    "recent": "Recent",
-    "historical": "Historical",
-    "temporary": "Temporary",
-    "permanent": "Permanent",
     "readOnly": "Read only",
     "readWrite": "Read/write",
-    "viewOnly": "View only",
-    "editable": "Editable",
-    "nonEditable": "Non-editable",
-    "required": "Required",
-    "optional": "Optional",
-    "mandatory": "Mandatory",
+    "recent": "Recent",
     "recommended": "Recommended",
+    "reconnecting": "Reconnecting...",
+    "refresh": "Refresh",
+    "register": "Register",
+    "rejected": "Rejected",
+    "remove": "Remove",
+    "required": "Required",
+    "retry": "Retry",
+    "routeErrorBoundary": {
+      "code_1": "Code 1",
+      "reload_page_2": "Reload page 2",
+      "technical_details_3": "Technical details 3"
+    },
+    "save": "Save",
+    "saveFailed": "Save failed",
+    "saved": "Saved successfully",
+    "saving": "Saving",
+    "scheduled": "Scheduled",
+    "search": "Search",
+    "secure": "Secure",
+    "select": "Select",
+    "sendFailed": "Send failed",
+    "sending": "Sending...",
+    "sent": "Sent successfully",
+    "serverError": "Server error",
+    "settings": "Settings",
+    "shareFailed": "Share failed",
+    "shared": "Shared successfully",
+    "sharing": "Sharing...",
+    "state": "State",
+    "status": "Status",
+    "submit": "Submit",
+    "success": "Success",
     "suggested": "Suggested",
-    "available": "Available",
-    "unavailable": "Unavailable",
     "supported": "Supported",
+    "synced": "Synced",
+    "temporary": "Temporary",
+    "time": "Time",
+    "tryAgain": "Please try again",
+    "ui": {
+      "close": "Close",
+      "goToNextPage": "Go to next page",
+      "goToPreviousPage": "Go to previous page",
+      "more": "More",
+      "nextSlide": "Next slide",
+      "previousSlide": "Previous slide",
+      "toggleSidebar": "Toggle sidebar"
+    },
+    "unauthenticated": "Unauthenticated",
+    "unauthorized": "Unauthorized",
+    "unavailable": "Unavailable",
+    "unencrypted": "Unencrypted",
     "unsupported": "Unsupported",
-    "compatible": "Compatible",
-    "incompatible": "Incompatible"
+    "unverified": "Unverified",
+    "upToDate": "Up to date",
+    "updateFailed": "Update failed",
+    "updated": "Updated successfully",
+    "updating": "Updating...",
+    "upload": "Upload",
+    "uploadComplete": "Upload complete",
+    "uploadFailed": "Upload failed",
+    "uploading": "Uploading...",
+    "urgent": "Urgent",
+    "valid": "Valid",
+    "verified": "Verified",
+    "view": "View",
+    "viewDetails": "View details",
+    "viewOnly": "View only",
+    "visible": "Visible",
+    "warning": "Warning",
+    "yes": "Yes",
+    "zipCode": "ZIP code",
+    "addedOn": "Added on",
+    "closing": "Closing",
+    "confidentialNotice": "Confidential notice",
+    "contactUs": "Contact us",
+    "countryLanguageSelector": {
+      "country_language_1": "Country language 1",
+      "select_country_2": "Select country 2",
+      "select_language_3": "Select language 3"
+    },
+    "done": "Done",
+    "fix": "Fix",
+    "footerTagline": "Footer tagline",
+    "greeting": "Greeting",
+    "greetingDefault": "Greeting default",
+    "minutes": "Minutes",
+    "saveChanges": "Save changes",
+    "securityReminder": "Security reminder",
+    "signature": "Signature",
+    "start": "Start",
+    "supportEmail": "Support email",
+    "supportPhone": "Support phone",
+    "unsubscribe": "Unsubscribe",
+    "unsubscribeLink": "Unsubscribe link"
+  },
+  "complexityReduction": {
+    "actions": {
+      "completeStep": "Complete step",
+      "iNeedHelp": "I need help",
+      "nextStep": "Next step",
+      "previousStep": "Previous step",
+      "showMeHow": "Show me how",
+      "skipStep": "Skip step"
+    },
+    "benefits": {
+      "confidence": {
+        "description": "Description",
+        "title": "Title"
+      },
+      "family": {
+        "description": "Description",
+        "title": "Title"
+      },
+      "overwhelm": {
+        "description": "Description",
+        "title": "Title"
+      },
+      "progress": {
+        "description": "Description",
+        "title": "Title"
+      },
+      "title": "Title"
+    },
+    "description": "Description",
+    "features": {
+      "difficultyLevels": {
+        "description": "Description",
+        "title": "Title"
+      },
+      "helpAvailable": {
+        "description": "Description",
+        "title": "Title"
+      },
+      "progressTracking": {
+        "description": "Description",
+        "title": "Title"
+      },
+      "stepByStep": {
+        "description": "Description",
+        "title": "Title"
+      },
+      "timeEstimation": {
+        "description": "Description",
+        "title": "Title"
+      },
+      "title": "Title"
+    },
+    "progress": {
+      "completed": "Completed",
+      "title": "Title",
+      "totalSteps": "Total steps"
+    },
+    "steps": {
+      "digitalAssets": {
+        "complexity": "Complexity",
+        "timeRequired": "Time required",
+        "title": "Title",
+        "whatWeDo": "What we do",
+        "whatYouDo": "What you do",
+        "why": "Why"
+      },
+      "emergencyContacts": {
+        "complexity": "Complexity",
+        "timeRequired": "Time required",
+        "title": "Title",
+        "whatWeDo": "What we do",
+        "whatYouDo": "What you do",
+        "why": "Why"
+      },
+      "familyInstructions": {
+        "complexity": "Complexity",
+        "timeRequired": "Time required",
+        "title": "Title",
+        "whatWeDo": "What we do",
+        "whatYouDo": "What you do",
+        "why": "Why"
+      },
+      "identifyBankAccount": {
+        "complexity": "Complexity",
+        "timeRequired": "Time required",
+        "title": "Title",
+        "whatWeDo": "What we do",
+        "whatYouDo": "What you do",
+        "why": "Why"
+      },
+      "insurancePolicies": {
+        "complexity": "Complexity",
+        "timeRequired": "Time required",
+        "title": "Title",
+        "whatWeDo": "What we do",
+        "whatYouDo": "What you do",
+        "why": "Why"
+      },
+      "legalDocuments": {
+        "complexity": "Complexity",
+        "timeRequired": "Time required",
+        "title": "Title",
+        "whatWeDo": "What we do",
+        "whatYouDo": "What you do",
+        "why": "Why"
+      }
+    },
+    "subtitle": "Subtitle",
+    "title": "Title"
+  },
+  "component": {
+    "fields": {
+      "description": "Description",
+      "lastUpdated": "Last updated",
+      "name": "Name"
+    },
+    "messages": {
+      "noData": "No data"
+    },
+    "title": "Title"
+  },
+  "consent": {
+    "banner": {
+      "acceptAll": "Accept all",
+      "cookiePolicy": "Cookie policy",
+      "customize": "Customize",
+      "description": "Description",
+      "privacyPolicy": "Privacy policy",
+      "rejectAll": "Reject all",
+      "title": "Title"
+    },
+    "cookies": {
+      "analytics": {
+        "description": "Description",
+        "items": {
+          "featureUsage": "Feature usage",
+          "pageViews": "Page views",
+          "performance": "Performance"
+        },
+        "privacy": "Privacy",
+        "privacyNote": "Privacy note",
+        "title": "Title"
+      },
+      "marketing": {
+        "description": "Description",
+        "items": {
+          "campaigns": "Campaigns",
+          "retargeting": "Retargeting"
+        },
+        "partners": "Partners",
+        "partnersList": "Partners list",
+        "title": "Title"
+      },
+      "necessary": {
+        "description": "Description",
+        "items": {
+          "authentication": "Authentication",
+          "preferences": "Preferences",
+          "security": "Security"
+        },
+        "retention": "Retention",
+        "retentionPeriod": "Retention period",
+        "title": "Title"
+      },
+      "preferences": {
+        "description": "Description",
+        "items": {
+          "language": "Language",
+          "layout": "Layout",
+          "theme": "Theme"
+        },
+        "title": "Title"
+      }
+    },
+    "details": {
+      "cancel": "Cancel",
+      "dataCollected": {
+        "item1": "Item1",
+        "item2": "Item2",
+        "item3": "Item3",
+        "item4": "Item4",
+        "title": "Title"
+      },
+      "description": "Description",
+      "savePreferences": "Save preferences",
+      "title": "Title",
+      "yourRights": {
+        "item1": "Item1",
+        "item2": "Item2",
+        "item3": "Item3",
+        "item4": "Item4",
+        "title": "Title"
+      }
+    },
+    "settings": {
+      "analytics": {
+        "description": "Description",
+        "label": "Label"
+      },
+      "consentGiven": "Consent given",
+      "description": "Description",
+      "lastUpdated": "Last updated",
+      "marketing": {
+        "description": "Description",
+        "label": "Label"
+      },
+      "preferences": {
+        "description": "Description",
+        "label": "Label"
+      },
+      "title": "Title",
+      "withdrawConsent": "Withdraw consent"
+    }
+  },
+  "cookies": {
+    "policy": {
+      "analytics": {
+        "description": "Description",
+        "examples": {
+          "ga": "Ga",
+          "gid": "Gid",
+          "session": "Session"
+        },
+        "purpose": "Purpose",
+        "title": "Title"
+      },
+      "categories": {
+        "title": "Title"
+      },
+      "contact": {
+        "address": "Address",
+        "addressDetails": "Address details",
+        "description": "Description",
+        "email": "Email",
+        "title": "Title"
+      },
+      "examples": "Examples",
+      "lastUpdated": "Last updated",
+      "manage": {
+        "title": "Title"
+      },
+      "marketing": {
+        "description": "Description",
+        "examples": {
+          "facebook": "Facebook",
+          "google": "Google"
+        },
+        "purpose": "Purpose",
+        "title": "Title"
+      },
+      "necessary": {
+        "description": "Description",
+        "examples": {
+          "auth": "Auth",
+          "consent": "Consent",
+          "csrf": "Csrf",
+          "session": "Session"
+        },
+        "purpose": "Purpose",
+        "title": "Title"
+      },
+      "overview": {
+        "intro": "Intro",
+        "point1": "Point1",
+        "point2": "Point2",
+        "point3": "Point3",
+        "point4": "Point4",
+        "title": "Title"
+      },
+      "preferences": {
+        "description": "Description",
+        "examples": {
+          "language": "Language",
+          "theme": "Theme",
+          "ui": "Ui"
+        },
+        "purpose": "Purpose",
+        "title": "Title"
+      },
+      "purpose": "Purpose",
+      "required": "Required",
+      "subtitle": "Subtitle",
+      "title": "Title",
+      "yourRights": {
+        "description": "Description",
+        "right1": "Right1",
+        "right2": "Right2",
+        "right3": "Right3",
+        "right4": "Right4",
+        "title": "Title"
+      }
+    }
+  },
+  "countryLanguage": {
+    "chooseLang": "Choose lang",
+    "confirm": "Confirm",
+    "confirmAndRedirect": "Confirm and redirect",
+    "description": "Description",
+    "detectedLocation": "Detected location",
+    "domainSuggestion": "Domain suggestion",
+    "selectCountry": "Select country",
+    "selectLanguage": "Select language",
+    "title": "Title"
+  },
+  "createTimeCapsuleModal": {
+    "buttons": {
+      "cancel": "Cancel",
+      "create": "Create",
+      "recordVideo": "Record video",
+      "saving": "Saving",
+      "update": "Update"
+    },
+    "characterCount": "Character count",
+    "description": "Description",
+    "errors": {
+      "fileTooLarge": "File too large",
+      "invalidFileType": "Invalid file type",
+      "noFile": "No file",
+      "noMessage": "No message",
+      "noRecipients": "No recipients",
+      "noTitle": "No title",
+      "noUnlockDate": "No unlock date",
+      "saveFailed": "Save failed",
+      "updateFailed": "Update failed"
+    },
+    "fileUpload": {
+      "clickToUpload": "Click to upload",
+      "dragAndDrop": "Drag and drop",
+      "fileSizeMB": "File size m b",
+      "maxSize": "Max size"
+    },
+    "labels": {
+      "deliveryQuestion": "Delivery question",
+      "messageType": "Message type",
+      "recipients": "Recipients",
+      "title": "Title",
+      "unlockDate": "Unlock date",
+      "uploadFile": "Upload file",
+      "yourMessage": "Your message"
+    },
+    "messageTypes": {
+      "audio": "Audio",
+      "photo": "Photo",
+      "text": "Text",
+      "video": "Video"
+    },
+    "placeholders": {
+      "message": "Message",
+      "selectDate": "Select date",
+      "title": "Title"
+    },
+    "premium": {
+      "upgradeNow": "Upgrade now",
+      "videoMessage": "Video message"
+    },
+    "recipients": {
+      "noTrustedPeople": "No trusted people",
+      "selected": "Selected"
+    },
+    "success": {
+      "created": "Created",
+      "updated": "Updated"
+    },
+    "titleCreate": "Title create",
+    "titleEdit": "Title edit",
+    "unlockConditions": {
+      "afterPassing": "After passing",
+      "onDate": "On date"
+    },
+    "upgrade_1": "Upgrade 1"
+  },
+  "dataTransparency": {
+    "dataFlow": {
+      "collection": "Collection",
+      "processing": "Processing",
+      "sharing": "Sharing",
+      "storage": "Storage",
+      "whereDataLives": "Where data lives"
+    },
+    "dataOwnership": {
+      "description": "Description",
+      "downloadButton": "Download button",
+      "title": "Title"
+    },
+    "description": "Description",
+    "loadingError": "Loading error",
+    "loadingMessage": "Loading message",
+    "recentActivity": {
+      "premiumText": "Premium text",
+      "premiumTitle": "Premium title",
+      "title": "Title"
+    },
+    "title": "Title"
+  },
+  "debug": {
+    "panel": {
+      "actions": {
+        "clearAllErrors": "Clear all errors",
+        "downloadErrors": "Download errors"
+      },
+      "error": {
+        "errorMessage": "Error message",
+        "noMessage": "No message",
+        "unknownError": "Unknown error"
+      },
+      "errorCount": "Error count",
+      "fields": {
+        "path": "Path",
+        "query": "Query",
+        "url": "Url",
+        "userAgent": "User agent",
+        "viewport": "Viewport"
+      },
+      "messages": {
+        "errorCopied": "Error copied",
+        "errorsCleared": "Errors cleared",
+        "errorsDownloaded": "Errors downloaded"
+      },
+      "recentErrors": "Recent errors",
+      "sections": {
+        "browserInfo": "Browser info",
+        "context": "Context",
+        "location": "Location",
+        "stackTrace": "Stack trace",
+        "time": "Time"
+      },
+      "tabs": {
+        "details": "Details",
+        "list": "List"
+      },
+      "title": "Title"
+    },
+    "translationTest": {
+      "available_languages_3": "Available languages 3",
+      "current_language_2": "Current language 2",
+      "dashboard_stats_translations_4": "Dashboard stats translations 4",
+      "exists_5": "Exists 5",
+      "raw_resource_check_6": "Raw resource check 6",
+      "translation_debug_test_1": "Translation debug test 1"
+    }
+  },
+  "errorTest": {
+    "logCriticalError": "Log critical error",
+    "logRegularError": "Log regular error",
+    "title": "Title",
+    "triggerAlert": "Trigger alert",
+    "triggerAsyncError": "Trigger async error",
+    "triggerSyncError": "Trigger sync error"
+  },
+  "errors": {
+    "dataNotFound": "Data not found",
+    "networkError": "Network error",
+    "permissionDenied": "Permission denied",
+    "unknown": "Unknown"
+  },
+  "firstTimeGuide": {
+    "getStarted": "Get started",
+    "step1": {
+      "description": "Description",
+      "detail1": "Detail1",
+      "detail2": "Detail2",
+      "detail3": "Detail3",
+      "title": "Title"
+    },
+    "step2": {
+      "description": "Description",
+      "detail1": "Detail1",
+      "detail2": "Detail2",
+      "detail3": "Detail3",
+      "title": "Title"
+    },
+    "step3": {
+      "description": "Description",
+      "detail1": "Detail1",
+      "detail2": "Detail2",
+      "detail3": "Detail3",
+      "title": "Title"
+    },
+    "tip": {
+      "description": "Description",
+      "title": "Title"
+    }
   },
   "footer": {
-    "tagline": "Secure your legacy, protect your family",
-    "platform": {
-      "title": "Platform",
-      "heritageVault": "Heritage Vault",
-      "guardianNetwork": "Guardian Network",
-      "dashboard": "Dashboard",
-      "security": "Security"
-    },
-    "support": {
-      "title": "Support",
-      "helpCenter": "Help Center",
-      "userGuides": "User Guides",
-      "contactUs": "Contact Us",
-      "community": "Community"
-    },
-    "legal": {
-      "title": "Legal",
-      "privacyPolicy": "Privacy Policy",
-      "termsOfService": "Terms of Service",
-      "dataProtection": "Data Protection"
-    },
+    "copyright": "© {{year}} LegacyGuard. All rights reserved.",
     "credibility": {
       "trustedByExperts": "Trusted by Legal Experts & Families Worldwide"
     },
-    "copyright": "© {{year}} LegacyGuard. All rights reserved.",
-    "description": "Securing legacies, protecting families, preserving memories."
-  },
-  "testimonials": {
-    "stats": {
-      "families": "10,000+",
-      "familiesLabel": "families trust us"
+    "description": "Securing legacies, protecting families, preserving memories.",
+    "legal": {
+      "dataProtection": "Data Protection",
+      "privacyPolicy": "Privacy Policy",
+      "termsOfService": "Terms of Service",
+      "title": "Legal"
     },
-    "compliance": {
-      "gdpr": "GDPR Compliant",
-      "dataProtection": "Data Protected",
-      "iso": "ISO 27001"
-    }
+    "platform": {
+      "dashboard": "Dashboard",
+      "guardianNetwork": "Guardian Network",
+      "heritageVault": "Heritage Vault",
+      "security": "Security",
+      "title": "Platform"
+    },
+    "support": {
+      "community": "Community",
+      "contactUs": "Contact Us",
+      "helpCenter": "Help Center",
+      "title": "Support",
+      "userGuides": "User Guides"
+    },
+    "tagline": "Secure your legacy, protect your family"
   },
-  "themeToggle": {
-    "toggleTheme": "Toggle theme",
-    "light": "Light",
-    "dark": "Dark",
-    "system": "System"
+  "general": {
+    "title": "Title",
+    "somethingWrong": "Something wrong",
+    "subtitle": "Subtitle",
+    "unknownError": "Unknown error"
+  },
+  "guardianUpload": {
+    "addButton": "Add button",
+    "addTitle": "Add title",
+    "added": "Added",
+    "countryDescription": "Country description",
+    "countryLabel": "Country label",
+    "countryPlaceholder": "Country placeholder",
+    "description": "Description",
+    "editTitle": "Edit title",
+    "emailLabel": "Email label",
+    "emailPlaceholder": "Email placeholder",
+    "error": "Error",
+    "errors": {
+      "connectionError": "Connection error",
+      "duplicateError": "Duplicate error",
+      "permissionError": "Permission error",
+      "requiredDataNotFound": "Required data not found",
+      "saveError": "Save error",
+      "unknownError": "Unknown error"
+    },
+    "fullNameLabel": "Full name label",
+    "fullNamePlaceholder": "Full name placeholder",
+    "loginToSave": "Login to save",
+    "phoneLabel": "Phone label",
+    "phonePlaceholder": "Phone placeholder",
+    "relationshipLabel": "Relationship label",
+    "relationshipPlaceholder": "Relationship placeholder",
+    "relationships": {
+      "child": "Child",
+      "friend": "Friend",
+      "legalProfessional": "Legal professional",
+      "other": "Other",
+      "parent": "Parent",
+      "sibling": "Sibling",
+      "spouse": "Spouse"
+    },
+    "roles": {
+      "emergencyContact": "Emergency contact",
+      "executorOfWill": "Executor of will",
+      "financialPowerOfAttorney": "Financial power of attorney",
+      "guardianForChildren": "Guardian for children",
+      "healthcareProxy": "Healthcare proxy",
+      "trustee": "Trustee"
+    },
+    "rolesTitle": "Roles title",
+    "saving": "Saving",
+    "success": "Success",
+    "updateButton": "Update button",
+    "updated": "Updated"
+  },
+  "index": {
+    "startBuilding": "Start building",
+    "welcome": "Welcome"
+  },
+  "justInTimeAccess": {
+    "accessLogged": "Access logged",
+    "accessTime": "Access time",
+    "actions": {
+      "cancel": "Cancel",
+      "close": "Close",
+      "verify": "Verify",
+      "verifying": "Verifying"
+    },
+    "description": "Description",
+    "errors": {
+      "incorrectPassword": "Incorrect password",
+      "noDataFound": "No data found",
+      "retrievalFailed": "Retrieval failed",
+      "verificationFailed": "Verification failed"
+    },
+    "executor": "Executor",
+    "fields": {
+      "accountName": "Account name",
+      "accountNumber": "Account number",
+      "additionalNotes": "Additional notes",
+      "password": "Password",
+      "passwordField": "Password field",
+      "pin": "Pin",
+      "username": "Username"
+    },
+    "logAction": "Log action",
+    "noSensitiveInfo": "No sensitive info",
+    "placeholders": {
+      "enterPassword": "Enter password"
+    },
+    "securityNotice": "Security notice",
+    "title": "Title",
+    "viewAccountDetails": "View account details"
+  },
+  "landing": {
+    "pricingSection": {
+      "upgrade_with_stripe_1": "Upgrade with stripe 1"
+    }
   },
   "languages": {
     "en": "English",
-    "sk": "Slovenčina",
-    "selectLanguage": "Select language"
+    "selectLanguage": "Select language",
+    "sk": "Slovenčina"
+  },
+  "layout": {
+    "marketingLayout": {
+      "login_1": "Login 1",
+      "register_2": "Register 2"
+    }
+  },
+  "legalConsultation": {
+    "types": {
+      "beneficiaryAdvice": {
+        "description": "Description",
+        "label": "Label"
+      },
+      "estatePlanningQA": {
+        "description": "Description",
+        "label": "Label"
+      },
+      "executorGuidance": {
+        "description": "Description",
+        "label": "Label"
+      },
+      "taxPlanning": {
+        "description": "Description",
+        "label": "Label"
+      },
+      "trustSetup": {
+        "description": "Description",
+        "label": "Label"
+      },
+      "willReview": {
+        "description": "Description",
+        "label": "Label"
+      }
+    }
+  },
+  "legalConsultationModal": {
+    "500_characters_minimum_20_10": "500 characters minimum 20 10",
+    "consultation_type_6": "Consultation type 6",
+    "follow_up_clarification_includ_14": "Follow up clarification includ 14",
+    "get_expert_legal_advice_from_o_5": "Get expert legal advice from o 5",
+    "one_time_consultation_fee_11": "One time consultation fee 11",
+    "please_describe_your_legal_que_9": "Please describe your legal que 9",
+    "please_provide_more_detail_in__3": "Please provide more detail in  3",
+    "please_provide_your_legal_ques_2": "Please provide your legal ques 2",
+    "please_select_a_consultation_t_1": "Please select a consultation t 1",
+    "proceed_to_payment_16": "Proceed to payment 16",
+    "request_a_professional_legal_r_4": "Request a professional legal r 4",
+    "review_by_qualified_lawyer_in__13": "Review by qualified lawyer in  13",
+    "secure_and_confidential_15": "Secure and confidential 15",
+    "select_the_type_of_legal_consu_7": "Select the type of legal consu 7",
+    "written_response_within_48_72__12": "Written response within 48 72  12",
+    "your_legal_question_8": "Your legal question 8"
+  },
+  "loadMore": "Load more",
+  "loading": "Loading",
+  "localPrivacyProtection": {
+    "bankAccountInfo": "Bank Account Information",
+    "changeStorage": "Change Storage",
+    "emergencyAccessSpouse": "Emergency access for spouse only",
+    "encryptedMasterPassword": "Encrypted with your master password",
+    "familyAccessConfigured": "Family access is properly configured",
+    "modifyAccess": "Modify Access",
+    "privacyStatus": "Privacy Status: Active",
+    "storedLocally": "Stored locally on your device",
+    "title": "Local Privacy Protection",
+    "trigger30DaysInactivity": "Trigger after 30 days of inactivity",
+    "viewFamilyAccess": "View Family Access"
+  },
+  "logLifeEvent": {
+    "eventTypes": {
+      "bought_sold_home": "Bought sold home",
+      "career_advancement": "Career advancement",
+      "child_graduated": "Child graduated",
+      "debt_change": "Debt change",
+      "financial_windfall": "Financial windfall",
+      "health_change": "Health change",
+      "inheritance": "Inheritance",
+      "insurance_change": "Insurance change",
+      "job_change": "Job change",
+      "married_divorced": "Married divorced",
+      "moved_location": "Moved location",
+      "new_child": "New child",
+      "retirement": "Retirement",
+      "started_business": "Started business",
+      "trusted_person_passed": "Trusted person passed"
+    },
+    "form": {
+      "cancel": "Cancel",
+      "description": "Description",
+      "eventDescription": "Event description",
+      "eventSelection": "Event selection",
+      "generateChecklist": "Generate checklist",
+      "title": "Title"
+    }
+  },
+  "manual": {
+    "contacts": {
+      "addContact": "Add contact",
+      "addFirstContact": "Add first contact",
+      "card": {
+        "edit": "Edit"
+      },
+      "description": "Description",
+      "empty": {
+        "description": "Description",
+        "title": "Title"
+      },
+      "form": {
+        "addButton": "Add button",
+        "addTitle": "Add title",
+        "cancel": "Cancel",
+        "description": "Description",
+        "editTitle": "Edit title",
+        "emailLabel": "Email label",
+        "emailPlaceholder": "Email placeholder",
+        "nameLabel": "Name label",
+        "namePlaceholder": "Name placeholder",
+        "notesLabel": "Notes label",
+        "notesPlaceholder": "Notes placeholder",
+        "phoneLabel": "Phone label",
+        "phonePlaceholder": "Phone placeholder",
+        "roleLabel": "Role label",
+        "rolePlaceholder": "Role placeholder",
+        "saving": "Saving",
+        "updateButton": "Update button"
+      },
+      "loading": "Loading",
+      "messages": {
+        "added": "Added",
+        "deleted": "Deleted",
+        "loginRequired": "Login required",
+        "nameAndRoleRequired": "Name and role required",
+        "updated": "Updated"
+      },
+      "title": "Title"
+    },
+    "documents": {
+      "card": {
+        "essentialNote": "Essential note"
+      },
+      "description": "Description",
+      "empty": {
+        "description": "Description",
+        "tip": "Tip",
+        "title": "Title"
+      },
+      "expiration": {
+        "expired": "Expired",
+        "expiresSoon": "Expires soon",
+        "expiring": "Expiring"
+      },
+      "loading": "Loading",
+      "title": "Title"
+    },
+    "errors": {
+      "dataNotFound": "Data not found",
+      "deleteContact": "Delete contact",
+      "duplicateEntry": "Duplicate entry",
+      "loadContacts": "Load contacts",
+      "loadInstructions": "Load instructions",
+      "loadKeyDocuments": "Load key documents",
+      "network": "Network",
+      "noPermission": "No permission",
+      "saveContact": "Save contact",
+      "saveInstructions": "Save instructions",
+      "unknown": "Unknown"
+    },
+    "instructions": {
+      "autoSaveNote": "Auto save note",
+      "description": "Description",
+      "digitalAccounts": {
+        "description": "Description",
+        "placeholder": "Placeholder",
+        "title": "Title"
+      },
+      "funeral": {
+        "description": "Description",
+        "placeholder": "Placeholder",
+        "title": "Title"
+      },
+      "loading": "Loading",
+      "messages": {
+        "description": "Description",
+        "placeholder": "Placeholder",
+        "title": "Title"
+      },
+      "title": "Title"
+    },
+    "subtitle": "Subtitle",
+    "tabs": {
+      "contacts": "Contacts",
+      "documents": "Documents",
+      "instructions": "Instructions"
+    },
+    "title": "Title"
+  },
+  "notifications": {
+    "daysAgo": "Days ago",
+    "empty": "Empty",
+    "hoursAgo": "Hours ago",
+    "justNow": "Just now",
+    "loading": "Loading",
+    "title": "Title",
+    "viewAll": "View all",
+    "yesterday": "Yesterday"
+  },
+  "plans": {
+    "title": "Title"
+  },
+  "pricing": {
+    "enterprise": {
+      "button": "Button",
+      "description": "Description",
+      "features": {
+        "guardians": "Guardians",
+        "legal": "Legal",
+        "storage": "Storage",
+        "support": "Support"
+      },
+      "limits": {
+        "storage": "Storage"
+      },
+      "name": "Name",
+      "price": "Price"
+    },
+    "mainSubtitle": "Main subtitle",
+    "mainTitle": "Main title",
+    "premium": {
+      "badge": "Badge",
+      "button": "Button",
+      "description": "Description",
+      "features": {
+        "guardians": "Guardians",
+        "manual": "Manual",
+        "storage": "Storage",
+        "support": "Support"
+      },
+      "limits": {
+        "guardians": "Guardians",
+        "storage": "Storage"
+      },
+      "name": "Name",
+      "period": "Period",
+      "price": "Price"
+    },
+    "starter": {
+      "button": "Button",
+      "description": "Description",
+      "features": {
+        "documents": "Documents",
+        "guardians": "Guardians",
+        "playbook": "Playbook",
+        "storage": "Storage",
+        "support": "Support"
+      },
+      "limits": {
+        "guardians": "Guardians",
+        "storage": "Storage"
+      },
+      "name": "Name",
+      "price": "Price"
+    }
+  },
+  "privacy": {
+    "aiAssistanceEnabled": "AI assistance enabled",
+    "allProcessingLocal": "All processing local",
+    "enhancedWithAI": "AI Enhanced",
+    "privacyMode": "Privacy Mode",
+    "processingLocal": "Local Processing"
+  },
+  "pwaInstallBanner": {
+    "accessFamilyInformation": "Access family information",
+    "dismiss": "Dismiss",
+    "installLegacyGuard": "Install legacy guard",
+    "installNow": "Install now",
+    "maybeLater": "Maybe later",
+    "quickAccessFromHomeScreen": "Quick access from home screen",
+    "secureOfflineAccess": "Secure offline access"
+  },
+  "securityStatus": {
+    "allSecurityFeaturesAreActive": "All security features are active and protecting your data",
+    "analogies": {
+      "endToEndEncryption": "Like a sealed envelope that only you and your family can open",
+      "europeanDataCenters": "Like storing your valuables in a secure facility that follows strict European standards",
+      "localOnlyPrivacyMode": "Like keeping your most important documents in a home safe",
+      "multiFactorAuthentication": "Like having multiple locks on your front door",
+      "secureCloudStorage": "Like a bank vault with multiple security systems and backup locations",
+      "zeroKnowledgeArchitecture": "Like a safety deposit box where even the bank doesn't know what's inside"
+    },
+    "explanations": {
+      "endToEndEncryption": "Your data is encrypted before it leaves your device and can only be decrypted by you and your designated family members.",
+      "europeanDataCenters": "All data is stored in EU-based data centers, ensuring compliance with GDPR and European privacy laws.",
+      "localOnlyPrivacyMode": "Process sensitive documents locally on your device without sending any data to our servers.",
+      "multiFactorAuthentication": "Multiple verification methods ensure only you and your trusted family members can access your legacy.",
+      "secureCloudStorage": "Your encrypted data is stored in secure, redundant cloud infrastructure with multiple layers of protection.",
+      "zeroKnowledgeArchitecture": "We cannot access your encrypted data - only you and your designated family members have the keys."
+    },
+    "familyBenefits": {
+      "endToEndEncryption": "Your family can access your legacy securely, even if our systems are compromised.",
+      "europeanDataCenters": "Your family's data is protected by the strongest privacy laws in the world.",
+      "localOnlyPrivacyMode": "Your family can process sensitive documents without any external access or monitoring.",
+      "multiFactorAuthentication": "Your family can be confident that only authorized people can access your legacy.",
+      "secureCloudStorage": "Your family's access to your legacy is never interrupted, even during emergencies.",
+      "zeroKnowledgeArchitecture": "Your family can trust that your legacy is truly private and secure."
+    },
+    "features": {
+      "endToEndEncryption": "End-to-End Encryption",
+      "europeanDataCenters": "European Data Centers",
+      "localOnlyPrivacyMode": "Local-Only Privacy Mode",
+      "multiFactorAuthentication": "Multi-Factor Authentication",
+      "secureCloudStorage": "Secure Cloud Storage",
+      "zeroKnowledgeArchitecture": "Zero-Knowledge Architecture"
+    },
+    "forYourFamily": "For your family:",
+    "howWeProtectYourLegacy": "How We Protect Your Legacy",
+    "yourSecurityStatusFullyProtected": "Your security status: Fully Protected",
+    "yourTrustIsOurHighestPriority": "Your trust is our highest priority"
+  },
+  "subscription": {
+    "activeSubscriptions": "Active subscriptions",
+    "allSubscriptions": "All subscriptions",
+    "allSubscriptionsDesc": "All subscriptions desc",
+    "autoRenewal": "Auto renewal",
+    "cancellationNoticeWarning": "Cancellation notice warning",
+    "costOptimization": "Cost optimization",
+    "costOptimizationDesc": "Cost optimization desc",
+    "dashboard": {
+      "subtitle": "Subtitle",
+      "title": "Title"
+    },
+    "days": "Days",
+    "daysBefore": "Days before",
+    "daysUntilRenewal": "Days until renewal",
+    "enableTracking": "Enable tracking",
+    "enableTrackingDesc": "Enable tracking desc",
+    "exportReport": "Export report",
+    "loadError": "Load error",
+    "manual": "Manual",
+    "monthlyCost": "Monthly cost",
+    "next90Days": "Next90 days",
+    "noUpcomingRenewals": "No upcoming renewals",
+    "perMonth": "Per month",
+    "perYear": "Per year",
+    "preferences": "Preferences",
+    "preferencesDesc": "Preferences desc",
+    "preferencesUpdated": "Preferences updated",
+    "reminderPeriods": "Reminder periods",
+    "renew": "Renew",
+    "review": "Review",
+    "tabs": {
+      "overview": "Overview",
+      "settings": "Settings",
+      "upcoming": "Upcoming"
+    },
+    "types": {
+      "monthly": "Monthly",
+      "yearly": "Yearly"
+    },
+    "upcomingRenewals": "Upcoming renewals",
+    "upcomingRenewalsDesc": "Upcoming renewals desc",
+    "upcomingRenewalsTitle": "Upcoming renewals title",
+    "upcomingSoon": "Upcoming soon",
+    "updateError": "Update error",
+    "yearlyCost": "Yearly cost"
+  },
+  "subscriptions": {
+    "subscriptionDashboard": {
+      "_1": "1"
+    }
+  },
+  "support": {
+    "title": "Title"
+  },
+  "testimonials": {
+    "compliance": {
+      "dataProtection": "Data Protected",
+      "gdpr": "GDPR Compliant",
+      "iso": "ISO 27001"
+    },
+    "stats": {
+      "families": "10,000+",
+      "familiesLabel": "families trust us"
+    }
+  },
+  "themeToggle": {
+    "dark": "Dark",
+    "light": "Light",
+    "system": "System",
+    "toggleTheme": "Toggle theme"
+  },
+  "trustedCircle": {
+    "title": "Title"
+  },
+  "ui": {
+    "common": {
+      "actions": {
+        "retry": "Retry",
+        "save": "Save"
+      },
+      "cancel": "Cancel",
+      "errors": {
+        "generic": "Generic"
+      },
+      "messages": {
+        "saved": "Saved"
+      }
+    }
+  },
+  "ui:common": {
+    "add": "Add",
+    "cancel": "Cancel",
+    "loading": "Loading"
   },
   "upgradeCard": {
     "defaultButtonText": "Upgrade Now",
     "pricing": "/pricing"
   },
-  "pwaInstallBanner": {
-    "installLegacyGuard": "Install LegacyGuard",
-    "accessFamilyInformation": "Access your family information anytime, anywhere",
-    "secureOfflineAccess": "Secure offline access",
-    "quickAccessFromHomeScreen": "Quick access from home screen",
-    "installNow": "Install Now",
-    "maybeLater": "Maybe Later",
-    "dismiss": "Dismiss"
-  },
-  "localPrivacyProtection": {
-    "title": "Local Privacy Protection",
-    "bankAccountInfo": "Bank Account Information",
-    "storedLocally": "Stored locally on your device",
-    "encryptedMasterPassword": "Encrypted with your master password",
-    "emergencyAccessSpouse": "Emergency access for spouse only",
-    "trigger30DaysInactivity": "Trigger after 30 days of inactivity",
-    "changeStorage": "Change Storage",
-    "modifyAccess": "Modify Access",
-    "viewFamilyAccess": "View Family Access",
-    "privacyStatus": "Privacy Status: Active",
-    "familyAccessConfigured": "Family access is properly configured"
-  },
-  "privacy": {
-    "processingLocal": "Local Processing",
-    "enhancedWithAI": "AI Enhanced",
-    "privacyMode": "Privacy Mode",
-    "allProcessingLocal": "All processing local",
-    "aiAssistanceEnabled": "AI assistance enabled"
-  },
-  "securityStatus": {
-    "howWeProtectYourLegacy": "How We Protect Your Legacy",
-    "yourTrustIsOurHighestPriority": "Your trust is our highest priority",
-    "forYourFamily": "For your family:",
-    "yourSecurityStatusFullyProtected": "Your security status: Fully Protected",
-    "allSecurityFeaturesAreActive": "All security features are active and protecting your data",
-    "features": {
-      "endToEndEncryption": "End-to-End Encryption",
-      "secureCloudStorage": "Secure Cloud Storage",
-      "localOnlyPrivacyMode": "Local-Only Privacy Mode",
-      "multiFactorAuthentication": "Multi-Factor Authentication",
-      "europeanDataCenters": "European Data Centers",
-      "zeroKnowledgeArchitecture": "Zero-Knowledge Architecture"
+  "upload": {
+    "smartUploadZone": {
+      "file_upload_1": "File upload 1",
+      "files_at_once_3": "Files at once 3",
+      "supports_images_jpeg_png_and_p_2": "Supports images jpeg png and p 2"
     },
-    "explanations": {
-      "endToEndEncryption": "Your data is encrypted before it leaves your device and can only be decrypted by you and your designated family members.",
-      "secureCloudStorage": "Your encrypted data is stored in secure, redundant cloud infrastructure with multiple layers of protection.",
-      "localOnlyPrivacyMode": "Process sensitive documents locally on your device without sending any data to our servers.",
-      "multiFactorAuthentication": "Multiple verification methods ensure only you and your trusted family members can access your legacy.",
-      "europeanDataCenters": "All data is stored in EU-based data centers, ensuring compliance with GDPR and European privacy laws.",
-      "zeroKnowledgeArchitecture": "We cannot access your encrypted data - only you and your designated family members have the keys."
-    },
-    "analogies": {
-      "endToEndEncryption": "Like a sealed envelope that only you and your family can open",
-      "secureCloudStorage": "Like a bank vault with multiple security systems and backup locations",
-      "localOnlyPrivacyMode": "Like keeping your most important documents in a home safe",
-      "multiFactorAuthentication": "Like having multiple locks on your front door",
-      "europeanDataCenters": "Like storing your valuables in a secure facility that follows strict European standards",
-      "zeroKnowledgeArchitecture": "Like a safety deposit box where even the bank doesn't know what's inside"
-    },
-    "familyBenefits": {
-      "endToEndEncryption": "Your family can access your legacy securely, even if our systems are compromised.",
-      "secureCloudStorage": "Your family's access to your legacy is never interrupted, even during emergencies.",
-      "localOnlyPrivacyMode": "Your family can process sensitive documents without any external access or monitoring.",
-      "multiFactorAuthentication": "Your family can be confident that only authorized people can access your legacy.",
-      "europeanDataCenters": "Your family's data is protected by the strongest privacy laws in the world.",
-      "zeroKnowledgeArchitecture": "Your family can trust that your legacy is truly private and secure."
+    "zone": {
+      "chooseFiles": "Choose files",
+      "description": "Description",
+      "descriptionActive": "Description active",
+      "dragOverlay": {
+        "subtitle": "Subtitle",
+        "title": "Title"
+      },
+      "dropHere": "Drop here",
+      "dropHereActive": "Drop here active",
+      "processingLocally": "Processing locally",
+      "takePhoto": "Take photo"
     }
   },
-  "actions": {
-    "create": "Create",
-    "read": "Read",
-    "update": "Update",
-    "delete": "Delete",
-    "view": "View",
-    "edit": "Edit",
-    "add": "Add",
-    "remove": "Remove",
+  "vault": {
+    "fileUpload": {
+      "addTag": "Add tag",
+      "clickToSelect": "Click to select",
+      "dragDropText": "Drag drop text",
+      "encryptDescription": "Encrypt description",
+      "encryptFiles": "Encrypt files",
+      "encryptionInfo": "Encryption info",
+      "maxFilesReached": "Max files reached",
+      "maxSize": "Max size",
+      "selectedFiles": "Selected files",
+      "tags": "Tags",
+      "title": "Title",
+      "uploadError": "Upload error",
+      "uploadFiles": "Upload files",
+      "uploadSuccess": "Upload success",
+      "uploading": "Uploading"
+    }
+  },
+  "visualConnectionSystem": {
+    "exploreConnections": "Explore connections",
+    "title": "Title"
+  },
+  "whatIfScenarios": {
+    "businessTravel": {
+      "impact": "Impact",
+      "title": "Title"
+    },
+    "disabilityIncapacity": {
+      "impact": "Impact",
+      "title": "Title"
+    },
+    "duration": "Duration",
+    "hospitalStay": {
+      "impact": "Impact",
+      "title": "Title"
+    },
+    "missing": "Missing",
+    "needs": "Needs",
+    "readiness": "Readiness",
+    "requirements": "Requirements",
+    "suddenDeath": {
+      "impact": "Impact",
+      "title": "Title"
+    }
+  },
+  "accessibility": {
+    "fontSize": "Font size",
+    "visualSettings": "Visual settings"
+  },
+  "visualSettings": {
+    "highContrast": "High contrast",
+    "reducedMotion": "Reduced motion",
+    "largeText": "Large text"
+  },
+  "form": {
+    "accountHelper": "Account helper",
+    "accountNumber": "Account number",
+    "accountPlaceholder": "Account placeholder",
+    "account_type": "Account type",
+    "addAsset": "Add asset",
+    "assetDetails": "Asset details",
+    "basicInfo": "Basic info",
+    "contactPlaceholder": "Contact placeholder",
+    "currency": "Currency",
+    "descriptionHelper": "Description helper",
+    "editAsset": "Edit asset",
+    "estimatedValue": "Estimated value",
+    "financialInfo": "Financial info",
+    "guardianship": {
+      "guardianInstructions": "Guardian instructions",
+      "minorChildren": "Minor children"
+    },
+    "institution": "Institution",
+    "institutionPlaceholder": "Institution placeholder",
+    "liens": "Liens",
+    "location": "Location",
+    "locationHelper": "Location helper",
+    "locationInfo": "Location info",
+    "locationPlaceholder": "Location placeholder",
+    "login_credentials": "Login credentials",
+    "name": "Name",
+    "nameHelper": "Name helper",
+    "namePlaceholder": "Name placeholder",
+    "property_registry_number": "Property registry number",
+    "provisions": {
+      "funeralWishes": "Funeral wishes",
+      "specialInstructions": "Special instructions"
+    },
+    "securityNote": "Security note",
+    "selectType": "Select type",
+    "type": "Type",
+    "valueHelper": "Value helper",
+    "valuePlaceholder": "Value placeholder"
+  },
+  "genderPreference": {
+    "description": "Description",
+    "examples": {
+      "agreement": "Agreement",
+      "greeting": "Greeting",
+      "possessive": "Possessive",
+      "title": "Title"
+    },
+    "options": {
+      "feminine": "Feminine",
+      "masculine": "Masculine",
+      "neutral": "Neutral"
+    },
+    "privacyNote": "Privacy note",
     "save": "Save",
-    "cancel": "Cancel",
-    "confirm": "Confirm",
-    "submit": "Submit",
-    "reset": "Reset",
-    "clear": "Clear",
-    "refresh": "Refresh",
-    "reload": "Reload",
-    "retry": "Retry",
-    "restart": "Restart",
-    "stop": "Stop",
-    "pause": "Pause",
-    "resume": "Resume",
-    "play": "Play",
-    "download": "Download",
-    "upload": "Upload",
-    "export": "Export",
-    "import": "Import",
-    "copy": "Copy",
-    "paste": "Paste",
-    "cut": "Cut",
-    "duplicate": "Duplicate",
-    "clone": "Clone",
-    "archive": "Archive",
-    "unarchive": "Unarchive",
-    "publish": "Publish",
-    "unpublish": "Unpublish",
-    "approve": "Approve",
-    "reject": "Reject",
-    "accept": "Accept",
-    "decline": "Decline",
-    "grant": "Grant",
-    "deny": "Deny",
-    "enable": "Enable",
-    "disable": "Disable",
-    "activate": "Activate",
-    "deactivate": "Deactivate",
-    "lock": "Lock",
-    "unlock": "Unlock",
-    "hide": "Hide",
-    "show": "Show",
-    "expand": "Expand",
-    "collapse": "Collapse",
-    "open": "Open",
-    "close": "Close",
-    "minimize": "Minimize",
-    "maximize": "Maximize",
-    "restore": "Restore",
-    "fullscreen": "Fullscreen",
-    "exitFullscreen": "Exit fullscreen",
-    "zoomIn": "Zoom in",
-    "zoomOut": "Zoom out",
-    "rotate": "Rotate",
-    "flip": "Flip",
-    "crop": "Crop",
-    "resize": "Resize",
-    "move": "Move",
-    "drag": "Drag",
-    "drop": "Drop",
-    "select": "Select",
-    "deselect": "Deselect",
-    "choose": "Choose",
-    "pick": "Pick",
-    "browse": "Browse",
-    "search": "Search",
-    "find": "Find",
-    "filter": "Filter",
-    "sort": "Sort",
-    "group": "Group",
-    "ungroup": "Ungroup",
-    "organize": "Organize",
-    "arrange": "Arrange",
-    "align": "Align",
-    "justify": "Justify",
-    "center": "Center",
-    "left": "Left",
-    "right": "Right",
-    "top": "Top",
-    "bottom": "Bottom",
-    "middle": "Middle",
-    "start": "Start",
-    "end": "End",
-    "begin": "Begin",
-    "finish": "Finish",
-    "complete": "Complete",
-    "done": "Done",
-    "ready": "Ready",
-    "prepare": "Prepare",
-    "setup": "Setup",
-    "configure": "Configure",
-    "customize": "Customize",
-    "personalize": "Personalize",
-    "optimize": "Optimize",
-    "improve": "Improve",
-    "enhance": "Enhance",
-    "upgrade": "Upgrade",
-    "update": "Update",
-    "downgrade": "Downgrade",
-    "scale": "Scale",
-    "resize": "Resize",
-    "adjust": "Adjust",
-    "modify": "Modify",
-    "change": "Change",
-    "alter": "Alter",
-    "transform": "Transform",
-    "convert": "Convert",
-    "translate": "Translate",
-    "localize": "Localize",
-    "internationalize": "Internationalize",
-    "format": "Format",
-    "parse": "Parse",
-    "encode": "Encode",
-    "decode": "Decode",
-    "encrypt": "Encrypt",
-    "decrypt": "Decrypt",
-    "hash": "Hash",
-    "sign": "Sign",
-    "verify": "Verify",
-    "validate": "Validate",
-    "authenticate": "Authenticate",
-    "authorize": "Authorize",
-    "login": "Login",
-    "logout": "Logout",
-    "register": "Register",
-    "signup": "Sign up",
-    "signin": "Sign in",
-    "signout": "Sign out",
-    "profile": "Profile",
-    "account": "Account",
-    "settings": "Settings",
-    "preferences": "Preferences",
-    "configuration": "Configuration",
-    "options": "Options",
-    "menu": "Menu",
-    "navigation": "Navigation",
-    "sidebar": "Sidebar",
-    "header": "Header",
-    "footer": "Footer",
-    "content": "Content",
-    "main": "Main",
-    "primary": "Primary",
-    "secondary": "Secondary",
-    "tertiary": "Tertiary",
-    "auxiliary": "Auxiliary",
-    "supplementary": "Supplementary",
-    "additional": "Additional",
-    "extra": "Extra",
-    "bonus": "Bonus",
-    "premium": "Premium",
-    "basic": "Basic",
-    "standard": "Standard",
-    "advanced": "Advanced",
-    "expert": "Expert",
-    "professional": "Professional",
-    "enterprise": "Enterprise",
-    "custom": "Custom",
-    "default": "Default",
-    "automatic": "Automatic",
-    "manual": "Manual",
-    "semiAutomatic": "Semi-automatic",
-    "full": "Full",
-    "partial": "Partial",
-    "complete": "Complete",
-    "incomplete": "Incomplete",
-    "valid": "Valid",
-    "invalid": "Invalid",
-    "verified": "Verified",
-    "unverified": "Unverified",
-    "authenticated": "Authenticated",
-    "unauthenticated": "Unauthenticated",
-    "authorized": "Authorized",
-    "unauthorized": "Unauthorized",
-    "secure": "Secure",
-    "insecure": "Insecure",
-    "encrypted": "Encrypted",
-    "unencrypted": "Unencrypted",
-    "backedUp": "Backed up",
-    "notBackedUp": "Not backed up",
-    "synced": "Synced",
-    "notSynced": "Not synced",
-    "upToDate": "Up to date",
-    "outdated": "Outdated",
-    "current": "Current",
-    "previous": "Previous",
-    "next": "Next",
-    "latest": "Latest",
-    "oldest": "Oldest",
-    "newest": "Newest",
-    "recent": "Recent",
-    "historical": "Historical",
-    "temporary": "Temporary",
-    "permanent": "Permanent",
-    "readOnly": "Read only",
-    "readWrite": "Read/write",
-    "viewOnly": "View only",
-    "editable": "Editable",
-    "nonEditable": "Non-editable",
-    "required": "Required",
-    "optional": "Optional",
-    "mandatory": "Mandatory",
-    "recommended": "Recommended",
-    "suggested": "Suggested",
-    "available": "Available",
-    "unavailable": "Unavailable",
-    "supported": "Supported",
-    "unsupported": "Unsupported",
-    "compatible": "Compatible",
-    "incompatible": "Incompatible",
-    "enabled": "Enabled",
-    "disabled": "Disabled",
-    "allowed": "Allowed",
-    "blocked": "Blocked",
-    "permitted": "Permitted",
-    "forbidden": "Forbidden",
-    "granted": "Granted",
-    "denied": "Denied",
-    "accepted": "Accepted",
-    "declined": "Declined",
-    "approved": "Approved",
-    "rejected": "Rejected",
-    "confirmed": "Confirmed",
-    "unconfirmed": "Unconfirmed",
-    "verified": "Verified",
-    "unverified": "Unverified",
-    "validated": "Validated",
-    "unvalidated": "Unvalidated",
-    "authenticated": "Authenticated",
-    "unauthenticated": "Unauthenticated",
-    "authorized": "Authorized",
-    "unauthorized": "Unauthorized",
-    "secure": "Secure",
-    "insecure": "Insecure",
-    "encrypted": "Encrypted",
-    "unencrypted": "Unencrypted",
-    "backedUp": "Backed up",
-    "notBackedUp": "Not backed up",
-    "synced": "Synced",
-    "notSynced": "Not synced",
-    "upToDate": "Up to date",
-    "outdated": "Outdated",
-    "current": "Current",
-    "previous": "Previous",
-    "next": "Next",
-    "latest": "Latest",
-    "oldest": "Oldest",
-    "newest": "Newest",
-    "recent": "Recent",
-    "historical": "Historical",
-    "temporary": "Temporary",
-    "permanent": "Permanent",
-    "readOnly": "Read only",
-    "readWrite": "Read/write",
-    "viewOnly": "View only",
-    "editable": "Editable",
-    "nonEditable": "Non-editable",
-    "required": "Required",
-    "optional": "Optional",
-    "mandatory": "Mandatory",
-    "recommended": "Recommended",
-    "suggested": "Suggested",
-    "available": "Available",
-    "unavailable": "Unavailable",
-    "supported": "Supported",
-    "unsupported": "Unsupported",
-    "compatible": "Compatible",
-    "incompatible": "Incompatible"
+    "saveError": "Save error",
+    "saveSuccess": "Save success",
+    "saving": "Saving",
+    "selectLabel": "Select label",
+    "title": "Title"
+  },
+  "categories": {
+    "digital": "Digital",
+    "financial": "Financial",
+    "other": "Other",
+    "personal": "Personal",
+    "realEstate": "Real estate",
+    "vehicles": "Vehicles"
+  },
+  "types": {
+    "automobile": "Automobile",
+    "bankStatement": "Bank statement",
+    "birthCertificate": "Birth certificate",
+    "businessOwnership": "Business ownership",
+    "certificate": "Certificate",
+    "checkingAccount": "Checking account",
+    "contract": "Contract",
+    "deed": "Deed",
+    "investmentAccount": "Investment account",
+    "license": "License",
+    "other": "Other",
+    "passport": "Passport",
+    "policy": "Policy",
+    "primaryResidence": "Primary residence",
+    "retirementAccount": "Retirement account",
+    "will": "Will"
+  },
+  "details": {
+    "documentType": "Document type",
+    "documents": "Documents",
+    "expirationDate": "Expiration date",
+    "familyNotes": "Family notes",
+    "fileName": "File name",
+    "importanceLevel": "Importance level",
+    "important": "Important",
+    "jurisdiction": "Jurisdiction",
+    "noLiabilities": "No liabilities",
+    "reference": "Reference"
+  },
+  "demo": {
+    "ai": {
+      "context": {
+        "completion": "Completion",
+        "label": "Label",
+        "mood": "Mood",
+        "recent": "Recent"
+      },
+      "generateQuestionButton": "Generate question button",
+      "getSuggestionButton": "Get suggestion button",
+      "lifeQuestions": {
+        "description": "Description",
+        "title": "Title"
+      },
+      "messages": {
+        "completedWill": "Completed will",
+        "description": "Description",
+        "justStarting": "Just starting",
+        "needsMotivation": "Needs motivation",
+        "overwhelmedUser": "Overwhelmed user",
+        "title": "Title"
+      },
+      "note": {
+        "apiKey": "Api key",
+        "description": "Description"
+      },
+      "profile": {
+        "documentsCount": "Documents count",
+        "label": "Label"
+      },
+      "question": {
+        "category": "Category",
+        "followUp": "Follow up",
+        "time": "Time"
+      },
+      "subtitle": "Subtitle",
+      "suggestion": {
+        "priority": "Priority",
+        "timeNeeded": "Time needed"
+      },
+      "suggestions": {
+        "description": "Description",
+        "title": "Title"
+      },
+      "tabs": {
+        "documents": "Documents",
+        "messages": "Messages",
+        "questions": "Questions",
+        "suggestions": "Suggestions"
+      },
+      "title": "Title"
+    },
+    "documentUpload": {
+      "confidence": "Confidence",
+      "description": "Description",
+      "integrationGuide": {
+        "benefit": "Benefit",
+        "description": "Description",
+        "step1": "Step1",
+        "step2": "Step2",
+        "step3": "Step3",
+        "step4": "Step4",
+        "step5": "Step5",
+        "title": "Title"
+      },
+      "mockData": {
+        "possessions": {
+          "businessLLC": "Business l l c",
+          "emergencyFund": "Emergency fund",
+          "familyHome": "Family home",
+          "lakeCabin": "Lake cabin",
+          "retirementAccount": "Retirement account",
+          "vehicle": "Vehicle"
+        },
+        "trustedPeople": {
+          "person1": {
+            "name": "Name",
+            "relationship": "Relationship"
+          },
+          "person2": {
+            "name": "Name",
+            "relationship": "Relationship"
+          },
+          "person3": {
+            "name": "Name",
+            "relationship": "Relationship"
+          },
+          "person4": {
+            "name": "Name",
+            "relationship": "Relationship"
+          }
+        }
+      },
+      "recentlyProcessed": "Recently processed",
+      "suggestedConnections": "Suggested connections",
+      "title": "Title",
+      "untitledDocument": "Untitled document"
+    },
+    "ocr": {
+      "badge": {
+        "languageSupport": "Language support",
+        "localProcessing": "Local processing",
+        "smartDetection": "Smart detection"
+      },
+      "detectionDescription": "Detection description",
+      "features": {
+        "completePrivacy": "Complete privacy",
+        "multiLanguage": "Multi language",
+        "smartDetection": "Smart detection"
+      },
+      "language": {
+        "czech": "Czech",
+        "english": "English",
+        "other": "Other",
+        "slovak": "Slovak"
+      },
+      "languageDescription": "Language description",
+      "previousDocuments": {
+        "description": "Description",
+        "title": "Title"
+      },
+      "privacyDescription": "Privacy description",
+      "privacyNotice": {
+        "ai": "Ai",
+        "local": "Local"
+      },
+      "subtitle": "Subtitle",
+      "title": "Title",
+      "unknownDocument": "Unknown document"
+    },
+    "upload": {
+      "badge": {
+        "aiAnalysis": "Ai analysis",
+        "encryption": "Encryption",
+        "familySharing": "Family sharing"
+      },
+      "console": {
+        "delete": "Delete",
+        "download": "Download",
+        "share": "Share",
+        "uploadStarted": "Upload started",
+        "view": "View"
+      },
+      "features": {
+        "aiAnalysis": "Ai analysis",
+        "autoCompress": "Auto compress",
+        "autoEncrypt": "Auto encrypt",
+        "familySharing": "Family sharing",
+        "processOCR": "Process o c r"
+      },
+      "privacy": {
+        "cloudMode": {
+          "description": "Description",
+          "title": "Title"
+        },
+        "localMode": {
+          "description": "Description",
+          "title": "Title"
+        }
+      },
+      "progress": {
+        "completed": "Completed",
+        "failed": "Failed",
+        "title": "Title"
+      },
+      "settings": {
+        "cloud": "Cloud",
+        "description": "Description",
+        "local": "Local",
+        "storageLocation": "Storage location",
+        "title": "Title"
+      },
+      "stats": {
+        "averageTime": "Average time",
+        "averageTimeValue": "Average time value",
+        "cloudStorage": {
+          "description": "Description",
+          "title": "Title"
+        },
+        "localStorage": {
+          "description": "Description",
+          "title": "Title"
+        },
+        "processingStats": {
+          "documentsProcessed": "Documents processed",
+          "title": "Title"
+        },
+        "successRate": "Success rate",
+        "totalSize": {
+          "description": "Description",
+          "title": "Title"
+        }
+      },
+      "subtitle": "Subtitle",
+      "tabs": {
+        "documents": "Documents",
+        "stats": "Stats",
+        "upload": "Upload"
+      },
+      "title": "Title"
+    }
+  },
+  "cta": {
+    "button": "Button",
+    "description": "Description",
+    "finalDescription": "Final description",
+    "finalSubtitle": "Final subtitle",
+    "finalTitle": "Final title",
+    "fullAccess": "Full access",
+    "noCredit": "No credit",
+    "startTrial": "Start trial",
+    "supportIncluded": "Support included",
+    "title": "Title"
+  },
+  "emotionalContextSystem": {
+    "advice_2": "Advice 2",
+    "contextResponses": {
+      "default": {
+        "actionableAdvice": "Actionable advice",
+        "motivationalElement": "Motivational element",
+        "nextStepGuidance": "Next step guidance",
+        "primaryMessage": "Primary message",
+        "supportingMessage": "Supporting message"
+      },
+      "highOverwhelm": {
+        "actionableAdvice": "Actionable advice",
+        "motivationalElement": "Motivational element",
+        "nextStepGuidance": "Next step guidance",
+        "primaryMessage": "Primary message",
+        "supportingMessage": "Supporting message"
+      },
+      "lowConfidence": {
+        "actionableAdvice": "Actionable advice",
+        "motivationalElement": "Motivational element",
+        "nextStepGuidance": "Next step guidance",
+        "primaryMessage": "Primary message",
+        "supportingMessage": "Supporting message"
+      }
+    },
+    "emotional_support_1": "Emotional support 1",
+    "motivation_3": "Motivation 3",
+    "next_steps_4": "Next steps 4"
+  },
+  "solution": {
+    "feature1": {
+      "benefits": "Benefits",
+      "description": "Description",
+      "title": "Title"
+    },
+    "feature2": {
+      "benefits": "Benefits",
+      "description": "Description",
+      "title": "Title"
+    },
+    "feature3": {
+      "benefits": "Benefits",
+      "description": "Description",
+      "title": "Title"
+    },
+    "feature4": {
+      "benefits": "Benefits",
+      "description": "Description",
+      "title": "Title"
+    },
+    "sectionSubtitle": "Section subtitle",
+    "sectionTitle": "Section title"
+  },
+  "steps": {
+    "assets": {
+      "description": "Description",
+      "title": "Title"
+    },
+    "beneficiaries": {
+      "description": "Description",
+      "title": "Title"
+    },
+    "executor": {
+      "description": "Description",
+      "title": "Title"
+    },
+    "guardians": {
+      "description": "Description",
+      "title": "Title"
+    },
+    "personal": {
+      "description": "Description",
+      "title": "Title"
+    },
+    "preferences": {
+      "description": "Description",
+      "title": "Title"
+    },
+    "review": {
+      "description": "Description",
+      "title": "Title"
+    }
+  },
+  "skip": {
+    "continueSetup": "Continue setup",
+    "description": "Description",
+    "skipConfirm": "Skip confirm",
+    "title": "Title"
   }
-} 
+}

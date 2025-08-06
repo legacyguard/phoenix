@@ -4,7 +4,7 @@ import DocumentUploadFlow from '../components/DocumentUploadFlow';
 import { DocumentProcessingResult } from '../types/document-ai';
 
 const DocumentUploadDemo: React.FC = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('ui');
   const [processedDocuments, setProcessedDocuments] = useState<DocumentProcessingResult[]>([]);
   
   // Mock data for existing possessions and trusted people

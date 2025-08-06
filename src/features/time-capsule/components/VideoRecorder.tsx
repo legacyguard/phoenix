@@ -17,6 +17,7 @@ export function VideoRecorder({
   maxDurationSeconds = 300, // 5 minutes default
   maxFileSizeMB = 500 // 500MB default
 }: VideoRecorderProps) {
+  const { t: tMicro } = useTranslation('micro-copy');
   const [isRecording, setIsRecording] = useState(false);
   const [recordedBlob, setRecordedBlob] = useState<Blob | null>(null);
   const [recordingDuration, setRecordingDuration] = useState(0);
@@ -235,7 +236,7 @@ export function VideoRecorder({
             {isRecording &&
             <div className="absolute top-4 left-4 flex items-center space-x-2 bg-red-600 text-white px-3 py-1.5 rounded-full">
                 <div className="w-3 h-3 bg-white rounded-full animate-pulse" />
-                <span className="text-sm font-medium">Recording</span>
+                <span className="text-sm font-medium">{tMicro('statusMessages.loading.processing')}</span>
               </div>
             }
 
@@ -290,7 +291,7 @@ export function VideoRecorder({
                 disabled={isProcessing}>
 
                   <Video className="h-5 w-5 mr-2" />
-                  Retake
+                  {tMicro('tooltips.general.retry')}
                 </Button>
                 <Button
                 size="lg"

@@ -25,7 +25,7 @@ import {
 } from 'lucide-react';
 
 export const Landing: React.FC = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('landing');
   
   return (
     <div className="flex flex-col">
@@ -112,10 +112,10 @@ export const Landing: React.FC = () => {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              {t('features.title')}
+              {t('landing.title')}
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              {t('features.subtitle')}
+              {t('landing.subtitle')}
             </p>
           </div>
 
@@ -126,9 +126,9 @@ export const Landing: React.FC = () => {
                 <div className="mx-auto bg-primary/10 p-4 rounded-full w-fit mb-4">
                   <Heart className="h-10 w-10 text-primary" />
                 </div>
-                <CardTitle className="text-2xl">{t('features.sleepBetter.title')}</CardTitle>
+                <CardTitle className="text-2xl">{t('landing.sleepBetter.title')}</CardTitle>
                 <CardDescription className="text-base">
-                  {t('features.sleepBetter.description')}
+                  {t('landing.sleepBetter.description')}
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -139,9 +139,9 @@ export const Landing: React.FC = () => {
                 <div className="mx-auto bg-earth-primary/10 p-4 rounded-full w-fit mb-4">
                   <Home className="h-10 w-10 text-earth-primary" />
                 </div>
-                <CardTitle className="text-2xl">{t('features.noChaos.title')}</CardTitle>
+                <CardTitle className="text-2xl">{t('landing.noChaos.title')}</CardTitle>
                 <CardDescription className="text-base">
-                  {t('features.noChaos.description')}
+                  {t('landing.noChaos.description')}
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -152,9 +152,9 @@ export const Landing: React.FC = () => {
                 <div className="mx-auto bg-primary/10 p-4 rounded-full w-fit mb-4">
                   <Navigation className="h-10 w-10 text-primary" />
                 </div>
-                <CardTitle className="text-2xl">{t('features.clearInstructions.title')}</CardTitle>
+                <CardTitle className="text-2xl">{t('landing.clearInstructions.title')}</CardTitle>
                 <CardDescription className="text-base">
-                  {t('features.clearInstructions.description')}
+                  {t('landing.clearInstructions.description')}
                 </CardDescription>
               </CardHeader>
             </Card>

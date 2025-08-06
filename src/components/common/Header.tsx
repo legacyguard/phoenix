@@ -13,12 +13,12 @@ export const Header: React.FC = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
           <Shield className="h-8 w-8 text-accent-primary" />
-            <span className="text-xl font-bold text-text-heading">{t('app.name')}</span>
+            <span className="text-xl font-bold text-text-heading">{t('ui.name')}</span>
           </Link>
 
           {/* Simple content - this is for public pages */}
           <div className="text-sm text-muted-foreground">
-            {t('app.tagline')}
+            {t('ui.tagline')}
           </div>
         </div>
       </div>

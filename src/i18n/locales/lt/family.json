@@ -1,1 +1,683 @@
-{}
+{
+  "beneficiaryCommunications": {
+    "actions": {
+      "cancel": "[LT] Cancel",
+      "save": "[LT] Save",
+      "saving": "[LT] Saving"
+    },
+    "description": "[LT] Description",
+    "dialog": {
+      "description": "[LT] Description",
+      "title": "[LT] Title"
+    },
+    "empty": {
+      "subtitle": "[LT] Subtitle",
+      "title": "[LT] Title"
+    },
+    "fields": {
+      "beneficiaryName": "[LT] Beneficiary name",
+      "date": "[LT] Date",
+      "email": "[LT] Email",
+      "subject": "[LT] Subject",
+      "summary": "[LT] Summary",
+      "type": "[LT] Type"
+    },
+    "logAction": "[LT] Log action",
+    "logCommunication": "[LT] Log communication",
+    "placeholders": {
+      "subject": "[LT] Subject",
+      "summary": "[LT] Summary"
+    },
+    "title": "[LT] Title",
+    "types": {
+      "email": "[LT] Email",
+      "inPerson": "[LT] In person",
+      "letter": "[LT] Letter",
+      "other": "[LT] Other",
+      "phone": "[LT] Phone"
+    }
+  },
+  "common": {
+    "cancel": "[LT] Cancel",
+    "fix": "[LT] Fix",
+    "minutes": "[LT] Minutes",
+    "start": "[LT] Start"
+  },
+  "crisisAssessment": {
+    "criticalVulnerabilities": "[LT] Critical vulnerabilities",
+    "familyCapabilities": "[LT] Family capabilities",
+    "familyDiscussion": "[LT] Family discussion",
+    "familyDiscussionDescription": "[LT] Family discussion description",
+    "fixCapability": "[LT] Fix capability",
+    "fixNow": "[LT] Fix now",
+    "missing": "[LT] Missing",
+    "mostUrgent": "[LT] Most urgent",
+    "nextCriticalAction": "[LT] Next critical action",
+    "notPrepared": "[LT] Not prepared",
+    "partial": "[LT] Partial",
+    "prepared": "[LT] Prepared",
+    "printReport": "[LT] Print report",
+    "protected": "[LT] Protected",
+    "scheduleReview": "[LT] Schedule review",
+    "situationReadiness": "[LT] Situation readiness",
+    "subtitle": "[LT] Subtitle",
+    "timeEstimate": "[LT] Time estimate",
+    "title": "[LT] Title",
+    "vulnerable": "[LT] Vulnerable"
+  },
+  "crisisSituations": {
+    "businessEmergency": {
+      "description": "[LT] Description",
+      "title": "[LT] Title"
+    },
+    "emergencyHospital": {
+      "description": "[LT] Description",
+      "title": "[LT] Title"
+    },
+    "extendedTravel": {
+      "description": "[LT] Description",
+      "title": "[LT] Title"
+    },
+    "suddenDeath": {
+      "description": "[LT] Description",
+      "title": "[LT] Title"
+    }
+  },
+  "dashboard": {
+    "familyGuide": {
+      "discreteMode": "[LT] Discrete mode",
+      "discreteModeDesc": "[LT] Discrete mode desc",
+      "emergency_contacts_1": "[LT] Emergency contacts 1",
+      "export_guide_4": "[LT] Export guide 4",
+      "generateGuide": "[LT] Generate guide",
+      "important_documents_2": "[LT] Important documents 2",
+      "last_updated_6": "[LT] Last updated 6",
+      "share_with_family_5": "[LT] Share with family 5",
+      "subtitle": "[LT] Subtitle",
+      "title": "[LT] Title",
+      "view": "[LT] View",
+      "what_to_do_when_3": "[LT] What to do when 3"
+    }
+  },
+  "emergency": {
+    "addContact": "[LT] Add contact",
+    "addContactDialog": {
+      "addButton": "[LT] Add button",
+      "description": "[LT] Description",
+      "relationship": "[LT] Relationship",
+      "relationshipPlaceholder": "[LT] Relationship placeholder",
+      "selectContact": "[LT] Select contact",
+      "selectPlaceholder": "[LT] Select placeholder",
+      "title": "[LT] Title"
+    },
+    "description": "[LT] Description",
+    "errors": {
+      "addFailed": "[LT] Add failed",
+      "loadFailed": "[LT] Load failed",
+      "removeFailed": "[LT] Remove failed",
+      "reorderFailed": "[LT] Reorder failed",
+      "selectContact": "[LT] Select contact",
+      "testFailed": "[LT] Test failed"
+    },
+    "lastContacted": "[LT] Last contacted",
+    "maxContactsReached": "[LT] Max contacts reached",
+    "messages": {
+      "added": "[LT] Added",
+      "removed": "[LT] Removed",
+      "reordered": "[LT] Reordered",
+      "testSent": "[LT] Test sent"
+    },
+    "noContacts": "[LT] No contacts",
+    "sendTest": "[LT] Send test",
+    "title": "[LT] Title"
+  },
+  "errors": {
+    "dataNotFound": "[LT] Data not found",
+    "duplicateRecord": "[LT] Duplicate record",
+    "networkError": "[LT] Network error",
+    "permissionDenied": "[LT] Permission denied",
+    "unknown": "[LT] Unknown"
+  },
+  "estateStatus": {
+    "actions": {
+      "cancel": "[LT] Cancel",
+      "update": "[LT] Update",
+      "updating": "[LT] Updating"
+    },
+    "description": "[LT] Description",
+    "dialog": {
+      "description": "[LT] Description",
+      "title": "[LT] Title"
+    },
+    "empty": {
+      "noStatus": "[LT] No status",
+      "readOnly": "[LT] Read only"
+    },
+    "fields": {
+      "additionalDetails": "[LT] Additional details",
+      "status": "[LT] Status"
+    },
+    "lastUpdated": "[LT] Last updated",
+    "logAction": "[LT] Log action",
+    "placeholders": {
+      "additionalContext": "[LT] Additional context",
+      "selectStatus": "[LT] Select status"
+    },
+    "progress": "[LT] Progress",
+    "statuses": {
+      "assetsBeingValued": "[LT] Assets being valued",
+      "debtsBeingSettled": "[LT] Debts being settled",
+      "distributionInProgress": "[LT] Distribution in progress",
+      "estateClosed": "[LT] Estate closed",
+      "gatheringDocuments": "[LT] Gathering documents",
+      "initialReview": "[LT] Initial review",
+      "probateInitiated": "[LT] Probate initiated",
+      "readyForDistribution": "[LT] Ready for distribution",
+      "taxPreparation": "[LT] Tax preparation"
+    },
+    "title": "[LT] Title",
+    "updateStatus": "[LT] Update status"
+  },
+  "familyCapabilities": {
+    "businessOperations": "[LT] Business operations",
+    "canAccessBankAccounts": "[LT] Can access bank accounts",
+    "canAccessDigitalAccounts": "[LT] Can access digital accounts",
+    "canFileInsuranceClaims": "[LT] Can file insurance claims",
+    "canManageBusiness": "[LT] Can manage business",
+    "cannotAccessBankAccounts": "[LT] Cannot access bank accounts",
+    "cannotAccessDigitalAccounts": "[LT] Cannot access digital accounts",
+    "cannotFileInsuranceClaims": "[LT] Cannot file insurance claims",
+    "clearInheritancePlan": "[LT] Clear inheritance plan",
+    "digitalAccess": "[LT] Digital access",
+    "digitalAccounts": "[LT] Digital accounts",
+    "immediateFinancialNeeds": "[LT] Immediate financial needs",
+    "inheritance": "[LT] Inheritance",
+    "insuranceClaims": "[LT] Insurance claims",
+    "knowsLegalContacts": "[LT] Knows legal contacts",
+    "knowsMedicalWishes": "[LT] Knows medical wishes",
+    "legalMatters": "[LT] Legal matters",
+    "medicalDecisions": "[LT] Medical decisions",
+    "noBusinessInfo": "[LT] No business info",
+    "noInheritancePlan": "[LT] No inheritance plan",
+    "noLegalContacts": "[LT] No legal contacts",
+    "noMedicalInfo": "[LT] No medical info",
+    "partialBusinessInfo": "[LT] Partial business info",
+    "partialInheritancePlan": "[LT] Partial inheritance plan",
+    "partialMedicalInfo": "[LT] Partial medical info",
+    "payBills": "[LT] Pay bills"
+  },
+  "familyCrisisAssessment": {
+    "15_1": "[LT] 15 1"
+  },
+  "familyExecutorView": {
+    "communications": {
+      "description": "[LT] Description",
+      "empty": "[LT] Empty",
+      "title": "[LT] Title",
+      "to": "[LT] To"
+    },
+    "executor": "[LT] Executor",
+    "footer": "[LT] Footer",
+    "subtitle": "[LT] Subtitle",
+    "theExecutor": "[LT] The executor",
+    "title": "[LT] Title"
+  },
+  "familyHub": {
+    "accessLevels": {
+      "emergencyOnly": {
+        "description": "[LT] Description",
+        "fullDescription": "[LT] Full description",
+        "title": "[LT] Title"
+      },
+      "fullAccess": {
+        "description": "[LT] Description",
+        "fullDescription": "[LT] Full description",
+        "title": "[LT] Title"
+      },
+      "limitedInfo": {
+        "description": "[LT] Description",
+        "fullDescription": "[LT] Full description",
+        "title": "[LT] Title"
+      },
+      "none": {
+        "description": "[LT] Description",
+        "title": "[LT] Title"
+      }
+    },
+    "emergencyProtocol": {
+      "activeMessage": "[LT] Active message",
+      "configure": "[LT] Configure",
+      "configured": "[LT] Configured",
+      "description": "[LT] Description",
+      "title": "[LT] Title"
+    },
+    "errors": {
+      "authenticationRequired": "[LT] Authentication required",
+      "failedToFetchData": "[LT] Failed to fetch data",
+      "failedToLoadMembers": "[LT] Failed to load members"
+    },
+    "memberManagement": {
+      "addMorePeople": "[LT] Add more people",
+      "addTrustedPerson": "[LT] Add trusted person",
+      "daysAgo": "[LT] Days ago",
+      "informationAccessLevel": "[LT] Information access level",
+      "lastContactOver30Days": "[LT] Last contact over30 days",
+      "lastContacted": "[LT] Last contacted",
+      "preparedness": "[LT] Preparedness",
+      "sendUpdate": "[LT] Send update",
+      "sendUpdateTo": "[LT] Send update to",
+      "title": "[LT] Title"
+    },
+    "messages": {
+      "accessLevelUpdated": "[LT] Access level updated",
+      "failedToSendUpdate": "[LT] Failed to send update",
+      "updateSentTo": "[LT] Update sent to"
+    },
+    "overallPreparedness": {
+      "description": "[LT] Description",
+      "improvementNeeded": "[LT] Improvement needed",
+      "title": "[LT] Title"
+    },
+    "subtitle": "[LT] Subtitle",
+    "tabs": {
+      "familyMembers": "[LT] Family members",
+      "members": "[LT] Members",
+      "preparednessTools": "[LT] Preparedness tools",
+      "tools": "[LT] Tools"
+    },
+    "title": "[LT] Title"
+  },
+  "familyPreparednessTools": {
+    "create_a_printable_guide_for_y_3": "[LT] Create a printable guide for y 3",
+    "errors": {
+      "comingSoon": "[LT] Coming soon",
+      "generateFailed": "[LT] Generate failed",
+      "premiumRequired": "[LT] Premium required",
+      "selectScenario": "[LT] Select scenario"
+    },
+    "generate_another_5": "[LT] Generate another 5",
+    "generate_emergency_guide_2": "[LT] Generate emergency guide 2",
+    "guides": {
+      "death": {
+        "bankAccounts": "[LT] Bank accounts",
+        "contactExecutor": "[LT] Contact executor",
+        "contactLawyer": "[LT] Contact lawyer",
+        "deathCertificate": "[LT] Death certificate",
+        "disclaimer": "[LT] Disclaimer",
+        "employer": "[LT] Employer",
+        "financialInstitutions": "[LT] Financial institutions",
+        "first24Hours": "[LT] First24 hours",
+        "generatedOn": "[LT] Generated on",
+        "importantDocuments": "[LT] Important documents",
+        "insuranceCompanies": "[LT] Insurance companies",
+        "investmentAccounts": "[LT] Investment accounts",
+        "locateWill": "[LT] Locate will",
+        "peopleToNotify": "[LT] People to notify",
+        "secureResidence": "[LT] Secure residence",
+        "socialSecurity": "[LT] Social security",
+        "title": "[LT] Title"
+      },
+      "emergency": {
+        "address": "[LT] Address",
+        "attorney": "[LT] Attorney",
+        "emergency": "[LT] Emergency",
+        "financialAdvisor": "[LT] Financial advisor",
+        "homeInformation": "[LT] Home information",
+        "insuranceAgent": "[LT] Insurance agent",
+        "keyContacts": "[LT] Key contacts",
+        "securitySystem": "[LT] Security system",
+        "spouse": "[LT] Spouse",
+        "title": "[LT] Title",
+        "utilities": "[LT] Utilities"
+      },
+      "hospitalization": {
+        "allergies": "[LT] Allergies",
+        "bloodType": "[LT] Blood type",
+        "currentMedications": "[LT] Current medications",
+        "emergencyContacts": "[LT] Emergency contacts",
+        "healthcarePowerOfAttorney": "[LT] Healthcare power of attorney",
+        "hipaaRelease": "[LT] Hipaa release",
+        "legalDocuments": "[LT] Legal documents",
+        "livingWill": "[LT] Living will",
+        "medicalInformation": "[LT] Medical information",
+        "preferredHospital": "[LT] Preferred hospital",
+        "primaryCarePhysician": "[LT] Primary care physician",
+        "title": "[LT] Title"
+      },
+      "missing": {
+        "bankingApps": "[LT] Banking apps",
+        "checkHospitals": "[LT] Check hospitals",
+        "checkWithWorkplace": "[LT] Check with workplace",
+        "contactCloseFriends": "[LT] Contact close friends",
+        "contactLocalPolice": "[LT] Contact local police",
+        "digitalFootprint": "[LT] Digital footprint",
+        "email": "[LT] Email",
+        "immediateActions": "[LT] Immediate actions",
+        "phoneProvider": "[LT] Phone provider",
+        "socialMedia": "[LT] Social media",
+        "title": "[LT] Title"
+      }
+    },
+    "mockContent": {
+      "insurancePolicies": "[LT] Insurance policies"
+    },
+    "scenarios": {
+      "death": {
+        "description": "[LT] Description",
+        "title": "[LT] Title"
+      },
+      "emergency": {
+        "description": "[LT] Description",
+        "title": "[LT] Title"
+      },
+      "hospitalization": {
+        "description": "[LT] Description",
+        "title": "[LT] Title"
+      },
+      "missing": {
+        "description": "[LT] Description",
+        "title": "[LT] Title"
+      }
+    },
+    "select_scenario_4": "[LT] Select scenario 4",
+    "tools": {
+      "cancel": "[LT] Cancel",
+      "chooseScenario": "[LT] Choose scenario",
+      "emergencySimulator": "[LT] Emergency simulator",
+      "emergencySimulatorDesc": "[LT] Emergency simulator desc",
+      "generateGuide": "[LT] Generate guide",
+      "generating": "[LT] Generating",
+      "informationTreasureHunt": "[LT] Information treasure hunt",
+      "launch": "[LT] Launch",
+      "printGuide": "[LT] Print guide",
+      "stepByStepGuides": "[LT] Step by step guides",
+      "stepByStepGuidesDesc": "[LT] Step by step guides desc",
+      "treasureHuntDesc": "[LT] Treasure hunt desc",
+      "videoMessages": "[LT] Video messages",
+      "videoMessagesDesc": "[LT] Video messages desc"
+    },
+    "use_these_tools_to_ensure_your_1": "[LT] Use these tools to ensure your 1"
+  },
+  "guardian": {
+    "templateModal": {
+      "_1": "[LT] 1"
+    }
+  },
+  "guardianView": {
+    "defaultUserName": "[LT] Default user name",
+    "emergencyAccess": {
+      "accessFailed": "[LT] Access failed",
+      "accessGranted": "[LT] Access granted",
+      "accessing": "[LT] Accessing",
+      "button": "[LT] Button",
+      "confirmButton": "[LT] Confirm button",
+      "confirmCheckbox": "[LT] Confirm checkbox",
+      "contactLogged": "[LT] Contact logged",
+      "contactsDescription": "[LT] Contacts description",
+      "contactsTitle": "[LT] Contacts title",
+      "failedToLoadContacts": "[LT] Failed to load contacts",
+      "importantNote": "[LT] Important note",
+      "lastContacted": "[LT] Last contacted",
+      "logContact": "[LT] Log contact",
+      "modalDescription": "[LT] Modal description",
+      "modalTitle": "[LT] Modal title",
+      "notAuthorized": "[LT] Not authorized",
+      "pleaseConfirm": "[LT] Please confirm",
+      "priority": "[LT] Priority",
+      "priorityOrder": "[LT] Priority order",
+      "reasonLabel": "[LT] Reason label",
+      "reasonPlaceholder": "[LT] Reason placeholder",
+      "warningText": "[LT] Warning text"
+    },
+    "errors": {
+      "failedToLoad": "[LT] Failed to load",
+      "pleaseLogin": "[LT] Please login"
+    },
+    "guardianInfo": {
+      "description": "[LT] Description",
+      "securityNote": "[LT] Security note"
+    },
+    "readOnlyAccess": "[LT] Read only access",
+    "sections": {
+      "finalWishes": {
+        "description": "[LT] Description",
+        "digitalAccounts": "[LT] Digital accounts",
+        "empty": "[LT] Empty",
+        "funeralWishes": "[LT] Funeral wishes",
+        "messagesToLovedOnes": "[LT] Messages to loved ones",
+        "title": "[LT] Title"
+      },
+      "importantContacts": {
+        "description": "[LT] Description",
+        "empty": "[LT] Empty",
+        "title": "[LT] Title"
+      },
+      "keyDocuments": {
+        "description": "[LT] Description",
+        "empty": "[LT] Empty",
+        "expires": "[LT] Expires",
+        "keyDocumentBadge": "[LT] Key document badge",
+        "noExpiration": "[LT] No expiration",
+        "title": "[LT] Title"
+      }
+    },
+    "subtitle": "[LT] Subtitle",
+    "title": "[LT] Title"
+  },
+  "manual": {
+    "contacts": {
+      "form": {
+        "addButton": "[LT] Add button",
+        "cancel": "[LT] Cancel",
+        "emailLabel": "[LT] Email label",
+        "emailPlaceholder": "[LT] Email placeholder",
+        "nameLabel": "[LT] Name label",
+        "namePlaceholder": "[LT] Name placeholder",
+        "notesLabel": "[LT] Notes label",
+        "notesPlaceholder": "[LT] Notes placeholder",
+        "phoneLabel": "[LT] Phone label",
+        "phonePlaceholder": "[LT] Phone placeholder",
+        "roleLabel": "[LT] Role label",
+        "rolePlaceholder": "[LT] Role placeholder",
+        "saving": "[LT] Saving",
+        "updateButton": "[LT] Update button"
+      }
+    }
+  },
+  "notificationPreferences": {
+    "description": "[LT] Description",
+    "emailRequired": "[LT] Email required",
+    "errors": {
+      "loadFailed": "[LT] Load failed",
+      "updateFailed": "[LT] Update failed"
+    },
+    "howItWorks": {
+      "point1": "[LT] Point1",
+      "point2": "[LT] Point2",
+      "point3": "[LT] Point3",
+      "title": "[LT] Title"
+    },
+    "info": "[LT] Info",
+    "lastUpdated": "[LT] Last updated",
+    "messages": {
+      "updated": "[LT] Updated"
+    },
+    "noContacts": "[LT] No contacts",
+    "noEmail": "[LT] No email",
+    "title": "[LT] Title"
+  },
+  "playbook": {
+    "addContact": "[LT] Add contact",
+    "autoSaveNotice": "[LT] Auto save notice",
+    "contact": "[LT] Contact",
+    "contactFields": {
+      "email": "[LT] Email",
+      "emailPlaceholder": "[LT] Email placeholder",
+      "name": "[LT] Name",
+      "namePlaceholder": "[LT] Name placeholder",
+      "notes": "[LT] Notes",
+      "notesPlaceholder": "[LT] Notes placeholder",
+      "phone": "[LT] Phone",
+      "phonePlaceholder": "[LT] Phone placeholder",
+      "role": "[LT] Role",
+      "rolePlaceholder": "[LT] Role placeholder"
+    },
+    "edit": "[LT] Edit",
+    "errors": {
+      "loadFailed": "[LT] Load failed",
+      "saveFailed": "[LT] Save failed"
+    },
+    "loading": "[LT] Loading",
+    "messages": {
+      "autoSaved": "[LT] Auto saved",
+      "saved": "[LT] Saved"
+    },
+    "noContacts": "[LT] No contacts",
+    "noContent": "[LT] No content",
+    "preview": "[LT] Preview",
+    "save": "[LT] Save",
+    "saving": "[LT] Saving",
+    "sections": {
+      "contacts": {
+        "description": "[LT] Description",
+        "title": "[LT] Title"
+      },
+      "digital": {
+        "description": "[LT] Description",
+        "placeholder": "[LT] Placeholder",
+        "title": "[LT] Title"
+      },
+      "documents": {
+        "description": "[LT] Description",
+        "placeholder": "[LT] Placeholder",
+        "title": "[LT] Title"
+      },
+      "funeral": {
+        "description": "[LT] Description",
+        "placeholder": "[LT] Placeholder",
+        "title": "[LT] Title"
+      },
+      "messages": {
+        "description": "[LT] Description",
+        "placeholder": "[LT] Placeholder",
+        "title": "[LT] Title"
+      },
+      "practical": {
+        "description": "[LT] Description",
+        "placeholder": "[LT] Placeholder",
+        "title": "[LT] Title"
+      }
+    },
+    "status": {
+      "complete": "[LT] Complete",
+      "draft": "[LT] Draft",
+      "empty": "[LT] Empty"
+    },
+    "subtitle": {
+      "edit": "[LT] Edit",
+      "view": "[LT] View"
+    },
+    "tabs": {
+      "contacts": "[LT] Contacts",
+      "digital": "[LT] Digital",
+      "documents": "[LT] Documents",
+      "funeral": "[LT] Funeral",
+      "messages": "[LT] Messages",
+      "practical": "[LT] Practical"
+    },
+    "templates": {
+      "append": "[LT] Append",
+      "backToTemplates": "[LT] Back to templates",
+      "description": "[LT] Description",
+      "existingContent": "[LT] Existing content",
+      "fillInVariables": "[LT] Fill in variables",
+      "insertTemplate": "[LT] Insert template",
+      "preview": "[LT] Preview",
+      "replace": "[LT] Replace",
+      "title": "[LT] Title",
+      "variableCount": "[LT] Variable count",
+      "variablePlaceholder": "[LT] Variable placeholder"
+    },
+    "title": {
+      "edit": "[LT] Edit",
+      "view": "[LT] View"
+    },
+    "useTemplate": "[LT] Use template"
+  },
+  "preparedness": {
+    "assessments": {
+      "decisionMaking": {
+        "good": "[LT] Good",
+        "needsWork": "[LT] Needs work"
+      },
+      "immediateAccess": {
+        "good": "[LT] Good",
+        "needsWork": "[LT] Needs work"
+      },
+      "longTermSecurity": {
+        "good": "[LT] Good",
+        "needsWork": "[LT] Needs work"
+      }
+    },
+    "dimensions": {
+      "decisionMaking": "[LT] Decision making",
+      "immediateAccess": "[LT] Immediate access",
+      "longTermSecurity": "[LT] Long term security"
+    },
+    "familyBenefit": "[LT] Family benefit",
+    "familyCommunication": {
+      "description": "[LT] Description",
+      "scheduleReview": "[LT] Schedule review",
+      "shareReport": "[LT] Share report",
+      "title": "[LT] Title"
+    },
+    "gaps": {
+      "addMedicalPreferences": "[LT] Add medical preferences",
+      "basicAccessInfo": "[LT] Basic access info",
+      "completeFinancialAccess": "[LT] Complete financial access",
+      "documentBusinessOperations": "[LT] Document business operations",
+      "improveImmediateAccess": "[LT] Improve immediate access",
+      "updateWillAndTrust": "[LT] Update will and trust"
+    },
+    "impact": "[LT] Impact",
+    "improvements": {
+      "addBankAccounts": "[LT] Add bank accounts",
+      "documentMedicalWishes": "[LT] Document medical wishes",
+      "uploadLegalDocuments": "[LT] Upload legal documents"
+    },
+    "levels": {
+      "fullyPrepared": "[LT] Fully prepared",
+      "goodBasic": "[LT] Good basic",
+      "minimalPreparation": "[LT] Minimal preparation",
+      "needsImmediate": "[LT] Needs immediate",
+      "somePreparation": "[LT] Some preparation",
+      "wellPrepared": "[LT] Well prepared"
+    },
+    "nextStep": "[LT] Next step",
+    "scenarioReadiness": "[LT] Scenario readiness",
+    "scenarios": {
+      "emergencyHospital": {
+        "description": "[LT] Description",
+        "title": "[LT] Title"
+      },
+      "extendedTravel": {
+        "description": "[LT] Description",
+        "title": "[LT] Title"
+      },
+      "suddenDeath": {
+        "description": "[LT] Description",
+        "title": "[LT] Title"
+      }
+    },
+    "title": "[LT] Title",
+    "toImprove": "[LT] To improve"
+  },
+  "relationships": {
+    "child": "[LT] Child",
+    "friend": "[LT] Friend",
+    "other": "[LT] Other",
+    "parent": "[LT] Parent",
+    "sibling": "[LT] Sibling",
+    "spouse": "[LT] Spouse"
+  }
+}

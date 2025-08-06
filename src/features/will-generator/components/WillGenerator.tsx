@@ -38,45 +38,45 @@ export function WillGenerator({ onComplete }: WillGeneratorProps) {
   const steps = [
     {
       id: 'personal',
-      title: t('steps.personal.title'),
+      title: t('ui.personal.title'),
       icon: FileText,
-      description: t('steps.personal.description')
+      description: t('ui.personal.description')
     },
     {
       id: 'assets',
-      title: t('steps.assets.title'),
+      title: t('ui.assets.title'),
       icon: Users,
-      description: t('steps.assets.description')
+      description: t('ui.assets.description')
     },
     {
       id: 'beneficiaries',
-      title: t('steps.beneficiaries.title'),
+      title: t('ui.beneficiaries.title'),
       icon: Users,
-      description: t('steps.beneficiaries.description')
+      description: t('ui.beneficiaries.description')
     },
     {
       id: 'guardians',
-      title: t('steps.guardians.title'),
+      title: t('ui.guardians.title'),
       icon: Briefcase,
-      description: t('steps.guardians.description')
+      description: t('ui.guardians.description')
     },
     {
       id: 'executor',
-      title: t('steps.executor.title'),
+      title: t('ui.executor.title'),
       icon: Briefcase,
-      description: t('steps.executor.description')
+      description: t('ui.executor.description')
     },
     {
       id: 'preferences',
-      title: t('steps.preferences.title'),
+      title: t('ui.preferences.title'),
       icon: Eye,
-      description: t('steps.preferences.description')
+      description: t('ui.preferences.description')
     },
     {
       id: 'review',
-      title: t('steps.review.title'),
+      title: t('ui.review.title'),
       icon: Eye,
-      description: t('steps.review.description')
+      description: t('ui.review.description')
     }
   ];
 
@@ -194,7 +194,7 @@ export function WillGenerator({ onComplete }: WillGeneratorProps) {
       // TODO: Call API to generate will with country code and language code
       // The API call should include both countryCode and languageCode
       // fetch(`/api/will/get-template?country=${countryCode}&language=${languageCode}`)
-      toast.success(t('notifications.willGenerated'));
+      toast.success(t('ui.willGenerated'));
       onComplete?.('generated-will-id');
     } catch (error) {
       toast.error(t('errors.generationFailed'));
@@ -325,7 +325,7 @@ export function WillGenerator({ onComplete }: WillGeneratorProps) {
       <Alert>
         <AlertCircle className="h-4 w-4" />
         <AlertDescription>
-          {t('legal.disclaimer')} {t('legal.notLegalAdvice')} {t('legal.professionalGuidance')}
+          {t('wills.disclaimer')} {t('wills.notLegalAdvice')} {t('wills.professionalGuidance')}
         </AlertDescription>
       </Alert>
     </div>

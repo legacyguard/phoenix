@@ -136,7 +136,7 @@ export const Vault: React.FC = () => {
       setAssets(prev => prev.filter(a => a.id !== asset.id));
     } catch (err) {
       console.error('Error deleting asset:', err);
-      alert(t('vault.errorDeletingAsset'));
+      alert(t('assets.errorDeletingAsset'));
     }
   };
 
@@ -159,8 +159,8 @@ export const Vault: React.FC = () => {
     <div className="container mx-auto px-4 md:px-6 lg:px-8 py-4 md:py-8 space-y-4 md:space-y-6 lg:space-y-8 max-w-screen-xl">
       {/* Header */}
       <div className="space-y-2">
-        <h1 className="text-3xl font-bold">{t('vault.title')}</h1>
-        <p className="text-lg text-muted-foreground">{t('vault.subtitle')}</p>
+        <h1 className="text-3xl font-bold">{t('assets.title')}</h1>
+        <p className="text-lg text-muted-foreground">{t('assets.subtitle')}</p>
       </div>
 
       {/* Error Alert */}
@@ -177,7 +177,7 @@ export const Vault: React.FC = () => {
           <div className="text-center max-w-4xl mx-auto space-y-8">
             {/* Large Headline */}
             <h2 className="text-4xl font-bold text-foreground">
-              {t('vault.addFirst')}
+              {t('assets.addFirst')}
             </h2>
             
             {/* Asset Type Grid */}
@@ -256,7 +256,7 @@ export const Vault: React.FC = () => {
                   <div className="p-4 bg-primary/10 rounded-full">
                     <PlusCircle className="h-12 w-12 text-primary" />
                   </div>
-                  <h3 className="text-lg font-semibold">{t('vault.addOther')}</h3>
+                  <h3 className="text-lg font-semibold">{t('assets.addOther')}</h3>
                 </CardContent>
               </Card>
             </div>
@@ -271,7 +271,7 @@ export const Vault: React.FC = () => {
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
               <Input
                 type="search"
-                placeholder={t('vault.searchPlaceholder')}
+                placeholder={t('assets.searchPlaceholder')}
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="pl-10"
@@ -290,7 +290,7 @@ export const Vault: React.FC = () => {
               className="shrink-0"
             >
               <PlusCircle className="mr-2 h-4 w-4" />
-              {t('vault.addAsset')}
+              {t('assets.addAsset')}
             </Button>
           </div>
 
@@ -299,7 +299,7 @@ export const Vault: React.FC = () => {
             <Card>
               <CardContent className="p-6">
                 <div className="text-2xl font-bold">{assets.length}</div>
-                <p className="text-sm text-muted-foreground">{t('vault.totalAssets')}</p>
+                <p className="text-sm text-muted-foreground">{t('assets.totalAssets')}</p>
               </CardContent>
             </Card>
             <Card>
@@ -312,7 +312,7 @@ export const Vault: React.FC = () => {
                     maximumFractionDigits: 0,
                   })}
                 </div>
-                <p className="text-sm text-muted-foreground">{t('vault.totalValue')}</p>
+                <p className="text-sm text-muted-foreground">{t('assets.totalValue')}</p>
               </CardContent>
             </Card>
             <Card>
@@ -320,7 +320,7 @@ export const Vault: React.FC = () => {
                 <div className="text-2xl font-bold">
                   {[...new Set(assets.map(a => a.main_category))].length}
                 </div>
-                <p className="text-sm text-muted-foreground">{t('vault.categories')}</p>
+                <p className="text-sm text-muted-foreground">{t('assets.categories')}</p>
               </CardContent>
             </Card>
           </div>
@@ -343,7 +343,7 @@ export const Vault: React.FC = () => {
               <p className="text-muted-foreground">
                 {searchQuery
                   ? t('vault.noAssetsFound', { searchQuery })
-                  : t('vault.startAddingAssets')}
+                  : t('assets.startAddingAssets')}
               </p>
             </div>
           )}
@@ -351,15 +351,15 @@ export const Vault: React.FC = () => {
           {/* Quick Add Asset Types */}
           {assets.length > 0 && (
             <div className="border-t pt-8">
-              <h3 className="text-lg font-semibold mb-4">{t('vault.addNewAsset')}</h3>
+              <h3 className="text-lg font-semibold mb-4">{t('assets.addNewAsset')}</h3>
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3">
                 {[
-                  { label: t('vault.property'), icon: Home, category: 'Property' },
-                  { label: t('vault.finances'), icon: Landmark, category: 'Finances' },
-                  { label: t('vault.vehicle'), icon: Car, category: 'Vehicle' },
-                  { label: t('vault.digital'), icon: Laptop, category: 'Digital Asset' },
-                  { label: t('vault.personal'), icon: Gem, category: 'Personal Item' },
-                  { label: t('vault.other'), icon: PlusCircle, category: 'Other' },
+                  { label: t('assets.property'), icon: Home, category: 'Property' },
+                  { label: t('assets.finances'), icon: Landmark, category: 'Finances' },
+                  { label: t('assets.vehicle'), icon: Car, category: 'Vehicle' },
+                  { label: t('assets.digital'), icon: Laptop, category: 'Digital Asset' },
+                  { label: t('assets.personal'), icon: Gem, category: 'Personal Item' },
+                  { label: t('assets.other'), icon: PlusCircle, category: 'Other' },
                 ].map((type) => {
                   const Icon = type.icon;
                   return (

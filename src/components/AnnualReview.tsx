@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next';
 import { CheckCircle, Clock, AlertCircle, ArrowRight, ArrowLeft, Calendar } from 'lucide-react';
 
 const AnnualReview: React.FC = () => {
-    const { t } = useTranslation('ui');
+    const { t } = useTranslation('dashboard');
     const [step, setStep] = useState(1);
     const [completedSteps, setCompletedSteps] = useState<Set<number>>(new Set());
 

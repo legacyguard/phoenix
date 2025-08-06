@@ -47,10 +47,10 @@ export const WillForm: React.FC<WillFormProps> = ({
   const watchStatus = watch('status');
 
   const statusOptions = [
-    { key: 'draft', label: t('will.status.draft'), variant: 'secondary' },
-    { key: 'notarized', label: t('will.status.notarized'), variant: 'default' },
-    { key: 'stored', label: t('will.status.stored'), variant: 'default' },
-    { key: 'updated', label: t('will.status.updated'), variant: 'secondary' },
+    { key: 'draft', label: t('wills.status.draft'), variant: 'secondary' },
+    { key: 'notarized', label: t('wills.status.notarized'), variant: 'default' },
+    { key: 'stored', label: t('wills.status.stored'), variant: 'default' },
+    { key: 'updated', label: t('wills.status.updated'), variant: 'secondary' },
   ];
 
   const getStatusVariant = (status: string): "default" | "secondary" | "destructive" | "outline" => {
@@ -62,7 +62,7 @@ export const WillForm: React.FC<WillFormProps> = ({
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
       {/* Current Status */}
       <div className="space-y-2">
-        <Label>{t('will.fields.currentStatus')}</Label>
+        <Label>{t('wills.fields.currentStatus')}</Label>
         <div className="flex items-center gap-3">
           <Select 
             value={watchStatus} 
@@ -87,16 +87,16 @@ export const WillForm: React.FC<WillFormProps> = ({
           <p className="text-sm text-destructive">{errors.status.message}</p>
         )}
         <p className="text-sm text-muted-foreground">
-          {t('will.descriptions.statusDescription')}
+          {t('wills.descriptions.statusDescription')}
         </p>
       </div>
 
       {/* Physical Location */}
       <div className="space-y-2">
-        <Label htmlFor="location">{t('will.fields.physicalLocation')}</Label>
+        <Label htmlFor="location">{t('wills.fields.physicalLocation')}</Label>
         <Input
           id="location"
-          placeholder={t('will.placeholders.physicalLocation')}
+          placeholder={t('wills.placeholders.physicalLocation')}
           {...register('physical_location')}
           className={errors.physical_location ? 'border-destructive' : ''}
         />
@@ -104,23 +104,23 @@ export const WillForm: React.FC<WillFormProps> = ({
           <p className="text-sm text-destructive">{errors.physical_location.message}</p>
         )}
         <p className="text-sm text-muted-foreground">
-          {t('will.descriptions.physicalLocationDescription')}
+          {t('wills.descriptions.physicalLocationDescription')}
         </p>
       </div>
 
       {/* Executor Contact */}
       <div className="space-y-2">
-        <Label>{t('will.fields.executorContact')}</Label>
+        <Label>{t('wills.fields.executorContact')}</Label>
         <Select
           value={watch('executor_contact_id') || ''}
           onValueChange={(value) => setValue('executor_contact_id', value)}
         >
           <SelectTrigger className={errors.executor_contact_id ? 'border-destructive' : ''}>
-            <SelectValue placeholder={t('will.placeholders.selectContact')} />
+            <SelectValue placeholder={t('wills.placeholders.selectContact')} />
           </SelectTrigger>
           <SelectContent>
             <SelectItem value="">
-              {t('will.options.noContactSelected')}
+              {t('wills.options.noContactSelected')}
             </SelectItem>
             {contacts.map((contact) => (
               <SelectItem key={contact.id} value={contact.id}>
@@ -138,16 +138,16 @@ export const WillForm: React.FC<WillFormProps> = ({
           <p className="text-sm text-destructive">{errors.executor_contact_id.message}</p>
         )}
         <p className="text-sm text-muted-foreground">
-          {t('will.descriptions.executorDescription')}
+          {t('wills.descriptions.executorDescription')}
         </p>
       </div>
 
       {/* Notes */}
       <div className="space-y-2">
-        <Label htmlFor="notes">{t('will.fields.additionalNotes')}</Label>
+        <Label htmlFor="notes">{t('wills.fields.additionalNotes')}</Label>
         <Textarea
           id="notes"
-          placeholder={t('will.placeholders.additionalNotes')}
+          placeholder={t('wills.placeholders.additionalNotes')}
           {...register('notes')}
           rows={3}
           className={errors.notes ? 'border-destructive' : ''}
@@ -161,19 +161,19 @@ export const WillForm: React.FC<WillFormProps> = ({
       <div className="flex gap-3">
         {onCancel && (
           <Button type="button" variant="outline" onClick={onCancel} disabled={isLoading}>
-            {t('legal.common.cancel')}
+            {t('wills.common.cancel')}
           </Button>
         )}
         <Button type="submit" disabled={isLoading} className="flex-1">
           {isLoading ? (
             <>
               <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
-              {t('will.buttons.saving')}
+              {t('wills.buttons.saving')}
             </>
           ) : (
             <>
               <Save className="mr-2 h-4 w-4" />
-              {t('will.buttons.saveWillInfo')}
+              {t('wills.buttons.saveWillInfo')}
             </>
           )}
         </Button>

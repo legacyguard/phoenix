@@ -5,7 +5,7 @@ import { ArrowLeft, Home } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 const NotFound: React.FC = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('errors');
   
   return (
     <div className="min-h-[60vh] flex flex-col items-center justify-center text-center space-y-6">

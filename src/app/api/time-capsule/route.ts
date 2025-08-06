@@ -30,14 +30,14 @@ export async function POST(request: NextRequest) {
     // Get authenticated user
     const authHeader = request.headers.get('authorization');
     if (!authHeader) {
-      return NextResponse.json({ error: t('common.errors.unauthorized') }, { status: 401 });
+      return NextResponse.json({ error: t('ui.errors.unauthorized') }, { status: 401 });
     }
 
     const token = authHeader.replace('Bearer ', '');
     const { data: { user }, error: authError } = await supabaseAdmin.auth.getUser(token);
     
     if (authError || !user) {
-      return NextResponse.json({ error: t('common.errors.invalidAuthentication') }, { status: 401 });
+      return NextResponse.json({ error: t('ui.errors.invalidAuthentication') }, { status: 401 });
     }
 
     // Parse form data for file upload support
@@ -62,7 +62,7 @@ export async function POST(request: NextRequest) {
 
   // Validate required fields
   if (!capsuleData.title || !capsuleData.messageType || !capsuleData.unlockCondition) {
-    return NextResponse.json({ error: t('common.errors.missingRequiredFields') }, { status: 400 });
+    return NextResponse.json({ error: t('ui.errors.missingRequiredFields') }, { status: 400 });
   }
 
   // Prepare database record
@@ -139,7 +139,7 @@ export async function POST(request: NextRequest) {
 
   } catch (error) {
     console.error('Error creating time capsule:', error);
-    return NextResponse.json({ error: t('common.errors.internalServerError') }, { status: 500 });
+    return NextResponse.json({ error: t('ui.errors.internalServerError') }, { status: 500 });
   }
 }
 
@@ -152,14 +152,14 @@ export async function GET(request: NextRequest) {
     // Get authenticated user
     const authHeader = request.headers.get('authorization');
     if (!authHeader) {
-      return NextResponse.json({ error: t('common.errors.unauthorized') }, { status: 401 });
+      return NextResponse.json({ error: t('ui.errors.unauthorized') }, { status: 401 });
     }
 
     const token = authHeader.replace('Bearer ', '');
     const { data: { user }, error: authError } = await supabaseAdmin.auth.getUser(token);
     
     if (authError || !user) {
-      return NextResponse.json({ error: t('common.errors.invalidAuthentication') }, { status: 401 });
+      return NextResponse.json({ error: t('ui.errors.invalidAuthentication') }, { status: 401 });
     }
 
     // Fetch time capsules with recipient details
@@ -199,6 +199,6 @@ export async function GET(request: NextRequest) {
 
   } catch (error) {
     console.error('Error fetching time capsules:', error);
-    return NextResponse.json({ error: t('common.errors.internalServerError') }, { status: 500 });
+    return NextResponse.json({ error: t('ui.errors.internalServerError') }, { status: 500 });
   }
 }

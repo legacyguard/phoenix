@@ -27,6 +27,8 @@ export function UploadProgress({
   onCancel,
   className
 }: UploadProgressProps) {
+  const { t } = useTranslation('assets');
+  const { t: tMicro } = useTranslation('micro-copy');
   const getStatusIcon = () => {
     switch (item.status) {
       case 'completed':
@@ -41,19 +43,19 @@ export function UploadProgress({
   };
 
   const getStageMessage = () => {
-    if (!item.currentStage) return 'Waiting to start...';
+    if (!item.currentStage) return tMicro('statusMessages.loading.general');
 
     const messages = {
-      validating: '🔍 Checking your document...',
-      compressing: '📦 Making it smaller for you...',
-      reading: '📖 Reading your document...',
-      analyzing: '🤖 Understanding what this is...',
-      encrypting: '🔐 Securing your information...',
-      storing: '💾 Keeping it safe...',
-      complete: '✅ All done!'
+      validating: tMicro('statusMessages.loading.analyzing'),
+      compressing: tMicro('statusMessages.loading.processing'),
+      reading: tMicro('statusMessages.loading.processing'),
+      analyzing: tMicro('statusMessages.loading.analyzing'),
+      encrypting: tMicro('statusMessages.loading.processing'),
+      storing: tMicro('statusMessages.loading.saving'),
+      complete: tMicro('statusMessages.success.saved')
     };
 
-    return messages[item.currentStage] || 'Processing...';
+    return messages[item.currentStage] || tMicro('statusMessages.loading.processing');
   };
 
   const getStatusColor = () => {
@@ -135,7 +137,7 @@ export function UploadProgress({
                 {item.error.userMessage}
               </p>
               {item.error.recoverable &&
-            <p className="text-xs text-red-600 mt-1">{t("upload.uploadProgress.don_t_worry_you_can_try_again_1")}
+            <p className="text-xs text-red-600 mt-1">{t('assets.uploadProgress.don_t_worry_you_can_try_again_1')}
 
             </p>
             }
@@ -147,7 +149,7 @@ export function UploadProgress({
         {item.status === 'completed' && item.result?.document &&
         <div className="pt-1">
             <p className="text-sm text-green-800">
-              {item.result.document.displayName}{t("upload.uploadProgress.is_now_secure_2")}
+              {item.result.document.displayName}{t('assets.uploadProgress.is_now_secure_2')}
           </p>
             {item.result.summary?.familyMessage &&
           <p className="text-xs text-green-600 mt-1">
@@ -159,7 +161,7 @@ export function UploadProgress({
 
         {/* Retry count */}
         {item.retryCount > 0 &&
-        <p className="text-xs text-muted-foreground">{t("upload.uploadProgress.retry_attempt_3")}
+        <p className="text-xs text-muted-foreground">{t('assets.uploadProgress.retry_attempt_3')}
           {item.retryCount}
           </p>
         }
@@ -203,7 +205,7 @@ export function UploadQueueList({
           variant="ghost"
           size="sm"
           onClick={onClearCompleted}
-          className="text-xs">{t("upload.uploadProgress.clear_completed_4")}
+          className="text-xs">{t('assets.uploadProgress.clear_completed_4')}
 
           {completedCount})
           </Button>

@@ -378,7 +378,7 @@ export const FamilyPreparednessIndex: React.FC<FamilyPreparednessIndexProps> = (
                     </p>
                   </div>
                   <Button size="sm" variant="outline">
-                    {t('common.start')}
+                    {t('ui.start')}
                   </Button>
                 </div>
               </CardContent>

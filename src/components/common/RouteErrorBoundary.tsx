@@ -52,7 +52,7 @@ export function RouteErrorBoundary() {
         <CardContent className="space-y-4">
           <div className="bg-muted/50 p-3 rounded-md">
             <p className="text-sm">
-              {errorStatus && <span className="font-medium">{t("common.routeErrorBoundary.code_1")}{errorStatus}</span>}
+              {errorStatus && <span className="font-medium">{t('ui.routeErrorBoundary.code_1')}{errorStatus}</span>}
               {errorStatus && errorMessage && ' - '}
               {errorMessage}
             </p>
@@ -68,14 +68,14 @@ export function RouteErrorBoundary() {
               onClick={() => window.location.reload()}
               className="flex-1">
 
-              <RefreshCw className="mr-2 h-4 w-4" />{t("common.routeErrorBoundary.reload_page_2")}
+              <RefreshCw className="mr-2 h-4 w-4" />{t('ui.routeErrorBoundary.reload_page_2')}
 
             </Button>
           </div>
 
           {process.env.NODE_ENV === 'development' && errorDetails &&
           <details className="mt-4">
-              <summary className="cursor-pointer text-sm text-muted-foreground hover:text-foreground">{t("common.routeErrorBoundary.technical_details_3")}
+              <summary className="cursor-pointer text-sm text-muted-foreground hover:text-foreground">{t('ui.routeErrorBoundary.technical_details_3')}
 
             </summary>
               <pre className="mt-2 text-xs bg-muted p-2 rounded overflow-auto max-h-48">

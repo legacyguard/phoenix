@@ -31,7 +31,7 @@ interface Testimonial {
 }
 
 export const FamilyTestimonials: React.FC = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('landing');
   const { trackAction } = useAnalytics({ componentName: 'FamilyTestimonials' });
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);

@@ -222,8 +222,8 @@ export const Sidebar: React.FC<SidebarProps> = ({ isCollapsed, onToggle }) => {
             </div>
             {!isCollapsed && (
               <div className="flex-1 text-sm">
-                <p className="font-medium text-foreground">{t('app.name')}</p>
-                <p className="text-xs text-muted-foreground">{t('app.tagline')}</p>
+                <p className="font-medium text-foreground">{t('ui.name')}</p>
+                <p className="text-xs text-muted-foreground">{t('ui.tagline')}</p>
               </div>
             )}
           </div>

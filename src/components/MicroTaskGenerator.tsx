@@ -45,7 +45,7 @@ interface TaskSession {
 }
 
 const MicroTaskGenerator: React.FC = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('ai');
 
   const taskData: MicroTask[] = [
   {

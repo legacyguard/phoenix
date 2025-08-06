@@ -28,7 +28,8 @@ import { supabase } from '@/lib/supabase';
 import { toast } from 'sonner';
 
 export const LegacyLetters: React.FC = () => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('time-capsule');
+  const { t: tMicro } = useTranslation('micro-copy');
   const { user } = useUser();
   const [capsules, setCapsules] = useState<TimeCapsuleMessage[]>([]);
   const [loading, setLoading] = useState(true);
@@ -137,21 +138,21 @@ export const LegacyLetters: React.FC = () => {
         return (
           <Badge variant="secondary" className="gap-1">
             <Lock className="h-3 w-3" />
-            Locked
+            {tMicro('badges.status.locked')}
           </Badge>);
 
       case 'unlocked':
         return (
           <Badge variant="default" className="gap-1">
             <Unlock className="h-3 w-3" />
-            Unlocked
+            {tMicro('badges.status.unlocked')}
           </Badge>);
 
       case 'delivered':
         return (
           <Badge variant="outline" className="gap-1">
             <Users className="h-3 w-3" />
-            Delivered
+            {tMicro('badges.status.delivered')}
           </Badge>);
 
       default:
@@ -161,7 +162,7 @@ export const LegacyLetters: React.FC = () => {
 
   const getRecipientNames = (recipientIds: string[]) => {
     const recipients = trustedPeople.filter((person) => recipientIds.includes(person.id));
-    if (recipients.length === 0) return 'No recipients';
+    if (recipients.length === 0) return tMicro('statusMessages.empty.noFamily');
     if (recipients.length <= 2) return recipients.map((r) => r.name).join(', ');
     return `${recipients[0].name} and ${recipients.length - 1} others`;
   };

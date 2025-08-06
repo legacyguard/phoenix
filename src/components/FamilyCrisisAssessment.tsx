@@ -327,7 +327,7 @@ export const FamilyCrisisAssessment: React.FC<FamilyCrisisAssessmentProps> = ({
               </div>
               {capability.status === 'vulnerable' &&
             <Button size="sm" variant="outline">
-                  {t('common.fix')}
+                  {t('ui.fix')}
                 </Button>
             }
             </div>
@@ -407,7 +407,7 @@ export const FamilyCrisisAssessment: React.FC<FamilyCrisisAssessmentProps> = ({
                   {t('crisisAssessment.fixCapability', { capability: mostCriticalGap.capability })}
                 </p>
                 <p className="text-xs text-red-600 mt-1">
-                  {t('crisisAssessment.timeEstimate')}{t("familyCrisisAssessment.15_1")}{t('common.minutes')}
+                  {t('crisisAssessment.timeEstimate')}{t("familyCrisisAssessment.15_1")}{t('ui.minutes')}
                 </p>
               </div>
               <Button size="sm" variant="destructive">

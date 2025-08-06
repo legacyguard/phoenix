@@ -109,7 +109,7 @@ export function DocumentPreview({
               {document.storageLocation === 'local' ?
               <>
                   <HardDrive className="h-3 w-3" />
-                  <span>{t("upload.documentPreview.on_device_1")}</span>
+                  <span>{t('assets.documentPreview.on_device_1')}</span>
                 </> :
               document.storageLocation === 'cloud' ?
               <>
@@ -133,7 +133,7 @@ export function DocumentPreview({
             {document.metadata.documentDate &&
           <div className="flex items-center gap-2 text-xs">
                 <Calendar className="h-3 w-3 text-muted-foreground" />
-                <span>{t("upload.documentPreview.issued_2")}{format(new Date(document.metadata.documentDate), 'MMM d, yyyy')}</span>
+                <span>{t('assets.documentPreview.issued_2')}{format(new Date(document.metadata.documentDate), 'MMM d, yyyy')}</span>
               </div>
           }
             
@@ -218,7 +218,7 @@ export function DocumentPreview({
         <div className="bg-blue-50 rounded-lg p-2 text-xs">
             <div className="flex items-center gap-2 text-blue-800">
               <Share2 className="h-3 w-3" />
-              <span>{t("upload.documentPreview.shared_with_3")}
+              <span>{t('assets.documentPreview.shared_with_3')}
               {document.sharingStatus.sharedWith.length} 
                 {document.sharingStatus.sharedWith.length === 1 ? ' person' : ' people'}
               </span>
@@ -251,8 +251,8 @@ export function DocumentGrid({
     return (
       <div className="text-center py-12">
         <FileText className="h-12 w-12 text-gray-300 mx-auto mb-4" />
-        <p className="text-gray-500">{t("upload.documentPreview.no_documents_uploaded_yet_4")}</p>
-        <p className="text-sm text-gray-400 mt-1">{t("upload.documentPreview.drop_some_files_above_to_get_s_5")}
+        <p className="text-gray-500">{t('assets.documentPreview.no_documents_uploaded_yet_4')}</p>
+        <p className="text-sm text-gray-400 mt-1">{t('assets.documentPreview.drop_some_files_above_to_get_s_5')}
 
         </p>
       </div>);

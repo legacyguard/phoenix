@@ -206,7 +206,7 @@ const LegalConsultationModal: React.FC<LegalConsultationModalProps> = ({
 
         <DialogFooter>
           <Button onClick={handleClose} variant="outline">
-            {t('common.cancel')}
+            {t('ui.cancel')}
           </Button>
           <Button onClick={handleProceed} disabled={!consultationType || !userQuestion}>
             {t("legalConsultationModal.proceed_to_payment_16")} (€{selectedPrice})

@@ -33,7 +33,7 @@ interface GuardianPlaybookViewProps {
 }
 
 export default function GuardianPlaybookView({ guardianId, userName }: GuardianPlaybookViewProps) {
-  const { t } = useTranslation();
+  const { t } = useTranslation('family');
   const [loading, setLoading] = useState(true);
   const [playbook, setPlaybook] = useState<GuardianPlaybookData | null>(null);
 
@@ -43,7 +43,7 @@ export default function GuardianPlaybookView({ guardianId, userName }: GuardianP
       const { data: { user } } = await supabase.auth.getUser();
       
       if (!user) {
-        toast.error(t('playbook.notAuthenticated'));
+        toast.error(t('family.notAuthenticated'));
         return;
       }
 
@@ -57,7 +57,7 @@ export default function GuardianPlaybookView({ guardianId, userName }: GuardianP
         .single();
 
       if (guardianError || !guardianData) {
-        toast.error(t('playbook.accessDenied'));
+        toast.error(t('family.accessDenied'));
         return;
       }
 
@@ -80,7 +80,7 @@ export default function GuardianPlaybookView({ guardianId, userName }: GuardianP
       }
     } catch (error) {
       console.error('Error fetching playbook:', error);
-      toast.error(t('playbook.fetchError'));
+      toast.error(t('family.fetchError'));
     } finally {
       setLoading(false);
     }
@@ -95,7 +95,7 @@ export default function GuardianPlaybookView({ guardianId, userName }: GuardianP
       <div className="min-h-screen flex items-center justify-center">
         <div className="animate-pulse text-center">
           <Book className="h-8 w-8 text-primary mx-auto mb-4" />
-          <p className="text-muted-foreground">{t('playbook.loading')}</p>
+          <p className="text-muted-foreground">{t('family.loading')}</p>
         </div>
       </div>
     );
@@ -107,8 +107,8 @@ export default function GuardianPlaybookView({ guardianId, userName }: GuardianP
         <Card className="max-w-md">
           <CardContent className="text-center p-8">
             <Book className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
-            <h2 className="text-xl font-semibold mb-2">{t('playbook.notFound.title')}</h2>
-            <p className="text-muted-foreground">{t('playbook.notFound.description')}</p>
+            <h2 className="text-xl font-semibold mb-2">{t('family.notFound.title')}</h2>
+            <p className="text-muted-foreground">{t('family.notFound.description')}</p>
           </CardContent>
         </Card>
       </div>
@@ -119,35 +119,35 @@ export default function GuardianPlaybookView({ guardianId, userName }: GuardianP
     {
       id: 'funeral',
       icon: Heart,
-      title: t('playbook.tabs.funeral'),
+      title: t('family.tabs.funeral'),
       content: playbook.funeral_wishes,
       color: 'text-pink-500'
     },
     {
       id: 'digital',
       icon: Shield,
-      title: t('playbook.tabs.digital'),
+      title: t('family.tabs.digital'),
       content: playbook.digital_accounts_shutdown,
       color: 'text-blue-500'
     },
     {
       id: 'documents',
       icon: FileText,
-      title: t('playbook.tabs.documents'),
+      title: t('family.tabs.documents'),
       content: playbook.document_locations,
       color: 'text-green-500'
     },
     {
       id: 'messages',
       icon: MessageSquare,
-      title: t('playbook.tabs.messages'),
+      title: t('family.tabs.messages'),
       content: playbook.personal_messages,
       color: 'text-purple-500'
     },
     {
       id: 'instructions',
       icon: Home,
-      title: t('playbook.tabs.instructions'),
+      title: t('family.tabs.instructions'),
       content: playbook.practical_instructions,
       color: 'text-orange-500'
     }
@@ -165,10 +165,10 @@ export default function GuardianPlaybookView({ guardianId, userName }: GuardianP
             {t('playbook.viewTitle', { userName })}
           </h1>
           <p className="text-muted-foreground">
-            {t('playbook.viewDescription')}
+            {t('family.viewDescription')}
           </p>
           <Badge variant="secondary" className="mt-4">
-            {t('playbook.lastUpdated')}: {new Date(playbook.updated_at || '').toLocaleDateString()}
+            {t('family.lastUpdated')}: {new Date(playbook.updated_at || '').toLocaleDateString()}
           </Badge>
         </div>
 
@@ -178,10 +178,10 @@ export default function GuardianPlaybookView({ guardianId, userName }: GuardianP
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <User className="h-5 w-5" />
-                {t('playbook.importantContacts.label')}
+                {t('family.importantContacts.label')}
               </CardTitle>
               <CardDescription>
-                {t('playbook.importantContacts.viewDescription')}
+                {t('family.importantContacts.viewDescription')}
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -252,7 +252,7 @@ export default function GuardianPlaybookView({ guardianId, userName }: GuardianP
 
         {/* Footer */}
         <div className="mt-12 text-center text-sm text-muted-foreground">
-          <p>{t('playbook.viewFooter')}</p>
+          <p>{t('family.viewFooter')}</p>
         </div>
       </div>
     </div>

@@ -5,20 +5,21 @@ import Backend from 'i18next-http-backend';
 
 // Define available namespaces
 export const namespaces = [
-  'auth',
-  'subscription',
-  'dashboard',
-  'documents',
+  'ai',
   'assets',
-  'family',
-  'guardians',
-  'wills',
-  'settings',
-  'onboarding',
-  'help',
-  'ui',
+  'auth',
+  'dashboard',
   'errors',
-  'emails'
+  'family',
+  'help',
+  'landing',
+  'micro-copy',
+  'settings',
+  'sharing',
+  'subscription',
+  'time-capsule',
+  'ui',
+  'wills'
 ] as const;
 
 export type Namespace = typeof namespaces[number];

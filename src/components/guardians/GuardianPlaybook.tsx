@@ -40,7 +40,7 @@ interface GuardianPlaybookProps {
 }
 
 export default function GuardianPlaybook({ userId, guardianId, guardianName, isReadOnly = false }: GuardianPlaybookProps) {
-  const { t } = useTranslation();
+  const { t } = useTranslation('family');
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [playbook, setPlaybook] = useState<GuardianPlaybookData>({
@@ -78,7 +78,7 @@ export default function GuardianPlaybook({ userId, guardianId, guardianName, isR
       }
     } catch (error) {
       console.error('Error fetching playbook:', error);
-      toast.error(t('playbook.fetchError'));
+      toast.error(t('family.fetchError'));
     } finally {
       setLoading(false);
     }
@@ -111,11 +111,11 @@ export default function GuardianPlaybook({ userId, guardianId, guardianName, isR
 
       if (error) throw error;
 
-      toast.success(t('playbook.saveSuccess'));
+      toast.success(t('family.saveSuccess'));
       setHasChanges(false);
     } catch (error) {
       console.error('Error saving playbook:', error);
-      toast.error(t('playbook.saveError'));
+      toast.error(t('family.saveError'));
     } finally {
       setSaving(false);
     }
@@ -181,7 +181,7 @@ export default function GuardianPlaybook({ userId, guardianId, guardianName, isR
     return (
       <Card>
         <CardContent className="flex items-center justify-center h-64">
-          <p className="text-muted-foreground">{t('playbook.loading')}</p>
+          <p className="text-muted-foreground">{t('family.loading')}</p>
         </CardContent>
       </Card>
     );
@@ -193,20 +193,20 @@ export default function GuardianPlaybook({ userId, guardianId, guardianName, isR
         {Object.entries(tabIcons).map(([key, Icon]) => (
           <TabsTrigger key={key} value={key} className="flex items-center gap-2">
             <Icon className="h-4 w-4" />
-            <span className="hidden sm:inline">{t(`playbook.tabs.${key}`)}</span>
+            <span className="hidden sm:inline">{t('family.tabs.${key}')}</span>
           </TabsTrigger>
         ))}
       </TabsList>
 
       <TabsContent value="funeral" className="space-y-4">
         <div>
-          <Label htmlFor="funeral_wishes">{t('playbook.funeralWishes.label')}</Label>
-          <p className="text-sm text-muted-foreground mb-2">{t('playbook.funeralWishes.description')}</p>
+          <Label htmlFor="funeral_wishes">{t('family.funeralWishes.label')}</Label>
+          <p className="text-sm text-muted-foreground mb-2">{t('family.funeralWishes.description')}</p>
           <Textarea
             id="funeral_wishes"
             value={playbook.funeral_wishes}
             onChange={(e) => updateField('funeral_wishes', e.target.value)}
-            placeholder={t('playbook.funeralWishes.placeholder')}
+            placeholder={t('family.funeralWishes.placeholder')}
             className="min-h-[200px]"
             disabled={isReadOnly || previewMode}
           />
@@ -215,13 +215,13 @@ export default function GuardianPlaybook({ userId, guardianId, guardianName, isR
 
       <TabsContent value="digital" className="space-y-4">
         <div>
-          <Label htmlFor="digital_accounts">{t('playbook.digitalAccounts.label')}</Label>
-          <p className="text-sm text-muted-foreground mb-2">{t('playbook.digitalAccounts.description')}</p>
+          <Label htmlFor="digital_accounts">{t('family.digitalAccounts.label')}</Label>
+          <p className="text-sm text-muted-foreground mb-2">{t('family.digitalAccounts.description')}</p>
           <Textarea
             id="digital_accounts"
             value={playbook.digital_accounts_shutdown}
             onChange={(e) => updateField('digital_accounts_shutdown', e.target.value)}
-            placeholder={t('playbook.digitalAccounts.placeholder')}
+            placeholder={t('family.digitalAccounts.placeholder')}
             className="min-h-[200px]"
             disabled={isReadOnly || previewMode}
           />
@@ -232,13 +232,13 @@ export default function GuardianPlaybook({ userId, guardianId, guardianName, isR
         <div>
           <div className="flex justify-between items-center mb-4">
             <div>
-              <Label>{t('playbook.importantContacts.label')}</Label>
-              <p className="text-sm text-muted-foreground">{t('playbook.importantContacts.description')}</p>
+              <Label>{t('family.importantContacts.label')}</Label>
+              <p className="text-sm text-muted-foreground">{t('family.importantContacts.description')}</p>
             </div>
             {!isReadOnly && !previewMode && (
               <Button onClick={addContact} size="sm" variant="outline">
                 <Plus className="h-4 w-4 mr-2" />
-                {t('playbook.importantContacts.add')}
+                {t('family.importantContacts.add')}
               </Button>
             )}
           </div>
@@ -250,54 +250,54 @@ export default function GuardianPlaybook({ userId, guardianId, guardianName, isR
                   <CardContent className="p-4">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
-                        <Label htmlFor={`contact-name-${index}`}>{t('playbook.importantContacts.name')}</Label>
+                        <Label htmlFor={`contact-name-${index}`}>{t('family.importantContacts.name')}</Label>
                         <Input
                           id={`contact-name-${index}`}
                           value={contact.name}
                           onChange={(e) => updateContact(index, 'name', e.target.value)}
-                          placeholder={t('playbook.importantContacts.namePlaceholder')}
+                          placeholder={t('family.importantContacts.namePlaceholder')}
                           disabled={isReadOnly || previewMode}
                         />
                       </div>
                       <div>
-                        <Label htmlFor={`contact-relationship-${index}`}>{t('playbook.importantContacts.relationship')}</Label>
+                        <Label htmlFor={`contact-relationship-${index}`}>{t('family.importantContacts.relationship')}</Label>
                         <Input
                           id={`contact-relationship-${index}`}
                           value={contact.relationship}
                           onChange={(e) => updateContact(index, 'relationship', e.target.value)}
-                          placeholder={t('playbook.importantContacts.relationshipPlaceholder')}
+                          placeholder={t('family.importantContacts.relationshipPlaceholder')}
                           disabled={isReadOnly || previewMode}
                         />
                       </div>
                       <div>
-                        <Label htmlFor={`contact-phone-${index}`}>{t('playbook.importantContacts.phone')}</Label>
+                        <Label htmlFor={`contact-phone-${index}`}>{t('family.importantContacts.phone')}</Label>
                         <Input
                           id={`contact-phone-${index}`}
                           type="tel"
                           value={contact.phone}
                           onChange={(e) => updateContact(index, 'phone', e.target.value)}
-                          placeholder={t('playbook.importantContacts.phonePlaceholder')}
+                          placeholder={t('family.importantContacts.phonePlaceholder')}
                           disabled={isReadOnly || previewMode}
                         />
                       </div>
                       <div>
-                        <Label htmlFor={`contact-email-${index}`}>{t('playbook.importantContacts.email')}</Label>
+                        <Label htmlFor={`contact-email-${index}`}>{t('family.importantContacts.email')}</Label>
                         <Input
                           id={`contact-email-${index}`}
                           type="email"
                           value={contact.email}
                           onChange={(e) => updateContact(index, 'email', e.target.value)}
-                          placeholder={t('playbook.importantContacts.emailPlaceholder')}
+                          placeholder={t('family.importantContacts.emailPlaceholder')}
                           disabled={isReadOnly || previewMode}
                         />
                       </div>
                       <div className="md:col-span-2">
-                        <Label htmlFor={`contact-notes-${index}`}>{t('playbook.importantContacts.notes')}</Label>
+                        <Label htmlFor={`contact-notes-${index}`}>{t('family.importantContacts.notes')}</Label>
                         <Textarea
                           id={`contact-notes-${index}`}
                           value={contact.notes || ''}
                           onChange={(e) => updateContact(index, 'notes', e.target.value)}
-                          placeholder={t('playbook.importantContacts.notesPlaceholder')}
+                          placeholder={t('family.importantContacts.notesPlaceholder')}
                           className="min-h-[80px]"
                           disabled={isReadOnly || previewMode}
                         />
@@ -311,7 +311,7 @@ export default function GuardianPlaybook({ userId, guardianId, guardianName, isR
                         className="mt-2"
                       >
                         <Trash2 className="h-4 w-4 mr-2" />
-                        {t('playbook.importantContacts.remove')}
+                        {t('family.importantContacts.remove')}
                       </Button>
                     )}
                   </CardContent>
@@ -319,7 +319,7 @@ export default function GuardianPlaybook({ userId, guardianId, guardianName, isR
               ))}
               {playbook.important_contacts.length === 0 && (
                 <p className="text-center text-muted-foreground py-8">
-                  {t('playbook.importantContacts.empty')}
+                  {t('family.importantContacts.empty')}
                 </p>
               )}
             </div>
@@ -329,13 +329,13 @@ export default function GuardianPlaybook({ userId, guardianId, guardianName, isR
 
       <TabsContent value="documents" className="space-y-4">
         <div>
-          <Label htmlFor="document_locations">{t('playbook.documentLocations.label')}</Label>
-          <p className="text-sm text-muted-foreground mb-2">{t('playbook.documentLocations.description')}</p>
+          <Label htmlFor="document_locations">{t('family.documentLocations.label')}</Label>
+          <p className="text-sm text-muted-foreground mb-2">{t('family.documentLocations.description')}</p>
           <Textarea
             id="document_locations"
             value={playbook.document_locations}
             onChange={(e) => updateField('document_locations', e.target.value)}
-            placeholder={t('playbook.documentLocations.placeholder')}
+            placeholder={t('family.documentLocations.placeholder')}
             className="min-h-[200px]"
             disabled={isReadOnly || previewMode}
           />
@@ -344,13 +344,13 @@ export default function GuardianPlaybook({ userId, guardianId, guardianName, isR
 
       <TabsContent value="messages" className="space-y-4">
         <div>
-          <Label htmlFor="personal_messages">{t('playbook.personalMessages.label')}</Label>
-          <p className="text-sm text-muted-foreground mb-2">{t('playbook.personalMessages.description')}</p>
+          <Label htmlFor="personal_messages">{t('family.personalMessages.label')}</Label>
+          <p className="text-sm text-muted-foreground mb-2">{t('family.personalMessages.description')}</p>
           <Textarea
             id="personal_messages"
             value={playbook.personal_messages}
             onChange={(e) => updateField('personal_messages', e.target.value)}
-            placeholder={t('playbook.personalMessages.placeholder')}
+            placeholder={t('family.personalMessages.placeholder')}
             className="min-h-[200px]"
             disabled={isReadOnly || previewMode}
           />
@@ -359,13 +359,13 @@ export default function GuardianPlaybook({ userId, guardianId, guardianName, isR
 
       <TabsContent value="instructions" className="space-y-4">
         <div>
-          <Label htmlFor="practical_instructions">{t('playbook.practicalInstructions.label')}</Label>
-          <p className="text-sm text-muted-foreground mb-2">{t('playbook.practicalInstructions.description')}</p>
+          <Label htmlFor="practical_instructions">{t('family.practicalInstructions.label')}</Label>
+          <p className="text-sm text-muted-foreground mb-2">{t('family.practicalInstructions.description')}</p>
           <Textarea
             id="practical_instructions"
             value={playbook.practical_instructions}
             onChange={(e) => updateField('practical_instructions', e.target.value)}
-            placeholder={t('playbook.practicalInstructions.placeholder')}
+            placeholder={t('family.practicalInstructions.placeholder')}
             className="min-h-[200px]"
             disabled={isReadOnly || previewMode}
           />
@@ -390,11 +390,11 @@ export default function GuardianPlaybook({ userId, guardianId, guardianName, isR
               <CardTitle className="text-2xl">
                 {isReadOnly ? t('playbook.titleReadOnly', { name: guardianName }) : t('playbook.title', { name: guardianName })}
               </CardTitle>
-              <CardDescription>{t('playbook.description')}</CardDescription>
+              <CardDescription>{t('family.description')}</CardDescription>
             </div>
             <div className="flex items-center gap-2">
               <Badge variant={statusColors[status]}>
-                {t(`playbook.status.${status}`)}
+                {t('family.status.${status}')}
               </Badge>
               {!isReadOnly && (
                 <>
@@ -406,12 +406,12 @@ export default function GuardianPlaybook({ userId, guardianId, guardianName, isR
                     {previewMode ? (
                       <>
                         <EyeOff className="h-4 w-4 mr-2" />
-                        {t('playbook.exitPreview')}
+                        {t('family.exitPreview')}
                       </>
                     ) : (
                       <>
                         <Eye className="h-4 w-4 mr-2" />
-                        {t('playbook.preview')}
+                        {t('family.preview')}
                       </>
                     )}
                   </Button>
@@ -421,7 +421,7 @@ export default function GuardianPlaybook({ userId, guardianId, guardianName, isR
                     size="sm"
                   >
                     <Save className="h-4 w-4 mr-2" />
-                    {saving ? t('playbook.saving') : t('playbook.save')}
+                    {saving ? t('family.saving') : t('family.save')}
                   </Button>
                 </>
               )}
@@ -436,18 +436,18 @@ export default function GuardianPlaybook({ userId, guardianId, guardianName, isR
       <AlertDialog open={showDiscardDialog} onOpenChange={setShowDiscardDialog}>
         <AlertDialogContent>
           <AlertDialogHeader>
-            <AlertDialogTitle>{t('playbook.discardChanges.title')}</AlertDialogTitle>
+            <AlertDialogTitle>{t('family.discardChanges.title')}</AlertDialogTitle>
             <AlertDialogDescription>
-              {t('playbook.discardChanges.description')}
+              {t('family.discardChanges.description')}
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
-            <AlertDialogCancel>{t('playbook.discardChanges.cancel')}</AlertDialogCancel>
+            <AlertDialogCancel>{t('family.discardChanges.cancel')}</AlertDialogCancel>
             <AlertDialogAction onClick={() => {
               setHasChanges(false);
               fetchPlaybook();
             }}>
-              {t('playbook.discardChanges.confirm')}
+              {t('family.discardChanges.confirm')}
             </AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>

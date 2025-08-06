@@ -23,7 +23,7 @@ export const Header: React.FC = () => {
           >
           <Shield className="h-8 w-8 text-accent-primary" />
             <span className="text-xl font-bold text-text-heading">
-              {t('app.name')}
+              {t('ui.name')}
             </span>
           </Link>
 

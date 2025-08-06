@@ -7,14 +7,15 @@ import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Lock, AlertCircle, LogOut } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
-const PASSWORD = 'legacy1guard';
+const PASSWORD = import.meta.env.VITE_APP_PASSWORD || 'legacy1guard';
 
 interface PasswordWallProps {
   children: React.ReactNode;
 }
 
 export default function PasswordWall({ children }: PasswordWallProps) {
-const { t, ready } = useTranslation();
+const { t, ready } = useTranslation('auth');
+  const { t: tMicro } = useTranslation('micro-copy');
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -66,6 +67,8 @@ const { t, ready } = useTranslation();
             size="sm"
             onClick={handleLogout}
             className="flex items-center gap-2"
+            title={tMicro('tooltips.passwordWall.logout')}
+            aria-label={tMicro('accessibility.labels.close')}
           >
             <LogOut className="h-4 w-4" />
             {t('passwordWall.logout')}
@@ -90,6 +93,9 @@ const { t, ready } = useTranslation();
       <CardDescription>
         {t('passwordWall.description')}
       </CardDescription>
+      <p className="text-sm text-muted-foreground mt-2">
+        {tMicro('tooltips.passwordWall.security')}
+      </p>
         </CardHeader>
         <CardContent>
           <form onSubmit={handleSubmit} className="space-y-4">
@@ -101,6 +107,7 @@ const { t, ready } = useTranslation();
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder={t('passwordWall.enterPassword')}
+                aria-label={tMicro('accessibility.descriptions.required')}
                 autoFocus
                 required />
 
@@ -116,6 +123,9 @@ const { t, ready } = useTranslation();
             <Button type="submit" className="w-full" size="lg">
               {t('passwordWall.accessApplication')}
             </Button>
+            <p className="text-xs text-muted-foreground text-center mt-2">
+              {tMicro('tooltips.passwordWall.session')}
+            </p>
           </form>
         </CardContent>
       </Card>

@@ -116,8 +116,8 @@ export const WhatIfScenarios: React.FC<WhatIfScenariosProps> = ({
               </p>
             </div>
             <div className="mt-4 flex space-x-3">
-              <Button variant="outline">{t('common.improveReadiness')}</Button>
-              <Button variant="outline">{t('common.viewDetails')}</Button>
+              <Button variant="outline">{t('ui.improveReadiness')}</Button>
+              <Button variant="outline">{t('ui.viewDetails')}</Button>
             </div>
           </CardContent>
         </Card>

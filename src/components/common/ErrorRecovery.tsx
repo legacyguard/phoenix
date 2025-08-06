@@ -47,7 +47,7 @@ export const ErrorRecovery: React.FC<ErrorRecoveryProps> = ({
       <div className="max-w-md w-full space-y-4">
         <Alert variant="destructive">
           <AlertCircle className="h-4 w-4" />
-          <AlertTitle>{t('common.error')}</AlertTitle>
+          <AlertTitle>{t('ui.error')}</AlertTitle>
           <AlertDescription>{getErrorMessage()}</AlertDescription>
         </Alert>
 
@@ -59,7 +59,7 @@ export const ErrorRecovery: React.FC<ErrorRecoveryProps> = ({
             className="flex-1">
 
               <RefreshCw className="mr-2 h-4 w-4" />
-              {t('common.retry')}
+              {t('ui.retry')}
             </Button>
           }
           
@@ -70,7 +70,7 @@ export const ErrorRecovery: React.FC<ErrorRecoveryProps> = ({
             className="flex-1">
 
               <ArrowLeft className="mr-2 h-4 w-4" />
-              {t('common.goBack')}
+              {t('ui.goBack')}
             </Button>
           }
           
@@ -81,7 +81,7 @@ export const ErrorRecovery: React.FC<ErrorRecoveryProps> = ({
             className="flex-1">
 
               <Home className="mr-2 h-4 w-4" />
-              {t('common.goHome')}
+              {t('ui.goHome')}
             </Button>
           }
         </div>
@@ -89,7 +89,7 @@ export const ErrorRecovery: React.FC<ErrorRecoveryProps> = ({
         {/* Technical details for development */}
         {process.env.NODE_ENV === 'development' &&
         <details className="mt-4">
-            <summary className="text-sm text-muted-foreground cursor-pointer">{t("common.routeErrorBoundary.technical_details_3")}
+            <summary className="text-sm text-muted-foreground cursor-pointer">{t('ui.routeErrorBoundary.technical_details_3')}
 
           </summary>
             <pre className="mt-2 p-2 bg-muted rounded text-xs overflow-auto">
