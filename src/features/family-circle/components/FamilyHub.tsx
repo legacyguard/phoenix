@@ -12,6 +12,8 @@ import { Shield, Users, Clock, Send, AlertTriangle, CheckCircle2, Wrench } from 
 import { toast } from 'sonner';
 import { useTranslation } from 'react-i18next';
 import FamilyPreparednessTools from '@/components/FamilyPreparednessTools';
+import { PersonalAssistant } from '@/components/assistant/PersonalAssistant';
+import { useAssistant } from '@/contexts/AssistantContext';
 
 // Define the access levels
 type AccessLevel = 'none' | 'emergency_only' | 'limited_info' | 'full_access';
@@ -33,6 +35,7 @@ interface FamilyMember {
 export const FamilyHub: React.FC = () => {
   const { t } = useTranslation('family');
   const { getToken } = useAuth();
+  const { updateEmotionalState } = useAssistant();
   const [familyMembers, setFamilyMembers] = useState<FamilyMember[]>([]);
   const [loading, setLoading] = useState(true);
   const [emergencyProtocolEnabled, setEmergencyProtocolEnabled] = useState(false);
@@ -64,6 +67,21 @@ export const FamilyHub: React.FC = () => {
         const data = await response.json();
         setFamilyMembers(data.familyMembers);
         setEmergencyProtocolEnabled(data.emergencyProtocolEnabled);
+        
+        // Update emotional state based on family preparedness
+        const avgPreparedness = data.familyMembers.length > 0 
+          ? data.familyMembers.reduce((sum: number, member: FamilyMember) => sum + member.preparednessScore, 0) / data.familyMembers.length
+          : 0;
+          
+        if (avgPreparedness < 40) {
+          updateEmotionalState('overwhelmed');
+        } else if (avgPreparedness < 60) {
+          updateEmotionalState('anxious');
+        } else if (avgPreparedness < 80) {
+          updateEmotionalState('hopeful');
+        } else {
+          updateEmotionalState('confident');
+        }
       } catch (error) {
         console.error('Error fetching family hub data:', error);
                 const errorMessage = error instanceof Error ? error.message : t('familyHub.errors.failedToLoadMembers');
@@ -400,6 +418,21 @@ export const FamilyHub: React.FC = () => {
           <FamilyPreparednessTools />
         </TabsContent>
       </Tabs>
+      
+      {/* Personal Assistant */}
+      {!loading && (
+        <PersonalAssistant 
+          currentPage="family"
+          contextData={{
+            familyMemberCount: familyMembers.length,
+            overallPreparedness,
+            emergencyProtocolEnabled,
+            membersNeedingAttention: familyMembers.filter(m => 
+              getDaysSinceContact(m.lastCommunicated) > 30 || m.preparednessScore < 50
+            ).length
+          }}
+        />
+      )}
     </div>
   );
 };

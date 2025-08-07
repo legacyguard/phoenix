@@ -3,6 +3,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Progress } from '@/components/ui/progress';
+import OverwhelmSupport from '@/components/emotional/OverwhelmSupport';
+import ProcrastinationSupport from '@/components/emotional/ProcrastinationSupport';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { AlertCircle, CheckCircle2, FileText, Users, Briefcase, Eye } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
@@ -36,49 +38,49 @@ export function WillGenerator({ onComplete }: WillGeneratorProps) {
   const [validationErrors, setValidationErrors] = useState<Record<string, string>>({});
 
   const steps = [
-    {
+{
       id: 'personal',
-      title: t('ui.personal.title'),
+      title: 'How You Want to Take Care of Your Family',
       icon: FileText,
-      description: t('ui.personal.description')
+      description: 'Enter details about yourself and what matters most to your family.'
     },
     {
       id: 'assets',
-      title: t('ui.assets.title'),
+      title: 'How You Want to Take Care of Your Family',
       icon: Users,
-      description: t('ui.assets.description')
+      description: 'Think about what would help each person in your family most.'
     },
     {
       id: 'beneficiaries',
-      title: t('ui.beneficiaries.title'),
+      title: 'Who You Want to Help and Protect',
       icon: Users,
-      description: t('ui.beneficiaries.description')
+      description: 'Designate who you want to help and protect.'
     },
     {
       id: 'guardians',
-      title: t('ui.guardians.title'),
+      title: 'Who Would Love and Care for Your Children',
       icon: Briefcase,
-      description: t('ui.guardians.description')
+      description: 'Choose who shares your values and would love your children.'
     },
     {
       id: 'executor',
-      title: t('ui.executor.title'),
+      title: 'Who You Trust to Handle Everything',
       icon: Briefcase,
-      description: t('ui.executor.description')
+      description: 'Select someone who is organized and would handle this responsibility with care.'
     },
     {
       id: 'preferences',
-      title: t('ui.preferences.title'),
+      title: 'Your Values and Priorities',
       icon: Eye,
-      description: t('ui.preferences.description')
+      description: 'Set down any special wishes or values you want respected.'
     },
     {
       id: 'review',
-      title: t('ui.review.title'),
+      title: 'Legacy Impact Preview',
       icon: Eye,
-      description: t('ui.review.description')
+      description: 'Review how your decisions will impact your loved ones.'
     }
-  ];
+  ]
 
   const calculateProgress = () => {
     return ((currentStep + 1) / steps.length) * 100;
@@ -194,6 +196,16 @@ export function WillGenerator({ onComplete }: WillGeneratorProps) {
       // TODO: Call API to generate will with country code and language code
       // The API call should include both countryCode and languageCode
       // fetch(`/api/will/get-template?country=${countryCode}&language=${languageCode}`)
+
+      if(willContent.beneficiaries?.length === 0) {
+        return (
+          cOverwhelmSupport /e
+        );
+      } else if(!willContent.beneficiaries?.some(b => b.allocation)) {
+        return (
+          cProcrastinationSupport /e
+        );
+      }
       toast.success(t('ui.willGenerated'));
       onComplete?.('generated-will-id');
     } catch (error) {

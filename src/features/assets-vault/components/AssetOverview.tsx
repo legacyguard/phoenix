@@ -17,13 +17,15 @@ import {
   Plus,
   TrendingUp,
   AlertTriangle,
+  AlertCircle,
   FileText,
   Users,
   PieChart,
-  BarChart3 } from
-'lucide-react';
+  BarChart3
+} from 'lucide-react';
 import { toast } from 'sonner';
 import { PieChart as RechartsChart, Pie, Cell, ResponsiveContainer, Legend, Tooltip } from 'recharts';
+import LifeInventoryAssistant from '@/components/assets/LifeInventoryAssistant';
 
 interface AssetStatistics {
   category: string;
@@ -167,235 +169,118 @@ export const AssetOverview: React.FC = () => {
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>
-          <h2 className="text-2xl font-bold">{t('assets.title')}</h2>
-          <p className="text-muted-foreground">{t('assets.subtitle')}</p>
+          <h2 className="text-2xl font-bold">{t('vault.title')}</h2>
+          <p className="text-muted-foreground">{t('vault.subtitle')}</p>
         </div>
-        <Button onClick={() => handleAddAsset()}>
-          <Plus className="h-4 w-4 mr-2" />
-          {t('actions.addAsset')}
-        </Button>
       </div>
 
-      {/* Total Portfolio Value */}
-      {totalValue > 0 &&
-      <Card>
-          <CardHeader className="pb-3">
-            <CardTitle className="flex items-center gap-2">
-              <TrendingUp className="h-5 w-5" />
-              {t('assets.estimatedWorth')}
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="text-3xl font-bold">
-              {formatCurrency(totalValue)}
-            </div>
-            <p className="text-sm text-muted-foreground mt-1">
-              {t('vault.lastUpdated', { date: new Date().toLocaleDateString() })}
-            </p>
-          </CardContent>
-        </Card>
-      }
+      {/* Life Inventory Assistant */}
+      <LifeInventoryAssistant 
+        statistics={statistics}
+        totalValue={totalValue}
+        unassignedCount={unassignedAssets.length}
+      />
 
-      {/* Category Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {['property', 'vehicle', 'financial', 'business', 'personal'].map((category) => {
-          const stat = statistics.find((s) => s.category === category) || { count: 0, total_value: 0 };
-          const Icon = getCategoryIcon(category);
-          const color = getCategoryColor(category);
-
-          return (
-            <Card
-              key={category}
-              className="cursor-pointer hover:shadow-lg transition-shadow"
-              onClick={() => navigate(`/dashboard?category=${category}`)}>
-
-              <CardHeader className="pb-3">
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-2">
-                    <div
-                      className="p-2 rounded-lg"
-                      style={{ backgroundColor: `${color}20` }}>
-
-                      <Icon className="h-5 w-5" style={{ color }} />
-                    </div>
-                    <CardTitle className="text-base">
-                      {t(`categories.${category}`)}
-                    </CardTitle>
-                  </div>
-                  <Badge variant="secondary">{stat.count}</Badge>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-2">
-                  {stat.total_value > 0 &&
-                  <p className="text-lg font-semibold">
-                      {formatCurrency(stat.total_value)}
-                    </p>
-                  }
-                  <Button
-                    variant="ghost"
-                    size="sm"
-                    className="w-full"
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      handleAddAsset(category);
-                    }}>
-
-                    <Plus className="h-3 w-3 mr-1" />
-                    {t('actions.addAsset')}
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>);
-
-        })}
-
-        {/* Uncategorized */}
-        {statistics.find((s) => s.category === 'uncategorized')?.count > 0 &&
-        <Card
-          className="cursor-pointer hover:shadow-lg transition-shadow"
-          onClick={() => navigate('/dashboard?category=uncategorized')}>
-
+      {/* Quick Stats Summary */}
+      {totalValue > 0 && (
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <Card>
             <CardHeader className="pb-3">
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-2">
-                  <div className="p-2 rounded-lg bg-gray-100">
-                    <FileText className="h-5 w-5 text-gray-600" />
-                  </div>
-                  <CardTitle className="text-base">
-                    {t('categories.other')}
-                  </CardTitle>
-                </div>
-                <Badge variant="secondary">
-                  {statistics.find((s) => s.category === 'uncategorized')?.count || 0}
-                </Badge>
-              </div>
-            </CardHeader>
-          </Card>
-        }
-      </div>
-
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        {/* Asset Distribution Chart */}
-        {chartData.length > 0 && totalValue > 0 &&
-        <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <PieChart className="h-5 w-5" />
-                {t('assets.categories')}
+              <CardTitle className="text-sm font-medium text-muted-foreground">
+                Total Value Protected
               </CardTitle>
-              <CardDescription>
-                {t('assets.description')}
-              </CardDescription>
             </CardHeader>
             <CardContent>
-              <div className="h-64">
-                <ResponsiveContainer width="100%" height="100%">
-                  <RechartsChart>
-                    <Pie
-                    data={chartData}
-                    cx="50%"
-                    cy="50%"
-                    labelLine={false}
-                    label={({ percent }) => `${(percent * 100).toFixed(0)}%`}
-                    outerRadius={80}
-                    fill="#8884d8"
-                    dataKey="value">
-
-                      {chartData.map((entry, index) => {
-                      const category = statistics[index]?.category;
-                      return (
-                        <Cell
-                          key={`cell-${index}`}
-                          fill={getCategoryColor(category)} />);
-
-
-                    })}
-                    </Pie>
-                    <Tooltip
-                    formatter={(value: number) => formatCurrency(value)}
-                    contentStyle={{
-                      backgroundColor: 'rgba(255, 255, 255, 0.95)',
-                      border: '1px solid #e5e7eb',
-                      borderRadius: '6px'
-                    }} />
-
-                    <Legend />
-                  </RechartsChart>
-                </ResponsiveContainer>
+              <div className="text-2xl font-bold">
+                {formatCurrency(totalValue)}
               </div>
             </CardContent>
           </Card>
-        }
+          
+          <Card>
+            <CardHeader className="pb-3">
+              <CardTitle className="text-sm font-medium text-muted-foreground">
+                Items Documented
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="text-2xl font-bold">
+                {statistics.reduce((sum, stat) => sum + stat.count, 0)}
+              </div>
+            </CardContent>
+          </Card>
+          
+          <Card>
+            <CardHeader className="pb-3">
+              <CardTitle className="text-sm font-medium text-muted-foreground">
+                Categories Covered
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="text-2xl font-bold">
+                {statistics.filter(s => s.count > 0).length}
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      )}
 
-        {/* Unassigned Assets Alert */}
+      {/* Recent Activity */}
+      {unassignedAssets.length > 0 && (
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
-              <Users className="h-5 w-5" />
-              {t('assets.recentlyAdded')}
+              <AlertCircle className="h-5 w-5 text-amber-600" />
+              Items That Need Organization
             </CardTitle>
             <CardDescription>
-              {t('assets.description')}
+              Help your family by completing information about these items
             </CardDescription>
           </CardHeader>
           <CardContent>
-            {unassignedAssets.length === 0 ?
-            <Alert>
-                <AlertDescription className="flex items-center gap-2">
-                  <Badge variant="outline" className="bg-green-50">
-                    ✓ {t('assets.empty')}
-                  </Badge>
-                </AlertDescription>
-              </Alert> :
-
-            <div className="space-y-3">
-                <Alert variant="destructive">
-                  <AlertTriangle className="h-4 w-4" />
-                  <AlertDescription>
-                    {t('errors.loadingAssets')}
-                  </AlertDescription>
-                </Alert>
-                
-                <div className="space-y-2 max-h-48 overflow-y-auto">
-                  {unassignedAssets.map((asset) =>
+            <div className="space-y-2 max-h-48 overflow-y-auto">
+              {unassignedAssets.slice(0, 5).map((asset) => (
                 <div
                   key={asset.id}
-                  className="flex items-center justify-between p-2 border rounded-lg hover:bg-muted/50 cursor-pointer"
-                  onClick={() => navigate(`/assets/${asset.id}`)}>
-
-                      <div className="flex items-center gap-2">
-                        {React.createElement(getCategoryIcon(asset.category), {
+                  className="flex items-center justify-between p-3 border rounded-lg hover:bg-muted/50 cursor-pointer transition-colors"
+                  onClick={() => navigate(`/assets/${asset.id}`)}
+                >
+                  <div className="flex items-center gap-3">
+                    {React.createElement(getCategoryIcon(asset.category), {
                       className: 'h-4 w-4 text-muted-foreground'
                     })}
-                        <span className="text-sm font-medium">{asset.name}</span>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <Progress
-                      value={asset.total_allocation}
-                      className="w-20 h-2" />
-
-                        <span className="text-xs text-muted-foreground">
-                          {asset.total_allocation}%
-                        </span>
-                      </div>
+                    <div>
+                      <span className="text-sm font-medium">{asset.name}</span>
+                      <p className="text-xs text-muted-foreground">
+                        {asset.total_allocation < 50 ? 'Needs more information' : 'Almost complete'}
+                      </p>
                     </div>
-                )}
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Progress
+                      value={asset.total_allocation}
+                      className="w-20 h-2"
+                    />
+                    <span className="text-xs text-muted-foreground">
+                      {asset.total_allocation}%
+                    </span>
+                  </div>
                 </div>
-
-                <Button
+              ))}
+            </div>
+            
+            {unassignedAssets.length > 5 && (
+              <Button
                 variant="outline"
-                className="w-full"
-                onClick={() => navigate('/dashboard/inheritance-summary')}>
-
-                  <BarChart3 className="h-4 w-4 mr-2" />
-                  {t('actions.viewDetails')}
-                </Button>
-              </div>
-            }
+                className="w-full mt-3"
+                onClick={() => navigate('/dashboard')}
+              >
+                View All {unassignedAssets.length} Items
+              </Button>
+            )}
           </CardContent>
         </Card>
-      </div>
+      )}
     </div>);
 
 };

@@ -25,6 +25,8 @@ export interface ProjectOrderAnswers {
   caretaker: 'designated' | 'family_figure_out' | 'not_thought';
   familyClarity: 'yes_clear' | 'somewhat' | 'never_discussed';
   biggestWorry: 'financial' | 'legal' | 'memories' | 'conflicts';
+  // Store original life answers for enhanced personalization
+  lifeAnswers?: LifeAnswers;
 }
 
 export interface TaskItem {
@@ -40,7 +42,7 @@ export interface TaskItem {
 interface OnboardingWizardProps {
   isOpen: boolean;
   onClose: () => void;
-  onComplete: (tasks: TaskItem[]) => void;
+  onComplete: (tasks: TaskItem[], answers?: ProjectOrderAnswers) => void;
   useLifeQuestions?: boolean; // Optional prop to enable/disable life questions
 }
 
@@ -117,14 +119,25 @@ export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({ isOpen, onCl
 
   const generateTasks = (answers: ProjectOrderAnswers): TaskItem[] => {
     const tasks: TaskItem[] = [];
+    const lifeAnswers = answers.lifeAnswers;
 
-    // Priority 1: Document organization based on Q1
+    // Priority 1: Document organization based on Q1 and emotional concerns
     if (answers.documentAccess === 'no' || answers.documentAccess === 'partially') {
+      let docTitle = t('dashboard.tasks.documentCentralization.title');
+      let docDescription = t('dashboard.tasks.documentCentralization.description');
+      
+      // Personalize based on emotional concern
+      if (lifeAnswers?.emotionalConcern === 'family_confusion') {
+        docDescription = 'Create a clear roadmap so your family knows exactly where to find everything, preventing confusion and costly mistakes.';
+      } else if (lifeAnswers?.emotionalConcern === 'lost_opportunities') {
+        docDescription = 'Organize all important documents and accounts so nothing valuable gets forgotten or lost.';
+      }
+      
       tasks.push({
         id: 'document-centralization',
-        title: t('dashboard.tasks.documentCentralization.title'),
-        description: t('dashboard.tasks.documentCentralization.description'),
-        priority: 'high',
+        title: docTitle,
+        description: docDescription,
+        priority: lifeAnswers?.timelineUrgency === 'immediate' ? 'high' : 'high',
         pillar: 'organize',
         completed: false,
         link: '/vault'
@@ -144,12 +157,21 @@ export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({ isOpen, onCl
       }
     }
 
-    // Priority 2: Guardian designation based on Q2
+    // Priority 2: Guardian designation based on Q2 and family structure
     if (answers.caretaker === 'not_thought' || answers.caretaker === 'family_figure_out') {
+      let guardianDescription = t('dashboard.tasks.guardianInstructions.description');
+      
+      // Personalize based on family structure
+      if (lifeAnswers?.familyStructure === 'young_children') {
+        guardianDescription = 'Your young children need trusted guardians who can step in immediately. Let\'s ensure they\'re properly designated and prepared.';
+      } else if (lifeAnswers?.familyStructure === 'blended_family') {
+        guardianDescription = 'With a blended family, clear guardian designations prevent conflicts and ensure everyone is cared for according to your wishes.';
+      }
+      
       tasks.push({
         id: 'guardian-instructions',
         title: t('dashboard.tasks.guardianInstructions.title'),
-        description: t('dashboard.tasks.guardianInstructions.description'),
+        description: guardianDescription,
         priority: 'high',
         pillar: 'secure',
         completed: false,
@@ -246,6 +268,64 @@ export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({ isOpen, onCl
         link: '/manual'
       });
     }
+    
+    // Add specialized tasks based on life answers
+    if (lifeAnswers?.familyStructure === 'young_children' && !tasks.find(t => t.id === 'education-planning')) {
+      tasks.push({
+        id: 'education-planning',
+        title: 'Plan for Children\'s Education',
+        description: 'Since you have young children, let\'s ensure their education is secured no matter what happens.',
+        priority: 'medium',
+        pillar: 'transfer',
+        completed: false,
+        link: '/education-planning'
+      });
+    }
+    
+    if (lifeAnswers?.familyStructure === 'extended_care' && !tasks.find(t => t.id === 'care-instructions')) {
+      tasks.push({
+        id: 'care-instructions',
+        title: 'Document Special Care Instructions',
+        description: 'Create detailed care instructions for family members with special needs to ensure continuity of care.',
+        priority: 'high',
+        pillar: 'secure',
+        completed: false,
+        link: '/care-planning'
+      });
+    }
+    
+    if (lifeAnswers?.financialComplexity === 'business_owner' && !tasks.find(t => t.id === 'business-succession')) {
+      tasks.push({
+        id: 'business-succession',
+        title: 'Create Business Succession Plan',
+        description: 'Protect your family\'s income by ensuring your business can continue or be sold according to your wishes.',
+        priority: 'high',
+        pillar: 'transfer',
+        completed: false,
+        link: '/business-succession'
+      });
+    }
+    
+    if (lifeAnswers?.financialComplexity === 'complex_estate' && !tasks.find(t => t.id === 'estate-planning')) {
+      tasks.push({
+        id: 'estate-planning',
+        title: 'Advanced Estate Planning Review',
+        description: 'Your complex financial situation requires sophisticated planning. Let\'s ensure everything is properly structured.',
+        priority: 'high',
+        pillar: 'transfer',
+        completed: false,
+        link: '/estate-planning'
+      });
+    }
+    
+    // Adjust priorities based on timeline urgency
+    if (lifeAnswers?.timelineUrgency === 'immediate') {
+      tasks.forEach(task => {
+        if (task.priority === 'medium') {
+          task.priority = 'high';
+        }
+      });
+    }
 
     // Remove duplicates and sort by priority
     const uniqueTasks = Array.from(new Map(tasks.map(task => [task.id, task])).values());
@@ -279,7 +359,7 @@ export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({ isOpen, onCl
       endTimer(sessionTimerId, true);
     }
     
-    onComplete(tasks);
+    onComplete(tasks, answers);
     setIsLoading(false);
   };
 
@@ -311,7 +391,8 @@ export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({ isOpen, onCl
 
   const handleLifeQuestionsComplete = (lifeAnswers: LifeAnswers) => {
     const projectOrderAnswers = mapLifeAnswersToProjectOrder(lifeAnswers);
-    setAnswers(projectOrderAnswers);
+    // Store the original life answers for enhanced personalization
+    setAnswers({ ...projectOrderAnswers, lifeAnswers });
     setShowLifeQuestions(false);
     setCurrentStep(1);
     trackAction('life_questions_completed', { lifeAnswers });

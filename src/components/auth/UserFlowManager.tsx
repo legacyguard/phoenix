@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { OnboardingWizard, TaskItem } from '@/components/onboarding/OnboardingWizard';
 import { FirstTimeUserGuide } from '@/components/onboarding/FirstTimeUserGuide';
 import { useAnalytics } from '@/hooks/useAnalytics';
+import { useFeatureFlag } from '@/config/features';
 
 interface UserFlowManagerProps {
   children: React.ReactNode;
@@ -17,6 +18,10 @@ export const UserFlowManager: React.FC<UserFlowManagerProps> = ({ children }) =>
   const { trackAction } = useAnalytics({ componentName: 'UserFlowManager', userJourneyStage: 'authentication' });
   const [flowState, setFlowState] = useState<FlowState>('loading');
   const [onboardingTasks, setOnboardingTasks] = useState<TaskItem[]>([]);
+  
+  // Feature flags
+  const useRespectfulOnboarding = useFeatureFlag('respectfulOnboarding');
+  const showLegacyGamification = useFeatureFlag('legacyGamification');
 
   useEffect(() => {
     if (!isLoaded) return;
@@ -31,6 +36,13 @@ export const UserFlowManager: React.FC<UserFlowManagerProps> = ({ children }) =>
     const onboardingCompleted = localStorage.getItem('onboardingCompleted') === 'true';
     const firstTimeGuideCompleted = localStorage.getItem('firstTimeGuideCompleted') === 'true';
     const onboardingSkipped = localStorage.getItem('onboardingSkipped') === 'true';
+    
+    // Track onboarding version
+    const onboardingVersion = localStorage.getItem('onboardingVersion');
+    if (!onboardingVersion && onboardingCompleted) {
+      // User completed old onboarding, mark as legacy
+      localStorage.setItem('onboardingVersion', 'legacy');
+    }
 
     // Check if this is a truly new user (created in the last 5 minutes)
     const userCreatedAt = new Date(user.createdAt);
@@ -41,7 +53,12 @@ export const UserFlowManager: React.FC<UserFlowManagerProps> = ({ children }) =>
     if (isNewUser && !onboardingCompleted && !onboardingSkipped) {
       // New user who hasn't completed onboarding
       setFlowState('onboarding');
-      trackAction('new_user_detected', { user_id: user.id });
+      trackAction('new_user_detected', { 
+        user_id: user.id,
+        onboarding_type: useRespectfulOnboarding ? 'respectful' : 'legacy'
+      });
+      // Set onboarding version for new users
+      localStorage.setItem('onboardingVersion', useRespectfulOnboarding ? 'respectful' : 'legacy');
     } else if (onboardingCompleted && !firstTimeGuideCompleted) {
       // User completed onboarding but not the guide
       setFlowState('first_time_guide');
@@ -59,8 +76,11 @@ export const UserFlowManager: React.FC<UserFlowManagerProps> = ({ children }) =>
     setFlowState('first_time_guide');
     trackAction('onboarding_flow_completed', { 
       user_id: user?.id,
-      tasks_generated: tasks.length 
+      tasks_generated: tasks.length,
+      onboarding_type: useRespectfulOnboarding ? 'respectful' : 'legacy'
     });
+    // Store completion with version
+    localStorage.setItem('onboardingVersion', useRespectfulOnboarding ? 'respectful' : 'legacy');
   };
 
   const handleOnboardingClose = () => {
@@ -90,7 +110,8 @@ export const UserFlowManager: React.FC<UserFlowManagerProps> = ({ children }) =>
         isOpen={true}
         onComplete={handleOnboardingComplete}
         onClose={handleOnboardingClose}
-        useLifeQuestions={true}
+        useLifeQuestions={!useRespectfulOnboarding} // Use life questions only for legacy
+        useRespectfulFlow={useRespectfulOnboarding} // New prop for respectful flow
       />
     );
   }

@@ -1,0 +1,300 @@
+/**
+ * Professional Design System
+ * A trustworthy, accessible design system for family security planning
+ */
+
+:root {
+  /* =================================================================
+     COLOR SYSTEM - Professional & Trustworthy
+     ================================================================= */
+  
+  /* Primary Colors - Deep, trustworthy blues */
+  --professional-primary-50: #eff6ff;
+  --professional-primary-100: #dbeafe;
+  --professional-primary-200: #bfdbfe;
+  --professional-primary-300: #93c5fd;
+  --professional-primary-400: #60a5fa;
+  --professional-primary-500: #3b82f6;
+  --professional-primary-600: #2563eb;
+  --professional-primary-700: #1d4ed8;
+  --professional-primary-800: #1e40af;
+  --professional-primary-900: #1e3a8a;
+  --professional-primary-950: #172554;
+
+  /* Secondary Colors - Warm, supportive grays */
+  --professional-secondary-50: #f9fafb;
+  --professional-secondary-100: #f3f4f6;
+  --professional-secondary-200: #e5e7eb;
+  --professional-secondary-300: #d1d5db;
+  --professional-secondary-400: #9ca3af;
+  --professional-secondary-500: #6b7280;
+  --professional-secondary-600: #4b5563;
+  --professional-secondary-700: #374151;
+  --professional-secondary-800: #1f2937;
+  --professional-secondary-900: #111827;
+  --professional-secondary-950: #030712;
+
+  /* Accent Colors - Subtle, meaningful colors */
+  --professional-success: #10b981;
+  --professional-success-light: #d1fae5;
+  --professional-success-dark: #065f46;
+  
+  --professional-warning: #f59e0b;
+  --professional-warning-light: #fef3c7;
+  --professional-warning-dark: #92400e;
+  
+  --professional-error: #ef4444;
+  --professional-error-light: #fee2e2;
+  --professional-error-dark: #991b1b;
+  
+  --professional-info: #3b82f6;
+  --professional-info-light: #dbeafe;
+  --professional-info-dark: #1e40af;
+
+  /* Status Colors - Clear, non-gamified */
+  --professional-status-complete: var(--professional-success);
+  --professional-status-in-progress: var(--professional-info);
+  --professional-status-needs-review: var(--professional-warning);
+  --professional-status-not-started: var(--professional-secondary-400);
+  
+  /* Priority Colors - Urgency without panic */
+  --professional-priority-urgent: #dc2626;
+  --professional-priority-high: #ea580c;
+  --professional-priority-medium: #0891b2;
+  --professional-priority-low: var(--professional-secondary-500);
+
+  /* =================================================================
+     TYPOGRAPHY SYSTEM - Clear & Readable
+     ================================================================= */
+  
+  /* Font Families */
+  --professional-font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", 
+                            "Inter", "Helvetica Neue", Arial, sans-serif;
+  --professional-font-serif: "Georgia", "Times New Roman", serif;
+  --professional-font-mono: "SF Mono", "Monaco", "Inconsolata", monospace;
+  
+  /* Font Sizes - Accessible scale */
+  --professional-text-xs: 0.75rem;    /* 12px */
+  --professional-text-sm: 0.875rem;   /* 14px */
+  --professional-text-base: 1rem;     /* 16px */
+  --professional-text-lg: 1.125rem;   /* 18px */
+  --professional-text-xl: 1.25rem;    /* 20px */
+  --professional-text-2xl: 1.5rem;    /* 24px */
+  --professional-text-3xl: 1.875rem;  /* 30px */
+  --professional-text-4xl: 2.25rem;   /* 36px */
+  --professional-text-5xl: 3rem;      /* 48px */
+  
+  /* Font Weights */
+  --professional-font-thin: 100;
+  --professional-font-light: 300;
+  --professional-font-normal: 400;
+  --professional-font-medium: 500;
+  --professional-font-semibold: 600;
+  --professional-font-bold: 700;
+  --professional-font-extrabold: 800;
+  
+  /* Line Heights */
+  --professional-leading-none: 1;
+  --professional-leading-tight: 1.25;
+  --professional-leading-snug: 1.375;
+  --professional-leading-normal: 1.5;
+  --professional-leading-relaxed: 1.625;
+  --professional-leading-loose: 2;
+  
+  /* Letter Spacing */
+  --professional-tracking-tighter: -0.05em;
+  --professional-tracking-tight: -0.025em;
+  --professional-tracking-normal: 0;
+  --professional-tracking-wide: 0.025em;
+  --professional-tracking-wider: 0.05em;
+  --professional-tracking-widest: 0.1em;
+
+  /* =================================================================
+     SPACING SYSTEM - Consistent & Harmonious
+     ================================================================= */
+  
+  --professional-space-0: 0;
+  --professional-space-1: 0.25rem;   /* 4px */
+  --professional-space-2: 0.5rem;    /* 8px */
+  --professional-space-3: 0.75rem;   /* 12px */
+  --professional-space-4: 1rem;      /* 16px */
+  --professional-space-5: 1.25rem;   /* 20px */
+  --professional-space-6: 1.5rem;    /* 24px */
+  --professional-space-8: 2rem;      /* 32px */
+  --professional-space-10: 2.5rem;   /* 40px */
+  --professional-space-12: 3rem;     /* 48px */
+  --professional-space-16: 4rem;     /* 64px */
+  --professional-space-20: 5rem;     /* 80px */
+  --professional-space-24: 6rem;     /* 96px */
+  --professional-space-32: 8rem;     /* 128px */
+
+  /* =================================================================
+     LAYOUT SYSTEM - Structured & Organized
+     ================================================================= */
+  
+  /* Border Radius - Soft, approachable */
+  --professional-radius-none: 0;
+  --professional-radius-sm: 0.125rem;   /* 2px */
+  --professional-radius-base: 0.25rem;  /* 4px */
+  --professional-radius-md: 0.375rem;   /* 6px */
+  --professional-radius-lg: 0.5rem;     /* 8px */
+  --professional-radius-xl: 0.75rem;    /* 12px */
+  --professional-radius-2xl: 1rem;      /* 16px */
+  --professional-radius-3xl: 1.5rem;    /* 24px */
+  --professional-radius-full: 9999px;
+  
+  /* Shadows - Subtle depth */
+  --professional-shadow-xs: 0 0 0 1px rgba(0, 0, 0, 0.05);
+  --professional-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --professional-shadow-base: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 
+                              0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --professional-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 
+                           0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --professional-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 
+                           0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --professional-shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 
+                           0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --professional-shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --professional-shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+  
+  /* Focus Shadows - Accessibility */
+  --professional-shadow-focus: 0 0 0 3px rgba(59, 130, 246, 0.5);
+  --professional-shadow-focus-error: 0 0 0 3px rgba(239, 68, 68, 0.5);
+  --professional-shadow-focus-success: 0 0 0 3px rgba(16, 185, 129, 0.5);
+  
+  /* Borders */
+  --professional-border-width: 1px;
+  --professional-border-width-2: 2px;
+  --professional-border-width-4: 4px;
+  --professional-border-color: var(--professional-secondary-200);
+  --professional-border-color-dark: var(--professional-secondary-300);
+
+  /* =================================================================
+     ANIMATION SYSTEM - Smooth & Professional
+     ================================================================= */
+  
+  /* Transitions */
+  --professional-transition-fast: 150ms;
+  --professional-transition-base: 250ms;
+  --professional-transition-slow: 350ms;
+  --professional-transition-slower: 500ms;
+  
+  /* Easing Functions */
+  --professional-ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --professional-ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --professional-ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --professional-ease-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+  /* =================================================================
+     Z-INDEX SYSTEM - Layered Organization
+     ================================================================= */
+  
+  --professional-z-base: 0;
+  --professional-z-dropdown: 1000;
+  --professional-z-sticky: 1020;
+  --professional-z-fixed: 1030;
+  --professional-z-modal-backdrop: 1040;
+  --professional-z-modal: 1050;
+  --professional-z-popover: 1060;
+  --professional-z-tooltip: 1070;
+  --professional-z-notification: 1080;
+
+  /* =================================================================
+     BREAKPOINTS - Responsive Design
+     ================================================================= */
+  
+  --professional-screen-xs: 475px;
+  --professional-screen-sm: 640px;
+  --professional-screen-md: 768px;
+  --professional-screen-lg: 1024px;
+  --professional-screen-xl: 1280px;
+  --professional-screen-2xl: 1536px;
+}
+
+/* =================================================================
+   DARK MODE OVERRIDES
+   ================================================================= */
+
+[data-theme="dark"] {
+  /* Dark mode color adjustments */
+  --professional-primary-50: #172554;
+  --professional-primary-100: #1e3a8a;
+  --professional-primary-200: #1e40af;
+  --professional-primary-300: #1d4ed8;
+  --professional-primary-400: #2563eb;
+  --professional-primary-500: #3b82f6;
+  --professional-primary-600: #60a5fa;
+  --professional-primary-700: #93c5fd;
+  --professional-primary-800: #bfdbfe;
+  --professional-primary-900: #dbeafe;
+  --professional-primary-950: #eff6ff;
+  
+  /* Inverted grays for dark mode */
+  --professional-secondary-50: #030712;
+  --professional-secondary-100: #111827;
+  --professional-secondary-200: #1f2937;
+  --professional-secondary-300: #374151;
+  --professional-secondary-400: #4b5563;
+  --professional-secondary-500: #6b7280;
+  --professional-secondary-600: #9ca3af;
+  --professional-secondary-700: #d1d5db;
+  --professional-secondary-800: #e5e7eb;
+  --professional-secondary-900: #f3f4f6;
+  --professional-secondary-950: #f9fafb;
+  
+  /* Adjusted shadows for dark mode */
+  --professional-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.25);
+  --professional-shadow-base: 0 1px 3px 0 rgba(0, 0, 0, 0.3), 
+                              0 1px 2px 0 rgba(0, 0, 0, 0.26);
+  --professional-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 
+                           0 2px 4px -1px rgba(0, 0, 0, 0.26);
+  
+  /* Border adjustments */
+  --professional-border-color: var(--professional-secondary-700);
+  --professional-border-color-dark: var(--professional-secondary-600);
+}
+
+/* =================================================================
+   UTILITY CLASSES
+   ================================================================= */
+
+.professional-text-gradient {
+  background: linear-gradient(135deg, 
+    var(--professional-primary-600) 0%, 
+    var(--professional-primary-400) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.professional-surface-gradient {
+  background: linear-gradient(135deg,
+    var(--professional-secondary-50) 0%,
+    var(--professional-secondary-100) 100%);
+}
+
+.professional-card-hover {
+  transition: all var(--professional-transition-base) var(--professional-ease-in-out);
+}
+
+.professional-card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--professional-shadow-lg);
+}
+
+.professional-focus-ring:focus-visible {
+  outline: none;
+  box-shadow: var(--professional-shadow-focus);
+}
+
+.professional-glass-effect {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+[data-theme="dark"] .professional-glass-effect {
+  background: rgba(17, 24, 39, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}

@@ -1,12 +1,9 @@
 export const documentCategories = [
-  { value: 'identity', label: 'Identity Documents' },
-  { value: 'financial', label: 'Financial Documents' },
-  { value: 'legal', label: 'Legal Documents' },
-  { value: 'medical', label: 'Medical Records' },
-  { value: 'property', label: 'Property Documents' },
-  { value: 'insurance', label: 'Insurance Policies' },
-  { value: 'tax', label: 'Tax Documents' },
-  { value: 'contracts', label: 'Contracts & Agreements' },
-  { value: 'personal', label: 'Personal Documents' },
+  { value: 'important_papers', label: 'Important Papers Your Family Will Need' },
+  { value: 'money_info', label: 'Money Information Your Family Should Have' },
+  { value: 'protection', label: 'Protection Your Family Can Count On' },
+  { value: 'health_info', label: 'Health Information Your Family Might Need' },
+  { value: 'personal_things', label: 'Personal Things Your Family Should Know About' },
+  { value: 'contracts', label: 'Contracts  Agreements' },
   { value: 'other', label: 'Other' }
 ];

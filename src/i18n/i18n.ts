@@ -14,6 +14,7 @@ export const namespaces = [
   'help',
   'landing',
   'micro-copy',
+  'onboarding',
   'settings',
   'sharing',
   'subscription',

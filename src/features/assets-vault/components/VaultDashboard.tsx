@@ -15,6 +15,8 @@ import { AssetFileUpload } from '../components/AssetFileUpload';
 import { AssetFileList } from '../components/AssetFileList';
 import { AssetShareModal } from '../components/AssetShareModal';
 import { assetFileService } from '../services/AssetFileService';
+import { PersonalAssistant } from '@/components/assistant/PersonalAssistant';
+import { useAssistant } from '@/contexts/AssistantContext';
 
 interface Asset {
   id: string;
@@ -31,6 +33,7 @@ interface Asset {
 export const Vault: React.FC = () => {
   const { t } = useTranslation('assets');
   const { user } = useAuth();
+  const { updateProgress, updateEmotionalState } = useAssistant();
   const [isLoading, setIsLoading] = useState(true);
   const [assets, setAssets] = useState<Asset[]>([]);
   const [filteredAssets, setFilteredAssets] = useState<Asset[]>([]);
@@ -59,13 +62,23 @@ export const Vault: React.FC = () => {
       
       setAssets(data || []);
       setFilteredAssets(data || []);
+      
+      // Update assistant context based on assets
+      const assetCount = data?.length || 0;
+      if (assetCount === 0) {
+        updateEmotionalState('overwhelmed');
+      } else if (assetCount < 3) {
+        updateEmotionalState('anxious');
+      } else {
+        updateEmotionalState('hopeful');
+      }
     } catch (err) {
       console.error('Error fetching assets:', err);
       setError(t('errors.loadingAssets'));
     } finally {
       setIsLoading(false);
     }
-  }, [user, t]);
+  }, [user, t, updateEmotionalState]);
 
   // Fetch assets on component mount
   useEffect(() => {
@@ -396,6 +409,19 @@ export const Vault: React.FC = () => {
         mainCategory={selectedMainCategory || ''}
         subType={selectedSubType || ''}
       />
+      
+      {/* Personal Assistant */}
+      {!isLoading && (
+        <PersonalAssistant 
+          currentPage="assets"
+          contextData={{
+            assetCount: assets.length,
+            totalValue: assets.reduce((sum, asset) => sum + (asset.estimated_value || 0), 0),
+            categories: [...new Set(assets.map(a => a.main_category))],
+            hasNoAssets: assets.length === 0
+          }}
+        />
+      )}
     </div>
   );
 };

@@ -69,6 +69,14 @@ theme: {
 				'success': '#2F855A',
 				'warning': '#D69E2E',
 				'danger': '#C53030',
+				
+				// Warm palette for empathetic design
+				'warm-primary': 'hsl(var(--warm-primary))',
+				'warm-light': 'hsl(var(--warm-light))',
+				'warm-accent': 'hsl(var(--warm-accent))',
+				'earth-primary': 'hsl(var(--earth-primary))',
+				'earth-secondary': 'hsl(var(--earth-secondary))',
+				'earth-accent': 'hsl(var(--earth-accent))',
 
 				// Layered & Professional - Dark Mode
 				'dark-background': '#1A202C', // Very dark blue-gray

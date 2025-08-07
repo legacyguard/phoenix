@@ -13,8 +13,11 @@ import {
   Home,
   Briefcase,
   Heart,
-  TrendingUp } from
-'lucide-react';
+  TrendingUp,
+  Clock,
+  Calendar,
+  CheckCircle
+} from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 export interface LifeQuestion {
@@ -37,6 +40,10 @@ export interface LifeAnswers {
   preparednessLevel: string;
   familyVulnerability: string;
   primaryResponsibility: string;
+  emotionalConcern?: string;
+  timelineUrgency?: string;
+  familyStructure?: string;
+  financialComplexity?: string;
 }
 
 interface BasicLifeQuestionsProps {
@@ -176,8 +183,140 @@ const questions: LifeQuestion[] = [
     icon: <Briefcase className="h-5 w-5" />,
     description: 'Ensuring business continuity and protecting family income'
   }]
-
-}];
+  },
+  {
+    id: 'emotionalConcern',
+    question: 'What keeps you up at night about your family\'s future?',
+    subtitle: 'Understanding your deepest concerns',
+    explanation: 'Your worries are valid. By understanding what concerns you most, we can address these fears directly and give you peace of mind.',
+    theme: 'protection',
+    options: [
+      {
+        value: 'family_confusion',
+        label: 'My family being confused and not knowing what to do',
+        icon: <AlertCircle className="h-5 w-5" />,
+        description: 'They might make costly mistakes or miss important deadlines'
+      },
+      {
+        value: 'financial_burden',
+        label: 'Leaving them with financial burdens or complications',
+        icon: <TrendingUp className="h-5 w-5" />,
+        description: 'Unexpected costs, taxes, or debts they didn\'t know about'
+      },
+      {
+        value: 'family_conflict',
+        label: 'Family conflicts over assets or decisions',
+        icon: <Users className="h-5 w-5" />,
+        description: 'Disagreements that could damage family relationships'
+      },
+      {
+        value: 'lost_opportunities',
+        label: 'Important things being forgotten or lost',
+        icon: <Shield className="h-5 w-5" />,
+        description: 'Benefits, accounts, or opportunities they don\'t know exist'
+      }
+    ]
+  },
+  {
+    id: 'timelineUrgency',
+    question: 'When do you feel this needs to be done?',
+    subtitle: 'Setting a realistic timeline',
+    explanation: 'Life moves fast. Understanding your timeline helps us create a plan that fits your schedule and priorities.',
+    theme: 'control',
+    options: [
+      {
+        value: 'immediate',
+        label: 'I need to get this done right away',
+        icon: <Clock className="h-5 w-5" />,
+        description: 'There\'s an urgent reason or upcoming event'
+      },
+      {
+        value: 'soon',
+        label: 'Within the next few months',
+        icon: <Calendar className="h-5 w-5" />,
+        description: 'It\'s important but not immediately urgent'
+      },
+      {
+        value: 'eventually',
+        label: 'Sometime this year',
+        icon: <CheckCircle className="h-5 w-5" />,
+        description: 'I want to check this off my list'
+      },
+      {
+        value: 'exploring',
+        label: 'Just exploring what I need to do',
+        icon: <FileCheck className="h-5 w-5" />,
+        description: 'Learning about the process before committing'
+      }
+    ]
+  },
+  {
+    id: 'familyStructure',
+    question: 'Tell us about your family situation',
+    subtitle: 'Tailoring our guidance to your family',
+    explanation: 'Every family is unique. Understanding yours helps us provide the most relevant advice and tools.',
+    theme: 'responsibility',
+    options: [
+      {
+        value: 'young_children',
+        label: 'I have young children who depend on me',
+        icon: <Heart className="h-5 w-5" />,
+        description: 'Minor children who need guardianship planning'
+      },
+      {
+        value: 'adult_children',
+        label: 'My children are grown but I still guide them',
+        icon: <Users className="h-5 w-5" />,
+        description: 'Adult children who may need help managing inheritance'
+      },
+      {
+        value: 'blended_family',
+        label: 'We\'re a blended family with multiple considerations',
+        icon: <Home className="h-5 w-5" />,
+        description: 'Step-children, multiple marriages, or complex relationships'
+      },
+      {
+        value: 'extended_care',
+        label: 'I care for extended family or have unique circumstances',
+        icon: <Shield className="h-5 w-5" />,
+        description: 'Elderly parents, special needs family members, or other dependents'
+      }
+    ]
+  },
+  {
+    id: 'financialComplexity',
+    question: 'How would you describe your financial situation?',
+    subtitle: 'Ensuring appropriate planning depth',
+    explanation: 'This helps us recommend the right level of planning and identify areas that might need professional guidance.',
+    theme: 'control',
+    options: [
+      {
+        value: 'straightforward',
+        label: 'Pretty straightforward - job, home, some savings',
+        icon: <Home className="h-5 w-5" />,
+        description: 'Standard assets without major complications'
+      },
+      {
+        value: 'multiple_assets',
+        label: 'Multiple properties or significant investments',
+        icon: <TrendingUp className="h-5 w-5" />,
+        description: 'Real estate, stocks, retirement accounts'
+      },
+      {
+        value: 'business_owner',
+        label: 'I own a business or have partnership interests',
+        icon: <Briefcase className="h-5 w-5" />,
+        description: 'Business succession planning needed'
+      },
+      {
+        value: 'complex_estate',
+        label: 'Complex with trusts, international assets, or tax concerns',
+        icon: <Shield className="h-5 w-5" />,
+        description: 'Requires sophisticated estate planning'
+      }
+    ]
+  }
+];
 
 
 const getThemeColors = (theme: LifeQuestion['theme']) => {

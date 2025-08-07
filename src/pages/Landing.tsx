@@ -8,6 +8,8 @@ import { PricingSection } from '@/components/landing/PricingSection';
 import { ScenarioShowcase } from '@/components/landing/ScenarioShowcase';
 import { FamilyPreparednessCalculator } from '@/components/landing/FamilyPreparednessCalculator';
 import { FamilyTestimonials } from '@/components/landing/FamilyTestimonials';
+import { PainPoints } from '@/components/landing/PainPoints';
+import { EmotionalValidation } from '@/components/landing/EmotionalValidation';
 import { 
   Shield, 
   Lock, 
@@ -30,37 +32,36 @@ export const Landing: React.FC = () => {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative bg-gradient-heritage text-primary-foreground py-20 lg:py-32">
+      <section className="relative bg-gradient-to-br from-warm-light via-background to-primary/5 text-foreground py-20 lg:py-32">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center space-y-8">
+          <div className="max-w-4xl mx-auto text-center space-y-6">
             
-            <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-              {t('hero.title')}
+            {/* Trust indicator */}
+            <p className="text-sm font-medium text-muted-foreground">
+              {t('hero.trustIndicator')}
+            </p>
+            
+            <h1 className="text-4xl md:text-6xl font-bold leading-tight text-foreground">
+              {t('hero.headline')}
             </h1>
             
-            <p className="text-xl md:text-2xl text-primary-foreground/90 max-w-3xl mx-auto">
-              {t('hero.subtitle')}
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
+              {t('hero.subheadline')}
             </p>
             
-            {/* Family count - social proof */}
-            <p className="text-lg text-primary-foreground/80">
-              {t('testimonials.title')}
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              {t('hero.description')}
             </p>
             
-            {/* Urgency subtitle */}
-            <p className="text-md text-primary-foreground/70 animate-pulse">
-              {t('hero.urgencySubtitle')}
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
               <Button 
                 asChild
-                variant="cta" 
+                variant="default" 
                 size="xl"
-                className="bg-background text-primary hover:bg-background/90"
+                className="bg-warm-primary hover:bg-warm-primary/90 text-white shadow-lg"
               >
                 <Link to="/register">
-                  {t('hero.cta_primary')}
+                  {t('hero.primaryCta')}
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
@@ -68,10 +69,10 @@ export const Landing: React.FC = () => {
                 asChild
                 variant="outline" 
                 size="xl"
-                className="bg-background/95 border-2 border-background text-foreground hover:bg-background hover:text-primary"
+                className="border-2 hover:bg-muted"
               >
                 <Link to="/demo">
-                  {t('hero.cta_secondary')}
+                  {t('hero.secondaryCta')}
                   <span className="block text-xs font-normal mt-1">
                     {t('hero.secondaryContext')}
                   </span>
@@ -79,24 +80,40 @@ export const Landing: React.FC = () => {
               </Button>
             </div>
             
+            {/* No commitment message */}
+            <p className="text-sm text-muted-foreground">
+              {t('hero.noCommitment')}
+            </p>
+            
             {/* Trust signals */}
             <div className="mt-12 flex flex-wrap justify-center gap-6 text-sm">
-              <div className="flex items-center gap-2 text-primary-foreground/80">
+              <div className="flex items-center gap-2 text-muted-foreground">
                 <Shield className="h-4 w-4" />
                 <span>{t('hero.trustSignals.dataOwnership')}</span>
               </div>
-              <div className="flex items-center gap-2 text-primary-foreground/80">
-                <span className="text-base">🇪🇺</span>
+              <div className="flex items-center gap-2 text-muted-foreground">
+                <Lock className="h-4 w-4" />
                 <span>{t('hero.trustSignals.gdprCompliant')}</span>
               </div>
-              <div className="flex items-center gap-2 text-primary-foreground/80">
+              <div className="flex items-center gap-2 text-muted-foreground">
                 <Heart className="h-4 w-4" />
                 <span>{t('hero.trustSignals.europeanFamilies')}</span>
               </div>
             </div>
+            
+            {/* Security badge */}
+            <p className="text-xs text-muted-foreground">
+              {t('hero.securityBadge')}
+            </p>
           </div>
         </div>
       </section>
+
+      {/* Pain Points Section */>
+      <PainPoints />
+
+      {/* Emotional Validation Section */}
+      <EmotionalValidation />
 
       {/* Scenarios Section */}
       <ScenarioShowcase />
@@ -112,10 +129,10 @@ export const Landing: React.FC = () => {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              {t('landing.title')}
+              {t('features.title')}
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              {t('landing.subtitle')}
+              {t('features.subtitle')}
             </p>
           </div>
 
@@ -126,9 +143,9 @@ export const Landing: React.FC = () => {
                 <div className="mx-auto bg-primary/10 p-4 rounded-full w-fit mb-4">
                   <Heart className="h-10 w-10 text-primary" />
                 </div>
-                <CardTitle className="text-2xl">{t('landing.sleepBetter.title')}</CardTitle>
+                <CardTitle className="text-2xl">{t('features.sleepBetter.title')}</CardTitle>
                 <CardDescription className="text-base">
-                  {t('landing.sleepBetter.description')}
+                  {t('features.sleepBetter.description')}
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -139,9 +156,9 @@ export const Landing: React.FC = () => {
                 <div className="mx-auto bg-earth-primary/10 p-4 rounded-full w-fit mb-4">
                   <Home className="h-10 w-10 text-earth-primary" />
                 </div>
-                <CardTitle className="text-2xl">{t('landing.noChaos.title')}</CardTitle>
+                <CardTitle className="text-2xl">{t('features.noChaos.title')}</CardTitle>
                 <CardDescription className="text-base">
-                  {t('landing.noChaos.description')}
+                  {t('features.noChaos.description')}
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -152,9 +169,9 @@ export const Landing: React.FC = () => {
                 <div className="mx-auto bg-primary/10 p-4 rounded-full w-fit mb-4">
                   <Navigation className="h-10 w-10 text-primary" />
                 </div>
-                <CardTitle className="text-2xl">{t('landing.clearInstructions.title')}</CardTitle>
+                <CardTitle className="text-2xl">{t('features.clearInstructions.title')}</CardTitle>
                 <CardDescription className="text-base">
-                  {t('landing.clearInstructions.description')}
+                  {t('features.clearInstructions.description')}
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -169,10 +186,10 @@ export const Landing: React.FC = () => {
       <section className="py-20 bg-gradient-warm text-background">
         <div className="container mx-auto px-4 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            {t('cta.title')}
+            {t('cta.finalTitle')}
           </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
-            {t('cta.description')}
+            {t('cta.finalDescription')}
           </p>
           <Button 
             asChild
@@ -180,7 +197,7 @@ export const Landing: React.FC = () => {
             className="bg-background text-primary hover:bg-background/90 border-2 border-background font-semibold shadow-lg"
           >
             <Link to="/register">
-              {t('cta.button')}
+              {t('hero.primaryCta')}
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
           </Button>

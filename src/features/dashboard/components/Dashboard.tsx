@@ -17,10 +17,31 @@ import { useAuth } from '@/hooks/useAuth';
 import { cn } from '@/lib/utils';
 import AnnualReview from '@/components/AnnualReview';
 import LegalConsultationModal from '@/components/LegalConsultationModal';
+import { EnhancedPersonalAssistant } from '@/components/assistant/EnhancedPersonalAssistant';
+import { PersonalizedDashboardContent } from '@/components/dashboard/PersonalizedDashboardContent';
+import { useAssistant } from '@/contexts/AssistantContext';
+
+// Import Professional Dashboard Integration
+import ProfessionalDashboardIntegration from './ProfessionalDashboardIntegration';
 
 const Dashboard = () => {
   const { t } = useTranslation('dashboard');
   const { user } = useAuth();
+  const { updateProgress, updateEmotionalState } = useAssistant();
+  
+  // Feature flag to enable professional dashboard
+  // Can be controlled via environment variable, user preference, or A/B testing
+  const useProfessionalDashboard = 
+    localStorage.getItem('useProfessionalDashboard') === 'true' || 
+    import.meta.env.VITE_USE_PROFESSIONAL_DASHBOARD === 'true' ||
+    new URLSearchParams(window.location.search).get('professional') === 'true';
+  
+  // If professional dashboard is enabled, use the new integration
+  if (useProfessionalDashboard) {
+    return <ProfessionalDashboardIntegration />;
+  }
+  
+  // Otherwise, continue with legacy dashboard
   const [progressStatus, setProgressStatus] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -29,6 +50,7 @@ const Dashboard = () => {
   const [showOnboarding, setShowOnboarding] = useState(false);
   const [showFirstTimeGuide, setShowFirstTimeGuide] = useState(false);
   const [onboardingTasks, setOnboardingTasks] = useState([]);
+  const [onboardingAnswers, setOnboardingAnswers] = useState(null);
 
   const handleAnnualReview = () => {
     setShowAnnualReview(true);
@@ -47,7 +69,22 @@ const Dashboard = () => {
         const userGuideKey = `legacyguard-dashboard-guide-completed-${user.id}`;
         
         // Check if user has completed onboarding
-        const hasCompletedOnboarding = localStorage.getItem(userOnboardingKey);
+        const onboardingDataStr = localStorage.getItem(userOnboardingKey);
+        let hasCompletedOnboarding = false;
+        
+        if (onboardingDataStr) {
+          try {
+            const onboardingData = JSON.parse(onboardingDataStr);
+            if (onboardingData.tasks) {
+              setOnboardingTasks(onboardingData.tasks);
+              setOnboardingAnswers(onboardingData.answers);
+              hasCompletedOnboarding = true;
+            }
+          } catch (e) {
+            // Handle legacy format
+            hasCompletedOnboarding = onboardingDataStr === 'true';
+          }
+        }
         const hasSeenGuide = localStorage.getItem(userGuideKey);
         
         // Check if user was created recently (within last 5 minutes)
@@ -88,6 +125,27 @@ const Dashboard = () => {
         // Fetch progress status only for users who have completed onboarding
         const status = await ProgressService.getProgressStatus(user.id);
         setProgressStatus(status);
+        
+        // Update assistant context with progress
+        if (status) {
+          updateProgress({
+            completionPercentage: status.completionScore,
+            currentStage: status.currentStage,
+            tasksCompleted: status.completedItems?.length || 0,
+            totalTasks: (status.completedItems?.length || 0) + (status.pendingItems?.length || 0)
+          });
+          
+          // Set emotional state based on progress
+          if (status.completionScore < 25) {
+            updateEmotionalState('overwhelmed');
+          } else if (status.completionScore < 50) {
+            updateEmotionalState('anxious');
+          } else if (status.completionScore < 75) {
+            updateEmotionalState('hopeful');
+          } else {
+            updateEmotionalState('confident');
+          }
+        }
       } catch (err) {
         setError(t('errors.failedToFetchStatus'));
       } finally {
@@ -159,14 +217,28 @@ const Dashboard = () => {
     );
   }
 
-  const handleOnboardingComplete = (tasks) => {
-    // Store the generated tasks
+  const handleOnboardingComplete = (tasks, answers) => {
+    // Store the generated tasks and answers
     setOnboardingTasks(tasks);
+    setOnboardingAnswers(answers);
     const userOnboardingKey = `legacyguard-onboarding-completed-${user?.id}`;
-    localStorage.setItem(userOnboardingKey, 'true');
+    const userOnboardingData = {
+      tasks,
+      answers,
+      completedAt: new Date().toISOString()
+    };
+    localStorage.setItem(userOnboardingKey, JSON.stringify(userOnboardingData));
     setShowOnboarding(false);
     // Show the first time guide after onboarding
     setShowFirstTimeGuide(true);
+    
+    // Update assistant context with initial progress
+    updateProgress({
+      completionPercentage: 0,
+      currentStage: 'Foundation',
+      tasksCompleted: 0,
+      totalTasks: tasks.length
+    });
   };
 
   const handleFirstTimeGuideComplete = async () => {
@@ -235,10 +307,19 @@ const Dashboard = () => {
           </p>
         </div>
 
+        {/* Show personalized content for new users with onboarding data */}
+        {onboardingTasks.length > 0 && onboardingAnswers && !progressStatus && (
+          <PersonalizedDashboardContent 
+            tasks={onboardingTasks}
+            onboardingAnswers={onboardingAnswers}
+            completionScore={0}
+          />
+        )}
+        
         {progressStatus && (
         <>
           {/* Enhanced Progress Tracking */}
-          <EnhancedProgressTracking 
+          <EnhancedProgressTracking
             progressStatus={{
               completionScore: progressStatus.completionScore,
               currentStage: progressStatus.currentStage,
@@ -419,6 +500,21 @@ const Dashboard = () => {
           contextData={{
             completionScore: progressStatus?.completionScore,
             hasBusiness: user?.has_business
+          }}
+        />
+      )}
+      
+      {/* Enhanced Personal Assistant */}
+      {!showOnboarding && !loading && (
+        <EnhancedPersonalAssistant 
+          currentPage="dashboard"
+          contextData={{
+            completionScore: progressStatus?.completionScore || 0,
+            currentStage: progressStatus?.currentStage || 'Foundation',
+            nextObjective: progressStatus?.nextObjective,
+            criticalGaps: progressStatus?.criticalGaps || [],
+            tasks: onboardingTasks,
+            onboardingAnswers: onboardingAnswers
           }}
         />
       )}

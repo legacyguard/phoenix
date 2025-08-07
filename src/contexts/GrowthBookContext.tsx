@@ -2,7 +2,7 @@
 
 import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react';
 import { GrowthBook } from '@growthbook/growthbook-react';
-import { useAuth } from './AuthContext';
+import { useAuth } from '@/hooks/useAuth';
 import { analytics } from '../services/analytics';
 import { FEATURE_FLAGS } from '../config/featureFlags';
 

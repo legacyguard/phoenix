@@ -4,22 +4,26 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { SignedIn, UserProfile } from "@clerk/clerk-react";
+import { SignedIn, UserProfile, useUser } from "@clerk/clerk-react";
 import { ProtectedRoute, AdminRoute } from '@/components/auth/ProtectedRoute';
 import { useTranslation } from 'react-i18next';
 import { ThemeProvider } from "@/contexts/ThemeContext";
 import { CountryProvider } from "@/contexts/CountryContext";
 import { ErrorProvider } from "@/contexts/ErrorContext";
+import { AssistantProvider } from "@/contexts/AssistantContext";
 import { GeoLocationProvider } from "@/providers/GeoLocationProvider";
 import { MainLayout } from "@/components/layout/MainLayout";
 import { MarketingLayout } from "@/components/layout/MarketingLayout";
 import { ErrorBoundary } from "@/components/common/ErrorBoundary";
 import { ErrorDebugPanel } from "@/components/debug/ErrorDebugPanel";
+import { FeatureFlagPanel } from "@/components/debug/FeatureFlagPanel";
 import { ConsentManager } from "./components/privacy/ConsentManager";
 import { Loader2 } from "lucide-react";
 import { usePerformanceMonitoring } from "@/hooks/usePerformanceMonitoring";
 import PasswordWall from "@/components/PasswordWall";
 import { UserFlowManager } from "@/components/auth/UserFlowManager";
+import { FeatureFlagProvider } from "@/config/features";
+import { logEnvironmentInfo } from "@/utils/env-check";
 
 // Loading component for lazy loaded routes
 const PageLoader = () => (
@@ -70,6 +74,11 @@ const queryClient = new QueryClient({
 const App = () => {
   // Enable performance monitoring in production
   usePerformanceMonitoring(import.meta.env.PROD);
+  
+  // Log environment configuration in development
+  React.useEffect(() => {
+    logEnvironmentInfo();
+  }, []);
 
   return (
     <ErrorProvider>
@@ -78,10 +87,17 @@ const App = () => {
           <ThemeProvider>
             <TooltipProvider>
               <Toaster />
-              <BrowserRouter>
-                <ErrorBoundary showDetails={import.meta.env.DEV}>
-                  <AppContent />
-                </ErrorBoundary>
+              <BrowserRouter
+                future={{
+                  v7_startTransition: true,
+                  v7_relativeSplatPath: true
+                }}
+              >
+                <AssistantProvider>
+                  <ErrorBoundary showDetails={import.meta.env.DEV}>
+                    <AppContent />
+                  </ErrorBoundary>
+                </AssistantProvider>
               </BrowserRouter>
             </TooltipProvider>
           </ThemeProvider>
@@ -93,11 +109,13 @@ const App = () => {
 
 const AppContent = () => {
   const { t } = useTranslation('ui');
+  const { user } = useUser();
 
   return (
     <PasswordWall>
-      <UserFlowManager>
-        <GeoLocationProvider>
+      <FeatureFlagProvider userId={user?.id}>
+        <UserFlowManager>
+          <GeoLocationProvider>
           <>
           <Suspense fallback={<PageLoader />}>
           <Routes>
@@ -264,9 +282,13 @@ const AppContent = () => {
       
       {/* Error Debug Panel - only in development */}
       <ErrorDebugPanel />
+      
+      {/* Feature Flag Panel - only in development */}
+      <FeatureFlagPanel />
     </>
-    </GeoLocationProvider>
-      </UserFlowManager>
+          </GeoLocationProvider>
+        </UserFlowManager>
+      </FeatureFlagProvider>
     </PasswordWall>
   );
 };
