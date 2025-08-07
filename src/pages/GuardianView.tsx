@@ -31,6 +31,7 @@ import {
 import { COUNTRY_CONFIGS } from '@/config/countries';
 import { ErrorBoundary } from '@/components/common/ErrorBoundary';
 import { ErrorRecovery } from '@/components/common/ErrorRecovery';
+import { logger } from '@/utils/logger';
 
 interface Document {
   id: string;
@@ -141,7 +142,7 @@ export const GuardianView: React.FC = () => {
       const errorMessage = error instanceof Error ? error.message : t('errors.unknown');
       const errorCode = error instanceof Error && 'code' in error ? String(error.code) : 'UNKNOWN_ERROR';
       // Detailed logging for debugging
-      console.error('[Guardian View] Error loading guardian data:', {
+      logger.error('[Guardian View] Error loading guardian data:', {
         timestamp,
         operation: 'loadGuardianData',
         errorCode,
@@ -240,7 +241,7 @@ export const GuardianView: React.FC = () => {
         });
 
       if (logError) {
-        console.error('Failed to log emergency access:', logError);
+        logger.error('Failed to log emergency access:', logError);
       }
 
       setShowEmergencyModal(false);
@@ -272,18 +273,18 @@ export const GuardianView: React.FC = () => {
         
         if (notificationResponse.ok) {
           const result = await notificationResponse.json();
-          console.log('Emergency notifications sent:', result);
+          logger.info('Emergency notifications sent:', result);
         } else {
-          console.error('Failed to send emergency notifications');
+          logger.error('Failed to send emergency notifications');
         }
       } catch (notificationError) {
-        console.error('Error sending emergency notifications:', notificationError);
+        logger.error('Error sending emergency notifications:', notificationError);
         // Don't block the UI - notifications are best effort
       }
       
       toast.success(t('guardianView.emergencyAccess.accessGranted'));
     } catch (error) {
-      console.error('Emergency access error:', error);
+      logger.error('Emergency access error:', error);
       toast.error(t('guardianView.emergencyAccess.accessFailed'));
     } finally {
       setAccessingEmergency(false);
@@ -300,7 +301,7 @@ export const GuardianView: React.FC = () => {
         .eq('user_id', userId);
 
       if (error) {
-        console.error('Failed to log contact attempt:', error);
+        logger.error('Failed to log contact attempt:', error);
       } else {
         // Update local state
         setEmergencyContacts(prev => 
@@ -313,7 +314,7 @@ export const GuardianView: React.FC = () => {
         toast.success(t('guardianView.emergencyAccess.contactLogged'));
       }
     } catch (error) {
-      console.error('Error logging contact attempt:', error);
+      logger.error('Error logging contact attempt:', error);
     }
   };
 

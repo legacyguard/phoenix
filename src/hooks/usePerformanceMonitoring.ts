@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { logger } from '@/utils/logger';
 
 interface PerformanceMetrics {
   FCP?: number; // First Contentful Paint
@@ -19,7 +20,7 @@ export const usePerformanceMonitoring = (enableLogging = false) => {
     // Helper function to log metrics
     const logMetric = (name: string, value: number) => {
       if (enableLogging) {
-        console.log(`[Performance] ${name}: ${value.toFixed(2)}ms`);
+        logger.info(`[Performance] ${name}: ${value.toFixed(2)}ms`);
       }
       
       // Send to analytics service (if configured)
@@ -139,13 +140,13 @@ export const usePerformanceMonitoring = (enableLogging = false) => {
       observeCLS();
       measureTTFB();
     } catch (error) {
-      console.error('Performance monitoring error:', error);
+      logger.error('Performance monitoring error:', error);
     }
 
     // Log all metrics on page unload
     return () => {
       if (enableLogging) {
-        console.log('[Performance] Final metrics:', metrics);
+        logger.info('[Performance] Final metrics:', metrics);
       }
     };
   }, [enableLogging]);
@@ -161,7 +162,7 @@ export const useRenderPerformance = (componentName: string, enableLogging = fals
     return () => {
       const endTime = performance.now();
       const renderTime = endTime - startTime;
-      console.log(`[Performance] ${componentName} render time: ${renderTime.toFixed(2)}ms`);
+      logger.info(`[Performance] ${componentName} render time: ${renderTime.toFixed(2)}ms`);
     };
   }, [componentName, enableLogging]);
 };

@@ -1,5 +1,6 @@
 import pdfParse from 'pdf-parse';
 import Tesseract from 'tesseract.js';
+import { logger } from '@/utils/logger';
 
 interface TextExtractionResult {
   textContent: string;
@@ -18,13 +19,13 @@ export async function extractTextFromFile(
         return { textContent: data.text, sourceType: 'pdf', pages: data.numpages };
       }
     } catch (error) {
-      console.warn('PDF parsing failed, attempting OCR:', error);
+      logger.warn('PDF parsing failed, attempting OCR:', error);
     }
   }
 
   // Fallback to OCR for image files or scanned PDFs
   const ocrResult = await Tesseract.recognize(file, 'eng', {
-    logger: info => console.log(info) // Log OCR progress
+    logger: info => logger.info(info) // Log OCR progress
   });
 
   const pageCount = (ocrResult.data && ocrResult.data.lines) ? Math.ceil(ocrResult.data.lines.length / 40) : 1; // Rough page estimate

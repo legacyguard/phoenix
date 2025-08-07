@@ -26,7 +26,6 @@ const DocumentUploadDemo: React.FC = () => {
 
   // Handler for when a document is processed
   const handleDocumentProcessed = (result: DocumentProcessingResult) => {
-    console.log('Document processed:', result);
     setProcessedDocuments(prev => [...prev, result]);
     
     // Here you would typically:

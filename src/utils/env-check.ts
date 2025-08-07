@@ -2,6 +2,7 @@
  * Environment configuration checker
  * Helps ensure proper configuration for development vs production
  */
+import { logger } from '@/utils/logger';
 
 export const isProduction = import.meta.env.PROD;
 export const isDevelopment = import.meta.env.DEV;
@@ -65,17 +66,17 @@ export const getEnvironmentWarnings = (): string[] => {
  */
 export const logEnvironmentInfo = (): void => {
   if (isDevelopment) {
-    console.group('🔧 Environment Configuration');
-    console.log('Mode:', isProduction ? 'Production' : 'Development');
-    console.log('Clerk:', isClerkProduction() ? 'Production Keys' : 'Development Keys');
+    logger.group('🔧 Environment Configuration');
+    logger.info('Mode:', isProduction ? 'Production' : 'Development');
+    logger.info('Clerk:', isClerkProduction() ? 'Production Keys' : 'Development Keys');
     
     const warnings = getEnvironmentWarnings();
     if (warnings.length > 0) {
-      console.group('⚠️ Configuration Warnings');
-      warnings.forEach(warning => console.warn(warning));
-      console.groupEnd();
+      logger.group('⚠️ Configuration Warnings');
+      warnings.forEach(warning => logger.warn(warning));
+      logger.groupEnd();
     }
-    
-    console.groupEnd();
+
+    logger.groupEnd();
   }
 };

@@ -15,6 +15,7 @@ import { Shield, Sparkles, HardDrive, Cloud, Heart } from 'lucide-react';
 import { useDocumentUpload, useUploadPreferences } from '../../lib/hooks/useDocumentUpload';
 import { documentStorage } from '../../lib/services/document-storage.service';
 import type { ProcessedDocument } from '../../lib/services/document-upload.types';
+import { logger } from '@/utils/logger';
 
 export function UploadDemo() {
   const { t } = useTranslation('ui');
@@ -56,7 +57,7 @@ export function UploadDemo() {
   }, [successCount, uploadQueue]);
 
   const handleUploadStart = () => {
-    console.log(t('demo.upload.console.uploadStarted'));
+    logger.info(t('demo.upload.console.uploadStarted'));
   };
 
   return (
@@ -219,10 +220,10 @@ export function UploadDemo() {
         <TabsContent value="documents" className="space-y-6">
           <DocumentGrid
             documents={uploadedDocuments}
-            onView={(doc) => console.log(t('demo.upload.console.view'), doc)}
-            onDownload={(doc) => console.log(t('demo.upload.console.download'), doc)}
-            onShare={(doc) => console.log(t('demo.upload.console.share'), doc)}
-            onDelete={(doc) => console.log(t('demo.upload.console.delete'), doc)}
+            onView={(doc) => logger.info(t('demo.upload.console.view'), doc)}
+            onDownload={(doc) => logger.info(t('demo.upload.console.download'), doc)}
+            onShare={(doc) => logger.info(t('demo.upload.console.share'), doc)}
+            onDelete={(doc) => logger.info(t('demo.upload.console.delete'), doc)}
           />
         </TabsContent>
 
