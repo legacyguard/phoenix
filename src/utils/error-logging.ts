@@ -1,4 +1,5 @@
 import { ErrorInfo } from 'react';
+import { logger } from '@/utils/logger';
 
 interface EmpatheticErrorLog {
   timestamp: Date;
@@ -38,12 +39,12 @@ export const logEmpatheticError = (
   
   // Log to console in development
   if (process.env.NODE_ENV === 'development') {
-    console.group('🤗 Empathetic Error Log');
-    console.error('Error:', error);
-    console.log('Context:', context);
-    console.log('User Impact:', userImpact);
-    console.log('Stack:', errorInfo?.componentStack);
-    console.groupEnd();
+    logger.group('🤗 Empathetic Error Log');
+    logger.error('Error:', error);
+    logger.info('Context:', context);
+    logger.info('User Impact:', userImpact);
+    logger.info('Stack:', errorInfo?.componentStack);
+    logger.groupEnd();
   }
 };
 
@@ -85,7 +86,7 @@ const sendToMonitoring = async (errorLog: EmpatheticErrorLog) => {
     });
   } catch (e) {
     // Silently fail - don't create more errors
-    console.error('Failed to log error to monitoring:', e);
+    logger.error('Failed to log error to monitoring:', e);
   }
 };
 
