@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { useAuth } from '@/hooks/useAuth';
 import { ProgressService } from '@/services/ProgressService';
 import { ProfessionalDashboard } from '@/components/dashboard';
-import { ProfessionalFlowManager } from '@/components/auth/ProfessionalFlowManager';
+import ProfessionalFlowManager from '@/components/auth/ProfessionalFlowManager';
 import { RespectfulOnboarding, OnboardingData } from '@/components/onboarding/RespectfulOnboarding';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Button } from '@/components/ui/button';

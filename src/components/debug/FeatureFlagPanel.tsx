@@ -77,49 +77,7 @@ export const FeatureFlagPanel: React.FC = () => {
               />
             </div>
 
-            <div className="flex items-center justify-between p-2 bg-muted rounded">
-              <div className="flex-1">
-                <p className="text-sm font-medium">Legacy Gamification</p>
-                <p className="text-xs text-muted-foreground">Old achievement system</p>
-              </div>
-              <Switch
-                checked={isEnabled('legacyGamification')}
-                onCheckedChange={() => toggleFlag('legacyGamification')}
-              />
-            </div>
 
-            <div className="flex items-center justify-between p-2 bg-muted rounded">
-              <div className="flex-1">
-                <p className="text-sm font-medium">Professional Dashboard</p>
-                <p className="text-xs text-muted-foreground">Clean status view</p>
-              </div>
-              <Switch
-                checked={isEnabled('professionalDashboard')}
-                onCheckedChange={() => toggleFlag('professionalDashboard')}
-              />
-            </div>
-
-            <div className="flex items-center justify-between p-2 bg-muted rounded">
-              <div className="flex-1">
-                <p className="text-sm font-medium">Enable Suggestions</p>
-                <p className="text-xs text-muted-foreground">Tasks as suggestions</p>
-              </div>
-              <Switch
-                checked={isEnabled('enableSuggestions')}
-                onCheckedChange={() => toggleFlag('enableSuggestions')}
-              />
-            </div>
-
-            <div className="flex items-center justify-between p-2 bg-muted rounded">
-              <div className="flex-1">
-                <p className="text-sm font-medium">Show Progress %</p>
-                <p className="text-xs text-muted-foreground">Display completion percentage</p>
-              </div>
-              <Switch
-                checked={isEnabled('showProgressPercentage')}
-                onCheckedChange={() => toggleFlag('showProgressPercentage')}
-              />
-            </div>
           </div>
 
           <div className="pt-2 border-t">

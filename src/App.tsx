@@ -23,6 +23,7 @@ import { usePerformanceMonitoring } from "@/hooks/usePerformanceMonitoring";
 import PasswordWall from "@/components/PasswordWall";
 import { UserFlowManager } from "@/components/auth/UserFlowManager";
 import { FeatureFlagProvider } from "@/config/features";
+import { PasswordWallProvider } from "@/components/auth/PasswordWallContext";
 import { logEnvironmentInfo } from "@/utils/env-check";
 
 // Loading component for lazy loaded routes
@@ -113,12 +114,13 @@ const AppContent = () => {
   const { user } = useUser();
 
   return (
-    <PasswordWall>
-      <FeatureFlagProvider userId={user?.id}>
-        <UserFlowManager>
-          <GeoLocationProvider>
-          <>
-          <Suspense fallback={<PageLoader />}>
+    <PasswordWallProvider>
+      <PasswordWall>
+        <FeatureFlagProvider userId={user?.id}>
+          <UserFlowManager>
+            <GeoLocationProvider>
+            <>
+            <Suspense fallback={<PageLoader />}>
           <Routes>
         {/* Public routes with marketing layout */}
         <Route path="/" element={<MarketingLayout><Landing /></MarketingLayout>} />
@@ -276,7 +278,7 @@ const AppContent = () => {
         /* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */
     <Route path="*" element={<MarketingLayout><NotFound /></MarketingLayout>} />
       </Routes>
-      </Suspense>
+                  </Suspense>
       
       {/* GDPR Consent Manager */}
       <ConsentManager />
@@ -287,10 +289,11 @@ const AppContent = () => {
       {/* Feature Flag Panel - only in development */}
       <FeatureFlagPanel />
     </>
-          </GeoLocationProvider>
-        </UserFlowManager>
-      </FeatureFlagProvider>
-    </PasswordWall>
+            </GeoLocationProvider>
+          </UserFlowManager>
+        </FeatureFlagProvider>
+      </PasswordWall>
+    </PasswordWallProvider>
   );
 };
 

@@ -44,9 +44,10 @@ interface OnboardingWizardProps {
   onClose: () => void;
   onComplete: (tasks: TaskItem[], answers?: ProjectOrderAnswers) => void;
   useLifeQuestions?: boolean; // Optional prop to enable/disable life questions
+  useRespectfulFlow?: boolean; // Optional prop to use respectful onboarding flow
 }
 
-export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({ isOpen, onClose, onComplete, useLifeQuestions = true }) => {
+export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({ isOpen, onClose, onComplete, useLifeQuestions = true, useRespectfulFlow = false }) => {
   const { t } = useTranslation('help');
   const { t: tCommon } = useTranslation('ui');
   const { trackAction, trackFormInteraction, startTimer, endTimer } = useAnalytics({ componentName: 'OnboardingWizard', userJourneyStage: 'onboarding' });

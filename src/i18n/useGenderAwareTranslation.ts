@@ -2,12 +2,11 @@ import { useTranslation } from 'react-i18next';
 import { useUser } from '@clerk/clerk-react';
 import { useCallback, useMemo } from 'react';
 import {
+  Gender,
   GenderContext,
-  GenderAwareTranslationOptions,
-  getUserGenderContext,
-  getGenderAwareTranslationKey,
-  formatWithGenderContext,
-  requiresGenderContext
+  useGenderContext,
+  getGenderedKey,
+  getGenderedTranslation
 } from './gender-context';
 
 /**
@@ -17,69 +16,44 @@ import {
 export const useGenderAwareTranslation = (namespace?: string) => {
   const { t, i18n, ready } = useTranslation(namespace);
   const { user } = useUser();
-  
-  // Get user's gender context from their profile
-  const userGenderContext = useMemo(() => {
-    return getUserGenderContext(user?.publicMetadata);
-  }, [user]);
+  const genderContext = useGenderContext();
   
   // Enhanced translation function with gender awareness
   const tg = useCallback((
     key: string,
-    options?: GenderAwareTranslationOptions
+    options?: any
   ): string => {
-    // Merge user gender context with provided options
-    const mergedOptions: GenderAwareTranslationOptions = {
-      userGender: userGenderContext,
-      ...options
-    };
-    
-    // Get the current language
-    const currentLanguage = i18n.language;
-    
-    // Determine which gender context to use for key selection
-    // Priority: referenceGender > userGender
-    const genderForKey = mergedOptions.referenceGender || mergedOptions.userGender || GenderContext.NEUTRAL;
-    
-    // Get possible translation keys (with fallback)
-    const translationKeys = getGenderAwareTranslationKey(key, genderForKey, currentLanguage);
+    // Get the gendered key
+    const genderedKey = getGenderedKey(key);
     
     // Try to get translation with gender-specific key first
-    let translation: string | undefined;
-    for (const tryKey of translationKeys) {
-      const result = t(tryKey, mergedOptions);
-      if (result && result !== tryKey) {
-        translation = result;
-        break;
-      }
-    }
+    let translation = t(genderedKey, options);
     
     // If no translation found, use the base key
-    if (!translation) {
-      translation = t(key, mergedOptions);
-    }
-    
-    // Apply gender-specific formatting
-    if (requiresGenderContext(currentLanguage)) {
-      translation = formatWithGenderContext(translation, mergedOptions);
+    if (translation === genderedKey) {
+      translation = t(key, options);
     }
     
     return translation;
-  }, [t, i18n.language, userGenderContext]);
+  }, [t, genderContext]);
   
   // Helper function to get gender-aware translation with specific reference gender
   const tgRef = useCallback((
     key: string,
-    referenceGender: GenderContext,
-    options?: Omit<GenderAwareTranslationOptions, 'referenceGender'>
+    referenceGender: Gender,
+    options?: any
   ): string => {
-    return tg(key, { ...options, referenceGender });
-  }, [tg]);
-  
-  // Helper to check if current language requires gender context
-  const needsGenderContext = useMemo(() => {
-    return requiresGenderContext(i18n.language);
-  }, [i18n.language]);
+    // Temporarily set gender context for this translation
+    const originalGender = genderContext.gender;
+    genderContext.setGender(referenceGender);
+    
+    const translation = tg(key, options);
+    
+    // Restore original gender
+    genderContext.setGender(originalGender);
+    
+    return translation;
+  }, [tg, genderContext]);
   
   return {
     t: tg, // Replace standard t with gender-aware version
@@ -87,7 +61,7 @@ export const useGenderAwareTranslation = (namespace?: string) => {
     tgRef, // Translation with reference gender
     i18n,
     ready,
-    userGenderContext,
-    needsGenderContext
+    userGenderContext: genderContext.gender,
+    needsGenderContext: true // Simplified for now
   };
 };

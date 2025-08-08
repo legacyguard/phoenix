@@ -4,7 +4,7 @@ import { Heart, Sparkles, Clock, CheckCircle, AlertCircle, Coffee } from 'lucide
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { cn } from '@/lib/utils';
-import { useAssistant } from '@/contexts/AssistantContext';
+import { useAssistant } from '@/hooks/useAssistant';
 import { AssistantAvatar } from './AssistantAvatar';
 import { AssistantMessage } from './AssistantMessage';
 import { AssistantActions } from './AssistantActions';

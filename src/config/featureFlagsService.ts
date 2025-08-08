@@ -8,10 +8,6 @@
 
 export interface FeatureFlags {
   respectfulOnboarding: boolean;
-  legacyGamification: boolean;
-  professionalDashboard: boolean;
-  enableSuggestions: boolean;
-  showProgressPercentage: boolean;
 }
 
 export interface FeatureFlagConfig {
@@ -30,26 +26,6 @@ export const FEATURE_FLAGS: Record<keyof FeatureFlags, FeatureFlagConfig> = {
     description: 'Enable the new respectful onboarding flow without gamification',
     rolloutPercentage: 0, // Start with 0% rollout
     enabledForUsers: [], // Can add specific user IDs for testing
-  },
-  legacyGamification: {
-    key: 'feature_legacyGamification',
-    defaultValue: true,
-    description: 'Show legacy gamification elements (will be deprecated)',
-  },
-  professionalDashboard: {
-    key: 'feature_professionalDashboard',
-    defaultValue: false,
-    description: 'Show professional dashboard without achievement elements',
-  },
-  enableSuggestions: {
-    key: 'feature_enableSuggestions',
-    defaultValue: false,
-    description: 'Show tasks as suggestions rather than requirements',
-  },
-  showProgressPercentage: {
-    key: 'feature_showProgressPercentage',
-    defaultValue: true,
-    description: 'Display completion percentage (will be replaced with status)',
   },
 };
 
@@ -89,10 +65,6 @@ export class FeatureFlagService {
     // 2. Override with environment variables
     if (import.meta.env.VITE_RESPECTFUL_ONBOARDING === 'true') {
       this.flags.respectfulOnboarding = true;
-      this.flags.legacyGamification = false;
-      this.flags.professionalDashboard = true;
-      this.flags.enableSuggestions = true;
-      this.flags.showProgressPercentage = false;
     }
 
     // 3. Override with localStorage (for testing and user preferences)

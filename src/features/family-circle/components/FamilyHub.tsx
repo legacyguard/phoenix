@@ -13,7 +13,7 @@ import { toast } from 'sonner';
 import { useTranslation } from 'react-i18next';
 import FamilyPreparednessTools from '@/components/FamilyPreparednessTools';
 import { PersonalAssistant } from '@/components/assistant/PersonalAssistant';
-import { useAssistant } from '@/contexts/AssistantContext';
+import { useAssistant } from '@/hooks/useAssistant';
 
 // Define the access levels
 type AccessLevel = 'none' | 'emergency_only' | 'limited_info' | 'full_access';

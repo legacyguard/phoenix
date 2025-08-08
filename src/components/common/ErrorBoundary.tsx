@@ -11,7 +11,7 @@ interface ErrorBoundaryProps {
 }
 
 const ErrorBoundary: React.FC<ErrorBoundaryProps> = ({ error, resetError }) => {
-  const { t } = useTranslation('errors');
+  const { t } = useTranslation(['errors', 'ui']);
   const navigate = useNavigate();
 
   const handleRefresh = () => {
@@ -38,10 +38,10 @@ const ErrorBoundary: React.FC<ErrorBoundaryProps> = ({ error, resetError }) => {
             <AlertTriangle className="h-8 w-8 text-red-600" />
           </div>
           <CardTitle className="text-xl text-red-600">
-            {t('ui.somethingWrong')}
+            {t('errors:general.somethingWrong')}
           </CardTitle>
           <CardDescription className="text-muted-foreground">
-            {t('ui.unknownError')}
+            {t('errors:general.unknownError')}
           </CardDescription>
         </CardHeader>
         
@@ -61,7 +61,7 @@ const ErrorBoundary: React.FC<ErrorBoundaryProps> = ({ error, resetError }) => {
               variant="default"
             >
               <RefreshCw className="w-4 h-4 mr-2" />
-              {t('actions.refresh')}
+              {t('errors:actions.refresh')}
             </Button>
             
             <Button 
@@ -70,7 +70,7 @@ const ErrorBoundary: React.FC<ErrorBoundaryProps> = ({ error, resetError }) => {
               variant="outline"
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
-              {t('actions.goBack')}
+              {t('errors:actions.goBack')}
             </Button>
             
             <Button 
@@ -79,20 +79,20 @@ const ErrorBoundary: React.FC<ErrorBoundaryProps> = ({ error, resetError }) => {
               variant="outline"
             >
               <Home className="w-4 h-4 mr-2" />
-              {t('actions.goBack')}
+              {t('errors:actions.goBack')}
             </Button>
           </div>
           
           <div className="text-center">
             <p className="text-sm text-muted-foreground">
-              {t('ui.unknownError')}
+              {t('errors:general.unknownError')}
             </p>
             <Button 
               variant="link" 
               className="text-sm p-0 h-auto"
               onClick={() => window.open('mailto:support@legacyguard.com', '_blank')}
             >
-              {t('actions.contactSupport')}
+              {t('errors:actions.contactSupport')}
             </Button>
           </div>
         </CardContent>

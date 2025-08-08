@@ -3,8 +3,10 @@ import { useUser } from '@clerk/clerk-react';
 import { useTranslation } from 'react-i18next';
 import { OnboardingWizard, TaskItem } from '@/components/onboarding/OnboardingWizard';
 import { FirstTimeUserGuide } from '@/components/onboarding/FirstTimeUserGuide';
+import RespectfulOnboarding, { OnboardingData } from '@/components/onboarding/RespectfulOnboarding';
 import { useAnalytics } from '@/hooks/useAnalytics';
 import { useFeatureFlag } from '@/config/features';
+import { usePasswordWall } from './PasswordWallContext';
 
 interface UserFlowManagerProps {
   children: React.ReactNode;
@@ -16,16 +18,24 @@ export const UserFlowManager: React.FC<UserFlowManagerProps> = ({ children }) =>
   const { user, isLoaded } = useUser();
   const { t } = useTranslation('ui');
   const { trackAction } = useAnalytics({ componentName: 'UserFlowManager', userJourneyStage: 'authentication' });
+  const { isPasswordWallAuthenticated } = usePasswordWall();
   const [flowState, setFlowState] = useState<FlowState>('loading');
   const [onboardingTasks, setOnboardingTasks] = useState<TaskItem[]>([]);
+  const [onboardingData, setOnboardingData] = useState<OnboardingData | null>(null);
   
   // Feature flags
   // See docs/feature-flags.md for semantics and rollout strategy
   const useRespectfulOnboarding = useFeatureFlag('respectfulOnboarding');
-  const showLegacyGamification = useFeatureFlag('legacyGamification');
 
   useEffect(() => {
     if (!isLoaded) return;
+
+    // Check if user is authenticated through PasswordWall but not signed in with Clerk
+    if (!user && isPasswordWallAuthenticated) {
+      // User is authenticated through PasswordWall, direct to onboarding
+      setFlowState('onboarding');
+      return;
+    }
 
     if (!user) {
       // User is not signed in, show the main content (which should be Landing page)
@@ -84,6 +94,19 @@ export const UserFlowManager: React.FC<UserFlowManagerProps> = ({ children }) =>
     localStorage.setItem('onboardingVersion', useRespectfulOnboarding ? 'respectful' : 'legacy');
   };
 
+  const handleRespectfulOnboardingComplete = (data: OnboardingData) => {
+    setOnboardingData(data);
+    setFlowState('first_time_guide');
+    trackAction('respectful_onboarding_flow_completed', { 
+      user_id: user?.id,
+      documents_uploaded: data.documents?.length || 0,
+      recommendations_generated: data.recommendations?.length || 0,
+      onboarding_type: 'respectful'
+    });
+    // Store completion with version
+    localStorage.setItem('onboardingVersion', 'respectful');
+  };
+
   const handleOnboardingClose = () => {
     // User skipped onboarding, go directly to dashboard
     setFlowState('dashboard');
@@ -106,15 +129,25 @@ export const UserFlowManager: React.FC<UserFlowManagerProps> = ({ children }) =>
 
   // Show onboarding wizard for new users
   if (flowState === 'onboarding') {
-    return (
-      <OnboardingWizard
-        isOpen={true}
-        onComplete={handleOnboardingComplete}
-        onClose={handleOnboardingClose}
-        useLifeQuestions={!useRespectfulOnboarding} // Use life questions only for legacy
-        useRespectfulFlow={useRespectfulOnboarding} // New prop for respectful flow
-      />
-    );
+    if (useRespectfulOnboarding) {
+      return (
+        <RespectfulOnboarding
+          isOpen={true}
+          onComplete={handleRespectfulOnboardingComplete}
+          onClose={handleOnboardingClose}
+          userName={user?.firstName || undefined}
+        />
+      );
+    } else {
+      return (
+        <OnboardingWizard
+          isOpen={true}
+          onComplete={handleOnboardingComplete}
+          onClose={handleOnboardingClose}
+          useLifeQuestions={true}
+        />
+      );
+    }
   }
 
   // Show first time user guide

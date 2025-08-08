@@ -20,10 +20,6 @@ Flags layer and precedence (highest wins):
 ## Current Flags
 
 - respectfulOnboarding: Enable the new respectful onboarding flow without gamification (default: false)
-- legacyGamification: Show legacy gamification elements (default: true)
-- professionalDashboard: Show professional dashboard (default: false)
-- enableSuggestions: Treat tasks as suggestions (default: false)
-- showProgressPercentage: Show progress percentage (default: true)
 
 ## Using Flags in Components
 
@@ -51,13 +47,9 @@ const { flags, isEnabled, setFlag, toggleFlag, resetFlags } = useFeatureFlags();
 
 ## Environment Variable Override
 
-Set VITE_RESPECTFUL_ONBOARDING to quickly flip an opinionated bundle of flags:
+Set VITE_RESPECTFUL_ONBOARDING to quickly enable the respectful onboarding flow:
 
 - respectfulOnboarding=true
-- legacyGamification=false
-- professionalDashboard=true
-- enableSuggestions=true
-- showProgressPercentage=false
 
 Usage examples:
 - Local: echo 'VITE_RESPECTFUL_ONBOARDING=true' >> .env.local
@@ -65,12 +57,8 @@ Usage examples:
 
 ## LocalStorage Keys
 
-Each flag maps to a stable localStorage key, e.g.:
+Each flag maps to a stable localStorage key:
 - feature_respectfulOnboarding
-- feature_legacyGamification
-- feature_professionalDashboard
-- feature_enableSuggestions
-- feature_showProgressPercentage
 
 You can clear these keys to reset the state or use the Reset button in the FeatureFlagPanel.
 

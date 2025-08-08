@@ -16,7 +16,7 @@ import { AssetFileList } from '../components/AssetFileList';
 import { AssetShareModal } from '../components/AssetShareModal';
 import { assetFileService } from '../services/AssetFileService';
 import { PersonalAssistant } from '@/components/assistant/PersonalAssistant';
-import { useAssistant } from '@/contexts/AssistantContext';
+import { useAssistant } from '@/hooks/useAssistant';
 
 interface Asset {
   id: string;
