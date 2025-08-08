@@ -4,11 +4,22 @@ interface SupportOptions {
   userMessage?: string;
 }
 
+interface SupportContext {
+  timestamp: string;
+  userAgent: string;
+  url: string;
+  errorMessage?: string;
+  errorStack?: string;
+  context?: string;
+  userMessage?: string;
+  savedData: Record<string, unknown>;
+}
+
 export const contactSupport = async (options: SupportOptions = {}) => {
   const { error, context, userMessage } = options;
-  
+
   // Gather context for support
-  const supportContext = {
+  const supportContext: SupportContext = {
     timestamp: new Date().toISOString(),
     userAgent: navigator.userAgent,
     url: window.location.href,
@@ -43,6 +54,7 @@ export const contactSupport = async (options: SupportOptions = {}) => {
   }
 };
 
+<<<<<<< HEAD
 interface SupportContext {
   timestamp: string;
   userAgent: string;
@@ -54,6 +66,8 @@ interface SupportContext {
   savedData: Record<string, unknown>;
 }
 
+=======
+>>>>>>> def8bce230b3756e164733a99e06fe0f070332f2
 const showSupportModal = (context: SupportContext) => {
   // This would integrate with your modal system
   // For now, we'll use a custom event
@@ -80,7 +94,7 @@ const updateSupportModal = (status: 'success' | 'fallback', ticketId?: string) =
   }));
 };
 
-const getSavedFormData = () => {
+const getSavedFormData = (): Record<string, unknown> => {
   // Retrieve any auto-saved form data
   try {
     return JSON.parse(localStorage.getItem('autosaved-form-data') || '{}');

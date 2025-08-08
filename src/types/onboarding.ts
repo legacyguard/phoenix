@@ -234,6 +234,7 @@ export class OnboardingDataManager {
   }
 }
 
+<<<<<<< HEAD
 // Export convenience functions - Type guards for onboarding answer types
 export function isRespectfulOnboarding(answers: unknown): answers is RespectfulOnboardingAnswers {
   return typeof answers === 'object' && 
@@ -247,4 +248,27 @@ export function isLegacyOnboarding(answers: unknown): answers is LegacyOnboardin
          answers !== null && 
          'documentAccess' in answers && 
          'caretaker' in answers;
+=======
+// Export convenience functions
+export function isRespectfulOnboarding(
+  answers: unknown
+): answers is RespectfulOnboardingAnswers {
+  return (
+    typeof answers === 'object' &&
+    answers !== null &&
+    'accessNeeds' in answers &&
+    'currentTrigger' in answers
+  );
+}
+
+export function isLegacyOnboarding(
+  answers: unknown
+): answers is LegacyOnboardingAnswers {
+  return (
+    typeof answers === 'object' &&
+    answers !== null &&
+    'documentAccess' in answers &&
+    'caretaker' in answers
+  );
+>>>>>>> def8bce230b3756e164733a99e06fe0f070332f2
 }
