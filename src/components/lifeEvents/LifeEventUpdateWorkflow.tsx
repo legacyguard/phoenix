@@ -28,7 +28,8 @@ import {
   Shield,
   Wallet,
   Clock,
-  AlertCircle
+  AlertCircle,
+  LucideIcon
 } from 'lucide-react';
 import { LifeEventChecklist, ChecklistTask, LifeEventService } from '@/services/LifeEventService';
 import { useToast } from '@/components/ui/use-toast';
@@ -41,7 +42,7 @@ interface LifeEventUpdateWorkflowProps {
   onExit?: () => void;
 }
 
-const taskIcons: Record<string, any> = {
+const taskIcons: Record<string, LucideIcon> = {
   'update_beneficiaries': Users,
   'update_will': FileText,
   'review_trusts': Shield,

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { Loader2, CheckCircle, XCircle } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { Alert, AlertDescription } from '@/components/ui/alert';
@@ -44,7 +44,7 @@ const ProgressiveErrorRecovery: React.FC<ProgressiveErrorRecoveryProps> = ({
   }, [retryCount, maxRetries, t]);
 
   // Handle gentle retry
-  const handleGentleRetry = async () => {
+  const handleGentleRetry = useCallback(async () => {
     setIsRetrying(true);
     setProgress(0);
 
@@ -64,10 +64,10 @@ const ProgressiveErrorRecovery: React.FC<ProgressiveErrorRecoveryProps> = ({
       setRetryCount(prev => prev + 1);
       setIsRetrying(false);
     }
-  };
+  }, [onRetry]);
 
   // Handle alternative approach
-  const handleAlternativeApproach = async () => {
+  const handleAlternativeApproach = useCallback(async () => {
     if (!onAlternativeApproach) {
       setRetryCount(maxRetries);
       return;
@@ -83,7 +83,7 @@ const ProgressiveErrorRecovery: React.FC<ProgressiveErrorRecoveryProps> = ({
       setRetryCount(maxRetries);
       setIsRetrying(false);
     }
-  };
+  }, [onAlternativeApproach, maxRetries]);
 
   // Render based on recovery level
   const renderRecoveryUI = () => {
@@ -137,7 +137,7 @@ const ProgressiveErrorRecovery: React.FC<ProgressiveErrorRecoveryProps> = ({
       }, 1000);
       return () => clearTimeout(timer);
     }
-  }, [currentLevel, isRetrying, retryCount]);
+  }, [currentLevel, isRetrying, retryCount, handleGentleRetry]);
 
   // Handle alternative approach automatically
   useEffect(() => {
@@ -147,7 +147,7 @@ const ProgressiveErrorRecovery: React.FC<ProgressiveErrorRecoveryProps> = ({
       }, 2000);
       return () => clearTimeout(timer);
     }
-  }, [currentLevel, isRetrying, retryCount]);
+  }, [currentLevel, isRetrying, retryCount, handleAlternativeApproach]);
 
   return (
     <div className="progressive-error-recovery">

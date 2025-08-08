@@ -325,9 +325,17 @@ const FeatureCard: React.FC<{
   );
 };
 
+interface Achievement {
+  id: string;
+  title: string;
+  description: string;
+  icon?: React.ReactNode;
+  unlockedAt?: string;
+}
+
 // Achievement card component
 const AchievementCard: React.FC<{
-  achievement: any;
+  achievement: Achievement;
   isAcknowledged: boolean;
 }> = ({ achievement, isAcknowledged }) => {
   return (

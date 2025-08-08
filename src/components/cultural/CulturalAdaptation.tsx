@@ -58,7 +58,7 @@ const culturalOptions: CulturalOption[] = [
     title: 'Jewish Traditions',
     description: 'Incorporate Jewish customs and ethical will considerations',
     category: 'religious',
-    details: 'Include ethical wills (tzava'ah) and honor traditions around inheritance and family obligations.'
+    details: "Include ethical wills (tzava'ah) and honor traditions around inheritance and family obligations."
   },
   {
     id: 'christian_values',

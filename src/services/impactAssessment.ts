@@ -12,7 +12,7 @@ interface DocumentedItem {
   type: string;
   description: string;
   dateDocumented: Date;
-  details?: Record<string, any>;
+  details?: Record<string, unknown>;
 }
 
 interface ProtectionArea {

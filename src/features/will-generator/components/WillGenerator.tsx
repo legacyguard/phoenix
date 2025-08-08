@@ -197,14 +197,13 @@ export function WillGenerator({ onComplete }: WillGeneratorProps) {
       // The API call should include both countryCode and languageCode
       // fetch(`/api/will/get-template?country=${countryCode}&language=${languageCode}`)
 
-      if(willContent.beneficiaries?.length === 0) {
-        return (
-          cOverwhelmSupport /e
-        );
-      } else if(!willContent.beneficiaries?.some(b => b.allocation)) {
-        return (
-          cProcrastinationSupport /e
-        );
+      if (willContent.beneficiaries?.length === 0) {
+        // Show gentle support UI if beneficiaries are not started
+        // In an event handler, navigate or set state to display these components instead of returning JSX here.
+        // For now, just notify the user empathetically.
+        toast.message(t('wills:gentle.nudgeStart'), { description: t('wills:gentle.addLovedOnes') });
+      } else if (!willContent.beneficiaries?.some(b => b.allocation)) {
+        toast.message(t('wills:gentle.nudgeAllocate'), { description: t('wills:gentle.helpAllocate') });
       }
       toast.success(t('ui.willGenerated'));
       onComplete?.('generated-will-id');

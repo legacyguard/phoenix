@@ -16,6 +16,53 @@ export const useEmpatheticError = <T>(options: EmpatheticErrorOptions = {}) => {
   const [isRetrying, setIsRetrying] = useState(false);
   const [retryCount, setRetryCount] = useState(0);
 
+  const getEmpatheticMessage = useCallback((error: Error, context?: string): string => {
+    // Network errors
+    if (error.message.includes('fetch') || error.message.includes('Failed to fetch')) {
+      return t('network.connection_lost');
+    }
+    
+    // Timeout errors
+    if (error.message.includes('timeout')) {
+      return t('network.timeout');
+    }
+    
+    // Validation errors
+    if (error.message.includes('validation')) {
+      return t('validation.required_field');
+    }
+    
+    // Context-specific errors
+    if (context) {
+      const contextKey = `contextual.${context}.${error.name || 'general'}`;
+      const contextMessage = t(contextKey, { defaultValue: '' });
+      if (contextMessage) return contextMessage;
+    }
+    
+    // Fallback
+    return options.fallbackMessage || t('general.something_wrong');
+  }, [t, options.fallbackMessage]);
+
+  const retryOperation = useCallback(async (operation: () => Promise<T>): Promise<T> => {
+    setIsRetrying(true);
+    setRetryCount(prev => prev + 1);
+    incrementRecoveryAttempts(new Date());
+
+    try {
+      const result = await operation();
+      toast.success(t('general.try_again') + " - Success! 🎉");
+      setRetryCount(0);
+      return result;
+    } catch (error) {
+      // Handle error internally to avoid circular dependency
+      const errorMessage = getEmpatheticMessage(error as Error, options.context);
+      toast.error(errorMessage);
+      throw error;
+    } finally {
+      setIsRetrying(false);
+    }
+  }, [t, getEmpatheticMessage, options.context]);
+
   const handleError = useCallback(async (
     error: Error,
     operation?: () => Promise<T>
@@ -48,51 +95,7 @@ export const useEmpatheticError = <T>(options: EmpatheticErrorOptions = {}) => {
       message: errorMessage,
       retry: operation ? () => retryOperation(operation) : undefined
     };
-  }, [retryCount, options]);
-
-  const retryOperation = useCallback(async (operation: () => Promise<T>): Promise<T> => {
-    setIsRetrying(true);
-    setRetryCount(prev => prev + 1);
-    incrementRecoveryAttempts(new Date());
-
-    try {
-      const result = await operation();
-      toast.success(t('general.try_again') + " - Success! 🎉");
-      setRetryCount(0);
-      return result;
-    } catch (error) {
-      handleError(error as Error, operation);
-    } finally {
-      setIsRetrying(false);
-    }
-  }, [handleError, t]);
-
-  const getEmpatheticMessage = (error: Error, context?: string): string => {
-    // Network errors
-    if (error.message.includes('fetch') || error.message.includes('Failed to fetch')) {
-      return t('network.connection_lost');
-    }
-    
-    // Timeout errors
-    if (error.message.includes('timeout')) {
-      return t('network.timeout');
-    }
-    
-    // Validation errors
-    if (error.message.includes('validation')) {
-      return t('validation.required_field');
-    }
-    
-    // Context-specific errors
-    if (context) {
-      const contextKey = `contextual.${context}.${error.name || 'general'}`;
-      const contextMessage = t(contextKey, { defaultValue: '' });
-      if (contextMessage) return contextMessage;
-    }
-    
-    // Fallback
-    return options.fallbackMessage || t('general.something_wrong');
-  };
+  }, [retryCount, options, getEmpatheticMessage, retryOperation]);
 
   return {
     handleError,

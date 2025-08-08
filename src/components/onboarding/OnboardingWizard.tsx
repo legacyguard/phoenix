@@ -123,7 +123,7 @@ export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({ isOpen, onCl
 
     // Priority 1: Document organization based on Q1 and emotional concerns
     if (answers.documentAccess === 'no' || answers.documentAccess === 'partially') {
-      let docTitle = t('dashboard.tasks.documentCentralization.title');
+      const docTitle = t('dashboard.tasks.documentCentralization.title');
       let docDescription = t('dashboard.tasks.documentCentralization.description');
       
       // Personalize based on emotional concern

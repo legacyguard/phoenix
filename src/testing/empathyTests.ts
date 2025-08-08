@@ -173,9 +173,9 @@ describe('Empathetic UX Tests', () => {
 
     test('Celebrations acknowledge emotional significance', () => {
       const celebrations = [
-        'Wonderful! You've taken an important step for your family.',
-        'Great job! Your loved ones will benefit from this.',
-        'You did it! This will bring peace of mind to your family.'
+        "Wonderful! You've taken an important step for your family.",
+        "Great job! Your loved ones will benefit from this.",
+        "You did it! This will bring peace of mind to your family."
       ];
       
       celebrations.forEach(celebration => {
@@ -367,8 +367,43 @@ describe('Emotional Accessibility Tests', () => {
   });
 });
 
+// Type definitions for testing interfaces
+interface EmotionalResponse {
+  warmthScore: number;
+  overwhelmScore: number;
+  trustScore: number;
+  comfortLevel: number;
+  clarityScore: number;
+  pressureLevel: number;
+  supportLevel: number;
+  hasAcknowledgment: boolean;
+  providesReassurance: boolean;
+  frustrationMitigation: number;
+  solutionClarity: number;
+  maintainsConfidence: boolean;
+}
+
+interface AssistantMessage {
+  acknowledgesEmotion: boolean;
+  empathyLevel: number;
+  providesComfort: boolean;
+}
+
+interface EmotionalStateInterface {
+  complexity: number;
+  supportLevel: number;
+  pressureLevel: number;
+  pacing: 'user_controlled' | 'system_controlled';
+}
+
+interface SectionInterface {
+  hasPauseOption: boolean;
+  hasSaveAndContinueLater: boolean;
+  hasEmotionalSupport: boolean;
+}
+
 // Helper functions for testing
-async function measureEmotionalResponse(context: string): Promise<any> {
+async function measureEmotionalResponse(context: string): Promise<EmotionalResponse> {
   // Mock implementation - would measure actual emotional response metrics
   return {
     warmthScore: 9,
@@ -386,7 +421,7 @@ async function measureEmotionalResponse(context: string): Promise<any> {
   };
 }
 
-function getAssistantMessageForContext(context: string): any {
+function getAssistantMessageForContext(context: string): AssistantMessage {
   // Mock implementation
   return {
     acknowledgesEmotion: true,
@@ -395,7 +430,7 @@ function getAssistantMessageForContext(context: string): any {
   };
 }
 
-function getInterfaceForEmotionalState(state: string): any {
+function getInterfaceForEmotionalState(state: string): EmotionalStateInterface {
   // Mock implementation
   return {
     complexity: 3,
@@ -405,7 +440,7 @@ function getInterfaceForEmotionalState(state: string): any {
   };
 }
 
-function getSectionInterface(section: string): any {
+function getSectionInterface(section: string): SectionInterface {
   // Mock implementation
   return {
     hasPauseOption: true,

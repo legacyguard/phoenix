@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Heart, Sparkles, Clock, CheckCircle, AlertCircle, Coffee, Users, Shield, FileCheck, TrendingUp, Briefcase } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -34,14 +34,31 @@ export interface PersonalizedRecommendation {
   personalContext?: string;
 }
 
+// Types for next objective and onboarding answers
+interface NextObjective {
+  type?: string;
+  title?: string;
+  description?: string;
+  actionUrl?: string;
+  estimatedTime?: string;
+}
+
+interface OnboardingAnswers {
+  familyDependency?: 'spouse_children' | 'family_would_struggle' | string;
+  preparednessLevel?: 'not_sure' | 'know_but_scattered' | string;
+  familyVulnerability?: 'documents_passwords' | 'financial_situation' | string;
+  primaryResponsibility?: 'aging_parents' | 'business_family' | 'family_security' | string;
+  [key: string]: unknown; // Allow for additional fields
+}
+
 interface EnhancedPersonalAssistantProps {
   currentPage: string;
   contextData: {
     completionScore?: number;
     currentStage?: string;
-    nextObjective?: any;
+    nextObjective?: NextObjective;
     criticalGaps?: string[];
-    onboardingAnswers?: any;
+    onboardingAnswers?: OnboardingAnswers;
     tasks?: TaskItem[];
   };
   className?: string;
@@ -66,7 +83,7 @@ export const EnhancedPersonalAssistant: React.FC<EnhancedPersonalAssistantProps>
   const [suggestions, setSuggestions] = useState<PersonalizedRecommendation[]>([]);
   const [isTyping, setIsTyping] = useState(false);
 
-  const generatePersonalizedMessage = (): EnhancedMessage => {
+  const generatePersonalizedMessage = useCallback((): EnhancedMessage => {
     const { completionScore = 0, tasks = [], onboardingAnswers } = contextData;
     
     // Default message
@@ -164,9 +181,9 @@ export const EnhancedPersonalAssistant: React.FC<EnhancedPersonalAssistantProps>
     }
 
     return message;
-  };
+  }, [contextData, t, updateEmotionalState]);
 
-  const generatePersonalizedSuggestions = (): PersonalizedRecommendation[] => {
+  const generatePersonalizedSuggestions = useCallback((): PersonalizedRecommendation[] => {
     const { tasks = [], onboardingAnswers } = contextData;
     const suggestions: PersonalizedRecommendation[] = [];
 
@@ -256,7 +273,7 @@ export const EnhancedPersonalAssistant: React.FC<EnhancedPersonalAssistantProps>
       const priorityOrder = { high: 3, medium: 2, low: 1 };
       return priorityOrder[b.priority] - priorityOrder[a.priority];
     }).slice(0, 3); // Show top 3 suggestions
-  };
+  }, [contextData]);
 
   useEffect(() => {
     updateContext(currentPage);
@@ -270,7 +287,7 @@ export const EnhancedPersonalAssistant: React.FC<EnhancedPersonalAssistantProps>
     }, 800);
 
     return () => clearTimeout(timer);
-  }, [currentPage, contextData]);
+  }, [currentPage, contextData, updateContext, generatePersonalizedMessage, generatePersonalizedSuggestions]);
 
   const getEmotionalIcon = () => {
     switch (emotionalState) {

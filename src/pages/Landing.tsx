@@ -109,7 +109,7 @@ export const Landing: React.FC = () => {
         </div>
       </section>
 
-      {/* Pain Points Section */>
+      {/* Pain Points Section */}
       <PainPoints />
 
       {/* Emotional Validation Section */}

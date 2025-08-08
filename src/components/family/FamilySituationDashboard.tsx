@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useAuth } from '@clerk/clerk-react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
@@ -81,11 +81,7 @@ export const FamilySituationDashboard: React.FC<FamilySituationDashboardProps> =
   const [activeTab, setActiveTab] = useState('overview');
   const [showCulturalSetup, setShowCulturalSetup] = useState(false);
 
-  useEffect(() => {
-    analyzeFamilySituation();
-  }, [familyData, userPreferences, culturalContext]);
-
-  const analyzeFamilySituation = () => {
+  const analyzeFamilySituation = useCallback(() => {
     const situation = FamilySituationAnalysisService.analyzeFamilySituation(
       familyData,
       userPreferences,
@@ -103,7 +99,11 @@ export const FamilySituationDashboard: React.FC<FamilySituationDashboardProps> =
     if (userId) {
       FamilySituationAnalysisService.saveFamilySituation(userId, situation, generatedInsights);
     }
-  };
+  }, [familyData, userPreferences, culturalContext, userId]);
+
+  useEffect(() => {
+    analyzeFamilySituation();
+  }, [analyzeFamilySituation]);
 
   const handleCulturalUpdate = (newContext: CulturalContext) => {
     onUpdateCulturalContext?.(newContext);

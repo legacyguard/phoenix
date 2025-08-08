@@ -512,15 +512,96 @@ async function checkEmotionalResponseTracking(): Promise<boolean> { return true;
 async function checkSuccessMetrics(): Promise<boolean> { return true; }
 async function checkRealTimeMonitoring(): Promise<boolean> { return true; }
 
-function calculateAssistantEmpathyScore(checks: any): number { return 8.5; }
-function calculateAssistantFamilyFocusScore(checks: any): number { return 9.0; }
-function calculateLanguageEmpathyScore(checks: any): number { return 8.8; }
-function calculateLanguageFamilyFocusScore(checks: any): number { return 9.2; }
-function calculateProgressiveDisclosureScore(checks: any): number { return 8.0; }
-function calculateEmotionalSupportScore(checks: any): number { return 9.0; }
-function calculateCelebrationEmpathyScore(checks: any): number { return 8.5; }
-function calculateCelebrationFamilyFocusScore(checks: any): number { return 8.8; }
-function calculateSmartSuggestionsFamilyScore(checks: any): number { return 8.5; }
-function calculateLifeEventEmpathyScore(checks: any): number { return 9.2; }
-function calculateFamilyAwarenessFocusScore(checks: any): number { return 9.5; }
-function calculateErrorHandlingEmpathyScore(checks: any): number { return 8.0; }
+// Type definitions for integration check results
+interface AssistantChecks {
+  presenceOnAllPages: boolean;
+  contextualAdaptation: boolean;
+  emotionalIntelligence: boolean;
+  personalizedSuggestions: boolean;
+  consistentPersonality: boolean;
+}
+
+interface LanguageChecks {
+  noTechnicalJargon: boolean;
+  familyFocusedCTAs: boolean;
+  empathyInErrors: boolean;
+  conversationalTone: boolean;
+  supportiveLanguage: boolean;
+}
+
+interface ProgressiveDisclosureChecks {
+  complexityReduction: boolean;
+  stepByStepGuidance: boolean;
+  informationHiding: boolean;
+  contextualReveal: boolean;
+  userControlledPacing: boolean;
+}
+
+interface EmotionalSupportChecks {
+  emotionalCheckpoints: boolean;
+  supportiveFeedback: boolean;
+  empathyInDifficultMoments: boolean;
+  stressReduction: boolean;
+  emotionalOffRamps: boolean;
+}
+
+interface CelebrationChecks {
+  milestoneCelebrations: boolean;
+  progressAcknowledgment: boolean;
+  familyImpactHighlight: boolean;
+  encouragementMessages: boolean;
+  visualCelebrations: boolean;
+}
+
+interface SmartSuggestionsChecks {
+  contextualSuggestions: boolean;
+  familySituationBased: boolean;
+  prioritization: boolean;
+  nonOverwhelming: boolean;
+  actionability: boolean;
+}
+
+interface LifeEventChecks {
+  eventDetection: boolean;
+  timelyNotifications: boolean;
+  relevantUpdates: boolean;
+  sensitiveApproach: boolean;
+  familyContextual: boolean;
+}
+
+interface FamilyAwarenessChecks {
+  situationDetection: boolean;
+  interfaceAdaptation: boolean;
+  relevantContent: boolean;
+  priorityAdjustment: boolean;
+  culturalSensitivity: boolean;
+}
+
+interface ErrorHandlingChecks {
+  empathyInErrors: boolean;
+  solutionFocused: boolean;
+  emotionalSupport: boolean;
+  progressiveRecovery: boolean;
+  noDataLossAssurance: boolean;
+}
+
+interface MetricsTrackingChecks {
+  empathyMetrics: boolean;
+  familyFocusMetrics: boolean;
+  emotionalResponseTracking: boolean;
+  successMetrics: boolean;
+  realTimeMonitoring: boolean;
+}
+
+function calculateAssistantEmpathyScore(checks: AssistantChecks): number { return 8.5; }
+function calculateAssistantFamilyFocusScore(checks: AssistantChecks): number { return 9.0; }
+function calculateLanguageEmpathyScore(checks: LanguageChecks): number { return 8.8; }
+function calculateLanguageFamilyFocusScore(checks: LanguageChecks): number { return 9.2; }
+function calculateProgressiveDisclosureScore(checks: ProgressiveDisclosureChecks): number { return 8.0; }
+function calculateEmotionalSupportScore(checks: EmotionalSupportChecks): number { return 9.0; }
+function calculateCelebrationEmpathyScore(checks: CelebrationChecks): number { return 8.5; }
+function calculateCelebrationFamilyFocusScore(checks: CelebrationChecks): number { return 8.8; }
+function calculateSmartSuggestionsFamilyScore(checks: SmartSuggestionsChecks): number { return 8.5; }
+function calculateLifeEventEmpathyScore(checks: LifeEventChecks): number { return 9.2; }
+function calculateFamilyAwarenessFocusScore(checks: FamilyAwarenessChecks): number { return 9.5; }
+function calculateErrorHandlingEmpathyScore(checks: ErrorHandlingChecks): number { return 8.0; }

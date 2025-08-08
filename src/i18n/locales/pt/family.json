@@ -1,4 +1,45 @@
 {
+  "access": {
+    "descriptions": {
+      "emergency": "They can help your family only in emergencies",
+      "executor": "They can manage everything to help your family",
+      "full": "They can see and manage all your family's information",
+      "limited": "They can see basic contact info and emergency instructions",
+      "standard": "They can see most of what your family would need"
+    },
+    "levels": {
+      "emergency": "Only in Emergencies",
+      "executor": "Full Helper Access",
+      "full": "Can See Everything",
+      "limited": "Basic Information Only",
+      "standard": "Regular Family Access"
+    },
+    "permissions": {
+      "editInformation": "Can Make Changes",
+      "emergencyOverride": "Emergency Access Rights",
+      "manageAccess": "Can Manage Other Helpers",
+      "receiveNotifications": "Gets Important Updates",
+      "viewAssets": "Can See Your Important Things",
+      "viewContacts": "Can See Contact Information",
+      "viewDocuments": "Can Read Documents"
+    }
+  },
+  "actions": {
+    "addPerson": "Add Someone You Trust",
+    "assignRole": "Give Them a Role",
+    "contactPerson": "Get in Touch",
+    "editPerson": "Update Their Information",
+    "exportContacts": "Download Contact List",
+    "grantAccess": "Let Them Help Your Family",
+    "printSummary": "Print This for Your Records",
+    "removePerson": "Remove from Your Support Team",
+    "removeRole": "Change Their Role",
+    "revokeAccess": "Limit What They Can See",
+    "scheduleReview": "Plan to Talk About This",
+    "sendInvitation": "Invite Them to Help",
+    "setBackup": "Make Them a Backup Helper",
+    "viewProfile": "See All Their Details"
+  },
   "beneficiaryCommunications": {
     "actions": {
       "cancel": "[PT] Cancel",
@@ -42,6 +83,16 @@
     "fix": "[PT] Fix",
     "minutes": "[PT] Minutes",
     "start": "[PT] Start"
+  },
+  "communication": {
+    "direct": "Direct & Clear",
+    "directDesc": "Straightforward communication that gets to the point quickly",
+    "gentle": "Gentle & Supportive",
+    "gentleDesc": "Careful, empathetic communication that acknowledges sensitivities",
+    "detailed": "Detailed & Comprehensive",
+    "detailedDesc": "Thorough explanations with all the important details",
+    "simplified": "Simplified & Essential",
+    "simplifiedDesc": "Focus on the most important information without overwhelming detail"
   },
   "crisisAssessment": {
     "criticalVulnerabilities": "[PT] Critical vulnerabilities",
@@ -398,6 +449,43 @@
     },
     "use_these_tools_to_ensure_your_1": "[PT] Use these tools to ensure your 1"
   },
+  "form": {
+    "accessDescription": "What they can see and when they can help",
+    "accessInfo": "What They Can Do",
+    "accessLevel": "How Much They Can See",
+    "addPerson": "Add Someone to Help",
+    "additionalRoles": "Other Ways They Can Help",
+    "alternatePhone": "Another Phone Number",
+    "assignedRoles": "How They'll Help Your Family",
+    "backupFor": "They're a Backup For",
+    "backupHelper": "Who they'll step in for if needed",
+    "capabilities": "Why They're Right for This",
+    "capabilitiesHelper": "What makes them a good choice to help?",
+    "compensation": "If They Need Support",
+    "compensationHelper": "Any financial help they might need",
+    "contactInfo": "How to Reach Them",
+    "dateOfBirth": "Birthday",
+    "editPerson": "Update Their Information",
+    "emailAddress": "Email",
+    "emergencyContact": "Who to Call for Them",
+    "fullName": "Their Full Name",
+    "fullNameHelper": "Use their legal name for important documents",
+    "fullNamePlaceholder": "Their complete legal name",
+    "homeAddress": "Where They Live",
+    "instructions": "Important Things They Should Know",
+    "instructionsHelper": "Any special guidance for helping your family",
+    "instructionsPlaceholder": "What they need to know to help",
+    "limitations": "Things to Be Aware Of",
+    "limitationsHelper": "Anything that might make it hard for them to help",
+    "personalInfo": "About Them",
+    "primaryPhone": "Best Phone Number",
+    "primaryRole": "Main Way They'll Help",
+    "relationship": "How You Know Them",
+    "relationshipPlaceholder": "Like Spouse, Child, Brother/Sister, Best Friend",
+    "roleInfo": "How They'll Help",
+    "selectRoles": "Pick how they can help your family",
+    "workAddress": "Where They Work"
+  },
   "guardian": {
     "templateModal": {
       "_1": "[PT] 1"
@@ -464,6 +552,30 @@
     "subtitle": "[PT] Subtitle",
     "title": "[PT] Title"
   },
+  "guardianship": {
+    "addDependent": "Add Someone Who Needs Care",
+    "alternateGuardian": "Backup Caregiver",
+    "careStandards": "How You Want Them Cared For",
+    "childGuardians": "Who Will Care for Your Children",
+    "dependentCare": "Care Plans for Your Loved Ones",
+    "description": "Choose loving people who will care for your children or family members who need help if you can't be there.",
+    "educationPreferences": "School and Education Wishes",
+    "financialProvisions": "Money for Their Care",
+    "guardianCompensation": "Support for the Caregiver",
+    "guardianFor": "Who Will Care for {{name}}",
+    "guardianInstructions": "How to Care for Them",
+    "guardianQualifications": "Why They're the Right Choice",
+    "healthcarePreferences": "Health and Medical Care",
+    "lifestylePreferences": "Daily Life and Activities",
+    "noChildren": "You haven't told us about any children or family members who need care yet.",
+    "primaryGuardian": "First Choice Caregiver",
+    "religiousPreferences": "Faith and Values",
+    "reportingRequirements": "Keeping Family Updated",
+    "subtitle": "Making sure your loved ones are cared for",
+    "temporaryGuardian": "Short-Term Caregiver",
+    "title": "Who Will Care for Your Loved Ones",
+    "visitationRights": "Family Visiting Arrangements"
+  },
   "manual": {
     "contacts": {
       "form": {
@@ -505,6 +617,18 @@
     "noContacts": "[PT] No contacts",
     "noEmail": "[PT] No email",
     "title": "[PT] Title"
+  },
+  "notifications": {
+    "accessGranted": "{{name}} can now help your family",
+    "accessRevoked": "{{name}}'s access has been updated",
+    "invitationAccepted": "Great news! {{name}} is ready to help",
+    "invitationSent": "We've invited {{name}} to join your support team",
+    "personAdded": "{{name}} is now part of your family's support team",
+    "personRemoved": "{{name}} is no longer on your support team",
+    "personUpdated": "We've updated {{name}}'s information",
+    "reviewScheduled": "You'll meet with {{name}} to discuss family plans",
+    "roleAssigned": "{{name}} can now help as your {{role}}",
+    "roleRemoved": "{{name}} no longer serves as {{role}}"
   },
   "playbook": {
     "addContact": "[PT] Add contact",
@@ -679,5 +803,421 @@
     "parent": "[PT] Parent",
     "sibling": "[PT] Sibling",
     "spouse": "[PT] Spouse"
-  }
+  },
+  "roles": {
+    "advisor": "Someone Who Gives Advice",
+    "beneficiary": "Will Receive Something",
+    "caregiver": "Can Care for Family Members",
+    "emergencyContact": "First Person to Call",
+    "executor": "Will Handle Everything",
+    "financialAgent": "Can Manage Money Matters",
+    "guardian": "Will Care for Children",
+    "healthcareProxy": "Can Make Medical Decisions",
+    "representative": "Can Act on Your Behalf",
+    "successor": "Backup Helper",
+    "trustee": "Manages Family Trust",
+    "witness": "Witnessed Your Will"
+  },
+  "trustedCircle": {
+    "addFirst": "Add Someone Who Can Help",
+    "description": "Choose people who can support your family when they need it most. These are the people your loved ones can turn to.",
+    "emergencyContacts": "People to Call First",
+    "empty": "Let's start by adding someone your family can rely on - maybe your spouse, a close friend, or a trusted family member.",
+    "keyPeople": "Your Most Important Helpers",
+    "recentlyAdded": "Recently Added",
+    "roles": "How They Can Help",
+    "subtitle": "People who will be there for your family",
+    "title": "Your Family's Support Team",
+    "totalMembers": "{{count}} People Ready to Help",
+    "viewAll": "See Everyone"
+  },
+  "family.GuardianPlaybook.className.flex_itemscenter_justifycenter_h64": "flex items-center justify-center h-64",
+  "family.GuardianPlaybook.className.grid_gridcols6_wfull": "grid grid-cols-6 w-full",
+  "family.GuardianPlaybook.className.flex_itemscenter_gap2": "flex items-center gap-2",
+  "family.GuardianPlaybook.className.hidden_sminline": "hidden sm:inline",
+  "family.GuardianPlaybook.className.spacey4": "space-y-4",
+  "family.GuardianPlaybook.htmlFor.funeral_wishes": "funeral_wishes",
+  "family.GuardianPlaybook.id.funeral_wishes": "funeral_wishes",
+  "family.GuardianPlaybook.className.minh200px": "min-h-[200px]",
+  "family.GuardianPlaybook.htmlFor.digital_accounts": "digital_accounts",
+  "family.GuardianPlaybook.id.digital_accounts": "digital_accounts",
+  "family.GuardianPlaybook.className.flex_justifybetween_itemscenter_mb4": "flex justify-between items-center mb-4",
+  "family.GuardianPlaybook.className.grid_gridcols1_mdgridcols2_gap4": "grid grid-cols-1 md:grid-cols-2 gap-4",
+  "family.GuardianPlaybook.className.mdcolspan2": "md:col-span-2",
+  "family.GuardianPlaybook.className.minh80px": "min-h-[80px]",
+  "family.GuardianPlaybook.className.mt2": "mt-2",
+  "family.GuardianPlaybook.htmlFor.document_locations": "document_locations",
+  "family.GuardianPlaybook.id.document_locations": "document_locations",
+  "family.GuardianPlaybook.htmlFor.personal_messages": "personal_messages",
+  "family.GuardianPlaybook.id.personal_messages": "personal_messages",
+  "family.GuardianPlaybook.htmlFor.practical_instructions": "practical_instructions",
+  "family.GuardianPlaybook.id.practical_instructions": "practical_instructions",
+  "family.GuardianPlaybook.className.flex_itemscenter_justifybetween": "flex items-center justify-between",
+  "family.GuardianPlaybook.playbooktabskey": "family.tabs.${key}",
+  "family.GuardianPlaybook.contactnameindex": "contact-name-${index}",
+  "family.GuardianPlaybook.contactrelationshipindex": "contact-relationship-${index}",
+  "family.GuardianPlaybook.contactphoneindex": "contact-phone-${index}",
+  "family.GuardianPlaybook.contactemailindex": "contact-email-${index}",
+  "family.GuardianPlaybook.contactnotesindex": "contact-notes-${index}",
+  "family.GuardianPlaybook.playbookstatusstatus": "family.status.${status}",
+  "family.GuardianPlaybookView.className.minhscreen_flex_itemscenter_justifycenter": "min-h-screen flex items-center justify-center",
+  "family.GuardianPlaybookView.className.animatepulse_textcenter": "animate-pulse text-center",
+  "family.GuardianPlaybookView.className.maxwmd": "max-w-md",
+  "family.GuardianPlaybookView.className.minhscreen_bggradienttobr_frombackground_tomuted20": "min-h-screen bg-gradient-to-br from-background to-muted/20",
+  "family.GuardianPlaybookView.className.container_mxauto_px4_py8_maxw4xl": "container mx-auto px-4 py-8 max-w-4xl",
+  "family.GuardianPlaybookView.className.flex_itemscenter_justifycenter_w20_h20_roundedfull": "flex items-center justify-center w-20 h-20 rounded-full bg-primary/10 mx-auto mb-4",
+  "family.GuardianPlaybookView.className.mt4": "mt-4",
+  "family.GuardianPlaybookView.className.mb8": "mb-8",
+  "family.GuardianPlaybookView.className.flex_itemscenter_gap2": "flex items-center gap-2",
+  "family.GuardianPlaybookView.className.grid_gap4_mdgridcols2": "grid gap-4 md:grid-cols-2",
+  "family.GuardianPlaybookView.className.spacey2": "space-y-2",
+  "family.GuardianPlaybookView.className.flex_itemsstart_justifybetween": "flex items-start justify-between",
+  "family.GuardianPlaybookView.className.fontsemibold": "font-semibold",
+  "family.GuardianPlaybookView.className.spacey1": "space-y-1",
+  "family.GuardianPlaybookView.className.flex_itemscenter_gap2_textsm_textprimary_hoverunde": "flex items-center gap-2 text-sm text-primary hover:underline",
+  "family.GuardianPlaybookView.className.spacey6": "space-y-6",
+  "family.GuardianPlaybookView.className.prose_prosesm_maxwnone": "prose prose-sm max-w-none",
+  "family.GuardianPlaybookView.className.whitespaceprewrap": "whitespace-pre-wrap",
+  "family.GuardianPlaybookView.className.mt12_textcenter_textsm_textmutedforeground": "mt-12 text-center text-sm text-muted-foreground",
+  "family.GuardianPlaybookView.telcontactphone": "tel:${contact.phone}",
+  "family.GuardianPlaybookView.mailtocontactemail": "mailto:${contact.email}",
+  "guardianUpload": {
+    "addButton": "Add button",
+    "addTitle": "Add title",
+    "added": "Added",
+    "countryDescription": "Country description",
+    "countryLabel": "Country label",
+    "countryPlaceholder": "Country placeholder",
+    "description": "Description",
+    "editTitle": "Edit title",
+    "emailLabel": "Email label",
+    "emailPlaceholder": "Email placeholder",
+    "error": "Error",
+    "errors": {
+      "connectionError": "Connection error",
+      "duplicateError": "Duplicate error",
+      "permissionError": "Permission error",
+      "requiredDataNotFound": "Required data not found",
+      "saveError": "Save error",
+      "unknownError": "Unknown error"
+    },
+    "fullNameLabel": "Full name label",
+    "fullNamePlaceholder": "Full name placeholder",
+    "loginToSave": "Login to save",
+    "phoneLabel": "Phone label",
+    "phonePlaceholder": "Phone placeholder",
+    "relationshipLabel": "Relationship label",
+    "relationshipPlaceholder": "Relationship placeholder",
+    "relationships": {
+      "child": "Child",
+      "friend": "Friend",
+      "legalProfessional": "Legal professional",
+      "other": "Other",
+      "parent": "Parent",
+      "sibling": "Sibling",
+      "spouse": "Spouse"
+    },
+    "roles": {
+      "emergencyContact": "Emergency contact",
+      "executorOfWill": "Executor of will",
+      "financialPowerOfAttorney": "Financial power of attorney",
+      "guardianForChildren": "Guardian for children",
+      "healthcareProxy": "Healthcare proxy",
+      "trustee": "Trustee"
+    },
+    "rolesTitle": "Roles title",
+    "saving": "Saving",
+    "success": "Success",
+    "updateButton": "Update button",
+    "updated": "Updated"
+  },
+  "executor": {
+    "completed": "Completed",
+    "dashboard": {
+      "reminder": "Reminder",
+      "subtitle": "Subtitle",
+      "title": "Title"
+    },
+    "due": "Due",
+    "errors": {
+      "loadTasksFailed": "Load tasks failed",
+      "updateTaskFailed": "Update task failed"
+    },
+    "highPriority": "High priority",
+    "legalSupport": {
+      "button": "Button",
+      "description": "Description",
+      "title": "Title"
+    },
+    "markComplete": "Mark complete",
+    "sections": {
+      "firstWeek": {
+        "description": "Description",
+        "empty": "Empty",
+        "title": "Title"
+      },
+      "immediate": {
+        "description": "Description",
+        "empty": "Empty",
+        "title": "Title"
+      },
+      "ongoing": {
+        "description": "Description",
+        "empty": "Empty",
+        "title": "Title"
+      }
+    },
+    "stats": {
+      "completed": "Completed",
+      "remaining": "Remaining",
+      "totalTasks": "Total tasks"
+    },
+    "undo": "Undo",
+    "viewAccountDetails": "View account details",
+    "viewRelatedDocuments": "View related documents"
+  },
+  "executorDashboard": {
+    "professional_guidance_1": "Professional guidance 1"
+  },
+  "executorManagement": {
+    "add_new_executor_10": "Add new executor 10",
+    "all_executors_must_have_legacy_23": "All executors must have legacy 23",
+    "current_executors_17": "Current executors 17",
+    "designate_trusted_individuals__9": "Designate trusted individuals  9",
+    "email_address_11": "Email address 11",
+    "emergency_contact_16": "Emergency contact 16",
+    "emergency_contacts_are_notifie_22": "Emergency contacts are notifie 22",
+    "executor_example_com_12": "Executor example com 12",
+    "executor_management_8": "Executor management 8",
+    "failed_to_add_executor_5": "Failed to add executor 5",
+    "failed_to_load_executors_2": "Failed to load executors 2",
+    "failed_to_remove_executor_6": "Failed to remove executor 6",
+    "important_information_19": "Important information 19",
+    "loading_executors_7": "Loading executors 7",
+    "no_executors_designated_yet_ad_18": "No executors designated yet ad 18",
+    "primary_executor_14": "Primary executor 14",
+    "primary_executors_receive_imme_20": "Primary executors receive imme 20",
+    "relationship_type_13": "Relationship type 13",
+    "secondary_executor_15": "Secondary executor 15",
+    "secondary_executors_are_notifi_21": "Secondary executors are notifi 21",
+    "statusLabels": {
+      "addExecutor": "Add executor",
+      "adding": "Adding",
+      "unknownUser": "Unknown user"
+    },
+    "successMessages": {
+      "executorAdded": "Executor added",
+      "executorRemoved": "Executor removed"
+    },
+    "this_person_is_already_designa_4": "This person is already designa 4",
+    "user_not_found_with_this_email_3": "User not found with this email 3"
+  },
+  "invite": {
+    "title": "Title"
+  },
+  "inviteAcceptance": {
+    "buttons": {
+      "acceptRole": "Accept role",
+      "decline": "Decline",
+      "processing": "Processing"
+    },
+    "defaultInviterName": "Default inviter name",
+    "disclaimer": "Disclaimer",
+    "errors": {
+      "acceptFailed": "Accept failed",
+      "alreadyProcessed": "Already processed",
+      "declineFailed": "Decline failed",
+      "invalidLink": "Invalid link",
+      "loadingFailed": "Loading failed",
+      "notFound": "Not found"
+    },
+    "guardianRole": {
+      "relationship": "Relationship",
+      "responsibilities": "Responsibilities",
+      "title": "Title",
+      "yourName": "Your name"
+    },
+    "loading": "Loading",
+    "messages": {
+      "accepted": "Accepted",
+      "declined": "Declined"
+    },
+    "notFound": {
+      "description": "Description",
+      "title": "Title"
+    },
+    "subtitle": "Subtitle",
+    "whatThisMeans": {
+      "point1": "Point1",
+      "point2": "Point2",
+      "point3": "Point3",
+      "point4": "Point4",
+      "title": "Title"
+    }
+  },
+  "preservationMode": {
+    "lastReviewDate": "Last review date",
+    "latestUpdates": "Latest updates",
+    "startAnnualCheck": "Start annual check"
+  },
+  "structures": {
+    "nuclear": "Traditional Family",
+    "single_parent": "Single Parent Family",
+    "blended": "Blended Family",
+    "multigenerational": "Multi-Generational Family",
+    "childless": "Couple Without Children",
+    "empty_nest": "Empty Nest Family",
+    "non_traditional": "Unique Family Structure"
+  },
+  "complexity": {
+    "simple": "Simple",
+    "moderate": "Moderate",
+    "complex": "Complex"
+  },
+  "personalized": "Your personalized family planning experience",
+  "familyMembers": "Family Members",
+  "specialConsiderations": "Special Considerations",
+  "recommendedFeatures": "Recommended Features",
+  "tabs": {
+    "overview": "Overview",
+    "insights": "Insights",
+    "features": "Features",
+    "cultural": "Cultural"
+  },
+  "keyConsiderations": "Key Considerations for Your Family",
+  "specialNeeds": "Special Planning Needs",
+  "sensitivities": "Areas Requiring Extra Care",
+  "sensitivity": {
+    "step_family_dynamics": "Step-family relationships need clear documentation",
+    "previous_marriage_obligations": "Previous marriage obligations must be addressed",
+    "absent_parent_considerations": "Absent parent situations require careful planning",
+    "solo_responsibility_pressure": "Single parent responsibilities can feel overwhelming",
+    "family_conflict": "Family conflicts require extra clarity in planning",
+    "inheritance_disputes": "Potential inheritance disputes need prevention",
+    "traditional_role_expectations": "Traditional family roles may need consideration",
+    "disability_planning_stress": "Special needs planning can be emotionally challenging",
+    "long_term_care_concerns": "Long-term care planning is essential"
+  },
+  "needs": {
+    "special_needs_planning": "Special Needs Planning",
+    "long_term_care_planning": "Long-Term Care Planning",
+    "special_needs_trust": "Special Needs Trust",
+    "elder_care_planning": "Elder Care Planning",
+    "multi_generational_wealth_transfer": "Multi-Generational Transfer",
+    "military_benefit_planning": "Military Benefits",
+    "deployment_planning": "Deployment Planning",
+    "business_succession": "Business Succession",
+    "key_person_planning": "Key Person Planning",
+    "young_child_guardianship": "Young Child Guardianship",
+    "education_planning": "Education Planning",
+    "sharia_compliant_planning": "Sharia-Compliant Planning"
+  },
+  "insightType": {
+    "structure": "Family Structure",
+    "need": "Special Need",
+    "opportunity": "Opportunity",
+    "risk": "Risk Factor"
+  },
+  "priority": {
+    "high": "High Priority",
+    "medium": "Medium Priority",
+    "low": "Low Priority"
+  },
+  "suggestedActions": "Suggested Actions",
+  "recommendedFeaturesTitle": "Features Tailored for Your Family",
+  "recommendedFeaturesDesc": "Based on your family structure and needs, these features will be most helpful",
+  "features": {
+    "family_communication_center": {
+      "title": "Family Communication Center",
+      "description": "Keep everyone informed and connected"
+    },
+    "document_vault": {
+      "title": "Secure Document Vault",
+      "description": "Store and share important documents safely"
+    },
+    "guardian_network_builder": {
+      "title": "Guardian Network Builder",
+      "description": "Build a strong support network for your children"
+    },
+    "emergency_contact_system": {
+      "title": "Emergency Contact System",
+      "description": "Quick access to critical contacts when needed"
+    },
+    "single_parent_resources": {
+      "title": "Single Parent Resources",
+      "description": "Specialized tools and support for solo parents"
+    },
+    "complex_beneficiary_manager": {
+      "title": "Complex Beneficiary Manager",
+      "description": "Handle multiple relationships with clarity"
+    },
+    "family_tree_visualizer": {
+      "title": "Family Tree Visualizer",
+      "description": "Map complex family relationships visually"
+    },
+    "step_family_guidance": {
+      "title": "Step-Family Guidance",
+      "description": "Navigate blended family planning with confidence"
+    },
+    "multi_generation_planner": {
+      "title": "Multi-Generation Planner",
+      "description": "Balance needs across all generations"
+    },
+    "elder_care_resources": {
+      "title": "Elder Care Resources",
+      "description": "Support for caring for aging parents"
+    },
+    "family_meeting_tools": {
+      "title": "Family Meeting Tools",
+      "description": "Facilitate important family discussions"
+    },
+    "special_needs_trust_wizard": {
+      "title": "Special Needs Trust Wizard",
+      "description": "Create proper trusts for special needs members"
+    },
+    "care_instruction_builder": {
+      "title": "Care Instruction Builder",
+      "description": "Document detailed care requirements"
+    },
+    "government_benefit_tracker": {
+      "title": "Government Benefit Tracker",
+      "description": "Ensure eligibility for important benefits"
+    },
+    "business_succession_planner": {
+      "title": "Business Succession Planner",
+      "description": "Plan for business continuity"
+    },
+    "buy_sell_agreement_tracker": {
+      "title": "Buy-Sell Agreement Tracker",
+      "description": "Manage business partnership agreements"
+    },
+    "remote_collaboration_tools": {
+      "title": "Remote Collaboration Tools",
+      "description": "Work together despite distance"
+    },
+    "multi_jurisdiction_guidance": {
+      "title": "Multi-Jurisdiction Guidance",
+      "description": "Navigate laws across different locations"
+    }
+  },
+  "communicationStyle": "Communication Approach",
+  "culturalConsiderations": "Cultural & Religious Considerations",
+  "culturalDesc": "Honor your family's values and traditions in your planning",
+  "cultural": {
+    "islamic_inheritance": "Islamic inheritance principles",
+    "jewish_traditions": "Jewish family traditions",
+    "christian_values": "Christian stewardship values",
+    "buddhist_principles": "Buddhist compassion principles",
+    "patriarchal_hierarchy": "Traditional patriarchal structure",
+    "matriarchal_hierarchy": "Traditional matriarchal structure",
+    "elder_led_hierarchy": "Elder-led family structure",
+    "collective_decision_making": "Collective family decisions",
+    "extended_family_obligations": "Extended family responsibilities",
+    "elder_respect_obligations": "Elder care obligations",
+    "multilingual_documentation": "Multi-language documentation needs"
+  },
+  "noCulturalSettings": "No cultural preferences have been set. Add them to ensure your planning respects your family's values.",
+  "configureCultural": "Configure Cultural Preferences",
+  "culturalUpdated": "Cultural Preferences Updated",
+  "culturalUpdatedDesc": "Your family planning will now reflect your cultural values and traditions"
 }

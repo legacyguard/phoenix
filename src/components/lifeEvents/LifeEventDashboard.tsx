@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useAuth } from '@clerk/clerk-react';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -54,14 +54,7 @@ export const LifeEventDashboard: React.FC = () => {
     completionRate: 0
   });
 
-  useEffect(() => {
-    if (userId) {
-      loadLifeEvents();
-      loadStats();
-    }
-  }, [userId]);
-
-  const loadLifeEvents = async () => {
+  const loadLifeEvents = useCallback(async () => {
     if (!userId) return;
     
     setLoading(true);
@@ -78,9 +71,9 @@ export const LifeEventDashboard: React.FC = () => {
     } finally {
       setLoading(false);
     }
-  };
+  }, [userId, t, toast]);
 
-  const loadStats = async () => {
+  const loadStats = useCallback(async () => {
     if (!userId) return;
     
     try {
@@ -95,7 +88,14 @@ export const LifeEventDashboard: React.FC = () => {
     } catch (error) {
       console.error('Error loading stats:', error);
     }
-  };
+  }, [userId]);
+
+  useEffect(() => {
+    if (userId) {
+      loadLifeEvents();
+      loadStats();
+    }
+  }, [userId, loadLifeEvents, loadStats]);
 
   const handleEventDismiss = (eventId: string) => {
     setActiveEvents(events => events.filter(e => e.id !== eventId));

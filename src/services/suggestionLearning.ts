@@ -10,12 +10,19 @@ interface SuggestionFeedback {
   contextWhenShown: string;
 }
 
+// User profile interface for suggestion matching
+interface UserProfile {
+  familyComposition: string;
+  engagementLevel: string;
+  [key: string]: unknown; // Allow for additional profile fields
+}
+
 interface SuggestionPattern {
   pattern: string;
   successRate: number;
   averageTimeToAccept: number;
   bestContexts: string[];
-  userProfileMatch: any;
+  userProfileMatch: UserProfile;
 }
 
 class SuggestionLearningService {
@@ -79,7 +86,7 @@ class SuggestionLearningService {
   // Get suggestion improvements based on patterns
   getSuggestionImprovements(
     suggestionType: string,
-    userProfile: any
+    userProfile: UserProfile
   ): {
     shouldShow: boolean;
     optimalContext: string;
@@ -114,10 +121,10 @@ class SuggestionLearningService {
   }
   
   // Get personalized suggestion ranking
-  rankSuggestions(
-    suggestions: any[],
-    userProfile: any
-  ): any[] {
+  rankSuggestions<T extends { type: string; priority: 'high' | 'medium' | 'low' }>(
+    suggestions: T[],
+    userProfile: UserProfile
+  ): T[] {
     return suggestions.sort((a, b) => {
       const aPattern = this.patterns.get(`${a.type}_${userProfile.familyComposition}`);
       const bPattern = this.patterns.get(`${b.type}_${userProfile.familyComposition}`);
@@ -135,7 +142,7 @@ class SuggestionLearningService {
   }
   
   // Identify successful patterns for similar users
-  getSimilarUserPatterns(userProfile: any): SuggestionPattern[] {
+  getSimilarUserPatterns(userProfile: UserProfile): SuggestionPattern[] {
     const similarPatterns: SuggestionPattern[] = [];
     
     this.patterns.forEach(pattern => {
@@ -154,7 +161,7 @@ class SuggestionLearningService {
   }
   
   // Calculate similarity between user profiles
-  private calculateProfileSimilarity(profile1: any, profile2: any): number {
+  private calculateProfileSimilarity(profile1: UserProfile, profile2: UserProfile): number {
     let matchScore = 0;
     let totalFactors = 0;
     
@@ -193,7 +200,9 @@ class SuggestionLearningService {
     topPerformingSuggestions: string[];
     worstPerformingSuggestions: string[];
     bestUserProfiles: string[];
-    optimalTimings: any;
+    optimalTimings: {
+      averageTimeToAccept: number;
+    };
   } {
     const patternArray = Array.from(this.patterns.values());
     

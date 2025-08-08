@@ -624,11 +624,19 @@ describe('ProfessionalProgressService - Edge Cases', () => {
       
       localStorage.setItem(`prof_progress_${mockUserId}`, JSON.stringify(cachedData));
       
-      vi.mocked(supabase.from).mockImplementation(() => {
+      vi.mocked(supabase.from).mockImplementation((table: string) => {
+        if (table === 'profiles') {
+          return {
+            select: vi.fn().mockReturnValue({
+              eq: vi.fn().mockReturnValue({
+                single: vi.fn().mockResolvedValue({ data: {}, error: null }),
+              }),
+            }),
+          } as any;
+        }
         return {
           select: vi.fn().mockReturnValue({
             eq: vi.fn().mockResolvedValue({ data: [], error: null }),
-            single: vi.fn().mockResolvedValue({ data: {}, error: null }),
           }),
         } as any;
       });
@@ -642,11 +650,19 @@ describe('ProfessionalProgressService - Edge Cases', () => {
     it('should handle corrupted cache data', async () => {
       localStorage.setItem(`prof_progress_${mockUserId}`, 'invalid json');
       
-      vi.mocked(supabase.from).mockImplementation(() => {
+      vi.mocked(supabase.from).mockImplementation((table: string) => {
+        if (table === 'profiles') {
+          return {
+            select: vi.fn().mockReturnValue({
+              eq: vi.fn().mockReturnValue({
+                single: vi.fn().mockResolvedValue({ data: {}, error: null }),
+              }),
+            }),
+          } as any;
+        }
         return {
           select: vi.fn().mockReturnValue({
             eq: vi.fn().mockResolvedValue({ data: [], error: null }),
-            single: vi.fn().mockResolvedValue({ data: {}, error: null }),
           }),
         } as any;
       });
@@ -661,11 +677,19 @@ describe('ProfessionalProgressService - Edge Cases', () => {
 
   describe('Concurrent Access', () => {
     it('should handle concurrent calls to the same method', async () => {
-      vi.mocked(supabase.from).mockImplementation(() => {
+      vi.mocked(supabase.from).mockImplementation((table: string) => {
+        if (table === 'profiles') {
+          return {
+            select: vi.fn().mockReturnValue({
+              eq: vi.fn().mockReturnValue({
+                single: vi.fn().mockResolvedValue({ data: {}, error: null }),
+              }),
+            }),
+          } as any;
+        }
         return {
           select: vi.fn().mockReturnValue({
             eq: vi.fn().mockResolvedValue({ data: [], error: null }),
-            single: vi.fn().mockResolvedValue({ data: {}, error: null }),
           }),
         } as any;
       });
@@ -735,10 +759,18 @@ describe('ProfessionalProgressService - Edge Cases', () => {
             }),
           } as any;
         }
+        if (table === 'profiles') {
+          return {
+            select: vi.fn().mockReturnValue({
+              eq: vi.fn().mockReturnValue({
+                single: vi.fn().mockResolvedValue({ data: {}, error: null }),
+              }),
+            }),
+          } as any;
+        }
         return {
           select: vi.fn().mockReturnValue({
             eq: vi.fn().mockResolvedValue({ data: [], error: null }),
-            single: vi.fn().mockResolvedValue({ data: {}, error: null }),
           }),
         } as any;
       });

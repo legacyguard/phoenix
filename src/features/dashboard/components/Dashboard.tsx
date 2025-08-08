@@ -36,11 +36,6 @@ const Dashboard = () => {
     import.meta.env.VITE_USE_PROFESSIONAL_DASHBOARD === 'true' ||
     new URLSearchParams(window.location.search).get('professional') === 'true';
   
-  // If professional dashboard is enabled, use the new integration
-  if (useProfessionalDashboard) {
-    return <ProfessionalDashboardIntegration />;
-  }
-  
   // Otherwise, continue with legacy dashboard
   const [progressStatus, setProgressStatus] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -57,6 +52,10 @@ const Dashboard = () => {
   };
 
   useEffect(() => {
+    if (useProfessionalDashboard) {
+      // Skip legacy dashboard initialization when using professional dashboard
+      return;
+    }
     const initializeDashboard = async () => {
       try {
         // Wait for user data to be loaded
@@ -261,14 +260,18 @@ const Dashboard = () => {
 
   return (
     <>
-      {/* Onboarding Wizard - 5 minute questions */}
-      {showOnboarding && (
-        <OnboardingWizard 
-          isOpen={showOnboarding}
-          onComplete={handleOnboardingComplete}
-          onClose={() => setShowOnboarding(false)}
-        />
-      )}
+      {useProfessionalDashboard ? (
+        <ProfessionalDashboardIntegration />
+      ) : (
+        <>
+          {/* Onboarding Wizard - 5 minute questions */}
+          {showOnboarding && (
+            <OnboardingWizard 
+              isOpen={showOnboarding}
+              onComplete={handleOnboardingComplete}
+              onClose={() => setShowOnboarding(false)}
+            />
+          )}
 
       {/* First Time User Guide - shown after onboarding */}
       {showFirstTimeGuide && (
@@ -491,32 +494,34 @@ const Dashboard = () => {
         )}
       </div>
 
-      {/* Legal Consultation Modal */}
-      {showLegalConsultation && (
-        <LegalConsultationModal
-          isOpen={showLegalConsultation}
-          onClose={() => setShowLegalConsultation(false)}
-          preselectedType="business_review"
-          contextData={{
-            completionScore: progressStatus?.completionScore,
-            hasBusiness: user?.has_business
-          }}
-        />
-      )}
-      
-      {/* Enhanced Personal Assistant */}
-      {!showOnboarding && !loading && (
-        <EnhancedPersonalAssistant 
-          currentPage="dashboard"
-          contextData={{
-            completionScore: progressStatus?.completionScore || 0,
-            currentStage: progressStatus?.currentStage || 'Foundation',
-            nextObjective: progressStatus?.nextObjective,
-            criticalGaps: progressStatus?.criticalGaps || [],
-            tasks: onboardingTasks,
-            onboardingAnswers: onboardingAnswers
-          }}
-        />
+          {/* Legal Consultation Modal */}
+          {showLegalConsultation && (
+            <LegalConsultationModal
+              isOpen={showLegalConsultation}
+              onClose={() => setShowLegalConsultation(false)}
+              preselectedType="business_review"
+              contextData={{
+                completionScore: progressStatus?.completionScore,
+                hasBusiness: user?.has_business
+              }}
+            />
+          )}
+          
+          {/* Enhanced Personal Assistant */}
+          {!showOnboarding && !loading && (
+            <EnhancedPersonalAssistant 
+              currentPage="dashboard"
+              contextData={{
+                completionScore: progressStatus?.completionScore || 0,
+                currentStage: progressStatus?.currentStage || 'Foundation',
+                nextObjective: progressStatus?.nextObjective,
+                criticalGaps: progressStatus?.criticalGaps || [],
+                tasks: onboardingTasks,
+                onboardingAnswers: onboardingAnswers
+              }}
+            />
+          )}
+        </>
       )}
     </>
   );

@@ -70,7 +70,7 @@ export const UserFlowManager: React.FC<UserFlowManagerProps> = ({ children }) =>
         trackAction('returning_user_detected', { user_id: user.id });
       }
     }
-  }, [user, isLoaded, trackAction]);
+  }, [user, isLoaded, trackAction, useRespectfulOnboarding]);
 
   const handleOnboardingComplete = (tasks: TaskItem[]) => {
     setOnboardingTasks(tasks);

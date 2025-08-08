@@ -182,7 +182,7 @@ const EmpatheticLoadingExample: React.FC = () => {
               }}
             />
             <EmpatheticValidation
-              type={validation as any}
+              type={validation as 'required' | 'too_short' | 'success'}
               show={!!validation}
             />
           </div>

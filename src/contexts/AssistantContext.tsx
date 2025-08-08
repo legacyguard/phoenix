@@ -1,45 +1,21 @@
-import React, { createContext, useContext, useState, useCallback, useEffect } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useAuth } from '@/hooks/useAuth';
 import { useNavigate } from 'react-router-dom';
 import { 
   Home, FileText, Users, Briefcase, Heart, 
-  FileCheck, Clock, AlertCircle, Shield 
+  FileCheck, Coffee
 } from 'lucide-react';
 import type { AssistantMessage, Recommendation } from '@/components/assistant/PersonalAssistant';
+import { 
+  AssistantContext, 
+  type EmotionalState, 
+  type UserProgress, 
+  type AssistantContextType 
+} from './AssistantContextType';
 
-export type EmotionalState = 'starting' | 'overwhelmed' | 'progressing' | 'accomplished';
-
-export interface UserProgress {
-  totalActions: number;
-  completedAreas: string[];
-  currentStreak: number;
-  lastActivity: Date | null;
-  assetsCount: number;
-  documentsCount: number;
-  trustedPeopleCount: number;
-  willCompleted: boolean;
-}
-
-interface AssistantContextType {
-  currentContext: string;
-  userProgress: UserProgress;
-  emotionalState: EmotionalState;
-  updateContext: (context: string) => void;
-  trackProgress: (action: string, area?: string) => void;
-  getPersonalizedMessage: () => AssistantMessage;
-  getSuggestions: () => Recommendation[];
-}
-
-const AssistantContext = createContext<AssistantContextType | undefined>(undefined);
-
-export const useAssistant = () => {
-  const context = useContext(AssistantContext);
-  if (!context) {
-    throw new Error('useAssistant must be used within AssistantProvider');
-  }
-  return context;
-};
+// Re-export types and context for convenience
+export { AssistantContext, type EmotionalState, type UserProgress } from './AssistantContextType';
 
 export const AssistantProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const { t } = useTranslation('assistant');

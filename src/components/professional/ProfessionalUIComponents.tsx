@@ -12,7 +12,7 @@ import { useTranslation } from 'react-i18next';
 // ============================================================
 
 interface StatusBadgeProps {
-  status: any; // Accept any to be resilient in edge cases tests
+  status: string | null | undefined;
   className?: string;
 }
 
@@ -55,7 +55,7 @@ export const StatusBadge: React.FC<StatusBadgeProps> = ({ status, className }) =
 // ============================================================
 
 interface PriorityIndicatorProps {
-  priority: any;
+  priority: string | null | undefined;
   showLabel?: boolean;
   size?: 'sm' | 'md' | 'lg';
   className?: string;
@@ -120,7 +120,7 @@ export const PriorityIndicator: React.FC<PriorityIndicatorProps> = (props) => {
 // ============================================================
 
 interface ReadinessLevelProps {
-  level: any;
+  level: string | { label: string; description?: string; color?: string } | null | undefined;
   size?: 'sm' | 'md' | 'lg';
   className?: string;
   showDescription?: boolean;
@@ -166,15 +166,27 @@ export const ReadinessLevel: React.FC<ReadinessLevelProps> = ({ level, size = 'm
 // SECURITY AREA CARD - matches edge-case tests API
 // ============================================================
 
+type SecurityAreaLike = {
+  id?: string;
+  name?: string;
+  description?: string;
+  status?: string;
+  priority?: string;
+  estimatedTime?: string;
+  actionUrl?: string;
+  reviewNeeded?: boolean;
+  lastUpdated?: string | Date | null;
+};
+
 interface SecurityAreaCardProps {
-  area: any;
+  area?: SecurityAreaLike | null;
   onClick?: (id: string) => void;
   disabled?: boolean;
   expanded?: boolean;
   className?: string;
 }
 
-export const SecurityAreaCard: React.FC<SecurityAreaCardProps & any> = ({ area, onClick, disabled, expanded, className, ...rest }) => {
+export const SecurityAreaCard: React.FC<SecurityAreaCardProps & Record<string, unknown>> = ({ area, onClick, disabled, expanded, className, ...rest }) => {
   const resolved = area ?? {
     id: rest.id,
     name: rest.title,
@@ -265,23 +277,42 @@ export const SecurityAreaCard: React.FC<SecurityAreaCardProps & any> = ({ area, 
 // RECOMMENDATION CARD - matches edge-case tests API
 // ============================================================
 
+type RecommendationLike = {
+  id?: string;
+  type?: 'action' | 'review' | 'milestone' | 'update' | 'consultation' | string;
+  title?: string;
+  description?: string;
+  priority?: 'urgent' | 'high' | 'medium' | 'low' | 'completed' | 'immediate' | string;
+  estimatedTime?: string;
+  actionUrl?: string;
+  dismissible?: boolean;
+  actionLabel?: string;
+};
+
 interface RecommendationCardProps {
-  recommendation?: any;
+  recommendation?: RecommendationLike;
   onAction?: (id: string) => void;
   onDismiss?: (id: string) => void;
   className?: string;
-  type?: any; title?: string; description?: string; priority?: any; estimatedTime?: string; actionLabel?: string; actionUrl?: string;
+  // Fallback props when recommendation is not provided
+  type?: RecommendationLike['type'];
+  title?: string;
+  description?: string;
+  priority?: RecommendationLike['priority'];
+  estimatedTime?: string;
+  actionLabel?: string;
+  actionUrl?: string;
 }
 
 export const RecommendationCard: React.FC<RecommendationCardProps> = (props) => {
   const recommendation = props.recommendation ?? props;
   const { id, title, description, priority, estimatedTime, actionUrl, dismissible, actionLabel: recActionLabel } = recommendation || {};
-  const { className } = props as any;
+  const { className } = props;
 
   const handleAction = () => props.onAction?.(id);
   const handleDismiss = () => props.onDismiss?.(id);
 
-  const actionText = (recActionLabel ?? (props as any).actionLabel ?? 'Take Action') as string;
+  const actionText = (recActionLabel ?? props.actionLabel ?? 'Take Action');
   const priorityEmphasis = priority === 'urgent' ? 'border-prof-urgent/30 shadow-prof-md' : 'border-prof-secondary-200 shadow-prof-sm';
 
   return (
@@ -328,18 +359,26 @@ export const RecommendationCard: React.FC<RecommendationCardProps> = (props) => 
 // PROGRESS OVERVIEW - robust metrics handling
 // ============================================================
 
+type ProgressMetricsLike = {
+  totalAreas?: number;
+  completedAreas?: number;
+  urgentActionsCount?: number;
+  needsReviewCount?: number;
+  lastActivityDate?: string | null;
+};
+
 interface ProgressOverviewProps {
-  metrics: any;
+  metrics: ProgressMetricsLike;
   showUrgentBanner?: boolean;
   className?: string;
 }
 
-export const ProgressOverview: React.FC<ProgressOverviewProps & any> = (props) => {
+export const ProgressOverview: React.FC<ProgressOverviewProps & Record<string, unknown>> = (props) => {
   const { t } = useTranslation('ui');
-  const tr = (key: string, fallback: string | ((o?: any) => string), opts?: any) => {
+  const tr = (key: string, fallback: string | ((o?: { minutes?: number; count?: number }) => string), opts?: { minutes?: number; count?: number }) => {
     const v = t(key, { defaultValue: '', ...opts }) as string;
     if (v && v !== key) return v;
-    return typeof fallback === 'function' ? (fallback as any)(opts) : (fallback as string);
+    return typeof fallback === 'function' ? (fallback as (o?: { minutes?: number; count?: number }) => string)(opts) : (fallback as string);
   };
   const metrics = props.metrics ?? props;
   const showUrgentBanner = props.showUrgentBanner;
@@ -371,13 +410,16 @@ export const ProgressOverview: React.FC<ProgressOverviewProps & any> = (props) =
         </div>
 
         {/* Urgent actions card */}
-        {(() => { const shouldShow = (typeof showUrgentBanner === 'undefined' ? urgent > 0 : (showUrgentBanner && urgent > 0)); return shouldShow ? (
-          <div role="alert" aria-live="polite" className="bg-red-50 rounded-lg p-3 border border-red-200">
-            <div className="text-2xl font-bold text-prof-urgent">{urgent}</div>
-            <div className="text-xs text-prof-urgent">{tr('professional.labels.urgentActions', 'Urgent Actions')}</div>
-            <div className="text-xs text-prof-urgent">{tr('professional.labels.urgentActionsDetail', (o?: any) => `${o?.count} urgent actions need your attention`, { count: urgent })}</div>
-          </div>
-        ) : null; })()}
+        {(() => {
+          const shouldShow = typeof showUrgentBanner === 'undefined' ? urgent > 0 : (showUrgentBanner && urgent > 0);
+          return shouldShow ? (
+            <div role="alert" aria-live="polite" className="bg-red-50 rounded-lg p-3 border border-red-200">
+              <div className="text-2xl font-bold text-prof-urgent">{urgent}</div>
+              <div className="text-xs text-prof-urgent">{tr('professional.labels.urgentActions', 'Urgent Actions')}</div>
+              <div className="text-xs text-prof-urgent">{tr('professional.labels.urgentActionsDetail', (o?: { count?: number }) => `${o?.count} urgent actions need your attention`, { count: urgent })}</div>
+            </div>
+          ) : null;
+        })()}
 
         {needsReview > 0 && (
           <div className="bg-yellow-50 rounded-lg p-3 border border-yellow-200">
@@ -402,7 +444,7 @@ export const ProgressOverview: React.FC<ProgressOverviewProps & any> = (props) =
           <div className="flex items-center justify-between">
             <div>
               <div className="font-medium">{tr('professional.labels.estatePlanning', 'Estate Planning')}</div>
-              <div className="text-xs text-prof-secondary-600">{tr('professional.labels.timeMinutes', (o?: any) => `${o?.minutes} minutes`, { minutes: 45 })}</div>
+              <div className="text-xs text-prof-secondary-600">{tr('professional.labels.timeMinutes', (o?: { minutes?: number }) => `${o?.minutes} minutes`, { minutes: 45 })}</div>
             </div>
             <div className="flex gap-2">
               <button className="px-3 py-1 rounded bg-prof-primary-600 text-white">{tr('professional.labels.startNow', 'Start Now')}</button>
@@ -423,7 +465,7 @@ export const ProgressOverview: React.FC<ProgressOverviewProps & any> = (props) =
 // ============================================================
 
 interface InfoAlertProps {
-  type?: 'info' | 'success' | 'warning' | 'error' | 'tip' | any;
+  type?: 'info' | 'success' | 'warning' | 'error' | 'tip';
   title?: string;
   description?: string;
   action?: { label: string; onClick: () => void };

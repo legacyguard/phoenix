@@ -1,5 +1,13 @@
 import type { Request, Response, NextFunction } from 'express';
 import { supabase } from '@/integrations/supabase/client';
+import type { User } from '@supabase/supabase-js';
+
+// Extend the Express Request interface to include authenticated user
+declare module 'express-serve-static-core' {
+  interface Request {
+    user?: User;
+  }
+}
 
 /**
  * Middleware that verifies the requester has admin privileges.
@@ -37,7 +45,7 @@ export async function requireAdmin(
     }
 
     // Attach user for downstream handlers if needed
-    (req as any).user = user;
+    req.user = user;
     return next();
   } catch (err) {
     console.error('Admin authentication error:', err);
@@ -76,6 +84,6 @@ export async function ensureAdmin(req: Request, res: Response): Promise<boolean>
     return false;
   }
 
-  (req as any).user = user;
+  req.user = user;
   return true;
 }

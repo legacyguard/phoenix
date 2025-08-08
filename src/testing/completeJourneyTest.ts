@@ -315,8 +315,13 @@ async function checkEmotionalCheckpoint(step: string): Promise<boolean> {
   return true; // Mock: pass for now
 }
 
+interface JourneyScenario {
+  description: string;
+  criticalNeeds: string[];
+}
+
 // Export journey scenarios for different user types
-export const journeyScenarios = {
+export const journeyScenarios: Record<string, JourneyScenario> = {
   anxiousNewParent: {
     description: 'Young parent worried about family protection',
     criticalNeeds: [
@@ -386,7 +391,7 @@ export const validateEmpatheticJourney = async (): Promise<{
   };
 };
 
-async function testScenarioJourney(user: TestUser, scenario: any): Promise<boolean> {
+async function testScenarioJourney(user: TestUser, scenario: JourneyScenario): Promise<boolean> {
   // Test specific scenario requirements
   for (const need of scenario.criticalNeeds) {
     const needMet = await verifyNeedMet(user, need);

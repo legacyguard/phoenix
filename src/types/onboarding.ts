@@ -234,11 +234,17 @@ export class OnboardingDataManager {
   }
 }
 
-// Export convenience functions
-export function isRespectfulOnboarding(answers: any): answers is RespectfulOnboardingAnswers {
-  return 'accessNeeds' in answers && 'currentTrigger' in answers;
+// Export convenience functions - Type guards for onboarding answer types
+export function isRespectfulOnboarding(answers: unknown): answers is RespectfulOnboardingAnswers {
+  return typeof answers === 'object' && 
+         answers !== null && 
+         'accessNeeds' in answers && 
+         'currentTrigger' in answers;
 }
 
-export function isLegacyOnboarding(answers: any): answers is LegacyOnboardingAnswers {
-  return 'documentAccess' in answers && 'caretaker' in answers;
+export function isLegacyOnboarding(answers: unknown): answers is LegacyOnboardingAnswers {
+  return typeof answers === 'object' && 
+         answers !== null && 
+         'documentAccess' in answers && 
+         'caretaker' in answers;
 }

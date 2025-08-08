@@ -33,9 +33,28 @@ import { Link } from 'react-router-dom';
 import ProfessionalProgress from './ProfessionalProgress';
 import { cn } from '@/lib/utils';
 
+// Types for onboarding data and tasks
+interface OnboardingData {
+  answers?: Record<string, unknown>;
+  documents?: Array<{ id?: string; name?: string; type?: string }>;
+  recommendations?: Array<{ id: string; title: string; description: string; priority: string }>;
+  completedSteps?: string[];
+}
+
+interface Task {
+  id: string;
+  title: string;
+  description?: string;
+  category: string;
+  priority: 'immediate' | 'high' | 'medium' | 'low' | 'completed';
+  completed: boolean;
+  estimatedTime: number;
+  pillar?: string;
+}
+
 interface ProfessionalDashboardProps {
-  onboardingData?: any;
-  tasks?: any[];
+  onboardingData?: OnboardingData;
+  tasks?: Task[];
   completionScore?: number;
 }
 
@@ -68,7 +87,12 @@ const ProfessionalDashboard: React.FC<ProfessionalDashboardProps> = ({
   const { t } = useTranslation(['dashboard', 'ui']);
   const [activeTab, setActiveTab] = useState('overview');
   const [showGuidance, setShowGuidance] = useState(true);
-  const [userProgress, setUserProgress] = useState<any>(null);
+  const [userProgress, setUserProgress] = useState<{
+    completedAreas?: number;
+    totalAreas?: number;
+    lastActivity?: string;
+    readinessLevel?: string;
+  } | null>(null);
 
   // Load user progress
   useEffect(() => {

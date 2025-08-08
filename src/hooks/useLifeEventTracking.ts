@@ -93,7 +93,7 @@ export const useLifeEventTracking = (): UseLifeEventTrackingReturn => {
     if (shouldTriggerImmediateCheck(change.field)) {
       setTimeout(() => checkForLifeEvents(), 1000);
     }
-  }, [userId]);
+  }, [userId, checkForLifeEvents]);
 
   // Track external indicators (e.g., from document uploads, AI analysis)
   const trackExternalIndicator = useCallback(async (
@@ -119,7 +119,7 @@ export const useLifeEventTracking = (): UseLifeEventTrackingReturn => {
     if (indicator.confidence > 0.8) {
       setTimeout(() => checkForLifeEvents(), 1000);
     }
-  }, [userId]);
+  }, [userId, checkForLifeEvents]);
 
   // Check for life events based on accumulated data
   const checkForLifeEvents = useCallback(async (): Promise<void> => {

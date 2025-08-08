@@ -26,9 +26,26 @@ interface RespectfulOnboardingProps {
 
 export interface OnboardingData {
   answers?: EssentialAnswers;
-  documents?: any[];
-  recommendations?: any[];
+  documents?: UploadedDoc[];
+  recommendations?: PlanRecommendation[];
   completedSteps: string[];
+}
+
+// Types for uploaded documents and plan recommendations used here
+export interface UploadedDoc {
+  id?: string;
+  name?: string;
+  type?: string;
+  url?: string;
+}
+
+export interface PlanRecommendation {
+  id: string;
+  title: string;
+  description: string;
+  estimatedTime: string;
+  priority: 'immediate' | 'high' | 'medium' | 'low';
+  link?: string;
 }
 
 type OnboardingStep = 'welcome' | 'questions' | 'upload' | 'recommendations';
@@ -43,7 +60,7 @@ const RespectfulOnboarding: React.FC<RespectfulOnboardingProps> = ({
   const { t } = useTranslation('onboarding');
   const [currentStep, setCurrentStep] = useState<OnboardingStep>('welcome');
   const [answers, setAnswers] = useState<EssentialAnswers | null>(null);
-  const [uploadedDocuments, setUploadedDocuments] = useState<any[]>([]);
+  const [uploadedDocuments, setUploadedDocuments] = useState<UploadedDoc[]>([]);
   const [showCloseConfirm, setShowCloseConfirm] = useState(false);
   const [completedSteps, setCompletedSteps] = useState<string[]>([]);
 
@@ -90,7 +107,7 @@ const RespectfulOnboarding: React.FC<RespectfulOnboardingProps> = ({
     setCurrentStep('upload');
   };
 
-  const handleUploadComplete = (documents: any[]) => {
+  const handleUploadComplete = (documents: UploadedDoc[]) => {
     setUploadedDocuments(documents);
     setCompletedSteps(prev => [...prev, 'upload']);
     
@@ -361,7 +378,7 @@ const WelcomeStep: React.FC<{
 // Recommendations Step Component
 const RecommendationsStep: React.FC<{
   answers: EssentialAnswers;
-  documents: any[];
+  documents: UploadedDoc[];
   onComplete: () => void;
 }> = ({ answers, documents, onComplete }) => {
   const { t } = useTranslation('onboarding');

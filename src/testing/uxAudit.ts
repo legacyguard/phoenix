@@ -419,43 +419,78 @@ export const auditOverallFlow = async (): Promise<UXAuditResult> => {
   };
 };
 
+// Helper domain types for audits
+interface DifficultMoment {
+  location: string;
+  hasEmotionalSupport: boolean;
+}
+
+interface ComplexityPoint {
+  location: string;
+  complexity: number; // 1-10 scale
+}
+
+interface AssistantMessage {
+  location: string;
+  content: string;
+}
+
+interface ErrorMessage {
+  location: string;
+  content: string;
+}
+
+interface Milestone {
+  name: string;
+  location: string;
+  hasCelebration: boolean;
+}
+
+interface FlowMetrics {
+  averageStepsToCompletion: number;
+  confusionPoints: string[];
+}
+
 // Helper functions (these would need actual implementation)
 async function getAllUserFacingText(): Promise<string> {
   // Mock implementation - would scan all UI text
   return '';
 }
 
-async function identifyDifficultMoments(): Promise<any[]> {
+async function identifyDifficultMoments(): Promise<DifficultMoment[]> {
   // Mock implementation - would identify emotionally difficult points
   return [];
 }
 
-async function checkEmotionalSupportCoverage(moments: any[]): Promise<number> {
+async function checkEmotionalSupportCoverage(moments: DifficultMoment[]): Promise<number> {
   // Mock implementation
-  return 0.8;
+  // Calculate percentage of moments that have emotional support
+  if (moments.length === 0) return 0.8;
+  const withSupport = moments.filter(m => m.hasEmotionalSupport).length;
+  return withSupport / moments.length;
 }
 
-async function identifyComplexityPoints(): Promise<any[]> {
-  // Mock implementation
-  return [];
-}
-
-async function getAllAssistantMessages(): Promise<any[]> {
+async function identifyComplexityPoints(): Promise<ComplexityPoint[]> {
   // Mock implementation
   return [];
 }
 
-async function getAllErrorMessages(): Promise<any[]> {
+async function getAllAssistantMessages(): Promise<AssistantMessage[]> {
   // Mock implementation
   return [];
 }
 
-async function identifyMilestones(): Promise<any[]> {
+async function getAllErrorMessages(): Promise<ErrorMessage[]> {
   // Mock implementation
   return [];
 }
 
-async function analyzeUserFlow(): Promise<any> {
+async function identifyMilestones(): Promise<Milestone[]> {
+  // Mock implementation
+  return [];
+}
+
+async function analyzeUserFlow(): Promise<FlowMetrics> {
   // Mock implementation
   return {
     averageStepsToCompletion: 4,

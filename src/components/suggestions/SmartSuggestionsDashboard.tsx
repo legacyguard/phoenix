@@ -18,10 +18,39 @@ interface SmartSuggestion {
   action: () => void;
 }
 
+// Types for user profile and progress data
+interface UserProfile {
+  id?: string;
+  name?: string;
+  familySize?: number;
+  hasWill?: boolean;
+  hasChildren?: boolean;
+  age?: number;
+  interests?: string[];
+  preferences?: Record<string, unknown>;
+}
+
+interface UserProgress {
+  completionPercentage?: number;
+  completedAreas?: string[];
+  pendingTasks?: Array<{ id: string; category: string; priority: string }>;
+  lastActivity?: string;
+  documentsUploaded?: number;
+  milestonesReached?: string[];
+}
+
+interface BehaviorPattern {
+  action: string;
+  frequency: number;
+  lastOccurrence: string;
+  category: 'engagement' | 'completion' | 'preference' | 'timing';
+  context?: Record<string, unknown>;
+}
+
 interface SmartSuggestionsDashboardProps {
-  userProfile: any;
-  userProgress: any;
-  behaviorPatterns: any[];
+  userProfile: UserProfile;
+  userProgress: UserProgress;
+  behaviorPatterns: BehaviorPattern[];
 }
 
 const SmartSuggestionsDashboard: React.FC<SmartSuggestionsDashboardProps> = ({

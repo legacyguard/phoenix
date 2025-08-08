@@ -283,16 +283,16 @@ const ImmediateValueUpload: React.FC<ImmediateValueUploadProps> = ({
     if (files.length > 0) {
       processFile(files[0]);
     }
-  }, []);
+  }, [processFile]);
 
   const handleFileSelect = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     const files = e.target.files;
     if (files && files.length > 0) {
       processFile(files[0]);
     }
-  }, []);
+  }, [processFile]);
 
-  const processFile = async (file: File) => {
+  const processFile = useCallback(async (file: File) => {
     // Check if we've reached the document limit
     if (uploadedDocuments.length >= maxDocuments) {
       return;
@@ -307,7 +307,7 @@ const ImmediateValueUpload: React.FC<ImmediateValueUploadProps> = ({
       setIsProcessing(false);
       setShowInsights(true);
     }, 1500);
-  };
+  }, [uploadedDocuments.length, maxDocuments]);
 
   const handleCategorySelect = (category: DocumentCategory) => {
     setSelectedCategory(category);

@@ -36,7 +36,7 @@ export interface DashboardSection {
   icon: string;
   content: string;
   priority: number;
-  prefilledData?: any;
+  prefilledData?: Record<string, unknown>;
 }
 
 export interface AssistantMessage {
@@ -384,10 +384,15 @@ export const generatePersonalizedDashboard = (profile: UserProfile): DashboardCo
   };
 };
 
+interface ExistingTask {
+  id: string;
+  [key: string]: unknown;
+}
+
 // Helper function to generate specific task recommendations
 export const generateTaskRecommendations = (
   profile: UserProfile,
-  existingTasks: any[]
+  existingTasks: ExistingTask[]
 ): PriorityTask[] => {
   const recommendations: PriorityTask[] = [];
   
@@ -422,9 +427,15 @@ export const generateTaskRecommendations = (
   return recommendations;
 };
 
+interface TaskForScoring {
+  category: string;
+  estimatedTime: number;
+  [key: string]: unknown;
+}
+
 // Score tasks based on user profile for intelligent prioritization
 export const scoreTaskPriority = (
-  task: any,
+  task: TaskForScoring,
   profile: UserProfile
 ): number => {
   let score = 0;

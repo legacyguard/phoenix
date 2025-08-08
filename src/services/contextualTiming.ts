@@ -1,7 +1,7 @@
 interface UserAction {
   type: string;
   timestamp: Date;
-  data?: any;
+  data?: Record<string, unknown>;
 }
 
 interface TimingContext {

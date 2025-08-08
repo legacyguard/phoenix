@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Heart, Loader2 } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -28,7 +28,7 @@ const EmpatheticLoader: React.FC<EmpatheticLoaderProps> = ({
 }) => {
   const { t } = useTranslation('loading-states');
 
-  const getContextualMessage = (): LoadingMessage => {
+  const getContextualMessage = useCallback((): LoadingMessage => {
     const message: LoadingMessage = {
       primary: ''
     };
@@ -73,9 +73,9 @@ const EmpatheticLoader: React.FC<EmpatheticLoaderProps> = ({
     }
 
     return message;
-  };
+  }, [context, action, emotionalState, progress, t]);
 
-  const message = useMemo(() => getContextualMessage(), [context, action, emotionalState, progress]);
+  const message = useMemo(() => getContextualMessage(), [getContextualMessage]);
 
   const sizeClasses = {
     small: 'p-4',

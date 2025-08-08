@@ -39,6 +39,27 @@
       "confidence_7": "[HU] Confidence 7"
     }
   },
+  "categories": {
+    "all": "Everything",
+    "business": "Work and Business Your Family Should Understand",
+    "collectibles": "Things That Matter to Your Family",
+    "digital": "Online Accounts & Digital Life",
+    "financial": "Money and Accounts Your Family Should Know About",
+    "insurance": "Insurance Policies",
+    "intellectual": "Creative Work & Ideas",
+    "investments": "Savings and Investments for Your Family's Future",
+    "other": "Other Important Things",
+    "personal": "Personal Things That Matter",
+    "realEstate": "Places Important to Your Family",
+    "vehicles": "Cars & Transportation",
+    "property": "Property & Real Estate",
+    "estate": "Estate Planning Documents",
+    "family": "Family Records",
+    "government": "Government Documents",
+    "legal": "Legal Documents",
+    "medical": "Medical Records",
+    "tax": "Tax Records & Returns"
+  },
   "common": {
     "cancel": "[HU] Cancel"
   },
@@ -225,15 +246,146 @@
     "property_registry_number": "[HU] Property registry number",
     "securityNote": "[HU] Security note"
   },
+  "notifications": {
+    "accessGranted": "{{name}} can now see this",
+    "accessRevoked": "{{name}} can no longer see this",
+    "assetAdded": "We've safely stored this information for your family",
+    "assetDeleted": "This has been removed",
+    "assetUpdated": "Your changes have been saved",
+    "documentLinked": "Document connected successfully",
+    "documentUploaded": "Your document is now safe and secure",
+    "noteAdded": "Your message for your family has been saved",
+    "reminderSet": "We'll remind you on {{date}}",
+    "valuationUpdated": "The value has been updated",
+    "analyzed": "Document analysis has been completed",
+    "archived": "Document has been archived",
+    "deleted": "Document has been permanently removed",
+    "moved": "Document has been moved to {{category}}",
+    "restored": "Document has been restored from archive",
+    "shared": "Document access has been granted to {{name}}",
+    "uploaded": "Document has been securely uploaded and processed"
+  },
   "settings": {
     "privacySettings": {
       "hybrid_mode_recommended_5": "[HU] Hybrid mode recommended 5",
       "local_only_privacy_mode_7": "[HU] Local only privacy mode 7"
     }
   },
+  "sharing": {
+    "accessLevel": "Access Level",
+    "accessLevels": {
+      "full": "Full Access - Can view and modify all information",
+      "inherit": "Inheritance Rights - Designated to receive this asset",
+      "limited": "Limited Access - Can view details and add notes",
+      "viewOnly": "View Only - Can see basic asset information"
+    },
+    "addPerson": "Grant Access to Family Member",
+    "description": "Manage which family members can access this document",
+    "expiresDate": "Access Expires",
+    "familyMember": "Family Member",
+    "grantedDate": "Access Granted",
+    "noAccess": "This document is currently private to you",
+    "permissions": {
+      "download": "Can Download Copy",
+      "edit": "Can Edit Information",
+      "view": "Can View Document"
+    },
+    "relationship": "Relationship",
+    "title": "Document Access Control",
+    "accessGranted": "Access Granted On",
+    "accessTypes": {
+      "emergency": "Emergency Access Only",
+      "permanent": "Permanent Access",
+      "temporary": "Temporary Access"
+    },
+    "emergencyAccess": "Available during family emergencies",
+    "expiresOn": "Access expires on {{date}}",
+    "lastAccessed": "Last Viewed"
+  },
+  "status": {
+    "active": "Active",
+    "expired": "Expired",
+    "inactive": "Inactive",
+    "needsUpdate": "Requires Update",
+    "pending": "Pending Transfer",
+    "sold": "Sold",
+    "transferred": "Transferred",
+    "underReview": "Under Review",
+    "verified": "Information Verified"
+  },
+  "types": {
+    "aircraft": "Aircraft",
+    "artwork": "Artwork & Antiques",
+    "autoInsurance": "Automobile Insurance",
+    "automobile": "Automobile",
+    "boat": "Boat or Watercraft",
+    "bondHoldings": "Bond Holdings",
+    "brokerageAccount": "Brokerage Account",
+    "businessOwnership": "Business Ownership",
+    "checkingAccount": "Primary Checking Account",
+    "commercialProperty": "Commercial Real Estate",
+    "cryptocurrency": "Cryptocurrency Holdings",
+    "disabilityInsurance": "Disability Insurance",
+    "electronics": "Electronics & Technology",
+    "firearms": "Firearms & Weapons",
+    "furniture": "Furniture & Household Items",
+    "healthInsurance": "Health Insurance Coverage",
+    "homeInsurance": "Homeowner's Insurance",
+    "investmentAccount": "Investment Account",
+    "investmentProperty": "Investment Property",
+    "jewelry": "Jewelry & Precious Items",
+    "lifeInsurance": "Life Insurance Policy",
+    "motorcycle": "Motorcycle",
+    "mutualFunds": "Mutual Fund Investments",
+    "partnership": "Partnership Interest",
+    "primaryResidence": "Primary Family Residence",
+    "retirementAccount": "Retirement Fund (401k/IRA)",
+    "savingsAccount": "Savings Account",
+    "stockPortfolio": "Stock Portfolio",
+    "tools": "Tools & Equipment",
+    "undevelopedLand": "Undeveloped Land",
+    "vacationHome": "Vacation Home",
+    "agreement": "Legal Agreement",
+    "bankStatement": "Bank Statement",
+    "birthCertificate": "Birth Certificate",
+    "certificate": "Official Certificate",
+    "contract": "Legal Contract",
+    "correspondence": "Important Correspondence",
+    "deathCertificate": "Death Certificate",
+    "deed": "Property Deed",
+    "identification": "Identification Document",
+    "investmentStatement": "Investment Statement",
+    "license": "License or Permit",
+    "marriageCertificate": "Marriage Certificate",
+    "medicalRecord": "Medical Record",
+    "other": "Other",
+    "passport": "Passport",
+    "policy": "Insurance Policy",
+    "powerOfAttorney": "Power of Attorney",
+    "prescription": "Medical Prescription",
+    "receipt": "Receipt or Invoice",
+    "report": "Official Report",
+    "statement": "Financial Statement",
+    "taxReturn": "Tax Return",
+    "title": "Vehicle Title",
+    "trust": "Trust Documents",
+    "will": "Last Will & Testament"
+  },
   "ui:common": {
     "add": "[HU] Add",
     "cancel": "[HU] Cancel"
+  },
+  "validation": {
+    "accountNumberInvalid": "Please enter a valid account number",
+    "dateInvalid": "Please enter a valid date",
+    "emailInvalid": "Please enter a valid email address",
+    "nameRequired": "Name required",
+    "percentageInvalid": "Percentage must be between 0 and 100",
+    "phoneInvalid": "Please enter a valid phone number",
+    "typeRequired": "Please select the type of asset",
+    "valueInvalid": "Please enter a valid monetary value",
+    "nameMaxLength": "Name max length",
+    "nameMinLength": "Name min length"
   },
   "vault": {
     "addAsset": "[HU] Add asset",
@@ -268,5 +420,170 @@
     "startAddingAssets": "[HU] Start adding assets",
     "totalAssets": "[HU] Total assets",
     "vehicle": "[HU] Vehicle"
+  },
+  "assets": {
+    "assetOverview": {
+      "100_2": "100 2",
+      "50_4": "50 4"
+    },
+    "title": "Life Inventory Overview",
+    "subtitle": "Organize what matters for your family's peace of mind",
+    "estimatedWorth": "Total Value Protected",
+    "categories": "Life Categories",
+    "description": "What matters in your life",
+    "recentlyAdded": "Items That Need Your Attention",
+    "empty": "All items are organized"
+  },
+  "assetType": {
+    "aircraft": "Aircraft",
+    "artCollectibles": "Art collectibles",
+    "bankAccount": "Bank account",
+    "boat": "Boat",
+    "car": "Car",
+    "commercialProperty": "Commercial property",
+    "cryptocurrency": "Cryptocurrency",
+    "cryptocurrencyWallet": "Cryptocurrency wallet",
+    "customAsset": "Custom asset",
+    "digitalSubscription": "Digital subscription",
+    "domainName": "Domain name",
+    "electronics": "Electronics",
+    "furniture": "Furniture",
+    "insurancePolicy": "Insurance policy",
+    "investmentPortfolio": "Investment portfolio",
+    "jewelry": "Jewelry",
+    "land": "Land",
+    "loanMortgage": "Loan mortgage",
+    "motorcycle": "Motorcycle",
+    "nft": "Nft",
+    "onlineAccount": "Online account",
+    "otherValuables": "Other valuables",
+    "pensionRetirement": "Pension retirement",
+    "primaryResidence": "Primary residence",
+    "rentalProperty": "Rental property",
+    "rvCamper": "Rv camper",
+    "selectType": "Select type",
+    "softwareLicense": "Software license",
+    "toolsEquipment": "Tools equipment",
+    "vacationHome": "Vacation home"
+  },
+  "myPossessions": {
+    "add_your_first_7": "Add your first 7",
+    "an_inventory_of_the_important__2": "An inventory of the important  2",
+    "areas": {
+      "business": {
+        "addButton": "Add button",
+        "description": "Description",
+        "emptyState": "Empty state",
+        "title": "Title"
+      },
+      "home": {
+        "addButton": "Add button",
+        "description": "Description",
+        "emptyState": "Empty state",
+        "title": "Title"
+      },
+      "savings": {
+        "addButton": "Add button",
+        "description": "Description",
+        "emptyState": "Empty state",
+        "title": "Title"
+      },
+      "valuables": {
+        "addButton": "Add button",
+        "description": "Description",
+        "emptyState": "Empty state",
+        "title": "Title"
+      }
+    },
+    "assign_access_6": "Assign access 6",
+    "edit_details_4": "Edit details 4",
+    "family_impact_3": "Family impact 3",
+    "link_papers_5": "Link papers 5",
+    "mockData": {
+      "classicCarCollection": "Classic car collection",
+      "emergencyFund": "Emergency fund",
+      "johnsonContracting": "Johnson contracting",
+      "lakeCabin": "Lake cabin"
+    },
+    "my_possessions_1": "My possessions 1"
+  },
+  "management": {
+    "categories": "Types of Documents",
+    "description": "Keep all your important papers safe and organized, so your family can find what they need.",
+    "encryptedStorage": "Completely Secure",
+    "filterBy": "Show Only",
+    "gridView": "Show as Tiles",
+    "listView": "Show as List",
+    "recentUploads": "Recently Added",
+    "searchPlaceholder": "Looking for something specific?",
+    "secureStorage": "Kept Safe",
+    "sortBy": "Organize By",
+    "subtitle": "All your important papers, organized and secure",
+    "title": "Your Family's Important Documents",
+    "totalDocuments": "{{count}} Documents Safe",
+    "viewMode": "How to View"
+  },
+  "upload": {
+    "analyzing": "Analyzing document content...",
+    "completed": "Upload completed successfully",
+    "dragDrop": "Please drag and drop your files here, or click to browse your computer",
+    "encrypting": "Securing your document...",
+    "extracting": "Extracting important information...",
+    "failed": "Upload was unsuccessful",
+    "maxSize": "Maximum file size: {{size}}MB per document",
+    "multipleFiles": "You may upload multiple documents at once",
+    "processing": "Processing your document...",
+    "retry": "Please Try Again",
+    "securityNote": "All documents are encrypted and securely stored",
+    "selectFiles": "Choose Files to Upload",
+    "subtitle": "Secure your family's access to critical paperwork",
+    "supportedFormats": "Accepted formats: PDF, JPG, PNG, DOC, DOCX",
+    "title": "Upload Important Documents",
+    "uploadProgress": {
+      "clear_completed_4": "Clear completed 4",
+      "don_t_worry_you_can_try_again_1": "Don t worry you can try again 1",
+      "is_now_secure_2": "Is now secure 2",
+      "retry_attempt_3": "Retry attempt 3"
+    }
+  },
+  "estateStatus": {
+    "actions": {
+      "cancel": "Cancel",
+      "update": "Update",
+      "updating": "Updating"
+    },
+    "description": "Description",
+    "dialog": {
+      "description": "Description",
+      "title": "Title"
+    },
+    "empty": {
+      "noStatus": "No status",
+      "readOnly": "Read only"
+    },
+    "fields": {
+      "additionalDetails": "Additional details",
+      "status": "Status"
+    },
+    "lastUpdated": "Last updated",
+    "logAction": "Log action",
+    "placeholders": {
+      "additionalContext": "Additional context",
+      "selectStatus": "Select status"
+    },
+    "progress": "Progress",
+    "statuses": {
+      "assetsBeingValued": "Assets being valued",
+      "debtsBeingSettled": "Debts being settled",
+      "distributionInProgress": "Distribution in progress",
+      "estateClosed": "Estate closed",
+      "gatheringDocuments": "Gathering documents",
+      "initialReview": "Initial review",
+      "probateInitiated": "Probate initiated",
+      "readyForDistribution": "Ready for distribution",
+      "taxPreparation": "Tax preparation"
+    },
+    "title": "Title",
+    "updateStatus": "Update status"
   }
 }

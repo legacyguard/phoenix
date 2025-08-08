@@ -21,9 +21,21 @@ import {
   DashboardConfig 
 } from '@/services/onboardingAnalysis';
 
+// Type for onboarding answers with life questions
+interface OnboardingAnswers {
+  lifeAnswers?: {
+    familyStructure?: 'young_children' | 'teenagers' | 'adult_children' | 'no_children' | string;
+    financialComplexity?: 'business_owner' | 'employee' | 'retired' | 'complex' | string;
+    emotionalConcern?: 'family_confusion' | 'financial_worry' | 'legal_complexity' | string;
+    timelineUrgency?: 'immediate' | 'soon' | 'eventually' | string;
+    [key: string]: unknown;
+  };
+  [key: string]: unknown; // Allow for additional onboarding data
+}
+
 interface PersonalizedDashboardContentProps {
   tasks: TaskItem[];
-  onboardingAnswers: any;
+  onboardingAnswers: OnboardingAnswers;
   completionScore: number;
 }
 
@@ -135,8 +147,8 @@ export const PersonalizedDashboardContent: React.FC<PersonalizedDashboardContent
   const timeline = getTimeline();
 
   // Get icon component from string
-  const getIconComponent = (iconName: string) => {
-    const icons: Record<string, any> = {
+  const getIconComponent = (iconName: string): React.ElementType => {
+    const icons: Record<string, React.ElementType> = {
       'Target': Target,
       'Heart': Heart,
       'Shield': Shield,

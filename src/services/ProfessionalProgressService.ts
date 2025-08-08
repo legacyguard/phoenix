@@ -5,6 +5,30 @@
 
 import { supabase } from '@/integrations/supabase/client';
 
+// Minimal row shapes used from Supabase
+type ProfileRow = {
+  will_updated_at?: string | null;
+  has_will?: boolean | null;
+  has_executor?: boolean | null;
+  has_beneficiaries?: boolean | null;
+};
+
+type DocumentRow = {
+  id: string;
+  category: string;
+  created_at: string;
+  updated_at?: string | null;
+  name?: string | null;
+};
+
+type AssetRow = {
+  id: string;
+  type: string;
+  name?: string | null;
+  created_at: string;
+  updated_at?: string | null;
+};
+
 export interface SecurityArea {
   id: string;
   name: string;
@@ -115,21 +139,21 @@ export class ProfessionalProgressService {
     }
 
     // Fetch user data from Supabase (tolerant to different mock shapes)
-    const profileQuery: any = supabase
+    const { data: profileData } = await supabase
       .from('profiles')
-      .select('*')
-      .eq('id', userId);
-    const profileRes: any = typeof profileQuery.single === 'function' ? await profileQuery.single() : await profileQuery;
-    const profile = Array.isArray(profileRes?.data) ? profileRes.data[0] : profileRes?.data;
+      .select('will_updated_at, has_will, has_executor, has_beneficiaries')
+      .eq('id', userId)
+      .single();
+    const profile: ProfileRow | null = profileData as ProfileRow | null;
 
     const { data: documents } = await supabase
       .from('documents')
-      .select('category, created_at, updated_at')
+      .select('id, category, created_at, updated_at, name')
       .eq('user_id', userId);
 
     const { data: assets } = await supabase
       .from('assets')
-      .select('type, created_at, updated_at')
+      .select('id, type, name, created_at, updated_at')
       .eq('user_id', userId);
 
     const { data: familyMembers } = await supabase
@@ -288,10 +312,10 @@ export class ProfessionalProgressService {
    */
   private static updateSubtaskStatus(
     area: SecurityArea,
-    profile: any,
-    documents: any[],
-    assets: any[],
-    familyMembers: any[]
+    profile: Record<string, unknown> | null,
+    documents: Array<{ category?: string; created_at?: string; updated_at?: string }> | undefined,
+    assets: Array<{ type?: string; created_at?: string; updated_at?: string }> | undefined,
+    familyMembers: Array<{ relationship?: string; created_at?: string }> | undefined
   ): SubTask[] {
     if (!area.subtasks) return [];
 
@@ -333,7 +357,7 @@ export class ProfessionalProgressService {
   /**
    * Determine estate planning status based on profile data
    */
-  private static getEstateStatus(profile: any): SecurityArea['status'] {
+  private static getEstateStatus(profile: Record<string, unknown> | null): SecurityArea['status'] {
     if (!profile) return 'not_started';
     
     const hasWill = profile.has_will || false;
@@ -350,7 +374,7 @@ export class ProfessionalProgressService {
   /**
    * Determine estate planning priority based on profile data
    */
-  private static getEstatePriority(profile: any): SecurityArea['priority'] {
+  private static getEstatePriority(profile: Record<string, unknown> | null): SecurityArea['priority'] {
     if (!profile || !profile.has_will) return 'urgent';
     // If has will but not all items completed, it's still high priority; if fully complete, low
     const hasExecutor = profile.has_executor || false;
@@ -362,7 +386,7 @@ export class ProfessionalProgressService {
   /**
    * Get the latest date from a list of items
    */
-  private static getLatestDate(items?: any[]): string | null {
+  private static getLatestDate(items?: Array<{ created_at?: string; updated_at?: string }> | null): string | null {
     if (!items || items.length === 0) return null;
     
     const dates = items
@@ -376,7 +400,7 @@ export class ProfessionalProgressService {
   /**
    * Check if documents need review (older than 1 year)
    */
-  private static needsReview(items?: any[]): boolean {
+  private static needsReview(items?: Array<{ created_at?: string; updated_at?: string }> | null): boolean {
     if (!items || items.length === 0) return false;
     
     const latestDate = this.getLatestDate(items);
@@ -443,8 +467,8 @@ export class ProfessionalProgressService {
     // Get last activity date
     const allDates = areas
       .map(a => a.lastUpdated)
-      .filter(date => date)
-      .sort((a, b) => new Date(b!).getTime() - new Date(a!).getTime());
+      .filter((date): date is string => Boolean(date))
+      .sort((a, b) => new Date(b).getTime() - new Date(a).getTime());
 
     const lastActivityDate = allDates[0] || null;
 
@@ -644,39 +668,45 @@ export class ProfessionalProgressService {
     const events: TimelineEvent[] = [];
 
     // Fetch recent activities from various tables, tolerant to partial mocks
-    let profiles: any[] | undefined;
-    let documents: any[] | undefined;
-    let assets: any[] | undefined;
+    let profiles: Array<{ updated_at?: string | null }> | undefined;
+    let documents: DocumentRow[] | undefined;
+    let assets: AssetRow[] | undefined;
 
     try {
-      const res: any = await (supabase as any)
+      const res = await supabase
         .from('profiles')
         .select('updated_at')
         .eq('id', userId)
         .order('updated_at', { ascending: false })
         .limit(1);
-      profiles = res?.data ?? res;
-    } catch {}
+      profiles = (res as { data?: Array<{ updated_at?: string | null }> }).data;
+    } catch (e) {
+      console.warn('Failed to fetch profile updates for timeline', e);
+    }
 
     try {
-      const res: any = await (supabase as any)
+      const res = await supabase
         .from('documents')
         .select('id, category, created_at, updated_at, name')
         .eq('user_id', userId)
         .order('created_at', { ascending: false })
         .limit(limit);
-      documents = res?.data ?? res;
-    } catch {}
+      documents = (res as { data?: DocumentRow[] }).data;
+    } catch (e) {
+      console.warn('Failed to fetch documents for timeline', e);
+    }
 
     try {
-      const res: any = await (supabase as any)
+      const res = await supabase
         .from('assets')
         .select('id, type, name, created_at, updated_at')
         .eq('user_id', userId)
         .order('created_at', { ascending: false })
         .limit(limit);
-      assets = res?.data ?? res;
-    } catch {}
+      assets = (res as { data?: AssetRow[] }).data;
+    } catch (e) {
+      console.warn('Failed to fetch assets for timeline', e);
+    }
 
     // Add profile update events
     profiles?.forEach(profile => {
@@ -780,7 +810,7 @@ export class ProfessionalProgressService {
     // Find the highest priority recommendation
     const priorities = ['urgent', 'high', 'medium', 'low'];
     for (const priority of priorities) {
-      const found = recommendations.find(r => r.priority === priority as any);
+      const found = recommendations.find(r => r.priority === (priority as Recommendation['priority']));
       if (found) return found;
     }
     return null;

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { Info, Shield, AlertTriangle, CheckCircle } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { cn } from '@/lib/utils';
@@ -29,7 +29,7 @@ const ProactiveErrorPrevention: React.FC<ProactiveErrorPreventionProps> = ({
   const [isAutoSaving, setIsAutoSaving] = useState(false);
 
   // Context-specific hints
-  const getContextHints = (): ValidationHint => {
+  const getContextHints = useCallback((): ValidationHint => {
     switch (context) {
       case 'form':
         if (fieldName?.includes('email')) {
@@ -87,13 +87,13 @@ const ProactiveErrorPrevention: React.FC<ProactiveErrorPreventionProps> = ({
           type: 'info'
         };
     }
-  };
+  }, [context, fieldName]);
 
   // Show hints on focus or hover
   useEffect(() => {
     const hint = getContextHints();
     setValidationHint(hint);
-  }, [context, fieldName]);
+  }, [getContextHints]);
 
   // Auto-save indicator
   useEffect(() => {

@@ -12,17 +12,29 @@ import {
   Timestamp 
 } from 'firebase/firestore';
 
+interface ActivityDetails {
+  [key: string]: unknown;
+  action?: 'add' | 'remove' | 'update';
+  relationship?: string;
+  reason?: string;
+  documentType?: string;
+  assetType?: string;
+  changeType?: string;
+  value?: number;
+  updateType?: string;
+}
+
 export interface UserActivity {
   type: 'profile_update' | 'asset_change' | 'beneficiary_update' | 'document_upload' | 'guardian_update';
   timestamp: Date;
-  details: Record<string, any>;
+  details: ActivityDetails;
   userId: string;
 }
 
 export interface ProfileChange {
   field: string;
-  oldValue: any;
-  newValue: any;
+  oldValue: unknown;
+  newValue: unknown;
   timestamp: Date;
 }
 
@@ -30,7 +42,7 @@ export interface ExternalIndicator {
   source: 'calendar' | 'email' | 'document_scan' | 'user_input';
   type: string;
   confidence: number;
-  data: Record<string, any>;
+  data: Record<string, unknown>;
 }
 
 export interface LifeEvent {

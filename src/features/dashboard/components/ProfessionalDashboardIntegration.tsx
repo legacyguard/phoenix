@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useAuth } from '@/hooks/useAuth';
 import { ProgressService } from '@/services/ProgressService';
@@ -39,11 +39,29 @@ const ProfessionalDashboardIntegration: React.FC<DashboardProps> = ({
   // State management
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [progressStatus, setProgressStatus] = useState<any>(null);
+  type ProgressStatus = {
+    completionScore?: number;
+    completedItems?: Array<{ id?: string; title?: string; name?: string; description?: string; type?: string; estimatedTime?: number }>;
+    pendingItems?: Array<{ id?: string; title?: string; name?: string; description?: string; type?: string; estimatedTime?: number; priority?: string; isCritical?: boolean; isFoundational?: boolean }>;
+    criticalGaps?: Array<{ id?: string; title?: string; name?: string; description?: string; type?: string; estimatedTime?: number }>;
+  } | null;
+
+  type Task = {
+    id: string;
+    title: string;
+    description?: string;
+    category: string;
+    priority: 'immediate' | 'high' | 'medium' | 'low' | 'completed';
+    completed: boolean;
+    estimatedTime: number;
+    pillar: string;
+  };
+
+  const [progressStatus, setProgressStatus] = useState<ProgressStatus>(null);
   const [onboardingData, setOnboardingData] = useState<OnboardingData | null>(null);
   const [showAnnualReview, setShowAnnualReview] = useState(false);
   const [showLegalConsultation, setShowLegalConsultation] = useState(false);
-  const [userTasks, setUserTasks] = useState<any[]>([]);
+  const [userTasks, setUserTasks] = useState<Task[]>([]);
   const [completionScore, setCompletionScore] = useState(0);
 
   // Initialize dashboard based on user state
@@ -113,15 +131,15 @@ const ProfessionalDashboardIntegration: React.FC<DashboardProps> = ({
     };
 
     initializeDashboard();
-  }, [user, forceOnboarding]);
+  }, [user, forceOnboarding, convertProgressToTasks, updateProgress, updateEmotionalState, checkAnnualReviewStatus, t]);
 
   // Convert progress status to task format for ProfessionalDashboard
-  const convertProgressToTasks = (status: any) => {
-    const tasks: any[] = [];
+  const convertProgressToTasks = useCallback((status: NonNullable<ProgressStatus>) => {
+    const tasks: Task[] = [];
     
     // Add completed items as completed tasks
     if (status.completedItems) {
-      status.completedItems.forEach((item: any) => {
+      status.completedItems.forEach((item) => {
         tasks.push({
           id: item.id || `completed-${tasks.length}`,
           title: item.title || item.name,
@@ -137,7 +155,7 @@ const ProfessionalDashboardIntegration: React.FC<DashboardProps> = ({
     
     // Add pending items as tasks
     if (status.pendingItems) {
-      status.pendingItems.forEach((item: any) => {
+      status.pendingItems.forEach((item) => {
         tasks.push({
           id: item.id || `pending-${tasks.length}`,
           title: item.title || item.name,
@@ -153,7 +171,7 @@ const ProfessionalDashboardIntegration: React.FC<DashboardProps> = ({
     
     // Add critical gaps as high priority tasks
     if (status.criticalGaps) {
-      status.criticalGaps.forEach((gap: any) => {
+      status.criticalGaps.forEach((gap) => {
         tasks.push({
           id: gap.id || `gap-${tasks.length}`,
           title: gap.title || gap.name,
@@ -168,10 +186,10 @@ const ProfessionalDashboardIntegration: React.FC<DashboardProps> = ({
     }
     
     return tasks;
-  };
+  }, [t, mapToCategory, mapToPillar, determinePriority]);
 
   // Map item types to professional categories
-  const mapToCategory = (type: string): string => {
+  const mapToCategory = useCallback((type: string): string => {
     const categoryMap: Record<string, string> = {
       'document': 'documents',
       'guardian': 'family',
@@ -183,10 +201,10 @@ const ProfessionalDashboardIntegration: React.FC<DashboardProps> = ({
       'security': 'security'
     };
     return categoryMap[type?.toLowerCase()] || 'other';
-  };
+  }, []);
 
   // Map item types to pillars
-  const mapToPillar = (type: string): string => {
+  const mapToPillar = useCallback((type: string): string => {
     const pillarMap: Record<string, string> = {
       'document': 'organize',
       'guardian': 'secure',
@@ -198,16 +216,16 @@ const ProfessionalDashboardIntegration: React.FC<DashboardProps> = ({
       'security': 'secure'
     };
     return pillarMap[type?.toLowerCase()] || 'organize';
-  };
+  }, []);
 
   // Determine task priority based on completion score and item type
-  const determinePriority = (item: any, completionScore: number): string => {
+  const determinePriority = useCallback((item: { isCritical?: boolean; priority?: string; isFoundational?: boolean }, completionScore: number): Task['priority'] => {
     if (item.isCritical || item.priority === 'critical') return 'immediate';
     if (completionScore < 25 && item.isFoundational) return 'high';
     if (completionScore < 50) return 'high';
     if (completionScore < 75) return 'medium';
     return 'low';
-  };
+  }, []);
 
   // Get professional stage name based on completion
   const getProfessionalStage = (score: number): string => {
@@ -227,7 +245,7 @@ const ProfessionalDashboardIntegration: React.FC<DashboardProps> = ({
   };
 
   // Check if annual review is needed
-  const checkAnnualReviewStatus = () => {
+  const checkAnnualReviewStatus = useCallback(() => {
     const lastReviewKey = `last_annual_review_${user?.id}`;
     const lastReview = localStorage.getItem(lastReviewKey);
     
@@ -241,7 +259,7 @@ const ProfessionalDashboardIntegration: React.FC<DashboardProps> = ({
         console.log('Annual review recommended');
       }
     }
-  };
+  }, [user]);
 
   // Handle onboarding completion
   const handleOnboardingComplete = (data: OnboardingData) => {
@@ -265,8 +283,8 @@ const ProfessionalDashboardIntegration: React.FC<DashboardProps> = ({
   };
 
   // Generate tasks from onboarding data
-  const generateTasksFromOnboarding = (data: OnboardingData): any[] => {
-    const tasks: any[] = [];
+  const generateTasksFromOnboarding = (data: OnboardingData): Task[] => {
+    const tasks: Task[] = [];
     
     // Add document-related tasks
     if (data.documents && data.documents.length > 0) {
