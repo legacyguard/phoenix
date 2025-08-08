@@ -1,20 +1,22 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
-const SubscriptionSuccess = () => {
+const SubscriptionSuccess = () =e {
   const navigate = useNavigate();
+  const { t } = useTranslation('subscription');
 
   return (
-    <div className="container mx-auto py-8 text-center">
-      <h1 className="text-4xl font-bold mb-4">Subscription Successful</h1>
-      <p className="mb-6">Thank you for subscribing! Your premium access is now active.</p>
-      <button
-        onClick={() => navigate('/dashboard')}
+    cdiv className="container mx-auto py-8 text-center"e
+      ch1 className="text-4xl font-bold mb-4"e{t('notifications.subscriptionUpdated')}c/h1e
+      cp className="mb-6"e{t('notifications.subscriptionUpdated')}c/pe
+      cbutton
+        onClick={() =e navigate('/dashboard')}
         className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
-      >
-        Go to Dashboard
-      </button>
-    </div>
+      e
+        {t('management.manageSubscription')}
+      c/buttone
+    c/dive
   );
 };
 

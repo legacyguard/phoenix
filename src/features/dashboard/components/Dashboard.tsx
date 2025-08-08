@@ -20,6 +20,7 @@ import LegalConsultationModal from '@/components/LegalConsultationModal';
 import { EnhancedPersonalAssistant } from '@/components/assistant/EnhancedPersonalAssistant';
 import { PersonalizedDashboardContent } from '@/components/dashboard/PersonalizedDashboardContent';
 import { useAssistant } from '@/hooks/useAssistant';
+import { FamilyPreparednessCalculator } from '@/components/landing/FamilyPreparednessCalculator';
 
 // Import Professional Dashboard Integration
 import ProfessionalDashboardIntegration from './ProfessionalDashboardIntegration';
@@ -442,6 +443,22 @@ const Dashboard = () => {
             currentStage={progressStatus.currentStage}
             completedItems={progressStatus.completedItems || []}
           />
+
+          {/* Family Preparedness Calculator - Secure, authenticated access only */}
+          <Card className="mb-8">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <Shield className="h-5 w-5 text-primary" />
+                {t('calculator.title')}
+              </CardTitle>
+              <CardDescription>
+                {t('calculator.subtitle')}
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <FamilyPreparednessCalculator />
+            </CardContent>
+          </Card>
 
           {/* Special Offer for Complex Profiles */}
           {progressStatus.completionScore > 80 && user?.has_business && (

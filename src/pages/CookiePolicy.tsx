@@ -18,10 +18,10 @@ const CookiePolicy: React.FC = () => {
       description: t('wills.policy.necessary.description'),
       purpose: t('wills.policy.necessary.purpose'),
       examples: [
-        { name: 'auth_token', duration: '7 days', description: t('wills.policy.necessary.examples.auth') },
-        { name: 'session_id', duration: 'Session', description: t('wills.policy.necessary.examples.session') },
-        { name: 'security_csrf', duration: '1 hour', description: t('wills.policy.necessary.examples.csrf') },
-        { name: 'consent_preferences', duration: '1 year', description: t('wills.policy.necessary.examples.consent') }
+        { name: 'auth_token', duration: t('wills.policy.duration.days', { count: 7 }), description: t('wills.policy.necessary.examples.auth') },
+        { name: 'session_id', duration: t('wills.policy.duration.session'), description: t('wills.policy.necessary.examples.session') },
+        { name: 'security_csrf', duration: t('wills.policy.duration.hours', { count: 1 }), description: t('wills.policy.necessary.examples.csrf') },
+        { name: 'consent_preferences', duration: t('wills.policy.duration.years', { count: 1 }), description: t('wills.policy.necessary.examples.consent') }
       ],
       required: true,
       color: 'text-green-600'
@@ -32,9 +32,9 @@ const CookiePolicy: React.FC = () => {
       description: t('wills.policy.analytics.description'),
       purpose: t('wills.policy.analytics.purpose'),
       examples: [
-        { name: '_ga', duration: '2 years', description: t('wills.policy.analytics.examples.ga') },
-        { name: '_gid', duration: '24 hours', description: t('wills.policy.analytics.examples.gid') },
-        { name: 'analytics_session', duration: '30 minutes', description: t('wills.policy.analytics.examples.session') }
+        { name: '_ga', duration: t('wills.policy.duration.years', { count: 2 }), description: t('wills.policy.analytics.examples.ga') },
+        { name: '_gid', duration: t('wills.policy.duration.hours', { count: 24 }), description: t('wills.policy.analytics.examples.gid') },
+        { name: 'analytics_session', duration: t('wills.policy.duration.minutes', { count: 30 }), description: t('wills.policy.analytics.examples.session') }
       ],
       required: false,
       color: 'text-blue-600'
@@ -45,8 +45,8 @@ const CookiePolicy: React.FC = () => {
       description: t('wills.policy.marketing.description'),
       purpose: t('wills.policy.marketing.purpose'),
       examples: [
-        { name: 'fbp', duration: '3 months', description: t('wills.policy.marketing.examples.facebook') },
-        { name: '_gcl_au', duration: '3 months', description: t('wills.policy.marketing.examples.google') }
+        { name: 'fbp', duration: t('wills.policy.duration.months', { count: 3 }), description: t('wills.policy.marketing.examples.facebook') },
+        { name: '_gcl_au', duration: t('wills.policy.duration.months', { count: 3 }), description: t('wills.policy.marketing.examples.google') }
       ],
       required: false,
       color: 'text-purple-600'
@@ -57,9 +57,9 @@ const CookiePolicy: React.FC = () => {
       description: t('wills.policy.preferences.description'),
       purpose: t('wills.policy.preferences.purpose'),
       examples: [
-        { name: 'theme_preference', duration: '1 year', description: t('wills.policy.preferences.examples.theme') },
-        { name: 'language', duration: '1 year', description: t('wills.policy.preferences.examples.language') },
-        { name: 'ui_settings', duration: '1 year', description: t('wills.policy.preferences.examples.ui') }
+        { name: 'theme_preference', duration: t('wills.policy.duration.years', { count: 1 }), description: t('wills.policy.preferences.examples.theme') },
+        { name: 'language', duration: t('wills.policy.duration.years', { count: 1 }), description: t('wills.policy.preferences.examples.language') },
+        { name: 'ui_settings', duration: t('wills.policy.duration.years', { count: 1 }), description: t('wills.policy.preferences.examples.ui') }
       ],
       required: false,
       color: 'text-orange-600'

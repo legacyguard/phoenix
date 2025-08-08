@@ -28,7 +28,7 @@ export const MarketingLayout: React.FC<MarketingLayoutProps> = ({ children }) =>
 
               <Shield className="h-8 w-8 text-primary" />
               <span className="text-xl font-bold text-primary">
-                {t('ui.name')}
+                {t('name')}
               </span>
             </Link>
 

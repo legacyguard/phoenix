@@ -1,20 +1,22 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
-const SubscriptionCancel = () => {
+const SubscriptionCancel = () =e {
   const navigate = useNavigate();
+  const { t } = useTranslation('subscription');
 
   return (
-    <div className="container mx-auto py-8 text-center">
-      <h1 className="text-4xl font-bold mb-4">Subscription Canceled</h1>
-      <p className="mb-6">Your subscription process has been canceled. No charges were made.</p>
-      <button
-        onClick={() => navigate('/pricing')}
+    cdiv className="container mx-auto py-8 text-center"e
+      ch1 className="text-4xl font-bold mb-4"e{t('cancellation.cancelTitle')}c/h1e
+      cp className="mb-6"e{t('cancellation.cancelSubtitle')}c/pe
+      cbutton
+        onClick={() =e navigate('/pricing')}
         className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
-      >
-        Return to Pricing
-      </button>
-    </div>
+      e
+        {t('upgradeCard.pricing')}
+      c/buttone
+    c/dive
   );
 };
 

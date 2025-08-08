@@ -1,43 +1,45 @@
 import React from 'react';
 import LegalLayout from '@/components/layouts/LegalLayout';
+import { useTranslation } from 'react-i18next';
 
 const RefundPolicy: React.FC = () => {
+  const { t } = useTranslation('legal');
   return (
-    <LegalLayout title="Refund Policy">
-      <p className="text-lg mb-4">Effective Date: {new Date().toLocaleDateString()}</p>
+    <LegalLayout title={t('refund.title')}>
+      <p className="text-lg mb-4">{t('refund.effectiveDate', { date: new Date().toLocaleDateString() })}</p>
       
-      <h2 className="text-2xl font-semibold mt-6 mb-3">1. Overview</h2>
+      <h2 className="text-2xl font-semibold mt-6 mb-3">{t('refund.sections.overview.title')}</h2>
       <p className="mb-4">
-        At LegacyGuard Heritage Vault, customer satisfaction is our priority. This Refund Policy outlines the criteria and process for requesting a refund.
+        {t('refund.sections.overview.body')}
       </p>
       
-      <h2 className="text-2xl font-semibold mt-6 mb-3">2. Eligibility for Refunds</h2>
+      <h2 className="text-2xl font-semibold mt-6 mb-3">{t('refund.sections.eligibility.title')}</h2>
       <p className="mb-4">
-        You may be eligible for a refund within 30 days of your initial purchase if you have not extensively used the premium features. Refunds are provided at our discretion.
+        {t('refund.sections.eligibility.body')}
       </p>
       
-      <h2 className="text-2xl font-semibold mt-6 mb-3">3. Refund Process</h2>
+      <h2 className="text-2xl font-semibold mt-6 mb-3">{t('refund.sections.process.title')}</h2>
       <p className="mb-4">
-        To initiate a refund request, please contact our support team at support@legacyguard.com within 30 days of purchase. Include your account email and reason for the refund request.
+        {t('refund.sections.process.body')}
       </p>
       
-      <h2 className="text-2xl font-semibold mt-6 mb-3">4. Non-refundable Services</h2>
+      <h2 className="text-2xl font-semibold mt-6 mb-3">{t('refund.sections.nonRefundable.title')}</h2>
       <p className="mb-4">
-        The following services are non-refundable:
+        {t('refund.sections.nonRefundable.intro')}
       </p>
       <ul className="list-disc pl-6 mb-4">
-        <li>Monthly subscriptions after the first 30 days</li>
-        <li>One-time document processing fees</li>
-        <li>Notarization and legal consultation services</li>
+        <li>{t('refund.sections.nonRefundable.items.item1')}</li>
+        <li>{t('refund.sections.nonRefundable.items.item2')}</li>
+        <li>{t('refund.sections.nonRefundable.items.item3')}</li>
       </ul>
       
-      <h2 className="text-2xl font-semibold mt-6 mb-3">5. Processing Time</h2>
+      <h2 className="text-2xl font-semibold mt-6 mb-3">{t('refund.sections.processingTime.title')}</h2>
       <p className="mb-4">
-        Approved refunds will be processed within 5-10 business days and credited to your original payment method.
+        {t('refund.sections.processingTime.body')}
       </p>
       
       <p className="mt-8 text-sm text-muted-foreground">
-        [This is a placeholder. Please consult with legal counsel to create a comprehensive Refund Policy.]
+        {t('refund.disclaimer')}
       </p>
     </LegalLayout>
   );

@@ -1,42 +1,40 @@
 import React from 'react';
 import LegalLayout from '@/components/layouts/LegalLayout';
+import { useTranslation } from 'react-i18next';
 
 const TermsOfService: React.FC = () => {
+  const { t } = useTranslation('legal');
   return (
-    <LegalLayout title="Terms of Service">
-      <p className="text-lg mb-4">Effective Date: {new Date().toLocaleDateString()}</p>
+    <LegalLayout title={t('tos.title')}>
+      <p className="text-lg mb-4">{t('tos.effectiveDate', { date: new Date().toLocaleDateString() })}</p>
       
-      <h2 className="text-2xl font-semibold mt-6 mb-3">1. Acceptance of Terms</h2>
+      <h2 className="text-2xl font-semibold mt-6 mb-3">{t('tos.sections.acceptance.title')}</h2>
       <p className="mb-4">
-        By accessing or using LegacyGuard Heritage Vault, you agree to be bound by these Terms of Service.
+        {t('tos.sections.acceptance.body')}
       </p>
       
-      <h2 className="text-2xl font-semibold mt-6 mb-3">2. Service Description</h2>
+      <h2 className="text-2xl font-semibold mt-6 mb-3">{t('tos.sections.service.title')}</h2>
       <p className="mb-4">
-        LegacyGuard Heritage Vault provides digital legacy management services, including document storage, 
-        will generation, and secure sharing of important information with designated beneficiaries.
+        {t('tos.sections.service.body')}
       </p>
       
-      <h2 className="text-2xl font-semibold mt-6 mb-3">3. User Responsibilities</h2>
+      <h2 className="text-2xl font-semibold mt-6 mb-3">{t('tos.sections.responsibilities.title')}</h2>
       <p className="mb-4">
-        You are responsible for maintaining the confidentiality of your account credentials and for all 
-        activities that occur under your account.
+        {t('tos.sections.responsibilities.body')}
       </p>
       
-      <h2 className="text-2xl font-semibold mt-6 mb-3">4. Privacy and Data Protection</h2>
+      <h2 className="text-2xl font-semibold mt-6 mb-3">{t('tos.sections.privacy.title')}</h2>
       <p className="mb-4">
-        Your privacy is important to us. Please review our Privacy Policy to understand how we collect, 
-        use, and protect your information.
+        {t('tos.sections.privacy.body')}
       </p>
       
-      <h2 className="text-2xl font-semibold mt-6 mb-3">5. Limitation of Liability</h2>
+      <h2 className="text-2xl font-semibold mt-6 mb-3">{t('tos.sections.liability.title')}</h2>
       <p className="mb-4">
-        LegacyGuard Heritage Vault shall not be liable for any indirect, incidental, special, consequential, 
-        or punitive damages resulting from your use of the service.
+        {t('tos.sections.liability.body')}
       </p>
       
       <p className="mt-8 text-sm text-muted-foreground">
-        [This is a placeholder. Please consult with legal counsel to create comprehensive Terms of Service.]
+        {t('tos.disclaimer')}
       </p>
     </LegalLayout>
   );

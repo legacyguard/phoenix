@@ -6,7 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { PricingSection } from '@/components/landing/PricingSection';
 import { ScenarioShowcase } from '@/components/landing/ScenarioShowcase';
-import { FamilyPreparednessCalculator } from '@/components/landing/FamilyPreparednessCalculator';
+
 import { FamilyTestimonials } from '@/components/landing/FamilyTestimonials';
 import { PainPoints } from '@/components/landing/PainPoints';
 import { EmotionalValidation } from '@/components/landing/EmotionalValidation';
@@ -23,7 +23,8 @@ import {
   Infinity as InfinityIcon,
   Home,
   FileSearch,
-  Navigation
+  Navigation,
+  Calculator
 } from 'lucide-react';
 
 export const Landing: React.FC = () => {
@@ -121,8 +122,36 @@ export const Landing: React.FC = () => {
       {/* Testimonials Section */}
       <FamilyTestimonials />
 
-      {/* Calculator Section */}
-      <FamilyPreparednessCalculator />
+      {/* Calculator CTA Section */}
+      <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="text-center max-w-4xl mx-auto">
+            <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full mb-4">
+              <Calculator className="h-4 w-4" />
+              <span className="text-sm font-medium">{t('calculator.badge')}</span>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+              {t('calculator.title')}
+            </h2>
+            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+              {t('calculator.description')}
+            </p>
+            <Button 
+              asChild
+              size="xl"
+              className="bg-primary hover:bg-primary/90 text-white shadow-lg"
+            >
+              <Link to="/register">
+                {t('calculator.cta')}
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
+            <p className="text-sm text-muted-foreground mt-4">
+              {t('calculator.context')}
+            </p>
+          </div>
+        </div>
+      </section>
 
       {/* Features Section */}
       <section className="py-20 bg-background">
