@@ -2,6 +2,8 @@
  * Security utilities for the application
  */
 
+import { logger } from '@/utils/logger';
+
 const AUTH_STORAGE_KEY = 'legacyguard_auth';
 
 /**
@@ -26,9 +28,9 @@ export function clearAuthenticationData(): void {
       sessionStorage.removeItem(key);
     });
     
-    console.log('Security: Cleared all authentication data');
+    logger.info('Security: Cleared all authentication data');
   } catch (error) {
-    console.warn('Security: Could not clear authentication data:', error);
+    logger.warn('Security: Could not clear authentication data:', error);
   }
 }
 
@@ -57,13 +59,8 @@ export function getEnvironment(): string {
  * Security check to ensure proper environment configuration
  */
 export function validateSecurityConfig(): void {
-  if (isProduction()) {
-    // In production, ensure no debug information is exposed
-    console.log = () => {};
-    console.debug = () => {};
-    console.info = () => {};
-  }
-  
+  // Debug output is managed by the logger via environment variables
+
   // Always clear authentication data on app start
   clearAuthenticationData();
-} 
+}
