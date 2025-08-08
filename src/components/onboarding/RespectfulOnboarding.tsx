@@ -48,6 +48,7 @@ const RespectfulOnboarding: React.FC<RespectfulOnboardingProps> = ({
   const [completedSteps, setCompletedSteps] = useState<string[]>([]);
 
   // Initialize step based on props
+  // This component intentionally avoids gamification; see migration guide in docs/migration-guide-respectful-onboarding.md
   useEffect(() => {
     if (skipToUpload && isOpen) {
       setCurrentStep('upload');

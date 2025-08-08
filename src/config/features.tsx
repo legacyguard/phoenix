@@ -1,6 +1,9 @@
 /**
  * Feature Flags Configuration
  * Controls feature rollout and A/B testing capabilities
+ *
+ * Usage documentation: see docs/feature-flags.md
+ * Rollback procedures: see docs/rollback-procedures.md
  */
 
 export interface FeatureFlags {

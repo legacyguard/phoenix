@@ -158,17 +158,17 @@ I'll execute the implementation in the following sequential steps. Each step wil
 
 • Verify backward compatibility
 
-**Step 14: Documentation & Cleanup**
+**Step 14: Documentation \u0026 Cleanup**
 
-• Document feature flag usage
+• Document feature flag usage — see docs/feature-flags.md
 
-• Create migration guide
+• Create migration guide — see docs/migration-guide-respectful-onboarding.md
 
-• Update component documentation
+• Update component documentation — added inline notes in src/config/features.tsx, src/components/debug/FeatureFlagPanel.tsx, src/components/auth/UserFlowManager.tsx, src/components/onboarding/RespectfulOnboarding.tsx, and src/App.tsx
 
-• Add inline comments for future maintenance
+• Add inline comments for future maintenance — completed in key files noted above
 
-• Create rollback procedures
+• Create rollback procedures — see docs/rollback-procedures.md
 
 **Step 15: Final Integration & Verification**
 

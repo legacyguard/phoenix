@@ -1,6 +1,11 @@
 /**
  * Feature Flag Debug Panel
  * Development tool for testing feature flags
+ *
+ * Notes:
+ * - Only renders in development (import.meta.env.PROD short-circuits)
+ * - Persists toggles to localStorage using keys from src/config/features.tsx
+ * - For full reference and procedures see docs/feature-flags.md
  */
 
 import React, { useState } from 'react';

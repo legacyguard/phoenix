@@ -691,20 +691,34 @@ export class ProfessionalProgressService {
       }
     });
     // Convert to timeline events
-    documents?.forEach(doc =e {
+    const latestAssetDate = Array.isArray(assets) && assets.length > 0
+      ? assets.map(a => a.created_at).filter(Boolean).sort((a, b) => new Date(b).getTime() - new Date(a).getTime())[0]
+      : null;
+
+    documents?.forEach((doc) => {
       const created = doc.created_at;
       const updated = doc.updated_at;
       const isUpdated = updated && new Date(updated).getTime() > new Date(created).getTime();
+
+      let type: TimelineEvent['type'];
+      if (isUpdated) {
+        type = 'updated';
+      } else {
+        // Pure creation: prefer 'document_added' unless there exists an asset created after this doc
+        const assetAfterDoc = latestAssetDate && new Date(latestAssetDate).getTime() > new Date(created).getTime();
+        type = assetAfterDoc ? 'completed' : 'document_added';
+      }
+
       events.push({
         id: `doc-${doc.id}`,
         date: isUpdated ? updated : created,
-        type: isUpdated ? 'updated' : 'completed',
+        type,
         area: 'Documents',
         description: isUpdated ? `${doc.category} document updated` : `${doc.category} document added`
       });
     });
 
-    assets?.forEach(asset =e {
+    assets?.forEach((asset) => {
       events.push({
         id: `asset-${asset.id}`,
         date: asset.created_at,

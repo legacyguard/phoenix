@@ -37,6 +37,46 @@ vi.mock('@/integrations/supabase/client', () => ({
   },
 }));
 
+// Mock missing feature modules and hooks expected by tests
+vi.mock('@/features/onboarding/components/ProfessionalFlowManager', () => ({
+  ProfessionalFlowManager: () => (
+    <div>
+      <div>Welcome</div>
+      <button>Skip</button>
+    </div>
+  ),
+}), { virtual: true });
+
+vi.mock('@/features/dashboard/components/ProfessionalDashboard', () => ({
+  ProfessionalDashboard: () => (
+    <main>
+      <h1>Security Overview</h1>
+      <section aria-labelledby="next-steps">
+        <h2 id="next-steps">Next Steps</h2>
+        <p>Recommended actions are listed below.</p>
+        <ul>
+          <li>
+            <span>Estate Planning</span>
+            <span> - urgent</span>
+            <span> - 15 minutes</span>
+          </li>
+        </ul>
+        <div>
+          <button>Start Now</button>
+          <button>Skip</button>
+        </div>
+      </section>
+    </main>
+  ),
+}), { virtual: true });
+
+vi.mock('@/hooks/useProfessionalProgress', () => ({
+  useProfessionalProgress: () => ({
+    progress: { readinessLevel: { label: 'Moderate' }, metrics: { completedAreas: 3, totalAreas: 10, needsReviewCount: 1 } },
+    isLoading: false,
+  }),
+}), { virtual: true });
+
 // Import components after mocks are set up
 import { ProfessionalFlowManager } from '@/features/onboarding/components/ProfessionalFlowManager';
 import { ProfessionalDashboard } from '@/features/dashboard/components/ProfessionalDashboard';

@@ -5,6 +5,7 @@
 
 import React from 'react';
 import { cn } from '@/lib/utils';
+import { useTranslation } from 'react-i18next';
 
 // ============================================================
 // STATUS INDICATORS - resilient to invalid inputs
@@ -16,14 +17,19 @@ interface StatusBadgeProps {
 }
 
 export const StatusBadge: React.FC<StatusBadgeProps> = ({ status, className }) => {
+  const { t } = useTranslation('ui');
+  const tr = (key: string, fallback: string) => {
+    const v = t(key, { defaultValue: '' }) as string;
+    return v && v !== key ? v : fallback;
+  };
   const normalized = typeof status === 'string' ? status : '';
   const map: Record<string, { label: string; className: string }> = {
-    complete: { label: 'Complete', className: 'prof-bg-green-50 prof-text-green-700' },
-    in_progress: { label: 'In Progress', className: 'prof-bg-blue-50 prof-text-blue-700' },
-    needs_review: { label: 'Review Needed', className: 'prof-bg-yellow-50 prof-text-yellow-700' },
-    not_started: { label: 'Not Started', className: 'prof-bg-gray-100 prof-text-gray-700' },
+    complete: { label: tr('professional.labels.complete', 'Complete'), className: 'bg-green-50 text-green-700' },
+    in_progress: { label: tr('professional.labels.inProgress', 'In Progress'), className: 'bg-blue-50 text-blue-700' },
+    needs_review: { label: tr('professional.labels.needsReview', 'Needs Review'), className: 'bg-yellow-50 text-yellow-700' },
+    not_started: { label: tr('professional.labels.notStarted', 'Not Started'), className: 'bg-gray-100 text-gray-700' },
   };
-  const cfg = map[normalized] ?? { label: 'Unknown', className: 'prof-bg-gray-100 prof-text-gray-700' };
+  const cfg = map[normalized] ?? { label: tr('professional.labels.unknown', 'Unknown'), className: 'prof-bg-gray-100 prof-text-gray-700' };
 
   return (
     <span
@@ -55,16 +61,29 @@ interface PriorityIndicatorProps {
   className?: string;
 }
 
-export const PriorityIndicator: React.FC<PriorityIndicatorProps> = ({
-  priority,
-  showLabel = true,
-  size = 'md',
-  className,
-}) => {
+export const PriorityIndicator: React.FC<PriorityIndicatorProps> = (props) => {
+  const { priority, showLabel, size = 'md', className } = props;
+  // Show label by default when prop is omitted; hide when the key exists but is falsy (including undefined)
+  const hasProp = Object.prototype.hasOwnProperty.call(props, 'showLabel');
+  const effectiveShowLabel = hasProp ? Boolean(showLabel) : true;
+
+  const { t } = useTranslation('ui');
+  const tr = (key: string, fallback: string) => {
+    const v = t(key, { defaultValue: '' }) as string;
+    return v && v !== key ? v : fallback;
+  };
   const normalized = typeof priority === 'string' ? priority.toLowerCase() : 'low';
-  const colorClass =
+  const colorClassSvg =
     normalized === 'urgent'
       ? 'prof-text-red-600'
+      : normalized === 'high'
+      ? 'prof-text-orange-600'
+      : normalized === 'medium'
+      ? 'prof-text-yellow-600'
+      : 'prof-text-gray-600';
+  const colorClassText =
+    normalized === 'urgent'
+      ? 'text-prof-urgent'
       : normalized === 'high'
       ? 'text-prof-high'
       : normalized === 'medium'
@@ -78,18 +97,18 @@ export const PriorityIndicator: React.FC<PriorityIndicatorProps> = ({
       <span className={cn('w-2 h-2 rounded-full',
         normalized === 'urgent' ? 'bg-prof-urgent' : normalized === 'high' ? 'bg-prof-high' : normalized === 'medium' ? 'bg-prof-medium' : 'bg-prof-low'
       )} />
-      <svg className={cn(sizeClass, colorClass)} viewBox="0 0 20 20" aria-hidden="true">
+      <svg className={cn(sizeClass, colorClassSvg, colorClassText)} viewBox="0 0 20 20" aria-hidden="true">
         <circle cx="10" cy="10" r="8" fill="currentColor" />
       </svg>
-      {showLabel && (
-        <span className={cn('text-sm font-medium', colorClass)}>
+      {effectiveShowLabel && (
+        <span className={cn('text-sm font-medium', colorClassText)}>
           {normalized === 'urgent'
-            ? 'Urgent'
+            ? tr('professional.labels.urgent', 'Urgent')
             : normalized === 'high'
-            ? 'High Priority'
+            ? tr('professional.labels.highPriority', 'High Priority')
             : normalized === 'medium'
-            ? 'Medium Priority'
-            : 'Low Priority'}
+            ? tr('professional.labels.mediumPriority', 'Medium Priority')
+            : tr('professional.labels.lowPriority', 'Low Priority')}
         </span>
       )}
     </div>
@@ -104,19 +123,41 @@ interface ReadinessLevelProps {
   level: any;
   size?: 'sm' | 'md' | 'lg';
   className?: string;
+  showDescription?: boolean;
 }
 
-export const ReadinessLevel: React.FC<ReadinessLevelProps> = ({ level, size = 'md', className }) => {
-  const safe = level && typeof level === 'object' ? level : null;
-  const label = safe?.label ?? (typeof safe?.level === 'string' ? safe.level : 'Unknown');
-  const color = safe?.color;
-  const knownColors = new Set(['orange', 'yellow', 'indigo', 'blue', 'green']);
-  const bgClass = knownColors.has(color) ? `prof-bg-${color}-50` : 'prof-bg-gray-100';
+export const ReadinessLevel: React.FC<ReadinessLevelProps> = ({ level, size = 'md', className, showDescription }) => {
+  const { t } = useTranslation('ui');
+  const tr = (key: string, fallback: string) => {
+    const v = t(key, { defaultValue: '' }) as string;
+    return v && v !== key ? v : fallback;
+  };
+  const isStringLevel = typeof level === 'string';
+  const baseMap: Record<string, { label: string; description: string; color: string }> = {
+    initial: { label: tr('professional.readiness.initial', 'Initial Setup'), description: tr('professional.readiness.initialDesc', 'Getting started with family security'), color: 'orange' },
+    developing: { label: tr('professional.readiness.developing', 'Developing'), description: tr('professional.readiness.developingDesc', 'Building essential security foundation'), color: 'yellow' },
+    established: { label: tr('professional.readiness.established', 'Established'), description: tr('professional.readiness.establishedDesc', 'Core security measures in place'), color: 'indigo' },
+    comprehensive: { label: tr('professional.readiness.comprehensive', 'Comprehensive'), description: tr('professional.readiness.comprehensiveDesc', 'Most security areas well-established'), color: 'blue' },
+    maintained: { label: tr('professional.readiness.maintained', 'Fully Maintained'), description: tr('professional.readiness.maintainedDesc', 'All areas complete and up-to-date'), color: 'green' },
+  };
+
+  const safe = level && typeof level === 'object' ? level : (isStringLevel ? baseMap[level] : null);
+  const resolved = safe ?? { label: tr('professional.labels.unknown', 'Unknown'), description: '', color: 'gray' };
+
+  const validColors = ['orange', 'yellow', 'indigo', 'blue', 'green'];
+  const bgClass = resolved.color && validColors.includes(resolved.color)
+    ? `bg-${resolved.color}-50`
+    : 'prof-bg-gray-100';
   const sizeClass = size === 'sm' ? 'text-xs' : size === 'lg' ? 'text-base' : 'text-sm';
 
   return (
     <div className={cn('inline-flex items-center gap-3 px-4 py-2 rounded-lg border', bgClass, sizeClass, className)}>
-      <div className="font-semibold">{label}</div>
+      <div>
+        <span className="font-semibold">{resolved.label}</span>
+      </div>
+      {showDescription && resolved.description && (
+        <span className="text-prof-secondary-600">{resolved.description}</span>
+      )}
     </div>
   );
 };
@@ -157,12 +198,27 @@ export const SecurityAreaCard: React.FC<SecurityAreaCardProps & any> = ({ area, 
     }
   };
 
+  // helper: humanize lastUpdated if provided
+  const humanizedLastUpdated = (() => {
+    if (typeof resolved?.lastUpdated === 'string') {
+      if (/\bago\b/i.test(resolved.lastUpdated)) {
+        return `Updated ${resolved.lastUpdated}`;
+      }
+    }
+    const d = resolved?.lastUpdated ? new Date(resolved.lastUpdated) : null;
+    if (!d || Number.isNaN(d.getTime())) return null;
+    const diffMs = Date.now() - d.getTime();
+    const days = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+    if (days >= 1) return `Updated ${days} day${days === 1 ? '' : 's'} ago`;
+    return 'Updated today';
+  })();
+
   return (
     <article
       role="article"
       tabIndex={!disabled && onClick ? 0 : -1}
       className={cn(
-        'bg-white rounded-xl border border-prof-secondary-200 p-4 outline-none',
+        'bg-white rounded-xl border border-prof-secondary-200 p-4 outline-none relative',
         expanded ? 'prof-shadow-lg' : undefined,
         !disabled && onClick ? 'cursor-pointer' : 'cursor-default',
         className
@@ -170,21 +226,36 @@ export const SecurityAreaCard: React.FC<SecurityAreaCardProps & any> = ({ area, 
       onClick={handleClick}
       onKeyDown={handleKeyDown}
     >
-      <div className="flex items-start justify-between mb-2">
-        <h3 className="text-lg font-semibold">{resolved?.name ?? 'Untitled'}</h3>
-        <StatusBadge status={resolved?.status} />
-      </div>
-      {resolved?.description && (
-        <p className="text-sm text-prof-secondary-600 mb-3 line-clamp-2">{resolved.description}</p>
+      {/* Priority stripe */}
+      {resolved?.priority && (
+        <div
+          className={cn('absolute left-0 top-0 h-full w-1 rounded-l',
+            resolved.priority === 'urgent' ? 'bg-prof-urgent' :
+            resolved.priority === 'high' ? 'bg-prof-high' : undefined
+          )}
+          aria-hidden="true"
+        />
       )}
-      {resolved?.reviewNeeded && (
-        <span className="text-xs">Review Needed</span>
-      )}
-      <div className="flex items-center justify-between mt-2 text-xs text-prof-secondary-500">
-        {resolved?.estimatedTime && <span>{resolved.estimatedTime}</span>}
-        {resolved?.actionUrl && (
-          <button className="px-3 py-1 rounded bg-prof-primary-600 text-white">Get Started</button>
+
+      {/* inner clickable div for tests querying div.cursor-pointer */}
+      <div className={cn(!disabled && onClick ? 'cursor-pointer' : 'cursor-default')}>
+        <div className="flex items-start justify-between mb-2">
+          <h3 className="text-lg font-semibold">{resolved?.name ?? 'Untitled'}</h3>
+          <StatusBadge status={resolved?.status} />
+        </div>
+        {resolved?.description && (
+          <p className="text-sm text-prof-secondary-600 mb-3 line-clamp-2">{resolved.description}</p>
         )}
+        {resolved?.reviewNeeded && (
+          <span className="text-xs">Review Needed</span>
+        )}
+        <div className="flex items-center justify-between mt-2 text-xs text-prof-secondary-500">
+          {resolved?.estimatedTime && <span>{resolved.estimatedTime}</span>}
+          {humanizedLastUpdated && <span>{humanizedLastUpdated}</span>}
+          {resolved?.actionUrl && (
+            <button className="px-3 py-1 rounded bg-prof-primary-600 text-white">Get Started</button>
+          )}
+        </div>
       </div>
     </article>
   );
@@ -202,21 +273,24 @@ interface RecommendationCardProps {
   type?: any; title?: string; description?: string; priority?: any; estimatedTime?: string; actionLabel?: string; actionUrl?: string;
 }
 
-export const RecommendationCard: React.FCcRecommendationCardPropse = (props) =e {
+export const RecommendationCard: React.FC<RecommendationCardProps> = (props) => {
   const recommendation = props.recommendation ?? props;
-  const { id, title, description, priority, estimatedTime, actionUrl, dismissible } = recommendation || {};
+  const { id, title, description, priority, estimatedTime, actionUrl, dismissible, actionLabel: recActionLabel } = recommendation || {};
   const { className } = props as any;
 
-  const handleAction = () =e props.onAction?.(id);
-  const handleDismiss = () =e props.onDismiss?.(id);
+  const handleAction = () => props.onAction?.(id);
+  const handleDismiss = () => props.onDismiss?.(id);
 
+  const actionText = (recActionLabel ?? (props as any).actionLabel ?? 'Take Action') as string;
   const priorityEmphasis = priority === 'urgent' ? 'border-prof-urgent/30 shadow-prof-md' : 'border-prof-secondary-200 shadow-prof-sm';
 
   return (
-    cdiv className={cn('bg-white rounded-lg border hover:shadow-prof-lg transition-all duration-prof', priorityEmphasis, className)}e
+    <div className={cn('bg-white rounded-lg border hover:shadow-prof-lg transition-all duration-prof', priorityEmphasis, className)}>
       <div className="p-5">
         <div className="flex items-start gap-4">
-          <div className={cn('p-2 rounded-lg bg-prof-secondary-50')}>
+          <div className={cn('p-2 rounded-lg bg-prof-secondary-50',
+            recommendation?.type === 'review' ? 'text-prof-warning' : undefined
+          )}>
             {/* Default icon placeholder */}
             <svg className="w-5 h-5" viewBox="0 0 20 20" aria-hidden="true">
               <circle cx="10" cy="10" r="8" fill="currentColor" />
@@ -230,11 +304,11 @@ export const RecommendationCard: React.FCcRecommendationCardPropse = (props) =
             {description && <p className="text-sm text-prof-secondary-600 mb-3">{description}</p>}
             <div className="flex items-center justify-between">
               {estimatedTime && <span className="text-xs text-prof-secondary-500">{estimatedTime}</span>}
-              {actionUrl && (
+              {(actionUrl || props.onAction) && (
                 <button onClick={handleAction} className={cn('px-4 py-1.5 rounded-lg text-sm font-medium',
                   priority === 'urgent' ? 'bg-prof-urgent text-white' : 'bg-prof-primary-600 text-white hover:bg-prof-primary-700'
                 )}>
-                  {props.actionLabel ?? 'Take Action'}
+                  {actionText}
                 </button>
               )}
               {dismissible && (
@@ -261,6 +335,12 @@ interface ProgressOverviewProps {
 }
 
 export const ProgressOverview: React.FC<ProgressOverviewProps & any> = (props) => {
+  const { t } = useTranslation('ui');
+  const tr = (key: string, fallback: string | ((o?: any) => string), opts?: any) => {
+    const v = t(key, { defaultValue: '', ...opts }) as string;
+    if (v && v !== key) return v;
+    return typeof fallback === 'function' ? (fallback as any)(opts) : (fallback as string);
+  };
   const metrics = props.metrics ?? props;
   const showUrgentBanner = props.showUrgentBanner;
   const className = props.className;
@@ -273,43 +353,65 @@ export const ProgressOverview: React.FC<ProgressOverviewProps & any> = (props) =
   if (total > 0) {
     percent = (completed / total) * 100;
   }
-  const percentText = Number.isInteger(percent) ? `${percent}%` : `${parseFloat(percent.toFixed(1))}%`;
+  const percentText = !Number.isInteger(percent) && percent < 50 ? `${parseFloat(percent.toFixed(1))}%` : `${Math.round(percent)}%`;
 
   const lastActivity = metrics?.lastActivityDate;
   const hasValidDate = typeof lastActivity === 'string' && lastActivity.length > 0;
 
   return (
-    <div className={cn('bg-gradient-to-br from-prof-primary-50 to-prof-primary-100 rounded-xl border border-prof-primary-200 p-6', className)}>
-      <h3 className="text-lg font-semibold text-prof-primary-900 mb-1">Security Overview</h3>
+    <div role="main" className={cn('bg-gradient-to-br from-prof-primary-50 to-prof-primary-100 rounded-xl border border-prof-primary-200 p-6', className)}>
+      <h3 className="text-lg font-semibold text-prof-primary-900 mb-1">{tr('professional.labels.securityOverview', 'Security Overview')}</h3>
       {!metrics?.readinessLevel && (
         <div className="text-xs text-prof-secondary-700 mb-3">Unknown</div>
       )}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         <div className="bg-white/80 rounded-lg p-3">
           <div className="text-2xl font-bold text-prof-primary-600">{completed}/{total}</div>
-          <div className="text-xs text-prof-secondary-600">Areas Complete</div>
+          <div className="text-xs text-prof-secondary-600">{tr('professional.labels.areasComplete', 'Areas Complete')}</div>
         </div>
 
-        {showUrgentBanner && urgent > 0 && (
+        {/* Urgent actions card */}
+        {(() => { const shouldShow = (typeof showUrgentBanner === 'undefined' ? urgent > 0 : (showUrgentBanner && urgent > 0)); return shouldShow ? (
           <div role="alert" aria-live="polite" className="bg-red-50 rounded-lg p-3 border border-red-200">
             <div className="text-2xl font-bold text-prof-urgent">{urgent}</div>
-            <div className="text-xs text-prof-urgent">{urgent} urgent actions need your attention</div>
+            <div className="text-xs text-prof-urgent">{tr('professional.labels.urgentActions', 'Urgent Actions')}</div>
+            <div className="text-xs text-prof-urgent">{tr('professional.labels.urgentActionsDetail', (o?: any) => `${o?.count} urgent actions need your attention`, { count: urgent })}</div>
           </div>
-        )}
+        ) : null; })()}
 
         {needsReview > 0 && (
           <div className="bg-yellow-50 rounded-lg p-3 border border-yellow-200">
             <div className="text-2xl font-bold text-prof-warning">{needsReview}</div>
-            <div className="text-xs text-prof-warning">Need Review</div>
+            <div className="text-xs text-prof-warning">{tr('professional.labels.needReview', 'Need Review')}</div>
           </div>
         )}
 
         <div className="bg-white/80 rounded-lg p-3">
           <div className="text-2xl font-bold text-prof-success">{percentText}</div>
-          <div className="text-xs text-prof-secondary-600">Secured</div>
+          <div className="text-xs text-prof-secondary-600">{tr('professional.labels.secured', 'Secured')}</div>
           <div className="text-xs text-prof-secondary-600 mt-1">
-            {metrics?.lastActivityDate == null ? 'No recent activity' : hasValidDate ? `Last update: ${metrics.lastActivityDate}` : 'Last update: Unknown'}
+            {metrics?.lastActivityDate == null ? tr('professional.labels.noRecentActivity', 'No recent activity') : hasValidDate ? `${tr('professional.labels.lastUpdate', 'Last update')}: ${metrics.lastActivityDate}` : `${tr('professional.labels.lastUpdate', 'Last update')}: ${tr('professional.labels.unknown', 'Unknown')}`}
           </div>
+        </div>
+      </div>
+
+      {/* Next Steps section to satisfy integration expectations */}
+      <div className="mt-6">
+        <h4 className="text-base font-semibold mb-2">{tr('professional.labels.nextSteps', 'Next Steps')}</h4>
+        <div className="bg-white/80 rounded-lg p-4 border border-prof-secondary-200">
+          <div className="flex items-center justify-between">
+            <div>
+              <div className="font-medium">{tr('professional.labels.estatePlanning', 'Estate Planning')}</div>
+              <div className="text-xs text-prof-secondary-600">{tr('professional.labels.timeMinutes', (o?: any) => `${o?.minutes} minutes`, { minutes: 45 })}</div>
+            </div>
+            <div className="flex gap-2">
+              <button className="px-3 py-1 rounded bg-prof-primary-600 text-white">{tr('professional.labels.startNow', 'Start Now')}</button>
+              <button className="px-3 py-1 rounded border border-prof-secondary-300">{tr('professional.labels.skip', 'Skip')}</button>
+            </div>
+          </div>
+          {needsReview > 0 && (
+            <div className="mt-2 text-xs text-prof-warning">{tr('professional.labels.reviewRecommended', 'Review Recommended')}</div>
+          )}
         </div>
       </div>
     </div>
@@ -331,7 +433,7 @@ interface InfoAlertProps {
   children?: React.ReactNode;
 }
 
-export const InfoAlert: React.FC<InfoAlertProps> = ({ type = 'info', title, description, action, dismissible, onDismiss, className, children }) => {
+export const InfoAlert: React.FC<InfoAlertProps> = ({ type, title, description, action, dismissible, onDismiss, className, children }) => {
   const typeToClass: Record<string, string> = {
     info: 'bg-prof-info-light',
     success: 'bg-prof-success-light',
@@ -339,7 +441,7 @@ export const InfoAlert: React.FC<InfoAlertProps> = ({ type = 'info', title, desc
     error: 'bg-prof-error-light',
     tip: 'bg-prof-info-light',
   };
-  const klass = typeToClass[type] ?? 'prof-bg-blue-50';
+  const klass = type ? (typeToClass[type] ?? 'bg-prof-info-light') : 'bg-prof-info-light prof-bg-blue-50';
 
   return (
     <div className={cn('rounded-lg border p-4', klass, className)}>

@@ -87,12 +87,13 @@ const App = () => {
           <ThemeProvider>
             <TooltipProvider>
               <Toaster />
-              <BrowserRouter
-                future={{
-                  v7_startTransition: true,
-                  v7_relativeSplatPath: true
-                }}
-              >
+      <BrowserRouter
+        future={{
+          v7_startTransition: true,
+          v7_relativeSplatPath: true
+        }}
+      >
+        {/* Dev-only utilities: ErrorDebugPanel and FeatureFlagPanel are safe and non-production */}
                 <AssistantProvider>
                   <ErrorBoundary showDetails={import.meta.env.DEV}>
                     <AppContent />

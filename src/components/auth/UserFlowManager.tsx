@@ -20,6 +20,7 @@ export const UserFlowManager: React.FC<UserFlowManagerProps> = ({ children }) =>
   const [onboardingTasks, setOnboardingTasks] = useState<TaskItem[]>([]);
   
   // Feature flags
+  // See docs/feature-flags.md for semantics and rollout strategy
   const useRespectfulOnboarding = useFeatureFlag('respectfulOnboarding');
   const showLegacyGamification = useFeatureFlag('legacyGamification');
 

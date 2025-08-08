@@ -10,6 +10,12 @@ A comprehensive digital legacy management platform built with React, TypeScript,
 - **Multi-language Support**: Available in 32+ languages
 - **Privacy-First**: End-to-end encryption and GDPR compliance
 
+## Documentation
+
+- Feature Flags: docs/feature-flags.md
+- Migration Guide (Respectful Onboarding): docs/migration-guide-respectful-onboarding.md
+- Rollback Procedures: docs/rollback-procedures.md
+
 ## Development
 
 ### Prerequisites
