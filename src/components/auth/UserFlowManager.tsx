@@ -6,19 +6,19 @@ import { FirstTimeUserGuide } from '@/components/onboarding/FirstTimeUserGuide';
 import RespectfulOnboarding, { OnboardingData } from '@/components/onboarding/RespectfulOnboarding';
 import { useAnalytics } from '@/hooks/useAnalytics';
 import { useFeatureFlag } from '@/config/features';
-import { usePasswordWall } from './PasswordWallContext';
+
 
 interface UserFlowManagerProps {
   children: React.ReactNode;
+  isPasswordWallAuthenticated?: boolean;
 }
 
 type FlowState = 'loading' | 'onboarding' | 'first_time_guide' | 'dashboard';
 
-export const UserFlowManager: React.FC<UserFlowManagerProps> = ({ children }) => {
+export const UserFlowManager: React.FC<UserFlowManagerProps> = ({ children, isPasswordWallAuthenticated = false }) => {
   const { user, isLoaded } = useUser();
   const { t } = useTranslation('ui');
   const { trackAction } = useAnalytics({ componentName: 'UserFlowManager', userJourneyStage: 'authentication' });
-  const { isPasswordWallAuthenticated } = usePasswordWall();
   const [flowState, setFlowState] = useState<FlowState>('loading');
   const [onboardingTasks, setOnboardingTasks] = useState<TaskItem[]>([]);
   const [onboardingData, setOnboardingData] = useState<OnboardingData | null>(null);

@@ -1,5 +1,5 @@
 
-import React, { Suspense } from 'react';
+import React, { Suspense, useState } from 'react';
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
@@ -112,12 +112,13 @@ const App = () => {
 const AppContent = () => {
   const { t } = useTranslation('ui');
   const { user } = useUser();
+  const [isPasswordWallAuthenticated, setIsPasswordWallAuthenticated] = useState(false);
 
   return (
-    <PasswordWallProvider>
+    <PasswordWallProvider onAuthenticationChange={setIsPasswordWallAuthenticated}>
       <PasswordWall>
         <FeatureFlagProvider userId={user?.id}>
-          <UserFlowManager>
+          <UserFlowManager isPasswordWallAuthenticated={isPasswordWallAuthenticated}>
             <GeoLocationProvider>
             <>
             <Suspense fallback={<PageLoader />}>
