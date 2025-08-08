@@ -11,15 +11,15 @@ interface EmpatheticErrorOptions {
   fallbackMessage?: string;
 }
 
-export const useEmpatheticError = (options: EmpatheticErrorOptions = {}) => {
+export const useEmpatheticError = <T>(options: EmpatheticErrorOptions = {}) => {
   const { t } = useTranslation('empathetic-errors');
   const [isRetrying, setIsRetrying] = useState(false);
   const [retryCount, setRetryCount] = useState(0);
 
   const handleError = useCallback(async (
     error: Error,
-    operation?: () => Promise<any>
-  ) => {
+    operation?: () => Promise<T>
+  ): Promise<{ message: string; retry?: () => Promise<T> }> => {
     // Log the error with context
     logEmpatheticError(error, undefined, options.context || 'general');
 
@@ -50,7 +50,7 @@ export const useEmpatheticError = (options: EmpatheticErrorOptions = {}) => {
     };
   }, [retryCount, options]);
 
-  const retryOperation = useCallback(async (operation: () => Promise<any>) => {
+  const retryOperation = useCallback(async (operation: () => Promise<T>): Promise<T> => {
     setIsRetrying(true);
     setRetryCount(prev => prev + 1);
     incrementRecoveryAttempts(new Date());
@@ -102,24 +102,24 @@ export const useEmpatheticError = (options: EmpatheticErrorOptions = {}) => {
 };
 
 // Specific error handlers for common scenarios
-export const useNetworkError = () => {
-  return useEmpatheticError({
+export const useNetworkError = <T>() => {
+  return useEmpatheticError<T>({
     context: 'network',
     autoRetry: true,
     retryDelay: 3000
   });
 };
 
-export const useFormError = () => {
-  return useEmpatheticError({
+export const useFormError = <T>() => {
+  return useEmpatheticError<T>({
     context: 'form',
     showToast: true,
     autoRetry: false
   });
 };
 
-export const useSaveError = () => {
-  return useEmpatheticError({
+export const useSaveError = <T>() => {
+  return useEmpatheticError<T>({
     context: 'save',
     autoRetry: true,
     retryDelay: 1000,

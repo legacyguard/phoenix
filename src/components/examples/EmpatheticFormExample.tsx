@@ -25,8 +25,8 @@ type FormData = z.infer<typeof formSchema>;
 
 const EmpatheticFormExample: React.FC = () => {
   const [saveError, setSaveError] = useState<Error | null>(null);
-  const { handleError: handleFormError } = useFormError();
-  const { handleError: handleSaveError, isRetrying } = useSaveError();
+  const { handleError: handleFormError } = useFormError<void>();
+  const { handleError: handleSaveError, isRetrying } = useSaveError<void>();
 
   const {
     register,
