@@ -27,18 +27,21 @@ export const UserFlowManager: React.FC<UserFlowManagerProps> = ({ children, isPa
   // See docs/feature-flags.md for semantics and rollout strategy
   const useRespectfulOnboarding = useFeatureFlag('respectfulOnboarding');
 
+  // Debug logging
+  console.log('UserFlowManager state:', {
+    isLoaded,
+    user: user?.id,
+    isPasswordWallAuthenticated,
+    flowState,
+    useRespectfulOnboarding
+  });
+
   useEffect(() => {
     if (!isLoaded) return;
 
-    // Check if user is authenticated through PasswordWall but not signed in with Clerk
-    if (!user && isPasswordWallAuthenticated) {
-      // User is authenticated through PasswordWall, direct to onboarding
-      setFlowState('onboarding');
-      return;
-    }
-
     if (!user) {
-      // User is not signed in, show the main content (which should be Landing page)
+      // User is not signed in with Clerk, show the main content (which should be Landing page or Login)
+      // Don't try to show onboarding without a Clerk user
       setFlowState('dashboard');
       return;
     }

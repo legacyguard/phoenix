@@ -6,6 +6,7 @@ import { Label } from '@/components/ui/label';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Lock, AlertCircle, LogOut } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { usePasswordWall } from '@/components/auth/PasswordWallContext';
 
 
 const PASSWORD = import.meta.env.VITE_APP_PASSWORD || 'legacy1guard';
@@ -15,8 +16,9 @@ interface PasswordWallProps {
 }
 
 export default function PasswordWall({ children }: PasswordWallProps) {
-const { t, ready } = useTranslation('auth');
+  const { t, ready } = useTranslation('auth');
   const { t: tMicro } = useTranslation('micro-copy');
+  const { setPasswordWallAuthenticated } = usePasswordWall();
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -29,6 +31,11 @@ const { t, ready } = useTranslation('auth');
     // No localStorage persistence for security
     setIsLoading(false);
   }, []);
+
+  // Notify context when authentication state changes
+  useEffect(() => {
+    setPasswordWallAuthenticated(isAuthenticated);
+  }, [isAuthenticated, setPasswordWallAuthenticated]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();

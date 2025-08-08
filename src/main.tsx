@@ -4,7 +4,6 @@ import { ClerkProvider } from '@clerk/clerk-react'
 import { I18nextProvider } from 'react-i18next'
 import i18n from './i18n/index'
 import App from './App.tsx'
-import PasswordWall from './components/PasswordWall'
 import { AuthSyncProvider } from './components/auth/AuthSyncProvider'
 import { validateSecurityConfig } from './utils/security'
 import './index.css'
@@ -25,19 +24,17 @@ try {
     createRoot(root).render(
       <React.StrictMode>
         <I18nextProvider i18n={i18n}>
-          <PasswordWall>
-            <ClerkProvider 
-              publishableKey={PUBLISHABLE_KEY} 
-              afterSignOutUrl="/"
-              fallbackRedirectUrl="/dashboard"
-              signInUrl="/login"
-              signUpUrl="/register"
-            >
-              <AuthSyncProvider>
-                <App />
-              </AuthSyncProvider>
-            </ClerkProvider>
-          </PasswordWall>
+          <ClerkProvider 
+            publishableKey={PUBLISHABLE_KEY} 
+            afterSignOutUrl="/"
+            fallbackRedirectUrl="/dashboard"
+            signInUrl="/login"
+            signUpUrl="/register"
+          >
+            <AuthSyncProvider>
+              <App />
+            </AuthSyncProvider>
+          </ClerkProvider>
         </I18nextProvider>
       </React.StrictMode>
     );

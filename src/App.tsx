@@ -14,7 +14,7 @@ import { AssistantProvider } from "@/contexts/AssistantContext";
 import { GeoLocationProvider } from "@/providers/GeoLocationProvider";
 import { MainLayout } from "@/components/layout/MainLayout";
 import { MarketingLayout } from "@/components/layout/MarketingLayout";
-import { ErrorBoundary } from "@/components/common/ErrorBoundary";
+import { ErrorBoundary } from "@/components/common/ErrorBoundaryI18n";
 import { ErrorDebugPanel } from "@/components/debug/ErrorDebugPanel";
 import { FeatureFlagPanel } from "@/components/debug/FeatureFlagPanel";
 import { ConsentManager } from "./components/privacy/ConsentManager";
@@ -24,6 +24,7 @@ import PasswordWall from "@/components/PasswordWall";
 import { UserFlowManager } from "@/components/auth/UserFlowManager";
 import { FeatureFlagProvider } from "@/config/features";
 import { PasswordWallProvider } from "@/components/auth/PasswordWallContext";
+import { AuthenticatedRedirect } from "@/components/auth/AuthenticatedRedirect";
 import { logEnvironmentInfo } from "@/utils/env-check";
 
 // Loading component for lazy loaded routes
@@ -118,13 +119,20 @@ const AppContent = () => {
     <PasswordWallProvider onAuthenticationChange={setIsPasswordWallAuthenticated}>
       <PasswordWall>
         <FeatureFlagProvider userId={user?.id}>
-          <UserFlowManager isPasswordWallAuthenticated={isPasswordWallAuthenticated}>
-            <GeoLocationProvider>
-            <>
-            <Suspense fallback={<PageLoader />}>
+          <ErrorBoundary showDetails={true}>
+            <UserFlowManager isPasswordWallAuthenticated={isPasswordWallAuthenticated}>
+              <GeoLocationProvider>
+              <>
+              <Suspense fallback={<PageLoader />}>
           <Routes>
         {/* Public routes with marketing layout */}
-        <Route path="/" element={<MarketingLayout><Landing /></MarketingLayout>} />
+        <Route path="/" element={
+          <MarketingLayout>
+            <AuthenticatedRedirect>
+              <Landing />
+            </AuthenticatedRedirect>
+          </MarketingLayout>
+        } />
         <Route path="/login" element={<MarketingLayout><Login /></MarketingLayout>} />
         <Route path="/register" element={<MarketingLayout><Register /></MarketingLayout>} />
         <Route path="/privacy-policy" element={<MarketingLayout><PrivacyPolicy /></MarketingLayout>} />
@@ -290,8 +298,9 @@ const AppContent = () => {
       {/* Feature Flag Panel - only in development */}
       <FeatureFlagPanel />
     </>
-            </GeoLocationProvider>
-          </UserFlowManager>
+              </GeoLocationProvider>
+            </UserFlowManager>
+          </ErrorBoundary>
         </FeatureFlagProvider>
       </PasswordWall>
     </PasswordWallProvider>
