@@ -54,20 +54,6 @@ export const contactSupport = async (options: SupportOptions = {}) => {
   }
 };
 
-<<<<<<< HEAD
-interface SupportContext {
-  timestamp: string;
-  userAgent: string;
-  url: string;
-  errorMessage?: string;
-  errorStack?: string;
-  context?: string;
-  userMessage?: string;
-  savedData: Record<string, unknown>;
-}
-
-=======
->>>>>>> def8bce230b3756e164733a99e06fe0f070332f2
 const showSupportModal = (context: SupportContext) => {
   // This would integrate with your modal system
   // For now, we'll use a custom event
