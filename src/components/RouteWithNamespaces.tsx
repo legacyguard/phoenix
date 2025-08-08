@@ -38,7 +38,10 @@ export const RouteWithNamespaces: React.FC<RouteWithNamespacesProps> = ({
         
         setIsLoading(false);
       } catch (err) {
-        console.error('Error loading namespaces:', err);
+        // Log error to monitoring service in production
+        if (process.env.NODE_ENV === 'development') {
+          console.error('Error loading namespaces:', err);
+        }
         setError(err instanceof Error ? err.message : 'Failed to load translations');
         setIsLoading(false);
       }
@@ -49,7 +52,10 @@ export const RouteWithNamespaces: React.FC<RouteWithNamespacesProps> = ({
 
   if (error) {
     // Fallback to children even if translations fail to load
-    console.warn('Continuing without translations:', error);
+    // In production, this would be logged to monitoring
+    if (process.env.NODE_ENV === 'development') {
+      console.warn('Continuing without translations:', error);
+    }
     return <>{children}</>;
   }
 

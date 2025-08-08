@@ -8,7 +8,7 @@ import { RespectfulOnboarding, OnboardingData } from '@/components/onboarding/Re
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import { useAssistant } from '@/contexts/AssistantContext';
+import { useAssistant } from '@/hooks/useAssistant';
 import { EnhancedPersonalAssistant } from '@/components/assistant/EnhancedPersonalAssistant';
 import AnnualReview from '@/components/AnnualReview';
 import LegalConsultationModal from '@/components/LegalConsultationModal';

@@ -19,7 +19,7 @@ import AnnualReview from '@/components/AnnualReview';
 import LegalConsultationModal from '@/components/LegalConsultationModal';
 import { EnhancedPersonalAssistant } from '@/components/assistant/EnhancedPersonalAssistant';
 import { PersonalizedDashboardContent } from '@/components/dashboard/PersonalizedDashboardContent';
-import { useAssistant } from '@/contexts/AssistantContext';
+import { useAssistant } from '@/hooks/useAssistant';
 
 // Import Professional Dashboard Integration
 import ProfessionalDashboardIntegration from './ProfessionalDashboardIntegration';
@@ -95,21 +95,8 @@ const Dashboard = () => {
         const urlParams = new URLSearchParams(window.location.search);
         const forceOnboarding = urlParams.get('onboarding') === 'true';
         
-        // Debug logging
-        console.log('Dashboard Debug:', {
-          userId: user.id,
-          userCreatedAt: user.createdAt,
-          isRecentlyCreated,
-          hasCompletedOnboarding,
-          hasSeenGuide,
-          forceOnboarding,
-          publicMetadata: user.publicMetadata
-        });
-        
         // Determine if this is a new user
         const isNewUser = forceOnboarding || (!hasCompletedOnboarding && (isRecentlyCreated || !user.publicMetadata?.onboardingCompleted));
-        
-        console.log('Is new user?', isNewUser);
         
         if (isNewUser) {
           // New user: show onboarding wizard
@@ -246,15 +233,14 @@ const Dashboard = () => {
     setShowFirstTimeGuide(false);
     
     // Apply the onboarding tasks to the user's progress
-    // In a real implementation, this would update the backend
-    console.log('Applying onboarding tasks:', onboardingTasks);
+    // TODO: Update backend with onboarding tasks
     
     // Fetch the initial progress status after onboarding is complete
     try {
       const status = await ProgressService.getProgressStatus(user?.id || 'user-id');
       setProgressStatus(status);
     } catch (err) {
-      console.error('Failed to fetch progress status after onboarding:', err);
+      setError(t('errors.failedToFetchStatus'));
     }
   };
 
