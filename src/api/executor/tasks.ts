@@ -1,6 +1,7 @@
-import { Request, Response } from 'express';
+import type { Request, Response } from 'express';
 import { ExecutorTaskService } from '@/services/executorTaskService';
 import { supabase } from '@/integrations/supabase/client';
+import { ensureAdmin } from '@/api/middleware/adminAuth';
 
 /**
  * GET /api/executor/tasks
@@ -99,7 +100,10 @@ export async function generateExecutorTasks(req: Request, res: Response) {
       return res.status(400).json({ error: 'Missing required parameters' });
     }
 
-    // TODO: Add admin authentication check here
+    // Verify admin authorization before generating tasks
+    if (!(await ensureAdmin(req, res))) {
+      return;
+    }
 
     await ExecutorTaskService.generateExecutorTasks(deceasedUserId, executorId);
 
