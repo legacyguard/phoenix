@@ -7,6 +7,7 @@ interface ImportMetaEnv {
   readonly VITE_IS_PRODUCTION: string
   readonly VITE_OPENAI_API_KEY: string
   readonly VITE_OPENAI_ORG_ID?: string
+  readonly VITE_ENABLE_DEBUG?: string
 }
 
 interface ImportMeta {
