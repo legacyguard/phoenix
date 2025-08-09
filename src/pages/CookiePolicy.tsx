@@ -8,15 +8,15 @@ import { useNavigate } from 'react-router-dom';
 import { ConsentSettings } from '@/components/privacy/ConsentManager';
 
 const CookiePolicy: React.FC = () => {
-  const { t } = useTranslation('ui');
+  const { t } = useTranslation('legal-pages');
   const navigate = useNavigate();
 
   const cookieCategories = [
     {
       icon: Shield,
-      title: t('wills.policy.necessary.title'),
-      description: t('wills.policy.necessary.description'),
-      purpose: t('wills.policy.necessary.purpose'),
+      title: t('cookiePolicy.cookieTypes.essential'),
+      description: t('cookiePolicy.cookieTypes.essential'),
+      purpose: t('cookiePolicy.whatAreCookies'),
       examples: [
         { name: 'auth_token', duration: t('wills.policy.duration.days', { count: 7 }), description: t('wills.policy.necessary.examples.auth') },
         { name: 'session_id', duration: t('wills.policy.duration.session'), description: t('wills.policy.necessary.examples.session') },

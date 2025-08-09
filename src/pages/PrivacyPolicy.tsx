@@ -2,7 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 export const PrivacyPolicy: React.FC = () => {
-  const { t } = useTranslation('auth');
+  const { t } = useTranslation('legal-pages');
 
   return (
     <div className="container mx-auto px-4 lg:px-8 py-12 max-w-4xl">
