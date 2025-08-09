@@ -122,7 +122,7 @@ interface ValidationRule<T> {
   message: string;
 }
 
-export function useFormValidation<T extends Record<string, any>>(
+export function useFormValidation<T extends Record<string, unknown>>(
   initialValues: T,
   validationRules: Partial<Record<keyof T, ValidationRule<T[keyof T]>[]>>
 ) {
@@ -235,7 +235,7 @@ export function isEmpty(value: unknown): boolean {
 /**
  * Deep merge objects
  */
-export function deepMerge<T extends Record<string, any>>(target: T, ...sources: Partial<T>[]): T {
+export function deepMerge<T extends Record<string, unknown>>(target: T, ...sources: Partial<T>[]): T {
   if (!sources.length) return target;
   
   const result = { ...target };
@@ -255,7 +255,10 @@ export function deepMerge<T extends Record<string, any>>(target: T, ...sources: 
         typeof targetValue === 'object' &&
         !Array.isArray(targetValue)
       ) {
-        result[key] = deepMerge(targetValue as any, sourceValue as any);
+        result[key] = deepMerge(
+          targetValue as Record<string, unknown>,
+          sourceValue as Record<string, unknown>
+        ) as T[typeof key];
       } else {
         result[key] = sourceValue as T[typeof key];
       }

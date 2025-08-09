@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { useUser } from '@clerk/clerk-react';
-import { useCallback, useMemo } from 'react';
+import { useCallback } from 'react';
 import {
   Gender,
   GenderContext,
@@ -21,7 +21,7 @@ export const useGenderAwareTranslation = (namespace?: string) => {
   // Enhanced translation function with gender awareness
   const tg = useCallback((
     key: string,
-    options?: any
+    options?: Record<string, unknown>
   ): string => {
     // Get the gendered key
     const genderedKey = getGenderedKey(key);
@@ -35,13 +35,13 @@ export const useGenderAwareTranslation = (namespace?: string) => {
     }
     
     return translation;
-  }, [t, genderContext]);
+  }, [t]);
   
   // Helper function to get gender-aware translation with specific reference gender
   const tgRef = useCallback((
     key: string,
     referenceGender: Gender,
-    options?: any
+    options?: Record<string, unknown>
   ): string => {
     // Temporarily set gender context for this translation
     const originalGender = genderContext.gender;

@@ -10,6 +10,7 @@ import { usePasswordWall } from '@/components/auth/PasswordWallContext';
 
 
 const PASSWORD = import.meta.env.VITE_APP_PASSWORD || 'legacy1guard';
+const DISABLE_PASSWORD_WALL = import.meta.env.VITE_DISABLE_PASSWORD_WALL === 'true';
 
 interface PasswordWallProps {
   children: React.ReactNode;
@@ -24,11 +25,13 @@ export default function PasswordWall({ children }: PasswordWallProps) {
   const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(true);
 
-  console.log('PasswordWall render - ready:', ready, 'isLoading:', isLoading, 'isAuthenticated:', isAuthenticated);
+  console.log('PasswordWall render - ready:', ready, 'isLoading:', isLoading, 'isAuthenticated:', isAuthenticated, 'disabled:', DISABLE_PASSWORD_WALL);
 
   useEffect(() => {
-    // Always start with authentication required
-    // No localStorage persistence for security
+    // If password wall is disabled, automatically authenticate
+    if (DISABLE_PASSWORD_WALL) {
+      setIsAuthenticated(true);
+    }
     setIsLoading(false);
   }, []);
 
