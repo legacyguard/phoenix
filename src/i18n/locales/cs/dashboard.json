@@ -1,1001 +1,1215 @@
 {
   "annualReview": {
-    "description": "Let's make sure everything is still right for your family",
-    "lastReview": "We last reviewed together: {{date}}",
-    "startReview": "Let's Review Together",
-    "title": "Time to Check In on Your Family's Protection",
+    "description": "Pojďme se ujistit, že je pro vaši rodinu vše stále v pořádku",
+    "lastReview": "Naposledy jsme společně kontrolovali: {{date}}",
+    "startReview": "Začněme kontrolu",
+    "title": "Čas prověřit ochranu vaší rodiny",
     "step1": {
-      "title": "Review Your Support Team",
-      "description": "Let's make sure the right people are still ready to help your family"
+      "title": "Zkontrolujte svůj podpůrný tým",
+      "description": "Ujistíme se, že jsou ti správní lidé stále připraveni pomoci vaší rodině"
     },
     "step2": {
-      "title": "Review What Matters to Your Family",
-      "description": "Let's update information about your important possessions and accounts"
+      "title": "Zkontrolujte, co je pro vaši rodinu důležité",
+      "description": "Aktualizujeme informace o vašem důležitém majetku a účtech"
     },
     "step3": {
-      "title": "Review Who You're Providing For",
-      "description": "Let's ensure your loved ones are properly designated"
+      "title": "Zkontrolujte, pro koho zajišťujete podporu",
+      "description": "Ověříme, že vaši blízcí jsou správně uvedeni"
     },
     "step4": {
-      "title": "Finish Your Review",
-      "description": "Let's wrap up and keep your family protected"
+      "title": "Dokončete kontrolu",
+      "description": "Ukončíme proces a zajistíme, aby byla vaše rodina chráněná"
     },
     "commandRoster": {
-      "title": "Your Support Team",
-      "description": "People who can help your family when needed",
+      "title": "Váš podpůrný tým",
+      "description": "Lidé, kteří mohou vaší rodině pomoci, když to bude potřeba",
       "details": {
-        "executor": "Executor",
-        "guardian": "Guardian"
+        "executor": "Správce závěti",
+        "guardian": "Poručník"
       },
       "status": {
-        "current": "Current",
-        "needsUpdate": "Needs Update"
+        "current": "Aktuální",
+        "needsUpdate": "Vyžaduje aktualizaci"
       }
     },
     "armory": {
-      "title": "What Matters to Your Family",
-      "description": "Important things your family should know about",
+      "title": "Co je pro vaši rodinu důležité",
+      "description": "Důležité informace, které by vaše rodina měla znát",
       "categories": {
-        "realEstate": "Real Estate",
-        "bankAccounts": "Bank Accounts"
+        "realEstate": "Nemovitosti",
+        "bankAccounts": "Bankovní účty"
       },
       "status": {
-        "current": "Current",
-        "needsUpdate": "Needs Update"
+        "current": "Aktuální",
+        "needsUpdate": "Vyžaduje aktualizaci"
       }
     },
     "beneficiaries": {
-      "title": "Who You're Providing For",
-      "description": "The loved ones you want to take care of",
+      "title": "Pro koho zajišťujete podporu",
+      "description": "Blízcí, o které se chcete postarat",
       "details": {
-        "primary": "Primary Beneficiary"
+        "primary": "Hlavní oprávněný"
       },
       "status": {
-        "current": "Current"
+        "current": "Aktuální"
       },
-      "confirmationQuestion": "Are all beneficiary designations current?"
+      "confirmationQuestion": "Jsou všechny určené osoby aktuální?"
     },
     "complete": {
-      "title": "Review Complete",
-      "description": "Your annual review has been completed successfully",
-      "summary": "Review Summary",
-      "changes": "Changes Made",
-      "noChanges": "No changes were needed",
-      "nextReview": "Next Review Date",
-      "message": "Your family is well protected - you're doing great!",
-      "reminder": "We'll gently remind you when it's time to check in again"
+      "title": "Kontrola dokončena",
+      "description": "Vaše každoroční kontrola byla úspěšně dokončena",
+      "summary": "Shrnutí kontroly",
+      "changes": "Provedené změny",
+      "noChanges": "Nebyly potřeba žádné změny",
+      "nextReview": "Datum příští kontroly",
+      "message": "Vaše rodina je dobře chráněna – vedete si skvěle!",
+      "reminder": "Jemně vám připomeneme, až bude čas na další kontrolu"
     },
     "status": {
-      "completed": "Completed"
+      "completed": "Dokončeno"
     },
     "progress": {
-      "title": "Review Progress",
-      "completed": "Completed Steps",
-      "totalSteps": "Total Steps",
-      "estimatedTime": "Estimated Time"
+      "title": "Průběh kontroly",
+      "completed": "Dokončené kroky",
+      "totalSteps": "Celkem kroků",
+      "estimatedTime": "Odhadovaný čas"
     },
     "buttons": {
-      "confirm": "Confirm",
-      "update": "Update",
-      "finish": "Finish Review",
-      "save": "Save Progress",
-      "back": "Back",
-      "next": "Next"
+      "confirm": "Potvrdit",
+      "update": "Aktualizovat",
+      "finish": "Dokončit kontrolu",
+      "save": "Uložit průběh",
+      "back": "Zpět",
+      "next": "Další"
     },
-    "subtitle": "Together, we'll make sure your family stays protected"
+    "subtitle": "Společně zajistíme, aby vaše rodina zůstala chráněná"
   },
   "complexProfile": {
-    "businessSuccessionNote": "Business succession note",
-    "detected": "Detected",
-    "discussWithExpert": "Discuss with expert",
-    "personalizedGuidance": "Personalized guidance"
+    "businessSuccessionNote": "Poznámka k předání podnikání",
+    "detected": "Zjištěno",
+    "discussWithExpert": "Projednat s odborníkem",
+    "personalizedGuidance": "Individuální doporučení"
   },
   "dashboard": {
     "welcome": {
-      "title": "Vítejte zpět!"
+      "title": "Pokračujme společně v přípravě budoucnosti vaší rodiny"
+    },
+    "respectful": {
+      "greeting": "Vítejte zpět, {{name}}",
+      "greetingNew": "Vítejte, {{name}}",
+      "statusOverview": {
+        "title": "Vaše dokumenty",
+        "secured": "{{count}} dokument je zabezpečen",
+        "secured_plural": "{{count}} dokumentů je zabezpečeno",
+        "suggestion": "Většina lidí zabezpečí 3–5 klíčových dokumentů",
+        "noDocuments": "Zatím nejsou zabezpečeny žádné dokumenty",
+        "getStarted": "Začněte přidáním občanského průkazu"
+      },
+      "suggestions": {
+        "title": "Můžete také zvážit:",
+        "notNow": "Teď ne",
+        "considerAdding": "Zvažte přidání",
+        "whenReady": "Až budete připraveni",
+        "noRush": "Nespěchejte – udělejte to svým tempem"
+      },
+      "professionalStatus": {
+        "foundation": {
+          "title": "Začínáme",
+          "description": "Budujete základy pro bezpečí vaší rodiny"
+        },
+        "building": {
+          "title": "Postupujete vpřed",
+          "description": "Organizujete důležité informace pro svou rodinu"
+        },
+        "established": {
+          "title": "Dobře uspořádáno",
+          "description": "Vaše zásadní dokumenty jsou zabezpečené a dostupné"
+        },
+        "comprehensive": {
+          "title": "Komplexní ochrana",
+          "description": "Vaše rodina má vše, co potřebuje"
+        }
+      },
+      "taskCategories": {
+        "essential": "Nezbytné",
+        "recommended": "Doporučené",
+        "optional": "Volitelné, až budete připraveni"
+      },
+      "taskStatus": {
+        "suggestion": "Doporučení",
+        "completed": "Dokončeno",
+        "secured": "Zabezpečeno",
+        "ready": "Připraveno, až budete chtít"
+      }
     },
     "notifications": {
       "success": {
-        "assetAdded": "Majetek byl úspěšně přidán",
+        "assetAdded": "Položka byla úspěšně přidána",
         "profileUpdated": "Profil byl úspěšně aktualizován",
         "settingsSaved": "Nastavení bylo úspěšně uloženo"
       },
       "info": {
-        "reviewDue": "Roční kontrola je brzy splatná",
-        "documentsExpiring": "Některé dokumenty brzy vyprší"
+        "reviewDue": "Blíží se každoroční kontrola",
+        "documentsExpiring": "Některým dokumentům brzy vyprší platnost"
       }
     },
     "documentCard": {
-      "include_in_survivor_s_manual_1": "[CS] Include in survivor s manual 1"
+      "include_in_survivor_s_manual_1": "Zahrnout do příručky pro pozůstalé 1"
     },
-    "expired": "[CS] Expired",
-    "expiresSoon": "[CS] Expires soon",
+    "expired": "Platnost vypršela",
+    "expiresSoon": "Brzy vyprší",
     "firstTimeGuide": {
-      "finish": "[CS] Finish",
-      "helpfulTips": "[CS] Helpful tips",
-      "importantNote": "[CS] Important note",
-      "next": "[CS] Next",
-      "previous": "[CS] Previous",
+      "finish": "Dokončit",
+      "helpfulTips": "Užitečné tipy",
+      "importantNote": "Důležitá poznámka",
+      "next": "Další",
+      "previous": "Předchozí",
       "progress": {
-        "description": "[CS] Description",
-        "tip1": "[CS] Tip1",
-        "tip2": "[CS] Tip2",
-        "title": "[CS] Title"
+        "description": "Popis",
+        "tip1": "Tip1",
+        "tip2": "Tip2",
+        "title": "Název"
       },
       "recommendations": {
-        "description": "[CS] Description",
-        "tip1": "[CS] Tip1",
-        "tip2": "[CS] Tip2",
-        "title": "[CS] Title"
+        "description": "Popis",
+        "tip1": "Tip1",
+        "tip2": "Tip2",
+        "title": "Název"
       },
-      "skipTour": "[CS] Skip tour",
+      "skipTour": "Přeskočit průvodce",
       "stages": {
-        "description": "[CS] Description",
-        "tip1": "[CS] Tip1",
-        "tip2": "[CS] Tip2",
-        "tip3": "[CS] Tip3",
-        "title": "[CS] Title"
+        "description": "Popis",
+        "tip1": "Tip1",
+        "tip2": "Tip2",
+        "tip3": "Tip3",
+        "title": "Název"
       },
-      "stepProgress": "[CS] Step progress",
+      "stepProgress": "Postup kroků",
       "welcome": {
-        "description": "[CS] Description",
-        "tip1": "[CS] Tip1",
-        "tip2": "[CS] Tip2",
-        "tip3": "[CS] Tip3",
-        "title": "[CS] Title"
+        "description": "Popis",
+        "tip1": "Tip1",
+        "tip2": "Tip2",
+        "tip3": "Tip3",
+        "title": "Název"
       }
     },
     "guardianCard": {
-      "country_1": "[CS] Country 1",
-      "roles_2": "[CS] Roles 2"
+      "country_1": "Země 1",
+      "roles_2": "Role 2"
     },
     "metadata": {
-      "contact": "[CS] Contact",
-      "renewsOn": "[CS] Renews on"
+      "contact": "Kontakt",
+      "renewsOn": "Obnovuje se dne"
     },
     "nudge": {
-      "completeNow": "[CS] Complete now",
-      "continueSecuring": "[CS] Continue securing",
-      "dismiss": "[CS] Dismiss",
-      "finishToday": "[CS] Finish today",
-      "oneTaskLeft": "[CS] One task left",
-      "progressTitle": "[CS] Progress title",
-      "tasksRemaining": "[CS] Tasks remaining",
-      "welcomeBack": "[CS] Welcome back"
+      "completeNow": "Dokončit nyní",
+      "continueSecuring": "Pokračovat v zabezpečení",
+      "dismiss": "Zavřít",
+      "finishToday": "Dokončit dnes",
+      "oneTaskLeft": "Zbývá jeden úkol",
+      "progressTitle": "Název postupu",
+      "tasksRemaining": "Zbývající úkoly",
+      "welcomeBack": "Vítejte zpět"
     },
     "stages": {
-      "advancedPlanning": "[CS] Advanced planning",
-      "building": "[CS] Building",
-      "foundation": "[CS] Foundation",
-      "legacy": "[CS] Legacy",
-      "strengthening": "[CS] Strengthening"
+      "advancedPlanning": "Pokročilé plánování",
+      "building": "Budování",
+      "foundation": "Základy",
+      "legacy": "Odkaz",
+      "strengthening": "Posilování"
     },
     "strategicSummary": {
-      "addBackupGuardian": "[CS] Add backup guardian",
-      "addContingentBeneficiaries": "[CS] Add contingent beneficiaries",
-      "addFinancialAccounts": "[CS] Add financial accounts",
-      "addHomeProperty": "[CS] Add home property",
-      "addPrimaryBeneficiary": "[CS] Add primary beneficiary",
-      "addPrimaryGuardian": "[CS] Add primary guardian",
-      "assetInventory": "[CS] Asset inventory",
-      "assetInventoryDesc": "[CS] Asset inventory desc",
-      "criticalDocuments": "[CS] Critical documents",
-      "criticalDocumentsDesc": "[CS] Critical documents desc",
-      "guardianNetwork": "[CS] Guardian network",
-      "guardianNetworkDesc": "[CS] Guardian network desc",
-      "ifNotDone": "[CS] If not done",
+      "addBackupGuardian": "Přidat náhradního poručníka",
+      "addContingentBeneficiaries": "Přidat podmíněné oprávněné osoby",
+      "addFinancialAccounts": "Přidat finanční účty",
+      "addHomeProperty": "Přidat rodinnou nemovitost",
+      "addPrimaryBeneficiary": "Přidat hlavního oprávněného",
+      "addPrimaryGuardian": "Přidat hlavního poručníka",
+      "assetInventory": "Co je pro vaši rodinu důležité",
+      "assetInventoryDesc": "Důležité věci, které by vaše rodina měla znát",
+      "criticalDocuments": "Důležité dokumenty",
+      "criticalDocumentsDesc": "Dokumenty, které vaše rodina bude potřebovat",
+      "guardianNetwork": "Podpůrný systém vaší rodiny",
+      "guardianNetworkDesc": "Lidé, kteří mohou pomoci, když to bude potřeba",
+      "ifNotDone": "Pokud není dokončeno",
       "impact": {
-        "familyProtection": "[CS] Family protection",
-        "immediateDecision": "[CS] Immediate decision",
-        "preventsAssetLoss": "[CS] Prevents asset loss",
-        "preventsConflicts": "[CS] Prevents conflicts"
+        "familyProtection": "Ochrana rodiny",
+        "immediateDecision": "Okamžité rozhodnutí",
+        "preventsAssetLoss": "Zabrání ztrátě majetku",
+        "preventsConflicts": "Předchází konfliktům"
       },
-      "inheritancePlan": "[CS] Inheritance plan",
-      "inheritancePlanDesc": "[CS] Inheritance plan desc",
-      "minutes": "[CS] Minutes",
-      "nextAction": "[CS] Next action",
-      "nextCriticalStep": "[CS] Next critical step",
-      "startWithNext": "[CS] Start with next",
-      "subtitle": "[CS] Subtitle",
-      "title": "[CS] Title",
-      "whyImportant": "[CS] Why important"
-    }
+      "inheritancePlan": "Budoucnost vaší rodiny",
+      "inheritancePlanDesc": "Jak chcete zajistit své blízké",
+      "minutes": "Minuty",
+      "nextAction": "Další krok",
+      "nextCriticalStep": "Nejdůležitější krok pro vaši rodinu",
+      "startWithNext": "Začněte dalším krokem",
+      "subtitle": "Podtitul",
+      "title": "Název",
+      "whyImportant": "Proč je to důležité"
+    },
+    "allocation": "Rozdělení",
+    "assetName": "Název majetku",
+    "assetType": "Typ majetku",
+    "beneficiaryName": "Jméno oprávněného",
+    "errors": {
+      "failedToSaveAsset": "Nepodařilo se uložit majetek",
+      "failedToSaveBeneficiary": "Nepodařilo se uložit oprávněnou osobu"
+    },
+    "familyGuide": {
+      "discreteMode": "Diskrétní režim",
+      "discreteModeDesc": "Popis diskrétního režimu",
+      "emergency_contacts_1": "Nouzové kontakty 1",
+      "export_guide_4": "Exportovat příručku 4",
+      "generateGuide": "Vytvořit příručku",
+      "important_documents_2": "Důležité dokumenty 2",
+      "last_updated_6": "Naposledy aktualizováno 6",
+      "share_with_family_5": "Sdílet s rodinou 5",
+      "subtitle": "Podtitul",
+      "title": "Název",
+      "view": "Zobrazit",
+      "what_to_do_when_3": "Co dělat, když 3"
+    },
+    "placeholders": {
+      "allocationPercentage": "Procento rozdělení",
+      "assetName": "Název majetku",
+      "assetType": "Typ majetku",
+      "beneficiaryName": "Jméno oprávněného"
+    },
+    "saveAsset": "Uložit majetek",
+    "saveBeneficiary": "Uložit oprávněného",
+    "tasks": {
+      "assetInventory": {
+        "description": "Popis",
+        "title": "Název"
+      },
+      "bankAccount": {
+        "description": "Popis",
+        "title": "Název"
+      },
+      "digitalAssetPlan": {
+        "description": "Popis",
+        "title": "Název"
+      },
+      "documentCentralization": {
+        "description": "Popis",
+        "title": "Název"
+      },
+      "emergencyContacts": {
+        "description": "Popis",
+        "title": "Název"
+      },
+      "familyMeeting": {
+        "description": "Popis",
+        "title": "Název"
+      },
+      "guardianInstructions": {
+        "description": "Popis",
+        "title": "Název"
+      },
+      "inheritanceEducation": {
+        "description": "Popis",
+        "title": "Název"
+      },
+      "personalMessages": {
+        "description": "Popis",
+        "title": "Název"
+      },
+      "willPreparation": {
+        "description": "Popis",
+        "title": "Název"
+      }
+    },
+    "updateAsset": "Aktualizovat majetek",
+    "updateBeneficiary": "Aktualizovat oprávněného"
   },
   "deepDive": {
-    "advancedPlanning": "Advanced Planning",
-    "deepDiveDescription": "You've completed the basics! Now let's dive deeper into advanced protection strategies.",
-    "milestoneAchieved": "Milestone Achieved"
+    "advancedPlanning": "Pokročilé plánování",
+    "deepDiveDescription": "Máte hotové základy! Teď se pustíme hlouběji do pokročilých strategií ochrany.",
+    "milestoneAchieved": "Milník dosažen"
   },
   "development": {
-    "resetOnboarding": "🔄 Reset Onboarding (Dev)"
+    "resetOnboarding": "🔄 Resetovat úvodní nastavení (Dev)"
   },
   "empty": {
-    "noActivity": "No recent activity to display",
-    "noAssets": "No assets added yet",
-    "noDocuments": "No documents uploaded yet",
-    "noPeople": "No trusted people added yet",
-    "noTasks": "No tasks available"
+    "noActivity": "Žádná nedávná aktivita k zobrazení",
+    "noAssets": "Zatím nebyl přidán žádný majetek",
+    "noDocuments": "Zatím nebyly nahrány žádné dokumenty",
+    "noPeople": "Zatím nebyly přidány žádné důvěryhodné osoby",
+    "noTasks": "Nejsou k dispozici žádné úkoly"
   },
   "errors": {
-    "failedToFetchStatus": "Failed to fetch progress status",
-    "genericError": "Something went wrong. Please refresh and try again.",
-    "loadingDashboard": "Failed to load dashboard. Please refresh the page.",
-    "loadingStats": "Failed to load statistics. Please refresh.",
-    "loadingTasks": "Failed to load tasks. Please try again.",
-    "markingComplete": "Failed to mark task as complete. Please try again.",
-    "savingProgress": "Failed to save progress. Please try again."
+    "failedToFetchStatus": "Nepodařilo se načíst stav postupu",
+    "genericError": "Došlo k chybě. Obnovte stránku a zkuste to znovu.",
+    "loadingDashboard": "Nepodařilo se načíst přehled. Obnovte stránku.",
+    "loadingStats": "Nepodařilo se načíst statistiky. Obnovte stránku.",
+    "loadingTasks": "Nepodařilo se načíst úkoly. Zkuste to znovu.",
+    "markingComplete": "Nepodařilo se označit úkol jako dokončený. Zkuste to znovu.",
+    "savingProgress": "Nepodařilo se uložit postup. Zkuste to znovu."
   },
   "guardian": {
-    "accepted": "[CS] Accepted",
-    "declined": "[CS] Declined",
-    "invitationSent": "[CS] Invitation sent",
-    "sendInvite": "[CS] Send invite"
+    "accepted": "Přijato",
+    "declined": "Odmítnuto",
+    "invitationSent": "Pozvánka odeslána",
+    "sendInvite": "Odeslat pozvánku"
   },
   "header": {
-    "lastUpdated": "We last helped you on {{date}}",
-    "quickActions": "How Can We Help Today?",
-    "subtitle": "Here's how prepared your family is",
-    "welcome": "Good to see you again, {{name}}",
-    "welcomeDefault": "Good to see you again"
+    "lastUpdated": "Naposledy jsme vám pomohli {{date}}",
+    "quickActions": "Jak vám dnes můžeme pomoci?",
+    "subtitle": "Takto je vaše rodina připravena",
+    "welcome": "Rád vás opět vidím, {{name}}",
+    "welcomeDefault": "Rád vás opět vidím"
   },
   "help": {
-    "basedOnProgress": "[CS] Based on progress",
-    "getHelp": "[CS] Get help",
-    "helpAndTutorials": "[CS] Help and tutorials",
-    "needHelp": "[CS] Need help",
-    "personalizedHelpDescription": "[CS] Personalized help description",
+    "basedOnProgress": "Na základě postupu",
+    "getHelp": "Získat pomoc",
+    "helpAndTutorials": "Nápověda a návody",
+    "needHelp": "Potřebujete pomoc",
+    "personalizedHelpDescription": "Popis personalizované pomoci",
     "quickTips": {
-      "tip1": "[CS] Tip1",
-      "tip2": "[CS] Tip2",
-      "tip3": "[CS] Tip3",
-      "tip4": "[CS] Tip4",
-      "title": "[CS] Title"
+      "tip1": "Tip1",
+      "tip2": "Tip2",
+      "tip3": "Tip3",
+      "tip4": "Tip4",
+      "title": "Název"
     },
-    "recommendedForYou": "[CS] Recommended for you",
-    "recommendedTopics": "[CS] Recommended topics",
+    "recommendedForYou": "Doporučeno pro vás",
+    "recommendedTopics": "Doporučená témata",
     "stepDetails": {
-      "description": "[CS] Description",
-      "estimatedTime": "[CS] Estimated time",
-      "gotIt": "[CS] Got it",
-      "minutes": "[CS] Minutes",
-      "stepByStepInstructions": "[CS] Step by step instructions",
-      "steps": "[CS] Steps",
-      "videoTutorial": "[CS] Video tutorial",
-      "watchVideoTutorial": "[CS] Watch video tutorial"
+      "description": "Popis",
+      "estimatedTime": "Odhadovaný čas",
+      "gotIt": "Rozumím",
+      "minutes": "Minuty",
+      "stepByStepInstructions": "Podrobný postup",
+      "steps": "Kroky",
+      "videoTutorial": "Video návod",
+      "watchVideoTutorial": "Sledovat video návod"
     },
     "topics": {
       "addGuardians": {
-        "description": "[CS] Description",
+        "description": "Popis",
         "steps": {
-          "1": "[CS] 1",
-          "2": "[CS] 2",
-          "3": "[CS] 3",
-          "4": "[CS] 4",
-          "5": "[CS] 5"
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5"
         },
-        "title": "[CS] Title"
+        "title": "Název"
       },
       "createWill": {
-        "description": "[CS] Description",
+        "description": "Popis",
         "steps": {
-          "1": "[CS] 1",
-          "2": "[CS] 2",
-          "3": "[CS] 3",
-          "4": "[CS] 4",
-          "5": "[CS] 5"
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5"
         },
-        "title": "[CS] Title"
+        "title": "Název"
       },
       "designateBeneficiaries": {
-        "description": "[CS] Description",
+        "description": "Popis",
         "steps": {
-          "1": "[CS] 1",
-          "2": "[CS] 2",
-          "3": "[CS] 3",
-          "4": "[CS] 4",
-          "5": "[CS] 5"
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5"
         },
-        "title": "[CS] Title"
+        "title": "Název"
       },
       "listAssets": {
-        "description": "[CS] Description",
+        "description": "Popis",
         "steps": {
-          "1": "[CS] 1",
-          "2": "[CS] 2",
-          "3": "[CS] 3",
-          "4": "[CS] 4",
-          "5": "[CS] 5"
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5"
         },
-        "title": "[CS] Title"
+        "title": "Název"
       },
       "uploadDocuments": {
-        "description": "[CS] Description",
+        "description": "Popis",
         "steps": {
-          "1": "[CS] 1",
-          "2": "[CS] 2",
-          "3": "[CS] 3",
-          "4": "[CS] 4",
-          "5": "[CS] 5"
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5"
         },
-        "title": "[CS] Title"
+        "title": "Název"
       }
     }
   },
   "nextStep": {
-    "estimatedTime": "Estimated time: {{time}}",
-    "title": "Your Next Priority"
+    "estimatedTime": "Odhadovaný čas: {{time}}",
+    "title": "Vaše další priorita"
   },
   "notifications": {
-    "accessGranted": "{{name}} can now help your family",
-    "accessRevoked": "{{name}}'s access has been removed",
-    "assetAdded": "We've safely stored this information for your family",
-    "documentUploaded": "Your document is now secure and ready",
-    "personAdded": "{{name}} is now part of your support team",
-    "planUpdated": "Your family's protection is now stronger",
-    "reminderSet": "We'll remind you on {{date}}",
-    "taskCompleted": "Great job protecting your family!",
-    "willGenerated": "Your will is ready to protect your loved ones"
+    "accessGranted": "{{name}} nyní může pomoci vaší rodině",
+    "accessRevoked": "Přístup uživatele {{name}} byl odebrán",
+    "assetAdded": "Tyto informace jsme bezpečně uložili pro vaši rodinu",
+    "documentUploaded": "Váš dokument je nyní zabezpečen a připraven",
+    "personAdded": "{{name}} byl(a) přidán(a) do vašeho podpůrného týmu",
+    "planUpdated": "Ochrana vaší rodiny je nyní silnější",
+    "reminderSet": "Připomeneme vám {{date}}",
+    "taskCompleted": "Skvělá práce na ochraně vaší rodiny!",
+    "willGenerated": "Vaše závěť je připravena chránit vaše blízké"
   },
   "playbook": {
-    "create": "[CS] Create",
-    "edit": "[CS] Edit",
-    "label": "[CS] Label",
+    "create": "Vytvořit",
+    "edit": "Upravit",
+    "label": "Štítek",
     "status": {
-      "complete": "[CS] Complete",
-      "draft": "[CS] Draft",
-      "empty": "[CS] Empty"
+      "complete": "Dokončeno",
+      "draft": "Návrh",
+      "empty": "Prázdné"
     }
   },
   "preservationMode": {
-    "description": "Your family protection plan is comprehensive and well-maintained. Regular reviews ensure everything stays current.",
-    "lastReviewDate": "Last review: {{date}}",
-    "latestUpdates": "Latest Updates",
-    "startAnnualCheck": "Start Annual Review",
-    "title": "Preservation Mode Active"
+    "description": "Váš plán ochrany rodiny je komplexní a dobře udržovaný. Pravidelné kontroly zajistí, že vše zůstane aktuální.",
+    "lastReviewDate": "Poslední kontrola: {{date}}",
+    "latestUpdates": "Nejnovější aktualizace",
+    "startAnnualCheck": "Spustit každoroční kontrolu",
+    "title": "Režim uchování je aktivní"
   },
   "progressTracking": {
-    "current": "[CS] Current"
+    "complete": "Dokončeno",
+    "completionRange": "Rozsah dokončení",
+    "critical": "Kritické",
+    "criticalGaps": {
+      "title": "Název"
+    },
+    "current": "Aktuální",
+    "currentStage": "Aktuální fáze",
+    "currentTasks": "Aktuální úkoly",
+    "progressDescription": "Popis postupu",
+    "stages": {
+      "buildout": {
+        "description": "Popis",
+        "name": "Název"
+      },
+      "foundation": {
+        "description": "Popis",
+        "name": "Název"
+      },
+      "reinforcement": {
+        "description": "Popis",
+        "name": "Název"
+      }
+    },
+    "subtitle": "Podtitul",
+    "tasks": {
+      "accessVerification": "Ověření přístupu",
+      "assetInventory": "Seznam majetku",
+      "basicInfo": "Základní informace",
+      "beneficiaries": "Oprávněné osoby",
+      "emergencyContacts": "Nouzové kontakty",
+      "guardianNetwork": "Síť poručníků",
+      "instructions": "Pokyny",
+      "keyDocuments": "Klíčové dokumenty",
+      "willCreation": "Vytvoření závěti"
+    },
+    "title": "Název"
   },
   "quickTasks": {
-    "ifNotDone": "[CS] If not done",
-    "whyImportant": "[CS] Why important"
+    "allCompleted": "Vše dokončeno",
+    "allTasks": "Všechny úkoly",
+    "assets": "Majetek",
+    "beneficiaries": "Oprávněné osoby",
+    "completed": "Dokončeno",
+    "documents": "Dokumenty",
+    "greatProgress": "Skvělý pokrok",
+    "guardians": "Poručníci",
+    "ifNotDone": "Pokud není dokončeno",
+    "markAsComplete": "Označit jako dokončené",
+    "minutes": "Minuty",
+    "progress": "Postup",
+    "start": "Začít",
+    "tasks": {
+      "backupGuardian": {
+        "description": "Popis",
+        "title": "Název"
+      },
+      "bankAccount": {
+        "description": "Popis",
+        "title": "Název"
+      },
+      "birthCertificate": {
+        "description": "Popis",
+        "title": "Název"
+      },
+      "childrenBeneficiaries": {
+        "description": "Popis",
+        "title": "Název"
+      },
+      "homeProperty": {
+        "description": "Popis",
+        "title": "Název"
+      },
+      "insurancePolicy": {
+        "description": "Popis",
+        "title": "Název"
+      },
+      "spouseBeneficiary": {
+        "description": "Popis",
+        "title": "Název"
+      },
+      "spouseGuardian": {
+        "description": "Popis",
+        "title": "Název"
+      },
+      "vehicle": {
+        "description": "Popis",
+        "title": "Název"
+      },
+      "will": {
+        "description": "Popis",
+        "title": "Název"
+      }
+    },
+    "title": "Název",
+    "wellOnWay": "Máte dobře nakročeno",
+    "whyImportant": "Proč je to důležité"
   },
   "recommendations": {
     "accessVerification": {
-      "action": "Action",
-      "description": "Description",
-      "impact": "Impact",
-      "title": "Title"
+      "action": "Akce",
+      "description": "Popis",
+      "impact": "Dopad",
+      "title": "Název"
     },
     "annualReview": {
-      "action": "Action",
-      "description": "Description",
-      "impact": "Impact",
-      "title": "Title"
+      "action": "Akce",
+      "description": "Popis",
+      "impact": "Dopad",
+      "title": "Název"
     },
     "assetInventory": {
-      "action": "Action",
-      "description": "Description",
-      "impact": "Impact",
-      "title": "Title"
+      "action": "Akce",
+      "description": "Popis",
+      "impact": "Dopad",
+      "title": "Název"
     },
     "beneficiaries": {
-      "action": "Action",
-      "description": "Description",
-      "impact": "Impact",
-      "prerequisite": "Prerequisite",
-      "title": "Title"
+      "action": "Akce",
+      "description": "Popis",
+      "impact": "Dopad",
+      "prerequisite": "Předpoklad",
+      "title": "Název"
     },
     "emergencyContacts": {
-      "action": "Action",
-      "description": "Description",
-      "impact": "Impact",
-      "title": "Title"
+      "action": "Akce",
+      "description": "Popis",
+      "impact": "Dopad",
+      "title": "Název"
     },
     "guardianNetwork": {
-      "action": "Add Guardians",
-      "description": "Create a support system for your family",
-      "impact": "Provides backup support and guidance",
-      "title": "Build Guardian Network"
+      "action": "Přidat poručníky",
+      "description": "Vytvořte podpůrný systém pro vaši rodinu",
+      "impact": "Poskytuje záložní podporu a vedení",
+      "title": "Vybudovat síť poručníků"
     },
     "impact": {
-      "label": "Label"
+      "label": "Štítek"
     },
     "keyDocuments": {
-      "action": "Action",
-      "description": "Description",
-      "impact": "Impact",
-      "title": "Title"
+      "action": "Akce",
+      "description": "Popis",
+      "impact": "Dopad",
+      "title": "Název"
     },
     "moreHelp": {
-      "link": "Link",
+      "link": "Odkaz",
       "text": "Text"
     },
     "personalInstructions": {
-      "action": "Add Instructions",
-      "description": "Leave important messages and guidance for your family",
-      "impact": "Provides emotional and practical guidance",
-      "title": "Add Personal Instructions"
+      "action": "Přidat pokyny",
+      "description": "Zanechte pro svou rodinu důležité zprávy a pokyny",
+      "impact": "Poskytuje emocionální i praktické vedení",
+      "title": "Přidat osobní pokyny"
     },
     "prerequisites": {
-      "label": "Label"
+      "label": "Štítek"
     },
     "priority": {
-      "critical": "Critical",
-      "important": "Important",
-      "suggested": "Suggested"
+      "critical": "Kritické",
+      "important": "Důležité",
+      "suggested": "Doporučené"
     },
-    "subtitle": "Subtitle",
-    "title": "Title",
+    "subtitle": "Podtitul",
+    "title": "Název",
     "will": {
-      "action": "Action",
-      "description": "Description",
-      "impact": "Impact",
-      "title": "Title"
+      "action": "Akce",
+      "description": "Popis",
+      "impact": "Dopad",
+      "title": "Název"
     },
     "willCreation": {
-      "action": "Start Will",
-      "description": "Generate a legally valid will document",
-      "impact": "Legally protects your family's inheritance",
-      "title": "Create Your Will"
+      "action": "Začít závěť",
+      "description": "Vytvořte právně platný dokument závěti",
+      "impact": "Právně chrání dědictví vaší rodiny",
+      "title": "Vytvořte svou závěť"
     }
   },
   "sections": {
     "insights": {
-      "dismiss": "Got it",
-      "noInsights": "As we learn more about your family, we'll share helpful suggestions here.",
-      "recommendation": "Something to Consider",
-      "subtitle": "Personalized guidance to help your family",
-      "tip": "Helpful Tip",
-      "title": "Ways to Strengthen Your Family's Protection",
-      "viewDetails": "Learn More",
-      "warning": "This Needs Your Attention"
+      "dismiss": "Rozumím",
+      "noInsights": "Jakmile se o vaší rodině dozvíme více, budeme zde sdílet užitečné tipy.",
+      "recommendation": "Co zvážit",
+      "subtitle": "Personalizované rady pro ochranu vaší rodiny",
+      "tip": "Užitečný tip",
+      "title": "Jak posílit ochranu vaší rodiny",
+      "viewDetails": "Zjistit více",
+      "warning": "Vyžaduje vaši pozornost"
     },
     "nextSteps": {
-      "estimatedTime": "About {{minutes}} minutes",
-      "highPriority": "Most Important for Your Family",
-      "lowPriority": "When You Have Time",
-      "markComplete": "I've Done This",
-      "mediumPriority": "Important Soon",
-      "noTasks": "Wonderful! Your family is well protected.",
-      "startTask": "Let's Do This",
-      "subtitle": "The most important things you can do for your loved ones right now",
-      "title": "Next Steps for Your Family",
-      "viewAll": "See All Steps"
+      "estimatedTime": "Přibližně {{minutes}} minut",
+      "highPriority": "Nejdůležitější pro vaši rodinu",
+      "lowPriority": "Až budete mít čas",
+      "markComplete": "Hotovo",
+      "mediumPriority": "Důležité brzy",
+      "noTasks": "Skvělé! Vaše rodina je dobře chráněná.",
+      "startTask": "Pojďme na to",
+      "subtitle": "To nejdůležitější, co můžete pro své blízké udělat právě teď",
+      "title": "Další kroky pro vaši rodinu",
+      "viewAll": "Zobrazit všechny kroky"
     },
     "quickStart": {
-      "completed": "Completed",
-      "inProgress": "In Progress",
-      "notStarted": "Not Started",
+      "completed": "Dokončeno",
+      "inProgress": "Probíhá",
+      "notStarted": "Nezahájeno",
       "step1": {
-        "action": "Tell Us About Something Important",
-        "description": "Let's start with your home, main bank account, or business",
-        "title": "Share What Matters Most to Your Family"
+        "action": "Sdělte nám něco důležitého",
+        "description": "Začněme vaším domovem, hlavním bankovním účtem nebo podnikáním",
+        "title": "Sdílejte, co je pro vaši rodinu nejdůležitější"
       },
       "step2": {
-        "action": "Choose Someone to Help",
-        "description": "Pick someone your family can turn to when they need support",
-        "title": "Add Your First Helper"
+        "action": "Vyberte někoho, kdo pomůže",
+        "description": "Zvolte osobu, na kterou se vaše rodina může obrátit v případě potřeby",
+        "title": "Přidejte svého prvního pomocníka"
       },
       "step3": {
-        "action": "Add Important Papers",
-        "description": "Keep insurance policies, deeds, and contracts where your family can find them",
-        "title": "Secure Your Important Documents"
+        "action": "Přidejte důležité dokumenty",
+        "description": "Uložte pojistky, listiny a smlouvy tam, kde je vaše rodina najde",
+        "title": "Zabezpečte důležité dokumenty"
       },
       "step4": {
-        "action": "Create Your Will",
-        "description": "Let's create a legal document that protects your family's future",
-        "title": "Write Your Will"
+        "action": "Vytvořte svou závěť",
+        "description": "Vytvoříme právní dokument, který ochrání budoucnost vaší rodiny",
+        "title": "Sepište závěť"
       },
-      "subtitle": "Let's take the first steps together to protect your loved ones",
-      "title": "Getting Started"
+      "subtitle": "Udělejme společně první kroky k ochraně vašich blízkých",
+      "title": "Začínáme"
     },
     "recentActivity": {
-      "assetUpdated": "Asset updated",
-      "daysAgo": "{{days}} days ago",
-      "documentAdded": "Document added",
-      "noActivity": "No recent activity",
-      "personAdded": "Trusted person added",
-      "subtitle": "Your latest updates and changes",
-      "taskCompleted": "Task completed",
-      "title": "Recent Activity",
-      "today": "Today",
-      "viewAll": "View All Activity",
-      "willUpdated": "Will updated",
-      "yesterday": "Yesterday"
+      "assetUpdated": "Majetek aktualizován",
+      "daysAgo": "Před {{days}} dny",
+      "documentAdded": "Dokument přidán",
+      "noActivity": "Žádná nedávná aktivita",
+      "personAdded": "Přidána důvěryhodná osoba",
+      "subtitle": "Vaše nejnovější změny a aktualizace",
+      "taskCompleted": "Úkol dokončen",
+      "title": "Nedávná aktivita",
+      "today": "Dnes",
+      "viewAll": "Zobrazit vše",
+      "willUpdated": "Závěť aktualizována",
+      "yesterday": "Včera"
     }
   },
   "stats": {
-    "completionRate": "{{percentage}}% Ready",
-    "documentsStored": "Safe Documents",
-    "documentsStoredDescription": "Important papers your family can access",
-    "excellent": "Your Family is Well Protected",
-    "gettingStarted": "Just Beginning",
-    "good": "Making Good Progress",
-    "needsWork": "Let's Work on This Together",
-    "planStrength": "How Protected Your Family Is",
-    "planStrengthDescription": "The level of preparation you've achieved for your loved ones",
-    "protectionLevel": "Family Readiness",
-    "protectionLevelDescription": "How well your family can handle difficult times",
-    "tasksCompleted": "Steps Completed",
-    "tasksCompletedDescription": "You've finished {{completed}} of {{total}} important steps",
-    "trustedPeople": "Support Team",
-    "trustedPeopleDescription": "People ready to help your family when needed"
+    "completionRate": "{{percentage}}% připraveno",
+    "documentsStored": "Zabezpečené dokumenty",
+    "documentsStoredDescription": "Důležité dokumenty, ke kterým má vaše rodina přístup",
+    "excellent": "Vaše rodina je dobře chráněná",
+    "gettingStarted": "Začínáte",
+    "good": "Děláte dobrý pokrok",
+    "needsWork": "Pojďme na tom zapracovat společně",
+    "planStrength": "Jak je vaše rodina chráněná",
+    "planStrengthDescription": "Úroveň připravenosti pro vaše blízké",
+    "protectionLevel": "Připravenost rodiny",
+    "protectionLevelDescription": "Jak dobře vaše rodina zvládne obtížné situace",
+    "tasksCompleted": "Dokončené kroky",
+    "tasksCompletedDescription": "Dokončili jste {{completed}} z {{total}} důležitých kroků",
+    "trustedPeople": "Podpůrný tým",
+    "trustedPeopleDescription": "Lidé připravení pomoci vaší rodině, když to bude potřeba"
   },
   "subscription": {
-    "autoRenewal": "[CS] Auto renewal",
-    "cancellationNotice": "[CS] Cancellation notice",
-    "days": "[CS] Days",
-    "manual": "[CS] Manual",
+    "autoRenewal": "Automatické obnovení",
+    "cancellationNotice": "Oznámení o zrušení",
+    "days": "Dny",
+    "manual": "Manuální",
     "types": {
-      "monthly": "[CS] Monthly",
-      "yearly": "[CS] Yearly"
+      "monthly": "Měsíční",
+      "yearly": "Roční"
     }
   },
-  "subtitle": "Your Family Protection Plan",
+  "subtitle": "Plán ochrany vaší rodiny",
   "tasks": {
     "actions": {
-      "start": "Start"
+      "start": "Začít"
     },
     "categories": {
-      "organize": "Organize",
-      "secure": "Secure",
-      "transfer": "Transfer"
+      "organize": "Uspořádat",
+      "secure": "Zabezpečit",
+      "transfer": "Předat"
     },
     "status": {
-      "blocked": "Blocked",
-      "completed": "Completed",
-      "inProgress": "In Progress",
-      "notStarted": "Not Started",
-      "skipped": "Skipped"
+      "blocked": "Blokováno",
+      "completed": "Dokončeno",
+      "inProgress": "Probíhá",
+      "notStarted": "Nezahájeno",
+      "skipped": "Přeskočeno"
     },
     "types": {
       "assetInventory": {
-        "description": "Document your valuable possessions so nothing gets overlooked or lost.",
-        "title": "Create Asset Inventory"
+        "description": "Zaznamenejte svůj cenný majetek, aby se na nic nezapomnělo nebo neztratilo.",
+        "title": "Vytvořit seznam majetku"
       },
       "bankAccount": {
-        "description": "Record your banking and investment information so your family can manage finances.",
-        "title": "Document Financial Accounts"
+        "description": "Zapište si informace o bankovních a investičních účtech, aby rodina mohla spravovat finance.",
+        "title": "Zaznamenat finanční účty"
       },
       "digitalAssetPlan": {
-        "description": "Organize your online accounts, passwords, and digital property for easy access.",
-        "title": "Plan for Digital Assets"
+        "description": "Uspořádejte své online účty, hesla a digitální majetek pro snadný přístup.",
+        "title": "Plán pro digitální aktiva"
       },
       "documentCentralization": {
-        "description": "Gather and digitize your most critical paperwork so your family can find everything in one place.",
-        "title": "Organize Important Documents"
+        "description": "Shromážděte a digitalizujte nejdůležitější dokumenty, aby je rodina našla na jednom místě.",
+        "title": "Uspořádat důležité dokumenty"
       },
       "emergencyContacts": {
-        "description": "Ensure the right people can access critical information when they need it most.",
-        "title": "Set Up Emergency Access"
+        "description": "Zajistěte, aby správní lidé měli přístup k důležitým informacím, když je to nejvíce potřeba.",
+        "title": "Nastavit nouzový přístup"
       },
       "familyMeeting": {
-        "description": "Have an open conversation with your family about your plans and their roles.",
-        "title": "Hold Family Discussion"
+        "description": "Otevřeně si promluvte s rodinou o svých plánech a jejich rolích.",
+        "title": "Uspořádat rodinnou diskuzi"
       },
       "guardianInstructions": {
-        "description": "Choose trusted people who can step in and help your family during difficult times.",
-        "title": "Designate Emergency Contacts"
+        "description": "Vyberte důvěryhodné osoby, které mohou pomoci vaší rodině v těžkých chvílích.",
+        "title": "Určit nouzové kontakty"
       },
       "inheritanceEducation": {
-        "description": "Understand the legal requirements in your area to avoid complications for your family.",
-        "title": "Learn About Inheritance Laws"
+        "description": "Seznamte se s právními požadavky ve vaší oblasti, abyste předešli komplikacím.",
+        "title": "Zjistit informace o dědickém právu"
       },
       "personalMessages": {
-        "description": "Leave heartfelt messages and important instructions for your loved ones.",
-        "title": "Record Personal Messages"
+        "description": "Zanechte srdečné vzkazy a důležité pokyny pro své blízké.",
+        "title": "Nahrát osobní zprávy"
       },
       "willPreparation": {
-        "description": "Create a legally valid document that clearly states your wishes for your assets and family.",
-        "title": "Prepare Your Will"
+        "description": "Vytvořte právně platný dokument, který jasně vyjadřuje vaše přání ohledně majetku a rodiny.",
+        "title": "Připravit závěť"
       }
     }
   },
-  "title": "Your Family's Protection Plan",
+  "title": "Plán ochrany vaší rodiny",
   "widgets": {
     "familyAccess": {
-      "description": "Who has access to what information",
-      "manageAccess": "Manage Access",
-      "noAccess": "No family access configured",
-      "title": "Family Access Status",
-      "viewPermissions": "View Permissions"
+      "description": "Kdo má přístup k jakým informacím",
+      "manageAccess": "Spravovat přístup",
+      "noAccess": "Žádný rodinný přístup není nastaven",
+      "title": "Stav rodinného přístupu",
+      "viewPermissions": "Zobrazit oprávnění"
     },
     "planStrengthMeter": {
-      "description": "Visual indicator of your overall preparation level",
-      "fullySecured": "Fully Secured",
-      "needsAttention": "Needs Attention",
-      "onTrack": "On Track",
-      "title": "Plan Strength Meter",
-      "wellProtected": "Well Protected"
+      "description": "Vizuální ukazatel celkové úrovně připravenosti",
+      "fullySecured": "Plně zabezpečeno",
+      "needsAttention": "Vyžaduje pozornost",
+      "onTrack": "Na dobré cestě",
+      "title": "Měřič síly plánu",
+      "wellProtected": "Dobře chráněno"
     },
     "upcomingDeadlines": {
-      "description": "Important dates and renewals to remember",
-      "dueThisWeek": "Due This Week",
-      "dueToday": "Due Today",
-      "dueTomorrow": "Due Tomorrow",
-      "noDeadlines": "No upcoming deadlines",
-      "overdue": "Overdue",
-      "title": "Upcoming Deadlines"
+      "description": "Důležitá data a termíny k zapamatování",
+      "dueThisWeek": "Termín tento týden",
+      "dueToday": "Termín dnes",
+      "dueTomorrow": "Termín zítra",
+      "noDeadlines": "Žádné nadcházející termíny",
+      "overdue": "Po termínu",
+      "title": "Nadcházející termíny"
     }
   },
   "progress": {
-    "step": "Step"
+    "step": "Krok"
   },
   "completion": {
-    "viewPlan": "View plan"
+    "viewPlan": "Zobrazit plán"
   },
   "push": {
     "taskReminder": {
-      "title": "Family Protection Reminder",
-      "body": "You have {{count}} pending tasks to strengthen your family's protection plan.",
-      "action": "Review Tasks"
+      "title": "Připomenutí ochrany rodiny",
+      "body": "Máte {{count}} čekajících úkolů pro posílení plánu ochrany vaší rodiny.",
+      "action": "Zkontrolovat úkoly"
     },
     "documentExpiry": {
-      "title": "Document Renewal Needed",
-      "body": "{{documentName}} expires on {{date}}. Please review and update.",
-      "action": "Update Document"
+      "title": "Potřeba obnovy dokumentu",
+      "body": "{{documentName}} vyprší dne {{date}}. Zkontrolujte a aktualizujte.",
+      "action": "Aktualizovat dokument"
     },
     "familyAccess": {
-      "title": "Family Access Update",
-      "body": "{{memberName}} has been granted access to your family protection information.",
-      "action": "Manage Access"
+      "title": "Aktualizace přístupu rodiny",
+      "body": "{{memberName}} získal(a) přístup k informacím o ochraně vaší rodiny.",
+      "action": "Spravovat přístup"
     },
     "securityAlert": {
-      "title": "Security Alert",
-      "body": "New login detected from {{location}}. If this wasn't you, secure your account immediately.",
-      "action": "Review Activity"
+      "title": "Bezpečnostní upozornění",
+      "body": "Bylo zjištěno nové přihlášení z {{location}}. Pokud jste to nebyli vy, okamžitě zabezpečte svůj účet.",
+      "action": "Zkontrolovat aktivitu"
     },
     "willGenerated": {
-      "title": "Will Document Ready",
-      "body": "Your will has been generated. Review execution requirements to make it legally binding.",
-      "action": "View Will"
+      "title": "Závěť je připravena",
+      "body": "Vaše závěť byla vytvořena. Zkontrolujte požadavky na podpis, aby byla právně platná.",
+      "action": "Zobrazit závěť"
     },
     "paymentIssue": {
-      "title": "Payment Issue",
-      "body": "We couldn't process your payment. Please update your payment method.",
-      "action": "Update Payment"
+      "title": "Problém s platbou",
+      "body": "Nepodařilo se zpracovat vaši platbu. Aktualizujte prosím platební metodu.",
+      "action": "Aktualizovat platbu"
     },
     "trialExpiring": {
-      "title": "Trial Ending Soon",
-      "body": "Your LegacyGuard trial expires in {{days}} days. Choose a plan to continue protection.",
-      "action": "View Plans"
+      "title": "Zkušební verze končí",
+      "body": "Vaše zkušební verze LegacyGuard končí za {{days}} dní. Vyberte si plán a pokračujte v ochraně.",
+      "action": "Zobrazit plány"
     }
   },
   "sms": {
     "securityCode": {
-      "message": "Your LegacyGuard security code is: {{code}}. This code expires in 10 minutes. Never share this code with anyone."
+      "message": "Váš bezpečnostní kód LegacyGuard je: {{code}}. Platnost kódu vyprší za 10 minut. Tento kód nikdy nesdílejte s nikým."
     },
     "loginAlert": {
-      "message": "LegacyGuard: New login detected from {{location}} at {{time}}. If this wasn't you, secure your account immediately: {{secureUrl}}"
+      "message": "LegacyGuard: Bylo zjištěno nové přihlášení z {{location}} v {{time}}. Pokud jste to nebyli vy, okamžitě zabezpečte svůj účet: {{secureUrl}}"
     },
     "emergencyAccess": {
-      "message": "LegacyGuard: Emergency access has been activated for {{familyName}}'s account. Login to view important information: {{loginUrl}}"
+      "message": "LegacyGuard: Nouzový přístup k účtu rodiny {{familyName}} byl aktivován. Přihlaste se a zobrazte důležité informace: {{loginUrl}}"
     },
     "criticalReminder": {
-      "message": "LegacyGuard: Important family protection tasks need your attention. Complete them when convenient: {{dashboardUrl}}"
+      "message": "LegacyGuard: Důležité úkoly ochrany rodiny vyžadují vaši pozornost. Dokončete je, až se vám to bude hodit: {{dashboardUrl}}"
     }
   },
   "inApp": {
     "welcome": {
-      "title": "Welcome to LegacyGuard",
-      "message": "Let's start building your family protection plan. Begin with our 5-minute assessment.",
-      "action": "Start Assessment"
+      "title": "Vítejte v LegacyGuard",
+      "message": "Začněme budovat váš plán ochrany rodiny. Začněte naším 5minutovým hodnocením.",
+      "action": "Spustit hodnocení"
     },
     "firstAsset": {
-      "title": "Add Your First Asset",
-      "message": "Protect your family by documenting your most important asset.",
-      "action": "Add Asset"
+      "title": "Přidejte svůj první majetek",
+      "message": "Chraňte svou rodinu zaznamenáním svého nejdůležitějšího majetku.",
+      "action": "Přidat majetek"
     },
     "inviteTrusted": {
-      "title": "Invite Trusted Person",
-      "message": "Designate someone who can help your family during emergencies.",
-      "action": "Add Person"
+      "title": "Pozvěte důvěryhodnou osobu",
+      "message": "Určete někoho, kdo může vaší rodině pomoci v nouzových situacích.",
+      "action": "Přidat osobu"
     },
     "createWill": {
-      "title": "Create Your Will",
-      "message": "Generate a legally valid will based on your assets and wishes.",
-      "action": "Start Will"
+      "title": "Vytvořte svou závěť",
+      "message": "Vygenerujte právně platnou závěť na základě svého majetku a přání.",
+      "action": "Začít závěť"
     },
     "reviewProgress": {
-      "title": "Review Your Progress",
-      "message": "See how your family protection plan is developing.",
-      "action": "View Progress"
+      "title": "Zkontrolujte svůj pokrok",
+      "message": "Podívejte se, jak se vyvíjí váš plán ochrany rodiny.",
+      "action": "Zobrazit postup"
     }
   },
   "alerts": {
-    "description": "Description",
-    "dismiss": "Dismiss",
+    "description": "Popis",
+    "dismiss": "Zavřít",
     "errors": {
-      "dismissFailed": "Dismiss failed",
-      "loadFailed": "Load failed",
-      "renewFailed": "Renew failed",
-      "snoozeFailed": "Snooze failed"
+      "dismissFailed": "Nepodařilo se zavřít",
+      "loadFailed": "Načítání se nezdařilo",
+      "renewFailed": "Nepodařilo se obnovit",
+      "snoozeFailed": "Nepodařilo se odložit"
     },
-    "expiresOn": "Expires on",
-    "markAsRenewed": "Mark as renewed",
+    "expiresOn": "Platí do",
+    "markAsRenewed": "Označit jako obnovené",
     "messages": {
-      "dismissed": "Dismissed",
-      "markedAsRenewed": "Marked as renewed",
-      "snoozed": "Snoozed"
+      "dismissed": "Zavřeno",
+      "markedAsRenewed": "Označeno jako obnovené",
+      "snoozed": "Odloženo"
     },
-    "noActiveAlerts": "No active alerts",
-    "noDismissedAlerts": "No dismissed alerts",
-    "noSnoozedAlerts": "No snoozed alerts",
-    "renewalInstructions": "Renewal instructions",
-    "snooze7Days": "Snooze7 days",
-    "snoozedUntil": "Snoozed until",
+    "noActiveAlerts": "Žádná aktivní upozornění",
+    "noDismissedAlerts": "Žádná zavřená upozornění",
+    "noSnoozedAlerts": "Žádná odložená upozornění",
+    "renewalInstructions": "Pokyny k obnovení",
+    "snooze7Days": "Odložit o 7 dní",
+    "snoozedUntil": "Odloženo do",
     "tabs": {
-      "active": "Active",
-      "dismissed": "Dismissed",
-      "snoozed": "Snoozed"
+      "active": "Aktivní",
+      "dismissed": "Zavřené",
+      "snoozed": "Odložené"
     },
-    "title": "Title",
+    "title": "Název",
     "types": {
-      "expired": "Expired",
-      "expiring30": "Expiring30",
-      "expiring7": "Expiring7",
-      "expiring90": "Expiring90"
+      "expired": "Platnost vypršela",
+      "expiring30": "Platnost vyprší do 30 dnů",
+      "expiring7": "Platnost vyprší do 7 dnů",
+      "expiring90": "Platnost vyprší do 90 dnů"
     },
-    "unread": "Unread",
-    "unsnooze": "Unsnooze"
+    "unread": "Nepřečtené",
+    "unsnooze": "Zrušit odložení"
   },
   "admin": {
     "accessDenied": {
-      "description": "You don't have permission to access this area",
-      "title": "Access Denied"
+      "description": "Nemáte oprávnění pro přístup do této oblasti",
+      "title": "Přístup odepřen"
     },
     "analyticsDashboard": {
-      "a_b_tests_9": "A/B Tests",
-      "active_and_new_users_over_time_12": "Active and new users over time",
-      "analytics_dashboard_2": "Analytics Dashboard",
-      "avg_documents_per_user_19": "Average documents per user",
-      "avg_session_duration_17": "Average session duration",
-      "avg_trusted_people_per_user_20": "Average trusted people per user",
-      "bounce_rate_18": "Bounce rate",
-      "confidence_29": "Confidence",
-      "feature_adoption_8": "Feature adoption",
-      "feature_adoption_rates_23": "Feature adoption rates",
-      "from_last_month_6": "From last month",
-      "key_platform_metrics_16": "Key platform metrics",
-      "loading_analytics_data_1": "Loading analytics data...",
-      "monitor_user_engagement_featur_3": "Monitor user engagement features",
-      "percentage_of_users_using_each_24": "Percentage of users using each feature",
-      "platform_statistics_15": "Platform statistics",
-      "refreshing_4": "Refreshing..."
+      "a_b_tests_9": "A/B testy",
+      "active_and_new_users_over_time_12": "Aktivní a noví uživatelé v čase",
+      "analytics_dashboard_2": "Analytický panel",
+      "avg_documents_per_user_19": "Průměrný počet dokumentů na uživatele",
+      "avg_session_duration_17": "Průměrná délka relace",
+      "avg_trusted_people_per_user_20": "Průměrný počet důvěryhodných osob na uživatele",
+      "bounce_rate_18": "Míra opuštění",
+      "confidence_29": "Důvěra",
+      "feature_adoption_8": "Přijetí funkcí",
+      "feature_adoption_rates_23": "Míra přijetí funkcí",
+      "from_last_month_6": "Od minulého měsíce",
+      "key_platform_metrics_16": "Klíčové metriky platformy",
+      "loading_analytics_data_1": "Načítání analytických dat...",
+      "monitor_user_engagement_featur_3": "Sledování zapojení uživatelů",
+      "percentage_of_users_using_each_24": "Procento uživatelů používajících jednotlivé funkce",
+      "platform_statistics_15": "Statistiky platformy",
+      "refreshing_4": "Obnovování..."
     }
   },
   "analytics": {
-    "description": "View platform analytics and insights",
-    "title": "Analytics"
+    "description": "Zobrazit analytiku a statistiky platformy",
+    "title": "Analytika"
   },
   "analysis": {
-    "description": "Data analysis and insights",
-    "title": "Analysis"
+    "description": "Analýza dat a statistiky",
+    "title": "Analýza"
   },
   "calculator": {
-    "badge": "Badge",
-    "calculateButton": "Calculate button",
+    "badge": "Odznak",
+    "calculateButton": "Tlačítko pro výpočet",
     "inputs": {
-      "accounts": "Accounts",
-      "accountsHelp": "Accounts help",
-      "business": "Business",
-      "dependents": "Dependents",
-      "dependentsHelp": "Dependents help",
-      "description": "Description",
-      "income": "Income",
-      "incomeHelp": "Income help",
-      "property": "Property",
-      "title": "Title"
+      "accounts": "Účty",
+      "accountsHelp": "Nápověda k účtům",
+      "business": "Podnikání",
+      "dependents": "Závislé osoby",
+      "dependentsHelp": "Nápověda k závislým osobám",
+      "description": "Popis",
+      "income": "Příjem",
+      "incomeHelp": "Nápověda k příjmu",
+      "property": "Majetek",
+      "title": "Název"
     },
     "results": {
-      "ctaButton": "Cta button",
-      "ctaContext": "Cta context",
-      "description": "Description",
+      "ctaButton": "Tlačítko výzvy k akci",
+      "ctaContext": "Kontext výzvy k akci",
+      "description": "Popis",
       "emotional": {
-        "confidence": "Confidence",
-        "peace": "Peace",
-        "stress": "Stress",
-        "title": "Title"
+        "confidence": "Sebejistota",
+        "peace": "Klid",
+        "stress": "Stres",
+        "title": "Název"
       },
-      "families": "Families",
+      "families": "Rodiny",
       "moneySavings": {
-        "legalFees": "Legal fees",
-        "lostWages": "Lost wages",
-        "penalties": "Penalties",
-        "title": "Title",
-        "total": "Total"
+        "legalFees": "Právní poplatky",
+        "lostWages": "Ušlá mzda",
+        "penalties": "Pokuty",
+        "title": "Název",
+        "total": "Celkem"
       },
-      "shareButton": "Share button",
-      "socialProof": "Social proof",
+      "shareButton": "Tlačítko sdílení",
+      "socialProof": "Sociální důkaz",
       "timeSavings": {
-        "saved": "Saved",
-        "title": "Title",
-        "with": "With",
-        "withMinutes": "With minutes",
-        "without": "Without",
-        "withoutHours": "Without hours"
+        "saved": "Ušetřeno",
+        "title": "Název",
+        "with": "S",
+        "withMinutes": "S minutami",
+        "without": "Bez",
+        "withoutHours": "Bez hodin"
       },
-      "title": "Title"
+      "title": "Název"
     },
-    "shareCopied": "Share copied",
-    "shareText": "Share text",
-    "shareTitle": "Share title",
-    "subtitle": "Subtitle",
+    "shareCopied": "Odkaz ke sdílení zkopírován",
+    "shareText": "Text sdílení",
+    "shareTitle": "Název sdílení",
+    "subtitle": "Podtitul",
     "testimonial": {
-      "author": "Author",
-      "quote": "Quote"
+      "author": "Autor",
+      "quote": "Citát"
     },
-    "title": "Title"
+    "title": "Název"
   },
   "benefits": {
-    "sectionSubtitle": "Section subtitle",
-    "sectionTitle": "Section title"
+    "sectionSubtitle": "Podtitul sekce",
+    "sectionTitle": "Název sekce"
   },
   "complexityReduction": {
     "actions": {
-      "completeStep": "Complete step",
-      "iNeedHelp": "I need help",
-      "nextStep": "Next step",
-      "previousStep": "Previous step",
-      "showMeHow": "Show me how",
-      "skipStep": "Skip step"
+      "completeStep": "Dokončit krok",
+      "iNeedHelp": "Potřebuji pomoc",
+      "nextStep": "Další krok",
+      "previousStep": "Předchozí krok",
+      "showMeHow": "Ukažte mi jak",
+      "skipStep": "Přeskočit krok"
     },
     "benefits": {
       "confidence": {
-        "description": "Description",
-        "title": "Title"
+        "description": "Popis",
+        "title": "Název"
       },
       "family": {
-        "description": "Description",
-        "title": "Title"
+        "description": "Popis",
+        "title": "Název"
       },
       "overwhelm": {
-        "description": "Description",
-        "title": "Title"
+        "description": "Popis",
+        "title": "Název"
       },
       "progress": {
-        "description": "Description",
-        "title": "Title"
+        "description": "Popis",
+        "title": "Název"
       },
-      "title": "Title"
+      "title": "Název"
     },
-    "description": "Description",
+    "description": "Popis",
     "features": {
       "difficultyLevels": {
-        "description": "Description",
-        "title": "Title"
+        "description": "Popis",
+        "title": "Název"
       },
       "helpAvailable": {
-        "description": "Description",
-        "title": "Title"
+        "description": "Popis",
+        "title": "Název"
       },
       "progressTracking": {
-        "description": "Description",
-        "title": "Title"
+        "description": "Popis",
+        "title": "Název"
       },
       "stepByStep": {
-        "description": "Description",
-        "title": "Title"
+        "description": "Popis",
+        "title": "Název"
       },
       "timeEstimation": {
-        "description": "Description",
-        "title": "Title"
+        "description": "Popis",
+        "title": "Název"
       },
-      "title": "Title"
+      "title": "Název"
     },
     "progress": {
-      "completed": "Completed",
-      "title": "Title",
-      "totalSteps": "Total steps"
+      "completed": "Dokončeno",
+      "title": "Název",
+      "totalSteps": "Celkový počet kroků"
     },
     "steps": {
       "digitalAssets": {
-        "complexity": "Complexity",
-        "timeRequired": "Time required",
-        "title": "Title",
-        "whatWeDo": "What we do",
-        "whatYouDo": "What you do",
-        "why": "Why"
+        "complexity": "Náročnost",
+        "timeRequired": "Potřebný čas",
+        "title": "Název",
+        "whatWeDo": "Co uděláme my",
+        "whatYouDo": "Co uděláte vy",
+        "why": "Proč"
       },
       "emergencyContacts": {
-        "complexity": "Complexity",
-        "timeRequired": "Time required",
-        "title": "Title",
-        "whatWeDo": "What we do",
-        "whatYouDo": "What you do",
-        "why": "Why"
+        "complexity": "Náročnost",
+        "timeRequired": "Potřebný čas",
+        "title": "Název",
+        "whatWeDo": "Co uděláme my",
+        "whatYouDo": "Co uděláte vy",
+        "why": "Proč"
       },
       "familyInstructions": {
-        "complexity": "Complexity",
-        "timeRequired": "Time required",
-        "title": "Title",
-        "whatWeDo": "What we do",
-        "whatYouDo": "What you do",
-        "why": "Why"
+        "complexity": "Náročnost",
+        "timeRequired": "Potřebný čas",
+        "title": "Název",
+        "whatWeDo": "Co uděláme my",
+        "whatYouDo": "Co uděláte vy",
+        "why": "Proč"
       },
       "identifyBankAccount": {
-        "complexity": "Complexity",
-        "timeRequired": "Time required",
-        "title": "Title",
-        "whatWeDo": "What we do",
-        "whatYouDo": "What you do",
-        "why": "Why"
+        "complexity": "Náročnost",
+        "timeRequired": "Potřebný čas",
+        "title": "Název",
+        "whatWeDo": "Co uděláme my",
+        "whatYouDo": "Co uděláte vy",
+        "why": "Proč"
       },
       "insurancePolicies": {
-        "complexity": "Complexity",
-        "timeRequired": "Time required",
-        "title": "Title",
-        "whatWeDo": "What we do",
-        "whatYouDo": "What you do",
-        "why": "Why"
+        "complexity": "Náročnost",
+        "timeRequired": "Potřebný čas",
+        "title": "Název",
+        "whatWeDo": "Co uděláme my",
+        "whatYouDo": "Co uděláte vy",
+        "why": "Proč"
       },
       "legalDocuments": {
-        "complexity": "Complexity",
-        "timeRequired": "Time required",
-        "title": "Title",
-        "whatWeDo": "What we do",
-        "whatYouDo": "What you do",
-        "why": "Why"
+        "complexity": "Náročnost",
+        "timeRequired": "Potřebný čas",
+        "title": "Název",
+        "whatWeDo": "Co uděláme my",
+        "whatYouDo": "Co uděláte vy",
+        "why": "Proč"
       }
     },
-    "subtitle": "Subtitle",
-    "title": "Title"
+    "subtitle": "Podtitul",
+    "title": "Název"
   },
   "reminders": {
     "channels": {
-      "email": "Email",
-      "emailDesc": "Email desc",
-      "inApp": "In app",
-      "inAppDesc": "In app desc"
+      "email": "E-mail",
+      "emailDesc": "Popis e-mailu",
+      "inApp": "V aplikaci",
+      "inAppDesc": "Popis v aplikaci"
     },
-    "complete": "Complete",
-    "completedSuccess": "Completed success",
-    "dashboardDescription": "Dashboard description",
-    "dismiss": "Dismiss",
-    "due": "Due",
-    "dueOn": "Due on",
+    "complete": "Dokončit",
+    "completedSuccess": "Úspěšně dokončeno",
+    "dashboardDescription": "Popis nástěnky",
+    "dismiss": "Zavřít",
+    "due": "Do",
+    "dueOn": "Termín",
     "duration": {
-      "week": "Week"
+      "week": "Týden"
     },
     "frequency": {
-      "annually": "Annually",
-      "monthly": "Monthly",
-      "quarterly": "Quarterly",
-      "semiAnnually": "Semi annually"
+      "annually": "Ročně",
+      "monthly": "Měsíčně",
+      "quarterly": "Čtvrtletně",
+      "semiAnnually": "Pololetně"
     },
-    "noUpcoming": "No upcoming",
-    "overdue": "Overdue",
+    "noUpcoming": "Žádné nadcházející",
+    "overdue": "Po termínu",
     "reminderDashboard": {
-      "reminders_1": "Reminders 1"
+      "reminders_1": "Připomínky 1"
     },
     "settings": {
-      "channels": "Channels",
-      "channelsDesc": "Channels desc",
-      "defaultFrequency": "Default frequency",
-      "enableReminders": "Enable reminders",
-      "enableRemindersDesc": "Enable reminders desc",
-      "general": "General",
-      "generalDesc": "General desc",
-      "reminderTypes": "Reminder types",
-      "reminderTypesDesc": "Reminder types desc",
-      "saveError": "Save error",
-      "saved": "Saved"
+      "channels": "Kanály",
+      "channelsDesc": "Popis kanálů",
+      "defaultFrequency": "Výchozí četnost",
+      "enableReminders": "Povolit připomínky",
+      "enableRemindersDesc": "Popis povolení připomínek",
+      "general": "Obecné",
+      "generalDesc": "Obecný popis",
+      "reminderTypes": "Typy připomínek",
+      "reminderTypesDesc": "Popis typů připomínek",
+      "saveError": "Chyba při ukládání",
+      "saved": "Uloženo"
     },
-    "snooze": "Snooze",
-    "snoozeWeek": "Snooze week",
-    "snoozedSuccess": "Snoozed success",
-    "title": "Title",
+    "snooze": "Odložit",
+    "snoozeWeek": "Odložit o týden",
+    "snoozedSuccess": "Úspěšně odloženo",
+    "title": "Název",
     "types": {
-      "contentUpdate": "Content update",
-      "contentUpdateDesc": "Content update desc",
-      "documentExpiry": "Document expiry",
-      "documentExpiryDesc": "Document expiry desc",
-      "lifeEvent": "Life event",
-      "lifeEventDesc": "Life event desc",
-      "review": "Review",
-      "reviewDesc": "Review desc"
+      "contentUpdate": "Aktualizace obsahu",
+      "contentUpdateDesc": "Popis aktualizace obsahu",
+      "documentExpiry": "Vypršení platnosti dokumentu",
+      "documentExpiryDesc": "Popis vypršení platnosti dokumentu",
+      "lifeEvent": "Životní událost",
+      "lifeEventDesc": "Popis životní události",
+      "review": "Kontrola",
+      "reviewDesc": "Popis kontroly"
     },
-    "viewAll": "View all"
+    "viewAll": "Zobrazit vše"
   }
 }
