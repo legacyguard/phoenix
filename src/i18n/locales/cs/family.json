@@ -1,835 +1,918 @@
 {
   "access": {
     "descriptions": {
-      "emergency": "They can help your family only in emergencies",
-      "executor": "They can manage everything to help your family",
-      "full": "They can see and manage all your family's information",
-      "limited": "They can see basic contact info and emergency instructions",
-      "standard": "They can see most of what your family would need"
+      "emergency": "Mohou pomoci vaší rodině pouze v nouzových situacích",
+      "executor": "Mohou spravovat vše, aby pomohli vaší rodině",
+      "full": "Mohou vidět a spravovat všechny informace o vaší rodině",
+      "limited": "Mohou vidět základní kontaktní informace a nouzové pokyny",
+      "standard": "Mohou vidět většinu toho, co by vaše rodina potřebovala"
     },
     "levels": {
-      "emergency": "Only in Emergencies",
-      "executor": "Full Helper Access",
-      "full": "Can See Everything",
-      "limited": "Basic Information Only",
-      "standard": "Regular Family Access"
+      "emergency": "Pouze v nouzových situacích",
+      "executor": "Plný pomocný přístup",
+      "full": "Může vidět vše",
+      "limited": "Pouze základní informace",
+      "standard": "Běžný rodinný přístup"
     },
     "permissions": {
-      "editInformation": "Can Make Changes",
-      "emergencyOverride": "Emergency Access Rights",
-      "manageAccess": "Can Manage Other Helpers",
-      "receiveNotifications": "Gets Important Updates",
-      "viewAssets": "Can See Your Important Things",
-      "viewContacts": "Can See Contact Information",
-      "viewDocuments": "Can Read Documents"
+      "editInformation": "Může provádět změny",
+      "emergencyOverride": "Práva nouzového přístupu",
+      "manageAccess": "Může spravovat další pomocníky",
+      "receiveNotifications": "Dostává důležité aktualizace",
+      "viewAssets": "Může vidět vaše důležité věci",
+      "viewContacts": "Může vidět kontaktní informace",
+      "viewDocuments": "Může číst dokumenty"
     }
   },
   "actions": {
-    "addPerson": "Add Someone You Trust",
-    "assignRole": "Give Them a Role",
-    "contactPerson": "Get in Touch",
-    "editPerson": "Update Their Information",
-    "exportContacts": "Download Contact List",
-    "grantAccess": "Let Them Help Your Family",
-    "printSummary": "Print This for Your Records",
-    "removePerson": "Remove from Your Support Team",
-    "removeRole": "Change Their Role",
-    "revokeAccess": "Limit What They Can See",
-    "scheduleReview": "Plan to Talk About This",
-    "sendInvitation": "Invite Them to Help",
-    "setBackup": "Make Them a Backup Helper",
-    "viewProfile": "See All Their Details"
+    "addPerson": "Přidejte někoho, komu důvěřujete",
+    "assignRole": "Přiřaďte jim roli",
+    "contactPerson": "Spojte se",
+    "editPerson": "Aktualizujte jejich informace",
+    "exportContacts": "Stáhněte seznam kontaktů",
+    "grantAccess": "Nechte je pomáhat vaší rodině",
+    "printSummary": "Vytiskněte si to pro vaše záznamy",
+    "removePerson": "Odeberte z vašeho podpůrného týmu",
+    "removeRole": "Změňte jejich roli",
+    "revokeAccess": "Omezte co mohou vidět",
+    "scheduleReview": "Naplánujte si o tom mluvit",
+    "sendInvitation": "Pozvěte je k pomoci",
+    "setBackup": "Učiňte z nich záložního pomocníka",
+    "viewProfile": "Zobrazte všechny jejich detaily"
   },
   "beneficiaryCommunications": {
     "actions": {
-      "cancel": "[CS] Cancel",
-      "save": "[CS] Save",
-      "saving": "[CS] Saving"
+      "cancel": "Zrušit",
+      "save": "Uložit",
+      "saving": "Ukládání"
     },
-    "description": "[CS] Description",
+    "description": "Popis",
     "dialog": {
-      "description": "[CS] Description",
-      "title": "[CS] Title"
+      "description": "Popis",
+      "title": "Název"
     },
     "empty": {
-      "subtitle": "[CS] Subtitle",
-      "title": "[CS] Title"
+      "subtitle": "Podtitul",
+      "title": "Název"
     },
     "fields": {
-      "beneficiaryName": "[CS] Beneficiary name",
-      "date": "[CS] Date",
-      "email": "[CS] Email",
-      "subject": "[CS] Subject",
-      "summary": "[CS] Summary",
-      "type": "[CS] Type"
+      "beneficiaryName": "Jméno příjemce",
+      "date": "Datum",
+      "email": "Email",
+      "subject": "Předmět",
+      "summary": "Shrnutí",
+      "type": "Typ"
     },
-    "logAction": "[CS] Log action",
-    "logCommunication": "[CS] Log communication",
+    "logAction": "Zaznamenat akci",
+    "logCommunication": "Zaznamenat komunikaci",
     "placeholders": {
-      "subject": "[CS] Subject",
-      "summary": "[CS] Summary"
+      "subject": "Předmět",
+      "summary": "Shrnutí"
     },
-    "title": "[CS] Title",
+    "title": "Název",
     "types": {
-      "email": "[CS] Email",
-      "inPerson": "[CS] In person",
-      "letter": "[CS] Letter",
-      "other": "[CS] Other",
-      "phone": "[CS] Phone"
+      "email": "Email",
+      "inPerson": "Osobně",
+      "letter": "Dopis",
+      "other": "Jiné",
+      "phone": "Telefon"
     }
   },
   "common": {
-    "cancel": "[CS] Cancel",
-    "fix": "[CS] Fix",
-    "minutes": "[CS] Minutes",
-    "start": "[CS] Start"
+    "cancel": "Zrušit",
+    "fix": "Opravit",
+    "minutes": "Minuty",
+    "start": "Začít"
   },
   "communication": {
-    "direct": "Direct & Clear",
-    "directDesc": "Straightforward communication that gets to the point quickly",
-    "gentle": "Gentle & Supportive",
-    "gentleDesc": "Careful, empathetic communication that acknowledges sensitivities",
-    "detailed": "Detailed & Comprehensive",
-    "detailedDesc": "Thorough explanations with all the important details",
-    "simplified": "Simplified & Essential",
-    "simplifiedDesc": "Focus on the most important information without overwhelming detail"
+    "communicationTree": "Kdo kontaktuje koho",
+    "conflictResolution": "Jak řešit neshody",
+    "decisionMaking": "Jak se rozhoduje",
+    "description": "Ujistěte se, že všichni vědí, koho kontaktovat a jak spolupracovat, když vaše rodina potřebuje pomoc.",
+    "emergencyProtocol": "Co dělat v nouzové situaci",
+    "familyMeetings": "Kdy by se vaše rodina měla sejít",
+    "informationSharing": "Jaké informace sdílet",
+    "meetingSchedule": "Pravidelné rodinné kontroly",
+    "primaryContact": "První osoba k kontaktování",
+    "subtitle": "Pomoc vašemu podpůrnému týmu spolupracovat",
+    "title": "Jak budou vaši pomocníci komunikovat"
   },
   "crisisAssessment": {
-    "criticalVulnerabilities": "[CS] Critical vulnerabilities",
-    "familyCapabilities": "[CS] Family capabilities",
-    "familyDiscussion": "[CS] Family discussion",
-    "familyDiscussionDescription": "[CS] Family discussion description",
-    "fixCapability": "[CS] Fix capability",
-    "fixNow": "[CS] Fix now",
-    "missing": "[CS] Missing",
-    "mostUrgent": "[CS] Most urgent",
-    "nextCriticalAction": "[CS] Next critical action",
-    "notPrepared": "[CS] Not prepared",
-    "partial": "[CS] Partial",
-    "prepared": "[CS] Prepared",
-    "printReport": "[CS] Print report",
-    "protected": "[CS] Protected",
-    "scheduleReview": "[CS] Schedule review",
-    "situationReadiness": "[CS] Situation readiness",
-    "subtitle": "[CS] Subtitle",
-    "timeEstimate": "[CS] Time estimate",
-    "title": "[CS] Title",
-    "vulnerable": "[CS] Vulnerable"
+    "criticalVulnerabilities": "Kritické zranitelnosti",
+    "familyCapabilities": "Rodinné schopnosti",
+    "familyDiscussion": "Rodinná diskuse",
+    "familyDiscussionDescription": "Popis rodinné diskuse",
+    "fixCapability": "Opravit schopnost",
+    "fixNow": "Opravit nyní",
+    "missing": "Chybí",
+    "mostUrgent": "Nejnaléhavější",
+    "nextCriticalAction": "Další kritická akce",
+    "notPrepared": "Nepřipravený",
+    "partial": "Částečný",
+    "prepared": "Připravený",
+    "printReport": "Vytisknout zprávu",
+    "protected": "Chráněný",
+    "scheduleReview": "Naplánovat přehled",
+    "situationReadiness": "Připravenost na situaci",
+    "subtitle": "Podtitul",
+    "timeEstimate": "Časový odhad",
+    "title": "Název",
+    "vulnerable": "Zranitelný"
   },
   "crisisSituations": {
     "businessEmergency": {
-      "description": "[CS] Description",
-      "title": "[CS] Title"
+      "description": "Popis",
+      "title": "Název"
     },
     "emergencyHospital": {
-      "description": "[CS] Description",
-      "title": "[CS] Title"
+      "description": "Popis",
+      "title": "Název"
     },
     "extendedTravel": {
-      "description": "[CS] Description",
-      "title": "[CS] Title"
+      "description": "Popis",
+      "title": "Název"
     },
     "suddenDeath": {
-      "description": "[CS] Description",
-      "title": "[CS] Title"
+      "description": "Popis",
+      "title": "Název"
     }
   },
   "dashboard": {
     "familyGuide": {
-      "discreteMode": "[CS] Discrete mode",
-      "discreteModeDesc": "[CS] Discrete mode desc",
-      "emergency_contacts_1": "[CS] Emergency contacts 1",
-      "export_guide_4": "[CS] Export guide 4",
-      "generateGuide": "[CS] Generate guide",
-      "important_documents_2": "[CS] Important documents 2",
-      "last_updated_6": "[CS] Last updated 6",
-      "share_with_family_5": "[CS] Share with family 5",
-      "subtitle": "[CS] Subtitle",
-      "title": "[CS] Title",
-      "view": "[CS] View",
-      "what_to_do_when_3": "[CS] What to do when 3"
+      "discreteMode": "Diskrétní režim",
+      "discreteModeDesc": "Popis diskrétního režimu",
+      "emergency_contacts_1": "Nouzové kontakty 1",
+      "export_guide_4": "Export průvodce 4",
+      "generateGuide": "Generovat průvodce",
+      "important_documents_2": "Důležité dokumenty 2",
+      "last_updated_6": "Naposledy aktualizováno 6",
+      "share_with_family_5": "Sdílet s rodinou 5",
+      "subtitle": "Podtitul",
+      "title": "Název",
+      "view": "Zobrazit",
+      "what_to_do_when_3": "Co dělat když 3"
     }
   },
   "emergency": {
-    "addContact": "[CS] Add contact",
+    "addContact": "Přidat kontakt",
     "addContactDialog": {
-      "addButton": "[CS] Add button",
-      "description": "[CS] Description",
-      "relationship": "[CS] Relationship",
-      "relationshipPlaceholder": "[CS] Relationship placeholder",
-      "selectContact": "[CS] Select contact",
-      "selectPlaceholder": "[CS] Select placeholder",
-      "title": "[CS] Title"
+      "addButton": "Tlačítko přidat",
+      "description": "Popis",
+      "relationship": "Vztah",
+      "relationshipPlaceholder": "Zástupný text pro vztah",
+      "selectContact": "Vybrat kontakt",
+      "selectPlaceholder": "Zástupný text výběru",
+      "title": "Název"
     },
-    "description": "[CS] Description",
+    "description": "Popis",
     "errors": {
-      "addFailed": "[CS] Add failed",
-      "loadFailed": "[CS] Load failed",
-      "removeFailed": "[CS] Remove failed",
-      "reorderFailed": "[CS] Reorder failed",
-      "selectContact": "[CS] Select contact",
-      "testFailed": "[CS] Test failed"
+      "addFailed": "Přidání selhalo",
+      "loadFailed": "Načtení selhalo",
+      "removeFailed": "Odebrání selhalo",
+      "reorderFailed": "Přeřazení selhalo",
+      "selectContact": "Vyberte kontakt",
+      "testFailed": "Test selhal"
     },
-    "lastContacted": "[CS] Last contacted",
-    "maxContactsReached": "[CS] Max contacts reached",
+    "lastContacted": "Naposledy kontaktován",
+    "maxContactsReached": "Dosažen maximální počet kontaktů",
     "messages": {
-      "added": "[CS] Added",
-      "removed": "[CS] Removed",
-      "reordered": "[CS] Reordered",
-      "testSent": "[CS] Test sent"
+      "added": "Přidáno",
+      "removed": "Odebráno",
+      "reordered": "Přeřazeno",
+      "testSent": "Test odeslán"
     },
-    "noContacts": "[CS] No contacts",
-    "sendTest": "[CS] Send test",
-    "title": "[CS] Title"
+    "noContacts": "Žádné kontakty",
+    "sendTest": "Odeslat test",
+    "title": "Název"
   },
   "errors": {
-    "dataNotFound": "[CS] Data not found",
-    "duplicateRecord": "[CS] Duplicate record",
-    "networkError": "[CS] Network error",
-    "permissionDenied": "[CS] Permission denied",
-    "unknown": "[CS] Unknown"
+    "accessDenied": "Nemůžete právě teď měnit informace této osoby",
+    "assigningRole": "Nemohli jsme jim přiřadit tuto roli. Zkusme to znovu.",
+    "dataNotFound": "Nemohli jsme najít tyto informace",
+    "duplicatePerson": "Tato osoba už je ve vašem podpůrném týmu",
+    "duplicateRecord": "Toto už je uloženo",
+    "grantingAccess": "Nemohli jsme jim poskytnout přístup. Zkusme to znovu.",
+    "invalidEmail": "Ten email nevypadá správně - zkontrolujte ho prosím",
+    "invalidPhone": "To telefonní číslo nevypadá správně - zkontrolujte ho prosím",
+    "loadingFamily": "Měli jsme problém s načtením vašeho podpůrného týmu. Obnovte prosím stránku.",
+    "networkError": "Problém s připojením - zkontrolujte prosím internet",
+    "permissionDenied": "Nemáte oprávnění k této akci",
+    "removingPerson": "Nemohli jsme je odebrat z vašeho týmu. Zkusme to znovu.",
+    "roleConflict": "Už mají jinou roli, která je v konfliktu s touto",
+    "savingPerson": "Nemohli jsme uložit jejich informace. Zkontrolujte prosím vše a zkuste znovu.",
+    "sendingInvitation": "Nemohli jsme odeslat pozvánku. Zkontrolujte prosím jejich email a zkuste znovu.",
+    "unknown": "Něco se pokazilo"
   },
   "estateStatus": {
     "actions": {
-      "cancel": "[CS] Cancel",
-      "update": "[CS] Update",
-      "updating": "[CS] Updating"
+      "cancel": "Zrušit",
+      "update": "Aktualizovat",
+      "updating": "Aktualizace"
     },
-    "description": "[CS] Description",
+    "description": "Popis",
     "dialog": {
-      "description": "[CS] Description",
-      "title": "[CS] Title"
+      "description": "Popis",
+      "title": "Název"
     },
     "empty": {
-      "noStatus": "[CS] No status",
-      "readOnly": "[CS] Read only"
+      "noStatus": "Žádný stav",
+      "readOnly": "Pouze pro čtení"
     },
     "fields": {
-      "additionalDetails": "[CS] Additional details",
-      "status": "[CS] Status"
+      "additionalDetails": "Další podrobnosti",
+      "status": "Stav"
     },
-    "lastUpdated": "[CS] Last updated",
-    "logAction": "[CS] Log action",
+    "lastUpdated": "Naposledy aktualizováno",
+    "logAction": "Zaznamenat akci",
     "placeholders": {
-      "additionalContext": "[CS] Additional context",
-      "selectStatus": "[CS] Select status"
+      "additionalContext": "Další kontext",
+      "selectStatus": "Vybrat stav"
     },
-    "progress": "[CS] Progress",
+    "progress": "Pokrok",
     "statuses": {
-      "assetsBeingValued": "[CS] Assets being valued",
-      "debtsBeingSettled": "[CS] Debts being settled",
-      "distributionInProgress": "[CS] Distribution in progress",
-      "estateClosed": "[CS] Estate closed",
-      "gatheringDocuments": "[CS] Gathering documents",
-      "initialReview": "[CS] Initial review",
-      "probateInitiated": "[CS] Probate initiated",
-      "readyForDistribution": "[CS] Ready for distribution",
-      "taxPreparation": "[CS] Tax preparation"
+      "assetsBeingValued": "Majetek se oceňuje",
+      "debtsBeingSettled": "Dluhy se vyřizují",
+      "distributionInProgress": "Rozdělování probíhá",
+      "estateClosed": "Dědictví uzavřeno",
+      "gatheringDocuments": "Shromažďování dokumentů",
+      "initialReview": "Počáteční přehled",
+      "probateInitiated": "Ověřování zahájeno",
+      "readyForDistribution": "Připraveno k rozdělení",
+      "taxPreparation": "Příprava daní"
     },
-    "title": "[CS] Title",
-    "updateStatus": "[CS] Update status"
+    "title": "Název",
+    "updateStatus": "Aktualizovat stav"
   },
   "familyCapabilities": {
-    "businessOperations": "[CS] Business operations",
-    "canAccessBankAccounts": "[CS] Can access bank accounts",
-    "canAccessDigitalAccounts": "[CS] Can access digital accounts",
-    "canFileInsuranceClaims": "[CS] Can file insurance claims",
-    "canManageBusiness": "[CS] Can manage business",
-    "cannotAccessBankAccounts": "[CS] Cannot access bank accounts",
-    "cannotAccessDigitalAccounts": "[CS] Cannot access digital accounts",
-    "cannotFileInsuranceClaims": "[CS] Cannot file insurance claims",
-    "clearInheritancePlan": "[CS] Clear inheritance plan",
-    "digitalAccess": "[CS] Digital access",
-    "digitalAccounts": "[CS] Digital accounts",
-    "immediateFinancialNeeds": "[CS] Immediate financial needs",
-    "inheritance": "[CS] Inheritance",
-    "insuranceClaims": "[CS] Insurance claims",
-    "knowsLegalContacts": "[CS] Knows legal contacts",
-    "knowsMedicalWishes": "[CS] Knows medical wishes",
-    "legalMatters": "[CS] Legal matters",
-    "medicalDecisions": "[CS] Medical decisions",
-    "noBusinessInfo": "[CS] No business info",
-    "noInheritancePlan": "[CS] No inheritance plan",
-    "noLegalContacts": "[CS] No legal contacts",
-    "noMedicalInfo": "[CS] No medical info",
-    "partialBusinessInfo": "[CS] Partial business info",
-    "partialInheritancePlan": "[CS] Partial inheritance plan",
-    "partialMedicalInfo": "[CS] Partial medical info",
-    "payBills": "[CS] Pay bills"
+    "businessOperations": "Obchodní operace",
+    "canAccessBankAccounts": "Může přistupovat k bankovním účtům",
+    "canAccessDigitalAccounts": "Může přistupovat k digitálním účtům",
+    "canFileInsuranceClaims": "Může podávat pojistné nároky",
+    "canManageBusiness": "Může řídit podnik",
+    "cannotAccessBankAccounts": "Nemůže přistupovat k bankovním účtům",
+    "cannotAccessDigitalAccounts": "Nemůže přistupovat k digitálním účtům",
+    "cannotFileInsuranceClaims": "Nemůže podávat pojistné nároky",
+    "clearInheritancePlan": "Jasný plán dědictví",
+    "digitalAccess": "Digitální přístup",
+    "digitalAccounts": "Digitální účty",
+    "immediateFinancialNeeds": "Okamžité finanční potřeby",
+    "inheritance": "Dědictví",
+    "insuranceClaims": "Pojistné nároky",
+    "knowsLegalContacts": "Zná právní kontakty",
+    "knowsMedicalWishes": "Zná lékařská přání",
+    "legalMatters": "Právní záležitosti",
+    "medicalDecisions": "Lékařská rozhodnutí",
+    "noBusinessInfo": "Žádné obchodní informace",
+    "noInheritancePlan": "Žádný plán dědictví",
+    "noLegalContacts": "Žádné právní kontakty",
+    "noMedicalInfo": "Žádné lékařské informace",
+    "partialBusinessInfo": "Částečné obchodní informace",
+    "partialInheritancePlan": "Částečný plán dědictví",
+    "partialMedicalInfo": "Částečné lékařské informace",
+    "payBills": "Platit účty"
   },
   "familyCrisisAssessment": {
-    "15_1": "[CS] 15 1"
+    "15_1": "15 1"
   },
   "familyExecutorView": {
     "communications": {
-      "description": "[CS] Description",
-      "empty": "[CS] Empty",
-      "title": "[CS] Title",
-      "to": "[CS] To"
+      "description": "Popis",
+      "empty": "Prázdné",
+      "title": "Název",
+      "to": "Pro"
     },
-    "executor": "[CS] Executor",
-    "footer": "[CS] Footer",
-    "subtitle": "[CS] Subtitle",
-    "theExecutor": "[CS] The executor",
-    "title": "[CS] Title"
+    "executor": "Vykonavatel",
+    "footer": "Zápatí",
+    "subtitle": "Podtitul",
+    "theExecutor": "Vykonavatel",
+    "title": "Název"
   },
   "familyHub": {
     "accessLevels": {
       "emergencyOnly": {
-        "description": "[CS] Description",
-        "fullDescription": "[CS] Full description",
-        "title": "[CS] Title"
+        "description": "Popis",
+        "fullDescription": "Úplný popis",
+        "title": "Název"
       },
       "fullAccess": {
-        "description": "[CS] Description",
-        "fullDescription": "[CS] Full description",
-        "title": "[CS] Title"
+        "description": "Popis",
+        "fullDescription": "Úplný popis",
+        "title": "Název"
       },
       "limitedInfo": {
-        "description": "[CS] Description",
-        "fullDescription": "[CS] Full description",
-        "title": "[CS] Title"
+        "description": "Popis",
+        "fullDescription": "Úplný popis",
+        "title": "Název"
       },
       "none": {
-        "description": "[CS] Description",
-        "title": "[CS] Title"
+        "description": "Popis",
+        "title": "Název"
       }
     },
     "emergencyProtocol": {
-      "activeMessage": "[CS] Active message",
-      "configure": "[CS] Configure",
-      "configured": "[CS] Configured",
-      "description": "[CS] Description",
-      "title": "[CS] Title"
+      "activeMessage": "Aktivní zpráva",
+      "configure": "Konfigurovat",
+      "configured": "Nakonfigurováno",
+      "description": "Popis",
+      "title": "Název"
     },
     "errors": {
-      "authenticationRequired": "[CS] Authentication required",
-      "failedToFetchData": "[CS] Failed to fetch data",
-      "failedToLoadMembers": "[CS] Failed to load members"
+      "authenticationRequired": "Vyžadována autentizace",
+      "failedToFetchData": "Selhalo načtení dat",
+      "failedToLoadMembers": "Selhalo načtení členů"
     },
     "memberManagement": {
-      "addMorePeople": "[CS] Add more people",
-      "addTrustedPerson": "[CS] Add trusted person",
-      "daysAgo": "[CS] Days ago",
-      "informationAccessLevel": "[CS] Information access level",
-      "lastContactOver30Days": "[CS] Last contact over30 days",
-      "lastContacted": "[CS] Last contacted",
-      "preparedness": "[CS] Preparedness",
-      "sendUpdate": "[CS] Send update",
-      "sendUpdateTo": "[CS] Send update to",
-      "title": "[CS] Title"
+      "addMorePeople": "Přidat více lidí",
+      "addTrustedPerson": "Přidat důvěryhodnou osobu",
+      "daysAgo": "Dnů zpět",
+      "informationAccessLevel": "Úroveň přístupu k informacím",
+      "lastContactOver30Days": "Poslední kontakt před více než 30 dny",
+      "lastContacted": "Naposledy kontaktován",
+      "preparedness": "Připravenost",
+      "sendUpdate": "Odeslat aktualizaci",
+      "sendUpdateTo": "Odeslat aktualizaci pro",
+      "title": "Název"
     },
     "messages": {
-      "accessLevelUpdated": "[CS] Access level updated",
-      "failedToSendUpdate": "[CS] Failed to send update",
-      "updateSentTo": "[CS] Update sent to"
+      "accessLevelUpdated": "Úroveň přístupu aktualizována",
+      "failedToSendUpdate": "Selhalo odeslání aktualizace",
+      "updateSentTo": "Aktualizace odeslána pro"
     },
     "overallPreparedness": {
-      "description": "[CS] Description",
-      "improvementNeeded": "[CS] Improvement needed",
-      "title": "[CS] Title"
+      "description": "Popis",
+      "improvementNeeded": "Potřebné zlepšení",
+      "title": "Název"
     },
-    "subtitle": "[CS] Subtitle",
+    "subtitle": "Podtitul",
     "tabs": {
-      "familyMembers": "[CS] Family members",
-      "members": "[CS] Members",
-      "preparednessTools": "[CS] Preparedness tools",
-      "tools": "[CS] Tools"
+      "familyMembers": "Členové rodiny",
+      "members": "Členové",
+      "preparednessTools": "Nástroje připravenosti",
+      "tools": "Nástroje"
     },
-    "title": "[CS] Title"
+    "title": "Název"
   },
   "familyPreparednessTools": {
-    "create_a_printable_guide_for_y_3": "[CS] Create a printable guide for y 3",
+    "create_a_printable_guide_for_y_3": "Vytvořit tiskový průvodce pro 3",
     "errors": {
-      "comingSoon": "[CS] Coming soon",
-      "generateFailed": "[CS] Generate failed",
-      "premiumRequired": "[CS] Premium required",
-      "selectScenario": "[CS] Select scenario"
+      "comingSoon": "Již brzy",
+      "generateFailed": "Generování selhalo",
+      "premiumRequired": "Vyžadována prémiová verze",
+      "selectScenario": "Vyberte scénář"
     },
-    "generate_another_5": "[CS] Generate another 5",
-    "generate_emergency_guide_2": "[CS] Generate emergency guide 2",
+    "generate_another_5": "Generovat další 5",
+    "generate_emergency_guide_2": "Generovat nouzový průvodce 2",
     "guides": {
       "death": {
-        "bankAccounts": "[CS] Bank accounts",
-        "contactExecutor": "[CS] Contact executor",
-        "contactLawyer": "[CS] Contact lawyer",
-        "deathCertificate": "[CS] Death certificate",
-        "disclaimer": "[CS] Disclaimer",
-        "employer": "[CS] Employer",
-        "financialInstitutions": "[CS] Financial institutions",
-        "first24Hours": "[CS] First24 hours",
-        "generatedOn": "[CS] Generated on",
-        "importantDocuments": "[CS] Important documents",
-        "insuranceCompanies": "[CS] Insurance companies",
-        "investmentAccounts": "[CS] Investment accounts",
-        "locateWill": "[CS] Locate will",
-        "peopleToNotify": "[CS] People to notify",
-        "secureResidence": "[CS] Secure residence",
-        "socialSecurity": "[CS] Social security",
-        "title": "[CS] Title"
+        "bankAccounts": "Bankovní účty",
+        "contactExecutor": "Kontaktovat vykonavatele",
+        "contactLawyer": "Kontaktovat právníka",
+        "deathCertificate": "Úmrtní list",
+        "disclaimer": "Zřeknutí se odpovědnosti",
+        "employer": "Zaměstnavatel",
+        "financialInstitutions": "Finanční instituce",
+        "first24Hours": "Prvních 24 hodin",
+        "generatedOn": "Vygenerováno",
+        "importantDocuments": "Důležité dokumenty",
+        "insuranceCompanies": "Pojišťovny",
+        "investmentAccounts": "Investiční účty",
+        "locateWill": "Najít závěť",
+        "peopleToNotify": "Lidé k upozornění",
+        "secureResidence": "Zabezpečit bydliště",
+        "socialSecurity": "Sociální zabezpečení",
+        "title": "Název"
       },
       "emergency": {
-        "address": "[CS] Address",
-        "attorney": "[CS] Attorney",
-        "emergency": "[CS] Emergency",
-        "financialAdvisor": "[CS] Financial advisor",
-        "homeInformation": "[CS] Home information",
-        "insuranceAgent": "[CS] Insurance agent",
-        "keyContacts": "[CS] Key contacts",
-        "securitySystem": "[CS] Security system",
-        "spouse": "[CS] Spouse",
-        "title": "[CS] Title",
-        "utilities": "[CS] Utilities"
+        "address": "Adresa",
+        "attorney": "Právník",
+        "emergency": "Nouzová situace",
+        "financialAdvisor": "Finanční poradce",
+        "homeInformation": "Informace o domově",
+        "insuranceAgent": "Pojišťovací agent",
+        "keyContacts": "Klíčové kontakty",
+        "securitySystem": "Bezpečnostní systém",
+        "spouse": "Manžel/manželka",
+        "title": "Název",
+        "utilities": "Služby"
       },
       "hospitalization": {
-        "allergies": "[CS] Allergies",
-        "bloodType": "[CS] Blood type",
-        "currentMedications": "[CS] Current medications",
-        "emergencyContacts": "[CS] Emergency contacts",
-        "healthcarePowerOfAttorney": "[CS] Healthcare power of attorney",
-        "hipaaRelease": "[CS] Hipaa release",
-        "legalDocuments": "[CS] Legal documents",
-        "livingWill": "[CS] Living will",
-        "medicalInformation": "[CS] Medical information",
-        "preferredHospital": "[CS] Preferred hospital",
-        "primaryCarePhysician": "[CS] Primary care physician",
-        "title": "[CS] Title"
+        "allergies": "Alergie",
+        "bloodType": "Krevní skupina",
+        "currentMedications": "Současné léky",
+        "emergencyContacts": "Nouzové kontakty",
+        "healthcarePowerOfAttorney": "Zdravotní plná moc",
+        "hipaaRelease": "HIPAA vydání",
+        "legalDocuments": "Právní dokumenty",
+        "livingWill": "Životní závěť",
+        "medicalInformation": "Lékařské informace",
+        "preferredHospital": "Preferovaná nemocnice",
+        "primaryCarePhysician": "Praktický lékař",
+        "title": "Název"
       },
       "missing": {
-        "bankingApps": "[CS] Banking apps",
-        "checkHospitals": "[CS] Check hospitals",
-        "checkWithWorkplace": "[CS] Check with workplace",
-        "contactCloseFriends": "[CS] Contact close friends",
-        "contactLocalPolice": "[CS] Contact local police",
-        "digitalFootprint": "[CS] Digital footprint",
-        "email": "[CS] Email",
-        "immediateActions": "[CS] Immediate actions",
-        "phoneProvider": "[CS] Phone provider",
-        "socialMedia": "[CS] Social media",
-        "title": "[CS] Title"
+        "bankingApps": "Bankovní aplikace",
+        "checkHospitals": "Zkontrolovat nemocnice",
+        "checkWithWorkplace": "Zkontrolovat s pracovištěm",
+        "contactCloseFriends": "Kontaktovat blízké přátele",
+        "contactLocalPolice": "Kontaktovat místní policii",
+        "digitalFootprint": "Digitální stopa",
+        "email": "Email",
+        "immediateActions": "Okamžité akce",
+        "phoneProvider": "Poskytovatel telefonu",
+        "socialMedia": "Sociální média",
+        "title": "Název"
       }
     },
     "mockContent": {
-      "insurancePolicies": "[CS] Insurance policies"
+      "insurancePolicies": "Pojistné smlouvy"
     },
     "scenarios": {
       "death": {
-        "description": "[CS] Description",
-        "title": "[CS] Title"
+        "description": "Popis",
+        "title": "Název"
       },
       "emergency": {
-        "description": "[CS] Description",
-        "title": "[CS] Title"
+        "description": "Popis",
+        "title": "Název"
       },
       "hospitalization": {
-        "description": "[CS] Description",
-        "title": "[CS] Title"
+        "description": "Popis",
+        "title": "Název"
       },
       "missing": {
-        "description": "[CS] Description",
-        "title": "[CS] Title"
+        "description": "Popis",
+        "title": "Název"
       }
     },
-    "select_scenario_4": "[CS] Select scenario 4",
+    "select_scenario_4": "Vybrat scénář 4",
     "tools": {
-      "cancel": "[CS] Cancel",
-      "chooseScenario": "[CS] Choose scenario",
-      "emergencySimulator": "[CS] Emergency simulator",
-      "emergencySimulatorDesc": "[CS] Emergency simulator desc",
-      "generateGuide": "[CS] Generate guide",
-      "generating": "[CS] Generating",
-      "informationTreasureHunt": "[CS] Information treasure hunt",
-      "launch": "[CS] Launch",
-      "printGuide": "[CS] Print guide",
-      "stepByStepGuides": "[CS] Step by step guides",
-      "stepByStepGuidesDesc": "[CS] Step by step guides desc",
-      "treasureHuntDesc": "[CS] Treasure hunt desc",
-      "videoMessages": "[CS] Video messages",
-      "videoMessagesDesc": "[CS] Video messages desc"
+      "cancel": "Zrušit",
+      "chooseScenario": "Vybrat scénář",
+      "emergencySimulator": "Simulátor nouzových situací",
+      "emergencySimulatorDesc": "Popis simulátoru nouzových situací",
+      "generateGuide": "Generovat průvodce",
+      "generating": "Generování",
+      "informationTreasureHunt": "Poklad informací",
+      "launch": "Spustit",
+      "printGuide": "Tisknout průvodce",
+      "stepByStepGuides": "Průvodci krok za krokem",
+      "stepByStepGuidesDesc": "Popis průvodců krok za krokem",
+      "treasureHuntDesc": "Popis hledání pokladu",
+      "videoMessages": "Video zprávy",
+      "videoMessagesDesc": "Popis video zpráv"
     },
-    "use_these_tools_to_ensure_your_1": "[CS] Use these tools to ensure your 1"
+    "use_these_tools_to_ensure_your_1": "Použijte tyto nástroje k zajištění vašeho 1"
   },
   "form": {
-    "accessDescription": "What they can see and when they can help",
-    "accessInfo": "What They Can Do",
-    "accessLevel": "How Much They Can See",
-    "addPerson": "Add Someone to Help",
-    "additionalRoles": "Other Ways They Can Help",
-    "alternatePhone": "Another Phone Number",
-    "assignedRoles": "How They'll Help Your Family",
-    "backupFor": "They're a Backup For",
-    "backupHelper": "Who they'll step in for if needed",
-    "capabilities": "Why They're Right for This",
-    "capabilitiesHelper": "What makes them a good choice to help?",
-    "compensation": "If They Need Support",
-    "compensationHelper": "Any financial help they might need",
-    "contactInfo": "How to Reach Them",
-    "dateOfBirth": "Birthday",
-    "editPerson": "Update Their Information",
+    "accessDescription": "Co mohou vidět a kdy mohou pomoci",
+    "accessInfo": "Co mohou dělat",
+    "accessLevel": "Kolik mohou vidět",
+    "addPerson": "Přidat někoho k pomoci",
+    "additionalRoles": "Další způsoby, jak mohou pomoci",
+    "alternatePhone": "Jiné telefonní číslo",
+    "assignedRoles": "Jak budou pomáhat vaší rodině",
+    "backupFor": "Jsou zálohou pro",
+    "backupHelper": "Za koho nastoupí, pokud bude potřeba",
+    "capabilities": "Proč jsou vhodní pro toto",
+    "capabilitiesHelper": "Co z nich dělá dobrou volbu k pomoci?",
+    "compensation": "Pokud potřebují podporu",
+    "compensationHelper": "Jakákoli finanční pomoc, kterou by mohli potřebovat",
+    "contactInfo": "Jak je kontaktovat",
+    "dateOfBirth": "Narozeniny",
+    "editPerson": "Aktualizovat jejich informace",
     "emailAddress": "Email",
-    "emergencyContact": "Who to Call for Them",
-    "fullName": "Their Full Name",
-    "fullNameHelper": "Use their legal name for important documents",
-    "fullNamePlaceholder": "Their complete legal name",
-    "homeAddress": "Where They Live",
-    "instructions": "Important Things They Should Know",
-    "instructionsHelper": "Any special guidance for helping your family",
-    "instructionsPlaceholder": "What they need to know to help",
-    "limitations": "Things to Be Aware Of",
-    "limitationsHelper": "Anything that might make it hard for them to help",
-    "personalInfo": "About Them",
-    "primaryPhone": "Best Phone Number",
-    "primaryRole": "Main Way They'll Help",
-    "relationship": "How You Know Them",
-    "relationshipPlaceholder": "Like Spouse, Child, Brother/Sister, Best Friend",
-    "roleInfo": "How They'll Help",
-    "selectRoles": "Pick how they can help your family",
-    "workAddress": "Where They Work"
+    "emergencyContact": "Koho zavolat kvůli nim",
+    "fullName": "Jejich celé jméno",
+    "fullNameHelper": "Použijte jejich právní jméno pro důležité dokumenty",
+    "fullNamePlaceholder": "Jejich úplné právní jméno",
+    "homeAddress": "Kde bydlí",
+    "instructions": "Důležité věci, které by měli vědět",
+    "instructionsHelper": "Jakékoliv speciální pokyny pro pomoc vaší rodině",
+    "instructionsPlaceholder": "Co potřebují vědět, aby pomohli",
+    "limitations": "Věci, kterých si být vědomi",
+    "limitationsHelper": "Cokoliv, co by jim mohlo ztížit pomoci",
+    "personalInfo": "O nich",
+    "primaryPhone": "Nejlepší telefonní číslo",
+    "primaryRole": "Hlavní způsob, jak budou pomáhat",
+    "relationship": "Jak je znáte",
+    "relationshipPlaceholder": "Jako manžel/manželka, dítě, bratr/sestra, nejlepší přítel",
+    "roleInfo": "Jak budou pomáhat",
+    "selectRoles": "Vyberte, jak mohou pomoci vaší rodině",
+    "workAddress": "Kde pracují"
   },
   "guardian": {
     "templateModal": {
-      "_1": "[CS] 1"
-    }
+      "_1": "1"
+    },
+    "accepted": "Přijato",
+    "declined": "Odmítnuto",
+    "invitationSent": "Pozvánka odeslána",
+    "sendInvite": "Odeslat pozvánku"
   },
   "guardianView": {
-    "defaultUserName": "[CS] Default user name",
+    "defaultUserName": "Výchozí jméno uživatele",
     "emergencyAccess": {
-      "accessFailed": "[CS] Access failed",
-      "accessGranted": "[CS] Access granted",
-      "accessing": "[CS] Accessing",
-      "button": "[CS] Button",
-      "confirmButton": "[CS] Confirm button",
-      "confirmCheckbox": "[CS] Confirm checkbox",
-      "contactLogged": "[CS] Contact logged",
-      "contactsDescription": "[CS] Contacts description",
-      "contactsTitle": "[CS] Contacts title",
-      "failedToLoadContacts": "[CS] Failed to load contacts",
-      "importantNote": "[CS] Important note",
-      "lastContacted": "[CS] Last contacted",
-      "logContact": "[CS] Log contact",
-      "modalDescription": "[CS] Modal description",
-      "modalTitle": "[CS] Modal title",
-      "notAuthorized": "[CS] Not authorized",
-      "pleaseConfirm": "[CS] Please confirm",
-      "priority": "[CS] Priority",
-      "priorityOrder": "[CS] Priority order",
-      "reasonLabel": "[CS] Reason label",
-      "reasonPlaceholder": "[CS] Reason placeholder",
-      "warningText": "[CS] Warning text"
+      "accessFailed": "Přístup selhal",
+      "accessGranted": "Přístup povolen",
+      "accessing": "Přistupování",
+      "button": "Tlačítko",
+      "confirmButton": "Tlačítko potvrzení",
+      "confirmCheckbox": "Zaškrtávací políčko potvrzení",
+      "contactLogged": "Kontakt zaznamenán",
+      "contactsDescription": "Popis kontaktů",
+      "contactsTitle": "Název kontaktů",
+      "failedToLoadContacts": "Selhalo načtení kontaktů",
+      "importantNote": "Důležitá poznámka",
+      "lastContacted": "Naposledy kontaktován",
+      "logContact": "Zaznamenat kontakt",
+      "modalDescription": "Popis modálu",
+      "modalTitle": "Název modálu",
+      "notAuthorized": "Neautorizováno",
+      "pleaseConfirm": "Potvrďte prosím",
+      "priority": "Priorita",
+      "priorityOrder": "Pořadí priority",
+      "reasonLabel": "Štítek důvodu",
+      "reasonPlaceholder": "Zástupný text důvodu",
+      "warningText": "Varovný text"
     },
     "errors": {
-      "failedToLoad": "[CS] Failed to load",
-      "pleaseLogin": "[CS] Please login"
+      "failedToLoad": "Selhalo načtení",
+      "pleaseLogin": "Přihlaste se prosím"
     },
     "guardianInfo": {
-      "description": "[CS] Description",
-      "securityNote": "[CS] Security note"
+      "description": "Popis",
+      "securityNote": "Bezpečnostní poznámka"
     },
-    "readOnlyAccess": "[CS] Read only access",
+    "readOnlyAccess": "Přístup pouze pro čtení",
     "sections": {
       "finalWishes": {
-        "description": "[CS] Description",
-        "digitalAccounts": "[CS] Digital accounts",
-        "empty": "[CS] Empty",
-        "funeralWishes": "[CS] Funeral wishes",
-        "messagesToLovedOnes": "[CS] Messages to loved ones",
-        "title": "[CS] Title"
+        "description": "Popis",
+        "digitalAccounts": "Digitální účty",
+        "empty": "Prázdné",
+        "funeralWishes": "Pohřební přání",
+        "messagesToLovedOnes": "Zprávy blízkým",
+        "title": "Název"
       },
       "importantContacts": {
-        "description": "[CS] Description",
-        "empty": "[CS] Empty",
-        "title": "[CS] Title"
+        "description": "Popis",
+        "empty": "Prázdné",
+        "title": "Název"
       },
       "keyDocuments": {
-        "description": "[CS] Description",
-        "empty": "[CS] Empty",
-        "expires": "[CS] Expires",
-        "keyDocumentBadge": "[CS] Key document badge",
-        "noExpiration": "[CS] No expiration",
-        "title": "[CS] Title"
+        "description": "Popis",
+        "empty": "Prázdné",
+        "expires": "Vyprší",
+        "keyDocumentBadge": "Odznak klíčového dokumentu",
+        "noExpiration": "Bez vypršení",
+        "title": "Název"
       }
     },
-    "subtitle": "[CS] Subtitle",
-    "title": "[CS] Title"
+    "subtitle": "Podtitul",
+    "title": "Název"
   },
   "guardianship": {
-    "addDependent": "Add Someone Who Needs Care",
-    "alternateGuardian": "Backup Caregiver",
-    "careStandards": "How You Want Them Cared For",
-    "childGuardians": "Who Will Care for Your Children",
-    "dependentCare": "Care Plans for Your Loved Ones",
-    "description": "Choose loving people who will care for your children or family members who need help if you can't be there.",
-    "educationPreferences": "School and Education Wishes",
-    "financialProvisions": "Money for Their Care",
-    "guardianCompensation": "Support for the Caregiver",
-    "guardianFor": "Who Will Care for {{name}}",
-    "guardianInstructions": "How to Care for Them",
-    "guardianQualifications": "Why They're the Right Choice",
-    "healthcarePreferences": "Health and Medical Care",
-    "lifestylePreferences": "Daily Life and Activities",
-    "noChildren": "You haven't told us about any children or family members who need care yet.",
-    "primaryGuardian": "First Choice Caregiver",
-    "religiousPreferences": "Faith and Values",
-    "reportingRequirements": "Keeping Family Updated",
-    "subtitle": "Making sure your loved ones are cared for",
-    "temporaryGuardian": "Short-Term Caregiver",
-    "title": "Who Will Care for Your Loved Ones",
-    "visitationRights": "Family Visiting Arrangements"
+    "addDependent": "Přidejte někoho, kdo potřebuje péči",
+    "alternateGuardian": "Záložní opatrovník",
+    "careStandards": "Jak chcete, aby o ně bylo pečováno",
+    "childGuardians": "Kdo se bude starat o vaše děti",
+    "dependentCare": "Plány péče pro vaše blízké",
+    "description": "Vyberte milující lidi, kteří se budou starat o vaše děti nebo rodinné příslušníky potřebující pomoc, pokud tam nemůžete být.",
+    "educationPreferences": "Přání ohledně školy a vzdělání",
+    "financialProvisions": "Peníze na jejich péči",
+    "guardianCompensation": "Podpora pro opatrovníka",
+    "guardianFor": "Kdo se bude starat o {{name}}",
+    "guardianInstructions": "Jak se o ně starat",
+    "guardianQualifications": "Proč jsou správnou volbou",
+    "healthcarePreferences": "Zdravotní a lékařská péče",
+    "lifestylePreferences": "Každodenní život a aktivity",
+    "noChildren": "Ještě jste nám neřekli o žádných dětech nebo rodinných příslušnících, kteří potřebují péči.",
+    "primaryGuardian": "První volba opatrovníka",
+    "religiousPreferences": "Víra a hodnoty",
+    "reportingRequirements": "Udržování rodiny v obraze",
+    "subtitle": "Zajištění péče o vaše blízké",
+    "temporaryGuardian": "Krátkodobý opatrovník",
+    "title": "Kdo se bude starat o vaše blízké",
+    "visitationRights": "Rodinné návštěvní dohody"
   },
   "manual": {
     "contacts": {
       "form": {
-        "addButton": "[CS] Add button",
-        "cancel": "[CS] Cancel",
-        "emailLabel": "[CS] Email label",
-        "emailPlaceholder": "[CS] Email placeholder",
-        "nameLabel": "[CS] Name label",
-        "namePlaceholder": "[CS] Name placeholder",
-        "notesLabel": "[CS] Notes label",
-        "notesPlaceholder": "[CS] Notes placeholder",
-        "phoneLabel": "[CS] Phone label",
-        "phonePlaceholder": "[CS] Phone placeholder",
-        "roleLabel": "[CS] Role label",
-        "rolePlaceholder": "[CS] Role placeholder",
-        "saving": "[CS] Saving",
-        "updateButton": "[CS] Update button"
+        "addButton": "Tlačítko přidat",
+        "cancel": "Zrušit",
+        "emailLabel": "Štítek emailu",
+        "emailPlaceholder": "Zástupný text emailu",
+        "nameLabel": "Štítek jména",
+        "namePlaceholder": "Zástupný text jména",
+        "notesLabel": "Štítek poznámek",
+        "notesPlaceholder": "Zástupný text poznámek",
+        "phoneLabel": "Štítek telefonu",
+        "phonePlaceholder": "Zástupný text telefonu",
+        "roleLabel": "Štítek role",
+        "rolePlaceholder": "Zástupný text role",
+        "saving": "Ukládání",
+        "updateButton": "Tlačítko aktualizace"
       }
     }
   },
   "notificationPreferences": {
-    "description": "[CS] Description",
-    "emailRequired": "[CS] Email required",
+    "description": "Popis",
+    "emailRequired": "Email vyžadován",
     "errors": {
-      "loadFailed": "[CS] Load failed",
-      "updateFailed": "[CS] Update failed"
+      "loadFailed": "Načtení selhalo",
+      "updateFailed": "Aktualizace selhala"
     },
     "howItWorks": {
-      "point1": "[CS] Point1",
-      "point2": "[CS] Point2",
-      "point3": "[CS] Point3",
-      "title": "[CS] Title"
+      "point1": "Bod1",
+      "point2": "Bod2",
+      "point3": "Bod3",
+      "title": "Název"
     },
-    "info": "[CS] Info",
-    "lastUpdated": "[CS] Last updated",
+    "info": "Informace",
+    "lastUpdated": "Naposledy aktualizováno",
     "messages": {
-      "updated": "[CS] Updated"
+      "updated": "Aktualizováno"
     },
-    "noContacts": "[CS] No contacts",
-    "noEmail": "[CS] No email",
-    "title": "[CS] Title"
+    "noContacts": "Žádné kontakty",
+    "noEmail": "Žádný email",
+    "title": "Název"
   },
   "notifications": {
-    "accessGranted": "{{name}} can now help your family",
-    "accessRevoked": "{{name}}'s access has been updated",
-    "invitationAccepted": "Great news! {{name}} is ready to help",
-    "invitationSent": "We've invited {{name}} to join your support team",
-    "personAdded": "{{name}} is now part of your family's support team",
-    "personRemoved": "{{name}} is no longer on your support team",
-    "personUpdated": "We've updated {{name}}'s information",
-    "reviewScheduled": "You'll meet with {{name}} to discuss family plans",
-    "roleAssigned": "{{name}} can now help as your {{role}}",
-    "roleRemoved": "{{name}} no longer serves as {{role}}"
+    "accessGranted": "{{name}} nyní může pomáhat vaší rodině",
+    "accessRevoked": "Přístup {{name}} byl aktualizován",
+    "invitationAccepted": "Skvělé zprávy! {{name}} je připraven pomáhat",
+    "invitationSent": "Pozvali jsme {{name}}, aby se připojil k vašemu podpůrnému týmu",
+    "personAdded": "{{name}} je nyní součástí podpůrného týmu vaší rodiny",
+    "personRemoved": "{{name}} už není ve vašem podpůrném týmu",
+    "personUpdated": "Aktualizovali jsme informace o {{name}}",
+    "reviewScheduled": "Setkáte se s {{name}} a budete diskutovat o rodinných plánech",
+    "roleAssigned": "{{name}} nyní může pomáhat jako váš {{role}}",
+    "roleRemoved": "{{name}} už neslouží jako {{role}}"
   },
   "playbook": {
-    "addContact": "[CS] Add contact",
-    "autoSaveNotice": "[CS] Auto save notice",
-    "contact": "[CS] Contact",
+    "addContact": "Přidat kontakt",
+    "autoSaveNotice": "Upozornění na automatické ukládání",
+    "contact": "Kontakt",
     "contactFields": {
-      "email": "[CS] Email",
-      "emailPlaceholder": "[CS] Email placeholder",
-      "name": "[CS] Name",
-      "namePlaceholder": "[CS] Name placeholder",
-      "notes": "[CS] Notes",
-      "notesPlaceholder": "[CS] Notes placeholder",
-      "phone": "[CS] Phone",
-      "phonePlaceholder": "[CS] Phone placeholder",
-      "role": "[CS] Role",
-      "rolePlaceholder": "[CS] Role placeholder"
+      "email": "Email",
+      "emailPlaceholder": "Zástupný text emailu",
+      "name": "Jméno",
+      "namePlaceholder": "Zástupný text jména",
+      "notes": "Poznámky",
+      "notesPlaceholder": "Zástupný text poznámek",
+      "phone": "Telefon",
+      "phonePlaceholder": "Zástupný text telefonu",
+      "role": "Role",
+      "rolePlaceholder": "Zástupný text role"
     },
-    "edit": "[CS] Edit",
+    "edit": "Upravit",
     "errors": {
-      "loadFailed": "[CS] Load failed",
-      "saveFailed": "[CS] Save failed"
+      "loadFailed": "Načtení selhalo",
+      "saveFailed": "Uložení selhalo"
     },
-    "loading": "[CS] Loading",
+    "loading": "Načítání",
     "messages": {
-      "autoSaved": "[CS] Auto saved",
-      "saved": "[CS] Saved"
+      "autoSaved": "Automaticky uloženo",
+      "saved": "Uloženo"
     },
-    "noContacts": "[CS] No contacts",
-    "noContent": "[CS] No content",
-    "preview": "[CS] Preview",
-    "save": "[CS] Save",
-    "saving": "[CS] Saving",
+    "noContacts": "Žádné kontakty",
+    "noContent": "Žádný obsah",
+    "preview": "Náhled",
+    "save": "Uložit",
+    "saving": "Ukládání",
     "sections": {
       "contacts": {
-        "description": "[CS] Description",
-        "title": "[CS] Title"
+        "description": "Popis",
+        "title": "Název"
       },
       "digital": {
-        "description": "[CS] Description",
-        "placeholder": "[CS] Placeholder",
-        "title": "[CS] Title"
+        "description": "Popis",
+        "placeholder": "Zástupný text",
+        "title": "Název"
       },
       "documents": {
-        "description": "[CS] Description",
-        "placeholder": "[CS] Placeholder",
-        "title": "[CS] Title"
+        "description": "Popis",
+        "placeholder": "Zástupný text",
+        "title": "Název"
       },
       "funeral": {
-        "description": "[CS] Description",
-        "placeholder": "[CS] Placeholder",
-        "title": "[CS] Title"
+        "description": "Popis",
+        "placeholder": "Zástupný text",
+        "title": "Název"
       },
       "messages": {
-        "description": "[CS] Description",
-        "placeholder": "[CS] Placeholder",
-        "title": "[CS] Title"
+        "description": "Popis",
+        "placeholder": "Zástupný text",
+        "title": "Název"
       },
       "practical": {
-        "description": "[CS] Description",
-        "placeholder": "[CS] Placeholder",
-        "title": "[CS] Title"
+        "description": "Popis",
+        "placeholder": "Zástupný text",
+        "title": "Název"
       }
     },
     "status": {
-      "complete": "[CS] Complete",
-      "draft": "[CS] Draft",
-      "empty": "[CS] Empty"
+      "complete": "Dokončeno",
+      "draft": "Koncept",
+      "empty": "Prázdné"
     },
     "subtitle": {
-      "edit": "[CS] Edit",
-      "view": "[CS] View"
+      "edit": "Upravit",
+      "view": "Zobrazit"
     },
     "tabs": {
-      "contacts": "[CS] Contacts",
-      "digital": "[CS] Digital",
-      "documents": "[CS] Documents",
-      "funeral": "[CS] Funeral",
-      "messages": "[CS] Messages",
-      "practical": "[CS] Practical"
+      "contacts": "Kontakty",
+      "digital": "Digitální",
+      "documents": "Dokumenty",
+      "funeral": "Pohřeb",
+      "instructions": "Pokyny",
+      "messages": "Zprávy",
+      "practical": "Praktické"
     },
     "templates": {
-      "append": "[CS] Append",
-      "backToTemplates": "[CS] Back to templates",
-      "description": "[CS] Description",
-      "existingContent": "[CS] Existing content",
-      "fillInVariables": "[CS] Fill in variables",
-      "insertTemplate": "[CS] Insert template",
-      "preview": "[CS] Preview",
-      "replace": "[CS] Replace",
-      "title": "[CS] Title",
-      "variableCount": "[CS] Variable count",
-      "variablePlaceholder": "[CS] Variable placeholder"
+      "append": "Připojit",
+      "backToTemplates": "Zpět k šablonám",
+      "description": "Popis",
+      "existingContent": "Existující obsah",
+      "fillInVariables": "Vyplnit proměnné",
+      "insertTemplate": "Vložit šablonu",
+      "preview": "Náhled",
+      "replace": "Nahradit",
+      "title": "Název",
+      "variableCount": "Počet proměnných",
+      "variablePlaceholder": "Zástupný text proměnné"
     },
-    "title": {
-      "edit": "[CS] Edit",
-      "view": "[CS] View"
+    "title": "Název",
+    "useTemplate": "Použít šablonu",
+    "accessDenied": "Přístup odepřen",
+    "create": "Vytvořit",
+    "description": "Popis",
+    "digitalAccounts": {
+      "description": "Popis",
+      "label": "Štítek",
+      "placeholder": "Zástupný text"
     },
-    "useTemplate": "[CS] Use template"
+    "discardChanges": {
+      "cancel": "Zrušit",
+      "confirm": "Potvrdit",
+      "description": "Popis",
+      "title": "Název"
+    },
+    "documentLocations": {
+      "description": "Popis",
+      "label": "Štítek",
+      "placeholder": "Zástupný text"
+    },
+    "exitPreview": "Ukončit náhled",
+    "fetchError": "Chyba načítání",
+    "funeralWishes": {
+      "description": "Popis",
+      "label": "Štítek",
+      "placeholder": "Zástupný text"
+    },
+    "importantContacts": {
+      "add": "Přidat",
+      "description": "Popis",
+      "email": "Email",
+      "emailPlaceholder": "Zástupný text emailu",
+      "empty": "Prázdné",
+      "label": "Štítek",
+      "name": "Jméno",
+      "namePlaceholder": "Zástupný text jména",
+      "notes": "Poznámky",
+      "notesPlaceholder": "Zástupný text poznámek",
+      "phone": "Telefon",
+      "phonePlaceholder": "Zástupný text telefonu",
+      "relationship": "Vztah",
+      "relationshipPlaceholder": "Zástupný text vztahu",
+      "remove": "Odebrat",
+      "viewDescription": "Popis zobrazení"
+    },
+    "label": "Štítek",
+    "lastUpdated": "Naposledy aktualizováno",
+    "notAuthenticated": "Neautentizován",
+    "notFound": {
+      "description": "Popis",
+      "title": "Název"
+    },
+    "personalMessages": {
+      "description": "Popis",
+      "label": "Štítek",
+      "placeholder": "Zástupný text"
+    },
+    "practicalInstructions": {
+      "description": "Popis",
+      "label": "Štítek",
+      "placeholder": "Zástupný text"
+    },
+    "saveError": "Chyba ukládání",
+    "saveSuccess": "Úspěšně uloženo",
+    "titleReadOnly": "Název pouze pro čtení",
+    "viewDescription": "Popis zobrazení",
+    "viewFooter": "Zápatí zobrazení",
+    "viewTitle": "Název zobrazení"
   },
   "preparedness": {
     "assessments": {
       "decisionMaking": {
-        "good": "[CS] Good",
-        "needsWork": "[CS] Needs work"
+        "good": "Dobré",
+        "needsWork": "Potřebuje práci"
       },
       "immediateAccess": {
-        "good": "[CS] Good",
-        "needsWork": "[CS] Needs work"
+        "good": "Dobré",
+        "needsWork": "Potřebuje práci"
       },
       "longTermSecurity": {
-        "good": "[CS] Good",
-        "needsWork": "[CS] Needs work"
+        "good": "Dobré",
+        "needsWork": "Potřebuje práci"
       }
     },
     "dimensions": {
-      "decisionMaking": "[CS] Decision making",
-      "immediateAccess": "[CS] Immediate access",
-      "longTermSecurity": "[CS] Long term security"
+      "decisionMaking": "Rozhodování",
+      "immediateAccess": "Okamžitý přístup",
+      "longTermSecurity": "Dlouhodobá bezpečnost"
     },
-    "familyBenefit": "[CS] Family benefit",
+    "familyBenefit": "Rodinný přínos",
     "familyCommunication": {
-      "description": "[CS] Description",
-      "scheduleReview": "[CS] Schedule review",
-      "shareReport": "[CS] Share report",
-      "title": "[CS] Title"
+      "description": "Popis",
+      "scheduleReview": "Naplánovat přehled",
+      "shareReport": "Sdílet zprávu",
+      "title": "Název"
     },
     "gaps": {
-      "addMedicalPreferences": "[CS] Add medical preferences",
-      "basicAccessInfo": "[CS] Basic access info",
-      "completeFinancialAccess": "[CS] Complete financial access",
-      "documentBusinessOperations": "[CS] Document business operations",
-      "improveImmediateAccess": "[CS] Improve immediate access",
-      "updateWillAndTrust": "[CS] Update will and trust"
+      "addMedicalPreferences": "Přidat lékařské preference",
+      "basicAccessInfo": "Základní informace o přístupu",
+      "completeFinancialAccess": "Dokončit finanční přístup",
+      "documentBusinessOperations": "Dokumentovat obchodní operace",
+      "improveImmediateAccess": "Zlepšit okamžitý přístup",
+      "updateWillAndTrust": "Aktualizovat závěť a svěřenský fond"
     },
-    "impact": "[CS] Impact",
+    "impact": "Dopad",
     "improvements": {
-      "addBankAccounts": "[CS] Add bank accounts",
-      "documentMedicalWishes": "[CS] Document medical wishes",
-      "uploadLegalDocuments": "[CS] Upload legal documents"
+      "addBankAccounts": "Přidat bankovní účty",
+      "documentMedicalWishes": "Dokumentovat lékařská přání",
+      "uploadLegalDocuments": "Nahrát právní dokumenty"
     },
     "levels": {
-      "fullyPrepared": "[CS] Fully prepared",
-      "goodBasic": "[CS] Good basic",
-      "minimalPreparation": "[CS] Minimal preparation",
-      "needsImmediate": "[CS] Needs immediate",
-      "somePreparation": "[CS] Some preparation",
-      "wellPrepared": "[CS] Well prepared"
+      "fullyPrepared": "Plně připraven",
+      "goodBasic": "Dobrý základ",
+      "minimalPreparation": "Minimální příprava",
+      "needsImmediate": "Potřebuje okamžité",
+      "somePreparation": "Nějaká příprava",
+      "wellPrepared": "Dobře připraven"
     },
-    "nextStep": "[CS] Next step",
-    "scenarioReadiness": "[CS] Scenario readiness",
+    "nextStep": "Další krok",
+    "scenarioReadiness": "Připravenost na scénář",
     "scenarios": {
       "emergencyHospital": {
-        "description": "[CS] Description",
-        "title": "[CS] Title"
+        "description": "Popis",
+        "title": "Název"
       },
       "extendedTravel": {
-        "description": "[CS] Description",
-        "title": "[CS] Title"
+        "description": "Popis",
+        "title": "Název"
       },
       "suddenDeath": {
-        "description": "[CS] Description",
-        "title": "[CS] Title"
+        "description": "Popis",
+        "title": "Název"
       }
     },
-    "title": "[CS] Title",
-    "toImprove": "[CS] To improve"
+    "title": "Název",
+    "toImprove": "K zlepšení"
   },
   "relationships": {
-    "child": "[CS] Child",
-    "friend": "[CS] Friend",
-    "other": "[CS] Other",
-    "parent": "[CS] Parent",
-    "sibling": "[CS] Sibling",
-    "spouse": "[CS] Spouse"
+    "child": "Dítě",
+    "friend": "Přítel",
+    "other": "Jiné",
+    "parent": "Rodič",
+    "sibling": "Sourozenec",
+    "spouse": "Manžel/manželka"
   },
   "roles": {
-    "advisor": "Someone Who Gives Advice",
-    "beneficiary": "Will Receive Something",
-    "caregiver": "Can Care for Family Members",
-    "emergencyContact": "First Person to Call",
-    "executor": "Will Handle Everything",
-    "financialAgent": "Can Manage Money Matters",
-    "guardian": "Will Care for Children",
-    "healthcareProxy": "Can Make Medical Decisions",
-    "representative": "Can Act on Your Behalf",
-    "successor": "Backup Helper",
-    "trustee": "Manages Family Trust",
-    "witness": "Witnessed Your Will"
+    "advisor": "Někdo, kdo dává rady",
+    "beneficiary": "Dostane něco",
+    "caregiver": "Může se starat o rodinné příslušníky",
+    "emergencyContact": "První osoba k zavolání",
+    "executor": "Vyřídí vše",
+    "financialAgent": "Může spravovat finanční záležitosti",
+    "guardian": "Bude se starat o děti",
+    "healthcareProxy": "Může dělat lékařská rozhodnutí",
+    "representative": "Může jednat vaším jménem",
+    "successor": "Záložní pomocník",
+    "trustee": "Spravuje rodinný svěřenský fond",
+    "witness": "Byl svědkem vaší závěti"
   },
   "trustedCircle": {
-    "addFirst": "Add Someone Who Can Help",
-    "description": "Choose people who can support your family when they need it most. These are the people your loved ones can turn to.",
-    "emergencyContacts": "People to Call First",
-    "empty": "Let's start by adding someone your family can rely on - maybe your spouse, a close friend, or a trusted family member.",
-    "keyPeople": "Your Most Important Helpers",
-    "recentlyAdded": "Recently Added",
-    "roles": "How They Can Help",
-    "subtitle": "People who will be there for your family",
-    "title": "Your Family's Support Team",
-    "totalMembers": "{{count}} People Ready to Help",
-    "viewAll": "See Everyone"
+    "addFirst": "Přidejte někoho, kdo může pomoci",
+    "description": "Vyberte lidi, kteří mohou podpořit vaši rodinu, když to nejvíce potřebuje. To jsou lidé, na které se vaši blízzcí mohou obrátit.",
+    "emergencyContacts": "Lidé, kterým zavolat jako prvním",
+    "empty": "Začněme přidáním někoho, na koho se vaše rodina může spolehnout - možná vašeho manžela/manželku, blízkého přítele nebo důvěryhodného rodinného příslušníka.",
+    "keyPeople": "Vaši nejdůležitější pomocníci",
+    "recentlyAdded": "Nedávno přidaní",
+    "roles": "Jak mohou pomoci",
+    "subtitle": "Lidé, kteří tu budou pro vaši rodinu",
+    "title": "Podpůrný tým vaší rodiny",
+    "totalMembers": "{{count}} lidí připravených pomoci",
+    "viewAll": "Zobrazit všechny"
   },
   "family.GuardianPlaybook.className.flex_itemscenter_justifycenter_h64": "flex items-center justify-center h-64",
   "family.GuardianPlaybook.className.grid_gridcols6_wfull": "grid grid-cols-6 w-full",
@@ -882,342 +965,352 @@
   "family.GuardianPlaybookView.telcontactphone": "tel:${contact.phone}",
   "family.GuardianPlaybookView.mailtocontactemail": "mailto:${contact.email}",
   "guardianUpload": {
-    "addButton": "Add button",
-    "addTitle": "Add title",
-    "added": "Added",
-    "countryDescription": "Country description",
-    "countryLabel": "Country label",
-    "countryPlaceholder": "Country placeholder",
-    "description": "Description",
-    "editTitle": "Edit title",
-    "emailLabel": "Email label",
-    "emailPlaceholder": "Email placeholder",
-    "error": "Error",
+    "addButton": "Tlačítko přidat",
+    "addTitle": "Název pro přidání",
+    "added": "Přidáno",
+    "countryDescription": "Popis země",
+    "countryLabel": "Štítek země",
+    "countryPlaceholder": "Zástupný text země",
+    "description": "Popis",
+    "editTitle": "Název pro úpravu",
+    "emailLabel": "Štítek emailu",
+    "emailPlaceholder": "Zástupný text emailu",
+    "error": "Chyba",
     "errors": {
-      "connectionError": "Connection error",
-      "duplicateError": "Duplicate error",
-      "permissionError": "Permission error",
-      "requiredDataNotFound": "Required data not found",
-      "saveError": "Save error",
-      "unknownError": "Unknown error"
+      "connectionError": "Chyba připojení",
+      "duplicateError": "Chyba duplicity",
+      "permissionError": "Chyba oprávnění",
+      "requiredDataNotFound": "Požadovaná data nenalezena",
+      "saveError": "Chyba ukládání",
+      "unknownError": "Neznámá chyba"
     },
-    "fullNameLabel": "Full name label",
-    "fullNamePlaceholder": "Full name placeholder",
-    "loginToSave": "Login to save",
-    "phoneLabel": "Phone label",
-    "phonePlaceholder": "Phone placeholder",
-    "relationshipLabel": "Relationship label",
-    "relationshipPlaceholder": "Relationship placeholder",
+    "fullNameLabel": "Štítek celého jména",
+    "fullNamePlaceholder": "Zástupný text celého jména",
+    "loginToSave": "Přihlaste se k uložení",
+    "phoneLabel": "Štítek telefonu",
+    "phonePlaceholder": "Zástupný text telefonu",
+    "relationshipLabel": "Štítek vztahu",
+    "relationshipPlaceholder": "Zástupný text vztahu",
     "relationships": {
-      "child": "Child",
-      "friend": "Friend",
-      "legalProfessional": "Legal professional",
-      "other": "Other",
-      "parent": "Parent",
-      "sibling": "Sibling",
-      "spouse": "Spouse"
+      "child": "Dítě",
+      "friend": "Přítel",
+      "legalProfessional": "Právní profesionál",
+      "other": "Jiné",
+      "parent": "Rodič",
+      "sibling": "Sourozenec",
+      "spouse": "Manžel/manželka"
     },
     "roles": {
-      "emergencyContact": "Emergency contact",
-      "executorOfWill": "Executor of will",
-      "financialPowerOfAttorney": "Financial power of attorney",
-      "guardianForChildren": "Guardian for children",
-      "healthcareProxy": "Healthcare proxy",
-      "trustee": "Trustee"
+      "emergencyContact": "Nouzový kontakt",
+      "executorOfWill": "Vykonavatel závěti",
+      "financialPowerOfAttorney": "Finanční plná moc",
+      "guardianForChildren": "Opatrovník dětí",
+      "healthcareProxy": "Zdravotní zástupce",
+      "trustee": "Správce"
     },
-    "rolesTitle": "Roles title",
-    "saving": "Saving",
-    "success": "Success",
-    "updateButton": "Update button",
-    "updated": "Updated"
+    "rolesTitle": "Název rolí",
+    "saving": "Ukládání",
+    "success": "Úspěch",
+    "updateButton": "Tlačítko aktualizace",
+    "updated": "Aktualizováno"
   },
   "executor": {
-    "completed": "Completed",
+    "completed": "Dokončeno",
     "dashboard": {
-      "reminder": "Reminder",
-      "subtitle": "Subtitle",
-      "title": "Title"
+      "reminder": "Připomínka",
+      "subtitle": "Podtitul",
+      "title": "Název"
     },
-    "due": "Due",
+    "due": "Splatné",
     "errors": {
-      "loadTasksFailed": "Load tasks failed",
-      "updateTaskFailed": "Update task failed"
+      "loadTasksFailed": "Načtení úkolů selhalo",
+      "updateTaskFailed": "Aktualizace úkolu selhala"
     },
-    "highPriority": "High priority",
+    "highPriority": "Vysoká priorita",
     "legalSupport": {
-      "button": "Button",
-      "description": "Description",
-      "title": "Title"
+      "button": "Tlačítko",
+      "description": "Popis",
+      "title": "Název"
     },
-    "markComplete": "Mark complete",
+    "markComplete": "Označit jako dokončené",
     "sections": {
       "firstWeek": {
-        "description": "Description",
-        "empty": "Empty",
-        "title": "Title"
+        "description": "Popis",
+        "empty": "Prázdné",
+        "title": "Název"
       },
       "immediate": {
-        "description": "Description",
-        "empty": "Empty",
-        "title": "Title"
+        "description": "Popis",
+        "empty": "Prázdné",
+        "title": "Název"
       },
       "ongoing": {
-        "description": "Description",
-        "empty": "Empty",
-        "title": "Title"
+        "description": "Popis",
+        "empty": "Prázdné",
+        "title": "Název"
       }
     },
     "stats": {
-      "completed": "Completed",
-      "remaining": "Remaining",
-      "totalTasks": "Total tasks"
+      "completed": "Dokončené",
+      "remaining": "Zbývající",
+      "totalTasks": "Celkem úkolů"
     },
-    "undo": "Undo",
-    "viewAccountDetails": "View account details",
-    "viewRelatedDocuments": "View related documents"
+    "undo": "Vrátit zpět",
+    "viewAccountDetails": "Zobrazit detaily účtu",
+    "viewRelatedDocuments": "Zobrazit související dokumenty"
   },
   "executorDashboard": {
-    "professional_guidance_1": "Professional guidance 1"
+    "professional_guidance_1": "Profesionální vedení 1"
   },
   "executorManagement": {
-    "add_new_executor_10": "Add new executor 10",
-    "all_executors_must_have_legacy_23": "All executors must have legacy 23",
-    "current_executors_17": "Current executors 17",
-    "designate_trusted_individuals__9": "Designate trusted individuals  9",
-    "email_address_11": "Email address 11",
-    "emergency_contact_16": "Emergency contact 16",
-    "emergency_contacts_are_notifie_22": "Emergency contacts are notifie 22",
-    "executor_example_com_12": "Executor example com 12",
-    "executor_management_8": "Executor management 8",
-    "failed_to_add_executor_5": "Failed to add executor 5",
-    "failed_to_load_executors_2": "Failed to load executors 2",
-    "failed_to_remove_executor_6": "Failed to remove executor 6",
-    "important_information_19": "Important information 19",
-    "loading_executors_7": "Loading executors 7",
-    "no_executors_designated_yet_ad_18": "No executors designated yet ad 18",
-    "primary_executor_14": "Primary executor 14",
-    "primary_executors_receive_imme_20": "Primary executors receive imme 20",
-    "relationship_type_13": "Relationship type 13",
-    "secondary_executor_15": "Secondary executor 15",
-    "secondary_executors_are_notifi_21": "Secondary executors are notifi 21",
+    "add_new_executor_10": "Přidat nového vykonavatele 10",
+    "all_executors_must_have_legacy_23": "Všichni vykonavatelé musí mít LegacyGuard 23",
+    "current_executors_17": "Současní vykonavatelé 17",
+    "designate_trusted_individuals__9": "Určit důvěryhodné jednotlivce 9",
+    "email_address_11": "Emailová adresa 11",
+    "emergency_contact_16": "Nouzový kontakt 16",
+    "emergency_contacts_are_notifie_22": "Nouzové kontakty jsou upozorněny 22",
+    "executor_example_com_12": "executor@example.com 12",
+    "executor_management_8": "Správa vykonavatelů 8",
+    "failed_to_add_executor_5": "Selhalo přidání vykonavatele 5",
+    "failed_to_load_executors_2": "Selhalo načtení vykonavatelů 2",
+    "failed_to_remove_executor_6": "Selhalo odebrání vykonavatele 6",
+    "important_information_19": "Důležité informace 19",
+    "loading_executors_7": "Načítání vykonavatelů 7",
+    "no_executors_designated_yet_ad_18": "Ještě nejsou určeni žádní vykonavatelé, přidejte 18",
+    "primary_executor_14": "Hlavní vykonavatel 14",
+    "primary_executors_receive_imme_20": "Hlavní vykonavatelé dostávají okamžitě 20",
+    "relationship_type_13": "Typ vztahu 13",
+    "secondary_executor_15": "Vedlejší vykonavatel 15",
+    "secondary_executors_are_notifi_21": "Vedlejší vykonavatelé jsou upozorněni 21",
     "statusLabels": {
-      "addExecutor": "Add executor",
-      "adding": "Adding",
-      "unknownUser": "Unknown user"
+      "addExecutor": "Přidat vykonavatele",
+      "adding": "Přidávání",
+      "unknownUser": "Neznámý uživatel"
     },
     "successMessages": {
-      "executorAdded": "Executor added",
-      "executorRemoved": "Executor removed"
+      "executorAdded": "Vykonavatel přidán",
+      "executorRemoved": "Vykonavatel odebrán"
     },
-    "this_person_is_already_designa_4": "This person is already designa 4",
-    "user_not_found_with_this_email_3": "User not found with this email 3"
+    "this_person_is_already_designa_4": "Tato osoba už je určena 4",
+    "user_not_found_with_this_email_3": "Uživatel s tímto emailem nenalezen 3"
   },
   "invite": {
-    "title": "Title"
+    "title": "Název"
   },
   "inviteAcceptance": {
     "buttons": {
-      "acceptRole": "Accept role",
-      "decline": "Decline",
-      "processing": "Processing"
+      "acceptRole": "Přijmout roli",
+      "decline": "Odmítnout",
+      "processing": "Zpracování"
     },
-    "defaultInviterName": "Default inviter name",
-    "disclaimer": "Disclaimer",
+    "defaultInviterName": "Výchozí jméno pozvaného",
+    "disclaimer": "Zřeknutí se odpovědnosti",
     "errors": {
-      "acceptFailed": "Accept failed",
-      "alreadyProcessed": "Already processed",
-      "declineFailed": "Decline failed",
-      "invalidLink": "Invalid link",
-      "loadingFailed": "Loading failed",
-      "notFound": "Not found"
+      "acceptFailed": "Přijetí selhalo",
+      "alreadyProcessed": "Už zpracováno",
+      "declineFailed": "Odmítnutí selhalo",
+      "invalidLink": "Neplatný odkaz",
+      "loadingFailed": "Načtení selhalo",
+      "notFound": "Nenalezeno"
     },
     "guardianRole": {
-      "relationship": "Relationship",
-      "responsibilities": "Responsibilities",
-      "title": "Title",
-      "yourName": "Your name"
+      "relationship": "Vztah",
+      "responsibilities": "Odpovědnosti",
+      "title": "Název",
+      "yourName": "Vaše jméno"
     },
-    "loading": "Loading",
+    "loading": "Načítání",
     "messages": {
-      "accepted": "Accepted",
-      "declined": "Declined"
+      "accepted": "Přijato",
+      "declined": "Odmítnuto"
     },
     "notFound": {
-      "description": "Description",
-      "title": "Title"
+      "description": "Popis",
+      "title": "Název"
     },
-    "subtitle": "Subtitle",
+    "subtitle": "Podtitul",
     "whatThisMeans": {
-      "point1": "Point1",
-      "point2": "Point2",
-      "point3": "Point3",
-      "point4": "Point4",
-      "title": "Title"
+      "point1": "Bod1",
+      "point2": "Bod2",
+      "point3": "Bod3",
+      "point4": "Bod4",
+      "title": "Název"
     }
   },
   "preservationMode": {
-    "lastReviewDate": "Last review date",
-    "latestUpdates": "Latest updates",
-    "startAnnualCheck": "Start annual check"
+    "lastReviewDate": "Datum posledního přehledu",
+    "latestUpdates": "Nejnovější aktualizace",
+    "startAnnualCheck": "Zahájit roční kontrolu"
   },
   "structures": {
-    "nuclear": "Traditional Family",
-    "single_parent": "Single Parent Family",
-    "blended": "Blended Family",
-    "multigenerational": "Multi-Generational Family",
-    "childless": "Couple Without Children",
-    "empty_nest": "Empty Nest Family",
-    "non_traditional": "Unique Family Structure"
+    "nuclear": "Tradiční rodina",
+    "single_parent": "Jednořodičovská rodina",
+    "blended": "Smíšená rodina",
+    "multigenerational": "Vícegenerační rodina",
+    "childless": "Pár bez dětí",
+    "empty_nest": "Rodina prázdného hnízda",
+    "non_traditional": "Jedinečná rodinná struktura"
   },
   "complexity": {
-    "simple": "Simple",
-    "moderate": "Moderate",
-    "complex": "Complex"
+    "simple": "Jednoduché",
+    "moderate": "Střední",
+    "complex": "Složité"
   },
-  "personalized": "Your personalized family planning experience",
-  "familyMembers": "Family Members",
-  "specialConsiderations": "Special Considerations",
-  "recommendedFeatures": "Recommended Features",
+  "personalized": "Vaše personalizované rodinné plánovací zkušenost",
+  "familyMembers": "Členové rodiny",
+  "specialConsiderations": "Speciální úvahy",
+  "recommendedFeatures": "Doporučené funkce",
   "tabs": {
-    "overview": "Overview",
-    "insights": "Insights",
-    "features": "Features",
-    "cultural": "Cultural"
+    "overview": "Přehled",
+    "insights": "Pozorování",
+    "features": "Funkce",
+    "cultural": "Kulturní"
   },
-  "keyConsiderations": "Key Considerations for Your Family",
-  "specialNeeds": "Special Planning Needs",
-  "sensitivities": "Areas Requiring Extra Care",
+  "keyConsiderations": "Klíčové úvahy pro vaši rodinu",
+  "specialNeeds": "Speciální plánovací potřeby",
+  "sensitivities": "Oblasti vyžadující zvláštní péči",
   "sensitivity": {
-    "step_family_dynamics": "Step-family relationships need clear documentation",
-    "previous_marriage_obligations": "Previous marriage obligations must be addressed",
-    "absent_parent_considerations": "Absent parent situations require careful planning",
-    "solo_responsibility_pressure": "Single parent responsibilities can feel overwhelming",
-    "family_conflict": "Family conflicts require extra clarity in planning",
-    "inheritance_disputes": "Potential inheritance disputes need prevention",
-    "traditional_role_expectations": "Traditional family roles may need consideration",
-    "disability_planning_stress": "Special needs planning can be emotionally challenging",
-    "long_term_care_concerns": "Long-term care planning is essential"
+    "step_family_dynamics": "Vztahy v nevlastní rodině potřebují jasnou dokumentaci",
+    "previous_marriage_obligations": "Závazky z předchozího manželství musí být řešeny",
+    "absent_parent_considerations": "Situace s nepřítomným rodičem vyžadují pečlivé plánování",
+    "solo_responsibility_pressure": "Odpovědnosti samoživitele se mohou zdát drtivé",
+    "family_conflict": "Rodinné konflikty vyžadují extra jasnost v plánování",
+    "inheritance_disputes": "Potenciální spory o dědictví potřebují prevenci",
+    "traditional_role_expectations": "Tradiční rodinné role mohou vyžadovat zvážení",
+    "disability_planning_stress": "Plánování speciálních potřeb může být emocionálně náročné",
+    "long_term_care_concerns": "Plánování dlouhodobé péče je zásadní"
   },
   "needs": {
-    "special_needs_planning": "Special Needs Planning",
-    "long_term_care_planning": "Long-Term Care Planning",
-    "special_needs_trust": "Special Needs Trust",
-    "elder_care_planning": "Elder Care Planning",
-    "multi_generational_wealth_transfer": "Multi-Generational Transfer",
-    "military_benefit_planning": "Military Benefits",
-    "deployment_planning": "Deployment Planning",
-    "business_succession": "Business Succession",
-    "key_person_planning": "Key Person Planning",
-    "young_child_guardianship": "Young Child Guardianship",
-    "education_planning": "Education Planning",
-    "sharia_compliant_planning": "Sharia-Compliant Planning"
+    "special_needs_planning": "Plánování speciálních potřeb",
+    "long_term_care_planning": "Plánování dlouhodobé péče",
+    "special_needs_trust": "Svěřenský fond pro speciální potřeby",
+    "elder_care_planning": "Plánování péče o seniory",
+    "multi_generational_wealth_transfer": "Vícegenerační převod",
+    "military_benefit_planning": "Vojenské dávky",
+    "deployment_planning": "Plánování nasazení",
+    "business_succession": "Obchodní nástupnictví",
+    "key_person_planning": "Plánování klíčových osob",
+    "young_child_guardianship": "Opatrovnictví malých dětí",
+    "education_planning": "Plánování vzdělání",
+    "sharia_compliant_planning": "Plánování podle šáría"
   },
   "insightType": {
-    "structure": "Family Structure",
-    "need": "Special Need",
-    "opportunity": "Opportunity",
-    "risk": "Risk Factor"
+    "structure": "Rodinná struktura",
+    "need": "Speciální potřeba",
+    "opportunity": "Příležitost",
+    "risk": "Rizikový faktor"
   },
   "priority": {
-    "high": "High Priority",
-    "medium": "Medium Priority",
-    "low": "Low Priority"
+    "high": "Vysoká priorita",
+    "medium": "Střední priorita",
+    "low": "Nízká priorita"
   },
-  "suggestedActions": "Suggested Actions",
-  "recommendedFeaturesTitle": "Features Tailored for Your Family",
-  "recommendedFeaturesDesc": "Based on your family structure and needs, these features will be most helpful",
+  "suggestedActions": "Navrhované akce",
+  "recommendedFeaturesTitle": "Funkce přizpůsobené vaší rodině",
+  "recommendedFeaturesDesc": "Na základě vaší rodinné struktury a potřeb budou tyto funkce nejužitečnější",
   "features": {
     "family_communication_center": {
-      "title": "Family Communication Center",
-      "description": "Keep everyone informed and connected"
+      "title": "Rodinné komunikační centrum",
+      "description": "Udržujte všechny informované a propojené"
     },
     "document_vault": {
-      "title": "Secure Document Vault",
-      "description": "Store and share important documents safely"
+      "title": "Bezpečné úložiště dokumentů",
+      "description": "Ukládejte a sdílejte důležité dokumenty bezpečně"
     },
     "guardian_network_builder": {
-      "title": "Guardian Network Builder",
-      "description": "Build a strong support network for your children"
+      "title": "Tvůrce sítě opatrovníků",
+      "description": "Vybudujte silnou podpůrnou síť pro vaše děti"
     },
     "emergency_contact_system": {
-      "title": "Emergency Contact System",
-      "description": "Quick access to critical contacts when needed"
+      "title": "Systém nouzových kontaktů",
+      "description": "Rychlý přístup ke kritickým kontaktům při potřebě"
     },
     "single_parent_resources": {
-      "title": "Single Parent Resources",
-      "description": "Specialized tools and support for solo parents"
+      "title": "Zdroje pro samoživitele",
+      "description": "Specializované nástroje a podpora pro osamělé rodiče"
     },
     "complex_beneficiary_manager": {
-      "title": "Complex Beneficiary Manager",
-      "description": "Handle multiple relationships with clarity"
+      "title": "Manažer složitých příjemců",
+      "description": "Zvládněte množství vztahů s jasností"
     },
     "family_tree_visualizer": {
-      "title": "Family Tree Visualizer",
-      "description": "Map complex family relationships visually"
+      "title": "Vizualizér rodokmenu",
+      "description": "Zmapujte složité rodinné vztahy vizuálně"
     },
     "step_family_guidance": {
-      "title": "Step-Family Guidance",
-      "description": "Navigate blended family planning with confidence"
+      "title": "Vedení pro nevlastní rodinu",
+      "description": "Navigujte plánování nevlastní rodiny s jistotou"
     },
     "multi_generation_planner": {
-      "title": "Multi-Generation Planner",
-      "description": "Balance needs across all generations"
+      "title": "Vícegenerační plánovač",
+      "description": "Vyvažte potřeby napříč všemi generacemi"
     },
     "elder_care_resources": {
-      "title": "Elder Care Resources",
-      "description": "Support for caring for aging parents"
+      "title": "Zdroje péče o seniory",
+      "description": "Podpora pro péči o stárnoucí rodiče"
     },
     "family_meeting_tools": {
-      "title": "Family Meeting Tools",
-      "description": "Facilitate important family discussions"
+      "title": "Nástroje rodinných schůzek",
+      "description": "Usnadněte důležité rodinné diskuse"
     },
     "special_needs_trust_wizard": {
-      "title": "Special Needs Trust Wizard",
-      "description": "Create proper trusts for special needs members"
+      "title": "Průvodce svěřenským fondem pro speciální potřeby",
+      "description": "Vytvořte vhodné svěřenské fondy pro členy se speciálními potřebami"
     },
     "care_instruction_builder": {
-      "title": "Care Instruction Builder",
-      "description": "Document detailed care requirements"
+      "title": "Tvůrce pokynů k péči",
+      "description": "Dokumentujte podrobné požadavky na péči"
     },
     "government_benefit_tracker": {
-      "title": "Government Benefit Tracker",
-      "description": "Ensure eligibility for important benefits"
+      "title": "Sledování vládních dávek",
+      "description": "Zajistěte nárok na důležité dávky"
     },
     "business_succession_planner": {
-      "title": "Business Succession Planner",
-      "description": "Plan for business continuity"
+      "title": "Plánovač obchodního nástupnictví",
+      "description": "Plánujte pro kontinuitu podnikání"
     },
     "buy_sell_agreement_tracker": {
-      "title": "Buy-Sell Agreement Tracker",
-      "description": "Manage business partnership agreements"
+      "title": "Sledování smluv o koupi-prodeji",
+      "description": "Spravujte obchodní partnerské smlouvy"
     },
     "remote_collaboration_tools": {
-      "title": "Remote Collaboration Tools",
-      "description": "Work together despite distance"
+      "title": "Nástroje vzdálené spolupráce",
+      "description": "Pracujte společně navzdory vzdálenosti"
     },
     "multi_jurisdiction_guidance": {
-      "title": "Multi-Jurisdiction Guidance",
-      "description": "Navigate laws across different locations"
+      "title": "Vedení pro více jurisdikcí",
+      "description": "Navigujte zákony napříč různými lokalitami"
     }
   },
-  "communicationStyle": "Communication Approach",
-  "culturalConsiderations": "Cultural & Religious Considerations",
-  "culturalDesc": "Honor your family's values and traditions in your planning",
-  "cultural": {
-    "islamic_inheritance": "Islamic inheritance principles",
-    "jewish_traditions": "Jewish family traditions",
-    "christian_values": "Christian stewardship values",
-    "buddhist_principles": "Buddhist compassion principles",
-    "patriarchal_hierarchy": "Traditional patriarchal structure",
-    "matriarchal_hierarchy": "Traditional matriarchal structure",
-    "elder_led_hierarchy": "Elder-led family structure",
-    "collective_decision_making": "Collective family decisions",
-    "extended_family_obligations": "Extended family responsibilities",
-    "elder_respect_obligations": "Elder care obligations",
-    "multilingual_documentation": "Multi-language documentation needs"
+  "communicationStyle": "Komunikační přístup",
+  "communication": {
+    "direct": "Přímý a jasný",
+    "directDesc": "Přímočará komunikace, která rychle míří k podstatě",
+    "gentle": "Jemný a podporující",
+    "gentleDesc": "Opatrná, empatická komunikace, která uznává citlivosti",
+    "detailed": "Podrobný a komplexní",
+    "detailedDesc": "Důkladná vysvětlení se všemi důležitými detaily",
+    "simplified": "Zjednodušený a podstatný",
+    "simplifiedDesc": "Zaměření na nejdůležitější informace bez přemíry detailů"
   },
-  "noCulturalSettings": "No cultural preferences have been set. Add them to ensure your planning respects your family's values.",
-  "configureCultural": "Configure Cultural Preferences",
-  "culturalUpdated": "Cultural Preferences Updated",
-  "culturalUpdatedDesc": "Your family planning will now reflect your cultural values and traditions"
+  "culturalConsiderations": "Kulturní a náboženské úvahy",
+  "culturalDesc": "Ctěte hodnoty a tradice vaší rodiny ve vašem plánování",
+  "cultural": {
+    "islamic_inheritance": "Islámské principy dědictví",
+    "jewish_traditions": "Židovské rodinné tradice",
+    "christian_values": "Křesťanské hodnoty správcovství",
+    "buddhist_principles": "Buddhistické principy soucitu",
+    "patriarchal_hierarchy": "Tradiční patriarchální struktura",
+    "matriarchal_hierarchy": "Tradiční matriarchální struktura",
+    "elder_led_hierarchy": "Struktura vedená seniory",
+    "collective_decision_making": "Kolektivní rodinná rozhodnutí",
+    "extended_family_obligations": "Závazky k rozšířené rodině",
+    "elder_respect_obligations": "Závazky úcty k seniorům",
+    "multilingual_documentation": "Potřeby vícejazyčné dokumentace"
+  },
+  "noCulturalSettings": "Nejsou nastaveny žádné kulturní preference. Přidejte je, abyste zajistili, že vaše plánování respektuje hodnoty vaší rodiny.",
+  "configureCultural": "Konfigurovat kulturní preference",
+  "culturalUpdated": "Kulturní preference aktualizovány",
+  "culturalUpdatedDesc": "Vaše rodinné plánování nyní bude odrážet vaše kulturní hodnoty a tradice"
 }

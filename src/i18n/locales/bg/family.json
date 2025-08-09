@@ -1,835 +1,918 @@
 {
   "access": {
     "descriptions": {
-      "emergency": "They can help your family only in emergencies",
-      "executor": "They can manage everything to help your family",
-      "full": "They can see and manage all your family's information",
-      "limited": "They can see basic contact info and emergency instructions",
-      "standard": "They can see most of what your family would need"
+      "emergency": "Те могат да помогнат на вашето семейство само при спешни случаи",
+      "executor": "Те могат да управляват всичко, за да помогнат на вашето семейство",
+      "full": "Те могат да виждат и управляват цялата информация на вашето семейство",
+      "limited": "Те могат да виждат основна контактна информация и инструкции за спешни случаи",
+      "standard": "Те могат да виждат повечето от това, от което вашето семейство би се нуждаело"
     },
     "levels": {
-      "emergency": "Only in Emergencies",
-      "executor": "Full Helper Access",
-      "full": "Can See Everything",
-      "limited": "Basic Information Only",
-      "standard": "Regular Family Access"
+      "emergency": "Само при спешни случаи",
+      "executor": "Пълен достъп за помощник",
+      "full": "Може да види всичко",
+      "limited": "Само основна информация",
+      "standard": "Редовен семеен достъп"
     },
     "permissions": {
-      "editInformation": "Can Make Changes",
-      "emergencyOverride": "Emergency Access Rights",
-      "manageAccess": "Can Manage Other Helpers",
-      "receiveNotifications": "Gets Important Updates",
-      "viewAssets": "Can See Your Important Things",
-      "viewContacts": "Can See Contact Information",
-      "viewDocuments": "Can Read Documents"
+      "editInformation": "Може да прави промени",
+      "emergencyOverride": "Права за спешен достъп",
+      "manageAccess": "Може да управлява други помощници",
+      "receiveNotifications": "Получава важни актуализации",
+      "viewAssets": "Може да види вашите важни неща",
+      "viewContacts": "Може да види контактна информация",
+      "viewDocuments": "Може да чете документи"
     }
   },
   "actions": {
-    "addPerson": "Add Someone You Trust",
-    "assignRole": "Give Them a Role",
-    "contactPerson": "Get in Touch",
-    "editPerson": "Update Their Information",
-    "exportContacts": "Download Contact List",
-    "grantAccess": "Let Them Help Your Family",
-    "printSummary": "Print This for Your Records",
-    "removePerson": "Remove from Your Support Team",
-    "removeRole": "Change Their Role",
-    "revokeAccess": "Limit What They Can See",
-    "scheduleReview": "Plan to Talk About This",
-    "sendInvitation": "Invite Them to Help",
-    "setBackup": "Make Them a Backup Helper",
-    "viewProfile": "See All Their Details"
+    "addPerson": "Добави някой, на когото се доверяваш",
+    "assignRole": "Дай им роля",
+    "contactPerson": "Влез в контакт",
+    "editPerson": "Актуализирай тяхната информация",
+    "exportContacts": "Изтегли списък с контакти",
+    "grantAccess": "Нека те помагат на твоето семейство",
+    "printSummary": "Отпечатай това за твоите записи",
+    "removePerson": "Премахни от твоя екип за подкрепа",
+    "removeRole": "Промени тяхната роля",
+    "revokeAccess": "Ограничи какво могат да виждат",
+    "scheduleReview": "Планирай да говориш за това",
+    "sendInvitation": "Покани ги да помагат",
+    "setBackup": "Направи ги резервен помощник",
+    "viewProfile": "Виж всички техни детайли"
   },
   "beneficiaryCommunications": {
     "actions": {
-      "cancel": "[BG] Cancel",
-      "save": "[BG] Save",
-      "saving": "[BG] Saving"
+      "cancel": "Отказ",
+      "save": "Запази",
+      "saving": "Запазване"
     },
-    "description": "[BG] Description",
+    "description": "Описание",
     "dialog": {
-      "description": "[BG] Description",
-      "title": "[BG] Title"
+      "description": "Описание",
+      "title": "Заглавие"
     },
     "empty": {
-      "subtitle": "[BG] Subtitle",
-      "title": "[BG] Title"
+      "subtitle": "Подзаглавие",
+      "title": "Заглавие"
     },
     "fields": {
-      "beneficiaryName": "[BG] Beneficiary name",
-      "date": "[BG] Date",
-      "email": "[BG] Email",
-      "subject": "[BG] Subject",
-      "summary": "[BG] Summary",
-      "type": "[BG] Type"
+      "beneficiaryName": "Име на наследника",
+      "date": "Дата",
+      "email": "Имейл",
+      "subject": "Предмет",
+      "summary": "Резюме",
+      "type": "Тип"
     },
-    "logAction": "[BG] Log action",
-    "logCommunication": "[BG] Log communication",
+    "logAction": "Записване на действие",
+    "logCommunication": "Записване на комуникация",
     "placeholders": {
-      "subject": "[BG] Subject",
-      "summary": "[BG] Summary"
+      "subject": "Предмет",
+      "summary": "Резюме"
     },
-    "title": "[BG] Title",
+    "title": "Заглавие",
     "types": {
-      "email": "[BG] Email",
-      "inPerson": "[BG] In person",
-      "letter": "[BG] Letter",
-      "other": "[BG] Other",
-      "phone": "[BG] Phone"
+      "email": "Имейл",
+      "inPerson": "Лично",
+      "letter": "Писмо",
+      "other": "Друго",
+      "phone": "Телефон"
     }
   },
   "common": {
-    "cancel": "[BG] Cancel",
-    "fix": "[BG] Fix",
-    "minutes": "[BG] Minutes",
-    "start": "[BG] Start"
+    "cancel": "Отказ",
+    "fix": "Поправи",
+    "minutes": "Минути",
+    "start": "Започни"
   },
   "communication": {
-    "direct": "Direct & Clear",
-    "directDesc": "Straightforward communication that gets to the point quickly",
-    "gentle": "Gentle & Supportive",
-    "gentleDesc": "Careful, empathetic communication that acknowledges sensitivities",
-    "detailed": "Detailed & Comprehensive",
-    "detailedDesc": "Thorough explanations with all the important details",
-    "simplified": "Simplified & Essential",
-    "simplifiedDesc": "Focus on the most important information without overwhelming detail"
+    "communicationTree": "Кой се свързва с кого",
+    "conflictResolution": "Как да се справяме с несъгласия",
+    "decisionMaking": "Как се вземат решения",
+    "description": "Уверете се, че всички знаят с кого да се свързват и как да работят заедно, когато вашето семейство се нуждае от помощ.",
+    "emergencyProtocol": "Какво да правим при спешен случай",
+    "familyMeetings": "Кога вашето семейство трябва да се среща",
+    "informationSharing": "Каква информация да споделяме",
+    "meetingSchedule": "Редовни семейни проверки",
+    "primaryContact": "Първо лице за контакт",
+    "subtitle": "Помагане на вашия екип за подкрепа да работи заедно",
+    "title": "Как вашите помощници ще комуникират"
   },
   "crisisAssessment": {
-    "criticalVulnerabilities": "[BG] Critical vulnerabilities",
-    "familyCapabilities": "[BG] Family capabilities",
-    "familyDiscussion": "[BG] Family discussion",
-    "familyDiscussionDescription": "[BG] Family discussion description",
-    "fixCapability": "[BG] Fix capability",
-    "fixNow": "[BG] Fix now",
-    "missing": "[BG] Missing",
-    "mostUrgent": "[BG] Most urgent",
-    "nextCriticalAction": "[BG] Next critical action",
-    "notPrepared": "[BG] Not prepared",
-    "partial": "[BG] Partial",
-    "prepared": "[BG] Prepared",
-    "printReport": "[BG] Print report",
-    "protected": "[BG] Protected",
-    "scheduleReview": "[BG] Schedule review",
-    "situationReadiness": "[BG] Situation readiness",
-    "subtitle": "[BG] Subtitle",
-    "timeEstimate": "[BG] Time estimate",
-    "title": "[BG] Title",
-    "vulnerable": "[BG] Vulnerable"
+    "criticalVulnerabilities": "Критични уязвимости",
+    "familyCapabilities": "Семейни възможности",
+    "familyDiscussion": "Семейна дискусия",
+    "familyDiscussionDescription": "Описание на семейната дискусия",
+    "fixCapability": "Поправи възможността",
+    "fixNow": "Поправи сега",
+    "missing": "Липсва",
+    "mostUrgent": "Най-спешно",
+    "nextCriticalAction": "Следващо критично действие",
+    "notPrepared": "Неподготвен",
+    "partial": "Частично",
+    "prepared": "Подготвен",
+    "printReport": "Отпечатай доклад",
+    "protected": "Защитен",
+    "scheduleReview": "Планирай преглед",
+    "situationReadiness": "Готовност за ситуацията",
+    "subtitle": "Подзаглавие",
+    "timeEstimate": "Времева оценка",
+    "title": "Заглавие",
+    "vulnerable": "Уязвим"
   },
   "crisisSituations": {
     "businessEmergency": {
-      "description": "[BG] Description",
-      "title": "[BG] Title"
+      "description": "Описание",
+      "title": "Заглавие"
     },
     "emergencyHospital": {
-      "description": "[BG] Description",
-      "title": "[BG] Title"
+      "description": "Описание",
+      "title": "Заглавие"
     },
     "extendedTravel": {
-      "description": "[BG] Description",
-      "title": "[BG] Title"
+      "description": "Описание",
+      "title": "Заглавие"
     },
     "suddenDeath": {
-      "description": "[BG] Description",
-      "title": "[BG] Title"
+      "description": "Описание",
+      "title": "Заглавие"
     }
   },
   "dashboard": {
     "familyGuide": {
-      "discreteMode": "[BG] Discrete mode",
-      "discreteModeDesc": "[BG] Discrete mode desc",
-      "emergency_contacts_1": "[BG] Emergency contacts 1",
-      "export_guide_4": "[BG] Export guide 4",
-      "generateGuide": "[BG] Generate guide",
-      "important_documents_2": "[BG] Important documents 2",
-      "last_updated_6": "[BG] Last updated 6",
-      "share_with_family_5": "[BG] Share with family 5",
-      "subtitle": "[BG] Subtitle",
-      "title": "[BG] Title",
-      "view": "[BG] View",
-      "what_to_do_when_3": "[BG] What to do when 3"
+      "discreteMode": "Дискретен режим",
+      "discreteModeDesc": "Описание на дискретния режим",
+      "emergency_contacts_1": "Спешни контакти 1",
+      "export_guide_4": "Експортиране на ръководство 4",
+      "generateGuide": "Генериране на ръководство",
+      "important_documents_2": "Важни документи 2",
+      "last_updated_6": "Последно актуализирано 6",
+      "share_with_family_5": "Споделяне със семейството 5",
+      "subtitle": "Подзаглавие",
+      "title": "Заглавие",
+      "view": "Преглед",
+      "what_to_do_when_3": "Какво да правим когато 3"
     }
   },
   "emergency": {
-    "addContact": "[BG] Add contact",
+    "addContact": "Добави контакт",
     "addContactDialog": {
-      "addButton": "[BG] Add button",
-      "description": "[BG] Description",
-      "relationship": "[BG] Relationship",
-      "relationshipPlaceholder": "[BG] Relationship placeholder",
-      "selectContact": "[BG] Select contact",
-      "selectPlaceholder": "[BG] Select placeholder",
-      "title": "[BG] Title"
+      "addButton": "Бутон за добавяне",
+      "description": "Описание",
+      "relationship": "Връзка",
+      "relationshipPlaceholder": "Запълнител за връзка",
+      "selectContact": "Избери контакт",
+      "selectPlaceholder": "Запълнител за избор",
+      "title": "Заглавие"
     },
-    "description": "[BG] Description",
+    "description": "Описание",
     "errors": {
-      "addFailed": "[BG] Add failed",
-      "loadFailed": "[BG] Load failed",
-      "removeFailed": "[BG] Remove failed",
-      "reorderFailed": "[BG] Reorder failed",
-      "selectContact": "[BG] Select contact",
-      "testFailed": "[BG] Test failed"
+      "addFailed": "Добавянето неуспешно",
+      "loadFailed": "Зареждането неуспешно",
+      "removeFailed": "Премахването неуспешно",
+      "reorderFailed": "Пренареждането неуспешно",
+      "selectContact": "Избери контакт",
+      "testFailed": "Тестът неуспешен"
     },
-    "lastContacted": "[BG] Last contacted",
-    "maxContactsReached": "[BG] Max contacts reached",
+    "lastContacted": "Последно свързване",
+    "maxContactsReached": "Достигнат максимален брой контакти",
     "messages": {
-      "added": "[BG] Added",
-      "removed": "[BG] Removed",
-      "reordered": "[BG] Reordered",
-      "testSent": "[BG] Test sent"
+      "added": "Добавено",
+      "removed": "Премахнато",
+      "reordered": "Пренаредено",
+      "testSent": "Тест изпратен"
     },
-    "noContacts": "[BG] No contacts",
-    "sendTest": "[BG] Send test",
-    "title": "[BG] Title"
+    "noContacts": "Няма контакти",
+    "sendTest": "Изпрати тест",
+    "title": "Заглавие"
   },
   "errors": {
-    "dataNotFound": "[BG] Data not found",
-    "duplicateRecord": "[BG] Duplicate record",
-    "networkError": "[BG] Network error",
-    "permissionDenied": "[BG] Permission denied",
-    "unknown": "[BG] Unknown"
+    "accessDenied": "Не можете да променяте информацията на този човек в момента",
+    "assigningRole": "Не можахме да им дадем тази роля. Нека опитаме отново.",
+    "dataNotFound": "Не можахме да намерим тази информация",
+    "duplicatePerson": "Този човек вече е в твоя екип за подкрепа",
+    "duplicateRecord": "Това вече е запазено",
+    "grantingAccess": "Не можахме да им дадем достъп. Нека опитаме отново.",
+    "invalidEmail": "Този имейл не изглежда правилно - моля проверете го",
+    "invalidPhone": "Този телефонен номер не изглежда правилно - моля проверете го",
+    "loadingFamily": "Имахме проблем със зареждането на твоя екип за подкрепа. Моля опреснете страницата.",
+    "networkError": "Проблем с връзката - моля проверете интернета си",
+    "permissionDenied": "Нямате разрешение да правите това",
+    "removingPerson": "Не можахме да ги премахнем от твоя екип. Нека опитаме отново.",
+    "roleConflict": "Те вече имат различна роля, която конфликтира с тази",
+    "savingPerson": "Не можахме да запазим тяхната информация. Моля проверете всичко и опитайте отново.",
+    "sendingInvitation": "Не можахме да изпратим поканата. Моля проверете техния имейл и опитайте отново.",
+    "unknown": "Нещо се обърка"
   },
   "estateStatus": {
     "actions": {
-      "cancel": "[BG] Cancel",
-      "update": "[BG] Update",
-      "updating": "[BG] Updating"
+      "cancel": "Отказ",
+      "update": "Актуализация",
+      "updating": "Актуализиране"
     },
-    "description": "[BG] Description",
+    "description": "Описание",
     "dialog": {
-      "description": "[BG] Description",
-      "title": "[BG] Title"
+      "description": "Описание",
+      "title": "Заглавие"
     },
     "empty": {
-      "noStatus": "[BG] No status",
-      "readOnly": "[BG] Read only"
+      "noStatus": "Няма статус",
+      "readOnly": "Само за четене"
     },
     "fields": {
-      "additionalDetails": "[BG] Additional details",
-      "status": "[BG] Status"
+      "additionalDetails": "Допълнителни детайли",
+      "status": "Статус"
     },
-    "lastUpdated": "[BG] Last updated",
-    "logAction": "[BG] Log action",
+    "lastUpdated": "Последно актуализирано",
+    "logAction": "Записване на действие",
     "placeholders": {
-      "additionalContext": "[BG] Additional context",
-      "selectStatus": "[BG] Select status"
+      "additionalContext": "Допълнителен контекст",
+      "selectStatus": "Избери статус"
     },
-    "progress": "[BG] Progress",
+    "progress": "Прогрес",
     "statuses": {
-      "assetsBeingValued": "[BG] Assets being valued",
-      "debtsBeingSettled": "[BG] Debts being settled",
-      "distributionInProgress": "[BG] Distribution in progress",
-      "estateClosed": "[BG] Estate closed",
-      "gatheringDocuments": "[BG] Gathering documents",
-      "initialReview": "[BG] Initial review",
-      "probateInitiated": "[BG] Probate initiated",
-      "readyForDistribution": "[BG] Ready for distribution",
-      "taxPreparation": "[BG] Tax preparation"
+      "assetsBeingValued": "Активите се оценяват",
+      "debtsBeingSettled": "Дълговете се уреждат",
+      "distributionInProgress": "Разпределението е в ход",
+      "estateClosed": "Наследството е затворено",
+      "gatheringDocuments": "Събиране на документи",
+      "initialReview": "Първоначален преглед",
+      "probateInitiated": "Заверяването е започнато",
+      "readyForDistribution": "Готово за разпределение",
+      "taxPreparation": "Подготовка на данъци"
     },
-    "title": "[BG] Title",
-    "updateStatus": "[BG] Update status"
+    "title": "Заглавие",
+    "updateStatus": "Актуализиране на статуса"
   },
   "familyCapabilities": {
-    "businessOperations": "[BG] Business operations",
-    "canAccessBankAccounts": "[BG] Can access bank accounts",
-    "canAccessDigitalAccounts": "[BG] Can access digital accounts",
-    "canFileInsuranceClaims": "[BG] Can file insurance claims",
-    "canManageBusiness": "[BG] Can manage business",
-    "cannotAccessBankAccounts": "[BG] Cannot access bank accounts",
-    "cannotAccessDigitalAccounts": "[BG] Cannot access digital accounts",
-    "cannotFileInsuranceClaims": "[BG] Cannot file insurance claims",
-    "clearInheritancePlan": "[BG] Clear inheritance plan",
-    "digitalAccess": "[BG] Digital access",
-    "digitalAccounts": "[BG] Digital accounts",
-    "immediateFinancialNeeds": "[BG] Immediate financial needs",
-    "inheritance": "[BG] Inheritance",
-    "insuranceClaims": "[BG] Insurance claims",
-    "knowsLegalContacts": "[BG] Knows legal contacts",
-    "knowsMedicalWishes": "[BG] Knows medical wishes",
-    "legalMatters": "[BG] Legal matters",
-    "medicalDecisions": "[BG] Medical decisions",
-    "noBusinessInfo": "[BG] No business info",
-    "noInheritancePlan": "[BG] No inheritance plan",
-    "noLegalContacts": "[BG] No legal contacts",
-    "noMedicalInfo": "[BG] No medical info",
-    "partialBusinessInfo": "[BG] Partial business info",
-    "partialInheritancePlan": "[BG] Partial inheritance plan",
-    "partialMedicalInfo": "[BG] Partial medical info",
-    "payBills": "[BG] Pay bills"
+    "businessOperations": "Бизнес операции",
+    "canAccessBankAccounts": "Може да достъпва банкови сметки",
+    "canAccessDigitalAccounts": "Може да достъпва цифрови акаунти",
+    "canFileInsuranceClaims": "Може да подава застрахователни искове",
+    "canManageBusiness": "Може да управлява бизнес",
+    "cannotAccessBankAccounts": "Не може да достъпва банкови сметки",
+    "cannotAccessDigitalAccounts": "Не може да достъпва цифрови акаунти",
+    "cannotFileInsuranceClaims": "Не може да подава застрахователни искове",
+    "clearInheritancePlan": "Ясен план за наследство",
+    "digitalAccess": "Цифров достъп",
+    "digitalAccounts": "Цифрови акаунти",
+    "immediateFinancialNeeds": "Непосредствени финансови нужди",
+    "inheritance": "Наследство",
+    "insuranceClaims": "Застрахователни искове",
+    "knowsLegalContacts": "Знае правни контакти",
+    "knowsMedicalWishes": "Знае медицински желания",
+    "legalMatters": "Правни въпроси",
+    "medicalDecisions": "Медицински решения",
+    "noBusinessInfo": "Няма бизнес информация",
+    "noInheritancePlan": "Няма план за наследство",
+    "noLegalContacts": "Няма правни контакти",
+    "noMedicalInfo": "Няма медицинска информация",
+    "partialBusinessInfo": "Частична бизнес информация",
+    "partialInheritancePlan": "Частичен план за наследство",
+    "partialMedicalInfo": "Частична медицинска информация",
+    "payBills": "Плащане на сметки"
   },
   "familyCrisisAssessment": {
-    "15_1": "[BG] 15 1"
+    "15_1": "15 1"
   },
   "familyExecutorView": {
     "communications": {
-      "description": "[BG] Description",
-      "empty": "[BG] Empty",
-      "title": "[BG] Title",
-      "to": "[BG] To"
+      "description": "Описание",
+      "empty": "Празно",
+      "title": "Заглавие",
+      "to": "До"
     },
-    "executor": "[BG] Executor",
-    "footer": "[BG] Footer",
-    "subtitle": "[BG] Subtitle",
-    "theExecutor": "[BG] The executor",
-    "title": "[BG] Title"
+    "executor": "Изпълнител",
+    "footer": "Долен колонтитул",
+    "subtitle": "Подзаглавие",
+    "theExecutor": "Изпълнителят",
+    "title": "Заглавие"
   },
   "familyHub": {
     "accessLevels": {
       "emergencyOnly": {
-        "description": "[BG] Description",
-        "fullDescription": "[BG] Full description",
-        "title": "[BG] Title"
+        "description": "Описание",
+        "fullDescription": "Пълно описание",
+        "title": "Заглавие"
       },
       "fullAccess": {
-        "description": "[BG] Description",
-        "fullDescription": "[BG] Full description",
-        "title": "[BG] Title"
+        "description": "Описание",
+        "fullDescription": "Пълно описание",
+        "title": "Заглавие"
       },
       "limitedInfo": {
-        "description": "[BG] Description",
-        "fullDescription": "[BG] Full description",
-        "title": "[BG] Title"
+        "description": "Описание",
+        "fullDescription": "Пълно описание",
+        "title": "Заглавие"
       },
       "none": {
-        "description": "[BG] Description",
-        "title": "[BG] Title"
+        "description": "Описание",
+        "title": "Заглавие"
       }
     },
     "emergencyProtocol": {
-      "activeMessage": "[BG] Active message",
-      "configure": "[BG] Configure",
-      "configured": "[BG] Configured",
-      "description": "[BG] Description",
-      "title": "[BG] Title"
+      "activeMessage": "Активно съобщение",
+      "configure": "Конфигуриране",
+      "configured": "Конфигуриран",
+      "description": "Описание",
+      "title": "Заглавие"
     },
     "errors": {
-      "authenticationRequired": "[BG] Authentication required",
-      "failedToFetchData": "[BG] Failed to fetch data",
-      "failedToLoadMembers": "[BG] Failed to load members"
+      "authenticationRequired": "Необходима автентификация",
+      "failedToFetchData": "Неуспешно извличане на данни",
+      "failedToLoadMembers": "Неуспешно зареждане на членове"
     },
     "memberManagement": {
-      "addMorePeople": "[BG] Add more people",
-      "addTrustedPerson": "[BG] Add trusted person",
-      "daysAgo": "[BG] Days ago",
-      "informationAccessLevel": "[BG] Information access level",
-      "lastContactOver30Days": "[BG] Last contact over30 days",
-      "lastContacted": "[BG] Last contacted",
-      "preparedness": "[BG] Preparedness",
-      "sendUpdate": "[BG] Send update",
-      "sendUpdateTo": "[BG] Send update to",
-      "title": "[BG] Title"
+      "addMorePeople": "Добави още хора",
+      "addTrustedPerson": "Добави доверено лице",
+      "daysAgo": "Дни назад",
+      "informationAccessLevel": "Ниво на достъп до информация",
+      "lastContactOver30Days": "Последен контакт преди повече от 30 дни",
+      "lastContacted": "Последно свързване",
+      "preparedness": "Подготвеност",
+      "sendUpdate": "Изпрати актуализация",
+      "sendUpdateTo": "Изпрати актуализация до",
+      "title": "Заглавие"
     },
     "messages": {
-      "accessLevelUpdated": "[BG] Access level updated",
-      "failedToSendUpdate": "[BG] Failed to send update",
-      "updateSentTo": "[BG] Update sent to"
+      "accessLevelUpdated": "Нивото на достъп е актуализирано",
+      "failedToSendUpdate": "Неуспешно изпращане на актуализация",
+      "updateSentTo": "Актуализацията е изпратена до"
     },
     "overallPreparedness": {
-      "description": "[BG] Description",
-      "improvementNeeded": "[BG] Improvement needed",
-      "title": "[BG] Title"
+      "description": "Описание",
+      "improvementNeeded": "Необходимо подобрение",
+      "title": "Заглавие"
     },
-    "subtitle": "[BG] Subtitle",
+    "subtitle": "Подзаглавие",
     "tabs": {
-      "familyMembers": "[BG] Family members",
-      "members": "[BG] Members",
-      "preparednessTools": "[BG] Preparedness tools",
-      "tools": "[BG] Tools"
+      "familyMembers": "Членове на семейството",
+      "members": "Членове",
+      "preparednessTools": "Инструменти за подготвеност",
+      "tools": "Инструменти"
     },
-    "title": "[BG] Title"
+    "title": "Заглавие"
   },
   "familyPreparednessTools": {
-    "create_a_printable_guide_for_y_3": "[BG] Create a printable guide for y 3",
+    "create_a_printable_guide_for_y_3": "Създай печатно ръководство за 3",
     "errors": {
-      "comingSoon": "[BG] Coming soon",
-      "generateFailed": "[BG] Generate failed",
-      "premiumRequired": "[BG] Premium required",
-      "selectScenario": "[BG] Select scenario"
+      "comingSoon": "Очаквайте скоро",
+      "generateFailed": "Генерирането неуспешно",
+      "premiumRequired": "Необходима премиум версия",
+      "selectScenario": "Избери сценарий"
     },
-    "generate_another_5": "[BG] Generate another 5",
-    "generate_emergency_guide_2": "[BG] Generate emergency guide 2",
+    "generate_another_5": "Генерирай друг 5",
+    "generate_emergency_guide_2": "Генерирай спешно ръководство 2",
     "guides": {
       "death": {
-        "bankAccounts": "[BG] Bank accounts",
-        "contactExecutor": "[BG] Contact executor",
-        "contactLawyer": "[BG] Contact lawyer",
-        "deathCertificate": "[BG] Death certificate",
-        "disclaimer": "[BG] Disclaimer",
-        "employer": "[BG] Employer",
-        "financialInstitutions": "[BG] Financial institutions",
-        "first24Hours": "[BG] First24 hours",
-        "generatedOn": "[BG] Generated on",
-        "importantDocuments": "[BG] Important documents",
-        "insuranceCompanies": "[BG] Insurance companies",
-        "investmentAccounts": "[BG] Investment accounts",
-        "locateWill": "[BG] Locate will",
-        "peopleToNotify": "[BG] People to notify",
-        "secureResidence": "[BG] Secure residence",
-        "socialSecurity": "[BG] Social security",
-        "title": "[BG] Title"
+        "bankAccounts": "Банкови сметки",
+        "contactExecutor": "Свържи се с изпълнителя",
+        "contactLawyer": "Свържи се с адвокат",
+        "deathCertificate": "Свидетелство за смърт",
+        "disclaimer": "Отказ от отговорност",
+        "employer": "Работодател",
+        "financialInstitutions": "Финансови институции",
+        "first24Hours": "Първите 24 часа",
+        "generatedOn": "Генерирано на",
+        "importantDocuments": "Важни документи",
+        "insuranceCompanies": "Застрахователни компании",
+        "investmentAccounts": "Инвестиционни сметки",
+        "locateWill": "Намери завещанието",
+        "peopleToNotify": "Хора за уведомяване",
+        "secureResidence": "Обезопаси жилището",
+        "socialSecurity": "Социално осигуряване",
+        "title": "Заглавие"
       },
       "emergency": {
-        "address": "[BG] Address",
-        "attorney": "[BG] Attorney",
-        "emergency": "[BG] Emergency",
-        "financialAdvisor": "[BG] Financial advisor",
-        "homeInformation": "[BG] Home information",
-        "insuranceAgent": "[BG] Insurance agent",
-        "keyContacts": "[BG] Key contacts",
-        "securitySystem": "[BG] Security system",
-        "spouse": "[BG] Spouse",
-        "title": "[BG] Title",
-        "utilities": "[BG] Utilities"
+        "address": "Адрес",
+        "attorney": "Адвокат",
+        "emergency": "Спешност",
+        "financialAdvisor": "Финансов консултант",
+        "homeInformation": "Информация за дома",
+        "insuranceAgent": "Застрахователен агент",
+        "keyContacts": "Ключови контакти",
+        "securitySystem": "Система за сигурност",
+        "spouse": "Съпруг/съпруга",
+        "title": "Заглавие",
+        "utilities": "Комунални услуги"
       },
       "hospitalization": {
-        "allergies": "[BG] Allergies",
-        "bloodType": "[BG] Blood type",
-        "currentMedications": "[BG] Current medications",
-        "emergencyContacts": "[BG] Emergency contacts",
-        "healthcarePowerOfAttorney": "[BG] Healthcare power of attorney",
-        "hipaaRelease": "[BG] Hipaa release",
-        "legalDocuments": "[BG] Legal documents",
-        "livingWill": "[BG] Living will",
-        "medicalInformation": "[BG] Medical information",
-        "preferredHospital": "[BG] Preferred hospital",
-        "primaryCarePhysician": "[BG] Primary care physician",
-        "title": "[BG] Title"
+        "allergies": "Алергии",
+        "bloodType": "Кръвна група",
+        "currentMedications": "Текущи лекарства",
+        "emergencyContacts": "Спешни контакти",
+        "healthcarePowerOfAttorney": "Пълномощно за здравеопазване",
+        "hipaaRelease": "HIPAA освобождаване",
+        "legalDocuments": "Правни документи",
+        "livingWill": "Приживотно завещание",
+        "medicalInformation": "Медицинска информация",
+        "preferredHospital": "Предпочитана болница",
+        "primaryCarePhysician": "Личен лекар",
+        "title": "Заглавие"
       },
       "missing": {
-        "bankingApps": "[BG] Banking apps",
-        "checkHospitals": "[BG] Check hospitals",
-        "checkWithWorkplace": "[BG] Check with workplace",
-        "contactCloseFriends": "[BG] Contact close friends",
-        "contactLocalPolice": "[BG] Contact local police",
-        "digitalFootprint": "[BG] Digital footprint",
-        "email": "[BG] Email",
-        "immediateActions": "[BG] Immediate actions",
-        "phoneProvider": "[BG] Phone provider",
-        "socialMedia": "[BG] Social media",
-        "title": "[BG] Title"
+        "bankingApps": "Банкови приложения",
+        "checkHospitals": "Провери болници",
+        "checkWithWorkplace": "Провери с работното място",
+        "contactCloseFriends": "Свържи се с близки приятели",
+        "contactLocalPolice": "Свържи се с местната полиция",
+        "digitalFootprint": "Цифрова следа",
+        "email": "Имейл",
+        "immediateActions": "Незабавни действия",
+        "phoneProvider": "Доставчик на телефон",
+        "socialMedia": "Социални медии",
+        "title": "Заглавие"
       }
     },
     "mockContent": {
-      "insurancePolicies": "[BG] Insurance policies"
+      "insurancePolicies": "Застрахователни полици"
     },
     "scenarios": {
       "death": {
-        "description": "[BG] Description",
-        "title": "[BG] Title"
+        "description": "Описание",
+        "title": "Заглавие"
       },
       "emergency": {
-        "description": "[BG] Description",
-        "title": "[BG] Title"
+        "description": "Описание",
+        "title": "Заглавие"
       },
       "hospitalization": {
-        "description": "[BG] Description",
-        "title": "[BG] Title"
+        "description": "Описание",
+        "title": "Заглавие"
       },
       "missing": {
-        "description": "[BG] Description",
-        "title": "[BG] Title"
+        "description": "Описание",
+        "title": "Заглавие"
       }
     },
-    "select_scenario_4": "[BG] Select scenario 4",
+    "select_scenario_4": "Избери сценарий 4",
     "tools": {
-      "cancel": "[BG] Cancel",
-      "chooseScenario": "[BG] Choose scenario",
-      "emergencySimulator": "[BG] Emergency simulator",
-      "emergencySimulatorDesc": "[BG] Emergency simulator desc",
-      "generateGuide": "[BG] Generate guide",
-      "generating": "[BG] Generating",
-      "informationTreasureHunt": "[BG] Information treasure hunt",
-      "launch": "[BG] Launch",
-      "printGuide": "[BG] Print guide",
-      "stepByStepGuides": "[BG] Step by step guides",
-      "stepByStepGuidesDesc": "[BG] Step by step guides desc",
-      "treasureHuntDesc": "[BG] Treasure hunt desc",
-      "videoMessages": "[BG] Video messages",
-      "videoMessagesDesc": "[BG] Video messages desc"
+      "cancel": "Отказ",
+      "chooseScenario": "Избери сценарий",
+      "emergencySimulator": "Симулатор за спешни случаи",
+      "emergencySimulatorDesc": "Описание на симулатора за спешни случаи",
+      "generateGuide": "Генерирай ръководство",
+      "generating": "Генериране",
+      "informationTreasureHunt": "Търсене на съкровища с информация",
+      "launch": "Стартирай",
+      "printGuide": "Отпечатай ръководство",
+      "stepByStepGuides": "Стъпка по стъпка ръководства",
+      "stepByStepGuidesDesc": "Описание на стъпка по стъпка ръководства",
+      "treasureHuntDesc": "Описание на търсенето на съкровища",
+      "videoMessages": "Видео съобщения",
+      "videoMessagesDesc": "Описание на видео съобщенията"
     },
-    "use_these_tools_to_ensure_your_1": "[BG] Use these tools to ensure your 1"
+    "use_these_tools_to_ensure_your_1": "Използвайте тези инструменти, за да гарантирате вашия 1"
   },
   "form": {
-    "accessDescription": "What they can see and when they can help",
-    "accessInfo": "What They Can Do",
-    "accessLevel": "How Much They Can See",
-    "addPerson": "Add Someone to Help",
-    "additionalRoles": "Other Ways They Can Help",
-    "alternatePhone": "Another Phone Number",
-    "assignedRoles": "How They'll Help Your Family",
-    "backupFor": "They're a Backup For",
-    "backupHelper": "Who they'll step in for if needed",
-    "capabilities": "Why They're Right for This",
-    "capabilitiesHelper": "What makes them a good choice to help?",
-    "compensation": "If They Need Support",
-    "compensationHelper": "Any financial help they might need",
-    "contactInfo": "How to Reach Them",
-    "dateOfBirth": "Birthday",
-    "editPerson": "Update Their Information",
-    "emailAddress": "Email",
-    "emergencyContact": "Who to Call for Them",
-    "fullName": "Their Full Name",
-    "fullNameHelper": "Use their legal name for important documents",
-    "fullNamePlaceholder": "Their complete legal name",
-    "homeAddress": "Where They Live",
-    "instructions": "Important Things They Should Know",
-    "instructionsHelper": "Any special guidance for helping your family",
-    "instructionsPlaceholder": "What they need to know to help",
-    "limitations": "Things to Be Aware Of",
-    "limitationsHelper": "Anything that might make it hard for them to help",
-    "personalInfo": "About Them",
-    "primaryPhone": "Best Phone Number",
-    "primaryRole": "Main Way They'll Help",
-    "relationship": "How You Know Them",
-    "relationshipPlaceholder": "Like Spouse, Child, Brother/Sister, Best Friend",
-    "roleInfo": "How They'll Help",
-    "selectRoles": "Pick how they can help your family",
-    "workAddress": "Where They Work"
+    "accessDescription": "Какво могат да виждат и кога могат да помагат",
+    "accessInfo": "Какво могат да правят",
+    "accessLevel": "Колко могат да виждат",
+    "addPerson": "Добави някой да помага",
+    "additionalRoles": "Други начини, по които могат да помагат",
+    "alternatePhone": "Друг телефонен номер",
+    "assignedRoles": "Как ще помагат на твоето семейство",
+    "backupFor": "Те са резерва за",
+    "backupHelper": "За кого ще встъпят, ако е необходимо",
+    "capabilities": "Защо са подходящи за това",
+    "capabilitiesHelper": "Какво ги прави добър избор за помощ?",
+    "compensation": "Ако се нуждаят от подкрепа",
+    "compensationHelper": "Всяка финансова помощ, от която могат да се нуждаят",
+    "contactInfo": "Как да ги достигнем",
+    "dateOfBirth": "Рожден ден",
+    "editPerson": "Актуализирай тяхната информация",
+    "emailAddress": "Имейл",
+    "emergencyContact": "Кого да се обадим за тях",
+    "fullName": "Пълното им име",
+    "fullNameHelper": "Използвайте тяхното законно име за важни документи",
+    "fullNamePlaceholder": "Пълното им законно име",
+    "homeAddress": "Къде живеят",
+    "instructions": "Важни неща, които трябва да знаят",
+    "instructionsHelper": "Всякакви специални указания за помощ на твоето семейство",
+    "instructionsPlaceholder": "Какво трябва да знаят, за да помагат",
+    "limitations": "Неща, които трябва да знаем",
+    "limitationsHelper": "Всичко, което може да им затрудни да помагат",
+    "personalInfo": "За тях",
+    "primaryPhone": "Най-добър телефонен номер",
+    "primaryRole": "Основен начин, по който ще помагат",
+    "relationship": "Как ги познаваш",
+    "relationshipPlaceholder": "Като съпруг/съпруга, дете, брат/сестра, най-добър приятел",
+    "roleInfo": "Как ще помагат",
+    "selectRoles": "Избери как могат да помагат на твоето семейство",
+    "workAddress": "Къде работят"
   },
   "guardian": {
     "templateModal": {
-      "_1": "[BG] 1"
-    }
+      "_1": "1"
+    },
+    "accepted": "Прието",
+    "declined": "Отказано",
+    "invitationSent": "Поканата е изпратена",
+    "sendInvite": "Изпрати покана"
   },
   "guardianView": {
-    "defaultUserName": "[BG] Default user name",
+    "defaultUserName": "Име по подразбиране на потребителя",
     "emergencyAccess": {
-      "accessFailed": "[BG] Access failed",
-      "accessGranted": "[BG] Access granted",
-      "accessing": "[BG] Accessing",
-      "button": "[BG] Button",
-      "confirmButton": "[BG] Confirm button",
-      "confirmCheckbox": "[BG] Confirm checkbox",
-      "contactLogged": "[BG] Contact logged",
-      "contactsDescription": "[BG] Contacts description",
-      "contactsTitle": "[BG] Contacts title",
-      "failedToLoadContacts": "[BG] Failed to load contacts",
-      "importantNote": "[BG] Important note",
-      "lastContacted": "[BG] Last contacted",
-      "logContact": "[BG] Log contact",
-      "modalDescription": "[BG] Modal description",
-      "modalTitle": "[BG] Modal title",
-      "notAuthorized": "[BG] Not authorized",
-      "pleaseConfirm": "[BG] Please confirm",
-      "priority": "[BG] Priority",
-      "priorityOrder": "[BG] Priority order",
-      "reasonLabel": "[BG] Reason label",
-      "reasonPlaceholder": "[BG] Reason placeholder",
-      "warningText": "[BG] Warning text"
+      "accessFailed": "Достъпът неуспешен",
+      "accessGranted": "Достъпът предоставен",
+      "accessing": "Получаване на достъп",
+      "button": "Бутон",
+      "confirmButton": "Бутон за потвърждение",
+      "confirmCheckbox": "Квадратче за потвърждение",
+      "contactLogged": "Контактът е записан",
+      "contactsDescription": "Описание на контактите",
+      "contactsTitle": "Заглавие на контактите",
+      "failedToLoadContacts": "Неуспешно зареждане на контактите",
+      "importantNote": "Важна бележка",
+      "lastContacted": "Последно свързване",
+      "logContact": "Запиши контакт",
+      "modalDescription": "Описание на модала",
+      "modalTitle": "Заглавие на модала",
+      "notAuthorized": "Не е упълномощен",
+      "pleaseConfirm": "Моля потвърдете",
+      "priority": "Приоритет",
+      "priorityOrder": "Ред на приоритета",
+      "reasonLabel": "Етикет за причина",
+      "reasonPlaceholder": "Запълнител за причина",
+      "warningText": "Текст за предупреждение"
     },
     "errors": {
-      "failedToLoad": "[BG] Failed to load",
-      "pleaseLogin": "[BG] Please login"
+      "failedToLoad": "Неуспешно зареждане",
+      "pleaseLogin": "Моля влезте"
     },
     "guardianInfo": {
-      "description": "[BG] Description",
-      "securityNote": "[BG] Security note"
+      "description": "Описание",
+      "securityNote": "Бележка за сигурност"
     },
-    "readOnlyAccess": "[BG] Read only access",
+    "readOnlyAccess": "Достъп само за четене",
     "sections": {
       "finalWishes": {
-        "description": "[BG] Description",
-        "digitalAccounts": "[BG] Digital accounts",
-        "empty": "[BG] Empty",
-        "funeralWishes": "[BG] Funeral wishes",
-        "messagesToLovedOnes": "[BG] Messages to loved ones",
-        "title": "[BG] Title"
+        "description": "Описание",
+        "digitalAccounts": "Цифрови акаунти",
+        "empty": "Празно",
+        "funeralWishes": "Желания за погребение",
+        "messagesToLovedOnes": "Съобщения до близки",
+        "title": "Заглавие"
       },
       "importantContacts": {
-        "description": "[BG] Description",
-        "empty": "[BG] Empty",
-        "title": "[BG] Title"
+        "description": "Описание",
+        "empty": "Празно",
+        "title": "Заглавие"
       },
       "keyDocuments": {
-        "description": "[BG] Description",
-        "empty": "[BG] Empty",
-        "expires": "[BG] Expires",
-        "keyDocumentBadge": "[BG] Key document badge",
-        "noExpiration": "[BG] No expiration",
-        "title": "[BG] Title"
+        "description": "Описание",
+        "empty": "Празно",
+        "expires": "Изтича",
+        "keyDocumentBadge": "Значка за ключов документ",
+        "noExpiration": "Без изтичане",
+        "title": "Заглавие"
       }
     },
-    "subtitle": "[BG] Subtitle",
-    "title": "[BG] Title"
+    "subtitle": "Подзаглавие",
+    "title": "Заглавие"
   },
   "guardianship": {
-    "addDependent": "Add Someone Who Needs Care",
-    "alternateGuardian": "Backup Caregiver",
-    "careStandards": "How You Want Them Cared For",
-    "childGuardians": "Who Will Care for Your Children",
-    "dependentCare": "Care Plans for Your Loved Ones",
-    "description": "Choose loving people who will care for your children or family members who need help if you can't be there.",
-    "educationPreferences": "School and Education Wishes",
-    "financialProvisions": "Money for Their Care",
-    "guardianCompensation": "Support for the Caregiver",
-    "guardianFor": "Who Will Care for {{name}}",
-    "guardianInstructions": "How to Care for Them",
-    "guardianQualifications": "Why They're the Right Choice",
-    "healthcarePreferences": "Health and Medical Care",
-    "lifestylePreferences": "Daily Life and Activities",
-    "noChildren": "You haven't told us about any children or family members who need care yet.",
-    "primaryGuardian": "First Choice Caregiver",
-    "religiousPreferences": "Faith and Values",
-    "reportingRequirements": "Keeping Family Updated",
-    "subtitle": "Making sure your loved ones are cared for",
-    "temporaryGuardian": "Short-Term Caregiver",
-    "title": "Who Will Care for Your Loved Ones",
-    "visitationRights": "Family Visiting Arrangements"
+    "addDependent": "Добави някой, който се нуждае от грижи",
+    "alternateGuardian": "Резервен настойник",
+    "careStandards": "Как искате да се грижат за тях",
+    "childGuardians": "Кой ще се грижи за вашите деца",
+    "dependentCare": "Планове за грижи за вашите близки",
+    "description": "Изберете любящи хора, които ще се грижат за вашите деца или членове на семейството, нуждаещи се от помощ, ако не можете да бъдете там.",
+    "educationPreferences": "Желания за училище и образование",
+    "financialProvisions": "Пари за тяхната грижа",
+    "guardianCompensation": "Подкрепа за настойника",
+    "guardianFor": "Кой ще се грижи за {{name}}",
+    "guardianInstructions": "Как да се грижат за тях",
+    "guardianQualifications": "Защо са правилният избор",
+    "healthcarePreferences": "Здравни и медицински грижи",
+    "lifestylePreferences": "Ежедневен живот и дейности",
+    "noChildren": "Още не сте ни казали за деца или членове на семейството, които се нуждаят от грижи.",
+    "primaryGuardian": "Първи избор за настойник",
+    "religiousPreferences": "Вяра и ценности",
+    "reportingRequirements": "Поддържане на семейството в течение",
+    "subtitle": "Уверяване, че вашите близки ще получат грижи",
+    "temporaryGuardian": "Краткосрочен настойник",
+    "title": "Кой ще се грижи за вашите близки",
+    "visitationRights": "Семейни договорености за посещения"
   },
   "manual": {
     "contacts": {
       "form": {
-        "addButton": "[BG] Add button",
-        "cancel": "[BG] Cancel",
-        "emailLabel": "[BG] Email label",
-        "emailPlaceholder": "[BG] Email placeholder",
-        "nameLabel": "[BG] Name label",
-        "namePlaceholder": "[BG] Name placeholder",
-        "notesLabel": "[BG] Notes label",
-        "notesPlaceholder": "[BG] Notes placeholder",
-        "phoneLabel": "[BG] Phone label",
-        "phonePlaceholder": "[BG] Phone placeholder",
-        "roleLabel": "[BG] Role label",
-        "rolePlaceholder": "[BG] Role placeholder",
-        "saving": "[BG] Saving",
-        "updateButton": "[BG] Update button"
+        "addButton": "Бутон за добавяне",
+        "cancel": "Отказ",
+        "emailLabel": "Етикет за имейл",
+        "emailPlaceholder": "Запълнител за имейл",
+        "nameLabel": "Етикет за име",
+        "namePlaceholder": "Запълнител за име",
+        "notesLabel": "Етикет за бележки",
+        "notesPlaceholder": "Запълнител за бележки",
+        "phoneLabel": "Етикет за телефон",
+        "phonePlaceholder": "Запълнител за телефон",
+        "roleLabel": "Етикет за роля",
+        "rolePlaceholder": "Запълнител за роля",
+        "saving": "Запазване",
+        "updateButton": "Бутон за актуализация"
       }
     }
   },
   "notificationPreferences": {
-    "description": "[BG] Description",
-    "emailRequired": "[BG] Email required",
+    "description": "Описание",
+    "emailRequired": "Необходим имейл",
     "errors": {
-      "loadFailed": "[BG] Load failed",
-      "updateFailed": "[BG] Update failed"
+      "loadFailed": "Зареждането неуспешно",
+      "updateFailed": "Актуализацията неуспешна"
     },
     "howItWorks": {
-      "point1": "[BG] Point1",
-      "point2": "[BG] Point2",
-      "point3": "[BG] Point3",
-      "title": "[BG] Title"
+      "point1": "Точка1",
+      "point2": "Точка2",
+      "point3": "Точка3",
+      "title": "Заглавие"
     },
-    "info": "[BG] Info",
-    "lastUpdated": "[BG] Last updated",
+    "info": "Информация",
+    "lastUpdated": "Последно актуализирано",
     "messages": {
-      "updated": "[BG] Updated"
+      "updated": "Актуализирано"
     },
-    "noContacts": "[BG] No contacts",
-    "noEmail": "[BG] No email",
-    "title": "[BG] Title"
+    "noContacts": "Няма контакти",
+    "noEmail": "Няма имейл",
+    "title": "Заглавие"
   },
   "notifications": {
-    "accessGranted": "{{name}} can now help your family",
-    "accessRevoked": "{{name}}'s access has been updated",
-    "invitationAccepted": "Great news! {{name}} is ready to help",
-    "invitationSent": "We've invited {{name}} to join your support team",
-    "personAdded": "{{name}} is now part of your family's support team",
-    "personRemoved": "{{name}} is no longer on your support team",
-    "personUpdated": "We've updated {{name}}'s information",
-    "reviewScheduled": "You'll meet with {{name}} to discuss family plans",
-    "roleAssigned": "{{name}} can now help as your {{role}}",
-    "roleRemoved": "{{name}} no longer serves as {{role}}"
+    "accessGranted": "{{name}} вече може да помага на твоето семейство",
+    "accessRevoked": "Достъпът на {{name}} беше актуализиран",
+    "invitationAccepted": "Страхотни новини! {{name}} е готов да помага",
+    "invitationSent": "Поканихме {{name}} да се присъедини към твоя екип за подкрепа",
+    "personAdded": "{{name}} вече е част от екипа за подкрепа на твоето семейство",
+    "personRemoved": "{{name}} вече не е в твоя екип за подкрепа",
+    "personUpdated": "Актуализирахме информацията на {{name}}",
+    "reviewScheduled": "Ще се срещнеш с {{name}}, за да обсъдиш семейните планове",
+    "roleAssigned": "{{name}} вече може да помага като твой {{role}}",
+    "roleRemoved": "{{name}} вече не служи като {{role}}"
   },
   "playbook": {
-    "addContact": "[BG] Add contact",
-    "autoSaveNotice": "[BG] Auto save notice",
-    "contact": "[BG] Contact",
+    "addContact": "Добави контакт",
+    "autoSaveNotice": "Уведомление за автоматично запазване",
+    "contact": "Контакт",
     "contactFields": {
-      "email": "[BG] Email",
-      "emailPlaceholder": "[BG] Email placeholder",
-      "name": "[BG] Name",
-      "namePlaceholder": "[BG] Name placeholder",
-      "notes": "[BG] Notes",
-      "notesPlaceholder": "[BG] Notes placeholder",
-      "phone": "[BG] Phone",
-      "phonePlaceholder": "[BG] Phone placeholder",
-      "role": "[BG] Role",
-      "rolePlaceholder": "[BG] Role placeholder"
+      "email": "Имейл",
+      "emailPlaceholder": "Запълнител за имейл",
+      "name": "Име",
+      "namePlaceholder": "Запълнител за име",
+      "notes": "Бележки",
+      "notesPlaceholder": "Запълнител за бележки",
+      "phone": "Телефон",
+      "phonePlaceholder": "Запълнител за телефон",
+      "role": "Роля",
+      "rolePlaceholder": "Запълнител за роля"
     },
-    "edit": "[BG] Edit",
+    "edit": "Редактирай",
     "errors": {
-      "loadFailed": "[BG] Load failed",
-      "saveFailed": "[BG] Save failed"
+      "loadFailed": "Зареждането неуспешно",
+      "saveFailed": "Запазването неуспешно"
     },
-    "loading": "[BG] Loading",
+    "loading": "Зареждане",
     "messages": {
-      "autoSaved": "[BG] Auto saved",
-      "saved": "[BG] Saved"
+      "autoSaved": "Автоматично запазено",
+      "saved": "Запазено"
     },
-    "noContacts": "[BG] No contacts",
-    "noContent": "[BG] No content",
-    "preview": "[BG] Preview",
-    "save": "[BG] Save",
-    "saving": "[BG] Saving",
+    "noContacts": "Няма контакти",
+    "noContent": "Няма съдържание",
+    "preview": "Преглед",
+    "save": "Запази",
+    "saving": "Запазване",
     "sections": {
       "contacts": {
-        "description": "[BG] Description",
-        "title": "[BG] Title"
+        "description": "Описание",
+        "title": "Заглавие"
       },
       "digital": {
-        "description": "[BG] Description",
-        "placeholder": "[BG] Placeholder",
-        "title": "[BG] Title"
+        "description": "Описание",
+        "placeholder": "Запълнител",
+        "title": "Заглавие"
       },
       "documents": {
-        "description": "[BG] Description",
-        "placeholder": "[BG] Placeholder",
-        "title": "[BG] Title"
+        "description": "Описание",
+        "placeholder": "Запълнител",
+        "title": "Заглавие"
       },
       "funeral": {
-        "description": "[BG] Description",
-        "placeholder": "[BG] Placeholder",
-        "title": "[BG] Title"
+        "description": "Описание",
+        "placeholder": "Запълнител",
+        "title": "Заглавие"
       },
       "messages": {
-        "description": "[BG] Description",
-        "placeholder": "[BG] Placeholder",
-        "title": "[BG] Title"
+        "description": "Описание",
+        "placeholder": "Запълнител",
+        "title": "Заглавие"
       },
       "practical": {
-        "description": "[BG] Description",
-        "placeholder": "[BG] Placeholder",
-        "title": "[BG] Title"
+        "description": "Описание",
+        "placeholder": "Запълнител",
+        "title": "Заглавие"
       }
     },
     "status": {
-      "complete": "[BG] Complete",
-      "draft": "[BG] Draft",
-      "empty": "[BG] Empty"
+      "complete": "Завършено",
+      "draft": "Чернова",
+      "empty": "Празно"
     },
     "subtitle": {
-      "edit": "[BG] Edit",
-      "view": "[BG] View"
+      "edit": "Редактирай",
+      "view": "Преглед"
     },
     "tabs": {
-      "contacts": "[BG] Contacts",
-      "digital": "[BG] Digital",
-      "documents": "[BG] Documents",
-      "funeral": "[BG] Funeral",
-      "messages": "[BG] Messages",
-      "practical": "[BG] Practical"
+      "contacts": "Контакти",
+      "digital": "Цифрово",
+      "documents": "Документи",
+      "funeral": "Погребение",
+      "instructions": "Инструкции",
+      "messages": "Съобщения",
+      "practical": "Практическо"
     },
     "templates": {
-      "append": "[BG] Append",
-      "backToTemplates": "[BG] Back to templates",
-      "description": "[BG] Description",
-      "existingContent": "[BG] Existing content",
-      "fillInVariables": "[BG] Fill in variables",
-      "insertTemplate": "[BG] Insert template",
-      "preview": "[BG] Preview",
-      "replace": "[BG] Replace",
-      "title": "[BG] Title",
-      "variableCount": "[BG] Variable count",
-      "variablePlaceholder": "[BG] Variable placeholder"
+      "append": "Добави",
+      "backToTemplates": "Обратно към шаблоните",
+      "description": "Описание",
+      "existingContent": "Съществуващо съдържание",
+      "fillInVariables": "Попълни променливите",
+      "insertTemplate": "Вмъкни шаблон",
+      "preview": "Преглед",
+      "replace": "Замени",
+      "title": "Заглавие",
+      "variableCount": "Брой променливи",
+      "variablePlaceholder": "Запълнител за променлива"
     },
-    "title": {
-      "edit": "[BG] Edit",
-      "view": "[BG] View"
+    "title": "Заглавие",
+    "useTemplate": "Използвай шаблон",
+    "accessDenied": "Достъпът отказан",
+    "create": "Създай",
+    "description": "Описание",
+    "digitalAccounts": {
+      "description": "Описание",
+      "label": "Етикет",
+      "placeholder": "Запълнител"
     },
-    "useTemplate": "[BG] Use template"
+    "discardChanges": {
+      "cancel": "Отказ",
+      "confirm": "Потвърди",
+      "description": "Описание",
+      "title": "Заглавие"
+    },
+    "documentLocations": {
+      "description": "Описание",
+      "label": "Етикет",
+      "placeholder": "Запълнител"
+    },
+    "exitPreview": "Излез от прегледа",
+    "fetchError": "Грешка при извличане",
+    "funeralWishes": {
+      "description": "Описание",
+      "label": "Етикет",
+      "placeholder": "Запълнител"
+    },
+    "importantContacts": {
+      "add": "Добави",
+      "description": "Описание",
+      "email": "Имейл",
+      "emailPlaceholder": "Запълнител за имейл",
+      "empty": "Празно",
+      "label": "Етикет",
+      "name": "Име",
+      "namePlaceholder": "Запълнител за име",
+      "notes": "Бележки",
+      "notesPlaceholder": "Запълнител за бележки",
+      "phone": "Телефон",
+      "phonePlaceholder": "Запълнител за телефон",
+      "relationship": "Връзка",
+      "relationshipPlaceholder": "Запълнител за връзка",
+      "remove": "Премахни",
+      "viewDescription": "Описание на прегледа"
+    },
+    "label": "Етикет",
+    "lastUpdated": "Последно актуализирано",
+    "notAuthenticated": "Не е автентификиран",
+    "notFound": {
+      "description": "Описание",
+      "title": "Заглавие"
+    },
+    "personalMessages": {
+      "description": "Описание",
+      "label": "Етикет",
+      "placeholder": "Запълнител"
+    },
+    "practicalInstructions": {
+      "description": "Описание",
+      "label": "Етикет",
+      "placeholder": "Запълнител"
+    },
+    "saveError": "Грешка при запазване",
+    "saveSuccess": "Успешно запазване",
+    "titleReadOnly": "Заглавие само за четене",
+    "viewDescription": "Описание на прегледа",
+    "viewFooter": "Долен колонтитул на прегледа",
+    "viewTitle": "Заглавие на прегледа"
   },
   "preparedness": {
     "assessments": {
       "decisionMaking": {
-        "good": "[BG] Good",
-        "needsWork": "[BG] Needs work"
+        "good": "Добро",
+        "needsWork": "Нужда от работа"
       },
       "immediateAccess": {
-        "good": "[BG] Good",
-        "needsWork": "[BG] Needs work"
+        "good": "Добро",
+        "needsWork": "Нужда от работа"
       },
       "longTermSecurity": {
-        "good": "[BG] Good",
-        "needsWork": "[BG] Needs work"
+        "good": "Добро",
+        "needsWork": "Нужда от работа"
       }
     },
     "dimensions": {
-      "decisionMaking": "[BG] Decision making",
-      "immediateAccess": "[BG] Immediate access",
-      "longTermSecurity": "[BG] Long term security"
+      "decisionMaking": "Вземане на решения",
+      "immediateAccess": "Незабавен достъп",
+      "longTermSecurity": "Дългосрочна сигурност"
     },
-    "familyBenefit": "[BG] Family benefit",
+    "familyBenefit": "Семейна полза",
     "familyCommunication": {
-      "description": "[BG] Description",
-      "scheduleReview": "[BG] Schedule review",
-      "shareReport": "[BG] Share report",
-      "title": "[BG] Title"
+      "description": "Описание",
+      "scheduleReview": "Планирай преглед",
+      "shareReport": "Сподели доклад",
+      "title": "Заглавие"
     },
     "gaps": {
-      "addMedicalPreferences": "[BG] Add medical preferences",
-      "basicAccessInfo": "[BG] Basic access info",
-      "completeFinancialAccess": "[BG] Complete financial access",
-      "documentBusinessOperations": "[BG] Document business operations",
-      "improveImmediateAccess": "[BG] Improve immediate access",
-      "updateWillAndTrust": "[BG] Update will and trust"
+      "addMedicalPreferences": "Добави медицински предпочитания",
+      "basicAccessInfo": "Основна информация за достъп",
+      "completeFinancialAccess": "Завърши финансовия достъп",
+      "documentBusinessOperations": "Документирай бизнес операциите",
+      "improveImmediateAccess": "Подобри незабавния достъп",
+      "updateWillAndTrust": "Актуализирай завещанието и доверието"
     },
-    "impact": "[BG] Impact",
+    "impact": "Въздействие",
     "improvements": {
-      "addBankAccounts": "[BG] Add bank accounts",
-      "documentMedicalWishes": "[BG] Document medical wishes",
-      "uploadLegalDocuments": "[BG] Upload legal documents"
+      "addBankAccounts": "Добави банкови сметки",
+      "documentMedicalWishes": "Документирай медицинските желания",
+      "uploadLegalDocuments": "Качи правни документи"
     },
     "levels": {
-      "fullyPrepared": "[BG] Fully prepared",
-      "goodBasic": "[BG] Good basic",
-      "minimalPreparation": "[BG] Minimal preparation",
-      "needsImmediate": "[BG] Needs immediate",
-      "somePreparation": "[BG] Some preparation",
-      "wellPrepared": "[BG] Well prepared"
+      "fullyPrepared": "Напълно подготвен",
+      "goodBasic": "Добра основа",
+      "minimalPreparation": "Минимална подготовка",
+      "needsImmediate": "Нужда от незабавно",
+      "somePreparation": "Известна подготовка",
+      "wellPrepared": "Добре подготвен"
     },
-    "nextStep": "[BG] Next step",
-    "scenarioReadiness": "[BG] Scenario readiness",
+    "nextStep": "Следваща стъпка",
+    "scenarioReadiness": "Готовност за сценарий",
     "scenarios": {
       "emergencyHospital": {
-        "description": "[BG] Description",
-        "title": "[BG] Title"
+        "description": "Описание",
+        "title": "Заглавие"
       },
       "extendedTravel": {
-        "description": "[BG] Description",
-        "title": "[BG] Title"
+        "description": "Описание",
+        "title": "Заглавие"
       },
       "suddenDeath": {
-        "description": "[BG] Description",
-        "title": "[BG] Title"
+        "description": "Описание",
+        "title": "Заглавие"
       }
     },
-    "title": "[BG] Title",
-    "toImprove": "[BG] To improve"
+    "title": "Заглавие",
+    "toImprove": "За подобрение"
   },
   "relationships": {
-    "child": "[BG] Child",
-    "friend": "[BG] Friend",
-    "other": "[BG] Other",
-    "parent": "[BG] Parent",
-    "sibling": "[BG] Sibling",
-    "spouse": "[BG] Spouse"
+    "child": "Дете",
+    "friend": "Приятел",
+    "other": "Друго",
+    "parent": "Родител",
+    "sibling": "Брат/сестра",
+    "spouse": "Съпруг/съпруга"
   },
   "roles": {
-    "advisor": "Someone Who Gives Advice",
-    "beneficiary": "Will Receive Something",
-    "caregiver": "Can Care for Family Members",
-    "emergencyContact": "First Person to Call",
-    "executor": "Will Handle Everything",
-    "financialAgent": "Can Manage Money Matters",
-    "guardian": "Will Care for Children",
-    "healthcareProxy": "Can Make Medical Decisions",
-    "representative": "Can Act on Your Behalf",
-    "successor": "Backup Helper",
-    "trustee": "Manages Family Trust",
-    "witness": "Witnessed Your Will"
+    "advisor": "Някой, който дава съвети",
+    "beneficiary": "Ще получи нещо",
+    "caregiver": "Може да се грижи за членове на семейството",
+    "emergencyContact": "Първо лице за обаждане",
+    "executor": "Ще се справи с всичко",
+    "financialAgent": "Може да управлява финансови въпроси",
+    "guardian": "Ще се грижи за децата",
+    "healthcareProxy": "Може да взема медицински решения",
+    "representative": "Може да действа от ваше име",
+    "successor": "Резервен помощник",
+    "trustee": "Управлява семейното доверие",
+    "witness": "Свидетел на завещанието ви"
   },
   "trustedCircle": {
-    "addFirst": "Add Someone Who Can Help",
-    "description": "Choose people who can support your family when they need it most. These are the people your loved ones can turn to.",
-    "emergencyContacts": "People to Call First",
-    "empty": "Let's start by adding someone your family can rely on - maybe your spouse, a close friend, or a trusted family member.",
-    "keyPeople": "Your Most Important Helpers",
-    "recentlyAdded": "Recently Added",
-    "roles": "How They Can Help",
-    "subtitle": "People who will be there for your family",
-    "title": "Your Family's Support Team",
-    "totalMembers": "{{count}} People Ready to Help",
-    "viewAll": "See Everyone"
+    "addFirst": "Добави някой, който може да помага",
+    "description": "Изберете хора, които могат да подкрепят вашето семейство, когато най-много се нуждае от това. Това са хората, към които вашите близки могат да се обърнат.",
+    "emergencyContacts": "Хора за обаждане първи",
+    "empty": "Нека започнем с добавяне на някой, на когото семейството ви може да разчита - може би вашия съпруг/съпруга, близък приятел или доверен член на семейството.",
+    "keyPeople": "Най-важните ви помощници",
+    "recentlyAdded": "Наскоро добавени",
+    "roles": "Как могат да помагат",
+    "subtitle": "Хора, които ще бъдат там за вашето семейство",
+    "title": "Екипът за подкрепа на вашето семейство",
+    "totalMembers": "{{count}} души готови да помагат",
+    "viewAll": "Виж всички"
   },
   "family.GuardianPlaybook.className.flex_itemscenter_justifycenter_h64": "flex items-center justify-center h-64",
   "family.GuardianPlaybook.className.grid_gridcols6_wfull": "grid grid-cols-6 w-full",
@@ -882,342 +965,352 @@
   "family.GuardianPlaybookView.telcontactphone": "tel:${contact.phone}",
   "family.GuardianPlaybookView.mailtocontactemail": "mailto:${contact.email}",
   "guardianUpload": {
-    "addButton": "Add button",
-    "addTitle": "Add title",
-    "added": "Added",
-    "countryDescription": "Country description",
-    "countryLabel": "Country label",
-    "countryPlaceholder": "Country placeholder",
-    "description": "Description",
-    "editTitle": "Edit title",
-    "emailLabel": "Email label",
-    "emailPlaceholder": "Email placeholder",
-    "error": "Error",
+    "addButton": "Бутон за добавяне",
+    "addTitle": "Заглавие за добавяне",
+    "added": "Добавено",
+    "countryDescription": "Описание на страната",
+    "countryLabel": "Етикет за страна",
+    "countryPlaceholder": "Запълнител за страна",
+    "description": "Описание",
+    "editTitle": "Заглавие за редактиране",
+    "emailLabel": "Етикет за имейл",
+    "emailPlaceholder": "Запълнител за имейл",
+    "error": "Грешка",
     "errors": {
-      "connectionError": "Connection error",
-      "duplicateError": "Duplicate error",
-      "permissionError": "Permission error",
-      "requiredDataNotFound": "Required data not found",
-      "saveError": "Save error",
-      "unknownError": "Unknown error"
+      "connectionError": "Грешка във връзката",
+      "duplicateError": "Грешка дублиране",
+      "permissionError": "Грешка в разрешението",
+      "requiredDataNotFound": "Необходимите данни не са намерени",
+      "saveError": "Грешка при запазване",
+      "unknownError": "Неизвестна грешка"
     },
-    "fullNameLabel": "Full name label",
-    "fullNamePlaceholder": "Full name placeholder",
-    "loginToSave": "Login to save",
-    "phoneLabel": "Phone label",
-    "phonePlaceholder": "Phone placeholder",
-    "relationshipLabel": "Relationship label",
-    "relationshipPlaceholder": "Relationship placeholder",
+    "fullNameLabel": "Етикет за пълно име",
+    "fullNamePlaceholder": "Запълнител за пълно име",
+    "loginToSave": "Влезте, за да запазите",
+    "phoneLabel": "Етикет за телефон",
+    "phonePlaceholder": "Запълнител за телефон",
+    "relationshipLabel": "Етикет за връзка",
+    "relationshipPlaceholder": "Запълнител за връзка",
     "relationships": {
-      "child": "Child",
-      "friend": "Friend",
-      "legalProfessional": "Legal professional",
-      "other": "Other",
-      "parent": "Parent",
-      "sibling": "Sibling",
-      "spouse": "Spouse"
+      "child": "Дете",
+      "friend": "Приятел",
+      "legalProfessional": "Правен професионалист",
+      "other": "Друго",
+      "parent": "Родител",
+      "sibling": "Брат/сестра",
+      "spouse": "Съпруг/съпруга"
     },
     "roles": {
-      "emergencyContact": "Emergency contact",
-      "executorOfWill": "Executor of will",
-      "financialPowerOfAttorney": "Financial power of attorney",
-      "guardianForChildren": "Guardian for children",
-      "healthcareProxy": "Healthcare proxy",
-      "trustee": "Trustee"
+      "emergencyContact": "Спешен контакт",
+      "executorOfWill": "Изпълнител на завещание",
+      "financialPowerOfAttorney": "Финансово пълномощно",
+      "guardianForChildren": "Настойник за деца",
+      "healthcareProxy": "Здравен представител",
+      "trustee": "Доверен"
     },
-    "rolesTitle": "Roles title",
-    "saving": "Saving",
-    "success": "Success",
-    "updateButton": "Update button",
-    "updated": "Updated"
+    "rolesTitle": "Заглавие на ролите",
+    "saving": "Запазване",
+    "success": "Успех",
+    "updateButton": "Бутон за актуализация",
+    "updated": "Актуализирано"
   },
   "executor": {
-    "completed": "Completed",
+    "completed": "Завършено",
     "dashboard": {
-      "reminder": "Reminder",
-      "subtitle": "Subtitle",
-      "title": "Title"
+      "reminder": "Напомняне",
+      "subtitle": "Подзаглавие",
+      "title": "Заглавие"
     },
-    "due": "Due",
+    "due": "Дължимо",
     "errors": {
-      "loadTasksFailed": "Load tasks failed",
-      "updateTaskFailed": "Update task failed"
+      "loadTasksFailed": "Зареждането на задачите неуспешно",
+      "updateTaskFailed": "Актуализацията на задачата неуспешна"
     },
-    "highPriority": "High priority",
+    "highPriority": "Висок приоритет",
     "legalSupport": {
-      "button": "Button",
-      "description": "Description",
-      "title": "Title"
+      "button": "Бутон",
+      "description": "Описание",
+      "title": "Заглавие"
     },
-    "markComplete": "Mark complete",
+    "markComplete": "Отбележи като завършено",
     "sections": {
       "firstWeek": {
-        "description": "Description",
-        "empty": "Empty",
-        "title": "Title"
+        "description": "Описание",
+        "empty": "Празно",
+        "title": "Заглавие"
       },
       "immediate": {
-        "description": "Description",
-        "empty": "Empty",
-        "title": "Title"
+        "description": "Описание",
+        "empty": "Празно",
+        "title": "Заглавие"
       },
       "ongoing": {
-        "description": "Description",
-        "empty": "Empty",
-        "title": "Title"
+        "description": "Описание",
+        "empty": "Празно",
+        "title": "Заглавие"
       }
     },
     "stats": {
-      "completed": "Completed",
-      "remaining": "Remaining",
-      "totalTasks": "Total tasks"
+      "completed": "Завършени",
+      "remaining": "Оставащи",
+      "totalTasks": "Общо задачи"
     },
-    "undo": "Undo",
-    "viewAccountDetails": "View account details",
-    "viewRelatedDocuments": "View related documents"
+    "undo": "Отмени",
+    "viewAccountDetails": "Виж детайли на сметката",
+    "viewRelatedDocuments": "Виж свързани документи"
   },
   "executorDashboard": {
-    "professional_guidance_1": "Professional guidance 1"
+    "professional_guidance_1": "Професионално ръководство 1"
   },
   "executorManagement": {
-    "add_new_executor_10": "Add new executor 10",
-    "all_executors_must_have_legacy_23": "All executors must have legacy 23",
-    "current_executors_17": "Current executors 17",
-    "designate_trusted_individuals__9": "Designate trusted individuals  9",
-    "email_address_11": "Email address 11",
-    "emergency_contact_16": "Emergency contact 16",
-    "emergency_contacts_are_notifie_22": "Emergency contacts are notifie 22",
-    "executor_example_com_12": "Executor example com 12",
-    "executor_management_8": "Executor management 8",
-    "failed_to_add_executor_5": "Failed to add executor 5",
-    "failed_to_load_executors_2": "Failed to load executors 2",
-    "failed_to_remove_executor_6": "Failed to remove executor 6",
-    "important_information_19": "Important information 19",
-    "loading_executors_7": "Loading executors 7",
-    "no_executors_designated_yet_ad_18": "No executors designated yet ad 18",
-    "primary_executor_14": "Primary executor 14",
-    "primary_executors_receive_imme_20": "Primary executors receive imme 20",
-    "relationship_type_13": "Relationship type 13",
-    "secondary_executor_15": "Secondary executor 15",
-    "secondary_executors_are_notifi_21": "Secondary executors are notifi 21",
+    "add_new_executor_10": "Добави нов изпълнител 10",
+    "all_executors_must_have_legacy_23": "Всички изпълнители трябва да имат LegacyGuard 23",
+    "current_executors_17": "Текущи изпълнители 17",
+    "designate_trusted_individuals__9": "Определи доверени лица 9",
+    "email_address_11": "Имейл адрес 11",
+    "emergency_contact_16": "Спешен контакт 16",
+    "emergency_contacts_are_notifie_22": "Спешните контакти са уведомени 22",
+    "executor_example_com_12": "executor@example.com 12",
+    "executor_management_8": "Управление на изпълнители 8",
+    "failed_to_add_executor_5": "Неуспешно добавяне на изпълнител 5",
+    "failed_to_load_executors_2": "Неуспешно зареждане на изпълнители 2",
+    "failed_to_remove_executor_6": "Неуспешно премахване на изпълнител 6",
+    "important_information_19": "Важна информация 19",
+    "loading_executors_7": "Зареждане на изпълнители 7",
+    "no_executors_designated_yet_ad_18": "Все още няма определени изпълнители, добавете 18",
+    "primary_executor_14": "Основен изпълнител 14",
+    "primary_executors_receive_imme_20": "Основните изпълнители получават незабавно 20",
+    "relationship_type_13": "Тип връзка 13",
+    "secondary_executor_15": "Вторичен изпълнител 15",
+    "secondary_executors_are_notifi_21": "Вторичните изпълнители са уведомени 21",
     "statusLabels": {
-      "addExecutor": "Add executor",
-      "adding": "Adding",
-      "unknownUser": "Unknown user"
+      "addExecutor": "Добави изпълнител",
+      "adding": "Добавяне",
+      "unknownUser": "Неизвестен потребител"
     },
     "successMessages": {
-      "executorAdded": "Executor added",
-      "executorRemoved": "Executor removed"
+      "executorAdded": "Изпълнителят е добавен",
+      "executorRemoved": "Изпълнителят е премахнат"
     },
-    "this_person_is_already_designa_4": "This person is already designa 4",
-    "user_not_found_with_this_email_3": "User not found with this email 3"
+    "this_person_is_already_designa_4": "Този човек вече е определен 4",
+    "user_not_found_with_this_email_3": "Потребител с този имейл не е намерен 3"
   },
   "invite": {
-    "title": "Title"
+    "title": "Заглавие"
   },
   "inviteAcceptance": {
     "buttons": {
-      "acceptRole": "Accept role",
-      "decline": "Decline",
-      "processing": "Processing"
+      "acceptRole": "Приеми роля",
+      "decline": "Откажи",
+      "processing": "Обработване"
     },
-    "defaultInviterName": "Default inviter name",
-    "disclaimer": "Disclaimer",
+    "defaultInviterName": "Име по подразбиране на поканилия",
+    "disclaimer": "Отказ от отговорност",
     "errors": {
-      "acceptFailed": "Accept failed",
-      "alreadyProcessed": "Already processed",
-      "declineFailed": "Decline failed",
-      "invalidLink": "Invalid link",
-      "loadingFailed": "Loading failed",
-      "notFound": "Not found"
+      "acceptFailed": "Приемането неуспешно",
+      "alreadyProcessed": "Вече обработено",
+      "declineFailed": "Отказът неуспешен",
+      "invalidLink": "Невалидна връзка",
+      "loadingFailed": "Зареждането неуспешно",
+      "notFound": "Не е намерено"
     },
     "guardianRole": {
-      "relationship": "Relationship",
-      "responsibilities": "Responsibilities",
-      "title": "Title",
-      "yourName": "Your name"
+      "relationship": "Връзка",
+      "responsibilities": "Отговорности",
+      "title": "Заглавие",
+      "yourName": "Вашето име"
     },
-    "loading": "Loading",
+    "loading": "Зареждане",
     "messages": {
-      "accepted": "Accepted",
-      "declined": "Declined"
+      "accepted": "Прието",
+      "declined": "Отказано"
     },
     "notFound": {
-      "description": "Description",
-      "title": "Title"
+      "description": "Описание",
+      "title": "Заглавие"
     },
-    "subtitle": "Subtitle",
+    "subtitle": "Подзаглавие",
     "whatThisMeans": {
-      "point1": "Point1",
-      "point2": "Point2",
-      "point3": "Point3",
-      "point4": "Point4",
-      "title": "Title"
+      "point1": "Точка1",
+      "point2": "Точка2",
+      "point3": "Точка3",
+      "point4": "Точка4",
+      "title": "Заглавие"
     }
   },
   "preservationMode": {
-    "lastReviewDate": "Last review date",
-    "latestUpdates": "Latest updates",
-    "startAnnualCheck": "Start annual check"
+    "lastReviewDate": "Дата на последен преглед",
+    "latestUpdates": "Последни актуализации",
+    "startAnnualCheck": "Започни годишна проверка"
   },
   "structures": {
-    "nuclear": "Traditional Family",
-    "single_parent": "Single Parent Family",
-    "blended": "Blended Family",
-    "multigenerational": "Multi-Generational Family",
-    "childless": "Couple Without Children",
-    "empty_nest": "Empty Nest Family",
-    "non_traditional": "Unique Family Structure"
+    "nuclear": "Традиционно семейство",
+    "single_parent": "Еднородителско семейство",
+    "blended": "Смесено семейство",
+    "multigenerational": "Многопоколенно семейство",
+    "childless": "Двойка без деца",
+    "empty_nest": "Семейство празно гнездо",
+    "non_traditional": "Уникална семейна структура"
   },
   "complexity": {
-    "simple": "Simple",
-    "moderate": "Moderate",
-    "complex": "Complex"
+    "simple": "Просто",
+    "moderate": "Умерено",
+    "complex": "Сложно"
   },
-  "personalized": "Your personalized family planning experience",
-  "familyMembers": "Family Members",
-  "specialConsiderations": "Special Considerations",
-  "recommendedFeatures": "Recommended Features",
+  "personalized": "Вашето персонализирано семейно планиращо изживяване",
+  "familyMembers": "Членове на семейството",
+  "specialConsiderations": "Специални съображения",
+  "recommendedFeatures": "Препоръчани функции",
   "tabs": {
-    "overview": "Overview",
-    "insights": "Insights",
-    "features": "Features",
-    "cultural": "Cultural"
+    "overview": "Преглед",
+    "insights": "Прозрения",
+    "features": "Функции",
+    "cultural": "Културни"
   },
-  "keyConsiderations": "Key Considerations for Your Family",
-  "specialNeeds": "Special Planning Needs",
-  "sensitivities": "Areas Requiring Extra Care",
+  "keyConsiderations": "Ключови съображения за вашето семейство",
+  "specialNeeds": "Специални планиращи нужди",
+  "sensitivities": "Области, изискващи допълнителни грижи",
   "sensitivity": {
-    "step_family_dynamics": "Step-family relationships need clear documentation",
-    "previous_marriage_obligations": "Previous marriage obligations must be addressed",
-    "absent_parent_considerations": "Absent parent situations require careful planning",
-    "solo_responsibility_pressure": "Single parent responsibilities can feel overwhelming",
-    "family_conflict": "Family conflicts require extra clarity in planning",
-    "inheritance_disputes": "Potential inheritance disputes need prevention",
-    "traditional_role_expectations": "Traditional family roles may need consideration",
-    "disability_planning_stress": "Special needs planning can be emotionally challenging",
-    "long_term_care_concerns": "Long-term care planning is essential"
+    "step_family_dynamics": "Отношенията в смесеното семейство се нуждаят от ясна документация",
+    "previous_marriage_obligations": "Задълженията от предишен брак трябва да бъдат адресирани",
+    "absent_parent_considerations": "Ситуациите с отсъстващ родител изискват внимателно планиране",
+    "solo_responsibility_pressure": "Отговорностите на еднородителя могат да се чувстват потискащи",
+    "family_conflict": "Семейните конфликти изискват допълнителна яснота в планирането",
+    "inheritance_disputes": "Потенциалните спорове за наследство се нуждаят от превенция",
+    "traditional_role_expectations": "Традиционните семейни роли може да се нуждаят от разглеждане",
+    "disability_planning_stress": "Планирането за специални нужди може да бъде емоционално предизвикателно",
+    "long_term_care_concerns": "Планирането за дългосрочни грижи е от съществено значение"
   },
   "needs": {
-    "special_needs_planning": "Special Needs Planning",
-    "long_term_care_planning": "Long-Term Care Planning",
-    "special_needs_trust": "Special Needs Trust",
-    "elder_care_planning": "Elder Care Planning",
-    "multi_generational_wealth_transfer": "Multi-Generational Transfer",
-    "military_benefit_planning": "Military Benefits",
-    "deployment_planning": "Deployment Planning",
-    "business_succession": "Business Succession",
-    "key_person_planning": "Key Person Planning",
-    "young_child_guardianship": "Young Child Guardianship",
-    "education_planning": "Education Planning",
-    "sharia_compliant_planning": "Sharia-Compliant Planning"
+    "special_needs_planning": "Планиране за специални нужди",
+    "long_term_care_planning": "Планиране за дългосрочни грижи",
+    "special_needs_trust": "Доверие за специални нужди",
+    "elder_care_planning": "Планиране за грижи за възрастни",
+    "multi_generational_wealth_transfer": "Многопоколенен трансфер",
+    "military_benefit_planning": "Военни обезщетения",
+    "deployment_planning": "Планиране за разполагане",
+    "business_succession": "Бизнес наследяване",
+    "key_person_planning": "Планиране за ключови лица",
+    "young_child_guardianship": "Настойничество за малки деца",
+    "education_planning": "Планиране за образование",
+    "sharia_compliant_planning": "Планиране съгласно шариата"
   },
   "insightType": {
-    "structure": "Family Structure",
-    "need": "Special Need",
-    "opportunity": "Opportunity",
-    "risk": "Risk Factor"
+    "structure": "Семейна структура",
+    "need": "Специална нужда",
+    "opportunity": "Възможност",
+    "risk": "Рисков фактор"
   },
   "priority": {
-    "high": "High Priority",
-    "medium": "Medium Priority",
-    "low": "Low Priority"
+    "high": "Висок приоритет",
+    "medium": "Среден приоритет",
+    "low": "Нисък приоритет"
   },
-  "suggestedActions": "Suggested Actions",
-  "recommendedFeaturesTitle": "Features Tailored for Your Family",
-  "recommendedFeaturesDesc": "Based on your family structure and needs, these features will be most helpful",
+  "suggestedActions": "Предложени действия",
+  "recommendedFeaturesTitle": "Функции, адаптирани за вашето семейство",
+  "recommendedFeaturesDesc": "Въз основа на вашата семейна структура и нужди, тези функции ще бъдат най-полезни",
   "features": {
     "family_communication_center": {
-      "title": "Family Communication Center",
-      "description": "Keep everyone informed and connected"
+      "title": "Семеен комуникационен център",
+      "description": "Поддържайте всички информирани и свързани"
     },
     "document_vault": {
-      "title": "Secure Document Vault",
-      "description": "Store and share important documents safely"
+      "title": "Сигурно хранилище за документи",
+      "description": "Съхранявайте и споделяйте важни документи безопасно"
     },
     "guardian_network_builder": {
-      "title": "Guardian Network Builder",
-      "description": "Build a strong support network for your children"
+      "title": "Изграждач на мрежа от настойници",
+      "description": "Изградете силна мрежа от подкрепа за вашите деца"
     },
     "emergency_contact_system": {
-      "title": "Emergency Contact System",
-      "description": "Quick access to critical contacts when needed"
+      "title": "Система за спешни контакти",
+      "description": "Бърз достъп до критични контакти при нужда"
     },
     "single_parent_resources": {
-      "title": "Single Parent Resources",
-      "description": "Specialized tools and support for solo parents"
+      "title": "Ресурси за еднородители",
+      "description": "Специализирани инструменти и подкрепа за самотни родители"
     },
     "complex_beneficiary_manager": {
-      "title": "Complex Beneficiary Manager",
-      "description": "Handle multiple relationships with clarity"
+      "title": "Мениджър за сложни наследници",
+      "description": "Справяйте се с множество отношения с яснота"
     },
     "family_tree_visualizer": {
-      "title": "Family Tree Visualizer",
-      "description": "Map complex family relationships visually"
+      "title": "Визуализатор на родословно дърво",
+      "description": "Картографирайте сложни семейни отношения визуално"
     },
     "step_family_guidance": {
-      "title": "Step-Family Guidance",
-      "description": "Navigate blended family planning with confidence"
+      "title": "Насоки за смесено семейство",
+      "description": "Навигирайте планирането на смесеното семейство с увереност"
     },
     "multi_generation_planner": {
-      "title": "Multi-Generation Planner",
-      "description": "Balance needs across all generations"
+      "title": "Многопоколенен планиращ",
+      "description": "Балансирайте нуждите в всички поколения"
     },
     "elder_care_resources": {
-      "title": "Elder Care Resources",
-      "description": "Support for caring for aging parents"
+      "title": "Ресурси за грижи за възрастни",
+      "description": "Подкрепа за грижи за остаряващи родители"
     },
     "family_meeting_tools": {
-      "title": "Family Meeting Tools",
-      "description": "Facilitate important family discussions"
+      "title": "Инструменти за семейни срещи",
+      "description": "Улеснете важни семейни дискусии"
     },
     "special_needs_trust_wizard": {
-      "title": "Special Needs Trust Wizard",
-      "description": "Create proper trusts for special needs members"
+      "title": "Магьосник за доверие за специални нужди",
+      "description": "Създайте подходящи доверия за членове със специални нужди"
     },
     "care_instruction_builder": {
-      "title": "Care Instruction Builder",
-      "description": "Document detailed care requirements"
+      "title": "Изграждач на инструкции за грижи",
+      "description": "Документирайте подробни изисквания за грижи"
     },
     "government_benefit_tracker": {
-      "title": "Government Benefit Tracker",
-      "description": "Ensure eligibility for important benefits"
+      "title": "Проследяващ правителствени обезщетения",
+      "description": "Осигурете право на важни обезщетения"
     },
     "business_succession_planner": {
-      "title": "Business Succession Planner",
-      "description": "Plan for business continuity"
+      "title": "Планиращ бизнес наследяване",
+      "description": "Планирайте за бизнес приемственост"
     },
     "buy_sell_agreement_tracker": {
-      "title": "Buy-Sell Agreement Tracker",
-      "description": "Manage business partnership agreements"
+      "title": "Проследяващ договори за покупко-продажба",
+      "description": "Управлявайте договори за бизнес партньорство"
     },
     "remote_collaboration_tools": {
-      "title": "Remote Collaboration Tools",
-      "description": "Work together despite distance"
+      "title": "Инструменти за отдалечено сътрудничество",
+      "description": "Работете заедно въпреки разстоянието"
     },
     "multi_jurisdiction_guidance": {
-      "title": "Multi-Jurisdiction Guidance",
-      "description": "Navigate laws across different locations"
+      "title": "Насоки за множество юрисдикции",
+      "description": "Навигирайте закони в различни местоположения"
     }
   },
-  "communicationStyle": "Communication Approach",
-  "culturalConsiderations": "Cultural & Religious Considerations",
-  "culturalDesc": "Honor your family's values and traditions in your planning",
-  "cultural": {
-    "islamic_inheritance": "Islamic inheritance principles",
-    "jewish_traditions": "Jewish family traditions",
-    "christian_values": "Christian stewardship values",
-    "buddhist_principles": "Buddhist compassion principles",
-    "patriarchal_hierarchy": "Traditional patriarchal structure",
-    "matriarchal_hierarchy": "Traditional matriarchal structure",
-    "elder_led_hierarchy": "Elder-led family structure",
-    "collective_decision_making": "Collective family decisions",
-    "extended_family_obligations": "Extended family responsibilities",
-    "elder_respect_obligations": "Elder care obligations",
-    "multilingual_documentation": "Multi-language documentation needs"
+  "communicationStyle": "Подход на комуникация",
+  "communication": {
+    "direct": "Директен и ясен",
+    "directDesc": "Направа комуникация, която достига до същността бързо",
+    "gentle": "Нежен и подкрепящ",
+    "gentleDesc": "Внимателна, емпатична комуникация, която признава чувствителността",
+    "detailed": "Подробен и обхватен",
+    "detailedDesc": "Задълбочени обяснения с всички важни детайли",
+    "simplified": "Опростен и основен",
+    "simplifiedDesc": "Фокус върху най-важната информация без потискащи детайли"
   },
-  "noCulturalSettings": "No cultural preferences have been set. Add them to ensure your planning respects your family's values.",
-  "configureCultural": "Configure Cultural Preferences",
-  "culturalUpdated": "Cultural Preferences Updated",
-  "culturalUpdatedDesc": "Your family planning will now reflect your cultural values and traditions"
+  "culturalConsiderations": "Културни и религиозни съображения",
+  "culturalDesc": "Почитайте ценностите и традициите на вашето семейство в планирането си",
+  "cultural": {
+    "islamic_inheritance": "Ислямски принципи на наследяване",
+    "jewish_traditions": "Еврейски семейни традиции",
+    "christian_values": "Християнски ценности на настойничество",
+    "buddhist_principles": "Будистки принципи на състрадание",
+    "patriarchal_hierarchy": "Традиционна патриархална структура",
+    "matriarchal_hierarchy": "Традиционна матриархална структура",
+    "elder_led_hierarchy": "Структура, ръководена от възрастни",
+    "collective_decision_making": "Колективни семейни решения",
+    "extended_family_obligations": "Задължения към разширеното семейство",
+    "elder_respect_obligations": "Задължения за почитане на възрастните",
+    "multilingual_documentation": "Нужди от многоезична документация"
+  },
+  "noCulturalSettings": "Не са зададени културни предпочитания. Добавете ги, за да гарантирате, че планирането ви зачита ценностите на семейството ви.",
+  "configureCultural": "Конфигурирай културни предпочитания",
+  "culturalUpdated": "Културните предпочитания са актуализирани",
+  "culturalUpdatedDesc": "Планирането на вашето семейство вече ще отразява културните ви ценности и традиции"
 }
