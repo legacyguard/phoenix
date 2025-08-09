@@ -274,8 +274,8 @@ export const FamilyTestimonials: React.FC = () => {
           
           {/* Compliance Badges */}
           <div className="flex justify-center gap-4 mt-6">
-            <Badge variant="outline" className="text-xs">{t("landing.familyTestimonials._1")}
-              {t('testimonials.compliance.gdpr')}
+            <Badge variant="outline" className="text-xs">
+              ✓ {t('testimonials.compliance.gdpr')}
             </Badge>
             <Badge variant="outline" className="text-xs">
               🔒 {t('testimonials.compliance.dataProtection')}
