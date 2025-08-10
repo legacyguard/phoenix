@@ -18,7 +18,7 @@ interface LogLifeEventProps {
 }
 
 const LogLifeEvent: React.FC<LogLifeEventProps> = ({ open, onClose, onEventLogged }) => {
-  const { t } = useTranslation('ui');
+  const { t } = useTranslation('ui-common');
   const [selectedEvent, setSelectedEvent] = useState<string | null>(null);
 
   const lifeEvents = [

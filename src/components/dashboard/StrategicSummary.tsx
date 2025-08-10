@@ -35,7 +35,7 @@ interface StrategicArea {
 }
 
 export const StrategicSummary: React.FC = () => {
-    const { t } = useTranslation('dashboard');
+    const { t } = useTranslation('dashboard-main');
   const [strategicAreas, setStrategicAreas] = useState<StrategicArea[]>([]);
 
   const [nextCriticalAction, setNextCriticalAction] = useState<string>('');

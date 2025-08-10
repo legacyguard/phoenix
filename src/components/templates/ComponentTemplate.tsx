@@ -65,7 +65,7 @@ export const ComponentName: React.FC<ComponentProps> = ({
   className = ''
 }) => {
   // Translation hook
-  const { t } = useTranslation('ui');
+  const { t } = useTranslation('ui-common');
   
   // Authentication hook
   const { getToken } = useAuth();

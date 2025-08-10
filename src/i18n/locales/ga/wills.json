@@ -1,361 +1,395 @@
 {
   "actions": {
-    "next": "[GA] Next",
-    "previous": "[GA] Previous"
+    "consultLawyer": "Sceideal Comhairliúcháin Dlí",
+    "createCodicil": "Leasú a Chruthú (Codicil)",
+    "deleteWill": "Scrios an Uacht seo",
+    "downloadPdf": "Íoslódáil Doiciméad PDF",
+    "generateWill": "Gin Uacht Deiridh",
+    "next": "Ar Aghaidh",
+    "previous": "Roimhe Seo",
+    "printWill": "Priontáil Doiciméad Uacht",
+    "saveProgress": "Sábháil Dul Chun Cinn Reatha",
+    "shareWill": "Comhroinn le Teaghlach",
+    "updateWill": "Nuashonraigh Faisnéis Uacht"
   },
   "errors": {
-    "assetLoadFailed": "We could not load your asset information. Please refresh and try again.",
-    "generationFailed": "We encountered an issue generating your will. Please review your information and try again.",
-    "jurisdictionRequired": "Please select your legal jurisdiction to ensure compliance",
-    "loadFailed": "We could not load your will information. Please refresh the page and try again.",
-    "printFailed": "We encountered an issue preparing your document for printing. Please try again.",
-    "saveFailed": "We could not save your progress. Please check your connection and try again.",
-    "sharingFailed": "We could not share your will. Please verify the recipients and try again.",
-    "validationFailed": "Please review and correct the highlighted information before proceeding"
+    "assetLoadFailed": "Níorbh fhéidir linn faisnéis faoi do shócmhainn a luchtú. Athnuachan agus déan iarracht arís.",
+    "generationFailed": "Tháinig fadhb orainn agus d’uacht á gineadh againn. Athbhreithnigh d’fhaisnéis agus déan iarracht arís.",
+    "jurisdictionRequired": "Roghnaigh do dhlínse dhlíthiúil le do thoil chun comhlíonadh a chinntiú",
+    "loadFailed": "Níorbh fhéidir linn faisnéis d’uachta a lódáil. Athnuachan an leathanach agus déan iarracht arís.",
+    "printFailed": "Tháinig fadhb chun cinn agus do dhoiciméad á ullmhú le haghaidh priontála. Déan iarracht arís.",
+    "saveFailed": "Níorbh fhéidir linn do dhul chun cinn a shábháil. Seiceáil do nasc agus déan iarracht arís.",
+    "validationFailed": "Athbhreithnigh agus ceartaigh an fhaisnéis atá aibhsithe sula leanann tú ar aghaidh"
   },
   "execution": {
-    "copyDistribution": "Distribution of Copies",
-    "familyNotification": "Informing Your Family",
-    "legalRequirements": "Legal Requirements for {{jurisdiction}}",
-    "notarization": "Notarization Requirements",
-    "notaryOptional": "Notary recommended but not required",
-    "notaryRequired": "Notary public required",
-    "numberOfCopies": "Recommended Number of Copies",
-    "safeStorage": "Secure Storage Locations",
-    "selfProving": "Self-Proving Affidavit",
-    "signingInstructions": "Signing Instructions",
-    "signingOrder": "Proper Signing Order",
-    "storageRecommendations": "Storage Recommendations",
-    "subtitle": "Making your will legally binding",
-    "title": "Will Execution Requirements",
-    "witnessCount": "{{count}} witnesses required",
-    "witnessInstructions": "Witness Instructions",
-    "witnessQualifications": "Witness Qualifications",
-    "witnessRequirements": "Witness Requirements"
+    "copyDistribution": "Dáileadh Cóipeanna",
+    "familyNotification": "Ag Cur do Theaghlach ar an Eolas",
+    "legalRequirements": "Ceanglais Dhlíthiúla le haghaidh {{jurisdiction}}",
+    "notarization": "Riachtanais Nótaireachta",
+    "notaryOptional": "Moltar nótaire ach níl sé riachtanach",
+    "notaryRequired": "Nótaire poiblí ag teastáil",
+    "numberOfCopies": "Líon Molta Cóipeanna",
+    "safeStorage": "Suíomhanna Stórála Slána",
+    "selfProving": "Mionnscríbhinn Féinchruthaithe",
+    "signingInstructions": "Treoracha Sínithe",
+    "signingOrder": "Ordú Sínithe Ceart",
+    "storageRecommendations": "Moltaí Stórála",
+    "subtitle": "Do uacht a dhéanamh ceangailteach ó thaobh an dlí de",
+    "title": "Riachtanais Fhorghníomhaithe Uachtanna",
+    "witnessCount": "{{count}} finnéithe ag teastáil",
+    "witnessInstructions": "Treoracha Finnéithe",
+    "witnessQualifications": "Cáilíochtaí Finnéithe",
+    "witnessRequirements": "Riachtanais Finnéithe"
   },
   "form": {
     "assetSelection": {
-      "allAssets": "Include All Current and Future Assets",
-      "assetCategories": "Asset Categories to Include",
-      "businessInterests": "Business Interests",
-      "excludedAssets": "Assets to Exclude",
-      "jointAssets": "Jointly Owned Assets",
-      "residualDescription": "All remaining assets not specifically mentioned elsewhere in this will",
-      "residualEstate": "Residual Estate",
-      "selectAssets": "Choose Assets to Include",
-      "specificAssets": "Select Specific Assets Only"
+      "allAssets": "Cuir na Sócmhainní Reatha agus Todhchaí go léir san áireamh",
+      "assetCategories": "Catagóirí Sócmhainní le hÁireamh",
+      "businessInterests": "Leasanna Gnó",
+      "excludedAssets": "Sócmhainní le hEisiamh",
+      "jointAssets": "Sócmhainní Comhúinéireachta",
+      "residualDescription": "Gach sócmhainn atá fágtha nach luaitear go sonrach in áit eile sa uacht seo",
+      "residualEstate": "Eastát Iarmharach",
+      "selectAssets": "Roghnaigh Sócmhainní le hÁireamh",
+      "specificAssets": "Roghnaigh Sócmhainní Sonracha Amháin"
     },
     "distribution": {
-      "addBeneficiary": "Add Additional Beneficiary",
-      "ageRestriction": "Age Requirement",
-      "allocation": "Inheritance Allocation",
-      "beneficiaryName": "Beneficiary's Full Name",
-      "conditions": "Conditions or Restrictions",
-      "contingentBeneficiary": "Contingent Beneficiary",
-      "percentage": "Percentage of Estate",
-      "primaryBeneficiary": "Primary Beneficiary",
-      "relationship": "Relationship to You",
-      "specificAmount": "Specific Dollar Amount",
-      "specificAsset": "Specific Asset or Property",
-      "trustProvision": "Trust Arrangement"
+      "addBeneficiary": "Cuir Tairbhí Breise leis",
+      "ageRestriction": "Riachtanas Aois",
+      "allocation": "Leithdháileadh Oidhreachta",
+      "beneficiaryName": "Ainm Iomlán an Tairbhí",
+      "conditions": "Coinníollacha nó Srianta",
+      "contingentBeneficiary": "Tairbhí Teagmhasach",
+      "percentage": "Céatadán den Eastát",
+      "primaryBeneficiary": "Príomhthairbhí",
+      "relationship": "Gaol leat",
+      "specificAmount": "Méid Dollar Sonrach",
+      "specificAsset": "Sócmhainn nó Maoin Shonrach",
+      "trustProvision": "Socrú Iontaobhais"
     },
     "executor": {
-      "alternateExecutor": "Alternate Executor",
-      "bondRequirement": "Bond Requirement",
-      "coExecutors": "Co-Executors",
-      "executorAddress": "Executor's Address",
-      "executorCompensation": "Executor Compensation",
-      "executorDuties": "Executor Responsibilities",
-      "executorInstructions": "Special Instructions for Executor",
-      "executorName": "Executor's Full Name",
-      "executorRelationship": "Relationship to You",
-      "primaryExecutor": "Primary Executor",
-      "specialPowers": "Special Powers Granted"
+      "alternateExecutor": "Seiceadóir Malartach",
+      "bondRequirement": "Riachtanas Bannaí",
+      "coExecutors": "Comh-Sheiceadóirí",
+      "executorAddress": "Seoladh an tSeiceadóra",
+      "executorCompensation": "Cúiteamh Seiceadóra",
+      "executorDuties": "Freagrachtaí an tSeiceadóra",
+      "executorInstructions": "Treoracha Speisialta don Seiceadóir",
+      "executorName": "Ainm Iomlán an tSeiceadóra",
+      "executorRelationship": "Gaol leat",
+      "primaryExecutor": "Príomh-Sheiceadóir",
+      "specialPowers": "Cumhachtaí Speisialta Deonaithe"
     },
     "guardianship": {
-      "backupGuardian": "Alternate Guardian",
-      "educationPreferences": "Education Preferences",
-      "guardianCompensation": "Guardian Compensation",
-      "guardianFor": "Guardian for {{childName}}",
-      "guardianInstructions": "Instructions for Guardian",
-      "guardianQualifications": "Guardian Qualifications",
-      "minorChildren": "Minor Children Requiring Guardianship",
-      "primaryGuardian": "Primary Guardian",
-      "religiousUpbringing": "Religious Upbringing Preferences"
+      "backupGuardian": "Caomhnóir Malartach",
+      "educationPreferences": "Roghanna Oideachais",
+      "guardianCompensation": "Cúiteamh Caomhnóra",
+      "guardianFor": "Caomhnóir do {{childName}}",
+      "guardianInstructions": "Treoracha don Chaomhnóir",
+      "guardianQualifications": "Cáilíochtaí Caomhnóra",
+      "minorChildren": "Leanaí Mionaoiseacha a bhfuil Caomhnóireacht ag teastáil uathu",
+      "primaryGuardian": "Príomh-Chaomhnóir",
+      "religiousUpbringing": "Roghanna Tógála Reiligiúnacha"
     },
     "personalInfo": {
-      "addChild": "Add Child",
-      "addressHelper": "Your primary residence address",
-      "childDateOfBirth": "Child's Date of Birth",
-      "childName": "Child's Full Name",
-      "childRelation": "Relationship to You",
-      "children": "Children and Dependents",
-      "currentAddress": "Current Legal Address",
-      "dateOfBirth": "Date of Birth",
-      "fullLegalName": "Complete Legal Name",
-      "fullLegalNameHelper": "Enter your name exactly as it appears on official documents",
-      "maritalStatus": "Marital Status",
-      "marriageDate": "Date of Marriage",
-      "placeOfBirth": "Place of Birth",
-      "previousWills": "Previous Wills",
-      "revokesPrevious": "This will revokes all previous wills",
-      "spouseName": "Spouse's Full Legal Name"
+      "addChild": "Cuir Leanbh leis",
+      "addressHelper": "Seoladh do phríomhchónaithe",
+      "childDateOfBirth": "Dáta Breithe an Linbh",
+      "childName": "Ainm Iomlán an Linbh",
+      "childRelation": "Gaol leat",
+      "children": "Leanaí agus Cleithiúnaithe",
+      "currentAddress": "Seoladh Dlíthiúil Reatha",
+      "dateOfBirth": "Dáta Breithe",
+      "fullLegalName": "Ainm Dlíthiúil Iomlán",
+      "fullLegalNameHelper": "Cuir isteach d'ainm díreach mar a fheictear é ar dhoiciméid oifigiúla",
+      "maritalStatus": "Stádas Pósta",
+      "marriageDate": "Dáta an Phósta",
+      "placeOfBirth": "Áit Bhreithe",
+      "previousWills": "Uachtanna Roimhe Seo",
+      "revokesPrevious": "Cúlghairmfidh an uacht seo gach uacht roimhe seo",
+      "spouseName": "Ainm Dlíthiúil Iomlán an Chéile"
     },
     "provisions": {
-      "burialCremation": "Burial or Cremation Preference",
-      "businessContinuation": "Business Continuation Plans",
-      "charitableBequests": "Charitable Donations",
-      "charityAmount": "Donation Amount",
-      "charityName": "Charitable Organization",
-      "digitalAssets": "Digital Asset Instructions",
-      "funeralInstructions": "Specific Funeral Instructions",
-      "funeralWishes": "Funeral and Burial Preferences",
-      "organDonation": "Organ Donation Wishes",
-      "personalMessages": "Personal Messages to Family",
-      "petCare": "Pet Care Arrangements",
-      "specialInstructions": "Special Instructions"
+      "burialCremation": "Rogha Adhlacadh nó Créamtha",
+      "businessContinuation": "Pleananna Leanúnachais Ghnó",
+      "charitableBequests": "Síntiúis Charthanachta",
+      "charityAmount": "Méid an Deonacháin",
+      "charityName": "Eagraíocht Charthanachta",
+      "digitalAssets": "Treoracha Sócmhainní Digiteacha",
+      "funeralInstructions": "Treoracha Sochraide Sonracha",
+      "funeralWishes": "Roghanna Sochraide agus Adhlacadh",
+      "organDonation": "Mianta Deonaithe Orgán",
+      "personalMessages": "Teachtaireachtaí Pearsanta chuig an Teaghlach",
+      "petCare": "Socruithe Cúraim Peataí",
+      "specialInstructions": "Treoracha Speisialta"
     }
   },
   "generator": {
-    "of": "[GA] Of",
-    "step": "[GA] Step"
+    "continueWill": "Lean ar aghaidh le hullmhú uachta",
+    "description": "Gin uacht chuimsitheach, bhailí ó thaobh dlí de, atá oiriúnaithe do riachtanais do dhlínse agus do riachtanais uathúla do theaghlaigh.",
+    "getStarted": "Tosaigh ag Cruthú Do Uachta",
+    "importance": "A chinntiú go bhfuil do mhianta doiciméadaithe go dleathach agus go bhfuil do theaghlach faoi chosaint",
+    "newWill": "Cruthaigh Uacht Nua",
+    "of": "De",
+    "professionalGuidance": "Treoir dhlíthiúil ghairmiúil molta le haghaidh eastáit chasta",
+    "step": "Céim",
+    "subtitle": "Cruthaigh uacht atá slán ó thaobh an dlí de le treoir ghairmiúil",
+    "title": "Gineadóir Uacht Deiridh & Tiomna",
+    "viewExisting": "Athbhreithniú ar an Uacht Reatha"
   },
   "legal": {
-    "consultLawyer": "Consult with Attorney",
-    "disclaimer": "Important Legal Disclaimer",
-    "estatePlanning": "Comprehensive Estate Planning",
-    "jurisdiction": "Legal Jurisdiction",
-    "lawsApply": "Laws of {{jurisdiction}} will apply",
-    "lawyerRecommended": "We strongly recommend consulting with a qualified attorney for complex estates",
-    "legalCompliance": "Legal Compliance Verification",
-    "notLegalAdvice": "This service does not constitute legal advice",
-    "probateProcess": "Probate Process Information",
-    "professionalGuidance": "Professional legal guidance is recommended",
-    "professionalReview": "Professional Legal Review",
-    "selectJurisdiction": "Please select your legal jurisdiction",
-    "taxImplications": "Tax Implications"
+    "consultLawyer": "Téigh i gcomhairle le hAturnae",
+    "disclaimer": "Séanadh Dlíthiúil Tábhachtach",
+    "estatePlanning": "Pleanáil Eastáit Chuimsitheach",
+    "jurisdiction": "Dlínse Dhlíthiúil",
+    "lawsApply": "Beidh dlíthe {{jurisdiction}} i bhfeidhm",
+    "lawyerRecommended": "Molaimid go láidir dul i gcomhairle le haturnae cáilithe le haghaidh eastáit chasta",
+    "legalCompliance": "Fíorú Comhlíontachta Dlíthiúla",
+    "notLegalAdvice": "Ní comhairle dlí atá sa tseirbhís seo",
+    "probateProcess": "Faisnéis faoin bPróiseas Probháide",
+    "professionalGuidance": "Moltar treoir dhlíthiúil ghairmiúil",
+    "professionalReview": "Athbhreithniú Dlíthiúil Gairmiúil",
+    "selectJurisdiction": "Roghnaigh do dhlínse dhlíthiúil le do thoil",
+    "taxImplications": "Impleachtaí Cánach"
   },
   "notifications": {
-    "consultationScheduled": "Legal consultation has been scheduled",
-    "documentShared": "Will has been shared with designated family members",
-    "executionComplete": "Will execution has been recorded",
-    "progressSaved": "Your progress has been saved",
-    "reminderSet": "Will review reminder has been set",
-    "willDeleted": "Will has been permanently deleted",
-    "willGenerated": "Your will has been successfully generated",
-    "willUpdated": "Will has been updated successfully"
+    "consultationScheduled": "Tá comhairliúchán dlí sceidealaithe",
+    "documentShared": "Tá an uacht roinnte le baill teaghlaigh ainmnithe",
+    "executionComplete": "Tá taifead déanta ar fhorghníomhú uachta",
+    "progressSaved": "Tá do dhul chun cinn sábháilte",
+    "willDeleted": "Scriosadh uacht go buan",
+    "willUpdated": "Tá Will nuashonraithe go rathúil"
   },
   "preview": {
-    "article": "ARTICLE {{number}}",
-    "draftWatermark": "DRAFT - NOT LEGALLY BINDING",
-    "executionInstructions": "EXECUTION INSTRUCTIONS",
-    "lastWillTestament": "LAST WILL AND TESTAMENT",
-    "of": "OF",
-    "pageNumber": "Page {{current}} of {{total}}",
-    "reviewCarefully": "Please review this document carefully before proceeding",
-    "section": "Section {{number}}",
-    "signatureSection": "SIGNATURE SECTION",
-    "subtitle": "Review your complete will before finalizing",
-    "title": "Will Document Preview",
-    "witnessClause": "WITNESS CLAUSE"
+    "article": "AIRTEAGAL {{number}}",
+    "draftWatermark": "DRÉACHT - NACH BHFUIL CEANGALACH Ó DHÁIL DHLEACHTACH",
+    "executionInstructions": "TREORACHA FORGHNÍOMHAITHE",
+    "lastWillTestament": "UACHT AGUS TEASTÁN DEIREANACH",
+    "of": "DE",
+    "pageNumber": "Leathanach {{current}} de {{total}}",
+    "reviewCarefully": "Athbhreithnigh an doiciméad seo go cúramach sula leanann tú ar aghaidh",
+    "section": "Roinn {{number}}",
+    "signatureSection": "AN ROINN SÍNITHE",
+    "subtitle": "Athbhreithnigh d’uacht iomlán sula ndéanann tú í a chríochnú",
+    "title": "Réamhamharc ar Dhoiciméad an Uachta",
+    "witnessClause": "CLÁSAL FINNÉ"
   },
   "status": {
-    "archived": "Archived Version",
-    "draft": "Draft in Progress",
-    "executed": "Legally Executed",
-    "generated": "Generated - Requires Execution",
-    "outdated": "Requires Update",
-    "underReview": "Under Professional Review"
+    "archived": "Leagan Cartlainne",
+    "draft": "Dréacht ar Siúl",
+    "executed": "Forghníomhaithe go Dleathach",
+    "generated": "Gineadh - Éilíonn Forghníomhú",
+    "outdated": "Nuashonrú ag Teastáil"
+  },
+  "policy": {
+    "duration": {
+      "session": "Seisiún",
+      "minutes": "{{count}} nóiméad",
+      "hours": "{{count}} uair an chloig",
+      "days": "{{count}} lá",
+      "months": "{{count}} míonna",
+      "years": "{{count}} bliain"
+    }
   },
   "steps": {
     "assets": {
-      "description": "Select which assets you wish to include in your will and how they should be distributed.",
-      "subtitle": "Your valuable possessions",
-      "title": "Asset Distribution"
+      "description": "Roghnaigh cé na sócmhainní is mian leat a áireamh i do uacht agus conas ba chóir iad a dháileadh.",
+      "subtitle": "Do shealúchais luachmhara",
+      "title": "Dáileadh Sócmhainní"
     },
     "beneficiaries": {
-      "description": "Designate who will receive your assets and in what proportions.",
-      "subtitle": "Your chosen recipients",
-      "title": "Beneficiary Designations"
+      "description": "Ainmnigh cé a gheobhaidh do shócmhainní agus i gcé na comhréireanna.",
+      "subtitle": "Do fhaighteoirí roghnaithe",
+      "title": "Ainmniúcháin Tairbhí"
     },
     "executor": {
-      "description": "Choose a responsible person to manage your estate and carry out your wishes.",
-      "subtitle": "Your estate representative",
-      "title": "Estate Executor"
+      "description": "Roghnaigh duine freagrach chun d’eastát a bhainistiú agus do mhianta a chur i gcrích.",
+      "subtitle": "Ionadaí d'eastáit",
+      "title": "Seiceadóir Eastáit"
     },
     "guardians": {
-      "description": "Appoint trusted individuals to care for minor children or dependents.",
-      "subtitle": "Care for your dependents",
-      "title": "Guardianship Appointments"
+      "description": "Ceap daoine iontaofa chun aire a thabhairt do leanaí mionaoiseacha nó do chleithiúnaithe.",
+      "subtitle": "Tabhair aire do do chleithiúnaithe",
+      "title": "Ceapacháin Chaomhnóireachta"
     },
     "personal": {
-      "description": "We require your complete legal information to ensure your will meets all legal requirements.",
-      "subtitle": "Your identifying information",
-      "title": "Personal Information"
+      "description": "Teastaíonn do chuid faisnéise dlíthiúla iomlán uainn chun a chinntiú go gcomhlíonann d'uacht na ceanglais dhlíthiúla go léir.",
+      "subtitle": "Do chuid faisnéise aitheantais",
+      "title": "Faisnéis Phearsanta"
     },
     "preferences": {
-      "description": "Include any special instructions, charitable bequests, or personal wishes.",
-      "subtitle": "Additional instructions",
-      "title": "Special Provisions"
+      "description": "Cuir aon treoracha speisialta, tiomnachtaí carthanúla, nó mianta pearsanta san áireamh.",
+      "subtitle": "Treoracha breise",
+      "title": "Forálacha Speisialta"
     },
     "review": {
-      "description": "Carefully review all details before generating your legal document.",
-      "subtitle": "Verify all information",
-      "title": "Final Review"
+      "description": "Déan athbhreithniú cúramach ar na sonraí go léir sula nginfidh tú do dhoiciméad dlíthiúil.",
+      "subtitle": "Fíoraigh an fhaisnéis go léir",
+      "title": "Athbhreithniú Deiridh"
     }
   },
   "validation": {
-    "jurisdictionRequired": "[GA] Jurisdiction required",
-    "requiredField": "[GA] Required field"
+    "addressRequired": "Tá do sheoladh dlíthiúil reatha riachtanach",
+    "allocationError": "Ní mór don leithdháileadh céatadáin iomlán a bheith cothrom le 100%",
+    "beneficiaryRequired": "Ní mór tairbhí amháin ar a laghad a shonrú",
+    "dobRequired": "Tá dáta breithe ag teastáil le haghaidh bailíocht dhlíthiúil",
+    "duplicateBeneficiary": "Tá an tairbhí seo curtha leis cheana féin",
+    "executorBeneficiaryConflict": "De ghnáth ba chóir go mbeadh an seiceadóir agus an príomhthairbhí ina ndaoine difriúla",
+    "executorRequired": "Ní mór seiceadóir amháin ar a laghad a ainmniú",
+    "guardianRequired": "Tá ainmniú caomhnóra ag teastáil do leanaí mionaoiseacha",
+    "invalidDate": "Cuir isteach dáta bailí le do thoil",
+    "invalidPercentage": "Ní mór don chéatadán a bheith idir 0 agus 100",
+    "jurisdictionRequired": "Dlínse riachtanach",
+    "requiredField": "Réimse riachtanach"
   },
   "will": {
-    "address": "Address",
-    "addressPlaceholder": "Address placeholder",
+    "address": "Seoladh",
+    "addressPlaceholder": "Áitchoinneálaí seolta",
     "allocation": {
-      "addBeneficiary": "Add beneficiary",
-      "description": "Description",
-      "generalEstate": "General estate",
-      "percentage": "Percentage",
+      "addBeneficiary": "Cuir tairbhí leis",
+      "description": "Cur síos",
+      "generalEstate": "Eastát ginearálta",
+      "percentage": "Céatadán",
       "tips": {
-        "tip1": "Tip1",
-        "tip2": "Tip2",
-        "tip3": "Tip3",
-        "title": "Title"
+        "tip1": "Leid1",
+        "tip2": "Leid2",
+        "tip3": "Leid3",
+        "title": "Teideal"
       },
-      "title": "Title",
-      "total": "Total"
+      "title": "Teideal",
+      "total": "Iomlán"
     },
     "beneficiaries": {
-      "addBeneficiary": "Add beneficiary",
-      "allocation": "Allocation",
-      "alternativeBeneficiary": "Alternative beneficiary",
-      "alternativePlaceholder": "Alternative placeholder",
-      "beneficiaryNumber": "Beneficiary number",
-      "currentAllocation": "Current allocation",
-      "description": "Description",
-      "identification": "Identification",
-      "identificationPlaceholder": "Identification placeholder",
-      "importantNotes": "Important notes",
-      "name": "Name",
-      "noBeneficiaries": "No beneficiaries",
-      "note1": "Note1",
-      "note2": "Note2",
-      "note3": "Note3",
-      "ofEstate": "Of estate",
-      "title": "Title"
+      "addBeneficiary": "Cuir tairbhí leis",
+      "allocation": "Leithdháileadh",
+      "alternativeBeneficiary": "Tairbhí malartach",
+      "alternativePlaceholder": "Coinnitheoir áite malartach",
+      "beneficiaryNumber": "Uimhir tairbhí",
+      "currentAllocation": "Leithdháileadh reatha",
+      "description": "Cur síos",
+      "identification": "Aitheantas",
+      "identificationPlaceholder": "Áitchoinneálaí aitheantais",
+      "importantNotes": "Nótaí tábhachtacha",
+      "name": "Ainm",
+      "noBeneficiaries": "Gan aon tairbhithe",
+      "note1": "Nóta1",
+      "note2": "Nóta2",
+      "note3": "Nóta3",
+      "ofEstate": "De eastát",
+      "title": "Teideal"
     },
     "beneficiary": {
-      "name": "Name",
-      "namePlaceholder": "Name placeholder",
-      "relationship": "Relationship",
-      "relationshipPlaceholder": "Relationship placeholder"
+      "name": "Ainm",
+      "namePlaceholder": "Ainmneoir áite",
+      "relationship": "Gaol",
+      "relationshipPlaceholder": "Coinnitheoir áite caidrimh"
     },
-    "birthDate": "Birth date",
-    "birthDatePlaceholder": "Birth date placeholder",
+    "birthDate": "Dáta breithe",
+    "birthDatePlaceholder": "Coinnitheoir áite dáta breithe",
     "buttons": {
-      "saveWillInfo": "Save will info",
-      "saving": "Saving"
+      "saveWillInfo": "Sábháil eolas uachta",
+      "saving": "Sábháil"
     },
-    "countryRequirements": "Country requirements",
+    "countryRequirements": "Riachtanais tíre",
     "descriptions": {
-      "executorDescription": "Executor description",
-      "physicalLocationDescription": "Physical location description",
-      "statusDescription": "Status description"
+      "executorDescription": "Cur síos ar an Seiceadóir",
+      "physicalLocationDescription": "Cur síos ar an suíomh fisiciúil",
+      "statusDescription": "Cur síos ar an stádas"
     },
     "executor": {
-      "addAlternative": "Add alternative",
-      "address": "Address",
-      "addressPlaceholder": "Address placeholder",
-      "alternative": "Alternative",
-      "alternativeDescription": "Alternative description",
-      "description": "Description",
-      "name": "Name",
-      "namePlaceholder": "Name placeholder",
-      "phone": "Phone",
-      "phonePlaceholder": "Phone placeholder",
-      "primary": "Primary",
-      "relationship": "Relationship",
-      "relationshipPlaceholder": "Relationship placeholder",
-      "responsibilities": "Responsibilities",
-      "responsibility1": "Responsibility1",
-      "responsibility2": "Responsibility2",
-      "responsibility3": "Responsibility3",
-      "responsibility4": "Responsibility4",
-      "title": "Title"
+      "addAlternative": "Cuir rogha eile leis",
+      "address": "Seoladh",
+      "addressPlaceholder": "Áitchoinneálaí seolta",
+      "alternative": "Rogha eile",
+      "alternativeDescription": "Cur síos malartach",
+      "description": "Cur síos",
+      "name": "Ainm",
+      "namePlaceholder": "Ainmneoir áite",
+      "phone": "Fón",
+      "phonePlaceholder": "Coinnitheoir áite gutháin",
+      "primary": "Príomhúil",
+      "relationship": "Gaol",
+      "relationshipPlaceholder": "Coinnitheoir áite caidrimh",
+      "responsibilities": "Freagrachtaí",
+      "responsibility1": "Freagracht1",
+      "responsibility2": "Freagracht2",
+      "responsibility3": "Freagracht3",
+      "responsibility4": "Freagracht4",
+      "title": "Teideal"
     },
     "fields": {
-      "additionalNotes": "Additional notes",
-      "currentStatus": "Current status",
-      "executorContact": "Executor contact",
-      "physicalLocation": "Physical location"
+      "additionalNotes": "Nótaí breise",
+      "currentStatus": "Stádas reatha",
+      "executorContact": "Teagmháil Seiceadóra",
+      "physicalLocation": "Suíomh fisiciúil"
     },
     "legalReview": {
-      "button": "Button",
-      "description": "Description",
-      "title": "Title"
+      "button": "Cnaipe",
+      "description": "Cur síos",
+      "title": "Teideal"
     },
-    "name": "Name",
-    "namePlaceholder": "Name placeholder",
+    "name": "Ainm",
+    "namePlaceholder": "Ainmneoir áite",
     "options": {
-      "noContactSelected": "No contact selected"
+      "noContactSelected": "Níl aon teagmhálaí roghnaithe"
     },
     "placeholders": {
-      "additionalNotes": "Additional notes",
-      "physicalLocation": "Physical location",
-      "selectContact": "Select contact"
+      "additionalNotes": "Nótaí breise",
+      "physicalLocation": "Suíomh fisiciúil",
+      "selectContact": "Roghnaigh teagmhálaí"
     },
     "preview": {
-      "address": "Address",
-      "alternative": "Alternative",
-      "alternativeExecutor": "Alternative executor",
-      "date": "Date",
-      "description": "Description",
-      "executor": "Executor",
-      "generatePDF": "Generate p d f",
-      "legalRequirements": "Legal requirements",
-      "name": "Name",
-      "ofEstate": "Of estate",
-      "place": "Place",
-      "print": "Print",
-      "signature": "Signature",
-      "title": "Title",
-      "witnesses": "Witnesses"
+      "address": "Seoladh",
+      "alternative": "Rogha eile",
+      "alternativeExecutor": "Seiceadóir malartach",
+      "date": "Dáta",
+      "description": "Cur síos",
+      "executor": "Seiceadóir",
+      "generatePDF": "Gin p d f",
+      "legalRequirements": "Ceanglais dhlíthiúla",
+      "name": "Ainm",
+      "ofEstate": "De eastát",
+      "place": "Áit",
+      "print": "Priontáil",
+      "signature": "Síniú",
+      "title": "Teideal",
+      "witnesses": "Finnéithe"
     },
     "requirements": {
-      "handwriting": "Handwriting",
-      "notarization": "Notarization",
-      "typed": "Typed",
-      "witnesses": "Witnesses"
+      "handwriting": "Lámhscríbhneoireacht",
+      "notarization": "Nótaireacht",
+      "typed": "Clóscríofa",
+      "witnesses": "Finnéithe"
     },
-    "selectCountry": "Select country",
-    "selectedCountryDetails": "Selected country details",
+    "selectCountry": "Roghnaigh tír",
+    "selectedCountryDetails": "Sonraí na tíre roghnaithe",
     "status": {
-      "draft": "Draft",
-      "notarized": "Notarized",
-      "stored": "Stored",
-      "updated": "Updated"
+      "draft": "Dréacht",
+      "notarized": "Nótaraithe",
+      "stored": "Stóráilte",
+      "updated": "Nuashonraithe"
     },
-    "testatorInfo": "Testator info",
+    "testatorInfo": "Eolas faoin dtástálaí",
     "validation": {
-      "allocation100": "Allocation100"
+      "allocation100": "Leithdháileadh100"
     },
     "willPreview": {
       "_2": "2",
-      "critical_execution_instruction_3": "Critical execution instruction 3",
-      "professional_review_4": "Professional review 4",
-      "provided_by_certified_legal_pa_5": "Provided by certified legal pa 5"
+      "critical_execution_instruction_3": "Treoir fhorghníomhaithe ríthábhachtach 3",
+      "professional_review_4": "Athbhreithniú gairmiúil 4",
+      "provided_by_certified_legal_pa_5": "Arna sholáthar ag aturnae dlíthiúil deimhnithe 5"
     }
   },
   "willGenerator": {
-    "changeCountry": "Change country",
-    "confirmCountry": "Confirm country",
-    "confirmSigned": "Confirm signed",
+    "changeCountry": "Athraigh tír",
+    "confirmCountry": "Deimhnigh an tír",
+    "confirmSigned": "Deimhnigh sínithe",
     "console": {
-      "willGenerationCompleted": "Will generation completed"
+      "willGenerationCompleted": "Giniúint uachta críochnaithe"
     },
     "countries": {
       "AL": "A l",
-      "AT": "A t",
+      "AT": "Ag",
       "BA": "B a",
       "BE": "B e",
       "BG": "B g",
@@ -363,273 +397,245 @@
       "CY": "C y",
       "CZ": "C z",
       "DE": "D e",
-      "DK": "D k",
+      "DK": "Dk",
       "EE": "E e",
       "ES": "E s",
       "FI": "F i",
-      "FR": "F r",
+      "FR": "A. F.",
       "GB": "G b",
       "GR": "G r",
       "HR": "H r",
-      "HU": "H u",
-      "IE": "I e",
-      "IS": "I s",
-      "IT": "I t",
+      "HU": "Hú",
+      "IE": "Táim",
+      "IS": "Táim",
+      "IT": "Táim",
       "LI": "L i",
-      "LT": "L t",
-      "LU": "L u",
+      "LT": "Lt",
+      "LU": "Lú",
       "LV": "L v",
       "MD": "M d",
-      "ME": "M e",
+      "ME": "Mé",
       "MK": "M k",
       "MT": "M t",
       "NL": "N l",
-      "NO": "N o",
+      "NO": "Níl",
       "PL": "P l",
-      "PT": "P t",
-      "RO": "R o",
+      "PT": "Pt",
+      "RO": "Ró",
       "RS": "R s",
       "SE": "S e",
       "SI": "S i",
       "SK": "S k",
-      "UA": "U a"
+      "UA": "Tusa"
     },
-    "executionInstructions": "Execution instructions",
-    "failed_to_load_will_template_2": "Failed to load will template 2",
-    "finalizeUpload": "Finalize upload",
-    "fullName": "Full name",
-    "no_template_found_for_this_jur_1": "No template found for this jur 1",
-    "please_confirm_that_you_have_s_3": "Please confirm that you have s 3",
-    "select_a_country_4": "Select a country 4",
+    "executionInstructions": "Treoracha forghníomhaithe",
+    "failed_to_load_will_template_2": "Theip ar theimpléad uachta 2 a lódáil",
+    "finalizeUpload": "Críochnaigh an t-uaslódáil",
+    "fullName": "Ainm iomlán",
+    "no_template_found_for_this_jur_1": "Níor aimsíodh aon teimpléad don jur 1 seo",
+    "please_confirm_that_you_have_s_3": "Deimhnigh le do thoil go bhfuil s3 agat",
+    "select_a_country_4": "Roghnaigh tír 4",
     "steps": {
-      "confirmJurisdiction": "Confirm jurisdiction",
-      "executorBeneficiaries": "Executor beneficiaries",
-      "personalInformation": "Personal information",
-      "reviewGenerate": "Review generate",
-      "signConfirm": "Sign confirm"
+      "confirmJurisdiction": "Deimhnigh dlínse",
+      "executorBeneficiaries": "Tairbhithe seiceadóra",
+      "personalInformation": "Faisnéis phearsanta",
+      "reviewGenerate": "Gin athbhreithniú",
+      "signConfirm": "Sínigh deimhniú"
     }
   },
   "willSync": {
-    "approve": "Approve",
-    "autoApplied": "Auto applied",
+    "approve": "Ceadaigh",
+    "autoApplied": "Uathoibríoch curtha i bhfeidhm",
     "changes": {
-      "allocationsModified": "Allocations modified",
-      "assetsAdded": "Assets added",
-      "beneficiariesRemoved": "Beneficiaries removed",
-      "noChanges": "No changes"
+      "allocationsModified": "Leithdháiltí modhnaithe",
+      "assetsAdded": "Sócmhainní curtha leis",
+      "beneficiariesRemoved": "Tairbhithe bainte",
+      "noChanges": "Gan aon athruithe"
     },
-    "reject": "Reject",
-    "viewChanges": "View changes"
+    "reject": "Diúltaigh",
+    "viewChanges": "Féach ar athruithe"
   },
   "willSyncSettings": {
-    "autoSync": "Auto sync",
-    "autoSyncDescription": "Auto sync description",
-    "frequencyDaily": "Frequency daily",
-    "frequencyImmediate": "Frequency immediate",
-    "frequencyWeekly": "Frequency weekly",
-    "generalDescription": "General description",
-    "generalSettings": "General settings",
-    "requireApproval": "Require approval",
-    "requireApprovalDescription": "Require approval description",
-    "saveError": "Save error",
-    "saved": "Saved",
-    "syncFrequency": "Sync frequency",
-    "triggerDescription": "Trigger description",
-    "triggerSettings": "Trigger settings"
+    "autoSync": "Sioncrónú uathoibríoch",
+    "autoSyncDescription": "Cur síos ar shioncrónú uathoibríoch",
+    "frequencyDaily": "Minicíocht laethúil",
+    "frequencyImmediate": "Minicíocht láithreach",
+    "frequencyWeekly": "Minicíocht sheachtainiúil",
+    "generalDescription": "Cur síos ginearálta",
+    "generalSettings": "Socruithe ginearálta",
+    "requireApproval": "Éiligh ceadú",
+    "requireApprovalDescription": "Cur síos ar cheadú a theastaíonn",
+    "saveError": "Earráid shábháilte",
+    "saved": "Sábháilte",
+    "syncFrequency": "Minicíocht sioncrónaithe",
+    "triggerDescription": "Cur síos ar an spreagthóir",
+    "triggerSettings": "Socruithe spreagthóra"
   },
   "willVersion": {
-    "added": "Added",
-    "compareDiff": "Compare diff",
-    "comparePrompt": "Compare prompt",
-    "current": "Current",
-    "description": "Description",
-    "modified": "Modified",
-    "removed": "Removed",
-    "restore": "Restore",
-    "title": "Title",
-    "versionNumber": "Version number"
+    "added": "Cuireadh leis",
+    "compareDiff": "Déan comparáid idir an difríocht",
+    "comparePrompt": "Déan comparáid idir leid",
+    "current": "Reatha",
+    "description": "Cur síos",
+    "modified": "Modhnaithe",
+    "removed": "Bainte",
+    "restore": "Athchóirigh",
+    "title": "Teideal",
+    "versionNumber": "Uimhir leagan"
   },
   "disclaimers": {
-    "general": "LegacyGuard provides tools and guidance for estate planning but does not provide legal advice. For complex estates or specific legal questions, please consult with a qualified attorney in your jurisdiction.",
-    "willGenerator": "The will generator creates documents based on information you provide. While designed to meet legal requirements, we strongly recommend having any generated will reviewed by a qualified attorney before execution.",
-    "jurisdiction": "Legal requirements vary by jurisdiction. Ensure your documents comply with the laws in your area.",
-    "notLegalAdvice": "This service does not constitute legal advice and should not be relied upon as such.",
-    "professionalReview": "For complex estates, business interests, or unique family situations, professional legal review is strongly recommended."
+    "general": "Cuireann LegacyGuard uirlisí agus treoir ar fáil maidir le pleanáil eastáit ach ní sholáthraíonn sé comhairle dlí. I gcás eastáit chasta nó ceisteanna dlí sonracha, téigh i gcomhairle le haturnae cáilithe i do dhlínse.",
+    "willGenerator": "Cruthaíonn an gineadóir uachta doiciméid bunaithe ar an bhfaisnéis a sholáthraíonn tú. Cé go bhfuil sé deartha chun freastal ar riachtanais dhlíthiúla, molaimid go láidir go ndéanfadh aturnae cáilithe athbhreithniú ar aon uacht a ghintear sula ndéantar í a fhorghníomhú.",
+    "jurisdiction": "Athraíonn ceanglais dhlíthiúla de réir dlínse. Cinntigh go gcomhlíonann do dhoiciméid na dlíthe i do cheantar.",
+    "notLegalAdvice": "Ní comhairle dhlíthiúil í an tseirbhís seo agus níor cheart brath uirthi mar sin.",
+    "professionalReview": "I gcás eastát casta, leasanna gnó, nó cásanna teaghlaigh uathúla, moltar go láidir athbhreithniú dlíthiúil gairmiúil a dhéanamh."
   },
   "terms": {
-    "serviceTerms": "Terms of Service",
-    "privacyPolicy": "Privacy Policy",
-    "dataProcessing": "Data Processing Agreement",
-    "userAgreement": "User Agreement",
-    "acceptanceRequired": "By using LegacyGuard, you agree to our Terms of Service and Privacy Policy.",
-    "lastUpdated": "Last updated: {{date}}",
-    "effectiveDate": "Effective date: {{date}}"
+    "serviceTerms": "Téarmaí Seirbhíse",
+    "privacyPolicy": "Polasaí Príobháideachais",
+    "dataProcessing": "Comhaontú Próiseála Sonraí",
+    "userAgreement": "Comhaontú Úsáideora",
+    "acceptanceRequired": "Trí LegacyGuard a úsáid, aontaíonn tú lenár dTéarmaí Seirbhíse agus lenár mBeartas Príobháideachais.",
+    "lastUpdated": "Nuashonraithe go deireanach: {{date}}",
+    "effectiveDate": "Dáta éifeachtach: {{date}}"
   },
   "compliance": {
-    "dataProtection": "Your data is protected in compliance with applicable data protection laws including GDPR and CCPA.",
-    "encryption": "All sensitive information is encrypted using industry-standard encryption methods.",
-    "retention": "Data retention policies are designed to protect your privacy while ensuring your family can access important information when needed.",
-    "access": "You have the right to access, modify, or delete your personal information at any time.",
-    "portability": "You can export your data in standard formats for use with other services."
+    "dataProtection": "Tá do shonraí cosanta i gcomhréir leis na dlíthe cosanta sonraí is infheidhme, lena n-áirítear GDPR agus CCPA.",
+    "encryption": "Déantar gach faisnéis íogair a chriptiú ag baint úsáide as modhanna criptithe caighdeánacha tionscail.",
+    "retention": "Tá beartais choinneála sonraí deartha chun do phríobháideacht a chosaint agus a chinntiú ag an am céanna gur féidir le do theaghlach rochtain a fháil ar fhaisnéis thábhachtach nuair is gá.",
+    "access": "Tá sé de cheart agat rochtain a fháil ar do chuid faisnéise pearsanta, í a mhodhnú nó a scriosadh tráth ar bith.",
+    "portability": "Is féidir leat do shonraí a onnmhairiú i bhformáidí caighdeánacha le húsáid le seirbhísí eile."
   },
   "executionRequirements": {
-    "witnessRequirements": "Witness Requirements for {{jurisdiction}}",
-    "notaryRequirements": "Notarization Requirements",
-    "signingInstructions": "Proper Signing Instructions",
-    "storageGuidelines": "Secure Storage Guidelines",
-    "legalCompliance": "Legal Compliance Verification"
+    "witnessRequirements": "Riachtanais Finnéithe le haghaidh {{jurisdiction}}",
+    "notaryRequirements": "Riachtanais Nótaireachta",
+    "signingInstructions": "Treoracha Sínithe Cearta",
+    "storageGuidelines": "Treoirlínte Stórála Slán",
+    "legalCompliance": "Fíorú Comhlíontachta Dlíthiúla"
   },
   "cookiePolicy": {
     "cookieTypes": {
-      "analytics": "Analytics cookies help us understand how visitors interact with our website.",
-      "essential": "Essential cookies are necessary for the website to function properly.",
-      "marketing": "Marketing cookies are used to track visitors across websites to display relevant advertisements."
+      "analytics": "Cuidíonn fianáin anailísíochta linn tuiscint a fháil ar an gcaoi a n-idirghníomhaíonn cuairteoirí lenár suíomh Gréasáin.",
+      "essential": "Tá fianáin riachtanacha riachtanach chun go bhfeidhmeoidh an suíomh Gréasáin i gceart.",
+      "marketing": "Úsáidtear fianáin mhargaíochta chun cuairteoirí ar fud suíomhanna gréasáin a rianú chun fógraí ábhartha a thaispeáint."
     },
-    "howWeUseCookies": "We use cookies to improve your experience, analyze site usage, and provide personalized content.",
-    "introduction": "This Cookie Policy explains how LegacyGuard uses cookies and similar technologies.",
-    "manageCookies": "You can manage your cookie preferences through your browser settings or our cookie preference center.",
-    "title": "Title",
-    "whatAreCookies": "Cookies are small text files that are stored on your device when you visit our website."
+    "howWeUseCookies": "Úsáidimid fianáin chun d’eispéireas a fheabhsú, úsáid an tsuímh a anailísiú, agus ábhar pearsantaithe a sholáthar.",
+    "introduction": "Míníonn an Polasaí Fianán seo conas a úsáideann LegacyGuard fianáin agus teicneolaíochtaí comhchosúla.",
+    "manageCookies": "Is féidir leat do chuid sainroghanna fianán a bhainistiú trí shocruithe do bhrabhsálaí nó ár n-ionad sainroghanna fianán.",
+    "title": "Teideal",
+    "whatAreCookies": "Is comhaid bheaga téacs iad fianáin a stóráiltear ar do ghléas nuair a thugann tú cuairt ar ár suíomh Gréasáin."
   },
   "header": {
-    "subtitle": "Subtitle",
-    "title": "Title"
+    "title": "Teideal"
   },
   "hero": {
-    "headline": "Headline",
-    "subheadline": "Subheadline"
-  },
-  "privacyPolicy": {
-    "introduction": "This Privacy Policy describes how LegacyGuard collects, uses, and protects your personal information.",
-    "lastUpdated": "Last updated: {{date}}",
-    "sections": {
-      "dataSecurity": {
-        "content": "We implement appropriate security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.",
-        "title": "Data Security"
-      },
-      "informationCollection": {
-        "content": "We collect information you provide directly to us, such as when you create an account, use our services, or contact us for support.",
-        "title": "Information We Collect"
-      },
-      "informationSharing": {
-        "content": "We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except as described in this policy.",
-        "title": "Information Sharing"
-      },
-      "informationUse": {
-        "content": "We use your information to provide, maintain, and improve our services, communicate with you, and ensure the security of your account.",
-        "title": "How We Use Your Information"
-      },
-      "yourRights": {
-        "content": "You have the right to access, update, or delete your personal information. You may also opt out of certain communications from us.",
-        "title": "Your Rights"
-      }
-    },
-    "title": "Privacy Policy"
+    "headline": "Ceannlíne",
+    "subheadline": "Fotheideal"
   },
   "termsOfService": {
-    "effectiveDate": "Effective date: {{date}}",
-    "introduction": "These Terms of Service govern your use of LegacyGuard's family protection platform and services.",
-    "lastUpdated": "Last updated: {{date}}",
+    "effectiveDate": "Dáta éifeachtach: {{date}}",
+    "introduction": "Rialaíonn na Téarmaí Seirbhíse seo d’úsáid ardán agus seirbhísí cosanta teaghlaigh LegacyGuard.",
+    "lastUpdated": "Nuashonraithe go deireanach: {{date}}",
     "sections": {
       "acceptance": {
-        "content": "By accessing or using LegacyGuard, you agree to be bound by these Terms of Service and all applicable laws and regulations.",
-        "title": "Acceptance of Terms"
+        "content": "Trí rochtain a fháil ar LegacyGuard nó trí úsáid a bhaint as, aontaíonn tú a bheith faoi cheangal ag na Téarmaí Seirbhíse seo agus ag na dlíthe agus na rialacháin uile is infheidhme.",
+        "title": "Glacadh le Téarmaí"
       },
       "description": {
-        "content": "LegacyGuard provides digital tools and services to help individuals organize their important information for family protection purposes.",
-        "title": "Service Description"
+        "content": "Cuireann LegacyGuard uirlisí agus seirbhísí digiteacha ar fáil chun cabhrú le daoine aonair a gcuid faisnéise tábhachtaí a eagrú chun críocha cosaint teaghlaigh.",
+        "title": "Cur Síos ar an tSeirbhís"
       },
       "limitations": {
-        "content": "LegacyGuard provides tools and guidance but does not provide legal advice. We recommend consulting with qualified professionals for complex legal matters.",
-        "title": "Limitations of Liability"
+        "content": "Cuireann LegacyGuard uirlisí agus treoir ar fáil ach ní sholáthraíonn sé comhairle dlí. Molaimid dul i gcomhairle le gairmithe cáilithe i gcás cúrsaí dlí casta.",
+        "title": "Teorainneacha Dliteanais"
       },
       "privacy": {
-        "content": "Your privacy is important to us. Please review our Privacy Policy to understand how we collect, use, and protect your information.",
-        "title": "Privacy and Data Protection"
+        "content": "Tá do phríobháideacht tábhachtach dúinn. Athbhreithnigh ár mBeartas Príobháideachta le do thoil chun tuiscint a fháil ar an gcaoi a mbailímid, a n-úsáidimid agus a chosnaímid d’fhaisnéis.",
+        "title": "Príobháideacht agus Cosaint Sonraí"
       },
       "userResponsibilities": {
-        "content": "You are responsible for maintaining the confidentiality of your account information and for all activities that occur under your account.",
-        "title": "User Responsibilities"
+        "content": "Tá tú freagrach as rúndacht fhaisnéis do chuntais a choinneáil agus as gach gníomhaíocht a tharlaíonn faoi do chuntas.",
+        "title": "Freagrachtaí Úsáideora"
       }
     },
-    "title": "Terms of Service"
+    "title": "Téarmaí Seirbhíse"
   },
   "cookies": {
     "policy": {
       "analytics": {
-        "description": "Description",
+        "description": "Cur síos",
         "examples": {
           "ga": "Ga",
           "gid": "Gid",
-          "session": "Session"
+          "session": "Seisiún"
         },
-        "purpose": "Purpose",
-        "title": "Title"
+        "purpose": "Cuspóir",
+        "title": "Teideal"
       },
       "categories": {
-        "title": "Title"
+        "title": "Teideal"
       },
       "contact": {
-        "address": "Address",
-        "addressDetails": "Address details",
-        "description": "Description",
-        "email": "Email",
-        "title": "Title"
+        "address": "Seoladh",
+        "addressDetails": "Sonraí seolta",
+        "description": "Cur síos",
+        "email": "Ríomhphost",
+        "title": "Teideal"
       },
-      "examples": "Examples",
-      "lastUpdated": "Last updated",
+      "examples": "Samplaí",
+      "lastUpdated": "Nuashonraithe go deireanach",
       "manage": {
-        "title": "Title"
+        "title": "Teideal"
       },
       "marketing": {
-        "description": "Description",
+        "description": "Cur síos",
         "examples": {
           "facebook": "Facebook",
           "google": "Google"
         },
-        "purpose": "Purpose",
-        "title": "Title"
+        "purpose": "Cuspóir",
+        "title": "Teideal"
       },
       "necessary": {
-        "description": "Description",
+        "description": "Cur síos",
         "examples": {
-          "auth": "Auth",
-          "consent": "Consent",
+          "auth": "Údarú",
+          "consent": "Toiliú",
           "csrf": "Csrf",
-          "session": "Session"
+          "session": "Seisiún"
         },
-        "purpose": "Purpose",
-        "title": "Title"
+        "purpose": "Cuspóir",
+        "title": "Teideal"
       },
       "overview": {
-        "intro": "Intro",
-        "point1": "Point1",
-        "point2": "Point2",
-        "point3": "Point3",
-        "point4": "Point4",
-        "title": "Title"
+        "intro": "Réamhrá",
+        "point1": "Pointe1",
+        "point2": "Pointe2",
+        "point3": "Pointe3",
+        "point4": "Pointe4",
+        "title": "Teideal"
       },
       "preferences": {
-        "description": "Description",
+        "description": "Cur síos",
         "examples": {
-          "language": "Language",
-          "theme": "Theme",
-          "ui": "Ui"
+          "language": "Teanga",
+          "theme": "Téama",
+          "ui": "Comhéadan Úsáideora"
         },
-        "purpose": "Purpose",
-        "title": "Title"
+        "purpose": "Cuspóir",
+        "title": "Teideal"
       },
-      "purpose": "Purpose",
-      "required": "Required",
-      "subtitle": "Subtitle",
-      "title": "Title",
+      "purpose": "Cuspóir",
+      "required": "Riachtanach",
+      "subtitle": "Fotheideal",
+      "title": "Teideal",
       "yourRights": {
-        "description": "Description",
-        "right1": "Right1",
-        "right2": "Right2",
-        "right3": "Right3",
-        "right4": "Right4",
-        "title": "Title"
+        "description": "Cur síos",
+        "right1": "Deas1",
+        "right2": "Deas2",
+        "right3": "Deas3",
+        "right4": "Deas4",
+        "title": "Teideal"
       }
     }
   }

@@ -101,8 +101,10 @@ const ProfessionalProgress: React.FC<ProfessionalProgressProps> = ({
   const milestones: Milestone[] = [
     {
       id: 'first-document',
-      title: t('dashboard:respectful.milestones.firstDocument.title'),
-      description: t('dashboard:respectful.milestones.firstDocument.description'),
+      // TODO: Fix missing translation key - dashboard-main:respectful.milestones.firstDocument.title
+      title: 'First Document',
+      // TODO: Fix missing translation key - dashboard-main:respectful.milestones.firstDocument.description
+      description: 'Upload your first important document',
       tasksRequired: 1,
       icon: <FileText className="w-5 h-5" />,
       achieved: completedTasks >= 1,
@@ -110,8 +112,10 @@ const ProfessionalProgress: React.FC<ProfessionalProgressProps> = ({
     },
     {
       id: 'essential-protection',
-      title: t('dashboard:respectful.milestones.essentialProtection.title'),
-      description: t('dashboard:respectful.milestones.essentialProtection.description'),
+      // TODO: Fix missing translation key - dashboard-main:respectful.milestones.essentialProtection.title
+      title: 'Essential Protection',
+      // TODO: Fix missing translation key - dashboard-main:respectful.milestones.essentialProtection.description
+      description: 'Basic security measures in place',
       tasksRequired: 5,
       icon: <Shield className="w-5 h-5" />,
       achieved: completedTasks >= 5,
@@ -119,8 +123,10 @@ const ProfessionalProgress: React.FC<ProfessionalProgressProps> = ({
     },
     {
       id: 'family-prepared',
-      title: t('dashboard:respectful.milestones.familyPrepared.title'),
-      description: t('dashboard:respectful.milestones.familyPrepared.description'),
+      // TODO: Fix missing translation key - dashboard-main:respectful.milestones.familyPrepared.title
+      title: 'Family Prepared',
+      // TODO: Fix missing translation key - dashboard-main:respectful.milestones.familyPrepared.description
+      description: 'Your family is well-prepared',
       tasksRequired: 10,
       icon: <Heart className="w-5 h-5" />,
       achieved: completedTasks >= 10,
@@ -128,8 +134,10 @@ const ProfessionalProgress: React.FC<ProfessionalProgressProps> = ({
     },
     {
       id: 'comprehensive-security',
-      title: t('dashboard:respectful.milestones.comprehensiveSecurity.title'),
-      description: t('dashboard:respectful.milestones.comprehensiveSecurity.description'),
+      // TODO: Fix missing translation key - dashboard-main:respectful.milestones.comprehensiveSecurity.title
+      title: 'Comprehensive Security',
+      // TODO: Fix missing translation key - dashboard-main:respectful.milestones.comprehensiveSecurity.description
+      description: 'Full protection achieved',
       tasksRequired: 20,
       icon: <Award className="w-5 h-5" />,
       achieved: completedTasks >= 20,
@@ -145,33 +153,33 @@ const ProfessionalProgress: React.FC<ProfessionalProgressProps> = ({
     {
       type: 'progress' as const,
       title: completedTasks === 0 
-        ? t('dashboard:respectful.insights.readyToStart')
+        ? 'Ready to Start'
         : completedTasks < 5
-        ? t('dashboard:respectful.insights.greatStart')
+        ? 'Great Start!'
         : completedTasks < 10
-        ? t('dashboard:respectful.insights.makingProgress')
-        : t('dashboard:respectful.insights.wellProtected'),
+        ? 'Making Progress'
+        : 'Well Protected',
       description: completedTasks === 0
-        ? t('dashboard:respectful.insights.firstStepDescription')
-        : t('dashboard:respectful.insights.progressDescription', { count: completedTasks }),
+        ? 'Take your first step towards security'
+        : `You've completed ${completedTasks} tasks`,
       icon: <TrendingUp className="w-5 h-5 text-green-600" />
     },
     {
       type: 'time' as const,
-      title: t('dashboard:respectful.insights.timeInvestment'),
+      title: 'Time Investment',
       description: timeSaved > 0 
-        ? t('dashboard:respectful.insights.timeSavedDescription', { minutes: timeSaved })
-        : t('dashboard:respectful.insights.quickStartDescription'),
+        ? `${timeSaved} minutes invested in your security`
+        : 'Quick tasks to get started',
       icon: <Clock className="w-5 h-5 text-blue-600" />
     },
     {
       type: 'focus' as const,
-      title: t('dashboard:respectful.insights.suggestedFocus'),
+      title: 'Suggested Focus',
       description: tasksByPriority.immediate?.filter(t => !t.completed).length > 0
-        ? t('dashboard:respectful.insights.immediatePriority')
+        ? 'Focus on immediate priority tasks'
         : tasksByPriority.high?.filter(t => !t.completed).length > 0
-        ? t('dashboard:respectful.insights.highPriority')
-        : t('dashboard:respectful.insights.steadyProgress'),
+        ? 'Complete high priority tasks next'
+        : 'Continue with steady progress',
       icon: <Target className="w-5 h-5 text-purple-600" />
     }
   ];
@@ -179,31 +187,33 @@ const ProfessionalProgress: React.FC<ProfessionalProgressProps> = ({
   // Get greeting based on time of day and progress
   const getGreeting = () => {
     const hour = new Date().getHours();
-    const name = userName || t('dashboard:respectful.defaultName');
+    const name = userName || 'there';
     
     if (completedTasks === 0) {
-      return t('dashboard:respectful.greetings.welcome', { name });
+      return `Welcome, ${name}!`;
     } else if (hour < 12) {
-      return t('dashboard:respectful.greetings.morning', { name });
+      return `Good morning, ${name}`;
     } else if (hour < 18) {
-      return t('dashboard:respectful.greetings.afternoon', { name });
+      return `Good afternoon, ${name}`;
     } else {
-      return t('dashboard:respectful.greetings.evening', { name });
+      return `Good evening, ${name}`;
     }
   };
 
   // Get encouragement message based on progress
   const getEncouragement = () => {
     if (completedTasks === 0) {
-      return t('dashboard:respectful.encouragement.start');
+      return "Let's secure your future together";
     } else if (completedTasks < 3) {
-      return t('dashboard:respectful.encouragement.earlyProgress');
+      return "You're off to a great start!";
     } else if (completedTasks < 7) {
-      return t('dashboard:respectful.encouragement.building');
+      return "You're building strong foundations";
     } else if (completedTasks < 15) {
-      return t('dashboard:respectful.encouragement.established');
+      return "Your security is well-established";
     } else {
-      return t('dashboard:respectful.encouragement.comprehensive');
+      return "You've achieved comprehensive protection!"
+
+      // return t('dashboard-main:respectful.encouragement.comprehensive');
     }
   };
 
@@ -253,7 +263,9 @@ const ProfessionalProgress: React.FC<ProfessionalProgressProps> = ({
       <div className="professional-progress-compact p-4 bg-white rounded-lg border border-gray-200">
         <div className="flex items-center justify-between mb-3">
           <h3 className="text-sm font-semibold text-gray-900">
-            {t('dashboard:respectful.progress.title')}
+            // TODO: Fix missing translation key - dashboard-main:respectful.progress.title
+
+            // {t('dashboard-main:respectful.progress.title')}
           </h3>
           <span className="text-xs text-gray-500">
             {completedTasks}/{totalTasks}
@@ -262,7 +274,9 @@ const ProfessionalProgress: React.FC<ProfessionalProgressProps> = ({
         
         <div className="mb-3">
           <p className="text-xs text-gray-700 font-medium">
-            {completedTasks} {t('dashboard:respectful.progress.tasksSecured')}
+            // TODO: Fix missing translation key - dashboard-main:respectful.progress.tasksSecured
+
+            // {completedTasks} {t('dashboard-main:respectful.progress.tasksSecured')}
           </p>
         </div>
         
@@ -278,7 +292,9 @@ const ProfessionalProgress: React.FC<ProfessionalProgressProps> = ({
             <div className="flex items-center gap-2">
               <AlertCircle className="w-4 h-4 text-red-600" />
               <span className="text-xs font-medium text-red-900">
-                {t('dashboard:respectful.progress.immediateAction')}
+                // TODO: Fix missing translation key - dashboard-main:respectful.progress.immediateAction
+
+                // {t('dashboard-main:respectful.progress.immediateAction')}
               </span>
             </div>
           </button>
@@ -303,7 +319,9 @@ const ProfessionalProgress: React.FC<ProfessionalProgressProps> = ({
           {lastLogin && (
             <div className="text-sm text-gray-500">
               <Calendar className="w-4 h-4 inline mr-1" />
-              {t('dashboard:respectful.lastActive', { 
+              // TODO: Fix missing translation key - dashboard-main:respectful.lastActive
+
+              // {t('dashboard-main:respectful.lastActive', { 
                 date: new Intl.RelativeTimeFormat('en', { numeric: 'auto' }).format(
                   -Math.floor((Date.now() - lastLogin.getTime()) / (1000 * 60 * 60 * 24)),
                   'day'
@@ -318,16 +336,18 @@ const ProfessionalProgress: React.FC<ProfessionalProgressProps> = ({
           <div className="flex items-center justify-between">
             <div>
               <span className="text-sm font-medium text-gray-700">
-                {t('dashboard:respectful.progress.familySecurity')}
+                // TODO: Fix missing translation key - dashboard-main:respectful.progress.familySecurity
+
+                // {t('dashboard-main:respectful.progress.familySecurity')}
               </span>
               <p className="text-lg font-semibold text-gray-900 mt-1">
                 {completedTasks === 0 
-                  ? t('dashboard:respectful.progress.gettingStarted')
+                  ? t('ui-components:respectful.progress.gettingStarted')
                   : completedTasks < 5
-                  ? t('dashboard:respectful.progress.buildingFoundation')
+                  ? 'Building Foundation'
                   : completedTasks < 10
-                  ? t('dashboard:respectful.progress.wellOrganized')
-                  : t('dashboard:respectful.progress.comprehensiveProtection')
+                  ? t('ui-components:respectful.progress.wellOrganized')
+                  : 'Comprehensive Protection'
                 }
               </p>
             </div>
@@ -336,7 +356,9 @@ const ProfessionalProgress: React.FC<ProfessionalProgressProps> = ({
                 {completedTasks}
               </p>
               <p className="text-xs text-gray-500">
-                {t('dashboard:respectful.progress.tasksComplete')}
+                // TODO: Fix missing translation key - dashboard-main:respectful.progress.tasksComplete
+
+                // {t('dashboard-main:respectful.progress.tasksComplete')}
               </p>
             </div>
           </div>
@@ -371,10 +393,14 @@ const ProfessionalProgress: React.FC<ProfessionalProgressProps> = ({
         <div className="bg-white rounded-xl p-6 border border-gray-200 mb-6">
           <div className="flex items-center justify-between mb-4">
             <h3 className="text-lg font-semibold text-gray-900">
-              {t('dashboard:respectful.milestones.title')}
+              // TODO: Fix missing translation key - dashboard-main:respectful.milestones.title
+
+              // {t('dashboard-main:respectful.milestones.title')}
             </h3>
             <span className="text-sm text-gray-500">
-              {milestones.filter(m => m.achieved).length} {t('dashboard:respectful.milestones.of')} {milestones.length} {t('dashboard:respectful.milestones.achieved')}
+              // TODO: Fix missing translation key - dashboard-main:respectful.milestones.achieved
+
+              // {milestones.filter(m => m.achieved).length} {t('dashboard-main:respectful.milestones.of')} {milestones.length} {t('dashboard-main:respectful.milestones.achieved')}
             </span>
           </div>
 
@@ -412,7 +438,9 @@ const ProfessionalProgress: React.FC<ProfessionalProgressProps> = ({
                   {milestone === currentMilestone && !milestone.achieved && (
                     <div className="mt-2">
                       <p className="text-xs text-blue-600 font-medium">
-                        {completedTasks} {t('dashboard:respectful.milestones.of')} {currentMilestone.tasksRequired} {t('dashboard:respectful.milestones.tasksComplete')}
+                        // TODO: Fix missing translation key - dashboard-main:respectful.milestones.tasksComplete
+
+                        // {completedTasks} {t('dashboard-main:respectful.milestones.of')} {currentMilestone.tasksRequired} {t('dashboard-main:respectful.milestones.tasksComplete')}
                       </p>
                     </div>
                   )}
@@ -432,14 +460,18 @@ const ProfessionalProgress: React.FC<ProfessionalProgressProps> = ({
       <div className="bg-white rounded-xl p-6 border border-gray-200">
         <div className="flex items-center justify-between mb-4">
           <h3 className="text-lg font-semibold text-gray-900">
-            {t('dashboard:respectful.tasks.title')}
+            // TODO: Fix missing translation key - dashboard-main:respectful.tasks.title
+
+            // {t('dashboard-main:respectful.tasks.title')}
           </h3>
           <div className="flex items-center gap-2">
             <button
               onClick={() => setShowAllTasks(!showAllTasks)}
               className="text-sm text-blue-600 hover:text-blue-700 font-medium"
             >
-              {showAllTasks ? t('dashboard:respectful.tasks.showPriority') : t('dashboard:respectful.tasks.showAll')}
+              // TODO: Fix missing translation key - dashboard-main:respectful.tasks.showPriority
+
+              // {showAllTasks ? t('dashboard-main:respectful.tasks.showPriority') : t('dashboard-main:respectful.tasks.showAll')}
             </button>
           </div>
         </div>
@@ -455,7 +487,9 @@ const ProfessionalProgress: React.FC<ProfessionalProgressProps> = ({
                 <div className="flex items-center gap-2">
                   <AlertCircle className="w-5 h-5 text-red-600" />
                   <h4 className="text-sm font-semibold text-gray-900">
-                    {t('dashboard:respectful.tasks.immediate')}
+                    // TODO: Fix missing translation key - dashboard-main:respectful.tasks.immediate
+
+                    // {t('dashboard-main:respectful.tasks.immediate')}
                   </h4>
                   <span className="text-xs bg-red-100 text-red-700 px-2 py-0.5 rounded-full">
                     {tasksByPriority.immediate.filter(t => !t.completed).length}
@@ -491,7 +525,9 @@ const ProfessionalProgress: React.FC<ProfessionalProgressProps> = ({
                 <div className="flex items-center gap-2">
                   <TrendingUp className="w-5 h-5 text-orange-600" />
                   <h4 className="text-sm font-semibold text-gray-900">
-                    {t('dashboard:respectful.tasks.high')}
+                    // TODO: Fix missing translation key - dashboard-main:respectful.tasks.high
+
+                    // {t('dashboard-main:respectful.tasks.high')}
                   </h4>
                   <span className="text-xs bg-orange-100 text-orange-700 px-2 py-0.5 rounded-full">
                     {tasksByPriority.high.filter(t => !t.completed).length}
@@ -529,7 +565,9 @@ const ProfessionalProgress: React.FC<ProfessionalProgressProps> = ({
                     <div className="flex items-center gap-2">
                       <Clock className="w-5 h-5 text-yellow-600" />
                       <h4 className="text-sm font-semibold text-gray-900">
-                        {t('dashboard:respectful.tasks.medium')}
+                        // TODO: Fix missing translation key - dashboard-main:respectful.tasks.medium
+
+                        // {t('dashboard-main:respectful.tasks.medium')}
                       </h4>
                       <span className="text-xs bg-yellow-100 text-yellow-700 px-2 py-0.5 rounded-full">
                         {tasksByPriority.medium.filter(t => !t.completed).length}
@@ -567,7 +605,9 @@ const ProfessionalProgress: React.FC<ProfessionalProgressProps> = ({
                 <div className="flex items-center gap-2">
                   <CheckCircle className="w-5 h-5 text-green-600" />
                   <h4 className="text-sm font-semibold text-gray-900">
-                    {t('dashboard:respectful.tasks.completed')}
+                    // TODO: Fix missing translation key - dashboard-main:respectful.tasks.completed
+
+                    // {t('dashboard-main:respectful.tasks.completed')}
                   </h4>
                   <span className="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full">
                     {completedTasks}
@@ -599,7 +639,9 @@ const ProfessionalProgress: React.FC<ProfessionalProgressProps> = ({
           <div className="text-center py-8">
             <BookOpen className="w-12 h-12 text-gray-300 mx-auto mb-3" />
             <p className="text-gray-500">
-              {t('dashboard:respectful.tasks.noTasks')}
+              // TODO: Fix missing translation key - dashboard-main:respectful.tasks.noTasks
+
+              // {t('dashboard-main:respectful.tasks.noTasks')}
             </p>
           </div>
         )}
@@ -614,7 +656,7 @@ const TaskCard: React.FC<{
   onTaskClick?: (task: Task) => void;
   completed?: boolean;
 }> = ({ task, onTaskClick, completed = false }) => {
-  const { t } = useTranslation('dashboard');
+  const { t } = useTranslation('dashboard-main');
   
   const getCategoryIcon = (category: string) => {
     const icons = {

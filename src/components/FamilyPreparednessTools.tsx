@@ -27,7 +27,7 @@ interface GuideScenario {
 
 
 const FamilyPreparednessTools: React.FC = () => {
-  const { t } = useTranslation('family');
+  const { t } = useTranslation('family-core');
   const { getToken } = useAuth();
   const [showGuideModal, setShowGuideModal] = useState(false);
   const [selectedScenario, setSelectedScenario] = useState<string>('');

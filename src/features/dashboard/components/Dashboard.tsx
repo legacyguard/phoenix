@@ -26,7 +26,7 @@ import { FamilyPreparednessCalculator } from '@/components/landing/FamilyPrepare
 import ProfessionalDashboardIntegration from './ProfessionalDashboardIntegration';
 
 const Dashboard = () => {
-  const { t } = useTranslation('dashboard');
+  const { t } = useTranslation('dashboard-main');
   const { user } = useAuth();
   const { updateProgress, updateEmotionalState } = useAssistant();
   

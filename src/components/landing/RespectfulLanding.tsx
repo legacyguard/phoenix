@@ -41,12 +41,12 @@ const RespectfulLanding: React.FC = () => {
 
               {/* Main Headline */}
               <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-                {t('landing:hero.headline')}
+                {t('wills:hero.headline')}
               </h1>
 
               {/* Subheadline */}
               <p className="text-xl md:text-2xl text-gray-700 mb-8 max-w-3xl mx-auto">
-                {t('landing:hero.subheadline')}
+                {t('wills:hero.subheadline')}
               </p>
 
               {/* Supporting Text */}
@@ -83,7 +83,9 @@ const RespectfulLanding: React.FC = () => {
                 </span>
                 <span className="flex items-center gap-2">
                   <CheckCircle className="w-4 h-4 text-green-500" />
-                  {t('onboarding:respectful.landing.trustSignals.professionalSupport')}
+                  // TODO: Fix missing translation key - onboarding:respectful.landing.trustSignals.professionalSupport
+
+                  // {t('onboarding:respectful.landing.trustSignals.professionalSupport')}
                 </span>
               </div>
             </div>
@@ -96,10 +98,14 @@ const RespectfulLanding: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              {t('onboarding:respectful.landing.understanding.title')}
+              // TODO: Fix missing translation key - onboarding:respectful.landing.understanding.title
+
+              // {t('onboarding:respectful.landing.understanding.title')}
             </h2>
             <p className="text-xl text-gray-600">
-              {t('onboarding:respectful.landing.understanding.subtitle')}
+              // TODO: Fix missing translation key - onboarding:respectful.landing.understanding.subtitle
+
+              // {t('onboarding:respectful.landing.understanding.subtitle')}
             </p>
           </div>
 
@@ -113,13 +119,19 @@ const RespectfulLanding: React.FC = () => {
                   {index === 0 ? '🤝' : index === 1 ? '💭' : '🌟'}
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  {t(`onboarding:respectful.landing.understanding.${concern}.title`)}
+                  // TODO: Fix missing translation key - onboarding:respectful.landing.understanding.${concern}.title
+
+                  // {t(`onboarding:respectful.landing.understanding.${concern}.title`)}
                 </h3>
                 <p className="text-gray-600 mb-4">
-                  {t(`onboarding:respectful.landing.understanding.${concern}.description`)}
+                  // TODO: Fix missing translation key - onboarding:respectful.landing.understanding.${concern}.description
+
+                  // {t(`onboarding:respectful.landing.understanding.${concern}.description`)}
                 </p>
                 <p className="text-sm text-blue-600 font-medium">
-                  {t(`onboarding:respectful.landing.understanding.${concern}.approach`)}
+                  // TODO: Fix missing translation key - onboarding:respectful.landing.understanding.${concern}.approach
+
+                  // {t(`onboarding:respectful.landing.understanding.${concern}.approach`)}
                 </p>
               </div>
             ))}
@@ -132,10 +144,14 @@ const RespectfulLanding: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              {t('onboarding:respectful.landing.process.title')}
+              // TODO: Fix missing translation key - onboarding:respectful.landing.process.title
+
+              // {t('onboarding:respectful.landing.process.title')}
             </h2>
             <p className="text-xl text-gray-600">
-              {t('onboarding:respectful.landing.process.subtitle')}
+              // TODO: Fix missing translation key - onboarding:respectful.landing.process.subtitle
+
+              // {t('onboarding:respectful.landing.process.subtitle')}
             </p>
           </div>
 
@@ -150,14 +166,20 @@ const RespectfulLanding: React.FC = () => {
                 <div className="flex-grow">
                   <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100">
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                      {t(`onboarding:respectful.landing.process.${step.key}.title`)}
+                      // TODO: Fix missing translation key - onboarding:respectful.landing.process.${step.key}.title
+
+                      // {t(`onboarding:respectful.landing.process.${step.key}.title`)}
                     </h3>
                     <p className="text-gray-600 mb-3">
-                      {t(`onboarding:respectful.landing.process.${step.key}.description`)}
+                      // TODO: Fix missing translation key - onboarding:respectful.landing.process.${step.key}.description
+
+                      // {t(`onboarding:respectful.landing.process.${step.key}.description`)}
                     </p>
                     <div className="flex items-center gap-4">
                       <span className="text-sm text-blue-600 font-medium">
-                        {t(`onboarding:respectful.landing.process.${step.key}.time`)}
+                        // TODO: Fix missing translation key - onboarding:respectful.landing.process.${step.key}.time
+
+                        // {t(`onboarding:respectful.landing.process.${step.key}.time`)}
                       </span>
                       <div className="flex-grow bg-gray-200 rounded-full h-2">
                         <div 
@@ -179,10 +201,14 @@ const RespectfulLanding: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              {t('onboarding:respectful.landing.benefits.title')}
+              // TODO: Fix missing translation key - onboarding:respectful.landing.benefits.title
+
+              // {t('onboarding:respectful.landing.benefits.title')}
             </h2>
             <p className="text-xl text-gray-600">
-              {t('onboarding:respectful.landing.benefits.subtitle')}
+              // TODO: Fix missing translation key - onboarding:respectful.landing.benefits.subtitle
+
+              // {t('onboarding:respectful.landing.benefits.subtitle')}
             </p>
           </div>
 
@@ -198,10 +224,14 @@ const RespectfulLanding: React.FC = () => {
                     <Icon className="w-6 h-6 text-blue-600" />
                   </div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                    {t(`onboarding:respectful.landing.benefits.${benefit.key}.title`)}
+                    // TODO: Fix missing translation key - onboarding:respectful.landing.benefits.${benefit.key}.title
+
+                    // {t(`onboarding:respectful.landing.benefits.${benefit.key}.title`)}
                   </h3>
                   <p className="text-gray-600 text-sm">
-                    {t(`onboarding:respectful.landing.benefits.${benefit.key}.description`)}
+                    // TODO: Fix missing translation key - onboarding:respectful.landing.benefits.${benefit.key}.description
+
+                    // {t(`onboarding:respectful.landing.benefits.${benefit.key}.description`)}
                   </p>
                 </div>
               );
@@ -215,10 +245,14 @@ const RespectfulLanding: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              {t('onboarding:respectful.landing.testimonials.title')}
+              // TODO: Fix missing translation key - onboarding:respectful.landing.testimonials.title
+
+              // {t('onboarding:respectful.landing.testimonials.title')}
             </h2>
             <p className="text-xl text-gray-600">
-              {t('onboarding:respectful.landing.testimonials.subtitle')}
+              // TODO: Fix missing translation key - onboarding:respectful.landing.testimonials.subtitle
+
+              // {t('onboarding:respectful.landing.testimonials.subtitle')}
             </p>
           </div>
 
@@ -233,16 +267,22 @@ const RespectfulLanding: React.FC = () => {
                     }`}
                   >
                     <blockquote className="text-lg md:text-xl text-gray-700 mb-6 italic">
-                      "{t(`onboarding:respectful.landing.testimonials.${story}.quote`)}"
+                      // TODO: Fix missing translation key - onboarding:respectful.landing.testimonials.${story}.quote
+
+                      // "{t(`onboarding:respectful.landing.testimonials.${story}.quote`)}"
                     </blockquote>
                     <div className="flex items-center gap-4">
                       <div className="w-12 h-12 bg-gray-200 rounded-full" />
                       <div>
                         <p className="font-semibold text-gray-900">
-                          {t(`onboarding:respectful.landing.testimonials.${story}.author`)}
+                          // TODO: Fix missing translation key - onboarding:respectful.landing.testimonials.${story}.author
+
+                          // {t(`onboarding:respectful.landing.testimonials.${story}.author`)}
                         </p>
                         <p className="text-sm text-gray-600">
-                          {t(`onboarding:respectful.landing.testimonials.${story}.context`)}
+                          // TODO: Fix missing translation key - onboarding:respectful.landing.testimonials.${story}.context
+
+                          // {t(`onboarding:respectful.landing.testimonials.${story}.context`)}
                         </p>
                       </div>
                     </div>
@@ -275,10 +315,14 @@ const RespectfulLanding: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              {t('onboarding:respectful.landing.security.title')}
+              // TODO: Fix missing translation key - onboarding:respectful.landing.security.title
+
+              // {t('onboarding:respectful.landing.security.title')}
             </h2>
             <p className="text-xl text-gray-300">
-              {t('onboarding:respectful.landing.security.subtitle')}
+              // TODO: Fix missing translation key - onboarding:respectful.landing.security.subtitle
+
+              // {t('onboarding:respectful.landing.security.subtitle')}
             </p>
           </div>
 
@@ -289,10 +333,14 @@ const RespectfulLanding: React.FC = () => {
                   <Lock className="w-8 h-8 text-blue-400" />
                 </div>
                 <h3 className="text-lg font-semibold mb-2">
-                  {t(`onboarding:respectful.landing.security.${feature}.title`)}
+                  // TODO: Fix missing translation key - onboarding:respectful.landing.security.${feature}.title
+
+                  // {t(`onboarding:respectful.landing.security.${feature}.title`)}
                 </h3>
                 <p className="text-sm text-gray-400">
-                  {t(`onboarding:respectful.landing.security.${feature}.description`)}
+                  // TODO: Fix missing translation key - onboarding:respectful.landing.security.${feature}.description
+
+                  // {t(`onboarding:respectful.landing.security.${feature}.description`)}
                 </p>
               </div>
             ))}
@@ -300,7 +348,9 @@ const RespectfulLanding: React.FC = () => {
 
           <div className="text-center mt-12">
             <p className="text-gray-400">
-              {t('onboarding:respectful.landing.security.certifications')}
+              // TODO: Fix missing translation key - onboarding:respectful.landing.security.certifications
+
+              // {t('onboarding:respectful.landing.security.certifications')}
             </p>
           </div>
         </div>
@@ -311,10 +361,14 @@ const RespectfulLanding: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              {t('onboarding:respectful.landing.cta.title')}
+              // TODO: Fix missing translation key - onboarding:respectful.landing.cta.title
+
+              // {t('onboarding:respectful.landing.cta.title')}
             </h2>
             <p className="text-xl mb-8 text-blue-100">
-              {t('onboarding:respectful.landing.cta.subtitle')}
+              // TODO: Fix missing translation key - onboarding:respectful.landing.cta.subtitle
+
+              // {t('onboarding:respectful.landing.cta.subtitle')}
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
@@ -322,28 +376,38 @@ const RespectfulLanding: React.FC = () => {
                 to="/signup"
                 className="bg-white text-blue-600 hover:bg-gray-100 font-medium py-4 px-8 rounded-lg text-lg transition-all duration-200 shadow-lg hover:shadow-xl"
               >
-                {t('onboarding:respectful.landing.cta.primaryButton')}
+                // TODO: Fix missing translation key - onboarding:respectful.landing.cta.primaryButton
+
+                // {t('onboarding:respectful.landing.cta.primaryButton')}
               </Link>
               <Link
                 to="/consultation"
                 className="bg-transparent border-2 border-white text-white hover:bg-white/10 font-medium py-4 px-8 rounded-lg text-lg transition-all duration-200"
               >
-                {t('onboarding:respectful.landing.cta.secondaryButton')}
+                // TODO: Fix missing translation key - onboarding:respectful.landing.cta.secondaryButton
+
+                // {t('onboarding:respectful.landing.cta.secondaryButton')}
               </Link>
             </div>
 
             <div className="flex flex-wrap items-center justify-center gap-6 text-sm">
               <span className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4" />
-                {t('onboarding:respectful.landing.cta.promise1')}
+                // TODO: Fix missing translation key - onboarding:respectful.landing.cta.promise1
+
+                // {t('onboarding:respectful.landing.cta.promise1')}
               </span>
               <span className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4" />
-                {t('onboarding:respectful.landing.cta.promise2')}
+                // TODO: Fix missing translation key - onboarding:respectful.landing.cta.promise2
+
+                // {t('onboarding:respectful.landing.cta.promise2')}
               </span>
               <span className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4" />
-                {t('onboarding:respectful.landing.cta.promise3')}
+                // TODO: Fix missing translation key - onboarding:respectful.landing.cta.promise3
+
+                // {t('onboarding:respectful.landing.cta.promise3')}
               </span>
             </div>
           </div>

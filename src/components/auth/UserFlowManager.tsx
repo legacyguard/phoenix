@@ -17,7 +17,7 @@ type FlowState = 'loading' | 'onboarding' | 'first_time_guide' | 'dashboard';
 
 export const UserFlowManager: React.FC<UserFlowManagerProps> = ({ children, isPasswordWallAuthenticated = false }) => {
   const { user, isLoaded } = useUser();
-  const { t } = useTranslation('ui');
+  const { t } = useTranslation('ui-common');
   const { trackAction } = useAnalytics({ componentName: 'UserFlowManager', userJourneyStage: 'authentication' });
   const [flowState, setFlowState] = useState<FlowState>('loading');
   const [onboardingTasks, setOnboardingTasks] = useState<TaskItem[]>([]);

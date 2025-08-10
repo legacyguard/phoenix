@@ -1,336 +1,251 @@
 {
   "billing": {
-    "annually": "Annually",
-    "billingAddress": "Billing Address",
-    "billingCycle": "Billing Cycle",
-    "billingInfo": "Billing Information",
-    "changeBilling": "Change Billing Cycle",
-    "downloadInvoice": "Download Invoice",
-    "invoiceHistory": "Invoice History",
-    "monthly": "Monthly",
-    "nextBilling": "Next Billing Date",
-    "paymentMethod": "Payment Method",
-    "updatePayment": "Update Payment Method",
-    "viewInvoice": "View Invoice"
+    "annually": "Annuellement",
+    "billingAddress": "adresse de facturation",
+    "billingCycle": "Cycle de facturation",
+    "billingInfo": "Informations de facturation",
+    "changeBilling": "Modifier le cycle de facturation",
+    "downloadInvoice": "Télécharger la facture",
+    "invoiceHistory": "Historique des factures",
+    "monthly": "Mensuel",
+    "nextBilling": "Prochaine date de facturation",
+    "paymentMethod": "Mode de paiement",
+    "updatePayment": "Mettre à jour le mode de paiement",
+    "viewInvoice": "Voir la facture"
   },
   "cancellation": {
-    "cancelConfirmation": "Are you sure you want to cancel?",
-    "cancelEffective": "Cancellation will be effective on {{date}}",
-    "cancelFeedback": "Additional Feedback",
-    "cancelReason": "Reason for Cancellation",
+    "cancelConfirmation": "Êtes-vous sûr de vouloir annuler ?",
+    "cancelEffective": "L'annulation sera effective le {{date}}",
+    "cancelFeedback": "Commentaires supplémentaires",
+    "cancelReason": "Motif de l'annulation",
     "cancelReasons": {
-      "foundAlternative": "Found alternative solution",
-      "notUsing": "Not using enough",
-      "other": "Other reason",
-      "technicalIssues": "Technical issues",
-      "tooExpensive": "Too expensive"
+      "foundAlternative": "Solution alternative trouvée",
+      "notUsing": "Ne pas utiliser suffisamment",
+      "other": "Autre raison",
+      "technicalIssues": "Problèmes techniques",
+      "tooExpensive": "Trop cher"
     },
-    "cancelSubtitle": "Cancel subtitle",
-    "cancelTitle": "Cancel title",
-    "confirmCancel": "Confirm Cancellation",
-    "dataRetention": "Your data will be retained for {{days}} days",
-    "keepSubscription": "Keep Subscription",
-    "retainAccess": "You will retain access until {{date}}"
+    "cancelSubtitle": "Annuler le sous-titre",
+    "cancelTitle": "Annuler le titre",
+    "confirmCancel": "Confirmer l'annulation",
+    "dataRetention": "Vos données seront conservées pendant {{days}} jours",
+    "keepSubscription": "Conserver l'abonnement",
+    "retainAccess": "Vous conserverez l'accès jusqu'au {{date}}"
   },
   "errors": {
-    "cancellationFailed": "We could not cancel your subscription. Please contact support.",
-    "invalidPayment": "Invalid payment information. Please check your details.",
-    "loadingSubscription": "We could not load your subscription information. Please try again.",
-    "paymentFailed": "Payment processing failed. Please check your payment method.",
-    "subscriptionError": "Subscription error occurred. Please contact support.",
-    "updatingSubscription": "We could not update your subscription. Please try again."
+    "cancellationFailed": "Nous n'avons pas pu annuler votre abonnement. Veuillez contacter l'assistance.",
+    "invalidPayment": "Informations de paiement non valides. Veuillez vérifier vos informations.",
+    "loadingSubscription": "Impossible de charger vos informations d'abonnement. Veuillez réessayer.",
+    "paymentFailed": "Le paiement a échoué. Veuillez vérifier votre mode de paiement.",
+    "subscriptionError": "Une erreur d'abonnement s'est produite. Veuillez contacter le support.",
+    "updatingSubscription": "Nous n'avons pas pu mettre à jour votre abonnement. Veuillez réessayer."
   },
   "features": {
-    "backupRecovery": "Backup & Recovery",
-    "documentStorage": "Secure Document Storage",
-    "encryptedStorage": "End-to-End Encryption",
-    "exportOptions": "Data Export Options",
-    "familyAccess": "Family Access Management",
-    "legalReview": "Legal Document Review",
-    "mobileAccess": "Mobile Application Access",
-    "prioritySupport": "Priority Customer Support",
-    "unlimitedAssets": "Unlimited Asset Storage",
-    "willGenerator": "Professional Will Generator"
+    "backupRecovery": "Sauvegarde et récupération",
+    "documentStorage": "Stockage sécurisé de documents",
+    "encryptedStorage": "Chiffrement de bout en bout",
+    "exportOptions": "Options d'exportation de données",
+    "familyAccess": "Gestion de l'accès familial",
+    "legalReview": "Révision de documents juridiques",
+    "mobileAccess": "Accès aux applications mobiles",
+    "prioritySupport": "Assistance client prioritaire",
+    "unlimitedAssets": "Stockage d'actifs illimité",
+    "willGenerator": "Générateur de testament professionnel"
   },
   "management": {
-    "cancelSubscription": "Cancel Subscription",
-    "cancellationDate": "Cancellation Date",
-    "changePayment": "Change Payment Method",
-    "manageSubscription": "Manage Subscription",
-    "pauseSubscription": "Pause Subscription",
-    "renewalDate": "Renewal Date",
-    "resumeSubscription": "Resume Subscription",
-    "subscriptionStatus": "Subscription Status",
-    "updateBilling": "Update Billing Information"
+    "cancelSubscription": "Annuler l'abonnement",
+    "cancellationDate": "Date d'annulation",
+    "changePayment": "Changer de mode de paiement",
+    "manageSubscription": "Gérer l'abonnement",
+    "pauseSubscription": "Suspendre l'abonnement",
+    "renewalDate": "Date de renouvellement",
+    "resumeSubscription": "Abonnement CV",
+    "subscriptionStatus": "Statut de l'abonnement",
+    "updateBilling": "Mettre à jour les informations de facturation"
   },
   "notifications": {
-    "paymentFailed": "Payment failed - please update your payment method",
-    "paymentUpdated": "Payment method has been updated",
-    "subscriptionCancelled": "Your subscription has been cancelled",
-    "subscriptionExpired": "Your subscription has expired",
-    "subscriptionResumed": "Your subscription has been resumed",
-    "subscriptionUpdated": "Your subscription has been updated",
-    "trialExpiring": "Your trial expires in {{days}} days"
+    "paymentFailed": "Paiement échoué - veuillez mettre à jour votre mode de paiement",
+    "paymentUpdated": "Le mode de paiement a été mis à jour",
+    "subscriptionCancelled": "Votre abonnement a été annulé",
+    "subscriptionExpired": "Votre abonnement a expiré",
+    "subscriptionResumed": "Votre abonnement a été repris",
+    "subscriptionUpdated": "Votre abonnement a été mis à jour",
+    "trialExpiring": "Votre essai expire dans {{days}} jours"
   },
   "plans": {
-    "currentPlan": "Your Current Plan",
-    "downgradePlan": "Change Plan",
-    "freeTrial": "Free Trial",
-    "recommendedPlan": "Recommended for You",
-    "subtitle": "Choose the plan that best protects your family",
-    "title": "Title",
-    "trialDaysLeft": "{{days}} days remaining in trial",
-    "upgradePlan": "Upgrade Plan",
+    "currentPlan": "Votre plan actuel",
+    "downgradePlan": "Changer de plan",
+    "freeTrial": "Essai gratuit",
+    "recommendedPlan": "Recommandé pour vous",
+    "subtitle": "Choisissez le plan qui protège le mieux votre famille",
+    "trialDaysLeft": "{{days}} jours restants avant la fin de l'essai",
+    "upgradePlan": "Plan de mise à niveau",
     "essential": {
-      "annualPrice": "$99",
-      "annualSavings": "Save $20 annually",
-      "bestFor": "Individuals and couples with straightforward needs",
-      "cta": "Start Essential Plan",
-      "description": "Perfect for individuals and couples getting started with family protection",
-      "features": {
-        "0": "Secure digital vault for important documents",
-        "1": "Asset inventory and organization",
-        "2": "Basic will generator",
-        "3": "Up to 3 trusted circle members",
-        "4": "Email support",
-        "5": "Mobile app access",
-        "6": "Bank-level encryption"
-      },
-      "limitations": {
-        "0": "Limited to 50 documents",
-        "1": "Basic will templates only",
-        "2": "Standard support response time"
-      },
-      "name": "Essential Protection",
-      "period": "per month",
-      "price": "$9.99"
+      "annualPrice": "99 $",
+      "annualSavings": "Économisez 20 $ par an",
+      "bestFor": "Individus et couples ayant des besoins simples",
+      "cta": "Démarrer le plan essentiel",
+      "description": "Idéal pour les particuliers et les couples qui débutent dans la protection de la famille",
+      "features": [
+        "Coffre-fort numérique sécurisé pour les documents importants",
+        "Inventaire et organisation des actifs",
+        "Générateur de testament de base",
+        "Jusqu'à 3 membres du cercle de confiance",
+        "Assistance par e-mail",
+        "Accès à l'application mobile",
+        "Cryptage de niveau bancaire"
+      ],
+      "limitations": [
+        "Limité à 50 documents",
+        "Modèles de testament de base uniquement",
+        "Temps de réponse du support standard"
+      ],
+      "name": "Protection essentielle",
+      "period": "par mois",
+      "price": "9,99 $"
     },
     "family": {
-      "annualPrice": "$199",
-      "annualSavings": "Save $40 annually",
-      "bestFor": "Families with children and multiple assets",
-      "cta": "Start Family Plan",
-      "description": "Comprehensive protection for families with children and multiple assets",
-      "features": {
-        "0": "Everything in Essential, plus:",
-        "1": "Unlimited document storage",
-        "2": "Advanced will generator with all templates",
-        "3": "Guardianship planning for children",
-        "4": "Up to 10 trusted circle members",
-        "5": "Legacy letters and personal messages",
-        "6": "Priority email and phone support",
-        "7": "Legal document review options",
-        "8": "Emergency access protocols"
-      },
+      "annualPrice": "199 $",
+      "annualSavings": "Économisez 40 $ par an",
+      "bestFor": "Familles avec enfants et biens multiples",
+      "cta": "Démarrer le plan familial",
+      "description": "Protection complète pour les familles avec enfants et biens multiples",
+      "features": [
+        "Tout ce qui est dans Essential, plus :",
+        "Stockage illimité de documents",
+        "Générateur de testament avancé avec tous les modèles",
+        "Planification de la tutelle des enfants",
+        "Jusqu'à 10 membres du cercle de confiance",
+        "Lettres testamentaires et messages personnels",
+        "Assistance prioritaire par e-mail et par téléphone",
+        "Options de révision des documents juridiques",
+        "Protocoles d'accès d'urgence"
+      ],
       "mostPopular": true,
-      "name": "Family Protection",
-      "period": "per month",
-      "price": "$19.99"
+      "name": "Protection de la famille",
+      "period": "par mois",
+      "price": "19,99 $"
     },
     "premium": {
-      "annualPrice": "$399",
-      "annualSavings": "Save $80 annually",
-      "bestFor": "High-net-worth individuals and complex estates",
-      "cta": "Start Premium Plan",
-      "description": "Complete estate planning solution for complex family situations",
-      "features": {
-        "0": "Everything in Family, plus:",
-        "1": "Unlimited trusted circle members",
-        "2": "Business asset planning",
-        "3": "Trust document templates",
-        "4": "Professional legal review included",
-        "5": "White-glove onboarding assistance",
-        "6": "Dedicated support representative",
-        "7": "Advanced reporting and analytics",
-        "8": "Custom document templates",
-        "9": "Estate tax planning guidance"
-      },
-      "name": "Premium Protection",
-      "period": "per month",
-      "price": "$39.99"
-    }
-  },
-  "subscription": {
-    "activeSubscriptions": "[FR] Active subscriptions",
-    "allSubscriptions": "[FR] All subscriptions",
-    "allSubscriptionsDesc": "[FR] All subscriptions desc",
-    "autoRenewal": "[FR] Auto renewal",
-    "cancellationNoticeWarning": "[FR] Cancellation notice warning",
-    "costOptimization": "[FR] Cost optimization",
-    "costOptimizationDesc": "[FR] Cost optimization desc",
-    "dashboard": {
-      "subtitle": "[FR] Subtitle",
-      "title": "[FR] Title"
-    },
-    "days": "[FR] Days",
-    "daysBefore": "[FR] Days before",
-    "daysUntilRenewal": "[FR] Days until renewal",
-    "enableTracking": "[FR] Enable tracking",
-    "enableTrackingDesc": "[FR] Enable tracking desc",
-    "exportReport": "[FR] Export report",
-    "loadError": "[FR] Load error",
-    "manual": "[FR] Manual",
-    "monthlyCost": "[FR] Monthly cost",
-    "next90Days": "[FR] Next90 days",
-    "noUpcomingRenewals": "[FR] No upcoming renewals",
-    "perMonth": "[FR] Per month",
-    "perYear": "[FR] Per year",
-    "preferences": "[FR] Preferences",
-    "preferencesDesc": "[FR] Preferences desc",
-    "preferencesUpdated": "[FR] Preferences updated",
-    "reminderPeriods": "[FR] Reminder periods",
-    "renew": "[FR] Renew",
-    "review": "[FR] Review",
-    "tabs": {
-      "overview": "[FR] Overview",
-      "settings": "[FR] Settings",
-      "upcoming": "[FR] Upcoming"
-    },
-    "types": {
-      "monthly": "[FR] Monthly",
-      "yearly": "[FR] Yearly"
-    },
-    "upcomingRenewals": "[FR] Upcoming renewals",
-    "upcomingRenewalsDesc": "[FR] Upcoming renewals desc",
-    "upcomingRenewalsTitle": "[FR] Upcoming renewals title",
-    "upcomingSoon": "[FR] Upcoming soon",
-    "updateError": "[FR] Update error",
-    "yearlyCost": "[FR] Yearly cost"
-  },
-  "subscriptions": {
-    "subscriptionDashboard": {
-      "_1": "[FR] 1"
+      "annualPrice": "399 $",
+      "annualSavings": "Économisez 80 $ par an",
+      "bestFor": "Particuliers fortunés et successions complexes",
+      "cta": "Démarrer le plan Premium",
+      "description": "Solution complète de planification successorale pour les situations familiales complexes",
+      "features": [
+        "Tout dans la famille, plus :",
+        "Nombre illimité de membres du cercle de confiance",
+        "Planification des actifs d'entreprise",
+        "Modèles de documents de fiducie",
+        "Révision juridique professionnelle incluse",
+        "Assistance d'intégration haut de gamme",
+        "Représentant du support dédié",
+        "Rapports et analyses avancés",
+        "Modèles de documents personnalisés",
+        "Conseils en matière de planification fiscale successorale"
+      ],
+      "name": "Protection Premium",
+      "period": "par mois",
+      "price": "39,99 $"
     }
   },
   "ui:common": {
-    "loading": "[FR] Loading"
+    "loading": "Chargement"
   },
   "trial": {
-    "cta": "Start Your Free Trial",
-    "features": {
-      "0": "Complete access to all premium features",
-      "1": "No credit card required to start",
-      "2": "Personal onboarding assistance",
-      "3": "Cancel anytime during trial"
-    },
-    "guarantee": "30-day money-back guarantee after trial",
-    "subtitle": "Try LegacyGuard for 14 days with full access to all features",
-    "title": "Start with a Risk-Free Trial"
-  },
-  "upgradeCard": {
-    "defaultButtonText": "Default button text",
-    "pricing": "Pricing"
+    "cta": "Commencez votre essai gratuit",
+    "features": [
+      "Accès complet à toutes les fonctionnalités premium",
+      "Aucune carte de crédit requise pour commencer",
+      "Assistance à l'intégration personnelle",
+      "Annuler à tout moment pendant la période d'essai"
+    ],
+    "guarantee": "Garantie de remboursement de 30 jours après l'essai",
+    "subtitle": "Essayez LegacyGuard pendant 14 jours avec un accès complet à toutes les fonctionnalités",
+    "title": "Commencez par un essai sans risque"
   },
   "comparison": {
-    "advanced": "Advanced",
-    "basic": "Basic",
+    "advanced": "Avancé",
+    "basic": "Basique",
     "features": {
-      "assetInventory": "Asset Inventory",
-      "businessPlanning": "Business Planning",
-      "dedicatedSupport": "Dedicated Support",
-      "digitalVault": "Secure Digital Vault",
-      "documentStorage": "Document Storage",
-      "emergencyAccess": "Emergency Access",
-      "encryption": "Bank-Level Encryption",
-      "guardianship": "Guardianship Planning",
-      "legacyLetters": "Legacy Letters",
-      "legalReview": "Legal Review",
-      "mobileApp": "Mobile App",
-      "support": "Customer Support",
-      "trustTemplates": "Trust Templates",
-      "trustedCircle": "Trusted Circle",
-      "whiteGlove": "White-Glove Service",
-      "willGenerator": "Will Generator"
+      "assetInventory": "Inventaire des actifs",
+      "businessPlanning": "Planification d'entreprise",
+      "dedicatedSupport": "Support dédié",
+      "digitalVault": "Coffre-fort numérique sécurisé",
+      "documentStorage": "Stockage de documents",
+      "emergencyAccess": "Accès d'urgence",
+      "encryption": "Cryptage de niveau bancaire",
+      "guardianship": "Planification de la tutelle",
+      "legacyLetters": "Lettres d'héritage",
+      "legalReview": "Revue juridique",
+      "mobileApp": "Application mobile",
+      "support": "Service client",
+      "trustTemplates": "Modèles de confiance",
+      "trustedCircle": "Cercle de confiance",
+      "whiteGlove": "Service de gants blancs",
+      "willGenerator": "Générateur de volonté"
     },
-    "included": "Included",
-    "limited": "Limited",
-    "notIncluded": "Not Included",
-    "premium": "Premium",
-    "subtitle": "Choose the level of protection that's right for your family",
-    "title": "Compare All Plans",
-    "unlimited": "Unlimited"
-  },
-  "cookiePolicy": {
-    "title": "Title"
+    "included": "Compris",
+    "limited": "Limité",
+    "notIncluded": "Non inclus",
+    "premium": "Prime",
+    "subtitle": "Choisissez le niveau de protection adapté à votre famille",
+    "title": "Comparez tous les plans",
+    "unlimited": "Illimité"
   },
   "faq": {
-    "questions": {
-      "0": {
-        "answer": "Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we'll prorate any billing adjustments.",
-        "question": "Can I change plans anytime?"
+    "questions": [
+      {
+        "answer": "Oui, vous pouvez changer d'abonnement à tout moment. Les modifications prennent effet immédiatement et nous appliquerons les ajustements de facturation au prorata.",
+        "question": "Puis-je changer de forfait à tout moment ?"
       },
-      "1": {
-        "answer": "You can cancel anytime and retain access until the end of your billing period. Your data remains secure and accessible for 90 days after cancellation.",
-        "question": "What happens if I cancel?"
+      {
+        "answer": "Vous pouvez annuler votre abonnement à tout moment et conserver l'accès jusqu'à la fin de votre période de facturation. Vos données restent sécurisées et accessibles pendant 90 jours après l'annulation.",
+        "question": "Que se passe-t-il si j'annule ?"
       },
-      "2": {
-        "answer": "Yes, all plans offer significant savings when billed annually. You'll save 2 months compared to monthly billing.",
-        "question": "Do you offer discounts for annual billing?"
+      {
+        "answer": "Oui, tous les forfaits offrent des économies importantes avec une facturation annuelle. Vous économiserez deux mois par rapport à une facturation mensuelle.",
+        "question": "Offrez-vous des réductions pour la facturation annuelle ?"
       },
-      "3": {
-        "answer": "Our Family and Premium plans are designed to cover your entire family. Additional family members can be added at no extra cost within plan limits.",
-        "question": "Is there a family discount?"
+      {
+        "answer": "Nos formules Famille et Premium sont conçues pour couvrir toute votre famille. Vous pouvez ajouter des membres supplémentaires sans frais supplémentaires, dans la limite des forfaits.",
+        "question": "Existe-t-il une réduction familiale ?"
       },
-      "4": {
-        "answer": "We accept all major credit cards, PayPal, and bank transfers. All payments are processed securely and encrypted.",
-        "question": "What payment methods do you accept?"
+      {
+        "answer": "Nous acceptons les principales cartes de crédit, PayPal et les virements bancaires. Tous les paiements sont traités de manière sécurisée et cryptée.",
+        "question": "Quels modes de paiement acceptez-vous ?"
       }
-    },
-    "subtitle": "Common questions about our plans and pricing",
-    "title": "Pricing Questions"
+    ],
+    "subtitle": "Questions fréquentes sur nos forfaits et nos tarifs",
+    "title": "Questions sur les prix"
   },
   "header": {
-    "description": "Every plan includes our core family protection features with bank-level security and unlimited support.",
-    "subtitle": "Comprehensive protection at a price that makes sense for your family",
-    "title": "Choose Your Family Protection Plan"
-  },
-  "hero": {
-    "headline": "Headline",
-    "subheadline": "Subheadline"
+    "description": "Chaque plan comprend nos principales fonctionnalités de protection familiale avec une sécurité de niveau bancaire et une assistance illimitée."
   },
   "landing": {
     "pricing": {
-      "mostPopular": "Most popular"
+      "mostPopular": "Le plus populaire"
     }
   },
-  "privacyPolicy": {
-    "title": "Title"
-  },
-  "security": {
-    "features": {
-      "0": "256-bit AES encryption",
-      "1": "Zero-knowledge architecture",
-      "2": "SOC 2 Type II compliance",
-      "3": "Regular security audits",
-      "4": "GDPR and CCPA compliant",
-      "5": "99.9% uptime guarantee"
-    },
-    "subtitle": "Every plan includes the same bank-level security features",
-    "title": "Enterprise-Grade Security Included"
-  },
   "support": {
-    "essential": {
-      "0": "Email support",
-      "1": "Help center access",
-      "2": "Video tutorials",
-      "3": "Community forum"
-    },
-    "family": {
-      "0": "Priority email support",
-      "1": "Phone support",
-      "2": "Live chat",
-      "3": "Onboarding assistance"
-    },
-    "premium": {
-      "0": "Dedicated support rep",
-      "1": "White-glove onboarding",
-      "2": "Legal consultation referrals",
-      "3": "Custom training sessions"
-    },
-    "subtitle": "We're here to help you protect your family every step of the way",
-    "title": "Support Included with Every Plan"
-  },
-  "termsOfService": {
-    "title": "Title"
+    "essential": [
+      "Assistance par e-mail",
+      "Accès au centre d'aide",
+      "Tutoriels vidéo",
+      "Forum communautaire"
+    ],
+    "family": [
+      "Assistance par e-mail prioritaire",
+      "Assistance téléphonique",
+      "Chat en direct",
+      "Assistance à l'intégration"
+    ],
+    "premium": [
+      "Représentant du support dédié",
+      "Intégration en gants blancs",
+      "Orientations vers des consultations juridiques",
+      "Séances de formation personnalisées"
+    ],
+    "subtitle": "Nous sommes là pour vous aider à protéger votre famille à chaque étape du processus"
   }
 }

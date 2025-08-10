@@ -1,390 +1,424 @@
 {
   "actions": {
-    "next": "[SV] Next",
-    "previous": "[SV] Previous"
+    "consultLawyer": "Boka juridisk konsultation",
+    "createCodicil": "Skapa ändring (Kodicil)",
+    "deleteWill": "Ta bort detta testamente",
+    "downloadPdf": "Ladda ner PDF-dokument",
+    "generateWill": "Skapa testamente",
+    "next": "Nästa",
+    "previous": "Tidigare",
+    "printWill": "Skriv ut testamentsdokument",
+    "saveProgress": "Spara aktuellt framsteg",
+    "shareWill": "Dela med familjen",
+    "updateWill": "Uppdatera testamentsinformation"
   },
   "errors": {
-    "assetLoadFailed": "We could not load your asset information. Please refresh and try again.",
-    "generationFailed": "We encountered an issue generating your will. Please review your information and try again.",
-    "jurisdictionRequired": "Please select your legal jurisdiction to ensure compliance",
-    "loadFailed": "We could not load your will information. Please refresh the page and try again.",
-    "printFailed": "We encountered an issue preparing your document for printing. Please try again.",
-    "saveFailed": "We could not save your progress. Please check your connection and try again.",
-    "sharingFailed": "We could not share your will. Please verify the recipients and try again.",
-    "validationFailed": "Please review and correct the highlighted information before proceeding"
+    "assetLoadFailed": "Vi kunde inte ladda din tillgångsinformation. Uppdatera och försök igen.",
+    "generationFailed": "Vi stötte på ett problem när vi genererade ditt testamente. Vänligen granska din information och försök igen.",
+    "jurisdictionRequired": "Välj din juridiska jurisdiktion för att säkerställa efterlevnad",
+    "loadFailed": "Vi kunde inte ladda din testamentsinformation. Uppdatera sidan och försök igen.",
+    "printFailed": "Vi stötte på ett problem när ditt dokument skulle förberedas för utskrift. Försök igen.",
+    "saveFailed": "Vi kunde inte spara dina framsteg. Kontrollera din anslutning och försök igen.",
+    "validationFailed": "Vänligen granska och korrigera den markerade informationen innan du fortsätter"
   },
   "execution": {
-    "copyDistribution": "Distribution of Copies",
-    "familyNotification": "Informing Your Family",
-    "legalRequirements": "Legal Requirements for {{jurisdiction}}",
-    "notarization": "Notarization Requirements",
-    "notaryOptional": "Notary recommended but not required",
-    "notaryRequired": "Notary public required",
-    "numberOfCopies": "Recommended Number of Copies",
-    "safeStorage": "Secure Storage Locations",
-    "selfProving": "Self-Proving Affidavit",
-    "signingInstructions": "Signing Instructions",
-    "signingOrder": "Proper Signing Order",
-    "storageRecommendations": "Storage Recommendations",
-    "subtitle": "Making your will legally binding",
-    "title": "Will Execution Requirements",
-    "witnessCount": "{{count}} witnesses required",
-    "witnessInstructions": "Witness Instructions",
-    "witnessQualifications": "Witness Qualifications",
-    "witnessRequirements": "Witness Requirements"
+    "copyDistribution": "Distribution av kopior",
+    "familyNotification": "Informera din familj",
+    "legalRequirements": "Juridiska krav för {{jurisdiction}}",
+    "notarization": "Notariseringskrav",
+    "notaryOptional": "Notarius publicus rekommenderas men är inte obligatoriskt",
+    "notaryRequired": "Notarius publicus krävs",
+    "numberOfCopies": "Rekommenderat antal kopior",
+    "safeStorage": "Säkra förvaringsplatser",
+    "selfProving": "Självbevisande försäkran",
+    "signingInstructions": "Signeringsinstruktioner",
+    "signingOrder": "Korrekt signeringsordning",
+    "storageRecommendations": "Förvaringsrekommendationer",
+    "subtitle": "Att göra ditt testamente juridiskt bindande",
+    "title": "Krav för testamentsutförande",
+    "witnessCount": "{{count}} vittnen krävs",
+    "witnessInstructions": "Instruktioner för vittnen",
+    "witnessQualifications": "Vittneskvalifikationer",
+    "witnessRequirements": "Krav på vittnen"
   },
   "form": {
     "assetSelection": {
-      "allAssets": "Include All Current and Future Assets",
-      "assetCategories": "Asset Categories to Include",
-      "businessInterests": "Business Interests",
-      "excludedAssets": "Assets to Exclude",
-      "jointAssets": "Jointly Owned Assets",
-      "residualDescription": "All remaining assets not specifically mentioned elsewhere in this will",
-      "residualEstate": "Residual Estate",
-      "selectAssets": "Choose Assets to Include",
-      "specificAssets": "Select Specific Assets Only"
+      "allAssets": "Inkludera alla nuvarande och framtida tillgångar",
+      "assetCategories": "Tillgångskategorier att inkludera",
+      "businessInterests": "Affärsintressen",
+      "excludedAssets": "Tillgångar att exkludera",
+      "jointAssets": "Gemensamt ägda tillgångar",
+      "residualDescription": "Alla återstående tillgångar som inte uttryckligen nämns någon annanstans i detta testamente",
+      "residualEstate": "Resterande egendom",
+      "selectAssets": "Välj tillgångar att inkludera",
+      "specificAssets": "Välj endast specifika tillgångar"
     },
     "distribution": {
-      "addBeneficiary": "Add Additional Beneficiary",
-      "ageRestriction": "Age Requirement",
-      "allocation": "Inheritance Allocation",
-      "beneficiaryName": "Beneficiary's Full Name",
-      "conditions": "Conditions or Restrictions",
-      "contingentBeneficiary": "Contingent Beneficiary",
-      "percentage": "Percentage of Estate",
-      "primaryBeneficiary": "Primary Beneficiary",
-      "relationship": "Relationship to You",
-      "specificAmount": "Specific Dollar Amount",
-      "specificAsset": "Specific Asset or Property",
-      "trustProvision": "Trust Arrangement"
+      "addBeneficiary": "Lägg till ytterligare förmånstagare",
+      "ageRestriction": "Ålderskrav",
+      "allocation": "Arvsallokering",
+      "beneficiaryName": "Mottagarens fullständiga namn",
+      "conditions": "Villkor eller begränsningar",
+      "contingentBeneficiary": "Villkorad förmånstagare",
+      "percentage": "Procentandel av dödsboet",
+      "primaryBeneficiary": "Primär förmånstagare",
+      "relationship": "Relation till dig",
+      "specificAmount": "Specifikt dollarbelopp",
+      "specificAsset": "Specifik tillgång eller egendom",
+      "trustProvision": "Förtroendeavtal"
     },
     "executor": {
-      "alternateExecutor": "Alternate Executor",
-      "bondRequirement": "Bond Requirement",
-      "coExecutors": "Co-Executors",
-      "executorAddress": "Executor's Address",
-      "executorCompensation": "Executor Compensation",
-      "executorDuties": "Executor Responsibilities",
-      "executorInstructions": "Special Instructions for Executor",
-      "executorName": "Executor's Full Name",
-      "executorRelationship": "Relationship to You",
-      "primaryExecutor": "Primary Executor",
-      "specialPowers": "Special Powers Granted"
+      "alternateExecutor": "Suppleant testamentsexekutor",
+      "bondRequirement": "Obligationskrav",
+      "coExecutors": "Medexekutorer",
+      "executorAddress": "Testamentsexekutorns adress",
+      "executorCompensation": "Ersättning för testamentsexekutor",
+      "executorDuties": "Exekutorns ansvar",
+      "executorInstructions": "Särskilda instruktioner för testamentsexekutor",
+      "executorName": "Testamentsexekutorns fullständiga namn",
+      "executorRelationship": "Relation till dig",
+      "primaryExecutor": "Primär testamentsexekutor",
+      "specialPowers": "Särskilda befogenheter beviljade"
     },
     "guardianship": {
-      "backupGuardian": "Alternate Guardian",
-      "educationPreferences": "Education Preferences",
-      "guardianCompensation": "Guardian Compensation",
-      "guardianFor": "Guardian for {{childName}}",
-      "guardianInstructions": "Instructions for Guardian",
-      "guardianQualifications": "Guardian Qualifications",
-      "minorChildren": "Minor Children Requiring Guardianship",
-      "primaryGuardian": "Primary Guardian",
-      "religiousUpbringing": "Religious Upbringing Preferences"
+      "backupGuardian": "Alternativ förmyndare",
+      "educationPreferences": "Utbildningspreferenser",
+      "guardianCompensation": "Förmyndarersättning",
+      "guardianFor": "Väktare för {{childName}}",
+      "guardianInstructions": "Instruktioner för vårdnadshavare",
+      "guardianQualifications": "Förmyndarkvalifikationer",
+      "minorChildren": "Minderåriga barn som behöver vårdnad",
+      "primaryGuardian": "Huvudvårdnadshavare",
+      "religiousUpbringing": "Religiösa uppfostranspreferenser"
     },
     "personalInfo": {
-      "addChild": "Add Child",
-      "addressHelper": "Your primary residence address",
-      "childDateOfBirth": "Child's Date of Birth",
-      "childName": "Child's Full Name",
-      "childRelation": "Relationship to You",
-      "children": "Children and Dependents",
-      "currentAddress": "Current Legal Address",
-      "dateOfBirth": "Date of Birth",
-      "fullLegalName": "Complete Legal Name",
-      "fullLegalNameHelper": "Enter your name exactly as it appears on official documents",
-      "maritalStatus": "Marital Status",
-      "marriageDate": "Date of Marriage",
-      "placeOfBirth": "Place of Birth",
-      "previousWills": "Previous Wills",
-      "revokesPrevious": "This will revokes all previous wills",
-      "spouseName": "Spouse's Full Legal Name"
+      "addChild": "Lägg till barn",
+      "addressHelper": "Din primära bostadsadress",
+      "childDateOfBirth": "Barnets födelsedatum",
+      "childName": "Barnets fullständiga namn",
+      "childRelation": "Relation till dig",
+      "children": "Barn och anhöriga",
+      "currentAddress": "Nuvarande juridisk adress",
+      "dateOfBirth": "Födelsedatum",
+      "fullLegalName": "Fullständigt juridiskt namn",
+      "fullLegalNameHelper": "Ange ditt namn exakt som det står på officiella dokument",
+      "maritalStatus": "Civilstånd",
+      "marriageDate": "Datum för äktenskap",
+      "placeOfBirth": "Födelseort",
+      "previousWills": "Tidigare testamenten",
+      "revokesPrevious": "Detta testamente upphäver alla tidigare testamenten",
+      "spouseName": "Makes/makas fullständiga juridiska namn"
     },
     "provisions": {
-      "burialCremation": "Burial or Cremation Preference",
-      "businessContinuation": "Business Continuation Plans",
-      "charitableBequests": "Charitable Donations",
-      "charityAmount": "Donation Amount",
-      "charityName": "Charitable Organization",
-      "digitalAssets": "Digital Asset Instructions",
-      "funeralInstructions": "Specific Funeral Instructions",
-      "funeralWishes": "Funeral and Burial Preferences",
-      "organDonation": "Organ Donation Wishes",
-      "personalMessages": "Personal Messages to Family",
-      "petCare": "Pet Care Arrangements",
-      "specialInstructions": "Special Instructions"
+      "burialCremation": "Begravning eller kremering som föredraget",
+      "businessContinuation": "Planer för fortsatt verksamhet",
+      "charitableBequests": "Välgörenhetsdonationer",
+      "charityAmount": "Donationsbelopp",
+      "charityName": "välgörenhetsorganisation",
+      "digitalAssets": "Instruktioner för digitala tillgångar",
+      "funeralInstructions": "Specifika begravningsinstruktioner",
+      "funeralWishes": "Begravnings- och gravsättningspreferenser",
+      "organDonation": "Önskemål om organdonation",
+      "personalMessages": "Personliga meddelanden till familjen",
+      "petCare": "Husdjursvårdsarrangemang",
+      "specialInstructions": "Särskilda instruktioner"
     }
   },
   "generator": {
-    "of": "[SV] Of",
-    "step": "[SV] Step"
+    "continueWill": "Fortsätt testamentsförberedelserna",
+    "description": "Skapa ett omfattande, juridiskt giltigt testamente skräddarsytt efter din jurisdiktion och din familjs unika behov.",
+    "getStarted": "Börja skapa ditt testamente",
+    "importance": "Att säkerställa att dina önskemål är juridiskt dokumenterade och att din familj är skyddad",
+    "newWill": "Skapa nytt testamente",
+    "of": "Av",
+    "professionalGuidance": "Professionell juridisk vägledning rekommenderas för komplexa dödsbon",
+    "step": "Steg",
+    "subtitle": "Skapa ett juridiskt sunt testamente med professionell vägledning",
+    "title": "Testamentsgenerator",
+    "viewExisting": "Granska nuvarande testamente"
   },
   "legal": {
-    "consultLawyer": "Consult with Attorney",
-    "disclaimer": "Important Legal Disclaimer",
-    "estatePlanning": "Comprehensive Estate Planning",
-    "jurisdiction": "Legal Jurisdiction",
-    "lawsApply": "Laws of {{jurisdiction}} will apply",
-    "lawyerRecommended": "We strongly recommend consulting with a qualified attorney for complex estates",
-    "legalCompliance": "Legal Compliance Verification",
-    "notLegalAdvice": "This service does not constitute legal advice",
-    "probateProcess": "Probate Process Information",
-    "professionalGuidance": "Professional legal guidance is recommended",
-    "professionalReview": "Professional Legal Review",
-    "selectJurisdiction": "Please select your legal jurisdiction",
-    "taxImplications": "Tax Implications"
+    "consultLawyer": "Rådfråga en advokat",
+    "disclaimer": "Viktig juridisk ansvarsfriskrivning",
+    "estatePlanning": "Omfattande arvsplanering",
+    "jurisdiction": "Jurisdiktion",
+    "lawsApply": "Lagarna i {{jurisdiction}} gäller",
+    "lawyerRecommended": "Vi rekommenderar starkt att rådgöra med en kvalificerad advokat för komplexa dödsbon",
+    "legalCompliance": "Verifiering av juridisk efterlevnad",
+    "notLegalAdvice": "Denna tjänst utgör inte juridisk rådgivning",
+    "probateProcess": "Information om bouppteckningsprocessen",
+    "professionalGuidance": "Professionell juridisk vägledning rekommenderas",
+    "professionalReview": "Professionell juridisk granskning",
+    "selectJurisdiction": "Välj din juridiska jurisdiktion",
+    "taxImplications": "Skattekonsekvenser"
   },
   "notifications": {
-    "consultationScheduled": "Legal consultation has been scheduled",
-    "documentShared": "Will has been shared with designated family members",
-    "executionComplete": "Will execution has been recorded",
-    "progressSaved": "Your progress has been saved",
-    "reminderSet": "Will review reminder has been set",
-    "willDeleted": "Will has been permanently deleted",
-    "willGenerated": "Your will has been successfully generated",
-    "willUpdated": "Will has been updated successfully"
+    "consultationScheduled": "Juridisk konsultation har planerats",
+    "documentShared": "Testamentet har delats med utsedda familjemedlemmar",
+    "executionComplete": "Testamentsförrättningen har registrerats",
+    "progressSaved": "Dina framsteg har sparats",
+    "willDeleted": "Will har raderats permanent",
+    "willUpdated": "Will har uppdaterats"
   },
   "preview": {
-    "article": "ARTICLE {{number}}",
-    "draftWatermark": "DRAFT - NOT LEGALLY BINDING",
-    "executionInstructions": "EXECUTION INSTRUCTIONS",
-    "lastWillTestament": "LAST WILL AND TESTAMENT",
-    "of": "OF",
-    "pageNumber": "Page {{current}} of {{total}}",
-    "reviewCarefully": "Please review this document carefully before proceeding",
-    "section": "Section {{number}}",
-    "signatureSection": "SIGNATURE SECTION",
-    "subtitle": "Review your complete will before finalizing",
-    "title": "Will Document Preview",
-    "witnessClause": "WITNESS CLAUSE"
+    "article": "ARTIKEL {{number}}",
+    "draftWatermark": "UTKAST - EJ RÄTTSLIGT BINDANDE",
+    "executionInstructions": "UTFÖRANDEINSTRUKTIONER",
+    "lastWillTestament": "TESTAMENTET",
+    "of": "AV",
+    "pageNumber": "Sida {{current}} av {{total}}",
+    "reviewCarefully": "Vänligen granska detta dokument noggrant innan du fortsätter",
+    "section": "Avsnitt {{number}}",
+    "signatureSection": "UNDERSKRIFTSAVSNITT",
+    "subtitle": "Granska ditt fullständiga testamente innan du slutför det",
+    "title": "Förhandsvisning av testamentsdokument",
+    "witnessClause": "VITTNESKLAUSUL"
   },
   "status": {
-    "archived": "Archived Version",
-    "draft": "Draft in Progress",
-    "executed": "Legally Executed",
-    "generated": "Generated - Requires Execution",
-    "outdated": "Requires Update",
-    "underReview": "Under Professional Review"
+    "archived": "Arkiverad version",
+    "draft": "Utkast pågår",
+    "executed": "Lagligt avrättad",
+    "generated": "Genererad - Kräver körning",
+    "outdated": "Kräver uppdatering"
+  },
+  "policy": {
+    "duration": {
+      "session": "Session",
+      "minutes": "{{count}} minuter",
+      "hours": "{{count}} timmar",
+      "days": "{{count}} dagar",
+      "months": "{{count}} månader",
+      "years": "{{count}} år"
+    }
   },
   "steps": {
     "assets": {
-      "description": "Select which assets you wish to include in your will and how they should be distributed.",
-      "subtitle": "Your valuable possessions",
-      "title": "Asset Distribution"
+      "description": "Välj vilka tillgångar du vill inkludera i ditt testamente och hur de ska fördelas.",
+      "subtitle": "Dina värdefulla ägodelar",
+      "title": "Tillgångsfördelning"
     },
     "beneficiaries": {
-      "description": "Designate who will receive your assets and in what proportions.",
-      "subtitle": "Your chosen recipients",
-      "title": "Beneficiary Designations"
+      "description": "Bestäm vem som ska ta emot dina tillgångar och i vilka proportioner.",
+      "subtitle": "Dina valda mottagare",
+      "title": "Mottagarens beteckningar"
     },
     "executor": {
-      "description": "Choose a responsible person to manage your estate and carry out your wishes.",
-      "subtitle": "Your estate representative",
-      "title": "Estate Executor"
+      "description": "Välj en ansvarsfull person som ska förvalta din egendom och genomföra dina önskemål.",
+      "subtitle": "Din dödsborepresentant",
+      "title": "Dödsboexekutor"
     },
     "guardians": {
-      "description": "Appoint trusted individuals to care for minor children or dependents.",
-      "subtitle": "Care for your dependents",
-      "title": "Guardianship Appointments"
+      "description": "Utse betrodda personer att ta hand om minderåriga barn eller anhöriga.",
+      "subtitle": "Ta hand om dina anhöriga",
+      "title": "Förmyndarskapsutnämningar"
     },
     "personal": {
-      "description": "We require your complete legal information to ensure your will meets all legal requirements.",
-      "subtitle": "Your identifying information",
-      "title": "Personal Information"
+      "description": "Vi behöver din fullständiga juridiska information för att säkerställa att ditt testamente uppfyller alla juridiska krav.",
+      "subtitle": "Din identifierande information",
+      "title": "Personlig information"
     },
     "preferences": {
-      "description": "Include any special instructions, charitable bequests, or personal wishes.",
-      "subtitle": "Additional instructions",
-      "title": "Special Provisions"
+      "description": "Inkludera eventuella särskilda instruktioner, välgörenhetsarv eller personliga önskemål.",
+      "subtitle": "Ytterligare instruktioner",
+      "title": "Särskilda bestämmelser"
     },
     "review": {
-      "description": "Carefully review all details before generating your legal document.",
-      "subtitle": "Verify all information",
-      "title": "Final Review"
+      "description": "Granska noggrant alla detaljer innan du skapar ditt juridiska dokument.",
+      "subtitle": "Verifiera all information",
+      "title": "Slutlig granskning"
     }
   },
   "validation": {
-    "jurisdictionRequired": "[SV] Jurisdiction required",
-    "requiredField": "[SV] Required field"
+    "addressRequired": "Din nuvarande juridiska adress krävs",
+    "allocationError": "Den totala procentuella tilldelningen måste vara lika med 100 %",
+    "beneficiaryRequired": "Minst en förmånstagare måste anges",
+    "dobRequired": "Födelsedatum krävs för juridisk giltighet",
+    "duplicateBeneficiary": "Denna förmånstagare har redan lagts till",
+    "executorBeneficiaryConflict": "Testamentsexekutor och primär förmånstagare bör vanligtvis vara olika individer",
+    "executorRequired": "Minst en testamentsexekutor måste utses",
+    "guardianRequired": "Förmyndarutnämning krävs för minderåriga barn",
+    "invalidDate": "Ange ett giltigt datum",
+    "invalidPercentage": "Procenten måste vara mellan 0 och 100",
+    "jurisdictionRequired": "Jurisdiktion krävs",
+    "requiredField": "Obligatoriskt fält"
   },
   "will": {
-    "address": "Address",
-    "addressPlaceholder": "Address placeholder",
+    "address": "Adress",
+    "addressPlaceholder": "Adressplatshållare",
     "allocation": {
-      "addBeneficiary": "Add beneficiary",
-      "description": "Description",
-      "generalEstate": "General estate",
-      "percentage": "Percentage",
+      "addBeneficiary": "Lägg till mottagare",
+      "description": "Beskrivning",
+      "generalEstate": "Allmän egendom",
+      "percentage": "Procentsats",
       "tips": {
-        "tip1": "Tip1",
-        "tip2": "Tip2",
-        "tip3": "Tip3",
-        "title": "Title"
+        "tip1": "Tips1",
+        "tip2": "Tips2",
+        "tip3": "Tips3",
+        "title": "Titel"
       },
-      "title": "Title",
+      "title": "Titel",
       "total": "Total"
     },
     "beneficiaries": {
-      "addBeneficiary": "Add beneficiary",
-      "allocation": "Allocation",
-      "alternativeBeneficiary": "Alternative beneficiary",
-      "alternativePlaceholder": "Alternative placeholder",
-      "beneficiaryNumber": "Beneficiary number",
-      "currentAllocation": "Current allocation",
-      "description": "Description",
-      "identification": "Identification",
-      "identificationPlaceholder": "Identification placeholder",
-      "importantNotes": "Important notes",
-      "name": "Name",
-      "noBeneficiaries": "No beneficiaries",
-      "note1": "Note1",
-      "note2": "Note2",
-      "note3": "Note3",
-      "ofEstate": "Of estate",
-      "title": "Title"
+      "addBeneficiary": "Lägg till mottagare",
+      "allocation": "Tilldelning",
+      "alternativeBeneficiary": "Alternativ förmånstagare",
+      "alternativePlaceholder": "Alternativ platshållare",
+      "beneficiaryNumber": "Mottagarens nummer",
+      "currentAllocation": "Nuvarande tilldelning",
+      "description": "Beskrivning",
+      "identification": "Identifiering",
+      "identificationPlaceholder": "Identifieringsplatshållare",
+      "importantNotes": "Viktiga anmärkningar",
+      "name": "Namn",
+      "noBeneficiaries": "Inga förmånstagare",
+      "note1": "Anmärkning 1",
+      "note2": "Anmärkning 2",
+      "note3": "Not 3",
+      "ofEstate": "Av egendom",
+      "title": "Titel"
     },
     "beneficiary": {
-      "name": "Name",
-      "namePlaceholder": "Name placeholder",
-      "relationship": "Relationship",
-      "relationshipPlaceholder": "Relationship placeholder"
+      "name": "Namn",
+      "namePlaceholder": "Namnplatshållare",
+      "relationship": "Relation",
+      "relationshipPlaceholder": "Platshållare för relationen"
     },
-    "birthDate": "Birth date",
-    "birthDatePlaceholder": "Birth date placeholder",
+    "birthDate": "Födelsedatum",
+    "birthDatePlaceholder": "Platshållare för födelsedatum",
     "buttons": {
-      "saveWillInfo": "Save will info",
-      "saving": "Saving"
+      "saveWillInfo": "Spara testamentsinformation",
+      "saving": "Sparande"
     },
-    "countryRequirements": "Country requirements",
+    "countryRequirements": "Landskrav",
     "descriptions": {
-      "executorDescription": "Executor description",
-      "physicalLocationDescription": "Physical location description",
-      "statusDescription": "Status description"
+      "executorDescription": "Beskrivning av testamentsexekutor",
+      "physicalLocationDescription": "Beskrivning av fysisk plats",
+      "statusDescription": "Statusbeskrivning"
     },
     "executor": {
-      "addAlternative": "Add alternative",
-      "address": "Address",
-      "addressPlaceholder": "Address placeholder",
-      "alternative": "Alternative",
-      "alternativeDescription": "Alternative description",
-      "description": "Description",
-      "name": "Name",
-      "namePlaceholder": "Name placeholder",
-      "phone": "Phone",
-      "phonePlaceholder": "Phone placeholder",
-      "primary": "Primary",
-      "relationship": "Relationship",
-      "relationshipPlaceholder": "Relationship placeholder",
-      "responsibilities": "Responsibilities",
-      "responsibility1": "Responsibility1",
-      "responsibility2": "Responsibility2",
-      "responsibility3": "Responsibility3",
-      "responsibility4": "Responsibility4",
-      "title": "Title"
+      "addAlternative": "Lägg till alternativ",
+      "address": "Adress",
+      "addressPlaceholder": "Adressplatshållare",
+      "alternative": "Alternativ",
+      "alternativeDescription": "Alternativ beskrivning",
+      "description": "Beskrivning",
+      "name": "Namn",
+      "namePlaceholder": "Namnplatshållare",
+      "phone": "Telefon",
+      "phonePlaceholder": "Telefonplatshållare",
+      "primary": "Primär",
+      "relationship": "Relation",
+      "relationshipPlaceholder": "Platshållare för relationen",
+      "responsibilities": "Ansvar",
+      "responsibility1": "Ansvar1",
+      "responsibility2": "Ansvar2",
+      "responsibility3": "Ansvar3",
+      "responsibility4": "Ansvar4",
+      "title": "Titel"
     },
     "fields": {
-      "additionalNotes": "Additional notes",
-      "currentStatus": "Current status",
-      "executorContact": "Executor contact",
-      "physicalLocation": "Physical location"
+      "additionalNotes": "Ytterligare anteckningar",
+      "currentStatus": "Nuvarande status",
+      "executorContact": "Kontakt för testamentsexekutor",
+      "physicalLocation": "Fysisk plats"
     },
     "legalReview": {
-      "button": "Button",
-      "description": "Description",
-      "title": "Title"
+      "button": "Knapp",
+      "description": "Beskrivning",
+      "title": "Titel"
     },
-    "name": "Name",
-    "namePlaceholder": "Name placeholder",
+    "name": "Namn",
+    "namePlaceholder": "Namnplatshållare",
     "options": {
-      "noContactSelected": "No contact selected"
+      "noContactSelected": "Ingen kontakt vald"
     },
     "placeholders": {
-      "additionalNotes": "Additional notes",
-      "physicalLocation": "Physical location",
-      "selectContact": "Select contact"
+      "additionalNotes": "Ytterligare anteckningar",
+      "physicalLocation": "Fysisk plats",
+      "selectContact": "Välj kontakt"
     },
     "preview": {
-      "address": "Address",
-      "alternative": "Alternative",
-      "alternativeExecutor": "Alternative executor",
-      "date": "Date",
-      "description": "Description",
-      "executor": "Executor",
-      "generatePDF": "Generate p d f",
-      "legalRequirements": "Legal requirements",
-      "name": "Name",
-      "ofEstate": "Of estate",
-      "place": "Place",
-      "print": "Print",
-      "signature": "Signature",
-      "title": "Title",
-      "witnesses": "Witnesses"
+      "address": "Adress",
+      "alternative": "Alternativ",
+      "alternativeExecutor": "Alternativ testamentsexekutor",
+      "date": "Datum",
+      "description": "Beskrivning",
+      "executor": "Testamentsexekutor",
+      "generatePDF": "Generera pdf",
+      "legalRequirements": "Rättsliga krav",
+      "name": "Namn",
+      "ofEstate": "Av egendom",
+      "place": "Plats",
+      "print": "Skriva ut",
+      "signature": "Signatur",
+      "title": "Titel",
+      "witnesses": "Vittnen"
     },
     "requirements": {
-      "handwriting": "Handwriting",
-      "notarization": "Notarization",
-      "typed": "Typed",
-      "witnesses": "Witnesses"
+      "handwriting": "Handstil",
+      "notarization": "Notarisering",
+      "typed": "Skrivet",
+      "witnesses": "Vittnen"
     },
-    "selectCountry": "Select country",
-    "selectedCountryDetails": "Selected country details",
+    "selectCountry": "Välj land",
+    "selectedCountryDetails": "Detaljer om valda länder",
     "status": {
-      "draft": "Draft",
-      "notarized": "Notarized",
-      "stored": "Stored",
-      "updated": "Updated"
+      "draft": "Förslag",
+      "notarized": "Notariserad",
+      "stored": "Lagrad",
+      "updated": "Uppdaterad"
     },
-    "testatorInfo": "Testator info",
+    "testatorInfo": "Information om testator",
     "validation": {
-      "allocation100": "Allocation100"
+      "allocation100": "Tilldelning100"
     },
     "willPreview": {
       "_2": "2",
-      "critical_execution_instruction_3": "Critical execution instruction 3",
-      "professional_review_4": "Professional review 4",
-      "provided_by_certified_legal_pa_5": "Provided by certified legal pa 5"
+      "critical_execution_instruction_3": "Kritisk utförandeinstruktion 3",
+      "professional_review_4": "Professionell recension 4",
+      "provided_by_certified_legal_pa_5": "Tillhandahålls av certifierad juridisk assistent 5"
     }
   },
   "willGenerator": {
-    "changeCountry": "Change country",
-    "confirmCountry": "Confirm country",
-    "confirmSigned": "Confirm signed",
+    "changeCountry": "Ändra land",
+    "confirmCountry": "Bekräfta land",
+    "confirmSigned": "Bekräfta underskrift",
     "console": {
-      "willGenerationCompleted": "Will generation completed"
+      "willGenerationCompleted": "Testamentsgenerering slutförd"
     },
     "countries": {
-      "AL": "A l",
-      "AT": "A t",
+      "AL": "En l",
+      "AT": "En t",
       "BA": "B a",
-      "BE": "B e",
+      "BE": "Var",
       "BG": "B g",
-      "CH": "C h",
+      "CH": "Ch",
       "CY": "C y",
       "CZ": "C z",
       "DE": "D e",
       "DK": "D k",
-      "EE": "E e",
+      "EE": "Ee",
       "ES": "E s",
       "FI": "F i",
-      "FR": "F r",
+      "FR": "Fr",
       "GB": "G b",
-      "GR": "G r",
-      "HR": "H r",
-      "HU": "H u",
-      "IE": "I e",
-      "IS": "I s",
-      "IT": "I t",
+      "GR": "Gr r",
+      "HR": "Hr",
+      "HU": "H du",
+      "IE": "Jag e",
+      "IS": "Jag är",
+      "IT": "Jag",
       "LI": "L i",
       "LT": "L t",
-      "LU": "L u",
+      "LU": "Lu",
       "LV": "L v",
       "MD": "M d",
       "ME": "M e",
       "MK": "M k",
-      "MT": "M t",
+      "MT": "Måndag till fredag",
       "NL": "N l",
-      "NO": "N o",
+      "NO": "Nej",
       "PL": "P l",
       "PT": "P t",
       "RO": "R o",
@@ -392,244 +426,216 @@
       "SE": "S e",
       "SI": "S i",
       "SK": "S k",
-      "UA": "U a"
+      "UA": "Du är en"
     },
-    "executionInstructions": "Execution instructions",
-    "failed_to_load_will_template_2": "Failed to load will template 2",
-    "finalizeUpload": "Finalize upload",
-    "fullName": "Full name",
-    "no_template_found_for_this_jur_1": "No template found for this jur 1",
-    "please_confirm_that_you_have_s_3": "Please confirm that you have s 3",
-    "select_a_country_4": "Select a country 4",
+    "executionInstructions": "Exekveringsinstruktioner",
+    "failed_to_load_will_template_2": "Misslyckades med att ladda testamentsmallen 2",
+    "finalizeUpload": "Slutför uppladdningen",
+    "fullName": "Fullständigt namn",
+    "no_template_found_for_this_jur_1": "Ingen mall hittades för denna jur 1",
+    "please_confirm_that_you_have_s_3": "Vänligen bekräfta att du har s 3",
+    "select_a_country_4": "Välj ett land 4",
     "steps": {
-      "confirmJurisdiction": "Confirm jurisdiction",
-      "executorBeneficiaries": "Executor beneficiaries",
-      "personalInformation": "Personal information",
-      "reviewGenerate": "Review generate",
-      "signConfirm": "Sign confirm"
+      "confirmJurisdiction": "Bekräfta jurisdiktion",
+      "executorBeneficiaries": "Testamentsexekutors förmånstagare",
+      "personalInformation": "Personlig information",
+      "reviewGenerate": "Recension generera",
+      "signConfirm": "Signera bekräfta"
     }
   },
   "willSync": {
-    "approve": "Approve",
-    "autoApplied": "Auto applied",
+    "approve": "Godkänna",
+    "autoApplied": "Automatiskt tillämpat",
     "changes": {
-      "allocationsModified": "Allocations modified",
-      "assetsAdded": "Assets added",
-      "beneficiariesRemoved": "Beneficiaries removed",
-      "noChanges": "No changes"
+      "allocationsModified": "Modifierade tilldelningar",
+      "assetsAdded": "Tillgångar tillagda",
+      "beneficiariesRemoved": "Mottagare borttagna",
+      "noChanges": "Inga ändringar"
     },
-    "reject": "Reject",
-    "viewChanges": "View changes"
+    "reject": "Avvisa",
+    "viewChanges": "Visa ändringar"
   },
   "willSyncSettings": {
-    "autoSync": "Auto sync",
-    "autoSyncDescription": "Auto sync description",
-    "frequencyDaily": "Frequency daily",
-    "frequencyImmediate": "Frequency immediate",
-    "frequencyWeekly": "Frequency weekly",
-    "generalDescription": "General description",
-    "generalSettings": "General settings",
-    "requireApproval": "Require approval",
-    "requireApprovalDescription": "Require approval description",
-    "saveError": "Save error",
-    "saved": "Saved",
-    "syncFrequency": "Sync frequency",
-    "triggerDescription": "Trigger description",
-    "triggerSettings": "Trigger settings"
+    "autoSync": "Automatisk synkronisering",
+    "autoSyncDescription": "Beskrivning av automatisk synkronisering",
+    "frequencyDaily": "Frekvens dagligen",
+    "frequencyImmediate": "Frekvens omedelbar",
+    "frequencyWeekly": "Frekvens varje vecka",
+    "generalDescription": "Allmän beskrivning",
+    "generalSettings": "Allmänna inställningar",
+    "requireApproval": "Kräv godkännande",
+    "requireApprovalDescription": "Beskrivning av krävt godkännande",
+    "saveError": "Sparningsfel",
+    "saved": "Sparad",
+    "syncFrequency": "Synkroniseringsfrekvens",
+    "triggerDescription": "Beskrivning av utlösaren",
+    "triggerSettings": "Triggerinställningar"
   },
   "willVersion": {
-    "added": "Added",
-    "compareDiff": "Compare diff",
-    "comparePrompt": "Compare prompt",
-    "current": "Current",
-    "description": "Description",
-    "modified": "Modified",
-    "removed": "Removed",
-    "restore": "Restore",
-    "title": "Title",
-    "versionNumber": "Version number"
+    "added": "Tillagd",
+    "compareDiff": "Jämför skillnad",
+    "comparePrompt": "Jämför prompt",
+    "current": "Nuvarande",
+    "description": "Beskrivning",
+    "modified": "Ändrad",
+    "removed": "Borttagen",
+    "restore": "Återställa",
+    "title": "Titel",
+    "versionNumber": "Versionsnummer"
   },
   "disclaimers": {
-    "general": "LegacyGuard provides tools and guidance for estate planning but does not provide legal advice. For complex estates or specific legal questions, please consult with a qualified attorney in your jurisdiction.",
-    "willGenerator": "The will generator creates documents based on information you provide. While designed to meet legal requirements, we strongly recommend having any generated will reviewed by a qualified attorney before execution.",
-    "jurisdiction": "Legal requirements vary by jurisdiction. Ensure your documents comply with the laws in your area.",
-    "notLegalAdvice": "This service does not constitute legal advice and should not be relied upon as such.",
-    "professionalReview": "For complex estates, business interests, or unique family situations, professional legal review is strongly recommended."
+    "general": "LegacyGuard tillhandahåller verktyg och vägledning för arvsplanering men ger inte juridisk rådgivning. För komplexa dödsbon eller specifika juridiska frågor, vänligen kontakta en kvalificerad advokat i din jurisdiktion.",
+    "willGenerator": "Testamentsgeneratorn skapar dokument baserat på information du anger. Även om den är utformad för att uppfylla juridiska krav, rekommenderar vi starkt att alla genererade testamenten granskas av en kvalificerad advokat innan de verkställs.",
+    "jurisdiction": "Rättsliga krav varierar beroende på jurisdiktion. Se till att dina dokument följer lagarna i ditt område.",
+    "notLegalAdvice": "Denna tjänst utgör inte juridisk rådgivning och bör inte åberopas som sådan.",
+    "professionalReview": "För komplexa dödsbon, affärsintressen eller unika familjesituationer rekommenderas starkt professionell juridisk granskning."
   },
   "terms": {
-    "serviceTerms": "Terms of Service",
-    "privacyPolicy": "Privacy Policy",
-    "dataProcessing": "Data Processing Agreement",
-    "userAgreement": "User Agreement",
-    "acceptanceRequired": "By using LegacyGuard, you agree to our Terms of Service and Privacy Policy.",
-    "lastUpdated": "Last updated: {{date}}",
-    "effectiveDate": "Effective date: {{date}}"
+    "serviceTerms": "Användarvillkor",
+    "privacyPolicy": "Integritetspolicy",
+    "dataProcessing": "Avtal om databehandling",
+    "userAgreement": "Användaravtal",
+    "acceptanceRequired": "Genom att använda LegacyGuard godkänner du våra användarvillkor och vår integritetspolicy.",
+    "lastUpdated": "Senast uppdaterad: {{date}}",
+    "effectiveDate": "Giltighetsdatum: {{date}}"
   },
   "compliance": {
-    "dataProtection": "Your data is protected in compliance with applicable data protection laws including GDPR and CCPA.",
-    "encryption": "All sensitive information is encrypted using industry-standard encryption methods.",
-    "retention": "Data retention policies are designed to protect your privacy while ensuring your family can access important information when needed.",
-    "access": "You have the right to access, modify, or delete your personal information at any time.",
-    "portability": "You can export your data in standard formats for use with other services."
+    "dataProtection": "Dina uppgifter skyddas i enlighet med tillämpliga dataskyddslagar, inklusive GDPR och CCPA.",
+    "encryption": "All känslig information krypteras med branschstandardiserade krypteringsmetoder.",
+    "retention": "Policyer för datalagring är utformade för att skydda din integritet samtidigt som de säkerställer att din familj kan komma åt viktig information när det behövs.",
+    "access": "Du har rätt att få tillgång till, ändra eller radera dina personuppgifter när som helst.",
+    "portability": "Du kan exportera dina data i standardformat för användning med andra tjänster."
   },
   "executionRequirements": {
-    "witnessRequirements": "Witness Requirements for {{jurisdiction}}",
-    "notaryRequirements": "Notarization Requirements",
-    "signingInstructions": "Proper Signing Instructions",
-    "storageGuidelines": "Secure Storage Guidelines",
-    "legalCompliance": "Legal Compliance Verification"
+    "witnessRequirements": "Vittneskrav för {{jurisdiction}}",
+    "notaryRequirements": "Notariseringskrav",
+    "signingInstructions": "Instruktioner för korrekt signering",
+    "storageGuidelines": "Riktlinjer för säker lagring",
+    "legalCompliance": "Verifiering av juridisk efterlevnad"
   },
   "cookiePolicy": {
     "cookieTypes": {
-      "analytics": "Analytics cookies help us understand how visitors interact with our website.",
-      "essential": "Essential cookies are necessary for the website to function properly.",
-      "marketing": "Marketing cookies are used to track visitors across websites to display relevant advertisements."
+      "analytics": "Analyscookies hjälper oss att förstå hur besökare interagerar med vår webbplats.",
+      "essential": "Nödvändiga cookies är nödvändiga för att webbplatsen ska fungera korrekt.",
+      "marketing": "Marknadsföringscookies används för att spåra besökare på olika webbplatser för att visa relevanta annonser."
     },
-    "howWeUseCookies": "We use cookies to improve your experience, analyze site usage, and provide personalized content.",
-    "introduction": "This Cookie Policy explains how LegacyGuard uses cookies and similar technologies.",
-    "manageCookies": "You can manage your cookie preferences through your browser settings or our cookie preference center.",
-    "title": "Title",
-    "whatAreCookies": "Cookies are small text files that are stored on your device when you visit our website."
+    "howWeUseCookies": "Vi använder cookies för att förbättra din upplevelse, analysera webbplatsanvändningen och tillhandahålla personligt anpassat innehåll.",
+    "introduction": "Denna cookiepolicy förklarar hur LegacyGuard använder cookies och liknande tekniker.",
+    "manageCookies": "Du kan hantera dina cookieinställningar via dina webbläsarinställningar eller vårt cookieinställningarcenter.",
+    "title": "Titel",
+    "whatAreCookies": "Cookies är små textfiler som lagras på din enhet när du besöker vår webbplats."
   },
   "header": {
-    "subtitle": "Subtitle",
-    "title": "Title"
+    "title": "Titel"
   },
   "hero": {
-    "headline": "Headline",
-    "subheadline": "Subheadline"
-  },
-  "privacyPolicy": {
-    "introduction": "This Privacy Policy describes how LegacyGuard collects, uses, and protects your personal information.",
-    "lastUpdated": "Last updated: {{date}}",
-    "sections": {
-      "dataSecurity": {
-        "content": "We implement appropriate security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.",
-        "title": "Data Security"
-      },
-      "informationCollection": {
-        "content": "We collect information you provide directly to us, such as when you create an account, use our services, or contact us for support.",
-        "title": "Information We Collect"
-      },
-      "informationSharing": {
-        "content": "We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except as described in this policy.",
-        "title": "Information Sharing"
-      },
-      "informationUse": {
-        "content": "We use your information to provide, maintain, and improve our services, communicate with you, and ensure the security of your account.",
-        "title": "How We Use Your Information"
-      },
-      "yourRights": {
-        "content": "You have the right to access, update, or delete your personal information. You may also opt out of certain communications from us.",
-        "title": "Your Rights"
-      }
-    },
-    "title": "Privacy Policy"
+    "headline": "Rubrik",
+    "subheadline": "Underrubrik"
   },
   "termsOfService": {
-    "effectiveDate": "Effective date: {{date}}",
-    "introduction": "These Terms of Service govern your use of LegacyGuard's family protection platform and services.",
-    "lastUpdated": "Last updated: {{date}}",
+    "effectiveDate": "Ikraftträdandedatum: {{date}}",
+    "introduction": "Dessa användarvillkor reglerar din användning av LegacyGuards plattform och tjänster för familjeskydd.",
+    "lastUpdated": "Senast uppdaterad: {{date}}",
     "sections": {
       "acceptance": {
-        "content": "By accessing or using LegacyGuard, you agree to be bound by these Terms of Service and all applicable laws and regulations.",
-        "title": "Acceptance of Terms"
+        "content": "Genom att besöka eller använda LegacyGuard godkänner du att vara bunden av dessa användarvillkor och alla tillämpliga lagar och förordningar.",
+        "title": "Godkännande av villkor"
       },
       "description": {
-        "content": "LegacyGuard provides digital tools and services to help individuals organize their important information for family protection purposes.",
-        "title": "Service Description"
+        "content": "LegacyGuard tillhandahåller digitala verktyg och tjänster som hjälper individer att organisera sin viktiga information för familjeskydd.",
+        "title": "Tjänstbeskrivning"
       },
       "limitations": {
-        "content": "LegacyGuard provides tools and guidance but does not provide legal advice. We recommend consulting with qualified professionals for complex legal matters.",
-        "title": "Limitations of Liability"
+        "content": "LegacyGuard tillhandahåller verktyg och vägledning men ger inte juridisk rådgivning. Vi rekommenderar att du konsulterar kvalificerade yrkespersoner för komplexa juridiska frågor.",
+        "title": "Ansvarsbegränsningar"
       },
       "privacy": {
-        "content": "Your privacy is important to us. Please review our Privacy Policy to understand how we collect, use, and protect your information.",
-        "title": "Privacy and Data Protection"
+        "content": "Din integritet är viktig för oss. Vänligen granska vår integritetspolicy för att förstå hur vi samlar in, använder och skyddar din information.",
+        "title": "Integritet och dataskydd"
       },
       "userResponsibilities": {
-        "content": "You are responsible for maintaining the confidentiality of your account information and for all activities that occur under your account.",
-        "title": "User Responsibilities"
+        "content": "Du är ansvarig för att upprätthålla sekretessen för din kontoinformation och för alla aktiviteter som sker under ditt konto.",
+        "title": "Användaransvar"
       }
     },
-    "title": "Terms of Service"
+    "title": "Användarvillkor"
   },
   "cookies": {
     "policy": {
       "analytics": {
-        "description": "Description",
+        "description": "Beskrivning",
         "examples": {
           "ga": "Ga",
           "gid": "Gid",
           "session": "Session"
         },
-        "purpose": "Purpose",
-        "title": "Title"
+        "purpose": "Ändamål",
+        "title": "Titel"
       },
       "categories": {
-        "title": "Title"
+        "title": "Titel"
       },
       "contact": {
-        "address": "Address",
-        "addressDetails": "Address details",
-        "description": "Description",
-        "email": "Email",
-        "title": "Title"
+        "address": "Adress",
+        "addressDetails": "Adressuppgifter",
+        "description": "Beskrivning",
+        "email": "E-post",
+        "title": "Titel"
       },
-      "examples": "Examples",
-      "lastUpdated": "Last updated",
+      "examples": "Exempel",
+      "lastUpdated": "Senast uppdaterad",
       "manage": {
-        "title": "Title"
+        "title": "Titel"
       },
       "marketing": {
-        "description": "Description",
+        "description": "Beskrivning",
         "examples": {
           "facebook": "Facebook",
           "google": "Google"
         },
-        "purpose": "Purpose",
-        "title": "Title"
+        "purpose": "Ändamål",
+        "title": "Titel"
       },
       "necessary": {
-        "description": "Description",
+        "description": "Beskrivning",
         "examples": {
-          "auth": "Auth",
-          "consent": "Consent",
+          "auth": "Auktorisering",
+          "consent": "Samtycke",
           "csrf": "Csrf",
           "session": "Session"
         },
-        "purpose": "Purpose",
-        "title": "Title"
+        "purpose": "Ändamål",
+        "title": "Titel"
       },
       "overview": {
-        "intro": "Intro",
-        "point1": "Point1",
-        "point2": "Point2",
-        "point3": "Point3",
-        "point4": "Point4",
-        "title": "Title"
+        "intro": "Introduktion",
+        "point1": "Punkt1",
+        "point2": "Punkt2",
+        "point3": "Punkt3",
+        "point4": "Punkt4",
+        "title": "Titel"
       },
       "preferences": {
-        "description": "Description",
+        "description": "Beskrivning",
         "examples": {
-          "language": "Language",
-          "theme": "Theme",
-          "ui": "Ui"
+          "language": "Språk",
+          "theme": "Tema",
+          "ui": "Användargränssnitt"
         },
-        "purpose": "Purpose",
-        "title": "Title"
+        "purpose": "Ändamål",
+        "title": "Titel"
       },
-      "purpose": "Purpose",
-      "required": "Required",
-      "subtitle": "Subtitle",
-      "title": "Title",
+      "purpose": "Ändamål",
+      "required": "Nödvändig",
+      "subtitle": "Texta",
+      "title": "Titel",
       "yourRights": {
-        "description": "Description",
-        "right1": "Right1",
-        "right2": "Right2",
-        "right3": "Right3",
-        "right4": "Right4",
-        "title": "Title"
+        "description": "Beskrivning",
+        "right1": "Höger1",
+        "right2": "Höger2",
+        "right3": "Höger3",
+        "right4": "Höger4",
+        "title": "Titel"
       }
     }
   }

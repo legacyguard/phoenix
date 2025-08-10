@@ -50,7 +50,7 @@ export const AlertCenter: React.FC<AlertCenterProps> = ({
   onClose,
   onAlertCountChange
 }) => {
-  const { t } = useTranslation('ui');
+  const { t } = useTranslation('ui-common');
   const [alerts, setAlerts] = useState<DocumentAlert[]>([]);
   const [loading, setLoading] = useState(true);
   const [activeTab, setActiveTab] = useState<'active' | 'snoozed' | 'dismissed'>('active');

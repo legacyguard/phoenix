@@ -46,7 +46,7 @@ export const NextStepRecommendations: React.FC<NextStepRecommendationsProps> = (
   completedItems,
   className
 }) => {
-  const { t } = useTranslation('dashboard');
+  const { t } = useTranslation('dashboard-main');
 
   // Generate recommendations based on current progress
   const getRecommendations = (): Recommendation[] => {

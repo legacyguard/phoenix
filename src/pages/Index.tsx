@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 
 const Index = () => {
-  const { t } = useTranslation('ui');
+  const { t } = useTranslation('ui-common');
   
   return (
     <div className="min-h-screen flex items-center justify-center bg-background">

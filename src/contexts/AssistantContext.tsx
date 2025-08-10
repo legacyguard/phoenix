@@ -18,7 +18,7 @@ import {
 export { AssistantContext, type EmotionalState, type UserProgress } from './AssistantContextType';
 
 export const AssistantProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const { t } = useTranslation('assistant');
+  const { t } = useTranslation('ai-assistant');
   const { user } = useAuth();
   const navigate = useNavigate();
   

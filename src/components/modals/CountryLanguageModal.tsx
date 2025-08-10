@@ -43,7 +43,7 @@ export const CountryLanguageModal: React.FC<CountryLanguageModalProps> = ({
   detectedLanguage,
   onConfirm,
 }) => {
-  const { t, i18n } = useTranslation('ui');
+  const { t, i18n } = useTranslation('ui-common');
   // Use detected country or let user choose from the list
   const [selectedCountry, setSelectedCountry] = useState<CountryCode | ''>(
     detectedCountry || 'CZ'

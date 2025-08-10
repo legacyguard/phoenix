@@ -1,370 +1,404 @@
 {
   "actions": {
-    "next": "[ET] Next",
-    "previous": "[ET] Previous"
+    "consultLawyer": "Broneeri juriidiline konsultatsioon",
+    "createCodicil": "Loo muudatus (kodicil)",
+    "deleteWill": "Kustuta see testament",
+    "downloadPdf": "Laadi alla PDF-dokument",
+    "generateWill": "Lõpliku testamendi genereerimine",
+    "next": "Järgmine",
+    "previous": "Eelmine",
+    "printWill": "Prindi testamendi dokument",
+    "saveProgress": "Salvesta praegune edenemine",
+    "shareWill": "Jaga perega",
+    "updateWill": "Testamendi teabe värskendamine"
   },
   "errors": {
-    "assetLoadFailed": "We could not load your asset information. Please refresh and try again.",
-    "generationFailed": "We encountered an issue generating your will. Please review your information and try again.",
-    "jurisdictionRequired": "Please select your legal jurisdiction to ensure compliance",
-    "loadFailed": "We could not load your will information. Please refresh the page and try again.",
-    "printFailed": "We encountered an issue preparing your document for printing. Please try again.",
-    "saveFailed": "We could not save your progress. Please check your connection and try again.",
-    "sharingFailed": "We could not share your will. Please verify the recipients and try again.",
-    "validationFailed": "Please review and correct the highlighted information before proceeding"
+    "assetLoadFailed": "Teie vara teavet ei õnnestunud laadida. Palun värskendage lehte ja proovige uuesti.",
+    "generationFailed": "Teie testamendi loomisel ilmnes probleem. Palun vaadake oma teave üle ja proovige uuesti.",
+    "jurisdictionRequired": "Palun valige oma jurisdiktsioon vastavuse tagamiseks",
+    "loadFailed": "Teie testamendi andmeid ei õnnestunud laadida. Palun värskendage lehte ja proovige uuesti.",
+    "printFailed": "Teie dokumendi printimiseks ettevalmistamisel ilmnes probleem. Palun proovige uuesti.",
+    "saveFailed": "Me ei saanud teie edenemist salvestada. Palun kontrollige oma ühendust ja proovige uuesti.",
+    "validationFailed": "Palun vaadake enne jätkamist esiletõstetud teave üle ja parandage see"
   },
   "execution": {
-    "copyDistribution": "Distribution of Copies",
-    "familyNotification": "Informing Your Family",
-    "legalRequirements": "Legal Requirements for {{jurisdiction}}",
-    "notarization": "Notarization Requirements",
-    "notaryOptional": "Notary recommended but not required",
-    "notaryRequired": "Notary public required",
-    "numberOfCopies": "Recommended Number of Copies",
-    "safeStorage": "Secure Storage Locations",
-    "selfProving": "Self-Proving Affidavit",
-    "signingInstructions": "Signing Instructions",
-    "signingOrder": "Proper Signing Order",
-    "storageRecommendations": "Storage Recommendations",
-    "subtitle": "Making your will legally binding",
-    "title": "Will Execution Requirements",
-    "witnessCount": "{{count}} witnesses required",
-    "witnessInstructions": "Witness Instructions",
-    "witnessQualifications": "Witness Qualifications",
-    "witnessRequirements": "Witness Requirements"
+    "copyDistribution": "Koopiate levitamine",
+    "familyNotification": "Perekonna teavitamine",
+    "legalRequirements": "{{jurisdiction}} juriidilised nõuded",
+    "notarization": "Notariaalse kinnitamise nõuded",
+    "notaryOptional": "Notar on soovitatav, kuid mitte nõutav",
+    "notaryRequired": "Notar on nõutav",
+    "numberOfCopies": "Soovitatav koopiate arv",
+    "safeStorage": "Turvalised hoiukohad",
+    "selfProving": "Enesetõestav vandetunnistus",
+    "signingInstructions": "Allkirjastamisjuhised",
+    "signingOrder": "Õige allkirjastamise järjekord",
+    "storageRecommendations": "Säilitamissoovitused",
+    "subtitle": "Testamendi õiguslikult siduvaks muutmine",
+    "title": "Testamendi täitmise nõuded",
+    "witnessCount": "Vaja on {{count}} tunnistajaid",
+    "witnessInstructions": "Tunnistaja juhised",
+    "witnessQualifications": "Tunnistaja kvalifikatsioon",
+    "witnessRequirements": "Tunnistajate nõuded"
   },
   "form": {
     "assetSelection": {
-      "allAssets": "Include All Current and Future Assets",
-      "assetCategories": "Asset Categories to Include",
-      "businessInterests": "Business Interests",
-      "excludedAssets": "Assets to Exclude",
-      "jointAssets": "Jointly Owned Assets",
-      "residualDescription": "All remaining assets not specifically mentioned elsewhere in this will",
-      "residualEstate": "Residual Estate",
-      "selectAssets": "Choose Assets to Include",
-      "specificAssets": "Select Specific Assets Only"
+      "allAssets": "Kaasa kõik praegused ja tulevased varad",
+      "assetCategories": "Kaasatavad varakategooriad",
+      "businessInterests": "Ärihuvid",
+      "excludedAssets": "Väljajäetavad varad",
+      "jointAssets": "Ühisomandis olevad varad",
+      "residualDescription": "Kõik ülejäänud varad, mida käesolevas testamendis mujal eraldi ei mainita",
+      "residualEstate": "Jääkvara",
+      "selectAssets": "Valige kaasatavad varad",
+      "specificAssets": "Valige ainult teatud varad"
     },
     "distribution": {
-      "addBeneficiary": "Add Additional Beneficiary",
-      "ageRestriction": "Age Requirement",
-      "allocation": "Inheritance Allocation",
-      "beneficiaryName": "Beneficiary's Full Name",
-      "conditions": "Conditions or Restrictions",
-      "contingentBeneficiary": "Contingent Beneficiary",
-      "percentage": "Percentage of Estate",
-      "primaryBeneficiary": "Primary Beneficiary",
-      "relationship": "Relationship to You",
-      "specificAmount": "Specific Dollar Amount",
-      "specificAsset": "Specific Asset or Property",
-      "trustProvision": "Trust Arrangement"
+      "addBeneficiary": "Lisa täiendav abisaaja",
+      "ageRestriction": "Vanusepiirang",
+      "allocation": "Pärandi jaotamine",
+      "beneficiaryName": "Saaja täisnimi",
+      "conditions": "Tingimused või piirangud",
+      "contingentBeneficiary": "Tingimuslik abisaaja",
+      "percentage": "Pärandvara protsent",
+      "primaryBeneficiary": "Peamine abisaaja",
+      "relationship": "Suhe sinuga",
+      "specificAmount": "Konkreetne dollarisumma",
+      "specificAsset": "Konkreetne vara või omandiõigus",
+      "trustProvision": "Usalduslepingu sõlmimine"
     },
     "executor": {
-      "alternateExecutor": "Alternate Executor",
-      "bondRequirement": "Bond Requirement",
-      "coExecutors": "Co-Executors",
-      "executorAddress": "Executor's Address",
-      "executorCompensation": "Executor Compensation",
-      "executorDuties": "Executor Responsibilities",
-      "executorInstructions": "Special Instructions for Executor",
-      "executorName": "Executor's Full Name",
-      "executorRelationship": "Relationship to You",
-      "primaryExecutor": "Primary Executor",
-      "specialPowers": "Special Powers Granted"
+      "alternateExecutor": "Asendustäitja",
+      "bondRequirement": "Võlakirjanõue",
+      "coExecutors": "Kaastäitjad",
+      "executorAddress": "Testamenditäitja aadress",
+      "executorCompensation": "Testamenditäitja hüvitis",
+      "executorDuties": "Testamenditäitja kohustused",
+      "executorInstructions": "Testamenditäitja erijuhised",
+      "executorName": "Testamenditäitja täisnimi",
+      "executorRelationship": "Suhe sinuga",
+      "primaryExecutor": "Esmane testamenditäitja",
+      "specialPowers": "Antud erivolitused"
     },
     "guardianship": {
-      "backupGuardian": "Alternate Guardian",
-      "educationPreferences": "Education Preferences",
-      "guardianCompensation": "Guardian Compensation",
-      "guardianFor": "Guardian for {{childName}}",
-      "guardianInstructions": "Instructions for Guardian",
-      "guardianQualifications": "Guardian Qualifications",
-      "minorChildren": "Minor Children Requiring Guardianship",
-      "primaryGuardian": "Primary Guardian",
-      "religiousUpbringing": "Religious Upbringing Preferences"
+      "backupGuardian": "Asendushooldaja",
+      "educationPreferences": "Hariduseelistused",
+      "guardianCompensation": "Eestkostja hüvitis",
+      "guardianFor": "{{childName}} eestkostja",
+      "guardianInstructions": "Juhised eestkostjale",
+      "guardianQualifications": "Eestkostja kvalifikatsioon",
+      "minorChildren": "Eestkostet vajavad alaealised lapsed",
+      "primaryGuardian": "Peamine eestkostja",
+      "religiousUpbringing": "Usulise kasvatuse eelistused"
     },
     "personalInfo": {
-      "addChild": "Add Child",
-      "addressHelper": "Your primary residence address",
-      "childDateOfBirth": "Child's Date of Birth",
-      "childName": "Child's Full Name",
-      "childRelation": "Relationship to You",
-      "children": "Children and Dependents",
-      "currentAddress": "Current Legal Address",
-      "dateOfBirth": "Date of Birth",
-      "fullLegalName": "Complete Legal Name",
-      "fullLegalNameHelper": "Enter your name exactly as it appears on official documents",
-      "maritalStatus": "Marital Status",
-      "marriageDate": "Date of Marriage",
-      "placeOfBirth": "Place of Birth",
-      "previousWills": "Previous Wills",
-      "revokesPrevious": "This will revokes all previous wills",
-      "spouseName": "Spouse's Full Legal Name"
+      "addChild": "Lisa laps",
+      "addressHelper": "Teie peamine elukoha aadress",
+      "childDateOfBirth": "Lapse sünnikuupäev",
+      "childName": "Lapse täisnimi",
+      "childRelation": "Suhe sinuga",
+      "children": "Lapsed ja ülalpeetavad",
+      "currentAddress": "Praegune juriidiline aadress",
+      "dateOfBirth": "Sünnikuupäev",
+      "fullLegalName": "Täielik juriidiline nimi",
+      "fullLegalNameHelper": "Sisestage oma nimi täpselt nii, nagu see ametlikes dokumentides kuvatakse",
+      "maritalStatus": "Perekonnaseis",
+      "marriageDate": "Abielu kuupäev",
+      "placeOfBirth": "Sünnikoht",
+      "previousWills": "Eelmised testamendid",
+      "revokesPrevious": "See tühistab kõik varasemad testamendid",
+      "spouseName": "Abikaasa täielik seaduslik nimi"
     },
     "provisions": {
-      "burialCremation": "Burial or Cremation Preference",
-      "businessContinuation": "Business Continuation Plans",
-      "charitableBequests": "Charitable Donations",
-      "charityAmount": "Donation Amount",
-      "charityName": "Charitable Organization",
-      "digitalAssets": "Digital Asset Instructions",
-      "funeralInstructions": "Specific Funeral Instructions",
-      "funeralWishes": "Funeral and Burial Preferences",
-      "organDonation": "Organ Donation Wishes",
-      "personalMessages": "Personal Messages to Family",
-      "petCare": "Pet Care Arrangements",
-      "specialInstructions": "Special Instructions"
+      "burialCremation": "Matmise või tuhastamise eelistus",
+      "businessContinuation": "Äritegevuse jätkamise plaanid",
+      "charitableBequests": "Heategevuslikud annetused",
+      "charityAmount": "Annetuse summa",
+      "charityName": "Heategevusorganisatsioon",
+      "digitalAssets": "Digitaalse vara juhised",
+      "funeralInstructions": "Konkreetsed matusejuhised",
+      "funeralWishes": "Matuse- ja matmiseelistused",
+      "organDonation": "Elundidoonorluse soovid",
+      "personalMessages": "Isiklikud sõnumid perele",
+      "petCare": "Lemmikloomade hoolduskorraldus",
+      "specialInstructions": "Erijuhised"
     }
   },
   "generator": {
-    "of": "[ET] Of",
-    "step": "[ET] Step"
+    "continueWill": "Jätka testamendi koostamist",
+    "description": "Koostage terviklik ja juriidiliselt kehtiv testament, mis on kohandatud teie jurisdiktsiooni nõuetele ja teie perekonna ainulaadsetele vajadustele.",
+    "getStarted": "Alusta oma testamendi loomist",
+    "importance": "Teie soovide seadusliku dokumenteerimise ja pere kaitsmise tagamine",
+    "newWill": "Loo uus testament",
+    "of": "Kohta",
+    "professionalGuidance": "Keeruliste pärandvarade puhul on soovitatav professionaalne õigusnõustamine",
+    "step": "Samm",
+    "subtitle": "Loo professionaalse juhendamisega juriidiliselt korrektne testament",
+    "title": "Viimse tahte ja testamendi generaator",
+    "viewExisting": "Vaadake üle kehtiv testament"
   },
   "legal": {
-    "consultLawyer": "Consult with Attorney",
-    "disclaimer": "Important Legal Disclaimer",
-    "estatePlanning": "Comprehensive Estate Planning",
-    "jurisdiction": "Legal Jurisdiction",
-    "lawsApply": "Laws of {{jurisdiction}} will apply",
-    "lawyerRecommended": "We strongly recommend consulting with a qualified attorney for complex estates",
-    "legalCompliance": "Legal Compliance Verification",
-    "notLegalAdvice": "This service does not constitute legal advice",
-    "probateProcess": "Probate Process Information",
-    "professionalGuidance": "Professional legal guidance is recommended",
-    "professionalReview": "Professional Legal Review",
-    "selectJurisdiction": "Please select your legal jurisdiction",
-    "taxImplications": "Tax Implications"
+    "consultLawyer": "Konsulteerige advokaadiga",
+    "disclaimer": "Oluline õiguslik lahtiütlus",
+    "estatePlanning": "Põhjalik pärandplaneerimine",
+    "jurisdiction": "Õiguslik pädevus",
+    "lawsApply": "Kehtivad {{jurisdiction}} seadused",
+    "lawyerRecommended": "Keeruliste pärandvaraküsimuste korral soovitame tungivalt konsulteerida kvalifitseeritud advokaadiga.",
+    "legalCompliance": "Õigusliku vastavuse kontroll",
+    "notLegalAdvice": "See teenus ei ole õigusnõustamine",
+    "probateProcess": "Pärimismenetluse teave",
+    "professionalGuidance": "Soovitatav on professionaalne juriidiline nõustamine",
+    "professionalReview": "Professionaalne juriidiline ülevaade",
+    "selectJurisdiction": "Palun valige oma jurisdiktsioon",
+    "taxImplications": "Maksumõjud"
   },
   "notifications": {
-    "consultationScheduled": "Legal consultation has been scheduled",
-    "documentShared": "Will has been shared with designated family members",
-    "executionComplete": "Will execution has been recorded",
-    "progressSaved": "Your progress has been saved",
-    "reminderSet": "Will review reminder has been set",
-    "willDeleted": "Will has been permanently deleted",
-    "willGenerated": "Your will has been successfully generated",
-    "willUpdated": "Will has been updated successfully"
+    "consultationScheduled": "Õiguskonsultatsioon on kokku lepitud",
+    "documentShared": "Testament on jagatud määratud pereliikmetega",
+    "executionComplete": "Testamendi täitmine on registreeritud",
+    "progressSaved": "Teie edusammud on salvestatud",
+    "willDeleted": "Testament on jäädavalt kustutatud",
+    "willUpdated": "Will on edukalt uuendatud"
   },
   "preview": {
-    "article": "ARTICLE {{number}}",
-    "draftWatermark": "DRAFT - NOT LEGALLY BINDING",
-    "executionInstructions": "EXECUTION INSTRUCTIONS",
-    "lastWillTestament": "LAST WILL AND TESTAMENT",
+    "article": "ARTIKKEL {{number}}",
+    "draftWatermark": "MUSTAND – MITTE ÕIGUSLIKULT SIDUV",
+    "executionInstructions": "TÄITMISJUHISED",
+    "lastWillTestament": "VIIMANE TAHE JA TESTAMENT",
     "of": "OF",
-    "pageNumber": "Page {{current}} of {{total}}",
-    "reviewCarefully": "Please review this document carefully before proceeding",
-    "section": "Section {{number}}",
-    "signatureSection": "SIGNATURE SECTION",
-    "subtitle": "Review your complete will before finalizing",
-    "title": "Will Document Preview",
-    "witnessClause": "WITNESS CLAUSE"
+    "pageNumber": "Lehekülg {{current}}/{{total}}",
+    "reviewCarefully": "Palun lugege see dokument enne jätkamist hoolikalt läbi",
+    "section": "Jaotis {{number}}",
+    "signatureSection": "ALLKIRJA OSA",
+    "subtitle": "Enne testamendi lõplikku vormistamist vaadake oma täielik testament üle",
+    "title": "Dokumendi eelvaade",
+    "witnessClause": "TUNNISTAJA KLAUSUL"
   },
   "status": {
-    "archived": "Archived Version",
-    "draft": "Draft in Progress",
-    "executed": "Legally Executed",
-    "generated": "Generated - Requires Execution",
-    "outdated": "Requires Update",
-    "underReview": "Under Professional Review"
+    "archived": "Arhiveeritud versioon",
+    "draft": "Mustand on pooleli",
+    "executed": "Seaduslikult hukatud",
+    "generated": "Genereeritud - nõuab käivitamist",
+    "outdated": "Vajab värskendamist"
+  },
+  "policy": {
+    "duration": {
+      "session": "Seanss",
+      "minutes": "{{count}} minutit",
+      "hours": "{{count}} tundi",
+      "days": "{{count}} päeva",
+      "months": "{{count}} kuud",
+      "years": "{{count}} aastat"
+    }
   },
   "steps": {
     "assets": {
-      "description": "Select which assets you wish to include in your will and how they should be distributed.",
-      "subtitle": "Your valuable possessions",
-      "title": "Asset Distribution"
+      "description": "Valige, milliseid varasid soovite oma testamenti lisada ja kuidas neid jaotada.",
+      "subtitle": "Teie väärtuslikud asjad",
+      "title": "Varade jaotus"
     },
     "beneficiaries": {
-      "description": "Designate who will receive your assets and in what proportions.",
-      "subtitle": "Your chosen recipients",
-      "title": "Beneficiary Designations"
+      "description": "Määrake, kes teie vara saab ja millises proportsioonis.",
+      "subtitle": "Teie valitud saajad",
+      "title": "Toetusesaajate nimetused"
     },
     "executor": {
-      "description": "Choose a responsible person to manage your estate and carry out your wishes.",
-      "subtitle": "Your estate representative",
-      "title": "Estate Executor"
+      "description": "Valige oma vara haldamiseks ja teie soovide elluviimiseks vastutustundlik inimene.",
+      "subtitle": "Teie kinnisvaraesindaja",
+      "title": "Pärandi testamenditäitja"
     },
     "guardians": {
-      "description": "Appoint trusted individuals to care for minor children or dependents.",
-      "subtitle": "Care for your dependents",
-      "title": "Guardianship Appointments"
+      "description": "Määrake alaealiste laste või ülalpeetavate eest hoolitsema usaldusväärsed isikud.",
+      "subtitle": "Hoolitse oma ülalpeetavate eest",
+      "title": "Eestkoste määramine"
     },
     "personal": {
-      "description": "We require your complete legal information to ensure your will meets all legal requirements.",
-      "subtitle": "Your identifying information",
-      "title": "Personal Information"
+      "description": "Vajame teie täielikku juriidilist teavet, et tagada teie testamendi vastavus kõigile juriidilistele nõuetele.",
+      "subtitle": "Teie tuvastav teave",
+      "title": "Isiklik teave"
     },
     "preferences": {
-      "description": "Include any special instructions, charitable bequests, or personal wishes.",
-      "subtitle": "Additional instructions",
-      "title": "Special Provisions"
+      "description": "Lisage kõik erijuhised, heategevuslikud pärandused või isiklikud soovid.",
+      "subtitle": "Lisajuhised",
+      "title": "Erisätted"
     },
     "review": {
-      "description": "Carefully review all details before generating your legal document.",
-      "subtitle": "Verify all information",
-      "title": "Final Review"
+      "description": "Enne juriidilise dokumendi koostamist lugege hoolikalt läbi kõik üksikasjad.",
+      "subtitle": "Kontrollige kogu teavet",
+      "title": "Lõplik ülevaade"
     }
   },
   "validation": {
-    "jurisdictionRequired": "[ET] Jurisdiction required",
-    "requiredField": "[ET] Required field"
+    "addressRequired": "Teie praegune juriidiline aadress on kohustuslik",
+    "allocationError": "Protsentuaalse jaotuse kogusumma peab olema võrdne 100%-ga.",
+    "beneficiaryRequired": "Vähemalt üks toetusesaaja peab olema määratud",
+    "dobRequired": "Sünnikuupäev on seadusliku kehtivuse jaoks vajalik",
+    "duplicateBeneficiary": "See abisaaja on juba lisatud",
+    "executorBeneficiaryConflict": "Testamenditäitja ja peamine soodustatud isik peaksid tavaliselt olema erinevad isikud.",
+    "executorRequired": "Tuleb määrata vähemalt üks testamenditäitja",
+    "guardianRequired": "Alaealiste laste puhul on vaja eestkostja määramist",
+    "invalidDate": "Palun sisestage kehtiv kuupäev",
+    "invalidPercentage": "Protsent peab olema vahemikus 0 kuni 100",
+    "jurisdictionRequired": "Nõutav jurisdiktsioon",
+    "requiredField": "Kohustuslik väli"
   },
   "will": {
-    "address": "Address",
-    "addressPlaceholder": "Address placeholder",
+    "address": "Aadress",
+    "addressPlaceholder": "Aadressi kohatäide",
     "allocation": {
-      "addBeneficiary": "Add beneficiary",
-      "description": "Description",
-      "generalEstate": "General estate",
-      "percentage": "Percentage",
+      "addBeneficiary": "Lisa saaja",
+      "description": "Kirjeldus",
+      "generalEstate": "Üldine kinnisvara",
+      "percentage": "Protsent",
       "tips": {
-        "tip1": "Tip1",
-        "tip2": "Tip2",
-        "tip3": "Tip3",
-        "title": "Title"
+        "tip1": "Näpunäide 1",
+        "tip2": "Näpunäide 2",
+        "tip3": "Näpunäide 3",
+        "title": "Pealkiri"
       },
-      "title": "Title",
-      "total": "Total"
+      "title": "Pealkiri",
+      "total": "Kokku"
     },
     "beneficiaries": {
-      "addBeneficiary": "Add beneficiary",
-      "allocation": "Allocation",
-      "alternativeBeneficiary": "Alternative beneficiary",
-      "alternativePlaceholder": "Alternative placeholder",
-      "beneficiaryNumber": "Beneficiary number",
-      "currentAllocation": "Current allocation",
-      "description": "Description",
-      "identification": "Identification",
-      "identificationPlaceholder": "Identification placeholder",
-      "importantNotes": "Important notes",
-      "name": "Name",
-      "noBeneficiaries": "No beneficiaries",
-      "note1": "Note1",
-      "note2": "Note2",
-      "note3": "Note3",
-      "ofEstate": "Of estate",
-      "title": "Title"
+      "addBeneficiary": "Lisa saaja",
+      "allocation": "Jaotus",
+      "alternativeBeneficiary": "Alternatiivne soodustatud isik",
+      "alternativePlaceholder": "Alternatiivne kohatäide",
+      "beneficiaryNumber": "Saaja number",
+      "currentAllocation": "Praegune jaotus",
+      "description": "Kirjeldus",
+      "identification": "Identifitseerimine",
+      "identificationPlaceholder": "Identifitseerimise kohatäide",
+      "importantNotes": "Olulised märkused",
+      "name": "Nimi",
+      "noBeneficiaries": "Abisaajaid pole",
+      "note1": "Märkus 1",
+      "note2": "Märkus 2",
+      "note3": "Märkus3",
+      "ofEstate": "Pärandvarast",
+      "title": "Pealkiri"
     },
     "beneficiary": {
-      "name": "Name",
-      "namePlaceholder": "Name placeholder",
-      "relationship": "Relationship",
-      "relationshipPlaceholder": "Relationship placeholder"
+      "name": "Nimi",
+      "namePlaceholder": "Nime kohatäide",
+      "relationship": "Suhe",
+      "relationshipPlaceholder": "Suhte kohatäide"
     },
-    "birthDate": "Birth date",
-    "birthDatePlaceholder": "Birth date placeholder",
+    "birthDate": "Sünnikuupäev",
+    "birthDatePlaceholder": "Sünnikuupäeva kohatäide",
     "buttons": {
-      "saveWillInfo": "Save will info",
-      "saving": "Saving"
+      "saveWillInfo": "Salvesta tahte teave",
+      "saving": "Salvestamine"
     },
-    "countryRequirements": "Country requirements",
+    "countryRequirements": "Riigi nõuded",
     "descriptions": {
-      "executorDescription": "Executor description",
-      "physicalLocationDescription": "Physical location description",
-      "statusDescription": "Status description"
+      "executorDescription": "Testamenditäitja kirjeldus",
+      "physicalLocationDescription": "Füüsilise asukoha kirjeldus",
+      "statusDescription": "Staatuse kirjeldus"
     },
     "executor": {
-      "addAlternative": "Add alternative",
-      "address": "Address",
-      "addressPlaceholder": "Address placeholder",
-      "alternative": "Alternative",
-      "alternativeDescription": "Alternative description",
-      "description": "Description",
-      "name": "Name",
-      "namePlaceholder": "Name placeholder",
-      "phone": "Phone",
-      "phonePlaceholder": "Phone placeholder",
-      "primary": "Primary",
-      "relationship": "Relationship",
-      "relationshipPlaceholder": "Relationship placeholder",
-      "responsibilities": "Responsibilities",
-      "responsibility1": "Responsibility1",
-      "responsibility2": "Responsibility2",
-      "responsibility3": "Responsibility3",
-      "responsibility4": "Responsibility4",
-      "title": "Title"
+      "addAlternative": "Lisa alternatiiv",
+      "address": "Aadress",
+      "addressPlaceholder": "Aadressi kohatäide",
+      "alternative": "Alternatiiv",
+      "alternativeDescription": "Alternatiivne kirjeldus",
+      "description": "Kirjeldus",
+      "name": "Nimi",
+      "namePlaceholder": "Nime kohatäide",
+      "phone": "Telefon",
+      "phonePlaceholder": "Telefoni kohatäide",
+      "primary": "Esmane",
+      "relationship": "Suhe",
+      "relationshipPlaceholder": "Suhte kohatäide",
+      "responsibilities": "Kohustused",
+      "responsibility1": "Vastutus1",
+      "responsibility2": "Vastutus2",
+      "responsibility3": "Vastutus3",
+      "responsibility4": "Vastutus4",
+      "title": "Pealkiri"
     },
     "fields": {
-      "additionalNotes": "Additional notes",
-      "currentStatus": "Current status",
-      "executorContact": "Executor contact",
-      "physicalLocation": "Physical location"
+      "additionalNotes": "Lisamärkused",
+      "currentStatus": "Praegune olek",
+      "executorContact": "Testamenditäitja kontakt",
+      "physicalLocation": "Füüsiline asukoht"
     },
     "legalReview": {
-      "button": "Button",
-      "description": "Description",
-      "title": "Title"
+      "button": "Nupp",
+      "description": "Kirjeldus",
+      "title": "Pealkiri"
     },
-    "name": "Name",
-    "namePlaceholder": "Name placeholder",
+    "name": "Nimi",
+    "namePlaceholder": "Nime kohatäide",
     "options": {
-      "noContactSelected": "No contact selected"
+      "noContactSelected": "Kontakti pole valitud"
     },
     "placeholders": {
-      "additionalNotes": "Additional notes",
-      "physicalLocation": "Physical location",
-      "selectContact": "Select contact"
+      "additionalNotes": "Lisamärkused",
+      "physicalLocation": "Füüsiline asukoht",
+      "selectContact": "Valige kontakt"
     },
     "preview": {
-      "address": "Address",
-      "alternative": "Alternative",
-      "alternativeExecutor": "Alternative executor",
-      "date": "Date",
-      "description": "Description",
-      "executor": "Executor",
-      "generatePDF": "Generate p d f",
-      "legalRequirements": "Legal requirements",
-      "name": "Name",
-      "ofEstate": "Of estate",
-      "place": "Place",
-      "print": "Print",
-      "signature": "Signature",
-      "title": "Title",
-      "witnesses": "Witnesses"
+      "address": "Aadress",
+      "alternative": "Alternatiiv",
+      "alternativeExecutor": "Alternatiivne testamenditäitja",
+      "date": "Kuupäev",
+      "description": "Kirjeldus",
+      "executor": "Testamenditäitja",
+      "generatePDF": "Genereeri p d f",
+      "legalRequirements": "Õiguslikud nõuded",
+      "name": "Nimi",
+      "ofEstate": "Pärandvarast",
+      "place": "Koht",
+      "print": "Prindi",
+      "signature": "Allkiri",
+      "title": "Pealkiri",
+      "witnesses": "Tunnistajad"
     },
     "requirements": {
-      "handwriting": "Handwriting",
-      "notarization": "Notarization",
-      "typed": "Typed",
-      "witnesses": "Witnesses"
+      "handwriting": "Käekiri",
+      "notarization": "Notariaalne kinnitus",
+      "typed": "Trükitud",
+      "witnesses": "Tunnistajad"
     },
-    "selectCountry": "Select country",
-    "selectedCountryDetails": "Selected country details",
+    "selectCountry": "Valige riik",
+    "selectedCountryDetails": "Valitud riigi üksikasjad",
     "status": {
-      "draft": "Draft",
-      "notarized": "Notarized",
-      "stored": "Stored",
-      "updated": "Updated"
+      "draft": "Mustand",
+      "notarized": "Notariaalselt kinnitatud",
+      "stored": "Salvestatud",
+      "updated": "Uuendatud"
     },
-    "testatorInfo": "Testator info",
+    "testatorInfo": "Testaatori info",
     "validation": {
-      "allocation100": "Allocation100"
+      "allocation100": "Jaotus100"
     },
     "willPreview": {
       "_2": "2",
-      "critical_execution_instruction_3": "Critical execution instruction 3",
-      "professional_review_4": "Professional review 4",
-      "provided_by_certified_legal_pa_5": "Provided by certified legal pa 5"
+      "critical_execution_instruction_3": "Kriitiline täitmisjuhis 3",
+      "professional_review_4": "Professionaalne ülevaade 4",
+      "provided_by_certified_legal_pa_5": "Sertifitseeritud juristi poolt esitatud teave 5"
     }
   },
   "willGenerator": {
-    "changeCountry": "Change country",
-    "confirmCountry": "Confirm country",
-    "confirmSigned": "Confirm signed",
+    "changeCountry": "Muuda riiki",
+    "confirmCountry": "Kinnita riik",
+    "confirmSigned": "Kinnitage allkirjastatud",
     "console": {
-      "willGenerationCompleted": "Will generation completed"
+      "willGenerationCompleted": "Testamendi genereerimine on lõpetatud"
     },
     "countries": {
-      "AL": "A l",
+      "AL": "Al",
       "AT": "A t",
-      "BA": "B a",
-      "BE": "B e",
+      "BA": "Ba",
+      "BE": "Ole e",
       "BG": "B g",
       "CH": "C h",
       "CY": "C y",
-      "CZ": "C z",
+      "CZ": "Cz",
       "DE": "D e",
       "DK": "D k",
-      "EE": "E e",
+      "EE": "Ee",
       "ES": "E s",
       "FI": "F i",
       "FR": "F r",
@@ -372,264 +406,236 @@
       "GR": "G r",
       "HR": "H r",
       "HU": "H u",
-      "IE": "I e",
-      "IS": "I s",
-      "IT": "I t",
+      "IE": "Ma e",
+      "IS": "Ma olen",
+      "IT": "Ma t",
       "LI": "L i",
       "LT": "L t",
-      "LU": "L u",
+      "LU": "Lu u",
       "LV": "L v",
       "MD": "M d",
-      "ME": "M e",
+      "ME": "Mina",
       "MK": "M k",
       "MT": "M t",
       "NL": "N l",
-      "NO": "N o",
-      "PL": "P l",
-      "PT": "P t",
+      "NO": "Ei",
+      "PL": "Pl",
+      "PT": "Pt",
       "RO": "R o",
-      "RS": "R s",
+      "RS": "R-s",
       "SE": "S e",
       "SI": "S i",
       "SK": "S k",
       "UA": "U a"
     },
-    "executionInstructions": "Execution instructions",
-    "failed_to_load_will_template_2": "Failed to load will template 2",
-    "finalizeUpload": "Finalize upload",
-    "fullName": "Full name",
-    "no_template_found_for_this_jur_1": "No template found for this jur 1",
-    "please_confirm_that_you_have_s_3": "Please confirm that you have s 3",
-    "select_a_country_4": "Select a country 4",
+    "executionInstructions": "Täitmisjuhised",
+    "failed_to_load_will_template_2": "Testamendi malli 2 laadimine ebaõnnestus",
+    "finalizeUpload": "Lõpeta üleslaadimine",
+    "fullName": "Täisnimi",
+    "no_template_found_for_this_jur_1": "Sellele vandekohtule malli ei leitud. 1",
+    "please_confirm_that_you_have_s_3": "Palun kinnitage, et teil on s 3",
+    "select_a_country_4": "Valige riik 4",
     "steps": {
-      "confirmJurisdiction": "Confirm jurisdiction",
-      "executorBeneficiaries": "Executor beneficiaries",
-      "personalInformation": "Personal information",
-      "reviewGenerate": "Review generate",
-      "signConfirm": "Sign confirm"
+      "confirmJurisdiction": "Kinnitage jurisdiktsioon",
+      "executorBeneficiaries": "Testamenditäitjad",
+      "personalInformation": "Isiklik teave",
+      "reviewGenerate": "Arvustuste genereerimine",
+      "signConfirm": "Allkirja kinnitamine"
     }
   },
   "willSync": {
-    "approve": "Approve",
-    "autoApplied": "Auto applied",
+    "approve": "Kinnita",
+    "autoApplied": "Automaatselt rakendatud",
     "changes": {
-      "allocationsModified": "Allocations modified",
-      "assetsAdded": "Assets added",
-      "beneficiariesRemoved": "Beneficiaries removed",
-      "noChanges": "No changes"
+      "allocationsModified": "Eraldised muudetud",
+      "assetsAdded": "Lisatud varad",
+      "beneficiariesRemoved": "Toetusesaajad eemaldati",
+      "noChanges": "Muudatusi pole"
     },
-    "reject": "Reject",
-    "viewChanges": "View changes"
+    "reject": "Keeldu",
+    "viewChanges": "Kuva muudatused"
   },
   "willSyncSettings": {
-    "autoSync": "Auto sync",
-    "autoSyncDescription": "Auto sync description",
-    "frequencyDaily": "Frequency daily",
-    "frequencyImmediate": "Frequency immediate",
-    "frequencyWeekly": "Frequency weekly",
-    "generalDescription": "General description",
-    "generalSettings": "General settings",
-    "requireApproval": "Require approval",
-    "requireApprovalDescription": "Require approval description",
-    "saveError": "Save error",
-    "saved": "Saved",
-    "syncFrequency": "Sync frequency",
-    "triggerDescription": "Trigger description",
-    "triggerSettings": "Trigger settings"
+    "autoSync": "Automaatne sünkroonimine",
+    "autoSyncDescription": "Automaatse sünkroonimise kirjeldus",
+    "frequencyDaily": "Sagedus päevas",
+    "frequencyImmediate": "Sagedus kohe",
+    "frequencyWeekly": "Sagedus nädalas",
+    "generalDescription": "Üldine kirjeldus",
+    "generalSettings": "Üldised seaded",
+    "requireApproval": "Nõutav kinnitus",
+    "requireApprovalDescription": "Nõutav kinnituskirjeldus",
+    "saveError": "Salvestamisviga",
+    "saved": "Salvestatud",
+    "syncFrequency": "Sünkroonimissagedus",
+    "triggerDescription": "Päästiku kirjeldus",
+    "triggerSettings": "Päästiku seaded"
   },
   "willVersion": {
-    "added": "Added",
-    "compareDiff": "Compare diff",
-    "comparePrompt": "Compare prompt",
-    "current": "Current",
-    "description": "Description",
-    "modified": "Modified",
-    "removed": "Removed",
-    "restore": "Restore",
-    "title": "Title",
-    "versionNumber": "Version number"
+    "added": "Lisatud",
+    "compareDiff": "Võrdle erinevusi",
+    "comparePrompt": "Võrdlusviiba",
+    "current": "Praegune",
+    "description": "Kirjeldus",
+    "modified": "Muudetud",
+    "removed": "Eemaldatud",
+    "restore": "Taasta",
+    "title": "Pealkiri",
+    "versionNumber": "Versiooninumber"
   },
   "disclaimers": {
-    "general": "LegacyGuard provides tools and guidance for estate planning but does not provide legal advice. For complex estates or specific legal questions, please consult with a qualified attorney in your jurisdiction.",
-    "willGenerator": "The will generator creates documents based on information you provide. While designed to meet legal requirements, we strongly recommend having any generated will reviewed by a qualified attorney before execution.",
-    "jurisdiction": "Legal requirements vary by jurisdiction. Ensure your documents comply with the laws in your area.",
-    "notLegalAdvice": "This service does not constitute legal advice and should not be relied upon as such.",
-    "professionalReview": "For complex estates, business interests, or unique family situations, professional legal review is strongly recommended."
+    "general": "LegacyGuard pakub pärandplaneerimiseks tööriistu ja juhiseid, kuid ei anna juriidilist nõu. Keeruliste pärandvaraasjade või konkreetsete juriidiliste küsimuste korral konsulteerige oma jurisdiktsiooni kvalifitseeritud advokaadiga.",
+    "willGenerator": "Testamendigeneraator loob dokumente teie esitatud teabe põhjal. Kuigi see on loodud vastama juriidilistele nõuetele, soovitame tungivalt lasta kõik loodud testamendid enne nende täitmist kvalifitseeritud advokaadil üle vaadata.",
+    "jurisdiction": "Juriidilised nõuded on jurisdiktsiooniti erinevad. Veenduge, et teie dokumendid vastavad teie piirkonna seadustele.",
+    "notLegalAdvice": "See teenus ei ole õigusnõustamine ja sellele ei tohiks sellisena tugineda.",
+    "professionalReview": "Keeruliste pärandvara, ärihuvide või ainulaadsete perekondlike olukordade korral on tungivalt soovitatav professionaalne juriidiline ülevaade."
   },
   "terms": {
-    "serviceTerms": "Terms of Service",
-    "privacyPolicy": "Privacy Policy",
-    "dataProcessing": "Data Processing Agreement",
-    "userAgreement": "User Agreement",
-    "acceptanceRequired": "By using LegacyGuard, you agree to our Terms of Service and Privacy Policy.",
-    "lastUpdated": "Last updated: {{date}}",
-    "effectiveDate": "Effective date: {{date}}"
+    "serviceTerms": "Teenusetingimused",
+    "privacyPolicy": "Privaatsuspoliitika",
+    "dataProcessing": "Andmetöötlusleping",
+    "userAgreement": "Kasutajaleping",
+    "acceptanceRequired": "LegacyGuardi kasutades nõustute meie teenusetingimuste ja privaatsuspoliitikaga.",
+    "lastUpdated": "Viimati uuendatud: {{date}}",
+    "effectiveDate": "Jõustumiskuupäev: {{date}}"
   },
   "compliance": {
-    "dataProtection": "Your data is protected in compliance with applicable data protection laws including GDPR and CCPA.",
-    "encryption": "All sensitive information is encrypted using industry-standard encryption methods.",
-    "retention": "Data retention policies are designed to protect your privacy while ensuring your family can access important information when needed.",
-    "access": "You have the right to access, modify, or delete your personal information at any time.",
-    "portability": "You can export your data in standard formats for use with other services."
+    "dataProtection": "Teie andmeid kaitstakse vastavalt kehtivatele andmekaitseseadustele, sealhulgas isikuandmete kaitse üldmäärusele (GDPR) ja isikuandmete kaitse üldmäärusele (CCPA).",
+    "encryption": "Kogu tundlik teave krüpteeritakse tööstusstandardile vastavate krüpteerimismeetodite abil.",
+    "retention": "Andmete säilitamise põhimõtted on loodud teie privaatsuse kaitsmiseks, tagades samal ajal, et teie pere pääseb vajadusel juurde olulisele teabele.",
+    "access": "Teil on õigus igal ajal oma isikuandmetele juurde pääseda, neid muuta või kustutada.",
+    "portability": "Saate oma andmeid eksportida standardvormingutes, et neid saaks kasutada ka teiste teenustega."
   },
   "executionRequirements": {
-    "witnessRequirements": "Witness Requirements for {{jurisdiction}}",
-    "notaryRequirements": "Notarization Requirements",
-    "signingInstructions": "Proper Signing Instructions",
-    "storageGuidelines": "Secure Storage Guidelines",
-    "legalCompliance": "Legal Compliance Verification"
+    "witnessRequirements": "Tunnistaja nõuded {{jurisdiction}} jaoks",
+    "notaryRequirements": "Notariaalse kinnitamise nõuded",
+    "signingInstructions": "Nõuetekohased allkirjastamisjuhised",
+    "storageGuidelines": "Turvalise hoiustamise juhised",
+    "legalCompliance": "Õigusliku vastavuse kontroll"
   },
   "cookiePolicy": {
     "cookieTypes": {
-      "analytics": "Analytics cookies help us understand how visitors interact with our website.",
-      "essential": "Essential cookies are necessary for the website to function properly.",
-      "marketing": "Marketing cookies are used to track visitors across websites to display relevant advertisements."
+      "analytics": "Analüütikaküpsised aitavad meil mõista, kuidas külastajad meie veebisaidiga suhtlevad.",
+      "essential": "Olulised küpsised on veebisaidi nõuetekohaseks toimimiseks vajalikud.",
+      "marketing": "Turundusküpsiseid kasutatakse külastajate jälgimiseks erinevatel veebisaitidel, et kuvada asjakohaseid reklaame."
     },
-    "howWeUseCookies": "We use cookies to improve your experience, analyze site usage, and provide personalized content.",
-    "introduction": "This Cookie Policy explains how LegacyGuard uses cookies and similar technologies.",
-    "manageCookies": "You can manage your cookie preferences through your browser settings or our cookie preference center.",
-    "title": "Title",
-    "whatAreCookies": "Cookies are small text files that are stored on your device when you visit our website."
+    "howWeUseCookies": "Kasutame küpsiseid teie kogemuse parandamiseks, saidikasutuse analüüsimiseks ja isikupärastatud sisu pakkumiseks.",
+    "introduction": "See küpsiste kasutamise poliitika selgitab, kuidas LegacyGuard küpsiseid ja sarnaseid tehnoloogiaid kasutab.",
+    "manageCookies": "Saate oma küpsiste eelistusi hallata oma brauseri seadete või meie küpsiste eelistuste keskuse kaudu.",
+    "title": "Pealkiri",
+    "whatAreCookies": "Küpsised on väikesed tekstifailid, mis salvestatakse teie seadmesse, kui külastate meie veebisaiti."
   },
   "header": {
-    "subtitle": "Subtitle",
-    "title": "Title"
+    "title": "Pealkiri"
   },
   "hero": {
-    "headline": "Headline",
-    "subheadline": "Subheadline"
-  },
-  "privacyPolicy": {
-    "introduction": "This Privacy Policy describes how LegacyGuard collects, uses, and protects your personal information.",
-    "lastUpdated": "Last updated: {{date}}",
-    "sections": {
-      "dataSecurity": {
-        "content": "We implement appropriate security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.",
-        "title": "Data Security"
-      },
-      "informationCollection": {
-        "content": "We collect information you provide directly to us, such as when you create an account, use our services, or contact us for support.",
-        "title": "Information We Collect"
-      },
-      "informationSharing": {
-        "content": "We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except as described in this policy.",
-        "title": "Information Sharing"
-      },
-      "informationUse": {
-        "content": "We use your information to provide, maintain, and improve our services, communicate with you, and ensure the security of your account.",
-        "title": "How We Use Your Information"
-      },
-      "yourRights": {
-        "content": "You have the right to access, update, or delete your personal information. You may also opt out of certain communications from us.",
-        "title": "Your Rights"
-      }
-    },
-    "title": "Privacy Policy"
+    "headline": "Pealkiri",
+    "subheadline": "Alapealkiri"
   },
   "termsOfService": {
-    "effectiveDate": "Effective date: {{date}}",
-    "introduction": "These Terms of Service govern your use of LegacyGuard's family protection platform and services.",
-    "lastUpdated": "Last updated: {{date}}",
+    "effectiveDate": "Jõustumiskuupäev: {{date}}",
+    "introduction": "Need teenusetingimused reguleerivad LegacyGuardi perekaitseplatvormi ja -teenuste kasutamist.",
+    "lastUpdated": "Viimati uuendatud: {{date}}",
     "sections": {
       "acceptance": {
-        "content": "By accessing or using LegacyGuard, you agree to be bound by these Terms of Service and all applicable laws and regulations.",
-        "title": "Acceptance of Terms"
+        "content": "LegacyGuardile ligi pääsedes või seda kasutades nõustute käesolevate teenuse osutamise tingimuste ja kõigi kohaldatavate seaduste ja määrustega.",
+        "title": "Tingimustega nõustumine"
       },
       "description": {
-        "content": "LegacyGuard provides digital tools and services to help individuals organize their important information for family protection purposes.",
-        "title": "Service Description"
+        "content": "LegacyGuard pakub digitaalseid tööriistu ja teenuseid, mis aitavad inimestel oma olulist teavet perekaitse eesmärgil korrastada.",
+        "title": "Teenuse kirjeldus"
       },
       "limitations": {
-        "content": "LegacyGuard provides tools and guidance but does not provide legal advice. We recommend consulting with qualified professionals for complex legal matters.",
-        "title": "Limitations of Liability"
+        "content": "LegacyGuard pakub tööriistu ja juhiseid, kuid ei anna juriidilist nõu. Keeruliste juriidiliste küsimuste korral soovitame konsulteerida kvalifitseeritud spetsialistidega.",
+        "title": "Vastutuse piiramine"
       },
       "privacy": {
-        "content": "Your privacy is important to us. Please review our Privacy Policy to understand how we collect, use, and protect your information.",
-        "title": "Privacy and Data Protection"
+        "content": "Teie privaatsus on meile oluline. Palun tutvuge meie privaatsuspoliitikaga, et mõista, kuidas me teie teavet kogume, kasutame ja kaitseme.",
+        "title": "Privaatsus ja andmekaitse"
       },
       "userResponsibilities": {
-        "content": "You are responsible for maintaining the confidentiality of your account information and for all activities that occur under your account.",
-        "title": "User Responsibilities"
+        "content": "Teie vastutate oma kontoteabe konfidentsiaalsuse säilitamise ja kõigi teie kontol toimuvate tegevuste eest.",
+        "title": "Kasutaja kohustused"
       }
     },
-    "title": "Terms of Service"
+    "title": "Teenusetingimused"
   },
   "cookies": {
     "policy": {
       "analytics": {
-        "description": "Description",
+        "description": "Kirjeldus",
         "examples": {
           "ga": "Ga",
           "gid": "Gid",
-          "session": "Session"
+          "session": "Seanss"
         },
-        "purpose": "Purpose",
-        "title": "Title"
+        "purpose": "Eesmärk",
+        "title": "Pealkiri"
       },
       "categories": {
-        "title": "Title"
+        "title": "Pealkiri"
       },
       "contact": {
-        "address": "Address",
-        "addressDetails": "Address details",
-        "description": "Description",
-        "email": "Email",
-        "title": "Title"
+        "address": "Aadress",
+        "addressDetails": "Aadressi üksikasjad",
+        "description": "Kirjeldus",
+        "email": "E-post",
+        "title": "Pealkiri"
       },
-      "examples": "Examples",
-      "lastUpdated": "Last updated",
+      "examples": "Näited",
+      "lastUpdated": "Viimati uuendatud",
       "manage": {
-        "title": "Title"
+        "title": "Pealkiri"
       },
       "marketing": {
-        "description": "Description",
+        "description": "Kirjeldus",
         "examples": {
           "facebook": "Facebook",
           "google": "Google"
         },
-        "purpose": "Purpose",
-        "title": "Title"
+        "purpose": "Eesmärk",
+        "title": "Pealkiri"
       },
       "necessary": {
-        "description": "Description",
+        "description": "Kirjeldus",
         "examples": {
-          "auth": "Auth",
-          "consent": "Consent",
+          "auth": "Autent",
+          "consent": "Nõusolek",
           "csrf": "Csrf",
-          "session": "Session"
+          "session": "Seanss"
         },
-        "purpose": "Purpose",
-        "title": "Title"
+        "purpose": "Eesmärk",
+        "title": "Pealkiri"
       },
       "overview": {
-        "intro": "Intro",
-        "point1": "Point1",
-        "point2": "Point2",
-        "point3": "Point3",
-        "point4": "Point4",
-        "title": "Title"
+        "intro": "Sissejuhatus",
+        "point1": "Punkt 1",
+        "point2": "Punkt 2",
+        "point3": "Punkt 3",
+        "point4": "Punkt4",
+        "title": "Pealkiri"
       },
       "preferences": {
-        "description": "Description",
+        "description": "Kirjeldus",
         "examples": {
-          "language": "Language",
-          "theme": "Theme",
-          "ui": "Ui"
+          "language": "Keel",
+          "theme": "Teema",
+          "ui": "Kasutajaliides"
         },
-        "purpose": "Purpose",
-        "title": "Title"
+        "purpose": "Eesmärk",
+        "title": "Pealkiri"
       },
-      "purpose": "Purpose",
-      "required": "Required",
-      "subtitle": "Subtitle",
-      "title": "Title",
+      "purpose": "Eesmärk",
+      "required": "Nõutav",
+      "subtitle": "Alapealkiri",
+      "title": "Pealkiri",
       "yourRights": {
-        "description": "Description",
-        "right1": "Right1",
-        "right2": "Right2",
-        "right3": "Right3",
-        "right4": "Right4",
-        "title": "Title"
+        "description": "Kirjeldus",
+        "right1": "Parem1",
+        "right2": "Parempoolne2",
+        "right3": "Parempoolne3",
+        "right4": "Parempoolne4",
+        "title": "Pealkiri"
       }
     }
   }

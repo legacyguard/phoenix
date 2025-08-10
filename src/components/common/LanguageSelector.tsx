@@ -12,7 +12,7 @@ import {
 import { ChevronDown, Languages, Loader2 } from 'lucide-react';
 
 export const LanguageSelector: React.FC = () => {
-  const { i18n } = useTranslation('ui');
+  const { i18n } = useTranslation('ui-common');
   const { selectedCountryCode, isDetecting } = useCountry();
   
   const currentCountry = getCurrentCountryConfig();

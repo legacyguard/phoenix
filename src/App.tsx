@@ -111,7 +111,7 @@ const App = () => {
 };
 
 const AppContent = () => {
-  const { t } = useTranslation('ui');
+  const { t } = useTranslation('ui-common');
   const { user } = useUser();
   const [isPasswordWallAuthenticated, setIsPasswordWallAuthenticated] = useState(false);
 

@@ -25,7 +25,7 @@ export function ReminderToast({
   onSnooze,
   onDismiss,
 }: ReminderToastProps) {
-  const { t } = useTranslation('dashboard');
+  const { t } = useTranslation('dashboard-main');
 
   const handleComplete = () => {
     onComplete(reminder.id);

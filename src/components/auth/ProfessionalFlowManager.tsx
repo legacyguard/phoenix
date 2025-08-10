@@ -146,7 +146,7 @@ const ProfessionalFlowManager: React.FC<ProfessionalFlowManagerProps> = ({ child
           <div className="inline-flex items-center justify-center w-16 h-16 bg-white rounded-full shadow-lg mb-4">
             <Shield className="w-8 h-8 text-blue-600 animate-pulse" />
           </div>
-          <p className="text-gray-600">{t('ui:common.loading')}</p>
+          <p className="text-gray-600">{t('ui-common:common.loading')}</p>
         </div>
       </div>
     );
@@ -288,7 +288,7 @@ const WelcomeBackBanner: React.FC<{
   lastActiveDate?: Date;
   onDismiss: () => void;
 }> = ({ userName, lastActiveDate, onDismiss }) => {
-  const { t } = useTranslation('dashboard');
+  const { t } = useTranslation('dashboard-main');
   
   return (
     <div className="fixed top-4 right-4 max-w-md bg-white rounded-xl shadow-lg border border-gray-200 p-6 z-50">
@@ -330,7 +330,7 @@ const GuidanceOverlay: React.FC<{
   progress: UserProgress | null;
   onDismiss: () => void;
 }> = ({ data, progress, onDismiss }) => {
-  const { t } = useTranslation('dashboard');
+  const { t } = useTranslation('dashboard-main');
   const [currentTip, setCurrentTip] = useState(0);
   
   const tips = [

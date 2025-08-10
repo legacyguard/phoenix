@@ -38,10 +38,10 @@ const ErrorBoundary: React.FC<ErrorBoundaryProps> = ({ error, resetError }) => {
             <AlertTriangle className="h-8 w-8 text-red-600" />
           </div>
           <CardTitle className="text-xl text-red-600">
-            {t('errors:general.somethingWrong')}
+            {t('ui-common:general.somethingWrong')}
           </CardTitle>
           <CardDescription className="text-muted-foreground">
-            {t('errors:general.unknownError')}
+            {t('ui-common:general.unknownError')}
           </CardDescription>
         </CardHeader>
         
@@ -61,7 +61,7 @@ const ErrorBoundary: React.FC<ErrorBoundaryProps> = ({ error, resetError }) => {
               variant="default"
             >
               <RefreshCw className="w-4 h-4 mr-2" />
-              {t('errors:actions.refresh')}
+              {t('ui-components:actions.refresh')}
             </Button>
             
             <Button 
@@ -70,7 +70,7 @@ const ErrorBoundary: React.FC<ErrorBoundaryProps> = ({ error, resetError }) => {
               variant="outline"
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
-              {t('errors:actions.goBack')}
+              {t('ui-components:actions.goBack')}
             </Button>
             
             <Button 
@@ -79,20 +79,20 @@ const ErrorBoundary: React.FC<ErrorBoundaryProps> = ({ error, resetError }) => {
               variant="outline"
             >
               <Home className="w-4 h-4 mr-2" />
-              {t('errors:actions.goBack')}
+              {t('ui-components:actions.goBack')}
             </Button>
           </div>
           
           <div className="text-center">
             <p className="text-sm text-muted-foreground">
-              {t('errors:general.unknownError')}
+              {t('ui-common:general.unknownError')}
             </p>
             <Button 
               variant="link" 
               className="text-sm p-0 h-auto"
               onClick={() => window.open('mailto:support@legacyguard.com', '_blank')}
             >
-              {t('errors:actions.contactSupport')}
+              {t('ui-components:actions.contactSupport')}
             </Button>
           </div>
         </CardContent>

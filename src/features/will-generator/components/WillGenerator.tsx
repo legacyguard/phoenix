@@ -201,9 +201,13 @@ export function WillGenerator({ onComplete }: WillGeneratorProps) {
         // Show gentle support UI if beneficiaries are not started
         // In an event handler, navigate or set state to display these components instead of returning JSX here.
         // For now, just notify the user empathetically.
-        toast.message(t('wills:gentle.nudgeStart'), { description: t('wills:gentle.addLovedOnes') });
+        // TODO: Fix missing translation key - wills:gentle.addLovedOnes
+
+        // toast.message(t('wills:gentle.nudgeStart'), { description: t('wills:gentle.addLovedOnes') });
       } else if (!willContent.beneficiaries?.some(b => b.allocation)) {
-        toast.message(t('wills:gentle.nudgeAllocate'), { description: t('wills:gentle.helpAllocate') });
+        // TODO: Fix missing translation key - wills:gentle.nudgeAllocate
+
+        // toast.message(t('wills:gentle.nudgeAllocate'), { description: t('wills:gentle.helpAllocate') });
       }
       toast.success(t('ui.willGenerated'));
       onComplete?.('generated-will-id');

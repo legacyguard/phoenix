@@ -13,7 +13,7 @@ export const TranslationExample: React.FC = () => {
   const { t: tAssets } = useTranslation('assets');
   const { t: tDocuments } = useTranslation('assets');
   const { t: tWills } = useTranslation('wills');
-  const { t: tCommon } = useTranslation('ui');
+  const { t: tCommon } = useTranslation('ui-common');
 
   return (
     <div className="space-y-6 p-6">

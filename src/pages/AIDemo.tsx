@@ -10,7 +10,7 @@ import { Heart, Brain, FileText, Sparkles } from 'lucide-react';
 import type { UserProfile, UserContext } from '../../lib/services/openai.types';
 
 export function AIDemo() {
-  const { t } = useTranslation('ui');
+  const { t } = useTranslation('ui-common');
   const { generateQuestion, generateMessage, suggestAction } = useAI();
   const [generatedMessage, setGeneratedMessage] = React.useState('');
   const [currentQuestion, setCurrentQuestion] = React.useState<Record<string, unknown> | null>(null);

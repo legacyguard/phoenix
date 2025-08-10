@@ -81,7 +81,7 @@ const getIconForAsset = (subType: string) => {
 };
 
 const AssetCard: React.FC<AssetCardProps> = ({ asset, onView, onEdit, onDelete }) => {
-  const { t, i18n } = useTranslation('ui');
+  const { t, i18n } = useTranslation('ui-common');
   
   const formatCurrency = (value: number | undefined, currency: string = 'USD') => {
     if (!value) return null;

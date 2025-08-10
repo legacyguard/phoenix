@@ -1,138 +1,135 @@
 {
   "general": {
-    "somethingWrong": "Nešto je pošlo naopako. Molimo pokušajte ponovo.",
-    "networkError": "Problem sa mrežnom vezom. Molimo provjerite internet vezu.",
-    "serverError": "Imamo tehničke poteškoće. Molimo pokušajte ponovo uskoro.",
-    "timeoutError": "Vrijeme za zahtjev je isteklo. Molimo pokušajte ponovo.",
-    "unknownError": "Došlo je do neočekivane greške. Ako se problem nastavi, kontaktirajte podršku.",
-    "maintenanceMode": "Trenutno vršimo održavanje sistema. Molimo pokušajte ponovo za nekoliko minuta."
+    "networkError": "Проблем са мрежном везом. Проверите интернет везу.",
+    "serverError": "Имамо техничких проблема. Молимо вас да покушате поново ускоро.",
+    "timeoutError": "Захтев је истекао. Молимо покушајте поново.",
+    "maintenanceMode": "Тренутно вршимо одржавање. Молимо вас да покушате поново за неколико минута.",
+    "something_wrong": "Нешто није баш како треба функционисало, али не брините - ваше важне информације су безбедне.",
+    "try_again": "Дозволи ми да то поново покушам за тебе",
+    "contact_support": "Ту сам да помогнем ако вам је потребна помоћ",
+    "no_data_lost": "Добра вест је да ништа на чему сте радили није изгубљено",
+    "temporary_issue": "Изгледа да је ово привремени проблем који би требало брзо да се реши"
   },
   "authentication": {
-    "sessionExpired": "Vaša sesija je istekla. Molimo prijavite se ponovo.",
-    "invalidCredentials": "Neispravna e-mail adresa ili lozinka. Molimo pokušajte ponovo.",
-    "accountLocked": "Vaš nalog je privremeno zaključan iz bezbjednosnih razloga.",
-    "accountDisabled": "Vaš nalog je onemogućen. Molimo kontaktirajte podršku.",
-    "emailNotVerified": "Molimo potvrdite svoju e-mail adresu prije nastavka.",
-    "passwordResetRequired": "Potrebno je resetovanje lozinke. Molimo provjerite e-mail."
+    "sessionExpired": "Ваша сесија је истекла. Молимо вас да се поново пријавите.",
+    "invalidCredentials": "Неважећа имејл адреса или лозинка. Молимо покушајте поново.",
+    "accountLocked": "Ваш налог је привремено закључан из безбедносних разлога.",
+    "accountDisabled": "Ваш налог је деактивиран. Молимо вас да контактирате подршку.",
+    "emailNotVerified": "Молимо вас да потврдите своју адресу е-поште пре него што наставите.",
+    "passwordResetRequired": "Потребно је ресетовање лозинке. Молимо вас да проверите своју е-пошту."
   },
   "authorization": {
-    "accessDenied": "Nemate dozvolu za pristup ovim informacijama.",
-    "insufficientPermissions": "Nemate dovoljno ovlašćenja za ovu radnju.",
-    "subscriptionRequired": "Ova funkcija zahtijeva aktivnu pretplatu.",
-    "upgradeRequired": "Molimo nadogradite svoj paket da biste pristupili ovoj funkciji."
+    "accessDenied": "Немате дозволу за приступ овим информацијама.",
+    "insufficientPermissions": "Немате довољна овлашћења за ову радњу.",
+    "subscriptionRequired": "Ова функција захтева активну претплату.",
+    "upgradeRequired": "Надоградите свој план да бисте приступили овој функцији."
   },
   "validation": {
-    "requiredField": "Ovo polje je obavezno.",
-    "invalidEmail": "Molimo unesite ispravnu e-mail adresu.",
-    "invalidPhone": "Molimo unesite ispravan broj telefona.",
-    "invalidDate": "Molimo unesite ispravan datum.",
-    "invalidFormat": "Neispravan format. Molimo provjerite unos.",
-    "passwordTooWeak": "Lozinka mora imati najmanje 8 znakova, uključujući velika i mala slova te brojeve.",
-    "passwordMismatch": "Lozinke se ne podudaraju.",
-    "fileTooLarge": "Veličina fajla prelazi maksimalni limit od {{size}} MB.",
-    "unsupportedFileType": "Ovaj tip fajla nije podržan."
+    "invalidEmail": "Молимо вас да унесете важећу адресу е-поште.",
+    "invalidPhone": "Молимо вас да унесете важећи број телефона.",
+    "invalidFormat": "Неважећи формат. Молимо проверите унос.",
+    "passwordTooWeak": "Лозинка мора имати најмање 8 карактера, укључујући велика слова, мала слова и бројеве.",
+    "passwordMismatch": "Лозинке се не подударају.",
+    "fileTooLarge": "Величина датотеке прелази максимално ограничење од {{size}}MB.",
+    "unsupportedFileType": "Овај тип датотеке није подржан.",
+    "required_field": "Вашој породици ће бити потребне ове информације - можете ли ми помоћи да их попуним?",
+    "invalid_email": "Та имејл адреса не изгледа баш исправно. Можете ли је још једном проверити?",
+    "invalid_phone": "Имам проблем са тим форматом броја телефона. Можете ли покушати да га унесете другачије?",
+    "invalid_date": "Тај формат датума ми не ради. Можете ли покушати са ММ/ДД/ГГГГ?",
+    "password_weak": "Хајде да мало појачамо вашу лозинку како бисмо додатно заштитили податке ваше породице.",
+    "file_too_large": "Та датотека је мало превелика за мене. Можете ли да покушате са мањом верзијом?",
+    "unsupported_file": "Не могу да радим са том врстом датотеке. Можете ли да покушате са PDF-ом или сликом уместо тога?"
   },
   "data": {
-    "loadingFailed": "Učitavanje podataka nije uspjelo. Molimo osvježite stranicu.",
-    "savingFailed": "Čuvanje izmjena nije uspjelo. Molimo pokušajte ponovo.",
-    "deletingFailed": "Brisanje stavke nije uspjelo. Molimo pokušajte ponovo.",
-    "uploadFailed": "Otpremanje fajla nije uspjelo. Molimo pokušajte ponovo.",
-    "exportFailed": "Izvoz podataka nije uspio. Molimo pokušajte kasnije.",
-    "importFailed": "Uvoz podataka nije uspio. Molimo provjerite format fajla.",
-    "syncFailed": "Sinhronizacija nije uspjela. Neke izmjene možda nisu sačuvane."
+    "loadingFailed": "Учитавање података није успело. Освежите страницу.",
+    "savingFailed": "Чување промена није успело. Молимо покушајте поново.",
+    "deletingFailed": "Брисање ставке није успело. Молимо покушајте поново.",
+    "uploadFailed": "Отпремање датотеке није успело. Молимо покушајте поново.",
+    "exportFailed": "Извоз података није успео. Молимо покушајте поново касније.",
+    "importFailed": "Увоз података није успео. Молимо проверите формат датотеке.",
+    "syncFailed": "Синхронизација није успела. Неке промене можда неће бити сачуване."
   },
   "payment": {
-    "paymentFailed": "Obrada plaćanja nije uspjela. Molimo provjerite način plaćanja.",
-    "cardDeclined": "Vaša kartica je odbijena. Molimo pokušajte drugi način plaćanja.",
-    "insufficientFunds": "Nedovoljno sredstava. Molimo provjerite stanje računa.",
-    "expiredCard": "Vaša kartica je istekla. Molimo ažurirajte podatke o plaćanju.",
-    "invalidCard": "Neispravni podaci o kartici. Molimo provjerite unos.",
-    "paymentTimeout": "Vrijeme za obradu plaćanja je isteklo. Molimo pokušajte ponovo."
+    "paymentFailed": "Обрада плаћања није успела. Молимо вас да проверите начин плаћања.",
+    "cardDeclined": "Ваша картица је одбијена. Молимо вас да покушате са другим начином плаћања.",
+    "insufficientFunds": "Недовољно средстава. Молимо вас да проверите стање на вашем рачуну.",
+    "expiredCard": "Ваша картица је истекла. Молимо вас да ажурирате информације о плаћању.",
+    "invalidCard": "Неважећи подаци о картици. Молимо вас да проверите своје податке.",
+    "paymentTimeout": "Временско ограничење за обраду плаћања је истекло. Молимо покушајте поново."
   },
   "actions": {
-    "tryAgain": "Pokušaj ponovo",
-    "refresh": "Osvježi stranicu",
-    "contactSupport": "Kontaktiraj podršku",
-    "goBack": "Vrati se",
-    "signInAgain": "Prijavi se ponovo",
-    "updatePayment": "Ažuriraj plaćanje",
-    "upgradeAccount": "Nadogradi nalog"
+    "tryAgain": "Покушај поново",
+    "signInAgain": "Пријавите се поново",
+    "updatePayment": "Ажурирање плаћања",
+    "upgradeAccount": "Надоградите налог"
   },
   "debug": {
     "i18nDebug": {
-      "current_lang_resources_7": "Trenutni jezički resursi 7",
-      "has_resources_6": "Postoje resursi 6",
-      "i18n_debug_info_1": "I18n informacije za otklanjanje grešaka 1",
-      "resolved_language_3": "Određeni jezik 3",
-      "test_translation_5": "Test prevoda 5"
-    },
-    "panel": {
-      "actions": {
-        "clearAllErrors": "Obriši sve greške",
-        "downloadErrors": "Preuzmi greške"
-      },
-      "error": {
-        "errorMessage": "Poruka o grešci",
-        "noMessage": "Nema poruke",
-        "unknownError": "Nepoznata greška"
-      },
-      "errorCount": "Broj grešaka",
-      "fields": {
-        "path": "Putanja",
-        "query": "Upit",
-        "url": "URL",
-        "userAgent": "Korisnički agent",
-        "viewport": "Prikazni prostor"
-      },
-      "messages": {
-        "errorCopied": "Greška je kopirana",
-        "errorsCleared": "Greške su obrisane",
-        "errorsDownloaded": "Greške su preuzete"
-      },
-      "recentErrors": "Nedavne greške",
-      "sections": {
-        "browserInfo": "Informacije o pregledaču",
-        "context": "Kontekst",
-        "location": "Lokacija",
-        "stackTrace": "Trag steka",
-        "time": "Vrijeme"
-      },
-      "tabs": {
-        "details": "Detalji",
-        "list": "Lista"
-      },
-      "title": "Naslov"
-    },
-    "translationTest": {
-      "available_languages_3": "Dostupni jezici 3",
-      "current_language_2": "Trenutni jezik 2",
-      "dashboard_stats_translations_4": "Prevodi statistike kontrolne table 4",
-      "exists_5": "Postoji 5",
-      "raw_resource_check_6": "Provjera neobrađenih resursa 6",
-      "translation_debug_test_1": "Test prevoda za otklanjanje grešaka 1"
+      "current_lang_resources_7": "Тренутни језички ресурси 7",
+      "has_resources_6": "Има ресурсе 6",
+      "i18n_debug_info_1": "Информације о отклањању грешака на I18n-у 1",
+      "resolved_language_3": "Решено питање 3",
+      "test_translation_5": "Тест превода 5"
     }
-  },
-  "development": {
-    "resetOnboarding": "Resetuj uvodni proces"
-  },
-  "errorTest": {
-    "logCriticalError": "Zabilježi kritičnu grešku",
-    "logRegularError": "Zabilježi običnu grešku",
-    "title": "Naslov",
-    "triggerAlert": "Pokreni upozorenje",
-    "triggerAsyncError": "Pokreni asinhronu grešku",
-    "triggerSyncError": "Pokreni sinhronu grešku"
   },
   "test": {
     "environment": {
-      "description": "Opis",
-      "title": "Naslov"
+      "description": "Опис",
+      "title": "Наслов"
     }
   },
   "notfound": {
-    "title": "Stranica nije pronađena",
-    "description": "Stranica koju tražite ne postoji ili je premještena.",
-    "goHome": "Idi na početnu stranicu",
-    "goBack": "Vrati se"
+    "title": "Страница није пронађена",
+    "description": "Страница коју тражите не постоји или је премештена.",
+    "goHome": "Иди кући",
+    "goBack": "Назад"
+  },
+  "network": {
+    "connection_lost": "Изгледа да је ваша интернет веза прекинута. Ваш рад је сачуван и аутоматски ћемо се поново повезати.",
+    "slow_connection": "Ваша веза данас делује мало споро. Стрпљиво ћу чекати док се ствари не учитају.",
+    "server_busy": "Наши сервери су тренутно мало заузети, али ћу наставити да покушавам да вам помогнем.",
+    "timeout": "То је трајало дуже него што се очекивало. Дозволите ми да покушам другачији приступ."
+  },
+  "contextual": {
+    "assets": {
+      "save_failed": "Тренутно нисам могао/могла да сачувам те информације о имовини, али ћу наставити да покушавам. Информације о вашој породици су ми важне.",
+      "load_failed": "Тренутно имам проблема са учитавањем ваших елемената. Дозволите ми да покушам поново за тренутак.",
+      "delete_failed": "Нисам могао/могла да уклоним ту ставку управо сада. Да ли желите да покушам поново?"
+    },
+    "documents": {
+      "upload_failed": "Тај документ није правилно отпремљен. Не брините - помоћи ћу вам да покушате поново.",
+      "processing_failed": "Имао сам проблема са обрадом тог документа. Датотека је безбедна и покушаћу поново.",
+      "access_failed": "Тренутно не могу да приступим том документу. Да видим шта могу да урадим да помогнем."
+    },
+    "family": {
+      "save_failed": "Нисам могао/могла да сачувам податке те особе. Дозволите ми да покушам поново - ваш круг поверења је важан.",
+      "invite_failed": "Тренутно нисам могао/могла да пошаљем ту позивницу. Помоћи ћу ти да покушаш поново када будеш спреман/спремна.",
+      "access_failed": "Имам проблема са подешавањима породичног приступа. Дозволите ми да ово решим."
+    },
+    "will": {
+      "generation_failed": "Нисам могао/могла да направим твој тестамент управо сада. Не брини - све твоје одлуке су сачуване и покушаћу поново.",
+      "save_failed": "Тренутно нисам могао/могла да сачувам те измене тестамента. Ваша претходна верзија је безбедна и наставићу да покушавам.",
+      "legal_check_failed": "Нисам могао/могла да проверим правне захтеве. Дозволите ми да покушам поново или можемо да потражимо помоћ од нашег правног тима."
+    }
+  },
+  "emotional_support": {
+    "frustration": "Знам да је ово фрустрирајуће када покушаваш да урадиш нешто важно за своју породицу. Ту сам да ти помогнем да ово успе.",
+    "time_pressure": "Разумем да немате пуно времена за техничке проблеме. Дозволите ми да ово брзо решим уместо вас.",
+    "overwhelm": "Технички проблеми могу деловати преплављујуће када се већ бавите важним планирањем породице. Удахните дубоко - ја ћу се носити са тим.",
+    "discouragement": "Не дозволите да вас овај технички проблем обесхрабри. Оно што радите за своју породицу је превише важно да бисте се од тога одрекли."
+  },
+  "solutions": {
+    "refresh_page": "Понекад освежавање странице помаже. Ваш рад је сачуван, тако да нећете ништа изгубити.",
+    "try_different_browser": "Ако се ово стално дешава, покушајте да користите други прегледач. Chrome или Firefox обично најбоље раде.",
+    "check_internet": "Можете ли проверити интернет везу? Понекад је то све што је потребно.",
+    "contact_support": "Волео бих да вам лично помогнем. Можете контактирати наш тим за подршку који ће се одлично побринути за вас.",
+    "try_later": "Ако журите, можете покушати поново касније. Све што сте урадили је безбедно сачувано.",
+    "alternative_approach": "Дозволите ми да предложим другачији начин да се ово уради, који би могао боље функционисати."
+  },
+  "recovery": {
+    "auto_save_worked": "Добра вест је да је све што сте унели аутоматски сачувано.",
+    "backup_available": "Имам резервну копију твог рада од пре неколико минута ако ти затреба.",
+    "progress_preserved": "Сав ваш напредак је сачуван - нећете морати да почињете испочетка.",
+    "data_secure": "Подаци ваше породице остају потпуно безбедни упркос овом техничком проблему."
   }
 }

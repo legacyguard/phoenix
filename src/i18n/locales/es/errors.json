@@ -1,127 +1,76 @@
 {
   "general": {
-    "somethingWrong": "Algo salió mal. Vuelve a intentarlo.",
-    "networkError": "Problema de conexión de red. Verifica tu conexión a Internet.",
-    "serverError": "Estamos experimentando dificultades técnicas. Inténtalo de nuevo en breve.",
-    "timeoutError": "La solicitud excedió el tiempo de espera. Inténtalo de nuevo.",
-    "unknownError": "Ocurrió un error inesperado. Si continúa, contacta al soporte.",
-    "maintenanceMode": "Estamos realizando tareas de mantenimiento. Inténtalo de nuevo en unos minutos."
+    "networkError": "Problema de conexión a la red. Por favor, revise su conexión a internet.",
+    "serverError": "Tenemos dificultades técnicas. Inténtalo de nuevo en breve.",
+    "timeoutError": "Se agotó el tiempo de solicitud. Inténtalo de nuevo.",
+    "maintenanceMode": "Estamos realizando tareas de mantenimiento. Inténtalo de nuevo en unos minutos.",
+    "something_wrong": "Algo no funcionó del todo bien, pero no te preocupes: tu información importante está segura.",
+    "try_again": "Déjame intentarlo de nuevo para ti.",
+    "contact_support": "Estoy aquí para ayudarte si necesitas ayuda.",
+    "no_data_lost": "La buena noticia es que nada de lo que has trabajado se ha perdido.",
+    "temporary_issue": "Este parece ser un problema temporal que debería resolverse rápidamente."
   },
   "authentication": {
-    "sessionExpired": "Tu sesión ha expirado. Inicia sesión nuevamente.",
-    "invalidCredentials": "Correo o contraseña inválidos. Vuelve a intentarlo.",
-    "accountLocked": "Tu cuenta se bloqueó temporalmente por seguridad.",
-    "accountDisabled": "Tu cuenta fue deshabilitada. Contacta al soporte.",
-    "emailNotVerified": "Verifica tu correo electrónico antes de continuar.",
-    "passwordResetRequired": "Se requiere restablecer la contraseña. Revisa tu correo."
+    "sessionExpired": "Tu sesión ha expirado. Inicia sesión de nuevo.",
+    "invalidCredentials": "Correo electrónico o contraseña no válidos. Inténtalo de nuevo.",
+    "accountLocked": "Su cuenta ha sido bloqueada temporalmente por razones de seguridad.",
+    "accountDisabled": "Su cuenta ha sido deshabilitada. Por favor, contacte con el servicio de asistencia.",
+    "emailNotVerified": "Por favor verifique su dirección de correo electrónico antes de continuar.",
+    "passwordResetRequired": "Necesita restablecer su contraseña. Por favor, revise su correo electrónico."
   },
   "authorization": {
     "accessDenied": "No tienes permiso para acceder a esta información.",
     "insufficientPermissions": "No tienes permisos suficientes para esta acción.",
     "subscriptionRequired": "Esta función requiere una suscripción activa.",
-    "upgradeRequired": "Mejora tu plan para acceder a esta función."
+    "upgradeRequired": "Actualice su plan para acceder a esta función."
   },
   "validation": {
-    "requiredField": "Este campo es obligatorio.",
-    "invalidEmail": "Ingresa un correo electrónico válido.",
-    "invalidPhone": "Ingresa un número de teléfono válido.",
-    "invalidDate": "Ingresa una fecha válida.",
-    "invalidFormat": "Formato inválido. Revisa tu entrada.",
-    "passwordTooWeak": "La contraseña debe tener al menos 8 caracteres con mayúsculas, minúsculas y números.",
+    "invalidEmail": "Por favor, introduce una dirección de correo electrónico válida.",
+    "invalidPhone": "Ingrese un número de teléfono válido.",
+    "invalidFormat": "Formato inválido. Por favor, revise su entrada.",
+    "passwordTooWeak": "La contraseña debe tener al menos 8 caracteres, con mayúsculas, minúsculas y números.",
     "passwordMismatch": "Las contraseñas no coinciden.",
-    "fileTooLarge": "El tamaño del archivo supera el límite máximo de {{size}} MB.",
-    "unsupportedFileType": "Este tipo de archivo no es compatible."
+    "fileTooLarge": "El tamaño del archivo excede el límite máximo de {{size}}MB.",
+    "unsupportedFileType": "Este tipo de archivo no es compatible.",
+    "required_field": "Su familia necesitará esta información: ¿podría ayudarme a completarla?",
+    "invalid_email": "Esa dirección de correo electrónico no parece correcta. ¿Podrías comprobarla?",
+    "invalid_phone": "Tengo problemas con el formato de ese número de teléfono. ¿Podrías intentar introducirlo de otra manera?",
+    "invalid_date": "Ese formato de fecha no me funciona. ¿Podrías probar con MM/DD/AAAA?",
+    "password_weak": "Hagamos que su contraseña sea un poco más fuerte para mantener la información de su familia más segura.",
+    "file_too_large": "Ese archivo es demasiado grande para mí. ¿Podrías probar una versión más pequeña?",
+    "unsupported_file": "No puedo trabajar con ese tipo de archivo. ¿Podrías probar con un PDF o una imagen?"
   },
   "data": {
-    "loadingFailed": "No se pudieron cargar los datos. Actualiza la página.",
+    "loadingFailed": "No se pudieron cargar los datos. Actualice la página.",
     "savingFailed": "No se pudieron guardar los cambios. Inténtalo de nuevo.",
-    "deletingFailed": "No se pudo eliminar el elemento. Inténtalo de nuevo.",
-    "uploadFailed": "Error al subir el archivo. Inténtalo de nuevo.",
-    "exportFailed": "Error al exportar los datos. Inténtalo más tarde.",
-    "importFailed": "Error al importar los datos. Revisa el formato del archivo.",
-    "syncFailed": "Error de sincronización. Es posible que algunos cambios no se hayan guardado."
+    "deletingFailed": "No se pudo eliminar el artículo. Inténtalo de nuevo.",
+    "uploadFailed": "Error al cargar el archivo. Inténtalo de nuevo.",
+    "exportFailed": "Error en la exportación de datos. Inténtelo de nuevo más tarde.",
+    "importFailed": "Error en la importación de datos. Verifique el formato del archivo.",
+    "syncFailed": "Error de sincronización. Es posible que algunos cambios no se guarden."
   },
   "payment": {
-    "paymentFailed": "Error al procesar el pago. Verifica tu método de pago.",
-    "cardDeclined": "Tu tarjeta fue rechazada. Prueba con otro método de pago.",
-    "insufficientFunds": "Fondos insuficientes. Verifica el saldo de tu cuenta.",
-    "expiredCard": "Tu tarjeta ha expirado. Actualiza tu información de pago.",
-    "invalidCard": "Información de tarjeta inválida. Revisa tus datos.",
-    "paymentTimeout": "El procesamiento del pago excedió el tiempo de espera. Inténtalo de nuevo."
+    "paymentFailed": "Error en el procesamiento del pago. Por favor, revise su método de pago.",
+    "cardDeclined": "Su tarjeta fue rechazada. Intente con otro método de pago.",
+    "insufficientFunds": "Fondos insuficientes. Por favor, revise el saldo de su cuenta.",
+    "expiredCard": "Su tarjeta ha caducado. Por favor, actualice su información de pago.",
+    "invalidCard": "Información de tarjeta no válida. Por favor, revise sus datos.",
+    "paymentTimeout": "Se agotó el tiempo de procesamiento del pago. Inténtalo de nuevo."
   },
   "actions": {
-    "tryAgain": "Intentar de nuevo",
-    "refresh": "Actualizar página",
-    "contactSupport": "Contactar soporte",
-    "goBack": "Volver",
+    "tryAgain": "Intentar otra vez",
     "signInAgain": "Iniciar sesión de nuevo",
     "updatePayment": "Actualizar pago",
-    "upgradeAccount": "Mejorar plan"
+    "upgradeAccount": "Actualizar cuenta"
   },
   "debug": {
     "i18nDebug": {
-      "current_lang_resources_7": "Recursos de idioma actuales 7",
+      "current_lang_resources_7": "Recursos lingüísticos actuales 7",
       "has_resources_6": "Tiene recursos 6",
-      "i18n_debug_info_1": "Información de depuración i18n 1",
-      "resolved_language_3": "Idioma determinado 3",
-      "test_translation_5": "Traducción de prueba 5"
-    },
-    "panel": {
-      "actions": {
-        "clearAllErrors": "Borrar todos los errores",
-        "downloadErrors": "Descargar errores"
-      },
-      "error": {
-        "errorMessage": "Mensaje de error",
-        "noMessage": "Sin mensaje",
-        "unknownError": "Error desconocido"
-      },
-      "errorCount": "Número de errores",
-      "fields": {
-        "path": "Ruta",
-        "query": "Consulta",
-        "url": "URL",
-        "userAgent": "Agente de usuario",
-        "viewport": "Área de visualización"
-      },
-      "messages": {
-        "errorCopied": "Error copiado",
-        "errorsCleared": "Errores borrados",
-        "errorsDownloaded": "Errores descargados"
-      },
-      "recentErrors": "Errores recientes",
-      "sections": {
-        "browserInfo": "Información del navegador",
-        "context": "Contexto",
-        "location": "Ubicación",
-        "stackTrace": "Traza de pila",
-        "time": "Hora"
-      },
-      "tabs": {
-        "details": "Detalles",
-        "list": "Lista"
-      },
-      "title": "Título"
-    },
-    "translationTest": {
-      "available_languages_3": "Idiomas disponibles 3",
-      "current_language_2": "Idioma actual 2",
-      "dashboard_stats_translations_4": "Traducciones de estadísticas del panel 4",
-      "exists_5": "Existe 5",
-      "raw_resource_check_6": "Comprobación de recurso sin procesar 6",
-      "translation_debug_test_1": "Prueba de depuración de traducción 1"
+      "i18n_debug_info_1": "Información de depuración de I18n 1",
+      "resolved_language_3": "Lenguaje resuelto 3",
+      "test_translation_5": "Prueba de traducción 5"
     }
-  },
-  "development": {
-    "resetOnboarding": "Restablecer introducción"
-  },
-  "errorTest": {
-    "logCriticalError": "Registrar error crítico",
-    "logRegularError": "Registrar error normal",
-    "title": "Título",
-    "triggerAlert": "Activar alerta",
-    "triggerAsyncError": "Activar error asíncrono",
-    "triggerSyncError": "Activar error síncrono"
   },
   "test": {
     "environment": {
@@ -131,8 +80,56 @@
   },
   "notfound": {
     "title": "Página no encontrada",
-    "description": "La página que buscas no existe o ha sido movida.",
-    "goHome": "Ir al inicio",
+    "description": "La página que estás buscando no existe o ha sido movida.",
+    "goHome": "Ir a casa",
     "goBack": "Volver"
+  },
+  "network": {
+    "connection_lost": "Parece que tu conexión a internet se interrumpió. Tu trabajo está guardado y nos reconectaremos automáticamente.",
+    "slow_connection": "Tu conexión parece un poco lenta hoy. Esperaré pacientemente mientras se carga.",
+    "server_busy": "Nuestros servidores están un poco ocupados en este momento, pero seguiré intentando ayudarte.",
+    "timeout": "Eso tardó más de lo esperado. Déjame intentar algo diferente."
+  },
+  "contextual": {
+    "assets": {
+      "save_failed": "No pude guardar la información de ese activo ahora mismo, pero seguiré intentándolo. La información de tu familia es importante para mí.",
+      "load_failed": "Tengo problemas para cargar tus recursos. Lo intentaré de nuevo en un momento.",
+      "delete_failed": "No pude eliminar ese elemento ahora mismo. ¿Quieres que lo intente de nuevo?"
+    },
+    "documents": {
+      "upload_failed": "Ese documento no se cargó correctamente. No te preocupes, te ayudaré a intentarlo de nuevo.",
+      "processing_failed": "Tuve problemas para procesar ese documento. El archivo está seguro y lo intentaré de nuevo.",
+      "access_failed": "No puedo acceder a ese documento ahora mismo. A ver si puedo ayudarte."
+    },
+    "family": {
+      "save_failed": "No pude guardar la información de esa persona ahora mismo. Déjame intentarlo de nuevo: tu círculo de confianza es importante.",
+      "invite_failed": "No pude enviar esa invitación ahora mismo. Te ayudaré a intentarlo de nuevo cuando estés listo.",
+      "access_failed": "Tengo problemas con la configuración de acceso familiar. Déjame ayudarte."
+    },
+    "will": {
+      "generation_failed": "No pude redactar tu testamento ahora mismo. No te preocupes, todas tus decisiones están guardadas y lo intentaré de nuevo.",
+      "save_failed": "No pude guardar esos cambios ahora mismo. Tu versión anterior está segura y seguiré intentándolo.",
+      "legal_check_failed": "No pude verificar los requisitos legales en este momento. Permítame intentarlo de nuevo o podemos pedir ayuda a nuestro equipo legal."
+    }
+  },
+  "emotional_support": {
+    "frustration": "Sé que es frustrante cuando intentas hacer algo importante para tu familia. Estoy aquí para ayudarte a que esto funcione.",
+    "time_pressure": "Entiendo que no tienes mucho tiempo para problemas técnicos. Permíteme solucionarlo rápidamente.",
+    "overwhelm": "Los problemas técnicos pueden resultar abrumadores cuando ya estás lidiando con importantes tareas de planificación familiar. Respira hondo, lo tengo bajo control.",
+    "discouragement": "No dejes que este problema técnico te desanime. Lo que haces por tu familia es demasiado importante como para renunciar a ello."
+  },
+  "solutions": {
+    "refresh_page": "A veces, refrescar la página ayuda. Tu trabajo se guarda, así que no perderás nada.",
+    "try_different_browser": "Si esto persiste, prueba con otro navegador. Chrome o Firefox suelen ser los más adecuados.",
+    "check_internet": "¿Podrías revisar tu conexión a internet? A veces basta con eso.",
+    "contact_support": "Me encantaría ayudarte personalmente. Puedes contactar con nuestro equipo de soporte, que te atenderá de maravilla.",
+    "try_later": "Si tienes prisa, puedes volver a intentarlo más tarde. Todo lo que has hecho está guardado de forma segura.",
+    "alternative_approach": "Permítame sugerir una forma diferente de hacer esto que podría funcionar mejor."
+  },
+  "recovery": {
+    "auto_save_worked": "La buena noticia es que todo lo que ingresaste se guardó automáticamente.",
+    "backup_available": "Tengo una copia de seguridad de tu trabajo de hace unos minutos si la necesitas.",
+    "progress_preserved": "Se conservará todo tu progreso: no tendrás que empezar de nuevo.",
+    "data_secure": "La información de su familia permanece completamente segura a pesar de este problema técnico."
   }
 }

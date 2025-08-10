@@ -33,7 +33,7 @@ interface GuardianPlaybookViewProps {
 }
 
 export default function GuardianPlaybookView({ guardianId, userName }: GuardianPlaybookViewProps) {
-  const { t } = useTranslation('family');
+  const { t } = useTranslation('family-core');
   const [loading, setLoading] = useState(true);
   const [playbook, setPlaybook] = useState<GuardianPlaybookData | null>(null);
 

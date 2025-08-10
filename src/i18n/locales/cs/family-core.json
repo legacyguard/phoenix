@@ -1,0 +1,1036 @@
+{
+  "crisisAssessment": {
+    "familyCapabilities": "Rodinné schopnosti",
+    "familyDiscussion": "Rodinná diskuse",
+    "familyDiscussionDescription": "Popis rodinné diskuse"
+  },
+  "errors": {
+    "loadingFamily": "Při načítání seznamu důvěryhodných osob se vyskytl problém. Obnovte prosím stránku.",
+    "accessDenied": "Informace o této osobě momentálně nemůžete změnit.",
+    "assigningRole": "Tuto roli jsme jim nemohli přidělit. Zkuste to prosím znovu.",
+    "dataNotFound": "Tuto informaci jsme nenašli",
+    "duplicatePerson": "Tato osoba je již ve vašem seznamu důvěryhodných osob",
+    "duplicateRecord": "Toto je již uloženo",
+    "grantingAccess": "Nepodařilo se nám jim udělit přístup. Zkuste to prosím znovu.",
+    "invalidEmail": "Ten e-mail nevypadá správně. Zkontrolujte ho prosím.",
+    "invalidPhone": "To telefonní číslo nevypadá správně. Zkontrolujte ho prosím.",
+    "networkError": "Problém s připojením. Zkontrolujte prosím připojení k internetu.",
+    "permissionDenied": "Nemáte k tomu oprávnění.",
+    "removingPerson": "Nepodařilo se nám je odebrat z vašich důvěryhodných osob. Zkuste to prosím znovu.",
+    "roleConflict": "Už mají jinou roli, která je s touto v konfliktu.",
+    "savingPerson": "Nepodařilo se nám uložit jejich informace. Zkontrolujte to prosím a zkuste to znovu.",
+    "sendingInvitation": "Pozvánku se nepodařilo odeslat. Zkontrolujte prosím jejich e-mail a zkuste to znovu.",
+    "unknown": "Něco se pokazilo"
+  },
+  "familyCapabilities": {
+    "businessOperations": "Obchodní operace",
+    "canAccessBankAccounts": "Může mít přístup k bankovním účtům",
+    "canAccessDigitalAccounts": "Může mít přístup k digitálním účtům",
+    "canFileInsuranceClaims": "Může podat žádost o pojistné plnění",
+    "canManageBusiness": "Může řídit podnikání",
+    "cannotAccessBankAccounts": "Nemůžete se přihlásit k bankovním účtům",
+    "cannotAccessDigitalAccounts": "Nelze získat přístup k digitálním účtům",
+    "cannotFileInsuranceClaims": "Nelze podat žádost o pojistné plnění",
+    "clearInheritancePlan": "Jasný plán dědictví",
+    "digitalAccess": "Digitální přístup",
+    "digitalAccounts": "Digitální účty",
+    "immediateFinancialNeeds": "Okamžité finanční potřeby",
+    "inheritance": "Dědictví",
+    "insuranceClaims": "Pojistné události",
+    "knowsLegalContacts": "Zná právní kontakty",
+    "knowsMedicalWishes": "Zná lékařská přání",
+    "legalMatters": "Právní záležitosti",
+    "medicalDecisions": "Lékařská rozhodnutí",
+    "noBusinessInfo": "Žádné informace o firmě",
+    "noInheritancePlan": "Žádný plán dědictví",
+    "noLegalContacts": "Žádné právní kontakty",
+    "noMedicalInfo": "Žádné lékařské informace",
+    "partialBusinessInfo": "Částečné informace o firmě",
+    "partialInheritancePlan": "Plán částečného dědictví",
+    "partialMedicalInfo": "Částečné lékařské informace",
+    "payBills": "Plaťte účty"
+  },
+  "familyCrisisAssessment": {
+    "15_1": "15 1"
+  },
+  "familyExecutorView": {
+    "communications": {
+      "description": "Popis",
+      "empty": "Prázdný",
+      "title": "Titul",
+      "to": "Na"
+    },
+    "executor": "Vykonavatel",
+    "footer": "Zápatí",
+    "subtitle": "Podtitul",
+    "theExecutor": "Vykonavatel závěti",
+    "title": "Titul"
+  },
+  "familyHub": {
+    "accessLevels": {
+      "emergencyOnly": {
+        "description": "Popis",
+        "fullDescription": "Úplný popis",
+        "title": "Titul"
+      },
+      "fullAccess": {
+        "description": "Popis",
+        "fullDescription": "Úplný popis",
+        "title": "Titul"
+      },
+      "limitedInfo": {
+        "description": "Popis",
+        "fullDescription": "Úplný popis",
+        "title": "Titul"
+      },
+      "none": {
+        "description": "Popis",
+        "title": "Titul"
+      }
+    },
+    "emergencyProtocol": {
+      "activeMessage": "Aktivní zpráva",
+      "configure": "Konfigurovat",
+      "configured": "Nakonfigurováno",
+      "description": "Popis",
+      "title": "Titul"
+    },
+    "errors": {
+      "authenticationRequired": "Vyžadováno ověření",
+      "failedToFetchData": "Načtení dat se nezdařilo",
+      "failedToLoadMembers": "Načtení členů se nezdařilo"
+    },
+    "memberManagement": {
+      "addMorePeople": "Přidat další lidi",
+      "addTrustedPerson": "Přidat důvěryhodnou osobu",
+      "daysAgo": "Před několika dny",
+      "informationAccessLevel": "Úroveň přístupu k informacím",
+      "lastContactOver30Days": "Poslední kontakt po dobu delší než 30 dní",
+      "lastContacted": "Naposledy kontaktováno",
+      "preparedness": "Připravenost",
+      "sendUpdate": "Odeslat aktualizaci",
+      "sendUpdateTo": "Odeslat aktualizaci uživateli",
+      "title": "Titul"
+    },
+    "messages": {
+      "accessLevelUpdated": "Úroveň přístupu aktualizována",
+      "failedToSendUpdate": "Odeslání aktualizace se nezdařilo",
+      "updateSentTo": "Aktualizace odeslána uživateli"
+    },
+    "overallPreparedness": {
+      "description": "Popis",
+      "improvementNeeded": "Je potřeba zlepšení",
+      "title": "Titul"
+    },
+    "subtitle": "Podtitul",
+    "tabs": {
+      "familyMembers": "Členové rodiny",
+      "members": "Členové",
+      "preparednessTools": "Nástroje pro připravenost",
+      "tools": "Nástroje"
+    },
+    "title": "Titul"
+  },
+  "familyPreparednessTools": {
+    "create_a_printable_guide_for_y_3": "Vytvořte tisknutelný průvodce pro 3. ročník",
+    "errors": {
+      "comingSoon": "Již brzy",
+      "generateFailed": "Generování se nezdařilo",
+      "premiumRequired": "Vyžadováno prémiové",
+      "selectScenario": "Vyberte scénář"
+    },
+    "generate_another_5": "Vygenerujte dalších 5",
+    "generate_emergency_guide_2": "Generovat průvodce pro případ nouze 2",
+    "guides": {
+      "death": {
+        "bankAccounts": "Bankovní účty",
+        "contactExecutor": "Kontaktovat vykonavatele",
+        "contactLawyer": "Kontaktujte právníka",
+        "deathCertificate": "Úmrtní list",
+        "disclaimer": "Zřeknutí se odpovědnosti",
+        "employer": "Zaměstnavatel",
+        "financialInstitutions": "Finanční instituce",
+        "first24Hours": "Prvních 24 hodin",
+        "generatedOn": "Vygenerováno dne",
+        "importantDocuments": "Důležité dokumenty",
+        "insuranceCompanies": "Pojišťovny",
+        "investmentAccounts": "Investiční účty",
+        "locateWill": "Najít vůli",
+        "peopleToNotify": "Osoby, které je třeba upozornit",
+        "secureResidence": "Bezpečné bydlení",
+        "socialSecurity": "Sociální zabezpečení",
+        "title": "Titul"
+      },
+      "emergency": {
+        "address": "Adresa",
+        "attorney": "Advokát",
+        "emergency": "Stav nouze",
+        "financialAdvisor": "Finanční poradce",
+        "homeInformation": "Informace o domově",
+        "insuranceAgent": "Pojišťovací agent",
+        "keyContacts": "Klíčové kontakty",
+        "securitySystem": "Bezpečnostní systém",
+        "spouse": "Manžel/ka",
+        "title": "Titul",
+        "utilities": "Utility"
+      },
+      "hospitalization": {
+        "allergies": "Alergie",
+        "bloodType": "Krevní skupina",
+        "currentMedications": "Současné léky",
+        "emergencyContacts": "Nouzové kontakty",
+        "healthcarePowerOfAttorney": "Plná moc pro zdravotní péči",
+        "hipaaRelease": "Vydání Hipaa",
+        "legalDocuments": "Právní dokumenty",
+        "livingWill": "Živá vůle",
+        "medicalInformation": "Lékařské informace",
+        "preferredHospital": "Preferovaná nemocnice",
+        "primaryCarePhysician": "Praktický lékař",
+        "title": "Titul"
+      },
+      "missing": {
+        "bankingApps": "Bankovní aplikace",
+        "checkHospitals": "Zkontrolujte nemocnice",
+        "checkWithWorkplace": "Ověřte si to na pracovišti",
+        "contactCloseFriends": "Kontaktujte blízké přátele",
+        "contactLocalPolice": "Kontaktujte místní policii",
+        "digitalFootprint": "Digitální stopa",
+        "email": "E-mail",
+        "immediateActions": "Okamžité akce",
+        "phoneProvider": "Poskytovatel telefonních služeb",
+        "socialMedia": "Sociální média",
+        "title": "Titul"
+      }
+    },
+    "mockContent": {
+      "insurancePolicies": "Pojistné smlouvy"
+    },
+    "scenarios": {
+      "death": {
+        "description": "Popis",
+        "title": "Titul"
+      },
+      "emergency": {
+        "description": "Popis",
+        "title": "Titul"
+      },
+      "hospitalization": {
+        "description": "Popis",
+        "title": "Titul"
+      },
+      "missing": {
+        "description": "Popis",
+        "title": "Titul"
+      }
+    },
+    "select_scenario_4": "Vyberte scénář 4",
+    "tools": {
+      "cancel": "Zrušit",
+      "chooseScenario": "Vyberte scénář",
+      "emergencySimulator": "Simulátor nouzových situací",
+      "emergencySimulatorDesc": "Popis simulátoru nouzových situací",
+      "generateGuide": "Generovat průvodce",
+      "generating": "Generování",
+      "informationTreasureHunt": "Honba za informačním pokladem",
+      "launch": "Zahájit",
+      "printGuide": "Průvodce tiskem",
+      "stepByStepGuides": "Podrobné návody",
+      "stepByStepGuidesDesc": "Podrobné návody krok za krokem",
+      "treasureHuntDesc": "Popis honby za pokladem",
+      "videoMessages": "Videozprávy",
+      "videoMessagesDesc": "Popis videozpráv"
+    },
+    "use_these_tools_to_ensure_your_1": "Použijte tyto nástroje k zajištění vaší 1"
+  },
+  "form": {
+    "additionalRoles": "Další způsoby, jak mohou pomoci",
+    "assignedRoles": "Jak pomohou vaší rodině",
+    "selectRoles": "Vyberte si, jak mohou pomoci vaší rodině",
+    "accessDescription": "Co vidí a kdy mohou pomoci",
+    "accessInfo": "Co mohou dělat",
+    "accessLevel": "Kolik toho vidí",
+    "addPerson": "Přidat někoho na pomoc",
+    "alternatePhone": "Další telefonní číslo",
+    "backupFor": "Jsou zálohou pro",
+    "backupHelper": "Za koho v případě potřeby zastoupí",
+    "capabilities": "Proč jsou pro to ti praví",
+    "capabilitiesHelper": "Co z nich dělá dobrou volbu pro pomoc?",
+    "compensation": "Pokud potřebují podporu",
+    "compensationHelper": "Jakákoli finanční pomoc, kterou by mohli potřebovat",
+    "contactInfo": "Jak je oslovit",
+    "dateOfBirth": "Narozeniny",
+    "editPerson": "Můžeme aktualizovat jejich informace",
+    "emailAddress": "E-mail",
+    "fullName": "Jejich celé jméno",
+    "fullNameHelper": "Pro důležité dokumenty používejte jejich oficiální jméno",
+    "fullNamePlaceholder": "Jejich celé právní jméno",
+    "homeAddress": "Kde žijí",
+    "instructions": "Důležité věci, které by měli vědět",
+    "instructionsHelper": "Jakékoli zvláštní pokyny pro pomoc vaší rodině",
+    "instructionsPlaceholder": "Co potřebují vědět, aby pomohli",
+    "limitations": "Na co si dát pozor",
+    "limitationsHelper": "Cokoli, co by jim mohlo ztížit pomoc",
+    "personalInfo": "O nich",
+    "primaryPhone": "Nejlepší telefonní číslo",
+    "primaryRole": "Hlavní způsob, jakým pomohou",
+    "relationship": "Jak je znáte",
+    "relationshipPlaceholder": "Jako manžel/manželka, dítě, bratr/sestra, nejlepší přítel/ka",
+    "roleInfo": "Jak pomohou",
+    "workAddress": "Kde pracují"
+  },
+  "preparedness": {
+    "familyBenefit": "Rodinné dávky",
+    "familyCommunication": {
+      "description": "Popis",
+      "scheduleReview": "Naplánovat kontrolu",
+      "shareReport": "Sdílet zprávu",
+      "title": "Titul"
+    },
+    "gaps": {
+      "basicAccessInfo": "Základní informace o přístupu",
+      "addMedicalPreferences": "Přidat lékařské preference",
+      "completeFinancialAccess": "Úplný finanční přístup",
+      "documentBusinessOperations": "Dokumentovat obchodní operace",
+      "improveImmediateAccess": "Zlepšete okamžitý přístup",
+      "updateWillAndTrust": "Aktualizace vůle a důvěry"
+    },
+    "levels": {
+      "goodBasic": "Dobrý základ",
+      "fullyPrepared": "Plně připraveni",
+      "minimalPreparation": "Minimální příprava",
+      "needsImmediate": "Potřebuje okamžité",
+      "somePreparation": "Trocha přípravy",
+      "wellPrepared": "Dobře připraveni"
+    },
+    "assessments": {
+      "decisionMaking": {
+        "good": "Dobrý",
+        "needsWork": "Potřebuje práci"
+      },
+      "immediateAccess": {
+        "good": "Dobrý",
+        "needsWork": "Potřebuje práci"
+      },
+      "longTermSecurity": {
+        "good": "Dobrý",
+        "needsWork": "Potřebuje práci"
+      }
+    },
+    "dimensions": {
+      "decisionMaking": "Rozhodování",
+      "immediateAccess": "Okamžitý přístup",
+      "longTermSecurity": "Dlouhodobé zabezpečení"
+    },
+    "impact": "Dopad",
+    "improvements": {
+      "addBankAccounts": "Přidat bankovní účty",
+      "documentMedicalWishes": "Zdokumentujte lékařská přání",
+      "uploadLegalDocuments": "Nahrát právní dokumenty"
+    },
+    "nextStep": "Další krok",
+    "scenarioReadiness": "Připravenost scénářů",
+    "scenarios": {
+      "extendedTravel": {
+        "description": "Popis",
+        "title": "Titul"
+      },
+      "suddenDeath": {
+        "description": "Popis",
+        "title": "Titul"
+      }
+    },
+    "title": "Titul",
+    "toImprove": "Zlepšit"
+  },
+  "relationships": {
+    "child": "Dítě",
+    "friend": "Přítel",
+    "other": "Ostatní",
+    "parent": "Rodič",
+    "sibling": "Sourozenec",
+    "spouse": "Manžel/ka"
+  },
+  "roles": {
+    "advisor": "Poradce",
+    "beneficiary": "Příjemce",
+    "caregiver": "Pečovatel/ka",
+    "emergencyContact": "Nouzový kontakt",
+    "executor": "Vykonavatel",
+    "financialAgent": "Finanční agent (plná moc)",
+    "guardian": "Strážce",
+    "healthcareProxy": "Proxy ve zdravotnictví",
+    "representative": "Zástupce",
+    "successor": "Zálohování",
+    "trustee": "Správce",
+    "witness": "Bude svědkem"
+  },
+  "trustedCircle": {
+    "roles": "Jak mohou pomoci",
+    "totalMembers": "{{count}} lidí připravených pomoci",
+    "addFirst": "Můžeme přidat někoho, kdo nám pomůže",
+    "description": "Vyberte si důvěryhodné lidi, kteří mohou vaši rodinu v případě potřeby podpořit.",
+    "empty": "Můžeme začít tím, že přidáme někoho, na koho se vaše rodina může spolehnout – manžela/manželku, blízkého přítele nebo důvěryhodného člena rodiny.",
+    "keyPeople": "Klíčoví lidé",
+    "recentlyAdded": "Nedávno přidáno",
+    "subtitle": "Lidé, kteří tu budou pro vaši rodinu",
+    "title": "Důvěryhodní lidé",
+    "viewAll": "Viz všichni"
+  },
+  "family": {
+    "GuardianPlaybook": {
+      "className": {
+        "flex_itemscenter_justifycenter_h64": "flex položky-na-střed zarovnat-na-střed h-64",
+        "grid_gridcols6_wfull": "mřížka mřížka-cols-6 w-full",
+        "flex_itemscenter_gap2": "flex položky-střední mezera-2",
+        "hidden_sminline": "skrytý sm:inline",
+        "spacey4": "prostor-y-4",
+        "minh200px": "min-h-[200px]",
+        "flex_justifybetween_itemscenter_mb4": "flex zarovnání mezi položkami na střed mb-4",
+        "grid_gridcols1_mdgridcols2_gap4": "mřížka mřížka-sloupce-1 md:mřížka-sloupce-2 mezera-4",
+        "mdcolspan2": "md:col-span-2",
+        "minh80px": "min-h-[80px]",
+        "mt2": "mt-2",
+        "flex_itemscenter_justifybetween": "flex položky-na-střed-zarovnat-mezi"
+      },
+      "htmlFor": {
+        "funeral_wishes": "pohřební přání",
+        "digital_accounts": "digitální_účty",
+        "document_locations": "umístění_dokumentů",
+        "personal_messages": "osobní_zprávy",
+        "practical_instructions": "praktické_pokyny"
+      },
+      "id": {
+        "funeral_wishes": "pohřební přání",
+        "digital_accounts": "digitální_účty",
+        "document_locations": "umístění_dokumentů",
+        "personal_messages": "osobní_zprávy",
+        "practical_instructions": "praktické_pokyny"
+      },
+      "playbooktabskey": "rodina.záložek.${key}",
+      "contactnameindex": "jméno-kontaktu-${index}",
+      "contactrelationshipindex": "kontaktní-vztah-${index}",
+      "contactphoneindex": "kontaktní-telefon-${index}",
+      "contactemailindex": "kontaktní-e-mail-${index}",
+      "contactnotesindex": "kontaktní-poznámky-${index}",
+      "playbookstatusstatus": "rodinný.stav.${status}"
+    },
+    "GuardianPlaybookView": {
+      "className": {
+        "minhscreen_flex_itemscenter_justifycenter": "min-h-screen flex items-center justify-center",
+        "animatepulse_textcenter": "animovat-pulz text-center",
+        "maxwmd": "max-w-md",
+        "minhscreen_bggradienttobr_frombackground_tomuted20": "min-h-screen bg-gradient-to-br from-background to-muted/20",
+        "container_mxauto_px4_py8_maxw4xl": "kontejner mx-auto px-4 py-8 max-w-4xl",
+        "flex_itemscenter_justifycenter_w20_h20_roundedfull": "flex položky na střed, zarovnat na střed, w-20 h-20, zaoblené na plný rozsah, bg-primary/10, mx-auto, mb-4",
+        "mt4": "mt-4",
+        "mb8": "mb-8",
+        "flex_itemscenter_gap2": "flex položky-středová mezera-2",
+        "grid_gap4_mdgridcols2": "mezera v mřížce-4 md:sloupce-mřížky-2",
+        "spacey2": "prostor-y-2",
+        "flex_itemsstart_justifybetween": "flex položky-začátek-zarovnání-mezi",
+        "fontsemibold": "polotučné písmo",
+        "spacey1": "prostor-y-1",
+        "flex_itemscenter_gap2_textsm_textprimary_hoverunde": "flex items-center mezera-2 text-sm text-primary hover:podtržení",
+        "spacey6": "prostor-y-6",
+        "prose_prosesm_maxwnone": "próza próza-sm max-w-none",
+        "whitespaceprewrap": "whitespace-pre-wrap",
+        "mt12_textcenter_textsm_textmutedforeground": "mt-12 text-center text-sm text-mutovaný-popředí"
+      },
+      "telcontactphone": "tel.: ${contact.phone}",
+      "mailtocontactemail": "e-mailová adresa: ${contact.email}"
+    }
+  },
+  "guardianUpload": {
+    "relationships": {
+      "child": "Dítě",
+      "friend": "Přítel",
+      "legalProfessional": "Právní profesionál",
+      "other": "Ostatní",
+      "parent": "Rodič",
+      "sibling": "Sourozenec",
+      "spouse": "Manžel/ka"
+    },
+    "roles": {
+      "emergencyContact": "Nouzový kontakt",
+      "executorOfWill": "Vykonavatel závěti",
+      "financialPowerOfAttorney": "Finanční plná moc",
+      "guardianForChildren": "Opatrovník pro děti",
+      "healthcareProxy": "Proxy ve zdravotnictví",
+      "trustee": "Správce"
+    },
+    "rolesTitle": "Název role",
+    "addButton": "Tlačítko Přidat",
+    "addTitle": "Přidat název",
+    "added": "Přidáno",
+    "countryDescription": "Popis země",
+    "countryLabel": "Štítek země",
+    "countryPlaceholder": "Zástupný symbol země",
+    "description": "Popis",
+    "editTitle": "Upravit název",
+    "emailLabel": "Štítek e-mailu",
+    "emailPlaceholder": "Zástupný symbol e-mailu",
+    "error": "Chyba",
+    "errors": {
+      "connectionError": "Chyba připojení",
+      "duplicateError": "Duplicitní chyba",
+      "permissionError": "Chyba oprávnění",
+      "requiredDataNotFound": "Požadovaná data nenalezena",
+      "saveError": "Chyba uložení",
+      "unknownError": "Neznámá chyba"
+    },
+    "fullNameLabel": "Štítek s celým jménem",
+    "fullNamePlaceholder": "Zástupný symbol pro celé jméno",
+    "loginToSave": "Přihlaste se pro uložení",
+    "phoneLabel": "Štítek telefonu",
+    "phonePlaceholder": "Zástupný symbol telefonu",
+    "relationshipLabel": "Štítek vztahu",
+    "relationshipPlaceholder": "Zástupný symbol vztahu",
+    "saving": "Ukládání",
+    "success": "Úspěch",
+    "updateButton": "Tlačítko Aktualizovat",
+    "updated": "Aktualizováno"
+  },
+  "familyMembers": "Členové rodiny",
+  "sensitivity": {
+    "step_family_dynamics": "Vztahy v nevlastní rodině potřebují jasnou dokumentaci",
+    "family_conflict": "Rodinné konflikty vyžadují při plánování větší jasnost",
+    "previous_marriage_obligations": "Je třeba se vypořádat s předchozími manželskými závazky",
+    "absent_parent_considerations": "Situace s nepřítomností rodičů vyžadují pečlivé plánování",
+    "solo_responsibility_pressure": "Zodpovědnosti samoživitelů se mohou zdát ohromující",
+    "inheritance_disputes": "Potenciálním dědickým sporům je třeba předcházet",
+    "traditional_role_expectations": "Tradiční rodinné role mohou vyžadovat zvážení",
+    "disability_planning_stress": "Plánování speciálních potřeb může být emocionálně náročné",
+    "long_term_care_concerns": "Plánování dlouhodobé péče je nezbytné"
+  },
+  "features": {
+    "family_communication_center": {
+      "title": "Centrum rodinné komunikace",
+      "description": "Udržujte všechny informované a propojené"
+    },
+    "family_tree_visualizer": {
+      "title": "Vizualizátor rodokmenu",
+      "description": "Vizuálně zmapujte složité rodinné vztahy"
+    },
+    "step_family_guidance": {
+      "title": "Poradenství pro nevlastní rodiny",
+      "description": "Zvládněte kombinované plánování rodiny s jistotou"
+    },
+    "family_meeting_tools": {
+      "title": "Nástroje pro rodinné schůzky",
+      "description": "Usnadněte důležité rodinné rozhovory"
+    },
+    "document_vault": {
+      "title": "Zabezpečený trezor dokumentů",
+      "description": "Bezpečně ukládejte a sdílejte důležité dokumenty"
+    },
+    "guardian_network_builder": {
+      "title": "Tvůrce sítě Guardian",
+      "description": "Vybudujte pro své děti silnou podpůrnou síť"
+    },
+    "single_parent_resources": {
+      "title": "Zdroje pro samoživitele",
+      "description": "Specializované nástroje a podpora pro osamělé rodiče"
+    },
+    "complex_beneficiary_manager": {
+      "title": "Manažer komplexních příjemců",
+      "description": "Zvládejte více vztahů s přehledem"
+    },
+    "multi_generation_planner": {
+      "title": "Plánovač pro více generací",
+      "description": "Rovnováha potřeb napříč všemi generacemi"
+    },
+    "elder_care_resources": {
+      "title": "Zdroje péče o seniory",
+      "description": "Podpora péče o stárnoucí rodiče"
+    },
+    "special_needs_trust_wizard": {
+      "title": "Průvodce trustem pro speciální potřeby",
+      "description": "Vytvořte vhodné svěřenecké fondy pro členy se speciálními potřebami"
+    },
+    "care_instruction_builder": {
+      "title": "Tvůrce instrukcí pro péči",
+      "description": "Zdokumentujte podrobné požadavky na péči"
+    },
+    "government_benefit_tracker": {
+      "title": "Sledovač vládních dávek",
+      "description": "Zajistěte si nárok na důležité výhody"
+    },
+    "business_succession_planner": {
+      "title": "Plánovač nástupnictví v podnikání",
+      "description": "Plán pro kontinuitu podnikání"
+    },
+    "buy_sell_agreement_tracker": {
+      "title": "Sledování kupních a prodejních smluv",
+      "description": "Správa obchodních partnerských smluv"
+    },
+    "remote_collaboration_tools": {
+      "title": "Nástroje pro vzdálenou spolupráci",
+      "description": "Pracujte společně i přes vzdálenost"
+    },
+    "multi_jurisdiction_guidance": {
+      "title": "Pokyny pro více jurisdikcí",
+      "description": "Procházejte zákony na různých místech"
+    }
+  },
+  "cultural": {
+    "extended_family_obligations": "Rozšířené rodinné povinnosti",
+    "islamic_inheritance": "Islámské principy dědictví",
+    "jewish_traditions": "Židovské rodinné tradice",
+    "christian_values": "Křesťanské hodnoty správcovství",
+    "buddhist_principles": "Buddhistické principy soucitu",
+    "patriarchal_hierarchy": "Tradiční patriarchální struktura",
+    "matriarchal_hierarchy": "Tradiční matriarchální struktura",
+    "elder_led_hierarchy": "Rodinná struktura vedená staršími lidmi",
+    "collective_decision_making": "Kolektivní rodinná rozhodnutí",
+    "elder_respect_obligations": "Povinnosti péče o seniory",
+    "multilingual_documentation": "Potřeby vícejazyčné dokumentace"
+  },
+  "access": {
+    "descriptions": {
+      "executor": "Zvládnou všechno, aby pomohli vaší rodině",
+      "full": "Mohou vidět a spravovat veškeré informace o vaší rodině",
+      "limited": "Mohou vidět základní kontaktní informace a pokyny pro případ nouze",
+      "standard": "Vidí většinu toho, co by vaše rodina potřebovala"
+    },
+    "levels": {
+      "executor": "Plný přístup pro pomocníky",
+      "full": "Vidí všechno",
+      "limited": "Pouze základní informace",
+      "standard": "Pravidelný rodinný přístup"
+    },
+    "permissions": {
+      "editInformation": "Může provádět změny",
+      "manageAccess": "Může spravovat další pomocníky",
+      "viewAssets": "Vidí vaše důležité věci",
+      "viewDocuments": "Může číst dokumenty"
+    }
+  },
+  "actions": {
+    "addPerson": "Můžeme přidat důvěryhodnou osobu",
+    "assignRole": "Můžeme přiřadit roli",
+    "contactPerson": "Můžeme se s vámi spojit",
+    "editPerson": "Aktualizovat jejich informace",
+    "grantAccess": "Můžeme udělit přístup",
+    "printSummary": "Můžeme vytisknout shrnutí",
+    "removePerson": "Můžeme odebrat od důvěryhodných osob",
+    "removeRole": "Můžeme změnit jejich roli",
+    "revokeAccess": "Můžeme změnit, co mohou vidět",
+    "scheduleReview": "Můžeme si naplánovat kontrolu",
+    "sendInvitation": "Můžeme je pozvat na pomoc",
+    "setBackup": "Můžeme nastavit záložního pomocníka",
+    "viewProfile": "Můžeme vidět všechny jejich detaily"
+  },
+  "common": {
+    "cancel": "Zrušit",
+    "fix": "Opravit",
+    "minutes": "Zápis",
+    "start": "Start"
+  },
+  "estateStatus": {
+    "actions": {
+      "cancel": "Zrušit",
+      "update": "Aktualizovat",
+      "updating": "Aktualizace"
+    },
+    "description": "Popis",
+    "dialog": {
+      "description": "Popis",
+      "title": "Titul"
+    },
+    "empty": {
+      "noStatus": "Žádný stav",
+      "readOnly": "Pouze pro čtení"
+    },
+    "fields": {
+      "additionalDetails": "Další podrobnosti",
+      "status": "Postavení"
+    },
+    "lastUpdated": "Naposledy aktualizováno",
+    "logAction": "Akce protokolu",
+    "placeholders": {
+      "additionalContext": "Další kontext",
+      "selectStatus": "Vyberte stav"
+    },
+    "progress": "Pokrok",
+    "statuses": {
+      "assetsBeingValued": "Oceňovaná aktiva",
+      "debtsBeingSettled": "Vyrovnávání dluhů",
+      "distributionInProgress": "Probíhá distribuce",
+      "estateClosed": "Pozůstalost uzavřena",
+      "gatheringDocuments": "Shromažďování dokumentů",
+      "initialReview": "Počáteční kontrola",
+      "probateInitiated": "Zahájeno dědické řízení",
+      "readyForDistribution": "Připraveno k distribuci",
+      "taxPreparation": "Příprava daňových přiznání"
+    },
+    "title": "Titul"
+  },
+  "guardian": {
+    "templateModal": {
+      "_1": "1"
+    }
+  },
+  "guardianView": {
+    "defaultUserName": "Výchozí uživatelské jméno",
+    "errors": {
+      "failedToLoad": "Načtení se nezdařilo",
+      "pleaseLogin": "Přihlaste se prosím"
+    },
+    "guardianInfo": {
+      "description": "Popis",
+      "securityNote": "Bezpečnostní poznámka"
+    },
+    "readOnlyAccess": "Přístup pouze pro čtení",
+    "sections": {
+      "finalWishes": {
+        "description": "Popis",
+        "digitalAccounts": "Digitální účty",
+        "empty": "Prázdný",
+        "funeralWishes": "Pohřební přání",
+        "title": "Titul"
+      },
+      "keyDocuments": {
+        "description": "Popis",
+        "empty": "Prázdný",
+        "expires": "Platnost vyprší",
+        "keyDocumentBadge": "Odznak klíčového dokumentu",
+        "noExpiration": "Bez expirace",
+        "title": "Titul"
+      }
+    },
+    "subtitle": "Podtitul",
+    "title": "Titul"
+  },
+  "guardianship": {
+    "addDependent": "Přidat někoho, kdo potřebuje péči",
+    "alternateGuardian": "Záložní pečovatel/ka",
+    "careStandards": "Jak chcete, aby o ně bylo postaráno",
+    "childGuardians": "Kdo se postará o vaše děti",
+    "dependentCare": "Plány péče o vaše blízké",
+    "description": "Vyberte si milující lidi, kteří se postarají o vaše děti nebo členy rodiny, kteří potřebují pomoc, pokud vy nemůžete být poblíž.",
+    "educationPreferences": "Školní a vzdělávací přání",
+    "financialProvisions": "Peníze za jejich péči",
+    "guardianCompensation": "Podpora pro pečovatele",
+    "guardianFor": "Kdo se postará o {{name}}",
+    "guardianInstructions": "Jak se o ně starat",
+    "guardianQualifications": "Proč jsou tou správnou volbou",
+    "healthcarePreferences": "Zdravotní a lékařská péče",
+    "lifestylePreferences": "Každodenní život a aktivity",
+    "noChildren": "Zatím jste nám neřekli o žádných dětech ani členech rodiny, kteří potřebují péči.",
+    "primaryGuardian": "Pečovatel první volby",
+    "religiousPreferences": "Víra a hodnoty",
+    "reportingRequirements": "Udržování rodiny v obraze",
+    "subtitle": "Zajistěte, aby o vaše blízké bylo postaráno",
+    "temporaryGuardian": "Krátkodobý pečovatel",
+    "title": "Kdo se postará o vaše blízké",
+    "visitationRights": "Rodinné návštěvy"
+  },
+  "notificationPreferences": {
+    "description": "Popis",
+    "emailRequired": "E-mail je vyžadován",
+    "errors": {
+      "loadFailed": "Načítání se nezdařilo",
+      "updateFailed": "Aktualizace selhala"
+    },
+    "howItWorks": {
+      "point1": "Bod 1",
+      "point2": "Bod 2",
+      "point3": "Bod 3",
+      "title": "Titul"
+    },
+    "info": "Informace",
+    "lastUpdated": "Naposledy aktualizováno",
+    "noEmail": "Žádný e-mail",
+    "title": "Titul"
+  },
+  "playbook": {
+    "addContact": "Přidat kontakt",
+    "autoSaveNotice": "Upozornění na automatické ukládání",
+    "contact": "Kontakt",
+    "contactFields": {
+      "email": "E-mail",
+      "emailPlaceholder": "Zástupný symbol e-mailu",
+      "name": "Jméno",
+      "namePlaceholder": "Zástupný symbol jména",
+      "notes": "Poznámky",
+      "notesPlaceholder": "Zástupný symbol pro poznámky",
+      "phone": "Telefon",
+      "phonePlaceholder": "Zástupný symbol telefonu",
+      "role": "Role",
+      "rolePlaceholder": "Zástupný symbol role"
+    },
+    "errors": {
+      "loadFailed": "Načítání se nezdařilo",
+      "saveFailed": "Uložení se nezdařilo"
+    },
+    "loading": "Načítání",
+    "noContent": "Žádný obsah",
+    "preview": "Náhled",
+    "save": "Uložit",
+    "saving": "Ukládání",
+    "sections": {
+      "digital": {
+        "description": "Popis",
+        "placeholder": "Zástupný symbol",
+        "title": "Titul"
+      },
+      "documents": {
+        "description": "Popis",
+        "placeholder": "Zástupný symbol",
+        "title": "Titul"
+      },
+      "funeral": {
+        "description": "Popis",
+        "placeholder": "Zástupný symbol",
+        "title": "Titul"
+      },
+      "practical": {
+        "description": "Popis",
+        "placeholder": "Zástupný symbol",
+        "title": "Titul"
+      }
+    },
+    "subtitle": {
+      "edit": "Upravit",
+      "view": "Pohled"
+    },
+    "tabs": {
+      "digital": "Digitální",
+      "documents": "Dokumenty",
+      "funeral": "Pohřeb",
+      "instructions": "Instrukce",
+      "practical": "Praktický"
+    },
+    "templates": {
+      "append": "Připojit",
+      "backToTemplates": "Zpět k šablonám",
+      "description": "Popis",
+      "existingContent": "Stávající obsah",
+      "fillInVariables": "Doplňte proměnné",
+      "insertTemplate": "Vložit šablonu",
+      "preview": "Náhled",
+      "replace": "Nahradit",
+      "title": "Titul",
+      "variableCount": "Počet proměnných",
+      "variablePlaceholder": "Zástupný symbol proměnné"
+    },
+    "title": "Titul",
+    "useTemplate": "Použít šablonu",
+    "accessDenied": "Přístup odepřen",
+    "description": "Popis",
+    "digitalAccounts": {
+      "description": "Popis",
+      "label": "Označení",
+      "placeholder": "Zástupný symbol"
+    },
+    "discardChanges": {
+      "cancel": "Zrušit",
+      "confirm": "Potvrdit",
+      "description": "Popis",
+      "title": "Titul"
+    },
+    "documentLocations": {
+      "description": "Popis",
+      "label": "Označení",
+      "placeholder": "Zástupný symbol"
+    },
+    "exitPreview": "Ukončit náhled",
+    "fetchError": "Chyba načítání",
+    "funeralWishes": {
+      "description": "Popis",
+      "label": "Označení",
+      "placeholder": "Zástupný symbol"
+    },
+    "lastUpdated": "Naposledy aktualizováno",
+    "notAuthenticated": "Neověřeno",
+    "notFound": {
+      "description": "Popis",
+      "title": "Titul"
+    },
+    "practicalInstructions": {
+      "description": "Popis",
+      "label": "Označení",
+      "placeholder": "Zástupný symbol"
+    },
+    "saveError": "Chyba uložení",
+    "saveSuccess": "Úspěšné uložení",
+    "titleReadOnly": "Název pouze pro čtení",
+    "viewDescription": "Zobrazit popis",
+    "viewFooter": "Zobrazit zápatí",
+    "viewTitle": "Zobrazit název"
+  },
+  "executor": {
+    "completed": "Dokončeno",
+    "dashboard": {
+      "reminder": "Připomínka",
+      "subtitle": "Podtitul",
+      "title": "Titul"
+    },
+    "due": "Splatné",
+    "errors": {
+      "loadTasksFailed": "Načtení úloh se nezdařilo",
+      "updateTaskFailed": "Úloha aktualizace selhala"
+    },
+    "highPriority": "Vysoká priorita",
+    "legalSupport": {
+      "button": "Tlačítko",
+      "description": "Popis",
+      "title": "Titul"
+    },
+    "markComplete": "Označit jako dokončené",
+    "sections": {
+      "firstWeek": {
+        "description": "Popis",
+        "empty": "Prázdný",
+        "title": "Titul"
+      },
+      "immediate": {
+        "description": "Popis",
+        "empty": "Prázdný",
+        "title": "Titul"
+      },
+      "ongoing": {
+        "description": "Popis",
+        "empty": "Prázdný",
+        "title": "Titul"
+      }
+    },
+    "stats": {
+      "completed": "Dokončeno",
+      "remaining": "Zbývající",
+      "totalTasks": "Celkový počet úkolů"
+    },
+    "undo": "Zpět",
+    "viewAccountDetails": "Zobrazit podrobnosti o účtu",
+    "viewRelatedDocuments": "Zobrazit související dokumenty"
+  },
+  "executorDashboard": {
+    "professional_guidance_1": "Odborné poradenství 1"
+  },
+  "executorManagement": {
+    "add_new_executor_10": "Přidat nového vykonavatele 10",
+    "all_executors_must_have_legacy_23": "Všichni vykonavatelé závěti musí mít odkaz 23",
+    "current_executors_17": "Současní vykonavatelé 17",
+    "designate_trusted_individuals__9": "Určete důvěryhodné osoby 9",
+    "email_address_11": "E-mailová adresa 11",
+    "executor_example_com_12": "Příklad exekutora com 12",
+    "executor_management_8": "Řízení exekutorů 8",
+    "failed_to_add_executor_5": "Nepodařilo se přidat vykonavatele 5",
+    "failed_to_load_executors_2": "Nepodařilo se načíst exekutory 2",
+    "failed_to_remove_executor_6": "Nepodařilo se odstranit vykonavatele 6",
+    "important_information_19": "Důležité informace 19",
+    "loading_executors_7": "Načítání vykonavatelů 7",
+    "no_executors_designated_yet_ad_18": "Zatím nebyli určeni žádní vykonavatelé závěti, ad 18",
+    "primary_executor_14": "Hlavní vykonavatel 14",
+    "primary_executors_receive_imme_20": "Hlavní vykonavatelé závazků obdrží okamžitě 20",
+    "relationship_type_13": "Typ vztahu 13",
+    "secondary_executor_15": "Vedlejší vykonavatel 15",
+    "secondary_executors_are_notifi_21": "Vedlejší vykonavatelé jsou informováni 21",
+    "statusLabels": {
+      "addExecutor": "Přidat vykonavatele",
+      "adding": "Přidávání",
+      "unknownUser": "Neznámý uživatel"
+    },
+    "this_person_is_already_designa_4": "Tato osoba je již označena jako 4.",
+    "user_not_found_with_this_email_3": "Uživatel s tímto e-mailem nebyl nalezen 3"
+  },
+  "invite": {
+    "title": "Titul"
+  },
+  "inviteAcceptance": {
+    "buttons": {
+      "acceptRole": "Přijmout roli",
+      "decline": "Pokles",
+      "processing": "Zpracování"
+    },
+    "defaultInviterName": "Výchozí jméno pozývající osoby",
+    "disclaimer": "Zřeknutí se odpovědnosti",
+    "errors": {
+      "acceptFailed": "Přijetí se nezdařilo",
+      "alreadyProcessed": "Již zpracováno",
+      "declineFailed": "Odmítnutí se nezdařilo",
+      "invalidLink": "Neplatný odkaz",
+      "loadingFailed": "Načítání se nezdařilo",
+      "notFound": "Nenalezeno"
+    },
+    "guardianRole": {
+      "relationship": "Vztah",
+      "responsibilities": "Zodpovědnosti",
+      "title": "Titul",
+      "yourName": "Vaše jméno"
+    },
+    "loading": "Načítání",
+    "notFound": {
+      "description": "Popis",
+      "title": "Titul"
+    },
+    "subtitle": "Podtitul",
+    "whatThisMeans": {
+      "point1": "Bod 1",
+      "point2": "Bod 2",
+      "point3": "Bod 3",
+      "point4": "Bod 4",
+      "title": "Titul"
+    }
+  },
+  "structures": {
+    "nuclear": "Tradiční rodina",
+    "single_parent": "Neúplná rodina",
+    "blended": "Smíšená rodina",
+    "multigenerational": "Vícegenerační rodina",
+    "childless": "Pár bez dětí",
+    "empty_nest": "Rodina prázdného hnízda",
+    "non_traditional": "Unikátní rodinná struktura"
+  },
+  "complexity": {
+    "simple": "Jednoduchý",
+    "moderate": "Mírný",
+    "complex": "Komplex"
+  },
+  "personalized": "Váš personalizovaný zážitek z plánování rodiny",
+  "specialConsiderations": "Zvláštní aspekty",
+  "recommendedFeatures": "Doporučené funkce",
+  "tabs": {
+    "overview": "Přehled",
+    "insights": "Přehledy",
+    "features": "Funkce",
+    "cultural": "Kulturní"
+  },
+  "keyConsiderations": "Klíčové aspekty pro vaši rodinu",
+  "specialNeeds": "Speciální potřeby plánování",
+  "sensitivities": "Oblasti vyžadující zvláštní péči",
+  "needs": {
+    "special_needs_planning": "Plánování pro speciální potřeby",
+    "long_term_care_planning": "Plánování dlouhodobé péče",
+    "special_needs_trust": "Nadace pro osoby se zvláštními potřebami",
+    "elder_care_planning": "Plánování péče o seniory",
+    "multi_generational_wealth_transfer": "Vícegenerační přenos",
+    "military_benefit_planning": "Vojenské výhody",
+    "deployment_planning": "Plánování nasazení",
+    "business_succession": "Nástupnictví v podnikání",
+    "key_person_planning": "Plánování klíčových osob",
+    "young_child_guardianship": "Opatrovnictví malých dětí",
+    "education_planning": "Plánování vzdělávání",
+    "sharia_compliant_planning": "Plánování v souladu se šaríou"
+  },
+  "insightType": {
+    "structure": "Struktura rodiny",
+    "need": "Zvláštní potřeby",
+    "opportunity": "Příležitost",
+    "risk": "Rizikový faktor"
+  },
+  "priority": {
+    "high": "Vysoká priorita",
+    "medium": "Střední priorita",
+    "low": "Nízká priorita"
+  },
+  "suggestedActions": "Navrhované akce",
+  "recommendedFeaturesTitle": "Funkce přizpůsobené vaší rodině",
+  "recommendedFeaturesDesc": "Na základě struktury a potřeb vaší rodiny budou tyto funkce nejužitečnější",
+  "culturalConsiderations": "Kulturní a náboženské aspekty",
+  "culturalDesc": "Při plánování ctěte hodnoty a tradice své rodiny",
+  "noCulturalSettings": "Nebyly nastaveny žádné kulturní preference. Přidejte je, abyste zajistili, že vaše plánování bude respektovat hodnoty vaší rodiny.",
+  "configureCultural": "Konfigurace kulturních preferencí",
+  "culturalUpdated": "Aktualizováno kulturní preference",
+  "culturalUpdatedDesc": "Vaše plánování rodiny bude nyní odrážet vaše kulturní hodnoty a tradice"
+}

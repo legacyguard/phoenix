@@ -2,7 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 const TermsOfService: React.FC = () => {
-  const { t } = useTranslation('legal-pages');
+  const { t } = useTranslation('legal');
 
   return (
     <div className="terms-of-service-page">

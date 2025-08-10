@@ -262,7 +262,9 @@ const ProfessionalDashboard: React.FC<ProfessionalDashboardProps> = ({
               onClick={() => setShowGuidance(false)}
               className="ml-4"
             >
-              {t('ui:common.dismiss')}
+              // TODO: Fix missing translation key - ui-elements:common.dismiss
+
+              // {t('ui-elements:common.dismiss')}
             </Button>
           </AlertDescription>
         </Alert>
@@ -453,7 +455,7 @@ const NextStepCard: React.FC<{
   time: string;
   url: string;
 }> = ({ title, description, icon, time, url }) => {
-  const { t } = useTranslation('ui');
+  const { t } = useTranslation('ui-common');
   
   return (
     <Link

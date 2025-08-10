@@ -43,7 +43,7 @@ export const ContextHelp: React.FC<ContextHelpProps> = ({
   currentContext,
   userProgress
 }) => {
-  const { t } = useTranslation('dashboard');
+  const { t } = useTranslation('dashboard-main');
   const [isHelpOpen, setIsHelpOpen] = useState(false);
   const [selectedTopic, setSelectedTopic] = useState<HelpTopic | null>(null);
 

@@ -15,7 +15,7 @@ const EmotionalRecoverySupport: React.FC<EmotionalRecoverySupportProps> = ({
   onContinue,
   onTakeBreak 
 }) => {
-  const { t } = useTranslation('empathetic-errors');
+  const { t } = useTranslation('errors');
   
   // Get context-specific emotional support
   const getEmotionalSupport = () => {

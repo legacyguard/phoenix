@@ -10,7 +10,7 @@ import { useTranslation } from 'react-i18next';
 const AnalyticsDashboard = lazy(() => import('@/components/admin/AnalyticsDashboard'));
 
 const AdminAnalyticsPage: React.FC = () => {
-  const { t } = useTranslation('dashboard');
+  const { t } = useTranslation('dashboard-main');
   const { user } = useUser();
   const [isAuthorized, setIsAuthorized] = useState<boolean | null>(null);
 

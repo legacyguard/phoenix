@@ -20,7 +20,7 @@ import {
 'lucide-react';
 
 export const FamilyPreparednessCalculator: React.FC = () => {
-  const { t } = useTranslation('dashboard');
+  const { t } = useTranslation('dashboard-main');
   const [dependents, setDependents] = useState(2);
   const [income, setIncome] = useState(3000);
   const [hasProperty, setHasProperty] = useState(false);

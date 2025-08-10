@@ -8,7 +8,7 @@ import { useTranslation } from "react-i18next";
 
 export function PWAInstallBanner() {
   const { isInstallable, isInstalled, installApp } = usePWA();
-  const { t } = useTranslation('ui');
+  const { t } = useTranslation('ui-common');
   const [isDismissed, setIsDismissed] = useState(false);
 
   // Check if banner was previously dismissed

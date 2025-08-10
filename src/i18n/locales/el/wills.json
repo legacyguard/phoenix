@@ -1,635 +1,641 @@
 {
   "actions": {
-    "next": "[EL] Next",
-    "previous": "[EL] Previous"
+    "consultLawyer": "Κλείστε ραντεβού για νομική συμβουλευτική",
+    "createCodicil": "Δημιουργία Τροποποίησης (Κωδικύλης)",
+    "deleteWill": "Διαγραφή αυτής της διαθήκης",
+    "downloadPdf": "Λήψη εγγράφου PDF",
+    "generateWill": "Δημιουργία τελικής διαθήκης",
+    "next": "Επόμενος",
+    "previous": "Προηγούμενος",
+    "printWill": "Εκτύπωση εγγράφου διαθήκης",
+    "saveProgress": "Αποθήκευση τρέχουσας προόδου",
+    "shareWill": "Κοινοποίηση με την οικογένεια",
+    "updateWill": "Ενημέρωση Πληροφοριών Διαθήκης"
   },
   "errors": {
-    "assetLoadFailed": "We could not load your asset information. Please refresh and try again.",
-    "generationFailed": "We encountered an issue generating your will. Please review your information and try again.",
-    "jurisdictionRequired": "Please select your legal jurisdiction to ensure compliance",
-    "loadFailed": "We could not load your will information. Please refresh the page and try again.",
-    "printFailed": "We encountered an issue preparing your document for printing. Please try again.",
-    "saveFailed": "We could not save your progress. Please check your connection and try again.",
-    "sharingFailed": "We could not share your will. Please verify the recipients and try again.",
-    "validationFailed": "Please review and correct the highlighted information before proceeding"
+    "assetLoadFailed": "Δεν ήταν δυνατή η φόρτωση των πληροφοριών του στοιχείου σας. Ανανεώστε και δοκιμάστε ξανά.",
+    "generationFailed": "Αντιμετωπίσαμε ένα πρόβλημα κατά τη δημιουργία της διαθήκης σας. Ελέγξτε τα στοιχεία σας και προσπαθήστε ξανά.",
+    "jurisdictionRequired": "Επιλέξτε την νομική σας δικαιοδοσία για να διασφαλίσετε τη συμμόρφωση",
+    "loadFailed": "Δεν ήταν δυνατή η φόρτωση των πληροφοριών της διαθήκης σας. Ανανεώστε τη σελίδα και προσπαθήστε ξανά.",
+    "printFailed": "Αντιμετωπίσαμε ένα πρόβλημα κατά την προετοιμασία του εγγράφου σας για εκτύπωση. Δοκιμάστε ξανά.",
+    "saveFailed": "Δεν ήταν δυνατή η αποθήκευση της προόδου σας. Ελέγξτε τη σύνδεσή σας και προσπαθήστε ξανά.",
+    "validationFailed": "Παρακαλούμε ελέγξτε και διορθώστε τις επισημασμένες πληροφορίες πριν συνεχίσετε"
   },
   "execution": {
-    "copyDistribution": "Distribution of Copies",
-    "familyNotification": "Informing Your Family",
-    "legalRequirements": "Legal Requirements for {{jurisdiction}}",
-    "notarization": "Notarization Requirements",
-    "notaryOptional": "Notary recommended but not required",
-    "notaryRequired": "Notary public required",
-    "numberOfCopies": "Recommended Number of Copies",
-    "safeStorage": "Secure Storage Locations",
-    "selfProving": "Self-Proving Affidavit",
-    "signingInstructions": "Signing Instructions",
-    "signingOrder": "Proper Signing Order",
-    "storageRecommendations": "Storage Recommendations",
-    "subtitle": "Making your will legally binding",
-    "title": "Will Execution Requirements",
-    "witnessCount": "{{count}} witnesses required",
-    "witnessInstructions": "Witness Instructions",
-    "witnessQualifications": "Witness Qualifications",
-    "witnessRequirements": "Witness Requirements"
+    "copyDistribution": "Διανομή Αντιγράφων",
+    "familyNotification": "Ενημέρωση της οικογένειάς σας",
+    "legalRequirements": "Νομικές απαιτήσεις για {{jurisdiction}}",
+    "notarization": "Απαιτήσεις συμβολαιογραφικής επικύρωσης",
+    "notaryOptional": "Συνιστάται συμβολαιογράφος, αλλά δεν απαιτείται.",
+    "notaryRequired": "Απαιτείται συμβολαιογράφος",
+    "numberOfCopies": "Συνιστώμενος αριθμός αντιγράφων",
+    "safeStorage": "Ασφαλείς τοποθεσίες αποθήκευσης",
+    "selfProving": "Αυτοαποδεικνυόμενη Υπεύθυνη Δήλωση",
+    "signingInstructions": "Οδηγίες υπογραφής",
+    "signingOrder": "Σωστή Σειρά Υπογραφής",
+    "storageRecommendations": "Συστάσεις αποθήκευσης",
+    "subtitle": "Κάνοντας τη διαθήκη σας νομικά δεσμευτική",
+    "title": "Απαιτήσεις Εκτέλεσης Διαθήκης",
+    "witnessCount": "Απαιτούνται {{count}} μάρτυρες",
+    "witnessInstructions": "Οδηγίες Μάρτυρα",
+    "witnessQualifications": "Προσόντα Μαρτύρων",
+    "witnessRequirements": "Απαιτήσεις Μαρτύρων"
   },
   "form": {
     "assetSelection": {
-      "allAssets": "Include All Current and Future Assets",
-      "assetCategories": "Asset Categories to Include",
-      "businessInterests": "Business Interests",
-      "excludedAssets": "Assets to Exclude",
-      "jointAssets": "Jointly Owned Assets",
-      "residualDescription": "All remaining assets not specifically mentioned elsewhere in this will",
-      "residualEstate": "Residual Estate",
-      "selectAssets": "Choose Assets to Include",
-      "specificAssets": "Select Specific Assets Only"
+      "allAssets": "Συμπεριλάβετε όλα τα τρέχοντα και μελλοντικά περιουσιακά στοιχεία",
+      "assetCategories": "Κατηγορίες στοιχείων προς συμπερίληψη",
+      "businessInterests": "Επιχειρηματικά Ενδιαφέροντα",
+      "excludedAssets": "Περιουσιακά στοιχεία προς εξαίρεση",
+      "jointAssets": "Κοινή Ιδιοκτησία Περιουσιακών Στοιχείων",
+      "residualDescription": "Όλα τα υπόλοιπα περιουσιακά στοιχεία που δεν αναφέρονται ρητά σε άλλο σημείο της παρούσας διαθήκης",
+      "residualEstate": "Υπολειμματική Κτηματαγορά",
+      "selectAssets": "Επιλέξτε στοιχεία για συμπερίληψη",
+      "specificAssets": "Επιλέξτε μόνο συγκεκριμένα στοιχεία"
     },
     "distribution": {
-      "addBeneficiary": "Add Additional Beneficiary",
-      "ageRestriction": "Age Requirement",
-      "allocation": "Inheritance Allocation",
-      "beneficiaryName": "Beneficiary's Full Name",
-      "conditions": "Conditions or Restrictions",
-      "contingentBeneficiary": "Contingent Beneficiary",
-      "percentage": "Percentage of Estate",
-      "primaryBeneficiary": "Primary Beneficiary",
-      "relationship": "Relationship to You",
-      "specificAmount": "Specific Dollar Amount",
-      "specificAsset": "Specific Asset or Property",
-      "trustProvision": "Trust Arrangement"
+      "addBeneficiary": "Προσθήκη επιπλέον δικαιούχου",
+      "ageRestriction": "Απαιτούμενη ηλικία",
+      "allocation": "Κατανομή Κληρονομιάς",
+      "beneficiaryName": "Ονοματεπώνυμο Δικαιούχου",
+      "conditions": "Όροι ή Περιορισμοί",
+      "contingentBeneficiary": "Υπό αίρεση Δικαιούχος",
+      "percentage": "Ποσοστό Κτήματος",
+      "primaryBeneficiary": "Κύριος Δικαιούχος",
+      "relationship": "Σχέση μαζί σας",
+      "specificAmount": "Συγκεκριμένο ποσό σε δολάρια",
+      "specificAsset": "Συγκεκριμένο Περιουσιακό Στοιχείο ή Ακίνητο",
+      "trustProvision": "Διακανονισμός Εμπιστοσύνης"
     },
     "executor": {
-      "alternateExecutor": "Alternate Executor",
-      "bondRequirement": "Bond Requirement",
-      "coExecutors": "Co-Executors",
-      "executorAddress": "Executor's Address",
-      "executorCompensation": "Executor Compensation",
-      "executorDuties": "Executor Responsibilities",
-      "executorInstructions": "Special Instructions for Executor",
-      "executorName": "Executor's Full Name",
-      "executorRelationship": "Relationship to You",
-      "primaryExecutor": "Primary Executor",
-      "specialPowers": "Special Powers Granted"
+      "alternateExecutor": "Αναπληρωτής Εκτελεστής",
+      "bondRequirement": "Απαίτηση Εγγύησης",
+      "coExecutors": "Συν-Εκτελεστές",
+      "executorAddress": "Διεύθυνση Εκτελεστή",
+      "executorCompensation": "Αποζημίωση Εκτελεστή",
+      "executorDuties": "Ευθύνες Εκτελεστή",
+      "executorInstructions": "Ειδικές οδηγίες για τον εκτελεστή",
+      "executorName": "Πλήρες όνομα εκτελεστή",
+      "executorRelationship": "Σχέση μαζί σας",
+      "primaryExecutor": "Κύριος Εκτελεστής",
+      "specialPowers": "Χορηγήθηκαν Ειδικές Εξουσίες"
     },
     "guardianship": {
-      "backupGuardian": "Alternate Guardian",
-      "educationPreferences": "Education Preferences",
-      "guardianCompensation": "Guardian Compensation",
-      "guardianFor": "Guardian for {{childName}}",
-      "guardianInstructions": "Instructions for Guardian",
-      "guardianQualifications": "Guardian Qualifications",
-      "minorChildren": "Minor Children Requiring Guardianship",
-      "primaryGuardian": "Primary Guardian",
-      "religiousUpbringing": "Religious Upbringing Preferences"
+      "backupGuardian": "Εναλλακτικός Φύλακας",
+      "educationPreferences": "Προτιμήσεις Εκπαίδευσης",
+      "guardianCompensation": "Αποζημίωση Κηδεμόνα",
+      "guardianFor": "Φύλακας για {{childName}}",
+      "guardianInstructions": "Οδηγίες για τον Φύλακα",
+      "guardianQualifications": "Προσόντα Κηδεμόνα",
+      "minorChildren": "Ανήλικα παιδιά που χρειάζονται κηδεμονία",
+      "primaryGuardian": "Κύριος Φύλακας",
+      "religiousUpbringing": "Προτιμήσεις Θρησκευτικής Ανατροφής"
     },
     "personalInfo": {
-      "addChild": "Add Child",
-      "addressHelper": "Your primary residence address",
-      "childDateOfBirth": "Child's Date of Birth",
-      "childName": "Child's Full Name",
-      "childRelation": "Relationship to You",
-      "children": "Children and Dependents",
-      "currentAddress": "Current Legal Address",
-      "dateOfBirth": "Date of Birth",
-      "fullLegalName": "Complete Legal Name",
-      "fullLegalNameHelper": "Enter your name exactly as it appears on official documents",
-      "maritalStatus": "Marital Status",
-      "marriageDate": "Date of Marriage",
-      "placeOfBirth": "Place of Birth",
-      "previousWills": "Previous Wills",
-      "revokesPrevious": "This will revokes all previous wills",
-      "spouseName": "Spouse's Full Legal Name"
+      "addChild": "Προσθήκη παιδιού",
+      "addressHelper": "Η κύρια διεύθυνση κατοικίας σας",
+      "childDateOfBirth": "Ημερομηνία γέννησης παιδιού",
+      "childName": "Ονοματεπώνυμο παιδιού",
+      "childRelation": "Σχέση μαζί σας",
+      "children": "Παιδιά και Εξαρτώμενα Μέλη",
+      "currentAddress": "Τρέχουσα νόμιμη διεύθυνση",
+      "dateOfBirth": "Ημερομηνία γεννήσεως",
+      "fullLegalName": "Πλήρες νόμιμο όνομα",
+      "fullLegalNameHelper": "Εισαγάγετε το όνομά σας ακριβώς όπως εμφανίζεται στα επίσημα έγγραφα",
+      "maritalStatus": "Συζυγική κατάσταση",
+      "marriageDate": "Ημερομηνία Γάμου",
+      "placeOfBirth": "Τόπος γεννήσεως",
+      "previousWills": "Προηγούμενες Διαθήκες",
+      "revokesPrevious": "Αυτή η διαθήκη ακυρώνει όλες τις προηγούμενες διαθήκες",
+      "spouseName": "Πλήρες νόμιμο όνομα συζύγου"
     },
     "provisions": {
-      "burialCremation": "Burial or Cremation Preference",
-      "businessContinuation": "Business Continuation Plans",
-      "charitableBequests": "Charitable Donations",
-      "charityAmount": "Donation Amount",
-      "charityName": "Charitable Organization",
-      "digitalAssets": "Digital Asset Instructions",
-      "funeralInstructions": "Specific Funeral Instructions",
-      "funeralWishes": "Funeral and Burial Preferences",
-      "organDonation": "Organ Donation Wishes",
-      "personalMessages": "Personal Messages to Family",
-      "petCare": "Pet Care Arrangements",
-      "specialInstructions": "Special Instructions"
+      "burialCremation": "Προτίμηση ταφής ή αποτέφρωσης",
+      "businessContinuation": "Σχέδια Συνέχισης Επιχειρήσεων",
+      "charitableBequests": "Φιλανθρωπικές Δωρεές",
+      "charityAmount": "Ποσό δωρεάς",
+      "charityName": "Φιλανθρωπικός Οργανισμός",
+      "digitalAssets": "Οδηγίες για Ψηφιακά Περιουσιακά Στοιχεία",
+      "funeralInstructions": "Ειδικές οδηγίες κηδείας",
+      "funeralWishes": "Προτιμήσεις κηδείας και ταφής",
+      "organDonation": "Ευχές για δωρεά οργάνων",
+      "personalMessages": "Προσωπικά Μηνύματα προς την Οικογένεια",
+      "petCare": "Ρυθμίσεις για τη φροντίδα κατοικίδιων ζώων",
+      "specialInstructions": "Ειδικές οδηγίες"
     }
   },
   "generator": {
-    "of": "[EL] Of",
-    "step": "[EL] Step"
+    "continueWill": "Συνέχεια προετοιμασίας διαθήκης",
+    "description": "Δημιουργήστε μια ολοκληρωμένη, νομικά έγκυρη διαθήκη, προσαρμοσμένη στις απαιτήσεις της δικαιοδοσίας σας και στις μοναδικές ανάγκες της οικογένειάς σας.",
+    "getStarted": "Ξεκινήστε να δημιουργείτε τη διαθήκη σας",
+    "importance": "Διασφάλιση ότι οι επιθυμίες σας είναι νομικά τεκμηριωμένες και η οικογένειά σας προστατεύεται",
+    "newWill": "Δημιουργία Νέας Διαθήκης",
+    "of": "Του",
+    "professionalGuidance": "Συνιστάται επαγγελματική νομική καθοδήγηση για σύνθετα ακίνητα",
+    "step": "Βήμα",
+    "subtitle": "Σύνταξη μιας νομικά έγκυρης διαθήκης με επαγγελματική καθοδήγηση",
+    "title": "Γεννήτρια Τελευταίας Διαθήκης",
+    "viewExisting": "Αναθεώρηση Τρέχουσας Διαθήκης"
   },
   "legal": {
-    "consultLawyer": "Consult with Attorney",
-    "disclaimer": "Important Legal Disclaimer",
-    "estatePlanning": "Comprehensive Estate Planning",
-    "jurisdiction": "Legal Jurisdiction",
-    "lawsApply": "Laws of {{jurisdiction}} will apply",
-    "lawyerRecommended": "We strongly recommend consulting with a qualified attorney for complex estates",
-    "legalCompliance": "Legal Compliance Verification",
-    "notLegalAdvice": "This service does not constitute legal advice",
-    "probateProcess": "Probate Process Information",
-    "professionalGuidance": "Professional legal guidance is recommended",
-    "professionalReview": "Professional Legal Review",
-    "selectJurisdiction": "Please select your legal jurisdiction",
-    "taxImplications": "Tax Implications"
+    "consultLawyer": "Συμβουλευτείτε τον δικηγόρο",
+    "disclaimer": "Σημαντική Νομική Αποποίηση Ευθύνης",
+    "estatePlanning": "Ολοκληρωμένος Σχεδιασμός Κληρονομιάς",
+    "jurisdiction": "Νομική Δικαιοδοσία",
+    "lawsApply": "Θα ισχύουν οι νόμοι του {{jurisdiction}}",
+    "lawyerRecommended": "Σας συνιστούμε ανεπιφύλακτα να συμβουλευτείτε έναν εξειδικευμένο δικηγόρο για σύνθετα ακίνητα.",
+    "legalCompliance": "Επαλήθευση Νομικής Συμμόρφωσης",
+    "notLegalAdvice": "Αυτή η υπηρεσία δεν αποτελεί νομική συμβουλή",
+    "probateProcess": "Πληροφορίες για τη διαδικασία κληρονομικής διαδοχής",
+    "professionalGuidance": "Συνιστάται επαγγελματική νομική καθοδήγηση",
+    "professionalReview": "Επαγγελματική Νομική Αναθεώρηση",
+    "selectJurisdiction": "Επιλέξτε την νομική σας δικαιοδοσία",
+    "taxImplications": "Φορολογικές επιπτώσεις"
   },
   "notifications": {
-    "consultationScheduled": "Legal consultation has been scheduled",
-    "documentShared": "Will has been shared with designated family members",
-    "executionComplete": "Will execution has been recorded",
-    "progressSaved": "Your progress has been saved",
-    "reminderSet": "Will review reminder has been set",
-    "willDeleted": "Will has been permanently deleted",
-    "willGenerated": "Your will has been successfully generated",
-    "willUpdated": "Will has been updated successfully"
+    "consultationScheduled": "Έχει προγραμματιστεί νομική διαβούλευση",
+    "documentShared": "Η διαθήκη έχει κοινοποιηθεί σε καθορισμένα μέλη της οικογένειας",
+    "executionComplete": "Η εκτέλεση της διαθήκης έχει καταγραφεί",
+    "progressSaved": "Η πρόοδός σας έχει αποθηκευτεί",
+    "willDeleted": "Το Will έχει διαγραφεί οριστικά",
+    "willUpdated": "Το Will ενημερώθηκε με επιτυχία"
   },
   "preview": {
-    "article": "ARTICLE {{number}}",
-    "draftWatermark": "DRAFT - NOT LEGALLY BINDING",
-    "executionInstructions": "EXECUTION INSTRUCTIONS",
-    "lastWillTestament": "LAST WILL AND TESTAMENT",
-    "of": "OF",
-    "pageNumber": "Page {{current}} of {{total}}",
-    "reviewCarefully": "Please review this document carefully before proceeding",
-    "section": "Section {{number}}",
-    "signatureSection": "SIGNATURE SECTION",
-    "subtitle": "Review your complete will before finalizing",
-    "title": "Will Document Preview",
-    "witnessClause": "WITNESS CLAUSE"
+    "article": "ΑΡΘΡΟ {{number}}",
+    "draftWatermark": "ΣΧΕΔΙΟ - ΔΕΝ ΕΙΝΑΙ ΝΟΜΙΚΑ ΔΕΣΜΕΥΤΙΚΟ",
+    "executionInstructions": "ΟΔΗΓΙΕΣ ΕΚΤΕΛΕΣΗΣ",
+    "lastWillTestament": "ΤΕΛΕΥΤΑΙΑ ΔΙΑΘΗΚΗ ΚΑΙ ΔΙΑΘΗΚΗ",
+    "of": "ΤΟΥ",
+    "pageNumber": "Σελίδα {{current}} από {{total}}",
+    "reviewCarefully": "Παρακαλούμε ελέγξτε προσεκτικά αυτό το έγγραφο πριν προχωρήσετε",
+    "section": "Ενότητα {{number}}",
+    "signatureSection": "ΤΜΗΜΑ ΥΠΟΓΡΑΦΗΣ",
+    "subtitle": "Ελέγξτε την πλήρη διαθήκη σας πριν την οριστικοποιήσετε",
+    "title": "Προεπισκόπηση Εγγράφου Διαθήκης",
+    "witnessClause": "ΡΗΤΡΑ ΜΑΡΤΥΡΑ"
   },
   "status": {
-    "archived": "Archived Version",
-    "draft": "Draft in Progress",
-    "executed": "Legally Executed",
-    "generated": "Generated - Requires Execution",
-    "outdated": "Requires Update",
-    "underReview": "Under Professional Review"
+    "archived": "Αρχειοθετημένη έκδοση",
+    "draft": "Σχέδιο σε εξέλιξη",
+    "executed": "Νόμιμα εκτελεσμένο",
+    "generated": "Δημιουργήθηκε - Απαιτείται εκτέλεση",
+    "outdated": "Απαιτείται ενημέρωση"
+  },
+  "policy": {
+    "duration": {
+      "session": "Συνεδρίαση",
+      "minutes": "{{count}} λεπτά",
+      "hours": "{{count}} ώρες",
+      "days": "{{count}} ημέρες",
+      "months": "{{count}} μήνες",
+      "years": "{{count}} χρόνια"
+    }
   },
   "steps": {
     "assets": {
-      "description": "Select which assets you wish to include in your will and how they should be distributed.",
-      "subtitle": "Your valuable possessions",
-      "title": "Asset Distribution"
+      "description": "Επιλέξτε ποια περιουσιακά στοιχεία θέλετε να συμπεριλάβετε στη διαθήκη σας και πώς θα πρέπει να διανεμηθούν.",
+      "subtitle": "Τα πολύτιμα υπάρχοντά σας",
+      "title": "Κατανομή Περιουσιακών Στοιχείων"
     },
     "beneficiaries": {
-      "description": "Designate who will receive your assets and in what proportions.",
-      "subtitle": "Your chosen recipients",
-      "title": "Beneficiary Designations"
+      "description": "Ορίστε ποιος θα λάβει τα περιουσιακά σας στοιχεία και σε ποιες αναλογίες.",
+      "subtitle": "Οι επιλεγμένοι παραλήπτες σας",
+      "title": "Ορισμοί Δικαιούχου"
     },
     "executor": {
-      "description": "Choose a responsible person to manage your estate and carry out your wishes.",
-      "subtitle": "Your estate representative",
-      "title": "Estate Executor"
+      "description": "Επιλέξτε ένα υπεύθυνο άτομο για να διαχειριστεί την περιουσία σας και να εκτελέσει τις επιθυμίες σας.",
+      "subtitle": "Ο εκπρόσωπος της διαθήκης σας",
+      "title": "Εκτελεστής Κληρονομιάς"
     },
     "guardians": {
-      "description": "Appoint trusted individuals to care for minor children or dependents.",
-      "subtitle": "Care for your dependents",
-      "title": "Guardianship Appointments"
+      "description": "Διορίστε έμπιστα άτομα για τη φροντίδα ανήλικων παιδιών ή εξαρτώμενων ατόμων.",
+      "subtitle": "Φροντίστε τα εξαρτώμενα μέλη σας",
+      "title": "Διορισμοί Κηδεμονίας"
     },
     "personal": {
-      "description": "We require your complete legal information to ensure your will meets all legal requirements.",
-      "subtitle": "Your identifying information",
-      "title": "Personal Information"
+      "description": "Χρειαζόμαστε τα πλήρη νομικά σας στοιχεία για να διασφαλίσουμε ότι η διαθήκη σας πληροί όλες τις νομικές απαιτήσεις.",
+      "subtitle": "Τα στοιχεία ταυτοποίησης",
+      "title": "Προσωπικές Πληροφορίες"
     },
     "preferences": {
-      "description": "Include any special instructions, charitable bequests, or personal wishes.",
-      "subtitle": "Additional instructions",
-      "title": "Special Provisions"
+      "description": "Συμπεριλάβετε τυχόν ειδικές οδηγίες, φιλανθρωπικά κληροδοτήματα ή προσωπικές επιθυμίες.",
+      "subtitle": "Πρόσθετες οδηγίες",
+      "title": "Ειδικές Διατάξεις"
     },
     "review": {
-      "description": "Carefully review all details before generating your legal document.",
-      "subtitle": "Verify all information",
-      "title": "Final Review"
+      "description": "Ελέγξτε προσεκτικά όλες τις λεπτομέρειες πριν δημιουργήσετε το νομικό σας έγγραφο.",
+      "subtitle": "Επαλήθευση όλων των πληροφοριών",
+      "title": "Τελική αξιολόγηση"
     }
   },
   "validation": {
-    "jurisdictionRequired": "[EL] Jurisdiction required",
-    "requiredField": "[EL] Required field"
+    "addressRequired": "Απαιτείται η τρέχουσα νόμιμη διεύθυνσή σας",
+    "allocationError": "Η συνολική ποσοστιαία κατανομή πρέπει να ισούται με 100%",
+    "beneficiaryRequired": "Πρέπει να καθοριστεί τουλάχιστον ένας δικαιούχος",
+    "dobRequired": "Η ημερομηνία γέννησης είναι απαραίτητη για νομική ισχύ",
+    "duplicateBeneficiary": "Αυτός ο δικαιούχος έχει ήδη προστεθεί",
+    "executorBeneficiaryConflict": "Ο εκτελεστής και ο κύριος δικαιούχος θα πρέπει συνήθως να είναι διαφορετικά άτομα",
+    "executorRequired": "Πρέπει να οριστεί τουλάχιστον ένας εκτελεστής",
+    "guardianRequired": "Απαιτείται ορισμός κηδεμόνα για ανήλικα παιδιά",
+    "invalidDate": "Παρακαλώ εισάγετε μια έγκυρη ημερομηνία",
+    "invalidPercentage": "Το ποσοστό πρέπει να είναι μεταξύ 0 και 100",
+    "jurisdictionRequired": "Απαιτείται δικαιοδοσία",
+    "requiredField": "Υποχρεωτικό πεδίο"
   },
   "will": {
-    "address": "Address",
-    "addressPlaceholder": "Address placeholder",
+    "address": "Διεύθυνση",
+    "addressPlaceholder": "Θέση διεύθυνσης",
     "allocation": {
-      "addBeneficiary": "Add beneficiary",
-      "description": "Description",
-      "generalEstate": "General estate",
-      "percentage": "Percentage",
+      "addBeneficiary": "Προσθήκη δικαιούχου",
+      "description": "Περιγραφή",
+      "generalEstate": "Γενική περιουσία",
+      "percentage": "Ποσοστό",
       "tips": {
-        "tip1": "Tip1",
-        "tip2": "Tip2",
-        "tip3": "Tip3",
-        "title": "Title"
+        "tip1": "Συμβουλή 1",
+        "tip2": "Συμβουλή 2",
+        "tip3": "Συμβουλή 3",
+        "title": "Τίτλος"
       },
-      "title": "Title",
-      "total": "Total"
+      "title": "Τίτλος",
+      "total": "Σύνολο"
     },
     "beneficiaries": {
-      "addBeneficiary": "Add beneficiary",
-      "allocation": "Allocation",
-      "alternativeBeneficiary": "Alternative beneficiary",
-      "alternativePlaceholder": "Alternative placeholder",
-      "beneficiaryNumber": "Beneficiary number",
-      "currentAllocation": "Current allocation",
-      "description": "Description",
-      "identification": "Identification",
-      "identificationPlaceholder": "Identification placeholder",
-      "importantNotes": "Important notes",
-      "name": "Name",
-      "noBeneficiaries": "No beneficiaries",
-      "note1": "Note1",
-      "note2": "Note2",
-      "note3": "Note3",
-      "ofEstate": "Of estate",
-      "title": "Title"
+      "addBeneficiary": "Προσθήκη δικαιούχου",
+      "allocation": "Κατανομή",
+      "alternativeBeneficiary": "Εναλλακτικός δικαιούχος",
+      "alternativePlaceholder": "Εναλλακτικό σύμβολο κράτησης θέσης",
+      "beneficiaryNumber": "Αριθμός δικαιούχου",
+      "currentAllocation": "Τρέχουσα κατανομή",
+      "description": "Περιγραφή",
+      "identification": "Αναγνώριση",
+      "identificationPlaceholder": "Θέση αναγνώρισης",
+      "importantNotes": "Σημαντικές σημειώσεις",
+      "name": "Ονομα",
+      "noBeneficiaries": "Δεν υπάρχουν δικαιούχοι",
+      "note1": "Σημείωση1",
+      "note2": "Σημείωση2",
+      "note3": "Σημείωση3",
+      "ofEstate": "της περιουσίας",
+      "title": "Τίτλος"
     },
     "beneficiary": {
-      "name": "Name",
-      "namePlaceholder": "Name placeholder",
-      "relationship": "Relationship",
-      "relationshipPlaceholder": "Relationship placeholder"
+      "name": "Ονομα",
+      "namePlaceholder": "Θέση ονόματος",
+      "relationship": "Σχέση",
+      "relationshipPlaceholder": "Θέση σχέσης"
     },
-    "birthDate": "Birth date",
-    "birthDatePlaceholder": "Birth date placeholder",
+    "birthDate": "Ημερομηνία γέννησης",
+    "birthDatePlaceholder": "Ημερομηνία γέννησης",
     "buttons": {
-      "saveWillInfo": "Save will info",
-      "saving": "Saving"
+      "saveWillInfo": "Αποθήκευση πληροφοριών θα",
+      "saving": "Οικονομία"
     },
-    "countryRequirements": "Country requirements",
+    "countryRequirements": "Απαιτήσεις χώρας",
     "descriptions": {
-      "executorDescription": "Executor description",
-      "physicalLocationDescription": "Physical location description",
-      "statusDescription": "Status description"
+      "executorDescription": "Περιγραφή εκτελεστή",
+      "physicalLocationDescription": "Περιγραφή φυσικής τοποθεσίας",
+      "statusDescription": "Περιγραφή κατάστασης"
     },
     "executor": {
-      "addAlternative": "Add alternative",
-      "address": "Address",
-      "addressPlaceholder": "Address placeholder",
-      "alternative": "Alternative",
-      "alternativeDescription": "Alternative description",
-      "description": "Description",
-      "name": "Name",
-      "namePlaceholder": "Name placeholder",
-      "phone": "Phone",
-      "phonePlaceholder": "Phone placeholder",
-      "primary": "Primary",
-      "relationship": "Relationship",
-      "relationshipPlaceholder": "Relationship placeholder",
-      "responsibilities": "Responsibilities",
-      "responsibility1": "Responsibility1",
-      "responsibility2": "Responsibility2",
-      "responsibility3": "Responsibility3",
-      "responsibility4": "Responsibility4",
-      "title": "Title"
+      "addAlternative": "Προσθήκη εναλλακτικής λύσης",
+      "address": "Διεύθυνση",
+      "addressPlaceholder": "Θέση διεύθυνσης",
+      "alternative": "Εναλλακτική λύση",
+      "alternativeDescription": "Εναλλακτική περιγραφή",
+      "description": "Περιγραφή",
+      "name": "Ονομα",
+      "namePlaceholder": "Θέση ονόματος",
+      "phone": "Τηλέφωνο",
+      "phonePlaceholder": "Θέση τηλεφώνου",
+      "primary": "Πρωταρχικός",
+      "relationship": "Σχέση",
+      "relationshipPlaceholder": "Θέση σχέσης",
+      "responsibilities": "Ευθύνες",
+      "responsibility1": "Ευθύνη1",
+      "responsibility2": "Ευθύνη2",
+      "responsibility3": "Ευθύνη3",
+      "responsibility4": "Ευθύνη4",
+      "title": "Τίτλος"
     },
     "fields": {
-      "additionalNotes": "Additional notes",
-      "currentStatus": "Current status",
-      "executorContact": "Executor contact",
-      "physicalLocation": "Physical location"
+      "additionalNotes": "Πρόσθετες σημειώσεις",
+      "currentStatus": "Τρέχουσα κατάσταση",
+      "executorContact": "Στοιχεία επικοινωνίας εκτελεστή",
+      "physicalLocation": "Φυσική τοποθεσία"
     },
     "legalReview": {
-      "button": "Button",
-      "description": "Description",
-      "title": "Title"
+      "button": "Κουμπί",
+      "description": "Περιγραφή",
+      "title": "Τίτλος"
     },
-    "name": "Name",
-    "namePlaceholder": "Name placeholder",
+    "name": "Ονομα",
+    "namePlaceholder": "Θέση ονόματος",
     "options": {
-      "noContactSelected": "No contact selected"
+      "noContactSelected": "Δεν επιλέχθηκε επαφή"
     },
     "placeholders": {
-      "additionalNotes": "Additional notes",
-      "physicalLocation": "Physical location",
-      "selectContact": "Select contact"
+      "additionalNotes": "Πρόσθετες σημειώσεις",
+      "physicalLocation": "Φυσική τοποθεσία",
+      "selectContact": "Επιλογή επαφής"
     },
     "preview": {
-      "address": "Address",
-      "alternative": "Alternative",
-      "alternativeExecutor": "Alternative executor",
-      "date": "Date",
-      "description": "Description",
-      "executor": "Executor",
-      "generatePDF": "Generate p d f",
-      "legalRequirements": "Legal requirements",
-      "name": "Name",
-      "ofEstate": "Of estate",
-      "place": "Place",
-      "print": "Print",
-      "signature": "Signature",
-      "title": "Title",
-      "witnesses": "Witnesses"
+      "address": "Διεύθυνση",
+      "alternative": "Εναλλακτική λύση",
+      "alternativeExecutor": "Εναλλακτικός εκτελεστής",
+      "date": "Ημερομηνία",
+      "description": "Περιγραφή",
+      "executor": "Εκτελεστής διαθήκης",
+      "generatePDF": "Δημιουργία p d f",
+      "legalRequirements": "Νομικές απαιτήσεις",
+      "name": "Ονομα",
+      "ofEstate": "της περιουσίας",
+      "place": "Θέση",
+      "print": "Αποτύπωμα",
+      "signature": "Υπογραφή",
+      "title": "Τίτλος",
+      "witnesses": "Μάρτυρες"
     },
     "requirements": {
-      "handwriting": "Handwriting",
-      "notarization": "Notarization",
-      "typed": "Typed",
-      "witnesses": "Witnesses"
+      "handwriting": "Γραφικός χαρακτήρας",
+      "notarization": "Συμβολαιογραφική επικύρωση",
+      "typed": "Πληκτρολογήθηκε",
+      "witnesses": "Μάρτυρες"
     },
-    "selectCountry": "Select country",
-    "selectedCountryDetails": "Selected country details",
+    "selectCountry": "Επιλέξτε χώρα",
+    "selectedCountryDetails": "Λεπτομέρειες επιλεγμένης χώρας",
     "status": {
-      "draft": "Draft",
-      "notarized": "Notarized",
-      "stored": "Stored",
-      "updated": "Updated"
+      "draft": "Προσχέδιο",
+      "notarized": "Συμβολαιογραφικό",
+      "stored": "Αποθηκευμένο",
+      "updated": "Ενημερώθηκε"
     },
-    "testatorInfo": "Testator info",
+    "testatorInfo": "Πληροφορίες διαθέτη",
     "validation": {
-      "allocation100": "Allocation100"
+      "allocation100": "Κατανομή100"
     },
     "willPreview": {
       "_2": "2",
-      "critical_execution_instruction_3": "Critical execution instruction 3",
-      "professional_review_4": "Professional review 4",
-      "provided_by_certified_legal_pa_5": "Provided by certified legal pa 5"
+      "critical_execution_instruction_3": "Εντολή κρίσιμης εκτέλεσης 3",
+      "professional_review_4": "Επαγγελματική αξιολόγηση 4",
+      "provided_by_certified_legal_pa_5": "Παρέχεται από πιστοποιημένο νομικό σύμβουλο 5"
     }
   },
   "willGenerator": {
-    "changeCountry": "Change country",
-    "confirmCountry": "Confirm country",
-    "confirmSigned": "Confirm signed",
+    "changeCountry": "Αλλαγή χώρας",
+    "confirmCountry": "Επιβεβαίωση χώρας",
+    "confirmSigned": "Επιβεβαίωση υπογραφής",
     "console": {
-      "willGenerationCompleted": "Will generation completed"
+      "willGenerationCompleted": "Η δημιουργία διαθήκης ολοκληρώθηκε"
     },
     "countries": {
-      "AL": "A l",
-      "AT": "A t",
-      "BA": "B a",
-      "BE": "B e",
-      "BG": "B g",
-      "CH": "C h",
-      "CY": "C y",
+      "AL": "Ένα αλ",
+      "AT": "Ένα τ",
+      "BA": "Β α",
+      "BE": "Β ε",
+      "BG": "Β γκ",
+      "CH": "Χ η",
+      "CY": "Κυ",
       "CZ": "C z",
-      "DE": "D e",
-      "DK": "D k",
-      "EE": "E e",
-      "ES": "E s",
-      "FI": "F i",
-      "FR": "F r",
-      "GB": "G b",
-      "GR": "G r",
+      "DE": "Δ ε",
+      "DK": "Δ κ",
+      "EE": "Ε ε",
+      "ES": "Α ς",
+      "FI": "Φι",
+      "FR": "Παρ",
+      "GB": "Γ β",
+      "GR": "Γ ρ",
       "HR": "H r",
-      "HU": "H u",
-      "IE": "I e",
-      "IS": "I s",
-      "IT": "I t",
-      "LI": "L i",
-      "LT": "L t",
-      "LU": "L u",
-      "LV": "L v",
-      "MD": "M d",
-      "ME": "M e",
-      "MK": "M k",
-      "MT": "M t",
-      "NL": "N l",
-      "NO": "N o",
-      "PL": "P l",
-      "PT": "P t",
-      "RO": "R o",
-      "RS": "R s",
-      "SE": "S e",
-      "SI": "S i",
-      "SK": "S k",
+      "HU": "Χου",
+      "IE": "Εγώ ε",
+      "IS": "Εγώ",
+      "IT": "Εγώ",
+      "LI": "Λ ι",
+      "LT": "Λ τ",
+      "LU": "Λου",
+      "LV": "Λ εναντίον",
+      "MD": "Μ η",
+      "ME": "Μ ε",
+      "MK": "Μ κ",
+      "MT": "Δευτ. τ.",
+      "NL": "Ν l",
+      "NO": "Όχι",
+      "PL": "Πλ l",
+      "PT": "Π τ",
+      "RO": "Ρ ο",
+      "RS": "Rs",
+      "SE": "Ν ε",
+      "SI": "Σ ι",
+      "SK": "Σ κ",
       "UA": "U a"
     },
-    "executionInstructions": "Execution instructions",
-    "failed_to_load_will_template_2": "Failed to load will template 2",
-    "finalizeUpload": "Finalize upload",
-    "fullName": "Full name",
-    "no_template_found_for_this_jur_1": "No template found for this jur 1",
-    "please_confirm_that_you_have_s_3": "Please confirm that you have s 3",
-    "select_a_country_4": "Select a country 4",
+    "executionInstructions": "Οδηγίες εκτέλεσης",
+    "failed_to_load_will_template_2": "Αποτυχία φόρτωσης προτύπου διαθήκης 2",
+    "finalizeUpload": "Ολοκλήρωση μεταφόρτωσης",
+    "fullName": "Ονοματεπώνυμο",
+    "no_template_found_for_this_jur_1": "Δεν βρέθηκε πρότυπο για αυτό το jur 1",
+    "please_confirm_that_you_have_s_3": "Επιβεβαιώστε ότι έχετε s 3",
+    "select_a_country_4": "Επιλέξτε μια χώρα 4",
     "steps": {
-      "confirmJurisdiction": "Confirm jurisdiction",
-      "executorBeneficiaries": "Executor beneficiaries",
-      "personalInformation": "Personal information",
-      "reviewGenerate": "Review generate",
-      "signConfirm": "Sign confirm"
+      "confirmJurisdiction": "Επιβεβαίωση δικαιοδοσίας",
+      "executorBeneficiaries": "Δικαιούχοι εκτελεστές",
+      "personalInformation": "Προσωπικές πληροφορίες",
+      "reviewGenerate": "Δημιουργία κριτικής",
+      "signConfirm": "Υπογραφή επιβεβαίωσης"
     }
   },
   "willSync": {
-    "approve": "Approve",
-    "autoApplied": "Auto applied",
+    "approve": "Εγκρίνω",
+    "autoApplied": "Αυτόματη εφαρμογή",
     "changes": {
-      "allocationsModified": "Allocations modified",
-      "assetsAdded": "Assets added",
-      "beneficiariesRemoved": "Beneficiaries removed",
-      "noChanges": "No changes"
+      "allocationsModified": "Κατανομές που τροποποιήθηκαν",
+      "assetsAdded": "Προστέθηκαν στοιχεία",
+      "beneficiariesRemoved": "Δικαιούχοι που αφαιρέθηκαν",
+      "noChanges": "Δεν υπάρχουν αλλαγές"
     },
-    "reject": "Reject",
-    "viewChanges": "View changes"
+    "reject": "Απορρίπτω",
+    "viewChanges": "Προβολή αλλαγών"
   },
   "willSyncSettings": {
-    "autoSync": "Auto sync",
-    "autoSyncDescription": "Auto sync description",
-    "frequencyDaily": "Frequency daily",
-    "frequencyImmediate": "Frequency immediate",
-    "frequencyWeekly": "Frequency weekly",
-    "generalDescription": "General description",
-    "generalSettings": "General settings",
-    "requireApproval": "Require approval",
-    "requireApprovalDescription": "Require approval description",
-    "saveError": "Save error",
-    "saved": "Saved",
-    "syncFrequency": "Sync frequency",
-    "triggerDescription": "Trigger description",
-    "triggerSettings": "Trigger settings"
+    "autoSync": "Αυτόματος συγχρονισμός",
+    "autoSyncDescription": "Περιγραφή αυτόματου συγχρονισμού",
+    "frequencyDaily": "Συχνότητα ημερησίως",
+    "frequencyImmediate": "Άμεση συχνότητα",
+    "frequencyWeekly": "Συχνότητα εβδομαδιαίως",
+    "generalDescription": "Γενική περιγραφή",
+    "generalSettings": "Γενικές ρυθμίσεις",
+    "requireApproval": "Απαιτείται έγκριση",
+    "requireApprovalDescription": "Απαιτείται περιγραφή έγκρισης",
+    "saveError": "Σφάλμα αποθήκευσης",
+    "saved": "Αποθηκεύτηκε",
+    "syncFrequency": "Συχνότητα συγχρονισμού",
+    "triggerDescription": "Περιγραφή ενεργοποίησης",
+    "triggerSettings": "Ρυθμίσεις ενεργοποίησης"
   },
   "willVersion": {
-    "added": "Added",
-    "compareDiff": "Compare diff",
-    "comparePrompt": "Compare prompt",
-    "current": "Current",
-    "description": "Description",
-    "modified": "Modified",
-    "removed": "Removed",
-    "restore": "Restore",
-    "title": "Title",
-    "versionNumber": "Version number"
+    "added": "Προστέθηκε",
+    "compareDiff": "Σύγκριση διαφοράς",
+    "comparePrompt": "Προτροπή σύγκρισης",
+    "current": "Ρεύμα",
+    "description": "Περιγραφή",
+    "modified": "Τροποποιημένο",
+    "removed": "Αφαιρέθηκε",
+    "restore": "Επαναφέρω",
+    "title": "Τίτλος",
+    "versionNumber": "Αριθμός έκδοσης"
   },
   "disclaimers": {
-    "general": "LegacyGuard provides tools and guidance for estate planning but does not provide legal advice. For complex estates or specific legal questions, please consult with a qualified attorney in your jurisdiction.",
-    "willGenerator": "The will generator creates documents based on information you provide. While designed to meet legal requirements, we strongly recommend having any generated will reviewed by a qualified attorney before execution.",
-    "jurisdiction": "Legal requirements vary by jurisdiction. Ensure your documents comply with the laws in your area.",
-    "notLegalAdvice": "This service does not constitute legal advice and should not be relied upon as such.",
-    "professionalReview": "For complex estates, business interests, or unique family situations, professional legal review is strongly recommended."
+    "general": "Η LegacyGuard παρέχει εργαλεία και καθοδήγηση για τον σχεδιασμό διαδοχής, αλλά δεν παρέχει νομικές συμβουλές. Για σύνθετες διαδοχές διαδοχής ή συγκεκριμένα νομικά ερωτήματα, συμβουλευτείτε έναν εξειδικευμένο δικηγόρο στη δικαιοδοσία σας.",
+    "willGenerator": "Η γεννήτρια διαθηκών δημιουργεί έγγραφα με βάση τις πληροφορίες που παρέχετε. Παρόλο που έχει σχεδιαστεί για να πληροί τις νομικές απαιτήσεις, συνιστούμε ανεπιφύλακτα να ελέγχεται οποιαδήποτε δημιουργημένη διαθήκη από έναν εξειδικευμένο δικηγόρο πριν από την εκτέλεσή της.",
+    "jurisdiction": "Οι νομικές απαιτήσεις ποικίλλουν ανάλογα με τη δικαιοδοσία. Βεβαιωθείτε ότι τα έγγραφά σας συμμορφώνονται με τους νόμους της περιοχής σας.",
+    "notLegalAdvice": "Αυτή η υπηρεσία δεν συνιστά νομική συμβουλή και δεν πρέπει να βασίζεστε σε αυτήν ως τέτοια.",
+    "professionalReview": "Για σύνθετες περιουσίες, επιχειρηματικά συμφέροντα ή μοναδικές οικογενειακές καταστάσεις, συνιστάται ανεπιφύλακτα η διεξαγωγή επαγγελματικής νομικής αξιολόγησης."
   },
   "terms": {
-    "serviceTerms": "Terms of Service",
-    "privacyPolicy": "Privacy Policy",
-    "dataProcessing": "Data Processing Agreement",
-    "userAgreement": "User Agreement",
-    "acceptanceRequired": "By using LegacyGuard, you agree to our Terms of Service and Privacy Policy.",
-    "lastUpdated": "Last updated: {{date}}",
-    "effectiveDate": "Effective date: {{date}}"
+    "serviceTerms": "Όροι Παροχής Υπηρεσιών",
+    "privacyPolicy": "Πολιτική Απορρήτου",
+    "dataProcessing": "Συμφωνία Επεξεργασίας Δεδομένων",
+    "userAgreement": "Συμφωνία χρήστη",
+    "acceptanceRequired": "Χρησιμοποιώντας το LegacyGuard, συμφωνείτε με τους Όρους Παροχής Υπηρεσιών και την Πολιτική Απορρήτου μας.",
+    "lastUpdated": "Τελευταία ενημέρωση: {{date}}",
+    "effectiveDate": "Ημερομηνία έναρξης ισχύος: {{date}}"
   },
   "compliance": {
-    "dataProtection": "Your data is protected in compliance with applicable data protection laws including GDPR and CCPA.",
-    "encryption": "All sensitive information is encrypted using industry-standard encryption methods.",
-    "retention": "Data retention policies are designed to protect your privacy while ensuring your family can access important information when needed.",
-    "access": "You have the right to access, modify, or delete your personal information at any time.",
-    "portability": "You can export your data in standard formats for use with other services."
+    "dataProtection": "Τα δεδομένα σας προστατεύονται σύμφωνα με τους ισχύοντες νόμους περί προστασίας δεδομένων, συμπεριλαμβανομένων των GDPR και CCPA.",
+    "encryption": "Όλες οι ευαίσθητες πληροφορίες κρυπτογραφούνται χρησιμοποιώντας μεθόδους κρυπτογράφησης που είναι συμβατές με τον κλάδο.",
+    "retention": "Οι πολιτικές διατήρησης δεδομένων έχουν σχεδιαστεί για να προστατεύουν το απόρρητό σας, διασφαλίζοντας παράλληλα ότι η οικογένειά σας μπορεί να έχει πρόσβαση σε σημαντικές πληροφορίες όταν χρειάζεται.",
+    "access": "Έχετε το δικαίωμα πρόσβασης, τροποποίησης ή διαγραφής των προσωπικών σας πληροφοριών ανά πάσα στιγμή.",
+    "portability": "Μπορείτε να εξαγάγετε τα δεδομένα σας σε τυπικές μορφές για χρήση με άλλες υπηρεσίες."
   },
   "executionRequirements": {
-    "witnessRequirements": "Witness Requirements for {{jurisdiction}}",
-    "notaryRequirements": "Notarization Requirements",
-    "signingInstructions": "Proper Signing Instructions",
-    "storageGuidelines": "Secure Storage Guidelines",
-    "legalCompliance": "Legal Compliance Verification"
+    "witnessRequirements": "Απαιτήσεις Μαρτύρων για {{jurisdiction}}",
+    "notaryRequirements": "Απαιτήσεις συμβολαιογραφικής επικύρωσης",
+    "signingInstructions": "Οδηγίες σωστής υπογραφής",
+    "storageGuidelines": "Οδηγίες ασφαλούς αποθήκευσης",
+    "legalCompliance": "Επαλήθευση Νομικής Συμμόρφωσης"
   },
   "cookiePolicy": {
     "cookieTypes": {
-      "analytics": "Analytics cookies help us understand how visitors interact with our website.",
-      "essential": "Essential cookies are necessary for the website to function properly.",
-      "marketing": "Marketing cookies are used to track visitors across websites to display relevant advertisements."
+      "analytics": "Τα cookies ανάλυσης μας βοηθούν να κατανοήσουμε πώς αλληλεπιδρούν οι επισκέπτες με τον ιστότοπό μας.",
+      "essential": "Τα απαραίτητα cookies είναι απαραίτητα για την ορθή λειτουργία του ιστότοπου.",
+      "marketing": "Τα cookies μάρκετινγκ χρησιμοποιούνται για την παρακολούθηση των επισκεπτών σε ιστότοπους με σκοπό την προβολή σχετικών διαφημίσεων."
     },
-    "howWeUseCookies": "We use cookies to improve your experience, analyze site usage, and provide personalized content.",
-    "introduction": "This Cookie Policy explains how LegacyGuard uses cookies and similar technologies.",
-    "manageCookies": "You can manage your cookie preferences through your browser settings or our cookie preference center.",
-    "title": "Title",
-    "whatAreCookies": "Cookies are small text files that are stored on your device when you visit our website."
+    "howWeUseCookies": "Χρησιμοποιούμε cookies για να βελτιώσουμε την εμπειρία σας, να αναλύσουμε τη χρήση του ιστότοπου και να παρέχουμε εξατομικευμένο περιεχόμενο.",
+    "introduction": "Αυτή η Πολιτική για τα Cookies εξηγεί πώς η LegacyGuard χρησιμοποιεί τα cookies και παρόμοιες τεχνολογίες.",
+    "manageCookies": "Μπορείτε να διαχειριστείτε τις προτιμήσεις σας για τα cookies μέσω των ρυθμίσεων του προγράμματος περιήγησής σας ή του κέντρου προτιμήσεων cookies.",
+    "title": "Τίτλος",
+    "whatAreCookies": "Τα cookies είναι μικρά αρχεία κειμένου που αποθηκεύονται στη συσκευή σας όταν επισκέπτεστε τον ιστότοπό μας."
   },
   "header": {
-    "subtitle": "Subtitle",
-    "title": "Title"
+    "title": "Τίτλος"
   },
   "hero": {
-    "headline": "Headline",
-    "subheadline": "Subheadline"
-  },
-  "privacyPolicy": {
-    "introduction": "This Privacy Policy describes how LegacyGuard collects, uses, and protects your personal information.",
-    "lastUpdated": "Last updated: {{date}}",
-    "sections": {
-      "dataSecurity": {
-        "content": "We implement appropriate security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.",
-        "title": "Data Security"
-      },
-      "informationCollection": {
-        "content": "We collect information you provide directly to us, such as when you create an account, use our services, or contact us for support.",
-        "title": "Information We Collect"
-      },
-      "informationSharing": {
-        "content": "We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except as described in this policy.",
-        "title": "Information Sharing"
-      },
-      "informationUse": {
-        "content": "We use your information to provide, maintain, and improve our services, communicate with you, and ensure the security of your account.",
-        "title": "How We Use Your Information"
-      },
-      "yourRights": {
-        "content": "You have the right to access, update, or delete your personal information. You may also opt out of certain communications from us.",
-        "title": "Your Rights"
-      }
-    },
-    "title": "Privacy Policy"
+    "headline": "Επικεφαλίδα",
+    "subheadline": "Υποτίτλος"
   },
   "termsOfService": {
-    "effectiveDate": "Effective date: {{date}}",
-    "introduction": "These Terms of Service govern your use of LegacyGuard's family protection platform and services.",
-    "lastUpdated": "Last updated: {{date}}",
+    "effectiveDate": "Ημερομηνία έναρξης ισχύος: {{date}}",
+    "introduction": "Οι παρόντες Όροι Παροχής Υπηρεσιών διέπουν τη χρήση της πλατφόρμας και των υπηρεσιών προστασίας οικογένειας της LegacyGuard.",
+    "lastUpdated": "Τελευταία ενημέρωση: {{date}}",
     "sections": {
       "acceptance": {
-        "content": "By accessing or using LegacyGuard, you agree to be bound by these Terms of Service and all applicable laws and regulations.",
-        "title": "Acceptance of Terms"
+        "content": "Με την πρόσβαση ή τη χρήση του LegacyGuard, συμφωνείτε να δεσμεύεστε από αυτούς τους Όρους Παροχής Υπηρεσιών και όλους τους ισχύοντες νόμους και κανονισμούς.",
+        "title": "Αποδοχή Όρων"
       },
       "description": {
-        "content": "LegacyGuard provides digital tools and services to help individuals organize their important information for family protection purposes.",
-        "title": "Service Description"
+        "content": "Το LegacyGuard παρέχει ψηφιακά εργαλεία και υπηρεσίες που βοηθούν τα άτομα να οργανώνουν τις σημαντικές πληροφορίες τους για σκοπούς προστασίας της οικογένειας.",
+        "title": "Περιγραφή υπηρεσίας"
       },
       "limitations": {
-        "content": "LegacyGuard provides tools and guidance but does not provide legal advice. We recommend consulting with qualified professionals for complex legal matters.",
-        "title": "Limitations of Liability"
+        "content": "Η LegacyGuard παρέχει εργαλεία και καθοδήγηση, αλλά δεν παρέχει νομικές συμβουλές. Συνιστούμε να συμβουλευτείτε εξειδικευμένους επαγγελματίες για πολύπλοκα νομικά ζητήματα.",
+        "title": "Περιορισμοί Ευθύνης"
       },
       "privacy": {
-        "content": "Your privacy is important to us. Please review our Privacy Policy to understand how we collect, use, and protect your information.",
-        "title": "Privacy and Data Protection"
+        "content": "Το απόρρητό σας είναι σημαντικό για εμάς. Ανατρέξτε στην Πολιτική Απορρήτου μας για να κατανοήσετε πώς συλλέγουμε, χρησιμοποιούμε και προστατεύουμε τα στοιχεία σας.",
+        "title": "Ιδιωτικότητα και Προστασία Δεδομένων"
       },
       "userResponsibilities": {
-        "content": "You are responsible for maintaining the confidentiality of your account information and for all activities that occur under your account.",
-        "title": "User Responsibilities"
+        "content": "Είστε υπεύθυνοι για τη διατήρηση της εμπιστευτικότητας των πληροφοριών του λογαριασμού σας και για όλες τις δραστηριότητες που πραγματοποιούνται μέσω του λογαριασμού σας.",
+        "title": "Ευθύνες Χρήστη"
       }
     },
-    "title": "Terms of Service"
+    "title": "Όροι Παροχής Υπηρεσιών"
   },
   "cookies": {
     "policy": {
       "analytics": {
-        "description": "Description",
+        "description": "Περιγραφή",
         "examples": {
-          "ga": "Ga",
-          "gid": "Gid",
-          "session": "Session"
+          "ga": "Γκα",
+          "gid": "Γιδ",
+          "session": "Συνεδρίαση"
         },
-        "purpose": "Purpose",
-        "title": "Title"
+        "purpose": "Σκοπός",
+        "title": "Τίτλος"
       },
       "categories": {
-        "title": "Title"
+        "title": "Τίτλος"
       },
       "contact": {
-        "address": "Address",
-        "addressDetails": "Address details",
-        "description": "Description",
-        "email": "Email",
-        "title": "Title"
+        "address": "Διεύθυνση",
+        "addressDetails": "Στοιχεία διεύθυνσης",
+        "description": "Περιγραφή",
+        "email": "E-mail",
+        "title": "Τίτλος"
       },
-      "examples": "Examples",
-      "lastUpdated": "Last updated",
+      "examples": "Παραδείγματα",
+      "lastUpdated": "Τελευταία ενημέρωση",
       "manage": {
-        "title": "Title"
+        "title": "Τίτλος"
       },
       "marketing": {
-        "description": "Description",
+        "description": "Περιγραφή",
         "examples": {
           "facebook": "Facebook",
           "google": "Google"
         },
-        "purpose": "Purpose",
-        "title": "Title"
+        "purpose": "Σκοπός",
+        "title": "Τίτλος"
       },
       "necessary": {
-        "description": "Description",
+        "description": "Περιγραφή",
         "examples": {
-          "auth": "Auth",
-          "consent": "Consent",
+          "auth": "Εξουσιοδότηση",
+          "consent": "Συγκατάθεση",
           "csrf": "Csrf",
-          "session": "Session"
+          "session": "Συνεδρίαση"
         },
-        "purpose": "Purpose",
-        "title": "Title"
+        "purpose": "Σκοπός",
+        "title": "Τίτλος"
       },
       "overview": {
-        "intro": "Intro",
-        "point1": "Point1",
-        "point2": "Point2",
-        "point3": "Point3",
-        "point4": "Point4",
-        "title": "Title"
+        "intro": "Εισαγωγή",
+        "point1": "Σημείο 1",
+        "point2": "Σημείο 2",
+        "point3": "Σημείο 3",
+        "point4": "Σημείο 4",
+        "title": "Τίτλος"
       },
       "preferences": {
-        "description": "Description",
+        "description": "Περιγραφή",
         "examples": {
-          "language": "Language",
-          "theme": "Theme",
-          "ui": "Ui"
+          "language": "Γλώσσα",
+          "theme": "Θέμα",
+          "ui": "Γνωριμία με το περιβάλλον χρήστη"
         },
-        "purpose": "Purpose",
-        "title": "Title"
+        "purpose": "Σκοπός",
+        "title": "Τίτλος"
       },
-      "purpose": "Purpose",
-      "required": "Required",
-      "subtitle": "Subtitle",
-      "title": "Title",
+      "purpose": "Σκοπός",
+      "required": "Υποχρεούμαι",
+      "subtitle": "Υπότιτλος",
+      "title": "Τίτλος",
       "yourRights": {
-        "description": "Description",
-        "right1": "Right1",
-        "right2": "Right2",
-        "right3": "Right3",
-        "right4": "Right4",
-        "title": "Title"
+        "description": "Περιγραφή",
+        "right1": "Δεξιά1",
+        "right2": "Δεξιά2",
+        "right3": "Δεξιά3",
+        "right4": "Δεξιά4",
+        "title": "Τίτλος"
       }
     }
   }

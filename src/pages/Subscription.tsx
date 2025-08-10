@@ -12,7 +12,7 @@ import { format } from 'date-fns';
 import { toast } from 'sonner';
 
 const Subscription = () => {
-  const { t } = useTranslation('ui');
+  const { t } = useTranslation('ui-common');
   const { user } = useUser();
   const { subscriptionStatus, isLoading, refreshSubscription } = useSubscription();
   const [isManagingBilling, setIsManagingBilling] = useState(false);

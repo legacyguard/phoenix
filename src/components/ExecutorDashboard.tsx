@@ -35,7 +35,7 @@ interface GroupedTasks {
 
 const ExecutorDashboard: React.FC = () => {
   const { user } = useAuth();
-  const { t } = useTranslation('family');
+  const { t } = useTranslation('family-core');
   const [tasks, setTasks] = useState<GroupedTasks>({
     immediate: [],
     first_week: [],

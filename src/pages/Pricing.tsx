@@ -7,7 +7,7 @@ import { Wrench } from 'lucide-react';
 import { useSubscription } from '@/hooks/useSubscription';
 
 const Pricing = () => {
-  const { t } = useTranslation('ui');
+  const { t } = useTranslation('ui-common');
   const navigate = useNavigate();
   const { refetch } = useSubscription();
   const [isGrantingPremium, setIsGrantingPremium] = useState(false);

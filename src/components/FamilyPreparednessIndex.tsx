@@ -92,7 +92,7 @@ export const FamilyPreparednessIndex: React.FC<FamilyPreparednessIndexProps> = (
   userGuardians = [],
   userBeneficiaries = []
 }) => {
-  const { t } = useTranslation('family');
+  const { t } = useTranslation('family-core');
 
   // Calculate preparedness scores
   const immediateAccessScore = useMemo(() => {

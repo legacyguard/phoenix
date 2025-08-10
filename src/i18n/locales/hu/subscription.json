@@ -1,336 +1,251 @@
 {
   "billing": {
-    "annually": "Annually",
-    "billingAddress": "Billing Address",
-    "billingCycle": "Billing Cycle",
-    "billingInfo": "Billing Information",
-    "changeBilling": "Change Billing Cycle",
-    "downloadInvoice": "Download Invoice",
-    "invoiceHistory": "Invoice History",
-    "monthly": "Monthly",
-    "nextBilling": "Next Billing Date",
-    "paymentMethod": "Payment Method",
-    "updatePayment": "Update Payment Method",
-    "viewInvoice": "View Invoice"
+    "annually": "Évente",
+    "billingAddress": "Számlázási cím",
+    "billingCycle": "Számlázási ciklus",
+    "billingInfo": "Számlázási információk",
+    "changeBilling": "Számlázási ciklus módosítása",
+    "downloadInvoice": "Számla letöltése",
+    "invoiceHistory": "Számlaelőzmények",
+    "monthly": "Havi",
+    "nextBilling": "Következő számlázási dátum",
+    "paymentMethod": "Fizetési mód",
+    "updatePayment": "Fizetési mód frissítése",
+    "viewInvoice": "Számla megtekintése"
   },
   "cancellation": {
-    "cancelConfirmation": "Are you sure you want to cancel?",
-    "cancelEffective": "Cancellation will be effective on {{date}}",
-    "cancelFeedback": "Additional Feedback",
-    "cancelReason": "Reason for Cancellation",
+    "cancelConfirmation": "Biztosan lemondja?",
+    "cancelEffective": "A lemondás {{date}} napon lép hatályba.",
+    "cancelFeedback": "További visszajelzés",
+    "cancelReason": "A lemondás oka",
     "cancelReasons": {
-      "foundAlternative": "Found alternative solution",
-      "notUsing": "Not using enough",
-      "other": "Other reason",
-      "technicalIssues": "Technical issues",
-      "tooExpensive": "Too expensive"
+      "foundAlternative": "Alternatív megoldást találtam",
+      "notUsing": "Nem használ eleget",
+      "other": "Egyéb ok",
+      "technicalIssues": "Technikai problémák",
+      "tooExpensive": "Túl drága"
     },
-    "cancelSubtitle": "Cancel subtitle",
-    "cancelTitle": "Cancel title",
-    "confirmCancel": "Confirm Cancellation",
-    "dataRetention": "Your data will be retained for {{days}} days",
-    "keepSubscription": "Keep Subscription",
-    "retainAccess": "You will retain access until {{date}}"
+    "cancelSubtitle": "Felirat törlése",
+    "cancelTitle": "Cím törlése",
+    "confirmCancel": "Lemondás megerősítése",
+    "dataRetention": "Az adatait {{days}} napig őrizzük meg",
+    "keepSubscription": "Előfizetés megtartása",
+    "retainAccess": "Hozzáférésed {{date}}-ig megmarad"
   },
   "errors": {
-    "cancellationFailed": "We could not cancel your subscription. Please contact support.",
-    "invalidPayment": "Invalid payment information. Please check your details.",
-    "loadingSubscription": "We could not load your subscription information. Please try again.",
-    "paymentFailed": "Payment processing failed. Please check your payment method.",
-    "subscriptionError": "Subscription error occurred. Please contact support.",
-    "updatingSubscription": "We could not update your subscription. Please try again."
+    "cancellationFailed": "Nem tudtuk lemondani az előfizetését. Kérjük, vegye fel a kapcsolatot az ügyfélszolgálattal.",
+    "invalidPayment": "Érvénytelen fizetési adatok. Kérjük, ellenőrizze az adatait.",
+    "loadingSubscription": "Nem tudtuk betölteni az előfizetési adatait. Kérjük, próbálja újra.",
+    "paymentFailed": "A fizetés feldolgozása sikertelen. Kérjük, ellenőrizze a fizetési módot.",
+    "subscriptionError": "Előfizetési hiba történt. Kérjük, vegye fel a kapcsolatot az ügyfélszolgálattal.",
+    "updatingSubscription": "Nem tudtuk frissíteni az előfizetését. Kérjük, próbálja újra."
   },
   "features": {
-    "backupRecovery": "Backup & Recovery",
-    "documentStorage": "Secure Document Storage",
-    "encryptedStorage": "End-to-End Encryption",
-    "exportOptions": "Data Export Options",
-    "familyAccess": "Family Access Management",
-    "legalReview": "Legal Document Review",
-    "mobileAccess": "Mobile Application Access",
-    "prioritySupport": "Priority Customer Support",
-    "unlimitedAssets": "Unlimited Asset Storage",
-    "willGenerator": "Professional Will Generator"
+    "backupRecovery": "Biztonsági mentés és helyreállítás",
+    "documentStorage": "Biztonságos dokumentumtárolás",
+    "encryptedStorage": "Végponttól végpontig terjedő titkosítás",
+    "exportOptions": "Adatexportálási beállítások",
+    "familyAccess": "Családi hozzáférés-kezelés",
+    "legalReview": "Jogi dokumentumok felülvizsgálata",
+    "mobileAccess": "Mobilalkalmazás-hozzáférés",
+    "prioritySupport": "Elsőbbségi ügyfélszolgálat",
+    "unlimitedAssets": "Korlátlan eszköztárolás",
+    "willGenerator": "Professzionális végrendeletgenerátor"
   },
   "management": {
-    "cancelSubscription": "Cancel Subscription",
-    "cancellationDate": "Cancellation Date",
-    "changePayment": "Change Payment Method",
-    "manageSubscription": "Manage Subscription",
-    "pauseSubscription": "Pause Subscription",
-    "renewalDate": "Renewal Date",
-    "resumeSubscription": "Resume Subscription",
-    "subscriptionStatus": "Subscription Status",
-    "updateBilling": "Update Billing Information"
+    "cancelSubscription": "Előfizetés lemondása",
+    "cancellationDate": "Lemondási dátum",
+    "changePayment": "Fizetési mód módosítása",
+    "manageSubscription": "Előfizetés kezelése",
+    "pauseSubscription": "Előfizetés szüneteltetése",
+    "renewalDate": "Megújítási dátum",
+    "resumeSubscription": "Előfizetés folytatása",
+    "subscriptionStatus": "Előfizetés állapota",
+    "updateBilling": "Számlázási adatok frissítése"
   },
   "notifications": {
-    "paymentFailed": "Payment failed - please update your payment method",
-    "paymentUpdated": "Payment method has been updated",
-    "subscriptionCancelled": "Your subscription has been cancelled",
-    "subscriptionExpired": "Your subscription has expired",
-    "subscriptionResumed": "Your subscription has been resumed",
-    "subscriptionUpdated": "Your subscription has been updated",
-    "trialExpiring": "Your trial expires in {{days}} days"
+    "paymentFailed": "Fizetés sikertelen - kérjük, frissítse a fizetési módot",
+    "paymentUpdated": "Fizetési mód frissítve",
+    "subscriptionCancelled": "Az előfizetését törölték",
+    "subscriptionExpired": "Az előfizetése lejárt",
+    "subscriptionResumed": "Az előfizetésed újraindult",
+    "subscriptionUpdated": "Előfizetésed frissült",
+    "trialExpiring": "A próbaidőszakod {{days}} nap múlva lejár"
   },
   "plans": {
-    "currentPlan": "Your Current Plan",
-    "downgradePlan": "Change Plan",
-    "freeTrial": "Free Trial",
-    "recommendedPlan": "Recommended for You",
-    "subtitle": "Choose the plan that best protects your family",
-    "title": "Title",
-    "trialDaysLeft": "{{days}} days remaining in trial",
-    "upgradePlan": "Upgrade Plan",
+    "currentPlan": "Jelenlegi csomagod",
+    "downgradePlan": "Terv módosítása",
+    "freeTrial": "Ingyenes próbaverzió",
+    "recommendedPlan": "Önnek ajánlott",
+    "subtitle": "Válassza ki a családját leginkább védő csomagot",
+    "trialDaysLeft": "{{days}} nap van hátra a próbaidőszakból",
+    "upgradePlan": "Frissítési csomag",
     "essential": {
-      "annualPrice": "$99",
-      "annualSavings": "Save $20 annually",
-      "bestFor": "Individuals and couples with straightforward needs",
-      "cta": "Start Essential Plan",
-      "description": "Perfect for individuals and couples getting started with family protection",
-      "features": {
-        "0": "Secure digital vault for important documents",
-        "1": "Asset inventory and organization",
-        "2": "Basic will generator",
-        "3": "Up to 3 trusted circle members",
-        "4": "Email support",
-        "5": "Mobile app access",
-        "6": "Bank-level encryption"
-      },
-      "limitations": {
-        "0": "Limited to 50 documents",
-        "1": "Basic will templates only",
-        "2": "Standard support response time"
-      },
-      "name": "Essential Protection",
-      "period": "per month",
-      "price": "$9.99"
+      "annualPrice": "99 dollár",
+      "annualSavings": "Spóroljon 20 dollárt évente",
+      "bestFor": "Egyedülálló igényű egyének és párok",
+      "cta": "Kezdje az alapvető tervet",
+      "description": "Tökéletes egyének és párok számára, akik most ismerkednek meg a családvédelemmel",
+      "features": [
+        "Biztonságos digitális trezor fontos dokumentumokhoz",
+        "Eszközleltár és -rendszerezés",
+        "Alapvető végrendeletgenerátor",
+        "Legfeljebb 3 megbízható kör tagja",
+        "E-mailes támogatás",
+        "Mobilalkalmazás-hozzáférés",
+        "Banki szintű titkosítás"
+      ],
+      "limitations": [
+        "Legfeljebb 50 dokumentum",
+        "Csak alapvető végrendelet-sablonok",
+        "Standard támogatási válaszidő"
+      ],
+      "name": "Alapvető védelem",
+      "period": "havonta",
+      "price": "9,99 USD"
     },
     "family": {
-      "annualPrice": "$199",
-      "annualSavings": "Save $40 annually",
-      "bestFor": "Families with children and multiple assets",
-      "cta": "Start Family Plan",
-      "description": "Comprehensive protection for families with children and multiple assets",
-      "features": {
-        "0": "Everything in Essential, plus:",
-        "1": "Unlimited document storage",
-        "2": "Advanced will generator with all templates",
-        "3": "Guardianship planning for children",
-        "4": "Up to 10 trusted circle members",
-        "5": "Legacy letters and personal messages",
-        "6": "Priority email and phone support",
-        "7": "Legal document review options",
-        "8": "Emergency access protocols"
-      },
+      "annualPrice": "199 dollár",
+      "annualSavings": "Spóroljon 40 dollárt évente",
+      "bestFor": "Gyermekes családok több vagyonnal",
+      "cta": "Családi csomag indítása",
+      "description": "Átfogó védelem gyermekes családok és több vagyonnal rendelkezők számára",
+      "features": [
+        "Minden, ami az Essentialben megtalálható, plusz:",
+        "Korlátlan dokumentumtárhely",
+        "Fejlett végrendeletgenerátor minden sablonnal",
+        "Gyermekek gyámságának megtervezése",
+        "Legfeljebb 10 megbízható kör tagja",
+        "Hagyatéki levelek és személyes üzenetek",
+        "Elsőbbségi e-mailes és telefonos támogatás",
+        "Jogi dokumentumok felülvizsgálati lehetőségei",
+        "Vészhelyzeti hozzáférési protokollok"
+      ],
       "mostPopular": true,
-      "name": "Family Protection",
-      "period": "per month",
-      "price": "$19.99"
+      "name": "Családvédelem",
+      "period": "havonta",
+      "price": "19,99 USD"
     },
     "premium": {
-      "annualPrice": "$399",
-      "annualSavings": "Save $80 annually",
-      "bestFor": "High-net-worth individuals and complex estates",
-      "cta": "Start Premium Plan",
-      "description": "Complete estate planning solution for complex family situations",
-      "features": {
-        "0": "Everything in Family, plus:",
-        "1": "Unlimited trusted circle members",
-        "2": "Business asset planning",
-        "3": "Trust document templates",
-        "4": "Professional legal review included",
-        "5": "White-glove onboarding assistance",
-        "6": "Dedicated support representative",
-        "7": "Advanced reporting and analytics",
-        "8": "Custom document templates",
-        "9": "Estate tax planning guidance"
-      },
-      "name": "Premium Protection",
-      "period": "per month",
-      "price": "$39.99"
-    }
-  },
-  "subscription": {
-    "activeSubscriptions": "[HU] Active subscriptions",
-    "allSubscriptions": "[HU] All subscriptions",
-    "allSubscriptionsDesc": "[HU] All subscriptions desc",
-    "autoRenewal": "[HU] Auto renewal",
-    "cancellationNoticeWarning": "[HU] Cancellation notice warning",
-    "costOptimization": "[HU] Cost optimization",
-    "costOptimizationDesc": "[HU] Cost optimization desc",
-    "dashboard": {
-      "subtitle": "[HU] Subtitle",
-      "title": "[HU] Title"
-    },
-    "days": "[HU] Days",
-    "daysBefore": "[HU] Days before",
-    "daysUntilRenewal": "[HU] Days until renewal",
-    "enableTracking": "[HU] Enable tracking",
-    "enableTrackingDesc": "[HU] Enable tracking desc",
-    "exportReport": "[HU] Export report",
-    "loadError": "[HU] Load error",
-    "manual": "[HU] Manual",
-    "monthlyCost": "[HU] Monthly cost",
-    "next90Days": "[HU] Next90 days",
-    "noUpcomingRenewals": "[HU] No upcoming renewals",
-    "perMonth": "[HU] Per month",
-    "perYear": "[HU] Per year",
-    "preferences": "[HU] Preferences",
-    "preferencesDesc": "[HU] Preferences desc",
-    "preferencesUpdated": "[HU] Preferences updated",
-    "reminderPeriods": "[HU] Reminder periods",
-    "renew": "[HU] Renew",
-    "review": "[HU] Review",
-    "tabs": {
-      "overview": "[HU] Overview",
-      "settings": "[HU] Settings",
-      "upcoming": "[HU] Upcoming"
-    },
-    "types": {
-      "monthly": "[HU] Monthly",
-      "yearly": "[HU] Yearly"
-    },
-    "upcomingRenewals": "[HU] Upcoming renewals",
-    "upcomingRenewalsDesc": "[HU] Upcoming renewals desc",
-    "upcomingRenewalsTitle": "[HU] Upcoming renewals title",
-    "upcomingSoon": "[HU] Upcoming soon",
-    "updateError": "[HU] Update error",
-    "yearlyCost": "[HU] Yearly cost"
-  },
-  "subscriptions": {
-    "subscriptionDashboard": {
-      "_1": "[HU] 1"
+      "annualPrice": "399 dollár",
+      "annualSavings": "Spóroljon 80 dollárt évente",
+      "bestFor": "Magas nettó vagyonnal rendelkező magánszemélyek és összetett vagyonok",
+      "cta": "Prémium csomag indítása",
+      "description": "Teljes körű vagyontervezési megoldás összetett családi helyzetekre",
+      "features": [
+        "Minden, ami a Családban van, plusz:",
+        "Korlátlan számú megbízható kör tagja",
+        "Üzleti eszköztervezés",
+        "Bizalmi dokumentumsablonok",
+        "Szakmai jogi felülvizsgálat benne foglaltatik",
+        "Fehér kesztyűs bevezetés",
+        "Dedikált ügyfélszolgálati képviselő",
+        "Speciális jelentéskészítés és elemzés",
+        "Egyéni dokumentumsablonok",
+        "Öröklési adótervezési útmutató"
+      ],
+      "name": "Prémium védelem",
+      "period": "havonta",
+      "price": "39,99 USD"
     }
   },
   "ui:common": {
-    "loading": "[HU] Loading"
+    "loading": "Terhelés"
   },
   "trial": {
-    "cta": "Start Your Free Trial",
-    "features": {
-      "0": "Complete access to all premium features",
-      "1": "No credit card required to start",
-      "2": "Personal onboarding assistance",
-      "3": "Cancel anytime during trial"
-    },
-    "guarantee": "30-day money-back guarantee after trial",
-    "subtitle": "Try LegacyGuard for 14 days with full access to all features",
-    "title": "Start with a Risk-Free Trial"
-  },
-  "upgradeCard": {
-    "defaultButtonText": "Default button text",
-    "pricing": "Pricing"
+    "cta": "Indítsa el az ingyenes próbaverziót",
+    "features": [
+      "Teljes hozzáférés az összes prémium funkcióhoz",
+      "Nincs szükség hitelkártyára a kezdéshez",
+      "Személyes beilleszkedési segítségnyújtás",
+      "A próbaidőszak alatt bármikor lemondható"
+    ],
+    "guarantee": "30 napos pénzvisszafizetési garancia a próbaidőszak után",
+    "subtitle": "Próbálja ki a LegacyGuardot 14 napig, és élvezze az összes funkció teljes hozzáférését",
+    "title": "Kezdje kockázatmentes próbaverzióval"
   },
   "comparison": {
-    "advanced": "Advanced",
-    "basic": "Basic",
+    "advanced": "Fejlett",
+    "basic": "Alapvető",
     "features": {
-      "assetInventory": "Asset Inventory",
-      "businessPlanning": "Business Planning",
-      "dedicatedSupport": "Dedicated Support",
-      "digitalVault": "Secure Digital Vault",
-      "documentStorage": "Document Storage",
-      "emergencyAccess": "Emergency Access",
-      "encryption": "Bank-Level Encryption",
-      "guardianship": "Guardianship Planning",
-      "legacyLetters": "Legacy Letters",
-      "legalReview": "Legal Review",
-      "mobileApp": "Mobile App",
-      "support": "Customer Support",
-      "trustTemplates": "Trust Templates",
-      "trustedCircle": "Trusted Circle",
-      "whiteGlove": "White-Glove Service",
-      "willGenerator": "Will Generator"
+      "assetInventory": "Eszközleltár",
+      "businessPlanning": "Üzleti tervezés",
+      "dedicatedSupport": "Dedikált támogatás",
+      "digitalVault": "Biztonságos digitális trezor",
+      "documentStorage": "Dokumentumtárolás",
+      "emergencyAccess": "Sürgősségi hozzáférés",
+      "encryption": "Banki szintű titkosítás",
+      "guardianship": "Gyámsági tervezés",
+      "legacyLetters": "Örökös levelek",
+      "legalReview": "Jogi felülvizsgálat",
+      "mobileApp": "Mobilalkalmazás",
+      "support": "Ügyfélszolgálat",
+      "trustTemplates": "Bizalmi sablonok",
+      "trustedCircle": "Megbízható kör",
+      "whiteGlove": "Fehér kesztyűs szolgáltatás",
+      "willGenerator": "Akaratgenerátor"
     },
-    "included": "Included",
-    "limited": "Limited",
-    "notIncluded": "Not Included",
-    "premium": "Premium",
-    "subtitle": "Choose the level of protection that's right for your family",
-    "title": "Compare All Plans",
-    "unlimited": "Unlimited"
-  },
-  "cookiePolicy": {
-    "title": "Title"
+    "included": "Tartalmazza",
+    "limited": "Korlátozott",
+    "notIncluded": "Nem tartalmazza",
+    "premium": "Prémium",
+    "subtitle": "Válassza ki a családja számára megfelelő védelmi szintet",
+    "title": "Összes csomag összehasonlítása",
+    "unlimited": "Korlátlan"
   },
   "faq": {
-    "questions": {
-      "0": {
-        "answer": "Yes, you can upgrade or downgrade your plan at any time. Changes take effect immediately, and we'll prorate any billing adjustments.",
-        "question": "Can I change plans anytime?"
+    "questions": [
+      {
+        "answer": "Igen, bármikor válthat magasabb vagy alacsonyabb csomagra. A változások azonnal érvénybe lépnek, és a számlázási korrekciókat arányosan számoljuk el.",
+        "question": "Bármikor módosíthatom a csomagokat?"
       },
-      "1": {
-        "answer": "You can cancel anytime and retain access until the end of your billing period. Your data remains secure and accessible for 90 days after cancellation.",
-        "question": "What happens if I cancel?"
+      {
+        "answer": "Bármikor lemondhatja az előfizetést, és a számlázási időszak végéig megőrizheti a hozzáférést. Adatai a lemondást követő 90 napig biztonságban maradnak és hozzáférhetők.",
+        "question": "Mi történik, ha lemondom?"
       },
-      "2": {
-        "answer": "Yes, all plans offer significant savings when billed annually. You'll save 2 months compared to monthly billing.",
-        "question": "Do you offer discounts for annual billing?"
+      {
+        "answer": "Igen, minden csomag jelentős megtakarítást kínál éves számlázás esetén. 2 hónapot takarít meg a havi számlázáshoz képest.",
+        "question": "Kínálnak kedvezményt éves számlázás esetén?"
       },
-      "3": {
-        "answer": "Our Family and Premium plans are designed to cover your entire family. Additional family members can be added at no extra cost within plan limits.",
-        "question": "Is there a family discount?"
+      {
+        "answer": "Családi és Prémium csomagjainkat úgy terveztük, hogy az egész családját lefedjék. További családtagok hozzáadhatók felár nélkül, a csomag keretein belül.",
+        "question": "Van családi kedvezmény?"
       },
-      "4": {
-        "answer": "We accept all major credit cards, PayPal, and bank transfers. All payments are processed securely and encrypted.",
-        "question": "What payment methods do you accept?"
+      {
+        "answer": "Elfogadjuk az összes főbb hitelkártyát, PayPalt és banki átutalást. Minden fizetést biztonságosan és titkosítva dolgozunk fel.",
+        "question": "Milyen fizetési módokat fogadnak el?"
       }
-    },
-    "subtitle": "Common questions about our plans and pricing",
-    "title": "Pricing Questions"
+    ],
+    "subtitle": "Gyakori kérdések a csomagjainkkal és árainkkal kapcsolatban",
+    "title": "Árazási kérdések"
   },
   "header": {
-    "description": "Every plan includes our core family protection features with bank-level security and unlimited support.",
-    "subtitle": "Comprehensive protection at a price that makes sense for your family",
-    "title": "Choose Your Family Protection Plan"
-  },
-  "hero": {
-    "headline": "Headline",
-    "subheadline": "Subheadline"
+    "description": "Minden csomag tartalmazza a családi védelmi funkciókat, banki szintű biztonsággal és korlátlan ügyfélszolgálattal."
   },
   "landing": {
     "pricing": {
-      "mostPopular": "Most popular"
+      "mostPopular": "Legnépszerűbb"
     }
   },
-  "privacyPolicy": {
-    "title": "Title"
-  },
-  "security": {
-    "features": {
-      "0": "256-bit AES encryption",
-      "1": "Zero-knowledge architecture",
-      "2": "SOC 2 Type II compliance",
-      "3": "Regular security audits",
-      "4": "GDPR and CCPA compliant",
-      "5": "99.9% uptime guarantee"
-    },
-    "subtitle": "Every plan includes the same bank-level security features",
-    "title": "Enterprise-Grade Security Included"
-  },
   "support": {
-    "essential": {
-      "0": "Email support",
-      "1": "Help center access",
-      "2": "Video tutorials",
-      "3": "Community forum"
-    },
-    "family": {
-      "0": "Priority email support",
-      "1": "Phone support",
-      "2": "Live chat",
-      "3": "Onboarding assistance"
-    },
-    "premium": {
-      "0": "Dedicated support rep",
-      "1": "White-glove onboarding",
-      "2": "Legal consultation referrals",
-      "3": "Custom training sessions"
-    },
-    "subtitle": "We're here to help you protect your family every step of the way",
-    "title": "Support Included with Every Plan"
-  },
-  "termsOfService": {
-    "title": "Title"
+    "essential": [
+      "E-mailes támogatás",
+      "Súgóközpont hozzáférés",
+      "Videós oktatóanyagok",
+      "Közösségi fórum"
+    ],
+    "family": [
+      "Elsőbbségi e-mailes támogatás",
+      "Telefonos támogatás",
+      "Élő chat",
+      "Bevezetési segítség"
+    ],
+    "premium": [
+      "Dedikált ügyfélszolgálati munkatárs",
+      "Fehér kesztyűs bevezetés",
+      "Jogi konzultációra vonatkozó ajánlások",
+      "Egyéni edzések"
+    ],
+    "subtitle": "Itt vagyunk, hogy segítsünk megvédeni családját minden lépésnél"
   }
 }

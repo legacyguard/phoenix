@@ -17,7 +17,7 @@ export const ProgressNudge: React.FC<ProgressNudgeProps> = ({
   onDismiss,
   onContinue,
 }) => {
-  const { t } = useTranslation('dashboard');
+  const { t } = useTranslation('dashboard-main');
   const [isDismissed, setIsDismissed] = useState(false);
   const [lastVisit, setLastVisit] = useState<Date | null>(null);
 

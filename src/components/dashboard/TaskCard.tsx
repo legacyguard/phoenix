@@ -14,7 +14,7 @@ interface TaskCardProps {
 }
 
 export const TaskCard: React.FC<TaskCardProps> = ({ task, onToggleComplete, onStartTask }) => {
-  const { t } = useTranslation('dashboard');
+  const { t } = useTranslation('dashboard-main');
   const navigate = useNavigate();
   const getPriorityColor = (priority: string) => {
     switch (priority) {
