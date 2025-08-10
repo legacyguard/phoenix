@@ -1,357 +1,391 @@
 {
   "actions": {
-    "next": "[SK] Next",
-    "previous": "[SK] Previous"
+    "consultLawyer": "Naplánujte si právnu konzultáciu",
+    "createCodicil": "Vytvoriť dodatok (dodatok)",
+    "deleteWill": "Zmazať tento závet",
+    "downloadPdf": "Stiahnuť PDF dokument",
+    "generateWill": "Vytvoriť konečnú vôľu",
+    "next": "Ďalej",
+    "previous": "Predchádzajúce",
+    "printWill": "Tlač dokumentu",
+    "saveProgress": "Uložiť aktuálny priebeh",
+    "shareWill": "Zdieľať s rodinou",
+    "updateWill": "Aktualizácia informácií o závete"
   },
   "errors": {
-    "assetLoadFailed": "We could not load your asset information. Please refresh and try again.",
-    "generationFailed": "We encountered an issue generating your will. Please review your information and try again.",
-    "jurisdictionRequired": "Please select your legal jurisdiction to ensure compliance",
-    "loadFailed": "We could not load your will information. Please refresh the page and try again.",
-    "printFailed": "We encountered an issue preparing your document for printing. Please try again.",
-    "saveFailed": "We could not save your progress. Please check your connection and try again.",
-    "sharingFailed": "We could not share your will. Please verify the recipients and try again.",
-    "validationFailed": "Please review and correct the highlighted information before proceeding"
+    "assetLoadFailed": "Nepodarilo sa nám načítať informácie o vašom aktíve. Obnovte stránku a skúste to znova.",
+    "generationFailed": "Pri generovaní vášho závetu sa vyskytol problém. Skontrolujte si svoje informácie a skúste to znova.",
+    "jurisdictionRequired": "Pre zabezpečenie súladu s predpismi si vyberte svoju jurisdikciu",
+    "loadFailed": "Nepodarilo sa nám načítať informácie o vašom závete. Obnovte stránku a skúste to znova.",
+    "printFailed": "Pri príprave dokumentu na tlač sa vyskytol problém. Skúste to znova.",
+    "saveFailed": "Váš postup sa nepodarilo uložiť. Skontrolujte pripojenie a skúste to znova.",
+    "validationFailed": "Pred pokračovaním si prosím skontrolujte a opravte zvýraznené informácie"
   },
   "execution": {
-    "copyDistribution": "Distribution of Copies",
-    "familyNotification": "Informing Your Family",
-    "legalRequirements": "Legal Requirements for {{jurisdiction}}",
-    "notarization": "Notarization Requirements",
-    "notaryOptional": "Notary recommended but not required",
-    "notaryRequired": "Notary public required",
-    "numberOfCopies": "Recommended Number of Copies",
-    "safeStorage": "Secure Storage Locations",
-    "selfProving": "Self-Proving Affidavit",
-    "signingInstructions": "Signing Instructions",
-    "signingOrder": "Proper Signing Order",
-    "storageRecommendations": "Storage Recommendations",
-    "subtitle": "Making your will legally binding",
-    "title": "Will Execution Requirements",
-    "witnessCount": "{{count}} witnesses required",
-    "witnessInstructions": "Witness Instructions",
-    "witnessQualifications": "Witness Qualifications",
-    "witnessRequirements": "Witness Requirements"
+    "copyDistribution": "Distribúcia kópií",
+    "familyNotification": "Informovanie vašej rodiny",
+    "legalRequirements": "Právne požiadavky pre {{jurisdiction}}",
+    "notarization": "Požiadavky na notárske overenie",
+    "notaryOptional": "Notár odporúča, ale nie je povinný",
+    "notaryRequired": "Vyžaduje sa notár",
+    "numberOfCopies": "Odporúčaný počet kópií",
+    "safeStorage": "Bezpečné úložné priestory",
+    "selfProving": "Čestné vyhlásenie s vlastným preukázaním",
+    "signingInstructions": "Pokyny na podpisovanie",
+    "signingOrder": "Správne poradie podpisovania",
+    "storageRecommendations": "Odporúčania pre skladovanie",
+    "subtitle": "Vytvorenie právne záväzného závetu",
+    "title": "Požiadavky na vykonanie závetu",
+    "witnessCount": "Vyžadujú sa svedkovia {{count}}",
+    "witnessInstructions": "Pokyny pre svedkov",
+    "witnessQualifications": "Kvalifikácia svedkov",
+    "witnessRequirements": "Požiadavky na svedkov"
   },
   "form": {
     "assetSelection": {
-      "allAssets": "Include All Current and Future Assets",
-      "assetCategories": "Asset Categories to Include",
-      "businessInterests": "Business Interests",
-      "excludedAssets": "Assets to Exclude",
-      "jointAssets": "Jointly Owned Assets",
-      "residualDescription": "All remaining assets not specifically mentioned elsewhere in this will",
-      "residualEstate": "Residual Estate",
-      "selectAssets": "Choose Assets to Include",
-      "specificAssets": "Select Specific Assets Only"
+      "allAssets": "Zahrnúť všetky súčasné a budúce aktíva",
+      "assetCategories": "Kategórie aktív, ktoré sa majú zahrnúť",
+      "businessInterests": "Obchodné záujmy",
+      "excludedAssets": "Aktíva, ktoré sa majú vylúčiť",
+      "jointAssets": "Spoločne vlastnený majetok",
+      "residualDescription": "Všetok zostávajúci majetok, ktorý nie je výslovne uvedený inde v tejto závete",
+      "residualEstate": "Zvyškový majetok",
+      "selectAssets": "Vyberte aktíva, ktoré chcete zahrnúť",
+      "specificAssets": "Vybrať iba konkrétne aktíva"
     },
     "distribution": {
-      "addBeneficiary": "Add Additional Beneficiary",
-      "ageRestriction": "Age Requirement",
-      "allocation": "Inheritance Allocation",
-      "beneficiaryName": "Beneficiary's Full Name",
-      "conditions": "Conditions or Restrictions",
-      "contingentBeneficiary": "Contingent Beneficiary",
-      "percentage": "Percentage of Estate",
-      "primaryBeneficiary": "Primary Beneficiary",
-      "relationship": "Relationship to You",
-      "specificAmount": "Specific Dollar Amount",
-      "specificAsset": "Specific Asset or Property",
-      "trustProvision": "Trust Arrangement"
+      "addBeneficiary": "Pridať ďalšieho príjemcu",
+      "ageRestriction": "Veková požiadavka",
+      "allocation": "Alokácia dedičstva",
+      "beneficiaryName": "Celé meno príjemcu",
+      "conditions": "Podmienky alebo obmedzenia",
+      "contingentBeneficiary": "Podmienený príjemca",
+      "percentage": "Percento majetku",
+      "primaryBeneficiary": "Hlavný príjemca",
+      "relationship": "Vzťah k tebe",
+      "specificAmount": "Konkrétna suma v dolároch",
+      "specificAsset": "Konkrétny majetok alebo majetok",
+      "trustProvision": "Dohoda o zvereneckej správe"
     },
     "executor": {
-      "alternateExecutor": "Alternate Executor",
-      "bondRequirement": "Bond Requirement",
-      "coExecutors": "Co-Executors",
-      "executorAddress": "Executor's Address",
-      "executorCompensation": "Executor Compensation",
-      "executorDuties": "Executor Responsibilities",
-      "executorInstructions": "Special Instructions for Executor",
-      "executorName": "Executor's Full Name",
-      "executorRelationship": "Relationship to You",
-      "primaryExecutor": "Primary Executor",
-      "specialPowers": "Special Powers Granted"
+      "alternateExecutor": "Alternatívny vykonávateľ",
+      "bondRequirement": "Požiadavka na dlhopis",
+      "coExecutors": "Spoluvykonávatelia",
+      "executorAddress": "Adresa vykonávateľa",
+      "executorCompensation": "Odmena exekútora",
+      "executorDuties": "Zodpovednosti vykonávateľa",
+      "executorInstructions": "Špeciálne pokyny pre vykonávateľa",
+      "executorName": "Celé meno vykonávateľa",
+      "executorRelationship": "Vzťah k tebe",
+      "primaryExecutor": "Hlavný vykonávateľ",
+      "specialPowers": "Udelené špeciálne právomoci"
     },
     "guardianship": {
-      "backupGuardian": "Alternate Guardian",
-      "educationPreferences": "Education Preferences",
-      "guardianCompensation": "Guardian Compensation",
-      "guardianFor": "Guardian for {{childName}}",
-      "guardianInstructions": "Instructions for Guardian",
-      "guardianQualifications": "Guardian Qualifications",
-      "minorChildren": "Minor Children Requiring Guardianship",
-      "primaryGuardian": "Primary Guardian",
-      "religiousUpbringing": "Religious Upbringing Preferences"
+      "backupGuardian": "Náhradný opatrovník",
+      "educationPreferences": "Preferencie vzdelávania",
+      "guardianCompensation": "Odškodnenie opatrovníka",
+      "guardianFor": "Opatrovník pre {{childName}}",
+      "guardianInstructions": "Pokyny pre opatrovníka",
+      "guardianQualifications": "Kvalifikácia opatrovníka",
+      "minorChildren": "Maloleté deti vyžadujúce opatrovníctvo",
+      "primaryGuardian": "Hlavný opatrovník",
+      "religiousUpbringing": "Preferencie náboženskej výchovy"
     },
     "personalInfo": {
-      "addChild": "Add Child",
-      "addressHelper": "Your primary residence address",
-      "childDateOfBirth": "Child's Date of Birth",
-      "childName": "Child's Full Name",
-      "childRelation": "Relationship to You",
-      "children": "Children and Dependents",
-      "currentAddress": "Current Legal Address",
-      "dateOfBirth": "Date of Birth",
-      "fullLegalName": "Complete Legal Name",
-      "fullLegalNameHelper": "Enter your name exactly as it appears on official documents",
-      "maritalStatus": "Marital Status",
-      "marriageDate": "Date of Marriage",
-      "placeOfBirth": "Place of Birth",
-      "previousWills": "Previous Wills",
-      "revokesPrevious": "This will revokes all previous wills",
-      "spouseName": "Spouse's Full Legal Name"
+      "addChild": "Pridať dieťa",
+      "addressHelper": "Vaša primárna adresa bydliska",
+      "childDateOfBirth": "Dátum narodenia dieťaťa",
+      "childName": "Celé meno dieťaťa",
+      "childRelation": "Vzťah k tebe",
+      "children": "Deti a nezaopatrené osoby",
+      "currentAddress": "Súčasná právna adresa",
+      "dateOfBirth": "Dátum narodenia",
+      "fullLegalName": "Celé meno",
+      "fullLegalNameHelper": "Zadajte svoje meno presne tak, ako je uvedené v oficiálnych dokumentoch",
+      "maritalStatus": "Rodinný stav",
+      "marriageDate": "Dátum sobáša",
+      "placeOfBirth": "Miesto narodenia",
+      "previousWills": "Predchádzajúce závety",
+      "revokesPrevious": "Týmto závetom sa rušia všetky predchádzajúce závety",
+      "spouseName": "Celé meno manžela/manželky"
     },
     "provisions": {
-      "burialCremation": "Burial or Cremation Preference",
-      "businessContinuation": "Business Continuation Plans",
-      "charitableBequests": "Charitable Donations",
-      "charityAmount": "Donation Amount",
-      "charityName": "Charitable Organization",
-      "digitalAssets": "Digital Asset Instructions",
-      "funeralInstructions": "Specific Funeral Instructions",
-      "funeralWishes": "Funeral and Burial Preferences",
-      "organDonation": "Organ Donation Wishes",
-      "personalMessages": "Personal Messages to Family",
-      "petCare": "Pet Care Arrangements",
-      "specialInstructions": "Special Instructions"
+      "burialCremation": "Preferencia pohrebu alebo kremácie",
+      "businessContinuation": "Plány pokračovania v podnikaní",
+      "charitableBequests": "Charitatívne dary",
+      "charityAmount": "Výška daru",
+      "charityName": "Charitatívna organizácia",
+      "digitalAssets": "Pokyny pre digitálne aktíva",
+      "funeralInstructions": "Špecifické pohrebné pokyny",
+      "funeralWishes": "Pohrebné a pohrebné preferencie",
+      "organDonation": "Priania o darovanie orgánov",
+      "personalMessages": "Osobné odkazy pre rodinu",
+      "petCare": "Starostlivosť o domáce zvieratá",
+      "specialInstructions": "Špeciálne pokyny"
     }
   },
   "generator": {
-    "of": "[SK] Of",
-    "step": "[SK] Step"
+    "continueWill": "Pokračovať v príprave závetu",
+    "description": "Vytvorte komplexný a právne platný závet prispôsobený požiadavkám vašej jurisdikcie a jedinečným potrebám vašej rodiny.",
+    "getStarted": "Začnite tvoriť svoju vôľu",
+    "importance": "Zabezpečenie právneho zdokumentovania vašich želaní a ochrany vašej rodiny",
+    "newWill": "Vytvoriť nový závet",
+    "of": "Z",
+    "professionalGuidance": "Pre komplexné pozostalosti sa odporúča profesionálne právne poradenstvo",
+    "step": "Krok",
+    "subtitle": "Vytvorte právne podložený závet s odborným vedením",
+    "title": "Generátor poslednej vôle a závetu",
+    "viewExisting": "Preskúmajte aktuálny závet"
   },
   "legal": {
-    "consultLawyer": "Consult with Attorney",
-    "disclaimer": "Important Legal Disclaimer",
-    "estatePlanning": "Comprehensive Estate Planning",
-    "jurisdiction": "Legal Jurisdiction",
-    "lawsApply": "Laws of {{jurisdiction}} will apply",
-    "lawyerRecommended": "We strongly recommend consulting with a qualified attorney for complex estates",
-    "legalCompliance": "Legal Compliance Verification",
-    "notLegalAdvice": "This service does not constitute legal advice",
-    "probateProcess": "Probate Process Information",
-    "professionalGuidance": "Professional legal guidance is recommended",
-    "professionalReview": "Professional Legal Review",
-    "selectJurisdiction": "Please select your legal jurisdiction",
-    "taxImplications": "Tax Implications"
+    "consultLawyer": "Poraďte sa s právnikom",
+    "disclaimer": "Dôležité právne vyhlásenie o odmietnutí zodpovednosti",
+    "estatePlanning": "Komplexné plánovanie pozostalosti",
+    "jurisdiction": "Právna príslušnosť",
+    "lawsApply": "Budú platiť zákony štátu {{jurisdiction}}",
+    "lawyerRecommended": "V prípade zložitých pozostalostí dôrazne odporúčame konzultáciu s kvalifikovaným právnikom.",
+    "legalCompliance": "Overenie súladu s právnymi predpismi",
+    "notLegalAdvice": "Táto služba nepredstavuje právne poradenstvo",
+    "probateProcess": "Informácie o dedičskom konaní",
+    "professionalGuidance": "Odporúča sa odborné právne poradenstvo",
+    "professionalReview": "Profesionálne právne posúdenie",
+    "selectJurisdiction": "Vyberte si jurisdikciu, v ktorej žijete",
+    "taxImplications": "Daňové dôsledky"
   },
   "notifications": {
-    "consultationScheduled": "Legal consultation has been scheduled",
-    "documentShared": "Will has been shared with designated family members",
-    "executionComplete": "Will execution has been recorded",
-    "progressSaved": "Your progress has been saved",
-    "reminderSet": "Will review reminder has been set",
-    "willDeleted": "Will has been permanently deleted",
-    "willGenerated": "Your will has been successfully generated",
-    "willUpdated": "Will has been updated successfully"
+    "consultationScheduled": "Bola naplánovaná právna konzultácia",
+    "documentShared": "Závet bol zdieľaný s určenými členmi rodiny",
+    "executionComplete": "Vykonanie závetu bolo zaznamenané",
+    "progressSaved": "Váš postup bol uložený",
+    "willDeleted": "Vôľa bola natrvalo vymazaná",
+    "willUpdated": "Vôľa bola úspešne aktualizovaná"
   },
   "preview": {
-    "article": "ARTICLE {{number}}",
-    "draftWatermark": "DRAFT - NOT LEGALLY BINDING",
-    "executionInstructions": "EXECUTION INSTRUCTIONS",
-    "lastWillTestament": "LAST WILL AND TESTAMENT",
-    "of": "OF",
-    "pageNumber": "Page {{current}} of {{total}}",
-    "reviewCarefully": "Please review this document carefully before proceeding",
-    "section": "Section {{number}}",
-    "signatureSection": "SIGNATURE SECTION",
-    "subtitle": "Review your complete will before finalizing",
-    "title": "Will Document Preview",
-    "witnessClause": "WITNESS CLAUSE"
+    "article": "ČLÁNOK {{number}}",
+    "draftWatermark": "NÁVRH - NIE JE PRÁVNE ZÁVÄZNÝ",
+    "executionInstructions": "POKYNY NA VYKONANIE",
+    "lastWillTestament": "POSLEDNÁ VÔĽA A ZÁVET",
+    "of": "Z",
+    "pageNumber": "Strana {{current}} z {{total}}",
+    "reviewCarefully": "Pred pokračovaním si pozorne prečítajte tento dokument",
+    "section": "Sekcia {{number}}",
+    "signatureSection": "SEKCIA PODPISOV",
+    "subtitle": "Pred finalizáciou si preštudujte celý závet",
+    "title": "Náhľad dokumentu",
+    "witnessClause": "DOLOŽKA O SVEDKOVI"
   },
   "status": {
-    "archived": "Archived Version",
-    "draft": "Draft in Progress",
-    "executed": "Legally Executed",
-    "generated": "Generated - Requires Execution",
-    "outdated": "Requires Update",
-    "underReview": "Under Professional Review"
+    "archived": "Archivovaná verzia",
+    "draft": "Rozpracovaný koncept",
+    "executed": "Právne vykonané",
+    "generated": "Vygenerované – Vyžaduje sa vykonanie",
+    "outdated": "Vyžaduje aktualizáciu"
+  },
+  "policy": {
+    "duration": {
+      "session": "Relácia",
+      "minutes": "{{count}} minút",
+      "hours": "{{count}} hodín",
+      "days": "{{count}} dní",
+      "months": "{{count}} mesiacov",
+      "years": "{{count}} rokov"
+    }
   },
   "steps": {
     "assets": {
-      "description": "Select which assets you wish to include in your will and how they should be distributed.",
-      "subtitle": "Your valuable possessions",
-      "title": "Asset Distribution"
+      "description": "Vyberte si, ktorý majetok chcete zahrnúť do závetu a ako má byť rozdelený.",
+      "subtitle": "Vaše cenné veci",
+      "title": "Distribúcia aktív"
     },
     "beneficiaries": {
-      "description": "Designate who will receive your assets and in what proportions.",
-      "subtitle": "Your chosen recipients",
-      "title": "Beneficiary Designations"
+      "description": "Určte, kto dostane váš majetok a v akých pomeroch.",
+      "subtitle": "Vami vybraní príjemcovia",
+      "title": "Označenie príjemcov"
     },
     "executor": {
-      "description": "Choose a responsible person to manage your estate and carry out your wishes.",
-      "subtitle": "Your estate representative",
-      "title": "Estate Executor"
+      "description": "Vyberte si zodpovednú osobu, ktorá bude spravovať váš majetok a plniť vaše želania.",
+      "subtitle": "Váš zástupca pre pozostalosti",
+      "title": "Exekútor pozostalosti"
     },
     "guardians": {
-      "description": "Appoint trusted individuals to care for minor children or dependents.",
-      "subtitle": "Care for your dependents",
-      "title": "Guardianship Appointments"
+      "description": "Vymenujte dôveryhodné osoby, aby sa starali o maloleté deti alebo osoby na nich závislé.",
+      "subtitle": "Starajte sa o svojich závislých",
+      "title": "Vymenovanie opatrovníkov"
     },
     "personal": {
-      "description": "We require your complete legal information to ensure your will meets all legal requirements.",
-      "subtitle": "Your identifying information",
-      "title": "Personal Information"
+      "description": "Aby sme zabezpečili, že váš závet spĺňa všetky zákonné požiadavky, potrebujeme vaše úplné právne informácie.",
+      "subtitle": "Vaše identifikačné údaje",
+      "title": "Osobné informácie"
     },
     "preferences": {
-      "description": "Include any special instructions, charitable bequests, or personal wishes.",
-      "subtitle": "Additional instructions",
-      "title": "Special Provisions"
+      "description": "Uveďte akékoľvek špeciálne pokyny, charitatívne odkazy alebo osobné želania.",
+      "subtitle": "Ďalšie pokyny",
+      "title": "Osobitné ustanovenia"
     },
     "review": {
-      "description": "Carefully review all details before generating your legal document.",
-      "subtitle": "Verify all information",
-      "title": "Final Review"
+      "description": "Pred vytvorením právneho dokumentu si starostlivo preštudujte všetky podrobnosti.",
+      "subtitle": "Overte všetky informácie",
+      "title": "Záverečné preskúmanie"
     }
   },
   "validation": {
-    "jurisdictionRequired": "[SK] Jurisdiction required",
-    "requiredField": "[SK] Required field"
+    "addressRequired": "Vyžaduje sa vaša aktuálna adresa sídla",
+    "allocationError": "Celková percentuálna alokácia musí byť 100 %",
+    "beneficiaryRequired": "Musí byť uvedený aspoň jeden príjemca",
+    "dobRequired": "Pre právnu platnosť je potrebný dátum narodenia",
+    "duplicateBeneficiary": "Tento príjemca už bol pridaný",
+    "executorBeneficiaryConflict": "Vykonávateľ a hlavný príjemca by mali byť zvyčajne rôzni jednotlivci",
+    "executorRequired": "Musí byť určený aspoň jeden vykonávateľ",
+    "guardianRequired": "Pre maloleté deti sa vyžaduje určenie opatrovníka",
+    "invalidDate": "Zadajte platný dátum",
+    "invalidPercentage": "Percento musí byť medzi 0 a 100",
+    "jurisdictionRequired": "Požadovaná jurisdikcia",
+    "requiredField": "Povinné pole"
   },
   "will": {
-    "address": "Address",
-    "addressPlaceholder": "Address placeholder",
+    "address": "Adresa",
+    "addressPlaceholder": "Zástupný symbol adresy",
     "allocation": {
-      "addBeneficiary": "Add beneficiary",
-      "description": "Description",
-      "generalEstate": "General estate",
-      "percentage": "Percentage",
+      "addBeneficiary": "Pridať príjemcu",
+      "description": "Popis",
+      "generalEstate": "Všeobecný majetok",
+      "percentage": "Percento",
       "tips": {
         "tip1": "Tip1",
         "tip2": "Tip2",
         "tip3": "Tip3",
-        "title": "Title"
+        "title": "Názov"
       },
-      "title": "Title",
-      "total": "Total"
+      "title": "Názov",
+      "total": "Celkom"
     },
     "beneficiaries": {
-      "addBeneficiary": "Add beneficiary",
-      "allocation": "Allocation",
-      "alternativeBeneficiary": "Alternative beneficiary",
-      "alternativePlaceholder": "Alternative placeholder",
-      "beneficiaryNumber": "Beneficiary number",
-      "currentAllocation": "Current allocation",
-      "description": "Description",
-      "identification": "Identification",
-      "identificationPlaceholder": "Identification placeholder",
-      "importantNotes": "Important notes",
-      "name": "Name",
-      "noBeneficiaries": "No beneficiaries",
-      "note1": "Note1",
-      "note2": "Note2",
-      "note3": "Note3",
-      "ofEstate": "Of estate",
-      "title": "Title"
+      "addBeneficiary": "Pridať príjemcu",
+      "allocation": "Pridelenie",
+      "alternativeBeneficiary": "Alternatívny príjemca",
+      "alternativePlaceholder": "Alternatívny zástupný symbol",
+      "beneficiaryNumber": "Číslo príjemcu",
+      "currentAllocation": "Aktuálna alokácia",
+      "description": "Popis",
+      "identification": "Identifikácia",
+      "identificationPlaceholder": "Zástupný symbol identifikácie",
+      "importantNotes": "Dôležité poznámky",
+      "name": "Meno",
+      "noBeneficiaries": "Žiadni príjemcovia",
+      "note1": "Poznámka 1",
+      "note2": "Poznámka 2",
+      "note3": "Poznámka 3",
+      "ofEstate": "Z pozostalosti",
+      "title": "Názov"
     },
     "beneficiary": {
-      "name": "Name",
-      "namePlaceholder": "Name placeholder",
-      "relationship": "Relationship",
-      "relationshipPlaceholder": "Relationship placeholder"
+      "name": "Meno",
+      "namePlaceholder": "Zástupný symbol mena",
+      "relationship": "Vzťah",
+      "relationshipPlaceholder": "Zástupný symbol vzťahu"
     },
-    "birthDate": "Birth date",
-    "birthDatePlaceholder": "Birth date placeholder",
+    "birthDate": "Dátum narodenia",
+    "birthDatePlaceholder": "Zástupný symbol dátumu narodenia",
     "buttons": {
-      "saveWillInfo": "Save will info",
-      "saving": "Saving"
+      "saveWillInfo": "Uložiť informácie o závete",
+      "saving": "Ukladá sa"
     },
-    "countryRequirements": "Country requirements",
+    "countryRequirements": "Požiadavky krajiny",
     "descriptions": {
-      "executorDescription": "Executor description",
-      "physicalLocationDescription": "Physical location description",
-      "statusDescription": "Status description"
+      "executorDescription": "Popis vykonávateľa",
+      "physicalLocationDescription": "Popis fyzickej polohy",
+      "statusDescription": "Popis stavu"
     },
     "executor": {
-      "addAlternative": "Add alternative",
-      "address": "Address",
-      "addressPlaceholder": "Address placeholder",
-      "alternative": "Alternative",
-      "alternativeDescription": "Alternative description",
-      "description": "Description",
-      "name": "Name",
-      "namePlaceholder": "Name placeholder",
-      "phone": "Phone",
-      "phonePlaceholder": "Phone placeholder",
-      "primary": "Primary",
-      "relationship": "Relationship",
-      "relationshipPlaceholder": "Relationship placeholder",
-      "responsibilities": "Responsibilities",
-      "responsibility1": "Responsibility1",
-      "responsibility2": "Responsibility2",
-      "responsibility3": "Responsibility3",
-      "responsibility4": "Responsibility4",
-      "title": "Title"
+      "addAlternative": "Pridať alternatívu",
+      "address": "Adresa",
+      "addressPlaceholder": "Zástupný symbol adresy",
+      "alternative": "Alternatíva",
+      "alternativeDescription": "Alternatívny popis",
+      "description": "Popis",
+      "name": "Meno",
+      "namePlaceholder": "Zástupný symbol mena",
+      "phone": "Telefón",
+      "phonePlaceholder": "Zástupný symbol telefónu",
+      "primary": "Primárne",
+      "relationship": "Vzťah",
+      "relationshipPlaceholder": "Zástupný symbol vzťahu",
+      "responsibilities": "Zodpovednosti",
+      "responsibility1": "Zodpovednosť1",
+      "responsibility2": "Zodpovednosť2",
+      "responsibility3": "Zodpovednosť3",
+      "responsibility4": "Zodpovednosť4",
+      "title": "Názov"
     },
     "fields": {
-      "additionalNotes": "Additional notes",
-      "currentStatus": "Current status",
-      "executorContact": "Executor contact",
-      "physicalLocation": "Physical location"
+      "additionalNotes": "Doplňujúce poznámky",
+      "currentStatus": "Aktuálny stav",
+      "executorContact": "Kontakt na vykonávateľa",
+      "physicalLocation": "Fyzická poloha"
     },
     "legalReview": {
-      "button": "Button",
-      "description": "Description",
-      "title": "Title"
+      "button": "Tlačidlo",
+      "description": "Popis",
+      "title": "Názov"
     },
-    "name": "Name",
-    "namePlaceholder": "Name placeholder",
+    "name": "Meno",
+    "namePlaceholder": "Zástupný symbol mena",
     "options": {
-      "noContactSelected": "No contact selected"
+      "noContactSelected": "Žiadny vybraný kontakt"
     },
     "placeholders": {
-      "additionalNotes": "Additional notes",
-      "physicalLocation": "Physical location",
-      "selectContact": "Select contact"
+      "additionalNotes": "Doplňujúce poznámky",
+      "physicalLocation": "Fyzická poloha",
+      "selectContact": "Vybrať kontakt"
     },
     "preview": {
-      "address": "Address",
-      "alternative": "Alternative",
-      "alternativeExecutor": "Alternative executor",
-      "date": "Date",
-      "description": "Description",
-      "executor": "Executor",
-      "generatePDF": "Generate p d f",
-      "legalRequirements": "Legal requirements",
-      "name": "Name",
-      "ofEstate": "Of estate",
-      "place": "Place",
-      "print": "Print",
-      "signature": "Signature",
-      "title": "Title",
-      "witnesses": "Witnesses"
+      "address": "Adresa",
+      "alternative": "Alternatíva",
+      "alternativeExecutor": "Alternatívny vykonávateľ",
+      "date": "Dátum",
+      "description": "Popis",
+      "executor": "Vykonávateľ",
+      "generatePDF": "Generovanie p d f",
+      "legalRequirements": "Právne požiadavky",
+      "name": "Meno",
+      "ofEstate": "Z pozostalosti",
+      "place": "Miesto",
+      "print": "Tlačiť",
+      "signature": "Podpis",
+      "title": "Názov",
+      "witnesses": "Svedkovia"
     },
     "requirements": {
-      "handwriting": "Handwriting",
-      "notarization": "Notarization",
-      "typed": "Typed",
-      "witnesses": "Witnesses"
+      "handwriting": "Rukopis",
+      "notarization": "Notárske overenie",
+      "typed": "Napísané",
+      "witnesses": "Svedkovia"
     },
-    "selectCountry": "Select country",
-    "selectedCountryDetails": "Selected country details",
+    "selectCountry": "Vyberte krajinu",
+    "selectedCountryDetails": "Podrobnosti o vybraných krajinách",
     "status": {
-      "draft": "Draft",
-      "notarized": "Notarized",
-      "stored": "Stored",
-      "updated": "Updated"
+      "draft": "Návrh",
+      "notarized": "Notársky overené",
+      "stored": "Uložené",
+      "updated": "Aktualizované"
     },
-    "testatorInfo": "Testator info",
+    "testatorInfo": "Informácie o poručiteľovi",
     "validation": {
-      "allocation100": "Allocation100"
+      "allocation100": "Alokácia100"
     },
     "willPreview": {
       "_2": "2",
-      "critical_execution_instruction_3": "Critical execution instruction 3",
-      "professional_review_4": "Professional review 4",
-      "provided_by_certified_legal_pa_5": "Provided by certified legal pa 5"
+      "critical_execution_instruction_3": "Kritická inštrukcia pre vykonanie 3",
+      "professional_review_4": "Odborné posúdenie 4",
+      "provided_by_certified_legal_pa_5": "Poskytuje certifikovaný právny poradca 5"
     }
   },
   "willGenerator": {
-    "changeCountry": "Change country",
-    "confirmCountry": "Confirm country",
-    "confirmSigned": "Confirm signed",
+    "changeCountry": "Zmeniť krajinu",
+    "confirmCountry": "Potvrdiť krajinu",
+    "confirmSigned": "Potvrdiť podpísané",
     "console": {
-      "willGenerationCompleted": "Will generation completed"
+      "willGenerationCompleted": "Generovanie závetu dokončené"
     },
     "countries": {
       "AL": "A l",
@@ -360,7 +394,7 @@
       "BE": "B e",
       "BG": "B g",
       "CH": "C h",
-      "CY": "C y",
+      "CY": "Cy",
       "CZ": "C z",
       "DE": "D e",
       "DK": "D k",
@@ -368,24 +402,24 @@
       "ES": "E s",
       "FI": "F i",
       "FR": "F r",
-      "GB": "G b",
-      "GR": "G r",
+      "GB": "Gb",
+      "GR": "Gr",
       "HR": "H r",
       "HU": "H u",
-      "IE": "I e",
-      "IS": "I s",
-      "IT": "I t",
-      "LI": "L i",
+      "IE": "Ja e",
+      "IS": "Ja",
+      "IT": "Ja t",
+      "LI": "Li",
       "LT": "L t",
       "LU": "L u",
       "LV": "L v",
       "MD": "M d",
-      "ME": "M e",
+      "ME": "Mňa",
       "MK": "M k",
       "MT": "M t",
       "NL": "N l",
-      "NO": "N o",
-      "PL": "P l",
+      "NO": "Nie",
+      "PL": "Pl",
       "PT": "P t",
       "RO": "R o",
       "RS": "R s",
@@ -394,242 +428,214 @@
       "SK": "S k",
       "UA": "U a"
     },
-    "executionInstructions": "Execution instructions",
-    "failed_to_load_will_template_2": "Failed to load will template 2",
-    "finalizeUpload": "Finalize upload",
-    "fullName": "Full name",
-    "no_template_found_for_this_jur_1": "No template found for this jur 1",
-    "please_confirm_that_you_have_s_3": "Please confirm that you have s 3",
-    "select_a_country_4": "Select a country 4",
+    "executionInstructions": "Pokyny na vykonanie",
+    "failed_to_load_will_template_2": "Nepodarilo sa načítať šablónu závetu č. 2",
+    "finalizeUpload": "Dokončiť nahrávanie",
+    "fullName": "Celé meno",
+    "no_template_found_for_this_jur_1": "Pre tento jur 1 sa nenašla žiadna šablóna",
+    "please_confirm_that_you_have_s_3": "Potvrďte, prosím, že máte s 3",
+    "select_a_country_4": "Vyberte krajinu 4",
     "steps": {
-      "confirmJurisdiction": "Confirm jurisdiction",
-      "executorBeneficiaries": "Executor beneficiaries",
-      "personalInformation": "Personal information",
-      "reviewGenerate": "Review generate",
-      "signConfirm": "Sign confirm"
+      "confirmJurisdiction": "Potvrdiť jurisdikciu",
+      "executorBeneficiaries": "Beneficienti vykonávateľa",
+      "personalInformation": "Osobné informácie",
+      "reviewGenerate": "Generovanie recenzií",
+      "signConfirm": "Potvrdiť podpis"
     }
   },
   "willSync": {
-    "approve": "Approve",
-    "autoApplied": "Auto applied",
+    "approve": "Schváliť",
+    "autoApplied": "Automaticky použité",
     "changes": {
-      "allocationsModified": "Allocations modified",
-      "assetsAdded": "Assets added",
-      "beneficiariesRemoved": "Beneficiaries removed",
-      "noChanges": "No changes"
+      "allocationsModified": "Upravené pridelenia",
+      "assetsAdded": "Pridané aktíva",
+      "beneficiariesRemoved": "Príjemcovia odstránení",
+      "noChanges": "Žiadne zmeny"
     },
-    "reject": "Reject",
-    "viewChanges": "View changes"
+    "reject": "Odmietnuť",
+    "viewChanges": "Zobraziť zmeny"
   },
   "willSyncSettings": {
-    "autoSync": "Auto sync",
-    "autoSyncDescription": "Auto sync description",
-    "frequencyDaily": "Frequency daily",
-    "frequencyImmediate": "Frequency immediate",
-    "frequencyWeekly": "Frequency weekly",
-    "generalDescription": "General description",
-    "generalSettings": "General settings",
-    "requireApproval": "Require approval",
-    "requireApprovalDescription": "Require approval description",
-    "saveError": "Save error",
-    "saved": "Saved",
-    "syncFrequency": "Sync frequency",
-    "triggerDescription": "Trigger description",
-    "triggerSettings": "Trigger settings"
+    "autoSync": "Automatická synchronizácia",
+    "autoSyncDescription": "Popis automatickej synchronizácie",
+    "frequencyDaily": "Frekvencia denne",
+    "frequencyImmediate": "Okamžitá frekvencia",
+    "frequencyWeekly": "Frekvencia týždenne",
+    "generalDescription": "Všeobecný popis",
+    "generalSettings": "Všeobecné nastavenia",
+    "requireApproval": "Vyžadovať schválenie",
+    "requireApprovalDescription": "Vyžadovať popis schválenia",
+    "saveError": "Chyba uloženia",
+    "saved": "Uložené",
+    "syncFrequency": "Synchronizačná frekvencia",
+    "triggerDescription": "Popis spúšťača",
+    "triggerSettings": "Nastavenia spúšťačov"
   },
   "willVersion": {
-    "added": "Added",
-    "compareDiff": "Compare diff",
-    "comparePrompt": "Compare prompt",
-    "current": "Current",
-    "description": "Description",
-    "modified": "Modified",
-    "removed": "Removed",
-    "restore": "Restore",
-    "title": "Title",
-    "versionNumber": "Version number"
+    "added": "Pridané",
+    "compareDiff": "Porovnať rozdiel",
+    "comparePrompt": "Porovnajte výzvu",
+    "current": "Súčasný",
+    "description": "Popis",
+    "modified": "Upravené",
+    "removed": "Odstránené",
+    "restore": "Obnoviť",
+    "title": "Názov",
+    "versionNumber": "Číslo verzie"
   },
   "disclaimers": {
-    "general": "LegacyGuard provides tools and guidance for estate planning but does not provide legal advice. For complex estates or specific legal questions, please consult with a qualified attorney in your jurisdiction.",
-    "willGenerator": "The will generator creates documents based on information you provide. While designed to meet legal requirements, we strongly recommend having any generated will reviewed by a qualified attorney before execution.",
-    "jurisdiction": "Legal requirements vary by jurisdiction. Ensure your documents comply with the laws in your area.",
-    "notLegalAdvice": "This service does not constitute legal advice and should not be relied upon as such.",
-    "professionalReview": "For complex estates, business interests, or unique family situations, professional legal review is strongly recommended."
+    "general": "LegacyGuard poskytuje nástroje a poradenstvo pre plánovanie dedičstva, ale neposkytuje právne poradenstvo. V prípade zložitých pozostalostí alebo špecifických právnych otázok sa obráťte na kvalifikovaného právnika vo vašej jurisdikcii.",
+    "willGenerator": "Generátor závetov vytvára dokumenty na základe informácií, ktoré poskytnete. Hoci je navrhnutý tak, aby spĺňal zákonné požiadavky, dôrazne odporúčame, aby si akýkoľvek vygenerovaný závet pred jeho vyhotovením nechal skontrolovať kvalifikovaným právnikom.",
+    "jurisdiction": "Právne požiadavky sa líšia v závislosti od jurisdikcie. Uistite sa, že vaše dokumenty sú v súlade so zákonmi vo vašej oblasti.",
+    "notLegalAdvice": "Táto služba nepredstavuje právne poradenstvo a nemalo by sa na ňu ako na takú spoliehať.",
+    "professionalReview": "V prípade zložitých pozostalostí, obchodných záujmov alebo jedinečných rodinných situácií sa dôrazne odporúča profesionálne právne posúdenie."
   },
   "terms": {
-    "serviceTerms": "Terms of Service",
-    "privacyPolicy": "Privacy Policy",
-    "dataProcessing": "Data Processing Agreement",
-    "userAgreement": "User Agreement",
-    "acceptanceRequired": "By using LegacyGuard, you agree to our Terms of Service and Privacy Policy.",
-    "lastUpdated": "Last updated: {{date}}",
-    "effectiveDate": "Effective date: {{date}}"
+    "serviceTerms": "Podmienky služby",
+    "privacyPolicy": "Zásady ochrany osobných údajov",
+    "dataProcessing": "Zmluva o spracovaní údajov",
+    "userAgreement": "Používateľská zmluva",
+    "acceptanceRequired": "Používaním služby LegacyGuard súhlasíte s našimi Podmienkami služby a Zásadami ochrany osobných údajov.",
+    "lastUpdated": "Posledná aktualizácia: {{date}}",
+    "effectiveDate": "Dátum účinnosti: {{date}}"
   },
   "compliance": {
-    "dataProtection": "Your data is protected in compliance with applicable data protection laws including GDPR and CCPA.",
-    "encryption": "All sensitive information is encrypted using industry-standard encryption methods.",
-    "retention": "Data retention policies are designed to protect your privacy while ensuring your family can access important information when needed.",
-    "access": "You have the right to access, modify, or delete your personal information at any time.",
-    "portability": "You can export your data in standard formats for use with other services."
+    "dataProtection": "Vaše údaje sú chránené v súlade s platnými zákonmi o ochrane údajov vrátane GDPR a CCPA.",
+    "encryption": "Všetky citlivé informácie sú šifrované pomocou štandardných šifrovacích metód.",
+    "retention": "Zásady uchovávania údajov sú navrhnuté tak, aby chránili vaše súkromie a zároveň zabezpečili, aby vaša rodina mala prístup k dôležitým informáciám, keď ich bude potrebovať.",
+    "access": "Máte právo kedykoľvek pristupovať k svojim osobným údajom, upravovať ich alebo ich vymazať.",
+    "portability": "Svoje údaje môžete exportovať v štandardných formátoch na použitie s inými službami."
   },
   "executionRequirements": {
-    "witnessRequirements": "Witness Requirements for {{jurisdiction}}",
-    "notaryRequirements": "Notarization Requirements",
-    "signingInstructions": "Proper Signing Instructions",
-    "storageGuidelines": "Secure Storage Guidelines",
-    "legalCompliance": "Legal Compliance Verification"
+    "witnessRequirements": "Požiadavky na svedkov pre {{jurisdiction}}",
+    "notaryRequirements": "Požiadavky na notárske overenie",
+    "signingInstructions": "Pokyny na správne podpisovanie",
+    "storageGuidelines": "Pokyny pre bezpečné úložisko",
+    "legalCompliance": "Overenie súladu s právnymi predpismi"
   },
   "cookiePolicy": {
     "cookieTypes": {
-      "analytics": "Analytics cookies help us understand how visitors interact with our website.",
-      "essential": "Essential cookies are necessary for the website to function properly.",
-      "marketing": "Marketing cookies are used to track visitors across websites to display relevant advertisements."
+      "analytics": "Analytické súbory cookie nám pomáhajú pochopiť, ako návštevníci interagujú s našou webovou stránkou.",
+      "essential": "Základné súbory cookie sú nevyhnutné pre správne fungovanie webovej stránky.",
+      "marketing": "Marketingové súbory cookie sa používajú na sledovanie návštevníkov webových stránok s cieľom zobrazovať relevantné reklamy."
     },
-    "howWeUseCookies": "We use cookies to improve your experience, analyze site usage, and provide personalized content.",
-    "introduction": "This Cookie Policy explains how LegacyGuard uses cookies and similar technologies.",
-    "manageCookies": "You can manage your cookie preferences through your browser settings or our cookie preference center.",
-    "title": "Title",
-    "whatAreCookies": "Cookies are small text files that are stored on your device when you visit our website."
+    "howWeUseCookies": "Na zlepšenie vášho zážitku, analýzu používania stránky a poskytovanie prispôsobeného obsahu používame súbory cookie.",
+    "introduction": "Tieto Zásady používania súborov cookie vysvetľujú, ako spoločnosť LegacyGuard používa súbory cookie a podobné technológie.",
+    "manageCookies": "Svoje preferencie týkajúce sa súborov cookie môžete spravovať prostredníctvom nastavení prehliadača alebo nášho centra preferencií súborov cookie.",
+    "title": "Názov",
+    "whatAreCookies": "Súbory cookie sú malé textové súbory, ktoré sa ukladajú do vášho zariadenia, keď navštívite našu webovú stránku."
   },
   "header": {
-    "subtitle": "Subtitle",
-    "title": "Title"
+    "title": "Názov"
   },
   "hero": {
-    "headline": "Headline",
-    "subheadline": "Subheadline"
-  },
-  "privacyPolicy": {
-    "introduction": "This Privacy Policy describes how LegacyGuard collects, uses, and protects your personal information.",
-    "lastUpdated": "Last updated: {{date}}",
-    "sections": {
-      "dataSecurity": {
-        "content": "We implement appropriate security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.",
-        "title": "Data Security"
-      },
-      "informationCollection": {
-        "content": "We collect information you provide directly to us, such as when you create an account, use our services, or contact us for support.",
-        "title": "Information We Collect"
-      },
-      "informationSharing": {
-        "content": "We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except as described in this policy.",
-        "title": "Information Sharing"
-      },
-      "informationUse": {
-        "content": "We use your information to provide, maintain, and improve our services, communicate with you, and ensure the security of your account.",
-        "title": "How We Use Your Information"
-      },
-      "yourRights": {
-        "content": "You have the right to access, update, or delete your personal information. You may also opt out of certain communications from us.",
-        "title": "Your Rights"
-      }
-    },
-    "title": "Privacy Policy"
+    "headline": "Nadpis",
+    "subheadline": "Podnadpis"
   },
   "termsOfService": {
-    "effectiveDate": "Effective date: {{date}}",
-    "introduction": "These Terms of Service govern your use of LegacyGuard's family protection platform and services.",
-    "lastUpdated": "Last updated: {{date}}",
+    "effectiveDate": "Dátum účinnosti: {{date}}",
+    "introduction": "Tieto Podmienky služby upravujú vaše používanie platformy a služieb na ochranu rodiny LegacyGuard.",
+    "lastUpdated": "Posledná aktualizácia: {{date}}",
     "sections": {
       "acceptance": {
-        "content": "By accessing or using LegacyGuard, you agree to be bound by these Terms of Service and all applicable laws and regulations.",
-        "title": "Acceptance of Terms"
+        "content": "Prístupom k službe LegacyGuard alebo jej používaním súhlasíte s tým, že budete viazaní týmito Podmienkami služby a všetkými platnými zákonmi a predpismi.",
+        "title": "Prijatie podmienok"
       },
       "description": {
-        "content": "LegacyGuard provides digital tools and services to help individuals organize their important information for family protection purposes.",
-        "title": "Service Description"
+        "content": "LegacyGuard poskytuje digitálne nástroje a služby, ktoré pomáhajú jednotlivcom organizovať dôležité informácie na účely ochrany rodiny.",
+        "title": "Popis služby"
       },
       "limitations": {
-        "content": "LegacyGuard provides tools and guidance but does not provide legal advice. We recommend consulting with qualified professionals for complex legal matters.",
-        "title": "Limitations of Liability"
+        "content": "LegacyGuard poskytuje nástroje a poradenstvo, ale neposkytuje právne poradenstvo. V prípade zložitých právnych záležitostí odporúčame konzultáciu s kvalifikovanými odborníkmi.",
+        "title": "Obmedzenia zodpovednosti"
       },
       "privacy": {
-        "content": "Your privacy is important to us. Please review our Privacy Policy to understand how we collect, use, and protect your information.",
-        "title": "Privacy and Data Protection"
+        "content": "Vaše súkromie je pre nás dôležité. Prečítajte si, prosím, naše Zásady ochrany osobných údajov, aby ste pochopili, ako zhromažďujeme, používame a chránime vaše informácie.",
+        "title": "Ochrana súkromia a údajov"
       },
       "userResponsibilities": {
-        "content": "You are responsible for maintaining the confidentiality of your account information and for all activities that occur under your account.",
-        "title": "User Responsibilities"
+        "content": "Ste zodpovedný/á za zachovanie dôvernosti informácií o vašom účte a za všetky aktivity, ktoré sa v rámci vášho účtu vyskytnú.",
+        "title": "Zodpovednosti používateľa"
       }
     },
-    "title": "Terms of Service"
+    "title": "Podmienky služby"
   },
   "cookies": {
     "policy": {
       "analytics": {
-        "description": "Description",
+        "description": "Popis",
         "examples": {
           "ga": "Ga",
           "gid": "Gid",
-          "session": "Session"
+          "session": "Relácia"
         },
-        "purpose": "Purpose",
-        "title": "Title"
+        "purpose": "Účel",
+        "title": "Názov"
       },
       "categories": {
-        "title": "Title"
+        "title": "Názov"
       },
       "contact": {
-        "address": "Address",
-        "addressDetails": "Address details",
-        "description": "Description",
-        "email": "Email",
-        "title": "Title"
+        "address": "Adresa",
+        "addressDetails": "Údaje o adrese",
+        "description": "Popis",
+        "email": "E-mail",
+        "title": "Názov"
       },
-      "examples": "Examples",
-      "lastUpdated": "Last updated",
+      "examples": "Príklady",
+      "lastUpdated": "Naposledy aktualizované",
       "manage": {
-        "title": "Title"
+        "title": "Názov"
       },
       "marketing": {
-        "description": "Description",
+        "description": "Popis",
         "examples": {
           "facebook": "Facebook",
           "google": "Google"
         },
-        "purpose": "Purpose",
-        "title": "Title"
+        "purpose": "Účel",
+        "title": "Názov"
       },
       "necessary": {
-        "description": "Description",
+        "description": "Popis",
         "examples": {
-          "auth": "Auth",
-          "consent": "Consent",
-          "csrf": "Csrf",
-          "session": "Session"
+          "auth": "Autorizácia",
+          "consent": "Súhlas",
+          "csrf": "CSRF",
+          "session": "Relácia"
         },
-        "purpose": "Purpose",
-        "title": "Title"
+        "purpose": "Účel",
+        "title": "Názov"
       },
       "overview": {
-        "intro": "Intro",
-        "point1": "Point1",
-        "point2": "Point2",
-        "point3": "Point3",
-        "point4": "Point4",
-        "title": "Title"
+        "intro": "Úvod",
+        "point1": "Bod 1",
+        "point2": "Bod 2",
+        "point3": "Bod3",
+        "point4": "Bod 4",
+        "title": "Názov"
       },
       "preferences": {
-        "description": "Description",
+        "description": "Popis",
         "examples": {
-          "language": "Language",
-          "theme": "Theme",
-          "ui": "Ui"
+          "language": "Jazyk",
+          "theme": "Téma",
+          "ui": "Používateľské rozhranie"
         },
-        "purpose": "Purpose",
-        "title": "Title"
+        "purpose": "Účel",
+        "title": "Názov"
       },
-      "purpose": "Purpose",
-      "required": "Required",
-      "subtitle": "Subtitle",
-      "title": "Title",
+      "purpose": "Účel",
+      "required": "Povinné",
+      "subtitle": "Podtitul",
+      "title": "Názov",
       "yourRights": {
-        "description": "Description",
-        "right1": "Right1",
-        "right2": "Right2",
-        "right3": "Right3",
-        "right4": "Right4",
-        "title": "Title"
+        "description": "Popis",
+        "right1": "Vpravo1",
+        "right2": "Vpravo2",
+        "right3": "Vpravo3",
+        "right4": "Vpravo4",
+        "title": "Názov"
       }
     }
   }

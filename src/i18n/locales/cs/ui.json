@@ -1,2131 +1,277 @@
 {
-  "name": "LegacyGuard",
-  "terms": {
-    "vault": "Vault",
-    "vaultLower": "vault",
-    "trustedCircle": "Trusted Circle",
-    "trustedCircleLower": "trusted circle",
-    "willGenerator": "Will Generator",
-    "willGeneratorLower": "will generator",
-    "legacyLetters": "Legacy Letters",
-    "secure": "Secure",
-    "secureLower": "secure"
-  },
-  "respectful": {
-    "status": {
-      "secured": "Secured",
-      "protected": "Protected",
-      "ready": "Ready",
-      "organized": "Organized",
-      "documented": "Documented",
-      "prepared": "Prepared"
-    },
-    "suggestions": {
-      "consider": "Consider",
-      "whenReady": "When you're ready",
-      "mightWant": "You might want to",
-      "optional": "Optional",
-      "recommended": "Recommended",
-      "noRush": "No rush"
-    },
-    "progress": {
-      "gettingStarted": "Getting Started",
-      "makingProgress": "Making Progress",
-      "wellOrganized": "Well Organized",
-      "comprehensive": "Comprehensive",
-      "documentsSecured": "{{count}} document secured",
-      "documentsSecured_plural": "{{count}} documents secured"
-    },
-    "actions": {
-      "secure": "Secure",
-      "add": "Add",
-      "organize": "Organize",
-      "protect": "Protect",
-      "document": "Document",
-      "prepare": "Prepare"
-    },
-    "tone": {
-      "professional": "Professional",
-      "respectful": "Respectful",
-      "supportive": "Supportive",
-      "clear": "Clear",
-      "practical": "Practical"
-    }
-  },
-  "actions": {
-    "addAsset": "Tell Us About Something Important",
-    "addLiability": "Add Something You Owe",
-    "addNote": "Leave a Note for Your Family",
-    "cancel": "Cancel",
-    "contactSupport": "Get Help",
-    "disable": "Turn Off",
-    "enable": "Turn On",
-    "generateWill": "Create Your Will",
-    "goBack": "Go Back",
-    "markImportant": "This Is Important",
-    "next": "Continue",
-    "previous": "Back",
-    "refresh": "Refresh",
-    "save": "Keep This Safe",
-    "saveAsset": "Save This Information",
-    "saving": "Saving...",
-    "updateAsset": "Update This",
-    "upload": "Add Document",
-    "viewDetails": "See More",
-    "accept": "Accept",
-    "accepted": "Accepted",
-    "account": "Account",
-    "activate": "Activate",
-    "add": "Add",
-    "additional": "More",
-    "adjust": "Adjust",
-    "advanced": "Advanced Options",
-    "align": "Align",
-    "allowed": "Allowed",
-    "alter": "Change",
-    "approve": "Approve",
-    "approved": "Approved",
-    "archive": "Store Away",
-    "arrange": "Organize",
-    "authenticate": "Verify It's You",
-    "authenticated": "Verified",
-    "authorize": "Give Permission",
-    "authorized": "Permission Given",
-    "automatic": "Automatic",
-    "auxiliary": "Extra",
-    "available": "Available",
-    "backedUp": "Safely Backed Up",
-    "basic": "Simple",
-    "begin": "Let's Start",
-    "blocked": "Blocked",
-    "bonus": "Extra",
-    "bottom": "Bottom",
-    "browse": "Look Through",
-    "center": "Center",
-    "change": "Change",
-    "choose": "Choose",
-    "clear": "Clear",
-    "clone": "Make a Copy",
-    "close": "Close",
-    "collapse": "Hide Details",
-    "compatible": "Works With",
-    "complete": "All Done",
-    "configuration": "Settings",
-    "configure": "Set Up",
-    "confirm": "Yes, I'm Sure",
-    "confirmed": "Confirmed",
-    "content": "Content",
-    "convert": "Change Format",
-    "copy": "Copy",
-    "create": "Create New",
-    "crop": "Crop",
-    "current": "Current",
-    "custom": "Custom",
-    "customize": "Make It Yours",
-    "cut": "Cut",
-    "deactivate": "Turn Off",
-    "decline": "No Thanks",
-    "declined": "Declined",
-    "decode": "Decode",
-    "decrypt": "Unlock",
-    "default": "Standard",
-    "delete": "Remove This",
-    "denied": "Not Allowed",
-    "deny": "Don't Allow",
-    "deselect": "Unselect",
-    "disabled": "Turned Off",
-    "done": "All Set",
-    "downgrade": "Use Simpler Version",
-    "download": "Download",
-    "drag": "Drag",
-    "drop": "Drop Here",
-    "duplicate": "Make a Copy",
-    "edit": "Update This",
-    "editable": "Can Be Changed",
-    "enabled": "Turned On",
-    "encode": "Encode",
-    "encrypt": "Keep Secure",
-    "encrypted": "Secured",
-    "end": "End",
-    "enhance": "Improve",
-    "enterprise": "Business",
-    "exitFullscreen": "Exit Full Screen",
-    "expand": "Show More",
-    "expert": "Advanced",
-    "export": "Download",
-    "extra": "Additional",
-    "filter": "Show Only",
-    "find": "Search For",
-    "finish": "Complete",
-    "flip": "Flip",
-    "footer": "Bottom",
-    "forbidden": "Not Allowed",
-    "format": "Format",
-    "full": "Full",
-    "fullscreen": "Full Screen",
-    "grant": "Give Access",
-    "granted": "Access Given",
-    "group": "Group Together",
-    "hash": "Security Code",
-    "header": "Top",
-    "hide": "Hide",
-    "historical": "Past",
-    "import": "Bring In",
-    "improve": "Make Better",
-    "incompatible": "Won't Work",
-    "incomplete": "Not Finished",
-    "insecure": "Not Secure",
-    "internationalize": "Translate",
-    "invalid": "Not Valid",
-    "justify": "Align Text",
-    "latest": "Most Recent",
-    "left": "Left",
-    "localize": "Translate",
-    "lock": "Lock",
-    "login": "Sign In",
-    "logout": "Sign Out",
-    "main": "Main",
-    "mandatory": "Required",
-    "manual": "Do It Yourself",
-    "maximize": "Make Bigger",
-    "menu": "Menu",
-    "middle": "Middle",
-    "minimize": "Make Smaller",
-    "modify": "Change",
-    "move": "Move",
-    "navigation": "Menu",
-    "newest": "Most Recent",
-    "nonEditable": "Can't Be Changed",
-    "notBackedUp": "Not Backed Up Yet",
-    "notSynced": "Not Updated Yet",
-    "oldest": "Oldest",
-    "open": "Open",
-    "optimize": "Improve",
-    "optional": "Not Required",
-    "options": "Choices",
-    "organize": "Organize",
-    "outdated": "Needs Update",
-    "parse": "Read",
-    "partial": "Some",
-    "paste": "Paste",
-    "pause": "Pause",
-    "permanent": "Always",
-    "permitted": "Allowed",
-    "personalize": "Make It Yours",
-    "pick": "Choose",
-    "play": "Play",
-    "preferences": "Your Choices",
-    "premium": "Full Features",
-    "prepare": "Get Ready",
-    "primary": "Main",
-    "professional": "Expert",
-    "profile": "Your Information",
-    "publish": "Share",
-    "read": "Read",
-    "readOnly": "View Only",
-    "readWrite": "Can Edit",
-    "ready": "Ready",
-    "recent": "Recent",
-    "recommended": "We Suggest",
-    "register": "Sign Up",
-    "reject": "Don't Accept",
-    "rejected": "Not Accepted",
-    "reload": "Refresh",
-    "remove": "Remove",
-    "required": "Needed",
-    "reset": "Start Over",
-    "resize": "Change Size",
-    "restart": "Start Again",
-    "restore": "Bring Back",
-    "resume": "Continue",
-    "retry": "Try Again",
-    "right": "Right",
-    "rotate": "Turn",
-    "scale": "Resize",
-    "search": "Search",
-    "secondary": "Other",
-    "secure": "Safe",
-    "select": "Choose",
-    "semiAutomatic": "Partly Automatic",
-    "settings": "Your Preferences",
-    "setup": "Set This Up",
-    "show": "Show",
-    "sidebar": "Side Menu",
-    "sign": "Sign",
-    "signin": "Sign In",
-    "signout": "Sign Out",
-    "signup": "Create Account",
-    "sort": "Organize",
-    "standard": "Regular",
-    "start": "Begin",
-    "stop": "Stop",
-    "submit": "Send",
-    "suggested": "We Recommend",
-    "supplementary": "Extra",
-    "supported": "Works With",
-    "synced": "Up to Date",
-    "temporary": "For Now",
-    "tertiary": "Other Option",
-    "top": "Top",
-    "transform": "Change",
-    "translate": "Translate",
-    "unarchive": "Bring Back",
-    "unauthenticated": "Not Signed In",
-    "unauthorized": "Not Allowed",
-    "unavailable": "Not Available",
-    "unconfirmed": "Not Confirmed",
-    "unencrypted": "Not Secure",
-    "ungroup": "Separate",
-    "unlock": "Unlock",
-    "unpublish": "Make Private",
-    "unsupported": "Not Compatible",
-    "unvalidated": "Not Checked",
-    "unverified": "Not Verified",
-    "upToDate": "Current",
-    "update": "Update",
-    "upgrade": "Get Better Version",
-    "valid": "Valid",
-    "validate": "Check This",
-    "validated": "Checked",
-    "verified": "Verified",
-    "verify": "Verify",
-    "view": "Look At",
-    "viewOnly": "Just Looking",
-    "zoomIn": "Make Bigger",
-    "zoomOut": "Make Smaller"
-  },
-  "alerts": {
-    "description": "[CS] Description",
-    "dismiss": "[CS] Dismiss",
-    "errors": {
-      "dismissFailed": "[CS] Dismiss failed",
-      "loadFailed": "[CS] Load failed",
-      "renewFailed": "[CS] Renew failed",
-      "snoozeFailed": "[CS] Snooze failed"
-    },
-    "expiresOn": "[CS] Expires on",
-    "markAsRenewed": "[CS] Mark as renewed",
-    "messages": {
-      "dismissed": "[CS] Dismissed",
-      "markedAsRenewed": "[CS] Marked as renewed",
-      "snoozed": "[CS] Snoozed"
-    },
-    "noActiveAlerts": "[CS] No active alerts",
-    "noDismissedAlerts": "[CS] No dismissed alerts",
-    "noSnoozedAlerts": "[CS] No snoozed alerts",
-    "renewalInstructions": "[CS] Renewal instructions",
-    "snooze7Days": "[CS] Snooze7 days",
-    "snoozedUntil": "[CS] Snoozed until",
-    "tabs": {
-      "active": "[CS] Active",
-      "dismissed": "[CS] Dismissed",
-      "snoozed": "[CS] Snoozed"
-    },
-    "title": "[CS] Title",
-    "types": {
-      "expired": "[CS] Expired",
-      "expiring30": "[CS] Expiring30",
-      "expiring7": "[CS] Expiring7",
-      "expiring90": "[CS] Expiring90"
-    },
-    "unread": "[CS] Unread",
-    "unsnooze": "[CS] Unsnooze"
-  },
-  "analytics": {
-    "analyticsDashboard": {
-      "3_3_7": "[CS] 3 3 7",
-      "drop_off_8": "[CS] Drop off 8",
-      "from_last_period_1": "[CS] From last period 1"
-    },
-    "analyticsDemo": {
-      "analytics_demo_tracking_disabl_1": "[CS] Analytics demo tracking disabl 1",
-      "analytics_event_generator_3": "[CS] Analytics event generator 3",
-      "enable_analytics_tracking_in_y_2": "[CS] Enable analytics tracking in y 2",
-      "events_are_only_sent_when_anal_9": "[CS] Events are only sent when anal 9",
-      "events_sent_5": "[CS] Events sent 5",
-      "generate_random_events_6": "[CS] Generate random events 6",
-      "generate_test_events_to_see_re_4": "[CS] Generate test events to see re 4",
-      "open_the_analytics_dashboard_i_8": "[CS] Open the analytics dashboard i 8",
-      "track_milestone_7": "[CS] Track milestone 7"
-    },
-    "charts": {
-      "emotionalJourney": {
-        "description": "[CS] Description",
-        "title": "[CS] Title"
-      },
-      "featureUsage": {
-        "adoption": "[CS] Adoption",
-        "description": "[CS] Description",
-        "title": "[CS] Title",
-        "usage": "[CS] Usage"
-      },
-      "onboardingFunnel": {
-        "description": "[CS] Description",
-        "title": "[CS] Title"
-      },
-      "userActivity": {
-        "active": "[CS] Active",
-        "description": "[CS] Description",
-        "new": "[CS] New",
-        "title": "[CS] Title"
-      }
-    },
-    "demo": {
-      "startTimer": "[CS] Start timer",
-      "stopTimer": "[CS] Stop timer"
-    },
-    "disabled": {
-      "alert": {
-        "description": "[CS] Description",
-        "title": "[CS] Title"
-      },
-      "privacy": {
-        "description": "[CS] Description",
-        "item1": "[CS] Item1",
-        "item2": "[CS] Item2",
-        "item3": "[CS] Item3",
-        "item4": "[CS] Item4",
-        "learnMore": "[CS] Learn more",
-        "manageConsent": "[CS] Manage consent",
-        "noItem1": "[CS] No item1",
-        "noItem2": "[CS] No item2",
-        "noItem3": "[CS] No item3",
-        "title": "[CS] Title",
-        "whatWeDontTrack": "[CS] What we dont track",
-        "whatWeTrack": "[CS] What we track"
-      },
-      "subtitle": "[CS] Subtitle",
-      "title": "[CS] Title"
-    },
-    "emotions": {
-      "insights": "[CS] Insights"
-    },
-    "eventStream": {
-      "description": "[CS] Description",
-      "empty": "[CS] Empty",
-      "pause": "[CS] Pause",
-      "resume": "[CS] Resume",
-      "title": "[CS] Title"
-    },
-    "insights": {
-      "highEngagement": {
-        "description": "[CS] Description",
-        "title": "[CS] Title"
-      },
-      "lowCompletion": {
-        "action": "[CS] Action",
-        "description": "[CS] Description",
-        "title": "[CS] Title"
-      },
-      "opportunity": {
-        "action": "[CS] Action",
-        "description": "[CS] Description",
-        "title": "[CS] Title"
-      },
-      "title": "[CS] Title"
-    },
-    "metrics": {
-      "dailyActiveUsers": "[CS] Daily active users",
-      "onboardingCompletion": "[CS] Onboarding completion",
-      "taskCompletion": "[CS] Task completion",
-      "timeToFirstAction": "[CS] Time to first action"
-    },
-    "subtitle": "[CS] Subtitle",
-    "tabs": {
-      "emotions": "[CS] Emotions",
-      "events": "[CS] Events",
-      "funnel": "[CS] Funnel",
-      "insights": "[CS] Insights"
-    },
-    "timeRange": {
-      "24h": "[CS] 24h",
-      "30d": "[CS] 30d",
-      "7d": "[CS] 7d"
-    },
-    "title": "[CS] Title"
-  },
-  "annualReview": {
-    "armory": {
-      "categories": {
-        "bankAccounts": "[CS] Bank accounts",
-        "realEstate": "[CS] Real estate"
-      },
-      "description": "[CS] Description",
-      "ownershipQuestion": "[CS] Ownership question",
-      "status": {
-        "current": "[CS] Current",
-        "needsUpdate": "[CS] Needs update"
-      },
-      "title": "[CS] Title"
-    },
-    "beneficiaries": {
-      "confirmationQuestion": "[CS] Confirmation question",
-      "description": "[CS] Description",
-      "details": {
-        "percentage": "[CS] Percentage",
-        "primary": "[CS] Primary"
-      },
-      "status": {
-        "current": "[CS] Current"
-      },
-      "title": "[CS] Title"
-    },
-    "buttons": {
-      "back": "[CS] Back",
-      "confirm": "[CS] Confirm",
-      "finish": "[CS] Finish",
-      "next": "[CS] Next",
-      "save": "[CS] Save",
-      "update": "[CS] Update"
-    },
-    "commandRoster": {
-      "description": "[CS] Description",
-      "details": {
-        "executor": "[CS] Executor",
-        "guardian": "[CS] Guardian"
-      },
-      "executorQuestion": "[CS] Executor question",
-      "status": {
-        "current": "[CS] Current",
-        "needsUpdate": "[CS] Needs update"
-      },
-      "title": "[CS] Title"
-    },
-    "complete": {
-      "changes": "[CS] Changes",
-      "description": "[CS] Description",
-      "message": "[CS] Message",
-      "nextReview": "[CS] Next review",
-      "noChanges": "[CS] No changes",
-      "reminder": "[CS] Reminder",
-      "summary": "[CS] Summary",
-      "title": "[CS] Title"
-    },
-    "description": "[CS] Description",
-    "progress": {
-      "completed": "[CS] Completed",
-      "estimatedTime": "[CS] Estimated time",
-      "title": "[CS] Title",
-      "totalSteps": "[CS] Total steps"
-    },
-    "status": {
-      "completed": "[CS] Completed"
-    },
-    "step1": {
-      "description": "[CS] Description",
-      "title": "[CS] Title"
-    },
-    "step2": {
-      "description": "[CS] Description",
-      "title": "[CS] Title"
-    },
-    "step3": {
-      "description": "[CS] Description",
-      "title": "[CS] Title"
-    },
-    "step4": {
-      "description": "[CS] Description",
-      "title": "[CS] Title"
-    },
-    "subtitle": "[CS] Subtitle",
-    "title": "[CS] Title"
-  },
-  "app": {
-    "name": "Name",
-    "tagline": "Tagline"
-  },
-  "assets": {
-    "assetOverview": {
-      "100_2": "[CS] 100 2",
-      "50_4": "[CS] 50 4"
-    }
-  },
-  "auth": {
-    "loginButton": "[CS] Login button",
-    "signUpLink": "[CS] Sign up link",
-    "signupButton": "[CS] Signup button"
-  },
-  "common": {
-    "footer": {
-      "community_8": "[CS] Community 8",
-      "contact_7": "[CS] Contact 7",
-      "dashboard_3": "[CS] Dashboard 3",
-      "data_protection_11": "[CS] Data protection 11",
-      "guardians_2": "[CS] Guardians 2",
-      "guides_6": "[CS] Guides 6",
-      "help_5": "[CS] Help 5",
-      "privacy_policy_9": "[CS] Privacy policy 9",
-      "security_4": "[CS] Security 4",
-      "terms_10": "[CS] Terms 10",
-      "vault_1": "[CS] Vault 1"
-    },
-    "goBack": "[CS] Go back",
-    "goHome": "[CS] Go home",
-    "improveReadiness": "[CS] Improve readiness",
-    "pagination": {
-      "morePages": "[CS] More pages",
-      "next": "[CS] Next",
-      "previous": "[CS] Previous"
-    },
-    "routeErrorBoundary": {
-      "code_1": "[CS] Code 1",
-      "reload_page_2": "[CS] Reload page 2",
-      "technical_details_3": "[CS] Technical details 3"
-    },
-    "ui": {
-      "close": "[CS] Close",
-      "goToNextPage": "[CS] Go to next page",
-      "goToPreviousPage": "[CS] Go to previous page",
-      "more": "[CS] More",
-      "nextSlide": "[CS] Next slide",
-      "previousSlide": "[CS] Previous slide",
-      "toggleSidebar": "[CS] Toggle sidebar"
-    },
-    "viewDetails": "[CS] View details"
-  },
-  "complexityReduction": {
-    "actions": {
-      "completeStep": "[CS] Complete step",
-      "iNeedHelp": "[CS] I need help",
-      "nextStep": "[CS] Next step",
-      "previousStep": "[CS] Previous step",
-      "showMeHow": "[CS] Show me how",
-      "skipStep": "[CS] Skip step"
-    },
-    "benefits": {
-      "confidence": {
-        "description": "[CS] Description",
-        "title": "[CS] Title"
-      },
-      "family": {
-        "description": "[CS] Description",
-        "title": "[CS] Title"
-      },
-      "overwhelm": {
-        "description": "[CS] Description",
-        "title": "[CS] Title"
-      },
-      "progress": {
-        "description": "[CS] Description",
-        "title": "[CS] Title"
-      },
-      "title": "[CS] Title"
-    },
-    "description": "[CS] Description",
-    "features": {
-      "difficultyLevels": {
-        "description": "[CS] Description",
-        "title": "[CS] Title"
-      },
-      "helpAvailable": {
-        "description": "[CS] Description",
-        "title": "[CS] Title"
-      },
-      "progressTracking": {
-        "description": "[CS] Description",
-        "title": "[CS] Title"
-      },
-      "stepByStep": {
-        "description": "[CS] Description",
-        "title": "[CS] Title"
-      },
-      "timeEstimation": {
-        "description": "[CS] Description",
-        "title": "[CS] Title"
-      },
-      "title": "[CS] Title"
-    },
-    "progress": {
-      "completed": "[CS] Completed",
-      "title": "[CS] Title",
-      "totalSteps": "[CS] Total steps"
-    },
-    "steps": {
-      "digitalAssets": {
-        "complexity": "[CS] Complexity",
-        "timeRequired": "[CS] Time required",
-        "title": "[CS] Title",
-        "whatWeDo": "[CS] What we do",
-        "whatYouDo": "[CS] What you do",
-        "why": "[CS] Why"
-      },
-      "emergencyContacts": {
-        "complexity": "[CS] Complexity",
-        "timeRequired": "[CS] Time required",
-        "title": "[CS] Title",
-        "whatWeDo": "[CS] What we do",
-        "whatYouDo": "[CS] What you do",
-        "why": "[CS] Why"
-      },
-      "familyInstructions": {
-        "complexity": "[CS] Complexity",
-        "timeRequired": "[CS] Time required",
-        "title": "[CS] Title",
-        "whatWeDo": "[CS] What we do",
-        "whatYouDo": "[CS] What you do",
-        "why": "[CS] Why"
-      },
-      "identifyBankAccount": {
-        "complexity": "[CS] Complexity",
-        "timeRequired": "[CS] Time required",
-        "title": "[CS] Title",
-        "whatWeDo": "[CS] What we do",
-        "whatYouDo": "[CS] What you do",
-        "why": "[CS] Why"
-      },
-      "insurancePolicies": {
-        "complexity": "[CS] Complexity",
-        "timeRequired": "[CS] Time required",
-        "title": "[CS] Title",
-        "whatWeDo": "[CS] What we do",
-        "whatYouDo": "[CS] What you do",
-        "why": "[CS] Why"
-      },
-      "legalDocuments": {
-        "complexity": "[CS] Complexity",
-        "timeRequired": "[CS] Time required",
-        "title": "[CS] Title",
-        "whatWeDo": "[CS] What we do",
-        "whatYouDo": "[CS] What you do",
-        "why": "[CS] Why"
-      }
-    },
-    "subtitle": "[CS] Subtitle",
-    "title": "[CS] Title"
-  },
-  "component": {
-    "fields": {
-      "description": "[CS] Description",
-      "lastUpdated": "[CS] Last updated",
-      "name": "[CS] Name"
-    },
-    "messages": {
-      "noData": "[CS] No data"
-    },
-    "title": "[CS] Title"
-  },
-  "consent": {
-    "banner": {
-      "acceptAll": "[CS] Accept all",
-      "cookiePolicy": "[CS] Cookie policy",
-      "customize": "[CS] Customize",
-      "description": "[CS] Description",
-      "privacyPolicy": "[CS] Privacy policy",
-      "rejectAll": "[CS] Reject all",
-      "title": "[CS] Title"
-    },
-    "cookies": {
-      "analytics": {
-        "description": "[CS] Description",
-        "items": {
-          "featureUsage": "[CS] Feature usage",
-          "pageViews": "[CS] Page views",
-          "performance": "[CS] Performance"
-        },
-        "privacy": "[CS] Privacy",
-        "privacyNote": "[CS] Privacy note",
-        "title": "[CS] Title"
-      },
-      "marketing": {
-        "description": "[CS] Description",
-        "items": {
-          "campaigns": "[CS] Campaigns",
-          "retargeting": "[CS] Retargeting"
-        },
-        "partners": "[CS] Partners",
-        "partnersList": "[CS] Partners list",
-        "title": "[CS] Title"
-      },
-      "necessary": {
-        "description": "[CS] Description",
-        "items": {
-          "authentication": "[CS] Authentication",
-          "preferences": "[CS] Preferences",
-          "security": "[CS] Security"
-        },
-        "retention": "[CS] Retention",
-        "retentionPeriod": "[CS] Retention period",
-        "title": "[CS] Title"
-      },
-      "preferences": {
-        "description": "[CS] Description",
-        "items": {
-          "language": "[CS] Language",
-          "layout": "[CS] Layout",
-          "theme": "[CS] Theme"
-        },
-        "title": "[CS] Title"
-      }
-    },
-    "details": {
-      "cancel": "[CS] Cancel",
-      "dataCollected": {
-        "item1": "[CS] Item1",
-        "item2": "[CS] Item2",
-        "item3": "[CS] Item3",
-        "item4": "[CS] Item4",
-        "title": "[CS] Title"
-      },
-      "description": "[CS] Description",
-      "savePreferences": "[CS] Save preferences",
-      "title": "[CS] Title",
-      "yourRights": {
-        "item1": "[CS] Item1",
-        "item2": "[CS] Item2",
-        "item3": "[CS] Item3",
-        "item4": "[CS] Item4",
-        "title": "[CS] Title"
-      }
-    },
-    "settings": {
-      "analytics": {
-        "description": "[CS] Description",
-        "label": "[CS] Label"
-      },
-      "consentGiven": "[CS] Consent given",
-      "description": "[CS] Description",
-      "lastUpdated": "[CS] Last updated",
-      "marketing": {
-        "description": "[CS] Description",
-        "label": "[CS] Label"
-      },
-      "preferences": {
-        "description": "[CS] Description",
-        "label": "[CS] Label"
-      },
-      "title": "[CS] Title",
-      "withdrawConsent": "[CS] Withdraw consent"
-    }
-  },
-  "cookies": {
-    "policy": {
-      "analytics": {
-        "description": "[CS] Description",
-        "examples": {
-          "ga": "[CS] Ga",
-          "gid": "[CS] Gid",
-          "session": "[CS] Session"
-        },
-        "purpose": "[CS] Purpose",
-        "title": "[CS] Title"
-      },
-      "categories": {
-        "title": "[CS] Title"
-      },
-      "contact": {
-        "address": "[CS] Address",
-        "addressDetails": "[CS] Address details",
-        "description": "[CS] Description",
-        "email": "[CS] Email",
-        "title": "[CS] Title"
-      },
-      "examples": "[CS] Examples",
-      "lastUpdated": "[CS] Last updated",
-      "manage": {
-        "title": "[CS] Title"
-      },
-      "marketing": {
-        "description": "[CS] Description",
-        "examples": {
-          "facebook": "[CS] Facebook",
-          "google": "[CS] Google"
-        },
-        "purpose": "[CS] Purpose",
-        "title": "[CS] Title"
-      },
-      "necessary": {
-        "description": "[CS] Description",
-        "examples": {
-          "auth": "[CS] Auth",
-          "consent": "[CS] Consent",
-          "csrf": "[CS] Csrf",
-          "session": "[CS] Session"
-        },
-        "purpose": "[CS] Purpose",
-        "title": "[CS] Title"
-      },
-      "overview": {
-        "intro": "[CS] Intro",
-        "point1": "[CS] Point1",
-        "point2": "[CS] Point2",
-        "point3": "[CS] Point3",
-        "point4": "[CS] Point4",
-        "title": "[CS] Title"
-      },
-      "preferences": {
-        "description": "[CS] Description",
-        "examples": {
-          "language": "[CS] Language",
-          "theme": "[CS] Theme",
-          "ui": "[CS] Ui"
-        },
-        "purpose": "[CS] Purpose",
-        "title": "[CS] Title"
-      },
-      "purpose": "[CS] Purpose",
-      "required": "[CS] Required",
-      "subtitle": "[CS] Subtitle",
-      "title": "[CS] Title",
-      "yourRights": {
-        "description": "[CS] Description",
-        "right1": "[CS] Right1",
-        "right2": "[CS] Right2",
-        "right3": "[CS] Right3",
-        "right4": "[CS] Right4",
-        "title": "[CS] Title"
-      }
-    }
-  },
-  "countryLanguage": {
-    "chooseLang": "[CS] Choose lang",
-    "confirm": "[CS] Confirm",
-    "confirmAndRedirect": "[CS] Confirm and redirect",
-    "description": "[CS] Description",
-    "detectedLocation": "[CS] Detected location",
-    "domainSuggestion": "[CS] Domain suggestion",
-    "selectCountry": "[CS] Select country",
-    "selectLanguage": "[CS] Select language",
-    "title": "[CS] Title"
-  },
-  "createTimeCapsuleModal": {
-    "buttons": {
-      "cancel": "[CS] Cancel",
-      "create": "[CS] Create",
-      "recordVideo": "[CS] Record video",
-      "saving": "[CS] Saving",
-      "update": "[CS] Update"
-    },
-    "characterCount": "[CS] Character count",
-    "description": "[CS] Description",
-    "errors": {
-      "fileTooLarge": "[CS] File too large",
-      "invalidFileType": "[CS] Invalid file type",
-      "noFile": "[CS] No file",
-      "noMessage": "[CS] No message",
-      "noRecipients": "[CS] No recipients",
-      "noTitle": "[CS] No title",
-      "noUnlockDate": "[CS] No unlock date",
-      "saveFailed": "[CS] Save failed",
-      "updateFailed": "[CS] Update failed"
-    },
-    "fileUpload": {
-      "clickToUpload": "[CS] Click to upload",
-      "dragAndDrop": "[CS] Drag and drop",
-      "fileSizeMB": "[CS] File size m b",
-      "maxSize": "[CS] Max size"
-    },
-    "labels": {
-      "deliveryQuestion": "[CS] Delivery question",
-      "messageType": "[CS] Message type",
-      "recipients": "[CS] Recipients",
-      "title": "[CS] Title",
-      "unlockDate": "[CS] Unlock date",
-      "uploadFile": "[CS] Upload file",
-      "yourMessage": "[CS] Your message"
-    },
-    "messageTypes": {
-      "audio": "[CS] Audio",
-      "photo": "[CS] Photo",
-      "text": "[CS] Text",
-      "video": "[CS] Video"
-    },
-    "placeholders": {
-      "message": "[CS] Message",
-      "selectDate": "[CS] Select date",
-      "title": "[CS] Title"
-    },
-    "premium": {
-      "upgradeNow": "[CS] Upgrade now",
-      "videoMessage": "[CS] Video message"
-    },
-    "recipients": {
-      "noTrustedPeople": "[CS] No trusted people",
-      "selected": "[CS] Selected"
-    },
-    "success": {
-      "created": "[CS] Created",
-      "updated": "[CS] Updated"
-    },
-    "titleCreate": "[CS] Title create",
-    "titleEdit": "[CS] Title edit",
-    "unlockConditions": {
-      "afterPassing": "[CS] After passing",
-      "onDate": "[CS] On date"
-    },
-    "upgrade_1": "[CS] Upgrade 1"
-  },
-  "dataTransparency": {
-    "dataFlow": {
-      "collection": "[CS] Collection",
-      "processing": "[CS] Processing",
-      "sharing": "[CS] Sharing",
-      "storage": "[CS] Storage",
-      "whereDataLives": "[CS] Where data lives"
-    },
-    "dataOwnership": {
-      "description": "[CS] Description",
-      "downloadButton": "[CS] Download button",
-      "title": "[CS] Title"
-    },
-    "description": "[CS] Description",
-    "loadingError": "[CS] Loading error",
-    "loadingMessage": "[CS] Loading message",
-    "recentActivity": {
-      "premiumText": "[CS] Premium text",
-      "premiumTitle": "[CS] Premium title",
-      "title": "[CS] Title"
-    },
-    "title": "[CS] Title"
-  },
-  "debug": {
-    "panel": {
-      "actions": {
-        "clearAllErrors": "[CS] Clear all errors",
-        "downloadErrors": "[CS] Download errors"
-      },
-      "error": {
-        "errorMessage": "[CS] Error message",
-        "noMessage": "[CS] No message",
-        "unknownError": "[CS] Unknown error"
-      },
-      "errorCount": "[CS] Error count",
-      "fields": {
-        "path": "[CS] Path",
-        "query": "[CS] Query",
-        "url": "[CS] Url",
-        "userAgent": "[CS] User agent",
-        "viewport": "[CS] Viewport"
-      },
-      "messages": {
-        "errorCopied": "[CS] Error copied",
-        "errorsCleared": "[CS] Errors cleared",
-        "errorsDownloaded": "[CS] Errors downloaded"
-      },
-      "recentErrors": "[CS] Recent errors",
-      "sections": {
-        "browserInfo": "[CS] Browser info",
-        "context": "[CS] Context",
-        "location": "[CS] Location",
-        "stackTrace": "[CS] Stack trace",
-        "time": "[CS] Time"
-      },
-      "tabs": {
-        "details": "[CS] Details",
-        "list": "[CS] List"
-      },
-      "title": "[CS] Title"
-    },
-    "translationTest": {
-      "available_languages_3": "[CS] Available languages 3",
-      "current_language_2": "[CS] Current language 2",
-      "dashboard_stats_translations_4": "[CS] Dashboard stats translations 4",
-      "exists_5": "[CS] Exists 5",
-      "raw_resource_check_6": "[CS] Raw resource check 6",
-      "translation_debug_test_1": "[CS] Translation debug test 1"
-    }
-  },
-  "errorTest": {
-    "logCriticalError": "[CS] Log critical error",
-    "logRegularError": "[CS] Log regular error",
-    "title": "[CS] Title",
-    "triggerAlert": "[CS] Trigger alert",
-    "triggerAsyncError": "[CS] Trigger async error",
-    "triggerSyncError": "[CS] Trigger sync error"
-  },
-  "errors": {
-    "dataNotFound": "[CS] Data not found",
-    "networkError": "[CS] Network error",
-    "permissionDenied": "[CS] Permission denied",
-    "unknown": "[CS] Unknown"
-  },
-  "firstTimeGuide": {
-    "getStarted": "[CS] Get started",
-    "step1": {
-      "description": "[CS] Description",
-      "detail1": "[CS] Detail1",
-      "detail2": "[CS] Detail2",
-      "detail3": "[CS] Detail3",
-      "title": "[CS] Title"
-    },
-    "step2": {
-      "description": "[CS] Description",
-      "detail1": "[CS] Detail1",
-      "detail2": "[CS] Detail2",
-      "detail3": "[CS] Detail3",
-      "title": "[CS] Title"
-    },
-    "step3": {
-      "description": "[CS] Description",
-      "detail1": "[CS] Detail1",
-      "detail2": "[CS] Detail2",
-      "detail3": "[CS] Detail3",
-      "title": "[CS] Title"
-    },
-    "tip": {
-      "description": "[CS] Description",
-      "title": "[CS] Title"
-    }
-  },
-  "footer": {
-    "copyright": "© {{year}} LegacyGuard. All rights reserved.",
-    "credibility": {
-      "trustedByExperts": "Trusted by Legal Experts & Families Worldwide"
-    },
-    "description": "Securing legacies, protecting families, preserving memories.",
-    "legal": {
-      "dataProtection": "Data Protection",
-      "privacyPolicy": "Privacy Policy",
-      "termsOfService": "Terms of Service",
-      "title": "Legal"
-    },
-    "platform": {
-      "dashboard": "Dashboard",
-      "guardianNetwork": "Guardian Network",
-      "heritageVault": "Heritage Vault",
-      "security": "Security",
-      "title": "Platform"
-    },
-    "support": {
-      "community": "Community",
-      "contactUs": "Contact Us",
-      "helpCenter": "Help Center",
-      "title": "Support",
-      "userGuides": "User Guides"
-    },
-    "tagline": "Secure your legacy, protect your family"
-  },
-  "general": {
-    "title": "[CS] Title"
-  },
-  "guardianUpload": {
-    "addButton": "[CS] Add button",
-    "addTitle": "[CS] Add title",
-    "added": "[CS] Added",
-    "countryDescription": "[CS] Country description",
-    "countryLabel": "[CS] Country label",
-    "countryPlaceholder": "[CS] Country placeholder",
-    "description": "[CS] Description",
-    "editTitle": "[CS] Edit title",
-    "emailLabel": "[CS] Email label",
-    "emailPlaceholder": "[CS] Email placeholder",
-    "error": "[CS] Error",
-    "errors": {
-      "connectionError": "[CS] Connection error",
-      "duplicateError": "[CS] Duplicate error",
-      "permissionError": "[CS] Permission error",
-      "requiredDataNotFound": "[CS] Required data not found",
-      "saveError": "[CS] Save error",
-      "unknownError": "[CS] Unknown error"
-    },
-    "fullNameLabel": "[CS] Full name label",
-    "fullNamePlaceholder": "[CS] Full name placeholder",
-    "loginToSave": "[CS] Login to save",
-    "phoneLabel": "[CS] Phone label",
-    "phonePlaceholder": "[CS] Phone placeholder",
-    "relationshipLabel": "[CS] Relationship label",
-    "relationshipPlaceholder": "[CS] Relationship placeholder",
-    "relationships": {
-      "child": "[CS] Child",
-      "friend": "[CS] Friend",
-      "legalProfessional": "[CS] Legal professional",
-      "other": "[CS] Other",
-      "parent": "[CS] Parent",
-      "sibling": "[CS] Sibling",
-      "spouse": "[CS] Spouse"
-    },
-    "roles": {
-      "emergencyContact": "[CS] Emergency contact",
-      "executorOfWill": "[CS] Executor of will",
-      "financialPowerOfAttorney": "[CS] Financial power of attorney",
-      "guardianForChildren": "[CS] Guardian for children",
-      "healthcareProxy": "[CS] Healthcare proxy",
-      "trustee": "[CS] Trustee"
-    },
-    "rolesTitle": "[CS] Roles title",
-    "saving": "[CS] Saving",
-    "success": "[CS] Success",
-    "updateButton": "[CS] Update button",
-    "updated": "[CS] Updated"
-  },
-  "index": {
-    "startBuilding": "[CS] Start building",
-    "welcome": "[CS] Welcome"
-  },
-  "justInTimeAccess": {
-    "accessLogged": "[CS] Access logged",
-    "accessTime": "[CS] Access time",
-    "actions": {
-      "cancel": "[CS] Cancel",
-      "close": "[CS] Close",
-      "verify": "[CS] Verify",
-      "verifying": "[CS] Verifying"
-    },
-    "description": "[CS] Description",
-    "errors": {
-      "incorrectPassword": "[CS] Incorrect password",
-      "noDataFound": "[CS] No data found",
-      "retrievalFailed": "[CS] Retrieval failed",
-      "verificationFailed": "[CS] Verification failed"
-    },
-    "executor": "[CS] Executor",
-    "fields": {
-      "accountName": "[CS] Account name",
-      "accountNumber": "[CS] Account number",
-      "additionalNotes": "[CS] Additional notes",
-      "password": "[CS] Password",
-      "passwordField": "[CS] Password field",
-      "pin": "[CS] Pin",
-      "username": "[CS] Username"
-    },
-    "logAction": "[CS] Log action",
-    "noSensitiveInfo": "[CS] No sensitive info",
-    "placeholders": {
-      "enterPassword": "[CS] Enter password"
-    },
-    "securityNotice": "[CS] Security notice",
-    "title": "[CS] Title",
-    "viewAccountDetails": "[CS] View account details"
-  },
-  "landing": {
-    "pricingSection": {
-      "upgrade_with_stripe_1": "[CS] Upgrade with stripe 1"
-    }
-  },
-  "languages": {
-    "en": "English",
-    "selectLanguage": "Select language",
-    "sk": "Slovenčina"
-  },
-  "layout": {
-    "marketingLayout": {
-      "login_1": "[CS] Login 1",
-      "register_2": "[CS] Register 2"
-    }
-  },
-  "legalConsultation": {
-    "types": {
-      "beneficiaryAdvice": {
-        "description": "[CS] Description",
-        "label": "[CS] Label"
-      },
-      "estatePlanningQA": {
-        "description": "[CS] Description",
-        "label": "[CS] Label"
-      },
-      "executorGuidance": {
-        "description": "[CS] Description",
-        "label": "[CS] Label"
-      },
-      "taxPlanning": {
-        "description": "[CS] Description",
-        "label": "[CS] Label"
-      },
-      "trustSetup": {
-        "description": "[CS] Description",
-        "label": "[CS] Label"
-      },
-      "willReview": {
-        "description": "[CS] Description",
-        "label": "[CS] Label"
-      }
-    }
-  },
-  "legalConsultationModal": {
-    "500_characters_minimum_20_10": "[CS] 500 characters minimum 20 10",
-    "consultation_type_6": "[CS] Consultation type 6",
-    "follow_up_clarification_includ_14": "[CS] Follow up clarification includ 14",
-    "get_expert_legal_advice_from_o_5": "[CS] Get expert legal advice from o 5",
-    "one_time_consultation_fee_11": "[CS] One time consultation fee 11",
-    "please_describe_your_legal_que_9": "[CS] Please describe your legal que 9",
-    "please_provide_more_detail_in__3": "[CS] Please provide more detail in  3",
-    "please_provide_your_legal_ques_2": "[CS] Please provide your legal ques 2",
-    "please_select_a_consultation_t_1": "[CS] Please select a consultation t 1",
-    "proceed_to_payment_16": "[CS] Proceed to payment 16",
-    "request_a_professional_legal_r_4": "[CS] Request a professional legal r 4",
-    "review_by_qualified_lawyer_in__13": "[CS] Review by qualified lawyer in  13",
-    "secure_and_confidential_15": "[CS] Secure and confidential 15",
-    "select_the_type_of_legal_consu_7": "[CS] Select the type of legal consu 7",
-    "written_response_within_48_72__12": "[CS] Written response within 48 72  12",
-    "your_legal_question_8": "[CS] Your legal question 8"
-  },
-  "loadMore": "[CS] Load more",
-  "loading": "[CS] Loading",
-  "localPrivacyProtection": {
-    "bankAccountInfo": "Bank Account Information",
-    "changeStorage": "Change Storage",
-    "emergencyAccessSpouse": "Emergency access for spouse only",
-    "encryptedMasterPassword": "Encrypted with your master password",
-    "familyAccessConfigured": "Family access is properly configured",
-    "modifyAccess": "Modify Access",
-    "privacyStatus": "Privacy Status: Active",
-    "storedLocally": "Stored locally on your device",
-    "title": "Local Privacy Protection",
-    "trigger30DaysInactivity": "Trigger after 30 days of inactivity",
-    "viewFamilyAccess": "View Family Access"
-  },
-  "logLifeEvent": {
-    "eventTypes": {
-      "bought_sold_home": "[CS] Bought sold home",
-      "career_advancement": "[CS] Career advancement",
-      "child_graduated": "[CS] Child graduated",
-      "debt_change": "[CS] Debt change",
-      "financial_windfall": "[CS] Financial windfall",
-      "health_change": "[CS] Health change",
-      "inheritance": "[CS] Inheritance",
-      "insurance_change": "[CS] Insurance change",
-      "job_change": "[CS] Job change",
-      "married_divorced": "[CS] Married divorced",
-      "moved_location": "[CS] Moved location",
-      "new_child": "[CS] New child",
-      "retirement": "[CS] Retirement",
-      "started_business": "[CS] Started business",
-      "trusted_person_passed": "[CS] Trusted person passed"
-    },
-    "form": {
-      "cancel": "[CS] Cancel",
-      "description": "[CS] Description",
-      "eventDescription": "[CS] Event description",
-      "eventSelection": "[CS] Event selection",
-      "generateChecklist": "[CS] Generate checklist",
-      "title": "[CS] Title"
-    }
-  },
-  "manual": {
-    "contacts": {
-      "addContact": "[CS] Add contact",
-      "addFirstContact": "[CS] Add first contact",
-      "card": {
-        "edit": "[CS] Edit"
-      },
-      "description": "[CS] Description",
-      "empty": {
-        "description": "[CS] Description",
-        "title": "[CS] Title"
-      },
-      "form": {
-        "addButton": "[CS] Add button",
-        "addTitle": "[CS] Add title",
-        "cancel": "[CS] Cancel",
-        "description": "[CS] Description",
-        "editTitle": "[CS] Edit title",
-        "emailLabel": "[CS] Email label",
-        "emailPlaceholder": "[CS] Email placeholder",
-        "nameLabel": "[CS] Name label",
-        "namePlaceholder": "[CS] Name placeholder",
-        "notesLabel": "[CS] Notes label",
-        "notesPlaceholder": "[CS] Notes placeholder",
-        "phoneLabel": "[CS] Phone label",
-        "phonePlaceholder": "[CS] Phone placeholder",
-        "roleLabel": "[CS] Role label",
-        "rolePlaceholder": "[CS] Role placeholder",
-        "saving": "[CS] Saving",
-        "updateButton": "[CS] Update button"
-      },
-      "loading": "[CS] Loading",
-      "messages": {
-        "added": "[CS] Added",
-        "deleted": "[CS] Deleted",
-        "loginRequired": "[CS] Login required",
-        "nameAndRoleRequired": "[CS] Name and role required",
-        "updated": "[CS] Updated"
-      },
-      "title": "[CS] Title"
-    },
-    "documents": {
-      "card": {
-        "essentialNote": "[CS] Essential note"
-      },
-      "description": "[CS] Description",
-      "empty": {
-        "description": "[CS] Description",
-        "tip": "[CS] Tip",
-        "title": "[CS] Title"
-      },
-      "expiration": {
-        "expired": "[CS] Expired",
-        "expiresSoon": "[CS] Expires soon",
-        "expiring": "[CS] Expiring"
-      },
-      "loading": "[CS] Loading",
-      "title": "[CS] Title"
-    },
-    "errors": {
-      "dataNotFound": "[CS] Data not found",
-      "deleteContact": "[CS] Delete contact",
-      "duplicateEntry": "[CS] Duplicate entry",
-      "loadContacts": "[CS] Load contacts",
-      "loadInstructions": "[CS] Load instructions",
-      "loadKeyDocuments": "[CS] Load key documents",
-      "network": "[CS] Network",
-      "noPermission": "[CS] No permission",
-      "saveContact": "[CS] Save contact",
-      "saveInstructions": "[CS] Save instructions",
-      "unknown": "[CS] Unknown"
-    },
-    "instructions": {
-      "autoSaveNote": "[CS] Auto save note",
-      "description": "[CS] Description",
-      "digitalAccounts": {
-        "description": "[CS] Description",
-        "placeholder": "[CS] Placeholder",
-        "title": "[CS] Title"
-      },
-      "funeral": {
-        "description": "[CS] Description",
-        "placeholder": "[CS] Placeholder",
-        "title": "[CS] Title"
-      },
-      "loading": "[CS] Loading",
-      "messages": {
-        "description": "[CS] Description",
-        "placeholder": "[CS] Placeholder",
-        "title": "[CS] Title"
-      },
-      "title": "[CS] Title"
-    },
-    "subtitle": "[CS] Subtitle",
-    "tabs": {
-      "contacts": "[CS] Contacts",
-      "documents": "[CS] Documents",
-      "instructions": "[CS] Instructions"
-    },
-    "title": "[CS] Title"
-  },
-  "notifications": {
-    "daysAgo": "[CS] Days ago",
-    "empty": "[CS] Empty",
-    "hoursAgo": "[CS] Hours ago",
-    "justNow": "[CS] Just now",
-    "loading": "[CS] Loading",
-    "title": "[CS] Title",
-    "viewAll": "[CS] View all",
-    "yesterday": "[CS] Yesterday"
-  },
-  "plans": {
-    "title": "[CS] Title"
-  },
-  "pricing": {
-    "enterprise": {
-      "button": "[CS] Button",
-      "description": "[CS] Description",
-      "features": {
-        "guardians": "[CS] Guardians",
-        "legal": "[CS] Legal",
-        "storage": "[CS] Storage",
-        "support": "[CS] Support"
-      },
-      "limits": {
-        "storage": "[CS] Storage"
-      },
-      "name": "[CS] Name",
-      "price": "[CS] Price"
-    },
-    "mainSubtitle": "[CS] Main subtitle",
-    "mainTitle": "[CS] Main title",
-    "premium": {
-      "badge": "[CS] Badge",
-      "button": "[CS] Button",
-      "description": "[CS] Description",
-      "features": {
-        "guardians": "[CS] Guardians",
-        "manual": "[CS] Manual",
-        "storage": "[CS] Storage",
-        "support": "[CS] Support"
-      },
-      "limits": {
-        "guardians": "[CS] Guardians",
-        "storage": "[CS] Storage"
-      },
-      "name": "[CS] Name",
-      "period": "[CS] Period",
-      "price": "[CS] Price"
-    },
-    "starter": {
-      "button": "[CS] Button",
-      "description": "[CS] Description",
-      "features": {
-        "documents": "[CS] Documents",
-        "guardians": "[CS] Guardians",
-        "playbook": "[CS] Playbook",
-        "storage": "[CS] Storage",
-        "support": "[CS] Support"
-      },
-      "limits": {
-        "guardians": "[CS] Guardians",
-        "storage": "[CS] Storage"
-      },
-      "name": "[CS] Name",
-      "price": "[CS] Price"
-    }
-  },
-  "privacy": {
-    "aiAssistanceEnabled": "AI assistance enabled",
-    "allProcessingLocal": "All processing local",
-    "enhancedWithAI": "AI Enhanced",
-    "privacyMode": "Privacy Mode",
-    "processingLocal": "Local Processing"
-  },
-  "pwaInstallBanner": {
-    "accessFamilyInformation": "Access family information",
-    "dismiss": "Dismiss",
-    "installLegacyGuard": "Install legacy guard",
-    "installNow": "Install now",
-    "maybeLater": "Maybe later",
-    "quickAccessFromHomeScreen": "Quick access from home screen",
-    "secureOfflineAccess": "Secure offline access"
-  },
-  "securityStatus": {
-    "allSecurityFeaturesAreActive": "All security features are active and protecting your data",
-    "analogies": {
-      "endToEndEncryption": "Like a sealed envelope that only you and your family can open",
-      "europeanDataCenters": "Like storing your valuables in a secure facility that follows strict European standards",
-      "localOnlyPrivacyMode": "Like keeping your most important documents in a home safe",
-      "multiFactorAuthentication": "Like having multiple locks on your front door",
-      "secureCloudStorage": "Like a bank vault with multiple security systems and backup locations",
-      "zeroKnowledgeArchitecture": "Like a safety deposit box where even the bank doesn't know what's inside"
-    },
-    "explanations": {
-      "endToEndEncryption": "Your data is encrypted before it leaves your device and can only be decrypted by you and your designated family members.",
-      "europeanDataCenters": "All data is stored in EU-based data centers, ensuring compliance with GDPR and European privacy laws.",
-      "localOnlyPrivacyMode": "Process sensitive documents locally on your device without sending any data to our servers.",
-      "multiFactorAuthentication": "Multiple verification methods ensure only you and your trusted family members can access your legacy.",
-      "secureCloudStorage": "Your encrypted data is stored in secure, redundant cloud infrastructure with multiple layers of protection.",
-      "zeroKnowledgeArchitecture": "We cannot access your encrypted data - only you and your designated family members have the keys."
-    },
-    "familyBenefits": {
-      "endToEndEncryption": "Your family can access your legacy securely, even if our systems are compromised.",
-      "europeanDataCenters": "Your family's data is protected by the strongest privacy laws in the world.",
-      "localOnlyPrivacyMode": "Your family can process sensitive documents without any external access or monitoring.",
-      "multiFactorAuthentication": "Your family can be confident that only authorized people can access your legacy.",
-      "secureCloudStorage": "Your family's access to your legacy is never interrupted, even during emergencies.",
-      "zeroKnowledgeArchitecture": "Your family can trust that your legacy is truly private and secure."
-    },
-    "features": {
-      "endToEndEncryption": "End-to-End Encryption",
-      "europeanDataCenters": "European Data Centers",
-      "localOnlyPrivacyMode": "Local-Only Privacy Mode",
-      "multiFactorAuthentication": "Multi-Factor Authentication",
-      "secureCloudStorage": "Secure Cloud Storage",
-      "zeroKnowledgeArchitecture": "Zero-Knowledge Architecture"
-    },
-    "forYourFamily": "For your family:",
-    "howWeProtectYourLegacy": "How We Protect Your Legacy",
-    "yourSecurityStatusFullyProtected": "Your security status: Fully Protected",
-    "yourTrustIsOurHighestPriority": "Your trust is our highest priority"
-  },
-  "subscription": {
-    "activeSubscriptions": "[CS] Active subscriptions",
-    "allSubscriptions": "[CS] All subscriptions",
-    "allSubscriptionsDesc": "[CS] All subscriptions desc",
-    "autoRenewal": "[CS] Auto renewal",
-    "cancellationNoticeWarning": "[CS] Cancellation notice warning",
-    "costOptimization": "[CS] Cost optimization",
-    "costOptimizationDesc": "[CS] Cost optimization desc",
-    "dashboard": {
-      "subtitle": "[CS] Subtitle",
-      "title": "[CS] Title"
-    },
-    "days": "[CS] Days",
-    "daysBefore": "[CS] Days before",
-    "daysUntilRenewal": "[CS] Days until renewal",
-    "enableTracking": "[CS] Enable tracking",
-    "enableTrackingDesc": "[CS] Enable tracking desc",
-    "exportReport": "[CS] Export report",
-    "loadError": "[CS] Load error",
-    "manual": "[CS] Manual",
-    "monthlyCost": "[CS] Monthly cost",
-    "next90Days": "[CS] Next90 days",
-    "noUpcomingRenewals": "[CS] No upcoming renewals",
-    "perMonth": "[CS] Per month",
-    "perYear": "[CS] Per year",
-    "preferences": "[CS] Preferences",
-    "preferencesDesc": "[CS] Preferences desc",
-    "preferencesUpdated": "[CS] Preferences updated",
-    "reminderPeriods": "[CS] Reminder periods",
-    "renew": "[CS] Renew",
-    "review": "[CS] Review",
-    "tabs": {
-      "overview": "[CS] Overview",
-      "settings": "[CS] Settings",
-      "upcoming": "[CS] Upcoming"
-    },
-    "types": {
-      "monthly": "[CS] Monthly",
-      "yearly": "[CS] Yearly"
-    },
-    "upcomingRenewals": "[CS] Upcoming renewals",
-    "upcomingRenewalsDesc": "[CS] Upcoming renewals desc",
-    "upcomingRenewalsTitle": "[CS] Upcoming renewals title",
-    "upcomingSoon": "[CS] Upcoming soon",
-    "updateError": "[CS] Update error",
-    "yearlyCost": "[CS] Yearly cost"
-  },
-  "subscriptions": {
-    "subscriptionDashboard": {
-      "_1": "[CS] 1"
-    }
-  },
-  "support": {
-    "title": "[CS] Title"
-  },
-  "testimonials": {
-    "compliance": {
-      "dataProtection": "Data Protected",
-      "gdpr": "GDPR Compliant",
-      "iso": "ISO 27001"
-    },
-    "stats": {
-      "families": "10,000+",
-      "familiesLabel": "families trust us"
-    }
-  },
-  "themeToggle": {
-    "dark": "Dark",
-    "light": "Light",
-    "system": "System",
-    "toggleTheme": "Toggle theme"
-  },
-  "trustedCircle": {
-    "title": "[CS] Title"
-  },
-  "professional": {
-    "labels": {
-      "complete": "Complete",
-      "inProgress": "In Progress",
-      "needsReview": "Needs Review",
-      "notStarted": "Not Started",
-      "unknown": "Unknown",
-      "urgent": "Urgent",
-      "highPriority": "High Priority",
-      "mediumPriority": "Medium Priority",
-      "lowPriority": "Low Priority",
-      "securityOverview": "Security Overview",
-      "areasComplete": "Areas Complete",
-      "urgentActions": "Urgent Actions",
-      "urgentActionsDetail": "{{count}} urgent actions need your attention",
-      "needReview": "Need Review",
-      "secured": "Secured",
-      "noRecentActivity": "No recent activity",
-      "lastUpdate": "Last update",
-      "nextSteps": "Next Steps",
-      "estatePlanning": "Estate Planning",
-      "timeMinutes": "{{minutes}} minutes",
-      "startNow": "Start Now",
-      "skip": "Skip",
-      "reviewRecommended": "Review Recommended"
-    },
-    "readiness": {
-      "initial": "Initial Setup",
-      "initialDesc": "Getting started with family security",
-      "developing": "Developing",
-      "developingDesc": "Building essential security foundation",
-      "established": "Established",
-      "establishedDesc": "Core security measures in place",
-      "comprehensive": "Comprehensive",
-      "comprehensiveDesc": "Most security areas well-established",
-      "maintained": "Fully Maintained",
-      "maintainedDesc": "All areas complete and up-to-date"
-    }
-  },
-  "ui": {
-    "common": {
-      "actions": {
-        "retry": "[CS] Retry",
-        "save": "[CS] Save"
-      },
-      "cancel": "[CS] Cancel",
-      "errors": {
-        "generic": "[CS] Generic"
-      },
-      "messages": {
-        "saved": "[CS] Saved"
-      }
-    }
-  },
-  "ui:common": {
-    "add": "[CS] Add",
-    "cancel": "[CS] Cancel",
-    "loading": "[CS] Loading"
-  },
-  "upgradeCard": {
-    "defaultButtonText": "Upgrade Now",
-    "pricing": "/pricing"
-  },
-  "upload": {
-    "smartUploadZone": {
-      "file_upload_1": "[CS] File upload 1",
-      "files_at_once_3": "[CS] Files at once 3",
-      "supports_images_jpeg_png_and_p_2": "[CS] Supports images jpeg png and p 2"
-    },
-    "zone": {
-      "chooseFiles": "[CS] Choose files",
-      "description": "[CS] Description",
-      "descriptionActive": "[CS] Description active",
-      "dragOverlay": {
-        "subtitle": "[CS] Subtitle",
-        "title": "[CS] Title"
-      },
-      "dropHere": "[CS] Drop here",
-      "dropHereActive": "[CS] Drop here active",
-      "processingLocally": "[CS] Processing locally",
-      "takePhoto": "[CS] Take photo"
-    }
-  },
-  "vault": {
-    "fileUpload": {
-      "addTag": "[CS] Add tag",
-      "clickToSelect": "[CS] Click to select",
-      "dragDropText": "[CS] Drag drop text",
-      "encryptDescription": "[CS] Encrypt description",
-      "encryptFiles": "[CS] Encrypt files",
-      "encryptionInfo": "[CS] Encryption info",
-      "maxFilesReached": "[CS] Max files reached",
-      "maxSize": "[CS] Max size",
-      "selectedFiles": "[CS] Selected files",
-      "tags": "[CS] Tags",
-      "title": "[CS] Title",
-      "uploadError": "[CS] Upload error",
-      "uploadFiles": "[CS] Upload files",
-      "uploadSuccess": "[CS] Upload success",
-      "uploading": "[CS] Uploading"
-    }
-  },
-  "visualConnectionSystem": {
-    "exploreConnections": "[CS] Explore connections",
-    "title": "[CS] Title"
-  },
-  "whatIfScenarios": {
-    "businessTravel": {
-      "impact": "[CS] Impact",
-      "title": "[CS] Title"
-    },
-    "disabilityIncapacity": {
-      "impact": "[CS] Impact",
-      "title": "[CS] Title"
-    },
-    "duration": "[CS] Duration",
-    "hospitalStay": {
-      "impact": "[CS] Impact",
-      "title": "[CS] Title"
-    },
-    "missing": "[CS] Missing",
-    "needs": "[CS] Needs",
-    "readiness": "[CS] Readiness",
-    "requirements": "[CS] Requirements",
-    "suddenDeath": {
-      "impact": "[CS] Impact",
-      "title": "[CS] Title"
-    }
-  },
-  "accessibility": {
-    "fontSize": "Font size",
-    "visualSettings": "Visual settings"
-  },
-  "visualSettings": {
-    "highContrast": "High contrast",
-    "reducedMotion": "Reduced motion",
-    "largeText": "Large text"
-  },
-  "form": {
-    "accountHelper": "Account helper",
-    "accountNumber": "Account number",
-    "accountPlaceholder": "Account placeholder",
-    "account_type": "Account type",
-    "addAsset": "Add asset",
-    "assetDetails": "Asset details",
-    "basicInfo": "Basic info",
-    "contactPlaceholder": "Contact placeholder",
-    "currency": "Currency",
-    "descriptionHelper": "Description helper",
-    "editAsset": "Edit asset",
-    "estimatedValue": "Estimated value",
-    "financialInfo": "Financial info",
-    "guardianship": {
-      "guardianInstructions": "Guardian instructions",
-      "minorChildren": "Minor children"
-    },
-    "institution": "Institution",
-    "institutionPlaceholder": "Institution placeholder",
-    "liens": "Liens",
-    "location": "Location",
-    "locationHelper": "Location helper",
-    "locationInfo": "Location info",
-    "locationPlaceholder": "Location placeholder",
-    "login_credentials": "Login credentials",
-    "name": "Name",
-    "nameHelper": "Name helper",
-    "namePlaceholder": "Name placeholder",
-    "property_registry_number": "Property registry number",
-    "provisions": {
-      "funeralWishes": "Funeral wishes",
-      "specialInstructions": "Special instructions"
-    },
-    "securityNote": "Security note",
-    "selectType": "Select type",
-    "type": "Type",
-    "valueHelper": "Value helper",
-    "valuePlaceholder": "Value placeholder"
-  },
-  "genderPreference": {
-    "description": "Description",
-    "examples": {
-      "agreement": "Agreement",
-      "greeting": "Greeting",
-      "possessive": "Possessive",
-      "title": "Title"
-    },
-    "options": {
-      "feminine": "Feminine",
-      "masculine": "Masculine",
-      "neutral": "Neutral"
-    },
-    "privacyNote": "Privacy note",
-    "save": "Save",
-    "saveError": "Save error",
-    "saveSuccess": "Save success",
-    "saving": "Saving",
-    "selectLabel": "Select label",
-    "title": "Title"
-  },
-  "categories": {
-    "digital": "Digital",
-    "financial": "Financial",
-    "other": "Other",
-    "personal": "Personal",
-    "realEstate": "Real estate",
-    "vehicles": "Vehicles"
-  },
-  "types": {
-    "automobile": "Automobile",
-    "bankStatement": "Bank statement",
-    "birthCertificate": "Birth certificate",
-    "businessOwnership": "Business ownership",
-    "certificate": "Certificate",
-    "checkingAccount": "Checking account",
-    "contract": "Contract",
-    "deed": "Deed",
-    "investmentAccount": "Investment account",
-    "license": "License",
-    "other": "Other",
-    "passport": "Passport",
-    "policy": "Policy",
-    "primaryResidence": "Primary residence",
-    "retirementAccount": "Retirement account",
-    "will": "Will"
-  },
-  "details": {
-    "documentType": "Document type",
-    "documents": "Documents",
-    "expirationDate": "Expiration date",
-    "familyNotes": "Family notes",
-    "fileName": "File name",
-    "importanceLevel": "Importance level",
-    "important": "Important",
-    "jurisdiction": "Jurisdiction",
-    "noLiabilities": "No liabilities",
-    "reference": "Reference"
-  },
-  "demo": {
-    "ai": {
-      "context": {
-        "completion": "Completion",
-        "label": "Label",
-        "mood": "Mood",
-        "recent": "Recent"
-      },
-      "generateQuestionButton": "Generate question button",
-      "getSuggestionButton": "Get suggestion button",
-      "lifeQuestions": {
-        "description": "Description",
-        "title": "Title"
-      },
-      "messages": {
-        "completedWill": "Completed will",
-        "description": "Description",
-        "justStarting": "Just starting",
-        "needsMotivation": "Needs motivation",
-        "overwhelmedUser": "Overwhelmed user",
-        "title": "Title"
-      },
-      "note": {
-        "apiKey": "Api key",
-        "description": "Description"
-      },
-      "profile": {
-        "documentsCount": "Documents count",
-        "label": "Label"
-      },
-      "question": {
-        "category": "Category",
-        "followUp": "Follow up",
-        "time": "Time"
-      },
-      "subtitle": "Subtitle",
-      "suggestion": {
-        "priority": "Priority",
-        "timeNeeded": "Time needed"
-      },
-      "suggestions": {
-        "description": "Description",
-        "title": "Title"
-      },
-      "tabs": {
-        "documents": "Documents",
-        "messages": "Messages",
-        "questions": "Questions",
-        "suggestions": "Suggestions"
-      },
-      "title": "Title"
-    },
-    "documentUpload": {
-      "confidence": "Confidence",
-      "description": "Description",
-      "integrationGuide": {
-        "benefit": "Benefit",
-        "description": "Description",
-        "step1": "Step1",
-        "step2": "Step2",
-        "step3": "Step3",
-        "step4": "Step4",
-        "step5": "Step5",
-        "title": "Title"
+  "_comment": "Sdílené překlady používané napříč aplikací",
+  "navigation": {
+    "dashboard": "Přehled",
+    "vault": "Trezor",
+    "trustedCircle": {
+      "title": "Váš důvěryhodný kruh",
+      "subtitle": "Lidé, kterým důvěřujete a kteří pomáhají chránit a pečovat o vaši rodinu a dědictví.",
+      "responsibilities": "Jejich odpovědnosti:",
+      "preparationStatus": "Stav připravenosti:",
+      "informedOfRole": "Byl informován o své roli",
+      "acceptedResponsibility": "Přijal odpovědnost",
+      "hasAccessToDocuments": "Má přístup k potřebným dokumentům",
+      "reviewedEmergencyProcedures": "Prošel nouzové postupy",
+      "addTrustedPerson": "+ Přidat důvěryhodnou osobu",
+      "preparednessStatus": {
+        "wellPrepared": "Dobře připraveno",
+        "partiallyPrepared": "Částečně připraveno",
+        "needsAttention": "Vyžaduje pozornost"
+      },
+      "buttonText": {
+        "prepared": "✓ {{name}} je připraven(a)",
+        "prepareNow": "Připravit {{name}} nyní"
       },
       "mockData": {
-        "possessions": {
-          "businessLLC": "Business l l c",
-          "emergencyFund": "Emergency fund",
-          "familyHome": "Family home",
-          "lakeCabin": "Lake cabin",
-          "retirementAccount": "Retirement account",
-          "vehicle": "Vehicle"
+        "sarah": {
+          "name": "Sarah Johnson",
+          "relationship": "Manželka",
+          "responsibilities": {
+            "bankAccess": "Může přistupovat ke všem bankovním účtům kvůli placení účtů a správě domácnosti.",
+            "inheritAssets": "Dědí rodinný dům, chatu a všechny úspory.",
+            "medicalPower": "Má plnou moc v oblasti zdravotní péče."
+          }
         },
-        "trustedPeople": {
-          "person1": {
-            "name": "Name",
-            "relationship": "Relationship"
-          },
-          "person2": {
-            "name": "Name",
-            "relationship": "Relationship"
-          },
-          "person3": {
-            "name": "Name",
-            "relationship": "Relationship"
-          },
-          "person4": {
-            "name": "Name",
-            "relationship": "Relationship"
+        "michael": {
+          "name": "Michael Johnson",
+          "relationship": "Bratr",
+          "responsibilities": {
+            "childCare": "Postará se o naše děti, pokud oba rodiče odejdou.",
+            "estateExecution": "Zajistí realizaci poslední vůle a správu pozůstalosti.",
+            "businessManagement": "Může dočasně řídit Johnson Contracting LLC."
+          }
+        },
+        "robert": {
+          "name": "Robert Chen",
+          "relationship": "Obchodní partner",
+          "responsibilities": {
+            "businessAuthority": "Má oprávnění řídit podnik a podepisovat smlouvy.",
+            "buySellAgreement": "Odkoupí můj podíl ve firmě podle naší smlouvy."
+          }
+        },
+        "emily": {
+          "name": "Emily Thompson",
+          "relationship": "Švagrová",
+          "responsibilities": {
+            "backupGuardian": "Záložní opatrovník dětí, pokud primární nemůže sloužit."
           }
         }
-      },
-      "recentlyProcessed": "Recently processed",
-      "suggestedConnections": "Suggested connections",
-      "title": "Title",
-      "untitledDocument": "Untitled document"
-    },
-    "ocr": {
-      "badge": {
-        "languageSupport": "Language support",
-        "localProcessing": "Local processing",
-        "smartDetection": "Smart detection"
-      },
-      "detectionDescription": "Detection description",
-      "features": {
-        "completePrivacy": "Complete privacy",
-        "multiLanguage": "Multi language",
-        "smartDetection": "Smart detection"
-      },
-      "language": {
-        "czech": "Czech",
-        "english": "English",
-        "other": "Other",
-        "slovak": "Slovak"
-      },
-      "languageDescription": "Language description",
-      "previousDocuments": {
-        "description": "Description",
-        "title": "Title"
-      },
-      "privacyDescription": "Privacy description",
-      "privacyNotice": {
-        "ai": "Ai",
-        "local": "Local"
-      },
-      "subtitle": "Subtitle",
-      "title": "Title",
-      "unknownDocument": "Unknown document"
-    },
-    "upload": {
-      "badge": {
-        "aiAnalysis": "Ai analysis",
-        "encryption": "Encryption",
-        "familySharing": "Family sharing"
-      },
-      "console": {
-        "delete": "Delete",
-        "download": "Download",
-        "share": "Share",
-        "uploadStarted": "Upload started",
-        "view": "View"
-      },
-      "features": {
-        "aiAnalysis": "Ai analysis",
-        "autoCompress": "Auto compress",
-        "autoEncrypt": "Auto encrypt",
-        "familySharing": "Family sharing",
-        "processOCR": "Process o c r"
-      },
-      "privacy": {
-        "cloudMode": {
-          "description": "Description",
-          "title": "Title"
-        },
-        "localMode": {
-          "description": "Description",
-          "title": "Title"
-        }
-      },
-      "progress": {
-        "completed": "Completed",
-        "failed": "Failed",
-        "title": "Title"
-      },
-      "settings": {
-        "cloud": "Cloud",
-        "description": "Description",
-        "local": "Local",
-        "storageLocation": "Storage location",
-        "title": "Title"
-      },
-      "stats": {
-        "averageTime": "Average time",
-        "averageTimeValue": "Average time value",
-        "cloudStorage": {
-          "description": "Description",
-          "title": "Title"
-        },
-        "localStorage": {
-          "description": "Description",
-          "title": "Title"
-        },
-        "processingStats": {
-          "documentsProcessed": "Documents processed",
-          "title": "Title"
-        },
-        "successRate": "Success rate",
-        "totalSize": {
-          "description": "Description",
-          "title": "Title"
-        }
-      },
-      "subtitle": "Subtitle",
-      "tabs": {
-        "documents": "Documents",
-        "stats": "Stats",
-        "upload": "Upload"
-      },
-      "title": "Title"
-    }
-  },
-  "cta": {
-    "button": "Button",
-    "description": "Description",
-    "finalDescription": "Final description",
-    "finalSubtitle": "Final subtitle",
-    "finalTitle": "Final title",
-    "fullAccess": "Full access",
-    "noCredit": "No credit",
-    "startTrial": "Start trial",
-    "supportIncluded": "Support included",
-    "title": "Title"
-  },
-  "emotionalContextSystem": {
-    "advice_2": "Advice 2",
-    "contextResponses": {
-      "default": {
-        "actionableAdvice": "Actionable advice",
-        "motivationalElement": "Motivational element",
-        "nextStepGuidance": "Next step guidance",
-        "primaryMessage": "Primary message",
-        "supportingMessage": "Supporting message"
-      },
-      "highOverwhelm": {
-        "actionableAdvice": "Actionable advice",
-        "motivationalElement": "Motivational element",
-        "nextStepGuidance": "Next step guidance",
-        "primaryMessage": "Primary message",
-        "supportingMessage": "Supporting message"
-      },
-      "lowConfidence": {
-        "actionableAdvice": "Actionable advice",
-        "motivationalElement": "Motivational element",
-        "nextStepGuidance": "Next step guidance",
-        "primaryMessage": "Primary message",
-        "supportingMessage": "Supporting message"
       }
     },
-    "emotional_support_1": "Emotional support 1",
-    "motivation_3": "Motivation 3",
-    "next_steps_4": "Next steps 4"
+    "familyHub": "Rodinné Centrum",
+    "legacyBriefing": {
+      "legacy_briefing_3": "Briefing Dědictví",
+      "create_and_manage_sealed_messa_4": "Vytvářejte a spravujte zapečetěné zprávy pro své blízké",
+      "failed_to_load_your_time_capsu_1": "Nepodařilo se načíst vaše časové kapsle",
+      "are_you_sure_you_want_to_delet_2": "Opravdu chcete tuto časovou kapsli smazat?",
+      "create_new_message_5": "Vytvořit novou zprávu",
+      "no_time_capsules_yet_6": "Zatím žádné časové kapsle",
+      "create_meaningful_messages_for_7": "Vytvářejte smysluplné zprávy pro své blízké do budoucna",
+      "create_your_first_message_8": "Vytvořte svou první zprávu",
+      "to_9": "Komu:",
+      "unlocks_on_10": "Odemkne se:",
+      "unlocks_11": "Odemkne:",
+      "after_passing_12": "Po úmrtí",
+      "statusLabels": {
+        "locked": "Zamčeno",
+        "unlocked": "Odemčeno",
+        "delivered": "Doručeno",
+        "noRecipients": "Žádní příjemci"
+      },
+      "messageTypes": {
+        "text": "Textová zpráva",
+        "photo": "Fotografie",
+        "video": "Video zpráva",
+        "audio": "Audio zpráva"
+      },
+      "actions": {
+        "edit": "Upravit",
+        "delete": "Smazat"
+      },
+      "toastMessages": {
+        "deleteSuccess": "Časová kapsle byla úspěšně smazána",
+        "deleteError": "Nepodařilo se smazat časovou kapsli"
+      },
+      "dateFormat": {
+        "dateNotSet": "Datum není nastaveno",
+        "created": "Vytvořeno"
+      },
+      "errors": {
+        "textContentRequired": "Textová zpráva je povinná",
+        "unlockDateRequired": "Datum odemčení je povinné, pokud je zvolen typ datum",
+        "failedToUploadAttachment": "Nepodařilo se nahrát přílohu",
+        "failedToCreate": "Nepodařilo se vytvořit časovou kapsli",
+        "failedToFetch": "Nepodařilo se načíst časové kapsle",
+        "failedToUpdate": "Nepodařilo se aktualizovat časovou kapsli",
+        "failedToDelete": "Nepodařilo se smazat časovou kapsli",
+        "notFoundOrCannotModify": "Časová kapsle nenalezena nebo ji nelze upravit",
+        "notFoundOrCannotDelete": "Časová kapsle nenalezena nebo ji nelze smazat",
+        "missingUploadFields": "Chybí povinná pole: název souboru, typ souboru, velikost souboru",
+        "invalidFileType": "Neplatný typ souboru. Povolené typy: webm, mp4, mov",
+        "fileSizeExceeds500MB": "Velikost souboru přesahuje maximální limit 500 MB",
+        "premiumRequired": "Vyžaduje se prémiové předplatné",
+        "premiumRequiredMessage": "Videozprávy jsou prémiová funkce. Pro využití této funkce upgradujte své předplatné.",
+        "failedToCreateUploadUrl": "Nepodařilo se vytvořit URL pro nahrání"
+      }
+    },
+    "executorToolkit": "Nástroje vykonavatele",
+    "assets": "Majetek",
+    "manual": "Příručka",
+    "documents": "Trezor dědictví",
+    "guardians": "Síť důvěrníků",
+    "family": "Rodinné Centrum",
+    "timeCapsule": {
+      "title": "Časové kapsle",
+      "notifications": {
+        "emailSubject": "{{senderName}} vám zanechal(a) zprávu",
+        "newMessage": "Máte novou zprávu",
+        "loginToView": "Přihlaste se do LegacyGuard a zobrazte si tuto speciální zprávu.",
+        "viewMessage": "Zobrazit zprávu",
+        "smsNotification": "Oznámení můžete také nastavit prostřednictvím SMS.",
+        "bestRegards": "S pozdravem,",
+        "legacyGuardTeam": "Tým LegacyGuard",
+        "inAppTitle": "Nová zpráva od {{senderName}}",
+        "inAppMessage": "{{senderName}} vám zanechal(a) časovou kapsli: \"{{capsuleTitle}}\""
+      }
+    },
+    "will": "Závěť",
+    "consultations": "Právní konzultace",
+    "settings": "Nastavení",
+    "help": "Nápověda a podpora",
+    "subscriptions": "Předplatná"
   },
-  "solution": {
-    "feature1": {
-      "benefits": "Benefits",
-      "description": "Description",
-      "title": "Title"
-    },
-    "feature2": {
-      "benefits": "Benefits",
-      "description": "Description",
-      "title": "Title"
-    },
-    "feature3": {
-      "benefits": "Benefits",
-      "description": "Description",
-      "title": "Title"
-    },
-    "feature4": {
-      "benefits": "Benefits",
-      "description": "Description",
-      "title": "Title"
-    },
-    "sectionSubtitle": "Section subtitle",
-    "sectionTitle": "Section title"
+  "nav": {
+    "dashboard": "Přehled",
+    "manual": "Příručka",
+    "vault": "Trezor dědictví",
+    "guardians": "Síť důvěrníků",
+    "will": "Závěť",
+    "settings": "Nastavení",
+    "help": "Nápověda a podpora"
   },
-  "steps": {
-    "assets": {
-      "description": "Description",
-      "title": "Title"
+  "footer": {
+    "tagline": "Chraňte své dědictví pro další generace.",
+    "platform": {
+      "title": "Platforma",
+      "heritageVault": "Trezor dědictví",
+      "guardianNetwork": "Síť důvěrníků",
+      "dashboard": "Přehled",
+      "security": "Zabezpečení"
     },
-    "beneficiaries": {
-      "description": "Description",
-      "title": "Title"
+    "support": {
+      "title": "Podpora",
+      "helpCenter": "Centrum nápovědy",
+      "userGuides": "Uživatelské příručky",
+      "contactUs": "Kontaktujte nás",
+      "community": "Komunita"
     },
-    "executor": {
-      "description": "Description",
-      "title": "Title"
+    "legal": {
+      "title": "Právní informace",
+      "privacyPolicy": "Zásady ochrany osobních údajů",
+      "termsOfService": "Podmínky služby",
+      "dataProtection": "Ochrana dat"
     },
-    "guardians": {
-      "description": "Description",
-      "title": "Title"
+    "copyright": "© {{year}} LegacyGuard. Všechna práva vyhrazena.",
+    "description": "Správa digitálního dědictví na podnikové úrovni."
+  },
+  "hero": {
+    "title": "Chraňte digitální dědictví své rodiny napořád",
+    "subtitle": "Bezpečná a intuitivní platforma, která pomáhá rodinám organizovat, chránit a předávat jejich nejdůležitější vzpomínky a dokumenty napříč generacemi.",
+    "cta_primary": "Začněte s plánem dědictví",
+    "cta_secondary": "Zhlédnout demo",
+    "urgencySubtitle": "Nastavení trvá jen 10 minut – buďte připraveným rodičem, kterého vaše rodina potřebuje",
+    "secondaryContext": "2minutové video ukazující skutečné rodiny",
+    "trustSignals": {
+      "dataOwnership": "Vaše data zůstávají vaše – nikdy je neprodáváme",
+      "gdprCompliant": "V souladu s GDPR od počátku",
+      "europeanFamilies": "Vytvořeno pro evropské rodiny"
     },
-    "personal": {
-      "description": "Description",
-      "title": "Title"
-    },
-    "preferences": {
-      "description": "Description",
-      "title": "Title"
-    },
-    "review": {
-      "description": "Description",
-      "title": "Title"
+    "community": {
+      "growing": "Připojte se k {{count}} rodinám, které již chrání své dědictví",
+      "growingFallback": "Připojte se k naší rostoucí komunitě"
     }
   },
-  "skip": {
-    "continueSetup": "Continue setup",
-    "description": "Description",
-    "skipConfirm": "Skip confirm",
-    "title": "Title"
+  "features": {
+    "title": "Proč si vybrat LegacyGuard?",
+    "subtitle": "Vytvořeno s podnikovou úrovní zabezpečení a navrženo pro rodiny, které si cení svého dědictví.",
+    "sleepBetter": {
+      "title": "Spěte lépe v noci",
+      "description": "S vědomím, že vaše rodina je chráněna a připravena na cokoliv, co přijde."
+    },
+    "noChaos": {
+      "title": "Bez chaosu a zmatku",
+      "description": "Vaši blízcí budou mít jasné pokyny a přístup ke všemu, co potřebují."
+    },
+    "clearInstructions": {
+      "title": "Jasné pokyny pro všechny",
+      "description": "Každý člen rodiny ví přesně, co dělat a kde najít to, co potřebuje."
+    },
+    "security": {
+      "title": "Absolutní důvěrnost a soukromí",
+      "description": "Navrženo tak, aby k vašim datům neměl přístup nikdo neoprávněný. Ani my. Vaše soukromí je naší nejvyšší prioritou."
+    },
+    "guardians": {
+      "title": "Síť důvěrníků",
+      "description": "Určete důvěryhodné členy rodiny a přátele jako důvěrníky, abyste zajistili kontinuitu dědictví."
+    },
+    "storage": {
+      "title": "Bezpečné cloudové úložiště",
+      "description": "Redundantní zálohy ve více datových centrech s garantovanou dostupností 99,99 %."
+    },
+    "timelock": {
+      "title": "Časově uzamčený přístup",
+      "description": "Nastavte podmínky, kdy a jak mohou oprávněné osoby přistupovat k vašemu digitálnímu dědictví."
+    },
+    "stories": {
+      "title": "Osobní příběhy",
+      "description": "Vytvářejte bohaté multimediální příběhy, které zachycují podstatu cesty vaší rodiny."
+    },
+    "preservation": {
+      "title": "Doživotní uchování",
+      "description": "Vaše dědictví je uchováno na neomezenou dobu s automatickou migrací formátů a aktualizacemi."
+    }
+  },
+  "alerts": {
+    "title": "Centrum upozornění",
+    "description": "Spravujte upozornění na expiraci dokumentů.",
+    "unread": "Nepřečteno",
+    "markAsRenewed": "Označit jako obnovené",
+    "snooze7Days": "Odložit na 7 dní",
+    "dismiss": "Zavřít",
+    "unsnooze": "Zrušit odložení",
+    "tabs": {
+      "active": "Aktivní",
+      "snoozed": "Odložené",
+      "dismissed": "Zavřené"
+    },
+    "noActiveAlerts": "Nemáte žádná aktivní upozornění.",
+    "noSnoozedAlerts": "Nemáte žádná odložená upozornění.",
+    "noDismissedAlerts": "Nemáte žádná zavřená upozornění.",
+    "expiresOn": "Platnost vyprší {{date}}",
+    "snoozedUntil": "Odloženo do {{date}}",
+    "renewalInstructions": "Instrukce pro obnovení",
+    "badges": {
+      "expired": "Expirace",
+      "expiring_7": "Brzy vyprší",
+      "expiring_30": "Vyprší za 30 dní",
+      "expiring_90": "Vyprší za 90 dní"
+    },
+    "types": {
+      "expired": "Dokument {{documentName}} expiroval před {{daysAgo}} dny!",
+      "expiring7": "Pozor! {{documentName}} vyprší za {{days}} dní.",
+      "expiring30": "Připomínka: {{documentName}} vyprší za {{days}} dní.",
+      "expiring90": "Upozornění: {{documentName}} má vypršet za {{days}} dní."
+    },
+    "messages": {
+      "dismissed": "Upozornění bylo úspěšně zavřeno.",
+      "snoozed": "Upozornění odloženo o {{days}} dní.",
+      "markedAsRenewed": "Dokument označen jako obnovený."
+    },
+    "errors": {
+      "loadFailed": "Nepodařilo se načíst upozornění.",
+      "dismissFailed": "Upozornění se nepodařilo zavřít.",
+      "snoozeFailed": "Upozornění se nepodařilo odložit.",
+      "renewFailed": "Dokument se nepodařilo označit jako obnovený."
+    }
   }
 }
