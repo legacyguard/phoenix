@@ -2,7 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 const LocalPrivacyProtection = () => {
-  const { t } = useTranslation('ui');
+  const { t } = useTranslation('ui-common');
 
   const privacyData = [
     {

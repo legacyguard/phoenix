@@ -1,363 +1,397 @@
 {
   "actions": {
-    "next": "[PL] Next",
-    "previous": "[PL] Previous"
+    "consultLawyer": "Zaplanuj konsultację prawną",
+    "createCodicil": "Utwórz poprawkę (kodicyl)",
+    "deleteWill": "Usuń tę wolę",
+    "downloadPdf": "Pobierz dokument PDF",
+    "generateWill": "Wygeneruj ostatnią wolę",
+    "next": "Następny",
+    "previous": "Poprzedni",
+    "printWill": "Wydrukuj dokument testamentu",
+    "saveProgress": "Zapisz bieżący postęp",
+    "shareWill": "Udostępnij rodzinie",
+    "updateWill": "Aktualizacja informacji o testamencie"
   },
   "errors": {
-    "assetLoadFailed": "We could not load your asset information. Please refresh and try again.",
-    "generationFailed": "We encountered an issue generating your will. Please review your information and try again.",
-    "jurisdictionRequired": "Please select your legal jurisdiction to ensure compliance",
-    "loadFailed": "We could not load your will information. Please refresh the page and try again.",
-    "printFailed": "We encountered an issue preparing your document for printing. Please try again.",
-    "saveFailed": "We could not save your progress. Please check your connection and try again.",
-    "sharingFailed": "We could not share your will. Please verify the recipients and try again.",
-    "validationFailed": "Please review and correct the highlighted information before proceeding"
+    "assetLoadFailed": "Nie udało się wczytać informacji o Twoim zasobie. Odśwież stronę i spróbuj ponownie.",
+    "generationFailed": "Wystąpił problem z wygenerowaniem testamentu. Sprawdź swoje dane i spróbuj ponownie.",
+    "jurisdictionRequired": "Wybierz swoją jurysdykcję prawną, aby zapewnić zgodność",
+    "loadFailed": "Nie udało się wczytać danych testamentu. Odśwież stronę i spróbuj ponownie.",
+    "printFailed": "Wystąpił problem podczas przygotowywania dokumentu do druku. Spróbuj ponownie.",
+    "saveFailed": "Nie udało się zapisać Twojego postępu. Sprawdź połączenie i spróbuj ponownie.",
+    "validationFailed": "Przed kontynuacją sprawdź i popraw podświetlone informacje"
   },
   "execution": {
-    "copyDistribution": "Distribution of Copies",
-    "familyNotification": "Informing Your Family",
-    "legalRequirements": "Legal Requirements for {{jurisdiction}}",
-    "notarization": "Notarization Requirements",
-    "notaryOptional": "Notary recommended but not required",
-    "notaryRequired": "Notary public required",
-    "numberOfCopies": "Recommended Number of Copies",
-    "safeStorage": "Secure Storage Locations",
-    "selfProving": "Self-Proving Affidavit",
-    "signingInstructions": "Signing Instructions",
-    "signingOrder": "Proper Signing Order",
-    "storageRecommendations": "Storage Recommendations",
-    "subtitle": "Making your will legally binding",
-    "title": "Will Execution Requirements",
-    "witnessCount": "{{count}} witnesses required",
-    "witnessInstructions": "Witness Instructions",
-    "witnessQualifications": "Witness Qualifications",
-    "witnessRequirements": "Witness Requirements"
+    "copyDistribution": "Dystrybucja kopii",
+    "familyNotification": "Informowanie rodziny",
+    "legalRequirements": "Wymagania prawne dla {{jurisdiction}}",
+    "notarization": "Wymagania notarialne",
+    "notaryOptional": "Zalecane, ale nie wymagane, aby skorzystać z usług notariusza",
+    "notaryRequired": "Wymagany notariusz",
+    "numberOfCopies": "Zalecana liczba kopii",
+    "safeStorage": "Bezpieczne lokalizacje magazynowe",
+    "selfProving": "Oświadczenie potwierdzające",
+    "signingInstructions": "Instrukcje podpisywania",
+    "signingOrder": "Prawidłowa kolejność podpisywania",
+    "storageRecommendations": "Zalecenia dotyczące przechowywania",
+    "subtitle": "Uczynienie testamentu prawnie wiążącym",
+    "title": "Wymagania dotyczące wykonania testamentu",
+    "witnessCount": "{{count}} wymagani świadkowie",
+    "witnessInstructions": "Instrukcje dla świadków",
+    "witnessQualifications": "Kwalifikacje świadków",
+    "witnessRequirements": "Wymagania dotyczące świadków"
   },
   "form": {
     "assetSelection": {
-      "allAssets": "Include All Current and Future Assets",
-      "assetCategories": "Asset Categories to Include",
-      "businessInterests": "Business Interests",
-      "excludedAssets": "Assets to Exclude",
-      "jointAssets": "Jointly Owned Assets",
-      "residualDescription": "All remaining assets not specifically mentioned elsewhere in this will",
-      "residualEstate": "Residual Estate",
-      "selectAssets": "Choose Assets to Include",
-      "specificAssets": "Select Specific Assets Only"
+      "allAssets": "Uwzględnij wszystkie bieżące i przyszłe aktywa",
+      "assetCategories": "Kategorie aktywów do uwzględnienia",
+      "businessInterests": "Interesy biznesowe",
+      "excludedAssets": "Aktywa do wykluczenia",
+      "jointAssets": "Aktywa będące wspólną własnością",
+      "residualDescription": "Wszystkie pozostałe aktywa, które nie zostały wymienione gdzie indziej, zostaną",
+      "residualEstate": "Nieruchomość resztkowa",
+      "selectAssets": "Wybierz zasoby do uwzględnienia",
+      "specificAssets": "Wybierz tylko określone zasoby"
     },
     "distribution": {
-      "addBeneficiary": "Add Additional Beneficiary",
-      "ageRestriction": "Age Requirement",
-      "allocation": "Inheritance Allocation",
-      "beneficiaryName": "Beneficiary's Full Name",
-      "conditions": "Conditions or Restrictions",
-      "contingentBeneficiary": "Contingent Beneficiary",
-      "percentage": "Percentage of Estate",
-      "primaryBeneficiary": "Primary Beneficiary",
-      "relationship": "Relationship to You",
-      "specificAmount": "Specific Dollar Amount",
-      "specificAsset": "Specific Asset or Property",
-      "trustProvision": "Trust Arrangement"
+      "addBeneficiary": "Dodaj dodatkowego beneficjenta",
+      "ageRestriction": "Wymagania wiekowe",
+      "allocation": "Przydział dziedziczenia",
+      "beneficiaryName": "Pełne imię i nazwisko beneficjenta",
+      "conditions": "Warunki lub ograniczenia",
+      "contingentBeneficiary": "Beneficjent warunkowy",
+      "percentage": "Procent majątku",
+      "primaryBeneficiary": "Główny beneficjent",
+      "relationship": "Relacja z Tobą",
+      "specificAmount": "Konkretna kwota w dolarach",
+      "specificAsset": "Konkretny składnik aktywów lub nieruchomość",
+      "trustProvision": "Umowa powiernicza"
     },
     "executor": {
-      "alternateExecutor": "Alternate Executor",
-      "bondRequirement": "Bond Requirement",
-      "coExecutors": "Co-Executors",
-      "executorAddress": "Executor's Address",
-      "executorCompensation": "Executor Compensation",
-      "executorDuties": "Executor Responsibilities",
-      "executorInstructions": "Special Instructions for Executor",
-      "executorName": "Executor's Full Name",
-      "executorRelationship": "Relationship to You",
-      "primaryExecutor": "Primary Executor",
-      "specialPowers": "Special Powers Granted"
+      "alternateExecutor": "Zastępczy wykonawca",
+      "bondRequirement": "Wymagania dotyczące obligacji",
+      "coExecutors": "Współwykonawcy",
+      "executorAddress": "Adres egzekutora",
+      "executorCompensation": "Wynagrodzenie egzekutora",
+      "executorDuties": "Obowiązki wykonawcy",
+      "executorInstructions": "Specjalne instrukcje dla wykonawcy",
+      "executorName": "Pełne imię i nazwisko wykonawcy",
+      "executorRelationship": "Relacja z Tobą",
+      "primaryExecutor": "Główny wykonawca",
+      "specialPowers": "Przyznane specjalne uprawnienia"
     },
     "guardianship": {
-      "backupGuardian": "Alternate Guardian",
-      "educationPreferences": "Education Preferences",
-      "guardianCompensation": "Guardian Compensation",
-      "guardianFor": "Guardian for {{childName}}",
-      "guardianInstructions": "Instructions for Guardian",
-      "guardianQualifications": "Guardian Qualifications",
-      "minorChildren": "Minor Children Requiring Guardianship",
-      "primaryGuardian": "Primary Guardian",
-      "religiousUpbringing": "Religious Upbringing Preferences"
+      "backupGuardian": "Alternatywny opiekun",
+      "educationPreferences": "Preferencje edukacyjne",
+      "guardianCompensation": "Wynagrodzenie opiekuna",
+      "guardianFor": "Opiekun dla {{childName}}",
+      "guardianInstructions": "Instrukcje dla opiekuna",
+      "guardianQualifications": "Kwalifikacje opiekuna",
+      "minorChildren": "Małoletnie dzieci wymagające opieki",
+      "primaryGuardian": "Opiekun Główny",
+      "religiousUpbringing": "Preferencje dotyczące wychowania religijnego"
     },
     "personalInfo": {
-      "addChild": "Add Child",
-      "addressHelper": "Your primary residence address",
-      "childDateOfBirth": "Child's Date of Birth",
-      "childName": "Child's Full Name",
-      "childRelation": "Relationship to You",
-      "children": "Children and Dependents",
-      "currentAddress": "Current Legal Address",
-      "dateOfBirth": "Date of Birth",
-      "fullLegalName": "Complete Legal Name",
-      "fullLegalNameHelper": "Enter your name exactly as it appears on official documents",
-      "maritalStatus": "Marital Status",
-      "marriageDate": "Date of Marriage",
-      "placeOfBirth": "Place of Birth",
-      "previousWills": "Previous Wills",
-      "revokesPrevious": "This will revokes all previous wills",
-      "spouseName": "Spouse's Full Legal Name"
+      "addChild": "Dodaj dziecko",
+      "addressHelper": "Twój główny adres zamieszkania",
+      "childDateOfBirth": "Data urodzenia dziecka",
+      "childName": "Pełne imię i nazwisko dziecka",
+      "childRelation": "Relacja z Tobą",
+      "children": "Dzieci i osoby na utrzymaniu",
+      "currentAddress": "Aktualny adres prawny",
+      "dateOfBirth": "Data urodzenia",
+      "fullLegalName": "Pełna nazwa prawna",
+      "fullLegalNameHelper": "Wpisz swoje imię i nazwisko dokładnie tak, jak widnieje ono w oficjalnych dokumentach",
+      "maritalStatus": "Stan cywilny",
+      "marriageDate": "Data ślubu",
+      "placeOfBirth": "Miejsce urodzenia",
+      "previousWills": "Poprzednie testamenty",
+      "revokesPrevious": "To unieważnia wszystkie poprzednie testamenty",
+      "spouseName": "Pełne imię i nazwisko małżonka"
     },
     "provisions": {
-      "burialCremation": "Burial or Cremation Preference",
-      "businessContinuation": "Business Continuation Plans",
-      "charitableBequests": "Charitable Donations",
-      "charityAmount": "Donation Amount",
-      "charityName": "Charitable Organization",
-      "digitalAssets": "Digital Asset Instructions",
-      "funeralInstructions": "Specific Funeral Instructions",
-      "funeralWishes": "Funeral and Burial Preferences",
-      "organDonation": "Organ Donation Wishes",
-      "personalMessages": "Personal Messages to Family",
-      "petCare": "Pet Care Arrangements",
-      "specialInstructions": "Special Instructions"
+      "burialCremation": "Preferencje dotyczące pochówku lub kremacji",
+      "businessContinuation": "Plany kontynuacji działalności",
+      "charitableBequests": "Darowizny charytatywne",
+      "charityAmount": "Kwota darowizny",
+      "charityName": "Organizacja charytatywna",
+      "digitalAssets": "Instrukcje dotyczące aktywów cyfrowych",
+      "funeralInstructions": "Szczegółowe instrukcje dotyczące pogrzebu",
+      "funeralWishes": "Preferencje dotyczące pogrzebu i pochówku",
+      "organDonation": "Życzenia dotyczące oddawania narządów",
+      "personalMessages": "Osobiste wiadomości do rodziny",
+      "petCare": "Organizacja opieki nad zwierzętami",
+      "specialInstructions": "Instrukcje specjalne"
     }
   },
   "generator": {
-    "of": "[PL] Of",
-    "step": "[PL] Step"
+    "continueWill": "Kontynuuj przygotowywanie testamentu",
+    "description": "Stwórz kompleksowy, prawnie ważny testament dostosowany do wymogów obowiązujących w Twojej jurysdykcji i wyjątkowych potrzeb Twojej rodziny.",
+    "getStarted": "Zacznij tworzyć swój testament",
+    "importance": "Zadbaj o to, aby Twoje życzenia były prawnie udokumentowane, a Twoja rodzina chroniona",
+    "newWill": "Utwórz nowy testament",
+    "of": "Z",
+    "professionalGuidance": "Zalecana profesjonalna pomoc prawna w przypadku skomplikowanych majątków",
+    "step": "Krok",
+    "subtitle": "Stwórz prawnie uzasadniony testament z pomocą profesjonalistów",
+    "title": "Generator ostatniej woli i testamentu",
+    "viewExisting": "Przejrzyj aktualną wolę"
   },
   "legal": {
-    "consultLawyer": "Consult with Attorney",
-    "disclaimer": "Important Legal Disclaimer",
-    "estatePlanning": "Comprehensive Estate Planning",
-    "jurisdiction": "Legal Jurisdiction",
-    "lawsApply": "Laws of {{jurisdiction}} will apply",
-    "lawyerRecommended": "We strongly recommend consulting with a qualified attorney for complex estates",
-    "legalCompliance": "Legal Compliance Verification",
-    "notLegalAdvice": "This service does not constitute legal advice",
-    "probateProcess": "Probate Process Information",
-    "professionalGuidance": "Professional legal guidance is recommended",
-    "professionalReview": "Professional Legal Review",
-    "selectJurisdiction": "Please select your legal jurisdiction",
-    "taxImplications": "Tax Implications"
+    "consultLawyer": "Skonsultuj się z prawnikiem",
+    "disclaimer": "Ważne zastrzeżenie prawne",
+    "estatePlanning": "Kompleksowe planowanie majątku",
+    "jurisdiction": "Jurysdykcja prawna",
+    "lawsApply": "Obowiązują przepisy {{jurisdiction}}",
+    "lawyerRecommended": "W przypadku skomplikowanych spraw spadkowych zdecydowanie zalecamy konsultację z wykwalifikowanym prawnikiem",
+    "legalCompliance": "Weryfikacja zgodności z przepisami prawnymi",
+    "notLegalAdvice": "Usługa ta nie stanowi porady prawnej.",
+    "probateProcess": "Informacje o procesie spadkowym",
+    "professionalGuidance": "Zaleca się skorzystanie z profesjonalnej porady prawnej",
+    "professionalReview": "Profesjonalna recenzja prawna",
+    "selectJurisdiction": "Proszę wybrać swoją jurysdykcję prawną",
+    "taxImplications": "Konsekwencje podatkowe"
   },
   "notifications": {
-    "consultationScheduled": "Legal consultation has been scheduled",
-    "documentShared": "Will has been shared with designated family members",
-    "executionComplete": "Will execution has been recorded",
-    "progressSaved": "Your progress has been saved",
-    "reminderSet": "Will review reminder has been set",
-    "willDeleted": "Will has been permanently deleted",
-    "willGenerated": "Your will has been successfully generated",
-    "willUpdated": "Will has been updated successfully"
+    "consultationScheduled": "Zaplanowano konsultację prawną",
+    "documentShared": "Wola została udostępniona wyznaczonym członkom rodziny",
+    "executionComplete": "Wykonanie testamentu zostało zarejestrowane",
+    "progressSaved": "Twój postęp został zapisany",
+    "willDeleted": "Will został trwale usunięty",
+    "willUpdated": "Will został pomyślnie zaktualizowany"
   },
   "preview": {
-    "article": "ARTICLE {{number}}",
-    "draftWatermark": "DRAFT - NOT LEGALLY BINDING",
-    "executionInstructions": "EXECUTION INSTRUCTIONS",
-    "lastWillTestament": "LAST WILL AND TESTAMENT",
-    "of": "OF",
-    "pageNumber": "Page {{current}} of {{total}}",
-    "reviewCarefully": "Please review this document carefully before proceeding",
-    "section": "Section {{number}}",
-    "signatureSection": "SIGNATURE SECTION",
-    "subtitle": "Review your complete will before finalizing",
-    "title": "Will Document Preview",
-    "witnessClause": "WITNESS CLAUSE"
+    "article": "ARTYKUŁ {{number}}",
+    "draftWatermark": "PROJEKT – NIE JEST PRAWNIE WIĄŻĄCY",
+    "executionInstructions": "INSTRUKCJE WYKONANIA",
+    "lastWillTestament": "OSTATNIA WOLA I TESTAMENT",
+    "of": "Z",
+    "pageNumber": "Strona {{current}} z {{total}}",
+    "reviewCarefully": "Przed kontynuacją prosimy o dokładne zapoznanie się z tym dokumentem",
+    "section": "Sekcja {{number}}",
+    "signatureSection": "SEKCJA PODPISU",
+    "subtitle": "Przed sfinalizowaniem umowy przejrzyj cały testament",
+    "title": "Podgląd dokumentu testamentu",
+    "witnessClause": "KLAUZULA ŚWIADKA"
   },
   "status": {
-    "archived": "Archived Version",
-    "draft": "Draft in Progress",
-    "executed": "Legally Executed",
-    "generated": "Generated - Requires Execution",
-    "outdated": "Requires Update",
-    "underReview": "Under Professional Review"
+    "archived": "Wersja archiwalna",
+    "draft": "Projekt w toku",
+    "executed": "Wykonany zgodnie z prawem",
+    "generated": "Wygenerowano - Wymaga wykonania",
+    "outdated": "Wymagana aktualizacja"
+  },
+  "policy": {
+    "duration": {
+      "session": "Sesja",
+      "minutes": "{{count}} minut",
+      "hours": "{{count}} godzin",
+      "days": "{{count}} dni",
+      "months": "{{count}} miesięcy",
+      "years": "{{count}} lat"
+    }
   },
   "steps": {
     "assets": {
-      "description": "Select which assets you wish to include in your will and how they should be distributed.",
-      "subtitle": "Your valuable possessions",
-      "title": "Asset Distribution"
+      "description": "Wybierz aktywa, które chcesz uwzględnić w testamencie i w jaki sposób chcesz je rozdysponować.",
+      "subtitle": "Twoje cenne dobra",
+      "title": "Dystrybucja aktywów"
     },
     "beneficiaries": {
-      "description": "Designate who will receive your assets and in what proportions.",
-      "subtitle": "Your chosen recipients",
-      "title": "Beneficiary Designations"
+      "description": "Określ, kto otrzyma Twój majątek i w jakich proporcjach.",
+      "subtitle": "Wybrani przez Ciebie odbiorcy",
+      "title": "Oznaczenia beneficjentów"
     },
     "executor": {
-      "description": "Choose a responsible person to manage your estate and carry out your wishes.",
-      "subtitle": "Your estate representative",
-      "title": "Estate Executor"
+      "description": "Wybierz osobę odpowiedzialną, która będzie zarządzać Twoim majątkiem i spełniać Twoje życzenia.",
+      "subtitle": "Twój przedstawiciel ds. nieruchomości",
+      "title": "Wykonawca testamentu"
     },
     "guardians": {
-      "description": "Appoint trusted individuals to care for minor children or dependents.",
-      "subtitle": "Care for your dependents",
-      "title": "Guardianship Appointments"
+      "description": "Wyznacz zaufane osoby do opieki nad małoletnimi dziećmi lub osobami na utrzymaniu.",
+      "subtitle": "Dbaj o osoby na Twoim utrzymaniu",
+      "title": "Nominacje opiekuńcze"
     },
     "personal": {
-      "description": "We require your complete legal information to ensure your will meets all legal requirements.",
-      "subtitle": "Your identifying information",
-      "title": "Personal Information"
+      "description": "Potrzebujemy Twoich pełnych informacji prawnych, aby mieć pewność, że Twój testament spełnia wszelkie wymogi prawne.",
+      "subtitle": "Twoje dane identyfikacyjne",
+      "title": "Informacje osobiste"
     },
     "preferences": {
-      "description": "Include any special instructions, charitable bequests, or personal wishes.",
-      "subtitle": "Additional instructions",
-      "title": "Special Provisions"
+      "description": "Uwzględnij wszelkie specjalne instrukcje, zapisy charytatywne i osobiste życzenia.",
+      "subtitle": "Dodatkowe instrukcje",
+      "title": "Postanowienia szczególne"
     },
     "review": {
-      "description": "Carefully review all details before generating your legal document.",
-      "subtitle": "Verify all information",
-      "title": "Final Review"
+      "description": "Przed wygenerowaniem dokumentu prawnego dokładnie zapoznaj się ze wszystkimi szczegółami.",
+      "subtitle": "Zweryfikuj wszystkie informacje",
+      "title": "Ostateczna recenzja"
     }
   },
   "validation": {
-    "jurisdictionRequired": "[PL] Jurisdiction required",
-    "requiredField": "[PL] Required field"
+    "addressRequired": "Wymagany jest Twój aktualny adres prawny",
+    "allocationError": "Całkowity podział procentowy musi wynosić 100%",
+    "beneficiaryRequired": "Należy określić co najmniej jednego beneficjenta",
+    "dobRequired": "Data urodzenia jest wymagana dla ważności prawnej",
+    "duplicateBeneficiary": "Ten beneficjent został już dodany",
+    "executorBeneficiaryConflict": "Wykonawca i główny beneficjent powinni być zazwyczaj różnymi osobami",
+    "executorRequired": "Należy wyznaczyć co najmniej jednego wykonawcę",
+    "guardianRequired": "W przypadku małoletnich dzieci wymagane jest wyznaczenie opiekuna",
+    "invalidDate": "Proszę podać prawidłową datę",
+    "invalidPercentage": "Procent musi mieścić się w przedziale od 0 do 100",
+    "jurisdictionRequired": "Wymagana jurysdykcja",
+    "requiredField": "Pole wymagane"
   },
   "will": {
-    "address": "Address",
-    "addressPlaceholder": "Address placeholder",
+    "address": "Adres",
+    "addressPlaceholder": "Miejsce zastępcze adresu",
     "allocation": {
-      "addBeneficiary": "Add beneficiary",
-      "description": "Description",
-      "generalEstate": "General estate",
-      "percentage": "Percentage",
+      "addBeneficiary": "Dodaj beneficjenta",
+      "description": "Opis",
+      "generalEstate": "Majątek ogólny",
+      "percentage": "Procent",
       "tips": {
-        "tip1": "Tip1",
-        "tip2": "Tip2",
-        "tip3": "Tip3",
-        "title": "Title"
+        "tip1": "Wskazówka 1",
+        "tip2": "Wskazówka 2",
+        "tip3": "Wskazówka 3",
+        "title": "Tytuł"
       },
-      "title": "Title",
-      "total": "Total"
+      "title": "Tytuł",
+      "total": "Całkowity"
     },
     "beneficiaries": {
-      "addBeneficiary": "Add beneficiary",
-      "allocation": "Allocation",
-      "alternativeBeneficiary": "Alternative beneficiary",
-      "alternativePlaceholder": "Alternative placeholder",
-      "beneficiaryNumber": "Beneficiary number",
-      "currentAllocation": "Current allocation",
-      "description": "Description",
-      "identification": "Identification",
-      "identificationPlaceholder": "Identification placeholder",
-      "importantNotes": "Important notes",
-      "name": "Name",
-      "noBeneficiaries": "No beneficiaries",
-      "note1": "Note1",
-      "note2": "Note2",
-      "note3": "Note3",
-      "ofEstate": "Of estate",
-      "title": "Title"
+      "addBeneficiary": "Dodaj beneficjenta",
+      "allocation": "Przydział",
+      "alternativeBeneficiary": "Alternatywny beneficjent",
+      "alternativePlaceholder": "Alternatywny symbol zastępczy",
+      "beneficiaryNumber": "Numer beneficjenta",
+      "currentAllocation": "Bieżąca alokacja",
+      "description": "Opis",
+      "identification": "Identyfikacja",
+      "identificationPlaceholder": "Symbol zastępczy identyfikacji",
+      "importantNotes": "Ważne uwagi",
+      "name": "Nazwa",
+      "noBeneficiaries": "Brak beneficjentów",
+      "note1": "Uwaga 1",
+      "note2": "Uwaga 2",
+      "note3": "Uwaga 3",
+      "ofEstate": "Majątku",
+      "title": "Tytuł"
     },
     "beneficiary": {
-      "name": "Name",
-      "namePlaceholder": "Name placeholder",
-      "relationship": "Relationship",
-      "relationshipPlaceholder": "Relationship placeholder"
+      "name": "Nazwa",
+      "namePlaceholder": "Nazwa zastępcza",
+      "relationship": "Relacja",
+      "relationshipPlaceholder": "Symbol zastępczy relacji"
     },
-    "birthDate": "Birth date",
-    "birthDatePlaceholder": "Birth date placeholder",
+    "birthDate": "Data urodzenia",
+    "birthDatePlaceholder": "Symbol zastępczy daty urodzenia",
     "buttons": {
-      "saveWillInfo": "Save will info",
-      "saving": "Saving"
+      "saveWillInfo": "Zapisz informacje",
+      "saving": "Oszczędność"
     },
-    "countryRequirements": "Country requirements",
+    "countryRequirements": "Wymagania krajowe",
     "descriptions": {
-      "executorDescription": "Executor description",
-      "physicalLocationDescription": "Physical location description",
-      "statusDescription": "Status description"
+      "executorDescription": "Opis wykonawcy",
+      "physicalLocationDescription": "Opis lokalizacji fizycznej",
+      "statusDescription": "Opis statusu"
     },
     "executor": {
-      "addAlternative": "Add alternative",
-      "address": "Address",
-      "addressPlaceholder": "Address placeholder",
-      "alternative": "Alternative",
-      "alternativeDescription": "Alternative description",
-      "description": "Description",
-      "name": "Name",
-      "namePlaceholder": "Name placeholder",
-      "phone": "Phone",
-      "phonePlaceholder": "Phone placeholder",
-      "primary": "Primary",
-      "relationship": "Relationship",
-      "relationshipPlaceholder": "Relationship placeholder",
-      "responsibilities": "Responsibilities",
-      "responsibility1": "Responsibility1",
-      "responsibility2": "Responsibility2",
-      "responsibility3": "Responsibility3",
-      "responsibility4": "Responsibility4",
-      "title": "Title"
+      "addAlternative": "Dodaj alternatywę",
+      "address": "Adres",
+      "addressPlaceholder": "Miejsce zastępcze adresu",
+      "alternative": "Alternatywny",
+      "alternativeDescription": "Alternatywny opis",
+      "description": "Opis",
+      "name": "Nazwa",
+      "namePlaceholder": "Nazwa zastępcza",
+      "phone": "Telefon",
+      "phonePlaceholder": "Symbol zastępczy telefonu",
+      "primary": "Podstawowy",
+      "relationship": "Relacja",
+      "relationshipPlaceholder": "Symbol zastępczy relacji",
+      "responsibilities": "Obowiązki",
+      "responsibility1": "Odpowiedzialność1",
+      "responsibility2": "Odpowiedzialność2",
+      "responsibility3": "Odpowiedzialność3",
+      "responsibility4": "Odpowiedzialność4",
+      "title": "Tytuł"
     },
     "fields": {
-      "additionalNotes": "Additional notes",
-      "currentStatus": "Current status",
-      "executorContact": "Executor contact",
-      "physicalLocation": "Physical location"
+      "additionalNotes": "Dodatkowe uwagi",
+      "currentStatus": "Aktualny status",
+      "executorContact": "Kontakt z wykonawcą",
+      "physicalLocation": "Lokalizacja fizyczna"
     },
     "legalReview": {
-      "button": "Button",
-      "description": "Description",
-      "title": "Title"
+      "button": "Przycisk",
+      "description": "Opis",
+      "title": "Tytuł"
     },
-    "name": "Name",
-    "namePlaceholder": "Name placeholder",
+    "name": "Nazwa",
+    "namePlaceholder": "Nazwa zastępcza",
     "options": {
-      "noContactSelected": "No contact selected"
+      "noContactSelected": "Nie wybrano kontaktu"
     },
     "placeholders": {
-      "additionalNotes": "Additional notes",
-      "physicalLocation": "Physical location",
-      "selectContact": "Select contact"
+      "additionalNotes": "Dodatkowe uwagi",
+      "physicalLocation": "Lokalizacja fizyczna",
+      "selectContact": "Wybierz kontakt"
     },
     "preview": {
-      "address": "Address",
-      "alternative": "Alternative",
-      "alternativeExecutor": "Alternative executor",
-      "date": "Date",
-      "description": "Description",
-      "executor": "Executor",
-      "generatePDF": "Generate p d f",
-      "legalRequirements": "Legal requirements",
-      "name": "Name",
-      "ofEstate": "Of estate",
-      "place": "Place",
-      "print": "Print",
-      "signature": "Signature",
-      "title": "Title",
-      "witnesses": "Witnesses"
+      "address": "Adres",
+      "alternative": "Alternatywny",
+      "alternativeExecutor": "Alternatywny wykonawca",
+      "date": "Data",
+      "description": "Opis",
+      "executor": "Wykonawca",
+      "generatePDF": "Generuj p d f",
+      "legalRequirements": "Wymagania prawne",
+      "name": "Nazwa",
+      "ofEstate": "Majątku",
+      "place": "Miejsce",
+      "print": "Wydrukować",
+      "signature": "Podpis",
+      "title": "Tytuł",
+      "witnesses": "Świadkowie"
     },
     "requirements": {
-      "handwriting": "Handwriting",
-      "notarization": "Notarization",
-      "typed": "Typed",
-      "witnesses": "Witnesses"
+      "handwriting": "Pismo",
+      "notarization": "Notariusz",
+      "typed": "Wpisane",
+      "witnesses": "Świadkowie"
     },
-    "selectCountry": "Select country",
-    "selectedCountryDetails": "Selected country details",
+    "selectCountry": "Wybierz kraj",
+    "selectedCountryDetails": "Szczegóły wybranego kraju",
     "status": {
-      "draft": "Draft",
-      "notarized": "Notarized",
-      "stored": "Stored",
-      "updated": "Updated"
+      "draft": "Projekt",
+      "notarized": "Notarialnie poświadczone",
+      "stored": "Przechowywane",
+      "updated": "Zaktualizowano"
     },
-    "testatorInfo": "Testator info",
+    "testatorInfo": "Informacje o testatorze",
     "validation": {
-      "allocation100": "Allocation100"
+      "allocation100": "Alokacja 100"
     },
     "willPreview": {
       "_2": "2",
-      "critical_execution_instruction_3": "Critical execution instruction 3",
-      "professional_review_4": "Professional review 4",
-      "provided_by_certified_legal_pa_5": "Provided by certified legal pa 5"
+      "critical_execution_instruction_3": "Instrukcja wykonania krytycznego 3",
+      "professional_review_4": "Recenzja profesjonalisty 4",
+      "provided_by_certified_legal_pa_5": "Dostarczone przez certyfikowanego prawnika PA 5"
     }
   },
   "willGenerator": {
-    "changeCountry": "Change country",
-    "confirmCountry": "Confirm country",
-    "confirmSigned": "Confirm signed",
+    "changeCountry": "Zmień kraj",
+    "confirmCountry": "Potwierdź kraj",
+    "confirmSigned": "Potwierdź podpisanie",
     "console": {
-      "willGenerationCompleted": "Will generation completed"
+      "willGenerationCompleted": "Zakończono generowanie testamentu"
     },
     "countries": {
       "AL": "A l",
-      "AT": "A t",
+      "AT": "Na",
       "BA": "B a",
-      "BE": "B e",
+      "BE": "Być",
       "BG": "B g",
       "CH": "C h",
       "CY": "C y",
@@ -366,270 +400,242 @@
       "DK": "D k",
       "EE": "E e",
       "ES": "E s",
-      "FI": "F i",
-      "FR": "F r",
+      "FI": "Fi",
+      "FR": "P r",
       "GB": "G b",
       "GR": "G r",
       "HR": "H r",
       "HU": "H u",
-      "IE": "I e",
-      "IS": "I s",
-      "IT": "I t",
+      "IE": "Tj",
+      "IS": "Jest",
+      "IT": "To",
       "LI": "L i",
       "LT": "L t",
-      "LU": "L u",
+      "LU": "Lu",
       "LV": "L v",
       "MD": "M d",
-      "ME": "M e",
+      "ME": "Ja",
       "MK": "M k",
       "MT": "M t",
       "NL": "N l",
-      "NO": "N o",
+      "NO": "NIE",
       "PL": "P l",
       "PT": "P t",
       "RO": "R o",
       "RS": "R s",
-      "SE": "S e",
+      "SE": "Zobacz",
       "SI": "S i",
-      "SK": "S k",
-      "UA": "U a"
+      "SK": "Sk",
+      "UA": "Ty a"
     },
-    "executionInstructions": "Execution instructions",
-    "failed_to_load_will_template_2": "Failed to load will template 2",
-    "finalizeUpload": "Finalize upload",
-    "fullName": "Full name",
-    "no_template_found_for_this_jur_1": "No template found for this jur 1",
-    "please_confirm_that_you_have_s_3": "Please confirm that you have s 3",
-    "select_a_country_4": "Select a country 4",
+    "executionInstructions": "Instrukcje wykonania",
+    "failed_to_load_will_template_2": "Nie udało się załadować szablonu 2",
+    "finalizeUpload": "Zakończ przesyłanie",
+    "fullName": "Pełne imię i nazwisko",
+    "no_template_found_for_this_jur_1": "Nie znaleziono szablonu dla tego jur 1",
+    "please_confirm_that_you_have_s_3": "Proszę potwierdzić, że posiadasz s 3",
+    "select_a_country_4": "Wybierz kraj 4",
     "steps": {
-      "confirmJurisdiction": "Confirm jurisdiction",
-      "executorBeneficiaries": "Executor beneficiaries",
-      "personalInformation": "Personal information",
-      "reviewGenerate": "Review generate",
-      "signConfirm": "Sign confirm"
+      "confirmJurisdiction": "Potwierdź jurysdykcję",
+      "executorBeneficiaries": "Beneficjenci wykonawcy testamentu",
+      "personalInformation": "Informacje osobiste",
+      "reviewGenerate": "Recenzja generowania",
+      "signConfirm": "Podpisz i potwierdź"
     }
   },
   "willSync": {
-    "approve": "Approve",
-    "autoApplied": "Auto applied",
+    "approve": "Zatwierdzić",
+    "autoApplied": "Zastosowano automatycznie",
     "changes": {
-      "allocationsModified": "Allocations modified",
-      "assetsAdded": "Assets added",
-      "beneficiariesRemoved": "Beneficiaries removed",
-      "noChanges": "No changes"
+      "allocationsModified": "Zmodyfikowano alokacje",
+      "assetsAdded": "Dodano zasoby",
+      "beneficiariesRemoved": "Usunięto beneficjentów",
+      "noChanges": "Bez zmian"
     },
-    "reject": "Reject",
-    "viewChanges": "View changes"
+    "reject": "Odrzucić",
+    "viewChanges": "Wyświetl zmiany"
   },
   "willSyncSettings": {
-    "autoSync": "Auto sync",
-    "autoSyncDescription": "Auto sync description",
-    "frequencyDaily": "Frequency daily",
-    "frequencyImmediate": "Frequency immediate",
-    "frequencyWeekly": "Frequency weekly",
-    "generalDescription": "General description",
-    "generalSettings": "General settings",
-    "requireApproval": "Require approval",
-    "requireApprovalDescription": "Require approval description",
-    "saveError": "Save error",
-    "saved": "Saved",
-    "syncFrequency": "Sync frequency",
-    "triggerDescription": "Trigger description",
-    "triggerSettings": "Trigger settings"
+    "autoSync": "Automatyczna synchronizacja",
+    "autoSyncDescription": "Opis automatycznej synchronizacji",
+    "frequencyDaily": "Częstotliwość codziennie",
+    "frequencyImmediate": "Częstotliwość natychmiastowa",
+    "frequencyWeekly": "Częstotliwość cotygodniowa",
+    "generalDescription": "Opis ogólny",
+    "generalSettings": "Ustawienia ogólne",
+    "requireApproval": "Wymagaj zatwierdzenia",
+    "requireApprovalDescription": "Wymagaj opisu zatwierdzenia",
+    "saveError": "Zapisz błąd",
+    "saved": "Zapisano",
+    "syncFrequency": "Częstotliwość synchronizacji",
+    "triggerDescription": "Opis wyzwalacza",
+    "triggerSettings": "Ustawienia wyzwalacza"
   },
   "willVersion": {
-    "added": "Added",
-    "compareDiff": "Compare diff",
-    "comparePrompt": "Compare prompt",
-    "current": "Current",
-    "description": "Description",
-    "modified": "Modified",
-    "removed": "Removed",
-    "restore": "Restore",
-    "title": "Title",
-    "versionNumber": "Version number"
+    "added": "W dodatku",
+    "compareDiff": "Porównaj różnice",
+    "comparePrompt": "Porównaj monit",
+    "current": "Aktualny",
+    "description": "Opis",
+    "modified": "Zmodyfikowany",
+    "removed": "REMOVED",
+    "restore": "Przywrócić",
+    "title": "Tytuł",
+    "versionNumber": "Numer wersji"
   },
   "disclaimers": {
-    "general": "LegacyGuard provides tools and guidance for estate planning but does not provide legal advice. For complex estates or specific legal questions, please consult with a qualified attorney in your jurisdiction.",
-    "willGenerator": "The will generator creates documents based on information you provide. While designed to meet legal requirements, we strongly recommend having any generated will reviewed by a qualified attorney before execution.",
-    "jurisdiction": "Legal requirements vary by jurisdiction. Ensure your documents comply with the laws in your area.",
-    "notLegalAdvice": "This service does not constitute legal advice and should not be relied upon as such.",
-    "professionalReview": "For complex estates, business interests, or unique family situations, professional legal review is strongly recommended."
+    "general": "LegacyGuard oferuje narzędzia i wskazówki dotyczące planowania spadkowego, ale nie udziela porad prawnych. W przypadku skomplikowanych spraw spadkowych lub konkretnych pytań prawnych, prosimy o konsultację z wykwalifikowanym prawnikiem w swojej jurysdykcji.",
+    "willGenerator": "Generator testamentów tworzy dokumenty na podstawie podanych przez Ciebie informacji. Chociaż został zaprojektowany tak, aby spełniać wymogi prawne, zdecydowanie zalecamy, aby każdy wygenerowany testament został sprawdzony przez wykwalifikowanego prawnika przed jego podpisaniem.",
+    "jurisdiction": "Wymagania prawne różnią się w zależności od jurysdykcji. Upewnij się, że Twoje dokumenty są zgodne z przepisami obowiązującymi w Twoim regionie.",
+    "notLegalAdvice": "Usługa ta nie stanowi porady prawnej i nie należy na niej polegać w tym sensie.",
+    "professionalReview": "W przypadku skomplikowanych majątków, interesów biznesowych lub nietypowych sytuacji rodzinnych zdecydowanie zaleca się skorzystanie z profesjonalnej porady prawnej."
   },
   "terms": {
-    "serviceTerms": "Terms of Service",
-    "privacyPolicy": "Privacy Policy",
-    "dataProcessing": "Data Processing Agreement",
-    "userAgreement": "User Agreement",
-    "acceptanceRequired": "By using LegacyGuard, you agree to our Terms of Service and Privacy Policy.",
-    "lastUpdated": "Last updated: {{date}}",
-    "effectiveDate": "Effective date: {{date}}"
+    "serviceTerms": "Warunki korzystania z usługi",
+    "privacyPolicy": "Polityka prywatności",
+    "dataProcessing": "Umowa o przetwarzaniu danych",
+    "userAgreement": "Umowa użytkownika",
+    "acceptanceRequired": "Korzystając z LegacyGuard, akceptujesz nasze Warunki korzystania z usługi i Politykę prywatności.",
+    "lastUpdated": "Ostatnia aktualizacja: {{date}}",
+    "effectiveDate": "Data wejścia w życie: {{date}}"
   },
   "compliance": {
-    "dataProtection": "Your data is protected in compliance with applicable data protection laws including GDPR and CCPA.",
-    "encryption": "All sensitive information is encrypted using industry-standard encryption methods.",
-    "retention": "Data retention policies are designed to protect your privacy while ensuring your family can access important information when needed.",
-    "access": "You have the right to access, modify, or delete your personal information at any time.",
-    "portability": "You can export your data in standard formats for use with other services."
+    "dataProtection": "Twoje dane są chronione zgodnie z obowiązującymi przepisami o ochronie danych, w tym RODO i CCPA.",
+    "encryption": "Wszystkie poufne informacje są szyfrowane z wykorzystaniem standardowych metod szyfrowania stosowanych w branży.",
+    "retention": "Zasady przechowywania danych mają na celu ochronę Twojej prywatności, a jednocześnie zapewnienie Twojej rodzinie dostępu do ważnych informacji w razie potrzeby.",
+    "access": "Masz prawo w każdej chwili uzyskać dostęp, zmienić lub usunąć swoje dane osobowe.",
+    "portability": "Możesz eksportować swoje dane w standardowych formatach do wykorzystania w innych usługach."
   },
   "executionRequirements": {
-    "witnessRequirements": "Witness Requirements for {{jurisdiction}}",
-    "notaryRequirements": "Notarization Requirements",
-    "signingInstructions": "Proper Signing Instructions",
-    "storageGuidelines": "Secure Storage Guidelines",
-    "legalCompliance": "Legal Compliance Verification"
+    "witnessRequirements": "Wymagania dotyczące świadków dla {{jurisdiction}}",
+    "notaryRequirements": "Wymagania notarialne",
+    "signingInstructions": "Prawidłowe instrukcje podpisywania",
+    "storageGuidelines": "Wytyczne dotyczące bezpiecznego przechowywania",
+    "legalCompliance": "Weryfikacja zgodności z przepisami prawnymi"
   },
   "cookiePolicy": {
     "cookieTypes": {
-      "analytics": "Analytics cookies help us understand how visitors interact with our website.",
-      "essential": "Essential cookies are necessary for the website to function properly.",
-      "marketing": "Marketing cookies are used to track visitors across websites to display relevant advertisements."
+      "analytics": "Pliki cookie analityczne pomagają nam zrozumieć, w jaki sposób odwiedzający wchodzą w interakcję z naszą witryną.",
+      "essential": "Niezbędne pliki cookie są konieczne do prawidłowego funkcjonowania witryny.",
+      "marketing": "Pliki cookie marketingowe służą do śledzenia użytkowników na stronach internetowych i wyświetlania im odpowiednich reklam."
     },
-    "howWeUseCookies": "We use cookies to improve your experience, analyze site usage, and provide personalized content.",
-    "introduction": "This Cookie Policy explains how LegacyGuard uses cookies and similar technologies.",
-    "manageCookies": "You can manage your cookie preferences through your browser settings or our cookie preference center.",
-    "title": "Title",
-    "whatAreCookies": "Cookies are small text files that are stored on your device when you visit our website."
+    "howWeUseCookies": "Używamy plików cookie w celu poprawy komfortu korzystania z witryny, analizowania sposobu korzystania z witryny i dostarczania spersonalizowanych treści.",
+    "introduction": "Niniejsza Polityka plików cookie wyjaśnia, w jaki sposób LegacyGuard wykorzystuje pliki cookie i podobne technologie.",
+    "manageCookies": "Preferencjami dotyczącymi plików cookie możesz zarządzać za pomocą ustawień swojej przeglądarki lub naszego centrum preferencji plików cookie.",
+    "title": "Tytuł",
+    "whatAreCookies": "Pliki cookie to niewielkie pliki tekstowe, które są zapisywane na Twoim urządzeniu podczas odwiedzania naszej witryny internetowej."
   },
   "header": {
-    "subtitle": "Subtitle",
-    "title": "Title"
+    "title": "Tytuł"
   },
   "hero": {
-    "headline": "Headline",
-    "subheadline": "Subheadline"
-  },
-  "privacyPolicy": {
-    "introduction": "This Privacy Policy describes how LegacyGuard collects, uses, and protects your personal information.",
-    "lastUpdated": "Last updated: {{date}}",
-    "sections": {
-      "dataSecurity": {
-        "content": "We implement appropriate security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.",
-        "title": "Data Security"
-      },
-      "informationCollection": {
-        "content": "We collect information you provide directly to us, such as when you create an account, use our services, or contact us for support.",
-        "title": "Information We Collect"
-      },
-      "informationSharing": {
-        "content": "We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except as described in this policy.",
-        "title": "Information Sharing"
-      },
-      "informationUse": {
-        "content": "We use your information to provide, maintain, and improve our services, communicate with you, and ensure the security of your account.",
-        "title": "How We Use Your Information"
-      },
-      "yourRights": {
-        "content": "You have the right to access, update, or delete your personal information. You may also opt out of certain communications from us.",
-        "title": "Your Rights"
-      }
-    },
-    "title": "Privacy Policy"
+    "headline": "Nagłówek",
+    "subheadline": "Podtytuł"
   },
   "termsOfService": {
-    "effectiveDate": "Effective date: {{date}}",
-    "introduction": "These Terms of Service govern your use of LegacyGuard's family protection platform and services.",
-    "lastUpdated": "Last updated: {{date}}",
+    "effectiveDate": "Data wejścia w życie: {{date}}",
+    "introduction": "Niniejsze Warunki korzystania z usługi regulują zasady korzystania z platformy i usług ochrony rodziny LegacyGuard.",
+    "lastUpdated": "Ostatnia aktualizacja: {{date}}",
     "sections": {
       "acceptance": {
-        "content": "By accessing or using LegacyGuard, you agree to be bound by these Terms of Service and all applicable laws and regulations.",
-        "title": "Acceptance of Terms"
+        "content": "Uzyskując dostęp do usługi LegacyGuard lub korzystając z niej, zgadzasz się przestrzegać niniejszych Warunków korzystania z usługi oraz wszystkich obowiązujących przepisów prawa.",
+        "title": "Akceptacja warunków"
       },
       "description": {
-        "content": "LegacyGuard provides digital tools and services to help individuals organize their important information for family protection purposes.",
-        "title": "Service Description"
+        "content": "LegacyGuard udostępnia narzędzia i usługi cyfrowe, które pomagają osobom uporządkować ważne informacje w celu ochrony rodziny.",
+        "title": "Opis usługi"
       },
       "limitations": {
-        "content": "LegacyGuard provides tools and guidance but does not provide legal advice. We recommend consulting with qualified professionals for complex legal matters.",
-        "title": "Limitations of Liability"
+        "content": "LegacyGuard udostępnia narzędzia i wskazówki, ale nie udziela porad prawnych. W przypadku skomplikowanych kwestii prawnych zalecamy konsultację z wykwalifikowanymi specjalistami.",
+        "title": "Ograniczenia odpowiedzialności"
       },
       "privacy": {
-        "content": "Your privacy is important to us. Please review our Privacy Policy to understand how we collect, use, and protect your information.",
-        "title": "Privacy and Data Protection"
+        "content": "Twoja prywatność jest dla nas ważna. Zapoznaj się z naszą Polityką Prywatności, aby dowiedzieć się, jak gromadzimy, wykorzystujemy i chronimy Twoje dane.",
+        "title": "Prywatność i ochrona danych"
       },
       "userResponsibilities": {
-        "content": "You are responsible for maintaining the confidentiality of your account information and for all activities that occur under your account.",
-        "title": "User Responsibilities"
+        "content": "Użytkownik jest odpowiedzialny za zachowanie poufności informacji o swoim koncie oraz za wszelkie działania podejmowane za jego pośrednictwem.",
+        "title": "Obowiązki użytkownika"
       }
     },
-    "title": "Terms of Service"
+    "title": "Warunki korzystania z usługi"
   },
   "cookies": {
     "policy": {
       "analytics": {
-        "description": "Description",
+        "description": "Opis",
         "examples": {
           "ga": "Ga",
-          "gid": "Gid",
-          "session": "Session"
+          "gid": "Kołowacizna",
+          "session": "Sesja"
         },
-        "purpose": "Purpose",
-        "title": "Title"
+        "purpose": "Zamiar",
+        "title": "Tytuł"
       },
       "categories": {
-        "title": "Title"
+        "title": "Tytuł"
       },
       "contact": {
-        "address": "Address",
-        "addressDetails": "Address details",
-        "description": "Description",
-        "email": "Email",
-        "title": "Title"
+        "address": "Adres",
+        "addressDetails": "Dane adresowe",
+        "description": "Opis",
+        "email": "E-mail",
+        "title": "Tytuł"
       },
-      "examples": "Examples",
-      "lastUpdated": "Last updated",
+      "examples": "Przykłady",
+      "lastUpdated": "Ostatnia aktualizacja",
       "manage": {
-        "title": "Title"
+        "title": "Tytuł"
       },
       "marketing": {
-        "description": "Description",
+        "description": "Opis",
         "examples": {
           "facebook": "Facebook",
           "google": "Google"
         },
-        "purpose": "Purpose",
-        "title": "Title"
+        "purpose": "Zamiar",
+        "title": "Tytuł"
       },
       "necessary": {
-        "description": "Description",
+        "description": "Opis",
         "examples": {
-          "auth": "Auth",
-          "consent": "Consent",
-          "csrf": "Csrf",
-          "session": "Session"
+          "auth": "Autoryzacja",
+          "consent": "Zgoda",
+          "csrf": "CSRF",
+          "session": "Sesja"
         },
-        "purpose": "Purpose",
-        "title": "Title"
+        "purpose": "Zamiar",
+        "title": "Tytuł"
       },
       "overview": {
-        "intro": "Intro",
-        "point1": "Point1",
-        "point2": "Point2",
-        "point3": "Point3",
-        "point4": "Point4",
-        "title": "Title"
+        "intro": "Wprowadzenie",
+        "point1": "Punkt 1",
+        "point2": "Punkt 2",
+        "point3": "Punkt 3",
+        "point4": "Punkt 4",
+        "title": "Tytuł"
       },
       "preferences": {
-        "description": "Description",
+        "description": "Opis",
         "examples": {
-          "language": "Language",
-          "theme": "Theme",
-          "ui": "Ui"
+          "language": "Język",
+          "theme": "Temat",
+          "ui": "Interfejs użytkownika"
         },
-        "purpose": "Purpose",
-        "title": "Title"
+        "purpose": "Zamiar",
+        "title": "Tytuł"
       },
-      "purpose": "Purpose",
-      "required": "Required",
-      "subtitle": "Subtitle",
-      "title": "Title",
+      "purpose": "Zamiar",
+      "required": "Wymagany",
+      "subtitle": "Podtytuł",
+      "title": "Tytuł",
       "yourRights": {
-        "description": "Description",
-        "right1": "Right1",
-        "right2": "Right2",
-        "right3": "Right3",
-        "right4": "Right4",
-        "title": "Title"
+        "description": "Opis",
+        "right1": "Prawo1",
+        "right2": "Prawo2",
+        "right3": "Prawo3",
+        "right4": "Prawo4",
+        "title": "Tytuł"
       }
     }
   }

@@ -71,7 +71,7 @@ export const EnhancedPersonalAssistant: React.FC<EnhancedPersonalAssistantProps>
   className,
   compact = false 
 }) => {
-  const { t } = useTranslation('assistant');
+  const { t } = useTranslation('ai-assistant');
   const { 
     userProgress, 
     emotionalState, 

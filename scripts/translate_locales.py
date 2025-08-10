@@ -4,6 +4,7 @@ import json
 import os
 import re
 import sys
+import time
 from pathlib import Path
 from typing import Any, Dict, List, Tuple
 
@@ -96,23 +97,45 @@ def pretty_print_map(mapping: Dict[str, Dict[str, str]]):
         print(f"- {src}\n  -> {targets}\n")
 
 
+LANGUAGE_OVERRIDES = {
+    # Montenegrin ('me') is not supported; map to closest available: Serbian Latin
+    "me": "sr-Latn",
+}
+
+
+def normalize_lang(code: str) -> str:
+    return LANGUAGE_OVERRIDES.get(code, code)
+
+
 def translate_batch(strings: List[str], target_language_code: str, project_id: str, location: str = "global") -> List[str]:
     # Lazy import to avoid dependency in map-only runs
     from google.cloud import translate
+    from google.api_core import exceptions as gax_exceptions
+
     client = translate.TranslationServiceClient()
     parent = f"projects/{project_id}/locations/{location}"
 
-    # The API supports up to 1024 strings per request
-    response = client.translate_text(
-        request={
-            "parent": parent,
-            "contents": strings,
-            "mime_type": "text/plain",
-            "source_language_code": "en",
-            "target_language_code": target_language_code,
-        }
-    )
-    return [t.translated_text for t in response.translations]
+    # Retry up to 3 times with exponential backoff on transient errors
+    attempts = 0
+    while True:
+        try:
+            response = client.translate_text(
+                request={
+                    "parent": parent,
+                    "contents": strings,
+                    "mime_type": "text/plain",
+                    "source_language_code": "en",
+                    "target_language_code": normalize_lang(target_language_code),
+                }
+            )
+            return [t.translated_text for t in response.translations]
+        except (gax_exceptions.ServiceUnavailable, gax_exceptions.DeadlineExceeded) as e:
+            attempts += 1
+            if attempts >= 3:
+                raise
+            sleep_s = 2 ** attempts
+            print(f"Transient error translating to {target_language_code}: {e}; retrying in {sleep_s}s...", file=sys.stderr)
+            time.sleep(sleep_s)
 
 
 def load_json(path: Path) -> Any:
@@ -173,6 +196,8 @@ def main():
     parser.add_argument("--location", default="global", help="Translation location (e.g., global or us-central1)")
     parser.add_argument("--map-only", action="store_true", help="Only print the export mapping without translating")
     parser.add_argument("--dry-run", action="store_true", help="Translate but do not write files; just report actions")
+    parser.add_argument("--continue-on-error", action="store_true", help="Skip languages/files that fail and continue processing others")
+    parser.add_argument("--include-files", nargs="*", help="Only process source JSON basenames (e.g., ui-components.json)")
     args = parser.parse_args()
 
     locales_dir = Path(args.locales_dir)
@@ -181,6 +206,14 @@ def main():
         sys.exit(1)
 
     mapping = build_map(locales_dir, args.source_lang)
+
+    # Optionally filter to selected source files
+    if args.include_files:
+        include_set = set(args.include_files)
+        mapping = {src: per_lang for src, per_lang in mapping.items() if Path(src).name in include_set}
+        if not mapping:
+            print(f"No matching source files for --include-files: {', '.join(args.include_files)}", file=sys.stderr)
+            sys.exit(1)
 
     if args.map_only:
         pretty_print_map(mapping)
@@ -209,12 +242,19 @@ def main():
 
         for lang in targets:
             out_path = Path(per_lang[lang])
-            translated_data = apply_translations(src_data, tfn, lang)
-            if args.dry_run:
-                print(f"[dry-run] Would write {out_path}")
-            else:
-                save_json(out_path, translated_data)
-                print(f"Wrote {out_path}")
+            try:
+                translated_data = apply_translations(src_data, tfn, lang)
+                if args.dry_run:
+                    print(f"[dry-run] Would write {out_path}")
+                else:
+                    save_json(out_path, translated_data)
+                    print(f"Wrote {out_path}")
+            except Exception as e:
+                if args.continue_on_error:
+                    print(f"[warn] Skipping {out_path} due to error: {e}", file=sys.stderr)
+                    continue
+                else:
+                    raise
 
 
 if __name__ == "__main__":

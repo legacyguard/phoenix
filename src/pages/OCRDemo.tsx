@@ -8,7 +8,7 @@ import { Shield, Clock, FileText, Globe } from 'lucide-react';
 import { format } from 'date-fns';
 
 export function OCRDemo() {
-  const { t } = useTranslation('ui');
+  const { t } = useTranslation('ui-common');
   const { results: storedResults, isLoading: isLoadingStored } = useStoredOCRResults();
 
   return (

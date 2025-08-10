@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { useErrorTracking } from '@/utils/errorTracking';
 
 export function ErrorTest() {
-  const { t } = useTranslation('ui');
+  const { t } = useTranslation('ui-common');
   const { logError, logWarning, logCritical } = useErrorTracking();
 
   const triggerError = () => {

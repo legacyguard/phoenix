@@ -28,7 +28,7 @@ interface EmergencyProtocolSettings {
 }
 
 export const EmergencyProtocolConfig: React.FC = () => {
-  const { t } = useTranslation('family');
+  const { t } = useTranslation('family-core');
   const { t: tMicro } = useTranslation('micro-copy');
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);

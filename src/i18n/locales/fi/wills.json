@@ -1,370 +1,404 @@
 {
   "actions": {
-    "next": "[FI] Next",
-    "previous": "[FI] Previous"
+    "consultLawyer": "Varaa oikeudellinen konsultaatio",
+    "createCodicil": "Luo tarkistus (Codicil)",
+    "deleteWill": "Poista tämä testamentti",
+    "downloadPdf": "Lataa PDF-dokumentti",
+    "generateWill": "Luo lopullinen testamentti",
+    "next": "Seuraava",
+    "previous": "Edellinen",
+    "printWill": "Tulosta testamenttiasiakirja",
+    "saveProgress": "Tallenna nykyinen edistyminen",
+    "shareWill": "Jaa perheen kanssa",
+    "updateWill": "Päivitä testamenttitiedot"
   },
   "errors": {
-    "assetLoadFailed": "We could not load your asset information. Please refresh and try again.",
-    "generationFailed": "We encountered an issue generating your will. Please review your information and try again.",
-    "jurisdictionRequired": "Please select your legal jurisdiction to ensure compliance",
-    "loadFailed": "We could not load your will information. Please refresh the page and try again.",
-    "printFailed": "We encountered an issue preparing your document for printing. Please try again.",
-    "saveFailed": "We could not save your progress. Please check your connection and try again.",
-    "sharingFailed": "We could not share your will. Please verify the recipients and try again.",
-    "validationFailed": "Please review and correct the highlighted information before proceeding"
+    "assetLoadFailed": "Emme voineet ladata resurssisi tietoja. Päivitä sivu ja yritä uudelleen.",
+    "generationFailed": "Testamenttisi luomisessa havaittiin ongelma. Tarkista tietosi ja yritä uudelleen.",
+    "jurisdictionRequired": "Valitse lainkäyttöalueesi varmistaaksesi vaatimustenmukaisuuden",
+    "loadFailed": "Testamenttitietojesi lataaminen epäonnistui. Päivitä sivu ja yritä uudelleen.",
+    "printFailed": "Asiakirjasi valmistelussa tulostusta varten kohtasimme ongelman. Yritä uudelleen.",
+    "saveFailed": "Edistymistäsi ei voitu tallentaa. Tarkista yhteytesi ja yritä uudelleen.",
+    "validationFailed": "Tarkista ja korjaa korostetut tiedot ennen jatkamista"
   },
   "execution": {
-    "copyDistribution": "Distribution of Copies",
-    "familyNotification": "Informing Your Family",
-    "legalRequirements": "Legal Requirements for {{jurisdiction}}",
-    "notarization": "Notarization Requirements",
-    "notaryOptional": "Notary recommended but not required",
-    "notaryRequired": "Notary public required",
-    "numberOfCopies": "Recommended Number of Copies",
-    "safeStorage": "Secure Storage Locations",
-    "selfProving": "Self-Proving Affidavit",
-    "signingInstructions": "Signing Instructions",
-    "signingOrder": "Proper Signing Order",
-    "storageRecommendations": "Storage Recommendations",
-    "subtitle": "Making your will legally binding",
-    "title": "Will Execution Requirements",
-    "witnessCount": "{{count}} witnesses required",
-    "witnessInstructions": "Witness Instructions",
-    "witnessQualifications": "Witness Qualifications",
-    "witnessRequirements": "Witness Requirements"
+    "copyDistribution": "Kopioiden jakelu",
+    "familyNotification": "Perheen tiedottaminen",
+    "legalRequirements": "Lakisääteiset vaatimukset {{jurisdiction}}:lle",
+    "notarization": "Notaarivaatimukset",
+    "notaryOptional": "Notaari on suositeltava, mutta ei pakollinen",
+    "notaryRequired": "Julkinen notaari vaaditaan",
+    "numberOfCopies": "Suositeltu kopioiden määrä",
+    "safeStorage": "Turvalliset säilytyspaikat",
+    "selfProving": "Itseään todistava valaehtoinen todistus",
+    "signingInstructions": "Allekirjoitusohjeet",
+    "signingOrder": "Oikea allekirjoitusjärjestys",
+    "storageRecommendations": "Säilytyssuositukset",
+    "subtitle": "Testamentin tekeminen oikeudellisesti sitovaksi",
+    "title": "Testamentin täytäntöönpanovaatimukset",
+    "witnessCount": "{{count}} todistajia tarvitaan",
+    "witnessInstructions": "Todistajan ohjeet",
+    "witnessQualifications": "Todistajan pätevyysvaatimukset",
+    "witnessRequirements": "Todistajavaatimukset"
   },
   "form": {
     "assetSelection": {
-      "allAssets": "Include All Current and Future Assets",
-      "assetCategories": "Asset Categories to Include",
-      "businessInterests": "Business Interests",
-      "excludedAssets": "Assets to Exclude",
-      "jointAssets": "Jointly Owned Assets",
-      "residualDescription": "All remaining assets not specifically mentioned elsewhere in this will",
-      "residualEstate": "Residual Estate",
-      "selectAssets": "Choose Assets to Include",
-      "specificAssets": "Select Specific Assets Only"
+      "allAssets": "Sisällytä kaikki nykyiset ja tulevat varat",
+      "assetCategories": "Sisällytettävät omaisuusluokat",
+      "businessInterests": "Liiketoimintaintressit",
+      "excludedAssets": "Poissuljettavat varat",
+      "jointAssets": "Yhteisomistuksessa olevat varat",
+      "residualDescription": "Kaikki muut varat, joita ei ole erikseen mainittu muualla tässä testamentissa",
+      "residualEstate": "Jäännösomaisuus",
+      "selectAssets": "Valitse sisällytettävät resurssit",
+      "specificAssets": "Valitse vain tietyt resurssit"
     },
     "distribution": {
-      "addBeneficiary": "Add Additional Beneficiary",
-      "ageRestriction": "Age Requirement",
-      "allocation": "Inheritance Allocation",
-      "beneficiaryName": "Beneficiary's Full Name",
-      "conditions": "Conditions or Restrictions",
-      "contingentBeneficiary": "Contingent Beneficiary",
-      "percentage": "Percentage of Estate",
-      "primaryBeneficiary": "Primary Beneficiary",
-      "relationship": "Relationship to You",
-      "specificAmount": "Specific Dollar Amount",
-      "specificAsset": "Specific Asset or Property",
-      "trustProvision": "Trust Arrangement"
+      "addBeneficiary": "Lisää edunsaaja",
+      "ageRestriction": "Ikäraja",
+      "allocation": "Perinnönjako",
+      "beneficiaryName": "Edunsaajan koko nimi",
+      "conditions": "Edellytykset tai rajoitukset",
+      "contingentBeneficiary": "Ehdollinen edunsaaja",
+      "percentage": "Prosenttiosuus omaisuudesta",
+      "primaryBeneficiary": "Ensisijainen edunsaaja",
+      "relationship": "Suhde sinuun",
+      "specificAmount": "Tietty dollarimäärä",
+      "specificAsset": "Tietty omaisuus tai ominaisuus",
+      "trustProvision": "Trust-järjestely"
     },
     "executor": {
-      "alternateExecutor": "Alternate Executor",
-      "bondRequirement": "Bond Requirement",
-      "coExecutors": "Co-Executors",
-      "executorAddress": "Executor's Address",
-      "executorCompensation": "Executor Compensation",
-      "executorDuties": "Executor Responsibilities",
-      "executorInstructions": "Special Instructions for Executor",
-      "executorName": "Executor's Full Name",
-      "executorRelationship": "Relationship to You",
-      "primaryExecutor": "Primary Executor",
-      "specialPowers": "Special Powers Granted"
+      "alternateExecutor": "Vaihtoehtoinen toimeenpanija",
+      "bondRequirement": "Joukkovelkakirjavaatimus",
+      "coExecutors": "Yhteistoteuttajat",
+      "executorAddress": "Toimeenpanijan osoite",
+      "executorCompensation": "Toimeenpanijan korvaus",
+      "executorDuties": "Toimeenpanijan vastuut",
+      "executorInstructions": "Erityisohjeet toimeenpanijalle",
+      "executorName": "Toimeenpanijan koko nimi",
+      "executorRelationship": "Suhde sinuun",
+      "primaryExecutor": "Ensisijainen toimeenpanija",
+      "specialPowers": "Myönnetyt erityisvaltuudet"
     },
     "guardianship": {
-      "backupGuardian": "Alternate Guardian",
-      "educationPreferences": "Education Preferences",
-      "guardianCompensation": "Guardian Compensation",
-      "guardianFor": "Guardian for {{childName}}",
-      "guardianInstructions": "Instructions for Guardian",
-      "guardianQualifications": "Guardian Qualifications",
-      "minorChildren": "Minor Children Requiring Guardianship",
-      "primaryGuardian": "Primary Guardian",
-      "religiousUpbringing": "Religious Upbringing Preferences"
+      "backupGuardian": "Vaihtoehtoinen huoltaja",
+      "educationPreferences": "Koulutusmieltymykset",
+      "guardianCompensation": "Huoltajan korvaus",
+      "guardianFor": "Valvoja käyttäjälle {{childName}}",
+      "guardianInstructions": "Ohjeet huoltajalle",
+      "guardianQualifications": "Huoltajan pätevyysvaatimukset",
+      "minorChildren": "Huoltajuutta tarvitsevat alaikäiset lapset",
+      "primaryGuardian": "Ensisijainen huoltaja",
+      "religiousUpbringing": "Uskonnolliset kasvatusmieltymykset"
     },
     "personalInfo": {
-      "addChild": "Add Child",
-      "addressHelper": "Your primary residence address",
-      "childDateOfBirth": "Child's Date of Birth",
-      "childName": "Child's Full Name",
-      "childRelation": "Relationship to You",
-      "children": "Children and Dependents",
-      "currentAddress": "Current Legal Address",
-      "dateOfBirth": "Date of Birth",
-      "fullLegalName": "Complete Legal Name",
-      "fullLegalNameHelper": "Enter your name exactly as it appears on official documents",
-      "maritalStatus": "Marital Status",
-      "marriageDate": "Date of Marriage",
-      "placeOfBirth": "Place of Birth",
-      "previousWills": "Previous Wills",
-      "revokesPrevious": "This will revokes all previous wills",
-      "spouseName": "Spouse's Full Legal Name"
+      "addChild": "Lisää lapsi",
+      "addressHelper": "Ensisijainen asuinosoitteesi",
+      "childDateOfBirth": "Lapsen syntymäaika",
+      "childName": "Lapsen koko nimi",
+      "childRelation": "Suhde sinuun",
+      "children": "Lapset ja huollettavat",
+      "currentAddress": "Nykyinen virallinen osoite",
+      "dateOfBirth": "Syntymäaika",
+      "fullLegalName": "Koko virallinen nimi",
+      "fullLegalNameHelper": "Kirjoita nimesi täsmälleen sellaisena kuin se näkyy virallisissa asiakirjoissa",
+      "maritalStatus": "Siviilisääty",
+      "marriageDate": "Avioliiton päivämäärä",
+      "placeOfBirth": "Syntymäpaikka",
+      "previousWills": "Aiemmat testamentit",
+      "revokesPrevious": "Tämä kumoaa kaikki aiemmat testamentit",
+      "spouseName": "Puolison koko virallinen nimi"
     },
     "provisions": {
-      "burialCremation": "Burial or Cremation Preference",
-      "businessContinuation": "Business Continuation Plans",
-      "charitableBequests": "Charitable Donations",
-      "charityAmount": "Donation Amount",
-      "charityName": "Charitable Organization",
-      "digitalAssets": "Digital Asset Instructions",
-      "funeralInstructions": "Specific Funeral Instructions",
-      "funeralWishes": "Funeral and Burial Preferences",
-      "organDonation": "Organ Donation Wishes",
-      "personalMessages": "Personal Messages to Family",
-      "petCare": "Pet Care Arrangements",
-      "specialInstructions": "Special Instructions"
+      "burialCremation": "Hautaaminen tai tuhkaus",
+      "businessContinuation": "Liiketoiminnan jatkosuunnitelmat",
+      "charitableBequests": "Hyväntekeväisyyslahjoitukset",
+      "charityAmount": "Lahjoituksen määrä",
+      "charityName": "Hyväntekeväisyysjärjestö",
+      "digitalAssets": "Digitaalisen omaisuuden ohjeet",
+      "funeralInstructions": "Hautajaisohjeet",
+      "funeralWishes": "Hautajais- ja hautausmieltymykset",
+      "organDonation": "Elinluovutustoiveet",
+      "personalMessages": "Henkilökohtaiset viestit perheelle",
+      "petCare": "Lemmikkien hoitojärjestelyt",
+      "specialInstructions": "Erityisohjeet"
     }
   },
   "generator": {
-    "of": "[FI] Of",
-    "step": "[FI] Step"
+    "continueWill": "Jatka testamentin laatimista",
+    "description": "Laadi kattava ja laillisesti pätevä testamentti, joka on räätälöity lainkäyttöalueesi vaatimusten ja perheesi ainutlaatuisten tarpeiden mukaan.",
+    "getStarted": "Aloita testamentin luominen",
+    "importance": "Varmista, että toiveesi on dokumentoitu laillisesti ja perheesi on suojattu",
+    "newWill": "Luo uusi testamentti",
+    "of": "Of",
+    "professionalGuidance": "Ammattimaista oikeudellista neuvontaa suositellaan monimutkaisiin perintöihin",
+    "step": "Vaihe",
+    "subtitle": "Luo oikeudellisesti pätevä testamentti ammattilaisen ohjauksessa",
+    "title": "Viimeisen tahdon ja testamentin generaattori",
+    "viewExisting": "Tarkista nykyinen testamentti"
   },
   "legal": {
-    "consultLawyer": "Consult with Attorney",
-    "disclaimer": "Important Legal Disclaimer",
-    "estatePlanning": "Comprehensive Estate Planning",
-    "jurisdiction": "Legal Jurisdiction",
-    "lawsApply": "Laws of {{jurisdiction}} will apply",
-    "lawyerRecommended": "We strongly recommend consulting with a qualified attorney for complex estates",
-    "legalCompliance": "Legal Compliance Verification",
-    "notLegalAdvice": "This service does not constitute legal advice",
-    "probateProcess": "Probate Process Information",
-    "professionalGuidance": "Professional legal guidance is recommended",
-    "professionalReview": "Professional Legal Review",
-    "selectJurisdiction": "Please select your legal jurisdiction",
-    "taxImplications": "Tax Implications"
+    "consultLawyer": "Ota yhteyttä asianajajaan",
+    "disclaimer": "Tärkeä oikeudellinen vastuuvapauslauseke",
+    "estatePlanning": "Kattava perintösuunnittelu",
+    "jurisdiction": "Oikeudellinen toimivalta",
+    "lawsApply": "{{jurisdiction}} lait ovat voimassa",
+    "lawyerRecommended": "Suosittelemme vahvasti konsultoimaan pätevää asianajajaa monimutkaisissa perintöasioissa",
+    "legalCompliance": "Lakienmukaisuuden varmennus",
+    "notLegalAdvice": "Tämä palvelu ei ole oikeudellista neuvontaa",
+    "probateProcess": "Perunkirjoitusprosessin tiedot",
+    "professionalGuidance": "Ammattimaista oikeudellista neuvontaa suositellaan",
+    "professionalReview": "Ammattimainen oikeudellinen tarkastus",
+    "selectJurisdiction": "Valitse lainkäyttöalueesi",
+    "taxImplications": "Verovaikutukset"
   },
   "notifications": {
-    "consultationScheduled": "Legal consultation has been scheduled",
-    "documentShared": "Will has been shared with designated family members",
-    "executionComplete": "Will execution has been recorded",
-    "progressSaved": "Your progress has been saved",
-    "reminderSet": "Will review reminder has been set",
-    "willDeleted": "Will has been permanently deleted",
-    "willGenerated": "Your will has been successfully generated",
-    "willUpdated": "Will has been updated successfully"
+    "consultationScheduled": "Oikeudellinen konsultaatio on sovittu",
+    "documentShared": "Testamentti on jaettu nimettyjen perheenjäsenten kanssa",
+    "executionComplete": "Testamentin täytäntöönpano on kirjattu",
+    "progressSaved": "Edistymisesi on tallennettu",
+    "willDeleted": "Testamentti on poistettu pysyvästi",
+    "willUpdated": "Will on päivitetty onnistuneesti"
   },
   "preview": {
-    "article": "ARTICLE {{number}}",
-    "draftWatermark": "DRAFT - NOT LEGALLY BINDING",
-    "executionInstructions": "EXECUTION INSTRUCTIONS",
-    "lastWillTestament": "LAST WILL AND TESTAMENT",
+    "article": "ARTIKKELI {{number}}",
+    "draftWatermark": "LUONNOS - EI OIKEUDELLISESTI SITOVA",
+    "executionInstructions": "SUORITUSOHJEET",
+    "lastWillTestament": "VIIMEINEN TESTAMENTTI",
     "of": "OF",
-    "pageNumber": "Page {{current}} of {{total}}",
-    "reviewCarefully": "Please review this document carefully before proceeding",
-    "section": "Section {{number}}",
-    "signatureSection": "SIGNATURE SECTION",
-    "subtitle": "Review your complete will before finalizing",
-    "title": "Will Document Preview",
-    "witnessClause": "WITNESS CLAUSE"
+    "pageNumber": "Sivu {{current}} / {{total}}",
+    "reviewCarefully": "Lue tämä asiakirja huolellisesti ennen jatkamista",
+    "section": "Osa {{number}}",
+    "signatureSection": "ALLEKIRJOITUSOSIO",
+    "subtitle": "Tarkista testamenttisi kokonaisuudessaan ennen sen viimeistelyä",
+    "title": "Dokumentin esikatselu",
+    "witnessClause": "TODISTAJALAUSEKE"
   },
   "status": {
-    "archived": "Archived Version",
-    "draft": "Draft in Progress",
-    "executed": "Legally Executed",
-    "generated": "Generated - Requires Execution",
-    "outdated": "Requires Update",
-    "underReview": "Under Professional Review"
+    "archived": "Arkistoitu versio",
+    "draft": "Luonnos käynnissä",
+    "executed": "Laillisesti teloitettu",
+    "generated": "Luotu - Vaatii suorituksen",
+    "outdated": "Vaatii päivityksen"
+  },
+  "policy": {
+    "duration": {
+      "session": "Istunto",
+      "minutes": "{{count}} minuuttia",
+      "hours": "{{count}} tuntia",
+      "days": "{{count}} päivää",
+      "months": "{{count}} kuukautta",
+      "years": "{{count}} vuotta"
+    }
   },
   "steps": {
     "assets": {
-      "description": "Select which assets you wish to include in your will and how they should be distributed.",
-      "subtitle": "Your valuable possessions",
-      "title": "Asset Distribution"
+      "description": "Valitse, mitkä varat haluat sisällyttää testamenttiisi ja miten ne jaetaan.",
+      "subtitle": "Arvokkaat omaisuutesi",
+      "title": "Varojen jako"
     },
     "beneficiaries": {
-      "description": "Designate who will receive your assets and in what proportions.",
-      "subtitle": "Your chosen recipients",
-      "title": "Beneficiary Designations"
+      "description": "Määritä, kuka saa omaisuutesi ja missä suhteessa.",
+      "subtitle": "Valitsemasi vastaanottajat",
+      "title": "Edunsaajien nimitykset"
     },
     "executor": {
-      "description": "Choose a responsible person to manage your estate and carry out your wishes.",
-      "subtitle": "Your estate representative",
-      "title": "Estate Executor"
+      "description": "Valitse vastuullinen henkilö hoitamaan omaisuuttasi ja toteuttamaan toiveesi.",
+      "subtitle": "Perintöedustajasi",
+      "title": "Kuolinpesän toimeenpanija"
     },
     "guardians": {
-      "description": "Appoint trusted individuals to care for minor children or dependents.",
-      "subtitle": "Care for your dependents",
-      "title": "Guardianship Appointments"
+      "description": "Nimeä luotettavia henkilöitä huolehtimaan alaikäisistä lapsista tai huollettavista.",
+      "subtitle": "Huolehdi huollettavistasi",
+      "title": "Holhouksen nimitykset"
     },
     "personal": {
-      "description": "We require your complete legal information to ensure your will meets all legal requirements.",
-      "subtitle": "Your identifying information",
-      "title": "Personal Information"
+      "description": "Tarvitsemme täydelliset oikeudelliset tiedot varmistaaksemme, että testamenttisi täyttää kaikki lain vaatimukset.",
+      "subtitle": "Sinun tunnistetietosi",
+      "title": "Henkilötiedot"
     },
     "preferences": {
-      "description": "Include any special instructions, charitable bequests, or personal wishes.",
-      "subtitle": "Additional instructions",
-      "title": "Special Provisions"
+      "description": "Sisällytä mukaan kaikki erityisohjeet, hyväntekeväisyyslahjoitukset tai henkilökohtaiset toiveet.",
+      "subtitle": "Lisäohjeet",
+      "title": "Erityismääräykset"
     },
     "review": {
-      "description": "Carefully review all details before generating your legal document.",
-      "subtitle": "Verify all information",
-      "title": "Final Review"
+      "description": "Tarkista kaikki yksityiskohdat huolellisesti ennen oikeudellisen asiakirjan luomista.",
+      "subtitle": "Tarkista kaikki tiedot",
+      "title": "Loppuarviointi"
     }
   },
   "validation": {
-    "jurisdictionRequired": "[FI] Jurisdiction required",
-    "requiredField": "[FI] Required field"
+    "addressRequired": "Nykyinen virallinen osoitteesi vaaditaan",
+    "allocationError": "Kokonaisprosenttiosuuden on oltava 100 %",
+    "beneficiaryRequired": "Vähintään yksi edunsaaja on määritettävä",
+    "dobRequired": "Syntymäaika vaaditaan laillisen pätevyyden varmistamiseksi",
+    "duplicateBeneficiary": "Tämä edunsaaja on jo lisätty",
+    "executorBeneficiaryConflict": "Toimeenpanijan ja ensisijaisen edunsaajan tulisi yleensä olla eri henkilöitä",
+    "executorRequired": "Vähintään yksi testamentin toimeenpanija on nimettävä",
+    "guardianRequired": "Alaikäisille lapsille vaaditaan huoltajan nimeäminen",
+    "invalidDate": "Anna kelvollinen päivämäärä",
+    "invalidPercentage": "Prosenttiluvun on oltava 0–100",
+    "jurisdictionRequired": "Vaadittu lainkäyttöalue",
+    "requiredField": "Pakollinen kenttä"
   },
   "will": {
-    "address": "Address",
-    "addressPlaceholder": "Address placeholder",
+    "address": "Osoite",
+    "addressPlaceholder": "Osoitteen paikkamerkki",
     "allocation": {
-      "addBeneficiary": "Add beneficiary",
-      "description": "Description",
-      "generalEstate": "General estate",
-      "percentage": "Percentage",
+      "addBeneficiary": "Lisää edunsaaja",
+      "description": "Kuvaus",
+      "generalEstate": "Yleinen kiinteistö",
+      "percentage": "Prosenttiosuus",
       "tips": {
-        "tip1": "Tip1",
-        "tip2": "Tip2",
-        "tip3": "Tip3",
-        "title": "Title"
+        "tip1": "Vinkki 1",
+        "tip2": "Vinkki 2",
+        "tip3": "Vinkki 3",
+        "title": "Otsikko"
       },
-      "title": "Title",
-      "total": "Total"
+      "title": "Otsikko",
+      "total": "Kokonais"
     },
     "beneficiaries": {
-      "addBeneficiary": "Add beneficiary",
-      "allocation": "Allocation",
-      "alternativeBeneficiary": "Alternative beneficiary",
-      "alternativePlaceholder": "Alternative placeholder",
-      "beneficiaryNumber": "Beneficiary number",
-      "currentAllocation": "Current allocation",
-      "description": "Description",
-      "identification": "Identification",
-      "identificationPlaceholder": "Identification placeholder",
-      "importantNotes": "Important notes",
-      "name": "Name",
-      "noBeneficiaries": "No beneficiaries",
-      "note1": "Note1",
-      "note2": "Note2",
-      "note3": "Note3",
-      "ofEstate": "Of estate",
-      "title": "Title"
+      "addBeneficiary": "Lisää edunsaaja",
+      "allocation": "Kohdistus",
+      "alternativeBeneficiary": "Vaihtoehtoinen edunsaaja",
+      "alternativePlaceholder": "Vaihtoehtoinen paikkamerkki",
+      "beneficiaryNumber": "Edunsaajan numero",
+      "currentAllocation": "Nykyinen allokaatio",
+      "description": "Kuvaus",
+      "identification": "Tunnistaminen",
+      "identificationPlaceholder": "Tunnistepaikkamerkki",
+      "importantNotes": "Tärkeitä huomioita",
+      "name": "Nimi",
+      "noBeneficiaries": "Ei edunsaajia",
+      "note1": "Huomautus1",
+      "note2": "Huomautus2",
+      "note3": "Huomautus3",
+      "ofEstate": "Kiinteistöstä",
+      "title": "Otsikko"
     },
     "beneficiary": {
-      "name": "Name",
-      "namePlaceholder": "Name placeholder",
-      "relationship": "Relationship",
-      "relationshipPlaceholder": "Relationship placeholder"
+      "name": "Nimi",
+      "namePlaceholder": "Nimen paikkamerkki",
+      "relationship": "Suhde",
+      "relationshipPlaceholder": "Suhteen paikkamerkki"
     },
-    "birthDate": "Birth date",
-    "birthDatePlaceholder": "Birth date placeholder",
+    "birthDate": "Syntymäaika",
+    "birthDatePlaceholder": "Syntymäajan paikkamerkki",
     "buttons": {
-      "saveWillInfo": "Save will info",
-      "saving": "Saving"
+      "saveWillInfo": "Tallenna testamentin tiedot",
+      "saving": "Tallennetaan"
     },
-    "countryRequirements": "Country requirements",
+    "countryRequirements": "Maakohtaiset vaatimukset",
     "descriptions": {
-      "executorDescription": "Executor description",
-      "physicalLocationDescription": "Physical location description",
-      "statusDescription": "Status description"
+      "executorDescription": "Toimeenpanijan kuvaus",
+      "physicalLocationDescription": "Fyysisen sijainnin kuvaus",
+      "statusDescription": "Tilan kuvaus"
     },
     "executor": {
-      "addAlternative": "Add alternative",
-      "address": "Address",
-      "addressPlaceholder": "Address placeholder",
-      "alternative": "Alternative",
-      "alternativeDescription": "Alternative description",
-      "description": "Description",
-      "name": "Name",
-      "namePlaceholder": "Name placeholder",
-      "phone": "Phone",
-      "phonePlaceholder": "Phone placeholder",
-      "primary": "Primary",
-      "relationship": "Relationship",
-      "relationshipPlaceholder": "Relationship placeholder",
-      "responsibilities": "Responsibilities",
-      "responsibility1": "Responsibility1",
-      "responsibility2": "Responsibility2",
-      "responsibility3": "Responsibility3",
-      "responsibility4": "Responsibility4",
-      "title": "Title"
+      "addAlternative": "Lisää vaihtoehto",
+      "address": "Osoite",
+      "addressPlaceholder": "Osoitteen paikkamerkki",
+      "alternative": "Vaihtoehtoinen",
+      "alternativeDescription": "Vaihtoehtoinen kuvaus",
+      "description": "Kuvaus",
+      "name": "Nimi",
+      "namePlaceholder": "Nimen paikkamerkki",
+      "phone": "Puhelin",
+      "phonePlaceholder": "Puhelinnumeron paikkamerkki",
+      "primary": "Ensisijainen",
+      "relationship": "Suhde",
+      "relationshipPlaceholder": "Suhteen paikkamerkki",
+      "responsibilities": "Vastuut",
+      "responsibility1": "Vastuu1",
+      "responsibility2": "Vastuu2",
+      "responsibility3": "Vastuu3",
+      "responsibility4": "Vastuullisuus4",
+      "title": "Otsikko"
     },
     "fields": {
-      "additionalNotes": "Additional notes",
-      "currentStatus": "Current status",
-      "executorContact": "Executor contact",
-      "physicalLocation": "Physical location"
+      "additionalNotes": "Lisähuomautuksia",
+      "currentStatus": "Nykyinen tila",
+      "executorContact": "Toimeenpanijan yhteystiedot",
+      "physicalLocation": "Fyysinen sijainti"
     },
     "legalReview": {
-      "button": "Button",
-      "description": "Description",
-      "title": "Title"
+      "button": "Painike",
+      "description": "Kuvaus",
+      "title": "Otsikko"
     },
-    "name": "Name",
-    "namePlaceholder": "Name placeholder",
+    "name": "Nimi",
+    "namePlaceholder": "Nimen paikkamerkki",
     "options": {
-      "noContactSelected": "No contact selected"
+      "noContactSelected": "Ei valittua yhteystietoa"
     },
     "placeholders": {
-      "additionalNotes": "Additional notes",
-      "physicalLocation": "Physical location",
-      "selectContact": "Select contact"
+      "additionalNotes": "Lisähuomautuksia",
+      "physicalLocation": "Fyysinen sijainti",
+      "selectContact": "Valitse yhteystieto"
     },
     "preview": {
-      "address": "Address",
-      "alternative": "Alternative",
-      "alternativeExecutor": "Alternative executor",
-      "date": "Date",
-      "description": "Description",
-      "executor": "Executor",
-      "generatePDF": "Generate p d f",
-      "legalRequirements": "Legal requirements",
-      "name": "Name",
-      "ofEstate": "Of estate",
-      "place": "Place",
-      "print": "Print",
-      "signature": "Signature",
-      "title": "Title",
-      "witnesses": "Witnesses"
+      "address": "Osoite",
+      "alternative": "Vaihtoehtoinen",
+      "alternativeExecutor": "Vaihtoehtoinen testamentin toimeenpanija",
+      "date": "Päivämäärä",
+      "description": "Kuvaus",
+      "executor": "Toimeenpanija",
+      "generatePDF": "Luo pdf",
+      "legalRequirements": "Lakisääteiset vaatimukset",
+      "name": "Nimi",
+      "ofEstate": "Kiinteistöstä",
+      "place": "Paikka",
+      "print": "Painaa",
+      "signature": "Allekirjoitus",
+      "title": "Otsikko",
+      "witnesses": "Todistajat"
     },
     "requirements": {
-      "handwriting": "Handwriting",
-      "notarization": "Notarization",
-      "typed": "Typed",
-      "witnesses": "Witnesses"
+      "handwriting": "Käsiala",
+      "notarization": "Notaarivahvistus",
+      "typed": "Kirjoitettu",
+      "witnesses": "Todistajat"
     },
-    "selectCountry": "Select country",
-    "selectedCountryDetails": "Selected country details",
+    "selectCountry": "Valitse maa",
+    "selectedCountryDetails": "Valitun maan tiedot",
     "status": {
-      "draft": "Draft",
-      "notarized": "Notarized",
-      "stored": "Stored",
-      "updated": "Updated"
+      "draft": "Luonnos",
+      "notarized": "Notaarin vahvistama",
+      "stored": "Tallennettu",
+      "updated": "Päivitetty"
     },
-    "testatorInfo": "Testator info",
+    "testatorInfo": "Testamentin tekijän tiedot",
     "validation": {
-      "allocation100": "Allocation100"
+      "allocation100": "Kohdistus100"
     },
     "willPreview": {
       "_2": "2",
-      "critical_execution_instruction_3": "Critical execution instruction 3",
-      "professional_review_4": "Professional review 4",
-      "provided_by_certified_legal_pa_5": "Provided by certified legal pa 5"
+      "critical_execution_instruction_3": "Kriittinen suoritusohje 3",
+      "professional_review_4": "Ammattimainen arviointi 4",
+      "provided_by_certified_legal_pa_5": "Sertifioidun lakimiehen tarjoama pa 5"
     }
   },
   "willGenerator": {
-    "changeCountry": "Change country",
-    "confirmCountry": "Confirm country",
-    "confirmSigned": "Confirm signed",
+    "changeCountry": "Vaihda maata",
+    "confirmCountry": "Vahvista maa",
+    "confirmSigned": "Vahvista allekirjoitus",
     "console": {
-      "willGenerationCompleted": "Will generation completed"
+      "willGenerationCompleted": "Testamentin luonti valmis"
     },
     "countries": {
-      "AL": "A l",
-      "AT": "A t",
+      "AL": "Al",
+      "AT": "T",
       "BA": "B a",
-      "BE": "B e",
+      "BE": "Ole e",
       "BG": "B g",
       "CH": "C h",
       "CY": "C y",
-      "CZ": "C z",
+      "CZ": "Cz",
       "DE": "D e",
       "DK": "D k",
-      "EE": "E e",
+      "EE": "Ee",
       "ES": "E s",
       "FI": "F i",
       "FR": "F r",
@@ -372,264 +406,236 @@
       "GR": "G r",
       "HR": "H r",
       "HU": "H u",
-      "IE": "I e",
-      "IS": "I s",
-      "IT": "I t",
+      "IE": "Minä e",
+      "IS": "Minä olen",
+      "IT": "Minä t",
       "LI": "L i",
       "LT": "L t",
-      "LU": "L u",
+      "LU": "Lu u",
       "LV": "L v",
       "MD": "M d",
-      "ME": "M e",
+      "ME": "Minä",
       "MK": "M k",
       "MT": "M t",
       "NL": "N l",
-      "NO": "N o",
-      "PL": "P l",
-      "PT": "P t",
+      "NO": "Ei",
+      "PL": "Pl",
+      "PT": "Pt",
       "RO": "R o",
       "RS": "R s",
-      "SE": "S e",
-      "SI": "S i",
+      "SE": "Katso",
+      "SI": "Si",
       "SK": "S k",
       "UA": "U a"
     },
-    "executionInstructions": "Execution instructions",
-    "failed_to_load_will_template_2": "Failed to load will template 2",
-    "finalizeUpload": "Finalize upload",
-    "fullName": "Full name",
-    "no_template_found_for_this_jur_1": "No template found for this jur 1",
-    "please_confirm_that_you_have_s_3": "Please confirm that you have s 3",
-    "select_a_country_4": "Select a country 4",
+    "executionInstructions": "Suoritusohjeet",
+    "failed_to_load_will_template_2": "Testamenttimallin 2 lataaminen epäonnistui",
+    "finalizeUpload": "Viimeistele lataus",
+    "fullName": "Koko nimi",
+    "no_template_found_for_this_jur_1": "Tälle tuomaristolle ei löytynyt mallipohjaa 1",
+    "please_confirm_that_you_have_s_3": "Vahvista, että sinulla on s 3",
+    "select_a_country_4": "Valitse maa 4",
     "steps": {
-      "confirmJurisdiction": "Confirm jurisdiction",
-      "executorBeneficiaries": "Executor beneficiaries",
-      "personalInformation": "Personal information",
-      "reviewGenerate": "Review generate",
-      "signConfirm": "Sign confirm"
+      "confirmJurisdiction": "Vahvista lainkäyttöalue",
+      "executorBeneficiaries": "Toimeenpanijan edunsaajat",
+      "personalInformation": "Henkilötiedot",
+      "reviewGenerate": "Arvostelujen luonti",
+      "signConfirm": "Allekirjoita vahvistamaan"
     }
   },
   "willSync": {
-    "approve": "Approve",
-    "autoApplied": "Auto applied",
+    "approve": "Hyväksyä",
+    "autoApplied": "Automaattisesti käytössä",
     "changes": {
-      "allocationsModified": "Allocations modified",
-      "assetsAdded": "Assets added",
-      "beneficiariesRemoved": "Beneficiaries removed",
-      "noChanges": "No changes"
+      "allocationsModified": "Määrärahoja muokattu",
+      "assetsAdded": "Lisätyt resurssit",
+      "beneficiariesRemoved": "Edunsaajat poistettu",
+      "noChanges": "Ei muutoksia"
     },
-    "reject": "Reject",
-    "viewChanges": "View changes"
+    "reject": "Hylätä",
+    "viewChanges": "Näytä muutokset"
   },
   "willSyncSettings": {
-    "autoSync": "Auto sync",
-    "autoSyncDescription": "Auto sync description",
-    "frequencyDaily": "Frequency daily",
-    "frequencyImmediate": "Frequency immediate",
-    "frequencyWeekly": "Frequency weekly",
-    "generalDescription": "General description",
-    "generalSettings": "General settings",
-    "requireApproval": "Require approval",
-    "requireApprovalDescription": "Require approval description",
-    "saveError": "Save error",
-    "saved": "Saved",
-    "syncFrequency": "Sync frequency",
-    "triggerDescription": "Trigger description",
-    "triggerSettings": "Trigger settings"
+    "autoSync": "Automaattinen synkronointi",
+    "autoSyncDescription": "Automaattisen synkronoinnin kuvaus",
+    "frequencyDaily": "Päivittäinen tiheys",
+    "frequencyImmediate": "Välitön taajuus",
+    "frequencyWeekly": "Viikoittainen tiheys",
+    "generalDescription": "Yleinen kuvaus",
+    "generalSettings": "Yleiset asetukset",
+    "requireApproval": "Vaaditaan hyväksyntä",
+    "requireApprovalDescription": "Vaaditaan hyväksyntäkuvaus",
+    "saveError": "Tallennusvirhe",
+    "saved": "Tallennettu",
+    "syncFrequency": "Synkronointitaajuus",
+    "triggerDescription": "Liipaisimen kuvaus",
+    "triggerSettings": "Liipaisinasetukset"
   },
   "willVersion": {
-    "added": "Added",
-    "compareDiff": "Compare diff",
-    "comparePrompt": "Compare prompt",
-    "current": "Current",
-    "description": "Description",
-    "modified": "Modified",
-    "removed": "Removed",
-    "restore": "Restore",
-    "title": "Title",
-    "versionNumber": "Version number"
+    "added": "Lisätty",
+    "compareDiff": "Vertaa eroja",
+    "comparePrompt": "Vertailukehote",
+    "current": "Nykyinen",
+    "description": "Kuvaus",
+    "modified": "Muokattu",
+    "removed": "Poistettu",
+    "restore": "Palauttaa",
+    "title": "Otsikko",
+    "versionNumber": "Versionumero"
   },
   "disclaimers": {
-    "general": "LegacyGuard provides tools and guidance for estate planning but does not provide legal advice. For complex estates or specific legal questions, please consult with a qualified attorney in your jurisdiction.",
-    "willGenerator": "The will generator creates documents based on information you provide. While designed to meet legal requirements, we strongly recommend having any generated will reviewed by a qualified attorney before execution.",
-    "jurisdiction": "Legal requirements vary by jurisdiction. Ensure your documents comply with the laws in your area.",
-    "notLegalAdvice": "This service does not constitute legal advice and should not be relied upon as such.",
-    "professionalReview": "For complex estates, business interests, or unique family situations, professional legal review is strongly recommended."
+    "general": "LegacyGuard tarjoaa työkaluja ja ohjausta perintösuunnitteluun, mutta ei tarjoa oikeudellista neuvontaa. Monimutkaisissa perintöasioissa tai erityisissä oikeudellisissa kysymyksissä ota yhteyttä pätevään asianajajaan omalla lainkäyttöalueellasi.",
+    "willGenerator": "Testamenttigeneraattori luo asiakirjoja antamiesi tietojen perusteella. Vaikka se on suunniteltu täyttämään lakisääteiset vaatimukset, suosittelemme vahvasti, että pätevä asianajaja tarkistaa kaikki luodut testamentit ennen niiden täytäntöönpanoa.",
+    "jurisdiction": "Lakisääteiset vaatimukset vaihtelevat lainkäyttöalueittain. Varmista, että asiakirjasi ovat alueesi lakien mukaisia.",
+    "notLegalAdvice": "Tämä palvelu ei ole oikeudellista neuvontaa, eikä siihen tule luottaa sellaisena.",
+    "professionalReview": "Monimutkaisissa kuolinpesissä, liikeintresseissä tai ainutlaatuisissa perhetilanteissa ammattimaisen oikeudellisen tarkastuksen tekeminen on erittäin suositeltavaa."
   },
   "terms": {
-    "serviceTerms": "Terms of Service",
-    "privacyPolicy": "Privacy Policy",
-    "dataProcessing": "Data Processing Agreement",
-    "userAgreement": "User Agreement",
-    "acceptanceRequired": "By using LegacyGuard, you agree to our Terms of Service and Privacy Policy.",
-    "lastUpdated": "Last updated: {{date}}",
-    "effectiveDate": "Effective date: {{date}}"
+    "serviceTerms": "Palveluehdot",
+    "privacyPolicy": "Tietosuojakäytäntö",
+    "dataProcessing": "Tietojenkäsittelysopimus",
+    "userAgreement": "Käyttäjäsopimus",
+    "acceptanceRequired": "Käyttämällä LegacyGuardia hyväksyt palveluehtomme ja tietosuojakäytäntömme.",
+    "lastUpdated": "Viimeksi päivitetty: {{date}}",
+    "effectiveDate": "Voimaantulopäivä: {{date}}"
   },
   "compliance": {
-    "dataProtection": "Your data is protected in compliance with applicable data protection laws including GDPR and CCPA.",
-    "encryption": "All sensitive information is encrypted using industry-standard encryption methods.",
-    "retention": "Data retention policies are designed to protect your privacy while ensuring your family can access important information when needed.",
-    "access": "You have the right to access, modify, or delete your personal information at any time.",
-    "portability": "You can export your data in standard formats for use with other services."
+    "dataProtection": "Tietojasi suojataan sovellettavien tietosuojalakien, mukaan lukien GDPR:n ja CCPA:n, mukaisesti.",
+    "encryption": "Kaikki arkaluontoiset tiedot salataan alan standardien mukaisilla salausmenetelmillä.",
+    "retention": "Tietojen säilytyskäytännöt on suunniteltu suojaamaan yksityisyyttäsi ja varmistamaan samalla, että perheesi voi käyttää tärkeitä tietoja tarvittaessa.",
+    "access": "Sinulla on oikeus milloin tahansa tarkastella, muokata tai poistaa henkilötietojasi.",
+    "portability": "Voit viedä tietosi vakiomuodoissa käytettäväksi muiden palveluiden kanssa."
   },
   "executionRequirements": {
-    "witnessRequirements": "Witness Requirements for {{jurisdiction}}",
-    "notaryRequirements": "Notarization Requirements",
-    "signingInstructions": "Proper Signing Instructions",
-    "storageGuidelines": "Secure Storage Guidelines",
-    "legalCompliance": "Legal Compliance Verification"
+    "witnessRequirements": "Todistajavaatimukset kohteelle {{jurisdiction}}",
+    "notaryRequirements": "Notaarivaatimukset",
+    "signingInstructions": "Oikeat allekirjoitusohjeet",
+    "storageGuidelines": "Turvallisen säilytyksen ohjeet",
+    "legalCompliance": "Lakienmukaisuuden varmennus"
   },
   "cookiePolicy": {
     "cookieTypes": {
-      "analytics": "Analytics cookies help us understand how visitors interact with our website.",
-      "essential": "Essential cookies are necessary for the website to function properly.",
-      "marketing": "Marketing cookies are used to track visitors across websites to display relevant advertisements."
+      "analytics": "Analytiikkaevästeet auttavat meitä ymmärtämään, miten kävijät ovat vuorovaikutuksessa verkkosivustomme kanssa.",
+      "essential": "Välttämättömät evästeet ovat välttämättömiä, jotta verkkosivusto toimii oikein.",
+      "marketing": "Markkinointievästeitä käytetään verkkosivustojen kävijöiden seuraamiseen ja relevanttien mainosten näyttämiseen."
     },
-    "howWeUseCookies": "We use cookies to improve your experience, analyze site usage, and provide personalized content.",
-    "introduction": "This Cookie Policy explains how LegacyGuard uses cookies and similar technologies.",
-    "manageCookies": "You can manage your cookie preferences through your browser settings or our cookie preference center.",
-    "title": "Title",
-    "whatAreCookies": "Cookies are small text files that are stored on your device when you visit our website."
+    "howWeUseCookies": "Käytämme evästeitä parantaaksemme käyttökokemustasi, analysoidaksemme sivuston käyttöä ja tarjotaksemme yksilöllistä sisältöä.",
+    "introduction": "Tämä evästekäytäntö selittää, miten LegacyGuard käyttää evästeitä ja vastaavia tekniikoita.",
+    "manageCookies": "Voit hallita evästeasetuksiasi selaimesi asetuksista tai evästeasetuskeskuksestamme.",
+    "title": "Otsikko",
+    "whatAreCookies": "Evästeet ovat pieniä tekstitiedostoja, jotka tallennetaan laitteellesi, kun vierailet verkkosivustollamme."
   },
   "header": {
-    "subtitle": "Subtitle",
-    "title": "Title"
+    "title": "Otsikko"
   },
   "hero": {
-    "headline": "Headline",
-    "subheadline": "Subheadline"
-  },
-  "privacyPolicy": {
-    "introduction": "This Privacy Policy describes how LegacyGuard collects, uses, and protects your personal information.",
-    "lastUpdated": "Last updated: {{date}}",
-    "sections": {
-      "dataSecurity": {
-        "content": "We implement appropriate security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.",
-        "title": "Data Security"
-      },
-      "informationCollection": {
-        "content": "We collect information you provide directly to us, such as when you create an account, use our services, or contact us for support.",
-        "title": "Information We Collect"
-      },
-      "informationSharing": {
-        "content": "We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except as described in this policy.",
-        "title": "Information Sharing"
-      },
-      "informationUse": {
-        "content": "We use your information to provide, maintain, and improve our services, communicate with you, and ensure the security of your account.",
-        "title": "How We Use Your Information"
-      },
-      "yourRights": {
-        "content": "You have the right to access, update, or delete your personal information. You may also opt out of certain communications from us.",
-        "title": "Your Rights"
-      }
-    },
-    "title": "Privacy Policy"
+    "headline": "Otsikko",
+    "subheadline": "Alaotsikko"
   },
   "termsOfService": {
-    "effectiveDate": "Effective date: {{date}}",
-    "introduction": "These Terms of Service govern your use of LegacyGuard's family protection platform and services.",
-    "lastUpdated": "Last updated: {{date}}",
+    "effectiveDate": "Voimaantulopäivä: {{date}}",
+    "introduction": "Nämä käyttöehdot säätelevät LegacyGuardin perheiden suojausalustan ja -palveluiden käyttöä.",
+    "lastUpdated": "Viimeksi päivitetty: {{date}}",
     "sections": {
       "acceptance": {
-        "content": "By accessing or using LegacyGuard, you agree to be bound by these Terms of Service and all applicable laws and regulations.",
-        "title": "Acceptance of Terms"
+        "content": "Käyttämällä LegacyGuardia sitoudut noudattamaan näitä käyttöehtoja ja kaikkia sovellettavia lakeja ja määräyksiä.",
+        "title": "Ehtojen hyväksyminen"
       },
       "description": {
-        "content": "LegacyGuard provides digital tools and services to help individuals organize their important information for family protection purposes.",
-        "title": "Service Description"
+        "content": "LegacyGuard tarjoaa digitaalisia työkaluja ja palveluita, jotka auttavat yksilöitä järjestämään tärkeät tietonsa perheen suojaamiseksi.",
+        "title": "Palvelun kuvaus"
       },
       "limitations": {
-        "content": "LegacyGuard provides tools and guidance but does not provide legal advice. We recommend consulting with qualified professionals for complex legal matters.",
-        "title": "Limitations of Liability"
+        "content": "LegacyGuard tarjoaa työkaluja ja ohjausta, mutta ei oikeudellista neuvontaa. Suosittelemme konsultoimaan päteviä ammattilaisia monimutkaisissa oikeudellisissa asioissa.",
+        "title": "Vastuunrajoitukset"
       },
       "privacy": {
-        "content": "Your privacy is important to us. Please review our Privacy Policy to understand how we collect, use, and protect your information.",
-        "title": "Privacy and Data Protection"
+        "content": "Tietosuojasi on meille tärkeää. Tutustu tietosuojakäytäntöömme ymmärtääksesi, miten keräämme, käytämme ja suojaamme tietojasi.",
+        "title": "Tietosuoja ja tietosuoja"
       },
       "userResponsibilities": {
-        "content": "You are responsible for maintaining the confidentiality of your account information and for all activities that occur under your account.",
-        "title": "User Responsibilities"
+        "content": "Olet vastuussa tilitietojesi luottamuksellisuuden säilyttämisestä ja kaikista tililläsi tapahtuvista toimista.",
+        "title": "Käyttäjän vastuut"
       }
     },
-    "title": "Terms of Service"
+    "title": "Palveluehdot"
   },
   "cookies": {
     "policy": {
       "analytics": {
-        "description": "Description",
+        "description": "Kuvaus",
         "examples": {
           "ga": "Ga",
           "gid": "Gid",
-          "session": "Session"
+          "session": "Istunto"
         },
-        "purpose": "Purpose",
-        "title": "Title"
+        "purpose": "Tarkoitus",
+        "title": "Otsikko"
       },
       "categories": {
-        "title": "Title"
+        "title": "Otsikko"
       },
       "contact": {
-        "address": "Address",
-        "addressDetails": "Address details",
-        "description": "Description",
-        "email": "Email",
-        "title": "Title"
+        "address": "Osoite",
+        "addressDetails": "Osoitetiedot",
+        "description": "Kuvaus",
+        "email": "Sähköposti",
+        "title": "Otsikko"
       },
-      "examples": "Examples",
-      "lastUpdated": "Last updated",
+      "examples": "Esimerkkejä",
+      "lastUpdated": "Viimeksi päivitetty",
       "manage": {
-        "title": "Title"
+        "title": "Otsikko"
       },
       "marketing": {
-        "description": "Description",
+        "description": "Kuvaus",
         "examples": {
           "facebook": "Facebook",
           "google": "Google"
         },
-        "purpose": "Purpose",
-        "title": "Title"
+        "purpose": "Tarkoitus",
+        "title": "Otsikko"
       },
       "necessary": {
-        "description": "Description",
+        "description": "Kuvaus",
         "examples": {
-          "auth": "Auth",
-          "consent": "Consent",
+          "auth": "Valtuutus",
+          "consent": "Suostumus",
           "csrf": "Csrf",
-          "session": "Session"
+          "session": "Istunto"
         },
-        "purpose": "Purpose",
-        "title": "Title"
+        "purpose": "Tarkoitus",
+        "title": "Otsikko"
       },
       "overview": {
-        "intro": "Intro",
-        "point1": "Point1",
-        "point2": "Point2",
-        "point3": "Point3",
-        "point4": "Point4",
-        "title": "Title"
+        "intro": "Johdanto",
+        "point1": "Piste 1",
+        "point2": "Kohta 2",
+        "point3": "Kohta 3",
+        "point4": "Kohta 4",
+        "title": "Otsikko"
       },
       "preferences": {
-        "description": "Description",
+        "description": "Kuvaus",
         "examples": {
-          "language": "Language",
-          "theme": "Theme",
-          "ui": "Ui"
+          "language": "Kieli",
+          "theme": "Teema",
+          "ui": "Käyttöliittymä"
         },
-        "purpose": "Purpose",
-        "title": "Title"
+        "purpose": "Tarkoitus",
+        "title": "Otsikko"
       },
-      "purpose": "Purpose",
-      "required": "Required",
-      "subtitle": "Subtitle",
-      "title": "Title",
+      "purpose": "Tarkoitus",
+      "required": "Pakollinen",
+      "subtitle": "Alaotsikko",
+      "title": "Otsikko",
       "yourRights": {
-        "description": "Description",
-        "right1": "Right1",
-        "right2": "Right2",
-        "right3": "Right3",
-        "right4": "Right4",
-        "title": "Title"
+        "description": "Kuvaus",
+        "right1": "Oikea1",
+        "right2": "Oikea2",
+        "right3": "Oikea3",
+        "right4": "Oikea4",
+        "title": "Otsikko"
       }
     }
   }

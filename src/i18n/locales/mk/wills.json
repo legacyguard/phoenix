@@ -1,635 +1,641 @@
 {
   "actions": {
-    "next": "[MK] Next",
-    "previous": "[MK] Previous"
+    "consultLawyer": "Закажете правна консултација",
+    "createCodicil": "Креирај амандман (Кодицил)",
+    "deleteWill": "Избриши го овој тестамент",
+    "downloadPdf": "Преземи PDF документ",
+    "generateWill": "Генерирај конечен тестамент",
+    "next": "Следно",
+    "previous": "Претходно",
+    "printWill": "Печатење на тестамент",
+    "saveProgress": "Зачувај го тековниот напредок",
+    "shareWill": "Сподели со семејството",
+    "updateWill": "Ажурирање на информациите за тестаментот"
   },
   "errors": {
-    "assetLoadFailed": "We could not load your asset information. Please refresh and try again.",
-    "generationFailed": "We encountered an issue generating your will. Please review your information and try again.",
-    "jurisdictionRequired": "Please select your legal jurisdiction to ensure compliance",
-    "loadFailed": "We could not load your will information. Please refresh the page and try again.",
-    "printFailed": "We encountered an issue preparing your document for printing. Please try again.",
-    "saveFailed": "We could not save your progress. Please check your connection and try again.",
-    "sharingFailed": "We could not share your will. Please verify the recipients and try again.",
-    "validationFailed": "Please review and correct the highlighted information before proceeding"
+    "assetLoadFailed": "Не можевме да ги вчитаме информациите за вашите средства. Освежете ја страницата и обидете се повторно.",
+    "generationFailed": "Наидовме на проблем при генерирањето на вашиот тестамент. Ве молиме проверете ги вашите информации и обидете се повторно.",
+    "jurisdictionRequired": "Изберете ја вашата правна надлежност за да обезбедите усогласеност",
+    "loadFailed": "Не можевме да ги вчитаме информациите за вашиот тестамент. Освежете ја страницата и обидете се повторно.",
+    "printFailed": "Наидовме на проблем при подготовката на вашиот документ за печатење. Обидете се повторно.",
+    "saveFailed": "Не можевме да го зачуваме вашиот напредок. Проверете ја вашата врска и обидете се повторно.",
+    "validationFailed": "Ве молиме проверете ги и исправете ги означените информации пред да продолжите"
   },
   "execution": {
-    "copyDistribution": "Distribution of Copies",
-    "familyNotification": "Informing Your Family",
-    "legalRequirements": "Legal Requirements for {{jurisdiction}}",
-    "notarization": "Notarization Requirements",
-    "notaryOptional": "Notary recommended but not required",
-    "notaryRequired": "Notary public required",
-    "numberOfCopies": "Recommended Number of Copies",
-    "safeStorage": "Secure Storage Locations",
-    "selfProving": "Self-Proving Affidavit",
-    "signingInstructions": "Signing Instructions",
-    "signingOrder": "Proper Signing Order",
-    "storageRecommendations": "Storage Recommendations",
-    "subtitle": "Making your will legally binding",
-    "title": "Will Execution Requirements",
-    "witnessCount": "{{count}} witnesses required",
-    "witnessInstructions": "Witness Instructions",
-    "witnessQualifications": "Witness Qualifications",
-    "witnessRequirements": "Witness Requirements"
+    "copyDistribution": "Дистрибуција на копии",
+    "familyNotification": "Информирање на вашето семејство",
+    "legalRequirements": "Правни барања за {{jurisdiction}}",
+    "notarization": "Нотаризација на барања",
+    "notaryOptional": "Нотар се препорачува, но не е задолжителен",
+    "notaryRequired": "Потребен е нотар",
+    "numberOfCopies": "Препорачан број на копии",
+    "safeStorage": "Безбедни локации за складирање",
+    "selfProving": "Самодокажлива изјава под заклетва",
+    "signingInstructions": "Упатства за потпишување",
+    "signingOrder": "Правилен редослед на потпишување",
+    "storageRecommendations": "Препораки за складирање",
+    "subtitle": "Правење на вашиот тестамент правно обврзувачки",
+    "title": "Барања за извршување на тестамент",
+    "witnessCount": "Потребни се {{count}} сведоци",
+    "witnessInstructions": "Упатства за сведоци",
+    "witnessQualifications": "Квалификации за сведоци",
+    "witnessRequirements": "Барања за сведоци"
   },
   "form": {
     "assetSelection": {
-      "allAssets": "Include All Current and Future Assets",
-      "assetCategories": "Asset Categories to Include",
-      "businessInterests": "Business Interests",
-      "excludedAssets": "Assets to Exclude",
-      "jointAssets": "Jointly Owned Assets",
-      "residualDescription": "All remaining assets not specifically mentioned elsewhere in this will",
-      "residualEstate": "Residual Estate",
-      "selectAssets": "Choose Assets to Include",
-      "specificAssets": "Select Specific Assets Only"
+      "allAssets": "Вклучи ги сите тековни и идни средства",
+      "assetCategories": "Категории на средства за вклучување",
+      "businessInterests": "Деловни интереси",
+      "excludedAssets": "Средства за исклучување",
+      "jointAssets": "Заеднички поседувани средства",
+      "residualDescription": "Сите преостанати средства што не се конкретно споменати на друго место во овој тестамент",
+      "residualEstate": "Резидуален имот",
+      "selectAssets": "Изберете средства за вклучување",
+      "specificAssets": "Изберете само специфични средства"
     },
     "distribution": {
-      "addBeneficiary": "Add Additional Beneficiary",
-      "ageRestriction": "Age Requirement",
-      "allocation": "Inheritance Allocation",
-      "beneficiaryName": "Beneficiary's Full Name",
-      "conditions": "Conditions or Restrictions",
-      "contingentBeneficiary": "Contingent Beneficiary",
-      "percentage": "Percentage of Estate",
-      "primaryBeneficiary": "Primary Beneficiary",
-      "relationship": "Relationship to You",
-      "specificAmount": "Specific Dollar Amount",
-      "specificAsset": "Specific Asset or Property",
-      "trustProvision": "Trust Arrangement"
+      "addBeneficiary": "Додај дополнителен корисник",
+      "ageRestriction": "Возрастна граница",
+      "allocation": "Распределба на наследство",
+      "beneficiaryName": "Целосно име на корисникот",
+      "conditions": "Услови или ограничувања",
+      "contingentBeneficiary": "Контингентен корисник",
+      "percentage": "Процент од имотот",
+      "primaryBeneficiary": "Примарен корисник",
+      "relationship": "Врска со вас",
+      "specificAmount": "Специфичен износ во долари",
+      "specificAsset": "Специфичен имот или средство",
+      "trustProvision": "Доверителски договор"
     },
     "executor": {
-      "alternateExecutor": "Alternate Executor",
-      "bondRequirement": "Bond Requirement",
-      "coExecutors": "Co-Executors",
-      "executorAddress": "Executor's Address",
-      "executorCompensation": "Executor Compensation",
-      "executorDuties": "Executor Responsibilities",
-      "executorInstructions": "Special Instructions for Executor",
-      "executorName": "Executor's Full Name",
-      "executorRelationship": "Relationship to You",
-      "primaryExecutor": "Primary Executor",
-      "specialPowers": "Special Powers Granted"
+      "alternateExecutor": "Алтернативен извршител",
+      "bondRequirement": "Потребна гаранција",
+      "coExecutors": "Ко-извршители",
+      "executorAddress": "Адреса на извршителот",
+      "executorCompensation": "Надоместок на извршител",
+      "executorDuties": "Одговорности на извршителот",
+      "executorInstructions": "Специјални упатства за извршител",
+      "executorName": "Целосно име на извршителот",
+      "executorRelationship": "Врска со вас",
+      "primaryExecutor": "Примарен извршител",
+      "specialPowers": "Доделени посебни овластувања"
     },
     "guardianship": {
-      "backupGuardian": "Alternate Guardian",
-      "educationPreferences": "Education Preferences",
-      "guardianCompensation": "Guardian Compensation",
-      "guardianFor": "Guardian for {{childName}}",
-      "guardianInstructions": "Instructions for Guardian",
-      "guardianQualifications": "Guardian Qualifications",
-      "minorChildren": "Minor Children Requiring Guardianship",
-      "primaryGuardian": "Primary Guardian",
-      "religiousUpbringing": "Religious Upbringing Preferences"
+      "backupGuardian": "Алтернативен чувар",
+      "educationPreferences": "Образовни преференции",
+      "guardianCompensation": "Надомест за старател",
+      "guardianFor": "Чувар за {{childName}}",
+      "guardianInstructions": "Упатства за чувар",
+      "guardianQualifications": "Квалификации за старател",
+      "minorChildren": "Малолетни деца кои бараат старателство",
+      "primaryGuardian": "Главен старател",
+      "religiousUpbringing": "Преференции за религиозно воспитување"
     },
     "personalInfo": {
-      "addChild": "Add Child",
-      "addressHelper": "Your primary residence address",
-      "childDateOfBirth": "Child's Date of Birth",
-      "childName": "Child's Full Name",
-      "childRelation": "Relationship to You",
-      "children": "Children and Dependents",
-      "currentAddress": "Current Legal Address",
-      "dateOfBirth": "Date of Birth",
-      "fullLegalName": "Complete Legal Name",
-      "fullLegalNameHelper": "Enter your name exactly as it appears on official documents",
-      "maritalStatus": "Marital Status",
-      "marriageDate": "Date of Marriage",
-      "placeOfBirth": "Place of Birth",
-      "previousWills": "Previous Wills",
-      "revokesPrevious": "This will revokes all previous wills",
-      "spouseName": "Spouse's Full Legal Name"
+      "addChild": "Додај дете",
+      "addressHelper": "Вашата примарна адреса на живеење",
+      "childDateOfBirth": "Датум на раѓање на детето",
+      "childName": "Целосно име на детето",
+      "childRelation": "Врска со вас",
+      "children": "Деца и издржувани лица",
+      "currentAddress": "Тековна правна адреса",
+      "dateOfBirth": "Датум на раѓање",
+      "fullLegalName": "Целосно правно име",
+      "fullLegalNameHelper": "Внесете го вашето име точно како што се појавува на официјалните документи",
+      "maritalStatus": "Брачна состојба",
+      "marriageDate": "Датум на брак",
+      "placeOfBirth": "Место на раѓање",
+      "previousWills": "Претходни тестаменти",
+      "revokesPrevious": "Овај тестамент ги поништува сите претходни тестаменти",
+      "spouseName": "Целосно законско име на брачниот другар"
     },
     "provisions": {
-      "burialCremation": "Burial or Cremation Preference",
-      "businessContinuation": "Business Continuation Plans",
-      "charitableBequests": "Charitable Donations",
-      "charityAmount": "Donation Amount",
-      "charityName": "Charitable Organization",
-      "digitalAssets": "Digital Asset Instructions",
-      "funeralInstructions": "Specific Funeral Instructions",
-      "funeralWishes": "Funeral and Burial Preferences",
-      "organDonation": "Organ Donation Wishes",
-      "personalMessages": "Personal Messages to Family",
-      "petCare": "Pet Care Arrangements",
-      "specialInstructions": "Special Instructions"
+      "burialCremation": "Преференција за погреб или кремација",
+      "businessContinuation": "Планови за продолжување на бизнисот",
+      "charitableBequests": "Добротворни донации",
+      "charityAmount": "Износ на донација",
+      "charityName": "Добротворна организација",
+      "digitalAssets": "Упатства за дигитални средства",
+      "funeralInstructions": "Специфични упатства за погреб",
+      "funeralWishes": "Преференции за погреб и закоп",
+      "organDonation": "Желби за донација на органи",
+      "personalMessages": "Лични пораки до семејството",
+      "petCare": "Аранжмани за грижа за домашни миленици",
+      "specialInstructions": "Специјални упатства"
     }
   },
   "generator": {
-    "of": "[MK] Of",
-    "step": "[MK] Step"
+    "continueWill": "Продолжете со подготовката на тестаментот",
+    "description": "Создадете сеопфатен, правно важечки тестамент прилагоден на барањата на вашата јурисдикција и уникатните потреби на вашето семејство.",
+    "getStarted": "Започнете со креирање на вашиот тестамент",
+    "importance": "Обезбедување на правно документирани ваши желби и заштита на вашето семејство",
+    "newWill": "Креирај нов тестамент",
+    "of": "Од",
+    "professionalGuidance": "Препорачани се професионални правни совети за сложени имоти",
+    "step": "Чекор",
+    "subtitle": "Создадете правно издржан тестамент со стручно водство",
+    "title": "Генератор на последен тестамент и тестамент",
+    "viewExisting": "Преглед на тековниот тестамент"
   },
   "legal": {
-    "consultLawyer": "Consult with Attorney",
-    "disclaimer": "Important Legal Disclaimer",
-    "estatePlanning": "Comprehensive Estate Planning",
-    "jurisdiction": "Legal Jurisdiction",
-    "lawsApply": "Laws of {{jurisdiction}} will apply",
-    "lawyerRecommended": "We strongly recommend consulting with a qualified attorney for complex estates",
-    "legalCompliance": "Legal Compliance Verification",
-    "notLegalAdvice": "This service does not constitute legal advice",
-    "probateProcess": "Probate Process Information",
-    "professionalGuidance": "Professional legal guidance is recommended",
-    "professionalReview": "Professional Legal Review",
-    "selectJurisdiction": "Please select your legal jurisdiction",
-    "taxImplications": "Tax Implications"
+    "consultLawyer": "Консултирајте се со адвокат",
+    "disclaimer": "Важно правно одрекување од одговорност",
+    "estatePlanning": "Сеопфатно планирање на имотот",
+    "jurisdiction": "Правна надлежност",
+    "lawsApply": "Ќе важат законите на {{jurisdiction}}",
+    "lawyerRecommended": "Препорачуваме консултација со квалификуван адвокат за сложени имоти",
+    "legalCompliance": "Проверка на усогласеност со законите",
+    "notLegalAdvice": "Оваа услуга не претставува правен совет",
+    "probateProcess": "Информации за процесот на оставина",
+    "professionalGuidance": "Се препорачува стручно правно советување",
+    "professionalReview": "Професионален правен преглед",
+    "selectJurisdiction": "Изберете ја вашата правна надлежност",
+    "taxImplications": "Даночни импликации"
   },
   "notifications": {
-    "consultationScheduled": "Legal consultation has been scheduled",
-    "documentShared": "Will has been shared with designated family members",
-    "executionComplete": "Will execution has been recorded",
-    "progressSaved": "Your progress has been saved",
-    "reminderSet": "Will review reminder has been set",
-    "willDeleted": "Will has been permanently deleted",
-    "willGenerated": "Your will has been successfully generated",
-    "willUpdated": "Will has been updated successfully"
+    "consultationScheduled": "Закажана е правна консултација",
+    "documentShared": "Тестаментот е споделен со одредени членови на семејството",
+    "executionComplete": "Извршувањето на тестаментот е евидентирано",
+    "progressSaved": "Вашиот напредок е зачуван",
+    "willDeleted": "Вилот е трајно избришан",
+    "willUpdated": "Вил е успешно ажуриран"
   },
   "preview": {
-    "article": "ARTICLE {{number}}",
-    "draftWatermark": "DRAFT - NOT LEGALLY BINDING",
-    "executionInstructions": "EXECUTION INSTRUCTIONS",
-    "lastWillTestament": "LAST WILL AND TESTAMENT",
-    "of": "OF",
-    "pageNumber": "Page {{current}} of {{total}}",
-    "reviewCarefully": "Please review this document carefully before proceeding",
-    "section": "Section {{number}}",
-    "signatureSection": "SIGNATURE SECTION",
-    "subtitle": "Review your complete will before finalizing",
-    "title": "Will Document Preview",
-    "witnessClause": "WITNESS CLAUSE"
+    "article": "СТАТИЈА {{number}}",
+    "draftWatermark": "НАЦРТ - НЕ Е ПРАВНО ОБВРЗУВАЧКИ",
+    "executionInstructions": "ИНСТРУКЦИИ ЗА ИЗВРШУВАЊЕ",
+    "lastWillTestament": "ПОСЛЕДНА ТЕСТАМЕНТАЦИЈА",
+    "of": "ОД",
+    "pageNumber": "Страница {{current}} од {{total}}",
+    "reviewCarefully": "Ве молиме внимателно разгледајте го овој документ пред да продолжите",
+    "section": "Дел {{number}}",
+    "signatureSection": "ДЕЛ ЗА ПОТПИС",
+    "subtitle": "Прегледајте го вашиот целосен тестамент пред да го финализирате",
+    "title": "Преглед на тестаментот",
+    "witnessClause": "КЛАУЗУЛА ЗА СВЕДОК"
   },
   "status": {
-    "archived": "Archived Version",
-    "draft": "Draft in Progress",
-    "executed": "Legally Executed",
-    "generated": "Generated - Requires Execution",
-    "outdated": "Requires Update",
-    "underReview": "Under Professional Review"
+    "archived": "Архивирана верзија",
+    "draft": "Нацртот е во тек",
+    "executed": "Законски извршено",
+    "generated": "Генерирано - Потребно е извршување",
+    "outdated": "Потребно е ажурирање"
+  },
+  "policy": {
+    "duration": {
+      "session": "Сесија",
+      "minutes": "{{count}} минути",
+      "hours": "{{count}} часа",
+      "days": "{{count}} дена",
+      "months": "{{count}} месеци",
+      "years": "{{count}} години"
+    }
   },
   "steps": {
     "assets": {
-      "description": "Select which assets you wish to include in your will and how they should be distributed.",
-      "subtitle": "Your valuable possessions",
-      "title": "Asset Distribution"
+      "description": "Изберете кои средства сакате да ги вклучите во вашиот тестамент и како тие треба да се распределат.",
+      "subtitle": "Вашите вредни поседи",
+      "title": "Распределба на средства"
     },
     "beneficiaries": {
-      "description": "Designate who will receive your assets and in what proportions.",
-      "subtitle": "Your chosen recipients",
-      "title": "Beneficiary Designations"
+      "description": "Назначете кој ќе ги добие вашите средства и во кои пропорции.",
+      "subtitle": "Вашите избрани приматели",
+      "title": "Ознаки на корисници"
     },
     "executor": {
-      "description": "Choose a responsible person to manage your estate and carry out your wishes.",
-      "subtitle": "Your estate representative",
-      "title": "Estate Executor"
+      "description": "Изберете одговорно лице кое ќе управува со вашиот имот и ќе ги исполнува вашите желби.",
+      "subtitle": "Вашиот претставник за имот",
+      "title": "Извршител на имот"
     },
     "guardians": {
-      "description": "Appoint trusted individuals to care for minor children or dependents.",
-      "subtitle": "Care for your dependents",
-      "title": "Guardianship Appointments"
+      "description": "Назначете доверливи лица да се грижат за малолетни деца или лица на кои им е издржувано.",
+      "subtitle": "Грижете се за вашите издржувани лица",
+      "title": "Назначувања за старателство"
     },
     "personal": {
-      "description": "We require your complete legal information to ensure your will meets all legal requirements.",
-      "subtitle": "Your identifying information",
-      "title": "Personal Information"
+      "description": "Ни се потребни вашите целосни правни информации за да се осигураме дека вашиот тестамент ги исполнува сите законски барања.",
+      "subtitle": "Вашите идентификациски информации",
+      "title": "Лични информации"
     },
     "preferences": {
-      "description": "Include any special instructions, charitable bequests, or personal wishes.",
-      "subtitle": "Additional instructions",
-      "title": "Special Provisions"
+      "description": "Вклучете какви било посебни упатства, добротворни завештанија или лични желби.",
+      "subtitle": "Дополнителни упатства",
+      "title": "Посебни одредби"
     },
     "review": {
-      "description": "Carefully review all details before generating your legal document.",
-      "subtitle": "Verify all information",
-      "title": "Final Review"
+      "description": "Внимателно разгледајте ги сите детали пред да го креирате вашиот правен документ.",
+      "subtitle": "Потврди ги сите информации",
+      "title": "Конечен преглед"
     }
   },
   "validation": {
-    "jurisdictionRequired": "[MK] Jurisdiction required",
-    "requiredField": "[MK] Required field"
+    "addressRequired": "Вашата тековна правна адреса е задолжителна",
+    "allocationError": "Вкупната процентна распределба мора да биде еднаква на 100%",
+    "beneficiaryRequired": "Мора да се наведе барем еден корисник",
+    "dobRequired": "Датумот на раѓање е потребен за правна важност",
+    "duplicateBeneficiary": "Овој корисник е веќе додаден",
+    "executorBeneficiaryConflict": "Извршителот и примарниот корисник обично треба да бидат различни лица",
+    "executorRequired": "Мора да биде назначен барем еден извршител",
+    "guardianRequired": "Потребно е назначување на старател за малолетни деца",
+    "invalidDate": "Внесете важечки датум",
+    "invalidPercentage": "Процентот мора да биде помеѓу 0 и 100",
+    "jurisdictionRequired": "Потребна јурисдикција",
+    "requiredField": "Задолжително поле"
   },
   "will": {
-    "address": "Address",
-    "addressPlaceholder": "Address placeholder",
+    "address": "Адреса",
+    "addressPlaceholder": "Резервен талон за адреса",
     "allocation": {
-      "addBeneficiary": "Add beneficiary",
-      "description": "Description",
-      "generalEstate": "General estate",
-      "percentage": "Percentage",
+      "addBeneficiary": "Додај корисник",
+      "description": "Опис",
+      "generalEstate": "Општ имот",
+      "percentage": "Процент",
       "tips": {
-        "tip1": "Tip1",
-        "tip2": "Tip2",
-        "tip3": "Tip3",
-        "title": "Title"
+        "tip1": "Совет 1",
+        "tip2": "Совет 2",
+        "tip3": "Совет 3",
+        "title": "Наслов"
       },
-      "title": "Title",
-      "total": "Total"
+      "title": "Наслов",
+      "total": "Вкупно"
     },
     "beneficiaries": {
-      "addBeneficiary": "Add beneficiary",
-      "allocation": "Allocation",
-      "alternativeBeneficiary": "Alternative beneficiary",
-      "alternativePlaceholder": "Alternative placeholder",
-      "beneficiaryNumber": "Beneficiary number",
-      "currentAllocation": "Current allocation",
-      "description": "Description",
-      "identification": "Identification",
-      "identificationPlaceholder": "Identification placeholder",
-      "importantNotes": "Important notes",
-      "name": "Name",
-      "noBeneficiaries": "No beneficiaries",
-      "note1": "Note1",
-      "note2": "Note2",
-      "note3": "Note3",
-      "ofEstate": "Of estate",
-      "title": "Title"
+      "addBeneficiary": "Додај корисник",
+      "allocation": "Распределба",
+      "alternativeBeneficiary": "Алтернативен корисник",
+      "alternativePlaceholder": "Алтернативно резервирано место",
+      "beneficiaryNumber": "Број на корисник",
+      "currentAllocation": "Тековна распределба",
+      "description": "Опис",
+      "identification": "Идентификација",
+      "identificationPlaceholder": "Замена за идентификација",
+      "importantNotes": "Важни забелешки",
+      "name": "Име",
+      "noBeneficiaries": "Нема корисници",
+      "note1": "Забелешка 1",
+      "note2": "Забелешка 2",
+      "note3": "Забелешка 3",
+      "ofEstate": "На имотот",
+      "title": "Наслов"
     },
     "beneficiary": {
-      "name": "Name",
-      "namePlaceholder": "Name placeholder",
-      "relationship": "Relationship",
-      "relationshipPlaceholder": "Relationship placeholder"
+      "name": "Име",
+      "namePlaceholder": "Заменски држач за име",
+      "relationship": "Врска",
+      "relationshipPlaceholder": "Релација на местото"
     },
-    "birthDate": "Birth date",
-    "birthDatePlaceholder": "Birth date placeholder",
+    "birthDate": "Датум на раѓање",
+    "birthDatePlaceholder": "Резервен датум на раѓање",
     "buttons": {
-      "saveWillInfo": "Save will info",
-      "saving": "Saving"
+      "saveWillInfo": "Зачувај информации за волја",
+      "saving": "Зачувување"
     },
-    "countryRequirements": "Country requirements",
+    "countryRequirements": "Државни барања",
     "descriptions": {
-      "executorDescription": "Executor description",
-      "physicalLocationDescription": "Physical location description",
-      "statusDescription": "Status description"
+      "executorDescription": "Опис на извршителот",
+      "physicalLocationDescription": "Опис на физичката локација",
+      "statusDescription": "Опис на статусот"
     },
     "executor": {
-      "addAlternative": "Add alternative",
-      "address": "Address",
-      "addressPlaceholder": "Address placeholder",
-      "alternative": "Alternative",
-      "alternativeDescription": "Alternative description",
-      "description": "Description",
-      "name": "Name",
-      "namePlaceholder": "Name placeholder",
-      "phone": "Phone",
-      "phonePlaceholder": "Phone placeholder",
-      "primary": "Primary",
-      "relationship": "Relationship",
-      "relationshipPlaceholder": "Relationship placeholder",
-      "responsibilities": "Responsibilities",
-      "responsibility1": "Responsibility1",
-      "responsibility2": "Responsibility2",
-      "responsibility3": "Responsibility3",
-      "responsibility4": "Responsibility4",
-      "title": "Title"
+      "addAlternative": "Додај алтернатива",
+      "address": "Адреса",
+      "addressPlaceholder": "Резервен талон за адреса",
+      "alternative": "Алтернатива",
+      "alternativeDescription": "Алтернативен опис",
+      "description": "Опис",
+      "name": "Име",
+      "namePlaceholder": "Заменски држач за име",
+      "phone": "Телефон",
+      "phonePlaceholder": "Резервен талон за телефон",
+      "primary": "Примарен",
+      "relationship": "Врска",
+      "relationshipPlaceholder": "Релација на местото",
+      "responsibilities": "Одговорности",
+      "responsibility1": "Одговорност1",
+      "responsibility2": "Одговорност2",
+      "responsibility3": "Одговорност3",
+      "responsibility4": "Одговорност4",
+      "title": "Наслов"
     },
     "fields": {
-      "additionalNotes": "Additional notes",
-      "currentStatus": "Current status",
-      "executorContact": "Executor contact",
-      "physicalLocation": "Physical location"
+      "additionalNotes": "Дополнителни белешки",
+      "currentStatus": "Моментален статус",
+      "executorContact": "Контакт за извршител",
+      "physicalLocation": "Физичка локација"
     },
     "legalReview": {
-      "button": "Button",
-      "description": "Description",
-      "title": "Title"
+      "button": "Копче",
+      "description": "Опис",
+      "title": "Наслов"
     },
-    "name": "Name",
-    "namePlaceholder": "Name placeholder",
+    "name": "Име",
+    "namePlaceholder": "Заменски држач за име",
     "options": {
-      "noContactSelected": "No contact selected"
+      "noContactSelected": "Не е избран контакт"
     },
     "placeholders": {
-      "additionalNotes": "Additional notes",
-      "physicalLocation": "Physical location",
-      "selectContact": "Select contact"
+      "additionalNotes": "Дополнителни белешки",
+      "physicalLocation": "Физичка локација",
+      "selectContact": "Изберете контакт"
     },
     "preview": {
-      "address": "Address",
-      "alternative": "Alternative",
-      "alternativeExecutor": "Alternative executor",
-      "date": "Date",
-      "description": "Description",
-      "executor": "Executor",
-      "generatePDF": "Generate p d f",
-      "legalRequirements": "Legal requirements",
-      "name": "Name",
-      "ofEstate": "Of estate",
-      "place": "Place",
-      "print": "Print",
-      "signature": "Signature",
-      "title": "Title",
-      "witnesses": "Witnesses"
+      "address": "Адреса",
+      "alternative": "Алтернатива",
+      "alternativeExecutor": "Алтернативен извршител",
+      "date": "Датум",
+      "description": "Опис",
+      "executor": "Извршител",
+      "generatePDF": "Генерирај p d f",
+      "legalRequirements": "Законски барања",
+      "name": "Име",
+      "ofEstate": "На имотот",
+      "place": "Место",
+      "print": "Печати",
+      "signature": "Потпис",
+      "title": "Наслов",
+      "witnesses": "Сведоци"
     },
     "requirements": {
-      "handwriting": "Handwriting",
-      "notarization": "Notarization",
-      "typed": "Typed",
-      "witnesses": "Witnesses"
+      "handwriting": "Ракопис",
+      "notarization": "Нотаризација",
+      "typed": "Отчукано",
+      "witnesses": "Сведоци"
     },
-    "selectCountry": "Select country",
-    "selectedCountryDetails": "Selected country details",
+    "selectCountry": "Изберете земја",
+    "selectedCountryDetails": "Детали за избраната земја",
     "status": {
-      "draft": "Draft",
-      "notarized": "Notarized",
-      "stored": "Stored",
-      "updated": "Updated"
+      "draft": "Нацрт",
+      "notarized": "Нотаризирано",
+      "stored": "Зачувано",
+      "updated": "Ажурирано"
     },
-    "testatorInfo": "Testator info",
+    "testatorInfo": "Информации за завештателот",
     "validation": {
-      "allocation100": "Allocation100"
+      "allocation100": "Алокација100"
     },
     "willPreview": {
       "_2": "2",
-      "critical_execution_instruction_3": "Critical execution instruction 3",
-      "professional_review_4": "Professional review 4",
-      "provided_by_certified_legal_pa_5": "Provided by certified legal pa 5"
+      "critical_execution_instruction_3": "Критична инструкција за извршување 3",
+      "professional_review_4": "Професионален преглед 4",
+      "provided_by_certified_legal_pa_5": "Обезбедено од овластен правен агент 5"
     }
   },
   "willGenerator": {
-    "changeCountry": "Change country",
-    "confirmCountry": "Confirm country",
-    "confirmSigned": "Confirm signed",
+    "changeCountry": "Промени ја земјата",
+    "confirmCountry": "Потврдете ја земјата",
+    "confirmSigned": "Потврди потпишано",
     "console": {
-      "willGenerationCompleted": "Will generation completed"
+      "willGenerationCompleted": "Генерирањето на тестаментот е завршено"
     },
     "countries": {
-      "AL": "A l",
-      "AT": "A t",
-      "BA": "B a",
-      "BE": "B e",
-      "BG": "B g",
+      "AL": "А л",
+      "AT": "А т",
+      "BA": "Б а",
+      "BE": "Б е",
+      "BG": "Б г",
       "CH": "C h",
-      "CY": "C y",
+      "CY": "Ци",
       "CZ": "C z",
-      "DE": "D e",
-      "DK": "D k",
-      "EE": "E e",
-      "ES": "E s",
-      "FI": "F i",
-      "FR": "F r",
-      "GB": "G b",
-      "GR": "G r",
-      "HR": "H r",
-      "HU": "H u",
-      "IE": "I e",
-      "IS": "I s",
-      "IT": "I t",
-      "LI": "L i",
-      "LT": "L t",
-      "LU": "L u",
-      "LV": "L v",
-      "MD": "M d",
-      "ME": "M e",
-      "MK": "M k",
-      "MT": "M t",
-      "NL": "N l",
-      "NO": "N o",
-      "PL": "P l",
-      "PT": "P t",
-      "RO": "R o",
-      "RS": "R s",
-      "SE": "S e",
-      "SI": "S i",
-      "SK": "S k",
-      "UA": "U a"
+      "DE": "Д е",
+      "DK": "Дк",
+      "EE": "Е е",
+      "ES": "И с",
+      "FI": "Ф и",
+      "FR": "Прв",
+      "GB": "Г б",
+      "GR": "Г р",
+      "HR": "Х р",
+      "HU": "Хју",
+      "IE": "Јас е",
+      "IS": "Јас с",
+      "IT": "Јас т",
+      "LI": "Л и",
+      "LT": "Л т",
+      "LU": "Л у",
+      "LV": "Л в",
+      "MD": "М д",
+      "ME": "Ме",
+      "MK": "Мк",
+      "MT": "Мт",
+      "NL": "Н л",
+      "NO": "Не",
+      "PL": "П л",
+      "PT": "Пт",
+      "RO": "Р о",
+      "RS": "Р с",
+      "SE": "Ј e",
+      "SI": "С и",
+      "SK": "Ск",
+      "UA": "У а"
     },
-    "executionInstructions": "Execution instructions",
-    "failed_to_load_will_template_2": "Failed to load will template 2",
-    "finalizeUpload": "Finalize upload",
-    "fullName": "Full name",
-    "no_template_found_for_this_jur_1": "No template found for this jur 1",
-    "please_confirm_that_you_have_s_3": "Please confirm that you have s 3",
-    "select_a_country_4": "Select a country 4",
+    "executionInstructions": "Инструкции за извршување",
+    "failed_to_load_will_template_2": "Не успеа да се вчита шаблонот за тестамент 2",
+    "finalizeUpload": "Финализирај го прикачувањето",
+    "fullName": "Целосно име",
+    "no_template_found_for_this_jur_1": "Не е пронајден шаблон за ова jur 1",
+    "please_confirm_that_you_have_s_3": "Ве молиме потврдете дека имате s 3",
+    "select_a_country_4": "Изберете земја 4",
     "steps": {
-      "confirmJurisdiction": "Confirm jurisdiction",
-      "executorBeneficiaries": "Executor beneficiaries",
-      "personalInformation": "Personal information",
-      "reviewGenerate": "Review generate",
-      "signConfirm": "Sign confirm"
+      "confirmJurisdiction": "Потврда на надлежноста",
+      "executorBeneficiaries": "Извршни корисници",
+      "personalInformation": "Лични информации",
+      "reviewGenerate": "Генерирање на преглед",
+      "signConfirm": "Потпишете потврди"
     }
   },
   "willSync": {
-    "approve": "Approve",
-    "autoApplied": "Auto applied",
+    "approve": "Одобри",
+    "autoApplied": "Автоматски применето",
     "changes": {
-      "allocationsModified": "Allocations modified",
-      "assetsAdded": "Assets added",
-      "beneficiariesRemoved": "Beneficiaries removed",
-      "noChanges": "No changes"
+      "allocationsModified": "Изменети распределби",
+      "assetsAdded": "Додадени средства",
+      "beneficiariesRemoved": "Корисниците се отстранети",
+      "noChanges": "Нема промени"
     },
-    "reject": "Reject",
-    "viewChanges": "View changes"
+    "reject": "Одбиј",
+    "viewChanges": "Прикажи ги промените"
   },
   "willSyncSettings": {
-    "autoSync": "Auto sync",
-    "autoSyncDescription": "Auto sync description",
-    "frequencyDaily": "Frequency daily",
-    "frequencyImmediate": "Frequency immediate",
-    "frequencyWeekly": "Frequency weekly",
-    "generalDescription": "General description",
-    "generalSettings": "General settings",
-    "requireApproval": "Require approval",
-    "requireApprovalDescription": "Require approval description",
-    "saveError": "Save error",
-    "saved": "Saved",
-    "syncFrequency": "Sync frequency",
-    "triggerDescription": "Trigger description",
-    "triggerSettings": "Trigger settings"
+    "autoSync": "Автоматска синхронизација",
+    "autoSyncDescription": "Опис на автоматската синхронизација",
+    "frequencyDaily": "Фреквенција дневно",
+    "frequencyImmediate": "Фреквенција веднаш",
+    "frequencyWeekly": "Фреквенција неделно",
+    "generalDescription": "Општ опис",
+    "generalSettings": "Општи поставки",
+    "requireApproval": "Бара одобрување",
+    "requireApprovalDescription": "Барај опис за одобрување",
+    "saveError": "Грешка во зачувувањето",
+    "saved": "Зачувано",
+    "syncFrequency": "Фреквенција на синхронизација",
+    "triggerDescription": "Опис на активирањето",
+    "triggerSettings": "Поставки за активирање"
   },
   "willVersion": {
-    "added": "Added",
-    "compareDiff": "Compare diff",
-    "comparePrompt": "Compare prompt",
-    "current": "Current",
-    "description": "Description",
-    "modified": "Modified",
-    "removed": "Removed",
-    "restore": "Restore",
-    "title": "Title",
-    "versionNumber": "Version number"
+    "added": "Додадено",
+    "compareDiff": "Спореди разлика",
+    "comparePrompt": "Спореди го потсетникот",
+    "current": "Тековно",
+    "description": "Опис",
+    "modified": "Изменето",
+    "removed": "Отстрането",
+    "restore": "Врати",
+    "title": "Наслов",
+    "versionNumber": "Број на верзија"
   },
   "disclaimers": {
-    "general": "LegacyGuard provides tools and guidance for estate planning but does not provide legal advice. For complex estates or specific legal questions, please consult with a qualified attorney in your jurisdiction.",
-    "willGenerator": "The will generator creates documents based on information you provide. While designed to meet legal requirements, we strongly recommend having any generated will reviewed by a qualified attorney before execution.",
-    "jurisdiction": "Legal requirements vary by jurisdiction. Ensure your documents comply with the laws in your area.",
-    "notLegalAdvice": "This service does not constitute legal advice and should not be relied upon as such.",
-    "professionalReview": "For complex estates, business interests, or unique family situations, professional legal review is strongly recommended."
+    "general": "LegacyGuard обезбедува алатки и упатства за планирање на имотот, но не дава правни совети. За сложени имоти или специфични правни прашања, консултирајте се со квалификуван адвокат во вашата јурисдикција.",
+    "willGenerator": "Генераторот на тестаменти креира документи врз основа на информациите што ги давате. Иако е дизајниран да ги исполни законските барања, препорачуваме секој генериран тестамент да го прегледа квалификуван адвокат пред да го изврши.",
+    "jurisdiction": "Правните барања се разликуваат во зависност од јурисдикцијата. Осигурајте се дека вашите документи се во согласност со законите во вашата област.",
+    "notLegalAdvice": "Оваа услуга не претставува правен совет и не треба да се смета за таква.",
+    "professionalReview": "За сложени имоти, деловни интереси или уникатни семејни ситуации, се препорачува професионален правен преглед."
   },
   "terms": {
-    "serviceTerms": "Terms of Service",
-    "privacyPolicy": "Privacy Policy",
-    "dataProcessing": "Data Processing Agreement",
-    "userAgreement": "User Agreement",
-    "acceptanceRequired": "By using LegacyGuard, you agree to our Terms of Service and Privacy Policy.",
-    "lastUpdated": "Last updated: {{date}}",
-    "effectiveDate": "Effective date: {{date}}"
+    "serviceTerms": "Услови за користење",
+    "privacyPolicy": "Политика за приватност",
+    "dataProcessing": "Договор за обработка на податоци",
+    "userAgreement": "Кориснички договор",
+    "acceptanceRequired": "Со користење на LegacyGuard, се согласувате со нашите Услови за користење и Политика за приватност.",
+    "lastUpdated": "Последна измена: {{date}}",
+    "effectiveDate": "Датум на стапување во сила: {{date}}"
   },
   "compliance": {
-    "dataProtection": "Your data is protected in compliance with applicable data protection laws including GDPR and CCPA.",
-    "encryption": "All sensitive information is encrypted using industry-standard encryption methods.",
-    "retention": "Data retention policies are designed to protect your privacy while ensuring your family can access important information when needed.",
-    "access": "You have the right to access, modify, or delete your personal information at any time.",
-    "portability": "You can export your data in standard formats for use with other services."
+    "dataProtection": "Вашите податоци се заштитени во согласност со важечките закони за заштита на податоци, вклучувајќи ги GDPR и CCPA.",
+    "encryption": "Сите чувствителни информации се шифрираат со користење на индустриски стандардни методи за шифрирање.",
+    "retention": "Политиките за задржување податоци се дизајнирани да ја заштитат вашата приватност, а воедно да обезбедат вашето семејство да може да пристапи до важни информации кога е потребно.",
+    "access": "Имате право да пристапите, измените или избришете ги вашите лични податоци во секое време.",
+    "portability": "Можете да ги извезете вашите податоци во стандардни формати за употреба со други услуги."
   },
   "executionRequirements": {
-    "witnessRequirements": "Witness Requirements for {{jurisdiction}}",
-    "notaryRequirements": "Notarization Requirements",
-    "signingInstructions": "Proper Signing Instructions",
-    "storageGuidelines": "Secure Storage Guidelines",
-    "legalCompliance": "Legal Compliance Verification"
+    "witnessRequirements": "Барања за сведоци за {{jurisdiction}}",
+    "notaryRequirements": "Нотаризација на барања",
+    "signingInstructions": "Правилни инструкции за потпишување",
+    "storageGuidelines": "Упатства за безбедно складирање",
+    "legalCompliance": "Проверка на усогласеност со законите"
   },
   "cookiePolicy": {
     "cookieTypes": {
-      "analytics": "Analytics cookies help us understand how visitors interact with our website.",
-      "essential": "Essential cookies are necessary for the website to function properly.",
-      "marketing": "Marketing cookies are used to track visitors across websites to display relevant advertisements."
+      "analytics": "Аналитичките колачиња ни помагаат да разбереме како посетителите комуницираат со нашата веб-страница.",
+      "essential": "Основните колачиња се неопходни за правилно функционирање на веб-страницата.",
+      "marketing": "Маркетинг колачињата се користат за следење на посетителите на веб-страниците за прикажување на релевантни реклами."
     },
-    "howWeUseCookies": "We use cookies to improve your experience, analyze site usage, and provide personalized content.",
-    "introduction": "This Cookie Policy explains how LegacyGuard uses cookies and similar technologies.",
-    "manageCookies": "You can manage your cookie preferences through your browser settings or our cookie preference center.",
-    "title": "Title",
-    "whatAreCookies": "Cookies are small text files that are stored on your device when you visit our website."
+    "howWeUseCookies": "Користиме колачиња за да го подобриме вашето искуство, да ја анализираме употребата на страницата и да обезбедиме персонализирана содржина.",
+    "introduction": "Оваа Политика за колачиња објаснува како LegacyGuard користи колачиња и слични технологии.",
+    "manageCookies": "Можете да ги управувате вашите преференции за колачиња преку поставките на вашиот прелистувач или нашиот центар за преференции за колачиња.",
+    "title": "Наслов",
+    "whatAreCookies": "Колачињата се мали текстуални датотеки што се складираат на вашиот уред кога ја посетувате нашата веб-страница."
   },
   "header": {
-    "subtitle": "Subtitle",
-    "title": "Title"
+    "title": "Наслов"
   },
   "hero": {
-    "headline": "Headline",
-    "subheadline": "Subheadline"
-  },
-  "privacyPolicy": {
-    "introduction": "This Privacy Policy describes how LegacyGuard collects, uses, and protects your personal information.",
-    "lastUpdated": "Last updated: {{date}}",
-    "sections": {
-      "dataSecurity": {
-        "content": "We implement appropriate security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.",
-        "title": "Data Security"
-      },
-      "informationCollection": {
-        "content": "We collect information you provide directly to us, such as when you create an account, use our services, or contact us for support.",
-        "title": "Information We Collect"
-      },
-      "informationSharing": {
-        "content": "We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except as described in this policy.",
-        "title": "Information Sharing"
-      },
-      "informationUse": {
-        "content": "We use your information to provide, maintain, and improve our services, communicate with you, and ensure the security of your account.",
-        "title": "How We Use Your Information"
-      },
-      "yourRights": {
-        "content": "You have the right to access, update, or delete your personal information. You may also opt out of certain communications from us.",
-        "title": "Your Rights"
-      }
-    },
-    "title": "Privacy Policy"
+    "headline": "Наслов",
+    "subheadline": "Поднаслов"
   },
   "termsOfService": {
-    "effectiveDate": "Effective date: {{date}}",
-    "introduction": "These Terms of Service govern your use of LegacyGuard's family protection platform and services.",
-    "lastUpdated": "Last updated: {{date}}",
+    "effectiveDate": "Датум на стапување во сила: {{date}}",
+    "introduction": "Овие Услови за користење го регулираат вашето користење на платформата и услугите за заштита на семејството на LegacyGuard.",
+    "lastUpdated": "Последна измена: {{date}}",
     "sections": {
       "acceptance": {
-        "content": "By accessing or using LegacyGuard, you agree to be bound by these Terms of Service and all applicable laws and regulations.",
-        "title": "Acceptance of Terms"
+        "content": "Со пристапување или користење на LegacyGuard, се согласувате да бидете обврзани со овие Услови за користење и сите важечки закони и прописи.",
+        "title": "Прифаќање на условите"
       },
       "description": {
-        "content": "LegacyGuard provides digital tools and services to help individuals organize their important information for family protection purposes.",
-        "title": "Service Description"
+        "content": "LegacyGuard обезбедува дигитални алатки и услуги за да им помогне на поединците да ги организираат своите важни информации за цели на заштита на семејството.",
+        "title": "Опис на услугата"
       },
       "limitations": {
-        "content": "LegacyGuard provides tools and guidance but does not provide legal advice. We recommend consulting with qualified professionals for complex legal matters.",
-        "title": "Limitations of Liability"
+        "content": "LegacyGuard нуди алатки и упатства, но не дава правни совети. Препорачуваме консултација со квалификувани професионалци за сложени правни прашања.",
+        "title": "Ограничувања на одговорноста"
       },
       "privacy": {
-        "content": "Your privacy is important to us. Please review our Privacy Policy to understand how we collect, use, and protect your information.",
-        "title": "Privacy and Data Protection"
+        "content": "Вашата приватност ни е важна. Ве молиме погледнете ја нашата Политика за приватност за да разберете како ги собираме, користиме и заштитуваме вашите информации.",
+        "title": "Приватност и заштита на податоци"
       },
       "userResponsibilities": {
-        "content": "You are responsible for maintaining the confidentiality of your account information and for all activities that occur under your account.",
-        "title": "User Responsibilities"
+        "content": "Вие сте одговорни за одржување на доверливоста на информациите за вашата сметка и за сите активности што се случуваат преку вашата сметка.",
+        "title": "Одговорности на корисникот"
       }
     },
-    "title": "Terms of Service"
+    "title": "Услови за користење"
   },
   "cookies": {
     "policy": {
       "analytics": {
-        "description": "Description",
+        "description": "Опис",
         "examples": {
-          "ga": "Ga",
-          "gid": "Gid",
-          "session": "Session"
+          "ga": "Га",
+          "gid": "Гид",
+          "session": "Сесија"
         },
-        "purpose": "Purpose",
-        "title": "Title"
+        "purpose": "Намена",
+        "title": "Наслов"
       },
       "categories": {
-        "title": "Title"
+        "title": "Наслов"
       },
       "contact": {
-        "address": "Address",
-        "addressDetails": "Address details",
-        "description": "Description",
-        "email": "Email",
-        "title": "Title"
+        "address": "Адреса",
+        "addressDetails": "Детали за адресата",
+        "description": "Опис",
+        "email": "Е-пошта",
+        "title": "Наслов"
       },
-      "examples": "Examples",
-      "lastUpdated": "Last updated",
+      "examples": "Примери",
+      "lastUpdated": "Последно ажурирано",
       "manage": {
-        "title": "Title"
+        "title": "Наслов"
       },
       "marketing": {
-        "description": "Description",
+        "description": "Опис",
         "examples": {
-          "facebook": "Facebook",
+          "facebook": "Фејсбук",
           "google": "Google"
         },
-        "purpose": "Purpose",
-        "title": "Title"
+        "purpose": "Намена",
+        "title": "Наслов"
       },
       "necessary": {
-        "description": "Description",
+        "description": "Опис",
         "examples": {
-          "auth": "Auth",
-          "consent": "Consent",
+          "auth": "Авторизација",
+          "consent": "Согласност",
           "csrf": "Csrf",
-          "session": "Session"
+          "session": "Сесија"
         },
-        "purpose": "Purpose",
-        "title": "Title"
+        "purpose": "Намена",
+        "title": "Наслов"
       },
       "overview": {
-        "intro": "Intro",
-        "point1": "Point1",
-        "point2": "Point2",
-        "point3": "Point3",
-        "point4": "Point4",
-        "title": "Title"
+        "intro": "Вовед",
+        "point1": "Точка1",
+        "point2": "Точка 2",
+        "point3": "Точка 3",
+        "point4": "Точка4",
+        "title": "Наслов"
       },
       "preferences": {
-        "description": "Description",
+        "description": "Опис",
         "examples": {
-          "language": "Language",
-          "theme": "Theme",
-          "ui": "Ui"
+          "language": "Јазик",
+          "theme": "Тема",
+          "ui": "Кориснички интерфејс"
         },
-        "purpose": "Purpose",
-        "title": "Title"
+        "purpose": "Намена",
+        "title": "Наслов"
       },
-      "purpose": "Purpose",
-      "required": "Required",
-      "subtitle": "Subtitle",
-      "title": "Title",
+      "purpose": "Намена",
+      "required": "Задолжително",
+      "subtitle": "Титл",
+      "title": "Наслов",
       "yourRights": {
-        "description": "Description",
-        "right1": "Right1",
-        "right2": "Right2",
-        "right3": "Right3",
-        "right4": "Right4",
-        "title": "Title"
+        "description": "Опис",
+        "right1": "Десно1",
+        "right2": "Десно2",
+        "right3": "Десно3",
+        "right4": "Десно4",
+        "title": "Наслов"
       }
     }
   }

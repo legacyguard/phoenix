@@ -7,7 +7,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '.
 import { Label } from './ui/label';
 
 export const GenderAwareExample: React.FC = () => {
-  const { t } = useTranslation('dashboard');
+  const { t } = useTranslation('dashboard-main');
   const { gender, setGender, getGenderedKey } = useGenderContext();
 
   // Example of using gendered translations

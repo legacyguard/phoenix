@@ -1,127 +1,76 @@
 {
   "general": {
-    "somethingWrong": "Valami hiba történt. Kérjük, próbálja meg újra.",
-    "networkError": "Hálózati kapcsolat probléma. Kérjük, ellenőrizze az internetkapcsolatát.",
-    "serverError": "Technikai nehézségeink adódtak. Kérjük, próbálja meg újra később.",
-    "timeoutError": "A kérés időtúllépett. Kérjük, próbálja meg újra.",
-    "unknownError": "Váratlan hiba történt. Ha a probléma továbbra is fennáll, kérjük, lépjen kapcsolatba az ügyfélszolgálattal.",
-    "maintenanceMode": "Jelenleg karbantartást végzünk. Kérjük, próbálja meg újra néhány perc múlva."
+    "networkError": "Hálózati kapcsolati probléma. Kérjük, ellenőrizze az internetkapcsolatát.",
+    "serverError": "Technikai problémákba ütköztünk. Kérjük, próbálja meg újra később.",
+    "timeoutError": "A kérés időtúllépést okozott. Kérjük, próbálja újra.",
+    "maintenanceMode": "Jelenleg karbantartást végzünk. Kérjük, próbálja újra néhány perc múlva.",
+    "something_wrong": "Valami nem működött teljesen rendesen, de ne aggódj - a fontos adataid biztonságban vannak.",
+    "try_again": "Hadd próbáljam meg újra neked",
+    "contact_support": "Itt vagyok, hogy segítsek, ha segítségre van szükséged",
+    "no_data_lost": "A jó hír az, hogy semmi, amin dolgoztál, nem veszett el.",
+    "temporary_issue": "Úgy tűnik, ez egy átmeneti probléma, aminek gyorsan meg kell oldódnia"
   },
   "authentication": {
-    "sessionExpired": "A munkamenet lejárt. Kérjük, jelentkezzen be újra.",
-    "invalidCredentials": "Érvénytelen e-mail cím vagy jelszó. Kérjük, próbálja meg újra.",
-    "accountLocked": "A fiókja ideiglenesen zárolva van biztonsági okokból.",
-    "accountDisabled": "A fiókja le van tiltva. Kérjük, lépjen kapcsolatba az ügyfélszolgálattal.",
-    "emailNotVerified": "Kérjük, erősítse meg az e-mail címét a folytatás előtt.",
-    "passwordResetRequired": "Jelszó-visszaállítás szükséges. Kérjük, ellenőrizze az e-mailjeit."
+    "sessionExpired": "A munkameneted lejárt. Kérjük, jelentkezz be újra.",
+    "invalidCredentials": "Érvénytelen e-mail cím vagy jelszó. Kérjük, próbálja újra.",
+    "accountLocked": "Fiókját biztonsági okokból ideiglenesen zároltuk.",
+    "accountDisabled": "Fiókját letiltottuk. Kérjük, vegye fel a kapcsolatot az ügyfélszolgálattal.",
+    "emailNotVerified": "Kérjük, a folytatás előtt ellenőrizze az e-mail címét.",
+    "passwordResetRequired": "Jelszó visszaállítása szükséges. Kérjük, ellenőrizze az e-mailjeit."
   },
   "authorization": {
-    "accessDenied": "Nincs jogosultsága az információ megtekintéséhez.",
-    "insufficientPermissions": "Nincs megfelelő jogosultsága ehhez a művelethez.",
-    "subscriptionRequired": "Ez a funkció aktív előfizetést igényel.",
-    "upgradeRequired": "Kérjük, frissítse a csomagját a funkció eléréséhez."
+    "accessDenied": "Nincs jogosultsága ehhez az információhoz hozzáférni.",
+    "insufficientPermissions": "Nincs elegendő jogosultsága ehhez a művelethez.",
+    "subscriptionRequired": "Ehhez a funkcióhoz aktív előfizetés szükséges.",
+    "upgradeRequired": "Kérjük, frissítse csomagját a funkció eléréséhez."
   },
   "validation": {
-    "requiredField": "Ez a mező kötelező.",
-    "invalidEmail": "Kérjük, adjon meg érvényes e-mail címet.",
-    "invalidPhone": "Kérjük, adjon meg érvényes telefonszámot.",
-    "invalidDate": "Kérjük, adjon meg érvényes dátumot.",
-    "invalidFormat": "Érvénytelen formátum. Kérjük, ellenőrizze a bevitelét.",
-    "passwordTooWeak": "A jelszónak legalább 8 karakterből kell állnia, és tartalmaznia kell nagybetűket, kisbetűket és számokat.",
-    "passwordMismatch": "A jelszavak nem egyeznek meg.",
-    "fileTooLarge": "A fájl mérete meghaladja a maximális {{size}} MB korlátot.",
-    "unsupportedFileType": "Ez a fájltípus nem támogatott."
+    "invalidEmail": "Kérjük, adjon meg egy érvényes e-mail címet.",
+    "invalidPhone": "Kérjük, adjon meg egy érvényes telefonszámot.",
+    "invalidFormat": "Érvénytelen formátum. Kérjük, ellenőrizze a bevitelt.",
+    "passwordTooWeak": "A jelszónak legalább 8 karakterből kell állnia, nagybetűkkel, kisbetűkkel és számokkal.",
+    "passwordMismatch": "A jelszavak nem egyeznek.",
+    "fileTooLarge": "A fájlméret meghaladja a {{size}}MB maximális korlátot.",
+    "unsupportedFileType": "Ez a fájltípus nem támogatott.",
+    "required_field": "A családodnak szüksége lesz erre az információra - tudnál segíteni nekem kitölteni?",
+    "invalid_email": "Ez az email cím nem tűnik egészen helyesnek. Meg tudnád nézni, hogy helyesen adtad meg?",
+    "invalid_phone": "Problémám van ezzel a telefonszám-formátummal. Megpróbálnád másképp megadni?",
+    "invalid_date": "Ez a dátumformátum nem működik nálam. Megpróbálnád a HH/NN/ÉÉÉÉ formátumot?",
+    "password_weak": "Tegyük egy kicsit erősebbé a jelszavadat, hogy a családod adatai extra biztonságban legyenek.",
+    "file_too_large": "Ez a fájl egy kicsit túl nagy ahhoz, hogy kezeljem. Megpróbálhatnád egy kisebb verzióval?",
+    "unsupported_file": "Nem tudok dolgozni ezzel a fájltípussal. Megpróbálhatnád PDF-fel vagy képpel?"
   },
   "data": {
-    "loadingFailed": "Az adatok betöltése sikertelen. Kérjük, frissítse az oldalt.",
-    "savingFailed": "A módosítások mentése sikertelen. Kérjük, próbálja meg újra.",
-    "deletingFailed": "Az elem törlése sikertelen. Kérjük, próbálja meg újra.",
-    "uploadFailed": "A fájl feltöltése sikertelen. Kérjük, próbálja meg újra.",
-    "exportFailed": "Az adatok exportálása sikertelen. Kérjük, próbálja meg újra később.",
-    "importFailed": "Az adatok importálása sikertelen. Kérjük, ellenőrizze a fájl formátumát.",
-    "syncFailed": "A szinkronizálás sikertelen. Előfordulhat, hogy néhány módosítás nem lett mentve."
+    "loadingFailed": "Nem sikerült betölteni az adatokat. Frissítse az oldalt.",
+    "savingFailed": "Nem sikerült menteni a változtatásokat. Próbáld újra.",
+    "deletingFailed": "Nem sikerült törölni az elemet. Próbáld újra.",
+    "uploadFailed": "A fájlfeltöltés sikertelen. Próbáld újra.",
+    "exportFailed": "Az adatexportálás sikertelen. Próbálja újra később.",
+    "importFailed": "Az adatimportálás sikertelen. Kérjük, ellenőrizze a fájlformátumot.",
+    "syncFailed": "A szinkronizálás sikertelen. Előfordulhat, hogy egyes módosítások nem menthetők."
   },
   "payment": {
-    "paymentFailed": "A fizetés feldolgozása sikertelen. Kérjük, ellenőrizze a fizetési módját.",
-    "cardDeclined": "A kártyáját elutasították. Kérjük, próbáljon másik fizetési módot.",
+    "paymentFailed": "A fizetés feldolgozása sikertelen. Kérjük, ellenőrizze a fizetési módot.",
+    "cardDeclined": "A kártyáját elutasították. Kérjük, próbáljon meg másik fizetési módot használni.",
     "insufficientFunds": "Nincs elegendő fedezet. Kérjük, ellenőrizze a számlaegyenlegét.",
-    "expiredCard": "A kártyája lejárt. Kérjük, frissítse a fizetési adatait.",
-    "invalidCard": "Érvénytelen kártyaadatok. Kérjük, ellenőrizze az adatait.",
-    "paymentTimeout": "A fizetés feldolgozása időtúllépett. Kérjük, próbálja meg újra."
+    "expiredCard": "A kártyája lejárt. Kérjük, frissítse fizetési adatait.",
+    "invalidCard": "Érvénytelen kártyaadatok. Kérjük, ellenőrizze adatait.",
+    "paymentTimeout": "A fizetés feldolgozása időtúllépést okozott. Kérjük, próbálja újra."
   },
   "actions": {
-    "tryAgain": "Próbálja újra",
-    "refresh": "Oldal frissítése",
-    "contactSupport": "Kapcsolat az ügyfélszolgálattal",
-    "goBack": "Vissza",
-    "signInAgain": "Jelentkezzen be újra",
+    "tryAgain": "Próbáld újra",
+    "signInAgain": "Bejelentkezés újra",
     "updatePayment": "Fizetés frissítése",
     "upgradeAccount": "Fiók frissítése"
   },
   "debug": {
     "i18nDebug": {
       "current_lang_resources_7": "Jelenlegi nyelvi erőforrások 7",
-      "has_resources_6": "Van erőforrás 6",
+      "has_resources_6": "6 erőforrással rendelkezik",
       "i18n_debug_info_1": "I18n hibakeresési információ 1",
       "resolved_language_3": "Feloldott nyelv 3",
-      "test_translation_5": "Fordítás teszt 5"
-    },
-    "panel": {
-      "actions": {
-        "clearAllErrors": "Összes hiba törlése",
-        "downloadErrors": "Hibák letöltése"
-      },
-      "error": {
-        "errorMessage": "Hibaüzenet",
-        "noMessage": "Nincs üzenet",
-        "unknownError": "Ismeretlen hiba"
-      },
-      "errorCount": "Hibák száma",
-      "fields": {
-        "path": "Útvonal",
-        "query": "Lekérdezés",
-        "url": "URL",
-        "userAgent": "Felhasználói ügynök",
-        "viewport": "Megjelenítési terület"
-      },
-      "messages": {
-        "errorCopied": "Hiba kimásolva",
-        "errorsCleared": "Hibák törölve",
-        "errorsDownloaded": "Hibák letöltve"
-      },
-      "recentErrors": "Legutóbbi hibák",
-      "sections": {
-        "browserInfo": "Böngészőinformáció",
-        "context": "Környezet",
-        "location": "Hely",
-        "stackTrace": "Veremnyomkövetés",
-        "time": "Idő"
-      },
-      "tabs": {
-        "details": "Részletek",
-        "list": "Lista"
-      },
-      "title": "Cím"
-    },
-    "translationTest": {
-      "available_languages_3": "Elérhető nyelvek 3",
-      "current_language_2": "Jelenlegi nyelv 2",
-      "dashboard_stats_translations_4": "Irányítópult statisztika fordítások 4",
-      "exists_5": "Létezik 5",
-      "raw_resource_check_6": "Nyers erőforrás ellenőrzés 6",
-      "translation_debug_test_1": "Fordítás hibakeresési teszt 1"
+      "test_translation_5": "Tesztfordítás 5"
     }
-  },
-  "development": {
-    "resetOnboarding": "Bevezetés visszaállítása"
-  },
-  "errorTest": {
-    "logCriticalError": "Kritikus hiba naplózása",
-    "logRegularError": "Általános hiba naplózása",
-    "title": "Cím",
-    "triggerAlert": "Riasztás indítása",
-    "triggerAsyncError": "Aszinkron hiba indítása",
-    "triggerSyncError": "Szinkron hiba indítása"
   },
   "test": {
     "environment": {
@@ -132,7 +81,55 @@
   "notfound": {
     "title": "Az oldal nem található",
     "description": "A keresett oldal nem létezik, vagy áthelyezték.",
-    "goHome": "Főoldalra",
+    "goHome": "Menj haza",
     "goBack": "Vissza"
+  },
+  "network": {
+    "connection_lost": "Úgy tűnik, megszakadt az internetkapcsolatod. A munkádat mentettük, és automatikusan újracsatlakozunk.",
+    "slow_connection": "Ma kicsit lassúnak tűnik a kapcsolatod. Türelmesen várok, amíg betöltődnek a dolgok.",
+    "server_busy": "A szervereink most kicsit leterheltek, de megpróbálok segíteni.",
+    "timeout": "Ez tovább tartott a vártnál. Hadd próbáljak meg egy másik megközelítést."
+  },
+  "contextual": {
+    "assets": {
+      "save_failed": "Jelenleg nem tudtam menteni az eszköz adatait, de folytatom a próbálkozást. A családod adatai fontosak számomra.",
+      "load_failed": "Jelenleg problémám van az anyagaid betöltésével. Hadd próbálkozzak újra egy pillanat múlva.",
+      "delete_failed": "Nem sikerült eltávolítanom az elemet. Megpróbáljam újra?"
+    },
+    "documents": {
+      "upload_failed": "A dokumentum feltöltése nem sikerült megfelelően. Ne aggódj, segítek újrapróbálkozni.",
+      "processing_failed": "Problémám volt a dokumentum feldolgozásával. A fájl biztonságban van, újra megpróbálom.",
+      "access_failed": "Jelenleg nem férek hozzá ehhez a dokumentumhoz. Nézzem meg, mit tehetek, hogy segítsek."
+    },
+    "family": {
+      "save_failed": "Nem tudtam menteni az illető adatait. Próbálom újra – a megbízható köröd fontos.",
+      "invite_failed": "Jelenleg nem tudtam elküldeni a meghívót. Segítek újrapróbálkozni, amikor készen állsz.",
+      "access_failed": "Problémáim vannak a családi hozzáférési beállításokkal. Hadd segítsek megoldani."
+    },
+    "will": {
+      "generation_failed": "Most nem tudtam megírni a végrendeletedet. Ne aggódj - minden döntésed mentésre került, és újra megpróbálom.",
+      "save_failed": "Jelenleg nem tudtam menteni a módosításokat. Az előző verziód biztonságban van, folytatom a próbálkozást.",
+      "legal_check_failed": "Jelenleg nem tudtam ellenőrizni a jogi követelményeket. Próbáljam újra, vagy kérhetünk segítséget a jogi csapatunktól."
+    }
+  },
+  "emotional_support": {
+    "frustration": "Tudom, hogy ez frusztráló lehet, amikor valami fontosat próbálsz tenni a családodért. Azért vagyok itt, hogy segítsek neked, hogy ez működjön.",
+    "time_pressure": "Megértem, hogy nincs sok ideje technikai problémákra. Hadd intézzem ezt gyorsan helyetted.",
+    "overwhelm": "A technikai problémák túlterhelőek lehetnek, amikor már amúgy is fontos családtervezéssel kell foglalkoznod. Vegyél egy mély lélegzetet – megvan ez.",
+    "discouragement": "Ne hagyd, hogy ez a technikai akadály elkedvetlenítsen. Amit a családodért teszel, túl fontos ahhoz, hogy feladd."
+  },
+  "solutions": {
+    "refresh_page": "Néha az oldal frissítése segít. A munkád mentésre kerül, így nem veszítesz semmit.",
+    "try_different_browser": "Ha ez továbbra is előfordul, próbáljon meg egy másik böngészőt használni. Általában a Chrome vagy a Firefox működik a legjobban.",
+    "check_internet": "Ellenőriznéd az internetkapcsolatodat? Néha ennyi elég is.",
+    "contact_support": "Szívesen segítek Önnek személyesen. Forduljon ügyfélszolgálatunkhoz, akik gondoskodni fognak Önről.",
+    "try_later": "Ha sietős a dolgod, megpróbálhatod később. Minden eddigi műveleted biztonságosan mentve van.",
+    "alternative_approach": "Hadd javasoljak egy másik módszert erre, ami talán jobban működik."
+  },
+  "recovery": {
+    "auto_save_worked": "A jó hír az, hogy minden, amit beírtál, automatikusan mentésre került.",
+    "backup_available": "Van egy biztonsági másolatom a munkádról pár perccel ezelőttről, ha szükséged van rá.",
+    "progress_preserved": "Minden előrehaladásod megmarad – nem kell újrakezdened.",
+    "data_secure": "Családod adatai a technikai probléma ellenére is teljes biztonságban maradnak."
   }
 }

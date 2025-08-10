@@ -270,7 +270,7 @@ export const AssetFileUpload: React.FC<AssetFileUploadProps> = ({
             />
             <Button type="button" onClick={addTag} size="sm">
               <Tag className="h-4 w-4 mr-1" />
-              {t('ui:common.add')}
+              {t('ui-common:common.add')}
             </Button>
           </div>
           {tags.length > 0 && (
@@ -348,7 +348,7 @@ export const AssetFileUpload: React.FC<AssetFileUploadProps> = ({
         <div className="flex justify-end gap-3">
           {onClose && (
             <Button variant="outline" onClick={onClose}>
-              {t('ui:common.cancel')}
+              {t('family-core:common.cancel')}
             </Button>
           )}
           <Button

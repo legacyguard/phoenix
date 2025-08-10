@@ -26,7 +26,7 @@ const PREFERENCES_DURATION = 30 * 24 * 60 * 60 * 1000; // 30 days
 
 export function useGeoLocation() {
   const navigate = useNavigate();
-  const { i18n } = useTranslation('ui');
+  const { i18n } = useTranslation('ui-common');
   const [state, setState] = useState<GeoLocationState>({
     isLoading: false, // Changed to false since we don't auto-detect
     showModal: false,

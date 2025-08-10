@@ -34,7 +34,7 @@ export function ReminderCard({
   onDismiss,
   className 
 }: ReminderCardProps) {
-  const { t } = useTranslation('dashboard');
+  const { t } = useTranslation('dashboard-main');
   
   const getStatusColor = () => {
     if (isPast(reminder.due_date)) {

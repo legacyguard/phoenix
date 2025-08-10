@@ -1,127 +1,76 @@
 {
   "general": {
-    "somethingWrong": "Noget gik galt. Prøv venligst igen.",
-    "networkError": "Problem med netværksforbindelsen. Kontroller venligst din internetforbindelse.",
-    "serverError": "Vi oplever tekniske problemer. Prøv venligst igen om lidt.",
-    "timeoutError": "Forespørgslen fik timeout. Prøv venligst igen.",
-    "unknownError": "Der opstod en uventet fejl. Kontakt venligst support, hvis problemet fortsætter.",
-    "maintenanceMode": "Vi udfører vedligeholdelse lige nu. Prøv venligst igen om et par minutter."
+    "networkError": "Problem med netværksforbindelsen. Tjek venligst din internetforbindelse.",
+    "serverError": "Vi oplever tekniske problemer. Prøv igen om lidt.",
+    "timeoutError": "Anmodningen er udløbet. Prøv igen.",
+    "maintenanceMode": "Vi udfører i øjeblikket vedligeholdelse. Prøv igen om et par minutter.",
+    "something_wrong": "Noget fungerede ikke helt korrekt, men bare rolig - dine vigtige oplysninger er sikre.",
+    "try_again": "Lad mig prøve det igen for dig",
+    "contact_support": "Jeg er her for at hjælpe, hvis du har brug for hjælp",
+    "no_data_lost": "Den gode nyhed er, at intet af det, du har arbejdet på, er gået tabt.",
+    "temporary_issue": "Dette ser ud til at være et midlertidigt problem, der burde løses hurtigt"
   },
   "authentication": {
     "sessionExpired": "Din session er udløbet. Log venligst ind igen.",
-    "invalidCredentials": "Ugyldig e-mail eller adgangskode. Prøv venligst igen.",
-    "accountLocked": "Din konto er midlertidigt låst af sikkerhedshensyn.",
-    "accountDisabled": "Din konto er deaktiveret. Kontakt venligst support.",
+    "invalidCredentials": "Ugyldig e-mail eller adgangskode. Prøv igen.",
+    "accountLocked": "Din konto er midlertidigt låst af sikkerhedsmæssige årsager.",
+    "accountDisabled": "Din konto er blevet deaktiveret. Kontakt venligst support.",
     "emailNotVerified": "Bekræft venligst din e-mailadresse, før du fortsætter.",
     "passwordResetRequired": "Nulstilling af adgangskode er påkrævet. Tjek venligst din e-mail."
   },
   "authorization": {
     "accessDenied": "Du har ikke tilladelse til at få adgang til disse oplysninger.",
-    "insufficientPermissions": "Du har ikke tilstrækkelige rettigheder til denne handling.",
+    "insufficientPermissions": "Du har ikke tilstrækkelige tilladelser til denne handling.",
     "subscriptionRequired": "Denne funktion kræver et aktivt abonnement.",
-    "upgradeRequired": "Opgrader venligst din plan for at få adgang til denne funktion."
+    "upgradeRequired": "Opgrader venligst dit abonnement for at få adgang til denne funktion."
   },
   "validation": {
-    "requiredField": "Dette felt er påkrævet.",
-    "invalidEmail": "Angiv venligst en gyldig e-mailadresse.",
-    "invalidPhone": "Angiv venligst et gyldigt telefonnummer.",
-    "invalidDate": "Angiv venligst en gyldig dato.",
-    "invalidFormat": "Ugyldigt format. Kontroller venligst dine indtastninger.",
-    "passwordTooWeak": "Adgangskoden skal være mindst 8 tegn og indeholde store og små bogstaver samt tal.",
+    "invalidEmail": "Indtast venligst en gyldig e-mailadresse.",
+    "invalidPhone": "Indtast venligst et gyldigt telefonnummer.",
+    "invalidFormat": "Ugyldigt format. Kontroller venligst din indtastning.",
+    "passwordTooWeak": "Adgangskoden skal være mindst 8 tegn lang med store bogstaver, små bogstaver og tal.",
     "passwordMismatch": "Adgangskoderne stemmer ikke overens.",
-    "fileTooLarge": "Filstørrelsen overskrider den maksimale grænse på {{size}} MB.",
-    "unsupportedFileType": "Denne filtype understøttes ikke."
+    "fileTooLarge": "Filstørrelsen overstiger den maksimale grænse på {{size}}MB.",
+    "unsupportedFileType": "Denne filtype understøttes ikke.",
+    "required_field": "Din familie skal bruge disse oplysninger - kan I hjælpe mig med at udfylde dem?",
+    "invalid_email": "Den e-mailadresse ser ikke helt korrekt ud. Kunne du tjekke den for mig?",
+    "invalid_phone": "Jeg har problemer med telefonnummerformatet. Kan du prøve at indtaste det på en anden måde?",
+    "invalid_date": "Det datoformat virker ikke for mig. Kunne du prøve MM/DD/ÅÅÅÅ?",
+    "password_weak": "Lad os gøre din adgangskode lidt stærkere for at holde din families oplysninger ekstra sikre.",
+    "file_too_large": "Den fil er lidt for stor til at jeg kan håndtere den. Kunne du prøve en mindre version?",
+    "unsupported_file": "Jeg kan ikke arbejde med den type fil. Kunne du prøve en PDF eller et billede i stedet?"
   },
   "data": {
     "loadingFailed": "Kunne ikke indlæse data. Opdater venligst siden.",
-    "savingFailed": "Kunne ikke gemme ændringer. Prøv venligst igen.",
-    "deletingFailed": "Kunne ikke slette elementet. Prøv venligst igen.",
-    "uploadFailed": "Filupload mislykkedes. Prøv venligst igen.",
-    "exportFailed": "Dataeksport mislykkedes. Prøv venligst igen senere.",
-    "importFailed": "Dataimport mislykkedes. Kontroller venligst filformatet.",
-    "syncFailed": "Synkronisering mislykkedes. Nogle ændringer er muligvis ikke gemt."
+    "savingFailed": "Ændringerne kunne ikke gemmes. Prøv igen.",
+    "deletingFailed": "Kunne ikke slette elementet. Prøv igen.",
+    "uploadFailed": "Filupload mislykkedes. Prøv igen.",
+    "exportFailed": "Dataeksport mislykkedes. Prøv igen senere.",
+    "importFailed": "Dataimport mislykkedes. Kontroller filformatet.",
+    "syncFailed": "Synkroniseringen mislykkedes. Nogle ændringer gemmes muligvis ikke."
   },
   "payment": {
-    "paymentFailed": "Betalingen kunne ikke behandles. Kontroller venligst din betalingsmetode.",
+    "paymentFailed": "Betalingsbehandling mislykkedes. Kontroller venligst din betalingsmetode.",
     "cardDeclined": "Dit kort blev afvist. Prøv venligst en anden betalingsmetode.",
-    "insufficientFunds": "Utilstrækkelige midler. Kontroller venligst din kontosaldo.",
+    "insufficientFunds": "Utilstrækkelige midler. Tjek venligst din kontosaldo.",
     "expiredCard": "Dit kort er udløbet. Opdater venligst dine betalingsoplysninger.",
-    "invalidCard": "Ugyldige kortoplysninger. Kontroller venligst dine detaljer.",
-    "paymentTimeout": "Betalingsbehandlingen fik timeout. Prøv venligst igen."
+    "invalidCard": "Ugyldige kortoplysninger. Kontroller venligst dine oplysninger.",
+    "paymentTimeout": "Betalingsbehandlingen er udløbet. Prøv igen."
   },
   "actions": {
     "tryAgain": "Prøv igen",
-    "refresh": "Opdater siden",
-    "contactSupport": "Kontakt support",
-    "goBack": "Tilbage",
     "signInAgain": "Log ind igen",
     "updatePayment": "Opdater betaling",
     "upgradeAccount": "Opgrader konto"
   },
   "debug": {
     "i18nDebug": {
-      "current_lang_resources_7": "Aktuelle sprogressourcer 7",
+      "current_lang_resources_7": "Nuværende sprogressourcer 7",
       "has_resources_6": "Har ressourcer 6",
-      "i18n_debug_info_1": "i18n-fejlsøgningsinfo 1",
-      "resolved_language_3": "Bestemt sprog 3",
+      "i18n_debug_info_1": "I18n fejlfindingsinfo 1",
+      "resolved_language_3": "Løst sprog 3",
       "test_translation_5": "Testoversættelse 5"
-    },
-    "panel": {
-      "actions": {
-        "clearAllErrors": "Ryd alle fejl",
-        "downloadErrors": "Download fejl"
-      },
-      "error": {
-        "errorMessage": "Fejlmeddelelse",
-        "noMessage": "Ingen meddelelse",
-        "unknownError": "Ukendt fejl"
-      },
-      "errorCount": "Antal fejl",
-      "fields": {
-        "path": "Sti",
-        "query": "Forespørgsel",
-        "url": "URL",
-        "userAgent": "Brugeragent",
-        "viewport": "Visningsområde"
-      },
-      "messages": {
-        "errorCopied": "Fejl kopieret",
-        "errorsCleared": "Fejl ryddet",
-        "errorsDownloaded": "Fejl downloadet"
-      },
-      "recentErrors": "Seneste fejl",
-      "sections": {
-        "browserInfo": "Browserinfo",
-        "context": "Kontekst",
-        "location": "Placering",
-        "stackTrace": "Stakspor",
-        "time": "Tid"
-      },
-      "tabs": {
-        "details": "Detaljer",
-        "list": "Liste"
-      },
-      "title": "Titel"
-    },
-    "translationTest": {
-      "available_languages_3": "Tilgængelige sprog 3",
-      "current_language_2": "Aktuelt sprog 2",
-      "dashboard_stats_translations_4": "Oversættelser af dashboardstatistikker 4",
-      "exists_5": "Findes 5",
-      "raw_resource_check_6": "Kontrol af rå ressource 6",
-      "translation_debug_test_1": "Test af oversættelsesfejlsøgning 1"
     }
-  },
-  "development": {
-    "resetOnboarding": "Nulstil introduktion"
-  },
-  "errorTest": {
-    "logCriticalError": "Log kritisk fejl",
-    "logRegularError": "Log almindelig fejl",
-    "title": "Titel",
-    "triggerAlert": "Udløs advarsel",
-    "triggerAsyncError": "Udløs asynkron fejl",
-    "triggerSyncError": "Udløs synkron fejl"
   },
   "test": {
     "environment": {
@@ -130,9 +79,57 @@
     }
   },
   "notfound": {
-    "title": "Side ikke fundet",
-    "description": "Siden du leder efter, findes ikke eller er blevet flyttet.",
-    "goHome": "Gå til startside",
-    "goBack": "Tilbage"
+    "title": "Siden blev ikke fundet",
+    "description": "Den side, du leder efter, findes ikke eller er blevet flyttet.",
+    "goHome": "Gå hjem",
+    "goBack": "Gå tilbage"
+  },
+  "network": {
+    "connection_lost": "Det ser ud til, at din internetforbindelse blev afbrudt. Dit arbejde er gemt, og vi genopretter automatisk forbindelsen.",
+    "slow_connection": "Din forbindelse virker lidt langsom i dag. Jeg venter tålmodigt, mens tingene indlæses.",
+    "server_busy": "Vores servere har lidt travlt lige nu, men jeg vil fortsætte med at forsøge at hjælpe dig.",
+    "timeout": "Det tog længere tid end forventet. Lad mig prøve en anden fremgangsmåde."
+  },
+  "contextual": {
+    "assets": {
+      "save_failed": "Jeg kunne ikke gemme oplysningerne om aktiverne lige nu, men jeg prøver igen. Din families oplysninger er vigtige for mig.",
+      "load_failed": "Jeg har problemer med at indlæse dine aktiver lige nu. Lad mig prøve igen om et øjeblik.",
+      "delete_failed": "Jeg kunne ikke fjerne det element lige nu. Skal jeg prøve igen?"
+    },
+    "documents": {
+      "upload_failed": "Dokumentet blev ikke uploadet korrekt. Bare rolig - jeg hjælper dig med at prøve igen.",
+      "processing_failed": "Jeg havde problemer med at behandle det dokument. Filen er sikker, og jeg prøver igen.",
+      "access_failed": "Jeg kan ikke få adgang til det dokument lige nu. Lad mig se, hvad jeg kan gøre for at hjælpe."
+    },
+    "family": {
+      "save_failed": "Jeg kunne ikke gemme den pågældende persons oplysninger lige nu. Lad mig prøve igen – din betroede cirkel er vigtig.",
+      "invite_failed": "Jeg kunne ikke sende invitationen lige nu. Jeg hjælper dig med at prøve igen, når du er klar.",
+      "access_failed": "Jeg har problemer med indstillingerne for familieadgang. Lad mig hjælpe dig med det."
+    },
+    "will": {
+      "generation_failed": "Jeg kunne ikke oprette dit testamente lige nu. Bare rolig - alle dine beslutninger er gemt, og jeg prøver igen.",
+      "save_failed": "Jeg kunne ikke gemme disse ændringer i testamentet lige nu. Din tidligere version er sikker, og jeg vil fortsætte med at prøve.",
+      "legal_check_failed": "Jeg kunne ikke bekræfte de juridiske krav lige nu. Lad mig prøve igen, eller vi kan få hjælp fra vores juridiske team."
+    }
+  },
+  "emotional_support": {
+    "frustration": "Jeg ved, at det er frustrerende, når man prøver at gøre noget vigtigt for sin familie. Jeg er her for at hjælpe med at få det til at fungere.",
+    "time_pressure": "Jeg forstår, at du ikke har meget tid til tekniske problemer. Lad mig klare det hurtigt for dig.",
+    "overwhelm": "Tekniske problemer kan føles overvældende, når man allerede har at gøre med vigtig familieplanlægning. Tag en dyb indånding – jeg forstår det.",
+    "discouragement": "Lad ikke dette tekniske problem afskrække dig. Det, du gør for din familie, er for vigtigt til at opgive."
+  },
+  "solutions": {
+    "refresh_page": "Nogle gange hjælper det at opdatere siden. Dit arbejde gemmes, så du mister ikke noget.",
+    "try_different_browser": "Hvis dette fortsætter, så prøv at bruge en anden browser. Chrome eller Firefox fungerer normalt bedst.",
+    "check_internet": "Kunne du tjekke din internetforbindelse? Nogle gange er det alt, hvad der skal til.",
+    "contact_support": "Jeg vil meget gerne hjælpe dig personligt. Du kan kontakte vores supportteam, som vil tage sig godt af dig.",
+    "try_later": "Hvis du har travlt, kan du prøve igen senere. Alt, hvad du har gjort, er gemt sikkert.",
+    "alternative_approach": "Lad mig foreslå en anden måde at gøre dette på, som måske fungerer bedre."
+  },
+  "recovery": {
+    "auto_save_worked": "Den gode nyhed er, at alt, hvad du indtastede, automatisk blev gemt.",
+    "backup_available": "Jeg har en sikkerhedskopi af dit arbejde fra et par minutter siden, hvis du har brug for det.",
+    "progress_preserved": "Alle dine fremskridt bevares - du behøver ikke at starte forfra.",
+    "data_secure": "Din families oplysninger forbliver fuldstændig sikre på trods af dette tekniske problem."
   }
 }

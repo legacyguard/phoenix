@@ -18,7 +18,7 @@ import type { ProcessedDocument } from '../../lib/services/document-upload.types
 import { logger } from '@/utils/logger';
 
 export function UploadDemo() {
-  const { t } = useTranslation('ui');
+  const { t } = useTranslation('ui-common');
   const {
     upload,
     uploadQueue,

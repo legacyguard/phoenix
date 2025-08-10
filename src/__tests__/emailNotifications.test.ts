@@ -15,7 +15,7 @@ vi.mock('@/i18n/i18n', () => {
   const map: Record<string, string> = {
     // Greetings and defaults
     'common.greeting': 'Dear {{name}}',
-    'emails:common.greeting': 'Dear {{name}}',
+    'ui-common:common.greeting': 'Dear {{name}}',
     'ui.greetingDefault': 'Dear Valued Member',
 
     // Welcome
@@ -64,9 +64,9 @@ vi.mock('@/i18n/i18n', () => {
     'ui.footerTagline': 'tagline',
 
     // Translation integration tests
-    'emails:welcome.subject': 'Welcome to LegacyGuard - Your Family Protection Journey Begins',
+    'sharing:welcome.subject': 'Welcome to LegacyGuard - Your Family Protection Journey Begins',
     'notifications:push.taskReminder.title': 'Family Protection Reminder',
-    'legal:disclaimers.general': 'LegacyGuard provides tools and guidance for estate planning but does not provide legal advice. For complex estates or specific legal questions, please consult with a qualified attorney in your jurisdiction.',
+    'wills:disclaimers.general': 'LegacyGuard provides tools and guidance for estate planning but does not provide legal advice. For complex estates or specific legal questions, please consult with a qualified attorney in your jurisdiction.',
   };
   const interpolate = (template: string, opts?: any) => {
     if (!opts) return template;
@@ -89,7 +89,7 @@ vi.mock('react-i18next', () => ({
     t: (key: string, opts?: any) => {
       const map: Record<string, string> = {
         'common.greeting': 'Dear {{name}}',
-        'emails:common.greeting': 'Dear {{name}}',
+        'ui-common:common.greeting': 'Dear {{name}}',
         'ui.greetingDefault': 'Dear Valued Member',
         'welcome.headline': 'Welcome to Your Family Protection Plan',
         'verification.headline': 'Verify Your Email Address',
@@ -107,9 +107,9 @@ vi.mock('react-i18next', () => ({
         'family.invitationSent.role': '{{role}}',
 'subscription.trialExpiring.headline': 'Your Trial is Ending Soon',
         'subscription.trialExpiring.message': '{{days}} days',
-        'emails:welcome.subject': 'Welcome to LegacyGuard - Your Family Protection Journey Begins',
+        'sharing:welcome.subject': 'Welcome to LegacyGuard - Your Family Protection Journey Begins',
         'notifications:push.taskReminder.title': 'Family Protection Reminder',
-        'legal:disclaimers.general': 'LegacyGuard provides tools and guidance for estate planning but does not provide legal advice. For complex estates or specific legal questions, please consult with a qualified attorney in your jurisdiction.',
+        'wills:disclaimers.general': 'LegacyGuard provides tools and guidance for estate planning but does not provide legal advice. For complex estates or specific legal questions, please consult with a qualified attorney in your jurisdiction.',
       };
       let val = map[key];
       if (!val) return key; // return key when missing
@@ -465,22 +465,22 @@ describe('Email & Notifications System', () => {
 
   describe('Translation Integration', () => {
     it('loads email translations correctly', () => {
-      const welcomeSubject = i18n.t('emails:welcome.subject');
+      const welcomeSubject = i18n.t('sharing:welcome.subject');
       expect(welcomeSubject).toBe('Welcome to LegacyGuard - Your Family Protection Journey Begins');
     });
 
     it('loads notification translations correctly', () => {
-      const taskReminderTitle = i18n.t('notifications:push.taskReminder.title');
+      const taskReminderTitle = i18n.t('dashboard-main:push.taskReminder.title');
       expect(taskReminderTitle).toBe('Family Protection Reminder');
     });
 
     it('loads legal translations correctly', () => {
-      const generalDisclaimer = i18n.t('legal:disclaimers.general');
+      const generalDisclaimer = i18n.t('wills:disclaimers.general');
       expect(generalDisclaimer).toBe('LegacyGuard provides tools and guidance for estate planning but does not provide legal advice. For complex estates or specific legal questions, please consult with a qualified attorney in your jurisdiction.');
     });
 
     it('handles interpolation correctly', () => {
-      const greeting = i18n.t('emails:common.greeting', { name: 'John Smith' });
+      const greeting = i18n.t('ui-common:common.greeting', { name: 'John Smith' });
       expect(greeting).toBe('Dear John Smith');
     });
 

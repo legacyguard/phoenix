@@ -47,7 +47,7 @@ const VisualConnectionSystem: React.FC<VisualConnectionSystemProps> = ({
   userGuardians = [],
   userBeneficiaries = []
 }) => {
-  const { t } = useTranslation('ui');
+  const { t } = useTranslation('ui-common');
 
   return (
     <div className="space-y-6">

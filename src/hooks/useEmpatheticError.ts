@@ -12,7 +12,7 @@ interface EmpatheticErrorOptions {
 }
 
 export const useEmpatheticError = <T>(options: EmpatheticErrorOptions = {}) => {
-  const { t } = useTranslation('empathetic-errors');
+  const { t } = useTranslation('errors');
   const [isRetrying, setIsRetrying] = useState(false);
   const [retryCount, setRetryCount] = useState(0);
 

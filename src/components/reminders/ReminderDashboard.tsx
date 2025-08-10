@@ -20,7 +20,7 @@ export function ReminderDashboard({
   overdueCount,
   className
 }: ReminderDashboardProps) {
-  const { t } = useTranslation('dashboard');
+  const { t } = useTranslation('dashboard-main');
   const upcomingReminders = reminders.slice(0, 3);
 
   return (

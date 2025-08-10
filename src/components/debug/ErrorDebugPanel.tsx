@@ -42,7 +42,7 @@ interface StoredError {
 }
 
 export const ErrorDebugPanel: React.FC = () => {
-  const { t } = useTranslation('ui');
+  const { t } = useTranslation('ui-common');
   const [isOpen, setIsOpen] = useState(false);
   const [errors, setErrors] = useState<StoredError[]>([]);
   const [selectedError, setSelectedError] = useState<number | null>(null);

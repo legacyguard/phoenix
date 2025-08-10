@@ -6,7 +6,7 @@ import { Progress } from '@/components/ui/progress';
 import { CheckCircle, Clock, HelpCircle, ArrowRight, ArrowLeft } from 'lucide-react';
 
 const ComplexityReduction = () => {
-  const { t } = useTranslation('ui');
+  const { t } = useTranslation('ui-common');
   const [currentStep, setCurrentStep] = useState(0);
   const [completedSteps, setCompletedSteps] = useState<Set<number>>(new Set());
 

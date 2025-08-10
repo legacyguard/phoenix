@@ -55,7 +55,7 @@ export const EnhancedProgressTracking: React.FC<EnhancedProgressTrackingProps> =
   progressStatus, 
   className 
 }) => {
-  const { t } = useTranslation('dashboard');
+  const { t } = useTranslation('dashboard-main');
 
   const stages: StageDetails[] = [
     {

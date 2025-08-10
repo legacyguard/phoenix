@@ -25,7 +25,7 @@ export const FamilyExecutorStatusView: React.FC<FamilyExecutorStatusViewProps> =
   deceasedUserId
 }) => {
   const { user } = useAuth();
-  const { t } = useTranslation('family');
+  const { t } = useTranslation('family-core');
   const [communications, setCommunications] = useState<Communication[]>([]);
   const [loading, setLoading] = useState(true);
   const [executorName, setExecutorName] = useState<string>('');

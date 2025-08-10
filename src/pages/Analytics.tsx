@@ -9,7 +9,7 @@ import { Shield, AlertCircle, ExternalLink } from 'lucide-react';
 import { useAnalytics } from '@/hooks/useAnalytics';
 
 const Analytics: React.FC = () => {
-  const { t } = useTranslation('ui');
+  const { t } = useTranslation('ui-common');
   const { isTrackingEnabled } = useAnalytics({ componentName: 'Analytics' });
 
   if (!isTrackingEnabled) {

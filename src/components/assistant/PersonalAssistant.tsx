@@ -42,7 +42,7 @@ export const PersonalAssistant: React.FC<PersonalAssistantProps> = ({
   className,
   compact = false 
 }) => {
-  const { t } = useTranslation('assistant');
+  const { t } = useTranslation('ai-assistant');
   const { 
     userProgress, 
     emotionalState, 

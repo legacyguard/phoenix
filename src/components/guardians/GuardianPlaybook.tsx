@@ -40,7 +40,7 @@ interface GuardianPlaybookProps {
 }
 
 export default function GuardianPlaybook({ userId, guardianId, guardianName, isReadOnly = false }: GuardianPlaybookProps) {
-  const { t } = useTranslation('family');
+  const { t } = useTranslation('family-core');
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [playbook, setPlaybook] = useState<GuardianPlaybookData>({

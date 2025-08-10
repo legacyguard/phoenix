@@ -26,7 +26,7 @@ export const LoadingSpinner: React.FC<{
 
 // Full page loading state
 export const FullPageLoading: React.FC = () => {
-  const { t } = useTranslation('ui');
+  const { t } = useTranslation('ui-common');
   
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center">
@@ -40,7 +40,7 @@ export const FullPageLoading: React.FC = () => {
 
 // Button loading state
 export const ButtonLoading: React.FC = () => {
-  const { t } = useTranslation('ui');
+  const { t } = useTranslation('ui-common');
   
   return (
     <div className="flex items-center justify-center">
@@ -184,7 +184,7 @@ export const ProgressiveLoading: React.FC<{
   onLoadMore: () => void;
   children: React.ReactNode;
 }> = ({ isLoading, hasMore, onLoadMore, children }) => {
-  const { t } = useTranslation('ui');
+  const { t } = useTranslation('ui-common');
   
   return (
     <div>

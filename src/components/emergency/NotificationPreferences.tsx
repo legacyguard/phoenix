@@ -26,7 +26,7 @@ interface EmergencyContactPreference {
 }
 
 export const NotificationPreferences: React.FC = () => {
-  const { t } = useTranslation('family');
+  const { t } = useTranslation('family-core');
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [preferences, setPreferences] = useState<EmergencyContactPreference[]>([]);

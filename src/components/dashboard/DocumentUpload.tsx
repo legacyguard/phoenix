@@ -39,7 +39,7 @@ interface DocumentUploadProps {
 export const DocumentUpload: React.FC<DocumentUploadProps> = ({ onDocumentUploaded, onCancel }) => {
   // Translation hook for internationalization
   const { t } = useTranslation('assets');
-  const { t: tCommon } = useTranslation('ui');
+  const { t: tCommon } = useTranslation('ui-common');
   const { selectedCountryCode } = useCountry();
 
   const { plan } = useUserPlan();

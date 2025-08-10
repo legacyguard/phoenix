@@ -27,7 +27,7 @@ interface TrustedPerson {
 }
 
 export const TrustedCircle: React.FC = () => {
-  const { t } = useTranslation('family');
+  const { t } = useTranslation('family-core');
   
   // Mock data representing the new unified structure
   const trustedPeople: TrustedPerson[] = [

@@ -99,7 +99,7 @@ const mockAnalyticsData = {
 };
 
 const AnalyticsDashboard: React.FC = () => {
-  const { t } = useTranslation('dashboard');
+  const { t } = useTranslation('dashboard-main');
   const [selectedTimeRange, setSelectedTimeRange] = useState('30d');
   const [isLoading, setIsLoading] = useState(true);
   const [analyticsData, setAnalyticsData] = useState(mockAnalyticsData);

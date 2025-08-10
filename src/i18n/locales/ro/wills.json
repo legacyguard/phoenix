@@ -1,635 +1,641 @@
 {
   "actions": {
-    "next": "[RO] Next",
-    "previous": "[RO] Previous"
+    "consultLawyer": "Programați o consultație juridică",
+    "createCodicil": "Creați amendament (codicil)",
+    "deleteWill": "Ștergeți acest testament",
+    "downloadPdf": "Descărcați documentul PDF",
+    "generateWill": "Generați testamentul final",
+    "next": "Următorul",
+    "previous": "Anterior",
+    "printWill": "Imprimare document testamentar",
+    "saveProgress": "Salvați progresul curent",
+    "shareWill": "Distribuie cu familia",
+    "updateWill": "Actualizați informațiile despre testament"
   },
   "errors": {
-    "assetLoadFailed": "We could not load your asset information. Please refresh and try again.",
-    "generationFailed": "We encountered an issue generating your will. Please review your information and try again.",
-    "jurisdictionRequired": "Please select your legal jurisdiction to ensure compliance",
-    "loadFailed": "We could not load your will information. Please refresh the page and try again.",
-    "printFailed": "We encountered an issue preparing your document for printing. Please try again.",
-    "saveFailed": "We could not save your progress. Please check your connection and try again.",
-    "sharingFailed": "We could not share your will. Please verify the recipients and try again.",
-    "validationFailed": "Please review and correct the highlighted information before proceeding"
+    "assetLoadFailed": "Nu am putut încărca informațiile despre elementul dvs. Vă rugăm să actualizați pagina și să încercați din nou.",
+    "generationFailed": "Am întâmpinat o problemă la generarea testamentului dumneavoastră. Vă rugăm să verificați informațiile și să încercați din nou.",
+    "jurisdictionRequired": "Vă rugăm să selectați jurisdicția legală pentru a asigura conformitatea.",
+    "loadFailed": "Nu am putut încărca informațiile despre testamentul dvs. Vă rugăm să actualizați pagina și să încercați din nou.",
+    "printFailed": "Am întâmpinat o problemă la pregătirea documentului pentru imprimare. Vă rugăm să încercați din nou.",
+    "saveFailed": "Nu am putut salva progresul. Vă rugăm să verificați conexiunea și să încercați din nou.",
+    "validationFailed": "Vă rugăm să revizuiți și să corectați informațiile evidențiate înainte de a continua."
   },
   "execution": {
-    "copyDistribution": "Distribution of Copies",
-    "familyNotification": "Informing Your Family",
-    "legalRequirements": "Legal Requirements for {{jurisdiction}}",
-    "notarization": "Notarization Requirements",
-    "notaryOptional": "Notary recommended but not required",
-    "notaryRequired": "Notary public required",
-    "numberOfCopies": "Recommended Number of Copies",
-    "safeStorage": "Secure Storage Locations",
-    "selfProving": "Self-Proving Affidavit",
-    "signingInstructions": "Signing Instructions",
-    "signingOrder": "Proper Signing Order",
-    "storageRecommendations": "Storage Recommendations",
-    "subtitle": "Making your will legally binding",
-    "title": "Will Execution Requirements",
-    "witnessCount": "{{count}} witnesses required",
-    "witnessInstructions": "Witness Instructions",
-    "witnessQualifications": "Witness Qualifications",
-    "witnessRequirements": "Witness Requirements"
+    "copyDistribution": "Distribuirea copiilor",
+    "familyNotification": "Informarea familiei dumneavoastră",
+    "legalRequirements": "Cerințe legale pentru {{jurisdiction}}",
+    "notarization": "Cerințe de notarizare",
+    "notaryOptional": "Notar recomandat, dar nu obligatoriu",
+    "notaryRequired": "Este necesar un notar public",
+    "numberOfCopies": "Număr recomandat de copii",
+    "safeStorage": "Locații de depozitare securizate",
+    "selfProving": "Declarație pe proprie răspundere",
+    "signingInstructions": "Instrucțiuni de semnare",
+    "signingOrder": "Ordinea corectă de semnare",
+    "storageRecommendations": "Recomandări de depozitare",
+    "subtitle": "Facerea testamentului dumneavoastră obligatoriu din punct de vedere juridic",
+    "title": "Cerințe pentru executarea testamentului",
+    "witnessCount": "Sunt necesari martori",
+    "witnessInstructions": "Instrucțiuni pentru martori",
+    "witnessQualifications": "Calificările martorilor",
+    "witnessRequirements": "Cerințe privind martorii"
   },
   "form": {
     "assetSelection": {
-      "allAssets": "Include All Current and Future Assets",
-      "assetCategories": "Asset Categories to Include",
-      "businessInterests": "Business Interests",
-      "excludedAssets": "Assets to Exclude",
-      "jointAssets": "Jointly Owned Assets",
-      "residualDescription": "All remaining assets not specifically mentioned elsewhere in this will",
-      "residualEstate": "Residual Estate",
-      "selectAssets": "Choose Assets to Include",
-      "specificAssets": "Select Specific Assets Only"
+      "allAssets": "Includeți toate activele actuale și viitoare",
+      "assetCategories": "Categorii de active de inclus",
+      "businessInterests": "Interese comerciale",
+      "excludedAssets": "Active de exclus",
+      "jointAssets": "Active deținute în comun",
+      "residualDescription": "Toate activele rămase care nu sunt menționate în mod specific în altă parte a acestui testament",
+      "residualEstate": "Proprietăți reziduale",
+      "selectAssets": "Alegeți activele de inclus",
+      "specificAssets": "Selectați doar anumite active"
     },
     "distribution": {
-      "addBeneficiary": "Add Additional Beneficiary",
-      "ageRestriction": "Age Requirement",
-      "allocation": "Inheritance Allocation",
-      "beneficiaryName": "Beneficiary's Full Name",
-      "conditions": "Conditions or Restrictions",
-      "contingentBeneficiary": "Contingent Beneficiary",
-      "percentage": "Percentage of Estate",
-      "primaryBeneficiary": "Primary Beneficiary",
-      "relationship": "Relationship to You",
-      "specificAmount": "Specific Dollar Amount",
-      "specificAsset": "Specific Asset or Property",
-      "trustProvision": "Trust Arrangement"
+      "addBeneficiary": "Adăugați un beneficiar suplimentar",
+      "ageRestriction": "Cerință de vârstă",
+      "allocation": "Alocarea moștenirii",
+      "beneficiaryName": "Numele complet al beneficiarului",
+      "conditions": "Condiții sau restricții",
+      "contingentBeneficiary": "Beneficiar condiționat",
+      "percentage": "Procentul din moștenire",
+      "primaryBeneficiary": "Beneficiar principal",
+      "relationship": "Relația cu tine",
+      "specificAmount": "Sumă specifică în dolari",
+      "specificAsset": "Activ sau proprietate specifică",
+      "trustProvision": "Aranjament fiduciar"
     },
     "executor": {
-      "alternateExecutor": "Alternate Executor",
-      "bondRequirement": "Bond Requirement",
-      "coExecutors": "Co-Executors",
-      "executorAddress": "Executor's Address",
-      "executorCompensation": "Executor Compensation",
-      "executorDuties": "Executor Responsibilities",
-      "executorInstructions": "Special Instructions for Executor",
-      "executorName": "Executor's Full Name",
-      "executorRelationship": "Relationship to You",
-      "primaryExecutor": "Primary Executor",
-      "specialPowers": "Special Powers Granted"
+      "alternateExecutor": "Executor alternativ",
+      "bondRequirement": "Cerința de garanție",
+      "coExecutors": "Coexecutori",
+      "executorAddress": "Adresa executorului",
+      "executorCompensation": "Compensația executorului",
+      "executorDuties": "Responsabilitățile executorului testamentar",
+      "executorInstructions": "Instrucțiuni speciale pentru executor",
+      "executorName": "Numele complet al executorului",
+      "executorRelationship": "Relația cu tine",
+      "primaryExecutor": "Executor principal",
+      "specialPowers": "Puteri speciale acordate"
     },
     "guardianship": {
-      "backupGuardian": "Alternate Guardian",
-      "educationPreferences": "Education Preferences",
-      "guardianCompensation": "Guardian Compensation",
-      "guardianFor": "Guardian for {{childName}}",
-      "guardianInstructions": "Instructions for Guardian",
-      "guardianQualifications": "Guardian Qualifications",
-      "minorChildren": "Minor Children Requiring Guardianship",
-      "primaryGuardian": "Primary Guardian",
-      "religiousUpbringing": "Religious Upbringing Preferences"
+      "backupGuardian": "Tutor alternativ",
+      "educationPreferences": "Preferințe educaționale",
+      "guardianCompensation": "Compensația tutorelui",
+      "guardianFor": "Tutor pentru {{childName}}",
+      "guardianInstructions": "Instrucțiuni pentru tutore",
+      "guardianQualifications": "Calificările tutorelui",
+      "minorChildren": "Copii minori care necesită tutelă",
+      "primaryGuardian": "Tutore principal",
+      "religiousUpbringing": "Preferințe religioase privind educația"
     },
     "personalInfo": {
-      "addChild": "Add Child",
-      "addressHelper": "Your primary residence address",
-      "childDateOfBirth": "Child's Date of Birth",
-      "childName": "Child's Full Name",
-      "childRelation": "Relationship to You",
-      "children": "Children and Dependents",
-      "currentAddress": "Current Legal Address",
-      "dateOfBirth": "Date of Birth",
-      "fullLegalName": "Complete Legal Name",
-      "fullLegalNameHelper": "Enter your name exactly as it appears on official documents",
-      "maritalStatus": "Marital Status",
-      "marriageDate": "Date of Marriage",
-      "placeOfBirth": "Place of Birth",
-      "previousWills": "Previous Wills",
-      "revokesPrevious": "This will revokes all previous wills",
-      "spouseName": "Spouse's Full Legal Name"
+      "addChild": "Adăugați un copil",
+      "addressHelper": "Adresa dumneavoastră principală de reședință",
+      "childDateOfBirth": "Data nașterii copilului",
+      "childName": "Numele complet al copilului",
+      "childRelation": "Relația cu tine",
+      "children": "Copii și persoane aflate în întreținere",
+      "currentAddress": "Adresa legală actuală",
+      "dateOfBirth": "Data nașterii",
+      "fullLegalName": "Nume legal complet",
+      "fullLegalNameHelper": "Introduceți numele exact așa cum apare în documentele oficiale",
+      "maritalStatus": "Starea civilă",
+      "marriageDate": "Data căsătoriei",
+      "placeOfBirth": "Locul nașterii",
+      "previousWills": "Testamente anterioare",
+      "revokesPrevious": "Acest testament revocă toate testamentele anterioare",
+      "spouseName": "Numele legal complet al soțului/soției"
     },
     "provisions": {
-      "burialCremation": "Burial or Cremation Preference",
-      "businessContinuation": "Business Continuation Plans",
-      "charitableBequests": "Charitable Donations",
-      "charityAmount": "Donation Amount",
-      "charityName": "Charitable Organization",
-      "digitalAssets": "Digital Asset Instructions",
-      "funeralInstructions": "Specific Funeral Instructions",
-      "funeralWishes": "Funeral and Burial Preferences",
-      "organDonation": "Organ Donation Wishes",
-      "personalMessages": "Personal Messages to Family",
-      "petCare": "Pet Care Arrangements",
-      "specialInstructions": "Special Instructions"
+      "burialCremation": "Preferință pentru înmormântare sau incinerare",
+      "businessContinuation": "Planuri de continuare a afacerii",
+      "charitableBequests": "Donații caritabile",
+      "charityAmount": "Suma donației",
+      "charityName": "Organizație caritabilă",
+      "digitalAssets": "Instrucțiuni pentru active digitale",
+      "funeralInstructions": "Instrucțiuni funerare specifice",
+      "funeralWishes": "Preferințe funerare și de înmormântare",
+      "organDonation": "Dorințe de donare de organe",
+      "personalMessages": "Mesaje personale către familie",
+      "petCare": "Aranjamente de îngrijire a animalelor de companie",
+      "specialInstructions": "Instrucțiuni speciale"
     }
   },
   "generator": {
-    "of": "[RO] Of",
-    "step": "[RO] Step"
+    "continueWill": "Continuați pregătirea testamentului",
+    "description": "Generați un testament cuprinzător, valid din punct de vedere legal, adaptat cerințelor jurisdicției dumneavoastră și nevoilor unice ale familiei dumneavoastră.",
+    "getStarted": "Începeți să vă creați testamentul",
+    "importance": "Asigurarea faptului că dorințele dumneavoastră sunt documentate legal și că familia dumneavoastră este protejată",
+    "newWill": "Creați un nou testament",
+    "of": "De",
+    "professionalGuidance": "Consiliere juridică profesională recomandată pentru succesiuni complexe",
+    "step": "Pas",
+    "subtitle": "Creați un testament solid din punct de vedere juridic cu îndrumare profesională",
+    "title": "Generator de testamente și voințe",
+    "viewExisting": "Revizuirea testamentului actual"
   },
   "legal": {
-    "consultLawyer": "Consult with Attorney",
-    "disclaimer": "Important Legal Disclaimer",
-    "estatePlanning": "Comprehensive Estate Planning",
-    "jurisdiction": "Legal Jurisdiction",
-    "lawsApply": "Laws of {{jurisdiction}} will apply",
-    "lawyerRecommended": "We strongly recommend consulting with a qualified attorney for complex estates",
-    "legalCompliance": "Legal Compliance Verification",
-    "notLegalAdvice": "This service does not constitute legal advice",
-    "probateProcess": "Probate Process Information",
-    "professionalGuidance": "Professional legal guidance is recommended",
-    "professionalReview": "Professional Legal Review",
-    "selectJurisdiction": "Please select your legal jurisdiction",
-    "taxImplications": "Tax Implications"
+    "consultLawyer": "Consultați-vă cu avocatul",
+    "disclaimer": "Declinare de responsabilitate legală importantă",
+    "estatePlanning": "Planificare patrimonială cuprinzătoare",
+    "jurisdiction": "Jurisdicție legală",
+    "lawsApply": "Se vor aplica legile statului {{jurisdiction}}",
+    "lawyerRecommended": "Vă recomandăm insistent să consultați un avocat calificat pentru succesiuni complexe.",
+    "legalCompliance": "Verificarea conformității legale",
+    "notLegalAdvice": "Acest serviciu nu constituie consultanță juridică",
+    "probateProcess": "Informații despre procesul de succesiune",
+    "professionalGuidance": "Se recomandă consiliere juridică profesională",
+    "professionalReview": "Revizuire juridică profesională",
+    "selectJurisdiction": "Vă rugăm să selectați jurisdicția dumneavoastră legală",
+    "taxImplications": "Implicații fiscale"
   },
   "notifications": {
-    "consultationScheduled": "Legal consultation has been scheduled",
-    "documentShared": "Will has been shared with designated family members",
-    "executionComplete": "Will execution has been recorded",
-    "progressSaved": "Your progress has been saved",
-    "reminderSet": "Will review reminder has been set",
-    "willDeleted": "Will has been permanently deleted",
-    "willGenerated": "Your will has been successfully generated",
-    "willUpdated": "Will has been updated successfully"
+    "consultationScheduled": "Consultația juridică a fost programată",
+    "documentShared": "Testamentul a fost împărtășit cu membrii desemnați ai familiei",
+    "executionComplete": "Executarea testamentului a fost înregistrată",
+    "progressSaved": "Progresul tău a fost salvat",
+    "willDeleted": "Testamentul a fost șters definitiv",
+    "willUpdated": "Testamentul a fost actualizat cu succes"
   },
   "preview": {
-    "article": "ARTICLE {{number}}",
-    "draftWatermark": "DRAFT - NOT LEGALLY BINDING",
-    "executionInstructions": "EXECUTION INSTRUCTIONS",
-    "lastWillTestament": "LAST WILL AND TESTAMENT",
-    "of": "OF",
-    "pageNumber": "Page {{current}} of {{total}}",
-    "reviewCarefully": "Please review this document carefully before proceeding",
-    "section": "Section {{number}}",
-    "signatureSection": "SIGNATURE SECTION",
-    "subtitle": "Review your complete will before finalizing",
-    "title": "Will Document Preview",
-    "witnessClause": "WITNESS CLAUSE"
+    "article": "ARTICOL {{number}}",
+    "draftWatermark": "PROIECT - NU ESTE OBLIGATORIU DIN PUNCT DE VEDERE JURIDIC",
+    "executionInstructions": "INSTRUCȚIUNI DE EXECUTARE",
+    "lastWillTestament": "TESTAMENT ȘI ULTIMĂ VOINȚĂ",
+    "of": "DE",
+    "pageNumber": "Pagina {{current}} din {{total}}",
+    "reviewCarefully": "Vă rugăm să examinați cu atenție acest document înainte de a continua",
+    "section": "Secțiunea {{number}}",
+    "signatureSection": "SECȚIUNEA SEMNĂTURII",
+    "subtitle": "Revizuiți testamentul complet înainte de finalizare",
+    "title": "Previzualizare document testamentar",
+    "witnessClause": "CLAUZA MARTORULUI"
   },
   "status": {
-    "archived": "Archived Version",
-    "draft": "Draft in Progress",
-    "executed": "Legally Executed",
-    "generated": "Generated - Requires Execution",
-    "outdated": "Requires Update",
-    "underReview": "Under Professional Review"
+    "archived": "Versiune arhivată",
+    "draft": "Schiță în curs de desfășurare",
+    "executed": "Executat legal",
+    "generated": "Generat - Necesită execuție",
+    "outdated": "Necesită actualizare"
+  },
+  "policy": {
+    "duration": {
+      "session": "Sesiune",
+      "minutes": "{{count}} minute",
+      "hours": "{{count}} ore",
+      "days": "{{count}} zile",
+      "months": "{{count}} luni",
+      "years": "{{count}} ani"
+    }
   },
   "steps": {
     "assets": {
-      "description": "Select which assets you wish to include in your will and how they should be distributed.",
-      "subtitle": "Your valuable possessions",
-      "title": "Asset Distribution"
+      "description": "Selectați bunurile pe care doriți să le includeți în testament și modul în care acestea ar trebui distribuite.",
+      "subtitle": "Bunurile tale valoroase",
+      "title": "Distribuția activelor"
     },
     "beneficiaries": {
-      "description": "Designate who will receive your assets and in what proportions.",
-      "subtitle": "Your chosen recipients",
-      "title": "Beneficiary Designations"
+      "description": "Desemnați cine va primi activele dumneavoastră și în ce proporții.",
+      "subtitle": "Destinatarii aleși de dvs.",
+      "title": "Desemnări de beneficiari"
     },
     "executor": {
-      "description": "Choose a responsible person to manage your estate and carry out your wishes.",
-      "subtitle": "Your estate representative",
-      "title": "Estate Executor"
+      "description": "Alege o persoană responsabilă care să îți administreze averea și să îți îndeplinească dorințele.",
+      "subtitle": "Reprezentantul dumneavoastră imobiliar",
+      "title": "Executor succesoral"
     },
     "guardians": {
-      "description": "Appoint trusted individuals to care for minor children or dependents.",
-      "subtitle": "Care for your dependents",
-      "title": "Guardianship Appointments"
+      "description": "Numiți persoane de încredere pentru îngrijirea copiilor minori sau a persoanelor aflate în întreținere.",
+      "subtitle": "Îngrijiți persoanele aflate în întreținerea dumneavoastră",
+      "title": "Numiri în Tutela"
     },
     "personal": {
-      "description": "We require your complete legal information to ensure your will meets all legal requirements.",
-      "subtitle": "Your identifying information",
-      "title": "Personal Information"
+      "description": "Avem nevoie de informațiile dumneavoastră juridice complete pentru a ne asigura că testamentul dumneavoastră îndeplinește toate cerințele legale.",
+      "subtitle": "Informațiile dumneavoastră de identificare",
+      "title": "Informații personale"
     },
     "preferences": {
-      "description": "Include any special instructions, charitable bequests, or personal wishes.",
-      "subtitle": "Additional instructions",
-      "title": "Special Provisions"
+      "description": "Includeți orice instrucțiuni speciale, moșteniri caritabile sau dorințe personale.",
+      "subtitle": "Instrucțiuni suplimentare",
+      "title": "Dispoziții speciale"
     },
     "review": {
-      "description": "Carefully review all details before generating your legal document.",
-      "subtitle": "Verify all information",
-      "title": "Final Review"
+      "description": "Examinați cu atenție toate detaliile înainte de a genera documentul legal.",
+      "subtitle": "Verificați toate informațiile",
+      "title": "Revizuire finală"
     }
   },
   "validation": {
-    "jurisdictionRequired": "[RO] Jurisdiction required",
-    "requiredField": "[RO] Required field"
+    "addressRequired": "Adresa dumneavoastră legală actuală este obligatorie",
+    "allocationError": "Procentul total alocat trebuie să fie egal cu 100%",
+    "beneficiaryRequired": "Trebuie specificat cel puțin un beneficiar",
+    "dobRequired": "Data nașterii este necesară pentru validitate legală",
+    "duplicateBeneficiary": "Acest beneficiar a fost deja adăugat",
+    "executorBeneficiaryConflict": "Executorul testamentar și beneficiarul principal ar trebui să fie, de obicei, persoane diferite.",
+    "executorRequired": "Trebuie desemnat cel puțin un executor testamentar",
+    "guardianRequired": "Desemnarea unui tutore este necesară pentru copiii minori",
+    "invalidDate": "Vă rugăm să introduceți o dată validă",
+    "invalidPercentage": "Procentul trebuie să fie între 0 și 100",
+    "jurisdictionRequired": "Jurisdicție necesară",
+    "requiredField": "Câmp obligatoriu"
   },
   "will": {
-    "address": "Address",
-    "addressPlaceholder": "Address placeholder",
+    "address": "Adresa",
+    "addressPlaceholder": "Substitut pentru adresă",
     "allocation": {
-      "addBeneficiary": "Add beneficiary",
-      "description": "Description",
-      "generalEstate": "General estate",
-      "percentage": "Percentage",
+      "addBeneficiary": "Adăugați beneficiar",
+      "description": "Descriere",
+      "generalEstate": "Proprietăți generale",
+      "percentage": "Procent",
       "tips": {
-        "tip1": "Tip1",
-        "tip2": "Tip2",
-        "tip3": "Tip3",
-        "title": "Title"
+        "tip1": "Sfat1",
+        "tip2": "Sfat2",
+        "tip3": "Sfat3",
+        "title": "Titlu"
       },
-      "title": "Title",
+      "title": "Titlu",
       "total": "Total"
     },
     "beneficiaries": {
-      "addBeneficiary": "Add beneficiary",
-      "allocation": "Allocation",
-      "alternativeBeneficiary": "Alternative beneficiary",
-      "alternativePlaceholder": "Alternative placeholder",
-      "beneficiaryNumber": "Beneficiary number",
-      "currentAllocation": "Current allocation",
-      "description": "Description",
-      "identification": "Identification",
-      "identificationPlaceholder": "Identification placeholder",
-      "importantNotes": "Important notes",
-      "name": "Name",
-      "noBeneficiaries": "No beneficiaries",
-      "note1": "Note1",
-      "note2": "Note2",
-      "note3": "Note3",
-      "ofEstate": "Of estate",
-      "title": "Title"
+      "addBeneficiary": "Adăugați beneficiar",
+      "allocation": "Alocare",
+      "alternativeBeneficiary": "Beneficiar alternativ",
+      "alternativePlaceholder": "Substitut alternativ",
+      "beneficiaryNumber": "Numărul beneficiarului",
+      "currentAllocation": "Alocarea curentă",
+      "description": "Descriere",
+      "identification": "Identificare",
+      "identificationPlaceholder": "Substitut de identificare",
+      "importantNotes": "Note importante",
+      "name": "Nume",
+      "noBeneficiaries": "Niciun beneficiar",
+      "note1": "Nota 1",
+      "note2": "Nota 2",
+      "note3": "Nota 3",
+      "ofEstate": "De proprietate",
+      "title": "Titlu"
     },
     "beneficiary": {
-      "name": "Name",
-      "namePlaceholder": "Name placeholder",
-      "relationship": "Relationship",
-      "relationshipPlaceholder": "Relationship placeholder"
+      "name": "Nume",
+      "namePlaceholder": "Substitut pentru nume",
+      "relationship": "Relaţie",
+      "relationshipPlaceholder": "Substitut pentru relație"
     },
-    "birthDate": "Birth date",
-    "birthDatePlaceholder": "Birth date placeholder",
+    "birthDate": "Data de naștere",
+    "birthDatePlaceholder": "Substituent pentru data nașterii",
     "buttons": {
-      "saveWillInfo": "Save will info",
-      "saving": "Saving"
+      "saveWillInfo": "Informații despre testament",
+      "saving": "Economisire"
     },
-    "countryRequirements": "Country requirements",
+    "countryRequirements": "Cerințe pentru țară",
     "descriptions": {
-      "executorDescription": "Executor description",
-      "physicalLocationDescription": "Physical location description",
-      "statusDescription": "Status description"
+      "executorDescription": "Descrierea executorului",
+      "physicalLocationDescription": "Descrierea locației fizice",
+      "statusDescription": "Descrierea stării"
     },
     "executor": {
-      "addAlternative": "Add alternative",
-      "address": "Address",
-      "addressPlaceholder": "Address placeholder",
-      "alternative": "Alternative",
-      "alternativeDescription": "Alternative description",
-      "description": "Description",
-      "name": "Name",
-      "namePlaceholder": "Name placeholder",
-      "phone": "Phone",
-      "phonePlaceholder": "Phone placeholder",
-      "primary": "Primary",
-      "relationship": "Relationship",
-      "relationshipPlaceholder": "Relationship placeholder",
-      "responsibilities": "Responsibilities",
-      "responsibility1": "Responsibility1",
-      "responsibility2": "Responsibility2",
-      "responsibility3": "Responsibility3",
-      "responsibility4": "Responsibility4",
-      "title": "Title"
+      "addAlternative": "Adăugați o alternativă",
+      "address": "Adresa",
+      "addressPlaceholder": "Substitut pentru adresă",
+      "alternative": "Alternativă",
+      "alternativeDescription": "Descriere alternativă",
+      "description": "Descriere",
+      "name": "Nume",
+      "namePlaceholder": "Substitut pentru nume",
+      "phone": "Telefon",
+      "phonePlaceholder": "Substitut pentru telefon",
+      "primary": "Primar",
+      "relationship": "Relaţie",
+      "relationshipPlaceholder": "Substitut pentru relație",
+      "responsibilities": "Responsabilități",
+      "responsibility1": "Responsabilitate1",
+      "responsibility2": "Responsabilitate2",
+      "responsibility3": "Responsabilitate3",
+      "responsibility4": "Responsabilitate4",
+      "title": "Titlu"
     },
     "fields": {
-      "additionalNotes": "Additional notes",
-      "currentStatus": "Current status",
-      "executorContact": "Executor contact",
-      "physicalLocation": "Physical location"
+      "additionalNotes": "Note suplimentare",
+      "currentStatus": "Starea actuală",
+      "executorContact": "Contactul executorului",
+      "physicalLocation": "Locație fizică"
     },
     "legalReview": {
-      "button": "Button",
-      "description": "Description",
-      "title": "Title"
+      "button": "Buton",
+      "description": "Descriere",
+      "title": "Titlu"
     },
-    "name": "Name",
-    "namePlaceholder": "Name placeholder",
+    "name": "Nume",
+    "namePlaceholder": "Substitut pentru nume",
     "options": {
-      "noContactSelected": "No contact selected"
+      "noContactSelected": "Nicio persoană de contact selectată"
     },
     "placeholders": {
-      "additionalNotes": "Additional notes",
-      "physicalLocation": "Physical location",
-      "selectContact": "Select contact"
+      "additionalNotes": "Note suplimentare",
+      "physicalLocation": "Locație fizică",
+      "selectContact": "Selectați contactul"
     },
     "preview": {
-      "address": "Address",
-      "alternative": "Alternative",
-      "alternativeExecutor": "Alternative executor",
-      "date": "Date",
-      "description": "Description",
-      "executor": "Executor",
-      "generatePDF": "Generate p d f",
-      "legalRequirements": "Legal requirements",
-      "name": "Name",
-      "ofEstate": "Of estate",
-      "place": "Place",
-      "print": "Print",
-      "signature": "Signature",
-      "title": "Title",
-      "witnesses": "Witnesses"
+      "address": "Adresa",
+      "alternative": "Alternativă",
+      "alternativeExecutor": "Executor alternativ",
+      "date": "Data",
+      "description": "Descriere",
+      "executor": "Executor testamentar",
+      "generatePDF": "Generați p d f",
+      "legalRequirements": "Cerințe legale",
+      "name": "Nume",
+      "ofEstate": "De proprietate",
+      "place": "Loc",
+      "print": "Imprimare",
+      "signature": "Semnătură",
+      "title": "Titlu",
+      "witnesses": "Martori"
     },
     "requirements": {
-      "handwriting": "Handwriting",
-      "notarization": "Notarization",
-      "typed": "Typed",
-      "witnesses": "Witnesses"
+      "handwriting": "Scris de mână",
+      "notarization": "Notarizare",
+      "typed": "Tastat",
+      "witnesses": "Martori"
     },
-    "selectCountry": "Select country",
-    "selectedCountryDetails": "Selected country details",
+    "selectCountry": "Selectați țara",
+    "selectedCountryDetails": "Detalii despre țările selectate",
     "status": {
-      "draft": "Draft",
-      "notarized": "Notarized",
-      "stored": "Stored",
-      "updated": "Updated"
+      "draft": "Proiect",
+      "notarized": "Notarizat",
+      "stored": "Stocat",
+      "updated": "Actualizat"
     },
-    "testatorInfo": "Testator info",
+    "testatorInfo": "Informații despre testator",
     "validation": {
-      "allocation100": "Allocation100"
+      "allocation100": "Alocare100"
     },
     "willPreview": {
       "_2": "2",
-      "critical_execution_instruction_3": "Critical execution instruction 3",
-      "professional_review_4": "Professional review 4",
-      "provided_by_certified_legal_pa_5": "Provided by certified legal pa 5"
+      "critical_execution_instruction_3": "Instrucțiunea critică de execuție 3",
+      "professional_review_4": "Recenzie profesională 4",
+      "provided_by_certified_legal_pa_5": "Furnizat de avocat certificat pa 5"
     }
   },
   "willGenerator": {
-    "changeCountry": "Change country",
-    "confirmCountry": "Confirm country",
-    "confirmSigned": "Confirm signed",
+    "changeCountry": "Schimbă țara",
+    "confirmCountry": "Confirmați țara",
+    "confirmSigned": "Confirmați semnătura",
     "console": {
-      "willGenerationCompleted": "Will generation completed"
+      "willGenerationCompleted": "Generarea testamentului finalizată"
     },
     "countries": {
-      "AL": "A l",
-      "AT": "A t",
+      "AL": "Un l",
+      "AT": "Un t",
       "BA": "B a",
       "BE": "B e",
-      "BG": "B g",
+      "BG": "Bg",
       "CH": "C h",
       "CY": "C y",
-      "CZ": "C z",
+      "CZ": "Cz",
       "DE": "D e",
       "DK": "D k",
       "EE": "E e",
       "ES": "E s",
       "FI": "F i",
-      "FR": "F r",
-      "GB": "G b",
-      "GR": "G r",
-      "HR": "H r",
+      "FR": "Fr.",
+      "GB": "Gb",
+      "GR": "Gr",
+      "HR": "Hr",
       "HU": "H u",
-      "IE": "I e",
-      "IS": "I s",
-      "IT": "I t",
-      "LI": "L i",
-      "LT": "L t",
-      "LU": "L u",
+      "IE": "Eu e",
+      "IS": "Eu sunt",
+      "IT": "Eu",
+      "LI": "Li",
+      "LT": "Lt",
+      "LU": "Lu",
       "LV": "L v",
       "MD": "M d",
-      "ME": "M e",
-      "MK": "M k",
-      "MT": "M t",
-      "NL": "N l",
-      "NO": "N o",
+      "ME": "Eu",
+      "MK": "Mk",
+      "MT": "Mt",
+      "NL": "Nl",
+      "NO": "Nu",
       "PL": "P l",
-      "PT": "P t",
+      "PT": "Pt",
       "RO": "R o",
-      "RS": "R s",
+      "RS": "R-uri",
       "SE": "S e",
       "SI": "S i",
       "SK": "S k",
-      "UA": "U a"
+      "UA": "Tu a"
     },
-    "executionInstructions": "Execution instructions",
-    "failed_to_load_will_template_2": "Failed to load will template 2",
-    "finalizeUpload": "Finalize upload",
-    "fullName": "Full name",
-    "no_template_found_for_this_jur_1": "No template found for this jur 1",
-    "please_confirm_that_you_have_s_3": "Please confirm that you have s 3",
-    "select_a_country_4": "Select a country 4",
+    "executionInstructions": "Instrucțiuni de execuție",
+    "failed_to_load_will_template_2": "Nu s-a putut încărca șablonul de testament 2",
+    "finalizeUpload": "Finalizarea încărcării",
+    "fullName": "Numele complet",
+    "no_template_found_for_this_jur_1": "Nu s-a găsit niciun șablon pentru acest jur 1",
+    "please_confirm_that_you_have_s_3": "Te rugăm să confirmi că ai s 3",
+    "select_a_country_4": "Selectați o țară 4",
     "steps": {
-      "confirmJurisdiction": "Confirm jurisdiction",
-      "executorBeneficiaries": "Executor beneficiaries",
-      "personalInformation": "Personal information",
-      "reviewGenerate": "Review generate",
-      "signConfirm": "Sign confirm"
+      "confirmJurisdiction": "Confirmați jurisdicția",
+      "executorBeneficiaries": "Beneficiari executori",
+      "personalInformation": "Informații personale",
+      "reviewGenerate": "Generarea recenziilor",
+      "signConfirm": "Confirmare semnătură"
     }
   },
   "willSync": {
-    "approve": "Approve",
-    "autoApplied": "Auto applied",
+    "approve": "Aproba",
+    "autoApplied": "Aplicat automat",
     "changes": {
-      "allocationsModified": "Allocations modified",
-      "assetsAdded": "Assets added",
-      "beneficiariesRemoved": "Beneficiaries removed",
-      "noChanges": "No changes"
+      "allocationsModified": "Alocările au fost modificate",
+      "assetsAdded": "Active adăugate",
+      "beneficiariesRemoved": "Beneficiari eliminați",
+      "noChanges": "Nicio modificare"
     },
-    "reject": "Reject",
-    "viewChanges": "View changes"
+    "reject": "Respinge",
+    "viewChanges": "Vizualizați modificările"
   },
   "willSyncSettings": {
-    "autoSync": "Auto sync",
-    "autoSyncDescription": "Auto sync description",
-    "frequencyDaily": "Frequency daily",
-    "frequencyImmediate": "Frequency immediate",
-    "frequencyWeekly": "Frequency weekly",
-    "generalDescription": "General description",
-    "generalSettings": "General settings",
-    "requireApproval": "Require approval",
-    "requireApprovalDescription": "Require approval description",
-    "saveError": "Save error",
-    "saved": "Saved",
-    "syncFrequency": "Sync frequency",
-    "triggerDescription": "Trigger description",
-    "triggerSettings": "Trigger settings"
+    "autoSync": "Sincronizare automată",
+    "autoSyncDescription": "Descrierea sincronizării automate",
+    "frequencyDaily": "Frecvență zilnică",
+    "frequencyImmediate": "Frecvență imediată",
+    "frequencyWeekly": "Frecvență săptămânală",
+    "generalDescription": "Descriere generală",
+    "generalSettings": "Setări generale",
+    "requireApproval": "Necesită aprobare",
+    "requireApprovalDescription": "Descrierea aprobării necesare",
+    "saveError": "Eroare de salvare",
+    "saved": "Salvat",
+    "syncFrequency": "Frecvența de sincronizare",
+    "triggerDescription": "Descrierea declanșatorului",
+    "triggerSettings": "Setări declanșator"
   },
   "willVersion": {
-    "added": "Added",
-    "compareDiff": "Compare diff",
-    "comparePrompt": "Compare prompt",
-    "current": "Current",
-    "description": "Description",
-    "modified": "Modified",
-    "removed": "Removed",
-    "restore": "Restore",
-    "title": "Title",
-    "versionNumber": "Version number"
+    "added": "Adăugat",
+    "compareDiff": "Comparați diferența",
+    "comparePrompt": "Comparați solicitarea",
+    "current": "Actual",
+    "description": "Descriere",
+    "modified": "Modificat",
+    "removed": "Îndepărtat",
+    "restore": "Restabili",
+    "title": "Titlu",
+    "versionNumber": "Numărul versiunii"
   },
   "disclaimers": {
-    "general": "LegacyGuard provides tools and guidance for estate planning but does not provide legal advice. For complex estates or specific legal questions, please consult with a qualified attorney in your jurisdiction.",
-    "willGenerator": "The will generator creates documents based on information you provide. While designed to meet legal requirements, we strongly recommend having any generated will reviewed by a qualified attorney before execution.",
-    "jurisdiction": "Legal requirements vary by jurisdiction. Ensure your documents comply with the laws in your area.",
-    "notLegalAdvice": "This service does not constitute legal advice and should not be relied upon as such.",
-    "professionalReview": "For complex estates, business interests, or unique family situations, professional legal review is strongly recommended."
+    "general": "LegacyGuard oferă instrumente și îndrumări pentru planificarea succesiunii, dar nu oferă consultanță juridică. Pentru succesiuni complexe sau întrebări juridice specifice, vă rugăm să consultați un avocat calificat din jurisdicția dumneavoastră.",
+    "willGenerator": "Generatorul de testamente creează documente pe baza informațiilor pe care le furnizați. Deși este conceput pentru a îndeplini cerințele legale, vă recomandăm insistent ca orice testament generat să fie revizuit de un avocat calificat înainte de executare.",
+    "jurisdiction": "Cerințele legale variază în funcție de jurisdicție. Asigurați-vă că documentele dumneavoastră respectă legile din zona dumneavoastră.",
+    "notLegalAdvice": "Acest serviciu nu constituie consultanță juridică și nu ar trebui să fie considerat ca atare.",
+    "professionalReview": "Pentru succesiuni complexe, interese comerciale sau situații familiale unice, se recomandă insistent consultarea juridică profesională."
   },
   "terms": {
-    "serviceTerms": "Terms of Service",
-    "privacyPolicy": "Privacy Policy",
-    "dataProcessing": "Data Processing Agreement",
-    "userAgreement": "User Agreement",
-    "acceptanceRequired": "By using LegacyGuard, you agree to our Terms of Service and Privacy Policy.",
-    "lastUpdated": "Last updated: {{date}}",
-    "effectiveDate": "Effective date: {{date}}"
+    "serviceTerms": "Termeni și condiții",
+    "privacyPolicy": "Politica de confidențialitate",
+    "dataProcessing": "Acord de prelucrare a datelor",
+    "userAgreement": "Acord de utilizare",
+    "acceptanceRequired": "Prin utilizarea LegacyGuard, sunteți de acord cu Termenii și condițiile noastre de utilizare și Politica de confidențialitate.",
+    "lastUpdated": "Ultima actualizare: {{date}}",
+    "effectiveDate": "Data intrării în vigoare: {{date}}"
   },
   "compliance": {
-    "dataProtection": "Your data is protected in compliance with applicable data protection laws including GDPR and CCPA.",
-    "encryption": "All sensitive information is encrypted using industry-standard encryption methods.",
-    "retention": "Data retention policies are designed to protect your privacy while ensuring your family can access important information when needed.",
-    "access": "You have the right to access, modify, or delete your personal information at any time.",
-    "portability": "You can export your data in standard formats for use with other services."
+    "dataProtection": "Datele dumneavoastră sunt protejate în conformitate cu legile aplicabile privind protecția datelor, inclusiv GDPR și CCPA.",
+    "encryption": "Toate informațiile sensibile sunt criptate folosind metode de criptare standard din industrie.",
+    "retention": "Politicile de păstrare a datelor sunt concepute pentru a vă proteja confidențialitatea, asigurând în același timp accesul familiei dvs. la informații importante atunci când este nevoie.",
+    "access": "Aveți dreptul de a accesa, modifica sau șterge informațiile dumneavoastră personale în orice moment.",
+    "portability": "Puteți exporta datele în formate standard pentru a le utiliza cu alte servicii."
   },
   "executionRequirements": {
-    "witnessRequirements": "Witness Requirements for {{jurisdiction}}",
-    "notaryRequirements": "Notarization Requirements",
-    "signingInstructions": "Proper Signing Instructions",
-    "storageGuidelines": "Secure Storage Guidelines",
-    "legalCompliance": "Legal Compliance Verification"
+    "witnessRequirements": "Cerințe privind martorii pentru {{jurisdiction}}",
+    "notaryRequirements": "Cerințe de notarizare",
+    "signingInstructions": "Instrucțiuni corecte de semnare",
+    "storageGuidelines": "Instrucțiuni de depozitare securizată",
+    "legalCompliance": "Verificarea conformității legale"
   },
   "cookiePolicy": {
     "cookieTypes": {
-      "analytics": "Analytics cookies help us understand how visitors interact with our website.",
-      "essential": "Essential cookies are necessary for the website to function properly.",
-      "marketing": "Marketing cookies are used to track visitors across websites to display relevant advertisements."
+      "analytics": "Cookie-urile analitice ne ajută să înțelegem cum interacționează vizitatorii cu site-ul nostru web.",
+      "essential": "Cookie-urile esențiale sunt necesare pentru ca site-ul web să funcționeze corect.",
+      "marketing": "Cookie-urile de marketing sunt utilizate pentru a urmări vizitatorii pe site-uri web pentru a afișa reclame relevante."
     },
-    "howWeUseCookies": "We use cookies to improve your experience, analyze site usage, and provide personalized content.",
-    "introduction": "This Cookie Policy explains how LegacyGuard uses cookies and similar technologies.",
-    "manageCookies": "You can manage your cookie preferences through your browser settings or our cookie preference center.",
-    "title": "Title",
-    "whatAreCookies": "Cookies are small text files that are stored on your device when you visit our website."
+    "howWeUseCookies": "Folosim cookie-uri pentru a îmbunătăți experiența dvs., a analiza utilizarea site-ului și a oferi conținut personalizat.",
+    "introduction": "Această Politică privind cookie-urile explică modul în care LegacyGuard utilizează cookie-urile și tehnologiile similare.",
+    "manageCookies": "Puteți gestiona preferințele privind cookie-urile prin setările browserului dvs. sau prin centrul nostru de preferințe privind cookie-urile.",
+    "title": "Titlu",
+    "whatAreCookies": "Cookie-urile sunt fișiere text de mici dimensiuni care sunt stocate pe dispozitivul dvs. atunci când vizitați site-ul nostru web."
   },
   "header": {
-    "subtitle": "Subtitle",
-    "title": "Title"
+    "title": "Titlu"
   },
   "hero": {
-    "headline": "Headline",
-    "subheadline": "Subheadline"
-  },
-  "privacyPolicy": {
-    "introduction": "This Privacy Policy describes how LegacyGuard collects, uses, and protects your personal information.",
-    "lastUpdated": "Last updated: {{date}}",
-    "sections": {
-      "dataSecurity": {
-        "content": "We implement appropriate security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.",
-        "title": "Data Security"
-      },
-      "informationCollection": {
-        "content": "We collect information you provide directly to us, such as when you create an account, use our services, or contact us for support.",
-        "title": "Information We Collect"
-      },
-      "informationSharing": {
-        "content": "We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except as described in this policy.",
-        "title": "Information Sharing"
-      },
-      "informationUse": {
-        "content": "We use your information to provide, maintain, and improve our services, communicate with you, and ensure the security of your account.",
-        "title": "How We Use Your Information"
-      },
-      "yourRights": {
-        "content": "You have the right to access, update, or delete your personal information. You may also opt out of certain communications from us.",
-        "title": "Your Rights"
-      }
-    },
-    "title": "Privacy Policy"
+    "headline": "Titlu",
+    "subheadline": "Subtitlu"
   },
   "termsOfService": {
-    "effectiveDate": "Effective date: {{date}}",
-    "introduction": "These Terms of Service govern your use of LegacyGuard's family protection platform and services.",
-    "lastUpdated": "Last updated: {{date}}",
+    "effectiveDate": "Data intrării în vigoare: {{date}}",
+    "introduction": "Acești Termeni și condiții guvernează utilizarea de către dvs. a platformei și serviciilor de protecție a familiei LegacyGuard.",
+    "lastUpdated": "Ultima actualizare: {{date}}",
     "sections": {
       "acceptance": {
-        "content": "By accessing or using LegacyGuard, you agree to be bound by these Terms of Service and all applicable laws and regulations.",
-        "title": "Acceptance of Terms"
+        "content": "Prin accesarea sau utilizarea LegacyGuard, sunteți de acord să respectați acești Termeni și condiții și toate legile și reglementările aplicabile.",
+        "title": "Acceptarea Termenilor"
       },
       "description": {
-        "content": "LegacyGuard provides digital tools and services to help individuals organize their important information for family protection purposes.",
-        "title": "Service Description"
+        "content": "LegacyGuard oferă instrumente și servicii digitale pentru a ajuta persoanele să își organizeze informațiile importante în scopul protejării familiei.",
+        "title": "Descrierea serviciului"
       },
       "limitations": {
-        "content": "LegacyGuard provides tools and guidance but does not provide legal advice. We recommend consulting with qualified professionals for complex legal matters.",
-        "title": "Limitations of Liability"
+        "content": "LegacyGuard oferă instrumente și îndrumări, dar nu oferă consultanță juridică. Recomandăm consultarea unor profesioniști calificați pentru aspecte juridice complexe.",
+        "title": "Limitări de răspundere"
       },
       "privacy": {
-        "content": "Your privacy is important to us. Please review our Privacy Policy to understand how we collect, use, and protect your information.",
-        "title": "Privacy and Data Protection"
+        "content": "Confidențialitatea dumneavoastră este importantă pentru noi. Vă rugăm să consultați Politica noastră de confidențialitate pentru a înțelege cum colectăm, utilizăm și protejăm informațiile dumneavoastră.",
+        "title": "Confidențialitate și protecția datelor"
       },
       "userResponsibilities": {
-        "content": "You are responsible for maintaining the confidentiality of your account information and for all activities that occur under your account.",
-        "title": "User Responsibilities"
+        "content": "Sunteți responsabil pentru menținerea confidențialității informațiilor contului dumneavoastră și pentru toate activitățile care au loc în cadrul contului dumneavoastră.",
+        "title": "Responsabilitățile utilizatorului"
       }
     },
-    "title": "Terms of Service"
+    "title": "Termeni și condiții"
   },
   "cookies": {
     "policy": {
       "analytics": {
-        "description": "Description",
+        "description": "Descriere",
         "examples": {
           "ga": "Ga",
           "gid": "Gid",
-          "session": "Session"
+          "session": "Sesiune"
         },
-        "purpose": "Purpose",
-        "title": "Title"
+        "purpose": "Scop",
+        "title": "Titlu"
       },
       "categories": {
-        "title": "Title"
+        "title": "Titlu"
       },
       "contact": {
-        "address": "Address",
-        "addressDetails": "Address details",
-        "description": "Description",
-        "email": "Email",
-        "title": "Title"
+        "address": "Adresa",
+        "addressDetails": "Detalii adresă",
+        "description": "Descriere",
+        "email": "E-mail",
+        "title": "Titlu"
       },
-      "examples": "Examples",
-      "lastUpdated": "Last updated",
+      "examples": "Exemple",
+      "lastUpdated": "Ultima actualizare",
       "manage": {
-        "title": "Title"
+        "title": "Titlu"
       },
       "marketing": {
-        "description": "Description",
+        "description": "Descriere",
         "examples": {
           "facebook": "Facebook",
           "google": "Google"
         },
-        "purpose": "Purpose",
-        "title": "Title"
+        "purpose": "Scop",
+        "title": "Titlu"
       },
       "necessary": {
-        "description": "Description",
+        "description": "Descriere",
         "examples": {
-          "auth": "Auth",
-          "consent": "Consent",
+          "auth": "Autorizare",
+          "consent": "Consimţământ",
           "csrf": "Csrf",
-          "session": "Session"
+          "session": "Sesiune"
         },
-        "purpose": "Purpose",
-        "title": "Title"
+        "purpose": "Scop",
+        "title": "Titlu"
       },
       "overview": {
-        "intro": "Intro",
-        "point1": "Point1",
-        "point2": "Point2",
-        "point3": "Point3",
-        "point4": "Point4",
-        "title": "Title"
+        "intro": "Introducere",
+        "point1": "Punctul 1",
+        "point2": "Punctul 2",
+        "point3": "Punctul 3",
+        "point4": "Punctul 4",
+        "title": "Titlu"
       },
       "preferences": {
-        "description": "Description",
+        "description": "Descriere",
         "examples": {
-          "language": "Language",
-          "theme": "Theme",
-          "ui": "Ui"
+          "language": "Limbă",
+          "theme": "Temă",
+          "ui": "Interfață utilizator"
         },
-        "purpose": "Purpose",
-        "title": "Title"
+        "purpose": "Scop",
+        "title": "Titlu"
       },
-      "purpose": "Purpose",
-      "required": "Required",
-      "subtitle": "Subtitle",
-      "title": "Title",
+      "purpose": "Scop",
+      "required": "Necesar",
+      "subtitle": "Subtitlu",
+      "title": "Titlu",
       "yourRights": {
-        "description": "Description",
-        "right1": "Right1",
-        "right2": "Right2",
-        "right3": "Right3",
-        "right4": "Right4",
-        "title": "Title"
+        "description": "Descriere",
+        "right1": "Dreapta1",
+        "right2": "Dreapta2",
+        "right3": "Dreapta3",
+        "right4": "Dreapta4",
+        "title": "Titlu"
       }
     }
   }

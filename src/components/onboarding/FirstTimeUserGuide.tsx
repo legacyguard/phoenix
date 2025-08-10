@@ -10,7 +10,7 @@ interface FirstTimeUserGuideProps {
 }
 
 export const FirstTimeUserGuide: React.FC<FirstTimeUserGuideProps> = ({ onComplete }) => {
-  const { t } = useTranslation('ui');
+  const { t } = useTranslation('ui-common');
   const { trackAction } = useAnalytics({ componentName: 'FirstTimeUserGuide', userJourneyStage: 'onboarding' });
   const [currentStep, setCurrentStep] = useState(0);
 

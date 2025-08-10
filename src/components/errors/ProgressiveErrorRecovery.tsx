@@ -22,7 +22,7 @@ const ProgressiveErrorRecovery: React.FC<ProgressiveErrorRecoveryProps> = ({
   onContactSupport,
   maxRetries = 3
 }) => {
-  const { t } = useTranslation('empathetic-errors');
+  const { t } = useTranslation('errors');
   const [retryCount, setRetryCount] = useState(0);
   const [isRetrying, setIsRetrying] = useState(false);
   const [currentLevel, setCurrentLevel] = useState<RecoveryLevel>('gentle');

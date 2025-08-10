@@ -56,7 +56,7 @@ const SheetContent = React.forwardRef<
   React.ElementRef<typeof SheetPrimitive.Content>,
   SheetContentProps
 >(({ side = "right", className, children, ...props }, ref) => {
-  const { t } = useTranslation('ui');
+  const { t } = useTranslation('ui-common');
   return (
     <SheetPortal>
       <SheetOverlay />

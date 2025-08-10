@@ -69,7 +69,7 @@ const EMOTION_COLORS = {
 };
 
 export const AnalyticsDashboard: React.FC = () => {
-  const { t } = useTranslation('ui');
+  const { t } = useTranslation('ui-common');
   const [eventStream, setEventStream] = useState<EventStreamItem[]>([]);
   const [isStreaming, setIsStreaming] = useState(true);
   const [timeRange, setTimeRange] = useState<'24h' | '7d' | '30d'>('7d');

@@ -65,7 +65,7 @@ interface EmergencyContact {
 }
 
 export const EmergencyContacts: React.FC = () => {
-  const { t } = useTranslation('family');
+  const { t } = useTranslation('family-core');
   const [loading, setLoading] = useState(true);
   const [emergencyContacts, setEmergencyContacts] = useState<EmergencyContact[]>([]);
   const [availableContacts, setAvailableContacts] = useState<Contact[]>([]);

@@ -48,7 +48,7 @@ export const QuickTasks: React.FC<QuickTasksProps> = ({
   onTaskComplete,
   onTaskStart
 }) => {
-  const { t } = useTranslation('dashboard');
+  const { t } = useTranslation('dashboard-main');
   const [tasks, setTasks] = useState<QuickTask[]>([]);
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
 
@@ -388,7 +388,9 @@ export const QuickTasks: React.FC<QuickTasksProps> = ({
                           variant="outline" 
                           className={`text-xs ${getPriorityColor(task.priority)}`}
                         >
-                          {t(`ui:common.priority.${task.priority}`)}
+                          // TODO: Fix missing translation key - ui:common.priority.${task.priority}
+
+                          // {t(`ui:common.priority.${task.priority}`)}
                         </Badge>
                       </div>
                       

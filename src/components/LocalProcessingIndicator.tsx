@@ -14,7 +14,7 @@ export function LocalProcessingIndicator({
   className,
   showDetails = false 
 }: LocalProcessingIndicatorProps) {
-  const { t } = useTranslation('ui');
+  const { t } = useTranslation('ui-common');
   
   return (
     <div className={cn(
@@ -52,7 +52,7 @@ export function PrivacyToggle({
   onToggle, 
   className 
 }: PrivacyToggleProps) {
-  const { t } = useTranslation('ui');
+  const { t } = useTranslation('ui-common');
   
   return (
     <div className={cn("flex items-center space-x-3", className)}>

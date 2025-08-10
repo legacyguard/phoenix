@@ -13,7 +13,7 @@ import { useTranslation } from "react-i18next";
 
 export const ThemeToggle: React.FC = () => {
   const { theme, setTheme, actualTheme } = useTheme();
-  const { t } = useTranslation('ui');
+  const { t } = useTranslation('ui-common');
 
   return (
     <DropdownMenu>

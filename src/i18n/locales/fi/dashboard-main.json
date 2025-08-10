@@ -1,0 +1,867 @@
+{
+  "annualReview": {
+    "complete": {
+      "summary": "Arvostelun yhteenveto"
+    }
+  },
+  "dashboard": {
+    "welcome": {
+      "title": "Voimme jatkaa perheesi tulevaisuuden varalle valmistautumista"
+    },
+    "respectful": {
+      "greeting": "Tervetuloa takaisin, {{name}}",
+      "greetingNew": "Tervetuloa, {{name}}",
+      "statusOverview": {
+        "title": "Tärkeät asiakirjat",
+        "secured": "{{count}} asiakirja tallennettu turvallisesti",
+        "secured_plural": "{{count}} asiakirjaa tallennettu turvallisesti",
+        "suggestion": "Useimmat ihmiset säilyttävät 3–5 keskeistä asiakirjaa",
+        "noDocuments": "Ei tallennettuja asiakirjoja",
+        "getStarted": "Aloita henkilöllisyystodistuksestasi"
+      },
+      "suggestions": {
+        "title": "Saatat myös haluta:",
+        "notNow": "Ei nyt",
+        "considerAdding": "Harkitse lisäämistä",
+        "whenReady": "Kun olet valmis",
+        "noRush": "Ei kiirettä - tee tämä omaan tahtiisi"
+      },
+      "professionalStatus": {
+        "foundation": {
+          "title": "Aloittaminen",
+          "description": "Rakennamme perustaa perheesi suunnitelmalle"
+        },
+        "building": {
+          "title": "Edistyminen",
+          "description": "Järjestämme tärkeitä tietoja perheellesi"
+        },
+        "established": {
+          "title": "Hyvin organisoitu",
+          "description": "Tärkeät asiakirjasi tallennetaan ja ovat käytettävissä"
+        },
+        "comprehensive": {
+          "title": "Kattava suunnitelma",
+          "description": "Perheelläsi on mitä he tarvitsevat"
+        }
+      },
+      "taskCategories": {
+        "essential": "Olennainen",
+        "recommended": "Suositeltu",
+        "optional": "Valinnainen"
+      },
+      "taskStatus": {
+        "suggestion": "Ehdotus",
+        "completed": "Valmis",
+        "secured": "Suojattu",
+        "ready": "Kun olet valmis"
+      }
+    },
+    "notifications": {
+      "success": {
+        "assetAdded": "Resurssi lisätty onnistuneesti",
+        "profileUpdated": "Profiili päivitetty onnistuneesti",
+        "settingsSaved": "Asetukset tallennettu onnistuneesti"
+      },
+      "info": {
+        "reviewDue": "Vuosittainen tarkastus pian",
+        "documentsExpiring": "Jotkin asiakirjat vanhenevat pian"
+      }
+    },
+    "documentCard": {
+      "include_in_survivor_s_manual_1": "Sisällytä selviytyjän käsikirjaan 1"
+    },
+    "expired": "Vanhentunut",
+    "expiresSoon": "Vanhenee pian",
+    "firstTimeGuide": {
+      "finish": "Valmis",
+      "helpfulTips": "Hyödyllisiä vinkkejä",
+      "importantNote": "Tärkeä huomautus",
+      "next": "Seuraava",
+      "previous": "Edellinen",
+      "progress": {
+        "description": "Kuvaus",
+        "tip1": "Vinkki 1",
+        "tip2": "Vinkki 2",
+        "title": "Otsikko"
+      },
+      "recommendations": {
+        "description": "Kuvaus",
+        "tip1": "Vinkki 1",
+        "tip2": "Vinkki 2",
+        "title": "Otsikko"
+      },
+      "skipTour": "Ohita kierros",
+      "stages": {
+        "description": "Kuvaus",
+        "tip1": "Vinkki 1",
+        "tip2": "Vinkki 2",
+        "tip3": "Vinkki 3",
+        "title": "Otsikko"
+      },
+      "stepProgress": "Vaiheen edistyminen",
+      "welcome": {
+        "description": "Kuvaus",
+        "tip1": "Vinkki 1",
+        "tip2": "Vinkki 2",
+        "tip3": "Vinkki 3",
+        "title": "Otsikko"
+      }
+    },
+    "guardianCard": {
+      "country_1": "Maa 1",
+      "roles_2": "Roolit 2"
+    },
+    "metadata": {
+      "contact": "Yhteystiedot",
+      "renewsOn": "Uusitaan"
+    },
+    "nudge": {
+      "completeNow": "Valmis nyt",
+      "continueSecuring": "Jatka kiinnittämistä",
+      "dismiss": "Hylkää",
+      "finishToday": "Lopeta tänään",
+      "oneTaskLeft": "Yksi tehtävä jäljellä",
+      "progressTitle": "Edistymisen otsikko",
+      "tasksRemaining": "Jäljellä olevat tehtävät",
+      "welcomeBack": "Tervetuloa takaisin"
+    },
+    "stages": {
+      "advancedPlanning": "Ennakkosuunnittelu",
+      "building": "Rakentaminen",
+      "foundation": "Säätiö",
+      "legacy": "Perintö",
+      "strengthening": "Vahvistaminen"
+    },
+    "strategicSummary": {
+      "addBackupGuardian": "Lisää varahuoltaja",
+      "addContingentBeneficiaries": "Lisää ehdolliset edunsaajat",
+      "addFinancialAccounts": "Lisää rahoitustilejä",
+      "addHomeProperty": "Lisää kodin kiinteistö",
+      "addPrimaryBeneficiary": "Lisää ensisijainen edunsaaja",
+      "addPrimaryGuardian": "Lisää ensisijainen huoltaja",
+      "assetInventory": "Mikä on tärkeää perheellesi",
+      "assetInventoryDesc": "Tärkeitä asioita, jotka perheesi tulisi tietää",
+      "criticalDocuments": "Tärkeät asiakirjat",
+      "criticalDocumentsDesc": "Perheesi tarvitsemat asiakirjat",
+      "guardianNetwork": "Luotetut ihmiset",
+      "guardianNetworkDesc": "Ihmiset, jotka voivat auttaa tarvittaessa",
+      "ifNotDone": "Jos ei tehdä",
+      "impact": {
+        "familyProtection": "Perheen suoja",
+        "immediateDecision": "Välitön päätös",
+        "preventsAssetLoss": "Estää omaisuuden menetyksen",
+        "preventsConflicts": "Ehkäisee konflikteja"
+      },
+      "inheritancePlan": "Perheesi tulevaisuus",
+      "inheritancePlanDesc": "Näin haluat elättää läheisiäsi",
+      "minutes": "Minuutit",
+      "nextAction": "Seuraava toiminto",
+      "nextCriticalStep": "Tärkein askel perheellesi",
+      "startWithNext": "Aloita seuraavasta",
+      "subtitle": "Alaotsikko",
+      "title": "Otsikko",
+      "whyImportant": "Miksi tärkeää"
+    },
+    "allocation": "Kohdistus",
+    "assetName": "Omaisuuden nimi",
+    "assetType": "Omaisuuslaji",
+    "beneficiaryName": "Edunsaajan nimi",
+    "errors": {
+      "failedToSaveAsset": "Resurssin tallennus epäonnistui",
+      "failedToSaveBeneficiary": "Edunsaajan tallentaminen epäonnistui"
+    },
+    "familyGuide": {
+      "discreteMode": "Diskreetti tila",
+      "discreteModeDesc": "Diskreetin tilan kuvaus",
+      "emergency_contacts_1": "Hätäyhteyshenkilöt 1",
+      "export_guide_4": "Vientiopas 4",
+      "generateGuide": "Luo opas",
+      "important_documents_2": "Tärkeät asiakirjat 2",
+      "last_updated_6": "Viimeksi päivitetty 6",
+      "share_with_family_5": "Jaa perheen kanssa 5",
+      "subtitle": "Alaotsikko",
+      "title": "Otsikko",
+      "view": "Näytä",
+      "what_to_do_when_3": "Mitä tehdä, kun 3"
+    },
+    "placeholders": {
+      "allocationPercentage": "Kohdistusprosentti",
+      "assetName": "Omaisuuden nimi",
+      "assetType": "Omaisuuslaji",
+      "beneficiaryName": "Edunsaajan nimi"
+    },
+    "saveAsset": "Tallenna resurssi",
+    "saveBeneficiary": "Tallenna edunsaaja",
+    "tasks": {
+      "assetInventory": {
+        "description": "Kuvaus",
+        "title": "Otsikko"
+      },
+      "bankAccount": {
+        "description": "Kuvaus",
+        "title": "Otsikko"
+      },
+      "digitalAssetPlan": {
+        "description": "Kuvaus",
+        "title": "Otsikko"
+      },
+      "documentCentralization": {
+        "description": "Kuvaus",
+        "title": "Otsikko"
+      },
+      "emergencyContacts": {
+        "description": "Kuvaus",
+        "title": "Otsikko"
+      },
+      "familyMeeting": {
+        "description": "Kuvaus",
+        "title": "Otsikko"
+      },
+      "guardianInstructions": {
+        "description": "Kuvaus",
+        "title": "Otsikko"
+      },
+      "inheritanceEducation": {
+        "description": "Kuvaus",
+        "title": "Otsikko"
+      },
+      "personalMessages": {
+        "description": "Kuvaus",
+        "title": "Otsikko"
+      },
+      "willPreparation": {
+        "description": "Kuvaus",
+        "title": "Otsikko"
+      }
+    },
+    "updateAsset": "Päivitä resurssi",
+    "updateBeneficiary": "Päivitä edunsaaja"
+  },
+  "empty": {
+    "noActivity": "Ei viimeaikaista toimintaa näytettäväksi",
+    "noAssets": "Ei vielä lisättyjä resursseja",
+    "noDocuments": "Ei vielä ladattuja asiakirjoja",
+    "noPeople": "Luotettuja henkilöitä ei ole vielä lisätty",
+    "noTasks": "Ei tehtäviä saatavilla"
+  },
+  "errors": {
+    "loadingDashboard": "Kojelaudan lataus epäonnistui. Päivitä sivu.",
+    "loadingStats": "Tilastojen lataaminen epäonnistui. Päivitä sivu.",
+    "failedToFetchStatus": "Edistymistilan hakeminen epäonnistui",
+    "genericError": "Jotain meni pieleen. Päivitä sivu ja yritä uudelleen.",
+    "loadingTasks": "Tehtävien lataaminen epäonnistui. Yritä uudelleen.",
+    "markingComplete": "Tehtävän merkitseminen valmiiksi epäonnistui. Yritä uudelleen.",
+    "savingProgress": "Edistymisen tallentaminen epäonnistui. Yritä uudelleen."
+  },
+  "quickTasks": {
+    "tasks": {
+      "homeProperty": {
+        "description": "Kuvaus",
+        "title": "Otsikko"
+      },
+      "backupGuardian": {
+        "description": "Kuvaus",
+        "title": "Otsikko"
+      },
+      "bankAccount": {
+        "description": "Kuvaus",
+        "title": "Otsikko"
+      },
+      "birthCertificate": {
+        "description": "Kuvaus",
+        "title": "Otsikko"
+      },
+      "childrenBeneficiaries": {
+        "description": "Kuvaus",
+        "title": "Otsikko"
+      },
+      "insurancePolicy": {
+        "description": "Kuvaus",
+        "title": "Otsikko"
+      },
+      "spouseBeneficiary": {
+        "description": "Kuvaus",
+        "title": "Otsikko"
+      },
+      "spouseGuardian": {
+        "description": "Kuvaus",
+        "title": "Otsikko"
+      },
+      "vehicle": {
+        "description": "Kuvaus",
+        "title": "Otsikko"
+      },
+      "will": {
+        "description": "Kuvaus",
+        "title": "Otsikko"
+      }
+    },
+    "allCompleted": "Kaikki valmiit",
+    "allTasks": "Kaikki tehtävät",
+    "assets": "varat",
+    "beneficiaries": "Edunsaajat",
+    "completed": "Valmis",
+    "documents": "Dokumentit",
+    "greatProgress": "Hienoa edistystä",
+    "guardians": "Huoltajat",
+    "ifNotDone": "Jos ei tehdä",
+    "markAsComplete": "Merkitse valmiiksi",
+    "minutes": "Minuutit",
+    "progress": "Edistyminen",
+    "start": "Aloita",
+    "title": "Otsikko",
+    "wellOnWay": "Hyvässä vauhdissa",
+    "whyImportant": "Miksi tärkeää"
+  },
+  "sections": {
+    "recentActivity": {
+      "assetUpdated": "Resurssi päivitetty",
+      "daysAgo": "{{days}} päivää sitten",
+      "documentAdded": "Dokumentti lisätty",
+      "noActivity": "Ei viimeaikaista toimintaa",
+      "personAdded": "Luotettu henkilö lisätty",
+      "subtitle": "Viimeisimmät päivityksesi ja muutoksesi",
+      "taskCompleted": "Tehtävä suoritettu",
+      "title": "Viimeaikaiset toiminnot",
+      "today": "Tänään",
+      "viewAll": "Näytä kaikki aktiviteetit",
+      "willUpdated": "Päivitetään",
+      "yesterday": "Eilen"
+    },
+    "insights": {
+      "dismiss": "Ymmärretty",
+      "noInsights": "Kun saamme tietää lisää perheestänne, jaamme hyödyllisiä ehdotuksia täällä.",
+      "recommendation": "Huomioitavaa",
+      "subtitle": "Ohjeita, jotka voivat auttaa perhettäsi",
+      "tip": "Hyödyllinen vinkki",
+      "title": "Tapoja vahvistaa suunnitelmaasi",
+      "viewDetails": "Lue lisää",
+      "warning": "Tarvitsee huomiotasi"
+    },
+    "nextSteps": {
+      "estimatedTime": "Noin {{minutes}} minuuttia",
+      "highPriority": "Tärkein",
+      "lowPriority": "Kun sinulla on aikaa",
+      "markComplete": "Voimme merkitä valmiiksi",
+      "mediumPriority": "Tärkeää pian",
+      "noTasks": "Perheesi on hyvin suojattu.",
+      "startTask": "Voimme aloittaa",
+      "subtitle": "Tärkeimmät askeleet, jotka sinun on otettava nyt",
+      "title": "Seuraavat askeleet perheellesi",
+      "viewAll": "Katso kaikki vaiheet"
+    },
+    "quickStart": {
+      "completed": "Valmis",
+      "inProgress": "Käynnissä",
+      "notStarted": "Ei aloitettu",
+      "step1": {
+        "action": "Kerro meille jostain tärkeästä",
+        "description": "Aloitetaan kodistasi, pääpankkitilistäsi tai yrityksestäsi",
+        "title": "Jaa, mikä on perheellesi tärkeintä"
+      },
+      "step2": {
+        "action": "Valitse joku auttamaan",
+        "description": "Valitse joku, johon perheesi voi kääntyä, kun he tarvitsevat tukea",
+        "title": "Lisää ensimmäinen auttajasi"
+      },
+      "step3": {
+        "action": "Lisää tärkeitä papereita",
+        "description": "Säilytä vakuutukset, kiinteistökaupat ja sopimukset paikassa, josta perheesi voi löytää ne.",
+        "title": "Suojaa tärkeät asiakirjasi"
+      },
+      "step4": {
+        "action": "Luo testamenttisi",
+        "description": "Luodaan oikeudellinen asiakirja, joka suojaa perheesi tulevaisuutta",
+        "title": "Kirjoita testamenttisi"
+      },
+      "subtitle": "Otetaan yhdessä ensimmäiset askeleet läheistesi suojelemiseksi",
+      "title": "Aloittaminen"
+    }
+  },
+  "stats": {
+    "completionRate": "{{percentage}}% valmis",
+    "documentsStored": "Tärkeät asiakirjat",
+    "documentsStoredDescription": "Tärkeät asiakirjat, joihin perheesi voi päästä käsiksi",
+    "excellent": "Hyvin suojattu",
+    "gettingStarted": "Aloittaminen",
+    "good": "Edistyminen",
+    "needsWork": "Tarvitsee huomiota",
+    "planStrength": "Suunnitelman valmius",
+    "planStrengthDescription": "Kuinka valmistautuneita läheisesi ovat",
+    "protectionLevel": "Perhevalmius",
+    "protectionLevelDescription": "Kuinka hyvin perheesi selviytyy vaikeista ajoista",
+    "tasksCompleted": "Suoritetut vaiheet",
+    "tasksCompletedDescription": "Olet suorittanut {{completed}}/_PH_1__ tärkeää vaihetta",
+    "trustedPeople": "Luotetut ihmiset",
+    "trustedPeopleDescription": "Ihmiset valmiina auttamaan perhettäsi tarvittaessa"
+  },
+  "widgets": {
+    "familyAccess": {
+      "description": "Kenellä on pääsy mihin tietoihin",
+      "manageAccess": "Hallinnoi käyttöoikeuksia",
+      "noAccess": "Perheen käyttöoikeuksia ei ole määritetty",
+      "title": "Perheen käyttöoikeustila",
+      "viewPermissions": "Näytä käyttöoikeudet"
+    },
+    "planStrengthMeter": {
+      "description": "Visuaalinen osoitin yleisestä valmistautumistasostasi",
+      "fullySecured": "Täysin suojattu",
+      "needsAttention": "Tarvitsee huomiota",
+      "onTrack": "Onnistunut",
+      "title": "Suunnitelman voimamittari",
+      "wellProtected": "Hyvin suojattu"
+    },
+    "upcomingDeadlines": {
+      "description": "Tärkeitä päivämääriä ja uusintoja, jotka kannattaa muistaa",
+      "dueThisWeek": "Erääntyy tällä viikolla",
+      "dueToday": "Erääntyy tänään",
+      "dueTomorrow": "Erääntyy huomenna",
+      "noDeadlines": "Ei tulevia määräaikoja",
+      "overdue": "Myöhässä",
+      "title": "Tulevat määräajat"
+    }
+  },
+  "admin": {
+    "analyticsDashboard": {
+      "a_b_tests_9": "A/B-testit",
+      "active_and_new_users_over_time_12": "Aktiiviset ja uudet käyttäjät ajan kuluessa",
+      "analytics_dashboard_2": "Analytics-hallintapaneeli",
+      "avg_documents_per_user_19": "Keskimääräinen dokumenttimäärä käyttäjää kohden",
+      "avg_session_duration_17": "Keskimääräinen istunnon kesto",
+      "avg_trusted_people_per_user_20": "Keskimääräinen luotettujen ihmisten määrä käyttäjää kohden",
+      "bounce_rate_18": "Pomppuprosentti",
+      "confidence_29": "Luottamus",
+      "feature_adoption_8": "Ominaisuuksien käyttöönotto",
+      "feature_adoption_rates_23": "Ominaisuuksien käyttöönottoasteet",
+      "from_last_month_6": "Viime kuusta",
+      "key_platform_metrics_16": "Keskeiset alustan mittarit",
+      "loading_analytics_data_1": "Ladataan analytiikkatietoja...",
+      "monitor_user_engagement_featur_3": "Käyttäjien sitoutumisen seurantaominaisuudet",
+      "percentage_of_users_using_each_24": "Käyttäjien prosenttiosuus kutakin ominaisuutta käyttävistä käyttäjistä",
+      "platform_statistics_15": "Alustan tilastot",
+      "refreshing_4": "Virkistävä..."
+    },
+    "accessDenied": {
+      "description": "Sinulla ei ole oikeutta käyttää tätä aluetta",
+      "title": "Käyttö estetty"
+    }
+  },
+  "reminders": {
+    "dashboardDescription": "Kojelaudan kuvaus",
+    "reminderDashboard": {
+      "reminders_1": "Muistutukset 1"
+    },
+    "channels": {
+      "email": "Sähköposti",
+      "emailDesc": "Sähköpostin kuvaus",
+      "inApp": "Sovelluksessa",
+      "inAppDesc": "Sovelluksen sisäinen kuvaus"
+    },
+    "complete": "Täydellinen",
+    "completedSuccess": "Suoritettu onnistuminen",
+    "dismiss": "Hylkää",
+    "due": "Erääntyvä",
+    "dueOn": "Erääntyy",
+    "duration": {
+      "week": "Viikko"
+    },
+    "frequency": {
+      "monthly": "Kuukausittain",
+      "quarterly": "Neljännesvuosittain"
+    },
+    "noUpcoming": "Ei tulevia",
+    "overdue": "Myöhässä",
+    "settings": {
+      "channels": "Kanavat",
+      "channelsDesc": "Kanavien kuvaus",
+      "defaultFrequency": "Oletustaajuus",
+      "enableReminders": "Ota muistutukset käyttöön",
+      "enableRemindersDesc": "Ota muistutukset käyttöön kuvaus",
+      "general": "Yleistä",
+      "generalDesc": "Yleinen kuvaus",
+      "reminderTypes": "Muistutustyypit",
+      "reminderTypesDesc": "Muistutustyypit kuvaus",
+      "saveError": "Tallennusvirhe",
+      "saved": "Tallennettu"
+    },
+    "snooze": "Torkku",
+    "snoozeWeek": "Viikon myöhempää käyttöä",
+    "snoozedSuccess": "Torkutettu onnistuminen",
+    "title": "Otsikko",
+    "types": {
+      "contentUpdate": "Sisällön päivitys",
+      "contentUpdateDesc": "Sisällön päivityksen kuvaus",
+      "documentExpiry": "Asiakirjan vanheneminen",
+      "documentExpiryDesc": "Asiakirjan voimassaoloaika",
+      "lifeEvent": "Elämäntapahtuma",
+      "lifeEventDesc": "Elämäntapahtuman kuvaus"
+    },
+    "viewAll": "Näytä kaikki"
+  },
+  "complexProfile": {
+    "businessSuccessionNote": "Liiketoiminnan seuraajahuomautus",
+    "detected": "Havaittu",
+    "discussWithExpert": "Keskustele asiantuntijan kanssa",
+    "personalizedGuidance": "Henkilökohtaista ohjausta"
+  },
+  "deepDive": {
+    "advancedPlanning": "Ennakkosuunnittelu",
+    "deepDiveDescription": "Olet suorittanut perusasiat! Sukelletaanpa nyt syvemmälle edistyneisiin suojausstrategioihin.",
+    "milestoneAchieved": "Virstanpylväs saavutettu"
+  },
+  "development": {
+    "resetOnboarding": "🔄 Nollaa käyttöönotto (kehitysversio)"
+  },
+  "guardian": {
+    "accepted": "Hyväksytty",
+    "declined": "Hylätty",
+    "invitationSent": "Kutsu lähetetty",
+    "sendInvite": "Lähetä kutsu"
+  },
+  "header": {
+    "lastUpdated": "Autoimme sinua viimeksi {{date}}",
+    "quickActions": "Pikatoiminnot",
+    "subtitle": "Näin perheesi on valmistautunut",
+    "welcome": "Mukava nähdä sinut taas, {{name}}",
+    "welcomeDefault": "Hyvä nähdä sinut taas"
+  },
+  "help": {
+    "basedOnProgress": "Edistymisen perusteella",
+    "getHelp": "Hae apua",
+    "helpAndTutorials": "Ohjeet ja oppaat",
+    "needHelp": "Tarvitsen apua",
+    "personalizedHelpDescription": "Henkilökohtainen ohjekuvaus",
+    "quickTips": {
+      "tip1": "Vinkki 1",
+      "tip2": "Vinkki 2",
+      "tip3": "Vinkki 3",
+      "tip4": "Vinkki 4",
+      "title": "Otsikko"
+    },
+    "recommendedForYou": "Suositeltu sinulle",
+    "recommendedTopics": "Suositellut aiheet",
+    "stepDetails": {
+      "description": "Kuvaus",
+      "estimatedTime": "Arvioitu aika",
+      "gotIt": "Selvä",
+      "minutes": "Minuutit",
+      "stepByStepInstructions": "Vaiheittaiset ohjeet",
+      "steps": "Askeleet",
+      "videoTutorial": "Video-opastus",
+      "watchVideoTutorial": "Katso video-opastus"
+    },
+    "topics": {
+      "addGuardians": {
+        "description": "Kuvaus",
+        "steps": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5"
+        },
+        "title": "Otsikko"
+      },
+      "createWill": {
+        "description": "Kuvaus",
+        "steps": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5"
+        },
+        "title": "Otsikko"
+      },
+      "designateBeneficiaries": {
+        "description": "Kuvaus",
+        "steps": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5"
+        },
+        "title": "Otsikko"
+      },
+      "listAssets": {
+        "description": "Kuvaus",
+        "steps": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5"
+        },
+        "title": "Otsikko"
+      },
+      "uploadDocuments": {
+        "description": "Kuvaus",
+        "steps": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5"
+        },
+        "title": "Otsikko"
+      }
+    }
+  },
+  "nextStep": {
+    "estimatedTime": "Arvioitu aika: {{time}}",
+    "title": "Seuraava prioriteettisi"
+  },
+  "notifications": {
+    "accessGranted": "{{name}} voi nyt auttaa perhettäsi",
+    "accessRevoked": "Käyttäjän {{name}} käyttöoikeus on poistettu",
+    "assetAdded": "Olemme tallentaneet nämä tiedot turvallisesti perhettäsi varten",
+    "documentUploaded": "Asiakirjasi on nyt tallennettu ja käyttövalmis",
+    "personAdded": "{{name}} on nyt osa luotettuja ihmisiäsi",
+    "planUpdated": "Suunnitelmasi on päivitetty",
+    "reminderSet": "Muistutamme sinua {{date}}",
+    "taskCompleted": "Hyvää työtä perheesi suojelemiseksi",
+    "willGenerated": "Testamenttisi on valmis suojelemaan rakkaitasi"
+  },
+  "playbook": {
+    "create": "Luoda",
+    "edit": "Muokata",
+    "label": "Tarra",
+    "status": {
+      "complete": "Täydellinen",
+      "draft": "Luonnos",
+      "empty": "Tyhjä"
+    }
+  },
+  "preservationMode": {
+    "description": "Perheen turvasuunnitelmasi on kattava ja hyvin ylläpidetty. Säännölliset tarkastukset varmistavat, että kaikki pysyy ajan tasalla.",
+    "latestUpdates": "Viimeisimmät päivitykset",
+    "title": "Säilytystila aktiivinen"
+  },
+  "progressTracking": {
+    "complete": "Täydellinen",
+    "completionRange": "Valmistumisalue",
+    "critical": "Kriittinen",
+    "criticalGaps": {
+      "title": "Otsikko"
+    },
+    "current": "Nykyinen",
+    "currentStage": "Nykyinen vaihe",
+    "currentTasks": "Nykyiset tehtävät",
+    "progressDescription": "Edistymisen kuvaus",
+    "stages": {
+      "buildout": {
+        "description": "Kuvaus",
+        "name": "Nimi"
+      },
+      "foundation": {
+        "description": "Kuvaus",
+        "name": "Nimi"
+      },
+      "reinforcement": {
+        "description": "Kuvaus",
+        "name": "Nimi"
+      }
+    },
+    "subtitle": "Alaotsikko",
+    "tasks": {
+      "accessVerification": "Käyttöoikeuksien vahvistus",
+      "assetInventory": "Omaisuusluettelo",
+      "basicInfo": "Perustiedot",
+      "beneficiaries": "Edunsaajat",
+      "emergencyContacts": "Hätäyhteyshenkilöt",
+      "guardianNetwork": "Guardian-verkosto",
+      "instructions": "Ohjeet",
+      "keyDocuments": "Keskeiset asiakirjat",
+      "willCreation": "Tahdon luominen"
+    },
+    "title": "Otsikko"
+  },
+  "subscription": {
+    "autoRenewal": "Automaattinen uusiminen",
+    "cancellationNotice": "Peruutusilmoitus",
+    "days": "Päivät",
+    "manual": "Manuaalinen",
+    "types": {
+      "monthly": "Kuukausittain",
+      "yearly": "Vuosittain"
+    }
+  },
+  "subtitle": "Perheesi suojasuunnitelma",
+  "tasks": {
+    "actions": {
+      "start": "Aloita"
+    },
+    "categories": {
+      "organize": "Järjestää",
+      "secure": "Turvallinen",
+      "transfer": "Siirtää"
+    },
+    "status": {
+      "blocked": "Estetty",
+      "completed": "Valmis",
+      "inProgress": "Käynnissä",
+      "notStarted": "Ei aloitettu",
+      "skipped": "Ohitettu"
+    },
+    "types": {
+      "assetInventory": {
+        "description": "Dokumentoi arvotavarasi, jotta mikään ei katoa tai jää huomaamatta.",
+        "title": "Luo omaisuusluettelo"
+      },
+      "bankAccount": {
+        "description": "Kirjaa pankki- ja sijoitustietosi ylös, jotta perheesi voi hallita taloutta.",
+        "title": "Asiakirjarahoitustilit"
+      },
+      "digitalAssetPlan": {
+        "description": "Järjestä verkkotilisi, salasanasi ja digitaalinen omaisuutesi helppoa käyttöä varten.",
+        "title": "Digitaalisten resurssien suunnitelma"
+      },
+      "documentCentralization": {
+        "description": "Kerää ja digitoi tärkeimmät paperityösi, jotta perheesi löytää kaiken yhdestä paikasta.",
+        "title": "Järjestä tärkeät asiakirjat"
+      },
+      "emergencyContacts": {
+        "description": "Varmista, että oikeat ihmiset pääsevät käsiksi kriittisiin tietoihin silloin, kun he niitä eniten tarvitsevat.",
+        "title": "Hätäkäyttöoikeuksien määrittäminen"
+      },
+      "familyMeeting": {
+        "description": "Käy avoin keskustelu perheesi kanssa suunnitelmistasi ja heidän rooleistaan.",
+        "title": "Pidä perhekeskustelu"
+      },
+      "guardianInstructions": {
+        "description": "Valitse luotettavia ihmisiä, jotka voivat astua esiin ja auttaa perhettäsi vaikeina aikoina.",
+        "title": "Hätäyhteyshenkilöiden nimeäminen"
+      },
+      "inheritanceEducation": {
+        "description": "Ymmärrä alueesi lain vaatimukset välttääksesi ongelmia perheellesi.",
+        "title": "Opi perintöoikeudesta"
+      },
+      "personalMessages": {
+        "description": "Jätä sydämellisiä viestejä ja tärkeitä ohjeita rakkaillesi.",
+        "title": "Tallenna henkilökohtaiset viestit"
+      },
+      "willPreparation": {
+        "description": "Laadi laillisesti pätevä asiakirja, jossa ilmoitat selvästi toiveesi omaisuutesi ja perheesi suhteen.",
+        "title": "Laadi testamenttisi"
+      }
+    }
+  },
+  "title": "Perheesi suojaussuunnitelma",
+  "progress": {
+    "step": "Vaihe"
+  },
+  "completion": {
+    "viewPlan": "Näytä suunnitelma"
+  },
+  "push": {
+    "taskReminder": {
+      "title": "Muistutus perheen suojelusta",
+      "body": "Sinulla on {{count}} keskeneräistä tehtävää perheesi suojaussuunnitelman vahvistamiseksi.",
+      "action": "Tarkista tehtävät"
+    },
+    "documentExpiry": {
+      "title": "Asiakirjan uusiminen tarpeen",
+      "body": "{{documentName}} vanhenee {{date}}. Tarkista ja päivitä.",
+      "action": "Päivitä asiakirja"
+    },
+    "familyAccess": {
+      "title": "Perheen käyttöoikeuspäivitys",
+      "body": "{{memberName}} on saanut pääsyn perheesi suojaustietoihin.",
+      "action": "Hallinnoi käyttöoikeuksia"
+    },
+    "securityAlert": {
+      "title": "Turvallisuushälytys",
+      "body": "Uusi kirjautuminen havaittu käyttäjältä {{location}}. Jos et kirjautunut sisään sinä, suojaa tilisi välittömästi.",
+      "action": "Arvostelutoiminto"
+    },
+    "willGenerated": {
+      "title": "Onko asiakirja valmis",
+      "body": "Testamenttisi on laadittu. Tarkista täytäntöönpanovaatimukset, jotta siitä tulee oikeudellisesti sitova.",
+      "action": "Näkymä tahtoo"
+    },
+    "paymentIssue": {
+      "title": "Maksuongelma",
+      "body": "Maksusi käsittely epäonnistui. Päivitä maksutapasi.",
+      "action": "Päivitä maksu"
+    },
+    "trialExpiring": {
+      "title": "Kokeilu päättyy pian",
+      "body": "LegacyGuard-kokeilujaksosi vanhenee {{days}} päivän kuluttua. Valitse paketti suojauksen jatkamiseksi.",
+      "action": "Näytä suunnitelmat"
+    }
+  },
+  "sms": {
+    "securityCode": {
+      "message": "LegacyGuard-turvakoodisi on: {{code}}. Tämä koodi vanhenee 10 minuutin kuluttua. Älä koskaan jaa tätä koodia kenenkään kanssa."
+    },
+    "loginAlert": {
+      "message": "LegacyGuard: Uusi kirjautuminen havaittu käyttäjältä {{location}} klo {{time}}. Jos et kirjautunut sisään sinä, suojaa tilisi välittömästi: {{secureUrl}}"
+    },
+    "emergencyAccess": {
+      "message": "LegacyGuard: Hätäkäyttö on aktivoitu käyttäjän {{familyName}} tilille. Kirjaudu sisään nähdäksesi tärkeät tiedot: {{loginUrl}}"
+    },
+    "criticalReminder": {
+      "message": "LegacyGuard: Tärkeät perheen suojaustehtävät vaativat huomiotasi. Suorita ne, kun sinulle sopii: {{dashboardUrl}}"
+    }
+  },
+  "inApp": {
+    "welcome": {
+      "title": "Tervetuloa LegacyGuardiin",
+      "message": "Voimme aloittaa perhesuunnitelmasi laatimisen. Voit aloittaa lyhyellä arvioinnilla.",
+      "action": "Voimme aloittaa arvioinnin"
+    },
+    "firstAsset": {
+      "title": "Lisää ensimmäinen resurssisi",
+      "message": "Suojaa perhettäsi dokumentoimalla tärkein omaisuutesi.",
+      "action": "Lisää resurssi"
+    },
+    "inviteTrusted": {
+      "title": "Kutsu luotettava henkilö",
+      "message": "Nimeä joku, joka voi auttaa perhettäsi hätätilanteissa.",
+      "action": "Lisää henkilö"
+    },
+    "createWill": {
+      "title": "Luo testamenttisi",
+      "message": "Laadi laillisesti pätevä testamentti omaisuutesi ja toiveidesi perusteella.",
+      "action": "Aloitus tahtoo"
+    }
+  },
+  "alerts": {
+    "description": "Kuvaus",
+    "dismiss": "Hylkää",
+    "errors": {
+      "dismissFailed": "Hylkääminen epäonnistui",
+      "loadFailed": "Lataus epäonnistui",
+      "renewFailed": "Uudistaminen epäonnistui",
+      "snoozeFailed": "Torkku epäonnistui"
+    },
+    "expiresOn": "Vanhenee",
+    "markAsRenewed": "Merkitse uusituksi",
+    "messages": {
+      "dismissed": "Hylätty",
+      "markedAsRenewed": "Merkitty uusituksi",
+      "snoozed": "Torkutettu"
+    },
+    "noActiveAlerts": "Ei aktiivisia hälytyksiä",
+    "noDismissedAlerts": "Ei hylättyjä hälytyksiä",
+    "noSnoozedAlerts": "Ei torkutettuja hälytyksiä",
+    "renewalInstructions": "Uusimisohjeet",
+    "snooze7Days": "Torkku7 päivää",
+    "snoozedUntil": "Torkutettu, kunnes",
+    "tabs": {
+      "active": "Aktiivinen",
+      "dismissed": "Hylätty",
+      "snoozed": "Torkutettu"
+    },
+    "title": "Otsikko",
+    "types": {
+      "expired": "Vanhentunut",
+      "expiring30": "Vanhenee 30",
+      "expiring7": "Vanhenee7",
+      "expiring90": "Vanhenee90"
+    },
+    "unread": "Lukematon",
+    "unsnooze": "Poista torkku käytöstä"
+  }
+}

@@ -5,21 +5,30 @@ import Backend from 'i18next-http-backend';
 
 // Define available namespaces
 export const namespaces = [
-  'ai',
+  'ai-assistant',
   'assets',
   'auth',
-  'dashboard',
+  'dashboard-main',
+  'dashboard-review',
+  'emails',
   'errors',
-  'family',
+  'family-communication',
+  'family-core',
+  'family-emergency',
   'help',
   'landing',
+  'legal',
+  'lifeEvents',
+  'loading-states',
   'micro-copy',
   'onboarding',
+  'pricing',
   'settings',
   'sharing',
   'subscription',
   'time-capsule',
-  'ui',
+  'ui-common',
+  "ui-components", "ui-elements",
   'wills'
 ] as const;
 
@@ -34,7 +43,7 @@ const supportedLanguages = [
 ];
 
 // Initial namespaces to load (essential for app startup)
-const initialNamespaces: Namespace[] = ['ui', 'errors'];
+const initialNamespaces: Namespace[] = ['ui-common', 'errors'];
 
 i18n
   // Load translation using http backend

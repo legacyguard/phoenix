@@ -10,7 +10,7 @@ import {
 } from '@/components/ui/select';
 
 const LanguageSwitcher = () => {
-  const { i18n, t } = useTranslation('ui');
+  const { i18n, t } = useTranslation('ui-common');
 
   const languages = [
     { code: 'en', name: t('languages.en'), flag: '🇬🇧' },

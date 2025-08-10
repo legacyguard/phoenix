@@ -13,7 +13,7 @@ import { Input } from '@/components/ui/input';
 import { ChevronDown, Search, Loader2 } from 'lucide-react';
 
 export const CountrySelector: React.FC = () => {
-  const { i18n, t } = useTranslation('ui');
+  const { i18n, t } = useTranslation('ui-common');
   const { selectedCountryCode, setSelectedCountryCode, isDetecting } = useCountry();
   const [searchTerm, setSearchTerm] = useState('');
 

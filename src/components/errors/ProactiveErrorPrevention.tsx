@@ -23,7 +23,7 @@ const ProactiveErrorPrevention: React.FC<ProactiveErrorPreventionProps> = ({
   children,
   className
 }) => {
-  const { t } = useTranslation('empathetic-errors');
+  const { t } = useTranslation('errors');
   const [showHint, setShowHint] = useState(false);
   const [validationHint, setValidationHint] = useState<ValidationHint | null>(null);
   const [isAutoSaving, setIsAutoSaving] = useState(false);

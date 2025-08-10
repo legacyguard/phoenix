@@ -263,7 +263,7 @@ const SidebarTrigger = React.forwardRef<
   React.ComponentProps<typeof Button>
 >(({ className, onClick, ...props }, ref) => {
   const { toggleSidebar } = useSidebar()
-  const { t } = useTranslation('ui');
+  const { t } = useTranslation('ui-common');
 
   return (
     <Button

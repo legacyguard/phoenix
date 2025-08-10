@@ -18,7 +18,7 @@ interface CountryProviderProps {
 }
 
 export const CountryProvider: React.FC<CountryProviderProps> = ({ children }) => {
-  const { i18n } = useTranslation('ui');
+  const { i18n } = useTranslation('ui-common');
   const [selectedCountryCode, setSelectedCountryCode] = useState('GB'); // Default to UK
   const [isDetecting, setIsDetecting] = useState(true);
 

@@ -11,7 +11,7 @@ interface SecurityFeature {
 }
 
 const SecurityStatus: React.FC = () => {
-  const { t } = useTranslation('ui');
+  const { t } = useTranslation('ui-common');
   const securityFeatures: SecurityFeature[] = [
   {
     title: t("securityStatus.features.endToEndEncryption"),

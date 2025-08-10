@@ -20,7 +20,7 @@ export function SmartUploadZone({
   acceptedTypes = UPLOAD.acceptedTypes
 }: SmartUploadZoneProps) {
 
-  const { t } = useTranslation('ui');
+  const { t } = useTranslation('ui-common');
   const [isDragging, setIsDragging] = useState(false);
   const [dragCounter, setDragCounter] = useState(0);
   const fileInputRef = useRef<HTMLInputElement>(null);

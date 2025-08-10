@@ -33,7 +33,7 @@ interface FamilyMember {
 }
 
 export const FamilyHub: React.FC = () => {
-  const { t } = useTranslation('family');
+  const { t } = useTranslation('family-core');
   const { getToken } = useAuth();
   const { updateEmotionalState } = useAssistant();
   const [familyMembers, setFamilyMembers] = useState<FamilyMember[]>([]);

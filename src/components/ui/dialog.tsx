@@ -32,7 +32,7 @@ const DialogContent = React.forwardRef<
   React.ElementRef<typeof DialogPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Content>
 >(({ className, children, ...props }, ref) => {
-  const { t } = useTranslation('ui');
+  const { t } = useTranslation('ui-common');
   return (
     <DialogPortal>
       <DialogOverlay />

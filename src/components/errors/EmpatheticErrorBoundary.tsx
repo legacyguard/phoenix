@@ -16,7 +16,7 @@ const EmpatheticErrorBoundary: React.FC<EmpatheticErrorBoundaryProps> = ({
   children, 
   context = 'general' 
 }) => {
-  const { t } = useTranslation('empathetic-errors');
+  const { t } = useTranslation('errors');
   const [errorContext] = useState<string>(context);
   
   return (

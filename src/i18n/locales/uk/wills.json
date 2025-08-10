@@ -1,635 +1,641 @@
 {
   "actions": {
-    "next": "[UK] Next",
-    "previous": "[UK] Previous"
+    "consultLawyer": "Запланувати юридичну консультацію",
+    "createCodicil": "Створити поправку (Кодикіл)",
+    "deleteWill": "Видалити цей заповіт",
+    "downloadPdf": "Завантажити PDF-документ",
+    "generateWill": "Створити остаточний заповіт",
+    "next": "Далі",
+    "previous": "Попередній",
+    "printWill": "Друк документа",
+    "saveProgress": "Зберегти поточний прогрес",
+    "shareWill": "Поділитися з родиною",
+    "updateWill": "Оновити інформацію про заповіт"
   },
   "errors": {
-    "assetLoadFailed": "We could not load your asset information. Please refresh and try again.",
-    "generationFailed": "We encountered an issue generating your will. Please review your information and try again.",
-    "jurisdictionRequired": "Please select your legal jurisdiction to ensure compliance",
-    "loadFailed": "We could not load your will information. Please refresh the page and try again.",
-    "printFailed": "We encountered an issue preparing your document for printing. Please try again.",
-    "saveFailed": "We could not save your progress. Please check your connection and try again.",
-    "sharingFailed": "We could not share your will. Please verify the recipients and try again.",
-    "validationFailed": "Please review and correct the highlighted information before proceeding"
+    "assetLoadFailed": "Не вдалося завантажити інформацію про ваш об’єкт. Оновіть сторінку та спробуйте ще раз.",
+    "generationFailed": "Виникла проблема зі створенням вашого заповіту. Будь ласка, перевірте свою інформацію та спробуйте ще раз.",
+    "jurisdictionRequired": "Будь ласка, виберіть свою юрисдикцію, щоб забезпечити дотримання вимог",
+    "loadFailed": "Нам не вдалося завантажити інформацію про ваш заповіт. Будь ласка, оновіть сторінку та спробуйте ще раз.",
+    "printFailed": "Виникла проблема з підготовкою вашого документа до друку. Спробуйте ще раз.",
+    "saveFailed": "Нам не вдалося зберегти ваш прогрес. Перевірте з’єднання та спробуйте ще раз.",
+    "validationFailed": "Будь ласка, перегляньте та виправте виділену інформацію, перш ніж продовжити"
   },
   "execution": {
-    "copyDistribution": "Distribution of Copies",
-    "familyNotification": "Informing Your Family",
-    "legalRequirements": "Legal Requirements for {{jurisdiction}}",
-    "notarization": "Notarization Requirements",
-    "notaryOptional": "Notary recommended but not required",
-    "notaryRequired": "Notary public required",
-    "numberOfCopies": "Recommended Number of Copies",
-    "safeStorage": "Secure Storage Locations",
-    "selfProving": "Self-Proving Affidavit",
-    "signingInstructions": "Signing Instructions",
-    "signingOrder": "Proper Signing Order",
-    "storageRecommendations": "Storage Recommendations",
-    "subtitle": "Making your will legally binding",
-    "title": "Will Execution Requirements",
-    "witnessCount": "{{count}} witnesses required",
-    "witnessInstructions": "Witness Instructions",
-    "witnessQualifications": "Witness Qualifications",
-    "witnessRequirements": "Witness Requirements"
+    "copyDistribution": "Розповсюдження копій",
+    "familyNotification": "Інформування вашої родини",
+    "legalRequirements": "Юридичні вимоги до {{jurisdiction}}",
+    "notarization": "Вимоги до нотаріального засвідчення",
+    "notaryOptional": "Нотаріус рекомендований, але не обов'язковий",
+    "notaryRequired": "Потрібен нотаріус",
+    "numberOfCopies": "Рекомендована кількість копій",
+    "safeStorage": "Безпечні місця зберігання",
+    "selfProving": "Самопідтверджувальна свідчення під присягою",
+    "signingInstructions": "Інструкції щодо підписання",
+    "signingOrder": "Правильний порядок підписання",
+    "storageRecommendations": "Рекомендації щодо зберігання",
+    "subtitle": "Надання вашому заповіту юридичної сили",
+    "title": "Вимоги до складання заповіту",
+    "witnessCount": "Потрібні свідки {{count}}",
+    "witnessInstructions": "Інструкції для свідків",
+    "witnessQualifications": "Кваліфікація свідків",
+    "witnessRequirements": "Вимоги до свідків"
   },
   "form": {
     "assetSelection": {
-      "allAssets": "Include All Current and Future Assets",
-      "assetCategories": "Asset Categories to Include",
-      "businessInterests": "Business Interests",
-      "excludedAssets": "Assets to Exclude",
-      "jointAssets": "Jointly Owned Assets",
-      "residualDescription": "All remaining assets not specifically mentioned elsewhere in this will",
-      "residualEstate": "Residual Estate",
-      "selectAssets": "Choose Assets to Include",
-      "specificAssets": "Select Specific Assets Only"
+      "allAssets": "Включити всі поточні та майбутні активи",
+      "assetCategories": "Категорії активів, які потрібно включити",
+      "businessInterests": "Бізнес-інтереси",
+      "excludedAssets": "Активи для виключення",
+      "jointAssets": "Спільні активи",
+      "residualDescription": "Усі інші активи, які не згадані окремо в цьому заповіті",
+      "residualEstate": "Залишкова нерухомість",
+      "selectAssets": "Виберіть ресурси для включення",
+      "specificAssets": "Вибрати лише певні активи"
     },
     "distribution": {
-      "addBeneficiary": "Add Additional Beneficiary",
-      "ageRestriction": "Age Requirement",
-      "allocation": "Inheritance Allocation",
-      "beneficiaryName": "Beneficiary's Full Name",
-      "conditions": "Conditions or Restrictions",
-      "contingentBeneficiary": "Contingent Beneficiary",
-      "percentage": "Percentage of Estate",
-      "primaryBeneficiary": "Primary Beneficiary",
-      "relationship": "Relationship to You",
-      "specificAmount": "Specific Dollar Amount",
-      "specificAsset": "Specific Asset or Property",
-      "trustProvision": "Trust Arrangement"
+      "addBeneficiary": "Додати додаткового бенефіціара",
+      "ageRestriction": "Вікові вимоги",
+      "allocation": "Розподіл спадщини",
+      "beneficiaryName": "Повне ім'я бенефіціара",
+      "conditions": "Умови або обмеження",
+      "contingentBeneficiary": "Умовний бенефіціар",
+      "percentage": "Відсоток майна",
+      "primaryBeneficiary": "Основний бенефіціар",
+      "relationship": "Стосунки з тобою",
+      "specificAmount": "Конкретна сума в доларах",
+      "specificAsset": "Конкретний актив або майно",
+      "trustProvision": "Трастова угода"
     },
     "executor": {
-      "alternateExecutor": "Alternate Executor",
-      "bondRequirement": "Bond Requirement",
-      "coExecutors": "Co-Executors",
-      "executorAddress": "Executor's Address",
-      "executorCompensation": "Executor Compensation",
-      "executorDuties": "Executor Responsibilities",
-      "executorInstructions": "Special Instructions for Executor",
-      "executorName": "Executor's Full Name",
-      "executorRelationship": "Relationship to You",
-      "primaryExecutor": "Primary Executor",
-      "specialPowers": "Special Powers Granted"
+      "alternateExecutor": "Альтернативний виконавець",
+      "bondRequirement": "Вимога щодо облігацій",
+      "coExecutors": "Співвиконавці",
+      "executorAddress": "Адреса виконавця",
+      "executorCompensation": "Компенсація виконавцю",
+      "executorDuties": "Обов'язки виконавця",
+      "executorInstructions": "Спеціальні інструкції для виконавця",
+      "executorName": "Повне ім'я виконавця",
+      "executorRelationship": "Стосунки з тобою",
+      "primaryExecutor": "Головний виконавець",
+      "specialPowers": "Надані спеціальні повноваження"
     },
     "guardianship": {
-      "backupGuardian": "Alternate Guardian",
-      "educationPreferences": "Education Preferences",
-      "guardianCompensation": "Guardian Compensation",
-      "guardianFor": "Guardian for {{childName}}",
-      "guardianInstructions": "Instructions for Guardian",
-      "guardianQualifications": "Guardian Qualifications",
-      "minorChildren": "Minor Children Requiring Guardianship",
-      "primaryGuardian": "Primary Guardian",
-      "religiousUpbringing": "Religious Upbringing Preferences"
+      "backupGuardian": "Альтернативний опікун",
+      "educationPreferences": "Освітні уподобання",
+      "guardianCompensation": "Компенсація опікунам",
+      "guardianFor": "Опікун для {{childName}}",
+      "guardianInstructions": "Інструкції для опікуна",
+      "guardianQualifications": "Кваліфікація опікуна",
+      "minorChildren": "Неповнолітні діти, які потребують опіки",
+      "primaryGuardian": "Головний опікун",
+      "religiousUpbringing": "Релігійні уподобання щодо виховання"
     },
     "personalInfo": {
-      "addChild": "Add Child",
-      "addressHelper": "Your primary residence address",
-      "childDateOfBirth": "Child's Date of Birth",
-      "childName": "Child's Full Name",
-      "childRelation": "Relationship to You",
-      "children": "Children and Dependents",
-      "currentAddress": "Current Legal Address",
-      "dateOfBirth": "Date of Birth",
-      "fullLegalName": "Complete Legal Name",
-      "fullLegalNameHelper": "Enter your name exactly as it appears on official documents",
-      "maritalStatus": "Marital Status",
-      "marriageDate": "Date of Marriage",
-      "placeOfBirth": "Place of Birth",
-      "previousWills": "Previous Wills",
-      "revokesPrevious": "This will revokes all previous wills",
-      "spouseName": "Spouse's Full Legal Name"
+      "addChild": "Додати дитину",
+      "addressHelper": "Ваша основна адреса проживання",
+      "childDateOfBirth": "Дата народження дитини",
+      "childName": "Повне ім'я дитини",
+      "childRelation": "Стосунки з тобою",
+      "children": "Діти та утриманці",
+      "currentAddress": "Поточна юридична адреса",
+      "dateOfBirth": "Дата народження",
+      "fullLegalName": "Повне юридичне ім'я",
+      "fullLegalNameHelper": "Введіть своє ім'я точно так, як воно зазначено в офіційних документах",
+      "maritalStatus": "Сімейний стан",
+      "marriageDate": "Дата одруження",
+      "placeOfBirth": "Місце народження",
+      "previousWills": "Попередні заповіти",
+      "revokesPrevious": "Цей заповіт скасовує всі попередні заповіти",
+      "spouseName": "Повне ім'я чоловіка/дружини"
     },
     "provisions": {
-      "burialCremation": "Burial or Cremation Preference",
-      "businessContinuation": "Business Continuation Plans",
-      "charitableBequests": "Charitable Donations",
-      "charityAmount": "Donation Amount",
-      "charityName": "Charitable Organization",
-      "digitalAssets": "Digital Asset Instructions",
-      "funeralInstructions": "Specific Funeral Instructions",
-      "funeralWishes": "Funeral and Burial Preferences",
-      "organDonation": "Organ Donation Wishes",
-      "personalMessages": "Personal Messages to Family",
-      "petCare": "Pet Care Arrangements",
-      "specialInstructions": "Special Instructions"
+      "burialCremation": "Перевага щодо поховання або кремації",
+      "businessContinuation": "Плани продовження бізнесу",
+      "charitableBequests": "Благодійні пожертви",
+      "charityAmount": "Сума пожертви",
+      "charityName": "Благодійна організація",
+      "digitalAssets": "Інструкції щодо цифрових активів",
+      "funeralInstructions": "Спеціальні інструкції щодо похорону",
+      "funeralWishes": "Похоронні налаштування та вподобання",
+      "organDonation": "Побажання щодо донорства органів",
+      "personalMessages": "Особисті повідомлення для родини",
+      "petCare": "Організація догляду за домашніми тваринами",
+      "specialInstructions": "Спеціальні інструкції"
     }
   },
   "generator": {
-    "of": "[UK] Of",
-    "step": "[UK] Step"
+    "continueWill": "Продовжити підготовку заповіту",
+    "description": "Складіть вичерпний, юридично дійсний заповіт, адаптований до вимог вашої юрисдикції та унікальних потреб вашої родини.",
+    "getStarted": "Почніть створювати свій заповіт",
+    "importance": "Забезпечення юридичного оформлення ваших побажань та захисту вашої родини",
+    "newWill": "Створити новий заповіт",
+    "of": "З",
+    "professionalGuidance": "Рекомендована професійна юридична консультація для складних спадкових справ",
+    "step": "Крок",
+    "subtitle": "Складіть юридично обґрунтований заповіт за допомогою професійного керівництва",
+    "title": "Генератор останньої волі та заповіту",
+    "viewExisting": "Переглянути поточний заповіт"
   },
   "legal": {
-    "consultLawyer": "Consult with Attorney",
-    "disclaimer": "Important Legal Disclaimer",
-    "estatePlanning": "Comprehensive Estate Planning",
-    "jurisdiction": "Legal Jurisdiction",
-    "lawsApply": "Laws of {{jurisdiction}} will apply",
-    "lawyerRecommended": "We strongly recommend consulting with a qualified attorney for complex estates",
-    "legalCompliance": "Legal Compliance Verification",
-    "notLegalAdvice": "This service does not constitute legal advice",
-    "probateProcess": "Probate Process Information",
-    "professionalGuidance": "Professional legal guidance is recommended",
-    "professionalReview": "Professional Legal Review",
-    "selectJurisdiction": "Please select your legal jurisdiction",
-    "taxImplications": "Tax Implications"
+    "consultLawyer": "Проконсультуйтеся з адвокатом",
+    "disclaimer": "Важлива юридична застереження",
+    "estatePlanning": "Комплексне планування нерухомості",
+    "jurisdiction": "Юридична юрисдикція",
+    "lawsApply": "Застосовуватимуться закони {{jurisdiction}}",
+    "lawyerRecommended": "Ми наполегливо рекомендуємо проконсультуватися з кваліфікованим адвокатом щодо складних спадкових справ",
+    "legalCompliance": "Перевірка відповідності законодавству",
+    "notLegalAdvice": "Ця послуга не є юридичною консультацією",
+    "probateProcess": "Інформація про процес спадкування",
+    "professionalGuidance": "Рекомендується професійна юридична консультація",
+    "professionalReview": "Професійний юридичний огляд",
+    "selectJurisdiction": "Будь ласка, виберіть вашу юрисдикцію",
+    "taxImplications": "Податкові наслідки"
   },
   "notifications": {
-    "consultationScheduled": "Legal consultation has been scheduled",
-    "documentShared": "Will has been shared with designated family members",
-    "executionComplete": "Will execution has been recorded",
-    "progressSaved": "Your progress has been saved",
-    "reminderSet": "Will review reminder has been set",
-    "willDeleted": "Will has been permanently deleted",
-    "willGenerated": "Your will has been successfully generated",
-    "willUpdated": "Will has been updated successfully"
+    "consultationScheduled": "Юридична консультація призначена",
+    "documentShared": "Заповіт було передано визначеним членам сім'ї",
+    "executionComplete": "Виконання заповіту зафіксовано",
+    "progressSaved": "Ваш прогрес збережено",
+    "willDeleted": "Заповіт видалено назавжди",
+    "willUpdated": "Волю успішно оновлено"
   },
   "preview": {
-    "article": "ARTICLE {{number}}",
-    "draftWatermark": "DRAFT - NOT LEGALLY BINDING",
-    "executionInstructions": "EXECUTION INSTRUCTIONS",
-    "lastWillTestament": "LAST WILL AND TESTAMENT",
-    "of": "OF",
-    "pageNumber": "Page {{current}} of {{total}}",
-    "reviewCarefully": "Please review this document carefully before proceeding",
-    "section": "Section {{number}}",
-    "signatureSection": "SIGNATURE SECTION",
-    "subtitle": "Review your complete will before finalizing",
-    "title": "Will Document Preview",
-    "witnessClause": "WITNESS CLAUSE"
+    "article": "СТАТТЯ {{number}}",
+    "draftWatermark": "ПРОЄКТ – НЕ МАЄ ЮРИДИЧНОЇ ЧИННОСТІ",
+    "executionInstructions": "ІНСТРУКЦІЇ З ВИКОНАННЯ",
+    "lastWillTestament": "ОСТАННЯ ВОЛЯ І ЗАПОВІТ",
+    "of": "З",
+    "pageNumber": "Сторінка {{current}} з {{total}}",
+    "reviewCarefully": "Будь ласка, уважно перегляньте цей документ, перш ніж продовжувати",
+    "section": "Розділ {{number}}",
+    "signatureSection": "РОЗДІЛ ПІДПИСІВ",
+    "subtitle": "Перегляньте свій повний заповіт перед остаточним оформленням",
+    "title": "Попередній перегляд документа",
+    "witnessClause": "ЗАСТОСОВУВАННЯ ПРО СВІДКИ"
   },
   "status": {
-    "archived": "Archived Version",
-    "draft": "Draft in Progress",
-    "executed": "Legally Executed",
-    "generated": "Generated - Requires Execution",
-    "outdated": "Requires Update",
-    "underReview": "Under Professional Review"
+    "archived": "Архівна версія",
+    "draft": "Чернетка в процесі розробки",
+    "executed": "Юридично виконано",
+    "generated": "Згенеровано – Потрібне виконання",
+    "outdated": "Потрібне оновлення"
+  },
+  "policy": {
+    "duration": {
+      "session": "Сесія",
+      "minutes": "{{count}} хвилин",
+      "hours": "{{count}} годин",
+      "days": "{{count}} днів",
+      "months": "{{count}} місяців",
+      "years": "{{count}} років"
+    }
   },
   "steps": {
     "assets": {
-      "description": "Select which assets you wish to include in your will and how they should be distributed.",
-      "subtitle": "Your valuable possessions",
-      "title": "Asset Distribution"
+      "description": "Виберіть, які активи ви хочете включити до свого заповіту та як їх розподілити.",
+      "subtitle": "Ваші цінні речі",
+      "title": "Розподіл активів"
     },
     "beneficiaries": {
-      "description": "Designate who will receive your assets and in what proportions.",
-      "subtitle": "Your chosen recipients",
-      "title": "Beneficiary Designations"
+      "description": "Визначте, хто отримає ваші активи та в яких пропорціях.",
+      "subtitle": "Вибрані вами одержувачі",
+      "title": "Призначення бенефіціарів"
     },
     "executor": {
-      "description": "Choose a responsible person to manage your estate and carry out your wishes.",
-      "subtitle": "Your estate representative",
-      "title": "Estate Executor"
+      "description": "Оберіть відповідальну особу, яка керуватиме вашим майном та виконуватиме ваші побажання.",
+      "subtitle": "Ваш представник з питань спадщини",
+      "title": "Виконавець майна"
     },
     "guardians": {
-      "description": "Appoint trusted individuals to care for minor children or dependents.",
-      "subtitle": "Care for your dependents",
-      "title": "Guardianship Appointments"
+      "description": "Призначте довірених осіб для догляду за неповнолітніми дітьми або утриманцями.",
+      "subtitle": "Піклуйтеся про своїх утриманців",
+      "title": "Призначення опікунства"
     },
     "personal": {
-      "description": "We require your complete legal information to ensure your will meets all legal requirements.",
-      "subtitle": "Your identifying information",
-      "title": "Personal Information"
+      "description": "Нам потрібна ваша повна юридична інформація, щоб переконатися, що ваш заповіт відповідає всім юридичним вимогам.",
+      "subtitle": "Ваша ідентифікаційна інформація",
+      "title": "Персональна інформація"
     },
     "preferences": {
-      "description": "Include any special instructions, charitable bequests, or personal wishes.",
-      "subtitle": "Additional instructions",
-      "title": "Special Provisions"
+      "description": "Включіть будь-які спеціальні інструкції, благодійні заповіти або особисті побажання.",
+      "subtitle": "Додаткові інструкції",
+      "title": "Спеціальні положення"
     },
     "review": {
-      "description": "Carefully review all details before generating your legal document.",
-      "subtitle": "Verify all information",
-      "title": "Final Review"
+      "description": "Уважно перегляньте всі деталі, перш ніж створювати свій юридичний документ.",
+      "subtitle": "Перевірте всю інформацію",
+      "title": "Заключний огляд"
     }
   },
   "validation": {
-    "jurisdictionRequired": "[UK] Jurisdiction required",
-    "requiredField": "[UK] Required field"
+    "addressRequired": "Ваша поточна юридична адреса обов'язкова",
+    "allocationError": "Загальний розподіл відсотків має дорівнювати 100%",
+    "beneficiaryRequired": "Потрібно вказати принаймні одного бенефіціара",
+    "dobRequired": "Дата народження обов'язкова для юридичної сили",
+    "duplicateBeneficiary": "Цього бенефіціара вже додано",
+    "executorBeneficiaryConflict": "Виконавець та основний бенефіціар зазвичай повинні бути різними особами",
+    "executorRequired": "Має бути призначений принаймні один виконавець",
+    "guardianRequired": "Для неповнолітніх дітей потрібне призначення опікуна",
+    "invalidDate": "Будь ласка, введіть дійсну дату",
+    "invalidPercentage": "Відсоток має бути від 0 до 100",
+    "jurisdictionRequired": "Необхідна юрисдикція",
+    "requiredField": "Обов'язкове поле"
   },
   "will": {
-    "address": "Address",
-    "addressPlaceholder": "Address placeholder",
+    "address": "Адреса",
+    "addressPlaceholder": "Заповнювач адреси",
     "allocation": {
-      "addBeneficiary": "Add beneficiary",
-      "description": "Description",
-      "generalEstate": "General estate",
-      "percentage": "Percentage",
+      "addBeneficiary": "Додати бенефіціара",
+      "description": "Опис",
+      "generalEstate": "Загальне майно",
+      "percentage": "Відсоток",
       "tips": {
-        "tip1": "Tip1",
-        "tip2": "Tip2",
-        "tip3": "Tip3",
-        "title": "Title"
+        "tip1": "Порада1",
+        "tip2": "Порада2",
+        "tip3": "Порада 3",
+        "title": "Назва"
       },
-      "title": "Title",
-      "total": "Total"
+      "title": "Назва",
+      "total": "Всього"
     },
     "beneficiaries": {
-      "addBeneficiary": "Add beneficiary",
-      "allocation": "Allocation",
-      "alternativeBeneficiary": "Alternative beneficiary",
-      "alternativePlaceholder": "Alternative placeholder",
-      "beneficiaryNumber": "Beneficiary number",
-      "currentAllocation": "Current allocation",
-      "description": "Description",
-      "identification": "Identification",
-      "identificationPlaceholder": "Identification placeholder",
-      "importantNotes": "Important notes",
-      "name": "Name",
-      "noBeneficiaries": "No beneficiaries",
-      "note1": "Note1",
-      "note2": "Note2",
-      "note3": "Note3",
-      "ofEstate": "Of estate",
-      "title": "Title"
+      "addBeneficiary": "Додати бенефіціара",
+      "allocation": "Розподіл",
+      "alternativeBeneficiary": "Альтернативний бенефіціар",
+      "alternativePlaceholder": "Альтернативний заповнювач",
+      "beneficiaryNumber": "Номер бенефіціара",
+      "currentAllocation": "Поточний розподіл",
+      "description": "Опис",
+      "identification": "Ідентифікація",
+      "identificationPlaceholder": "Заповнювач ідентифікації",
+      "importantNotes": "Важливі примітки",
+      "name": "Ім'я",
+      "noBeneficiaries": "Немає бенефіціарів",
+      "note1": "Примітка 1",
+      "note2": "Примітка 2",
+      "note3": "Примітка 3",
+      "ofEstate": "Маєтку",
+      "title": "Назва"
     },
     "beneficiary": {
-      "name": "Name",
-      "namePlaceholder": "Name placeholder",
-      "relationship": "Relationship",
-      "relationshipPlaceholder": "Relationship placeholder"
+      "name": "Ім'я",
+      "namePlaceholder": "Заповнювач імені",
+      "relationship": "Стосунки",
+      "relationshipPlaceholder": "Заповнювач для зв'язку"
     },
-    "birthDate": "Birth date",
-    "birthDatePlaceholder": "Birth date placeholder",
+    "birthDate": "Дата народження",
+    "birthDatePlaceholder": "Заповнювач дати народження",
     "buttons": {
-      "saveWillInfo": "Save will info",
-      "saving": "Saving"
+      "saveWillInfo": "Зберегти інформацію про заповіт",
+      "saving": "Збереження"
     },
-    "countryRequirements": "Country requirements",
+    "countryRequirements": "Вимоги країни",
     "descriptions": {
-      "executorDescription": "Executor description",
-      "physicalLocationDescription": "Physical location description",
-      "statusDescription": "Status description"
+      "executorDescription": "Опис виконавця",
+      "physicalLocationDescription": "Опис фізичного розташування",
+      "statusDescription": "Опис статусу"
     },
     "executor": {
-      "addAlternative": "Add alternative",
-      "address": "Address",
-      "addressPlaceholder": "Address placeholder",
-      "alternative": "Alternative",
-      "alternativeDescription": "Alternative description",
-      "description": "Description",
-      "name": "Name",
-      "namePlaceholder": "Name placeholder",
-      "phone": "Phone",
-      "phonePlaceholder": "Phone placeholder",
-      "primary": "Primary",
-      "relationship": "Relationship",
-      "relationshipPlaceholder": "Relationship placeholder",
-      "responsibilities": "Responsibilities",
-      "responsibility1": "Responsibility1",
-      "responsibility2": "Responsibility2",
-      "responsibility3": "Responsibility3",
-      "responsibility4": "Responsibility4",
-      "title": "Title"
+      "addAlternative": "Додати альтернативу",
+      "address": "Адреса",
+      "addressPlaceholder": "Заповнювач адреси",
+      "alternative": "Альтернатива",
+      "alternativeDescription": "Альтернативний опис",
+      "description": "Опис",
+      "name": "Ім'я",
+      "namePlaceholder": "Заповнювач імені",
+      "phone": "Телефон",
+      "phonePlaceholder": "Заповнювач телефону",
+      "primary": "Первинний",
+      "relationship": "Стосунки",
+      "relationshipPlaceholder": "Заповнювач для зв'язку",
+      "responsibilities": "Обов'язки",
+      "responsibility1": "Відповідальність1",
+      "responsibility2": "Відповідальність2",
+      "responsibility3": "Відповідальність3",
+      "responsibility4": "Відповідальність4",
+      "title": "Назва"
     },
     "fields": {
-      "additionalNotes": "Additional notes",
-      "currentStatus": "Current status",
-      "executorContact": "Executor contact",
-      "physicalLocation": "Physical location"
+      "additionalNotes": "Додаткові примітки",
+      "currentStatus": "Поточний стан",
+      "executorContact": "Контакт виконавця",
+      "physicalLocation": "Фізичне місцезнаходження"
     },
     "legalReview": {
-      "button": "Button",
-      "description": "Description",
-      "title": "Title"
+      "button": "Кнопка",
+      "description": "Опис",
+      "title": "Назва"
     },
-    "name": "Name",
-    "namePlaceholder": "Name placeholder",
+    "name": "Ім'я",
+    "namePlaceholder": "Заповнювач імені",
     "options": {
-      "noContactSelected": "No contact selected"
+      "noContactSelected": "Контакт не вибрано"
     },
     "placeholders": {
-      "additionalNotes": "Additional notes",
-      "physicalLocation": "Physical location",
-      "selectContact": "Select contact"
+      "additionalNotes": "Додаткові примітки",
+      "physicalLocation": "Фізичне місцезнаходження",
+      "selectContact": "Виберіть контакт"
     },
     "preview": {
-      "address": "Address",
-      "alternative": "Alternative",
-      "alternativeExecutor": "Alternative executor",
-      "date": "Date",
-      "description": "Description",
-      "executor": "Executor",
-      "generatePDF": "Generate p d f",
-      "legalRequirements": "Legal requirements",
-      "name": "Name",
-      "ofEstate": "Of estate",
-      "place": "Place",
-      "print": "Print",
-      "signature": "Signature",
-      "title": "Title",
-      "witnesses": "Witnesses"
+      "address": "Адреса",
+      "alternative": "Альтернатива",
+      "alternativeExecutor": "Альтернативний виконавець",
+      "date": "Дата",
+      "description": "Опис",
+      "executor": "Виконавець",
+      "generatePDF": "Згенерувати p d f",
+      "legalRequirements": "Юридичні вимоги",
+      "name": "Ім'я",
+      "ofEstate": "Маєтку",
+      "place": "Місце",
+      "print": "Друк",
+      "signature": "Підпис",
+      "title": "Назва",
+      "witnesses": "Свідки"
     },
     "requirements": {
-      "handwriting": "Handwriting",
-      "notarization": "Notarization",
-      "typed": "Typed",
-      "witnesses": "Witnesses"
+      "handwriting": "Почерк",
+      "notarization": "Нотаріальне засвідчення",
+      "typed": "Надруковано",
+      "witnesses": "Свідки"
     },
-    "selectCountry": "Select country",
-    "selectedCountryDetails": "Selected country details",
+    "selectCountry": "Виберіть країну",
+    "selectedCountryDetails": "Деталі вибраної країни",
     "status": {
-      "draft": "Draft",
-      "notarized": "Notarized",
-      "stored": "Stored",
-      "updated": "Updated"
+      "draft": "Чернетка",
+      "notarized": "Нотаріально засвідчене",
+      "stored": "Збережено",
+      "updated": "Оновлено"
     },
-    "testatorInfo": "Testator info",
+    "testatorInfo": "Інформація про заповідача",
     "validation": {
-      "allocation100": "Allocation100"
+      "allocation100": "Розподіл100"
     },
     "willPreview": {
       "_2": "2",
-      "critical_execution_instruction_3": "Critical execution instruction 3",
-      "professional_review_4": "Professional review 4",
-      "provided_by_certified_legal_pa_5": "Provided by certified legal pa 5"
+      "critical_execution_instruction_3": "Критична інструкція виконання 3",
+      "professional_review_4": "Професійний огляд 4",
+      "provided_by_certified_legal_pa_5": "Надано сертифікованим юридичним фахівцем 5"
     }
   },
   "willGenerator": {
-    "changeCountry": "Change country",
-    "confirmCountry": "Confirm country",
-    "confirmSigned": "Confirm signed",
+    "changeCountry": "Змінити країну",
+    "confirmCountry": "Підтвердити країну",
+    "confirmSigned": "Підтвердити підпис",
     "console": {
-      "willGenerationCompleted": "Will generation completed"
+      "willGenerationCompleted": "Формування заповіту завершено"
     },
     "countries": {
-      "AL": "A l",
-      "AT": "A t",
-      "BA": "B a",
-      "BE": "B e",
-      "BG": "B g",
-      "CH": "C h",
+      "AL": "Ал",
+      "AT": "А т",
+      "BA": "Б а",
+      "BE": "Б е",
+      "BG": "Б г",
+      "CH": "Ч.",
       "CY": "C y",
       "CZ": "C z",
-      "DE": "D e",
-      "DK": "D k",
-      "EE": "E e",
-      "ES": "E s",
-      "FI": "F i",
-      "FR": "F r",
-      "GB": "G b",
-      "GR": "G r",
-      "HR": "H r",
-      "HU": "H u",
-      "IE": "I e",
-      "IS": "I s",
-      "IT": "I t",
-      "LI": "L i",
-      "LT": "L t",
-      "LU": "L u",
-      "LV": "L v",
-      "MD": "M d",
-      "ME": "M e",
-      "MK": "M k",
-      "MT": "M t",
-      "NL": "N l",
-      "NO": "N o",
-      "PL": "P l",
-      "PT": "P t",
-      "RO": "R o",
-      "RS": "R s",
-      "SE": "S e",
+      "DE": "Д е",
+      "DK": "Д к",
+      "EE": "Е е",
+      "ES": "Е с",
+      "FI": "Фі",
+      "FR": "Ф р",
+      "GB": "Г б",
+      "GR": "Г р",
+      "HR": "Год.",
+      "HU": "Х у",
+      "IE": "Я е",
+      "IS": "Я",
+      "IT": "Я т",
+      "LI": "Лі",
+      "LT": "Л т",
+      "LU": "Л у",
+      "LV": "Л в",
+      "MD": "М д",
+      "ME": "Мене",
+      "MK": "М к",
+      "MT": "М т",
+      "NL": "Н л",
+      "NO": "Ні",
+      "PL": "Пл",
+      "PT": "Пт",
+      "RO": "Р о",
+      "RS": "Рс",
+      "SE": "Пд. с.",
       "SI": "S i",
-      "SK": "S k",
-      "UA": "U a"
+      "SK": "С к",
+      "UA": "У а"
     },
-    "executionInstructions": "Execution instructions",
-    "failed_to_load_will_template_2": "Failed to load will template 2",
-    "finalizeUpload": "Finalize upload",
-    "fullName": "Full name",
-    "no_template_found_for_this_jur_1": "No template found for this jur 1",
-    "please_confirm_that_you_have_s_3": "Please confirm that you have s 3",
-    "select_a_country_4": "Select a country 4",
+    "executionInstructions": "Інструкції з виконання",
+    "failed_to_load_will_template_2": "Не вдалося завантажити шаблон заповіту 2",
+    "finalizeUpload": "Завершити завантаження",
+    "fullName": "Повне ім'я",
+    "no_template_found_for_this_jur_1": "Для цього jur 1 шаблон не знайдено",
+    "please_confirm_that_you_have_s_3": "Будь ласка, підтвердіть, що у вас є s 3",
+    "select_a_country_4": "Виберіть країну 4",
     "steps": {
-      "confirmJurisdiction": "Confirm jurisdiction",
-      "executorBeneficiaries": "Executor beneficiaries",
-      "personalInformation": "Personal information",
-      "reviewGenerate": "Review generate",
-      "signConfirm": "Sign confirm"
+      "confirmJurisdiction": "Підтвердити юрисдикцію",
+      "executorBeneficiaries": "Бенефіціари-виконавці",
+      "personalInformation": "Персональна інформація",
+      "reviewGenerate": "Згенерувати відгук",
+      "signConfirm": "Підписати підтвердження"
     }
   },
   "willSync": {
-    "approve": "Approve",
-    "autoApplied": "Auto applied",
+    "approve": "Схвалити",
+    "autoApplied": "Автоматично застосовано",
     "changes": {
-      "allocationsModified": "Allocations modified",
-      "assetsAdded": "Assets added",
-      "beneficiariesRemoved": "Beneficiaries removed",
-      "noChanges": "No changes"
+      "allocationsModified": "Розподіл змінено",
+      "assetsAdded": "Додано активів",
+      "beneficiariesRemoved": "Вилучено бенефіціарів",
+      "noChanges": "Без змін"
     },
-    "reject": "Reject",
-    "viewChanges": "View changes"
+    "reject": "Відхилити",
+    "viewChanges": "Переглянути зміни"
   },
   "willSyncSettings": {
-    "autoSync": "Auto sync",
-    "autoSyncDescription": "Auto sync description",
-    "frequencyDaily": "Frequency daily",
-    "frequencyImmediate": "Frequency immediate",
-    "frequencyWeekly": "Frequency weekly",
-    "generalDescription": "General description",
-    "generalSettings": "General settings",
-    "requireApproval": "Require approval",
-    "requireApprovalDescription": "Require approval description",
-    "saveError": "Save error",
-    "saved": "Saved",
-    "syncFrequency": "Sync frequency",
-    "triggerDescription": "Trigger description",
-    "triggerSettings": "Trigger settings"
+    "autoSync": "Автоматична синхронізація",
+    "autoSyncDescription": "Опис автоматичної синхронізації",
+    "frequencyDaily": "Частота щодня",
+    "frequencyImmediate": "Частота негайно",
+    "frequencyWeekly": "Частота щотижня",
+    "generalDescription": "Загальний опис",
+    "generalSettings": "Загальні налаштування",
+    "requireApproval": "Вимагати схвалення",
+    "requireApprovalDescription": "Вимагати опису затвердження",
+    "saveError": "Помилка збереження",
+    "saved": "Збережено",
+    "syncFrequency": "Частота синхронізації",
+    "triggerDescription": "Опис тригера",
+    "triggerSettings": "Налаштування тригерів"
   },
   "willVersion": {
-    "added": "Added",
-    "compareDiff": "Compare diff",
-    "comparePrompt": "Compare prompt",
-    "current": "Current",
-    "description": "Description",
-    "modified": "Modified",
-    "removed": "Removed",
-    "restore": "Restore",
-    "title": "Title",
-    "versionNumber": "Version number"
+    "added": "Додано",
+    "compareDiff": "Порівняти різницю",
+    "comparePrompt": "Порівняння запиту",
+    "current": "Поточний",
+    "description": "Опис",
+    "modified": "Змінено",
+    "removed": "Видалено",
+    "restore": "Відновити",
+    "title": "Назва",
+    "versionNumber": "Номер версії"
   },
   "disclaimers": {
-    "general": "LegacyGuard provides tools and guidance for estate planning but does not provide legal advice. For complex estates or specific legal questions, please consult with a qualified attorney in your jurisdiction.",
-    "willGenerator": "The will generator creates documents based on information you provide. While designed to meet legal requirements, we strongly recommend having any generated will reviewed by a qualified attorney before execution.",
-    "jurisdiction": "Legal requirements vary by jurisdiction. Ensure your documents comply with the laws in your area.",
-    "notLegalAdvice": "This service does not constitute legal advice and should not be relied upon as such.",
-    "professionalReview": "For complex estates, business interests, or unique family situations, professional legal review is strongly recommended."
+    "general": "LegacyGuard надає інструменти та рекомендації щодо планування спадщини, але не надає юридичних консультацій. Щодо складних питань спадщини або конкретних юридичних питань, будь ласка, проконсультуйтеся з кваліфікованим адвокатом у вашій юрисдикції.",
+    "willGenerator": "Генератор заповітів створює документи на основі наданої вами інформації. Хоча він розроблений відповідно до юридичних вимог, ми наполегливо рекомендуємо перед підписанням перевірити будь-який створений заповіт кваліфікованим адвокатом.",
+    "jurisdiction": "Юридичні вимоги різняться залежно від юрисдикції. Переконайтеся, що ваші документи відповідають законам вашого регіону.",
+    "notLegalAdvice": "Ця послуга не є юридичною консультацією і не повинна розглядатися як така.",
+    "professionalReview": "Для складних спадкових справ, бізнес-інтересів або унікальних сімейних ситуацій наполегливо рекомендується професійна юридична експертиза."
   },
   "terms": {
-    "serviceTerms": "Terms of Service",
-    "privacyPolicy": "Privacy Policy",
-    "dataProcessing": "Data Processing Agreement",
-    "userAgreement": "User Agreement",
-    "acceptanceRequired": "By using LegacyGuard, you agree to our Terms of Service and Privacy Policy.",
-    "lastUpdated": "Last updated: {{date}}",
-    "effectiveDate": "Effective date: {{date}}"
+    "serviceTerms": "Умови надання послуг",
+    "privacyPolicy": "Політика конфіденційності",
+    "dataProcessing": "Угода про обробку даних",
+    "userAgreement": "Угода користувача",
+    "acceptanceRequired": "Використовуючи LegacyGuard, ви погоджуєтеся з нашими Умовами надання послуг та Політикою конфіденційності.",
+    "lastUpdated": "Останнє оновлення: {{date}}",
+    "effectiveDate": "Дата набрання чинності: {{date}}"
   },
   "compliance": {
-    "dataProtection": "Your data is protected in compliance with applicable data protection laws including GDPR and CCPA.",
-    "encryption": "All sensitive information is encrypted using industry-standard encryption methods.",
-    "retention": "Data retention policies are designed to protect your privacy while ensuring your family can access important information when needed.",
-    "access": "You have the right to access, modify, or delete your personal information at any time.",
-    "portability": "You can export your data in standard formats for use with other services."
+    "dataProtection": "Ваші дані захищені відповідно до чинного законодавства про захист даних, включаючи GDPR та CCPA.",
+    "encryption": "Вся конфіденційна інформація шифрується за допомогою стандартних галузевих методів шифрування.",
+    "retention": "Політики зберігання даних розроблені для захисту вашої конфіденційності, водночас забезпечуючи доступ вашої родини до важливої інформації за потреби.",
+    "access": "Ви маєте право доступу, зміни або видалення вашої особистої інформації в будь-який час.",
+    "portability": "Ви можете експортувати свої дані у стандартних форматах для використання з іншими сервісами."
   },
   "executionRequirements": {
-    "witnessRequirements": "Witness Requirements for {{jurisdiction}}",
-    "notaryRequirements": "Notarization Requirements",
-    "signingInstructions": "Proper Signing Instructions",
-    "storageGuidelines": "Secure Storage Guidelines",
-    "legalCompliance": "Legal Compliance Verification"
+    "witnessRequirements": "Вимоги до свідків для {{jurisdiction}}",
+    "notaryRequirements": "Вимоги до нотаріального засвідчення",
+    "signingInstructions": "Інструкції з правильного підписання",
+    "storageGuidelines": "Рекомендації щодо безпечного зберігання",
+    "legalCompliance": "Перевірка відповідності законодавству"
   },
   "cookiePolicy": {
     "cookieTypes": {
-      "analytics": "Analytics cookies help us understand how visitors interact with our website.",
-      "essential": "Essential cookies are necessary for the website to function properly.",
-      "marketing": "Marketing cookies are used to track visitors across websites to display relevant advertisements."
+      "analytics": "Аналітичні файли cookie допомагають нам зрозуміти, як відвідувачі взаємодіють з нашим веб-сайтом.",
+      "essential": "Основні файли cookie необхідні для належної роботи веб-сайту.",
+      "marketing": "Маркетингові файли cookie використовуються для відстеження відвідувачів на веб-сайтах з метою показу релевантної реклами."
     },
-    "howWeUseCookies": "We use cookies to improve your experience, analyze site usage, and provide personalized content.",
-    "introduction": "This Cookie Policy explains how LegacyGuard uses cookies and similar technologies.",
-    "manageCookies": "You can manage your cookie preferences through your browser settings or our cookie preference center.",
-    "title": "Title",
-    "whatAreCookies": "Cookies are small text files that are stored on your device when you visit our website."
+    "howWeUseCookies": "Ми використовуємо файли cookie, щоб покращити ваш досвід, аналізувати використання сайту та надавати персоналізований контент.",
+    "introduction": "Ця Політика щодо файлів cookie пояснює, як LegacyGuard використовує файли cookie та аналогічні технології.",
+    "manageCookies": "Ви можете керувати своїми налаштуваннями щодо файлів cookie через налаштування браузера або наш центр налаштувань файлів cookie.",
+    "title": "Назва",
+    "whatAreCookies": "Файли cookie — це невеликі текстові файли, які зберігаються на вашому пристрої, коли ви відвідуєте наш веб-сайт."
   },
   "header": {
-    "subtitle": "Subtitle",
-    "title": "Title"
+    "title": "Назва"
   },
   "hero": {
-    "headline": "Headline",
-    "subheadline": "Subheadline"
-  },
-  "privacyPolicy": {
-    "introduction": "This Privacy Policy describes how LegacyGuard collects, uses, and protects your personal information.",
-    "lastUpdated": "Last updated: {{date}}",
-    "sections": {
-      "dataSecurity": {
-        "content": "We implement appropriate security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.",
-        "title": "Data Security"
-      },
-      "informationCollection": {
-        "content": "We collect information you provide directly to us, such as when you create an account, use our services, or contact us for support.",
-        "title": "Information We Collect"
-      },
-      "informationSharing": {
-        "content": "We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except as described in this policy.",
-        "title": "Information Sharing"
-      },
-      "informationUse": {
-        "content": "We use your information to provide, maintain, and improve our services, communicate with you, and ensure the security of your account.",
-        "title": "How We Use Your Information"
-      },
-      "yourRights": {
-        "content": "You have the right to access, update, or delete your personal information. You may also opt out of certain communications from us.",
-        "title": "Your Rights"
-      }
-    },
-    "title": "Privacy Policy"
+    "headline": "Заголовок",
+    "subheadline": "Підзаголовок"
   },
   "termsOfService": {
-    "effectiveDate": "Effective date: {{date}}",
-    "introduction": "These Terms of Service govern your use of LegacyGuard's family protection platform and services.",
-    "lastUpdated": "Last updated: {{date}}",
+    "effectiveDate": "Дата набрання чинності: {{date}}",
+    "introduction": "Ці Умови надання послуг регулюють ваше використання платформи та послуг захисту сім'ї LegacyGuard.",
+    "lastUpdated": "Останнє оновлення: {{date}}",
     "sections": {
       "acceptance": {
-        "content": "By accessing or using LegacyGuard, you agree to be bound by these Terms of Service and all applicable laws and regulations.",
-        "title": "Acceptance of Terms"
+        "content": "Отримуючи доступ до LegacyGuard або використовуючи його, ви погоджуєтеся з цими Умовами обслуговування та всіма чинними законами та нормативними актами.",
+        "title": "Прийняття Умов"
       },
       "description": {
-        "content": "LegacyGuard provides digital tools and services to help individuals organize their important information for family protection purposes.",
-        "title": "Service Description"
+        "content": "LegacyGuard надає цифрові інструменти та послуги, які допомагають людям упорядковувати важливу інформацію з метою захисту сім'ї.",
+        "title": "Опис послуги"
       },
       "limitations": {
-        "content": "LegacyGuard provides tools and guidance but does not provide legal advice. We recommend consulting with qualified professionals for complex legal matters.",
-        "title": "Limitations of Liability"
+        "content": "LegacyGuard надає інструменти та рекомендації, але не надає юридичних консультацій. З питань складних юридичних питань ми рекомендуємо звертатися до кваліфікованих фахівців.",
+        "title": "Обмеження відповідальності"
       },
       "privacy": {
-        "content": "Your privacy is important to us. Please review our Privacy Policy to understand how we collect, use, and protect your information.",
-        "title": "Privacy and Data Protection"
+        "content": "Ваша конфіденційність важлива для нас. Будь ласка, ознайомтеся з нашою Політикою конфіденційності, щоб зрозуміти, як ми збираємо, використовуємо та захищаємо вашу інформацію.",
+        "title": "Конфіденційність та захист даних"
       },
       "userResponsibilities": {
-        "content": "You are responsible for maintaining the confidentiality of your account information and for all activities that occur under your account.",
-        "title": "User Responsibilities"
+        "content": "Ви несете відповідальність за збереження конфіденційності інформації вашого облікового запису та за всі дії, що відбуваються під вашим обліковим записом.",
+        "title": "Обов'язки користувача"
       }
     },
-    "title": "Terms of Service"
+    "title": "Умови надання послуг"
   },
   "cookies": {
     "policy": {
       "analytics": {
-        "description": "Description",
+        "description": "Опис",
         "examples": {
-          "ga": "Ga",
-          "gid": "Gid",
-          "session": "Session"
+          "ga": "Га",
+          "gid": "Гід",
+          "session": "Сесія"
         },
-        "purpose": "Purpose",
-        "title": "Title"
+        "purpose": "Мета",
+        "title": "Назва"
       },
       "categories": {
-        "title": "Title"
+        "title": "Назва"
       },
       "contact": {
-        "address": "Address",
-        "addressDetails": "Address details",
-        "description": "Description",
-        "email": "Email",
-        "title": "Title"
+        "address": "Адреса",
+        "addressDetails": "Адресні дані",
+        "description": "Опис",
+        "email": "Електронна пошта",
+        "title": "Назва"
       },
-      "examples": "Examples",
-      "lastUpdated": "Last updated",
+      "examples": "Приклади",
+      "lastUpdated": "Останнє оновлення",
       "manage": {
-        "title": "Title"
+        "title": "Назва"
       },
       "marketing": {
-        "description": "Description",
+        "description": "Опис",
         "examples": {
-          "facebook": "Facebook",
+          "facebook": "Фейсбук",
           "google": "Google"
         },
-        "purpose": "Purpose",
-        "title": "Title"
+        "purpose": "Мета",
+        "title": "Назва"
       },
       "necessary": {
-        "description": "Description",
+        "description": "Опис",
         "examples": {
-          "auth": "Auth",
-          "consent": "Consent",
-          "csrf": "Csrf",
-          "session": "Session"
+          "auth": "Авторизація",
+          "consent": "Згода",
+          "csrf": "CSRF",
+          "session": "Сесія"
         },
-        "purpose": "Purpose",
-        "title": "Title"
+        "purpose": "Мета",
+        "title": "Назва"
       },
       "overview": {
-        "intro": "Intro",
-        "point1": "Point1",
-        "point2": "Point2",
-        "point3": "Point3",
-        "point4": "Point4",
-        "title": "Title"
+        "intro": "Вступ",
+        "point1": "Точка 1",
+        "point2": "Пункт2",
+        "point3": "Пункт3",
+        "point4": "Пункт4",
+        "title": "Назва"
       },
       "preferences": {
-        "description": "Description",
+        "description": "Опис",
         "examples": {
-          "language": "Language",
-          "theme": "Theme",
-          "ui": "Ui"
+          "language": "Мова",
+          "theme": "Тема",
+          "ui": "Інтерфейс користувача"
         },
-        "purpose": "Purpose",
-        "title": "Title"
+        "purpose": "Мета",
+        "title": "Назва"
       },
-      "purpose": "Purpose",
-      "required": "Required",
-      "subtitle": "Subtitle",
-      "title": "Title",
+      "purpose": "Мета",
+      "required": "Обов'язково",
+      "subtitle": "Підзаголовок",
+      "title": "Назва",
       "yourRights": {
-        "description": "Description",
-        "right1": "Right1",
-        "right2": "Right2",
-        "right3": "Right3",
-        "right4": "Right4",
-        "title": "Title"
+        "description": "Опис",
+        "right1": "Право1",
+        "right2": "Право2",
+        "right3": "Право3",
+        "right4": "Право4",
+        "title": "Назва"
       }
     }
   }

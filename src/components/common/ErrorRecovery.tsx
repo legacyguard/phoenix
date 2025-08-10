@@ -22,7 +22,7 @@ export const ErrorRecovery: React.FC<ErrorRecoveryProps> = ({
   customMessage,
   className = ''
 }) => {
-  const { t } = useTranslation('ui');
+  const { t } = useTranslation('ui-common');
   const navigate = useNavigate();
 
   if (!error) return null;

@@ -1,635 +1,641 @@
 {
   "actions": {
-    "next": "[RU] Next",
-    "previous": "[RU] Previous"
+    "consultLawyer": "Запланируйте юридическую консультацию",
+    "createCodicil": "Создать поправку (кодицил)",
+    "deleteWill": "Удалить это завещание",
+    "downloadPdf": "Загрузить PDF-документ",
+    "generateWill": "Составить окончательное завещание",
+    "next": "Следующий",
+    "previous": "Предыдущий",
+    "printWill": "Распечатать завещание",
+    "saveProgress": "Сохранить текущий прогресс",
+    "shareWill": "Поделиться с семьей",
+    "updateWill": "Обновление информации о завещании"
   },
   "errors": {
-    "assetLoadFailed": "We could not load your asset information. Please refresh and try again.",
-    "generationFailed": "We encountered an issue generating your will. Please review your information and try again.",
-    "jurisdictionRequired": "Please select your legal jurisdiction to ensure compliance",
-    "loadFailed": "We could not load your will information. Please refresh the page and try again.",
-    "printFailed": "We encountered an issue preparing your document for printing. Please try again.",
-    "saveFailed": "We could not save your progress. Please check your connection and try again.",
-    "sharingFailed": "We could not share your will. Please verify the recipients and try again.",
-    "validationFailed": "Please review and correct the highlighted information before proceeding"
+    "assetLoadFailed": "Не удалось загрузить информацию о вашем активе. Обновите страницу и повторите попытку.",
+    "generationFailed": "Возникла проблема при формировании вашего завещания. Проверьте информацию и повторите попытку.",
+    "jurisdictionRequired": "Пожалуйста, выберите свою юрисдикцию, чтобы обеспечить соблюдение",
+    "loadFailed": "Не удалось загрузить информацию о вашем завещании. Обновите страницу и повторите попытку.",
+    "printFailed": "Возникла проблема при подготовке вашего документа к печати. Попробуйте ещё раз.",
+    "saveFailed": "Не удалось сохранить ваш прогресс. Проверьте подключение и повторите попытку.",
+    "validationFailed": "Пожалуйста, проверьте и исправьте выделенную информацию, прежде чем продолжить."
   },
   "execution": {
-    "copyDistribution": "Distribution of Copies",
-    "familyNotification": "Informing Your Family",
-    "legalRequirements": "Legal Requirements for {{jurisdiction}}",
-    "notarization": "Notarization Requirements",
-    "notaryOptional": "Notary recommended but not required",
-    "notaryRequired": "Notary public required",
-    "numberOfCopies": "Recommended Number of Copies",
-    "safeStorage": "Secure Storage Locations",
-    "selfProving": "Self-Proving Affidavit",
-    "signingInstructions": "Signing Instructions",
-    "signingOrder": "Proper Signing Order",
-    "storageRecommendations": "Storage Recommendations",
-    "subtitle": "Making your will legally binding",
-    "title": "Will Execution Requirements",
-    "witnessCount": "{{count}} witnesses required",
-    "witnessInstructions": "Witness Instructions",
-    "witnessQualifications": "Witness Qualifications",
-    "witnessRequirements": "Witness Requirements"
+    "copyDistribution": "Распространение копий",
+    "familyNotification": "Информирование вашей семьи",
+    "legalRequirements": "Юридические требования для {{jurisdiction}}",
+    "notarization": "Требования нотариального заверения",
+    "notaryOptional": "Нотариальное заверение рекомендуется, но не обязательно",
+    "notaryRequired": "Требуется нотариус",
+    "numberOfCopies": "Рекомендуемое количество копий",
+    "safeStorage": "Безопасные места хранения",
+    "selfProving": "Самодоказательственное заявление под присягой",
+    "signingInstructions": "Инструкции по подписанию",
+    "signingOrder": "Правильный порядок подписания",
+    "storageRecommendations": "Рекомендации по хранению",
+    "subtitle": "Придание вашей воле юридической силы",
+    "title": "Требования к исполнению завещания",
+    "witnessCount": "{{count}} требуются свидетели",
+    "witnessInstructions": "Инструкции для свидетелей",
+    "witnessQualifications": "Квалификация свидетеля",
+    "witnessRequirements": "Требования к свидетелям"
   },
   "form": {
     "assetSelection": {
-      "allAssets": "Include All Current and Future Assets",
-      "assetCategories": "Asset Categories to Include",
-      "businessInterests": "Business Interests",
-      "excludedAssets": "Assets to Exclude",
-      "jointAssets": "Jointly Owned Assets",
-      "residualDescription": "All remaining assets not specifically mentioned elsewhere in this will",
-      "residualEstate": "Residual Estate",
-      "selectAssets": "Choose Assets to Include",
-      "specificAssets": "Select Specific Assets Only"
+      "allAssets": "Включить все текущие и будущие активы",
+      "assetCategories": "Категории активов, которые следует включить",
+      "businessInterests": "Деловые интересы",
+      "excludedAssets": "Активы для исключения",
+      "jointAssets": "Совместно принадлежащие активы",
+      "residualDescription": "Все оставшиеся активы, не упомянутые конкретно в другом месте настоящего завещания",
+      "residualEstate": "Остаточное имущество",
+      "selectAssets": "Выберите активы для включения",
+      "specificAssets": "Выбрать только определенные активы"
     },
     "distribution": {
-      "addBeneficiary": "Add Additional Beneficiary",
-      "ageRestriction": "Age Requirement",
-      "allocation": "Inheritance Allocation",
-      "beneficiaryName": "Beneficiary's Full Name",
-      "conditions": "Conditions or Restrictions",
-      "contingentBeneficiary": "Contingent Beneficiary",
-      "percentage": "Percentage of Estate",
-      "primaryBeneficiary": "Primary Beneficiary",
-      "relationship": "Relationship to You",
-      "specificAmount": "Specific Dollar Amount",
-      "specificAsset": "Specific Asset or Property",
-      "trustProvision": "Trust Arrangement"
+      "addBeneficiary": "Добавить дополнительного бенефициара",
+      "ageRestriction": "Возрастной ценз",
+      "allocation": "Распределение наследства",
+      "beneficiaryName": "Полное имя бенефициара",
+      "conditions": "Условия или ограничения",
+      "contingentBeneficiary": "Условный бенефициар",
+      "percentage": "Процент имущества",
+      "primaryBeneficiary": "Основной бенефициар",
+      "relationship": "Отношение к вам",
+      "specificAmount": "Конкретная сумма в долларах",
+      "specificAsset": "Конкретный актив или имущество",
+      "trustProvision": "Трастовое соглашение"
     },
     "executor": {
-      "alternateExecutor": "Alternate Executor",
-      "bondRequirement": "Bond Requirement",
-      "coExecutors": "Co-Executors",
-      "executorAddress": "Executor's Address",
-      "executorCompensation": "Executor Compensation",
-      "executorDuties": "Executor Responsibilities",
-      "executorInstructions": "Special Instructions for Executor",
-      "executorName": "Executor's Full Name",
-      "executorRelationship": "Relationship to You",
-      "primaryExecutor": "Primary Executor",
-      "specialPowers": "Special Powers Granted"
+      "alternateExecutor": "Альтернативный исполнитель",
+      "bondRequirement": "Требование к залогу",
+      "coExecutors": "Соисполнители",
+      "executorAddress": "Адрес исполнителя",
+      "executorCompensation": "Вознаграждение исполнителю",
+      "executorDuties": "Обязанности исполнителя",
+      "executorInstructions": "Специальные инструкции для исполнителя",
+      "executorName": "Полное имя исполнителя",
+      "executorRelationship": "Отношение к вам",
+      "primaryExecutor": "Основной исполнитель",
+      "specialPowers": "Предоставлены особые полномочия"
     },
     "guardianship": {
-      "backupGuardian": "Alternate Guardian",
-      "educationPreferences": "Education Preferences",
-      "guardianCompensation": "Guardian Compensation",
-      "guardianFor": "Guardian for {{childName}}",
-      "guardianInstructions": "Instructions for Guardian",
-      "guardianQualifications": "Guardian Qualifications",
-      "minorChildren": "Minor Children Requiring Guardianship",
-      "primaryGuardian": "Primary Guardian",
-      "religiousUpbringing": "Religious Upbringing Preferences"
+      "backupGuardian": "Альтернативный опекун",
+      "educationPreferences": "Настройки образования",
+      "guardianCompensation": "Компенсация опекуну",
+      "guardianFor": "Хранитель для {{childName}}",
+      "guardianInstructions": "Инструкции для Guardian",
+      "guardianQualifications": "Требования к опекуну",
+      "minorChildren": "Несовершеннолетние дети, нуждающиеся в опеке",
+      "primaryGuardian": "Основной опекун",
+      "religiousUpbringing": "Предпочтения в религиозном воспитании"
     },
     "personalInfo": {
-      "addChild": "Add Child",
-      "addressHelper": "Your primary residence address",
-      "childDateOfBirth": "Child's Date of Birth",
-      "childName": "Child's Full Name",
-      "childRelation": "Relationship to You",
-      "children": "Children and Dependents",
-      "currentAddress": "Current Legal Address",
-      "dateOfBirth": "Date of Birth",
-      "fullLegalName": "Complete Legal Name",
-      "fullLegalNameHelper": "Enter your name exactly as it appears on official documents",
-      "maritalStatus": "Marital Status",
-      "marriageDate": "Date of Marriage",
-      "placeOfBirth": "Place of Birth",
-      "previousWills": "Previous Wills",
-      "revokesPrevious": "This will revokes all previous wills",
-      "spouseName": "Spouse's Full Legal Name"
+      "addChild": "Добавить ребенка",
+      "addressHelper": "Ваш основной адрес проживания",
+      "childDateOfBirth": "Дата рождения ребенка",
+      "childName": "Полное имя ребенка",
+      "childRelation": "Отношение к вам",
+      "children": "Дети и иждивенцы",
+      "currentAddress": "Текущий юридический адрес",
+      "dateOfBirth": "Дата рождения",
+      "fullLegalName": "Полное официальное имя",
+      "fullLegalNameHelper": "Введите свое имя точно так, как оно указано в официальных документах.",
+      "maritalStatus": "Семейное положение",
+      "marriageDate": "Дата брака",
+      "placeOfBirth": "Место рождения",
+      "previousWills": "Предыдущие завещания",
+      "revokesPrevious": "Это завещание отменяет все предыдущие завещания.",
+      "spouseName": "Полное официальное имя супруга(и)"
     },
     "provisions": {
-      "burialCremation": "Burial or Cremation Preference",
-      "businessContinuation": "Business Continuation Plans",
-      "charitableBequests": "Charitable Donations",
-      "charityAmount": "Donation Amount",
-      "charityName": "Charitable Organization",
-      "digitalAssets": "Digital Asset Instructions",
-      "funeralInstructions": "Specific Funeral Instructions",
-      "funeralWishes": "Funeral and Burial Preferences",
-      "organDonation": "Organ Donation Wishes",
-      "personalMessages": "Personal Messages to Family",
-      "petCare": "Pet Care Arrangements",
-      "specialInstructions": "Special Instructions"
+      "burialCremation": "Предпочтение отдается захоронению или кремации",
+      "businessContinuation": "Планы продолжения бизнеса",
+      "charitableBequests": "Благотворительные пожертвования",
+      "charityAmount": "Сумма пожертвования",
+      "charityName": "Благотворительная организация",
+      "digitalAssets": "Инструкции по цифровым активам",
+      "funeralInstructions": "Конкретные инструкции по похоронам",
+      "funeralWishes": "Предпочтения относительно похорон и погребения",
+      "organDonation": "Пожелания по донорству органов",
+      "personalMessages": "Личные сообщения семье",
+      "petCare": "Организация ухода за домашними животными",
+      "specialInstructions": "Специальные инструкции"
     }
   },
   "generator": {
-    "of": "[RU] Of",
-    "step": "[RU] Step"
+    "continueWill": "Продолжить подготовку завещания",
+    "description": "Составьте полное, юридически действительное завещание, отвечающее требованиям вашей юрисдикции и уникальным потребностям вашей семьи.",
+    "getStarted": "Начните создавать свое завещание",
+    "importance": "Обеспечение юридического оформления ваших желаний и защиты вашей семьи",
+    "newWill": "Создать новое завещание",
+    "of": "Из",
+    "professionalGuidance": "Профессиональная юридическая помощь рекомендуется для сложных имущественных вопросов",
+    "step": "Шаг",
+    "subtitle": "Создайте юридически обоснованное завещание под профессиональным руководством",
+    "title": "Генератор завещания и последней воли",
+    "viewExisting": "Просмотреть текущее завещание"
   },
   "legal": {
-    "consultLawyer": "Consult with Attorney",
-    "disclaimer": "Important Legal Disclaimer",
-    "estatePlanning": "Comprehensive Estate Planning",
-    "jurisdiction": "Legal Jurisdiction",
-    "lawsApply": "Laws of {{jurisdiction}} will apply",
-    "lawyerRecommended": "We strongly recommend consulting with a qualified attorney for complex estates",
-    "legalCompliance": "Legal Compliance Verification",
-    "notLegalAdvice": "This service does not constitute legal advice",
-    "probateProcess": "Probate Process Information",
-    "professionalGuidance": "Professional legal guidance is recommended",
-    "professionalReview": "Professional Legal Review",
-    "selectJurisdiction": "Please select your legal jurisdiction",
-    "taxImplications": "Tax Implications"
+    "consultLawyer": "Проконсультируйтесь с адвокатом",
+    "disclaimer": "Важное юридическое уведомление",
+    "estatePlanning": "Комплексное планирование имущества",
+    "jurisdiction": "Правовая юрисдикция",
+    "lawsApply": "Будут применяться законы {{jurisdiction}}",
+    "lawyerRecommended": "Мы настоятельно рекомендуем проконсультироваться с квалифицированным юристом по вопросам сложного имущества.",
+    "legalCompliance": "Проверка соответствия законодательству",
+    "notLegalAdvice": "Данная услуга не является юридической консультацией.",
+    "probateProcess": "Информация о процессе наследования",
+    "professionalGuidance": "Рекомендуется профессиональная юридическая консультация.",
+    "professionalReview": "Профессиональный юридический обзор",
+    "selectJurisdiction": "Пожалуйста, выберите вашу юрисдикцию",
+    "taxImplications": "Налоговые последствия"
   },
   "notifications": {
-    "consultationScheduled": "Legal consultation has been scheduled",
-    "documentShared": "Will has been shared with designated family members",
-    "executionComplete": "Will execution has been recorded",
-    "progressSaved": "Your progress has been saved",
-    "reminderSet": "Will review reminder has been set",
-    "willDeleted": "Will has been permanently deleted",
-    "willGenerated": "Your will has been successfully generated",
-    "willUpdated": "Will has been updated successfully"
+    "consultationScheduled": "Юридическая консультация была назначена",
+    "documentShared": "Завещание было передано определенным членам семьи.",
+    "executionComplete": "Исполнение завещания зарегистрировано",
+    "progressSaved": "Ваш прогресс сохранен.",
+    "willDeleted": "Завещание было удалено навсегда.",
+    "willUpdated": "Будет успешно обновлено"
   },
   "preview": {
-    "article": "ARTICLE {{number}}",
-    "draftWatermark": "DRAFT - NOT LEGALLY BINDING",
-    "executionInstructions": "EXECUTION INSTRUCTIONS",
-    "lastWillTestament": "LAST WILL AND TESTAMENT",
-    "of": "OF",
-    "pageNumber": "Page {{current}} of {{total}}",
-    "reviewCarefully": "Please review this document carefully before proceeding",
-    "section": "Section {{number}}",
-    "signatureSection": "SIGNATURE SECTION",
-    "subtitle": "Review your complete will before finalizing",
-    "title": "Will Document Preview",
-    "witnessClause": "WITNESS CLAUSE"
+    "article": "СТАТЬЯ {{number}}",
+    "draftWatermark": "ПРОЕКТ - НЕ ИМЕЕТ ОБЯЗАТЕЛЬНОЙ ЮРИДИЧЕСКОЙ СИЛЫ",
+    "executionInstructions": "ИНСТРУКЦИИ ПО ИСПОЛНЕНИЮ",
+    "lastWillTestament": "ПОСЛЕДНЯЯ ВОЛЯ И ЗАВЕЩАНИЕ",
+    "of": "ИЗ",
+    "pageNumber": "Страница {{current}} из {{total}}",
+    "reviewCarefully": "Пожалуйста, внимательно ознакомьтесь с этим документом, прежде чем продолжить.",
+    "section": "Раздел {{number}}",
+    "signatureSection": "РАЗДЕЛ ПОДПИСИ",
+    "subtitle": "Пересмотрите свое полное завещание перед его окончательным оформлением.",
+    "title": "Предварительный просмотр документа Will",
+    "witnessClause": "ПУНКТ О СВИДЕТЕЛЬСТВЕ"
   },
   "status": {
-    "archived": "Archived Version",
-    "draft": "Draft in Progress",
-    "executed": "Legally Executed",
-    "generated": "Generated - Requires Execution",
-    "outdated": "Requires Update",
-    "underReview": "Under Professional Review"
+    "archived": "Архивная версия",
+    "draft": "Проект в процессе разработки",
+    "executed": "Юридически исполнено",
+    "generated": "Сгенерировано — требует выполнения",
+    "outdated": "Требуется обновление"
+  },
+  "policy": {
+    "duration": {
+      "session": "Сессия",
+      "minutes": "{{count}} минут",
+      "hours": "{{count}} часов",
+      "days": "{{count}} дней",
+      "months": "{{count}} месяцев",
+      "years": "{{count}} лет"
+    }
   },
   "steps": {
     "assets": {
-      "description": "Select which assets you wish to include in your will and how they should be distributed.",
-      "subtitle": "Your valuable possessions",
-      "title": "Asset Distribution"
+      "description": "Выберите, какие активы вы хотите включить в завещание и как они будут распределены.",
+      "subtitle": "Ваши ценные вещи",
+      "title": "Распределение активов"
     },
     "beneficiaries": {
-      "description": "Designate who will receive your assets and in what proportions.",
-      "subtitle": "Your chosen recipients",
-      "title": "Beneficiary Designations"
+      "description": "Определите, кто и в каких пропорциях получит ваши активы.",
+      "subtitle": "Выбранные вами получатели",
+      "title": "Назначение бенефициаров"
     },
     "executor": {
-      "description": "Choose a responsible person to manage your estate and carry out your wishes.",
-      "subtitle": "Your estate representative",
-      "title": "Estate Executor"
+      "description": "Выберите ответственного человека, который будет управлять вашим имуществом и исполнять ваши желания.",
+      "subtitle": "Ваш представитель по недвижимости",
+      "title": "Исполнитель завещания"
     },
     "guardians": {
-      "description": "Appoint trusted individuals to care for minor children or dependents.",
-      "subtitle": "Care for your dependents",
-      "title": "Guardianship Appointments"
+      "description": "Назначьте доверенных лиц для ухода за несовершеннолетними детьми или иждивенцами.",
+      "subtitle": "Забота о ваших иждивенцах",
+      "title": "Назначение опекунов"
     },
     "personal": {
-      "description": "We require your complete legal information to ensure your will meets all legal requirements.",
-      "subtitle": "Your identifying information",
-      "title": "Personal Information"
+      "description": "Нам необходима ваша полная юридическая информация, чтобы убедиться, что ваше завещание соответствует всем юридическим требованиям.",
+      "subtitle": "Ваша идентификационная информация",
+      "title": "Персональная информация"
     },
     "preferences": {
-      "description": "Include any special instructions, charitable bequests, or personal wishes.",
-      "subtitle": "Additional instructions",
-      "title": "Special Provisions"
+      "description": "Включите любые особые указания, благотворительные завещания или личные пожелания.",
+      "subtitle": "Дополнительные инструкции",
+      "title": "Специальные положения"
     },
     "review": {
-      "description": "Carefully review all details before generating your legal document.",
-      "subtitle": "Verify all information",
-      "title": "Final Review"
+      "description": "Внимательно проверьте все детали перед составлением юридического документа.",
+      "subtitle": "Проверьте всю информацию",
+      "title": "Окончательный обзор"
     }
   },
   "validation": {
-    "jurisdictionRequired": "[RU] Jurisdiction required",
-    "requiredField": "[RU] Required field"
+    "addressRequired": "Требуется ваш текущий юридический адрес",
+    "allocationError": "Общее процентное распределение должно быть равно 100%.",
+    "beneficiaryRequired": "Необходимо указать хотя бы одного бенефициара.",
+    "dobRequired": "Для юридической силы требуется дата рождения.",
+    "duplicateBeneficiary": "Этот бенефициар уже добавлен",
+    "executorBeneficiaryConflict": "Исполнитель и основной бенефициар, как правило, должны быть разными лицами.",
+    "executorRequired": "Должен быть назначен по крайней мере один исполнитель",
+    "guardianRequired": "Для несовершеннолетних детей требуется назначение опекуна.",
+    "invalidDate": "Пожалуйста, введите правильную дату",
+    "invalidPercentage": "Процент должен быть от 0 до 100.",
+    "jurisdictionRequired": "Требуется юрисдикция",
+    "requiredField": "Обязательное поле"
   },
   "will": {
-    "address": "Address",
-    "addressPlaceholder": "Address placeholder",
+    "address": "Адрес",
+    "addressPlaceholder": "Заполнитель адреса",
     "allocation": {
-      "addBeneficiary": "Add beneficiary",
-      "description": "Description",
-      "generalEstate": "General estate",
-      "percentage": "Percentage",
+      "addBeneficiary": "Добавить бенефициара",
+      "description": "Описание",
+      "generalEstate": "Генеральное имущество",
+      "percentage": "Процент",
       "tips": {
-        "tip1": "Tip1",
-        "tip2": "Tip2",
-        "tip3": "Tip3",
-        "title": "Title"
+        "tip1": "Совет 1",
+        "tip2": "Совет 2",
+        "tip3": "Совет 3",
+        "title": "Заголовок"
       },
-      "title": "Title",
-      "total": "Total"
+      "title": "Заголовок",
+      "total": "Общий"
     },
     "beneficiaries": {
-      "addBeneficiary": "Add beneficiary",
-      "allocation": "Allocation",
-      "alternativeBeneficiary": "Alternative beneficiary",
-      "alternativePlaceholder": "Alternative placeholder",
-      "beneficiaryNumber": "Beneficiary number",
-      "currentAllocation": "Current allocation",
-      "description": "Description",
-      "identification": "Identification",
-      "identificationPlaceholder": "Identification placeholder",
-      "importantNotes": "Important notes",
-      "name": "Name",
-      "noBeneficiaries": "No beneficiaries",
-      "note1": "Note1",
-      "note2": "Note2",
-      "note3": "Note3",
-      "ofEstate": "Of estate",
-      "title": "Title"
+      "addBeneficiary": "Добавить бенефициара",
+      "allocation": "Распределение",
+      "alternativeBeneficiary": "Альтернативный бенефициар",
+      "alternativePlaceholder": "Альтернативный заполнитель",
+      "beneficiaryNumber": "Номер бенефициара",
+      "currentAllocation": "Текущее распределение",
+      "description": "Описание",
+      "identification": "Идентификация",
+      "identificationPlaceholder": "Заполнитель идентификации",
+      "importantNotes": "Важные примечания",
+      "name": "Имя",
+      "noBeneficiaries": "Нет бенефициаров",
+      "note1": "Примечание 1",
+      "note2": "Примечание 2",
+      "note3": "Примечание 3",
+      "ofEstate": "имущества",
+      "title": "Заголовок"
     },
     "beneficiary": {
-      "name": "Name",
-      "namePlaceholder": "Name placeholder",
-      "relationship": "Relationship",
-      "relationshipPlaceholder": "Relationship placeholder"
+      "name": "Имя",
+      "namePlaceholder": "Имя заполнителя",
+      "relationship": "Отношение",
+      "relationshipPlaceholder": "Заполнитель отношений"
     },
-    "birthDate": "Birth date",
-    "birthDatePlaceholder": "Birth date placeholder",
+    "birthDate": "Дата рождения",
+    "birthDatePlaceholder": "Заполнитель даты рождения",
     "buttons": {
-      "saveWillInfo": "Save will info",
-      "saving": "Saving"
+      "saveWillInfo": "Сохранить информацию о завещании",
+      "saving": "Экономия"
     },
-    "countryRequirements": "Country requirements",
+    "countryRequirements": "Требования страны",
     "descriptions": {
-      "executorDescription": "Executor description",
-      "physicalLocationDescription": "Physical location description",
-      "statusDescription": "Status description"
+      "executorDescription": "Описание исполнителя",
+      "physicalLocationDescription": "Описание физического местоположения",
+      "statusDescription": "Описание статуса"
     },
     "executor": {
-      "addAlternative": "Add alternative",
-      "address": "Address",
-      "addressPlaceholder": "Address placeholder",
-      "alternative": "Alternative",
-      "alternativeDescription": "Alternative description",
-      "description": "Description",
-      "name": "Name",
-      "namePlaceholder": "Name placeholder",
-      "phone": "Phone",
-      "phonePlaceholder": "Phone placeholder",
-      "primary": "Primary",
-      "relationship": "Relationship",
-      "relationshipPlaceholder": "Relationship placeholder",
-      "responsibilities": "Responsibilities",
-      "responsibility1": "Responsibility1",
-      "responsibility2": "Responsibility2",
-      "responsibility3": "Responsibility3",
-      "responsibility4": "Responsibility4",
-      "title": "Title"
+      "addAlternative": "Добавить альтернативу",
+      "address": "Адрес",
+      "addressPlaceholder": "Заполнитель адреса",
+      "alternative": "Альтернатива",
+      "alternativeDescription": "Альтернативное описание",
+      "description": "Описание",
+      "name": "Имя",
+      "namePlaceholder": "Имя заполнителя",
+      "phone": "Телефон",
+      "phonePlaceholder": "Заполнитель для телефона",
+      "primary": "Начальный",
+      "relationship": "Отношение",
+      "relationshipPlaceholder": "Заполнитель отношений",
+      "responsibilities": "Обязанности",
+      "responsibility1": "Ответственность1",
+      "responsibility2": "Ответственность2",
+      "responsibility3": "Ответственность3",
+      "responsibility4": "Ответственность4",
+      "title": "Заголовок"
     },
     "fields": {
-      "additionalNotes": "Additional notes",
-      "currentStatus": "Current status",
-      "executorContact": "Executor contact",
-      "physicalLocation": "Physical location"
+      "additionalNotes": "Дополнительные примечания",
+      "currentStatus": "Текущий статус",
+      "executorContact": "Контакт с исполнителем",
+      "physicalLocation": "Физическое местоположение"
     },
     "legalReview": {
-      "button": "Button",
-      "description": "Description",
-      "title": "Title"
+      "button": "Кнопка",
+      "description": "Описание",
+      "title": "Заголовок"
     },
-    "name": "Name",
-    "namePlaceholder": "Name placeholder",
+    "name": "Имя",
+    "namePlaceholder": "Имя заполнителя",
     "options": {
-      "noContactSelected": "No contact selected"
+      "noContactSelected": "Контакт не выбран"
     },
     "placeholders": {
-      "additionalNotes": "Additional notes",
-      "physicalLocation": "Physical location",
-      "selectContact": "Select contact"
+      "additionalNotes": "Дополнительные примечания",
+      "physicalLocation": "Физическое местоположение",
+      "selectContact": "Выберите контакт"
     },
     "preview": {
-      "address": "Address",
-      "alternative": "Alternative",
-      "alternativeExecutor": "Alternative executor",
-      "date": "Date",
-      "description": "Description",
-      "executor": "Executor",
-      "generatePDF": "Generate p d f",
-      "legalRequirements": "Legal requirements",
-      "name": "Name",
-      "ofEstate": "Of estate",
-      "place": "Place",
-      "print": "Print",
-      "signature": "Signature",
-      "title": "Title",
-      "witnesses": "Witnesses"
+      "address": "Адрес",
+      "alternative": "Альтернатива",
+      "alternativeExecutor": "Альтернативный исполнитель",
+      "date": "Дата",
+      "description": "Описание",
+      "executor": "Исполнитель",
+      "generatePDF": "Генерировать p d f",
+      "legalRequirements": "Юридические требования",
+      "name": "Имя",
+      "ofEstate": "имущества",
+      "place": "Место",
+      "print": "Печать",
+      "signature": "Подпись",
+      "title": "Заголовок",
+      "witnesses": "Свидетели"
     },
     "requirements": {
-      "handwriting": "Handwriting",
-      "notarization": "Notarization",
-      "typed": "Typed",
-      "witnesses": "Witnesses"
+      "handwriting": "Почерк",
+      "notarization": "Нотариальное заверение",
+      "typed": "Напечатано",
+      "witnesses": "Свидетели"
     },
-    "selectCountry": "Select country",
-    "selectedCountryDetails": "Selected country details",
+    "selectCountry": "Выберите страну",
+    "selectedCountryDetails": "Подробности о выбранной стране",
     "status": {
-      "draft": "Draft",
-      "notarized": "Notarized",
-      "stored": "Stored",
-      "updated": "Updated"
+      "draft": "Черновик",
+      "notarized": "Нотариально заверенный",
+      "stored": "Сохранено",
+      "updated": "Обновлено"
     },
-    "testatorInfo": "Testator info",
+    "testatorInfo": "Информация о завещателе",
     "validation": {
-      "allocation100": "Allocation100"
+      "allocation100": "Распределение100"
     },
     "willPreview": {
       "_2": "2",
-      "critical_execution_instruction_3": "Critical execution instruction 3",
-      "professional_review_4": "Professional review 4",
-      "provided_by_certified_legal_pa_5": "Provided by certified legal pa 5"
+      "critical_execution_instruction_3": "Критическая инструкция по выполнению 3",
+      "professional_review_4": "Профессиональный обзор 4",
+      "provided_by_certified_legal_pa_5": "Предоставлено сертифицированным юридическим лицом 5"
     }
   },
   "willGenerator": {
-    "changeCountry": "Change country",
-    "confirmCountry": "Confirm country",
-    "confirmSigned": "Confirm signed",
+    "changeCountry": "Изменить страну",
+    "confirmCountry": "Подтвердите страну",
+    "confirmSigned": "Подтвердить подпись",
     "console": {
-      "willGenerationCompleted": "Will generation completed"
+      "willGenerationCompleted": "Составление завещания завершено"
     },
     "countries": {
-      "AL": "A l",
-      "AT": "A t",
-      "BA": "B a",
-      "BE": "B e",
-      "BG": "B g",
-      "CH": "C h",
+      "AL": "А л",
+      "AT": "В",
+      "BA": "Б а",
+      "BE": "Быть",
+      "BG": "Б г",
+      "CH": "С ч",
       "CY": "C y",
-      "CZ": "C z",
-      "DE": "D e",
-      "DK": "D k",
-      "EE": "E e",
-      "ES": "E s",
-      "FI": "F i",
-      "FR": "F r",
-      "GB": "G b",
-      "GR": "G r",
+      "CZ": "С з",
+      "DE": "Д е",
+      "DK": "Д к",
+      "EE": "Е е",
+      "ES": "Е с",
+      "FI": "Ф я",
+      "FR": "Ф р",
+      "GB": "Г б",
+      "GR": "Г р",
       "HR": "H r",
-      "HU": "H u",
-      "IE": "I e",
-      "IS": "I s",
-      "IT": "I t",
-      "LI": "L i",
-      "LT": "L t",
-      "LU": "L u",
-      "LV": "L v",
-      "MD": "M d",
-      "ME": "M e",
-      "MK": "M k",
-      "MT": "M t",
-      "NL": "N l",
-      "NO": "N o",
-      "PL": "P l",
-      "PT": "P t",
-      "RO": "R o",
-      "RS": "R s",
-      "SE": "S e",
-      "SI": "S i",
-      "SK": "S k",
-      "UA": "U a"
+      "HU": "Х у",
+      "IE": "Я е",
+      "IS": "Является",
+      "IT": "Это",
+      "LI": "Ли",
+      "LT": "Л т",
+      "LU": "Лу",
+      "LV": "Л в",
+      "MD": "М д",
+      "ME": "Мне",
+      "MK": "М к",
+      "MT": "М т",
+      "NL": "Н л",
+      "NO": "Нет",
+      "PL": "П л",
+      "PT": "П т",
+      "RO": "Ро",
+      "RS": "Р с",
+      "SE": "С е",
+      "SI": "Си",
+      "SK": "С к",
+      "UA": "У а"
     },
-    "executionInstructions": "Execution instructions",
-    "failed_to_load_will_template_2": "Failed to load will template 2",
-    "finalizeUpload": "Finalize upload",
-    "fullName": "Full name",
-    "no_template_found_for_this_jur_1": "No template found for this jur 1",
-    "please_confirm_that_you_have_s_3": "Please confirm that you have s 3",
-    "select_a_country_4": "Select a country 4",
+    "executionInstructions": "Инструкции по выполнению",
+    "failed_to_load_will_template_2": "Не удалось загрузить шаблон завещания 2",
+    "finalizeUpload": "Завершить загрузку",
+    "fullName": "Полное имя",
+    "no_template_found_for_this_jur_1": "Шаблон для этого юр. 1 не найден",
+    "please_confirm_that_you_have_s_3": "Пожалуйста, подтвердите, что у вас есть s 3",
+    "select_a_country_4": "Выберите страну 4",
     "steps": {
-      "confirmJurisdiction": "Confirm jurisdiction",
-      "executorBeneficiaries": "Executor beneficiaries",
-      "personalInformation": "Personal information",
-      "reviewGenerate": "Review generate",
-      "signConfirm": "Sign confirm"
+      "confirmJurisdiction": "Подтвердить юрисдикцию",
+      "executorBeneficiaries": "Бенефициары исполнителей",
+      "personalInformation": "Персональная информация",
+      "reviewGenerate": "Обзор генерации",
+      "signConfirm": "Подтвердить подпись"
     }
   },
   "willSync": {
-    "approve": "Approve",
-    "autoApplied": "Auto applied",
+    "approve": "Утвердить",
+    "autoApplied": "Применяется автоматически",
     "changes": {
-      "allocationsModified": "Allocations modified",
-      "assetsAdded": "Assets added",
-      "beneficiariesRemoved": "Beneficiaries removed",
-      "noChanges": "No changes"
+      "allocationsModified": "Распределения изменены",
+      "assetsAdded": "Активы добавлены",
+      "beneficiariesRemoved": "Бенефициары удалены",
+      "noChanges": "Никаких изменений."
     },
-    "reject": "Reject",
-    "viewChanges": "View changes"
+    "reject": "Отклонять",
+    "viewChanges": "Просмотреть изменения"
   },
   "willSyncSettings": {
-    "autoSync": "Auto sync",
-    "autoSyncDescription": "Auto sync description",
-    "frequencyDaily": "Frequency daily",
-    "frequencyImmediate": "Frequency immediate",
-    "frequencyWeekly": "Frequency weekly",
-    "generalDescription": "General description",
-    "generalSettings": "General settings",
-    "requireApproval": "Require approval",
-    "requireApprovalDescription": "Require approval description",
-    "saveError": "Save error",
-    "saved": "Saved",
-    "syncFrequency": "Sync frequency",
-    "triggerDescription": "Trigger description",
-    "triggerSettings": "Trigger settings"
+    "autoSync": "Автоматическая синхронизация",
+    "autoSyncDescription": "Описание автоматической синхронизации",
+    "frequencyDaily": "Частота ежедневно",
+    "frequencyImmediate": "Частота немедленно",
+    "frequencyWeekly": "Частота еженедельно",
+    "generalDescription": "Общее описание",
+    "generalSettings": "Общие настройки",
+    "requireApproval": "Требуется одобрение",
+    "requireApprovalDescription": "Требовать описание утверждения",
+    "saveError": "Ошибка сохранения",
+    "saved": "Сохранено",
+    "syncFrequency": "Частота синхронизации",
+    "triggerDescription": "Описание триггера",
+    "triggerSettings": "Настройки триггера"
   },
   "willVersion": {
-    "added": "Added",
-    "compareDiff": "Compare diff",
-    "comparePrompt": "Compare prompt",
-    "current": "Current",
-    "description": "Description",
-    "modified": "Modified",
-    "removed": "Removed",
-    "restore": "Restore",
-    "title": "Title",
-    "versionNumber": "Version number"
+    "added": "Добавлен",
+    "compareDiff": "Сравнить различия",
+    "comparePrompt": "Сравнить подсказку",
+    "current": "Текущий",
+    "description": "Описание",
+    "modified": "Измененный",
+    "removed": "Удаленный",
+    "restore": "Восстановить",
+    "title": "Заголовок",
+    "versionNumber": "Номер версии"
   },
   "disclaimers": {
-    "general": "LegacyGuard provides tools and guidance for estate planning but does not provide legal advice. For complex estates or specific legal questions, please consult with a qualified attorney in your jurisdiction.",
-    "willGenerator": "The will generator creates documents based on information you provide. While designed to meet legal requirements, we strongly recommend having any generated will reviewed by a qualified attorney before execution.",
-    "jurisdiction": "Legal requirements vary by jurisdiction. Ensure your documents comply with the laws in your area.",
-    "notLegalAdvice": "This service does not constitute legal advice and should not be relied upon as such.",
-    "professionalReview": "For complex estates, business interests, or unique family situations, professional legal review is strongly recommended."
+    "general": "LegacyGuard предоставляет инструменты и рекомендации по планированию наследства, но не предоставляет юридических консультаций. По сложным вопросам, связанным с наследством, или по конкретным юридическим вопросам обратитесь к квалифицированному юристу в вашей юрисдикции.",
+    "willGenerator": "Генератор завещаний создаёт документы на основе предоставленной вами информации. Несмотря на то, что он разработан с учётом юридических требований, мы настоятельно рекомендуем, чтобы любое составленное завещание было проверено квалифицированным юристом перед его составлением.",
+    "jurisdiction": "Юридические требования различаются в зависимости от юрисдикции. Убедитесь, что ваши документы соответствуют законам вашего региона.",
+    "notLegalAdvice": "Данная услуга не является юридической консультацией и не должна рассматриваться как таковая.",
+    "professionalReview": "В случае сложных имущественных вопросов, деловых интересов или уникальных семейных ситуаций настоятельно рекомендуется профессиональная юридическая экспертиза."
   },
   "terms": {
-    "serviceTerms": "Terms of Service",
-    "privacyPolicy": "Privacy Policy",
-    "dataProcessing": "Data Processing Agreement",
-    "userAgreement": "User Agreement",
-    "acceptanceRequired": "By using LegacyGuard, you agree to our Terms of Service and Privacy Policy.",
-    "lastUpdated": "Last updated: {{date}}",
-    "effectiveDate": "Effective date: {{date}}"
+    "serviceTerms": "Условия обслуживания",
+    "privacyPolicy": "политика конфиденциальности",
+    "dataProcessing": "Соглашение об обработке данных",
+    "userAgreement": "Пользовательское соглашение",
+    "acceptanceRequired": "Используя LegacyGuard, вы соглашаетесь с нашими Условиями обслуживания и Политикой конфиденциальности.",
+    "lastUpdated": "Последнее обновление: {{date}}",
+    "effectiveDate": "Дата вступления в силу: {{date}}"
   },
   "compliance": {
-    "dataProtection": "Your data is protected in compliance with applicable data protection laws including GDPR and CCPA.",
-    "encryption": "All sensitive information is encrypted using industry-standard encryption methods.",
-    "retention": "Data retention policies are designed to protect your privacy while ensuring your family can access important information when needed.",
-    "access": "You have the right to access, modify, or delete your personal information at any time.",
-    "portability": "You can export your data in standard formats for use with other services."
+    "dataProtection": "Ваши данные защищены в соответствии с действующими законами о защите данных, включая GDPR и CCPA.",
+    "encryption": "Вся конфиденциальная информация шифруется с использованием стандартных отраслевых методов шифрования.",
+    "retention": "Политики хранения данных призваны защитить вашу конфиденциальность и гарантировать, что ваша семья сможет получить доступ к важной информации при необходимости.",
+    "access": "Вы имеете право доступа, изменения или удаления вашей личной информации в любое время.",
+    "portability": "Вы можете экспортировать свои данные в стандартных форматах для использования в других сервисах."
   },
   "executionRequirements": {
-    "witnessRequirements": "Witness Requirements for {{jurisdiction}}",
-    "notaryRequirements": "Notarization Requirements",
-    "signingInstructions": "Proper Signing Instructions",
-    "storageGuidelines": "Secure Storage Guidelines",
-    "legalCompliance": "Legal Compliance Verification"
+    "witnessRequirements": "Требования к свидетелям для {{jurisdiction}}",
+    "notaryRequirements": "Требования нотариального заверения",
+    "signingInstructions": "Правильные инструкции по подписанию",
+    "storageGuidelines": "Правила безопасного хранения",
+    "legalCompliance": "Проверка соответствия законодательству"
   },
   "cookiePolicy": {
     "cookieTypes": {
-      "analytics": "Analytics cookies help us understand how visitors interact with our website.",
-      "essential": "Essential cookies are necessary for the website to function properly.",
-      "marketing": "Marketing cookies are used to track visitors across websites to display relevant advertisements."
+      "analytics": "Аналитические файлы cookie помогают нам понять, как посетители взаимодействуют с нашим веб-сайтом.",
+      "essential": "Необходимые файлы cookie необходимы для корректной работы веб-сайта.",
+      "marketing": "Маркетинговые файлы cookie используются для отслеживания посетителей веб-сайтов с целью показа релевантной рекламы."
     },
-    "howWeUseCookies": "We use cookies to improve your experience, analyze site usage, and provide personalized content.",
-    "introduction": "This Cookie Policy explains how LegacyGuard uses cookies and similar technologies.",
-    "manageCookies": "You can manage your cookie preferences through your browser settings or our cookie preference center.",
-    "title": "Title",
-    "whatAreCookies": "Cookies are small text files that are stored on your device when you visit our website."
+    "howWeUseCookies": "Мы используем файлы cookie для улучшения вашего опыта, анализа использования сайта и предоставления персонализированного контента.",
+    "introduction": "В настоящей Политике использования файлов cookie объясняется, как LegacyGuard использует файлы cookie и аналогичные технологии.",
+    "manageCookies": "Вы можете управлять настройками файлов cookie через настройки браузера или в нашем центре настроек файлов cookie.",
+    "title": "Заголовок",
+    "whatAreCookies": "Файлы cookie — это небольшие текстовые файлы, которые сохраняются на вашем устройстве при посещении нашего веб-сайта."
   },
   "header": {
-    "subtitle": "Subtitle",
-    "title": "Title"
+    "title": "Заголовок"
   },
   "hero": {
-    "headline": "Headline",
-    "subheadline": "Subheadline"
-  },
-  "privacyPolicy": {
-    "introduction": "This Privacy Policy describes how LegacyGuard collects, uses, and protects your personal information.",
-    "lastUpdated": "Last updated: {{date}}",
-    "sections": {
-      "dataSecurity": {
-        "content": "We implement appropriate security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.",
-        "title": "Data Security"
-      },
-      "informationCollection": {
-        "content": "We collect information you provide directly to us, such as when you create an account, use our services, or contact us for support.",
-        "title": "Information We Collect"
-      },
-      "informationSharing": {
-        "content": "We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except as described in this policy.",
-        "title": "Information Sharing"
-      },
-      "informationUse": {
-        "content": "We use your information to provide, maintain, and improve our services, communicate with you, and ensure the security of your account.",
-        "title": "How We Use Your Information"
-      },
-      "yourRights": {
-        "content": "You have the right to access, update, or delete your personal information. You may also opt out of certain communications from us.",
-        "title": "Your Rights"
-      }
-    },
-    "title": "Privacy Policy"
+    "headline": "Заголовок",
+    "subheadline": "Подзаголовок"
   },
   "termsOfService": {
-    "effectiveDate": "Effective date: {{date}}",
-    "introduction": "These Terms of Service govern your use of LegacyGuard's family protection platform and services.",
-    "lastUpdated": "Last updated: {{date}}",
+    "effectiveDate": "Дата вступления в силу: {{date}}",
+    "introduction": "Настоящие Условия обслуживания регулируют использование вами платформы и услуг семейной защиты LegacyGuard.",
+    "lastUpdated": "Последнее обновление: {{date}}",
     "sections": {
       "acceptance": {
-        "content": "By accessing or using LegacyGuard, you agree to be bound by these Terms of Service and all applicable laws and regulations.",
-        "title": "Acceptance of Terms"
+        "content": "Получая доступ к LegacyGuard или используя его, вы соглашаетесь соблюдать настоящие Условия обслуживания и все применимые законы и правила.",
+        "title": "Принятие условий"
       },
       "description": {
-        "content": "LegacyGuard provides digital tools and services to help individuals organize their important information for family protection purposes.",
-        "title": "Service Description"
+        "content": "LegacyGuard предоставляет цифровые инструменты и услуги, помогающие людям организовать важную информацию в целях защиты семьи.",
+        "title": "Описание услуги"
       },
       "limitations": {
-        "content": "LegacyGuard provides tools and guidance but does not provide legal advice. We recommend consulting with qualified professionals for complex legal matters.",
-        "title": "Limitations of Liability"
+        "content": "LegacyGuard предоставляет инструменты и рекомендации, но не предоставляет юридические консультации. По сложным юридическим вопросам мы рекомендуем обращаться к квалифицированным специалистам.",
+        "title": "Ограничения ответственности"
       },
       "privacy": {
-        "content": "Your privacy is important to us. Please review our Privacy Policy to understand how we collect, use, and protect your information.",
-        "title": "Privacy and Data Protection"
+        "content": "Ваша конфиденциальность важна для нас. Ознакомьтесь с нашей Политикой конфиденциальности, чтобы понять, как мы собираем, используем и защищаем вашу информацию.",
+        "title": "Конфиденциальность и защита данных"
       },
       "userResponsibilities": {
-        "content": "You are responsible for maintaining the confidentiality of your account information and for all activities that occur under your account.",
-        "title": "User Responsibilities"
+        "content": "Вы несете ответственность за сохранение конфиденциальности информации вашей учетной записи и за все действия, которые происходят под вашей учетной записью.",
+        "title": "Обязанности пользователя"
       }
     },
-    "title": "Terms of Service"
+    "title": "Условия обслуживания"
   },
   "cookies": {
     "policy": {
       "analytics": {
-        "description": "Description",
+        "description": "Описание",
         "examples": {
-          "ga": "Ga",
-          "gid": "Gid",
-          "session": "Session"
+          "ga": "Га",
+          "gid": "Гид",
+          "session": "Сессия"
         },
-        "purpose": "Purpose",
-        "title": "Title"
+        "purpose": "Цель",
+        "title": "Заголовок"
       },
       "categories": {
-        "title": "Title"
+        "title": "Заголовок"
       },
       "contact": {
-        "address": "Address",
-        "addressDetails": "Address details",
-        "description": "Description",
-        "email": "Email",
-        "title": "Title"
+        "address": "Адрес",
+        "addressDetails": "Адресные данные",
+        "description": "Описание",
+        "email": "Электронная почта",
+        "title": "Заголовок"
       },
-      "examples": "Examples",
-      "lastUpdated": "Last updated",
+      "examples": "Примеры",
+      "lastUpdated": "Последнее обновление",
       "manage": {
-        "title": "Title"
+        "title": "Заголовок"
       },
       "marketing": {
-        "description": "Description",
+        "description": "Описание",
         "examples": {
-          "facebook": "Facebook",
+          "facebook": "Фейсбук",
           "google": "Google"
         },
-        "purpose": "Purpose",
-        "title": "Title"
+        "purpose": "Цель",
+        "title": "Заголовок"
       },
       "necessary": {
-        "description": "Description",
+        "description": "Описание",
         "examples": {
-          "auth": "Auth",
-          "consent": "Consent",
+          "auth": "Авторизация",
+          "consent": "Согласие",
           "csrf": "Csrf",
-          "session": "Session"
+          "session": "Сессия"
         },
-        "purpose": "Purpose",
-        "title": "Title"
+        "purpose": "Цель",
+        "title": "Заголовок"
       },
       "overview": {
-        "intro": "Intro",
-        "point1": "Point1",
-        "point2": "Point2",
-        "point3": "Point3",
-        "point4": "Point4",
-        "title": "Title"
+        "intro": "Вступление",
+        "point1": "Точка 1",
+        "point2": "Пункт 2",
+        "point3": "Пункт 3",
+        "point4": "Пункт 4",
+        "title": "Заголовок"
       },
       "preferences": {
-        "description": "Description",
+        "description": "Описание",
         "examples": {
-          "language": "Language",
-          "theme": "Theme",
-          "ui": "Ui"
+          "language": "Язык",
+          "theme": "Тема",
+          "ui": "Уи"
         },
-        "purpose": "Purpose",
-        "title": "Title"
+        "purpose": "Цель",
+        "title": "Заголовок"
       },
-      "purpose": "Purpose",
-      "required": "Required",
-      "subtitle": "Subtitle",
-      "title": "Title",
+      "purpose": "Цель",
+      "required": "Необходимый",
+      "subtitle": "Подзаголовок",
+      "title": "Заголовок",
       "yourRights": {
-        "description": "Description",
-        "right1": "Right1",
-        "right2": "Right2",
+        "description": "Описание",
+        "right1": "Правый1",
+        "right2": "Правый2",
         "right3": "Right3",
-        "right4": "Right4",
-        "title": "Title"
+        "right4": "Правый4",
+        "title": "Заголовок"
       }
     }
   }

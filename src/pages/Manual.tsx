@@ -41,7 +41,7 @@ interface Instructions {
 }
 
 export const Manual: React.FC = () => {
-    const { t } = useTranslation('ui');
+    const { t } = useTranslation('ui-common');
   const [contacts, setContacts] = useState<Contact[]>([]);
   const [documents, setDocuments] = useState<Document[]>([]);
   const [instructions, setInstructions] = useState<Instructions | null>(null);

@@ -1,635 +1,641 @@
 {
   "actions": {
-    "next": "[MT] Next",
-    "previous": "[MT] Previous"
+    "consultLawyer": "Skeda Konsultazzjoni Legali",
+    "createCodicil": "Oħloq Emenda (Kodiċill)",
+    "deleteWill": "Ħassar Dan it-Testment",
+    "downloadPdf": "Niżżel id-Dokument PDF",
+    "generateWill": "Ġenera t-Testment Finali",
+    "next": "Li jmiss",
+    "previous": "Preċedenti",
+    "printWill": "Ipprintja Dokument tat-Testment",
+    "saveProgress": "Issejvja l-Progress Kurrenti",
+    "shareWill": "Aqsam mal-Familja",
+    "updateWill": "Aġġorna l-Informazzjoni tat-Testment"
   },
   "errors": {
-    "assetLoadFailed": "We could not load your asset information. Please refresh and try again.",
-    "generationFailed": "We encountered an issue generating your will. Please review your information and try again.",
-    "jurisdictionRequired": "Please select your legal jurisdiction to ensure compliance",
-    "loadFailed": "We could not load your will information. Please refresh the page and try again.",
-    "printFailed": "We encountered an issue preparing your document for printing. Please try again.",
-    "saveFailed": "We could not save your progress. Please check your connection and try again.",
-    "sharingFailed": "We could not share your will. Please verify the recipients and try again.",
-    "validationFailed": "Please review and correct the highlighted information before proceeding"
+    "assetLoadFailed": "Ma stajniex iniżżlu l-informazzjoni tal-assi tiegħek. Jekk jogħġbok aġġorna u erġa' pprova.",
+    "generationFailed": "Iltqajna ma' problema biex niġġeneraw it-testment tiegħek. Jekk jogħġbok irrevedi l-informazzjoni tiegħek u erġa' pprova.",
+    "jurisdictionRequired": "Jekk jogħġbok agħżel il-ġurisdizzjoni legali tiegħek biex tiżgura l-konformità",
+    "loadFailed": "Ma stajniex iniżżlu l-informazzjoni tat-testment tiegħek. Jekk jogħġbok aġġorna l-paġna u erġa' pprova.",
+    "printFailed": "Iltqajna ma' problema fit-tħejjija tad-dokument tiegħek għall-istampar. Jekk jogħġbok erġa' pprova.",
+    "saveFailed": "Ma stajniex insalvaw il-progress tiegħek. Jekk jogħġbok iċċekkja l-konnessjoni tiegħek u erġa' pprova.",
+    "validationFailed": "Jekk jogħġbok irrevedi u kkoreġi l-informazzjoni enfasizzata qabel ma tipproċedi"
   },
   "execution": {
-    "copyDistribution": "Distribution of Copies",
-    "familyNotification": "Informing Your Family",
-    "legalRequirements": "Legal Requirements for {{jurisdiction}}",
-    "notarization": "Notarization Requirements",
-    "notaryOptional": "Notary recommended but not required",
-    "notaryRequired": "Notary public required",
-    "numberOfCopies": "Recommended Number of Copies",
-    "safeStorage": "Secure Storage Locations",
-    "selfProving": "Self-Proving Affidavit",
-    "signingInstructions": "Signing Instructions",
-    "signingOrder": "Proper Signing Order",
-    "storageRecommendations": "Storage Recommendations",
-    "subtitle": "Making your will legally binding",
-    "title": "Will Execution Requirements",
-    "witnessCount": "{{count}} witnesses required",
-    "witnessInstructions": "Witness Instructions",
-    "witnessQualifications": "Witness Qualifications",
-    "witnessRequirements": "Witness Requirements"
+    "copyDistribution": "Distribuzzjoni ta' Kopji",
+    "familyNotification": "Tinforma lill-Familja Tiegħek",
+    "legalRequirements": "Rekwiżiti Legali għal {{jurisdiction}}",
+    "notarization": "Rekwiżiti ta' Notarizzazzjoni",
+    "notaryOptional": "Nutar rakkomandat iżda mhux meħtieġ",
+    "notaryRequired": "Nutar pubbliku meħtieġ",
+    "numberOfCopies": "Numru Rakkomandat ta' Kopji",
+    "safeStorage": "Postijiet ta' Ħażna Sikuri",
+    "selfProving": "Affidavit li Jipprova lilha nnifisha",
+    "signingInstructions": "Istruzzjonijiet għall-Iffirmar",
+    "signingOrder": "Ordni ta' Firma Tajba",
+    "storageRecommendations": "Rakkomandazzjonijiet għall-Ħażna",
+    "subtitle": "Li tagħmel it-testment tiegħek legalment vinkolanti",
+    "title": "Rekwiżiti tal-Eżekuzzjoni tat-Testment",
+    "witnessCount": "{{count}} xhieda meħtieġa",
+    "witnessInstructions": "Istruzzjonijiet tax-Xhieda",
+    "witnessQualifications": "Kwalifiki tax-Xhieda",
+    "witnessRequirements": "Rekwiżiti tax-Xhieda"
   },
   "form": {
     "assetSelection": {
-      "allAssets": "Include All Current and Future Assets",
-      "assetCategories": "Asset Categories to Include",
-      "businessInterests": "Business Interests",
-      "excludedAssets": "Assets to Exclude",
-      "jointAssets": "Jointly Owned Assets",
-      "residualDescription": "All remaining assets not specifically mentioned elsewhere in this will",
-      "residualEstate": "Residual Estate",
-      "selectAssets": "Choose Assets to Include",
-      "specificAssets": "Select Specific Assets Only"
+      "allAssets": "Inkludi l-Assi Kurrenti u Futuri Kollha",
+      "assetCategories": "Kategoriji ta' Assi li għandhom jiġu Inklużi",
+      "businessInterests": "Interessi Kummerċjali",
+      "excludedAssets": "Assi li għandhom jiġu esklużi",
+      "jointAssets": "Assi ta' Proprjetà Konġunta",
+      "residualDescription": "L-assi kollha li fadal mhux imsemmija speċifikament x'imkien ieħor f'dan it-testment",
+      "residualEstate": "Proprjetà Residwa",
+      "selectAssets": "Agħżel l-Assi li Tinkludi",
+      "specificAssets": "Agħżel Assi Speċifiċi Biss"
     },
     "distribution": {
-      "addBeneficiary": "Add Additional Beneficiary",
-      "ageRestriction": "Age Requirement",
-      "allocation": "Inheritance Allocation",
-      "beneficiaryName": "Beneficiary's Full Name",
-      "conditions": "Conditions or Restrictions",
-      "contingentBeneficiary": "Contingent Beneficiary",
-      "percentage": "Percentage of Estate",
-      "primaryBeneficiary": "Primary Beneficiary",
-      "relationship": "Relationship to You",
-      "specificAmount": "Specific Dollar Amount",
-      "specificAsset": "Specific Asset or Property",
-      "trustProvision": "Trust Arrangement"
+      "addBeneficiary": "Żid Benefiċjarju Addizzjonali",
+      "ageRestriction": "Rekwiżit tal-Età",
+      "allocation": "Allokazzjoni tal-Wirt",
+      "beneficiaryName": "Isem Sħiħ tal-Benefiċjarju",
+      "conditions": "Kundizzjonijiet jew Restrizzjonijiet",
+      "contingentBeneficiary": "Benefiċjarju Kontinġenti",
+      "percentage": "Perċentwal tal-Patrimonju",
+      "primaryBeneficiary": "Benefiċjarju Primarju",
+      "relationship": "Relazzjoni Miegħek",
+      "specificAmount": "Ammont Speċifiku f'Dollari",
+      "specificAsset": "Assett jew Proprjetà Speċifiku",
+      "trustProvision": "Arranġament ta' Fiduċja"
     },
     "executor": {
-      "alternateExecutor": "Alternate Executor",
-      "bondRequirement": "Bond Requirement",
-      "coExecutors": "Co-Executors",
-      "executorAddress": "Executor's Address",
-      "executorCompensation": "Executor Compensation",
-      "executorDuties": "Executor Responsibilities",
-      "executorInstructions": "Special Instructions for Executor",
-      "executorName": "Executor's Full Name",
-      "executorRelationship": "Relationship to You",
-      "primaryExecutor": "Primary Executor",
-      "specialPowers": "Special Powers Granted"
+      "alternateExecutor": "Eżekutur Alternattiv",
+      "bondRequirement": "Rekwiżit ta' Bond",
+      "coExecutors": "Ko-Eżekuturi",
+      "executorAddress": "Indirizz tal-Eżekutur",
+      "executorCompensation": "Kumpens tal-Eżekutur",
+      "executorDuties": "Responsabbiltajiet tal-Eżekutur",
+      "executorInstructions": "Istruzzjonijiet Speċjali għall-Eżekutur",
+      "executorName": "Isem Sħiħ tal-Eżekutur",
+      "executorRelationship": "Relazzjoni Miegħek",
+      "primaryExecutor": "Eżekutur Primarju",
+      "specialPowers": "Setgħat Speċjali Mogħtija"
     },
     "guardianship": {
-      "backupGuardian": "Alternate Guardian",
-      "educationPreferences": "Education Preferences",
-      "guardianCompensation": "Guardian Compensation",
-      "guardianFor": "Guardian for {{childName}}",
-      "guardianInstructions": "Instructions for Guardian",
-      "guardianQualifications": "Guardian Qualifications",
-      "minorChildren": "Minor Children Requiring Guardianship",
-      "primaryGuardian": "Primary Guardian",
-      "religiousUpbringing": "Religious Upbringing Preferences"
+      "backupGuardian": "Kustodju Alternattiv",
+      "educationPreferences": "Preferenzi fl-Edukazzjoni",
+      "guardianCompensation": "Kumpens għall-Gwardjani",
+      "guardianFor": "Gwardjan għal {{childName}}",
+      "guardianInstructions": "Istruzzjonijiet għall-Gwardjan",
+      "guardianQualifications": "Kwalifiki tal-Gwardjan",
+      "minorChildren": "Tfal Minuri li Jeħtieġu Kustodja",
+      "primaryGuardian": "Gwardjan Primarju",
+      "religiousUpbringing": "Preferenzi fit-Trobbija Reliġjuża"
     },
     "personalInfo": {
-      "addChild": "Add Child",
-      "addressHelper": "Your primary residence address",
-      "childDateOfBirth": "Child's Date of Birth",
-      "childName": "Child's Full Name",
-      "childRelation": "Relationship to You",
-      "children": "Children and Dependents",
-      "currentAddress": "Current Legal Address",
-      "dateOfBirth": "Date of Birth",
-      "fullLegalName": "Complete Legal Name",
-      "fullLegalNameHelper": "Enter your name exactly as it appears on official documents",
-      "maritalStatus": "Marital Status",
-      "marriageDate": "Date of Marriage",
-      "placeOfBirth": "Place of Birth",
-      "previousWills": "Previous Wills",
-      "revokesPrevious": "This will revokes all previous wills",
-      "spouseName": "Spouse's Full Legal Name"
+      "addChild": "Żid Tifel/Tifla",
+      "addressHelper": "L-indirizz tar-residenza primarja tiegħek",
+      "childDateOfBirth": "Data tat-Twelid tat-Tifel/Tifla",
+      "childName": "Isem Sħiħ tat-Tifel/Tifla",
+      "childRelation": "Relazzjoni Miegħek",
+      "children": "Tfal u Dipendenti",
+      "currentAddress": "Indirizz Legali Attwali",
+      "dateOfBirth": "Data tat-Twelid",
+      "fullLegalName": "Isem Legali Sħiħ",
+      "fullLegalNameHelper": "Daħħal ismek eżatt kif jidher fuq id-dokumenti uffiċjali",
+      "maritalStatus": "Stat Ċivili",
+      "marriageDate": "Data taż-Żwieġ",
+      "placeOfBirth": "Post tat-Twelid",
+      "previousWills": "Testmenti Preċedenti",
+      "revokesPrevious": "Dan it-testment jirrevoka t-testmenti preċedenti kollha",
+      "spouseName": "Isem Legali Sħiħ tal-Konjuġi/Konjuġa"
     },
     "provisions": {
-      "burialCremation": "Burial or Cremation Preference",
-      "businessContinuation": "Business Continuation Plans",
-      "charitableBequests": "Charitable Donations",
-      "charityAmount": "Donation Amount",
-      "charityName": "Charitable Organization",
-      "digitalAssets": "Digital Asset Instructions",
-      "funeralInstructions": "Specific Funeral Instructions",
-      "funeralWishes": "Funeral and Burial Preferences",
-      "organDonation": "Organ Donation Wishes",
-      "personalMessages": "Personal Messages to Family",
-      "petCare": "Pet Care Arrangements",
-      "specialInstructions": "Special Instructions"
+      "burialCremation": "Preferenza ta' Difna jew Kremazzjoni",
+      "businessContinuation": "Pjanijiet ta' Kontinwazzjoni tan-Negozju",
+      "charitableBequests": "Donazzjonijiet Karitattivi",
+      "charityAmount": "Ammont tad-Donazzjoni",
+      "charityName": "Organizzazzjoni Karitattiva",
+      "digitalAssets": "Istruzzjonijiet dwar l-Assi Diġitali",
+      "funeralInstructions": "Istruzzjonijiet Speċifiċi tal-Funeral",
+      "funeralWishes": "Preferenzi dwar il-Funeral u d-Dfin",
+      "organDonation": "Xewqat għad-Donazzjoni tal-Organi",
+      "personalMessages": "Messaġġi Personali lill-Familja",
+      "petCare": "Arranġamenti għall-Kura tal-Annimali Domestiċi",
+      "specialInstructions": "Istruzzjonijiet Speċjali"
     }
   },
   "generator": {
-    "of": "[MT] Of",
-    "step": "[MT] Step"
+    "continueWill": "Kompli t-Tħejjija tat-Testment",
+    "description": "Iġġenera testment komprensiv u legalment validu mfassal skont ir-rekwiżiti tal-ġurisdizzjoni tiegħek u l-bżonnijiet uniċi tal-familja tiegħek.",
+    "getStarted": "Ibda l-Ħolqien tat-Testment Tiegħek",
+    "importance": "Niżguraw li x-xewqat tiegħek ikunu dokumentati legalment u li l-familja tiegħek tkun protetta",
+    "newWill": "Oħloq Testment Ġdid",
+    "of": "Ta'",
+    "professionalGuidance": "Gwida legali professjonali rakkomandata għal wirt kumpless",
+    "step": "Pass",
+    "subtitle": "Oħloq testment legalment sod b'gwida professjonali",
+    "title": "Ġeneratur tat-Testment u r-Rieda",
+    "viewExisting": "Reviżjoni tat-Testment Attwali"
   },
   "legal": {
-    "consultLawyer": "Consult with Attorney",
-    "disclaimer": "Important Legal Disclaimer",
-    "estatePlanning": "Comprehensive Estate Planning",
-    "jurisdiction": "Legal Jurisdiction",
-    "lawsApply": "Laws of {{jurisdiction}} will apply",
-    "lawyerRecommended": "We strongly recommend consulting with a qualified attorney for complex estates",
-    "legalCompliance": "Legal Compliance Verification",
-    "notLegalAdvice": "This service does not constitute legal advice",
-    "probateProcess": "Probate Process Information",
-    "professionalGuidance": "Professional legal guidance is recommended",
-    "professionalReview": "Professional Legal Review",
-    "selectJurisdiction": "Please select your legal jurisdiction",
-    "taxImplications": "Tax Implications"
+    "consultLawyer": "Ikkonsulta mal-Avukat",
+    "disclaimer": "Ċaħda ta' Responsabbiltà Legali Importanti",
+    "estatePlanning": "Ippjanar Komprensiv tal-Patrimonju",
+    "jurisdiction": "Ġurisdizzjoni Legali",
+    "lawsApply": "Japplikaw il-liġijiet ta' {{jurisdiction}}",
+    "lawyerRecommended": "Nirrakkomandaw bil-qawwa li tikkonsulta ma' avukat kwalifikat għal wirt kumpless.",
+    "legalCompliance": "Verifika tal-Konformità Legali",
+    "notLegalAdvice": "Dan is-servizz ma jikkostitwixxix parir legali",
+    "probateProcess": "Informazzjoni dwar il-Proċess tal-Probat",
+    "professionalGuidance": "Gwida legali professjonali hija rakkomandata",
+    "professionalReview": "Reviżjoni Legali Professjonali",
+    "selectJurisdiction": "Jekk jogħġbok agħżel il-ġurisdizzjoni legali tiegħek",
+    "taxImplications": "Implikazzjonijiet tat-Taxxa"
   },
   "notifications": {
-    "consultationScheduled": "Legal consultation has been scheduled",
-    "documentShared": "Will has been shared with designated family members",
-    "executionComplete": "Will execution has been recorded",
-    "progressSaved": "Your progress has been saved",
-    "reminderSet": "Will review reminder has been set",
-    "willDeleted": "Will has been permanently deleted",
-    "willGenerated": "Your will has been successfully generated",
-    "willUpdated": "Will has been updated successfully"
+    "consultationScheduled": "Ġiet skedata konsultazzjoni legali",
+    "documentShared": "It-testment ġie kondiviż mal-membri tal-familja magħżula",
+    "executionComplete": "L-eżekuzzjoni tat-testment ġiet irreġistrata",
+    "progressSaved": "Il-progress tiegħek ġie salvat",
+    "willDeleted": "It-testment ġie mħassar b'mod permanenti",
+    "willUpdated": "It-testment ġie aġġornat b'suċċess"
   },
   "preview": {
-    "article": "ARTICLE {{number}}",
-    "draftWatermark": "DRAFT - NOT LEGALLY BINDING",
-    "executionInstructions": "EXECUTION INSTRUCTIONS",
-    "lastWillTestament": "LAST WILL AND TESTAMENT",
-    "of": "OF",
-    "pageNumber": "Page {{current}} of {{total}}",
-    "reviewCarefully": "Please review this document carefully before proceeding",
-    "section": "Section {{number}}",
-    "signatureSection": "SIGNATURE SECTION",
-    "subtitle": "Review your complete will before finalizing",
-    "title": "Will Document Preview",
-    "witnessClause": "WITNESS CLAUSE"
+    "article": "ARTIKLU {{number}}",
+    "draftWatermark": "ABBOZZ - MHUX LEGALMENT VINCOLANTI",
+    "executionInstructions": "ISTRUZZJONIJIET TA' EŻEKUZZJONI",
+    "lastWillTestament": "L-AĦĦAR TESTAMENT",
+    "of": "TA'",
+    "pageNumber": "Paġna {{current}} minn {{total}}",
+    "reviewCarefully": "Jekk jogħġbok irrevedi dan id-dokument bir-reqqa qabel ma tipproċedi",
+    "section": "Taqsima {{number}}",
+    "signatureSection": "TAQSIMA TAL-FIRMA",
+    "subtitle": "Irrevedi t-testment sħiħ tiegħek qabel ma tiffinalizzah",
+    "title": "Previżjoni tad-Dokument tat-Testment",
+    "witnessClause": "KLAWŻOLA TAX-XHIEDA"
   },
   "status": {
-    "archived": "Archived Version",
-    "draft": "Draft in Progress",
-    "executed": "Legally Executed",
-    "generated": "Generated - Requires Execution",
-    "outdated": "Requires Update",
-    "underReview": "Under Professional Review"
+    "archived": "Verżjoni Arkivjata",
+    "draft": "Abbozz fil-Progress",
+    "executed": "Eżegwit Legalment",
+    "generated": "Ġenerat - Jeħtieġ Eżekuzzjoni",
+    "outdated": "Jeħtieġ Aġġornament"
+  },
+  "policy": {
+    "duration": {
+      "session": "Sessjoni",
+      "minutes": "{{count}} minuti",
+      "hours": "{{count}} sigħat",
+      "days": "{{count}} jiem",
+      "months": "{{count}} xhur",
+      "years": "{{count}} snin"
+    }
   },
   "steps": {
     "assets": {
-      "description": "Select which assets you wish to include in your will and how they should be distributed.",
-      "subtitle": "Your valuable possessions",
-      "title": "Asset Distribution"
+      "description": "Agħżel liema assi tixtieq tinkludi fit-testment tiegħek u kif għandhom jitqassmu.",
+      "subtitle": "Il-possessjonijiet prezzjużi tiegħek",
+      "title": "Distribuzzjoni tal-Assi"
     },
     "beneficiaries": {
-      "description": "Designate who will receive your assets and in what proportions.",
-      "subtitle": "Your chosen recipients",
-      "title": "Beneficiary Designations"
+      "description": "Innomina min se jirċievi l-assi tiegħek u f'liema proporzjonijiet.",
+      "subtitle": "Ir-riċevituri magħżula tiegħek",
+      "title": "Nominazzjonijiet tal-Benefiċjarji"
     },
     "executor": {
-      "description": "Choose a responsible person to manage your estate and carry out your wishes.",
-      "subtitle": "Your estate representative",
-      "title": "Estate Executor"
+      "description": "Agħżel persuna responsabbli biex tamministra l-proprjetà tiegħek u twettaq xewqatek.",
+      "subtitle": "Ir-rappreżentant tal-proprjetà tiegħek",
+      "title": "Eżekutur tal-Patrimonju"
     },
     "guardians": {
-      "description": "Appoint trusted individuals to care for minor children or dependents.",
-      "subtitle": "Care for your dependents",
-      "title": "Guardianship Appointments"
+      "description": "Ħatret individwi fdati biex jieħdu ħsieb tfal minorenni jew persuni dipendenti.",
+      "subtitle": "Ħu ħsieb id-dipendenti tiegħek",
+      "title": "Ħatriet ta' Kustodja"
     },
     "personal": {
-      "description": "We require your complete legal information to ensure your will meets all legal requirements.",
-      "subtitle": "Your identifying information",
-      "title": "Personal Information"
+      "description": "Neħtieġu l-informazzjoni legali sħiħa tiegħek biex niżguraw li t-testment tiegħek jissodisfa r-rekwiżiti legali kollha.",
+      "subtitle": "L-informazzjoni ta' identifikazzjoni tiegħek",
+      "title": "Informazzjoni Personali"
     },
     "preferences": {
-      "description": "Include any special instructions, charitable bequests, or personal wishes.",
-      "subtitle": "Additional instructions",
-      "title": "Special Provisions"
+      "description": "Inkludi kwalunkwe istruzzjoni speċjali, legati ta' karità, jew xewqat personali.",
+      "subtitle": "Istruzzjonijiet addizzjonali",
+      "title": "Dispożizzjonijiet Speċjali"
     },
     "review": {
-      "description": "Carefully review all details before generating your legal document.",
-      "subtitle": "Verify all information",
-      "title": "Final Review"
+      "description": "Irrevedi bir-reqqa d-dettalji kollha qabel ma tiġġenera d-dokument legali tiegħek.",
+      "subtitle": "Ivverifika l-informazzjoni kollha",
+      "title": "Reviżjoni Finali"
     }
   },
   "validation": {
-    "jurisdictionRequired": "[MT] Jurisdiction required",
-    "requiredField": "[MT] Required field"
+    "addressRequired": "L-indirizz legali attwali tiegħek huwa meħtieġ",
+    "allocationError": "L-allokazzjoni perċentwali totali trid tkun ugwali għal 100%",
+    "beneficiaryRequired": "Irid jiġi speċifikat mill-inqas benefiċjarju wieħed",
+    "dobRequired": "Id-data tat-twelid hija meħtieġa għall-validità legali",
+    "duplicateBeneficiary": "Dan il-benefiċjarju diġà ġie miżjud",
+    "executorBeneficiaryConflict": "L-eżekutur u l-benefiċjarju primarju għandhom tipikament ikunu individwi differenti",
+    "executorRequired": "Irid jiġi nnominat mill-inqas eżekutur wieħed",
+    "guardianRequired": "Hija meħtieġa l-ħatra ta' kustodju għal tfal minorenni",
+    "invalidDate": "Jekk jogħġbok daħħal data valida",
+    "invalidPercentage": "Il-perċentwal irid ikun bejn 0 u 100",
+    "jurisdictionRequired": "Ġurisdizzjoni meħtieġa",
+    "requiredField": "Qasam meħtieġ"
   },
   "will": {
-    "address": "Address",
-    "addressPlaceholder": "Address placeholder",
+    "address": "Indirizz",
+    "addressPlaceholder": "Spazju għall-indirizz",
     "allocation": {
-      "addBeneficiary": "Add beneficiary",
-      "description": "Description",
-      "generalEstate": "General estate",
-      "percentage": "Percentage",
+      "addBeneficiary": "Żid benefiċjarju",
+      "description": "Deskrizzjoni",
+      "generalEstate": "Proprjetà ġenerali",
+      "percentage": "Perċentwal",
       "tips": {
         "tip1": "Tip1",
         "tip2": "Tip2",
         "tip3": "Tip3",
-        "title": "Title"
+        "title": "Titlu"
       },
-      "title": "Title",
+      "title": "Titlu",
       "total": "Total"
     },
     "beneficiaries": {
-      "addBeneficiary": "Add beneficiary",
-      "allocation": "Allocation",
-      "alternativeBeneficiary": "Alternative beneficiary",
-      "alternativePlaceholder": "Alternative placeholder",
-      "beneficiaryNumber": "Beneficiary number",
-      "currentAllocation": "Current allocation",
-      "description": "Description",
-      "identification": "Identification",
-      "identificationPlaceholder": "Identification placeholder",
-      "importantNotes": "Important notes",
-      "name": "Name",
-      "noBeneficiaries": "No beneficiaries",
-      "note1": "Note1",
-      "note2": "Note2",
-      "note3": "Note3",
-      "ofEstate": "Of estate",
-      "title": "Title"
+      "addBeneficiary": "Żid benefiċjarju",
+      "allocation": "Allokazzjoni",
+      "alternativeBeneficiary": "Benefiċjarju alternattiv",
+      "alternativePlaceholder": "Spazju alternattiv",
+      "beneficiaryNumber": "Numru tal-benefiċjarju",
+      "currentAllocation": "Allokazzjoni attwali",
+      "description": "Deskrizzjoni",
+      "identification": "Identifikazzjoni",
+      "identificationPlaceholder": "Spazju għall-identifikazzjoni",
+      "importantNotes": "Noti importanti",
+      "name": "Isem",
+      "noBeneficiaries": "L-ebda benefiċjarju",
+      "note1": "Nota1",
+      "note2": "Nota2",
+      "note3": "Nota3",
+      "ofEstate": "Tal-proprjetà",
+      "title": "Titlu"
     },
     "beneficiary": {
-      "name": "Name",
-      "namePlaceholder": "Name placeholder",
-      "relationship": "Relationship",
-      "relationshipPlaceholder": "Relationship placeholder"
+      "name": "Isem",
+      "namePlaceholder": "Spazju għall-isem",
+      "relationship": "Relazzjoni",
+      "relationshipPlaceholder": "Spazju post-relazzjonali"
     },
-    "birthDate": "Birth date",
-    "birthDatePlaceholder": "Birth date placeholder",
+    "birthDate": "Data tat-twelid",
+    "birthDatePlaceholder": "Spazju riżervat għad-data tat-twelid",
     "buttons": {
-      "saveWillInfo": "Save will info",
-      "saving": "Saving"
+      "saveWillInfo": "Informazzjoni dwar it-testment tas-salvataġġ",
+      "saving": "Iffrankar"
     },
-    "countryRequirements": "Country requirements",
+    "countryRequirements": "Rekwiżiti tal-pajjiż",
     "descriptions": {
-      "executorDescription": "Executor description",
-      "physicalLocationDescription": "Physical location description",
-      "statusDescription": "Status description"
+      "executorDescription": "Deskrizzjoni tal-eżekutur",
+      "physicalLocationDescription": "Deskrizzjoni tal-post fiżiku",
+      "statusDescription": "Deskrizzjoni tal-istatus"
     },
     "executor": {
-      "addAlternative": "Add alternative",
-      "address": "Address",
-      "addressPlaceholder": "Address placeholder",
-      "alternative": "Alternative",
-      "alternativeDescription": "Alternative description",
-      "description": "Description",
-      "name": "Name",
-      "namePlaceholder": "Name placeholder",
-      "phone": "Phone",
-      "phonePlaceholder": "Phone placeholder",
-      "primary": "Primary",
-      "relationship": "Relationship",
-      "relationshipPlaceholder": "Relationship placeholder",
-      "responsibilities": "Responsibilities",
-      "responsibility1": "Responsibility1",
-      "responsibility2": "Responsibility2",
-      "responsibility3": "Responsibility3",
-      "responsibility4": "Responsibility4",
-      "title": "Title"
+      "addAlternative": "Żid alternattiva",
+      "address": "Indirizz",
+      "addressPlaceholder": "Spazju għall-indirizz",
+      "alternative": "Alternattiva",
+      "alternativeDescription": "Deskrizzjoni alternattiva",
+      "description": "Deskrizzjoni",
+      "name": "Isem",
+      "namePlaceholder": "Spazju għall-isem",
+      "phone": "Telefon",
+      "phonePlaceholder": "Spazju għat-telefon",
+      "primary": "Primarja",
+      "relationship": "Relazzjoni",
+      "relationshipPlaceholder": "Spazju post-relazzjonali",
+      "responsibilities": "Responsabbiltajiet",
+      "responsibility1": "Responsabbiltà1",
+      "responsibility2": "Responsabbiltà2",
+      "responsibility3": "Responsabbiltà3",
+      "responsibility4": "Responsabbiltà4",
+      "title": "Titlu"
     },
     "fields": {
-      "additionalNotes": "Additional notes",
-      "currentStatus": "Current status",
-      "executorContact": "Executor contact",
-      "physicalLocation": "Physical location"
+      "additionalNotes": "Noti addizzjonali",
+      "currentStatus": "Status attwali",
+      "executorContact": "Kuntatt tal-eżekutur",
+      "physicalLocation": "Post fiżiku"
     },
     "legalReview": {
-      "button": "Button",
-      "description": "Description",
-      "title": "Title"
+      "button": "Buttuna",
+      "description": "Deskrizzjoni",
+      "title": "Titlu"
     },
-    "name": "Name",
-    "namePlaceholder": "Name placeholder",
+    "name": "Isem",
+    "namePlaceholder": "Spazju għall-isem",
     "options": {
-      "noContactSelected": "No contact selected"
+      "noContactSelected": "L-ebda kuntatt ma ġie magħżul"
     },
     "placeholders": {
-      "additionalNotes": "Additional notes",
-      "physicalLocation": "Physical location",
-      "selectContact": "Select contact"
+      "additionalNotes": "Noti addizzjonali",
+      "physicalLocation": "Post fiżiku",
+      "selectContact": "Agħżel kuntatt"
     },
     "preview": {
-      "address": "Address",
-      "alternative": "Alternative",
-      "alternativeExecutor": "Alternative executor",
-      "date": "Date",
-      "description": "Description",
-      "executor": "Executor",
-      "generatePDF": "Generate p d f",
-      "legalRequirements": "Legal requirements",
-      "name": "Name",
-      "ofEstate": "Of estate",
-      "place": "Place",
-      "print": "Print",
-      "signature": "Signature",
-      "title": "Title",
-      "witnesses": "Witnesses"
+      "address": "Indirizz",
+      "alternative": "Alternattiva",
+      "alternativeExecutor": "Esekutur alternattiv",
+      "date": "Data",
+      "description": "Deskrizzjoni",
+      "executor": "Eżekutur",
+      "generatePDF": "Iġġenera p d f",
+      "legalRequirements": "Rekwiżiti legali",
+      "name": "Isem",
+      "ofEstate": "Tal-proprjetà",
+      "place": "Post",
+      "print": "Stampa",
+      "signature": "Firma",
+      "title": "Titlu",
+      "witnesses": "Xhieda"
     },
     "requirements": {
-      "handwriting": "Handwriting",
-      "notarization": "Notarization",
-      "typed": "Typed",
-      "witnesses": "Witnesses"
+      "handwriting": "Kitba bl-idejn",
+      "notarization": "Notarizzazzjoni",
+      "typed": "Ittajpjat",
+      "witnesses": "Xhieda"
     },
-    "selectCountry": "Select country",
-    "selectedCountryDetails": "Selected country details",
+    "selectCountry": "Agħżel pajjiż",
+    "selectedCountryDetails": "Dettalji magħżula tal-pajjiż",
     "status": {
-      "draft": "Draft",
-      "notarized": "Notarized",
-      "stored": "Stored",
-      "updated": "Updated"
+      "draft": "Abbozz",
+      "notarized": "Notarili",
+      "stored": "Maħżun",
+      "updated": "Aġġornat"
     },
-    "testatorInfo": "Testator info",
+    "testatorInfo": "Informazzjoni dwar it-testatur",
     "validation": {
-      "allocation100": "Allocation100"
+      "allocation100": "Allokazzjoni100"
     },
     "willPreview": {
       "_2": "2",
-      "critical_execution_instruction_3": "Critical execution instruction 3",
-      "professional_review_4": "Professional review 4",
-      "provided_by_certified_legal_pa_5": "Provided by certified legal pa 5"
+      "critical_execution_instruction_3": "Istruzzjoni ta' eżekuzzjoni kritika 3",
+      "professional_review_4": "Reviżjoni professjonali 4",
+      "provided_by_certified_legal_pa_5": "Provdut minn avukat ċertifikat pa 5"
     }
   },
   "willGenerator": {
-    "changeCountry": "Change country",
-    "confirmCountry": "Confirm country",
-    "confirmSigned": "Confirm signed",
+    "changeCountry": "Ibdel il-pajjiż",
+    "confirmCountry": "Ikkonferma l-pajjiż",
+    "confirmSigned": "Ikkonferma l-firma",
     "console": {
-      "willGenerationCompleted": "Will generation completed"
+      "willGenerationCompleted": "Ġenerazzjoni tat-testment kompluta"
     },
     "countries": {
       "AL": "A l",
       "AT": "A t",
       "BA": "B a",
-      "BE": "B e",
-      "BG": "B g",
-      "CH": "C h",
-      "CY": "C y",
-      "CZ": "C z",
+      "BE": "Be",
+      "BG": "Bg",
+      "CH": "Ċ h",
+      "CY": "Ċ y",
+      "CZ": "Ċz",
       "DE": "D e",
-      "DK": "D k",
+      "DK": "Dk",
       "EE": "E e",
       "ES": "E s",
       "FI": "F i",
-      "FR": "F r",
-      "GB": "G b",
-      "GR": "G r",
+      "FR": "Fr",
+      "GB": "Ġb",
+      "GR": "Gr",
       "HR": "H r",
-      "HU": "H u",
-      "IE": "I e",
-      "IS": "I s",
-      "IT": "I t",
-      "LI": "L i",
-      "LT": "L t",
-      "LU": "L u",
+      "HU": "Ħu",
+      "IE": "Jiena e",
+      "IS": "Jiena",
+      "IT": "Jiena t",
+      "LI": "Li",
+      "LT": "L-t",
+      "LU": "Lu",
       "LV": "L v",
-      "MD": "M d",
-      "ME": "M e",
-      "MK": "M k",
-      "MT": "M t",
-      "NL": "N l",
-      "NO": "N o",
+      "MD": "Md",
+      "ME": "Jien",
+      "MK": "Mk",
+      "MT": "Mt",
+      "NL": "Nl",
+      "NO": "Le",
       "PL": "P l",
-      "PT": "P t",
+      "PT": "Pt",
       "RO": "R o",
-      "RS": "R s",
-      "SE": "S e",
+      "RS": "Rs",
+      "SE": "Se",
       "SI": "S i",
-      "SK": "S k",
-      "UA": "U a"
+      "SK": "Sk",
+      "UA": "Inti"
     },
-    "executionInstructions": "Execution instructions",
-    "failed_to_load_will_template_2": "Failed to load will template 2",
-    "finalizeUpload": "Finalize upload",
-    "fullName": "Full name",
-    "no_template_found_for_this_jur_1": "No template found for this jur 1",
-    "please_confirm_that_you_have_s_3": "Please confirm that you have s 3",
-    "select_a_country_4": "Select a country 4",
+    "executionInstructions": "Istruzzjonijiet ta' eżekuzzjoni",
+    "failed_to_load_will_template_2": "Ma rnexxiex jitgħabba l-mudell tat-testment 2",
+    "finalizeUpload": "Finalizza t-tlugħ",
+    "fullName": "Isem sħiħ",
+    "no_template_found_for_this_jur_1": "Ma nstab l-ebda template għal dan il-ġur 1",
+    "please_confirm_that_you_have_s_3": "Jekk jogħġbok ikkonferma li għandek s 3",
+    "select_a_country_4": "Agħżel pajjiż 4",
     "steps": {
-      "confirmJurisdiction": "Confirm jurisdiction",
-      "executorBeneficiaries": "Executor beneficiaries",
-      "personalInformation": "Personal information",
-      "reviewGenerate": "Review generate",
-      "signConfirm": "Sign confirm"
+      "confirmJurisdiction": "Ikkonferma l-ġurisdizzjoni",
+      "executorBeneficiaries": "Benefiċjarji eżekuturi",
+      "personalInformation": "Informazzjoni personali",
+      "reviewGenerate": "Ġeneratur ta' reviżjoni",
+      "signConfirm": "Iffirma konferma"
     }
   },
   "willSync": {
-    "approve": "Approve",
-    "autoApplied": "Auto applied",
+    "approve": "Approva",
+    "autoApplied": "Applikat awtomatikament",
     "changes": {
-      "allocationsModified": "Allocations modified",
-      "assetsAdded": "Assets added",
-      "beneficiariesRemoved": "Beneficiaries removed",
-      "noChanges": "No changes"
+      "allocationsModified": "Allokazzjonijiet modifikati",
+      "assetsAdded": "Assi miżjuda",
+      "beneficiariesRemoved": "Benefiċjarji mneħħija",
+      "noChanges": "L-ebda tibdil"
     },
-    "reject": "Reject",
-    "viewChanges": "View changes"
+    "reject": "Irrifjuta",
+    "viewChanges": "Ara l-bidliet"
   },
   "willSyncSettings": {
-    "autoSync": "Auto sync",
-    "autoSyncDescription": "Auto sync description",
-    "frequencyDaily": "Frequency daily",
-    "frequencyImmediate": "Frequency immediate",
-    "frequencyWeekly": "Frequency weekly",
-    "generalDescription": "General description",
-    "generalSettings": "General settings",
-    "requireApproval": "Require approval",
-    "requireApprovalDescription": "Require approval description",
-    "saveError": "Save error",
-    "saved": "Saved",
-    "syncFrequency": "Sync frequency",
-    "triggerDescription": "Trigger description",
-    "triggerSettings": "Trigger settings"
+    "autoSync": "Sinkronizzazzjoni awtomatika",
+    "autoSyncDescription": "Deskrizzjoni tas-sinkronizzazzjoni awtomatika",
+    "frequencyDaily": "Frekwenza kuljum",
+    "frequencyImmediate": "Frekwenza immedjata",
+    "frequencyWeekly": "Frekwenza kull ġimgħa",
+    "generalDescription": "Deskrizzjoni ġenerali",
+    "generalSettings": "Issettjar ġenerali",
+    "requireApproval": "Jeħtieġ approvazzjoni",
+    "requireApprovalDescription": "Deskrizzjoni tal-approvazzjoni meħtieġa",
+    "saveError": "Żball ta' salvataġġ",
+    "saved": "Salvat",
+    "syncFrequency": "Frekwenza tas-sinkronizzazzjoni",
+    "triggerDescription": "Deskrizzjoni tal-attivazzjoni",
+    "triggerSettings": "Issettjar tat-trigger"
   },
   "willVersion": {
-    "added": "Added",
-    "compareDiff": "Compare diff",
-    "comparePrompt": "Compare prompt",
-    "current": "Current",
-    "description": "Description",
-    "modified": "Modified",
-    "removed": "Removed",
-    "restore": "Restore",
-    "title": "Title",
-    "versionNumber": "Version number"
+    "added": "Miżjud",
+    "compareDiff": "Qabbel id-differenza",
+    "comparePrompt": "Qabbel il-pront",
+    "current": "Kurrenti",
+    "description": "Deskrizzjoni",
+    "modified": "Modifikat",
+    "removed": "Imneħħi",
+    "restore": "Irrestawra",
+    "title": "Titlu",
+    "versionNumber": "Numru tal-verżjoni"
   },
   "disclaimers": {
-    "general": "LegacyGuard provides tools and guidance for estate planning but does not provide legal advice. For complex estates or specific legal questions, please consult with a qualified attorney in your jurisdiction.",
-    "willGenerator": "The will generator creates documents based on information you provide. While designed to meet legal requirements, we strongly recommend having any generated will reviewed by a qualified attorney before execution.",
-    "jurisdiction": "Legal requirements vary by jurisdiction. Ensure your documents comply with the laws in your area.",
-    "notLegalAdvice": "This service does not constitute legal advice and should not be relied upon as such.",
-    "professionalReview": "For complex estates, business interests, or unique family situations, professional legal review is strongly recommended."
+    "general": "LegacyGuard jipprovdi għodod u gwida għall-ippjanar tal-wirt iżda ma jipprovdix pariri legali. Għal wirt kumpless jew mistoqsijiet legali speċifiċi, jekk jogħġbok ikkonsulta ma' avukat kwalifikat fil-ġurisdizzjoni tiegħek.",
+    "willGenerator": "Il-ġeneratur tat-testment joħloq dokumenti bbażati fuq l-informazzjoni li tipprovdi. Filwaqt li huwa ddisinjat biex jissodisfa r-rekwiżiti legali, nirrakkomandaw bil-qawwa li kwalunkwe testment iġġenerat jiġi rivedut minn avukat kwalifikat qabel l-eżekuzzjoni.",
+    "jurisdiction": "Ir-rekwiżiti legali jvarjaw skont il-ġurisdizzjoni. Kun żgur li d-dokumenti tiegħek jikkonformaw mal-liġijiet fiż-żona tiegħek.",
+    "notLegalAdvice": "Dan is-servizz ma jikkostitwixxix parir legali u m'għandux jiġi fdat bħala tali.",
+    "professionalReview": "Għal wirt kumpless, interessi kummerċjali, jew sitwazzjonijiet familjari uniċi, hija rakkomandata ħafna reviżjoni legali professjonali."
   },
   "terms": {
-    "serviceTerms": "Terms of Service",
-    "privacyPolicy": "Privacy Policy",
-    "dataProcessing": "Data Processing Agreement",
-    "userAgreement": "User Agreement",
-    "acceptanceRequired": "By using LegacyGuard, you agree to our Terms of Service and Privacy Policy.",
-    "lastUpdated": "Last updated: {{date}}",
-    "effectiveDate": "Effective date: {{date}}"
+    "serviceTerms": "Termini tas-Servizz",
+    "privacyPolicy": "Politika tal-Privatezza",
+    "dataProcessing": "Ftehim dwar l-Ipproċessar tad-Data",
+    "userAgreement": "Ftehim tal-Utent",
+    "acceptanceRequired": "Billi tuża LegacyGuard, inti taqbel mat-Termini ta' Servizz u l-Politika ta' Privatezza tagħna.",
+    "lastUpdated": "Aġġornat l-aħħar: {{date}}",
+    "effectiveDate": "Data effettiva: {{date}}"
   },
   "compliance": {
-    "dataProtection": "Your data is protected in compliance with applicable data protection laws including GDPR and CCPA.",
-    "encryption": "All sensitive information is encrypted using industry-standard encryption methods.",
-    "retention": "Data retention policies are designed to protect your privacy while ensuring your family can access important information when needed.",
-    "access": "You have the right to access, modify, or delete your personal information at any time.",
-    "portability": "You can export your data in standard formats for use with other services."
+    "dataProtection": "Id-dejta tiegħek hija protetta f'konformità mal-liġijiet applikabbli dwar il-protezzjoni tad-dejta inklużi l-GDPR u s-CCPA.",
+    "encryption": "L-informazzjoni sensittiva kollha hija kriptata bl-użu ta' metodi ta' kriptaġġ standard tal-industrija.",
+    "retention": "Il-politiki taż-żamma tad-dejta huma mfassla biex jipproteġu l-privatezza tiegħek filwaqt li jiżguraw li l-familja tiegħek tkun tista' taċċessa informazzjoni importanti meta jkun hemm bżonn.",
+    "access": "Għandek id-dritt li taċċessa, timmodifika, jew tħassar l-informazzjoni personali tiegħek fi kwalunkwe ħin.",
+    "portability": "Tista' tesporta d-dejta tiegħek f'formati standard għall-użu ma' servizzi oħra."
   },
   "executionRequirements": {
-    "witnessRequirements": "Witness Requirements for {{jurisdiction}}",
-    "notaryRequirements": "Notarization Requirements",
-    "signingInstructions": "Proper Signing Instructions",
-    "storageGuidelines": "Secure Storage Guidelines",
-    "legalCompliance": "Legal Compliance Verification"
+    "witnessRequirements": "Rekwiżiti tax-Xhieda għal {{jurisdiction}}",
+    "notaryRequirements": "Rekwiżiti ta' Notarizzazzjoni",
+    "signingInstructions": "Istruzzjonijiet xierqa għall-iffirmar",
+    "storageGuidelines": "Linji Gwida għall-Ħażna Sikura",
+    "legalCompliance": "Verifika tal-Konformità Legali"
   },
   "cookiePolicy": {
     "cookieTypes": {
-      "analytics": "Analytics cookies help us understand how visitors interact with our website.",
-      "essential": "Essential cookies are necessary for the website to function properly.",
-      "marketing": "Marketing cookies are used to track visitors across websites to display relevant advertisements."
+      "analytics": "Il-cookies tal-analitika jgħinuna nifhmu kif il-viżitaturi jinteraġixxu mal-websajt tagħna.",
+      "essential": "Il-cookies essenzjali huma meħtieġa biex il-websajt tiffunzjona sew.",
+      "marketing": "Il-cookies tal-kummerċjalizzazzjoni jintużaw biex isegwu l-viżitaturi fuq il-websajts biex juru reklami rilevanti."
     },
-    "howWeUseCookies": "We use cookies to improve your experience, analyze site usage, and provide personalized content.",
-    "introduction": "This Cookie Policy explains how LegacyGuard uses cookies and similar technologies.",
-    "manageCookies": "You can manage your cookie preferences through your browser settings or our cookie preference center.",
-    "title": "Title",
-    "whatAreCookies": "Cookies are small text files that are stored on your device when you visit our website."
+    "howWeUseCookies": "Aħna nużaw il-cookies biex intejbu l-esperjenza tiegħek, nanalizzaw l-użu tas-sit, u nipprovdu kontenut personalizzat.",
+    "introduction": "Din il-Politika tal-Cookies tispjega kif LegacyGuard juża l-cookies u teknoloġiji simili.",
+    "manageCookies": "Tista' timmaniġġja l-preferenzi tal-cookies tiegħek permezz tas-settings tal-browser tiegħek jew iċ-ċentru tal-preferenzi tal-cookies tagħna.",
+    "title": "Titlu",
+    "whatAreCookies": "Il-cookies huma fajls żgħar ta’ test li jinħażnu fuq it-tagħmir tiegħek meta żżur il-websajt tagħna."
   },
   "header": {
-    "subtitle": "Subtitle",
-    "title": "Title"
+    "title": "Titlu"
   },
   "hero": {
-    "headline": "Headline",
-    "subheadline": "Subheadline"
-  },
-  "privacyPolicy": {
-    "introduction": "This Privacy Policy describes how LegacyGuard collects, uses, and protects your personal information.",
-    "lastUpdated": "Last updated: {{date}}",
-    "sections": {
-      "dataSecurity": {
-        "content": "We implement appropriate security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.",
-        "title": "Data Security"
-      },
-      "informationCollection": {
-        "content": "We collect information you provide directly to us, such as when you create an account, use our services, or contact us for support.",
-        "title": "Information We Collect"
-      },
-      "informationSharing": {
-        "content": "We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except as described in this policy.",
-        "title": "Information Sharing"
-      },
-      "informationUse": {
-        "content": "We use your information to provide, maintain, and improve our services, communicate with you, and ensure the security of your account.",
-        "title": "How We Use Your Information"
-      },
-      "yourRights": {
-        "content": "You have the right to access, update, or delete your personal information. You may also opt out of certain communications from us.",
-        "title": "Your Rights"
-      }
-    },
-    "title": "Privacy Policy"
+    "headline": "Titlu",
+    "subheadline": "Sottotitlu"
   },
   "termsOfService": {
-    "effectiveDate": "Effective date: {{date}}",
-    "introduction": "These Terms of Service govern your use of LegacyGuard's family protection platform and services.",
-    "lastUpdated": "Last updated: {{date}}",
+    "effectiveDate": "Data effettiva: {{date}}",
+    "introduction": "Dawn it-Termini ta' Servizz jirregolaw l-użu tiegħek tal-pjattaforma u s-servizzi tal-protezzjoni tal-familja ta' LegacyGuard.",
+    "lastUpdated": "Aġġornat l-aħħar: {{date}}",
     "sections": {
       "acceptance": {
-        "content": "By accessing or using LegacyGuard, you agree to be bound by these Terms of Service and all applicable laws and regulations.",
-        "title": "Acceptance of Terms"
+        "content": "Billi taċċessa jew tuża LegacyGuard, inti taqbel li tkun marbut b'dawn it-Termini ta' Servizz u l-liġijiet u r-regolamenti applikabbli kollha.",
+        "title": "Aċċettazzjoni tat-Termini"
       },
       "description": {
-        "content": "LegacyGuard provides digital tools and services to help individuals organize their important information for family protection purposes.",
-        "title": "Service Description"
+        "content": "LegacyGuard jipprovdi għodod u servizzi diġitali biex jgħin lill-individwi jorganizzaw l-informazzjoni importanti tagħhom għal skopijiet ta’ protezzjoni tal-familja.",
+        "title": "Deskrizzjoni tas-Servizz"
       },
       "limitations": {
-        "content": "LegacyGuard provides tools and guidance but does not provide legal advice. We recommend consulting with qualified professionals for complex legal matters.",
-        "title": "Limitations of Liability"
+        "content": "LegacyGuard jipprovdi għodod u gwida iżda ma jipprovdix pariri legali. Nirrakkomandaw li tikkonsulta ma' professjonisti kwalifikati għal kwistjonijiet legali kumplessi.",
+        "title": "Limitazzjonijiet tar-Responsabbiltà"
       },
       "privacy": {
-        "content": "Your privacy is important to us. Please review our Privacy Policy to understand how we collect, use, and protect your information.",
-        "title": "Privacy and Data Protection"
+        "content": "Il-privatezza tiegħek hija importanti għalina. Jekk jogħġbok irrevedi l-Politika ta' Privatezza tagħna biex tifhem kif niġbru, nużaw u nipproteġu l-informazzjoni tiegħek.",
+        "title": "Privatezza u Protezzjoni tad-Data"
       },
       "userResponsibilities": {
-        "content": "You are responsible for maintaining the confidentiality of your account information and for all activities that occur under your account.",
-        "title": "User Responsibilities"
+        "content": "Inti responsabbli biex iżżomm il-kunfidenzjalità tal-informazzjoni tal-kont tiegħek u għall-attivitajiet kollha li jseħħu taħt il-kont tiegħek.",
+        "title": "Responsabbiltajiet tal-Utent"
       }
     },
-    "title": "Terms of Service"
+    "title": "Termini tas-Servizz"
   },
   "cookies": {
     "policy": {
       "analytics": {
-        "description": "Description",
+        "description": "Deskrizzjoni",
         "examples": {
           "ga": "Ga",
           "gid": "Gid",
-          "session": "Session"
+          "session": "Sessjoni"
         },
-        "purpose": "Purpose",
-        "title": "Title"
+        "purpose": "Skop",
+        "title": "Titlu"
       },
       "categories": {
-        "title": "Title"
+        "title": "Titlu"
       },
       "contact": {
-        "address": "Address",
-        "addressDetails": "Address details",
-        "description": "Description",
+        "address": "Indirizz",
+        "addressDetails": "Dettalji tal-indirizz",
+        "description": "Deskrizzjoni",
         "email": "Email",
-        "title": "Title"
+        "title": "Titlu"
       },
-      "examples": "Examples",
-      "lastUpdated": "Last updated",
+      "examples": "Eżempji",
+      "lastUpdated": "Aġġornat l-aħħar",
       "manage": {
-        "title": "Title"
+        "title": "Titlu"
       },
       "marketing": {
-        "description": "Description",
+        "description": "Deskrizzjoni",
         "examples": {
           "facebook": "Facebook",
           "google": "Google"
         },
-        "purpose": "Purpose",
-        "title": "Title"
+        "purpose": "Skop",
+        "title": "Titlu"
       },
       "necessary": {
-        "description": "Description",
+        "description": "Deskrizzjoni",
         "examples": {
-          "auth": "Auth",
-          "consent": "Consent",
+          "auth": "Awtorizzazzjoni",
+          "consent": "Kunsens",
           "csrf": "Csrf",
-          "session": "Session"
+          "session": "Sessjoni"
         },
-        "purpose": "Purpose",
-        "title": "Title"
+        "purpose": "Skop",
+        "title": "Titlu"
       },
       "overview": {
-        "intro": "Intro",
-        "point1": "Point1",
-        "point2": "Point2",
-        "point3": "Point3",
-        "point4": "Point4",
-        "title": "Title"
+        "intro": "Introduzzjoni",
+        "point1": "Punt 1",
+        "point2": "Punt2",
+        "point3": "Punt3",
+        "point4": "Punt 4",
+        "title": "Titlu"
       },
       "preferences": {
-        "description": "Description",
+        "description": "Deskrizzjoni",
         "examples": {
-          "language": "Language",
-          "theme": "Theme",
+          "language": "Lingwa",
+          "theme": "Tema",
           "ui": "Ui"
         },
-        "purpose": "Purpose",
-        "title": "Title"
+        "purpose": "Skop",
+        "title": "Titlu"
       },
-      "purpose": "Purpose",
-      "required": "Required",
-      "subtitle": "Subtitle",
-      "title": "Title",
+      "purpose": "Skop",
+      "required": "Meħtieġ",
+      "subtitle": "Sottotitlu",
+      "title": "Titlu",
       "yourRights": {
-        "description": "Description",
-        "right1": "Right1",
-        "right2": "Right2",
-        "right3": "Right3",
-        "right4": "Right4",
-        "title": "Title"
+        "description": "Deskrizzjoni",
+        "right1": "Lemin1",
+        "right2": "Lemin2",
+        "right3": "Lemin3",
+        "right4": "Lemin4",
+        "title": "Titlu"
       }
     }
   }

@@ -17,7 +17,7 @@ interface StatusBadgeProps {
 }
 
 export const StatusBadge: React.FC<StatusBadgeProps> = ({ status, className }) => {
-  const { t } = useTranslation('ui');
+  const { t } = useTranslation('ui-common');
   const tr = (key: string, fallback: string) => {
     const v = t(key, { defaultValue: '' }) as string;
     return v && v !== key ? v : fallback;
@@ -67,7 +67,7 @@ export const PriorityIndicator: React.FC<PriorityIndicatorProps> = (props) => {
   const hasProp = Object.prototype.hasOwnProperty.call(props, 'showLabel');
   const effectiveShowLabel = hasProp ? Boolean(showLabel) : true;
 
-  const { t } = useTranslation('ui');
+  const { t } = useTranslation('ui-common');
   const tr = (key: string, fallback: string) => {
     const v = t(key, { defaultValue: '' }) as string;
     return v && v !== key ? v : fallback;
@@ -127,7 +127,7 @@ interface ReadinessLevelProps {
 }
 
 export const ReadinessLevel: React.FC<ReadinessLevelProps> = ({ level, size = 'md', className, showDescription }) => {
-  const { t } = useTranslation('ui');
+  const { t } = useTranslation('ui-common');
   const tr = (key: string, fallback: string) => {
     const v = t(key, { defaultValue: '' }) as string;
     return v && v !== key ? v : fallback;
@@ -374,7 +374,7 @@ interface ProgressOverviewProps {
 }
 
 export const ProgressOverview: React.FC<ProgressOverviewProps & Record<string, unknown>> = (props) => {
-  const { t } = useTranslation('ui');
+  const { t } = useTranslation('ui-common');
   const tr = (key: string, fallback: string | ((o?: { minutes?: number; count?: number }) => string), opts?: { minutes?: number; count?: number }) => {
     const v = t(key, { defaultValue: '', ...opts }) as string;
     if (v && v !== key) return v;

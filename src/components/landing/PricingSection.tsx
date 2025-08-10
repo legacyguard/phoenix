@@ -8,7 +8,7 @@ import { Check } from 'lucide-react';
 import { stripeService } from '@/services/stripeService';
 
 export const PricingSection: React.FC = () => {
-  const { t } = useTranslation('ui');
+  const { t } = useTranslation('ui-common');
 
   const plans = [
   {

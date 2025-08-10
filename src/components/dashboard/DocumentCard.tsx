@@ -44,7 +44,7 @@ interface DocumentCardProps {
 }
 
 export const DocumentCard: React.FC<DocumentCardProps> = ({ document, onEdit, onDelete, onToggleKeyDocument }) => {
-  const { t } = useTranslation('dashboard');
+  const { t } = useTranslation('dashboard-main');
 
   const getCountryFlag = (countryCode: string) => {
     const config = Object.values(COUNTRY_CONFIGS).find((c) => c.code === countryCode);

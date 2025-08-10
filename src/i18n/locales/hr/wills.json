@@ -1,357 +1,391 @@
 {
   "actions": {
-    "next": "[HR] Next",
-    "previous": "[HR] Previous"
+    "consultLawyer": "Zakažite pravne konzultacije",
+    "createCodicil": "Izradi amandman (Dodatak)",
+    "deleteWill": "Izbriši ovu oporuku",
+    "downloadPdf": "Preuzmi PDF dokument",
+    "generateWill": "Izradi konačnu oporuku",
+    "next": "Sljedeći",
+    "previous": "Prethodno",
+    "printWill": "Ispis dokumenta o oporuci",
+    "saveProgress": "Spremi trenutni napredak",
+    "shareWill": "Podijeli s obitelji",
+    "updateWill": "Ažuriranje informacija o oporuci"
   },
   "errors": {
-    "assetLoadFailed": "We could not load your asset information. Please refresh and try again.",
-    "generationFailed": "We encountered an issue generating your will. Please review your information and try again.",
-    "jurisdictionRequired": "Please select your legal jurisdiction to ensure compliance",
-    "loadFailed": "We could not load your will information. Please refresh the page and try again.",
-    "printFailed": "We encountered an issue preparing your document for printing. Please try again.",
-    "saveFailed": "We could not save your progress. Please check your connection and try again.",
-    "sharingFailed": "We could not share your will. Please verify the recipients and try again.",
-    "validationFailed": "Please review and correct the highlighted information before proceeding"
+    "assetLoadFailed": "Nismo mogli učitati podatke o vašoj imovini. Osvježite stranicu i pokušajte ponovno.",
+    "generationFailed": "Naišli smo na problem prilikom generiranja vaše oporuke. Molimo vas da pregledate svoje podatke i pokušate ponovno.",
+    "jurisdictionRequired": "Molimo odaberite svoju jurisdikciju kako biste osigurali usklađenost",
+    "loadFailed": "Nismo mogli učitati podatke o vašoj oporuci. Osvježite stranicu i pokušajte ponovno.",
+    "printFailed": "Naišli smo na problem prilikom pripreme vašeg dokumenta za ispis. Pokušajte ponovno.",
+    "saveFailed": "Nismo mogli spremiti vaš napredak. Provjerite vezu i pokušajte ponovno.",
+    "validationFailed": "Molimo Vas da pregledate i ispravite istaknute informacije prije nego što nastavite"
   },
   "execution": {
-    "copyDistribution": "Distribution of Copies",
-    "familyNotification": "Informing Your Family",
-    "legalRequirements": "Legal Requirements for {{jurisdiction}}",
-    "notarization": "Notarization Requirements",
-    "notaryOptional": "Notary recommended but not required",
-    "notaryRequired": "Notary public required",
-    "numberOfCopies": "Recommended Number of Copies",
-    "safeStorage": "Secure Storage Locations",
-    "selfProving": "Self-Proving Affidavit",
-    "signingInstructions": "Signing Instructions",
-    "signingOrder": "Proper Signing Order",
-    "storageRecommendations": "Storage Recommendations",
-    "subtitle": "Making your will legally binding",
-    "title": "Will Execution Requirements",
-    "witnessCount": "{{count}} witnesses required",
-    "witnessInstructions": "Witness Instructions",
-    "witnessQualifications": "Witness Qualifications",
-    "witnessRequirements": "Witness Requirements"
+    "copyDistribution": "Distribucija kopija",
+    "familyNotification": "Obavještavanje vaše obitelji",
+    "legalRequirements": "Pravni zahtjevi za {{jurisdiction}}",
+    "notarization": "Zahtjevi za ovjeru",
+    "notaryOptional": "Javni bilježnik se preporučuje, ali nije obavezno",
+    "notaryRequired": "Potreban javni bilježnik",
+    "numberOfCopies": "Preporučeni broj kopija",
+    "safeStorage": "Sigurne lokacije za pohranu",
+    "selfProving": "Izjava pod prisegom",
+    "signingInstructions": "Upute za potpisivanje",
+    "signingOrder": "Ispravan redoslijed potpisivanja",
+    "storageRecommendations": "Preporuke za pohranu",
+    "subtitle": "Učinite svoju oporuku pravno obvezujućom",
+    "title": "Zahtjevi za izvršenje oporuke",
+    "witnessCount": "Potrebni su svjedoci {{count}}",
+    "witnessInstructions": "Upute za svjedoke",
+    "witnessQualifications": "Kvalifikacije svjedoka",
+    "witnessRequirements": "Zahtjevi za svjedoke"
   },
   "form": {
     "assetSelection": {
-      "allAssets": "Include All Current and Future Assets",
-      "assetCategories": "Asset Categories to Include",
-      "businessInterests": "Business Interests",
-      "excludedAssets": "Assets to Exclude",
-      "jointAssets": "Jointly Owned Assets",
-      "residualDescription": "All remaining assets not specifically mentioned elsewhere in this will",
-      "residualEstate": "Residual Estate",
-      "selectAssets": "Choose Assets to Include",
-      "specificAssets": "Select Specific Assets Only"
+      "allAssets": "Uključite svu trenutnu i buduću imovinu",
+      "assetCategories": "Kategorije imovine koje treba uključiti",
+      "businessInterests": "Poslovni interesi",
+      "excludedAssets": "Imovina za izuzimanje",
+      "jointAssets": "Zajednička imovina",
+      "residualDescription": "Sva preostala imovina koja nije posebno spomenuta drugdje u ovoj oporuci",
+      "residualEstate": "Preostala imovina",
+      "selectAssets": "Odaberite elemente koje želite uključiti",
+      "specificAssets": "Odaberite samo određenu imovinu"
     },
     "distribution": {
-      "addBeneficiary": "Add Additional Beneficiary",
-      "ageRestriction": "Age Requirement",
-      "allocation": "Inheritance Allocation",
-      "beneficiaryName": "Beneficiary's Full Name",
-      "conditions": "Conditions or Restrictions",
-      "contingentBeneficiary": "Contingent Beneficiary",
-      "percentage": "Percentage of Estate",
-      "primaryBeneficiary": "Primary Beneficiary",
-      "relationship": "Relationship to You",
-      "specificAmount": "Specific Dollar Amount",
-      "specificAsset": "Specific Asset or Property",
-      "trustProvision": "Trust Arrangement"
+      "addBeneficiary": "Dodaj dodatnog korisnika",
+      "ageRestriction": "Dobna granica",
+      "allocation": "Raspodjela nasljeđivanja",
+      "beneficiaryName": "Puno ime korisnika",
+      "conditions": "Uvjeti ili ograničenja",
+      "contingentBeneficiary": "Uvjetni korisnik",
+      "percentage": "Postotak imovine",
+      "primaryBeneficiary": "Primarni korisnik",
+      "relationship": "Odnos prema tebi",
+      "specificAmount": "Određeni iznos u dolarima",
+      "specificAsset": "Određena imovina ili nekretnina",
+      "trustProvision": "Ugovor o trustu"
     },
     "executor": {
-      "alternateExecutor": "Alternate Executor",
-      "bondRequirement": "Bond Requirement",
-      "coExecutors": "Co-Executors",
-      "executorAddress": "Executor's Address",
-      "executorCompensation": "Executor Compensation",
-      "executorDuties": "Executor Responsibilities",
-      "executorInstructions": "Special Instructions for Executor",
-      "executorName": "Executor's Full Name",
-      "executorRelationship": "Relationship to You",
-      "primaryExecutor": "Primary Executor",
-      "specialPowers": "Special Powers Granted"
+      "alternateExecutor": "Zamjenski izvršitelj",
+      "bondRequirement": "Zahtjev za obveznicu",
+      "coExecutors": "Suizvršitelji",
+      "executorAddress": "Adresa izvršitelja",
+      "executorCompensation": "Naknada izvršitelju",
+      "executorDuties": "Odgovornosti izvršitelja",
+      "executorInstructions": "Posebne upute za izvršitelja",
+      "executorName": "Puno ime izvršitelja",
+      "executorRelationship": "Odnos prema tebi",
+      "primaryExecutor": "Glavni izvršitelj",
+      "specialPowers": "Dodijeljene posebne ovlasti"
     },
     "guardianship": {
-      "backupGuardian": "Alternate Guardian",
-      "educationPreferences": "Education Preferences",
-      "guardianCompensation": "Guardian Compensation",
-      "guardianFor": "Guardian for {{childName}}",
-      "guardianInstructions": "Instructions for Guardian",
-      "guardianQualifications": "Guardian Qualifications",
-      "minorChildren": "Minor Children Requiring Guardianship",
-      "primaryGuardian": "Primary Guardian",
-      "religiousUpbringing": "Religious Upbringing Preferences"
+      "backupGuardian": "Zamjenski skrbnik",
+      "educationPreferences": "Obrazovne postavke",
+      "guardianCompensation": "Naknada skrbniku",
+      "guardianFor": "Skrbnik za {{childName}}",
+      "guardianInstructions": "Upute za skrbnika",
+      "guardianQualifications": "Kvalifikacije skrbnika",
+      "minorChildren": "Maloljetna djeca kojoj je potrebno skrbništvo",
+      "primaryGuardian": "Glavni skrbnik",
+      "religiousUpbringing": "Preferencije vjerskog odgoja"
     },
     "personalInfo": {
-      "addChild": "Add Child",
-      "addressHelper": "Your primary residence address",
-      "childDateOfBirth": "Child's Date of Birth",
-      "childName": "Child's Full Name",
-      "childRelation": "Relationship to You",
-      "children": "Children and Dependents",
-      "currentAddress": "Current Legal Address",
-      "dateOfBirth": "Date of Birth",
-      "fullLegalName": "Complete Legal Name",
-      "fullLegalNameHelper": "Enter your name exactly as it appears on official documents",
-      "maritalStatus": "Marital Status",
-      "marriageDate": "Date of Marriage",
-      "placeOfBirth": "Place of Birth",
-      "previousWills": "Previous Wills",
-      "revokesPrevious": "This will revokes all previous wills",
-      "spouseName": "Spouse's Full Legal Name"
+      "addChild": "Dodaj dijete",
+      "addressHelper": "Vaša primarna adresa prebivališta",
+      "childDateOfBirth": "Datum rođenja djeteta",
+      "childName": "Puno ime djeteta",
+      "childRelation": "Odnos prema tebi",
+      "children": "Djeca i uzdržavane osobe",
+      "currentAddress": "Trenutna pravna adresa",
+      "dateOfBirth": "Datum rođenja",
+      "fullLegalName": "Puno ime i prezime",
+      "fullLegalNameHelper": "Unesite svoje ime točno onako kako je navedeno u službenim dokumentima",
+      "maritalStatus": "Bračni status",
+      "marriageDate": "Datum vjenčanja",
+      "placeOfBirth": "Mjesto rođenja",
+      "previousWills": "Prethodne oporuke",
+      "revokesPrevious": "Ovom oporukom poništavaju se sve prethodne oporuke",
+      "spouseName": "Puno ime i prezime supružnika/supružnice"
     },
     "provisions": {
-      "burialCremation": "Burial or Cremation Preference",
-      "businessContinuation": "Business Continuation Plans",
-      "charitableBequests": "Charitable Donations",
-      "charityAmount": "Donation Amount",
-      "charityName": "Charitable Organization",
-      "digitalAssets": "Digital Asset Instructions",
-      "funeralInstructions": "Specific Funeral Instructions",
-      "funeralWishes": "Funeral and Burial Preferences",
-      "organDonation": "Organ Donation Wishes",
-      "personalMessages": "Personal Messages to Family",
-      "petCare": "Pet Care Arrangements",
-      "specialInstructions": "Special Instructions"
+      "burialCremation": "Poželjni pogreb ili kremiranje",
+      "businessContinuation": "Planovi za nastavak poslovanja",
+      "charitableBequests": "Dobrotvorne donacije",
+      "charityAmount": "Iznos donacije",
+      "charityName": "Dobrotvorna organizacija",
+      "digitalAssets": "Upute za digitalnu imovinu",
+      "funeralInstructions": "Posebne upute za pogreb",
+      "funeralWishes": "Pogrebne i grobne postavke",
+      "organDonation": "Želje za doniranje organa",
+      "personalMessages": "Osobne poruke obitelji",
+      "petCare": "Aranžmani za brigu o kućnim ljubimcima",
+      "specialInstructions": "Posebne upute"
     }
   },
   "generator": {
-    "of": "[HR] Of",
-    "step": "[HR] Step"
+    "continueWill": "Nastavite s pripremom oporuke",
+    "description": "Izradite sveobuhvatnu, pravno valjanu oporuku prilagođenu zahtjevima vaše jurisdikcije i jedinstvenim potrebama vaše obitelji.",
+    "getStarted": "Počnite stvarati svoju oporuku",
+    "importance": "Osiguravanje da su vaše želje pravno dokumentirane i da je vaša obitelj zaštićena",
+    "newWill": "Izradi novu oporuku",
+    "of": "Od",
+    "professionalGuidance": "Za složene ostavine preporučuje se stručno pravno savjetovanje",
+    "step": "Korak",
+    "subtitle": "Sastavite pravno valjanu oporuku uz stručno vodstvo",
+    "title": "Generator oporuka i testamenata",
+    "viewExisting": "Pregledajte trenutnu oporuku"
   },
   "legal": {
-    "consultLawyer": "Consult with Attorney",
-    "disclaimer": "Important Legal Disclaimer",
-    "estatePlanning": "Comprehensive Estate Planning",
-    "jurisdiction": "Legal Jurisdiction",
-    "lawsApply": "Laws of {{jurisdiction}} will apply",
-    "lawyerRecommended": "We strongly recommend consulting with a qualified attorney for complex estates",
-    "legalCompliance": "Legal Compliance Verification",
-    "notLegalAdvice": "This service does not constitute legal advice",
-    "probateProcess": "Probate Process Information",
-    "professionalGuidance": "Professional legal guidance is recommended",
-    "professionalReview": "Professional Legal Review",
-    "selectJurisdiction": "Please select your legal jurisdiction",
-    "taxImplications": "Tax Implications"
+    "consultLawyer": "Posavjetujte se s odvjetnikom",
+    "disclaimer": "Važno pravno odricanje od odgovornosti",
+    "estatePlanning": "Sveobuhvatno planiranje imovine",
+    "jurisdiction": "Pravna nadležnost",
+    "lawsApply": "Primjenjivat će se zakoni {{jurisdiction}}",
+    "lawyerRecommended": "Za složene ostavinske postupke toplo preporučujemo konzultacije s kvalificiranim odvjetnikom",
+    "legalCompliance": "Provjera pravne usklađenosti",
+    "notLegalAdvice": "Ova usluga ne predstavlja pravni savjet",
+    "probateProcess": "Informacije o ostavinskom postupku",
+    "professionalGuidance": "Preporučuje se stručni pravni savjet",
+    "professionalReview": "Stručni pravni pregled",
+    "selectJurisdiction": "Molimo odaberite svoju pravnu nadležnost",
+    "taxImplications": "Porezne implikacije"
   },
   "notifications": {
-    "consultationScheduled": "Legal consultation has been scheduled",
-    "documentShared": "Will has been shared with designated family members",
-    "executionComplete": "Will execution has been recorded",
-    "progressSaved": "Your progress has been saved",
-    "reminderSet": "Will review reminder has been set",
-    "willDeleted": "Will has been permanently deleted",
-    "willGenerated": "Your will has been successfully generated",
-    "willUpdated": "Will has been updated successfully"
+    "consultationScheduled": "Pravne konzultacije su zakazane",
+    "documentShared": "Oporuka je podijeljena s određenim članovima obitelji",
+    "executionComplete": "Izvršenje oporuke je zabilježeno",
+    "progressSaved": "Vaš napredak je spremljen",
+    "willDeleted": "Oporuka je trajno izbrisana",
+    "willUpdated": "Oporuka je uspješno ažurirana"
   },
   "preview": {
-    "article": "ARTICLE {{number}}",
-    "draftWatermark": "DRAFT - NOT LEGALLY BINDING",
-    "executionInstructions": "EXECUTION INSTRUCTIONS",
-    "lastWillTestament": "LAST WILL AND TESTAMENT",
-    "of": "OF",
-    "pageNumber": "Page {{current}} of {{total}}",
-    "reviewCarefully": "Please review this document carefully before proceeding",
-    "section": "Section {{number}}",
-    "signatureSection": "SIGNATURE SECTION",
-    "subtitle": "Review your complete will before finalizing",
-    "title": "Will Document Preview",
-    "witnessClause": "WITNESS CLAUSE"
+    "article": "ČLANAK {{number}}",
+    "draftWatermark": "NACRT - NIJE PRAVNO OBVEZUJUĆE",
+    "executionInstructions": "UPUTE ZA IZVRŠENJE",
+    "lastWillTestament": "POSLJEDNJA OPORUKA I TESTAMENT",
+    "of": "OD",
+    "pageNumber": "Stranica {{current}} od {{total}}",
+    "reviewCarefully": "Molimo vas da pažljivo pregledate ovaj dokument prije nego što nastavite",
+    "section": "Odjeljak {{number}}",
+    "signatureSection": "ODJELJAK ZA POTPIS",
+    "subtitle": "Pregledajte svoju cijelu oporuku prije nego što je sastavite",
+    "title": "Pregled dokumenta",
+    "witnessClause": "KLAUZULA O SVJEDOKU"
   },
   "status": {
-    "archived": "Archived Version",
-    "draft": "Draft in Progress",
-    "executed": "Legally Executed",
-    "generated": "Generated - Requires Execution",
-    "outdated": "Requires Update",
-    "underReview": "Under Professional Review"
+    "archived": "Arhivirana verzija",
+    "draft": "Nacrt u tijeku",
+    "executed": "Pravno izvršeno",
+    "generated": "Generirano - Zahtijeva izvršenje",
+    "outdated": "Potrebno je ažuriranje"
+  },
+  "policy": {
+    "duration": {
+      "session": "Sjednica",
+      "minutes": "{{count}} minuta",
+      "hours": "{{count}} sati",
+      "days": "{{count}} dana",
+      "months": "{{count}} mjeseci",
+      "years": "{{count}} godina"
+    }
   },
   "steps": {
     "assets": {
-      "description": "Select which assets you wish to include in your will and how they should be distributed.",
-      "subtitle": "Your valuable possessions",
-      "title": "Asset Distribution"
+      "description": "Odaberite imovinu koju želite uključiti u svoju oporuku i kako bi trebala biti raspoređena.",
+      "subtitle": "Vaše vrijedne stvari",
+      "title": "Raspodjela imovine"
     },
     "beneficiaries": {
-      "description": "Designate who will receive your assets and in what proportions.",
-      "subtitle": "Your chosen recipients",
-      "title": "Beneficiary Designations"
+      "description": "Odredite tko će primiti vašu imovinu i u kojim omjerima.",
+      "subtitle": "Vaši odabrani primatelji",
+      "title": "Određivanje korisnika"
     },
     "executor": {
-      "description": "Choose a responsible person to manage your estate and carry out your wishes.",
-      "subtitle": "Your estate representative",
-      "title": "Estate Executor"
+      "description": "Odaberite odgovornu osobu koja će upravljati vašim imanjem i provoditi vaše želje.",
+      "subtitle": "Vaš predstavnik za nekretnine",
+      "title": "Izvršitelj ostavštine"
     },
     "guardians": {
-      "description": "Appoint trusted individuals to care for minor children or dependents.",
-      "subtitle": "Care for your dependents",
-      "title": "Guardianship Appointments"
+      "description": "Imenujte pouzdane osobe za brigu o maloljetnoj djeci ili uzdržavanim osobama.",
+      "subtitle": "Brinite se za svoje uzdržavane osobe",
+      "title": "Imenovanja skrbnika"
     },
     "personal": {
-      "description": "We require your complete legal information to ensure your will meets all legal requirements.",
-      "subtitle": "Your identifying information",
-      "title": "Personal Information"
+      "description": "Potrebni su nam vaši potpuni pravni podaci kako bismo osigurali da vaša oporuka ispunjava sve zakonske uvjete.",
+      "subtitle": "Vaši identifikacijski podaci",
+      "title": "Osobni podaci"
     },
     "preferences": {
-      "description": "Include any special instructions, charitable bequests, or personal wishes.",
-      "subtitle": "Additional instructions",
-      "title": "Special Provisions"
+      "description": "Uključite sve posebne upute, dobrotvorne ostavštine ili osobne želje.",
+      "subtitle": "Dodatne upute",
+      "title": "Posebne odredbe"
     },
     "review": {
-      "description": "Carefully review all details before generating your legal document.",
-      "subtitle": "Verify all information",
-      "title": "Final Review"
+      "description": "Pažljivo pregledajte sve detalje prije izrade pravnog dokumenta.",
+      "subtitle": "Provjerite sve podatke",
+      "title": "Završni pregled"
     }
   },
   "validation": {
-    "jurisdictionRequired": "[HR] Jurisdiction required",
-    "requiredField": "[HR] Required field"
+    "addressRequired": "Vaša trenutna pravna adresa je obavezna",
+    "allocationError": "Ukupna postotna alokacija mora biti jednaka 100%",
+    "beneficiaryRequired": "Mora biti naveden barem jedan korisnik",
+    "dobRequired": "Datum rođenja je potreban za pravnu valjanost",
+    "duplicateBeneficiary": "Ovaj korisnik je već dodan",
+    "executorBeneficiaryConflict": "Izvršitelj i primarni korisnik obično bi trebali biti različite osobe",
+    "executorRequired": "Mora biti određen barem jedan izvršitelj",
+    "guardianRequired": "Za maloljetnu djecu potrebno je odrediti skrbnika",
+    "invalidDate": "Molimo unesite valjani datum",
+    "invalidPercentage": "Postotak mora biti između 0 i 100",
+    "jurisdictionRequired": "Potrebna nadležnost",
+    "requiredField": "Obavezno polje"
   },
   "will": {
-    "address": "Address",
-    "addressPlaceholder": "Address placeholder",
+    "address": "Adresa",
+    "addressPlaceholder": "Rezervirano mjesto za adresu",
     "allocation": {
-      "addBeneficiary": "Add beneficiary",
-      "description": "Description",
-      "generalEstate": "General estate",
-      "percentage": "Percentage",
+      "addBeneficiary": "Dodaj korisnika",
+      "description": "Opis",
+      "generalEstate": "Opća imovina",
+      "percentage": "Postotak",
       "tips": {
-        "tip1": "Tip1",
-        "tip2": "Tip2",
-        "tip3": "Tip3",
-        "title": "Title"
+        "tip1": "Savjet 1",
+        "tip2": "Savjet 2",
+        "tip3": "Savjet 3",
+        "title": "Titula"
       },
-      "title": "Title",
-      "total": "Total"
+      "title": "Titula",
+      "total": "Ukupno"
     },
     "beneficiaries": {
-      "addBeneficiary": "Add beneficiary",
-      "allocation": "Allocation",
-      "alternativeBeneficiary": "Alternative beneficiary",
-      "alternativePlaceholder": "Alternative placeholder",
-      "beneficiaryNumber": "Beneficiary number",
-      "currentAllocation": "Current allocation",
-      "description": "Description",
-      "identification": "Identification",
-      "identificationPlaceholder": "Identification placeholder",
-      "importantNotes": "Important notes",
-      "name": "Name",
-      "noBeneficiaries": "No beneficiaries",
-      "note1": "Note1",
-      "note2": "Note2",
-      "note3": "Note3",
-      "ofEstate": "Of estate",
-      "title": "Title"
+      "addBeneficiary": "Dodaj korisnika",
+      "allocation": "Dodjela",
+      "alternativeBeneficiary": "Alternativni korisnik",
+      "alternativePlaceholder": "Alternativno rezervirano mjesto",
+      "beneficiaryNumber": "Broj korisnika",
+      "currentAllocation": "Trenutna alokacija",
+      "description": "Opis",
+      "identification": "Identifikacija",
+      "identificationPlaceholder": "Rezervirano mjesto za identifikaciju",
+      "importantNotes": "Važne napomene",
+      "name": "Ime",
+      "noBeneficiaries": "Nema korisnika",
+      "note1": "Napomena 1",
+      "note2": "Napomena 2",
+      "note3": "Napomena 3",
+      "ofEstate": "Imanja",
+      "title": "Titula"
     },
     "beneficiary": {
-      "name": "Name",
-      "namePlaceholder": "Name placeholder",
-      "relationship": "Relationship",
-      "relationshipPlaceholder": "Relationship placeholder"
+      "name": "Ime",
+      "namePlaceholder": "Rezervirano mjesto za ime",
+      "relationship": "Odnos",
+      "relationshipPlaceholder": "Rezervirano mjesto za odnos"
     },
-    "birthDate": "Birth date",
-    "birthDatePlaceholder": "Birth date placeholder",
+    "birthDate": "Datum rođenja",
+    "birthDatePlaceholder": "Rezervirano mjesto za datum rođenja",
     "buttons": {
-      "saveWillInfo": "Save will info",
-      "saving": "Saving"
+      "saveWillInfo": "Spremi informacije o oporuci",
+      "saving": "Spremanje"
     },
-    "countryRequirements": "Country requirements",
+    "countryRequirements": "Zahtjevi zemlje",
     "descriptions": {
-      "executorDescription": "Executor description",
-      "physicalLocationDescription": "Physical location description",
-      "statusDescription": "Status description"
+      "executorDescription": "Opis izvršitelja",
+      "physicalLocationDescription": "Opis fizičke lokacije",
+      "statusDescription": "Opis statusa"
     },
     "executor": {
-      "addAlternative": "Add alternative",
-      "address": "Address",
-      "addressPlaceholder": "Address placeholder",
-      "alternative": "Alternative",
-      "alternativeDescription": "Alternative description",
-      "description": "Description",
-      "name": "Name",
-      "namePlaceholder": "Name placeholder",
-      "phone": "Phone",
-      "phonePlaceholder": "Phone placeholder",
-      "primary": "Primary",
-      "relationship": "Relationship",
-      "relationshipPlaceholder": "Relationship placeholder",
-      "responsibilities": "Responsibilities",
-      "responsibility1": "Responsibility1",
-      "responsibility2": "Responsibility2",
-      "responsibility3": "Responsibility3",
-      "responsibility4": "Responsibility4",
-      "title": "Title"
+      "addAlternative": "Dodaj alternativu",
+      "address": "Adresa",
+      "addressPlaceholder": "Rezervirano mjesto za adresu",
+      "alternative": "Alternativa",
+      "alternativeDescription": "Alternativni opis",
+      "description": "Opis",
+      "name": "Ime",
+      "namePlaceholder": "Rezervirano mjesto za ime",
+      "phone": "Telefon",
+      "phonePlaceholder": "Rezervirano mjesto za telefon",
+      "primary": "Primarni",
+      "relationship": "Odnos",
+      "relationshipPlaceholder": "Rezervirano mjesto za odnos",
+      "responsibilities": "Odgovornosti",
+      "responsibility1": "Odgovornost1",
+      "responsibility2": "Odgovornost2",
+      "responsibility3": "Odgovornost3",
+      "responsibility4": "Odgovornost4",
+      "title": "Titula"
     },
     "fields": {
-      "additionalNotes": "Additional notes",
-      "currentStatus": "Current status",
-      "executorContact": "Executor contact",
-      "physicalLocation": "Physical location"
+      "additionalNotes": "Dodatne napomene",
+      "currentStatus": "Trenutni status",
+      "executorContact": "Kontakt izvršitelja",
+      "physicalLocation": "Fizička lokacija"
     },
     "legalReview": {
-      "button": "Button",
-      "description": "Description",
-      "title": "Title"
+      "button": "Gumb",
+      "description": "Opis",
+      "title": "Titula"
     },
-    "name": "Name",
-    "namePlaceholder": "Name placeholder",
+    "name": "Ime",
+    "namePlaceholder": "Rezervirano mjesto za ime",
     "options": {
-      "noContactSelected": "No contact selected"
+      "noContactSelected": "Nije odabran nijedan kontakt"
     },
     "placeholders": {
-      "additionalNotes": "Additional notes",
-      "physicalLocation": "Physical location",
-      "selectContact": "Select contact"
+      "additionalNotes": "Dodatne napomene",
+      "physicalLocation": "Fizička lokacija",
+      "selectContact": "Odaberite kontakt"
     },
     "preview": {
-      "address": "Address",
-      "alternative": "Alternative",
-      "alternativeExecutor": "Alternative executor",
-      "date": "Date",
-      "description": "Description",
-      "executor": "Executor",
-      "generatePDF": "Generate p d f",
-      "legalRequirements": "Legal requirements",
-      "name": "Name",
-      "ofEstate": "Of estate",
-      "place": "Place",
-      "print": "Print",
-      "signature": "Signature",
-      "title": "Title",
-      "witnesses": "Witnesses"
+      "address": "Adresa",
+      "alternative": "Alternativa",
+      "alternativeExecutor": "Alternativni izvršitelj",
+      "date": "Datum",
+      "description": "Opis",
+      "executor": "Izvršitelj",
+      "generatePDF": "Generiraj p d f",
+      "legalRequirements": "Pravni zahtjevi",
+      "name": "Ime",
+      "ofEstate": "Imanja",
+      "place": "Mjesto",
+      "print": "Ispis",
+      "signature": "Potpis",
+      "title": "Titula",
+      "witnesses": "Svjedoci"
     },
     "requirements": {
-      "handwriting": "Handwriting",
-      "notarization": "Notarization",
-      "typed": "Typed",
-      "witnesses": "Witnesses"
+      "handwriting": "Rukopis",
+      "notarization": "Ovjera",
+      "typed": "Utipkano",
+      "witnesses": "Svjedoci"
     },
-    "selectCountry": "Select country",
-    "selectedCountryDetails": "Selected country details",
+    "selectCountry": "Odaberite državu",
+    "selectedCountryDetails": "Detalji odabrane zemlje",
     "status": {
-      "draft": "Draft",
-      "notarized": "Notarized",
-      "stored": "Stored",
-      "updated": "Updated"
+      "draft": "Nacrt",
+      "notarized": "Ovjereno",
+      "stored": "Pohranjeno",
+      "updated": "Ažurirano"
     },
-    "testatorInfo": "Testator info",
+    "testatorInfo": "Podaci o oporučitelju",
     "validation": {
-      "allocation100": "Allocation100"
+      "allocation100": "Alokacija100"
     },
     "willPreview": {
       "_2": "2",
-      "critical_execution_instruction_3": "Critical execution instruction 3",
-      "professional_review_4": "Professional review 4",
-      "provided_by_certified_legal_pa_5": "Provided by certified legal pa 5"
+      "critical_execution_instruction_3": "Kritična instrukcija izvršenja 3",
+      "professional_review_4": "Stručni pregled 4",
+      "provided_by_certified_legal_pa_5": "Pruža ovlašteni pravni savjetnik 5"
     }
   },
   "willGenerator": {
-    "changeCountry": "Change country",
-    "confirmCountry": "Confirm country",
-    "confirmSigned": "Confirm signed",
+    "changeCountry": "Promijeni državu",
+    "confirmCountry": "Potvrdi državu",
+    "confirmSigned": "Potvrdi potpis",
     "console": {
-      "willGenerationCompleted": "Will generation completed"
+      "willGenerationCompleted": "Generiranje oporuke završeno"
     },
     "countries": {
       "AL": "A l",
@@ -360,22 +394,22 @@
       "BE": "B e",
       "BG": "B g",
       "CH": "C h",
-      "CY": "C y",
+      "CY": "Cy",
       "CZ": "C z",
       "DE": "D e",
       "DK": "D k",
       "EE": "E e",
       "ES": "E s",
-      "FI": "F i",
+      "FI": "Fi",
       "FR": "F r",
-      "GB": "G b",
+      "GB": "Gb",
       "GR": "G r",
       "HR": "H r",
       "HU": "H u",
-      "IE": "I e",
-      "IS": "I s",
-      "IT": "I t",
-      "LI": "L i",
+      "IE": "Ja e",
+      "IS": "Ja sam",
+      "IT": "Ja t",
+      "LI": "Li",
       "LT": "L t",
       "LU": "L u",
       "LV": "L v",
@@ -384,7 +418,7 @@
       "MK": "M k",
       "MT": "M t",
       "NL": "N l",
-      "NO": "N o",
+      "NO": "Ne",
       "PL": "P l",
       "PT": "P t",
       "RO": "R o",
@@ -394,242 +428,214 @@
       "SK": "S k",
       "UA": "U a"
     },
-    "executionInstructions": "Execution instructions",
-    "failed_to_load_will_template_2": "Failed to load will template 2",
-    "finalizeUpload": "Finalize upload",
-    "fullName": "Full name",
-    "no_template_found_for_this_jur_1": "No template found for this jur 1",
-    "please_confirm_that_you_have_s_3": "Please confirm that you have s 3",
-    "select_a_country_4": "Select a country 4",
+    "executionInstructions": "Upute za izvršenje",
+    "failed_to_load_will_template_2": "Nije uspjelo učitavanje predloška oporuke 2",
+    "finalizeUpload": "Završi prijenos",
+    "fullName": "Puno ime",
+    "no_template_found_for_this_jur_1": "Nije pronađen predložak za ovaj jur 1",
+    "please_confirm_that_you_have_s_3": "Molimo potvrdite da imate s 3",
+    "select_a_country_4": "Odaberite državu 4",
     "steps": {
-      "confirmJurisdiction": "Confirm jurisdiction",
-      "executorBeneficiaries": "Executor beneficiaries",
-      "personalInformation": "Personal information",
-      "reviewGenerate": "Review generate",
-      "signConfirm": "Sign confirm"
+      "confirmJurisdiction": "Potvrdite nadležnost",
+      "executorBeneficiaries": "Korisnici izvršitelja",
+      "personalInformation": "Osobni podaci",
+      "reviewGenerate": "Generiranje recenzija",
+      "signConfirm": "Potpis potvrdi"
     }
   },
   "willSync": {
-    "approve": "Approve",
-    "autoApplied": "Auto applied",
+    "approve": "Odobriti",
+    "autoApplied": "Automatski primijenjeno",
     "changes": {
-      "allocationsModified": "Allocations modified",
-      "assetsAdded": "Assets added",
-      "beneficiariesRemoved": "Beneficiaries removed",
-      "noChanges": "No changes"
+      "allocationsModified": "Izmijenjene alokacije",
+      "assetsAdded": "Dodani elementi",
+      "beneficiariesRemoved": "Korisnici uklonjeni",
+      "noChanges": "Nema promjena"
     },
-    "reject": "Reject",
-    "viewChanges": "View changes"
+    "reject": "Odbiti",
+    "viewChanges": "Prikaži promjene"
   },
   "willSyncSettings": {
-    "autoSync": "Auto sync",
-    "autoSyncDescription": "Auto sync description",
-    "frequencyDaily": "Frequency daily",
-    "frequencyImmediate": "Frequency immediate",
-    "frequencyWeekly": "Frequency weekly",
-    "generalDescription": "General description",
-    "generalSettings": "General settings",
-    "requireApproval": "Require approval",
-    "requireApprovalDescription": "Require approval description",
-    "saveError": "Save error",
-    "saved": "Saved",
-    "syncFrequency": "Sync frequency",
-    "triggerDescription": "Trigger description",
-    "triggerSettings": "Trigger settings"
+    "autoSync": "Automatska sinkronizacija",
+    "autoSyncDescription": "Opis automatske sinkronizacije",
+    "frequencyDaily": "Učestalost dnevno",
+    "frequencyImmediate": "Frekvencija odmah",
+    "frequencyWeekly": "Učestalost tjedno",
+    "generalDescription": "Opći opis",
+    "generalSettings": "Opće postavke",
+    "requireApproval": "Zahtijeva odobrenje",
+    "requireApprovalDescription": "Zahtijeva opis odobrenja",
+    "saveError": "Pogreška spremanja",
+    "saved": "Spremljeno",
+    "syncFrequency": "Frekvencija sinkronizacije",
+    "triggerDescription": "Opis okidača",
+    "triggerSettings": "Postavke okidača"
   },
   "willVersion": {
-    "added": "Added",
-    "compareDiff": "Compare diff",
-    "comparePrompt": "Compare prompt",
-    "current": "Current",
-    "description": "Description",
-    "modified": "Modified",
-    "removed": "Removed",
-    "restore": "Restore",
-    "title": "Title",
-    "versionNumber": "Version number"
+    "added": "Dodano",
+    "compareDiff": "Usporedi razliku",
+    "comparePrompt": "Usporedi upit",
+    "current": "Trenutni",
+    "description": "Opis",
+    "modified": "Izmijenjeno",
+    "removed": "Uklonjeno",
+    "restore": "Vratiti",
+    "title": "Titula",
+    "versionNumber": "Broj verzije"
   },
   "disclaimers": {
-    "general": "LegacyGuard provides tools and guidance for estate planning but does not provide legal advice. For complex estates or specific legal questions, please consult with a qualified attorney in your jurisdiction.",
-    "willGenerator": "The will generator creates documents based on information you provide. While designed to meet legal requirements, we strongly recommend having any generated will reviewed by a qualified attorney before execution.",
-    "jurisdiction": "Legal requirements vary by jurisdiction. Ensure your documents comply with the laws in your area.",
-    "notLegalAdvice": "This service does not constitute legal advice and should not be relied upon as such.",
-    "professionalReview": "For complex estates, business interests, or unique family situations, professional legal review is strongly recommended."
+    "general": "LegacyGuard pruža alate i smjernice za planiranje ostavštine, ali ne pruža pravne savjete. Za složene ostavštine ili specifična pravna pitanja, obratite se kvalificiranom odvjetniku u vašoj jurisdikciji.",
+    "willGenerator": "Generator oporuka izrađuje dokumente na temelju informacija koje navedete. Iako je osmišljen u skladu sa zakonskim zahtjevima, toplo preporučujemo da svaku generiranu oporuku prije potpisivanja pregleda kvalificirani odvjetnik.",
+    "jurisdiction": "Pravni zahtjevi razlikuju se ovisno o jurisdikciji. Osigurajte da su vaši dokumenti u skladu sa zakonima u vašem području.",
+    "notLegalAdvice": "Ova usluga ne predstavlja pravni savjet i ne treba se na nju oslanjati kao na takvu.",
+    "professionalReview": "Za složene ostavinske postupke, poslovne interese ili jedinstvene obiteljske situacije, toplo se preporučuje stručna pravna analiza."
   },
   "terms": {
-    "serviceTerms": "Terms of Service",
-    "privacyPolicy": "Privacy Policy",
-    "dataProcessing": "Data Processing Agreement",
-    "userAgreement": "User Agreement",
-    "acceptanceRequired": "By using LegacyGuard, you agree to our Terms of Service and Privacy Policy.",
-    "lastUpdated": "Last updated: {{date}}",
-    "effectiveDate": "Effective date: {{date}}"
+    "serviceTerms": "Uvjeti pružanja usluge",
+    "privacyPolicy": "Pravila o privatnosti",
+    "dataProcessing": "Ugovor o obradi podataka",
+    "userAgreement": "Korisnički ugovor",
+    "acceptanceRequired": "Korištenjem LegacyGuarda prihvaćate naše Uvjete pružanja usluge i Pravila o privatnosti.",
+    "lastUpdated": "Zadnje ažuriranje: {{date}}",
+    "effectiveDate": "Datum stupanja na snagu: {{date}}"
   },
   "compliance": {
-    "dataProtection": "Your data is protected in compliance with applicable data protection laws including GDPR and CCPA.",
-    "encryption": "All sensitive information is encrypted using industry-standard encryption methods.",
-    "retention": "Data retention policies are designed to protect your privacy while ensuring your family can access important information when needed.",
-    "access": "You have the right to access, modify, or delete your personal information at any time.",
-    "portability": "You can export your data in standard formats for use with other services."
+    "dataProtection": "Vaši su podaci zaštićeni u skladu s važećim zakonima o zaštiti podataka, uključujući GDPR i CCPA.",
+    "encryption": "Sve osjetljive informacije šifriraju se korištenjem industrijskih standardnih metoda šifriranja.",
+    "retention": "Pravila o čuvanju podataka osmišljena su kako bi zaštitila vašu privatnost, a istovremeno osigurala da vaša obitelj može pristupiti važnim informacijama kada je to potrebno.",
+    "access": "Imate pravo pristupiti, izmijeniti ili izbrisati svoje osobne podatke u bilo kojem trenutku.",
+    "portability": "Svoje podatke možete izvesti u standardnim formatima za korištenje s drugim uslugama."
   },
   "executionRequirements": {
-    "witnessRequirements": "Witness Requirements for {{jurisdiction}}",
-    "notaryRequirements": "Notarization Requirements",
-    "signingInstructions": "Proper Signing Instructions",
-    "storageGuidelines": "Secure Storage Guidelines",
-    "legalCompliance": "Legal Compliance Verification"
+    "witnessRequirements": "Zahtjevi za svjedoke za {{jurisdiction}}",
+    "notaryRequirements": "Zahtjevi za ovjeru",
+    "signingInstructions": "Pravilne upute za potpisivanje",
+    "storageGuidelines": "Smjernice za sigurnu pohranu",
+    "legalCompliance": "Provjera pravne usklađenosti"
   },
   "cookiePolicy": {
     "cookieTypes": {
-      "analytics": "Analytics cookies help us understand how visitors interact with our website.",
-      "essential": "Essential cookies are necessary for the website to function properly.",
-      "marketing": "Marketing cookies are used to track visitors across websites to display relevant advertisements."
+      "analytics": "Analitički kolačići nam pomažu da shvatimo kako posjetitelji koriste našu web stranicu.",
+      "essential": "Osnovni kolačići su neophodni za pravilno funkcioniranje web stranice.",
+      "marketing": "Marketinški kolačići koriste se za praćenje posjetitelja na web-stranicama kako bi se prikazivali relevantni oglasi."
     },
-    "howWeUseCookies": "We use cookies to improve your experience, analyze site usage, and provide personalized content.",
-    "introduction": "This Cookie Policy explains how LegacyGuard uses cookies and similar technologies.",
-    "manageCookies": "You can manage your cookie preferences through your browser settings or our cookie preference center.",
-    "title": "Title",
-    "whatAreCookies": "Cookies are small text files that are stored on your device when you visit our website."
+    "howWeUseCookies": "Kolačiće koristimo za poboljšanje vašeg iskustva, analizu korištenja stranice i pružanje personaliziranog sadržaja.",
+    "introduction": "Ova Pravila o kolačićima objašnjavaju kako LegacyGuard koristi kolačiće i slične tehnologije.",
+    "manageCookies": "Postavkama kolačića možete upravljati putem postavki preglednika ili našeg centra za postavke kolačića.",
+    "title": "Titula",
+    "whatAreCookies": "Kolačići su male tekstualne datoteke koje se pohranjuju na vaš uređaj kada posjetite našu web stranicu."
   },
   "header": {
-    "subtitle": "Subtitle",
-    "title": "Title"
+    "title": "Titula"
   },
   "hero": {
-    "headline": "Headline",
-    "subheadline": "Subheadline"
-  },
-  "privacyPolicy": {
-    "introduction": "This Privacy Policy describes how LegacyGuard collects, uses, and protects your personal information.",
-    "lastUpdated": "Last updated: {{date}}",
-    "sections": {
-      "dataSecurity": {
-        "content": "We implement appropriate security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.",
-        "title": "Data Security"
-      },
-      "informationCollection": {
-        "content": "We collect information you provide directly to us, such as when you create an account, use our services, or contact us for support.",
-        "title": "Information We Collect"
-      },
-      "informationSharing": {
-        "content": "We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except as described in this policy.",
-        "title": "Information Sharing"
-      },
-      "informationUse": {
-        "content": "We use your information to provide, maintain, and improve our services, communicate with you, and ensure the security of your account.",
-        "title": "How We Use Your Information"
-      },
-      "yourRights": {
-        "content": "You have the right to access, update, or delete your personal information. You may also opt out of certain communications from us.",
-        "title": "Your Rights"
-      }
-    },
-    "title": "Privacy Policy"
+    "headline": "Naslov",
+    "subheadline": "Podnaslov"
   },
   "termsOfService": {
-    "effectiveDate": "Effective date: {{date}}",
-    "introduction": "These Terms of Service govern your use of LegacyGuard's family protection platform and services.",
-    "lastUpdated": "Last updated: {{date}}",
+    "effectiveDate": "Datum stupanja na snagu: {{date}}",
+    "introduction": "Ovi Uvjeti pružanja usluge uređuju vaše korištenje platforme i usluga za zaštitu obitelji LegacyGuard.",
+    "lastUpdated": "Zadnje ažuriranje: {{date}}",
     "sections": {
       "acceptance": {
-        "content": "By accessing or using LegacyGuard, you agree to be bound by these Terms of Service and all applicable laws and regulations.",
-        "title": "Acceptance of Terms"
+        "content": "Pristupom ili korištenjem LegacyGuarda pristajete na ove Uvjete pružanja usluge i sve primjenjive zakone i propise.",
+        "title": "Prihvaćanje uvjeta"
       },
       "description": {
-        "content": "LegacyGuard provides digital tools and services to help individuals organize their important information for family protection purposes.",
-        "title": "Service Description"
+        "content": "LegacyGuard pruža digitalne alate i usluge koji pomažu pojedincima organizirati važne podatke u svrhu zaštite obitelji.",
+        "title": "Opis usluge"
       },
       "limitations": {
-        "content": "LegacyGuard provides tools and guidance but does not provide legal advice. We recommend consulting with qualified professionals for complex legal matters.",
-        "title": "Limitations of Liability"
+        "content": "LegacyGuard pruža alate i smjernice, ali ne pruža pravne savjete. Za složena pravna pitanja preporučujemo konzultacije s kvalificiranim stručnjacima.",
+        "title": "Ograničenja odgovornosti"
       },
       "privacy": {
-        "content": "Your privacy is important to us. Please review our Privacy Policy to understand how we collect, use, and protect your information.",
-        "title": "Privacy and Data Protection"
+        "content": "Vaša privatnost nam je važna. Molimo vas da pregledate našu Politiku privatnosti kako biste razumjeli kako prikupljamo, koristimo i štitimo vaše podatke.",
+        "title": "Privatnost i zaštita podataka"
       },
       "userResponsibilities": {
-        "content": "You are responsible for maintaining the confidentiality of your account information and for all activities that occur under your account.",
-        "title": "User Responsibilities"
+        "content": "Odgovorni ste za održavanje povjerljivosti podataka o vašem računu i za sve aktivnosti koje se događaju na vašem računu.",
+        "title": "Odgovornosti korisnika"
       }
     },
-    "title": "Terms of Service"
+    "title": "Uvjeti pružanja usluge"
   },
   "cookies": {
     "policy": {
       "analytics": {
-        "description": "Description",
+        "description": "Opis",
         "examples": {
           "ga": "Ga",
           "gid": "Gid",
-          "session": "Session"
+          "session": "Sjednica"
         },
-        "purpose": "Purpose",
-        "title": "Title"
+        "purpose": "Svrha",
+        "title": "Titula"
       },
       "categories": {
-        "title": "Title"
+        "title": "Titula"
       },
       "contact": {
-        "address": "Address",
-        "addressDetails": "Address details",
-        "description": "Description",
-        "email": "Email",
-        "title": "Title"
+        "address": "Adresa",
+        "addressDetails": "Podaci o adresi",
+        "description": "Opis",
+        "email": "E-pošta",
+        "title": "Titula"
       },
-      "examples": "Examples",
-      "lastUpdated": "Last updated",
+      "examples": "Primjeri",
+      "lastUpdated": "Zadnje ažuriranje",
       "manage": {
-        "title": "Title"
+        "title": "Titula"
       },
       "marketing": {
-        "description": "Description",
+        "description": "Opis",
         "examples": {
           "facebook": "Facebook",
           "google": "Google"
         },
-        "purpose": "Purpose",
-        "title": "Title"
+        "purpose": "Svrha",
+        "title": "Titula"
       },
       "necessary": {
-        "description": "Description",
+        "description": "Opis",
         "examples": {
-          "auth": "Auth",
-          "consent": "Consent",
-          "csrf": "Csrf",
-          "session": "Session"
+          "auth": "Autorizacija",
+          "consent": "Pristanak",
+          "csrf": "CSRF",
+          "session": "Sjednica"
         },
-        "purpose": "Purpose",
-        "title": "Title"
+        "purpose": "Svrha",
+        "title": "Titula"
       },
       "overview": {
-        "intro": "Intro",
-        "point1": "Point1",
-        "point2": "Point2",
-        "point3": "Point3",
-        "point4": "Point4",
-        "title": "Title"
+        "intro": "Uvod",
+        "point1": "Točka 1",
+        "point2": "Točka 2",
+        "point3": "Točka 3",
+        "point4": "Točka 4",
+        "title": "Titula"
       },
       "preferences": {
-        "description": "Description",
+        "description": "Opis",
         "examples": {
-          "language": "Language",
-          "theme": "Theme",
-          "ui": "Ui"
+          "language": "Jezik",
+          "theme": "Tema",
+          "ui": "Korisničko sučelje"
         },
-        "purpose": "Purpose",
-        "title": "Title"
+        "purpose": "Svrha",
+        "title": "Titula"
       },
-      "purpose": "Purpose",
-      "required": "Required",
-      "subtitle": "Subtitle",
-      "title": "Title",
+      "purpose": "Svrha",
+      "required": "Potreban",
+      "subtitle": "Titl",
+      "title": "Titula",
       "yourRights": {
-        "description": "Description",
-        "right1": "Right1",
-        "right2": "Right2",
-        "right3": "Right3",
-        "right4": "Right4",
-        "title": "Title"
+        "description": "Opis",
+        "right1": "Desno1",
+        "right2": "Desno2",
+        "right3": "Desno3",
+        "right4": "Desno4",
+        "title": "Titula"
       }
     }
   }

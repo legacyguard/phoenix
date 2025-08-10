@@ -49,7 +49,7 @@ interface OnboardingWizardProps {
 
 export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({ isOpen, onClose, onComplete, useLifeQuestions = true, useRespectfulFlow = false }) => {
   const { t } = useTranslation('help');
-  const { t: tCommon } = useTranslation('ui');
+  const { t: tCommon } = useTranslation('ui-common');
   const { trackAction, trackFormInteraction, startTimer, endTimer } = useAnalytics({ componentName: 'OnboardingWizard', userJourneyStage: 'onboarding' });
   const [currentStep, setCurrentStep] = useState(0); // 0 for BasicLifeQuestions
   const [isLoading, setIsLoading] = useState(false);

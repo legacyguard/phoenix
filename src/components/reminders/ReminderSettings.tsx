@@ -38,7 +38,7 @@ export function ReminderSettings({
   preferences: initialPreferences, 
   onSave 
 }: ReminderSettingsProps) {
-  const { t } = useTranslation('dashboard');
+  const { t } = useTranslation('dashboard-main');
   const [preferences, setPreferences] = useState<ReminderPreferences>(initialPreferences);
   const [saving, setSaving] = useState(false);
 

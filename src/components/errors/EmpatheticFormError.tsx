@@ -16,7 +16,7 @@ const EmpatheticFormError: React.FC<EmpatheticFormErrorProps> = ({
   className,
   showIcon = true 
 }) => {
-  const { t } = useTranslation('empathetic-errors');
+  const { t } = useTranslation('errors');
   
   // Get the appropriate error message
   const getErrorMessage = () => {
@@ -65,7 +65,7 @@ const EmpatheticFormError: React.FC<EmpatheticFormErrorProps> = ({
 
 // Export additional variant for inline errors
 export const InlineEmpatheticError: React.FC<{ message: string }> = ({ message }) => {
-  const { t } = useTranslation('empathetic-errors');
+  const { t } = useTranslation('errors');
   
   return (
     <span className="inline-empathetic-error">
