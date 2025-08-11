@@ -33,7 +33,7 @@
     "check:i18n": "node scripts/ci/i18n-guard.cjs",
     "check:cycles": "node scripts/ci/cycles-guard.cjs",
     "check:exports": "node scripts/ci/exports-guard.cjs",
-    "check:all": "npm run -s check:i18n && npm run -s check:cycles && npm run -s check:exports && npm run -s check:size && npm run -s check:only && npm run -s check:console && npm run -s check:imports",
+    "check:all": "npm run -s check:i18n && npm run -s check:cycles && npm run -s check:exports && npm run -s check:size && npm run -s check:only && npm run -s check:console && npm run -s check:imports && npm run -s check:img",
     "ci": "npm run -s lint && npm run -s typecheck && npm run -s test:ci && npm run -s check:all",
     "check:i18n:strict": "node scripts/ci/i18n-guard.cjs --strict",
     "check:size": "node scripts/ci/size-guard.cjs",
@@ -46,7 +46,10 @@
     "typecheck:strict": "tsc -p tsconfig.strict.json --noEmit",
     "typecheck:strict-plus": "tsc -p tsconfig.strict-plus.json --noEmit",
     "check:imports": "node scripts/ci/imports-guard.cjs",
-    "build:pwa": "vite build --config vite.config.pwa.ts"
+    "build:pwa": "vite build --config vite.config.pwa.ts",
+    "check:img": "node scripts/ci/img-guard.cjs",
+    "check:img:strict": "node scripts/ci/img-guard.cjs --strict",
+    "img:baseline": "node scripts/ci/img-guard.cjs --write-baseline"
   },
   "dependencies": {
     "@clerk/clerk-react": "^5.36.0",
@@ -148,6 +151,7 @@
     "@vitest/coverage-v8": "^3.2.4",
     "@vitest/ui": "^3.2.4",
     "autoprefixer": "^10.4.20",
+    "chrome-launcher": "^1.2.0",
     "cypress": "^14.5.3",
     "cypress-file-upload": "^5.0.8",
     "dotenv": "^17.2.1",
@@ -159,6 +163,7 @@
     "globals": "^15.9.0",
     "i18next-scanner": "^4.6.0",
     "jsdom": "^26.1.0",
+    "lighthouse": "^12.8.1",
     "lovable-tagger": "^1.1.7",
     "playwright": "^1.54.1",
     "postcss": "^8.4.47",
