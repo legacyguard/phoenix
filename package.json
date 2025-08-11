@@ -42,7 +42,8 @@
     "check:only": "node scripts/ci/only-guard.cjs",
     "check:console": "node scripts/ci/console-guard.cjs",
     "check:console:strict": "node scripts/ci/console-guard.cjs --strict",
-    "console:baseline": "node scripts/ci/console-guard.cjs --write-baseline"
+    "console:baseline": "node scripts/ci/console-guard.cjs --write-baseline",
+    "typecheck:strict": "tsc -p tsconfig.strict.json --noEmit"
   },
   "dependencies": {
     "@clerk/clerk-react": "^5.36.0",
