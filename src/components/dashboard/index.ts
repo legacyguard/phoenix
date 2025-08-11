@@ -1,3 +1,4 @@
+import { initWebVitals } from '../../rum/vitals';
 export { ProgressNudge } from "./ProgressNudge";
 export {
   default as ProfessionalProgress,
@@ -6,3 +7,7 @@ export {
 export { default as ProfessionalDashboard } from "./ProfessionalDashboard";
 export { default as DocumentCard } from "./DocumentCard";
 export { DocumentUpload } from "./DocumentUpload";
+
+
+// Perf RUM
+initWebVitals();
