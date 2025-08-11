@@ -448,7 +448,6 @@ export const QuickTasks: React.FC<QuickTasksProps> = ({
                         >
                           // TODO: Fix missing translation key -
                           ui:common.priority.${task.priority}
-                          // {t(`ui:common.priority.${task.priority}`)}
                         </Badge>
                       </div>
 

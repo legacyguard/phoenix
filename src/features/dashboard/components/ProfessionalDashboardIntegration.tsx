@@ -157,8 +157,6 @@ const ProfessionalDashboardIntegration: React.FC<DashboardProps> = ({
       } catch (err) {
         console.error("Dashboard initialization error:", err);
         // TODO: Fix missing translation key - dashboard-main:errors.initializationFailed
-
-        // setError(t('dashboard-main:errors.initializationFailed'));
       } finally {
         setLoading(false);
       }
@@ -220,7 +218,6 @@ const ProfessionalDashboardIntegration: React.FC<DashboardProps> = ({
             title: gap.title || gap.name,
             // TODO: Fix missing translation key - dashboard-main:tasks.criticalGap
 
-            // description: gap.description || t('dashboard-main:tasks.criticalGap'),
             category: mapToCategory(gap.type),
             priority: "immediate",
             completed: false,
@@ -351,10 +348,8 @@ const ProfessionalDashboardIntegration: React.FC<DashboardProps> = ({
           id: `doc-${index}`,
           // TODO: Fix missing translation key - dashboard-main:tasks.reviewDocument
 
-          // title: t('dashboard-main:tasks.reviewDocument', { name: doc.name }),
           // TODO: Fix missing translation key - dashboard-main:tasks.documentReviewDesc
 
-          // description: t('dashboard-main:tasks.documentReviewDesc'),
           category: "documents",
           priority: "high",
           completed: false,

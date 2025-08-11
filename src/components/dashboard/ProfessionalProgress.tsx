@@ -227,8 +227,6 @@ const ProfessionalProgress: React.FC<ProfessionalProgressProps> = ({
       return "Your security is well-established";
     } else {
       return "You've achieved comprehensive protection!";
-
-      // return t('dashboard-main:respectful.encouragement.comprehensive');
     }
   };
 

@@ -242,10 +242,8 @@ export function WillGenerator({ onComplete }: WillGeneratorProps) {
         // In an event handler, navigate or set state to display these components instead of returning JSX here.
         // For now, just notify the user empathetically.
         // TODO: Fix missing translation key - wills:gentle.addLovedOnes
-        // toast.message(t('wills:gentle.nudgeStart'), { description: t('wills:gentle.addLovedOnes') });
       } else if (!willContent.beneficiaries?.some((b) => b.allocation)) {
         // TODO: Fix missing translation key - wills:gentle.nudgeAllocate
-        // toast.message(t('wills:gentle.nudgeAllocate'), { description: t('wills:gentle.helpAllocate') });
       }
       toast.success(t("common:ui.willGenerated"));
       onComplete?.("generated-will-id");

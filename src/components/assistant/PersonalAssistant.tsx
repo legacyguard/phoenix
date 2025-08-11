@@ -15,7 +15,10 @@ import { useAssistant } from "@/hooks/useAssistant";
 import { AssistantAvatar } from "./AssistantAvatar";
 import { AssistantMessage } from "./AssistantMessage";
 import { AssistantActions } from "./AssistantActions";
-import type { AssistantMessage as AssistantMessageType, Recommendation } from "./types";
+import type {
+  AssistantMessage as AssistantMessageType,
+  Recommendation,
+} from "./types";
 
 interface PersonalAssistantProps {
   context: string;
@@ -37,9 +40,8 @@ export const PersonalAssistant: React.FC<PersonalAssistantProps> = ({
     updateContext,
   } = useAssistant();
 
-  const [currentMessage, setCurrentMessage] = useState<AssistantMessageType | null>(
-    null,
-  );
+  const [currentMessage, setCurrentMessage] =
+    useState<AssistantMessageType | null>(null);
   const [suggestions, setSuggestions] = useState<Recommendation[]>([]);
   const [isTyping, setIsTyping] = useState(false);
 

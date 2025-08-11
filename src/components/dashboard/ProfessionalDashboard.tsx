@@ -296,7 +296,6 @@ const ProfessionalDashboard: React.FC<ProfessionalDashboardProps> = ({
               className="ml-4"
             >
               // TODO: Fix missing translation key - ui-elements:common.dismiss
-              // {t("ui-elements:common.dismiss")}
             </Button>
           </AlertDescription>
         </Alert>
