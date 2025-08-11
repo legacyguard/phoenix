@@ -1,0 +1,642 @@
+{
+  "actions": {
+    "consultLawyer": "Trefnu Ymgynghoriad Cyfreithiol",
+    "createCodicil": "Creu Gwelliant (Codicil)",
+    "deleteWill": "Dileu'r Ewyllys Hon",
+    "downloadPdf": "Lawrlwytho Dogfen PDF",
+    "generateWill": "Cynhyrchu Ewyllys Derfynol",
+    "next": "Nesaf",
+    "previous": "Blaenorol",
+    "printWill": "Argraffu Dogfen Ewyllys",
+    "saveProgress": "Cadw Cynnydd Cyfredol",
+    "shareWill": "Rhannu gyda'r Teulu",
+    "updateWill": "Diweddaru Gwybodaeth Ewyllys"
+  },
+  "errors": {
+    "assetLoadFailed": "Ni allem lwytho gwybodaeth eich ased. Adnewyddwch a cheisiwch eto.",
+    "generationFailed": "Daethom ar draws problem wrth gynhyrchu eich ewyllys. Adolygwch eich gwybodaeth a cheisiwch eto.",
+    "jurisdictionRequired": "Dewiswch eich awdurdodaeth gyfreithiol i sicrhau cydymffurfiaeth",
+    "loadFailed": "Ni allem lwytho gwybodaeth eich ewyllys. Adnewyddwch y dudalen a cheisiwch eto.",
+    "printFailed": "Daethom ar draws problem wrth baratoi eich dogfen i'w hargraffu. Rhowch gynnig arall arni.",
+    "saveFailed": "Ni allem gadw eich cynnydd. Gwiriwch eich cysylltiad a cheisiwch eto.",
+    "validationFailed": "Adolygwch a chywirwch y wybodaeth a amlygwyd cyn bwrw ymlaen"
+  },
+  "execution": {
+    "copyDistribution": "Dosbarthu Copïau",
+    "familyNotification": "Hysbysu Eich Teulu",
+    "legalRequirements": "Gofynion Cyfreithiol ar gyfer {{jurisdiction}}",
+    "notarization": "Gofynion Notareiddio",
+    "notaryOptional": "Argymhellir notari ond nid yw'n ofynnol",
+    "notaryRequired": "Angen notari cyhoeddus",
+    "numberOfCopies": "Nifer a Argymhellir o Gopïau",
+    "safeStorage": "Lleoliadau Storio Diogel",
+    "selfProving": "Affidafid Hunan-brofiol",
+    "signingInstructions": "Cyfarwyddiadau Arwyddo",
+    "signingOrder": "Trefn Arwyddo Briodol",
+    "storageRecommendations": "Argymhellion Storio",
+    "subtitle": "Gwneud eich ewyllys yn gyfreithiol rwymol",
+    "title": "Gofynion Gweithredu Ewyllys",
+    "witnessCount": "Mae angen tystion {{count}}",
+    "witnessInstructions": "Cyfarwyddiadau Tystion",
+    "witnessQualifications": "Cymwysterau Tystion",
+    "witnessRequirements": "Gofynion Tystion"
+  },
+  "form": {
+    "assetSelection": {
+      "allAssets": "Cynnwys yr Holl Asedau Cyfredol a Dyfodol",
+      "assetCategories": "Categorïau Asedau i'w Cynnwys",
+      "businessInterests": "Buddiannau Busnes",
+      "excludedAssets": "Asedau i'w heithrio",
+      "jointAssets": "Asedau sy'n eiddo ar y cyd",
+      "residualDescription": "Yr holl asedau sy'n weddill nad ydynt wedi'u crybwyll yn benodol mewn man arall yn yr ewyllys hon",
+      "residualEstate": "Ystâd Weddilliol",
+      "selectAssets": "Dewiswch Asedau i'w Cynnwys",
+      "specificAssets": "Dewiswch Asedau Penodol yn Unig"
+    },
+    "distribution": {
+      "addBeneficiary": "Ychwanegu Buddiolwr Ychwanegol",
+      "ageRestriction": "Gofyniad Oedran",
+      "allocation": "Dyraniad Etifeddiaeth",
+      "beneficiaryName": "Enw Llawn y Buddiolwr",
+      "conditions": "Amodau neu Gyfyngiadau",
+      "contingentBeneficiary": "Buddiolwr Amodol",
+      "percentage": "Canran yr Ystâd",
+      "primaryBeneficiary": "Prif Fuddiolwr",
+      "relationship": "Perthynas â Chi",
+      "specificAmount": "Swm Doler Penodol",
+      "specificAsset": "Ased neu Eiddo Penodol",
+      "trustProvision": "Trefniant Ymddiriedolaeth"
+    },
+    "executor": {
+      "alternateExecutor": "Ysgutor Eilaidd",
+      "bondRequirement": "Gofyniad Bond",
+      "coExecutors": "Cyd-Weithredwyr",
+      "executorAddress": "Cyfeiriad yr Ysgutor",
+      "executorCompensation": "Iawndal Ysgutor",
+      "executorDuties": "Cyfrifoldebau'r Ysgutor",
+      "executorInstructions": "Cyfarwyddiadau Arbennig ar gyfer Ysgutor",
+      "executorName": "Enw Llawn yr Ysgutor",
+      "executorRelationship": "Perthynas â Chi",
+      "primaryExecutor": "Prif Ysgutor",
+      "specialPowers": "Pwerau Arbennig a Roddwyd"
+    },
+    "guardianship": {
+      "backupGuardian": "Gwarcheidwad Amgen",
+      "educationPreferences": "Dewisiadau Addysg",
+      "guardianCompensation": "Iawndal Gwarcheidwad",
+      "guardianFor": "Gwarchodwr ar gyfer {{childName}}",
+      "guardianInstructions": "Cyfarwyddiadau i'r Gwarcheidwad",
+      "guardianQualifications": "Cymwysterau Gwarchodwr",
+      "minorChildren": "Plant Dan Oed sydd Angen Gwarcheidiaeth",
+      "primaryGuardian": "Prif Warcheidwad",
+      "religiousUpbringing": "Dewisiadau Magwraeth Grefyddol"
+    },
+    "personalInfo": {
+      "addChild": "Ychwanegu Plentyn",
+      "addressHelper": "Cyfeiriad eich prif breswylfa",
+      "childDateOfBirth": "Dyddiad Geni'r Plentyn",
+      "childName": "Enw Llawn y Plentyn",
+      "childRelation": "Perthynas â Chi",
+      "children": "Plant a Dibynyddion",
+      "currentAddress": "Cyfeiriad Cyfreithiol Cyfredol",
+      "dateOfBirth": "Dyddiad Geni",
+      "fullLegalName": "Enw Cyfreithiol Cyflawn",
+      "fullLegalNameHelper": "Rhowch eich enw yn union fel y mae'n ymddangos ar ddogfennau swyddogol",
+      "maritalStatus": "Statws Priodasol",
+      "marriageDate": "Dyddiad Priodas",
+      "placeOfBirth": "Man Geni",
+      "previousWills": "Ewyllysiau Blaenorol",
+      "revokesPrevious": "Mae hyn yn dirymu pob ewyllys flaenorol",
+      "spouseName": "Enw Cyfreithiol Llawn y Priod"
+    },
+    "provisions": {
+      "burialCremation": "Dewis Claddedigaeth neu Amlosgiad",
+      "businessContinuation": "Cynlluniau Parhad Busnes",
+      "charitableBequests": "Rhoddion Elusennol",
+      "charityAmount": "Swm y Rhodd",
+      "charityName": "Sefydliad Elusennol",
+      "digitalAssets": "Cyfarwyddiadau Ased Digidol",
+      "funeralInstructions": "Cyfarwyddiadau Angladd Penodol",
+      "funeralWishes": "Dewisiadau Angladd a Chladdu",
+      "organDonation": "Dymuniadau Rhoi Organau",
+      "personalMessages": "Negeseuon Personol i'r Teulu",
+      "petCare": "Trefniadau Gofal Anifeiliaid Anwes",
+      "specialInstructions": "Cyfarwyddiadau Arbennig"
+    }
+  },
+  "generator": {
+    "continueWill": "Parhau i baratoi'r ewyllys",
+    "description": "Cynhyrchwch ewyllys gynhwysfawr, gyfreithiol ddilys, wedi'i theilwra i ofynion eich awdurdodaeth ac anghenion unigryw eich teulu.",
+    "getStarted": "Dechreuwch Greu Eich Ewyllys",
+    "importance": "Sicrhau bod eich dymuniadau wedi'u dogfennu'n gyfreithiol a bod eich teulu wedi'i ddiogelu",
+    "newWill": "Creu Ewyllys Newydd",
+    "of": "O",
+    "professionalGuidance": "Canllawiau cyfreithiol proffesiynol a argymhellir ar gyfer ystadau cymhleth",
+    "step": "Cam",
+    "subtitle": "Creu ewyllys gyfreithiol gadarn gyda chanllawiau proffesiynol",
+    "title": "Generadur Ewyllys a Thestament Olaf",
+    "viewExisting": "Adolygu'r Ewyllys Gyfredol"
+  },
+  "legal": {
+    "consultLawyer": "Ymgynghorwch â'r Cyfreithiwr",
+    "disclaimer": "Ymwadiad Cyfreithiol Pwysig",
+    "estatePlanning": "Cynllunio Ystadau Cynhwysfawr",
+    "jurisdiction": "Awdurdodaeth Gyfreithiol",
+    "lawsApply": "Bydd cyfreithiau {{jurisdiction}} yn berthnasol",
+    "lawyerRecommended": "Rydym yn argymell yn gryf ymgynghori ag atwrnai cymwys ar gyfer ystadau cymhleth",
+    "legalCompliance": "Gwirio Cydymffurfiaeth Gyfreithiol",
+    "notLegalAdvice": "Nid yw'r gwasanaeth hwn yn gyfystyr â chyngor cyfreithiol",
+    "probateProcess": "Gwybodaeth am y Broses Profiant",
+    "professionalGuidance": "Argymhellir arweiniad cyfreithiol proffesiynol",
+    "professionalReview": "Adolygiad Cyfreithiol Proffesiynol",
+    "selectJurisdiction": "Dewiswch eich awdurdodaeth gyfreithiol",
+    "taxImplications": "Goblygiadau Treth"
+  },
+  "notifications": {
+    "consultationScheduled": "Mae ymgynghoriad cyfreithiol wedi'i drefnu",
+    "documentShared": "Mae ewyllys wedi'i rhannu ag aelodau dynodedig o'r teulu",
+    "executionComplete": "Mae gweithredu ewyllys wedi'i gofnodi",
+    "progressSaved": "Mae eich cynnydd wedi'i gadw",
+    "willDeleted": "Mae Will wedi'i ddileu'n barhaol",
+    "willUpdated": "Mae Will wedi cael ei ddiweddaru'n llwyddiannus"
+  },
+  "preview": {
+    "article": "ERTHYGL {{number}}",
+    "draftWatermark": "DRAFFT - DIM YN RHWYMO'N GYFREITHIOL",
+    "executionInstructions": "CYFARWYDDIADAU GWEITHREDU",
+    "lastWillTestament": "EWYLLYS A THESTAMENT OLAF",
+    "of": "O",
+    "pageNumber": "Tudalen {{current}} o {{total}}",
+    "reviewCarefully": "Adolygwch y ddogfen hon yn ofalus cyn bwrw ymlaen",
+    "section": "Adran {{number}}",
+    "signatureSection": "ADRAN LLOFNOD",
+    "subtitle": "Adolygwch eich ewyllys gyflawn cyn ei chwblhau",
+    "title": "Rhagolwg Dogfen Ewyllys",
+    "witnessClause": "CYMAL TYST"
+  },
+  "status": {
+    "archived": "Fersiwn wedi'i Archifo",
+    "draft": "Drafft ar y Gweill",
+    "executed": "Wedi'i Weithredu'n Gyfreithiol",
+    "generated": "Wedi'i Gynhyrchu - Angen Gweithredu",
+    "outdated": "Angen Diweddariad"
+  },
+  "policy": {
+    "duration": {
+      "session": "Sesiwn",
+      "minutes": "{{count}} munud",
+      "hours": "{{count}} awr",
+      "days": "{{count}} diwrnod",
+      "months": "{{count}} mis",
+      "years": "{{count}} mlynedd"
+    }
+  },
+  "steps": {
+    "assets": {
+      "description": "Dewiswch pa asedau yr hoffech eu cynnwys yn eich ewyllys a sut y dylid eu dosbarthu.",
+      "subtitle": "Eich eiddo gwerthfawr",
+      "title": "Dosbarthu Asedau"
+    },
+    "beneficiaries": {
+      "description": "Nodwch pwy fydd yn derbyn eich asedau ac ym mha gyfrannau.",
+      "subtitle": "Eich derbynwyr dewisol",
+      "title": "Dynodiadau Buddiolwyr"
+    },
+    "executor": {
+      "description": "Dewiswch berson cyfrifol i reoli eich ystâd a chyflawni eich dymuniadau.",
+      "subtitle": "Eich cynrychiolydd ystâd",
+      "title": "Ysgutor Ystâd"
+    },
+    "guardians": {
+      "description": "Penodi unigolion dibynadwy i ofalu am blant dan oed neu ddibynyddion.",
+      "subtitle": "Gofalwch am eich dibynyddion",
+      "title": "Apwyntiadau Gwarcheidiaeth"
+    },
+    "personal": {
+      "description": "Mae angen eich gwybodaeth gyfreithiol gyflawn arnom i sicrhau bod eich ewyllys yn bodloni'r holl ofynion cyfreithiol.",
+      "subtitle": "Eich gwybodaeth adnabod",
+      "title": "Gwybodaeth Bersonol"
+    },
+    "preferences": {
+      "description": "Cynhwyswch unrhyw gyfarwyddiadau arbennig, rhoddion elusennol, neu ddymuniadau personol.",
+      "subtitle": "Cyfarwyddiadau ychwanegol",
+      "title": "Darpariaethau Arbennig"
+    },
+    "review": {
+      "description": "Adolygwch yr holl fanylion yn ofalus cyn cynhyrchu eich dogfen gyfreithiol.",
+      "subtitle": "Gwiriwch yr holl wybodaeth",
+      "title": "Adolygiad Terfynol"
+    }
+  },
+  "validation": {
+    "addressRequired": "Mae angen eich cyfeiriad cyfreithiol presennol",
+    "allocationError": "Rhaid i'r dyraniad canrannol cyfanswm fod yn hafal i 100%",
+    "beneficiaryRequired": "Rhaid nodi o leiaf un buddiolwr",
+    "dobRequired": "Mae angen dyddiad geni ar gyfer dilysrwydd cyfreithiol",
+    "duplicateBeneficiary": "Mae'r buddiolwr hwn eisoes wedi'i ychwanegu",
+    "executorBeneficiaryConflict": "Dylai'r ysgutor a'r prif fuddiolwr fod yn unigolion gwahanol fel arfer",
+    "executorRequired": "Rhaid dynodi o leiaf un ysgutor",
+    "guardianRequired": "Mae angen dynodiad gwarcheidwad ar gyfer plant dan oed",
+    "invalidDate": "Rhowch ddyddiad dilys",
+    "invalidPercentage": "Rhaid i'r ganran fod rhwng 0 a 100",
+    "jurisdictionRequired": "Awdurdodaeth sydd ei hangen",
+    "requiredField": "Maes gofynnol"
+  },
+  "will": {
+    "address": "Cyfeiriad",
+    "addressPlaceholder": "Dalfan cyfeiriad",
+    "allocation": {
+      "addBeneficiary": "Ychwanegu buddiolwr",
+      "description": "Disgrifiad",
+      "generalEstate": "Ystâd gyffredinol",
+      "percentage": "Canran",
+      "tips": {
+        "tip1": "Awgrym1",
+        "tip2": "Awgrym2",
+        "tip3": "Awgrym3",
+        "title": "Teitl"
+      },
+      "title": "Teitl",
+      "total": "Cyfanswm"
+    },
+    "beneficiaries": {
+      "addBeneficiary": "Ychwanegu buddiolwr",
+      "allocation": "Dyraniad",
+      "alternativeBeneficiary": "Buddiolwr amgen",
+      "alternativePlaceholder": "Deiliad lle amgen",
+      "beneficiaryNumber": "Rhif buddiolwr",
+      "currentAllocation": "Dyraniad cyfredol",
+      "description": "Disgrifiad",
+      "identification": "Adnabod",
+      "identificationPlaceholder": "Dalfan adnabod",
+      "importantNotes": "Nodiadau pwysig",
+      "name": "Enw",
+      "noBeneficiaries": "Dim buddiolwyr",
+      "note1": "Nodyn 1",
+      "note2": "Nodyn 2",
+      "note3": "Nodyn3",
+      "ofEstate": "O ystâd",
+      "title": "Teitl"
+    },
+    "beneficiary": {
+      "name": "Enw",
+      "namePlaceholder": "Dalfan enw",
+      "relationship": "Perthynas",
+      "relationshipPlaceholder": "Dalfan perthynas"
+    },
+    "birthDate": "Dyddiad geni",
+    "birthDatePlaceholder": "Dalfan dyddiad geni",
+    "buttons": {
+      "saveWillInfo": "Cadw gwybodaeth ewyllys",
+      "saving": "Arbed"
+    },
+    "countryRequirements": "Gofynion gwlad",
+    "descriptions": {
+      "executorDescription": "Disgrifiad yr Ysgutor",
+      "physicalLocationDescription": "Disgrifiad o'r lleoliad ffisegol",
+      "statusDescription": "Disgrifiad o'r statws"
+    },
+    "executor": {
+      "addAlternative": "Ychwanegu dewis arall",
+      "address": "Cyfeiriad",
+      "addressPlaceholder": "Dalfan cyfeiriad",
+      "alternative": "Dewis arall",
+      "alternativeDescription": "Disgrifiad amgen",
+      "description": "Disgrifiad",
+      "name": "Enw",
+      "namePlaceholder": "Dalfan enw",
+      "phone": "Ffôn",
+      "phonePlaceholder": "Dalfan ffôn",
+      "primary": "Cynradd",
+      "relationship": "Perthynas",
+      "relationshipPlaceholder": "Dalfan perthynas",
+      "responsibilities": "Cyfrifoldebau",
+      "responsibility1": "Cyfrifoldeb1",
+      "responsibility2": "Cyfrifoldeb2",
+      "responsibility3": "Cyfrifoldeb3",
+      "responsibility4": "Cyfrifoldeb4",
+      "title": "Teitl"
+    },
+    "fields": {
+      "additionalNotes": "Nodiadau ychwanegol",
+      "currentStatus": "Statws cyfredol",
+      "executorContact": "Cyswllt ysgutor",
+      "physicalLocation": "Lleoliad ffisegol"
+    },
+    "legalReview": {
+      "button": "Botwm",
+      "description": "Disgrifiad",
+      "title": "Teitl"
+    },
+    "name": "Enw",
+    "namePlaceholder": "Dalfan enw",
+    "options": {
+      "noContactSelected": "Dim cyswllt wedi'i ddewis"
+    },
+    "placeholders": {
+      "additionalNotes": "Nodiadau ychwanegol",
+      "physicalLocation": "Lleoliad ffisegol",
+      "selectContact": "Dewiswch gyswllt"
+    },
+    "preview": {
+      "address": "Cyfeiriad",
+      "alternative": "Dewis arall",
+      "alternativeExecutor": "Ysgutor amgen",
+      "date": "Dyddiad",
+      "description": "Disgrifiad",
+      "executor": "Ysgutor",
+      "generatePDF": "Cynhyrchu p d f",
+      "legalRequirements": "Gofynion cyfreithiol",
+      "name": "Enw",
+      "ofEstate": "O ystâd",
+      "place": "Lle",
+      "print": "Argraffu",
+      "signature": "Llofnod",
+      "title": "Teitl",
+      "witnesses": "Tystion"
+    },
+    "requirements": {
+      "handwriting": "Llawysgrifen",
+      "notarization": "Notareiddio",
+      "typed": "Wedi'i deipio",
+      "witnesses": "Tystion"
+    },
+    "selectCountry": "Dewiswch wlad",
+    "selectedCountryDetails": "Manylion y wlad a ddewiswyd",
+    "status": {
+      "draft": "Drafft",
+      "notarized": "Notareiddiedig",
+      "stored": "Wedi'i storio",
+      "updated": "Wedi'i ddiweddaru"
+    },
+    "testatorInfo": "Gwybodaeth am y profwr",
+    "validation": {
+      "allocation100": "Dyraniad100"
+    },
+    "willPreview": {
+      "_2": "2",
+      "critical_execution_instruction_3": "Cyfarwyddyd gweithredu hanfodol 3",
+      "professional_review_4": "Adolygiad proffesiynol 4",
+      "provided_by_certified_legal_pa_5": "Wedi'i ddarparu gan gyfreithiol ardystiedig 5"
+    }
+  },
+  "willGenerator": {
+    "changeCountry": "Newid gwlad",
+    "confirmCountry": "Cadarnhau gwlad",
+    "confirmSigned": "Cadarnhau llofnod",
+    "console": {
+      "willGenerationCompleted": "Cynhyrchu ewyllys wedi'i gwblhau"
+    },
+    "countries": {
+      "AL": "A l",
+      "AT": "A t",
+      "BA": "B a",
+      "BE": "B e",
+      "BG": "B g",
+      "CH": "C h",
+      "CY": "C y",
+      "CZ": "C z",
+      "DE": "D e",
+      "DK": "D k",
+      "EE": "E e",
+      "ES": "E s",
+      "FI": "F i",
+      "FR": "Ffr",
+      "GB": "G b",
+      "GR": "G r",
+      "HR": "H r",
+      "HU": "H u",
+      "IE": "Dw i",
+      "IS": "Dw i'n",
+      "IT": "Dw i'n",
+      "LI": "L i",
+      "LT": "L t",
+      "LU": "L u",
+      "LV": "L v",
+      "MD": "M d",
+      "ME": "M e",
+      "MK": "M k",
+      "MT": "M t",
+      "NL": "N l",
+      "NO": "Na",
+      "PL": "P l",
+      "PT": "Pt",
+      "RO": "R o",
+      "RS": "R s",
+      "SE": "S e",
+      "SI": "S i",
+      "SK": "S k",
+      "UA": "U a"
+    },
+    "executionInstructions": "Cyfarwyddiadau gweithredu",
+    "failed_to_load_will_template_2": "Methwyd llwytho templed ewyllys 2",
+    "finalizeUpload": "Cwblhau'r uwchlwytho",
+    "fullName": "Enw llawn",
+    "no_template_found_for_this_jur_1": "Ni chanfuwyd templed ar gyfer y jur 1 hwn",
+    "please_confirm_that_you_have_s_3": "Cadarnhewch fod gennych s 3",
+    "select_a_country_4": "Dewiswch wlad 4",
+    "steps": {
+      "confirmJurisdiction": "Cadarnhau awdurdodaeth",
+      "executorBeneficiaries": "Buddiolwyr ysgutor",
+      "personalInformation": "Gwybodaeth bersonol",
+      "reviewGenerate": "Cynhyrchu adolygiad",
+      "signConfirm": "Llofnodwch gadarnhau"
+    }
+  },
+  "willSync": {
+    "approve": "Cymeradwyo",
+    "autoApplied": "Wedi'i gymhwyso'n awtomatig",
+    "changes": {
+      "allocationsModified": "Dyraniadau wedi'u haddasu",
+      "assetsAdded": "Asedau wedi'u hychwanegu",
+      "beneficiariesRemoved": "Buddiolwyr wedi'u tynnu",
+      "noChanges": "Dim newidiadau"
+    },
+    "reject": "Gwrthod",
+    "viewChanges": "Gweld newidiadau"
+  },
+  "willSyncSettings": {
+    "autoSync": "Cydamseru awtomatig",
+    "autoSyncDescription": "Disgrifiad cysoni awtomatig",
+    "frequencyDaily": "Amlder bob dydd",
+    "frequencyImmediate": "Amlder ar unwaith",
+    "frequencyWeekly": "Amlder yn wythnosol",
+    "generalDescription": "Disgrifiad cyffredinol",
+    "generalSettings": "Gosodiadau cyffredinol",
+    "requireApproval": "Angen cymeradwyaeth",
+    "requireApprovalDescription": "Disgrifiad cymeradwyaeth yn ofynnol",
+    "saveError": "Gwall cadw",
+    "saved": "Wedi'i gadw",
+    "syncFrequency": "Amledd cydamseru",
+    "triggerDescription": "Disgrifiad o'r sbardun",
+    "triggerSettings": "Gosodiadau sbardun"
+  },
+  "willVersion": {
+    "added": "Ychwanegwyd",
+    "compareDiff": "Cymharwch y gwahaniaeth",
+    "comparePrompt": "Cymharwch yr awgrym",
+    "current": "Cyfredol",
+    "description": "Disgrifiad",
+    "modified": "Addaswyd",
+    "removed": "Wedi'i dynnu",
+    "restore": "Adfer",
+    "title": "Teitl",
+    "versionNumber": "Rhif fersiwn"
+  },
+  "disclaimers": {
+    "general": "Mae LegacyGuard yn darparu offer a chanllawiau ar gyfer cynllunio ystadau ond nid yw'n darparu cyngor cyfreithiol. Ar gyfer ystadau cymhleth neu gwestiynau cyfreithiol penodol, ymgynghorwch ag atwrnai cymwys yn eich awdurdodaeth.",
+    "willGenerator": "Mae'r cynhyrchydd ewyllys yn creu dogfennau yn seiliedig ar wybodaeth a ddarparwch. Er ei fod wedi'i gynllunio i fodloni gofynion cyfreithiol, rydym yn argymell yn gryf bod unrhyw ewyllys a gynhyrchwyd yn cael ei adolygu gan gyfreithiwr cymwys cyn ei weithredu.",
+    "jurisdiction": "Mae gofynion cyfreithiol yn amrywio yn ôl awdurdodaeth. Gwnewch yn siŵr bod eich dogfennau'n cydymffurfio â'r cyfreithiau yn eich ardal.",
+    "notLegalAdvice": "Nid yw'r gwasanaeth hwn yn gyfystyr â chyngor cyfreithiol ac ni ddylid dibynnu arno felly.",
+    "professionalReview": "Ar gyfer ystadau cymhleth, buddiannau busnes, neu sefyllfaoedd teuluol unigryw, argymhellir adolygiad cyfreithiol proffesiynol yn gryf."
+  },
+  "terms": {
+    "serviceTerms": "Telerau Gwasanaeth",
+    "privacyPolicy": "Polisi Preifatrwydd",
+    "dataProcessing": "Cytundeb Prosesu Data",
+    "userAgreement": "Cytundeb Defnyddiwr",
+    "acceptanceRequired": "Drwy ddefnyddio LegacyGuard, rydych chi'n cytuno i'n Telerau Gwasanaeth a'n Polisi Preifatrwydd.",
+    "lastUpdated": "Diweddarwyd ddiwethaf: {{date}}",
+    "effectiveDate": "Dyddiad effeithiol: {{date}}"
+  },
+  "compliance": {
+    "dataProtection": "Mae eich data wedi'i ddiogelu yn unol â chyfreithiau diogelu data perthnasol gan gynnwys GDPR a CCPA.",
+    "encryption": "Mae'r holl wybodaeth sensitif wedi'i hamgryptio gan ddefnyddio dulliau amgryptio safonol y diwydiant.",
+    "retention": "Mae polisïau cadw data wedi'u cynllunio i amddiffyn eich preifatrwydd wrth sicrhau y gall eich teulu gael mynediad at wybodaeth bwysig pan fo angen.",
+    "access": "Mae gennych yr hawl i gael mynediad at eich gwybodaeth bersonol, ei haddasu neu ei dileu ar unrhyw adeg.",
+    "portability": "Gallwch allforio eich data mewn fformatau safonol i'w defnyddio gyda gwasanaethau eraill."
+  },
+  "executionRequirements": {
+    "witnessRequirements": "Gofynion Tystion ar gyfer {{jurisdiction}}",
+    "notaryRequirements": "Gofynion Notareiddio",
+    "signingInstructions": "Cyfarwyddiadau Arwyddo Cywir",
+    "storageGuidelines": "Canllawiau Storio Diogel",
+    "legalCompliance": "Gwirio Cydymffurfiaeth Gyfreithiol"
+  },
+  "cookiePolicy": {
+    "cookieTypes": {
+      "analytics": "Mae cwcis dadansoddeg yn ein helpu i ddeall sut mae ymwelwyr yn rhyngweithio â'n gwefan.",
+      "essential": "Mae cwcis hanfodol yn angenrheidiol er mwyn i'r wefan weithredu'n iawn.",
+      "marketing": "Defnyddir cwcis marchnata i olrhain ymwelwyr ar draws gwefannau er mwyn arddangos hysbysebion perthnasol."
+    },
+    "howWeUseCookies": "Rydym yn defnyddio cwcis i wella eich profiad, dadansoddi defnydd o'r wefan, a darparu cynnwys wedi'i bersonoli.",
+    "introduction": "Mae'r Polisi Cwcis hwn yn esbonio sut mae LegacyGuard yn defnyddio cwcis a thechnolegau tebyg.",
+    "manageCookies": "Gallwch reoli eich dewisiadau cwcis drwy osodiadau eich porwr neu ein canolfan dewisiadau cwcis.",
+    "title": "Teitl",
+    "whatAreCookies": "Ffeiliau testun bach yw cwcis sy'n cael eu storio ar eich dyfais pan fyddwch chi'n ymweld â'n gwefan."
+  },
+  "header": {
+    "title": "Teitl"
+  },
+  "hero": {
+    "headline": "Pennawd",
+    "subheadline": "Is-bennawd"
+  },
+  "termsOfService": {
+    "effectiveDate": "Dyddiad effeithiol: {{date}}",
+    "introduction": "Mae'r Telerau Gwasanaeth hyn yn llywodraethu eich defnydd o blatfform a gwasanaethau amddiffyn teulu LegacyGuard.",
+    "lastUpdated": "Diweddarwyd ddiwethaf: {{date}}",
+    "sections": {
+      "acceptance": {
+        "content": "Drwy gael mynediad at neu ddefnyddio LegacyGuard, rydych chi'n cytuno i fod yn rhwym i'r Telerau Gwasanaeth hyn a'r holl gyfreithiau a rheoliadau cymwys.",
+        "title": "Derbyn Telerau"
+      },
+      "description": {
+        "content": "Mae LegacyGuard yn darparu offer a gwasanaethau digidol i helpu unigolion i drefnu eu gwybodaeth bwysig at ddibenion diogelu teuluoedd.",
+        "title": "Disgrifiad o'r Gwasanaeth"
+      },
+      "limitations": {
+        "content": "Mae LegacyGuard yn darparu offer ac arweiniad ond nid yw'n darparu cyngor cyfreithiol. Rydym yn argymell ymgynghori â gweithwyr proffesiynol cymwys ar gyfer materion cyfreithiol cymhleth.",
+        "title": "Cyfyngiadau Atebolrwydd"
+      },
+      "privacy": {
+        "content": "Mae eich preifatrwydd yn bwysig i ni. Adolygwch ein Polisi Preifatrwydd i ddeall sut rydym yn casglu, defnyddio ac amddiffyn eich gwybodaeth.",
+        "title": "Preifatrwydd a Diogelu Data"
+      },
+      "userResponsibilities": {
+        "content": "Rydych chi'n gyfrifol am gynnal cyfrinachedd gwybodaeth eich cyfrif ac am yr holl weithgareddau sy'n digwydd o dan eich cyfrif.",
+        "title": "Cyfrifoldebau Defnyddwyr"
+      }
+    },
+    "title": "Telerau Gwasanaeth"
+  },
+  "cookies": {
+    "policy": {
+      "analytics": {
+        "description": "Disgrifiad",
+        "examples": {
+          "ga": "Ga",
+          "gid": "Gid",
+          "session": "Sesiwn"
+        },
+        "purpose": "Diben",
+        "title": "Teitl"
+      },
+      "categories": {
+        "title": "Teitl"
+      },
+      "contact": {
+        "address": "Cyfeiriad",
+        "addressDetails": "Manylion cyfeiriad",
+        "description": "Disgrifiad",
+        "email": "E-bost",
+        "title": "Teitl"
+      },
+      "examples": "Enghreifftiau",
+      "lastUpdated": "Diweddarwyd ddiwethaf",
+      "manage": {
+        "title": "Teitl"
+      },
+      "marketing": {
+        "description": "Disgrifiad",
+        "examples": {
+          "facebook": "Facebook",
+          "google": "Google"
+        },
+        "purpose": "Diben",
+        "title": "Teitl"
+      },
+      "necessary": {
+        "description": "Disgrifiad",
+        "examples": {
+          "auth": "Awdurdodiad",
+          "consent": "Caniatâd",
+          "csrf": "Csrf",
+          "session": "Sesiwn"
+        },
+        "purpose": "Diben",
+        "title": "Teitl"
+      },
+      "overview": {
+        "intro": "Cyflwyniad",
+        "point1": "Pwynt1",
+        "point2": "Pwynt2",
+        "point3": "Pwynt3",
+        "point4": "Pwynt4",
+        "title": "Teitl"
+      },
+      "preferences": {
+        "description": "Disgrifiad",
+        "examples": {
+          "language": "Iaith",
+          "theme": "Thema",
+          "ui": "UI"
+        },
+        "purpose": "Diben",
+        "title": "Teitl"
+      },
+      "purpose": "Diben",
+      "required": "Angenrheidiol",
+      "subtitle": "Isdeitl",
+      "title": "Teitl",
+      "yourRights": {
+        "description": "Disgrifiad",
+        "right1": "Dde1",
+        "right2": "Dde2",
+        "right3": "Dde3",
+        "right4": "Dde4",
+        "title": "Teitl"
+      }
+    }
+  }
+}

@@ -1,0 +1,642 @@
+{
+  "actions": {
+    "consultLawyer": "Caktoni Konsultim Ligjor",
+    "createCodicil": "Krijo Amendament (Kodicil)",
+    "deleteWill": "Fshije këtë testament",
+    "downloadPdf": "Shkarko dokumentin PDF",
+    "generateWill": "Gjeneroni Testamentin Përfundimtar",
+    "next": "Tjetra",
+    "previous": "Mëparshme",
+    "printWill": "Printo Dokumentin e Testamentit",
+    "saveProgress": "Ruaj progresin aktual",
+    "shareWill": "Ndani me familjen",
+    "updateWill": "Përditësoni Informacionin e Testamentit"
+  },
+  "errors": {
+    "assetLoadFailed": "Nuk mundëm të ngarkonim informacionin e aseteve tuaja. Ju lutemi, rifreskoni faqen dhe provoni përsëri.",
+    "generationFailed": "Hasëm një problem gjatë gjenerimit të testamentit tuaj. Ju lutemi rishikoni informacionin tuaj dhe provoni përsëri.",
+    "jurisdictionRequired": "Ju lutemi zgjidhni juridiksionin tuaj ligjor për të siguruar pajtueshmërinë",
+    "loadFailed": "Nuk mundëm të ngarkonim informacionin e testamentit tuaj. Ju lutemi rifreskoni faqen dhe provoni përsëri.",
+    "printFailed": "Hasëm një problem gjatë përgatitjes së dokumentit tuaj për printim. Ju lutemi provoni përsëri.",
+    "saveFailed": "Nuk mundëm ta ruanim progresin tuaj. Ju lutemi kontrolloni lidhjen tuaj dhe provoni përsëri.",
+    "validationFailed": "Ju lutemi rishikoni dhe korrigjoni informacionin e theksuar përpara se të vazhdoni"
+  },
+  "execution": {
+    "copyDistribution": "Shpërndarja e Kopjeve",
+    "familyNotification": "Informimi i familjes suaj",
+    "legalRequirements": "Kërkesat Ligjore për {{jurisdiction}}",
+    "notarization": "Kërkesat e Noterizimit",
+    "notaryOptional": "Noter i rekomanduar, por jo i detyrueshëm",
+    "notaryRequired": "Kërkohet noter publik",
+    "numberOfCopies": "Numri i rekomanduar i kopjeve",
+    "safeStorage": "Vendndodhje të sigurta të ruajtjes",
+    "selfProving": "Deklaratë me betim vetë-vërtetuese",
+    "signingInstructions": "Udhëzime për nënshkrimin",
+    "signingOrder": "Urdhri i duhur i nënshkrimit",
+    "storageRecommendations": "Rekomandime për ruajtjen e të dhënave",
+    "subtitle": "Bërja e testamentit tuaj ligjërisht të detyrueshëm",
+    "title": "Kërkesat për Ekzekutimin e Testamentit",
+    "witnessCount": "Kërkohen dëshmitarë {{count}}",
+    "witnessInstructions": "Udhëzime për Dëshmitarët",
+    "witnessQualifications": "Kualifikimet e Dëshmitarëve",
+    "witnessRequirements": "Kërkesat për Dëshmitarët"
+  },
+  "form": {
+    "assetSelection": {
+      "allAssets": "Përfshi të gjitha asetet aktuale dhe të ardhshme",
+      "assetCategories": "Kategoritë e aseteve që duhen përfshirë",
+      "businessInterests": "Interesat e biznesit",
+      "excludedAssets": "Asetet që duhen përjashtuar",
+      "jointAssets": "Asete në pronësi të përbashkët",
+      "residualDescription": "Të gjitha pasuritë e mbetura që nuk përmenden posaçërisht diku tjetër në këtë testament",
+      "residualEstate": "Pasuri e mbetur",
+      "selectAssets": "Zgjidhni Asetet për t'u Përfshirë",
+      "specificAssets": "Zgjidhni vetëm asete specifike"
+    },
+    "distribution": {
+      "addBeneficiary": "Shto Përfitues Shtesë",
+      "ageRestriction": "Kërkesa për moshë",
+      "allocation": "Ndarja e Trashëgimisë",
+      "beneficiaryName": "Emri i plotë i përfituesit",
+      "conditions": "Kushtet ose Kufizimet",
+      "contingentBeneficiary": "Përfitues i Kushtëzuar",
+      "percentage": "Përqindja e Pasurisë",
+      "primaryBeneficiary": "Përfituesi Kryesor",
+      "relationship": "Marrëdhënia me ju",
+      "specificAmount": "Shuma specifike në dollarë",
+      "specificAsset": "Aset ose Pronë Specifike",
+      "trustProvision": "Marrëveshje Besimi"
+    },
+    "executor": {
+      "alternateExecutor": "Ekzekutues Alternativ",
+      "bondRequirement": "Kërkesa për Garanci",
+      "coExecutors": "Bashkëekzekutuesit",
+      "executorAddress": "Adresa e Ekzekutuesit",
+      "executorCompensation": "Kompensimi i Ekzekutuesit",
+      "executorDuties": "Përgjegjësitë e Ekzekutuesit",
+      "executorInstructions": "Udhëzime të Veçanta për Ekzekutuesin",
+      "executorName": "Emri i plotë i ekzekutuesit",
+      "executorRelationship": "Marrëdhënia me ju",
+      "primaryExecutor": "Ekzekutuesi Kryesor",
+      "specialPowers": "Fuqi të Veçanta të Dhëna"
+    },
+    "guardianship": {
+      "backupGuardian": "Kujdestar Alternativ",
+      "educationPreferences": "Preferencat e Arsimit",
+      "guardianCompensation": "Kompensimi i Kujdestarit",
+      "guardianFor": "Kujdestar për {{childName}}",
+      "guardianInstructions": "Udhëzime për Kujdestarin",
+      "guardianQualifications": "Kualifikimet e Kujdestarit",
+      "minorChildren": "Fëmijë të mitur që kërkojnë kujdestari",
+      "primaryGuardian": "Kujdestari Kryesor",
+      "religiousUpbringing": "Preferencat e Edukimit Fetar"
+    },
+    "personalInfo": {
+      "addChild": "Shto Fëmijë",
+      "addressHelper": "Adresa juaj kryesore e banimit",
+      "childDateOfBirth": "Data e lindjes së fëmijës",
+      "childName": "Emri i plotë i fëmijës",
+      "childRelation": "Marrëdhënia me ju",
+      "children": "Fëmijët dhe personat në varësi",
+      "currentAddress": "Adresa aktuale ligjore",
+      "dateOfBirth": "Data e lindjes",
+      "fullLegalName": "Emri i plotë ligjor",
+      "fullLegalNameHelper": "Shkruani emrin tuaj saktësisht siç shfaqet në dokumentet zyrtare",
+      "maritalStatus": "Gjendja Civile",
+      "marriageDate": "Data e martesës",
+      "placeOfBirth": "Vendi i lindjes",
+      "previousWills": "Testamentet e mëparshme",
+      "revokesPrevious": "Ky testament anulon të gjitha testamentet e mëparshme",
+      "spouseName": "Emri i plotë ligjor i bashkëshortit/bashkëshortes"
+    },
+    "provisions": {
+      "burialCremation": "Preferenca e varrimit ose kremimit",
+      "businessContinuation": "Planet e Vazhdimit të Biznesit",
+      "charitableBequests": "Donacione bamirësie",
+      "charityAmount": "Shuma e Donacionit",
+      "charityName": "Organizatë bamirësie",
+      "digitalAssets": "Udhëzime për Asetet Dixhitale",
+      "funeralInstructions": "Udhëzime specifike për funeralin",
+      "funeralWishes": "Preferencat për funeralin dhe varrimin",
+      "organDonation": "Dëshirat për Dhurimin e Organeve",
+      "personalMessages": "Mesazhe personale për familjen",
+      "petCare": "Marrëveshje për Kujdesin ndaj Kafshëve Shtëpiake",
+      "specialInstructions": "Udhëzime të Veçanta"
+    }
+  },
+  "generator": {
+    "continueWill": "Vazhdoni përgatitjen e testamentit",
+    "description": "Gjeneroni një testament gjithëpërfshirës dhe ligjërisht të vlefshëm, të përshtatur sipas kërkesave të juridiksionit tuaj dhe nevojave unike të familjes suaj.",
+    "getStarted": "Filloni të krijoni testamentin tuaj",
+    "importance": "Sigurimi që dëshirat tuaja të jenë të dokumentuara ligjërisht dhe familja juaj të jetë e mbrojtur",
+    "newWill": "Krijo Testament të Ri",
+    "of": "Nga",
+    "professionalGuidance": "Udhëzime ligjore profesionale të rekomanduara për pasuri komplekse",
+    "step": "Hapi",
+    "subtitle": "Krijoni një testament ligjërisht të qëndrueshëm me udhëzime profesionale",
+    "title": "Gjeneratori i Testamentit dhe Testamentit të Fundit",
+    "viewExisting": "Rishikoni Testamentin Aktual"
+  },
+  "legal": {
+    "consultLawyer": "Konsultohuni me Avokatin",
+    "disclaimer": "Mohim i Rëndësishëm Ligjor i Përgjegjësisë",
+    "estatePlanning": "Planifikim Gjithëpërfshirës i Pasurisë",
+    "jurisdiction": "Juridiksioni Ligjor",
+    "lawsApply": "Do të zbatohen ligjet e {{jurisdiction}}",
+    "lawyerRecommended": "Ne ju rekomandojmë fuqimisht të konsultoheni me një avokat të kualifikuar për prona komplekse.",
+    "legalCompliance": "Verifikimi i Përputhshmërisë Ligjore",
+    "notLegalAdvice": "Ky shërbim nuk përbën këshillë ligjore",
+    "probateProcess": "Informacion mbi Procesin e Trashëgimisë",
+    "professionalGuidance": "Rekomandohet udhëzim ligjor profesional",
+    "professionalReview": "Rishikimi Ligjor Profesional",
+    "selectJurisdiction": "Ju lutemi zgjidhni juridiksionin tuaj ligjor",
+    "taxImplications": "Implikimet Tatimore"
+  },
+  "notifications": {
+    "consultationScheduled": "Konsultimi ligjor është planifikuar",
+    "documentShared": "Testamenti është ndarë me anëtarët e caktuar të familjes",
+    "executionComplete": "Ekzekutimi i testamentit është regjistruar",
+    "progressSaved": "Progresi juaj është ruajtur",
+    "willDeleted": "Testamenti është fshirë përgjithmonë",
+    "willUpdated": "Will është përditësuar me sukses"
+  },
+  "preview": {
+    "article": "ARTIKULL {{number}}",
+    "draftWatermark": "DRAFT - JO LIGJOR I DETYRUAR",
+    "executionInstructions": "UDHËZIME PËR EKZEKUTIM",
+    "lastWillTestament": "TESTAMENTI I FUNDIT",
+    "of": "E",
+    "pageNumber": "Faqja {{current}} e {{total}}",
+    "reviewCarefully": "Ju lutemi ta shqyrtoni me kujdes këtë dokument përpara se të vazhdoni",
+    "section": "Seksioni {{number}}",
+    "signatureSection": "SEKSIONI I NËNSHKRIMIT",
+    "subtitle": "Rishikoni testamentin tuaj të plotë përpara se ta finalizoni",
+    "title": "Pamje paraprake e dokumentit të testamentit",
+    "witnessClause": "KLAUZOLA E DËSHMITARIT"
+  },
+  "status": {
+    "archived": "Versioni i Arkivuar",
+    "draft": "Drafti në Përpunim e sipër",
+    "executed": "Ekzekutuar ligjërisht",
+    "generated": "Gjeneruar - Kërkon ekzekutim",
+    "outdated": "Kërkon përditësim"
+  },
+  "policy": {
+    "duration": {
+      "session": "Sesioni",
+      "minutes": "{{count}} minuta",
+      "hours": "{{count}} orë",
+      "days": "{{count}} ditë",
+      "months": "{{count}} muaj",
+      "years": "{{count}} vjet"
+    }
+  },
+  "steps": {
+    "assets": {
+      "description": "Zgjidhni se cilat pasuri dëshironi të përfshini në testamentin tuaj dhe si duhet të shpërndahen ato.",
+      "subtitle": "Pasuritë tuaja të çmuara",
+      "title": "Shpërndarja e Aseteve"
+    },
+    "beneficiaries": {
+      "description": "Caktoni se kush do t'i marrë asetet tuaja dhe në çfarë përmasash.",
+      "subtitle": "Marrësit tuaj të zgjedhur",
+      "title": "Emërtimet e Përfituesve"
+    },
+    "executor": {
+      "description": "Zgjidhni një person përgjegjës për të menaxhuar pasurinë tuaj dhe për të përmbushur dëshirat tuaja.",
+      "subtitle": "Përfaqësuesi juaj i pasurisë",
+      "title": "Ekzekutori i Pasurive të Paluajtshme"
+    },
+    "guardians": {
+      "description": "Emëroni individë të besuar për t'u kujdesur për fëmijët e mitur ose personat në varësi.",
+      "subtitle": "Kujdesuni për personat në varësi tuaj",
+      "title": "Emërimet e Kujdestarisë"
+    },
+    "personal": {
+      "description": "Ne kërkojmë informacionin tuaj të plotë ligjor për të siguruar që testamenti juaj i plotëson të gjitha kërkesat ligjore.",
+      "subtitle": "Informacioni juaj identifikues",
+      "title": "Informacione Personale"
+    },
+    "preferences": {
+      "description": "Përfshi çdo udhëzim të veçantë, trashëgimi bamirësie ose dëshirë personale.",
+      "subtitle": "Udhëzime shtesë",
+      "title": "Dispozita të Veçanta"
+    },
+    "review": {
+      "description": "Shqyrtoni me kujdes të gjitha detajet përpara se të hartoni një dokument ligjor.",
+      "subtitle": "Verifikoni të gjitha informacionet",
+      "title": "Rishikimi përfundimtar"
+    }
+  },
+  "validation": {
+    "addressRequired": "Adresa juaj aktuale ligjore është e detyrueshme",
+    "allocationError": "Shpërndarja totale e përqindjes duhet të jetë e barabartë me 100%",
+    "beneficiaryRequired": "Duhet të specifikohet të paktën një përfitues",
+    "dobRequired": "Data e lindjes është e nevojshme për vlefshmëri ligjore",
+    "duplicateBeneficiary": "Ky përfitues është shtuar tashmë",
+    "executorBeneficiaryConflict": "Ekzekutuesi dhe përfituesi kryesor zakonisht duhet të jenë individë të ndryshëm.",
+    "executorRequired": "Duhet të caktohet të paktën një ekzekutor",
+    "guardianRequired": "Caktimi i kujdestarit është i detyrueshëm për fëmijët e mitur",
+    "invalidDate": "Ju lutemi futni një datë të vlefshme",
+    "invalidPercentage": "Përqindja duhet të jetë midis 0 dhe 100",
+    "jurisdictionRequired": "Juridiksioni i kërkuar",
+    "requiredField": "Fushë e detyrueshme"
+  },
+  "will": {
+    "address": "Adresa",
+    "addressPlaceholder": "Vendmbajtës adrese",
+    "allocation": {
+      "addBeneficiary": "Shto përfitues",
+      "description": "Përshkrimi",
+      "generalEstate": "Pasuri të përgjithshme",
+      "percentage": "Përqindja",
+      "tips": {
+        "tip1": "Këshilla 1",
+        "tip2": "Këshilla 2",
+        "tip3": "Këshilla 3",
+        "title": "Titulli"
+      },
+      "title": "Titulli",
+      "total": "Totali"
+    },
+    "beneficiaries": {
+      "addBeneficiary": "Shto përfitues",
+      "allocation": "Shpërndarja",
+      "alternativeBeneficiary": "Përfitues alternativ",
+      "alternativePlaceholder": "Mbajtës alternativ i vendit",
+      "beneficiaryNumber": "Numri i përfituesit",
+      "currentAllocation": "Shpërndarja aktuale",
+      "description": "Përshkrimi",
+      "identification": "Identifikimi",
+      "identificationPlaceholder": "Vendmbajtës identifikimi",
+      "importantNotes": "Shënime të rëndësishme",
+      "name": "Emri",
+      "noBeneficiaries": "Asnjë përfitues",
+      "note1": "Shënim 1",
+      "note2": "Shënim 2",
+      "note3": "Shënim 3",
+      "ofEstate": "E pasurisë",
+      "title": "Titulli"
+    },
+    "beneficiary": {
+      "name": "Emri",
+      "namePlaceholder": "Vendmbajtës emri",
+      "relationship": "Marrëdhënie",
+      "relationshipPlaceholder": "Vendmbajtës i marrëdhënies"
+    },
+    "birthDate": "Data e lindjes",
+    "birthDatePlaceholder": "Vendmbajtës i datës së lindjes",
+    "buttons": {
+      "saveWillInfo": "Ruaj informacionin e do të",
+      "saving": "Ruajtja"
+    },
+    "countryRequirements": "Kërkesat e vendit",
+    "descriptions": {
+      "executorDescription": "Përshkrimi i ekzekutuesit",
+      "physicalLocationDescription": "Përshkrimi i vendndodhjes fizike",
+      "statusDescription": "Përshkrimi i statusit"
+    },
+    "executor": {
+      "addAlternative": "Shto alternativë",
+      "address": "Adresa",
+      "addressPlaceholder": "Vendmbajtës adrese",
+      "alternative": "Alternativë",
+      "alternativeDescription": "Përshkrim alternativ",
+      "description": "Përshkrimi",
+      "name": "Emri",
+      "namePlaceholder": "Vendmbajtës emri",
+      "phone": "Telefon",
+      "phonePlaceholder": "Vendmbajtës telefoni",
+      "primary": "Kryesore",
+      "relationship": "Marrëdhënie",
+      "relationshipPlaceholder": "Vendmbajtës i marrëdhënies",
+      "responsibilities": "Përgjegjësitë",
+      "responsibility1": "Përgjegjësia1",
+      "responsibility2": "Përgjegjësia 2",
+      "responsibility3": "Përgjegjësia 3",
+      "responsibility4": "Përgjegjësia 4",
+      "title": "Titulli"
+    },
+    "fields": {
+      "additionalNotes": "Shënime shtesë",
+      "currentStatus": "Statusi aktual",
+      "executorContact": "Kontakti i ekzekutuesit",
+      "physicalLocation": "Vendndodhja fizike"
+    },
+    "legalReview": {
+      "button": "Buton",
+      "description": "Përshkrimi",
+      "title": "Titulli"
+    },
+    "name": "Emri",
+    "namePlaceholder": "Vendmbajtës emri",
+    "options": {
+      "noContactSelected": "Nuk është zgjedhur asnjë kontakt"
+    },
+    "placeholders": {
+      "additionalNotes": "Shënime shtesë",
+      "physicalLocation": "Vendndodhja fizike",
+      "selectContact": "Zgjidh kontaktin"
+    },
+    "preview": {
+      "address": "Adresa",
+      "alternative": "Alternativë",
+      "alternativeExecutor": "Ekzekutues alternativ",
+      "date": "Data",
+      "description": "Përshkrimi",
+      "executor": "Ekzekutues",
+      "generatePDF": "Gjenero p d f",
+      "legalRequirements": "Kërkesat ligjore",
+      "name": "Emri",
+      "ofEstate": "E pasurisë",
+      "place": "Vend",
+      "print": "Printo",
+      "signature": "Nënshkrimi",
+      "title": "Titulli",
+      "witnesses": "Dëshmitarët"
+    },
+    "requirements": {
+      "handwriting": "Shkrim dore",
+      "notarization": "Noterizim",
+      "typed": "Shtypur",
+      "witnesses": "Dëshmitarët"
+    },
+    "selectCountry": "Zgjidh vendin",
+    "selectedCountryDetails": "Detajet e vendit të zgjedhur",
+    "status": {
+      "draft": "Draft",
+      "notarized": "I noterizuar",
+      "stored": "I ruajtur",
+      "updated": "Përditësuar"
+    },
+    "testatorInfo": "Informacion mbi testatorin",
+    "validation": {
+      "allocation100": "Alokimi 100"
+    },
+    "willPreview": {
+      "_2": "2",
+      "critical_execution_instruction_3": "Udhëzimi i ekzekutimit kritik 3",
+      "professional_review_4": "Rishikimi profesional 4",
+      "provided_by_certified_legal_pa_5": "Ofruar nga avokatë të çertifikuar ligjorë 5"
+    }
+  },
+  "willGenerator": {
+    "changeCountry": "Ndrysho vendin",
+    "confirmCountry": "Konfirmo vendin",
+    "confirmSigned": "Konfirmo nënshkrimin",
+    "console": {
+      "willGenerationCompleted": "Gjenerimi i testamentit u përfundua"
+    },
+    "countries": {
+      "AL": "Një l",
+      "AT": "Një t",
+      "BA": "B a",
+      "BE": "B e",
+      "BG": "B g",
+      "CH": "Ç h",
+      "CY": "Cy",
+      "CZ": "C z",
+      "DE": "D e",
+      "DK": "D k",
+      "EE": "E e",
+      "ES": "E s",
+      "FI": "F i",
+      "FR": "F r",
+      "GB": "Gb",
+      "GR": "G r",
+      "HR": "H r",
+      "HU": "H u",
+      "IE": "Unë e",
+      "IS": "Unë jam",
+      "IT": "Unë",
+      "LI": "L i",
+      "LT": "L t",
+      "LU": "L u",
+      "LV": "L v",
+      "MD": "M d",
+      "ME": "M e",
+      "MK": "M k",
+      "MT": "E hënë",
+      "NL": "N l",
+      "NO": "Jo",
+      "PL": "P l",
+      "PT": "P t",
+      "RO": "R o",
+      "RS": "R s",
+      "SE": "S e",
+      "SI": "S i",
+      "SK": "S k",
+      "UA": "U a"
+    },
+    "executionInstructions": "Udhëzime ekzekutimi",
+    "failed_to_load_will_template_2": "Dështoi në ngarkimin e shabllonit të testamentit 2",
+    "finalizeUpload": "Përfundo ngarkimin",
+    "fullName": "Emri i plotë",
+    "no_template_found_for_this_jur_1": "Nuk u gjet asnjë shabllon për këtë jur 1",
+    "please_confirm_that_you_have_s_3": "Ju lutem konfirmoni që keni s 3",
+    "select_a_country_4": "Zgjidhni një vend 4",
+    "steps": {
+      "confirmJurisdiction": "Konfirmo juridiksionin",
+      "executorBeneficiaries": "Përfituesit ekzekutues",
+      "personalInformation": "Informacion personal",
+      "reviewGenerate": "Gjenerimi i rishikimit",
+      "signConfirm": "Nënshkruaj konfirmo"
+    }
+  },
+  "willSync": {
+    "approve": "Miratoj",
+    "autoApplied": "Zbatuar automatikisht",
+    "changes": {
+      "allocationsModified": "Alokimet e modifikuara",
+      "assetsAdded": "Asetet e shtuara",
+      "beneficiariesRemoved": "Përfituesit u hoqën",
+      "noChanges": "Pa ndryshime"
+    },
+    "reject": "Refuzo",
+    "viewChanges": "Shiko ndryshimet"
+  },
+  "willSyncSettings": {
+    "autoSync": "Sinkronizimi automatik",
+    "autoSyncDescription": "Përshkrimi i sinkronizimit automatik",
+    "frequencyDaily": "Frekuenca ditore",
+    "frequencyImmediate": "Frekuenca e menjëhershme",
+    "frequencyWeekly": "Frekuenca javore",
+    "generalDescription": "Përshkrim i përgjithshëm",
+    "generalSettings": "Cilësimet e përgjithshme",
+    "requireApproval": "Kërko miratim",
+    "requireApprovalDescription": "Kërko përshkrimin e miratimit",
+    "saveError": "Gabim në ruajtje",
+    "saved": "Ruajtur",
+    "syncFrequency": "Frekuenca e sinkronizimit",
+    "triggerDescription": "Përshkrimi i shkaktarit",
+    "triggerSettings": "Cilësimet e shkrehësit"
+  },
+  "willVersion": {
+    "added": "Shtuar",
+    "compareDiff": "Krahaso ndryshimin",
+    "comparePrompt": "Krahaso kërkesën",
+    "current": "Aktual",
+    "description": "Përshkrimi",
+    "modified": "Modifikuar",
+    "removed": "U hoq",
+    "restore": "Rivendos",
+    "title": "Titulli",
+    "versionNumber": "Numri i versionit"
+  },
+  "disclaimers": {
+    "general": "LegacyGuard ofron mjete dhe udhëzime për planifikimin e pasurisë, por nuk ofron këshilla ligjore. Për pasuri komplekse ose pyetje specifike ligjore, ju lutemi konsultohuni me një avokat të kualifikuar në juridiksionin tuaj.",
+    "willGenerator": "Gjeneratori i testamentit krijon dokumente bazuar në informacionin që jepni. Ndërsa është projektuar për të përmbushur kërkesat ligjore, ne rekomandojmë fuqimisht që çdo testament i gjeneruar të shqyrtohet nga një avokat i kualifikuar para ekzekutimit.",
+    "jurisdiction": "Kërkesat ligjore ndryshojnë në varësi të juridiksionit. Sigurohuni që dokumentet tuaja të jenë në përputhje me ligjet në zonën tuaj.",
+    "notLegalAdvice": "Ky shërbim nuk përbën këshillë ligjore dhe nuk duhet të mbështeteni në të si i tillë.",
+    "professionalReview": "Për pasuri komplekse, interesa biznesi ose situata unike familjare, rekomandohet fuqimisht një shqyrtim ligjor profesional."
+  },
+  "terms": {
+    "serviceTerms": "Kushtet e Shërbimit",
+    "privacyPolicy": "Politika e Privatësisë",
+    "dataProcessing": "Marrëveshje për Përpunimin e të Dhënave",
+    "userAgreement": "Marrëveshja e Përdoruesit",
+    "acceptanceRequired": "Duke përdorur LegacyGuard, ju pranoni Kushtet tona të Shërbimit dhe Politikën e Privatësisë.",
+    "lastUpdated": "Përditësuar për herë të fundit: {{date}}",
+    "effectiveDate": "Data e hyrjes në fuqi: {{date}}"
+  },
+  "compliance": {
+    "dataProtection": "Të dhënat tuaja mbrohen në përputhje me ligjet në fuqi për mbrojtjen e të dhënave, duke përfshirë GDPR dhe CCPA.",
+    "encryption": "I gjithë informacioni i ndjeshëm është i koduar duke përdorur metoda standarde të enkriptimit të industrisë.",
+    "retention": "Politikat e ruajtjes së të dhënave janë hartuar për të mbrojtur privatësinë tuaj, duke siguruar që familja juaj të ketë qasje në informacione të rëndësishme kur është e nevojshme.",
+    "access": "Ju keni të drejtë të hyni, modifikoni ose fshini informacionin tuaj personal në çdo kohë.",
+    "portability": "Ju mund të eksportoni të dhënat tuaja në formate standarde për t'i përdorur me shërbime të tjera."
+  },
+  "executionRequirements": {
+    "witnessRequirements": "Kërkesat e Dëshmitarëve për {{jurisdiction}}",
+    "notaryRequirements": "Kërkesat e Noterizimit",
+    "signingInstructions": "Udhëzime për Nënshkrimin e Duhur",
+    "storageGuidelines": "Udhëzime për Ruajtje të Sigurt",
+    "legalCompliance": "Verifikimi i Përputhshmërisë Ligjore"
+  },
+  "cookiePolicy": {
+    "cookieTypes": {
+      "analytics": "Kukitë analitike na ndihmojnë të kuptojmë se si vizitorët bashkëveprojnë me faqen tonë të internetit.",
+      "essential": "Kukitë thelbësore janë të nevojshme që faqja e internetit të funksionojë siç duhet.",
+      "marketing": "Kukitë e marketingut përdoren për të gjurmuar vizitorët nëpër faqet e internetit për të shfaqur reklama përkatëse."
+    },
+    "howWeUseCookies": "Ne përdorim cookies për të përmirësuar përvojën tuaj, për të analizuar përdorimin e faqes dhe për të ofruar përmbajtje të personalizuar.",
+    "introduction": "Kjo Politikë e Cookie-ve shpjegon se si LegacyGuard përdor cookies dhe teknologji të ngjashme.",
+    "manageCookies": "Ju mund t'i menaxhoni preferencat tuaja për cookie-t përmes cilësimeve të shfletuesit tuaj ose qendrës sonë të preferencave për cookie-t.",
+    "title": "Titulli",
+    "whatAreCookies": "Kukitë janë skedarë të vegjël teksti që ruhen në pajisjen tuaj kur vizitoni faqen tonë të internetit."
+  },
+  "header": {
+    "title": "Titulli"
+  },
+  "hero": {
+    "headline": "Titulli",
+    "subheadline": "Nëntitull"
+  },
+  "termsOfService": {
+    "effectiveDate": "Data e hyrjes në fuqi: {{date}}",
+    "introduction": "Këto Kushte Shërbimi rregullojnë përdorimin tuaj të platformës dhe shërbimeve të mbrojtjes së familjes së LegacyGuard.",
+    "lastUpdated": "Përditësuar për herë të fundit: {{date}}",
+    "sections": {
+      "acceptance": {
+        "content": "Duke hyrë ose duke përdorur LegacyGuard, ju pranoni të jeni të lidhur nga këto Kushte Shërbimi dhe të gjitha ligjet dhe rregulloret në fuqi.",
+        "title": "Pranimi i Kushteve"
+      },
+      "description": {
+        "content": "LegacyGuard ofron mjete dhe shërbime dixhitale për të ndihmuar individët të organizojnë informacionin e tyre të rëndësishëm për qëllime të mbrojtjes së familjes.",
+        "title": "Përshkrimi i Shërbimit"
+      },
+      "limitations": {
+        "content": "LegacyGuard ofron mjete dhe udhëzime, por nuk ofron këshilla ligjore. Ne rekomandojmë konsultimin me profesionistë të kualifikuar për çështje komplekse ligjore.",
+        "title": "Kufizimet e Përgjegjësisë"
+      },
+      "privacy": {
+        "content": "Privatësia juaj është e rëndësishme për ne. Ju lutemi rishikoni Politikën tonë të Privatësisë për të kuptuar se si i mbledhim, përdorim dhe mbrojmë informacionet tuaja.",
+        "title": "Privatësia dhe Mbrojtja e të Dhënave"
+      },
+      "userResponsibilities": {
+        "content": "Ju jeni përgjegjës për ruajtjen e konfidencialitetit të informacionit të llogarisë suaj dhe për të gjitha aktivitetet që ndodhin në llogarinë tuaj.",
+        "title": "Përgjegjësitë e Përdoruesit"
+      }
+    },
+    "title": "Kushtet e Shërbimit"
+  },
+  "cookies": {
+    "policy": {
+      "analytics": {
+        "description": "Përshkrimi",
+        "examples": {
+          "ga": "Ga",
+          "gid": "Gid",
+          "session": "Sesioni"
+        },
+        "purpose": "Qëllimi",
+        "title": "Titulli"
+      },
+      "categories": {
+        "title": "Titulli"
+      },
+      "contact": {
+        "address": "Adresa",
+        "addressDetails": "Detajet e adresës",
+        "description": "Përshkrimi",
+        "email": "Email",
+        "title": "Titulli"
+      },
+      "examples": "Shembuj",
+      "lastUpdated": "Përditësuar për herë të fundit",
+      "manage": {
+        "title": "Titulli"
+      },
+      "marketing": {
+        "description": "Përshkrimi",
+        "examples": {
+          "facebook": "Facebook",
+          "google": "Google"
+        },
+        "purpose": "Qëllimi",
+        "title": "Titulli"
+      },
+      "necessary": {
+        "description": "Përshkrimi",
+        "examples": {
+          "auth": "Autorizimi",
+          "consent": "Pëlqim",
+          "csrf": "Csrf",
+          "session": "Sesioni"
+        },
+        "purpose": "Qëllimi",
+        "title": "Titulli"
+      },
+      "overview": {
+        "intro": "Hyrje",
+        "point1": "Pika 1",
+        "point2": "Pika 2",
+        "point3": "Pika 3",
+        "point4": "Pika 4",
+        "title": "Titulli"
+      },
+      "preferences": {
+        "description": "Përshkrimi",
+        "examples": {
+          "language": "Gjuha",
+          "theme": "Tema",
+          "ui": "Ndërfaqja e përdoruesit"
+        },
+        "purpose": "Qëllimi",
+        "title": "Titulli"
+      },
+      "purpose": "Qëllimi",
+      "required": "E detyrueshme",
+      "subtitle": "Titra",
+      "title": "Titulli",
+      "yourRights": {
+        "description": "Përshkrimi",
+        "right1": "Djathtas1",
+        "right2": "Djathtas2",
+        "right3": "Djathtas3",
+        "right4": "Djathtas4",
+        "title": "Titulli"
+      }
+    }
+  }
+}

@@ -1,0 +1,642 @@
+{
+  "actions": {
+    "consultLawyer": "Pierakstīties uz juridisko konsultāciju",
+    "createCodicil": "Izveidot grozījumu (kodicils)",
+    "deleteWill": "Dzēst šo testamentu",
+    "downloadPdf": "Lejupielādēt PDF dokumentu",
+    "generateWill": "Ģenerēt galīgo testamentu",
+    "next": "Nākamais",
+    "previous": "Iepriekšējais",
+    "printWill": "Drukāt testamenta dokumentu",
+    "saveProgress": "Saglabāt pašreizējo progresu",
+    "shareWill": "Kopīgot ar ģimeni",
+    "updateWill": "Atjaunināt testamenta informāciju"
+  },
+  "errors": {
+    "assetLoadFailed": "Nevarēja ielādēt jūsu līdzekļa informāciju. Lūdzu, atsvaidziniet lapu un mēģiniet vēlreiz.",
+    "generationFailed": "Radās problēma, ģenerējot jūsu testamentu. Lūdzu, pārskatiet savu informāciju un mēģiniet vēlreiz.",
+    "jurisdictionRequired": "Lūdzu, izvēlieties savu juridisko jurisdikciju, lai nodrošinātu atbilstību",
+    "loadFailed": "Neizdevās ielādēt jūsu testamenta informāciju. Lūdzu, atsvaidziniet lapu un mēģiniet vēlreiz.",
+    "printFailed": "Sagatavojot jūsu dokumentu drukāšanai, radās problēma. Lūdzu, mēģiniet vēlreiz.",
+    "saveFailed": "Neizdevās saglabāt jūsu progresu. Lūdzu, pārbaudiet savienojumu un mēģiniet vēlreiz.",
+    "validationFailed": "Lūdzu, pirms turpināt, pārskatiet un izlabojiet iezīmēto informāciju."
+  },
+  "execution": {
+    "copyDistribution": "Kopiju izplatīšana",
+    "familyNotification": "Ģimenes informēšana",
+    "legalRequirements": "Juridiskās prasības attiecībā uz {{jurisdiction}}",
+    "notarization": "Notariālas apliecināšanas prasības",
+    "notaryOptional": "Notārs ieteicams, bet nav obligāts",
+    "notaryRequired": "Nepieciešams notārs",
+    "numberOfCopies": "Ieteicamais kopiju skaits",
+    "safeStorage": "Drošas glabāšanas vietas",
+    "selfProving": "Pašapliecinošs apliecinājums",
+    "signingInstructions": "Parakstīšanas instrukcijas",
+    "signingOrder": "Pareiza parakstīšanas secība",
+    "storageRecommendations": "Uzglabāšanas ieteikumi",
+    "subtitle": "Testamenta padarīšana juridiski saistoša",
+    "title": "Testamenta izpildes prasības",
+    "witnessCount": "Nepieciešami {{count}} liecinieki",
+    "witnessInstructions": "Liecinieka norādījumi",
+    "witnessQualifications": "Liecinieku kvalifikācija",
+    "witnessRequirements": "Liecinieku prasības"
+  },
+  "form": {
+    "assetSelection": {
+      "allAssets": "Iekļaut visus pašreizējos un nākotnes aktīvus",
+      "assetCategories": "Iekļaujamās aktīvu kategorijas",
+      "businessInterests": "Biznesa intereses",
+      "excludedAssets": "Izslēdzamie aktīvi",
+      "jointAssets": "Kopīpašumā esoši aktīvi",
+      "residualDescription": "Visi pārējie aktīvi, kas nav īpaši minēti citur šajā testamentā",
+      "residualEstate": "Atlikušais īpašums",
+      "selectAssets": "Izvēlieties iekļaujamos aktīvus",
+      "specificAssets": "Atlasīt tikai konkrētus līdzekļus"
+    },
+    "distribution": {
+      "addBeneficiary": "Pievienot papildu saņēmēju",
+      "ageRestriction": "Vecuma prasības",
+      "allocation": "Mantojuma piešķiršana",
+      "beneficiaryName": "Saņēmēja pilns vārds",
+      "conditions": "Nosacījumi vai ierobežojumi",
+      "contingentBeneficiary": "Iespējamais labuma guvējs",
+      "percentage": "Mantojuma procentuālā daļa",
+      "primaryBeneficiary": "Galvenais saņēmējs",
+      "relationship": "Attiecības ar jums",
+      "specificAmount": "Konkrēta dolāru summa",
+      "specificAsset": "Konkrēts aktīvs vai īpašums",
+      "trustProvision": "Uzticības līgums"
+    },
+    "executor": {
+      "alternateExecutor": "Alternatīvais izpildītājs",
+      "bondRequirement": "Obligāciju prasība",
+      "coExecutors": "Līdzizpildītāji",
+      "executorAddress": "Izpildītāja adrese",
+      "executorCompensation": "Izpildītāja atlīdzība",
+      "executorDuties": "Izpildītāja pienākumi",
+      "executorInstructions": "Īpaši norādījumi izpildītājam",
+      "executorName": "Izpildītāja pilns vārds",
+      "executorRelationship": "Attiecības ar jums",
+      "primaryExecutor": "Galvenais izpildītājs",
+      "specialPowers": "Piešķirtās īpašās pilnvaras"
+    },
+    "guardianship": {
+      "backupGuardian": "Aizbildņa vietnieks",
+      "educationPreferences": "Izglītības preferences",
+      "guardianCompensation": "Aizbildņa kompensācija",
+      "guardianFor": "Aizbildnis priekš {{childName}}",
+      "guardianInstructions": "Norādījumi aizbildnim",
+      "guardianQualifications": "Aizbildņa kvalifikācija",
+      "minorChildren": "Nepilngadīgi bērni, kuriem nepieciešama aizbildnība",
+      "primaryGuardian": "Galvenais aizbildnis",
+      "religiousUpbringing": "Reliģiskās audzināšanas preferences"
+    },
+    "personalInfo": {
+      "addChild": "Pievienot bērnu",
+      "addressHelper": "Jūsu galvenā dzīvesvietas adrese",
+      "childDateOfBirth": "Bērna dzimšanas datums",
+      "childName": "Bērna pilns vārds",
+      "childRelation": "Attiecības ar jums",
+      "children": "Bērni un apgādājamie",
+      "currentAddress": "Pašreizējā juridiskā adrese",
+      "dateOfBirth": "Dzimšanas datums",
+      "fullLegalName": "Pilns juridiskais vārds",
+      "fullLegalNameHelper": "Ievadiet savu vārdu tieši tā, kā tas ir norādīts oficiālajos dokumentos",
+      "maritalStatus": "Ģimenes stāvoklis",
+      "marriageDate": "Laulības datums",
+      "placeOfBirth": "Dzimšanas vieta",
+      "previousWills": "Iepriekšējie testamenti",
+      "revokesPrevious": "Tas atcels visus iepriekšējos testamentus",
+      "spouseName": "Laulātā pilns vārds un uzvārds"
+    },
+    "provisions": {
+      "burialCremation": "Apbedīšanas vai kremācijas izvēle",
+      "businessContinuation": "Uzņēmējdarbības turpināšanas plāni",
+      "charitableBequests": "Labdarības ziedojumi",
+      "charityAmount": "Ziedojuma summa",
+      "charityName": "Labdarības organizācija",
+      "digitalAssets": "Digitālā īpašuma instrukcijas",
+      "funeralInstructions": "Īpašas bēru instrukcijas",
+      "funeralWishes": "Bēru un apbedīšanas preferences",
+      "organDonation": "Orgānu ziedošanas vēlmes",
+      "personalMessages": "Personīgi ziņojumi ģimenei",
+      "petCare": "Mājdzīvnieku aprūpes pasākumi",
+      "specialInstructions": "Īpaši norādījumi"
+    }
+  },
+  "generator": {
+    "continueWill": "Turpināt testamenta sagatavošanu",
+    "description": "Izveidojiet visaptverošu, juridiski derīgu testamentu, kas pielāgots jūsu jurisdikcijas prasībām un jūsu ģimenes unikālajām vajadzībām.",
+    "getStarted": "Sāciet veidot savu testamentu",
+    "importance": "Nodrošināt, lai jūsu vēlmes būtu juridiski dokumentētas un jūsu ģimene būtu aizsargāta",
+    "newWill": "Izveidot jaunu testamentu",
+    "of": "No",
+    "professionalGuidance": "Sarežģītu īpašumu gadījumā ieteicamas profesionālas juridiskās konsultācijas",
+    "step": "Solis",
+    "subtitle": "Izveidojiet juridiski pamatotu testamentu ar profesionālas palīdzības palīdzību",
+    "title": "Pēdējās gribas un testamenta ģenerators",
+    "viewExisting": "Pārskatīt pašreizējo testamentu"
+  },
+  "legal": {
+    "consultLawyer": "Konsultējieties ar advokātu",
+    "disclaimer": "Svarīga juridiskā atruna",
+    "estatePlanning": "Visaptveroša īpašuma plānošana",
+    "jurisdiction": "Juridiskā jurisdikcija",
+    "lawsApply": "Tiks piemēroti {{jurisdiction}} likumi",
+    "lawyerRecommended": "Sarežģītu īpašumu gadījumā mēs stingri iesakām konsultēties ar kvalificētu advokātu.",
+    "legalCompliance": "Juridiskās atbilstības pārbaude",
+    "notLegalAdvice": "Šis pakalpojums nav uzskatāms par juridisku konsultāciju",
+    "probateProcess": "Informācija par mantojuma procesu",
+    "professionalGuidance": "Ieteicama profesionāla juridiskā palīdzība",
+    "professionalReview": "Profesionāla juridiskā pārskatīšana",
+    "selectJurisdiction": "Lūdzu, izvēlieties savu juridisko jurisdikciju",
+    "taxImplications": "Nodokļu ietekme"
+  },
+  "notifications": {
+    "consultationScheduled": "Juridiskā konsultācija ir ieplānota",
+    "documentShared": "Testaments ir kopīgots ar norādītajiem ģimenes locekļiem.",
+    "executionComplete": "Testamenta izpilde ir reģistrēta",
+    "progressSaved": "Jūsu progress ir saglabāts",
+    "willDeleted": "Testaments ir neatgriezeniski dzēsts",
+    "willUpdated": "Testaments ir veiksmīgi atjaunināts"
+  },
+  "preview": {
+    "article": "RAKSTS {{number}}",
+    "draftWatermark": "MELNRAKSTS — NAV JURIDISKI SAISTOŠS",
+    "executionInstructions": "IZPILDES INSTRUKCIJAS",
+    "lastWillTestament": "Pēdējā griba un testaments",
+    "of": "NO",
+    "pageNumber": "{{current}}. lapa no {{total}}.",
+    "reviewCarefully": "Pirms turpināt, lūdzu, rūpīgi pārskatiet šo dokumentu",
+    "section": "Sadaļa {{number}}",
+    "signatureSection": "PARAKSTA SADAĻA",
+    "subtitle": "Pirms testamenta pabeigšanas pārskatiet to pilnībā",
+    "title": "Dokumenta priekšskatījums",
+    "witnessClause": "LIECINIEKA KLAUZULA"
+  },
+  "status": {
+    "archived": "Arhivēta versija",
+    "draft": "Melnraksts tiek gatavots",
+    "executed": "Likumīgi izpildīts",
+    "generated": "Ģenerēts — nepieciešama izpilde",
+    "outdated": "Nepieciešams atjauninājums"
+  },
+  "policy": {
+    "duration": {
+      "session": "Sesija",
+      "minutes": "{{count}} minūtes",
+      "hours": "{{count}} stundas",
+      "days": "{{count}} dienas",
+      "months": "{{count}} mēneši",
+      "years": "{{count}} gadi"
+    }
+  },
+  "steps": {
+    "assets": {
+      "description": "Izvēlieties, kurus aktīvus vēlaties iekļaut savā testamentā un kā tie jāsadala.",
+      "subtitle": "Jūsu vērtīgās mantas",
+      "title": "Aktīvu sadale"
+    },
+    "beneficiaries": {
+      "description": "Norādiet, kas saņems jūsu aktīvus un kādās proporcijās.",
+      "subtitle": "Jūsu izvēlētie adresāti",
+      "title": "Saņēmēju apzīmējumi"
+    },
+    "executor": {
+      "description": "Izvēlieties atbildīgu personu, kas pārvaldīs jūsu īpašumu un īstenos jūsu vēlmes.",
+      "subtitle": "Jūsu īpašuma pārstāvis",
+      "title": "Mantojuma izpildītājs"
+    },
+    "guardians": {
+      "description": "Norīkojiet uzticamas personas, kas rūpējas par nepilngadīgiem bērniem vai apgādībā esošām personām.",
+      "subtitle": "Rūpējieties par saviem apgādājamajiem",
+      "title": "Aizbildnības iecelšana"
+    },
+    "personal": {
+      "description": "Mums ir nepieciešama jūsu pilnīga juridiskā informācija, lai nodrošinātu, ka jūsu testaments atbilst visām juridiskajām prasībām.",
+      "subtitle": "Jūsu identificējošā informācija",
+      "title": "Personīgā informācija"
+    },
+    "preferences": {
+      "description": "Iekļaujiet visus īpašos norādījumus, labdarības mantojumus vai personīgās vēlmes.",
+      "subtitle": "Papildu norādījumi",
+      "title": "Īpaši noteikumi"
+    },
+    "review": {
+      "description": "Pirms juridiskā dokumenta ģenerēšanas rūpīgi pārskatiet visu informāciju.",
+      "subtitle": "Pārbaudiet visu informāciju",
+      "title": "Galīgā pārskatīšana"
+    }
+  },
+  "validation": {
+    "addressRequired": "Obligāti jānorāda jūsu pašreizējā juridiskā adrese.",
+    "allocationError": "Kopējam procentuālajam piešķīrumam jābūt vienādam ar 100 %",
+    "beneficiaryRequired": "Jānorāda vismaz viens saņēmējs",
+    "dobRequired": "Dzimšanas datums ir nepieciešams juridiskai derīguma termiņa noteikšanai.",
+    "duplicateBeneficiary": "Šis saņēmējs jau ir pievienots",
+    "executorBeneficiaryConflict": "Izpildītājam un galvenajam labuma guvējam parasti jābūt dažādām personām.",
+    "executorRequired": "Jāieceļ vismaz viens testamenta izpildītājs",
+    "guardianRequired": "Nepilngadīgiem bērniem ir nepieciešams aizbildņa iecelšana",
+    "invalidDate": "Lūdzu, ievadiet derīgu datumu",
+    "invalidPercentage": "Procentuālajai vērtībai jābūt no 0 līdz 100",
+    "jurisdictionRequired": "Nepieciešama jurisdikcija",
+    "requiredField": "Obligāti aizpildāms lauks"
+  },
+  "will": {
+    "address": "Adrese",
+    "addressPlaceholder": "Adreses vietturis",
+    "allocation": {
+      "addBeneficiary": "Pievienot saņēmēju",
+      "description": "Apraksts",
+      "generalEstate": "Vispārējais īpašums",
+      "percentage": "Procenti",
+      "tips": {
+        "tip1": "1. padoms",
+        "tip2": "2. padoms",
+        "tip3": "3. padoms",
+        "title": "Nosaukums"
+      },
+      "title": "Nosaukums",
+      "total": "Kopā"
+    },
+    "beneficiaries": {
+      "addBeneficiary": "Pievienot saņēmēju",
+      "allocation": "Piešķīrums",
+      "alternativeBeneficiary": "Alternatīvais labuma guvējs",
+      "alternativePlaceholder": "Alternatīvs vietturis",
+      "beneficiaryNumber": "Saņēmēja numurs",
+      "currentAllocation": "Pašreizējais piešķīrums",
+      "description": "Apraksts",
+      "identification": "Identifikācija",
+      "identificationPlaceholder": "Identifikācijas vietturis",
+      "importantNotes": "Svarīgas piezīmes",
+      "name": "Vārds",
+      "noBeneficiaries": "Nav saņēmēju",
+      "note1": "1. piezīme",
+      "note2": "2. piezīme",
+      "note3": "3. piezīme",
+      "ofEstate": "No īpašuma",
+      "title": "Nosaukums"
+    },
+    "beneficiary": {
+      "name": "Vārds",
+      "namePlaceholder": "Nosaukuma vietturis",
+      "relationship": "Attiecības",
+      "relationshipPlaceholder": "Relāciju vietturis"
+    },
+    "birthDate": "Dzimšanas datums",
+    "birthDatePlaceholder": "Dzimšanas datuma vietturis",
+    "buttons": {
+      "saveWillInfo": "Saglabāt testamenta informāciju",
+      "saving": "Saglabāšana"
+    },
+    "countryRequirements": "Valsts prasības",
+    "descriptions": {
+      "executorDescription": "Izpildītāja apraksts",
+      "physicalLocationDescription": "Fiziskās atrašanās vietas apraksts",
+      "statusDescription": "Statusa apraksts"
+    },
+    "executor": {
+      "addAlternative": "Pievienot alternatīvu",
+      "address": "Adrese",
+      "addressPlaceholder": "Adreses vietturis",
+      "alternative": "Alternatīva",
+      "alternativeDescription": "Alternatīvs apraksts",
+      "description": "Apraksts",
+      "name": "Vārds",
+      "namePlaceholder": "Nosaukuma vietturis",
+      "phone": "Tālrunis",
+      "phonePlaceholder": "Tālruņa vietturis",
+      "primary": "Primārā",
+      "relationship": "Attiecības",
+      "relationshipPlaceholder": "Relāciju vietturis",
+      "responsibilities": "Pienākumi",
+      "responsibility1": "Atbildība1",
+      "responsibility2": "Atbildība2",
+      "responsibility3": "Atbildība3",
+      "responsibility4": "Atbildība4",
+      "title": "Nosaukums"
+    },
+    "fields": {
+      "additionalNotes": "Papildu piezīmes",
+      "currentStatus": "Pašreizējais statuss",
+      "executorContact": "Izpildītāja kontaktinformācija",
+      "physicalLocation": "Fiziskā atrašanās vieta"
+    },
+    "legalReview": {
+      "button": "Poga",
+      "description": "Apraksts",
+      "title": "Nosaukums"
+    },
+    "name": "Vārds",
+    "namePlaceholder": "Nosaukuma vietturis",
+    "options": {
+      "noContactSelected": "Nav atlasīts kontakts"
+    },
+    "placeholders": {
+      "additionalNotes": "Papildu piezīmes",
+      "physicalLocation": "Fiziskā atrašanās vieta",
+      "selectContact": "Atlasīt kontaktpersonu"
+    },
+    "preview": {
+      "address": "Adrese",
+      "alternative": "Alternatīva",
+      "alternativeExecutor": "Alternatīvais izpildītājs",
+      "date": "Datums",
+      "description": "Apraksts",
+      "executor": "Izpildītājs",
+      "generatePDF": "Ģenerēt p d f",
+      "legalRequirements": "Juridiskās prasības",
+      "name": "Vārds",
+      "ofEstate": "No īpašuma",
+      "place": "Vieta",
+      "print": "Drukāt",
+      "signature": "Paraksts",
+      "title": "Nosaukums",
+      "witnesses": "Liecinieki"
+    },
+    "requirements": {
+      "handwriting": "Rokraksts",
+      "notarization": "Notariāls apliecinājums",
+      "typed": "Rakstīts",
+      "witnesses": "Liecinieki"
+    },
+    "selectCountry": "Izvēlieties valsti",
+    "selectedCountryDetails": "Atlasītās valsts informācija",
+    "status": {
+      "draft": "Melnraksts",
+      "notarized": "Notariāli apstiprināts",
+      "stored": "Saglabāts",
+      "updated": "Atjaunināts"
+    },
+    "testatorInfo": "Informācija par testatoru",
+    "validation": {
+      "allocation100": "Piešķīrums100"
+    },
+    "willPreview": {
+      "_2": "2",
+      "critical_execution_instruction_3": "Kritiskās izpildes instrukcija 3",
+      "professional_review_4": "Profesionāla atsauksme 4",
+      "provided_by_certified_legal_pa_5": "Nodrošina sertificēts juridiskais pa 5"
+    }
+  },
+  "willGenerator": {
+    "changeCountry": "Mainīt valsti",
+    "confirmCountry": "Apstiprināt valsti",
+    "confirmSigned": "Apstiprināt parakstīšanu",
+    "console": {
+      "willGenerationCompleted": "Testamenta ģenerēšana pabeigta"
+    },
+    "countries": {
+      "AL": "Al",
+      "AT": "T",
+      "BA": "B a",
+      "BE": "Esiet",
+      "BG": "B g",
+      "CH": "C h",
+      "CY": "C y",
+      "CZ": "Cz",
+      "DE": "D e",
+      "DK": "D k",
+      "EE": "E e",
+      "ES": "E s",
+      "FI": "F i",
+      "FR": "F r",
+      "GB": "G b",
+      "GR": "G r",
+      "HR": "H r",
+      "HU": "Hū",
+      "IE": "Es e",
+      "IS": "Es esmu",
+      "IT": "Es t",
+      "LI": "L i",
+      "LT": "Lt",
+      "LU": "Lū",
+      "LV": "L v",
+      "MD": "M d",
+      "ME": "Es",
+      "MK": "M k",
+      "MT": "Mt",
+      "NL": "N l",
+      "NO": "Nē",
+      "PL": "Pl.",
+      "PT": "Pt",
+      "RO": "R o",
+      "RS": "R s",
+      "SE": "S e",
+      "SI": "S i",
+      "SK": "S k",
+      "UA": "U a"
+    },
+    "executionInstructions": "Izpildes instrukcijas",
+    "failed_to_load_will_template_2": "Neizdevās ielādēt testamenta 2. veidni.",
+    "finalizeUpload": "Pabeigt augšupielādi",
+    "fullName": "Pilns vārds",
+    "no_template_found_for_this_jur_1": "Šai žūrijai nav atrasta veidne. 1.",
+    "please_confirm_that_you_have_s_3": "Lūdzu, apstipriniet, ka jums ir 3. s.",
+    "select_a_country_4": "Izvēlieties valsti 4",
+    "steps": {
+      "confirmJurisdiction": "Apstiprināt jurisdikciju",
+      "executorBeneficiaries": "Izpildītāja labuma guvēji",
+      "personalInformation": "Personīgā informācija",
+      "reviewGenerate": "Atsauksmju ģenerēšana",
+      "signConfirm": "Paraksts apstiprināt"
+    }
+  },
+  "willSync": {
+    "approve": "Apstiprināt",
+    "autoApplied": "Automātiski lietots",
+    "changes": {
+      "allocationsModified": "Piešķīrumi ir mainīti",
+      "assetsAdded": "Pievienotie līdzekļi",
+      "beneficiariesRemoved": "Labuma guvēji ir noņemti",
+      "noChanges": "Nav izmaiņu"
+    },
+    "reject": "Noraidīt",
+    "viewChanges": "Skatīt izmaiņas"
+  },
+  "willSyncSettings": {
+    "autoSync": "Automātiska sinhronizācija",
+    "autoSyncDescription": "Automātiskās sinhronizācijas apraksts",
+    "frequencyDaily": "Biežums dienā",
+    "frequencyImmediate": "Biežums tūlītējs",
+    "frequencyWeekly": "Biežums nedēļā",
+    "generalDescription": "Vispārīgs apraksts",
+    "generalSettings": "Vispārīgie iestatījumi",
+    "requireApproval": "Nepieciešams apstiprinājums",
+    "requireApprovalDescription": "Nepieciešama apstiprinājuma apraksts",
+    "saveError": "Saglabāšanas kļūda",
+    "saved": "Saglabāts",
+    "syncFrequency": "Sinhronizācijas frekvence",
+    "triggerDescription": "Aktivizētāja apraksts",
+    "triggerSettings": "Aktivizētāja iestatījumi"
+  },
+  "willVersion": {
+    "added": "Pievienots",
+    "compareDiff": "Salīdzināt atšķirības",
+    "comparePrompt": "Salīdzināšanas uzvedne",
+    "current": "Pašreizējais",
+    "description": "Apraksts",
+    "modified": "Modificēts",
+    "removed": "Noņemts",
+    "restore": "Atjaunot",
+    "title": "Nosaukums",
+    "versionNumber": "Versijas numurs"
+  },
+  "disclaimers": {
+    "general": "LegacyGuard nodrošina rīkus un norādījumus mantojuma plānošanai, bet nesniedz juridiskas konsultācijas. Sarežģītu mantojuma lietu vai specifisku juridisku jautājumu gadījumā, lūdzu, konsultējieties ar kvalificētu juristu savā jurisdikcijā.",
+    "willGenerator": "Testamentu ģenerētājs izveido dokumentus, pamatojoties uz jūsu sniegto informāciju. Lai gan tas ir izstrādāts, lai atbilstu juridiskajām prasībām, mēs stingri iesakām pirms testamenta parakstīšanas pārskatīt jebkuru ģenerēto testamentu kvalificētam juristam.",
+    "jurisdiction": "Juridiskās prasības dažādās jurisdikcijās atšķiras. Pārliecinieties, vai jūsu dokumenti atbilst jūsu reģiona likumiem.",
+    "notLegalAdvice": "Šis pakalpojums nav uzskatāms par juridisku konsultāciju, un uz to nevajadzētu paļauties kā uz tādu.",
+    "professionalReview": "Sarežģītu īpašumu, biznesa interešu vai unikālu ģimenes situāciju gadījumā ļoti ieteicams veikt profesionālu juridisko pārbaudi."
+  },
+  "terms": {
+    "serviceTerms": "Pakalpojumu sniegšanas noteikumi",
+    "privacyPolicy": "Privātuma politika",
+    "dataProcessing": "Datu apstrādes līgums",
+    "userAgreement": "Lietotāja līgums",
+    "acceptanceRequired": "Izmantojot LegacyGuard, jūs piekrītat mūsu Pakalpojumu sniegšanas noteikumiem un Privātuma politikai.",
+    "lastUpdated": "Pēdējoreiz atjaunināts: {{date}}",
+    "effectiveDate": "Spēkā stāšanās datums: {{date}}"
+  },
+  "compliance": {
+    "dataProtection": "Jūsu dati tiek aizsargāti saskaņā ar piemērojamajiem datu aizsardzības likumiem, tostarp GDPR un CCPA.",
+    "encryption": "Visa sensitīvā informācija tiek šifrēta, izmantojot nozares standarta šifrēšanas metodes.",
+    "retention": "Datu saglabāšanas politikas ir izstrādātas, lai aizsargātu jūsu privātumu, vienlaikus nodrošinot, ka jūsu ģimene var piekļūt svarīgai informācijai, kad tā ir nepieciešama.",
+    "access": "Jums ir tiesības jebkurā laikā piekļūt savai personas informācijai, to mainīt vai dzēst.",
+    "portability": "Jūs varat eksportēt savus datus standarta formātos, lai tos izmantotu citos pakalpojumos."
+  },
+  "executionRequirements": {
+    "witnessRequirements": "Liecinieka prasības {{jurisdiction}}",
+    "notaryRequirements": "Notariālas apliecināšanas prasības",
+    "signingInstructions": "Pareizas parakstīšanas instrukcijas",
+    "storageGuidelines": "Drošas glabāšanas vadlīnijas",
+    "legalCompliance": "Juridiskās atbilstības pārbaude"
+  },
+  "cookiePolicy": {
+    "cookieTypes": {
+      "analytics": "Analītikas sīkfaili palīdz mums izprast, kā apmeklētāji mijiedarbojas ar mūsu tīmekļa vietni.",
+      "essential": "Lai tīmekļa vietne darbotos pareizi, ir nepieciešamas obligātās sīkdatnes.",
+      "marketing": "Mārketinga sīkfaili tiek izmantoti, lai izsekotu apmeklētājus dažādās tīmekļa vietnēs un rādītu atbilstošas reklāmas."
+    },
+    "howWeUseCookies": "Mēs izmantojam sīkfailus, lai uzlabotu jūsu pieredzi, analizētu vietnes lietošanu un nodrošinātu personalizētu saturu.",
+    "introduction": "Šajā sīkfailu politikā ir paskaidrots, kā LegacyGuard izmanto sīkfailus un līdzīgas tehnoloģijas.",
+    "manageCookies": "Jūs varat pārvaldīt savas sīkfailu preferences, izmantojot pārlūkprogrammas iestatījumus vai mūsu sīkfailu preferenču centru.",
+    "title": "Nosaukums",
+    "whatAreCookies": "Sīkfaili ir mazi teksta faili, kas tiek saglabāti jūsu ierīcē, kad apmeklējat mūsu tīmekļa vietni."
+  },
+  "header": {
+    "title": "Nosaukums"
+  },
+  "hero": {
+    "headline": "Virsraksts",
+    "subheadline": "Apakšvirsraksts"
+  },
+  "termsOfService": {
+    "effectiveDate": "Spēkā stāšanās datums: {{date}}",
+    "introduction": "Šie Pakalpojumu sniegšanas noteikumi regulē jūsu LegacyGuard ģimenes aizsardzības platformas un pakalpojumu lietošanu.",
+    "lastUpdated": "Pēdējoreiz atjaunināts: {{date}}",
+    "sections": {
+      "acceptance": {
+        "content": "Piekļūstot LegacyGuard vai izmantojot to, jūs piekrītat ievērot šos Pakalpojumu sniegšanas noteikumus un visus piemērojamos likumus un noteikumus.",
+        "title": "Noteikumu pieņemšana"
+      },
+      "description": {
+        "content": "LegacyGuard nodrošina digitālus rīkus un pakalpojumus, kas palīdz indivīdiem sakārtot savu svarīgo informāciju ģimenes aizsardzības nolūkos.",
+        "title": "Pakalpojuma apraksts"
+      },
+      "limitations": {
+        "content": "LegacyGuard nodrošina rīkus un norādījumus, bet nesniedz juridiskas konsultācijas. Sarežģītu juridisko jautājumu gadījumā iesakām konsultēties ar kvalificētiem speciālistiem.",
+        "title": "Atbildības ierobežojumi"
+      },
+      "privacy": {
+        "content": "Jūsu privātums mums ir svarīgs. Lūdzu, pārskatiet mūsu privātuma politiku, lai saprastu, kā mēs apkopojam, izmantojam un aizsargājam jūsu informāciju.",
+        "title": "Privātums un datu aizsardzība"
+      },
+      "userResponsibilities": {
+        "content": "Jūs esat atbildīgs par sava konta informācijas konfidencialitātes saglabāšanu un visām darbībām, kas notiek jūsu kontā.",
+        "title": "Lietotāja pienākumi"
+      }
+    },
+    "title": "Pakalpojumu sniegšanas noteikumi"
+  },
+  "cookies": {
+    "policy": {
+      "analytics": {
+        "description": "Apraksts",
+        "examples": {
+          "ga": "Ga",
+          "gid": "Gid",
+          "session": "Sesija"
+        },
+        "purpose": "Mērķis",
+        "title": "Nosaukums"
+      },
+      "categories": {
+        "title": "Nosaukums"
+      },
+      "contact": {
+        "address": "Adrese",
+        "addressDetails": "Adreses dati",
+        "description": "Apraksts",
+        "email": "E-pasts",
+        "title": "Nosaukums"
+      },
+      "examples": "Piemēri",
+      "lastUpdated": "Pēdējoreiz atjaunināts",
+      "manage": {
+        "title": "Nosaukums"
+      },
+      "marketing": {
+        "description": "Apraksts",
+        "examples": {
+          "facebook": "Facebook",
+          "google": "Google"
+        },
+        "purpose": "Mērķis",
+        "title": "Nosaukums"
+      },
+      "necessary": {
+        "description": "Apraksts",
+        "examples": {
+          "auth": "Autorizācija",
+          "consent": "Piekrišana",
+          "csrf": "CSRF",
+          "session": "Sesija"
+        },
+        "purpose": "Mērķis",
+        "title": "Nosaukums"
+      },
+      "overview": {
+        "intro": "Ievads",
+        "point1": "1. punkts",
+        "point2": "2. punkts",
+        "point3": "3. punkts",
+        "point4": "4. punkts",
+        "title": "Nosaukums"
+      },
+      "preferences": {
+        "description": "Apraksts",
+        "examples": {
+          "language": "Valoda",
+          "theme": "Tēma",
+          "ui": "Lietotāja saskarne"
+        },
+        "purpose": "Mērķis",
+        "title": "Nosaukums"
+      },
+      "purpose": "Mērķis",
+      "required": "Obligāti",
+      "subtitle": "Apakšvirsraksts",
+      "title": "Nosaukums",
+      "yourRights": {
+        "description": "Apraksts",
+        "right1": "Labā1",
+        "right2": "Labā2",
+        "right3": "Labi3",
+        "right4": "Labi4",
+        "title": "Nosaukums"
+      }
+    }
+  }
+}

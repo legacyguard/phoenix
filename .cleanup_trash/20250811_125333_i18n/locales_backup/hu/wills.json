@@ -1,0 +1,642 @@
+{
+  "actions": {
+    "consultLawyer": "Jogi konzultáció ütemezése",
+    "createCodicil": "Módosítás létrehozása (Kódicil)",
+    "deleteWill": "Végrendelet törlése",
+    "downloadPdf": "PDF dokumentum letöltése",
+    "generateWill": "Végrendelet létrehozása",
+    "next": "Következő",
+    "previous": "Előző",
+    "printWill": "Végrendelet nyomtatása",
+    "saveProgress": "Aktuális állapot mentése",
+    "shareWill": "Megosztás a családdal",
+    "updateWill": "Végrendeleti információk frissítése"
+  },
+  "errors": {
+    "assetLoadFailed": "Nem tudtuk betölteni az eszköz adatait. Kérjük, frissítse az oldalt, és próbálja újra.",
+    "generationFailed": "Probléma merült fel a végrendelet létrehozásakor. Kérjük, tekintse át adatait, és próbálja újra.",
+    "jurisdictionRequired": "Kérjük, válassza ki a joghatóságát a megfelelőség biztosítása érdekében",
+    "loadFailed": "Nem tudtuk betölteni a végrendelet adatait. Kérjük, frissítse az oldalt, és próbálja újra.",
+    "printFailed": "Probléma merült fel a dokumentum nyomtatásra való előkészítése során. Kérjük, próbálja újra.",
+    "saveFailed": "Nem tudtuk menteni a folyamatot. Kérjük, ellenőrizze a kapcsolatot, és próbálja újra.",
+    "validationFailed": "Kérjük, a folytatás előtt tekintse át és javítsa ki a kiemelt információkat"
+  },
+  "execution": {
+    "copyDistribution": "Másolatok terjesztése",
+    "familyNotification": "Családod tájékoztatása",
+    "legalRequirements": "Jogi követelmények a {{jurisdiction}} számára",
+    "notarization": "Közjegyzői hitelesítési követelmények",
+    "notaryOptional": "Közjegyző ajánlott, de nem kötelező",
+    "notaryRequired": "Közjegyző szükséges",
+    "numberOfCopies": "Ajánlott példányszám",
+    "safeStorage": "Biztonságos tárolási helyek",
+    "selfProving": "Önigazoló nyilatkozat",
+    "signingInstructions": "Aláírási utasítások",
+    "signingOrder": "Megfelelő aláírási sorrend",
+    "storageRecommendations": "Tárolási ajánlások",
+    "subtitle": "A végrendelet jogilag kötelező érvényűvé tétele",
+    "title": "Végrendelet végrehajtási követelményei",
+    "witnessCount": "{{count}} tanúk szükségesek",
+    "witnessInstructions": "Tanúi utasítások",
+    "witnessQualifications": "Tanúk képesítése",
+    "witnessRequirements": "Tanúkövetelmények"
+  },
+  "form": {
+    "assetSelection": {
+      "allAssets": "Tartalmazza az összes jelenlegi és jövőbeli eszközt",
+      "assetCategories": "Tartalmazandó eszközkategóriák",
+      "businessInterests": "Üzleti érdekek",
+      "excludedAssets": "Kizárandó eszközök",
+      "jointAssets": "Közös tulajdonban lévő eszközök",
+      "residualDescription": "Minden további, ebben a végrendeletben máshol konkrétan nem említett vagyontárgy",
+      "residualEstate": "Maradékvagyon",
+      "selectAssets": "Válassza ki a belefoglalandó eszközöket",
+      "specificAssets": "Csak meghatározott eszközök kiválasztása"
+    },
+    "distribution": {
+      "addBeneficiary": "További kedvezményezett hozzáadása",
+      "ageRestriction": "Korhatár",
+      "allocation": "Öröklés elosztása",
+      "beneficiaryName": "Kedvezményezett teljes neve",
+      "conditions": "Feltételek vagy korlátozások",
+      "contingentBeneficiary": "Feltételes kedvezményezett",
+      "percentage": "Vagyon százalékos aránya",
+      "primaryBeneficiary": "Elsődleges kedvezményezett",
+      "relationship": "Kapcsolat veled",
+      "specificAmount": "Konkrét dollárösszeg",
+      "specificAsset": "Adott eszköz vagy ingatlan",
+      "trustProvision": "Vagyonkezelői megállapodás"
+    },
+    "executor": {
+      "alternateExecutor": "helyettes végrehajtó",
+      "bondRequirement": "Kötvénykövetelmény",
+      "coExecutors": "Társvégrehajtók",
+      "executorAddress": "Végrehajtó címe",
+      "executorCompensation": "Végrehajtói kompenzáció",
+      "executorDuties": "Végrehajtói felelősségek",
+      "executorInstructions": "Különleges utasítások a végrehajtó számára",
+      "executorName": "Végrehajtó teljes neve",
+      "executorRelationship": "Kapcsolat veled",
+      "primaryExecutor": "Elsődleges végrehajtó",
+      "specialPowers": "Különleges hatáskörök megadása"
+    },
+    "guardianship": {
+      "backupGuardian": "Alternatív gyám",
+      "educationPreferences": "Oktatási beállítások",
+      "guardianCompensation": "Gyámi kártérítés",
+      "guardianFor": "{{childName}} őrzője",
+      "guardianInstructions": "Utasítások a Guardian számára",
+      "guardianQualifications": "Gyámi képesítések",
+      "minorChildren": "Gyámságra szoruló kiskorú gyermekek",
+      "primaryGuardian": "Elsődleges gyám",
+      "religiousUpbringing": "Vallási nevelési preferenciák"
+    },
+    "personalInfo": {
+      "addChild": "Gyermek hozzáadása",
+      "addressHelper": "Az Ön elsődleges lakcíme",
+      "childDateOfBirth": "Gyermek születési dátuma",
+      "childName": "Gyermek teljes neve",
+      "childRelation": "Kapcsolat veled",
+      "children": "Gyermekek és eltartottak",
+      "currentAddress": "Jelenlegi jogi cím",
+      "dateOfBirth": "Születési idő",
+      "fullLegalName": "Teljes hivatalos név",
+      "fullLegalNameHelper": "Pontosan úgy adja meg a nevét, ahogyan a hivatalos dokumentumokon szerepel",
+      "maritalStatus": "Családi állapot",
+      "marriageDate": "Házasságkötés dátuma",
+      "placeOfBirth": "Születési hely",
+      "previousWills": "Korábbi végrendeletek",
+      "revokesPrevious": "Ez hatályon kívül helyezi az összes korábbi végrendeletet",
+      "spouseName": "Házastárs teljes hivatalos neve"
+    },
+    "provisions": {
+      "burialCremation": "Temetés vagy hamvasztás preferenciája",
+      "businessContinuation": "Üzletmenet-folytonossági tervek",
+      "charitableBequests": "Jótékonysági adományok",
+      "charityAmount": "Adomány összege",
+      "charityName": "Jótékonysági szervezet",
+      "digitalAssets": "Digitális eszközökre vonatkozó utasítások",
+      "funeralInstructions": "Temetési utasítások",
+      "funeralWishes": "Temetési és eltemetési preferenciák",
+      "organDonation": "Szervadományozási kívánságok",
+      "personalMessages": "Személyes üzenetek a családnak",
+      "petCare": "Háziállat-gondozási megoldások",
+      "specialInstructions": "Különleges utasítások"
+    }
+  },
+  "generator": {
+    "continueWill": "Folytassa a végrendelet elkészítését",
+    "description": "Készítsen átfogó, jogilag érvényes végrendeletet, amely az Ön joghatóságának követelményeire és családja egyedi igényeire szabott.",
+    "getStarted": "Kezdje el a végrendelet megírását",
+    "importance": "A kívánságok jogi dokumentálásának és családja védelmének biztosítása",
+    "newWill": "Új végrendelet létrehozása",
+    "of": "A",
+    "professionalGuidance": "Komplex hagyatékokhoz ajánlott professzionális jogi tanácsadás",
+    "step": "Lépés",
+    "subtitle": "Készítsen jogilag megalapozott végrendeletet szakértői útmutatással",
+    "title": "Végrendelet-generátor",
+    "viewExisting": "Jelenlegi végrendelet felülvizsgálata"
+  },
+  "legal": {
+    "consultLawyer": "Ügyvéddel konzultáljon",
+    "disclaimer": "Fontos jogi nyilatkozat",
+    "estatePlanning": "Átfogó vagyontervezés",
+    "jurisdiction": "Joghatóság",
+    "lawsApply": "{{jurisdiction}} törvényei érvényesek",
+    "lawyerRecommended": "Összetett hagyatékok esetén erősen javasoljuk, hogy konzultáljon egy képzett ügyvéddel",
+    "legalCompliance": "Jogi megfelelőség ellenőrzése",
+    "notLegalAdvice": "Ez a szolgáltatás nem minősül jogi tanácsadásnak",
+    "probateProcess": "Hagyatéki eljárási információk",
+    "professionalGuidance": "Szakmai jogi tanácsadás ajánlott",
+    "professionalReview": "Szakmai jogi felülvizsgálat",
+    "selectJurisdiction": "Kérjük, válassza ki a joghatóságát",
+    "taxImplications": "Adózási következmények"
+  },
+  "notifications": {
+    "consultationScheduled": "Jogi konzultációt ütemeztek be",
+    "documentShared": "A végrendeletet megosztották a kijelölt családtagokkal.",
+    "executionComplete": "A végrendelet végrehajtását rögzítették.",
+    "progressSaved": "A haladásod mentésre került",
+    "willDeleted": "A végrendelet véglegesen törölve lett",
+    "willUpdated": "A Will frissítése sikeresen megtörtént."
+  },
+  "preview": {
+    "article": "CIKK {{number}}",
+    "draftWatermark": "VÁZLAT - NEM JOGI KÖTELEZŐ EREJŰ",
+    "executionInstructions": "VÉGREHAJTÁSI UTASÍTÁSOK",
+    "lastWillTestament": "VÉGRENDELET",
+    "of": "OF",
+    "pageNumber": "{{current}} oldal / {{total}} oldal",
+    "reviewCarefully": "Kérjük, a folytatás előtt figyelmesen olvassa el ezt a dokumentumot",
+    "section": "{{number}} szakasz",
+    "signatureSection": "ALÁÍRÁS RÉSZ",
+    "subtitle": "Végrendeletének véglegesítése előtt tekintse át teljes végrendeletét",
+    "title": "Dokumentum előnézete",
+    "witnessClause": "TANÚSÁGI ZÁRADÉK"
+  },
+  "status": {
+    "archived": "Archivált verzió",
+    "draft": "Vázlat folyamatban",
+    "executed": "Jogilag kivégezték",
+    "generated": "Létrehozva - Végrehajtást igényel",
+    "outdated": "Frissítést igényel"
+  },
+  "policy": {
+    "duration": {
+      "session": "Ülés",
+      "minutes": "{{count}} perc",
+      "hours": "{{count}} óra",
+      "days": "{{count}} nap",
+      "months": "{{count}} hónap",
+      "years": "{{count}} év"
+    }
+  },
+  "steps": {
+    "assets": {
+      "description": "Válassza ki, hogy mely vagyontárgyakat kívánja a végrendeletébe foglalni, és hogyan szeretné azokat felosztani.",
+      "subtitle": "Az értékes vagyontárgyaid",
+      "title": "Vagyonelosztás"
+    },
+    "beneficiaries": {
+      "description": "Jelöld meg, hogy ki kapja meg a vagyonodat és milyen arányban.",
+      "subtitle": "A kiválasztott címzettek",
+      "title": "Kedvezményezettek megnevezése"
+    },
+    "executor": {
+      "description": "Válasszon egy felelős személyt, aki kezeli a vagyonát és végrehajtja kívánságait.",
+      "subtitle": "Az Ön ingatlanügynöke",
+      "title": "hagyatéki végrehajtó"
+    },
+    "guardians": {
+      "description": "Jelöljön ki megbízható személyeket kiskorú gyermekek vagy eltartottak gondozására.",
+      "subtitle": "Gondoskodjon az eltartottjairól",
+      "title": "Gyámsági kinevezések"
+    },
+    "personal": {
+      "description": "Teljes körű jogi információkra van szükségünk annak érdekében, hogy a végrendeleted megfeleljen minden jogi követelménynek.",
+      "subtitle": "Az Ön azonosító adatai",
+      "title": "Személyes adatok"
+    },
+    "preferences": {
+      "description": "Tüntesse fel a különleges utasításokat, jótékonysági hagyatékokat vagy személyes kívánságokat.",
+      "subtitle": "További utasítások",
+      "title": "Különleges rendelkezések"
+    },
+    "review": {
+      "description": "A jogi dokumentum elkészítése előtt gondosan ellenőrizze az összes részletet.",
+      "subtitle": "Ellenőrizze az összes információt",
+      "title": "Végső felülvizsgálat"
+    }
+  },
+  "validation": {
+    "addressRequired": "A jelenlegi hivatalos cím megadása kötelező",
+    "allocationError": "A teljes százalékos allokációnak 100%-nak kell lennie.",
+    "beneficiaryRequired": "Legalább egy kedvezményezettet meg kell adni",
+    "dobRequired": "A születési dátum megadása kötelező a jogi érvényességhez",
+    "duplicateBeneficiary": "Ez a kedvezményezett már hozzáadva",
+    "executorBeneficiaryConflict": "A végrehajtónak és a fő kedvezményezettnek jellemzően különböző személyeknek kell lenniük.",
+    "executorRequired": "Legalább egy végrehajtót kell kijelölni",
+    "guardianRequired": "Kiskorú gyermekek esetén gyám kijelölése szükséges",
+    "invalidDate": "Kérjük, adjon meg egy érvényes dátumot",
+    "invalidPercentage": "A százalékos értéknek 0 és 100 között kell lennie",
+    "jurisdictionRequired": "Joghatóság szükséges",
+    "requiredField": "Kötelező mező"
+  },
+  "will": {
+    "address": "Cím",
+    "addressPlaceholder": "Cím helyőrzője",
+    "allocation": {
+      "addBeneficiary": "Kedvezményezett hozzáadása",
+      "description": "Leírás",
+      "generalEstate": "Általános ingatlan",
+      "percentage": "Százalék",
+      "tips": {
+        "tip1": "1. tipp",
+        "tip2": "2. tipp",
+        "tip3": "3. tipp",
+        "title": "Cím"
+      },
+      "title": "Cím",
+      "total": "Teljes"
+    },
+    "beneficiaries": {
+      "addBeneficiary": "Kedvezményezett hozzáadása",
+      "allocation": "Kiosztás",
+      "alternativeBeneficiary": "Alternatív kedvezményezett",
+      "alternativePlaceholder": "Alternatív helyőrző",
+      "beneficiaryNumber": "Kedvezményezett száma",
+      "currentAllocation": "Jelenlegi allokáció",
+      "description": "Leírás",
+      "identification": "Azonosítás",
+      "identificationPlaceholder": "Azonosító helyőrző",
+      "importantNotes": "Fontos megjegyzések",
+      "name": "Név",
+      "noBeneficiaries": "Nincsenek kedvezményezettek",
+      "note1": "1. megjegyzés",
+      "note2": "2. megjegyzés",
+      "note3": "3. megjegyzés",
+      "ofEstate": "Vagyonból",
+      "title": "Cím"
+    },
+    "beneficiary": {
+      "name": "Név",
+      "namePlaceholder": "Név helyőrzője",
+      "relationship": "Kapcsolat",
+      "relationshipPlaceholder": "Kapcsolat helyőrzője"
+    },
+    "birthDate": "Születési dátum",
+    "birthDatePlaceholder": "Születési dátum helyőrzője",
+    "buttons": {
+      "saveWillInfo": "Mentési adatok",
+      "saving": "Megtakarítás"
+    },
+    "countryRequirements": "Országspecifikus követelmények",
+    "descriptions": {
+      "executorDescription": "Végrehajtó leírása",
+      "physicalLocationDescription": "Fizikai helyszín leírása",
+      "statusDescription": "Állapot leírása"
+    },
+    "executor": {
+      "addAlternative": "Alternatíva hozzáadása",
+      "address": "Cím",
+      "addressPlaceholder": "Cím helyőrzője",
+      "alternative": "Alternatív",
+      "alternativeDescription": "Alternatív leírás",
+      "description": "Leírás",
+      "name": "Név",
+      "namePlaceholder": "Név helyőrzője",
+      "phone": "Telefon",
+      "phonePlaceholder": "Telefonszám helyőrzője",
+      "primary": "Elsődleges",
+      "relationship": "Kapcsolat",
+      "relationshipPlaceholder": "Kapcsolat helyőrzője",
+      "responsibilities": "Felelősségek",
+      "responsibility1": "Felelősség1",
+      "responsibility2": "Felelősség2",
+      "responsibility3": "Felelősség3",
+      "responsibility4": "Felelősség4",
+      "title": "Cím"
+    },
+    "fields": {
+      "additionalNotes": "További megjegyzések",
+      "currentStatus": "Jelenlegi állapot",
+      "executorContact": "Végrehajtó elérhetősége",
+      "physicalLocation": "Fizikai helyszín"
+    },
+    "legalReview": {
+      "button": "Gomb",
+      "description": "Leírás",
+      "title": "Cím"
+    },
+    "name": "Név",
+    "namePlaceholder": "Név helyőrzője",
+    "options": {
+      "noContactSelected": "Nincs kiválasztva kapcsolattartó"
+    },
+    "placeholders": {
+      "additionalNotes": "További megjegyzések",
+      "physicalLocation": "Fizikai helyszín",
+      "selectContact": "Válasszon kontaktot"
+    },
+    "preview": {
+      "address": "Cím",
+      "alternative": "Alternatív",
+      "alternativeExecutor": "alternatív végrehajtó",
+      "date": "Dátum",
+      "description": "Leírás",
+      "executor": "Végrehajtó",
+      "generatePDF": "P d f generálása",
+      "legalRequirements": "Jogi követelmények",
+      "name": "Név",
+      "ofEstate": "Vagyonból",
+      "place": "Hely",
+      "print": "Nyomtatás",
+      "signature": "Aláírás",
+      "title": "Cím",
+      "witnesses": "Tanúk"
+    },
+    "requirements": {
+      "handwriting": "Kézírás",
+      "notarization": "Közjegyzői hitelesítés",
+      "typed": "Gépelt",
+      "witnesses": "Tanúk"
+    },
+    "selectCountry": "Válasszon országot",
+    "selectedCountryDetails": "Kiválasztott ország részletei",
+    "status": {
+      "draft": "Vázlat",
+      "notarized": "Közjegyző által hitelesített",
+      "stored": "Tárolt",
+      "updated": "Frissítve"
+    },
+    "testatorInfo": "Végrendelkező adatai",
+    "validation": {
+      "allocation100": "Kiosztás100"
+    },
+    "willPreview": {
+      "_2": "2",
+      "critical_execution_instruction_3": "Kritikus végrehajtási utasítás 3",
+      "professional_review_4": "Szakmai felülvizsgálat 4",
+      "provided_by_certified_legal_pa_5": "Okleveles jogi képviselő biztosítja 5"
+    }
+  },
+  "willGenerator": {
+    "changeCountry": "Ország módosítása",
+    "confirmCountry": "Ország megerősítése",
+    "confirmSigned": "Aláírás megerősítése",
+    "console": {
+      "willGenerationCompleted": "Végrendelet generálása befejeződött"
+    },
+    "countries": {
+      "AL": "Egy l",
+      "AT": "Egy t",
+      "BA": "B a",
+      "BE": "Légy",
+      "BG": "B g",
+      "CH": "C h",
+      "CY": "C y",
+      "CZ": "Cz",
+      "DE": "D e",
+      "DK": "D k",
+      "EE": "É é",
+      "ES": "E sz",
+      "FI": "F i",
+      "FR": "F r",
+      "GB": "G b",
+      "GR": "G r",
+      "HR": "H r",
+      "HU": "H u",
+      "IE": "Én e",
+      "IS": "Én s",
+      "IT": "Én t",
+      "LI": "L i",
+      "LT": "L t",
+      "LU": "Lu u",
+      "LV": "L v.",
+      "MD": "M d",
+      "ME": "Én",
+      "MK": "M. K.",
+      "MT": "Mt.",
+      "NL": "N l",
+      "NO": "Nem",
+      "PL": "Pl.",
+      "PT": "Pt",
+      "RO": "R o",
+      "RS": "R sz",
+      "SE": "L é",
+      "SI": "S i",
+      "SK": "S k",
+      "UA": "U a"
+    },
+    "executionInstructions": "Végrehajtási utasítások",
+    "failed_to_load_will_template_2": "Nem sikerült betölteni a 2. végrendelet sablont",
+    "finalizeUpload": "Feltöltés véglegesítése",
+    "fullName": "Teljes név",
+    "no_template_found_for_this_jur_1": "Nem található sablon ehhez az esküdtszékhez 1",
+    "please_confirm_that_you_have_s_3": "Kérjük, erősítse meg, hogy rendelkezik 3. számú résszel.",
+    "select_a_country_4": "Válasszon egy országot 4",
+    "steps": {
+      "confirmJurisdiction": "Igazolja a joghatóságot",
+      "executorBeneficiaries": "Végrehajtó kedvezményezettek",
+      "personalInformation": "Személyes adatok",
+      "reviewGenerate": "Vélemény generálása",
+      "signConfirm": "Aláírás megerősítése"
+    }
+  },
+  "willSync": {
+    "approve": "Jóváhagyás",
+    "autoApplied": "Automatikusan alkalmazva",
+    "changes": {
+      "allocationsModified": "Módosított allokációk",
+      "assetsAdded": "Hozzáadott eszközök",
+      "beneficiariesRemoved": "Kedvezményezettek eltávolítva",
+      "noChanges": "Nincsenek változások"
+    },
+    "reject": "Elutasít",
+    "viewChanges": "Változások megtekintése"
+  },
+  "willSyncSettings": {
+    "autoSync": "Automatikus szinkronizálás",
+    "autoSyncDescription": "Automatikus szinkronizálás leírása",
+    "frequencyDaily": "Napi gyakoriság",
+    "frequencyImmediate": "Azonnali gyakoriság",
+    "frequencyWeekly": "Heti gyakoriság",
+    "generalDescription": "Általános leírás",
+    "generalSettings": "Általános beállítások",
+    "requireApproval": "Jóváhagyás szükséges",
+    "requireApprovalDescription": "Jóváhagyás szükséges leírása",
+    "saveError": "Mentési hiba",
+    "saved": "Mentett",
+    "syncFrequency": "Szinkronizálási frekvencia",
+    "triggerDescription": "Trigger leírása",
+    "triggerSettings": "Trigger beállítások"
+  },
+  "willVersion": {
+    "added": "Hozzáadva",
+    "compareDiff": "Hasonlítsa össze a különbséget",
+    "comparePrompt": "Összehasonlítási prompt",
+    "current": "Jelenlegi",
+    "description": "Leírás",
+    "modified": "Módosított",
+    "removed": "Eltávolítva",
+    "restore": "Visszaállítás",
+    "title": "Cím",
+    "versionNumber": "Verziószám"
+  },
+  "disclaimers": {
+    "general": "A LegacyGuard eszközöket és útmutatást nyújt a hagyatéktervezéshez, de jogi tanácsadást nem nyújt. Összetett hagyatékok vagy konkrét jogi kérdések esetén kérjük, konzultáljon az Ön joghatóságában illetékes ügyvéddel.",
+    "willGenerator": "A végrendeletgenerátor az Ön által megadott információk alapján készít dokumentumokat. Bár a végrendeletet úgy tervezték, hogy megfeleljen a jogi követelményeknek, határozottan javasoljuk, hogy a létrehozott végrendeleteket a végrehajtás előtt vizsgáltassa felül egy képzett ügyvéd.",
+    "jurisdiction": "A jogi követelmények joghatóságonként eltérőek lehetnek. Győződjön meg arról, hogy dokumentumai megfelelnek az Ön területén érvényes törvényeknek.",
+    "notLegalAdvice": "Ez a szolgáltatás nem minősül jogi tanácsadásnak, és nem szabad rá úgy hivatkozni.",
+    "professionalReview": "Összetett hagyatékok, üzleti érdekeltségek vagy egyedi családi helyzetek esetén erősen ajánlott a szakértői jogi felülvizsgálat."
+  },
+  "terms": {
+    "serviceTerms": "Szolgáltatási feltételek",
+    "privacyPolicy": "Adatvédelmi irányelvek",
+    "dataProcessing": "Adatfeldolgozási megállapodás",
+    "userAgreement": "Felhasználói szerződés",
+    "acceptanceRequired": "A LegacyGuard használatával Ön elfogadja a Szolgáltatási Feltételeinket és az Adatvédelmi Szabályzatunkat.",
+    "lastUpdated": "Utolsó frissítés: {{date}}",
+    "effectiveDate": "Hatálybalépés dátuma: {{date}}"
+  },
+  "compliance": {
+    "dataProtection": "Adatait a vonatkozó adatvédelmi törvényeknek, beleértve a GDPR-t és a CCPA-t is, megfelelően védjük.",
+    "encryption": "Minden érzékeny információt iparági szabványoknak megfelelő titkosítási módszerekkel titkosítunk.",
+    "retention": "Az adatmegőrzési szabályzatok célja az Ön adatainak védelme, miközben biztosítják, hogy családja szükség esetén hozzáférhessen a fontos információkhoz.",
+    "access": "Önnek bármikor joga van hozzáférni, módosítani vagy törölni a személyes adatait.",
+    "portability": "Adatait szabványos formátumokban exportálhatja, hogy más szolgáltatásokkal is használhassa."
+  },
+  "executionRequirements": {
+    "witnessRequirements": "Tanúkövetelmények a {{jurisdiction}} számára",
+    "notaryRequirements": "Közjegyzői hitelesítési követelmények",
+    "signingInstructions": "Megfelelő aláírási utasítások",
+    "storageGuidelines": "Biztonságos tárolási irányelvek",
+    "legalCompliance": "Jogi megfelelőség ellenőrzése"
+  },
+  "cookiePolicy": {
+    "cookieTypes": {
+      "analytics": "Az analitikai sütik segítenek megérteni, hogyan használják a látogatók a weboldalunkat.",
+      "essential": "A weboldal megfelelő működéséhez elengedhetetlen sütik szükségesek.",
+      "marketing": "A marketing sütiket arra használjuk, hogy nyomon kövessék a látogatókat a weboldalakon keresztül, és releváns hirdetéseket jelenítsünk meg számukra."
+    },
+    "howWeUseCookies": "Sütiket használunk a felhasználói élmény javítása, a webhelyhasználat elemzése és személyre szabott tartalom biztosítása érdekében.",
+    "introduction": "Ez a sütikre vonatkozó szabályzat ismerteti, hogyan használja a LegacyGuard a sütiket és hasonló technológiákat.",
+    "manageCookies": "A sütibeállításaidat a böngésződ beállításain keresztül vagy a sütibeállítás-központunkban kezelheted.",
+    "title": "Cím",
+    "whatAreCookies": "A sütik kis szöveges fájlok, amelyek az Ön eszközén tárolódnak, amikor meglátogatja weboldalunkat."
+  },
+  "header": {
+    "title": "Cím"
+  },
+  "hero": {
+    "headline": "Címsor",
+    "subheadline": "Alcím"
+  },
+  "termsOfService": {
+    "effectiveDate": "Hatálybalépés dátuma: {{date}}",
+    "introduction": "Jelen Szolgáltatási Feltételek szabályozzák a LegacyGuard családvédelmi platformjának és szolgáltatásainak használatát.",
+    "lastUpdated": "Utolsó frissítés: {{date}}",
+    "sections": {
+      "acceptance": {
+        "content": "A LegacyGuard elérésével vagy használatával Ön elfogadja a jelen Szolgáltatási Feltételeket és az összes vonatkozó törvényt és szabályozást.",
+        "title": "Feltételek elfogadása"
+      },
+      "description": {
+        "content": "A LegacyGuard digitális eszközöket és szolgáltatásokat kínál, amelyek segítenek az egyéneknek rendszerezni fontos adataikat családvédelmi célokból.",
+        "title": "Szolgáltatás leírása"
+      },
+      "limitations": {
+        "content": "A LegacyGuard eszközöket és útmutatást biztosít, de jogi tanácsadást nem nyújt. Összetett jogi ügyekben szakképzett szakemberekkel való konzultációt javasolunk.",
+        "title": "Felelősség korlátozása"
+      },
+      "privacy": {
+        "content": "Az Ön adatainak védelme fontos számunkra. Kérjük, tekintse át Adatvédelmi irányelveinket, hogy megértse, hogyan gyűjtjük, használjuk fel és védjük az Ön adatait.",
+        "title": "Adatvédelem és adatvédelem"
+      },
+      "userResponsibilities": {
+        "content": "Ön felelős fiókadatai bizalmas kezeléséért és a fiókjában végrehajtott összes tevékenységért.",
+        "title": "Felhasználói felelősségek"
+      }
+    },
+    "title": "Szolgáltatási feltételek"
+  },
+  "cookies": {
+    "policy": {
+      "analytics": {
+        "description": "Leírás",
+        "examples": {
+          "ga": "Ga",
+          "gid": "Gid",
+          "session": "Ülés"
+        },
+        "purpose": "Cél",
+        "title": "Cím"
+      },
+      "categories": {
+        "title": "Cím"
+      },
+      "contact": {
+        "address": "Cím",
+        "addressDetails": "Cím részletei",
+        "description": "Leírás",
+        "email": "Email",
+        "title": "Cím"
+      },
+      "examples": "Példák",
+      "lastUpdated": "Utolsó frissítés",
+      "manage": {
+        "title": "Cím"
+      },
+      "marketing": {
+        "description": "Leírás",
+        "examples": {
+          "facebook": "Facebook",
+          "google": "Google"
+        },
+        "purpose": "Cél",
+        "title": "Cím"
+      },
+      "necessary": {
+        "description": "Leírás",
+        "examples": {
+          "auth": "Aut.",
+          "consent": "Hozzájárul",
+          "csrf": "Csrf",
+          "session": "Ülés"
+        },
+        "purpose": "Cél",
+        "title": "Cím"
+      },
+      "overview": {
+        "intro": "Bevezetés",
+        "point1": "1. pont",
+        "point2": "2. pont",
+        "point3": "3. pont",
+        "point4": "4. pont",
+        "title": "Cím"
+      },
+      "preferences": {
+        "description": "Leírás",
+        "examples": {
+          "language": "Nyelv",
+          "theme": "Téma",
+          "ui": "Felhasználói felület"
+        },
+        "purpose": "Cél",
+        "title": "Cím"
+      },
+      "purpose": "Cél",
+      "required": "Kívánt",
+      "subtitle": "Felirat",
+      "title": "Cím",
+      "yourRights": {
+        "description": "Leírás",
+        "right1": "Jobb1",
+        "right2": "Jobb2",
+        "right3": "Jobb3",
+        "right4": "Jobbra4",
+        "title": "Cím"
+      }
+    }
+  }
+}

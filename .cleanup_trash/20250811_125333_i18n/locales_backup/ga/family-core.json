@@ -1,0 +1,1036 @@
+{
+  "crisisAssessment": {
+    "familyCapabilities": "Cumais teaghlaigh",
+    "familyDiscussion": "Plé teaghlaigh",
+    "familyDiscussionDescription": "Cur síos ar phlé teaghlaigh"
+  },
+  "errors": {
+    "loadingFamily": "Bhí deacracht againn do dhaoine iontaofa a lódáil. Athnuachan an leathanach le do thoil.",
+    "accessDenied": "Ní féidir leat faisnéis an duine seo a athrú faoi láthair",
+    "assigningRole": "Ní raibh muid in ann an ról seo a thabhairt dóibh. Déan iarracht arís, le do thoil.",
+    "dataNotFound": "Ní raibh muid in ann an fhaisnéis sin a fháil",
+    "duplicatePerson": "Tá an duine seo i measc do dhaoine iontaofa cheana féin",
+    "duplicateRecord": "Tá sé seo sábháilte cheana féin",
+    "grantingAccess": "Ní raibh muid in ann rochtain a thabhairt dóibh. Déan iarracht arís.",
+    "invalidEmail": "Níl cuma cheart ar an ríomhphost sin. Seiceáil é le do thoil.",
+    "invalidPhone": "Ní cosúil go bhfuil an uimhir theileafóin sin ceart. Seiceáil í le do thoil.",
+    "networkError": "Fadhb leis an nasc. Seiceáil do nasc idirlín le do thoil.",
+    "permissionDenied": "Níl cead agat é seo a dhéanamh",
+    "removingPerson": "Níorbh fhéidir linn iad a bhaint de na daoine iontaofa atá agat. Déan iarracht arís.",
+    "roleConflict": "Tá ról difriúil acu cheana féin a bhfuil coimhlint aige leis an gceann seo",
+    "savingPerson": "Níorbh fhéidir linn a gcuid faisnéise a shábháil. Seiceáil agus déan iarracht arís.",
+    "sendingInvitation": "Níorbh fhéidir linn an cuireadh a sheoladh. Seiceáil a ríomhphost agus déan iarracht eile.",
+    "unknown": "Chuaigh rud éigin mícheart"
+  },
+  "familyCapabilities": {
+    "businessOperations": "Oibríochtaí gnó",
+    "canAccessBankAccounts": "Is féidir rochtain a fháil ar chuntais bhainc",
+    "canAccessDigitalAccounts": "Is féidir rochtain a fháil ar chuntais dhigiteacha",
+    "canFileInsuranceClaims": "Is féidir éilimh árachais a chomhdú",
+    "canManageBusiness": "Is féidir gnó a bhainistiú",
+    "cannotAccessBankAccounts": "Ní féidir rochtain a fháil ar chuntais bhainc",
+    "cannotAccessDigitalAccounts": "Ní féidir rochtain a fháil ar chuntais dhigiteacha",
+    "cannotFileInsuranceClaims": "Ní féidir éilimh árachais a chomhdú",
+    "clearInheritancePlan": "Plean oidhreachta soiléir",
+    "digitalAccess": "Rochtain dhigiteach",
+    "digitalAccounts": "Cuntais dhigiteacha",
+    "immediateFinancialNeeds": "Riachtanais airgeadais láithreacha",
+    "inheritance": "Oidhreacht",
+    "insuranceClaims": "Éilimh árachais",
+    "knowsLegalContacts": "Tá aithne aige ar theagmhálaithe dlí.",
+    "knowsMedicalWishes": "Tá a fhios aige/aici mianta leighis",
+    "legalMatters": "Cúrsaí dlí",
+    "medicalDecisions": "Cinntí leighis",
+    "noBusinessInfo": "Gan aon fhaisnéis ghnó",
+    "noInheritancePlan": "Gan aon phlean oidhreachta",
+    "noLegalContacts": "Gan aon teagmhálacha dlíthiúla",
+    "noMedicalInfo": "Gan aon eolas leighis",
+    "partialBusinessInfo": "Faisnéis ghnó pháirteach",
+    "partialInheritancePlan": "Plean oidhreachta páirteach",
+    "partialMedicalInfo": "Faisnéis leighis pháirteach",
+    "payBills": "Íoc billí"
+  },
+  "familyCrisisAssessment": {
+    "15_1": "15 1"
+  },
+  "familyExecutorView": {
+    "communications": {
+      "description": "Cur síos",
+      "empty": "Folamh",
+      "title": "Teideal",
+      "to": "Chuig"
+    },
+    "executor": "Seiceadóir",
+    "footer": "Buntásc",
+    "subtitle": "Fotheideal",
+    "theExecutor": "An seiceadóir",
+    "title": "Teideal"
+  },
+  "familyHub": {
+    "accessLevels": {
+      "emergencyOnly": {
+        "description": "Cur síos",
+        "fullDescription": "Cur síos iomlán",
+        "title": "Teideal"
+      },
+      "fullAccess": {
+        "description": "Cur síos",
+        "fullDescription": "Cur síos iomlán",
+        "title": "Teideal"
+      },
+      "limitedInfo": {
+        "description": "Cur síos",
+        "fullDescription": "Cur síos iomlán",
+        "title": "Teideal"
+      },
+      "none": {
+        "description": "Cur síos",
+        "title": "Teideal"
+      }
+    },
+    "emergencyProtocol": {
+      "activeMessage": "Teachtaireacht ghníomhach",
+      "configure": "Cumraigh",
+      "configured": "Cumraithe",
+      "description": "Cur síos",
+      "title": "Teideal"
+    },
+    "errors": {
+      "authenticationRequired": "Fíordheimhniú ag teastáil",
+      "failedToFetchData": "Theip ar shonraí a fháil",
+      "failedToLoadMembers": "Theip ar bhaill a lódáil"
+    },
+    "memberManagement": {
+      "addMorePeople": "Cuir níos mó daoine leis",
+      "addTrustedPerson": "Cuir duine iontaofa leis",
+      "daysAgo": "Laethanta ó shin",
+      "informationAccessLevel": "Leibhéal rochtana faisnéise",
+      "lastContactOver30Days": "Teagmháil dheireanach os cionn 30 lá",
+      "lastContacted": "An teagmháil dheireanach",
+      "preparedness": "Ullmhacht",
+      "sendUpdate": "Seol nuashonrú",
+      "sendUpdateTo": "Seol nuashonrú chuig",
+      "title": "Teideal"
+    },
+    "messages": {
+      "accessLevelUpdated": "Leibhéal rochtana nuashonraithe",
+      "failedToSendUpdate": "Theip ar an nuashonrú a sheoladh",
+      "updateSentTo": "Nuashonrú seolta chuig"
+    },
+    "overallPreparedness": {
+      "description": "Cur síos",
+      "improvementNeeded": "Feabhsú ag teastáil",
+      "title": "Teideal"
+    },
+    "subtitle": "Fotheideal",
+    "tabs": {
+      "familyMembers": "Baill teaghlaigh",
+      "members": "Baill",
+      "preparednessTools": "Uirlisí ullmhachta",
+      "tools": "Uirlisí"
+    },
+    "title": "Teideal"
+  },
+  "familyPreparednessTools": {
+    "create_a_printable_guide_for_y_3": "Cruthaigh treoir inphriontáilte do bhliain 3",
+    "errors": {
+      "comingSoon": "Ag teacht go luath",
+      "generateFailed": "Theip ar ghiniúint",
+      "premiumRequired": "Préimh riachtanach",
+      "selectScenario": "Roghnaigh cás"
+    },
+    "generate_another_5": "Gin 5 eile",
+    "generate_emergency_guide_2": "Gin treoir éigeandála 2",
+    "guides": {
+      "death": {
+        "bankAccounts": "Cuntais bhainc",
+        "contactExecutor": "Déan teagmháil leis an seiceadóir",
+        "contactLawyer": "Déan teagmháil le dlíodóir",
+        "deathCertificate": "Teastas báis",
+        "disclaimer": "Séanadh",
+        "employer": "Fostóir",
+        "financialInstitutions": "Institiúidí airgeadais",
+        "first24Hours": "Na chéad 24 uair an chloig",
+        "generatedOn": "Gineadh ar",
+        "importantDocuments": "Doiciméid thábhachtacha",
+        "insuranceCompanies": "Cuideachtaí árachais",
+        "investmentAccounts": "Cuntais infheistíochta",
+        "locateWill": "Aimsigh uacht",
+        "peopleToNotify": "Daoine le fógra a thabhairt",
+        "secureResidence": "Áit chónaithe slán",
+        "socialSecurity": "Slándáil shóisialta",
+        "title": "Teideal"
+      },
+      "emergency": {
+        "address": "Seoladh",
+        "attorney": "Aturnae",
+        "emergency": "Éigeandáil",
+        "financialAdvisor": "Comhairleoir airgeadais",
+        "homeInformation": "Eolas baile",
+        "insuranceAgent": "Gníomhaire árachais",
+        "keyContacts": "Teagmhálaithe tábhachtacha",
+        "securitySystem": "Córas slándála",
+        "spouse": "Céile",
+        "title": "Teideal",
+        "utilities": "Fóntais"
+      },
+      "hospitalization": {
+        "allergies": "Ailléirgí",
+        "bloodType": "Cineál fola",
+        "currentMedications": "Cógais reatha",
+        "emergencyContacts": "Teagmhálaithe éigeandála",
+        "healthcarePowerOfAttorney": "Cumhacht aturnae cúram sláinte",
+        "hipaaRelease": "Scaoileadh Hipaa",
+        "legalDocuments": "Doiciméid dhlíthiúla",
+        "livingWill": "Uacht bheo",
+        "medicalInformation": "Faisnéis leighis",
+        "preferredHospital": "Ospidéal is fearr leat",
+        "primaryCarePhysician": "Dochtúir cúraim phríomhúil",
+        "title": "Teideal"
+      },
+      "missing": {
+        "bankingApps": "Aipeanna baincéireachta",
+        "checkHospitals": "Seiceáil ospidéil",
+        "checkWithWorkplace": "Seiceáil leis an ionad oibre",
+        "contactCloseFriends": "Déan teagmháil le cairde dlúth",
+        "contactLocalPolice": "Déan teagmháil leis na póilíní áitiúla",
+        "digitalFootprint": "Lorg digiteach",
+        "email": "Ríomhphost",
+        "immediateActions": "Gníomhartha láithreacha",
+        "phoneProvider": "Soláthraí teileafóin",
+        "socialMedia": "Meáin shóisialta",
+        "title": "Teideal"
+      }
+    },
+    "mockContent": {
+      "insurancePolicies": "Polasaithe árachais"
+    },
+    "scenarios": {
+      "death": {
+        "description": "Cur síos",
+        "title": "Teideal"
+      },
+      "emergency": {
+        "description": "Cur síos",
+        "title": "Teideal"
+      },
+      "hospitalization": {
+        "description": "Cur síos",
+        "title": "Teideal"
+      },
+      "missing": {
+        "description": "Cur síos",
+        "title": "Teideal"
+      }
+    },
+    "select_scenario_4": "Roghnaigh cás 4",
+    "tools": {
+      "cancel": "Cealaigh",
+      "chooseScenario": "Roghnaigh cás",
+      "emergencySimulator": "Insamhlóir éigeandála",
+      "emergencySimulatorDesc": "Cur síos ar insamhlóir éigeandála",
+      "generateGuide": "Gin treoir",
+      "generating": "Ag giniúint",
+      "informationTreasureHunt": "Fiach taisce faisnéise",
+      "launch": "Seoladh",
+      "printGuide": "Treoir phriontála",
+      "stepByStepGuides": "Treoracha céim ar chéim",
+      "stepByStepGuidesDesc": "Treoracha céim ar chéim cur síos",
+      "treasureHuntDesc": "Cur síos ar an seilg taisce",
+      "videoMessages": "Teachtaireachtaí físe",
+      "videoMessagesDesc": "Cur síos ar theachtaireachtaí físe"
+    },
+    "use_these_tools_to_ensure_your_1": "Bain úsáid as na huirlisí seo chun a chinntiú go bhfuil do 1"
+  },
+  "form": {
+    "additionalRoles": "Bealaí Eile ar Féidir Leo Cabhrú",
+    "assignedRoles": "Conas a Chabhróidh Siad le do Theaghlach",
+    "selectRoles": "Roghnaigh conas is féidir leo cabhrú le do theaghlach",
+    "accessDescription": "Cad is féidir leo a fheiceáil agus cathain is féidir leo cabhrú",
+    "accessInfo": "Cad is Féidir Leo a Dhéanamh",
+    "accessLevel": "Cé mhéad is féidir leo a fheiceáil",
+    "addPerson": "Cuir Duine éigin leis chun Cabhrú",
+    "alternatePhone": "Uimhir Theileafóin Eile",
+    "backupFor": "Is Cúltaca iad do",
+    "backupHelper": "Cé a dtabharfaidh siad aghaidh air más gá",
+    "capabilities": "Cén fáth go bhfuil siad ceart don seo",
+    "capabilitiesHelper": "Cad a fhágann gur rogha mhaith iad chun cabhrú?",
+    "compensation": "Má theastaíonn tacaíocht uathu",
+    "compensationHelper": "Aon chabhair airgeadais a d'fhéadfadh a bheith ag teastáil uathu",
+    "contactInfo": "Conas iad a bhaint amach",
+    "dateOfBirth": "Breithlá",
+    "editPerson": "Is féidir linn a gcuid faisnéise a nuashonrú",
+    "emailAddress": "Ríomhphost",
+    "fullName": "A nAinm Iomlán",
+    "fullNameHelper": "Úsáid a n-ainm dlíthiúil le haghaidh cáipéisí tábhachtacha",
+    "fullNamePlaceholder": "A n-ainm dlíthiúil iomlán",
+    "homeAddress": "Cá bhfuil cónaí orthu",
+    "instructions": "Rudaí Tábhachtacha Ba Chóir dóibh a Bheith ar Eolas acu",
+    "instructionsHelper": "Aon treoir speisialta chun cabhrú le do theaghlach",
+    "instructionsPlaceholder": "Cad is gá dóibh a bheith ar an eolas faoi chun cabhrú leo",
+    "limitations": "Rudaí le bheith ar an eolas fúthu",
+    "limitationsHelper": "Aon rud a d'fhéadfadh a bheith deacair dóibh cabhrú",
+    "personalInfo": "Fúthu",
+    "primaryPhone": "Uimhir Theileafóin is Fearr",
+    "primaryRole": "Príomhbhealach a Chabhróidh Siad",
+    "relationship": "Conas a bhfuil aithne agat orthu",
+    "relationshipPlaceholder": "Cosúil le Céile, Leanbh, Deartháir/Deirfiúr, Cara is Fearr",
+    "roleInfo": "Conas a Chabhróidh Siad",
+    "workAddress": "Cá n-Oibríonn siad"
+  },
+  "preparedness": {
+    "familyBenefit": "Sochar teaghlaigh",
+    "familyCommunication": {
+      "description": "Cur síos",
+      "scheduleReview": "Athbhreithniú sceidil",
+      "shareReport": "Roinn an tuarascáil",
+      "title": "Teideal"
+    },
+    "gaps": {
+      "basicAccessInfo": "Eolas bunúsach rochtana",
+      "addMedicalPreferences": "Cuir roghanna leighis leis",
+      "completeFinancialAccess": "Rochtain airgeadais iomlán",
+      "documentBusinessOperations": "Oibríochtaí gnó a dhoiciméadú",
+      "improveImmediateAccess": "Feabhas a chur ar rochtain láithreach",
+      "updateWillAndTrust": "Nuashonraigh uacht agus muinín"
+    },
+    "levels": {
+      "goodBasic": "Bunúsach maith",
+      "fullyPrepared": "Ullmhaithe go hiomlán",
+      "minimalPreparation": "Ullmhúchán íosta",
+      "needsImmediate": "Riachtanais láithreacha",
+      "somePreparation": "Roinnt ullmhúcháin",
+      "wellPrepared": "Ullmhaithe go maith"
+    },
+    "assessments": {
+      "decisionMaking": {
+        "good": "Maith",
+        "needsWork": "Teastaíonn obair"
+      },
+      "immediateAccess": {
+        "good": "Maith",
+        "needsWork": "Teastaíonn obair"
+      },
+      "longTermSecurity": {
+        "good": "Maith",
+        "needsWork": "Teastaíonn obair"
+      }
+    },
+    "dimensions": {
+      "decisionMaking": "Cinntí a dhéanamh",
+      "immediateAccess": "Rochtain láithreach",
+      "longTermSecurity": "Slándáil fhadtéarmach"
+    },
+    "impact": "Tionchar",
+    "improvements": {
+      "addBankAccounts": "Cuir cuntais bhainc leis",
+      "documentMedicalWishes": "Doiciméadaigh mianta leighis",
+      "uploadLegalDocuments": "Uaslódáil doiciméid dhlíthiúla"
+    },
+    "nextStep": "An chéad chéim eile",
+    "scenarioReadiness": "Ullmhacht don chás",
+    "scenarios": {
+      "extendedTravel": {
+        "description": "Cur síos",
+        "title": "Teideal"
+      },
+      "suddenDeath": {
+        "description": "Cur síos",
+        "title": "Teideal"
+      }
+    },
+    "title": "Teideal",
+    "toImprove": "Chun feabhas a chur"
+  },
+  "relationships": {
+    "child": "Leanbh",
+    "friend": "Cara",
+    "other": "Eile",
+    "parent": "Tuismitheoir",
+    "sibling": "Siblín",
+    "spouse": "Céile"
+  },
+  "roles": {
+    "advisor": "Comhairleoir",
+    "beneficiary": "Tairbhí",
+    "caregiver": "Cúramóir",
+    "emergencyContact": "Teagmháil éigeandála",
+    "executor": "Seiceadóir",
+    "financialAgent": "Gníomhaire airgeadais (cumhacht aturnae)",
+    "guardian": "Caomhnóir",
+    "healthcareProxy": "Ionadaí cúram sláinte",
+    "representative": "Ionadaí",
+    "successor": "Cúltaca",
+    "trustee": "Iontaobhaí",
+    "witness": "Beidh finné"
+  },
+  "trustedCircle": {
+    "roles": "Conas is féidir leo cabhrú",
+    "totalMembers": "{{count}} duine réidh le cabhrú",
+    "addFirst": "Is féidir linn duine a chur leis a chabhróidh linn",
+    "description": "Roghnaigh daoine iontaofa ar féidir leo tacú le do theaghlach nuair is gá.",
+    "empty": "Is féidir linn tosú trí dhuine a chur leis ar féidir le do theaghlach brath air — céile, cara dlúth, nó ball teaghlaigh iontaofa.",
+    "keyPeople": "Daoine tábhachtacha",
+    "recentlyAdded": "Cuireadh leis le déanaí",
+    "subtitle": "Daoine a bheidh ann do do theaghlach",
+    "title": "Daoine Iontaofa",
+    "viewAll": "Féach ar gach duine"
+  },
+  "family": {
+    "GuardianPlaybook": {
+      "className": {
+        "flex_itemscenter_justifycenter_h64": "lár-earraí solúbtha lár-fhírinniú h-64",
+        "grid_gridcols6_wfull": "eangach eangach-colbhaí-6 w-lán",
+        "flex_itemscenter_gap2": "míreanna solúbtha-bearna lár-2",
+        "hidden_sminline": "sm i bhfolach:inlíne",
+        "spacey4": "spás-y-4",
+        "minh200px": "nóim-u-[200px]",
+        "flex_justifybetween_itemscenter_mb4": "flex fírinniú idir míreanna lár mb-4",
+        "grid_gridcols1_mdgridcols2_gap4": "eangach eangach-cols-1 md:eangach-cols-2 bearna-4",
+        "mdcolspan2": "md:col-span-2",
+        "minh80px": "nóim-u-[80px]",
+        "mt2": "mt-2",
+        "flex_itemscenter_justifybetween": "lár-mhíreanna solúbtha fírinniú-idir"
+      },
+      "htmlFor": {
+        "funeral_wishes": "mianta_sochraide",
+        "digital_accounts": "cuntais_dhigiteacha",
+        "document_locations": "suíomhanna_doiciméid",
+        "personal_messages": "teachtaireachtaí_pearsanta",
+        "practical_instructions": "treoracha_praiticiúla"
+      },
+      "id": {
+        "funeral_wishes": "mianta_sochraide",
+        "digital_accounts": "cuntais_dhigiteacha",
+        "document_locations": "suíomhanna_doiciméid",
+        "personal_messages": "teachtaireachtaí_pearsanta",
+        "practical_instructions": "treoracha_praiticiúla"
+      },
+      "playbooktabskey": "cluaisíní.teaghlaigh.${key}",
+      "contactnameindex": "ainm-teagmhála-${index}",
+      "contactrelationshipindex": "caidreamh-teagmhála-${index}",
+      "contactphoneindex": "teagmhála-teileafóin-${index}",
+      "contactemailindex": "ríomhphost-teagmhála-${index}",
+      "contactnotesindex": "nótaí-teagmhála-${index}",
+      "playbookstatusstatus": "stádas.teaghlaigh.${status}"
+    },
+    "GuardianPlaybookView": {
+      "className": {
+        "minhscreen_flex_itemscenter_justifycenter": "scáileán-min-h flex míreanna-lár fírinniú-lár",
+        "animatepulse_textcenter": "lár-téacs beoite-pulse",
+        "maxwmd": "uas-w-md",
+        "minhscreen_bggradienttobr_frombackground_tomuted20": "min-h-screen bg-gradient-to-br ón-chúlra go dtí-balbhaithe/20",
+        "container_mxauto_px4_py8_maxw4xl": "coimeádán mx-auto px-4 py-8 max-w-4xl",
+        "flex_itemscenter_justifycenter_w20_h20_roundedfull": "lár-earraí solúbtha lár-fhíorú w-20 h-20 cruinn-lán bg-príomhúil/10 mx-uathoibríoch mb-4",
+        "mt4": "mt-4",
+        "mb8": "mb-8",
+        "flex_itemscenter_gap2": "míreanna solúbtha-bearna lár-2",
+        "grid_gap4_mdgridcols2": "bearna eangaí-4 md:cológa-eangaí-2",
+        "spacey2": "spás-y-2",
+        "flex_itemsstart_justifybetween": "míreanna solúbtha-tús-chomhfhírinniú-idir",
+        "fontsemibold": "cló-leathchló",
+        "spacey1": "spás-y-1",
+        "flex_itemscenter_gap2_textsm_textprimary_hoverunde": "míreanna solúbtha-lár bearna-2 téacs-sm téacs-príomhúil hover:folíne",
+        "spacey6": "spás-y-6",
+        "prose_prosesm_maxwnone": "prós prós-sm uasmhéid-w-none",
+        "whitespaceprewrap": "réamhfhilleadh spás bán",
+        "mt12_textcenter_textsm_textmutedforeground": "mt-12 téacs-lár téacs-sm téacs-balbhaithe-tulra"
+      },
+      "telcontactphone": "teileafón: ${contact.phone}",
+      "mailtocontactemail": "ríomhphost chuig:${contact.email}"
+    }
+  },
+  "guardianUpload": {
+    "relationships": {
+      "child": "Leanbh",
+      "friend": "Cara",
+      "legalProfessional": "Gairmí dlí",
+      "other": "Eile",
+      "parent": "Tuismitheoir",
+      "sibling": "Siblín",
+      "spouse": "Céile"
+    },
+    "roles": {
+      "emergencyContact": "Teagmháil éigeandála",
+      "executorOfWill": "Seiceadóir uachta",
+      "financialPowerOfAttorney": "Cumhacht aturnae airgeadais",
+      "guardianForChildren": "Caomhnóir do leanaí",
+      "healthcareProxy": "Ionadaí cúram sláinte",
+      "trustee": "Iontaobhaí"
+    },
+    "rolesTitle": "Teideal na rólanna",
+    "addButton": "Cuir cnaipe leis",
+    "addTitle": "Cuir teideal leis",
+    "added": "Cuireadh leis",
+    "countryDescription": "Cur síos ar an tír",
+    "countryLabel": "Lipéad tíre",
+    "countryPlaceholder": "Áitchoinneálaí tíre",
+    "description": "Cur síos",
+    "editTitle": "Cuir an teideal in eagar",
+    "emailLabel": "Lipéad ríomhphoist",
+    "emailPlaceholder": "Áititheoir ríomhphoist",
+    "error": "Earráid",
+    "errors": {
+      "connectionError": "Earráid nasc",
+      "duplicateError": "Earráid dhúblach",
+      "permissionError": "Earráid ceadanna",
+      "requiredDataNotFound": "Níor aimsíodh sonraí riachtanacha",
+      "saveError": "Earráid shábháilte",
+      "unknownError": "Earráid anaithnid"
+    },
+    "fullNameLabel": "Lipéad ainm iomlán",
+    "fullNamePlaceholder": "Coinnitheoir áite ainm iomlán",
+    "loginToSave": "Logáil isteach chun sábháil",
+    "phoneLabel": "Lipéad teileafóin",
+    "phonePlaceholder": "Coinnitheoir áite gutháin",
+    "relationshipLabel": "Lipéad caidrimh",
+    "relationshipPlaceholder": "Coinnitheoir áite caidrimh",
+    "saving": "Sábháil",
+    "success": "Rath",
+    "updateButton": "Cnaipe Nuashonraithe",
+    "updated": "Nuashonraithe"
+  },
+  "familyMembers": "Baill Teaghlaigh",
+  "sensitivity": {
+    "step_family_dynamics": "Caithfidh doiciméadú soiléir a bheith ag teastáil ó chaidrimh leas-theaghlaigh",
+    "family_conflict": "Éilíonn coimhlintí teaghlaigh soiléireacht bhreise i bpleanáil",
+    "previous_marriage_obligations": "Ní mór aghaidh a thabhairt ar oibleagáidí pósta roimhe seo",
+    "absent_parent_considerations": "Éilíonn cásanna tuismitheora as láthair pleanáil chúramach",
+    "solo_responsibility_pressure": "Is féidir go mbraitheann freagrachtaí tuismitheora aonair rómhór",
+    "inheritance_disputes": "Ní mór cosc a chur ar dhíospóidí oidhreachta féideartha",
+    "traditional_role_expectations": "B’fhéidir go mbeadh gá le róil thraidisiúnta teaghlaigh a mheas",
+    "disability_planning_stress": "Is féidir le pleanáil riachtanas speisialta a bheith dúshlánach go mothúchánach",
+    "long_term_care_concerns": "Tá pleanáil cúraim fhadtéarmaigh riachtanach"
+  },
+  "features": {
+    "family_communication_center": {
+      "title": "Ionad Cumarsáide Teaghlaigh",
+      "description": "Coinnigh gach duine ar an eolas agus ceangailte"
+    },
+    "family_tree_visualizer": {
+      "title": "Amharcléiritheoir Crann Teaghlaigh",
+      "description": "Léarscáiligh caidrimh theaghlaigh chasta go hamhairc"
+    },
+    "step_family_guidance": {
+      "title": "Treoir do Leas-Theaghlaigh",
+      "description": "Nascleanúint a dhéanamh ar phleanáil teaghlaigh chumaisc le muinín"
+    },
+    "family_meeting_tools": {
+      "title": "Uirlisí Cruinnithe Teaghlaigh",
+      "description": "Éascaigh plé tábhachtach teaghlaigh"
+    },
+    "document_vault": {
+      "title": "Cruinneachán Doiciméad Slán",
+      "description": "Stóráil agus roinn doiciméid thábhachtacha go sábháilte"
+    },
+    "guardian_network_builder": {
+      "title": "Tógálaí Líonra Guardian",
+      "description": "Tóg líonra tacaíochta láidir do do leanaí"
+    },
+    "single_parent_resources": {
+      "title": "Acmhainní do Thuismitheoirí Aonair",
+      "description": "Uirlisí speisialaithe agus tacaíocht do thuismitheoirí aonair"
+    },
+    "complex_beneficiary_manager": {
+      "title": "Bainisteoir Tairbhí Casta",
+      "description": "Déileáil le caidrimh iolracha go soiléir"
+    },
+    "multi_generation_planner": {
+      "title": "Pleanálaí Ilghlúine",
+      "description": "Riachtanais chothromaíochta trasna na nglún uile"
+    },
+    "elder_care_resources": {
+      "title": "Acmhainní Cúraim Daoine Scothaosta",
+      "description": "Tacaíocht le haghaidh cúram a thabhairt do thuismitheoirí atá ag dul in aois"
+    },
+    "special_needs_trust_wizard": {
+      "title": "Draoi Iontaobhais Riachtanas Speisialta",
+      "description": "Iontaobhais chuí a chruthú do bhaill le riachtanais speisialta"
+    },
+    "care_instruction_builder": {
+      "title": "Tógálaí Treoracha Cúraim",
+      "description": "Doiciméadaigh riachtanais chúraim mhionsonraithe"
+    },
+    "government_benefit_tracker": {
+      "title": "Rianaitheoir Sochair Rialtais",
+      "description": "Cinntigh incháilitheacht le haghaidh sochar tábhachtach"
+    },
+    "business_succession_planner": {
+      "title": "Pleanálaí Comharbais Ghnó",
+      "description": "Pleanáil le haghaidh leanúnachas gnó"
+    },
+    "buy_sell_agreement_tracker": {
+      "title": "Rianaitheoir Comhaontuithe Ceannaigh-Díola",
+      "description": "Bainistigh comhaontuithe comhpháirtíochta gnó"
+    },
+    "remote_collaboration_tools": {
+      "title": "Uirlisí Comhoibrithe Cianda",
+      "description": "Oibrigh le chéile in ainneoin an achair"
+    },
+    "multi_jurisdiction_guidance": {
+      "title": "Treoir Il-Dlínse",
+      "description": "Nascleanúint dlíthe trasna áiteanna éagsúla"
+    }
+  },
+  "cultural": {
+    "extended_family_obligations": "Freagrachtaí teaghlaigh leathnaithe",
+    "islamic_inheritance": "Prionsabail oidhreachta Ioslamacha",
+    "jewish_traditions": "Traidisiúin teaghlaigh Giúdacha",
+    "christian_values": "Luachanna maoirseachta Críostaí",
+    "buddhist_principles": "Prionsabail chomhbhá Búdaíoch",
+    "patriarchal_hierarchy": "Struchtúr traidisiúnta patriarchal",
+    "matriarchal_hierarchy": "Struchtúr traidisiúnta matriarchal",
+    "elder_led_hierarchy": "Struchtúr teaghlaigh faoi stiúir daoine scothaosta",
+    "collective_decision_making": "Cinntí comhchoiteanna teaghlaigh",
+    "elder_respect_obligations": "Oibleagáidí cúraim do dhaoine scothaosta",
+    "multilingual_documentation": "Riachtanais dhoiciméadaithe ilteangacha"
+  },
+  "access": {
+    "descriptions": {
+      "executor": "Is féidir leo gach rud a bhainistiú chun cabhrú le do theaghlach",
+      "full": "Is féidir leo faisnéis do theaghlaigh go léir a fheiceáil agus a bhainistiú",
+      "limited": "Is féidir leo faisnéis bhunúsach teagmhála agus treoracha éigeandála a fheiceáil",
+      "standard": "Is féidir leo an chuid is mó de na rudaí a bheadh ag teastáil ó do theaghlach a fheiceáil"
+    },
+    "levels": {
+      "executor": "Rochtain Iomlán Cúntóra",
+      "full": "Is féidir gach rud a fheiceáil",
+      "limited": "Faisnéis Bhunúsach Amháin",
+      "standard": "Rochtain Rialta Teaghlaigh"
+    },
+    "permissions": {
+      "editInformation": "Is Féidir Athruithe a Dhéanamh",
+      "manageAccess": "Is féidir le Cúntóirí Eile a Bhainistiú",
+      "viewAssets": "Is féidir leat do chuid rudaí tábhachtacha a fheiceáil",
+      "viewDocuments": "Is féidir Doiciméid a Léamh"
+    }
+  },
+  "actions": {
+    "addPerson": "Is féidir linn duine iontaofa a chur leis",
+    "assignRole": "Is féidir linn ról a shannadh",
+    "contactPerson": "Is féidir linn teagmháil a dhéanamh",
+    "editPerson": "Nuashonraigh a gcuid faisnéise",
+    "grantAccess": "Is féidir linn rochtain a dheonú",
+    "printSummary": "Is féidir linn achoimre a phriontáil",
+    "removePerson": "Is féidir linn daoine iontaofa a bhaint",
+    "removeRole": "Is féidir linn a ról a athrú",
+    "revokeAccess": "Is féidir linn athrú a dhéanamh ar a bhfeiceann siad",
+    "scheduleReview": "Is féidir linn athbhreithniú a sceidealú",
+    "sendInvitation": "Is féidir linn cuireadh a thabhairt dóibh cabhrú",
+    "setBackup": "Is féidir linn cúntóir cúltaca a shocrú",
+    "viewProfile": "Is féidir linn a gcuid sonraí go léir a fheiceáil"
+  },
+  "common": {
+    "cancel": "Cealaigh",
+    "fix": "Deisigh",
+    "minutes": "Nóiméid",
+    "start": "Tosaigh"
+  },
+  "estateStatus": {
+    "actions": {
+      "cancel": "Cealaigh",
+      "update": "Nuashonrú",
+      "updating": "Nuashonrú"
+    },
+    "description": "Cur síos",
+    "dialog": {
+      "description": "Cur síos",
+      "title": "Teideal"
+    },
+    "empty": {
+      "noStatus": "Gan stádas",
+      "readOnly": "Léamh amháin"
+    },
+    "fields": {
+      "additionalDetails": "Sonraí breise",
+      "status": "Stádas"
+    },
+    "lastUpdated": "Nuashonraithe go deireanach",
+    "logAction": "Gníomh logála",
+    "placeholders": {
+      "additionalContext": "Comhthéacs breise",
+      "selectStatus": "Roghnaigh stádas"
+    },
+    "progress": "Dul Chun Cinn",
+    "statuses": {
+      "assetsBeingValued": "Sócmhainní atá á luacháil",
+      "debtsBeingSettled": "Fiacha á socrú",
+      "distributionInProgress": "Dáileadh ar siúl",
+      "estateClosed": "Eastát dúnta",
+      "gatheringDocuments": "Doiciméid a bhailiú",
+      "initialReview": "Athbhreithniú tosaigh",
+      "probateInitiated": "Probháid tionscnaithe",
+      "readyForDistribution": "Réidh le haghaidh dáilte",
+      "taxPreparation": "Ullmhúchán cánach"
+    },
+    "title": "Teideal"
+  },
+  "guardian": {
+    "templateModal": {
+      "_1": "1"
+    }
+  },
+  "guardianView": {
+    "defaultUserName": "Ainm úsáideora réamhshocraithe",
+    "errors": {
+      "failedToLoad": "Theip ar an luchtú",
+      "pleaseLogin": "Logáil isteach le do thoil"
+    },
+    "guardianInfo": {
+      "description": "Cur síos",
+      "securityNote": "Nóta slándála"
+    },
+    "readOnlyAccess": "Rochtain léite amháin",
+    "sections": {
+      "finalWishes": {
+        "description": "Cur síos",
+        "digitalAccounts": "Cuntais dhigiteacha",
+        "empty": "Folamh",
+        "funeralWishes": "Mianta sochraide",
+        "title": "Teideal"
+      },
+      "keyDocuments": {
+        "description": "Cur síos",
+        "empty": "Folamh",
+        "expires": "Éagaíonn",
+        "keyDocumentBadge": "Suaitheantas doiciméad tábhachtach",
+        "noExpiration": "Gan aon dul in éag",
+        "title": "Teideal"
+      }
+    },
+    "subtitle": "Fotheideal",
+    "title": "Teideal"
+  },
+  "guardianship": {
+    "addDependent": "Cuir Duine a bhfuil Cúram de Dhíth air",
+    "alternateGuardian": "Cúramóir Cúltaca",
+    "careStandards": "Conas is mian leat aire a thabhairt dóibh",
+    "childGuardians": "Cé a Thabharfaidh Aire do do Leanaí",
+    "dependentCare": "Pleananna Cúraim do Do Ghaolta",
+    "description": "Roghnaigh daoine grámhara a thabharfaidh aire do do leanaí nó do bhaill teaghlaigh a bhfuil cabhair ag teastáil uathu mura féidir leatsa a bheith ann.",
+    "educationPreferences": "Mianta Scoile agus Oideachais",
+    "financialProvisions": "Airgead dá gCúram",
+    "guardianCompensation": "Tacaíocht don Chúramóir",
+    "guardianFor": "Cé a thabharfaidh aire do {{name}}",
+    "guardianInstructions": "Conas Aire a Thabhairt Dóibh",
+    "guardianQualifications": "Cén fáth gur rogha cheart iad",
+    "healthcarePreferences": "Cúram Sláinte agus Leighis",
+    "lifestylePreferences": "Saol Laethúil agus Gníomhaíochtaí",
+    "noChildren": "Níor inis tú dúinn go fóill faoi aon leanaí ná baill teaghlaigh a bhfuil cúram de dhíth orthu.",
+    "primaryGuardian": "Cúramóir Céad Rogha",
+    "religiousPreferences": "Creideamh agus Luachanna",
+    "reportingRequirements": "Ag Coinneáil an Teaghlaigh ar an Eolas",
+    "subtitle": "A chinntiú go dtugtar aire do do mhuintir",
+    "temporaryGuardian": "Cúramóir Gearrthéarmach",
+    "title": "Cé a thabharfaidh aire do do mhuintir",
+    "visitationRights": "Socruithe Cuairte Teaghlaigh"
+  },
+  "notificationPreferences": {
+    "description": "Cur síos",
+    "emailRequired": "Ríomhphost ag teastáil",
+    "errors": {
+      "loadFailed": "Theip ar an luchtú",
+      "updateFailed": "Theip ar an nuashonrú"
+    },
+    "howItWorks": {
+      "point1": "Pointe1",
+      "point2": "Pointe2",
+      "point3": "Pointe3",
+      "title": "Teideal"
+    },
+    "info": "Eolas",
+    "lastUpdated": "Nuashonraithe go deireanach",
+    "noEmail": "Gan ríomhphost",
+    "title": "Teideal"
+  },
+  "playbook": {
+    "addContact": "Cuir teagmhálaí leis",
+    "autoSaveNotice": "Fógra uath-shábháilte",
+    "contact": "Teagmháil",
+    "contactFields": {
+      "email": "Ríomhphost",
+      "emailPlaceholder": "Áititheoir ríomhphoist",
+      "name": "Ainm",
+      "namePlaceholder": "Ainmneoir áite",
+      "notes": "Nótaí",
+      "notesPlaceholder": "Coinnitheoir áite nótaí",
+      "phone": "Fón",
+      "phonePlaceholder": "Coinnitheoir áite gutháin",
+      "role": "Ról",
+      "rolePlaceholder": "Coinnitheoir áite róil"
+    },
+    "errors": {
+      "loadFailed": "Theip ar an luchtú",
+      "saveFailed": "Theip ar shábháil"
+    },
+    "loading": "Ag luchtú",
+    "noContent": "Gan aon ábhar",
+    "preview": "Réamhamharc",
+    "save": "Sábháil",
+    "saving": "Sábháil",
+    "sections": {
+      "digital": {
+        "description": "Cur síos",
+        "placeholder": "Coinnitheoir áite",
+        "title": "Teideal"
+      },
+      "documents": {
+        "description": "Cur síos",
+        "placeholder": "Coinnitheoir áite",
+        "title": "Teideal"
+      },
+      "funeral": {
+        "description": "Cur síos",
+        "placeholder": "Coinnitheoir áite",
+        "title": "Teideal"
+      },
+      "practical": {
+        "description": "Cur síos",
+        "placeholder": "Coinnitheoir áite",
+        "title": "Teideal"
+      }
+    },
+    "subtitle": {
+      "edit": "Cuir in Eagar",
+      "view": "Amharc"
+    },
+    "tabs": {
+      "digital": "Digiteach",
+      "documents": "Doiciméid",
+      "funeral": "Sochraid",
+      "instructions": "Treoracha",
+      "practical": "Praiticiúil"
+    },
+    "templates": {
+      "append": "Cuir leis",
+      "backToTemplates": "Ar ais chuig na teimpléid",
+      "description": "Cur síos",
+      "existingContent": "Ábhar atá ann cheana féin",
+      "fillInVariables": "Líon isteach na hathróga",
+      "insertTemplate": "Cuir teimpléad isteach",
+      "preview": "Réamhamharc",
+      "replace": "Athsholáthair",
+      "title": "Teideal",
+      "variableCount": "Líon athraitheach",
+      "variablePlaceholder": "Áitchoinneálaí athróg"
+    },
+    "title": "Teideal",
+    "useTemplate": "Úsáid teimpléad",
+    "accessDenied": "Rochtain diúltaithe",
+    "description": "Cur síos",
+    "digitalAccounts": {
+      "description": "Cur síos",
+      "label": "Lipéad",
+      "placeholder": "Coinnitheoir áite"
+    },
+    "discardChanges": {
+      "cancel": "Cealaigh",
+      "confirm": "Deimhnigh",
+      "description": "Cur síos",
+      "title": "Teideal"
+    },
+    "documentLocations": {
+      "description": "Cur síos",
+      "label": "Lipéad",
+      "placeholder": "Coinnitheoir áite"
+    },
+    "exitPreview": "Scoir an réamhamharc",
+    "fetchError": "Earráid aisghabhála",
+    "funeralWishes": {
+      "description": "Cur síos",
+      "label": "Lipéad",
+      "placeholder": "Coinnitheoir áite"
+    },
+    "lastUpdated": "Nuashonraithe go deireanach",
+    "notAuthenticated": "Gan fhíordheimhniú",
+    "notFound": {
+      "description": "Cur síos",
+      "title": "Teideal"
+    },
+    "practicalInstructions": {
+      "description": "Cur síos",
+      "label": "Lipéad",
+      "placeholder": "Coinnitheoir áite"
+    },
+    "saveError": "Earráid shábháilte",
+    "saveSuccess": "Sábháil rath",
+    "titleReadOnly": "Teideal inléite amháin",
+    "viewDescription": "Féach ar an tuairisc",
+    "viewFooter": "Féach ar an mbuntásc",
+    "viewTitle": "Féach ar an teideal"
+  },
+  "executor": {
+    "completed": "Críochnaithe",
+    "dashboard": {
+      "reminder": "Meabhrúchán",
+      "subtitle": "Fotheideal",
+      "title": "Teideal"
+    },
+    "due": "Dlite",
+    "errors": {
+      "loadTasksFailed": "Theip ar lódáil tascanna",
+      "updateTaskFailed": "Theip ar an tasc nuashonraithe"
+    },
+    "highPriority": "Tosaíocht ard",
+    "legalSupport": {
+      "button": "Cnaipe",
+      "description": "Cur síos",
+      "title": "Teideal"
+    },
+    "markComplete": "Marcáil críochnaithe",
+    "sections": {
+      "firstWeek": {
+        "description": "Cur síos",
+        "empty": "Folamh",
+        "title": "Teideal"
+      },
+      "immediate": {
+        "description": "Cur síos",
+        "empty": "Folamh",
+        "title": "Teideal"
+      },
+      "ongoing": {
+        "description": "Cur síos",
+        "empty": "Folamh",
+        "title": "Teideal"
+      }
+    },
+    "stats": {
+      "completed": "Críochnaithe",
+      "remaining": "Fágtha",
+      "totalTasks": "Iomlán na dtascanna"
+    },
+    "undo": "Cealaigh",
+    "viewAccountDetails": "Féach sonraí an chuntais",
+    "viewRelatedDocuments": "Féach ar dhoiciméid ghaolmhara"
+  },
+  "executorDashboard": {
+    "professional_guidance_1": "Treoir ghairmiúil 1"
+  },
+  "executorManagement": {
+    "add_new_executor_10": "Cuir seiceadóir nua leis 10",
+    "all_executors_must_have_legacy_23": "Ní mór oidhreacht 23 a bheith ag gach seiceadóir",
+    "current_executors_17": "Seiceadóirí reatha 17",
+    "designate_trusted_individuals__9": "Ainmnigh daoine iontaofa 9",
+    "email_address_11": "Seoladh ríomhphoist 11",
+    "executor_example_com_12": "Sampla Seiceadóir com 12",
+    "executor_management_8": "Bainistíocht seiceadóra 8",
+    "failed_to_add_executor_5": "Theip ar sheiceadóir 5 a chur leis",
+    "failed_to_load_executors_2": "Theip ar luchtú forghníomhaithe 2",
+    "failed_to_remove_executor_6": "Theip ar sheiceadóir 6 a bhaint",
+    "important_information_19": "Faisnéis thábhachtach 19",
+    "loading_executors_7": "Ag luchtú seiceadóirí 7",
+    "no_executors_designated_yet_ad_18": "Níl aon seiceadóirí ainmnithe fós 18ú fógra",
+    "primary_executor_14": "Príomh-sheiceadóir 14",
+    "primary_executors_receive_imme_20": "Faigheann príomh-sheiceadóirí láithreach 20",
+    "relationship_type_13": "Cineál caidrimh 13",
+    "secondary_executor_15": "Seiceadóir tánaisteach 15",
+    "secondary_executors_are_notifi_21": "Cuirtear seiceadóirí tánaisteacha ar an eolas 21",
+    "statusLabels": {
+      "addExecutor": "Cuir seiceadóir leis",
+      "adding": "Ag cur leis",
+      "unknownUser": "Úsáideoir anaithnid"
+    },
+    "this_person_is_already_designa_4": "Tá an duine seo ainmnithe cheana féin mar 4",
+    "user_not_found_with_this_email_3": "Níor aimsíodh an t-úsáideoir leis an seoladh ríomhphoist seo 3"
+  },
+  "invite": {
+    "title": "Teideal"
+  },
+  "inviteAcceptance": {
+    "buttons": {
+      "acceptRole": "Glac leis an ról",
+      "decline": "Diúltaigh",
+      "processing": "Próiseáil"
+    },
+    "defaultInviterName": "Ainm réamhshocraithe an chuireadóra",
+    "disclaimer": "Séanadh",
+    "errors": {
+      "acceptFailed": "Theip ar ghlacadh",
+      "alreadyProcessed": "Próiseáilte cheana féin",
+      "declineFailed": "Theip ar an diúltú",
+      "invalidLink": "Nasc neamhbhailí",
+      "loadingFailed": "Theip ar an luchtú",
+      "notFound": "Níor aimsíodh"
+    },
+    "guardianRole": {
+      "relationship": "Gaol",
+      "responsibilities": "Freagrachtaí",
+      "title": "Teideal",
+      "yourName": "D'ainm"
+    },
+    "loading": "Ag luchtú",
+    "notFound": {
+      "description": "Cur síos",
+      "title": "Teideal"
+    },
+    "subtitle": "Fotheideal",
+    "whatThisMeans": {
+      "point1": "Pointe1",
+      "point2": "Pointe2",
+      "point3": "Pointe3",
+      "point4": "Pointe4",
+      "title": "Teideal"
+    }
+  },
+  "structures": {
+    "nuclear": "Teaghlach Traidisiúnta",
+    "single_parent": "Teaghlach Aontuismitheora",
+    "blended": "Teaghlach Cumaiscthe",
+    "multigenerational": "Teaghlach Ilghlúine",
+    "childless": "Lánúin Gan Leanaí",
+    "empty_nest": "Teaghlach Neid Folamh",
+    "non_traditional": "Struchtúr Teaghlaigh Uathúil"
+  },
+  "complexity": {
+    "simple": "Simplí",
+    "moderate": "Measartha",
+    "complex": "Coimpléasc"
+  },
+  "personalized": "Do thaithí phleanála teaghlaigh phearsantaithe",
+  "specialConsiderations": "Breithnithe Speisialta",
+  "recommendedFeatures": "Gnéithe Molta",
+  "tabs": {
+    "overview": "Forbhreathnú",
+    "insights": "Léargais",
+    "features": "Gnéithe",
+    "cultural": "Cultúrtha"
+  },
+  "keyConsiderations": "Príomh-Bhreithnithe do do Theaghlach",
+  "specialNeeds": "Riachtanais Phleanála Speisialta",
+  "sensitivities": "Limistéir a bhfuil Cúram Breise ag teastáil uathu",
+  "needs": {
+    "special_needs_planning": "Pleanáil Riachtanas Speisialta",
+    "long_term_care_planning": "Pleanáil Cúraim Fadtéarmaigh",
+    "special_needs_trust": "Iontaobhas Riachtanas Speisialta",
+    "elder_care_planning": "Pleanáil Cúraim Daoine Scothaosta",
+    "multi_generational_wealth_transfer": "Aistriú Ilghlúine",
+    "military_benefit_planning": "Sochair Mhíleata",
+    "deployment_planning": "Pleanáil Imscartha",
+    "business_succession": "Comharbas Gnó",
+    "key_person_planning": "Pleanáil Dhuine Eochair",
+    "young_child_guardianship": "Caomhnóireacht Leanaí Óga",
+    "education_planning": "Pleanáil Oideachais",
+    "sharia_compliant_planning": "Pleanáil atá i gcomhréir le Sharia"
+  },
+  "insightType": {
+    "structure": "Struchtúr Teaghlaigh",
+    "need": "Riachtanas Speisialta",
+    "opportunity": "Deis",
+    "risk": "Fachtóir Riosca"
+  },
+  "priority": {
+    "high": "Tosaíocht Ard",
+    "medium": "Tosaíocht Mheánach",
+    "low": "Tosaíocht Íseal"
+  },
+  "suggestedActions": "Gníomhartha Molta",
+  "recommendedFeaturesTitle": "Gnéithe atá Oiriúnaithe do do Theaghlach",
+  "recommendedFeaturesDesc": "Bunaithe ar struchtúr agus riachtanais do theaghlaigh, is iad na gnéithe seo a bheidh an-chabhrach",
+  "culturalConsiderations": "Breithnithe Cultúrtha & Reiligiúnacha",
+  "culturalDesc": "Tabhair urraim do luachanna agus do thraidisiúin do theaghlaigh i do phleanáil",
+  "noCulturalSettings": "Níl aon roghanna cultúrtha socraithe. Cuir leis iad lena chinntiú go n-urramaíonn do phleanáil luachanna do theaghlaigh.",
+  "configureCultural": "Cumraigh Roghanna Cultúrtha",
+  "culturalUpdated": "Roghanna Cultúrtha Nuashonraithe",
+  "culturalUpdatedDesc": "Léireoidh do phleanáil teaghlaigh do luachanna agus do thraidisiúin chultúrtha anois"
+}

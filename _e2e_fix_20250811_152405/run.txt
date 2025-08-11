@@ -1,0 +1,20 @@
+
+DevTools listening on ws://127.0.0.1:58443/devtools/browser/aef5155f-4c04-4bb0-97dd-4c5ce0e19d32
+(node:87619) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("file%3A///Users/luborfedak/Library/Caches/Cypress/14.5.3/Cypress.app/Contents/Resources/app/node_modules/ts-node/esm/transpile-only.mjs", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:87619) ExperimentalWarning: The Node.js specifier resolution flag is experimental. It could change or be removed at any time.
+(node:87619) ExperimentalWarning: The Node.js specifier resolution flag is experimental. It could change or be removed at any time.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Your configFile is invalid: /Users/luborfedak/Documents/Github/phoenix/cypress.config.js
+
+It threw an error when required, check the stack trace below:
+
+ReferenceError: exports is not defined in ES module scope
+This file is being treated as an ES module because it has a '.js' file extension and '/Users/luborfedak/Documents/Github/phoenix/package.json' contains "type": "module". To treat it as a CommonJS script, rename it to use the '.cjs' file extension.
+    at file:///Users/luborfedak/Documents/Github/phoenix/cypress.config.js:2:23
+    at ModuleJob.run (node:internal/modules/esm/module_job:195:25)
+    at async ModuleLoader.import (node:internal/modules/esm/loader:337:24)
+    at async importModuleDynamicallyWrapper (node:internal/vm/module:432:15)
+    at async loadFile (/Users/luborfedak/Library/Caches/Cypress/14.5.3/Cypress.app/Contents/Resources/app/packages/server/lib/plugins/child/run_require_async_child.js:106:14)
+    at async EventEmitter.<anonymous> (/Users/luborfedak/Library/Caches/Cypress/14.5.3/Cypress.app/Contents/Resources/app/packages/server/lib/plugins/child/run_require_async_child.js:116:32)

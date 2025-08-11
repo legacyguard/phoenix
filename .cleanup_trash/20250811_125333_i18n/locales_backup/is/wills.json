@@ -1,0 +1,642 @@
+{
+  "actions": {
+    "consultLawyer": "Bóka lögfræðiráðgjöf",
+    "createCodicil": "Búa til breytingartillögu (tilvísun)",
+    "deleteWill": "Eyða þessari erfðaskrá",
+    "downloadPdf": "Sækja PDF skjal",
+    "generateWill": "Búa til lokaerfðaskrá",
+    "next": "Næst",
+    "previous": "Fyrri",
+    "printWill": "Prenta erfðaskrá",
+    "saveProgress": "Vista núverandi framvindu",
+    "shareWill": "Deila með fjölskyldunni",
+    "updateWill": "Uppfæra upplýsingar um erfðaskrá"
+  },
+  "errors": {
+    "assetLoadFailed": "Við gátum ekki hlaðið inn upplýsingum um eignina þína. Endurnýjaðu síðuna og reyndu aftur.",
+    "generationFailed": "Við lentum í vandræðum við að búa til erfðaskrá þína. Vinsamlegast farðu yfir upplýsingarnar þínar og reyndu aftur.",
+    "jurisdictionRequired": "Veldu lögsögu þína til að tryggja samræmi",
+    "loadFailed": "Við gátum ekki hlaðið inn erfðaskrárupplýsingum þínum. Endurnýjaðu síðuna og reyndu aftur.",
+    "printFailed": "Við lentum í vandræðum við að undirbúa skjalið þitt til prentunar. Reyndu aftur.",
+    "saveFailed": "Við gátum ekki vistað framvinduna þína. Vinsamlegast athugaðu tenginguna þína og reyndu aftur.",
+    "validationFailed": "Vinsamlegast farið yfir og leiðréttið merktu upplýsingarnar áður en haldið er áfram"
+  },
+  "execution": {
+    "copyDistribution": "Dreifing eintaka",
+    "familyNotification": "Að upplýsa fjölskyldu þína",
+    "legalRequirements": "Lagalegar kröfur fyrir {{jurisdiction}}",
+    "notarization": "Kröfur um löggilta staðfestingu",
+    "notaryOptional": "Löggiltur dómari er ráðlagður en ekki skylda",
+    "notaryRequired": "Löggiltur embættismaður krafist",
+    "numberOfCopies": "Ráðlagður fjöldi eintaka",
+    "safeStorage": "Öruggar geymslustaðir",
+    "selfProving": "Sjálfssönnunaryfirlýsing",
+    "signingInstructions": "Leiðbeiningar um undirritun",
+    "signingOrder": "Rétt undirritunarröð",
+    "storageRecommendations": "Geymsluráðleggingar",
+    "subtitle": "Að gera erfðaskrá þína lagalega bindandi",
+    "title": "Kröfur um framkvæmd erfðaskrár",
+    "witnessCount": "{{count}} vitni krafist",
+    "witnessInstructions": "Leiðbeiningar fyrir vitni",
+    "witnessQualifications": "Hæfniskröfur vitna",
+    "witnessRequirements": "Kröfur um vitni"
+  },
+  "form": {
+    "assetSelection": {
+      "allAssets": "Innifalið allar núverandi og framtíðareignir",
+      "assetCategories": "Flokkar eigna sem á að taka með",
+      "businessInterests": "Viðskiptahagsmunir",
+      "excludedAssets": "Eignir sem útiloka á",
+      "jointAssets": "Eignir í sameign",
+      "residualDescription": "Allar eftirstandandi eignir sem ekki eru sérstaklega nefndar annars staðar í þessari erfðaskrá",
+      "residualEstate": "Eftirstöðvar eigna",
+      "selectAssets": "Veldu eignir til að taka með",
+      "specificAssets": "Veldu aðeins tilteknar eignir"
+    },
+    "distribution": {
+      "addBeneficiary": "Bæta við viðbótarstyrkþega",
+      "ageRestriction": "Aldurskröfur",
+      "allocation": "Úthlutun erfða",
+      "beneficiaryName": "Fullt nafn rétthafa",
+      "conditions": "Skilyrði eða takmarkanir",
+      "contingentBeneficiary": "Skilyrtur styrkþegi",
+      "percentage": "Hlutfall dánarbús",
+      "primaryBeneficiary": "Aðalstyrkþegi",
+      "relationship": "Tengsl við þig",
+      "specificAmount": "Sérstök upphæð í Bandaríkjadölum",
+      "specificAsset": "Tiltekin eign eða fasteign",
+      "trustProvision": "Traustssamningur"
+    },
+    "executor": {
+      "alternateExecutor": "Varafulltrúi",
+      "bondRequirement": "Skuldabréfakröfur",
+      "coExecutors": "Meðframkvæmdastjórar",
+      "executorAddress": "Heimilisfang framkvæmdastjóra",
+      "executorCompensation": "Bætur til erfðafjárhaldsmanns",
+      "executorDuties": "Ábyrgð framkvæmdastjóra",
+      "executorInstructions": "Sérstakar leiðbeiningar fyrir framkvæmdastjóra",
+      "executorName": "Fullt nafn framkvæmdastjóra",
+      "executorRelationship": "Tengsl við þig",
+      "primaryExecutor": "Aðalframkvæmdastjóri",
+      "specialPowers": "Sérstök völd veitt"
+    },
+    "guardianship": {
+      "backupGuardian": "Varaforráðamaður",
+      "educationPreferences": "Menntunarvalkostir",
+      "guardianCompensation": "Bætur forráðamanna",
+      "guardianFor": "Verndari fyrir {{childName}}",
+      "guardianInstructions": "Leiðbeiningar fyrir forráðamenn",
+      "guardianQualifications": "Hæfniskröfur forráðamanns",
+      "minorChildren": "Ólögráða börn sem þurfa forsjá",
+      "primaryGuardian": "Aðalforráðamaður",
+      "religiousUpbringing": "Trúarleg uppeldisval"
+    },
+    "personalInfo": {
+      "addChild": "Bæta við barni",
+      "addressHelper": "Aðalheimilisfang þitt",
+      "childDateOfBirth": "Fæðingardagur barns",
+      "childName": "Fullt nafn barns",
+      "childRelation": "Tengsl við þig",
+      "children": "Börn og aðstandendur",
+      "currentAddress": "Núverandi lögheimili",
+      "dateOfBirth": "Fæðingardagur",
+      "fullLegalName": "Fullt löglegt nafn",
+      "fullLegalNameHelper": "Sláðu inn nafnið þitt nákvæmlega eins og það birtist á opinberum skjölum",
+      "maritalStatus": "Hjúskaparstaða",
+      "marriageDate": "Dagsetning hjónabands",
+      "placeOfBirth": "Fæðingarstaður",
+      "previousWills": "Fyrri erfðaskrár",
+      "revokesPrevious": "Þetta ógildir allar fyrri erfðaskrár",
+      "spouseName": "Fullt löglegt nafn maka"
+    },
+    "provisions": {
+      "burialCremation": "Jarðför eða líkbrennsla valin",
+      "businessContinuation": "Áætlanir um áframhaldandi viðskipti",
+      "charitableBequests": "Góðgerðargjafir",
+      "charityAmount": "Upphæð framlags",
+      "charityName": "Góðgerðarstofnun",
+      "digitalAssets": "Leiðbeiningar um stafrænar eignir",
+      "funeralInstructions": "Sérstakar leiðbeiningar um útför",
+      "funeralWishes": "Útfarar- og greftrunarvalkostir",
+      "organDonation": "Óskir um líffæragjöf",
+      "personalMessages": "Persónuleg skilaboð til fjölskyldunnar",
+      "petCare": "Gæludýraumhirða",
+      "specialInstructions": "Sérstakar leiðbeiningar"
+    }
+  },
+  "generator": {
+    "continueWill": "Halda áfram erfðaskrárgerð",
+    "description": "Búið til ítarlega, löglega gilda erfðaskrá sem er sniðin að kröfum lögsagnarumdæmis ykkar og einstökum þörfum fjölskyldu ykkar.",
+    "getStarted": "Byrjaðu að búa til erfðaskrá þína",
+    "importance": "Að tryggja að óskir þínar séu löglega skjalfestar og að fjölskylda þín sé vernduð",
+    "newWill": "Stofna nýja erfðaskrá",
+    "of": "Af",
+    "professionalGuidance": "Fagleg lögfræðiráðgjöf ráðlögð fyrir flóknar dánarbú",
+    "step": "Skref",
+    "subtitle": "Gerðu löglega traust erfðaskrá með faglegri leiðsögn",
+    "title": "Síðasta erfðaskrá og testamentisframleiðandi",
+    "viewExisting": "Endurskoða núverandi erfðaskrá"
+  },
+  "legal": {
+    "consultLawyer": "Ráðfærðu þig við lögmann",
+    "disclaimer": "Mikilvægur lagalegur fyrirvari",
+    "estatePlanning": "Alhliða erfðaskipulagning",
+    "jurisdiction": "Lögsaga",
+    "lawsApply": "Lög {{jurisdiction}} gilda",
+    "lawyerRecommended": "Við mælum eindregið með því að ráðfæra sig við lögfræðing vegna flókinna erfðamála",
+    "legalCompliance": "Staðfesting á lagalegum fylgni",
+    "notLegalAdvice": "Þessi þjónusta telst ekki vera lögfræðiráðgjöf",
+    "probateProcess": "Upplýsingar um erfðaskrárferlið",
+    "professionalGuidance": "Mælt er með faglegri lögfræðiráðgjöf",
+    "professionalReview": "Fagleg lögfræðiúttekt",
+    "selectJurisdiction": "Veldu lögsögu þína",
+    "taxImplications": "Skattalegar afleiðingar"
+  },
+  "notifications": {
+    "consultationScheduled": "Lögfræðiráðgjöf hefur verið boðuð",
+    "documentShared": "Erfðaskrá hefur verið deilt með tilnefndum fjölskyldumeðlimum",
+    "executionComplete": "Erfðaskrárgerð hefur verið skráð",
+    "progressSaved": "Framvindan þín hefur verið vistuð",
+    "willDeleted": "Will hefur verið eytt fyrir fullt og allt",
+    "willUpdated": "Will hefur verið uppfært með góðum árangri"
+  },
+  "preview": {
+    "article": "GREIN {{number}}",
+    "draftWatermark": "DRÖG - EKKI LÖGALEGA BINDANDI",
+    "executionInstructions": "FRAMKVÆMDARLEIÐBEININGAR",
+    "lastWillTestament": "SÍÐASTA ERLIF OG TESTAMENTI",
+    "of": "AF",
+    "pageNumber": "Síða {{current}} af {{total}}",
+    "reviewCarefully": "Vinsamlegast skoðið þetta skjal vandlega áður en haldið er áfram",
+    "section": "Kafli {{number}}",
+    "signatureSection": "UNDIRSKRIFTARHLUTI",
+    "subtitle": "Farðu yfir alla erfðaskrána þína áður en þú gerir hana endanlega",
+    "title": "Forskoðun á erfðaskrá",
+    "witnessClause": "VITNISKLAUSLA"
+  },
+  "status": {
+    "archived": "Geymd útgáfa",
+    "draft": "Drög í vinnslu",
+    "executed": "Löglega framkvæmdur",
+    "generated": "Búið til - Krefst keyrslu",
+    "outdated": "Krefst uppfærslu"
+  },
+  "policy": {
+    "duration": {
+      "session": "Setu",
+      "minutes": "{{count}} mínútur",
+      "hours": "{{count}} klukkustundir",
+      "days": "{{count}} dagar",
+      "months": "{{count}} mánuðir",
+      "years": "{{count}} ár"
+    }
+  },
+  "steps": {
+    "assets": {
+      "description": "Veldu hvaða eignir þú vilt hafa með í erfðaskrá þinni og hvernig þeim skuli úthlutað.",
+      "subtitle": "Verðmætar eignir þínar",
+      "title": "Eignadreifing"
+    },
+    "beneficiaries": {
+      "description": "Tilgreindu hverjir fá eignir þínar og í hvaða hlutföllum.",
+      "subtitle": "Viðtakendur sem þú valdir",
+      "title": "Tilnefningar styrkþega"
+    },
+    "executor": {
+      "description": "Veldu ábyrgan aðila til að stjórna eignum þínum og framfylgja óskum þínum.",
+      "subtitle": "Umboðsmaður dánarbúsins þíns",
+      "title": "Skiptastjóri dánarbús"
+    },
+    "guardians": {
+      "description": "Tilnefna trausta einstaklinga til að annast ólögráða börn eða framfærendur.",
+      "subtitle": "Annast þína framfærendur",
+      "title": "Skipanir forráða"
+    },
+    "personal": {
+      "description": "Við þurfum allar lagalegar upplýsingar frá þér til að tryggja að erfðaskrá þín uppfylli allar lagalegar kröfur.",
+      "subtitle": "Persónugreinanlegar upplýsingar þínar",
+      "title": "Persónuupplýsingar"
+    },
+    "preferences": {
+      "description": "Takið með allar sérstakar leiðbeiningar, arfleifð eða persónulegar óskir.",
+      "subtitle": "Viðbótarleiðbeiningar",
+      "title": "Sérákvæði"
+    },
+    "review": {
+      "description": "Farðu vandlega yfir allar upplýsingar áður en þú býrð til lagalegt skjal.",
+      "subtitle": "Staðfestu allar upplýsingar",
+      "title": "Lokaúttekt"
+    }
+  },
+  "validation": {
+    "addressRequired": "Núverandi lögheimili þitt er krafist",
+    "allocationError": "Heildarprósentuúthlutun verður að vera 100%",
+    "beneficiaryRequired": "Að minnsta kosti einn styrkþegi verður að tilgreina",
+    "dobRequired": "Fæðingardagur er nauðsynlegur til að lagaleg gildi sé tryggt",
+    "duplicateBeneficiary": "Þessum styrkþega hefur þegar verið bætt við",
+    "executorBeneficiaryConflict": "Skiptastjóri og aðalþegi ættu venjulega að vera ólíkir einstaklingar.",
+    "executorRequired": "Að minnsta kosti einn framkvæmdastjóri skal tilnefndur",
+    "guardianRequired": "Forráðamaður þarf að tilnefna fyrir ólögráða börn",
+    "invalidDate": "Vinsamlegast sláðu inn gilda dagsetningu",
+    "invalidPercentage": "Prósenta verður að vera á milli 0 og 100",
+    "jurisdictionRequired": "Lögsaga krafist",
+    "requiredField": "Skylda reitur"
+  },
+  "will": {
+    "address": "Heimilisfang",
+    "addressPlaceholder": "Staðgengill heimilisfangs",
+    "allocation": {
+      "addBeneficiary": "Bæta við styrkþega",
+      "description": "Lýsing",
+      "generalEstate": "Almennar fasteignir",
+      "percentage": "Hlutfall",
+      "tips": {
+        "tip1": "Ábending 1",
+        "tip2": "Ábending 2",
+        "tip3": "Ráð 3",
+        "title": "Titill"
+      },
+      "title": "Titill",
+      "total": "Samtals"
+    },
+    "beneficiaries": {
+      "addBeneficiary": "Bæta við styrkþega",
+      "allocation": "Úthlutun",
+      "alternativeBeneficiary": "Annar rétthafi",
+      "alternativePlaceholder": "Annar staðgengill",
+      "beneficiaryNumber": "Númer rétthafa",
+      "currentAllocation": "Núverandi úthlutun",
+      "description": "Lýsing",
+      "identification": "Auðkenning",
+      "identificationPlaceholder": "Staðgengill auðkenningar",
+      "importantNotes": "Mikilvægar athugasemdir",
+      "name": "Nafn",
+      "noBeneficiaries": "Engir rétthafar",
+      "note1": "Athugasemd 1",
+      "note2": "Athugasemd 2",
+      "note3": "Athugasemd 3",
+      "ofEstate": "Af eignum",
+      "title": "Titill"
+    },
+    "beneficiary": {
+      "name": "Nafn",
+      "namePlaceholder": "Nafnsstaðgengill",
+      "relationship": "Tengsl",
+      "relationshipPlaceholder": "Staðgengill fyrir tengsl"
+    },
+    "birthDate": "Fæðingardagur",
+    "birthDatePlaceholder": "Staðgengill fyrir fæðingardag",
+    "buttons": {
+      "saveWillInfo": "Vista upplýsingar um erfðaskrá",
+      "saving": "Sparnaður"
+    },
+    "countryRequirements": "Kröfur lands",
+    "descriptions": {
+      "executorDescription": "Lýsing á framkvæmdastjóra",
+      "physicalLocationDescription": "Lýsing á staðsetningu",
+      "statusDescription": "Lýsing á stöðu"
+    },
+    "executor": {
+      "addAlternative": "Bæta við valkosti",
+      "address": "Heimilisfang",
+      "addressPlaceholder": "Staðgengill heimilisfangs",
+      "alternative": "Valkostur",
+      "alternativeDescription": "Önnur lýsing",
+      "description": "Lýsing",
+      "name": "Nafn",
+      "namePlaceholder": "Nafnsstaðgengill",
+      "phone": "Sími",
+      "phonePlaceholder": "Staðgengill símans",
+      "primary": "Aðal",
+      "relationship": "Tengsl",
+      "relationshipPlaceholder": "Staðgengill fyrir tengsl",
+      "responsibilities": "Ábyrgð",
+      "responsibility1": "Ábyrgð1",
+      "responsibility2": "Ábyrgð2",
+      "responsibility3": "Ábyrgð3",
+      "responsibility4": "Ábyrgð4",
+      "title": "Titill"
+    },
+    "fields": {
+      "additionalNotes": "Viðbótar athugasemdir",
+      "currentStatus": "Núverandi staða",
+      "executorContact": "Tengiliður framkvæmdastjóra",
+      "physicalLocation": "Staðsetning"
+    },
+    "legalReview": {
+      "button": "Hnappur",
+      "description": "Lýsing",
+      "title": "Titill"
+    },
+    "name": "Nafn",
+    "namePlaceholder": "Nafnsstaðgengill",
+    "options": {
+      "noContactSelected": "Enginn tengiliður valinn"
+    },
+    "placeholders": {
+      "additionalNotes": "Viðbótar athugasemdir",
+      "physicalLocation": "Staðsetning",
+      "selectContact": "Veldu tengilið"
+    },
+    "preview": {
+      "address": "Heimilisfang",
+      "alternative": "Valkostur",
+      "alternativeExecutor": "Varafulltrúi",
+      "date": "Dagsetning",
+      "description": "Lýsing",
+      "executor": "Erfðafjárhaldsmaður",
+      "generatePDF": "Búa til p d f",
+      "legalRequirements": "Lagalegar kröfur",
+      "name": "Nafn",
+      "ofEstate": "Af eignum",
+      "place": "Staður",
+      "print": "Prenta",
+      "signature": "Undirskrift",
+      "title": "Titill",
+      "witnesses": "Vottar"
+    },
+    "requirements": {
+      "handwriting": "Handskrift",
+      "notarization": "Löggiltur vottur",
+      "typed": "Vélritað",
+      "witnesses": "Vottar"
+    },
+    "selectCountry": "Veldu land",
+    "selectedCountryDetails": "Upplýsingar um valið land",
+    "status": {
+      "draft": "Drög",
+      "notarized": "Löggiltur",
+      "stored": "Geymt",
+      "updated": "Uppfært"
+    },
+    "testatorInfo": "Upplýsingar um erfðafjárhaldara",
+    "validation": {
+      "allocation100": "Úthlutun100"
+    },
+    "willPreview": {
+      "_2": "2",
+      "critical_execution_instruction_3": "Mikilvæg framkvæmdarleiðbeining 3",
+      "professional_review_4": "Fagleg umsögn 4",
+      "provided_by_certified_legal_pa_5": "Veitt af löggiltum lögmanni 5"
+    }
+  },
+  "willGenerator": {
+    "changeCountry": "Skipta um land",
+    "confirmCountry": "Staðfesta land",
+    "confirmSigned": "Staðfesta undirritun",
+    "console": {
+      "willGenerationCompleted": "Myndun erfðaskrár lokið"
+    },
+    "countries": {
+      "AL": "A l",
+      "AT": "A t",
+      "BA": "B a",
+      "BE": "B e",
+      "BG": "B g",
+      "CH": "C h",
+      "CY": "C y",
+      "CZ": "Cz",
+      "DE": "D e",
+      "DK": "Dk",
+      "EE": "Ee",
+      "ES": "E s",
+      "FI": "F i",
+      "FR": "F r",
+      "GB": "G b",
+      "GR": "Gr.",
+      "HR": "Hr",
+      "HU": "Hú",
+      "IE": "Ég e",
+      "IS": "Ég er",
+      "IT": "Ég t",
+      "LI": "L i",
+      "LT": "Lt",
+      "LU": "Lú",
+      "LV": "L v.",
+      "MD": "M d",
+      "ME": "M e",
+      "MK": "M k",
+      "MT": "Mánudagur",
+      "NL": "N l",
+      "NO": "Nei",
+      "PL": "P l",
+      "PT": "P t",
+      "RO": "Ró",
+      "RS": "R s",
+      "SE": "Sjá",
+      "SI": "S i",
+      "SK": "S k",
+      "UA": "Þú"
+    },
+    "executionInstructions": "Leiðbeiningar um framkvæmd",
+    "failed_to_load_will_template_2": "Mistókst að hlaða inn erfðaskráarsniðmát 2",
+    "finalizeUpload": "Ljúka upphleðslu",
+    "fullName": "Fullt nafn",
+    "no_template_found_for_this_jur_1": "Ekkert sniðmát fannst fyrir þetta jur 1",
+    "please_confirm_that_you_have_s_3": "Vinsamlegast staðfestu að þú hafir s 3",
+    "select_a_country_4": "Veldu land 4",
+    "steps": {
+      "confirmJurisdiction": "Staðfesta lögsögu",
+      "executorBeneficiaries": "Erfingjar sem eru skiptastjórar",
+      "personalInformation": "Persónuupplýsingar",
+      "reviewGenerate": "Umsögn mynda",
+      "signConfirm": "Undirrita staðfestingu"
+    }
+  },
+  "willSync": {
+    "approve": "Samþykkja",
+    "autoApplied": "Sjálfvirkt notað",
+    "changes": {
+      "allocationsModified": "Úthlutunum breytt",
+      "assetsAdded": "Eignir bættar við",
+      "beneficiariesRemoved": "Rétthafar fjarlægðir",
+      "noChanges": "Engar breytingar"
+    },
+    "reject": "Hafna",
+    "viewChanges": "Skoða breytingar"
+  },
+  "willSyncSettings": {
+    "autoSync": "Sjálfvirk samstilling",
+    "autoSyncDescription": "Lýsing á sjálfvirkri samstillingu",
+    "frequencyDaily": "Tíðni daglega",
+    "frequencyImmediate": "Tíðni strax",
+    "frequencyWeekly": "Tíðni vikulega",
+    "generalDescription": "Almenn lýsing",
+    "generalSettings": "Almennar stillingar",
+    "requireApproval": "Krefjast samþykkis",
+    "requireApprovalDescription": "Krefjast lýsingar á samþykki",
+    "saveError": "Vista villa",
+    "saved": "Vistað",
+    "syncFrequency": "Samstillingartíðni",
+    "triggerDescription": "Lýsing á kveikju",
+    "triggerSettings": "Stillingar kveikju"
+  },
+  "willVersion": {
+    "added": "Bætt við",
+    "compareDiff": "Berðu saman mismunandi",
+    "comparePrompt": "Berðu saman fyrirspurn",
+    "current": "Núverandi",
+    "description": "Lýsing",
+    "modified": "Breytt",
+    "removed": "Fjarlægt",
+    "restore": "Endurheimta",
+    "title": "Titill",
+    "versionNumber": "Útgáfunúmer"
+  },
+  "disclaimers": {
+    "general": "LegacyGuard býður upp á verkfæri og leiðbeiningar fyrir erfðaskipulagningu en veitir ekki lögfræðiráðgjöf. Ef um flókin erfðamál eða sértækar lögfræðilegar spurningar er að ræða, vinsamlegast ráðfærðu þig við lögfræðing á þínu svæði.",
+    "willGenerator": "Erfðaskrársmiðurinn býr til skjöl út frá upplýsingum sem þú lætur okkur í té. Þótt hann sé hannaður til að uppfylla lagalegar kröfur mælum við eindregið með að löggiltur lögmaður yfirfari allar erfðaskrár áður en þær eru undirritaðar.",
+    "jurisdiction": "Lagalegar kröfur eru mismunandi eftir lögsagnarumdæmum. Gakktu úr skugga um að skjöl þín séu í samræmi við lög á þínu svæði.",
+    "notLegalAdvice": "Þessi þjónusta telst ekki vera lögfræðiráðgjöf og ætti ekki að treysta á hana sem slíka.",
+    "professionalReview": "Fyrir flóknar dánarbú, viðskiptahagsmuni eða einstakar fjölskylduaðstæður er eindregið mælt með faglegri lögfræðiúttekt."
+  },
+  "terms": {
+    "serviceTerms": "Þjónustuskilmálar",
+    "privacyPolicy": "Persónuverndarstefna",
+    "dataProcessing": "Samningur um gagnavinnslu",
+    "userAgreement": "Notendasamningur",
+    "acceptanceRequired": "Með því að nota LegacyGuard samþykkir þú þjónustuskilmála okkar og persónuverndarstefnu.",
+    "lastUpdated": "Síðast uppfært: {{date}}",
+    "effectiveDate": "Gildistaka: {{date}}"
+  },
+  "compliance": {
+    "dataProtection": "Gögnin þín eru vernduð í samræmi við gildandi lög um persónuvernd, þar á meðal GDPR og CCPA.",
+    "encryption": "Allar viðkvæmar upplýsingar eru dulkóðaðar með dulkóðunaraðferðum sem eru staðlaðar í greininni.",
+    "retention": "Reglur um varðveislu gagna eru hannaðar til að vernda friðhelgi þína og tryggja jafnframt að fjölskylda þín hafi aðgang að mikilvægum upplýsingum þegar þörf krefur.",
+    "access": "Þú hefur rétt til að fá aðgang að, breyta eða eyða persónuupplýsingum þínum hvenær sem er.",
+    "portability": "Þú getur flutt út gögnin þín í stöðluðu sniði til notkunar með öðrum þjónustum."
+  },
+  "executionRequirements": {
+    "witnessRequirements": "Kröfur um vitni fyrir {{jurisdiction}}",
+    "notaryRequirements": "Kröfur um löggilta staðfestingu",
+    "signingInstructions": "Leiðbeiningar um rétta undirritun",
+    "storageGuidelines": "Leiðbeiningar um örugga geymslu",
+    "legalCompliance": "Staðfesting á lagalegum fylgni"
+  },
+  "cookiePolicy": {
+    "cookieTypes": {
+      "analytics": "Greiningarvafrakökur hjálpa okkur að skilja hvernig gestir hafa samskipti við vefsíðu okkar.",
+      "essential": "Nauðsynlegar vafrakökur eru nauðsynlegar til að vefsíðan virki rétt.",
+      "marketing": "Markaðssetningarkökur eru notaðar til að rekja gesti á vefsíðum til að birta viðeigandi auglýsingar."
+    },
+    "howWeUseCookies": "Við notum vafrakökur til að bæta upplifun þína, greina notkun á síðunni og veita þér sérsniðið efni.",
+    "introduction": "Þessi vafrakökustefna útskýrir hvernig LegacyGuard notar vafrakökur og svipaða tækni.",
+    "manageCookies": "Þú getur stjórnað stillingum þínum fyrir vafrakökur í gegnum stillingar vafrans þíns eða í stillingamiðstöð okkar fyrir vafrakökur.",
+    "title": "Titill",
+    "whatAreCookies": "Vafrakökur eru litlar textaskrár sem eru geymdar á tækinu þínu þegar þú heimsækir vefsíðu okkar."
+  },
+  "header": {
+    "title": "Titill"
+  },
+  "hero": {
+    "headline": "Fyrirsögn",
+    "subheadline": "Undirfyrirsögn"
+  },
+  "termsOfService": {
+    "effectiveDate": "Gildistaka: {{date}}",
+    "introduction": "Þessir þjónustuskilmálar gilda um notkun þína á fjölskylduverndarvettvangi og þjónustu LegacyGuard.",
+    "lastUpdated": "Síðast uppfært: {{date}}",
+    "sections": {
+      "acceptance": {
+        "content": "Með því að fá aðgang að eða nota LegacyGuard samþykkir þú að vera bundinn af þessum þjónustuskilmálum og öllum gildandi lögum og reglugerðum.",
+        "title": "Samþykki skilmála"
+      },
+      "description": {
+        "content": "LegacyGuard býður upp á stafræn verkfæri og þjónustu til að hjálpa einstaklingum að skipuleggja mikilvægar upplýsingar sínar til að vernda fjölskyldur sínar.",
+        "title": "Lýsing á þjónustu"
+      },
+      "limitations": {
+        "content": "LegacyGuard býður upp á verkfæri og leiðbeiningar en veitir ekki lögfræðiráðgjöf. Við mælum með að ráðfæra sig við hæfa sérfræðinga vegna flókinna lögfræðilegra mála.",
+        "title": "Takmarkanir á ábyrgð"
+      },
+      "privacy": {
+        "content": "Persónuvernd þín er okkur mikilvæg. Vinsamlegast skoðið persónuverndarstefnu okkar til að skilja hvernig við söfnum, notum og verndum upplýsingar þínar.",
+        "title": "Persónuvernd og gagnavernd"
+      },
+      "userResponsibilities": {
+        "content": "Þú berð ábyrgð á að viðhalda trúnaði upplýsinga um reikninginn þinn og fyrir alla starfsemi sem fer fram í tengslum við hann.",
+        "title": "Ábyrgð notenda"
+      }
+    },
+    "title": "Þjónustuskilmálar"
+  },
+  "cookies": {
+    "policy": {
+      "analytics": {
+        "description": "Lýsing",
+        "examples": {
+          "ga": "Ga",
+          "gid": "Gid",
+          "session": "Setu"
+        },
+        "purpose": "Tilgangur",
+        "title": "Titill"
+      },
+      "categories": {
+        "title": "Titill"
+      },
+      "contact": {
+        "address": "Heimilisfang",
+        "addressDetails": "Upplýsingar um heimilisfang",
+        "description": "Lýsing",
+        "email": "Tölvupóstur",
+        "title": "Titill"
+      },
+      "examples": "Dæmi",
+      "lastUpdated": "Síðast uppfært",
+      "manage": {
+        "title": "Titill"
+      },
+      "marketing": {
+        "description": "Lýsing",
+        "examples": {
+          "facebook": "Facebook",
+          "google": "Google"
+        },
+        "purpose": "Tilgangur",
+        "title": "Titill"
+      },
+      "necessary": {
+        "description": "Lýsing",
+        "examples": {
+          "auth": "Heimild",
+          "consent": "Samþykki",
+          "csrf": "Csrf",
+          "session": "Setu"
+        },
+        "purpose": "Tilgangur",
+        "title": "Titill"
+      },
+      "overview": {
+        "intro": "Inngangur",
+        "point1": "Liður 1",
+        "point2": "Liður 2",
+        "point3": "Liður 3",
+        "point4": "Punkt4",
+        "title": "Titill"
+      },
+      "preferences": {
+        "description": "Lýsing",
+        "examples": {
+          "language": "Tungumál",
+          "theme": "Þema",
+          "ui": "Notendaviðmót"
+        },
+        "purpose": "Tilgangur",
+        "title": "Titill"
+      },
+      "purpose": "Tilgangur",
+      "required": "Nauðsynlegt",
+      "subtitle": "Undirtitill",
+      "title": "Titill",
+      "yourRights": {
+        "description": "Lýsing",
+        "right1": "Hægri1",
+        "right2": "Hægri2",
+        "right3": "Hægri3",
+        "right4": "Hægri4",
+        "title": "Titill"
+      }
+    }
+  }
+}
