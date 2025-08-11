@@ -1,12 +1,15 @@
-import { PLAN_LIMITS, MAX_FILE_SIZES } from './constants';
-import type { Tables } from '@/integrations/supabase/types';
+import { PLAN_LIMITS, MAX_FILE_SIZES } from "./constants";
+import type { Tables } from "@/integrations/supabase/types";
 
-type PlanType = Tables<'user_subscriptions'>['plan_type'];
+type PlanType = Tables<"user_subscriptions">["plan_type"];
 
 /**
  * Check if a user can add more guardians based on their plan
  */
-export function canAddGuardian(currentGuardianCount: number, plan: PlanType): boolean {
+export function canAddGuardian(
+  currentGuardianCount: number,
+  plan: PlanType,
+): boolean {
   const limit = PLAN_LIMITS[plan].guardians;
   // -1 means unlimited
   if (limit === -1) return true;
@@ -16,7 +19,10 @@ export function canAddGuardian(currentGuardianCount: number, plan: PlanType): bo
 /**
  * Get remaining guardian slots for a plan
  */
-export function getRemainingGuardianSlots(currentGuardianCount: number, plan: PlanType): number | null {
+export function getRemainingGuardianSlots(
+  currentGuardianCount: number,
+  plan: PlanType,
+): number | null {
   const limit = PLAN_LIMITS[plan].guardians;
   // -1 means unlimited, return null
   if (limit === -1) return null;
@@ -35,18 +41,21 @@ export function isFileSizeAllowed(fileSize: number, plan: PlanType): boolean {
  * Check if adding a file would exceed storage limit
  */
 export function canAddFile(
-  currentStorageUsed: number, 
-  fileSize: number, 
-  plan: PlanType
+  currentStorageUsed: number,
+  fileSize: number,
+  plan: PlanType,
 ): boolean {
   const storageLimit = PLAN_LIMITS[plan].storage;
-  return (currentStorageUsed + fileSize) <= storageLimit;
+  return currentStorageUsed + fileSize <= storageLimit;
 }
 
 /**
  * Get remaining storage in bytes
  */
-export function getRemainingStorage(currentStorageUsed: number, plan: PlanType): number {
+export function getRemainingStorage(
+  currentStorageUsed: number,
+  plan: PlanType,
+): number {
   const storageLimit = PLAN_LIMITS[plan].storage;
   return Math.max(0, storageLimit - currentStorageUsed);
 }
@@ -55,13 +64,13 @@ export function getRemainingStorage(currentStorageUsed: number, plan: PlanType):
  * Format bytes to human readable string
  */
 export function formatBytes(bytes: number): string {
-  if (bytes === 0) return '0 Bytes';
-  
+  if (bytes === 0) return "0 Bytes";
+
   const k = 1024;
-  const sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB'];
+  const sizes = ["Bytes", "KB", "MB", "GB", "TB"];
   const i = Math.floor(Math.log(bytes) / Math.log(k));
-  
-  return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+
+  return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + " " + sizes[i];
 }
 
 /**
@@ -71,8 +80,9 @@ export function getPlanLimitsDisplay(plan: PlanType) {
   const limits = PLAN_LIMITS[plan];
   return {
     storage: formatBytes(limits.storage),
-    guardians: limits.guardians === -1 ? 'Unlimited' : limits.guardians.toString(),
+    guardians:
+      limits.guardians === -1 ? "Unlimited" : limits.guardians.toString(),
     maxFileSize: formatBytes(MAX_FILE_SIZES[plan]),
-    features: limits.features
+    features: limits.features,
   };
 }

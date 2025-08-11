@@ -1,21 +1,21 @@
-import '@testing-library/jest-dom';
-import { vi } from 'vitest';
-import type { mockSupabaseClient } from './mocks/supabase';
+import "@testing-library/jest-dom";
+import { vi } from "vitest";
+import type { mockSupabaseClient } from "./mocks/supabase";
 
 // Mock environment variables for tests
-vi.stubEnv('VITE_SUPABASE_URL', 'https://test.supabase.co');
-vi.stubEnv('VITE_SUPABASE_ANON_KEY', 'test-anon-key');
-vi.stubEnv('NEXT_PUBLIC_SUPABASE_URL', 'https://test.supabase.co');
-vi.stubEnv('SUPABASE_SERVICE_ROLE_KEY', 'test-service-role-key');
-vi.stubEnv('VITE_CLERK_PUBLISHABLE_KEY', 'test-clerk-key');
-vi.stubEnv('VITE_APP_URL', 'http://localhost:3000');
-vi.stubEnv('VITE_ENCRYPTION_KEY', 'test-encryption-key');
-vi.stubEnv('VITE_OPENAI_API_KEY', 'test-openai-key');
+vi.stubEnv("VITE_SUPABASE_URL", "https://test.supabase.co");
+vi.stubEnv("VITE_SUPABASE_ANON_KEY", "test-anon-key");
+vi.stubEnv("NEXT_PUBLIC_SUPABASE_URL", "https://test.supabase.co");
+vi.stubEnv("SUPABASE_SERVICE_ROLE_KEY", "test-service-role-key");
+vi.stubEnv("VITE_CLERK_PUBLISHABLE_KEY", "test-clerk-key");
+vi.stubEnv("VITE_APP_URL", "http://localhost:3000");
+vi.stubEnv("VITE_ENCRYPTION_KEY", "test-encryption-key");
+vi.stubEnv("VITE_OPENAI_API_KEY", "test-openai-key");
 
 // Mock window.matchMedia
-Object.defineProperty(window, 'matchMedia', {
+Object.defineProperty(window, "matchMedia", {
   writable: true,
-  value: vi.fn().mockImplementation(query => ({
+  value: vi.fn().mockImplementation((query) => ({
     matches: false,
     media: query,
     onchange: null,
@@ -47,21 +47,20 @@ const originalWarn = console.warn;
 beforeAll(() => {
   console.error = (...args: unknown[]) => {
     if (
-      typeof args[0] === 'string' &&
-      (args[0].includes('Warning: ReactDOM.render') || 
-       args[0].includes('Could not parse CSS') ||
-       args[0].includes('act()'))
+      typeof args[0] === "string" &&
+      (args[0].includes("Warning: ReactDOM.render") ||
+        args[0].includes("Could not parse CSS") ||
+        args[0].includes("act()"))
     ) {
       return;
     }
     originalError.call(console, ...args);
   };
-  
+
   console.warn = (...args: unknown[]) => {
     if (
-      typeof args[0] === 'string' &&
-      (args[0].includes('act()') || 
-       args[0].includes('was not wrapped in act'))
+      typeof args[0] === "string" &&
+      (args[0].includes("act()") || args[0].includes("was not wrapped in act"))
     ) {
       return;
     }

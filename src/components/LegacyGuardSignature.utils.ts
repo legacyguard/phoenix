@@ -1,4 +1,4 @@
-import { LEGACY_GUARD_SIGNATURE_CONSTANTS } from './LegacyGuardSignature.constants';
+import { LEGACY_GUARD_SIGNATURE_CONSTANTS } from "./LegacyGuardSignature.constants";
 
 export interface LegacyGuardSignatureProps {
   date?: string;
@@ -14,12 +14,19 @@ export const svgToBase64 = (svgElement: string): string => {
 };
 
 // Function to get SVG string
-export const getLegacyGuardSignatureSVG = (props: LegacyGuardSignatureProps): string => {
+export const getLegacyGuardSignatureSVG = (
+  props: LegacyGuardSignatureProps,
+): string => {
   const date = props.date || new Date().toISOString();
-  const signerName = props.signerName || LEGACY_GUARD_SIGNATURE_CONSTANTS.defaults.signerName;
-  const documentId = props.documentId || LEGACY_GUARD_SIGNATURE_CONSTANTS.defaults.documentId;
-  const formattedDate = new Date(date).toLocaleDateString('en-US', LEGACY_GUARD_SIGNATURE_CONSTANTS.dateFormat);
-  
+  const signerName =
+    props.signerName || LEGACY_GUARD_SIGNATURE_CONSTANTS.defaults.signerName;
+  const documentId =
+    props.documentId || LEGACY_GUARD_SIGNATURE_CONSTANTS.defaults.documentId;
+  const formattedDate = new Date(date).toLocaleDateString(
+    "en-US",
+    LEGACY_GUARD_SIGNATURE_CONSTANTS.dateFormat,
+  );
+
   const { colors, fonts } = LEGACY_GUARD_SIGNATURE_CONSTANTS;
 
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${LEGACY_GUARD_SIGNATURE_CONSTANTS.viewBox}">

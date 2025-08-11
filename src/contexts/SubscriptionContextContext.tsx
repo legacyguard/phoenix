@@ -1,5 +1,5 @@
-import React, { createContext } from 'react';
-import type { SubscriptionStatus } from '@/services/stripeService';
+import React, { createContext } from "react";
+import type { SubscriptionStatus } from "@/services/stripeService";
 
 interface SubscriptionContextType {
   subscriptionStatus: SubscriptionStatus | null;
@@ -9,4 +9,6 @@ interface SubscriptionContextType {
   refreshSubscription: () => Promise<void>;
 }
 
-export const SubscriptionContext = createContext<SubscriptionContextType | undefined>(undefined); 
+export const SubscriptionContext = createContext<
+  SubscriptionContextType | undefined
+>(undefined);

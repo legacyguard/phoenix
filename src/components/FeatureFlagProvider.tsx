@@ -1,8 +1,14 @@
-import React, { useState, useEffect, ReactNode } from 'react';
-import { FeatureFlags, featureFlags } from '../config/featureFlagsService';
-import { FeatureFlagContext } from '../hooks/useFeatureFlags';
+import React, { useState, useEffect, ReactNode } from "react";
+import { FeatureFlags, featureFlags } from "../config/featureFlagsService";
+import { FeatureFlagContext } from "../hooks/useFeatureFlags";
 
-export function FeatureFlagProvider({ children, userId }: { children: ReactNode; userId?: string | null }) {
+export function FeatureFlagProvider({
+  children,
+  userId,
+}: {
+  children: ReactNode;
+  userId?: string | null;
+}) {
   const [flags, setFlags] = useState<FeatureFlags>(() => {
     featureFlags.initialize(userId || null);
     return featureFlags.getAllFlags();

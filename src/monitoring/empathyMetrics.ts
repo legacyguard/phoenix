@@ -20,7 +20,7 @@ export interface EmpathyReport {
 
 export interface EmpathyTrend {
   metric: string;
-  direction: 'improving' | 'declining' | 'stable';
+  direction: "improving" | "declining" | "stable";
   changePercent: number;
   recommendation?: string;
 }
@@ -55,15 +55,15 @@ export const trackEmpathyMetrics = async (): Promise<EmpathyMetrics> => {
     assistantPersonalityConsistency: await evaluateAssistantConsistency(),
     progressCelebrationImpact: await measureCelebrationEffectiveness(),
     errorRecoverySupport: await assessErrorRecoverySupport(),
-    timestamp: new Date()
+    timestamp: new Date(),
   };
-  
+
   // Store metrics for trending
   await storeMetrics(metrics);
-  
+
   // Alert if any metric falls below threshold
   await checkMetricThresholds(metrics);
-  
+
   return metrics;
 };
 
@@ -72,13 +72,16 @@ export const generateEmpathyReport = async (): Promise<EmpathyReport> => {
   const currentMetrics = await trackEmpathyMetrics();
   const historicalMetrics = await getHistoricalMetrics(30); // Last 30 days
   const trends = calculateTrends(currentMetrics, historicalMetrics);
-  
+
   const overallScore = calculateOverallEmpathyScore(currentMetrics);
   const strengths = identifyEmpathyStrengths(currentMetrics);
   const improvementAreas = identifyImprovementAreas(currentMetrics);
-  const recommendations = generateEmpathyRecommendations(currentMetrics, trends);
+  const recommendations = generateEmpathyRecommendations(
+    currentMetrics,
+    trends,
+  );
   const nextActions = prioritizeEmpathyImprovements(recommendations);
-  
+
   return {
     overallEmpathyScore: overallScore,
     strengths,
@@ -86,7 +89,7 @@ export const generateEmpathyReport = async (): Promise<EmpathyReport> => {
     recommendations,
     nextActions,
     metrics: currentMetrics,
-    trends
+    trends,
   };
 };
 
@@ -96,8 +99,8 @@ async function calculateUserSatisfactionScore(): Promise<number> {
   const feedbackScore = await getUserFeedbackScore();
   const behaviorScore = await getUserBehaviorScore();
   const npsScore = await getNetPromoterScore();
-  
-  return (feedbackScore * 0.4 + behaviorScore * 0.3 + npsScore * 0.3);
+
+  return feedbackScore * 0.4 + behaviorScore * 0.3 + npsScore * 0.3;
 }
 
 async function measureEmotionalSupportImpact(): Promise<number> {
@@ -105,8 +108,12 @@ async function measureEmotionalSupportImpact(): Promise<number> {
   const checkpointUsage = await getEmotionalCheckpointUsage();
   const supportMessageEngagement = await getSupportMessageEngagement();
   const stressReduction = await measureStressReduction();
-  
-  return (checkpointUsage * 0.3 + supportMessageEngagement * 0.4 + stressReduction * 0.3);
+
+  return (
+    checkpointUsage * 0.3 +
+    supportMessageEngagement * 0.4 +
+    stressReduction * 0.3
+  );
 }
 
 async function assessFamilyFocusClarity(): Promise<number> {
@@ -114,8 +121,10 @@ async function assessFamilyFocusClarity(): Promise<number> {
   const contentAnalysis = await analyzeFamilyFocusedContent();
   const userUnderstanding = await measureUserUnderstanding();
   const featureAdoption = await getFamilyFeatureAdoption();
-  
-  return (contentAnalysis * 0.3 + userUnderstanding * 0.5 + featureAdoption * 0.2);
+
+  return (
+    contentAnalysis * 0.3 + userUnderstanding * 0.5 + featureAdoption * 0.2
+  );
 }
 
 async function evaluateAssistantConsistency(): Promise<number> {
@@ -123,8 +132,10 @@ async function evaluateAssistantConsistency(): Promise<number> {
   const voiceConsistency = await checkVoiceConsistency();
   const responseQuality = await assessResponseQuality();
   const contextRetention = await measureContextRetention();
-  
-  return (voiceConsistency * 0.4 + responseQuality * 0.4 + contextRetention * 0.2);
+
+  return (
+    voiceConsistency * 0.4 + responseQuality * 0.4 + contextRetention * 0.2
+  );
 }
 
 async function measureCelebrationEffectiveness(): Promise<number> {
@@ -132,8 +143,12 @@ async function measureCelebrationEffectiveness(): Promise<number> {
   const celebrationEngagement = await getCelebrationEngagement();
   const motivationIncrease = await measureMotivationIncrease();
   const continuationRate = await getContinuationAfterCelebration();
-  
-  return (celebrationEngagement * 0.3 + motivationIncrease * 0.4 + continuationRate * 0.3);
+
+  return (
+    celebrationEngagement * 0.3 +
+    motivationIncrease * 0.4 +
+    continuationRate * 0.3
+  );
 }
 
 async function assessErrorRecoverySupport(): Promise<number> {
@@ -141,26 +156,28 @@ async function assessErrorRecoverySupport(): Promise<number> {
   const recoverySuccess = await getErrorRecoverySuccess();
   const userConfidence = await measureConfidenceAfterError();
   const frustrationMitigation = await measureFrustrationMitigation();
-  
-  return (recoverySuccess * 0.4 + userConfidence * 0.3 + frustrationMitigation * 0.3);
+
+  return (
+    recoverySuccess * 0.4 + userConfidence * 0.3 + frustrationMitigation * 0.3
+  );
 }
 
 // Calculate overall empathy score
 const calculateOverallEmpathyScore = (metrics: EmpathyMetrics): number => {
   const weights = {
     userSatisfaction: 0.25,
-    emotionalSupportEffectiveness: 0.20,
-    familyFocusClarity: 0.20,
+    emotionalSupportEffectiveness: 0.2,
+    familyFocusClarity: 0.2,
     assistantPersonalityConsistency: 0.15,
-    progressCelebrationImpact: 0.10,
-    errorRecoverySupport: 0.10
+    progressCelebrationImpact: 0.1,
+    errorRecoverySupport: 0.1,
   };
-  
+
   let score = 0;
   for (const [key, weight] of Object.entries(weights)) {
     score += (metrics[key as keyof EmpathyMetrics] as number) * weight;
   }
-  
+
   return Math.round(score * 10) / 10; // Round to 1 decimal
 };
 
@@ -168,20 +185,20 @@ const calculateOverallEmpathyScore = (metrics: EmpathyMetrics): number => {
 const identifyEmpathyStrengths = (metrics: EmpathyMetrics): string[] => {
   const strengths: string[] = [];
   const threshold = 8.0;
-  
+
   if (metrics.userSatisfaction >= threshold) {
-    strengths.push('High user satisfaction with empathetic experience');
+    strengths.push("High user satisfaction with empathetic experience");
   }
   if (metrics.emotionalSupportEffectiveness >= threshold) {
-    strengths.push('Effective emotional support during difficult moments');
+    strengths.push("Effective emotional support during difficult moments");
   }
   if (metrics.familyFocusClarity >= threshold) {
-    strengths.push('Clear communication of family benefits');
+    strengths.push("Clear communication of family benefits");
   }
   if (metrics.assistantPersonalityConsistency >= threshold) {
-    strengths.push('Consistent and caring assistant personality');
+    strengths.push("Consistent and caring assistant personality");
   }
-  
+
   return strengths;
 };
 
@@ -189,59 +206,59 @@ const identifyEmpathyStrengths = (metrics: EmpathyMetrics): string[] => {
 const identifyImprovementAreas = (metrics: EmpathyMetrics): string[] => {
   const areas: string[] = [];
   const threshold = 7.0;
-  
+
   if (metrics.userSatisfaction < threshold) {
-    areas.push('User satisfaction needs improvement');
+    areas.push("User satisfaction needs improvement");
   }
   if (metrics.emotionalSupportEffectiveness < threshold) {
-    areas.push('Emotional support could be more effective');
+    areas.push("Emotional support could be more effective");
   }
   if (metrics.familyFocusClarity < threshold) {
-    areas.push('Family benefits need clearer communication');
+    areas.push("Family benefits need clearer communication");
   }
   if (metrics.assistantPersonalityConsistency < threshold) {
-    areas.push('Assistant personality needs more consistency');
+    areas.push("Assistant personality needs more consistency");
   }
   if (metrics.progressCelebrationImpact < threshold) {
-    areas.push('Celebration moments could be more impactful');
+    areas.push("Celebration moments could be more impactful");
   }
   if (metrics.errorRecoverySupport < threshold) {
-    areas.push('Error recovery needs better emotional support');
+    areas.push("Error recovery needs better emotional support");
   }
-  
+
   return areas;
 };
 
 // Generate recommendations
 const generateEmpathyRecommendations = (
-  metrics: EmpathyMetrics, 
-  trends: EmpathyTrend[]
+  metrics: EmpathyMetrics,
+  trends: EmpathyTrend[],
 ): string[] => {
   const recommendations: string[] = [];
-  
+
   // Metric-based recommendations
   if (metrics.familyFocusClarity < 7.5) {
-    recommendations.push('Review all UI text for family-focused language');
-    recommendations.push('Add more family impact visualizations');
+    recommendations.push("Review all UI text for family-focused language");
+    recommendations.push("Add more family impact visualizations");
   }
-  
+
   if (metrics.emotionalSupportEffectiveness < 7.5) {
-    recommendations.push('Add more emotional checkpoints in difficult flows');
-    recommendations.push('Enhance supportive messaging during errors');
+    recommendations.push("Add more emotional checkpoints in difficult flows");
+    recommendations.push("Enhance supportive messaging during errors");
   }
-  
+
   if (metrics.assistantPersonalityConsistency < 8.0) {
-    recommendations.push('Audit all assistant messages for voice consistency');
-    recommendations.push('Implement stricter personality guidelines');
+    recommendations.push("Audit all assistant messages for voice consistency");
+    recommendations.push("Implement stricter personality guidelines");
   }
-  
+
   // Trend-based recommendations
-  trends.forEach(trend => {
-    if (trend.direction === 'declining' && trend.changePercent > 5) {
+  trends.forEach((trend) => {
+    if (trend.direction === "declining" && trend.changePercent > 5) {
       recommendations.push(`Address declining ${trend.metric} immediately`);
     }
   });
-  
+
   return recommendations;
 };
 
@@ -253,30 +270,34 @@ const prioritizeEmpathyImprovements = (recommendations: string[]): string[] => {
 
 // Calculate trends
 const calculateTrends = (
-  current: EmpathyMetrics, 
-  historical: EmpathyMetrics[]
+  current: EmpathyMetrics,
+  historical: EmpathyMetrics[],
 ): EmpathyTrend[] => {
   const trends: EmpathyTrend[] = [];
-  
+
   if (historical.length === 0) return trends;
-  
+
   const avgHistorical = calculateAverageMetrics(historical);
   const metricKeys = Object.keys(current) as Array<keyof EmpathyMetrics>;
-  
-  metricKeys.forEach(key => {
-    if (typeof current[key] === 'number' && typeof avgHistorical[key] === 'number') {
+
+  metricKeys.forEach((key) => {
+    if (
+      typeof current[key] === "number" &&
+      typeof avgHistorical[key] === "number"
+    ) {
       const currentValue = current[key] as number;
       const historicalValue = avgHistorical[key] as number;
       const change = ((currentValue - historicalValue) / historicalValue) * 100;
-      
+
       trends.push({
         metric: key,
-        direction: change > 2 ? 'improving' : change < -2 ? 'declining' : 'stable',
-        changePercent: Math.round(change * 10) / 10
+        direction:
+          change > 2 ? "improving" : change < -2 ? "declining" : "stable",
+        changePercent: Math.round(change * 10) / 10,
       });
     }
   });
-  
+
   return trends;
 };
 
@@ -284,41 +305,44 @@ const calculateTrends = (
 const checkMetricThresholds = async (metrics: EmpathyMetrics) => {
   const criticalThreshold = 6.0;
   const warningThreshold = 7.0;
-  
+
   for (const [key, value] of Object.entries(metrics)) {
-    if (typeof value === 'number') {
+    if (typeof value === "number") {
       if (value < criticalThreshold) {
         await sendCriticalAlert(`Critical: ${key} below threshold at ${value}`);
       } else if (value < warningThreshold) {
-        await sendWarningAlert(`Warning: ${key} approaching threshold at ${value}`);
+        await sendWarningAlert(
+          `Warning: ${key} approaching threshold at ${value}`,
+        );
       }
     }
   }
 };
 
 // Track family protection success
-export const trackFamilyProtectionSuccess = async (): Promise<FamilyProtectionSuccessMetrics> => {
-  return {
-    completionRates: {
-      onboardingCompletion: await getOnboardingCompletionRate(),
-      firstTaskCompletion: await getFirstTaskCompletionRate(),
-      milestoneReaching: await getMilestoneReachingRate(),
-      planCompletion: await getPlanCompletionRate()
-    },
-    emotionalEngagement: {
-      assistantInteraction: await getAssistantInteractionRate(),
-      celebrationResponse: await getCelebrationResponseRate(),
-      supportUtilization: await getSupportUtilizationRate(),
-      returnEngagement: await getReturnEngagementRate()
-    },
-    familyImpact: {
-      familyPreparedness: await measureFamilyPreparedness(),
-      informationClarity: await measureInformationClarity(),
-      stressReduction: await measureFamilyStressReduction(),
-      wishesClarity: await measureWishesClarity()
-    }
+export const trackFamilyProtectionSuccess =
+  async (): Promise<FamilyProtectionSuccessMetrics> => {
+    return {
+      completionRates: {
+        onboardingCompletion: await getOnboardingCompletionRate(),
+        firstTaskCompletion: await getFirstTaskCompletionRate(),
+        milestoneReaching: await getMilestoneReachingRate(),
+        planCompletion: await getPlanCompletionRate(),
+      },
+      emotionalEngagement: {
+        assistantInteraction: await getAssistantInteractionRate(),
+        celebrationResponse: await getCelebrationResponseRate(),
+        supportUtilization: await getSupportUtilizationRate(),
+        returnEngagement: await getReturnEngagementRate(),
+      },
+      familyImpact: {
+        familyPreparedness: await measureFamilyPreparedness(),
+        informationClarity: await measureInformationClarity(),
+        stressReduction: await measureFamilyStressReduction(),
+        wishesClarity: await measureWishesClarity(),
+      },
+    };
   };
-};
 
 // Helper functions (mock implementations)
 async function storeMetrics(metrics: EmpathyMetrics): Promise<void> {
@@ -330,7 +354,9 @@ async function getHistoricalMetrics(days: number): Promise<EmpathyMetrics[]> {
   return [];
 }
 
-async function calculateAverageMetrics(metrics: EmpathyMetrics[]): Promise<EmpathyMetrics> {
+async function calculateAverageMetrics(
+  metrics: EmpathyMetrics[],
+): Promise<EmpathyMetrics> {
   // Calculate averages
   return metrics[0]; // Mock
 }
@@ -346,33 +372,93 @@ async function sendWarningAlert(message: string): Promise<void> {
 }
 
 // Mock metric calculation functions
-async function getUserFeedbackScore(): Promise<number> { return 8.2; }
-async function getUserBehaviorScore(): Promise<number> { return 8.5; }
-async function getNetPromoterScore(): Promise<number> { return 8.0; }
-async function getEmotionalCheckpointUsage(): Promise<number> { return 7.8; }
-async function getSupportMessageEngagement(): Promise<number> { return 8.3; }
-async function measureStressReduction(): Promise<number> { return 7.5; }
-async function analyzeFamilyFocusedContent(): Promise<number> { return 8.7; }
-async function measureUserUnderstanding(): Promise<number> { return 8.1; }
-async function getFamilyFeatureAdoption(): Promise<number> { return 7.9; }
-async function checkVoiceConsistency(): Promise<number> { return 8.4; }
-async function assessResponseQuality(): Promise<number> { return 8.6; }
-async function measureContextRetention(): Promise<number> { return 7.7; }
-async function getCelebrationEngagement(): Promise<number> { return 8.8; }
-async function measureMotivationIncrease(): Promise<number> { return 8.2; }
-async function getContinuationAfterCelebration(): Promise<number> { return 8.5; }
-async function getErrorRecoverySuccess(): Promise<number> { return 7.6; }
-async function measureConfidenceAfterError(): Promise<number> { return 7.3; }
-async function measureFrustrationMitigation(): Promise<number> { return 7.8; }
-async function getOnboardingCompletionRate(): Promise<number> { return 0.82; }
-async function getFirstTaskCompletionRate(): Promise<number> { return 0.75; }
-async function getMilestoneReachingRate(): Promise<number> { return 0.68; }
-async function getPlanCompletionRate(): Promise<number> { return 0.55; }
-async function getAssistantInteractionRate(): Promise<number> { return 0.88; }
-async function getCelebrationResponseRate(): Promise<number> { return 0.92; }
-async function getSupportUtilizationRate(): Promise<number> { return 0.65; }
-async function getReturnEngagementRate(): Promise<number> { return 0.78; }
-async function measureFamilyPreparedness(): Promise<number> { return 8.3; }
-async function measureInformationClarity(): Promise<number> { return 8.7; }
-async function measureFamilyStressReduction(): Promise<number> { return 7.9; }
-async function measureWishesClarity(): Promise<number> { return 8.5; }
+async function getUserFeedbackScore(): Promise<number> {
+  return 8.2;
+}
+async function getUserBehaviorScore(): Promise<number> {
+  return 8.5;
+}
+async function getNetPromoterScore(): Promise<number> {
+  return 8.0;
+}
+async function getEmotionalCheckpointUsage(): Promise<number> {
+  return 7.8;
+}
+async function getSupportMessageEngagement(): Promise<number> {
+  return 8.3;
+}
+async function measureStressReduction(): Promise<number> {
+  return 7.5;
+}
+async function analyzeFamilyFocusedContent(): Promise<number> {
+  return 8.7;
+}
+async function measureUserUnderstanding(): Promise<number> {
+  return 8.1;
+}
+async function getFamilyFeatureAdoption(): Promise<number> {
+  return 7.9;
+}
+async function checkVoiceConsistency(): Promise<number> {
+  return 8.4;
+}
+async function assessResponseQuality(): Promise<number> {
+  return 8.6;
+}
+async function measureContextRetention(): Promise<number> {
+  return 7.7;
+}
+async function getCelebrationEngagement(): Promise<number> {
+  return 8.8;
+}
+async function measureMotivationIncrease(): Promise<number> {
+  return 8.2;
+}
+async function getContinuationAfterCelebration(): Promise<number> {
+  return 8.5;
+}
+async function getErrorRecoverySuccess(): Promise<number> {
+  return 7.6;
+}
+async function measureConfidenceAfterError(): Promise<number> {
+  return 7.3;
+}
+async function measureFrustrationMitigation(): Promise<number> {
+  return 7.8;
+}
+async function getOnboardingCompletionRate(): Promise<number> {
+  return 0.82;
+}
+async function getFirstTaskCompletionRate(): Promise<number> {
+  return 0.75;
+}
+async function getMilestoneReachingRate(): Promise<number> {
+  return 0.68;
+}
+async function getPlanCompletionRate(): Promise<number> {
+  return 0.55;
+}
+async function getAssistantInteractionRate(): Promise<number> {
+  return 0.88;
+}
+async function getCelebrationResponseRate(): Promise<number> {
+  return 0.92;
+}
+async function getSupportUtilizationRate(): Promise<number> {
+  return 0.65;
+}
+async function getReturnEngagementRate(): Promise<number> {
+  return 0.78;
+}
+async function measureFamilyPreparedness(): Promise<number> {
+  return 8.3;
+}
+async function measureInformationClarity(): Promise<number> {
+  return 8.7;
+}
+async function measureFamilyStressReduction(): Promise<number> {
+  return 7.9;
+}
+async function measureWishesClarity(): Promise<number> {
+  return 8.5;
+}

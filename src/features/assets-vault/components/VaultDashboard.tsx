@@ -1,22 +1,35 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { useTranslation } from 'react-i18next';
-import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Home, Package, Landmark, Car, Laptop, Gem, PlusCircle, Search, Filter, Upload, FileText, Share2 } from 'lucide-react';
-import AssetTypeSelectorModal from '@/components/assets/AssetTypeSelectorModal';
-import DynamicAssetForm from '@/components/assets/DynamicAssetForm';
-import AssetCard from '@/components/assets/AssetCard';
-import { supabase } from '@/lib/supabase';
-import { useAuth } from '@/hooks/useAuth';
-import { Skeleton } from '@/components/ui/skeleton';
-import { Alert, AlertDescription } from '@/components/ui/alert';
-import type { AssetFileUpload } from '../components/AssetFileUpload';
-import type { AssetFileList } from '../components/AssetFileList';
-import type { AssetShareModal } from '../components/AssetShareModal';
-import type { assetFileService } from '../services/AssetFileService';
-import { PersonalAssistant } from '@/components/assistant/PersonalAssistant';
-import { useAssistant } from '@/hooks/useAssistant';
+import React, { useState, useEffect, useCallback } from "react";
+import { useTranslation } from "react-i18next";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import {
+  Home,
+  Package,
+  Landmark,
+  Car,
+  Laptop,
+  Gem,
+  PlusCircle,
+  Search,
+  Filter,
+  Upload,
+  FileText,
+  Share2,
+} from "lucide-react";
+import AssetTypeSelectorModal from "@/components/assets/AssetTypeSelectorModal";
+import DynamicAssetForm from "@/components/assets/DynamicAssetForm";
+import AssetCard from "@/components/assets/AssetCard";
+import { supabase } from "@/lib/supabase";
+import { useAuth } from "@/hooks/useAuth";
+import { Skeleton } from "@/components/ui/skeleton";
+import { Alert, AlertDescription } from "@/components/ui/alert";
+import type { AssetFileUpload } from "../components/AssetFileUpload";
+import type { AssetFileList } from "../components/AssetFileList";
+import type { AssetShareModal } from "../components/AssetShareModal";
+import type { assetFileService } from "../services/AssetFileService";
+import { PersonalAssistant } from "@/components/assistant/PersonalAssistant";
+import { useAssistant } from "@/hooks/useAssistant";
 
 interface Asset {
   id: string;
@@ -31,14 +44,16 @@ interface Asset {
 }
 
 export const Vault: React.FC = () => {
-  const { t } = useTranslation('assets');
+  const { t } = useTranslation("assets");
   const { user } = useAuth();
   const { updateProgress, updateEmotionalState } = useAssistant();
   const [isLoading, setIsLoading] = useState(true);
   const [assets, setAssets] = useState<Asset[]>([]);
   const [filteredAssets, setFilteredAssets] = useState<Asset[]>([]);
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedMainCategory, setSelectedMainCategory] = useState<string | null>(null);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [selectedMainCategory, setSelectedMainCategory] = useState<
+    string | null
+  >(null);
   const [showSubTypeModal, setShowSubTypeModal] = useState(false);
   const [selectedSubType, setSelectedSubType] = useState<string | null>(null);
   const [showDynamicForm, setShowDynamicForm] = useState(false);
@@ -47,34 +62,34 @@ export const Vault: React.FC = () => {
 
   const fetchAssets = useCallback(async () => {
     if (!user) return;
-    
+
     try {
       setIsLoading(true);
       setError(null);
-      
+
       const { data, error } = await supabase
-        .from('assets')
-        .select('*')
-        .eq('user_id', user.id)
-        .order('created_at', { ascending: false });
+        .from("assets")
+        .select("*")
+        .eq("user_id", user.id)
+        .order("created_at", { ascending: false });
 
       if (error) throw error;
-      
+
       setAssets(data || []);
       setFilteredAssets(data || []);
-      
+
       // Update assistant context based on assets
       const assetCount = data?.length || 0;
       if (assetCount === 0) {
-        updateEmotionalState('overwhelmed');
+        updateEmotionalState("overwhelmed");
       } else if (assetCount < 3) {
-        updateEmotionalState('anxious');
+        updateEmotionalState("anxious");
       } else {
-        updateEmotionalState('hopeful');
+        updateEmotionalState("hopeful");
       }
     } catch (err) {
-      console.error('Error fetching assets:', err);
-      setError(t('errors.loadingAssets'));
+      console.error("Error fetching assets:", err);
+      setError(t("errors.loadingAssets"));
     } finally {
       setIsLoading(false);
     }
@@ -82,7 +97,6 @@ export const Vault: React.FC = () => {
 
   // Fetch assets on component mount
   useEffect(() => {
-     
     fetchAssets();
   }, [user, fetchAssets]);
 
@@ -93,10 +107,10 @@ export const Vault: React.FC = () => {
     } else {
       const query = searchQuery.toLowerCase();
       const filtered = assets.filter(
-        asset => 
+        (asset) =>
           asset.name.toLowerCase().includes(query) ||
           asset.main_category.toLowerCase().includes(query) ||
-          asset.sub_type.toLowerCase().includes(query)
+          asset.sub_type.toLowerCase().includes(query),
       );
       setFilteredAssets(filtered);
     }
@@ -124,7 +138,7 @@ export const Vault: React.FC = () => {
 
   const handleViewAsset = (asset: Asset) => {
     // TODO: Implement view asset details
-    console.log('View asset:', asset);
+    console.log("View asset:", asset);
   };
 
   const handleEditAsset = (asset: Asset) => {
@@ -135,21 +149,21 @@ export const Vault: React.FC = () => {
   };
 
   const handleDeleteAsset = async (asset: Asset) => {
-    if (!confirm(t('vault.confirmDeletion', { assetName: asset.name }))) return;
-    
+    if (!confirm(t("vault.confirmDeletion", { assetName: asset.name }))) return;
+
     try {
       const { error } = await supabase
-        .from('assets')
+        .from("assets")
         .delete()
-        .eq('id', asset.id);
-        
+        .eq("id", asset.id);
+
       if (error) throw error;
-      
+
       // Remove from local state
-      setAssets(prev => prev.filter(a => a.id !== asset.id));
+      setAssets((prev) => prev.filter((a) => a.id !== asset.id));
     } catch (err) {
-      console.error('Error deleting asset:', err);
-      alert(t('assets.errorDeletingAsset'));
+      console.error("Error deleting asset:", err);
+      alert(t("assets.errorDeletingAsset"));
     }
   };
 
@@ -172,8 +186,8 @@ export const Vault: React.FC = () => {
     <div className="container mx-auto px-4 md:px-6 lg:px-8 py-4 md:py-8 space-y-4 md:space-y-6 lg:space-y-8 max-w-screen-xl">
       {/* Header */}
       <div className="space-y-2">
-        <h1 className="text-3xl font-bold">{t('assets.title')}</h1>
-        <p className="text-lg text-muted-foreground">{t('assets.subtitle')}</p>
+        <h1 className="text-3xl font-bold">{t("assets.title")}</h1>
+        <p className="text-lg text-muted-foreground">{t("assets.subtitle")}</p>
       </div>
 
       {/* Error Alert */}
@@ -190,86 +204,98 @@ export const Vault: React.FC = () => {
           <div className="text-center max-w-4xl mx-auto space-y-8">
             {/* Large Headline */}
             <h2 className="text-4xl font-bold text-foreground">
-              {t('assets.addFirst')}
+              {t("assets.addFirst")}
             </h2>
-            
+
             {/* Asset Type Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {/* Add Property */}
-              <Card 
+              <Card
                 className="hover:shadow-lg transition-all cursor-pointer border-2 hover:border-primary"
-                onClick={() => handleAssetTypeClick('Property')}
+                onClick={() => handleAssetTypeClick("Property")}
               >
                 <CardContent className="flex flex-col items-center justify-center p-8 space-y-4">
                   <div className="p-4 bg-primary/10 rounded-full">
                     <Home className="h-12 w-12 text-primary" />
                   </div>
-                  <h3 className="text-lg font-semibold">{t('categories.realEstate')}</h3>
+                  <h3 className="text-lg font-semibold">
+                    {t("categories.realEstate")}
+                  </h3>
                 </CardContent>
               </Card>
 
               {/* Add Finances */}
-              <Card 
+              <Card
                 className="hover:shadow-lg transition-all cursor-pointer border-2 hover:border-primary"
-                onClick={() => handleAssetTypeClick('Finances')}
+                onClick={() => handleAssetTypeClick("Finances")}
               >
                 <CardContent className="flex flex-col items-center justify-center p-8 space-y-4">
                   <div className="p-4 bg-primary/10 rounded-full">
                     <Landmark className="h-12 w-12 text-primary" />
                   </div>
-                  <h3 className="text-lg font-semibold">{t('categories.financial')}</h3>
+                  <h3 className="text-lg font-semibold">
+                    {t("categories.financial")}
+                  </h3>
                 </CardContent>
               </Card>
 
               {/* Add Vehicle */}
-              <Card 
+              <Card
                 className="hover:shadow-lg transition-all cursor-pointer border-2 hover:border-primary"
-                onClick={() => handleAssetTypeClick('Vehicle')}
+                onClick={() => handleAssetTypeClick("Vehicle")}
               >
                 <CardContent className="flex flex-col items-center justify-center p-8 space-y-4">
                   <div className="p-4 bg-primary/10 rounded-full">
                     <Car className="h-12 w-12 text-primary" />
                   </div>
-                  <h3 className="text-lg font-semibold">{t('categories.vehicles')}</h3>
+                  <h3 className="text-lg font-semibold">
+                    {t("categories.vehicles")}
+                  </h3>
                 </CardContent>
               </Card>
 
               {/* Add Digital Asset */}
-              <Card 
+              <Card
                 className="hover:shadow-lg transition-all cursor-pointer border-2 hover:border-primary"
-                onClick={() => handleAssetTypeClick('Digital Asset')}
+                onClick={() => handleAssetTypeClick("Digital Asset")}
               >
                 <CardContent className="flex flex-col items-center justify-center p-8 space-y-4">
                   <div className="p-4 bg-primary/10 rounded-full">
                     <Laptop className="h-12 w-12 text-primary" />
                   </div>
-                  <h3 className="text-lg font-semibold">{t('categories.digital')}</h3>
+                  <h3 className="text-lg font-semibold">
+                    {t("categories.digital")}
+                  </h3>
                 </CardContent>
               </Card>
 
               {/* Add Personal Item */}
-              <Card 
+              <Card
                 className="hover:shadow-lg transition-all cursor-pointer border-2 hover:border-primary"
-                onClick={() => handleAssetTypeClick('Personal Item')}
+                onClick={() => handleAssetTypeClick("Personal Item")}
               >
                 <CardContent className="flex flex-col items-center justify-center p-8 space-y-4">
                   <div className="p-4 bg-primary/10 rounded-full">
                     <Gem className="h-12 w-12 text-primary" />
                   </div>
-                  <h3 className="text-lg font-semibold">{t('categories.personal')}</h3>
+                  <h3 className="text-lg font-semibold">
+                    {t("categories.personal")}
+                  </h3>
                 </CardContent>
               </Card>
 
               {/* Add Something Else */}
-              <Card 
+              <Card
                 className="hover:shadow-lg transition-all cursor-pointer border-2 hover:border-primary"
-                onClick={() => handleAssetTypeClick('Other')}
+                onClick={() => handleAssetTypeClick("Other")}
               >
                 <CardContent className="flex flex-col items-center justify-center p-8 space-y-4">
                   <div className="p-4 bg-primary/10 rounded-full">
                     <PlusCircle className="h-12 w-12 text-primary" />
                   </div>
-                  <h3 className="text-lg font-semibold">{t('assets.addOther')}</h3>
+                  <h3 className="text-lg font-semibold">
+                    {t("assets.addOther")}
+                  </h3>
                 </CardContent>
               </Card>
             </div>
@@ -284,26 +310,29 @@ export const Vault: React.FC = () => {
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
               <Input
                 type="search"
-                placeholder={t('assets.searchPlaceholder')}
+                placeholder={t("assets.searchPlaceholder")}
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="pl-10"
               />
             </div>
-            <Button 
+            <Button
               onClick={() => {
                 setSelectedMainCategory(null);
                 setShowSubTypeModal(false);
                 // Show asset type selector
-                const firstCard = document.querySelector('[data-asset-type]');
+                const firstCard = document.querySelector("[data-asset-type]");
                 if (firstCard) {
-                  firstCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                  firstCard.scrollIntoView({
+                    behavior: "smooth",
+                    block: "center",
+                  });
                 }
               }}
               className="shrink-0"
             >
               <PlusCircle className="mr-2 h-4 w-4" />
-              {t('assets.addAsset')}
+              {t("assets.addAsset")}
             </Button>
           </div>
 
@@ -312,28 +341,39 @@ export const Vault: React.FC = () => {
             <Card>
               <CardContent className="p-6">
                 <div className="text-2xl font-bold">{assets.length}</div>
-                <p className="text-sm text-muted-foreground">{t('assets.totalAssets')}</p>
+                <p className="text-sm text-muted-foreground">
+                  {t("assets.totalAssets")}
+                </p>
               </CardContent>
             </Card>
             <Card>
               <CardContent className="p-6">
                 <div className="text-2xl font-bold">
-                  {assets.reduce((sum, asset) => sum + (asset.estimated_value || 0), 0).toLocaleString('en-US', {
-                    style: 'currency',
-                    currency: 'USD',
-                    minimumFractionDigits: 0,
-                    maximumFractionDigits: 0,
-                  })}
+                  {assets
+                    .reduce(
+                      (sum, asset) => sum + (asset.estimated_value || 0),
+                      0,
+                    )
+                    .toLocaleString("en-US", {
+                      style: "currency",
+                      currency: "USD",
+                      minimumFractionDigits: 0,
+                      maximumFractionDigits: 0,
+                    })}
                 </div>
-                <p className="text-sm text-muted-foreground">{t('assets.totalValue')}</p>
+                <p className="text-sm text-muted-foreground">
+                  {t("assets.totalValue")}
+                </p>
               </CardContent>
             </Card>
             <Card>
               <CardContent className="p-6">
                 <div className="text-2xl font-bold">
-                  {[...new Set(assets.map(a => a.main_category))].length}
+                  {[...new Set(assets.map((a) => a.main_category))].length}
                 </div>
-                <p className="text-sm text-muted-foreground">{t('assets.categories')}</p>
+                <p className="text-sm text-muted-foreground">
+                  {t("assets.categories")}
+                </p>
               </CardContent>
             </Card>
           </div>
@@ -355,8 +395,8 @@ export const Vault: React.FC = () => {
             <div className="text-center py-12">
               <p className="text-muted-foreground">
                 {searchQuery
-                  ? t('vault.noAssetsFound', { searchQuery })
-                  : t('assets.startAddingAssets')}
+                  ? t("vault.noAssetsFound", { searchQuery })
+                  : t("assets.startAddingAssets")}
               </p>
             </div>
           )}
@@ -364,15 +404,41 @@ export const Vault: React.FC = () => {
           {/* Quick Add Asset Types */}
           {assets.length > 0 && (
             <div className="border-t pt-8">
-              <h3 className="text-lg font-semibold mb-4">{t('assets.addNewAsset')}</h3>
+              <h3 className="text-lg font-semibold mb-4">
+                {t("assets.addNewAsset")}
+              </h3>
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3">
                 {[
-                  { label: t('assets.property'), icon: Home, category: 'Property' },
-                  { label: t('assets.finances'), icon: Landmark, category: 'Finances' },
-                  { label: t('assets.vehicle'), icon: Car, category: 'Vehicle' },
-                  { label: t('assets.digital'), icon: Laptop, category: 'Digital Asset' },
-                  { label: t('assets.personal'), icon: Gem, category: 'Personal Item' },
-                  { label: t('assets.other'), icon: PlusCircle, category: 'Other' },
+                  {
+                    label: t("assets.property"),
+                    icon: Home,
+                    category: "Property",
+                  },
+                  {
+                    label: t("assets.finances"),
+                    icon: Landmark,
+                    category: "Finances",
+                  },
+                  {
+                    label: t("assets.vehicle"),
+                    icon: Car,
+                    category: "Vehicle",
+                  },
+                  {
+                    label: t("assets.digital"),
+                    icon: Laptop,
+                    category: "Digital Asset",
+                  },
+                  {
+                    label: t("assets.personal"),
+                    icon: Gem,
+                    category: "Personal Item",
+                  },
+                  {
+                    label: t("assets.other"),
+                    icon: PlusCircle,
+                    category: "Other",
+                  },
                 ].map((type) => {
                   const Icon = type.icon;
                   return (
@@ -398,7 +464,7 @@ export const Vault: React.FC = () => {
       <AssetTypeSelectorModal
         isOpen={showSubTypeModal}
         onClose={() => setShowSubTypeModal(false)}
-        mainCategory={selectedMainCategory || ''}
+        mainCategory={selectedMainCategory || ""}
         onSelectSubType={handleSubTypeSelect}
       />
 
@@ -406,19 +472,22 @@ export const Vault: React.FC = () => {
       <DynamicAssetForm
         isOpen={showDynamicForm}
         onClose={handleFormClose}
-        mainCategory={selectedMainCategory || ''}
-        subType={selectedSubType || ''}
+        mainCategory={selectedMainCategory || ""}
+        subType={selectedSubType || ""}
       />
-      
+
       {/* Personal Assistant */}
       {!isLoading && (
-        <PersonalAssistant 
+        <PersonalAssistant
           currentPage="assets"
           contextData={{
             assetCount: assets.length,
-            totalValue: assets.reduce((sum, asset) => sum + (asset.estimated_value || 0), 0),
-            categories: [...new Set(assets.map(a => a.main_category))],
-            hasNoAssets: assets.length === 0
+            totalValue: assets.reduce(
+              (sum, asset) => sum + (asset.estimated_value || 0),
+              0,
+            ),
+            categories: [...new Set(assets.map((a) => a.main_category))],
+            hasNoAssets: assets.length === 0,
           }}
         />
       )}

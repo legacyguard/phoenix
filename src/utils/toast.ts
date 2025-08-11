@@ -1,3 +1,3 @@
-import type { toast } from "sonner"
+import type { toast } from "sonner";
 
-export { toast } 
+export { toast };

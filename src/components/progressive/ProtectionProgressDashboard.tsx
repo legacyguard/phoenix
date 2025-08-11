@@ -1,14 +1,27 @@
-import React, { useState, useEffect } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { Progress } from '@/components/ui/progress';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { 
-  Shield, FileText, Users, Heart, Home, 
-  ChevronRight, Check, Circle, AlertCircle
-} from 'lucide-react';
-import { 
+import React, { useState, useEffect } from "react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Progress } from "@/components/ui/progress";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import {
+  Shield,
+  FileText,
+  Users,
+  Heart,
+  Home,
+  ChevronRight,
+  Check,
+  Circle,
+  AlertCircle,
+} from "lucide-react";
+import {
   UserProgress,
   ProtectionFeature,
   getDisclosureLevel,
@@ -16,14 +29,14 @@ import {
   getNextLogicalStep,
   getProtectionStatus,
   getConfidenceMessage,
-  PROTECTION_FEATURES
-} from '@/services/familyProtectionDisclosure';
-import { 
-  ProtectionMilestone, 
+  PROTECTION_FEATURES,
+} from "@/services/familyProtectionDisclosure";
+import {
+  ProtectionMilestone,
   PROTECTION_MILESTONES,
-  getConfidenceAcknowledgment 
-} from '@/components/milestones/ProtectionMilestone';
-import { cn } from '@/lib/utils';
+  getConfidenceAcknowledgment,
+} from "@/components/milestones/ProtectionMilestone";
+import { cn } from "@/lib/utils";
 
 interface ProtectionProgressDashboardProps {
   userProgress: UserProgress;
@@ -32,14 +45,15 @@ interface ProtectionProgressDashboardProps {
   className?: string;
 }
 
-export const ProtectionProgressDashboard: React.FC<ProtectionProgressDashboardProps> = ({
-  userProgress,
-  onFeatureAccess,
-  onStepComplete,
-  className
-}) => {
-  const [activeMilestone, setActiveMilestone] = useState<typeof PROTECTION_MILESTONES[0] | null>(null);
-  const [acknowledgedMilestones, setAcknowledgedMilestones] = useState<Set<string>>(new Set());
+export const ProtectionProgressDashboard: React.FC<
+  ProtectionProgressDashboardProps
+> = ({ userProgress, onFeatureAccess, onStepComplete, className }) => {
+  const [activeMilestone, setActiveMilestone] = useState<
+    (typeof PROTECTION_MILESTONES)[0] | null
+  >(null);
+  const [acknowledgedMilestones, setAcknowledgedMilestones] = useState<
+    Set<string>
+  >(new Set());
 
   const disclosureLevel = getDisclosureLevel(userProgress);
   const protectionStatus = getProtectionStatus(userProgress);
@@ -61,20 +75,27 @@ export const ProtectionProgressDashboard: React.FC<ProtectionProgressDashboardPr
     checkMilestones();
   }, [userProgress, acknowledgedMilestones]);
 
-  const checkMilestoneCompletion = (milestoneId: string, progress: UserProgress): boolean => {
+  const checkMilestoneCompletion = (
+    milestoneId: string,
+    progress: UserProgress,
+  ): boolean => {
     switch (milestoneId) {
-      case 'first-asset-documented':
+      case "first-asset-documented":
         return progress.documentedAssets === 1;
-      case 'foundation-complete':
-        return progress.completedSteps.includes('basic-asset-documentation') &&
-               progress.completedSteps.includes('primary-family-info');
-      case 'will-created':
-        return progress.completedSteps.includes('basic-will');
-      case 'trusted-circle-established':
-        return progress.completedSteps.includes('trusted-circle');
-      case 'comprehensive-protection':
-        return progress.protectionLevel === 'comprehensive' &&
-               progress.completedSteps.length >= 6;
+      case "foundation-complete":
+        return (
+          progress.completedSteps.includes("basic-asset-documentation") &&
+          progress.completedSteps.includes("primary-family-info")
+        );
+      case "will-created":
+        return progress.completedSteps.includes("basic-will");
+      case "trusted-circle-established":
+        return progress.completedSteps.includes("trusted-circle");
+      case "comprehensive-protection":
+        return (
+          progress.protectionLevel === "comprehensive" &&
+          progress.completedSteps.length >= 6
+        );
       default:
         return false;
     }
@@ -82,7 +103,9 @@ export const ProtectionProgressDashboard: React.FC<ProtectionProgressDashboardPr
 
   const handleMilestoneAcknowledge = () => {
     if (activeMilestone) {
-      setAcknowledgedMilestones(prev => new Set(prev).add(activeMilestone.id));
+      setAcknowledgedMilestones((prev) =>
+        new Set(prev).add(activeMilestone.id),
+      );
       setActiveMilestone(null);
     }
   };
@@ -94,22 +117,24 @@ export const ProtectionProgressDashboard: React.FC<ProtectionProgressDashboardPr
     }
   };
 
-  const getFeatureStatus = (feature: ProtectionFeature): 'completed' | 'available' | 'locked' => {
+  const getFeatureStatus = (
+    feature: ProtectionFeature,
+  ): "completed" | "available" | "locked" => {
     if (userProgress.completedSteps.includes(feature.id)) {
-      return 'completed';
+      return "completed";
     }
     if (shouldShowFeature(feature.id, userProgress)) {
-      return 'available';
+      return "available";
     }
-    return 'locked';
+    return "locked";
   };
 
-  const availableFeatures = PROTECTION_FEATURES.filter(f => 
-    getFeatureStatus(f) === 'available'
+  const availableFeatures = PROTECTION_FEATURES.filter(
+    (f) => getFeatureStatus(f) === "available",
   );
 
-  const completedFeatures = PROTECTION_FEATURES.filter(f =>
-    getFeatureStatus(f) === 'completed'
+  const completedFeatures = PROTECTION_FEATURES.filter(
+    (f) => getFeatureStatus(f) === "completed",
   );
 
   return (
@@ -154,11 +179,16 @@ export const ProtectionProgressDashboard: React.FC<ProtectionProgressDashboardPr
             <div className="flex justify-between text-sm">
               <span className="text-muted-foreground">Protection Progress</span>
               <span className="font-medium">
-                {userProgress.completedSteps.length} of {PROTECTION_FEATURES.length} steps completed
+                {userProgress.completedSteps.length} of{" "}
+                {PROTECTION_FEATURES.length} steps completed
               </span>
             </div>
-            <Progress 
-              value={(userProgress.completedSteps.length / PROTECTION_FEATURES.length) * 100}
+            <Progress
+              value={
+                (userProgress.completedSteps.length /
+                  PROTECTION_FEATURES.length) *
+                100
+              }
               className="h-2"
             />
           </div>
@@ -190,10 +220,11 @@ export const ProtectionProgressDashboard: React.FC<ProtectionProgressDashboardPr
               </div>
               <div className="bg-blue-50 rounded-lg p-3 border border-blue-200">
                 <p className="text-sm text-blue-700">
-                  <span className="font-medium">Family Benefit:</span> {nextStep.familyBenefit}
+                  <span className="font-medium">Family Benefit:</span>{" "}
+                  {nextStep.familyBenefit}
                 </p>
               </div>
-              <Button 
+              <Button
                 onClick={() => onFeatureAccess?.(nextStep.id)}
                 className="w-full bg-warm-sage hover:bg-warm-sage/90"
               >
@@ -216,14 +247,16 @@ export const ProtectionProgressDashboard: React.FC<ProtectionProgressDashboardPr
           {availableFeatures.length > 0 ? (
             <Card>
               <CardHeader>
-                <CardTitle className="text-lg">Available Protection Steps</CardTitle>
+                <CardTitle className="text-lg">
+                  Available Protection Steps
+                </CardTitle>
                 <CardDescription>
                   These steps are ready for you to complete
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="space-y-3">
-                  {availableFeatures.map(feature => (
+                  {availableFeatures.map((feature) => (
                     <FeatureCard
                       key={feature.id}
                       feature={feature}
@@ -239,7 +272,8 @@ export const ProtectionProgressDashboard: React.FC<ProtectionProgressDashboardPr
               <CardContent className="py-8 text-center">
                 <Shield className="h-12 w-12 mx-auto mb-4 text-gray-400" />
                 <p className="text-muted-foreground">
-                  Complete current steps to unlock additional protection features
+                  Complete current steps to unlock additional protection
+                  features
                 </p>
               </CardContent>
             </Card>
@@ -250,14 +284,16 @@ export const ProtectionProgressDashboard: React.FC<ProtectionProgressDashboardPr
           {completedFeatures.length > 0 ? (
             <Card>
               <CardHeader>
-                <CardTitle className="text-lg">Completed Protection Steps</CardTitle>
+                <CardTitle className="text-lg">
+                  Completed Protection Steps
+                </CardTitle>
                 <CardDescription>
                   {getConfidenceAcknowledgment(userProgress.protectionLevel)}
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="space-y-3">
-                  {completedFeatures.map(feature => (
+                  {completedFeatures.map((feature) => (
                     <FeatureCard
                       key={feature.id}
                       feature={feature}
@@ -286,14 +322,14 @@ export const ProtectionProgressDashboard: React.FC<ProtectionProgressDashboardPr
 // Feature card component
 const FeatureCard: React.FC<{
   feature: ProtectionFeature;
-  status: 'completed' | 'available' | 'locked';
+  status: "completed" | "available" | "locked";
   onClick?: () => void;
 }> = ({ feature, status, onClick }) => {
   const getIcon = () => {
     switch (status) {
-      case 'completed':
+      case "completed":
         return <Check className="h-5 w-5 text-green-600" />;
-      case 'available':
+      case "available":
         return <Circle className="h-5 w-5 text-amber-600" />;
       default:
         return <Circle className="h-5 w-5 text-gray-400" />;
@@ -304,24 +340,24 @@ const FeatureCard: React.FC<{
     <div
       className={cn(
         "flex items-start gap-3 p-4 rounded-lg border transition-all",
-        status === 'available' && "hover:bg-gray-50 cursor-pointer",
-        status === 'completed' && "bg-green-50/50 border-green-200",
-        status === 'available' && "border-amber-200",
-        status === 'locked' && "opacity-60"
+        status === "available" && "hover:bg-gray-50 cursor-pointer",
+        status === "completed" && "bg-green-50/50 border-green-200",
+        status === "available" && "border-amber-200",
+        status === "locked" && "opacity-60",
       )}
-      onClick={status === 'available' ? onClick : undefined}
+      onClick={status === "available" ? onClick : undefined}
     >
       <div className="mt-0.5">{getIcon()}</div>
       <div className="flex-1 space-y-1">
         <h4 className="font-medium text-sm">{feature.name}</h4>
         <p className="text-xs text-muted-foreground">{feature.description}</p>
-        {status === 'available' && (
+        {status === "available" && (
           <p className="text-xs text-blue-600 font-medium mt-2">
             {feature.familyBenefit}
           </p>
         )}
       </div>
-      {status === 'available' && (
+      {status === "available" && (
         <ChevronRight className="h-4 w-4 text-muted-foreground mt-1" />
       )}
     </div>

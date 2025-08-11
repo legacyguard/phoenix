@@ -1,13 +1,19 @@
-import React, { useState, useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
-import { useGenderAwareTranslation } from '@/i18n/useGenderAwareTranslation';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { supabase } from '@/integrations/supabase/client';
-import { toast } from 'sonner';
-import { CheckCircle2, XCircle, Shield, User } from 'lucide-react';
-import { ErrorBoundary } from '@/components/common/ErrorBoundary';
+import React, { useState, useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import { useGenderAwareTranslation } from "@/i18n/useGenderAwareTranslation";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "sonner";
+import { CheckCircle2, XCircle, Shield, User } from "lucide-react";
+import { ErrorBoundary } from "@/components/common/ErrorBoundary";
 
 interface GuardianInvitation {
   id: string;
@@ -21,11 +27,11 @@ interface GuardianInvitation {
 export const InviteAcceptance: React.FC = () => {
   const { inviteToken } = useParams<{ inviteToken: string }>();
   const navigate = useNavigate();
-  const { t } = useGenderAwareTranslation('auth');
+  const { t } = useGenderAwareTranslation("auth");
   const [invitation, setInvitation] = useState<GuardianInvitation | null>(null);
   const [loading, setLoading] = useState(true);
   const [processing, setProcessing] = useState(false);
-  const [inviterName, setInviterName] = useState<string>('');
+  const [inviterName, setInviterName] = useState<string>("");
 
   useEffect(() => {
     let mounted = true;
@@ -34,8 +40,8 @@ export const InviteAcceptance: React.FC = () => {
     const loadInvitationData = async () => {
       if (!inviteToken) {
         if (mounted) {
-          toast.error(t('inviteAcceptance.errors.invalidLink'));
-          navigate('/');
+          toast.error(t("inviteAcceptance.errors.invalidLink"));
+          navigate("/");
         }
         return;
       }
@@ -43,56 +49,56 @@ export const InviteAcceptance: React.FC = () => {
       try {
         // Note: Supabase doesn't support AbortController yet, but we can still check mounted status
         const { data, error } = await supabase
-          .from('guardians')
-          .select('*')
-          .eq('invitation_token', inviteToken)
+          .from("guardians")
+          .select("*")
+          .eq("invitation_token", inviteToken)
           .single();
 
         if (!mounted) return;
 
         if (error || !data) {
-          toast.error(t('inviteAcceptance.errors.notFound'));
-          navigate('/');
+          toast.error(t("inviteAcceptance.errors.notFound"));
+          navigate("/");
           return;
         }
 
-        if (data.invitation_status !== 'sent') {
-          toast.error(t('inviteAcceptance.errors.alreadyProcessed'));
-          navigate('/');
+        if (data.invitation_status !== "sent") {
+          toast.error(t("inviteAcceptance.errors.alreadyProcessed"));
+          navigate("/");
           return;
         }
 
         setInvitation(data);
         // Get inviter's information
-        setInviterName(t('inviteAcceptance.defaultInviterName'));
+        setInviterName(t("inviteAcceptance.defaultInviterName"));
       } catch (error: Record<string, unknown>) {
         if (!mounted) return;
-        
+
         const timestamp = new Date().toISOString();
-const errorMessage = error?.message || t('errors.unknown');
-        const errorCode = error?.code || 'UNKNOWN_ERROR';
-        
-        console.error('[Guardian Invitation] Error loading invitation:', {
+        const errorMessage = error?.message || t("errors.unknown");
+        const errorCode = error?.code || "UNKNOWN_ERROR";
+
+        console.error("[Guardian Invitation] Error loading invitation:", {
           timestamp,
-          operation: 'loadInvitation',
+          operation: "loadInvitation",
           errorCode,
           errorMessage,
           errorDetails: error,
-          stack: error?.stack
+          stack: error?.stack,
         });
-        
-        let userMessage = t('inviteAcceptance.errors.loadingFailed');
-        
-        if (error?.code === 'PGRST116') {
-          userMessage = t('errors.dataNotFound');
-        } else if (error?.message?.includes('network')) {
-          userMessage = t('errors.networkError');
-        } else if (error?.message?.includes('permission')) {
-          userMessage = t('errors.permissionDenied');
-        } else if (error?.message?.includes('duplicate')) {
-          userMessage = t('errors.duplicateRecord');
+
+        let userMessage = t("inviteAcceptance.errors.loadingFailed");
+
+        if (error?.code === "PGRST116") {
+          userMessage = t("errors.dataNotFound");
+        } else if (error?.message?.includes("network")) {
+          userMessage = t("errors.networkError");
+        } else if (error?.message?.includes("permission")) {
+          userMessage = t("errors.permissionDenied");
+        } else if (error?.message?.includes("duplicate")) {
+          userMessage = t("errors.duplicateRecord");
         }
-        
+
         toast.error(userMessage);
       } finally {
         if (mounted) {
@@ -111,65 +117,64 @@ const errorMessage = error?.message || t('errors.unknown');
 
   const loadInvitation = async () => {
     if (!inviteToken) {
-      toast.error(t('inviteAcceptance.errors.invalidLink'));
-      navigate('/');
+      toast.error(t("inviteAcceptance.errors.invalidLink"));
+      navigate("/");
       return;
     }
 
     try {
       const { data, error } = await supabase
-        .from('guardians')
-        .select('*')
-        .eq('invitation_token', inviteToken)
+        .from("guardians")
+        .select("*")
+        .eq("invitation_token", inviteToken)
         .single();
 
       if (error || !data) {
-        toast.error(t('inviteAcceptance.errors.notFound'));
-        navigate('/');
+        toast.error(t("inviteAcceptance.errors.notFound"));
+        navigate("/");
         return;
       }
 
-      if (data.invitation_status !== 'sent') {
-        toast.error(t('inviteAcceptance.errors.alreadyProcessed'));
-        navigate('/');
+      if (data.invitation_status !== "sent") {
+        toast.error(t("inviteAcceptance.errors.alreadyProcessed"));
+        navigate("/");
         return;
       }
 
       setInvitation(data);
-      
+
       // Get inviter's information (you might want to create a profiles table for this)
       // For now, we'll use a placeholder
-      setInviterName(t('inviteAcceptance.defaultInviterName'));
-      
+      setInviterName(t("inviteAcceptance.defaultInviterName"));
     } catch (error: Record<string, unknown>) {
       const timestamp = new Date().toISOString();
-const errorMessage = error?.message || t('errors.unknown');
-      const errorCode = error?.code || 'UNKNOWN_ERROR';
-      
+      const errorMessage = error?.message || t("errors.unknown");
+      const errorCode = error?.code || "UNKNOWN_ERROR";
+
       // Detailed logging for debugging
-      console.error('[Guardian Invitation] Error loading invitation:', {
+      console.error("[Guardian Invitation] Error loading invitation:", {
         timestamp,
-        operation: 'loadInvitation',
+        operation: "loadInvitation",
         errorCode,
         errorMessage,
         errorDetails: error,
-        stack: error?.stack
+        stack: error?.stack,
       });
-      
+
       // User-friendly message
-      let userMessage = t('inviteAcceptance.errors.loadingFailed');
-      
+      let userMessage = t("inviteAcceptance.errors.loadingFailed");
+
       // Specific messages based on error type
-      if (error?.code === 'PGRST116') {
-        userMessage = t('errors.dataNotFound');
-      } else if (error?.message?.includes('network')) {
-        userMessage = t('errors.networkError');
-      } else if (error?.message?.includes('permission')) {
-        userMessage = t('errors.permissionDenied');
-      } else if (error?.message?.includes('duplicate')) {
-        userMessage = t('errors.duplicateRecord');
+      if (error?.code === "PGRST116") {
+        userMessage = t("errors.dataNotFound");
+      } else if (error?.message?.includes("network")) {
+        userMessage = t("errors.networkError");
+      } else if (error?.message?.includes("permission")) {
+        userMessage = t("errors.permissionDenied");
+      } else if (error?.message?.includes("duplicate")) {
+        userMessage = t("errors.duplicateRecord");
       }
-      
+
       toast.error(userMessage);
     } finally {
       setLoading(false);
@@ -178,55 +183,54 @@ const errorMessage = error?.message || t('errors.unknown');
 
   const handleAccept = async () => {
     if (!invitation) return;
-    
+
     setProcessing(true);
     try {
       const { error } = await supabase
-        .from('guardians')
+        .from("guardians")
         .update({
-          invitation_status: 'accepted',
-          accepted_at: new Date().toISOString()
+          invitation_status: "accepted",
+          accepted_at: new Date().toISOString(),
         })
-        .eq('id', invitation.id);
+        .eq("id", invitation.id);
 
       if (error) {
         throw error;
       }
 
-      toast.success(t('inviteAcceptance.messages.accepted'));
-      
+      toast.success(t("inviteAcceptance.messages.accepted"));
+
       // Redirect to guardian view or login
-      navigate('/guardian-view');
-      
+      navigate("/guardian-view");
     } catch (error: Record<string, unknown>) {
       const timestamp = new Date().toISOString();
-const errorMessage = error?.message || t('errors.unknown');
-      const errorCode = error?.code || 'UNKNOWN_ERROR';
-      
+      const errorMessage = error?.message || t("errors.unknown");
+      const errorCode = error?.code || "UNKNOWN_ERROR";
+
       // Detailed logging for debugging
-      console.error('[Guardian Invitation] Error accepting invitation:', {
+      console.error("[Guardian Invitation] Error accepting invitation:", {
         timestamp,
-        operation: 'handleAccept',
+        operation: "handleAccept",
         errorCode,
         errorMessage,
         errorDetails: error,
-        stack: error?.stack
+        stack: error?.stack,
       });
-      
+
       // User-friendly message
-      let userMessage = t('inviteAcceptance.errors.acceptFailed');
-      
+      let userMessage = t("inviteAcceptance.errors.acceptFailed");
+
       // Specific messages based on error type
-      if (error?.code === 'PGRST116') {
-        userMessage = t('errors.dataNotFound');
-      } else if (error?.message?.includes('network')) {
-        userMessage = t('errors.networkError');
-      } else if (error?.message?.includes('permission')) {
-        userMessage = t('errors.permissionDenied');
-      } else if (error?.message?.includes('duplicate')) {
-        userMessage = t('errors.duplicateRecord');
+      if (error?.code === "PGRST116") {
+        userMessage = t("errors.dataNotFound");
+      } else if (error?.message?.includes("network")) {
+        userMessage = t("errors.networkError");
+      } else if (error?.message?.includes("permission")) {
+        userMessage = t("errors.permissionDenied");
+      } else if (error?.message?.includes("duplicate")) {
+        userMessage = t("errors.duplicateRecord");
       }
-      
+
       toast.error(userMessage);
     } finally {
       setProcessing(false);
@@ -235,52 +239,51 @@ const errorMessage = error?.message || t('errors.unknown');
 
   const handleDecline = async () => {
     if (!invitation) return;
-    
+
     setProcessing(true);
     try {
       const { error } = await supabase
-        .from('guardians')
+        .from("guardians")
         .update({
-          invitation_status: 'declined'
+          invitation_status: "declined",
         })
-        .eq('id', invitation.id);
+        .eq("id", invitation.id);
 
       if (error) {
         throw error;
       }
 
-      toast.success(t('inviteAcceptance.messages.declined'));
-      navigate('/');
-      
+      toast.success(t("inviteAcceptance.messages.declined"));
+      navigate("/");
     } catch (error: Record<string, unknown>) {
       const timestamp = new Date().toISOString();
-const errorMessage = error?.message || t('errors.unknown');
-      const errorCode = error?.code || 'UNKNOWN_ERROR';
-      
+      const errorMessage = error?.message || t("errors.unknown");
+      const errorCode = error?.code || "UNKNOWN_ERROR";
+
       // Detailed logging for debugging
-      console.error('[Guardian Invitation] Error declining invitation:', {
+      console.error("[Guardian Invitation] Error declining invitation:", {
         timestamp,
-        operation: 'handleDecline',
+        operation: "handleDecline",
         errorCode,
         errorMessage,
         errorDetails: error,
-        stack: error?.stack
+        stack: error?.stack,
       });
-      
+
       // User-friendly message
-      let userMessage = t('inviteAcceptance.errors.declineFailed');
-      
+      let userMessage = t("inviteAcceptance.errors.declineFailed");
+
       // Specific messages based on error type
-      if (error?.code === 'PGRST116') {
-        userMessage = t('errors.dataNotFound');
-      } else if (error?.message?.includes('network')) {
-        userMessage = t('errors.networkError');
-      } else if (error?.message?.includes('permission')) {
-        userMessage = t('errors.permissionDenied');
-      } else if (error?.message?.includes('duplicate')) {
-        userMessage = t('errors.duplicateRecord');
+      if (error?.code === "PGRST116") {
+        userMessage = t("errors.dataNotFound");
+      } else if (error?.message?.includes("network")) {
+        userMessage = t("errors.networkError");
+      } else if (error?.message?.includes("permission")) {
+        userMessage = t("errors.permissionDenied");
+      } else if (error?.message?.includes("duplicate")) {
+        userMessage = t("errors.duplicateRecord");
       }
-      
+
       toast.error(userMessage);
     } finally {
       setProcessing(false);
@@ -289,15 +292,17 @@ const errorMessage = error?.message || t('errors.unknown');
 
   if (loading) {
     return (
-    <ErrorBoundary>
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="animate-pulse">
-          <Shield className="h-8 w-8 text-primary mx-auto mb-4" />
-          <p className="text-muted-foreground">{t('inviteAcceptance.loading')}</p>
+      <ErrorBoundary>
+        <div className="min-h-screen flex items-center justify-center">
+          <div className="animate-pulse">
+            <Shield className="h-8 w-8 text-primary mx-auto mb-4" />
+            <p className="text-muted-foreground">
+              {t("inviteAcceptance.loading")}
+            </p>
+          </div>
         </div>
-      </div>
-    </ErrorBoundary>
-  );
+      </ErrorBoundary>
+    );
   }
 
   if (!invitation) {
@@ -306,8 +311,12 @@ const errorMessage = error?.message || t('errors.unknown');
         <Card className="w-full max-w-md">
           <CardContent className="text-center p-6">
             <XCircle className="h-12 w-12 text-destructive mx-auto mb-4" />
-            <h2 className="text-xl font-semibold mb-2">{t('inviteAcceptance.notFound.title')}</h2>
-            <p className="text-muted-foreground">{t('inviteAcceptance.notFound.description')}</p>
+            <h2 className="text-xl font-semibold mb-2">
+              {t("inviteAcceptance.notFound.title")}
+            </h2>
+            <p className="text-muted-foreground">
+              {t("inviteAcceptance.notFound.description")}
+            </p>
           </CardContent>
         </Card>
       </div>
@@ -322,25 +331,35 @@ const errorMessage = error?.message || t('errors.unknown');
             <Shield className="h-8 w-8 text-primary" />
           </div>
           <CardTitle className="text-2xl mb-2">
-            {t('invite.title', { name: inviterName })}
+            {t("invite.title", { name: inviterName })}
           </CardTitle>
           <CardDescription className="text-base">
-            {t('inviteAcceptance.subtitle')}
+            {t("inviteAcceptance.subtitle")}
           </CardDescription>
         </CardHeader>
-        
+
         <CardContent className="space-y-6">
           {/* Guardian Role Details */}
           <div className="bg-muted/50 p-4 rounded-lg space-y-3">
             <h3 className="font-semibold flex items-center">
               <User className="h-4 w-4 mr-2" />
-              {t('inviteAcceptance.guardianRole.title')}
+              {t("inviteAcceptance.guardianRole.title")}
             </h3>
             <div className="space-y-2 text-sm">
-              <p><strong>{t('inviteAcceptance.guardianRole.yourName')}</strong> {invitation.full_name}</p>
-              <p><strong>{t('inviteAcceptance.guardianRole.relationship')}</strong> {invitation.relationship}</p>
+              <p>
+                <strong>{t("inviteAcceptance.guardianRole.yourName")}</strong>{" "}
+                {invitation.full_name}
+              </p>
+              <p>
+                <strong>
+                  {t("inviteAcceptance.guardianRole.relationship")}
+                </strong>{" "}
+                {invitation.relationship}
+              </p>
               <div>
-                <strong>{t('inviteAcceptance.guardianRole.responsibilities')}</strong>
+                <strong>
+                  {t("inviteAcceptance.guardianRole.responsibilities")}
+                </strong>
                 <div className="flex flex-wrap gap-1 mt-1">
                   {invitation.roles.map((role, index) => (
                     <Badge key={index} variant="heritage" className="text-xs">
@@ -354,27 +373,31 @@ const errorMessage = error?.message || t('errors.unknown');
 
           {/* What This Means */}
           <div className="bg-primary/5 p-4 rounded-lg">
-            <h3 className="font-semibold text-primary mb-2">{t('inviteAcceptance.whatThisMeans.title')}</h3>
+            <h3 className="font-semibold text-primary mb-2">
+              {t("inviteAcceptance.whatThisMeans.title")}
+            </h3>
             <ul className="text-sm space-y-1 text-muted-foreground">
-              <li>• {t('inviteAcceptance.whatThisMeans.point1')}</li>
-              <li>• {t('inviteAcceptance.whatThisMeans.point2')}</li>
-              <li>• {t('inviteAcceptance.whatThisMeans.point3')}</li>
-              <li>• {t('inviteAcceptance.whatThisMeans.point4')}</li>
+              <li>• {t("inviteAcceptance.whatThisMeans.point1")}</li>
+              <li>• {t("inviteAcceptance.whatThisMeans.point2")}</li>
+              <li>• {t("inviteAcceptance.whatThisMeans.point3")}</li>
+              <li>• {t("inviteAcceptance.whatThisMeans.point4")}</li>
             </ul>
           </div>
 
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-3 pt-4">
-            <Button 
+            <Button
               onClick={handleAccept}
               disabled={processing}
               className="flex-1"
               size="lg"
             >
               <CheckCircle2 className="h-4 w-4 mr-2" />
-              {processing ? t('inviteAcceptance.buttons.processing') : t('inviteAcceptance.buttons.acceptRole')}
+              {processing
+                ? t("inviteAcceptance.buttons.processing")
+                : t("inviteAcceptance.buttons.acceptRole")}
             </Button>
-            <Button 
+            <Button
               variant="outline"
               onClick={handleDecline}
               disabled={processing}
@@ -382,12 +405,12 @@ const errorMessage = error?.message || t('errors.unknown');
               size="lg"
             >
               <XCircle className="h-4 w-4 mr-2" />
-              {t('inviteAcceptance.buttons.decline')}
+              {t("inviteAcceptance.buttons.decline")}
             </Button>
           </div>
 
           <p className="text-xs text-muted-foreground text-center">
-            {t('inviteAcceptance.disclaimer')}
+            {t("inviteAcceptance.disclaimer")}
           </p>
         </CardContent>
       </Card>

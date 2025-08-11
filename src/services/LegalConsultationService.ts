@@ -1,4 +1,4 @@
-import { supabase } from '@/lib/supabase';
+import { supabase } from "@/lib/supabase";
 
 export interface ConsultationRequest {
   id: string;
@@ -41,31 +41,31 @@ export class LegalConsultationService {
     consultationType: string,
     userQuestion: string,
     countryCode: string,
-    paymentAmount: number
+    paymentAmount: number,
   ): Promise<ConsultationRequest | null> {
     try {
       const { data, error } = await supabase
-        .from('legal_consultations')
+        .from("legal_consultations")
         .insert({
           user_id: userId,
           consultation_type: consultationType,
           user_question: userQuestion,
           country_code: countryCode,
-          status: 'pending_payment',
+          status: "pending_payment",
           payment_amount: paymentAmount,
-          payment_currency: 'EUR'
+          payment_currency: "EUR",
         })
         .select()
         .single();
 
       if (error) {
-        console.error('Error creating consultation:', error);
+        console.error("Error creating consultation:", error);
         return null;
       }
 
       return data;
     } catch (error) {
-      console.error('Error in createConsultation:', error);
+      console.error("Error in createConsultation:", error);
       return null;
     }
   }
@@ -73,45 +73,52 @@ export class LegalConsultationService {
   /**
    * Update the consultation status
    */
-  static async updateConsultationStatus(consultationId: string, status: string): Promise<boolean> {
+  static async updateConsultationStatus(
+    consultationId: string,
+    status: string,
+  ): Promise<boolean> {
     try {
       const { data, error } = await supabase
-        .from('legal_consultations')
+        .from("legal_consultations")
         .update({ status })
-        .eq('id', consultationId);
+        .eq("id", consultationId);
 
       if (error) {
-        console.error('Error updating consultation status:', error);
+        console.error("Error updating consultation status:", error);
         return false;
       }
 
       return true;
     } catch (error) {
-      console.error('Error in updateConsultationStatus:', error);
+      console.error("Error in updateConsultationStatus:", error);
       return false;
     }
   }
 
   // Fetch consultations for a user
-  static async getUserConsultations(userId: string): Promise<ConsultationRequest[]> {
+  static async getUserConsultations(
+    userId: string,
+  ): Promise<ConsultationRequest[]> {
     try {
       const { data, error } = await supabase
-        .from('legal_consultations')
-        .select(`
+        .from("legal_consultations")
+        .select(
+          `
           *,
           assigned_firm:law_firms(id, name, email)
-        `)
-        .eq('user_id', userId)
-        .order('created_at', { ascending: false });
+        `,
+        )
+        .eq("user_id", userId)
+        .order("created_at", { ascending: false });
 
       if (error) {
-        console.error('Error fetching user consultations:', error);
+        console.error("Error fetching user consultations:", error);
         return [];
       }
 
       return data || [];
     } catch (error) {
-      console.error('Error in getUserConsultations:', error);
+      console.error("Error in getUserConsultations:", error);
       return [];
     }
   }
@@ -119,25 +126,29 @@ export class LegalConsultationService {
   /**
    * Get consultation by ID
    */
-  static async getConsultationById(consultationId: string): Promise<ConsultationRequest | null> {
+  static async getConsultationById(
+    consultationId: string,
+  ): Promise<ConsultationRequest | null> {
     try {
       const { data, error } = await supabase
-        .from('legal_consultations')
-        .select(`
+        .from("legal_consultations")
+        .select(
+          `
           *,
           assigned_firm:law_firms(id, name, email)
-        `)
-        .eq('id', consultationId)
+        `,
+        )
+        .eq("id", consultationId)
         .single();
 
       if (error) {
-        console.error('Error fetching consultation:', error);
+        console.error("Error fetching consultation:", error);
         return null;
       }
 
       return data;
     } catch (error) {
-      console.error('Error in getConsultationById:', error);
+      console.error("Error in getConsultationById:", error);
       return null;
     }
   }
@@ -147,20 +158,20 @@ export class LegalConsultationService {
    */
   static async updatePaymentInfo(
     consultationId: string,
-    paymentIntentId: string
+    paymentIntentId: string,
   ): Promise<boolean> {
     try {
       const { error } = await supabase
-        .from('legal_consultations')
+        .from("legal_consultations")
         .update({
           payment_intent_id: paymentIntentId,
           paid_at: new Date().toISOString(),
-          status: 'submitted_to_firm'
+          status: "submitted_to_firm",
         })
-        .eq('id', consultationId);
+        .eq("id", consultationId);
 
       if (error) {
-        console.error('Error updating payment info:', error);
+        console.error("Error updating payment info:", error);
         return false;
       }
 
@@ -169,7 +180,7 @@ export class LegalConsultationService {
 
       return true;
     } catch (error) {
-      console.error('Error in updatePaymentInfo:', error);
+      console.error("Error in updatePaymentInfo:", error);
       return false;
     }
   }
@@ -180,19 +191,19 @@ export class LegalConsultationService {
   static async getAvailableLawFirms(countryCode: string): Promise<LawFirm[]> {
     try {
       const { data, error } = await supabase
-        .from('law_firms')
-        .select('*')
-        .eq('country_code', countryCode)
-        .eq('is_active', true);
+        .from("law_firms")
+        .select("*")
+        .eq("country_code", countryCode)
+        .eq("is_active", true);
 
       if (error) {
-        console.error('Error fetching law firms:', error);
+        console.error("Error fetching law firms:", error);
         return [];
       }
 
       return data || [];
     } catch (error) {
-      console.error('Error in getAvailableLawFirms:', error);
+      console.error("Error in getAvailableLawFirms:", error);
       return [];
     }
   }
@@ -206,25 +217,29 @@ export class LegalConsultationService {
       if (!consultation) return;
 
       // Find appropriate law firm based on country
-      const lawFirms = await this.getAvailableLawFirms(consultation.country_code);
-      const appropriateFirm = lawFirms.find(firm => 
-        firm.consultation_types.includes(consultation.consultation_type)
+      const lawFirms = await this.getAvailableLawFirms(
+        consultation.country_code,
+      );
+      const appropriateFirm = lawFirms.find((firm) =>
+        firm.consultation_types.includes(consultation.consultation_type),
       );
 
       if (!appropriateFirm) {
-        console.error('No appropriate law firm found for consultation');
+        console.error("No appropriate law firm found for consultation");
         return;
       }
 
       // Update consultation with assigned firm
       await supabase
-        .from('legal_consultations')
+        .from("legal_consultations")
         .update({ assigned_firm_id: appropriateFirm.id })
-        .eq('id', consultationId);
+        .eq("id", consultationId);
 
       // In a real implementation, send email notification
-      console.log(`Notifying ${appropriateFirm.name} about consultation ${consultationId}`);
-      
+      console.log(
+        `Notifying ${appropriateFirm.name} about consultation ${consultationId}`,
+      );
+
       // TODO: Implement actual email notification using a service like SendGrid
       // await sendEmail({
       //   to: appropriateFirm.email,
@@ -232,7 +247,7 @@ export class LegalConsultationService {
       //   body: `New ${consultation.consultation_type} consultation from user ${consultation.user_id}`
       // });
     } catch (error) {
-      console.error('Error notifying law firm:', error);
+      console.error("Error notifying law firm:", error);
     }
   }
 
@@ -242,27 +257,28 @@ export class LegalConsultationService {
   static async getUserConsultationStats(userId: string) {
     try {
       const { data, error } = await supabase
-        .from('consultation_statistics')
-        .select('*')
-        .eq('user_id', userId)
+        .from("consultation_statistics")
+        .select("*")
+        .eq("user_id", userId)
         .single();
 
-      if (error && error.code !== 'PGRST116') {
-        console.error('Error fetching consultation stats:', error);
+      if (error && error.code !== "PGRST116") {
+        console.error("Error fetching consultation stats:", error);
         return null;
       }
 
-      return data || {
-        total_consultations: 0,
-        answered_consultations: 0,
-        pending_payment: 0,
-        awaiting_response: 0,
-        avg_response_time_hours: null
-      };
+      return (
+        data || {
+          total_consultations: 0,
+          answered_consultations: 0,
+          pending_payment: 0,
+          awaiting_response: 0,
+          avg_response_time_hours: null,
+        }
+      );
     } catch (error) {
-      console.error('Error in getUserConsultationStats:', error);
+      console.error("Error in getUserConsultationStats:", error);
       return null;
     }
   }
 }
-

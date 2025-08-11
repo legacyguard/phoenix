@@ -1,13 +1,13 @@
-import { useState, useEffect, useCallback } from 'react';
-import { ExecutorTaskService } from '@/services/executorTaskService';
-import { useAuth } from '@/hooks/useAuth';
+import { useState, useEffect, useCallback } from "react";
+import { ExecutorTaskService } from "@/services/executorTaskService";
+import { useAuth } from "@/hooks/useAuth";
 
 interface ExecutorTask {
   id: string;
   title: string;
   details: string;
-  status: 'pending' | 'completed';
-  category: 'immediate' | 'first_week' | 'ongoing';
+  status: "pending" | "completed";
+  category: "immediate" | "first_week" | "ongoing";
   priority: number;
   due_date?: string;
   completed_at?: string;
@@ -30,7 +30,10 @@ interface UseExecutorTasksReturn {
     pending: number;
   };
   refreshTasks: () => Promise<void>;
-  updateTaskStatus: (taskId: string, status: 'pending' | 'completed') => Promise<void>;
+  updateTaskStatus: (
+    taskId: string,
+    status: "pending" | "completed",
+  ) => Promise<void>;
 }
 
 export function useExecutorTasks(): UseExecutorTasksReturn {
@@ -38,7 +41,7 @@ export function useExecutorTasks(): UseExecutorTasksReturn {
   const [tasks, setTasks] = useState<GroupedTasks>({
     immediate: [],
     first_week: [],
-    ongoing: []
+    ongoing: [],
   });
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -46,52 +49,54 @@ export function useExecutorTasks(): UseExecutorTasksReturn {
 
   const fetchTasks = useCallback(async () => {
     if (!user) return;
-    
+
     try {
       setLoading(true);
       setError(null);
-      
+
       const taskList = await ExecutorTaskService.getExecutorTasks(user.id);
-      
+
       // Group tasks by category
       const grouped: GroupedTasks = {
-        immediate: taskList.filter(t => t.category === 'immediate'),
-        first_week: taskList.filter(t => t.category === 'first_week'),
-        ongoing: taskList.filter(t => t.category === 'ongoing')
+        immediate: taskList.filter((t) => t.category === "immediate"),
+        first_week: taskList.filter((t) => t.category === "first_week"),
+        ongoing: taskList.filter((t) => t.category === "ongoing"),
       };
-      
+
       setTasks(grouped);
-      
+
       // Calculate stats
       setStats({
         total: taskList.length,
-        completed: taskList.filter(t => t.status === 'completed').length,
-        pending: taskList.filter(t => t.status === 'pending').length
+        completed: taskList.filter((t) => t.status === "completed").length,
+        pending: taskList.filter((t) => t.status === "pending").length,
       });
     } catch (err) {
-      console.error('Failed to fetch executor tasks:', err);
-      setError('Failed to load executor tasks. Please try again later.');
+      console.error("Failed to fetch executor tasks:", err);
+      setError("Failed to load executor tasks. Please try again later.");
     } finally {
       setLoading(false);
     }
   }, [user]);
 
-  const updateTaskStatus = async (taskId: string, status: 'pending' | 'completed') => {
+  const updateTaskStatus = async (
+    taskId: string,
+    status: "pending" | "completed",
+  ) => {
     if (!user) return;
-    
+
     try {
       await ExecutorTaskService.updateTaskStatus(taskId, status, user.id);
       // Refresh tasks after update
       await fetchTasks();
     } catch (err) {
-      console.error('Failed to update task status:', err);
-      setError('Failed to update task status. Please try again.');
+      console.error("Failed to update task status:", err);
+      setError("Failed to update task status. Please try again.");
       throw err;
     }
   };
 
   useEffect(() => {
-     
     if (user) {
       fetchTasks();
     }
@@ -103,6 +108,6 @@ export function useExecutorTasks(): UseExecutorTasksReturn {
     error,
     stats,
     refreshTasks: fetchTasks,
-    updateTaskStatus
+    updateTaskStatus,
   };
 }

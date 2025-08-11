@@ -1,12 +1,15 @@
 # Translation Namespace Migration Summary
 
 ## Overview
+
 This document summarizes the migration from the generic 'common' namespace to domain-specific namespaces for better organization and maintainability of translations.
 
 ## Migration Date
+
 Completed on: [Current Date]
 
 ## Namespace Strategy
+
 We've migrated from a single 'common' namespace to domain-specific namespaces:
 
 - **`ui`** - General UI components, common actions, errors, messages
@@ -23,6 +26,7 @@ We've migrated from a single 'common' namespace to domain-specific namespaces:
 ### Components Updated to Use Domain-Specific Namespaces
 
 #### UI Components (→ 'ui' namespace)
+
 - `src/components/DataTransparency.tsx` ✅ (already using 'ui')
 - `src/components/VisualConnectionSystem.tsx` ✅ (already using 'ui')
 - `src/components/PrivacyControlPanel.tsx` ✅ (already using 'ui')
@@ -33,16 +37,20 @@ We've migrated from a single 'common' namespace to domain-specific namespaces:
 - `src/components/common/ErrorBoundaryI18n.tsx` ✅ (updated: 'common' → 'ui')
 
 #### Legal Components (→ 'legal' namespace)
+
 - `src/components/WillGenerator.tsx` ✅ (updated: 'common' → 'legal')
 - `src/features/will-generator/components/WillForm.tsx` ✅ (updated: 'common' → 'legal')
 
 #### Mixed Components (→ appropriate namespaces)
+
 - `src/components/modals/CountryLanguageModal.tsx` ✅ (updated: one key from 'common.cancel' → 'ui.common.cancel')
 
 ### Translation Key Updates
+
 The following translation keys were updated to use namespaced paths:
 
 #### UI Namespace Keys
+
 - `t('common.cancel')` → `t('ui.common.cancel')`
 - `t('common.errors.generic')` → `t('ui.common.errors.generic')`
 - `t('common.messages.saved')` → `t('ui.common.messages.saved')`
@@ -50,6 +58,7 @@ The following translation keys were updated to use namespaced paths:
 - `t('common.actions.save')` → `t('ui.common.actions.save')`
 
 #### Legal Namespace Keys
+
 - `t('common.confirm')` → `t('legal.common.confirm')`
 - `t('common.next')` → `t('legal.common.next')`
 - `t('common.cancel')` → `t('legal.common.cancel')`
@@ -63,7 +72,9 @@ The following translation keys were updated to use namespaced paths:
 5. **Scalability**: Easy to add new features with their own translation namespaces
 
 ## Translation File Structure
+
 The new structure follows this pattern:
+
 ```
 src/i18n/locales/
 ├── [lang]/
@@ -80,27 +91,32 @@ src/i18n/locales/
 ## Key Changes Made
 
 ### Hook Updates
+
 - `useTranslation('common')` → `useTranslation('ui')` (for UI components)
 - `useTranslation('common')` → `useTranslation('legal')` (for legal components)
 - `useGenderAwareTranslation('common')` → `useGenderAwareTranslation('legal')` (for legal forms)
 - `withTranslation('common')` → `withTranslation('ui')` (for class components)
 
 ### Translation Key Updates
+
 All translation keys have been updated to use the new namespaced structure, maintaining backward compatibility where possible through the nested key structure.
 
 ## Validation
+
 - ✅ All components successfully migrated
 - ✅ No remaining direct 'common' namespace usage found
 - ✅ Translation keys updated to use namespaced paths
 - ✅ Components tested to ensure proper namespace loading
 
 ## Next Steps
+
 1. Update translation files to organize keys under the new namespace structure
 2. Test all components to ensure translations load correctly
 3. Update documentation to reflect new namespace structure
 4. Consider implementing namespace-based lazy loading for better performance
 
 ## Notes
+
 - The migration maintains backward compatibility by using nested key structures
 - All components now use appropriate domain-specific namespaces
 - Common utility translations are now properly namespaced under `ui.common.*`

@@ -1,14 +1,14 @@
-import { ClassificationResult, DocumentCategory } from '../types/document-ai';
+import { ClassificationResult, DocumentCategory } from "../types/document-ai";
 
 // Document classification using OpenAI's GPT-4 Vision
 export async function classifyDocument(
   documentImageUrl: string,
-  apiKey: string
+  apiKey: string,
 ): Promise<ClassificationResult> {
   try {
     // Validate input
     if (!documentImageUrl) {
-      throw new Error('Document image URL is required');
+      throw new Error("Document image URL is required");
     }
 
     // Prepare the prompt for document classification
@@ -50,39 +50,39 @@ export async function classifyDocument(
     Provide your classification in the specified JSON format.`;
 
     // Call OpenAI API
-    const response = await fetch('https://api.openai.com/v1/chat/completions', {
-      method: 'POST',
+    const response = await fetch("https://api.openai.com/v1/chat/completions", {
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${apiKey}`
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${apiKey}`,
       },
       body: JSON.stringify({
-        model: 'gpt-4-vision-preview',
+        model: "gpt-4-vision-preview",
         messages: [
           {
-            role: 'system',
-            content: systemPrompt
+            role: "system",
+            content: systemPrompt,
           },
           {
-            role: 'user',
+            role: "user",
             content: [
               {
-                type: 'text',
-                text: userPrompt
+                type: "text",
+                text: userPrompt,
               },
               {
-                type: 'image_url',
+                type: "image_url",
                 image_url: {
                   url: documentImageUrl,
-                  detail: 'high'
-                }
-              }
-            ]
-          }
+                  detail: "high",
+                },
+              },
+            ],
+          },
         ],
         max_tokens: 500,
-        temperature: 0.3 // Lower temperature for more consistent classification
-      })
+        temperature: 0.3, // Lower temperature for more consistent classification
+      }),
     });
 
     if (!response.ok) {
@@ -91,7 +91,7 @@ export async function classifyDocument(
 
     const data = await response.json();
     const content = data.choices[0].message.content;
-    
+
     // Parse the JSON response
     let result;
     try {
@@ -103,22 +103,27 @@ export async function classifyDocument(
 
     // Validate and normalize the result
     const classification: ClassificationResult = {
-      category: validateCategory(result.category) || 'other',
+      category: validateCategory(result.category) || "other",
       confidence: Math.min(Math.max(result.confidence || 0.5, 0), 1),
-      reasoning: result.reasoning || result.explanation || 'Unable to determine reasoning',
-      suggestedTitle: result.suggestedTitle || result.title || generateDefaultTitle(result.category)
+      reasoning:
+        result.reasoning ||
+        result.explanation ||
+        "Unable to determine reasoning",
+      suggestedTitle:
+        result.suggestedTitle ||
+        result.title ||
+        generateDefaultTitle(result.category),
     };
 
     return classification;
-
   } catch (error) {
-    console.error('Document classification error:', error);
-    
+    console.error("Document classification error:", error);
+
     // Return a fallback classification
     return {
-      category: 'other',
+      category: "other",
       confidence: 0,
-      reasoning: `Classification failed: ${error instanceof Error ? error.message : 'Unknown error'}`
+      reasoning: `Classification failed: ${error instanceof Error ? error.message : "Unknown error"}`,
     };
   }
 }
@@ -126,31 +131,31 @@ export async function classifyDocument(
 // Helper function to validate category
 function validateCategory(category: string): DocumentCategory | null {
   const validCategories: DocumentCategory[] = [
-    'insurance_policy',
-    'property_deed',
-    'vehicle_title',
-    'bank_statement',
-    'investment_statement',
-    'will_or_trust',
-    'business_document',
-    'personal_id',
-    'tax_document',
-    'medical_document',
-    'other'
+    "insurance_policy",
+    "property_deed",
+    "vehicle_title",
+    "bank_statement",
+    "investment_statement",
+    "will_or_trust",
+    "business_document",
+    "personal_id",
+    "tax_document",
+    "medical_document",
+    "other",
   ];
-  
-  const normalized = category?.toLowerCase().replace(/\s+/g, '_');
-  return validCategories.includes(normalized as DocumentCategory) 
-    ? normalized as DocumentCategory 
+
+  const normalized = category?.toLowerCase().replace(/\s+/g, "_");
+  return validCategories.includes(normalized as DocumentCategory)
+    ? (normalized as DocumentCategory)
     : null;
 }
 
 // Helper function to parse text response if JSON parsing fails
 function parseTextResponse(text: string): Record<string, unknown> {
   const result: Record<string, unknown> = {
-    category: 'other',
+    category: "other",
     confidence: 0.5,
-    reasoning: text
+    reasoning: text,
   };
 
   // Try to extract category
@@ -171,27 +176,27 @@ function parseTextResponse(text: string): Record<string, unknown> {
 // Helper function to generate default titles
 function generateDefaultTitle(category: DocumentCategory): string {
   const titleMap: Record<DocumentCategory, string> = {
-    insurance_policy: 'Insurance Policy Document',
-    property_deed: 'Property Ownership Document',
-    vehicle_title: 'Vehicle Title Document',
-    bank_statement: 'Bank Account Document',
-    investment_statement: 'Investment Account Document',
-    will_or_trust: 'Estate Planning Document',
-    business_document: 'Business Document',
-    personal_id: 'Personal Identification',
-    tax_document: 'Tax Document',
-    medical_document: 'Medical Document',
-    other: 'Important Document'
+    insurance_policy: "Insurance Policy Document",
+    property_deed: "Property Ownership Document",
+    vehicle_title: "Vehicle Title Document",
+    bank_statement: "Bank Account Document",
+    investment_statement: "Investment Account Document",
+    will_or_trust: "Estate Planning Document",
+    business_document: "Business Document",
+    personal_id: "Personal Identification",
+    tax_document: "Tax Document",
+    medical_document: "Medical Document",
+    other: "Important Document",
   };
-  
-  return titleMap[category] || 'Document';
+
+  return titleMap[category] || "Document";
 }
 
 // Alternative implementation using base64 encoded images
 export async function classifyDocumentFromBase64(
   documentBase64: string,
   mimeType: string,
-  apiKey: string
+  apiKey: string,
 ): Promise<ClassificationResult> {
   const dataUrl = `data:${mimeType};base64,${documentBase64}`;
   return classifyDocument(dataUrl, apiKey);
@@ -204,24 +209,24 @@ export async function classifyDocumentsBatch(
   options?: {
     maxConcurrent?: number;
     onProgress?: (completed: number, total: number) => void;
-  }
+  },
 ): Promise<ClassificationResult[]> {
   const maxConcurrent = options?.maxConcurrent || 3;
   const results: ClassificationResult[] = [];
-  
+
   // Process in batches to avoid rate limits
   for (let i = 0; i < documentUrls.length; i += maxConcurrent) {
     const batch = documentUrls.slice(i, i + maxConcurrent);
     const batchResults = await Promise.all(
-      batch.map(url => classifyDocument(url, apiKey))
+      batch.map((url) => classifyDocument(url, apiKey)),
     );
-    
+
     results.push(...batchResults);
-    
+
     if (options?.onProgress) {
       options.onProgress(results.length, documentUrls.length);
     }
   }
-  
+
   return results;
 }

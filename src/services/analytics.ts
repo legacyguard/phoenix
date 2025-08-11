@@ -1,6 +1,6 @@
-import type { AnalyticsEvent, UserMetrics } from '@/types/analytics';
-import { supabase } from '@/integrations/supabase/client';
-import { v4 as uuidv4 } from 'uuid';
+import type { AnalyticsEvent, UserMetrics } from "@/types/analytics";
+import { supabase } from "@/integrations/supabase/client";
+import { v4 as uuidv4 } from "uuid";
 
 interface QueuedEvent extends AnalyticsEvent {
   attempts: number;
@@ -29,40 +29,40 @@ export class AnalyticsService {
   }
 
   private getOrCreateSessionId(): string {
-    const stored = sessionStorage.getItem('analytics_session_id');
+    const stored = sessionStorage.getItem("analytics_session_id");
     if (stored) return stored;
-    
+
     const newId = uuidv4();
-    sessionStorage.setItem('analytics_session_id', newId);
+    sessionStorage.setItem("analytics_session_id", newId);
     return newId;
   }
 
   private initializeEventListeners(): void {
     // Listen for online/offline status
-    window.addEventListener('online', () => {
+    window.addEventListener("online", () => {
       this.isOnline = true;
       this.processQueuedEvents();
     });
-    
-    window.addEventListener('offline', () => {
+
+    window.addEventListener("offline", () => {
       this.isOnline = false;
     });
 
     // Process queue before page unload
-    window.addEventListener('beforeunload', () => {
+    window.addEventListener("beforeunload", () => {
       this.flushQueue();
     });
   }
 
   private loadConsent(): void {
-    const consent = localStorage.getItem('analytics_consent');
-    this.consentGiven = consent === 'true';
+    const consent = localStorage.getItem("analytics_consent");
+    this.consentGiven = consent === "true";
   }
 
   setConsent(given: boolean): void {
     this.consentGiven = given;
-    localStorage.setItem('analytics_consent', given.toString());
-    
+    localStorage.setItem("analytics_consent", given.toString());
+
     if (!given) {
       // Clear any queued events if consent is revoked
       this.eventQueue = [];
@@ -72,14 +72,14 @@ export class AnalyticsService {
   async track(
     eventName: string,
     properties: Record<string, unknown> = {},
-    emotionalContext?: AnalyticsEvent['emotional_context'],
-    userJourneyStage: AnalyticsEvent['user_journey_stage'] = 'maintenance'
+    emotionalContext?: AnalyticsEvent["emotional_context"],
+    userJourneyStage: AnalyticsEvent["user_journey_stage"] = "maintenance",
   ): Promise<void> {
     if (!this.consentGiven) return;
 
     try {
       const userId = await this.getUserId();
-      
+
       const event: AnalyticsEvent = {
         event_name: eventName,
         user_id: userId,
@@ -96,27 +96,40 @@ export class AnalyticsService {
         this.queueEvent(event);
       }
     } catch (error) {
-      console.error('Analytics tracking error:', error);
+      console.error("Analytics tracking error:", error);
       // Fail silently to not disrupt user experience
     }
   }
 
   private async getUserId(): Promise<string | undefined> {
     try {
-      const { data: { user } } = await supabase.auth.getUser();
+      const {
+        data: { user },
+      } = await supabase.auth.getUser();
       return user?.id;
     } catch {
       return undefined;
     }
   }
 
-  private sanitizeProperties(properties: Record<string, unknown>): Record<string, unknown> {
+  private sanitizeProperties(
+    properties: Record<string, unknown>,
+  ): Record<string, unknown> {
     // Remove any PII or sensitive data
     const sanitized = { ...properties };
-    const sensitiveKeys = ['email', 'name', 'phone', 'ssn', 'address', 'password'];
-    
-    Object.keys(sanitized).forEach(key => {
-      if (sensitiveKeys.some(sensitive => key.toLowerCase().includes(sensitive))) {
+    const sensitiveKeys = [
+      "email",
+      "name",
+      "phone",
+      "ssn",
+      "address",
+      "password",
+    ];
+
+    Object.keys(sanitized).forEach((key) => {
+      if (
+        sensitiveKeys.some((sensitive) => key.toLowerCase().includes(sensitive))
+      ) {
         delete sanitized[key];
       }
     });
@@ -125,17 +138,15 @@ export class AnalyticsService {
   }
 
   private async sendEvent(event: AnalyticsEvent): Promise<void> {
-    const { error } = await supabase
-      .from('analytics_events')
-      .insert({
-        event_name: event.event_name,
-        user_id: event.user_id,
-        session_id: event.session_id,
-        timestamp: event.timestamp.toISOString(),
-        properties: event.properties,
-        emotional_context: event.emotional_context,
-        user_journey_stage: event.user_journey_stage,
-      });
+    const { error } = await supabase.from("analytics_events").insert({
+      event_name: event.event_name,
+      user_id: event.user_id,
+      session_id: event.session_id,
+      timestamp: event.timestamp.toISOString(),
+      properties: event.properties,
+      emotional_context: event.emotional_context,
+      user_journey_stage: event.user_journey_stage,
+    });
 
     if (error) {
       throw error;
@@ -144,25 +155,29 @@ export class AnalyticsService {
 
   private queueEvent(event: AnalyticsEvent): void {
     this.eventQueue.push({ ...event, attempts: 0 });
-    
+
     // Store in localStorage for persistence
-    localStorage.setItem('analytics_queue', JSON.stringify(this.eventQueue));
+    localStorage.setItem("analytics_queue", JSON.stringify(this.eventQueue));
   }
 
   private async processQueuedEvents(): Promise<void> {
-    if (this.processingQueue || !this.isOnline || this.eventQueue.length === 0) {
+    if (
+      this.processingQueue ||
+      !this.isOnline ||
+      this.eventQueue.length === 0
+    ) {
       return;
     }
 
     this.processingQueue = true;
 
     // Load from localStorage in case of page reload
-    const stored = localStorage.getItem('analytics_queue');
+    const stored = localStorage.getItem("analytics_queue");
     if (stored) {
       try {
         const parsedQueue = JSON.parse(stored);
         this.eventQueue = [...parsedQueue, ...this.eventQueue];
-        localStorage.removeItem('analytics_queue');
+        localStorage.removeItem("analytics_queue");
       } catch {
         // Ignore parsing errors
       }
@@ -194,53 +209,58 @@ export class AnalyticsService {
     if (this.eventQueue.length > 0) {
       // Use sendBeacon for reliability during page unload
       const payload = JSON.stringify(this.eventQueue);
-      navigator.sendBeacon('/api/analytics/batch', payload);
+      navigator.sendBeacon("/api/analytics/batch", payload);
     }
   }
 
   // Predefined event tracking methods
   trackOnboardingStep(step: string, completed: boolean): void {
     this.track(
-      completed ? 'onboarding_step_completed' : 'onboarding_step_started',
+      completed ? "onboarding_step_completed" : "onboarding_step_started",
       { step },
-      completed ? 'satisfied' : undefined,
-      'onboarding'
+      completed ? "satisfied" : undefined,
+      "onboarding",
     );
   }
 
-  trackDocumentAction(action: 'uploaded' | 'categorized' | 'shared', documentType?: string): void {
+  trackDocumentAction(
+    action: "uploaded" | "categorized" | "shared",
+    documentType?: string,
+  ): void {
     this.track(
       `document_${action}`,
       { document_type: documentType },
-      action === 'uploaded' ? 'accomplished' : 'satisfied',
-      'setup'
+      action === "uploaded" ? "accomplished" : "satisfied",
+      "setup",
     );
   }
 
-  trackFamilyAction(action: 'guardian_added' | 'beneficiary_updated' | 'member_invited'): void {
-    this.track(
-      action,
-      {},
-      'accomplished',
-      'family_prep'
-    );
+  trackFamilyAction(
+    action: "guardian_added" | "beneficiary_updated" | "member_invited",
+  ): void {
+    this.track(action, {}, "accomplished", "family_prep");
   }
 
-  trackEmotionalMilestone(milestone: 'first_peace_of_mind' | 'family_protection_realized' | 'procrastination_overcome'): void {
+  trackEmotionalMilestone(
+    milestone:
+      | "first_peace_of_mind"
+      | "family_protection_realized"
+      | "procrastination_overcome",
+  ): void {
     this.track(
-      'emotional_milestone_reached',
+      "emotional_milestone_reached",
       { milestone },
-      'accomplished',
-      'maintenance'
+      "accomplished",
+      "maintenance",
     );
   }
 
   trackFeatureUsage(feature: string, accepted: boolean = true): void {
     this.track(
-      'feature_used',
+      "feature_used",
       { feature, accepted },
-      accepted ? 'satisfied' : 'confused',
-      'maintenance'
+      accepted ? "satisfied" : "confused",
+      "maintenance",
     );
   }
 
@@ -249,10 +269,10 @@ export class AnalyticsService {
     try {
       // Fetch user events
       const { data: events, error } = await supabase
-        .from('analytics_events')
-        .select('*')
-        .eq('user_id', userId)
-        .order('timestamp', { ascending: true });
+        .from("analytics_events")
+        .select("*")
+        .eq("user_id", userId)
+        .order("timestamp", { ascending: true });
 
       if (error || !events) return null;
 
@@ -261,50 +281,67 @@ export class AnalyticsService {
         onboarding_completion_rate: this.calculateOnboardingCompletion(events),
         time_to_first_value: this.calculateTimeToFirstValue(events),
         feature_adoption_rates: this.calculateFeatureAdoption(events),
-        document_completion_percentage: this.calculateDocumentCompletion(events),
+        document_completion_percentage:
+          this.calculateDocumentCompletion(events),
         family_preparedness_score: this.calculateFamilyPreparedness(events),
       };
 
       return metrics;
     } catch (error) {
-      console.error('Error calculating user metrics:', error);
+      console.error("Error calculating user metrics:", error);
       return null;
     }
   }
 
-  private calculateOnboardingCompletion(events: Array<Record<string, unknown>>): number {
-    const onboardingEvents = events.filter(e => e.user_journey_stage === 'onboarding');
+  private calculateOnboardingCompletion(
+    events: Array<Record<string, unknown>>,
+  ): number {
+    const onboardingEvents = events.filter(
+      (e) => e.user_journey_stage === "onboarding",
+    );
     const completedSteps = new Set(
       onboardingEvents
-        .filter(e => e.event_name === 'onboarding_step_completed')
-        .map(e => e.properties?.step)
+        .filter((e) => e.event_name === "onboarding_step_completed")
+        .map((e) => e.properties?.step),
     );
-    
+
     // Assuming 5 total onboarding steps
     return (completedSteps.size / 5) * 100;
   }
 
-  private calculateTimeToFirstValue(events: Array<Record<string, unknown>>): number {
+  private calculateTimeToFirstValue(
+    events: Array<Record<string, unknown>>,
+  ): number {
     const firstEvent = events[0];
-    const firstValueEvent = events.find(e => 
-      e.event_name === 'document_uploaded' || 
-      e.event_name === 'guardian_added'
+    const firstValueEvent = events.find(
+      (e) =>
+        e.event_name === "document_uploaded" ||
+        e.event_name === "guardian_added",
     );
 
     if (!firstEvent || !firstValueEvent) return 0;
 
-    const timeDiff = new Date(firstValueEvent.timestamp).getTime() - new Date(firstEvent.timestamp).getTime();
+    const timeDiff =
+      new Date(firstValueEvent.timestamp).getTime() -
+      new Date(firstEvent.timestamp).getTime();
     return Math.floor(timeDiff / 60000); // Convert to minutes
   }
 
-  private calculateFeatureAdoption(events: Array<Record<string, unknown>>): Record<string, number> {
-    const features = ['ai_suggestions', 'manual_mode', 'privacy_mode', 'family_sharing'];
+  private calculateFeatureAdoption(
+    events: Array<Record<string, unknown>>,
+  ): Record<string, number> {
+    const features = [
+      "ai_suggestions",
+      "manual_mode",
+      "privacy_mode",
+      "family_sharing",
+    ];
     const adoption: Record<string, number> = {};
 
-    features.forEach(feature => {
-      const used = events.some(e => 
-        e.event_name === 'feature_used' && 
-        e.properties?.feature === feature
+    features.forEach((feature) => {
+      const used = events.some(
+        (e) =>
+          e.event_name === "feature_used" && e.properties?.feature === feature,
       );
       adoption[feature] = used ? 100 : 0;
     });
@@ -312,18 +349,30 @@ export class AnalyticsService {
     return adoption;
   }
 
-  private calculateDocumentCompletion(events: Array<Record<string, unknown>>): number {
-    const uploadedDocs = events.filter(e => e.event_name === 'document_uploaded').length;
-    const categorizedDocs = events.filter(e => e.event_name === 'document_categorized').length;
-    
+  private calculateDocumentCompletion(
+    events: Array<Record<string, unknown>>,
+  ): number {
+    const uploadedDocs = events.filter(
+      (e) => e.event_name === "document_uploaded",
+    ).length;
+    const categorizedDocs = events.filter(
+      (e) => e.event_name === "document_categorized",
+    ).length;
+
     if (uploadedDocs === 0) return 0;
     return (categorizedDocs / uploadedDocs) * 100;
   }
 
-  private calculateFamilyPreparedness(events: Array<Record<string, unknown>>): number {
-    const familyActions = ['guardian_added', 'beneficiary_updated', 'member_invited'];
-    const completedActions = familyActions.filter(action =>
-      events.some(e => e.event_name === action)
+  private calculateFamilyPreparedness(
+    events: Array<Record<string, unknown>>,
+  ): number {
+    const familyActions = [
+      "guardian_added",
+      "beneficiary_updated",
+      "member_invited",
+    ];
+    const completedActions = familyActions.filter((action) =>
+      events.some((e) => e.event_name === action),
     );
 
     return (completedActions.length / familyActions.length) * 100;
@@ -332,16 +381,16 @@ export class AnalyticsService {
   // Session tracking
   startNewSession(): void {
     this.sessionId = uuidv4();
-    sessionStorage.setItem('analytics_session_id', this.sessionId);
-    
-    this.track('session_started', {
+    sessionStorage.setItem("analytics_session_id", this.sessionId);
+
+    this.track("session_started", {
       referrer: document.referrer,
       user_agent: navigator.userAgent,
     });
   }
 
   endSession(): void {
-    this.track('session_ended', {
+    this.track("session_ended", {
       duration: this.getSessionDuration(),
     });
   }

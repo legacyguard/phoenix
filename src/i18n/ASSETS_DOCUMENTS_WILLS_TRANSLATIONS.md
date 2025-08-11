@@ -158,7 +158,7 @@ Comprehensive coverage for asset management:
     "addPerson": "Add Person",
     "permissions": {
       "view": "Can View",
-      "edit": "Can Edit", 
+      "edit": "Can Edit",
       "manage": "Can Manage",
       "inherit": "Will Inherit"
     },
@@ -171,7 +171,7 @@ Comprehensive coverage for asset management:
   },
   "notifications": {
     "assetAdded": "Asset added successfully",
-    "assetUpdated": "Asset updated successfully", 
+    "assetUpdated": "Asset updated successfully",
     "assetDeleted": "Asset deleted successfully",
     "documentUploaded": "Document uploaded successfully",
     "accessGranted": "Access granted to {{name}}",
@@ -542,7 +542,7 @@ import { useTranslation } from 'react-i18next';
 const AssetComponent = () => {
   const { t } = useTranslation('assets');
   const { t: tCommon } = useTranslation('ui');
-  
+
   return (
     <div>
       <h1>{t('vault.title')}</h1>
@@ -560,7 +560,7 @@ const DocumentComponent = () => {
   const { t: tDocuments } = useTranslation('documents');
   const { t: tAssets } = useTranslation('assets');
   const { t: tCommon } = useTranslation('ui');
-  
+
   return (
     <div>
       <h1>{tDocuments('management.title')}</h1>
@@ -576,7 +576,7 @@ const DocumentComponent = () => {
 ```typescript
 const WillComponent = () => {
   const { t } = useTranslation('wills');
-  
+
   return (
     <div>
       <p>{t('execution.witnessCount', { count: 2, jurisdiction: 'California' })}</p>
@@ -591,14 +591,17 @@ const WillComponent = () => {
 The following components have been updated to use the new translation structure:
 
 ### Assets Vault
+
 - `AssetOverview.tsx` - Updated to use new vault and categories keys
 - `VaultDashboard.tsx` - Updated to use new vault and actions keys
 - `AssetDetail.tsx` - Updated to use new form and details keys
 
 ### Document Management
+
 - `DocumentUpload.tsx` - Updated to use documents namespace instead of ui
 
 ### Will Generator
+
 - `WillGenerator.tsx` - Updated to use wills namespace and new step structure
 
 ## Verification Checklist
@@ -624,4 +627,4 @@ See `/src/components/examples/TranslationExample.tsx` for a comprehensive exampl
 1. **Add Slovak translations** - Create corresponding `.json` files in `/src/i18n/locales/sk/`
 2. **Add other languages** - Extend to support additional languages as needed
 3. **Test thoroughly** - Ensure all components work correctly with the new translations
-4. **Update remaining components** - Apply the same pattern to any remaining untranslated components 
+4. **Update remaining components** - Apply the same pattern to any remaining untranslated components

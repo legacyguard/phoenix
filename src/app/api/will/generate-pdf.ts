@@ -1,5 +1,5 @@
-import React from 'react';
-import { NextResponse } from 'next/server';
+import React from "react";
+import { NextResponse } from "next/server";
 
 export async function generatePDF(req) {
   try {
@@ -12,7 +12,10 @@ export async function generatePDF(req) {
 
     return NextResponse.json({ pdf: pdfOutput });
   } catch (error) {
-    console.error('PDF Generation Error:', error);
-    return NextResponse.json({ error: 'Failed to generate PDF', detail: error }, { status: 500 });
+    console.error("PDF Generation Error:", error);
+    return NextResponse.json(
+      { error: "Failed to generate PDF", detail: error },
+      { status: 500 },
+    );
   }
 }

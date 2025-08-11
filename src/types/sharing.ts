@@ -1,6 +1,10 @@
-export type ContentType = 'playbook_section' | 'asset_summary' | 'inheritance_allocation' | 'document';
+export type ContentType =
+  | "playbook_section"
+  | "asset_summary"
+  | "inheritance_allocation"
+  | "document";
 
-export type ShareExpiration = '24h' | '7d' | '30d' | 'never';
+export type ShareExpiration = "24h" | "7d" | "30d" | "never";
 
 export interface SharedLink {
   id: string;

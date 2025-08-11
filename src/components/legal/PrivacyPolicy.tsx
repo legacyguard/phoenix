@@ -1,8 +1,8 @@
-import React from 'react';
-import { useTranslation } from 'react-i18next';
+import React from "react";
+import { useTranslation } from "react-i18next";
 
 const PrivacyPolicy: React.FC = () => {
-  const { t } = useTranslation('wills');
+  const { t } = useTranslation("wills");
 
   return (
     <div className="privacy-policy-page">
@@ -10,17 +10,17 @@ const PrivacyPolicy: React.FC = () => {
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            {t('privacyPolicy.title')}
+            {t("privacyPolicy.title")}
           </h1>
           <p className="text-gray-600">
-            {t('privacyPolicy.lastUpdated', { date: 'January 15, 2024' })}
+            {t("privacyPolicy.lastUpdated", { date: "January 15, 2024" })}
           </p>
         </div>
 
         {/* Introduction */}
         <div className="bg-white rounded-lg shadow-sm p-8 mb-8">
           <p className="text-lg text-gray-700 leading-relaxed">
-            {t('privacyPolicy.introduction')}
+            {t("privacyPolicy.introduction")}
           </p>
         </div>
 
@@ -29,10 +29,10 @@ const PrivacyPolicy: React.FC = () => {
           {/* Information Collection */}
           <section className="bg-white rounded-lg shadow-sm p-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-              {t('privacyPolicy.sections.informationCollection.title')}
+              {t("privacyPolicy.sections.informationCollection.title")}
             </h2>
             <p className="text-gray-700 leading-relaxed">
-              {t('privacyPolicy.sections.informationCollection.content')}
+              {t("privacyPolicy.sections.informationCollection.content")}
             </p>
             <div className="mt-6 bg-gray-50 p-6 rounded-lg">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
@@ -51,10 +51,10 @@ const PrivacyPolicy: React.FC = () => {
           {/* Information Use */}
           <section className="bg-white rounded-lg shadow-sm p-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-              {t('privacyPolicy.sections.informationUse.title')}
+              {t("privacyPolicy.sections.informationUse.title")}
             </h2>
             <p className="text-gray-700 leading-relaxed">
-              {t('privacyPolicy.sections.informationUse.content')}
+              {t("privacyPolicy.sections.informationUse.content")}
             </p>
             <div className="mt-6 bg-gray-50 p-6 rounded-lg">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
@@ -74,10 +74,10 @@ const PrivacyPolicy: React.FC = () => {
           {/* Information Sharing */}
           <section className="bg-white rounded-lg shadow-sm p-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-              {t('privacyPolicy.sections.informationSharing.title')}
+              {t("privacyPolicy.sections.informationSharing.title")}
             </h2>
             <p className="text-gray-700 leading-relaxed">
-              {t('privacyPolicy.sections.informationSharing.content')}
+              {t("privacyPolicy.sections.informationSharing.content")}
             </p>
             <div className="mt-6 bg-gray-50 p-6 rounded-lg">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
@@ -85,7 +85,10 @@ const PrivacyPolicy: React.FC = () => {
               </h3>
               <ul className="space-y-2 text-gray-700">
                 <li>• With your explicit consent</li>
-                <li>• With designated family members or trusted individuals (as you specify)</li>
+                <li>
+                  • With designated family members or trusted individuals (as
+                  you specify)
+                </li>
                 <li>• With service providers who assist in our operations</li>
                 <li>• To comply with legal requirements or court orders</li>
                 <li>• To protect our rights, property, or safety</li>
@@ -96,10 +99,10 @@ const PrivacyPolicy: React.FC = () => {
           {/* Data Security */}
           <section className="bg-white rounded-lg shadow-sm p-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-              {t('privacyPolicy.sections.dataSecurity.title')}
+              {t("privacyPolicy.sections.dataSecurity.title")}
             </h2>
             <p className="text-gray-700 leading-relaxed">
-              {t('privacyPolicy.sections.dataSecurity.content')}
+              {t("privacyPolicy.sections.dataSecurity.content")}
             </p>
             <div className="mt-6 bg-gray-50 p-6 rounded-lg">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
@@ -107,7 +110,9 @@ const PrivacyPolicy: React.FC = () => {
               </h3>
               <ul className="space-y-2 text-gray-700">
                 <li>• End-to-end encryption for all sensitive data</li>
-                <li>• Zero-knowledge architecture (we cannot access your data)</li>
+                <li>
+                  • Zero-knowledge architecture (we cannot access your data)
+                </li>
                 <li>• Regular security audits and penetration testing</li>
                 <li>• SOC 2 Type II compliance</li>
                 <li>• Secure data centers with physical security</li>
@@ -119,10 +124,10 @@ const PrivacyPolicy: React.FC = () => {
           {/* Your Rights */}
           <section className="bg-white rounded-lg shadow-sm p-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-              {t('privacyPolicy.sections.yourRights.title')}
+              {t("privacyPolicy.sections.yourRights.title")}
             </h2>
             <p className="text-gray-700 leading-relaxed">
-              {t('privacyPolicy.sections.yourRights.content')}
+              {t("privacyPolicy.sections.yourRights.content")}
             </p>
             <div className="mt-6 bg-gray-50 p-6 rounded-lg">
               <h3 className="text-lg font-semibold text-gray-900 mb-3">
@@ -146,12 +151,16 @@ const PrivacyPolicy: React.FC = () => {
             GDPR and CCPA Compliance
           </h3>
           <p className="text-gray-700 mb-4">
-            LegacyGuard complies with the General Data Protection Regulation (GDPR) and the California Consumer Privacy Act (CCPA). 
-            We respect your privacy rights and provide you with control over your personal information.
+            LegacyGuard complies with the General Data Protection Regulation
+            (GDPR) and the California Consumer Privacy Act (CCPA). We respect
+            your privacy rights and provide you with control over your personal
+            information.
           </p>
           <div className="grid md:grid-cols-2 gap-6">
             <div>
-              <h4 className="font-semibold text-gray-900 mb-2">GDPR Rights (EU Users):</h4>
+              <h4 className="font-semibold text-gray-900 mb-2">
+                GDPR Rights (EU Users):
+              </h4>
               <ul className="text-sm text-gray-700 space-y-1">
                 <li>• Right to access and portability</li>
                 <li>• Right to rectification</li>
@@ -162,7 +171,9 @@ const PrivacyPolicy: React.FC = () => {
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold text-gray-900 mb-2">CCPA Rights (California Users):</h4>
+              <h4 className="font-semibold text-gray-900 mb-2">
+                CCPA Rights (California Users):
+              </h4>
               <ul className="text-sm text-gray-700 space-y-1">
                 <li>• Right to know what data is collected</li>
                 <li>• Right to know if data is sold or disclosed</li>
@@ -181,12 +192,16 @@ const PrivacyPolicy: React.FC = () => {
             Contact Us
           </h3>
           <p className="text-gray-700 mb-4">
-            If you have any questions about this Privacy Policy or want to exercise your rights, please contact us:
+            If you have any questions about this Privacy Policy or want to
+            exercise your rights, please contact us:
           </p>
           <div className="space-y-2 text-gray-600">
             <p>Email: privacy@legacyguard.com</p>
             <p>Phone: 1-800-LEGACY-1</p>
-            <p>Address: LegacyGuard, Inc., 123 Protection Way, Family Security, FS 12345</p>
+            <p>
+              Address: LegacyGuard, Inc., 123 Protection Way, Family Security,
+              FS 12345
+            </p>
             <p>Data Protection Officer: dpo@legacyguard.com</p>
           </div>
         </div>
@@ -195,4 +210,4 @@ const PrivacyPolicy: React.FC = () => {
   );
 };
 
-export default PrivacyPolicy; 
+export default PrivacyPolicy;

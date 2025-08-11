@@ -1,11 +1,11 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Shield, CheckCircle, Lock, Users } from 'lucide-react';
-import { useTranslation } from 'react-i18next';
-import { Badge } from '@/components/ui/badge';
+import React from "react";
+import { Link } from "react-router-dom";
+import { Shield, CheckCircle, Lock, Users } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import { Badge } from "@/components/ui/badge";
 
 export const Footer: React.FC = () => {
-  const { t } = useTranslation('ui-common');
+  const { t } = useTranslation("ui-common");
   const currentYear = new Date().getFullYear();
 
   return (
@@ -16,42 +16,121 @@ export const Footer: React.FC = () => {
           <div className="space-y-3">
             <div className="flex items-center space-x-2">
               <Shield className="h-6 w-6 text-primary" />
-              <span className="text-lg font-bold text-primary">{t('ui.name')}</span>
+              <span className="text-lg font-bold text-primary">
+                {t("ui-elements:ui.name")}
+              </span>
             </div>
             <p className="text-sm text-muted-foreground font-heritage italic">
-              "{t('footer.tagline')}"
+              "{t("footer.tagline")}"
             </p>
           </div>
 
           {/* Platform */}
           <div>
-            <h3 className="font-semibold mb-3">{t('footer.platform.title')}</h3>
+            <h3 className="font-semibold mb-3">{t("footer.platform.title")}</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><Link to={t('ui.footer.vault_1')} className="hover:text-primary transition-colors">{t('footer.platform.heritageVault')}</Link></li>
-              <li><Link to={t('ui.footer.guardians_2')} className="hover:text-primary transition-colors">{t('footer.platform.guardianNetwork')}</Link></li>
-              <li><Link to={t('ui.footer.dashboard_3')} className="hover:text-primary transition-colors">{t('footer.platform.dashboard')}</Link></li>
-              <li><Link to={t('ui.footer.security_4')} className="hover:text-primary transition-colors">{t('footer.platform.security')}</Link></li>
+              <li>
+                <Link
+                  to={t("ui-elements:ui.footer.vault_1")}
+                  className="hover:text-primary transition-colors"
+                >
+                  {t("footer.platform.heritageVault")}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to={t("ui-elements:ui.footer.guardians_2")}
+                  className="hover:text-primary transition-colors"
+                >
+                  {t("footer.platform.guardianNetwork")}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to={t("ui-elements:ui.footer.dashboard_3")}
+                  className="hover:text-primary transition-colors"
+                >
+                  {t("footer.platform.dashboard")}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to={t("ui-elements:ui.footer.security_4")}
+                  className="hover:text-primary transition-colors"
+                >
+                  {t("footer.platform.security")}
+                </Link>
+              </li>
             </ul>
           </div>
 
           {/* Support */}
           <div>
-            <h3 className="font-semibold mb-3">{t('footer.support.title')}</h3>
+            <h3 className="font-semibold mb-3">{t("footer.support.title")}</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><Link to={t('ui.footer.help_5')} className="hover:text-primary transition-colors">{t('footer.support.helpCenter')}</Link></li>
-              <li><Link to={t('ui.footer.guides_6')} className="hover:text-primary transition-colors">{t('footer.support.userGuides')}</Link></li>
-              <li><Link to={t('ui.footer.contact_7')} className="hover:text-primary transition-colors">{t('footer.support.contactUs')}</Link></li>
-              <li><Link to={t('ui.footer.community_8')} className="hover:text-primary transition-colors">{t('footer.support.community')}</Link></li>
+              <li>
+                <Link
+                  to={t("ui-elements:ui.footer.help_5")}
+                  className="hover:text-primary transition-colors"
+                >
+                  {t("footer.support.helpCenter")}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to={t("ui-elements:ui.footer.guides_6")}
+                  className="hover:text-primary transition-colors"
+                >
+                  {t("footer.support.userGuides")}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to={t("ui-elements:ui.footer.contact_7")}
+                  className="hover:text-primary transition-colors"
+                >
+                  {t("footer.support.contactUs")}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to={t("ui-elements:ui.footer.community_8")}
+                  className="hover:text-primary transition-colors"
+                >
+                  {t("footer.support.community")}
+                </Link>
+              </li>
             </ul>
           </div>
 
           {/* Legal */}
           <div>
-            <h3 className="font-semibold mb-3">{t('footer.legal.title')}</h3>
+            <h3 className="font-semibold mb-3">{t("footer.legal.title")}</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><Link to={t('ui.footer.privacy_policy_9')} className="hover:text-primary transition-colors">{t('footer.legal.privacyPolicy')}</Link></li>
-              <li><Link to={t('ui.footer.terms_10')} className="hover:text-primary transition-colors">{t('footer.legal.termsOfService')}</Link></li>
-              <li><Link to={t('ui.footer.data_protection_11')} className="hover:text-primary transition-colors">{t('footer.legal.dataProtection')}</Link></li>
+              <li>
+                <Link
+                  to={t("ui-elements:ui.footer.privacy_policy_9")}
+                  className="hover:text-primary transition-colors"
+                >
+                  {t("footer.legal.privacyPolicy")}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to={t("ui-elements:ui.footer.terms_10")}
+                  className="hover:text-primary transition-colors"
+                >
+                  {t("footer.legal.termsOfService")}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to={t("ui-elements:ui.footer.data_protection_11")}
+                  className="hover:text-primary transition-colors"
+                >
+                  {t("footer.legal.dataProtection")}
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
@@ -60,7 +139,9 @@ export const Footer: React.FC = () => {
         <div className="bg-gray-50 py-4 mt-8">
           <div className="container mx-auto text-center">
             <Shield className="h-8 w-8 inline text-primary" />
-            <p className="text-lg font-semibold text-primary mt-2">{t('footer.credibility.trustedByExperts')}</p>
+            <p className="text-lg font-semibold text-primary mt-2">
+              {t("footer.credibility.trustedByExperts")}
+            </p>
           </div>
         </div>
 
@@ -70,34 +151,46 @@ export const Footer: React.FC = () => {
             {/* Family count */}
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
               <Users className="h-4 w-4" />
-              <span>{t('testimonials.stats.families')} {t('testimonials.stats.familiesLabel')}</span>
+              <span>
+                {t("testimonials.stats.families")}{" "}
+                {t("testimonials.stats.familiesLabel")}
+              </span>
             </div>
-            
+
             {/* Trust badges */}
-            <Badge variant="outline" className="text-xs flex items-center gap-1">
+            <Badge
+              variant="outline"
+              className="text-xs flex items-center gap-1"
+            >
               <Lock className="h-3 w-3" />
-              {t('testimonials.compliance.gdpr')}
+              {t("testimonials.compliance.gdpr")}
             </Badge>
-            <Badge variant="outline" className="text-xs flex items-center gap-1">
+            <Badge
+              variant="outline"
+              className="text-xs flex items-center gap-1"
+            >
               <Shield className="h-3 w-3" />
-              {t('testimonials.compliance.dataProtection')}
+              {t("testimonials.compliance.dataProtection")}
             </Badge>
-            <Badge variant="outline" className="text-xs flex items-center gap-1">
+            <Badge
+              variant="outline"
+              className="text-xs flex items-center gap-1"
+            >
               <CheckCircle className="h-3 w-3" />
-              {t('testimonials.compliance.iso')}
+              {t("testimonials.compliance.iso")}
             </Badge>
           </div>
-          
+
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-sm text-muted-foreground">
-              {t('footer.copyright', { year: currentYear })}
+              {t("footer.copyright", { year: currentYear })}
             </p>
             <p className="text-sm text-muted-foreground">
-              {t('footer.description')}
+              {t("footer.description")}
             </p>
           </div>
         </div>
       </div>
-    </footer>);
-
+    </footer>
+  );
 };

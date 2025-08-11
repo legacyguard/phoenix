@@ -5,14 +5,14 @@
 export function clearGeolocationCache(): void {
   try {
     // Clear geolocation cache
-    localStorage.removeItem('geolocation_data');
-    
+    localStorage.removeItem("geolocation_data");
+
     // Clear user preferences
-    localStorage.removeItem('user_country_language_preferences');
-    
-    console.log('Geolocation cache cleared successfully');
+    localStorage.removeItem("user_country_language_preferences");
+
+    console.log("Geolocation cache cleared successfully");
   } catch (error) {
-    console.error('Failed to clear geolocation cache:', error);
+    console.error("Failed to clear geolocation cache:", error);
   }
 }
 
@@ -20,7 +20,7 @@ export function clearGeolocationCache(): void {
  * Check if geolocation cache exists
  */
 export function hasGeolocationCache(): boolean {
-  return localStorage.getItem('geolocation_data') !== null;
+  return localStorage.getItem("geolocation_data") !== null;
 }
 
 /**
@@ -28,13 +28,13 @@ export function hasGeolocationCache(): boolean {
  */
 export function getCachedGeolocationData(): Record<string, unknown> {
   try {
-    const cached = localStorage.getItem('geolocation_data');
+    const cached = localStorage.getItem("geolocation_data");
     if (cached) {
       return JSON.parse(cached);
     }
     return null;
   } catch (error) {
-    console.error('Failed to get cached geolocation data:', error);
+    console.error("Failed to get cached geolocation data:", error);
     return null;
   }
 }

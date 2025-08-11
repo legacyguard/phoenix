@@ -1,6 +1,6 @@
-import { useEffect, useRef } from 'react';
-import { useUser } from '@clerk/clerk-react';
-import { logActivity } from '@/services/loggingService';
+import { useEffect, useRef } from "react";
+import { useUser } from "@clerk/clerk-react";
+import { logActivity } from "@/services/loggingService";
 
 export const useAuthLogging = () => {
   const { user, isSignedIn } = useUser();
@@ -9,7 +9,12 @@ export const useAuthLogging = () => {
 
   useEffect(() => {
     // Log user login when authentication state changes
-    if (isSignedIn && user && user.id !== previousUserId.current && !hasLoggedCurrentSession.current) {
+    if (
+      isSignedIn &&
+      user &&
+      user.id !== previousUserId.current &&
+      !hasLoggedCurrentSession.current
+    ) {
       // New login detected
       hasLoggedCurrentSession.current = true;
       previousUserId.current = user.id;
@@ -17,18 +22,18 @@ export const useAuthLogging = () => {
       // Log the login activity
       logActivity(
         user.id,
-        'USER',
-        'LOGGED_IN',
+        "USER",
+        "LOGGED_IN",
         undefined,
-        'unknown', // IP address would need to be fetched from API
+        "unknown", // IP address would need to be fetched from API
         navigator.userAgent,
         {
           email: user.primaryEmailAddress?.emailAddress,
-          loginMethod: 'clerk',
-          timestamp: new Date().toISOString()
-        }
-      ).catch(error => {
-        console.error('Failed to log login activity:', error);
+          loginMethod: "clerk",
+          timestamp: new Date().toISOString(),
+        },
+      ).catch((error) => {
+        console.error("Failed to log login activity:", error);
       });
     } else if (!isSignedIn && previousUserId.current) {
       // User logged out

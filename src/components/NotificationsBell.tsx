@@ -1,20 +1,20 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react';
-import { Bell, AlertCircle, AlertTriangle, Info, X } from 'lucide-react';
-import { useUser } from '@clerk/clerk-react';
-import { useNavigate } from 'react-router-dom';
-import { expirationIntelligence } from '@/services/expiration-intelligence';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { ScrollArea } from '@/components/ui/scroll-area';
-import type { Separator } from '@/components/ui/separator';
-import { cn } from '@/lib/utils';
-import { useTranslation } from 'react-i18next';
+import React, { useState, useEffect, useRef, useCallback } from "react";
+import { Bell, AlertCircle, AlertTriangle, Info, X } from "lucide-react";
+import { useUser } from "@clerk/clerk-react";
+import { useNavigate } from "react-router-dom";
+import { expirationIntelligence } from "@/services/expiration-intelligence";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import type { Separator } from "@/components/ui/separator";
+import { cn } from "@/lib/utils";
+import { useTranslation } from "react-i18next";
 
 interface Notification {
   id: string;
   title: string;
   message: string;
-  severity: 'info' | 'warning' | 'critical';
+  severity: "info" | "warning" | "critical";
   document_id?: string;
   is_read: boolean;
   created_at: string;
@@ -33,30 +33,31 @@ export const NotificationsBell: React.FC = () => {
   const dropdownRef = useRef<HTMLDivElement>(null);
   const { user } = useUser();
   const navigate = useNavigate();
-  const { t } = useTranslation('ui-common');
+  const { t } = useTranslation("ui-common");
 
   const fetchNotifications = useCallback(async () => {
     if (!user?.id) return;
-    
+
     try {
       setLoading(true);
-      const userNotifications = await expirationIntelligence.getUserNotifications(user.id);
+      const userNotifications =
+        await expirationIntelligence.getUserNotifications(user.id);
       setNotifications(userNotifications);
-      
+
       // Count unread critical and warning notifications
       const unread = userNotifications.filter(
-        (n: Notification) => !n.is_read && (n.severity === 'critical' || n.severity === 'warning')
+        (n: Notification) =>
+          !n.is_read && (n.severity === "critical" || n.severity === "warning"),
       );
       setUnreadCount(unread.length);
     } catch (error) {
-      console.error('Failed to fetch notifications:', error);
+      console.error("Failed to fetch notifications:", error);
     } finally {
       setLoading(false);
     }
   }, [user?.id]);
 
   useEffect(() => {
-     
     if (user?.id) {
       fetchNotifications();
       // Set up periodic refresh every 5 minutes
@@ -67,15 +68,17 @@ export const NotificationsBell: React.FC = () => {
 
   // Close dropdown when clicking outside
   useEffect(() => {
-     
     const handleClickOutside = (event: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
         setShowDropdown(false);
       }
     };
 
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   const handleNotificationClick = async (notification: Notification) => {
@@ -94,36 +97,41 @@ export const NotificationsBell: React.FC = () => {
 
   const getSeverityIcon = (severity: string) => {
     switch (severity) {
-      case 'critical':
+      case "critical":
         return <AlertCircle className="h-4 w-4 text-destructive" />;
-      case 'warning':
+      case "warning":
         return <AlertTriangle className="h-4 w-4 text-yellow-600" />;
       default:
         return <Info className="h-4 w-4 text-blue-600" />;
     }
   };
 
-  const getSeverityBadgeVariant = (severity: string): "default" | "destructive" | "outline" | "secondary" => {
+  const getSeverityBadgeVariant = (
+    severity: string,
+  ): "default" | "destructive" | "outline" | "secondary" => {
     switch (severity) {
-      case 'critical':
-        return 'destructive';
-      case 'warning':
-        return 'outline';
+      case "critical":
+        return "destructive";
+      case "warning":
+        return "outline";
       default:
-        return 'secondary';
+        return "secondary";
     }
   };
 
   const formatTimeAgo = (dateString: string) => {
     const date = new Date(dateString);
     const now = new Date();
-    const diffInHours = Math.floor((now.getTime() - date.getTime()) / (1000 * 60 * 60));
-    
-    if (diffInHours < 1) return t('notifications.justNow', 'Just now');
-    if (diffInHours < 24) return t('notifications.hoursAgo', { hours: diffInHours });
+    const diffInHours = Math.floor(
+      (now.getTime() - date.getTime()) / (1000 * 60 * 60),
+    );
+
+    if (diffInHours < 1) return t("notifications.justNow", "Just now");
+    if (diffInHours < 24)
+      return t("notifications.hoursAgo", { hours: diffInHours });
     const diffInDays = Math.floor(diffInHours / 24);
-    if (diffInDays === 1) return t('notifications.yesterday', 'Yesterday');
-    return t('notifications.daysAgo', { days: diffInDays });
+    if (diffInDays === 1) return t("notifications.yesterday", "Yesterday");
+    return t("notifications.daysAgo", { days: diffInDays });
   };
 
   return (
@@ -137,7 +145,7 @@ export const NotificationsBell: React.FC = () => {
         <Bell className="h-5 w-5" />
         {unreadCount > 0 && (
           <span className="absolute -top-1 -right-1 flex h-5 w-5 items-center justify-center rounded-full bg-destructive text-[10px] font-medium text-destructive-foreground">
-            {unreadCount > 9 ? '9+' : unreadCount}
+            {unreadCount > 9 ? "9+" : unreadCount}
           </span>
         )}
       </Button>
@@ -146,7 +154,7 @@ export const NotificationsBell: React.FC = () => {
         <div className="absolute right-0 mt-2 w-96 rounded-lg border bg-popover p-0 shadow-lg">
           <div className="flex items-center justify-between border-b px-4 py-3">
             <h4 className="text-sm font-semibold">
-              {t('notifications.title', 'Notifications')}
+              {t("notifications.title", "Notifications")}
             </h4>
             <Button
               variant="ghost"
@@ -162,14 +170,14 @@ export const NotificationsBell: React.FC = () => {
             {loading ? (
               <div className="flex items-center justify-center py-8">
                 <div className="text-sm text-muted-foreground">
-                  {t('notifications.loading', 'Loading notifications...')}
+                  {t("notifications.loading", "Loading notifications...")}
                 </div>
               </div>
             ) : notifications.length === 0 ? (
               <div className="flex flex-col items-center justify-center py-8">
                 <Bell className="h-12 w-12 text-muted-foreground/30 mb-3" />
                 <p className="text-sm text-muted-foreground">
-                  {t('notifications.empty', 'No notifications')}
+                  {t("notifications.empty", "No notifications")}
                 </p>
               </div>
             ) : (
@@ -180,7 +188,7 @@ export const NotificationsBell: React.FC = () => {
                     onClick={() => handleNotificationClick(notification)}
                     className={cn(
                       "w-full px-4 py-3 text-left transition-colors hover:bg-muted/50",
-                      !notification.is_read && "bg-muted/20"
+                      !notification.is_read && "bg-muted/20",
                     )}
                   >
                     <div className="flex items-start gap-3">
@@ -192,7 +200,11 @@ export const NotificationsBell: React.FC = () => {
                           <p className="text-sm font-medium leading-none">
                             {notification.title}
                           </p>
-                          <Badge variant={getSeverityBadgeVariant(notification.severity)}>
+                          <Badge
+                            variant={getSeverityBadgeVariant(
+                              notification.severity,
+                            )}
+                          >
                             {notification.severity}
                           </Badge>
                         </div>
@@ -217,11 +229,11 @@ export const NotificationsBell: React.FC = () => {
                 size="sm"
                 className="w-full"
                 onClick={() => {
-                  navigate('/notifications');
+                  navigate("/notifications");
                   setShowDropdown(false);
                 }}
               >
-                {t('notifications.viewAll', 'View all notifications')}
+                {t("notifications.viewAll", "View all notifications")}
               </Button>
             </div>
           )}

@@ -1,4 +1,4 @@
-import type { SubscriptionStatus } from '@/services/stripeService';
+import type { SubscriptionStatus } from "@/services/stripeService";
 
 export interface SubscriptionContextValue {
   subscriptionStatus: SubscriptionStatus | null;

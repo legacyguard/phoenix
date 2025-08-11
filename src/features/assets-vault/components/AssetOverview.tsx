@@ -1,13 +1,19 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { useTranslation } from 'react-i18next';
-import { useNavigate } from 'react-router-dom';
-import { supabaseWithRetry } from '@/utils/supabaseWithRetry';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import type { Badge } from '@/components/ui/badge';
-import type { Alert, AlertDescription } from '@/components/ui/alert';
-import { Skeleton } from '@/components/ui/skeleton';
-import { Progress } from '@/components/ui/progress';
+import React, { useState, useEffect, useCallback } from "react";
+import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
+import { supabaseWithRetry } from "@/utils/supabaseWithRetry";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import type { Badge } from "@/components/ui/badge";
+import type { Alert, AlertDescription } from "@/components/ui/alert";
+import { Skeleton } from "@/components/ui/skeleton";
+import { Progress } from "@/components/ui/progress";
 import {
   Home,
   Car,
@@ -21,11 +27,18 @@ import {
   FileText,
   Users,
   PieChart,
-  BarChart3
-} from 'lucide-react';
-import { toast } from 'sonner';
-import type { PieChart as RechartsChart, Pie, Cell, ResponsiveContainer, Legend, Tooltip } from 'recharts';
-import LifeInventoryAssistant from '@/components/assets/LifeInventoryAssistant';
+  BarChart3,
+} from "lucide-react";
+import { toast } from "sonner";
+import type {
+  PieChart as RechartsChart,
+  Pie,
+  Cell,
+  ResponsiveContainer,
+  Legend,
+  Tooltip,
+} from "recharts";
+import LifeInventoryAssistant from "@/components/assets/LifeInventoryAssistant";
 
 interface AssetStatistics {
   category: string;
@@ -48,35 +61,41 @@ const CATEGORY_ICONS = {
   financial: DollarSign,
   business: Briefcase,
   personal: Package,
-  uncategorized: FileText
+  uncategorized: FileText,
 };
 
 const CATEGORY_COLORS = {
-  property: '#8B5CF6',
-  vehicle: '#3B82F6',
-  financial: '#10B981',
-  business: '#F59E0B',
-  personal: '#EF4444',
-  uncategorized: '#6B7280'
+  property: "#8B5CF6",
+  vehicle: "#3B82F6",
+  financial: "#10B981",
+  business: "#F59E0B",
+  personal: "#EF4444",
+  uncategorized: "#6B7280",
 };
 
 export const AssetOverview: React.FC = () => {
-  const { t } = useTranslation('assets');
+  const { t } = useTranslation("assets");
   const navigate = useNavigate();
   const [loading, setLoading] = useState(true);
   const [statistics, setStatistics] = useState<AssetStatistics[]>([]);
-  const [unassignedAssets, setUnassignedAssets] = useState<UnassignedAsset[]>([]);
+  const [unassignedAssets, setUnassignedAssets] = useState<UnassignedAsset[]>(
+    [],
+  );
   const [totalValue, setTotalValue] = useState(0);
-  const [currency, setCurrency] = useState('USD');
+  const [currency, setCurrency] = useState("USD");
 
   const loadAssetData = useCallback(async () => {
     try {
-      const { data: { user } } = await supabaseWithRetry.auth.getUser();
+      const {
+        data: { user },
+      } = await supabaseWithRetry.auth.getUser();
       if (!user) return;
 
       // Get asset statistics
-      const { data: statsData, error: statsError } = await supabaseWithRetry.
-      rpc('get_asset_statistics', { p_user_id: user.id });
+      const { data: statsData, error: statsError } =
+        await supabaseWithRetry.rpc("get_asset_statistics", {
+          p_user_id: user.id,
+        });
 
       if (statsError) throw statsError;
 
@@ -84,30 +103,34 @@ export const AssetOverview: React.FC = () => {
       setStatistics(stats);
 
       // Calculate total value
-      const total = stats.reduce((sum, stat) => sum + (stat.total_value || 0), 0);
+      const total = stats.reduce(
+        (sum, stat) => sum + (stat.total_value || 0),
+        0,
+      );
       setTotalValue(total);
 
       // Get unassigned assets
-      const { data: unassignedData, error: unassignedError } = await supabaseWithRetry.
-      rpc('get_unassigned_assets', { p_user_id: user.id });
+      const { data: unassignedData, error: unassignedError } =
+        await supabaseWithRetry.rpc("get_unassigned_assets", {
+          p_user_id: user.id,
+        });
 
       if (unassignedError) throw unassignedError;
       setUnassignedAssets(unassignedData || []);
 
       // Get user's preferred currency
-      const { data: profileData } = await supabaseWithRetry.
-      from('profiles').
-      select('preferred_currency').
-      eq('id', user.id).
-      single();
+      const { data: profileData } = await supabaseWithRetry
+        .from("profiles")
+        .select("preferred_currency")
+        .eq("id", user.id)
+        .single();
 
       if (profileData?.preferred_currency) {
         setCurrency(profileData.preferred_currency);
       }
-
     } catch (error) {
-      console.error('[AssetOverview] Error loading data:', error);
-      toast.error(t('errors.loadingAssets'));
+      console.error("[AssetOverview] Error loading data:", error);
+      toast.error(t("errors.loadingAssets"));
     } finally {
       setLoading(false);
     }
@@ -118,33 +141,36 @@ export const AssetOverview: React.FC = () => {
   }, [loadAssetData]);
 
   const formatCurrency = (value: number) => {
-    return new Intl.NumberFormat('en-US', {
-      style: 'currency',
+    return new Intl.NumberFormat("en-US", {
+      style: "currency",
       currency: currency,
       minimumFractionDigits: 0,
-      maximumFractionDigits: 0
+      maximumFractionDigits: 0,
     }).format(value);
   };
 
   const getCategoryIcon = (category: string) => {
-    const Icon = CATEGORY_ICONS[category as keyof typeof CATEGORY_ICONS] || FileText;
+    const Icon =
+      CATEGORY_ICONS[category as keyof typeof CATEGORY_ICONS] || FileText;
     return Icon;
   };
 
   const getCategoryColor = (category: string) => {
-    return CATEGORY_COLORS[category as keyof typeof CATEGORY_COLORS] || '#6B7280';
+    return (
+      CATEGORY_COLORS[category as keyof typeof CATEGORY_COLORS] || "#6B7280"
+    );
   };
 
-  const chartData = statistics.
-  filter((stat) => stat.count > 0).
-  map((stat) => ({
-    name: t(`categories.${stat.category}`),
-    value: stat.total_value || 0,
-    count: stat.count
-  }));
+  const chartData = statistics
+    .filter((stat) => stat.count > 0)
+    .map((stat) => ({
+      name: t(`categories.${stat.category}`),
+      value: stat.total_value || 0,
+      count: stat.count,
+    }));
 
   const handleAddAsset = (category?: string) => {
-    const searchParams = category ? `?category=${category}` : '';
+    const searchParams = category ? `?category=${category}` : "";
     navigate(`/assets/new${searchParams}`);
   };
 
@@ -152,16 +178,16 @@ export const AssetOverview: React.FC = () => {
     return (
       <div className="space-y-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {[1, 2, 3].map((i) =>
-          <Skeleton key={i} className="h-32" />
-          )}
+          {[1, 2, 3].map((i) => (
+            <Skeleton key={i} className="h-32" />
+          ))}
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <Skeleton className="h-64" />
           <Skeleton className="h-64" />
         </div>
-      </div>);
-
+      </div>
+    );
   }
 
   return (
@@ -169,13 +195,13 @@ export const AssetOverview: React.FC = () => {
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>
-          <h2 className="text-2xl font-bold">{t('vault.title')}</h2>
-          <p className="text-muted-foreground">{t('vault.subtitle')}</p>
+          <h2 className="text-2xl font-bold">{t("vault.title")}</h2>
+          <p className="text-muted-foreground">{t("vault.subtitle")}</p>
         </div>
       </div>
 
       {/* Life Inventory Assistant */}
-      <LifeInventoryAssistant 
+      <LifeInventoryAssistant
         statistics={statistics}
         totalValue={totalValue}
         unassignedCount={unassignedAssets.length}
@@ -196,7 +222,7 @@ export const AssetOverview: React.FC = () => {
               </div>
             </CardContent>
           </Card>
-          
+
           <Card>
             <CardHeader className="pb-3">
               <CardTitle className="text-sm font-medium text-muted-foreground">
@@ -209,7 +235,7 @@ export const AssetOverview: React.FC = () => {
               </div>
             </CardContent>
           </Card>
-          
+
           <Card>
             <CardHeader className="pb-3">
               <CardTitle className="text-sm font-medium text-muted-foreground">
@@ -218,7 +244,7 @@ export const AssetOverview: React.FC = () => {
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">
-                {statistics.filter(s => s.count > 0).length}
+                {statistics.filter((s) => s.count > 0).length}
               </div>
             </CardContent>
           </Card>
@@ -247,12 +273,14 @@ export const AssetOverview: React.FC = () => {
                 >
                   <div className="flex items-center gap-3">
                     {React.createElement(getCategoryIcon(asset.category), {
-                      className: 'h-4 w-4 text-muted-foreground'
+                      className: "h-4 w-4 text-muted-foreground",
                     })}
                     <div>
                       <span className="text-sm font-medium">{asset.name}</span>
                       <p className="text-xs text-muted-foreground">
-                        {asset.total_allocation < 50 ? 'Needs more information' : 'Almost complete'}
+                        {asset.total_allocation < 50
+                          ? "Needs more information"
+                          : "Almost complete"}
                       </p>
                     </div>
                   </div>
@@ -268,12 +296,12 @@ export const AssetOverview: React.FC = () => {
                 </div>
               ))}
             </div>
-            
+
             {unassignedAssets.length > 5 && (
               <Button
                 variant="outline"
                 className="w-full mt-3"
-                onClick={() => navigate('/dashboard')}
+                onClick={() => navigate("/dashboard")}
               >
                 View All {unassignedAssets.length} Items
               </Button>
@@ -281,6 +309,6 @@ export const AssetOverview: React.FC = () => {
           </CardContent>
         </Card>
       )}
-    </div>);
-
+    </div>
+  );
 };

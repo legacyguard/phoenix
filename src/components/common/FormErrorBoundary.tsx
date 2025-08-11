@@ -1,8 +1,8 @@
-import type React, { Component, ReactNode } from 'react';
-import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
-import { Button } from '@/components/ui/button';
-import { AlertCircle, RefreshCw } from 'lucide-react';
-import { withTranslation, WithTranslation } from 'react-i18next';
+import type React, { Component, ReactNode } from "react";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { Button } from "@/components/ui/button";
+import { AlertCircle, RefreshCw } from "lucide-react";
+import { withTranslation, WithTranslation } from "react-i18next";
 
 interface Props extends WithTranslation {
   children: ReactNode;
@@ -27,14 +27,14 @@ class FormErrorBoundaryComponent extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    console.error('[FormErrorBoundary] Form error:', {
+    console.error("[FormErrorBoundary] Form error:", {
       timestamp: new Date().toISOString(),
       error: {
         message: error.message,
         name: error.name,
-        stack: error.stack
+        stack: error.stack,
       },
-      componentStack: errorInfo.componentStack
+      componentStack: errorInfo.componentStack,
     });
 
     if (this.props.onError) {
@@ -48,37 +48,45 @@ class FormErrorBoundaryComponent extends Component<Props, State> {
 
   render() {
     if (this.state.hasError) {
-      const { resetOnError = true, resetButtonText = 'Try Again' } = this.props;
+      const { resetOnError = true, resetButtonText = "Try Again" } = this.props;
 
       return (
         <Alert variant="destructive" className="my-4">
           <AlertCircle className="h-4 w-4" />
-          <AlertTitle>{this.props.t("ui.common.formErrorBoundary.form_error_1")}</AlertTitle>
+          <AlertTitle>
+            {this.props.t("ui.common.formErrorBoundary.form_error_1")}
+          </AlertTitle>
           <AlertDescription className="mt-2 space-y-2">
-            <p>{this.props.t("ui.common.formErrorBoundary.an_unexpected_error_occurred_w_2")}</p>
-            {process.env.NODE_ENV === 'development' && this.state.error &&
-            <p className="text-xs font-mono bg-destructive/10 p-2 rounded">
+            <p>
+              {this.props.t(
+                "ui.common.formErrorBoundary.an_unexpected_error_occurred_w_2",
+              )}
+            </p>
+            {process.env.NODE_ENV === "development" && this.state.error && (
+              <p className="text-xs font-mono bg-destructive/10 p-2 rounded">
                 {this.state.error.message}
               </p>
-            }
-            {resetOnError &&
-            <Button
-              size="sm"
-              variant="outline"
-              onClick={this.handleReset}
-              className="mt-2">
-
+            )}
+            {resetOnError && (
+              <Button
+                size="sm"
+                variant="outline"
+                onClick={this.handleReset}
+                className="mt-2"
+              >
                 <RefreshCw className="mr-2 h-3 w-3" />
                 {resetButtonText}
               </Button>
-            }
+            )}
           </AlertDescription>
-        </Alert>);
-
+        </Alert>
+      );
     }
 
     return this.props.children;
   }
 }
 
-export const FormErrorBoundary = withTranslation('ui')(FormErrorBoundaryComponent);
+export const FormErrorBoundary = withTranslation("ui")(
+  FormErrorBoundaryComponent,
+);

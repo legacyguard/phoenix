@@ -1,5 +1,5 @@
-import { useCallback } from 'react';
-import { toast } from 'sonner';
+import { useCallback } from "react";
+import { toast } from "sonner";
 
 interface ErrorHandlerOptions {
   showToast?: boolean;
@@ -9,135 +9,141 @@ interface ErrorHandlerOptions {
 }
 
 export const useErrorHandler = () => {
-  const handleError = useCallback((
-    error: unknown,
-    options: ErrorHandlerOptions = {}
-  ) => {
-    const {
-      showToast = true,
-      fallbackMessage = 'An unexpected error occurred',
-      context = 'Application',
-      captureStackTrace = true
-    } = options;
+  const handleError = useCallback(
+    (error: unknown, options: ErrorHandlerOptions = {}) => {
+      const {
+        showToast = true,
+        fallbackMessage = "An unexpected error occurred",
+        context = "Application",
+        captureStackTrace = true,
+      } = options;
 
-    // Konvertujeme error na Error objekt
-    let errorObj: Error;
-    if (error instanceof Error) {
-      errorObj = error;
-    } else if (typeof error === 'string') {
-      errorObj = new Error(error);
-    } else {
-      errorObj = new Error(fallbackMessage);
-    }
-
-    // Zachytiť stack trace ak ešte neexistuje
-    if (captureStackTrace && !errorObj.stack) {
-      Error.captureStackTrace(errorObj, handleError);
-    }
-
-    // Vytvoríme detailný error objekt
-    const errorDetails = {
-      timestamp: new Date().toISOString(),
-      context,
-      error: {
-        message: errorObj.message,
-        name: errorObj.name,
-        stack: errorObj.stack,
-        cause: (errorObj as Error & { cause?: unknown }).cause
-      },
-      location: {
-        href: window.location.href,
-        pathname: window.location.pathname,
-        search: window.location.search
-      },
-      userAgent: navigator.userAgent,
-      viewport: {
-        width: window.innerWidth,
-        height: window.innerHeight
+      // Konvertujeme error na Error objekt
+      let errorObj: Error;
+      if (error instanceof Error) {
+        errorObj = error;
+      } else if (typeof error === "string") {
+        errorObj = new Error(error);
+      } else {
+        errorObj = new Error(fallbackMessage);
       }
-    };
 
-    // Logovanie do konzoly
-    console.error(`[${context}] Error:`, errorDetails);
-
-    // Toast notifikácia
-    if (showToast) {
-      toast.error(errorObj.message || fallbackMessage);
-    }
-
-    // Uložiť do localStorage pre debugging
-    try {
-      const errors = JSON.parse(localStorage.getItem('app_errors') || '[]');
-      errors.push(errorDetails);
-      if (errors.length > 10) {
-        errors.shift();
+      // Zachytiť stack trace ak ešte neexistuje
+      if (captureStackTrace && !errorObj.stack) {
+        Error.captureStackTrace(errorObj, handleError);
       }
-      localStorage.setItem('app_errors', JSON.stringify(errors));
-    } catch (e) {
-      console.error('Failed to save error to localStorage:', e);
-    }
 
-    // Hodiť error ďalej pre Error Boundary
-    throw errorObj;
-  }, []);
+      // Vytvoríme detailný error objekt
+      const errorDetails = {
+        timestamp: new Date().toISOString(),
+        context,
+        error: {
+          message: errorObj.message,
+          name: errorObj.name,
+          stack: errorObj.stack,
+          cause: (errorObj as Error & { cause?: unknown }).cause,
+        },
+        location: {
+          href: window.location.href,
+          pathname: window.location.pathname,
+          search: window.location.search,
+        },
+        userAgent: navigator.userAgent,
+        viewport: {
+          width: window.innerWidth,
+          height: window.innerHeight,
+        },
+      };
 
-  const logError = useCallback((
-    message: string,
-    error?: unknown,
-    additionalData?: Record<string, unknown>
-  ) => {
-    const errorDetails = {
-      timestamp: new Date().toISOString(),
-      message,
-      error: error instanceof Error ? {
-        message: error.message,
-        name: error.name,
-        stack: error.stack
-      } : error,
-      additionalData,
-      location: window.location.href
-    };
+      // Logovanie do konzoly
+      console.error(`[${context}] Error:`, errorDetails);
 
-    console.error('[Error Log]:', errorDetails);
+      // Toast notifikácia
+      if (showToast) {
+        toast.error(errorObj.message || fallbackMessage);
+      }
 
-    // V produkcii by sa tu poslalo do monitorovacej služby
-    if (process.env.NODE_ENV === 'production') {
-      // window.Sentry?.captureMessage(message, {
-      //   level: 'error',
-      //   extra: errorDetails
-      // });
-    }
-  }, []);
+      // Uložiť do localStorage pre debugging
+      try {
+        const errors = JSON.parse(localStorage.getItem("app_errors") || "[]");
+        errors.push(errorDetails);
+        if (errors.length > 10) {
+          errors.shift();
+        }
+        localStorage.setItem("app_errors", JSON.stringify(errors));
+      } catch (e) {
+        console.error("Failed to save error to localStorage:", e);
+      }
 
-  const captureException = useCallback((
-    error: Error,
-    context?: Record<string, unknown>
-  ) => {
-    const errorDetails = {
-      timestamp: new Date().toISOString(),
-      error: {
-        message: error.message,
-        name: error.name,
-        stack: error.stack
-      },
-      context,
-      breadcrumbs: getBreadcrumbs()
-    };
+      // Hodiť error ďalej pre Error Boundary
+      throw errorObj;
+    },
+    [],
+  );
 
-    console.error('[Exception Captured]:', errorDetails);
+  const logError = useCallback(
+    (
+      message: string,
+      error?: unknown,
+      additionalData?: Record<string, unknown>,
+    ) => {
+      const errorDetails = {
+        timestamp: new Date().toISOString(),
+        message,
+        error:
+          error instanceof Error
+            ? {
+                message: error.message,
+                name: error.name,
+                stack: error.stack,
+              }
+            : error,
+        additionalData,
+        location: window.location.href,
+      };
 
-    // V produkcii poslať do monitorovacej služby
-    if (process.env.NODE_ENV === 'production') {
-      // window.Sentry?.captureException(error, {
-      //   contexts: { custom: context }
-      // });
-    }
-  }, []);
+      console.error("[Error Log]:", errorDetails);
+
+      // V produkcii by sa tu poslalo do monitorovacej služby
+      if (process.env.NODE_ENV === "production") {
+        // window.Sentry?.captureMessage(message, {
+        //   level: 'error',
+        //   extra: errorDetails
+        // });
+      }
+    },
+    [],
+  );
+
+  const captureException = useCallback(
+    (error: Error, context?: Record<string, unknown>) => {
+      const errorDetails = {
+        timestamp: new Date().toISOString(),
+        error: {
+          message: error.message,
+          name: error.name,
+          stack: error.stack,
+        },
+        context,
+        breadcrumbs: getBreadcrumbs(),
+      };
+
+      console.error("[Exception Captured]:", errorDetails);
+
+      // V produkcii poslať do monitorovacej služby
+      if (process.env.NODE_ENV === "production") {
+        // window.Sentry?.captureException(error, {
+        //   contexts: { custom: context }
+        // });
+      }
+    },
+    [],
+  );
 
   return {
     handleError,
     logError,
-    captureException
+    captureException,
   };
 };
 
@@ -149,12 +155,12 @@ function getBreadcrumbs(): Array<Record<string, unknown>> {
     return [
       {
         timestamp: new Date().toISOString(),
-        category: 'navigation',
+        category: "navigation",
         data: {
           from: document.referrer,
-          to: window.location.href
-        }
-      }
+          to: window.location.href,
+        },
+      },
     ];
   } catch {
     return [];

@@ -1,5 +1,9 @@
-import { COUNTRY_LANGUAGES, type CountryCode, type LanguageCode } from '@/config/countries';
-import { domainRedirectService } from '@/utils/domainRedirect';
+import {
+  COUNTRY_LANGUAGES,
+  type CountryCode,
+  type LanguageCode,
+} from "@/config/countries";
+import { domainRedirectService } from "@/utils/domainRedirect";
 
 interface LanguageDetectionResult {
   detectedLanguage: LanguageCode | null;
@@ -14,7 +18,7 @@ class LanguageDetectionService {
   detectBrowserLanguage(): LanguageDetectionResult {
     // Get all browser languages
     const browserLanguages = this.getBrowserLanguages();
-    
+
     return {
       detectedLanguage: this.parseLanguageCode(browserLanguages[0]),
       browserLanguages,
@@ -27,11 +31,11 @@ class LanguageDetectionService {
    */
   detectLanguageForCountry(
     countryCode: CountryCode,
-    browserLanguages?: string[]
+    browserLanguages?: string[],
   ): LanguageDetectionResult {
     const languages = browserLanguages || this.getBrowserLanguages();
     const countryLanguages = COUNTRY_LANGUAGES[countryCode] || [];
-    
+
     // Try to find exact match
     for (const browserLang of languages) {
       const langCode = this.parseLanguageCode(browserLang);
@@ -43,14 +47,14 @@ class LanguageDetectionService {
         };
       }
     }
-    
+
     // Try to match by language family (e.g., en-US matches en)
     for (const browserLang of languages) {
-      const baseLang = browserLang.split('-')[0].toLowerCase();
-      const matchedLang = countryLanguages.find(cl => 
-        cl.toLowerCase().startsWith(baseLang)
+      const baseLang = browserLang.split("-")[0].toLowerCase();
+      const matchedLang = countryLanguages.find((cl) =>
+        cl.toLowerCase().startsWith(baseLang),
       );
-      
+
       if (matchedLang) {
         return {
           detectedLanguage: matchedLang,
@@ -59,7 +63,7 @@ class LanguageDetectionService {
         };
       }
     }
-    
+
     // Fallback to country's default language
     return {
       detectedLanguage: countryLanguages[0] || null,
@@ -73,28 +77,28 @@ class LanguageDetectionService {
    */
   private getBrowserLanguages(): string[] {
     const languages: string[] = [];
-    
+
     // Primary language
     if (navigator.language) {
       languages.push(navigator.language);
     }
-    
+
     // Additional languages
     if (navigator.languages && navigator.languages.length > 0) {
-      navigator.languages.forEach(lang => {
+      navigator.languages.forEach((lang) => {
         if (!languages.includes(lang)) {
           languages.push(lang);
         }
       });
     }
-    
+
     // Fallback to userLanguage for older browsers
     // @ts-expect-error - userLanguage is not in TypeScript definitions but exists in older browsers
     if (navigator.userLanguage && !languages.includes(navigator.userLanguage)) {
       // @ts-expect-error - userLanguage is not in TypeScript definitions but exists in older browsers
       languages.push(navigator.userLanguage);
     }
-    
+
     return languages;
   }
 
@@ -103,25 +107,25 @@ class LanguageDetectionService {
    */
   private parseLanguageCode(langString: string): LanguageCode | null {
     if (!langString) return null;
-    
+
     // Extract language code (e.g., "en" from "en-US")
-    const langCode = langString.split('-')[0].toLowerCase();
-    
+    const langCode = langString.split("-")[0].toLowerCase();
+
     // Check if it's a supported language
     const supportedLanguages = Object.values(COUNTRY_LANGUAGES)
       .flat()
-      .map(lang => lang.toLowerCase());
-    
+      .map((lang) => lang.toLowerCase());
+
     if (supportedLanguages.includes(langCode)) {
       return langCode as LanguageCode;
     }
-    
+
     // Try full language code (e.g., "en-US")
-    const fullLangCode = langString.toLowerCase().replace('_', '-');
+    const fullLangCode = langString.toLowerCase().replace("_", "-");
     if (supportedLanguages.includes(fullLangCode)) {
       return fullLangCode as LanguageCode;
     }
-    
+
     return null;
   }
 

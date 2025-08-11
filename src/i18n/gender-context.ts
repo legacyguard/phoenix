@@ -3,7 +3,7 @@
  * Supports grammatical gender in multiple languages while maintaining inclusivity
  */
 
-export type Gender = 'masculine' | 'feminine' | 'neutral';
+export type Gender = "masculine" | "feminine" | "neutral";
 
 export interface GenderContext {
   gender: Gender;
@@ -16,24 +16,24 @@ export interface GenderContext {
 // Gender-specific suffixes for different languages
 const GENDER_SUFFIXES = {
   en: {
-    masculine: '_masculine',
-    feminine: '_feminine', 
-    neutral: '_neutral'
+    masculine: "_masculine",
+    feminine: "_feminine",
+    neutral: "_neutral",
   },
   cs: {
-    masculine: '_masculine',
-    feminine: '_feminine',
-    neutral: '_neutral'
-  }
+    masculine: "_masculine",
+    feminine: "_feminine",
+    neutral: "_neutral",
+  },
 } as const;
 
 // Default gender preference
-const DEFAULT_GENDER: Gender = 'neutral';
+const DEFAULT_GENDER: Gender = "neutral";
 
 // Gender context management
 class GenderContextManager {
   private currentGender: Gender = DEFAULT_GENDER;
-  private language: string = 'en';
+  private language: string = "en";
 
   constructor() {
     // Load saved gender preference from localStorage
@@ -54,7 +54,9 @@ class GenderContextManager {
   }
 
   getGenderSuffix(key: string): string {
-    const suffixes = GENDER_SUFFIXES[this.language as keyof typeof GENDER_SUFFIXES] || GENDER_SUFFIXES.en;
+    const suffixes =
+      GENDER_SUFFIXES[this.language as keyof typeof GENDER_SUFFIXES] ||
+      GENDER_SUFFIXES.en;
     return suffixes[this.currentGender];
   }
 
@@ -66,11 +68,11 @@ class GenderContextManager {
   formatGenderedText(text: string, gender: Gender): string {
     // Apply gender-specific formatting rules
     switch (gender) {
-      case 'masculine':
+      case "masculine":
         return this.formatMasculineText(text);
-      case 'feminine':
+      case "feminine":
         return this.formatFeminineText(text);
-      case 'neutral':
+      case "neutral":
         return this.formatNeutralText(text);
       default:
         return text;
@@ -94,20 +96,20 @@ class GenderContextManager {
 
   private loadGenderPreference() {
     try {
-      const saved = localStorage.getItem('gender-preference');
-      if (saved && ['masculine', 'feminine', 'neutral'].includes(saved)) {
+      const saved = localStorage.getItem("gender-preference");
+      if (saved && ["masculine", "feminine", "neutral"].includes(saved)) {
         this.currentGender = saved as Gender;
       }
     } catch (error) {
-      console.warn('Failed to load gender preference:', error);
+      console.warn("Failed to load gender preference:", error);
     }
   }
 
   private saveGenderPreference() {
     try {
-      localStorage.setItem('gender-preference', this.currentGender);
+      localStorage.setItem("gender-preference", this.currentGender);
     } catch (error) {
-      console.warn('Failed to save gender preference:', error);
+      console.warn("Failed to save gender preference:", error);
     }
   }
 
@@ -143,7 +145,8 @@ export const useGenderContext = (): GenderContext => {
     setGender: (gender: Gender) => genderContext.setGender(gender),
     getGenderSuffix: (key: string) => genderContext.getGenderSuffix(key),
     getGenderedKey: (baseKey: string) => genderContext.getGenderedKey(baseKey),
-    formatGenderedText: (text: string, gender: Gender) => genderContext.formatGenderedText(text, gender)
+    formatGenderedText: (text: string, gender: Gender) =>
+      genderContext.formatGenderedText(text, gender),
   };
 };
 
@@ -153,7 +156,10 @@ export const getGenderedKey = (baseKey: string): string => {
 };
 
 // Utility function to check if a gendered key exists
-export const hasGenderedKey = (t: (key: string) => string, baseKey: string): boolean => {
+export const hasGenderedKey = (
+  t: (key: string) => string,
+  baseKey: string,
+): boolean => {
   const genderedKey = getGenderedKey(baseKey);
   try {
     const result = t(genderedKey);
@@ -165,18 +171,18 @@ export const hasGenderedKey = (t: (key: string) => string, baseKey: string): boo
 
 // Utility function to get translation with fallback
 export const getGenderedTranslation = (
-  t: (key: string) => string, 
-  baseKey: string, 
-  fallbackKey?: string
+  t: (key: string) => string,
+  baseKey: string,
+  fallbackKey?: string,
 ): string => {
   const genderedKey = getGenderedKey(baseKey);
-  
+
   // Try gendered key first
   const genderedResult = t(genderedKey);
   if (genderedResult !== genderedKey) {
     return genderedResult;
   }
-  
+
   // Try fallback key if provided
   if (fallbackKey) {
     const fallbackResult = t(fallbackKey);
@@ -184,7 +190,7 @@ export const getGenderedTranslation = (
       return fallbackResult;
     }
   }
-  
+
   // Fall back to base key
   const baseResult = t(baseKey);
   return baseResult !== baseKey ? baseResult : baseKey;
@@ -192,10 +198,10 @@ export const getGenderedTranslation = (
 
 // Gender preference constants
 export const GENDER_OPTIONS = [
-  { value: 'neutral', label: 'Neutral/Inclusive' },
-  { value: 'masculine', label: 'Masculine' },
-  { value: 'feminine', label: 'Feminine' }
+  { value: "neutral", label: "Neutral/Inclusive" },
+  { value: "masculine", label: "Masculine" },
+  { value: "feminine", label: "Feminine" },
 ] as const;
 
 // Export types for use in components
-export type GenderOption = typeof GENDER_OPTIONS[number];
+export type GenderOption = (typeof GENDER_OPTIONS)[number];

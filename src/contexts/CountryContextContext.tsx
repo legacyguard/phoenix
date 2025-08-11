@@ -1,4 +1,4 @@
-import React, { createContext } from 'react';
+import React, { createContext } from "react";
 
 interface CountryContextType {
   selectedCountryCode: string;
@@ -6,4 +6,6 @@ interface CountryContextType {
   isDetecting: boolean;
 }
 
-export const CountryContext = createContext<CountryContextType | undefined>(undefined); 
+export const CountryContext = createContext<CountryContextType | undefined>(
+  undefined,
+);

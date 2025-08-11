@@ -8,17 +8,24 @@
  * - For full reference and procedures see docs/feature-flags.md
  */
 
-import React, { useState } from 'react';
-import { useFeatureFlags } from '@/config/features';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Switch } from '@/components/ui/switch';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { Settings, RefreshCw, Eye, EyeOff } from 'lucide-react';
+import React, { useState } from "react";
+import { useFeatureFlags } from "@/config/features";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Switch } from "@/components/ui/switch";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Settings, RefreshCw, Eye, EyeOff } from "lucide-react";
 
 export const FeatureFlagPanel: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
-  const { flags, isEnabled, setFlag, toggleFlag, resetFlags } = useFeatureFlags();
+  const { flags, isEnabled, setFlag, toggleFlag, resetFlags } =
+    useFeatureFlags();
 
   // Only show in development
   if (import.meta.env.PROD) {
@@ -43,7 +50,9 @@ export const FeatureFlagPanel: React.FC = () => {
         <CardHeader className="flex flex-row items-center justify-between">
           <div>
             <CardTitle className="text-sm">Feature Flags</CardTitle>
-            <CardDescription className="text-xs">Development only</CardDescription>
+            <CardDescription className="text-xs">
+              Development only
+            </CardDescription>
           </div>
           <div className="flex gap-2">
             <Button
@@ -69,27 +78,29 @@ export const FeatureFlagPanel: React.FC = () => {
             <div className="flex items-center justify-between p-2 bg-muted rounded">
               <div className="flex-1">
                 <p className="text-sm font-medium">Respectful Onboarding</p>
-                <p className="text-xs text-muted-foreground">New professional flow</p>
+                <p className="text-xs text-muted-foreground">
+                  New professional flow
+                </p>
               </div>
               <Switch
-                checked={isEnabled('respectfulOnboarding')}
-                onCheckedChange={() => toggleFlag('respectfulOnboarding')}
+                checked={isEnabled("respectfulOnboarding")}
+                onCheckedChange={() => toggleFlag("respectfulOnboarding")}
               />
             </div>
-
-
           </div>
 
           <div className="pt-2 border-t">
-            <p className="text-xs text-muted-foreground mb-2">Current Configuration:</p>
+            <p className="text-xs text-muted-foreground mb-2">
+              Current Configuration:
+            </p>
             <div className="flex flex-wrap gap-1">
               {Object.entries(flags).map(([key, value]) => (
                 <Badge
                   key={key}
-                  variant={value ? 'default' : 'secondary'}
+                  variant={value ? "default" : "secondary"}
                   className="text-xs"
                 >
-                  {key}: {value ? 'ON' : 'OFF'}
+                  {key}: {value ? "ON" : "OFF"}
                 </Badge>
               ))}
             </div>
@@ -97,8 +108,8 @@ export const FeatureFlagPanel: React.FC = () => {
 
           <div className="pt-2 border-t">
             <p className="text-xs text-muted-foreground">
-              💡 Tip: Changes are saved to localStorage and persist across sessions.
-              Use the refresh button to reset to defaults.
+              💡 Tip: Changes are saved to localStorage and persist across
+              sessions. Use the refresh button to reset to defaults.
             </p>
           </div>
         </CardContent>

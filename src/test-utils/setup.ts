@@ -1,9 +1,9 @@
-import '@testing-library/jest-dom';
+import "@testing-library/jest-dom";
 
 // Mock window.matchMedia
-Object.defineProperty(window, 'matchMedia', {
+Object.defineProperty(window, "matchMedia", {
   writable: true,
-  value: jest.fn().mockImplementation(query => ({
+  value: jest.fn().mockImplementation((query) => ({
     matches: false,
     media: query,
     onchange: null,
@@ -21,9 +21,11 @@ global.IntersectionObserver = class IntersectionObserver {
   disconnect() {}
   observe() {}
   unobserve() {}
-  takeRecords() { return []; }
+  takeRecords() {
+    return [];
+  }
   readonly root: Element | null = null;
-  readonly rootMargin: string = '';
+  readonly rootMargin: string = "";
   readonly thresholds: ReadonlyArray<number> = [];
 };
 
@@ -36,12 +38,12 @@ global.ResizeObserver = class ResizeObserver {
 };
 
 // Mock next/router
-jest.mock('next/router', () => ({
+jest.mock("next/router", () => ({
   useRouter: () => ({
-    route: '/',
-    pathname: '/',
+    route: "/",
+    pathname: "/",
     query: {},
-    asPath: '/',
+    asPath: "/",
     push: jest.fn(),
     replace: jest.fn(),
     reload: jest.fn(),
@@ -57,7 +59,7 @@ jest.mock('next/router', () => ({
 }));
 
 // Mock next/navigation
-jest.mock('next/navigation', () => ({
+jest.mock("next/navigation", () => ({
   useRouter: () => ({
     push: jest.fn(),
     replace: jest.fn(),
@@ -75,12 +77,12 @@ jest.mock('next/navigation', () => ({
     values: jest.fn(),
     toString: jest.fn(),
   }),
-  usePathname: () => '/',
+  usePathname: () => "/",
   useParams: () => ({}),
 }));
 
 // Mock Supabase
-jest.mock('@supabase/supabase-js', () => ({
+jest.mock("@supabase/supabase-js", () => ({
   createClient: jest.fn(() => ({
     auth: {
       signIn: jest.fn(),

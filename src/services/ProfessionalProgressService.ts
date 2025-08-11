@@ -3,7 +3,7 @@
  * Non-gamified progress tracking focused on completion status and readiness levels
  */
 
-import { supabase } from '@/integrations/supabase/client';
+import { supabase } from "@/integrations/supabase/client";
 
 // Minimal row shapes used from Supabase
 type ProfileRow = {
@@ -32,8 +32,8 @@ type AssetRow = {
 export interface SecurityArea {
   id: string;
   name: string;
-  status: 'not_started' | 'in_progress' | 'needs_review' | 'complete';
-  priority: 'urgent' | 'high' | 'medium' | 'low';
+  status: "not_started" | "in_progress" | "needs_review" | "complete";
+  priority: "urgent" | "high" | "medium" | "low";
   lastUpdated: string | null;
   reviewNeeded: boolean;
   estimatedTime?: string;
@@ -50,7 +50,12 @@ export interface SubTask {
 }
 
 export interface ReadinessLevel {
-  level: 'initial' | 'developing' | 'established' | 'comprehensive' | 'maintained';
+  level:
+    | "initial"
+    | "developing"
+    | "established"
+    | "comprehensive"
+    | "maintained";
   label: string;
   description: string;
   color: string;
@@ -77,10 +82,16 @@ export interface ProfessionalProgress {
 
 export interface Recommendation {
   id: string;
-  type: 'action' | 'review' | 'milestone' | 'update' | 'consultation' | 'insight';
+  type:
+    | "action"
+    | "review"
+    | "milestone"
+    | "update"
+    | "consultation"
+    | "insight";
   title: string;
   description: string;
-  priority: 'urgent' | 'high' | 'medium' | 'low';
+  priority: "urgent" | "high" | "medium" | "low";
   estimatedTime: string;
   actionUrl: string;
   dueDate?: string;
@@ -91,7 +102,14 @@ export interface Recommendation {
 export interface TimelineEvent {
   id: string;
   date: string;
-  type: 'completed' | 'started' | 'updated' | 'reviewed' | 'document_added' | 'profile_updated' | 'asset_added';
+  type:
+    | "completed"
+    | "started"
+    | "updated"
+    | "reviewed"
+    | "document_added"
+    | "profile_updated"
+    | "asset_added";
   area: string;
   description: string;
 }
@@ -100,11 +118,17 @@ export class ProfessionalProgressService {
   /**
    * Get complete professional progress status
    */
-  static async getProfessionalProgress(userId: string): Promise<ProfessionalProgress> {
+  static async getProfessionalProgress(
+    userId: string,
+  ): Promise<ProfessionalProgress> {
     const securityAreas = await this.getSecurityAreas(userId);
     const metrics = this.calculateMetrics(securityAreas);
     const readinessLevel = this.determineReadinessLevel(metrics);
-    const recommendations = await this.generateRecommendations(userId, securityAreas, metrics);
+    const recommendations = await this.generateRecommendations(
+      userId,
+      securityAreas,
+      metrics,
+    );
     const timeline = await this.getActivityTimeline(userId);
 
     return {
@@ -112,7 +136,7 @@ export class ProfessionalProgressService {
       securityAreas,
       metrics,
       recommendations,
-      timeline
+      timeline,
     };
   }
 
@@ -123,7 +147,7 @@ export class ProfessionalProgressService {
     // Check cache first
     const cacheKey = `prof_progress_${userId}`;
     const cached = localStorage.getItem(cacheKey);
-    
+
     if (cached) {
       try {
         const parsedCache = JSON.parse(cached);
@@ -134,174 +158,299 @@ export class ProfessionalProgressService {
         }
       } catch (e) {
         // Invalid cache, continue to fetch fresh data
-        console.warn('Invalid cache data:', e);
+        console.warn("Invalid cache data:", e);
       }
     }
 
     // Fetch user data from Supabase (tolerant to different mock shapes)
     const { data: profileData } = await supabase
-      .from('profiles')
-      .select('will_updated_at, has_will, has_executor, has_beneficiaries')
-      .eq('id', userId)
+      .from("profiles")
+      .select("will_updated_at, has_will, has_executor, has_beneficiaries")
+      .eq("id", userId)
       .single();
     const profile: ProfileRow | null = profileData as ProfileRow | null;
 
     const { data: documents } = await supabase
-      .from('documents')
-      .select('id, category, created_at, updated_at, name')
-      .eq('user_id', userId);
+      .from("documents")
+      .select("id, category, created_at, updated_at, name")
+      .eq("user_id", userId);
 
     const { data: assets } = await supabase
-      .from('assets')
-      .select('id, type, name, created_at, updated_at')
-      .eq('user_id', userId);
+      .from("assets")
+      .select("id, type, name, created_at, updated_at")
+      .eq("user_id", userId);
 
     const { data: familyMembers } = await supabase
-      .from('family_members')
-      .select('relationship, created_at')
-      .eq('user_id', userId);
+      .from("family_members")
+      .select("relationship, created_at")
+      .eq("user_id", userId);
 
     const areas: SecurityArea[] = [
       {
-        id: 'identity_documents',
-        name: 'Identity & Legal Documents',
-        status: this.getAreaStatus(documents?.filter(d => d.category === 'identity').length || 0),
-        priority: 'high',
-        lastUpdated: this.getLatestDate(documents?.filter(d => d.category === 'identity')),
-        reviewNeeded: this.needsReview(documents?.filter(d => d.category === 'identity')),
-        estimatedTime: '15 minutes',
-        actionUrl: '/vault?category=identity',
-        description: 'Essential identification and legal documentation',
+        id: "identity_documents",
+        name: "Identity & Legal Documents",
+        status: this.getAreaStatus(
+          documents?.filter((d) => d.category === "identity").length || 0,
+        ),
+        priority: "high",
+        lastUpdated: this.getLatestDate(
+          documents?.filter((d) => d.category === "identity"),
+        ),
+        reviewNeeded: this.needsReview(
+          documents?.filter((d) => d.category === "identity"),
+        ),
+        estimatedTime: "15 minutes",
+        actionUrl: "/vault?category=identity",
+        description: "Essential identification and legal documentation",
         subtasks: [
-          { id: 'passport', title: 'Passport or ID', completed: false, required: true },
-          { id: 'birth_cert', title: 'Birth Certificate', completed: false, required: true },
-          { id: 'ssn', title: 'Social Security Card', completed: false, required: false },
-          { id: 'marriage_cert', title: 'Marriage Certificate', completed: false, required: false }
-        ]
+          {
+            id: "passport",
+            title: "Passport or ID",
+            completed: false,
+            required: true,
+          },
+          {
+            id: "birth_cert",
+            title: "Birth Certificate",
+            completed: false,
+            required: true,
+          },
+          {
+            id: "ssn",
+            title: "Social Security Card",
+            completed: false,
+            required: false,
+          },
+          {
+            id: "marriage_cert",
+            title: "Marriage Certificate",
+            completed: false,
+            required: false,
+          },
+        ],
       },
       {
-        id: 'financial_records',
-        name: 'Financial Records',
-        status: this.getAreaStatus(assets?.filter(a => a.type === 'bank_account' || a.type === 'investment').length || 0),
-        priority: 'high',
-        lastUpdated: this.getLatestDate(assets?.filter(a => a.type === 'bank_account' || a.type === 'investment')),
-        reviewNeeded: this.needsReview(assets?.filter(a => a.type === 'bank_account' || a.type === 'investment')),
-        estimatedTime: '20 minutes',
-        actionUrl: '/assets',
-        description: 'Bank accounts, investments, and financial documentation',
+        id: "financial_records",
+        name: "Financial Records",
+        status: this.getAreaStatus(
+          assets?.filter(
+            (a) => a.type === "bank_account" || a.type === "investment",
+          ).length || 0,
+        ),
+        priority: "high",
+        lastUpdated: this.getLatestDate(
+          assets?.filter(
+            (a) => a.type === "bank_account" || a.type === "investment",
+          ),
+        ),
+        reviewNeeded: this.needsReview(
+          assets?.filter(
+            (a) => a.type === "bank_account" || a.type === "investment",
+          ),
+        ),
+        estimatedTime: "20 minutes",
+        actionUrl: "/assets",
+        description: "Bank accounts, investments, and financial documentation",
         subtasks: [
-          { id: 'primary_bank', title: 'Primary Bank Account', completed: false, required: true },
-          { id: 'savings', title: 'Savings Accounts', completed: false, required: false },
-          { id: 'investments', title: 'Investment Accounts', completed: false, required: false },
-          { id: 'retirement', title: 'Retirement Accounts', completed: false, required: false }
-        ]
+          {
+            id: "primary_bank",
+            title: "Primary Bank Account",
+            completed: false,
+            required: true,
+          },
+          {
+            id: "savings",
+            title: "Savings Accounts",
+            completed: false,
+            required: false,
+          },
+          {
+            id: "investments",
+            title: "Investment Accounts",
+            completed: false,
+            required: false,
+          },
+          {
+            id: "retirement",
+            title: "Retirement Accounts",
+            completed: false,
+            required: false,
+          },
+        ],
       },
       {
-        id: 'estate_planning',
-        name: 'Estate Planning',
+        id: "estate_planning",
+        name: "Estate Planning",
         status: this.getEstateStatus(profile),
         priority: this.getEstatePriority(profile),
         lastUpdated: profile?.will_updated_at || null,
         reviewNeeded: this.needsWillReview(profile?.will_updated_at),
-        estimatedTime: '45 minutes',
-        actionUrl: '/will',
-        description: 'Will, trusts, and estate planning documents',
+        estimatedTime: "45 minutes",
+        actionUrl: "/will",
+        description: "Will, trusts, and estate planning documents",
         subtasks: [
-          { id: 'will', title: 'Last Will & Testament', completed: profile?.has_will || false, required: true },
-          { id: 'executor', title: 'Executor Designated', completed: profile?.has_executor || false, required: true },
-          { id: 'beneficiaries', title: 'Beneficiaries Listed', completed: profile?.has_beneficiaries || false, required: true },
-          { id: 'power_attorney', title: 'Power of Attorney', completed: false, required: false }
-        ]
+          {
+            id: "will",
+            title: "Last Will & Testament",
+            completed: profile?.has_will || false,
+            required: true,
+          },
+          {
+            id: "executor",
+            title: "Executor Designated",
+            completed: profile?.has_executor || false,
+            required: true,
+          },
+          {
+            id: "beneficiaries",
+            title: "Beneficiaries Listed",
+            completed: profile?.has_beneficiaries || false,
+            required: true,
+          },
+          {
+            id: "power_attorney",
+            title: "Power of Attorney",
+            completed: false,
+            required: false,
+          },
+        ],
       },
       {
-        id: 'insurance_policies',
-        name: 'Insurance Policies',
-        status: this.getAreaStatus(documents?.filter(d => d.category === 'insurance').length || 0),
-        priority: 'medium',
-        lastUpdated: this.getLatestDate(documents?.filter(d => d.category === 'insurance')),
+        id: "insurance_policies",
+        name: "Insurance Policies",
+        status: this.getAreaStatus(
+          documents?.filter((d) => d.category === "insurance").length || 0,
+        ),
+        priority: "medium",
+        lastUpdated: this.getLatestDate(
+          documents?.filter((d) => d.category === "insurance"),
+        ),
         reviewNeeded: false,
-        estimatedTime: '10 minutes',
-        actionUrl: '/vault?category=insurance',
-        description: 'Life, health, property, and other insurance policies'
+        estimatedTime: "10 minutes",
+        actionUrl: "/vault?category=insurance",
+        description: "Life, health, property, and other insurance policies",
       },
       {
-        id: 'property_assets',
-        name: 'Property & Assets',
-        status: this.getAreaStatus(assets?.filter(a => a.type === 'real_estate' || a.type === 'vehicle').length || 0),
-        priority: 'medium',
-        lastUpdated: this.getLatestDate(assets?.filter(a => a.type === 'real_estate' || a.type === 'vehicle')),
+        id: "property_assets",
+        name: "Property & Assets",
+        status: this.getAreaStatus(
+          assets?.filter(
+            (a) => a.type === "real_estate" || a.type === "vehicle",
+          ).length || 0,
+        ),
+        priority: "medium",
+        lastUpdated: this.getLatestDate(
+          assets?.filter(
+            (a) => a.type === "real_estate" || a.type === "vehicle",
+          ),
+        ),
         reviewNeeded: false,
-        estimatedTime: '15 minutes',
-        actionUrl: '/assets?type=property',
-        description: 'Real estate, vehicles, and valuable possessions'
+        estimatedTime: "15 minutes",
+        actionUrl: "/assets?type=property",
+        description: "Real estate, vehicles, and valuable possessions",
       },
       {
-        id: 'family_circle',
-        name: 'Family & Beneficiaries',
+        id: "family_circle",
+        name: "Family & Beneficiaries",
         status: this.getAreaStatus(familyMembers?.length || 0),
-        priority: familyMembers?.length ? 'low' : 'high',
+        priority: familyMembers?.length ? "low" : "high",
         lastUpdated: this.getLatestDate(familyMembers),
         reviewNeeded: false,
-        estimatedTime: '10 minutes',
-        actionUrl: '/family-hub',
-        description: 'Family members, beneficiaries, and trusted contacts',
+        estimatedTime: "10 minutes",
+        actionUrl: "/family-hub",
+        description: "Family members, beneficiaries, and trusted contacts",
         subtasks: [
-          { id: 'spouse', title: 'Spouse/Partner', completed: false, required: false },
-          { id: 'children', title: 'Children', completed: false, required: false },
-          { id: 'emergency', title: 'Emergency Contact', completed: profile?.has_emergency_contacts || false, required: true },
-          { id: 'executor_contact', title: 'Executor Contact', completed: profile?.has_executor || false, required: true }
-        ]
+          {
+            id: "spouse",
+            title: "Spouse/Partner",
+            completed: false,
+            required: false,
+          },
+          {
+            id: "children",
+            title: "Children",
+            completed: false,
+            required: false,
+          },
+          {
+            id: "emergency",
+            title: "Emergency Contact",
+            completed: profile?.has_emergency_contacts || false,
+            required: true,
+          },
+          {
+            id: "executor_contact",
+            title: "Executor Contact",
+            completed: profile?.has_executor || false,
+            required: true,
+          },
+        ],
       },
       {
-        id: 'medical_directives',
-        name: 'Medical Directives',
-        status: this.getAreaStatus(documents?.filter(d => d.category === 'medical').length || 0),
-        priority: 'medium',
-        lastUpdated: this.getLatestDate(documents?.filter(d => d.category === 'medical')),
+        id: "medical_directives",
+        name: "Medical Directives",
+        status: this.getAreaStatus(
+          documents?.filter((d) => d.category === "medical").length || 0,
+        ),
+        priority: "medium",
+        lastUpdated: this.getLatestDate(
+          documents?.filter((d) => d.category === "medical"),
+        ),
         reviewNeeded: false,
-        estimatedTime: '20 minutes',
-        actionUrl: '/vault?category=medical',
-        description: 'Healthcare directives, medical history, and emergency medical information'
+        estimatedTime: "20 minutes",
+        actionUrl: "/vault?category=medical",
+        description:
+          "Healthcare directives, medical history, and emergency medical information",
       },
       {
-        id: 'digital_assets',
-        name: 'Digital Assets & Accounts',
-        status: 'not_started', // Would need specific tracking
-        priority: 'low',
+        id: "digital_assets",
+        name: "Digital Assets & Accounts",
+        status: "not_started", // Would need specific tracking
+        priority: "low",
         lastUpdated: null,
         reviewNeeded: false,
-        estimatedTime: '30 minutes',
-        actionUrl: '/vault?category=digital',
-        description: 'Online accounts, digital subscriptions, and cryptocurrency'
+        estimatedTime: "30 minutes",
+        actionUrl: "/vault?category=digital",
+        description:
+          "Online accounts, digital subscriptions, and cryptocurrency",
       },
       {
-        id: 'legacy_messages',
-        name: 'Legacy Messages',
-        status: profile?.has_legacy_letters ? 'complete' : 'not_started',
-        priority: 'low',
+        id: "legacy_messages",
+        name: "Legacy Messages",
+        status: profile?.has_legacy_letters ? "complete" : "not_started",
+        priority: "low",
         lastUpdated: null,
         reviewNeeded: false,
-        estimatedTime: '15 minutes',
-        actionUrl: '/legacy-letters',
-        description: 'Personal messages and instructions for loved ones'
-      }
+        estimatedTime: "15 minutes",
+        actionUrl: "/legacy-letters",
+        description: "Personal messages and instructions for loved ones",
+      },
     ];
 
     // Update subtask completion status based on actual data
-    areas.forEach(area => {
+    areas.forEach((area) => {
       if (area.subtasks) {
-        area.subtasks = this.updateSubtaskStatus(area, profile, documents, assets, familyMembers);
+        area.subtasks = this.updateSubtaskStatus(
+          area,
+          profile,
+          documents,
+          assets,
+          familyMembers,
+        );
       }
     });
 
     // Cache the result
     try {
-      localStorage.setItem(cacheKey, JSON.stringify({
-        areas,
-        timestamp: Date.now()
-      }));
+      localStorage.setItem(
+        cacheKey,
+        JSON.stringify({
+          areas,
+          timestamp: Date.now(),
+        }),
+      );
     } catch (e) {
-      console.warn('Failed to cache areas:', e);
+      console.warn("Failed to cache areas:", e);
     }
 
     return areas;
@@ -313,31 +462,40 @@ export class ProfessionalProgressService {
   private static updateSubtaskStatus(
     area: SecurityArea,
     profile: Record<string, unknown> | null,
-    documents: Array<{ category?: string; created_at?: string; updated_at?: string }> | undefined,
-    assets: Array<{ type?: string; created_at?: string; updated_at?: string }> | undefined,
-    familyMembers: Array<{ relationship?: string; created_at?: string }> | undefined
+    documents:
+      | Array<{ category?: string; created_at?: string; updated_at?: string }>
+      | undefined,
+    assets:
+      | Array<{ type?: string; created_at?: string; updated_at?: string }>
+      | undefined,
+    familyMembers:
+      | Array<{ relationship?: string; created_at?: string }>
+      | undefined,
   ): SubTask[] {
     if (!area.subtasks) return [];
 
-    return area.subtasks.map(subtask => {
+    return area.subtasks.map((subtask) => {
       let completed = subtask.completed;
 
       // Check specific subtasks based on area and data
-      if (area.id === 'identity_documents') {
-        if (subtask.id === 'passport') {
-          completed = documents?.some(d => d.category === 'identity') || false;
+      if (area.id === "identity_documents") {
+        if (subtask.id === "passport") {
+          completed =
+            documents?.some((d) => d.category === "identity") || false;
         }
-      } else if (area.id === 'financial_records') {
-        if (subtask.id === 'primary_bank') {
-          completed = assets?.some(a => a.type === 'bank_account') || false;
-        } else if (subtask.id === 'investments') {
-          completed = assets?.some(a => a.type === 'investment') || false;
+      } else if (area.id === "financial_records") {
+        if (subtask.id === "primary_bank") {
+          completed = assets?.some((a) => a.type === "bank_account") || false;
+        } else if (subtask.id === "investments") {
+          completed = assets?.some((a) => a.type === "investment") || false;
         }
-      } else if (area.id === 'family_circle') {
-        if (subtask.id === 'spouse') {
-          completed = familyMembers?.some(m => m.relationship === 'spouse') || false;
-        } else if (subtask.id === 'children') {
-          completed = familyMembers?.some(m => m.relationship === 'child') || false;
+      } else if (area.id === "family_circle") {
+        if (subtask.id === "spouse") {
+          completed =
+            familyMembers?.some((m) => m.relationship === "spouse") || false;
+        } else if (subtask.id === "children") {
+          completed =
+            familyMembers?.some((m) => m.relationship === "child") || false;
         }
       }
 
@@ -348,68 +506,81 @@ export class ProfessionalProgressService {
   /**
    * Determine area status based on item count
    */
-  private static getAreaStatus(itemCount: number): SecurityArea['status'] {
-    if (itemCount === 0) return 'not_started';
-    if (itemCount <= 2) return 'in_progress';
-    return 'complete';
+  private static getAreaStatus(itemCount: number): SecurityArea["status"] {
+    if (itemCount === 0) return "not_started";
+    if (itemCount <= 2) return "in_progress";
+    return "complete";
   }
 
   /**
    * Determine estate planning status based on profile data
    */
-  private static getEstateStatus(profile: Record<string, unknown> | null): SecurityArea['status'] {
-    if (!profile) return 'not_started';
-    
+  private static getEstateStatus(
+    profile: Record<string, unknown> | null,
+  ): SecurityArea["status"] {
+    if (!profile) return "not_started";
+
     const hasWill = profile.has_will || false;
     const hasExecutor = profile.has_executor || false;
     const hasBeneficiaries = profile.has_beneficiaries || false;
-    
-    const completedCount = [hasWill, hasExecutor, hasBeneficiaries].filter(Boolean).length;
-    
-    if (completedCount === 0) return 'not_started';
-    if (completedCount === 3) return 'complete';
-    return 'in_progress';
+
+    const completedCount = [hasWill, hasExecutor, hasBeneficiaries].filter(
+      Boolean,
+    ).length;
+
+    if (completedCount === 0) return "not_started";
+    if (completedCount === 3) return "complete";
+    return "in_progress";
   }
 
   /**
    * Determine estate planning priority based on profile data
    */
-  private static getEstatePriority(profile: Record<string, unknown> | null): SecurityArea['priority'] {
-    if (!profile || !profile.has_will) return 'urgent';
+  private static getEstatePriority(
+    profile: Record<string, unknown> | null,
+  ): SecurityArea["priority"] {
+    if (!profile || !profile.has_will) return "urgent";
     // If has will but not all items completed, it's still high priority; if fully complete, low
     const hasExecutor = profile.has_executor || false;
     const hasBeneficiaries = profile.has_beneficiaries || false;
-    const completedCount = [true, hasExecutor, hasBeneficiaries].filter(Boolean).length;
-    return completedCount === 3 ? 'low' : 'high';
+    const completedCount = [true, hasExecutor, hasBeneficiaries].filter(
+      Boolean,
+    ).length;
+    return completedCount === 3 ? "low" : "high";
   }
 
   /**
    * Get the latest date from a list of items
    */
-  private static getLatestDate(items?: Array<{ created_at?: string; updated_at?: string }> | null): string | null {
+  private static getLatestDate(
+    items?: Array<{ created_at?: string; updated_at?: string }> | null,
+  ): string | null {
     if (!items || items.length === 0) return null;
-    
+
     const dates = items
-      .map(item => item.updated_at || item.created_at)
-      .filter(date => date)
+      .map((item) => item.updated_at || item.created_at)
+      .filter((date) => date)
       .sort((a, b) => new Date(b).getTime() - new Date(a).getTime());
-    
+
     return dates[0] || null;
   }
 
   /**
    * Check if documents need review (older than 1 year)
    */
-  private static needsReview(items?: Array<{ created_at?: string; updated_at?: string }> | null): boolean {
+  private static needsReview(
+    items?: Array<{ created_at?: string; updated_at?: string }> | null,
+  ): boolean {
     if (!items || items.length === 0) return false;
-    
+
     const latestDate = this.getLatestDate(items);
     if (!latestDate) return false;
-    
+
     const daysSinceUpdate = Math.floor(
-      (new Date().getTime() - new Date(latestDate).getTime()) / (1000 * 60 * 60 * 24)
+      (new Date().getTime() - new Date(latestDate).getTime()) /
+        (1000 * 60 * 60 * 24),
     );
-    
+
     return daysSinceUpdate > 365;
   }
 
@@ -418,11 +589,12 @@ export class ProfessionalProgressService {
    */
   private static needsWillReview(lastUpdated?: string): boolean {
     if (!lastUpdated) return false;
-    
+
     const daysSinceUpdate = Math.floor(
-      (new Date().getTime() - new Date(lastUpdated).getTime()) / (1000 * 60 * 60 * 24)
+      (new Date().getTime() - new Date(lastUpdated).getTime()) /
+        (1000 * 60 * 60 * 24),
     );
-    
+
     // Will should be reviewed every 3 years or after major life events
     return daysSinceUpdate > 1095; // 3 years
   }
@@ -431,14 +603,18 @@ export class ProfessionalProgressService {
    * Calculate progress metrics
    */
   static calculateMetrics(areas: SecurityArea[]): ProgressMetrics {
-    const completedAreas = areas.filter(a => a.status === 'complete').length;
-    const inProgressAreas = areas.filter(a => a.status === 'in_progress').length;
-    const needsReviewCount = areas.filter(a => a.reviewNeeded).length;
-    const urgentActionsCount = areas.filter(a => a.priority === 'urgent' && a.status !== 'complete').length;
+    const completedAreas = areas.filter((a) => a.status === "complete").length;
+    const inProgressAreas = areas.filter(
+      (a) => a.status === "in_progress",
+    ).length;
+    const needsReviewCount = areas.filter((a) => a.reviewNeeded).length;
+    const urgentActionsCount = areas.filter(
+      (a) => a.priority === "urgent" && a.status !== "complete",
+    ).length;
 
     // Calculate estimated time to complete
     const totalMinutes = areas
-      .filter(a => a.status !== 'complete')
+      .filter((a) => a.status !== "complete")
       .reduce((total, area) => {
         // Parse minutes from string - handles both "10 minutes" and "10"
         let minutes = 0;
@@ -454,19 +630,19 @@ export class ProfessionalProgressService {
 
     const hours = Math.floor(totalMinutes / 60);
     const minutes = totalMinutes % 60;
-    let estimatedTimeToComplete = '';
-    
+    let estimatedTimeToComplete = "";
+
     if (hours > 0 && minutes > 0) {
-      estimatedTimeToComplete = `${hours} hour${hours > 1 ? 's' : ''} ${minutes} minutes`;
+      estimatedTimeToComplete = `${hours} hour${hours > 1 ? "s" : ""} ${minutes} minutes`;
     } else if (hours > 0) {
-      estimatedTimeToComplete = `${hours} hour${hours > 1 ? 's' : ''}`;
+      estimatedTimeToComplete = `${hours} hour${hours > 1 ? "s" : ""}`;
     } else {
       estimatedTimeToComplete = `${minutes} minutes`;
     }
 
     // Get last activity date
     const allDates = areas
-      .map(a => a.lastUpdated)
+      .map((a) => a.lastUpdated)
       .filter((date): date is string => Boolean(date))
       .sort((a, b) => new Date(b).getTime() - new Date(a).getTime());
 
@@ -488,7 +664,7 @@ export class ProfessionalProgressService {
       urgentActionsCount,
       lastActivityDate,
       nextReviewDate,
-      estimatedTimeToComplete
+      estimatedTimeToComplete,
     };
   }
 
@@ -496,44 +672,45 @@ export class ProfessionalProgressService {
    * Determine readiness level based on metrics
    */
   static determineReadinessLevel(metrics: ProgressMetrics): ReadinessLevel {
-    const completionPercentage = metrics.totalAreas > 0 
-      ? (metrics.completedAreas / metrics.totalAreas) * 100
-      : 0;
+    const completionPercentage =
+      metrics.totalAreas > 0
+        ? (metrics.completedAreas / metrics.totalAreas) * 100
+        : 0;
 
     if (completionPercentage === 100 && metrics.needsReviewCount === 0) {
       return {
-        level: 'maintained',
-        label: 'Fully Maintained',
-        description: 'All areas complete and up-to-date',
-        color: 'green'
+        level: "maintained",
+        label: "Fully Maintained",
+        description: "All areas complete and up-to-date",
+        color: "green",
       };
     } else if (completionPercentage >= 80) {
       return {
-        level: 'comprehensive',
-        label: 'Comprehensive',
-        description: 'Most security areas are well-established',
-        color: 'blue'
+        level: "comprehensive",
+        label: "Comprehensive",
+        description: "Most security areas are well-established",
+        color: "blue",
       };
     } else if (completionPercentage >= 60) {
       return {
-        level: 'established',
-        label: 'Established',
-        description: 'Core security measures in place',
-        color: 'indigo'
+        level: "established",
+        label: "Established",
+        description: "Core security measures in place",
+        color: "indigo",
       };
     } else if (completionPercentage >= 30) {
       return {
-        level: 'developing',
-        label: 'Developing',
-        description: 'Building essential security foundation',
-        color: 'yellow'
+        level: "developing",
+        label: "Developing",
+        description: "Building essential security foundation",
+        color: "yellow",
       };
     } else {
       return {
-        level: 'initial',
-        label: 'Initial Setup',
-        description: 'Getting started with family security',
-        color: 'orange'
+        level: "initial",
+        label: "Initial Setup",
+        description: "Getting started with family security",
+        color: "orange",
       };
     }
   }
@@ -544,116 +721,128 @@ export class ProfessionalProgressService {
   static async generateRecommendations(
     userId: string,
     areas: SecurityArea[],
-    metrics: ProgressMetrics
+    metrics: ProgressMetrics,
   ): Promise<Recommendation[]> {
     const recommendations: Recommendation[] = [];
 
     // Priority 1: Urgent incomplete areas
-    const urgentIncomplete = areas.filter(a => a.priority === 'urgent' && a.status !== 'complete');
-    urgentIncomplete.forEach(area => {
+    const urgentIncomplete = areas.filter(
+      (a) => a.priority === "urgent" && a.status !== "complete",
+    );
+    urgentIncomplete.forEach((area) => {
       recommendations.push({
         id: `urgent-${area.id}`,
-        type: 'action',
+        type: "action",
         title: `Complete ${area.name}`,
         description: area.description,
-        priority: 'urgent',
-        estimatedTime: area.estimatedTime || '15 minutes',
+        priority: "urgent",
+        estimatedTime: area.estimatedTime || "15 minutes",
         actionUrl: area.actionUrl,
-        icon: 'AlertCircle'
+        icon: "AlertCircle",
       });
     });
 
     // Priority 2: Areas needing review
-    const needsReview = areas.filter(a => a.reviewNeeded);
-    needsReview.forEach(area => {
+    const needsReview = areas.filter((a) => a.reviewNeeded);
+    needsReview.forEach((area) => {
       recommendations.push({
         id: `review-${area.id}`,
-        type: 'review',
+        type: "review",
         title: `Review ${area.name}`,
         description: `Your ${area.name.toLowerCase()} haven't been updated in over a year`,
-        priority: 'high',
-        estimatedTime: '10 minutes',
+        priority: "high",
+        estimatedTime: "10 minutes",
         actionUrl: area.actionUrl,
-        icon: 'Clock'
+        icon: "Clock",
       });
     });
 
     // Priority 3: High priority incomplete areas
-    const highIncomplete = areas.filter(a => a.priority === 'high' && a.status !== 'complete');
-    highIncomplete.slice(0, 2).forEach(area => {
+    const highIncomplete = areas.filter(
+      (a) => a.priority === "high" && a.status !== "complete",
+    );
+    highIncomplete.slice(0, 2).forEach((area) => {
       recommendations.push({
         id: `high-${area.id}`,
-        type: 'action',
+        type: "action",
         title: `Set up ${area.name}`,
         description: area.description,
-        priority: 'high',
-        estimatedTime: area.estimatedTime || '20 minutes',
+        priority: "high",
+        estimatedTime: area.estimatedTime || "20 minutes",
         actionUrl: area.actionUrl,
-        icon: 'FileText'
+        icon: "FileText",
       });
     });
 
     // Priority 4: Annual review if needed
     if (metrics.nextReviewDate) {
       const daysUntilReview = Math.floor(
-        (new Date(metrics.nextReviewDate).getTime() - new Date().getTime()) / (1000 * 60 * 60 * 24)
+        (new Date(metrics.nextReviewDate).getTime() - new Date().getTime()) /
+          (1000 * 60 * 60 * 24),
       );
-      
+
       if (daysUntilReview <= 30) {
         recommendations.push({
-          id: 'annual-review',
-          type: 'review',
-          title: 'Annual Security Review',
-          description: 'Review and update all your family security information',
-          priority: 'medium',
-          estimatedTime: '30 minutes',
-          actionUrl: '/dashboard?review=true',
+          id: "annual-review",
+          type: "review",
+          title: "Annual Security Review",
+          description: "Review and update all your family security information",
+          priority: "medium",
+          estimatedTime: "30 minutes",
+          actionUrl: "/dashboard?review=true",
           dueDate: metrics.nextReviewDate,
-          icon: 'Calendar'
+          icon: "Calendar",
         });
       }
     }
 
     // Add milestone recommendations
-    const completionPercentage = metrics.totalAreas > 0 
-      ? (metrics.completedAreas / metrics.totalAreas) * 100 
-      : 0;
-      
+    const completionPercentage =
+      metrics.totalAreas > 0
+        ? (metrics.completedAreas / metrics.totalAreas) * 100
+        : 0;
+
     if (completionPercentage >= 50 && completionPercentage < 60) {
       recommendations.push({
-        id: 'milestone-halfway',
-        type: 'milestone',
-        title: 'You\'re halfway there!',
-        description: 'You\'ve completed half of your family security setup. Keep up the great work!',
-        priority: 'low',
-        estimatedTime: '0 minutes',
-        actionUrl: '/dashboard',
-        icon: 'Trophy'
+        id: "milestone-halfway",
+        type: "milestone",
+        title: "You're halfway there!",
+        description:
+          "You've completed half of your family security setup. Keep up the great work!",
+        priority: "low",
+        estimatedTime: "0 minutes",
+        actionUrl: "/dashboard",
+        icon: "Trophy",
       });
     } else if (completionPercentage === 100) {
       recommendations.push({
-        id: 'milestone-complete',
-        type: 'milestone',
-        title: 'Congratulations! All areas complete',
-        description: 'Your family security plan is fully established. Remember to review it annually.',
-        priority: 'low',
-        estimatedTime: '0 minutes',
-        actionUrl: '/dashboard',
-        icon: 'Award'
+        id: "milestone-complete",
+        type: "milestone",
+        title: "Congratulations! All areas complete",
+        description:
+          "Your family security plan is fully established. Remember to review it annually.",
+        priority: "low",
+        estimatedTime: "0 minutes",
+        actionUrl: "/dashboard",
+        icon: "Award",
       });
     }
 
     // Priority 5: Professional consultation for comprehensive plans
-    if (metrics.completedAreas >= 6 && !recommendations.some(r => r.type === 'consultation')) {
+    if (
+      metrics.completedAreas >= 6 &&
+      !recommendations.some((r) => r.type === "consultation")
+    ) {
       recommendations.push({
-        id: 'legal-consultation',
-        type: 'consultation',
-        title: 'Consider Professional Review',
-        description: 'Your security plan is comprehensive. Consider having it reviewed by a legal professional.',
-        priority: 'low',
-        estimatedTime: '1 hour',
-        actionUrl: '/help?topic=legal-consultation',
-        icon: 'Briefcase'
+        id: "legal-consultation",
+        type: "consultation",
+        title: "Consider Professional Review",
+        description:
+          "Your security plan is comprehensive. Consider having it reviewed by a legal professional.",
+        priority: "low",
+        estimatedTime: "1 hour",
+        actionUrl: "/help?topic=legal-consultation",
+        icon: "Briefcase",
       });
     }
 
@@ -664,7 +853,10 @@ export class ProfessionalProgressService {
   /**
    * Get activity timeline
    */
-  static async getActivityTimeline(userId: string, limit: number = 10): Promise<TimelineEvent[]> {
+  static async getActivityTimeline(
+    userId: string,
+    limit: number = 10,
+  ): Promise<TimelineEvent[]> {
     const events: TimelineEvent[] = [];
 
     // Fetch recent activities from various tables, tolerant to partial mocks
@@ -674,77 +866,86 @@ export class ProfessionalProgressService {
 
     try {
       const res = await supabase
-        .from('profiles')
-        .select('updated_at')
-        .eq('id', userId)
-        .order('updated_at', { ascending: false })
+        .from("profiles")
+        .select("updated_at")
+        .eq("id", userId)
+        .order("updated_at", { ascending: false })
         .limit(1);
       profiles = (res as { data?: Array<{ updated_at?: string | null }> }).data;
     } catch (e) {
-      console.warn('Failed to fetch profile updates for timeline', e);
+      console.warn("Failed to fetch profile updates for timeline", e);
     }
 
     try {
       const res = await supabase
-        .from('documents')
-        .select('id, category, created_at, updated_at, name')
-        .eq('user_id', userId)
-        .order('created_at', { ascending: false })
+        .from("documents")
+        .select("id, category, created_at, updated_at, name")
+        .eq("user_id", userId)
+        .order("created_at", { ascending: false })
         .limit(limit);
       documents = (res as { data?: DocumentRow[] }).data;
     } catch (e) {
-      console.warn('Failed to fetch documents for timeline', e);
+      console.warn("Failed to fetch documents for timeline", e);
     }
 
     try {
       const res = await supabase
-        .from('assets')
-        .select('id, type, name, created_at, updated_at')
-        .eq('user_id', userId)
-        .order('created_at', { ascending: false })
+        .from("assets")
+        .select("id, type, name, created_at, updated_at")
+        .eq("user_id", userId)
+        .order("created_at", { ascending: false })
         .limit(limit);
       assets = (res as { data?: AssetRow[] }).data;
     } catch (e) {
-      console.warn('Failed to fetch assets for timeline', e);
+      console.warn("Failed to fetch assets for timeline", e);
     }
 
     // Add profile update events
-    profiles?.forEach(profile => {
+    profiles?.forEach((profile) => {
       if (profile.updated_at) {
         events.push({
-          id: 'profile-update',
+          id: "profile-update",
           date: profile.updated_at,
-          type: 'profile_updated',
-          area: 'Profile',
-          description: 'Profile information updated'
+          type: "profile_updated",
+          area: "Profile",
+          description: "Profile information updated",
         });
       }
     });
     // Convert to timeline events
-    const latestAssetDate = Array.isArray(assets) && assets.length > 0
-      ? assets.map(a => a.created_at).filter(Boolean).sort((a, b) => new Date(b).getTime() - new Date(a).getTime())[0]
-      : null;
+    const latestAssetDate =
+      Array.isArray(assets) && assets.length > 0
+        ? assets
+            .map((a) => a.created_at)
+            .filter(Boolean)
+            .sort((a, b) => new Date(b).getTime() - new Date(a).getTime())[0]
+        : null;
 
     documents?.forEach((doc) => {
       const created = doc.created_at;
       const updated = doc.updated_at;
-      const isUpdated = updated && new Date(updated).getTime() > new Date(created).getTime();
+      const isUpdated =
+        updated && new Date(updated).getTime() > new Date(created).getTime();
 
-      let type: TimelineEvent['type'];
+      let type: TimelineEvent["type"];
       if (isUpdated) {
-        type = 'updated';
+        type = "updated";
       } else {
         // Pure creation: prefer 'document_added' unless there exists an asset created after this doc
-        const assetAfterDoc = latestAssetDate && new Date(latestAssetDate).getTime() > new Date(created).getTime();
-        type = assetAfterDoc ? 'completed' : 'document_added';
+        const assetAfterDoc =
+          latestAssetDate &&
+          new Date(latestAssetDate).getTime() > new Date(created).getTime();
+        type = assetAfterDoc ? "completed" : "document_added";
       }
 
       events.push({
         id: `doc-${doc.id}`,
         date: isUpdated ? updated : created,
         type,
-        area: 'Documents',
-        description: isUpdated ? `${doc.category} document updated` : `${doc.category} document added`
+        area: "Documents",
+        description: isUpdated
+          ? `${doc.category} document updated`
+          : `${doc.category} document added`,
       });
     });
 
@@ -752,9 +953,9 @@ export class ProfessionalProgressService {
       events.push({
         id: `asset-${asset.id}`,
         date: asset.created_at,
-        type: 'asset_added',
-        area: 'Assets',
-        description: `${asset.name || asset.type} added`
+        type: "asset_added",
+        area: "Assets",
+        description: `${asset.name || asset.type} added`,
       });
     });
 
@@ -780,7 +981,7 @@ export class ProfessionalProgressService {
   static async updateAreaStatus(
     userId: string,
     areaId: string,
-    status: SecurityArea['status']
+    status: SecurityArea["status"],
   ): Promise<void> {
     // Update the area status in the database
     // This is a placeholder for actual database update
@@ -806,11 +1007,15 @@ export class ProfessionalProgressService {
   /**
    * Get next priority action
    */
-  static getNextPriorityAction(recommendations: Recommendation[]): Recommendation | null {
+  static getNextPriorityAction(
+    recommendations: Recommendation[],
+  ): Recommendation | null {
     // Find the highest priority recommendation
-    const priorities = ['urgent', 'high', 'medium', 'low'];
+    const priorities = ["urgent", "high", "medium", "low"];
     for (const priority of priorities) {
-      const found = recommendations.find(r => r.priority === (priority as Recommendation['priority']));
+      const found = recommendations.find(
+        (r) => r.priority === (priority as Recommendation["priority"]),
+      );
       if (found) return found;
     }
     return null;

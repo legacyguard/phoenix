@@ -1,15 +1,35 @@
-import React, { useState, useEffect } from 'react';
-import { useTranslation } from 'react-i18next';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Switch } from '@/components/ui/switch';
-import { Label } from '@/components/ui/label';
-import { Alert, AlertDescription } from '@/components/ui/alert';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Badge } from '@/components/ui/badge';
-import { Shield, Users, Clock, AlertTriangle, CheckCircle2, Settings, Info } from 'lucide-react';
-import { toast } from 'sonner';
-import { supabaseWithRetry } from '@/utils/supabaseWithRetry';
+import React, { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Switch } from "@/components/ui/switch";
+import { Label } from "@/components/ui/label";
+import { Alert, AlertDescription } from "@/components/ui/alert";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { Badge } from "@/components/ui/badge";
+import {
+  Shield,
+  Users,
+  Clock,
+  AlertTriangle,
+  CheckCircle2,
+  Settings,
+  Info,
+} from "lucide-react";
+import { toast } from "sonner";
+import { supabaseWithRetry } from "@/utils/supabaseWithRetry";
 
 interface EmergencyApprover {
   id: string;
@@ -28,8 +48,8 @@ interface EmergencyProtocolSettings {
 }
 
 export const EmergencyProtocolConfig: React.FC = () => {
-  const { t } = useTranslation('family-core');
-  const { t: tMicro } = useTranslation('micro-copy');
+  const { t } = useTranslation("family-core");
+  const { t: tMicro } = useTranslation("micro-copy");
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [settings, setSettings] = useState<EmergencyProtocolSettings>({
@@ -38,9 +58,11 @@ export const EmergencyProtocolConfig: React.FC = () => {
     approverIds: [],
     autoNotifyContacts: true,
     accessDuration: 48,
-    notificationDelay: 30
+    notificationDelay: 30,
   });
-  const [availableApprovers, setAvailableApprovers] = useState<EmergencyApprover[]>([]);
+  const [availableApprovers, setAvailableApprovers] = useState<
+    EmergencyApprover[]
+  >([]);
 
   useEffect(() => {
     loadSettings();
@@ -48,43 +70,50 @@ export const EmergencyProtocolConfig: React.FC = () => {
 
   const loadSettings = async () => {
     try {
-      const { data: { user } } = await supabaseWithRetry.auth.getUser();
+      const {
+        data: { user },
+      } = await supabaseWithRetry.auth.getUser();
       if (!user) return;
 
       // Load user profile settings
       const { data: profile, error: profileError } = await supabaseWithRetry
-        .from('user_profiles')
-        .select('emergency_protocol_enabled, emergency_protocol_settings')
-        .eq('user_id', user.id)
+        .from("user_profiles")
+        .select("emergency_protocol_enabled, emergency_protocol_settings")
+        .eq("user_id", user.id)
         .single();
 
       if (profileError) throw profileError;
 
       // Load trusted people who can be approvers
-      const { data: trustedPeople, error: trustedError } = await supabaseWithRetry
-        .from('trusted_people')
-        .select('id, name, email, relationship')
-        .eq('user_id', user.id)
-        .in('access_level', ['limited_info', 'full_access'])
-        .order('name');
+      const { data: trustedPeople, error: trustedError } =
+        await supabaseWithRetry
+          .from("trusted_people")
+          .select("id, name, email, relationship")
+          .eq("user_id", user.id)
+          .in("access_level", ["limited_info", "full_access"])
+          .order("name");
 
       if (trustedError) throw trustedError;
 
       setAvailableApprovers(trustedPeople || []);
-      
+
       if (profile) {
         setSettings({
           enabled: profile.emergency_protocol_enabled || false,
-          requireApproval: profile.emergency_protocol_settings?.requireApproval ?? true,
+          requireApproval:
+            profile.emergency_protocol_settings?.requireApproval ?? true,
           approverIds: profile.emergency_protocol_settings?.approverIds || [],
-          autoNotifyContacts: profile.emergency_protocol_settings?.autoNotifyContacts ?? true,
-          accessDuration: profile.emergency_protocol_settings?.accessDuration || 48,
-          notificationDelay: profile.emergency_protocol_settings?.notificationDelay || 30
+          autoNotifyContacts:
+            profile.emergency_protocol_settings?.autoNotifyContacts ?? true,
+          accessDuration:
+            profile.emergency_protocol_settings?.accessDuration || 48,
+          notificationDelay:
+            profile.emergency_protocol_settings?.notificationDelay || 30,
         });
       }
     } catch (error) {
-      console.error('Error loading emergency protocol settings:', error);
-      toast.error('Failed to load emergency protocol settings');
+      console.error("Error loading emergency protocol settings:", error);
+      toast.error("Failed to load emergency protocol settings");
     } finally {
       setLoading(false);
     }
@@ -93,17 +122,25 @@ export const EmergencyProtocolConfig: React.FC = () => {
   const saveSettings = async () => {
     try {
       setSaving(true);
-      const { data: { user } } = await supabaseWithRetry.auth.getUser();
+      const {
+        data: { user },
+      } = await supabaseWithRetry.auth.getUser();
       if (!user) return;
 
       // Validate settings
-      if (settings.enabled && settings.requireApproval && settings.approverIds.length === 0) {
-        toast.error('Please select at least one approver when approval is required');
+      if (
+        settings.enabled &&
+        settings.requireApproval &&
+        settings.approverIds.length === 0
+      ) {
+        toast.error(
+          "Please select at least one approver when approval is required",
+        );
         return;
       }
 
       const { error } = await supabaseWithRetry
-        .from('user_profiles')
+        .from("user_profiles")
         .update({
           emergency_protocol_enabled: settings.enabled,
           emergency_protocol_settings: {
@@ -111,18 +148,18 @@ export const EmergencyProtocolConfig: React.FC = () => {
             approverIds: settings.approverIds,
             autoNotifyContacts: settings.autoNotifyContacts,
             accessDuration: settings.accessDuration,
-            notificationDelay: settings.notificationDelay
+            notificationDelay: settings.notificationDelay,
           },
-          updated_at: new Date().toISOString()
+          updated_at: new Date().toISOString(),
         })
-        .eq('user_id', user.id);
+        .eq("user_id", user.id);
 
       if (error) throw error;
 
-      toast.success('Emergency protocol settings updated successfully');
+      toast.success("Emergency protocol settings updated successfully");
     } catch (error) {
-      console.error('Error saving emergency protocol settings:', error);
-      toast.error('Failed to save emergency protocol settings');
+      console.error("Error saving emergency protocol settings:", error);
+      toast.error("Failed to save emergency protocol settings");
     } finally {
       setSaving(false);
     }
@@ -154,11 +191,12 @@ export const EmergencyProtocolConfig: React.FC = () => {
               Emergency Protocol Configuration
             </CardTitle>
             <CardDescription>
-              Configure how trusted people can access information during emergencies
+              Configure how trusted people can access information during
+              emergencies
             </CardDescription>
           </div>
           <Badge variant={settings.enabled ? "default" : "outline"}>
-            {settings.enabled ? 'Active' : 'Inactive'}
+            {settings.enabled ? "Active" : "Inactive"}
           </Badge>
         </div>
       </CardHeader>
@@ -170,13 +208,16 @@ export const EmergencyProtocolConfig: React.FC = () => {
               Enable Emergency Protocol
             </Label>
             <p className="text-sm text-muted-foreground mt-1">
-              Allow trusted people with "Emergency Only" access to request information during critical situations
+              Allow trusted people with "Emergency Only" access to request
+              information during critical situations
             </p>
           </div>
           <Switch
             id="protocol-enabled"
             checked={settings.enabled}
-            onCheckedChange={(checked) => setSettings({ ...settings, enabled: checked })}
+            onCheckedChange={(checked) =>
+              setSettings({ ...settings, enabled: checked })
+            }
           />
         </div>
 
@@ -195,7 +236,9 @@ export const EmergencyProtocolConfig: React.FC = () => {
               <Switch
                 id="require-approval"
                 checked={settings.requireApproval}
-                onCheckedChange={(checked) => setSettings({ ...settings, requireApproval: checked })}
+                onCheckedChange={(checked) =>
+                  setSettings({ ...settings, requireApproval: checked })
+                }
               />
             </div>
 
@@ -204,19 +247,25 @@ export const EmergencyProtocolConfig: React.FC = () => {
               <div className="space-y-2">
                 <Label htmlFor="approvers">Emergency Access Approvers</Label>
                 <Select
-                  value={settings.approverIds[0] || ''}
-                  onValueChange={(value) => setSettings({ ...settings, approverIds: [value] })}
+                  value={settings.approverIds[0] || ""}
+                  onValueChange={(value) =>
+                    setSettings({ ...settings, approverIds: [value] })
+                  }
                 >
                   <SelectTrigger id="approvers">
-                    <SelectValue placeholder={tMicro('placeholders.forms.name')} />
+                    <SelectValue
+                      placeholder={tMicro("placeholders.forms.name")}
+                    />
                   </SelectTrigger>
                   <SelectContent>
-                    {availableApprovers.map(person => (
+                    {availableApprovers.map((person) => (
                       <SelectItem key={person.id} value={person.id}>
                         <div className="flex items-center gap-2">
                           <Users className="h-3 w-3" />
                           <span>{person.name}</span>
-                          <span className="text-muted-foreground">({person.relationship})</span>
+                          <span className="text-muted-foreground">
+                            ({person.relationship})
+                          </span>
                         </div>
                       </SelectItem>
                     ))}
@@ -235,13 +284,16 @@ export const EmergencyProtocolConfig: React.FC = () => {
                   Auto-notify Emergency Contacts
                 </Label>
                 <p className="text-sm text-muted-foreground mt-1">
-                  Automatically send notifications to all emergency contacts when access is granted
+                  Automatically send notifications to all emergency contacts
+                  when access is granted
                 </p>
               </div>
               <Switch
                 id="auto-notify"
                 checked={settings.autoNotifyContacts}
-                onCheckedChange={(checked) => setSettings({ ...settings, autoNotifyContacts: checked })}
+                onCheckedChange={(checked) =>
+                  setSettings({ ...settings, autoNotifyContacts: checked })
+                }
               />
             </div>
 
@@ -250,7 +302,9 @@ export const EmergencyProtocolConfig: React.FC = () => {
               <Label htmlFor="access-duration">Emergency Access Duration</Label>
               <Select
                 value={settings.accessDuration.toString()}
-                onValueChange={(value) => setSettings({ ...settings, accessDuration: parseInt(value) })}
+                onValueChange={(value) =>
+                  setSettings({ ...settings, accessDuration: parseInt(value) })
+                }
               >
                 <SelectTrigger id="access-duration">
                   <SelectValue />
@@ -272,7 +326,12 @@ export const EmergencyProtocolConfig: React.FC = () => {
               <Label htmlFor="notification-delay">Notification Delay</Label>
               <Select
                 value={settings.notificationDelay.toString()}
-                onValueChange={(value) => setSettings({ ...settings, notificationDelay: parseInt(value) })}
+                onValueChange={(value) =>
+                  setSettings({
+                    ...settings,
+                    notificationDelay: parseInt(value),
+                  })
+                }
               >
                 <SelectTrigger id="notification-delay">
                   <SelectValue />
@@ -285,7 +344,8 @@ export const EmergencyProtocolConfig: React.FC = () => {
                 </SelectContent>
               </Select>
               <p className="text-xs text-muted-foreground">
-                Delay before sending notifications after emergency access is granted
+                Delay before sending notifications after emergency access is
+                granted
               </p>
             </div>
 
@@ -293,9 +353,9 @@ export const EmergencyProtocolConfig: React.FC = () => {
             <Alert>
               <Info className="h-4 w-4" />
               <AlertDescription>
-                Emergency protocol provides a secure way for trusted helpers to access critical information 
-                during emergencies while maintaining your privacy and control. All access is logged and 
-                monitored.
+                Emergency protocol provides a secure way for trusted helpers to
+                access critical information during emergencies while maintaining
+                your privacy and control. All access is logged and monitored.
               </AlertDescription>
             </Alert>
           </>

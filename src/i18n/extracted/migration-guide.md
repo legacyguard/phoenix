@@ -1,16 +1,19 @@
 # i18n Migration Guide
 
 ## Extracted Strings
+
 - Total strings: 506
 - Total files: 68
 
 ## Next Steps:
+
 1. Review extracted-strings.json and refine the translations
 2. Merge into your main translation files
 3. Run the refactoring script to update components
 4. Review and test the changes
 
 ## Files to be updated:
+
 - CreateTimeCapsuleModal.tsx
 - DocumentConfirmation.tsx
 - DocumentUploadFlow.tsx

@@ -1,16 +1,31 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { Progress } from '@/components/ui/progress';
-import { 
-  Award, Sparkles, Trophy, Star, Heart, Shield, 
-  Users, ChevronRight, X, Zap, Target
-} from 'lucide-react';
-import confetti from 'canvas-confetti';
-import { cn } from '@/lib/utils';
-import type { Milestone } from '@/services/progressiveDisclosure';
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Progress } from "@/components/ui/progress";
+import {
+  Award,
+  Sparkles,
+  Trophy,
+  Star,
+  Heart,
+  Shield,
+  Users,
+  ChevronRight,
+  X,
+  Zap,
+  Target,
+} from "lucide-react";
+import confetti from "canvas-confetti";
+import { cn } from "@/lib/utils";
+import type { Milestone } from "@/services/progressiveDisclosure";
 
 interface MilestoneCelebrationProps {
   milestone: Milestone;
@@ -26,33 +41,33 @@ export const MilestoneCelebration: React.FC<MilestoneCelebrationProps> = ({
   milestone,
   onClose,
   onContinue,
-  userProgress
+  userProgress,
 }) => {
   const [isVisible, setIsVisible] = useState(true);
   const [showConfetti, setShowConfetti] = useState(false);
 
   useEffect(() => {
     // Trigger confetti for major and mega milestones
-    if (milestone.celebrationType !== 'minor') {
+    if (milestone.celebrationType !== "minor") {
       setShowConfetti(true);
-      const duration = milestone.celebrationType === 'mega' ? 3000 : 1500;
-      const particleCount = milestone.celebrationType === 'mega' ? 200 : 100;
-      
+      const duration = milestone.celebrationType === "mega" ? 3000 : 1500;
+      const particleCount = milestone.celebrationType === "mega" ? 200 : 100;
+
       confetti({
         particleCount,
         spread: 70,
         origin: { y: 0.6 },
-        colors: ['#86BC25', '#F5E6D3', '#FFD700']
+        colors: ["#86BC25", "#F5E6D3", "#FFD700"],
       });
 
       // Additional confetti bursts for mega celebrations
-      if (milestone.celebrationType === 'mega') {
+      if (milestone.celebrationType === "mega") {
         setTimeout(() => {
           confetti({
             particleCount: 50,
             angle: 60,
             spread: 55,
-            origin: { x: 0 }
+            origin: { x: 0 },
           });
         }, 250);
 
@@ -61,7 +76,7 @@ export const MilestoneCelebration: React.FC<MilestoneCelebrationProps> = ({
             particleCount: 50,
             angle: 120,
             spread: 55,
-            origin: { x: 1 }
+            origin: { x: 1 },
           });
         }, 400);
       }
@@ -75,15 +90,15 @@ export const MilestoneCelebration: React.FC<MilestoneCelebrationProps> = ({
 
   const getIcon = () => {
     switch (milestone.id) {
-      case 'first-asset':
+      case "first-asset":
         return <Star className="h-8 w-8 text-yellow-500" />;
-      case 'foundation-complete':
+      case "foundation-complete":
         return <Target className="h-8 w-8 text-green-500" />;
-      case 'trusted-circle-created':
+      case "trusted-circle-created":
         return <Shield className="h-8 w-8 text-blue-500" />;
-      case 'will-completed':
+      case "will-completed":
         return <Award className="h-8 w-8 text-purple-500" />;
-      case 'advanced-planning':
+      case "advanced-planning":
         return <Trophy className="h-8 w-8 text-yellow-600" />;
       default:
         return <Sparkles className="h-8 w-8 text-warm-sage" />;
@@ -92,12 +107,12 @@ export const MilestoneCelebration: React.FC<MilestoneCelebrationProps> = ({
 
   const getCelebrationColor = () => {
     switch (milestone.celebrationType) {
-      case 'mega':
-        return 'from-yellow-400 via-orange-400 to-red-400';
-      case 'major':
-        return 'from-blue-400 via-purple-400 to-pink-400';
+      case "mega":
+        return "from-yellow-400 via-orange-400 to-red-400";
+      case "major":
+        return "from-blue-400 via-purple-400 to-pink-400";
       default:
-        return 'from-green-400 via-emerald-400 to-teal-400';
+        return "from-green-400 via-emerald-400 to-teal-400";
     }
   };
 
@@ -113,21 +128,28 @@ export const MilestoneCelebration: React.FC<MilestoneCelebrationProps> = ({
           <motion.div
             initial={{ y: 20 }}
             animate={{ y: 0 }}
-            transition={{ type: 'spring', damping: 25, stiffness: 300 }}
+            transition={{ type: "spring", damping: 25, stiffness: 300 }}
             className="w-full max-w-lg"
           >
-            <Card className={cn(
-              "relative overflow-hidden border-2",
-              milestone.celebrationType === 'mega' && "border-yellow-400 shadow-2xl shadow-yellow-400/20",
-              milestone.celebrationType === 'major' && "border-purple-400 shadow-xl shadow-purple-400/20",
-              milestone.celebrationType === 'minor' && "border-green-400 shadow-lg shadow-green-400/20"
-            )}>
+            <Card
+              className={cn(
+                "relative overflow-hidden border-2",
+                milestone.celebrationType === "mega" &&
+                  "border-yellow-400 shadow-2xl shadow-yellow-400/20",
+                milestone.celebrationType === "major" &&
+                  "border-purple-400 shadow-xl shadow-purple-400/20",
+                milestone.celebrationType === "minor" &&
+                  "border-green-400 shadow-lg shadow-green-400/20",
+              )}
+            >
               {/* Background gradient */}
-              <div className={cn(
-                "absolute inset-0 opacity-10 bg-gradient-to-br",
-                getCelebrationColor()
-              )} />
-              
+              <div
+                className={cn(
+                  "absolute inset-0 opacity-10 bg-gradient-to-br",
+                  getCelebrationColor(),
+                )}
+              />
+
               {/* Close button */}
               <Button
                 variant="ghost"
@@ -143,19 +165,21 @@ export const MilestoneCelebration: React.FC<MilestoneCelebrationProps> = ({
                 <motion.div
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
-                  transition={{ 
-                    type: 'spring',
+                  transition={{
+                    type: "spring",
                     delay: 0.2,
                     damping: 10,
-                    stiffness: 100
+                    stiffness: 100,
                   }}
                   className="mx-auto"
                 >
-                  <div className={cn(
-                    "p-4 rounded-full inline-flex",
-                    "bg-gradient-to-br",
-                    getCelebrationColor()
-                  )}>
+                  <div
+                    className={cn(
+                      "p-4 rounded-full inline-flex",
+                      "bg-gradient-to-br",
+                      getCelebrationColor(),
+                    )}
+                  >
                     {getIcon()}
                   </div>
                 </motion.div>
@@ -184,9 +208,7 @@ export const MilestoneCelebration: React.FC<MilestoneCelebrationProps> = ({
                   transition={{ delay: 0.4 }}
                   className="text-center space-y-2"
                 >
-                  <p className="text-lg font-medium">
-                    {milestone.message}
-                  </p>
+                  <p className="text-lg font-medium">{milestone.message}</p>
                   <p className="text-muted-foreground">
                     {milestone.familyBenefit}
                   </p>
@@ -204,7 +226,10 @@ export const MilestoneCelebration: React.FC<MilestoneCelebrationProps> = ({
                     <span className="font-medium">Family Impact</span>
                   </div>
                   <p className="text-sm">
-                    Your family is now <span className="font-semibold">{milestone.improvementDescription}</span>
+                    Your family is now{" "}
+                    <span className="font-semibold">
+                      {milestone.improvementDescription}
+                    </span>
                   </p>
                 </motion.div>
 
@@ -222,7 +247,7 @@ export const MilestoneCelebration: React.FC<MilestoneCelebrationProps> = ({
                     </div>
                     <div className="flex flex-wrap gap-2">
                       {milestone.newFeatures.map((feature, index) => (
-                        <Badge 
+                        <Badge
                           key={index}
                           variant="secondary"
                           className="bg-warm-sage/20 text-warm-sage border-warm-sage/30"
@@ -243,13 +268,20 @@ export const MilestoneCelebration: React.FC<MilestoneCelebrationProps> = ({
                     className="space-y-2"
                   >
                     <div className="flex items-center justify-between text-sm">
-                      <span className="text-muted-foreground">Overall Progress</span>
+                      <span className="text-muted-foreground">
+                        Overall Progress
+                      </span>
                       <span className="font-medium">
-                        {userProgress.completedItems} / {userProgress.totalItems} completed
+                        {userProgress.completedItems} /{" "}
+                        {userProgress.totalItems} completed
                       </span>
                     </div>
-                    <Progress 
-                      value={(userProgress.completedItems / userProgress.totalItems) * 100}
+                    <Progress
+                      value={
+                        (userProgress.completedItems /
+                          userProgress.totalItems) *
+                        100
+                      }
                       className="h-2"
                     />
                   </motion.div>

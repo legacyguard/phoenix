@@ -1,8 +1,12 @@
-import React from 'react';
+import React from "react";
 
 interface AcknowledgmentMoment {
   trigger: string;
-  type: 'foundation' | 'documentation' | 'completion' | 'responsibility_fulfilled';
+  type:
+    | "foundation"
+    | "documentation"
+    | "completion"
+    | "responsibility_fulfilled";
   familyImpact: string;
   acknowledgmentMessage: string;
   confidenceBuilder: string;
@@ -14,10 +18,10 @@ interface ProtectionAcknowledgmentProps {
   onContinue?: () => void;
 }
 
-const ProtectionAcknowledgment: React.FC<ProtectionAcknowledgmentProps> = ({ 
-  moment, 
+const ProtectionAcknowledgment: React.FC<ProtectionAcknowledgmentProps> = ({
+  moment,
   nextSteps = [],
-  onContinue 
+  onContinue,
 }) => {
   return (
     <div className="protection-acknowledgment">
@@ -25,16 +29,16 @@ const ProtectionAcknowledgment: React.FC<ProtectionAcknowledgmentProps> = ({
         <div className="acknowledgment-icon">✓</div>
         <h2>Important Step Completed</h2>
         <p className="accomplishment">{moment.acknowledgmentMessage}</p>
-        
+
         <div className="family-protection">
           <h3>Family Protection Impact:</h3>
           <p>{moment.familyImpact}</p>
         </div>
-        
+
         <div className="confidence-building">
           <p>{moment.confidenceBuilder}</p>
         </div>
-        
+
         {nextSteps.length > 0 && (
           <div className="next-steps">
             <h4>Consider Next:</h4>
@@ -45,11 +49,8 @@ const ProtectionAcknowledgment: React.FC<ProtectionAcknowledgmentProps> = ({
             </ul>
           </div>
         )}
-        
-        <button 
-          className="continue-button" 
-          onClick={onContinue}
-        >
+
+        <button className="continue-button" onClick={onContinue}>
           Continue Protecting Your Family
         </button>
       </div>

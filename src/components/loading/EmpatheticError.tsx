@@ -1,13 +1,13 @@
-import React from 'react';
-import { useTranslation } from 'react-i18next';
-import { motion } from 'framer-motion';
-import { AlertCircle, RefreshCw, Heart } from 'lucide-react';
-import { cn } from '@/lib/utils';
-import { Button } from '@/components/ui/button';
-import { Alert, AlertDescription } from '@/components/ui/alert';
+import React from "react";
+import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
+import { AlertCircle, RefreshCw, Heart } from "lucide-react";
+import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
+import { Alert, AlertDescription } from "@/components/ui/alert";
 
 interface EmpatheticErrorProps {
-  type?: 'general' | 'save_failed' | 'network' | 'timeout';
+  type?: "general" | "save_failed" | "network" | "timeout";
   onRetry?: () => void;
   onDismiss?: () => void;
   className?: string;
@@ -15,13 +15,13 @@ interface EmpatheticErrorProps {
 }
 
 const EmpatheticError: React.FC<EmpatheticErrorProps> = ({
-  type = 'general',
+  type = "general",
   onRetry,
   onDismiss,
   className,
-  showReassurance = true
+  showReassurance = true,
 }) => {
-  const { t } = useTranslation('loading-states');
+  const { t } = useTranslation("loading-states");
 
   return (
     <motion.div
@@ -29,7 +29,7 @@ const EmpatheticError: React.FC<EmpatheticErrorProps> = ({
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -20 }}
       transition={{ duration: 0.3 }}
-      className={cn('w-full', className)}
+      className={cn("w-full", className)}
     >
       <Alert className="border-amber-200 bg-amber-50">
         <div className="flex items-start space-x-3">
@@ -42,7 +42,7 @@ const EmpatheticError: React.FC<EmpatheticErrorProps> = ({
             {showReassurance && (
               <div className="flex items-center space-x-2 text-sm text-gray-600">
                 <Heart className="w-4 h-4 text-primary" />
-                <span>{t('errors.reassurance.data_safe')}</span>
+                <span>{t("errors.reassurance.data_safe")}</span>
               </div>
             )}
 
@@ -54,15 +54,11 @@ const EmpatheticError: React.FC<EmpatheticErrorProps> = ({
                   className="flex items-center space-x-2"
                 >
                   <RefreshCw className="w-4 h-4" />
-                  <span>{t('errors.reassurance.try_again')}</span>
+                  <span>{t("errors.reassurance.try_again")}</span>
                 </Button>
               )}
               {onDismiss && (
-                <Button
-                  size="sm"
-                  variant="outline"
-                  onClick={onDismiss}
-                >
+                <Button size="sm" variant="outline" onClick={onDismiss}>
                   OK, I understand
                 </Button>
               )}

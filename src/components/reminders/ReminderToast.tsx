@@ -1,8 +1,8 @@
-import React from 'react';
-import { Button } from '@/components/ui/button';
-import { Clock, CheckCircle, SnoozeIcon, X } from 'lucide-react';
-import { toast } from 'sonner';
-import { useTranslation } from 'react-i18next';
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { Clock, CheckCircle, SnoozeIcon, X } from "lucide-react";
+import { toast } from "sonner";
+import { useTranslation } from "react-i18next";
 
 interface Reminder {
   id: string;
@@ -14,7 +14,7 @@ interface ReminderToastProps {
   reminder: Reminder;
   toastId: string;
   onComplete: (id: string) => void;
-  onSnooze: (id: string, duration: 'week' | 'month' | '3months') => void;
+  onSnooze: (id: string, duration: "week" | "month" | "3months") => void;
   onDismiss: (id: string) => void;
 }
 
@@ -25,18 +25,22 @@ export function ReminderToast({
   onSnooze,
   onDismiss,
 }: ReminderToastProps) {
-  const { t } = useTranslation('dashboard-main');
+  const { t } = useTranslation("dashboard-main");
 
   const handleComplete = () => {
     onComplete(reminder.id);
     toast.dismiss(toastId);
-    toast.success(t('dashboard.completedSuccess'));
+    toast.success(t("dashboard.completedSuccess"));
   };
 
   const handleSnooze = () => {
-    onSnooze(reminder.id, 'week');
+    onSnooze(reminder.id, "week");
     toast.dismiss(toastId);
-    toast.info(t('reminders.snoozedSuccess', { duration: t('dashboard.duration.week') }));
+    toast.info(
+      t("reminders.snoozedSuccess", {
+        duration: t("dashboard-main:dashboard.duration.week"),
+      }),
+    );
   };
 
   const handleDismiss = () => {
@@ -61,7 +65,7 @@ export function ReminderToast({
               className="h-7 text-xs"
             >
               <CheckCircle className="h-3 w-3 mr-1" />
-              {t('dashboard.complete')}
+              {t("dashboard-main:dashboard.complete")}
             </Button>
             <Button
               size="sm"
@@ -70,7 +74,7 @@ export function ReminderToast({
               className="h-7 text-xs"
             >
               <SnoozeIcon className="h-3 w-3 mr-1" />
-              {t('dashboard.snoozeWeek')}
+              {t("dashboard.snoozeWeek")}
             </Button>
             <Button
               size="sm"
@@ -85,4 +89,4 @@ export function ReminderToast({
       </div>
     </div>
   );
-} 
+}

@@ -27,13 +27,13 @@ Dátum: {date}
 Podpis: ___________________
     `,
     executionSteps: [
-      'Submit will to probate court',
-      'Notify all beneficiaries',
-      'Inventory assets',
-      'Pay debts and taxes',
-      'Distribute remaining assets',
+      "Submit will to probate court",
+      "Notify all beneficiaries",
+      "Inventory assets",
+      "Pay debts and taxes",
+      "Distribute remaining assets",
     ],
-    specialRequirements: ['Must be handwritten', 'Requires two witnesses'],
+    specialRequirements: ["Must be handwritten", "Requires two witnesses"],
   },
   CZ: {
     formalities: {
@@ -50,13 +50,13 @@ Datum: {date}
 Podpis: ___________________
     `,
     executionSteps: [
-      'Submit will to probate court',
-      'Notify all beneficiaries',
-      'Inventory assets',
-      'Pay debts and taxes',
-      'Distribute remaining assets',
+      "Submit will to probate court",
+      "Notify all beneficiaries",
+      "Inventory assets",
+      "Pay debts and taxes",
+      "Distribute remaining assets",
     ],
-    specialRequirements: ['Requires two witnesses'],
+    specialRequirements: ["Requires two witnesses"],
   },
   US: {
     formalities: {
@@ -73,13 +73,13 @@ Date: {date}
 Signature: ___________________
     `,
     executionSteps: [
-      'File will with probate court',
-      'Notify all beneficiaries',
-      'Inventory assets',
-      'Pay debts and taxes',
-      'Distribute remaining assets',
+      "File will with probate court",
+      "Notify all beneficiaries",
+      "Inventory assets",
+      "Pay debts and taxes",
+      "Distribute remaining assets",
     ],
-    specialRequirements: ['Requires notarization', 'Two witnesses required'],
+    specialRequirements: ["Requires notarization", "Two witnesses required"],
   },
   GB: {
     formalities: {
@@ -96,13 +96,13 @@ Date: {date}
 Signature: ___________________
     `,
     executionSteps: [
-      'Apply for probate',
-      'Notify all beneficiaries',
-      'Inventory assets',
-      'Pay debts and taxes',
-      'Distribute remaining assets',
+      "Apply for probate",
+      "Notify all beneficiaries",
+      "Inventory assets",
+      "Pay debts and taxes",
+      "Distribute remaining assets",
     ],
-    specialRequirements: ['Two witnesses required'],
+    specialRequirements: ["Two witnesses required"],
   },
   DE: {
     formalities: {
@@ -119,13 +119,13 @@ Datum: {date}
 Unterschrift: ___________________
     `,
     executionSteps: [
-      'Submit will to probate court',
-      'Notify all beneficiaries',
-      'Inventory assets',
-      'Pay debts and taxes',
-      'Distribute remaining assets',
+      "Submit will to probate court",
+      "Notify all beneficiaries",
+      "Inventory assets",
+      "Pay debts and taxes",
+      "Distribute remaining assets",
     ],
-    specialRequirements: ['Requires notarization', 'Two witnesses required'],
+    specialRequirements: ["Requires notarization", "Two witnesses required"],
   },
   FR: {
     formalities: {
@@ -142,13 +142,13 @@ Date: {date}
 Signature: ___________________
     `,
     executionSteps: [
-      'Submit will to probate court',
-      'Notify all beneficiaries',
-      'Inventory assets',
-      'Pay debts and taxes',
-      'Distribute remaining assets',
+      "Submit will to probate court",
+      "Notify all beneficiaries",
+      "Inventory assets",
+      "Pay debts and taxes",
+      "Distribute remaining assets",
     ],
-    specialRequirements: ['Requires notarization', 'Two witnesses required'],
+    specialRequirements: ["Requires notarization", "Two witnesses required"],
   },
   ES: {
     formalities: {
@@ -165,13 +165,13 @@ Fecha: {date}
 Firma: ___________________
     `,
     executionSteps: [
-      'Presentar testamento al juzgado',
-      'Notificar a todos los beneficiarios',
-      'Inventariar bienes',
-      'Pagar deudas e impuestos',
-      'Distribuir bienes restantes',
+      "Presentar testamento al juzgado",
+      "Notificar a todos los beneficiarios",
+      "Inventariar bienes",
+      "Pagar deudas e impuestos",
+      "Distribuir bienes restantes",
     ],
-    specialRequirements: ['Requiere notarización', 'Se requieren dos testigos'],
+    specialRequirements: ["Requiere notarización", "Se requieren dos testigos"],
   },
   IT: {
     formalities: {
@@ -188,13 +188,13 @@ Data: {date}
 Firma: ___________________
     `,
     executionSteps: [
-      'Depositare il testamento presso il notaio',
-      'Notificare tutti i beneficiari',
-      'Inventariare i beni',
-      'Pagare debiti e tasse',
-      'Distribuire i beni rimanenti',
+      "Depositare il testamento presso il notaio",
+      "Notificare tutti i beneficiari",
+      "Inventariare i beni",
+      "Pagare debiti e tasse",
+      "Distribuire i beni rimanenti",
     ],
-    specialRequirements: ['Richiede notarizzazione', 'Richiesti due testimoni'],
+    specialRequirements: ["Richiede notarizzazione", "Richiesti due testimoni"],
   },
   PL: {
     formalities: {
@@ -212,13 +212,16 @@ Data: {date}
 Podpis: ___________________
     `,
     executionSteps: [
-      'Złożyć testament w sądzie spadkowym',
-      'Powiadomić wszystkich beneficjentów',
-      'Sporządzić spis inwentarza',
-      'Spłacić długi i podatki',
-      'Rozdzielić pozostały majątek',
+      "Złożyć testament w sądzie spadkowym",
+      "Powiadomić wszystkich beneficjentów",
+      "Sporządzić spis inwentarza",
+      "Spłacić długi i podatki",
+      "Rozdzielić pozostały majątek",
     ],
-    specialRequirements: ['Testament musi być napisany odręcznie', 'Wymagani dwaj świadkowie'],
+    specialRequirements: [
+      "Testament musi być napisany odręcznie",
+      "Wymagani dwaj świadkowie",
+    ],
   },
   NL: {
     formalities: {
@@ -235,13 +238,13 @@ Datum: {date}
 Handtekening: ___________________
     `,
     executionSteps: [
-      'Testament indienen bij de rechtbank',
-      'Alle begunstigden informeren',
-      'Inventarisatie van bezittingen',
-      'Schulden en belastingen betalen',
-      'Resterende bezittingen verdelen',
+      "Testament indienen bij de rechtbank",
+      "Alle begunstigden informeren",
+      "Inventarisatie van bezittingen",
+      "Schulden en belastingen betalen",
+      "Resterende bezittingen verdelen",
     ],
-    specialRequirements: ['Vereist notariële akte', 'Twee getuigen vereist'],
+    specialRequirements: ["Vereist notariële akte", "Twee getuigen vereist"],
   },
   AT: {
     formalities: {
@@ -258,13 +261,16 @@ Datum: {date}
 Unterschrift: ___________________
     `,
     executionSteps: [
-      'Testament beim Verlassenschaftsgericht einreichen',
-      'Alle Begünstigten benachrichtigen',
-      'Vermögen inventarisieren',
-      'Schulden und Steuern bezahlen',
-      'Verbleibendes Vermögen verteilen',
+      "Testament beim Verlassenschaftsgericht einreichen",
+      "Alle Begünstigten benachrichtigen",
+      "Vermögen inventarisieren",
+      "Schulden und Steuern bezahlen",
+      "Verbleibendes Vermögen verteilen",
     ],
-    specialRequirements: ['Erfordert Notarisierung', 'Drei Zeugen erforderlich'],
+    specialRequirements: [
+      "Erfordert Notarisierung",
+      "Drei Zeugen erforderlich",
+    ],
   },
   CH: {
     formalities: {
@@ -282,13 +288,16 @@ Datum: {date}
 Unterschrift: ___________________
     `,
     executionSteps: [
-      'Testament bei der zuständigen Behörde hinterlegen',
-      'Erben benachrichtigen',
-      'Erbschaftsinventar erstellen',
-      'Schulden und Steuern begleichen',
-      'Nachlass verteilen',
+      "Testament bei der zuständigen Behörde hinterlegen",
+      "Erben benachrichtigen",
+      "Erbschaftsinventar erstellen",
+      "Schulden und Steuern begleichen",
+      "Nachlass verteilen",
     ],
-    specialRequirements: ['Muss vollständig handschriftlich verfasst sein', 'Zwei Zeugen erforderlich'],
+    specialRequirements: [
+      "Muss vollständig handschriftlich verfasst sein",
+      "Zwei Zeugen erforderlich",
+    ],
   },
   BE: {
     formalities: {
@@ -305,12 +314,15 @@ Datum/Date: {date}
 Handtekening/Signature: ___________________
     `,
     executionSteps: [
-      'Testament indienen bij de rechtbank / Déposer le testament au tribunal',
-      'Begunstigden informeren / Informer les bénéficiaires',
-      'Inventaris opmaken / Faire l\'inventaire',
-      'Schulden en belastingen betalen / Payer dettes et impôts',
-      'Nalatenschap verdelen / Distribuer l\'héritage',
+      "Testament indienen bij de rechtbank / Déposer le testament au tribunal",
+      "Begunstigden informeren / Informer les bénéficiaires",
+      "Inventaris opmaken / Faire l'inventaire",
+      "Schulden en belastingen betalen / Payer dettes et impôts",
+      "Nalatenschap verdelen / Distribuer l'héritage",
     ],
-    specialRequirements: ['Vereist notariële akte / Acte notarié requis', 'Twee getuigen / Deux témoins'],
+    specialRequirements: [
+      "Vereist notariële akte / Acte notarié requis",
+      "Twee getuigen / Deux témoins",
+    ],
   },
 };

@@ -49,14 +49,14 @@ export interface AnalyticsData {
 }
 
 export const fetchAnalytics = async (): Promise<AnalyticsData> => {
-  const response = await fetch('/api/admin/analytics', {
+  const response = await fetch("/api/admin/analytics", {
     headers: {
-      'Authorization': `Bearer ${localStorage.getItem('clerk-db-jwt')}`,
+      Authorization: `Bearer ${localStorage.getItem("clerk-db-jwt")}`,
     },
   });
 
   if (!response.ok) {
-    throw new Error('Failed to fetch analytics');
+    throw new Error("Failed to fetch analytics");
   }
 
   return response.json();

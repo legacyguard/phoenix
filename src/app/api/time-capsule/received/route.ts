@@ -1,6 +1,6 @@
-import { NextRequest, NextResponse } from 'next/server';
-import { createClient } from '@/lib/supabase/server';
-import { cookies } from 'next/headers';
+import { NextRequest, NextResponse } from "next/server";
+import { createClient } from "@/lib/supabase/server";
+import { cookies } from "next/headers";
 
 export async function GET(request: NextRequest) {
   try {
@@ -8,19 +8,19 @@ export async function GET(request: NextRequest) {
     const supabase = createClient(cookieStore);
 
     // Check authentication
-    const { data: { user }, error: authError } = await supabase.auth.getUser();
+    const {
+      data: { user },
+      error: authError,
+    } = await supabase.auth.getUser();
     if (authError || !user) {
-      return NextResponse.json(
-        { error: 'Unauthorized' },
-        { status: 401 }
-      );
+      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
 
     // First, get the user's profile to find their associated trusted_people ID
     const { data: trustedPersonRecord, error: trustedError } = await supabase
-      .from('trusted_people')
-      .select('id')
-      .eq('email', user.email)
+      .from("trusted_people")
+      .select("id")
+      .eq("email", user.email)
       .single();
 
     if (trustedError || !trustedPersonRecord) {
@@ -30,8 +30,9 @@ export async function GET(request: NextRequest) {
 
     // Fetch unlocked or delivered time capsule messages where user is a recipient
     const { data: messages, error: messagesError } = await supabase
-      .from('time_capsule_messages')
-      .select(`
+      .from("time_capsule_messages")
+      .select(
+        `
         id,
         title,
         message_type,
@@ -48,44 +49,46 @@ export async function GET(request: NextRequest) {
           full_name,
           email
         )
-      `)
-      .contains('recipient_ids', [trustedPersonRecord.id])
-      .in('status', ['unlocked', 'delivered'])
-      .order('unlocked_at', { ascending: false });
+      `,
+      )
+      .contains("recipient_ids", [trustedPersonRecord.id])
+      .in("status", ["unlocked", "delivered"])
+      .order("unlocked_at", { ascending: false });
 
     if (messagesError) {
-      console.error('Error fetching messages:', messagesError);
+      console.error("Error fetching messages:", messagesError);
       return NextResponse.json(
-        { error: 'Failed to fetch messages' },
-        { status: 500 }
+        { error: "Failed to fetch messages" },
+        { status: 500 },
       );
     }
 
     // Transform the data for the frontend
-    const transformedMessages = messages?.map(message => ({
-      id: message.id,
-      title: message.title,
-      messageType: message.message_type,
-      textContent: message.text_content,
-      attachmentUrl: message.attachment_url,
-      attachmentMetadata: message.attachment_metadata,
-      status: message.status,
-      unlockCondition: message.unlock_condition,
-      unlockedAt: message.unlocked_at,
-      createdAt: message.created_at,
-      sender: {
-        id: message.profiles?.id,
-        name: message.profiles?.full_name,
-        email: message.profiles?.email
-      }
-    })) || [];
+    const transformedMessages =
+      messages?.map((message) => ({
+        id: message.id,
+        title: message.title,
+        messageType: message.message_type,
+        textContent: message.text_content,
+        attachmentUrl: message.attachment_url,
+        attachmentMetadata: message.attachment_metadata,
+        status: message.status,
+        unlockCondition: message.unlock_condition,
+        unlockedAt: message.unlocked_at,
+        createdAt: message.created_at,
+        sender: {
+          id: message.profiles?.id,
+          name: message.profiles?.full_name,
+          email: message.profiles?.email,
+        },
+      })) || [];
 
     return NextResponse.json({ messages: transformedMessages });
   } catch (error) {
-    console.error('Error in received messages endpoint:', error);
+    console.error("Error in received messages endpoint:", error);
     return NextResponse.json(
-      { error: 'Internal server error' },
-      { status: 500 }
+      { error: "Internal server error" },
+      { status: 500 },
     );
   }
 }

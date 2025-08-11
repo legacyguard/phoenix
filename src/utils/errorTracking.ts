@@ -1,6 +1,6 @@
-import { supabase } from '@/integrations/supabase/client';
+import { supabase } from "@/integrations/supabase/client";
 
-export type ErrorLevel = 'error' | 'warning' | 'critical';
+export type ErrorLevel = "error" | "warning" | "critical";
 
 interface ErrorContext {
   component?: string;
@@ -29,12 +29,12 @@ class ErrorTracker {
   private constructor() {
     // Set up global error handler
     this.setupGlobalErrorHandler();
-    
+
     // Set up periodic flush
     setInterval(() => this.flushErrors(), this.flushInterval);
-    
+
     // Flush on page unload
-    window.addEventListener('beforeunload', () => this.flushErrors());
+    window.addEventListener("beforeunload", () => this.flushErrors());
   }
 
   static getInstance(): ErrorTracker {
@@ -46,23 +46,32 @@ class ErrorTracker {
 
   private setupGlobalErrorHandler() {
     // Handle unhandled promise rejections
-    window.addEventListener('unhandledrejection', (event) => {
-      this.logError('critical', `Unhandled Promise Rejection: ${event.reason}`, {
-        type: 'unhandledRejection',
-        promise: event.promise,
-        reason: event.reason
-      });
+    window.addEventListener("unhandledrejection", (event) => {
+      this.logError(
+        "critical",
+        `Unhandled Promise Rejection: ${event.reason}`,
+        {
+          type: "unhandledRejection",
+          promise: event.promise,
+          reason: event.reason,
+        },
+      );
     });
 
     // Handle global errors
-    window.addEventListener('error', (event) => {
-      this.logError('critical', event.message, {
-        type: 'globalError',
-        filename: event.filename,
-        lineno: event.lineno,
-        colno: event.colno,
-        error: event.error
-      }, event.error?.stack);
+    window.addEventListener("error", (event) => {
+      this.logError(
+        "critical",
+        event.message,
+        {
+          type: "globalError",
+          filename: event.filename,
+          lineno: event.lineno,
+          colno: event.colno,
+          error: event.error,
+        },
+        event.error?.stack,
+      );
     });
   }
 
@@ -74,7 +83,7 @@ class ErrorTracker {
       vendor: navigator.vendor,
       screenResolution: `${window.screen.width}x${window.screen.height}`,
       viewport: `${window.innerWidth}x${window.innerHeight}`,
-      timezone: Intl.DateTimeFormat().resolvedOptions().timeZone
+      timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
     };
   }
 
@@ -82,7 +91,7 @@ class ErrorTracker {
     level: ErrorLevel,
     message: string,
     context?: ErrorContext,
-    stack?: string
+    stack?: string,
   ) {
     try {
       // Add structured console logging
@@ -92,19 +101,19 @@ class ErrorTracker {
         context,
         stack,
         timestamp: new Date().toISOString(),
-        url: window.location.href
+        url: window.location.href,
       };
 
       // Console log with appropriate method
       switch (level) {
-        case 'critical':
-          console.error('🚨 [CRITICAL ERROR]', logData);
+        case "critical":
+          console.error("🚨 [CRITICAL ERROR]", logData);
           break;
-        case 'error':
-          console.error('❌ [ERROR]', logData);
+        case "error":
+          console.error("❌ [ERROR]", logData);
           break;
-        case 'warning':
-          console.warn('⚠️ [WARNING]', logData);
+        case "warning":
+          console.warn("⚠️ [WARNING]", logData);
           break;
       }
 
@@ -116,17 +125,17 @@ class ErrorTracker {
         error_context: context || {},
         page_url: window.location.href,
         user_agent: navigator.userAgent,
-        browser_info: this.getBrowserInfo()
+        browser_info: this.getBrowserInfo(),
       });
 
       // Process immediately if critical
-      if (level === 'critical') {
+      if (level === "critical") {
         await this.flushErrors();
       }
     } catch (error) {
       // Fallback to console if logging fails
-      console.error('Failed to log error:', error);
-      console.error('Original error:', { level, message, context, stack });
+      console.error("Failed to log error:", error);
+      console.error("Original error:", { level, message, context, stack });
     }
   }
 
@@ -141,23 +150,30 @@ class ErrorTracker {
     try {
       // Log errors to Supabase
       for (const error of errors) {
-        const { error: dbError } = await supabase.rpc('log_error', error);
-        
+        const { error: dbError } = await supabase.rpc("log_error", error);
+
         if (dbError) {
-          console.error('Failed to log error to database:', dbError);
+          console.error("Failed to log error to database:", dbError);
           // Re-add to queue if failed
           this.errorQueue.unshift(error);
         }
       }
 
       // Check if we should send critical error alert
-      const { data: alertData, error: alertError } = await supabase.rpc('check_critical_error_threshold');
-      
-      if (!alertError && alertData && alertData.length > 0 && alertData[0].should_alert) {
+      const { data: alertData, error: alertError } = await supabase.rpc(
+        "check_critical_error_threshold",
+      );
+
+      if (
+        !alertError &&
+        alertData &&
+        alertData.length > 0 &&
+        alertData[0].should_alert
+      ) {
         await this.sendCriticalErrorAlert(alertData[0].error_count);
       }
     } catch (error) {
-      console.error('Error flushing error logs:', error);
+      console.error("Error flushing error logs:", error);
     } finally {
       this.isProcessing = false;
     }
@@ -166,37 +182,45 @@ class ErrorTracker {
   private async sendCriticalErrorAlert(errorCount: number) {
     try {
       // Call Edge Function to send alert email
-      const { error } = await supabase.functions.invoke('send-critical-error-alert', {
-        body: {
-          errorCount,
-          timeWindow: '1 hour'
-        }
-      });
+      const { error } = await supabase.functions.invoke(
+        "send-critical-error-alert",
+        {
+          body: {
+            errorCount,
+            timeWindow: "1 hour",
+          },
+        },
+      );
 
       if (error) {
-        console.error('Failed to send critical error alert:', error);
+        console.error("Failed to send critical error alert:", error);
       }
     } catch (error) {
-      console.error('Error sending critical error alert:', error);
+      console.error("Error sending critical error alert:", error);
     }
   }
 
   // Convenience methods
   logWarning(message: string, context?: ErrorContext) {
-    return this.logError('warning', message, context);
+    return this.logError("warning", message, context);
   }
 
   logCritical(message: string, context?: ErrorContext, stack?: string) {
-    return this.logError('critical', message, context, stack);
+    return this.logError("critical", message, context, stack);
   }
 
   // React Error Boundary integration
   logErrorBoundary(error: Error, errorInfo: Record<string, unknown>) {
-    return this.logError('critical', error.message, {
-      type: 'errorBoundary',
-      componentStack: errorInfo.componentStack,
-      ...errorInfo
-    }, error.stack);
+    return this.logError(
+      "critical",
+      error.message,
+      {
+        type: "errorBoundary",
+        componentStack: errorInfo.componentStack,
+        ...errorInfo,
+      },
+      error.stack,
+    );
   }
 }
 
@@ -206,16 +230,19 @@ export const errorTracker = ErrorTracker.getInstance();
 // React hook for error tracking
 export function useErrorTracking() {
   return {
-    logError: (message: string, context?: ErrorContext) => 
-      errorTracker.logError('error', message, context),
-    logWarning: (message: string, context?: ErrorContext) => 
+    logError: (message: string, context?: ErrorContext) =>
+      errorTracker.logError("error", message, context),
+    logWarning: (message: string, context?: ErrorContext) =>
       errorTracker.logWarning(message, context),
-    logCritical: (message: string, context?: ErrorContext) => 
-      errorTracker.logCritical(message, context)
+    logCritical: (message: string, context?: ErrorContext) =>
+      errorTracker.logCritical(message, context),
   };
 }
 
 // Error boundary error logger
-export function logErrorToSupabase(error: Error, errorInfo: Record<string, unknown>) {
+export function logErrorToSupabase(
+  error: Error,
+  errorInfo: Record<string, unknown>,
+) {
   errorTracker.logErrorBoundary(error, errorInfo);
 }

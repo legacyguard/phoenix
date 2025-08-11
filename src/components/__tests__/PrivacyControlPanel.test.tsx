@@ -1,45 +1,50 @@
-import React from 'react';
-import { render, screen, waitFor, fireEvent } from '@testing-library/react';
-import { vi, describe, it, expect, beforeEach, afterEach } from 'vitest';
-import PrivacyControlPanel from '../PrivacyControlPanel';
+import React from "react";
+import { render, screen, waitFor, fireEvent } from "@testing-library/react";
+import { vi, describe, it, expect, beforeEach, afterEach } from "vitest";
+import PrivacyControlPanel from "../PrivacyControlPanel";
 
 // Mock react-i18next completely
-vi.mock('react-i18next', () => ({
+vi.mock("react-i18next", () => ({
   useTranslation: () => ({
     t: (key: string) => {
       const translations: Record<string, string> = {
         // Map the keys actually used by PrivacyControlPanel to the expected display strings
-        'ui.title': 'Privacy Data Controls',
-        'ui.subtitle': 'Manage how your data is processed',
+        "ui.title": "Privacy Data Controls",
+        "ui.subtitle": "Manage how your data is processed",
 
-        'dataManagement.exportData': 'Data Processing',
-        'dataManagement.exportDescription': 'Configure how we export and process data',
-        'dataManagement.dataRetention': 'Automatic Data Deletion',
-        'dataManagement.privacySettings': 'Family Access Management',
+        "dataManagement.exportData": "Data Processing",
+        "dataManagement.exportDescription":
+          "Configure how we export and process data",
+        "dataManagement.dataRetention": "Automatic Data Deletion",
+        "dataManagement.privacySettings": "Family Access Management",
 
-        'ui.visualSettings': 'AI Assistant Features',
-        'ui.fontSize': 'AI Feature Toggle',
+        "ui.visualSettings": "AI Assistant Features",
+        "ui.fontSize": "AI Feature Toggle",
 
-        'actions.save': 'Save Privacy Settings',
+        "actions.save": "Save Privacy Settings",
 
         // Common fallbacks used in other tests
-        'common.loading': 'Loading...',
-        'common.success': 'Success',
-        'common.error': 'Error',
+        "common.loading": "Loading...",
+        "common.success": "Success",
+        "common.error": "Error",
       };
       return translations[key] || key;
     },
     i18n: { changeLanguage: vi.fn() },
   }),
-  I18nextProvider: ({ children }: { children: React.ReactNode }) => <div>{children}</div>,
+  I18nextProvider: ({ children }: { children: React.ReactNode }) => (
+    <div>{children}</div>
+  ),
 }));
 
 // Mock ClerkProvider and useAuth
-vi.mock('@clerk/clerk-react', () => ({
-  ClerkProvider: ({ children }: { children: React.ReactNode }) => <div>{children}</div>,
+vi.mock("@clerk/clerk-react", () => ({
+  ClerkProvider: ({ children }: { children: React.ReactNode }) => (
+    <div>{children}</div>
+  ),
   useAuth: () => ({
-    getToken: vi.fn().mockResolvedValue('mock-token'),
-    userId: 'mock-user-id',
+    getToken: vi.fn().mockResolvedValue("mock-token"),
+    userId: "mock-user-id",
   }),
 }));
 
@@ -47,7 +52,7 @@ vi.mock('@clerk/clerk-react', () => ({
 Object.assign(navigator, {
   clipboard: {
     writeText: vi.fn().mockResolvedValue(undefined),
-    readText: vi.fn().mockResolvedValue(''),
+    readText: vi.fn().mockResolvedValue(""),
   },
 });
 
@@ -55,7 +60,7 @@ Object.assign(navigator, {
 global.fetch = vi.fn();
 
 const mockSettings = {
-  processingMode: 'standard',
+  processingMode: "standard",
   autoDelete: {
     enabled: false,
     days: 30,
@@ -71,7 +76,7 @@ const mockSettings = {
   },
 };
 
-describe('PrivacyControlPanel', () => {
+describe("PrivacyControlPanel", () => {
   beforeEach(() => {
     vi.clearAllMocks();
     (global.fetch as jest.MockedFunction<typeof fetch>).mockResolvedValue({
@@ -85,104 +90,104 @@ describe('PrivacyControlPanel', () => {
   });
 
   const renderWithProviders = (component: React.ReactElement) => {
-    return render(
-      <div>{component}</div>
-    );
+    return render(<div>{component}</div>);
   };
 
-  it('should render the privacy control panel', async () => {
+  it("should render the privacy control panel", async () => {
     renderWithProviders(<PrivacyControlPanel />);
-    
+
     await waitFor(() => {
-      expect(screen.getByText('Privacy Data Controls')).toBeInTheDocument();
+      expect(screen.getByText("Privacy Data Controls")).toBeInTheDocument();
     });
   });
 
-  it('should display loading state initially', async () => {
+  it("should display loading state initially", async () => {
     renderWithProviders(<PrivacyControlPanel />);
-    
+
     // Check for loading spinner instead of text
-    expect(screen.getByTestId('loading-spinner')).toBeInTheDocument();
-    
+    expect(screen.getByTestId("loading-spinner")).toBeInTheDocument();
+
     await waitFor(() => {
-      expect(screen.queryByTestId('loading-spinner')).not.toBeInTheDocument();
+      expect(screen.queryByTestId("loading-spinner")).not.toBeInTheDocument();
     });
   });
 
-  it('should load and display privacy settings', async () => {
+  it("should load and display privacy settings", async () => {
     renderWithProviders(<PrivacyControlPanel />);
-    
+
     await waitFor(() => {
-      expect(screen.getByText('Data Processing')).toBeInTheDocument();
+      expect(screen.getByText("Data Processing")).toBeInTheDocument();
       // Multiple elements contain this text (label, helper, and select value)
-      expect(screen.getAllByText('Automatic Data Deletion').length).toBeGreaterThan(0);
-      expect(screen.getByText('AI Assistant Features')).toBeInTheDocument();
+      expect(
+        screen.getAllByText("Automatic Data Deletion").length,
+      ).toBeGreaterThan(0);
+      expect(screen.getByText("AI Assistant Features")).toBeInTheDocument();
     });
   });
 
-  it('should handle processing mode change', async () => {
+  it("should handle processing mode change", async () => {
     renderWithProviders(<PrivacyControlPanel />);
-    
+
     await waitFor(() => {
-      expect(screen.getByText('Privacy Data Controls')).toBeInTheDocument();
+      expect(screen.getByText("Privacy Data Controls")).toBeInTheDocument();
     });
-    
+
     // Note: Processing mode toggle is not implemented in the component yet
     // This test is updated to just verify the component loads correctly
   });
 
-  it('should handle auto delete setting change', async () => {
+  it("should handle auto delete setting change", async () => {
     renderWithProviders(<PrivacyControlPanel />);
-    
+
     await waitFor(() => {
-      expect(screen.getByText('Privacy Data Controls')).toBeInTheDocument();
+      expect(screen.getByText("Privacy Data Controls")).toBeInTheDocument();
     });
-    
+
     // Skip specific interaction tests as they depend on implementation
   });
 
-  it('should toggle AI feature switches', async () => {
+  it("should toggle AI feature switches", async () => {
     renderWithProviders(<PrivacyControlPanel />);
-    
+
     await waitFor(() => {
-      expect(screen.getByText('Privacy Data Controls')).toBeInTheDocument();
+      expect(screen.getByText("Privacy Data Controls")).toBeInTheDocument();
     });
-    
+
     // Skip specific interaction tests as they depend on implementation
   });
 
-  it('should save settings successfully', async () => {
+  it("should save settings successfully", async () => {
     renderWithProviders(<PrivacyControlPanel />);
-    
+
     await waitFor(() => {
-      const saveButton = screen.getByText('Save Privacy Settings');
+      const saveButton = screen.getByText("Save Privacy Settings");
       fireEvent.click(saveButton);
     });
 
     await waitFor(() => {
       expect(global.fetch).toHaveBeenCalledWith(
-        expect.stringContaining('/api/privacy-settings'),
+        expect.stringContaining("/api/privacy-settings"),
         expect.objectContaining({
-          method: 'PUT',
+          method: "PUT",
           headers: expect.objectContaining({
-            'Content-Type': 'application/json',
+            "Content-Type": "application/json",
           }),
-        })
+        }),
       );
     });
   });
 
-  it('should handle save error', async () => {
+  it("should handle save error", async () => {
     (global.fetch as jest.MockedFunction<typeof fetch>).mockResolvedValue({
       ok: false,
       status: 500,
-      json: () => Promise.resolve({ error: 'Server error' }),
+      json: () => Promise.resolve({ error: "Server error" }),
     } as Response);
 
     renderWithProviders(<PrivacyControlPanel />);
-    
+
     await waitFor(() => {
-      const saveButton = screen.getByText('Save Privacy Settings');
+      const saveButton = screen.getByText("Save Privacy Settings");
       fireEvent.click(saveButton);
     });
   });

@@ -1,19 +1,37 @@
-import React from 'react';
-import { useTranslation } from 'react-i18next';
-import { Card, CardContent, CardHeader } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { 
-  Home, Landmark, Car, Laptop, Gem, Package, Building2, 
-  Wallet, Bitcoin, FileText, Shield, Plane, HardDrive,
-  Globe, CreditCard, Sparkles, MoreVertical, Eye, Edit, Trash2,
-  DollarSign, Calendar
-} from 'lucide-react';
+import React from "react";
+import { useTranslation } from "react-i18next";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import {
+  Home,
+  Landmark,
+  Car,
+  Laptop,
+  Gem,
+  Package,
+  Building2,
+  Wallet,
+  Bitcoin,
+  FileText,
+  Shield,
+  Plane,
+  HardDrive,
+  Globe,
+  CreditCard,
+  Sparkles,
+  MoreVertical,
+  Eye,
+  Edit,
+  Trash2,
+  DollarSign,
+  Calendar,
+} from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
+} from "@/components/ui/dropdown-menu";
 
 interface Asset {
   id: string;
@@ -36,66 +54,74 @@ interface AssetCardProps {
 const getIconForAsset = (subType: string) => {
   const iconMap: Record<string, React.ReactNode> = {
     // Property types
-    'Primary Residence': <Home className="h-6 w-6" />,
-    'Vacation Home': <Home className="h-6 w-6" />,
-    'Rental Property': <Building2 className="h-6 w-6" />,
-    'Land': <Globe className="h-6 w-6" />,
-    'Commercial Property': <Building2 className="h-6 w-6" />,
-    
+    "Primary Residence": <Home className="h-6 w-6" />,
+    "Vacation Home": <Home className="h-6 w-6" />,
+    "Rental Property": <Building2 className="h-6 w-6" />,
+    Land: <Globe className="h-6 w-6" />,
+    "Commercial Property": <Building2 className="h-6 w-6" />,
+
     // Finance types
-    'Bank Account': <Landmark className="h-6 w-6" />,
-    'Investment Portfolio': <Wallet className="h-6 w-6" />,
-    'Cryptocurrency Wallet': <Bitcoin className="h-6 w-6" />,
-    'Loan / Mortgage': <FileText className="h-6 w-6" />,
-    'Insurance Policy': <Shield className="h-6 w-6" />,
-    'Pension / Retirement Account': <Wallet className="h-6 w-6" />,
-    
+    "Bank Account": <Landmark className="h-6 w-6" />,
+    "Investment Portfolio": <Wallet className="h-6 w-6" />,
+    "Cryptocurrency Wallet": <Bitcoin className="h-6 w-6" />,
+    "Loan / Mortgage": <FileText className="h-6 w-6" />,
+    "Insurance Policy": <Shield className="h-6 w-6" />,
+    "Pension / Retirement Account": <Wallet className="h-6 w-6" />,
+
     // Vehicle types
-    'Car': <Car className="h-6 w-6" />,
-    'Motorcycle': <Car className="h-6 w-6" />,
-    'Boat': <Car className="h-6 w-6" />,
-    'RV / Camper': <Car className="h-6 w-6" />,
-    'Aircraft': <Plane className="h-6 w-6" />,
-    
+    Car: <Car className="h-6 w-6" />,
+    Motorcycle: <Car className="h-6 w-6" />,
+    Boat: <Car className="h-6 w-6" />,
+    "RV / Camper": <Car className="h-6 w-6" />,
+    Aircraft: <Plane className="h-6 w-6" />,
+
     // Digital Asset types
-    'Online Account': <Globe className="h-6 w-6" />,
-    'Software License': <HardDrive className="h-6 w-6" />,
-    'Domain Name': <Globe className="h-6 w-6" />,
-    'Digital Subscription': <CreditCard className="h-6 w-6" />,
-    'Cryptocurrency': <Bitcoin className="h-6 w-6" />,
-    'NFT': <Sparkles className="h-6 w-6" />,
-    
+    "Online Account": <Globe className="h-6 w-6" />,
+    "Software License": <HardDrive className="h-6 w-6" />,
+    "Domain Name": <Globe className="h-6 w-6" />,
+    "Digital Subscription": <CreditCard className="h-6 w-6" />,
+    Cryptocurrency: <Bitcoin className="h-6 w-6" />,
+    NFT: <Sparkles className="h-6 w-6" />,
+
     // Personal Item types
-    'Jewelry': <Gem className="h-6 w-6" />,
-    'Art / Collectibles': <Sparkles className="h-6 w-6" />,
-    'Electronics': <Laptop className="h-6 w-6" />,
-    'Furniture': <Package className="h-6 w-6" />,
-    'Tools / Equipment': <Package className="h-6 w-6" />,
-    'Other Valuables': <Package className="h-6 w-6" />,
-    
+    Jewelry: <Gem className="h-6 w-6" />,
+    "Art / Collectibles": <Sparkles className="h-6 w-6" />,
+    Electronics: <Laptop className="h-6 w-6" />,
+    Furniture: <Package className="h-6 w-6" />,
+    "Tools / Equipment": <Package className="h-6 w-6" />,
+    "Other Valuables": <Package className="h-6 w-6" />,
+
     // Default
-    'Custom Asset': <Package className="h-6 w-6" />,
+    "Custom Asset": <Package className="h-6 w-6" />,
   };
-  
+
   return iconMap[subType] || <Package className="h-6 w-6" />;
 };
 
-const AssetCard: React.FC<AssetCardProps> = ({ asset, onView, onEdit, onDelete }) => {
-  const { t, i18n } = useTranslation('ui-common');
-  
-  const formatCurrency = (value: number | undefined, currency: string = 'USD') => {
+const AssetCard: React.FC<AssetCardProps> = ({
+  asset,
+  onView,
+  onEdit,
+  onDelete,
+}) => {
+  const { t, i18n } = useTranslation("ui-common");
+
+  const formatCurrency = (
+    value: number | undefined,
+    currency: string = "USD",
+  ) => {
     if (!value) return null;
     return new Intl.NumberFormat(i18n.language, {
-      style: 'currency',
+      style: "currency",
       currency: currency,
     }).format(value);
   };
 
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString(i18n.language, {
-      year: 'numeric',
-      month: 'short',
-      day: 'numeric',
+      year: "numeric",
+      month: "short",
+      day: "numeric",
     });
   };
 
@@ -125,18 +151,18 @@ const AssetCard: React.FC<AssetCardProps> = ({ asset, onView, onEdit, onDelete }
             <DropdownMenuContent align="end">
               <DropdownMenuItem onClick={() => onView(asset)}>
                 <Eye className="mr-2 h-4 w-4" />
-                {t('ui.viewDetails')}
+                {t("ui.viewDetails")}
               </DropdownMenuItem>
               <DropdownMenuItem onClick={() => onEdit(asset)}>
                 <Edit className="mr-2 h-4 w-4" />
-                {t('ui.edit')}
+                {t("ui-elements:ui.edit")}
               </DropdownMenuItem>
-              <DropdownMenuItem 
+              <DropdownMenuItem
                 onClick={() => onDelete(asset)}
                 className="text-destructive"
               >
                 <Trash2 className="mr-2 h-4 w-4" />
-                {t('ui.delete')}
+                {t("ui-elements:ui.delete")}
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
@@ -155,7 +181,9 @@ const AssetCard: React.FC<AssetCardProps> = ({ asset, onView, onEdit, onDelete }
             )}
             <div className="flex items-center gap-1 text-muted-foreground">
               <Calendar className="h-3 w-3" />
-              <span>{t('common.addedOn', { date: formatDate(asset.created_at) })}</span>
+              <span>
+                {t("common.addedOn", { date: formatDate(asset.created_at) })}
+              </span>
             </div>
           </div>
         </div>

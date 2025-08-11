@@ -1,24 +1,24 @@
-import * as React from "react"
-import { createContext, useContext, useEffect, useState } from "react"
+import * as React from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 
 type SidebarContext = {
-  state: "expanded" | "collapsed"
-  open: boolean
-  setOpen: (open: boolean) => void
-  openMobile: boolean
-  setOpenMobile: (open: boolean) => void
-  isMobile: boolean
-  toggleSidebar: () => void
-}
+  state: "expanded" | "collapsed";
+  open: boolean;
+  setOpen: (open: boolean) => void;
+  openMobile: boolean;
+  setOpenMobile: (open: boolean) => void;
+  isMobile: boolean;
+  toggleSidebar: () => void;
+};
 
-const SidebarContext = createContext<SidebarContext | undefined>(undefined)
+const SidebarContext = createContext<SidebarContext | undefined>(undefined);
 
 function useSidebar() {
-  const context = useContext(SidebarContext)
+  const context = useContext(SidebarContext);
   if (context === undefined) {
-    throw new Error("useSidebar must be used within a SidebarProvider")
+    throw new Error("useSidebar must be used within a SidebarProvider");
   }
-  return context
+  return context;
 }
 
-export { useSidebar } 
+export { useSidebar };

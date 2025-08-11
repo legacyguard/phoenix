@@ -1,6 +1,6 @@
-import { supabase } from '@/integrations/supabase/client';
-import { retry, RetryConditions, RetryOptions } from './retry';
-import { toast } from 'sonner';
+import { supabase } from "@/integrations/supabase/client";
+import { retry, RetryConditions, RetryOptions } from "./retry";
+import { toast } from "sonner";
 
 /**
  * Supabase client wrapper s automatickým retry
@@ -13,10 +13,10 @@ export class SupabaseWithRetry {
     retryCondition: RetryConditions.supabaseErrors,
     onRetry: (error, attempt) => {
       console.warn(`[SupabaseRetry] Pokus ${attempt} zlyhal:`, error);
-      if (process.env.NODE_ENV === 'development') {
+      if (process.env.NODE_ENV === "development") {
         toast.warning(`Opakujem požiadavku... (pokus ${attempt + 1})`);
       }
-    }
+    },
   };
 
   /**
@@ -24,13 +24,18 @@ export class SupabaseWithRetry {
    */
   from(table: string) {
     const originalFrom = supabase.from(table);
-    
+
     return {
-      select: (...args: Array<Record<string, unknown>>) => this.wrapQuery(originalFrom.select(...args)),
-      insert: (...args: Array<Record<string, unknown>>) => this.wrapQuery(originalFrom.insert(...args)),
-      update: (...args: Array<Record<string, unknown>>) => this.wrapQuery(originalFrom.update(...args)),
-      upsert: (...args: Array<Record<string, unknown>>) => this.wrapQuery(originalFrom.upsert(...args)),
-      delete: (...args: Array<Record<string, unknown>>) => this.wrapQuery(originalFrom.delete(...args))
+      select: (...args: Array<Record<string, unknown>>) =>
+        this.wrapQuery(originalFrom.select(...args)),
+      insert: (...args: Array<Record<string, unknown>>) =>
+        this.wrapQuery(originalFrom.insert(...args)),
+      update: (...args: Array<Record<string, unknown>>) =>
+        this.wrapQuery(originalFrom.update(...args)),
+      upsert: (...args: Array<Record<string, unknown>>) =>
+        this.wrapQuery(originalFrom.upsert(...args)),
+      delete: (...args: Array<Record<string, unknown>>) =>
+        this.wrapQuery(originalFrom.delete(...args)),
     };
   }
 
@@ -40,34 +45,38 @@ export class SupabaseWithRetry {
   storage = {
     from: (bucket: string) => {
       const originalStorage = supabase.storage.from(bucket);
-      
+
       return {
-        upload: async (path: string, file: File, options?: Record<string, unknown>) => {
+        upload: async (
+          path: string,
+          file: File,
+          options?: Record<string, unknown>,
+        ) => {
           return retry(
             () => originalStorage.upload(path, file, options),
-            this.defaultRetryOptions
+            this.defaultRetryOptions,
           );
         },
         download: async (path: string) => {
           return retry(
             () => originalStorage.download(path),
-            this.defaultRetryOptions
+            this.defaultRetryOptions,
           );
         },
         remove: async (paths: string[]) => {
           return retry(
             () => originalStorage.remove(paths),
-            this.defaultRetryOptions
+            this.defaultRetryOptions,
           );
         },
         createSignedUrl: async (path: string, expiresIn: number) => {
           return retry(
             () => originalStorage.createSignedUrl(path, expiresIn),
-            this.defaultRetryOptions
+            this.defaultRetryOptions,
           );
-        }
+        },
       };
-    }
+    },
   };
 
   /**
@@ -75,26 +84,17 @@ export class SupabaseWithRetry {
    */
   auth = {
     getUser: async () => {
-      return retry(
-        () => supabase.auth.getUser(),
-        this.defaultRetryOptions
-      );
+      return retry(() => supabase.auth.getUser(), this.defaultRetryOptions);
     },
     signIn: async (credentials: Record<string, unknown>) => {
-      return retry(
-        () => supabase.auth.signInWithPassword(credentials),
-        {
-          ...this.defaultRetryOptions,
-          maxAttempts: 2 // Menej pokusov pre prihlasovanie
-        }
-      );
+      return retry(() => supabase.auth.signInWithPassword(credentials), {
+        ...this.defaultRetryOptions,
+        maxAttempts: 2, // Menej pokusov pre prihlasovanie
+      });
     },
     signOut: async () => {
-      return retry(
-        () => supabase.auth.signOut(),
-        this.defaultRetryOptions
-      );
-    }
+      return retry(() => supabase.auth.signOut(), this.defaultRetryOptions);
+    },
   };
 
   /**
@@ -114,21 +114,23 @@ export class SupabaseWithRetry {
     return new Proxy(query, {
       get: (target, prop) => {
         // Pre metódy, ktoré ukončujú query (single, maybeSingle, atď.)
-        if (['single', 'maybeSingle', 'csv', 'execute'].includes(prop as string)) {
+        if (
+          ["single", "maybeSingle", "csv", "execute"].includes(prop as string)
+        ) {
           return async () => {
             return retry(execute, this.defaultRetryOptions);
           };
         }
-        
+
         // Pre ostatné metódy, vrátime wrapped query
-        if (typeof target[prop] === 'function') {
+        if (typeof target[prop] === "function") {
           return (...args: Array<Record<string, unknown>>) => {
             return this.wrapQuery(target[prop](...args));
           };
         }
-        
+
         return target[prop];
-      }
+      },
     });
   }
 
@@ -137,11 +139,11 @@ export class SupabaseWithRetry {
    */
   async retryOperation<T>(
     operation: () => Promise<T>,
-    options?: Partial<RetryOptions>
+    options?: Partial<RetryOptions>,
   ): Promise<T> {
     return retry(operation, {
       ...this.defaultRetryOptions,
-      ...options
+      ...options,
     });
   }
 }
@@ -169,12 +171,12 @@ export const supabaseHelpers = {
     bucket: string,
     path: string,
     file: File,
-    onProgress?: (progress: number) => void
+    onProgress?: (progress: number) => void,
   ) {
     // Pre veľké súbory použijeme chunked upload s retry
     const chunkSize = 1024 * 1024 * 2; // 2MB chunks
     const chunks = Math.ceil(file.size / chunkSize);
-    
+
     if (chunks === 1) {
       // Malý súbor, uploadni celý
       return supabaseWithRetry.storage.from(bucket).upload(path, file);
@@ -192,26 +194,32 @@ export const supabaseHelpers = {
     options?: {
       concurrency?: number;
       stopOnError?: boolean;
-    }
-  ): Promise<Array<{ success: boolean; data?: T; error?: Record<string, unknown> }>> {
+    },
+  ): Promise<
+    Array<{ success: boolean; data?: T; error?: Record<string, unknown> }>
+  > {
     const { concurrency = 3, stopOnError = false } = options || {};
-    const results: Array<{ success: boolean; data?: T; error?: Record<string, unknown> }> = [];
-    
+    const results: Array<{
+      success: boolean;
+      data?: T;
+      error?: Record<string, unknown>;
+    }> = [];
+
     // Rozdelíme operácie na chunky
     for (let i = 0; i < operations.length; i += concurrency) {
       const chunk = operations.slice(i, i + concurrency);
-      
+
       const chunkResults = await Promise.allSettled(
-        chunk.map(op => 
+        chunk.map((op) =>
           retry(op, {
             ...supabaseWithRetry.defaultRetryOptions,
-            maxAttempts: 2
-          })
-        )
+            maxAttempts: 2,
+          }),
+        ),
       );
-      
+
       for (const result of chunkResults) {
-        if (result.status === 'fulfilled') {
+        if (result.status === "fulfilled") {
           results.push({ success: true, data: result.value });
         } else {
           results.push({ success: false, error: result.reason });
@@ -221,7 +229,7 @@ export const supabaseHelpers = {
         }
       }
     }
-    
+
     return results;
-  }
+  },
 };

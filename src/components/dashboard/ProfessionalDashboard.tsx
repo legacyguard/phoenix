@@ -1,12 +1,18 @@
-import React, { useState, useEffect, useMemo } from 'react';
-import { useUser } from '@clerk/clerk-react';
-import { useTranslation } from 'react-i18next';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { Progress } from '@/components/ui/progress';
-import { Alert, AlertDescription } from '@/components/ui/alert';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import React, { useState, useEffect, useMemo } from "react";
+import { useUser } from "@clerk/clerk-react";
+import { useTranslation } from "react-i18next";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Progress } from "@/components/ui/progress";
+import { Alert, AlertDescription } from "@/components/ui/alert";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
   Shield,
   Heart,
@@ -27,17 +33,22 @@ import {
   ArrowRight,
   Sparkles,
   FolderOpen,
-  UserCheck
-} from 'lucide-react';
-import { Link } from 'react-router-dom';
-import ProfessionalProgress from './ProfessionalProgress';
-import { cn } from '@/lib/utils';
+  UserCheck,
+} from "lucide-react";
+import { Link } from "react-router-dom";
+import ProfessionalProgress from "./ProfessionalProgress";
+import { cn } from "@/lib/utils";
 
 // Types for onboarding data and tasks
 interface OnboardingData {
   answers?: Record<string, unknown>;
   documents?: Array<{ id?: string; name?: string; type?: string }>;
-  recommendations?: Array<{ id: string; title: string; description: string; priority: string }>;
+  recommendations?: Array<{
+    id: string;
+    title: string;
+    description: string;
+    priority: string;
+  }>;
   completedSteps?: string[];
 }
 
@@ -46,7 +57,7 @@ interface Task {
   title: string;
   description?: string;
   category: string;
-  priority: 'immediate' | 'high' | 'medium' | 'low' | 'completed';
+  priority: "immediate" | "high" | "medium" | "low" | "completed";
   completed: boolean;
   estimatedTime: number;
   pillar?: string;
@@ -59,7 +70,7 @@ interface ProfessionalDashboardProps {
 }
 
 interface SecurityStatus {
-  level: 'getting-started' | 'building' | 'organized' | 'comprehensive';
+  level: "getting-started" | "building" | "organized" | "comprehensive";
   description: string;
   nextMilestone: string;
   color: string;
@@ -73,7 +84,7 @@ interface FocusArea {
   progress: number;
   tasks: number;
   completedTasks: number;
-  priority: 'critical' | 'important' | 'recommended';
+  priority: "critical" | "important" | "recommended";
   estimatedTime: string;
   actionUrl: string;
 }
@@ -81,11 +92,11 @@ interface FocusArea {
 const ProfessionalDashboard: React.FC<ProfessionalDashboardProps> = ({
   onboardingData,
   tasks = [],
-  completionScore = 0
+  completionScore = 0,
 }) => {
   const { user } = useUser();
-  const { t } = useTranslation(['dashboard', 'ui']);
-  const [activeTab, setActiveTab] = useState('overview');
+  const { t } = useTranslation(["dashboard", "ui"]);
+  const [activeTab, setActiveTab] = useState("overview");
   const [showGuidance, setShowGuidance] = useState(true);
   const [userProgress, setUserProgress] = useState<{
     completedAreas?: number;
@@ -102,7 +113,7 @@ const ProfessionalDashboard: React.FC<ProfessionalDashboardProps> = ({
         try {
           setUserProgress(JSON.parse(savedProgress));
         } catch (error) {
-          console.error('Failed to load progress:', error);
+          console.error("Failed to load progress:", error);
         }
       }
     }
@@ -112,31 +123,35 @@ const ProfessionalDashboard: React.FC<ProfessionalDashboardProps> = ({
   const getSecurityStatus = (): SecurityStatus => {
     if (completionScore < 25) {
       return {
-        level: 'getting-started',
-        description: t('dashboard.status.gettingStarted'),
-        nextMilestone: t('dashboard.status.milestone.foundation'),
-        color: 'text-blue-600 bg-blue-50'
+        level: "getting-started",
+        description: t("dashboard.status.gettingStarted"),
+        nextMilestone: t(
+          "dashboard-main:dashboard.status.milestone.foundation",
+        ),
+        color: "text-blue-600 bg-blue-50",
       };
     } else if (completionScore < 50) {
       return {
-        level: 'building',
-        description: t('dashboard.status.building'),
-        nextMilestone: t('dashboard.status.milestone.core'),
-        color: 'text-purple-600 bg-purple-50'
+        level: "building",
+        description: t("dashboard-main:dashboard.status.building"),
+        nextMilestone: t("dashboard-main:dashboard.status.milestone.core"),
+        color: "text-purple-600 bg-purple-50",
       };
     } else if (completionScore < 75) {
       return {
-        level: 'organized',
-        description: t('dashboard.status.organized'),
-        nextMilestone: t('dashboard.status.milestone.comprehensive'),
-        color: 'text-green-600 bg-green-50'
+        level: "organized",
+        description: t("dashboard-main:dashboard.status.organized"),
+        nextMilestone: t(
+          "dashboard-main:dashboard.status.milestone.comprehensive",
+        ),
+        color: "text-green-600 bg-green-50",
       };
     } else {
       return {
-        level: 'comprehensive',
-        description: t('dashboard.status.comprehensive'),
-        nextMilestone: t('dashboard.status.milestone.maintain'),
-        color: 'text-emerald-600 bg-emerald-50'
+        level: "comprehensive",
+        description: t("dashboard-main:dashboard.status.comprehensive"),
+        nextMilestone: t("dashboard-main:dashboard.status.milestone.maintain"),
+        color: "text-emerald-600 bg-emerald-50",
       };
     }
   };
@@ -147,53 +162,55 @@ const ProfessionalDashboard: React.FC<ProfessionalDashboardProps> = ({
   const focusAreas: FocusArea[] = useMemo(() => {
     const areas: FocusArea[] = [
       {
-        id: 'documents',
-        title: t('dashboard.areas.documents.title'),
-        description: t('dashboard.areas.documents.description'),
+        id: "documents",
+        title: t("dashboard-main:dashboard.areas.documents.title"),
+        description: t("dashboard-main:dashboard.areas.documents.description"),
         icon: <FileText className="w-5 h-5" />,
         progress: 35,
         tasks: 8,
         completedTasks: 3,
-        priority: 'critical',
-        estimatedTime: '30 minutes',
-        actionUrl: '/vault'
+        priority: "critical",
+        estimatedTime: "30 minutes",
+        actionUrl: "/vault",
       },
       {
-        id: 'guardians',
-        title: t('dashboard.areas.guardians.title'),
-        description: t('dashboard.areas.guardians.description'),
+        id: "guardians",
+        title: t("dashboard-main:dashboard.areas.guardians.title"),
+        description: t("dashboard-main:dashboard.areas.guardians.description"),
         icon: <Users className="w-5 h-5" />,
         progress: 50,
         tasks: 4,
         completedTasks: 2,
-        priority: 'critical',
-        estimatedTime: '15 minutes',
-        actionUrl: '/manual'
+        priority: "critical",
+        estimatedTime: "15 minutes",
+        actionUrl: "/manual",
       },
       {
-        id: 'assets',
-        title: t('dashboard.areas.assets.title'),
-        description: t('dashboard.areas.assets.description'),
+        id: "assets",
+        title: t("dashboard-main:dashboard.areas.assets.title"),
+        description: t("dashboard-main:dashboard.areas.assets.description"),
         icon: <Building className="w-5 h-5" />,
         progress: 20,
         tasks: 6,
         completedTasks: 1,
-        priority: 'important',
-        estimatedTime: '20 minutes',
-        actionUrl: '/assets'
+        priority: "important",
+        estimatedTime: "20 minutes",
+        actionUrl: "/assets",
       },
       {
-        id: 'beneficiaries',
-        title: t('dashboard.areas.beneficiaries.title'),
-        description: t('dashboard.areas.beneficiaries.description'),
+        id: "beneficiaries",
+        title: t("dashboard-main:dashboard.areas.beneficiaries.title"),
+        description: t(
+          "dashboard-main:dashboard.areas.beneficiaries.description",
+        ),
         icon: <Heart className="w-5 h-5" />,
         progress: 75,
         tasks: 4,
         completedTasks: 3,
-        priority: 'important',
-        estimatedTime: '10 minutes',
-        actionUrl: '/beneficiaries'
-      }
+        priority: "important",
+        estimatedTime: "10 minutes",
+        actionUrl: "/beneficiaries",
+      },
     ];
 
     return areas.sort((a, b) => {
@@ -209,22 +226,34 @@ const ProfessionalDashboard: React.FC<ProfessionalDashboardProps> = ({
   // Get time-appropriate greeting
   const getGreeting = () => {
     const hour = new Date().getHours();
-    const name = user?.firstName || 'there';
-    
-    if (hour < 12) return t('dashboard.greeting.morning', { name });
-    if (hour < 17) return t('dashboard.greeting.afternoon', { name });
-    return t('dashboard.greeting.evening', { name });
+    const name = user?.firstName || "there";
+
+    if (hour < 12) return t("dashboard.greeting.morning", { name });
+    if (hour < 17) return t("dashboard.greeting.afternoon", { name });
+    return t("dashboard.greeting.evening", { name });
   };
 
   // Get priority badge styling
   const getPriorityBadge = (priority: string) => {
     switch (priority) {
-      case 'critical':
-        return <Badge variant="destructive" className="text-xs">{t('dashboard.priority.critical')}</Badge>;
-      case 'important':
-        return <Badge className="text-xs bg-orange-100 text-orange-800">{t('dashboard.priority.important')}</Badge>;
+      case "critical":
+        return (
+          <Badge variant="destructive" className="text-xs">
+            {t("dashboard-main:dashboard.priority.critical")}
+          </Badge>
+        );
+      case "important":
+        return (
+          <Badge className="text-xs bg-orange-100 text-orange-800">
+            {t("dashboard-main:dashboard.priority.important")}
+          </Badge>
+        );
       default:
-        return <Badge variant="secondary" className="text-xs">{t('dashboard.priority.recommended')}</Badge>;
+        return (
+          <Badge variant="secondary" className="text-xs">
+            {t("dashboard-main:dashboard.priority.recommended")}
+          </Badge>
+        );
     }
   };
 
@@ -238,11 +267,13 @@ const ProfessionalDashboard: React.FC<ProfessionalDashboardProps> = ({
               {getGreeting()}
             </h1>
             <p className="text-gray-600">
-              {t('dashboard.subtitle.professional')}
+              {t("dashboard-main:dashboard.subtitle.professional")}
             </p>
           </div>
           <div className={cn("px-4 py-2 rounded-lg", securityStatus.color)}>
-            <p className="text-sm font-medium">{t('dashboard.securityLevel')}</p>
+            <p className="text-sm font-medium">
+              {t("dashboard.securityLevel")}
+            </p>
             <p className="text-xs mt-1">{securityStatus.description}</p>
           </div>
         </div>
@@ -254,7 +285,7 @@ const ProfessionalDashboard: React.FC<ProfessionalDashboardProps> = ({
           <Info className="h-4 w-4 text-blue-600" />
           <AlertDescription className="flex items-center justify-between">
             <span className="text-gray-700">
-              {t('dashboard.guidance.professional')}
+              {t("dashboard-main:dashboard.guidance.professional")}
             </span>
             <Button
               variant="ghost"
@@ -263,27 +294,30 @@ const ProfessionalDashboard: React.FC<ProfessionalDashboardProps> = ({
               className="ml-4"
             >
               // TODO: Fix missing translation key - ui-elements:common.dismiss
-
-              // {t('ui-elements:common.dismiss')}
+              // {t("ui-elements:common.dismiss")}
             </Button>
           </AlertDescription>
         </Alert>
       )}
 
       {/* Main Content Tabs */}
-      <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-6">
+      <Tabs
+        value={activeTab}
+        onValueChange={setActiveTab}
+        className="space-y-6"
+      >
         <TabsList className="grid w-full grid-cols-3">
           <TabsTrigger value="overview">
             <Target className="w-4 h-4 mr-2" />
-            {t('dashboard.tabs.overview')}
+            {t("dashboard-main:dashboard.tabs.overview")}
           </TabsTrigger>
           <TabsTrigger value="progress">
             <CheckCircle2 className="w-4 h-4 mr-2" />
-            {t('dashboard.tabs.progress')}
+            {t("dashboard-main:dashboard.tabs.progress")}
           </TabsTrigger>
           <TabsTrigger value="resources">
             <BookOpen className="w-4 h-4 mr-2" />
-            {t('dashboard.tabs.resources')}
+            {t("dashboard-main:dashboard.tabs.resources")}
           </TabsTrigger>
         </TabsList>
 
@@ -294,10 +328,10 @@ const ProfessionalDashboard: React.FC<ProfessionalDashboardProps> = ({
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Shield className="w-5 h-5 text-blue-600" />
-                {t('dashboard.focusAreas.title')}
+                {t("dashboard.focusAreas.title")}
               </CardTitle>
               <CardDescription>
-                {t('dashboard.focusAreas.description')}
+                {t("dashboard.focusAreas.description")}
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
@@ -312,8 +346,12 @@ const ProfessionalDashboard: React.FC<ProfessionalDashboardProps> = ({
                         {area.icon}
                       </div>
                       <div>
-                        <h4 className="font-semibold text-gray-900">{area.title}</h4>
-                        <p className="text-sm text-gray-600 mt-1">{area.description}</p>
+                        <h4 className="font-semibold text-gray-900">
+                          {area.title}
+                        </h4>
+                        <p className="text-sm text-gray-600 mt-1">
+                          {area.description}
+                        </p>
                         <div className="flex items-center gap-4 mt-2">
                           <span className="text-xs text-gray-500 flex items-center gap-1">
                             <Clock className="w-3 h-3" />
@@ -331,7 +369,7 @@ const ProfessionalDashboard: React.FC<ProfessionalDashboardProps> = ({
                     <Progress value={area.progress} className="h-2" />
                     <Button asChild size="sm" className="w-full">
                       <Link to={area.actionUrl}>
-                        {t('dashboard.continue')}
+                        {t("dashboard-main:dashboard.continue")}
                         <ArrowRight className="w-4 h-4 ml-2" />
                       </Link>
                     </Button>
@@ -346,31 +384,31 @@ const ProfessionalDashboard: React.FC<ProfessionalDashboardProps> = ({
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Sparkles className="w-5 h-5 text-purple-600" />
-                {t('dashboard.nextSteps.title')}
+                {t("dashboard.nextSteps.title")}
               </CardTitle>
               <CardDescription>
-                {t('dashboard.nextSteps.description')}
+                {t("dashboard.nextSteps.description")}
               </CardDescription>
             </CardHeader>
             <CardContent>
               <div className="grid gap-3">
                 <NextStepCard
-                  title={t('dashboard.nextSteps.uploadDocuments')}
-                  description={t('dashboard.nextSteps.uploadDocumentsDesc')}
+                  title={t("dashboard.nextSteps.uploadDocuments")}
+                  description={t("dashboard.nextSteps.uploadDocumentsDesc")}
                   icon={<FileText className="w-4 h-4" />}
                   time="5 min"
                   url="/vault"
                 />
                 <NextStepCard
-                  title={t('dashboard.nextSteps.addGuardian')}
-                  description={t('dashboard.nextSteps.addGuardianDesc')}
+                  title={t("dashboard.nextSteps.addGuardian")}
+                  description={t("dashboard.nextSteps.addGuardianDesc")}
                   icon={<UserCheck className="w-4 h-4" />}
                   time="3 min"
                   url="/manual"
                 />
                 <NextStepCard
-                  title={t('dashboard.nextSteps.reviewAssets')}
-                  description={t('dashboard.nextSteps.reviewAssetsDesc')}
+                  title={t("dashboard.nextSteps.reviewAssets")}
+                  description={t("dashboard.nextSteps.reviewAssetsDesc")}
                   icon={<Wallet className="w-4 h-4" />}
                   time="10 min"
                   url="/assets"
@@ -395,35 +433,35 @@ const ProfessionalDashboard: React.FC<ProfessionalDashboardProps> = ({
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <BookOpen className="w-5 h-5 text-green-600" />
-                {t('dashboard.resources.title')}
+                {t("dashboard-main:dashboard.resources.title")}
               </CardTitle>
               <CardDescription>
-                {t('dashboard.resources.description')}
+                {t("dashboard-main:dashboard.resources.description")}
               </CardDescription>
             </CardHeader>
             <CardContent>
               <div className="grid gap-4">
                 <ResourceCard
-                  title={t('dashboard.resources.gettingStarted')}
-                  description={t('dashboard.resources.gettingStartedDesc')}
+                  title={t("dashboard.resources.gettingStarted")}
+                  description={t("dashboard.resources.gettingStartedDesc")}
                   icon={<Info className="w-5 h-5 text-blue-600" />}
                   url="/guide/getting-started"
                 />
                 <ResourceCard
-                  title={t('dashboard.resources.familyGuide')}
-                  description={t('dashboard.resources.familyGuideDesc')}
+                  title={t("dashboard.resources.familyGuide")}
+                  description={t("dashboard.resources.familyGuideDesc")}
                   icon={<Users className="w-5 h-5 text-purple-600" />}
                   url="/guide/family"
                 />
                 <ResourceCard
-                  title={t('dashboard.resources.documentChecklist')}
-                  description={t('dashboard.resources.documentChecklistDesc')}
+                  title={t("dashboard.resources.documentChecklist")}
+                  description={t("dashboard.resources.documentChecklistDesc")}
                   icon={<FolderOpen className="w-5 h-5 text-green-600" />}
                   url="/guide/documents"
                 />
                 <ResourceCard
-                  title={t('dashboard.resources.support')}
-                  description={t('dashboard.resources.supportDesc')}
+                  title={t("dashboard-main:dashboard.resources.support")}
+                  description={t("dashboard.resources.supportDesc")}
                   icon={<Heart className="w-5 h-5 text-pink-600" />}
                   url="/support"
                 />
@@ -438,7 +476,7 @@ const ProfessionalDashboard: React.FC<ProfessionalDashboardProps> = ({
         <Alert className="border-green-200 bg-green-50">
           <CheckCircle2 className="h-4 w-4 text-green-600" />
           <AlertDescription>
-            <strong>{t('dashboard.milestone.reached')}</strong>
+            <strong>{t("dashboard-main:dashboard.milestone.reached")}</strong>
             <p className="mt-1">{securityStatus.nextMilestone}</p>
           </AlertDescription>
         </Alert>
@@ -455,16 +493,14 @@ const NextStepCard: React.FC<{
   time: string;
   url: string;
 }> = ({ title, description, icon, time, url }) => {
-  const { t } = useTranslation('ui-common');
-  
+  const { t } = useTranslation("ui-common");
+
   return (
     <Link
       to={url}
       className="flex items-center gap-3 p-3 border rounded-lg hover:border-blue-300 hover:bg-blue-50/30 transition-all"
     >
-      <div className="p-2 bg-gray-100 rounded">
-        {icon}
-      </div>
+      <div className="p-2 bg-gray-100 rounded">{icon}</div>
       <div className="flex-1">
         <h4 className="font-medium text-gray-900">{title}</h4>
         <p className="text-sm text-gray-600">{description}</p>
@@ -490,9 +526,7 @@ const ResourceCard: React.FC<{
       to={url}
       className="flex items-start gap-3 p-4 border rounded-lg hover:border-gray-300 hover:bg-gray-50 transition-all"
     >
-      <div className="p-2 bg-gray-100 rounded-lg flex-shrink-0">
-        {icon}
-      </div>
+      <div className="p-2 bg-gray-100 rounded-lg flex-shrink-0">{icon}</div>
       <div className="flex-1">
         <h4 className="font-semibold text-gray-900 mb-1">{title}</h4>
         <p className="text-sm text-gray-600">{description}</p>

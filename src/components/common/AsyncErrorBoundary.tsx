@@ -1,6 +1,6 @@
-import React, { Component, ReactNode, Suspense } from 'react';
-import { ErrorBoundary } from './ErrorBoundary';
-import { Loader2 } from 'lucide-react';
+import React, { Component, ReactNode, Suspense } from "react";
+import { ErrorBoundary } from "./ErrorBoundary";
+import { Loader2 } from "lucide-react";
 
 interface Props {
   children: ReactNode;
@@ -16,22 +16,20 @@ interface State {
 // Wrapper pre async komponenty s Error Boundary a Suspense
 export class AsyncErrorBoundary extends Component<Props, State> {
   render() {
-    const { 
-      children, 
-      fallback, 
+    const {
+      children,
+      fallback,
       loadingFallback = (
         <div className="flex items-center justify-center p-8">
           <Loader2 className="h-8 w-8 animate-spin text-primary" />
         </div>
       ),
-      onError 
+      onError,
     } = this.props;
 
     return (
       <ErrorBoundary fallback={fallback} onError={onError}>
-        <Suspense fallback={loadingFallback}>
-          {children}
-        </Suspense>
+        <Suspense fallback={loadingFallback}>{children}</Suspense>
       </ErrorBoundary>
     );
   }

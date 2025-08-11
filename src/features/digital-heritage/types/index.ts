@@ -71,25 +71,25 @@ export interface UpdateAssetRequest {
 }
 
 export enum TransferStatus {
-  PENDING = 'pending',
-  COMPLETED = 'completed',
-  FAILED = 'failed',
-  CANCELLED = 'cancelled'
+  PENDING = "pending",
+  COMPLETED = "completed",
+  FAILED = "failed",
+  CANCELLED = "cancelled",
 }
 
 export enum StrategyType {
-  STAKING = 'staking',
-  YIELD_FARMING = 'yield_farming',
-  LIQUIDITY_PROVISION = 'liquidity_provision',
-  REBALANCING = 'rebalancing',
-  TAX_OPTIMIZATION = 'tax_optimization'
+  STAKING = "staking",
+  YIELD_FARMING = "yield_farming",
+  LIQUIDITY_PROVISION = "liquidity_provision",
+  REBALANCING = "rebalancing",
+  TAX_OPTIMIZATION = "tax_optimization",
 }
 
 export enum RiskLevel {
-  LOW = 'low',
-  MEDIUM = 'medium',
-  HIGH = 'high',
-  VERY_HIGH = 'very_high'
+  LOW = "low",
+  MEDIUM = "medium",
+  HIGH = "high",
+  VERY_HIGH = "very_high",
 }
 
 export interface AssetMetadata {

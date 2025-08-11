@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const FamilyAccessGuidance: React.FC = () => {
   return (
@@ -15,4 +15,3 @@ const FamilyAccessGuidance: React.FC = () => {
 };
 
 export default FamilyAccessGuidance;
-

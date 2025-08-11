@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import { useTranslation } from 'react-i18next';
-import { loadNamespaces, type Namespace } from '@/i18n/i18n';
-import { Loader2 } from 'lucide-react';
+import React, { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
+import { loadNamespaces, type Namespace } from "@/i18n/i18n";
+import { Loader2 } from "lucide-react";
 
 interface RouteWithNamespacesProps {
   namespaces: Namespace | Namespace[];
@@ -9,12 +9,12 @@ interface RouteWithNamespacesProps {
   fallback?: React.ReactNode;
 }
 
-export const RouteWithNamespaces: React.FC<RouteWithNamespacesProps> = ({ 
-  namespaces, 
+export const RouteWithNamespaces: React.FC<RouteWithNamespacesProps> = ({
+  namespaces,
   children,
-  fallback 
+  fallback,
 }) => {
-  const { i18n } = useTranslation('ui-common');
+  const { i18n } = useTranslation("ui-common");
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -23,26 +23,28 @@ export const RouteWithNamespaces: React.FC<RouteWithNamespacesProps> = ({
       try {
         setIsLoading(true);
         setError(null);
-        
+
         const ns = Array.isArray(namespaces) ? namespaces : [namespaces];
-        const hasNamespaces = ns.every(namespace => 
-          i18n.hasLoadedNamespace(`${namespace}:${i18n.language}`)
+        const hasNamespaces = ns.every((namespace) =>
+          i18n.hasLoadedNamespace(`${namespace}:${i18n.language}`),
         );
-        
+
         if (!hasNamespaces) {
           const success = await loadNamespaces(namespaces);
           if (!success) {
-            throw new Error('Failed to load translation namespaces');
+            throw new Error("Failed to load translation namespaces");
           }
         }
-        
+
         setIsLoading(false);
       } catch (err) {
         // Log error to monitoring service in production
-        if (process.env.NODE_ENV === 'development') {
-          console.error('Error loading namespaces:', err);
+        if (process.env.NODE_ENV === "development") {
+          console.error("Error loading namespaces:", err);
         }
-        setError(err instanceof Error ? err.message : 'Failed to load translations');
+        setError(
+          err instanceof Error ? err.message : "Failed to load translations",
+        );
         setIsLoading(false);
       }
     };
@@ -53,8 +55,8 @@ export const RouteWithNamespaces: React.FC<RouteWithNamespacesProps> = ({
   if (error) {
     // Fallback to children even if translations fail to load
     // In production, this would be logged to monitoring
-    if (process.env.NODE_ENV === 'development') {
-      console.warn('Continuing without translations:', error);
+    if (process.env.NODE_ENV === "development") {
+      console.warn("Continuing without translations:", error);
     }
     return <>{children}</>;
   }
@@ -63,7 +65,7 @@ export const RouteWithNamespaces: React.FC<RouteWithNamespacesProps> = ({
     if (fallback) {
       return <>{fallback}</>;
     }
-    
+
     return (
       <div className="flex items-center justify-center min-h-[200px]">
         <Loader2 className="h-8 w-8 animate-spin text-muted-foreground" />

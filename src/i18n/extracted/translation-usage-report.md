@@ -1,11 +1,13 @@
 # Translation Keys Usage Report
 
 ## Summary
+
 - Total files scanned: 261
 - Files with translations: 170
 - Total unique keys found: 3594
 
 ## Namespaces Used
+
 - common: used in 170 files
 - ui: used in 50 files
 - family: used in 14 files
@@ -27,6 +29,7 @@
 - help: used in 1 files
 
 ## Files with Most Keys
+
 - components/assets/DynamicAssetForm.tsx: 96 keys
 - components/FamilyPreparednessTools.tsx: 83 keys
 - components/emails/EmailTemplate.tsx: 77 keys
@@ -39,6 +42,7 @@
 - components/privacy/ConsentManager.tsx: 57 keys
 
 ## Next Steps
+
 1. Review used-translation-keys.json to see all keys organized by namespace
 2. Compare with your existing translation files
 3. Add any missing translations

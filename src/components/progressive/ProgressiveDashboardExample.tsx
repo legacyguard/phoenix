@@ -1,9 +1,15 @@
-import React, { useState, useEffect } from 'react';
-import { ProgressiveDashboard } from '@/components/progressive/ProgressiveDashboard';
-import { UserProgress } from '@/services/progressiveDisclosure';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Plus, Check } from 'lucide-react';
+import React, { useState, useEffect } from "react";
+import { ProgressiveDashboard } from "@/components/progressive/ProgressiveDashboard";
+import { UserProgress } from "@/services/progressiveDisclosure";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Plus, Check } from "lucide-react";
 
 /**
  * Example component demonstrating the Progressive Disclosure Dashboard
@@ -12,47 +18,47 @@ import { Plus, Check } from 'lucide-react';
 export const ProgressiveDashboardExample: React.FC = () => {
   // Load user progress from localStorage or initialize default
   const [userProgress, setUserProgress] = useState<UserProgress>(() => {
-    const savedProgress = localStorage.getItem('userProgress');
+    const savedProgress = localStorage.getItem("userProgress");
     if (savedProgress) {
       return JSON.parse(savedProgress);
     }
-    
+
     // Default progress for new users
     return {
       completedItems: 0,
       unlockedFeatures: [],
-      currentEmotionalState: 'neutral',
+      currentEmotionalState: "neutral",
       familyStructure: {
         hasSpouse: true,
         hasChildren: true,
-        childrenAges: ['school-age']
+        childrenAges: ["school-age"],
       },
       introducedFeatures: [],
-      acknowledgedMilestones: []
+      acknowledgedMilestones: [],
     };
   });
 
   // Save progress to localStorage whenever it changes
   useEffect(() => {
-    localStorage.setItem('userProgress', JSON.stringify(userProgress));
+    localStorage.setItem("userProgress", JSON.stringify(userProgress));
   }, [userProgress]);
 
   // Simulate completing a task
   const completeTask = () => {
-    setUserProgress(prev => ({
+    setUserProgress((prev) => ({
       ...prev,
-      completedItems: prev.completedItems + 1
+      completedItems: prev.completedItems + 1,
     }));
   };
 
   // Handle feature access
   const handleFeatureAccess = (featureId: string) => {
-    setUserProgress(prev => ({
+    setUserProgress((prev) => ({
       ...prev,
       introducedFeatures: [...(prev.introducedFeatures || []), featureId],
-      unlockedFeatures: prev.unlockedFeatures.includes(featureId) 
-        ? prev.unlockedFeatures 
-        : [...prev.unlockedFeatures, featureId]
+      unlockedFeatures: prev.unlockedFeatures.includes(featureId)
+        ? prev.unlockedFeatures
+        : [...prev.unlockedFeatures, featureId],
     }));
     console.log(`User accessed feature: ${featureId}`);
     // Here you would typically navigate to the feature or open it
@@ -60,18 +66,21 @@ export const ProgressiveDashboardExample: React.FC = () => {
 
   // Handle milestone acknowledgment
   const handleMilestoneAcknowledged = (milestoneId: string) => {
-    setUserProgress(prev => ({
+    setUserProgress((prev) => ({
       ...prev,
-      acknowledgedMilestones: [...(prev.acknowledgedMilestones || []), milestoneId]
+      acknowledgedMilestones: [
+        ...(prev.acknowledgedMilestones || []),
+        milestoneId,
+      ],
     }));
     console.log(`User acknowledged milestone: ${milestoneId}`);
   };
 
   // Update emotional state (example)
-  const updateEmotionalState = (state: 'anxious' | 'neutral' | 'confident') => {
-    setUserProgress(prev => ({
+  const updateEmotionalState = (state: "anxious" | "neutral" | "confident") => {
+    setUserProgress((prev) => ({
       ...prev,
-      currentEmotionalState: state
+      currentEmotionalState: state,
     }));
   };
 
@@ -82,7 +91,8 @@ export const ProgressiveDashboardExample: React.FC = () => {
         <CardHeader>
           <CardTitle>Demo Controls</CardTitle>
           <CardDescription>
-            Simulate user actions to see how the progressive disclosure system responds
+            Simulate user actions to see how the progressive disclosure system
+            responds
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
@@ -95,27 +105,39 @@ export const ProgressiveDashboardExample: React.FC = () => {
               Tasks completed: {userProgress.completedItems}
             </span>
           </div>
-          
+
           <div className="flex items-center gap-2">
             <span className="text-sm font-medium">Emotional State:</span>
             <Button
-              variant={userProgress.currentEmotionalState === 'anxious' ? 'default' : 'outline'}
+              variant={
+                userProgress.currentEmotionalState === "anxious"
+                  ? "default"
+                  : "outline"
+              }
               size="sm"
-              onClick={() => updateEmotionalState('anxious')}
+              onClick={() => updateEmotionalState("anxious")}
             >
               Anxious
             </Button>
             <Button
-              variant={userProgress.currentEmotionalState === 'neutral' ? 'default' : 'outline'}
+              variant={
+                userProgress.currentEmotionalState === "neutral"
+                  ? "default"
+                  : "outline"
+              }
               size="sm"
-              onClick={() => updateEmotionalState('neutral')}
+              onClick={() => updateEmotionalState("neutral")}
             >
               Neutral
             </Button>
             <Button
-              variant={userProgress.currentEmotionalState === 'confident' ? 'default' : 'outline'}
+              variant={
+                userProgress.currentEmotionalState === "confident"
+                  ? "default"
+                  : "outline"
+              }
               size="sm"
-              onClick={() => updateEmotionalState('confident')}
+              onClick={() => updateEmotionalState("confident")}
             >
               Confident
             </Button>
@@ -128,14 +150,14 @@ export const ProgressiveDashboardExample: React.FC = () => {
               setUserProgress({
                 completedItems: 0,
                 unlockedFeatures: [],
-                currentEmotionalState: 'neutral',
+                currentEmotionalState: "neutral",
                 familyStructure: {
                   hasSpouse: true,
                   hasChildren: true,
-                  childrenAges: ['school-age']
+                  childrenAges: ["school-age"],
                 },
                 introducedFeatures: [],
-                acknowledgedMilestones: []
+                acknowledgedMilestones: [],
               });
             }}
           >
@@ -160,17 +182,23 @@ export const ProgressiveDashboardExample: React.FC = () => {
           </CardDescription>
         </CardHeader>
         <CardContent>
-          {userProgress.introducedFeatures && userProgress.introducedFeatures.length > 0 ? (
+          {userProgress.introducedFeatures &&
+          userProgress.introducedFeatures.length > 0 ? (
             <div className="space-y-2">
-              {userProgress.introducedFeatures.map(featureId => (
-                <div key={featureId} className="flex items-center gap-2 text-sm">
+              {userProgress.introducedFeatures.map((featureId) => (
+                <div
+                  key={featureId}
+                  className="flex items-center gap-2 text-sm"
+                >
                   <Check className="h-4 w-4 text-green-600" />
                   <span>{featureId}</span>
                 </div>
               ))}
             </div>
           ) : (
-            <p className="text-sm text-muted-foreground">No features accessed yet</p>
+            <p className="text-sm text-muted-foreground">
+              No features accessed yet
+            </p>
           )}
         </CardContent>
       </Card>

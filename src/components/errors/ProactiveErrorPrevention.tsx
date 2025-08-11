@@ -1,11 +1,11 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { Info, Shield, AlertTriangle, CheckCircle } from 'lucide-react';
-import { useTranslation } from 'react-i18next';
-import { cn } from '@/lib/utils';
-import { Alert, AlertDescription } from '@/components/ui/alert';
+import React, { useState, useEffect, useCallback } from "react";
+import { Info, Shield, AlertTriangle, CheckCircle } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import { cn } from "@/lib/utils";
+import { Alert, AlertDescription } from "@/components/ui/alert";
 
 interface ProactiveErrorPreventionProps {
-  context: 'form' | 'upload' | 'network' | 'save';
+  context: "form" | "upload" | "network" | "save";
   fieldName?: string;
   children: React.ReactNode;
   className?: string;
@@ -14,77 +14,79 @@ interface ProactiveErrorPreventionProps {
 interface ValidationHint {
   icon: React.ReactNode;
   message: string;
-  type: 'info' | 'warning' | 'success';
+  type: "info" | "warning" | "success";
 }
 
 const ProactiveErrorPrevention: React.FC<ProactiveErrorPreventionProps> = ({
   context,
   fieldName,
   children,
-  className
+  className,
 }) => {
-  const { t } = useTranslation('errors');
+  const { t } = useTranslation("errors");
   const [showHint, setShowHint] = useState(false);
-  const [validationHint, setValidationHint] = useState<ValidationHint | null>(null);
+  const [validationHint, setValidationHint] = useState<ValidationHint | null>(
+    null,
+  );
   const [isAutoSaving, setIsAutoSaving] = useState(false);
 
   // Context-specific hints
   const getContextHints = useCallback((): ValidationHint => {
     switch (context) {
-      case 'form':
-        if (fieldName?.includes('email')) {
+      case "form":
+        if (fieldName?.includes("email")) {
           return {
             icon: <Info className="h-4 w-4" />,
             message: "Use the email address your family knows best",
-            type: 'info'
+            type: "info",
           };
         }
-        if (fieldName?.includes('phone')) {
+        if (fieldName?.includes("phone")) {
           return {
             icon: <Info className="h-4 w-4" />,
             message: "Include area code - like (555) 123-4567",
-            type: 'info'
+            type: "info",
           };
         }
-        if (fieldName?.includes('date')) {
+        if (fieldName?.includes("date")) {
           return {
             icon: <Info className="h-4 w-4" />,
             message: "Format: MM/DD/YYYY",
-            type: 'info'
+            type: "info",
           };
         }
         return {
           icon: <Info className="h-4 w-4" />,
           message: "This information helps protect your family",
-          type: 'info'
+          type: "info",
         };
 
-      case 'upload':
+      case "upload":
         return {
           icon: <AlertTriangle className="h-4 w-4" />,
           message: "Files under 10MB work best - PDFs and images are perfect",
-          type: 'warning'
+          type: "warning",
         };
 
-      case 'network':
+      case "network":
         return {
           icon: <Shield className="h-4 w-4" />,
           message: "I'll save your work frequently so you don't lose anything",
-          type: 'success'
+          type: "success",
         };
 
-      case 'save':
+      case "save":
         return {
           icon: <CheckCircle className="h-4 w-4" />,
           message: "Your work saves automatically - no need to worry",
-          type: 'success'
+          type: "success",
         };
 
       default:
         return {
           icon: <Info className="h-4 w-4" />,
           message: "Take your time - there's no rush",
-          type: 'info'
+          type: "info",
         };
     }
   }, [context, fieldName]);
@@ -97,7 +99,7 @@ const ProactiveErrorPrevention: React.FC<ProactiveErrorPreventionProps> = ({
 
   // Auto-save indicator
   useEffect(() => {
-    if (context === 'save' || context === 'form') {
+    if (context === "save" || context === "form") {
       const interval = setInterval(() => {
         setIsAutoSaving(true);
         setTimeout(() => setIsAutoSaving(false), 2000);
@@ -109,17 +111,17 @@ const ProactiveErrorPrevention: React.FC<ProactiveErrorPreventionProps> = ({
 
   const getAlertVariant = (type: string) => {
     switch (type) {
-      case 'warning':
-        return 'border-amber-200 bg-amber-50';
-      case 'success':
-        return 'border-green-200 bg-green-50';
+      case "warning":
+        return "border-amber-200 bg-amber-50";
+      case "success":
+        return "border-green-200 bg-green-50";
       default:
-        return 'border-blue-200 bg-blue-50';
+        return "border-blue-200 bg-blue-50";
     }
   };
 
   return (
-    <div 
+    <div
       className={cn("proactive-error-prevention", className)}
       onFocus={() => setShowHint(true)}
       onBlur={() => setShowHint(false)}
@@ -128,7 +130,12 @@ const ProactiveErrorPrevention: React.FC<ProactiveErrorPreventionProps> = ({
     >
       {/* Contextual hint */}
       {showHint && validationHint && (
-        <Alert className={cn("mb-2 transition-all duration-200", getAlertVariant(validationHint.type))}>
+        <Alert
+          className={cn(
+            "mb-2 transition-all duration-200",
+            getAlertVariant(validationHint.type),
+          )}
+        >
           <div className="flex items-start gap-2">
             {validationHint.icon}
             <AlertDescription className="text-sm">
@@ -147,14 +154,12 @@ const ProactiveErrorPrevention: React.FC<ProactiveErrorPreventionProps> = ({
       )}
 
       {/* Wrapped content */}
-      <div className="relative">
-        {children}
-      </div>
+      <div className="relative">{children}</div>
 
       {/* Persistent helpful message */}
-      {context === 'form' && (
+      {context === "form" && (
         <p className="text-xs text-gray-500 mt-1">
-          {t('general.no_data_lost')}
+          {t("general.no_data_lost")}
         </p>
       )}
     </div>

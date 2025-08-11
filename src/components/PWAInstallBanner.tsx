@@ -1,20 +1,19 @@
 // src/components/PWAInstallBanner.tsx
 
-import React, { useState, useEffect } from 'react';
-import { X, Download, Smartphone, Shield } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { usePWA } from '@/hooks/usePWA';
+import React, { useState, useEffect } from "react";
+import { X, Download, Smartphone, Shield } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { usePWA } from "@/hooks/usePWA";
 import { useTranslation } from "react-i18next";
 
 export function PWAInstallBanner() {
   const { isInstallable, isInstalled, installApp } = usePWA();
-  const { t } = useTranslation('ui-common');
+  const { t } = useTranslation("ui-common");
   const [isDismissed, setIsDismissed] = useState(false);
 
   // Check if banner was previously dismissed
   useEffect(() => {
-     
-    const dismissed = localStorage.getItem('pwa-install-dismissed');
+    const dismissed = localStorage.getItem("pwa-install-dismissed");
     if (dismissed) {
       setIsDismissed(true);
     }
@@ -27,7 +26,7 @@ export function PWAInstallBanner() {
 
   const handleDismiss = () => {
     setIsDismissed(true);
-    localStorage.setItem('pwa-install-dismissed', 'true');
+    localStorage.setItem("pwa-install-dismissed", "true");
   };
 
   const handleInstall = async () => {
@@ -41,8 +40,8 @@ export function PWAInstallBanner() {
         <button
           onClick={handleDismiss}
           className="absolute top-2 right-2 text-gray-400 hover:text-gray-600"
-          aria-label={t("pwaInstallBanner.dismiss")}>
-
+          aria-label={t("pwaInstallBanner.dismiss")}
+        >
           <X className="h-5 w-5" />
         </button>
 
@@ -54,8 +53,12 @@ export function PWAInstallBanner() {
           </div>
 
           <div className="flex-1">
-            <h3 className="text-lg font-semibold text-gray-900 mb-1">{t("pwaInstallBanner.installLegacyGuard")}</h3>
-            <p className="text-sm text-gray-600 mb-3">{t("pwaInstallBanner.accessFamilyInformation")}</p>
+            <h3 className="text-lg font-semibold text-gray-900 mb-1">
+              {t("pwaInstallBanner.installLegacyGuard")}
+            </h3>
+            <p className="text-sm text-gray-600 mb-3">
+              {t("pwaInstallBanner.accessFamilyInformation")}
+            </p>
 
             <div className="flex items-center space-x-2 text-xs text-gray-500 mb-4">
               <Shield className="h-4 w-4" />
@@ -69,15 +72,17 @@ export function PWAInstallBanner() {
               <Button
                 onClick={handleInstall}
                 size="sm"
-                className="bg-purple-600 hover:bg-purple-700">{t("pwaInstallBanner.installNow")}</Button>
-              <Button
-                onClick={handleDismiss}
-                size="sm"
-                variant="outline">{t("pwaInstallBanner.maybeLater")}</Button>
+                className="bg-purple-600 hover:bg-purple-700"
+              >
+                {t("pwaInstallBanner.installNow")}
+              </Button>
+              <Button onClick={handleDismiss} size="sm" variant="outline">
+                {t("pwaInstallBanner.maybeLater")}
+              </Button>
             </div>
           </div>
         </div>
       </div>
-    </div>);
-
+    </div>
+  );
 }

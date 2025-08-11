@@ -1,12 +1,12 @@
-import React, { createContext, useContext, useEffect, useState } from 'react';
-import { ThemeContext } from './ThemeContextContext';
+import React, { createContext, useContext, useEffect, useState } from "react";
+import { ThemeContext } from "./ThemeContextContext";
 
-type Theme = 'light' | 'dark' | 'system';
+type Theme = "light" | "dark" | "system";
 
 interface ThemeContextType {
   theme: Theme;
   setTheme: (theme: Theme) => void;
-  actualTheme: 'light' | 'dark';
+  actualTheme: "light" | "dark";
 }
 
 interface ThemeProviderProps {
@@ -15,16 +15,19 @@ interface ThemeProviderProps {
 
 export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
   const [theme, setTheme] = useState<Theme>(() => {
-    const savedTheme = localStorage.getItem('legacyguard-theme') as Theme;
-    return savedTheme || 'system';
+    const savedTheme = localStorage.getItem("legacyguard-theme") as Theme;
+    return savedTheme || "system";
   });
 
-  const [actualTheme, setActualTheme] = useState<'light' | 'dark'>('light');
+  const [actualTheme, setActualTheme] = useState<"light" | "dark">("light");
 
   useEffect(() => {
     const updateActualTheme = () => {
-      if (theme === 'system') {
-        const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      if (theme === "system") {
+        const systemTheme = window.matchMedia("(prefers-color-scheme: dark)")
+          .matches
+          ? "dark"
+          : "light";
         setActualTheme(systemTheme);
       } else {
         setActualTheme(theme);
@@ -33,19 +36,18 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
 
     updateActualTheme();
 
-    if (theme === 'system') {
-      const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-      mediaQuery.addEventListener('change', updateActualTheme);
-      return () => mediaQuery.removeEventListener('change', updateActualTheme);
+    if (theme === "system") {
+      const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+      mediaQuery.addEventListener("change", updateActualTheme);
+      return () => mediaQuery.removeEventListener("change", updateActualTheme);
     }
   }, [theme]);
 
   useEffect(() => {
-     
-    localStorage.setItem('legacyguard-theme', theme);
-    
+    localStorage.setItem("legacyguard-theme", theme);
+
     const root = document.documentElement;
-    root.classList.remove('light', 'dark');
+    root.classList.remove("light", "dark");
     root.classList.add(actualTheme);
   }, [theme, actualTheme]);
 
@@ -54,11 +56,11 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
   };
 
   return (
-    <ThemeContext.Provider 
-      value={{ 
-        theme, 
-        setTheme: handleSetTheme, 
-        actualTheme 
+    <ThemeContext.Provider
+      value={{
+        theme,
+        setTheme: handleSetTheme,
+        actualTheme,
       }}
     >
       {children}

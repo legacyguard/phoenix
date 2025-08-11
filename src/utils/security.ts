@@ -2,9 +2,9 @@
  * Security utilities for the application
  */
 
-import { logger } from '@/utils/logger';
+import { logger } from "@/utils/logger";
 
-const AUTH_STORAGE_KEY = 'legacyguard_auth';
+const AUTH_STORAGE_KEY = "legacyguard_auth";
 
 /**
  * Clear any existing authentication data from localStorage
@@ -14,23 +14,23 @@ export function clearAuthenticationData(): void {
   try {
     // Clear any existing authentication data
     localStorage.removeItem(AUTH_STORAGE_KEY);
-    
+
     // Also clear any other potential auth-related data
     const keysToRemove = [
-      'legacyguard_auth',
-      'auth_token',
-      'user_session',
-      'app_authenticated'
+      "legacyguard_auth",
+      "auth_token",
+      "user_session",
+      "app_authenticated",
     ];
-    
-    keysToRemove.forEach(key => {
+
+    keysToRemove.forEach((key) => {
       localStorage.removeItem(key);
       sessionStorage.removeItem(key);
     });
-    
-    logger.info('Security: Cleared all authentication data');
+
+    logger.info("Security: Cleared all authentication data");
   } catch (error) {
-    logger.warn('Security: Could not clear authentication data:', error);
+    logger.warn("Security: Could not clear authentication data:", error);
   }
 }
 
@@ -38,21 +38,21 @@ export function clearAuthenticationData(): void {
  * Check if the application is running in a development environment
  */
 export function isDevelopment(): boolean {
-  return import.meta.env.DEV || import.meta.env.MODE === 'development';
+  return import.meta.env.DEV || import.meta.env.MODE === "development";
 }
 
 /**
  * Check if the application is running in production
  */
 export function isProduction(): boolean {
-  return import.meta.env.PROD || import.meta.env.MODE === 'production';
+  return import.meta.env.PROD || import.meta.env.MODE === "production";
 }
 
 /**
  * Get the current environment
  */
 export function getEnvironment(): string {
-  return import.meta.env.MODE || 'development';
+  return import.meta.env.MODE || "development";
 }
 
 /**

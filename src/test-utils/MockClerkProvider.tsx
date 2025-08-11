@@ -1,14 +1,14 @@
 /* eslint-disable react-refresh/only-export-components */
-import type React, { ReactNode } from 'react';
-import type { MockUser } from './mockClerkHelpers';
-import { 
+import type React, { ReactNode } from "react";
+import type { MockUser } from "./mockClerkHelpers";
+import {
   MockSession,
   MockAuthContextValue,
   MockUserContextValue,
   MockAuthContext,
   MockUserContext,
-  MockClerkContext
-} from './mockClerkContexts';
+  MockClerkContext,
+} from "./mockClerkContexts";
 
 interface MockClerkProviderProps {
   children: ReactNode;
@@ -17,28 +17,32 @@ interface MockClerkProviderProps {
   onSignOut?: () => void;
 }
 
-
 // Mock ClerkProvider
-export const ClerkProvider: React.FC<MockClerkProviderProps & { 
-  publishableKey?: string;
-  fallbackRedirectUrl?: string;
-  signInUrl?: string;
-  signUpUrl?: string;
-  afterSignOutUrl?: string;
-}> = ({ 
-  children, 
-  user = null, 
+export const ClerkProvider: React.FC<
+  MockClerkProviderProps & {
+    publishableKey?: string;
+    fallbackRedirectUrl?: string;
+    signInUrl?: string;
+    signUpUrl?: string;
+    afterSignOutUrl?: string;
+  }
+> = ({
+  children,
+  user = null,
   isSignedIn = false,
   onSignOut,
-  ...clerkProps 
+  ...clerkProps
 }) => {
-  const session: MockSession | null = isSignedIn && user ? {
-    id: 'test-session-id',
-    status: 'active',
-    lastActiveAt: new Date(),
-    expireAt: new Date(Date.now() + 24 * 60 * 60 * 1000), // 24 hours from now
-    user: user as MockUser
-  } : null;
+  const session: MockSession | null =
+    isSignedIn && user
+      ? {
+          id: "test-session-id",
+          status: "active",
+          lastActiveAt: new Date(),
+          expireAt: new Date(Date.now() + 24 * 60 * 60 * 1000), // 24 hours from now
+          user: user as MockUser,
+        }
+      : null;
 
   const mockAuthValue: MockAuthContextValue = {
     isLoaded: true,
@@ -47,7 +51,7 @@ export const ClerkProvider: React.FC<MockClerkProviderProps & {
     sessionId: session?.id || null,
     session: session,
     signOut: async () => {
-      console.log('Mock signOut called');
+      console.log("Mock signOut called");
       if (onSignOut) {
         onSignOut();
       }
@@ -58,17 +62,17 @@ export const ClerkProvider: React.FC<MockClerkProviderProps & {
     getToken: async (options?: Record<string, unknown>) => {
       if (!isSignedIn) return null;
       // Return a mock JWT token
-      return 'mock-jwt-token-' + user?.id;
+      return "mock-jwt-token-" + user?.id;
     },
     orgId: null,
     orgRole: null,
-    orgSlug: null
+    orgSlug: null,
   };
 
   const mockUserValue: MockUserContextValue = {
     isLoaded: true,
     isSignedIn: isSignedIn,
-    user: user
+    user: user,
   };
 
   const mockClerkValue = {
@@ -81,7 +85,7 @@ export const ClerkProvider: React.FC<MockClerkProviderProps & {
   };
 
   // Also set on window for components that might access Clerk directly
-  if (typeof window !== 'undefined') {
+  if (typeof window !== "undefined") {
     (window as { Clerk?: Record<string, unknown> }).Clerk = mockClerkValue;
   }
 
@@ -97,18 +101,18 @@ export const ClerkProvider: React.FC<MockClerkProviderProps & {
 };
 
 // Re-export everything from separate files for backward compatibility
-export { createMockUser, mockUsers } from './mockClerkHelpers';
-export { 
-  useAuth, 
-  useUser, 
-  useClerk, 
-  useSession, 
-  useSessionList, 
-  useOrganization, 
+export { createMockUser, mockUsers } from "./mockClerkHelpers";
+export {
+  useAuth,
+  useUser,
+  useClerk,
+  useSession,
+  useSessionList,
+  useOrganization,
   useOrganizationList,
   SignedIn,
   SignedOut,
   RedirectToSignIn,
   UserButton,
-  UserProfile
-} from './mockClerkExports';
+  UserProfile,
+} from "./mockClerkExports";

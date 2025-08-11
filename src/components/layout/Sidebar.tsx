@@ -1,14 +1,14 @@
-import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { 
+import React from "react";
+import { Link, useLocation } from "react-router-dom";
+import {
   LayoutDashboard,
-  Package, 
+  Package,
   Users,
   Home,
   Mail,
   Archive,
-  FileText, 
-  Settings, 
+  FileText,
+  Settings,
   HelpCircle,
   BookUser,
   ChevronLeft,
@@ -18,12 +18,12 @@ import {
   CreditCard,
   Lock,
   Crown,
-  Scale
-} from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { cn } from '@/lib/utils';
-import { useTranslation } from 'react-i18next';
-import { useSubscription } from '@/hooks/useSubscription';
+  Scale,
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+import { useTranslation } from "react-i18next";
+import { useSubscription } from "@/hooks/useSubscription";
 
 interface SidebarProps {
   isCollapsed: boolean;
@@ -43,79 +43,79 @@ const navigationSections: NavigationSection[] = [
   {
     items: [
       {
-        label: 'dashboard',
+        label: "dashboard",
         icon: LayoutDashboard,
-        href: '/dashboard',
+        href: "/dashboard",
       },
     ],
   },
   {
-    title: 'MY VAULT',
+    title: "MY VAULT",
     items: [
       {
-        label: 'vault',
+        label: "vault",
         icon: Package,
-        href: '/vault',
+        href: "/vault",
       },
       {
-        label: 'trustedCircle',
+        label: "trustedCircle",
         icon: Users,
-        href: '/trusted-circle',
+        href: "/trusted-circle",
       },
       {
-        label: 'familyHub',
+        label: "familyHub",
         icon: Home,
-        href: '/family-hub',
+        href: "/family-hub",
       },
       {
-        label: 'legacyBriefing',
+        label: "legacyBriefing",
         icon: Mail,
-        href: '/briefing',
+        href: "/briefing",
       },
       {
-        label: 'executorToolkit',
+        label: "executorToolkit",
         icon: Lock,
-        href: '/executor-toolkit',
+        href: "/executor-toolkit",
       },
     ],
   },
   {
-    title: 'OTHER',
+    title: "OTHER",
     items: [
       {
-        label: 'assets',
+        label: "assets",
         icon: Wallet,
-        href: '/assets',
+        href: "/assets",
       },
       {
-        label: 'subscriptions',
+        label: "subscriptions",
         icon: CreditCard,
-        href: '/subscriptions',
+        href: "/subscriptions",
       },
       {
-        label: 'manual',
+        label: "manual",
         icon: BookUser,
-        href: '/manual',
+        href: "/manual",
       },
       {
-        label: 'will',
+        label: "will",
         icon: FileSignature,
-        href: '/will',
+        href: "/will",
       },
       {
-        label: 'consultations',
+        label: "consultations",
         icon: Scale,
-        href: '/consultations',
+        href: "/consultations",
       },
       {
-        label: 'settings',
+        label: "settings",
         icon: Settings,
-        href: '/user-profile',
+        href: "/user-profile",
       },
       {
-        label: 'help',
+        label: "help",
         icon: HelpCircle,
-        href: '/help',
+        href: "/help",
       },
     ],
   },
@@ -123,16 +123,18 @@ const navigationSections: NavigationSection[] = [
 
 export const Sidebar: React.FC<SidebarProps> = ({ isCollapsed, onToggle }) => {
   const location = useLocation();
-  const { t } = useTranslation('ui-common');
+  const { t } = useTranslation("ui-common");
   const { isPremium, isLoading } = useSubscription();
 
   const isActive = (href: string) => location.pathname === href;
 
   return (
-    <aside className={cn(
-      "fixed left-0 top-16 z-40 h-[calc(100vh-4rem)] border-r border-border bg-background transition-all duration-300 ease-in-out",
-      isCollapsed ? "w-16" : "w-64"
-    )}>
+    <aside
+      className={cn(
+        "fixed left-0 top-16 z-40 h-[calc(100vh-4rem)] border-r border-border bg-background transition-all duration-300 ease-in-out",
+        isCollapsed ? "w-16" : "w-64",
+      )}
+    >
       <div className="flex h-full flex-col">
         {/* Toggle Button */}
         <div className="flex items-center justify-end p-2">
@@ -163,28 +165,31 @@ export const Sidebar: React.FC<SidebarProps> = ({ isCollapsed, onToggle }) => {
               )}
               {section.items.map((item) => {
                 const isItemActive = isActive(item.href);
-                const isPrimary = item.label === 'dashboard';
-                const isPremiumFeature = item.label === 'executorToolkit';
+                const isPrimary = item.label === "dashboard";
+                const isPremiumFeature = item.label === "executorToolkit";
                 const isLocked = isPremiumFeature && !isPremium && !isLoading;
-                
+
                 return (
                   <Link
                     key={item.href}
-                    to={isLocked ? '/pricing' : item.href}
+                    to={isLocked ? "/pricing" : item.href}
                     className={cn(
                       "flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition-all duration-200 hover:bg-accent hover:text-accent-foreground",
-                      isItemActive && "bg-earth-primary/10 text-earth-primary hover:bg-earth-primary/20",
+                      isItemActive &&
+                        "bg-earth-primary/10 text-earth-primary hover:bg-earth-primary/20",
                       isPrimary && !isItemActive && "font-semibold",
                       isCollapsed && "justify-center px-2",
-                      isLocked && "opacity-60 hover:opacity-80"
+                      isLocked && "opacity-60 hover:opacity-80",
                     )}
                   >
                     <div className="relative">
-                      <item.icon className={cn(
-                        "h-5 w-5 transition-colors",
-                        isItemActive && "text-earth-primary",
-                        isPrimary && !isItemActive && "text-primary"
-                      )} />
+                      <item.icon
+                        className={cn(
+                          "h-5 w-5 transition-colors",
+                          isItemActive && "text-earth-primary",
+                          isPrimary && !isItemActive && "text-primary",
+                        )}
+                      />
                       {isLocked && (
                         <Lock className="absolute -bottom-1 -right-1 h-3 w-3 text-yellow-600" />
                       )}
@@ -192,12 +197,17 @@ export const Sidebar: React.FC<SidebarProps> = ({ isCollapsed, onToggle }) => {
                     {!isCollapsed && (
                       <div className="flex items-center gap-2 flex-1">
                         <span className="transition-opacity duration-200">
-                          {item.label === 'trustedCircle' ? t('trustedCircle.title', { ns: 'family' }) :
-                           item.label === 'familyHub' ? t('trustedCircle.title', { ns: 'family' }) :
-                           item.label === 'subscriptions' ? t('plans.title', { ns: 'subscription' }) :
-                           item.label === 'settings' ? t('general.title', { ns: 'settings' }) :
-                           item.label === 'help' ? t('support.title', { ns: 'help' }) :
-                           t(`navigation.${item.label}`)}
+                          {item.label === "trustedCircle"
+                            ? t("trustedCircle.title", { ns: "family" })
+                            : item.label === "familyHub"
+                              ? t("trustedCircle.title", { ns: "family" })
+                              : item.label === "subscriptions"
+                                ? t("plans.title", { ns: "subscription" })
+                                : item.label === "settings"
+                                  ? t("general.title", { ns: "settings" })
+                                  : item.label === "help"
+                                    ? t("support.title", { ns: "help" })
+                                    : t(`navigation.${item.label}`)}
                         </span>
                         {isLocked && (
                           <Crown className="h-4 w-4 text-yellow-600" />
@@ -213,17 +223,23 @@ export const Sidebar: React.FC<SidebarProps> = ({ isCollapsed, onToggle }) => {
 
         {/* Footer */}
         <div className="border-t border-border p-4">
-          <div className={cn(
-            "flex items-center gap-3",
-            isCollapsed && "justify-center"
-          )}>
+          <div
+            className={cn(
+              "flex items-center gap-3",
+              isCollapsed && "justify-center",
+            )}
+          >
             <div className="flex h-8 w-8 items-center justify-center rounded-full bg-earth-primary/10">
               <Package className="h-4 w-4 text-earth-primary" />
             </div>
             {!isCollapsed && (
               <div className="flex-1 text-sm">
-                <p className="font-medium text-foreground">{t('ui.name')}</p>
-                <p className="text-xs text-muted-foreground">{t('ui.tagline')}</p>
+                <p className="font-medium text-foreground">
+                  {t("ui-elements:ui.name")}
+                </p>
+                <p className="text-xs text-muted-foreground">
+                  {t("ui-elements:ui.tagline")}
+                </p>
               </div>
             )}
           </div>

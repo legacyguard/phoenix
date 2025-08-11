@@ -1,16 +1,19 @@
 // src/app/api/push/unsubscribe/route.ts
 
-import { NextResponse } from 'next/server';
-import { createServerSupabaseClient } from '@/lib/supabase-server';
+import { NextResponse } from "next/server";
+import { createServerSupabaseClient } from "@/lib/supabase-server";
 
 export async function POST(request: Request) {
   try {
     const supabase = createServerSupabaseClient();
-    
+
     // Get authenticated user
-    const { data: { user }, error: authError } = await supabase.auth.getUser();
+    const {
+      data: { user },
+      error: authError,
+    } = await supabase.auth.getUser();
     if (authError || !user) {
-      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
 
     // Parse request body
@@ -19,34 +22,34 @@ export async function POST(request: Request) {
 
     if (!endpoint) {
       return NextResponse.json(
-        { error: 'Endpoint is required' },
-        { status: 400 }
+        { error: "Endpoint is required" },
+        { status: 400 },
       );
     }
 
     // Delete subscription
     const { error: deleteError } = await supabase
-      .from('push_subscriptions')
+      .from("push_subscriptions")
       .delete()
       .match({
         user_id: user.id,
-        endpoint: endpoint
+        endpoint: endpoint,
       });
 
     if (deleteError) {
-      console.error('Error deleting push subscription:', deleteError);
+      console.error("Error deleting push subscription:", deleteError);
       return NextResponse.json(
-        { error: 'Failed to delete subscription' },
-        { status: 500 }
+        { error: "Failed to delete subscription" },
+        { status: 500 },
       );
     }
 
     return NextResponse.json({ success: true });
   } catch (error) {
-    console.error('Push unsubscribe error:', error);
+    console.error("Push unsubscribe error:", error);
     return NextResponse.json(
-      { error: 'Internal server error' },
-      { status: 500 }
+      { error: "Internal server error" },
+      { status: 500 },
     );
   }
 }

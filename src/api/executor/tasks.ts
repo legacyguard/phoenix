@@ -1,7 +1,7 @@
-import type { Request, Response } from 'express';
-import { ExecutorTaskService } from '@/services/executorTaskService';
-import { supabase } from '@/integrations/supabase/client';
-import { ensureAdmin } from '@/api/middleware/adminAuth';
+import type { Request, Response } from "express";
+import { ExecutorTaskService } from "@/services/executorTaskService";
+import { supabase } from "@/integrations/supabase/client";
+import { ensureAdmin } from "@/api/middleware/adminAuth";
 
 /**
  * GET /api/executor/tasks
@@ -10,14 +10,17 @@ import { ensureAdmin } from '@/api/middleware/adminAuth';
 export async function getExecutorTasks(req: Request, res: Response) {
   try {
     // Get authenticated user from session
-    const token = req.headers.authorization?.replace('Bearer ', '');
+    const token = req.headers.authorization?.replace("Bearer ", "");
     if (!token) {
-      return res.status(401).json({ error: 'Unauthorized' });
+      return res.status(401).json({ error: "Unauthorized" });
     }
 
-    const { data: { user }, error: authError } = await supabase.auth.getUser(token);
+    const {
+      data: { user },
+      error: authError,
+    } = await supabase.auth.getUser(token);
     if (authError || !user) {
-      return res.status(401).json({ error: 'Unauthorized' });
+      return res.status(401).json({ error: "Unauthorized" });
     }
 
     // Fetch tasks for this executor
@@ -25,9 +28,9 @@ export async function getExecutorTasks(req: Request, res: Response) {
 
     // Group tasks by category
     const groupedTasks = {
-      immediate: tasks.filter(t => t.category === 'immediate'),
-      first_week: tasks.filter(t => t.category === 'first_week'),
-      ongoing: tasks.filter(t => t.category === 'ongoing'),
+      immediate: tasks.filter((t) => t.category === "immediate"),
+      first_week: tasks.filter((t) => t.category === "first_week"),
+      ongoing: tasks.filter((t) => t.category === "ongoing"),
     };
 
     return res.json({
@@ -35,13 +38,13 @@ export async function getExecutorTasks(req: Request, res: Response) {
       data: groupedTasks,
       stats: {
         total: tasks.length,
-        completed: tasks.filter(t => t.status === 'completed').length,
-        pending: tasks.filter(t => t.status === 'pending').length,
+        completed: tasks.filter((t) => t.status === "completed").length,
+        pending: tasks.filter((t) => t.status === "pending").length,
       },
     });
   } catch (error) {
-    console.error('Error fetching executor tasks:', error);
-    return res.status(500).json({ error: 'Failed to fetch tasks' });
+    console.error("Error fetching executor tasks:", error);
+    return res.status(500).json({ error: "Failed to fetch tasks" });
   }
 }
 
@@ -55,26 +58,29 @@ export async function updateExecutorTask(req: Request, res: Response) {
     const { status } = req.body;
 
     // Validate status
-    if (!['pending', 'completed'].includes(status)) {
-      return res.status(400).json({ error: 'Invalid status' });
+    if (!["pending", "completed"].includes(status)) {
+      return res.status(400).json({ error: "Invalid status" });
     }
 
     // Get authenticated user
-    const token = req.headers.authorization?.replace('Bearer ', '');
+    const token = req.headers.authorization?.replace("Bearer ", "");
     if (!token) {
-      return res.status(401).json({ error: 'Unauthorized' });
+      return res.status(401).json({ error: "Unauthorized" });
     }
 
-    const { data: { user }, error: authError } = await supabase.auth.getUser(token);
+    const {
+      data: { user },
+      error: authError,
+    } = await supabase.auth.getUser(token);
     if (authError || !user) {
-      return res.status(401).json({ error: 'Unauthorized' });
+      return res.status(401).json({ error: "Unauthorized" });
     }
 
     // Update task
     const updatedTask = await ExecutorTaskService.updateTaskStatus(
       taskId,
       status,
-      user.id
+      user.id,
     );
 
     return res.json({
@@ -82,8 +88,8 @@ export async function updateExecutorTask(req: Request, res: Response) {
       data: updatedTask,
     });
   } catch (error) {
-    console.error('Error updating executor task:', error);
-    return res.status(500).json({ error: 'Failed to update task' });
+    console.error("Error updating executor task:", error);
+    return res.status(500).json({ error: "Failed to update task" });
   }
 }
 
@@ -97,7 +103,7 @@ export async function generateExecutorTasks(req: Request, res: Response) {
     const { deceasedUserId, executorId } = req.body;
 
     if (!deceasedUserId || !executorId) {
-      return res.status(400).json({ error: 'Missing required parameters' });
+      return res.status(400).json({ error: "Missing required parameters" });
     }
 
     // Verify admin authorization before generating tasks
@@ -109,10 +115,10 @@ export async function generateExecutorTasks(req: Request, res: Response) {
 
     return res.json({
       success: true,
-      message: 'Executor tasks generated successfully',
+      message: "Executor tasks generated successfully",
     });
   } catch (error) {
-    console.error('Error generating executor tasks:', error);
-    return res.status(500).json({ error: 'Failed to generate tasks' });
+    console.error("Error generating executor tasks:", error);
+    return res.status(500).json({ error: "Failed to generate tasks" });
   }
 }

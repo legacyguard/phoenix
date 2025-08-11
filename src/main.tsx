@@ -1,31 +1,31 @@
-import React from 'react'
-import { createRoot } from 'react-dom/client'
-import { ClerkProvider } from '@clerk/clerk-react'
-import { I18nextProvider } from 'react-i18next'
-import i18n from './i18n/index'
-import App from './App.tsx'
-import { AuthSyncProvider } from './components/auth/AuthSyncProvider'
-import { validateSecurityConfig } from './utils/security'
-import './index.css'
+import React from "react";
+import { createRoot } from "react-dom/client";
+import { ClerkProvider } from "@clerk/clerk-react";
+import { I18nextProvider } from "react-i18next";
+import i18n from "./i18n/index";
+import App from "./App.tsx";
+import { AuthSyncProvider } from "./components/auth/AuthSyncProvider";
+import { validateSecurityConfig } from "./utils/security";
+import "./index.css";
 
 // Initialize security configuration
-validateSecurityConfig()
+validateSecurityConfig();
 
-const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY
+const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
 
 if (!PUBLISHABLE_KEY) {
-  throw new Error("Missing Clerk Publishable Key")
+  throw new Error("Missing Clerk Publishable Key");
 }
 
 try {
-  const root = document.getElementById('root');
-  
+  const root = document.getElementById("root");
+
   if (root) {
     createRoot(root).render(
       <React.StrictMode>
         <I18nextProvider i18n={i18n}>
-          <ClerkProvider 
-            publishableKey={PUBLISHABLE_KEY} 
+          <ClerkProvider
+            publishableKey={PUBLISHABLE_KEY}
             afterSignOutUrl="/"
             fallbackRedirectUrl="/dashboard"
             signInUrl="/login"
@@ -36,12 +36,13 @@ try {
             </AuthSyncProvider>
           </ClerkProvider>
         </I18nextProvider>
-      </React.StrictMode>
+      </React.StrictMode>,
     );
   } else {
-    console.error('Root element not found!');
+    console.error("Root element not found!");
   }
 } catch (error) {
-  console.error('Error in main.tsx:', error);
-  document.body.innerHTML = '<h1>Error loading app</h1><pre>' + error + '</pre>';
+  console.error("Error in main.tsx:", error);
+  document.body.innerHTML =
+    "<h1>Error loading app</h1><pre>" + error + "</pre>";
 }

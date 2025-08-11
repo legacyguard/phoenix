@@ -1,17 +1,29 @@
-import React, { useState } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Switch } from '@/components/ui/switch';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Label } from '@/components/ui/label';
-import { Separator } from '@/components/ui/separator';
-import { Bell, Calendar, FileText, Users, Shield } from 'lucide-react';
-import { useTranslation } from 'react-i18next';
-import { toast } from 'sonner';
+import React, { useState } from "react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Switch } from "@/components/ui/switch";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { Label } from "@/components/ui/label";
+import { Separator } from "@/components/ui/separator";
+import { Bell, Calendar, FileText, Users, Shield } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import { toast } from "sonner";
 
 export interface ReminderPreferences {
   enabled: boolean;
-  frequency: 'monthly' | 'quarterly' | 'semi-annually' | 'annually';
+  frequency: "monthly" | "quarterly" | "semi-annually" | "annually";
   types: {
     document_expiry: boolean;
     content_update: boolean;
@@ -34,21 +46,22 @@ interface ReminderSettingsProps {
   onSave: (preferences: ReminderPreferences) => Promise<void>;
 }
 
-export function ReminderSettings({ 
-  preferences: initialPreferences, 
-  onSave 
+export function ReminderSettings({
+  preferences: initialPreferences,
+  onSave,
 }: ReminderSettingsProps) {
-  const { t } = useTranslation('dashboard-main');
-  const [preferences, setPreferences] = useState<ReminderPreferences>(initialPreferences);
+  const { t } = useTranslation("dashboard-main");
+  const [preferences, setPreferences] =
+    useState<ReminderPreferences>(initialPreferences);
   const [saving, setSaving] = useState(false);
 
   const handleSave = async () => {
     setSaving(true);
     try {
       await onSave(preferences);
-      toast.success(t('dashboard.settings.saved'));
+      toast.success(t("dashboard-main:dashboard.settings.saved"));
     } catch (error) {
-      toast.error(t('dashboard.settings.saveError'));
+      toast.error(t("dashboard.settings.saveError"));
     } finally {
       setSaving(false);
     }
@@ -56,27 +69,27 @@ export function ReminderSettings({
 
   const reminderTypes = [
     {
-      id: 'document_expiry',
-      label: t('dashboard.types.documentExpiry'),
-      description: t('dashboard.types.documentExpiryDesc'),
+      id: "document_expiry",
+      label: t("dashboard.types.documentExpiry"),
+      description: t("dashboard.types.documentExpiryDesc"),
       icon: FileText,
     },
     {
-      id: 'content_update',
-      label: t('dashboard.types.contentUpdate'),
-      description: t('dashboard.types.contentUpdateDesc'),
+      id: "content_update",
+      label: t("dashboard.types.contentUpdate"),
+      description: t("dashboard.types.contentUpdateDesc"),
       icon: Calendar,
     },
     {
-      id: 'review',
-      label: t('dashboard.types.review'),
-      description: t('dashboard.types.reviewDesc'),
+      id: "review",
+      label: t("dashboard-main:dashboard.types.review"),
+      description: t("dashboard.types.reviewDesc"),
       icon: Shield,
     },
     {
-      id: 'life_event',
-      label: t('dashboard.types.lifeEvent'),
-      description: t('dashboard.types.lifeEventDesc'),
+      id: "life_event",
+      label: t("dashboard.types.lifeEvent"),
+      description: t("dashboard.types.lifeEventDesc"),
       icon: Users,
     },
   ] as const;
@@ -85,17 +98,21 @@ export function ReminderSettings({
     <div className="space-y-6">
       <Card>
         <CardHeader>
-          <CardTitle>{t('dashboard.settings.general')}</CardTitle>
+          <CardTitle>
+            {t("dashboard-main:dashboard.settings.general")}
+          </CardTitle>
           <CardDescription>
-            {t('dashboard.settings.generalDesc')}
+            {t("dashboard.settings.generalDesc")}
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-6">
           <div className="flex items-center justify-between">
             <div className="space-y-0.5">
-              <Label htmlFor="enabled">{t('dashboard.settings.enableReminders')}</Label>
+              <Label htmlFor="enabled">
+                {t("dashboard.settings.enableReminders")}
+              </Label>
               <p className="text-sm text-muted-foreground">
-                {t('dashboard.settings.enableRemindersDesc')}
+                {t("dashboard.settings.enableRemindersDesc")}
               </p>
             </div>
             <Switch
@@ -110,13 +127,15 @@ export function ReminderSettings({
           <Separator />
 
           <div className="space-y-2">
-            <Label htmlFor="frequency">{t('dashboard.settings.defaultFrequency')}</Label>
+            <Label htmlFor="frequency">
+              {t("dashboard.settings.defaultFrequency")}
+            </Label>
             <Select
               value={preferences.frequency}
               onValueChange={(value) =>
-                setPreferences({ 
-                  ...preferences, 
-                  frequency: value as ReminderPreferences['frequency'] 
+                setPreferences({
+                  ...preferences,
+                  frequency: value as ReminderPreferences["frequency"],
                 })
               }
               disabled={!preferences.enabled}
@@ -125,10 +144,18 @@ export function ReminderSettings({
                 <SelectValue />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="monthly">{t('dashboard.frequency.monthly')}</SelectItem>
-                <SelectItem value="quarterly">{t('dashboard.frequency.quarterly')}</SelectItem>
-                <SelectItem value="semi-annually">{t('dashboard.frequency.semiAnnually')}</SelectItem>
-                <SelectItem value="annually">{t('dashboard.frequency.annually')}</SelectItem>
+                <SelectItem value="monthly">
+                  {t("dashboard-main:dashboard.frequency.monthly")}
+                </SelectItem>
+                <SelectItem value="quarterly">
+                  {t("dashboard-main:dashboard.frequency.quarterly")}
+                </SelectItem>
+                <SelectItem value="semi-annually">
+                  {t("dashboard.frequency.semiAnnually")}
+                </SelectItem>
+                <SelectItem value="annually">
+                  {t("dashboard-main:dashboard.frequency.annually")}
+                </SelectItem>
               </SelectContent>
             </Select>
           </div>
@@ -137,16 +164,19 @@ export function ReminderSettings({
 
       <Card>
         <CardHeader>
-          <CardTitle>{t('dashboard.settings.reminderTypes')}</CardTitle>
+          <CardTitle>{t("dashboard.settings.reminderTypes")}</CardTitle>
           <CardDescription>
-            {t('dashboard.settings.reminderTypesDesc')}
+            {t("dashboard.settings.reminderTypesDesc")}
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
           {reminderTypes.map((type) => {
             const Icon = type.icon;
             return (
-              <div key={type.id} className="flex items-start justify-between gap-3">
+              <div
+                key={type.id}
+                className="flex items-start justify-between gap-3"
+              >
                 <div className="flex gap-3">
                   <Icon className="h-5 w-5 text-muted-foreground mt-0.5" />
                   <div className="space-y-0.5">
@@ -175,17 +205,21 @@ export function ReminderSettings({
 
       <Card>
         <CardHeader>
-          <CardTitle>{t('dashboard.settings.channels')}</CardTitle>
+          <CardTitle>
+            {t("dashboard-main:dashboard.settings.channels")}
+          </CardTitle>
           <CardDescription>
-            {t('dashboard.settings.channelsDesc')}
+            {t("dashboard.settings.channelsDesc")}
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="flex items-center justify-between">
             <div className="space-y-0.5">
-              <Label htmlFor="email">{t('dashboard.channels.email')}</Label>
+              <Label htmlFor="email">
+                {t("dashboard-main:dashboard.channels.email")}
+              </Label>
               <p className="text-sm text-muted-foreground">
-                {t('dashboard.channels.emailDesc')}
+                {t("dashboard.channels.emailDesc")}
               </p>
             </div>
             <Switch
@@ -203,9 +237,9 @@ export function ReminderSettings({
 
           <div className="flex items-center justify-between">
             <div className="space-y-0.5">
-              <Label htmlFor="in_app">{t('dashboard.channels.inApp')}</Label>
+              <Label htmlFor="in_app">{t("dashboard.channels.inApp")}</Label>
               <p className="text-sm text-muted-foreground">
-                {t('dashboard.channels.inAppDesc')}
+                {t("dashboard.channels.inAppDesc")}
               </p>
             </div>
             <Switch
@@ -226,10 +260,15 @@ export function ReminderSettings({
       <div className="flex justify-end">
         <Button
           onClick={handleSave}
-          disabled={saving || (!preferences.channels.email && !preferences.channels.in_app && preferences.enabled)}
+          disabled={
+            saving ||
+            (!preferences.channels.email &&
+              !preferences.channels.in_app &&
+              preferences.enabled)
+          }
         >
           <Bell className="h-4 w-4 mr-2" />
-          {saving ? t('ui.saving') : t('ui.saveChanges')}
+          {saving ? t("ui-elements:ui.saving") : t("ui.saveChanges")}
         </Button>
       </div>
     </div>

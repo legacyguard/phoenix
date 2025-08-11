@@ -1,4 +1,4 @@
-import { apiClient, ApiResponse, ApiClientError } from '../client';
+import { apiClient, ApiResponse, ApiClientError } from "../client";
 
 export interface BaseServiceConfig {
   endpoint: string;
@@ -19,7 +19,9 @@ export abstract class BaseService<T = unknown> {
     return response.data;
   }
 
-  protected async getAll<R = T[]>(params?: Record<string, unknown>): Promise<R> {
+  protected async getAll<R = T[]>(
+    params?: Record<string, unknown>,
+  ): Promise<R> {
     const response = await apiClient.get<R>(this.endpoint, { params });
     return response.data;
   }
@@ -43,12 +45,9 @@ export abstract class BaseService<T = unknown> {
     if (error instanceof ApiClientError) {
       throw error;
     }
-    const message = error instanceof Error ? error.message : 'An unexpected error occurred';
-    throw new ApiClientError(
-      message,
-      'UNKNOWN_ERROR',
-      error
-    );
+    const message =
+      error instanceof Error ? error.message : "An unexpected error occurred";
+    throw new ApiClientError(message, "UNKNOWN_ERROR", error);
   }
 }
 

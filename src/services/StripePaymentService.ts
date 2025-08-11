@@ -1,7 +1,7 @@
-import Stripe from 'stripe';
+import Stripe from "stripe";
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
-  apiVersion: '2024-11-20.acacia',
+  apiVersion: "2024-11-20.acacia",
 });
 
 export class StripePaymentService {
@@ -11,8 +11,8 @@ export class StripePaymentService {
   static async createConsultationPaymentIntent(
     consultationId: string,
     amount: number,
-    currency: string = 'EUR',
-    userEmail?: string
+    currency: string = "EUR",
+    userEmail?: string,
   ): Promise<Stripe.PaymentIntent | null> {
     try {
       const paymentIntent = await stripe.paymentIntents.create({
@@ -20,7 +20,7 @@ export class StripePaymentService {
         currency: currency.toLowerCase(),
         metadata: {
           consultationId,
-          type: 'legal_consultation'
+          type: "legal_consultation",
         },
         receipt_email: userEmail,
         automatic_payment_methods: {
@@ -30,7 +30,7 @@ export class StripePaymentService {
 
       return paymentIntent;
     } catch (error) {
-      console.error('Error creating payment intent:', error);
+      console.error("Error creating payment intent:", error);
       return null;
     }
   }
@@ -38,12 +38,15 @@ export class StripePaymentService {
   /**
    * Retrieve a payment intent by ID
    */
-  static async getPaymentIntent(paymentIntentId: string): Promise<Stripe.PaymentIntent | null> {
+  static async getPaymentIntent(
+    paymentIntentId: string,
+  ): Promise<Stripe.PaymentIntent | null> {
     try {
-      const paymentIntent = await stripe.paymentIntents.retrieve(paymentIntentId);
+      const paymentIntent =
+        await stripe.paymentIntents.retrieve(paymentIntentId);
       return paymentIntent;
     } catch (error) {
-      console.error('Error retrieving payment intent:', error);
+      console.error("Error retrieving payment intent:", error);
       return null;
     }
   }
@@ -56,7 +59,7 @@ export class StripePaymentService {
       await stripe.paymentIntents.cancel(paymentIntentId);
       return true;
     } catch (error) {
-      console.error('Error canceling payment intent:', error);
+      console.error("Error canceling payment intent:", error);
       return false;
     }
   }

@@ -1,9 +1,9 @@
-import { describe, it, expect, beforeEach, vi } from 'vitest';
-import { supabase } from '@/integrations/supabase/client';
-import { ProgressService } from '@/services/ProgressService';
+import { describe, it, expect, beforeEach, vi } from "vitest";
+import { supabase } from "@/integrations/supabase/client";
+import { ProgressService } from "@/services/ProgressService";
 
 // Mock Supabase client
-vi.mock('@/integrations/supabase/client', () => ({
+vi.mock("@/integrations/supabase/client", () => ({
   supabase: {
     from: vi.fn(),
     auth: {
@@ -12,21 +12,21 @@ vi.mock('@/integrations/supabase/client', () => ({
   },
 }));
 
-describe('Dashboard Service - Plan Strength & Stages', () => {
-  const mockUserId = 'test-user-123';
-  
+describe("Dashboard Service - Plan Strength & Stages", () => {
+  const mockUserId = "test-user-123";
+
   beforeEach(() => {
     vi.clearAllMocks();
     localStorage.clear();
   });
 
-  describe('Plan Strength Calculation', () => {
-    it('should calculate 0% for a brand new user with no data', () => {
+  describe("Plan Strength Calculation", () => {
+    it("should calculate 0% for a brand new user with no data", () => {
       const strength = ProgressService.calculateCompletionScore(mockUserId);
       expect(strength).toBe(0);
     });
 
-    it('should calculate correct percentage based on completed items', () => {
+    it("should calculate correct percentage based on completed items", () => {
       // Mock user with some completed items
       const mockProfile = {
         has_will: true,
@@ -36,23 +36,25 @@ describe('Dashboard Service - Plan Strength & Stages', () => {
         has_documents: false,
         has_emergency_contacts: false,
       };
-      
+
       // 3 out of 6 items completed = 50%
       vi.mocked(supabase.from).mockReturnValue({
         select: vi.fn().mockReturnValue({
           eq: vi.fn().mockReturnValue({
-            single: vi.fn().mockResolvedValue({ data: mockProfile, error: null }),
+            single: vi
+              .fn()
+              .mockResolvedValue({ data: mockProfile, error: null }),
           }),
         }),
       } as Record<string, unknown>);
-      
+
       // Set a cached score for this test
-      localStorage.setItem(`completionScore_${mockUserId}`, '50');
+      localStorage.setItem(`completionScore_${mockUserId}`, "50");
       const strength = ProgressService.calculateCompletionScore(mockUserId);
       expect(strength).toBe(50);
     });
 
-    it('should return 100% for fully complete user profile', () => {
+    it("should return 100% for fully complete user profile", () => {
       // Mock complete user profile
       const completeProfile = {
         has_will: true,
@@ -64,126 +66,142 @@ describe('Dashboard Service - Plan Strength & Stages', () => {
         has_time_capsules: true,
         has_legacy_letters: true,
       };
-      
+
       vi.mocked(supabase.from).mockReturnValue({
         select: vi.fn().mockReturnValue({
           eq: vi.fn().mockReturnValue({
-            single: vi.fn().mockResolvedValue({ data: completeProfile, error: null }),
+            single: vi
+              .fn()
+              .mockResolvedValue({ data: completeProfile, error: null }),
           }),
         }),
       } as Record<string, unknown>);
-      
+
       // Mock localStorage to simulate 100% completion
-      localStorage.setItem(`completionScore_${mockUserId}`, '100');
+      localStorage.setItem(`completionScore_${mockUserId}`, "100");
       const strength = ProgressService.calculateCompletionScore(mockUserId);
       expect(strength).toBe(100);
     });
   });
 
-  describe('Stage Determination', () => {
+  describe("Stage Determination", () => {
     it('should return "Foundation" stage for strength < 25%', () => {
-      const { currentStage, nextObjective } = ProgressService.determineStageAndObjective(15, null, true);
-      
-      expect(currentStage).toBe('Foundation');
-      expect(nextObjective.type).toBe('task');
-      expect(nextObjective.title).toContain('Add Your First Trusted Person');
-      expect(nextObjective.actionUrl).toBe('/trusted-circle');
+      const { currentStage, nextObjective } =
+        ProgressService.determineStageAndObjective(15, null, true);
+
+      expect(currentStage).toBe("Foundation");
+      expect(nextObjective.type).toBe("task");
+      expect(nextObjective.title).toContain("Add Your First Trusted Person");
+      expect(nextObjective.actionUrl).toBe("/trusted-circle");
     });
 
     it('should return "Buildout" stage for strength 25-59%', () => {
-      const { currentStage, nextObjective } = ProgressService.determineStageAndObjective(45, null, true);
-      
-      expect(currentStage).toBe('Buildout');
-      expect(nextObjective.type).toBe('task');
-      expect(nextObjective.title).toContain('bank account');
-      expect(nextObjective.actionUrl).toBe('/vault');
+      const { currentStage, nextObjective } =
+        ProgressService.determineStageAndObjective(45, null, true);
+
+      expect(currentStage).toBe("Buildout");
+      expect(nextObjective.type).toBe("task");
+      expect(nextObjective.title).toContain("bank account");
+      expect(nextObjective.actionUrl).toBe("/vault");
     });
 
     it('should return "Reinforcement" stage for strength 60-74%', () => {
-      const { currentStage, nextObjective } = ProgressService.determineStageAndObjective(70, null, true);
-      
-      expect(currentStage).toBe('Reinforcement');
-      expect(nextObjective.type).toBe('task');
-      expect(nextObjective.title).toContain('Family Hub');
-      expect(nextObjective.actionUrl).toBe('/family-hub');
+      const { currentStage, nextObjective } =
+        ProgressService.determineStageAndObjective(70, null, true);
+
+      expect(currentStage).toBe("Reinforcement");
+      expect(nextObjective.type).toBe("task");
+      expect(nextObjective.title).toContain("Family Hub");
+      expect(nextObjective.actionUrl).toBe("/family-hub");
     });
 
     it('should return "Advanced Planning" stage for strength 75-89%', () => {
-      const { currentStage, nextObjective } = ProgressService.determineStageAndObjective(85, null, true);
-      
-      expect(currentStage).toBe('Advanced Planning');
-      expect(nextObjective.type).toBe('deepDive');
-      expect(nextObjective.title).toContain('Foundation Secured');
+      const { currentStage, nextObjective } =
+        ProgressService.determineStageAndObjective(85, null, true);
+
+      expect(currentStage).toBe("Advanced Planning");
+      expect(nextObjective.type).toBe("deepDive");
+      expect(nextObjective.title).toContain("Foundation Secured");
       expect(nextObjective.features).toBeDefined();
       expect(nextObjective.features).toHaveLength(2);
     });
 
     it('should return "Monitoring" stage for 100% completion', () => {
       const lastReview = new Date().toISOString();
-      const { currentStage, nextObjective } = ProgressService.determineStageAndObjective(100, lastReview, false);
-      
-      expect(currentStage).toBe('Monitoring');
-      expect(nextObjective.type).toBe('monitoring');
-      expect(nextObjective.title).toContain('Well Done');
+      const { currentStage, nextObjective } =
+        ProgressService.determineStageAndObjective(100, lastReview, false);
+
+      expect(currentStage).toBe("Monitoring");
+      expect(nextObjective.type).toBe("monitoring");
+      expect(nextObjective.title).toContain("Well Done");
       expect(nextObjective.lastReviewDate).toBe(lastReview);
       expect(nextObjective.notifications).toBeDefined();
     });
   });
 
-  describe('Next Recommended Step', () => {
-    it('should recommend adding trusted person for new users', () => {
+  describe("Next Recommended Step", () => {
+    it("should recommend adding trusted person for new users", () => {
       const status = ProgressService.getProgressStatus(mockUserId);
-      
+
       expect(status.completionScore).toBe(0); // Default for new users
       expect(status.currentStage).toBeDefined();
       expect(status.nextObjective).toBeDefined();
     });
 
-    it('should recommend annual review when needed', () => {
+    it("should recommend annual review when needed", () => {
       const oneYearAgo = new Date();
       oneYearAgo.setFullYear(oneYearAgo.getFullYear() - 1);
       oneYearAgo.setDate(oneYearAgo.getDate() - 1);
-      
-      localStorage.setItem(`lastReview_${mockUserId}`, oneYearAgo.toISOString());
-      
-      const isReviewNeeded = ProgressService.checkIfReviewNeeded(oneYearAgo.toISOString());
+
+      localStorage.setItem(
+        `lastReview_${mockUserId}`,
+        oneYearAgo.toISOString(),
+      );
+
+      const isReviewNeeded = ProgressService.checkIfReviewNeeded(
+        oneYearAgo.toISOString(),
+      );
       expect(isReviewNeeded).toBe(true);
     });
 
-    it('should not recommend review if done recently', () => {
+    it("should not recommend review if done recently", () => {
       const lastWeek = new Date();
       lastWeek.setDate(lastWeek.getDate() - 7);
-      
-      const isReviewNeeded = ProgressService.checkIfReviewNeeded(lastWeek.toISOString());
+
+      const isReviewNeeded = ProgressService.checkIfReviewNeeded(
+        lastWeek.toISOString(),
+      );
       expect(isReviewNeeded).toBe(false);
     });
   });
 
-  describe('Edge Cases', () => {
-    it('should handle null/undefined user data gracefully', () => {
+  describe("Edge Cases", () => {
+    it("should handle null/undefined user data gracefully", () => {
       vi.mocked(supabase.from).mockReturnValue({
         select: vi.fn().mockReturnValue({
           eq: vi.fn().mockReturnValue({
-            single: vi.fn().mockResolvedValue({ data: null, error: new Error('Not found') }),
+            single: vi
+              .fn()
+              .mockResolvedValue({ data: null, error: new Error("Not found") }),
           }),
         }),
       } as Record<string, unknown>);
-      
+
       const strength = ProgressService.calculateCompletionScore(mockUserId);
       expect(strength).toBe(0); // Should return 0 for new users
     });
 
-    it('should handle progress status for users who never reviewed', () => {
+    it("should handle progress status for users who never reviewed", () => {
       const status = ProgressService.getProgressStatus(mockUserId);
-      
+
       expect(status.lastReviewDate).toBeNull();
       expect(status.isReviewNeeded).toBe(true);
     });
 
-    it('should update last review date correctly', () => {
+    it("should update last review date correctly", () => {
       const newDate = ProgressService.updateLastReviewDate(mockUserId);
       const storedDate = localStorage.getItem(`lastReview_${mockUserId}`);
-      
+
       expect(storedDate).toBe(newDate);
       expect(new Date(newDate).toDateString()).toBe(new Date().toDateString());
     });
