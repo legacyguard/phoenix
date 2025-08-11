@@ -45,7 +45,8 @@
     "console:baseline": "node scripts/ci/console-guard.cjs --write-baseline",
     "typecheck:strict": "tsc -p tsconfig.strict.json --noEmit",
     "typecheck:strict-plus": "tsc -p tsconfig.strict-plus.json --noEmit",
-    "check:imports": "node scripts/ci/imports-guard.cjs"
+    "check:imports": "node scripts/ci/imports-guard.cjs",
+    "build:pwa": "vite build --config vite.config.pwa.ts"
   },
   "dependencies": {
     "@clerk/clerk-react": "^5.36.0",
@@ -123,6 +124,7 @@
     "uuid": "^11.1.0",
     "vaul": "^0.9.3",
     "web-push": "^3.6.7",
+    "web-vitals": "^5.1.0",
     "zod": "^3.25.76"
   },
   "devDependencies": {
@@ -168,6 +170,7 @@
     "typescript": "^5.8.3",
     "typescript-eslint": "^8.0.1",
     "vite": "^5.4.1",
+    "vite-plugin-pwa": "^1.0.2",
     "vitest": "^3.2.4"
   }
 }
