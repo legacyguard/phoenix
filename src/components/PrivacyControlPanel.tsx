@@ -26,7 +26,7 @@ interface PrivacySettings {
 }
 
 const PrivacyControlPanel: React.FC = () => {
-  const { t } = useTranslation("settings");
+  const { t } = useTranslation();
   const { getToken } = useAuth();
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
@@ -56,11 +56,11 @@ const PrivacyControlPanel: React.FC = () => {
           const settings = await response.json();
           setUserSettings(settings);
         } else {
-          toast.error(t("settings:errors.loadingSettings"));
+          toast.error(t("errors.loadingSettings"));
         }
       } catch (error) {
         console.error("Error fetching privacy settings:", error);
-        toast.error(t("settings:errors.loadingSettings"));
+        toast.error(t("errors.loadingSettings"));
       } finally {
         setLoading(false);
       }
@@ -103,14 +103,14 @@ const PrivacyControlPanel: React.FC = () => {
       });
 
       if (response.ok) {
-        toast.success(t("settings:notifications_system.settingsSaved"));
+        toast.success(t("notifications_system.settingsSaved"));
       } else {
         const error = await response.json();
-        toast.error(error.error || t("settings:errors.savingSettings"));
+        toast.error(error.error || t("errors.savingSettings"));
       }
     } catch (error) {
       console.error("Error saving privacy settings:", error);
-      toast.error(t("settings:errors.savingSettings"));
+              toast.error(t("errors.savingSettings"));
     } finally {
       setSaving(false);
     }
@@ -218,10 +218,10 @@ const PrivacyControlPanel: React.FC = () => {
         {saving ? (
           <>
             <Loader2 className="w-4 h-4 mr-2 animate-spin" />
-            {t("settings:actions.save")}
+            {t("actions.save")}
           </>
         ) : (
-          t("settings:actions.save")
+          t("actions.save")
         )}
       </Button>
     </div>

@@ -90,34 +90,113 @@ vi.mock("@/i18n/i18n", () => {
 
 // Mock react-i18next to provide deterministic translations for this suite
 vi.mock("react-i18next", () => ({
-  useTranslation: () => ({
+  useTranslation: (ns?: string) => ({
     t: (key: string, opts?: any) => {
       const map: Record<string, string> = {
+        // Common keys
         "common.greeting": "Dear {{name}}",
         "ui-common:common.greeting": "Dear {{name}}",
         "ui.greetingDefault": "Dear Valued Member",
+        "emails:common.greeting": "Dear {{name}}",
+        "emails:ui.greetingDefault": "Dear Valued Member",
+        
+        // Welcome keys
         "welcome.headline": "Welcome to Your Family Protection Plan",
+        "welcome.introduction": "Welcome to your comprehensive family protection plan. We're here to help you secure your family's future.",
+        "welcome.whatNext": "What's Next?",
+        "welcome.step1": "Complete your profile information",
+        "welcome.step2": "Add family members and trusted contacts",
+        "welcome.step3": "Upload important documents",
+        "welcome.step4": "Set up your preferences",
+        "welcome.supportMessage": "Our team is here to support you every step of the way.",
+        "welcome.securityNote": "Your information is protected with bank-level security.",
+        
+        // Verification keys
         "verification.headline": "Verify Your Email Address",
+        "verification.message": "Please verify your email address to complete your account setup.",
+        "verification.instruction": "Click the button below to verify your email address.",
+        "verification.alternativeLink": "If the button doesn't work, copy and paste this link into your browser:",
+        "verification.linkExpiry": "This verification link will expire in 24 hours.",
+        "verification.alreadyVerified": "If you've already verified your email, you can safely ignore this message.",
+        "verification.troubleshooting": "Having trouble? Contact our support team for assistance.",
+        
+        // Password reset keys
         "passwordReset.headline": "Password Reset Request",
-        "ui.taskReminder.headline":
-          "Your Family Protection Plan Needs Attention",
+        "passwordReset.message": "We received a request to reset your password.",
+        "passwordReset.notRequested": "If you didn't request this, you can safely ignore this email.",
+        "passwordReset.linkExpiry": "This reset link will expire in 1 hour.",
+        "passwordReset.securityTip": "For security, always use a strong, unique password.",
+        "passwordReset.contactSupport": "Need help? Contact our support team.",
+        
+        // Task reminder keys
+        "ui.taskReminder.headline": "Your Family Protection Plan Needs Attention",
+        "ui.taskReminder.message": "You have {{count}} tasks that need your attention to keep your family protected.",
+        "ui.taskReminder.highPriority": "High Priority Tasks",
+        "notifications.taskReminder.pendingTasks": "You have {{count}} pending tasks that require your attention.",
+        "ui.taskReminder.encouragement": "Don't worry - we're here to help you complete these step by step.",
+        "ui.taskReminder.noRush": "Take your time to ensure everything is accurate and complete.",
+        
+        // Document expiry keys
         "ui.documentExpiry.headline": "Document Renewal Reminder",
+        "ui.documentExpiry.message": "The following document will expire soon and needs to be renewed:",
+        "ui.documentExpiry.action": "Please log in to your account to upload the renewed document.",
+        "ui.documentExpiry.importance": "Keeping documents current ensures your family's protection remains active.",
+        
+        // Security alert keys
         "ui.loginAlert.headline": "Account Access Notification",
+        "ui.loginAlert.message": "We detected a new login to your account.",
+        "ui.loginAlert.details": "Login Details",
+        "ui.loginAlert.wasYou": "If this was you, no action is needed.",
+        "ui.loginAlert.notYou": "If this wasn't you, please secure your account immediately.",
+        "ui.loginAlert.action1": "Change your password",
+        "ui.loginAlert.action2": "Enable two-factor authentication",
+        "ui.loginAlert.action3": "Contact our support team",
+        "ui.loginAlert.supportContact": "Our security team is available 24/7 to help you.",
+        
+        // Family invitation keys
+        "family.invitationSent.headline": "Family Protection Plan Invitation",
+        "family.invitationSent.message": "{{senderName}} has invited you to join their Family Protection Plan.",
+        "family.invitationSent.role": "{{role}}",
+        "family.invitationSent.responsibility": "As an {{role}}, you'll have access to important family information and documents.",
+        "family.invitationSent.whatNext": "What happens next?",
+        "family.invitationSent.access1": "Review the invitation details",
+        "family.invitationSent.access2": "Accept or decline the invitation",
+        "family.invitationSent.access3": "Set up your account if you accept",
+        "family.invitationSent.questions": "Questions about this invitation? Contact {{senderName}} directly.",
+        "family.invitationSent.honor": "This invitation represents trust and responsibility. Please consider it carefully.",
+        
+        // Subscription keys
+        "subscription.trialExpiring.headline": "Your Trial is Ending Soon",
+        "subscription.trialExpiring.message": "{{days}} days",
+        "subscription.trialExpiring.whatHappens": "What happens when your trial ends?",
+        "subscription.trialExpiring.consequence1": "You'll lose access to premium features",
+        "subscription.trialExpiring.consequence2": "Your data will be archived",
+        "subscription.trialExpiring.consequence3": "You won't be able to add new documents",
+        "subscription.trialExpiring.continueProtection": "Continue protecting your family with our premium plan.",
+        "subscription.trialExpiring.noCommitment": "No long-term commitment required. Cancel anytime.",
+        "subscription.trialExpiring.questions": "Have questions? Our support team is here to help.",
+        
+        // Other keys
         "notifications.documentExpiry.documentName": "{{documentName}}",
         "notifications.documentExpiry.expiryDate": "{{date}}",
         "security.loginAlert.time": "{{timestamp}}",
         "security.loginAlert.location": "{{location}}",
         "security.loginAlert.device": "{{device}}",
-        "family.invitationSent.headline": "Family Protection Plan Invitation",
-        "family.invitationSent.message": "{{senderName}}",
-        "family.invitationSent.role": "{{role}}",
-        "subscription.trialExpiring.headline": "Your Trial is Ending Soon",
-        "subscription.trialExpiring.message": "{{days}} days",
-        "sharing:welcome.subject":
-          "Welcome to LegacyGuard - Your Family Protection Journey Begins",
+        "sharing:welcome.subject": "Welcome to LegacyGuard - Your Family Protection Journey Begins",
         "dashboard-main:push.taskReminder.title": "Family Protection Reminder",
-        "wills:disclaimers.general":
-          "LegacyGuard provides tools and guidance for estate planning but does not provide legal advice. For complex estates or specific legal questions, please consult with a qualified attorney in your jurisdiction.",
+        "wills:disclaimers.general": "LegacyGuard provides tools and guidance for estate planning but does not provide legal advice. For complex estates or specific legal questions, please consult with a qualified attorney in your jurisdiction.",
+        
+        // UI footer keys
+        "ui.closing": "Best regards,",
+        "ui.signature": "The LegacyGuard Team",
+        "ui.footerTagline": "Protecting your family's future, one step at a time.",
+        "ui.confidentialNotice": "This email contains confidential information. If you received this in error, please delete it immediately.",
+        "ui.securityReminder": "Your security is our priority. Never share your login credentials.",
+        "ui.contactUs": "Need help? Contact our support team.",
+        "ui.supportEmail": "support@legacyguard.com",
+        "ui.supportPhone": "+1 (555) 123-4567",
+        "ui.unsubscribe": "To unsubscribe from these emails, click",
+        "ui.unsubscribeLink": "here",
       };
       let val = map[key];
       if (!val) return key; // return key when missing
@@ -321,7 +400,7 @@ describe("Email & Notifications System", () => {
       expect(
         screen.getByText(/Family Protection Plan Invitation/),
       ).toBeInTheDocument();
-      expect(screen.getByText(/Emma Wilson/)).toBeInTheDocument();
+      expect(screen.getByText(/Emma Wilson has invited you/)).toBeInTheDocument();
       expect(screen.getByText("Accept Invitation")).toBeInTheDocument();
     });
 
