@@ -14,17 +14,13 @@ export const createDocumentFormSchema = (
       .max(200, { message: t("validation.errors.nameMaxLength", { max: 200 }) })
       .trim(),
 
-    type: z
-      .string()
-      .min(1, {
-        message: t("validation:validation.errors.documentTypeRequired"),
-      }),
+    type: z.string().min(1, {
+      message: t("validation:validation.errors.documentTypeRequired"),
+    }),
 
-    country_code: z
-      .string()
-      .length(2, {
-        message: t("validation:validation.errors.countryCodeLength"),
-      }),
+    country_code: z.string().length(2, {
+      message: t("validation:validation.errors.countryCodeLength"),
+    }),
 
     expiration_date: z
       .date()

@@ -11,11 +11,9 @@ export const createGuardianFormSchema = (
       .max(100, { message: t("validation.errors.nameMaxLength", { max: 100 }) })
       .trim(),
 
-    relationship: z
-      .string()
-      .min(1, {
-        message: t("validation:validation.errors.relationshipRequired"),
-      }),
+    relationship: z.string().min(1, {
+      message: t("validation:validation.errors.relationshipRequired"),
+    }),
 
     country_code: z
       .string()
