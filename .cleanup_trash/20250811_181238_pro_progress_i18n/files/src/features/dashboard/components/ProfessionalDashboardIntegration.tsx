@@ -1,76 +1,49 @@
-import React, { useEffect, useState, useCallback } from "react";
-import { useTranslation } from "react-i18next";
-import { useAuth } from "@/hooks/useAuth";
-import { ProgressService } from "@/services/ProgressService";
-import { ProfessionalDashboard } from "@/components/dashboard";
-import ProfessionalFlowManager from "@/components/auth/ProfessionalFlowManager";
-import {
-  RespectfulOnboarding,
-  OnboardingData,
-} from "@/components/onboarding/RespectfulOnboarding";
-import { Alert, AlertDescription } from "@/components/ui/alert";
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import { useAssistant } from "@/hooks/useAssistant";
-import { EnhancedPersonalAssistant } from "@/components/assistant/EnhancedPersonalAssistant";
-import AnnualReview from "@/components/AnnualReview";
-import LegalConsultationModal from "@/components/LegalConsultationModal";
-import {
-  Shield,
-  Info,
+import React, { useEffect, useState, useCallback } from 'react';
+import { useTranslation } from 'react-i18next';
+import { useAuth } from '@/hooks/useAuth';
+import { ProgressService } from '@/services/ProgressService';
+import { ProfessionalDashboard } from '@/components/dashboard';
+import ProfessionalFlowManager from '@/components/auth/ProfessionalFlowManager';
+import { RespectfulOnboarding, OnboardingData } from '@/components/onboarding/RespectfulOnboarding';
+import { Alert, AlertDescription } from '@/components/ui/alert';
+import { Button } from '@/components/ui/button';
+import { Card } from '@/components/ui/card';
+import { useAssistant } from '@/hooks/useAssistant';
+import { EnhancedPersonalAssistant } from '@/components/assistant/EnhancedPersonalAssistant';
+import AnnualReview from '@/components/AnnualReview';
+import LegalConsultationModal from '@/components/LegalConsultationModal';
+import { 
+  Shield, 
+  Info, 
   RefreshCw,
   FileText,
   Users,
   Heart,
-  Building,
-} from "lucide-react";
+  Building
+} from 'lucide-react';
 
 interface DashboardProps {
   // Optional props for testing or specific configurations
   forceOnboarding?: boolean;
-  initialView?: "dashboard" | "onboarding" | "review";
+  initialView?: 'dashboard' | 'onboarding' | 'review';
 }
 
-const ProfessionalDashboardIntegration: React.FC<DashboardProps> = ({
+const ProfessionalDashboardIntegration: React.FC<DashboardProps> = ({ 
   forceOnboarding = false,
-  initialView = "dashboard",
+  initialView = 'dashboard' 
 }) => {
-  const { t } = useTranslation(["dashboard", "onboarding"]);
+  const { t } = useTranslation(['dashboard', 'onboarding']);
   const { user } = useAuth();
   const { updateProgress, updateEmotionalState } = useAssistant();
-
+  
   // State management
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   type ProgressStatus = {
     completionScore?: number;
-    completedItems?: Array<{
-      id?: string;
-      title?: string;
-      name?: string;
-      description?: string;
-      type?: string;
-      estimatedTime?: number;
-    }>;
-    pendingItems?: Array<{
-      id?: string;
-      title?: string;
-      name?: string;
-      description?: string;
-      type?: string;
-      estimatedTime?: number;
-      priority?: string;
-      isCritical?: boolean;
-      isFoundational?: boolean;
-    }>;
-    criticalGaps?: Array<{
-      id?: string;
-      title?: string;
-      name?: string;
-      description?: string;
-      type?: string;
-      estimatedTime?: number;
-    }>;
+    completedItems?: Array<{ id?: string; title?: string; name?: string; description?: string; type?: string; estimatedTime?: number }>;
+    pendingItems?: Array<{ id?: string; title?: string; name?: string; description?: string; type?: string; estimatedTime?: number; priority?: string; isCritical?: boolean; isFoundational?: boolean }>;
+    criticalGaps?: Array<{ id?: string; title?: string; name?: string; description?: string; type?: string; estimatedTime?: number }>;
   } | null;
 
   type Task = {
@@ -78,16 +51,14 @@ const ProfessionalDashboardIntegration: React.FC<DashboardProps> = ({
     title: string;
     description?: string;
     category: string;
-    priority: "immediate" | "high" | "medium" | "low" | "completed";
+    priority: 'immediate' | 'high' | 'medium' | 'low' | 'completed';
     completed: boolean;
     estimatedTime: number;
     pillar: string;
   };
 
   const [progressStatus, setProgressStatus] = useState<ProgressStatus>(null);
-  const [onboardingData, setOnboardingData] = useState<OnboardingData | null>(
-    null,
-  );
+  const [onboardingData, setOnboardingData] = useState<OnboardingData | null>(null);
   const [showAnnualReview, setShowAnnualReview] = useState(false);
   const [showLegalConsultation, setShowLegalConsultation] = useState(false);
   const [userTasks, setUserTasks] = useState<Task[]>([]);
@@ -105,20 +76,20 @@ const ProfessionalDashboardIntegration: React.FC<DashboardProps> = ({
         // Check for stored onboarding data
         const storedOnboardingKey = `onboarding_data_${user.id}`;
         const storedData = localStorage.getItem(storedOnboardingKey);
-
+        
         if (storedData) {
           try {
             const parsed = JSON.parse(storedData);
             setOnboardingData(parsed);
           } catch (e) {
-            console.error("Failed to parse onboarding data:", e);
+            console.error('Failed to parse onboarding data:', e);
           }
         }
 
         // Check for force onboarding in URL params (development/testing)
         const urlParams = new URLSearchParams(window.location.search);
-        const urlForceOnboarding = urlParams.get("onboarding") === "true";
-
+        const urlForceOnboarding = urlParams.get('onboarding') === 'true';
+        
         if (forceOnboarding || urlForceOnboarding) {
           // Force onboarding flow for testing
           setLoading(false);
@@ -127,35 +98,33 @@ const ProfessionalDashboardIntegration: React.FC<DashboardProps> = ({
 
         // Fetch user's progress status
         const status = await ProgressService.getProgressStatus(user.id);
-
+        
         if (status) {
           setProgressStatus(status);
           setCompletionScore(status.completionScore || 0);
-
+          
           // Convert progress items to tasks format
           const tasks = convertProgressToTasks(status);
           setUserTasks(tasks);
-
+          
           // Update assistant context with professional terminology
           updateProgress({
             completionPercentage: status.completionScore,
             currentStage: getProfessionalStage(status.completionScore),
             tasksCompleted: status.completedItems?.length || 0,
-            totalTasks:
-              (status.completedItems?.length || 0) +
-              (status.pendingItems?.length || 0),
+            totalTasks: (status.completedItems?.length || 0) + (status.pendingItems?.length || 0)
           });
-
+          
           // Set emotional state using supportive approach
-          updateEmotionalState(
-            getSupportiveEmotionalState(status.completionScore),
-          );
+          updateEmotionalState(getSupportiveEmotionalState(status.completionScore));
         }
-
+        
         // Check if annual review is needed
         checkAnnualReviewStatus();
+        
       } catch (err) {
-        console.error("Dashboard initialization error:", err);
+        console.error('Dashboard initialization error:', err);
+        // TODO: Fix missing translation key - dashboard-main:errors.initializationFailed
 
         // setError(t('dashboard-main:errors.initializationFailed'));
       } finally {
@@ -164,155 +133,134 @@ const ProfessionalDashboardIntegration: React.FC<DashboardProps> = ({
     };
 
     initializeDashboard();
-  }, [
-    user,
-    forceOnboarding,
-    convertProgressToTasks,
-    updateProgress,
-    updateEmotionalState,
-    checkAnnualReviewStatus,
-    t,
-  ]);
+  }, [user, forceOnboarding, convertProgressToTasks, updateProgress, updateEmotionalState, checkAnnualReviewStatus, t]);
 
   // Convert progress status to task format for ProfessionalDashboard
-  const convertProgressToTasks = useCallback(
-    (status: NonNullable<ProgressStatus>) => {
-      const tasks: Task[] = [];
-
-      // Add completed items as completed tasks
-      if (status.completedItems) {
-        status.completedItems.forEach((item) => {
-          tasks.push({
-            id: item.id || `completed-${tasks.length}`,
-            title: item.title || item.name,
-            description: item.description,
-            category: mapToCategory(item.type),
-            priority: "completed",
-            completed: true,
-            estimatedTime: item.estimatedTime || 5,
-            pillar: mapToPillar(item.type),
-          });
+  const convertProgressToTasks = useCallback((status: NonNullable<ProgressStatus>) => {
+    const tasks: Task[] = [];
+    
+    // Add completed items as completed tasks
+    if (status.completedItems) {
+      status.completedItems.forEach((item) => {
+        tasks.push({
+          id: item.id || `completed-${tasks.length}`,
+          title: item.title || item.name,
+          description: item.description,
+          category: mapToCategory(item.type),
+          priority: 'completed',
+          completed: true,
+          estimatedTime: item.estimatedTime || 5,
+          pillar: mapToPillar(item.type)
         });
-      }
-
-      // Add pending items as tasks
-      if (status.pendingItems) {
-        status.pendingItems.forEach((item) => {
-          tasks.push({
-            id: item.id || `pending-${tasks.length}`,
-            title: item.title || item.name,
-            description: item.description,
-            category: mapToCategory(item.type),
-            priority: determinePriority(item, status.completionScore),
-            completed: false,
-            estimatedTime: item.estimatedTime || 10,
-            pillar: mapToPillar(item.type),
-          });
+      });
+    }
+    
+    // Add pending items as tasks
+    if (status.pendingItems) {
+      status.pendingItems.forEach((item) => {
+        tasks.push({
+          id: item.id || `pending-${tasks.length}`,
+          title: item.title || item.name,
+          description: item.description,
+          category: mapToCategory(item.type),
+          priority: determinePriority(item, status.completionScore),
+          completed: false,
+          estimatedTime: item.estimatedTime || 10,
+          pillar: mapToPillar(item.type)
         });
-      }
+      });
+    }
+    
+    // Add critical gaps as high priority tasks
+    if (status.criticalGaps) {
+      status.criticalGaps.forEach((gap) => {
+        tasks.push({
+          id: gap.id || `gap-${tasks.length}`,
+          title: gap.title || gap.name,
+          // TODO: Fix missing translation key - dashboard-main:tasks.criticalGap
 
-      // Add critical gaps as high priority tasks
-      if (status.criticalGaps) {
-        status.criticalGaps.forEach((gap) => {
-          tasks.push({
-            id: gap.id || `gap-${tasks.length}`,
-            title: gap.title || gap.name,
-
-            // description: gap.description || t('dashboard-main:tasks.criticalGap'),
-            category: mapToCategory(gap.type),
-            priority: "immediate",
-            completed: false,
-            estimatedTime: gap.estimatedTime || 15,
-            pillar: "secure",
-          });
+          // description: gap.description || t('dashboard-main:tasks.criticalGap'),
+          category: mapToCategory(gap.type),
+          priority: 'immediate',
+          completed: false,
+          estimatedTime: gap.estimatedTime || 15,
+          pillar: 'secure'
         });
-      }
-
-      return tasks;
-    },
-    [mapToCategory, mapToPillar, determinePriority],
-  );
+      });
+    }
+    
+    return tasks;
+  }, [mapToCategory, mapToPillar, determinePriority]);
 
   // Map item types to professional categories
   const mapToCategory = useCallback((type: string): string => {
     const categoryMap: Record<string, string> = {
-      document: "documents",
-      guardian: "family",
-      asset: "financial",
-      beneficiary: "legal",
-      will: "legal",
-      insurance: "financial",
-      medical: "documents",
-      security: "security",
+      'document': 'documents',
+      'guardian': 'family',
+      'asset': 'financial',
+      'beneficiary': 'legal',
+      'will': 'legal',
+      'insurance': 'financial',
+      'medical': 'documents',
+      'security': 'security'
     };
-    return categoryMap[type?.toLowerCase()] || "other";
+    return categoryMap[type?.toLowerCase()] || 'other';
   }, []);
 
   // Map item types to pillars
   const mapToPillar = useCallback((type: string): string => {
     const pillarMap: Record<string, string> = {
-      document: "organize",
-      guardian: "secure",
-      asset: "transfer",
-      beneficiary: "transfer",
-      will: "secure",
-      insurance: "secure",
-      medical: "organize",
-      security: "secure",
+      'document': 'organize',
+      'guardian': 'secure',
+      'asset': 'transfer',
+      'beneficiary': 'transfer',
+      'will': 'secure',
+      'insurance': 'secure',
+      'medical': 'organize',
+      'security': 'secure'
     };
-    return pillarMap[type?.toLowerCase()] || "organize";
+    return pillarMap[type?.toLowerCase()] || 'organize';
   }, []);
 
   // Determine task priority based on completion score and item type
-  const determinePriority = useCallback(
-    (
-      item: {
-        isCritical?: boolean;
-        priority?: string;
-        isFoundational?: boolean;
-      },
-      completionScore: number,
-    ): Task["priority"] => {
-      if (item.isCritical || item.priority === "critical") return "immediate";
-      if (completionScore < 25 && item.isFoundational) return "high";
-      if (completionScore < 50) return "high";
-      if (completionScore < 75) return "medium";
-      return "low";
-    },
-    [],
-  );
+  const determinePriority = useCallback((item: { isCritical?: boolean; priority?: string; isFoundational?: boolean }, completionScore: number): Task['priority'] => {
+    if (item.isCritical || item.priority === 'critical') return 'immediate';
+    if (completionScore < 25 && item.isFoundational) return 'high';
+    if (completionScore < 50) return 'high';
+    if (completionScore < 75) return 'medium';
+    return 'low';
+  }, []);
 
   // Get professional stage name based on completion
   const getProfessionalStage = (score: number): string => {
-    if (score < 25) return "Foundation";
-    if (score < 50) return "Building";
-    if (score < 75) return "Strengthening";
-    if (score < 90) return "Comprehensive";
-    return "Maintained";
+    if (score < 25) return 'Foundation';
+    if (score < 50) return 'Building';
+    if (score < 75) return 'Strengthening';
+    if (score < 90) return 'Comprehensive';
+    return 'Maintained';
   };
 
   // Get supportive emotional state (no gamification)
   const getSupportiveEmotionalState = (score: number): string => {
-    if (score < 25) return "starting";
-    if (score < 50) return "progressing";
-    if (score < 75) return "confident";
-    return "secure";
+    if (score < 25) return 'starting';
+    if (score < 50) return 'progressing';
+    if (score < 75) return 'confident';
+    return 'secure';
   };
 
   // Check if annual review is needed
   const checkAnnualReviewStatus = useCallback(() => {
     const lastReviewKey = `last_annual_review_${user?.id}`;
     const lastReview = localStorage.getItem(lastReviewKey);
-
+    
     if (lastReview) {
       const lastReviewDate = new Date(lastReview);
-      const monthsSinceReview =
-        (Date.now() - lastReviewDate.getTime()) / (1000 * 60 * 60 * 24 * 30);
-
+      const monthsSinceReview = (Date.now() - lastReviewDate.getTime()) / (1000 * 60 * 60 * 24 * 30);
+      
       // Suggest annual review if it's been more than 11 months
       if (monthsSinceReview > 11) {
         // We'll show a gentle reminder in the dashboard
-        console.log("Annual review recommended");
+        console.log('Annual review recommended');
       }
     }
   }, [user]);
@@ -320,46 +268,48 @@ const ProfessionalDashboardIntegration: React.FC<DashboardProps> = ({
   // Handle onboarding completion
   const handleOnboardingComplete = (data: OnboardingData) => {
     setOnboardingData(data);
-
+    
     // Convert onboarding data to tasks
     const tasks = generateTasksFromOnboarding(data);
     setUserTasks(tasks);
-
+    
     // Store onboarding completion
     const onboardingKey = `onboarding_data_${user?.id}`;
     localStorage.setItem(onboardingKey, JSON.stringify(data));
-
+    
     // Update progress
     updateProgress({
       completionPercentage: 0,
-      currentStage: "Foundation",
+      currentStage: 'Foundation',
       tasksCompleted: 0,
-      totalTasks: tasks.length,
+      totalTasks: tasks.length
     });
   };
 
   // Generate tasks from onboarding data
   const generateTasksFromOnboarding = (data: OnboardingData): Task[] => {
     const tasks: Task[] = [];
-
+    
     // Add document-related tasks
     if (data.documents && data.documents.length > 0) {
       data.documents.forEach((doc, index) => {
         tasks.push({
           id: `doc-${index}`,
+          // TODO: Fix missing translation key - dashboard-main:tasks.reviewDocument
 
           // title: t('dashboard-main:tasks.reviewDocument', { name: doc.name }),
+          // TODO: Fix missing translation key - dashboard-main:tasks.documentReviewDesc
 
           // description: t('dashboard-main:tasks.documentReviewDesc'),
-          category: "documents",
-          priority: "high",
+          category: 'documents',
+          priority: 'high',
           completed: false,
           estimatedTime: 5,
-          pillar: "organize",
+          pillar: 'organize'
         });
       });
     }
-
+    
     // Add recommendation-based tasks
     if (data.recommendations) {
       data.recommendations.forEach((rec) => {
@@ -368,14 +318,14 @@ const ProfessionalDashboardIntegration: React.FC<DashboardProps> = ({
           title: rec.title,
           description: rec.description,
           category: rec.category,
-          priority: rec.priority === "critical" ? "immediate" : rec.priority,
+          priority: rec.priority === 'critical' ? 'immediate' : rec.priority,
           completed: false,
           estimatedTime: parseInt(rec.estimatedTime) || 10,
-          pillar: mapToPillar(rec.category),
+          pillar: mapToPillar(rec.category)
         });
       });
     }
-
+    
     return tasks;
   };
 
@@ -389,18 +339,18 @@ const ProfessionalDashboardIntegration: React.FC<DashboardProps> = ({
   // Development reset function
   const handleResetOnboarding = () => {
     if (!user) return;
-
+    
     // Clear all user-specific localStorage items
     const keysToRemove = [
       `onboarding_status_${user.id}`,
       `onboarding_data_${user.id}`,
       `progress_${user.id}`,
       `last_visit_${user.id}`,
-      `last_annual_review_${user.id}`,
+      `last_annual_review_${user.id}`
     ];
-
-    keysToRemove.forEach((key) => localStorage.removeItem(key));
-
+    
+    keysToRemove.forEach(key => localStorage.removeItem(key));
+    
     // Reload the page to restart
     window.location.reload();
   };
@@ -413,7 +363,7 @@ const ProfessionalDashboardIntegration: React.FC<DashboardProps> = ({
           <div className="inline-flex items-center justify-center w-16 h-16 bg-white rounded-full shadow-lg mb-4">
             <Shield className="w-8 h-8 text-blue-600 animate-pulse" />
           </div>
-          <p className="text-gray-600">{t("ui-common:common.loading")}</p>
+          <p className="text-gray-600">{t('ui-common:common.loading')}</p>
         </div>
       </div>
     );
@@ -439,7 +389,9 @@ const ProfessionalDashboardIntegration: React.FC<DashboardProps> = ({
           onClick={() => setShowAnnualReview(false)}
           className="mb-4"
         >
-          // ← {t("dashboard-main:common.backToDashboard")}
+          // TODO: Fix missing translation key - dashboard-main:common.backToDashboard
+
+          // ← {t('dashboard-main:common.backToDashboard')}
         </Button>
         <AnnualReview />
       </div>
@@ -460,7 +412,7 @@ const ProfessionalDashboardIntegration: React.FC<DashboardProps> = ({
               className="bg-yellow-500 text-black hover:bg-yellow-600"
             >
               <RefreshCw className="w-4 h-4 mr-2" />
-              {t("dashboard-main:development.resetOnboarding")}
+              {t('dashboard-main:development.resetOnboarding')}
             </Button>
           </div>
         )}
@@ -483,11 +435,14 @@ const ProfessionalDashboardIntegration: React.FC<DashboardProps> = ({
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">
-                      // {t("dashboard-review:annualReview.reminderTitle")}
+                      // TODO: Fix missing translation key - dashboard-review:annualReview.reminderTitle
+
+                      // {t('dashboard-review:annualReview.reminderTitle')}
                     </h3>
                     <p className="text-sm text-gray-600">
-                      //{" "}
-                      {t("dashboard-review:annualReview.reminderDescription")}
+                      // TODO: Fix missing translation key - dashboard-review:annualReview.reminderDescription
+
+                      // {t('dashboard-review:annualReview.reminderDescription')}
                     </p>
                   </div>
                 </div>
@@ -496,7 +451,7 @@ const ProfessionalDashboardIntegration: React.FC<DashboardProps> = ({
                   size="sm"
                   className="bg-green-600 hover:bg-green-700"
                 >
-                  {t("dashboard-review:annualReview.startReview")}
+                  {t('dashboard-review:annualReview.startReview')}
                 </Button>
               </div>
             </div>
@@ -514,10 +469,14 @@ const ProfessionalDashboardIntegration: React.FC<DashboardProps> = ({
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">
-                      // {t("dashboard-main:complexProfile.title")}
+                      // TODO: Fix missing translation key - dashboard-main:complexProfile.title
+
+                      // {t('dashboard-main:complexProfile.title')}
                     </h3>
                     <p className="text-sm text-gray-600">
-                      // {t("dashboard-main:complexProfile.description")}
+                      // TODO: Fix missing translation key - dashboard-main:complexProfile.description
+
+                      // {t('dashboard-main:complexProfile.description')}
                     </p>
                   </div>
                 </div>
@@ -527,7 +486,9 @@ const ProfessionalDashboardIntegration: React.FC<DashboardProps> = ({
                   variant="outline"
                   className="border-purple-300 hover:bg-purple-100"
                 >
-                  // {t("dashboard-main:complexProfile.getHelp")}
+                  // TODO: Fix missing translation key - dashboard-main:complexProfile.getHelp
+
+                  // {t('dashboard-main:complexProfile.getHelp')}
                 </Button>
               </div>
             </div>
@@ -543,7 +504,7 @@ const ProfessionalDashboardIntegration: React.FC<DashboardProps> = ({
           preselectedType="comprehensive_review"
           contextData={{
             completionScore: completionScore,
-            hasComplexProfile: progressStatus?.hasComplexProfile,
+            hasComplexProfile: progressStatus?.hasComplexProfile
           }}
         />
       )}
@@ -557,7 +518,7 @@ const ProfessionalDashboardIntegration: React.FC<DashboardProps> = ({
             currentStage: getProfessionalStage(completionScore),
             tasks: userTasks,
             onboardingData: onboardingData,
-            professionalMode: true, // Enable professional mode
+            professionalMode: true // Enable professional mode
           }}
         />
       )}
