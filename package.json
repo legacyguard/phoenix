@@ -33,7 +33,7 @@
     "check:i18n": "node scripts/ci/i18n-guard.cjs",
     "check:cycles": "node scripts/ci/cycles-guard.cjs",
     "check:exports": "node scripts/ci/exports-guard.cjs",
-    "check:all": "npm run -s check:i18n && npm run -s check:cycles && npm run -s check:exports && npm run -s check:size && npm run -s check:only && npm run -s check:console",
+    "check:all": "npm run -s check:i18n && npm run -s check:cycles && npm run -s check:exports && npm run -s check:size && npm run -s check:only && npm run -s check:console && npm run -s check:imports",
     "ci": "npm run -s lint && npm run -s typecheck && npm run -s test:ci && npm run -s check:all",
     "check:i18n:strict": "node scripts/ci/i18n-guard.cjs --strict",
     "check:size": "node scripts/ci/size-guard.cjs",
@@ -44,7 +44,8 @@
     "check:console:strict": "node scripts/ci/console-guard.cjs --strict",
     "console:baseline": "node scripts/ci/console-guard.cjs --write-baseline",
     "typecheck:strict": "tsc -p tsconfig.strict.json --noEmit",
-    "typecheck:strict-plus": "tsc -p tsconfig.strict-plus.json --noEmit"
+    "typecheck:strict-plus": "tsc -p tsconfig.strict-plus.json --noEmit",
+    "check:imports": "node scripts/ci/imports-guard.cjs"
   },
   "dependencies": {
     "@clerk/clerk-react": "^5.36.0",
