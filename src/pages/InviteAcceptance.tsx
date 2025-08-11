@@ -75,7 +75,7 @@ export const InviteAcceptance: React.FC = () => {
         if (!mounted) return;
 
         const timestamp = new Date().toISOString();
-        const errorMessage = error?.message || t("errors.unknown");
+        const errorMessage = error?.message || t("errors:errors.unknown");
         const errorCode = error?.code || "UNKNOWN_ERROR";
 
         console.error("[Guardian Invitation] Error loading invitation:", {
@@ -90,13 +90,13 @@ export const InviteAcceptance: React.FC = () => {
         let userMessage = t("inviteAcceptance.errors.loadingFailed");
 
         if (error?.code === "PGRST116") {
-          userMessage = t("errors.dataNotFound");
+          userMessage = t("errors:errors.dataNotFound");
         } else if (error?.message?.includes("network")) {
-          userMessage = t("errors.networkError");
+          userMessage = t("errors:errors.networkError");
         } else if (error?.message?.includes("permission")) {
-          userMessage = t("errors.permissionDenied");
+          userMessage = t("errors:errors.permissionDenied");
         } else if (error?.message?.includes("duplicate")) {
-          userMessage = t("errors.duplicateRecord");
+          userMessage = t("errors:errors.duplicateRecord");
         }
 
         toast.error(userMessage);
@@ -148,7 +148,7 @@ export const InviteAcceptance: React.FC = () => {
       setInviterName(t("inviteAcceptance.defaultInviterName"));
     } catch (error: Record<string, unknown>) {
       const timestamp = new Date().toISOString();
-      const errorMessage = error?.message || t("errors.unknown");
+      const errorMessage = error?.message || t("errors:errors.unknown");
       const errorCode = error?.code || "UNKNOWN_ERROR";
 
       // Detailed logging for debugging
@@ -166,13 +166,13 @@ export const InviteAcceptance: React.FC = () => {
 
       // Specific messages based on error type
       if (error?.code === "PGRST116") {
-        userMessage = t("errors.dataNotFound");
+        userMessage = t("errors:errors.dataNotFound");
       } else if (error?.message?.includes("network")) {
-        userMessage = t("errors.networkError");
+        userMessage = t("errors:errors.networkError");
       } else if (error?.message?.includes("permission")) {
-        userMessage = t("errors.permissionDenied");
+        userMessage = t("errors:errors.permissionDenied");
       } else if (error?.message?.includes("duplicate")) {
-        userMessage = t("errors.duplicateRecord");
+        userMessage = t("errors:errors.duplicateRecord");
       }
 
       toast.error(userMessage);
@@ -204,7 +204,7 @@ export const InviteAcceptance: React.FC = () => {
       navigate("/guardian-view");
     } catch (error: Record<string, unknown>) {
       const timestamp = new Date().toISOString();
-      const errorMessage = error?.message || t("errors.unknown");
+      const errorMessage = error?.message || t("errors:errors.unknown");
       const errorCode = error?.code || "UNKNOWN_ERROR";
 
       // Detailed logging for debugging
@@ -222,13 +222,13 @@ export const InviteAcceptance: React.FC = () => {
 
       // Specific messages based on error type
       if (error?.code === "PGRST116") {
-        userMessage = t("errors.dataNotFound");
+        userMessage = t("errors:errors.dataNotFound");
       } else if (error?.message?.includes("network")) {
-        userMessage = t("errors.networkError");
+        userMessage = t("errors:errors.networkError");
       } else if (error?.message?.includes("permission")) {
-        userMessage = t("errors.permissionDenied");
+        userMessage = t("errors:errors.permissionDenied");
       } else if (error?.message?.includes("duplicate")) {
-        userMessage = t("errors.duplicateRecord");
+        userMessage = t("errors:errors.duplicateRecord");
       }
 
       toast.error(userMessage);
@@ -257,7 +257,7 @@ export const InviteAcceptance: React.FC = () => {
       navigate("/");
     } catch (error: Record<string, unknown>) {
       const timestamp = new Date().toISOString();
-      const errorMessage = error?.message || t("errors.unknown");
+      const errorMessage = error?.message || t("errors:errors.unknown");
       const errorCode = error?.code || "UNKNOWN_ERROR";
 
       // Detailed logging for debugging
@@ -275,13 +275,13 @@ export const InviteAcceptance: React.FC = () => {
 
       // Specific messages based on error type
       if (error?.code === "PGRST116") {
-        userMessage = t("errors.dataNotFound");
+        userMessage = t("errors:errors.dataNotFound");
       } else if (error?.message?.includes("network")) {
-        userMessage = t("errors.networkError");
+        userMessage = t("errors:errors.networkError");
       } else if (error?.message?.includes("permission")) {
-        userMessage = t("errors.permissionDenied");
+        userMessage = t("errors:errors.permissionDenied");
       } else if (error?.message?.includes("duplicate")) {
-        userMessage = t("errors.duplicateRecord");
+        userMessage = t("errors:errors.duplicateRecord");
       }
 
       toast.error(userMessage);

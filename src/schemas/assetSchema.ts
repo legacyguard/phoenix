@@ -7,33 +7,35 @@ export const createAssetFormSchema = (
   z.object({
     name: z
       .string()
-      .min(1, { message: t("validation.errors.assetNameRequired") })
+      .min(1, { message: t("validation:validation.errors.assetNameRequired") })
       .max(200, { message: t("validation.errors.nameMaxLength", { max: 200 }) })
       .trim(),
 
     type: z
       .string()
-      .min(1, { message: t("validation.errors.assetTypeRequired") }),
+      .min(1, { message: t("validation:validation.errors.assetTypeRequired") }),
 
     country_code: z
       .string()
-      .min(2, { message: t("validation.errors.countryRequired") })
-      .max(2, { message: t("validation.errors.countryCodeLength") })
+      .min(2, { message: t("validation:validation.errors.countryRequired") })
+      .max(2, { message: t("validation:validation.errors.countryCodeLength") })
       .optional(),
 
     estimated_value: z
       .string()
       .optional()
       .refine((val) => !val || !isNaN(Number(val)), {
-        message: t("validation.errors.valueMustBeNumber"),
+        message: t("validation:validation.errors.valueMustBeNumber"),
       })
       .refine((val) => !val || Number(val) >= 0, {
-        message: t("validation.errors.valueMustBePositive"),
+        message: t("validation:validation.errors.valueMustBePositive"),
       }),
 
     currency_code: z
       .string()
-      .length(3, { message: t("validation.errors.currencyCodeLength") })
+      .length(3, {
+        message: t("validation:validation.errors.currencyCodeLength"),
+      })
       .optional(),
 
     // Specific fields for real estate

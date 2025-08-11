@@ -30,20 +30,20 @@ const EmpatheticFormError: React.FC<EmpatheticFormErrorProps> = ({
 
     // Fallback to contextual messages based on field type
     if (field.toLowerCase().includes("email")) {
-      return t("validation.invalid_email");
+      return t("validation:validation.invalid_email");
     }
     if (field.toLowerCase().includes("phone")) {
-      return t("validation.invalid_phone");
+      return t("validation:validation.invalid_phone");
     }
     if (field.toLowerCase().includes("date")) {
-      return t("validation.invalid_date");
+      return t("validation:validation.invalid_date");
     }
     if (field.toLowerCase().includes("password")) {
-      return t("validation.password_weak");
+      return t("validation:validation.password_weak");
     }
 
     // Default message
-    return t("validation.required_field");
+    return t("validation:validation.required_field");
   };
 
   return (

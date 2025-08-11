@@ -156,7 +156,7 @@ export const GuardianView: React.FC = () => {
     } catch (error: unknown) {
       const timestamp = new Date().toISOString();
       const errorMessage =
-        error instanceof Error ? error.message : t("errors.unknown");
+        error instanceof Error ? error.message : t("errors:errors.unknown");
       const errorCode =
         error instanceof Error && "code" in error
           ? String(error.code)
@@ -174,13 +174,13 @@ export const GuardianView: React.FC = () => {
       let userMessage = t("guardianView.errors.failedToLoad");
       // Specific messages based on error type
       if (errorCode === "PGRST116") {
-        userMessage = t("errors.dataNotFound");
+        userMessage = t("errors:errors.dataNotFound");
       } else if (errorMessage?.includes("network")) {
-        userMessage = t("errors.networkError");
+        userMessage = t("errors:errors.networkError");
       } else if (errorMessage?.includes("permission")) {
-        userMessage = t("errors.permissionDenied");
+        userMessage = t("errors:errors.permissionDenied");
       } else if (errorMessage?.includes("duplicate")) {
-        userMessage = t("errors.duplicateRecord");
+        userMessage = t("errors:errors.duplicateRecord");
       }
       setError(error instanceof Error ? error : new Error(errorMessage));
       toast.error(userMessage);

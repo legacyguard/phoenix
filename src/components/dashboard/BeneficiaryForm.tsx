@@ -13,14 +13,14 @@ const createBeneficiaryFormSchema = (t: Record<string, unknown>) =>
   z.object({
     name: z
       .string()
-      .min(2, { message: t("validation.errors.nameMinLength") })
+      .min(2, { message: t("validation:validation.errors.nameMinLength") })
       .max(100, { message: t("validation.errors.nameMaxLength", { max: 100 }) })
       .trim(),
     allocation: z
       .string()
-      .min(1, { message: t("validation.errors.allocationRequired") })
+      .min(1, { message: t("validation:validation.errors.allocationRequired") })
       .refine((val) => !isNaN(Number(val)), {
-        message: t("validation.errors.allocationMustBeNumber"),
+        message: t("validation:validation.errors.allocationMustBeNumber"),
       })
       .refine(
         (val) => {
@@ -28,7 +28,7 @@ const createBeneficiaryFormSchema = (t: Record<string, unknown>) =>
           return num >= 1 && num <= 100;
         },
         {
-          message: t("validation.errors.allocationRange"),
+          message: t("validation:validation.errors.allocationRange"),
         },
       ),
   });

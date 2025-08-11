@@ -19,10 +19,12 @@ const PrivacySettings: React.FC = () => {
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
           <Shield className="h-5 w-5" />
-          {t("settings.privacySettings.privacy_settings_1")}
+          {t("settings:settings.privacySettings.privacy_settings_1")}
         </CardTitle>
         <CardDescription>
-          {t("settings.privacySettings.control_how_your_documents_are_2")}
+          {t(
+            "settings:settings.privacySettings.control_how_your_documents_are_2",
+          )}
         </CardDescription>
       </CardHeader>
       <CardContent className="space-y-6">
@@ -30,10 +32,14 @@ const PrivacySettings: React.FC = () => {
           <div className="flex items-center justify-between space-x-4">
             <div className="flex-1 space-y-1">
               <h3 className="text-sm font-medium leading-none">
-                {t("settings.privacySettings.default_processing_mode_3")}
+                {t(
+                  "settings:settings.privacySettings.default_processing_mode_3",
+                )}
               </h3>
               <p className="text-sm text-muted-foreground">
-                {t("settings.privacySettings.choose_how_documents_are_proce_4")}
+                {t(
+                  "settings:settings.privacySettings.choose_how_documents_are_proce_4",
+                )}
               </p>
             </div>
             <Switch
@@ -57,7 +63,9 @@ const PrivacySettings: React.FC = () => {
                 <Cloud className="h-5 w-5 text-blue-600 mt-0.5" />
                 <div>
                   <h4 className="font-medium text-sm">
-                    {t("settings.privacySettings.hybrid_mode_recommended_5")}
+                    {t(
+                      "settings:settings.privacySettings.hybrid_mode_recommended_5",
+                    )}
                   </h4>
                   <p className="text-sm text-muted-foreground mt-1">
                     {t(
@@ -80,7 +88,9 @@ const PrivacySettings: React.FC = () => {
                 <Lock className="h-5 w-5 text-green-600 mt-0.5" />
                 <div>
                   <h4 className="font-medium text-sm">
-                    {t("settings.privacySettings.local_only_privacy_mode_7")}
+                    {t(
+                      "settings:settings.privacySettings.local_only_privacy_mode_7",
+                    )}
                   </h4>
                   <p className="text-sm text-muted-foreground mt-1">
                     {t(
@@ -94,8 +104,10 @@ const PrivacySettings: React.FC = () => {
 
           <div className="mt-4 p-3 bg-gray-50 rounded-lg">
             <p className="text-xs text-muted-foreground">
-              <strong>{t("settings.privacySettings.note_9")}</strong>
-              {t("settings.privacySettings.you_can_always_override_this_s_10")}
+              <strong>{t("settings:settings.privacySettings.note_9")}</strong>
+              {t(
+                "settings:settings.privacySettings.you_can_always_override_this_s_10",
+              )}
             </p>
           </div>
         </div>

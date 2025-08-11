@@ -56,11 +56,11 @@ const PrivacyControlPanel: React.FC = () => {
           const settings = await response.json();
           setUserSettings(settings);
         } else {
-          toast.error(t("errors.loadingSettings"));
+          toast.error(t("errors:errors.loadingSettings"));
         }
       } catch (error) {
         console.error("Error fetching privacy settings:", error);
-        toast.error(t("errors.loadingSettings"));
+        toast.error(t("errors:errors.loadingSettings"));
       } finally {
         setLoading(false);
       }
@@ -106,11 +106,11 @@ const PrivacyControlPanel: React.FC = () => {
         toast.success(t("notifications_system.settingsSaved"));
       } else {
         const error = await response.json();
-        toast.error(error.error || t("errors.savingSettings"));
+        toast.error(error.error || t("errors:errors.savingSettings"));
       }
     } catch (error) {
       console.error("Error saving privacy settings:", error);
-      toast.error(t("errors.savingSettings"));
+      toast.error(t("errors:errors.savingSettings"));
     } finally {
       setSaving(false);
     }

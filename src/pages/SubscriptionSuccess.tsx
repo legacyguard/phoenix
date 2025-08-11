@@ -9,9 +9,11 @@ const SubscriptionSuccess = () => {
   return (
     <div className="container mx-auto py-8 text-center">
       <h1 className="text-4xl font-bold mb-4">
-        {t("notifications.subscriptionUpdated")}
+        {t("notifications:notifications.subscriptionUpdated")}
       </h1>
-      <p className="mb-6">{t("notifications.subscriptionUpdated")}</p>
+      <p className="mb-6">
+        {t("notifications:notifications.subscriptionUpdated")}
+      </p>
       <button
         onClick={() => navigate("/dashboard")}
         className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"

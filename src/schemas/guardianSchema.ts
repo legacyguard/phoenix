@@ -13,12 +13,14 @@ export const createGuardianFormSchema = (
 
     relationship: z
       .string()
-      .min(1, { message: t("validation.errors.relationshipRequired") }),
+      .min(1, {
+        message: t("validation:validation.errors.relationshipRequired"),
+      }),
 
     country_code: z
       .string()
-      .min(2, { message: t("validation.errors.countryRequired") })
-      .max(2, { message: t("validation.errors.countryCodeLength") }),
+      .min(2, { message: t("validation:validation.errors.countryRequired") })
+      .max(2, { message: t("validation:validation.errors.countryCodeLength") }),
 
     roles: z
       .array(z.string())
@@ -31,7 +33,7 @@ export const createGuardianFormSchema = (
 
     email: z
       .string()
-      .email({ message: t("validation.errors.invalidEmail") })
+      .email({ message: t("validation:validation.errors.invalidEmail") })
       .optional()
       .or(z.literal("")),
 
@@ -40,7 +42,7 @@ export const createGuardianFormSchema = (
       .regex(
         /^(\+\d{1,3})?[\s.-]?\(?\d{1,4}\)?[\s.-]?\d{1,4}[\s.-]?\d{1,4}[\s.-]?\d{1,9}$/,
         {
-          message: t("validation.errors.invalidPhone"),
+          message: t("validation:validation.errors.invalidPhone"),
         },
       )
       .optional()

@@ -89,7 +89,7 @@ export const Vault: React.FC = () => {
       }
     } catch (err) {
       console.error("Error fetching assets:", err);
-      setError(t("errors.loadingAssets"));
+      setError(t("errors:errors.loadingAssets"));
     } finally {
       setIsLoading(false);
     }

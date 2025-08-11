@@ -161,7 +161,7 @@ export const AssetDetail: React.FC = () => {
 
   const handleSave = async () => {
     if (!formData.name.trim()) {
-      toast.error(t("validation.nameRequired"));
+      toast.error(t("validation:validation.nameRequired"));
       return;
     }
 
@@ -299,7 +299,7 @@ export const AssetDetail: React.FC = () => {
             <div className="text-center">
               <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary mx-auto mb-4"></div>
               <p className="text-muted-foreground">
-                {t("errors.loadingAssets")}
+                {t("errors:errors.loadingAssets")}
               </p>
             </div>
           </div>

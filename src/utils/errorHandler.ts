@@ -45,15 +45,15 @@ export function getErrorMessage(
 ): string {
   // Specific messages based on error type
   if (error?.code === "PGRST116") {
-    return t("errors.dataNotFound");
+    return t("errors:errors.dataNotFound");
   } else if (error?.message?.includes("network")) {
-    return t("errors.networkError");
+    return t("errors:errors.networkError");
   } else if (error?.message?.includes("permission")) {
-    return t("errors.permissionDenied");
+    return t("errors:errors.permissionDenied");
   } else if (error?.message?.includes("duplicate")) {
-    return t("errors.duplicateRecord");
+    return t("errors:errors.duplicateRecord");
   }
 
   // Default to the error message or a generic error
-  return error?.message || t("errors.unknown");
+  return error?.message || t("errors:errors.unknown");
 }

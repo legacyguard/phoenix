@@ -75,7 +75,7 @@ export const AddLiabilityModal: React.FC<AddLiabilityModalProps> = ({
         data: { user },
       } = await supabaseWithRetry.auth.getUser();
       if (!user) {
-        toast.error(t("errors.notAuthenticated"));
+        toast.error(t("errors:errors.notAuthenticated"));
         return;
       }
 
@@ -95,7 +95,7 @@ export const AddLiabilityModal: React.FC<AddLiabilityModalProps> = ({
       onLiabilityAdded();
       onClose();
     } catch (error: Record<string, unknown>) {
-      toast.error(t("errors.generic"));
+      toast.error(t("errors:errors.generic"));
     } finally {
       setIsLoading(false);
     }

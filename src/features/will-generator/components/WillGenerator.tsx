@@ -123,20 +123,22 @@ export function WillGenerator({ onComplete }: WillGeneratorProps) {
     switch (currentStep) {
       case 0: // Country selection
         if (!countryCode) {
-          errors.country = t("validation.jurisdictionRequired");
+          errors.country = t("validation:validation.jurisdictionRequired");
         }
         // Add UK jurisdiction validation
         if (countryCode === "GB" && !countryCode.includes("-")) {
-          errors.ukJurisdiction = t("validation.jurisdictionRequired");
+          errors.ukJurisdiction = t(
+            "validation:validation.jurisdictionRequired",
+          );
         }
         if (!willContent.testator?.name) {
-          errors.name = t("validation.nameRequired");
+          errors.name = t("validation:validation.nameRequired");
         }
         if (!willContent.testator?.birthDate) {
-          errors.birthDate = t("validation.dobRequired");
+          errors.birthDate = t("validation:validation.dobRequired");
         }
         if (!willContent.testator?.address) {
-          errors.address = t("validation.addressRequired");
+          errors.address = t("validation:validation.addressRequired");
         }
         break;
 
@@ -151,13 +153,13 @@ export function WillGenerator({ onComplete }: WillGeneratorProps) {
           }, 0) || 0;
 
         if (totalAllocation !== 100 && totalAllocation > 0) {
-          errors.allocation = t("validation.allocationError");
+          errors.allocation = t("validation:validation.allocationError");
         }
         if (
           !willContent.beneficiaries ||
           willContent.beneficiaries.length === 0
         ) {
-          errors.beneficiaries = t("validation.beneficiaryRequired");
+          errors.beneficiaries = t("validation:validation.beneficiaryRequired");
         }
         break;
       }
@@ -166,7 +168,9 @@ export function WillGenerator({ onComplete }: WillGeneratorProps) {
         // Beneficiaries
         willContent.beneficiaries?.forEach((b, index) => {
           if (!b.name) {
-            errors[`beneficiary_${index}_name`] = t("validation.nameRequired");
+            errors[`beneficiary_${index}_name`] = t(
+              "validation:validation.nameRequired",
+            );
           }
           if (!b.relationship) {
             errors[`beneficiary_${index}_relationship`] = t(
@@ -180,7 +184,7 @@ export function WillGenerator({ onComplete }: WillGeneratorProps) {
       case 3: {
         // Executors
         if (!willContent.executor?.name) {
-          errors.executor = t("validation.executorRequired");
+          errors.executor = t("validation:validation.executorRequired");
         }
         break;
       }
@@ -196,7 +200,7 @@ export function WillGenerator({ onComplete }: WillGeneratorProps) {
         setCurrentStep(currentStep + 1);
       }
     } else {
-      toast.error(t("errors.validationFailed"));
+      toast.error(t("errors:errors.validationFailed"));
     }
   };
 
@@ -231,7 +235,7 @@ export function WillGenerator({ onComplete }: WillGeneratorProps) {
 
   const handleGenerateWill = async () => {
     if (!validateCurrentStep()) {
-      toast.error(t("errors.validationFailed"));
+      toast.error(t("errors:errors.validationFailed"));
       return;
     }
 
@@ -253,7 +257,7 @@ export function WillGenerator({ onComplete }: WillGeneratorProps) {
       toast.success(t("ui.willGenerated"));
       onComplete?.("generated-will-id");
     } catch (error) {
-      toast.error(t("errors.generationFailed"));
+      toast.error(t("errors:errors.generationFailed"));
     }
   };
 

@@ -160,7 +160,7 @@ const Dashboard = () => {
           }
         }
       } catch (err) {
-        setError(t("errors.failedToFetchStatus"));
+        setError(t("errors:errors.failedToFetchStatus"));
       } finally {
         setLoading(false);
       }
@@ -289,7 +289,7 @@ const Dashboard = () => {
       );
       setProgressStatus(status);
     } catch (err) {
-      setError(t("errors.failedToFetchStatus"));
+      setError(t("errors:errors.failedToFetchStatus"));
     }
   };
 

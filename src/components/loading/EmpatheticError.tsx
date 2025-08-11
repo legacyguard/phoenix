@@ -42,7 +42,7 @@ const EmpatheticError: React.FC<EmpatheticErrorProps> = ({
             {showReassurance && (
               <div className="flex items-center space-x-2 text-sm text-gray-600">
                 <Heart className="w-4 h-4 text-primary" />
-                <span>{t("errors.reassurance.data_safe")}</span>
+                <span>{t("errors:errors.reassurance.data_safe")}</span>
               </div>
             )}
 
@@ -54,7 +54,7 @@ const EmpatheticError: React.FC<EmpatheticErrorProps> = ({
                   className="flex items-center space-x-2"
                 >
                   <RefreshCw className="w-4 h-4" />
-                  <span>{t("errors.reassurance.try_again")}</span>
+                  <span>{t("errors:errors.reassurance.try_again")}</span>
                 </Button>
               )}
               {onDismiss && (

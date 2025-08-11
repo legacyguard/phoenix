@@ -9,7 +9,7 @@ export const getValidationMessage = (
 
   const messages: Record<string, string> = {
     // Name validations
-    "name.min": t("validation.errors.nameMinLength"),
+    "name.min": t("validation:validation.errors.nameMinLength"),
     "name.max": t("validation.errors.nameMaxLength", {
       max: params?.max || 100,
     }),
@@ -18,10 +18,10 @@ export const getValidationMessage = (
     "field.required": t("validation.errors.fieldRequired", {
       field: params?.field,
     }),
-    "country.required": t("validation.errors.countryRequired"),
+    "country.required": t("validation:validation.errors.countryRequired"),
 
     // Country code
-    "countryCode.length": t("validation.errors.countryCodeLength"),
+    "countryCode.length": t("validation:validation.errors.countryCodeLength"),
 
     // Selections
     "select.min": t("validation.errors.selectAtLeastOne", {
@@ -33,15 +33,15 @@ export const getValidationMessage = (
     }),
 
     // Email & Phone
-    "email.invalid": t("validation.errors.invalidEmail"),
-    "phone.invalid": t("validation.errors.invalidPhone"),
+    "email.invalid": t("validation:validation.errors.invalidEmail"),
+    "phone.invalid": t("validation:validation.errors.invalidPhone"),
 
     // Numbers
-    "value.number": t("validation.errors.valueMustBeNumber"),
-    "value.positive": t("validation.errors.valueMustBePositive"),
+    "value.number": t("validation:validation.errors.valueMustBeNumber"),
+    "value.positive": t("validation:validation.errors.valueMustBePositive"),
 
     // Currency
-    "currency.length": t("validation.errors.currencyCodeLength"),
+    "currency.length": t("validation:validation.errors.currencyCodeLength"),
 
     // Character limits
     "field.maxLength": t("validation.errors.maxCharacters", {
@@ -50,12 +50,14 @@ export const getValidationMessage = (
     }),
 
     // Allocation
-    "allocation.required": t("validation.errors.allocationRequired"),
-    "allocation.number": t("validation.errors.allocationMustBeNumber"),
-    "allocation.range": t("validation.errors.allocationRange"),
+    "allocation.required": t("validation:validation.errors.allocationRequired"),
+    "allocation.number": t(
+      "validation:validation.errors.allocationMustBeNumber",
+    ),
+    "allocation.range": t("validation:validation.errors.allocationRange"),
 
     // Dates
-    "expiration.future": t("validation.errors.expirationDateFuture"),
+    "expiration.future": t("validation:validation.errors.expirationDateFuture"),
 
     // Tags
     "tags.max": t("validation.errors.maxTags", { max: params?.max }),
@@ -69,11 +71,11 @@ export const getValidationMessage = (
     }),
 
     // General errors
-    "error.unknown": t("validation.errors.unknownError"),
-    "error.dataNotFound": t("validation.errors.dataNotFound"),
-    "error.connection": t("validation.errors.connectionError"),
-    "error.permission": t("validation.errors.permissionDenied"),
-    "error.duplicate": t("validation.errors.duplicateRecord"),
+    "error.unknown": t("validation:validation.errors.unknownError"),
+    "error.dataNotFound": t("validation:validation.errors.dataNotFound"),
+    "error.connection": t("validation:validation.errors.connectionError"),
+    "error.permission": t("validation:validation.errors.permissionDenied"),
+    "error.duplicate": t("validation:validation.errors.duplicateRecord"),
   };
 
   return messages[key] || key;

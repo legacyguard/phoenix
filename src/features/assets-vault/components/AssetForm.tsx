@@ -68,8 +68,10 @@ export const AssetForm: React.FC<AssetFormProps> = ({
           shape[field.name] = z.preprocess(
             (val) => (val === "" ? undefined : Number(val)),
             z.number({
-              required_error: t("validation.errors.requiredField"),
-              invalid_type_error: t("validation.errors.mustBeNumber"),
+              required_error: t("validation:validation.errors.requiredField"),
+              invalid_type_error: t(
+                "validation:validation.errors.mustBeNumber",
+              ),
             }),
           );
         } else {
@@ -77,7 +79,9 @@ export const AssetForm: React.FC<AssetFormProps> = ({
             (val) => (val === "" ? undefined : Number(val)),
             z
               .number({
-                invalid_type_error: t("validation.errors.mustBeNumber"),
+                invalid_type_error: t(
+                  "validation:validation.errors.mustBeNumber",
+                ),
               })
               .optional(),
           );
@@ -86,7 +90,7 @@ export const AssetForm: React.FC<AssetFormProps> = ({
         let zodField = z.string();
         if (field.required) {
           zodField = zodField.min(1, {
-            message: t("validation.errors.requiredField"),
+            message: t("validation:validation.errors.requiredField"),
           });
         }
         shape[field.name] = zodField;

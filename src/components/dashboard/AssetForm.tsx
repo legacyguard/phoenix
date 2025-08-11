@@ -36,7 +36,7 @@ export const AssetForm: React.FC<AssetFormProps> = ({
   const assetFormSchema = z.object({
     name: z
       .string()
-      .min(1, { message: t("validation.errors.assetNameRequired") })
+      .min(1, { message: t("validation:validation.errors.assetNameRequired") })
       .max(200, {
         message: t("validation.errors.maxCharacters", {
           field: "Name",
@@ -46,7 +46,7 @@ export const AssetForm: React.FC<AssetFormProps> = ({
       .trim(),
     type: z
       .string()
-      .min(1, { message: t("validation.errors.assetTypeRequired") })
+      .min(1, { message: t("validation:validation.errors.assetTypeRequired") })
       .trim(),
   });
 

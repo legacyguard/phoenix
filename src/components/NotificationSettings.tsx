@@ -57,7 +57,7 @@ export function NotificationSettings() {
 
   const handleEnableNotifications = async () => {
     if (!user?.id) {
-      toast.error(t("errors.savingSettings"));
+      toast.error(t("errors:errors.savingSettings"));
       return;
     }
 
@@ -84,7 +84,7 @@ export function NotificationSettings() {
       }
     } catch (error) {
       console.error("Error enabling notifications:", error);
-      toast.error(t("errors.savingSettings"));
+      toast.error(t("errors:errors.savingSettings"));
     } finally {
       setIsLoading(false);
     }
@@ -99,7 +99,7 @@ export function NotificationSettings() {
       setIsEnabled(false);
     } catch (error) {
       console.error("Error disabling notifications:", error);
-      toast.error(t("errors.savingSettings"));
+      toast.error(t("errors:errors.savingSettings"));
     } finally {
       setIsLoading(false);
     }
@@ -304,7 +304,7 @@ export function NotificationSettings() {
                   );
                   toast.success(t("notifications_system.notificationsSaved"));
                 } catch (error) {
-                  toast.error(t("errors.savingSettings"));
+                  toast.error(t("errors:errors.savingSettings"));
                 }
               }}
             >

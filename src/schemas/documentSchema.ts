@@ -8,17 +8,23 @@ export const createDocumentFormSchema = (
   z.object({
     name: z
       .string()
-      .min(1, { message: t("validation.errors.documentNameRequired") })
+      .min(1, {
+        message: t("validation:validation.errors.documentNameRequired"),
+      })
       .max(200, { message: t("validation.errors.nameMaxLength", { max: 200 }) })
       .trim(),
 
     type: z
       .string()
-      .min(1, { message: t("validation.errors.documentTypeRequired") }),
+      .min(1, {
+        message: t("validation:validation.errors.documentTypeRequired"),
+      }),
 
     country_code: z
       .string()
-      .length(2, { message: t("validation.errors.countryCodeLength") }),
+      .length(2, {
+        message: t("validation:validation.errors.countryCodeLength"),
+      }),
 
     expiration_date: z
       .date()
@@ -30,7 +36,7 @@ export const createDocumentFormSchema = (
           return date > new Date();
         },
         {
-          message: t("validation.errors.expirationDateFuture"),
+          message: t("validation:validation.errors.expirationDateFuture"),
         },
       ),
 

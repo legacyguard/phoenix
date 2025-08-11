@@ -119,9 +119,9 @@ export const DocumentUpload: React.FC<DocumentUploadProps> = ({
   // Debounced validation for document name
   const validateDocumentName = useDebouncedCallback((name: string) => {
     if (!name.trim()) {
-      setNameError(t("validation.nameRequired"));
+      setNameError(t("validation:validation.nameRequired"));
     } else if (name.trim().length < 2) {
-      setNameError(t("validation.nameMinLength"));
+      setNameError(t("validation:validation.nameMinLength"));
     } else if (name.trim().length > 255) {
       setNameError(t("validation.nameMaxLength", { max: 255 }));
     } else {
@@ -313,7 +313,7 @@ export const DocumentUpload: React.FC<DocumentUploadProps> = ({
       return data.path;
     } catch (error: Record<string, unknown>) {
       console.error("Upload error:", error);
-      toast.error(t("errors.uploadFailed"));
+      toast.error(t("errors:errors.uploadFailed"));
       return null;
     } finally {
       setIsUploading(false);
@@ -323,7 +323,7 @@ export const DocumentUpload: React.FC<DocumentUploadProps> = ({
 
   const handleSaveDocument = async () => {
     if (!uploadedFilePath || !documentName.trim()) {
-      toast.error(t("validation.nameRequired"));
+      toast.error(t("validation:validation.nameRequired"));
       return;
     }
 
@@ -332,7 +332,7 @@ export const DocumentUpload: React.FC<DocumentUploadProps> = ({
         data: { user },
       } = await supabaseWithRetry.auth.getUser();
       if (!user) {
-        toast.error(t("errors.accessDenied"));
+        toast.error(t("errors:errors.accessDenied"));
         return;
       }
 
@@ -375,7 +375,7 @@ export const DocumentUpload: React.FC<DocumentUploadProps> = ({
       onDocumentUploaded(documentData);
     } catch (error: Record<string, unknown>) {
       console.error("Save document error:", error);
-      toast.error(t("errors.uploadFailed"));
+      toast.error(t("errors:errors.uploadFailed"));
     }
   };
 

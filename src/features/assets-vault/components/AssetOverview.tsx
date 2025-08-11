@@ -130,7 +130,7 @@ export const AssetOverview: React.FC = () => {
       }
     } catch (error) {
       console.error("[AssetOverview] Error loading data:", error);
-      toast.error(t("errors.loadingAssets"));
+      toast.error(t("errors:errors.loadingAssets"));
     } finally {
       setLoading(false);
     }

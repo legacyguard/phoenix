@@ -36,7 +36,7 @@ export const useEmpatheticError = <T>(options: EmpatheticErrorOptions = {}) => {
 
       // Validation errors
       if (error.message.includes("validation")) {
-        return t("validation.required_field");
+        return t("validation:validation.required_field");
       }
 
       // Context-specific errors

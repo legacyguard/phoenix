@@ -415,7 +415,9 @@ const DocumentUploadFlow: React.FC<DocumentUploadFlowProps> = ({
                 </div>
                 <div className="flex-1">
                   <h4 className="font-semibold text-sm md:text-base text-gray-900">
-                    {t("settings.privacySettings.hybrid_mode_recommended_5")}
+                    {t(
+                      "settings:settings.privacySettings.hybrid_mode_recommended_5",
+                    )}
                   </h4>
                   <p className="text-xs md:text-sm text-gray-600 mt-1">
                     {t("documentUploadFlow.combines_local_and_cloud_ai_fo_6")}
@@ -448,7 +450,9 @@ const DocumentUploadFlow: React.FC<DocumentUploadFlowProps> = ({
                 </div>
                 <div className="flex-1">
                   <h4 className="font-semibold text-sm md:text-base text-gray-900">
-                    {t("settings.privacySettings.local_only_privacy_mode_7")}
+                    {t(
+                      "settings:settings.privacySettings.local_only_privacy_mode_7",
+                    )}
                   </h4>
                   <p className="text-xs md:text-sm text-gray-600 mt-1">
                     {t("documentUploadFlow.processes_your_document_entire_8")}

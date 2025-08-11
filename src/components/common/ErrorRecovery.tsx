@@ -32,14 +32,14 @@ export const ErrorRecovery: React.FC<ErrorRecoveryProps> = ({
 
     // Check for specific error types
     if (error.message.includes("network")) {
-      return t("errors.networkError");
+      return t("errors:errors.networkError");
     } else if (error.message.includes("permission")) {
-      return t("errors.permissionDenied");
+      return t("errors:errors.permissionDenied");
     } else if (error.message.includes("not found")) {
-      return t("errors.dataNotFound");
+      return t("errors:errors.dataNotFound");
     }
 
-    return t("errors.unknown");
+    return t("errors:errors.unknown");
   };
 
   return (
