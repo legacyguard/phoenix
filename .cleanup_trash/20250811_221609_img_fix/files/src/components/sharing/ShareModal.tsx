@@ -290,7 +290,7 @@ export function ShareModal({
               <TabsContent value="qr" className="space-y-4">
                 {qrCode && (
                   <div className="flex justify-center">
-                    <img src={qrCode} alt="QR Code" className="max-w-[200px]" / loading="lazy" decoding="async">
+                    <img src={qrCode} alt="QR Code" className="max-w-[200px]" />
                   </div>
                 )}
                 <p className="text-sm text-center text-muted-foreground">
