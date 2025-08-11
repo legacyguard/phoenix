@@ -49,7 +49,8 @@
     "build:pwa": "vite build --config vite.config.pwa.ts",
     "check:img": "node scripts/ci/img-guard.cjs",
     "check:img:strict": "node scripts/ci/img-guard.cjs --strict",
-    "img:baseline": "node scripts/ci/img-guard.cjs --write-baseline"
+    "img:baseline": "node scripts/ci/img-guard.cjs --write-baseline",
+    "img:autofix": "node scripts/tools/img-autofix.cjs"
   },
   "dependencies": {
     "@clerk/clerk-react": "^5.36.0",

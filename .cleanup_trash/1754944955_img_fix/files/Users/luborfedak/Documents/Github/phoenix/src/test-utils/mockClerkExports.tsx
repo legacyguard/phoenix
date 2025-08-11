@@ -110,7 +110,7 @@ export const UserButton: React.FC<{ afterSignOutUrl?: string }> = ({
       <img
         src={
           user.user.imageUrl ||
-        loading loading="lazy" decoding="async"="lazy"
+        loading="lazy"
         decoding="async"
           `https://ui-avatars.com/api/?name=${user.user.firstName}+${user.user.lastName}`
         }

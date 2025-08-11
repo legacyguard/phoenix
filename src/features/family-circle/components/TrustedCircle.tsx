@@ -186,6 +186,8 @@ export const TrustedCircle: React.FC = () => {
               <img
                 src={person.avatarUrl || API_URLS.placeholder}
                 alt={person.name}
+                loading="lazy"
+                decoding="async"
                 className="h-12 w-12 rounded-full"
               />
               <div className="ml-4">

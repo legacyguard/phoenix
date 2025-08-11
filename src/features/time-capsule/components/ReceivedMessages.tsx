@@ -228,6 +228,8 @@ export const ReceivedMessages: React.FC = () => {
                       src={selectedMessage.attachmentUrl}
                       alt={selectedMessage.title}
                       className="w-full h-auto"
+                      loading="lazy"
+                      decoding="async"
                     />
                   </div>
                 )}
