@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import type { AssistantMessage as AssistantMessageType } from "./PersonalAssistant";
+import type { AssistantMessage as AssistantMessageType } from "./types";
 
 interface AssistantMessageProps {
   message: AssistantMessageType;

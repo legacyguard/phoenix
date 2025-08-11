@@ -15,28 +15,7 @@ import { useAssistant } from "@/hooks/useAssistant";
 import { AssistantAvatar } from "./AssistantAvatar";
 import { AssistantMessage } from "./AssistantMessage";
 import { AssistantActions } from "./AssistantActions";
-
-export interface AssistantMessage {
-  type: "welcome" | "guidance" | "encouragement" | "celebration" | "support";
-  content: string;
-  icon?: React.ElementType;
-  actionSuggestion?: {
-    text: string;
-    action: () => void;
-    priority: "low" | "medium" | "high";
-  };
-}
-
-export interface Recommendation {
-  id: string;
-  title: string;
-  description: string;
-  timeEstimate: string;
-  priority: "high" | "medium" | "low";
-  familyBenefit: string;
-  action: () => void;
-  icon?: React.ElementType;
-}
+import type { AssistantMessage as AssistantMessageType, Recommendation } from "./types";
 
 interface PersonalAssistantProps {
   context: string;
@@ -58,7 +37,7 @@ export const PersonalAssistant: React.FC<PersonalAssistantProps> = ({
     updateContext,
   } = useAssistant();
 
-  const [currentMessage, setCurrentMessage] = useState<AssistantMessage | null>(
+  const [currentMessage, setCurrentMessage] = useState<AssistantMessageType | null>(
     null,
   );
   const [suggestions, setSuggestions] = useState<Recommendation[]>([]);
