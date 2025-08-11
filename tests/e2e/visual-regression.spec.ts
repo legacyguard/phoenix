@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { loginAsFreeUser, loginAsPremiumUser, bypassPasswordWall, acceptCookieConsent } from './utils/auth';
+import { loginAsFreeUser, loginAsPremiumUser, acceptCookieConsent } from './utils/auth';
 
 test.describe('Visual Regression Tests', () => {
   // Configure visual regression settings for this suite
@@ -10,7 +10,7 @@ test.describe('Visual Regression Tests', () => {
 
   test.beforeEach(async ({ page }) => {
     // Ensure consistent starting state
-    await bypassPasswordWall(page);
+    // Password wall has been removed
   });
 
   test('should match the snapshot for the Landing page', async ({ page }) => {

@@ -10,12 +10,11 @@ import { useFeatureFlag } from '@/config/features';
 
 interface UserFlowManagerProps {
   children: React.ReactNode;
-  isPasswordWallAuthenticated?: boolean;
 }
 
 type FlowState = 'loading' | 'onboarding' | 'first_time_guide' | 'dashboard';
 
-export const UserFlowManager: React.FC<UserFlowManagerProps> = ({ children, isPasswordWallAuthenticated = false }) => {
+export const UserFlowManager: React.FC<UserFlowManagerProps> = ({ children }) => {
   const { user, isLoaded } = useUser();
   const { t } = useTranslation('ui-common');
   const { trackAction } = useAnalytics({ componentName: 'UserFlowManager', userJourneyStage: 'authentication' });
@@ -31,7 +30,6 @@ export const UserFlowManager: React.FC<UserFlowManagerProps> = ({ children, isPa
   console.log('UserFlowManager state:', {
     isLoaded,
     user: user?.id,
-    isPasswordWallAuthenticated,
     flowState,
     useRespectfulOnboarding
   });

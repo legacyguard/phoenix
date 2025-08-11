@@ -20,10 +20,8 @@ import { FeatureFlagPanel } from "@/components/debug/FeatureFlagPanel";
 import { ConsentManager } from "./components/privacy/ConsentManager";
 import { Loader2 } from "lucide-react";
 import { usePerformanceMonitoring } from "@/hooks/usePerformanceMonitoring";
-import PasswordWall from "@/components/PasswordWall";
 import { UserFlowManager } from "@/components/auth/UserFlowManager";
 import { FeatureFlagProvider } from "@/config/features";
-import { PasswordWallProvider } from "@/components/auth/PasswordWallProvider";
 import { AuthenticatedRedirect } from "@/components/auth/AuthenticatedRedirect";
 import { logEnvironmentInfo } from "@/utils/env-check";
 
@@ -113,197 +111,191 @@ const App = () => {
 const AppContent = () => {
   const { t } = useTranslation('ui-common');
   const { user } = useUser();
-  const [isPasswordWallAuthenticated, setIsPasswordWallAuthenticated] = useState(false);
 
   return (
-    <PasswordWallProvider onAuthenticationChange={setIsPasswordWallAuthenticated}>
-      <PasswordWall>
-        <FeatureFlagProvider userId={user?.id}>
-          <ErrorBoundary showDetails={true}>
-            <UserFlowManager isPasswordWallAuthenticated={isPasswordWallAuthenticated}>
-              <GeoLocationProvider>
-              <>
+    <FeatureFlagProvider userId={user?.id}>
+      <ErrorBoundary showDetails={true}>
+        <UserFlowManager>
+          <GeoLocationProvider>
+            <>
               <Suspense fallback={<PageLoader />}>
-          <Routes>
-        {/* Public routes with marketing layout */}
-        <Route path="/" element={
-          <MarketingLayout>
-            <AuthenticatedRedirect>
-              <Landing />
-            </AuthenticatedRedirect>
-          </MarketingLayout>
-        } />
-        <Route path="/login" element={<MarketingLayout><Login /></MarketingLayout>} />
-        <Route path="/register" element={<MarketingLayout><Register /></MarketingLayout>} />
-        <Route path="/privacy-policy" element={<MarketingLayout><PrivacyPolicy /></MarketingLayout>} />
-        <Route path="/cookies" element={<MarketingLayout><CookiePolicy /></MarketingLayout>} />
-        <Route path="/terms-of-service" element={<MarketingLayout><TermsOfService /></MarketingLayout>} />
-        <Route path="/refund-policy" element={<MarketingLayout><RefundPolicy /></MarketingLayout>} />
-        <Route path="/pricing" element={<MarketingLayout><Pricing /></MarketingLayout>} />
-              
-              {/* Protected Application routes with full layout */}
-              <Route path="/dashboard" element={
-                <SignedIn>
-                  <MainLayout />
-                </SignedIn>
-              }>
-                <Route index element={<Dashboard />} />
-              </Route>
-              <Route path="/assets" element={
-                <SignedIn>
-                  <MainLayout />
-                </SignedIn>
-              }>
-                <Route index element={<AssetOverview />} />
-                <Route path=":assetId" element={<AssetDetail />} />
-              </Route>
-              <Route path="/subscriptions" element={
-                <SignedIn>
-                  <MainLayout />
-                </SignedIn>
-              }>
-                <Route index element={<SubscriptionDashboard />} />
-              </Route>
-              <Route path="/manual" element={
-                <SignedIn>
-                  <MainLayout />
-                </SignedIn>
-              }>
-                <Route index element={<Manual />} />
-              </Route>
-              <Route path="/will" element={
-                <SignedIn>
-                  <MainLayout />
-                </SignedIn>
-              }>
-                <Route index element={<Will />} />
-              </Route>
-              <Route path="/vault" element={
-                <SignedIn>
-                  <MainLayout />
-                </SignedIn>
-              }>
-                <Route index element={<Vault />} />
-              </Route>
-              <Route path="/trusted-circle" element={
-                <SignedIn>
-                  <MainLayout />
-                </SignedIn>
-              }>
-                <Route index element={<TrustedCircle />} />
-              </Route>
-              <Route path="/user-profile" element={
-                <SignedIn>
-                  <MainLayout />
-                </SignedIn>
-              }>
-                <Route index element={
-                  <div className="container mx-auto px-4 lg:px-8 py-8">
-                    <UserProfile />
-                  </div>
-                } />
-              </Route>
-              <Route path="/help" element={
-                <SignedIn>
-                  <MainLayout />
-                </SignedIn>
-              }>
-                <Route index element={<Help />} />
-              </Route>
-              
-              {/* Family Hub */}
-              <Route path="/family-hub" element={
-                <SignedIn>
-                  <MainLayout />
-                </SignedIn>
-              }>
-                <Route index element={<FamilyHub />} />
-              </Route>
-              
-              {/* Legacy Letters */}
-              <Route path="/legacy-letters" element={
-                <SignedIn>
-                  <MainLayout />
-                </SignedIn>
-              }>
-                <Route index element={<LegacyLetters />} />
-              </Route>
-              
-              {/* Demo routes - only in development */}
-              {import.meta.env.DEV && (
-                <>
-                  <Route path="/test-error" element={
+                <Routes>
+                  {/* Public routes with marketing layout */}
+                  <Route path="/" element={
+                    <MarketingLayout>
+                      <AuthenticatedRedirect>
+                        <Landing />
+                      </AuthenticatedRedirect>
+                    </MarketingLayout>
+                  } />
+                  <Route path="/login" element={<MarketingLayout><Login /></MarketingLayout>} />
+                  <Route path="/register" element={<MarketingLayout><Register /></MarketingLayout>} />
+                  <Route path="/privacy-policy" element={<MarketingLayout><PrivacyPolicy /></MarketingLayout>} />
+                  <Route path="/cookies" element={<MarketingLayout><CookiePolicy /></MarketingLayout>} />
+                  <Route path="/terms-of-service" element={<MarketingLayout><TermsOfService /></MarketingLayout>} />
+                  <Route path="/refund-policy" element={<MarketingLayout><RefundPolicy /></MarketingLayout>} />
+                  <Route path="/pricing" element={<MarketingLayout><Pricing /></MarketingLayout>} />
+                  
+                  {/* Protected Application routes with full layout */}
+                  <Route path="/dashboard" element={
                     <SignedIn>
                       <MainLayout />
                     </SignedIn>
                   }>
-                    <Route index element={<TestError />} />
+                    <Route index element={<Dashboard />} />
+                  </Route>
+                  <Route path="/assets" element={
+                    <SignedIn>
+                      <MainLayout />
+                    </SignedIn>
+                  }>
+                    <Route index element={<AssetOverview />} />
+                    <Route path=":assetId" element={<AssetDetail />} />
+                  </Route>
+                  <Route path="/subscriptions" element={
+                    <SignedIn>
+                      <MainLayout />
+                    </SignedIn>
+                  }>
+                    <Route index element={<SubscriptionDashboard />} />
+                  </Route>
+                  <Route path="/manual" element={
+                    <SignedIn>
+                      <MainLayout />
+                    </SignedIn>
+                  }>
+                    <Route index element={<Manual />} />
+                  </Route>
+                  <Route path="/will" element={
+                    <SignedIn>
+                      <MainLayout />
+                    </SignedIn>
+                  }>
+                    <Route index element={<Will />} />
+                  </Route>
+                  <Route path="/vault" element={
+                    <SignedIn>
+                      <MainLayout />
+                    </SignedIn>
+                  }>
+                    <Route index element={<Vault />} />
+                  </Route>
+                  <Route path="/trusted-circle" element={
+                    <SignedIn>
+                      <MainLayout />
+                    </SignedIn>
+                  }>
+                    <Route index element={<TrustedCircle />} />
+                  </Route>
+                  <Route path="/user-profile" element={
+                    <SignedIn>
+                      <MainLayout />
+                    </SignedIn>
+                  }>
+                    <Route index element={
+                      <div className="container mx-auto px-4 lg:px-8 py-8">
+                        <UserProfile />
+                      </div>
+                    } />
+                  </Route>
+                  <Route path="/help" element={
+                    <SignedIn>
+                      <MainLayout />
+                    </SignedIn>
+                  }>
+                    <Route index element={<Help />} />
                   </Route>
                   
-                  <Route path="/ocr-demo" element={
+                  {/* Family Hub */}
+                  <Route path="/family-hub" element={
                     <SignedIn>
                       <MainLayout />
                     </SignedIn>
                   }>
-                    <Route index element={<OCRDemo />} />
+                    <Route index element={<FamilyHub />} />
                   </Route>
-                  <Route path="/upload-demo" element={
+                  
+                  {/* Legacy Letters */}
+                  <Route path="/legacy-letters" element={
                     <SignedIn>
                       <MainLayout />
                     </SignedIn>
                   }>
-                    <Route index element={<UploadDemo />} />
+                    <Route index element={<LegacyLetters />} />
                   </Route>
-                </>
-              )}
-            <Route path="/analytics" element={
-                <SignedIn>
-                  <MainLayout />
-                </SignedIn>
-              }>
-                <Route index element={<Analytics />} />
-              </Route>
-              
-              {/* Admin routes */}
-              <Route path="/admin/analytics" element={
-                <AdminRoute>
-                  <MainLayout />
-                </AdminRoute>
-              }>
-                <Route index element={<AdminAnalytics />} />
-              </Route>
-              
-              
-              {/* Guardian routes */}
-              <Route path="/invite/:inviteToken" element={<MarketingLayout><InviteAcceptance /></MarketingLayout>} />
-              <Route path="/guardian-view" element={
-                <SignedIn>
-                  <MainLayout />
-                </SignedIn>
-              }>
-                <Route index element={<GuardianView />} />
-              </Route>
+                  
+                  {/* Demo routes - only in development */}
+                  {import.meta.env.DEV && (
+                    <>
+                      <Route path="/test-error" element={
+                        <SignedIn>
+                          <MainLayout />
+                        </SignedIn>
+                      }>
+                        <Route index element={<TestError />} />
+                      </Route>
+                      
+                      <Route path="/ocr-demo" element={
+                        <SignedIn>
+                          <MainLayout />
+                        </SignedIn>
+                      }>
+                        <Route index element={<OCRDemo />} />
+                      </Route>
+                      <Route path="/upload-demo" element={
+                        <SignedIn>
+                          <MainLayout />
+                        </SignedIn>
+                      }>
+                        <Route index element={<UploadDemo />} />
+                      </Route>
+                    </>
+                  )}
+                  <Route path="/analytics" element={
+                    <SignedIn>
+                      <MainLayout />
+                    </SignedIn>
+                  }>
+                    <Route index element={<Analytics />} />
+                  </Route>
+                  
+                  {/* Admin routes */}
+                  <Route path="/admin/analytics" element={
+                    <AdminRoute>
+                      <MainLayout />
+                    </AdminRoute>
+                  }>
+                    <Route index element={<AdminAnalytics />} />
+                  </Route>
+                  
+                  {/* Guardian routes */}
+                  <Route path="/invite/:inviteToken" element={<MarketingLayout><InviteAcceptance /></MarketingLayout>} />
+                  <Route path="/guardian-view" element={
+                    <SignedIn>
+                      <MainLayout />
+                    </SignedIn>
+                  }>
+                    <Route index element={<GuardianView />} />
+                  </Route>
 
-        /* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */
-    <Route path="*" element={<MarketingLayout><NotFound /></MarketingLayout>} />
-      </Routes>
-                  </Suspense>
-      
-      {/* GDPR Consent Manager */}
-      <ConsentManager />
-      
-      {/* Error Debug Panel - only in development */}
-      <ErrorDebugPanel />
-      
-      {/* Feature Flag Panel - only in development */}
-      <FeatureFlagPanel />
-    </>
-              </GeoLocationProvider>
-            </UserFlowManager>
-          </ErrorBoundary>
-        </FeatureFlagProvider>
-      </PasswordWall>
-    </PasswordWallProvider>
+                  {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+                  <Route path="*" element={<MarketingLayout><NotFound /></MarketingLayout>} />
+                </Routes>
+              </Suspense>
+              
+              {/* GDPR Consent Manager */}
+              <ConsentManager />
+              
+              {/* Error Debug Panel - only in development */}
+              <ErrorDebugPanel />
+              
+              {/* Feature Flag Panel - only in development */}
+              <FeatureFlagPanel />
+            </>
+          </GeoLocationProvider>
+        </UserFlowManager>
+      </ErrorBoundary>
+    </FeatureFlagProvider>
   );
 };
 

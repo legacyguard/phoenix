@@ -1,0 +1,26 @@
+vite
+VITE_RESPECTFUL_ONBOARDING=true vite
+vite build
+vite build --mode development
+eslint .
+vite preview
+vitest
+vitest run
+vitest watch
+vitest run --coverage
+vitest --ui
+node scripts/test-error-logging.js
+node audit-translations.js
+playwright test
+playwright test --ui
+playwright test --headed
+playwright test --debug
+vitest will
+tsx scripts/run-migrations.ts
+NODE_ENV=production tsx scripts/run-migrations.ts
+tsx scripts/backup-wills.ts
+NODE_ENV=production tsx scripts/backup-wills.ts
+docker build -t legacyguard/phoenix:latest .
+docker-compose up -d
+docker-compose down
+npm run build && npm run docker:build && npm run docker:push
