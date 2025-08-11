@@ -200,7 +200,7 @@ export function SmartUploadZone({
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
           <Button onClick={openFilePicker} variant="default" className="gap-2">
             <FileText className="h-4 w-4" />
-            {t("assets.zone.chooseFiles")}
+            {t("assets:zone.chooseFiles")}
           </Button>
 
           {/* Show camera button on mobile */}
@@ -210,7 +210,7 @@ export function SmartUploadZone({
             className="gap-2 sm:hidden"
           >
             <Camera className="h-4 w-4" />
-            {t("assets.zone.takePhoto")}
+            {t("assets:zone.takePhoto")}
           </Button>
         </div>
 
@@ -225,7 +225,7 @@ export function SmartUploadZone({
         {preferences.privacy === "local" && (
           <div className="mt-4 inline-flex items-center gap-2 px-3 py-1 bg-green-100 text-green-800 rounded-full text-xs font-medium">
             <div className="w-2 h-2 bg-green-600 rounded-full" />
-            {t("assets.zone.processingLocally")}
+            {t("assets:zone.processingLocally")}
           </div>
         )}
       </div>
@@ -236,10 +236,10 @@ export function SmartUploadZone({
           <div className="text-center">
             <Upload className="h-12 w-12 text-primary mx-auto mb-3 animate-bounce" />
             <p className="text-lg font-semibold text-primary">
-              {t("assets.zone.dragOverlay.title")}
+              {t("assets:zone.dragOverlay.title")}
             </p>
             <p className="text-sm text-primary/70">
-              {t("assets.zone.dragOverlay.subtitle")}
+              {t("assets:zone.dragOverlay.subtitle")}
             </p>
           </div>
         </div>
