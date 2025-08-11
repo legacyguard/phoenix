@@ -34,7 +34,8 @@
     "check:cycles": "node scripts/ci/cycles-guard.cjs",
     "check:exports": "node scripts/ci/exports-guard.cjs",
     "check:all": "npm run -s check:i18n && npm run -s check:cycles && npm run -s check:exports",
-    "ci": "npm run -s lint && npm run -s typecheck && npm run -s test:ci && npm run -s check:all"
+    "ci": "npm run -s lint && npm run -s typecheck && npm run -s test:ci && npm run -s check:all",
+    "check:i18n:strict": "node scripts/ci/i18n-guard.cjs --strict"
   },
   "dependencies": {
     "@clerk/clerk-react": "^5.36.0",
