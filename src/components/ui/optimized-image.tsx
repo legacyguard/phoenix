@@ -8,6 +8,8 @@ interface OptimizedImageProps
   fallbackSrc?: string;
   loading?: "lazy" | "eager";
   priority?: boolean;
+  width?: number;
+  height?: number;
   onLoad?: () => void;
   onError?: () => void;
 }
@@ -18,6 +20,8 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   fallbackSrc,
   loading = "lazy",
   priority = false,
+  width,
+  height,
   onLoad,
   onError,
   className,
@@ -130,7 +134,11 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
           ref={imgRef}
           src={optimizedSrc}
           alt={alt}
+          width={width}
+          height={height}
           loading={priority ? "eager" : "lazy"}
+          decoding={priority ? "sync" : "async"}
+          fetchpriority={priority ? "high" : undefined}
           onLoad={handleLoad}
           onError={handleError}
           className={cn(
@@ -140,6 +148,10 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
           )}
           srcSet={generateSrcSet(optimizedSrc)}
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          style={{
+            aspectRatio: (width && height) ? `${width} / ${height}` : undefined,
+            ...props.style
+          }}
           {...props}
         />
       )}
@@ -161,6 +173,8 @@ interface OptimizedPictureProps {
   className?: string;
   loading?: "lazy" | "eager";
   priority?: boolean;
+  width?: number;
+  height?: number;
 }
 
 export const OptimizedPicture: React.FC<OptimizedPictureProps> = ({
@@ -169,6 +183,8 @@ export const OptimizedPicture: React.FC<OptimizedPictureProps> = ({
   className,
   loading = "lazy",
   priority = false,
+  width,
+  height,
 }) => {
   return (
     <picture>
@@ -186,6 +202,8 @@ export const OptimizedPicture: React.FC<OptimizedPictureProps> = ({
         className={className}
         loading={loading}
         priority={priority}
+        width={width}
+        height={height}
       />
     </picture>
   );
