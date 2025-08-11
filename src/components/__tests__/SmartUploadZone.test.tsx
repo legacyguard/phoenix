@@ -53,7 +53,9 @@ describe("SmartUploadZone", () => {
     render(<SmartUploadZone onUploadStart={mockOnUploadStart} />);
 
     expect(screen.getByText("common:assets.zone.dropHere")).toBeInTheDocument();
-    expect(screen.getByText("common:assets.zone.description")).toBeInTheDocument();
+    expect(
+      screen.getByText("common:assets.zone.description"),
+    ).toBeInTheDocument();
     expect(screen.getByText("assets:zone.chooseFiles")).toBeInTheDocument();
   });
 
@@ -202,7 +204,9 @@ describe("SmartUploadZone", () => {
     fireEvent.dragLeave(uploadZone);
 
     await waitFor(() => {
-      expect(screen.getByText("common:assets.zone.dropHere")).toBeInTheDocument();
+      expect(
+        screen.getByText("common:assets.zone.dropHere"),
+      ).toBeInTheDocument();
     });
   });
 
@@ -215,7 +219,9 @@ describe("SmartUploadZone", () => {
     fireEvent.dragEnter(uploadZone);
 
     await waitFor(() => {
-      expect(screen.getByText("common:assets.zone.dropHere")).toBeInTheDocument();
+      expect(
+        screen.getByText("common:assets.zone.dropHere"),
+      ).toBeInTheDocument();
     });
   });
 
