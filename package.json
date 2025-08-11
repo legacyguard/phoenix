@@ -29,7 +29,12 @@
     "docker:build": "docker build -t legacyguard/phoenix:latest .",
     "docker:run": "docker-compose up -d",
     "docker:stop": "docker-compose down",
-    "deploy": "npm run build && npm run docker:build && npm run docker:push"
+    "deploy": "npm run build && npm run docker:build && npm run docker:push",
+    "check:i18n": "node scripts/ci/i18n-guard.cjs",
+    "check:cycles": "node scripts/ci/cycles-guard.cjs",
+    "check:exports": "node scripts/ci/exports-guard.cjs",
+    "check:all": "npm run -s check:i18n && npm run -s check:cycles && npm run -s check:exports",
+    "ci": "npm run -s lint && npm run -s typecheck && npm run -s test:ci && npm run -s check:all"
   },
   "dependencies": {
     "@clerk/clerk-react": "^5.36.0",
