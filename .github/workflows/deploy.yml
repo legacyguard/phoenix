@@ -95,12 +95,30 @@ jobs:
     if: github.ref == 'refs/heads/main'
     
     steps:
+      - name: Validate deployment secrets
+        run: |
+          if [ -z "${{ secrets.DEPLOY_HOST }}" ]; then
+            echo "Error: DEPLOY_HOST secret is not set"
+            exit 1
+          fi
+          if [ -z "${{ secrets.DEPLOY_USER }}" ]; then
+            echo "Error: DEPLOY_USER secret is not set"
+            exit 1
+          fi
+          if [ -z "${{ secrets.DEPLOY_KEY }}" ]; then
+            echo "Error: DEPLOY_KEY secret is not set"
+            exit 1
+          fi
+          echo "All required deployment secrets are configured"
+      
       - name: Deploy to production
         uses: appleboy/ssh-action@v1.0.0
         with:
           host: ${{ secrets.DEPLOY_HOST }}
           username: ${{ secrets.DEPLOY_USER }}
           key: ${{ secrets.DEPLOY_KEY }}
+          port: ${{ secrets.DEPLOY_PORT || '22' }}
+          timeout: 300s
           script: |
             cd /app/legacyguard
             docker pull ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:main
@@ -113,10 +131,26 @@ jobs:
           sleep 30
           curl -f https://app.legacyguard.com/health || exit 1
 
+      - name: Validate Slack webhook
+        run: |
+          if [ -z "${{ secrets.SLACK_WEBHOOK_URL }}" ]; then
+            echo "Warning: SLACK_WEBHOOK_URL secret is not set, skipping Slack notification"
+          else
+            echo "Slack webhook is configured"
+          fi
+
       - name: Notify deployment
         uses: 8398a7/action-slack@v3
         with:
           status: ${{ job.status }}
           text: 'Production deployment completed'
-          webhook_url: ${{ secrets.SLACK_WEBHOOK }}
+          webhook_url: ${{ secrets.SLACK_WEBHOOK_URL }}
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
         if: always()
+=======
+        if: always() && secrets.SLACK_WEBHOOK_URL != ''
+>>>>>>> Stashed changes
+=======
+        if: always() && secrets.SLACK_WEBHOOK_URL != ''
+>>>>>>> Stashed changes
