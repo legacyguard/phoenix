@@ -6,7 +6,7 @@ import { Label } from '@/components/ui/label';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Lock, AlertCircle, LogOut } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
-import { usePasswordWall } from '@/components/auth/PasswordWallContext';
+import { usePasswordWall } from '@/components/auth/usePasswordWall';
 
 
 const PASSWORD = import.meta.env.VITE_APP_PASSWORD || 'legacy1guard';

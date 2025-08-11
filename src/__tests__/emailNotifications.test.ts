@@ -65,7 +65,7 @@ vi.mock('@/i18n/i18n', () => {
 
     // Translation integration tests
     'sharing:welcome.subject': 'Welcome to LegacyGuard - Your Family Protection Journey Begins',
-    'notifications:push.taskReminder.title': 'Family Protection Reminder',
+    'dashboard-main:push.taskReminder.title': 'Family Protection Reminder',
     'wills:disclaimers.general': 'LegacyGuard provides tools and guidance for estate planning but does not provide legal advice. For complex estates or specific legal questions, please consult with a qualified attorney in your jurisdiction.',
   };
   const interpolate = (template: string, opts?: any) => {
@@ -108,7 +108,7 @@ vi.mock('react-i18next', () => ({
 'subscription.trialExpiring.headline': 'Your Trial is Ending Soon',
         'subscription.trialExpiring.message': '{{days}} days',
         'sharing:welcome.subject': 'Welcome to LegacyGuard - Your Family Protection Journey Begins',
-        'notifications:push.taskReminder.title': 'Family Protection Reminder',
+        'dashboard-main:push.taskReminder.title': 'Family Protection Reminder',
         'wills:disclaimers.general': 'LegacyGuard provides tools and guidance for estate planning but does not provide legal advice. For complex estates or specific legal questions, please consult with a qualified attorney in your jurisdiction.',
       };
       let val = map[key];

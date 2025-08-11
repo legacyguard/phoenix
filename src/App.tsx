@@ -23,7 +23,7 @@ import { usePerformanceMonitoring } from "@/hooks/usePerformanceMonitoring";
 import PasswordWall from "@/components/PasswordWall";
 import { UserFlowManager } from "@/components/auth/UserFlowManager";
 import { FeatureFlagProvider } from "@/config/features";
-import { PasswordWallProvider } from "@/components/auth/PasswordWallContext";
+import { PasswordWallProvider } from "@/components/auth/PasswordWallProvider";
 import { AuthenticatedRedirect } from "@/components/auth/AuthenticatedRedirect";
 import { logEnvironmentInfo } from "@/utils/env-check";
 

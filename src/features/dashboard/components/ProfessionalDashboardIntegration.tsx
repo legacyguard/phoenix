@@ -190,7 +190,7 @@ const ProfessionalDashboardIntegration: React.FC<DashboardProps> = ({
     }
     
     return tasks;
-  }, [t, mapToCategory, mapToPillar, determinePriority]);
+  }, [mapToCategory, mapToPillar, determinePriority]);
 
   // Map item types to professional categories
   const mapToCategory = useCallback((type: string): string => {
