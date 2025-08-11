@@ -40,7 +40,9 @@
     "check:size:strict": "node scripts/ci/size-guard.cjs --strict",
     "size:baseline": "node scripts/ci/size-guard.cjs --write-baseline",
     "check:only": "node scripts/ci/only-guard.cjs",
-    "check:console": "node scripts/ci/console-guard.cjs"
+    "check:console": "node scripts/ci/console-guard.cjs",
+    "check:console:strict": "node scripts/ci/console-guard.cjs --strict",
+    "console:baseline": "node scripts/ci/console-guard.cjs --write-baseline"
   },
   "dependencies": {
     "@clerk/clerk-react": "^5.36.0",
