@@ -3,7 +3,7 @@ import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Clock, ArrowRight } from 'lucide-react';
-import type { Recommendation } from './PersonalAssistant';
+import type { Recommendation } from './types';
 import type { EmotionalState } from '@/contexts/AssistantContext';
 
 interface AssistantActionsProps {

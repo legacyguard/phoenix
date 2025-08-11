@@ -1,5 +1,5 @@
 import type { LifeAnswers } from './BasicLifeQuestions';
-import type { ProjectOrderAnswers } from './OnboardingWizard';
+import type { ProjectOrderAnswers } from './types';
 
 /**
  * Maps life-centered answers to technical onboarding answers
