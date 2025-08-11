@@ -1,10 +1,10 @@
-import { useEffect, useState } from 'react';
-import { useTranslation } from 'react-i18next';
-import { loadNamespaces, type Namespace } from '@/i18n/i18n';
+import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
+import { loadNamespaces, type Namespace } from "@/i18n/i18n";
 
 interface UseTranslationNamespacesReturn {
-  t: ReturnType<typeof useTranslation>['t'];
-  i18n: ReturnType<typeof useTranslation>['i18n'];
+  t: ReturnType<typeof useTranslation>["t"];
+  i18n: ReturnType<typeof useTranslation>["i18n"];
   isLoading: boolean;
   error: string | null;
 }
@@ -20,7 +20,7 @@ export const useTranslationNamespaces = (
   options?: {
     keyPrefix?: string;
     fallbackNS?: string;
-  }
+  },
 ): UseTranslationNamespacesReturn => {
   const { t, i18n } = useTranslation(namespaces, options);
   const [isLoading, setIsLoading] = useState(false);
@@ -29,22 +29,27 @@ export const useTranslationNamespaces = (
   useEffect(() => {
     const loadRequiredNamespaces = async () => {
       const ns = Array.isArray(namespaces) ? namespaces : [namespaces];
-      const notLoaded = ns.filter(namespace => 
-        !i18n.hasLoadedNamespace(`${namespace}:${i18n.language}`)
+      const notLoaded = ns.filter(
+        (namespace) =>
+          !i18n.hasLoadedNamespace(`${namespace}:${i18n.language}`),
       );
 
       if (notLoaded.length > 0) {
         setIsLoading(true);
         setError(null);
-        
+
         try {
           const success = await loadNamespaces(notLoaded);
           if (!success) {
-            throw new Error(`Failed to load namespaces: ${notLoaded.join(', ')}`);
+            throw new Error(
+              `Failed to load namespaces: ${notLoaded.join(", ")}`,
+            );
           }
         } catch (err) {
-          console.error('Error loading namespaces:', err);
-          setError(err instanceof Error ? err.message : 'Failed to load translations');
+          console.error("Error loading namespaces:", err);
+          setError(
+            err instanceof Error ? err.message : "Failed to load translations",
+          );
         } finally {
           setIsLoading(false);
         }

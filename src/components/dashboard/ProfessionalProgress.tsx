@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { useTranslation } from 'react-i18next';
+import React, { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import {
   Shield,
   FileText,
@@ -19,16 +19,16 @@ import {
   Lock,
   Sparkles,
   Target,
-  BookOpen
-} from 'lucide-react';
+  BookOpen,
+} from "lucide-react";
 
 interface Task {
   id: string;
   title: string;
   description: string;
-  category: 'documents' | 'family' | 'legal' | 'financial' | 'security';
+  category: "documents" | "family" | "legal" | "financial" | "security";
   completed: boolean;
-  priority: 'immediate' | 'high' | 'medium' | 'low';
+  priority: "immediate" | "high" | "medium" | "low";
   estimatedTime?: string;
   completedDate?: Date;
   link?: string;
@@ -61,37 +61,47 @@ const ProfessionalProgress: React.FC<ProfessionalProgressProps> = ({
   lastLogin,
   showMilestones = true,
   showInsights = true,
-  compactMode = false
+  compactMode = false,
 }) => {
-  const { t } = useTranslation(['dashboard', 'ui']);
-  const [expandedCategories, setExpandedCategories] = useState<string[]>(['immediate']);
-  const [selectedTimeframe, setSelectedTimeframe] = useState<'all' | 'week' | 'month'>('all');
+  const { t } = useTranslation(["dashboard", "ui"]);
+  const [expandedCategories, setExpandedCategories] = useState<string[]>([
+    "immediate",
+  ]);
+  const [selectedTimeframe, setSelectedTimeframe] = useState<
+    "all" | "week" | "month"
+  >("all");
   const [showAllTasks, setShowAllTasks] = useState(false);
 
   // Calculate progress metrics
-  const completedTasks = tasks.filter(t => t.completed).length;
+  const completedTasks = tasks.filter((t) => t.completed).length;
   const totalTasks = tasks.length;
 
   // Group tasks by category and priority
-  const tasksByCategory = tasks.reduce((acc, task) => {
-    if (!acc[task.category]) {
-      acc[task.category] = [];
-    }
-    acc[task.category].push(task);
-    return acc;
-  }, {} as Record<string, Task[]>);
+  const tasksByCategory = tasks.reduce(
+    (acc, task) => {
+      if (!acc[task.category]) {
+        acc[task.category] = [];
+      }
+      acc[task.category].push(task);
+      return acc;
+    },
+    {} as Record<string, Task[]>,
+  );
 
-  const tasksByPriority = tasks.reduce((acc, task) => {
-    if (!acc[task.priority]) {
-      acc[task.priority] = [];
-    }
-    acc[task.priority].push(task);
-    return acc;
-  }, {} as Record<string, Task[]>);
+  const tasksByPriority = tasks.reduce(
+    (acc, task) => {
+      if (!acc[task.priority]) {
+        acc[task.priority] = [];
+      }
+      acc[task.priority].push(task);
+      return acc;
+    },
+    {} as Record<string, Task[]>,
+  );
 
   // Calculate time saved for completed tasks
   const timeSaved = tasks
-    .filter(t => t.completed && t.estimatedTime)
+    .filter((t) => t.completed && t.estimatedTime)
     .reduce((total, task) => {
       const match = task.estimatedTime?.match(/(\d+)/);
       return total + (match ? parseInt(match[1]) : 0);
@@ -100,95 +110,100 @@ const ProfessionalProgress: React.FC<ProfessionalProgressProps> = ({
   // Define milestones
   const milestones: Milestone[] = [
     {
-      id: 'first-document',
+      id: "first-document",
       // TODO: Fix missing translation key - dashboard-main:respectful.milestones.firstDocument.title
-      title: 'First Document',
+      title: "First Document",
       // TODO: Fix missing translation key - dashboard-main:respectful.milestones.firstDocument.description
-      description: 'Upload your first important document',
+      description: "Upload your first important document",
       tasksRequired: 1,
       icon: <FileText className="w-5 h-5" />,
       achieved: completedTasks >= 1,
-      achievedDate: completedTasks >= 1 ? new Date() : undefined
+      achievedDate: completedTasks >= 1 ? new Date() : undefined,
     },
     {
-      id: 'essential-protection',
+      id: "essential-protection",
       // TODO: Fix missing translation key - dashboard-main:respectful.milestones.essentialProtection.title
-      title: 'Essential Protection',
+      title: "Essential Protection",
       // TODO: Fix missing translation key - dashboard-main:respectful.milestones.essentialProtection.description
-      description: 'Basic security measures in place',
+      description: "Basic security measures in place",
       tasksRequired: 5,
       icon: <Shield className="w-5 h-5" />,
       achieved: completedTasks >= 5,
-      achievedDate: completedTasks >= 5 ? new Date() : undefined
+      achievedDate: completedTasks >= 5 ? new Date() : undefined,
     },
     {
-      id: 'family-prepared',
+      id: "family-prepared",
       // TODO: Fix missing translation key - dashboard-main:respectful.milestones.familyPrepared.title
-      title: 'Family Prepared',
+      title: "Family Prepared",
       // TODO: Fix missing translation key - dashboard-main:respectful.milestones.familyPrepared.description
-      description: 'Your family is well-prepared',
+      description: "Your family is well-prepared",
       tasksRequired: 10,
       icon: <Heart className="w-5 h-5" />,
       achieved: completedTasks >= 10,
-      achievedDate: completedTasks >= 10 ? new Date() : undefined
+      achievedDate: completedTasks >= 10 ? new Date() : undefined,
     },
     {
-      id: 'comprehensive-security',
+      id: "comprehensive-security",
       // TODO: Fix missing translation key - dashboard-main:respectful.milestones.comprehensiveSecurity.title
-      title: 'Comprehensive Security',
+      title: "Comprehensive Security",
       // TODO: Fix missing translation key - dashboard-main:respectful.milestones.comprehensiveSecurity.description
-      description: 'Full protection achieved',
+      description: "Full protection achieved",
       tasksRequired: 20,
       icon: <Award className="w-5 h-5" />,
       achieved: completedTasks >= 20,
-      achievedDate: completedTasks >= 20 ? new Date() : undefined
-    }
+      achievedDate: completedTasks >= 20 ? new Date() : undefined,
+    },
   ];
 
   // Get current milestone
-  const currentMilestone = milestones.find(m => !m.achieved) || milestones[milestones.length - 1];
+  const currentMilestone =
+    milestones.find((m) => !m.achieved) || milestones[milestones.length - 1];
 
   // Generate insights
   const insights = [
     {
-      type: 'progress' as const,
-      title: completedTasks === 0 
-        ? 'Ready to Start'
-        : completedTasks < 5
-        ? 'Great Start!'
-        : completedTasks < 10
-        ? 'Making Progress'
-        : 'Well Protected',
-      description: completedTasks === 0
-        ? 'Take your first step towards security'
-        : `You've completed ${completedTasks} tasks`,
-      icon: <TrendingUp className="w-5 h-5 text-green-600" />
+      type: "progress" as const,
+      title:
+        completedTasks === 0
+          ? "Ready to Start"
+          : completedTasks < 5
+            ? "Great Start!"
+            : completedTasks < 10
+              ? "Making Progress"
+              : "Well Protected",
+      description:
+        completedTasks === 0
+          ? "Take your first step towards security"
+          : `You've completed ${completedTasks} tasks`,
+      icon: <TrendingUp className="w-5 h-5 text-green-600" />,
     },
     {
-      type: 'time' as const,
-      title: 'Time Investment',
-      description: timeSaved > 0 
-        ? `${timeSaved} minutes invested in your security`
-        : 'Quick tasks to get started',
-      icon: <Clock className="w-5 h-5 text-blue-600" />
+      type: "time" as const,
+      title: "Time Investment",
+      description:
+        timeSaved > 0
+          ? `${timeSaved} minutes invested in your security`
+          : "Quick tasks to get started",
+      icon: <Clock className="w-5 h-5 text-blue-600" />,
     },
     {
-      type: 'focus' as const,
-      title: 'Suggested Focus',
-      description: tasksByPriority.immediate?.filter(t => !t.completed).length > 0
-        ? 'Focus on immediate priority tasks'
-        : tasksByPriority.high?.filter(t => !t.completed).length > 0
-        ? 'Complete high priority tasks next'
-        : 'Continue with steady progress',
-      icon: <Target className="w-5 h-5 text-purple-600" />
-    }
+      type: "focus" as const,
+      title: "Suggested Focus",
+      description:
+        tasksByPriority.immediate?.filter((t) => !t.completed).length > 0
+          ? "Focus on immediate priority tasks"
+          : tasksByPriority.high?.filter((t) => !t.completed).length > 0
+            ? "Complete high priority tasks next"
+            : "Continue with steady progress",
+      icon: <Target className="w-5 h-5 text-purple-600" />,
+    },
   ];
 
   // Get greeting based on time of day and progress
   const getGreeting = () => {
     const hour = new Date().getHours();
-    const name = userName || 'there';
-    
+    const name = userName || "there";
+
     if (completedTasks === 0) {
       return `Welcome, ${name}!`;
     } else if (hour < 12) {
@@ -211,7 +226,7 @@ const ProfessionalProgress: React.FC<ProfessionalProgressProps> = ({
     } else if (completedTasks < 15) {
       return "Your security is well-established";
     } else {
-      return "You've achieved comprehensive protection!"
+      return "You've achieved comprehensive protection!";
 
       // return t('dashboard-main:respectful.encouragement.comprehensive');
     }
@@ -223,37 +238,39 @@ const ProfessionalProgress: React.FC<ProfessionalProgressProps> = ({
       family: <Users className="w-4 h-4" />,
       legal: <Shield className="w-4 h-4" />,
       financial: <CreditCard className="w-4 h-4" />,
-      security: <Lock className="w-4 h-4" />
+      security: <Lock className="w-4 h-4" />,
     };
-    return icons[category as keyof typeof icons] || <Circle className="w-4 h-4" />;
+    return (
+      icons[category as keyof typeof icons] || <Circle className="w-4 h-4" />
+    );
   };
 
   const getCategoryColor = (category: string) => {
     const colors = {
-      documents: 'blue',
-      family: 'purple',
-      legal: 'red',
-      financial: 'green',
-      security: 'orange'
+      documents: "blue",
+      family: "purple",
+      legal: "red",
+      financial: "green",
+      security: "orange",
     };
-    return colors[category as keyof typeof colors] || 'gray';
+    return colors[category as keyof typeof colors] || "gray";
   };
 
   const getPriorityColor = (priority: string) => {
     const colors = {
-      immediate: 'red',
-      high: 'orange',
-      medium: 'yellow',
-      low: 'green'
+      immediate: "red",
+      high: "orange",
+      medium: "yellow",
+      low: "green",
     };
-    return colors[priority as keyof typeof colors] || 'gray';
+    return colors[priority as keyof typeof colors] || "gray";
   };
 
   const toggleCategory = (category: string) => {
-    setExpandedCategories(prev =>
+    setExpandedCategories((prev) =>
       prev.includes(category)
-        ? prev.filter(c => c !== category)
-        : [...prev, category]
+        ? prev.filter((c) => c !== category)
+        : [...prev, category],
     );
   };
 
@@ -263,38 +280,40 @@ const ProfessionalProgress: React.FC<ProfessionalProgressProps> = ({
       <div className="professional-progress-compact p-4 bg-white rounded-lg border border-gray-200">
         <div className="flex items-center justify-between mb-3">
           <h3 className="text-sm font-semibold text-gray-900">
-            // TODO: Fix missing translation key - dashboard-main:respectful.progress.title
-
-            // {t('dashboard-main:respectful.progress.title')}
+            // TODO: Fix missing translation key -
+            dashboard-main:respectful.progress.title //{" "}
+            {t("dashboard-main:respectful.progress.title")}
           </h3>
           <span className="text-xs text-gray-500">
             {completedTasks}/{totalTasks}
           </span>
         </div>
-        
+
         <div className="mb-3">
           <p className="text-xs text-gray-700 font-medium">
-            // TODO: Fix missing translation key - dashboard-main:respectful.progress.tasksSecured
-
-            // {completedTasks} {t('dashboard-main:respectful.progress.tasksSecured')}
+            // TODO: Fix missing translation key -
+            dashboard-main:respectful.progress.tasksSecured // {completedTasks}{" "}
+            {t("dashboard-main:respectful.progress.tasksSecured")}
           </p>
         </div>
-        
-        <p className="text-xs text-gray-600 mb-3">
-          {getEncouragement()}
-        </p>
-        
-        {tasksByPriority.immediate?.filter(t => !t.completed).length > 0 && (
+
+        <p className="text-xs text-gray-600 mb-3">{getEncouragement()}</p>
+
+        {tasksByPriority.immediate?.filter((t) => !t.completed).length > 0 && (
           <button
-            onClick={() => onTaskClick?.(tasksByPriority.immediate.find(t => !t.completed)!)}
+            onClick={() =>
+              onTaskClick?.(
+                tasksByPriority.immediate.find((t) => !t.completed)!,
+              )
+            }
             className="w-full text-left p-2 bg-red-50 rounded-lg hover:bg-red-100 transition-colors"
           >
             <div className="flex items-center gap-2">
               <AlertCircle className="w-4 h-4 text-red-600" />
               <span className="text-xs font-medium text-red-900">
-                // TODO: Fix missing translation key - dashboard-main:respectful.progress.immediateAction
-
-                // {t('dashboard-main:respectful.progress.immediateAction')}
+                // TODO: Fix missing translation key -
+                dashboard-main:respectful.progress.immediateAction //{" "}
+                {t("dashboard-main:respectful.progress.immediateAction")}
               </span>
             </div>
           </button>
@@ -312,20 +331,22 @@ const ProfessionalProgress: React.FC<ProfessionalProgressProps> = ({
             <h2 className="text-2xl font-bold text-gray-900 mb-2">
               {getGreeting()}
             </h2>
-            <p className="text-gray-600">
-              {getEncouragement()}
-            </p>
+            <p className="text-gray-600">{getEncouragement()}</p>
           </div>
           {lastLogin && (
             <div className="text-sm text-gray-500">
               <Calendar className="w-4 h-4 inline mr-1" />
-              // TODO: Fix missing translation key - dashboard-main:respectful.lastActive
-
-              // {t('dashboard-main:respectful.lastActive', { 
-                date: new Intl.RelativeTimeFormat('en', { numeric: 'auto' }).format(
-                  -Math.floor((Date.now() - lastLogin.getTime()) / (1000 * 60 * 60 * 24)),
-                  'day'
-                )
+              // TODO: Fix missing translation key -
+              dashboard-main:respectful.lastActive //{" "}
+              {t("dashboard-main:respectful.lastActive", {
+                date: new Intl.RelativeTimeFormat("en", {
+                  numeric: "auto",
+                }).format(
+                  -Math.floor(
+                    (Date.now() - lastLogin.getTime()) / (1000 * 60 * 60 * 24),
+                  ),
+                  "day",
+                ),
               })}
             </div>
           )}
@@ -336,19 +357,18 @@ const ProfessionalProgress: React.FC<ProfessionalProgressProps> = ({
           <div className="flex items-center justify-between">
             <div>
               <span className="text-sm font-medium text-gray-700">
-                // TODO: Fix missing translation key - dashboard-main:respectful.progress.familySecurity
-
-                // {t('dashboard-main:respectful.progress.familySecurity')}
+                // TODO: Fix missing translation key -
+                dashboard-main:respectful.progress.familySecurity //{" "}
+                {t("dashboard-main:respectful.progress.familySecurity")}
               </span>
               <p className="text-lg font-semibold text-gray-900 mt-1">
-                {completedTasks === 0 
-                  ? t('ui-components:respectful.progress.gettingStarted')
+                {completedTasks === 0
+                  ? t("ui-components:respectful.progress.gettingStarted")
                   : completedTasks < 5
-                  ? 'Building Foundation'
-                  : completedTasks < 10
-                  ? t('ui-components:respectful.progress.wellOrganized')
-                  : 'Comprehensive Protection'
-                }
+                    ? "Building Foundation"
+                    : completedTasks < 10
+                      ? t("ui-components:respectful.progress.wellOrganized")
+                      : "Comprehensive Protection"}
               </p>
             </div>
             <div className="text-right">
@@ -356,9 +376,9 @@ const ProfessionalProgress: React.FC<ProfessionalProgressProps> = ({
                 {completedTasks}
               </p>
               <p className="text-xs text-gray-500">
-                // TODO: Fix missing translation key - dashboard-main:respectful.progress.tasksComplete
-
-                // {t('dashboard-main:respectful.progress.tasksComplete')}
+                // TODO: Fix missing translation key -
+                dashboard-main:respectful.progress.tasksComplete //{" "}
+                {t("dashboard-main:respectful.progress.tasksComplete")}
               </p>
             </div>
           </div>
@@ -369,18 +389,17 @@ const ProfessionalProgress: React.FC<ProfessionalProgressProps> = ({
       {showInsights && insights.length > 0 && (
         <div className="grid md:grid-cols-3 gap-4 mb-6">
           {insights.map((insight, index) => (
-            <div key={index} className="bg-white rounded-lg p-4 border border-gray-200 hover:shadow-md transition-shadow">
+            <div
+              key={index}
+              className="bg-white rounded-lg p-4 border border-gray-200 hover:shadow-md transition-shadow"
+            >
               <div className="flex items-start gap-3">
-                <div className="p-2 bg-gray-50 rounded-lg">
-                  {insight.icon}
-                </div>
+                <div className="p-2 bg-gray-50 rounded-lg">{insight.icon}</div>
                 <div className="flex-grow">
                   <h4 className="text-sm font-semibold text-gray-900 mb-1">
                     {insight.title}
                   </h4>
-                  <p className="text-xs text-gray-600">
-                    {insight.description}
-                  </p>
+                  <p className="text-xs text-gray-600">{insight.description}</p>
                 </div>
               </div>
             </div>
@@ -393,35 +412,40 @@ const ProfessionalProgress: React.FC<ProfessionalProgressProps> = ({
         <div className="bg-white rounded-xl p-6 border border-gray-200 mb-6">
           <div className="flex items-center justify-between mb-4">
             <h3 className="text-lg font-semibold text-gray-900">
-              // TODO: Fix missing translation key - dashboard-main:respectful.milestones.title
-
-              // {t('dashboard-main:respectful.milestones.title')}
+              // TODO: Fix missing translation key -
+              dashboard-main:respectful.milestones.title //{" "}
+              {t("dashboard-main:respectful.milestones.title")}
             </h3>
             <span className="text-sm text-gray-500">
-              // TODO: Fix missing translation key - dashboard-main:respectful.milestones.achieved
-
-              // {milestones.filter(m => m.achieved).length} {t('dashboard-main:respectful.milestones.of')} {milestones.length} {t('dashboard-main:respectful.milestones.achieved')}
+              // TODO: Fix missing translation key -
+              dashboard-main:respectful.milestones.achieved //{" "}
+              {milestones.filter((m) => m.achieved).length}{" "}
+              {t("dashboard-main:respectful.milestones.of")} {milestones.length}{" "}
+              {t("dashboard-main:respectful.milestones.achieved")}
             </span>
           </div>
 
           <div className="space-y-3">
             {milestones.map((milestone) => (
-              <div 
+              <div
                 key={milestone.id}
                 className={`
                   flex items-center gap-4 p-3 rounded-lg border transition-all
-                  ${milestone.achieved 
-                    ? 'bg-green-50 border-green-200' 
-                    : milestone === currentMilestone
-                    ? 'bg-blue-50 border-blue-200'
-                    : 'bg-gray-50 border-gray-200 opacity-60'
+                  ${
+                    milestone.achieved
+                      ? "bg-green-50 border-green-200"
+                      : milestone === currentMilestone
+                        ? "bg-blue-50 border-blue-200"
+                        : "bg-gray-50 border-gray-200 opacity-60"
                   }
                 `}
               >
-                <div className={`
+                <div
+                  className={`
                   p-2 rounded-full
-                  ${milestone.achieved ? 'bg-green-100' : 'bg-gray-100'}
-                `}>
+                  ${milestone.achieved ? "bg-green-100" : "bg-gray-100"}
+                `}
+                >
                   {milestone.achieved ? (
                     <CheckCircle className="w-5 h-5 text-green-600" />
                   ) : (
@@ -429,7 +453,9 @@ const ProfessionalProgress: React.FC<ProfessionalProgressProps> = ({
                   )}
                 </div>
                 <div className="flex-grow">
-                  <h4 className={`text-sm font-medium ${milestone.achieved ? 'text-green-900' : 'text-gray-900'}`}>
+                  <h4
+                    className={`text-sm font-medium ${milestone.achieved ? "text-green-900" : "text-gray-900"}`}
+                  >
                     {milestone.title}
                   </h4>
                   <p className="text-xs text-gray-600">
@@ -438,16 +464,24 @@ const ProfessionalProgress: React.FC<ProfessionalProgressProps> = ({
                   {milestone === currentMilestone && !milestone.achieved && (
                     <div className="mt-2">
                       <p className="text-xs text-blue-600 font-medium">
-                        // TODO: Fix missing translation key - dashboard-main:respectful.milestones.tasksComplete
-
-                        // {completedTasks} {t('dashboard-main:respectful.milestones.of')} {currentMilestone.tasksRequired} {t('dashboard-main:respectful.milestones.tasksComplete')}
+                        // TODO: Fix missing translation key -
+                        dashboard-main:respectful.milestones.tasksComplete //{" "}
+                        {completedTasks}{" "}
+                        {t("dashboard-main:respectful.milestones.of")}{" "}
+                        {currentMilestone.tasksRequired}{" "}
+                        {t(
+                          "dashboard-main:respectful.milestones.tasksComplete",
+                        )}
                       </p>
                     </div>
                   )}
                 </div>
                 {milestone.achievedDate && (
                   <span className="text-xs text-green-600 font-medium">
-                    {new Intl.DateTimeFormat('en', { month: 'short', day: 'numeric' }).format(milestone.achievedDate)}
+                    {new Intl.DateTimeFormat("en", {
+                      month: "short",
+                      day: "numeric",
+                    }).format(milestone.achievedDate)}
                   </span>
                 )}
               </div>
@@ -460,55 +494,65 @@ const ProfessionalProgress: React.FC<ProfessionalProgressProps> = ({
       <div className="bg-white rounded-xl p-6 border border-gray-200">
         <div className="flex items-center justify-between mb-4">
           <h3 className="text-lg font-semibold text-gray-900">
-            // TODO: Fix missing translation key - dashboard-main:respectful.tasks.title
-
-            // {t('dashboard-main:respectful.tasks.title')}
+            // TODO: Fix missing translation key -
+            dashboard-main:respectful.tasks.title //{" "}
+            {t("dashboard-main:respectful.tasks.title")}
           </h3>
           <div className="flex items-center gap-2">
             <button
               onClick={() => setShowAllTasks(!showAllTasks)}
               className="text-sm text-blue-600 hover:text-blue-700 font-medium"
             >
-              // TODO: Fix missing translation key - dashboard-main:respectful.tasks.showPriority
-
-              // {showAllTasks ? t('dashboard-main:respectful.tasks.showPriority') : t('dashboard-main:respectful.tasks.showAll')}
+              // TODO: Fix missing translation key -
+              dashboard-main:respectful.tasks.showPriority //{" "}
+              {showAllTasks
+                ? t("dashboard-main:respectful.tasks.showPriority")
+                : t("dashboard-main:respectful.tasks.showAll")}
             </button>
           </div>
         </div>
 
         <div className="space-y-4">
           {/* Immediate Priority Tasks */}
-          {tasksByPriority.immediate?.filter(t => !t.completed).length > 0 && (
+          {tasksByPriority.immediate?.filter((t) => !t.completed).length >
+            0 && (
             <div className="border-l-4 border-red-500 pl-4">
               <button
-                onClick={() => toggleCategory('immediate')}
+                onClick={() => toggleCategory("immediate")}
                 className="flex items-center justify-between w-full text-left mb-2"
               >
                 <div className="flex items-center gap-2">
                   <AlertCircle className="w-5 h-5 text-red-600" />
                   <h4 className="text-sm font-semibold text-gray-900">
-                    // TODO: Fix missing translation key - dashboard-main:respectful.tasks.immediate
-
-                    // {t('dashboard-main:respectful.tasks.immediate')}
+                    // TODO: Fix missing translation key -
+                    dashboard-main:respectful.tasks.immediate //{" "}
+                    {t("dashboard-main:respectful.tasks.immediate")}
                   </h4>
                   <span className="text-xs bg-red-100 text-red-700 px-2 py-0.5 rounded-full">
-                    {tasksByPriority.immediate.filter(t => !t.completed).length}
+                    {
+                      tasksByPriority.immediate.filter((t) => !t.completed)
+                        .length
+                    }
                   </span>
                 </div>
-                {expandedCategories.includes('immediate') ? (
+                {expandedCategories.includes("immediate") ? (
                   <ChevronDown className="w-4 h-4 text-gray-400" />
                 ) : (
                   <ChevronRight className="w-4 h-4 text-gray-400" />
                 )}
               </button>
-              
-              {expandedCategories.includes('immediate') && (
+
+              {expandedCategories.includes("immediate") && (
                 <div className="space-y-2">
                   {tasksByPriority.immediate
-                    .filter(t => !t.completed)
+                    .filter((t) => !t.completed)
                     .slice(0, showAllTasks ? undefined : 3)
                     .map((task) => (
-                      <TaskCard key={task.id} task={task} onTaskClick={onTaskClick} />
+                      <TaskCard
+                        key={task.id}
+                        task={task}
+                        onTaskClick={onTaskClick}
+                      />
                     ))}
                 </div>
               )}
@@ -516,37 +560,41 @@ const ProfessionalProgress: React.FC<ProfessionalProgressProps> = ({
           )}
 
           {/* High Priority Tasks */}
-          {tasksByPriority.high?.filter(t => !t.completed).length > 0 && (
+          {tasksByPriority.high?.filter((t) => !t.completed).length > 0 && (
             <div className="border-l-4 border-orange-500 pl-4">
               <button
-                onClick={() => toggleCategory('high')}
+                onClick={() => toggleCategory("high")}
                 className="flex items-center justify-between w-full text-left mb-2"
               >
                 <div className="flex items-center gap-2">
                   <TrendingUp className="w-5 h-5 text-orange-600" />
                   <h4 className="text-sm font-semibold text-gray-900">
-                    // TODO: Fix missing translation key - dashboard-main:respectful.tasks.high
-
-                    // {t('dashboard-main:respectful.tasks.high')}
+                    // TODO: Fix missing translation key -
+                    dashboard-main:respectful.tasks.high //{" "}
+                    {t("dashboard-main:respectful.tasks.high")}
                   </h4>
                   <span className="text-xs bg-orange-100 text-orange-700 px-2 py-0.5 rounded-full">
-                    {tasksByPriority.high.filter(t => !t.completed).length}
+                    {tasksByPriority.high.filter((t) => !t.completed).length}
                   </span>
                 </div>
-                {expandedCategories.includes('high') ? (
+                {expandedCategories.includes("high") ? (
                   <ChevronDown className="w-4 h-4 text-gray-400" />
                 ) : (
                   <ChevronRight className="w-4 h-4 text-gray-400" />
                 )}
               </button>
-              
-              {expandedCategories.includes('high') && (
+
+              {expandedCategories.includes("high") && (
                 <div className="space-y-2">
                   {tasksByPriority.high
-                    .filter(t => !t.completed)
+                    .filter((t) => !t.completed)
                     .slice(0, showAllTasks ? undefined : 3)
                     .map((task) => (
-                      <TaskCard key={task.id} task={task} onTaskClick={onTaskClick} />
+                      <TaskCard
+                        key={task.id}
+                        task={task}
+                        onTaskClick={onTaskClick}
+                      />
                     ))}
                 </div>
               )}
@@ -554,39 +602,49 @@ const ProfessionalProgress: React.FC<ProfessionalProgressProps> = ({
           )}
 
           {/* Other Tasks */}
-          {(showAllTasks || (!tasksByPriority.immediate?.filter(t => !t.completed).length && !tasksByPriority.high?.filter(t => !t.completed).length)) && (
+          {(showAllTasks ||
+            (!tasksByPriority.immediate?.filter((t) => !t.completed).length &&
+              !tasksByPriority.high?.filter((t) => !t.completed).length)) && (
             <>
-              {tasksByPriority.medium?.filter(t => !t.completed).length > 0 && (
+              {tasksByPriority.medium?.filter((t) => !t.completed).length >
+                0 && (
                 <div className="border-l-4 border-yellow-500 pl-4">
                   <button
-                    onClick={() => toggleCategory('medium')}
+                    onClick={() => toggleCategory("medium")}
                     className="flex items-center justify-between w-full text-left mb-2"
                   >
                     <div className="flex items-center gap-2">
                       <Clock className="w-5 h-5 text-yellow-600" />
                       <h4 className="text-sm font-semibold text-gray-900">
-                        // TODO: Fix missing translation key - dashboard-main:respectful.tasks.medium
-
-                        // {t('dashboard-main:respectful.tasks.medium')}
+                        // TODO: Fix missing translation key -
+                        dashboard-main:respectful.tasks.medium //{" "}
+                        {t("dashboard-main:respectful.tasks.medium")}
                       </h4>
                       <span className="text-xs bg-yellow-100 text-yellow-700 px-2 py-0.5 rounded-full">
-                        {tasksByPriority.medium.filter(t => !t.completed).length}
+                        {
+                          tasksByPriority.medium.filter((t) => !t.completed)
+                            .length
+                        }
                       </span>
                     </div>
-                    {expandedCategories.includes('medium') ? (
+                    {expandedCategories.includes("medium") ? (
                       <ChevronDown className="w-4 h-4 text-gray-400" />
                     ) : (
                       <ChevronRight className="w-4 h-4 text-gray-400" />
                     )}
                   </button>
-                  
-                  {expandedCategories.includes('medium') && (
+
+                  {expandedCategories.includes("medium") && (
                     <div className="space-y-2">
                       {tasksByPriority.medium
-                        .filter(t => !t.completed)
+                        .filter((t) => !t.completed)
                         .slice(0, showAllTasks ? undefined : 3)
                         .map((task) => (
-                          <TaskCard key={task.id} task={task} onTaskClick={onTaskClick} />
+                          <TaskCard
+                            key={task.id}
+                            task={task}
+                            onTaskClick={onTaskClick}
+                          />
                         ))}
                     </div>
                   )}
@@ -599,34 +657,39 @@ const ProfessionalProgress: React.FC<ProfessionalProgressProps> = ({
           {completedTasks > 0 && (
             <div className="border-l-4 border-green-500 pl-4 opacity-75">
               <button
-                onClick={() => toggleCategory('completed')}
+                onClick={() => toggleCategory("completed")}
                 className="flex items-center justify-between w-full text-left mb-2"
               >
                 <div className="flex items-center gap-2">
                   <CheckCircle className="w-5 h-5 text-green-600" />
                   <h4 className="text-sm font-semibold text-gray-900">
-                    // TODO: Fix missing translation key - dashboard-main:respectful.tasks.completed
-
-                    // {t('dashboard-main:respectful.tasks.completed')}
+                    // TODO: Fix missing translation key -
+                    dashboard-main:respectful.tasks.completed //{" "}
+                    {t("dashboard-main:respectful.tasks.completed")}
                   </h4>
                   <span className="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full">
                     {completedTasks}
                   </span>
                 </div>
-                {expandedCategories.includes('completed') ? (
+                {expandedCategories.includes("completed") ? (
                   <ChevronDown className="w-4 h-4 text-gray-400" />
                 ) : (
                   <ChevronRight className="w-4 h-4 text-gray-400" />
                 )}
               </button>
-              
-              {expandedCategories.includes('completed') && (
+
+              {expandedCategories.includes("completed") && (
                 <div className="space-y-2">
                   {tasks
-                    .filter(t => t.completed)
+                    .filter((t) => t.completed)
                     .slice(0, showAllTasks ? undefined : 5)
                     .map((task) => (
-                      <TaskCard key={task.id} task={task} onTaskClick={onTaskClick} completed />
+                      <TaskCard
+                        key={task.id}
+                        task={task}
+                        onTaskClick={onTaskClick}
+                        completed
+                      />
                     ))}
                 </div>
               )}
@@ -639,9 +702,9 @@ const ProfessionalProgress: React.FC<ProfessionalProgressProps> = ({
           <div className="text-center py-8">
             <BookOpen className="w-12 h-12 text-gray-300 mx-auto mb-3" />
             <p className="text-gray-500">
-              // TODO: Fix missing translation key - dashboard-main:respectful.tasks.noTasks
-
-              // {t('dashboard-main:respectful.tasks.noTasks')}
+              // TODO: Fix missing translation key -
+              dashboard-main:respectful.tasks.noTasks //{" "}
+              {t("dashboard-main:respectful.tasks.noTasks")}
             </p>
           </div>
         )}
@@ -656,17 +719,19 @@ const TaskCard: React.FC<{
   onTaskClick?: (task: Task) => void;
   completed?: boolean;
 }> = ({ task, onTaskClick, completed = false }) => {
-  const { t } = useTranslation('dashboard-main');
-  
+  const { t } = useTranslation("dashboard-main");
+
   const getCategoryIcon = (category: string) => {
     const icons = {
       documents: <FileText className="w-4 h-4" />,
       family: <Users className="w-4 h-4" />,
       legal: <Shield className="w-4 h-4" />,
       financial: <CreditCard className="w-4 h-4" />,
-      security: <Lock className="w-4 h-4" />
+      security: <Lock className="w-4 h-4" />,
     };
-    return icons[category as keyof typeof icons] || <Circle className="w-4 h-4" />;
+    return (
+      icons[category as keyof typeof icons] || <Circle className="w-4 h-4" />
+    );
   };
 
   return (
@@ -674,15 +739,18 @@ const TaskCard: React.FC<{
       onClick={() => onTaskClick?.(task)}
       className={`
         w-full text-left p-3 rounded-lg border transition-all
-        ${completed 
-          ? 'bg-gray-50 border-gray-200 opacity-60' 
-          : 'bg-white border-gray-200 hover:border-blue-300 hover:shadow-sm'
+        ${
+          completed
+            ? "bg-gray-50 border-gray-200 opacity-60"
+            : "bg-white border-gray-200 hover:border-blue-300 hover:shadow-sm"
         }
       `}
       disabled={completed}
     >
       <div className="flex items-start gap-3">
-        <div className={`p-1.5 rounded-lg ${completed ? 'bg-green-100' : 'bg-gray-100'}`}>
+        <div
+          className={`p-1.5 rounded-lg ${completed ? "bg-green-100" : "bg-gray-100"}`}
+        >
           {completed ? (
             <CheckCircle className="w-4 h-4 text-green-600" />
           ) : (
@@ -690,12 +758,12 @@ const TaskCard: React.FC<{
           )}
         </div>
         <div className="flex-grow">
-          <h5 className={`text-sm font-medium ${completed ? 'text-gray-500 line-through' : 'text-gray-900'}`}>
+          <h5
+            className={`text-sm font-medium ${completed ? "text-gray-500 line-through" : "text-gray-900"}`}
+          >
             {task.title}
           </h5>
-          <p className="text-xs text-gray-600 mt-1">
-            {task.description}
-          </p>
+          <p className="text-xs text-gray-600 mt-1">{task.description}</p>
           {task.estimatedTime && !completed && (
             <div className="flex items-center gap-3 mt-2">
               <span className="text-xs text-gray-500 flex items-center gap-1">
@@ -704,7 +772,7 @@ const TaskCard: React.FC<{
               </span>
               {task.link && (
                 <span className="text-xs text-blue-600 font-medium flex items-center gap-1">
-                  {t('respectful.tasks.start')}
+                  {t("respectful.tasks.start")}
                   <ChevronRight className="w-3 h-3" />
                 </span>
               )}
@@ -712,8 +780,11 @@ const TaskCard: React.FC<{
           )}
           {completed && task.completedDate && (
             <span className="text-xs text-green-600 mt-2 inline-block">
-              {t('respectful.tasks.completedOn', { 
-                date: new Intl.DateTimeFormat('en', { month: 'short', day: 'numeric' }).format(task.completedDate)
+              {t("respectful.tasks.completedOn", {
+                date: new Intl.DateTimeFormat("en", {
+                  month: "short",
+                  day: "numeric",
+                }).format(task.completedDate),
               })}
             </span>
           )}
@@ -728,8 +799,18 @@ export { TaskCard };
 
 // Also export a CreditCard icon since it's missing from the imports
 const CreditCard: React.FC<{ className?: string }> = ({ className }) => (
-  <svg className={className} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+  <svg
+    className={className}
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth={2}
+      d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"
+    />
   </svg>
 );
 

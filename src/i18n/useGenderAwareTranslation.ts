@@ -1,13 +1,13 @@
-import { useTranslation } from 'react-i18next';
-import { useUser } from '@clerk/clerk-react';
-import { useCallback } from 'react';
+import { useTranslation } from "react-i18next";
+import { useUser } from "@clerk/clerk-react";
+import { useCallback } from "react";
 import {
   Gender,
   GenderContext,
   useGenderContext,
   getGenderedKey,
-  getGenderedTranslation
-} from './gender-context';
+  getGenderedTranslation,
+} from "./gender-context";
 
 /**
  * Custom hook for gender-aware translations
@@ -17,44 +17,47 @@ export const useGenderAwareTranslation = (namespace?: string) => {
   const { t, i18n, ready } = useTranslation(namespace);
   const { user } = useUser();
   const genderContext = useGenderContext();
-  
+
   // Enhanced translation function with gender awareness
-  const tg = useCallback((
-    key: string,
-    options?: Record<string, unknown>
-  ): string => {
-    // Get the gendered key
-    const genderedKey = getGenderedKey(key);
-    
-    // Try to get translation with gender-specific key first
-    let translation = t(genderedKey, options);
-    
-    // If no translation found, use the base key
-    if (translation === genderedKey) {
-      translation = t(key, options);
-    }
-    
-    return translation;
-  }, [t]);
-  
+  const tg = useCallback(
+    (key: string, options?: Record<string, unknown>): string => {
+      // Get the gendered key
+      const genderedKey = getGenderedKey(key);
+
+      // Try to get translation with gender-specific key first
+      let translation = t(genderedKey, options);
+
+      // If no translation found, use the base key
+      if (translation === genderedKey) {
+        translation = t(key, options);
+      }
+
+      return translation;
+    },
+    [t],
+  );
+
   // Helper function to get gender-aware translation with specific reference gender
-  const tgRef = useCallback((
-    key: string,
-    referenceGender: Gender,
-    options?: Record<string, unknown>
-  ): string => {
-    // Temporarily set gender context for this translation
-    const originalGender = genderContext.gender;
-    genderContext.setGender(referenceGender);
-    
-    const translation = tg(key, options);
-    
-    // Restore original gender
-    genderContext.setGender(originalGender);
-    
-    return translation;
-  }, [tg, genderContext]);
-  
+  const tgRef = useCallback(
+    (
+      key: string,
+      referenceGender: Gender,
+      options?: Record<string, unknown>,
+    ): string => {
+      // Temporarily set gender context for this translation
+      const originalGender = genderContext.gender;
+      genderContext.setGender(referenceGender);
+
+      const translation = tg(key, options);
+
+      // Restore original gender
+      genderContext.setGender(originalGender);
+
+      return translation;
+    },
+    [tg, genderContext],
+  );
+
   return {
     t: tg, // Replace standard t with gender-aware version
     tg, // Explicit gender-aware translation
@@ -62,6 +65,6 @@ export const useGenderAwareTranslation = (namespace?: string) => {
     i18n,
     ready,
     userGenderContext: genderContext.gender,
-    needsGenderContext: true // Simplified for now
+    needsGenderContext: true, // Simplified for now
   };
 };

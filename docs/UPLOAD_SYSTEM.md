@@ -116,24 +116,28 @@ graph TD
 ## 🎯 Key Features
 
 ### Privacy-First Design
+
 - **Local Processing**: All document analysis happens in-browser
 - **Optional Cloud**: Users explicitly choose cloud storage
 - **End-to-End Encryption**: Keys never leave the device
 - **Zero-Knowledge**: Even with cloud storage, we can't read documents
 
 ### Intelligent Processing
+
 - **Auto-Categorization**: Smart detection of document types
 - **Date Extraction**: Finds issue/expiry dates automatically
 - **People Recognition**: Links documents to family members
 - **Related Documents**: Groups similar documents together
 
 ### Empathetic UX
+
 - **Friendly Messages**: "Drop your treasures here" instead of technical jargon
 - **Progress Narratives**: "Reading your passport..." not "Processing file..."
 - **Smart Suggestions**: "This passport expires soon - shall I remind you?"
 - **Error Recovery**: Gentle guidance when things go wrong
 
 ### Family Features
+
 - **Secure Sharing**: Share documents with family members
 - **Role Detection**: Automatically tags documents with relevant people
 - **Timeline View**: See important dates across all documents
@@ -142,47 +146,46 @@ graph TD
 ## 🚀 Usage Examples
 
 ### Basic Upload
+
 ```tsx
 function MyComponent() {
   const { upload, uploadQueue, isUploading } = useDocumentUpload();
-  
+
   return (
     <SmartUploadZone
-      onUploadStart={() => console.log('Starting upload')}
+      onUploadStart={() => console.log("Starting upload")}
       maxFiles={10}
-      acceptedTypes={['image/*', 'application/pdf']}
+      acceptedTypes={["image/*", "application/pdf"]}
     />
   );
 }
 ```
 
 ### With Preferences
+
 ```tsx
 function MyComponent() {
   const { preferences, updatePreference } = useUploadPreferences();
-  
+
   // Toggle encryption
-  updatePreference('autoEncrypt', true);
-  
+  updatePreference("autoEncrypt", true);
+
   // Switch to local storage
-  updatePreference('privacy', 'local');
-  
+  updatePreference("privacy", "local");
+
   // Enable AI analysis
-  updatePreference('analyzeWithAI', true);
+  updatePreference("analyzeWithAI", true);
 }
 ```
 
 ### Progress Tracking
+
 ```tsx
 function UploadStatus() {
   const { uploadQueue, overallProgress, retry, cancel } = useDocumentUpload();
-  
+
   return (
-    <UploadQueueList
-      items={uploadQueue}
-      onRetry={retry}
-      onCancel={cancel}
-    />
+    <UploadQueueList items={uploadQueue} onRetry={retry} onCancel={cancel} />
   );
 }
 ```
@@ -190,6 +193,7 @@ function UploadStatus() {
 ## 🎨 UI Components
 
 ### SmartUploadZone
+
 - Drag & drop with visual feedback
 - Mobile camera capture support
 - File type filtering
@@ -197,6 +201,7 @@ function UploadStatus() {
 - Accessibility compliant
 
 ### UploadProgress
+
 - Per-file progress bars
 - Meaningful stage descriptions
 - Retry/cancel controls
@@ -204,6 +209,7 @@ function UploadStatus() {
 - Batch operations
 
 ### DocumentPreview
+
 - Thumbnail display
 - Category badges with emojis
 - Encryption indicators
@@ -231,12 +237,14 @@ function UploadStatus() {
 ## 🧪 Testing Scenarios
 
 ### File Types
+
 - Images: JPEG, PNG, WebP, HEIC
 - Documents: PDF, DOCX, TXT
 - Archives: ZIP (with inspection)
 - Edge cases: 0-byte files, corrupted files
 
 ### Upload Conditions
+
 - Single file upload
 - Batch upload (10+ files)
 - Large files (near 50MB limit)
@@ -245,6 +253,7 @@ function UploadStatus() {
 - Storage quota exceeded
 
 ### User Flows
+
 - First-time user
 - Privacy-conscious user (local only)
 - Family sharing scenario
@@ -265,18 +274,21 @@ function UploadStatus() {
 ## 🤝 Integration Points
 
 ### With OCR Service
+
 ```typescript
 // Automatic text extraction
 const ocrResult = await processOCR(file);
 ```
 
 ### With AI Service
+
 ```typescript
 // Enhanced analysis when enabled
 const analysis = await analyzeWithAI(document);
 ```
 
 ### With Family Network
+
 ```typescript
 // Share with family members
 await shareDocument(documentId, familyMemberIds);

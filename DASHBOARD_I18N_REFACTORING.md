@@ -3,6 +3,7 @@
 ## ✅ Implementované zmeny
 
 ### 1. **Dashboard.tsx** - Section Headers
+
 - **Refaktorované hardcoded texty** na preklady:
   - `"What to do when something happens - your family plan"` → `t('dashboard.sectionHeaders.familyGuide')`
   - `"Automatically generated guide for your loved ones"` → `t('dashboard.sectionHeaders.familyGuideSubtitle')`
@@ -10,6 +11,7 @@
   - `"Each task takes only 5-15 minutes but provides lasting security"` → `t('dashboard.sectionHeaders.quickTasksSubtitle')`
 
 ### 2. **StrategicSummary.tsx** - Kompletne refaktorované
+
 - **Title**: `"Your Strategic Overview"` → `t('dashboard.strategicSummary.title')`
 - **Subtitle**: Dynamický text s počtom → `t('dashboard.strategicSummary.subtitle', { count })`
 - **Strategic Areas**: Všetky názvy a popisy preložené
@@ -18,6 +20,7 @@
 - **Context cards**: Why Important, If Not Done, Next Action
 
 ### 3. **FamilyGuide.tsx** - Refaktorované
+
 - **Title**: `"Family Emergency Guide"` → `t('dashboard.familyGuide.title')`
 - **Discrete Mode**: `"Notes"` → `t('dashboard.familyGuide.discreteMode')`
 - **Generate Guide**: `t('dashboard.familyGuide.generateGuide')`
@@ -25,6 +28,7 @@
 - **Descriptions**: `t('dashboard.familyGuide.subtitle')` a `t('dashboard.familyGuide.discreteModeDesc')`
 
 ### 4. **QuickTasks.tsx** - Všetky tasky preložené
+
 - **Birth Certificate**: `t('dashboard.quickTasks.tasks.birthCertificate.title')`
 - **Insurance Policy**: `t('dashboard.quickTasks.tasks.insurancePolicy.title')`
 - **Will**: `t('dashboard.quickTasks.tasks.will.title')`
@@ -33,12 +37,14 @@
 - **Beneficiaries**: `t('dashboard.quickTasks.tasks.spouseBeneficiary.title')`
 
 ### 5. **Toast Messages** - Preložené
+
 - `"Task completed!"` → `t('dashboard.quickTasks.taskCompleted')`
 - `"Starting task..."` → `t('dashboard.quickTasks.taskStarted')`
 
 ## 📝 Nové preklady v common.json
 
 ### **dashboard.quickTasks**
+
 ```json
 {
   "taskCompleted": "Task completed!",
@@ -49,7 +55,7 @@
       "description": "Without this document, your family cannot prove inheritance rights or access accounts"
     },
     "insurancePolicy": {
-      "title": "💰 Add Life Insurance Policy", 
+      "title": "💰 Add Life Insurance Policy",
       "description": "Your family needs immediate access to claim benefits and avoid delays"
     },
     "will": {
@@ -89,6 +95,7 @@
 ```
 
 ### **dashboard.familyGuide**
+
 ```json
 {
   "view": "View",
@@ -98,10 +105,11 @@
 ```
 
 ### **dashboard.strategicSummary**
+
 ```json
 {
   "addPrimaryGuardian": "Add primary guardian",
-  "addBackupGuardian": "Add backup guardian", 
+  "addBackupGuardian": "Add backup guardian",
   "addHomeProperty": "Add your home property",
   "addFinancialAccounts": "Add financial accounts",
   "addPrimaryBeneficiary": "Add primary beneficiary",
@@ -113,6 +121,7 @@
 ## 🌍 Všetky jazyky aktualizované
 
 ✅ **32 jazykových mutácií** bolo úspešne aktualizovaných:
+
 - bg, cs, da, de, el, es, et, fi, fr, ga, hr, hu, is, it, lt, lv, me, mk, mt, nl, no, pl, pt, ro, ru, sk, sl, sq, sr, sv, tr, uk
 
 ## 🎯 Výsledok
@@ -126,6 +135,7 @@
 ## 📋 Čo bolo refaktorované
 
 ### **Hardcoded texty → Preklady:**
+
 - ✅ "Your Strategic Overview" → `t('dashboard.strategicSummary.title')`
 - ✅ "What to do when something happens - your family plan" → `t('dashboard.sectionHeaders.familyGuide')`
 - ✅ "Small steps, big protection - complete today" → `t('dashboard.sectionHeaders.quickTasks')`
@@ -135,10 +145,11 @@
 - ✅ "Task completed!" → `t('dashboard.quickTasks.taskCompleted')`
 
 ### **Komponenty s prekladmi:**
+
 - ✅ Dashboard.tsx - section headers
 - ✅ StrategicSummary.tsx - všetky texty
 - ✅ FamilyGuide.tsx - title, buttons, descriptions
 - ✅ QuickTasks.tsx - všetky task názvy a popisy
 - ✅ Toast messages - task notifications
 
-Teraz je dashboard plne lokalizovaný a všetky texty sa zobrazujú v správnom jazyku podľa nastavenia užívateľa! 
+Teraz je dashboard plne lokalizovaný a všetky texty sa zobrazujú v správnom jazyku podľa nastavenia užívateľa!

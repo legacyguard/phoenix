@@ -1,10 +1,10 @@
-import { createClient } from '@/lib/supabase/server';
-import { schedule } from 'node-cron';
-import nodemailer from 'nodemailer';
+import { createClient } from "@/lib/supabase/server";
+import { schedule } from "node-cron";
+import nodemailer from "nodemailer";
 
 // Create email transporter
 const transporter = nodemailer.createTransport({
-  service: 'gmail',
+  service: "gmail",
   auth: {
     user: process.env.EMAIL_USER,
     pass: process.env.EMAIL_PASS,
@@ -17,16 +17,16 @@ interface TimeCapsuleMessage {
   title: string;
   message_type: string;
   recipient_ids: string[];
-  unlock_condition: 'date' | 'after_passing';
+  unlock_condition: "date" | "after_passing";
   unlock_date: string | null;
-  status: 'locked' | 'unlocked' | 'delivered';
+  status: "locked" | "unlocked" | "delivered";
 }
 
 interface UserProfile {
   id: string;
   email: string;
   full_name: string;
-  status: 'active' | 'deceased';
+  status: "active" | "deceased";
 }
 
 /**
@@ -34,7 +34,7 @@ interface UserProfile {
  */
 async function checkAndUnlockTimeCapsules(): Promise<void> {
   const supabase = createClient();
-  
+
   try {
     // Get current date at start of day for date comparisons
     const today = new Date();
@@ -42,17 +42,17 @@ async function checkAndUnlockTimeCapsules(): Promise<void> {
 
     // Fetch all locked time capsules
     const { data: lockedCapsules, error: capsulesError } = await supabase
-      .from('time_capsule_messages')
-      .select('*')
-      .eq('status', 'locked');
+      .from("time_capsule_messages")
+      .select("*")
+      .eq("status", "locked");
 
     if (capsulesError) {
-      console.error('Error fetching locked capsules:', capsulesError);
+      console.error("Error fetching locked capsules:", capsulesError);
       return;
     }
 
     if (!lockedCapsules || lockedCapsules.length === 0) {
-      console.log('No locked time capsules to process');
+      console.log("No locked time capsules to process");
       return;
     }
 
@@ -61,27 +61,30 @@ async function checkAndUnlockTimeCapsules(): Promise<void> {
       let shouldUnlock = false;
 
       // Check unlock conditions
-      if (capsule.unlock_condition === 'date' && capsule.unlock_date) {
+      if (capsule.unlock_condition === "date" && capsule.unlock_date) {
         const unlockDate = new Date(capsule.unlock_date);
         unlockDate.setHours(0, 0, 0, 0);
-        
+
         if (unlockDate <= today) {
           shouldUnlock = true;
         }
-      } else if (capsule.unlock_condition === 'after_passing') {
+      } else if (capsule.unlock_condition === "after_passing") {
         // Check if user status is deceased
         const { data: userProfile, error: userError } = await supabase
-          .from('profiles')
-          .select('status')
-          .eq('id', capsule.user_id)
+          .from("profiles")
+          .select("status")
+          .eq("id", capsule.user_id)
           .single();
 
         if (userError) {
-          console.error(`Error fetching user profile for ${capsule.user_id}:`, userError);
+          console.error(
+            `Error fetching user profile for ${capsule.user_id}:`,
+            userError,
+          );
           continue;
         }
 
-        if (userProfile?.status === 'deceased') {
+        if (userProfile?.status === "deceased") {
           shouldUnlock = true;
         }
       }
@@ -92,9 +95,9 @@ async function checkAndUnlockTimeCapsules(): Promise<void> {
       }
     }
 
-    console.log('Time capsule delivery check completed');
+    console.log("Time capsule delivery check completed");
   } catch (error) {
-    console.error('Error in time capsule delivery service:', error);
+    console.error("Error in time capsule delivery service:", error);
   }
 }
 
@@ -103,17 +106,17 @@ async function checkAndUnlockTimeCapsules(): Promise<void> {
  */
 async function unlockAndNotifyRecipients(
   capsule: TimeCapsuleMessage,
-  supabase: Record<string, unknown>
+  supabase: Record<string, unknown>,
 ): Promise<void> {
   try {
     // Update capsule status to unlocked
     const { error: updateError } = await supabase
-      .from('time_capsule_messages')
-      .update({ 
-        status: 'unlocked',
-        unlocked_at: new Date().toISOString()
+      .from("time_capsule_messages")
+      .update({
+        status: "unlocked",
+        unlocked_at: new Date().toISOString(),
       })
-      .eq('id', capsule.id);
+      .eq("id", capsule.id);
 
     if (updateError) {
       console.error(`Error unlocking capsule ${capsule.id}:`, updateError);
@@ -122,9 +125,9 @@ async function unlockAndNotifyRecipients(
 
     // Get sender information
     const { data: sender, error: senderError } = await supabase
-      .from('profiles')
-      .select('full_name, email')
-      .eq('id', capsule.user_id)
+      .from("profiles")
+      .select("full_name, email")
+      .eq("id", capsule.user_id)
       .single();
 
     if (senderError) {
@@ -136,13 +139,16 @@ async function unlockAndNotifyRecipients(
     for (const recipientId of capsule.recipient_ids) {
       // Get recipient information
       const { data: recipient, error: recipientError } = await supabase
-        .from('trusted_people')
-        .select('name, email')
-        .eq('id', recipientId)
+        .from("trusted_people")
+        .select("name, email")
+        .eq("id", recipientId)
         .single();
 
       if (recipientError || !recipient) {
-        console.error(`Error fetching recipient ${recipientId}:`, recipientError);
+        console.error(
+          `Error fetching recipient ${recipientId}:`,
+          recipientError,
+        );
         continue;
       }
 
@@ -151,7 +157,7 @@ async function unlockAndNotifyRecipients(
         recipient.email,
         recipient.name,
         sender.full_name,
-        capsule.title
+        capsule.title,
       );
 
       // Create in-app notification
@@ -160,15 +166,15 @@ async function unlockAndNotifyRecipients(
         capsule.id,
         sender.full_name,
         capsule.title,
-        supabase
+        supabase,
       );
     }
 
     // Update status to delivered
     await supabase
-      .from('time_capsule_messages')
-      .update({ status: 'delivered' })
-      .eq('id', capsule.id);
+      .from("time_capsule_messages")
+      .update({ status: "delivered" })
+      .eq("id", capsule.id);
 
     console.log(`Time capsule ${capsule.id} unlocked and notifications sent`);
   } catch (error) {
@@ -183,7 +189,7 @@ async function sendUnlockNotification(
   recipientEmail: string,
   recipientName: string,
   senderName: string,
-  capsuleTitle: string
+  capsuleTitle: string,
 ): Promise<void> {
   try {
     const mailOptions = {
@@ -224,19 +230,17 @@ async function createInAppNotification(
   capsuleId: string,
   senderName: string,
   capsuleTitle: string,
-  supabase: Record<string, unknown>
+  supabase: Record<string, unknown>,
 ): Promise<void> {
   try {
-    const { error } = await supabase
-      .from('notifications')
-      .insert({
-        user_id: recipientId,
-        type: 'time_capsule_unlocked',
-        title: `New message from ${senderName}`,
-        message: `${senderName} has left you a time capsule message: "${capsuleTitle}"`,
-        data: { capsule_id: capsuleId },
-        read: false,
-      });
+    const { error } = await supabase.from("notifications").insert({
+      user_id: recipientId,
+      type: "time_capsule_unlocked",
+      title: `New message from ${senderName}`,
+      message: `${senderName} has left you a time capsule message: "${capsuleTitle}"`,
+      data: { capsule_id: capsuleId },
+      read: false,
+    });
 
     if (error) {
       console.error(`Error creating notification for ${recipientId}:`, error);
@@ -247,7 +251,7 @@ async function createInAppNotification(
 }
 
 // Schedule the delivery service to run daily at 9:00 AM
-schedule('0 9 * * *', checkAndUnlockTimeCapsules);
+schedule("0 9 * * *", checkAndUnlockTimeCapsules);
 
 // Export for manual triggering if needed
 export { checkAndUnlockTimeCapsules };

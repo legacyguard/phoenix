@@ -1,11 +1,12 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { cn } from '@/lib/utils';
+import React, { useState, useEffect, useRef } from "react";
+import { cn } from "@/lib/utils";
 
-interface OptimizedImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
+interface OptimizedImageProps
+  extends React.ImgHTMLAttributes<HTMLImageElement> {
   src: string;
   alt: string;
   fallbackSrc?: string;
-  loading?: 'lazy' | 'eager';
+  loading?: "lazy" | "eager";
   priority?: boolean;
   onLoad?: () => void;
   onError?: () => void;
@@ -15,7 +16,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   src,
   alt,
   fallbackSrc,
-  loading = 'lazy',
+  loading = "lazy",
   priority = false,
   onLoad,
   onError,
@@ -29,7 +30,7 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
 
   // Use Intersection Observer for truly lazy loading
   useEffect(() => {
-    if (priority || loading === 'eager') {
+    if (priority || loading === "eager") {
       setIsInView(true);
       return;
     }
@@ -44,8 +45,8 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
         });
       },
       {
-        rootMargin: '50px', // Start loading 50px before the image enters viewport
-      }
+        rootMargin: "50px", // Start loading 50px before the image enters viewport
+      },
     );
 
     if (imgRef.current) {
@@ -76,39 +77,39 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   // Generate srcSet for responsive images
   const generateSrcSet = (baseSrc: string) => {
     // If it's already a full URL or data URL, don't modify it
-    if (baseSrc.startsWith('http') || baseSrc.startsWith('data:')) {
+    if (baseSrc.startsWith("http") || baseSrc.startsWith("data:")) {
       return undefined;
     }
 
     // Generate multiple sizes for responsive loading
     const sizes = [320, 640, 768, 1024, 1280, 1920];
-    const srcSetParts = sizes.map(size => {
+    const srcSetParts = sizes.map((size) => {
       const url = baseSrc.replace(/\.[^.]+$/, `-${size}w$&`);
       return `${url} ${size}w`;
     });
 
-    return srcSetParts.join(', ');
+    return srcSetParts.join(", ");
   };
 
   // Determine WebP support
   const supportsWebP = () => {
-    if (typeof window === 'undefined') return false;
-    
-    const canvas = document.createElement('canvas');
+    if (typeof window === "undefined") return false;
+
+    const canvas = document.createElement("canvas");
     canvas.width = 1;
     canvas.height = 1;
-    return canvas.toDataURL('image/webp').indexOf('image/webp') === 0;
+    return canvas.toDataURL("image/webp").indexOf("image/webp") === 0;
   };
 
   // Convert image URL to WebP if supported
   const getOptimizedSrc = (originalSrc: string) => {
-    if (!supportsWebP() || originalSrc.includes('.svg')) {
+    if (!supportsWebP() || originalSrc.includes(".svg")) {
       return originalSrc;
     }
 
     // If it's a local image and not already WebP, try WebP version
-    if (!originalSrc.startsWith('http') && !originalSrc.endsWith('.webp')) {
-      return originalSrc.replace(/\.(jpg|jpeg|png)$/i, '.webp');
+    if (!originalSrc.startsWith("http") && !originalSrc.endsWith(".webp")) {
+      return originalSrc.replace(/\.(jpg|jpeg|png)$/i, ".webp");
     }
 
     return originalSrc;
@@ -117,36 +118,34 @@ export const OptimizedImage: React.FC<OptimizedImageProps> = ({
   const optimizedSrc = getOptimizedSrc(imageSrc);
 
   return (
-    <div className={cn('relative', className)}>
+    <div className={cn("relative", className)}>
       {/* Loading placeholder */}
       {isLoading && (
         <div className="absolute inset-0 bg-muted animate-pulse rounded" />
       )}
-      
+
       {/* Actual image */}
       {isInView && (
         <img
           ref={imgRef}
           src={optimizedSrc}
           alt={alt}
-          loading={priority ? 'eager' : 'lazy'}
+          loading={priority ? "eager" : "lazy"}
           onLoad={handleLoad}
           onError={handleError}
           className={cn(
-            'transition-opacity duration-300',
-            isLoading ? 'opacity-0' : 'opacity-100',
-            className
+            "transition-opacity duration-300",
+            isLoading ? "opacity-0" : "opacity-100",
+            className,
           )}
           srcSet={generateSrcSet(optimizedSrc)}
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           {...props}
         />
       )}
-      
+
       {/* Invisible placeholder for lazy loading */}
-      {!isInView && (
-        <div ref={imgRef} className={cn('invisible', className)} />
-      )}
+      {!isInView && <div ref={imgRef} className={cn("invisible", className)} />}
     </div>
   );
 };
@@ -160,7 +159,7 @@ interface OptimizedPictureProps {
   }>;
   alt: string;
   className?: string;
-  loading?: 'lazy' | 'eager';
+  loading?: "lazy" | "eager";
   priority?: boolean;
 }
 
@@ -168,7 +167,7 @@ export const OptimizedPicture: React.FC<OptimizedPictureProps> = ({
   sources,
   alt,
   className,
-  loading = 'lazy',
+  loading = "lazy",
   priority = false,
 }) => {
   return (

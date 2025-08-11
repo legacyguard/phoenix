@@ -1,12 +1,16 @@
-import { supabase } from '@/integrations/supabase/client';
-import type { ProcessedDocument, EncryptedFile, StorageOptions } from './document-upload.types';
-import { 
-  generateKey, 
-  encryptFile, 
+import { supabase } from "@/integrations/supabase/client";
+import type {
+  ProcessedDocument,
+  EncryptedFile,
+  StorageOptions,
+} from "./document-upload.types";
+import {
+  generateKey,
+  encryptFile,
   decryptFile,
   storeEncryptionKey,
-  retrieveEncryptionKey 
-} from '../utils/encryption-utils';
+  retrieveEncryptionKey,
+} from "../utils/encryption-utils";
 
 // Document storage service
 export class DocumentStorageService {
@@ -14,7 +18,7 @@ export class DocumentStorageService {
   async storeDocument(
     file: File,
     document: ProcessedDocument,
-    options: StorageOptions
+    options: StorageOptions,
   ): Promise<{ success: boolean; error?: string }> {
     try {
       // Generate encryption key
@@ -27,20 +31,20 @@ export class DocumentStorageService {
       await storeEncryptionKey(document.id, encryptionKey);
 
       // Determine storage location
-      if (options.location === 'local' || options.location === 'both') {
+      if (options.location === "local" || options.location === "both") {
         await this.storeLocalEncrypted(encryptedFile, document);
       }
 
-      if (options.location === 'cloud' || options.location === 'both') {
+      if (options.location === "cloud" || options.location === "both") {
         await this.storeCloudEncrypted(encryptedFile, document);
       }
 
       return { success: true };
     } catch (error) {
-      console.error('Storage error:', error);
-      return { 
-        success: false, 
-        error: error instanceof Error ? error.message : 'Storage failed' 
+      console.error("Storage error:", error);
+      return {
+        success: false,
+        error: error instanceof Error ? error.message : "Storage failed",
       };
     }
   }
@@ -53,8 +57,8 @@ export class DocumentStorageService {
     const db = await this.openDatabase();
 
     // Store in IndexedDB
-    const transaction = db.transaction(['documents'], 'readwrite');
-    const store = transaction.objectStore('documents');
+    const transaction = db.transaction(["documents"], "readwrite");
+    const store = transaction.objectStore("documents");
 
     await new Promise<void>((resolve, reject) => {
       const request = store.put({
@@ -77,18 +81,17 @@ export class DocumentStorageService {
     document: ProcessedDocument,
   ): Promise<void> {
     // Convert encrypted data to file
-    const fileToUpload = new Blob(
-      [encryptedFile.encryptedData],
-      { type: 'application/octet-stream' }
-    );
+    const fileToUpload = new Blob([encryptedFile.encryptedData], {
+      type: "application/octet-stream",
+    });
 
     // Upload to Supabase storage
     const { error: uploadError } = await supabase.storage
-      .from('documents')
+      .from("documents")
       .upload(`${document.id}/${document.id}.encrypted`, fileToUpload, {
-        cacheControl: '3600',
+        cacheControl: "3600",
         upsert: false,
-        contentType: 'application/octet-stream',
+        contentType: "application/octet-stream",
       });
 
     if (uploadError) {
@@ -110,10 +113,10 @@ export class DocumentStorageService {
   private async storeLocal(
     file: File,
     document: ProcessedDocument,
-    encrypt: boolean
+    encrypt: boolean,
   ): Promise<void> {
     const db = await this.openDatabase();
-    
+
     let dataToStore: ArrayBuffer | EncryptedFile;
     let encryptionKey: CryptoKey | null = null;
 
@@ -121,7 +124,7 @@ export class DocumentStorageService {
       // Generate and store encryption key
       encryptionKey = await generateKey();
       await storeEncryptionKey(document.id, encryptionKey);
-      
+
       // Encrypt file
       dataToStore = await encryptFile(file, encryptionKey);
     } else {
@@ -130,8 +133,8 @@ export class DocumentStorageService {
     }
 
     // Store in IndexedDB
-    const transaction = db.transaction(['documents'], 'readwrite');
-    const store = transaction.objectStore('documents');
+    const transaction = db.transaction(["documents"], "readwrite");
+    const store = transaction.objectStore("documents");
 
     await new Promise<void>((resolve, reject) => {
       const request = store.put({
@@ -152,7 +155,7 @@ export class DocumentStorageService {
   private async storeCloud(
     file: File,
     document: ProcessedDocument,
-    encrypt: boolean
+    encrypt: boolean,
   ): Promise<void> {
     let fileToUpload: File = file;
     let encryptionKey: CryptoKey | null = null;
@@ -161,12 +164,12 @@ export class DocumentStorageService {
       // Encrypt file before uploading
       encryptionKey = await generateKey();
       const encryptedData = await encryptFile(file, encryptionKey);
-      
+
       // Convert encrypted data to file
       fileToUpload = new File(
         [encryptedData.encryptedData],
         `${document.id}.encrypted`,
-        { type: 'application/octet-stream' }
+        { type: "application/octet-stream" },
       );
 
       // Store encryption metadata
@@ -183,9 +186,9 @@ export class DocumentStorageService {
 
     // Upload to Supabase storage
     const { error: uploadError } = await supabase.storage
-      .from('documents')
+      .from("documents")
       .upload(`${document.id}/${fileToUpload.name}`, fileToUpload, {
-        cacheControl: '3600',
+        cacheControl: "3600",
         upsert: false,
       });
 
@@ -194,25 +197,23 @@ export class DocumentStorageService {
     }
 
     // Store document metadata in database
-    const { error: dbError } = await supabase
-      .from('documents')
-      .insert({
-        id: document.id,
-        user_id: (await supabase.auth.getUser()).data.user?.id,
-        file_name: document.originalName,
-        display_name: document.displayName,
-        document_type: document.type,
-        category: document.category,
-        file_size: document.size,
-        mime_type: document.metadata.mimeType,
-        encrypted: encrypt,
-        ocr_text: document.ocrText,
-        extracted_data: document.extractedData,
-        ai_analysis: document.aiAnalysis,
-        metadata: document.metadata,
-        thumbnail: document.thumbnail,
-        storage_location: 'cloud',
-      });
+    const { error: dbError } = await supabase.from("documents").insert({
+      id: document.id,
+      user_id: (await supabase.auth.getUser()).data.user?.id,
+      file_name: document.originalName,
+      display_name: document.displayName,
+      document_type: document.type,
+      category: document.category,
+      file_size: document.size,
+      mime_type: document.metadata.mimeType,
+      encrypted: encrypt,
+      ocr_text: document.ocrText,
+      extracted_data: document.extractedData,
+      ai_analysis: document.aiAnalysis,
+      metadata: document.metadata,
+      thumbnail: document.thumbnail,
+      storage_location: "cloud",
+    });
 
     if (dbError) {
       throw new Error(`Database error: ${dbError.message}`);
@@ -222,14 +223,12 @@ export class DocumentStorageService {
   // Store encryption metadata in Supabase
   private async storeCloudEncryptionMetadata(
     documentId: string,
-    metadata: Record<string, unknown>
+    metadata: Record<string, unknown>,
   ): Promise<void> {
-    const { error } = await supabase
-      .from('document_encryption')
-      .insert({
-        document_id: documentId,
-        encryption_metadata: metadata,
-      });
+    const { error } = await supabase.from("document_encryption").insert({
+      document_id: documentId,
+      encryption_metadata: metadata,
+    });
 
     if (error) {
       throw new Error(`Failed to store encryption metadata: ${error.message}`);
@@ -239,16 +238,16 @@ export class DocumentStorageService {
   // Retrieve document from storage
   async retrieveDocument(
     documentId: string,
-    location: 'local' | 'cloud'
+    location: "local" | "cloud",
   ): Promise<File | null> {
     try {
-      if (location === 'local') {
+      if (location === "local") {
         return await this.retrieveLocal(documentId);
       } else {
         return await this.retrieveCloud(documentId);
       }
     } catch (error) {
-      console.error('Retrieval error:', error);
+      console.error("Retrieval error:", error);
       return null;
     }
   }
@@ -256,15 +255,17 @@ export class DocumentStorageService {
   // Retrieve from local storage
   private async retrieveLocal(documentId: string): Promise<File | null> {
     const db = await this.openDatabase();
-    
-    const transaction = db.transaction(['documents'], 'readonly');
-    const store = transaction.objectStore('documents');
 
-    const data = await new Promise<Record<string, unknown>>((resolve, reject) => {
-      const request = store.get(documentId);
-      request.onsuccess = () => resolve(request.result);
-      request.onerror = () => reject(request.error);
-    });
+    const transaction = db.transaction(["documents"], "readonly");
+    const store = transaction.objectStore("documents");
+
+    const data = await new Promise<Record<string, unknown>>(
+      (resolve, reject) => {
+        const request = store.get(documentId);
+        request.onsuccess = () => resolve(request.result);
+        request.onerror = () => reject(request.error);
+      },
+    );
 
     db.close();
 
@@ -274,17 +275,15 @@ export class DocumentStorageService {
     if (data.encrypted) {
       const key = await retrieveEncryptionKey(documentId);
       if (!key) {
-        throw new Error('Encryption key not found');
+        throw new Error("Encryption key not found");
       }
 
       return await decryptFile(data.fileData as EncryptedFile, key);
     } else {
       // Reconstruct file from ArrayBuffer
-      return new File(
-        [data.fileData],
-        data.document.originalName,
-        { type: data.document.metadata.mimeType }
-      );
+      return new File([data.fileData], data.document.originalName, {
+        type: data.document.metadata.mimeType,
+      });
     }
   }
 
@@ -292,42 +291,44 @@ export class DocumentStorageService {
   private async retrieveCloud(documentId: string): Promise<File | null> {
     // Get document metadata
     const { data: docData, error: docError } = await supabase
-      .from('documents')
-      .select('*')
-      .eq('id', documentId)
+      .from("documents")
+      .select("*")
+      .eq("id", documentId)
       .single();
 
     if (docError || !docData) {
-      throw new Error('Document not found');
+      throw new Error("Document not found");
     }
 
     // Download file from storage
-    const fileName = docData.encrypted ? `${documentId}.encrypted` : docData.file_name;
+    const fileName = docData.encrypted
+      ? `${documentId}.encrypted`
+      : docData.file_name;
     const { data: fileData, error: downloadError } = await supabase.storage
-      .from('documents')
+      .from("documents")
       .download(`${documentId}/${fileName}`);
 
     if (downloadError || !fileData) {
-      throw new Error('Failed to download file');
+      throw new Error("Failed to download file");
     }
 
     // Handle decryption if needed
     if (docData.encrypted) {
       // Get encryption metadata
       const { data: encData } = await supabase
-        .from('document_encryption')
-        .select('encryption_metadata')
-        .eq('document_id', documentId)
+        .from("document_encryption")
+        .select("encryption_metadata")
+        .eq("document_id", documentId)
         .single();
 
       if (!encData) {
-        throw new Error('Encryption metadata not found');
+        throw new Error("Encryption metadata not found");
       }
 
       // Get encryption key (stored locally)
       const key = await retrieveEncryptionKey(documentId);
       if (!key) {
-        throw new Error('Encryption key not found');
+        throw new Error("Encryption key not found");
       }
 
       // Reconstruct encrypted file object
@@ -339,40 +340,38 @@ export class DocumentStorageService {
           originalName: encData.encryption_metadata.originalName,
           mimeType: encData.encryption_metadata.originalType,
           size: docData.file_size,
-          checksum: '',
+          checksum: "",
         },
       };
 
       return await decryptFile(encryptedFile, key);
     } else {
       // Return unencrypted file
-      return new File(
-        [fileData],
-        docData.file_name,
-        { type: docData.mime_type }
-      );
+      return new File([fileData], docData.file_name, {
+        type: docData.mime_type,
+      });
     }
   }
 
   // Delete document from storage
   async deleteDocument(
     documentId: string,
-    location: 'local' | 'cloud' | 'both'
+    location: "local" | "cloud" | "both",
   ): Promise<{ success: boolean; error?: string }> {
     try {
-      if (location === 'local' || location === 'both') {
+      if (location === "local" || location === "both") {
         await this.deleteLocal(documentId);
       }
 
-      if (location === 'cloud' || location === 'both') {
+      if (location === "cloud" || location === "both") {
         await this.deleteCloud(documentId);
       }
 
       return { success: true };
     } catch (error) {
-      return { 
-        success: false, 
-        error: error instanceof Error ? error.message : 'Delete failed' 
+      return {
+        success: false,
+        error: error instanceof Error ? error.message : "Delete failed",
       };
     }
   }
@@ -380,9 +379,9 @@ export class DocumentStorageService {
   // Delete from local storage
   private async deleteLocal(documentId: string): Promise<void> {
     const db = await this.openDatabase();
-    
-    const transaction = db.transaction(['documents'], 'readwrite');
-    const store = transaction.objectStore('documents');
+
+    const transaction = db.transaction(["documents"], "readwrite");
+    const store = transaction.objectStore("documents");
 
     await new Promise<void>((resolve, reject) => {
       const request = store.delete(documentId);
@@ -400,18 +399,18 @@ export class DocumentStorageService {
   private async deleteCloud(documentId: string): Promise<void> {
     // Delete from storage bucket
     const { error: storageError } = await supabase.storage
-      .from('documents')
+      .from("documents")
       .remove([`${documentId}/`]);
 
     if (storageError) {
-      console.error('Storage deletion error:', storageError);
+      console.error("Storage deletion error:", storageError);
     }
 
     // Delete from database
     const { error: dbError } = await supabase
-      .from('documents')
+      .from("documents")
       .delete()
-      .eq('id', documentId);
+      .eq("id", documentId);
 
     if (dbError) {
       throw new Error(`Database deletion error: ${dbError.message}`);
@@ -419,26 +418,26 @@ export class DocumentStorageService {
 
     // Delete encryption metadata
     await supabase
-      .from('document_encryption')
+      .from("document_encryption")
       .delete()
-      .eq('document_id', documentId);
+      .eq("document_id", documentId);
   }
 
   // Open IndexedDB database
   private async openDatabase(): Promise<IDBDatabase> {
     return new Promise((resolve, reject) => {
-      const request = indexedDB.open('LegacyGuardDocuments', 1);
-      
+      const request = indexedDB.open("LegacyGuardDocuments", 1);
+
       request.onupgradeneeded = (event) => {
         const db = (event.target as IDBOpenDBRequest).result;
-        
-        if (!db.objectStoreNames.contains('documents')) {
-          const store = db.createObjectStore('documents', { keyPath: 'id' });
-          store.createIndex('storedAt', 'storedAt', { unique: false });
-          store.createIndex('category', 'document.category', { unique: false });
+
+        if (!db.objectStoreNames.contains("documents")) {
+          const store = db.createObjectStore("documents", { keyPath: "id" });
+          store.createIndex("storedAt", "storedAt", { unique: false });
+          store.createIndex("category", "document.category", { unique: false });
         }
       };
-      
+
       request.onsuccess = () => resolve(request.result);
       request.onerror = () => reject(request.error);
     });
@@ -456,32 +455,32 @@ export class DocumentStorageService {
     // Get local stats
     try {
       const db = await this.openDatabase();
-      const transaction = db.transaction(['documents'], 'readonly');
-      const store = transaction.objectStore('documents');
-      
+      const transaction = db.transaction(["documents"], "readonly");
+      const store = transaction.objectStore("documents");
+
       const countRequest = store.count();
       localCount = await new Promise<number>((resolve) => {
         countRequest.onsuccess = () => resolve(countRequest.result);
       });
-      
+
       db.close();
     } catch (error) {
-      console.error('Error getting local stats:', error);
+      console.error("Error getting local stats:", error);
     }
 
     // Get cloud stats
     let cloudCount = 0;
     try {
       const { count, data } = await supabase
-        .from('documents')
-        .select('file_size', { count: 'exact' });
-      
+        .from("documents")
+        .select("file_size", { count: "exact" });
+
       cloudCount = count || 0;
       if (data) {
         totalSize = data.reduce((sum, doc) => sum + (doc.file_size || 0), 0);
       }
     } catch (error) {
-      console.error('Error getting cloud stats:', error);
+      console.error("Error getting cloud stats:", error);
     }
 
     return { localCount, cloudCount, totalSize };

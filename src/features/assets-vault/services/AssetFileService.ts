@@ -1,14 +1,14 @@
-import { supabase } from '@/lib/supabase';
-import { 
-  generateKey, 
-  encryptFile, 
+import { supabase } from "@/lib/supabase";
+import {
+  generateKey,
+  encryptFile,
   decryptFile,
   storeEncryptionKey,
   retrieveEncryptionKey,
   createShareablePackage,
   decryptShareablePackage,
-  generateSecurePassword
-} from '@/lib/utils/encryption-utils';
+  generateSecurePassword,
+} from "@/lib/utils/encryption-utils";
 
 export interface AssetFile {
   id: string;
@@ -41,7 +41,7 @@ export interface AssetShare {
 }
 
 export class AssetFileService {
-  private readonly BUCKET_NAME = 'asset-files';
+  private readonly BUCKET_NAME = "asset-files";
   private readonly MAX_FILE_SIZE = 100 * 1024 * 1024; // 100MB
 
   /**
@@ -49,15 +49,19 @@ export class AssetFileService {
    */
   async uploadAssetFile(
     file: File,
-    options: AssetUploadOptions
+    options: AssetUploadOptions,
   ): Promise<AssetFile> {
     // Validate file size
     if (file.size > this.MAX_FILE_SIZE) {
-      throw new Error(`File size exceeds maximum allowed size of ${this.MAX_FILE_SIZE / 1024 / 1024}MB`);
+      throw new Error(
+        `File size exceeds maximum allowed size of ${this.MAX_FILE_SIZE / 1024 / 1024}MB`,
+      );
     }
 
-    const { data: { user } } = await supabase.auth.getUser();
-    if (!user) throw new Error('User not authenticated');
+    const {
+      data: { user },
+    } = await supabase.auth.getUser();
+    if (!user) throw new Error("User not authenticated");
 
     const fileId = crypto.randomUUID();
     const shouldEncrypt = options.encrypt !== false; // Default to true
@@ -69,25 +73,25 @@ export class AssetFileService {
       if (shouldEncrypt) {
         // Generate encryption key
         const encryptionKey = await generateKey();
-        
+
         // Encrypt file
         const encryptedFile = await encryptFile(file, encryptionKey);
-        
+
         // Store encryption key locally
         await storeEncryptionKey(fileId, encryptionKey);
-        
+
         // Prepare upload data
-        uploadData = new Blob([encryptedFile.encryptedData], { 
-          type: 'application/octet-stream' 
+        uploadData = new Blob([encryptedFile.encryptedData], {
+          type: "application/octet-stream",
         });
-        
+
         // Prepare encryption metadata
         encryptionMetadata = {
           iv: Array.from(encryptedFile.iv),
           method: encryptedFile.encryptionMethod,
           originalName: file.name,
           originalType: file.type,
-          checksum: encryptedFile.metadata.checksum
+          checksum: encryptedFile.metadata.checksum,
         };
       } else {
         uploadData = file;
@@ -98,9 +102,9 @@ export class AssetFileService {
       const { error: uploadError } = await supabase.storage
         .from(this.BUCKET_NAME)
         .upload(filePath, uploadData, {
-          cacheControl: '3600',
+          cacheControl: "3600",
           upsert: false,
-          contentType: shouldEncrypt ? 'application/octet-stream' : file.type
+          contentType: shouldEncrypt ? "application/octet-stream" : file.type,
         });
 
       if (uploadError) {
@@ -116,17 +120,17 @@ export class AssetFileService {
         mimeType: file.type,
         encrypted: shouldEncrypt,
         uploadedAt: new Date(),
-        tags: options.tags || []
+        tags: options.tags || [],
       };
 
       const { data: fileRecord, error: dbError } = await supabase
-        .from('asset_files')
+        .from("asset_files")
         .insert({
           ...assetFile,
           user_id: user.id,
           file_path: filePath,
           encryption_metadata: encryptionMetadata,
-          category: options.category
+          category: options.category,
         })
         .select()
         .single();
@@ -139,7 +143,7 @@ export class AssetFileService {
 
       return fileRecord as AssetFile;
     } catch (error) {
-      console.error('Asset upload error:', error);
+      console.error("Asset upload error:", error);
       throw error;
     }
   }
@@ -148,19 +152,21 @@ export class AssetFileService {
    * Download and decrypt an asset file
    */
   async downloadAssetFile(fileId: string): Promise<File> {
-    const { data: { user } } = await supabase.auth.getUser();
-    if (!user) throw new Error('User not authenticated');
+    const {
+      data: { user },
+    } = await supabase.auth.getUser();
+    if (!user) throw new Error("User not authenticated");
 
     // Get file metadata
     const { data: fileRecord, error: dbError } = await supabase
-      .from('asset_files')
-      .select('*')
-      .eq('id', fileId)
-      .eq('user_id', user.id)
+      .from("asset_files")
+      .select("*")
+      .eq("id", fileId)
+      .eq("user_id", user.id)
       .single();
 
     if (dbError || !fileRecord) {
-      throw new Error('File not found');
+      throw new Error("File not found");
     }
 
     // Download file from storage
@@ -169,14 +175,14 @@ export class AssetFileService {
       .download(fileRecord.file_path);
 
     if (downloadError || !fileData) {
-      throw new Error('Failed to download file');
+      throw new Error("Failed to download file");
     }
 
     // Handle decryption if needed
     if (fileRecord.encrypted && fileRecord.encryption_metadata) {
       const encryptionKey = await retrieveEncryptionKey(fileId);
       if (!encryptionKey) {
-        throw new Error('Encryption key not found');
+        throw new Error("Encryption key not found");
       }
 
       const encryptedFile = {
@@ -187,15 +193,15 @@ export class AssetFileService {
           originalName: fileRecord.encryption_metadata.originalName,
           mimeType: fileRecord.encryption_metadata.originalType,
           size: fileRecord.file_size,
-          checksum: fileRecord.encryption_metadata.checksum
-        }
+          checksum: fileRecord.encryption_metadata.checksum,
+        },
       };
 
       return await decryptFile(encryptedFile, encryptionKey);
     } else {
       // Return unencrypted file
-      return new File([fileData], fileRecord.file_name, { 
-        type: fileRecord.mime_type 
+      return new File([fileData], fileRecord.file_name, {
+        type: fileRecord.mime_type,
       });
     }
   }
@@ -206,21 +212,23 @@ export class AssetFileService {
   async shareAssetFile(
     fileId: string,
     shareWithEmail: string,
-    expiresInHours: number = 72
+    expiresInHours: number = 72,
   ): Promise<AssetShare> {
-    const { data: { user } } = await supabase.auth.getUser();
-    if (!user) throw new Error('User not authenticated');
+    const {
+      data: { user },
+    } = await supabase.auth.getUser();
+    if (!user) throw new Error("User not authenticated");
 
     // Verify file ownership
     const { data: fileRecord } = await supabase
-      .from('asset_files')
-      .select('*')
-      .eq('id', fileId)
-      .eq('user_id', user.id)
+      .from("asset_files")
+      .select("*")
+      .eq("id", fileId)
+      .eq("user_id", user.id)
       .single();
 
     if (!fileRecord) {
-      throw new Error('File not found or access denied');
+      throw new Error("File not found or access denied");
     }
 
     // Generate secure share package
@@ -237,27 +245,33 @@ export class AssetFileService {
     const sharePath = `shares/${shareId}`;
     const { error: uploadError } = await supabase.storage
       .from(this.BUCKET_NAME)
-      .upload(sharePath, new Blob([
-        JSON.stringify({
-          encryptedFile: {
-            encryptedData: Array.from(new Uint8Array(sharePackage.encryptedFile.encryptedData)),
-            encryptionMethod: sharePackage.encryptedFile.encryptionMethod,
-            iv: Array.from(sharePackage.encryptedFile.iv),
-            metadata: sharePackage.encryptedFile.metadata
-          },
-          salt: Array.from(sharePackage.salt)
-        })
-      ]), {
-        contentType: 'application/json'
-      });
+      .upload(
+        sharePath,
+        new Blob([
+          JSON.stringify({
+            encryptedFile: {
+              encryptedData: Array.from(
+                new Uint8Array(sharePackage.encryptedFile.encryptedData),
+              ),
+              encryptionMethod: sharePackage.encryptedFile.encryptionMethod,
+              iv: Array.from(sharePackage.encryptedFile.iv),
+              metadata: sharePackage.encryptedFile.metadata,
+            },
+            salt: Array.from(sharePackage.salt),
+          }),
+        ]),
+        {
+          contentType: "application/json",
+        },
+      );
 
     if (uploadError) {
-      throw new Error('Failed to create share package');
+      throw new Error("Failed to create share package");
     }
 
     // Store share metadata
     const { data: shareRecord, error: shareError } = await supabase
-      .from('asset_shares')
+      .from("asset_shares")
       .insert({
         id: shareId,
         asset_file_id: fileId,
@@ -266,7 +280,7 @@ export class AssetFileService {
         share_path: sharePath,
         expires_at: expiresAt,
         access_count: 0,
-        created_at: new Date()
+        created_at: new Date(),
       })
       .select()
       .single();
@@ -274,7 +288,7 @@ export class AssetFileService {
     if (shareError) {
       // Cleanup on error
       await supabase.storage.from(this.BUCKET_NAME).remove([sharePath]);
-      throw new Error('Failed to create share record');
+      throw new Error("Failed to create share record");
     }
 
     // Send notification email (would be implemented separately)
@@ -282,7 +296,7 @@ export class AssetFileService {
 
     return {
       ...shareRecord,
-      password
+      password,
     } as AssetShare;
   }
 
@@ -290,69 +304,76 @@ export class AssetFileService {
    * Revoke a shared asset
    */
   async revokeShare(shareId: string): Promise<void> {
-    const { data: { user } } = await supabase.auth.getUser();
-    if (!user) throw new Error('User not authenticated');
+    const {
+      data: { user },
+    } = await supabase.auth.getUser();
+    if (!user) throw new Error("User not authenticated");
 
     // Get share record
     const { data: share } = await supabase
-      .from('asset_shares')
-      .select('*')
-      .eq('id', shareId)
-      .eq('shared_by', user.id)
+      .from("asset_shares")
+      .select("*")
+      .eq("id", shareId)
+      .eq("shared_by", user.id)
       .single();
 
     if (!share) {
-      throw new Error('Share not found');
+      throw new Error("Share not found");
     }
 
     // Remove share package
-    await supabase.storage
-      .from(this.BUCKET_NAME)
-      .remove([share.share_path]);
+    await supabase.storage.from(this.BUCKET_NAME).remove([share.share_path]);
 
     // Update share record
     await supabase
-      .from('asset_shares')
+      .from("asset_shares")
       .update({ revoked_at: new Date() })
-      .eq('id', shareId);
+      .eq("id", shareId);
   }
 
   /**
    * Add tags to an asset file
    */
   async updateTags(fileId: string, tags: string[]): Promise<void> {
-    const { data: { user } } = await supabase.auth.getUser();
-    if (!user) throw new Error('User not authenticated');
+    const {
+      data: { user },
+    } = await supabase.auth.getUser();
+    if (!user) throw new Error("User not authenticated");
 
     const { error } = await supabase
-      .from('asset_files')
+      .from("asset_files")
       .update({ tags, updated_at: new Date() })
-      .eq('id', fileId)
-      .eq('user_id', user.id);
+      .eq("id", fileId)
+      .eq("user_id", user.id);
 
     if (error) {
-      throw new Error('Failed to update tags');
+      throw new Error("Failed to update tags");
     }
   }
 
   /**
    * Delete an asset file (soft delete with retention)
    */
-  async deleteAssetFile(fileId: string, permanent: boolean = false): Promise<void> {
-    const { data: { user } } = await supabase.auth.getUser();
-    if (!user) throw new Error('User not authenticated');
+  async deleteAssetFile(
+    fileId: string,
+    permanent: boolean = false,
+  ): Promise<void> {
+    const {
+      data: { user },
+    } = await supabase.auth.getUser();
+    if (!user) throw new Error("User not authenticated");
 
     if (permanent) {
       // Get file record
       const { data: fileRecord } = await supabase
-        .from('asset_files')
-        .select('file_path')
-        .eq('id', fileId)
-        .eq('user_id', user.id)
+        .from("asset_files")
+        .select("file_path")
+        .eq("id", fileId)
+        .eq("user_id", user.id)
         .single();
 
       if (!fileRecord) {
-        throw new Error('File not found');
+        throw new Error("File not found");
       }
 
       // Delete from storage
@@ -361,23 +382,20 @@ export class AssetFileService {
         .remove([fileRecord.file_path]);
 
       // Delete from database
-      await supabase
-        .from('asset_files')
-        .delete()
-        .eq('id', fileId);
+      await supabase.from("asset_files").delete().eq("id", fileId);
 
       // Delete encryption key
       // This would need to be implemented in encryption-utils
     } else {
       // Soft delete
       await supabase
-        .from('asset_files')
-        .update({ 
+        .from("asset_files")
+        .update({
           deleted_at: new Date(),
-          updated_at: new Date()
+          updated_at: new Date(),
         })
-        .eq('id', fileId)
-        .eq('user_id', user.id);
+        .eq("id", fileId)
+        .eq("user_id", user.id);
     }
   }
 
@@ -390,35 +408,39 @@ export class AssetFileService {
     category?: string;
     searchTerm?: string;
   }): Promise<AssetFile[]> {
-    const { data: { user } } = await supabase.auth.getUser();
-    if (!user) throw new Error('User not authenticated');
+    const {
+      data: { user },
+    } = await supabase.auth.getUser();
+    if (!user) throw new Error("User not authenticated");
 
     let query = supabase
-      .from('asset_files')
-      .select('*')
-      .eq('user_id', user.id)
-      .is('deleted_at', null);
+      .from("asset_files")
+      .select("*")
+      .eq("user_id", user.id)
+      .is("deleted_at", null);
 
     if (params.assetId) {
-      query = query.eq('asset_id', params.assetId);
+      query = query.eq("asset_id", params.assetId);
     }
 
     if (params.category) {
-      query = query.eq('category', params.category);
+      query = query.eq("category", params.category);
     }
 
     if (params.tags && params.tags.length > 0) {
-      query = query.contains('tags', params.tags);
+      query = query.contains("tags", params.tags);
     }
 
     if (params.searchTerm) {
-      query = query.ilike('file_name', `%${params.searchTerm}%`);
+      query = query.ilike("file_name", `%${params.searchTerm}%`);
     }
 
-    const { data, error } = await query.order('created_at', { ascending: false });
+    const { data, error } = await query.order("created_at", {
+      ascending: false,
+    });
 
     if (error) {
-      throw new Error('Search failed');
+      throw new Error("Search failed");
     }
 
     return data as AssetFile[];

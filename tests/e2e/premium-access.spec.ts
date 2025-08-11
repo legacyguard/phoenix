@@ -1,8 +1,12 @@
-import { test, expect } from '@playwright/test';
-import { loginAsFreeUser, loginAsPremiumUser, grantPremiumAccess } from './utils/auth';
+import { test, expect } from "@playwright/test";
+import {
+  loginAsFreeUser,
+  loginAsPremiumUser,
+  grantPremiumAccess,
+} from "./utils/auth";
 
-test.describe('Premium Feature Access', () => {
-  test('Free user attempting to access premium feature', async ({ page }) => {
+test.describe("Premium Feature Access", () => {
+  test("Free user attempting to access premium feature", async ({ page }) => {
     await loginAsFreeUser(page);
 
     // Navigate to Executor's Toolkit
@@ -20,10 +24,12 @@ test.describe('Premium Feature Access', () => {
 
     // Should now have access to toolkit dashboard
     await expect(page).toHaveURL(/\/executor-toolkit/);
-    await expect(page.locator('[data-testid="toolkit-dashboard"]')).toBeVisible();
+    await expect(
+      page.locator('[data-testid="toolkit-dashboard"]'),
+    ).toBeVisible();
   });
 
-  test('Premium user accessing premium feature', async ({ page }) => {
+  test("Premium user accessing premium feature", async ({ page }) => {
     await loginAsPremiumUser(page);
 
     // Directly access Executor's Toolkit
@@ -31,7 +37,8 @@ test.describe('Premium Feature Access', () => {
 
     // Should have direct access
     await expect(page).toHaveURL(/\/executor-toolkit/);
-    await expect(page.locator('[data-testid="toolkit-dashboard"]')).toBeVisible();
+    await expect(
+      page.locator('[data-testid="toolkit-dashboard"]'),
+    ).toBeVisible();
   });
 });
-

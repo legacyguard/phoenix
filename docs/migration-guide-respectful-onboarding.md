@@ -18,9 +18,11 @@ This guide explains how to migrate from the legacy onboarding and dashboard expe
 ## Enabling the New Experience
 
 Option A: Environment variable bundle (recommended for quick testing)
+
 - Set `VITE_RESPECTFUL_ONBOARDING=true` in `.env.local`
 
 Option B: LocalStorage flags (deterministic per-browser)
+
 - feature_respectfulOnboarding=true
 - feature_legacyGamification=false
 - feature_professionalDashboard=true
@@ -28,6 +30,7 @@ Option B: LocalStorage flags (deterministic per-browser)
 - feature_showProgressPercentage=false
 
 Option C: Programmatic (for tests)
+
 - Wrap with `FeatureFlagProvider` and call `featureFlags.setFlag(...)`
 
 ## Component Integrations
@@ -62,10 +65,10 @@ No database migrations are required for this change set.
 
 ## Rollout Plan
 
-1) Internal testing with `VITE_RESPECTFUL_ONBOARDING=true`
-2) Limited rollout with `rolloutPercentage` in `FEATURE_FLAGS`
-3) Expand `enabledForUsers` for targeted allow-list testing
-4) Monitor analytics and error logs
+1. Internal testing with `VITE_RESPECTFUL_ONBOARDING=true`
+2. Limited rollout with `rolloutPercentage` in `FEATURE_FLAGS`
+3. Expand `enabledForUsers` for targeted allow-list testing
+4. Monitor analytics and error logs
 
 ## Rollback Plan (high level)
 
@@ -82,4 +85,3 @@ No database migrations are required for this change set.
 
 Q: Does this change break existing users' progress?
 A: No. Legacy progress indicators remain. Respectful flow adds separate tracking keys and does not overwrite legacy keys.
-

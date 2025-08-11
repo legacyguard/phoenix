@@ -1,121 +1,147 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LegacyGuard - Offline</title>
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-      background-color: #f9fafb;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      text-align: center;
-    }
-    .offline-container {
-      max-width: 500px;
-      padding: 2rem;
-    }
-    .offline-icon {
-      width: 120px;
-      height: 120px;
-      margin: 0 auto 2rem;
-      opacity: 0.8;
-    }
-    h1 {
-      color: #1f2937;
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      font-weight: 600;
-    }
-    p {
-      color: #6b7280;
-      font-size: 1.125rem;
-      line-height: 1.75;
-      margin-bottom: 2rem;
-    }
-    .offline-actions {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-    .offline-btn {
-      background-color: #7c3aed;
-      color: white;
-      padding: 0.75rem 1.5rem;
-      border: none;
-      border-radius: 0.5rem;
-      font-size: 1rem;
-      font-weight: 500;
-      cursor: pointer;
-      transition: background-color 0.2s;
-    }
-    .offline-btn:hover {
-      background-color: #6d28d9;
-    }
-    .offline-btn-secondary {
-      background-color: transparent;
-      color: #7c3aed;
-      border: 2px solid #7c3aed;
-    }
-    .offline-btn-secondary:hover {
-      background-color: #f3f4f6;
-    }
-    .cached-info {
-      margin-top: 2rem;
-      padding: 1rem;
-      background-color: #ede9fe;
-      border-radius: 0.5rem;
-      color: #5b21b6;
-      font-size: 0.875rem;
-    }
-  </style>
-</head>
-<body>
-  <div class="offline-container">
-    <svg class="offline-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M8.578 16.359l-6.669-6.669c.534-.534 1.032-1.032 1.566-1.566l5.103 5.103 11.646-11.646c.534.534 1.032 1.032 1.566 1.566l-13.212 13.212z" fill="#7c3aed" opacity="0.3"/>
-      <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z" fill="#7c3aed"/>
-      <path d="M12 7v5l3.5 3.5" stroke="#7c3aed" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-    
-    <h1>You're Currently Offline</h1>
-    <p>Don't worry! Your critical family information is still accessible. We've saved your most important data for offline viewing.</p>
-    
-    <div class="offline-actions">
-      <button class="offline-btn" onclick="window.location.reload()">
-        Try Again
-      </button>
-      <button class="offline-btn offline-btn-secondary" onclick="history.back()">
-        Go Back
-      </button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LegacyGuard - Offline</title>
+    <style>
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+          Cantarell, sans-serif;
+        background-color: #f9fafb;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        text-align: center;
+      }
+      .offline-container {
+        max-width: 500px;
+        padding: 2rem;
+      }
+      .offline-icon {
+        width: 120px;
+        height: 120px;
+        margin: 0 auto 2rem;
+        opacity: 0.8;
+      }
+      h1 {
+        color: #1f2937;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+      p {
+        color: #6b7280;
+        font-size: 1.125rem;
+        line-height: 1.75;
+        margin-bottom: 2rem;
+      }
+      .offline-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+      .offline-btn {
+        background-color: #7c3aed;
+        color: white;
+        padding: 0.75rem 1.5rem;
+        border: none;
+        border-radius: 0.5rem;
+        font-size: 1rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background-color 0.2s;
+      }
+      .offline-btn:hover {
+        background-color: #6d28d9;
+      }
+      .offline-btn-secondary {
+        background-color: transparent;
+        color: #7c3aed;
+        border: 2px solid #7c3aed;
+      }
+      .offline-btn-secondary:hover {
+        background-color: #f3f4f6;
+      }
+      .cached-info {
+        margin-top: 2rem;
+        padding: 1rem;
+        background-color: #ede9fe;
+        border-radius: 0.5rem;
+        color: #5b21b6;
+        font-size: 0.875rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="offline-container">
+      <svg
+        class="offline-icon"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M8.578 16.359l-6.669-6.669c.534-.534 1.032-1.032 1.566-1.566l5.103 5.103 11.646-11.646c.534.534 1.032 1.032 1.566 1.566l-13.212 13.212z"
+          fill="#7c3aed"
+          opacity="0.3"
+        />
+        <path
+          d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z"
+          fill="#7c3aed"
+        />
+        <path
+          d="M12 7v5l3.5 3.5"
+          stroke="#7c3aed"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+
+      <h1>You're Currently Offline</h1>
+      <p>
+        Don't worry! Your critical family information is still accessible. We've
+        saved your most important data for offline viewing.
+      </p>
+
+      <div class="offline-actions">
+        <button class="offline-btn" onclick="window.location.reload()">
+          Try Again
+        </button>
+        <button
+          class="offline-btn offline-btn-secondary"
+          onclick="history.back()"
+        >
+          Go Back
+        </button>
+      </div>
+
+      <div class="cached-info">
+        <strong>Available Offline:</strong><br />
+        • Your trusted people contacts<br />
+        • Important documents list<br />
+        • Your possessions inventory<br />
+        • Emergency information
+      </div>
     </div>
-    
-    <div class="cached-info">
-      <strong>Available Offline:</strong><br>
-      • Your trusted people contacts<br>
-      • Important documents list<br>
-      • Your possessions inventory<br>
-      • Emergency information
-    </div>
-  </div>
-  
-  <script>
-    // Check for connection periodically
-    setInterval(() => {
-      fetch('/api/ping')
-        .then(() => {
-          // If successful, we're back online
-          window.location.reload();
-        })
-        .catch(() => {
-          // Still offline
-        });
-    }, 5000);
-  </script>
-</body>
+
+    <script>
+      // Check for connection periodically
+      setInterval(() => {
+        fetch("/api/ping")
+          .then(() => {
+            // If successful, we're back online
+            window.location.reload();
+          })
+          .catch(() => {
+            // Still offline
+          });
+      }, 5000);
+    </script>
+  </body>
 </html>

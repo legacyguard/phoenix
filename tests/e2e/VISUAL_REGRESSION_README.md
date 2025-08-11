@@ -9,6 +9,7 @@ Visual regression tests automatically capture screenshots of key pages and compa
 ## Prerequisites
 
 1. Ensure you have test users configured in `.env.test`:
+
    ```
    E2E_TEST_USER_EMAIL=your-test-email@example.com
    E2E_TEST_USER_PASSWORD=your-test-password
@@ -29,6 +30,7 @@ npm run test:visual:update
 ```
 
 This will:
+
 - Navigate to each page
 - Take screenshots
 - Save them as baseline images in `tests/e2e/visual-regression.spec.ts-snapshots/`
@@ -42,6 +44,7 @@ npm run test:visual
 ```
 
 This will:
+
 - Take new screenshots
 - Compare them with baseline images
 - Report any differences
@@ -55,6 +58,7 @@ npm run test:visual:report
 ```
 
 The report will show:
+
 - Side-by-side comparisons
 - Diff images highlighting changes
 - Pixel difference percentages
@@ -76,6 +80,7 @@ When you make intentional UI changes, you'll need to update the baseline screens
 The visual regression suite covers:
 
 ### Desktop Views (1280x720)
+
 - Landing page
 - Dashboard (free and premium users)
 - Vault
@@ -90,10 +95,12 @@ The visual regression suite covers:
 - Legacy Letters
 
 ### Mobile Views (375x667)
+
 - Landing page
 - Dashboard
 
 ### Dark Mode
+
 - Dashboard
 
 ## Configuration
@@ -133,6 +140,7 @@ expect: {
 ### Tests Failing Due to Minor Differences
 
 If tests fail due to minor, acceptable differences:
+
 1. Check the pixel difference percentage in the report
 2. If differences are minimal and acceptable, consider increasing the threshold
 3. Or update the baselines if the changes are intentional
@@ -140,6 +148,7 @@ If tests fail due to minor, acceptable differences:
 ### Different Results Locally vs CI
 
 This usually happens due to:
+
 - Different operating systems (font rendering varies)
 - Different screen resolutions
 - Missing fonts
@@ -149,6 +158,7 @@ Solution: Use Docker or ensure consistent environments.
 ### Animation-Related Failures
 
 Ensure animations are disabled in the test configuration. If issues persist, add explicit waits:
+
 ```typescript
 await page.waitForTimeout(500); // Wait for animations
 ```
@@ -170,17 +180,19 @@ To add visual regression coverage for a new page:
 1. Add a new test in `visual-regression.spec.ts`
 2. Follow the existing pattern:
    ```typescript
-   test('should match the snapshot for the New Page', async ({ page }) => {
+   test("should match the snapshot for the New Page", async ({ page }) => {
      await loginAsFreeUser(page);
-     await page.goto('/new-page');
-     
+     await page.goto("/new-page");
+
      // Wait for key element
-     await expect(page.locator('[data-testid="new-page-container"]')).toBeVisible();
-     
+     await expect(
+       page.locator('[data-testid="new-page-container"]'),
+     ).toBeVisible();
+
      // Take snapshot
-     await expect(page).toHaveScreenshot('new-page.png', {
+     await expect(page).toHaveScreenshot("new-page.png", {
        fullPage: true,
-       animations: 'disabled',
+       animations: "disabled",
      });
    });
    ```

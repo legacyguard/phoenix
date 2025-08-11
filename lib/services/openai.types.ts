@@ -1,6 +1,6 @@
 // Document Analysis Types
 export interface DocumentAnalysis {
-  type: 'insurance' | 'will' | 'medical' | 'financial' | 'property' | 'other';
+  type: "insurance" | "will" | "medical" | "financial" | "property" | "other";
   confidence: number;
   extractedData: {
     title?: string;
@@ -17,7 +17,7 @@ export interface DocumentAnalysis {
   metadata: {
     language: string;
     pageCount?: number;
-    quality: 'high' | 'medium' | 'low';
+    quality: "high" | "medium" | "low";
   };
 }
 
@@ -31,7 +31,7 @@ export interface UserProfile {
   lastActivity?: Date;
   preferences?: {
     language?: string;
-    communicationStyle?: 'formal' | 'casual' | 'empathetic';
+    communicationStyle?: "formal" | "casual" | "empathetic";
   };
 }
 
@@ -39,8 +39,14 @@ export interface UserProfile {
 export interface LifeQuestion {
   id: string;
   question: string;
-  category: 'family' | 'legacy' | 'values' | 'memories' | 'wishes' | 'practical';
-  priority: 'high' | 'medium' | 'low';
+  category:
+    | "family"
+    | "legacy"
+    | "values"
+    | "memories"
+    | "wishes"
+    | "practical";
+  priority: "high" | "medium" | "low";
   context?: string;
   followUpQuestions?: string[];
   estimatedTimeMinutes?: number;
@@ -53,7 +59,7 @@ export interface UserContext {
   documentsUploaded: number;
   completionPercentage: number;
   lastInteraction?: Date;
-  mood?: 'motivated' | 'overwhelmed' | 'neutral' | 'curious';
+  mood?: "motivated" | "overwhelmed" | "neutral" | "curious";
 }
 
 // Action Suggestions
@@ -61,7 +67,7 @@ export interface ActionSuggestion {
   id: string;
   action: string;
   reason: string;
-  priority: 'immediate' | 'soon' | 'eventual';
+  priority: "immediate" | "soon" | "eventual";
   estimatedTime: string;
   relatedTo?: string[];
   encouragement?: string;
@@ -76,20 +82,25 @@ export interface DocumentMetadata {
   parties: string[];
   tags: string[];
   summary: string;
-  importance: 'critical' | 'important' | 'reference';
+  importance: "critical" | "important" | "reference";
   actionItems?: string[];
 }
 
 // Empathetic Message Generation
 export interface EmpatheticMessage {
   message: string;
-  tone: 'supportive' | 'encouraging' | 'gentle' | 'celebratory';
+  tone: "supportive" | "encouraging" | "gentle" | "celebratory";
   includesPersonalization: boolean;
 }
 
 // API Error Types
 export interface OpenAIError {
-  code: 'rate_limit' | 'invalid_request' | 'authentication' | 'server_error' | 'unknown';
+  code:
+    | "rate_limit"
+    | "invalid_request"
+    | "authentication"
+    | "server_error"
+    | "unknown";
   message: string;
   userMessage: string;
   retryable: boolean;
@@ -98,7 +109,7 @@ export interface OpenAIError {
 
 // Request Options
 export interface OpenAIRequestOptions {
-  priority?: 'high' | 'normal' | 'low';
+  priority?: "high" | "normal" | "low";
   maxRetries?: number;
   timeout?: number;
   userId?: string;

@@ -1,13 +1,25 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { 
-  LayoutDashboard, Sparkles, Trophy, Target,
-  ChevronRight, Lock, CheckCircle, Circle
-} from 'lucide-react';
-import { 
+import React, { useState, useEffect, useCallback } from "react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import {
+  LayoutDashboard,
+  Sparkles,
+  Trophy,
+  Target,
+  ChevronRight,
+  Lock,
+  CheckCircle,
+  Circle,
+} from "lucide-react";
+import {
   UserProgress,
   FeatureDefinition,
   getMilestoneAchievements,
@@ -15,15 +27,15 @@ import {
   getFeatureById,
   checkMilestoneCompletion,
   FEATURES,
-  MILESTONES
-} from '@/services/progressiveDisclosure';
-import { 
+  MILESTONES,
+} from "@/services/progressiveDisclosure";
+import {
   ProgressiveDisclosureWidget,
   FeatureIntroduction,
-  ProgressLevelIndicator
-} from '@/components/progressive/ProgressiveDisclosureWidget';
-import { MilestoneCelebration } from '@/components/milestones/MilestoneCelebration';
-import { cn } from '@/lib/utils';
+  ProgressLevelIndicator,
+} from "@/components/progressive/ProgressiveDisclosureWidget";
+import { MilestoneCelebration } from "@/components/milestones/MilestoneCelebration";
+import { cn } from "@/lib/utils";
 
 interface ProgressiveDashboardProps {
   userProgress: UserProgress;
@@ -36,14 +48,19 @@ export const ProgressiveDashboard: React.FC<ProgressiveDashboardProps> = ({
   userProgress,
   onFeatureAccess,
   onMilestoneAcknowledged,
-  className
+  className,
 }) => {
-  const [activeFeatureIntro, setActiveFeatureIntro] = useState<FeatureDefinition | null>(null);
-  const [activeMilestone, setActiveMilestone] = useState<typeof MILESTONES[0] | null>(null);
-  const [dismissedIntros, setDismissedIntros] = useState<Set<string>>(new Set());
-  const [acknowledgedMilestones, setAcknowledgedMilestones] = useState<Set<string>>(
-    new Set(userProgress.acknowledgedMilestones || [])
+  const [activeFeatureIntro, setActiveFeatureIntro] =
+    useState<FeatureDefinition | null>(null);
+  const [activeMilestone, setActiveMilestone] = useState<
+    (typeof MILESTONES)[0] | null
+  >(null);
+  const [dismissedIntros, setDismissedIntros] = useState<Set<string>>(
+    new Set(),
   );
+  const [acknowledgedMilestones, setAcknowledgedMilestones] = useState<
+    Set<string>
+  >(new Set(userProgress.acknowledgedMilestones || []));
 
   // Check for newly unlocked features
   useEffect(() => {
@@ -80,33 +97,42 @@ export const ProgressiveDashboard: React.FC<ProgressiveDashboardProps> = ({
     checkNewMilestones();
   }, [userProgress, acknowledgedMilestones]);
 
-  const handleFeatureExplore = useCallback((feature: FeatureDefinition) => {
-    setActiveFeatureIntro(null);
-    onFeatureAccess?.(feature.id);
-  }, [onFeatureAccess]);
+  const handleFeatureExplore = useCallback(
+    (feature: FeatureDefinition) => {
+      setActiveFeatureIntro(null);
+      onFeatureAccess?.(feature.id);
+    },
+    [onFeatureAccess],
+  );
 
   const handleFeatureDismiss = useCallback((feature: FeatureDefinition) => {
-    setDismissedIntros(prev => new Set(prev).add(feature.id));
+    setDismissedIntros((prev) => new Set(prev).add(feature.id));
     setActiveFeatureIntro(null);
   }, []);
 
-  const handleMilestoneAcknowledge = useCallback((milestoneId: string) => {
-    setAcknowledgedMilestones(prev => new Set(prev).add(milestoneId));
-    setActiveMilestone(null);
-    onMilestoneAcknowledged?.(milestoneId);
-  }, [onMilestoneAcknowledged]);
+  const handleMilestoneAcknowledge = useCallback(
+    (milestoneId: string) => {
+      setAcknowledgedMilestones((prev) => new Set(prev).add(milestoneId));
+      setActiveMilestone(null);
+      onMilestoneAcknowledged?.(milestoneId);
+    },
+    [onMilestoneAcknowledged],
+  );
 
   const categorizedFeatures = React.useMemo(() => {
     const categories = {
       available: [] as FeatureDefinition[],
       upcoming: [] as FeatureDefinition[],
-      locked: [] as FeatureDefinition[]
+      locked: [] as FeatureDefinition[],
     };
 
-    FEATURES.forEach(feature => {
+    FEATURES.forEach((feature) => {
       if (shouldShowFeature(feature.id, userProgress)) {
         categories.available.push(feature);
-      } else if (feature.requiredItems && userProgress.completedItems >= feature.requiredItems - 3) {
+      } else if (
+        feature.requiredItems &&
+        userProgress.completedItems >= feature.requiredItems - 3
+      ) {
         categories.upcoming.push(feature);
       } else {
         categories.locked.push(feature);
@@ -116,7 +142,10 @@ export const ProgressiveDashboard: React.FC<ProgressiveDashboardProps> = ({
     return categories;
   }, [userProgress]);
 
-  const achievements = React.useMemo(() => getMilestoneAchievements(userProgress), [userProgress]);
+  const achievements = React.useMemo(
+    () => getMilestoneAchievements(userProgress),
+    [userProgress],
+  );
 
   return (
     <div className={cn("space-y-6", className)}>
@@ -149,7 +178,7 @@ export const ProgressiveDashboard: React.FC<ProgressiveDashboardProps> = ({
       {/* Main progress widget */}
       <ProgressiveDisclosureWidget
         userProgress={userProgress}
-        onFeatureClick={(feature) => console.log('Feature clicked:', feature)}
+        onFeatureClick={(feature) => console.log("Feature clicked:", feature)}
       />
 
       {/* Features and achievements tabs */}
@@ -174,7 +203,7 @@ export const ProgressiveDashboard: React.FC<ProgressiveDashboardProps> = ({
               </CardHeader>
               <CardContent>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                  {categorizedFeatures.available.map(feature => (
+                  {categorizedFeatures.available.map((feature) => (
                     <FeatureCard
                       key={feature.id}
                       feature={feature}
@@ -201,7 +230,7 @@ export const ProgressiveDashboard: React.FC<ProgressiveDashboardProps> = ({
               </CardHeader>
               <CardContent>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                  {categorizedFeatures.upcoming.map(feature => (
+                  {categorizedFeatures.upcoming.map((feature) => (
                     <FeatureCard
                       key={feature.id}
                       feature={feature}
@@ -228,13 +257,15 @@ export const ProgressiveDashboard: React.FC<ProgressiveDashboardProps> = ({
               </CardHeader>
               <CardContent>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
-                  {categorizedFeatures.locked.slice(0, 6).map(feature => (
+                  {categorizedFeatures.locked.slice(0, 6).map((feature) => (
                     <div
                       key={feature.id}
                       className="p-3 rounded-lg bg-muted/50 text-center"
                     >
                       <Lock className="h-4 w-4 mx-auto mb-1 text-muted-foreground" />
-                      <p className="text-xs text-muted-foreground">{feature.name}</p>
+                      <p className="text-xs text-muted-foreground">
+                        {feature.name}
+                      </p>
                     </div>
                   ))}
                 </div>
@@ -256,7 +287,7 @@ export const ProgressiveDashboard: React.FC<ProgressiveDashboardProps> = ({
             </CardHeader>
             <CardContent>
               <div className="space-y-3">
-                {achievements.map(achievement => (
+                {achievements.map((achievement) => (
                   <AchievementCard
                     key={achievement.id}
                     achievement={achievement}
@@ -275,21 +306,20 @@ export const ProgressiveDashboard: React.FC<ProgressiveDashboardProps> = ({
 // Feature card component
 const FeatureCard: React.FC<{
   feature: FeatureDefinition;
-  status: 'available' | 'upcoming' | 'locked';
+  status: "available" | "upcoming" | "locked";
   progress?: number;
   onClick?: () => void;
 }> = ({ feature, status, progress, onClick }) => {
   const getStatusBadge = () => {
     switch (status) {
-      case 'available':
+      case "available":
         return <Badge className="bg-green-100 text-green-800">Available</Badge>;
-      case 'upcoming':
+      case "upcoming":
         return (
           <Badge variant="outline" className="text-amber-600 border-amber-600">
             {feature.requiredItems && progress
               ? `${feature.requiredItems - progress} tasks away`
-              : 'Coming soon'
-            }
+              : "Coming soon"}
           </Badge>
         );
       default:
@@ -301,12 +331,12 @@ const FeatureCard: React.FC<{
     <div
       className={cn(
         "p-4 rounded-lg border transition-all",
-        status === 'available' 
-          ? "border-green-200 bg-green-50/50 hover:bg-green-50 cursor-pointer" 
+        status === "available"
+          ? "border-green-200 bg-green-50/50 hover:bg-green-50 cursor-pointer"
           : "border-gray-200 bg-gray-50/30",
-        onClick && "hover:shadow-sm"
+        onClick && "hover:shadow-sm",
       )}
-      onClick={status === 'available' ? onClick : undefined}
+      onClick={status === "available" ? onClick : undefined}
     >
       <div className="flex items-start justify-between mb-2">
         <h4 className="font-medium text-sm">{feature.name}</h4>
@@ -315,7 +345,7 @@ const FeatureCard: React.FC<{
       <p className="text-xs text-muted-foreground mb-3">
         {feature.description}
       </p>
-      {status === 'available' && (
+      {status === "available" && (
         <Button size="sm" variant="ghost" className="w-full justify-between">
           Explore
           <ChevronRight className="h-3 w-3" />
@@ -339,19 +369,27 @@ const AchievementCard: React.FC<{
   isAcknowledged: boolean;
 }> = ({ achievement, isAcknowledged }) => {
   return (
-    <div className={cn(
-      "flex items-center gap-3 p-3 rounded-lg",
-      isAcknowledged ? "bg-muted/50" : "bg-yellow-50 border border-yellow-200"
-    )}>
-      <div className={cn(
-        "p-2 rounded-full",
-        isAcknowledged ? "bg-muted" : "bg-yellow-100"
-      )}>
+    <div
+      className={cn(
+        "flex items-center gap-3 p-3 rounded-lg",
+        isAcknowledged
+          ? "bg-muted/50"
+          : "bg-yellow-50 border border-yellow-200",
+      )}
+    >
+      <div
+        className={cn(
+          "p-2 rounded-full",
+          isAcknowledged ? "bg-muted" : "bg-yellow-100",
+        )}
+      >
         {achievement.icon || <Trophy className="h-4 w-4 text-yellow-600" />}
       </div>
       <div className="flex-1">
         <p className="font-medium text-sm">{achievement.title}</p>
-        <p className="text-xs text-muted-foreground">{achievement.description}</p>
+        <p className="text-xs text-muted-foreground">
+          {achievement.description}
+        </p>
       </div>
       <div className="text-right">
         <Badge variant="outline" className="text-xs">

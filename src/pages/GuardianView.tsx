@@ -1,21 +1,35 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { useTranslation } from 'react-i18next';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Skeleton } from '@/components/ui/skeleton';
-import { Button } from '@/components/ui/button';
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
-import { Checkbox } from '@/components/ui/checkbox';
-import { Textarea } from '@/components/ui/textarea';
-import { Label } from '@/components/ui/label';
-import { supabaseWithRetry } from '@/utils/supabaseWithRetry';
-import { useRetry } from '@/utils/retry';
-import { RetryStatus } from '@/components/common/RetryStatus';
-import { toast } from 'sonner';
-import { 
-  Shield, 
-  FileText, 
-  Users, 
+import React, { useState, useEffect, useCallback } from "react";
+import { useTranslation } from "react-i18next";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Skeleton } from "@/components/ui/skeleton";
+import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import { supabaseWithRetry } from "@/utils/supabaseWithRetry";
+import { useRetry } from "@/utils/retry";
+import { RetryStatus } from "@/components/common/RetryStatus";
+import { toast } from "sonner";
+import {
+  Shield,
+  FileText,
+  Users,
   Heart,
   Star,
   Download,
@@ -26,12 +40,12 @@ import {
   MapPin,
   AlertTriangle,
   PhoneCall,
-  Clock
-} from 'lucide-react';
-import { COUNTRY_CONFIGS } from '@/config/countries';
-import { ErrorBoundary } from '@/components/common/ErrorBoundary';
-import { ErrorRecovery } from '@/components/common/ErrorRecovery';
-import { logger } from '@/utils/logger';
+  Clock,
+} from "lucide-react";
+import { COUNTRY_CONFIGS } from "@/config/countries";
+import { ErrorBoundary } from "@/components/common/ErrorBoundary";
+import { ErrorRecovery } from "@/components/common/ErrorRecovery";
+import { logger } from "@/utils/logger";
 
 interface Document {
   id: string;
@@ -72,7 +86,7 @@ interface EmergencyContact {
 }
 
 export const GuardianView: React.FC = () => {
-  const { t } = useTranslation('family-core');
+  const { t } = useTranslation("family-core");
   const [documents, setDocuments] = useState<Document[]>([]);
   const [contacts, setContacts] = useState<Contact[]>([]);
   const [instructions, setInstructions] = useState<Instructions | null>(null);
@@ -84,23 +98,28 @@ export const GuardianView: React.FC = () => {
     relationship?: string;
     status?: string;
   } | null>(null);
-  const [userInfo, setUserInfo] = useState<string>('');
+  const [userInfo, setUserInfo] = useState<string>("");
   const [error, setError] = useState<Error | null>(null);
-  
+
   // Emergency access state
   const [showEmergencyModal, setShowEmergencyModal] = useState(false);
   const [emergencyConfirmed, setEmergencyConfirmed] = useState(false);
-  const [emergencyNotes, setEmergencyNotes] = useState('');
-  const [emergencyContacts, setEmergencyContacts] = useState<EmergencyContact[]>([]);
+  const [emergencyNotes, setEmergencyNotes] = useState("");
+  const [emergencyContacts, setEmergencyContacts] = useState<
+    EmergencyContact[]
+  >([]);
   const [accessingEmergency, setAccessingEmergency] = useState(false);
-  const [showingEmergencyContacts, setShowingEmergencyContacts] = useState(false);
-  const [userId, setUserId] = useState<string>('');
+  const [showingEmergencyContacts, setShowingEmergencyContacts] =
+    useState(false);
+  const [userId, setUserId] = useState<string>("");
 
   const loadGuardianData = useCallback(async () => {
     try {
-      const { data: { user } } = await supabaseWithRetry.auth.getUser();
+      const {
+        data: { user },
+      } = await supabaseWithRetry.auth.getUser();
       if (!user) {
-        toast.error(t('guardianView.errors.pleaseLogin'));
+        toast.error(t("common:guardianView.errors.pleaseLogin"));
         return;
       }
       // For this demo, we'll load all data
@@ -108,59 +127,60 @@ export const GuardianView: React.FC = () => {
       // and only show data they have permission to see
       // Load key documents only
       const { data: documentsData, error: docsError } = await supabaseWithRetry
-        .from('documents')
-        .select('*')
-        .eq('is_key_document', true);
+        .from("documents")
+        .select("*")
+        .eq("is_key_document", true);
       if (docsError) {
         // Error loading documents
       } else {
         setDocuments(documentsData || []);
       }
       // Load important contacts
-      const { data: contactsData, error: contactsError } = await supabaseWithRetry
-        .from('contacts')
-        .select('*');
+      const { data: contactsData, error: contactsError } =
+        await supabaseWithRetry.from("contacts").select("*");
       if (contactsError) {
         // Error loading contacts
       } else {
         setContacts(contactsData || []);
       }
       // Load instructions
-      const { data: instructionsData, error: instructionsError } = await supabaseWithRetry
-        .from('instructions')
-        .select('*')
-        .single();
-      if (instructionsError && instructionsError.code !== 'PGRST116') {
+      const { data: instructionsData, error: instructionsError } =
+        await supabaseWithRetry.from("instructions").select("*").single();
+      if (instructionsError && instructionsError.code !== "PGRST116") {
         // Error loading instructions
       } else {
         setInstructions(instructionsData);
       }
       // Set placeholder user info
-      setUserInfo(t('guardianView.defaultUserName'));
+      setUserInfo(t("common:guardianView.defaultUserName"));
     } catch (error: unknown) {
       const timestamp = new Date().toISOString();
-      const errorMessage = error instanceof Error ? error.message : t('errors.unknown');
-      const errorCode = error instanceof Error && 'code' in error ? String(error.code) : 'UNKNOWN_ERROR';
+      const errorMessage =
+        error instanceof Error ? error.message : t("errors:errors.unknown");
+      const errorCode =
+        error instanceof Error && "code" in error
+          ? String(error.code)
+          : "UNKNOWN_ERROR";
       // Detailed logging for debugging
-      logger.error('[Guardian View] Error loading guardian data:', {
+      logger.error("[Guardian View] Error loading guardian data:", {
         timestamp,
-        operation: 'loadGuardianData',
+        operation: "loadGuardianData",
         errorCode,
         errorMessage,
         errorDetails: error,
-        stack: error instanceof Error ? error.stack : undefined
+        stack: error instanceof Error ? error.stack : undefined,
       });
       // User-friendly message
-      let userMessage = t('guardianView.errors.failedToLoad');
+      let userMessage = t("common:guardianView.errors.failedToLoad");
       // Specific messages based on error type
-      if (errorCode === 'PGRST116') {
-        userMessage = t('errors.dataNotFound');
-      } else if (errorMessage?.includes('network')) {
-        userMessage = t('errors.networkError');
-      } else if (errorMessage?.includes('permission')) {
-        userMessage = t('errors.permissionDenied');
-      } else if (errorMessage?.includes('duplicate')) {
-        userMessage = t('errors.duplicateRecord');
+      if (errorCode === "PGRST116") {
+        userMessage = t("errors:errors.dataNotFound");
+      } else if (errorMessage?.includes("network")) {
+        userMessage = t("errors:errors.networkError");
+      } else if (errorMessage?.includes("permission")) {
+        userMessage = t("errors:errors.permissionDenied");
+      } else if (errorMessage?.includes("duplicate")) {
+        userMessage = t("errors:errors.duplicateRecord");
       }
       setError(error instanceof Error ? error : new Error(errorMessage));
       toast.error(userMessage);
@@ -170,59 +190,69 @@ export const GuardianView: React.FC = () => {
   }, [t]);
 
   useEffect(() => {
-     
     loadGuardianData();
   }, [loadGuardianData]);
 
   const getCountryFlag = (countryCode: string) => {
-    const config = Object.values(COUNTRY_CONFIGS).find(c => c.code === countryCode);
-    return config?.flag || '🏳️';
+    const config = Object.values(COUNTRY_CONFIGS).find(
+      (c) => c.code === countryCode,
+    );
+    return config?.flag || "🏳️";
   };
 
   const formatDate = (dateString: string | null) => {
-    if (!dateString) return t('guardianView.sections.keyDocuments.noExpiration');
+    if (!dateString)
+      return t("common:guardianView.sections.keyDocuments.noExpiration");
     return new Date(dateString).toLocaleDateString();
   };
 
   const handleEmergencyAccess = async () => {
     if (!emergencyConfirmed || !emergencyNotes.trim()) {
-      toast.error(t('guardianView.emergencyAccess.pleaseConfirm'));
+      toast.error(t("common:guardianView.emergencyAccess.pleaseConfirm"));
       return;
     }
 
     setAccessingEmergency(true);
     try {
-      const { data: { user } } = await supabaseWithRetry.auth.getUser();
+      const {
+        data: { user },
+      } = await supabaseWithRetry.auth.getUser();
       if (!user) {
-        toast.error(t('guardianView.errors.pleaseLogin'));
+        toast.error(t("common:guardianView.errors.pleaseLogin"));
         return;
       }
 
       // Get the guardian relationship
-      const { data: guardianData, error: guardianError } = await supabaseWithRetry
-        .from('guardians')
-        .select('id, user_id')
-        .eq('guardian_email', user.email)
-        .eq('status', 'accepted')
-        .single();
+      const { data: guardianData, error: guardianError } =
+        await supabaseWithRetry
+          .from("guardians")
+          .select("id, user_id")
+          .eq("guardian_email", user.email)
+          .eq("status", "accepted")
+          .single();
 
       if (guardianError || !guardianData) {
-        toast.error(t('guardianView.emergencyAccess.notAuthorized'));
+        toast.error(t("common:guardianView.emergencyAccess.notAuthorized"));
         return;
       }
 
       // Load emergency contacts
-      const { data: contactsData, error: contactsError } = await supabaseWithRetry
-        .from('emergency_contacts')
-        .select(`
+      const { data: contactsData, error: contactsError } =
+        await supabaseWithRetry
+          .from("emergency_contacts")
+          .select(
+            `
           *,
           contact:contacts(*)
-        `)
-        .eq('user_id', guardianData.user_id)
-        .order('priority_order');
+        `,
+          )
+          .eq("user_id", guardianData.user_id)
+          .order("priority_order");
 
       if (contactsError) {
-        toast.error(t('guardianView.emergencyAccess.failedToLoadContacts'));
+        toast.error(
+          t("common:guardianView.emergencyAccess.failedToLoadContacts"),
+        );
         return;
       }
 
@@ -230,62 +260,68 @@ export const GuardianView: React.FC = () => {
       setUserId(guardianData.user_id);
 
       // Log the emergency access
-      const contactIds = (contactsData || []).map(ec => ec.contact_id);
+      const contactIds = (contactsData || []).map((ec) => ec.contact_id);
       const { error: logError } = await supabaseWithRetry
-        .from('emergency_access_logs')
+        .from("emergency_access_logs")
         .insert({
           guardian_id: guardianData.id,
           user_id: guardianData.user_id,
           contacts_accessed: contactIds,
-          notes: emergencyNotes
+          notes: emergencyNotes,
         });
 
       if (logError) {
-        logger.error('Failed to log emergency access:', logError);
+        logger.error("Failed to log emergency access:", logError);
       }
 
       setShowEmergencyModal(false);
       setShowingEmergencyContacts(true);
-      
+
       // Send emergency notifications
       try {
-        const { data: { user: currentUser } } = await supabaseWithRetry.auth.getUser();
-        const guardianName = guardianData.guardian_name || currentUser?.email || 'Guardian';
-        
+        const {
+          data: { user: currentUser },
+        } = await supabaseWithRetry.auth.getUser();
+        const guardianName =
+          guardianData.guardian_name || currentUser?.email || "Guardian";
+
         const notificationResponse = await fetch(
           `${import.meta.env.VITE_SUPABASE_URL}/functions/v1/send-emergency-notification`,
           {
-            method: 'POST',
+            method: "POST",
             headers: {
-              'Content-Type': 'application/json',
-              'Authorization': `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${import.meta.env.VITE_SUPABASE_ANON_KEY}`,
             },
             body: JSON.stringify({
               userId: guardianData.user_id,
               guardianId: guardianData.id,
               guardianName: guardianName,
-              guardianEmail: user.email || '',
+              guardianEmail: user.email || "",
               emergencyNotes: emergencyNotes,
-              timestamp: new Date().toISOString()
+              timestamp: new Date().toISOString(),
             }),
-          }
+          },
         );
-        
+
         if (notificationResponse.ok) {
           const result = await notificationResponse.json();
-          logger.info('Emergency notifications sent:', result);
+          logger.info("Emergency notifications sent:", result);
         } else {
-          logger.error('Failed to send emergency notifications');
+          logger.error("Failed to send emergency notifications");
         }
       } catch (notificationError) {
-        logger.error('Error sending emergency notifications:', notificationError);
+        logger.error(
+          "Error sending emergency notifications:",
+          notificationError,
+        );
         // Don't block the UI - notifications are best effort
       }
-      
-      toast.success(t('guardianView.emergencyAccess.accessGranted'));
+
+      toast.success(t("common:guardianView.emergencyAccess.accessGranted"));
     } catch (error) {
-      logger.error('Emergency access error:', error);
-      toast.error(t('guardianView.emergencyAccess.accessFailed'));
+      logger.error("Emergency access error:", error);
+      toast.error(t("common:guardianView.emergencyAccess.accessFailed"));
     } finally {
       setAccessingEmergency(false);
     }
@@ -295,126 +331,132 @@ export const GuardianView: React.FC = () => {
     try {
       // Update last_contacted timestamp
       const { error } = await supabaseWithRetry
-        .from('emergency_contacts')
+        .from("emergency_contacts")
         .update({ last_contacted: new Date().toISOString() })
-        .eq('contact_id', contactId)
-        .eq('user_id', userId);
+        .eq("contact_id", contactId)
+        .eq("user_id", userId);
 
       if (error) {
-        logger.error('Failed to log contact attempt:', error);
+        logger.error("Failed to log contact attempt:", error);
       } else {
         // Update local state
-        setEmergencyContacts(prev => 
-          prev.map(ec => 
-            ec.contact_id === contactId 
+        setEmergencyContacts((prev) =>
+          prev.map((ec) =>
+            ec.contact_id === contactId
               ? { ...ec, last_contacted: new Date().toISOString() }
-              : ec
-          )
+              : ec,
+          ),
         );
-        toast.success(t('guardianView.emergencyAccess.contactLogged'));
+        toast.success(t("common:guardianView.emergencyAccess.contactLogged"));
       }
     } catch (error) {
-      logger.error('Error logging contact attempt:', error);
+      logger.error("Error logging contact attempt:", error);
     }
   };
 
   if (loading) {
     return (
-    <ErrorBoundary>
-      <div className="container mx-auto px-4 lg:px-8 py-8 space-y-8">
-        {/* Header Skeleton */}
-        <div className="text-center space-y-4">
-          <Skeleton className="w-20 h-20 rounded-full mx-auto" />
-          <div className="space-y-2">
-            <Skeleton className="h-8 w-64 mx-auto" />
-            <Skeleton className="h-4 w-96 mx-auto" />
-          </div>
-          <Skeleton className="h-6 w-32 mx-auto" />
-        </div>
-
-        {/* Key Documents Skeleton */}
-        <Card>
-          <CardHeader>
-            <Skeleton className="h-6 w-48" />
-            <Skeleton className="h-4 w-64" />
-          </CardHeader>
-          <CardContent>
-            <div className="space-y-3">
-              {[1, 2, 3].map((i) => (
-                <div key={i} className="flex items-center justify-between p-3 border rounded-lg">
-                  <div className="flex items-center space-x-3">
-                    <Skeleton className="h-4 w-4" />
-                    <div className="space-y-2">
-                      <Skeleton className="h-4 w-32" />
-                      <Skeleton className="h-3 w-48" />
-                    </div>
-                  </div>
-                  <div className="space-y-1">
-                    <Skeleton className="h-4 w-20" />
-                    <Skeleton className="h-3 w-24" />
-                  </div>
-                </div>
-              ))}
+      <ErrorBoundary>
+        <div className="container mx-auto px-4 lg:px-8 py-8 space-y-8">
+          {/* Header Skeleton */}
+          <div className="text-center space-y-4">
+            <Skeleton className="w-20 h-20 rounded-full mx-auto" />
+            <div className="space-y-2">
+              <Skeleton className="h-8 w-64 mx-auto" />
+              <Skeleton className="h-4 w-96 mx-auto" />
             </div>
-          </CardContent>
-        </Card>
+            <Skeleton className="h-6 w-32 mx-auto" />
+          </div>
 
-        {/* Important Contacts Skeleton */}
-        <Card>
-          <CardHeader>
-            <Skeleton className="h-6 w-48" />
-            <Skeleton className="h-4 w-64" />
-          </CardHeader>
-          <CardContent>
-            <div className="space-y-3">
-              {[1, 2].map((i) => (
-                <div key={i} className="flex items-center justify-between p-3 border rounded-lg">
-                  <div className="flex items-center space-x-3">
-                    <Skeleton className="h-8 w-8 rounded-full" />
+          {/* Key Documents Skeleton */}
+          <Card>
+            <CardHeader>
+              <Skeleton className="h-6 w-48" />
+              <Skeleton className="h-4 w-64" />
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-3">
+                {[1, 2, 3].map((i) => (
+                  <div
+                    key={i}
+                    className="flex items-center justify-between p-3 border rounded-lg"
+                  >
+                    <div className="flex items-center space-x-3">
+                      <Skeleton className="h-4 w-4" />
+                      <div className="space-y-2">
+                        <Skeleton className="h-4 w-32" />
+                        <Skeleton className="h-3 w-48" />
+                      </div>
+                    </div>
                     <div className="space-y-1">
-                      <Skeleton className="h-4 w-32" />
+                      <Skeleton className="h-4 w-20" />
                       <Skeleton className="h-3 w-24" />
                     </div>
                   </div>
-                  <div className="space-y-1">
-                    <Skeleton className="h-3 w-36" />
-                    <Skeleton className="h-3 w-28" />
-                  </div>
-                </div>
-              ))}
-            </div>
-          </CardContent>
-        </Card>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
 
-        {/* Final Wishes Skeleton */}
-        <Card>
-          <CardHeader>
-            <Skeleton className="h-6 w-56" />
-            <Skeleton className="h-4 w-64" />
-          </CardHeader>
-          <CardContent>
-            <div className="space-y-4">
-              <div className="space-y-2">
-                <Skeleton className="h-5 w-32" />
-                <Skeleton className="h-20 w-full rounded-lg" />
+          {/* Important Contacts Skeleton */}
+          <Card>
+            <CardHeader>
+              <Skeleton className="h-6 w-48" />
+              <Skeleton className="h-4 w-64" />
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-3">
+                {[1, 2].map((i) => (
+                  <div
+                    key={i}
+                    className="flex items-center justify-between p-3 border rounded-lg"
+                  >
+                    <div className="flex items-center space-x-3">
+                      <Skeleton className="h-8 w-8 rounded-full" />
+                      <div className="space-y-1">
+                        <Skeleton className="h-4 w-32" />
+                        <Skeleton className="h-3 w-24" />
+                      </div>
+                    </div>
+                    <div className="space-y-1">
+                      <Skeleton className="h-3 w-36" />
+                      <Skeleton className="h-3 w-28" />
+                    </div>
+                  </div>
+                ))}
               </div>
-              <div className="space-y-2">
-                <Skeleton className="h-5 w-40" />
-                <Skeleton className="h-20 w-full rounded-lg" />
+            </CardContent>
+          </Card>
+
+          {/* Final Wishes Skeleton */}
+          <Card>
+            <CardHeader>
+              <Skeleton className="h-6 w-56" />
+              <Skeleton className="h-4 w-64" />
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-4">
+                <div className="space-y-2">
+                  <Skeleton className="h-5 w-32" />
+                  <Skeleton className="h-20 w-full rounded-lg" />
+                </div>
+                <div className="space-y-2">
+                  <Skeleton className="h-5 w-40" />
+                  <Skeleton className="h-20 w-full rounded-lg" />
+                </div>
               </div>
-            </div>
-          </CardContent>
-        </Card>
-      </div>
-    </ErrorBoundary>
-  );
+            </CardContent>
+          </Card>
+        </div>
+      </ErrorBoundary>
+    );
   }
 
   // Show error recovery UI if there's an error
   if (error) {
     return (
       <ErrorBoundary>
-        <ErrorRecovery 
+        <ErrorRecovery
           error={error}
           onRetry={() => {
             setError(null);
@@ -434,91 +476,102 @@ export const GuardianView: React.FC = () => {
           <Shield className="h-10 w-10 text-primary" />
         </div>
         <div>
-          <h1 className="text-3xl font-bold">{t('guardianView.title')}</h1>
+          <h1 className="text-3xl font-bold">{t("guardianView.title")}</h1>
           <p className="text-muted-foreground">
-            {t('guardianView.subtitle', { userName: userInfo })}
+            {t("guardianView.subtitle", { userName: userInfo })}
           </p>
         </div>
         <div className="flex items-center justify-center gap-4">
           <Badge variant="heritage">
             <Eye className="h-3 w-3 mr-1" />
-            {t('guardianView.readOnlyAccess')}
+            {t("guardianView.readOnlyAccess")}
           </Badge>
-          
+
           {/* Emergency Access Button */}
-          <Dialog open={showEmergencyModal} onOpenChange={setShowEmergencyModal}>
+          <Dialog
+            open={showEmergencyModal}
+            onOpenChange={setShowEmergencyModal}
+          >
             <DialogTrigger asChild>
               <Button variant="destructive" size="lg" className="gap-2">
                 <AlertTriangle className="h-5 w-5" />
-                {t('guardianView.emergencyAccess.button')}
+                {t("guardianView.emergencyAccess.button")}
               </Button>
             </DialogTrigger>
             <DialogContent className="sm:max-w-[500px]">
               <DialogHeader>
                 <DialogTitle className="flex items-center gap-2 text-destructive">
                   <AlertTriangle className="h-5 w-5" />
-                  {t('guardianView.emergencyAccess.modalTitle')}
+                  {t("guardianView.emergencyAccess.modalTitle")}
                 </DialogTitle>
                 <DialogDescription className="space-y-2">
-                  <p>{t('guardianView.emergencyAccess.modalDescription')}</p>
+                  <p>{t("guardianView.emergencyAccess.modalDescription")}</p>
                   <p className="text-sm font-medium text-destructive">
-                    {t('guardianView.emergencyAccess.warningText')}
+                    {t("guardianView.emergencyAccess.warningText")}
                   </p>
                 </DialogDescription>
               </DialogHeader>
-              
+
               <div className="space-y-4 py-4">
                 <div className="space-y-2">
                   <Label htmlFor="emergency-notes">
-                    {t('guardianView.emergencyAccess.reasonLabel')}
+                    {t("guardianView.emergencyAccess.reasonLabel")}
                   </Label>
                   <Textarea
                     id="emergency-notes"
-                    placeholder={t('guardianView.emergencyAccess.reasonPlaceholder')}
+                    placeholder={t(
+                      "guardianView.emergencyAccess.reasonPlaceholder",
+                    )}
                     value={emergencyNotes}
                     onChange={(e) => setEmergencyNotes(e.target.value)}
                     className="min-h-[100px]"
                   />
                 </div>
-                
+
                 <div className="flex items-start space-x-2">
                   <Checkbox
                     id="emergency-confirm"
                     checked={emergencyConfirmed}
-                    onCheckedChange={(checked) => setEmergencyConfirmed(checked as boolean)}
+                    onCheckedChange={(checked) =>
+                      setEmergencyConfirmed(checked as boolean)
+                    }
                   />
-                  <Label 
-                    htmlFor="emergency-confirm" 
+                  <Label
+                    htmlFor="emergency-confirm"
                     className="text-sm font-medium leading-normal cursor-pointer"
                   >
-                    {t('guardianView.emergencyAccess.confirmCheckbox')}
+                    {t("guardianView.emergencyAccess.confirmCheckbox")}
                   </Label>
                 </div>
               </div>
-              
+
               <DialogFooter>
                 <Button
                   variant="outline"
                   onClick={() => {
                     setShowEmergencyModal(false);
                     setEmergencyConfirmed(false);
-                    setEmergencyNotes('');
+                    setEmergencyNotes("");
                   }}
                 >
-                  {t('ui.cancel')}
+                  {t("ui.cancel")}
                 </Button>
                 <Button
                   variant="destructive"
                   onClick={handleEmergencyAccess}
-                  disabled={!emergencyConfirmed || !emergencyNotes.trim() || accessingEmergency}
+                  disabled={
+                    !emergencyConfirmed ||
+                    !emergencyNotes.trim() ||
+                    accessingEmergency
+                  }
                 >
                   {accessingEmergency ? (
                     <>
                       <span className="animate-spin mr-2">⚡</span>
-                      {t('guardianView.emergencyAccess.accessing')}
+                      {t("guardianView.emergencyAccess.accessing")}
                     </>
                   ) : (
-                    t('guardianView.emergencyAccess.confirmButton')
+                    t("common:guardianView.emergencyAccess.confirmButton")
                   )}
                 </Button>
               </DialogFooter>
@@ -532,17 +585,20 @@ export const GuardianView: React.FC = () => {
         <CardHeader>
           <CardTitle className="flex items-center">
             <FileText className="h-5 w-5 mr-2" />
-            {t('guardianView.sections.keyDocuments.title')}
+            {t("guardianView.sections.keyDocuments.title")}
           </CardTitle>
           <CardDescription>
-            {t('guardianView.sections.keyDocuments.description')}
+            {t("guardianView.sections.keyDocuments.description")}
           </CardDescription>
         </CardHeader>
         <CardContent>
           <div className="space-y-3">
             {documents.length > 0 ? (
               documents.map((document) => (
-                <div key={document.id} className="flex items-center justify-between p-3 border rounded-lg">
+                <div
+                  key={document.id}
+                  className="flex items-center justify-between p-3 border rounded-lg"
+                >
                   <div className="flex items-center space-x-3">
                     <FileText className="h-4 w-4 text-primary" />
                     <div>
@@ -553,7 +609,11 @@ export const GuardianView: React.FC = () => {
                         <span className="flex items-center">
                           {getCountryFlag(document.country_code)}
                           <span className="ml-1">
-                            {COUNTRY_CONFIGS[document.country_code as keyof typeof COUNTRY_CONFIGS]?.name}
+                            {
+                              COUNTRY_CONFIGS[
+                                document.country_code as keyof typeof COUNTRY_CONFIGS
+                              ]?.name
+                            }
                           </span>
                         </span>
                       </div>
@@ -562,18 +622,19 @@ export const GuardianView: React.FC = () => {
                   <div className="text-right space-y-1">
                     <Badge variant="secondary" className="text-xs">
                       <Star className="h-3 w-3 mr-1" />
-                      {t('guardianView.sections.keyDocuments.keyDocumentBadge')}
+                      {t("guardianView.sections.keyDocuments.keyDocumentBadge")}
                     </Badge>
                     <p className="text-xs text-muted-foreground">
                       <Calendar className="h-3 w-3 inline mr-1" />
-                      {t('guardianView.sections.keyDocuments.expires')}: {formatDate(document.expiration_date)}
+                      {t("guardianView.sections.keyDocuments.expires")}:{" "}
+                      {formatDate(document.expiration_date)}
                     </p>
                   </div>
                 </div>
               ))
             ) : (
               <p className="text-center text-muted-foreground py-8">
-                {t('guardianView.sections.keyDocuments.empty')}
+                {t("guardianView.sections.keyDocuments.empty")}
               </p>
             )}
           </div>
@@ -585,24 +646,29 @@ export const GuardianView: React.FC = () => {
         <CardHeader>
           <CardTitle className="flex items-center">
             <Users className="h-5 w-5 mr-2" />
-            {t('guardianView.sections.importantContacts.title')}
+            {t("guardianView.sections.importantContacts.title")}
           </CardTitle>
           <CardDescription>
-            {t('guardianView.sections.importantContacts.description')}
+            {t("guardianView.sections.importantContacts.description")}
           </CardDescription>
         </CardHeader>
         <CardContent>
           <div className="space-y-3">
             {contacts.length > 0 ? (
               contacts.map((contact) => (
-                <div key={contact.id} className="flex items-center justify-between p-3 border rounded-lg">
+                <div
+                  key={contact.id}
+                  className="flex items-center justify-between p-3 border rounded-lg"
+                >
                   <div className="flex items-center space-x-3">
                     <div className="flex items-center justify-center w-8 h-8 rounded-full bg-primary/10">
                       <Users className="h-4 w-4 text-primary" />
                     </div>
                     <div>
                       <h4 className="font-medium">{contact.name}</h4>
-                      <p className="text-sm text-muted-foreground">{contact.role}</p>
+                      <p className="text-sm text-muted-foreground">
+                        {contact.role}
+                      </p>
                     </div>
                   </div>
                   <div className="text-right space-y-1 text-sm">
@@ -623,7 +689,7 @@ export const GuardianView: React.FC = () => {
               ))
             ) : (
               <p className="text-center text-muted-foreground py-8">
-                {t('guardianView.sections.importantContacts.empty')}
+                {t("guardianView.sections.importantContacts.empty")}
               </p>
             )}
           </div>
@@ -635,10 +701,10 @@ export const GuardianView: React.FC = () => {
         <CardHeader>
           <CardTitle className="flex items-center">
             <Heart className="h-5 w-5 mr-2" />
-            {t('guardianView.sections.finalWishes.title')}
+            {t("guardianView.sections.finalWishes.title")}
           </CardTitle>
           <CardDescription>
-            {t('guardianView.sections.finalWishes.description')}
+            {t("guardianView.sections.finalWishes.description")}
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -646,7 +712,9 @@ export const GuardianView: React.FC = () => {
             {/* Funeral Wishes */}
             {instructions?.funeral_wishes && (
               <div className="space-y-2">
-                <h4 className="font-medium text-primary">{t('guardianView.sections.finalWishes.funeralWishes')}</h4>
+                <h4 className="font-medium text-primary">
+                  {t("guardianView.sections.finalWishes.funeralWishes")}
+                </h4>
                 <div className="p-3 bg-muted/30 rounded-lg">
                   <p className="text-sm">{instructions.funeral_wishes}</p>
                 </div>
@@ -656,9 +724,13 @@ export const GuardianView: React.FC = () => {
             {/* Digital Accounts */}
             {instructions?.digital_accounts_shutdown && (
               <div className="space-y-2">
-                <h4 className="font-medium text-primary">{t('guardianView.sections.finalWishes.digitalAccounts')}</h4>
+                <h4 className="font-medium text-primary">
+                  {t("guardianView.sections.finalWishes.digitalAccounts")}
+                </h4>
                 <div className="p-3 bg-muted/30 rounded-lg">
-                  <p className="text-sm">{instructions.digital_accounts_shutdown}</p>
+                  <p className="text-sm">
+                    {instructions.digital_accounts_shutdown}
+                  </p>
                 </div>
               </div>
             )}
@@ -666,16 +738,20 @@ export const GuardianView: React.FC = () => {
             {/* Messages to Loved Ones */}
             {instructions?.messages_to_loved_ones && (
               <div className="space-y-2">
-                <h4 className="font-medium text-primary">{t('guardianView.sections.finalWishes.messagesToLovedOnes')}</h4>
+                <h4 className="font-medium text-primary">
+                  {t("guardianView.sections.finalWishes.messagesToLovedOnes")}
+                </h4>
                 <div className="p-3 bg-muted/30 rounded-lg">
-                  <p className="text-sm">{instructions.messages_to_loved_ones}</p>
+                  <p className="text-sm">
+                    {instructions.messages_to_loved_ones}
+                  </p>
                 </div>
               </div>
             )}
 
             {!instructions && (
               <p className="text-center text-muted-foreground py-8">
-                {t('guardianView.sections.finalWishes.empty')}
+                {t("guardianView.sections.finalWishes.empty")}
               </p>
             )}
           </div>
@@ -687,10 +763,10 @@ export const GuardianView: React.FC = () => {
         <CardContent className="text-center py-6">
           <Shield className="h-8 w-8 text-primary mx-auto mb-2" />
           <p className="text-sm text-muted-foreground">
-            {t('guardianView.guardianInfo.description')}
+            {t("guardianView.guardianInfo.description")}
           </p>
           <p className="text-xs text-muted-foreground mt-2">
-            {t('guardianView.guardianInfo.securityNote')}
+            {t("guardianView.guardianInfo.securityNote")}
           </p>
         </CardContent>
       </Card>
@@ -702,14 +778,14 @@ export const GuardianView: React.FC = () => {
             <CardTitle className="flex items-center justify-between">
               <span className="flex items-center gap-2 text-destructive">
                 <AlertTriangle className="h-5 w-5" />
-                {t('guardianView.emergencyAccess.contactsTitle')}
+                {t("guardianView.emergencyAccess.contactsTitle")}
               </span>
               <Badge variant="destructive">
-                {t('guardianView.emergencyAccess.priorityOrder')}
+                {t("guardianView.emergencyAccess.priorityOrder")}
               </Badge>
             </CardTitle>
             <CardDescription>
-              {t('guardianView.emergencyAccess.contactsDescription')}
+              {t("guardianView.emergencyAccess.contactsDescription")}
             </CardDescription>
           </CardHeader>
           <CardContent>
@@ -737,7 +813,7 @@ export const GuardianView: React.FC = () => {
                             </p>
                           )}
                         </div>
-                        
+
                         <div className="space-y-2">
                           {ec.contact.phone_number && (
                             <div className="flex items-center gap-2">
@@ -753,11 +829,11 @@ export const GuardianView: React.FC = () => {
                                 variant="outline"
                                 onClick={() => logContactAttempt(ec.contact_id)}
                               >
-                                {t('guardianView.emergencyAccess.logContact')}
+                                {t("guardianView.emergencyAccess.logContact")}
                               </Button>
                             </div>
                           )}
-                          
+
                           {ec.contact.email && (
                             <div className="flex items-center gap-2">
                               <a
@@ -772,18 +848,18 @@ export const GuardianView: React.FC = () => {
                         </div>
                       </div>
                     </div>
-                    
+
                     <div className="text-right space-y-1">
                       <Badge variant="outline" className="text-xs">
-                        {t('guardianView.emergencyAccess.priority', { 
-                          order: index + 1 
+                        {t("guardianView.emergencyAccess.priority", {
+                          order: index + 1,
                         })}
                       </Badge>
                       {ec.last_contacted && (
                         <p className="text-xs text-muted-foreground flex items-center gap-1">
                           <Clock className="h-3 w-3" />
-                          {t('guardianView.emergencyAccess.lastContacted', {
-                            time: new Date(ec.last_contacted).toLocaleString()
+                          {t("guardianView.emergencyAccess.lastContacted", {
+                            time: new Date(ec.last_contacted).toLocaleString(),
                           })}
                         </p>
                       )}
@@ -792,11 +868,11 @@ export const GuardianView: React.FC = () => {
                 </div>
               ))}
             </div>
-            
+
             <div className="mt-6 p-4 bg-muted/50 rounded-lg">
               <p className="text-sm text-muted-foreground flex items-start gap-2">
                 <AlertTriangle className="h-4 w-4 text-destructive flex-shrink-0 mt-0.5" />
-                {t('guardianView.emergencyAccess.importantNote')}
+                {t("guardianView.emergencyAccess.importantNote")}
               </p>
             </div>
           </CardContent>

@@ -6,7 +6,7 @@ export interface User {
   firstName: string;
   lastName: string;
   avatarUrl?: string;
-  plan: 'starter' | 'premium' | 'enterprise';
+  plan: "starter" | "premium" | "enterprise";
   createdAt: Date;
   updatedAt: Date;
 }
@@ -18,22 +18,22 @@ export interface Guardian {
   guardianName: string;
   relationship: string;
   permissions: GuardianPermission[];
-  status: 'pending' | 'active' | 'suspended';
+  status: "pending" | "active" | "suspended";
   verifiedAt?: Date;
   createdAt: Date;
 }
 
 export interface GuardianPermission {
   id: string;
-  type: 'view' | 'download' | 'manage';
-  scope: 'all' | 'specific';
+  type: "view" | "download" | "manage";
+  scope: "all" | "specific";
   resources?: string[];
 }
 
 export interface HeritageItem {
   id: string;
   userId: string;
-  type: 'document' | 'photo' | 'video' | 'audio' | 'story';
+  type: "document" | "photo" | "video" | "audio" | "story";
   title: string;
   description?: string;
   filePath?: string;
@@ -47,7 +47,7 @@ export interface HeritageItem {
 
 export interface AccessCondition {
   id: string;
-  type: 'time_lock' | 'guardian_approval' | 'special_event';
+  type: "time_lock" | "guardian_approval" | "special_event";
   parameters: Record<string, unknown>;
   description: string;
 }
@@ -66,15 +66,15 @@ export interface Vault {
 export interface VaultShareSettings {
   isPublic: boolean;
   allowedGuardians: string[];
-  accessLevel: 'view' | 'download' | 'manage';
+  accessLevel: "view" | "download" | "manage";
 }
 
 export interface SecurityEvent {
   id: string;
   userId: string;
-  type: 'login' | 'file_access' | 'guardian_action' | 'security_alert';
+  type: "login" | "file_access" | "guardian_action" | "security_alert";
   description: string;
-  severity: 'info' | 'warning' | 'critical';
+  severity: "info" | "warning" | "critical";
   metadata: Record<string, unknown>;
   timestamp: Date;
 }
@@ -130,6 +130,11 @@ export interface UserEntity extends BaseEntity {
 }
 
 // Common Status Types
-export type Status = 'pending' | 'active' | 'inactive' | 'suspended' | 'deleted';
-export type Severity = 'info' | 'warning' | 'error' | 'success' | 'critical';
-export type Priority = 'low' | 'medium' | 'high' | 'urgent';
+export type Status =
+  | "pending"
+  | "active"
+  | "inactive"
+  | "suspended"
+  | "deleted";
+export type Severity = "info" | "warning" | "error" | "success" | "critical";
+export type Priority = "low" | "medium" | "high" | "urgent";

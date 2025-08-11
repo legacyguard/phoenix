@@ -1,10 +1,22 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import { withTranslation, WithTranslation } from 'react-i18next';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { AlertCircle, RefreshCw, Home, ChevronDown, ChevronUp } from 'lucide-react';
-import { toast } from 'sonner';
-import { logErrorToSupabase } from '@/utils/errorTracking';
+import React, { Component, ErrorInfo, ReactNode } from "react";
+import { withTranslation, WithTranslation } from "react-i18next";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import {
+  AlertCircle,
+  RefreshCw,
+  Home,
+  ChevronDown,
+  ChevronUp,
+} from "lucide-react";
+import { toast } from "sonner";
+import { logErrorToSupabase } from "@/utils/errorTracking";
 
 interface Props extends WithTranslation {
   children: ReactNode;
@@ -28,33 +40,33 @@ class ErrorBoundaryComponent extends Component<Props, State> {
       hasError: false,
       error: null,
       errorInfo: null,
-      errorId: '',
-      showStackTrace: false
+      errorId: "",
+      showStackTrace: false,
     };
   }
 
   static getDerivedStateFromError(error: Error): Partial<State> {
     const errorId = `ERR_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-    
+
     return {
       hasError: true,
       error,
-      errorId
+      errorId,
     };
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     const timestamp = new Date().toISOString();
     const { errorId } = this.state;
-    
+
     // Detailed logging for debugging
-    console.error('[ErrorBoundary] Component error caught:', {
+    console.error("[ErrorBoundary] Component error caught:", {
       errorId,
       timestamp,
       error: {
         message: error.message,
         name: error.name,
-        stack: error.stack
+        stack: error.stack,
       },
       componentStack: errorInfo.componentStack,
       errorBoundaryProps: this.props,
@@ -62,8 +74,8 @@ class ErrorBoundaryComponent extends Component<Props, State> {
       url: window.location.href,
       viewport: {
         width: window.innerWidth,
-        height: window.innerHeight
-      }
+        height: window.innerHeight,
+      },
     });
 
     // Save errorInfo to state
@@ -75,10 +87,10 @@ class ErrorBoundaryComponent extends Component<Props, State> {
     }
 
     // Toast notification for development
-    if (process.env.NODE_ENV === 'development') {
+    if (process.env.NODE_ENV === "development") {
       toast.error(`Application error (${errorId})`, {
         description: error.message,
-        duration: 10000
+        duration: 10000,
       });
     }
 
@@ -98,21 +110,21 @@ class ErrorBoundaryComponent extends Component<Props, State> {
         error: {
           message: error.message,
           name: error.name,
-          stack: error.stack
+          stack: error.stack,
         },
         componentStack: errorInfo.componentStack,
-        url: window.location.href
+        url: window.location.href,
       };
-      
-      const errors = JSON.parse(localStorage.getItem('app_errors') || '[]');
+
+      const errors = JSON.parse(localStorage.getItem("app_errors") || "[]");
       errors.push(errorData);
       // Keep only the last 10 errors
       if (errors.length > 10) {
         errors.shift();
       }
-      localStorage.setItem('app_errors', JSON.stringify(errors));
+      localStorage.setItem("app_errors", JSON.stringify(errors));
     } catch (e) {
-      console.error('Failed to save error to localStorage:', e);
+      console.error("Failed to save error to localStorage:", e);
     }
   };
 
@@ -121,8 +133,8 @@ class ErrorBoundaryComponent extends Component<Props, State> {
       hasError: false,
       error: null,
       errorInfo: null,
-      errorId: '',
-      showStackTrace: false
+      errorId: "",
+      showStackTrace: false,
     });
   };
 
@@ -131,25 +143,29 @@ class ErrorBoundaryComponent extends Component<Props, State> {
   };
 
   handleGoHome = () => {
-    window.location.href = '/';
+    window.location.href = "/";
   };
 
   toggleStackTrace = () => {
-    this.setState(prev => ({ showStackTrace: !prev.showStackTrace }));
+    this.setState((prev) => ({ showStackTrace: !prev.showStackTrace }));
   };
 
   formatStackTrace = (stack: string | undefined): string[] => {
     if (!stack) return [];
     return stack
-      .split('\n')
-      .filter(line => line.trim())
-      .map(line => line.trim());
+      .split("\n")
+      .filter((line) => line.trim())
+      .map((line) => line.trim());
   };
 
   render() {
     if (this.state.hasError) {
       const { error, errorInfo, errorId, showStackTrace } = this.state;
-      const { fallback, showDetails = process.env.NODE_ENV === 'development', t } = this.props;
+      const {
+        fallback,
+        showDetails = process.env.NODE_ENV === "development",
+        t,
+      } = this.props;
 
       // If custom fallback is defined, use it
       if (fallback) {
@@ -164,9 +180,11 @@ class ErrorBoundaryComponent extends Component<Props, State> {
               <div className="flex items-center space-x-2">
                 <AlertCircle className="h-8 w-8 text-destructive" />
                 <div>
-                  <CardTitle className="text-2xl">{t('errorBoundary.title')}</CardTitle>
+                  <CardTitle className="text-2xl">
+                    {t("errorBoundary.title")}
+                  </CardTitle>
                   <CardDescription>
-                    {t('errorBoundary.description')}
+                    {t("errorBoundary.description")}
                   </CardDescription>
                 </div>
               </div>
@@ -175,7 +193,10 @@ class ErrorBoundaryComponent extends Component<Props, State> {
               {/* Error ID for support */}
               <div className="bg-muted/50 p-3 rounded-md">
                 <p className="text-sm text-muted-foreground">
-                  {t('errorBoundary.errorId')}: <code className="text-xs bg-background px-2 py-1 rounded">{errorId}</code>
+                  {t("errorBoundary.errorId")}:{" "}
+                  <code className="text-xs bg-background px-2 py-1 rounded">
+                    {errorId}
+                  </code>
                 </p>
               </div>
 
@@ -183,15 +204,15 @@ class ErrorBoundaryComponent extends Component<Props, State> {
               <div className="flex flex-wrap gap-2">
                 <Button onClick={this.handleReset} variant="default">
                   <RefreshCw className="mr-2 h-4 w-4" />
-                  {t('errorBoundary.tryAgain')}
+                  {t("errorBoundary.tryAgain")}
                 </Button>
                 <Button onClick={this.handleReload} variant="secondary">
                   <RefreshCw className="mr-2 h-4 w-4" />
-                  {t('errorBoundary.reloadPage')}
+                  {t("errorBoundary.reloadPage")}
                 </Button>
                 <Button onClick={this.handleGoHome} variant="outline">
                   <Home className="mr-2 h-4 w-4" />
-                  {t('errorBoundary.goToHomepage')}
+                  {t("errorBoundary.goToHomepage")}
                 </Button>
               </div>
 
@@ -200,7 +221,7 @@ class ErrorBoundaryComponent extends Component<Props, State> {
                 <div className="space-y-3 pt-4 border-t">
                   <div className="space-y-2">
                     <h4 className="font-semibold text-sm flex items-center justify-between">
-                      {t('errorBoundary.technicalDetails')}
+                      {t("errorBoundary.technicalDetails")}
                       <Button
                         size="sm"
                         variant="ghost"
@@ -210,17 +231,17 @@ class ErrorBoundaryComponent extends Component<Props, State> {
                         {showStackTrace ? (
                           <>
                             <ChevronUp className="h-3 w-3 mr-1" />
-                            {t('errorBoundary.hide')}
+                            {t("errorBoundary.hide")}
                           </>
                         ) : (
                           <>
                             <ChevronDown className="h-3 w-3 mr-1" />
-                            {t('errorBoundary.show')}
+                            {t("errorBoundary.show")}
                           </>
                         )}
                       </Button>
                     </h4>
-                    
+
                     {/* Error message */}
                     <div className="bg-destructive/10 p-3 rounded-md">
                       <p className="text-sm font-mono text-destructive">
@@ -234,13 +255,17 @@ class ErrorBoundaryComponent extends Component<Props, State> {
                         {error.stack && (
                           <div>
                             <p className="text-xs font-semibold text-muted-foreground mb-1">
-                              {t('errorBoundary.stackTrace')}:
+                              {t("errorBoundary.stackTrace")}:
                             </p>
                             <div className="bg-muted/30 p-3 rounded-md max-h-48 overflow-y-auto">
                               <pre className="text-xs font-mono whitespace-pre-wrap break-all">
-                                {this.formatStackTrace(error.stack).map((line, i) => (
-                                  <div key={i} className="py-0.5">{line}</div>
-                                ))}
+                                {this.formatStackTrace(error.stack).map(
+                                  (line, i) => (
+                                    <div key={i} className="py-0.5">
+                                      {line}
+                                    </div>
+                                  ),
+                                )}
                               </pre>
                             </div>
                           </div>
@@ -249,7 +274,7 @@ class ErrorBoundaryComponent extends Component<Props, State> {
                         {errorInfo?.componentStack && (
                           <div>
                             <p className="text-xs font-semibold text-muted-foreground mb-1">
-                              {t('errorBoundary.componentStack')}:
+                              {t("errorBoundary.componentStack")}:
                             </p>
                             <div className="bg-muted/30 p-3 rounded-md max-h-48 overflow-y-auto">
                               <pre className="text-xs font-mono whitespace-pre-wrap break-all">
@@ -266,7 +291,7 @@ class ErrorBoundaryComponent extends Component<Props, State> {
 
               {/* Help text */}
               <p className="text-sm text-muted-foreground pt-4">
-                {t('errorBoundary.helpText')}
+                {t("errorBoundary.helpText")}
               </p>
             </CardContent>
           </Card>
@@ -278,4 +303,4 @@ class ErrorBoundaryComponent extends Component<Props, State> {
   }
 }
 
-export const ErrorBoundary = withTranslation('ui')(ErrorBoundaryComponent);
+export const ErrorBoundary = withTranslation("ui")(ErrorBoundaryComponent);

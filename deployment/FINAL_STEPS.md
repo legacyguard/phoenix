@@ -11,13 +11,16 @@
 ## 🔧 Zostávajúce manuálne kroky:
 
 ### 1. Overte nasadenie v Supabase
+
 Spustite v SQL Editore:
+
 ```sql
 -- Skopírujte obsah súboru:
 deployment/sql/00_complete_deployment.sql
 ```
 
 Alebo pre overenie:
+
 ```sql
 -- Skopírujte obsah súboru:
 scripts/verify-supabase.sql
@@ -26,12 +29,14 @@ scripts/verify-supabase.sql
 ### 2. Nasaďte Edge Function
 
 #### Cez Supabase CLI:
+
 ```bash
 cd /Users/luborfedak/Documents/Github/legacyguard-heritage-vault
 supabase functions deploy send-critical-error-alert --project-ref zdcbfsyegttwpfrfjkfn
 ```
 
 #### Alebo manuálne:
+
 1. Supabase Dashboard → Edge Functions
 2. New Function → `send-critical-error-alert`
 3. Skopírujte kód z: `deployment/functions/send-critical-error-alert/index.ts`
@@ -39,6 +44,7 @@ supabase functions deploy send-critical-error-alert --project-ref zdcbfsyegttwpf
 ### 3. Nastavte environment premenné
 
 V Edge Function nastavte:
+
 - `RESEND_API_KEY` - váš Resend API kľúč
 - `ERROR_ALERT_EMAIL` - email pre notifikácie
 - `RESEND_FROM_EMAIL` - odosielateľský email
@@ -60,22 +66,23 @@ Po nasadení môžete monitorovať chyby:
 
 ```sql
 -- Posledné chyby
-SELECT * FROM error_logs 
-ORDER BY created_at DESC 
+SELECT * FROM error_logs
+ORDER BY created_at DESC
 LIMIT 20;
 
 -- Štatistiky
 SELECT * FROM error_statistics;
 
 -- Critical errors
-SELECT * FROM error_logs 
-WHERE error_level = 'critical' 
+SELECT * FROM error_logs
+WHERE error_level = 'critical'
 AND created_at > NOW() - INTERVAL '24 hours';
 ```
 
 ## 🚀 Produkčné nasadenie
 
 Pred produkciou:
+
 1. Odstráňte test route z `src/App.tsx`
 2. Zmažte test komponenty
 3. Upravte error threshold podľa potreby
@@ -104,6 +111,7 @@ scripts/
 ## ❓ Pomoc
 
 Ak máte problémy:
+
 1. Overte, že SQL skripty boli spustené: `scripts/verify-supabase.sql`
 2. Skontrolujte Edge Function logy v Supabase
 3. Overte environment premenné v `.env`

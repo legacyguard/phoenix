@@ -1,27 +1,29 @@
-import { vi } from 'vitest';
+import { vi } from "vitest";
 
 export const createMockSupabaseClient = () => {
   const mockFrom = vi.fn();
   const mockStorage = {
     from: vi.fn(() => ({
-      upload: vi.fn().mockResolvedValue({ data: { path: 'test-path' }, error: null }),
-      download: vi.fn().mockResolvedValue({ 
-        data: new Blob(['test data']), 
-        error: null 
+      upload: vi
+        .fn()
+        .mockResolvedValue({ data: { path: "test-path" }, error: null }),
+      download: vi.fn().mockResolvedValue({
+        data: new Blob(["test data"]),
+        error: null,
       }),
       remove: vi.fn().mockResolvedValue({ data: null, error: null }),
       list: vi.fn().mockResolvedValue({ data: [], error: null }),
-      createSignedUrl: vi.fn().mockResolvedValue({ 
-        data: { signedUrl: 'https://example.com/signed-url' }, 
-        error: null 
+      createSignedUrl: vi.fn().mockResolvedValue({
+        data: { signedUrl: "https://example.com/signed-url" },
+        error: null,
       }),
     })),
   };
 
   const mockAuth = {
-    getUser: vi.fn().mockResolvedValue({ 
-      data: { user: { id: 'test-user-id' } }, 
-      error: null 
+    getUser: vi.fn().mockResolvedValue({
+      data: { user: { id: "test-user-id" } },
+      error: null,
     }),
     signInWithEmail: vi.fn(),
     signOut: vi.fn(),
@@ -64,14 +66,14 @@ export const createMockSupabaseClient = () => {
 
 export const setupSupabaseMocks = () => {
   const mockClient = createMockSupabaseClient();
-  
+
   // Mock the imports
-  vi.doMock('@/lib/supabase', () => ({
-    supabase: mockClient
+  vi.doMock("@/lib/supabase", () => ({
+    supabase: mockClient,
   }));
-  
-  vi.doMock('@/integrations/supabase/client', () => ({
-    supabase: mockClient
+
+  vi.doMock("@/integrations/supabase/client", () => ({
+    supabase: mockClient,
   }));
 
   return mockClient;

@@ -1,42 +1,44 @@
-import { supabase } from '@/lib/supabase';
-import type { 
-  WillSyncPreferences, 
-  WillSyncLog, 
-  WillVersion, 
+import { supabase } from "@/lib/supabase";
+import type {
+  WillSyncPreferences,
+  WillSyncLog,
+  WillVersion,
   WillSyncQueue,
-  WillChanges 
-} from '@/types/willSync';
-import type { RealtimeChannel } from '@supabase/supabase-js';
+  WillChanges,
+} from "@/types/willSync";
+import type { RealtimeChannel } from "@supabase/supabase-js";
 
 class WillSyncService {
   private subscriptions: Map<string, RealtimeChannel> = new Map();
 
   // Sync Preferences
-  async getUserSyncPreferences(userId: string): Promise<WillSyncPreferences | null> {
+  async getUserSyncPreferences(
+    userId: string,
+  ): Promise<WillSyncPreferences | null> {
     const { data, error } = await supabase
-      .from('will_sync_preferences')
-      .select('*')
-      .eq('user_id', userId)
+      .from("will_sync_preferences")
+      .select("*")
+      .eq("user_id", userId)
       .single();
 
     if (error) {
-      console.error('Error fetching sync preferences:', error);
+      console.error("Error fetching sync preferences:", error);
       return null;
     }
 
     return data;
   }
 
-  async updateSyncPreferences(preferences: WillSyncPreferences): Promise<boolean> {
-    const { error } = await supabase
-      .from('will_sync_preferences')
-      .upsert({
-        ...preferences,
-        updated_at: new Date().toISOString()
-      });
+  async updateSyncPreferences(
+    preferences: WillSyncPreferences,
+  ): Promise<boolean> {
+    const { error } = await supabase.from("will_sync_preferences").upsert({
+      ...preferences,
+      updated_at: new Date().toISOString(),
+    });
 
     if (error) {
-      console.error('Error updating sync preferences:', error);
+      console.error("Error updating sync preferences:", error);
       return false;
     }
 
@@ -46,19 +48,19 @@ class WillSyncService {
   // Sync Logs
   async getSyncLogs(userId: string, status?: string): Promise<WillSyncLog[]> {
     let query = supabase
-      .from('will_sync_log')
-      .select('*')
-      .eq('user_id', userId)
-      .order('created_at', { ascending: false });
+      .from("will_sync_log")
+      .select("*")
+      .eq("user_id", userId)
+      .order("created_at", { ascending: false });
 
     if (status) {
-      query = query.eq('status', status);
+      query = query.eq("status", status);
     }
 
     const { data, error } = await query;
 
     if (error) {
-      console.error('Error fetching sync logs:', error);
+      console.error("Error fetching sync logs:", error);
       return [];
     }
 
@@ -67,16 +69,16 @@ class WillSyncService {
 
   async approveSyncLog(logId: string, userId: string): Promise<boolean> {
     const { error } = await supabase
-      .from('will_sync_log')
+      .from("will_sync_log")
       .update({
-        status: 'approved',
+        status: "approved",
         approved_at: new Date().toISOString(),
-        approved_by: userId
+        approved_by: userId,
       })
-      .eq('id', logId);
+      .eq("id", logId);
 
     if (error) {
-      console.error('Error approving sync log:', error);
+      console.error("Error approving sync log:", error);
       return false;
     }
 
@@ -87,14 +89,14 @@ class WillSyncService {
 
   async rejectSyncLog(logId: string): Promise<boolean> {
     const { error } = await supabase
-      .from('will_sync_log')
+      .from("will_sync_log")
       .update({
-        status: 'rejected'
+        status: "rejected",
       })
-      .eq('id', logId);
+      .eq("id", logId);
 
     if (error) {
-      console.error('Error rejecting sync log:', error);
+      console.error("Error rejecting sync log:", error);
       return false;
     }
 
@@ -104,13 +106,13 @@ class WillSyncService {
   // Version Management
   async getWillVersions(willId: string): Promise<WillVersion[]> {
     const { data, error } = await supabase
-      .from('will_versions')
-      .select('*')
-      .eq('will_id', willId)
-      .order('version_number', { ascending: false });
+      .from("will_versions")
+      .select("*")
+      .eq("will_id", willId)
+      .order("version_number", { ascending: false });
 
     if (error) {
-      console.error('Error fetching will versions:', error);
+      console.error("Error fetching will versions:", error);
       return [];
     }
 
@@ -119,27 +121,27 @@ class WillSyncService {
 
   async restoreWillVersion(versionId: string): Promise<boolean> {
     const { data: version, error: versionError } = await supabase
-      .from('will_versions')
-      .select('*')
-      .eq('id', versionId)
+      .from("will_versions")
+      .select("*")
+      .eq("id", versionId)
       .single();
 
     if (versionError || !version) {
-      console.error('Error fetching version:', versionError);
+      console.error("Error fetching version:", versionError);
       return false;
     }
 
     // Create a new version from the restored one
-    const { error } = await supabase.rpc('create_will_version', {
+    const { error } = await supabase.rpc("create_will_version", {
       p_will_id: version.will_id,
       p_content: version.content_snapshot,
-      p_created_by: 'user',
+      p_created_by: "user",
       p_created_reason: `Restored from version ${version.version_number}`,
-      p_changes: null
+      p_changes: null,
     });
 
     if (error) {
-      console.error('Error restoring version:', error);
+      console.error("Error restoring version:", error);
       return false;
     }
 
@@ -147,33 +149,36 @@ class WillSyncService {
   }
 
   // Real-time Subscriptions
-  subscribeToSyncQueue(userId: string, callback: (payload: Record<string, unknown>) => void): () => void {
+  subscribeToSyncQueue(
+    userId: string,
+    callback: (payload: Record<string, unknown>) => void,
+  ): () => void {
     const channelName = `sync-queue-${userId}`;
-    
+
     // Unsubscribe from existing channel if any
     this.unsubscribeFromChannel(channelName);
 
     const channel = supabase
       .channel(channelName)
       .on(
-        'postgres_changes',
+        "postgres_changes",
         {
-          event: 'INSERT',
-          schema: 'public',
-          table: 'will_sync_queue',
-          filter: `user_id=eq.${userId}`
+          event: "INSERT",
+          schema: "public",
+          table: "will_sync_queue",
+          filter: `user_id=eq.${userId}`,
         },
-        callback
+        callback,
       )
       .on(
-        'postgres_changes',
+        "postgres_changes",
         {
-          event: 'UPDATE',
-          schema: 'public',
-          table: 'will_sync_queue',
-          filter: `user_id=eq.${userId}`
+          event: "UPDATE",
+          schema: "public",
+          table: "will_sync_queue",
+          filter: `user_id=eq.${userId}`,
         },
-        callback
+        callback,
       )
       .subscribe();
 
@@ -183,22 +188,25 @@ class WillSyncService {
     return () => this.unsubscribeFromChannel(channelName);
   }
 
-  subscribeToSyncLogs(userId: string, callback: (payload: Record<string, unknown>) => void): () => void {
+  subscribeToSyncLogs(
+    userId: string,
+    callback: (payload: Record<string, unknown>) => void,
+  ): () => void {
     const channelName = `sync-logs-${userId}`;
-    
+
     this.unsubscribeFromChannel(channelName);
 
     const channel = supabase
       .channel(channelName)
       .on(
-        'postgres_changes',
+        "postgres_changes",
         {
-          event: '*',
-          schema: 'public',
-          table: 'will_sync_log',
-          filter: `user_id=eq.${userId}`
+          event: "*",
+          schema: "public",
+          table: "will_sync_log",
+          filter: `user_id=eq.${userId}`,
         },
-        callback
+        callback,
       )
       .subscribe();
 
@@ -218,13 +226,13 @@ class WillSyncService {
   // Process approved sync
   private async processApprovedSync(logId: string) {
     const { data: log, error } = await supabase
-      .from('will_sync_log')
-      .select('*')
-      .eq('id', logId)
+      .from("will_sync_log")
+      .select("*")
+      .eq("id", logId)
       .single();
 
     if (error || !log) {
-      console.error('Error fetching sync log:', error);
+      console.error("Error fetching sync log:", error);
       return;
     }
 
@@ -235,13 +243,13 @@ class WillSyncService {
   private async applyChangesToWill(willId: string, changes: WillChanges) {
     // Fetch current will content
     const { data: will, error: willError } = await supabase
-      .from('generated_wills')
-      .select('*')
-      .eq('id', willId)
+      .from("generated_wills")
+      .select("*")
+      .eq("id", willId)
       .single();
 
     if (willError || !will) {
-      console.error('Error fetching will:', willError);
+      console.error("Error fetching will:", willError);
       return;
     }
 
@@ -249,20 +257,23 @@ class WillSyncService {
     const updatedContent = this.mergeWillChanges(will.will_content, changes);
 
     // Create new version
-    const { error } = await supabase.rpc('create_will_version', {
+    const { error } = await supabase.rpc("create_will_version", {
       p_will_id: willId,
       p_content: updatedContent,
-      p_created_by: 'auto_sync',
-      p_created_reason: 'Automatic sync from asset/beneficiary changes',
-      p_changes: changes
+      p_created_by: "auto_sync",
+      p_created_reason: "Automatic sync from asset/beneficiary changes",
+      p_changes: changes,
     });
 
     if (error) {
-      console.error('Error creating new will version:', error);
+      console.error("Error creating new will version:", error);
     }
   }
 
-  private mergeWillChanges(currentContent: Record<string, unknown>, changes: WillChanges): Record<string, unknown> {
+  private mergeWillChanges(
+    currentContent: Record<string, unknown>,
+    changes: WillChanges,
+  ): Record<string, unknown> {
     const updatedContent = { ...currentContent };
 
     // Apply additions
@@ -271,13 +282,13 @@ class WillSyncService {
         // Add new assets to will content
         updatedContent.assets = [
           ...(updatedContent.assets || []),
-          ...changes.added.assets
+          ...changes.added.assets,
         ];
       }
       if (changes.added.beneficiaries) {
         updatedContent.beneficiaries = [
           ...(updatedContent.beneficiaries || []),
-          ...changes.added.beneficiaries
+          ...changes.added.beneficiaries,
         ];
       }
     }
@@ -285,17 +296,17 @@ class WillSyncService {
     // Apply removals
     if (changes.removed) {
       if (changes.removed.assets) {
-        const removedIds = changes.removed.assets.map(a => a.id);
+        const removedIds = changes.removed.assets.map((a) => a.id);
         updatedContent.assets = updatedContent.assets?.filter(
-          (a: Record<string, unknown>) => !removedIds.includes(a.id)
+          (a: Record<string, unknown>) => !removedIds.includes(a.id),
         );
       }
       if (changes.removed.beneficiaries) {
-        const removedIds = changes.removed.beneficiaries.map(b => b.id);
+        const removedIds = changes.removed.beneficiaries.map((b) => b.id);
         updatedContent.beneficiaries = updatedContent.beneficiaries?.filter(
-          (b: Record<string, unknown>) => !removedIds.includes(b.id)
+          (b: Record<string, unknown>) => !removedIds.includes(b.id),
         );
-        
+
         // Redistribute allocations
         if (changes.removed.beneficiaries.length > 0) {
           this.redistributeAllocations(updatedContent);
@@ -305,16 +316,18 @@ class WillSyncService {
 
     // Apply modifications
     if (changes.modified?.allocations) {
-      changes.modified.allocations.forEach(alloc => {
+      changes.modified.allocations.forEach((alloc) => {
         const beneficiary = updatedContent.beneficiaries?.find(
-          (b: Record<string, unknown>) => b.id === alloc.beneficiary_id
+          (b: Record<string, unknown>) => b.id === alloc.beneficiary_id,
         );
         if (beneficiary) {
-          beneficiary.allocation = [{
-            assetType: 'percentage',
-            description: 'General Estate',
-            value: alloc.new_percentage
-          }];
+          beneficiary.allocation = [
+            {
+              assetType: "percentage",
+              description: "General Estate",
+              value: alloc.new_percentage,
+            },
+          ];
         }
       });
     }
@@ -329,14 +342,18 @@ class WillSyncService {
     const equalShare = Math.floor(100 / content.beneficiaries.length);
     const remainder = 100 % content.beneficiaries.length;
 
-    content.beneficiaries.forEach((beneficiary: Record<string, unknown>, index: number) => {
-      const allocation = equalShare + (index < remainder ? 1 : 0);
-      beneficiary.allocation = [{
-        assetType: 'percentage',
-        description: 'General Estate',
-        value: allocation
-      }];
-    });
+    content.beneficiaries.forEach(
+      (beneficiary: Record<string, unknown>, index: number) => {
+        const allocation = equalShare + (index < remainder ? 1 : 0);
+        beneficiary.allocation = [
+          {
+            assetType: "percentage",
+            description: "General Estate",
+            value: allocation,
+          },
+        ];
+      },
+    );
   }
 
   // Cleanup

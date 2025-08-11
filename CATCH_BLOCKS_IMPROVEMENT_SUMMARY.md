@@ -9,7 +9,9 @@ Automatizovane sme vylepšili error handling vo všetkých catch blokoch v celom
 ## Čo bolo vylepšené
 
 ### 1. Detailné logovanie chýb
+
 Každý catch blok teraz obsahuje:
+
 - **Timestamp** - presný čas výskytu chyby
 - **Kontext** - kde sa chyba vyskytla (komponenta/funkcia)
 - **Operácia** - čo sa práve vykonávalo
@@ -19,6 +21,7 @@ Každý catch blok teraz obsahuje:
 - **Kompletné detaily chyby** - celý error objekt
 
 ### 2. Používateľsky prívetivé správy
+
 - Všeobecné chybové správy boli nahradené kontextovými správami
 - Pridané špecifické správy pre bežné typy chýb:
   - Sieťové chyby
@@ -27,13 +30,15 @@ Každý catch blok teraz obsahuje:
   - Nenájdené dáta
 
 ### 3. Konzistentný formát
+
 Všetky catch bloky teraz používajú rovnakú štruktúru:
+
 ```typescript
 } catch (error: any) {
   const timestamp = new Date().toISOString();
   const errorMessage = error?.message || 'Neznáma chyba';
   const errorCode = error?.code || 'UNKNOWN_ERROR';
-  
+
   // Detailné logovanie pre debugging
   console.error('[Kontext] Chyba pri operácii:', {
     timestamp,
@@ -43,15 +48,15 @@ Všetky catch bloky teraz používajú rovnakú štruktúru:
     errorDetails: error,
     stack: error?.stack
   });
-  
+
   // Používateľsky prívetivá správa
   let userMessage = 'Nastala chyba pri operácii.';
-  
+
   // Špecifické správy podľa typu chyby
   if (error?.code === 'PGRST116') {
     userMessage = 'Požadované dáta neboli nájdené.';
   } // ... ďalšie podmienky
-  
+
   toast.error(userMessage);
 }
 ```
@@ -96,11 +101,13 @@ Pôvodné súbory boli zálohované do adresára: `backup-before-catch-improveme
 ## Použitie
 
 Skript je možné znovu spustiť kedykoľvek:
+
 ```bash
 node scripts/improve-catch-blocks.cjs
 ```
 
 Skript automaticky:
+
 - Nájde všetky catch bloky
 - Identifikuje tie, ktoré potrebujú vylepšenie
 - Vytvorí backup pôvodných súborov

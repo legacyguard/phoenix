@@ -1,16 +1,24 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from "next/server";
 
-export function withSecurityHeaders(handler: (req: NextRequest, ...args: Array<Record<string, unknown>>) => Promise<NextResponse>) {
+export function withSecurityHeaders(
+  handler: (
+    req: NextRequest,
+    ...args: Array<Record<string, unknown>>
+  ) => Promise<NextResponse>,
+) {
   return async (req: NextRequest, ...args: Array<Record<string, unknown>>) => {
     const response = await handler(req, ...args);
-    
+
     // Add security headers
-    response.headers.set('X-Content-Type-Options', 'nosniff');
-    response.headers.set('X-Frame-Options', 'DENY');
-    response.headers.set('X-XSS-Protection', '1; mode=block');
-    response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
-    response.headers.set('Permissions-Policy', 'camera=(), microphone=(), geolocation=()');
-    
+    response.headers.set("X-Content-Type-Options", "nosniff");
+    response.headers.set("X-Frame-Options", "DENY");
+    response.headers.set("X-XSS-Protection", "1; mode=block");
+    response.headers.set("Referrer-Policy", "strict-origin-when-cross-origin");
+    response.headers.set(
+      "Permissions-Policy",
+      "camera=(), microphone=(), geolocation=()",
+    );
+
     // Content Security Policy
     const csp = [
       "default-src 'self'",
@@ -24,11 +32,11 @@ export function withSecurityHeaders(handler: (req: NextRequest, ...args: Array<R
       "base-uri 'self'",
       "form-action 'self'",
       "frame-ancestors 'none'",
-      "upgrade-insecure-requests"
-    ].join('; ');
-    
-    response.headers.set('Content-Security-Policy', csp);
-    
+      "upgrade-insecure-requests",
+    ].join("; ");
+
+    response.headers.set("Content-Security-Policy", csp);
+
     return response;
   };
 }

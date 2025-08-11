@@ -1,12 +1,18 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { useTranslation } from 'react-i18next';
-import { supabaseWithRetry } from '@/utils/supabaseWithRetry';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { ScrollArea } from '@/components/ui/scroll-area';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Alert, AlertDescription } from '@/components/ui/alert';
+import React, { useState, useEffect, useCallback } from "react";
+import { useTranslation } from "react-i18next";
+import { supabaseWithRetry } from "@/utils/supabaseWithRetry";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Alert, AlertDescription } from "@/components/ui/alert";
 import {
   Bell,
   AlertTriangle,
@@ -16,15 +22,15 @@ import {
   RotateCcw,
   Calendar,
   FileText,
-  BellOff
-} from 'lucide-react';
-import { format, formatDistanceToNow, addDays } from 'date-fns';
-import { toast } from 'sonner';
+  BellOff,
+} from "lucide-react";
+import { format, formatDistanceToNow, addDays } from "date-fns";
+import { toast } from "sonner";
 
 interface DocumentAlert {
   id: string;
   document_id: string;
-  alert_type: 'expiring_90' | 'expiring_30' | 'expiring_7' | 'expired';
+  alert_type: "expiring_90" | "expiring_30" | "expiring_7" | "expired";
   alert_date: string;
   is_read: boolean;
   is_dismissed: boolean;
@@ -48,21 +54,26 @@ interface AlertCenterProps {
 export const AlertCenter: React.FC<AlertCenterProps> = ({
   isOpen,
   onClose,
-  onAlertCountChange
+  onAlertCountChange,
 }) => {
-  const { t } = useTranslation('ui-common');
+  const { t } = useTranslation("ui-common");
   const [alerts, setAlerts] = useState<DocumentAlert[]>([]);
   const [loading, setLoading] = useState(true);
-  const [activeTab, setActiveTab] = useState<'active' | 'snoozed' | 'dismissed'>('active');
+  const [activeTab, setActiveTab] = useState<
+    "active" | "snoozed" | "dismissed"
+  >("active");
 
   const loadAlerts = useCallback(async () => {
     try {
-      const { data: { user } } = await supabaseWithRetry.auth.getUser();
+      const {
+        data: { user },
+      } = await supabaseWithRetry.auth.getUser();
       if (!user) return;
 
       let query = supabaseWithRetry
-        .from('alerts')
-        .select(`
+        .from("alerts")
+        .select(
+          `
           *,
           document:documents!inner(
             id,
@@ -71,53 +82,56 @@ export const AlertCenter: React.FC<AlertCenterProps> = ({
             renewal_date,
             metadata
           )
-        `)
-        .eq('user_id', user.id)
-        .order('alert_date', { ascending: true });
+        `,
+        )
+        .eq("user_id", user.id)
+        .order("alert_date", { ascending: true });
 
       // Filter based on active tab
-      if (activeTab === 'active') {
+      if (activeTab === "active") {
         query = query
-          .eq('is_dismissed', false)
-          .or('snooze_until.is.null,snooze_until.lte.now()');
-      } else if (activeTab === 'snoozed') {
+          .eq("is_dismissed", false)
+          .or("snooze_until.is.null,snooze_until.lte.now()");
+      } else if (activeTab === "snoozed") {
         query = query
-          .eq('is_dismissed', false)
-          .gt('snooze_until', new Date().toISOString());
-      } else if (activeTab === 'dismissed') {
-        query = query.eq('is_dismissed', true);
+          .eq("is_dismissed", false)
+          .gt("snooze_until", new Date().toISOString());
+      } else if (activeTab === "dismissed") {
+        query = query.eq("is_dismissed", true);
       }
 
       const { data, error } = await query;
 
       if (error) throw error;
 
-      const alertsWithDocumentData = data?.map(alert => ({
-        ...alert,
-        document: {
-          ...alert.document,
-          renewal_action: alert.document.metadata?.renewal_action
-        }
-      })) || [];
+      const alertsWithDocumentData =
+        data?.map((alert) => ({
+          ...alert,
+          document: {
+            ...alert.document,
+            renewal_action: alert.document.metadata?.renewal_action,
+          },
+        })) || [];
 
       setAlerts(alertsWithDocumentData);
 
       // Update unread count
       const unreadCount = alertsWithDocumentData.filter(
-        a => !a.is_read && !a.is_dismissed && (!a.snooze_until || new Date(a.snooze_until) <= new Date())
+        (a) =>
+          !a.is_read &&
+          !a.is_dismissed &&
+          (!a.snooze_until || new Date(a.snooze_until) <= new Date()),
       ).length;
       onAlertCountChange?.(unreadCount);
-
     } catch (error) {
-      console.error('[AlertCenter] Error loading alerts:', error);
-      toast.error(t('ui.errors.loadFailed'));
+      console.error("[AlertCenter] Error loading alerts:", error);
+      toast.error(t("common:ui.errors.loadFailed"));
     } finally {
       setLoading(false);
     }
   }, [activeTab, onAlertCountChange, t]);
 
   useEffect(() => {
-     
     if (isOpen) {
       loadAlerts();
     }
@@ -126,53 +140,55 @@ export const AlertCenter: React.FC<AlertCenterProps> = ({
   const markAsRead = async (alertId: string) => {
     try {
       const { error } = await supabaseWithRetry
-        .from('alerts')
+        .from("alerts")
         .update({ is_read: true })
-        .eq('id', alertId);
+        .eq("id", alertId);
 
       if (error) throw error;
 
-      setAlerts(prev => prev.map(alert =>
-        alert.id === alertId ? { ...alert, is_read: true } : alert
-      ));
+      setAlerts((prev) =>
+        prev.map((alert) =>
+          alert.id === alertId ? { ...alert, is_read: true } : alert,
+        ),
+      );
     } catch (error) {
-      console.error('[AlertCenter] Error marking as read:', error);
+      console.error("[AlertCenter] Error marking as read:", error);
     }
   };
 
   const dismissAlert = async (alertId: string) => {
     try {
       const { error } = await supabaseWithRetry
-        .from('alerts')
+        .from("alerts")
         .update({ is_dismissed: true })
-        .eq('id', alertId);
+        .eq("id", alertId);
 
       if (error) throw error;
 
-      toast.success(t('ui.messages.dismissed'));
+      toast.success(t("common:ui.messages.dismissed"));
       loadAlerts();
     } catch (error) {
-      console.error('[AlertCenter] Error dismissing alert:', error);
-      toast.error(t('ui.errors.dismissFailed'));
+      console.error("[AlertCenter] Error dismissing alert:", error);
+      toast.error(t("common:ui.errors.dismissFailed"));
     }
   };
 
   const snoozeAlert = async (alertId: string, days: number) => {
     try {
       const snoozeUntil = addDays(new Date(), days).toISOString();
-      
+
       const { error } = await supabaseWithRetry
-        .from('alerts')
+        .from("alerts")
         .update({ snooze_until: snoozeUntil })
-        .eq('id', alertId);
+        .eq("id", alertId);
 
       if (error) throw error;
 
-      toast.success(t('alerts.messages.snoozed', { days }));
+      toast.success(t("common:alerts.messages.snoozed", { days }));
       loadAlerts();
     } catch (error) {
-      console.error('[AlertCenter] Error snoozing alert:', error);
-      toast.error(t('ui.errors.snoozeFailed'));
+      console.error("[AlertCenter] Error snoozing alert:", error);
+      toast.error(t("common:ui.errors.snoozeFailed"));
     }
   };
 
@@ -181,71 +197,76 @@ export const AlertCenter: React.FC<AlertCenterProps> = ({
       // This would typically update the document's renewal date
       // For now, we'll just dismiss related alerts
       const { error } = await supabaseWithRetry
-        .from('alerts')
+        .from("alerts")
         .update({ is_dismissed: true })
-        .eq('document_id', documentId);
+        .eq("document_id", documentId);
 
       if (error) throw error;
 
-      toast.success(t('ui.messages.markedAsRenewed'));
+      toast.success(t("common:ui.messages.markedAsRenewed"));
       loadAlerts();
     } catch (error) {
-      console.error('[AlertCenter] Error marking as renewed:', error);
-      toast.error(t('ui.errors.renewFailed'));
+      console.error("[AlertCenter] Error marking as renewed:", error);
+      toast.error(t("common:ui.errors.renewFailed"));
     }
   };
 
   const getAlertIcon = (alertType: string) => {
     switch (alertType) {
-      case 'expired':
+      case "expired":
         return <AlertTriangle className="h-4 w-4 text-destructive" />;
-      case 'expiring_7':
-      case 'expiring_30':
+      case "expiring_7":
+      case "expiring_30":
         return <Clock className="h-4 w-4 text-warning" />;
-      case 'expiring_90':
+      case "expiring_90":
         return <Bell className="h-4 w-4 text-muted-foreground" />;
       default:
         return <Bell className="h-4 w-4" />;
     }
   };
 
-  const getAlertBadgeVariant = (alertType: string): "default" | "secondary" | "destructive" | "outline" => {
+  const getAlertBadgeVariant = (
+    alertType: string,
+  ): "default" | "secondary" | "destructive" | "outline" => {
     switch (alertType) {
-      case 'expired':
-        return 'destructive';
-      case 'expiring_7':
-      case 'expiring_30':
-        return 'default';
-      case 'expiring_90':
-        return 'secondary';
+      case "expired":
+        return "destructive";
+      case "expiring_7":
+      case "expiring_30":
+        return "default";
+      case "expiring_90":
+        return "secondary";
       default:
-        return 'outline';
+        return "outline";
     }
   };
 
   const getAlertMessage = (alert: DocumentAlert) => {
-    const daysUntil = Math.ceil((new Date(alert.alert_date).getTime() - new Date().getTime()) / (1000 * 60 * 60 * 24));
-    
+    const daysUntil = Math.ceil(
+      (new Date(alert.alert_date).getTime() - new Date().getTime()) /
+        (1000 * 60 * 60 * 24),
+    );
+
     switch (alert.alert_type) {
-      case 'expired':
-        return t('alerts.types.expired', { 
+      case "expired":
+        return t("common:alerts.types.expired", {
           documentName: alert.document.name,
-          daysAgo: Math.abs(daysUntil)
+          daysAgo: Math.abs(daysUntil),
         });
-      case 'expiring_7':
-        return t('alerts.types.expiring7', {
+      case "expiring_7":
+        return t("common:alerts.types.expiring7", {
           documentName: alert.document.name,
-          days: daysUntil
+          days: daysUntil,
         });
-      case 'expiring_30':
-        return t('alerts.types.expiring30', {
+      case "expiring_30":
+        return t("common:alerts.types.expiring30", {
           documentName: alert.document.name,
-          days: daysUntil
+          days: daysUntil,
         });
-      case 'expiring_90':
-        return t('alerts.types.expiring90', {
+      case "expiring_90":
+        return t("common:alerts.types.expiring90", {
           documentName: alert.document.name,
-          days: daysUntil
+          days: daysUntil,
         });
       default:
         return alert.document.name;
@@ -253,9 +274,9 @@ export const AlertCenter: React.FC<AlertCenterProps> = ({
   };
 
   const renderAlert = (alert: DocumentAlert) => (
-    <Card 
-      key={alert.id} 
-      className={`mb-3 ${!alert.is_read ? 'border-primary/50 bg-primary/5' : ''}`}
+    <Card
+      key={alert.id}
+      className={`mb-3 ${!alert.is_read ? "border-primary/50 bg-primary/5" : ""}`}
       onClick={() => !alert.is_read && markAsRead(alert.id)}
     >
       <CardContent className="pt-4">
@@ -266,11 +287,11 @@ export const AlertCenter: React.FC<AlertCenterProps> = ({
               <span className="font-medium">{getAlertMessage(alert)}</span>
               {!alert.is_read && (
                 <Badge variant="secondary" className="ml-2">
-                  {t('ui.unread')}
+                  {t("ui.unread")}
                 </Badge>
               )}
             </div>
-            
+
             <div className="flex items-center gap-4 text-sm text-muted-foreground">
               <span className="flex items-center gap-1">
                 <FileText className="h-3 w-3" />
@@ -278,28 +299,34 @@ export const AlertCenter: React.FC<AlertCenterProps> = ({
               </span>
               <span className="flex items-center gap-1">
                 <Calendar className="h-3 w-3" />
-                {t('alerts.expiresOn', { date: format(new Date(alert.alert_date), 'PPP') })}
+                {t("alerts.expiresOn", {
+                  date: format(new Date(alert.alert_date), "PPP"),
+                })}
               </span>
             </div>
 
             {alert.document.renewal_action && (
               <Alert className="mt-2">
                 <AlertDescription className="text-sm">
-                  <strong>{t('ui.renewalInstructions')}:</strong> {alert.document.renewal_action}
+                  <strong>{t("ui.renewalInstructions")}:</strong>{" "}
+                  {alert.document.renewal_action}
                 </AlertDescription>
               </Alert>
             )}
 
-            {alert.snooze_until && new Date(alert.snooze_until) > new Date() && (
-              <div className="flex items-center gap-1 text-sm text-muted-foreground">
-                <BellOff className="h-3 w-3" />
-                {t('alerts.snoozedUntil', { date: format(new Date(alert.snooze_until), 'PPP') })}
-              </div>
-            )}
+            {alert.snooze_until &&
+              new Date(alert.snooze_until) > new Date() && (
+                <div className="flex items-center gap-1 text-sm text-muted-foreground">
+                  <BellOff className="h-3 w-3" />
+                  {t("alerts.snoozedUntil", {
+                    date: format(new Date(alert.snooze_until), "PPP"),
+                  })}
+                </div>
+              )}
           </div>
 
           <Badge variant={getAlertBadgeVariant(alert.alert_type)}>
-            {t('ui.badges.${alert.alert_type}')}
+            {t("ui.badges.${alert.alert_type}")}
           </Badge>
         </div>
 
@@ -315,10 +342,11 @@ export const AlertCenter: React.FC<AlertCenterProps> = ({
                 }}
               >
                 <CheckCircle className="h-3 w-3 mr-1" />
-                {t('ui.markAsRenewed')}
+                {t("ui.markAsRenewed")}
               </Button>
-              
-              {!alert.snooze_until || new Date(alert.snooze_until) <= new Date() ? (
+
+              {!alert.snooze_until ||
+              new Date(alert.snooze_until) <= new Date() ? (
                 <>
                   <Button
                     size="sm"
@@ -329,9 +357,9 @@ export const AlertCenter: React.FC<AlertCenterProps> = ({
                     }}
                   >
                     <Clock className="h-3 w-3 mr-1" />
-                    {t('ui.snooze7Days')}
+                    {t("ui.snooze7Days")}
                   </Button>
-                  
+
                   <Button
                     size="sm"
                     variant="ghost"
@@ -341,7 +369,7 @@ export const AlertCenter: React.FC<AlertCenterProps> = ({
                     }}
                   >
                     <X className="h-3 w-3 mr-1" />
-                    {t('ui.dismiss')}
+                    {t("ui.dismiss")}
                   </Button>
                 </>
               ) : (
@@ -354,7 +382,7 @@ export const AlertCenter: React.FC<AlertCenterProps> = ({
                   }}
                 >
                   <RotateCcw className="h-3 w-3 mr-1" />
-                  {t('ui.unsnooze')}
+                  {t("ui.unsnooze")}
                 </Button>
               )}
             </>
@@ -375,33 +403,32 @@ export const AlertCenter: React.FC<AlertCenterProps> = ({
               <div>
                 <CardTitle className="flex items-center gap-2">
                   <Bell className="h-5 w-5" />
-                  {t('ui.title')}
+                  {t("ui.title")}
                 </CardTitle>
-                <CardDescription>
-                  {t('ui.description')}
-                </CardDescription>
+                <CardDescription>{t("ui.description")}</CardDescription>
               </div>
-              <Button
-                variant="ghost"
-                size="icon"
-                onClick={onClose}
-              >
+              <Button variant="ghost" size="icon" onClick={onClose}>
                 <X className="h-4 w-4" />
               </Button>
             </div>
           </CardHeader>
 
           <CardContent className="p-0">
-            <Tabs value={activeTab} onValueChange={(v) => setActiveTab(v as 'active' | 'snoozed' | 'dismissed')}>
+            <Tabs
+              value={activeTab}
+              onValueChange={(v) =>
+                setActiveTab(v as "active" | "snoozed" | "dismissed")
+              }
+            >
               <TabsList className="w-full rounded-none">
                 <TabsTrigger value="active" className="flex-1">
-                  {t('ui.tabs.active')}
+                  {t("ui.tabs.active")}
                 </TabsTrigger>
                 <TabsTrigger value="snoozed" className="flex-1">
-                  {t('ui.tabs.snoozed')}
+                  {t("ui.tabs.snoozed")}
                 </TabsTrigger>
                 <TabsTrigger value="dismissed" className="flex-1">
-                  {t('ui.tabs.dismissed')}
+                  {t("ui.tabs.dismissed")}
                 </TabsTrigger>
               </TabsList>
 
@@ -415,7 +442,7 @@ export const AlertCenter: React.FC<AlertCenterProps> = ({
                     <div className="text-center py-8">
                       <Bell className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
                       <p className="text-muted-foreground">
-                        {t('ui.noActiveAlerts')}
+                        {t("ui.noActiveAlerts")}
                       </p>
                     </div>
                   ) : (
@@ -434,7 +461,7 @@ export const AlertCenter: React.FC<AlertCenterProps> = ({
                     <div className="text-center py-8">
                       <BellOff className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
                       <p className="text-muted-foreground">
-                        {t('ui.noSnoozedAlerts')}
+                        {t("ui.noSnoozedAlerts")}
                       </p>
                     </div>
                   ) : (
@@ -453,7 +480,7 @@ export const AlertCenter: React.FC<AlertCenterProps> = ({
                     <div className="text-center py-8">
                       <CheckCircle className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
                       <p className="text-muted-foreground">
-                        {t('ui.noDismissedAlerts')}
+                        {t("ui.noDismissedAlerts")}
                       </p>
                     </div>
                   ) : (

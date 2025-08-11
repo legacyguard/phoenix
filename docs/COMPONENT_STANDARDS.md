@@ -3,6 +3,7 @@
 This document outlines the component standards and best practices for the Phoenix application, ensuring consistency, maintainability, and high-quality code across all components.
 
 ## Table of Contents
+
 1. [Component Structure](#component-structure)
 2. [TypeScript Standards](#typescript-standards)
 3. [Styling Guidelines](#styling-guidelines)
@@ -16,6 +17,7 @@ This document outlines the component standards and best practices for the Phoeni
 ## Component Structure
 
 ### File Organization
+
 ```
 src/
 ├── components/
@@ -30,23 +32,24 @@ src/
 ```
 
 ### Component Template
+
 ```tsx
 /**
  * Component Name
  * Brief description of what the component does
  */
 
-import React, { memo } from 'react';
-import { useTranslation } from 'react-i18next';
-import { cn } from '@/lib/utils';
-import { logger } from '@/utils/logger';
+import React, { memo } from "react";
+import { useTranslation } from "react-i18next";
+import { cn } from "@/lib/utils";
+import { logger } from "@/utils/logger";
 
 // Types
 interface ComponentNameProps {
   // Required props
   id: string;
   title: string;
-  
+
   // Optional props
   className?: string;
   disabled?: boolean;
@@ -54,50 +57,47 @@ interface ComponentNameProps {
 }
 
 // Component
-export const ComponentName: React.FC<ComponentNameProps> = memo(({
-  id,
-  title,
-  className,
-  disabled = false,
-  onAction,
-}) => {
-  const { t } = useTranslation('namespace');
-  
-  // Component logic here
-  
-  return (
-    <div className={cn('base-classes', className)}>
-      {/* Component JSX */}
-    </div>
-  );
-});
+export const ComponentName: React.FC<ComponentNameProps> = memo(
+  ({ id, title, className, disabled = false, onAction }) => {
+    const { t } = useTranslation("namespace");
 
-ComponentName.displayName = 'ComponentName';
+    // Component logic here
+
+    return (
+      <div className={cn("base-classes", className)}>{/* Component JSX */}</div>
+    );
+  },
+);
+
+ComponentName.displayName = "ComponentName";
 ```
 
 ## TypeScript Standards
 
 ### Type Safety
+
 - **No `any` types**: Always use specific types or generics
 - **Strict null checks**: Handle null/undefined cases explicitly
 - **Exhaustive checks**: Use TypeScript's exhaustiveness checking for switch statements
 
 ### Interface Naming
+
 ```tsx
 // Props interfaces
-interface ComponentNameProps { }
+interface ComponentNameProps {}
 
 // Data models
-interface UserData { }
+interface UserData {}
 
 // Service responses
-interface ApiResponse<T> { }
+interface ApiResponse<T> {}
 
 // Type aliases for unions/enums
-type Status = 'pending' | 'complete' | 'error';
+type Status = "pending" | "complete" | "error";
 ```
 
 ### Generic Components
+
 ```tsx
 interface ListProps<T> {
   items: T[];
@@ -108,10 +108,8 @@ interface ListProps<T> {
 export function List<T>({ items, renderItem, keyExtractor }: ListProps<T>) {
   return (
     <>
-      {items.map(item => (
-        <div key={keyExtractor(item)}>
-          {renderItem(item)}
-        </div>
+      {items.map((item) => (
+        <div key={keyExtractor(item)}>{renderItem(item)}</div>
       ))}
     </>
   );
@@ -121,6 +119,7 @@ export function List<T>({ items, renderItem, keyExtractor }: ListProps<T>) {
 ## Styling Guidelines
 
 ### Tailwind CSS Usage
+
 - Use Tailwind utility classes for styling
 - Create custom utility classes in `tailwind.config.js` for repeated patterns
 - Use `cn()` utility for conditional classes
@@ -139,6 +138,7 @@ export function List<T>({ items, renderItem, keyExtractor }: ListProps<T>) {
 ```
 
 ### Professional Theme Classes
+
 - Use professional theme classes for consistency:
   - `prof-primary-*` for primary colors
   - `prof-secondary-*` for secondary colors
@@ -149,6 +149,7 @@ export function List<T>({ items, renderItem, keyExtractor }: ListProps<T>) {
 ## State Management
 
 ### Local State
+
 ```tsx
 // Use hooks for local state
 const [isLoading, setIsLoading] = useState(false);
@@ -159,15 +160,18 @@ const { data, loading, error, refetch } = useAsyncOperation();
 ```
 
 ### Global State
+
 - Use Context API for cross-component state
 - Keep contexts focused and single-purpose
 - Provide custom hooks for context consumers
 
 ```tsx
 // Context provider
-export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [theme, setTheme] = useState<'light' | 'dark'>('light');
-  
+export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({
+  children,
+}) => {
+  const [theme, setTheme] = useState<"light" | "dark">("light");
+
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
       {children}
@@ -179,7 +183,7 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
 export const useTheme = () => {
   const context = useContext(ThemeContext);
   if (!context) {
-    throw new Error('useTheme must be used within ThemeProvider');
+    throw new Error("useTheme must be used within ThemeProvider");
   }
   return context;
 };
@@ -188,6 +192,7 @@ export const useTheme = () => {
 ## Error Handling
 
 ### Component Error Boundaries
+
 ```tsx
 // Wrap components in error boundaries
 <ErrorBoundary fallback={<ErrorFallback />}>
@@ -196,6 +201,7 @@ export const useTheme = () => {
 ```
 
 ### Async Operations
+
 ```tsx
 const handleSubmit = async () => {
   try {
@@ -203,9 +209,9 @@ const handleSubmit = async () => {
     const result = await apiCall();
     // Handle success
   } catch (error) {
-    logger.error('Operation failed', error, {
-      component: 'ComponentName',
-      action: 'submit'
+    logger.error("Operation failed", error, {
+      component: "ComponentName",
+      action: "submit",
     });
     setError(formatErrorMessage(error));
   } finally {
@@ -215,6 +221,7 @@ const handleSubmit = async () => {
 ```
 
 ### User-Friendly Error Messages
+
 - Always translate error messages
 - Provide actionable error information
 - Log technical details for debugging
@@ -222,26 +229,27 @@ const handleSubmit = async () => {
 ## Testing Standards
 
 ### Test Structure
+
 ```tsx
-describe('ComponentName', () => {
+describe("ComponentName", () => {
   // Setup
   beforeEach(() => {
     // Setup code
   });
-  
+
   // Group related tests
-  describe('Rendering', () => {
-    it('should render with required props', () => {
+  describe("Rendering", () => {
+    it("should render with required props", () => {
       // Test implementation
     });
-    
-    it('should handle edge cases', () => {
+
+    it("should handle edge cases", () => {
       // Test edge cases
     });
   });
-  
-  describe('User Interactions', () => {
-    it('should handle click events', () => {
+
+  describe("User Interactions", () => {
+    it("should handle click events", () => {
       // Test interactions
     });
   });
@@ -249,6 +257,7 @@ describe('ComponentName', () => {
 ```
 
 ### Testing Best Practices
+
 - Test user behavior, not implementation details
 - Use data-testid for querying elements
 - Mock external dependencies
@@ -257,6 +266,7 @@ describe('ComponentName', () => {
 ## Performance Optimization
 
 ### Component Optimization
+
 ```tsx
 // Memoize expensive computations
 const expensiveValue = useMemo(() => {
@@ -264,26 +274,31 @@ const expensiveValue = useMemo(() => {
 }, [data]);
 
 // Memoize callbacks
-const handleClick = useCallback((id: string) => {
-  // Handle click
-}, [dependency]);
+const handleClick = useCallback(
+  (id: string) => {
+    // Handle click
+  },
+  [dependency],
+);
 
 // Memoize components
 export const OptimizedComponent = memo(Component);
 ```
 
 ### Lazy Loading
+
 ```tsx
 // Lazy load heavy components
-const HeavyComponent = lazy(() => import('./HeavyComponent'));
+const HeavyComponent = lazy(() => import("./HeavyComponent"));
 
 // Use with Suspense
 <Suspense fallback={<LoadingSpinner />}>
   <HeavyComponent />
-</Suspense>
+</Suspense>;
 ```
 
 ### Image Optimization
+
 - Use appropriate image formats (WebP, AVIF)
 - Implement lazy loading for images
 - Provide responsive images with srcSet
@@ -291,6 +306,7 @@ const HeavyComponent = lazy(() => import('./HeavyComponent'));
 ## Accessibility
 
 ### ARIA Attributes
+
 ```tsx
 <button
   aria-label={t('button.label')}
@@ -302,11 +318,13 @@ const HeavyComponent = lazy(() => import('./HeavyComponent'));
 ```
 
 ### Keyboard Navigation
+
 - Ensure all interactive elements are keyboard accessible
 - Implement proper focus management
 - Provide keyboard shortcuts where appropriate
 
 ### Screen Reader Support
+
 - Use semantic HTML elements
 - Provide alternative text for images
 - Use ARIA live regions for dynamic content
@@ -314,10 +332,11 @@ const HeavyComponent = lazy(() => import('./HeavyComponent'));
 ## Documentation
 
 ### Component Documentation
+
 ```tsx
 /**
  * SecurityAreaCard - Displays security area information
- * 
+ *
  * @component
  * @example
  * <SecurityAreaCard
@@ -325,7 +344,7 @@ const HeavyComponent = lazy(() => import('./HeavyComponent'));
  *   onClick={handleAreaClick}
  *   disabled={false}
  * />
- * 
+ *
  * @param {SecurityAreaLike} area - The security area data
  * @param {Function} onClick - Callback when card is clicked
  * @param {boolean} disabled - Whether the card is disabled
@@ -333,13 +352,16 @@ const HeavyComponent = lazy(() => import('./HeavyComponent'));
 ```
 
 ### README Files
+
 Each feature directory should have a README.md explaining:
+
 - Purpose of the feature
 - Component hierarchy
 - Key dependencies
 - Testing approach
 
 ### Code Comments
+
 ```tsx
 // Use comments to explain "why", not "what"
 // Bad: Increment counter
@@ -366,6 +388,7 @@ retryCounter++;
 ## Common Patterns
 
 ### Loading States
+
 ```tsx
 if (isLoading) {
   return <LoadingSpinner />;
@@ -379,14 +402,16 @@ return <YourContent data={data} />;
 ```
 
 ### Form Handling
+
 ```tsx
 const { values, errors, handleChange, handleSubmit } = useFormValidation(
   initialValues,
-  validationRules
+  validationRules,
 );
 ```
 
 ### Data Fetching
+
 ```tsx
 const { data, loading, error, refetch } = useAsyncOperation();
 

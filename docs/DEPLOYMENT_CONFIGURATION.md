@@ -37,6 +37,7 @@ cd scripts
 ```
 
 This will generate:
+
 - Will backup encryption key
 - Document encryption key
 - Guardian data encryption key
@@ -55,6 +56,7 @@ cp .env.production.example .env.production
 Edit `.env.production` with your actual values:
 
 #### Supabase Configuration
+
 ```env
 VITE_SUPABASE_URL=https://your-project-id.supabase.co
 VITE_SUPABASE_ANON_KEY=your-supabase-anon-key
@@ -62,6 +64,7 @@ SUPABASE_SERVICE_ROLE_KEY=your-supabase-service-role-key
 ```
 
 #### Email Configuration
+
 ```env
 RESEND_API_KEY=re_your_resend_api_key
 RESEND_FROM_EMAIL=notifications@yourdomain.com
@@ -86,7 +89,7 @@ Create the following storage buckets in Supabase:
 1. **documents** - For user documents
    - Public: No
    - File size limit: 50MB
-   - Allowed MIME types: application/pdf, image/*
+   - Allowed MIME types: application/pdf, image/\*
 
 2. **wills** - For will documents
    - Public: No
@@ -96,7 +99,7 @@ Create the following storage buckets in Supabase:
 3. **avatars** - For user avatars
    - Public: Yes (with RLS)
    - File size limit: 5MB
-   - Allowed MIME types: image/*
+   - Allowed MIME types: image/\*
 
 4. **backups** - For encrypted backups
    - Public: No
@@ -150,6 +153,7 @@ supabase functions deploy send-emergency-notification
 ### 3. Email Templates
 
 Configure email templates for:
+
 - Guardian invitations
 - Emergency access notifications
 - Will completion confirmations
@@ -197,11 +201,15 @@ LEGAL_VALIDATION_WEBHOOK_SECRET=your-webhook-secret
 Implement webhook signature verification:
 
 ```typescript
-import crypto from 'crypto';
+import crypto from "crypto";
 
-function verifyWebhookSignature(payload: string, signature: string, secret: string): boolean {
-  const hmac = crypto.createHmac('sha256', secret);
-  const digest = hmac.update(payload).digest('hex');
+function verifyWebhookSignature(
+  payload: string,
+  signature: string,
+  secret: string,
+): boolean {
+  const hmac = crypto.createHmac("sha256", secret);
+  const digest = hmac.update(payload).digest("hex");
   return crypto.timingSafeEqual(Buffer.from(signature), Buffer.from(digest));
 }
 ```
@@ -226,15 +234,17 @@ LEGAL_VALIDATION_CZ_API_KEY=your-czech-api-key
 
 1. Create a Sentry project
 2. Configure DSN:
+
    ```env
    SENTRY_DSN=https://your-key@o123456.ingest.sentry.io/1234567
    SENTRY_ENVIRONMENT=production
    ```
 
 3. Initialize in your app:
+
    ```typescript
    import * as Sentry from "@sentry/react";
-   
+
    Sentry.init({
      dsn: process.env.SENTRY_DSN,
      environment: process.env.SENTRY_ENVIRONMENT,
@@ -245,6 +255,7 @@ LEGAL_VALIDATION_CZ_API_KEY=your-czech-api-key
 ### 2. Application Monitoring
 
 Configure monitoring for:
+
 - Error rates
 - Performance metrics
 - User sessions
@@ -254,6 +265,7 @@ Configure monitoring for:
 ### 3. Alerting Rules
 
 Set up alerts for:
+
 - [ ] Error rate > 1%
 - [ ] API response time > 2s
 - [ ] Failed login attempts > 10/minute
@@ -309,11 +321,12 @@ npm run build
 Vercel automatically injects environment variables during build and runtime:
 
 1. **Using Vercel CLI:**
+
    ```bash
    # Add environment variables
    vercel env add VITE_SUPABASE_URL production
    vercel env add VITE_SUPABASE_ANON_KEY production
-   
+
    # Pull environment variables locally
    vercel env pull .env.production.local
    ```
@@ -326,11 +339,14 @@ Vercel automatically injects environment variables during build and runtime:
 ### 3. Deployment to Vercel
 
 #### Automatic Deployment
+
 Vercel automatically deploys when you push to your connected Git repository:
+
 - Production: Pushes to `main` branch
 - Preview: Pushes to other branches
 
 #### Manual Deployment
+
 ```bash
 # Deploy to production
 vercel --prod
@@ -340,7 +356,9 @@ vercel
 ```
 
 #### Vercel Configuration
+
 The `vercel.json` file in the project root configures:
+
 - URL rewrites for single-page application
 - Cron jobs for scheduled tasks
 
@@ -394,6 +412,7 @@ The `vercel.json` file in the project root configures:
 ## Support
 
 For deployment support:
+
 - Technical Documentation: [docs.legacyguard.com](https://docs.legacyguard.com)
 - Support Email: support@legacyguard.com
 - Emergency Contact: +1-XXX-XXX-XXXX

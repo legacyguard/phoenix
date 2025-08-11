@@ -34,6 +34,7 @@ Use this checklist to verify the Respectful Onboarding and Professional Dashboar
   - Straight to dashboard
 
 Tips:
+
 - For unit/integration tests, wrap with MockClerkProvider or your Clerk mocks and FeatureFlagProvider
 - For E2E, use tests/e2e/setup/test-setup.ts helpers to inject mock Clerk state
 
@@ -57,4 +58,3 @@ Tips:
 - Feature Flags: docs/feature-flags.md
 - Migration Guide: docs/migration-guide-respectful-onboarding.md
 - Rollback Procedures: docs/rollback-procedures.md
-

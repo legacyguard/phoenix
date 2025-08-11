@@ -1,86 +1,112 @@
-import React, { useState, useEffect } from 'react';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Progress } from '@/components/ui/progress';
-import OverwhelmSupport from '@/components/emotional/OverwhelmSupport';
-import ProcrastinationSupport from '@/components/emotional/ProcrastinationSupport';
-import { Alert, AlertDescription } from '@/components/ui/alert';
-import { AlertCircle, CheckCircle2, FileText, Users, Briefcase, Eye } from 'lucide-react';
-import { useTranslation } from 'react-i18next';
-import { toast } from 'sonner';
-import { CountrySelector } from './CountrySelector';
-import { AssetAllocationWizard } from './AssetAllocationWizard';
-import { BeneficiariesForm } from './BeneficiariesForm';
-import { ExecutorSelector } from './ExecutorSelector';
-import { WillPreview } from './WillPreview';
-import type { WillContent, WillRequirements, Beneficiary, Executor } from '@/types/will';
+import React, { useState, useEffect } from "react";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Progress } from "@/components/ui/progress";
+import OverwhelmSupport from "@/components/emotional/OverwhelmSupport";
+import ProcrastinationSupport from "@/components/emotional/ProcrastinationSupport";
+import { Alert, AlertDescription } from "@/components/ui/alert";
+import {
+  AlertCircle,
+  CheckCircle2,
+  FileText,
+  Users,
+  Briefcase,
+  Eye,
+} from "lucide-react";
+import { useTranslation } from "react-i18next";
+import { toast } from "sonner";
+import { CountrySelector } from "./CountrySelector";
+import { AssetAllocationWizard } from "./AssetAllocationWizard";
+import { BeneficiariesForm } from "./BeneficiariesForm";
+import { ExecutorSelector } from "./ExecutorSelector";
+import { WillPreview } from "./WillPreview";
+import type {
+  WillContent,
+  WillRequirements,
+  Beneficiary,
+  Executor,
+} from "@/types/will";
 
 interface WillGeneratorProps {
   onComplete?: (willId: string) => void;
 }
 
 export function WillGenerator({ onComplete }: WillGeneratorProps) {
-  const { t } = useTranslation('wills');
+  const { t } = useTranslation("wills");
   const [currentStep, setCurrentStep] = useState(0);
-  const [countryCode, setCountryCode] = useState<string>('');
-  const [languageCode, setLanguageCode] = useState<string>('en');
-  const [requirements, setRequirements] = useState<WillRequirements | null>(null);
+  const [countryCode, setCountryCode] = useState<string>("");
+  const [languageCode, setLanguageCode] = useState<string>("en");
+  const [requirements, setRequirements] = useState<WillRequirements | null>(
+    null,
+  );
   const [willContent, setWillContent] = useState<Partial<WillContent>>({
     testator: {
-      name: '',
-      birthDate: '',
-      address: ''
+      name: "",
+      birthDate: "",
+      address: "",
     },
     beneficiaries: [],
-    createdDate: new Date().toISOString()
+    createdDate: new Date().toISOString(),
   });
-  const [validationErrors, setValidationErrors] = useState<Record<string, string>>({});
+  const [validationErrors, setValidationErrors] = useState<
+    Record<string, string>
+  >({});
 
   const steps = [
-{
-      id: 'personal',
-      title: 'How You Want to Take Care of Your Family',
+    {
+      id: "personal",
+      title: "How You Want to Take Care of Your Family",
       icon: FileText,
-      description: 'Enter details about yourself and what matters most to your family.'
+      description:
+        "Enter details about yourself and what matters most to your family.",
     },
     {
-      id: 'assets',
-      title: 'How You Want to Take Care of Your Family',
+      id: "assets",
+      title: "How You Want to Take Care of Your Family",
       icon: Users,
-      description: 'Think about what would help each person in your family most.'
+      description:
+        "Think about what would help each person in your family most.",
     },
     {
-      id: 'beneficiaries',
-      title: 'Who You Want to Help and Protect',
+      id: "beneficiaries",
+      title: "Who You Want to Help and Protect",
       icon: Users,
-      description: 'Designate who you want to help and protect.'
+      description: "Designate who you want to help and protect.",
     },
     {
-      id: 'guardians',
-      title: 'Who Would Love and Care for Your Children',
+      id: "guardians",
+      title: "Who Would Love and Care for Your Children",
       icon: Briefcase,
-      description: 'Choose who shares your values and would love your children.'
+      description:
+        "Choose who shares your values and would love your children.",
     },
     {
-      id: 'executor',
-      title: 'Who You Trust to Handle Everything',
+      id: "executor",
+      title: "Who You Trust to Handle Everything",
       icon: Briefcase,
-      description: 'Select someone who is organized and would handle this responsibility with care.'
+      description:
+        "Select someone who is organized and would handle this responsibility with care.",
     },
     {
-      id: 'preferences',
-      title: 'Your Values and Priorities',
+      id: "preferences",
+      title: "Your Values and Priorities",
       icon: Eye,
-      description: 'Set down any special wishes or values you want respected.'
+      description: "Set down any special wishes or values you want respected.",
     },
     {
-      id: 'review',
-      title: 'Legacy Impact Preview',
+      id: "review",
+      title: "Legacy Impact Preview",
       icon: Eye,
-      description: 'Review how your decisions will impact your loved ones.'
-    }
-  ]
+      description: "Review how your decisions will impact your loved ones.",
+    },
+  ];
 
   const calculateProgress = () => {
     return ((currentStep + 1) / steps.length) * 100;
@@ -92,55 +118,66 @@ export function WillGenerator({ onComplete }: WillGeneratorProps) {
     switch (currentStep) {
       case 0: // Country selection
         if (!countryCode) {
-          errors.country = t('validation.jurisdictionRequired');
+          errors.country = t("common:validation.jurisdictionRequired");
         }
         // Add UK jurisdiction validation
-        if (countryCode === 'GB' && !countryCode.includes('-')) {
-          errors.ukJurisdiction = t('validation.jurisdictionRequired');
+        if (countryCode === "GB" && !countryCode.includes("-")) {
+          errors.ukJurisdiction = t("common:validation.jurisdictionRequired");
         }
         if (!willContent.testator?.name) {
-          errors.name = t('validation.nameRequired');
+          errors.name = t("common:validation.nameRequired");
         }
         if (!willContent.testator?.birthDate) {
-          errors.birthDate = t('validation.dobRequired');
+          errors.birthDate = t("common:validation.dobRequired");
         }
         if (!willContent.testator?.address) {
-          errors.address = t('validation.addressRequired');
+          errors.address = t("common:validation.addressRequired");
         }
         break;
 
-      case 1: { // Asset allocation
-        const totalAllocation = willContent.beneficiaries?.reduce((sum, b) => {
-          const percentageAllocation = b.allocation
-            .filter(a => a.assetType === 'percentage')
-            .reduce((s, a) => s + (a.value || 0), 0);
-          return sum + percentageAllocation;
-        }, 0) || 0;
+      case 1: {
+        // Asset allocation
+        const totalAllocation =
+          willContent.beneficiaries?.reduce((sum, b) => {
+            const percentageAllocation = b.allocation
+              .filter((a) => a.assetType === "percentage")
+              .reduce((s, a) => s + (a.value || 0), 0);
+            return sum + percentageAllocation;
+          }, 0) || 0;
 
         if (totalAllocation !== 100 && totalAllocation > 0) {
-          errors.allocation = t('validation.allocationError');
+          errors.allocation = t("common:validation.allocationError");
         }
-        if (!willContent.beneficiaries || willContent.beneficiaries.length === 0) {
-          errors.beneficiaries = t('validation.beneficiaryRequired');
+        if (
+          !willContent.beneficiaries ||
+          willContent.beneficiaries.length === 0
+        ) {
+          errors.beneficiaries = t("common:validation.beneficiaryRequired");
         }
         break;
       }
 
-      case 2: { // Beneficiaries
+      case 2: {
+        // Beneficiaries
         willContent.beneficiaries?.forEach((b, index) => {
           if (!b.name) {
-            errors[`beneficiary_${index}_name`] = t('validation.nameRequired');
+            errors[`beneficiary_${index}_name`] = t(
+              "common:validation.nameRequired",
+            );
           }
           if (!b.relationship) {
-            errors[`beneficiary_${index}_relationship`] = t('validation.requiredField');
+            errors[`beneficiary_${index}_relationship`] = t(
+              "common:validation.requiredField",
+            );
           }
         });
         break;
       }
 
-      case 3: { // Executors
+      case 3: {
+        // Executors
         if (!willContent.executor?.name) {
-          errors.executor = t('validation.executorRequired');
+          errors.executor = t("common:validation.executorRequired");
         }
         break;
       }
@@ -156,7 +193,7 @@ export function WillGenerator({ onComplete }: WillGeneratorProps) {
         setCurrentStep(currentStep + 1);
       }
     } else {
-      toast.error(t('errors.validationFailed'));
+      toast.error(t("errors:errors.validationFailed"));
     }
   };
 
@@ -166,7 +203,10 @@ export function WillGenerator({ onComplete }: WillGeneratorProps) {
     }
   };
 
-  const handleCountrySelect = (code: string, reqs: WillRequirements & { language_code?: string }) => {
+  const handleCountrySelect = (
+    code: string,
+    reqs: WillRequirements & { language_code?: string },
+  ) => {
     setCountryCode(code);
     setRequirements(reqs);
     if (reqs.language_code) {
@@ -175,20 +215,20 @@ export function WillGenerator({ onComplete }: WillGeneratorProps) {
   };
 
   const handleBeneficiariesUpdate = (beneficiaries: Beneficiary[]) => {
-    setWillContent(prev => ({ ...prev, beneficiaries }));
+    setWillContent((prev) => ({ ...prev, beneficiaries }));
   };
 
   const handleExecutorUpdate = (executor: Executor) => {
-    setWillContent(prev => ({ ...prev, executor }));
+    setWillContent((prev) => ({ ...prev, executor }));
   };
 
-  const handleTestatorUpdate = (testator: WillContent['testator']) => {
-    setWillContent(prev => ({ ...prev, testator }));
+  const handleTestatorUpdate = (testator: WillContent["testator"]) => {
+    setWillContent((prev) => ({ ...prev, testator }));
   };
 
   const handleGenerateWill = async () => {
     if (!validateCurrentStep()) {
-      toast.error(t('errors.validationFailed'));
+      toast.error(t("errors:errors.validationFailed"));
       return;
     }
 
@@ -202,17 +242,15 @@ export function WillGenerator({ onComplete }: WillGeneratorProps) {
         // In an event handler, navigate or set state to display these components instead of returning JSX here.
         // For now, just notify the user empathetically.
         // TODO: Fix missing translation key - wills:gentle.addLovedOnes
-
         // toast.message(t('wills:gentle.nudgeStart'), { description: t('wills:gentle.addLovedOnes') });
-      } else if (!willContent.beneficiaries?.some(b => b.allocation)) {
+      } else if (!willContent.beneficiaries?.some((b) => b.allocation)) {
         // TODO: Fix missing translation key - wills:gentle.nudgeAllocate
-
         // toast.message(t('wills:gentle.nudgeAllocate'), { description: t('wills:gentle.helpAllocate') });
       }
-      toast.success(t('ui.willGenerated'));
-      onComplete?.('generated-will-id');
+      toast.success(t("common:ui.willGenerated"));
+      onComplete?.("generated-will-id");
     } catch (error) {
-      toast.error(t('errors.generationFailed'));
+      toast.error(t("errors:errors.generationFailed"));
     }
   };
 
@@ -220,15 +258,20 @@ export function WillGenerator({ onComplete }: WillGeneratorProps) {
     <div className="max-w-4xl mx-auto p-6 space-y-6">
       {/* Header */}
       <div className="text-center space-y-2">
-        <h1 className="text-3xl font-bold">{t('generator.title')}</h1>
-        <p className="text-muted-foreground">{t('generator.subtitle')}</p>
-        <p className="text-sm text-muted-foreground">{t('generator.description')}</p>
+        <h1 className="text-3xl font-bold">{t("generator.title")}</h1>
+        <p className="text-muted-foreground">{t("generator.subtitle")}</p>
+        <p className="text-sm text-muted-foreground">
+          {t("generator.description")}
+        </p>
       </div>
 
       {/* Progress Bar */}
       <div className="space-y-2">
         <div className="flex justify-between text-sm">
-          <span>{t('generator.step')} {currentStep + 1} {t('generator.of')} {steps.length}</span>
+          <span>
+            {t("generator.step")} {currentStep + 1} {t("generator.of")}{" "}
+            {steps.length}
+          </span>
           <span>{Math.round(calculateProgress())}%</span>
         </div>
         <Progress value={calculateProgress()} className="w-full" />
@@ -238,7 +281,9 @@ export function WillGenerator({ onComplete }: WillGeneratorProps) {
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
-            {React.createElement(steps[currentStep].icon, { className: 'h-5 w-5' })}
+            {React.createElement(steps[currentStep].icon, {
+              className: "h-5 w-5",
+            })}
             {steps[currentStep].title}
           </CardTitle>
           <CardDescription>{steps[currentStep].description}</CardDescription>
@@ -253,7 +298,10 @@ export function WillGenerator({ onComplete }: WillGeneratorProps) {
               {Object.keys(validationErrors).length > 0 && (
                 <div className="space-y-2">
                   {Object.entries(validationErrors).map(([key, error]) => (
-                    <div key={key} className="flex items-center gap-2 text-sm text-red-600">
+                    <div
+                      key={key}
+                      className="flex items-center gap-2 text-sm text-red-600"
+                    >
                       <AlertCircle className="h-4 w-4" />
                       <span>{error}</span>
                     </div>
@@ -281,8 +329,12 @@ export function WillGenerator({ onComplete }: WillGeneratorProps) {
 
           {currentStep === 3 && (
             <div className="space-y-4">
-              <h3 className="text-lg font-semibold">{t('form.guardianship.minorChildren')}</h3>
-              <p className="text-muted-foreground">{t('form.guardianship.guardianInstructions')}</p>
+              <h3 className="text-lg font-semibold">
+                {t("form.guardianship.minorChildren")}
+              </h3>
+              <p className="text-muted-foreground">
+                {t("form.guardianship.guardianInstructions")}
+              </p>
               {/* Guardian selection component would go here */}
             </div>
           )}
@@ -297,8 +349,12 @@ export function WillGenerator({ onComplete }: WillGeneratorProps) {
 
           {currentStep === 5 && (
             <div className="space-y-4">
-              <h3 className="text-lg font-semibold">{t('form.provisions.funeralWishes')}</h3>
-              <p className="text-muted-foreground">{t('form.provisions.specialInstructions')}</p>
+              <h3 className="text-lg font-semibold">
+                {t("form.provisions.funeralWishes")}
+              </h3>
+              <p className="text-muted-foreground">
+                {t("form.provisions.specialInstructions")}
+              </p>
               {/* Special provisions form would go here */}
             </div>
           )}
@@ -320,17 +376,15 @@ export function WillGenerator({ onComplete }: WillGeneratorProps) {
           onClick={handlePrevious}
           disabled={currentStep === 0}
         >
-          {t('actions.previous')}
+          {t("actions.previous")}
         </Button>
 
         <div className="flex gap-2">
           {currentStep < steps.length - 1 ? (
-            <Button onClick={handleNext}>
-              {t('actions.next')}
-            </Button>
+            <Button onClick={handleNext}>{t("actions.next")}</Button>
           ) : (
             <Button onClick={handleGenerateWill}>
-              {t('actions.generateWill')}
+              {t("actions.generateWill")}
             </Button>
           )}
         </div>
@@ -340,7 +394,8 @@ export function WillGenerator({ onComplete }: WillGeneratorProps) {
       <Alert>
         <AlertCircle className="h-4 w-4" />
         <AlertDescription>
-          {t('wills.disclaimer')} {t('wills.notLegalAdvice')} {t('wills.professionalGuidance')}
+          {t("wills.disclaimer")} {t("wills.notLegalAdvice")}{" "}
+          {t("wills.professionalGuidance")}
         </AlertDescription>
       </Alert>
     </div>

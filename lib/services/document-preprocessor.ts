@@ -1,15 +1,18 @@
-import type { PreprocessingOptions } from './ocr.types';
+import type { PreprocessingOptions } from "./ocr.types";
 
 export class DocumentPreprocessor {
   private canvas: HTMLCanvasElement;
   private ctx: CanvasRenderingContext2D;
 
   constructor() {
-    this.canvas = document.createElement('canvas');
-    this.ctx = this.canvas.getContext('2d')!;
+    this.canvas = document.createElement("canvas");
+    this.ctx = this.canvas.getContext("2d")!;
   }
 
-  async preprocessImage(file: File, options: PreprocessingOptions = {}): Promise<File> {
+  async preprocessImage(
+    file: File,
+    options: PreprocessingOptions = {},
+  ): Promise<File> {
     const {
       resize = true,
       maxWidth = 2400,
@@ -22,14 +25,14 @@ export class DocumentPreprocessor {
 
     // Load image
     const img = await this.loadImage(file);
-    
+
     // Calculate dimensions
     const { width, height } = this.calculateDimensions(
       img.width,
       img.height,
       maxWidth,
       maxHeight,
-      resize
+      resize,
     );
 
     // Set canvas size
@@ -60,7 +63,7 @@ export class DocumentPreprocessor {
 
     // Convert to blob and file
     const blob = await this.canvasToBlob(this.canvas);
-    return new File([blob], file.name, { type: 'image/png' });
+    return new File([blob], file.name, { type: "image/png" });
   }
 
   private async loadImage(file: File): Promise<HTMLImageElement> {
@@ -75,7 +78,7 @@ export class DocumentPreprocessor {
 
       img.onerror = () => {
         URL.revokeObjectURL(url);
-        reject(new Error('Failed to load image'));
+        reject(new Error("Failed to load image"));
       };
 
       img.src = url;
@@ -87,7 +90,7 @@ export class DocumentPreprocessor {
     originalHeight: number,
     maxWidth: number,
     maxHeight: number,
-    resize: boolean
+    resize: boolean,
   ): { width: number; height: number } {
     if (!resize) {
       return { width: originalWidth, height: originalHeight };
@@ -123,7 +126,7 @@ export class DocumentPreprocessor {
     for (let y = 1; y < height - 1; y++) {
       for (let x = 1; x < width - 1; x++) {
         const idx = (y * width + x) * 4;
-        
+
         // Get surrounding pixels
         const pixels = [];
         for (let dy = -1; dy <= 1; dy++) {
@@ -149,18 +152,20 @@ export class DocumentPreprocessor {
 
   private enhanceContrast(imageData: ImageData): ImageData {
     const data = imageData.data;
-    
+
     // Calculate histogram
     const histogram = new Array(256).fill(0);
     for (let i = 0; i < data.length; i += 4) {
-      const gray = Math.round(0.299 * data[i] + 0.587 * data[i + 1] + 0.114 * data[i + 2]);
+      const gray = Math.round(
+        0.299 * data[i] + 0.587 * data[i + 1] + 0.114 * data[i + 2],
+      );
       histogram[gray]++;
     }
 
     // Find min and max values (ignore outliers)
     const totalPixels = data.length / 4;
     const threshold = totalPixels * 0.01; // 1% threshold
-    
+
     let min = 0;
     let max = 255;
     let count = 0;
@@ -187,10 +192,12 @@ export class DocumentPreprocessor {
     // Apply contrast stretching
     const scale = 255 / (max - min);
     for (let i = 0; i < data.length; i += 4) {
-      const gray = Math.round(0.299 * data[i] + 0.587 * data[i + 1] + 0.114 * data[i + 2]);
+      const gray = Math.round(
+        0.299 * data[i] + 0.587 * data[i + 1] + 0.114 * data[i + 2],
+      );
       const adjusted = Math.round((gray - min) * scale);
       const value = Math.max(0, Math.min(255, adjusted));
-      
+
       data[i] = value;
       data[i + 1] = value;
       data[i + 2] = value;
@@ -201,7 +208,7 @@ export class DocumentPreprocessor {
 
   private binarize(imageData: ImageData): ImageData {
     const data = imageData.data;
-    
+
     // Calculate adaptive threshold using Otsu's method
     const histogram = new Array(256).fill(0);
     for (let i = 0; i < data.length; i += 4) {
@@ -253,13 +260,17 @@ export class DocumentPreprocessor {
 
   private canvasToBlob(canvas: HTMLCanvasElement): Promise<Blob> {
     return new Promise((resolve, reject) => {
-      canvas.toBlob((blob) => {
-        if (blob) {
-          resolve(blob);
-        } else {
-          reject(new Error('Failed to convert canvas to blob'));
-        }
-      }, 'image/png', 1.0);
+      canvas.toBlob(
+        (blob) => {
+          if (blob) {
+            resolve(blob);
+          } else {
+            reject(new Error("Failed to convert canvas to blob"));
+          }
+        },
+        "image/png",
+        1.0,
+      );
     });
   }
 
@@ -271,11 +282,14 @@ export class DocumentPreprocessor {
   }
 
   // Method to anonymize text for privacy
-  static anonymizeText(text: string, options: {
-    preserveStructure?: boolean;
-    preserveDates?: boolean;
-    preserveAmounts?: boolean;
-  } = {}): { text: string; removedCount: number } {
+  static anonymizeText(
+    text: string,
+    options: {
+      preserveStructure?: boolean;
+      preserveDates?: boolean;
+      preserveAmounts?: boolean;
+    } = {},
+  ): { text: string; removedCount: number } {
     let anonymized = text;
     let removedCount = 0;
 
@@ -289,26 +303,24 @@ export class DocumentPreprocessor {
     ];
 
     // Names (simplified - would need more sophisticated NER in production)
-    const namePatterns = [
-      /\b[A-Z][a-z]+\s+[A-Z][a-z]+\b/g,
-    ];
+    const namePatterns = [/\b[A-Z][a-z]+\s+[A-Z][a-z]+\b/g];
 
     // Replace personal patterns
-    personalPatterns.forEach(pattern => {
+    personalPatterns.forEach((pattern) => {
       const matches = anonymized.match(pattern);
       if (matches) {
         removedCount += matches.length;
-        anonymized = anonymized.replace(pattern, '[REMOVED]');
+        anonymized = anonymized.replace(pattern, "[REMOVED]");
       }
     });
 
     // Replace names (if not preserving structure)
     if (!options.preserveStructure) {
-      namePatterns.forEach(pattern => {
+      namePatterns.forEach((pattern) => {
         const matches = anonymized.match(pattern);
         if (matches) {
           removedCount += matches.length;
-          anonymized = anonymized.replace(pattern, '[NAME]');
+          anonymized = anonymized.replace(pattern, "[NAME]");
         }
       });
     }
@@ -319,7 +331,7 @@ export class DocumentPreprocessor {
       const matches = anonymized.match(datePattern);
       if (matches) {
         removedCount += matches.length;
-        anonymized = anonymized.replace(datePattern, '[DATE]');
+        anonymized = anonymized.replace(datePattern, "[DATE]");
       }
     }
 
@@ -329,7 +341,7 @@ export class DocumentPreprocessor {
       const matches = anonymized.match(amountPattern);
       if (matches) {
         removedCount += matches.length;
-        anonymized = anonymized.replace(amountPattern, '[AMOUNT]');
+        anonymized = anonymized.replace(amountPattern, "[AMOUNT]");
       }
     }
 

@@ -1,21 +1,31 @@
-import React, { useState, useEffect } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Progress } from '@/components/ui/progress';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { 
-  Heart, 
-  Users, 
-  MessageCircle, 
-  TrendingUp, 
+import React, { useState, useEffect } from "react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Progress } from "@/components/ui/progress";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import {
+  Heart,
+  Users,
+  MessageCircle,
+  TrendingUp,
   AlertCircle,
   CheckCircle,
   RefreshCw,
-  Download
-} from 'lucide-react';
-import { auditEmpatheticUX, UXAuditResult, AuditMetrics } from '@/testing/uxAudit';
-import { useUXMetrics } from '@/hooks/useUXMetrics';
+  Download,
+} from "lucide-react";
+import {
+  auditEmpatheticUX,
+  UXAuditResult,
+  AuditMetrics,
+} from "@/testing/uxAudit";
+import { useUXMetrics } from "@/hooks/useUXMetrics";
 
 interface MetricCardProps {
   title: string;
@@ -23,22 +33,22 @@ interface MetricCardProps {
   target: number;
   description: string;
   icon?: React.ReactNode;
-  trend?: 'up' | 'down' | 'stable';
+  trend?: "up" | "down" | "stable";
 }
 
-const MetricCard: React.FC<MetricCardProps> = ({ 
-  title, 
-  value, 
-  target, 
-  description, 
+const MetricCard: React.FC<MetricCardProps> = ({
+  title,
+  value,
+  target,
+  description,
   icon,
-  trend 
+  trend,
 }) => {
   const percentage = (value / target) * 100;
   const isOnTarget = value >= target;
-  
+
   return (
-    <Card className={`${isOnTarget ? 'border-green-200' : 'border-amber-200'}`}>
+    <Card className={`${isOnTarget ? "border-green-200" : "border-amber-200"}`}>
       <CardHeader className="pb-3">
         <div className="flex items-center justify-between">
           <CardTitle className="text-lg flex items-center gap-2">
@@ -46,8 +56,16 @@ const MetricCard: React.FC<MetricCardProps> = ({
             {title}
           </CardTitle>
           {trend && (
-            <Badge variant={trend === 'up' ? 'default' : trend === 'down' ? 'destructive' : 'secondary'}>
-              {trend === 'up' ? '↑' : trend === 'down' ? '↓' : '→'}
+            <Badge
+              variant={
+                trend === "up"
+                  ? "default"
+                  : trend === "down"
+                    ? "destructive"
+                    : "secondary"
+              }
+            >
+              {trend === "up" ? "↑" : trend === "down" ? "↓" : "→"}
             </Badge>
           )}
         </div>
@@ -57,11 +75,13 @@ const MetricCard: React.FC<MetricCardProps> = ({
         <div className="space-y-2">
           <div className="flex items-center justify-between">
             <span className="text-2xl font-bold">{value.toFixed(1)}</span>
-            <span className="text-sm text-muted-foreground">Target: {target}</span>
+            <span className="text-sm text-muted-foreground">
+              Target: {target}
+            </span>
           </div>
-          <Progress 
-            value={percentage} 
-            className={`h-2 ${isOnTarget ? 'bg-green-100' : 'bg-amber-100'}`}
+          <Progress
+            value={percentage}
+            className={`h-2 ${isOnTarget ? "bg-green-100" : "bg-amber-100"}`}
           />
           {!isOnTarget && (
             <p className="text-xs text-amber-600">
@@ -98,13 +118,18 @@ const UXMetricsDashboard: React.FC = () => {
 
   const calculateOverallScore = () => {
     if (auditResults.length === 0) return 0;
-    const totalScore = auditResults.reduce((sum, result) => sum + result.score, 0);
+    const totalScore = auditResults.reduce(
+      (sum, result) => sum + result.score,
+      0,
+    );
     return totalScore / auditResults.length;
   };
 
   const getCriticalIssues = () => {
-    return auditResults.flatMap(result => 
-      result.issues.filter(issue => issue.severity === 'critical' || issue.severity === 'high')
+    return auditResults.flatMap((result) =>
+      result.issues.filter(
+        (issue) => issue.severity === "critical" || issue.severity === "high",
+      ),
     );
   };
 
@@ -114,14 +139,16 @@ const UXMetricsDashboard: React.FC = () => {
       overallScore: calculateOverallScore(),
       metrics,
       auditResults,
-      criticalIssues: getCriticalIssues()
+      criticalIssues: getCriticalIssues(),
     };
-    
-    const blob = new Blob([JSON.stringify(report, null, 2)], { type: 'application/json' });
+
+    const blob = new Blob([JSON.stringify(report, null, 2)], {
+      type: "application/json",
+    });
     const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
+    const a = document.createElement("a");
     a.href = url;
-    a.download = `ux-audit-report-${new Date().toISOString().split('T')[0]}.json`;
+    a.download = `ux-audit-report-${new Date().toISOString().split("T")[0]}.json`;
     a.click();
   };
 
@@ -135,11 +162,7 @@ const UXMetricsDashboard: React.FC = () => {
           </p>
         </div>
         <div className="flex gap-2">
-          <Button 
-            onClick={runAudit} 
-            disabled={isAuditing}
-            variant="outline"
-          >
+          <Button onClick={runAudit} disabled={isAuditing} variant="outline">
             {isAuditing ? (
               <>
                 <RefreshCw className="mr-2 h-4 w-4 animate-spin" />
@@ -167,36 +190,36 @@ const UXMetricsDashboard: React.FC = () => {
 
       {/* Key Metrics Overview */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-        <MetricCard 
-          title="Empathy Score" 
-          value={metrics.empathyScore} 
+        <MetricCard
+          title="Empathy Score"
+          value={metrics.empathyScore}
           target={8.5}
           description="How empathetic the language feels to users"
           icon={<Heart className="h-4 w-4 text-rose-500" />}
           trend="up"
         />
-        
-        <MetricCard 
-          title="Family Focus Ratio" 
-          value={metrics.familyFocusRatio * 10} 
+
+        <MetricCard
+          title="Family Focus Ratio"
+          value={metrics.familyFocusRatio * 10}
           target={8}
           description="Ratio of family-focused vs feature-focused content"
           icon={<Users className="h-4 w-4 text-blue-500" />}
           trend="stable"
         />
-        
-        <MetricCard 
-          title="Emotional Support Coverage" 
-          value={metrics.emotionalSupportCoverage * 10} 
+
+        <MetricCard
+          title="Emotional Support Coverage"
+          value={metrics.emotionalSupportCoverage * 10}
           target={9.5}
           description="Percentage of difficult moments with emotional support"
           icon={<MessageCircle className="h-4 w-4 text-green-500" />}
           trend="up"
         />
-        
-        <MetricCard 
-          title="Assistant Consistency" 
-          value={metrics.assistantConsistency * 10} 
+
+        <MetricCard
+          title="Assistant Consistency"
+          value={metrics.assistantConsistency * 10}
           target={9}
           description="Consistency of caring assistant personality"
           icon={<TrendingUp className="h-4 w-4 text-purple-500" />}
@@ -234,9 +257,14 @@ const UXMetricsDashboard: React.FC = () => {
                 <CardHeader>
                   <div className="flex items-center justify-between">
                     <CardTitle className="text-lg">{result.category}</CardTitle>
-                    <Badge 
-                      variant={result.emotionalTone === 'empathetic' ? 'default' : 
-                               result.emotionalTone === 'warm' ? 'secondary' : 'outline'}
+                    <Badge
+                      variant={
+                        result.emotionalTone === "empathetic"
+                          ? "default"
+                          : result.emotionalTone === "warm"
+                            ? "secondary"
+                            : "outline"
+                      }
                     >
                       {result.emotionalTone}
                     </Badge>
@@ -244,7 +272,9 @@ const UXMetricsDashboard: React.FC = () => {
                 </CardHeader>
                 <CardContent>
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-2xl font-bold">{result.score.toFixed(1)}</span>
+                    <span className="text-2xl font-bold">
+                      {result.score.toFixed(1)}
+                    </span>
                     <span className="text-sm text-muted-foreground">
                       {result.issues.length} issues
                     </span>
@@ -300,10 +330,16 @@ const UXMetricsDashboard: React.FC = () => {
                   <ul className="space-y-2">
                     {result.issues.map((issue, issueIndex) => (
                       <li key={issueIndex} className="flex items-start gap-2">
-                        <Badge 
-                          variant={issue.severity === 'critical' ? 'destructive' :
-                                  issue.severity === 'high' ? 'default' :
-                                  issue.severity === 'medium' ? 'secondary' : 'outline'}
+                        <Badge
+                          variant={
+                            issue.severity === "critical"
+                              ? "destructive"
+                              : issue.severity === "high"
+                                ? "default"
+                                : issue.severity === "medium"
+                                  ? "secondary"
+                                  : "outline"
+                          }
                           className="mt-0.5"
                         >
                           {issue.severity}

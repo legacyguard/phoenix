@@ -1,4 +1,4 @@
-import { vi } from 'vitest';
+import { vi } from "vitest";
 
 // Mock Supabase client
 export const mockSupabaseClient = {
@@ -32,16 +32,18 @@ export const mockSupabaseClient = {
   })),
   storage: {
     from: vi.fn((bucket: string) => ({
-      upload: vi.fn().mockResolvedValue({ data: { path: 'test-path' }, error: null }),
-      download: vi.fn().mockResolvedValue({ 
-        data: new Blob(['test data']), 
-        error: null 
+      upload: vi
+        .fn()
+        .mockResolvedValue({ data: { path: "test-path" }, error: null }),
+      download: vi.fn().mockResolvedValue({
+        data: new Blob(["test data"]),
+        error: null,
       }),
       remove: vi.fn().mockResolvedValue({ data: null, error: null }),
       list: vi.fn().mockResolvedValue({ data: [], error: null }),
-      createSignedUrl: vi.fn().mockResolvedValue({ 
-        data: { signedUrl: 'https://example.com/signed-url' }, 
-        error: null 
+      createSignedUrl: vi.fn().mockResolvedValue({
+        data: { signedUrl: "https://example.com/signed-url" },
+        error: null,
       }),
     })),
   },
@@ -49,16 +51,16 @@ export const mockSupabaseClient = {
 };
 
 // Mock for @supabase/supabase-js
-vi.mock('@supabase/supabase-js', () => ({
+vi.mock("@supabase/supabase-js", () => ({
   createClient: vi.fn(() => mockSupabaseClient),
 }));
 
 // Mock for the local supabase client
-vi.mock('@/integrations/supabase/client', () => ({
+vi.mock("@/integrations/supabase/client", () => ({
   supabase: mockSupabaseClient,
 }));
 
 // Alternative import path
-vi.mock('@/lib/supabase', () => ({
+vi.mock("@/lib/supabase", () => ({
   supabase: mockSupabaseClient,
 }));

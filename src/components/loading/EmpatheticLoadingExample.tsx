@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import {
   EmpatheticLoader,
   EmpatheticTransition,
   EmpatheticButton,
   EmpatheticError,
   EmpatheticValidation,
-  ProgressStory
-} from './index';
-import type { ProgressStep } from './index';
+  ProgressStory,
+} from "./index";
+import type { ProgressStep } from "./index";
 
 /**
  * Example usage of all empathetic loading components
@@ -16,36 +16,36 @@ const EmpatheticLoadingExample: React.FC = () => {
   const [loading, setLoading] = useState(false);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [validation, setValidation] = useState<string>('');
+  const [validation, setValidation] = useState<string>("");
   const [showTransition, setShowTransition] = useState(false);
   const [progress, setProgress] = useState(0);
 
   const progressSteps: ProgressStep[] = [
     {
-      id: 'gather-info',
-      title: 'Gather Information',
-      description: 'Collecting your family details',
-      completed: true
-    },
-    {
-      id: 'analyze',
-      title: 'Analyze Needs',
-      description: 'Understanding your requirements',
+      id: "gather-info",
+      title: "Gather Information",
+      description: "Collecting your family details",
       completed: true,
-      current: true
     },
     {
-      id: 'create-plan',
-      title: 'Create Plan',
-      description: 'Building your protection plan',
-      completed: false
+      id: "analyze",
+      title: "Analyze Needs",
+      description: "Understanding your requirements",
+      completed: true,
+      current: true,
     },
     {
-      id: 'finalize',
-      title: 'Finalize',
-      description: 'Completing your setup',
-      completed: false
-    }
+      id: "create-plan",
+      title: "Create Plan",
+      description: "Building your protection plan",
+      completed: false,
+    },
+    {
+      id: "finalize",
+      title: "Finalize",
+      description: "Completing your setup",
+      completed: false,
+    },
   ];
 
   return (
@@ -154,7 +154,7 @@ const EmpatheticLoadingExample: React.FC = () => {
           />
         ) : (
           <button
-            onClick={() => setError('save_failed')}
+            onClick={() => setError("save_failed")}
             className="px-4 py-2 bg-red-500 text-white rounded"
           >
             Trigger Error
@@ -173,16 +173,16 @@ const EmpatheticLoadingExample: React.FC = () => {
               className="px-3 py-2 border rounded"
               onChange={(e) => {
                 if (e.target.value.length === 0) {
-                  setValidation('required');
+                  setValidation("required");
                 } else if (e.target.value.length < 3) {
-                  setValidation('too_short');
+                  setValidation("too_short");
                 } else {
-                  setValidation('success');
+                  setValidation("success");
                 }
               }}
             />
             <EmpatheticValidation
-              type={validation as 'required' | 'too_short' | 'success'}
+              type={validation as "required" | "too_short" | "success"}
               show={!!validation}
             />
           </div>
@@ -192,10 +192,7 @@ const EmpatheticLoadingExample: React.FC = () => {
       {/* Progress Story */}
       <section className="border rounded-lg p-6">
         <h3 className="text-lg font-semibold mb-4">Progress Story</h3>
-        <ProgressStory
-          steps={progressSteps}
-          orientation="horizontal"
-        />
+        <ProgressStory steps={progressSteps} orientation="horizontal" />
       </section>
     </div>
   );

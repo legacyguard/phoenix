@@ -3,84 +3,101 @@
  * Tests the complete non-gamified onboarding experience
  */
 
-import React from 'react';
-import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
-import { render, screen, fireEvent, waitFor } from '@testing-library/react';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { BrowserRouter } from 'react-router-dom';
-import '@testing-library/jest-dom';
+import React from "react";
+import { describe, it, expect, vi, beforeEach, afterEach } from "vitest";
+import { render, screen, fireEvent, waitFor } from "@testing-library/react";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { BrowserRouter } from "react-router-dom";
+import "@testing-library/jest-dom";
 
 // Mock Clerk hooks
-vi.mock('@clerk/clerk-react', () => ({
+vi.mock("@clerk/clerk-react", () => ({
   useUser: () => ({
-    user: { id: 'test-user-123', firstName: 'John', lastName: 'Doe' },
+    user: { id: "test-user-123", firstName: "John", lastName: "Doe" },
     isLoaded: true,
   }),
   useAuth: () => ({
     isSignedIn: true,
-    userId: 'test-user-123',
+    userId: "test-user-123",
   }),
   SignedIn: ({ children }: { children: React.ReactNode }) => <>{children}</>,
-  ClerkProvider: ({ children }: { children: React.ReactNode }) => <>{children}</>,
+  ClerkProvider: ({ children }: { children: React.ReactNode }) => (
+    <>{children}</>
+  ),
 }));
 
 // Mock Supabase
-vi.mock('@/integrations/supabase/client', () => ({
+vi.mock("@/integrations/supabase/client", () => ({
   supabase: {
     from: vi.fn(),
     auth: {
-      getUser: vi.fn().mockResolvedValue({ 
-        data: { user: { id: 'test-user-123' } }, 
-        error: null 
+      getUser: vi.fn().mockResolvedValue({
+        data: { user: { id: "test-user-123" } },
+        error: null,
       }),
     },
   },
 }));
 
 // Mock missing feature modules and hooks expected by tests
-vi.mock('@/features/onboarding/components/ProfessionalFlowManager', () => ({
-  ProfessionalFlowManager: () => (
-    <div>
-      <div>Welcome</div>
-      <button>Skip</button>
-    </div>
-  ),
-}), { virtual: true });
-
-vi.mock('@/features/dashboard/components/ProfessionalDashboard', () => ({
-  ProfessionalDashboard: () => (
-    <main>
-      <h1>Security Overview</h1>
-      <section aria-labelledby="next-steps">
-        <h2 id="next-steps">Next Steps</h2>
-        <p>Recommended actions are listed below.</p>
-        <ul>
-          <li>
-            <span>Estate Planning</span>
-            <span> - urgent</span>
-            <span> - 15 minutes</span>
-          </li>
-        </ul>
-        <div>
-          <button>Start Now</button>
-          <button>Skip</button>
-        </div>
-      </section>
-    </main>
-  ),
-}), { virtual: true });
-
-vi.mock('@/hooks/useProfessionalProgress', () => ({
-  useProfessionalProgress: () => ({
-    progress: { readinessLevel: { label: 'Moderate' }, metrics: { completedAreas: 3, totalAreas: 10, needsReviewCount: 1 } },
-    isLoading: false,
+vi.mock(
+  "@/features/onboarding/components/ProfessionalFlowManager",
+  () => ({
+    ProfessionalFlowManager: () => (
+      <div>
+        <div>Welcome</div>
+        <button>Skip</button>
+      </div>
+    ),
   }),
-}), { virtual: true });
+  { virtual: true },
+);
+
+vi.mock(
+  "@/features/dashboard/components/ProfessionalDashboard",
+  () => ({
+    ProfessionalDashboard: () => (
+      <main>
+        <h1>Security Overview</h1>
+        <section aria-labelledby="next-steps">
+          <h2 id="next-steps">Next Steps</h2>
+          <p>Recommended actions are listed below.</p>
+          <ul>
+            <li>
+              <span>Estate Planning</span>
+              <span> - urgent</span>
+              <span> - 15 minutes</span>
+            </li>
+          </ul>
+          <div>
+            <button>Start Now</button>
+            <button>Skip</button>
+          </div>
+        </section>
+      </main>
+    ),
+  }),
+  { virtual: true },
+);
+
+vi.mock(
+  "@/hooks/useProfessionalProgress",
+  () => ({
+    useProfessionalProgress: () => ({
+      progress: {
+        readinessLevel: { label: "Moderate" },
+        metrics: { completedAreas: 3, totalAreas: 10, needsReviewCount: 1 },
+      },
+      isLoading: false,
+    }),
+  }),
+  { virtual: true },
+);
 
 // Import components after mocks are set up
-import { ProfessionalFlowManager } from '@/features/onboarding/components/ProfessionalFlowManager';
-import { ProfessionalDashboard } from '@/features/dashboard/components/ProfessionalDashboard';
-import { useProfessionalProgress } from '@/hooks/useProfessionalProgress';
+import { ProfessionalFlowManager } from "@/features/onboarding/components/ProfessionalFlowManager";
+import { ProfessionalDashboard } from "@/features/dashboard/components/ProfessionalDashboard";
+import { useProfessionalProgress } from "@/hooks/useProfessionalProgress";
 
 // Create a wrapper component for testing
 const TestWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -93,14 +110,12 @@ const TestWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <BrowserRouter>
-        {children}
-      </BrowserRouter>
+      <BrowserRouter>{children}</BrowserRouter>
     </QueryClientProvider>
   );
 };
 
-describe('Professional Onboarding Integration', () => {
+describe("Professional Onboarding Integration", () => {
   beforeEach(() => {
     vi.clearAllMocks();
     localStorage.clear();
@@ -111,22 +126,25 @@ describe('Professional Onboarding Integration', () => {
     vi.restoreAllMocks();
   });
 
-  describe('Initial User Experience', () => {
-    it('should show welcome message for new users', async () => {
+  describe("Initial User Experience", () => {
+    it("should show welcome message for new users", async () => {
       // Mock new user with no data
-      const mockSupabase = await import('@/integrations/supabase/client');
-      vi.mocked(mockSupabase.supabase.from).mockImplementation(() => ({
-        select: vi.fn().mockReturnValue({
-          eq: vi.fn().mockReturnValue({
-            single: vi.fn().mockResolvedValue({ data: null, error: null }),
-          }),
-        }),
-      } as any));
+      const mockSupabase = await import("@/integrations/supabase/client");
+      vi.mocked(mockSupabase.supabase.from).mockImplementation(
+        () =>
+          ({
+            select: vi.fn().mockReturnValue({
+              eq: vi.fn().mockReturnValue({
+                single: vi.fn().mockResolvedValue({ data: null, error: null }),
+              }),
+            }),
+          }) as any,
+      );
 
       render(
         <TestWrapper>
           <ProfessionalFlowManager />
-        </TestWrapper>
+        </TestWrapper>,
       );
 
       await waitFor(() => {
@@ -139,11 +157,11 @@ describe('Professional Onboarding Integration', () => {
       expect(screen.queryByText(/achievement/i)).not.toBeInTheDocument();
     });
 
-    it('should display initial security areas without gamification', async () => {
+    it("should display initial security areas without gamification", async () => {
       render(
         <TestWrapper>
           <ProfessionalDashboard />
-        </TestWrapper>
+        </TestWrapper>,
       );
 
       await waitFor(() => {
@@ -158,43 +176,48 @@ describe('Professional Onboarding Integration', () => {
     });
   });
 
-  describe('Progress Tracking', () => {
-    it('should show readiness levels instead of game scores', async () => {
-      const mockSupabase = await import('@/integrations/supabase/client');
-      vi.mocked(mockSupabase.supabase.from).mockImplementation((table: string) => {
-        if (table === 'profiles') {
-          return {
-            select: vi.fn().mockReturnValue({
-              eq: vi.fn().mockReturnValue({
-                single: vi.fn().mockResolvedValue({
-                  data: {
-                    has_will: true,
-                    has_executor: true,
-                    has_beneficiaries: true,
-                  },
-                  error: null,
+  describe("Progress Tracking", () => {
+    it("should show readiness levels instead of game scores", async () => {
+      const mockSupabase = await import("@/integrations/supabase/client");
+      vi.mocked(mockSupabase.supabase.from).mockImplementation(
+        (table: string) => {
+          if (table === "profiles") {
+            return {
+              select: vi.fn().mockReturnValue({
+                eq: vi.fn().mockReturnValue({
+                  single: vi.fn().mockResolvedValue({
+                    data: {
+                      has_will: true,
+                      has_executor: true,
+                      has_beneficiaries: true,
+                    },
+                    error: null,
+                  }),
                 }),
               }),
+            } as any;
+          }
+          return {
+            select: vi.fn().mockReturnValue({
+              eq: vi.fn().mockResolvedValue({ data: [], error: null }),
             }),
           } as any;
-        }
-        return {
-          select: vi.fn().mockReturnValue({
-            eq: vi.fn().mockResolvedValue({ data: [], error: null }),
-          }),
-        } as any;
-      });
+        },
+      );
 
       // Create a test component that uses the hook
       const TestComponent = () => {
         const { progress, isLoading } = useProfessionalProgress();
-        
+
         if (isLoading) return <div>Loading...</div>;
-        
+
         return (
           <div>
             <div>Readiness: {progress?.readinessLevel.label}</div>
-            <div>Areas Complete: {progress?.metrics.completedAreas}/{progress?.metrics.totalAreas}</div>
+            <div>
+              Areas Complete: {progress?.metrics.completedAreas}/
+              {progress?.metrics.totalAreas}
+            </div>
           </div>
         );
       };
@@ -202,7 +225,7 @@ describe('Professional Onboarding Integration', () => {
       render(
         <TestWrapper>
           <TestComponent />
-        </TestWrapper>
+        </TestWrapper>,
       );
 
       await waitFor(() => {
@@ -212,38 +235,40 @@ describe('Professional Onboarding Integration', () => {
       // Should show professional readiness levels
       expect(screen.getByText(/Readiness:/i)).toBeInTheDocument();
       expect(screen.getByText(/Areas Complete:/i)).toBeInTheDocument();
-      
+
       // No game elements
       expect(screen.queryByText(/Score:/i)).not.toBeInTheDocument();
       expect(screen.queryByText(/Level \d+/i)).not.toBeInTheDocument();
     });
 
-    it('should prioritize urgent actions without pressure', async () => {
-      const mockSupabase = await import('@/integrations/supabase/client');
-      vi.mocked(mockSupabase.supabase.from).mockImplementation((table: string) => {
-        if (table === 'profiles') {
-          return {
-            select: vi.fn().mockReturnValue({
-              eq: vi.fn().mockReturnValue({
-                single: vi.fn().mockResolvedValue({
-                  data: { has_will: false }, // No will = urgent
-                  error: null,
+    it("should prioritize urgent actions without pressure", async () => {
+      const mockSupabase = await import("@/integrations/supabase/client");
+      vi.mocked(mockSupabase.supabase.from).mockImplementation(
+        (table: string) => {
+          if (table === "profiles") {
+            return {
+              select: vi.fn().mockReturnValue({
+                eq: vi.fn().mockReturnValue({
+                  single: vi.fn().mockResolvedValue({
+                    data: { has_will: false }, // No will = urgent
+                    error: null,
+                  }),
                 }),
               }),
+            } as any;
+          }
+          return {
+            select: vi.fn().mockReturnValue({
+              eq: vi.fn().mockResolvedValue({ data: [], error: null }),
             }),
           } as any;
-        }
-        return {
-          select: vi.fn().mockReturnValue({
-            eq: vi.fn().mockResolvedValue({ data: [], error: null }),
-          }),
-        } as any;
-      });
+        },
+      );
 
       render(
         <TestWrapper>
           <ProfessionalDashboard />
-        </TestWrapper>
+        </TestWrapper>,
       );
 
       await waitFor(() => {
@@ -253,7 +278,7 @@ describe('Professional Onboarding Integration', () => {
 
       // Professional urgency indicators
       expect(screen.queryByText(/urgent/i)).toBeInTheDocument();
-      
+
       // No pressure tactics
       expect(screen.queryByText(/hurry/i)).not.toBeInTheDocument();
       expect(screen.queryByText(/limited time/i)).not.toBeInTheDocument();
@@ -261,43 +286,45 @@ describe('Professional Onboarding Integration', () => {
     });
   });
 
-  describe('User Actions', () => {
-    it('should handle area completion without celebration animations', async () => {
-      const mockSupabase = await import('@/integrations/supabase/client');
+  describe("User Actions", () => {
+    it("should handle area completion without celebration animations", async () => {
+      const mockSupabase = await import("@/integrations/supabase/client");
       let hasWill = false;
 
-      vi.mocked(mockSupabase.supabase.from).mockImplementation((table: string) => {
-        if (table === 'profiles') {
-          return {
-            select: vi.fn().mockReturnValue({
-              eq: vi.fn().mockReturnValue({
-                single: vi.fn().mockResolvedValue({
-                  data: { has_will: hasWill },
-                  error: null,
+      vi.mocked(mockSupabase.supabase.from).mockImplementation(
+        (table: string) => {
+          if (table === "profiles") {
+            return {
+              select: vi.fn().mockReturnValue({
+                eq: vi.fn().mockReturnValue({
+                  single: vi.fn().mockResolvedValue({
+                    data: { has_will: hasWill },
+                    error: null,
+                  }),
                 }),
               }),
-            }),
-            update: vi.fn().mockImplementation((data) => {
-              hasWill = data.has_will;
-              return {
-                eq: vi.fn().mockResolvedValue({
-                  data: { has_will: true },
-                  error: null,
-                }),
-              };
+              update: vi.fn().mockImplementation((data) => {
+                hasWill = data.has_will;
+                return {
+                  eq: vi.fn().mockResolvedValue({
+                    data: { has_will: true },
+                    error: null,
+                  }),
+                };
+              }),
+            } as any;
+          }
+          return {
+            select: vi.fn().mockReturnValue({
+              eq: vi.fn().mockResolvedValue({ data: [], error: null }),
             }),
           } as any;
-        }
-        return {
-          select: vi.fn().mockReturnValue({
-            eq: vi.fn().mockResolvedValue({ data: [], error: null }),
-          }),
-        } as any;
-      });
+        },
+      );
 
       const TestComponent = () => {
         const [completed, setCompleted] = React.useState(false);
-        
+
         const handleComplete = () => {
           setCompleted(true);
           // Simulate completing an area
@@ -320,28 +347,30 @@ describe('Professional Onboarding Integration', () => {
       render(
         <TestWrapper>
           <TestComponent />
-        </TestWrapper>
+        </TestWrapper>,
       );
 
-      const button = screen.getByText('Complete Estate Planning');
+      const button = screen.getByText("Complete Estate Planning");
       fireEvent.click(button);
 
       await waitFor(() => {
-        expect(screen.getByText('✓ Complete')).toBeInTheDocument();
+        expect(screen.getByText("✓ Complete")).toBeInTheDocument();
         expect(screen.getByText(/secured/i)).toBeInTheDocument();
       });
 
       // No gamification celebrations
       expect(screen.queryByText(/congratulations/i)).not.toBeInTheDocument();
-      expect(screen.queryByText(/achievement unlocked/i)).not.toBeInTheDocument();
+      expect(
+        screen.queryByText(/achievement unlocked/i),
+      ).not.toBeInTheDocument();
       expect(screen.queryByText(/\+\d+ points/i)).not.toBeInTheDocument();
     });
 
-    it('should show time estimates instead of points', async () => {
+    it("should show time estimates instead of points", async () => {
       render(
         <TestWrapper>
           <ProfessionalDashboard />
-        </TestWrapper>
+        </TestWrapper>,
       );
 
       await waitFor(() => {
@@ -356,12 +385,12 @@ describe('Professional Onboarding Integration', () => {
     });
   });
 
-  describe('Navigation and Flow', () => {
-    it('should allow skipping non-essential steps', async () => {
+  describe("Navigation and Flow", () => {
+    it("should allow skipping non-essential steps", async () => {
       render(
         <TestWrapper>
           <ProfessionalFlowManager />
-        </TestWrapper>
+        </TestWrapper>,
       );
 
       await waitFor(() => {
@@ -371,11 +400,11 @@ describe('Professional Onboarding Integration', () => {
       });
     });
 
-    it('should provide clear next steps without pressure', async () => {
+    it("should provide clear next steps without pressure", async () => {
       render(
         <TestWrapper>
           <ProfessionalDashboard />
-        </TestWrapper>
+        </TestWrapper>,
       );
 
       await waitFor(() => {
@@ -385,46 +414,52 @@ describe('Professional Onboarding Integration', () => {
 
       // Professional language
       expect(screen.queryByText(/recommended/i)).toBeInTheDocument();
-      
+
       // No pressure language
       expect(screen.queryByText(/must complete/i)).not.toBeInTheDocument();
-      expect(screen.queryByText(/required immediately/i)).not.toBeInTheDocument();
+      expect(
+        screen.queryByText(/required immediately/i),
+      ).not.toBeInTheDocument();
     });
   });
 
-  describe('Review and Maintenance', () => {
-    it('should remind about reviews without nagging', async () => {
+  describe("Review and Maintenance", () => {
+    it("should remind about reviews without nagging", async () => {
       const oneYearAgo = new Date();
       oneYearAgo.setFullYear(oneYearAgo.getFullYear() - 1);
       oneYearAgo.setDate(oneYearAgo.getDate() - 1);
 
-      const mockSupabase = await import('@/integrations/supabase/client');
-      vi.mocked(mockSupabase.supabase.from).mockImplementation((table: string) => {
-        if (table === 'documents') {
+      const mockSupabase = await import("@/integrations/supabase/client");
+      vi.mocked(mockSupabase.supabase.from).mockImplementation(
+        (table: string) => {
+          if (table === "documents") {
+            return {
+              select: vi.fn().mockReturnValue({
+                eq: vi.fn().mockResolvedValue({
+                  data: [
+                    {
+                      category: "identity",
+                      created_at: oneYearAgo.toISOString(),
+                      updated_at: oneYearAgo.toISOString(),
+                    },
+                  ],
+                  error: null,
+                }),
+              }),
+            } as any;
+          }
           return {
             select: vi.fn().mockReturnValue({
-              eq: vi.fn().mockResolvedValue({
-                data: [{
-                  category: 'identity',
-                  created_at: oneYearAgo.toISOString(),
-                  updated_at: oneYearAgo.toISOString(),
-                }],
-                error: null,
-              }),
+              eq: vi.fn().mockResolvedValue({ data: [], error: null }),
             }),
           } as any;
-        }
-        return {
-          select: vi.fn().mockReturnValue({
-            eq: vi.fn().mockResolvedValue({ data: [], error: null }),
-          }),
-        } as any;
-      });
+        },
+      );
 
       const TestComponent = () => {
         const { progress } = useProfessionalProgress();
         const needsReview = progress?.metrics.needsReviewCount || 0;
-        
+
         return (
           <div>
             {needsReview > 0 && (
@@ -440,7 +475,7 @@ describe('Professional Onboarding Integration', () => {
       render(
         <TestWrapper>
           <TestComponent />
-        </TestWrapper>
+        </TestWrapper>,
       );
 
       await waitFor(() => {
@@ -449,7 +484,7 @@ describe('Professional Onboarding Integration', () => {
 
       // Professional reminder language
       expect(screen.getByText(/may need updating/i)).toBeInTheDocument();
-      
+
       // No nagging
       expect(screen.queryByText(/overdue/i)).not.toBeInTheDocument();
       expect(screen.queryByText(/expired/i)).not.toBeInTheDocument();
@@ -457,35 +492,35 @@ describe('Professional Onboarding Integration', () => {
     });
   });
 
-  describe('Accessibility', () => {
-    it('should have proper ARIA labels and roles', async () => {
+  describe("Accessibility", () => {
+    it("should have proper ARIA labels and roles", async () => {
       render(
         <TestWrapper>
           <ProfessionalDashboard />
-        </TestWrapper>
+        </TestWrapper>,
       );
 
       await waitFor(() => {
         // Check for proper semantic HTML
-        expect(screen.getByRole('main')).toBeInTheDocument();
+        expect(screen.getByRole("main")).toBeInTheDocument();
       });
 
       // Check for headings hierarchy
-      const headings = screen.getAllByRole('heading');
+      const headings = screen.getAllByRole("heading");
       expect(headings.length).toBeGreaterThan(0);
     });
 
-    it('should be keyboard navigable', async () => {
+    it("should be keyboard navigable", async () => {
       render(
         <TestWrapper>
           <ProfessionalDashboard />
-        </TestWrapper>
+        </TestWrapper>,
       );
 
       await waitFor(() => {
-        const buttons = screen.getAllByRole('button');
-        buttons.forEach(button => {
-          expect(button).toHaveProperty('tabIndex');
+        const buttons = screen.getAllByRole("button");
+        buttons.forEach((button) => {
+          expect(button).toHaveProperty("tabIndex");
         });
       });
     });

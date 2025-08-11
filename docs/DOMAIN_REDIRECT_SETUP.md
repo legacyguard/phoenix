@@ -25,46 +25,46 @@ VITE_IS_PRODUCTION=false
 
 The application supports the following country-to-domain mappings:
 
-| Country | Domain |
-|---------|--------|
-| Germany | legacyguard.eu |
-| France | legacyguard.fr |
-| Spain | legacyguard.es |
-| Italy | legacyguard.it |
-| Netherlands | legacyguard.nl |
-| Belgium | legacyguard.be |
-| Luxembourg | legacyguard.lu |
-| Switzerland | legacyguard.ch |
-| Liechtenstein | legacyguard.li |
-| Austria | legacyguard.at |
-| United Kingdom | legacyguard.uk |
-| Denmark | legacyguard.dk |
-| Sweden | legacyguard.se |
-| Finland | legacyguard.fi |
-| Czech Republic | legacyguard.cz |
-| Slovakia | legacyguard.sk |
-| Poland | legacyguard.pl |
-| Hungary | legacyguard.hu |
-| Slovenia | legacyguard.si |
-| Estonia | legacyguard.ee |
-| Latvia | legacyguard.lv |
-| Lithuania | legacyguard.lt |
-| Portugal | legacyguard.pt |
-| Greece | legacyguard.gr |
-| Malta | legacyguard.mt |
-| Cyprus | legacyguard.cy |
-| Ireland | legacyguard.ie |
-| Norway | legacyguard.no |
-| Iceland | legacyguard.is |
-| Romania | legacyguard.ro |
-| Bulgaria | legacyguard.bg |
-| Croatia | legacyguard.hr |
-| Serbia | legacyguard.rs |
-| Albania | legacyguard.al |
-| North Macedonia | legacyguard.mk |
-| Montenegro | legacyguard.me |
-| Moldova | legacyguard.md |
-| Ukraine | legacyguard.ua |
+| Country                | Domain         |
+| ---------------------- | -------------- |
+| Germany                | legacyguard.eu |
+| France                 | legacyguard.fr |
+| Spain                  | legacyguard.es |
+| Italy                  | legacyguard.it |
+| Netherlands            | legacyguard.nl |
+| Belgium                | legacyguard.be |
+| Luxembourg             | legacyguard.lu |
+| Switzerland            | legacyguard.ch |
+| Liechtenstein          | legacyguard.li |
+| Austria                | legacyguard.at |
+| United Kingdom         | legacyguard.uk |
+| Denmark                | legacyguard.dk |
+| Sweden                 | legacyguard.se |
+| Finland                | legacyguard.fi |
+| Czech Republic         | legacyguard.cz |
+| Slovakia               | legacyguard.sk |
+| Poland                 | legacyguard.pl |
+| Hungary                | legacyguard.hu |
+| Slovenia               | legacyguard.si |
+| Estonia                | legacyguard.ee |
+| Latvia                 | legacyguard.lv |
+| Lithuania              | legacyguard.lt |
+| Portugal               | legacyguard.pt |
+| Greece                 | legacyguard.gr |
+| Malta                  | legacyguard.mt |
+| Cyprus                 | legacyguard.cy |
+| Ireland                | legacyguard.ie |
+| Norway                 | legacyguard.no |
+| Iceland                | legacyguard.is |
+| Romania                | legacyguard.ro |
+| Bulgaria               | legacyguard.bg |
+| Croatia                | legacyguard.hr |
+| Serbia                 | legacyguard.rs |
+| Albania                | legacyguard.al |
+| North Macedonia        | legacyguard.mk |
+| Montenegro             | legacyguard.me |
+| Moldova                | legacyguard.md |
+| Ukraine                | legacyguard.ua |
 | Bosnia and Herzegovina | legacyguard.ba |
 
 ## How It Works
@@ -72,11 +72,13 @@ The application supports the following country-to-domain mappings:
 ### Production Mode (`VITE_IS_PRODUCTION=true`)
 
 When a user:
+
 - Registers with a country selection
 - Logs in and has a country preference
 - Manually selects a country from the country/language modal
 
 The application will:
+
 1. Determine the appropriate domain based on the country
 2. Preserve the current path and query parameters
 3. Preserve session tokens if available
@@ -87,6 +89,7 @@ The application will:
 In non-production environments, instead of redirecting, the application will:
 
 1. Show a toast notification with the message:
+
    ```
    V produkci by jste byli přesměrováni na: https://[target-domain]
    ```
@@ -103,19 +106,19 @@ In non-production environments, instead of redirecting, the application will:
 The domain redirect functionality is centralized in the `domainRedirectService`:
 
 ```typescript
-import { domainRedirectService } from '@/utils/domainRedirect';
+import { domainRedirectService } from "@/utils/domainRedirect";
 
 // Redirect to a country-specific domain
-domainRedirectService.redirectToDomain('CZ', {
+domainRedirectService.redirectToDomain("CZ", {
   preserveSession: true,
-  preservePath: true
+  preservePath: true,
 });
 
 // Check if current domain matches expected domain
-const isCorrect = domainRedirectService.isCorrectDomain('CZ');
+const isCorrect = domainRedirectService.isCorrectDomain("CZ");
 
 // Get target domain for a country
-const domain = domainRedirectService.getTargetDomain('CZ');
+const domain = domainRedirectService.getTargetDomain("CZ");
 ```
 
 ## Testing

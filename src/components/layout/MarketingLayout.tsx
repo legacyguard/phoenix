@@ -1,19 +1,21 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Shield } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { ThemeToggle } from '@/components/common/ThemeToggle';
-import { CountrySelector } from '@/components/common/CountrySelector';
-import { LanguageSelector } from '@/components/common/LanguageSelector';
-import { useTranslation } from 'react-i18next';
-import PublicFooter from '@/components/common/PublicFooter';
+import React from "react";
+import { Link } from "react-router-dom";
+import { Shield } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "@/components/common/ThemeToggle";
+import { CountrySelector } from "@/components/common/CountrySelector";
+import { LanguageSelector } from "@/components/common/LanguageSelector";
+import { useTranslation } from "react-i18next";
+import PublicFooter from "@/components/common/PublicFooter";
 
 interface MarketingLayoutProps {
   children: React.ReactNode;
 }
 
-export const MarketingLayout: React.FC<MarketingLayoutProps> = ({ children }) => {
-  const { t } = useTranslation('ui-common');
+export const MarketingLayout: React.FC<MarketingLayoutProps> = ({
+  children,
+}) => {
+  const { t } = useTranslation("ui-common");
 
   return (
     <div className="min-h-screen bg-background">
@@ -24,11 +26,11 @@ export const MarketingLayout: React.FC<MarketingLayoutProps> = ({ children }) =>
             {/* Logo */}
             <Link
               to="/"
-              className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
-
+              className="flex items-center space-x-2 hover:opacity-80 transition-opacity"
+            >
               <Shield className="h-8 w-8 text-primary" />
               <span className="text-xl font-bold text-primary">
-                {t('name')}
+                {t("name")}
               </span>
             </Link>
 
@@ -37,17 +39,21 @@ export const MarketingLayout: React.FC<MarketingLayoutProps> = ({ children }) =>
               {/* Country & Language Selector */}
               <CountrySelector />
               <LanguageSelector />
-              
+
               {/* Theme Toggle */}
               <ThemeToggle />
 
               {/* Auth Buttons */}
               <div className="flex items-center space-x-2">
                 <Button variant="ghost" asChild>
-                  <Link to={t("layout.marketingLayout.login_1")}>{t('auth.loginButton')}</Link>
+                  <Link to={t("layout.marketingLayout.login_1")}>
+                    {t("auth.loginButton")}
+                  </Link>
                 </Button>
                 <Button variant="default" asChild>
-                  <Link to={t("layout.marketingLayout.register_2")}>{t('auth.signupButton')}</Link>
+                  <Link to={t("layout.marketingLayout.register_2")}>
+                    {t("auth.signupButton")}
+                  </Link>
                 </Button>
               </div>
             </div>
@@ -56,12 +62,10 @@ export const MarketingLayout: React.FC<MarketingLayoutProps> = ({ children }) =>
       </header>
 
       {/* Main Content */}
-      <main>
-        {children}
-      </main>
+      <main>{children}</main>
 
       {/* Footer */}
       <PublicFooter />
-    </div>);
-
+    </div>
+  );
 };

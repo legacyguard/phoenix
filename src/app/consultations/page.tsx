@@ -1,49 +1,64 @@
-'use client';
+"use client";
 
-import { useState, useEffect, useCallback } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { Skeleton } from '@/components/ui/skeleton';
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components/ui/dialog';
-import { LegalConsultationService, ConsultationRequest } from '@/services/LegalConsultationService';
-import { useAuth } from '@/hooks/useAuth';
-import { format } from 'date-fns';
-import { 
-  Clock, 
-  CheckCircle2, 
-  AlertCircle, 
-  MessageCircle, 
+import { useState, useEffect, useCallback } from "react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Skeleton } from "@/components/ui/skeleton";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
+import {
+  LegalConsultationService,
+  ConsultationRequest,
+} from "@/services/LegalConsultationService";
+import { useAuth } from "@/hooks/useAuth";
+import { format } from "date-fns";
+import {
+  Clock,
+  CheckCircle2,
+  AlertCircle,
+  MessageCircle,
   CreditCard,
   XCircle,
   Calendar,
   Building,
-  FileText
-} from 'lucide-react';
+  FileText,
+} from "lucide-react";
 
 export default function MyConsultationsPage() {
   const { user } = useAuth();
   const [consultations, setConsultations] = useState<ConsultationRequest[]>([]);
   const [loading, setLoading] = useState(true);
-  const [selectedConsultation, setSelectedConsultation] = useState<ConsultationRequest | null>(null);
+  const [selectedConsultation, setSelectedConsultation] =
+    useState<ConsultationRequest | null>(null);
   const [showResponseDialog, setShowResponseDialog] = useState(false);
 
   const fetchConsultations = useCallback(async () => {
     if (!user) return;
-    
+
     setLoading(true);
     try {
       const data = await LegalConsultationService.getUserConsultations(user.id);
       setConsultations(data);
     } catch (error) {
-      console.error('Error fetching consultations:', error);
+      console.error("Error fetching consultations:", error);
     } finally {
       setLoading(false);
     }
   }, [user]);
 
   useEffect(() => {
-     
     if (user) {
       fetchConsultations();
     }
@@ -52,36 +67,36 @@ export default function MyConsultationsPage() {
   const getStatusBadge = (status: string) => {
     const statusConfig = {
       pending_payment: {
-        label: 'Pending Payment',
-        variant: 'secondary' as const,
-        icon: CreditCard
+        label: "Pending Payment",
+        variant: "secondary" as const,
+        icon: CreditCard,
       },
       payment_failed: {
-        label: 'Payment Failed',
-        variant: 'destructive' as const,
-        icon: XCircle
+        label: "Payment Failed",
+        variant: "destructive" as const,
+        icon: XCircle,
       },
       submitted_to_firm: {
-        label: 'Awaiting Response',
-        variant: 'default' as const,
-        icon: Clock
+        label: "Awaiting Response",
+        variant: "default" as const,
+        icon: Clock,
       },
       answered: {
-        label: 'Answered',
-        variant: 'default' as const,
-        icon: CheckCircle2
+        label: "Answered",
+        variant: "default" as const,
+        icon: CheckCircle2,
       },
       cancelled: {
-        label: 'Cancelled',
-        variant: 'secondary' as const,
-        icon: XCircle
-      }
+        label: "Cancelled",
+        variant: "secondary" as const,
+        icon: XCircle,
+      },
     };
 
     const config = statusConfig[status] || {
       label: status,
-      variant: 'secondary' as const,
-      icon: AlertCircle
+      variant: "secondary" as const,
+      icon: AlertCircle,
     };
 
     const Icon = config.icon;
@@ -95,23 +110,26 @@ export default function MyConsultationsPage() {
   };
 
   const getConsultationTypeIcon = (type: string) => {
-    const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
+    const iconMap: Record<
+      string,
+      React.ComponentType<{ className?: string }>
+    > = {
       will_review: FileText,
       estate_planning: Building,
       inheritance_dispute: AlertCircle,
       tax_consultation: CreditCard,
-      general_advice: MessageCircle
+      general_advice: MessageCircle,
     };
-    
+
     const Icon = iconMap[type] || MessageCircle;
     return <Icon className="h-4 w-4" />;
   };
 
   const formatConsultationType = (type: string) => {
     return type
-      .split('_')
-      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-      .join(' ');
+      .split("_")
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(" ");
   };
 
   const viewResponse = (consultation: ConsultationRequest) => {
@@ -161,7 +179,10 @@ export default function MyConsultationsPage() {
       ) : (
         <div className="space-y-4">
           {consultations.map((consultation) => (
-            <Card key={consultation.id} className="hover:shadow-md transition-shadow">
+            <Card
+              key={consultation.id}
+              className="hover:shadow-md transition-shadow"
+            >
               <CardContent className="p-6">
                 <div className="flex items-start justify-between mb-4">
                   <div className="flex items-center gap-3">
@@ -173,7 +194,10 @@ export default function MyConsultationsPage() {
                       <div className="flex items-center gap-4 text-sm text-muted-foreground mt-1">
                         <span className="flex items-center gap-1">
                           <Calendar className="h-3 w-3" />
-                          {format(new Date(consultation.created_at), 'MMM d, yyyy')}
+                          {format(
+                            new Date(consultation.created_at),
+                            "MMM d, yyyy",
+                          )}
                         </span>
                         {consultation.assigned_firm && (
                           <span className="flex items-center gap-1">
@@ -194,20 +218,21 @@ export default function MyConsultationsPage() {
                   </p>
                 </div>
 
-                {consultation.status === 'answered' && consultation.law_firm_response && (
-                  <div className="pt-4 border-t">
-                    <Button 
-                      size="sm" 
-                      onClick={() => viewResponse(consultation)}
-                      className="w-full sm:w-auto"
-                    >
-                      <MessageCircle className="h-4 w-4 mr-2" />
-                      View Response
-                    </Button>
-                  </div>
-                )}
+                {consultation.status === "answered" &&
+                  consultation.law_firm_response && (
+                    <div className="pt-4 border-t">
+                      <Button
+                        size="sm"
+                        onClick={() => viewResponse(consultation)}
+                        className="w-full sm:w-auto"
+                      >
+                        <MessageCircle className="h-4 w-4 mr-2" />
+                        View Response
+                      </Button>
+                    </div>
+                  )}
 
-                {consultation.status === 'pending_payment' && (
+                {consultation.status === "pending_payment" && (
                   <div className="pt-4 border-t">
                     <p className="text-sm text-amber-600 dark:text-amber-500 mb-2">
                       Payment required to submit your consultation
@@ -219,12 +244,16 @@ export default function MyConsultationsPage() {
                   </div>
                 )}
 
-                {consultation.status === 'payment_failed' && (
+                {consultation.status === "payment_failed" && (
                   <div className="pt-4 border-t">
                     <p className="text-sm text-destructive mb-2">
                       Payment failed. Please try again.
                     </p>
-                    <Button size="sm" variant="destructive" className="w-full sm:w-auto">
+                    <Button
+                      size="sm"
+                      variant="destructive"
+                      className="w-full sm:w-auto"
+                    >
                       <CreditCard className="h-4 w-4 mr-2" />
                       Retry Payment (€{consultation.payment_amount})
                     </Button>
@@ -244,13 +273,19 @@ export default function MyConsultationsPage() {
             <DialogDescription>
               {selectedConsultation && (
                 <span>
-                  {formatConsultationType(selectedConsultation.consultation_type)} •{' '}
-                  Responded on {format(new Date(selectedConsultation.responded_at!), 'MMMM d, yyyy')}
+                  {formatConsultationType(
+                    selectedConsultation.consultation_type,
+                  )}{" "}
+                  • Responded on{" "}
+                  {format(
+                    new Date(selectedConsultation.responded_at!),
+                    "MMMM d, yyyy",
+                  )}
                 </span>
               )}
             </DialogDescription>
           </DialogHeader>
-          
+
           {selectedConsultation && (
             <div className="space-y-6 mt-4">
               <div>
@@ -263,14 +298,19 @@ export default function MyConsultationsPage() {
               <div>
                 <h4 className="font-semibold mb-2">Law Firm Response:</h4>
                 <div className="prose prose-sm dark:prose-invert max-w-none">
-                  <p className="whitespace-pre-wrap">{selectedConsultation.law_firm_response}</p>
+                  <p className="whitespace-pre-wrap">
+                    {selectedConsultation.law_firm_response}
+                  </p>
                 </div>
               </div>
 
               {selectedConsultation.assigned_firm && (
                 <div className="pt-4 border-t">
                   <p className="text-sm text-muted-foreground">
-                    Response provided by: <span className="font-medium">{selectedConsultation.assigned_firm.name}</span>
+                    Response provided by:{" "}
+                    <span className="font-medium">
+                      {selectedConsultation.assigned_firm.name}
+                    </span>
                   </p>
                 </div>
               )}

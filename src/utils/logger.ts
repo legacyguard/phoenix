@@ -3,13 +3,15 @@ const isProduction = (() => {
     // Vite/Browser environment
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const meta: any = import.meta;
-    if (meta && meta.env && typeof meta.env.PROD === 'boolean') {
+    if (meta && meta.env && typeof meta.env.PROD === "boolean") {
       return meta.env.PROD as boolean;
     }
   } catch {
     // ignore, fallback to process.env
   }
-  return typeof process !== 'undefined' && process.env.NODE_ENV === 'production';
+  return (
+    typeof process !== "undefined" && process.env.NODE_ENV === "production"
+  );
 })();
 
 const debugEnabled = (() => {
@@ -17,14 +19,17 @@ const debugEnabled = (() => {
     // Vite/Browser environment
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const meta: any = import.meta;
-    if (meta && meta.env && typeof meta.env.VITE_ENABLE_DEBUG !== 'undefined') {
-      return meta.env.VITE_ENABLE_DEBUG === 'true';
+    if (meta && meta.env && typeof meta.env.VITE_ENABLE_DEBUG !== "undefined") {
+      return meta.env.VITE_ENABLE_DEBUG === "true";
     }
   } catch {
     // ignore, fallback to process.env
   }
-  if (typeof process !== 'undefined' && typeof process.env.ENABLE_DEBUG !== 'undefined') {
-    return process.env.ENABLE_DEBUG === 'true';
+  if (
+    typeof process !== "undefined" &&
+    typeof process.env.ENABLE_DEBUG !== "undefined"
+  ) {
+    return process.env.ENABLE_DEBUG === "true";
   }
   return !isProduction;
 })();

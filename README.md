@@ -20,7 +20,7 @@ A comprehensive digital legacy management platform built with React, TypeScript,
 
 ### Prerequisites
 
-- Node.js 18+ 
+- Node.js 18+
 - npm or yarn
 
 ### Installation
@@ -65,12 +65,14 @@ npm run audit-translations
 ```
 
 This will:
+
 - Compare all language files against the English master file
 - Identify missing translation keys
 - Generate a comprehensive report with statistics
 - Provide recommendations for translation priorities
 
 The audit script (`audit-translations.js`) recursively traverses nested JSON objects to find all translation keys and provides:
+
 - ✅ Complete translations (100%)
 - ⚠️ Needs attention (≤10 missing keys)
 - ❌ Incomplete (>10 missing keys)

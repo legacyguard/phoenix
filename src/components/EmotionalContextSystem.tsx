@@ -1,10 +1,11 @@
-import React from 'react';import { useTranslation } from "react-i18next";
+import React from "react";
+import { useTranslation } from "react-i18next";
 
 interface EmotionalState {
-  confidence: 'high' | 'medium' | 'low';
-  motivation: 'high' | 'medium' | 'low';
-  overwhelm: 'none' | 'slight' | 'moderate' | 'high';
-  urgency: 'relaxed' | 'focused' | 'pressed' | 'stressed';
+  confidence: "high" | "medium" | "low";
+  motivation: "high" | "medium" | "low";
+  overwhelm: "none" | "slight" | "moderate" | "high";
+  urgency: "relaxed" | "focused" | "pressed" | "stressed";
 }
 
 interface ContextualResponse {
@@ -30,44 +31,74 @@ interface EmotionalJourney {
 }
 
 const EmotionalContextSystem: React.FC = () => {
-  const { t } = useTranslation('ui-common');
+  const { t } = useTranslation("ui-common");
 
   const getEmotionalResponse = (state: EmotionalState): ContextualResponse => {
-    if (state.confidence === 'low') {
+    if (state.confidence === "low") {
       return {
-        primaryMessage: t('emotionalContextSystem.contextResponses.lowConfidence.primaryMessage'),
-        supportingMessage: t('emotionalContextSystem.contextResponses.lowConfidence.supportingMessage'),
-        actionableAdvice: t('emotionalContextSystem.contextResponses.lowConfidence.actionableAdvice'),
-        motivationalElement: t('emotionalContextSystem.contextResponses.lowConfidence.motivationalElement'),
-        nextStepGuidance: t('emotionalContextSystem.contextResponses.lowConfidence.nextStepGuidance')
+        primaryMessage: t(
+          "common:emotionalContextSystem.contextResponses.lowConfidence.primaryMessage",
+        ),
+        supportingMessage: t(
+          "common:emotionalContextSystem.contextResponses.lowConfidence.supportingMessage",
+        ),
+        actionableAdvice: t(
+          "common:emotionalContextSystem.contextResponses.lowConfidence.actionableAdvice",
+        ),
+        motivationalElement: t(
+          "common:emotionalContextSystem.contextResponses.lowConfidence.motivationalElement",
+        ),
+        nextStepGuidance: t(
+          "common:emotionalContextSystem.contextResponses.lowConfidence.nextStepGuidance",
+        ),
       };
     }
 
-    if (state.overwhelm === 'high') {
+    if (state.overwhelm === "high") {
       return {
-        primaryMessage: t('emotionalContextSystem.contextResponses.highOverwhelm.primaryMessage'),
-        supportingMessage: t('emotionalContextSystem.contextResponses.highOverwhelm.supportingMessage'),
-        actionableAdvice: t('emotionalContextSystem.contextResponses.highOverwhelm.actionableAdvice'),
-        motivationalElement: t('emotionalContextSystem.contextResponses.highOverwhelm.motivationalElement'),
-        nextStepGuidance: t('emotionalContextSystem.contextResponses.highOverwhelm.nextStepGuidance')
+        primaryMessage: t(
+          "common:emotionalContextSystem.contextResponses.highOverwhelm.primaryMessage",
+        ),
+        supportingMessage: t(
+          "common:emotionalContextSystem.contextResponses.highOverwhelm.supportingMessage",
+        ),
+        actionableAdvice: t(
+          "common:emotionalContextSystem.contextResponses.highOverwhelm.actionableAdvice",
+        ),
+        motivationalElement: t(
+          "common:emotionalContextSystem.contextResponses.highOverwhelm.motivationalElement",
+        ),
+        nextStepGuidance: t(
+          "common:emotionalContextSystem.contextResponses.highOverwhelm.nextStepGuidance",
+        ),
       };
     }
 
     return {
-      primaryMessage: t('emotionalContextSystem.contextResponses.default.primaryMessage'),
-      supportingMessage: t('emotionalContextSystem.contextResponses.default.supportingMessage'),
-      actionableAdvice: t('emotionalContextSystem.contextResponses.default.actionableAdvice'),
-      motivationalElement: t('emotionalContextSystem.contextResponses.default.motivationalElement'),
-      nextStepGuidance: t('emotionalContextSystem.contextResponses.default.nextStepGuidance')
+      primaryMessage: t(
+        "common:emotionalContextSystem.contextResponses.default.primaryMessage",
+      ),
+      supportingMessage: t(
+        "common:emotionalContextSystem.contextResponses.default.supportingMessage",
+      ),
+      actionableAdvice: t(
+        "common:emotionalContextSystem.contextResponses.default.actionableAdvice",
+      ),
+      motivationalElement: t(
+        "common:emotionalContextSystem.contextResponses.default.motivationalElement",
+      ),
+      nextStepGuidance: t(
+        "common:emotionalContextSystem.contextResponses.default.nextStepGuidance",
+      ),
     };
   };
 
   // Assume a placeholder for current session state
   const currentState: EmotionalState = {
-    confidence: 'medium',
-    motivation: 'high',
-    overwhelm: 'slight',
-    urgency: 'focused'
+    confidence: "medium",
+    motivation: "high",
+    overwhelm: "slight",
+    urgency: "focused",
   };
 
   const currentResponse = getEmotionalResponse(currentState);
@@ -77,11 +108,20 @@ const EmotionalContextSystem: React.FC = () => {
       <h2>{t("emotionalContextSystem.emotional_support_1")}</h2>
       <p>{currentResponse.primaryMessage}</p>
       <p>{currentResponse.supportingMessage}</p>
-      <p>{t("emotionalContextSystem.advice_2")}{currentResponse.actionableAdvice}</p>
-      <p>{t("emotionalContextSystem.motivation_3")}{currentResponse.motivationalElement}</p>
-      <p>{t("emotionalContextSystem.next_steps_4")}{currentResponse.nextStepGuidance}</p>
-    </div>);
-
+      <p>
+        {t("emotionalContextSystem.advice_2")}
+        {currentResponse.actionableAdvice}
+      </p>
+      <p>
+        {t("emotionalContextSystem.motivation_3")}
+        {currentResponse.motivationalElement}
+      </p>
+      <p>
+        {t("emotionalContextSystem.next_steps_4")}
+        {currentResponse.nextStepGuidance}
+      </p>
+    </div>
+  );
 };
 
 export default EmotionalContextSystem;

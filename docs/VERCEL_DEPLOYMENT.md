@@ -35,7 +35,6 @@ VITE_SENTRY_DSN=your_sentry_dsn
      - `https://your-domain.vercel.app/*`
      - `https://your-domain.vercel.app/dashboard`
      - `https://your-domain.vercel.app/login`
-   
 2. Configure OAuth redirect URLs:
    - Google OAuth: `https://your-domain.vercel.app/dashboard`
    - Other providers: Same pattern
@@ -56,6 +55,7 @@ VITE_SENTRY_DSN=your_sentry_dsn
 ### 404 Error After Login
 
 This usually means:
+
 1. Clerk redirect URLs are not configured properly
 2. The SPA routing is not working (check vercel.json)
 3. Environment variables are missing
@@ -63,6 +63,7 @@ This usually means:
 ### Authentication Loop
 
 Check:
+
 1. VITE_CLERK_PUBLISHABLE_KEY is correct
 2. Domain is added to Clerk allowed URLs
 3. Cookies are enabled in browser
@@ -70,6 +71,7 @@ Check:
 ## Testing
 
 After deployment:
+
 1. Clear browser cache and cookies
 2. Test login flow
 3. Check console for errors

@@ -1,10 +1,10 @@
-import { createContext } from 'react';
-import type { SessionResource } from '@clerk/types';
-import { MockUser } from './mockClerkHelpers';
+import { createContext } from "react";
+import type { SessionResource } from "@clerk/types";
+import { MockUser } from "./mockClerkHelpers";
 
 export interface MockSession extends Partial<SessionResource> {
   id: string;
-  status: 'active' | 'ended' | 'expired' | 'removed' | 'replaced' | 'unknown';
+  status: "active" | "ended" | "expired" | "removed" | "replaced" | "unknown";
   lastActiveAt: Date;
   expireAt: Date;
   user?: MockUser;
@@ -32,4 +32,6 @@ export interface MockUserContextValue {
 // Create contexts
 export const MockAuthContext = createContext<MockAuthContextValue | null>(null);
 export const MockUserContext = createContext<MockUserContextValue | null>(null);
-export const MockClerkContext = createContext<Record<string, unknown> | null>(null);
+export const MockClerkContext = createContext<Record<string, unknown> | null>(
+  null,
+);

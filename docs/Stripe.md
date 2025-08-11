@@ -56,25 +56,25 @@ You are now ready to complete the Stripe verification process. The next steps ar
 
 **Step 1: Populate the Placeholder Content**
 
--   This is the most important manual task. You must replace the **[Insert your ... text here]** placeholders with real content.
+- This is the most important manual task. You must replace the **[Insert your ... text here]** placeholders with real content.
 
--   **For the Terms of Service and Privacy Policy:** You can use online template generators as a starting point (search for "SaaS Terms of Service generator" or "GDPR Privacy Policy generator"). **Crucially, you must have a legal professional review these before you launch to real customers.** For the purpose of Stripe's *initial verification*, a comprehensive template is usually sufficient.
+- **For the Terms of Service and Privacy Policy:** You can use online template generators as a starting point (search for "SaaS Terms of Service generator" or "GDPR Privacy Policy generator"). **Crucially, you must have a legal professional review these before you launch to real customers.** For the purpose of Stripe's _initial verification_, a comprehensive template is usually sufficient.
 
--   **For the Refund Policy:** Be clear and decisive. A simple statement like, "Due to the nature of our digital service, we do not offer refunds on subscription payments. You may cancel your subscription at any time, and you will retain access to premium features until the end of your current billing period," is a common and acceptable policy.
+- **For the Refund Policy:** Be clear and decisive. A simple statement like, "Due to the nature of our digital service, we do not offer refunds on subscription payments. You may cancel your subscription at any time, and you will retain access to premium features until the end of your current billing period," is a common and acceptable policy.
 
 **Step 2: Submit Your Website to Stripe**
 
--   Log in to your Stripe Dashboard.
+- Log in to your Stripe Dashboard.
 
--   Navigate to the section where it asks for your business details and website.
+- Navigate to the section where it asks for your business details and website.
 
--   Enter the URL of your main landing page (e.g., **https://legacyguard.eu** ).
+- Enter the URL of your main landing page (e.g., **https://legacyguard.eu** ).
 
--   Submit the information for review.
+- Submit the information for review.
 
 **Step 3: Wait for Approval**
 
--   Stripe's review process is usually quite fast, often taking anywhere from a few hours to a couple of business days. Their automated systems will crawl your site, find the footer, and verify that the links to your Pricing, Terms, Privacy, and Refund policies are present and contain relevant content.
+- Stripe's review process is usually quite fast, often taking anywhere from a few hours to a couple of business days. Their automated systems will crawl your site, find the footer, and verify that the links to your Pricing, Terms, Privacy, and Refund policies are present and contain relevant content.
 
 **Conclusion**
 

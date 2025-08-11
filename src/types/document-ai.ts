@@ -1,19 +1,24 @@
 // Document AI type definitions for the LegacyGuard system
 
-export type DocumentCategory = 
-  | 'insurance_policy'
-  | 'property_deed'
-  | 'vehicle_title'
-  | 'bank_statement'
-  | 'investment_statement'
-  | 'will_or_trust'
-  | 'business_document'
-  | 'personal_id'
-  | 'tax_document'
-  | 'medical_document'
-  | 'other';
+export type DocumentCategory =
+  | "insurance_policy"
+  | "property_deed"
+  | "vehicle_title"
+  | "bank_statement"
+  | "investment_statement"
+  | "will_or_trust"
+  | "business_document"
+  | "personal_id"
+  | "tax_document"
+  | "medical_document"
+  | "other";
 
-export type PossessionAreaId = 'home' | 'savings' | 'business' | 'valuables' | 'personal';
+export type PossessionAreaId =
+  | "home"
+  | "savings"
+  | "business"
+  | "valuables"
+  | "personal";
 
 export interface ClassificationResult {
   category: DocumentCategory;
@@ -28,7 +33,7 @@ export interface DocumentMetadata {
   category: DocumentCategory;
   uploadDate: Date;
   lastModified: Date;
-  
+
   // AI-extracted information
   extractedText?: string;
   summary?: string;
@@ -37,14 +42,18 @@ export interface DocumentMetadata {
     expirationDate?: Date;
     issueDate?: Date;
   };
-  
+
   // Relationships
   relatedPossessionIds?: string[];
   relatedPersonIds?: string[];
-  relatedScenarios?: Array<'hospitalized' | 'incapacitated' | 'sudden_passing'>;
-  
+  relatedScenarios?: Array<"hospitalized" | "incapacitated" | "sudden_passing">;
+
   // Document-specific metadata (varies by category)
-  specificMetadata?: InsuranceMetadata | PropertyMetadata | VehicleMetadata | FinancialMetadata;
+  specificMetadata?:
+    | InsuranceMetadata
+    | PropertyMetadata
+    | VehicleMetadata
+    | FinancialMetadata;
 }
 
 // Specific metadata interfaces for different document types
@@ -54,7 +63,7 @@ export interface InsuranceMetadata {
   coverageAmount?: number;
   beneficiaries?: string[];
   premiumAmount?: number;
-  policyType?: 'life' | 'health' | 'home' | 'auto' | 'disability' | 'other';
+  policyType?: "life" | "health" | "home" | "auto" | "disability" | "other";
 }
 
 export interface PropertyMetadata {
@@ -83,7 +92,7 @@ export interface VehicleMetadata {
 export interface FinancialMetadata {
   accountNumber?: string;
   institutionName?: string;
-  accountType?: 'checking' | 'savings' | 'investment' | 'retirement' | 'other';
+  accountType?: "checking" | "savings" | "investment" | "retirement" | "other";
   balance?: number;
   accountHolders?: string[];
 }
@@ -127,8 +136,8 @@ export interface DocumentProcessingResult {
       reasoning: string;
     }>;
     relevantScenarios?: Array<{
-      scenario: 'hospitalized' | 'incapacitated' | 'sudden_passing';
-      importance: 'critical' | 'high' | 'medium' | 'low';
+      scenario: "hospitalized" | "incapacitated" | "sudden_passing";
+      importance: "critical" | "high" | "medium" | "low";
       reasoning: string;
     }>;
   };
@@ -136,7 +145,12 @@ export interface DocumentProcessingResult {
 
 // Error handling
 export interface DocumentProcessingError {
-  code: 'INVALID_IMAGE' | 'OCR_FAILED' | 'CLASSIFICATION_FAILED' | 'EXTRACTION_FAILED' | 'UNKNOWN';
+  code:
+    | "INVALID_IMAGE"
+    | "OCR_FAILED"
+    | "CLASSIFICATION_FAILED"
+    | "EXTRACTION_FAILED"
+    | "UNKNOWN";
   message: string;
   details?: Record<string, unknown>;
 }
@@ -144,13 +158,13 @@ export interface DocumentProcessingError {
 // Extracted metadata types
 export interface ExtractedMetadata {
   [key: string]: string | number | string[] | undefined;
-  
+
   // Common fields
   documentTitle?: string;
   issueDate?: string; // ISO 8601 format
   expirationDate?: string; // ISO 8601 format
   referenceNumber?: string;
-  
+
   // Insurance specific
   policyNumber?: string;
   insurerName?: string;
@@ -159,7 +173,7 @@ export interface ExtractedMetadata {
   premiumAmount?: number;
   beneficiaries?: string[];
   policyType?: string;
-  
+
   // Property specific
   propertyAddress?: string;
   parcelNumber?: string;
@@ -167,7 +181,7 @@ export interface ExtractedMetadata {
   propertyType?: string;
   assessedValue?: number;
   legalDescription?: string;
-  
+
   // Vehicle specific
   vinNumber?: string;
   make?: string;
@@ -175,7 +189,7 @@ export interface ExtractedMetadata {
   year?: number;
   licensePlate?: string;
   vehicleOwners?: string[];
-  
+
   // Financial specific
   accountNumber?: string;
   institutionName?: string;
@@ -183,26 +197,26 @@ export interface ExtractedMetadata {
   balance?: number;
   accountType?: string;
   routingNumber?: string;
-  
+
   // Business specific
   businessName?: string;
   einNumber?: string;
   registrationNumber?: string;
   businessType?: string;
   registeredAgent?: string;
-  
+
   // Personal ID specific
   fullName?: string;
   dateOfBirth?: string;
   idNumber?: string;
   address?: string;
-  
+
   // Medical specific
   patientName?: string;
   medicalRecordNumber?: string;
   physician?: string;
   diagnosis?: string;
-  
+
   // Will/Trust specific
   testatorName?: string;
   executorName?: string;
@@ -217,7 +231,7 @@ export interface RelationshipResult {
   missingDocumentSuggestion?: string; // e.g., "We see a mortgage but no property insurance. You should add it."
   relatedDocumentIds?: string[]; // IDs of other related documents
   relationshipDetails?: {
-    type: 'covers' | 'references' | 'supersedes' | 'supplements' | 'related';
+    type: "covers" | "references" | "supersedes" | "supplements" | "related";
     description: string;
   }[];
 }
@@ -228,27 +242,27 @@ export interface Possession {
   name: string;
   description: string;
   familyImpact: string;
-  lifeArea: 'home' | 'savings' | 'business' | 'valuables';
+  lifeArea: "home" | "savings" | "business" | "valuables";
   relatedDocumentIds: string[];
   details?: {
     // Property details
     address?: string;
     parcelNumber?: string;
-    
+
     // Vehicle details
     vin?: string;
     make?: string;
     model?: string;
     year?: number;
-    
+
     // Financial details
     accountNumber?: string;
     institutionName?: string;
-    
+
     // Business details
     einNumber?: string;
     businessName?: string;
-    
+
     // General
     value?: number;
     [key: string]: Record<string, unknown>;
@@ -264,9 +278,9 @@ export interface TrustedPerson {
   responsibilities: Array<{
     id: string;
     description: string;
-    relevantScenario: 'hospitalized' | 'incapacitated' | 'sudden_passing';
+    relevantScenario: "hospitalized" | "incapacitated" | "sudden_passing";
     relatedAssetIds?: string[];
-    type: 'financial' | 'caregiving' | 'legal' | 'inheritance';
+    type: "financial" | "caregiving" | "legal" | "inheritance";
   }>;
   preparednessScore: number;
 }

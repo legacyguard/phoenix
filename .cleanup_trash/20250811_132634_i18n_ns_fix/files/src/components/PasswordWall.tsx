@@ -1,31 +1,46 @@
-import { useState, useEffect } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { Alert, AlertDescription } from '@/components/ui/alert';
-import { Lock, AlertCircle, LogOut } from 'lucide-react';
-import { useTranslation } from 'react-i18next';
-import { usePasswordWall } from '@/components/auth/usePasswordWall';
+import { useState, useEffect } from "react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Alert, AlertDescription } from "@/components/ui/alert";
+import { Lock, AlertCircle, LogOut } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import { usePasswordWall } from "@/components/auth/usePasswordWall";
 
-
-const PASSWORD = import.meta.env.VITE_APP_PASSWORD || 'legacy1guard';
-const DISABLE_PASSWORD_WALL = import.meta.env.VITE_DISABLE_PASSWORD_WALL === 'true';
+const PASSWORD = import.meta.env.VITE_APP_PASSWORD || "legacy1guard";
+const DISABLE_PASSWORD_WALL =
+  import.meta.env.VITE_DISABLE_PASSWORD_WALL === "true";
 
 interface PasswordWallProps {
   children: React.ReactNode;
 }
 
 export default function PasswordWall({ children }: PasswordWallProps) {
-  const { t, ready } = useTranslation('auth');
-  const { t: tMicro } = useTranslation('micro-copy');
+  const { t, ready } = useTranslation("auth");
+  const { t: tMicro } = useTranslation("micro-copy");
   const { setPasswordWallAuthenticated } = usePasswordWall();
   const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(true);
 
-  console.log('PasswordWall render - ready:', ready, 'isLoading:', isLoading, 'isAuthenticated:', isAuthenticated, 'disabled:', DISABLE_PASSWORD_WALL);
+  console.log(
+    "PasswordWall render - ready:",
+    ready,
+    "isLoading:",
+    isLoading,
+    "isAuthenticated:",
+    isAuthenticated,
+    "disabled:",
+    DISABLE_PASSWORD_WALL,
+  );
 
   useEffect(() => {
     // If password wall is disabled, automatically authenticate
@@ -42,21 +57,21 @@ export default function PasswordWall({ children }: PasswordWallProps) {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setError('');
+    setError("");
 
     if (password === PASSWORD) {
       setIsAuthenticated(true);
       // Don't store authentication state - session only
     } else {
-      setError(t('passwordWall.incorrectPassword'));
-      setPassword('');
+      setError(t("auth:passwordWall.incorrectPassword"));
+      setPassword("");
     }
   };
 
   const handleLogout = () => {
     setIsAuthenticated(false);
-    setPassword('');
-    setError('');
+    setPassword("");
+    setError("");
   };
 
   // Show loading state while i18n not ready
@@ -64,7 +79,8 @@ export default function PasswordWall({ children }: PasswordWallProps) {
     return (
       <div className="flex items-center justify-center min-h-screen bg-background">
         <div className="animate-pulse">{t("passwordWall.loading")}</div>
-      </div>);
+      </div>
+    );
   }
 
   // Show protected content if authenticated
@@ -78,11 +94,11 @@ export default function PasswordWall({ children }: PasswordWallProps) {
             size="sm"
             onClick={handleLogout}
             className="flex items-center gap-2"
-            title={tMicro('tooltips.passwordWall.logout')}
-            aria-label={tMicro('accessibility.labels.close')}
+            title={tMicro("tooltips.passwordWall.logout")}
+            aria-label={tMicro("accessibility.labels.close")}
           >
             <LogOut className="h-4 w-4" />
-            {t('passwordWall.logout')}
+            {t("passwordWall.logout")}
           </Button>
         </div>
         {children}
@@ -100,45 +116,44 @@ export default function PasswordWall({ children }: PasswordWallProps) {
               <Lock className="h-6 w-6 text-primary" />
             </div>
           </div>
-      <CardTitle className="text-2xl">{t('passwordWall.title')}</CardTitle>
-      <CardDescription>
-        {t('passwordWall.description')}
-      </CardDescription>
-      <p className="text-sm text-muted-foreground mt-2">
-        {tMicro('tooltips.passwordWall.security')}
-      </p>
+          <CardTitle className="text-2xl">{t("passwordWall.title")}</CardTitle>
+          <CardDescription>{t("passwordWall.description")}</CardDescription>
+          <p className="text-sm text-muted-foreground mt-2">
+            {tMicro("tooltips.passwordWall.security")}
+          </p>
         </CardHeader>
         <CardContent>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="space-y-2">
-              <Label htmlFor="password">{t('passwordWall.password')}</Label>
+              <Label htmlFor="password">{t("passwordWall.password")}</Label>
               <Input
                 id="password"
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                placeholder={t('passwordWall.enterPassword')}
-                aria-label={tMicro('accessibility.descriptions.required')}
+                placeholder={t("passwordWall.enterPassword")}
+                aria-label={tMicro("accessibility.descriptions.required")}
                 autoFocus
-                required />
-
+                required
+              />
             </div>
-            
-            {error &&
-            <Alert variant="destructive">
+
+            {error && (
+              <Alert variant="destructive">
                 <AlertCircle className="h-4 w-4" />
                 <AlertDescription>{error}</AlertDescription>
               </Alert>
-            }
-            
+            )}
+
             <Button type="submit" className="w-full" size="lg">
-              {t('passwordWall.accessApplication')}
+              {t("passwordWall.accessApplication")}
             </Button>
             <p className="text-xs text-muted-foreground text-center mt-2">
-              {tMicro('tooltips.passwordWall.session')}
+              {tMicro("tooltips.passwordWall.session")}
             </p>
           </form>
         </CardContent>
       </Card>
-    </div>);
+    </div>
+  );
 }

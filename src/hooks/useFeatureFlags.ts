@@ -1,6 +1,6 @@
 // Feature flag context hooks for React
-import { useState, useContext, createContext } from 'react';
-import { FeatureFlags, featureFlags } from '../config/featureFlagsService';
+import { useState, useContext, createContext } from "react";
+import { FeatureFlags, featureFlags } from "../config/featureFlagsService";
 
 interface FeatureFlagContextValue {
   flags: FeatureFlags;
@@ -10,12 +10,14 @@ interface FeatureFlagContextValue {
   resetFlags: () => void;
 }
 
-export const FeatureFlagContext = createContext<FeatureFlagContextValue | null>(null);
+export const FeatureFlagContext = createContext<FeatureFlagContextValue | null>(
+  null,
+);
 
 export function useFeatureFlags() {
   const context = useContext(FeatureFlagContext);
   if (!context) {
-    throw new Error('useFeatureFlags must be used within FeatureFlagProvider');
+    throw new Error("useFeatureFlags must be used within FeatureFlagProvider");
   }
   return context;
 }

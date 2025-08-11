@@ -1,14 +1,14 @@
 /**
  * Expiration Intelligence Service
- * 
+ *
  * This service provides proactive monitoring and notification capabilities for document
  * expiration dates. It helps users stay ahead of critical deadlines by:
- * 
+ *
  * 1. Scanning all documents with expiration dates
  * 2. Calculating time remaining until expiration
  * 3. Generating contextual notifications based on urgency
  * 4. Providing actionable recommendations for renewal
- * 
+ *
  * The service uses a tiered notification system:
  * - 90+ days: Informational reminders
  * - 30-90 days: Warning notifications with renewal suggestions
@@ -16,9 +16,9 @@
  * - <7 days or expired: Critical alerts requiring immediate attention
  */
 
-import { createClient } from '@supabase/supabase-js';
-import { Database } from '@/integrations/supabase/types';
-import { supabase } from '@/integrations/supabase/client';
+import { createClient } from "@supabase/supabase-js";
+import { Database } from "@/integrations/supabase/types";
+import { supabase } from "@/integrations/supabase/client";
 
 export interface ExpirationNotification {
   userId: string;
@@ -27,7 +27,7 @@ export interface ExpirationNotification {
   documentCategory: string;
   expirationDate: Date;
   daysUntilExpiration: number;
-  severity: 'info' | 'warning' | 'critical';
+  severity: "info" | "warning" | "critical";
   message: string;
   actionRequired: string;
 }
@@ -41,8 +41,9 @@ export class ExpirationIntelligenceService {
     try {
       // Get all documents with expiration dates
       const { data: documents, error } = await supabase
-        .from('documents')
-        .select(`
+        .from("documents")
+        .select(
+          `
           id,
           title,
           category,
@@ -50,9 +51,10 @@ export class ExpirationIntelligenceService {
           user_id,
           created_at,
           user_profiles (ai_feature_toggles)
-        `)
-        .not('metadata->expirationDate', 'is', null)
-        .eq('user_profiles->ai_feature_toggles->expirationIntelligence', true);
+        `,
+        )
+        .not("metadata->expirationDate", "is", null)
+        .eq("user_profiles->ai_feature_toggles->expirationIntelligence", true);
 
       if (error) throw error;
 
@@ -61,12 +63,15 @@ export class ExpirationIntelligenceService {
 
       for (const doc of documents || []) {
         const expirationDate = new Date(doc.metadata?.expirationDate);
-        const daysUntilExpiration = this.calculateDaysUntilExpiration(expirationDate, today);
-        
+        const daysUntilExpiration = this.calculateDaysUntilExpiration(
+          expirationDate,
+          today,
+        );
+
         const notification = this.createNotificationForDocument(
           doc,
           expirationDate,
-          daysUntilExpiration
+          daysUntilExpiration,
         );
 
         if (notification) {
@@ -76,12 +81,15 @@ export class ExpirationIntelligenceService {
 
       return notifications;
     } catch (error) {
-      console.error('Error checking expiring documents:', error);
+      console.error("Error checking expiring documents:", error);
       throw error;
     }
   }
 
-  private calculateDaysUntilExpiration(expirationDate: Date, today: Date): number {
+  private calculateDaysUntilExpiration(
+    expirationDate: Date,
+    today: Date,
+  ): number {
     const diffTime = expirationDate.getTime() - today.getTime();
     return Math.ceil(diffTime / (1000 * 60 * 60 * 24));
   }
@@ -89,7 +97,7 @@ export class ExpirationIntelligenceService {
   private createNotificationForDocument(
     doc: Record<string, unknown>,
     expirationDate: Date,
-    daysUntilExpiration: number
+    daysUntilExpiration: number,
   ): ExpirationNotification | null {
     // Skip if expiration is more than 90 days away
     if (daysUntilExpiration > this.NINETY_DAYS) {
@@ -109,9 +117,9 @@ export class ExpirationIntelligenceService {
     if (daysUntilExpiration < 0) {
       return {
         ...baseNotification,
-        severity: 'critical',
+        severity: "critical",
         message: this.getCriticalMessage(doc.category, doc.title),
-        actionRequired: 'Immediate renewal required',
+        actionRequired: "Immediate renewal required",
       };
     }
 
@@ -119,9 +127,13 @@ export class ExpirationIntelligenceService {
     if (daysUntilExpiration <= this.SEVEN_DAYS) {
       return {
         ...baseNotification,
-        severity: 'critical',
-        message: this.getUrgentMessage(doc.category, doc.title, daysUntilExpiration),
-        actionRequired: 'Urgent renewal needed',
+        severity: "critical",
+        message: this.getUrgentMessage(
+          doc.category,
+          doc.title,
+          daysUntilExpiration,
+        ),
+        actionRequired: "Urgent renewal needed",
       };
     }
 
@@ -129,18 +141,26 @@ export class ExpirationIntelligenceService {
     if (daysUntilExpiration <= this.THIRTY_DAYS) {
       return {
         ...baseNotification,
-        severity: 'warning',
-        message: this.getWarningMessage(doc.category, doc.title, daysUntilExpiration),
-        actionRequired: 'Schedule renewal soon',
+        severity: "warning",
+        message: this.getWarningMessage(
+          doc.category,
+          doc.title,
+          daysUntilExpiration,
+        ),
+        actionRequired: "Schedule renewal soon",
       };
     }
 
     // Expires within 90 days
     return {
       ...baseNotification,
-      severity: 'info',
-      message: this.getInfoMessage(doc.category, doc.title, daysUntilExpiration),
-      actionRequired: 'Plan for renewal',
+      severity: "info",
+      message: this.getInfoMessage(
+        doc.category,
+        doc.title,
+        daysUntilExpiration,
+      ),
+      actionRequired: "Plan for renewal",
     };
   }
 
@@ -157,9 +177,13 @@ export class ExpirationIntelligenceService {
     return messages[category] || messages.default;
   }
 
-  private getUrgentMessage(category: string, title: string, days: number): string {
-    const daysText = days === 1 ? 'tomorrow' : `in ${days} days`;
-    
+  private getUrgentMessage(
+    category: string,
+    title: string,
+    days: number,
+  ): string {
+    const daysText = days === 1 ? "tomorrow" : `in ${days} days`;
+
     const messages: Record<string, string> = {
       insurance: `URGENT: Your ${title} expires ${daysText}. Renew now to avoid coverage gaps.`,
       identification: `URGENT: Your ${title} expires ${daysText}. Start renewal immediately to avoid complications.`,
@@ -172,7 +196,11 @@ export class ExpirationIntelligenceService {
     return messages[category] || messages.default;
   }
 
-  private getWarningMessage(category: string, title: string, days: number): string {
+  private getWarningMessage(
+    category: string,
+    title: string,
+    days: number,
+  ): string {
     const messages: Record<string, string> = {
       insurance: `Warning: Your ${title} expires in ${days} days. Renew soon to ensure continuous coverage for your family.`,
       identification: `Warning: Your ${title} expires in ${days} days. Schedule renewal to avoid travel or legal issues.`,
@@ -185,9 +213,13 @@ export class ExpirationIntelligenceService {
     return messages[category] || messages.default;
   }
 
-  private getInfoMessage(category: string, title: string, days: number): string {
-    const monthsText = days > 60 ? '3 months' : `${days} days`;
-    
+  private getInfoMessage(
+    category: string,
+    title: string,
+    days: number,
+  ): string {
+    const monthsText = days > 60 ? "3 months" : `${days} days`;
+
     const messages: Record<string, string> = {
       insurance: `Info: Your ${title} expires in ${monthsText}. It's a good time to review your coverage and start the renewal process.`,
       identification: `Info: Your ${title} expires in ${monthsText}. Consider starting the renewal process early to avoid rush fees.`,
@@ -200,83 +232,86 @@ export class ExpirationIntelligenceService {
     return messages[category] || messages.default;
   }
 
-  async saveNotifications(notifications: ExpirationNotification[]): Promise<void> {
+  async saveNotifications(
+    notifications: ExpirationNotification[],
+  ): Promise<void> {
     try {
       for (const notification of notifications) {
         // Check if notification already exists for this document and severity
         const { data: existing } = await supabase
-          .from('notifications')
-          .select('id')
-          .eq('user_id', notification.userId)
-          .eq('document_id', notification.documentId)
-          .eq('severity', notification.severity)
-          .eq('is_read', false)
+          .from("notifications")
+          .select("id")
+          .eq("user_id", notification.userId)
+          .eq("document_id", notification.documentId)
+          .eq("severity", notification.severity)
+          .eq("is_read", false)
           .single();
 
         // Only create new notification if one doesn't already exist
         if (!existing) {
-          const { error } = await supabase
-            .from('notifications')
-            .insert({
-              user_id: notification.userId,
-              document_id: notification.documentId,
-              type: 'document_expiration',
-              severity: notification.severity,
-              title: `Document Expiring: ${notification.documentTitle}`,
-              message: notification.message,
-              action_required: notification.actionRequired,
-              metadata: {
-                expirationDate: notification.expirationDate.toISOString(),
-                daysUntilExpiration: notification.daysUntilExpiration,
-                documentCategory: notification.documentCategory,
-              },
-              is_read: false,
-              created_at: new Date().toISOString(),
-            });
+          const { error } = await supabase.from("notifications").insert({
+            user_id: notification.userId,
+            document_id: notification.documentId,
+            type: "document_expiration",
+            severity: notification.severity,
+            title: `Document Expiring: ${notification.documentTitle}`,
+            message: notification.message,
+            action_required: notification.actionRequired,
+            metadata: {
+              expirationDate: notification.expirationDate.toISOString(),
+              daysUntilExpiration: notification.daysUntilExpiration,
+              documentCategory: notification.documentCategory,
+            },
+            is_read: false,
+            created_at: new Date().toISOString(),
+          });
 
           if (error) {
-            console.error('Error saving notification:', error);
+            console.error("Error saving notification:", error);
           }
         }
       }
     } catch (error) {
-      console.error('Error in saveNotifications:', error);
+      console.error("Error in saveNotifications:", error);
       throw error;
     }
   }
 
   async markNotificationAsRead(notificationId: string): Promise<void> {
     const { error } = await supabase
-      .from('notifications')
+      .from("notifications")
       .update({ is_read: true })
-      .eq('id', notificationId);
+      .eq("id", notificationId);
 
     if (error) {
-      console.error('Error marking notification as read:', error);
+      console.error("Error marking notification as read:", error);
       throw error;
     }
   }
 
   async getUnreadNotificationsCount(userId: string): Promise<number> {
     const { count, error } = await supabase
-      .from('notifications')
-      .select('*', { count: 'exact', head: true })
-      .eq('user_id', userId)
-      .eq('is_read', false)
-      .in('severity', ['warning', 'critical']);
+      .from("notifications")
+      .select("*", { count: "exact", head: true })
+      .eq("user_id", userId)
+      .eq("is_read", false)
+      .in("severity", ["warning", "critical"]);
 
     if (error) {
-      console.error('Error getting unread notifications count:', error);
+      console.error("Error getting unread notifications count:", error);
       return 0;
     }
 
     return count || 0;
   }
 
-  async getUserNotifications(userId: string): Promise<Array<Record<string, unknown>>> {
+  async getUserNotifications(
+    userId: string,
+  ): Promise<Array<Record<string, unknown>>> {
     const { data, error } = await supabase
-      .from('notifications')
-      .select(`
+      .from("notifications")
+      .select(
+        `
         *,
         documents (
           id,
@@ -284,13 +319,14 @@ export class ExpirationIntelligenceService {
           category,
           metadata
         )
-      `)
-      .eq('user_id', userId)
-      .order('created_at', { ascending: false })
-      .order('severity', { ascending: false });
+      `,
+      )
+      .eq("user_id", userId)
+      .order("created_at", { ascending: false })
+      .order("severity", { ascending: false });
 
     if (error) {
-      console.error('Error getting user notifications:', error);
+      console.error("Error getting user notifications:", error);
       throw error;
     }
 

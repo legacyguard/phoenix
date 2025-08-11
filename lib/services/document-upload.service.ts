@@ -1,10 +1,13 @@
-import { v4 as uuidv4 } from 'uuid';
-import { ocrService } from './ocr.service';
-import { openAIService } from './openai.service';
-import { documentStorage } from './document-storage.service';
-import { validateDocument, validateImageDimensions } from '../utils/file-validators';
-import { compressImage, generateThumbnail } from '../utils/image-compression';
-import { calculateChecksum } from '../utils/encryption-utils';
+import { v4 as uuidv4 } from "uuid";
+import { ocrService } from "./ocr.service";
+import { openAIService } from "./openai.service";
+import { documentStorage } from "./document-storage.service";
+import {
+  validateDocument,
+  validateImageDimensions,
+} from "../utils/file-validators";
+import { compressImage, generateThumbnail } from "../utils/image-compression";
+import { calculateChecksum } from "../utils/encryption-utils";
 import type {
   UploadOptions,
   UploadResult,
@@ -14,14 +17,14 @@ import type {
   FamilySummary,
   UploadError,
   DocumentMetadata,
-} from './document-upload.types';
+} from "./document-upload.types";
 
 // Document upload service
 export class DocumentUploadService {
   // Main upload function
   async uploadDocument(
     file: File,
-    options: UploadOptions = {}
+    options: UploadOptions = {},
   ): Promise<UploadResult> {
     const documentId = uuidv4();
     const startTime = Date.now();
@@ -29,20 +32,20 @@ export class DocumentUploadService {
     try {
       // Step 1: Validate document
       options.onProgress?.({
-        stage: 'validating',
+        stage: "validating",
         progress: 10,
-        message: 'Checking your document...',
-        emoji: '🔍',
+        message: "Checking your document...",
+        emoji: "🔍",
       });
 
       const validation = await this.validateDocument(file);
       if (!validation.valid) {
         throw this.createError(
-          'validation_failed',
+          "validation_failed",
           validation.errors[0].message,
           validation.errors[0].userMessage,
-          'validating',
-          validation.errors[0].recoverable
+          "validating",
+          validation.errors[0].recoverable,
         );
       }
 
@@ -53,13 +56,17 @@ export class DocumentUploadService {
       const document: ProcessedDocument = {
         id: documentId,
         originalName: file.name,
-        displayName: this.generateDisplayName(file.name, processed.documentType),
+        displayName: this.generateDisplayName(
+          file.name,
+          processed.documentType,
+        ),
         type: processed.documentType,
         category: this.categorizeDocument(processed.documentType),
         size: processed.compressedFile.size,
         uploadedAt: new Date(),
-        storageLocation: options.privacy || 'cloud',
-        encryptionStatus: options.encrypt !== false ? 'encrypted' : 'unencrypted',
+        storageLocation: options.privacy || "cloud",
+        encryptionStatus:
+          options.encrypt !== false ? "encrypted" : "unencrypted",
         thumbnail: processed.thumbnail,
         ocrText: processed.ocrText,
         extractedData: processed.extractedData,
@@ -79,30 +86,30 @@ export class DocumentUploadService {
 
       // Step 4: Store document
       options.onProgress?.({
-        stage: 'storing',
+        stage: "storing",
         progress: 80,
-        message: 'Keeping your document safe...',
-        emoji: '🔒',
+        message: "Keeping your document safe...",
+        emoji: "🔒",
       });
 
       const storageResult = await documentStorage.storeDocument(
         processed.compressedFile,
         document,
         {
-          location: options.privacy || 'cloud',
+          location: options.privacy || "cloud",
           encrypt: options.encrypt !== false,
           generateBackup: true,
           familyVault: options.familySharing,
-        }
+        },
       );
 
       if (!storageResult.success) {
         throw this.createError(
-          'storage_failed',
-          'Failed to store document',
-          'I couldn\'t save your document. Please try again.',
-          'storing',
-          true
+          "storage_failed",
+          "Failed to store document",
+          "I couldn't save your document. Please try again.",
+          "storing",
+          true,
         );
       }
 
@@ -110,15 +117,15 @@ export class DocumentUploadService {
       const summary = await this.generateFamilySummary(document);
 
       options.onProgress?.({
-        stage: 'complete',
+        stage: "complete",
         progress: 100,
         message: `Your ${this.getDocumentTypeDisplay(document.type)} is secure!`,
-        emoji: '✅',
+        emoji: "✅",
       });
 
       return {
         id: documentId,
-        status: 'success',
+        status: "success",
         document,
         summary,
       };
@@ -126,7 +133,7 @@ export class DocumentUploadService {
       const uploadError = error as UploadError;
       return {
         id: documentId,
-        status: 'failed',
+        status: "failed",
         error: uploadError,
       };
     }
@@ -135,17 +142,17 @@ export class DocumentUploadService {
   // Process document through intelligent pipeline
   async processDocumentPipeline(
     file: File,
-    options: UploadOptions
+    options: UploadOptions,
   ): Promise<Record<string, unknown>> {
     const result: Record<string, unknown> = {};
 
     // Step 1: Compress if needed
-    if (options.compress !== false && file.type.startsWith('image/')) {
+    if (options.compress !== false && file.type.startsWith("image/")) {
       options.onProgress?.({
-        stage: 'compressing',
+        stage: "compressing",
         progress: 20,
-        message: 'Optimizing your document...',
-        emoji: '📦',
+        message: "Optimizing your document...",
+        emoji: "📦",
       });
 
       result.compressedFile = await compressImage(file);
@@ -159,48 +166,54 @@ export class DocumentUploadService {
     }
 
     // Step 3: Get image dimensions
-    if (file.type.startsWith('image/')) {
-      const dimensionCheck = await validateImageDimensions(result.compressedFile);
-      result.dimensions = dimensionCheck.width && dimensionCheck.height
-        ? { width: dimensionCheck.width, height: dimensionCheck.height }
-        : undefined;
+    if (file.type.startsWith("image/")) {
+      const dimensionCheck = await validateImageDimensions(
+        result.compressedFile,
+      );
+      result.dimensions =
+        dimensionCheck.width && dimensionCheck.height
+          ? { width: dimensionCheck.width, height: dimensionCheck.height }
+          : undefined;
     }
 
     // Step 4: Run OCR if enabled
     if (options.processOCR !== false) {
       options.onProgress?.({
-        stage: 'reading',
+        stage: "reading",
         progress: 40,
-        message: 'Reading your document...',
-        emoji: '📖',
+        message: "Reading your document...",
+        emoji: "📖",
       });
 
-      const ocrResult = await ocrService.extractTextFromImage(result.compressedFile, {
-        localOnly: options.privacy === 'local',
-        preprocessImage: true,
-      });
+      const ocrResult = await ocrService.extractTextFromImage(
+        result.compressedFile,
+        {
+          localOnly: options.privacy === "local",
+          preprocessImage: true,
+        },
+      );
 
       result.ocrText = ocrResult.text;
       result.ocrConfidence = ocrResult.confidence;
-      result.documentType = ocrResult.documentType?.type || 'unknown';
+      result.documentType = ocrResult.documentType?.type || "unknown";
       result.extractedData = ocrResult.structuredData;
     }
 
     // Step 5: AI analysis if enabled and confidence is low
     if (
       options.analyzeWithAI !== false &&
-      options.privacy !== 'local' &&
+      options.privacy !== "local" &&
       result.ocrConfidence < 80
     ) {
       options.onProgress?.({
-        stage: 'analyzing',
+        stage: "analyzing",
         progress: 60,
-        message: 'Understanding your document better...',
-        emoji: '🤖',
+        message: "Understanding your document better...",
+        emoji: "🤖",
       });
 
       const aiResult = await openAIService.analyzeDocument(
-        await this.fileToBase64(result.compressedFile)
+        await this.fileToBase64(result.compressedFile),
       );
 
       if (aiResult.success) {
@@ -218,15 +231,15 @@ export class DocumentUploadService {
   // Validate document
   async validateDocument(file: File): Promise<Record<string, unknown>> {
     const validation = validateDocument(file);
-    
+
     // Additional dimension check for images
-    if (file.type.startsWith('image/')) {
+    if (file.type.startsWith("image/")) {
       const dimensionCheck = await validateImageDimensions(file);
       if (!dimensionCheck.valid) {
         validation.errors.push({
-          code: 'invalid_type',
-          message: dimensionCheck.error || 'Invalid image dimensions',
-          userMessage: dimensionCheck.error || 'This image might be too small.',
+          code: "invalid_type",
+          message: dimensionCheck.error || "Invalid image dimensions",
+          userMessage: dimensionCheck.error || "This image might be too small.",
           recoverable: false,
         });
         validation.valid = false;
@@ -237,20 +250,23 @@ export class DocumentUploadService {
   }
 
   // Generate display name for document
-  private generateDisplayName(originalName: string, documentType: string): string {
-    const date = new Date().toLocaleDateString('en-US', {
-      month: 'short',
-      day: 'numeric',
-      year: 'numeric',
+  private generateDisplayName(
+    originalName: string,
+    documentType: string,
+  ): string {
+    const date = new Date().toLocaleDateString("en-US", {
+      month: "short",
+      day: "numeric",
+      year: "numeric",
     });
 
     const typeDisplay = this.getDocumentTypeDisplay(documentType);
-    
+
     // Remove extension from original name
-    const nameWithoutExt = originalName.replace(/\.[^/.]+$/, '');
-    
+    const nameWithoutExt = originalName.replace(/\.[^/.]+$/, "");
+
     // Create a friendly display name
-    if (documentType !== 'unknown') {
+    if (documentType !== "unknown") {
       return `${typeDisplay} - ${date}`;
     } else {
       // Use original name if type is unknown
@@ -261,59 +277,63 @@ export class DocumentUploadService {
   // Get user-friendly document type display
   private getDocumentTypeDisplay(type: string): string {
     const displayMap: Record<string, string> = {
-      insurance_policy: 'Insurance Policy',
-      bank_statement: 'Bank Statement',
-      property_deed: 'Property Deed',
-      identity_card: 'ID Card',
-      passport: 'Passport',
-      will: 'Will',
-      medical_record: 'Medical Record',
-      contract: 'Contract',
-      invoice: 'Invoice',
-      receipt: 'Receipt',
-      unknown: 'Document',
+      insurance_policy: "Insurance Policy",
+      bank_statement: "Bank Statement",
+      property_deed: "Property Deed",
+      identity_card: "ID Card",
+      passport: "Passport",
+      will: "Will",
+      medical_record: "Medical Record",
+      contract: "Contract",
+      invoice: "Invoice",
+      receipt: "Receipt",
+      unknown: "Document",
     };
-    return displayMap[type] || 'Document';
+    return displayMap[type] || "Document";
   }
 
   // Categorize document
   private categorizeDocument(documentType: string): DocumentCategory {
     const categoryMap: Record<string, DocumentCategory> = {
-      insurance_policy: 'finance',
-      bank_statement: 'finance',
-      property_deed: 'home',
-      identity_card: 'identity',
-      passport: 'identity',
-      will: 'legal',
-      medical_record: 'health',
-      contract: 'legal',
-      invoice: 'finance',
-      receipt: 'finance',
+      insurance_policy: "finance",
+      bank_statement: "finance",
+      property_deed: "home",
+      identity_card: "identity",
+      passport: "identity",
+      will: "legal",
+      medical_record: "health",
+      contract: "legal",
+      invoice: "finance",
+      receipt: "finance",
     };
-    return categoryMap[documentType] || 'other';
+    return categoryMap[documentType] || "other";
   }
 
   // Extract important dates
-  private extractImportantDates(extractedData: Record<string, unknown>): Date[] {
+  private extractImportantDates(
+    extractedData: Record<string, unknown>,
+  ): Date[] {
     const dates: Date[] = [];
-    
+
     if (extractedData?.issueDate) {
       dates.push(new Date(extractedData.issueDate));
     }
-    
+
     if (extractedData?.expiryDate) {
       dates.push(new Date(extractedData.expiryDate));
     }
-    
+
     // Add more date extraction logic based on document type
-    
+
     return dates;
   }
 
   // Generate family-friendly summary
-  async generateFamilySummary(document: ProcessedDocument): Promise<FamilySummary> {
+  async generateFamilySummary(
+    document: ProcessedDocument,
+  ): Promise<FamilySummary> {
     const typeDisplay = this.getDocumentTypeDisplay(document.type);
-    
+
     // Create base summary
     const summary: FamilySummary = {
       title: `${typeDisplay} Added`,
@@ -326,45 +346,51 @@ export class DocumentUploadService {
     // Add key points based on document type
     if (document.metadata.expiryDate) {
       const daysUntilExpiry = Math.floor(
-        (document.metadata.expiryDate.getTime() - Date.now()) / (1000 * 60 * 60 * 24)
+        (document.metadata.expiryDate.getTime() - Date.now()) /
+          (1000 * 60 * 60 * 24),
       );
-      
+
       if (daysUntilExpiry < 90) {
         summary.keyPoints.push(`⚠️ Expires in ${daysUntilExpiry} days`);
-        summary.suggestedActions.push('Set a reminder to renew this document');
+        summary.suggestedActions.push("Set a reminder to renew this document");
       }
     }
 
     // Add type-specific suggestions
     switch (document.type) {
-      case 'insurance_policy':
-        summary.relatedDocuments = ['Medical Records', 'Bank Statements'];
-        summary.suggestedActions.push('Review beneficiaries annually');
-        summary.familyMessage = 'This insurance policy helps protect our family\'s future.';
+      case "insurance_policy":
+        summary.relatedDocuments = ["Medical Records", "Bank Statements"];
+        summary.suggestedActions.push("Review beneficiaries annually");
+        summary.familyMessage =
+          "This insurance policy helps protect our family's future.";
         break;
-      
-      case 'will':
-        summary.relatedDocuments = ['Power of Attorney', 'Insurance Policies'];
-        summary.suggestedActions.push('Inform your executor about this update');
-        summary.familyMessage = 'Your wishes have been safely recorded for your loved ones.';
+
+      case "will":
+        summary.relatedDocuments = ["Power of Attorney", "Insurance Policies"];
+        summary.suggestedActions.push("Inform your executor about this update");
+        summary.familyMessage =
+          "Your wishes have been safely recorded for your loved ones.";
         break;
-      
-      case 'property_deed':
-        summary.relatedDocuments = ['Insurance Policy', 'Tax Documents'];
-        summary.suggestedActions.push('Update home insurance if needed');
-        summary.familyMessage = 'Your property documents are organized and secure.';
+
+      case "property_deed":
+        summary.relatedDocuments = ["Insurance Policy", "Tax Documents"];
+        summary.suggestedActions.push("Update home insurance if needed");
+        summary.familyMessage =
+          "Your property documents are organized and secure.";
         break;
     }
 
     // Add extraction highlights
     if (document.extractedData) {
       if (document.extractedData.parties?.length > 0) {
-        summary.keyPoints.push(`Involves: ${document.extractedData.parties.join(', ')}`);
+        summary.keyPoints.push(
+          `Involves: ${document.extractedData.parties.join(", ")}`,
+        );
       }
-      
+
       if (document.extractedData.amount) {
         summary.keyPoints.push(
-          `Amount: ${document.extractedData.currency || '$'}${document.extractedData.amount.toLocaleString()}`
+          `Amount: ${document.extractedData.currency || "$"}${document.extractedData.amount.toLocaleString()}`,
         );
       }
     }
@@ -378,7 +404,7 @@ export class DocumentUploadService {
       const reader = new FileReader();
       reader.onload = () => {
         const base64 = reader.result as string;
-        resolve(base64.split(',')[1]);
+        resolve(base64.split(",")[1]);
       };
       reader.onerror = reject;
       reader.readAsDataURL(file);
@@ -394,8 +420,8 @@ export class DocumentUploadService {
     code: string,
     message: string,
     userMessage: string,
-    stage: UploadProgress['stage'],
-    recoverable: boolean
+    stage: UploadProgress["stage"],
+    recoverable: boolean,
   ): UploadError {
     return {
       code,

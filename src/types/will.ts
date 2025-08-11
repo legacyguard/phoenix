@@ -26,7 +26,7 @@ export interface GeneratedWill {
   user_id: string;
   country_code: string;
   will_content: WillContent;
-  status: 'draft' | 'pending_signatures' | 'completed' | 'revoked';
+  status: "draft" | "pending_signatures" | "completed" | "revoked";
   version: number;
   pdf_url?: string;
   handwriting_template_url?: string;
@@ -60,7 +60,7 @@ export interface Beneficiary {
 }
 
 export interface AssetAllocation {
-  assetType: 'percentage' | 'specific';
+  assetType: "percentage" | "specific";
   description: string;
   value?: number; // For percentage allocations
   specificAssets?: string[]; // For specific asset allocations
@@ -95,7 +95,7 @@ export interface SpecialBequest {
 export interface WillSignature {
   id: string;
   will_id: string;
-  signatory_type: 'testator' | 'witness' | 'notary';
+  signatory_type: "testator" | "witness" | "notary";
   signatory_name: string;
   signed_at?: string;
   signature_data?: string;

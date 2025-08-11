@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 // Types for Profile and Tasks
 interface UserProfile {
@@ -17,7 +17,7 @@ interface UserProfile {
     startingPoint: string;
     priorityOrder: string[];
     timeEstimate: string;
-    complexityLevel: 'basic' | 'intermediate' | 'advanced';
+    complexityLevel: "basic" | "intermediate" | "advanced";
   };
 }
 
@@ -28,24 +28,23 @@ interface PersonalizedTask {
   archetypeRelevance: number;
   preparednessRequirement: number;
   estimatedTime: string;
-  difficultyLevel: 'easy' | 'medium' | 'hard';
+  difficultyLevel: "easy" | "medium" | "hard";
   emotionalBenefit: string;
   familyImpact: string;
 }
 
 // Enums for Archetype and Scoring
 enum ResponsibilityArchetype {
-  FamilyAnchor = 'Family Anchor',
-  Provider = 'Provider',
-  Protector = 'Protector',
-  Builder = 'Builder'
+  FamilyAnchor = "Family Anchor",
+  Provider = "Provider",
+  Protector = "Protector",
+  Builder = "Builder",
 }
 
 const PersonalizationEngine: React.FC = () => {
   const [userProfile, setUserProfile] = useState<UserProfile | null>(null);
 
   useEffect(() => {
-     
     // Simulate loading user profile from storage or analysis
     const profile = generateUserProfile();
     setUserProfile(profile);
@@ -64,14 +63,18 @@ const PersonalizationEngine: React.FC = () => {
         primaryMotivation: "Your family depends on your leadership...",
         communicationStyle: "Direct and supportive",
         urgencyTone: "Immediate action required",
-        successMetrics: ['Family stability', 'Financial security']
+        successMetrics: ["Family stability", "Financial security"],
       },
       recommendedPath: {
         startingPoint: "Organize financial documents",
-        priorityOrder: ["Financial security", "Legal documentation", "Family communication"],
-        timeEstimate: '3 months',
-        complexityLevel: 'intermediate'
-      }
+        priorityOrder: [
+          "Financial security",
+          "Legal documentation",
+          "Family communication",
+        ],
+        timeEstimate: "3 months",
+        complexityLevel: "intermediate",
+      },
     };
   };
 
@@ -87,10 +90,16 @@ const PersonalizationEngine: React.FC = () => {
           <p>Urgency Level: {userProfile.urgencyLevel}</p>
           <h3>Personalized Messaging</h3>
           <p>{userProfile.personalizedMessaging.primaryMotivation}</p>
-          <p>Communication Style: {userProfile.personalizedMessaging.communicationStyle}</p>
+          <p>
+            Communication Style:{" "}
+            {userProfile.personalizedMessaging.communicationStyle}
+          </p>
           <h3>Recommended Path</h3>
           <p>Starting Point: {userProfile.recommendedPath.startingPoint}</p>
-          <p>Priority Order: {userProfile.recommendedPath.priorityOrder.join(', ')}</p>
+          <p>
+            Priority Order:{" "}
+            {userProfile.recommendedPath.priorityOrder.join(", ")}
+          </p>
           <p>Time Estimate: {userProfile.recommendedPath.timeEstimate}</p>
           <p>Complexity Level: {userProfile.recommendedPath.complexityLevel}</p>
         </div>
@@ -102,4 +111,3 @@ const PersonalizationEngine: React.FC = () => {
 };
 
 export default PersonalizationEngine;
-

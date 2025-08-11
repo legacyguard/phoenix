@@ -2,7 +2,7 @@ export interface WillSyncPreferences {
   id: string;
   user_id: string;
   auto_sync_enabled: boolean;
-  sync_frequency: 'immediate' | 'daily' | 'weekly';
+  sync_frequency: "immediate" | "daily" | "weekly";
   require_approval: boolean;
   sync_triggers: {
     asset_added: boolean;
@@ -26,7 +26,7 @@ export interface WillSyncLog {
   changes_made: WillChanges;
   previous_version?: string;
   new_version?: string;
-  status: 'pending' | 'approved' | 'rejected' | 'auto_applied';
+  status: "pending" | "approved" | "rejected" | "auto_applied";
   approved_at?: string;
   approved_by?: string;
   created_at: string;
@@ -38,7 +38,7 @@ export interface WillVersion {
   version_number: number;
   content_snapshot: Record<string, unknown>; // Will content structure
   changes_from_previous?: WillChanges;
-  created_by: 'user' | 'system' | 'auto_sync';
+  created_by: "user" | "system" | "auto_sync";
   created_reason: string;
   is_current: boolean;
   created_at: string;
@@ -51,7 +51,7 @@ export interface WillSyncQueue {
   trigger_events: TriggerEvent[];
   scheduled_for: string;
   processed_at?: string;
-  status: 'pending' | 'processing' | 'completed' | 'failed';
+  status: "pending" | "processing" | "completed" | "failed";
   error_message?: string;
   created_at: string;
 }
@@ -72,11 +72,19 @@ export interface WillChanges {
     assets?: Array<{ id: string; name: string; allocation?: number }>;
     beneficiaries?: Array<{ id: string; name: string; allocation?: number }>;
     guardians?: Array<{ id: string; name: string; for_children: string[] }>;
-    executors?: Array<{ id: string; name: string; type: 'primary' | 'alternative' }>;
+    executors?: Array<{
+      id: string;
+      name: string;
+      type: "primary" | "alternative";
+    }>;
   };
   removed?: {
     assets?: Array<{ id: string; name: string }>;
-    beneficiaries?: Array<{ id: string; name: string; previous_allocation: number }>;
+    beneficiaries?: Array<{
+      id: string;
+      name: string;
+      previous_allocation: number;
+    }>;
     guardians?: Array<{ id: string; name: string }>;
     executors?: Array<{ id: string; name: string }>;
   };
@@ -106,7 +114,7 @@ export interface WillChanges {
 
 export interface WillSyncNotification {
   id: string;
-  type: 'sync_completed' | 'approval_required' | 'sync_failed';
+  type: "sync_completed" | "approval_required" | "sync_failed";
   title: string;
   message: string;
   changes_summary?: string;

@@ -16,12 +16,13 @@ interface StackFrame {
 export function parseStackTrace(stack: string): StackFrame[] {
   if (!stack) return [];
 
-  const lines = stack.split('\n');
+  const lines = stack.split("\n");
   const frames: StackFrame[] = [];
 
   // Regex patterns pre rôzne formáty stack traces
   const chromeRegex = /^\s*at\s+(.+?)\s+\((.+?):(\d+):(\d+)\)$/;
-  const chromeEvalRegex = /^\s*at\s+(.+?)\s+\(eval\s+at\s+.+?\),\s+(.+?):(\d+):(\d+)\)$/;
+  const chromeEvalRegex =
+    /^\s*at\s+(.+?)\s+\(eval\s+at\s+.+?\),\s+(.+?):(\d+):(\d+)\)$/;
   const firefoxRegex = /^\s*(.+?)@(.+?):(\d+):(\d+)$/;
   const safariRegex = /^\s*(.+?)@(.+?):(\d+):(\d+)$/;
 
@@ -30,13 +31,16 @@ export function parseStackTrace(stack: string): StackFrame[] {
     let frame: StackFrame = {};
 
     // Chrome/Node.js format
-    if ((match = chromeRegex.exec(line)) || (match = chromeEvalRegex.exec(line))) {
+    if (
+      (match = chromeRegex.exec(line)) ||
+      (match = chromeEvalRegex.exec(line))
+    ) {
       frame = {
         functionName: match[1],
         fileName: match[2],
         lineNumber: parseInt(match[3], 10),
         columnNumber: parseInt(match[4], 10),
-        source: line
+        source: line,
       };
     }
     // Firefox format
@@ -46,7 +50,7 @@ export function parseStackTrace(stack: string): StackFrame[] {
         fileName: match[2],
         lineNumber: parseInt(match[3], 10),
         columnNumber: parseInt(match[4], 10),
-        source: line
+        source: line,
       };
     }
     // Safari format
@@ -56,20 +60,24 @@ export function parseStackTrace(stack: string): StackFrame[] {
         fileName: match[2],
         lineNumber: parseInt(match[3], 10),
         columnNumber: parseInt(match[4], 10),
-        source: line
+        source: line,
       };
     }
     // Jednoduchý formát bez zátvorkiek
-    else if (line.includes('@')) {
-      const parts = line.split('@');
+    else if (line.includes("@")) {
+      const parts = line.split("@");
       if (parts.length === 2) {
-        const locationParts = parts[1].split(':');
+        const locationParts = parts[1].split(":");
         frame = {
           functionName: parts[0].trim(),
           fileName: locationParts[0],
-          lineNumber: locationParts[1] ? parseInt(locationParts[1], 10) : undefined,
-          columnNumber: locationParts[2] ? parseInt(locationParts[2], 10) : undefined,
-          source: line
+          lineNumber: locationParts[1]
+            ? parseInt(locationParts[1], 10)
+            : undefined,
+          columnNumber: locationParts[2]
+            ? parseInt(locationParts[2], 10)
+            : undefined,
+          source: line,
         };
       }
     }
@@ -87,24 +95,24 @@ export function parseStackTrace(stack: string): StackFrame[] {
  */
 export function formatStackFrame(frame: StackFrame): string {
   const { functionName, fileName, lineNumber, columnNumber } = frame;
-  
-  let result = functionName || '<anonymous>';
-  
+
+  let result = functionName || "<anonymous>";
+
   if (fileName) {
     // Skrátiť dlhé cesty k súborom
-    const shortFileName = fileName.replace(/^.*\/node_modules\//, '~/');
+    const shortFileName = fileName.replace(/^.*\/node_modules\//, "~/");
     result += ` (${shortFileName}`;
-    
+
     if (lineNumber) {
       result += `:${lineNumber}`;
       if (columnNumber) {
         result += `:${columnNumber}`;
       }
     }
-    
-    result += ')';
+
+    result += ")";
   }
-  
+
   return result;
 }
 
@@ -117,30 +125,30 @@ export function filterStackFrames(
     excludeNodeModules?: boolean;
     excludeNative?: boolean;
     includeOnly?: string[];
-  } = {}
+  } = {},
 ): StackFrame[] {
-  const { 
-    excludeNodeModules = true, 
+  const {
+    excludeNodeModules = true,
     excludeNative = true,
-    includeOnly = []
+    includeOnly = [],
   } = options;
 
-  return frames.filter(frame => {
+  return frames.filter((frame) => {
     if (!frame.fileName) return !excludeNative;
 
     // Vylúčiť node_modules
-    if (excludeNodeModules && frame.fileName.includes('node_modules')) {
+    if (excludeNodeModules && frame.fileName.includes("node_modules")) {
       return false;
     }
 
     // Vylúčiť natívne funkcie
-    if (excludeNative && frame.fileName.startsWith('native')) {
+    if (excludeNative && frame.fileName.startsWith("native")) {
       return false;
     }
 
     // Ak je špecifikovaný zoznam, zahrnúť len tie
     if (includeOnly.length > 0) {
-      return includeOnly.some(pattern => frame.fileName!.includes(pattern));
+      return includeOnly.some((pattern) => frame.fileName!.includes(pattern));
     }
 
     return true;
@@ -157,10 +165,13 @@ export function enhanceError(
     action?: string;
     userId?: string;
     metadata?: Record<string, unknown>;
-  }
+  },
 ): Error & { enhanced: boolean; context?: Record<string, unknown> } {
-  const enhanced = error as Error & { enhanced: boolean; context?: Record<string, unknown> };
-  
+  const enhanced = error as Error & {
+    enhanced: boolean;
+    context?: Record<string, unknown>;
+  };
+
   if (enhanced.enhanced) {
     return enhanced;
   }
@@ -170,7 +181,7 @@ export function enhanceError(
     ...context,
     timestamp: new Date().toISOString(),
     url: window.location.href,
-    userAgent: navigator.userAgent
+    userAgent: navigator.userAgent,
   };
 
   // Označiť ako vylepšený
@@ -193,18 +204,21 @@ export function getErrorSummary(error: Error): {
   component?: string;
   line?: string;
 } {
-  const frames = parseStackTrace(error.stack || '');
-  const relevantFrame = frames.find(f => 
-    f.fileName && 
-    !f.fileName.includes('node_modules') &&
-    !f.fileName.startsWith('native')
+  const frames = parseStackTrace(error.stack || "");
+  const relevantFrame = frames.find(
+    (f) =>
+      f.fileName &&
+      !f.fileName.includes("node_modules") &&
+      !f.fileName.startsWith("native"),
   );
 
   return {
     type: error.name,
     message: error.message,
     component: relevantFrame?.functionName,
-    line: relevantFrame ? `${relevantFrame.fileName}:${relevantFrame.lineNumber}` : undefined
+    line: relevantFrame
+      ? `${relevantFrame.fileName}:${relevantFrame.lineNumber}`
+      : undefined,
   };
 }
 
@@ -216,7 +230,7 @@ export function serializeError(error: Error): Record<string, unknown> {
     name: error.name,
     message: error.message,
     stack: error.stack,
-    timestamp: new Date().toISOString()
+    timestamp: new Date().toISOString(),
   };
 
   // Pridať vlastné vlastnosti
@@ -242,12 +256,14 @@ export function normalizeError(error: unknown): Error {
     return error;
   }
 
-  if (typeof error === 'string') {
+  if (typeof error === "string") {
     return new Error(error);
   }
 
-  if (typeof error === 'object' && error !== null) {
-    const err = new Error((error as Record<string, unknown>).message as string || 'Unknown error');
+  if (typeof error === "object" && error !== null) {
+    const err = new Error(
+      ((error as Record<string, unknown>).message as string) || "Unknown error",
+    );
     Object.assign(err, error);
     return err;
   }

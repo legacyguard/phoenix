@@ -1,24 +1,24 @@
-import { createWorker, Worker as TesseractWorker } from 'tesseract.js';
-import type { OCRProgress } from '../services/ocr.types';
+import { createWorker, Worker as TesseractWorker } from "tesseract.js";
+import type { OCRProgress } from "../services/ocr.types";
 
 let worker: TesseractWorker | null = null;
 
 // Message types for worker communication
 interface WorkerMessage {
-  type: 'INIT' | 'RECOGNIZE' | 'TERMINATE';
+  type: "INIT" | "RECOGNIZE" | "TERMINATE";
   payload?: Record<string, unknown>;
   id: string;
 }
 
 interface WorkerResponse {
-  type: 'SUCCESS' | 'ERROR' | 'PROGRESS';
+  type: "SUCCESS" | "ERROR" | "PROGRESS";
   data?: Record<string, unknown>;
   error?: string;
   id: string;
 }
 
 // Initialize Tesseract worker
-async function initializeWorker(languages: string[] = ['eng']) {
+async function initializeWorker(languages: string[] = ["eng"]) {
   if (worker) {
     await worker.terminate();
   }
@@ -33,31 +33,35 @@ async function initializeWorker(languages: string[] = ['eng']) {
       };
 
       self.postMessage({
-        type: 'PROGRESS',
+        type: "PROGRESS",
         data: progressData,
-        id: 'progress',
+        id: "progress",
       } as WorkerResponse);
     },
-    langPath: 'https://tessdata.projectnaptha.com/4.0.0',
-    cachePath: './tesseract-cache',
+    langPath: "https://tessdata.projectnaptha.com/4.0.0",
+    cachePath: "./tesseract-cache",
   });
 
-  await worker.loadLanguage(languages.join('+'));
-  await worker.initialize(languages.join('+'));
-  
+  await worker.loadLanguage(languages.join("+"));
+  await worker.initialize(languages.join("+"));
+
   // Set parameters for better accuracy
   await worker.setParameters({
-    tessedit_char_whitelist: '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzáčďéěíňóřšťúůýžÁČĎÉĚÍŇÓŘŠŤÚŮÝŽäöüÄÖÜ .,;:!?()[]{}/-_@#$%&*+=€"\'',
-    preserve_interword_spaces: '1',
-    tessjs_create_hocr: '0',
-    tessjs_create_tsv: '0',
+    tessedit_char_whitelist:
+      "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzáčďéěíňóřšťúůýžÁČĎÉĚÍŇÓŘŠŤÚŮÝŽäöüÄÖÜ .,;:!?()[]{}/-_@#$%&*+=€\"'",
+    preserve_interword_spaces: "1",
+    tessjs_create_hocr: "0",
+    tessjs_create_tsv: "0",
   });
 }
 
 // Perform OCR on image
-async function recognize(imageData: string | ArrayBuffer, options: Record<string, unknown> = {}) {
+async function recognize(
+  imageData: string | ArrayBuffer,
+  options: Record<string, unknown> = {},
+) {
   if (!worker) {
-    throw new Error('Worker not initialized');
+    throw new Error("Worker not initialized");
   }
 
   const result = await worker.recognize(imageData, {
@@ -76,49 +80,50 @@ async function recognize(imageData: string | ArrayBuffer, options: Record<string
 // Get user-friendly progress messages
 function getProgressMessage(status: string, progress: number): string {
   const messages: Record<string, string> = {
-    'loading tesseract.js': 'Preparing to read your document...',
-    'initializing tesseract': 'Getting ready to help you...',
-    'loading language traineddata': 'Learning how to read your document...',
-    'initializing api': 'Almost ready to start...',
-    'recognizing text': `Reading your document... ${Math.round(progress * 100)}%`,
+    "loading tesseract.js": "Preparing to read your document...",
+    "initializing tesseract": "Getting ready to help you...",
+    "loading language traineddata": "Learning how to read your document...",
+    "initializing api": "Almost ready to start...",
+    "recognizing text": `Reading your document... ${Math.round(progress * 100)}%`,
   };
 
-  return messages[status] || 'Processing your document...';
+  return messages[status] || "Processing your document...";
 }
 
 // Handle messages from main thread
-self.addEventListener('message', async (event: MessageEvent<WorkerMessage>) => {
+self.addEventListener("message", async (event: MessageEvent<WorkerMessage>) => {
   const { type, payload, id } = event.data;
 
   try {
     switch (type) {
-      case 'INIT':
-        await initializeWorker(payload.languages || ['eng']);
+      case "INIT":
+        await initializeWorker(payload.languages || ["eng"]);
         self.postMessage({
-          type: 'SUCCESS',
+          type: "SUCCESS",
           data: { initialized: true },
           id,
         } as WorkerResponse);
         break;
 
-      case 'RECOGNIZE': {
-      const result = await recognize(payload.imageData, payload.options);
-      break;
-    }
+      case "RECOGNIZE":
+        {
+          const result = await recognize(payload.imageData, payload.options);
+          break;
+        }
         self.postMessage({
-          type: 'SUCCESS',
+          type: "SUCCESS",
           data: result,
           id,
         } as WorkerResponse);
         break;
 
-      case 'TERMINATE':
+      case "TERMINATE":
         if (worker) {
           await worker.terminate();
           worker = null;
         }
         self.postMessage({
-          type: 'SUCCESS',
+          type: "SUCCESS",
           data: { terminated: true },
           id,
         } as WorkerResponse);
@@ -129,8 +134,8 @@ self.addEventListener('message', async (event: MessageEvent<WorkerMessage>) => {
     }
   } catch (error) {
     self.postMessage({
-      type: 'ERROR',
-      error: error instanceof Error ? error.message : 'Unknown error',
+      type: "ERROR",
+      error: error instanceof Error ? error.message : "Unknown error",
       id,
     } as WorkerResponse);
   }

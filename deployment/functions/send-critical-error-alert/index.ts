@@ -2,8 +2,9 @@ import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.38.4";
 
 const corsHeaders = {
-  'Access-Control-Allow-Origin': '*',
-  'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Headers":
+    "authorization, x-client-info, apikey, content-type",
 };
 
 interface AlertRequest {
@@ -13,31 +14,31 @@ interface AlertRequest {
 
 serve(async (req) => {
   // Handle CORS preflight requests
-  if (req.method === 'OPTIONS') {
-    return new Response('ok', { headers: corsHeaders });
+  if (req.method === "OPTIONS") {
+    return new Response("ok", { headers: corsHeaders });
   }
 
   try {
     const supabaseClient = createClient(
-      Deno.env.get('SUPABASE_URL') ?? '',
-      Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') ?? '',
+      Deno.env.get("SUPABASE_URL") ?? "",
+      Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "",
       {
         auth: {
           autoRefreshToken: false,
-          persistSession: false
-        }
-      }
+          persistSession: false,
+        },
+      },
     );
 
-    const { errorCount, timeWindow } = await req.json() as AlertRequest;
+    const { errorCount, timeWindow } = (await req.json()) as AlertRequest;
 
     // Get recent critical errors for the email
     const { data: recentErrors, error: errorsError } = await supabaseClient
-      .from('error_logs')
-      .select('*')
-      .eq('error_level', 'critical')
-      .gte('created_at', new Date(Date.now() - 3600000).toISOString()) // Last hour
-      .order('created_at', { ascending: false })
+      .from("error_logs")
+      .select("*")
+      .eq("error_level", "critical")
+      .gte("created_at", new Date(Date.now() - 3600000).toISOString()) // Last hour
+      .order("created_at", { ascending: false })
       .limit(10);
 
     if (errorsError) {
@@ -46,23 +47,28 @@ serve(async (req) => {
 
     // Get error statistics
     const { data: stats, error: statsError } = await supabaseClient
-      .from('error_statistics')
-      .select('*')
+      .from("error_statistics")
+      .select("*")
       .limit(24); // Last 24 hours
 
     // Prepare email content
-    const errorSummary = recentErrors?.map((error, index) => `
+    const errorSummary =
+      recentErrors
+        ?.map(
+          (error, index) => `
       <tr>
         <td style="padding: 12px; border-bottom: 1px solid #eee;">
           <strong>${index + 1}. ${error.error_message}</strong><br>
           <small style="color: #666;">
             ${new Date(error.created_at).toLocaleString()}<br>
-            Page: ${error.page_url || 'Unknown'}<br>
-            User: ${error.user_id || 'Anonymous'}
+            Page: ${error.page_url || "Unknown"}<br>
+            User: ${error.user_id || "Anonymous"}
           </small>
         </td>
       </tr>
-    `).join('') || '<tr><td>No recent errors found</td></tr>';
+    `,
+        )
+        .join("") || "<tr><td>No recent errors found</td></tr>";
 
     const emailHtml = `
       <!DOCTYPE html>
@@ -118,7 +124,7 @@ serve(async (req) => {
           </div>
 
           <div style="text-align: center; margin-top: 30px;">
-            <a href="${Deno.env.get('SUPABASE_URL')}/project/default/editor/table/error_logs" 
+            <a href="${Deno.env.get("SUPABASE_URL")}/project/default/editor/table/error_logs" 
                style="display: inline-block; background-color: #dc2626; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: 600;">
               View Error Logs in Dashboard
             </a>
@@ -145,12 +151,18 @@ ALERT DETAILS:
 - Alert Time: ${new Date().toLocaleString()}
 
 RECENT CRITICAL ERRORS:
-${recentErrors?.map((error, index) => `
+${
+  recentErrors
+    ?.map(
+      (error, index) => `
 ${index + 1}. ${error.error_message}
    Time: ${new Date(error.created_at).toLocaleString()}
-   Page: ${error.page_url || 'Unknown'}
-   User: ${error.user_id || 'Anonymous'}
-`).join('\n') || 'No recent errors found'}
+   Page: ${error.page_url || "Unknown"}
+   User: ${error.user_id || "Anonymous"}
+`,
+    )
+    .join("\n") || "No recent errors found"
+}
 
 RECOMMENDED ACTIONS:
 - Review the error logs in the Supabase dashboard
@@ -158,25 +170,27 @@ RECOMMENDED ACTIONS:
 - Verify system resources and external service connectivity
 - Consider rolling back if errors started after a recent change
 
-View logs: ${Deno.env.get('SUPABASE_URL')}/project/default/editor/table/error_logs
+View logs: ${Deno.env.get("SUPABASE_URL")}/project/default/editor/table/error_logs
 
 This is an automated alert from LegacyGuard error monitoring system.
     `;
 
     // Send email using Resend
-    const RESEND_API_KEY = Deno.env.get('RESEND_API_KEY');
-    const ERROR_ALERT_EMAIL = Deno.env.get('ERROR_ALERT_EMAIL') || 'admin@legacyguard.com';
-    const RESEND_FROM_EMAIL = Deno.env.get('RESEND_FROM_EMAIL') || 'alerts@legacyguard.com';
+    const RESEND_API_KEY = Deno.env.get("RESEND_API_KEY");
+    const ERROR_ALERT_EMAIL =
+      Deno.env.get("ERROR_ALERT_EMAIL") || "admin@legacyguard.com";
+    const RESEND_FROM_EMAIL =
+      Deno.env.get("RESEND_FROM_EMAIL") || "alerts@legacyguard.com";
 
     if (!RESEND_API_KEY) {
-      throw new Error('RESEND_API_KEY is not configured');
+      throw new Error("RESEND_API_KEY is not configured");
     }
 
-    const emailResponse = await fetch('https://api.resend.com/emails', {
-      method: 'POST',
+    const emailResponse = await fetch("https://api.resend.com/emails", {
+      method: "POST",
       headers: {
-        'Authorization': `Bearer ${RESEND_API_KEY}`,
-        'Content-Type': 'application/json',
+        Authorization: `Bearer ${RESEND_API_KEY}`,
+        "Content-Type": "application/json",
       },
       body: JSON.stringify({
         from: RESEND_FROM_EMAIL,
@@ -193,42 +207,40 @@ This is an automated alert from LegacyGuard error monitoring system.
     }
 
     // Log that alert was sent
-    await supabaseClient
-      .from('error_logs')
-      .insert({
-        error_level: 'warning',
-        error_message: `Critical error alert sent: ${errorCount} errors in ${timeWindow}`,
-        error_context: {
-          type: 'alertSent',
-          errorCount,
-          timeWindow,
-          sentTo: ERROR_ALERT_EMAIL
-        }
-      });
+    await supabaseClient.from("error_logs").insert({
+      error_level: "warning",
+      error_message: `Critical error alert sent: ${errorCount} errors in ${timeWindow}`,
+      error_context: {
+        type: "alertSent",
+        errorCount,
+        timeWindow,
+        sentTo: ERROR_ALERT_EMAIL,
+      },
+    });
 
     return new Response(
-      JSON.stringify({ 
-        success: true, 
-        message: 'Critical error alert sent successfully',
+      JSON.stringify({
+        success: true,
+        message: "Critical error alert sent successfully",
         errorCount,
-        sentTo: ERROR_ALERT_EMAIL
+        sentTo: ERROR_ALERT_EMAIL,
       }),
-      { 
-        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-        status: 200 
-      }
+      {
+        headers: { ...corsHeaders, "Content-Type": "application/json" },
+        status: 200,
+      },
     );
   } catch (error) {
-    console.error('Error sending critical error alert:', error);
+    console.error("Error sending critical error alert:", error);
     return new Response(
-      JSON.stringify({ 
-        success: false, 
-        error: error.message 
+      JSON.stringify({
+        success: false,
+        error: error.message,
       }),
-      { 
-        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-        status: 500 
-      }
+      {
+        headers: { ...corsHeaders, "Content-Type": "application/json" },
+        status: 500,
+      },
     );
   }
 });

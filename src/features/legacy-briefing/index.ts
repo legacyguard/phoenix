@@ -1,2 +1,2 @@
-export { LegacyBriefing } from './components/LegacyBriefing';
-export { LegacyLetters } from './components/LegacyLetters';
+export { LegacyBriefing } from "./components/LegacyBriefing";
+export { LegacyLetters } from "./components/LegacyLetters";

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 /**
  * Support component shown when users feel overwhelmed.
@@ -9,8 +9,8 @@ const OverwhelmSupport: React.FC = () => {
     <div className="emotional-support overwhelm">
       <h3>This Can Feel Like a Lot</h3>
       <p>
-        It's completely normal to feel overwhelmed when thinking about these important topics.
-        You're dealing with big, emotional decisions.
+        It's completely normal to feel overwhelmed when thinking about these
+        important topics. You're dealing with big, emotional decisions.
       </p>
       <div className="support-options">
         <button>Take a Break</button>
@@ -22,4 +22,3 @@ const OverwhelmSupport: React.FC = () => {
 };
 
 export default OverwhelmSupport;
-

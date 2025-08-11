@@ -1,19 +1,19 @@
-import React from 'react';
-import { useTranslation } from 'react-i18next';
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { z, ZodObject, ZodRawShape } from 'zod';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { FormField } from '@/components/ui/form-field';
-import { toast } from 'sonner';
+import React from "react";
+import { useTranslation } from "react-i18next";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z, ZodObject, ZodRawShape } from "zod";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { FormField } from "@/components/ui/form-field";
+import { toast } from "sonner";
 
 // Type for a dynamic field
 export type AssetField = {
   name: string;
   label: string;
-  type: 'text' | 'number' | 'date';
+  type: "text" | "number" | "date";
   required?: boolean;
   placeholder?: string;
   options?: Array<{ label: string; value: string }>; // for select fields in the future
@@ -32,8 +32,20 @@ export interface AssetFormProps {
 
 // Default fields for simple asset form
 const defaultFields: AssetField[] = [
-  { name: 'name', label: 'dashboard.assetName', type: 'text', required: true, placeholder: 'dashboard.placeholders.assetName' },
-  { name: 'type', label: 'dashboard.assetType', type: 'text', required: true, placeholder: 'dashboard.placeholders.assetType' },
+  {
+    name: "name",
+    label: "dashboard.assetName",
+    type: "text",
+    required: true,
+    placeholder: "dashboard.placeholders.assetName",
+  },
+  {
+    name: "type",
+    label: "dashboard.assetType",
+    type: "text",
+    required: true,
+    placeholder: "dashboard.placeholders.assetType",
+  },
 ];
 
 export const AssetForm: React.FC<AssetFormProps> = ({
@@ -44,32 +56,38 @@ export const AssetForm: React.FC<AssetFormProps> = ({
   fields = defaultFields,
   schema,
 }) => {
-  const { t } = useTranslation('errors');
+  const { t } = useTranslation("errors");
 
   // Build a zod schema dynamically if not provided
   const assetFormSchema = React.useMemo(() => {
     if (schema) return schema;
     const shape: ZodRawShape = {};
-    fields.forEach(field => {
-      if (field.type === 'number') {
+    fields.forEach((field) => {
+      if (field.type === "number") {
         if (field.required) {
           shape[field.name] = z.preprocess(
-            val => (val === '' ? undefined : Number(val)),
+            (val) => (val === "" ? undefined : Number(val)),
             z.number({
-              required_error: t('validation.errors.requiredField'),
-              invalid_type_error: t('validation.errors.mustBeNumber')
-            })
+              required_error: t("common:validation.errors.requiredField"),
+              invalid_type_error: t("common:validation.errors.mustBeNumber"),
+            }),
           );
         } else {
           shape[field.name] = z.preprocess(
-            val => (val === '' ? undefined : Number(val)),
-            z.number({ invalid_type_error: t('validation.errors.mustBeNumber') }).optional()
+            (val) => (val === "" ? undefined : Number(val)),
+            z
+              .number({
+                invalid_type_error: t("common:validation.errors.mustBeNumber"),
+              })
+              .optional(),
           );
         }
       } else {
         let zodField = z.string();
         if (field.required) {
-          zodField = zodField.min(1, { message: t('validation.errors.requiredField') });
+          zodField = zodField.min(1, {
+            message: t("common:validation.errors.requiredField"),
+          });
         }
         shape[field.name] = zodField;
       }
@@ -84,7 +102,7 @@ export const AssetForm: React.FC<AssetFormProps> = ({
   } = useForm<AssetFormData>({
     resolver: zodResolver(assetFormSchema),
     defaultValues: fields.reduce((acc, field) => {
-      acc[field.name] = initialData[field.name] || '';
+      acc[field.name] = initialData[field.name] || "";
       return acc;
     }, {} as AssetFormData),
   });
@@ -93,14 +111,14 @@ export const AssetForm: React.FC<AssetFormProps> = ({
     try {
       await onSubmit(data);
     } catch (error) {
-      console.error('Error submitting asset form:', error);
-      toast.error(t('dashboard.errors.failedToSaveAsset'));
+      console.error("Error submitting asset form:", error);
+      toast.error(t("dashboard-main:dashboard.errors.failedToSaveAsset"));
     }
   };
 
   return (
     <form onSubmit={handleSubmit(onFormSubmit)} className="space-y-4">
-      {fields.map(field => (
+      {fields.map((field) => (
         <FormField
           key={field.name}
           label={t(field.label)}
@@ -110,19 +128,19 @@ export const AssetForm: React.FC<AssetFormProps> = ({
           <Input
             id={field.name}
             type={field.type}
-            placeholder={t(field.placeholder || '')}
+            placeholder={t(field.placeholder || "")}
             {...register(field.name)}
-            className={errors[field.name] ? 'border-red-500' : ''}
+            className={errors[field.name] ? "border-red-500" : ""}
           />
         </FormField>
       ))}
       <div className="flex gap-3 pt-4">
         <Button type="submit" disabled={isSubmitting} className="flex-1">
           {isSubmitting
-            ? t('ui.saving')
+            ? t("common:ui.saving")
             : isEditing
-            ? t('dashboard.updateAsset')
-            : t('dashboard.saveAsset')}
+              ? t("dashboard-main:dashboard.updateAsset")
+              : t("dashboard-main:dashboard.saveAsset")}
         </Button>
         <Button
           type="button"
@@ -130,7 +148,7 @@ export const AssetForm: React.FC<AssetFormProps> = ({
           onClick={onCancel}
           disabled={isSubmitting}
         >
-          {t('ui.cancel')}
+          {t("ui.cancel")}
         </Button>
       </div>
     </form>

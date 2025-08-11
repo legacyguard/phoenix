@@ -8,7 +8,7 @@ export interface TaskItem {
   id: string;
   title: string;
   description: string;
-  priority: 'high' | 'medium' | 'low';
+  priority: "high" | "medium" | "low";
   pillar: string;
   completed: boolean;
   link: string;
@@ -17,15 +17,15 @@ export interface TaskItem {
   respectfulDescription?: string;
   practicalRationale?: string;
   estimatedTime?: string;
-  category?: 'essential' | 'recommended' | 'optional';
+  category?: "essential" | "recommended" | "optional";
 }
 
 // Legacy onboarding answers (existing structure)
 export interface LegacyOnboardingAnswers {
-  documentAccess: 'yes' | 'no' | 'partially';
-  caretaker: 'designated' | 'family_figure_out' | 'not_thought';
-  familyClarity: 'clear' | 'somewhat' | 'never_discussed';
-  biggestWorry: 'financial' | 'legal' | 'memories' | 'conflicts';
+  documentAccess: "yes" | "no" | "partially";
+  caretaker: "designated" | "family_figure_out" | "not_thought";
+  familyClarity: "clear" | "somewhat" | "never_discussed";
+  biggestWorry: "financial" | "legal" | "memories" | "conflicts";
   lifeAnswers?: {
     familyStructure?: string;
     financialComplexity?: string;
@@ -38,12 +38,12 @@ export interface LegacyOnboardingAnswers {
 export interface RespectfulOnboardingAnswers {
   // Question 1: Who would need access?
   accessNeeds: {
-    type: 'family' | 'partner' | 'parents' | 'business' | 'solo';
+    type: "family" | "partner" | "parents" | "business" | "solo";
     customResponse?: string;
   };
   // Question 2: What brought you here?
   currentTrigger: {
-    type: 'baby' | 'property' | 'travel' | 'health' | 'organizing' | 'planning';
+    type: "baby" | "property" | "travel" | "health" | "organizing" | "planning";
     customResponse?: string;
   };
   // Optional first document info
@@ -56,7 +56,7 @@ export interface RespectfulOnboardingAnswers {
 
 // Unified onboarding data structure
 export interface OnboardingData {
-  version: 'legacy' | 'respectful';
+  version: "legacy" | "respectful";
   completedAt?: string;
   skippedAt?: string;
   resumedAt?: string;
@@ -79,19 +79,21 @@ export interface OnboardingData {
 // Storage keys configuration
 export const ONBOARDING_STORAGE_KEYS = {
   // Existing keys (keep for backward compatibility)
-  COMPLETED: 'onboardingCompleted',
-  SKIPPED: 'onboardingSkipped',
-  PROGRESS: 'onboardingProgress',
-  FIRST_TIME_GUIDE: 'firstTimeGuideCompleted',
-  
+  COMPLETED: "onboardingCompleted",
+  SKIPPED: "onboardingSkipped",
+  PROGRESS: "onboardingProgress",
+  FIRST_TIME_GUIDE: "firstTimeGuideCompleted",
+
   // New keys for respectful onboarding
-  VERSION: 'onboardingVersion',
-  DATA: 'onboardingData',
-  PROFESSIONAL_DATA: 'professionalOnboardingData',
-  
+  VERSION: "onboardingVersion",
+  DATA: "onboardingData",
+  PROFESSIONAL_DATA: "professionalOnboardingData",
+
   // User-specific keys (with userId appended)
-  USER_COMPLETED: (userId: string) => `legacyguard-onboarding-completed-${userId}`,
-  USER_GUIDE: (userId: string) => `legacyguard-dashboard-guide-completed-${userId}`,
+  USER_COMPLETED: (userId: string) =>
+    `legacyguard-onboarding-completed-${userId}`,
+  USER_GUIDE: (userId: string) =>
+    `legacyguard-dashboard-guide-completed-${userId}`,
   USER_DATA: (userId: string) => `legacyguard-onboarding-data-${userId}`,
 } as const;
 
@@ -104,7 +106,9 @@ export class OnboardingDataManager {
     try {
       // Try user-specific data first
       if (userId) {
-        const userDataStr = localStorage.getItem(ONBOARDING_STORAGE_KEYS.USER_DATA(userId));
+        const userDataStr = localStorage.getItem(
+          ONBOARDING_STORAGE_KEYS.USER_DATA(userId),
+        );
         if (userDataStr) {
           return JSON.parse(userDataStr);
         }
@@ -117,22 +121,26 @@ export class OnboardingDataManager {
       }
 
       // Check for legacy data
-      const legacyProgress = localStorage.getItem(ONBOARDING_STORAGE_KEYS.PROGRESS);
+      const legacyProgress = localStorage.getItem(
+        ONBOARDING_STORAGE_KEYS.PROGRESS,
+      );
       if (legacyProgress) {
         const legacyData = JSON.parse(legacyProgress);
         // Convert legacy format to new format
         return {
-          version: 'legacy',
+          version: "legacy",
           tasks: [],
           answers: legacyData.answers || {},
-          completedAt: localStorage.getItem(ONBOARDING_STORAGE_KEYS.COMPLETED) === 'true' 
-            ? new Date().toISOString() : undefined,
+          completedAt:
+            localStorage.getItem(ONBOARDING_STORAGE_KEYS.COMPLETED) === "true"
+              ? new Date().toISOString()
+              : undefined,
         };
       }
 
       return null;
     } catch (error) {
-      console.error('Error loading onboarding data:', error);
+      console.error("Error loading onboarding data:", error);
       return null;
     }
   }
@@ -143,32 +151,38 @@ export class OnboardingDataManager {
   static saveData(data: OnboardingData, userId?: string): void {
     try {
       const dataStr = JSON.stringify(data);
-      
+
       // Save to user-specific key if userId provided
       if (userId) {
-        localStorage.setItem(ONBOARDING_STORAGE_KEYS.USER_DATA(userId), dataStr);
-        
+        localStorage.setItem(
+          ONBOARDING_STORAGE_KEYS.USER_DATA(userId),
+          dataStr,
+        );
+
         // Also update user-specific completion flags
         if (data.completedAt) {
-          localStorage.setItem(ONBOARDING_STORAGE_KEYS.USER_COMPLETED(userId), 'true');
+          localStorage.setItem(
+            ONBOARDING_STORAGE_KEYS.USER_COMPLETED(userId),
+            "true",
+          );
         }
       }
-      
+
       // Save to general key
       localStorage.setItem(ONBOARDING_STORAGE_KEYS.DATA, dataStr);
-      
+
       // Update legacy keys for backward compatibility
       if (data.completedAt) {
-        localStorage.setItem(ONBOARDING_STORAGE_KEYS.COMPLETED, 'true');
+        localStorage.setItem(ONBOARDING_STORAGE_KEYS.COMPLETED, "true");
       }
       if (data.skippedAt) {
-        localStorage.setItem(ONBOARDING_STORAGE_KEYS.SKIPPED, 'true');
+        localStorage.setItem(ONBOARDING_STORAGE_KEYS.SKIPPED, "true");
       }
-      
+
       // Store version
       localStorage.setItem(ONBOARDING_STORAGE_KEYS.VERSION, data.version);
     } catch (error) {
-      console.error('Error saving onboarding data:', error);
+      console.error("Error saving onboarding data:", error);
     }
   }
 
@@ -182,12 +196,12 @@ export class OnboardingDataManager {
       localStorage.removeItem(ONBOARDING_STORAGE_KEYS.USER_COMPLETED(userId));
       localStorage.removeItem(ONBOARDING_STORAGE_KEYS.USER_GUIDE(userId));
     }
-    
+
     // Clear general data
     localStorage.removeItem(ONBOARDING_STORAGE_KEYS.DATA);
     localStorage.removeItem(ONBOARDING_STORAGE_KEYS.PROFESSIONAL_DATA);
     localStorage.removeItem(ONBOARDING_STORAGE_KEYS.VERSION);
-    
+
     // Clear legacy keys
     localStorage.removeItem(ONBOARDING_STORAGE_KEYS.COMPLETED);
     localStorage.removeItem(ONBOARDING_STORAGE_KEYS.SKIPPED);
@@ -201,21 +215,23 @@ export class OnboardingDataManager {
   static isCompleted(userId?: string): boolean {
     // Check user-specific completion
     if (userId) {
-      const userCompleted = localStorage.getItem(ONBOARDING_STORAGE_KEYS.USER_COMPLETED(userId));
-      if (userCompleted === 'true') return true;
+      const userCompleted = localStorage.getItem(
+        ONBOARDING_STORAGE_KEYS.USER_COMPLETED(userId),
+      );
+      if (userCompleted === "true") return true;
     }
-    
+
     // Check general completion
     const completed = localStorage.getItem(ONBOARDING_STORAGE_KEYS.COMPLETED);
-    return completed === 'true';
+    return completed === "true";
   }
 
   /**
    * Get onboarding version
    */
-  static getVersion(): 'legacy' | 'respectful' | null {
+  static getVersion(): "legacy" | "respectful" | null {
     const version = localStorage.getItem(ONBOARDING_STORAGE_KEYS.VERSION);
-    return version as 'legacy' | 'respectful' | null;
+    return version as "legacy" | "respectful" | null;
   }
 
   /**
@@ -228,7 +244,7 @@ export class OnboardingDataManager {
     const data = this.getData(userId);
     if (data && !data.version) {
       // Add version to existing data
-      data.version = 'legacy';
+      data.version = "legacy";
       this.saveData(data, userId);
     }
   }
@@ -236,23 +252,23 @@ export class OnboardingDataManager {
 
 // Export convenience functions - Type guards for onboarding answer types
 export function isRespectfulOnboarding(
-  answers: unknown
+  answers: unknown,
 ): answers is RespectfulOnboardingAnswers {
   return (
-    typeof answers === 'object' &&
+    typeof answers === "object" &&
     answers !== null &&
-    'accessNeeds' in answers &&
-    'currentTrigger' in answers
+    "accessNeeds" in answers &&
+    "currentTrigger" in answers
   );
 }
 
 export function isLegacyOnboarding(
-  answers: unknown
+  answers: unknown,
 ): answers is LegacyOnboardingAnswers {
   return (
-    typeof answers === 'object' &&
+    typeof answers === "object" &&
     answers !== null &&
-    'documentAccess' in answers &&
-    'caretaker' in answers
+    "documentAccess" in answers &&
+    "caretaker" in answers
   );
 }

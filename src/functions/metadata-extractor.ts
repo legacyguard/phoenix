@@ -1,36 +1,36 @@
-import { ExtractedMetadata, DocumentCategory } from '../types/document-ai';
+import { ExtractedMetadata, DocumentCategory } from "../types/document-ai";
 
 export async function extractMetadata(
-  category: DocumentCategory, 
+  category: DocumentCategory,
   textContent: string,
-  apiKey: string
+  apiKey: string,
 ): Promise<ExtractedMetadata> {
   try {
     // Validate inputs
     if (!textContent || textContent.trim().length === 0) {
-      throw new Error('No text content provided for extraction');
+      throw new Error("No text content provided for extraction");
     }
 
     const systemPrompt = getSystemPromptForCategory(category);
     const userPrompt = formatUserPrompt(textContent, category);
 
     // Call OpenAI API
-    const response = await fetch('https://api.openai.com/v1/chat/completions', {
-      method: 'POST',
+    const response = await fetch("https://api.openai.com/v1/chat/completions", {
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${apiKey}`
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${apiKey}`,
       },
       body: JSON.stringify({
-        model: 'gpt-4-turbo-preview',
+        model: "gpt-4-turbo-preview",
         messages: [
-          { role: 'system', content: systemPrompt },
-          { role: 'user', content: userPrompt }
+          { role: "system", content: systemPrompt },
+          { role: "user", content: userPrompt },
         ],
-        response_format: { type: 'json_object' },
+        response_format: { type: "json_object" },
         max_tokens: 1000,
-        temperature: 0.2 // Very low temperature for consistent extraction
-      })
+        temperature: 0.2, // Very low temperature for consistent extraction
+      }),
     });
 
     if (!response.ok) {
@@ -39,27 +39,26 @@ export async function extractMetadata(
 
     const data = await response.json();
     const content = data.choices[0].message.content;
-    
+
     // Parse and validate the result
     let result: ExtractedMetadata;
     try {
       result = JSON.parse(content);
     } catch (parseError) {
-      console.error('Failed to parse AI response:', content);
-      throw new Error('Invalid JSON response from AI');
+      console.error("Failed to parse AI response:", content);
+      throw new Error("Invalid JSON response from AI");
     }
 
     // Clean and validate the extracted data
     return cleanExtractedData(result, category);
-
   } catch (error) {
-    console.error('Metadata extraction error:', error);
+    console.error("Metadata extraction error:", error);
     throw error;
   }
 }
 
 function getSystemPromptForCategory(category: DocumentCategory): string {
-  const basePrompt = `You are an expert document analyst specializing in extracting structured data from ${category.replace(/_/g, ' ')} documents.
+  const basePrompt = `You are an expert document analyst specializing in extracting structured data from ${category.replace(/_/g, " ")} documents.
   
   CRITICAL INSTRUCTIONS:
   1. Return ONLY valid JSON with the specified fields
@@ -183,49 +182,56 @@ function getSystemPromptForCategory(category: DocumentCategory): string {
     - names: Any person or organization names
     - dates: Any important dates
     - referenceNumbers: Any reference, account, or ID numbers
-    - amounts: Any monetary amounts`
+    - amounts: Any monetary amounts`,
   };
 
   return categoryPrompts[category] || categoryPrompts.other;
 }
 
-function formatUserPrompt(textContent: string, category: DocumentCategory): string {
+function formatUserPrompt(
+  textContent: string,
+  category: DocumentCategory,
+): string {
   // Truncate very long documents to stay within token limits
   const maxLength = 4000;
-  const truncatedText = textContent.length > maxLength 
-    ? textContent.substring(0, maxLength) + '...\n[Document truncated]'
-    : textContent;
+  const truncatedText =
+    textContent.length > maxLength
+      ? textContent.substring(0, maxLength) + "...\n[Document truncated]"
+      : textContent;
 
-  return `Please extract the requested information from this ${category.replace(/_/g, ' ')} document:
+  return `Please extract the requested information from this ${category.replace(/_/g, " ")} document:
 
 ${truncatedText}
 
 Remember to return ONLY valid JSON with the extracted values.`;
 }
 
-function cleanExtractedData(data: Record<string, unknown>, category: DocumentCategory): ExtractedMetadata {
+function cleanExtractedData(
+  data: Record<string, unknown>,
+  category: DocumentCategory,
+): ExtractedMetadata {
   const cleaned: ExtractedMetadata = {};
 
   // Copy all valid fields
   for (const [key, value] of Object.entries(data)) {
-    if (value !== null && value !== undefined && value !== '') {
+    if (value !== null && value !== undefined && value !== "") {
       // Clean up common formatting issues
-      if (typeof value === 'string') {
+      if (typeof value === "string") {
         // Remove extra whitespace
         cleaned[key] = value.trim();
-        
+
         // Clean up dates
-        if (key.toLowerCase().includes('date') && cleaned[key]) {
+        if (key.toLowerCase().includes("date") && cleaned[key]) {
           cleaned[key] = normalizeDate(cleaned[key] as string);
         }
-      } else if (typeof value === 'number') {
+      } else if (typeof value === "number") {
         // Ensure numbers are clean
         cleaned[key] = Number(value);
       } else if (Array.isArray(value)) {
         // Clean array values
-        cleaned[key] = value.map(v => 
-          typeof v === 'string' ? v.trim() : v
-        ).filter(v => v !== null && v !== undefined && v !== '');
+        cleaned[key] = value
+          .map((v) => (typeof v === "string" ? v.trim() : v))
+          .filter((v) => v !== null && v !== undefined && v !== "");
       } else {
         cleaned[key] = value;
       }
@@ -241,7 +247,7 @@ function normalizeDate(dateStr: string): string {
     const date = new Date(dateStr);
     if (!isNaN(date.getTime())) {
       // Return in ISO format (YYYY-MM-DD)
-      return date.toISOString().split('T')[0];
+      return date.toISOString().split("T")[0];
     }
   } catch (e) {
     // If parsing fails, return original string
@@ -256,25 +262,26 @@ export async function extractMetadataBatch(
   options?: {
     maxConcurrent?: number;
     onProgress?: (completed: number, total: number) => void;
-  }
+  },
 ): Promise<ExtractedMetadata[]> {
   const maxConcurrent = options?.maxConcurrent || 3;
   const results: ExtractedMetadata[] = [];
-  
+
   // Process in batches to avoid rate limits
   for (let i = 0; i < documents.length; i += maxConcurrent) {
     const batch = documents.slice(i, i + maxConcurrent);
     const batchResults = await Promise.all(
-      batch.map(doc => extractMetadata(doc.category, doc.textContent, apiKey))
+      batch.map((doc) =>
+        extractMetadata(doc.category, doc.textContent, apiKey),
+      ),
     );
-    
+
     results.push(...batchResults);
-    
+
     if (options?.onProgress) {
       options.onProgress(results.length, documents.length);
     }
   }
-  
+
   return results;
 }
-

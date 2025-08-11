@@ -29,21 +29,21 @@ export interface DetectedDocumentType {
   type: DocumentType;
   confidence: number;
   matchedPatterns: string[];
-  language: 'cs' | 'sk' | 'en' | 'other';
+  language: "cs" | "sk" | "en" | "other";
 }
 
-export type DocumentType = 
-  | 'insurance_policy'      // pojistná smlouva
-  | 'bank_statement'        // výpis z účtu
-  | 'property_deed'         // list vlastnictví
-  | 'identity_card'         // občanský průkaz
-  | 'passport'              // pas
-  | 'will'                  // závěť
-  | 'medical_record'        // zdravotní záznam
-  | 'contract'              // smlouva
-  | 'invoice'               // faktura
-  | 'receipt'               // účtenka
-  | 'unknown';
+export type DocumentType =
+  | "insurance_policy" // pojistná smlouva
+  | "bank_statement" // výpis z účtu
+  | "property_deed" // list vlastnictví
+  | "identity_card" // občanský průkaz
+  | "passport" // pas
+  | "will" // závěť
+  | "medical_record" // zdravotní záznam
+  | "contract" // smlouva
+  | "invoice" // faktura
+  | "receipt" // účtenka
+  | "unknown";
 
 // Structured data extraction
 export interface ExtractedData {
@@ -52,31 +52,31 @@ export interface ExtractedData {
   issueDate?: Date;
   expiryDate?: Date;
   issuer?: string;
-  
+
   // Person/Entity fields
   names?: string[];
   addresses?: string[];
   identificationNumbers?: string[];
-  
+
   // Financial fields
   amounts?: Array<{
     value: number;
     currency: string;
     description?: string;
   }>;
-  
+
   // Insurance specific
   policyNumber?: string;
   insuredPerson?: string;
   beneficiaries?: string[];
   coverageType?: string;
   premium?: number;
-  
+
   // Property specific
   propertyAddress?: string;
   cadastralNumber?: string;
   ownership?: string[];
-  
+
   // Custom key-value pairs
   customFields?: Record<string, string>;
 }
@@ -94,7 +94,12 @@ export interface OCROptions {
 
 // Progress tracking
 export interface OCRProgress {
-  status: 'initializing' | 'preprocessing' | 'recognizing' | 'postprocessing' | 'complete';
+  status:
+    | "initializing"
+    | "preprocessing"
+    | "recognizing"
+    | "postprocessing"
+    | "complete";
   progress: number; // 0-100
   message: string;
   eta?: number; // Estimated time remaining in seconds
@@ -112,7 +117,7 @@ export interface AnonymizationOptions {
 export interface AnonymizedText {
   text: string;
   removedEntities: Array<{
-    type: 'name' | 'address' | 'id_number' | 'phone' | 'email' | 'custom';
+    type: "name" | "address" | "id_number" | "phone" | "email" | "custom";
     count: number;
   }>;
   documentStructure: {
@@ -136,7 +141,12 @@ export interface PreprocessingOptions {
 
 // OCR Error types
 export interface OCRError {
-  code: 'initialization_failed' | 'processing_failed' | 'unsupported_format' | 'file_too_large' | 'worker_error';
+  code:
+    | "initialization_failed"
+    | "processing_failed"
+    | "unsupported_format"
+    | "file_too_large"
+    | "worker_error";
   message: string;
   userMessage: string;
   details?: Record<string, unknown>;
@@ -147,7 +157,7 @@ export interface OCRWorkerConfig {
   workerPath?: string;
   langPath?: string;
   corePath?: string;
-  cacheMethod?: 'write' | 'refresh' | 'none';
+  cacheMethod?: "write" | "refresh" | "none";
   gzip?: boolean;
   logging?: boolean;
 }

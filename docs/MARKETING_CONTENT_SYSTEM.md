@@ -7,6 +7,7 @@ The LegacyGuard application now includes a comprehensive internationalized marke
 ## Features
 
 ### 🏠 Landing Page Content
+
 - **Hero sections** - Compelling headlines and value propositions
 - **Problem statements** - Real challenges that resonate with target audience
 - **Solution features** - Clear benefits and capabilities
@@ -18,6 +19,7 @@ The LegacyGuard application now includes a comprehensive internationalized marke
 - **Call-to-action** - Clear next steps
 
 ### 💰 Pricing Content
+
 - **Plan descriptions** - Clear feature differentiation
 - **Pricing transparency** - Monthly and annual options
 - **Feature comparisons** - Detailed plan comparisons
@@ -26,6 +28,7 @@ The LegacyGuard application now includes a comprehensive internationalized marke
 - **Security features** - Enterprise-grade security included
 
 ### ⚖️ Legal Content
+
 - **Terms of Service** - Comprehensive legal terms
 - **Privacy Policy** - GDPR and CCPA compliant
 - **Cookie Policy** - Transparent cookie usage
@@ -35,6 +38,7 @@ The LegacyGuard application now includes a comprehensive internationalized marke
 ## Translation Files
 
 ### Landing Page (`/src/i18n/locales/{lang}/landing.json`)
+
 ```json
 {
   "hero": {
@@ -53,6 +57,7 @@ The LegacyGuard application now includes a comprehensive internationalized marke
 ```
 
 ### Pricing (`/src/i18n/locales/{lang}/pricing.json`)
+
 ```json
 {
   "header": {
@@ -70,6 +75,7 @@ The LegacyGuard application now includes a comprehensive internationalized marke
 ```
 
 ### Legal Pages (`/src/i18n/locales/{lang}/legal-pages.json`)
+
 ```json
 {
   "termsOfService": {
@@ -169,39 +175,39 @@ const CustomPage = () => {
 
 ### Landing Page Sections
 
-| Section | Purpose | Key Elements |
-|---------|---------|--------------|
-| Hero | Main value proposition | Headline, subheadline, CTAs, trust indicators |
-| Problems | Pain point identification | 3 key problems with impacts |
-| Solution | Feature presentation | 4 main features with benefits |
-| How It Works | Process explanation | 5-step process with timeframes |
-| Benefits | Value demonstration | 6 key benefits with icons |
-| Testimonials | Social proof | 3 customer stories |
-| Security | Trust building | 4 security features |
-| FAQ | Objection handling | 5 common questions |
-| Final CTA | Conversion | Strong call-to-action |
+| Section      | Purpose                   | Key Elements                                  |
+| ------------ | ------------------------- | --------------------------------------------- |
+| Hero         | Main value proposition    | Headline, subheadline, CTAs, trust indicators |
+| Problems     | Pain point identification | 3 key problems with impacts                   |
+| Solution     | Feature presentation      | 4 main features with benefits                 |
+| How It Works | Process explanation       | 5-step process with timeframes                |
+| Benefits     | Value demonstration       | 6 key benefits with icons                     |
+| Testimonials | Social proof              | 3 customer stories                            |
+| Security     | Trust building            | 4 security features                           |
+| FAQ          | Objection handling        | 5 common questions                            |
+| Final CTA    | Conversion                | Strong call-to-action                         |
 
 ### Pricing Page Sections
 
-| Section | Purpose | Key Elements |
-|---------|---------|--------------|
-| Header | Plan overview | Title, subtitle, description |
-| Billing Toggle | Pricing options | Monthly/annual toggle |
-| Plans | Plan comparison | 3 plans with features |
-| Trial | Risk reduction | Trial features and guarantee |
-| Security | Trust building | Security features included |
-| Support | Service levels | Support by plan level |
-| FAQ | Pricing questions | Common pricing concerns |
+| Section        | Purpose           | Key Elements                 |
+| -------------- | ----------------- | ---------------------------- |
+| Header         | Plan overview     | Title, subtitle, description |
+| Billing Toggle | Pricing options   | Monthly/annual toggle        |
+| Plans          | Plan comparison   | 3 plans with features        |
+| Trial          | Risk reduction    | Trial features and guarantee |
+| Security       | Trust building    | Security features included   |
+| Support        | Service levels    | Support by plan level        |
+| FAQ            | Pricing questions | Common pricing concerns      |
 
 ### Legal Page Sections
 
-| Section | Purpose | Key Elements |
-|---------|---------|--------------|
-| Header | Page identification | Title, last updated date |
-| Introduction | Context setting | Policy overview |
-| Sections | Legal content | Structured legal information |
-| Compliance | Regulatory info | GDPR, CCPA compliance |
-| Contact | Legal contacts | Contact information |
+| Section      | Purpose             | Key Elements                 |
+| ------------ | ------------------- | ---------------------------- |
+| Header       | Page identification | Title, last updated date     |
+| Introduction | Context setting     | Policy overview              |
+| Sections     | Legal content       | Structured legal information |
+| Compliance   | Regulatory info     | GDPR, CCPA compliance        |
+| Contact      | Legal contacts      | Contact information          |
 
 ## SEO and Meta Tags
 
@@ -222,16 +228,17 @@ const CustomPage = () => {
 ### Supported Page Types
 
 | Page Type | Default Title | Default Description |
-|-----------|---------------|-------------------|
-| `landing` | Hero headline | Hero subheadline |
-| `pricing` | Header title | Header subtitle |
-| `terms` | Terms title | Terms description |
+| --------- | ------------- | ------------------- |
+| `landing` | Hero headline | Hero subheadline    |
+| `pricing` | Header title  | Header subtitle     |
+| `terms`   | Terms title   | Terms description   |
 | `privacy` | Privacy title | Privacy description |
-| `cookies` | Cookie title | Cookie description |
+| `cookies` | Cookie title  | Cookie description  |
 
 ### Structured Data
 
 The system automatically generates structured data for:
+
 - **Organization** - Company information
 - **WebSite** - Landing page search functionality
 - **Product** - Pricing page product information
@@ -239,6 +246,7 @@ The system automatically generates structured data for:
 ## Content Guidelines
 
 ### 1. Language and Tone
+
 - Use formal, respectful language appropriate for estate planning
 - Maintain cultural sensitivity across all communications
 - Ensure professional tone for serious family protection matters
@@ -246,18 +254,21 @@ The system automatically generates structured data for:
 - Avoid pushy or aggressive marketing language
 
 ### 2. Target Audience
+
 - **Primary**: Middle-aged and older adults (40+)
 - **Secondary**: Families with children and assets
 - **Tertiary**: High-net-worth individuals
 - **Focus**: Responsible adults concerned about family protection
 
 ### 3. Value Proposition
+
 - **Primary**: Peace of mind through organization
 - **Secondary**: Time and money savings
 - **Tertiary**: Professional guidance and support
 - **Emotional**: Family protection and legacy preservation
 
 ### 4. Trust Building
+
 - Security certifications and compliance
 - Customer testimonials and social proof
 - Transparent pricing and policies
@@ -267,6 +278,7 @@ The system automatically generates structured data for:
 ## Best Practices
 
 ### 1. Content Strategy
+
 - Lead with problems, not features
 - Use specific, relatable examples
 - Include clear next steps and CTAs
@@ -274,6 +286,7 @@ The system automatically generates structured data for:
 - Provide multiple conversion opportunities
 
 ### 2. User Experience
+
 - Clear navigation and information hierarchy
 - Mobile-responsive design
 - Fast loading times
@@ -281,6 +294,7 @@ The system automatically generates structured data for:
 - Clear contact and support information
 
 ### 3. Legal Compliance
+
 - Comprehensive terms and conditions
 - GDPR and CCPA compliant privacy policy
 - Clear cookie usage information
@@ -288,6 +302,7 @@ The system automatically generates structured data for:
 - Jurisdiction-specific requirements
 
 ### 4. SEO Optimization
+
 - Relevant meta tags and descriptions
 - Structured data markup
 - Optimized page titles and headings
@@ -297,6 +312,7 @@ The system automatically generates structured data for:
 ## Testing
 
 ### Content Testing
+
 ```typescript
 // Test landing page rendering
 const testLanding = (
@@ -315,14 +331,15 @@ const testTerms = (
 ```
 
 ### Translation Testing
+
 ```typescript
 // Test translation loading
-const { t } = useTranslation('landing');
-const headline = t('hero.headline');
+const { t } = useTranslation("landing");
+const headline = t("hero.headline");
 console.log(headline); // Should output: "Protect Your Family's Future with Confidence"
 
 // Test interpolation
-const greeting = t('hero.greeting', { name: 'John' });
+const greeting = t("hero.greeting", { name: "John" });
 console.log(greeting); // Should output: "Dear John"
 ```
 
@@ -353,9 +370,10 @@ console.log(greeting); // Should output: "Dear John"
 ### Debug Mode
 
 Enable debug logging:
+
 ```typescript
 // In i18n configuration
-debug: true
+debug: true;
 ```
 
 ## Maintenance
@@ -412,4 +430,4 @@ For questions or issues with the marketing content system:
 - **Personalization** - Dynamic content based on user segments
 - **Localization** - Jurisdiction-specific legal requirements
 - **Content Management** - Visual content editor
-- **Performance** - Content optimization and caching 
+- **Performance** - Content optimization and caching

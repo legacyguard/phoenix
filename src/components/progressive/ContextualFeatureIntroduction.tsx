@@ -1,11 +1,24 @@
-import React from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { 
-  Shield, FileText, Users, Heart, Home, Briefcase, 
-  AlertCircle, ChevronRight, X 
-} from 'lucide-react';
-import { ProtectionFeature } from '@/services/familyProtectionDisclosure';
+import React from "react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import {
+  Shield,
+  FileText,
+  Users,
+  Heart,
+  Home,
+  Briefcase,
+  AlertCircle,
+  ChevronRight,
+  X,
+} from "lucide-react";
+import { ProtectionFeature } from "@/services/familyProtectionDisclosure";
 
 interface ContextualFeatureIntroductionProps {
   feature: ProtectionFeature;
@@ -22,41 +35,50 @@ interface ContextualFeatureIntroductionProps {
   onDismiss: () => void;
 }
 
-export const ContextualFeatureIntroduction: React.FC<ContextualFeatureIntroductionProps> = ({
-  feature,
-  context,
-  onBegin,
-  onDismiss
-}) => {
+export const ContextualFeatureIntroduction: React.FC<
+  ContextualFeatureIntroductionProps
+> = ({ feature, context, onBegin, onDismiss }) => {
   const getFeatureIcon = (featureId: string) => {
     const icons: Record<string, React.ReactNode> = {
-      'basic-asset-documentation': <Home className="h-6 w-6" />,
-      'primary-family-info': <Users className="h-6 w-6" />,
-      'document-storage': <FileText className="h-6 w-6" />,
-      'basic-will': <FileText className="h-6 w-6" />,
-      'trusted-circle': <Shield className="h-6 w-6" />,
-      'healthcare-directives': <Heart className="h-6 w-6" />,
-      'business-succession': <Briefcase className="h-6 w-6" />,
-      'access-planning': <AlertCircle className="h-6 w-6" />
+      "basic-asset-documentation": <Home className="h-6 w-6" />,
+      "primary-family-info": <Users className="h-6 w-6" />,
+      "document-storage": <FileText className="h-6 w-6" />,
+      "basic-will": <FileText className="h-6 w-6" />,
+      "trusted-circle": <Shield className="h-6 w-6" />,
+      "healthcare-directives": <Heart className="h-6 w-6" />,
+      "business-succession": <Briefcase className="h-6 w-6" />,
+      "access-planning": <AlertCircle className="h-6 w-6" />,
     };
     return icons[featureId] || <Shield className="h-6 w-6" />;
   };
 
   const getContextualIntroduction = () => {
     // Provide context-aware introductions based on what the user just completed
-    if (context.previousStep === 'basic-asset-documentation' && feature.id === 'document-storage') {
+    if (
+      context.previousStep === "basic-asset-documentation" &&
+      feature.id === "document-storage"
+    ) {
       return "Now that you've documented your primary assets, let's ensure your family can access the supporting documents they'll need.";
     }
-    
-    if (context.previousStep === 'basic-will' && feature.id === 'trusted-circle') {
+
+    if (
+      context.previousStep === "basic-will" &&
+      feature.id === "trusted-circle"
+    ) {
       return "Your will is in place. Now, let's identify trusted people who can support your family when they need guidance.";
     }
 
-    if (context.familyStructure?.hasChildren && feature.id === 'trusted-circle') {
+    if (
+      context.familyStructure?.hasChildren &&
+      feature.id === "trusted-circle"
+    ) {
       return "As a parent, establishing a trusted circle ensures your children will have reliable support and guidance.";
     }
 
-    if (context.familyStructure?.hasBusinessInterests && feature.id === 'business-succession') {
+    if (
+      context.familyStructure?.hasBusinessInterests &&
+      feature.id === "business-succession"
+    ) {
       return "Your business is an important part of your family's security. Let's ensure it continues to provide for them.";
     }
 
@@ -66,22 +88,27 @@ export const ContextualFeatureIntroduction: React.FC<ContextualFeatureIntroducti
 
   const getUrgencyIndicator = () => {
     // Highlight urgency for certain features based on family structure
-    if (feature.id === 'basic-will' && context.familyStructure?.hasChildren) {
+    if (feature.id === "basic-will" && context.familyStructure?.hasChildren) {
       return (
         <div className="bg-amber-50 rounded-lg p-3 border border-amber-200 mb-4">
           <p className="text-sm text-amber-800">
             <AlertCircle className="h-4 w-4 inline mr-1" />
-            As a parent, this step is especially important for your children's security.
+            As a parent, this step is especially important for your children's
+            security.
           </p>
         </div>
       );
     }
 
-    if (feature.id === 'healthcare-directives' && context.currentProtectionLevel === 'comprehensive') {
+    if (
+      feature.id === "healthcare-directives" &&
+      context.currentProtectionLevel === "comprehensive"
+    ) {
       return (
         <div className="bg-blue-50 rounded-lg p-3 border border-blue-200 mb-4">
           <p className="text-sm text-blue-800">
-            This completes an important aspect of your comprehensive protection plan.
+            This completes an important aspect of your comprehensive protection
+            plan.
           </p>
         </div>
       );
@@ -92,15 +119,15 @@ export const ContextualFeatureIntroduction: React.FC<ContextualFeatureIntroducti
 
   const getTimeEstimate = () => {
     const estimates: Record<string, string> = {
-      'basic-asset-documentation': '10-15 minutes',
-      'primary-family-info': '5-10 minutes',
-      'document-storage': '15-20 minutes',
-      'basic-will': '20-30 minutes',
-      'trusted-circle': '10-15 minutes',
-      'healthcare-directives': '15-20 minutes',
-      'business-succession': '30-45 minutes'
+      "basic-asset-documentation": "10-15 minutes",
+      "primary-family-info": "5-10 minutes",
+      "document-storage": "15-20 minutes",
+      "basic-will": "20-30 minutes",
+      "trusted-circle": "10-15 minutes",
+      "healthcare-directives": "15-20 minutes",
+      "business-succession": "30-45 minutes",
     };
-    return estimates[feature.id] || '15-20 minutes';
+    return estimates[feature.id] || "15-20 minutes";
   };
 
   return (
@@ -128,34 +155,36 @@ export const ContextualFeatureIntroduction: React.FC<ContextualFeatureIntroducti
       </CardHeader>
       <CardContent className="space-y-4">
         {getUrgencyIndicator()}
-        
-        <p className="text-sm text-gray-600">
-          {getContextualIntroduction()}
-        </p>
+
+        <p className="text-sm text-gray-600">{getContextualIntroduction()}</p>
 
         <div className="bg-gray-50 rounded-lg p-4 space-y-3">
           <div>
-            <h4 className="text-sm font-medium text-gray-900">What you'll do:</h4>
+            <h4 className="text-sm font-medium text-gray-900">
+              What you'll do:
+            </h4>
             <p className="text-sm text-gray-600 mt-1">{feature.description}</p>
-          </div>
-          
-          <div>
-            <h4 className="text-sm font-medium text-gray-900">Time needed:</h4>
-            <p className="text-sm text-gray-600 mt-1">Approximately {getTimeEstimate()}</p>
           </div>
 
           <div>
-            <h4 className="text-sm font-medium text-gray-900">Why this matters:</h4>
-            <p className="text-sm text-gray-600 mt-1">{feature.familyBenefit}</p>
+            <h4 className="text-sm font-medium text-gray-900">Time needed:</h4>
+            <p className="text-sm text-gray-600 mt-1">
+              Approximately {getTimeEstimate()}
+            </p>
+          </div>
+
+          <div>
+            <h4 className="text-sm font-medium text-gray-900">
+              Why this matters:
+            </h4>
+            <p className="text-sm text-gray-600 mt-1">
+              {feature.familyBenefit}
+            </p>
           </div>
         </div>
 
         <div className="flex gap-3">
-          <Button
-            variant="outline"
-            onClick={onDismiss}
-            className="flex-1"
-          >
+          <Button variant="outline" onClick={onDismiss} className="flex-1">
             Not Right Now
           </Button>
           <Button

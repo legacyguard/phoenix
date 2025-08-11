@@ -1,21 +1,27 @@
-import React, { useState, useEffect } from 'react';
-import { useTranslation } from 'react-i18next';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Progress } from '@/components/ui/progress';
-import { Alert, AlertDescription } from '@/components/ui/alert';
-import { 
-  X, 
-  ChevronRight, 
+import React, { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Progress } from "@/components/ui/progress";
+import { Alert, AlertDescription } from "@/components/ui/alert";
+import {
+  X,
+  ChevronRight,
   ChevronLeft,
   Lightbulb,
   Target,
   Shield,
   ClipboardCheck,
   AlertTriangle,
-  CheckCircle
-} from 'lucide-react';
-import { cn } from '@/lib/utils';
+  CheckCircle,
+} from "lucide-react";
+import { cn } from "@/lib/utils";
 
 interface FirstTimeUserGuideProps {
   onComplete: () => void;
@@ -30,62 +36,74 @@ interface GuideStep {
   targetElement?: string;
 }
 
-export const FirstTimeUserGuide: React.FC<FirstTimeUserGuideProps> = ({ onComplete }) => {
-  const { t } = useTranslation('dashboard-main');
+export const FirstTimeUserGuide: React.FC<FirstTimeUserGuideProps> = ({
+  onComplete,
+}) => {
+  const { t } = useTranslation("dashboard-main");
   const [currentStep, setCurrentStep] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
 
   const steps: GuideStep[] = [
     {
-      id: 'welcome',
-      title: t('dashboard.firstTimeGuide.welcome.title'),
-      description: t('dashboard.firstTimeGuide.welcome.description'),
+      id: "welcome",
+      title: t("dashboard-main:dashboard.firstTimeGuide.welcome.title"),
+      description: t(
+        "dashboard-main:dashboard.firstTimeGuide.welcome.description",
+      ),
       icon: <Shield className="h-8 w-8 text-primary" />,
       tips: [
-        t('dashboard.firstTimeGuide.welcome.tip1'),
-        t('dashboard.firstTimeGuide.welcome.tip2'),
-        t('dashboard.firstTimeGuide.welcome.tip3')
-      ]
+        t("dashboard-main:dashboard.firstTimeGuide.welcome.tip1"),
+        t("dashboard-main:dashboard.firstTimeGuide.welcome.tip2"),
+        t("dashboard-main:dashboard.firstTimeGuide.welcome.tip3"),
+      ],
     },
     {
-      id: 'progress',
-      title: t('dashboard.firstTimeGuide.progress.title'),
-      description: t('dashboard.firstTimeGuide.progress.description'),
+      id: "progress",
+      title: t("dashboard-main:dashboard.firstTimeGuide.progress.title"),
+      description: t(
+        "dashboard-main:dashboard.firstTimeGuide.progress.description",
+      ),
       icon: <Target className="h-8 w-8 text-primary" />,
       tips: [
-        t('dashboard.firstTimeGuide.progress.tip1'),
-        t('dashboard.firstTimeGuide.progress.tip2')
+        t("dashboard-main:dashboard.firstTimeGuide.progress.tip1"),
+        t("dashboard-main:dashboard.firstTimeGuide.progress.tip2"),
       ],
-      targetElement: '.progress-tracking-section'
+      targetElement: ".progress-tracking-section",
     },
     {
-      id: 'stages',
-      title: t('dashboard.firstTimeGuide.stages.title'),
-      description: t('dashboard.firstTimeGuide.stages.description'),
+      id: "stages",
+      title: t("dashboard-main:dashboard.firstTimeGuide.stages.title"),
+      description: t(
+        "dashboard-main:dashboard.firstTimeGuide.stages.description",
+      ),
       icon: <ClipboardCheck className="h-8 w-8 text-primary" />,
       tips: [
-        t('dashboard.firstTimeGuide.stages.tip1'),
-        t('dashboard.firstTimeGuide.stages.tip2'),
-        t('dashboard.firstTimeGuide.stages.tip3')
+        t("dashboard-main:dashboard.firstTimeGuide.stages.tip1"),
+        t("dashboard-main:dashboard.firstTimeGuide.stages.tip2"),
+        t("dashboard-main:dashboard.firstTimeGuide.stages.tip3"),
       ],
-      targetElement: '.stages-timeline-section'
+      targetElement: ".stages-timeline-section",
     },
     {
-      id: 'recommendations',
-      title: t('dashboard.firstTimeGuide.recommendations.title'),
-      description: t('dashboard.firstTimeGuide.recommendations.description'),
+      id: "recommendations",
+      title: t("dashboard-main:dashboard.firstTimeGuide.recommendations.title"),
+      description: t(
+        "dashboard-main:dashboard.firstTimeGuide.recommendations.description",
+      ),
       icon: <Lightbulb className="h-8 w-8 text-primary" />,
       tips: [
-        t('dashboard.firstTimeGuide.recommendations.tip1'),
-        t('dashboard.firstTimeGuide.recommendations.tip2')
+        t("dashboard-main:dashboard.firstTimeGuide.recommendations.tip1"),
+        t("dashboard-main:dashboard.firstTimeGuide.recommendations.tip2"),
       ],
-      targetElement: '.recommendations-section'
-    }
+      targetElement: ".recommendations-section",
+    },
   ];
 
   useEffect(() => {
     // Check if user has already seen the guide
-    const hasSeenGuide = localStorage.getItem('legacyguard-dashboard-guide-completed');
+    const hasSeenGuide = localStorage.getItem(
+      "legacyguard-dashboard-guide-completed",
+    );
     if (hasSeenGuide) {
       setIsVisible(false);
       onComplete();
@@ -109,7 +127,7 @@ export const FirstTimeUserGuide: React.FC<FirstTimeUserGuideProps> = ({ onComple
   };
 
   const handleComplete = () => {
-    localStorage.setItem('legacyguard-dashboard-guide-completed', 'true');
+    localStorage.setItem("legacyguard-dashboard-guide-completed", "true");
     setIsVisible(false);
     onComplete();
   };
@@ -122,7 +140,7 @@ export const FirstTimeUserGuide: React.FC<FirstTimeUserGuideProps> = ({ onComple
     if (selector) {
       const element = document.querySelector(selector);
       if (element) {
-        element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        element.scrollIntoView({ behavior: "smooth", block: "center" });
       }
     }
   };
@@ -149,11 +167,13 @@ export const FirstTimeUserGuide: React.FC<FirstTimeUserGuideProps> = ({ onComple
           <div className="flex items-center space-x-4 mb-4">
             {currentStepData.icon}
             <div>
-              <CardTitle className="text-2xl">{currentStepData.title}</CardTitle>
+              <CardTitle className="text-2xl">
+                {currentStepData.title}
+              </CardTitle>
               <p className="text-sm text-muted-foreground mt-1">
-                {t('dashboard.firstTimeGuide.stepProgress', { 
-                  current: currentStep + 1, 
-                  total: steps.length 
+                {t("dashboard.firstTimeGuide.stepProgress", {
+                  current: currentStep + 1,
+                  total: steps.length,
                 })}
               </p>
             </div>
@@ -168,7 +188,7 @@ export const FirstTimeUserGuide: React.FC<FirstTimeUserGuideProps> = ({ onComple
           <div className="space-y-3">
             <h4 className="font-semibold text-sm flex items-center gap-2">
               <Lightbulb className="h-4 w-4 text-primary" />
-              {t('dashboard.firstTimeGuide.helpfulTips')}
+              {t("dashboard.firstTimeGuide.helpfulTips")}
             </h4>
             <div className="space-y-2">
               {currentStepData.tips.map((tip, index) => (
@@ -185,7 +205,7 @@ export const FirstTimeUserGuide: React.FC<FirstTimeUserGuideProps> = ({ onComple
           <Alert className="bg-muted/50 border-muted">
             <AlertTriangle className="h-4 w-4" />
             <AlertDescription>
-              {t('dashboard.firstTimeGuide.importantNote')}
+              {t("dashboard.firstTimeGuide.importantNote")}
             </AlertDescription>
           </Alert>
 
@@ -197,7 +217,7 @@ export const FirstTimeUserGuide: React.FC<FirstTimeUserGuideProps> = ({ onComple
               className="flex items-center gap-2"
             >
               <ChevronLeft className="h-4 w-4" />
-              {t('dashboard.firstTimeGuide.previous')}
+              {t("dashboard.firstTimeGuide.previous")}
             </Button>
 
             <Button
@@ -205,16 +225,13 @@ export const FirstTimeUserGuide: React.FC<FirstTimeUserGuideProps> = ({ onComple
               onClick={handleSkip}
               className="text-muted-foreground"
             >
-              {t('dashboard.firstTimeGuide.skipTour')}
+              {t("dashboard.firstTimeGuide.skipTour")}
             </Button>
 
-            <Button
-              onClick={handleNext}
-              className="flex items-center gap-2"
-            >
-              {currentStep === steps.length - 1 
-                ? t('dashboard.firstTimeGuide.finish') 
-                : t('dashboard.firstTimeGuide.next')}
+            <Button onClick={handleNext} className="flex items-center gap-2">
+              {currentStep === steps.length - 1
+                ? t("dashboard-main:dashboard.firstTimeGuide.finish")
+                : t("dashboard-main:dashboard.firstTimeGuide.next")}
               <ChevronRight className="h-4 w-4" />
             </Button>
           </div>

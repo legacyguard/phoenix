@@ -4,22 +4,22 @@
  */
 
 // Clear geolocation cache
-localStorage.removeItem('geolocation_data');
-localStorage.removeItem('user_country_language_preferences');
+localStorage.removeItem("geolocation_data");
+localStorage.removeItem("user_country_language_preferences");
 
-console.log('✅ Geolocation cache cleared!');
-console.log('🔄 Please refresh the page to trigger new location detection.');
+console.log("✅ Geolocation cache cleared!");
+console.log("🔄 Please refresh the page to trigger new location detection.");
 
 // Optional: Display current cached data before clearing
-const geoData = localStorage.getItem('geolocation_data');
-const prefs = localStorage.getItem('user_country_language_preferences');
+const geoData = localStorage.getItem("geolocation_data");
+const prefs = localStorage.getItem("user_country_language_preferences");
 
 if (geoData || prefs) {
-  console.log('📍 Previous data:');
+  console.log("📍 Previous data:");
   if (geoData) {
-    console.log('Geolocation:', JSON.parse(geoData));
+    console.log("Geolocation:", JSON.parse(geoData));
   }
   if (prefs) {
-    console.log('Preferences:', JSON.parse(prefs));
+    console.log("Preferences:", JSON.parse(prefs));
   }
 }

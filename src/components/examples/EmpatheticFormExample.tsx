@@ -1,24 +1,24 @@
-import React, { useState } from 'react';
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import * as z from 'zod';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
-import { Label } from '@/components/ui/label';
-import EmpatheticErrorBoundary from '@/components/errors/EmpatheticErrorBoundary';
-import EmpatheticFormError from '@/components/errors/EmpatheticFormError';
-import { FormFieldWithPrevention } from '@/components/errors/ProactiveErrorPrevention';
-import ProgressiveErrorRecovery from '@/components/errors/ProgressiveErrorRecovery';
-import { useFormError, useSaveError } from '@/hooks/useEmpatheticError';
-import { Save } from 'lucide-react';
+import React, { useState } from "react";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import * as z from "zod";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { Label } from "@/components/ui/label";
+import EmpatheticErrorBoundary from "@/components/errors/EmpatheticErrorBoundary";
+import EmpatheticFormError from "@/components/errors/EmpatheticFormError";
+import { FormFieldWithPrevention } from "@/components/errors/ProactiveErrorPrevention";
+import ProgressiveErrorRecovery from "@/components/errors/ProgressiveErrorRecovery";
+import { useFormError, useSaveError } from "@/hooks/useEmpatheticError";
+import { Save } from "lucide-react";
 
 // Example form schema
 const formSchema = z.object({
-  fullName: z.string().min(1, 'required_field'),
-  email: z.string().email('invalid_email'),
-  phone: z.string().regex(/^\(\d{3}\) \d{3}-\d{4}$/, 'invalid_phone'),
-  birthDate: z.string().regex(/^\d{2}\/\d{2}\/\d{4}$/, 'invalid_date')
+  fullName: z.string().min(1, "required_field"),
+  email: z.string().email("invalid_email"),
+  phone: z.string().regex(/^\(\d{3}\) \d{3}-\d{4}$/, "invalid_phone"),
+  birthDate: z.string().regex(/^\d{2}\/\d{2}\/\d{4}$/, "invalid_date"),
 });
 
 type FormData = z.infer<typeof formSchema>;
@@ -31,22 +31,22 @@ const EmpatheticFormExample: React.FC = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors, isSubmitting }
+    formState: { errors, isSubmitting },
   } = useForm<FormData>({
-    resolver: zodResolver(formSchema)
+    resolver: zodResolver(formSchema),
   });
 
   const onSubmit = async (data: FormData) => {
     try {
       // Simulate API call
-      const response = await fetch('/api/family/members', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data)
+      const response = await fetch("/api/family/members", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
       });
 
       if (!response.ok) {
-        throw new Error('save_failed');
+        throw new Error("save_failed");
       }
 
       // Success handling
@@ -73,14 +73,14 @@ const EmpatheticFormExample: React.FC = () => {
                 <Label htmlFor="fullName">Full Name</Label>
                 <Input
                   id="fullName"
-                  {...register('fullName')}
+                  {...register("fullName")}
                   placeholder="John Michael Doe"
-                  className={errors.fullName ? 'border-amber-300' : ''}
+                  className={errors.fullName ? "border-amber-300" : ""}
                 />
                 {errors.fullName && (
                   <EmpatheticFormError
                     field="fullName"
-                    error={errors.fullName.message || 'required_field'}
+                    error={errors.fullName.message || "required_field"}
                   />
                 )}
               </div>
@@ -93,14 +93,14 @@ const EmpatheticFormExample: React.FC = () => {
                 <Input
                   id="email"
                   type="email"
-                  {...register('email')}
+                  {...register("email")}
                   placeholder="john.doe@email.com"
-                  className={errors.email ? 'border-amber-300' : ''}
+                  className={errors.email ? "border-amber-300" : ""}
                 />
                 {errors.email && (
                   <EmpatheticFormError
                     field="email"
-                    error={errors.email.message || 'invalid_email'}
+                    error={errors.email.message || "invalid_email"}
                   />
                 )}
               </div>
@@ -112,14 +112,14 @@ const EmpatheticFormExample: React.FC = () => {
                 <Label htmlFor="phone">Phone Number</Label>
                 <Input
                   id="phone"
-                  {...register('phone')}
+                  {...register("phone")}
                   placeholder="(555) 123-4567"
-                  className={errors.phone ? 'border-amber-300' : ''}
+                  className={errors.phone ? "border-amber-300" : ""}
                 />
                 {errors.phone && (
                   <EmpatheticFormError
                     field="phone"
-                    error={errors.phone.message || 'invalid_phone'}
+                    error={errors.phone.message || "invalid_phone"}
                   />
                 )}
               </div>
@@ -131,14 +131,14 @@ const EmpatheticFormExample: React.FC = () => {
                 <Label htmlFor="birthDate">Birth Date</Label>
                 <Input
                   id="birthDate"
-                  {...register('birthDate')}
+                  {...register("birthDate")}
                   placeholder="MM/DD/YYYY"
-                  className={errors.birthDate ? 'border-amber-300' : ''}
+                  className={errors.birthDate ? "border-amber-300" : ""}
                 />
                 {errors.birthDate && (
                   <EmpatheticFormError
                     field="birthDate"
-                    error={errors.birthDate.message || 'invalid_date'}
+                    error={errors.birthDate.message || "invalid_date"}
                   />
                 )}
               </div>
@@ -149,7 +149,9 @@ const EmpatheticFormExample: React.FC = () => {
               <ProgressiveErrorRecovery
                 error={saveError}
                 onRetry={() => handleSubmit(onSubmit)()}
-                onContactSupport={() => window.dispatchEvent(new CustomEvent('show-support-modal'))}
+                onContactSupport={() =>
+                  window.dispatchEvent(new CustomEvent("show-support-modal"))
+                }
               />
             )}
 
@@ -175,7 +177,8 @@ const EmpatheticFormExample: React.FC = () => {
 
           {/* Reassurance message */}
           <p className="text-sm text-muted-foreground text-center mt-6">
-            Your information is automatically saved as you type, so you never lose your progress
+            Your information is automatically saved as you type, so you never
+            lose your progress
           </p>
         </CardContent>
       </Card>

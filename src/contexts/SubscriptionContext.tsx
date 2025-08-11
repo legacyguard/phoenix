@@ -1,13 +1,16 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { useUser } from '@clerk/clerk-react';
-import { stripeService, SubscriptionStatus } from '@/services/stripeService';
-import { supabase } from '@/lib/supabase';
-import { SubscriptionContext } from './SubscriptionContext.context';
-import { FEATURE_ACCESS } from './SubscriptionContext.constants';
+import React, { useState, useEffect, useCallback } from "react";
+import { useUser } from "@clerk/clerk-react";
+import { stripeService, SubscriptionStatus } from "@/services/stripeService";
+import { supabase } from "@/lib/supabase";
+import { SubscriptionContext } from "./SubscriptionContext.context";
+import { FEATURE_ACCESS } from "./SubscriptionContext.constants";
 
-export const SubscriptionProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+export const SubscriptionProvider: React.FC<{ children: React.ReactNode }> = ({
+  children,
+}) => {
   const { user } = useUser();
-  const [subscriptionStatus, setSubscriptionStatus] = useState<SubscriptionStatus | null>(null);
+  const [subscriptionStatus, setSubscriptionStatus] =
+    useState<SubscriptionStatus | null>(null);
   const [isLoading, setIsLoading] = useState(true);
 
   const refreshSubscription = useCallback(async () => {
@@ -21,7 +24,7 @@ export const SubscriptionProvider: React.FC<{ children: React.ReactNode }> = ({ 
       const status = await stripeService.getSubscriptionStatus(user.id);
       setSubscriptionStatus(status);
     } catch (error) {
-      console.error('Error fetching subscription status:', error);
+      console.error("Error fetching subscription status:", error);
       setSubscriptionStatus(null);
     } finally {
       setIsLoading(false);
@@ -44,18 +47,18 @@ export const SubscriptionProvider: React.FC<{ children: React.ReactNode }> = ({ 
 
     // Subscribe to real-time updates
     const subscription = supabase
-      .channel('subscription_changes')
+      .channel("subscription_changes")
       .on(
-        'postgres_changes',
+        "postgres_changes",
         {
-          event: '*',
-          schema: 'public',
-          table: 'user_subscriptions',
-          filter: `user_id=eq.${user.id}`
+          event: "*",
+          schema: "public",
+          table: "user_subscriptions",
+          filter: `user_id=eq.${user.id}`,
         },
         () => {
           refreshSubscription();
-        }
+        },
       )
       .subscribe();
 
@@ -73,7 +76,7 @@ export const SubscriptionProvider: React.FC<{ children: React.ReactNode }> = ({ 
         isLoading,
         isPremium,
         checkAccess,
-        refreshSubscription
+        refreshSubscription,
       }}
     >
       {children}

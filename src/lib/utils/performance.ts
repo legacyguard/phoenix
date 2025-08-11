@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef } from "react";
 
 // Performance monitoring utilities
 export interface PerformanceMetrics {
@@ -39,11 +39,13 @@ export class PerformanceMonitor {
   }
 
   getMetric(key: string): PerformanceMetrics {
-    return this.metrics.get(key) || {
-      loadTime: 0,
-      renderTime: 0,
-      apiResponseTime: 0,
-    };
+    return (
+      this.metrics.get(key) || {
+        loadTime: 0,
+        renderTime: 0,
+        apiResponseTime: 0,
+      }
+    );
   }
 
   getAllMetrics(): Record<string, PerformanceMetrics> {
@@ -70,7 +72,7 @@ export function usePerformanceMonitor(componentName: string) {
 
   useEffect(() => {
     startTimeRef.current = performance.now();
-    
+
     return () => {
       const renderTime = performance.now() - startTimeRef.current;
       monitor.recordRenderTime(componentName, renderTime);
@@ -79,36 +81,40 @@ export function usePerformanceMonitor(componentName: string) {
 
   return {
     startTimer: () => monitor.startTimer(componentName),
-    recordApiResponseTime: (duration: number) => 
+    recordApiResponseTime: (duration: number) =>
       monitor.recordApiResponseTime(componentName, duration),
     getMetrics: () => monitor.getMetric(componentName),
   };
 }
 
 // Extend PerformanceMonitor with render time
-declare module './performance' {
+declare module "./performance" {
   interface PerformanceMonitor {
     recordRenderTime(key: string, duration: number): void;
   }
 }
 
-PerformanceMonitor.prototype.recordRenderTime = function(key: string, duration: number): void {
+PerformanceMonitor.prototype.recordRenderTime = function (
+  key: string,
+  duration: number,
+): void {
   const current = this.getMetric(key);
   this.recordMetric(key, { ...current, renderTime: duration });
 };
 
 // Web Vitals tracking
 export function reportWebVitals(metric: unknown) {
-  if (process.env.NODE_ENV === 'production') {
+  if (process.env.NODE_ENV === "production") {
     // Send to analytics service
-    console.log('Web Vital:', metric);
+    console.log("Web Vital:", metric);
   }
 }
 
 // Memory usage tracking
 export function getMemoryUsage(): number | undefined {
-  if ('memory' in performance) {
-    return (performance as { memory: { usedJSHeapSize: number } }).memory.usedJSHeapSize;
+  if ("memory" in performance) {
+    return (performance as { memory: { usedJSHeapSize: number } }).memory
+      .usedJSHeapSize;
   }
   return undefined;
 }
@@ -116,10 +122,10 @@ export function getMemoryUsage(): number | undefined {
 // Debounce utility
 export function debounce<T extends (...args: unknown[]) => unknown>(
   func: T,
-  delay: number
+  delay: number,
 ): (...args: Parameters<T>) => void {
   let timeoutId: NodeJS.Timeout;
-  
+
   return (...args: Parameters<T>) => {
     clearTimeout(timeoutId);
     timeoutId = setTimeout(() => func(...args), delay);
@@ -129,10 +135,10 @@ export function debounce<T extends (...args: unknown[]) => unknown>(
 // Throttle utility
 export function throttle<T extends (...args: unknown[]) => unknown>(
   func: T,
-  limit: number
+  limit: number,
 ): (...args: Parameters<T>) => void {
   let inThrottle: boolean;
-  
+
   return (...args: Parameters<T>) => {
     if (!inThrottle) {
       func(...args);

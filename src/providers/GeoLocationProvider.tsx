@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import React from 'react';
-import { useGeoLocation } from '@/hooks/useGeoLocation';
-import { CountryLanguageModal } from '@/components/modals/CountryLanguageModal';
+import React from "react";
+import { useGeoLocation } from "@/hooks/useGeoLocation";
+import { CountryLanguageModal } from "@/components/modals/CountryLanguageModal";
 
 interface GeoLocationProviderProps {
   children: React.ReactNode;

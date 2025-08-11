@@ -1,11 +1,11 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
-import { SignUp } from '@clerk/clerk-react';
-import { Shield } from 'lucide-react';
+import React from "react";
+import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import { SignUp } from "@clerk/clerk-react";
+import { Shield } from "lucide-react";
 
 export const Register: React.FC = () => {
-  const { t } = useTranslation('auth');
+  const { t } = useTranslation("auth");
 
   return (
     <div className="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
@@ -13,7 +13,9 @@ export const Register: React.FC = () => {
         <div className="text-center">
           <div className="flex justify-center items-center space-x-2 mb-6">
             <Shield className="h-8 w-8 text-primary" />
-            <span className="text-2xl font-bold text-primary">{t('register.title')}</span>
+            <span className="text-2xl font-bold text-primary">
+              {t("register.title")}
+            </span>
           </div>
         </div>
 
@@ -22,13 +24,13 @@ export const Register: React.FC = () => {
             fallbackRedirectUrl="/dashboard"
             appearance={{
               variables: {
-                colorPrimary: 'hsl(var(--primary))',
-                colorBackground: 'hsl(var(--background))',
-                colorInputBackground: 'hsl(var(--background))',
-                colorInputText: 'hsl(var(--foreground))',
-                colorText: 'hsl(var(--foreground))',
-                colorTextSecondary: 'hsl(var(--muted-foreground))',
-                borderRadius: '0.5rem',
+                colorPrimary: "hsl(var(--primary))",
+                colorBackground: "hsl(var(--background))",
+                colorInputBackground: "hsl(var(--background))",
+                colorInputText: "hsl(var(--foreground))",
+                colorText: "hsl(var(--foreground))",
+                colorTextSecondary: "hsl(var(--muted-foreground))",
+                borderRadius: "0.5rem",
               },
             }}
           />
@@ -36,13 +38,13 @@ export const Register: React.FC = () => {
 
         <div className="text-center text-sm">
           <span className="text-muted-foreground">
-            {t('register.alreadyHaveAccount')}{' '}
+            {t("register.alreadyHaveAccount")}{" "}
           </span>
-          <Link 
-            to="/login" 
+          <Link
+            to="/login"
             className="text-primary hover:text-primary/80 font-medium"
           >
-            {t('register.signIn')}
+            {t("register.signIn")}
           </Link>
         </div>
       </div>

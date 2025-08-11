@@ -1,8 +1,8 @@
-import { describe, it, expect, vi, beforeEach } from 'vitest';
-import { willSyncService } from '@/services/willSyncService';
+import { describe, it, expect, vi, beforeEach } from "vitest";
+import { willSyncService } from "@/services/willSyncService";
 
 // Mock supabase
-vi.mock('@/lib/supabase', () => ({
+vi.mock("@/lib/supabase", () => ({
   supabase: {
     from: vi.fn(() => ({
       select: vi.fn(() => ({
@@ -31,32 +31,46 @@ beforeEach(() => {
 
 // Unit test examples
 
-describe('WillSyncService', () => {
-  it('should initialize with no subscriptions', () => {
-    expect(willSyncService).toHaveProperty('subscriptions');
-    expect(willSyncService['subscriptions'].size).toBe(0);
+describe("WillSyncService", () => {
+  it("should initialize with no subscriptions", () => {
+    expect(willSyncService).toHaveProperty("subscriptions");
+    expect(willSyncService["subscriptions"].size).toBe(0);
   });
 
-  it('should merge will changes correctly', () => {
+  it("should merge will changes correctly", () => {
     const currentContent = {
       beneficiaries: [
-        { id: 'b1', name: 'Beneficiary 1', allocation: [{ assetType: 'percentage', value: 100 }] },
+        {
+          id: "b1",
+          name: "Beneficiary 1",
+          allocation: [{ assetType: "percentage", value: 100 }],
+        },
       ],
     };
 
     const changes = {
       added: {
-        beneficiaries: [{ id: 'b2', name: 'Beneficiary 2' }],
+        beneficiaries: [{ id: "b2", name: "Beneficiary 2" }],
       },
       modified: {
         allocations: [
-          { beneficiary_id: 'b1', beneficiary_name: 'Beneficiary 1', old_percentage: 100, new_percentage: 50 },
-          { beneficiary_id: 'b2', beneficiary_name: 'Beneficiary 2', old_percentage: 0, new_percentage: 50 },
+          {
+            beneficiary_id: "b1",
+            beneficiary_name: "Beneficiary 1",
+            old_percentage: 100,
+            new_percentage: 50,
+          },
+          {
+            beneficiary_id: "b2",
+            beneficiary_name: "Beneficiary 2",
+            old_percentage: 0,
+            new_percentage: 50,
+          },
         ],
       },
     };
 
-    const merged = willSyncService['mergeWillChanges'](currentContent, changes);
+    const merged = willSyncService["mergeWillChanges"](currentContent, changes);
 
     expect(merged.beneficiaries).toHaveLength(2);
     expect(merged.beneficiaries[0].allocation[0].value).toBe(50);
@@ -66,12 +80,12 @@ describe('WillSyncService', () => {
 
 // Integration test examples
 
-describe('Will Integration', () => {
-  it('should create a new will version when changes are applied', async () => {
-    const willId = 'sample-will-id';
+describe("Will Integration", () => {
+  it("should create a new will version when changes are applied", async () => {
+    const willId = "sample-will-id";
     const changes = {
       added: {
-        beneficiaries: [{ id: 'b3', name: 'Beneficiary 3' }],
+        beneficiaries: [{ id: "b3", name: "Beneficiary 3" }],
       },
     };
 

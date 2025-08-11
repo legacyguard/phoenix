@@ -1,16 +1,24 @@
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
-import { ChevronRight, AlertCircle, CheckCircle, TrendingUp, Users, Clock } from 'lucide-react';
-import { 
-  UserContext, 
-  QuestionOption, 
-  Question, 
+import React, { useState, useEffect, useCallback, useMemo } from "react";
+import {
+  ChevronRight,
+  AlertCircle,
+  CheckCircle,
+  TrendingUp,
+  Users,
+  Clock,
+} from "lucide-react";
+import {
+  UserContext,
+  QuestionOption,
+  Question,
   QuestionFlow,
-  ProgressiveQuestionLogicProps 
-} from './ProgressiveQuestionLogic';
-import { flowAnalytics, flowOptimizer } from './progressiveQuestionAnalytics';
+  ProgressiveQuestionLogicProps,
+} from "./ProgressiveQuestionLogic";
+import { flowAnalytics, flowOptimizer } from "./progressiveQuestionAnalytics";
 
 // Extended props to include analytics
-interface ProgressiveQuestionLogicWithAnalyticsProps extends ProgressiveQuestionLogicProps {
+interface ProgressiveQuestionLogicWithAnalyticsProps
+  extends ProgressiveQuestionLogicProps {
   enableAnalytics?: boolean;
   onAnalyticsEvent?: (eventType: string, data: Record<string, unknown>) => void;
   showDebugInfo?: boolean;
@@ -19,211 +27,232 @@ interface ProgressiveQuestionLogicWithAnalyticsProps extends ProgressiveQuestion
 // Question definitions with enhanced metadata
 const ENHANCED_QUESTIONS: Record<string, Question> = {
   // Primary questions with emotional hooks
-  'family-reliance': {
-    id: 'family-reliance',
+  "family-reliance": {
+    id: "family-reliance",
     text: "When you think about your family's future, who depends on you the most?",
     subtext: "This helps us understand what matters most to you",
-    type: 'primary',
+    type: "primary",
     options: [
-      { 
-        value: 'spouse-children', 
-        label: 'My spouse and children rely on me for everything',
-        icon: <Users className="w-5 h-5 text-blue-600" />
+      {
+        value: "spouse-children",
+        label: "My spouse and children rely on me for everything",
+        icon: <Users className="w-5 h-5 text-blue-600" />,
       },
-      { 
-        value: 'business-partners', 
-        label: 'My business partners and employees count on me',
-        icon: <TrendingUp className="w-5 h-5 text-green-600" />
+      {
+        value: "business-partners",
+        label: "My business partners and employees count on me",
+        icon: <TrendingUp className="w-5 h-5 text-green-600" />,
       },
-      { 
-        value: 'aging-parents', 
-        label: 'I help care for aging parents or relatives',
-        icon: <AlertCircle className="w-5 h-5 text-amber-600" />
+      {
+        value: "aging-parents",
+        label: "I help care for aging parents or relatives",
+        icon: <AlertCircle className="w-5 h-5 text-amber-600" />,
       },
-      { 
-        value: 'self-focused', 
+      {
+        value: "self-focused",
         label: "It's mainly just me I need to plan for",
-        icon: <CheckCircle className="w-5 h-5 text-gray-600" />
-      }
-    ]
+        icon: <CheckCircle className="w-5 h-5 text-gray-600" />,
+      },
+    ],
   },
-  
+
   // Enhanced follow-up questions
-  'spouse-challenge': {
-    id: 'spouse-challenge',
+  "spouse-challenge": {
+    id: "spouse-challenge",
     text: "If something happened to you tomorrow, what would be the hardest thing for your spouse to handle?",
     subtext: "We'll create a plan to make this easier",
-    type: 'followup',
-    category: 'family',
+    type: "followup",
+    category: "family",
     options: [
-      { 
-        value: 'finances', 
-        label: 'Understanding our finances and paying the bills' 
+      {
+        value: "finances",
+        label: "Understanding our finances and paying the bills",
       },
-      { 
-        value: 'legal-insurance', 
-        label: 'Dealing with insurance claims and legal paperwork' 
+      {
+        value: "legal-insurance",
+        label: "Dealing with insurance claims and legal paperwork",
       },
-      { 
-        value: 'children-decisions', 
-        label: 'Making important decisions about our children\'s future' 
+      {
+        value: "children-decisions",
+        label: "Making important decisions about our children's future",
       },
-      { 
-        value: 'business-work', 
-        label: 'Managing my business or work responsibilities' 
-      }
-    ]
+      {
+        value: "business-work",
+        label: "Managing my business or work responsibilities",
+      },
+    ],
   },
-  
+
   // Time-sensitive follow-ups
-  'urgency-assessment': {
-    id: 'urgency-assessment',
+  "urgency-assessment": {
+    id: "urgency-assessment",
     text: "When do you want to have everything organized and protected?",
     subtext: "There's no wrong answer - we'll work with your timeline",
-    type: 'contextual',
-    category: 'planning',
+    type: "contextual",
+    category: "planning",
     options: [
-      { 
-        value: 'asap', 
-        label: 'As soon as possible - I\'ve been putting this off',
-        icon: <Clock className="w-5 h-5 text-red-600" />
+      {
+        value: "asap",
+        label: "As soon as possible - I've been putting this off",
+        icon: <Clock className="w-5 h-5 text-red-600" />,
       },
-      { 
-        value: 'months', 
-        label: 'In the next few months - I want to do this right' 
+      {
+        value: "months",
+        label: "In the next few months - I want to do this right",
       },
-      { 
-        value: 'year', 
-        label: 'Within the year - I\'m planning ahead' 
+      {
+        value: "year",
+        label: "Within the year - I'm planning ahead",
       },
-      { 
-        value: 'eventually', 
-        label: 'Eventually - I\'m just exploring options' 
-      }
-    ]
+      {
+        value: "eventually",
+        label: "Eventually - I'm just exploring options",
+      },
+    ],
   },
-  
+
   // Emotional reassurance questions
-  'confidence-builder': {
-    id: 'confidence-builder',
+  "confidence-builder": {
+    id: "confidence-builder",
     text: "What would give you the most peace of mind?",
     subtext: "Let's focus on what will help you sleep better at night",
-    type: 'contextual',
-    category: 'emotional',
+    type: "contextual",
+    category: "emotional",
     options: [
-      { 
-        value: 'family-prepared', 
-        label: 'Knowing my family won\'t struggle if something happens' 
+      {
+        value: "family-prepared",
+        label: "Knowing my family won't struggle if something happens",
       },
-      { 
-        value: 'everything-documented', 
-        label: 'Having everything documented and easy to find' 
+      {
+        value: "everything-documented",
+        label: "Having everything documented and easy to find",
       },
-      { 
-        value: 'professional-help', 
-        label: 'Having professionals ready to help my family' 
+      {
+        value: "professional-help",
+        label: "Having professionals ready to help my family",
       },
-      { 
-        value: 'control-maintained', 
-        label: 'Maintaining control over important decisions' 
-      }
-    ]
-  }
+      {
+        value: "control-maintained",
+        label: "Maintaining control over important decisions",
+      },
+    ],
+  },
 };
 
 // Dynamic question generator based on context
 class DynamicQuestionGenerator {
-  generateContextualQuestion(context: UserContext, previousAnswers: Record<string, string>): Question | null {
+  generateContextualQuestion(
+    context: UserContext,
+    previousAnswers: Record<string, string>,
+  ): Question | null {
     // Generate questions based on detected patterns
-    if (context.preparednessLevel === 'low' && context.urgencyLevel === 'immediate') {
+    if (
+      context.preparednessLevel === "low" &&
+      context.urgencyLevel === "immediate"
+    ) {
       return {
-        id: 'quick-win',
+        id: "quick-win",
         text: "Let's start small. What can you do this week?",
         subtext: "Small steps lead to big results",
-        type: 'contextual',
-        category: 'action',
+        type: "contextual",
+        category: "action",
         options: [
-          { value: 'list-passwords', label: 'Write down my important passwords' },
-          { value: 'find-documents', label: 'Gather my important documents' },
-          { value: 'talk-family', label: 'Talk to my family about my wishes' },
-          { value: 'call-advisor', label: 'Schedule a call with an advisor' }
-        ]
+          {
+            value: "list-passwords",
+            label: "Write down my important passwords",
+          },
+          { value: "find-documents", label: "Gather my important documents" },
+          { value: "talk-family", label: "Talk to my family about my wishes" },
+          { value: "call-advisor", label: "Schedule a call with an advisor" },
+        ],
       };
     }
-    
-    if (context.familyFocus === 'children' && !previousAnswers['children-age']) {
+
+    if (
+      context.familyFocus === "children" &&
+      !previousAnswers["children-age"]
+    ) {
       return {
-        id: 'children-age',
+        id: "children-age",
         text: "How old are your children?",
         subtext: "This helps us tailor our recommendations",
-        type: 'contextual',
-        category: 'family',
+        type: "contextual",
+        category: "family",
         options: [
-          { value: 'young', label: 'Under 10 - they still need everything' },
-          { value: 'teens', label: 'Teenagers - planning for college soon' },
-          { value: 'adults', label: 'Adults - but I still worry about them' },
-          { value: 'mixed', label: 'Different ages - each with different needs' }
-        ]
+          { value: "young", label: "Under 10 - they still need everything" },
+          { value: "teens", label: "Teenagers - planning for college soon" },
+          { value: "adults", label: "Adults - but I still worry about them" },
+          {
+            value: "mixed",
+            label: "Different ages - each with different needs",
+          },
+        ],
       };
     }
-    
+
     return null;
   }
 }
 
-const ProgressiveQuestionLogicWithAnalytics: React.FC<ProgressiveQuestionLogicWithAnalyticsProps> = ({
+const ProgressiveQuestionLogicWithAnalytics: React.FC<
+  ProgressiveQuestionLogicWithAnalyticsProps
+> = ({
   onComplete,
   onProgress,
   initialContext = {},
   enableAnalytics = true,
   onAnalyticsEvent,
-  showDebugInfo = false
+  showDebugInfo = false,
 }) => {
-  const [currentQuestionId, setCurrentQuestionId] = useState<string>('family-reliance');
+  const [currentQuestionId, setCurrentQuestionId] =
+    useState<string>("family-reliance");
   const [answers, setAnswers] = useState<Record<string, string>>({});
-  const [questionHistory, setQuestionHistory] = useState<string[]>(['family-reliance']);
+  const [questionHistory, setQuestionHistory] = useState<string[]>([
+    "family-reliance",
+  ]);
   const [isComplete, setIsComplete] = useState(false);
   const [userContext, setUserContext] = useState<UserContext>({
-    preparednessLevel: 'medium',
-    familyFocus: 'spouse',
-    urgencyLevel: 'moderate',
-    complexityLevel: 'basic',
-    ...initialContext
+    preparednessLevel: "medium",
+    familyFocus: "spouse",
+    urgencyLevel: "moderate",
+    complexityLevel: "basic",
+    ...initialContext,
   });
   const [showInsight, setShowInsight] = useState(false);
-  const [currentInsight, setCurrentInsight] = useState<string>('');
+  const [currentInsight, setCurrentInsight] = useState<string>("");
 
   const questionGenerator = useMemo(() => new DynamicQuestionGenerator(), []);
   const questions = useMemo(() => {
     const baseQuestions = { ...ENHANCED_QUESTIONS };
-    
+
     // Add dynamically generated questions
-    const dynamicQuestion = questionGenerator.generateContextualQuestion(userContext, answers);
+    const dynamicQuestion = questionGenerator.generateContextualQuestion(
+      userContext,
+      answers,
+    );
     if (dynamicQuestion) {
       baseQuestions[dynamicQuestion.id] = dynamicQuestion;
     }
-    
+
     return baseQuestions;
   }, [questionGenerator, userContext, answers]);
-  
+
   const currentQuestion = questions[currentQuestionId];
   const maxQuestions = 8;
   const progress = Math.min((questionHistory.length / maxQuestions) * 100, 100);
 
   // Track question view
   useEffect(() => {
-     
     if (enableAnalytics && currentQuestionId) {
       flowAnalytics.trackQuestionView(currentQuestionId);
       if (onAnalyticsEvent) {
-        onAnalyticsEvent('question_viewed', { questionId: currentQuestionId });
+        onAnalyticsEvent("question_viewed", { questionId: currentQuestionId });
       }
     }
   }, [currentQuestionId, enableAnalytics, onAnalyticsEvent]);
 
   // Update progress
   useEffect(() => {
-     
     if (onProgress) {
       onProgress(progress);
     }
@@ -232,108 +261,122 @@ const ProgressiveQuestionLogicWithAnalytics: React.FC<ProgressiveQuestionLogicWi
   // Generate contextual insights
   const generateInsight = useCallback((answer: string, questionId: string) => {
     const insights: Record<string, Record<string, string>> = {
-      'spouse-challenge': {
-        'finances': "You're not alone - 60% of spouses struggle with financial decisions after loss.",
-        'legal-insurance': "Smart thinking - having clear documentation saves months of stress.",
-        'children-decisions': "Protecting your children's future is what great parents do.",
-        'business-work': "Your business legacy deserves protection too."
+      "spouse-challenge": {
+        finances:
+          "You're not alone - 60% of spouses struggle with financial decisions after loss.",
+        "legal-insurance":
+          "Smart thinking - having clear documentation saves months of stress.",
+        "children-decisions":
+          "Protecting your children's future is what great parents do.",
+        "business-work": "Your business legacy deserves protection too.",
       },
-      'organization-status': {
-        'very-organized': "Excellent! Let's make your good system even better.",
-        'somewhat-organized': "You're ahead of most people - let's fill those gaps.",
-        'not-organized': "Recognizing this is the first step to peace of mind.",
-        'no-system': "Many successful people are in the same boat - we'll fix this together."
-      }
+      "organization-status": {
+        "very-organized": "Excellent! Let's make your good system even better.",
+        "somewhat-organized":
+          "You're ahead of most people - let's fill those gaps.",
+        "not-organized": "Recognizing this is the first step to peace of mind.",
+        "no-system":
+          "Many successful people are in the same boat - we'll fix this together.",
+      },
     };
-    
-    return insights[questionId]?.[answer] || '';
+
+    return insights[questionId]?.[answer] || "";
   }, []);
 
-  const handleAnswer = useCallback((answerValue: string) => {
-    // Track analytics
-    if (enableAnalytics) {
-      flowAnalytics.trackAnswer(currentQuestionId, answerValue, userContext);
-      if (onAnalyticsEvent) {
-        onAnalyticsEvent('answer_selected', {
-          questionId: currentQuestionId,
-          answer: answerValue,
-          context: userContext
-        });
-      }
-    }
-
-    // Show insight for certain questions
-    const insight = generateInsight(answerValue, currentQuestionId);
-    if (insight) {
-      setCurrentInsight(insight);
-      setShowInsight(true);
-      setTimeout(() => setShowInsight(false), 3000);
-    }
-
-    // Record the answer
-    const newAnswers = { ...answers, [currentQuestionId]: answerValue };
-    setAnswers(newAnswers);
-
-    // Get flow definition (simplified for this example)
-    const shouldComplete = questionHistory.length >= maxQuestions;
-    
-    if (shouldComplete) {
-      setIsComplete(true);
+  const handleAnswer = useCallback(
+    (answerValue: string) => {
+      // Track analytics
       if (enableAnalytics) {
-        flowAnalytics.trackCompletion(questionHistory, userContext);
+        flowAnalytics.trackAnswer(currentQuestionId, answerValue, userContext);
+        if (onAnalyticsEvent) {
+          onAnalyticsEvent("answer_selected", {
+            questionId: currentQuestionId,
+            answer: answerValue,
+            context: userContext,
+          });
+        }
       }
-      onComplete(newAnswers, userContext);
-      return;
-    }
 
-    // Determine next question using optimizer if available
-    let nextQuestionId: string | null = null;
-    
-    if (enableAnalytics) {
-      nextQuestionId = flowOptimizer.getOptimalNextQuestion(userContext, questionHistory);
-    }
-    
-    // Fall back to dynamic generation if no optimized path
-    if (!nextQuestionId) {
-      const dynamicQ = questionGenerator.generateContextualQuestion(userContext, newAnswers);
-      if (dynamicQ && !questionHistory.includes(dynamicQ.id)) {
-        nextQuestionId = dynamicQ.id;
+      // Show insight for certain questions
+      const insight = generateInsight(answerValue, currentQuestionId);
+      if (insight) {
+        setCurrentInsight(insight);
+        setShowInsight(true);
+        setTimeout(() => setShowInsight(false), 3000);
       }
-    }
-    
-    // Default to a simple flow if nothing else works
-    if (!nextQuestionId) {
-      const defaultFlow: Record<string, string> = {
-        'family-reliance': 'spouse-challenge',
-        'spouse-challenge': 'organization-status',
-        'organization-status': 'urgency-assessment',
-        'urgency-assessment': 'confidence-builder'
-      };
-      nextQuestionId = defaultFlow[currentQuestionId] || null;
-    }
 
-    if (nextQuestionId && !questionHistory.includes(nextQuestionId)) {
-      setCurrentQuestionId(nextQuestionId);
-      setQuestionHistory([...questionHistory, nextQuestionId]);
-    } else {
-      // Complete if no valid next question
-      setIsComplete(true);
+      // Record the answer
+      const newAnswers = { ...answers, [currentQuestionId]: answerValue };
+      setAnswers(newAnswers);
+
+      // Get flow definition (simplified for this example)
+      const shouldComplete = questionHistory.length >= maxQuestions;
+
+      if (shouldComplete) {
+        setIsComplete(true);
+        if (enableAnalytics) {
+          flowAnalytics.trackCompletion(questionHistory, userContext);
+        }
+        onComplete(newAnswers, userContext);
+        return;
+      }
+
+      // Determine next question using optimizer if available
+      let nextQuestionId: string | null = null;
+
       if (enableAnalytics) {
-        flowAnalytics.trackCompletion(questionHistory, userContext);
+        nextQuestionId = flowOptimizer.getOptimalNextQuestion(
+          userContext,
+          questionHistory,
+        );
       }
-      onComplete(newAnswers, userContext);
-    }
-  }, [
-    currentQuestionId, 
-    answers, 
-    questionHistory, 
-    userContext, 
-    onComplete, 
-    enableAnalytics, 
-    onAnalyticsEvent,
-    generateInsight,
-    questionGenerator
-  ]);
+
+      // Fall back to dynamic generation if no optimized path
+      if (!nextQuestionId) {
+        const dynamicQ = questionGenerator.generateContextualQuestion(
+          userContext,
+          newAnswers,
+        );
+        if (dynamicQ && !questionHistory.includes(dynamicQ.id)) {
+          nextQuestionId = dynamicQ.id;
+        }
+      }
+
+      // Default to a simple flow if nothing else works
+      if (!nextQuestionId) {
+        const defaultFlow: Record<string, string> = {
+          "family-reliance": "spouse-challenge",
+          "spouse-challenge": "organization-status",
+          "organization-status": "urgency-assessment",
+          "urgency-assessment": "confidence-builder",
+        };
+        nextQuestionId = defaultFlow[currentQuestionId] || null;
+      }
+
+      if (nextQuestionId && !questionHistory.includes(nextQuestionId)) {
+        setCurrentQuestionId(nextQuestionId);
+        setQuestionHistory([...questionHistory, nextQuestionId]);
+      } else {
+        // Complete if no valid next question
+        setIsComplete(true);
+        if (enableAnalytics) {
+          flowAnalytics.trackCompletion(questionHistory, userContext);
+        }
+        onComplete(newAnswers, userContext);
+      }
+    },
+    [
+      currentQuestionId,
+      answers,
+      questionHistory,
+      userContext,
+      onComplete,
+      enableAnalytics,
+      onAnalyticsEvent,
+      generateInsight,
+      questionGenerator,
+    ],
+  );
 
   const getProgressMessage = () => {
     const count = questionHistory.length;
@@ -374,7 +417,7 @@ const ProgressiveQuestionLogicWithAnalytics: React.FC<ProgressiveQuestionLogicWi
           </span>
         </div>
         <div className="w-full bg-gray-200 rounded-full h-2">
-          <div 
+          <div
             className="bg-blue-600 h-2 rounded-full transition-all duration-300"
             style={{ width: `${progress}%` }}
           />
@@ -394,9 +437,7 @@ const ProgressiveQuestionLogicWithAnalytics: React.FC<ProgressiveQuestionLogicWi
           {currentQuestion.text}
         </h3>
         {currentQuestion.subtext && (
-          <p className="text-gray-600">
-            {currentQuestion.subtext}
-          </p>
+          <p className="text-gray-600">{currentQuestion.subtext}</p>
         )}
       </div>
 
@@ -412,7 +453,9 @@ const ProgressiveQuestionLogicWithAnalytics: React.FC<ProgressiveQuestionLogicWi
               <span className="text-lg text-gray-800 group-hover:text-blue-700">
                 {option.label}
               </span>
-              {option.icon || <ChevronRight className="w-5 h-5 text-gray-400" />}
+              {option.icon || (
+                <ChevronRight className="w-5 h-5 text-gray-400" />
+              )}
             </div>
           </button>
         ))}

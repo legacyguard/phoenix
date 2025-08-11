@@ -7,6 +7,7 @@ The LegacyGuard application now includes a comprehensive internationalized email
 ## Features
 
 ### 📧 Email Templates
+
 - **Welcome emails** - Introduction to family protection planning
 - **Verification emails** - Account security and email verification
 - **Password reset emails** - Secure account recovery
@@ -17,6 +18,7 @@ The LegacyGuard application now includes a comprehensive internationalized email
 - **Family invitations** - Trusted person access invitations
 
 ### 📱 Push Notifications
+
 - **Task reminders** - Family protection task notifications
 - **Document expiry** - Document renewal alerts
 - **Family access updates** - Access permission changes
@@ -26,12 +28,14 @@ The LegacyGuard application now includes a comprehensive internationalized email
 - **Trial expiry** - Trial period ending reminders
 
 ### 📲 SMS Notifications
+
 - **Security codes** - Two-factor authentication codes
 - **Login alerts** - New device/location login notifications
 - **Emergency access** - Critical family information access
 - **Critical reminders** - Important family protection tasks
 
 ### ⚖️ Legal Communications
+
 - **Legal disclaimers** - Comprehensive legal notices
 - **Terms and conditions** - Service agreements and policies
 - **Compliance information** - Data protection and privacy details
@@ -40,6 +44,7 @@ The LegacyGuard application now includes a comprehensive internationalized email
 ## Translation Files
 
 ### Email Templates (`/src/i18n/locales/{lang}/emails.json`)
+
 ```json
 {
   "common": {
@@ -55,6 +60,7 @@ The LegacyGuard application now includes a comprehensive internationalized email
 ```
 
 ### Notifications (`/src/i18n/locales/{lang}/notifications.json`)
+
 ```json
 {
   "push": {
@@ -72,6 +78,7 @@ The LegacyGuard application now includes a comprehensive internationalized email
 ```
 
 ### Legal Communications (`/src/i18n/locales/{lang}/legal.json`)
+
 ```json
 {
   "disclaimers": {
@@ -88,13 +95,13 @@ The LegacyGuard application now includes a comprehensive internationalized email
 ### 1. Using the Email Service
 
 ```typescript
-import { emailService } from '@/services/emailService';
+import { emailService } from "@/services/emailService";
 
 // Send welcome email
 const user = {
-  id: 'user123',
-  name: 'John Smith',
-  email: 'john@example.com'
+  id: "user123",
+  name: "John Smith",
+  email: "john@example.com",
 };
 
 await emailService.sendWelcomeEmail(user);
@@ -103,30 +110,26 @@ await emailService.sendWelcomeEmail(user);
 ### 2. Using the Notification Service
 
 ```typescript
-import { notificationService } from '@/services/notificationService';
+import { notificationService } from "@/services/notificationService";
 
 // Send push notification
-await notificationService.sendPushNotification(
-  'user123',
-  'taskReminder',
-  { count: 3 }
-);
+await notificationService.sendPushNotification("user123", "taskReminder", {
+  count: 3,
+});
 
 // Send SMS notification
-await notificationService.sendSMSNotification(
-  '+1234567890',
-  'securityCode',
-  { code: '123456' }
-);
+await notificationService.sendSMSNotification("+1234567890", "securityCode", {
+  code: "123456",
+});
 ```
 
 ### 3. Using the Legal Document Service
 
 ```typescript
-import { legalDocumentService } from '@/services/legalDocumentService';
+import { legalDocumentService } from "@/services/legalDocumentService";
 
 // Get legal disclaimers
-const disclaimers = legalDocumentService.getLegalDisclaimers('willGenerator');
+const disclaimers = legalDocumentService.getLegalDisclaimers("willGenerator");
 
 // Get compliance information
 const compliance = legalDocumentService.getComplianceInformation();
@@ -187,20 +190,21 @@ const emailContent = (
 
 ## Supported Email Types
 
-| Type | Description | Use Case |
-|------|-------------|----------|
-| `welcome` | Welcome to LegacyGuard | New user onboarding |
-| `verification` | Email verification | Account security |
-| `passwordReset` | Password reset | Account recovery |
-| `taskReminder` | Task completion reminder | Family protection tasks |
-| `documentExpiry` | Document renewal reminder | Important document updates |
-| `securityAlert` | Security notification | Account access alerts |
-| `subscription` | Subscription updates | Trial expiry, payments |
-| `familyInvitation` | Family member invitation | Trusted person access |
+| Type               | Description               | Use Case                   |
+| ------------------ | ------------------------- | -------------------------- |
+| `welcome`          | Welcome to LegacyGuard    | New user onboarding        |
+| `verification`     | Email verification        | Account security           |
+| `passwordReset`    | Password reset            | Account recovery           |
+| `taskReminder`     | Task completion reminder  | Family protection tasks    |
+| `documentExpiry`   | Document renewal reminder | Important document updates |
+| `securityAlert`    | Security notification     | Account access alerts      |
+| `subscription`     | Subscription updates      | Trial expiry, payments     |
+| `familyInvitation` | Family member invitation  | Trusted person access      |
 
 ## Supported Notification Types
 
 ### Push Notifications
+
 - `taskReminder` - Family protection tasks
 - `documentExpiry` - Document renewal needed
 - `familyAccess` - Family access updates
@@ -210,12 +214,14 @@ const emailContent = (
 - `trialExpiring` - Trial ending soon
 
 ### SMS Notifications
+
 - `securityCode` - Authentication codes
 - `loginAlert` - New login detection
 - `emergencyAccess` - Emergency access activation
 - `criticalReminder` - Important reminders
 
 ### In-App Notifications
+
 - `welcome` - Welcome message
 - `firstAsset` - Add first asset
 - `inviteTrusted` - Invite trusted person
@@ -247,6 +253,7 @@ LEGAL_SERVICE_API_KEY=your_legal_api_key
 ### i18n Configuration
 
 The system automatically loads the required translation namespaces:
+
 - `emails` - Email templates
 - `notifications` - Push, SMS, and in-app notifications
 - `legal` - Legal disclaimers and compliance information
@@ -254,24 +261,28 @@ The system automatically loads the required translation namespaces:
 ## Best Practices
 
 ### 1. Language and Tone
+
 - Use formal, respectful language appropriate for estate planning
 - Maintain cultural sensitivity across all communications
 - Ensure professional tone for serious family protection matters
 - Use clear, actionable language for security communications
 
 ### 2. Personalization
+
 - Always include the user's name when available
 - Use dynamic content for dates, counts, and specific information
 - Provide relevant action buttons and links
 - Include appropriate contact information
 
 ### 3. Security
+
 - Never include sensitive information in SMS messages
 - Use secure links for password resets and verifications
 - Include security reminders in appropriate communications
 - Log all notification activities for audit purposes
 
 ### 4. Legal Compliance
+
 - Include appropriate disclaimers for legal documents
 - Ensure compliance with data protection regulations
 - Provide clear terms and conditions
@@ -280,6 +291,7 @@ The system automatically loads the required translation namespaces:
 ## Testing
 
 ### Email Testing
+
 ```typescript
 // Test email template rendering
 const testEmail = (
@@ -300,20 +312,17 @@ await emailService.sendWelcomeEmail(testUser);
 ```
 
 ### Notification Testing
+
 ```typescript
 // Test push notification
-await notificationService.sendPushNotification(
-  'test123',
-  'taskReminder',
-  { count: 1 }
-);
+await notificationService.sendPushNotification("test123", "taskReminder", {
+  count: 1,
+});
 
 // Test SMS notification
-await notificationService.sendSMSNotification(
-  '+1234567890',
-  'securityCode',
-  { code: '123456' }
-);
+await notificationService.sendSMSNotification("+1234567890", "securityCode", {
+  code: "123456",
+});
 ```
 
 ## Troubleshooting
@@ -340,9 +349,10 @@ await notificationService.sendSMSNotification(
 ### Debug Mode
 
 Enable debug logging by setting:
+
 ```typescript
 // In i18n configuration
-debug: true
+debug: true;
 ```
 
 ## Maintenance
@@ -386,4 +396,4 @@ For questions or issues with the email and notification system:
 - **Templates** - Visual email template builder
 - **Scheduling** - Schedule notifications for optimal timing
 - **Preferences** - User notification preference management
-- **Localization** - Jurisdiction-specific legal requirements 
+- **Localization** - Jurisdiction-specific legal requirements

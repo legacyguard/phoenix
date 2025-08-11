@@ -1,45 +1,53 @@
-import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { BarChart3, FileText, Users, Settings, Wallet, CreditCard, Lock } from 'lucide-react';
-import { cn } from '@/lib/utils';
-import { useTranslation } from 'react-i18next';
+import React from "react";
+import { Link, useLocation } from "react-router-dom";
+import {
+  BarChart3,
+  FileText,
+  Users,
+  Settings,
+  Wallet,
+  CreditCard,
+  Lock,
+} from "lucide-react";
+import { cn } from "@/lib/utils";
+import { useTranslation } from "react-i18next";
 
 const mobileNavItems = [
   {
-    label: 'dashboard',
+    label: "dashboard",
     icon: BarChart3,
-    href: '/dashboard',
+    href: "/dashboard",
   },
   {
-    label: 'assets',
+    label: "assets",
     icon: Wallet,
-    href: '/assets',
+    href: "/assets",
   },
   {
-    label: 'documents',
+    label: "documents",
     icon: FileText,
-    href: '/vault',
+    href: "/vault",
   },
   {
-    label: 'guardians',
+    label: "guardians",
     icon: Users,
-    href: '/guardians',
+    href: "/guardians",
   },
   {
-    label: 'subscriptions',
+    label: "subscriptions",
     icon: CreditCard,
-    href: '/subscriptions',
+    href: "/subscriptions",
   },
   {
-    label: 'settings',
+    label: "settings",
     icon: Settings,
-    href: '/user-profile',
+    href: "/user-profile",
   },
 ];
 
 export const MobileNav: React.FC = () => {
   const location = useLocation();
-  const { t } = useTranslation('ui-common');
+  const { t } = useTranslation("ui-common");
 
   const isActive = (href: string) => location.pathname === href;
 
@@ -48,26 +56,30 @@ export const MobileNav: React.FC = () => {
       <div className="grid h-16 grid-cols-6">
         {mobileNavItems.map((item) => {
           const isItemActive = isActive(item.href);
-          
+
           return (
             <Link
               key={item.href}
               to={item.href}
               className={cn(
                 "flex flex-col items-center justify-center gap-1 text-xs transition-colors",
-                isItemActive 
-                  ? "text-nav-icon-active" 
-                  : "text-nav-icon hover:text-nav-icon-active"
+                isItemActive
+                  ? "text-nav-icon-active"
+                  : "text-nav-icon hover:text-nav-icon-active",
               )}
             >
-              <item.icon className={cn(
-                "h-5 w-5",
-                isItemActive ? "text-nav-icon-active" : "text-nav-icon"
-              )} />
-              <span className={cn(
-                "text-[10px] font-medium",
-                isItemActive ? "text-nav-icon-active" : "text-nav-icon"
-              )}>
+              <item.icon
+                className={cn(
+                  "h-5 w-5",
+                  isItemActive ? "text-nav-icon-active" : "text-nav-icon",
+                )}
+              />
+              <span
+                className={cn(
+                  "text-[10px] font-medium",
+                  isItemActive ? "text-nav-icon-active" : "text-nav-icon",
+                )}
+              >
                 {t(`navigation.${item.label}`)}
               </span>
             </Link>

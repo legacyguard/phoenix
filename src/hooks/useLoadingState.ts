@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState } from "react";
 
 export function useLoadingState(initialState = false) {
   const [isLoading, setIsLoading] = useState(initialState);

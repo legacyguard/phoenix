@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { cn } from '@/lib/utils';
-import { Button } from '@/components/ui/button';
-import type { AssistantMessage as AssistantMessageType } from './PersonalAssistant';
+import React, { useState, useEffect } from "react";
+import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
+import type { AssistantMessage as AssistantMessageType } from "./PersonalAssistant";
 
 interface AssistantMessageProps {
   message: AssistantMessageType;
@@ -14,9 +14,9 @@ export const AssistantMessage: React.FC<AssistantMessageProps> = ({
   message,
   isTyping,
   compact = false,
-  className
+  className,
 }) => {
-  const [displayedText, setDisplayedText] = useState('');
+  const [displayedText, setDisplayedText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -26,12 +26,12 @@ export const AssistantMessage: React.FC<AssistantMessageProps> = ({
     }
 
     // Reset when new message
-    setDisplayedText('');
+    setDisplayedText("");
     setCurrentIndex(0);
 
     // Typing animation
     const interval = setInterval(() => {
-      setCurrentIndex(prev => {
+      setCurrentIndex((prev) => {
         if (prev >= message.content.length - 1) {
           clearInterval(interval);
           return prev;
@@ -51,29 +51,29 @@ export const AssistantMessage: React.FC<AssistantMessageProps> = ({
 
   const getMessageStyle = () => {
     switch (message.type) {
-      case 'welcome':
-        return 'text-foreground';
-      case 'guidance':
-        return 'text-foreground font-medium';
-      case 'encouragement':
-        return 'text-warm-primary';
-      case 'celebration':
-        return 'text-earth-primary font-medium';
-      case 'support':
-        return 'text-muted-foreground';
+      case "welcome":
+        return "text-foreground";
+      case "guidance":
+        return "text-foreground font-medium";
+      case "encouragement":
+        return "text-warm-primary";
+      case "celebration":
+        return "text-earth-primary font-medium";
+      case "support":
+        return "text-muted-foreground";
       default:
-        return 'text-foreground';
+        return "text-foreground";
     }
   };
 
   return (
-    <div className={cn('space-y-3', className)}>
+    <div className={cn("space-y-3", className)}>
       <p
         className={cn(
-          'leading-relaxed transition-all duration-200',
+          "leading-relaxed transition-all duration-200",
           getMessageStyle(),
-          compact ? 'text-sm' : 'text-base',
-          isTyping && 'min-h-[1.5em]'
+          compact ? "text-sm" : "text-base",
+          isTyping && "min-h-[1.5em]",
         )}
       >
         {displayedText}
@@ -84,13 +84,15 @@ export const AssistantMessage: React.FC<AssistantMessageProps> = ({
 
       {message.actionSuggestion && !isTyping && (
         <Button
-          variant={message.actionSuggestion.priority === 'high' ? 'default' : 'outline'}
-          size={compact ? 'sm' : 'default'}
+          variant={
+            message.actionSuggestion.priority === "high" ? "default" : "outline"
+          }
+          size={compact ? "sm" : "default"}
           onClick={message.actionSuggestion.action}
           className={cn(
-            'transition-all duration-200',
-            message.actionSuggestion.priority === 'high' &&
-              'bg-warm-primary hover:bg-warm-primary/90'
+            "transition-all duration-200",
+            message.actionSuggestion.priority === "high" &&
+              "bg-warm-primary hover:bg-warm-primary/90",
           )}
         >
           {message.actionSuggestion.text}

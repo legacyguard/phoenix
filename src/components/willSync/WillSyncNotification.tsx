@@ -1,11 +1,17 @@
-import React from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { AlertCircle, CheckCircle2, Clock, X, RefreshCw } from 'lucide-react';
-import { useTranslation } from 'react-i18next';
-import { formatDistanceToNow } from 'date-fns';
-import type { WillSyncLog, WillChanges } from '@/types/willSync';
+import React from "react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { AlertCircle, CheckCircle2, Clock, X, RefreshCw } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import { formatDistanceToNow } from "date-fns";
+import type { WillSyncLog, WillChanges } from "@/types/willSync";
 
 interface WillSyncNotificationProps {
   syncLog: WillSyncLog;
@@ -20,18 +26,18 @@ export function WillSyncNotification({
   onApprove,
   onReject,
   onDismiss,
-  onViewChanges
+  onViewChanges,
 }: WillSyncNotificationProps) {
-  const { t } = useTranslation('wills');
+  const { t } = useTranslation("wills");
 
   const getStatusIcon = () => {
     switch (syncLog.status) {
-      case 'pending':
+      case "pending":
         return <Clock className="h-5 w-5 text-orange-500" />;
-      case 'approved':
-      case 'auto_applied':
+      case "approved":
+      case "auto_applied":
         return <CheckCircle2 className="h-5 w-5 text-green-500" />;
-      case 'rejected':
+      case "rejected":
         return <X className="h-5 w-5 text-destructive" />;
       default:
         return <AlertCircle className="h-5 w-5 text-muted-foreground" />;
@@ -39,14 +45,15 @@ export function WillSyncNotification({
   };
 
   const getStatusBadge = () => {
-    const variant = syncLog.status === 'pending' ? 'secondary' : 
-                   syncLog.status === 'approved' || syncLog.status === 'auto_applied' ? 'default' : 
-                   'destructive';
-    
+    const variant =
+      syncLog.status === "pending"
+        ? "secondary"
+        : syncLog.status === "approved" || syncLog.status === "auto_applied"
+          ? "default"
+          : "destructive";
+
     return (
-      <Badge variant={variant}>
-        {t(`willSync.status.${syncLog.status}`)}
-      </Badge>
+      <Badge variant={variant}>{t(`willSync.status.${syncLog.status}`)}</Badge>
     );
   };
 
@@ -54,16 +61,30 @@ export function WillSyncNotification({
     const items: string[] = [];
 
     if (changes.added?.assets?.length) {
-      items.push(t('willSync.changes.assetsAdded', { count: changes.added.assets.length }));
+      items.push(
+        t("common:willSync.changes.assetsAdded", {
+          count: changes.added.assets.length,
+        }),
+      );
     }
     if (changes.removed?.beneficiaries?.length) {
-      items.push(t('willSync.changes.beneficiariesRemoved', { count: changes.removed.beneficiaries.length }));
+      items.push(
+        t("common:willSync.changes.beneficiariesRemoved", {
+          count: changes.removed.beneficiaries.length,
+        }),
+      );
     }
     if (changes.modified?.allocations?.length) {
-      items.push(t('willSync.changes.allocationsModified', { count: changes.modified.allocations.length }));
+      items.push(
+        t("common:willSync.changes.allocationsModified", {
+          count: changes.modified.allocations.length,
+        }),
+      );
     }
 
-    return items.length > 0 ? items.join(', ') : t('willSync.changes.noChanges');
+    return items.length > 0
+      ? items.join(", ")
+      : t("common:willSync.changes.noChanges");
   };
 
   return (
@@ -77,7 +98,9 @@ export function WillSyncNotification({
                 {t(`willSync.events.${syncLog.trigger_event}`)}
               </CardTitle>
               <CardDescription>
-                {formatDistanceToNow(new Date(syncLog.created_at), { addSuffix: true })}
+                {formatDistanceToNow(new Date(syncLog.created_at), {
+                  addSuffix: true,
+                })}
               </CardDescription>
             </div>
           </div>
@@ -102,14 +125,11 @@ export function WillSyncNotification({
             {renderChangeSummary(syncLog.changes_made)}
           </div>
 
-          {syncLog.status === 'pending' && (
+          {syncLog.status === "pending" && (
             <div className="flex items-center gap-2">
-              <Button
-                size="sm"
-                onClick={() => onApprove?.(syncLog.id)}
-              >
+              <Button size="sm" onClick={() => onApprove?.(syncLog.id)}>
                 <CheckCircle2 className="mr-2 h-4 w-4" />
-                {t('willSync.approve')}
+                {t("willSync.approve")}
               </Button>
               <Button
                 size="sm"
@@ -117,22 +137,22 @@ export function WillSyncNotification({
                 onClick={() => onReject?.(syncLog.id)}
               >
                 <X className="mr-2 h-4 w-4" />
-                {t('willSync.reject')}
+                {t("willSync.reject")}
               </Button>
               <Button
                 size="sm"
                 variant="ghost"
                 onClick={() => onViewChanges?.(syncLog.id)}
               >
-                {t('willSync.viewChanges')}
+                {t("willSync.viewChanges")}
               </Button>
             </div>
           )}
 
-          {syncLog.status === 'auto_applied' && (
+          {syncLog.status === "auto_applied" && (
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
               <RefreshCw className="h-4 w-4" />
-              {t('willSync.autoApplied')}
+              {t("willSync.autoApplied")}
             </div>
           )}
         </div>

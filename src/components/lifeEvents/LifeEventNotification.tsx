@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import { useTranslation } from 'react-i18next';
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { motion, AnimatePresence } from "framer-motion";
+import { useTranslation } from "react-i18next";
 import {
   Card,
   CardContent,
@@ -9,11 +9,11 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { Progress } from '@/components/ui/progress';
-import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Progress } from "@/components/ui/progress";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import {
   Baby,
   Heart,
@@ -28,12 +28,12 @@ import {
   Clock,
   AlertCircle,
   Info,
-  Sparkles
-} from 'lucide-react';
-import { LifeEvent } from '@/services/lifeEventDetection';
-import { LifeEventService } from '@/services/LifeEventService';
-import { LifeEventDetectionService } from '@/services/lifeEventDetection';
-import { useToast } from '@/components/ui/use-toast';
+  Sparkles,
+} from "lucide-react";
+import { LifeEvent } from "@/services/lifeEventDetection";
+import { LifeEventService } from "@/services/LifeEventService";
+import { LifeEventDetectionService } from "@/services/lifeEventDetection";
+import { useToast } from "@/components/ui/use-toast";
 
 interface LifeEventNotificationProps {
   lifeEvent: LifeEvent;
@@ -50,25 +50,25 @@ const lifeEventIcons = {
   move: Home,
   retirement: Calendar,
   major_purchase: Wallet,
-  illness: AlertCircle
+  illness: AlertCircle,
 };
 
 const urgencyColors = {
-  immediate: 'bg-red-100 text-red-800 border-red-200',
-  soon: 'bg-yellow-100 text-yellow-800 border-yellow-200',
-  when_convenient: 'bg-blue-100 text-blue-800 border-blue-200'
+  immediate: "bg-red-100 text-red-800 border-red-200",
+  soon: "bg-yellow-100 text-yellow-800 border-yellow-200",
+  when_convenient: "bg-blue-100 text-blue-800 border-blue-200",
 };
 
 const urgencyBadgeVariants = {
-  immediate: 'destructive',
-  soon: 'warning',
-  when_convenient: 'secondary'
+  immediate: "destructive",
+  soon: "warning",
+  when_convenient: "secondary",
 } as const;
 
 export const LifeEventNotification: React.FC<LifeEventNotificationProps> = ({
   lifeEvent,
   onDismiss,
-  onUpdate
+  onUpdate,
 }) => {
   const { t } = useTranslation();
   const navigate = useNavigate();
@@ -78,19 +78,24 @@ export const LifeEventNotification: React.FC<LifeEventNotificationProps> = ({
   const [completedUpdates, setCompletedUpdates] = useState<string[]>([]);
 
   const Icon = lifeEventIcons[lifeEvent.type] || Info;
-  const completionProgress = (completedUpdates.length / lifeEvent.suggestedUpdates.length) * 100;
+  const completionProgress =
+    (completedUpdates.length / lifeEvent.suggestedUpdates.length) * 100;
 
   const handleUpdateEverything = async () => {
     setIsProcessing(true);
     try {
       // Generate checklist based on life event
       const checklist = LifeEventService.generateChecklist(
-        lifeEvent.type === 'marriage' || lifeEvent.type === 'divorce' ? 'married_divorced' :
-        lifeEvent.type === 'birth' ? 'new_child' :
-        lifeEvent.type === 'move' ? 'bought_sold_home' :
-        lifeEvent.type === 'death' ? 'trusted_person_passed' :
-        'started_business',
-        t
+        lifeEvent.type === "marriage" || lifeEvent.type === "divorce"
+          ? "married_divorced"
+          : lifeEvent.type === "birth"
+            ? "new_child"
+            : lifeEvent.type === "move"
+              ? "bought_sold_home"
+              : lifeEvent.type === "death"
+                ? "trusted_person_passed"
+                : "started_business",
+        t,
       );
 
       // Save checklist for user
@@ -100,7 +105,10 @@ export const LifeEventNotification: React.FC<LifeEventNotificationProps> = ({
 
       // Update life event status
       if (lifeEvent.id) {
-        await LifeEventDetectionService.updateLifeEventStatus(lifeEvent.id, 'acknowledged');
+        await LifeEventDetectionService.updateLifeEventStatus(
+          lifeEvent.id,
+          "acknowledged",
+        );
       }
 
       // Navigate to first task
@@ -109,17 +117,17 @@ export const LifeEventNotification: React.FC<LifeEventNotificationProps> = ({
       }
 
       toast({
-        title: t('lifeEvents.updateStarted'),
-        description: t('lifeEvents.updateStartedDesc'),
+        title: t("common:lifeEvents.updateStarted"),
+        description: t("common:lifeEvents.updateStartedDesc"),
       });
 
       onUpdate?.();
     } catch (error) {
-      console.error('Error starting update process:', error);
+      console.error("Error starting update process:", error);
       toast({
-        title: t('lifeEvents.updateError'),
-        description: t('lifeEvents.updateErrorDesc'),
-        variant: 'destructive',
+        title: t("common:lifeEvents.updateError"),
+        description: t("common:lifeEvents.updateErrorDesc"),
+        variant: "destructive",
       });
     } finally {
       setIsProcessing(false);
@@ -128,50 +136,56 @@ export const LifeEventNotification: React.FC<LifeEventNotificationProps> = ({
 
   const handleReviewLater = async () => {
     if (lifeEvent.id) {
-      await LifeEventDetectionService.updateLifeEventStatus(lifeEvent.id, 'acknowledged');
+      await LifeEventDetectionService.updateLifeEventStatus(
+        lifeEvent.id,
+        "acknowledged",
+      );
     }
     toast({
-      title: t('lifeEvents.savedForLater'),
-      description: t('lifeEvents.savedForLaterDesc'),
+      title: t("common:lifeEvents.savedForLater"),
+      description: t("common:lifeEvents.savedForLaterDesc"),
     });
     onDismiss?.();
   };
 
   const handleDismiss = async () => {
     if (lifeEvent.id) {
-      await LifeEventDetectionService.updateLifeEventStatus(lifeEvent.id, 'dismissed');
+      await LifeEventDetectionService.updateLifeEventStatus(
+        lifeEvent.id,
+        "dismissed",
+      );
     }
     onDismiss?.();
   };
 
   const getEventTitle = () => {
     const titles = {
-      marriage: t('lifeEvents.titles.marriage'),
-      divorce: t('lifeEvents.titles.divorce'),
-      birth: t('lifeEvents.titles.birth'),
-      death: t('lifeEvents.titles.death'),
-      job_change: t('lifeEvents.titles.jobChange'),
-      move: t('lifeEvents.titles.move'),
-      retirement: t('lifeEvents.titles.retirement'),
-      major_purchase: t('lifeEvents.titles.majorPurchase'),
-      illness: t('lifeEvents.titles.illness')
+      marriage: t("common:lifeEvents.titles.marriage"),
+      divorce: t("common:lifeEvents.titles.divorce"),
+      birth: t("common:lifeEvents.titles.birth"),
+      death: t("common:lifeEvents.titles.death"),
+      job_change: t("common:lifeEvents.titles.jobChange"),
+      move: t("common:lifeEvents.titles.move"),
+      retirement: t("common:lifeEvents.titles.retirement"),
+      major_purchase: t("common:lifeEvents.titles.majorPurchase"),
+      illness: t("common:lifeEvents.titles.illness"),
     };
-    return titles[lifeEvent.type] || t('lifeEvents.titles.default');
+    return titles[lifeEvent.type] || t("common:lifeEvents.titles.default");
   };
 
   const getEventMessage = () => {
     const messages = {
-      marriage: t('lifeEvents.messages.marriage'),
-      divorce: t('lifeEvents.messages.divorce'),
-      birth: t('lifeEvents.messages.birth'),
-      death: t('lifeEvents.messages.death'),
-      job_change: t('lifeEvents.messages.jobChange'),
-      move: t('lifeEvents.messages.move'),
-      retirement: t('lifeEvents.messages.retirement'),
-      major_purchase: t('lifeEvents.messages.majorPurchase'),
-      illness: t('lifeEvents.messages.illness')
+      marriage: t("common:lifeEvents.messages.marriage"),
+      divorce: t("common:lifeEvents.messages.divorce"),
+      birth: t("common:lifeEvents.messages.birth"),
+      death: t("common:lifeEvents.messages.death"),
+      job_change: t("common:lifeEvents.messages.jobChange"),
+      move: t("common:lifeEvents.messages.move"),
+      retirement: t("common:lifeEvents.messages.retirement"),
+      major_purchase: t("common:lifeEvents.messages.majorPurchase"),
+      illness: t("common:lifeEvents.messages.illness"),
     };
-    return messages[lifeEvent.type] || t('lifeEvents.messages.default');
+    return messages[lifeEvent.type] || t("common:lifeEvents.messages.default");
   };
 
   return (
@@ -181,7 +195,9 @@ export const LifeEventNotification: React.FC<LifeEventNotificationProps> = ({
       exit={{ opacity: 0, y: -20 }}
       transition={{ duration: 0.3 }}
     >
-      <Card className={`border-2 ${urgencyColors[lifeEvent.urgency]} shadow-lg`}>
+      <Card
+        className={`border-2 ${urgencyColors[lifeEvent.urgency]} shadow-lg`}
+      >
         <CardHeader>
           <div className="flex items-start justify-between">
             <div className="flex items-center gap-3">
@@ -192,8 +208,12 @@ export const LifeEventNotification: React.FC<LifeEventNotificationProps> = ({
                 <CardTitle className="text-xl flex items-center gap-2">
                   {getEventTitle()}
                   <Badge variant={urgencyBadgeVariants[lifeEvent.urgency]}>
-                    {lifeEvent.urgency === 'immediate' && <AlertCircle className="h-3 w-3 mr-1" />}
-                    {lifeEvent.urgency === 'soon' && <Clock className="h-3 w-3 mr-1" />}
+                    {lifeEvent.urgency === "immediate" && (
+                      <AlertCircle className="h-3 w-3 mr-1" />
+                    )}
+                    {lifeEvent.urgency === "soon" && (
+                      <Clock className="h-3 w-3 mr-1" />
+                    )}
                     {t(`lifeEvents.urgency.${lifeEvent.urgency}`)}
                   </Badge>
                 </CardTitle>
@@ -204,7 +224,9 @@ export const LifeEventNotification: React.FC<LifeEventNotificationProps> = ({
             </div>
             <div className="flex items-center gap-2 text-sm text-gray-500">
               <Sparkles className="h-4 w-4" />
-              {t('lifeEvents.confidence', { confidence: Math.round(lifeEvent.confidence * 100) })}
+              {t("lifeEvents.confidence", {
+                confidence: Math.round(lifeEvent.confidence * 100),
+              })}
             </div>
           </div>
         </CardHeader>
@@ -215,30 +237,34 @@ export const LifeEventNotification: React.FC<LifeEventNotificationProps> = ({
             <Alert className="bg-blue-50 border-blue-200">
               <Info className="h-4 w-4 text-blue-600" />
               <AlertTitle className="text-blue-800">
-                {t('lifeEvents.whyUpdate')}
+                {t("lifeEvents.whyUpdate")}
               </AlertTitle>
               <AlertDescription className="text-blue-700">
-                {t('lifeEvents.whyUpdateDesc')}
+                {t("lifeEvents.whyUpdateDesc")}
               </AlertDescription>
             </Alert>
 
             {/* Suggested updates */}
             <div className="space-y-2">
               <h4 className="font-medium text-sm text-gray-700 flex items-center gap-2">
-                {t('lifeEvents.suggestedUpdates')}
+                {t("lifeEvents.suggestedUpdates")}
                 {completionProgress > 0 && (
                   <span className="text-xs text-gray-500">
-                    ({completedUpdates.length}/{lifeEvent.suggestedUpdates.length})
+                    ({completedUpdates.length}/
+                    {lifeEvent.suggestedUpdates.length})
                   </span>
                 )}
               </h4>
-              
+
               {completionProgress > 0 && (
                 <Progress value={completionProgress} className="h-2 mb-3" />
               )}
 
               <AnimatePresence>
-                {(isExpanded ? lifeEvent.suggestedUpdates : lifeEvent.suggestedUpdates.slice(0, 3)).map((update, index) => (
+                {(isExpanded
+                  ? lifeEvent.suggestedUpdates
+                  : lifeEvent.suggestedUpdates.slice(0, 3)
+                ).map((update, index) => (
                   <motion.div
                     key={update}
                     initial={{ opacity: 0, x: -20 }}
@@ -246,9 +272,9 @@ export const LifeEventNotification: React.FC<LifeEventNotificationProps> = ({
                     exit={{ opacity: 0, x: -20 }}
                     transition={{ delay: index * 0.05 }}
                     className={`flex items-start gap-3 p-3 rounded-lg transition-colors ${
-                      completedUpdates.includes(update) 
-                        ? 'bg-green-50 border border-green-200' 
-                        : 'bg-gray-50 hover:bg-gray-100'
+                      completedUpdates.includes(update)
+                        ? "bg-green-50 border border-green-200"
+                        : "bg-gray-50 hover:bg-gray-100"
                     }`}
                   >
                     {completedUpdates.includes(update) ? (
@@ -256,9 +282,13 @@ export const LifeEventNotification: React.FC<LifeEventNotificationProps> = ({
                     ) : (
                       <ChevronRight className="h-5 w-5 text-gray-400 mt-0.5 flex-shrink-0" />
                     )}
-                    <span className={`text-sm ${
-                      completedUpdates.includes(update) ? 'text-green-800 line-through' : 'text-gray-700'
-                    }`}>
+                    <span
+                      className={`text-sm ${
+                        completedUpdates.includes(update)
+                          ? "text-green-800 line-through"
+                          : "text-gray-700"
+                      }`}
+                    >
                       {update}
                     </span>
                   </motion.div>
@@ -272,9 +302,11 @@ export const LifeEventNotification: React.FC<LifeEventNotificationProps> = ({
                   onClick={() => setIsExpanded(!isExpanded)}
                   className="w-full"
                 >
-                  {isExpanded ? t('lifeEvents.showLess') : t('lifeEvents.showMore', { 
-                    count: lifeEvent.suggestedUpdates.length - 3 
-                  })}
+                  {isExpanded
+                    ? t("common:lifeEvents.showLess")
+                    : t("common:lifeEvents.showMore", {
+                        count: lifeEvent.suggestedUpdates.length - 3,
+                      })}
                 </Button>
               )}
             </div>
@@ -284,11 +316,13 @@ export const LifeEventNotification: React.FC<LifeEventNotificationProps> = ({
               <div className="pt-2 border-t">
                 <details className="text-xs text-gray-500">
                   <summary className="cursor-pointer hover:text-gray-700">
-                    {t('lifeEvents.howWeKnew')}
+                    {t("lifeEvents.howWeKnew")}
                   </summary>
                   <ul className="mt-2 space-y-1 ml-4">
                     {lifeEvent.indicators.map((indicator, index) => (
-                      <li key={index} className="list-disc">{indicator}</li>
+                      <li key={index} className="list-disc">
+                        {indicator}
+                      </li>
                     ))}
                   </ul>
                 </details>
@@ -303,7 +337,9 @@ export const LifeEventNotification: React.FC<LifeEventNotificationProps> = ({
             disabled={isProcessing}
             className="flex-1 sm:flex-initial"
           >
-            {isProcessing ? t('lifeEvents.processing') : t('lifeEvents.helpMeUpdate')}
+            {isProcessing
+              ? t("common:lifeEvents.processing")
+              : t("common:lifeEvents.helpMeUpdate")}
           </Button>
           <Button
             variant="outline"
@@ -311,7 +347,7 @@ export const LifeEventNotification: React.FC<LifeEventNotificationProps> = ({
             disabled={isProcessing}
             className="flex-1 sm:flex-initial"
           >
-            {t('lifeEvents.reviewLater')}
+            {t("lifeEvents.reviewLater")}
           </Button>
           <Button
             variant="ghost"
@@ -319,7 +355,7 @@ export const LifeEventNotification: React.FC<LifeEventNotificationProps> = ({
             disabled={isProcessing}
             className="flex-1 sm:flex-initial"
           >
-            {t('lifeEvents.notApplicable')}
+            {t("lifeEvents.notApplicable")}
           </Button>
         </CardFooter>
       </Card>

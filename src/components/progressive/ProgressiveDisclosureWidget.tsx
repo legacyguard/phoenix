@@ -1,23 +1,41 @@
-import React, { useMemo } from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { Progress } from '@/components/ui/progress';
-import { 
-  Lock, Unlock, Star, Zap, Trophy, 
-  ChevronRight, Info, Sparkles, X
-} from 'lucide-react';
-import { 
+import React, { useMemo } from "react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Progress } from "@/components/ui/progress";
+import {
+  Lock,
+  Unlock,
+  Star,
+  Zap,
+  Trophy,
+  ChevronRight,
+  Info,
+  Sparkles,
+  X,
+} from "lucide-react";
+import {
   UserProgress,
   getDisclosureLevel,
   getNextFeatureToUnlock,
   getUpcomingFeatures,
   getMotivationalMessage,
   shouldShowFeature,
-  FeatureDefinition
-} from '@/services/progressiveDisclosure';
-import { cn } from '@/lib/utils';
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
+  FeatureDefinition,
+} from "@/services/progressiveDisclosure";
+import { cn } from "@/lib/utils";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
 
 interface ProgressiveDisclosureWidgetProps {
   userProgress: UserProgress;
@@ -25,15 +43,25 @@ interface ProgressiveDisclosureWidgetProps {
   compact?: boolean;
 }
 
-export const ProgressiveDisclosureWidget: React.FC<ProgressiveDisclosureWidgetProps> = ({
-  userProgress,
-  onFeatureClick,
-  compact = false
-}) => {
-  const currentLevel = useMemo(() => getDisclosureLevel(userProgress), [userProgress]);
-  const nextFeature = useMemo(() => getNextFeatureToUnlock(userProgress), [userProgress]);
-  const upcomingFeatures = useMemo(() => getUpcomingFeatures(userProgress), [userProgress]);
-  const motivationalMessage = useMemo(() => getMotivationalMessage(userProgress), [userProgress]);
+export const ProgressiveDisclosureWidget: React.FC<
+  ProgressiveDisclosureWidgetProps
+> = ({ userProgress, onFeatureClick, compact = false }) => {
+  const currentLevel = useMemo(
+    () => getDisclosureLevel(userProgress),
+    [userProgress],
+  );
+  const nextFeature = useMemo(
+    () => getNextFeatureToUnlock(userProgress),
+    [userProgress],
+  );
+  const upcomingFeatures = useMemo(
+    () => getUpcomingFeatures(userProgress),
+    [userProgress],
+  );
+  const motivationalMessage = useMemo(
+    () => getMotivationalMessage(userProgress),
+    [userProgress],
+  );
 
   const getLevelIcon = (level: number) => {
     switch (level) {
@@ -51,13 +79,13 @@ export const ProgressiveDisclosureWidget: React.FC<ProgressiveDisclosureWidgetPr
   const getLevelColor = (level: number) => {
     switch (level) {
       case 1:
-        return 'text-blue-600 bg-blue-50 border-blue-200';
+        return "text-blue-600 bg-blue-50 border-blue-200";
       case 2:
-        return 'text-purple-600 bg-purple-50 border-purple-200';
+        return "text-purple-600 bg-purple-50 border-purple-200";
       case 3:
-        return 'text-yellow-600 bg-yellow-50 border-yellow-200';
+        return "text-yellow-600 bg-yellow-50 border-yellow-200";
       default:
-        return 'text-gray-600 bg-gray-50 border-gray-200';
+        return "text-gray-600 bg-gray-50 border-gray-200";
     }
   };
 
@@ -67,12 +95,19 @@ export const ProgressiveDisclosureWidget: React.FC<ProgressiveDisclosureWidgetPr
         <CardContent className="p-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <div className={cn("p-2 rounded-lg", getLevelColor(currentLevel.level))}>
+              <div
+                className={cn(
+                  "p-2 rounded-lg",
+                  getLevelColor(currentLevel.level),
+                )}
+              >
                 {getLevelIcon(currentLevel.level)}
               </div>
               <div>
                 <p className="font-medium">{currentLevel.name}</p>
-                <p className="text-sm text-muted-foreground">{motivationalMessage}</p>
+                <p className="text-sm text-muted-foreground">
+                  {motivationalMessage}
+                </p>
               </div>
             </div>
             {nextFeature && (
@@ -104,11 +139,15 @@ export const ProgressiveDisclosureWidget: React.FC<ProgressiveDisclosureWidgetPr
               <Sparkles className="h-5 w-5 text-warm-sage" />
               Your Progress Journey
             </CardTitle>
-            <CardDescription>
-              {currentLevel.description}
-            </CardDescription>
+            <CardDescription>{currentLevel.description}</CardDescription>
           </div>
-          <Badge variant="outline" className={cn("text-base px-3 py-1", getLevelColor(currentLevel.level))}>
+          <Badge
+            variant="outline"
+            className={cn(
+              "text-base px-3 py-1",
+              getLevelColor(currentLevel.level),
+            )}
+          >
             <span className="mr-2">{getLevelIcon(currentLevel.level)}</span>
             {currentLevel.name}
           </Badge>
@@ -130,8 +169,8 @@ export const ProgressiveDisclosureWidget: React.FC<ProgressiveDisclosureWidgetPr
               {userProgress.completedItems} tasks completed
             </span>
           </div>
-          <Progress 
-            value={Math.min((userProgress.completedItems / 15) * 100, 100)} 
+          <Progress
+            value={Math.min((userProgress.completedItems / 15) * 100, 100)}
             className="h-2"
           />
           <p className="text-xs text-muted-foreground">
@@ -173,10 +212,9 @@ export const ProgressiveDisclosureWidget: React.FC<ProgressiveDisclosureWidgetPr
                     <div>
                       <p className="text-sm font-medium">{feature.name}</p>
                       <p className="text-xs text-muted-foreground">
-                        {feature.requiredItems 
+                        {feature.requiredItems
                           ? `Complete ${feature.requiredItems - userProgress.completedItems} more tasks`
-                          : 'Complete prerequisites'
-                        }
+                          : "Complete prerequisites"}
                       </p>
                     </div>
                   </div>
@@ -192,13 +230,15 @@ export const ProgressiveDisclosureWidget: React.FC<ProgressiveDisclosureWidgetPr
           <h4 className="text-sm font-medium">Currently Available</h4>
           <div className="grid grid-cols-2 gap-2">
             {currentLevel.unlockedFeatures.slice(0, 4).map((featureId) => (
-              <Badge 
-                key={featureId} 
-                variant="secondary" 
+              <Badge
+                key={featureId}
+                variant="secondary"
                 className="justify-start text-xs py-1"
               >
                 <Unlock className="h-3 w-3 mr-1" />
-                {featureId.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}
+                {featureId
+                  .replace(/-/g, " ")
+                  .replace(/\b\w/g, (l) => l.toUpperCase())}
               </Badge>
             ))}
           </div>
@@ -245,7 +285,10 @@ export const FeatureIntroduction: React.FC<{
           <Button variant="outline" onClick={onDismiss} className="flex-1">
             Maybe Later
           </Button>
-          <Button onClick={onExplore} className="flex-1 bg-warm-sage hover:bg-warm-sage/90">
+          <Button
+            onClick={onExplore}
+            className="flex-1 bg-warm-sage hover:bg-warm-sage/90"
+          >
             Explore Now
             <ChevronRight className="ml-2 h-4 w-4" />
           </Button>
@@ -259,7 +302,10 @@ export const FeatureIntroduction: React.FC<{
 export const ProgressLevelIndicator: React.FC<{
   userProgress: UserProgress;
 }> = ({ userProgress }) => {
-  const currentLevel = useMemo(() => getDisclosureLevel(userProgress), [userProgress]);
+  const currentLevel = useMemo(
+    () => getDisclosureLevel(userProgress),
+    [userProgress],
+  );
 
   const getLevelIcon = (level: number) => {
     switch (level) {
@@ -277,13 +323,13 @@ export const ProgressLevelIndicator: React.FC<{
   const getLevelColor = (level: number) => {
     switch (level) {
       case 1:
-        return 'text-blue-600 bg-blue-50';
+        return "text-blue-600 bg-blue-50";
       case 2:
-        return 'text-purple-600 bg-purple-50';
+        return "text-purple-600 bg-purple-50";
       case 3:
-        return 'text-yellow-600 bg-yellow-50';
+        return "text-yellow-600 bg-yellow-50";
       default:
-        return 'text-gray-600 bg-gray-50';
+        return "text-gray-600 bg-gray-50";
     }
   };
 

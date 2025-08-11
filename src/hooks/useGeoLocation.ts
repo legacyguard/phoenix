@@ -1,10 +1,10 @@
-import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
-import { geolocationService } from '@/services/geolocation';
-import { languageDetectionService } from '@/services/languageDetection';
-import { domainRedirectService } from '@/utils/domainRedirect';
-import { type CountryCode, type LanguageCode } from '@/config/countries';
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import { geolocationService } from "@/services/geolocation";
+import { languageDetectionService } from "@/services/languageDetection";
+import { domainRedirectService } from "@/utils/domainRedirect";
+import { type CountryCode, type LanguageCode } from "@/config/countries";
 
 interface GeoLocationState {
   isLoading: boolean;
@@ -21,12 +21,12 @@ interface UserPreferences {
   timestamp: number;
 }
 
-const PREFERENCES_KEY = 'user_country_language_preferences';
+const PREFERENCES_KEY = "user_country_language_preferences";
 const PREFERENCES_DURATION = 30 * 24 * 60 * 60 * 1000; // 30 days
 
 export function useGeoLocation() {
   const navigate = useNavigate();
-  const { i18n } = useTranslation('ui-common');
+  const { i18n } = useTranslation("ui-common");
   const [state, setState] = useState<GeoLocationState>({
     isLoading: false, // Changed to false since we don't auto-detect
     showModal: false,
@@ -37,21 +37,21 @@ export function useGeoLocation() {
 
   // Remove automatic detection on mount since it's now handled in CountryContext
   // useEffect(() => {
-     
+
   //   checkLocationAndLanguage();
   // }, []);
 
   const checkLocationAndLanguage = async () => {
     try {
-      setState(prev => ({ ...prev, isLoading: true }));
-      
+      setState((prev) => ({ ...prev, isLoading: true }));
+
       // Check if user has existing preferences
       const preferences = getUserPreferences();
-      
+
       if (preferences && !isPreferencesExpired(preferences)) {
         // Apply saved preferences
         await applyPreferences(preferences);
-        setState(prev => ({ ...prev, isLoading: false }));
+        setState((prev) => ({ ...prev, isLoading: false }));
         return;
       }
 
@@ -64,17 +64,19 @@ export function useGeoLocation() {
       // If we have a detected country, find best language match
       let detectedLanguage = browserLangData.detectedLanguage;
       if (geoData.countryCode) {
-        const countryLangData = languageDetectionService.detectLanguageForCountry(
-          geoData.countryCode,
-          browserLangData.browserLanguages
-        );
+        const countryLangData =
+          languageDetectionService.detectLanguageForCountry(
+            geoData.countryCode,
+            browserLangData.browserLanguages,
+          );
         detectedLanguage = countryLangData.detectedLanguage;
       }
 
       // Check if current domain matches detected country
-      const shouldShowModal = geoData.countryCode && 
-        (!languageDetectionService.isCorrectDomain(geoData.countryCode) || 
-         !detectedLanguage);
+      const shouldShowModal =
+        geoData.countryCode &&
+        (!languageDetectionService.isCorrectDomain(geoData.countryCode) ||
+          !detectedLanguage);
 
       setState({
         isLoading: false,
@@ -95,7 +97,7 @@ export function useGeoLocation() {
         i18n.changeLanguage(detectedLanguage);
       }
     } catch (error) {
-      console.error('Failed to detect location/language:', error);
+      console.error("Failed to detect location/language:", error);
       setState({
         isLoading: false,
         showModal: true,
@@ -107,13 +109,13 @@ export function useGeoLocation() {
   };
 
   const handleModalClose = () => {
-    setState(prev => ({ ...prev, showModal: false }));
+    setState((prev) => ({ ...prev, showModal: false }));
   };
 
   const handleModalConfirm = async (
     country: CountryCode,
     language: LanguageCode,
-    redirectToDomain: boolean
+    redirectToDomain: boolean,
   ) => {
     // Save preferences
     const preferences: UserPreferences = {
@@ -134,7 +136,7 @@ export function useGeoLocation() {
         preservePath: true,
       });
     } else {
-      setState(prev => ({ ...prev, showModal: false }));
+      setState((prev) => ({ ...prev, showModal: false }));
       window.location.reload();
     }
   };
@@ -152,7 +154,7 @@ export function useGeoLocation() {
     try {
       localStorage.setItem(PREFERENCES_KEY, JSON.stringify(preferences));
     } catch (error) {
-      console.error('Failed to save preferences:', error);
+      console.error("Failed to save preferences:", error);
     }
   };
 
@@ -160,12 +162,14 @@ export function useGeoLocation() {
     return Date.now() - preferences.timestamp > PREFERENCES_DURATION;
   };
 
-  const applyPreferences = async (preferences: UserPreferences): Promise<void> => {
+  const applyPreferences = async (
+    preferences: UserPreferences,
+  ): Promise<void> => {
     await i18n.changeLanguage(preferences.language);
-    
+
     // Check if domain redirect is needed
     if (!languageDetectionService.isCorrectDomain(preferences.country)) {
-      setState(prev => ({
+      setState((prev) => ({
         ...prev,
         showModal: true,
         detectedCountry: preferences.country,

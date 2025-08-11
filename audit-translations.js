@@ -1,18 +1,18 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Function to recursively get all keys from a nested object
-function getAllKeys(obj, prefix = '') {
+function getAllKeys(obj, prefix = "") {
   const keys = [];
   for (const [key, value] of Object.entries(obj)) {
     const fullKey = prefix ? `${prefix}.${key}` : key;
-    if (typeof value === 'object' && value !== null && !Array.isArray(value)) {
+    if (typeof value === "object" && value !== null && !Array.isArray(value)) {
       keys.push(...getAllKeys(value, fullKey));
     } else {
       keys.push(fullKey);
@@ -23,10 +23,10 @@ function getAllKeys(obj, prefix = '') {
 
 // Function to get value by nested key
 function getNestedValue(obj, key) {
-  const keys = key.split('.');
+  const keys = key.split(".");
   let current = obj;
   for (const k of keys) {
-    if (current && typeof current === 'object' && k in current) {
+    if (current && typeof current === "object" && k in current) {
       current = current[k];
     } else {
       return undefined;
@@ -38,106 +38,117 @@ function getNestedValue(obj, key) {
 // Function to audit a single file
 function auditFile(enPath, frPath, filename) {
   console.log(`\n=== Auditing ${filename} ===`);
-  
+
   try {
-    const enContent = JSON.parse(fs.readFileSync(enPath, 'utf8'));
-    const frContent = JSON.parse(fs.readFileSync(frPath, 'utf8'));
-    
+    const enContent = JSON.parse(fs.readFileSync(enPath, "utf8"));
+    const frContent = JSON.parse(fs.readFileSync(frPath, "utf8"));
+
     const enKeys = getAllKeys(enContent);
     const frKeys = getAllKeys(frContent);
-    
+
     // Find missing keys in French
-    const missingInFrench = enKeys.filter(key => !frKeys.includes(key));
-    
+    const missingInFrench = enKeys.filter((key) => !frKeys.includes(key));
+
     // Find extra keys in French (not in English)
-    const extraInFrench = frKeys.filter(key => !enKeys.includes(key));
-    
+    const extraInFrench = frKeys.filter((key) => !enKeys.includes(key));
+
     // Find empty or potentially problematic translations
     const emptyOrProblematic = [];
     for (const key of frKeys) {
       const value = getNestedValue(frContent, key);
-      if (value === '' || value === null || value === undefined) {
-        emptyOrProblematic.push({ key, value, issue: 'empty' });
-      } else if (typeof value === 'string' && value.trim() === '') {
-        emptyOrProblematic.push({ key, value, issue: 'whitespace-only' });
-      } else if (typeof value === 'string' && value === getNestedValue(enContent, key)) {
-        emptyOrProblematic.push({ key, value, issue: 'same-as-english' });
+      if (value === "" || value === null || value === undefined) {
+        emptyOrProblematic.push({ key, value, issue: "empty" });
+      } else if (typeof value === "string" && value.trim() === "") {
+        emptyOrProblematic.push({ key, value, issue: "whitespace-only" });
+      } else if (
+        typeof value === "string" &&
+        value === getNestedValue(enContent, key)
+      ) {
+        emptyOrProblematic.push({ key, value, issue: "same-as-english" });
       }
     }
-    
+
     // Report results
     if (missingInFrench.length > 0) {
       console.log(`❌ Missing keys in French (${missingInFrench.length}):`);
-      missingInFrench.forEach(key => console.log(`  - ${key}`));
+      missingInFrench.forEach((key) => console.log(`  - ${key}`));
     } else {
-      console.log('✅ All English keys present in French');
+      console.log("✅ All English keys present in French");
     }
-    
+
     if (extraInFrench.length > 0) {
       console.log(`⚠️  Extra keys in French (${extraInFrench.length}):`);
-      extraInFrench.forEach(key => console.log(`  - ${key}`));
+      extraInFrench.forEach((key) => console.log(`  - ${key}`));
     } else {
-      console.log('✅ No extra keys in French');
+      console.log("✅ No extra keys in French");
     }
-    
+
     if (emptyOrProblematic.length > 0) {
-      console.log(`⚠️  Empty or problematic translations (${emptyOrProblematic.length}):`);
+      console.log(
+        `⚠️  Empty or problematic translations (${emptyOrProblematic.length}):`,
+      );
       emptyOrProblematic.forEach(({ key, value, issue }) => {
         console.log(`  - ${key}: ${issue} (value: "${value}")`);
       });
     } else {
-      console.log('✅ No empty or problematic translations');
+      console.log("✅ No empty or problematic translations");
     }
-    
+
     // Calculate completion percentage
-    const completionPercentage = ((frKeys.length - missingInFrench.length) / enKeys.length * 100).toFixed(1);
+    const completionPercentage = (
+      ((frKeys.length - missingInFrench.length) / enKeys.length) *
+      100
+    ).toFixed(1);
     console.log(`📊 Translation completion: ${completionPercentage}%`);
-    
+
     return {
       filename,
       missingKeys: missingInFrench,
       extraKeys: extraInFrench,
       problematicTranslations: emptyOrProblematic,
-      completionPercentage: parseFloat(completionPercentage)
+      completionPercentage: parseFloat(completionPercentage),
     };
-    
   } catch (error) {
     console.error(`❌ Error processing ${filename}:`, error.message);
     return {
       filename,
-      error: error.message
+      error: error.message,
     };
   }
 }
 
 // Main audit function
 function auditTranslations() {
-  const enDir = path.join(__dirname, 'src/i18n/locales/en');
-  const frDir = path.join(__dirname, 'src/i18n/locales/fr');
-  
-  console.log('🔍 Starting French translation audit...\n');
-  
+  const enDir = path.join(__dirname, "src/i18n/locales/en");
+  const frDir = path.join(__dirname, "src/i18n/locales/fr");
+
+  console.log("🔍 Starting French translation audit...\n");
+
   try {
-    const enFiles = fs.readdirSync(enDir).filter(file => file.endsWith('.json'));
-    const frFiles = fs.readdirSync(frDir).filter(file => file.endsWith('.json'));
-    
+    const enFiles = fs
+      .readdirSync(enDir)
+      .filter((file) => file.endsWith(".json"));
+    const frFiles = fs
+      .readdirSync(frDir)
+      .filter((file) => file.endsWith(".json"));
+
     console.log(`📁 English files: ${enFiles.length}`);
     console.log(`📁 French files: ${frFiles.length}\n`);
-    
+
     const results = [];
     let totalMissing = 0;
     let totalExtra = 0;
     let totalProblematic = 0;
-    
+
     // Audit each file
     for (const filename of enFiles) {
       const enPath = path.join(enDir, filename);
       const frPath = path.join(frDir, filename);
-      
+
       if (fs.existsSync(frPath)) {
         const result = auditFile(enPath, frPath, filename);
         results.push(result);
-        
+
         if (result.missingKeys) {
           totalMissing += result.missingKeys.length;
         }
@@ -149,10 +160,10 @@ function auditTranslations() {
         }
       } else {
         console.log(`❌ French file missing: ${filename}`);
-        results.push({ filename, error: 'French file not found' });
+        results.push({ filename, error: "French file not found" });
       }
     }
-    
+
     // Check for French files that don't exist in English
     for (const filename of frFiles) {
       const enPath = path.join(enDir, filename);
@@ -160,39 +171,42 @@ function auditTranslations() {
         console.log(`⚠️  French file without English counterpart: ${filename}`);
       }
     }
-    
+
     // Summary
-    console.log('\n' + '='.repeat(50));
-    console.log('📋 AUDIT SUMMARY');
-    console.log('='.repeat(50));
+    console.log("\n" + "=".repeat(50));
+    console.log("📋 AUDIT SUMMARY");
+    console.log("=".repeat(50));
     console.log(`Total missing keys: ${totalMissing}`);
     console.log(`Total extra keys: ${totalExtra}`);
     console.log(`Total problematic translations: ${totalProblematic}`);
-    
-    const avgCompletion = results
-      .filter(r => r.completionPercentage !== undefined)
-      .reduce((sum, r) => sum + r.completionPercentage, 0) / 
-      results.filter(r => r.completionPercentage !== undefined).length;
-    
+
+    const avgCompletion =
+      results
+        .filter((r) => r.completionPercentage !== undefined)
+        .reduce((sum, r) => sum + r.completionPercentage, 0) /
+      results.filter((r) => r.completionPercentage !== undefined).length;
+
     console.log(`Average completion: ${avgCompletion.toFixed(1)}%`);
-    
+
     // Files with issues
-    const filesWithIssues = results.filter(r => 
-      (r.missingKeys && r.missingKeys.length > 0) ||
-      (r.problematicTranslations && r.problematicTranslations.length > 0)
+    const filesWithIssues = results.filter(
+      (r) =>
+        (r.missingKeys && r.missingKeys.length > 0) ||
+        (r.problematicTranslations && r.problematicTranslations.length > 0),
     );
-    
+
     if (filesWithIssues.length > 0) {
-      console.log('\n🚨 Files requiring attention:');
-      filesWithIssues.forEach(r => {
-        console.log(`  - ${r.filename}: ${r.missingKeys?.length || 0} missing, ${r.problematicTranslations?.length || 0} problematic`);
+      console.log("\n🚨 Files requiring attention:");
+      filesWithIssues.forEach((r) => {
+        console.log(
+          `  - ${r.filename}: ${r.missingKeys?.length || 0} missing, ${r.problematicTranslations?.length || 0} problematic`,
+        );
       });
     }
-    
   } catch (error) {
-    console.error('❌ Error during audit:', error.message);
+    console.error("❌ Error during audit:", error.message);
   }
 }
 
 // Run the audit
-auditTranslations(); 
+auditTranslations();

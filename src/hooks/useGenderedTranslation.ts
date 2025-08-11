@@ -1,5 +1,8 @@
-import { useTranslation } from 'react-i18next';
-import { useGenderContext, getGenderedTranslation } from '../i18n/gender-context';
+import { useTranslation } from "react-i18next";
+import {
+  useGenderContext,
+  getGenderedTranslation,
+} from "../i18n/gender-context";
 
 // Hook for using gendered translations in other components
 export const useGenderedTranslation = () => {
@@ -35,6 +38,6 @@ export const useGenderedTranslation = () => {
     // Utility to get the actual key being used
     getKey: (baseKey: string) => {
       return getGenderedKey(baseKey);
-    }
+    },
   };
 };

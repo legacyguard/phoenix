@@ -7,6 +7,7 @@ This comprehensive End-to-End (E2E) testing suite for LegacyGuard Heritage Vault
 ## Test Structure
 
 ### 1. Core Vault Setup Test (`core-vault-setup.spec.ts`)
+
 This test suite verifies the complete onboarding journey for new users:
 
 - **User Registration**: Tests the sign-up flow with email/password
@@ -16,11 +17,13 @@ This test suite verifies the complete onboarding journey for new users:
 - **Plan Strength Tracking**: Ensures the plan strength percentage increases correctly
 
 **Key Scenarios:**
+
 - New user completes core vault setup
 - Plan strength calculation accuracy
 - Progress indicators update correctly
 
 ### 2. Premium Feature Access Test (`premium-feature-access.spec.ts`)
+
 This test suite validates the premium/freemium model implementation:
 
 - **Free User Restrictions**: Verifies upgrade prompts appear for premium features
@@ -29,11 +32,13 @@ This test suite validates the premium/freemium model implementation:
 - **Premium Badges**: Verifies visual indicators for premium features
 
 **Key Scenarios:**
+
 - Free user attempting to access premium features
 - Premium user successfully accessing premium features
 - Premium feature badge visibility and tooltips
 
 ### 3. Asset Story Test (`asset-story.spec.ts`)
+
 This test suite ensures the asset story feature works correctly:
 
 - **Story Creation**: Tests adding personal stories to assets
@@ -42,6 +47,7 @@ This test suite ensures the asset story feature works correctly:
 - **Data Persistence**: Ensures stories persist after page refresh
 
 **Key Scenarios:**
+
 - User can add a story to an asset
 - User can edit an existing story
 - Story character limit validation
@@ -50,7 +56,9 @@ This test suite ensures the asset story feature works correctly:
 ## Running the Tests
 
 ### Prerequisites
+
 1. Install dependencies:
+
    ```bash
    npm install
    ```
@@ -63,31 +71,37 @@ This test suite ensures the asset story feature works correctly:
 ### Running Tests
 
 **Run all tests:**
+
 ```bash
 npm run test:e2e
 ```
 
 **Run tests with UI mode (recommended for debugging):**
+
 ```bash
 npm run test:e2e:ui
 ```
 
 **Run tests in headed mode (see browser):**
+
 ```bash
 npm run test:e2e:headed
 ```
 
 **Debug a specific test:**
+
 ```bash
 npm run test:e2e:debug
 ```
 
 **Run a specific test file:**
+
 ```bash
 npx playwright test tests/e2e/core-vault-setup.spec.ts
 ```
 
 **Run tests in a specific browser:**
+
 ```bash
 npx playwright test --project=chromium
 npx playwright test --project=firefox
@@ -109,14 +123,18 @@ The tests are configured in `playwright.config.ts` with the following settings:
 ## Test Utilities
 
 ### Authentication Helper (`utils/auth.ts`)
+
 Provides reusable functions for:
+
 - User sign-up
 - User sign-in
 - User sign-out
 - Mock premium status for testing
 
 ### Test Users
+
 Pre-configured test users:
+
 - `newUser`: For registration tests
 - `freeUser`: For testing free tier limitations
 - `premiumUser`: For testing premium features
@@ -132,25 +150,26 @@ Pre-configured test users:
 ## Writing New Tests
 
 Example test structure:
-```typescript
-import { test, expect } from '@playwright/test';
-import { signIn, testUsers } from './utils/auth';
 
-test.describe('Feature Name', () => {
+```typescript
+import { test, expect } from "@playwright/test";
+import { signIn, testUsers } from "./utils/auth";
+
+test.describe("Feature Name", () => {
   test.beforeEach(async ({ page }) => {
     // Setup before each test
     await signIn(page, testUsers.freeUser);
   });
 
-  test('should do something', async ({ page }) => {
+  test("should do something", async ({ page }) => {
     // Arrange
-    await page.goto('/some-page');
-    
+    await page.goto("/some-page");
+
     // Act
     await page.click('button:has-text("Action")');
-    
+
     // Assert
-    await expect(page.locator('.result')).toBeVisible();
+    await expect(page.locator(".result")).toBeVisible();
   });
 });
 ```
@@ -190,13 +209,16 @@ The tests are designed to run in CI/CD pipelines:
 ## Maintenance
 
 ### Regular Tasks:
+
 - Update test data and selectors when UI changes
 - Review and update test scenarios quarterly
 - Monitor test execution times and optimize slow tests
 - Keep Playwright and dependencies updated
 
 ### Adding Test Coverage:
+
 When adding new features, ensure to:
+
 1. Add corresponding E2E tests
 2. Update existing tests if behavior changes
 3. Document new test scenarios in this README
@@ -204,11 +226,13 @@ When adding new features, ensure to:
 ## Reporting
 
 After running tests, view the HTML report:
+
 ```bash
 npx playwright show-report
 ```
 
 The report includes:
+
 - Test results summary
 - Detailed failure information
 - Screenshots and videos of failures

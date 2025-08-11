@@ -7,11 +7,13 @@ LegacyGuard uses Clerk for authentication and Supabase for data storage. This do
 ## Architecture
 
 ### 1. **Clerk Authentication**
+
 - Handles user registration, login, and session management
 - Provides social logins (Google, Apple, Microsoft)
 - Manages MFA and security features
 
 ### 2. **Supabase Integration**
+
 - Stores user profiles and application data
 - Syncs with Clerk user data via webhooks
 - Handles role-based access control (RBAC)
@@ -34,15 +36,18 @@ graph TD
 ## Implementation Components
 
 ### 1. **AuthService** (`/src/services/authService.ts`)
+
 - Syncs Clerk users with Supabase profiles
 - Manages user permissions and roles
 - Provides permission checking utilities
 
 ### 2. **AuthSyncProvider** (`/src/components/auth/AuthSyncProvider.tsx`)
+
 - Automatically syncs authenticated users with Supabase
 - Runs on every login to ensure data consistency
 
 ### 3. **ProtectedRoute** (`/src/components/auth/ProtectedRoute.tsx`)
+
 - Wraps routes that require authentication
 - Supports role-based access control
 - Shows loading states and access denied messages
@@ -50,21 +55,22 @@ graph TD
 ## User Roles and Permissions
 
 ### Roles:
+
 1. **user** - Basic user with free tier access
 2. **premium** - Premium subscribers with enhanced features
 3. **admin** - Administrative users with full access
 
 ### Permissions Matrix:
 
-| Permission | User | Premium | Admin |
-|------------|------|---------|-------|
-| View own profile | ✓ | ✓ | ✓ |
-| Edit own profile | ✓ | ✓ | ✓ |
-| Create will | ✓ | ✓ | ✓ |
-| Unlimited wills | ✗ | ✓ | ✓ |
-| Advanced encryption | ✗ | ✓ | ✓ |
-| View all users | ✗ | ✗ | ✓ |
-| Access admin panel | ✗ | ✗ | ✓ |
+| Permission          | User | Premium | Admin |
+| ------------------- | ---- | ------- | ----- |
+| View own profile    | ✓    | ✓       | ✓     |
+| Edit own profile    | ✓    | ✓       | ✓     |
+| Create will         | ✓    | ✓       | ✓     |
+| Unlimited wills     | ✗    | ✓       | ✓     |
+| Advanced encryption | ✗    | ✓       | ✓     |
+| View all users      | ✗    | ✗       | ✓     |
+| Access admin panel  | ✗    | ✗       | ✓     |
 
 ## Setup Instructions
 
@@ -135,14 +141,14 @@ graph TD
 ### Checking Permissions in Components
 
 ```tsx
-import { usePermissions } from '@/services/authService';
+import { usePermissions } from "@/services/authService";
 
 function MyComponent() {
   const { checkPermission } = usePermissions();
   const [canAccessFeature, setCanAccessFeature] = useState(false);
 
   useEffect(() => {
-    checkPermission('advanced_encryption').then(setCanAccessFeature);
+    checkPermission("advanced_encryption").then(setCanAccessFeature);
   }, []);
 
   if (!canAccessFeature) {
@@ -156,10 +162,10 @@ function MyComponent() {
 ### Syncing Custom User Data
 
 ```tsx
-import { authService } from '@/services/authService';
+import { authService } from "@/services/authService";
 
 // Update user role
-await authService.updateUserRole(userId, 'premium');
+await authService.updateUserRole(userId, "premium");
 
 // Get user permissions
 const { role, permissions } = await authService.getUserPermissions(userId);
@@ -176,18 +182,21 @@ const { role, permissions } = await authService.getUserPermissions(userId);
 ## Troubleshooting
 
 ### User not syncing to Supabase
+
 1. Check webhook configuration
 2. Verify environment variables
 3. Check Supabase logs for errors
 4. Ensure RLS policies allow insertion
 
 ### Permission denied errors
+
 1. Verify user role in Supabase
 2. Check permission requirements
 3. Ensure AuthSyncProvider is working
 4. Review RLS policies
 
 ### Webhook failures
+
 1. Check webhook secret
 2. Verify endpoint URL
 3. Review server logs

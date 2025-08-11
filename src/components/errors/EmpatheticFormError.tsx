@@ -1,7 +1,7 @@
-import React from 'react';
-import { Info, AlertCircle } from 'lucide-react';
-import { useTranslation } from 'react-i18next';
-import { cn } from '@/lib/utils';
+import React from "react";
+import { Info, AlertCircle } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import { cn } from "@/lib/utils";
 
 interface EmpatheticFormErrorProps {
   field: string;
@@ -10,42 +10,42 @@ interface EmpatheticFormErrorProps {
   showIcon?: boolean;
 }
 
-const EmpatheticFormError: React.FC<EmpatheticFormErrorProps> = ({ 
-  field, 
-  error, 
+const EmpatheticFormError: React.FC<EmpatheticFormErrorProps> = ({
+  field,
+  error,
   className,
-  showIcon = true 
+  showIcon = true,
 }) => {
-  const { t } = useTranslation('errors');
-  
+  const { t } = useTranslation("errors");
+
   // Get the appropriate error message
   const getErrorMessage = () => {
     // Check if we have a specific validation message
     const validationKey = `validation.${error}`;
-    const hasValidationMessage = t(validationKey, { defaultValue: '' }) !== '';
-    
+    const hasValidationMessage = t(validationKey, { defaultValue: "" }) !== "";
+
     if (hasValidationMessage) {
       return t(validationKey);
     }
-    
+
     // Fallback to contextual messages based on field type
-    if (field.toLowerCase().includes('email')) {
-      return t('validation.invalid_email');
+    if (field.toLowerCase().includes("email")) {
+      return t("errors:validation.invalid_email");
     }
-    if (field.toLowerCase().includes('phone')) {
-      return t('validation.invalid_phone');
+    if (field.toLowerCase().includes("phone")) {
+      return t("errors:validation.invalid_phone");
     }
-    if (field.toLowerCase().includes('date')) {
-      return t('validation.invalid_date');
+    if (field.toLowerCase().includes("date")) {
+      return t("errors:validation.invalid_date");
     }
-    if (field.toLowerCase().includes('password')) {
-      return t('validation.password_weak');
+    if (field.toLowerCase().includes("password")) {
+      return t("errors:validation.password_weak");
     }
-    
+
     // Default message
-    return t('validation.required_field');
+    return t("errors:validation.required_field");
   };
-  
+
   return (
     <div className={cn("empathetic-form-error", className)}>
       {showIcon && (
@@ -64,9 +64,11 @@ const EmpatheticFormError: React.FC<EmpatheticFormErrorProps> = ({
 };
 
 // Export additional variant for inline errors
-export const InlineEmpatheticError: React.FC<{ message: string }> = ({ message }) => {
-  const { t } = useTranslation('errors');
-  
+export const InlineEmpatheticError: React.FC<{ message: string }> = ({
+  message,
+}) => {
+  const { t } = useTranslation("errors");
+
   return (
     <span className="inline-empathetic-error">
       <AlertCircle className="inline h-3 w-3 mr-1 text-amber-500" />

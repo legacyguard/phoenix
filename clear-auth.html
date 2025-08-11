@@ -1,18 +1,19 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
+  <head>
     <title>Clear Auth</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Clear Authentication</h1>
     <button onclick="clearAuth()">Clear LegacyGuard Auth</button>
     <p id="status"></p>
-    
+
     <script>
-        function clearAuth() {
-            localStorage.removeItem('legacyguard_auth');
-            document.getElementById('status').textContent = 'Authentication cleared! You can now go back to the app.';
-        }
+      function clearAuth() {
+        localStorage.removeItem("legacyguard_auth");
+        document.getElementById("status").textContent =
+          "Authentication cleared! You can now go back to the app.";
+      }
     </script>
-</body>
+  </body>
 </html>

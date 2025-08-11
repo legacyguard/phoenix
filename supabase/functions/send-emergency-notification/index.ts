@@ -2,8 +2,9 @@ import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2.38.4";
 
 const corsHeaders = {
-  'Access-Control-Allow-Origin': '*',
-  'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Headers":
+    "authorization, x-client-info, apikey, content-type",
 };
 
 interface EmergencyNotificationRequest {
@@ -17,70 +18,73 @@ interface EmergencyNotificationRequest {
 
 serve(async (req) => {
   // Handle CORS preflight requests
-  if (req.method === 'OPTIONS') {
-    return new Response('ok', { headers: corsHeaders });
+  if (req.method === "OPTIONS") {
+    return new Response("ok", { headers: corsHeaders });
   }
 
   try {
     const supabaseClient = createClient(
-      Deno.env.get('SUPABASE_URL') ?? '',
-      Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') ?? '',
+      Deno.env.get("SUPABASE_URL") ?? "",
+      Deno.env.get("SUPABASE_SERVICE_ROLE_KEY") ?? "",
       {
         auth: {
           autoRefreshToken: false,
-          persistSession: false
-        }
-      }
+          persistSession: false,
+        },
+      },
     );
 
-    const { 
-      userId, 
-      guardianId, 
-      guardianName, 
-      guardianEmail, 
-      emergencyNotes, 
-      timestamp 
-    } = await req.json() as EmergencyNotificationRequest;
+    const {
+      userId,
+      guardianId,
+      guardianName,
+      guardianEmail,
+      emergencyNotes,
+      timestamp,
+    } = (await req.json()) as EmergencyNotificationRequest;
 
     // Get user information
     const { data: userData, error: userError } = await supabaseClient
-      .from('profiles')
-      .select('full_name, email')
-      .eq('id', userId)
+      .from("profiles")
+      .select("full_name, email")
+      .eq("id", userId)
       .single();
 
     if (userError || !userData) {
-      throw new Error('Failed to fetch user information');
+      throw new Error("Failed to fetch user information");
     }
 
     // Get guardian relationship
     const { data: guardianData, error: guardianError } = await supabaseClient
-      .from('guardians')
-      .select('relationship')
-      .eq('id', guardianId)
+      .from("guardians")
+      .select("relationship")
+      .eq("id", guardianId)
       .single();
 
-    const guardianRelationship = guardianData?.relationship || 'Guardian';
+    const guardianRelationship = guardianData?.relationship || "Guardian";
 
     // Get emergency contacts with their details
-    const { data: emergencyContacts, error: contactsError } = await supabaseClient
-      .from('emergency_contacts')
-      .select(`
+    const { data: emergencyContacts, error: contactsError } =
+      await supabaseClient
+        .from("emergency_contacts")
+        .select(
+          `
         *,
         contact:contacts(*)
-      `)
-      .eq('user_id', userId)
-      .order('priority_order');
+      `,
+        )
+        .eq("user_id", userId)
+        .order("priority_order");
 
     if (contactsError || !emergencyContacts || emergencyContacts.length === 0) {
-      throw new Error('No emergency contacts found');
+      throw new Error("No emergency contacts found");
     }
 
     // Format timestamp
-    const formattedTimestamp = new Date(timestamp).toLocaleString('en-US', {
-      dateStyle: 'full',
-      timeStyle: 'short',
-      timeZone: 'UTC'
+    const formattedTimestamp = new Date(timestamp).toLocaleString("en-US", {
+      dateStyle: "full",
+      timeStyle: "short",
+      timeZone: "UTC",
     });
 
     // Build contact list for email
@@ -91,14 +95,14 @@ serve(async (req) => {
           <tr>
             <td style="padding: 12px; border-bottom: 1px solid #eee;">
               <strong>${index + 1}. ${contact.name}</strong><br>
-              ${contact.relationship ? `${contact.relationship}<br>` : ''}
-              ${contact.phone_number ? `📞 ${contact.phone_number}<br>` : ''}
-              ${contact.email ? `✉️ ${contact.email}` : ''}
+              ${contact.relationship ? `${contact.relationship}<br>` : ""}
+              ${contact.phone_number ? `📞 ${contact.phone_number}<br>` : ""}
+              ${contact.email ? `✉️ ${contact.email}` : ""}
             </td>
           </tr>
         `;
       })
-      .join('');
+      .join("");
 
     // Email template
     const emailHtml = `
@@ -188,14 +192,16 @@ GUARDIAN ACCESS DETAILS:
 - Situation Notes: ${emergencyNotes}
 
 EMERGENCY CONTACT LIST (in priority order):
-${emergencyContacts.map((ec, index) => {
-  const contact = ec.contact;
-  return `
+${emergencyContacts
+  .map((ec, index) => {
+    const contact = ec.contact;
+    return `
 ${index + 1}. ${contact.name}
-   ${contact.relationship ? `Relationship: ${contact.relationship}` : ''}
-   ${contact.phone_number ? `Phone: ${contact.phone_number}` : ''}
-   ${contact.email ? `Email: ${contact.email}` : ''}`;
-}).join('\n')}
+   ${contact.relationship ? `Relationship: ${contact.relationship}` : ""}
+   ${contact.phone_number ? `Phone: ${contact.phone_number}` : ""}
+   ${contact.email ? `Email: ${contact.email}` : ""}`;
+  })
+  .join("\n")}
 
 NEXT STEPS:
 - Contact individuals in the priority order shown above
@@ -210,25 +216,25 @@ All emergency access is logged for security purposes.
 
     // Send emails to all emergency contacts who have opted in
     const emailPromises = emergencyContacts
-      .filter(ec => {
+      .filter((ec) => {
         // Check if contact has email and has opted in for notifications
         if (!ec.contact.email) return false;
-        
+
         const prefs = ec.notification_preferences || { email_enabled: true };
         return prefs.email_enabled !== false;
       })
       .map(async (ec) => {
         const contact = ec.contact;
-        
+
         try {
-          const response = await fetch('https://api.resend.com/emails', {
-            method: 'POST',
+          const response = await fetch("https://api.resend.com/emails", {
+            method: "POST",
             headers: {
-              'Content-Type': 'application/json',
-              'Authorization': `Bearer ${Deno.env.get('RESEND_API_KEY')}`,
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${Deno.env.get("RESEND_API_KEY")}`,
             },
             body: JSON.stringify({
-              from: 'LegacyGuard <notifications@legacyguard.eu>',
+              from: "LegacyGuard <notifications@legacyguard.eu>",
               to: contact.email,
               subject: `Emergency Contact Access for ${userData.full_name}`,
               html: emailHtml,
@@ -236,14 +242,14 @@ All emergency access is logged for security purposes.
               reply_to: guardianEmail,
               tags: [
                 {
-                  name: 'notification_type',
-                  value: 'emergency_access'
+                  name: "notification_type",
+                  value: "emergency_access",
                 },
                 {
-                  name: 'user_id',
-                  value: userId
-                }
-              ]
+                  name: "user_id",
+                  value: userId,
+                },
+              ],
             }),
           });
 
@@ -259,20 +265,21 @@ All emergency access is logged for security purposes.
       });
 
     const emailResults = await Promise.all(emailPromises);
-    
+
     // Also send a notification to the user (account owner)
     if (userData.email) {
       try {
-        await fetch('https://api.resend.com/emails', {
-          method: 'POST',
+        await fetch("https://api.resend.com/emails", {
+          method: "POST",
           headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${Deno.env.get('RESEND_API_KEY')}`,
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${Deno.env.get("RESEND_API_KEY")}`,
           },
           body: JSON.stringify({
-            from: 'LegacyGuard <notifications@legacyguard.eu>',
+            from: "LegacyGuard <notifications@legacyguard.eu>",
             to: userData.email,
-            subject: 'Emergency Access Alert - Your Emergency Contacts Have Been Accessed',
+            subject:
+              "Emergency Access Alert - Your Emergency Contacts Have Been Accessed",
             html: `
               <body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; padding: 20px;">
                 <div style="background-color: #fee2e2; border: 2px solid #dc2626; border-radius: 8px; padding: 20px; margin-bottom: 30px;">
@@ -311,52 +318,46 @@ All your emergency contacts have been notified of this access. If you believe th
 
 Best regards,
 The LegacyGuard Team
-            `
+            `,
           }),
         });
       } catch (error) {
-        console.error('Failed to send notification to user:', error);
+        console.error("Failed to send notification to user:", error);
       }
     }
 
     // Log the notification event
-    await supabaseClient
-      .from('notification_logs')
-      .insert({
-        user_id: userId,
-        type: 'emergency_access',
-        recipient_emails: emergencyContacts
-          .filter(ec => ec.contact.email)
-          .map(ec => ec.contact.email),
-        metadata: {
-          guardian_id: guardianId,
-          guardian_name: guardianName,
-          emergency_notes: emergencyNotes,
-          email_results: emailResults
-        }
-      });
+    await supabaseClient.from("notification_logs").insert({
+      user_id: userId,
+      type: "emergency_access",
+      recipient_emails: emergencyContacts
+        .filter((ec) => ec.contact.email)
+        .map((ec) => ec.contact.email),
+      metadata: {
+        guardian_id: guardianId,
+        guardian_name: guardianName,
+        emergency_notes: emergencyNotes,
+        email_results: emailResults,
+      },
+    });
 
     return new Response(
-      JSON.stringify({ 
-        success: true, 
-        notificationsSent: emailResults.filter(r => r.success).length,
+      JSON.stringify({
+        success: true,
+        notificationsSent: emailResults.filter((r) => r.success).length,
         totalContacts: emergencyContacts.length,
-        results: emailResults
+        results: emailResults,
       }),
-      { 
-        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-        status: 200 
-      }
+      {
+        headers: { ...corsHeaders, "Content-Type": "application/json" },
+        status: 200,
+      },
     );
-
   } catch (error) {
-    console.error('Error in send-emergency-notification:', error);
-    return new Response(
-      JSON.stringify({ error: error.message }),
-      { 
-        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
-        status: 500
-      }
-    );
+    console.error("Error in send-emergency-notification:", error);
+    return new Response(JSON.stringify({ error: error.message }), {
+      headers: { ...corsHeaders, "Content-Type": "application/json" },
+      status: 500,
+    });
   }
 });

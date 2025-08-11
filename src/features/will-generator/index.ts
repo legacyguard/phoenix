@@ -1,2 +1,2 @@
-export { default as WillGenerator } from './components/WillGenerator';
-export * from './components';
+export { default as WillGenerator } from "./components/WillGenerator";
+export * from "./components";

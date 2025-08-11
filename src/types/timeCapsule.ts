@@ -1,6 +1,6 @@
-export type MessageType = 'text' | 'photo' | 'video' | 'audio';
-export type UnlockCondition = 'date' | 'after_passing';
-export type CapsuleStatus = 'locked' | 'unlocked' | 'delivered';
+export type MessageType = "text" | "photo" | "video" | "audio";
+export type UnlockCondition = "date" | "after_passing";
+export type CapsuleStatus = "locked" | "unlocked" | "delivered";
 
 export interface TimeCapsuleMessage {
   id: string;

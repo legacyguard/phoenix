@@ -1,21 +1,25 @@
 # Maintaining Empathetic UX Guide
 
 ## Overview
+
 This guide ensures the caring, family-focused experience is maintained as the application evolves. Every team member should understand their role in preserving the empathetic personal assistant experience.
 
 ## Core Principles
 
 ### 1. Family First, Features Second
+
 - Every feature must clearly communicate family benefit
 - Technical capabilities are means to family outcomes
 - User stories should focus on family impact
 
 ### 2. Emotional Intelligence Throughout
+
 - Acknowledge the emotional weight of estate planning
 - Provide support during difficult moments
 - Celebrate meaningful progress
 
 ### 3. Personal Assistant, Not Tool
+
 - Maintain consistent first-person voice
 - Show understanding and care
 - Guide rather than instruct
@@ -23,22 +27,22 @@ This guide ensures the caring, family-focused experience is maintained as the ap
 ## Daily Checks
 
 ### Morning Review (15 minutes)
+
 - [ ] Review new content for empathetic language
   - Check pull requests for technical jargon
   - Verify family-focused messaging
   - Ensure consistent assistant voice
-  
 - [ ] Check error logs for user frustration patterns
   - Identify repeated error encounters
   - Review error message effectiveness
   - Note areas needing better support
-  
 - [ ] Monitor assistant message effectiveness
   - Review user interactions with assistant
   - Check completion rates after suggestions
   - Note confusion points
 
 ### End of Day (10 minutes)
+
 - [ ] Review user feedback for emotional indicators
 - [ ] Document any empathy issues found
 - [ ] Update team on critical findings
@@ -46,18 +50,21 @@ This guide ensures the caring, family-focused experience is maintained as the ap
 ## Weekly Reviews
 
 ### Language Audit (30 minutes)
+
 - [ ] Run automated empathy language tests
 - [ ] Review new UI text for technical terms
 - [ ] Verify all CTAs focus on family benefit
 - [ ] Check consistency of assistant personality
 
 ### User Journey Review (45 minutes)
+
 - [ ] Analyze user drop-off points
 - [ ] Review celebration moment effectiveness
 - [ ] Check emotional checkpoint usage
 - [ ] Evaluate progressive disclosure success
 
 ### Family Impact Assessment (30 minutes)
+
 - [ ] Review family benefit messaging clarity
 - [ ] Check family visualization components
 - [ ] Verify cultural sensitivity
@@ -66,16 +73,20 @@ This guide ensures the caring, family-focused experience is maintained as the ap
 ## Monthly Audits
 
 ### Comprehensive Empathy Score (2 hours)
+
 ```bash
 npm run audit:empathy
 ```
+
 Review results for:
+
 - Overall empathy score (target: >8.5)
 - Family focus ratio (target: >80%)
 - Emotional support coverage (target: >95%)
 - Assistant consistency (target: >90%)
 
 ### User Emotional Journey Analysis (3 hours)
+
 1. Select 5 random user sessions
 2. Track emotional journey through app
 3. Identify stress points
@@ -83,6 +94,7 @@ Review results for:
 5. Share findings with team
 
 ### Family Focus Verification (2 hours)
+
 - Review all features for family benefit clarity
 - Check that no feature-focused language has crept in
 - Verify family impact visualizations
@@ -91,6 +103,7 @@ Review results for:
 ## Guidelines for New Features
 
 ### Pre-Development Checklist
+
 - [ ] Family benefit clearly defined
 - [ ] Emotional impact considered
 - [ ] Progressive disclosure planned
@@ -99,6 +112,7 @@ Review results for:
 - [ ] Error states humanized
 
 ### Development Guidelines
+
 1. **Start with Why (Family Benefit)**
    - What family problem does this solve?
    - How does it protect/help loved ones?
@@ -123,6 +137,7 @@ Review results for:
    - Confident user scenario
 
 ### Post-Development Verification
+
 - [ ] No technical jargon introduced
 - [ ] Family benefit clearly communicated
 - [ ] Emotional support present where needed
@@ -133,12 +148,14 @@ Review results for:
 ## Responding to Issues
 
 ### When Technical Language Appears
+
 1. Immediately flag in code review
 2. Suggest family-focused alternative
 3. Update word blocklist if needed
 4. Add to automated tests
 
 ### When Users Feel Overwhelmed
+
 1. Identify the overwhelming element
 2. Apply progressive disclosure
 3. Add emotional checkpoint
@@ -146,6 +163,7 @@ Review results for:
 5. Test with anxious user persona
 
 ### When Features Overshadow Family
+
 1. Rewrite to lead with family benefit
 2. Hide technical details by default
 3. Add family impact visualization
@@ -155,24 +173,28 @@ Review results for:
 ## Team Responsibilities
 
 ### Developers
+
 - Use empathy linter before commits
 - Test with different emotional states
 - Implement progressive disclosure
 - Maintain assistant integration
 
 ### Designers
+
 - Design with emotional states in mind
 - Create calming, supportive interfaces
 - Visualize family impact
 - Plan celebration moments
 
 ### Content Writers
+
 - Maintain empathetic tone
 - Focus on family benefits
 - Write in assistant's voice
 - Avoid technical jargon
 
 ### Product Managers
+
 - Define family benefit for features
 - Prioritize emotional support
 - Track empathy metrics
@@ -181,6 +203,7 @@ Review results for:
 ## Metrics to Track
 
 ### Quantitative
+
 - Empathy score (automated testing)
 - Family focus ratio (content analysis)
 - Completion rates by emotional state
@@ -188,6 +211,7 @@ Review results for:
 - Error recovery success rate
 
 ### Qualitative
+
 - User emotional feedback
 - Family benefit understanding
 - Assistant effectiveness
@@ -197,7 +221,9 @@ Review results for:
 ## Emergency Procedures
 
 ### Critical Empathy Failure
+
 If empathy score drops below 7.0:
+
 1. Stop feature development
 2. Run comprehensive audit
 3. Fix critical issues immediately
@@ -205,7 +231,9 @@ If empathy score drops below 7.0:
 5. Deploy fixes with monitoring
 
 ### User Distress Pattern
+
 If multiple users report distress:
+
 1. Identify common trigger
 2. Deploy immediate messaging fix
 3. Add emotional support
@@ -215,16 +243,19 @@ If multiple users report distress:
 ## Resources
 
 ### Word Lists
+
 - [Technical terms to avoid](./technical-terms-blocklist.md)
 - [Empathetic phrases to use](./empathetic-phrases.md)
 - [Family-focused alternatives](./family-focused-language.md)
 
 ### Testing Tools
+
 - Empathy language analyzer: `npm run analyze:language`
 - Journey emotion tracker: `npm run test:emotional-journey`
 - Family focus validator: `npm run validate:family-focus`
 
 ### Templates
+
 - [Empathetic error messages](./templates/error-messages.md)
 - [Celebration messages](./templates/celebrations.md)
 - [Assistant responses](./templates/assistant-messages.md)
@@ -232,6 +263,7 @@ If multiple users report distress:
 ## Continuous Improvement
 
 ### Quarterly Review
+
 1. Analyze empathy trends
 2. Review user emotional feedback
 3. Update guidelines based on learnings
@@ -239,6 +271,7 @@ If multiple users report distress:
 5. Celebrate team successes
 
 ### Annual Empathy Summit
+
 - Review year's emotional metrics
 - Share success stories
 - Plan next year's improvements
@@ -251,5 +284,5 @@ If multiple users report distress:
 
 ---
 
-*Last updated: Current Date*
-*Next review: Monthly*
+_Last updated: Current Date_
+_Next review: Monthly_

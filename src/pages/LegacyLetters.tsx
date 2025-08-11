@@ -1,5 +1,5 @@
-import React from 'react';
-import { LegacyLetters } from '@/features/legacy-briefing/components/LegacyLetters';
+import React from "react";
+import { LegacyLetters } from "@/features/legacy-briefing/components/LegacyLetters";
 
 const LegacyLettersPage: React.FC = () => {
   return (

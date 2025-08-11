@@ -42,21 +42,25 @@ npm install openai
 ### Key Features
 
 #### 🔄 Automatic Retry Logic
+
 - Exponential backoff for failed requests
 - Handles rate limits gracefully
 - User-friendly error messages
 
 #### 💾 Intelligent Caching
+
 - Reduces API calls and costs
 - 1-hour cache TTL by default
 - Automatic cache management
 
 #### 📊 Usage Tracking
+
 - Token counting and cost estimation
 - Per-user usage limits
 - Daily/monthly quotas
 
 #### 🔒 Security
+
 - API key never exposed to client
 - Request validation and sanitization
 - User authentication checks (when implemented)
@@ -66,20 +70,20 @@ npm install openai
 ### Basic Document Analysis
 
 ```typescript
-import { useAI } from '@/lib/hooks/useAI';
+import { useAI } from "@/lib/hooks/useAI";
 
 function DocumentUpload() {
   const { analyzeDocument, isAnalyzing } = useAI();
 
   const handleUpload = async (file: File) => {
     const result = await analyzeDocument(file);
-    
+
     if (result) {
-      console.log('Document type:', result.type);
-      console.log('Suggestions:', result.suggestions);
-      
+      console.log("Document type:", result.type);
+      console.log("Suggestions:", result.suggestions);
+
       // Show empathetic message based on document type
-      if (result.type === 'insurance') {
+      if (result.type === "insurance") {
         // "Great job protecting your family's future!"
       }
     }
@@ -146,26 +150,31 @@ function Dashboard() {
 ## API Functions
 
 ### `analyzeDocument(imageBase64: string)`
+
 Analyzes document images to extract type, metadata, and provide suggestions.
 
 **Returns**: `DocumentAnalysis` with extracted data, suggestions, and related documents.
 
 ### `generateLifeQuestion(userProfile: UserProfile)`
+
 Creates personalized questions to help users capture their life stories.
 
 **Returns**: `LifeQuestion` with follow-ups and time estimates.
 
 ### `suggestNextAction(context: UserContext)`
+
 Provides context-aware suggestions for the user's next step.
 
 **Returns**: `ActionSuggestion` with priority and encouragement.
 
 ### `extractDocumentMetadata(text: string, docType: string)`
+
 Extracts structured data from document text.
 
 **Returns**: `DocumentMetadata` with dates, parties, and key information.
 
 ### `generateEmpatheticMessage(scenario: string, tone: string)`
+
 Creates supportive messages for various user scenarios.
 
 **Returns**: Empathetic message string.
@@ -210,6 +219,7 @@ npm run test lib/services/__tests__/openai.service.test.ts
 ```
 
 Tests include:
+
 - ✅ Document analysis with fixtures
 - ✅ Life question generation
 - ✅ Error handling and retries
@@ -244,6 +254,7 @@ All errors are transformed into user-friendly messages:
 ## Support
 
 For issues or questions about the OpenAI integration:
+
 1. Check the error messages in the console
 2. Verify your API key is correctly set
 3. Review the test files for usage examples

@@ -1,5 +1,5 @@
-import { SUPPORTED_COUNTRIES, type CountryCode } from '@/config/countries';
-import { API_URLS, CACHE } from '@/utils/constants';
+import { SUPPORTED_COUNTRIES, type CountryCode } from "@/config/countries";
+import { API_URLS, CACHE } from "@/utils/constants";
 
 interface GeolocationResponse {
   country_code: string;
@@ -25,7 +25,7 @@ interface GeolocationResult {
 
 class GeolocationService {
   private static readonly API_URL = API_URLS.geolocation;
-  private static readonly CACHE_KEY = 'geolocation_data';
+  private static readonly CACHE_KEY = "geolocation_data";
   private static readonly CACHE_DURATION = CACHE.geolocation;
 
   async detectCountry(): Promise<GeolocationResult> {
@@ -38,9 +38,9 @@ class GeolocationService {
 
       // Fetch from API
       const response = await fetch(GeolocationService.API_URL, {
-        method: 'GET',
+        method: "GET",
         headers: {
-          'Accept': 'application/json',
+          Accept: "application/json",
         },
       });
 
@@ -49,15 +49,15 @@ class GeolocationService {
       }
 
       const data: GeolocationResponse = await response.json();
-      
+
       // Map to our result format
       const result: GeolocationResult = {
         countryCode: this.mapToSupportedCountry(data.country_code),
-        countryName: data.country_name || '',
-        city: data.city || '',
-        region: data.region || '',
-        timezone: data.timezone || '',
-        detectedLanguages: data.languages ? data.languages.split(',') : [],
+        countryName: data.country_name || "",
+        city: data.city || "",
+        region: data.region || "",
+        timezone: data.timezone || "",
+        detectedLanguages: data.languages ? data.languages.split(",") : [],
         isEU: this.isEUCountry(data.country_code),
       };
 
@@ -66,21 +66,47 @@ class GeolocationService {
 
       return result;
     } catch (error) {
-      console.error('Geolocation detection failed:', error);
+      console.error("Geolocation detection failed:", error);
       return this.getFallbackResult();
     }
   }
 
   private mapToSupportedCountry(code: string): CountryCode | null {
     const upperCode = code?.toUpperCase();
-    return SUPPORTED_COUNTRIES.find(c => c === upperCode) as CountryCode || null;
+    return (
+      (SUPPORTED_COUNTRIES.find((c) => c === upperCode) as CountryCode) || null
+    );
   }
 
   private isEUCountry(code: string): boolean {
     const euCountries = [
-      'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR',
-      'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU', 'MT', 'NL',
-      'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE'
+      "AT",
+      "BE",
+      "BG",
+      "HR",
+      "CY",
+      "CZ",
+      "DK",
+      "EE",
+      "FI",
+      "FR",
+      "DE",
+      "GR",
+      "HU",
+      "IE",
+      "IT",
+      "LV",
+      "LT",
+      "LU",
+      "MT",
+      "NL",
+      "PL",
+      "PT",
+      "RO",
+      "SK",
+      "SI",
+      "ES",
+      "SE",
     ];
     return euCountries.includes(code?.toUpperCase());
   }
@@ -91,8 +117,9 @@ class GeolocationService {
       if (!cached) return null;
 
       const { data, timestamp } = JSON.parse(cached);
-      const isExpired = Date.now() - timestamp > GeolocationService.CACHE_DURATION;
-      
+      const isExpired =
+        Date.now() - timestamp > GeolocationService.CACHE_DURATION;
+
       if (isExpired) {
         localStorage.removeItem(GeolocationService.CACHE_KEY);
         return null;
@@ -106,21 +133,24 @@ class GeolocationService {
 
   private cacheData(data: GeolocationResult): void {
     try {
-      localStorage.setItem(GeolocationService.CACHE_KEY, JSON.stringify({
-        data,
-        timestamp: Date.now(),
-      }));
+      localStorage.setItem(
+        GeolocationService.CACHE_KEY,
+        JSON.stringify({
+          data,
+          timestamp: Date.now(),
+        }),
+      );
     } catch (error) {
-      console.error('Failed to cache geolocation data:', error);
+      console.error("Failed to cache geolocation data:", error);
     }
   }
 
   private getFallbackResult(): GeolocationResult {
     return {
       countryCode: null,
-      countryName: 'Unknown',
-      city: '',
-      region: '',
+      countryName: "Unknown",
+      city: "",
+      region: "",
       timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
       detectedLanguages: [],
       isEU: false,

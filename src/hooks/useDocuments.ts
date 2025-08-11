@@ -1,7 +1,7 @@
-import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
-import { useUser } from '@clerk/clerk-react';
-import { supabase } from '@/lib/supabase';
-import { toast } from 'sonner';
+import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
+import { useUser } from "@clerk/clerk-react";
+import { supabase } from "@/lib/supabase";
+import { toast } from "sonner";
 
 export interface Document {
   id: string;
@@ -19,15 +19,15 @@ export function useDocuments() {
   const queryClient = useQueryClient();
 
   const documentsQuery = useQuery({
-    queryKey: ['documents', user?.id],
+    queryKey: ["documents", user?.id],
     queryFn: async () => {
-      if (!user?.id) throw new Error('User not authenticated');
-      
+      if (!user?.id) throw new Error("User not authenticated");
+
       const { data, error } = await supabase
-        .from('documents')
-        .select('*')
-        .eq('user_id', user.id)
-        .order('created_at', { ascending: false });
+        .from("documents")
+        .select("*")
+        .eq("user_id", user.id)
+        .order("created_at", { ascending: false });
 
       if (error) throw error;
       return data as Document[];
@@ -40,40 +40,46 @@ export function useDocuments() {
   const deleteDocument = useMutation({
     mutationFn: async (documentId: string) => {
       const { error } = await supabase
-        .from('documents')
+        .from("documents")
         .delete()
-        .eq('id', documentId)
-        .eq('user_id', user?.id);
+        .eq("id", documentId)
+        .eq("user_id", user?.id);
 
       if (error) throw error;
     },
     onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ['documents', user?.id] });
-      toast.success('Document deleted successfully');
+      queryClient.invalidateQueries({ queryKey: ["documents", user?.id] });
+      toast.success("Document deleted successfully");
     },
     onError: (error) => {
-      toast.error('Failed to delete document');
-      console.error('Delete document error:', error);
+      toast.error("Failed to delete document");
+      console.error("Delete document error:", error);
     },
   });
 
   const updateDocument = useMutation({
-    mutationFn: async ({ id, updates }: { id: string; updates: Partial<Document> }) => {
+    mutationFn: async ({
+      id,
+      updates,
+    }: {
+      id: string;
+      updates: Partial<Document>;
+    }) => {
       const { error } = await supabase
-        .from('documents')
+        .from("documents")
         .update(updates)
-        .eq('id', id)
-        .eq('user_id', user?.id);
+        .eq("id", id)
+        .eq("user_id", user?.id);
 
       if (error) throw error;
     },
     onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ['documents', user?.id] });
-      toast.success('Document updated successfully');
+      queryClient.invalidateQueries({ queryKey: ["documents", user?.id] });
+      toast.success("Document updated successfully");
     },
     onError: (error) => {
-      toast.error('Failed to update document');
-      console.error('Update document error:', error);
+      toast.error("Failed to update document");
+      console.error("Update document error:", error);
     },
   });
 

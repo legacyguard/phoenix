@@ -140,6 +140,7 @@ WILL_ENCRYPTION_KEY=your_encryption_key
 ### 2. Signing a Will
 
 For simple signatures:
+
 ```typescript
 // POST /api/will/sign
 {
@@ -149,6 +150,7 @@ For simple signatures:
 ```
 
 For QES signatures (automatically triggered for wills):
+
 - User is redirected to Skribble
 - Webhook updates signature status
 - Certificate stored in database
@@ -173,6 +175,7 @@ For QES signatures (automatically triggered for wills):
 ## Testing
 
 Run the test suite:
+
 ```bash
 npm test will
 ```
@@ -208,6 +211,7 @@ npm test will
 ## Support
 
 For issues or questions:
+
 - Technical: dev@legacyguard.com
 - Legal: legal@legacyguard.com
 - Support: support@legacyguard.com

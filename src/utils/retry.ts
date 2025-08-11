@@ -12,7 +12,9 @@ export interface RetryOptions {
   signal?: AbortSignal;
 }
 
-const DEFAULT_OPTIONS: Required<Omit<RetryOptions, 'retryCondition' | 'onRetry' | 'signal'>> = {
+const DEFAULT_OPTIONS: Required<
+  Omit<RetryOptions, "retryCondition" | "onRetry" | "signal">
+> = {
   maxAttempts: 3,
   initialDelay: 1000,
   maxDelay: 10000,
@@ -24,7 +26,7 @@ const DEFAULT_OPTIONS: Required<Omit<RetryOptions, 'retryCondition' | 'onRetry' 
  */
 export async function retry<T>(
   fn: () => Promise<T>,
-  options: RetryOptions = {}
+  options: RetryOptions = {},
 ): Promise<T> {
   const opts = { ...DEFAULT_OPTIONS, ...options };
   let lastError: Record<string, unknown>;
@@ -33,7 +35,7 @@ export async function retry<T>(
     try {
       // Kontrola či nebola operácia zrušená
       if (options.signal?.aborted) {
-        throw new Error('Operácia bola zrušená');
+        throw new Error("Operácia bola zrušená");
       }
 
       // Pokus o vykonanie funkcie
@@ -60,7 +62,7 @@ export async function retry<T>(
       // Vypočítaj delay s exponenciálnym backoff
       const delay = Math.min(
         opts.initialDelay * Math.pow(opts.backoffMultiplier, attempt - 1),
-        opts.maxDelay
+        opts.maxDelay,
       );
 
       // Počkaj pred ďalším pokusom
@@ -75,7 +77,7 @@ export async function retry<T>(
  * Helper funkcia pre čakanie
  */
 export function sleep(ms: number): Promise<void> {
-  return new Promise(resolve => setTimeout(resolve, ms));
+  return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
 /**
@@ -85,64 +87,70 @@ export const RetryConditions = {
   // Opakuj len pre sieťové chyby
   networkErrors: (error: Record<string, unknown>): boolean => {
     const networkErrorMessages = [
-      'network',
-      'fetch',
-      'ECONNREFUSED',
-      'ETIMEDOUT',
-      'ENOTFOUND',
-      'ECONNRESET',
-      'ECONNABORTED',
-      'EHOSTUNREACH',
-      'EPIPE',
-      'EAI_AGAIN'
+      "network",
+      "fetch",
+      "ECONNREFUSED",
+      "ETIMEDOUT",
+      "ENOTFOUND",
+      "ECONNRESET",
+      "ECONNABORTED",
+      "EHOSTUNREACH",
+      "EPIPE",
+      "EAI_AGAIN",
     ];
-    
-    const errorMessage = error?.message?.toLowerCase() || '';
-    const errorCode = error?.code?.toUpperCase() || '';
-    
-    return networkErrorMessages.some(msg => 
-      errorMessage.includes(msg.toLowerCase()) || 
-      errorCode.includes(msg.toUpperCase())
+
+    const errorMessage = error?.message?.toLowerCase() || "";
+    const errorCode = error?.code?.toUpperCase() || "";
+
+    return networkErrorMessages.some(
+      (msg) =>
+        errorMessage.includes(msg.toLowerCase()) ||
+        errorCode.includes(msg.toUpperCase()),
     );
   },
 
   // Opakuj pre HTTP chyby, ktoré môžu byť dočasné
   httpRetryableErrors: (error: Record<string, unknown>): boolean => {
     const retryableStatusCodes = [408, 429, 500, 502, 503, 504];
-    return retryableStatusCodes.includes(error?.status || error?.response?.status);
+    return retryableStatusCodes.includes(
+      error?.status || error?.response?.status,
+    );
   },
 
   // Opakuj pre Supabase chyby
   supabaseErrors: (error: Record<string, unknown>): boolean => {
     const retryableCodes = [
-      'PGRST301', // Moved Permanently
-      '57P01', // admin_shutdown
-      '57P02', // crash_shutdown
-      '57P03', // cannot_connect_now
-      '08001', // sqlclient_unable_to_establish_sqlconnection
-      '08003', // connection_does_not_exist
-      '08006', // connection_failure
+      "PGRST301", // Moved Permanently
+      "57P01", // admin_shutdown
+      "57P02", // crash_shutdown
+      "57P03", // cannot_connect_now
+      "08001", // sqlclient_unable_to_establish_sqlconnection
+      "08003", // connection_does_not_exist
+      "08006", // connection_failure
     ];
-    
-    return retryableCodes.includes(error?.code) || 
-           RetryConditions.networkErrors(error) ||
-           RetryConditions.httpRetryableErrors(error);
+
+    return (
+      retryableCodes.includes(error?.code) ||
+      RetryConditions.networkErrors(error) ||
+      RetryConditions.httpRetryableErrors(error)
+    );
   },
 
   // Kombinovaná podmienka pre bežné prípady
   default: (error: Record<string, unknown>): boolean => {
-    return RetryConditions.networkErrors(error) || 
-           RetryConditions.httpRetryableErrors(error);
-  }
+    return (
+      RetryConditions.networkErrors(error) ||
+      RetryConditions.httpRetryableErrors(error)
+    );
+  },
 };
 
 /**
  * Retry wrapper pre async funkcie
  */
-export function withRetry<T extends (...args: Array<Record<string, unknown>>) => Promise<unknown>>(
-  fn: T,
-  options: RetryOptions = {}
-): T {
+export function withRetry<
+  T extends (...args: Array<Record<string, unknown>>) => Promise<unknown>,
+>(fn: T, options: RetryOptions = {}): T {
   return (async (...args: Parameters<T>) => {
     return retry(() => fn(...args), options);
   }) as T;
@@ -155,11 +163,13 @@ export function Retry(options: RetryOptions = {}) {
   return function (
     target: Record<string, unknown>,
     propertyKey: string,
-    descriptor: PropertyDescriptor
+    descriptor: PropertyDescriptor,
   ) {
     const originalMethod = descriptor.value;
 
-    descriptor.value = async function (...args: Array<Record<string, unknown>>) {
+    descriptor.value = async function (
+      ...args: Array<Record<string, unknown>>
+    ) {
       return retry(() => originalMethod.apply(this, args), options);
     };
 
@@ -172,7 +182,7 @@ export function Retry(options: RetryOptions = {}) {
  */
 export function useRetry<T>(
   fn: () => Promise<T>,
-  options: RetryOptions = {}
+  options: RetryOptions = {},
 ): {
   execute: () => Promise<T>;
   reset: () => void;
@@ -196,7 +206,7 @@ export function useRetry<T>(
           setAttemptCount(attempt);
           setLastError(error);
           options.onRetry?.(error, attempt);
-        }
+        },
       });
       return result;
     } catch (error) {
@@ -208,7 +218,6 @@ export function useRetry<T>(
   }, [fn, options]);
 
   const reset = React.useCallback(() => {
-     
     setIsRetrying(false);
     setAttemptCount(0);
     setLastError(null);
@@ -219,9 +228,9 @@ export function useRetry<T>(
     reset,
     isRetrying,
     attemptCount,
-    lastError
+    lastError,
   };
 }
 
 // Import React len ak je potrebný
-import * as React from 'react';
+import * as React from "react";

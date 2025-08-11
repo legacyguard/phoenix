@@ -1,8 +1,8 @@
-import { useEffect, useState } from 'react';
-import { supabaseWithRetry } from '@/utils/supabaseWithRetry';
-import { useUserPlan } from './useUserPlan';
-import { getRemainingStorage, formatBytes } from '@/utils/planLimits';
-import { toast } from 'sonner';
+import { useEffect, useState } from "react";
+import { supabaseWithRetry } from "@/utils/supabaseWithRetry";
+import { useUserPlan } from "./useUserPlan";
+import { getRemainingStorage, formatBytes } from "@/utils/planLimits";
+import { toast } from "sonner";
 
 interface StorageUsage {
   used: number;
@@ -23,31 +23,35 @@ export function useStorageUsage() {
   useEffect(() => {
     async function fetchStorageUsage() {
       try {
-        const { data: { user } } = await supabaseWithRetry.auth.getUser();
-        
+        const {
+          data: { user },
+        } = await supabaseWithRetry.auth.getUser();
+
         if (!user) {
           setLoading(false);
           return;
         }
 
         // Get all documents for the user
-        const { data: documents, error: documentsError } = await supabaseWithRetry
-          .from('documents')
-          .select('file_size')
-          .eq('user_id', user.id);
+        const { data: documents, error: documentsError } =
+          await supabaseWithRetry
+            .from("documents")
+            .select("file_size")
+            .eq("user_id", user.id);
 
         if (documentsError) {
           throw documentsError;
         }
 
         // Calculate total storage used
-        const totalUsed = documents?.reduce((sum, doc) => sum + (doc.file_size || 0), 0) || 0;
-        
+        const totalUsed =
+          documents?.reduce((sum, doc) => sum + (doc.file_size || 0), 0) || 0;
+
         // Get plan storage limit
-        const { PLAN_LIMITS } = await import('@/utils/constants');
+        const { PLAN_LIMITS } = await import("@/utils/constants");
         const totalStorage = PLAN_LIMITS[plan].storage;
         const remaining = getRemainingStorage(totalUsed, plan);
-        
+
         setStorageUsage({
           used: totalUsed,
           total: totalStorage,
@@ -55,12 +59,15 @@ export function useStorageUsage() {
           usedFormatted: formatBytes(totalUsed),
           totalFormatted: formatBytes(totalStorage),
           remainingFormatted: formatBytes(remaining),
-          percentage: Math.min(100, Math.round((totalUsed / totalStorage) * 100))
+          percentage: Math.min(
+            100,
+            Math.round((totalUsed / totalStorage) * 100),
+          ),
         });
       } catch (err) {
-        console.error('Error fetching storage usage:', err);
+        console.error("Error fetching storage usage:", err);
         setError(err as Error);
-        toast.error('Failed to load storage usage');
+        toast.error("Failed to load storage usage");
       } finally {
         setLoading(false);
       }
@@ -70,17 +77,17 @@ export function useStorageUsage() {
 
     // Subscribe to document changes
     const channel = supabaseWithRetry
-      .channel('storage-usage-changes')
+      .channel("storage-usage-changes")
       .on(
-        'postgres_changes',
+        "postgres_changes",
         {
-          event: '*',
-          schema: 'public',
-          table: 'documents'
+          event: "*",
+          schema: "public",
+          table: "documents",
         },
         () => {
           fetchStorageUsage();
-        }
+        },
       )
       .subscribe();
 

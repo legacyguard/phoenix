@@ -1,6 +1,7 @@
 # TARGET MARKETS (39 countries with dedicated domains)
 
 ## TIER 1 LAUNCH MARKETS (Western & Central Europe) - €19/month
+
 - legacyguard.eu - Germany
 - legacyguard.fr - France
 - legacyguard.es - Spain
@@ -32,6 +33,7 @@
 - legacyguard.is - Iceland
 
 ## TIER 2 EXPANSION MARKETS (Eastern Europe & Balkans) - €14/month
+
 - legacyguard.ro - Romania
 - legacyguard.bg - Bulgaria
 - legacyguard.hr - Croatia
@@ -48,12 +50,14 @@
 # IMPLEMENTATION STRATEGY
 
 ## PHASE 1: TIER 1 MARKETS (Months 1-6)
+
 - Launch with 29 Western & Central European countries
 - Single pricing: €19/month
 - Focus on high-value markets with strong purchasing power
 - Validate product-market fit and gather testimonials
 
 ## PHASE 2: TIER 2 EXPANSION (Months 7-12)
+
 - Add 10 Eastern European and Balkan countries
 - Competitive pricing: €14/month
 - Leverage success stories from Tier 1 markets
@@ -66,6 +70,7 @@
 ## TIER 1 MARKETS
 
 ### DEUTSCHLAND (legacyguard.de)
+
 - **Legal System:** German Civil Code (BGB) inheritance law
 - **Document Templates:** German testament (Testament), healthcare proxy (Vorsorgevollmacht), living will (Patientenverfügung)
 - **Tax System:** German inheritance tax (Erbschaftsteuer) with rates from 7-50% based on relationship and amount
@@ -74,6 +79,7 @@
 - **Validation Rules:** BGB compliance validation
 
 ### FRANCE (legacyguard.fr)
+
 - **Legal System:** French Civil Code with forced heirship (réserve héréditaire)
 - **Document Templates:** French will (testament), gift (donation), beneficiary designation (désignation bénéficiaire)
 - **Tax System:** French succession tax (droits de succession) with rates up to 60%
@@ -82,6 +88,7 @@
 - **Validation Rules:** French forced heirship compliance
 
 ### ESPAÑA (legacyguard.es)
+
 - **Legal System:** Spanish Civil Code with regional variations (derechos forales)
 - **Document Templates:** Spanish will (testamento), notarial power of attorney (poder notarial), advance directives (instrucciones previas)
 - **Tax System:** Spanish inheritance tax (Impuesto de Sucesiones y Donaciones) with significant regional variations
@@ -90,6 +97,7 @@
 - **Validation Rules:** Spanish regional compliance (autonomous communities)
 
 ### ITALIA (legacyguard.it)
+
 - **Legal System:** Italian Civil Code (Codice Civile)
 - **Document Templates:** Italian will (testamento), power of attorney (procura), advance directives (dichiarazioni anticipate di trattamento - DAT)
 - **Tax System:** Italian inheritance tax (imposta di successione) with rates from 4-8%
@@ -98,6 +106,7 @@
 - **Validation Rules:** Italian legal compliance
 
 ### NEDERLAND (legacyguard.nl)
+
 - **Legal System:** Dutch Civil Code (Burgerlijk Wetboek)
 - **Document Templates:** Dutch will (testament), power of attorney (volmacht), living will (wilsverklaring)
 - **Tax System:** Dutch inheritance tax (erfbelasting) with rates from 10-40%
@@ -106,6 +115,7 @@
 - **Validation Rules:** Dutch legal compliance
 
 ### BELGIË/BELGIQUE (legacyguard.be)
+
 - **Legal System:** Belgian Civil Code
 - **Document Templates:** Belgian will (testament/uiterste wil), power of attorney (volmacht/mandat)
 - **Tax System:** Belgian inheritance tax with regional variations (Flanders, Wallonia, Brussels)
@@ -114,6 +124,7 @@
 - **Validation Rules:** Belgian regional compliance
 
 ### LUXEMBOURG (legacyguard.lu)
+
 - **Legal System:** Luxembourg inheritance law
 - **Document Templates:** Luxembourg will (testament), power of attorney (procuration)
 - **Tax System:** Luxembourg inheritance tax
@@ -122,6 +133,7 @@
 - **Validation Rules:** Luxembourg legal compliance
 
 ### SCHWEIZ/SUISSE/SVIZZERA (legacyguard.ch)
+
 - **Legal System:** Swiss Civil Code (ZGB/CC/CCS)
 - **Document Templates:** Swiss will (Testament/testament/testamento), advance care directive (Vorsorgeauftrag/mandat pour cause d'inaptitude)
 - **Tax System:** Swiss cantonal inheritance tax (varies from 0-55% by canton)
@@ -130,6 +142,7 @@
 - **Validation Rules:** Swiss cantonal compliance (26 cantons)
 
 ### LIECHTENSTEIN (legacyguard.li)
+
 - **Legal System:** Liechtenstein inheritance law
 - **Document Templates:** Liechtenstein will (Testament), power of attorney (Vollmacht)
 - **Tax System:** Liechtenstein inheritance regulations
@@ -138,6 +151,7 @@
 - **Validation Rules:** Liechtenstein legal compliance
 
 ### ÖSTERREICH (legacyguard.at)
+
 - **Legal System:** Austrian Civil Code (ABGB)
 - **Document Templates:** Austrian will (Testament), healthcare proxy (Vorsorgevollmacht), living will (Patientenverfügung)
 - **Tax System:** No inheritance tax, but gift tax may apply
@@ -146,6 +160,7 @@
 - **Validation Rules:** Austrian legal compliance
 
 ### UNITED KINGDOM (legacyguard.co.uk)
+
 - **Legal System:** UK Inheritance Act, with variations for England/Wales, Scotland, and Northern Ireland
 - **Document Templates:** UK will, lasting power of attorney (LPA), advance decision to refuse treatment (living will)
 - **Tax System:** UK Inheritance Tax (IHT) at 40% above a threshold
@@ -154,6 +169,7 @@
 - **Validation Rules:** UK probate compliance, with Scottish and Northern Irish law variations
 
 ### DANMARK (legacyguard.dk)
+
 - **Legal System:** Danish Inheritance Act
 - **Document Templates:** Danish will (testamente), power of attorney (fremtidsfuldmagt), living will (livstestamente)
 - **Tax System:** Danish inheritance tax (boafgift)
@@ -162,6 +178,7 @@
 - **Validation Rules:** Danish legal compliance
 
 ### SVERIGE (legacyguard.se)
+
 - **Legal System:** Swedish Inheritance Code
 - **Document Templates:** Swedish will (testamente), power of attorney (fullmakt), future-oriented power of attorney (framtidsfullmakt)
 - **Tax System:** No inheritance tax
@@ -170,6 +187,7 @@
 - **Validation Rules:** Swedish legal compliance
 
 ### SUOMI (legacyguard.fi)
+
 - **Legal System:** Finnish Code of Inheritance
 - **Document Templates:** Finnish will (testamentti), power of attorney (valtakirja), living will (hoitotahto)
 - **Tax System:** Finnish inheritance tax
@@ -178,6 +196,7 @@
 - **Validation Rules:** Finnish legal compliance
 
 ### ČESKÁ REPUBLIKA (legacyguard.cz)
+
 - **Legal System:** Czech Civil Code inheritance law
 - **Document Templates:** Czech will (závěť), power of attorney (plná moc), advance directive (dříve vyslovené přání)
 - **Tax System:** No inheritance tax between close relatives
@@ -186,6 +205,7 @@
 - **Validation Rules:** Czech legal compliance
 
 ### SLOVENSKO (legacyguard.sk)
+
 - **Legal System:** Slovak Civil Code inheritance law
 - **Document Templates:** Slovak will (závet), power of attorney (splnomocnenie), advance healthcare directive (predchádzajúce súhlasy)
 - **Tax System:** No inheritance tax
@@ -194,6 +214,7 @@
 - **Validation Rules:** Slovak legal compliance
 
 ### POLSKA (legacyguard.pl)
+
 - **Legal System:** Polish Civil Code inheritance law
 - **Document Templates:** Polish will (testament), power of attorney (pełnomocnictwo), declaration of will regarding medical treatment (oświadczenie woli dotyczące leczenia)
 - **Tax System:** Polish inheritance and donation tax (podatek od spadków i darowizn) with rates from 3-20%
@@ -202,6 +223,7 @@
 - **Validation Rules:** Polish legal compliance
 
 ### MAGYARORSZÁG (legacyguard.hu)
+
 - **Legal System:** Hungarian Civil Code (Ptk) inheritance law
 - **Document Templates:** Hungarian will (végrendelet), power of attorney (meghatalmazás), advance healthcare directive (előzetes egészségügyi rendelkezés)
 - **Tax System:** Hungarian inheritance duty (öröklési illeték) at a general rate of 18%, with exemptions for close relatives
@@ -210,6 +232,7 @@
 - **Validation Rules:** Hungarian legal compliance
 
 ### SLOVENIJA (legacyguard.si)
+
 - **Legal System:** Slovenian Inheritance Act
 - **Document Templates:** Slovenian will (oporoka), power of attorney (pooblastilo), advance healthcare directive (predhodna volja)
 - **Tax System:** Slovenian inheritance and gift tax with rates from 5-39% for non-direct heirs
@@ -218,6 +241,7 @@
 - **Validation Rules:** Slovenian legal compliance
 
 ### EESTI (legacyguard.ee)
+
 - **Legal System:** Estonian Law of Succession Act (Pärimisseadus)
 - **Document Templates:** Estonian will (testament), power of attorney (volikiri), directive for healthcare (hoolduskorraldus)
 - **Tax System:** No inheritance tax
@@ -226,6 +250,7 @@
 - **Validation Rules:** Estonian legal compliance
 
 ### LATVIJA (legacyguard.lv)
+
 - **Legal System:** Latvian Civil Law (Civillikums)
 - **Document Templates:** Latvian will (testaments), power of attorney (pilnvara), future directive (nākotnes pilnvarojums)
 - **Tax System:** Latvian inheritance tax
@@ -234,6 +259,7 @@
 - **Validation Rules:** Latvian legal compliance
 
 ### LIETUVA (legacyguard.lt)
+
 - **Legal System:** Lithuanian Civil Code (Civilinis kodeksas) inheritance law
 - **Document Templates:** Lithuanian will (testamentas), power of attorney (įgaliojimas), advance directive (išankstinis nurodymas)
 - **Tax System:** Lithuanian inheritance tax
@@ -242,6 +268,7 @@
 - **Validation Rules:** Lithuanian legal compliance
 
 ### PORTUGAL (legacyguard.pt)
+
 - **Legal System:** Portuguese Civil Code inheritance law
 - **Document Templates:** Portuguese will (testamento), power of attorney (procuração), advance directive of will (diretiva antecipada de vontade)
 - **Tax System:** Stamp duty (Imposto do Selo) at a flat rate of 10% on inherited assets for non-direct heirs
@@ -250,6 +277,7 @@
 - **Validation Rules:** Portuguese legal compliance
 
 ### ΕΛΛΑΔΑ (legacyguard.gr)
+
 - **Legal System:** Greek Civil Code inheritance law
 - **Document Templates:** Greek will (διαθήκη), power of attorney (πληρεξούσιο), advance directives (προκαταβολικές οδηγίες)
 - **Tax System:** Greek inheritance tax with progressive rates based on relationship and amount
@@ -258,6 +286,7 @@
 - **Validation Rules:** Greek legal compliance
 
 ### MALTA (legacyguard.mt)
+
 - **Legal System:** Maltese Civil Code
 - **Document Templates:** Maltese will (testment), power of attorney (prokura), advance directive
 - **Tax System:** No inheritance tax, but a transfer duty on immovable property may apply
@@ -266,6 +295,7 @@
 - **Validation Rules:** Maltese legal compliance
 
 ### ΚΥΠΡΟΣ (legacyguard.cy)
+
 - **Legal System:** Cypriot Wills and Succession Law
 - **Document Templates:** Cypriot will, power of attorney, advance healthcare directive
 - **Tax System:** No inheritance tax
@@ -274,6 +304,7 @@
 - **Validation Rules:** Cypriot legal compliance
 
 ### ÉIRE/IRELAND (legacyguard.ie)
+
 - **Legal System:** Irish Succession Act
 - **Document Templates:** Irish will, enduring power of attorney, advance healthcare directive
 - **Tax System:** Capital Acquisitions Tax (CAT) at 33% above certain thresholds
@@ -282,6 +313,7 @@
 - **Validation Rules:** Irish legal compliance
 
 ### NORGE (legacyguard.no)
+
 - **Legal System:** Norwegian Inheritance Act
 - **Document Templates:** Norwegian will (testament), future power of attorney (fremtidsfullmakt), advance directive (livstestament)
 - **Tax System:** No inheritance tax
@@ -290,6 +322,7 @@
 - **Validation Rules:** Norwegian legal compliance
 
 ### ÍSLAND (legacyguard.is)
+
 - **Legal System:** Icelandic Inheritance Act
 - **Document Templates:** Icelandic will (erfðaskrá), power of attorney (umboð), advance directive
 - **Tax System:** Icelandic inheritance tax
@@ -300,6 +333,7 @@
 ## TIER 2 EXPANSION MARKETS
 
 ### ROMÂNIA (legacyguard.ro)
+
 - **Legal System:** Romanian Civil Code inheritance law
 - **Document Templates:** Romanian will (testament), power of attorney (procură), advance directive (directivă anticipată)
 - **Tax System:** 1% inheritance tax if the succession is not finalized within two years
@@ -308,6 +342,7 @@
 - **Validation Rules:** Romanian legal compliance
 
 ### БЪЛГАРИЯ (legacyguard.bg)
+
 - **Legal System:** Bulgarian Inheritance Act
 - **Document Templates:** Bulgarian will (завещание), power of attorney (пълномощно), declaration for medical procedures (декларация за медицински процедури)
 - **Tax System:** Bulgarian inheritance tax with rates from 0.4-6.6% for non-direct heirs
@@ -316,6 +351,7 @@
 - **Validation Rules:** Bulgarian legal compliance
 
 ### HRVATSKA (legacyguard.hr)
+
 - **Legal System:** Croatian Inheritance Act
 - **Document Templates:** Croatian will (oporuka), power of attorney (punomoć), advance directives (izjave volje)
 - **Tax System:** Croatian inheritance and gift tax at a flat rate of 4% for non-direct heirs
@@ -324,6 +360,7 @@
 - **Validation Rules:** Croatian legal compliance
 
 ### СРБИЈА (legacyguard.rs)
+
 - **Legal System:** Serbian Law of Inheritance
 - **Document Templates:** Serbian will (тестамент), power of attorney (пуномоћје), advance healthcare directive
 - **Tax System:** Serbian inheritance tax with progressive rates
@@ -332,6 +369,7 @@
 - **Validation Rules:** Serbian legal compliance
 
 ### SHQIPËRIA (legacyguard.al)
+
 - **Legal System:** Albanian Civil Code inheritance law
 - **Document Templates:** Albanian will (testament), power of attorney (prokurë), advance directive
 - **Tax System:** Albanian inheritance tax
@@ -340,6 +378,7 @@
 - **Validation Rules:** Albanian legal compliance
 
 ### СЕВЕРНА МАКЕДОНИЈА (legacyguard.mk)
+
 - **Legal System:** North Macedonian Law of Inheritance
 - **Document Templates:** Macedonian will (тестамент), power of attorney (полномошно), advance directive
 - **Tax System:** North Macedonian inheritance tax
@@ -348,6 +387,7 @@
 - **Validation Rules:** North Macedonian legal compliance
 
 ### ЦРНА ГОРА (legacyguard.me)
+
 - **Legal System:** Montenegrin Law of Inheritance
 - **Document Templates:** Montenegrin will (тестамент), power of attorney (пуномоћје), advance directive
 - **Tax System:** Montenegrin inheritance tax
@@ -356,6 +396,7 @@
 - **Validation Rules:** Montenegrin legal compliance
 
 ### MOLDOVA (legacyguard.md)
+
 - **Legal System:** Moldovan Civil Code inheritance law
 - **Document Templates:** Moldovan will (testament), power of attorney (procură), advance directive
 - **Tax System:** Moldovan inheritance tax
@@ -364,6 +405,7 @@
 - **Validation Rules:** Moldovan legal compliance
 
 ### УКРАЇНА (legacyguard.ua)
+
 - **Legal System:** Ukrainian Civil Code inheritance law
 - **Document Templates:** Ukrainian will (заповіт), power of attorney (довіреність), advance healthcare directive
 - **Tax System:** Ukrainian inheritance tax
@@ -372,6 +414,7 @@
 - **Validation Rules:** Ukrainian legal compliance
 
 ### BOSNA I HERCEGOVINA (legacyguard.ba)
+
 - **Legal System:** Bosnia and Herzegovina inheritance law (complex federal system)
 - **Document Templates:** BiH will (testament/oporuka), power of attorney (punomoć/пуномоћје), advance directive
 - **Tax System:** BiH inheritance tax (varies by entity)
@@ -385,30 +428,35 @@
 # TECHNICAL IMPLEMENTATION REQUIREMENTS
 
 ## 1. MULTI-DOMAIN ARCHITECTURE
+
 - 39 separate domains with country-specific routing
 - Automatic geolocation-based domain suggestion
 - Cross-domain session management and data synchronization
 - Country-specific legal content and templates
 
 ## 2. PRICING SYSTEM
+
 - Tier 1: €19/month (29 countries)
 - Tier 2: €14/month (10 countries)
 - Automatic currency conversion and local payment methods
 - Regional payment gateway integration (Stripe, local providers)
 
 ## 3. LEGAL COMPLIANCE ENGINE
+
 - Country-specific will generation templates
 - Legal requirement validation per jurisdiction
 - Notary system integration APIs
 - Emergency procedure automation
 
 ## 4. LOCALIZATION INFRASTRUCTURE
+
 - 33+ language support with professional translations
 - Cultural adaptation beyond direct translation
 - Legal terminology dictionaries per country-language combination
 - Right-to-left language support where applicable
 
 ## 5. ROLLOUT STRATEGY
+
 - **Phase 1 (Months 1-6):** Tier 1 markets launch
 - **Phase 2 (Months 7-12):** Tier 2 markets expansion
 - **Phase 3 (Year 2+):** Advanced features and additional markets
@@ -418,20 +466,22 @@
 # SUCCESS METRICS
 
 ## TIER 1 TARGETS (6 months)
+
 - 1,000+ paying customers across 29 countries
 - €19,000+ Monthly Recurring Revenue (MRR)
 - 15%+ conversion rate from free to paid
 - 90%+ customer satisfaction score
 
 ## TIER 2 TARGETS (12 months)
+
 - 2,500+ paying customers across 39 countries
 - €40,000+ Monthly Recurring Revenue (MRR)
 - Market validation in all Eastern European markets
 - Established legal partnerships in key markets
 
 ## EXPANSION CRITERIA
+
 - Minimum 50 customers per country before adding new markets
 - Legal framework validation by local law firms
 - Positive unit economics in each market
 - Sustainable customer acquisition costs
-

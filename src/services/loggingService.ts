@@ -1,8 +1,8 @@
-import { supabase } from '@/integrations/supabase/client';
+import { supabase } from "@/integrations/supabase/client";
 
 interface LogActivityParams {
   userId: string;
-  actor: 'USER' | 'AI_SYSTEM' | 'TRUSTED_PERSON';
+  actor: "USER" | "AI_SYSTEM" | "TRUSTED_PERSON";
   action: string;
   targetId?: string;
   ipAddress?: string;
@@ -17,10 +17,10 @@ export async function logActivity({
   targetId,
   ipAddress,
   userAgent,
-  metadata = {}
+  metadata = {},
 }: LogActivityParams): Promise<void> {
   try {
-    const { error } = await supabase.from('access_logs').insert([
+    const { error } = await supabase.from("access_logs").insert([
       {
         user_id: userId,
         actor,
@@ -28,14 +28,14 @@ export async function logActivity({
         target_id: targetId,
         ip_address: ipAddress,
         user_agent: userAgent,
-        metadata
-      }
+        metadata,
+      },
     ]);
 
     if (error) {
       throw error;
     }
   } catch (error) {
-    console.error('Failed to log activity:', error);
+    console.error("Failed to log activity:", error);
   }
 }

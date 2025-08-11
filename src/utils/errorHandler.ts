@@ -1,4 +1,4 @@
-import { toast } from 'sonner';
+import { toast } from "sonner";
 
 interface ErrorHandlerOptions {
   operation: string;
@@ -7,13 +7,21 @@ interface ErrorHandlerOptions {
   customMessage?: string;
 }
 
-export function handleError(error: Record<string, unknown>, options: ErrorHandlerOptions): void {
-  const { operation, context = 'Application', showToast = true, customMessage } = options;
-  
+export function handleError(
+  error: Record<string, unknown>,
+  options: ErrorHandlerOptions,
+): void {
+  const {
+    operation,
+    context = "Application",
+    showToast = true,
+    customMessage,
+  } = options;
+
   const timestamp = new Date().toISOString();
-  const errorMessage = error?.message || 'Unknown error';
-  const errorCode = error?.code || 'UNKNOWN_ERROR';
-  
+  const errorMessage = error?.message || "Unknown error";
+  const errorCode = error?.code || "UNKNOWN_ERROR";
+
   // Detailed logging for debugging
   console.error(`[${context}] Error during ${operation}:`, {
     timestamp,
@@ -21,9 +29,9 @@ export function handleError(error: Record<string, unknown>, options: ErrorHandle
     errorCode,
     errorMessage,
     errorDetails: error,
-    stack: error?.stack
+    stack: error?.stack,
   });
-  
+
   if (showToast) {
     // Use custom message if provided, otherwise use error message
     const message = customMessage || errorMessage;
@@ -31,18 +39,21 @@ export function handleError(error: Record<string, unknown>, options: ErrorHandle
   }
 }
 
-export function getErrorMessage(error: Record<string, unknown>, t: (key: string) => string): string {
+export function getErrorMessage(
+  error: Record<string, unknown>,
+  t: (key: string) => string,
+): string {
   // Specific messages based on error type
-  if (error?.code === 'PGRST116') {
-    return t('errors.dataNotFound');
-  } else if (error?.message?.includes('network')) {
-    return t('errors.networkError');
-  } else if (error?.message?.includes('permission')) {
-    return t('errors.permissionDenied');
-  } else if (error?.message?.includes('duplicate')) {
-    return t('errors.duplicateRecord');
+  if (error?.code === "PGRST116") {
+    return t("errors:errors.dataNotFound");
+  } else if (error?.message?.includes("network")) {
+    return t("errors:errors.networkError");
+  } else if (error?.message?.includes("permission")) {
+    return t("errors:errors.permissionDenied");
+  } else if (error?.message?.includes("duplicate")) {
+    return t("errors:errors.duplicateRecord");
   }
-  
+
   // Default to the error message or a generic error
-  return error?.message || t('errors.unknown');
+  return error?.message || t("errors:errors.unknown");
 }

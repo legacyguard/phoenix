@@ -1,12 +1,14 @@
-import React, { useEffect } from 'react';
-import { useUser, useAuth } from '@clerk/clerk-react';
-import { authService } from '@/services/authService';
+import React, { useEffect } from "react";
+import { useUser, useAuth } from "@clerk/clerk-react";
+import { authService } from "@/services/authService";
 
 interface AuthSyncProviderProps {
   children: React.ReactNode;
 }
 
-export const AuthSyncProvider: React.FC<AuthSyncProviderProps> = ({ children }) => {
+export const AuthSyncProvider: React.FC<AuthSyncProviderProps> = ({
+  children,
+}) => {
   const { user, isLoaded } = useUser();
   const { getToken } = useAuth();
 
@@ -14,7 +16,7 @@ export const AuthSyncProvider: React.FC<AuthSyncProviderProps> = ({ children }) 
     if (isLoaded && user) {
       // Sync user data with Supabase
       authService.syncUserWithSupabase(user);
-      
+
       // Set up Supabase session
       authService.getSupabaseToken(getToken);
     }

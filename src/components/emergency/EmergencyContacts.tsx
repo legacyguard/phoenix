@@ -1,11 +1,22 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { useTranslation } from 'react-i18next';
-import { DragDropContext, Droppable, Draggable, DropResult } from '@hello-pangea/dnd';
-import { supabaseWithRetry } from '@/utils/supabaseWithRetry';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { Alert, AlertDescription } from '@/components/ui/alert';
+import React, { useState, useEffect, useCallback } from "react";
+import { useTranslation } from "react-i18next";
+import {
+  DragDropContext,
+  Droppable,
+  Draggable,
+  DropResult,
+} from "@hello-pangea/dnd";
+import { supabaseWithRetry } from "@/utils/supabaseWithRetry";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Alert, AlertDescription } from "@/components/ui/alert";
 import {
   Dialog,
   DialogContent,
@@ -13,16 +24,16 @@ import {
   DialogHeader,
   DialogTitle,
   DialogFooter,
-} from '@/components/ui/dialog';
+} from "@/components/ui/dialog";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from '@/components/ui/select';
-import { Label } from '@/components/ui/label';
-import { Skeleton } from '@/components/ui/skeleton';
+} from "@/components/ui/select";
+import { Label } from "@/components/ui/label";
+import { Skeleton } from "@/components/ui/skeleton";
 import {
   Phone,
   Mail,
@@ -37,10 +48,10 @@ import {
   CheckCircle,
   X,
   Bell,
-  BellOff
-} from 'lucide-react';
-import { format } from 'date-fns';
-import { toast } from 'sonner';
+  BellOff,
+} from "lucide-react";
+import { format } from "date-fns";
+import { toast } from "sonner";
 
 interface Contact {
   id: string;
@@ -65,48 +76,55 @@ interface EmergencyContact {
 }
 
 export const EmergencyContacts: React.FC = () => {
-  const { t } = useTranslation('family-core');
+  const { t } = useTranslation("family-core");
   const [loading, setLoading] = useState(true);
-  const [emergencyContacts, setEmergencyContacts] = useState<EmergencyContact[]>([]);
+  const [emergencyContacts, setEmergencyContacts] = useState<
+    EmergencyContact[]
+  >([]);
   const [availableContacts, setAvailableContacts] = useState<Contact[]>([]);
   const [showAddDialog, setShowAddDialog] = useState(false);
-  const [selectedContactId, setSelectedContactId] = useState<string>('');
-  const [relationship, setRelationship] = useState<string>('');
+  const [selectedContactId, setSelectedContactId] = useState<string>("");
+  const [relationship, setRelationship] = useState<string>("");
   const [isReordering, setIsReordering] = useState(false);
 
   const loadData = useCallback(async () => {
     try {
-      const { data: { user } } = await supabaseWithRetry.auth.getUser();
+      const {
+        data: { user },
+      } = await supabaseWithRetry.auth.getUser();
       if (!user) return;
 
       // Load emergency contacts with details
-      const { data: emergencyData, error: emergencyError } = await supabaseWithRetry
-        .from('emergency_contacts_view')
-        .select('*')
-        .eq('user_id', user.id)
-        .order('priority_order');
+      const { data: emergencyData, error: emergencyError } =
+        await supabaseWithRetry
+          .from("emergency_contacts_view")
+          .select("*")
+          .eq("user_id", user.id)
+          .order("priority_order");
 
       if (emergencyError) throw emergencyError;
       setEmergencyContacts(emergencyData || []);
 
       // Load all contacts to show available ones
-      const { data: contactsData, error: contactsError } = await supabaseWithRetry
-        .from('contacts')
-        .select('*')
-        .eq('user_id', user.id)
-        .is('deleted_at', null)
-        .order('name');
+      const { data: contactsData, error: contactsError } =
+        await supabaseWithRetry
+          .from("contacts")
+          .select("*")
+          .eq("user_id", user.id)
+          .is("deleted_at", null)
+          .order("name");
 
       if (contactsError) throw contactsError;
 
       // Filter out contacts already set as emergency contacts
-      const emergencyContactIds = emergencyData?.map(ec => ec.contact_id) || [];
-      const available = contactsData?.filter(c => !emergencyContactIds.includes(c.id)) || [];
+      const emergencyContactIds =
+        emergencyData?.map((ec) => ec.contact_id) || [];
+      const available =
+        contactsData?.filter((c) => !emergencyContactIds.includes(c.id)) || [];
       setAvailableContacts(available);
-
     } catch (error) {
-      console.error('[EmergencyContacts] Error loading data:', error);
-      toast.error(t('emergency.errors.loadFailed'));
+      console.error("[EmergencyContacts] Error loading data:", error);
+      toast.error(t("common:emergency.errors.loadFailed"));
     } finally {
       setLoading(false);
     }
@@ -128,21 +146,26 @@ export const EmergencyContacts: React.FC = () => {
     setIsReordering(true);
 
     try {
-      const { data: { user } } = await supabaseWithRetry.auth.getUser();
+      const {
+        data: { user },
+      } = await supabaseWithRetry.auth.getUser();
       if (!user) return;
 
       // Update priority orders in database
-      const contactIds = items.map(item => item.contact_id);
-      const { error } = await supabaseWithRetry.rpc('reorder_emergency_contacts', {
-        p_user_id: user.id,
-        p_contact_ids: contactIds
-      });
+      const contactIds = items.map((item) => item.contact_id);
+      const { error } = await supabaseWithRetry.rpc(
+        "reorder_emergency_contacts",
+        {
+          p_user_id: user.id,
+          p_contact_ids: contactIds,
+        },
+      );
 
       if (error) throw error;
-      toast.success(t('emergency.messages.reordered'));
+      toast.success(t("common:emergency.messages.reordered"));
     } catch (error) {
-      console.error('[EmergencyContacts] Error reordering:', error);
-      toast.error(t('emergency.errors.reorderFailed'));
+      console.error("[EmergencyContacts] Error reordering:", error);
+      toast.error(t("common:emergency.errors.reorderFailed"));
       loadData(); // Reload to restore correct order
     } finally {
       setIsReordering(false);
@@ -151,93 +174,97 @@ export const EmergencyContacts: React.FC = () => {
 
   const handleAddEmergencyContact = async () => {
     if (!selectedContactId) {
-      toast.error(t('emergency.errors.selectContact'));
+      toast.error(t("common:emergency.errors.selectContact"));
       return;
     }
 
     try {
-      const { data: { user } } = await supabaseWithRetry.auth.getUser();
+      const {
+        data: { user },
+      } = await supabaseWithRetry.auth.getUser();
       if (!user) return;
 
       const nextPriority = emergencyContacts.length + 1;
 
       const { error } = await supabaseWithRetry
-        .from('emergency_contacts')
+        .from("emergency_contacts")
         .insert({
           user_id: user.id,
           contact_id: selectedContactId,
           priority_order: nextPriority,
-          relationship
+          relationship,
         });
 
       if (error) throw error;
 
-      toast.success(t('emergency.messages.added'));
+      toast.success(t("common:emergency.messages.added"));
       setShowAddDialog(false);
-      setSelectedContactId('');
-      setRelationship('');
+      setSelectedContactId("");
+      setRelationship("");
       loadData();
     } catch (error) {
-      console.error('[EmergencyContacts] Error adding:', error);
-      toast.error(t('emergency.errors.addFailed'));
+      console.error("[EmergencyContacts] Error adding:", error);
+      toast.error(t("common:emergency.errors.addFailed"));
     }
   };
 
   const handleRemoveEmergencyContact = async (id: string) => {
     try {
       const { error } = await supabaseWithRetry
-        .from('emergency_contacts')
+        .from("emergency_contacts")
         .delete()
-        .eq('id', id);
+        .eq("id", id);
 
       if (error) throw error;
 
-      toast.success(t('emergency.messages.removed'));
+      toast.success(t("common:emergency.messages.removed"));
       loadData();
     } catch (error) {
-      console.error('[EmergencyContacts] Error removing:', error);
-      toast.error(t('emergency.errors.removeFailed'));
+      console.error("[EmergencyContacts] Error removing:", error);
+      toast.error(t("common:emergency.errors.removeFailed"));
     }
   };
 
   const handleSendTestMessage = async (contact: EmergencyContact) => {
     try {
       const response = await fetch(`/api/emergency/send-test`, {
-        method: 'POST',
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json'
+          "Content-Type": "application/json",
         },
-        body: JSON.stringify({ contactId: contact.id })
+        body: JSON.stringify({ contactId: contact.id }),
       });
 
       if (!response.ok) {
-        throw new Error(t('emergency.errors.testFailed'));
+        throw new Error(t("common:emergency.errors.testFailed"));
       }
 
-      toast.success(t('emergency.messages.testSent', { name: contact.contact_name }));
-      
+      toast.success(
+        t("common:emergency.messages.testSent", { name: contact.contact_name }),
+      );
+
       // Update last_contacted timestamp
       await supabaseWithRetry
-        .from('emergency_contacts')
+        .from("emergency_contacts")
         .update({ last_contacted: new Date().toISOString() })
-        .eq('id', contact.id);
-      
+        .eq("id", contact.id);
+
       loadData();
     } catch (error) {
-      console.error('[EmergencyContacts] Error sending test:', error);
-      toast.error(t('emergency.errors.testFailed'));
+      console.error("[EmergencyContacts] Error sending test:", error);
+      toast.error(t("common:emergency.errors.testFailed"));
     }
   };
 
   const getPriorityBadge = (priority: number) => {
     const variants = {
-      1: 'default',
-      2: 'secondary',
-      3: 'outline'
+      1: "default",
+      2: "secondary",
+      3: "outline",
     } as const;
 
     return (
-      <Badge variant={variants[priority as keyof typeof variants] || 'outline'}>
+      <Badge variant={variants[priority as keyof typeof variants] || "outline"}>
         {t(`emergency.priority.${priority}`)}
       </Badge>
     );
@@ -247,11 +274,11 @@ export const EmergencyContacts: React.FC = () => {
     return (
       <Card>
         <CardHeader>
-          <CardTitle>{t('emergency.title')}</CardTitle>
-          <CardDescription>{t('emergency.description')}</CardDescription>
+          <CardTitle>{t("emergency.title")}</CardTitle>
+          <CardDescription>{t("emergency.description")}</CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
-          {[1, 2, 3].map(i => (
+          {[1, 2, 3].map((i) => (
             <Skeleton key={i} className="h-24 w-full" />
           ))}
         </CardContent>
@@ -267,14 +294,14 @@ export const EmergencyContacts: React.FC = () => {
             <div>
               <CardTitle className="flex items-center gap-2">
                 <Shield className="h-5 w-5" />
-                {t('emergency.title')}
+                {t("emergency.title")}
               </CardTitle>
-              <CardDescription>{t('emergency.description')}</CardDescription>
+              <CardDescription>{t("emergency.description")}</CardDescription>
             </div>
             {emergencyContacts.length < 3 && (
               <Button onClick={() => setShowAddDialog(true)}>
                 <Plus className="h-4 w-4 mr-2" />
-                {t('emergency.addContact')}
+                {t("emergency.addContact")}
               </Button>
             )}
           </div>
@@ -283,9 +310,7 @@ export const EmergencyContacts: React.FC = () => {
           {emergencyContacts.length === 0 ? (
             <Alert>
               <AlertCircle className="h-4 w-4" />
-              <AlertDescription>
-                {t('emergency.noContacts')}
-              </AlertDescription>
+              <AlertDescription>{t("emergency.noContacts")}</AlertDescription>
             </Alert>
           ) : (
             <DragDropContext onDragEnd={handleDragEnd}>
@@ -307,7 +332,7 @@ export const EmergencyContacts: React.FC = () => {
                           <div
                             ref={provided.innerRef}
                             {...provided.draggableProps}
-                            className={`${snapshot.isDragging ? 'opacity-50' : ''}`}
+                            className={`${snapshot.isDragging ? "opacity-50" : ""}`}
                           >
                             <Card className="p-4">
                               <div className="flex items-start gap-3">
@@ -317,13 +342,17 @@ export const EmergencyContacts: React.FC = () => {
                                 >
                                   <GripVertical className="h-5 w-5 text-muted-foreground" />
                                 </div>
-                                
+
                                 <div className="flex-1 space-y-3">
                                   <div className="flex items-start justify-between">
                                     <div>
                                       <div className="flex items-center gap-2">
-                                        <h4 className="font-medium">{contact.contact_name}</h4>
-                                        {getPriorityBadge(contact.priority_order)}
+                                        <h4 className="font-medium">
+                                          {contact.contact_name}
+                                        </h4>
+                                        {getPriorityBadge(
+                                          contact.priority_order,
+                                        )}
                                       </div>
                                       {contact.relationship && (
                                         <p className="text-sm text-muted-foreground">
@@ -334,7 +363,9 @@ export const EmergencyContacts: React.FC = () => {
                                     <Button
                                       variant="ghost"
                                       size="icon"
-                                      onClick={() => handleRemoveEmergencyContact(contact.id)}
+                                      onClick={() =>
+                                        handleRemoveEmergencyContact(contact.id)
+                                      }
                                     >
                                       <Trash2 className="h-4 w-4" />
                                     </Button>
@@ -370,17 +401,22 @@ export const EmergencyContacts: React.FC = () => {
                                       <Button
                                         size="sm"
                                         variant="outline"
-                                        onClick={() => handleSendTestMessage(contact)}
+                                        onClick={() =>
+                                          handleSendTestMessage(contact)
+                                        }
                                       >
                                         <MessageSquare className="h-3 w-3 mr-1" />
-                                        {t('emergency.sendTest')}
+                                        {t("emergency.sendTest")}
                                       </Button>
-                                      
+
                                       {contact.last_contacted && (
                                         <span className="flex items-center gap-1 text-xs text-muted-foreground">
                                           <Clock className="h-3 w-3" />
-                                          {t('emergency.lastContacted', {
-                                            time: format(new Date(contact.last_contacted), 'MM/dd/yyyy HH:mm')
+                                          {t("emergency.lastContacted", {
+                                            time: format(
+                                              new Date(contact.last_contacted),
+                                              "MM/dd/yyyy HH:mm",
+                                            ),
                                           })}
                                         </span>
                                       )}
@@ -404,7 +440,7 @@ export const EmergencyContacts: React.FC = () => {
             <Alert className="mt-4">
               <CheckCircle className="h-4 w-4" />
               <AlertDescription>
-                {t('emergency.maxContactsReached')}
+                {t("emergency.maxContactsReached")}
               </AlertDescription>
             </Alert>
           )}
@@ -415,27 +451,38 @@ export const EmergencyContacts: React.FC = () => {
       <Dialog open={showAddDialog} onOpenChange={setShowAddDialog}>
         <DialogContent>
           <DialogHeader>
-            <DialogTitle>{t('emergency.addContactDialog.title')}</DialogTitle>
+            <DialogTitle>{t("emergency.addContactDialog.title")}</DialogTitle>
             <DialogDescription>
-              {t('emergency.addContactDialog.description')}
+              {t("emergency.addContactDialog.description")}
             </DialogDescription>
           </DialogHeader>
 
           <div className="space-y-4">
             <div className="space-y-2">
-              <Label htmlFor="contact">{t('emergency.addContactDialog.selectContact')}</Label>
-              <Select value={selectedContactId} onValueChange={setSelectedContactId}>
+              <Label htmlFor="contact">
+                {t("emergency.addContactDialog.selectContact")}
+              </Label>
+              <Select
+                value={selectedContactId}
+                onValueChange={setSelectedContactId}
+              >
                 <SelectTrigger id="contact">
-                  <SelectValue placeholder={t('emergency.addContactDialog.selectPlaceholder')} />
+                  <SelectValue
+                    placeholder={t(
+                      "emergency.addContactDialog.selectPlaceholder",
+                    )}
+                  />
                 </SelectTrigger>
                 <SelectContent>
-                  {availableContacts.map(contact => (
+                  {availableContacts.map((contact) => (
                     <SelectItem key={contact.id} value={contact.id}>
                       <div className="flex items-center gap-2">
                         <User className="h-3 w-3" />
                         <span>{contact.name}</span>
                         {contact.role && (
-                          <span className="text-muted-foreground">({contact.role})</span>
+                          <span className="text-muted-foreground">
+                            ({contact.role})
+                          </span>
                         )}
                       </div>
                     </SelectItem>
@@ -445,18 +492,36 @@ export const EmergencyContacts: React.FC = () => {
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="relationship">{t('emergency.addContactDialog.relationship')}</Label>
+              <Label htmlFor="relationship">
+                {t("emergency.addContactDialog.relationship")}
+              </Label>
               <Select value={relationship} onValueChange={setRelationship}>
                 <SelectTrigger id="relationship">
-                  <SelectValue placeholder={t('emergency.addContactDialog.relationshipPlaceholder')} />
+                  <SelectValue
+                    placeholder={t(
+                      "emergency.addContactDialog.relationshipPlaceholder",
+                    )}
+                  />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="spouse">{t('relationships.spouse')}</SelectItem>
-                  <SelectItem value="child">{t('relationships.child')}</SelectItem>
-                  <SelectItem value="parent">{t('relationships.parent')}</SelectItem>
-                  <SelectItem value="sibling">{t('relationships.sibling')}</SelectItem>
-                  <SelectItem value="friend">{t('relationships.friend')}</SelectItem>
-                  <SelectItem value="other">{t('relationships.other')}</SelectItem>
+                  <SelectItem value="spouse">
+                    {t("relationships.spouse")}
+                  </SelectItem>
+                  <SelectItem value="child">
+                    {t("relationships.child")}
+                  </SelectItem>
+                  <SelectItem value="parent">
+                    {t("relationships.parent")}
+                  </SelectItem>
+                  <SelectItem value="sibling">
+                    {t("relationships.sibling")}
+                  </SelectItem>
+                  <SelectItem value="friend">
+                    {t("relationships.friend")}
+                  </SelectItem>
+                  <SelectItem value="other">
+                    {t("relationships.other")}
+                  </SelectItem>
                 </SelectContent>
               </Select>
             </div>
@@ -464,10 +529,10 @@ export const EmergencyContacts: React.FC = () => {
 
           <DialogFooter>
             <Button variant="outline" onClick={() => setShowAddDialog(false)}>
-              {t('ui.cancel')}
+              {t("ui.cancel")}
             </Button>
             <Button onClick={handleAddEmergencyContact}>
-              {t('emergency.addContactDialog.addButton')}
+              {t("emergency.addContactDialog.addButton")}
             </Button>
           </DialogFooter>
         </DialogContent>

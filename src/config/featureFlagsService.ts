@@ -21,9 +21,10 @@ export interface FeatureFlagConfig {
 
 export const FEATURE_FLAGS: Record<keyof FeatureFlags, FeatureFlagConfig> = {
   respectfulOnboarding: {
-    key: 'feature_respectfulOnboarding',
+    key: "feature_respectfulOnboarding",
     defaultValue: false,
-    description: 'Enable the new respectful onboarding flow without gamification',
+    description:
+      "Enable the new respectful onboarding flow without gamification",
     rolloutPercentage: 0, // Start with 0% rollout
     enabledForUsers: [], // Can add specific user IDs for testing
   },
@@ -63,7 +64,7 @@ export class FeatureFlagService {
     });
 
     // 2. Override with environment variables
-    if (import.meta.env.VITE_RESPECTFUL_ONBOARDING === 'true') {
+    if (import.meta.env.VITE_RESPECTFUL_ONBOARDING === "true") {
       this.flags.respectfulOnboarding = true;
     }
 
@@ -71,7 +72,7 @@ export class FeatureFlagService {
     Object.entries(FEATURE_FLAGS).forEach(([key, config]) => {
       const storedValue = localStorage.getItem(config.key);
       if (storedValue !== null) {
-        this.flags[key as keyof FeatureFlags] = storedValue === 'true';
+        this.flags[key as keyof FeatureFlags] = storedValue === "true";
       }
     });
 
@@ -130,7 +131,7 @@ export class FeatureFlagService {
    * Reset all flags to defaults
    */
   public resetFlags(): void {
-    Object.values(FEATURE_FLAGS).forEach(config => {
+    Object.values(FEATURE_FLAGS).forEach((config) => {
       localStorage.removeItem(config.key);
     });
     this.loadFlags();
@@ -141,7 +142,9 @@ export class FeatureFlagService {
    */
   public getAllFlags(): FeatureFlags {
     return Object.keys(FEATURE_FLAGS).reduce((acc, key) => {
-      acc[key as keyof FeatureFlags] = this.isEnabled(key as keyof FeatureFlags);
+      acc[key as keyof FeatureFlags] = this.isEnabled(
+        key as keyof FeatureFlags,
+      );
       return acc;
     }, {} as FeatureFlags);
   }
@@ -153,7 +156,7 @@ export class FeatureFlagService {
     let hash = 0;
     for (let i = 0; i < userId.length; i++) {
       const char = userId.charCodeAt(i);
-      hash = ((hash << 5) - hash) + char;
+      hash = (hash << 5) - hash + char;
       hash = hash & hash; // Convert to 32-bit integer
     }
     return Math.abs(hash) / 2147483647; // Normalize to 0-1

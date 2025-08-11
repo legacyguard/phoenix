@@ -16,6 +16,7 @@
 ## Edge Function Deployment
 
 ### Option A: Using Supabase CLI
+
 ```bash
 # If not already linked
 supabase link --project-ref your-project-ref
@@ -30,6 +31,7 @@ supabase secrets set RESEND_FROM_EMAIL=alerts@yourdomain.com
 ```
 
 ### Option B: Manual Dashboard Upload
+
 1. [ ] Go to Edge Functions in Supabase Dashboard
 2. [ ] Create new function: `send-critical-error-alert`
 3. [ ] Copy content from `deployment/functions/send-critical-error-alert/index.ts`

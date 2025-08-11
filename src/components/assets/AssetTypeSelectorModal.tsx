@@ -1,13 +1,32 @@
-import React from 'react';
-import { useTranslation } from 'react-i18next';
-import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
-import { Button } from '@/components/ui/button';
-import { Card } from '@/components/ui/card';
-import { 
-  Home, Landmark, Car, Laptop, Gem, PlusCircle, Building2, 
-  Wallet, Bitcoin, FileText, Shield, Plane, HardDrive,
-  Globe, CreditCard, Sparkles, Package
-} from 'lucide-react';
+import React from "react";
+import { useTranslation } from "react-i18next";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import {
+  Home,
+  Landmark,
+  Car,
+  Laptop,
+  Gem,
+  PlusCircle,
+  Building2,
+  Wallet,
+  Bitcoin,
+  FileText,
+  Shield,
+  Plane,
+  HardDrive,
+  Globe,
+  CreditCard,
+  Sparkles,
+  Package,
+} from "lucide-react";
 
 interface AssetTypeSelectorModalProps {
   isOpen: boolean;
@@ -16,61 +35,177 @@ interface AssetTypeSelectorModalProps {
   onSelectSubType: (subType: string) => void;
 }
 
-const AssetTypeSelectorModal: React.FC<AssetTypeSelectorModalProps> = ({ 
-  isOpen, 
-  onClose, 
+const AssetTypeSelectorModal: React.FC<AssetTypeSelectorModalProps> = ({
+  isOpen,
+  onClose,
   mainCategory,
-  onSelectSubType 
+  onSelectSubType,
 }) => {
-  const { t } = useTranslation('assets');
+  const { t } = useTranslation("assets");
   const getSubTypes = () => {
     switch (mainCategory) {
-      case 'Property':
+      case "Property":
         return [
-          { label: t('assetType.primaryResidence'), icon: <Home className="h-8 w-8" />, value: 'Primary Residence' },
-          { label: t('assetType.vacationHome'), icon: <Home className="h-8 w-8" />, value: 'Vacation Home' },
-          { label: t('assetType.rentalProperty'), icon: <Building2 className="h-8 w-8" />, value: 'Rental Property' },
-          { label: t('assetType.land'), icon: <Globe className="h-8 w-8" />, value: 'Land' },
-          { label: t('assetType.commercialProperty'), icon: <Building2 className="h-8 w-8" />, value: 'Commercial Property' },
+          {
+            label: t("common:assetType.primaryResidence"),
+            icon: <Home className="h-8 w-8" />,
+            value: "Primary Residence",
+          },
+          {
+            label: t("common:assetType.vacationHome"),
+            icon: <Home className="h-8 w-8" />,
+            value: "Vacation Home",
+          },
+          {
+            label: t("common:assetType.rentalProperty"),
+            icon: <Building2 className="h-8 w-8" />,
+            value: "Rental Property",
+          },
+          {
+            label: t("common:assetType.land"),
+            icon: <Globe className="h-8 w-8" />,
+            value: "Land",
+          },
+          {
+            label: t("common:assetType.commercialProperty"),
+            icon: <Building2 className="h-8 w-8" />,
+            value: "Commercial Property",
+          },
         ];
-      case 'Finances':
+      case "Finances":
         return [
-          { label: t('assetType.bankAccount'), icon: <Landmark className="h-8 w-8" />, value: 'Bank Account' },
-          { label: t('assetType.investmentPortfolio'), icon: <Wallet className="h-8 w-8" />, value: 'Investment Portfolio' },
-          { label: t('assetType.cryptocurrencyWallet'), icon: <Bitcoin className="h-8 w-8" />, value: 'Cryptocurrency Wallet' },
-          { label: t('assetType.loanMortgage'), icon: <FileText className="h-8 w-8" />, value: 'Loan / Mortgage' },
-          { label: t('assetType.insurancePolicy'), icon: <Shield className="h-8 w-8" />, value: 'Insurance Policy' },
-          { label: t('assetType.pensionRetirement'), icon: <Wallet className="h-8 w-8" />, value: 'Pension / Retirement Account' },
+          {
+            label: t("common:assetType.bankAccount"),
+            icon: <Landmark className="h-8 w-8" />,
+            value: "Bank Account",
+          },
+          {
+            label: t("common:assetType.investmentPortfolio"),
+            icon: <Wallet className="h-8 w-8" />,
+            value: "Investment Portfolio",
+          },
+          {
+            label: t("common:assetType.cryptocurrencyWallet"),
+            icon: <Bitcoin className="h-8 w-8" />,
+            value: "Cryptocurrency Wallet",
+          },
+          {
+            label: t("common:assetType.loanMortgage"),
+            icon: <FileText className="h-8 w-8" />,
+            value: "Loan / Mortgage",
+          },
+          {
+            label: t("common:assetType.insurancePolicy"),
+            icon: <Shield className="h-8 w-8" />,
+            value: "Insurance Policy",
+          },
+          {
+            label: t("common:assetType.pensionRetirement"),
+            icon: <Wallet className="h-8 w-8" />,
+            value: "Pension / Retirement Account",
+          },
         ];
-      case 'Vehicle':
+      case "Vehicle":
         return [
-          { label: t('assetType.car'), icon: <Car className="h-8 w-8" />, value: 'Car' },
-          { label: t('assetType.motorcycle'), icon: <Car className="h-8 w-8" />, value: 'Motorcycle' },
-          { label: t('assetType.boat'), icon: <Car className="h-8 w-8" />, value: 'Boat' },
-          { label: t('assetType.rvCamper'), icon: <Car className="h-8 w-8" />, value: 'RV / Camper' },
-          { label: t('assetType.aircraft'), icon: <Plane className="h-8 w-8" />, value: 'Aircraft' },
+          {
+            label: t("common:assetType.car"),
+            icon: <Car className="h-8 w-8" />,
+            value: "Car",
+          },
+          {
+            label: t("common:assetType.motorcycle"),
+            icon: <Car className="h-8 w-8" />,
+            value: "Motorcycle",
+          },
+          {
+            label: t("common:assetType.boat"),
+            icon: <Car className="h-8 w-8" />,
+            value: "Boat",
+          },
+          {
+            label: t("common:assetType.rvCamper"),
+            icon: <Car className="h-8 w-8" />,
+            value: "RV / Camper",
+          },
+          {
+            label: t("common:assetType.aircraft"),
+            icon: <Plane className="h-8 w-8" />,
+            value: "Aircraft",
+          },
         ];
-      case 'Digital Asset':
+      case "Digital Asset":
         return [
-          { label: t('assetType.onlineAccount'), icon: <Globe className="h-8 w-8" />, value: 'Online Account' },
-          { label: t('assetType.softwareLicense'), icon: <HardDrive className="h-8 w-8" />, value: 'Software License' },
-          { label: t('assetType.domainName'), icon: <Globe className="h-8 w-8" />, value: 'Domain Name' },
-          { label: t('assetType.digitalSubscription'), icon: <CreditCard className="h-8 w-8" />, value: 'Digital Subscription' },
-          { label: t('assetType.cryptocurrency'), icon: <Bitcoin className="h-8 w-8" />, value: 'Cryptocurrency' },
-          { label: t('assetType.nft'), icon: <Sparkles className="h-8 w-8" />, value: 'NFT' },
+          {
+            label: t("common:assetType.onlineAccount"),
+            icon: <Globe className="h-8 w-8" />,
+            value: "Online Account",
+          },
+          {
+            label: t("common:assetType.softwareLicense"),
+            icon: <HardDrive className="h-8 w-8" />,
+            value: "Software License",
+          },
+          {
+            label: t("common:assetType.domainName"),
+            icon: <Globe className="h-8 w-8" />,
+            value: "Domain Name",
+          },
+          {
+            label: t("common:assetType.digitalSubscription"),
+            icon: <CreditCard className="h-8 w-8" />,
+            value: "Digital Subscription",
+          },
+          {
+            label: t("common:assetType.cryptocurrency"),
+            icon: <Bitcoin className="h-8 w-8" />,
+            value: "Cryptocurrency",
+          },
+          {
+            label: t("common:assetType.nft"),
+            icon: <Sparkles className="h-8 w-8" />,
+            value: "NFT",
+          },
         ];
-      case 'Personal Item':
+      case "Personal Item":
         return [
-          { label: t('assetType.jewelry'), icon: <Gem className="h-8 w-8" />, value: 'Jewelry' },
-          { label: t('assetType.artCollectibles'), icon: <Sparkles className="h-8 w-8" />, value: 'Art / Collectibles' },
-          { label: t('assetType.electronics'), icon: <Laptop className="h-8 w-8" />, value: 'Electronics' },
-          { label: t('assetType.furniture'), icon: <Package className="h-8 w-8" />, value: 'Furniture' },
-          { label: t('assetType.toolsEquipment'), icon: <Package className="h-8 w-8" />, value: 'Tools / Equipment' },
-          { label: t('assetType.otherValuables'), icon: <Package className="h-8 w-8" />, value: 'Other Valuables' },
+          {
+            label: t("common:assetType.jewelry"),
+            icon: <Gem className="h-8 w-8" />,
+            value: "Jewelry",
+          },
+          {
+            label: t("common:assetType.artCollectibles"),
+            icon: <Sparkles className="h-8 w-8" />,
+            value: "Art / Collectibles",
+          },
+          {
+            label: t("common:assetType.electronics"),
+            icon: <Laptop className="h-8 w-8" />,
+            value: "Electronics",
+          },
+          {
+            label: t("common:assetType.furniture"),
+            icon: <Package className="h-8 w-8" />,
+            value: "Furniture",
+          },
+          {
+            label: t("common:assetType.toolsEquipment"),
+            icon: <Package className="h-8 w-8" />,
+            value: "Tools / Equipment",
+          },
+          {
+            label: t("common:assetType.otherValuables"),
+            icon: <Package className="h-8 w-8" />,
+            value: "Other Valuables",
+          },
         ];
-      case 'Other':
+      case "Other":
         return [
-          { label: t('assetType.customAsset'), icon: <PlusCircle className="h-8 w-8" />, value: 'Custom Asset' },
+          {
+            label: t("common:assetType.customAsset"),
+            icon: <PlusCircle className="h-8 w-8" />,
+            value: "Custom Asset",
+          },
         ];
       default:
         return [];
@@ -83,7 +218,9 @@ const AssetTypeSelectorModal: React.FC<AssetTypeSelectorModalProps> = ({
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="max-w-2xl">
         <DialogHeader>
-          <DialogTitle>{t('assetType.selectType', { mainCategory })}</DialogTitle>
+          <DialogTitle>
+            {t("assetType.selectType", { mainCategory })}
+          </DialogTitle>
         </DialogHeader>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
           {subTypes.map((subType) => (
@@ -96,7 +233,9 @@ const AssetTypeSelectorModal: React.FC<AssetTypeSelectorModalProps> = ({
                 <div className="p-3 bg-primary/10 rounded-full">
                   {subType.icon}
                 </div>
-                <h3 className="text-sm font-semibold text-center">{subType.label}</h3>
+                <h3 className="text-sm font-semibold text-center">
+                  {subType.label}
+                </h3>
               </div>
             </Card>
           ))}
@@ -107,4 +246,3 @@ const AssetTypeSelectorModal: React.FC<AssetTypeSelectorModalProps> = ({
 };
 
 export default AssetTypeSelectorModal;
-

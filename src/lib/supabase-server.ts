@@ -1,7 +1,7 @@
 // src/lib/supabase-server.ts
 
-import { createServerClient, type CookieOptions } from '@supabase/ssr';
-import { cookies } from 'next/headers';
+import { createServerClient, type CookieOptions } from "@supabase/ssr";
+import { cookies } from "next/headers";
 
 export function createServerSupabaseClient() {
   const cookieStore = cookies();
@@ -23,12 +23,12 @@ export function createServerSupabaseClient() {
         },
         remove(name: string, options: CookieOptions) {
           try {
-            cookieStore.set({ name, value: '', ...options });
+            cookieStore.set({ name, value: "", ...options });
           } catch (error) {
             // Handle potential errors in edge runtime
           }
         },
       },
-    }
+    },
   );
 }

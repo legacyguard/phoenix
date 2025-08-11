@@ -4,8 +4,8 @@ export interface AnalyticsEvent {
   session_id: string;
   timestamp: Date;
   properties: Record<string, unknown>;
-  emotional_context?: 'frustrated' | 'confused' | 'satisfied' | 'accomplished';
-  user_journey_stage: 'onboarding' | 'setup' | 'maintenance' | 'family_prep';
+  emotional_context?: "frustrated" | "confused" | "satisfied" | "accomplished";
+  user_journey_stage: "onboarding" | "setup" | "maintenance" | "family_prep";
 }
 
 export interface UserMetrics {

@@ -1,7 +1,7 @@
-import { useEffect, useState, useCallback } from 'react';
-import { toast } from 'sonner';
-import { useTranslation } from 'react-i18next';
-import { TaskItem } from '@/components/onboarding/OnboardingWizard';
+import { useEffect, useState, useCallback } from "react";
+import { toast } from "sonner";
+import { useTranslation } from "react-i18next";
+import { TaskItem } from "@/components/onboarding/OnboardingWizard";
 
 interface UseUsageNudgeProps {
   tasks: TaskItem[];
@@ -15,14 +15,18 @@ interface UseUsageNudgeReturn {
   timeSinceLastVisit: number | null;
 }
 
-export const useUsageNudge = ({ tasks }: UseUsageNudgeProps): UseUsageNudgeReturn => {
-  const { t } = useTranslation('ui-common');
+export const useUsageNudge = ({
+  tasks,
+}: UseUsageNudgeProps): UseUsageNudgeReturn => {
+  const { t } = useTranslation("ui-common");
   const [shouldShowNudge, setShouldShowNudge] = useState(false);
   const [shouldShowToast, setShouldShowToast] = useState(false);
-  const [timeSinceLastVisit, setTimeSinceLastVisit] = useState<number | null>(null);
+  const [timeSinceLastVisit, setTimeSinceLastVisit] = useState<number | null>(
+    null,
+  );
 
   // Calculate task progress
-  const completedTasks = tasks.filter(task => task.completed).length;
+  const completedTasks = tasks.filter((task) => task.completed).length;
   const totalTasks = tasks.length;
   const hasIncompleteTasks = totalTasks > 0 && completedTasks < totalTasks;
 
@@ -30,14 +34,19 @@ export const useUsageNudge = ({ tasks }: UseUsageNudgeProps): UseUsageNudgeRetur
     if (!hasIncompleteTasks) return;
 
     const now = new Date();
-    const lastVisitStr = localStorage.getItem('legacyguard-last-visit');
-    const nudgeDismissedUntilStr = localStorage.getItem('legacyguard-nudge-dismissed-until');
-    const toastDismissedUntilStr = localStorage.getItem('legacyguard-toast-dismissed-until');
-    
+    const lastVisitStr = localStorage.getItem("legacyguard-last-visit");
+    const nudgeDismissedUntilStr = localStorage.getItem(
+      "legacyguard-nudge-dismissed-until",
+    );
+    const toastDismissedUntilStr = localStorage.getItem(
+      "legacyguard-toast-dismissed-until",
+    );
+
     // Check last visit time
     if (lastVisitStr) {
       const lastVisit = new Date(lastVisitStr);
-      const hoursSinceLastVisit = (now.getTime() - lastVisit.getTime()) / (1000 * 60 * 60);
+      const hoursSinceLastVisit =
+        (now.getTime() - lastVisit.getTime()) / (1000 * 60 * 60);
       setTimeSinceLastVisit(hoursSinceLastVisit);
 
       // Show nudge/toast if more than 24 hours since last visit
@@ -59,57 +68,74 @@ export const useUsageNudge = ({ tasks }: UseUsageNudgeProps): UseUsageNudgeRetur
     }
 
     // Update last visit time
-    localStorage.setItem('legacyguard-last-visit', now.toISOString());
+    localStorage.setItem("legacyguard-last-visit", now.toISOString());
   }, [hasIncompleteTasks]);
 
   // Show toast notification when appropriate
   useEffect(() => {
     if (shouldShowToast && hasIncompleteTasks) {
       const remainingTasks = totalTasks - completedTasks;
-      
+
       setTimeout(() => {
         toast.info(
           remainingTasks === 1
-            ? t('dashboard.nudge.toast.oneTaskLeft')
-            : t('dashboard.nudge.toast.tasksRemaining', { count: remainingTasks }),
+            ? t("dashboard-main:dashboard.nudge.toast.oneTaskLeft")
+            : t("dashboard-main:dashboard.nudge.toast.tasksRemaining", {
+                count: remainingTasks,
+              }),
           {
-            description: t('dashboard.nudge.toast.continueSecuring'),
+            description: t(
+              "dashboard-main:dashboard.nudge.toast.continueSecuring",
+            ),
             duration: 8000,
             action: {
-              label: t('dashboard.nudge.toast.viewTasks'),
+              label: t("dashboard-main:dashboard.nudge.toast.viewTasks"),
               onClick: () => {
                 // Scroll to tasks section
-                const tasksSection = document.querySelector('[data-tasks-section]');
+                const tasksSection = document.querySelector(
+                  "[data-tasks-section]",
+                );
                 if (tasksSection) {
-                  tasksSection.scrollIntoView({ behavior: 'smooth' });
+                  tasksSection.scrollIntoView({ behavior: "smooth" });
                 }
               },
             },
             onDismiss: () => {
               dismissToast();
             },
-          }
+          },
         );
       }, 3000); // Show after 3 seconds
     }
-  }, [shouldShowToast, hasIncompleteTasks, totalTasks, completedTasks, t, dismissToast]);
+  }, [
+    shouldShowToast,
+    hasIncompleteTasks,
+    totalTasks,
+    completedTasks,
+    t,
+    dismissToast,
+  ]);
 
   const dismissNudge = useCallback(() => {
-     
     setShouldShowNudge(false);
     // Dismiss for 24 hours
     const dismissUntil = new Date();
     dismissUntil.setHours(dismissUntil.getHours() + 24);
-    localStorage.setItem('legacyguard-nudge-dismissed-until', dismissUntil.toISOString());
+    localStorage.setItem(
+      "legacyguard-nudge-dismissed-until",
+      dismissUntil.toISOString(),
+    );
   }, []);
 
   const dismissToast = useCallback(() => {
-     
     setShouldShowToast(false);
     // Dismiss for 48 hours (longer than nudge)
     const dismissUntil = new Date();
     dismissUntil.setHours(dismissUntil.getHours() + 48);
-    localStorage.setItem('legacyguard-toast-dismissed-until', dismissUntil.toISOString());
+    localStorage.setItem(
+      "legacyguard-toast-dismissed-until",
+      dismissUntil.toISOString(),
+    );
   }, []);
 
   return {

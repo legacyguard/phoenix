@@ -1,27 +1,33 @@
-import React, { useState } from 'react';
-import { useTranslation } from 'react-i18next';
+import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
 import {
   Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
   DialogDescription,
-  DialogFooter } from
-'@/components/ui/dialog';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
-import { ScrollArea } from '@/components/ui/scroll-area';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Badge } from '@/components/ui/badge';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Alert, AlertDescription } from '@/components/ui/alert';
+  DialogFooter,
+} from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Badge } from "@/components/ui/badge";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Alert, AlertDescription } from "@/components/ui/alert";
 import {
   PlaybookTemplate,
   PlaybookTemplates,
   getTemplatesByFilter,
-  replaceVariables } from
-'@/data/playbookTemplates';
+  replaceVariables,
+} from "@/data/playbookTemplates";
 import {
   FileText,
   User,
@@ -31,8 +37,8 @@ import {
   Home,
   Users,
   AlertCircle,
-  Sparkles } from
-'lucide-react';
+  Sparkles,
+} from "lucide-react";
 
 interface TemplateModalProps {
   isOpen: boolean;
@@ -53,13 +59,13 @@ const categoryIcons: Record<string, React.ReactNode> = {
   home: <Home className="h-4 w-4" />,
   family: <Users className="h-4 w-4" />,
   comprehensive: <FileText className="h-4 w-4" />,
-  immediate: <AlertCircle className="h-4 w-4" />
+  immediate: <AlertCircle className="h-4 w-4" />,
 };
 
 const toneColors = {
-  formal: 'default',
-  personal: 'secondary',
-  professional: 'outline'
+  formal: "default",
+  personal: "secondary",
+  professional: "outline",
 } as const;
 
 export const TemplateModal: React.FC<TemplateModalProps> = ({
@@ -67,27 +73,29 @@ export const TemplateModal: React.FC<TemplateModalProps> = ({
   onClose,
   section,
   onInsert,
-  existingContent
+  existingContent,
 }) => {
-  const { t } = useTranslation('family-core');
-  const [selectedTemplate, setSelectedTemplate] = useState<PlaybookTemplate | null>(null);
+  const { t } = useTranslation("family-core");
+  const [selectedTemplate, setSelectedTemplate] =
+    useState<PlaybookTemplate | null>(null);
   const [variables, setVariables] = useState<Record<string, string>>({});
-  const [insertMode, setInsertMode] = useState<'replace' | 'append'>('replace');
-  const [activeCategory, setActiveCategory] = useState<string>('all');
+  const [insertMode, setInsertMode] = useState<"replace" | "append">("replace");
+  const [activeCategory, setActiveCategory] = useState<string>("all");
 
-  const templates = getTemplatesByFilter(section,
-  activeCategory === 'all' ? undefined : { category: activeCategory }
+  const templates = getTemplatesByFilter(
+    section,
+    activeCategory === "all" ? undefined : { category: activeCategory },
   );
 
   // Get unique categories for this section
-  const categories = ['all', ...new Set(templates.map((t) => t.category))];
+  const categories = ["all", ...new Set(templates.map((t) => t.category))];
 
   const handleSelectTemplate = (template: PlaybookTemplate) => {
     setSelectedTemplate(template);
     // Initialize variables with empty strings
     const initialVars: Record<string, string> = {};
     template.variables?.forEach((v) => {
-      initialVars[v] = '';
+      initialVars[v] = "";
     });
     setVariables(initialVars);
   };
@@ -98,10 +106,10 @@ export const TemplateModal: React.FC<TemplateModalProps> = ({
     let content = replaceVariables(selectedTemplate.content, variables);
 
     // Clean up any remaining unreplaced variables
-    content = content.replace(/{{[^}]+}}/g, '[PLEASE FILL IN]');
+    content = content.replace(/{{[^}]+}}/g, "[PLEASE FILL IN]");
 
-    if (insertMode === 'append' && existingContent) {
-      content = existingContent + '\n\n' + content;
+    if (insertMode === "append" && existingContent) {
+      content = existingContent + "\n\n" + content;
     }
 
     onInsert(content);
@@ -109,7 +117,7 @@ export const TemplateModal: React.FC<TemplateModalProps> = ({
   };
 
   const getPreview = () => {
-    if (!selectedTemplate) return '';
+    if (!selectedTemplate) return "";
     return replaceVariables(selectedTemplate.content, variables);
   };
 
@@ -117,111 +125,126 @@ export const TemplateModal: React.FC<TemplateModalProps> = ({
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="max-w-4xl max-h-[90vh]">
         <DialogHeader>
-          <DialogTitle>{t('family.templates.title')}</DialogTitle>
+          <DialogTitle>{t("family.templates.title")}</DialogTitle>
           <DialogDescription>
-            {t('family.templates.description')}
+            {t("family.templates.description")}
           </DialogDescription>
         </DialogHeader>
 
-        {!selectedTemplate ?
-        // Template Selection View
-        <div className="space-y-4">
+        {!selectedTemplate ? (
+          // Template Selection View
+          <div className="space-y-4">
             <Tabs value={activeCategory} onValueChange={setActiveCategory}>
               <TabsList className="grid grid-cols-4 lg:grid-cols-6 h-auto">
-                {categories.map((category) =>
-              <TabsTrigger
-                key={category}
-                value={category}
-                className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
-
+                {categories.map((category) => (
+                  <TabsTrigger
+                    key={category}
+                    value={category}
+                    className="data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
+                  >
                     {categoryIcons[category]}
                     <span className="ml-1 text-xs">
                       {t(`playbook.templates.categories.${category}`, category)}
                     </span>
                   </TabsTrigger>
-              )}
+                ))}
               </TabsList>
             </Tabs>
 
             <ScrollArea className="h-[400px] pr-4">
               <div className="grid gap-3">
-                {templates.map((template) =>
-              <Card
-                key={template.id}
-                className="cursor-pointer hover:shadow-md transition-shadow"
-                onClick={() => handleSelectTemplate(template)}>
-
+                {templates.map((template) => (
+                  <Card
+                    key={template.id}
+                    className="cursor-pointer hover:shadow-md transition-shadow"
+                    onClick={() => handleSelectTemplate(template)}
+                  >
                     <CardHeader className="pb-3">
                       <div className="flex items-start justify-between">
                         <div className="flex items-center gap-2">
                           {categoryIcons[template.category]}
-                          <CardTitle className="text-base">{template.title}</CardTitle>
+                          <CardTitle className="text-base">
+                            {template.title}
+                          </CardTitle>
                         </div>
                         <Badge variant={toneColors[template.tone]}>
-                          {t('family.templates.tone.${template.tone}')}
+                          {t("family.templates.tone.${template.tone}")}
                         </Badge>
                       </div>
                     </CardHeader>
                     <CardContent>
                       <p className="text-sm text-muted-foreground line-clamp-2">
-                        {template.content.substring(0, 150)}{t('family.templateModal._1')}
-                  </p>
-                      {template.variables && template.variables.length > 0 &&
-                  <div className="mt-2 flex items-center gap-1">
+                        {template.content.substring(0, 150)}
+                        {t("family.templateModal._1")}
+                      </p>
+                      {template.variables && template.variables.length > 0 && (
+                        <div className="mt-2 flex items-center gap-1">
                           <Sparkles className="h-3 w-3 text-primary" />
                           <span className="text-xs text-primary">
-                            {t('playbook.templates.variableCount', { count: template.variables.length })}
+                            {t("playbook.templates.variableCount", {
+                              count: template.variables.length,
+                            })}
                           </span>
                         </div>
-                  }
+                      )}
                     </CardContent>
                   </Card>
-              )}
+                ))}
               </div>
             </ScrollArea>
-          </div> :
-
-        // Template Customization View
-        <div className="space-y-4">
+          </div>
+        ) : (
+          // Template Customization View
+          <div className="space-y-4">
             <div className="flex items-center justify-between">
-              <h3 className="text-lg font-semibold">{selectedTemplate.title}</h3>
+              <h3 className="text-lg font-semibold">
+                {selectedTemplate.title}
+              </h3>
               <Button
-              variant="ghost"
-              size="sm"
-              onClick={() => setSelectedTemplate(null)}>
-
-                {t('family.templates.backToTemplates')}
+                variant="ghost"
+                size="sm"
+                onClick={() => setSelectedTemplate(null)}
+              >
+                {t("family.templates.backToTemplates")}
               </Button>
             </div>
 
-            {selectedTemplate.variables && selectedTemplate.variables.length > 0 &&
-          <div className="space-y-3">
-                <Label>{t('family.templates.fillInVariables')}</Label>
-                <ScrollArea className="h-[200px] pr-4">
-                  <div className="space-y-3">
-                    {selectedTemplate.variables.map((variable) =>
-                <div key={variable} className="space-y-1">
-                        <Label htmlFor={variable} className="text-sm">
-                          {t(`playbook.templates.variables.${variable}`, variable)}
-                        </Label>
-                        <Input
-                    id={variable}
-                    value={variables[variable] || ''}
-                    onChange={(e) => setVariables((prev) => ({
-                      ...prev,
-                      [variable]: e.target.value
-                    }))}
-                    placeholder={t('family.templates.variablePlaceholder')} />
-
-                      </div>
-                )}
-                  </div>
-                </ScrollArea>
-              </div>
-          }
+            {selectedTemplate.variables &&
+              selectedTemplate.variables.length > 0 && (
+                <div className="space-y-3">
+                  <Label>{t("family.templates.fillInVariables")}</Label>
+                  <ScrollArea className="h-[200px] pr-4">
+                    <div className="space-y-3">
+                      {selectedTemplate.variables.map((variable) => (
+                        <div key={variable} className="space-y-1">
+                          <Label htmlFor={variable} className="text-sm">
+                            {t(
+                              `playbook.templates.variables.${variable}`,
+                              variable,
+                            )}
+                          </Label>
+                          <Input
+                            id={variable}
+                            value={variables[variable] || ""}
+                            onChange={(e) =>
+                              setVariables((prev) => ({
+                                ...prev,
+                                [variable]: e.target.value,
+                              }))
+                            }
+                            placeholder={t(
+                              "family.templates.variablePlaceholder",
+                            )}
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  </ScrollArea>
+                </div>
+              )}
 
             <div className="space-y-2">
-              <Label>{t('family.templates.preview')}</Label>
+              <Label>{t("family.templates.preview")}</Label>
               <ScrollArea className="h-[200px] border rounded-md p-3">
                 <pre className="text-sm whitespace-pre-wrap font-sans">
                   {getPreview()}
@@ -229,46 +252,50 @@ export const TemplateModal: React.FC<TemplateModalProps> = ({
               </ScrollArea>
             </div>
 
-            {existingContent &&
-          <Alert>
+            {existingContent && (
+              <Alert>
                 <AlertCircle className="h-4 w-4" />
                 <AlertDescription>
                   <div className="space-y-2">
-                    <p>{t('family.templates.existingContent')}</p>
+                    <p>{t("family.templates.existingContent")}</p>
                     <div className="flex gap-2">
                       <Button
-                    size="sm"
-                    variant={insertMode === 'replace' ? 'default' : 'outline'}
-                    onClick={() => setInsertMode('replace')}>
-
-                        {t('family.templates.replace')}
+                        size="sm"
+                        variant={
+                          insertMode === "replace" ? "default" : "outline"
+                        }
+                        onClick={() => setInsertMode("replace")}
+                      >
+                        {t("family.templates.replace")}
                       </Button>
                       <Button
-                    size="sm"
-                    variant={insertMode === 'append' ? 'default' : 'outline'}
-                    onClick={() => setInsertMode('append')}>
-
-                        {t('family.templates.append')}
+                        size="sm"
+                        variant={
+                          insertMode === "append" ? "default" : "outline"
+                        }
+                        onClick={() => setInsertMode("append")}
+                      >
+                        {t("family.templates.append")}
                       </Button>
                     </div>
                   </div>
                 </AlertDescription>
               </Alert>
-          }
+            )}
           </div>
-        }
+        )}
 
         <DialogFooter>
           <Button variant="outline" onClick={onClose}>
-            {t('ui.cancel')}
+            {t("ui.cancel")}
           </Button>
-          {selectedTemplate &&
-          <Button onClick={handleInsert}>
-              {t('family.templates.insertTemplate')}
+          {selectedTemplate && (
+            <Button onClick={handleInsert}>
+              {t("family.templates.insertTemplate")}
             </Button>
-          }
+          )}
         </DialogFooter>
       </DialogContent>
-    </Dialog>);
-
+    </Dialog>
+  );
 };

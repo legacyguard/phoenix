@@ -1,21 +1,49 @@
-import React, { useState } from 'react';
-import { useTranslation } from 'react-i18next';
-import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter } from '@/components/ui/dialog';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Label } from '@/components/ui/label';
-import { AlertTriangle, Map, BookOpen, Video, Printer, Download, Lock, Crown } from 'lucide-react';
-import { useAuth } from '@clerk/clerk-react';
-import { toast } from 'sonner';
-import { useSubscription } from '@/hooks/useSubscription';
+import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+  CardFooter,
+} from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+  DialogFooter,
+} from "@/components/ui/dialog";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { Label } from "@/components/ui/label";
+import {
+  AlertTriangle,
+  Map,
+  BookOpen,
+  Video,
+  Printer,
+  Download,
+  Lock,
+  Crown,
+} from "lucide-react";
+import { useAuth } from "@clerk/clerk-react";
+import { toast } from "sonner";
+import { useSubscription } from "@/hooks/useSubscription";
 
 interface PreparednessTool {
-  id: 'simulator' | 'treasure_hunt' | 'guides' | 'video_messages';
+  id: "simulator" | "treasure_hunt" | "guides" | "video_messages";
   title: string;
   description: string;
   icon: React.ReactNode;
-  targetUser: 'user' | 'family_member'; // Who is this tool for?
+  targetUser: "user" | "family_member"; // Who is this tool for?
 }
 
 interface GuideScenario {
@@ -24,59 +52,69 @@ interface GuideScenario {
   description: string;
 }
 
-
-
 const FamilyPreparednessTools: React.FC = () => {
-  const { t } = useTranslation('family-core');
+  const { t } = useTranslation("family-core");
   const { getToken } = useAuth();
   const [showGuideModal, setShowGuideModal] = useState(false);
-  const [selectedScenario, setSelectedScenario] = useState<string>('');
-  const [generatedGuide, setGeneratedGuide] = useState<string>('');
+  const [selectedScenario, setSelectedScenario] = useState<string>("");
+  const [generatedGuide, setGeneratedGuide] = useState<string>("");
   const [isGenerating, setIsGenerating] = useState(false);
 
   const { isPremium } = useSubscription();
 
   const guideScenarios: GuideScenario[] = [
     {
-      id: 'death',
-      title: t("familyPreparednessTools.scenarios.death.title"),
-      description: t("familyPreparednessTools.scenarios.death.description")
+      id: "death",
+      title: t("common:familyPreparednessTools.scenarios.death.title"),
+      description: t(
+        "common:familyPreparednessTools.scenarios.death.description",
+      ),
     },
     {
-      id: 'hospitalization',
-      title: t("familyPreparednessTools.scenarios.hospitalization.title"),
-      description: t("familyPreparednessTools.scenarios.hospitalization.description")
+      id: "hospitalization",
+      title: t(
+        "common:familyPreparednessTools.scenarios.hospitalization.title",
+      ),
+      description: t(
+        "common:familyPreparednessTools.scenarios.hospitalization.description",
+      ),
     },
     {
-      id: 'missing',
-      title: t("familyPreparednessTools.scenarios.missing.title"),
-      description: t("familyPreparednessTools.scenarios.missing.description")
+      id: "missing",
+      title: t("common:familyPreparednessTools.scenarios.missing.title"),
+      description: t(
+        "common:familyPreparednessTools.scenarios.missing.description",
+      ),
     },
     {
-      id: 'emergency',
-      title: t("familyPreparednessTools.scenarios.emergency.title"),
-      description: t("familyPreparednessTools.scenarios.emergency.description")
-    }
+      id: "emergency",
+      title: t("common:familyPreparednessTools.scenarios.emergency.title"),
+      description: t(
+        "common:familyPreparednessTools.scenarios.emergency.description",
+      ),
+    },
   ];
 
   const handleToolClick = (toolId: string) => {
     if (!isPremium) {
-      toast.error(t("familyPreparednessTools.errors.premiumRequired"));
+      toast.error(t("common:familyPreparednessTools.errors.premiumRequired"));
       return;
     }
 
     switch (toolId) {
-      case 'guides':
+      case "guides":
         setShowGuideModal(true);
         break;
       default:
-        toast.info(`${toolId} ${t("familyPreparednessTools.errors.comingSoon")}`);
+        toast.info(
+          `${toolId} ${t("familyPreparednessTools.errors.comingSoon")}`,
+        );
     }
   };
 
   const generateGuide = async () => {
     if (!selectedScenario) {
-      toast.error(t("familyPreparednessTools.errors.selectScenario"));
+      toast.error(t("common:familyPreparednessTools.errors.selectScenario"));
       return;
     }
 
@@ -84,7 +122,7 @@ const FamilyPreparednessTools: React.FC = () => {
     try {
       const token = await getToken();
       if (!token) {
-        throw new Error('Authentication required');
+        throw new Error("Authentication required");
       }
 
       // For now, we'll generate a mock guide. In production, this would fetch user data
@@ -92,8 +130,8 @@ const FamilyPreparednessTools: React.FC = () => {
       const guide = generateMockGuide(selectedScenario);
       setGeneratedGuide(guide);
     } catch (error) {
-      console.error('Error generating guide:', error);
-      toast.error(t("familyPreparednessTools.errors.generateFailed"));
+      console.error("Error generating guide:", error);
+      toast.error(t("common:familyPreparednessTools.errors.generateFailed"));
     } finally {
       setIsGenerating(false);
     }
@@ -101,7 +139,7 @@ const FamilyPreparednessTools: React.FC = () => {
 
   const generateMockGuide = (scenario: string) => {
     const scenarioData = guideScenarios.find((s) => s.id === scenario);
-    if (!scenarioData) return '';
+    if (!scenarioData) return "";
 
     // This is a mock implementation. In production, this would use actual user data
     const guides: Record<string, string> = {
@@ -236,14 +274,14 @@ const FamilyPreparednessTools: React.FC = () => {
             <li><strong>${t("familyPreparednessTools.guides.emergency.utilities")}</strong> Account numbers in filing cabinet</li>
           </ul>
         </div>
-      `
+      `,
     };
 
-    return guides[scenario] || '<p>Guide not available for this scenario.</p>';
+    return guides[scenario] || "<p>Guide not available for this scenario.</p>";
   };
 
   const handlePrint = () => {
-    const printWindow = window.open('', '_blank');
+    const printWindow = window.open("", "_blank");
     if (printWindow) {
       printWindow.document.write(`
         <!DOCTYPE html>
@@ -267,44 +305,50 @@ const FamilyPreparednessTools: React.FC = () => {
   };
 
   const tools: PreparednessTool[] = [
-  {
-    id: 'simulator',
-    title: t("familyPreparednessTools.tools.emergencySimulator"),
-    description: t("familyPreparednessTools.tools.emergencySimulatorDesc"),
-    icon: <AlertTriangle className="w-8 h-8 text-orange-600" />,
-    targetUser: 'user'
-  },
-  {
-    id: 'treasure_hunt',
-    title: t("familyPreparednessTools.tools.informationTreasureHunt"),
-    description: t("familyPreparednessTools.tools.treasureHuntDesc"),
-    icon: <Map className="w-8 h-8 text-blue-600" />,
-    targetUser: 'family_member'
-  },
-  {
-    id: 'guides',
-    title: t("familyPreparednessTools.tools.stepByStepGuides"),
-    description: t("familyPreparednessTools.tools.stepByStepGuidesDesc"),
-    icon: <BookOpen className="w-8 h-8 text-green-600" />,
-    targetUser: 'user'
-  },
-  {
-    id: 'video_messages',
-    title: t("familyPreparednessTools.tools.videoMessages"),
-    description: t("familyPreparednessTools.tools.videoMessagesDesc"),
-    icon: <Video className="w-8 h-8 text-purple-600" />,
-    targetUser: 'user'
-  }];
-
+    {
+      id: "simulator",
+      title: t("common:familyPreparednessTools.tools.emergencySimulator"),
+      description: t(
+        "common:familyPreparednessTools.tools.emergencySimulatorDesc",
+      ),
+      icon: <AlertTriangle className="w-8 h-8 text-orange-600" />,
+      targetUser: "user",
+    },
+    {
+      id: "treasure_hunt",
+      title: t("common:familyPreparednessTools.tools.informationTreasureHunt"),
+      description: t("common:familyPreparednessTools.tools.treasureHuntDesc"),
+      icon: <Map className="w-8 h-8 text-blue-600" />,
+      targetUser: "family_member",
+    },
+    {
+      id: "guides",
+      title: t("common:familyPreparednessTools.tools.stepByStepGuides"),
+      description: t(
+        "common:familyPreparednessTools.tools.stepByStepGuidesDesc",
+      ),
+      icon: <BookOpen className="w-8 h-8 text-green-600" />,
+      targetUser: "user",
+    },
+    {
+      id: "video_messages",
+      title: t("common:familyPreparednessTools.tools.videoMessages"),
+      description: t("common:familyPreparednessTools.tools.videoMessagesDesc"),
+      icon: <Video className="w-8 h-8 text-purple-600" />,
+      targetUser: "user",
+    },
+  ];
 
   // Component JSX will go here
   return (
     <div>
-      <p className="text-gray-600 mb-6">{t("familyPreparednessTools.use_these_tools_to_ensure_your_1")}</p>
+      <p className="text-gray-600 mb-6">
+        {t("familyPreparednessTools.use_these_tools_to_ensure_your_1")}
+      </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {tools.map((tool) =>
-        <Card key={tool.id} className="flex flex-col">
+        {tools.map((tool) => (
+          <Card key={tool.id} className="flex flex-col">
             <CardHeader>
               <div className="flex items-center">
                 <div className="mr-4">{tool.icon}</div>
@@ -315,80 +359,103 @@ const FamilyPreparednessTools: React.FC = () => {
               <p className="text-sm text-gray-700">{tool.description}</p>
             </CardContent>
             <CardFooter>
-              <Button className="w-full" onClick={() => handleToolClick(tool.id)}>{t("familyPreparednessTools.tools.launch")} {tool.title}</Button>
+              <Button
+                className="w-full"
+                onClick={() => handleToolClick(tool.id)}
+              >
+                {t("familyPreparednessTools.tools.launch")} {tool.title}
+              </Button>
             </CardFooter>
           </Card>
-        )}
+        ))}
       </div>
 
       {/* Step-by-Step Guide Generator Modal */}
       <Dialog open={showGuideModal} onOpenChange={setShowGuideModal}>
         <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
           <DialogHeader>
-            <DialogTitle>{t("familyPreparednessTools.generate_emergency_guide_2")}</DialogTitle>
-            <DialogDescription>{t("familyPreparednessTools.create_a_printable_guide_for_y_3")}
-
+            <DialogTitle>
+              {t("familyPreparednessTools.generate_emergency_guide_2")}
+            </DialogTitle>
+            <DialogDescription>
+              {t("familyPreparednessTools.create_a_printable_guide_for_y_3")}
             </DialogDescription>
           </DialogHeader>
 
-          {!generatedGuide ?
-          <div className="space-y-4 py-4">
+          {!generatedGuide ? (
+            <div className="space-y-4 py-4">
               <div>
-                <Label htmlFor="scenario-select">{t("familyPreparednessTools.select_scenario_4")}</Label>
-                <Select value={selectedScenario} onValueChange={setSelectedScenario}>
+                <Label htmlFor="scenario-select">
+                  {t("familyPreparednessTools.select_scenario_4")}
+                </Label>
+                <Select
+                  value={selectedScenario}
+                  onValueChange={setSelectedScenario}
+                >
                   <SelectTrigger id="scenario-select" className="w-full mt-2">
-                    <SelectValue placeholder={t('familyPreparednessTools.tools.chooseScenario')} />
+                    <SelectValue
+                      placeholder={t(
+                        "familyPreparednessTools.tools.chooseScenario",
+                      )}
+                    />
                   </SelectTrigger>
                   <SelectContent>
-                    {guideScenarios.map((scenario) =>
-                  <SelectItem key={scenario.id} value={scenario.id}>
+                    {guideScenarios.map((scenario) => (
+                      <SelectItem key={scenario.id} value={scenario.id}>
                         <div>
                           <p className="font-medium">{scenario.title}</p>
-                          <p className="text-xs text-gray-500">{scenario.description}</p>
+                          <p className="text-xs text-gray-500">
+                            {scenario.description}
+                          </p>
                         </div>
                       </SelectItem>
-                  )}
+                    ))}
                   </SelectContent>
                 </Select>
               </div>
 
               <DialogFooter>
-                <Button variant="outline" onClick={() => setShowGuideModal(false)}>
-                  {t('familyPreparednessTools.tools.cancel')}
+                <Button
+                  variant="outline"
+                  onClick={() => setShowGuideModal(false)}
+                >
+                  {t("familyPreparednessTools.tools.cancel")}
                 </Button>
                 <Button onClick={generateGuide} disabled={isGenerating}>
-                  {isGenerating ? t('familyPreparednessTools.tools.generating') : t('familyPreparednessTools.tools.generateGuide')}
-                </Button>
-              </DialogFooter>
-            </div> :
-
-          <div>
-              <div
-              className="border rounded-lg p-4 bg-white my-4"
-              dangerouslySetInnerHTML={{ __html: generatedGuide }} />
-
-              
-              <DialogFooter className="flex gap-2">
-                <Button
-                variant="outline"
-                onClick={() => {
-                  setGeneratedGuide('');
-                  setSelectedScenario('');
-                }}>{t("familyPreparednessTools.generate_another_5")}
-
-
-              </Button>
-                <Button onClick={handlePrint}>
-                  <Printer className="w-4 h-4 mr-2" />
-                  {t('familyPreparednessTools.tools.printGuide')}
+                  {isGenerating
+                    ? t("common:familyPreparednessTools.tools.generating")
+                    : t("common:familyPreparednessTools.tools.generateGuide")}
                 </Button>
               </DialogFooter>
             </div>
-          }
+          ) : (
+            <div>
+              <div
+                className="border rounded-lg p-4 bg-white my-4"
+                dangerouslySetInnerHTML={{ __html: generatedGuide }}
+              />
+
+              <DialogFooter className="flex gap-2">
+                <Button
+                  variant="outline"
+                  onClick={() => {
+                    setGeneratedGuide("");
+                    setSelectedScenario("");
+                  }}
+                >
+                  {t("familyPreparednessTools.generate_another_5")}
+                </Button>
+                <Button onClick={handlePrint}>
+                  <Printer className="w-4 h-4 mr-2" />
+                  {t("familyPreparednessTools.tools.printGuide")}
+                </Button>
+              </DialogFooter>
+            </div>
+          )}
         </DialogContent>
       </Dialog>
-    </div>);
-
+    </div>
+  );
 };
 
 export default FamilyPreparednessTools;

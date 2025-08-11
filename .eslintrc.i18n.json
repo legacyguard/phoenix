@@ -14,7 +14,17 @@
           "**/*.config.js",
           "**/*.config.ts"
         ],
-        "ignoreAttribute": ["className", "id", "name", "type", "href", "src", "alt", "key", "data-testid"],
+        "ignoreAttribute": [
+          "className",
+          "id",
+          "name",
+          "type",
+          "href",
+          "src",
+          "alt",
+          "key",
+          "data-testid"
+        ],
         "ignoreProperty": ["className", "id", "key", "style"],
         "ignoreComponent": ["script", "style"],
         "message": "Hardcoded string found - should use t() function"

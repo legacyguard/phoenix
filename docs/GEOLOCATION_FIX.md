@@ -1,28 +1,35 @@
 # Geolocation Fix Summary
 
 ## Problem
+
 The country/language selection modal was defaulting to Germany ('DE') when no country was detected, instead of properly detecting the user's location based on their IP address.
 
 ## Root Cause
+
 In `src/components/modals/CountryLanguageModal.tsx`, line 48 had a hardcoded default:
+
 ```typescript
 const [selectedCountry, setSelectedCountry] = useState<CountryCode>(
-  detectedCountry || 'DE'  // Hardcoded to Germany
+  detectedCountry || "DE", // Hardcoded to Germany
 );
 ```
 
 ## Solution Applied
 
 ### 1. Fixed the Hardcoded Default
+
 Updated the component to not default to any country if detection fails:
+
 ```typescript
-const [selectedCountry, setSelectedCountry] = useState<CountryCode | ''>(
-  detectedCountry || ''  // Let user choose if no detection
+const [selectedCountry, setSelectedCountry] = useState<CountryCode | "">(
+  detectedCountry || "", // Let user choose if no detection
 );
 ```
 
 ### 2. Added Proper Country Update Hook
+
 Added a useEffect to update the selected country when detection completes:
+
 ```typescript
 useEffect(() => {
   if (detectedCountry) {
@@ -32,20 +39,23 @@ useEffect(() => {
 ```
 
 ### 3. Fixed UI Display
+
 - Updated the country selector to show placeholder text when no country is selected
 - Updated button validation to require both country AND language selection
 - Fixed domain suggestion display to handle empty country state
 
 ### 4. Created Cache Clearing Utilities
+
 - Created `src/utils/clearGeoCache.ts` with functions to clear geolocation cache
 - Created `docs/clear-geo-cache.js` - a script to run in browser console
 
 ## How to Test
 
 1. Clear your browser's localStorage cache by running this in the console:
+
    ```javascript
-   localStorage.removeItem('geolocation_data');
-   localStorage.removeItem('user_country_language_preferences');
+   localStorage.removeItem("geolocation_data");
+   localStorage.removeItem("user_country_language_preferences");
    ```
 
 2. Refresh the page

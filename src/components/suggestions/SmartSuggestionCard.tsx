@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
 interface SmartSuggestion {
   id: string;
-  type: 'next_step' | 'improvement' | 'completion' | 'family_benefit';
-  priority: 'high' | 'medium' | 'low';
+  type: "next_step" | "improvement" | "completion" | "family_benefit";
+  priority: "high" | "medium" | "low";
   context: string;
   suggestion: string;
   reasoning: string;
@@ -23,32 +23,45 @@ const SmartSuggestionCard: React.FC<SmartSuggestionCardProps> = ({
   suggestion,
   onAccept,
   onDismiss,
-  onDefer
+  onDefer,
 }) => {
   const getPriorityColor = (priority: string) => {
     switch (priority) {
-      case 'high': return 'border-red-200 bg-red-50';
-      case 'medium': return 'border-yellow-200 bg-yellow-50';
-      case 'low': return 'border-blue-200 bg-blue-50';
-      default: return 'border-gray-200 bg-gray-50';
+      case "high":
+        return "border-red-200 bg-red-50";
+      case "medium":
+        return "border-yellow-200 bg-yellow-50";
+      case "low":
+        return "border-blue-200 bg-blue-50";
+      default:
+        return "border-gray-200 bg-gray-50";
     }
   };
-  
+
   const getTypeIcon = (type: string) => {
     switch (type) {
-      case 'next_step': return '→';
-      case 'improvement': return '↑';
-      case 'completion': return '✓';
-      case 'family_benefit': return '👨‍👩‍👧‍👦';
-      default: return '•';
+      case "next_step":
+        return "→";
+      case "improvement":
+        return "↑";
+      case "completion":
+        return "✓";
+      case "family_benefit":
+        return "👨‍👩‍👧‍👦";
+      default:
+        return "•";
     }
   };
-  
+
   return (
-    <div className={`smart-suggestion-card border-2 rounded-lg p-4 mb-4 ${getPriorityColor(suggestion.priority)}`}>
+    <div
+      className={`smart-suggestion-card border-2 rounded-lg p-4 mb-4 ${getPriorityColor(suggestion.priority)}`}
+    >
       <div className="suggestion-header flex items-start justify-between mb-3">
         <div className="flex items-center">
-          <span className="type-icon text-2xl mr-3">{getTypeIcon(suggestion.type)}</span>
+          <span className="type-icon text-2xl mr-3">
+            {getTypeIcon(suggestion.type)}
+          </span>
           <div>
             <h3 className="font-semibold text-lg">{suggestion.suggestion}</h3>
             <p className="text-sm text-gray-600">{suggestion.context}</p>
@@ -58,21 +71,21 @@ const SmartSuggestionCard: React.FC<SmartSuggestionCardProps> = ({
           {suggestion.timeEstimate}
         </span>
       </div>
-      
+
       <div className="suggestion-details mb-4">
         <div className="reasoning mb-2">
           <p className="text-sm text-gray-700">
             <strong>Why this matters:</strong> {suggestion.reasoning}
           </p>
         </div>
-        
+
         <div className="family-benefit">
           <p className="text-sm text-green-700 bg-green-50 p-2 rounded">
             <strong>Family benefit:</strong> {suggestion.familyBenefit}
           </p>
         </div>
       </div>
-      
+
       <div className="suggestion-actions flex gap-2">
         <button
           onClick={() => {

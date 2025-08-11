@@ -1,11 +1,11 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { ChevronRight, AlertCircle, CheckCircle } from 'lucide-react';
+import React, { useState, useEffect, useCallback } from "react";
+import { ChevronRight, AlertCircle, CheckCircle } from "lucide-react";
 
 // Types
-type PreparednessLevel = 'high' | 'medium' | 'low';
-type FamilyFocus = 'spouse' | 'children' | 'parents' | 'business';
-type UrgencyLevel = 'immediate' | 'moderate' | 'planning';
-type ComplexityLevel = 'basic' | 'intermediate' | 'advanced';
+type PreparednessLevel = "high" | "medium" | "low";
+type FamilyFocus = "spouse" | "children" | "parents" | "business";
+type UrgencyLevel = "immediate" | "moderate" | "planning";
+type ComplexityLevel = "basic" | "intermediate" | "advanced";
 
 export interface UserContext {
   preparednessLevel: PreparednessLevel;
@@ -25,7 +25,7 @@ export interface Question {
   text: string;
   subtext?: string;
   options: QuestionOption[];
-  type: 'primary' | 'followup' | 'contextual';
+  type: "primary" | "followup" | "contextual";
   category?: string;
 }
 
@@ -51,330 +51,406 @@ export interface ProgressiveQuestionLogicProps {
 // Question definitions
 const QUESTIONS: Record<string, Question> = {
   // Primary questions
-  'family-reliance': {
-    id: 'family-reliance',
+  "family-reliance": {
+    id: "family-reliance",
     text: "Who depends on you the most?",
-    subtext: "Understanding your responsibilities helps us prioritize what matters",
-    type: 'primary',
+    subtext:
+      "Understanding your responsibilities helps us prioritize what matters",
+    type: "primary",
     options: [
-      { value: 'spouse-children', label: 'My spouse and children rely on me for everything' },
-      { value: 'business-partners', label: 'My business partners and employees count on me' },
-      { value: 'aging-parents', label: 'I help care for aging parents or relatives' },
-      { value: 'self-focused', label: "It's mainly just me I need to plan for" }
-    ]
+      {
+        value: "spouse-children",
+        label: "My spouse and children rely on me for everything",
+      },
+      {
+        value: "business-partners",
+        label: "My business partners and employees count on me",
+      },
+      {
+        value: "aging-parents",
+        label: "I help care for aging parents or relatives",
+      },
+      {
+        value: "self-focused",
+        label: "It's mainly just me I need to plan for",
+      },
+    ],
   },
-  
+
   // Follow-up questions for spouse-children path
-  'spouse-challenge': {
-    id: 'spouse-challenge',
+  "spouse-challenge": {
+    id: "spouse-challenge",
     text: "What would be most challenging for your spouse to handle alone?",
     subtext: "We'll focus on making this easier for them",
-    type: 'followup',
-    category: 'family',
+    type: "followup",
+    category: "family",
     options: [
-      { value: 'finances', label: 'Managing our finances and investments' },
-      { value: 'legal-insurance', label: 'Dealing with insurance and legal matters' },
-      { value: 'children-decisions', label: 'Making major decisions about the children' },
-      { value: 'business-work', label: 'Handling business or work responsibilities' }
-    ]
+      { value: "finances", label: "Managing our finances and investments" },
+      {
+        value: "legal-insurance",
+        label: "Dealing with insurance and legal matters",
+      },
+      {
+        value: "children-decisions",
+        label: "Making major decisions about the children",
+      },
+      {
+        value: "business-work",
+        label: "Handling business or work responsibilities",
+      },
+    ],
   },
-  
+
   // Follow-up questions for organization path
-  'organization-status': {
-    id: 'organization-status',
+  "organization-status": {
+    id: "organization-status",
     text: "How organized are your important documents right now?",
     subtext: "Be honest - we're here to help, not judge",
-    type: 'primary',
+    type: "primary",
     options: [
-      { value: 'very-organized', label: 'Everything is documented and easy to find' },
-      { value: 'somewhat-organized', label: 'Most things are in place, but some gaps exist' },
-      { value: 'not-organized', label: "I'm not sure where everything is" },
-      { value: 'no-system', label: "There's no real system - it's all in my head" }
-    ]
+      {
+        value: "very-organized",
+        label: "Everything is documented and easy to find",
+      },
+      {
+        value: "somewhat-organized",
+        label: "Most things are in place, but some gaps exist",
+      },
+      { value: "not-organized", label: "I'm not sure where everything is" },
+      {
+        value: "no-system",
+        label: "There's no real system - it's all in my head",
+      },
+    ],
   },
-  
-  'organization-priority': {
-    id: 'organization-priority',
+
+  "organization-priority": {
+    id: "organization-priority",
     text: "What's the most important thing you need to get organized first?",
     subtext: "Let's start with what would make the biggest difference",
-    type: 'followup',
-    category: 'organization',
+    type: "followup",
+    category: "organization",
     options: [
-      { value: 'documents', label: 'Important documents (insurance, legal papers)' },
-      { value: 'accounts', label: 'Financial account information and passwords' },
-      { value: 'contacts', label: 'Contact information for advisors and professionals' },
-      { value: 'instructions', label: 'Instructions for handling emergencies' }
-    ]
+      {
+        value: "documents",
+        label: "Important documents (insurance, legal papers)",
+      },
+      {
+        value: "accounts",
+        label: "Financial account information and passwords",
+      },
+      {
+        value: "contacts",
+        label: "Contact information for advisors and professionals",
+      },
+      { value: "instructions", label: "Instructions for handling emergencies" },
+    ],
   },
-  
-  'document-timeline': {
-    id: 'document-timeline',
+
+  "document-timeline": {
+    id: "document-timeline",
     text: "How much time do you think your family would need to find everything?",
     subtext: "This helps us understand the urgency",
-    type: 'followup',
-    category: 'organization',
+    type: "followup",
+    category: "organization",
     options: [
-      { value: 'hours', label: 'A few hours if they knew where to look' },
-      { value: 'days', label: 'Several days of searching through everything' },
-      { value: 'weeks', label: 'Weeks or months to piece it all together' },
-      { value: 'never', label: 'They might never find some important things' }
-    ]
+      { value: "hours", label: "A few hours if they knew where to look" },
+      { value: "days", label: "Several days of searching through everything" },
+      { value: "weeks", label: "Weeks or months to piece it all together" },
+      { value: "never", label: "They might never find some important things" },
+    ],
   },
-  
+
   // Business-focused follow-ups
-  'business-structure': {
-    id: 'business-structure',
+  "business-structure": {
+    id: "business-structure",
     text: "What's your role in the business?",
     subtext: "This helps us understand succession planning needs",
-    type: 'followup',
-    category: 'business',
+    type: "followup",
+    category: "business",
     options: [
-      { value: 'sole-owner', label: "I'm the sole owner and decision maker" },
-      { value: 'majority-owner', label: "I'm the majority owner with partners" },
-      { value: 'equal-partner', label: "I'm an equal partner in the business" },
-      { value: 'key-employee', label: "I'm a key employee but not an owner" }
-    ]
+      { value: "sole-owner", label: "I'm the sole owner and decision maker" },
+      {
+        value: "majority-owner",
+        label: "I'm the majority owner with partners",
+      },
+      { value: "equal-partner", label: "I'm an equal partner in the business" },
+      { value: "key-employee", label: "I'm a key employee but not an owner" },
+    ],
   },
-  
+
   // Advanced preparedness questions
-  'optimization-focus': {
-    id: 'optimization-focus',
+  "optimization-focus": {
+    id: "optimization-focus",
     text: "What aspect of your planning would you like to strengthen?",
     subtext: "Even good plans can be better",
-    type: 'contextual',
-    category: 'advanced',
+    type: "contextual",
+    category: "advanced",
     options: [
-      { value: 'tax-efficiency', label: 'Tax efficiency and wealth preservation' },
-      { value: 'business-continuity', label: 'Business continuity planning' },
-      { value: 'family-communication', label: 'Family preparation and communication' },
-      { value: 'scenario-planning', label: 'Planning for unexpected scenarios' }
-    ]
+      {
+        value: "tax-efficiency",
+        label: "Tax efficiency and wealth preservation",
+      },
+      { value: "business-continuity", label: "Business continuity planning" },
+      {
+        value: "family-communication",
+        label: "Family preparation and communication",
+      },
+      {
+        value: "scenario-planning",
+        label: "Planning for unexpected scenarios",
+      },
+    ],
   },
-  
+
   // Low preparedness questions
-  'first-step': {
-    id: 'first-step',
+  "first-step": {
+    id: "first-step",
     text: "What feels like the most manageable first step?",
     subtext: "Small steps lead to big progress",
-    type: 'contextual',
-    category: 'basic',
+    type: "contextual",
+    category: "basic",
     options: [
-      { value: 'list-accounts', label: 'Make a list of all my accounts' },
-      { value: 'gather-documents', label: 'Gather important documents in one place' },
-      { value: 'talk-spouse', label: 'Have a conversation with my spouse' },
-      { value: 'find-advisor', label: 'Find a trusted advisor to help' }
-    ]
-  }
+      { value: "list-accounts", label: "Make a list of all my accounts" },
+      {
+        value: "gather-documents",
+        label: "Gather important documents in one place",
+      },
+      { value: "talk-spouse", label: "Have a conversation with my spouse" },
+      { value: "find-advisor", label: "Find a trusted advisor to help" },
+    ],
+  },
 };
 
 // Question flow definitions
 const QUESTION_FLOWS: QuestionFlow[] = [
   {
-    questionId: 'family-reliance',
+    questionId: "family-reliance",
     nextQuestions: {
-      'spouse-children': 'spouse-challenge',
-      'business-partners': 'business-structure',
-      'aging-parents': 'organization-status',
-      'self-focused': 'organization-status'
+      "spouse-children": "spouse-challenge",
+      "business-partners": "business-structure",
+      "aging-parents": "organization-status",
+      "self-focused": "organization-status",
     },
     contextModifiers: {
-      'spouse-children': { familyFocus: 'spouse', urgencyLevel: 'immediate' },
-      'business-partners': { familyFocus: 'business', complexityLevel: 'advanced' },
-      'aging-parents': { familyFocus: 'parents', urgencyLevel: 'moderate' },
-      'self-focused': { urgencyLevel: 'planning' }
-    }
+      "spouse-children": { familyFocus: "spouse", urgencyLevel: "immediate" },
+      "business-partners": {
+        familyFocus: "business",
+        complexityLevel: "advanced",
+      },
+      "aging-parents": { familyFocus: "parents", urgencyLevel: "moderate" },
+      "self-focused": { urgencyLevel: "planning" },
+    },
   },
   {
-    questionId: 'spouse-challenge',
+    questionId: "spouse-challenge",
     nextQuestions: {
-      'finances': 'organization-status',
-      'legal-insurance': 'organization-status',
-      'children-decisions': 'organization-status',
-      'business-work': 'business-structure'
+      finances: "organization-status",
+      "legal-insurance": "organization-status",
+      "children-decisions": "organization-status",
+      "business-work": "business-structure",
     },
     contextModifiers: {
-      'finances': { complexityLevel: 'intermediate' },
-      'legal-insurance': { complexityLevel: 'intermediate' },
-      'children-decisions': { familyFocus: 'children' },
-      'business-work': { familyFocus: 'business', complexityLevel: 'advanced' }
-    }
+      finances: { complexityLevel: "intermediate" },
+      "legal-insurance": { complexityLevel: "intermediate" },
+      "children-decisions": { familyFocus: "children" },
+      "business-work": { familyFocus: "business", complexityLevel: "advanced" },
+    },
   },
   {
-    questionId: 'organization-status',
+    questionId: "organization-status",
     nextQuestions: {
-      'very-organized': 'optimization-focus',
-      'somewhat-organized': 'organization-priority',
-      'not-organized': 'organization-priority',
-      'no-system': 'first-step'
+      "very-organized": "optimization-focus",
+      "somewhat-organized": "organization-priority",
+      "not-organized": "organization-priority",
+      "no-system": "first-step",
     },
     contextModifiers: {
-      'very-organized': { preparednessLevel: 'high' },
-      'somewhat-organized': { preparednessLevel: 'medium' },
-      'not-organized': { preparednessLevel: 'low' },
-      'no-system': { preparednessLevel: 'low', urgencyLevel: 'immediate' }
-    }
+      "very-organized": { preparednessLevel: "high" },
+      "somewhat-organized": { preparednessLevel: "medium" },
+      "not-organized": { preparednessLevel: "low" },
+      "no-system": { preparednessLevel: "low", urgencyLevel: "immediate" },
+    },
   },
   {
-    questionId: 'organization-priority',
+    questionId: "organization-priority",
     nextQuestions: {
-      'documents': 'document-timeline',
-      'accounts': 'document-timeline',
-      'contacts': 'document-timeline',
-      'instructions': 'document-timeline'
+      documents: "document-timeline",
+      accounts: "document-timeline",
+      contacts: "document-timeline",
+      instructions: "document-timeline",
     },
     contextModifiers: {
-      'documents': { complexityLevel: 'basic' },
-      'accounts': { complexityLevel: 'intermediate' },
-      'contacts': { complexityLevel: 'basic' },
-      'instructions': { urgencyLevel: 'immediate' }
-    }
+      documents: { complexityLevel: "basic" },
+      accounts: { complexityLevel: "intermediate" },
+      contacts: { complexityLevel: "basic" },
+      instructions: { urgencyLevel: "immediate" },
+    },
   },
   {
-    questionId: 'document-timeline',
+    questionId: "document-timeline",
     nextQuestions: {
-      'hours': null,
-      'days': null,
-      'weeks': null,
-      'never': null
+      hours: null,
+      days: null,
+      weeks: null,
+      never: null,
     },
     contextModifiers: {
-      'hours': { preparednessLevel: 'medium' },
-      'days': { preparednessLevel: 'low' },
-      'weeks': { preparednessLevel: 'low', urgencyLevel: 'immediate' },
-      'never': { preparednessLevel: 'low', urgencyLevel: 'immediate' }
+      hours: { preparednessLevel: "medium" },
+      days: { preparednessLevel: "low" },
+      weeks: { preparednessLevel: "low", urgencyLevel: "immediate" },
+      never: { preparednessLevel: "low", urgencyLevel: "immediate" },
     },
     completionTriggers: {
-      'hours': true,
-      'days': true,
-      'weeks': true,
-      'never': true
-    }
+      hours: true,
+      days: true,
+      weeks: true,
+      never: true,
+    },
   },
   {
-    questionId: 'business-structure',
+    questionId: "business-structure",
     nextQuestions: {
-      'sole-owner': 'organization-status',
-      'majority-owner': 'organization-status',
-      'equal-partner': 'organization-status',
-      'key-employee': 'organization-status'
+      "sole-owner": "organization-status",
+      "majority-owner": "organization-status",
+      "equal-partner": "organization-status",
+      "key-employee": "organization-status",
     },
     contextModifiers: {
-      'sole-owner': { complexityLevel: 'advanced', urgencyLevel: 'immediate' },
-      'majority-owner': { complexityLevel: 'advanced' },
-      'equal-partner': { complexityLevel: 'intermediate' },
-      'key-employee': { complexityLevel: 'basic' }
-    }
+      "sole-owner": { complexityLevel: "advanced", urgencyLevel: "immediate" },
+      "majority-owner": { complexityLevel: "advanced" },
+      "equal-partner": { complexityLevel: "intermediate" },
+      "key-employee": { complexityLevel: "basic" },
+    },
   },
   {
-    questionId: 'optimization-focus',
+    questionId: "optimization-focus",
     nextQuestions: {
-      'tax-efficiency': null,
-      'business-continuity': null,
-      'family-communication': null,
-      'scenario-planning': null
+      "tax-efficiency": null,
+      "business-continuity": null,
+      "family-communication": null,
+      "scenario-planning": null,
     },
     contextModifiers: {
-      'tax-efficiency': { complexityLevel: 'advanced' },
-      'business-continuity': { complexityLevel: 'advanced', familyFocus: 'business' },
-      'family-communication': { familyFocus: 'spouse' },
-      'scenario-planning': { complexityLevel: 'advanced' }
+      "tax-efficiency": { complexityLevel: "advanced" },
+      "business-continuity": {
+        complexityLevel: "advanced",
+        familyFocus: "business",
+      },
+      "family-communication": { familyFocus: "spouse" },
+      "scenario-planning": { complexityLevel: "advanced" },
     },
     completionTriggers: {
-      'tax-efficiency': true,
-      'business-continuity': true,
-      'family-communication': true,
-      'scenario-planning': true
-    }
+      "tax-efficiency": true,
+      "business-continuity": true,
+      "family-communication": true,
+      "scenario-planning": true,
+    },
   },
   {
-    questionId: 'first-step',
+    questionId: "first-step",
     nextQuestions: {
-      'list-accounts': null,
-      'gather-documents': null,
-      'talk-spouse': null,
-      'find-advisor': null
+      "list-accounts": null,
+      "gather-documents": null,
+      "talk-spouse": null,
+      "find-advisor": null,
     },
     contextModifiers: {
-      'list-accounts': { complexityLevel: 'basic' },
-      'gather-documents': { complexityLevel: 'basic' },
-      'talk-spouse': { familyFocus: 'spouse' },
-      'find-advisor': { complexityLevel: 'intermediate' }
+      "list-accounts": { complexityLevel: "basic" },
+      "gather-documents": { complexityLevel: "basic" },
+      "talk-spouse": { familyFocus: "spouse" },
+      "find-advisor": { complexityLevel: "intermediate" },
     },
     completionTriggers: {
-      'list-accounts': true,
-      'gather-documents': true,
-      'talk-spouse': true,
-      'find-advisor': true
-    }
-  }
+      "list-accounts": true,
+      "gather-documents": true,
+      "talk-spouse": true,
+      "find-advisor": true,
+    },
+  },
 ];
 
 const ProgressiveQuestionLogic: React.FC<ProgressiveQuestionLogicProps> = ({
   onComplete,
   onProgress,
-  initialContext = {}
+  initialContext = {},
 }) => {
-  const [currentQuestionId, setCurrentQuestionId] = useState<string>('family-reliance');
+  const [currentQuestionId, setCurrentQuestionId] =
+    useState<string>("family-reliance");
   const [answers, setAnswers] = useState<Record<string, string>>({});
-  const [questionHistory, setQuestionHistory] = useState<string[]>(['family-reliance']);
+  const [questionHistory, setQuestionHistory] = useState<string[]>([
+    "family-reliance",
+  ]);
   const [isComplete, setIsComplete] = useState(false);
   const [userContext, setUserContext] = useState<UserContext>({
-    preparednessLevel: 'medium',
-    familyFocus: 'spouse',
-    urgencyLevel: 'moderate',
-    complexityLevel: 'basic',
-    ...initialContext
+    preparednessLevel: "medium",
+    familyFocus: "spouse",
+    urgencyLevel: "moderate",
+    complexityLevel: "basic",
+    ...initialContext,
   });
 
   const currentQuestion = QUESTIONS[currentQuestionId];
-  const currentFlow = QUESTION_FLOWS.find(flow => flow.questionId === currentQuestionId);
+  const currentFlow = QUESTION_FLOWS.find(
+    (flow) => flow.questionId === currentQuestionId,
+  );
   const maxQuestions = 8; // Maximum questions to maintain engagement
   const progress = Math.min((questionHistory.length / maxQuestions) * 100, 100);
 
   useEffect(() => {
-     
     if (onProgress) {
       onProgress(progress);
     }
   }, [progress, onProgress]);
 
-  const handleAnswer = useCallback((answerValue: string) => {
-    // Record the answer
-    const newAnswers = { ...answers, [currentQuestionId]: answerValue };
-    setAnswers(newAnswers);
+  const handleAnswer = useCallback(
+    (answerValue: string) => {
+      // Record the answer
+      const newAnswers = { ...answers, [currentQuestionId]: answerValue };
+      setAnswers(newAnswers);
 
-    if (!currentFlow) {
-      console.error('No flow found for question:', currentQuestionId);
-      return;
-    }
+      if (!currentFlow) {
+        console.error("No flow found for question:", currentQuestionId);
+        return;
+      }
 
-    // Update context if needed
-    const contextUpdate = currentFlow.contextModifiers[answerValue];
-    if (contextUpdate) {
-      setUserContext(prev => ({ ...prev, ...contextUpdate }));
-    }
+      // Update context if needed
+      const contextUpdate = currentFlow.contextModifiers[answerValue];
+      if (contextUpdate) {
+        setUserContext((prev) => ({ ...prev, ...contextUpdate }));
+      }
 
-    // Check for completion
-    const shouldComplete = currentFlow.completionTriggers?.[answerValue] || 
-                          questionHistory.length >= maxQuestions;
-    
-    if (shouldComplete) {
-      setIsComplete(true);
-      onComplete(newAnswers, { ...userContext, ...contextUpdate });
-      return;
-    }
+      // Check for completion
+      const shouldComplete =
+        currentFlow.completionTriggers?.[answerValue] ||
+        questionHistory.length >= maxQuestions;
 
-    // Get next question
-    const nextQuestionId = currentFlow.nextQuestions[answerValue];
-    if (nextQuestionId) {
-      setCurrentQuestionId(nextQuestionId);
-      setQuestionHistory([...questionHistory, nextQuestionId]);
-    } else {
-      // No more questions - complete the flow
-      setIsComplete(true);
-      onComplete(newAnswers, { ...userContext, ...contextUpdate });
-    }
-  }, [currentQuestionId, currentFlow, answers, questionHistory, userContext, onComplete]);
+      if (shouldComplete) {
+        setIsComplete(true);
+        onComplete(newAnswers, { ...userContext, ...contextUpdate });
+        return;
+      }
+
+      // Get next question
+      const nextQuestionId = currentFlow.nextQuestions[answerValue];
+      if (nextQuestionId) {
+        setCurrentQuestionId(nextQuestionId);
+        setQuestionHistory([...questionHistory, nextQuestionId]);
+      } else {
+        // No more questions - complete the flow
+        setIsComplete(true);
+        onComplete(newAnswers, { ...userContext, ...contextUpdate });
+      }
+    },
+    [
+      currentQuestionId,
+      currentFlow,
+      answers,
+      questionHistory,
+      userContext,
+      onComplete,
+    ],
+  );
 
   const getProgressMessage = () => {
     const count = questionHistory.length;
@@ -386,10 +462,10 @@ const ProgressiveQuestionLogic: React.FC<ProgressiveQuestionLogicProps> = ({
 
   const getContextualIcon = (option: QuestionOption) => {
     // Add contextual icons based on answer implications
-    if (option.value.includes('organized') || option.value.includes('hours')) {
+    if (option.value.includes("organized") || option.value.includes("hours")) {
       return <CheckCircle className="w-5 h-5 text-green-600" />;
     }
-    if (option.value.includes('never') || option.value.includes('no-system')) {
+    if (option.value.includes("never") || option.value.includes("no-system")) {
       return <AlertCircle className="w-5 h-5 text-amber-600" />;
     }
     return <ChevronRight className="w-5 h-5 text-gray-400" />;
@@ -426,7 +502,7 @@ const ProgressiveQuestionLogic: React.FC<ProgressiveQuestionLogicProps> = ({
           </span>
         </div>
         <div className="w-full bg-gray-200 rounded-full h-2">
-          <div 
+          <div
             className="bg-blue-600 h-2 rounded-full transition-all duration-300"
             style={{ width: `${progress}%` }}
           />
@@ -439,9 +515,7 @@ const ProgressiveQuestionLogic: React.FC<ProgressiveQuestionLogicProps> = ({
           {currentQuestion.text}
         </h3>
         {currentQuestion.subtext && (
-          <p className="text-gray-600">
-            {currentQuestion.subtext}
-          </p>
+          <p className="text-gray-600">{currentQuestion.subtext}</p>
         )}
       </div>
 
@@ -466,9 +540,9 @@ const ProgressiveQuestionLogic: React.FC<ProgressiveQuestionLogicProps> = ({
       {/* Question type indicator */}
       <div className="mt-6 text-center">
         <span className="text-sm text-gray-500">
-          {currentQuestion.type === 'primary' && 'Core Question'}
-          {currentQuestion.type === 'followup' && 'Follow-up Question'}
-          {currentQuestion.type === 'contextual' && 'Contextual Question'}
+          {currentQuestion.type === "primary" && "Core Question"}
+          {currentQuestion.type === "followup" && "Follow-up Question"}
+          {currentQuestion.type === "contextual" && "Contextual Question"}
         </span>
       </div>
     </div>
@@ -476,4 +550,3 @@ const ProgressiveQuestionLogic: React.FC<ProgressiveQuestionLogicProps> = ({
 };
 
 export default ProgressiveQuestionLogic;
-

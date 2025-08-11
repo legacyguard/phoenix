@@ -1,11 +1,19 @@
-import React, { useState } from 'react';
-import { useTranslation } from 'react-i18next';
-import { motion } from 'framer-motion';
-import { cn } from '@/lib/utils';
-import { Button, ButtonProps } from '@/components/ui/button';
+import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
+import { cn } from "@/lib/utils";
+import { Button, ButtonProps } from "@/components/ui/button";
 
 interface EmpatheticButtonProps extends ButtonProps {
-  action: 'save' | 'delete' | 'share' | 'edit' | 'add' | 'continue' | 'back' | 'next';
+  action:
+    | "save"
+    | "delete"
+    | "share"
+    | "edit"
+    | "add"
+    | "continue"
+    | "back"
+    | "next";
   loading?: boolean;
   loadingContext?: string;
 }
@@ -19,7 +27,7 @@ const EmpatheticButton: React.FC<EmpatheticButtonProps> = ({
   disabled,
   ...props
 }) => {
-  const { t } = useTranslation('loading-states');
+  const { t } = useTranslation("loading-states");
   const [isHovered, setIsHovered] = useState(false);
 
   const getButtonText = () => {
@@ -37,15 +45,12 @@ const EmpatheticButton: React.FC<EmpatheticButtonProps> = ({
       whileTap={{ scale: 0.98 }}
     >
       <Button
-        className={cn(
-          'transition-all duration-300',
-          className
-        )}
+        className={cn("transition-all duration-300", className)}
         disabled={disabled || loading}
         {...props}
       >
         <motion.span
-          key={isHovered ? 'hover' : 'normal'}
+          key={isHovered ? "hover" : "normal"}
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 10 }}

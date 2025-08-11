@@ -1,25 +1,50 @@
-import React from 'react';
-import { useTranslation } from 'react-i18next';
-import { useGenderContext, getGenderedTranslation, GENDER_OPTIONS } from '../i18n/gender-context';
-import { Button } from './ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';
-import { Label } from './ui/label';
+import React from "react";
+import { useTranslation } from "react-i18next";
+import {
+  useGenderContext,
+  getGenderedTranslation,
+  GENDER_OPTIONS,
+} from "../i18n/gender-context";
+import { Button } from "./ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "./ui/card";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "./ui/select";
+import { Label } from "./ui/label";
 
 export const GenderAwareExample: React.FC = () => {
-  const { t } = useTranslation('dashboard-main');
+  const { t } = useTranslation("dashboard-main");
   const { gender, setGender, getGenderedKey } = useGenderContext();
 
   // Example of using gendered translations
-  const welcomeTitle = getGenderedTranslation(t, 'welcome.title');
-  const welcomeSubtitle = getGenderedTranslation(t, 'welcome.subtitle');
-  
-  const assetAddedMessage = getGenderedTranslation(t, 'notifications.success.assetAdded');
-  const profileUpdatedMessage = getGenderedTranslation(t, 'notifications.success.profileUpdated');
-  const reviewDueMessage = getGenderedTranslation(t, 'notifications.info.reviewDue');
+  const welcomeTitle = getGenderedTranslation(t, "welcome.title");
+  const welcomeSubtitle = getGenderedTranslation(t, "welcome.subtitle");
+
+  const assetAddedMessage = getGenderedTranslation(
+    t,
+    "notifications.success.assetAdded",
+  );
+  const profileUpdatedMessage = getGenderedTranslation(
+    t,
+    "notifications.success.profileUpdated",
+  );
+  const reviewDueMessage = getGenderedTranslation(
+    t,
+    "notifications.info.reviewDue",
+  );
 
   const handleGenderChange = (newGender: string) => {
-    setGender(newGender as 'masculine' | 'feminine' | 'neutral');
+    setGender(newGender as "masculine" | "feminine" | "neutral");
   };
 
   return (
@@ -28,7 +53,8 @@ export const GenderAwareExample: React.FC = () => {
         <CardHeader>
           <CardTitle>Gender-Aware Translation Example</CardTitle>
           <CardDescription>
-            This component demonstrates how to use gender-aware translations in the application.
+            This component demonstrates how to use gender-aware translations in
+            the application.
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
@@ -51,7 +77,9 @@ export const GenderAwareExample: React.FC = () => {
 
           {/* Current Gender Display */}
           <div className="p-3 bg-muted rounded-md">
-            <p className="text-sm font-medium">Current Gender Setting: {gender}</p>
+            <p className="text-sm font-medium">
+              Current Gender Setting: {gender}
+            </p>
             <p className="text-xs text-muted-foreground">
               Translation keys will be suffixed with: _{gender}
             </p>
@@ -64,7 +92,7 @@ export const GenderAwareExample: React.FC = () => {
               <p className="text-lg font-medium">{welcomeTitle}</p>
               <p className="text-sm text-muted-foreground">{welcomeSubtitle}</p>
               <p className="text-xs text-muted-foreground mt-2">
-                Key used: {getGenderedKey('welcome.title')}
+                Key used: {getGenderedKey("welcome.title")}
               </p>
             </div>
 
@@ -75,7 +103,8 @@ export const GenderAwareExample: React.FC = () => {
                 <p className="text-sm">• {profileUpdatedMessage}</p>
               </div>
               <p className="text-xs text-muted-foreground mt-2">
-                Keys used: {getGenderedKey('notifications.success.assetAdded')}, {getGenderedKey('notifications.success.profileUpdated')}
+                Keys used: {getGenderedKey("notifications.success.assetAdded")},{" "}
+                {getGenderedKey("notifications.success.profileUpdated")}
               </p>
             </div>
 
@@ -83,7 +112,7 @@ export const GenderAwareExample: React.FC = () => {
               <h3 className="font-semibold mb-2">Info Notifications:</h3>
               <p className="text-sm">• {reviewDueMessage}</p>
               <p className="text-xs text-muted-foreground mt-2">
-                Key used: {getGenderedKey('notifications.info.reviewDue')}
+                Key used: {getGenderedKey("notifications.info.reviewDue")}
               </p>
             </div>
           </div>
@@ -107,5 +136,4 @@ export const GenderAwareExample: React.FC = () => {
   );
 };
 
-
-export default GenderAwareExample; 
+export default GenderAwareExample;

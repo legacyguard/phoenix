@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
-import { useTranslation } from 'react-i18next';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowRight, Heart } from 'lucide-react';
-import { cn } from '@/lib/utils';
+import React, { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
+import { motion, AnimatePresence } from "framer-motion";
+import { ArrowRight, Heart } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 interface EmpatheticTransitionProps {
   from: string;
@@ -13,10 +13,10 @@ interface EmpatheticTransitionProps {
 }
 
 const transitionKeys: Record<string, string> = {
-  'dashboard-assets': 'dashboard_to_assets',
-  'assets-family': 'assets_to_family',
-  'family-will': 'family_to_will',
-  'will-review': 'will_to_review',
+  "dashboard-assets": "dashboard_to_assets",
+  "assets-family": "assets_to_family",
+  "family-will": "family_to_will",
+  "will-review": "will_to_review",
 };
 
 const EmpatheticTransition: React.FC<EmpatheticTransitionProps> = ({
@@ -24,9 +24,9 @@ const EmpatheticTransition: React.FC<EmpatheticTransitionProps> = ({
   to,
   duration = 2000,
   onComplete,
-  className
+  className,
 }) => {
-  const { t } = useTranslation('loading-states');
+  const { t } = useTranslation("loading-states");
   const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
@@ -41,7 +41,9 @@ const EmpatheticTransition: React.FC<EmpatheticTransitionProps> = ({
   }, [duration, onComplete]);
 
   const transitionKey = `${from}-${to}`;
-  const message = t(`transitions.${transitionKeys[transitionKey] || 'navigating'}`);
+  const message = t(
+    `transitions.${transitionKeys[transitionKey] || "navigating"}`,
+  );
 
   return (
     <AnimatePresence>
@@ -52,8 +54,8 @@ const EmpatheticTransition: React.FC<EmpatheticTransitionProps> = ({
           exit={{ opacity: 0 }}
           transition={{ duration: 0.3 }}
           className={cn(
-            'fixed inset-0 z-50 flex items-center justify-center bg-white/95 backdrop-blur-sm',
-            className
+            "fixed inset-0 z-50 flex items-center justify-center bg-white/95 backdrop-blur-sm",
+            className,
           )}
         >
           <div className="flex flex-col items-center space-y-6">
@@ -61,12 +63,12 @@ const EmpatheticTransition: React.FC<EmpatheticTransitionProps> = ({
             <motion.div
               animate={{
                 scale: [1, 1.1, 1],
-                rotate: [0, 5, -5, 0]
+                rotate: [0, 5, -5, 0],
               }}
               transition={{
                 duration: 2,
                 repeat: Infinity,
-                ease: "easeInOut"
+                ease: "easeInOut",
               }}
             >
               <Heart className="w-16 h-16 text-primary" />
@@ -79,15 +81,13 @@ const EmpatheticTransition: React.FC<EmpatheticTransitionProps> = ({
               transition={{ delay: 0.2 }}
               className="text-center space-y-2"
             >
-              <p className="text-lg font-medium text-gray-900">
-                {message}
-              </p>
+              <p className="text-lg font-medium text-gray-900">{message}</p>
               <motion.div
                 animate={{ x: [0, 10, 0] }}
                 transition={{
                   duration: 1.5,
                   repeat: Infinity,
-                  ease: "easeInOut"
+                  ease: "easeInOut",
                 }}
                 className="flex items-center justify-center text-primary"
               >
