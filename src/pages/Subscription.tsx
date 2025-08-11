@@ -15,8 +15,8 @@ import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Loader2, CreditCard, Calendar, AlertCircle } from "lucide-react";
 import { stripeService } from "@/services/stripeService";
 import { useSubscription } from "@/hooks/useSubscription";
-import { format } from "date-fns";
 import { toast } from "sonner";
+import format from "date-fns/format";
 
 const Subscription = () => {
   const { t } = useTranslation("ui-common");

@@ -13,7 +13,7 @@ import {
 import { Skeleton } from "@/components/ui/skeleton";
 import { ExecutorStatusReporting } from "./ExecutorStatusReporting";
 import type { Badge } from "@/components/ui/badge";
-import { format } from "date-fns";
+import format from "date-fns/format";
 
 interface Communication {
   id: string;

@@ -23,7 +23,6 @@ import {
   ConsultationRequest,
 } from "@/services/LegalConsultationService";
 import { useAuth } from "@/hooks/useAuth";
-import { format } from "date-fns";
 import {
   Clock,
   CheckCircle2,
@@ -35,6 +34,7 @@ import {
   Building,
   FileText,
 } from "lucide-react";
+import format from "date-fns/format";
 
 export default function MyConsultationsPage() {
   const { user } = useAuth();

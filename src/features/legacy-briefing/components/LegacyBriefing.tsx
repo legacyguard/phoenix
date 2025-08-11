@@ -27,11 +27,12 @@ import {
   Trash2,
   Edit,
 } from "lucide-react";
-import { format, formatDistanceToNow } from "date-fns";
 import type { TimeCapsuleMessage } from "@/types/timeCapsule";
 import { CreateTimeCapsuleModal } from "@/components/CreateTimeCapsuleModal";
 import type { supabase } from "@/lib/supabase";
 import { toast } from "sonner";
+import format from "date-fns/format";
+import formatDistanceToNow from "date-fns/formatDistanceToNow";
 
 export const LegacyBriefing: React.FC = () => {
   const { t } = useTranslation("time-capsule");

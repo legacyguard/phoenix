@@ -38,7 +38,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { format } from "date-fns";
+import format from "date-fns/format";
 
 interface Communication {
   id: string;

@@ -32,8 +32,8 @@ import {
   Gift,
   Heart,
 } from "lucide-react";
-import { format } from "date-fns";
 import type { useTranslation } from "react-i18next";
+import format from "date-fns/format";
 
 interface TimeCapsuleMessage {
   id: string;

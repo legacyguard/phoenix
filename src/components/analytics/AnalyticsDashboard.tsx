@@ -52,8 +52,8 @@ import {
 } from "recharts";
 import { analyticsService } from "@/services/analytics.service";
 import type { AnalyticsEvent } from "@/types/analytics";
-import { formatDistanceToNow } from "date-fns";
 import { cn } from "@/lib/utils";
+import formatDistanceToNow from "date-fns/formatDistanceToNow";
 
 interface EventStreamItem extends AnalyticsEvent {
   id: string;

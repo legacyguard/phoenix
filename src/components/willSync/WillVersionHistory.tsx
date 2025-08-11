@@ -26,8 +26,8 @@ import {
   RefreshCw,
 } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import { format } from "date-fns";
 import type { WillVersion, WillChanges } from "@/types/willSync";
+import format from "date-fns/format";
 
 interface WillVersionHistoryProps {
   versions: WillVersion[];

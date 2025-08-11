@@ -20,7 +20,6 @@ import {
 } from "@/components/ui/popover";
 import { Calendar } from "@/components/ui/calendar";
 import { cn } from "@/lib/utils";
-import { format } from "date-fns";
 import {
   CalendarIcon,
   Upload,
@@ -54,6 +53,7 @@ import type { FormField } from "@/components/ui/form-field";
 import { useDebouncedCallback } from "@/hooks/useDebounce";
 import { useStorageUsage } from "@/hooks/useStorageUsage";
 import { canAddFile, formatBytes } from "@/utils/planLimits";
+import format from "date-fns/format";
 
 interface DocumentUploadProps {
   onDocumentUploaded: (document: Record<string, unknown>) => void;

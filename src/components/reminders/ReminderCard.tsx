@@ -9,14 +9,12 @@ import {
 import { Button } from "@/components/ui/button";
 import { Clock, CheckCircle, SnoozeIcon, X } from "lucide-react";
 import { cn } from "@/lib/utils";
-import {
-  format,
-  formatDistanceToNow,
-  isPast,
-  isWithinInterval,
-  subDays,
-} from "date-fns";
 import { useTranslation } from "react-i18next";
+import format from "date-fns/format";
+import formatDistanceToNow from "date-fns/formatDistanceToNow";
+import isPast from "date-fns/isPast";
+import isWithinInterval from "date-fns/isWithinInterval";
+import subDays from "date-fns/subDays";
 
 export interface Reminder {
   id: string;

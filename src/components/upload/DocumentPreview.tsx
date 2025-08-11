@@ -15,10 +15,10 @@ import {
   Trash2,
   AlertCircle,
 } from "lucide-react";
-import { format } from "date-fns";
 import { cn } from "@/lib/utils";
 import type { ProcessedDocument } from "../../../lib/services/document-upload.types";
 import type { useTranslation } from "react-i18next";
+import format from "date-fns/format";
 
 interface DocumentPreviewProps {
   document: ProcessedDocument;

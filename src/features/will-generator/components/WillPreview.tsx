@@ -20,10 +20,10 @@ import {
   Shield,
 } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import type { format } from "date-fns";
 import type { WillContent, WillRequirements } from "@/types/will";
 import LegalConsultationModal from "@/components/LegalConsultationModal";
 import jsPDF from "jspdf";
+import format from "date-fns/format";
 
 interface WillPreviewProps {
   willContent: WillContent;

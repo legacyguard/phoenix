@@ -30,7 +30,7 @@ import {
 } from "@/components/ui/card";
 import type { Badge } from "@/components/ui/badge";
 import { Alert, AlertDescription } from "@/components/ui/alert";
-import { format } from "date-fns";
+import format from "date-fns/format";
 
 interface ExecutorStatus {
   status: string;

@@ -20,8 +20,9 @@ import {
 import { useTranslation } from "react-i18next";
 import { COUNTRY_CONFIGS } from "@/config/countries";
 import { AsyncErrorBoundary } from "@/components/common/AsyncErrorBoundary";
-import { format } from "date-fns";
 import { cn } from "@/lib/utils";
+import format from "date-fns/format";
+
 interface Document {
   id: string;
   name: string;

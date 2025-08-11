@@ -24,8 +24,10 @@ import {
   FileText,
   BellOff,
 } from "lucide-react";
-import { format, formatDistanceToNow, addDays } from "date-fns";
 import { toast } from "sonner";
+import format from "date-fns/format";
+import formatDistanceToNow from "date-fns/formatDistanceToNow";
+import addDays from "date-fns/addDays";
 
 interface DocumentAlert {
   id: string;

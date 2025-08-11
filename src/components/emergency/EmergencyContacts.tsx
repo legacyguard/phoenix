@@ -50,8 +50,8 @@ import {
   Bell,
   BellOff,
 } from "lucide-react";
-import { format } from "date-fns";
 import { toast } from "sonner";
+import format from "date-fns/format";
 
 interface Contact {
   id: string;

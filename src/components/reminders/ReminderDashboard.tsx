@@ -11,9 +11,9 @@ import { Button } from "@/components/ui/button";
 import { Bell, Clock, ArrowRight } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import { format } from "date-fns";
 import { cn } from "@/lib/utils";
 import type { Reminder } from "./ReminderCard";
+import format from "date-fns/format";
 
 interface ReminderDashboardProps {
   reminders: Reminder[];

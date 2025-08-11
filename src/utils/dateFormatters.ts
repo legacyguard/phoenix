@@ -1,4 +1,4 @@
-import { formatDistanceToNow } from "date-fns";
+import formatDistanceToNow from "date-fns/formatDistanceToNow";
 
 // Helper function that might be used elsewhere
 export const formatLastContacted = (date: string | null): string => {

@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Shield, Clock, FileText, Globe } from "lucide-react";
-import { format } from "date-fns";
+import format from "date-fns/format";
 
 export function OCRDemo() {
   const { t } = useTranslation("ui-common");

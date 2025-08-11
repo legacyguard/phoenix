@@ -21,7 +21,7 @@ import {
   PiggyBank,
   Shield,
 } from "lucide-react";
-import { format } from "date-fns";
+import format from "date-fns/format";
 
 interface SharedContentViewerProps {
   token?: string;

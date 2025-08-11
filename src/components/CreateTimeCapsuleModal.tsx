@@ -22,7 +22,6 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { cn } from "@/lib/utils";
-import { format } from "date-fns";
 import {
   CalendarIcon,
   FileText,
@@ -46,6 +45,7 @@ import {
 import { useSubscription } from "@/hooks/useSubscription";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import format from "date-fns/format";
 
 interface CreateTimeCapsuleModalProps {
   open: boolean;

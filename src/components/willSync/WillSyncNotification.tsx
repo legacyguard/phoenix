@@ -10,8 +10,8 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { AlertCircle, CheckCircle2, Clock, X, RefreshCw } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import { formatDistanceToNow } from "date-fns";
 import type { WillSyncLog, WillChanges } from "@/types/willSync";
+import formatDistanceToNow from "date-fns/formatDistanceToNow";
 
 interface WillSyncNotificationProps {
   syncLog: WillSyncLog;
