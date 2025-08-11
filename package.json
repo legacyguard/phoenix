@@ -33,12 +33,14 @@
     "check:i18n": "node scripts/ci/i18n-guard.cjs",
     "check:cycles": "node scripts/ci/cycles-guard.cjs",
     "check:exports": "node scripts/ci/exports-guard.cjs",
-    "check:all": "npm run -s check:i18n && npm run -s check:cycles && npm run -s check:exports && npm run -s check:size",
+    "check:all": "npm run -s check:i18n && npm run -s check:cycles && npm run -s check:exports && npm run -s check:size && npm run -s check:only && npm run -s check:console",
     "ci": "npm run -s lint && npm run -s typecheck && npm run -s test:ci && npm run -s check:all",
     "check:i18n:strict": "node scripts/ci/i18n-guard.cjs --strict",
     "check:size": "node scripts/ci/size-guard.cjs",
     "check:size:strict": "node scripts/ci/size-guard.cjs --strict",
-    "size:baseline": "node scripts/ci/size-guard.cjs --write-baseline"
+    "size:baseline": "node scripts/ci/size-guard.cjs --write-baseline",
+    "check:only": "node scripts/ci/only-guard.cjs",
+    "check:console": "node scripts/ci/console-guard.cjs"
   },
   "dependencies": {
     "@clerk/clerk-react": "^5.36.0",
