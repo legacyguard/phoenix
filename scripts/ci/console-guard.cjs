@@ -4,7 +4,7 @@ const roots=['src']; const bad=[];
 function walk(d){ for(const n of fs.readdirSync(d)){ const p=path.join(d,n);
   if (n==='node_modules'||n==='coverage'||n.startsWith('.cleanup_')) continue;
   const st=fs.statSync(p);
-  if (st.isDirectory()) walk(d);
+  if (st.isDirectory()) walk(p);
   else if (/\.(t|j)sx?$/.test(n)) {
     const s=fs.readFileSync(p,'utf8'); const lines=s.split('\n');
     lines.forEach((ln,i)=>{
