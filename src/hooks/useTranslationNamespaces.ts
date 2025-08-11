@@ -82,7 +82,7 @@ const ComplexComponent = () => {
   return (
     <div>
       <h1>{t('dashboard-main:dashboard.title')}</h1>
-      <p>{t('assets.description')}</p>
+      <p>{t('assets:assets.description')}</p>
     </div>
   );
 };

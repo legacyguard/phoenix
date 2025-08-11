@@ -393,7 +393,7 @@ export const DocumentUpload: React.FC<DocumentUploadProps> = ({
     return (
       <div className="space-y-6">
         <div className="flex items-center justify-between">
-          <h2 className="text-xl font-semibold">{t("assets.title")}</h2>
+          <h2 className="text-xl font-semibold">{t("assets:assets.title")}</h2>
           <Button variant="outline" onClick={handleCancel}>
             {tCommon("common.buttons.cancel")}
           </Button>
@@ -521,7 +521,7 @@ export const DocumentUpload: React.FC<DocumentUploadProps> = ({
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between">
-        <h2 className="text-xl font-semibold">{t("assets.title")}</h2>
+        <h2 className="text-xl font-semibold">{t("assets:assets.title")}</h2>
         <Button variant="outline" onClick={handleCancel}>
           {tCommon("common.buttons.cancel")}
         </Button>
@@ -580,7 +580,7 @@ export const DocumentUpload: React.FC<DocumentUploadProps> = ({
           {isUploading ? (
             <div className="space-y-2">
               <div className="flex items-center justify-between text-sm">
-                <span>{t("assets.processing")}</span>
+                <span>{t("assets:assets.processing")}</span>
                 <span>{uploadProgress}%</span>
               </div>
               <Progress value={uploadProgress} className="w-full" />
@@ -588,7 +588,7 @@ export const DocumentUpload: React.FC<DocumentUploadProps> = ({
           ) : (
             <Button onClick={uploadFile} className="w-full">
               <Upload className="mr-2 h-4 w-4" />
-              {t("assets.title")}
+              {t("assets:assets.title")}
             </Button>
           )}
         </div>

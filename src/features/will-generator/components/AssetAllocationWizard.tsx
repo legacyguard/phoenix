@@ -90,14 +90,16 @@ export function AssetAllocationWizard({
     <div className="space-y-6">
       <Card>
         <CardHeader>
-          <CardTitle>{t("wills.allocation.title")}</CardTitle>
-          <CardDescription>{t("wills.allocation.description")}</CardDescription>
+          <CardTitle>{t("wills:wills.allocation.title")}</CardTitle>
+          <CardDescription>
+            {t("wills:wills.allocation.description")}
+          </CardDescription>
         </CardHeader>
         <CardContent>
           {/* Allocation progress */}
           <div className="mb-6 space-y-2">
             <div className="flex items-center justify-between text-sm">
-              <span>{t("wills.allocation.total")}</span>
+              <span>{t("wills:wills.allocation.total")}</span>
               <span
                 className={`font-medium ${isValid ? "text-green-600" : "text-destructive"}`}
               >
@@ -111,7 +113,7 @@ export function AssetAllocationWizard({
             {!isValid && totalAllocation > 0 && (
               <p className="text-sm text-destructive flex items-center gap-1">
                 <AlertCircle className="h-3 w-3" />
-                {errors.allocation || t("wills.validation.allocation100")}
+                {errors.allocation || t("wills:wills.validation.allocation100")}
               </p>
             )}
           </div>
@@ -127,7 +129,7 @@ export function AssetAllocationWizard({
                         <div className="grid grid-cols-2 gap-4">
                           <div className="space-y-2">
                             <Label htmlFor={`name-${beneficiary.id}`}>
-                              {t("wills.beneficiary.name")}
+                              {t("wills:wills.beneficiary.name")}
                             </Label>
                             <Input
                               id={`name-${beneficiary.id}`}
@@ -144,7 +146,7 @@ export function AssetAllocationWizard({
                           </div>
                           <div className="space-y-2">
                             <Label htmlFor={`relationship-${beneficiary.id}`}>
-                              {t("wills.beneficiary.relationship")}
+                              {t("wills:wills.beneficiary.relationship")}
                             </Label>
                             <Input
                               id={`relationship-${beneficiary.id}`}
@@ -164,7 +166,7 @@ export function AssetAllocationWizard({
                         {allocationType === "percentage" && (
                           <div className="space-y-2">
                             <Label htmlFor={`allocation-${beneficiary.id}`}>
-                              {t("wills.allocation.percentage")}
+                              {t("wills:wills.allocation.percentage")}
                             </Label>
                             <div className="flex items-center gap-4">
                               <Slider
@@ -238,12 +240,12 @@ export function AssetAllocationWizard({
       <Card>
         <CardContent className="pt-6">
           <h4 className="font-medium mb-2">
-            {t("wills.allocation.tips.title")}
+            {t("wills:wills.allocation.tips.title")}
           </h4>
           <ul className="text-sm text-muted-foreground space-y-1">
-            <li>• {t("wills.allocation.tips.tip1")}</li>
-            <li>• {t("wills.allocation.tips.tip2")}</li>
-            <li>• {t("wills.allocation.tips.tip3")}</li>
+            <li>• {t("wills:wills.allocation.tips.tip1")}</li>
+            <li>• {t("wills:wills.allocation.tips.tip2")}</li>
+            <li>• {t("wills:wills.allocation.tips.tip3")}</li>
           </ul>
         </CardContent>
       </Card>

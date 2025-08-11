@@ -139,20 +139,20 @@ export const GuardianCard: React.FC<GuardianCardProps> = ({
               <div className="flex items-center justify-between pt-2 border-t">
                 <div className="flex items-center gap-2">
                   <span className="text-sm font-medium">
-                    {t("family.label")}:
+                    {t("ui-common:family.label")}:
                   </span>
                   {playbookStatus === "complete" ? (
                     <Badge variant="default" className="text-xs gap-1">
                       <CheckCircle className="h-3 w-3" />
-                      {t("family.status.complete")}
+                      {t("ui-common:family.status.complete")}
                     </Badge>
                   ) : playbookStatus === "draft" ? (
                     <Badge variant="secondary" className="text-xs">
-                      {t("family.status.draft")}
+                      {t("ui-common:family.status.draft")}
                     </Badge>
                   ) : (
                     <Badge variant="outline" className="text-xs">
-                      {t("family.status.empty")}
+                      {t("ui-common:family.status.empty")}
                     </Badge>
                   )}
                 </div>
@@ -164,8 +164,8 @@ export const GuardianCard: React.FC<GuardianCardProps> = ({
                 >
                   <BookOpen className="h-3 w-3 mr-1" />
                   {playbookStatus === "empty"
-                    ? t("family.create")
-                    : t("family.edit")}
+                    ? t("ui-common:family.create")
+                    : t("ui-common:family.edit")}
                 </Button>
               </div>
             )}
@@ -178,11 +178,11 @@ export const GuardianCard: React.FC<GuardianCardProps> = ({
                 </Badge>
               ) : guardian.invitation_status === "accepted" ? (
                 <Badge variant="heritage" className="text-xs">
-                  {t("family.accepted")}
+                  {t("ui-common:family.accepted")}
                 </Badge>
               ) : guardian.invitation_status === "declined" ? (
                 <Badge variant="destructive" className="text-xs">
-                  {t("family.declined")}
+                  {t("ui-common:family.declined")}
                 </Badge>
               ) : (
                 onSendInvite && (

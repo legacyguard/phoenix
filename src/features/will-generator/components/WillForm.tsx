@@ -53,14 +53,26 @@ export const WillForm: React.FC<WillFormProps> = ({
   const watchStatus = watch("status");
 
   const statusOptions = [
-    { key: "draft", label: t("wills.status.draft"), variant: "secondary" },
+    {
+      key: "draft",
+      label: t("wills:wills.status.draft"),
+      variant: "secondary",
+    },
     {
       key: "notarized",
-      label: t("wills.status.notarized"),
+      label: t("wills:wills.status.notarized"),
       variant: "default",
     },
-    { key: "stored", label: t("wills.status.stored"), variant: "default" },
-    { key: "updated", label: t("wills.status.updated"), variant: "secondary" },
+    {
+      key: "stored",
+      label: t("wills:wills.status.stored"),
+      variant: "default",
+    },
+    {
+      key: "updated",
+      label: t("wills:wills.status.updated"),
+      variant: "secondary",
+    },
   ];
 
   const getStatusVariant = (
@@ -191,14 +203,14 @@ export const WillForm: React.FC<WillFormProps> = ({
             onClick={onCancel}
             disabled={isLoading}
           >
-            {t("wills.common.cancel")}
+            {t("wills:wills.common.cancel")}
           </Button>
         )}
         <Button type="submit" disabled={isLoading} className="flex-1">
           {isLoading ? (
             <>
               <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
-              {t("wills.buttons.saving")}
+              {t("wills:wills.buttons.saving")}
             </>
           ) : (
             <>

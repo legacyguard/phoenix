@@ -203,7 +203,7 @@ const ExecutorDashboard: React.FC = () => {
                     <div className="flex items-center gap-2 text-xs text-muted-foreground">
                       <Clock className="h-3 w-3" />
                       <span>
-                        {t("family.due")}:{" "}
+                        {t("ui-common:family.due")}:{" "}
                         {new Date(task.due_date).toLocaleDateString()}
                       </span>
                     </div>
@@ -213,7 +213,7 @@ const ExecutorDashboard: React.FC = () => {
                     <div className="flex items-center gap-2 text-xs text-green-600">
                       <CheckCircle2 className="h-3 w-3" />
                       <span>
-                        {t("family.completed")}:{" "}
+                        {t("ui-common:family.completed")}:{" "}
                         {new Date(task.completed_at).toLocaleDateString()}
                       </span>
                     </div>
@@ -227,7 +227,7 @@ const ExecutorDashboard: React.FC = () => {
                   className="flex-shrink-0"
                 >
                   {task.status === "completed" ? (
-                    <>{t("family.undo")}</>
+                    <>{t("ui-common:family.undo")}</>
                   ) : (
                     <>{t("family.markComplete")}</>
                   )}
@@ -301,10 +301,10 @@ const ExecutorDashboard: React.FC = () => {
     <div className="p-6 max-w-6xl mx-auto">
       <div className="mb-8">
         <h1 className="text-3xl font-bold mb-2">
-          {t("family.dashboard.title")}
+          {t("ui-common:family.dashboard.title")}
         </h1>
         <p className="text-muted-foreground">
-          {t("family.dashboard.subtitle")}
+          {t("ui-common:family.dashboard.subtitle")}
         </p>
       </div>
 
@@ -366,7 +366,7 @@ const ExecutorDashboard: React.FC = () => {
               {stats.completed}
             </div>
             <div className="text-sm text-muted-foreground">
-              {t("family.stats.completed")}
+              {t("ui-common:family.stats.completed")}
             </div>
           </CardContent>
         </Card>
@@ -376,7 +376,7 @@ const ExecutorDashboard: React.FC = () => {
               {stats.pending}
             </div>
             <div className="text-sm text-muted-foreground">
-              {t("family.stats.remaining")}
+              {t("ui-common:family.stats.remaining")}
             </div>
           </CardContent>
         </Card>
@@ -393,10 +393,10 @@ const ExecutorDashboard: React.FC = () => {
               <div>
                 <CardTitle className="flex items-center gap-2">
                   <AlertCircle className="h-5 w-5 text-red-500" />
-                  {t("family.sections.immediate.title")}
+                  {t("ui-common:family.sections.immediate.title")}
                 </CardTitle>
                 <CardDescription>
-                  {t("family.sections.immediate.description")}
+                  {t("ui-common:family.sections.immediate.description")}
                 </CardDescription>
               </div>
               {expandedSections.has("immediate") ? (
@@ -410,7 +410,7 @@ const ExecutorDashboard: React.FC = () => {
             <CardContent>
               {renderTaskList(
                 tasks.immediate,
-                t("family.sections.immediate.empty"),
+                t("ui-common:family.sections.immediate.empty"),
               )}
             </CardContent>
           )}
@@ -457,9 +457,11 @@ const ExecutorDashboard: React.FC = () => {
           >
             <div className="flex items-center justify-between">
               <div>
-                <CardTitle>{t("family.sections.ongoing.title")}</CardTitle>
+                <CardTitle>
+                  {t("ui-common:family.sections.ongoing.title")}
+                </CardTitle>
                 <CardDescription>
-                  {t("family.sections.ongoing.description")}
+                  {t("ui-common:family.sections.ongoing.description")}
                 </CardDescription>
               </div>
               {expandedSections.has("ongoing") ? (
@@ -473,7 +475,7 @@ const ExecutorDashboard: React.FC = () => {
             <CardContent>
               {renderTaskList(
                 tasks.ongoing,
-                t("family.sections.ongoing.empty"),
+                t("ui-common:family.sections.ongoing.empty"),
               )}
             </CardContent>
           )}
@@ -489,7 +491,7 @@ const ExecutorDashboard: React.FC = () => {
 
       <div className="mt-8 p-4 bg-muted rounded-lg">
         <p className="text-sm text-muted-foreground text-center">
-          {t("family.dashboard.reminder")}
+          {t("ui-common:family.dashboard.reminder")}
         </p>
       </div>
 

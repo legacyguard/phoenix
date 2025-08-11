@@ -25,7 +25,7 @@ export async function POST(request: NextRequest) {
     } = await supabase.auth.getUser();
     if (authError || !user) {
       return NextResponse.json(
-        { error: t("wills.errors.unauthorized") },
+        { error: t("wills:wills.errors.unauthorized") },
         { status: 401 },
       );
     }
@@ -56,7 +56,7 @@ export async function POST(request: NextRequest) {
     if (saveError) {
       console.error("Error saving will:", saveError);
       return NextResponse.json(
-        { error: t("wills.errors.failed_to_save") },
+        { error: t("wills:wills.errors.failed_to_save") },
         { status: 500 },
       );
     }
@@ -104,7 +104,7 @@ export async function POST(request: NextRequest) {
         console.error("Skribble signing error:", skribbleResponse.error);
         return NextResponse.json(
           {
-            error: t("wills.errors.failed_to_sign"),
+            error: t("wills:wills.errors.failed_to_sign"),
             details: skribbleResponse.error,
           },
           { status: skribbleResponse.status },
@@ -137,7 +137,7 @@ export async function POST(request: NextRequest) {
   } catch (error) {
     console.error("Will generation error:", error);
     return NextResponse.json(
-      { error: t("wills.errors.failed_to_generate") },
+      { error: t("wills:wills.errors.failed_to_generate") },
       { status: 500 },
     );
   }

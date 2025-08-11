@@ -116,7 +116,9 @@ export default function GuardianPlaybookView({
       <div className="min-h-screen flex items-center justify-center">
         <div className="animate-pulse text-center">
           <Book className="h-8 w-8 text-primary mx-auto mb-4" />
-          <p className="text-muted-foreground">{t("family.loading")}</p>
+          <p className="text-muted-foreground">
+            {t("ui-common:family.loading")}
+          </p>
         </div>
       </div>
     );
@@ -144,35 +146,35 @@ export default function GuardianPlaybookView({
     {
       id: "funeral",
       icon: Heart,
-      title: t("family.tabs.funeral"),
+      title: t("ui-common:family.tabs.funeral"),
       content: playbook.funeral_wishes,
       color: "text-pink-500",
     },
     {
       id: "digital",
       icon: Shield,
-      title: t("family.tabs.digital"),
+      title: t("ui-common:family.tabs.digital"),
       content: playbook.digital_accounts_shutdown,
       color: "text-blue-500",
     },
     {
       id: "documents",
       icon: FileText,
-      title: t("family.tabs.documents"),
+      title: t("ui-common:family.tabs.documents"),
       content: playbook.document_locations,
       color: "text-green-500",
     },
     {
       id: "messages",
       icon: MessageSquare,
-      title: t("family.tabs.messages"),
+      title: t("ui-common:family.tabs.messages"),
       content: playbook.personal_messages,
       color: "text-purple-500",
     },
     {
       id: "instructions",
       icon: Home,
-      title: t("family.tabs.instructions"),
+      title: t("ui-common:family.tabs.instructions"),
       content: playbook.practical_instructions,
       color: "text-orange-500",
     },

@@ -158,10 +158,10 @@ export const BeneficiariesForm: React.FC<BeneficiariesFormProps> = ({
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <Users className="h-5 w-5" />
-              {t("wills.beneficiaries.title")}
+              {t("wills:wills.beneficiaries.title")}
             </CardTitle>
             <CardDescription>
-              {t("wills.beneficiaries.description")}
+              {t("wills:wills.beneficiaries.description")}
             </CardDescription>
           </CardHeader>
           <CardContent>
@@ -184,7 +184,7 @@ export const BeneficiariesForm: React.FC<BeneficiariesFormProps> = ({
                         <div className="grid grid-cols-2 gap-4">
                           <div className="space-y-2">
                             <Label htmlFor={`beneficiaries.${index}.name`}>
-                              {t("wills.beneficiaries.name")}
+                              {t("wills:wills.beneficiaries.name")}
                             </Label>
                             <Input
                               id={`beneficiaries.${index}.name`}
@@ -220,7 +220,7 @@ export const BeneficiariesForm: React.FC<BeneficiariesFormProps> = ({
                             <Label
                               htmlFor={`beneficiaries.${index}.allocation`}
                             >
-                              {t("wills.beneficiaries.allocation")}
+                              {t("wills:wills.beneficiaries.allocation")}
                             </Label>
                             <Input
                               id={`beneficiaries.${index}.allocation`}

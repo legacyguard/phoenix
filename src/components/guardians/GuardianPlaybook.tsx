@@ -229,7 +229,9 @@ export default function GuardianPlaybook({
     return (
       <Card>
         <CardContent className="flex items-center justify-center h-64">
-          <p className="text-muted-foreground">{t("family.loading")}</p>
+          <p className="text-muted-foreground">
+            {t("ui-common:family.loading")}
+          </p>
         </CardContent>
       </Card>
     );
@@ -500,7 +502,9 @@ export default function GuardianPlaybook({
                   ? t("playbook.titleReadOnly", { name: guardianName })
                   : t("playbook.title", { name: guardianName })}
               </CardTitle>
-              <CardDescription>{t("family.description")}</CardDescription>
+              <CardDescription>
+                {t("ui-common:family.description")}
+              </CardDescription>
             </div>
             <div className="flex items-center gap-2">
               <Badge variant={statusColors[status]}>
@@ -521,7 +525,7 @@ export default function GuardianPlaybook({
                     ) : (
                       <>
                         <Eye className="h-4 w-4 mr-2" />
-                        {t("family.preview")}
+                        {t("ui-common:family.preview")}
                       </>
                     )}
                   </Button>
@@ -531,7 +535,9 @@ export default function GuardianPlaybook({
                     size="sm"
                   >
                     <Save className="h-4 w-4 mr-2" />
-                    {saving ? t("family.saving") : t("family.save")}
+                    {saving
+                      ? t("ui-common:family.saving")
+                      : t("ui-common:family.save")}
                   </Button>
                 </>
               )}

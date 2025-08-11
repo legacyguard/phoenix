@@ -16,7 +16,7 @@ export async function GET(request: NextRequest) {
     } = await supabase.auth.getUser();
     if (authError || !user) {
       return NextResponse.json(
-        { error: t("wills.errors.unauthorized") },
+        { error: t("wills:wills.errors.unauthorized") },
         { status: 401 },
       );
     }
@@ -48,7 +48,7 @@ export async function GET(request: NextRequest) {
     if (error) {
       console.error("Error fetching wills:", error);
       return NextResponse.json(
-        { error: t("wills.errors.failed_to_fetch") },
+        { error: t("wills:wills.errors.failed_to_fetch") },
         { status: 500 },
       );
     }
@@ -57,7 +57,7 @@ export async function GET(request: NextRequest) {
   } catch (error) {
     console.error("Error in will list:", error);
     return NextResponse.json(
-      { error: t("wills.errors.failed_to_fetch") },
+      { error: t("wills:wills.errors.failed_to_fetch") },
       { status: 500 },
     );
   }

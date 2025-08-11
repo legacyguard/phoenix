@@ -253,7 +253,7 @@ const WelcomeScreen: React.FC<{
           <div className="grid md:grid-cols-3 gap-6 mb-10">
             <FeatureCard
               icon={<Shield className="w-6 h-6 text-blue-600" />}
-              title={t("respectful.welcome.features.security.title")}
+              title={t("onboarding:respectful.welcome.features.security.title")}
               description={t(
                 "respectful.welcome.features.security.description",
               )}
@@ -261,13 +261,15 @@ const WelcomeScreen: React.FC<{
             />
             <FeatureCard
               icon={<Users className="w-6 h-6 text-purple-600" />}
-              title={t("respectful.welcome.features.family.title")}
-              description={t("respectful.welcome.features.family.description")}
+              title={t("onboarding:respectful.welcome.features.family.title")}
+              description={t(
+                "onboarding:respectful.welcome.features.family.description",
+              )}
               color="purple"
             />
             <FeatureCard
               icon={<Sparkles className="w-6 h-6 text-green-600" />}
-              title={t("respectful.welcome.features.guidance.title")}
+              title={t("onboarding:respectful.welcome.features.guidance.title")}
               description={t(
                 "respectful.welcome.features.guidance.description",
               )}
@@ -356,21 +358,25 @@ const GuidanceOverlay: React.FC<{
   const tips = [
     {
       icon: <FileText className="w-5 h-5 text-blue-600" />,
-      title: t("respectful.guidance.tips.documents.title"),
-      description: t("respectful.guidance.tips.documents.description"),
-      action: t("respectful.guidance.tips.documents.action"),
+      title: t("onboarding:respectful.guidance.tips.documents.title"),
+      description: t(
+        "onboarding:respectful.guidance.tips.documents.description",
+      ),
+      action: t("onboarding:respectful.guidance.tips.documents.action"),
     },
     {
       icon: <Users className="w-5 h-5 text-purple-600" />,
-      title: t("respectful.guidance.tips.family.title"),
-      description: t("respectful.guidance.tips.family.description"),
-      action: t("respectful.guidance.tips.family.action"),
+      title: t("onboarding:respectful.guidance.tips.family.title"),
+      description: t("onboarding:respectful.guidance.tips.family.description"),
+      action: t("onboarding:respectful.guidance.tips.family.action"),
     },
     {
       icon: <Shield className="w-5 h-5 text-green-600" />,
-      title: t("respectful.guidance.tips.security.title"),
-      description: t("respectful.guidance.tips.security.description"),
-      action: t("respectful.guidance.tips.security.action"),
+      title: t("onboarding:respectful.guidance.tips.security.title"),
+      description: t(
+        "onboarding:respectful.guidance.tips.security.description",
+      ),
+      action: t("onboarding:respectful.guidance.tips.security.action"),
     },
   ];
 
@@ -380,7 +386,7 @@ const GuidanceOverlay: React.FC<{
         <div className="flex items-center gap-2">
           <Sparkles className="w-5 h-5 text-yellow-500" />
           <h4 className="font-semibold text-gray-900">
-            {t("respectful.guidance.title")}
+            {t("onboarding:respectful.guidance.title")}
           </h4>
         </div>
         <button
@@ -427,7 +433,7 @@ const GuidanceOverlay: React.FC<{
           onClick={() => setCurrentTip((prev) => (prev + 1) % tips.length)}
           className="text-xs text-gray-500 hover:text-gray-700"
         >
-          {t("respectful.guidance.next")} →
+          {t("onboarding:respectful.guidance.next")} →
         </button>
       </div>
     </div>

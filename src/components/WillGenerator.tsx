@@ -292,7 +292,7 @@ const WillGenerator: React.FC<WillGeneratorProps> = ({
           </p>
           <div className="mt-4">
             <Button onClick={() => handleJurisdictionConfirm(true)}>
-              {t("wills.common.confirm")}
+              {t("wills:wills.common.confirm")}
             </Button>
             <Button variant="outline" onClick={() => setChangeCountry(true)}>
               {t("willGenerator.changeCountry")}
@@ -336,7 +336,7 @@ const WillGenerator: React.FC<WillGeneratorProps> = ({
               required
             />
             <Button type="submit" className="mt-4">
-              {t("wills.common.next")}
+              {t("wills:wills.common.next")}
             </Button>
           </form>
         </div>

@@ -125,9 +125,9 @@ export const TemplateModal: React.FC<TemplateModalProps> = ({
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="max-w-4xl max-h-[90vh]">
         <DialogHeader>
-          <DialogTitle>{t("family.templates.title")}</DialogTitle>
+          <DialogTitle>{t("ui-common:family.templates.title")}</DialogTitle>
           <DialogDescription>
-            {t("family.templates.description")}
+            {t("ui-common:family.templates.description")}
           </DialogDescription>
         </DialogHeader>
 
@@ -244,7 +244,7 @@ export const TemplateModal: React.FC<TemplateModalProps> = ({
               )}
 
             <div className="space-y-2">
-              <Label>{t("family.templates.preview")}</Label>
+              <Label>{t("ui-common:family.templates.preview")}</Label>
               <ScrollArea className="h-[200px] border rounded-md p-3">
                 <pre className="text-sm whitespace-pre-wrap font-sans">
                   {getPreview()}
@@ -266,7 +266,7 @@ export const TemplateModal: React.FC<TemplateModalProps> = ({
                         }
                         onClick={() => setInsertMode("replace")}
                       >
-                        {t("family.templates.replace")}
+                        {t("ui-common:family.templates.replace")}
                       </Button>
                       <Button
                         size="sm"
@@ -275,7 +275,7 @@ export const TemplateModal: React.FC<TemplateModalProps> = ({
                         }
                         onClick={() => setInsertMode("append")}
                       >
-                        {t("family.templates.append")}
+                        {t("ui-common:family.templates.append")}
                       </Button>
                     </div>
                   </div>

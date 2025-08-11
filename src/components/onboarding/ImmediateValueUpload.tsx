@@ -88,49 +88,49 @@ const ImmediateValueUpload: React.FC<ImmediateValueUploadProps> = ({
   }> = [
     {
       id: "identity",
-      label: t("respectful.upload.categories.identity"),
+      label: t("onboarding:respectful.upload.categories.identity"),
       icon: <Users className="w-5 h-5" />,
       color: "blue",
       examples: ["Passport", "Driver's License", "Birth Certificate"],
     },
     {
       id: "financial",
-      label: t("respectful.upload.categories.financial"),
+      label: t("onboarding:respectful.upload.categories.financial"),
       icon: <CreditCard className="w-5 h-5" />,
       color: "green",
       examples: ["Bank Statements", "Investment Accounts", "Tax Returns"],
     },
     {
       id: "property",
-      label: t("respectful.upload.categories.property"),
+      label: t("onboarding:respectful.upload.categories.property"),
       icon: <Home className="w-5 h-5" />,
       color: "purple",
       examples: ["Deeds", "Titles", "Mortgages"],
     },
     {
       id: "insurance",
-      label: t("respectful.upload.categories.insurance"),
+      label: t("onboarding:respectful.upload.categories.insurance"),
       icon: <Shield className="w-5 h-5" />,
       color: "orange",
       examples: ["Life Insurance", "Health Insurance", "Home Insurance"],
     },
     {
       id: "legal",
-      label: t("respectful.upload.categories.legal"),
+      label: t("onboarding:respectful.upload.categories.legal"),
       icon: <FileCheck className="w-5 h-5" />,
       color: "red",
       examples: ["Will", "Power of Attorney", "Trust Documents"],
     },
     {
       id: "medical",
-      label: t("respectful.upload.categories.medical"),
+      label: t("onboarding:respectful.upload.categories.medical"),
       icon: <Heart className="w-5 h-5" />,
       color: "pink",
       examples: ["Medical Records", "Prescriptions", "Insurance Cards"],
     },
     {
       id: "family",
-      label: t("respectful.upload.categories.family"),
+      label: t("onboarding:respectful.upload.categories.family"),
       icon: <Users className="w-5 h-5" />,
       color: "indigo",
       examples: [
@@ -141,7 +141,7 @@ const ImmediateValueUpload: React.FC<ImmediateValueUploadProps> = ({
     },
     {
       id: "other",
-      label: t("respectful.upload.categories.other"),
+      label: t("onboarding:respectful.upload.categories.other"),
       icon: <FileText className="w-5 h-5" />,
       color: "gray",
       examples: ["Contracts", "Warranties", "Other Documents"],
@@ -397,12 +397,14 @@ const ImmediateValueUpload: React.FC<ImmediateValueUploadProps> = ({
         </div>
 
         <h2 className="text-3xl font-bold text-gray-900 mb-4">
-          {t("respectful.upload.title")}
+          {t("onboarding:respectful.upload.title")}
         </h2>
         <p className="text-xl text-gray-600 mb-2">
-          {t("respectful.upload.subtitle")}
+          {t("onboarding:respectful.upload.subtitle")}
         </p>
-        <p className="text-gray-500">{t("respectful.upload.description")}</p>
+        <p className="text-gray-500">
+          {t("onboarding:respectful.upload.description")}
+        </p>
       </div>
 
       {/* Progress Indicator */}
@@ -471,14 +473,14 @@ const ImmediateValueUpload: React.FC<ImmediateValueUploadProps> = ({
                 <div className="py-4">
                   <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4" />
                   <p className="text-gray-600">
-                    {t("respectful.upload.processing")}
+                    {t("onboarding:respectful.upload.processing")}
                   </p>
                 </div>
               ) : showSuccess ? (
                 <div className="py-4">
                   <CheckCircle className="w-12 h-12 text-green-600 mx-auto mb-4" />
                   <p className="text-green-600 font-medium">
-                    {t("respectful.upload.success")}
+                    {t("onboarding:respectful.upload.success")}
                   </p>
                 </div>
               ) : (
@@ -494,7 +496,7 @@ const ImmediateValueUpload: React.FC<ImmediateValueUploadProps> = ({
                   </p>
                   <div className="flex items-center justify-center gap-2 text-xs text-gray-400">
                     <Lock className="w-3 h-3" />
-                    <span>{t("respectful.upload.encrypted")}</span>
+                    <span>{t("onboarding:respectful.upload.encrypted")}</span>
                   </div>
                 </>
               )}
@@ -548,10 +550,10 @@ const ImmediateValueUpload: React.FC<ImmediateValueUploadProps> = ({
                   </div>
                   <div>
                     <p className="font-medium text-gray-900">
-                      {t("respectful.upload.benefit1.title")}
+                      {t("onboarding:respectful.upload.benefit1.title")}
                     </p>
                     <p className="text-sm text-gray-600">
-                      {t("respectful.upload.benefit1.description")}
+                      {t("onboarding:respectful.upload.benefit1.description")}
                     </p>
                   </div>
                 </div>
@@ -562,10 +564,10 @@ const ImmediateValueUpload: React.FC<ImmediateValueUploadProps> = ({
                   </div>
                   <div>
                     <p className="font-medium text-gray-900">
-                      {t("respectful.upload.benefit2.title")}
+                      {t("onboarding:respectful.upload.benefit2.title")}
                     </p>
                     <p className="text-sm text-gray-600">
-                      {t("respectful.upload.benefit2.description")}
+                      {t("onboarding:respectful.upload.benefit2.description")}
                     </p>
                   </div>
                 </div>
@@ -576,10 +578,10 @@ const ImmediateValueUpload: React.FC<ImmediateValueUploadProps> = ({
                   </div>
                   <div>
                     <p className="font-medium text-gray-900">
-                      {t("respectful.upload.benefit3.title")}
+                      {t("onboarding:respectful.upload.benefit3.title")}
                     </p>
                     <p className="text-sm text-gray-600">
-                      {t("respectful.upload.benefit3.description")}
+                      {t("onboarding:respectful.upload.benefit3.description")}
                     </p>
                   </div>
                 </div>
@@ -614,10 +616,10 @@ const ImmediateValueUpload: React.FC<ImmediateValueUploadProps> = ({
               <Lock className="w-5 h-5 text-gray-400 mt-0.5" />
               <div>
                 <p className="text-sm font-medium text-gray-700">
-                  {t("respectful.upload.security.title")}
+                  {t("onboarding:respectful.upload.security.title")}
                 </p>
                 <p className="text-xs text-gray-600 mt-1">
-                  {t("respectful.upload.security.description")}
+                  {t("onboarding:respectful.upload.security.description")}
                 </p>
               </div>
             </div>
@@ -782,7 +784,7 @@ const ImmediateValueUpload: React.FC<ImmediateValueUploadProps> = ({
               onClick={handleComplete}
               className="ml-auto bg-green-600 hover:bg-green-700 text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center gap-2"
             >
-              {t("respectful.upload.continue")}
+              {t("onboarding:respectful.upload.continue")}
               <ArrowRight className="w-5 h-5" />
             </button>
           )}

@@ -186,8 +186,10 @@ export const Vault: React.FC = () => {
     <div className="container mx-auto px-4 md:px-6 lg:px-8 py-4 md:py-8 space-y-4 md:space-y-6 lg:space-y-8 max-w-screen-xl">
       {/* Header */}
       <div className="space-y-2">
-        <h1 className="text-3xl font-bold">{t("assets.title")}</h1>
-        <p className="text-lg text-muted-foreground">{t("assets.subtitle")}</p>
+        <h1 className="text-3xl font-bold">{t("assets:assets.title")}</h1>
+        <p className="text-lg text-muted-foreground">
+          {t("assets:assets.subtitle")}
+        </p>
       </div>
 
       {/* Error Alert */}
@@ -372,7 +374,7 @@ export const Vault: React.FC = () => {
                   {[...new Set(assets.map((a) => a.main_category))].length}
                 </div>
                 <p className="text-sm text-muted-foreground">
-                  {t("assets.categories")}
+                  {t("assets:assets.categories")}
                 </p>
               </CardContent>
             </Card>
@@ -410,32 +412,32 @@ export const Vault: React.FC = () => {
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3">
                 {[
                   {
-                    label: t("assets.property"),
+                    label: t("assets:assets.property"),
                     icon: Home,
                     category: "Property",
                   },
                   {
-                    label: t("assets.finances"),
+                    label: t("assets:assets.finances"),
                     icon: Landmark,
                     category: "Finances",
                   },
                   {
-                    label: t("assets.vehicle"),
+                    label: t("assets:assets.vehicle"),
                     icon: Car,
                     category: "Vehicle",
                   },
                   {
-                    label: t("assets.digital"),
+                    label: t("assets:assets.digital"),
                     icon: Laptop,
                     category: "Digital Asset",
                   },
                   {
-                    label: t("assets.personal"),
+                    label: t("assets:assets.personal"),
                     icon: Gem,
                     category: "Personal Item",
                   },
                   {
-                    label: t("assets.other"),
+                    label: t("assets:assets.other"),
                     icon: PlusCircle,
                     category: "Other",
                   },

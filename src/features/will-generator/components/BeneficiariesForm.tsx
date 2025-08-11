@@ -42,10 +42,10 @@ export function BeneficiariesForm({
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             <Users className="h-5 w-5" />
-            {t("wills.beneficiaries.title")}
+            {t("wills:wills.beneficiaries.title")}
           </CardTitle>
           <CardDescription>
-            {t("wills.beneficiaries.description")}
+            {t("wills:wills.beneficiaries.description")}
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -69,7 +69,7 @@ export function BeneficiariesForm({
                       <div className="grid grid-cols-2 gap-4">
                         <div className="space-y-2">
                           <Label htmlFor={`id-${beneficiary.id}`}>
-                            {t("wills.beneficiaries.identification")}
+                            {t("wills:wills.beneficiaries.identification")}
                           </Label>
                           <Input
                             id={`id-${beneficiary.id}`}
@@ -155,9 +155,9 @@ export function BeneficiariesForm({
             {t("wills.beneficiaries.importantNotes")}
           </h4>
           <ul className="text-sm text-muted-foreground space-y-1">
-            <li>• {t("wills.beneficiaries.note1")}</li>
-            <li>• {t("wills.beneficiaries.note2")}</li>
-            <li>• {t("wills.beneficiaries.note3")}</li>
+            <li>• {t("wills:wills.beneficiaries.note1")}</li>
+            <li>• {t("wills:wills.beneficiaries.note2")}</li>
+            <li>• {t("wills:wills.beneficiaries.note3")}</li>
           </ul>
         </CardContent>
       </Card>

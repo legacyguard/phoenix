@@ -598,7 +598,7 @@ const EssentialQuestions: React.FC<EssentialQuestionsProps> = ({
           `}
         >
           <ChevronLeft className="w-5 h-5" />
-          {t("respectful.questions.previous")}
+          {t("onboarding:respectful.questions.previous")}
         </button>
 
         <div className="flex items-center gap-2">
@@ -634,8 +634,8 @@ const EssentialQuestions: React.FC<EssentialQuestionsProps> = ({
           `}
         >
           {currentQuestion === questions.length - 1
-            ? t("respectful.questions.complete")
-            : t("respectful.questions.next")}
+            ? t("onboarding:respectful.questions.complete")
+            : t("onboarding:respectful.questions.next")}
           <ChevronRight className="w-5 h-5" />
         </button>
       </div>
@@ -643,7 +643,7 @@ const EssentialQuestions: React.FC<EssentialQuestionsProps> = ({
       {/* Reassurance Text */}
       <div className="mt-8 text-center">
         <p className="text-sm text-gray-500">
-          {t("respectful.questions.reassurance")}
+          {t("onboarding:respectful.questions.reassurance")}
         </p>
       </div>
     </div>

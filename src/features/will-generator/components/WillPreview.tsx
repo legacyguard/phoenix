@@ -62,20 +62,22 @@ export function WillPreview({
               <>
                 <AlertCircle className="h-4 w-4 text-orange-500" />
                 <span className="text-sm">
-                  {t("wills.requirements.handwriting")}
+                  {t("wills:wills.requirements.handwriting")}
                 </span>
               </>
             ) : (
               <>
                 <CheckCircle2 className="h-4 w-4 text-green-500" />
-                <span className="text-sm">{t("wills.requirements.typed")}</span>
+                <span className="text-sm">
+                  {t("wills:wills.requirements.typed")}
+                </span>
               </>
             )}
           </div>
 
           <div className="flex items-center gap-2">
             <span className="text-sm font-medium">
-              {t("wills.requirements.witnesses")}:
+              {t("wills:wills.requirements.witnesses")}:
             </span>
             <Badge variant="secondary">{requirements.witness_count}</Badge>
           </div>
@@ -84,7 +86,7 @@ export function WillPreview({
             <div className="flex items-center gap-2">
               <AlertCircle className="h-4 w-4 text-orange-500" />
               <span className="text-sm">
-                {t("wills.requirements.notarization")}
+                {t("wills:wills.requirements.notarization")}
               </span>
             </div>
           )}
@@ -133,7 +135,7 @@ export function WillPreview({
               ))}
               {beneficiary.alternativeBeneficiary && (
                 <p className="ml-4 text-sm italic">
-                  {t("wills.preview.alternative")}:{" "}
+                  {t("wills:wills.preview.alternative")}:{" "}
                   {beneficiary.alternativeBeneficiary}
                 </p>
               )}
@@ -144,7 +146,7 @@ export function WillPreview({
         {/* Executor */}
         {willContent.executor && (
           <div className="space-y-2">
-            <p className="font-medium">{t("wills.preview.executor")}:</p>
+            <p className="font-medium">{t("wills:wills.preview.executor")}:</p>
             <p className="ml-4">
               {willContent.executor.name} ({willContent.executor.relationship})
               <br />
@@ -181,7 +183,7 @@ export function WillPreview({
             </div>
             <div>
               <p>
-                {t("wills.preview.place")}
+                {t("wills:wills.preview.place")}
                 {t("wills.willPreview._2")}
               </p>
             </div>
@@ -195,7 +197,9 @@ export function WillPreview({
           {/* Witness signatures */}
           {requirements.witness_count > 0 && (
             <div className="space-y-6 mt-12 pt-6 border-t">
-              <p className="font-medium">{t("wills.preview.witnesses")}:</p>
+              <p className="font-medium">
+                {t("wills:wills.preview.witnesses")}:
+              </p>
               {Array.from({ length: requirements.witness_count }).map(
                 (_, index) => (
                   <div key={index} className="grid grid-cols-2 gap-8">
@@ -204,16 +208,20 @@ export function WillPreview({
                         {lang.witness} {index + 1}:
                       </p>
                       <p className="mt-4">_________________________________</p>
-                      <p className="text-sm">{t("wills.preview.name")}</p>
+                      <p className="text-sm">{t("wills:wills.preview.name")}</p>
                       <p className="mt-2">_________________________________</p>
-                      <p className="text-sm">{t("wills.preview.signature")}</p>
+                      <p className="text-sm">
+                        {t("wills:wills.preview.signature")}
+                      </p>
                     </div>
                     <div>
                       <p>&nbsp;</p>
                       <p className="mt-4">_________________________________</p>
-                      <p className="text-sm">{t("wills.preview.address")}</p>
+                      <p className="text-sm">
+                        {t("wills:wills.preview.address")}
+                      </p>
                       <p className="mt-2">_________________________________</p>
-                      <p className="text-sm">{t("wills.preview.date")}</p>
+                      <p className="text-sm">{t("wills:wills.preview.date")}</p>
                     </div>
                   </div>
                 ),
@@ -233,8 +241,10 @@ export function WillPreview({
       {/* Will preview */}
       <Card>
         <CardHeader>
-          <CardTitle>{t("wills.preview.title")}</CardTitle>
-          <CardDescription>{t("wills.preview.description")}</CardDescription>
+          <CardTitle>{t("wills:wills.preview.title")}</CardTitle>
+          <CardDescription>
+            {t("wills:wills.preview.description")}
+          </CardDescription>
         </CardHeader>
         <CardContent>
           <div className="bg-white p-8 rounded-lg border min-h-[600px]">
@@ -302,7 +312,7 @@ export function WillPreview({
       <div className="flex justify-end gap-3">
         <Button variant="outline">
           <Printer className="mr-2 h-4 w-4" />
-          {t("wills.preview.print")}
+          {t("wills:wills.preview.print")}
         </Button>
         <Button onClick={onGenerate}>
           <Download className="mr-2 h-4 w-4" />

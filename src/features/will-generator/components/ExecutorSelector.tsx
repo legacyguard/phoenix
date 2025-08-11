@@ -61,19 +61,21 @@ export function ExecutorSelector({
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             <Briefcase className="h-5 w-5" />
-            {t("wills.executor.title")}
+            {t("wills:wills.executor.title")}
           </CardTitle>
-          <CardDescription>{t("wills.executor.description")}</CardDescription>
+          <CardDescription>
+            {t("wills:wills.executor.description")}
+          </CardDescription>
         </CardHeader>
         <CardContent className="space-y-6">
           {/* Primary Executor */}
           <div className="space-y-4">
-            <h4 className="font-medium">{t("wills.executor.primary")}</h4>
+            <h4 className="font-medium">{t("wills:wills.executor.primary")}</h4>
 
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-2">
                 <Label htmlFor="executor-name">
-                  {t("wills.executor.name")} *
+                  {t("wills:wills.executor.name")} *
                 </Label>
                 <Input
                   id="executor-name"
@@ -93,7 +95,7 @@ export function ExecutorSelector({
 
               <div className="space-y-2">
                 <Label htmlFor="executor-relationship">
-                  {t("wills.executor.relationship")} *
+                  {t("wills:wills.executor.relationship")} *
                 </Label>
                 <Input
                   id="executor-relationship"
@@ -108,7 +110,7 @@ export function ExecutorSelector({
 
             <div className="space-y-2">
               <Label htmlFor="executor-address">
-                {t("wills.executor.address")} *
+                {t("wills:wills.executor.address")} *
               </Label>
               <Textarea
                 id="executor-address"
@@ -123,7 +125,7 @@ export function ExecutorSelector({
 
             <div className="space-y-2">
               <Label htmlFor="executor-phone">
-                {t("wills.executor.phone")}
+                {t("wills:wills.executor.phone")}
               </Label>
               <Input
                 id="executor-phone"
@@ -164,13 +166,13 @@ export function ExecutorSelector({
             <div className="space-y-4 pt-4 border-t">
               <h4 className="font-medium flex items-center gap-2">
                 <UserPlus className="h-4 w-4" />
-                {t("wills.executor.alternative")}
+                {t("wills:wills.executor.alternative")}
               </h4>
 
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <Label htmlFor="alt-executor-name">
-                    {t("wills.executor.name")}
+                    {t("wills:wills.executor.name")}
                   </Label>
                   <Input
                     id="alt-executor-name"
@@ -184,7 +186,7 @@ export function ExecutorSelector({
 
                 <div className="space-y-2">
                   <Label htmlFor="alt-executor-relationship">
-                    {t("wills.executor.relationship")}
+                    {t("wills:wills.executor.relationship")}
                   </Label>
                   <Input
                     id="alt-executor-relationship"
@@ -199,7 +201,7 @@ export function ExecutorSelector({
 
               <div className="space-y-2">
                 <Label htmlFor="alt-executor-address">
-                  {t("wills.executor.address")}
+                  {t("wills:wills.executor.address")}
                 </Label>
                 <Textarea
                   id="alt-executor-address"
@@ -214,7 +216,7 @@ export function ExecutorSelector({
 
               <div className="space-y-2">
                 <Label htmlFor="alt-executor-phone">
-                  {t("wills.executor.phone")}
+                  {t("wills:wills.executor.phone")}
                 </Label>
                 <Input
                   id="alt-executor-phone"
@@ -235,13 +237,13 @@ export function ExecutorSelector({
       <Card>
         <CardContent className="pt-6">
           <h4 className="font-medium mb-2">
-            {t("wills.executor.responsibilities")}
+            {t("wills:wills.executor.responsibilities")}
           </h4>
           <ul className="text-sm text-muted-foreground space-y-1">
-            <li>• {t("wills.executor.responsibility1")}</li>
-            <li>• {t("wills.executor.responsibility2")}</li>
-            <li>• {t("wills.executor.responsibility3")}</li>
-            <li>• {t("wills.executor.responsibility4")}</li>
+            <li>• {t("wills:wills.executor.responsibility1")}</li>
+            <li>• {t("wills:wills.executor.responsibility2")}</li>
+            <li>• {t("wills:wills.executor.responsibility3")}</li>
+            <li>• {t("wills:wills.executor.responsibility4")}</li>
           </ul>
         </CardContent>
       </Card>

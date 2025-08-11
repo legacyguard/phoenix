@@ -172,7 +172,9 @@ export const FamilySituationDashboard: React.FC<
                 <CardTitle className="text-2xl">
                   {t(`family.structures.${familySituation.structure}`)}
                 </CardTitle>
-                <CardDescription>{t("family.personalized")}</CardDescription>
+                <CardDescription>
+                  {t("ui-common:family.personalized")}
+                </CardDescription>
               </div>
             </div>
             <Badge className={complexityColors[familySituation.complexity]}>
@@ -216,19 +218,19 @@ export const FamilySituationDashboard: React.FC<
         <TabsList className="grid w-full grid-cols-4">
           <TabsTrigger value="overview">
             <BarChart3 className="h-4 w-4 mr-2" />
-            {t("family.tabs.overview")}
+            {t("ui-common:family.tabs.overview")}
           </TabsTrigger>
           <TabsTrigger value="insights">
             <Sparkles className="h-4 w-4 mr-2" />
-            {t("family.tabs.insights")}
+            {t("ui-common:family.tabs.insights")}
           </TabsTrigger>
           <TabsTrigger value="features">
             <Settings className="h-4 w-4 mr-2" />
-            {t("family.tabs.features")}
+            {t("ui-common:family.tabs.features")}
           </TabsTrigger>
           <TabsTrigger value="cultural">
             <Globe className="h-4 w-4 mr-2" />
-            {t("family.tabs.cultural")}
+            {t("ui-common:family.tabs.cultural")}
           </TabsTrigger>
         </TabsList>
 
@@ -285,7 +287,7 @@ export const FamilySituationDashboard: React.FC<
           {familySituation.sensitivities.length > 0 && (
             <Alert>
               <AlertCircle className="h-4 w-4" />
-              <AlertTitle>{t("family.sensitivities")}</AlertTitle>
+              <AlertTitle>{t("ui-common:family.sensitivities")}</AlertTitle>
               <AlertDescription>
                 <ul className="mt-2 space-y-1">
                   {familySituation.sensitivities.map((sensitivity) => (

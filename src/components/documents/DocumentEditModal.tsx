@@ -248,43 +248,47 @@ export const DocumentEditModal: React.FC<DocumentEditModalProps> = ({
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
         <DialogHeader>
-          <DialogTitle>{t("assets.edit.title")}</DialogTitle>
-          <DialogDescription>{t("assets.edit.description")}</DialogDescription>
+          <DialogTitle>{t("assets:assets.edit.title")}</DialogTitle>
+          <DialogDescription>
+            {t("assets:assets.edit.description")}
+          </DialogDescription>
         </DialogHeader>
 
         <form onSubmit={handleSubmit} className="space-y-6">
           {/* Basic Information */}
           <div className="space-y-4">
             <div>
-              <Label htmlFor="title">{t("assets.fields.title")}</Label>
+              <Label htmlFor="title">{t("assets:assets.fields.title")}</Label>
               <Input
                 id="title"
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
-                placeholder={t("assets.placeholders.title")}
+                placeholder={t("assets:assets.placeholders.title")}
                 required
               />
             </div>
 
             <div>
               <Label htmlFor="description">
-                {t("assets.fields.description")}
+                {t("assets:assets.fields.description")}
               </Label>
               <Textarea
                 id="description"
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
-                placeholder={t("assets.placeholders.description")}
+                placeholder={t("assets:assets.placeholders.description")}
                 rows={3}
               />
             </div>
 
             <div>
-              <Label htmlFor="category">{t("assets.fields.category")}</Label>
+              <Label htmlFor="category">
+                {t("assets:assets.fields.category")}
+              </Label>
               <Select value={category} onValueChange={setCategory}>
                 <SelectTrigger>
                   <SelectValue
-                    placeholder={t("assets.placeholders.category")}
+                    placeholder={t("assets:assets.placeholders.category")}
                   />
                 </SelectTrigger>
                 <SelectContent>
@@ -298,12 +302,12 @@ export const DocumentEditModal: React.FC<DocumentEditModalProps> = ({
             </div>
 
             <div>
-              <Label htmlFor="tags">{t("assets.fields.tags")}</Label>
+              <Label htmlFor="tags">{t("assets:assets.fields.tags")}</Label>
               <Input
                 id="tags"
                 value={tags}
                 onChange={(e) => setTags(e.target.value)}
-                placeholder={t("assets.placeholders.tags")}
+                placeholder={t("assets:assets.placeholders.tags")}
               />
             </div>
 
@@ -344,7 +348,9 @@ export const DocumentEditModal: React.FC<DocumentEditModalProps> = ({
           {/* Metadata Fields */}
           {showMetadataFields && (
             <div className="space-y-4 border-t pt-4">
-              <h3 className="font-medium">{t("assets.metadata.title")}</h3>
+              <h3 className="font-medium">
+                {t("assets:assets.metadata.title")}
+              </h3>
 
               <div className="grid grid-cols-2 gap-4">
                 <div>
@@ -372,16 +378,16 @@ export const DocumentEditModal: React.FC<DocumentEditModalProps> = ({
                     </SelectTrigger>
                     <SelectContent>
                       <SelectItem value="low">
-                        {t("assets.metadata.importance.low")}
+                        {t("assets:assets.metadata.importance.low")}
                       </SelectItem>
                       <SelectItem value="medium">
-                        {t("assets.metadata.importance.medium")}
+                        {t("assets:assets.metadata.importance.medium")}
                       </SelectItem>
                       <SelectItem value="high">
-                        {t("assets.metadata.importance.high")}
+                        {t("assets:assets.metadata.importance.high")}
                       </SelectItem>
                       <SelectItem value="critical">
-                        {t("assets.metadata.importance.critical")}
+                        {t("assets:assets.metadata.importance.critical")}
                       </SelectItem>
                     </SelectContent>
                   </Select>
@@ -467,12 +473,14 @@ export const DocumentEditModal: React.FC<DocumentEditModalProps> = ({
           {/* Subscription Fields */}
           {showSubscriptionFields && (
             <div className="space-y-4 border-t pt-4">
-              <h3 className="font-medium">{t("assets.subscription.title")}</h3>
+              <h3 className="font-medium">
+                {t("assets:assets.subscription.title")}
+              </h3>
 
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <Label htmlFor="subscriptionType">
-                    {t("assets.subscription.type")}
+                    {t("assets:assets.subscription.type")}
                   </Label>
                   <Select
                     value={subscriptionType}
@@ -485,13 +493,13 @@ export const DocumentEditModal: React.FC<DocumentEditModalProps> = ({
                     </SelectTrigger>
                     <SelectContent>
                       <SelectItem value="monthly">
-                        {t("assets.subscription.types.monthly")}
+                        {t("assets:assets.subscription.types.monthly")}
                       </SelectItem>
                       <SelectItem value="yearly">
-                        {t("assets.subscription.types.yearly")}
+                        {t("assets:assets.subscription.types.yearly")}
                       </SelectItem>
                       <SelectItem value="lifetime">
-                        {t("assets.subscription.types.lifetime")}
+                        {t("assets:assets.subscription.types.lifetime")}
                       </SelectItem>
                       <SelectItem value="payPerUse">
                         {t("assets.subscription.types.payPerUse")}
@@ -607,7 +615,7 @@ export const DocumentEditModal: React.FC<DocumentEditModalProps> = ({
               ) : (
                 <>
                   <Upload className="mr-2 h-4 w-4" />
-                  {t("assets.edit.save")}
+                  {t("assets:assets.edit.save")}
                 </>
               )}
             </Button>

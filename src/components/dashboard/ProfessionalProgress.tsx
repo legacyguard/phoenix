@@ -735,7 +735,7 @@ const TaskCard: React.FC<{
               </span>
               {task.link && (
                 <span className="text-xs text-blue-600 font-medium flex items-center gap-1">
-                  {t("respectful.tasks.start")}
+                  {t("onboarding:respectful.tasks.start")}
                   <ChevronRight className="w-3 h-3" />
                 </span>
               )}

@@ -177,7 +177,7 @@ const RespectfulOnboarding: React.FC<RespectfulOnboardingProps> = ({
           <div className="flex items-center gap-3">
             <Shield className="w-6 h-6 text-blue-600" />
             <h2 className="text-xl font-semibold text-gray-900">
-              {t("respectful.title")}
+              {t("onboarding:respectful.title")}
             </h2>
           </div>
           <button
@@ -234,19 +234,19 @@ const RespectfulOnboarding: React.FC<RespectfulOnboardingProps> = ({
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-4">
               <StepIndicator
-                label={t("respectful.steps.understand")}
+                label={t("onboarding:respectful.steps.understand")}
                 completed={completedSteps.includes("questions")}
                 active={currentStep === "questions"}
               />
               <ChevronRight className="w-4 h-4 text-gray-400" />
               <StepIndicator
-                label={t("respectful.steps.secure")}
+                label={t("onboarding:respectful.steps.secure")}
                 completed={completedSteps.includes("upload")}
                 active={currentStep === "upload"}
               />
               <ChevronRight className="w-4 h-4 text-gray-400" />
               <StepIndicator
-                label={t("respectful.steps.plan")}
+                label={t("onboarding:respectful.steps.plan")}
                 completed={completedSteps.includes("recommendations")}
                 active={currentStep === "recommendations"}
               />
@@ -309,12 +309,14 @@ const WelcomeStep: React.FC<{
         <h2 className="text-3xl font-bold text-gray-900 mb-4">
           {userName
             ? t("respectful.welcome.titlePersonal", { name: userName })
-            : t("respectful.welcome.title")}
+            : t("onboarding:respectful.welcome.title")}
         </h2>
         <p className="text-xl text-gray-600 mb-3">
-          {t("respectful.welcome.subtitle")}
+          {t("onboarding:respectful.welcome.subtitle")}
         </p>
-        <p className="text-gray-500">{t("respectful.welcome.description")}</p>
+        <p className="text-gray-500">
+          {t("onboarding:respectful.welcome.description")}
+        </p>
       </div>
 
       <div className="grid md:grid-cols-3 gap-6 mb-8">
@@ -323,10 +325,10 @@ const WelcomeStep: React.FC<{
             <Users className="w-6 h-6 text-purple-600" />
           </div>
           <h3 className="font-semibold text-gray-900 mb-2">
-            {t("respectful.welcome.benefit1.title")}
+            {t("onboarding:respectful.welcome.benefit1.title")}
           </h3>
           <p className="text-sm text-gray-600">
-            {t("respectful.welcome.benefit1.description")}
+            {t("onboarding:respectful.welcome.benefit1.description")}
           </p>
         </div>
 
@@ -335,10 +337,10 @@ const WelcomeStep: React.FC<{
             <Shield className="w-6 h-6 text-green-600" />
           </div>
           <h3 className="font-semibold text-gray-900 mb-2">
-            {t("respectful.welcome.benefit2.title")}
+            {t("onboarding:respectful.welcome.benefit2.title")}
           </h3>
           <p className="text-sm text-gray-600">
-            {t("respectful.welcome.benefit2.description")}
+            {t("onboarding:respectful.welcome.benefit2.description")}
           </p>
         </div>
 
@@ -347,10 +349,10 @@ const WelcomeStep: React.FC<{
             <Sparkles className="w-6 h-6 text-orange-600" />
           </div>
           <h3 className="font-semibold text-gray-900 mb-2">
-            {t("respectful.welcome.benefit3.title")}
+            {t("onboarding:respectful.welcome.benefit3.title")}
           </h3>
           <p className="text-sm text-gray-600">
-            {t("respectful.welcome.benefit3.description")}
+            {t("onboarding:respectful.welcome.benefit3.description")}
           </p>
         </div>
       </div>
@@ -396,7 +398,7 @@ const RecommendationsStep: React.FC<{
           <CheckCircle className="w-8 h-8 text-green-600" />
         </div>
         <h2 className="text-3xl font-bold text-gray-900 mb-4">
-          {t("respectful.recommendations.title")}
+          {t("onboarding:respectful.recommendations.title")}
         </h2>
         <p className="text-xl text-gray-600 mb-3">{plan.reassurance}</p>
         <p className="text-gray-500">{plan.timeline}</p>

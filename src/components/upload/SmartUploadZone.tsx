@@ -193,7 +193,7 @@ export function SmartUploadZone({
         <p className="text-sm text-muted-foreground mb-6 max-w-sm mx-auto">
           {isDragging
             ? t("assets.zone.descriptionActive")
-            : t("assets.zone.description")}
+            : t("assets:assets.zone.description")}
         </p>
 
         {/* Action buttons */}

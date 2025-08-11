@@ -298,7 +298,7 @@ export function CountrySelector({
           <div className="space-y-4">
             <Label>{t("wills.testatorInfo")}</Label>
             <div className="space-y-2">
-              <Label htmlFor="name">{t("wills.name")}</Label>
+              <Label htmlFor="name">{t("wills:wills.name")}</Label>
               <Input
                 id="name"
                 value={testator.name}
@@ -327,7 +327,7 @@ export function CountrySelector({
               )}
             </div>
             <div className="space-y-2">
-              <Label htmlFor="address">{t("wills.address")}</Label>
+              <Label htmlFor="address">{t("wills:wills.address")}</Label>
               <Input
                 id="address"
                 value={testator.address}

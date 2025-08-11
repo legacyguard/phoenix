@@ -259,7 +259,7 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
     setIsSaving(true);
     try {
       await autoSave.flush();
-      toast.success(t("family.messages.saved"));
+      toast.success(t("ui-common:family.messages.saved"));
       onClose();
     } catch (error) {
       toast.error(t("family.errors.saveFailed"));
@@ -274,13 +274,20 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
       case "complete":
         return (
           <Badge variant="default" className="gap-1">
-            <CheckCircle className="h-3 w-3" /> {t("family.status.complete")}
+            <CheckCircle className="h-3 w-3" />{" "}
+            {t("ui-common:family.status.complete")}
           </Badge>
         );
       case "draft":
-        return <Badge variant="secondary">{t("family.status.draft")}</Badge>;
+        return (
+          <Badge variant="secondary">
+            {t("ui-common:family.status.draft")}
+          </Badge>
+        );
       default:
-        return <Badge variant="outline">{t("family.status.empty")}</Badge>;
+        return (
+          <Badge variant="outline">{t("ui-common:family.status.empty")}</Badge>
+        );
     }
   };
 
@@ -289,7 +296,9 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
       <div className="flex items-center justify-center py-12">
         <div className="text-center space-y-2">
           <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary mx-auto"></div>
-          <p className="text-sm text-muted-foreground">{t("family.loading")}</p>
+          <p className="text-sm text-muted-foreground">
+            {t("ui-common:family.loading")}
+          </p>
         </div>
       </div>
     );
@@ -308,8 +317,8 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
             </h2>
             <p className="text-muted-foreground mt-1">
               {isReadOnly
-                ? t("family.subtitle.view")
-                : t("family.subtitle.edit")}
+                ? t("ui-common:family.subtitle.view")
+                : t("ui-common:family.subtitle.edit")}
             </p>
           </div>
           <div className="flex items-center gap-2">
@@ -321,7 +330,9 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
                 onClick={() => setIsPreview(!isPreview)}
               >
                 <Eye className="h-4 w-4 mr-2" />
-                {isPreview ? t("family.edit") : t("family.preview")}
+                {isPreview
+                  ? t("ui-common:family.edit")
+                  : t("ui-common:family.preview")}
               </Button>
             )}
           </div>
@@ -344,27 +355,27 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
         <TabsList className="grid w-full grid-cols-3 lg:grid-cols-6">
           <TabsTrigger value="funeral" className="text-xs">
             <Heart className="h-3 w-3 mr-1" />
-            {t("family.tabs.funeral")}
+            {t("ui-common:family.tabs.funeral")}
           </TabsTrigger>
           <TabsTrigger value="digital" className="text-xs">
             <FileText className="h-3 w-3 mr-1" />
-            {t("family.tabs.digital")}
+            {t("ui-common:family.tabs.digital")}
           </TabsTrigger>
           <TabsTrigger value="contacts" className="text-xs">
             <Users className="h-3 w-3 mr-1" />
-            {t("family.tabs.contacts")}
+            {t("ui-common:family.tabs.contacts")}
           </TabsTrigger>
           <TabsTrigger value="documents" className="text-xs">
             <MapPin className="h-3 w-3 mr-1" />
-            {t("family.tabs.documents")}
+            {t("ui-common:family.tabs.documents")}
           </TabsTrigger>
           <TabsTrigger value="messages" className="text-xs">
             <MessageSquare className="h-3 w-3 mr-1" />
-            {t("family.tabs.messages")}
+            {t("ui-common:family.tabs.messages")}
           </TabsTrigger>
           <TabsTrigger value="practical" className="text-xs">
             <Briefcase className="h-3 w-3 mr-1" />
-            {t("family.tabs.practical")}
+            {t("ui-common:family.tabs.practical")}
           </TabsTrigger>
         </TabsList>
 
@@ -373,7 +384,7 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center justify-between">
-                <span>{t("family.sections.funeral.title")}</span>
+                <span>{t("ui-common:family.sections.funeral.title")}</span>
                 {!isReadOnly && !isPreview && (
                   <Button
                     variant="outline"
@@ -386,7 +397,7 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
                 )}
               </CardTitle>
               <CardDescription>
-                {t("family.sections.funeral.description")}
+                {t("ui-common:family.sections.funeral.description")}
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -404,7 +415,9 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
                   onChange={(e) =>
                     handleTextChange("funeral_wishes", e.target.value)
                   }
-                  placeholder={t("family.sections.funeral.placeholder")}
+                  placeholder={t(
+                    "ui-common:family.sections.funeral.placeholder",
+                  )}
                   rows={8}
                   className="font-mono text-sm"
                 />
@@ -418,7 +431,7 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center justify-between">
-                <span>{t("family.sections.digital.title")}</span>
+                <span>{t("ui-common:family.sections.digital.title")}</span>
                 {!isReadOnly && !isPreview && (
                   <Button
                     variant="outline"
@@ -433,7 +446,7 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
                 )}
               </CardTitle>
               <CardDescription>
-                {t("family.sections.digital.description")}
+                {t("ui-common:family.sections.digital.description")}
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -454,7 +467,9 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
                       e.target.value,
                     )
                   }
-                  placeholder={t("family.sections.digital.placeholder")}
+                  placeholder={t(
+                    "ui-common:family.sections.digital.placeholder",
+                  )}
                   rows={8}
                   className="font-mono text-sm"
                 />
@@ -468,7 +483,7 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center justify-between">
-                <span>{t("family.sections.contacts.title")}</span>
+                <span>{t("ui-common:family.sections.contacts.title")}</span>
                 {!isReadOnly && !isPreview && (
                   <Button
                     variant="outline"
@@ -481,7 +496,7 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
                 )}
               </CardTitle>
               <CardDescription>
-                {t("family.sections.contacts.description")}
+                {t("ui-common:family.sections.contacts.description")}
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
@@ -545,7 +560,7 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
                         <div className="space-y-3">
                           <div className="flex items-start justify-between">
                             <Label>
-                              {t("family.contact")} {index + 1}
+                              {t("ui-common:family.contact")} {index + 1}
                             </Label>
                             <Button
                               variant="ghost"
@@ -683,7 +698,7 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center justify-between">
-                <span>{t("family.sections.documents.title")}</span>
+                <span>{t("ui-common:family.sections.documents.title")}</span>
                 {!isReadOnly && !isPreview && (
                   <Button
                     variant="outline"
@@ -696,7 +711,7 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
                 )}
               </CardTitle>
               <CardDescription>
-                {t("family.sections.documents.description")}
+                {t("ui-common:family.sections.documents.description")}
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -714,7 +729,9 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
                   onChange={(e) =>
                     handleTextChange("document_locations", e.target.value)
                   }
-                  placeholder={t("family.sections.documents.placeholder")}
+                  placeholder={t(
+                    "ui-common:family.sections.documents.placeholder",
+                  )}
                   rows={8}
                   className="font-mono text-sm"
                 />
@@ -728,7 +745,7 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center justify-between">
-                <span>{t("family.sections.messages.title")}</span>
+                <span>{t("ui-common:family.sections.messages.title")}</span>
                 {!isReadOnly && !isPreview && (
                   <Button
                     variant="outline"
@@ -741,7 +758,7 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
                 )}
               </CardTitle>
               <CardDescription>
-                {t("family.sections.messages.description")}
+                {t("ui-common:family.sections.messages.description")}
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -759,7 +776,9 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
                   onChange={(e) =>
                     handleTextChange("personal_messages", e.target.value)
                   }
-                  placeholder={t("family.sections.messages.placeholder")}
+                  placeholder={t(
+                    "ui-common:family.sections.messages.placeholder",
+                  )}
                   rows={10}
                   className="font-mono text-sm"
                 />
@@ -773,7 +792,7 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center justify-between">
-                <span>{t("family.sections.practical.title")}</span>
+                <span>{t("ui-common:family.sections.practical.title")}</span>
                 {!isReadOnly && !isPreview && (
                   <Button
                     variant="outline"
@@ -786,7 +805,7 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
                 )}
               </CardTitle>
               <CardDescription>
-                {t("family.sections.practical.description")}
+                {t("ui-common:family.sections.practical.description")}
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -804,7 +823,9 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
                   onChange={(e) =>
                     handleTextChange("practical_instructions", e.target.value)
                   }
-                  placeholder={t("family.sections.practical.placeholder")}
+                  placeholder={t(
+                    "ui-common:family.sections.practical.placeholder",
+                  )}
                   rows={8}
                   className="font-mono text-sm"
                 />
@@ -822,7 +843,9 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
           </Button>
           <Button onClick={handleSave} disabled={isSaving}>
             <Save className="h-4 w-4 mr-2" />
-            {isSaving ? t("family.saving") : t("family.save")}
+            {isSaving
+              ? t("ui-common:family.saving")
+              : t("ui-common:family.save")}
           </Button>
         </div>
       )}

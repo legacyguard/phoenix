@@ -397,7 +397,7 @@ export function WillGenerator({ onComplete }: WillGeneratorProps) {
       <Alert>
         <AlertCircle className="h-4 w-4" />
         <AlertDescription>
-          {t("wills.disclaimer")} {t("wills.notLegalAdvice")}{" "}
+          {t("wills:wills.disclaimer")} {t("wills.notLegalAdvice")}{" "}
           {t("wills.professionalGuidance")}
         </AlertDescription>
       </Alert>

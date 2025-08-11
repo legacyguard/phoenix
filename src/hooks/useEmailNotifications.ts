@@ -420,10 +420,10 @@ export const useEmailNotifications = () => {
   const getComplianceInfo = () => {
     return {
       dataProtection: t("wills.compliance.dataProtection"),
-      encryption: t("wills.compliance.encryption"),
-      retention: t("wills.compliance.retention"),
-      access: t("wills.compliance.access"),
-      portability: t("wills.compliance.portability"),
+      encryption: t("wills:wills.compliance.encryption"),
+      retention: t("wills:wills.compliance.retention"),
+      access: t("wills:wills.compliance.access"),
+      portability: t("wills:wills.compliance.portability"),
     };
   };
 

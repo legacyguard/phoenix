@@ -19,7 +19,7 @@ export async function GET(
     } = await supabase.auth.getUser();
     if (authError || !user) {
       return NextResponse.json(
-        { error: t("wills.errors.unauthorized") },
+        { error: t("wills:wills.errors.unauthorized") },
         { status: 401 },
       );
     }
@@ -41,7 +41,7 @@ export async function GET(
 
     if (error || !will) {
       return NextResponse.json(
-        { error: t("wills.errors.not_found") },
+        { error: t("wills:wills.errors.not_found") },
         { status: 404 },
       );
     }
@@ -50,7 +50,7 @@ export async function GET(
   } catch (error) {
     console.error("Error fetching will:", error);
     return NextResponse.json(
-      { error: t("wills.errors.failed_to_load") },
+      { error: t("wills:wills.errors.failed_to_load") },
       { status: 500 },
     );
   }
@@ -73,7 +73,7 @@ export async function PUT(
     } = await supabase.auth.getUser();
     if (authError || !user) {
       return NextResponse.json(
-        { error: t("wills.errors.unauthorized") },
+        { error: t("wills:wills.errors.unauthorized") },
         { status: 401 },
       );
     }
@@ -88,7 +88,7 @@ export async function PUT(
 
     if (!existingWill) {
       return NextResponse.json(
-        { error: t("wills.errors.not_found") },
+        { error: t("wills:wills.errors.not_found") },
         { status: 404 },
       );
     }
@@ -96,7 +96,7 @@ export async function PUT(
     // Only allow updates to draft wills
     if (existingWill.status !== "draft") {
       return NextResponse.json(
-        { error: t("wills.errors.cannot_update_non_draft") },
+        { error: t("wills:wills.errors.cannot_update_non_draft") },
         { status: 400 },
       );
     }
@@ -125,7 +125,7 @@ export async function PUT(
 
     if (updateError) {
       return NextResponse.json(
-        { error: t("wills.errors.failed_to_save") },
+        { error: t("wills:wills.errors.failed_to_save") },
         { status: 500 },
       );
     }
@@ -134,7 +134,7 @@ export async function PUT(
   } catch (error) {
     console.error("Error updating will:", error);
     return NextResponse.json(
-      { error: t("wills.errors.failed_to_save") },
+      { error: t("wills:wills.errors.failed_to_save") },
       { status: 500 },
     );
   }
@@ -156,7 +156,7 @@ export async function DELETE(
     } = await supabase.auth.getUser();
     if (authError || !user) {
       return NextResponse.json(
-        { error: t("wills.errors.unauthorized") },
+        { error: t("wills:wills.errors.unauthorized") },
         { status: 401 },
       );
     }
@@ -171,7 +171,7 @@ export async function DELETE(
 
     if (!existingWill) {
       return NextResponse.json(
-        { error: t("wills.errors.not_found") },
+        { error: t("wills:wills.errors.not_found") },
         { status: 404 },
       );
     }
@@ -179,7 +179,7 @@ export async function DELETE(
     // Only allow deletion of draft wills
     if (existingWill.status !== "draft") {
       return NextResponse.json(
-        { error: t("wills.errors.cannot_delete_non_draft") },
+        { error: t("wills:wills.errors.cannot_delete_non_draft") },
         { status: 400 },
       );
     }
@@ -192,7 +192,7 @@ export async function DELETE(
 
     if (deleteError) {
       return NextResponse.json(
-        { error: t("wills.errors.failed_to_delete") },
+        { error: t("wills:wills.errors.failed_to_delete") },
         { status: 500 },
       );
     }
@@ -201,7 +201,7 @@ export async function DELETE(
   } catch (error) {
     console.error("Error deleting will:", error);
     return NextResponse.json(
-      { error: t("wills.errors.failed_to_delete") },
+      { error: t("wills:wills.errors.failed_to_delete") },
       { status: 500 },
     );
   }
