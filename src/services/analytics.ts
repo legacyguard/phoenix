@@ -1,4 +1,4 @@
-import { AnalyticsEvent, UserMetrics } from '@/types/analytics';
+import type { AnalyticsEvent, UserMetrics } from '@/types/analytics';
 import { supabase } from '@/integrations/supabase/client';
 import { v4 as uuidv4 } from 'uuid';
 

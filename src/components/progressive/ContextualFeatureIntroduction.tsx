@@ -5,7 +5,7 @@ import {
   Shield, FileText, Users, Heart, Home, Briefcase, 
   AlertCircle, ChevronRight, X 
 } from 'lucide-react';
-import { ProtectionFeature } from '@/services/familyProtectionDisclosure';
+import type { ProtectionFeature } from '@/services/familyProtectionDisclosure';
 
 interface ContextualFeatureIntroductionProps {
   feature: ProtectionFeature;

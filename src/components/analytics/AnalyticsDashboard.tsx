@@ -39,7 +39,7 @@ import {
   AreaChart } from
 'recharts';
 import { analyticsService } from '@/services/analytics.service';
-import { AnalyticsEvent } from '@/types/analytics';
+import type { AnalyticsEvent } from '@/types/analytics';
 import { formatDistanceToNow } from 'date-fns';
 import { cn } from '@/lib/utils';
 

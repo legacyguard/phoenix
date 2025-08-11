@@ -9,12 +9,12 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Checkbox } from '@/components/ui/checkbox';
 import { COUNTRY_CONFIGS } from '@/config/countries';
 import { supabaseWithRetry } from '@/utils/supabaseWithRetry';
-import { useRetry } from '@/utils/retry';
-import { RetryStatus } from '@/components/common/RetryStatus';
+import type { useRetry } from '@/utils/retry';
+import type { RetryStatus } from '@/components/common/RetryStatus';
 import { toast } from '@/hooks/use-toast';
 import { AsyncErrorBoundary } from '@/components/common/AsyncErrorBoundary';
 import { createGuardianFormSchema, type GuardianFormData } from '@/schemas/guardianSchema';
-import { useDebouncedCallback } from '@/hooks/useDebounce';
+import type { useDebouncedCallback } from '@/hooks/useDebounce';
 
 interface GuardianUploadProps {
   onSuccess: () => void;

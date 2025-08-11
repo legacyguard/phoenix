@@ -1,4 +1,4 @@
-import { DocumentCategory, ExtractedMetadata, PossessionAreaId } from '../types/document-ai';
+import type { DocumentCategory, ExtractedMetadata, PossessionAreaId } from '../types/document-ai';
 
 interface CategorySuggestion {
   suggestedArea: PossessionAreaId;

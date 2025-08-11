@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { Heart, Shield, Moon } from 'lucide-react';
+import type { Heart, Shield, Moon } from 'lucide-react';
 
 export const EmotionalValidation: React.FC = () => {
   const { t } = useTranslation('landing');

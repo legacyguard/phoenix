@@ -4,7 +4,7 @@ import { Button } from '../ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../ui/card';
 import { Alert, AlertDescription } from '../ui/alert';
 import { Loader2, Upload, FileText, CheckCircle2, AlertCircle } from 'lucide-react';
-import type { DocumentAnalysis } from '../../../lib/services/openai.types';import { useTranslation } from "react-i18next";
+import type { DocumentAnalysis } from '../../../lib/services/openai.types';import type { useTranslation } from "react-i18next";
 
 export function DocumentUploadExample() {
   const { analyzeDocument, isAnalyzing, analysisError, generateMessage } = useAI();

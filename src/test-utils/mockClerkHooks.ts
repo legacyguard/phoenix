@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import type { useContext } from 'react';
 
 // Re-export contexts and hooks here to avoid Fast Refresh issues
 export { 

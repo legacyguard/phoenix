@@ -1,4 +1,4 @@
-import { isEqual } from 'lodash';
+import type { isEqual } from 'lodash';
 
 // Cache configuration
 interface CacheConfig {

@@ -4,7 +4,7 @@ import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Progress } from '@/components/ui/progress';
 import { ChevronRight, X } from 'lucide-react';
-import { TaskItem } from '@/components/onboarding/OnboardingWizard';
+import type { TaskItem } from '@/components/onboarding/OnboardingWizard';
 
 interface ProgressNudgeProps {
   tasks: TaskItem[];

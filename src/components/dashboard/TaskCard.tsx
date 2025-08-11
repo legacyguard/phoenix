@@ -5,7 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { CheckCircle2, Circle, ArrowRight } from 'lucide-react';
-import { TaskItem } from '@/components/onboarding/OnboardingWizard';
+import type { TaskItem } from '@/components/onboarding/OnboardingWizard';
 
 interface TaskCardProps {
   task: TaskItem;

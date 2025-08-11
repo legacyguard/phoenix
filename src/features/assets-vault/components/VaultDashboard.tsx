@@ -11,10 +11,10 @@ import { supabase } from '@/lib/supabase';
 import { useAuth } from '@/hooks/useAuth';
 import { Skeleton } from '@/components/ui/skeleton';
 import { Alert, AlertDescription } from '@/components/ui/alert';
-import { AssetFileUpload } from '../components/AssetFileUpload';
-import { AssetFileList } from '../components/AssetFileList';
-import { AssetShareModal } from '../components/AssetShareModal';
-import { assetFileService } from '../services/AssetFileService';
+import type { AssetFileUpload } from '../components/AssetFileUpload';
+import type { AssetFileList } from '../components/AssetFileList';
+import type { AssetShareModal } from '../components/AssetShareModal';
+import type { assetFileService } from '../services/AssetFileService';
 import { PersonalAssistant } from '@/components/assistant/PersonalAssistant';
 import { useAssistant } from '@/hooks/useAssistant';
 

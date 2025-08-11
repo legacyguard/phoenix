@@ -1,4 +1,4 @@
-import { NextRequest } from 'next/server';
+import type { NextRequest } from 'next/server';
 
 // Import translations from the modular structure
 import enUI from '@/i18n/locales/en/ui.json';

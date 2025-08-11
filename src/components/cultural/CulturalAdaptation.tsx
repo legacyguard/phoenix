@@ -26,7 +26,7 @@ import {
   Shield,
   Calendar
 } from 'lucide-react';
-import { CulturalContext } from '@/services/familySituationAnalysis';
+import type { CulturalContext } from '@/services/familySituationAnalysis';
 import { useToast } from '@/components/ui/use-toast';
 
 interface CulturalOption {

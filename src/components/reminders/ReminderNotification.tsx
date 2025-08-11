@@ -1,5 +1,5 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
+import type { useTranslation } from 'react-i18next';
 import { toast } from 'sonner';
 import { ReminderToast } from './ReminderToast';
 

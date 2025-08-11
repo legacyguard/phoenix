@@ -4,8 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import { supabaseWithRetry } from '@/utils/supabaseWithRetry';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { Alert, AlertDescription } from '@/components/ui/alert';
+import type { Badge } from '@/components/ui/badge';
+import type { Alert, AlertDescription } from '@/components/ui/alert';
 import { Skeleton } from '@/components/ui/skeleton';
 import { Progress } from '@/components/ui/progress';
 import {
@@ -24,7 +24,7 @@ import {
   BarChart3
 } from 'lucide-react';
 import { toast } from 'sonner';
-import { PieChart as RechartsChart, Pie, Cell, ResponsiveContainer, Legend, Tooltip } from 'recharts';
+import type { PieChart as RechartsChart, Pie, Cell, ResponsiveContainer, Legend, Tooltip } from 'recharts';
 import LifeInventoryAssistant from '@/components/assets/LifeInventoryAssistant';
 
 interface AssetStatistics {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Card, CardContent } from '@/components/ui/card';
-import { HelpCircle, Lock, Clock } from 'lucide-react';
+import type { HelpCircle, Lock, Clock } from 'lucide-react';
 
 export const PainPoints: React.FC = () => {
   const { t } = useTranslation('landing');

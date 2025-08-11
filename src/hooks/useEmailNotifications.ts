@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { emailService } from '@/services/emailService';
 import { notificationService } from '@/services/notificationService';
-import { legalDocumentService } from '@/services/legalDocumentService';
+import type { legalDocumentService } from '@/services/legalDocumentService';
 
 interface User {
   id: string;

@@ -15,7 +15,7 @@ import {
   AlertTriangle,
   CheckCircle
 } from 'lucide-react';
-import { cn } from '@/lib/utils';
+import type { cn } from '@/lib/utils';
 
 interface FirstTimeUserGuideProps {
   onComplete: () => void;

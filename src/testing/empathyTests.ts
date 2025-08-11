@@ -1,5 +1,5 @@
 import { describe, test, expect, beforeEach } from '@jest/globals';
-import { render, screen, within } from '@testing-library/react';
+import type { render, screen, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
 // Mock functions to simulate UI element retrieval

@@ -1,5 +1,5 @@
 import { supabase } from '@/integrations/supabase/client';
-import { Database } from '@/integrations/supabase/types';
+import type { Database } from '@/integrations/supabase/types';
 
 type ExecutorTask = Database['public']['Tables']['executor_tasks']['Insert'];
 

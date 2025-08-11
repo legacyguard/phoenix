@@ -1,4 +1,4 @@
-import { ExtractedMetadata, RelationshipResult, UserInventory } from '../types/document-ai';
+import type { ExtractedMetadata, RelationshipResult, UserInventory } from '../types/document-ai';
 
 // To find related documents based on new document data
 export async function detectRelationships(

@@ -7,8 +7,8 @@ import { cn } from '@/lib/utils';
 import { useAssistant } from '@/hooks/useAssistant';
 import { AssistantAvatar } from './AssistantAvatar';
 import { AssistantMessage } from './AssistantMessage';
-import { AssistantActions } from './AssistantActions';
-import { TaskItem } from '@/components/onboarding/OnboardingWizard';
+import type { AssistantActions } from './AssistantActions';
+import type { TaskItem } from '@/components/onboarding/OnboardingWizard';
 
 export interface EnhancedMessage {
   type: 'welcome' | 'guidance' | 'encouragement' | 'celebration' | 'support';

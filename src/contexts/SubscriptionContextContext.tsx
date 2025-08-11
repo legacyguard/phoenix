@@ -1,5 +1,5 @@
 import React, { createContext } from 'react';
-import { SubscriptionStatus } from '@/services/stripeService';
+import type { SubscriptionStatus } from '@/services/stripeService';
 
 interface SubscriptionContextType {
   subscriptionStatus: SubscriptionStatus | null;

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { BarChart3, FileText, Users, Settings, Wallet, CreditCard, Lock } from 'lucide-react';
+import type { BarChart3, FileText, Users, Settings, Wallet, CreditCard, Lock } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useTranslation } from 'react-i18next';
 

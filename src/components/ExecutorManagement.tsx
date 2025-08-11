@@ -8,7 +8,7 @@ import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Badge } from '@/components/ui/badge';
-import { UserPlus, Shield, Trash2, AlertCircle } from 'lucide-react';import { useTranslation } from "react-i18next";
+import { UserPlus, Shield, Trash2, AlertCircle } from 'lucide-react';import type { useTranslation } from "react-i18next";
 
 interface ExecutorRelationship {
   id: string;

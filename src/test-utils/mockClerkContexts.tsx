@@ -1,6 +1,6 @@
 import { createContext } from 'react';
 import type { SessionResource } from '@clerk/types';
-import { MockUser } from './mockClerkHelpers';
+import type { MockUser } from './mockClerkHelpers';
 
 export interface MockSession extends Partial<SessionResource> {
   id: string;

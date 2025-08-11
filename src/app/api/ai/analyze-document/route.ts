@@ -1,4 +1,4 @@
-import { Request, Response } from 'express';
+import type { Request, Response } from 'express';
 import { openAIService } from '../../../../../lib/services/openai.service';
 import type { OpenAIRequestOptions } from '../../../../../lib/services/openai.types';
 

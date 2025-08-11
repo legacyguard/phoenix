@@ -1,5 +1,5 @@
 import { SUPPORTED_COUNTRIES, type CountryCode } from '@/config/countries';
-import { API_URLS, CACHE } from '@/utils/constants';
+import type { API_URLS, CACHE } from '@/utils/constants';
 
 interface GeolocationResponse {
   country_code: string;

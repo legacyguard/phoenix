@@ -4,7 +4,7 @@ import { Upload, Camera, FileText, Sparkles } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import { useDocumentUpload, useUploadPreferences } from '../../../lib/hooks/useDocumentUpload';
-import { UPLOAD } from '@/utils/constants';
+import type { UPLOAD } from '@/utils/constants';
 
 interface SmartUploadZoneProps {
   onUploadStart?: () => void;

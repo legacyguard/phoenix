@@ -4,7 +4,7 @@ import { useAuth } from "@/hooks/useAuth";
 import { ProgressService } from "@/services/ProgressService";
 import { ProfessionalDashboard } from "@/components/dashboard";
 import ProfessionalFlowManager from "@/components/auth/ProfessionalFlowManager";
-import {
+import type {
   RespectfulOnboarding,
   OnboardingData,
 } from "@/components/onboarding/RespectfulOnboarding";

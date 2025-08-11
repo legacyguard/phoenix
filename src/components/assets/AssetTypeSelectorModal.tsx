@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
-import { Button } from '@/components/ui/button';
+import type { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { 
   Home, Landmark, Car, Laptop, Gem, PlusCircle, Building2, 

@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import type React, { ReactNode } from 'react';
 import { AsyncErrorBoundary } from './AsyncErrorBoundary';
 
 // HOC pre ľahšie použitie

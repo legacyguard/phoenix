@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { supabaseWithRetry } from '@/utils/supabaseWithRetry';
 import { supabase } from '@/integrations/supabase/client';
-import { Tables } from '@/integrations/supabase/types';
+import type { Tables } from '@/integrations/supabase/types';
 import { toast } from 'sonner';
 
 type PlanType = Tables<'user_subscriptions'>['plan_type'];

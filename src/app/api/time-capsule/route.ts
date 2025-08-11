@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createClient } from '@supabase/supabase-js';
 import { v4 as uuidv4 } from 'uuid';
-import { CreateTimeCapsuleDto } from '@/types/timeCapsule';
+import type { CreateTimeCapsuleDto } from '@/types/timeCapsule';
 import { uploadLimiter } from '@/middleware/rateLimiter';
 import { getServerTranslation, getLocaleFromRequest } from '@/lib/server-i18n';
 

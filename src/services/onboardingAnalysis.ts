@@ -1,5 +1,5 @@
-import { LifeAnswers } from '@/components/onboarding/BasicLifeQuestions';
-import { ProjectOrderAnswers } from '@/components/onboarding/OnboardingWizard';
+import type { LifeAnswers } from '@/components/onboarding/BasicLifeQuestions';
+import type { ProjectOrderAnswers } from '@/components/onboarding/OnboardingWizard';
 
 export interface UserProfile {
   familyType: 'young_family' | 'empty_nesters' | 'single_parent' | 'retirees' | 'blended_family' | 'single_professional';

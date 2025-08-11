@@ -1,5 +1,5 @@
 import { PLAN_LIMITS, MAX_FILE_SIZES } from './constants';
-import { Tables } from '@/integrations/supabase/types';
+import type { Tables } from '@/integrations/supabase/types';
 
 type PlanType = Tables<'user_subscriptions'>['plan_type'];
 

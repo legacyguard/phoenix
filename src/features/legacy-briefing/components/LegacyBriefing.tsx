@@ -22,9 +22,9 @@ import {
   Edit } from
 'lucide-react';
 import { format, formatDistanceToNow } from 'date-fns';
-import { TimeCapsuleMessage } from '@/types/timeCapsule';
+import type { TimeCapsuleMessage } from '@/types/timeCapsule';
 import { CreateTimeCapsuleModal } from '@/components/CreateTimeCapsuleModal';
-import { supabase } from '@/lib/supabase';
+import type { supabase } from '@/lib/supabase';
 import { toast } from 'sonner';
 
 export const LegacyBriefing: React.FC = () => {

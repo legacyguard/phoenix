@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { createClient } from '@supabase/supabase-js';
-import { UpdateTimeCapsuleDto } from '@/types/timeCapsule';
+import type { UpdateTimeCapsuleDto } from '@/types/timeCapsule';
 import { getServerTranslation, getLocaleFromRequest } from '@/lib/server-i18n';
 
 // Initialize Supabase client with service role key

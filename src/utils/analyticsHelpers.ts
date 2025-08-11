@@ -1,4 +1,4 @@
-import { AnalyticsEvent } from '@/types/analytics';
+import type { AnalyticsEvent } from '@/types/analytics';
 
 /**
  * Determines emotional context based on user actions and timing

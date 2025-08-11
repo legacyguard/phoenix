@@ -1,4 +1,4 @@
-import { useContext } from "react"
+import type { useContext } from "react"
 import { useFormContext } from "react-hook-form"
 
 // This is a simplified version of the useFormField hook

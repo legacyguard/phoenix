@@ -1,6 +1,6 @@
 // Feature flag context hooks for React
 import { useState, useContext, createContext } from 'react';
-import { FeatureFlags, featureFlags } from '../config/featureFlagsService';
+import type { FeatureFlags, featureFlags } from '../config/featureFlagsService';
 
 interface FeatureFlagContextValue {
   flags: FeatureFlags;

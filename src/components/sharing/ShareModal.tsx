@@ -12,7 +12,7 @@ import { Copy, Mail, QrCode, Check, Eye, EyeOff, Loader2 } from 'lucide-react';
 import { ShareModalProps, ShareExpiration, CreateShareLinkParams } from '@/types/sharing';
 import { sharingService } from '@/services/sharingService';
 import { useToast } from '@/hooks/use-toast';
-import { cn } from '@/lib/utils';
+import type { cn } from '@/lib/utils';
 
 export function ShareModal({ 
   isOpen, 

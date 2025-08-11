@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { geolocationService } from '@/services/geolocation';
 import { languageDetectionService } from '@/services/languageDetection';
 import { domainRedirectService } from '@/utils/domainRedirect';
-import { type CountryCode, type LanguageCode } from '@/config/countries';
+import type { type CountryCode, type LanguageCode } from '@/config/countries';
 
 interface GeoLocationState {
   isLoading: boolean;

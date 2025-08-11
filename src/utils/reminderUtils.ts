@@ -1,4 +1,4 @@
-import { Reminder } from '@/types/reminder';
+import type { Reminder } from '@/types/reminder';
 
 interface ReminderNotificationProps {
   reminder: Reminder;

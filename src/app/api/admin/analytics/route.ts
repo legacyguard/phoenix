@@ -2,7 +2,7 @@
 
 import { NextResponse } from 'next/server';
 import { createServerSupabaseClient } from '@/lib/supabase-server';
-import { SupabaseClient } from '@supabase/supabase-js';
+import type { SupabaseClient } from '@supabase/supabase-js';
 
 // Helper function to check if user is admin
 async function isAdmin(supabase: SupabaseClient): Promise<boolean> {

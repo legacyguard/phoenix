@@ -2,7 +2,7 @@ import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Shield, Home, FileText, Users, Heart, ChevronRight } from 'lucide-react';
-import { Milestone } from '@/constants/protectionMilestones';
+import type { Milestone } from '@/constants/protectionMilestones';
 
 interface ProtectionMilestoneProps {
   milestone: Milestone;

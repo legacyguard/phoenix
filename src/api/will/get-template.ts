@@ -1,4 +1,4 @@
-import { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse } from 'next';
 import { WillTemplateService } from '@/features/will-generator/api/WillTemplateService';
 import { supabase } from '@/lib/supabase';
 

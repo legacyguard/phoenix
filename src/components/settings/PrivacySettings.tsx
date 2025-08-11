@@ -2,7 +2,7 @@ import React from 'react';
 import { useUserSettings } from '@/hooks/useUserSettings';
 import { Switch } from '@/components/ui/switch';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Shield, Cloud, Lock } from 'lucide-react';import { useTranslation } from "react-i18next";
+import { Shield, Cloud, Lock } from 'lucide-react';import type { useTranslation } from "react-i18next";
 
 const PrivacySettings: React.FC = () => {
   const { defaultProcessingMode, setDefaultProcessingMode } = useUserSettings();

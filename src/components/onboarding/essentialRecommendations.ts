@@ -1,4 +1,4 @@
-import { EssentialAnswers } from './EssentialQuestions';
+import type { EssentialAnswers } from './EssentialQuestions';
 
 export interface Recommendation {
   id: string;

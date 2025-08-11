@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Skeleton } from '@/components/ui/skeleton';
 import { ExecutorStatusReporting } from './ExecutorStatusReporting';
-import { Badge } from '@/components/ui/badge';
+import type { Badge } from '@/components/ui/badge';
 import { format } from 'date-fns';
 
 interface Communication {

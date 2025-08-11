@@ -12,7 +12,7 @@ import { supabaseWithRetry } from '@/utils/supabaseWithRetry';
 import { toast } from 'sonner';
 import { useDebouncedCallback } from '@/hooks/useDebounce';
 import { TemplateModal } from './TemplateModal';
-import { PlaybookTemplates } from '@/data/playbookTemplates';
+import type { PlaybookTemplates } from '@/data/playbookTemplates';
 import { 
   FileText, 
   Users, 

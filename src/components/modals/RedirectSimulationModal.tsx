@@ -8,7 +8,7 @@ import {
 '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { AlertCircle, Globe } from 'lucide-react';
-import { Alert, AlertDescription } from '@/components/ui/alert';import { useTranslation } from "react-i18next";
+import { Alert, AlertDescription } from '@/components/ui/alert';import type { useTranslation } from "react-i18next";
 
 interface RedirectSimulationModalProps {
   isOpen: boolean;

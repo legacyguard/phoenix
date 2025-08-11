@@ -7,7 +7,7 @@ const NextResponse = {
 import { GET as getWillList } from '../list/route';
 import { GET as getWill, PUT as updateWill, DELETE as deleteWill } from '../[id]/route';
 import { POST as generateWill } from '../generate/route';
-import { POST as signWill } from '../sign/route';
+import type { POST as signWill } from '../sign/route';
 import { POST as notarizeWill, GET as verifyNotarization } from '../notarize/route';
 
 // Mock Next.js dependencies

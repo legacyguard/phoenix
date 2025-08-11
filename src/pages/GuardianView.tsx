@@ -9,8 +9,8 @@ import { Checkbox } from '@/components/ui/checkbox';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { supabaseWithRetry } from '@/utils/supabaseWithRetry';
-import { useRetry } from '@/utils/retry';
-import { RetryStatus } from '@/components/common/RetryStatus';
+import type { useRetry } from '@/utils/retry';
+import type { RetryStatus } from '@/components/common/RetryStatus';
 import { toast } from 'sonner';
 import { 
   Shield, 

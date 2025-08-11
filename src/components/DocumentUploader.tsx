@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from 'react';
-import { ClassificationResult, DocumentCategory } from '../types/document-ai';
-import { classifyDocumentFromBase64 } from '../functions/document-classifier';import { useTranslation } from "react-i18next";
+import type { ClassificationResult, DocumentCategory } from '../types/document-ai';
+import { classifyDocumentFromBase64 } from '../functions/document-classifier';import type { useTranslation } from "react-i18next";
 
 interface DocumentUploaderProps {
   onDocumentProcessed?: (result: ClassificationResult, file: File) => void;

@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Progress } from '@/components/ui/progress';
 import { CheckCircle, ChevronRight, Loader2, SkipForward } from 'lucide-react';
-import { Checkbox } from '@/components/ui/checkbox';
+import type { Checkbox } from '@/components/ui/checkbox';
 import { useAnalytics } from '@/hooks/useAnalytics';
 import { cn } from '@/lib/utils';
 import {
@@ -17,7 +17,7 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from '@/components/ui/alert-dialog';
-import BasicLifeQuestions, { LifeAnswers } from './BasicLifeQuestions';
+import type BasicLifeQuestions, { LifeAnswers } from './BasicLifeQuestions';
 import { mapLifeAnswersToProjectOrder, mapProjectOrderToLifeAnswers } from './lifeAnswersMapper';
 
 export interface ProjectOrderAnswers {

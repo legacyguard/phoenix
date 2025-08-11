@@ -16,8 +16,8 @@
  * - <7 days or expired: Critical alerts requiring immediate attention
  */
 
-import { createClient } from '@supabase/supabase-js';
-import { Database } from '@/integrations/supabase/types';
+import type { createClient } from '@supabase/supabase-js';
+import type { Database } from '@/integrations/supabase/types';
 import { supabase } from '@/integrations/supabase/client';
 
 export interface ExpirationNotification {

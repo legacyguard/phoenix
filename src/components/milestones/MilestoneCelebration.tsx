@@ -10,7 +10,7 @@ import {
 } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { cn } from '@/lib/utils';
-import { Milestone } from '@/services/progressiveDisclosure';
+import type { Milestone } from '@/services/progressiveDisclosure';
 
 interface MilestoneCelebrationProps {
   milestone: Milestone;

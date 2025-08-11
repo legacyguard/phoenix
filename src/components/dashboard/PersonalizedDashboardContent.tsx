@@ -11,7 +11,7 @@ import {
   Award, BookOpen, Zap
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { TaskItem } from '@/components/onboarding/OnboardingWizard';
+import type { TaskItem } from '@/components/onboarding/OnboardingWizard';
 import { cn } from '@/lib/utils';
 import { 
   analyzeOnboardingResponses, 

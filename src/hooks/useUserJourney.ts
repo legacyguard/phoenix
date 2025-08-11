@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 import { analytics } from '@/services/analytics';
-import { AnalyticsEvent, UserMetrics } from '@/types/analytics';
+import type { AnalyticsEvent, UserMetrics } from '@/types/analytics';
 import { determineJourneyStage } from '@/utils/analyticsHelpers';
 import { supabase } from '@/integrations/supabase/client';
 

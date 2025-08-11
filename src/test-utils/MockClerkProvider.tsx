@@ -1,6 +1,6 @@
 /* eslint-disable react-refresh/only-export-components */
-import React, { ReactNode } from 'react';
-import { MockUser } from './mockClerkHelpers';
+import type React, { ReactNode } from 'react';
+import type { MockUser } from './mockClerkHelpers';
 import { 
   MockSession,
   MockAuthContextValue,

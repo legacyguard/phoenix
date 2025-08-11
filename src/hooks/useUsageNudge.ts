@@ -1,7 +1,7 @@
 import { useEffect, useState, useCallback } from 'react';
 import { toast } from 'sonner';
 import { useTranslation } from 'react-i18next';
-import { TaskItem } from '@/components/onboarding/OnboardingWizard';
+import type { TaskItem } from '@/components/onboarding/OnboardingWizard';
 
 interface UseUsageNudgeProps {
   tasks: TaskItem[];

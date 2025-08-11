@@ -1,4 +1,4 @@
-import { ExtractedMetadata, DocumentCategory } from '../types/document-ai';
+import type { ExtractedMetadata, DocumentCategory } from '../types/document-ai';
 
 export async function extractMetadata(
   category: DocumentCategory, 

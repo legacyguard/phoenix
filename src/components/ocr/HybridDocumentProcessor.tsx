@@ -8,7 +8,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { LocalProcessingIndicator, PrivacyToggle } from '../LocalProcessingIndicator';
 import { OCRProgress, OCRStatusMessage } from '../OCRProgress';
 import { Upload, FileText, Shield, Sparkles, Eye, EyeOff } from 'lucide-react';
-import type { OCRResult } from '../../../lib/services/ocr.types';import { useTranslation } from "react-i18next";
+import type { OCRResult } from '../../../lib/services/ocr.types';import type { useTranslation } from "react-i18next";
 
 export function HybridDocumentProcessor() {
   const {

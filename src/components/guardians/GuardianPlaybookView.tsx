@@ -4,8 +4,8 @@ import { toast } from 'sonner';
 import { supabase } from '@/lib/supabase';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { ScrollArea } from '@/components/ui/scroll-area';
-import { Separator } from '@/components/ui/separator';
+import type { ScrollArea } from '@/components/ui/scroll-area';
+import type { Separator } from '@/components/ui/separator';
 import { User, Phone, Mail, FileText, Heart, Shield, MessageSquare, Home, Book } from 'lucide-react';
 
 interface ImportantContact {

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { useUser } from '@clerk/clerk-react';
+import type { useUser } from '@clerk/clerk-react';
 import { toast } from 'sonner';
-import { Button } from '@/components/ui/button';
+import type { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Skeleton } from '@/components/ui/skeleton';
@@ -26,7 +26,7 @@ import {
   Gift,
   Heart } from
 'lucide-react';
-import { format } from 'date-fns';import { useTranslation } from "react-i18next";
+import { format } from 'date-fns';import type { useTranslation } from "react-i18next";
 
 interface TimeCapsuleMessage {
   id: string;

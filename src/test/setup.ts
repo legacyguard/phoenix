@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom';
 import { vi } from 'vitest';
-import { mockSupabaseClient } from './mocks/supabase';
+import type { mockSupabaseClient } from './mocks/supabase';
 
 // Mock environment variables for tests
 vi.stubEnv('VITE_SUPABASE_URL', 'https://test.supabase.co');

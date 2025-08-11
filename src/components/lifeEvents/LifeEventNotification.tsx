@@ -30,7 +30,7 @@ import {
   Info,
   Sparkles
 } from 'lucide-react';
-import { LifeEvent } from '@/services/lifeEventDetection';
+import type { LifeEvent } from '@/services/lifeEventDetection';
 import { LifeEventService } from '@/services/LifeEventService';
 import { LifeEventDetectionService } from '@/services/lifeEventDetection';
 import { useToast } from '@/components/ui/use-toast';

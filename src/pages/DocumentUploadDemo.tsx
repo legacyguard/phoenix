@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import DocumentUploadFlow from '../components/DocumentUploadFlow';
-import { DocumentProcessingResult } from '../types/document-ai';
+import type { DocumentProcessingResult } from '../types/document-ai';
 
 const DocumentUploadDemo: React.FC = () => {
   const { t } = useTranslation('ui-common');

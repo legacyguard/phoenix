@@ -1,7 +1,7 @@
 import React from 'react';
 import { Progress } from '@/components/ui/progress';
 import { FileText, Sparkles, Heart } from 'lucide-react';
-import { cn } from '@/lib/utils';import { useTranslation } from "react-i18next";
+import { cn } from '@/lib/utils';import type { useTranslation } from "react-i18next";
 
 interface OCRProgressProps {
   progress: number;

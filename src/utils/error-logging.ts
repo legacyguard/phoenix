@@ -1,4 +1,4 @@
-import { ErrorInfo } from 'react';
+import type { ErrorInfo } from 'react';
 import { logger } from '@/utils/logger';
 
 interface EmpatheticErrorLog {

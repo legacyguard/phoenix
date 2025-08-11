@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useUser } from '@clerk/clerk-react';
 import { useTranslation } from 'react-i18next';
-import RespectfulOnboarding, { OnboardingData } from '@/components/onboarding/RespectfulOnboarding';
+import type RespectfulOnboarding, { OnboardingData } from '@/components/onboarding/RespectfulOnboarding';
 import ProfessionalProgress from '@/components/dashboard/ProfessionalProgress';
 import { 
   Shield, 

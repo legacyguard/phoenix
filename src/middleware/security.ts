@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from 'next/server';
+import type { NextRequest, NextResponse } from 'next/server';
 
 export function withSecurityHeaders(handler: (req: NextRequest, ...args: Array<Record<string, unknown>>) => Promise<NextResponse>) {
   return async (req: NextRequest, ...args: Array<Record<string, unknown>>) => {

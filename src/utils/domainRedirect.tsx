@@ -1,9 +1,9 @@
 import React from 'react';
-import { type CountryCode } from '@/config/countries';
+import type { type CountryCode } from '@/config/countries';
 import { toast } from '@/components/ui/use-toast';
 import { createRoot } from 'react-dom/client';
 import { RedirectSimulationModal } from '@/components/modals/RedirectSimulationModal';
-import { useTranslation } from 'react-i18next';
+import type { useTranslation } from 'react-i18next';
 
 interface RedirectOptions {
   preserveSession?: boolean;

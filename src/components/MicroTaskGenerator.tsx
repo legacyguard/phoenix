@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ResponsibilityArchetype } from './PersonalizationEngine';import { useTranslation } from "react-i18next";
+import type { ResponsibilityArchetype } from './PersonalizationEngine';import { useTranslation } from "react-i18next";
 
 interface MicroTask {
   id: string;

@@ -17,7 +17,7 @@ import {
 'lucide-react';
 import { format } from 'date-fns';
 import { cn } from '@/lib/utils';
-import type { ProcessedDocument } from '../../../lib/services/document-upload.types';import { useTranslation } from "react-i18next";
+import type { ProcessedDocument } from '../../../lib/services/document-upload.types';import type { useTranslation } from "react-i18next";
 
 interface DocumentPreviewProps {
   document: ProcessedDocument;

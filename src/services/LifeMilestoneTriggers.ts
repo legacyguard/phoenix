@@ -1,6 +1,6 @@
 import { createClient } from '@supabase/supabase-js';
 
-import { SupabaseClient } from '@supabase/supabase-js';
+import type { SupabaseClient } from '@supabase/supabase-js';
 
 export class LifeMilestoneTriggers {
   private supabase: SupabaseClient;

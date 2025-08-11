@@ -9,7 +9,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { useAnalytics } from '@/hooks/useAnalytics';
 import { Shield, Cookie, BarChart3, Info, X, Check, AlertCircle, Eye, Database, Globe } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { cn } from '@/lib/utils';
+import type { cn } from '@/lib/utils';
 
 export interface ConsentPreferences {
   necessary: boolean; // Always true - required cookies

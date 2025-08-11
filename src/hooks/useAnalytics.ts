@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { analytics } from '@/services/analytics';
-import { AnalyticsEvent } from '@/types/analytics';
+import type { AnalyticsEvent } from '@/types/analytics';
 import { inferEmotionalContext } from '@/utils/analyticsHelpers';
 import type { ConsentPreferences } from '@/components/privacy/ConsentManager';
 
