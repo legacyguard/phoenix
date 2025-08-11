@@ -1,6 +1,6 @@
 import React from 'react';
-import type { type CountryCode } from '@/config/countries';
-import { toast } from '@/components/ui/use-toast';
+import type { CountryCode } from '@/config/countries';
+import { toast } from 'sonner';
 import { createRoot } from 'react-dom/client';
 import { RedirectSimulationModal } from '@/components/modals/RedirectSimulationModal';
 import type { useTranslation } from 'react-i18next';

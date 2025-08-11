@@ -17,7 +17,7 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
 } from '@/components/ui/alert-dialog';
-import type BasicLifeQuestions, { LifeAnswers } from './BasicLifeQuestions';
+import BasicLifeQuestions, { LifeAnswers } from './BasicLifeQuestions';
 import { mapLifeAnswersToProjectOrder, mapProjectOrderToLifeAnswers } from './lifeAnswersMapper';
 import type { ProjectOrderAnswers } from './types';
 

@@ -3,7 +3,8 @@ import { useUser } from '@clerk/clerk-react';
 import { useTranslation } from 'react-i18next';
 import { OnboardingWizard, TaskItem } from '@/components/onboarding/OnboardingWizard';
 import { FirstTimeUserGuide } from '@/components/onboarding/FirstTimeUserGuide';
-import type RespectfulOnboarding, { OnboardingData } from '@/components/onboarding/RespectfulOnboarding';
+import type { OnboardingData } from '@/components/onboarding/RespectfulOnboarding';
+import RespectfulOnboarding from '@/components/onboarding/RespectfulOnboarding';
 import { useAnalytics } from '@/hooks/useAnalytics';
 import { useFeatureFlag } from '@/config/features';
 

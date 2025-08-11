@@ -12,7 +12,7 @@ import {
   CheckCircle,
   Sparkles
 } from 'lucide-react';
-import type EssentialQuestions, { EssentialAnswers } from './EssentialQuestions';
+import EssentialQuestions, { EssentialAnswers } from './EssentialQuestions';
 import ImmediateValueUpload from './ImmediateValueUpload';
 import { generatePersonalizedPlan, getTaskEstimate } from './essentialRecommendations';
 
