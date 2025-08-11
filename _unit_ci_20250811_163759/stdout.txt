@@ -1,0 +1,2997 @@
+
+[1m[46m RUN [49m[22m [36mv3.2.4 [39m[90m/Users/luborfedak/Documents/Github/phoenix[39m
+
+ [32m✓[39m lib/services/__tests__/openai.service.test.ts[2m > [22mOpenAI Service[2m > [22mConfiguration[2m > [22mshould have valid configuration[32m 2[2mms[22m[39m
+ [32m✓[39m lib/services/__tests__/openai.service.test.ts[2m > [22mOpenAI Service[2m > [22mConfiguration[2m > [22mshould have rate limits configured[32m 2[2mms[22m[39m
+ [32m✓[39m lib/services/__tests__/openai.service.test.ts[2m > [22mOpenAI Service[2m > [22mConfiguration[2m > [22mshould have retry configuration[32m 1[2mms[22m[39m
+ [32m✓[39m lib/services/__tests__/openai.service.test.ts[2m > [22mOpenAI Service[2m > [22mDocument Analysis[2m > [22mshould analyze insurance document successfully[32m 3[2mms[22m[39m
+ [32m✓[39m lib/services/__tests__/openai.service.test.ts[2m > [22mOpenAI Service[2m > [22mDocument Analysis[2m > [22mshould handle analysis errors gracefully[32m 2[2mms[22m[39m
+ [32m✓[39m lib/services/__tests__/openai.service.test.ts[2m > [22mOpenAI Service[2m > [22mDocument Analysis[2m > [22mshould use cache for repeated requests[32m 1[2mms[22m[39m
+ [32m✓[39m lib/services/__tests__/openai.service.test.ts[2m > [22mOpenAI Service[2m > [22mLife Question Generation[2m > [22mshould generate life questions successfully[32m 1[2mms[22m[39m
+ [32m✓[39m lib/services/__tests__/openai.service.test.ts[2m > [22mOpenAI Service[2m > [22mAction Suggestions[2m > [22mshould suggest next actions based on context[32m 1[2mms[22m[39m
+ [32m✓[39m lib/services/__tests__/openai.service.test.ts[2m > [22mOpenAI Service[2m > [22mEmpathetic Message Generation[2m > [22mshould generate supportive messages[32m 1[2mms[22m[39m
+ [31m×[39m src/__tests__/emailNotifications.test.ts[2m > [22mEmail & Notifications System[2m > [22mEmailTemplate Component[2m > [22mrenders welcome email template correctly[32m 51[2mms[22m[39m
+[31m   → Unable to find an element with the text: /Dear John Smith/. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+[36m<body>[31m
+  [36m<div>[31m
+    [36m<div[31m
+      [33mclass[31m=[32m"email-template"[31m
+    [36m>[31m
+      [36m<header[31m
+        [33mclass[31m=[32m"email-header"[31m
+      [36m>[31m
+        [36m<p>[31m
+          [0memails:common.greeting[0m
+        [36m</p>[31m
+      [36m</header>[31m
+      [36m<main[31m
+        [33mclass[31m=[32m"email-main"[31m
+      [36m>[31m
+        [36m<div[31m
+          [33mclass[31m=[32m"email-content"[31m
+        [36m>[31m
+          [36m<h1>[31m
+            [0mWelcome to Your Family Protection Plan[0m
+          [36m</h1>[31m
+          [36m<p>[31m
+            [0mwelcome.introduction[0m
+          [36m</p>[31m
+          [36m<h2>[31m
+            [0mwelcome.whatNext[0m
+          [36m</h2>[31m
+          [36m<ol>[31m
+            [36m<li>[31m
+              [0mwelcome.step1[0m
+            [36m</li>[31m
+            [36m<li>[31m
+              [0mwelcome.step2[0m
+            [36m</li>[31m
+            [36m<li>[31m
+              [0mwelcome.step3[0m
+            [36m</li>[31m
+            [36m<li>[31m
+              [0mwelcome.step4[0m
+            [36m</li>[31m
+          [36m</ol>[31m
+          [36m<div[31m
+            [33mclass[31m=[32m"email-buttons"[31m
+          [36m>[31m
+            [36m<a[31m
+              [33mclass[31m=[32m"email-button"[31m
+              [33mhref[31m=[32m"/setup"[31m
+            [36m>[31m
+              [0mComplete Your Setup[0m
+            [36m</a>[31m
+          [36m</div>[31m
+          [36m<p>[31m
+            [0mwelcome.supportMessage[0m
+          [36m</p>[31m
+          [36m<p>[31m
+            [36m<em>[31m
+              [0mwelcome.securityNote[0m
+            [36m</em>[31m
+          [36m</p>[31m
+        [36m</div>[31m
+      [36m</main>[31m
+      [36m<footer[31m
+        [33mclass[31m=[32m"email-footer"[31m
+      [36m>[31m
+        [36m<p>[31m
+          [0mui.closing[0m
+        [36m</p>[31m
+        [36m<p>[31m
+          [0mui.signature[0m
+        [36m</p>[31m
+        [36m<p>[31m
+          [0mui.footerTagline[0m
+        [36m</p>[31m
+        [36m<hr />[31m
+        [36m<p>[31m
+          [36m<small>[31m
+            [0mui.confidentialNotice[0m
+          [36m</small>[31m
+        [36m</p>[31m
+        [36m<p>[31m
+          [36m<small>[31m
+            [0mui.securityReminder[0m
+          [36m</small>[31m
+        [36m</p>[31m
+        [36m<p>[31m
+          [36m<small>[31m
+            [0mui.contactUs[0m
+          [36m</small>[31m
+        [36m</p>[31m
+        [36m<p>[31m
+          [36m<small>[31m
+            [0mui.supportEmail[0m
+            [0m | [0m
+            [0mui.supportPhone[0m
+          [36m</small>[31m
+        [36m</p>[31m
+        [36m<p>[31m
+          [36m<small>[31m
+            [0mui.unsubscribe[0m
+            [0m [0m
+            [36m<a[31m
+              [33mhref[31m=[32m"#unsubscribe"[31m
+            [36m>[31m
+              [0mui.unsubscribeLink[0m
+            [36m</a>[31m
+          [36m</small>[31m
+        [36m</p>[31m
+      [36m</footer>[31m
+    [36m</div>[31m
+  [36m</div>[31m
+[36m</body>[31m[39m
+ [31m×[39m src/__tests__/emailNotifications.test.ts[2m > [22mEmail & Notifications System[2m > [22mEmailTemplate Component[2m > [22mrenders verification email template correctly[32m 13[2mms[22m[39m
+[31m   → Unable to find an element with the text: /Dear Jane Doe/. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+[36m<body>[31m
+  [36m<div>[31m
+    [36m<div[31m
+      [33mclass[31m=[32m"email-template"[31m
+    [36m>[31m
+      [36m<header[31m
+        [33mclass[31m=[32m"email-header"[31m
+      [36m>[31m
+        [36m<p>[31m
+          [0memails:common.greeting[0m
+        [36m</p>[31m
+      [36m</header>[31m
+      [36m<main[31m
+        [33mclass[31m=[32m"email-main"[31m
+      [36m>[31m
+        [36m<div[31m
+          [33mclass[31m=[32m"email-content"[31m
+        [36m>[31m
+          [36m<h1>[31m
+            [0mVerify Your Email Address[0m
+          [36m</h1>[31m
+          [36m<p>[31m
+            [0mverification.message[0m
+          [36m</p>[31m
+          [36m<p>[31m
+            [0mverification.instruction[0m
+          [36m</p>[31m
+          [36m<div[31m
+            [33mclass[31m=[32m"email-buttons"[31m
+          [36m>[31m
+            [36m<a[31m
+              [33mclass[31m=[32m"email-button"[31m
+              [33mhref[31m=[32m"/verify"[31m
+            [36m>[31m
+              [0mVerify Email Address[0m
+            [36m</a>[31m
+          [36m</div>[31m
+          [36m<p>[31m
+            [0mverification.alternativeLink[0m
+          [36m</p>[31m
+          [36m<p>[31m
+            [36m<em>[31m
+              [0mverification.linkExpiry[0m
+            [36m</em>[31m
+          [36m</p>[31m
+          [36m<p>[31m
+            [0mverification.alreadyVerified[0m
+          [36m</p>[31m
+          [36m<p>[31m
+            [0mverification.troubleshooting[0m
+          [36m</p>[31m
+        [36m</div>[31m
+      [36m</main>[31m
+      [36m<footer[31m
+        [33mclass[31m=[32m"email-footer"[31m
+      [36m>[31m
+        [36m<p>[31m
+          [0mui.closing[0m
+        [36m</p>[31m
+        [36m<p>[31m
+          [0mui.signature[0m
+        [36m</p>[31m
+        [36m<p>[31m
+          [0mui.footerTagline[0m
+        [36m</p>[31m
+        [36m<hr />[31m
+        [36m<p>[31m
+          [36m<small>[31m
+            [0mui.confidentialNotice[0m
+          [36m</small>[31m
+        [36m</p>[31m
+        [36m<p>[31m
+          [36m<small>[31m
+            [0mui.securityReminder[0m
+          [36m</small>[31m
+        [36m</p>[31m
+        [36m<p>[31m
+          [36m<small>[31m
+            [0mui.contactUs[0m
+          [36m</small>[31m
+        [36m</p>[31m
+        [36m<p>[31m
+          [36m<small>[31m
+            [0mui.supportEmail[0m
+            [0m | [0m
+            [0mui.supportPhone[0m
+          [36m</small>[31m
+        [36m</p>[31m
+        [36m<p>[31m
+          [36m<small>[31m
+            [0mui.unsubscribe[0m
+            [0m [0m
+            [36m<a[31m
+              [33mhref[31m=[32m"#unsubscribe"[31m
+            [36m>[31m
+              [0mui.unsubscribeLink[0m
+            [36m</a>[31m
+          [36m</small>[31m
+        [36m</p>[31m
+      [36m</footer>[31m
+    [36m</div>[31m
+  [36m</div>[31m
+[36m</body>[31m[39m
+ [31m×[39m src/__tests__/emailNotifications.test.ts[2m > [22mEmail & Notifications System[2m > [22mEmailTemplate Component[2m > [22mrenders password reset email template correctly[32m 7[2mms[22m[39m
+[31m   → Unable to find an element with the text: /Dear Bob Wilson/. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+[36m<body>[31m
+  [36m<div>[31m
+    [36m<div[31m
+      [33mclass[31m=[32m"email-template"[31m
+    [36m>[31m
+      [36m<header[31m
+        [33mclass[31m=[32m"email-header"[31m
+      [36m>[31m
+        [36m<p>[31m
+          [0memails:common.greeting[0m
+        [36m</p>[31m
+      [36m</header>[31m
+      [36m<main[31m
+        [33mclass[31m=[32m"email-main"[31m
+      [36m>[31m
+        [36m<div[31m
+          [33mclass[31m=[32m"email-content"[31m
+        [36m>[31m
+          [36m<h1>[31m
+            [0mPassword Reset Request[0m
+          [36m</h1>[31m
+          [36m<p>[31m
+            [0mpasswordReset.message[0m
+          [36m</p>[31m
+          [36m<div[31m
+            [33mclass[31m=[32m"email-buttons"[31m
+          [36m>[31m
+            [36m<a[31m
+              [33mclass[31m=[32m"email-button"[31m
+              [33mhref[31m=[32m"/reset"[31m
+            [36m>[31m
+              [0mReset My Password[0m
+            [36m</a>[31m
+          [36m</div>[31m
+          [36m<p>[31m
+            [0mpasswordReset.notRequested[0m
+          [36m</p>[31m
+          [36m<p>[31m
+            [36m<em>[31m
+              [0mpasswordReset.linkExpiry[0m
+            [36m</em>[31m
+          [36m</p>[31m
+          [36m<p>[31m
+            [0mpasswordReset.securityTip[0m
+          [36m</p>[31m
+          [36m<p>[31m
+            [0mpasswordReset.contactSupport[0m
+          [36m</p>[31m
+        [36m</div>[31m
+      [36m</main>[31m
+      [36m<footer[31m
+        [33mclass[31m=[32m"email-footer"[31m
+      [36m>[31m
+        [36m<p>[31m
+          [0mui.closing[0m
+        [36m</p>[31m
+        [36m<p>[31m
+          [0mui.signature[0m
+        [36m</p>[31m
+        [36m<p>[31m
+          [0mui.footerTagline[0m
+        [36m</p>[31m
+        [36m<hr />[31m
+        [36m<p>[31m
+          [36m<small>[31m
+            [0mui.confidentialNotice[0m
+          [36m</small>[31m
+        [36m</p>[31m
+        [36m<p>[31m
+          [36m<small>[31m
+            [0mui.securityReminder[0m
+          [36m</small>[31m
+        [36m</p>[31m
+        [36m<p>[31m
+          [36m<small>[31m
+            [0mui.contactUs[0m
+          [36m</small>[31m
+        [36m</p>[31m
+        [36m<p>[31m
+          [36m<small>[31m
+            [0mui.supportEmail[0m
+            [0m | [0m
+            [0mui.supportPhone[0m
+          [36m</small>[31m
+        [36m</p>[31m
+        [36m<p>[31m
+          [36m<small>[31m
+            [0mui.unsubscribe[0m
+            [0m [0m
+            [36m<a[31m
+              [33mhref[31m=[32m"#unsubscribe"[31m
+            [36m>[31m
+              [0mui.unsubscribeLink[0m
+            [36m</a>[31m
+          [36m</small>[31m
+        [36m</p>[31m
+      [36m</footer>[31m
+    [36m</div>[31m
+  [36m</div>[31m
+[36m</body>[31m[39m
+ [31m×[39m src/__tests__/emailNotifications.test.ts[2m > [22mEmail & Notifications System[2m > [22mEmailTemplate Component[2m > [22mrenders task reminder email template correctly[32m 4[2mms[22m[39m
+[31m   → Unable to find an element with the text: /Dear Alice Brown/. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+[36m<body>[31m
+  [36m<div>[31m
+    [36m<div[31m
+      [33mclass[31m=[32m"email-template"[31m
+    [36m>[31m
+      [36m<header[31m
+        [33mclass[31m=[32m"email-header"[31m
+      [36m>[31m
+        [36m<p>[31m
+          [0memails:common.greeting[0m
+        [36m</p>[31m
+      [36m</header>[31m
+      [36m<main[31m
+        [33mclass[31m=[32m"email-main"[31m
+      [36m>[31m
+        [36m<div[31m
+          [33mclass[31m=[32m"email-content"[31m
+        [36m>[31m
+          [36m<h1>[31m
+            [0mYour Family Protection Plan Needs Attention[0m
+          [36m</h1>[31m
+          [36m<p>[31m
+            [0mui.taskReminder.message[0m
+          [36m</p>[31m
+          [36m<p>[31m
+            [0mnotifications.taskReminder.pendingTasks[0m
+          [36m</p>[31m
+          [36m<h3>[31m
+            [0mui.taskReminder.highPriority[0m
+          [36m</h3>[31m
+          [36m<div[31m
+            [33mclass[31m=[32m"email-buttons"[31m
+          [36m>[31m
+            [36m<a[31m
+              [33mclass[31m=[32m"email-button"[31m
+              [33mhref[31m=[32m"/tasks"[31m
+            [36m>[31m
+              [0mReview My Tasks[0m
+            [36m</a>[31m
+          [36m</div>[31m
+          [36m<p>[31m
+            [0mui.taskReminder.encouragement[0m
+          [36m</p>[31m
+          [36m<p>[31m
+            [0mui.taskReminder.noRush[0m
+          [36m</p>[31m
+        [36m</div>[31m
+      [36m</main>[31m
+      [36m<footer[31m
+        [33mclass[31m=[32m"email-footer"[31m
+      [36m>[31m
+        [36m<p>[31m
+          [0mui.closing[0m
+        [36m</p>[31m
+        [36m<p>[31m
+          [0mui.signature[0m
+        [36m</p>[31m
+        [36m<p>[31m
+          [0mui.footerTagline[0m
+        [36m</p>[31m
+        [36m<hr />[31m
+        [36m<p>[31m
+          [36m<small>[31m
+            [0mui.confidentialNotice[0m
+          [36m</small>[31m
+        [36m</p>[31m
+        [36m<p>[31m
+          [36m<small>[31m
+            [0mui.securityReminder[0m
+          [36m</small>[31m
+        [36m</p>[31m
+        [36m<p>[31m
+          [36m<small>[31m
+            [0mui.contactUs[0m
+          [36m</small>[31m
+        [36m</p>[31m
+        [36m<p>[31m
+          [36m<small>[31m
+            [0mui.supportEmail[0m
+            [0m | [0m
+            [0mui.supportPhone[0m
+          [36m</small>[31m
+        [36m</p>[31m
+        [36m<p>[31m
+          [36m<small>[31m
+            [0mui.unsubscribe[0m
+            [0m [0m
+            [36m<a[31m
+              [33mhref[31m=[32m"#unsubscribe"[31m
+            [36m>[31m
+              [0mui.unsubscribeLink[0m
+            [36m</a>[31m
+          [36m</small>[31m
+        [36m</p>[31m
+      [36m</footer>[31m
+    [36m</div>[31m
+  [36m</div>[31m
+[36m</body>[31m[39m
+ [31m×[39m src/__tests__/emailNotifications.test.ts[2m > [22mEmail & Notifications System[2m > [22mEmailTemplate Component[2m > [22mrenders document expiry email template correctly[32m 4[2mms[22m[39m
+[31m   → Unable to find an element with the text: /Dear Charlie Davis/. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+[36m<body>[31m
+  [36m<div>[31m
+    [36m<div[31m
+      [33mclass[31m=[32m"email-template"[31m
+    [36m>[31m
+      [36m<header[31m
+        [33mclass[31m=[32m"email-header"[31m
+      [36m>[31m
+        [36m<p>[31m
+          [0memails:common.greeting[0m
+        [36m</p>[31m
+      [36m</header>[31m
+      [36m<main[31m
+        [33mclass[31m=[32m"email-main"[31m
+      [36m>[31m
+        [36m<div[31m
+          [33mclass[31m=[32m"email-content"[31m
+        [36m>[31m
+          [36m<h1>[31m
+            [0mDocument Renewal Reminder[0m
+          [36m</h1>[31m
+          [36m<p>[31m
+            [0mui.documentExpiry.message[0m
+          [36m</p>[31m
+          [36m<p>[31m
+            [36m<strong>[31m
+              [0mLife Insurance Policy[0m
+            [36m</strong>[31m
+          [36m</p>[31m
+          [36m<p>[31m
+            [36m<strong>[31m
+              [0m2024-12-31[0m
+            [36m</strong>[31m
+          [36m</p>[31m
+          [36m<p>[31m
+            [0mui.documentExpiry.action[0m
+          [36m</p>[31m
+          [36m<div[31m
+            [33mclass[31m=[32m"email-buttons"[31m
+          [36m>[31m
+            [36m<a[31m
+              [33mclass[31m=[32m"email-button"[31m
+              [33mhref[31m=[32m"/documents"[31m
+            [36m>[31m
+              [0mUpdate Document[0m
+            [36m</a>[31m
+          [36m</div>[31m
+          [36m<p>[31m
+            [0mui.documentExpiry.importance[0m
+          [36m</p>[31m
+        [36m</div>[31m
+      [36m</main>[31m
+      [36m<footer[31m
+        [33mclass[31m=[32m"email-footer"[31m
+      [36m>[31m
+        [36m<p>[31m
+          [0mui.closing[0m
+        [36m</p>[31m
+        [36m<p>[31m
+          [0mui.signature[0m
+        [36m</p>[31m
+        [36m<p>[31m
+          [0mui.footerTagline[0m
+        [36m</p>[31m
+        [36m<hr />[31m
+        [36m<p>[31m
+          [36m<small>[31m
+            [0mui.confidentialNotice[0m
+          [36m</small>[31m
+        [36m</p>[31m
+        [36m<p>[31m
+          [36m<small>[31m
+            [0mui.securityReminder[0m
+          [36m</small>[31m
+        [36m</p>[31m
+        [36m<p>[31m
+          [36m<small>[31m
+            [0mui.contactUs[0m
+          [36m</small>[31m
+        [36m</p>[31m
+        [36m<p>[31m
+          [36m<small>[31m
+            [0mui.supportEmail[0m
+            [0m | [0m
+            [0mui.supportPhone[0m
+          [36m</small>[31m
+        [36m</p>[31m
+        [36m<p>[31m
+          [36m<small>[31m
+            [0mui.unsubscribe[0m
+            [0m [0m
+            [36m<a[31m
+              [33mhref[31m=[32m"#unsubscribe"[31m
+            [36m>[31m
+              [0mui.unsubscribeLink[0m
+            [36m</a>[31m
+          [36m</small>[31m
+        [36m</p>[31m
+      [36m</footer>[31m
+    [36m</div>[31m
+  [36m</div>[31m
+[36m</body>[31m[39m
+ [31m×[39m src/__tests__/emailNotifications.test.ts[2m > [22mEmail & Notifications System[2m > [22mEmailTemplate Component[2m > [22mrenders security alert email template correctly[32m 4[2mms[22m[39m
+[31m   → Unable to find an element with the text: /Dear David Miller/. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+[36m<body>[31m
+  [36m<div>[31m
+    [36m<div[31m
+      [33mclass[31m=[32m"email-template"[31m
+    [36m>[31m
+      [36m<header[31m
+        [33mclass[31m=[32m"email-header"[31m
+      [36m>[31m
+        [36m<p>[31m
+          [0memails:common.greeting[0m
+        [36m</p>[31m
+      [36m</header>[31m
+      [36m<main[31m
+        [33mclass[31m=[32m"email-main"[31m
+      [36m>[31m
+        [36m<div[31m
+          [33mclass[31m=[32m"email-content"[31m
+        [36m>[31m
+          [36m<h1>[31m
+            [0mAccount Access Notification[0m
+          [36m</h1>[31m
+          [36m<p>[31m
+            [0mui.loginAlert.message[0m
+          [36m</p>[31m
+          [36m<h3>[31m
+            [0mui.loginAlert.details[0m
+          [36m</h3>[31m
+          [36m<ul>[31m
+            [36m<li>[31m
+              [0m2024-01-15 14:30:00[0m
+            [36m</li>[31m
+            [36m<li>[31m
+              [0mNew York, NY[0m
+            [36m</li>[31m
+            [36m<li>[31m
+              [0miPhone 15[0m
+            [36m</li>[31m
+          [36m</ul>[31m
+          [36m<p>[31m
+            [0mui.loginAlert.wasYou[0m
+          [36m</p>[31m
+          [36m<p>[31m
+            [0mui.loginAlert.notYou[0m
+          [36m</p>[31m
+          [36m<ul>[31m
+            [36m<li>[31m
+              [0mui.loginAlert.action1[0m
+            [36m</li>[31m
+            [36m<li>[31m
+              [0mui.loginAlert.action2[0m
+            [36m</li>[31m
+            [36m<li>[31m
+              [0mui.loginAlert.action3[0m
+            [36m</li>[31m
+          [36m</ul>[31m
+          [36m<div[31m
+            [33mclass[31m=[32m"email-buttons"[31m
+          [36m>[31m
+            [36m<a[31m
+              [33mclass[31m=[32m"email-button"[31m
+              [33mhref[31m=[32m"/security"[31m
+            [36m>[31m
+              [0mSecure My Account[0m
+            [36m</a>[31m
+          [36m</div>[31m
+          [36m<p>[31m
+            [0mui.loginAlert.supportContact[0m
+          [36m</p>[31m
+        [36m</div>[31m
+      [36m</main>[31m
+      [36m<footer[31m
+        [33mclass[31m=[32m"email-footer"[31m
+      [36m>[31m
+        [36m<p>[31m
+          [0mui.closing[0m
+        [36m</p>[31m
+        [36m<p>[31m
+          [0mui.signature[0m
+        [36m</p>[31m
+        [36m<p>[31m
+          [0mui.footerTagline[0m
+        [36m</p>[31m
+        [36m<hr />[31m
+        [36m<p>[31m
+          [36m<small>[31m
+            [0mui.confidentialNotice[0m
+          [36m</small>[31m
+        [36m</p>[31m
+        [36m<p>[31m
+          [36m<small>[31m
+            [0mui.securityReminder[0m
+          [36m</small>[31m
+        [36m</p>[31m
+        [36m<p>[31m
+          [36m<small>[31m
+            [0mui.contactUs[0m
+          [36m</small>[31m
+        [36m</p>[31m
+        [36m<p>[31m
+          [36m<small>[31m
+            [0mui.supportEmail[0m
+            [0m | [0m
+            [0mui.supportPhone[0m
+          [36m</small>[31m
+        [36m</p>[31m
+        [36m<p>[31m
+          [36m<small>[31m
+            [0mui.unsubscribe[0m
+            [0m [0m
+            [36m<a[31m
+              [33mhref[31m=[32m"#unsubscribe"[31m
+            [36m>[31m
+              [0mui.unsubscribeLink[0m
+            [36m</a>[31m
+          [36m</small>[31m
+        [36m</p>[31m
+      [36m</footer>[31m
+    [36m</div>[31m
+  [36m</div>[31m
+[36m</body>[31m[39m
+ [31m×[39m src/__tests__/emailNotifications.test.ts[2m > [22mEmail & Notifications System[2m > [22mEmailTemplate Component[2m > [22mrenders family invitation email template correctly[32m 5[2mms[22m[39m
+[31m   → Unable to find an element with the text: /Dear Valued Member/. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+[36m<body>[31m
+  [36m<div>[31m
+    [36m<div[31m
+      [33mclass[31m=[32m"email-template"[31m
+    [36m>[31m
+      [36m<header[31m
+        [33mclass[31m=[32m"email-header"[31m
+      [36m>[31m
+        [36m<p>[31m
+          [0memails:ui.greetingDefault[0m
+        [36m</p>[31m
+      [36m</header>[31m
+      [36m<main[31m
+        [33mclass[31m=[32m"email-main"[31m
+      [36m>[31m
+        [36m<div[31m
+          [33mclass[31m=[32m"email-content"[31m
+        [36m>[31m
+          [36m<h1>[31m
+            [0mFamily Protection Plan Invitation[0m
+          [36m</h1>[31m
+          [36m<p>[31m
+            [0mEmma Wilson[0m
+          [36m</p>[31m
+          [36m<p>[31m
+            [36m<strong>[31m
+              [0mExecutor[0m
+            [36m</strong>[31m
+          [36m</p>[31m
+          [36m<p>[31m
+            [0mfamily.invitationSent.responsibility[0m
+          [36m</p>[31m
+          [36m<h3>[31m
+            [0mfamily.invitationSent.whatNext[0m
+          [36m</h3>[31m
+          [36m<ul>[31m
+            [36m<li>[31m
+              [0mfamily.invitationSent.access1[0m
+            [36m</li>[31m
+            [36m<li>[31m
+              [0mfamily.invitationSent.access2[0m
+            [36m</li>[31m
+            [36m<li>[31m
+              [0mfamily.invitationSent.access3[0m
+            [36m</li>[31m
+          [36m</ul>[31m
+          [36m<div[31m
+            [33mclass[31m=[32m"email-buttons"[31m
+          [36m>[31m
+            [36m<a[31m
+              [33mclass[31m=[32m"email-button"[31m
+              [33mhref[31m=[32m"/family/accept"[31m
+            [36m>[31m
+              [0mAccept Invitation[0m
+            [36m</a>[31m
+          [36m</div>[31m
+          [36m<p>[31m
+            [0mfamily.invitationSent.questions[0m
+          [36m</p>[31m
+          [36m<p>[31m
+            [36m<em>[31m
+              [0mfamily.invitationSent.honor[0m
+            [36m</em>[31m
+          [36m</p>[31m
+        [36m</div>[31m
+      [36m</main>[31m
+      [36m<footer[31m
+        [33mclass[31m=[32m"email-footer"[31m
+      [36m>[31m
+        [36m<p>[31m
+          [0mui.closing[0m
+        [36m</p>[31m
+        [36m<p>[31m
+          [0mui.signature[0m
+        [36m</p>[31m
+        [36m<p>[31m
+          [0mui.footerTagline[0m
+        [36m</p>[31m
+        [36m<hr />[31m
+        [36m<p>[31m
+          [36m<small>[31m
+            [0mui.confidentialNotice[0m
+          [36m</small>[31m
+        [36m</p>[31m
+        [36m<p>[31m
+          [36m<small>[31m
+            [0mui.securityReminder[0m
+          [36m</small>[31m
+        [36m</p>[31m
+        [36m<p>[31m
+          [36m<small>[31m
+            [0mui.contactUs[0m
+          [36m</small>[31m
+        [36m</p>[31m
+        [36m<p>[31m
+          [36m<small>[31m
+            [0mui.supportEmail[0m
+            [0m | [0m
+            [0mui.supportPhone[0m
+          [36m</small>[31m
+        [36m</p>[31m
+        [36m<p>[31m
+          [36m<small>[31m
+            [0mui.unsubscribe[0m
+            [0m [0m
+            [36m<a[31m
+              [33mhref[31m=[32m"#unsubscribe"[31m
+            [36m>[31m
+              [0mui.unsubscribeLink[0m
+            [36m</a>[31m
+          [36m</small>[31m
+        [36m</p>[31m
+      [36m</footer>[31m
+    [36m</div>[31m
+  [36m</div>[31m
+[36m</body>[31m[39m
+ [31m×[39m src/__tests__/emailNotifications.test.ts[2m > [22mEmail & Notifications System[2m > [22mEmailTemplate Component[2m > [22mrenders subscription email template correctly[32m 4[2mms[22m[39m
+[31m   → Unable to find an element with the text: /Dear Frank Johnson/. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+[36m<body>[31m
+  [36m<div>[31m
+    [36m<div[31m
+      [33mclass[31m=[32m"email-template"[31m
+    [36m>[31m
+      [36m<header[31m
+        [33mclass[31m=[32m"email-header"[31m
+      [36m>[31m
+        [36m<p>[31m
+          [0memails:common.greeting[0m
+        [36m</p>[31m
+      [36m</header>[31m
+      [36m<main[31m
+        [33mclass[31m=[32m"email-main"[31m
+      [36m>[31m
+        [36m<div[31m
+          [33mclass[31m=[32m"email-content"[31m
+        [36m>[31m
+          [36m<h1>[31m
+            [0mYour Trial is Ending Soon[0m
+          [36m</h1>[31m
+          [36m<p>[31m
+            [0m7 days[0m
+          [36m</p>[31m
+          [36m<h3>[31m
+            [0msubscription.trialExpiring.whatHappens[0m
+          [36m</h3>[31m
+          [36m<ul>[31m
+            [36m<li>[31m
+              [0msubscription.trialExpiring.consequence1[0m
+            [36m</li>[31m
+            [36m<li>[31m
+              [0msubscription.trialExpiring.consequence2[0m
+            [36m</li>[31m
+            [36m<li>[31m
+              [0msubscription.trialExpiring.consequence3[0m
+            [36m</li>[31m
+          [36m</ul>[31m
+          [36m<p>[31m
+            [0msubscription.trialExpiring.continueProtection[0m
+          [36m</p>[31m
+          [36m<div[31m
+            [33mclass[31m=[32m"email-buttons"[31m
+          [36m>[31m
+            [36m<a[31m
+              [33mclass[31m=[32m"email-button"[31m
+              [33mhref[31m=[32m"/subscription"[31m
+            [36m>[31m
+              [0mChoose Your Plan[0m
+            [36m</a>[31m
+          [36m</div>[31m
+          [36m<p>[31m
+            [0msubscription.trialExpiring.noCommitment[0m
+          [36m</p>[31m
+          [36m<p>[31m
+            [0msubscription.trialExpiring.questions[0m
+          [36m</p>[31m
+        [36m</div>[31m
+      [36m</main>[31m
+      [36m<footer[31m
+        [33mclass[31m=[32m"email-footer"[31m
+      [36m>[31m
+        [36m<p>[31m
+          [0mui.closing[0m
+        [36m</p>[31m
+        [36m<p>[31m
+          [0mui.signature[0m
+        [36m</p>[31m
+        [36m<p>[31m
+          [0mui.footerTagline[0m
+        [36m</p>[31m
+        [36m<hr />[31m
+        [36m<p>[31m
+          [36m<small>[31m
+            [0mui.confidentialNotice[0m
+          [36m</small>[31m
+        [36m</p>[31m
+        [36m<p>[31m
+          [36m<small>[31m
+            [0mui.securityReminder[0m
+          [36m</small>[31m
+        [36m</p>[31m
+        [36m<p>[31m
+          [36m<small>[31m
+            [0mui.contactUs[0m
+          [36m</small>[31m
+        [36m</p>[31m
+        [36m<p>[31m
+          [36m<small>[31m
+            [0mui.supportEmail[0m
+            [0m | [0m
+            [0mui.supportPhone[0m
+          [36m</small>[31m
+        [36m</p>[31m
+        [36m<p>[31m
+          [36m<small>[31m
+            [0mui.unsubscribe[0m
+            [0m [0m
+            [36m<a[31m
+              [33mhref[31m=[32m"#unsubscribe"[31m
+            [36m>[31m
+              [0mui.unsubscribeLink[0m
+            [36m</a>[31m
+          [36m</small>[31m
+        [36m</p>[31m
+      [36m</footer>[31m
+    [36m</div>[31m
+  [36m</div>[31m
+[36m</body>[31m[39m
+ [32m✓[39m src/__tests__/emailNotifications.test.ts[2m > [22mEmail & Notifications System[2m > [22mEmail Service[2m > [22msends welcome email successfully[32m 1[2mms[22m[39m
+ [32m✓[39m src/__tests__/emailNotifications.test.ts[2m > [22mEmail & Notifications System[2m > [22mEmail Service[2m > [22msends verification email successfully[32m 0[2mms[22m[39m
+ [32m✓[39m src/__tests__/emailNotifications.test.ts[2m > [22mEmail & Notifications System[2m > [22mEmail Service[2m > [22msends password reset email successfully[32m 0[2mms[22m[39m
+ [32m✓[39m src/__tests__/emailNotifications.test.ts[2m > [22mEmail & Notifications System[2m > [22mNotification Service[2m > [22msends push notification successfully[32m 1[2mms[22m[39m
+ [32m✓[39m src/__tests__/emailNotifications.test.ts[2m > [22mEmail & Notifications System[2m > [22mNotification Service[2m > [22msends SMS notification successfully[32m 1[2mms[22m[39m
+ [32m✓[39m src/__tests__/emailNotifications.test.ts[2m > [22mEmail & Notifications System[2m > [22mNotification Service[2m > [22msends multi-channel notification successfully[32m 1[2mms[22m[39m
+ [32m✓[39m src/__tests__/emailNotifications.test.ts[2m > [22mEmail & Notifications System[2m > [22mLegal Document Service[2m > [22mgets legal disclaimers correctly[32m 0[2mms[22m[39m
+ [32m✓[39m src/__tests__/emailNotifications.test.ts[2m > [22mEmail & Notifications System[2m > [22mLegal Document Service[2m > [22mgets compliance information correctly[32m 0[2mms[22m[39m
+ [32m✓[39m src/__tests__/emailNotifications.test.ts[2m > [22mEmail & Notifications System[2m > [22mLegal Document Service[2m > [22mgets terms and conditions correctly[32m 0[2mms[22m[39m
+ [32m✓[39m src/__tests__/emailNotifications.test.ts[2m > [22mEmail & Notifications System[2m > [22mLegal Document Service[2m > [22mgets execution requirements correctly[32m 0[2mms[22m[39m
+ [32m✓[39m src/__tests__/emailNotifications.test.ts[2m > [22mEmail & Notifications System[2m > [22mTranslation Integration[2m > [22mloads email translations correctly[32m 0[2mms[22m[39m
+ [32m✓[39m src/__tests__/emailNotifications.test.ts[2m > [22mEmail & Notifications System[2m > [22mTranslation Integration[2m > [22mloads notification translations correctly[32m 0[2mms[22m[39m
+ [32m✓[39m src/__tests__/emailNotifications.test.ts[2m > [22mEmail & Notifications System[2m > [22mTranslation Integration[2m > [22mloads legal translations correctly[32m 10[2mms[22m[39m
+ [32m✓[39m src/__tests__/emailNotifications.test.ts[2m > [22mEmail & Notifications System[2m > [22mTranslation Integration[2m > [22mhandles interpolation correctly[32m 1[2mms[22m[39m
+ [32m✓[39m src/__tests__/emailNotifications.test.ts[2m > [22mEmail & Notifications System[2m > [22mTranslation Integration[2m > [22mhandles missing translations gracefully[32m 0[2mms[22m[39m
+ [32m✓[39m src/__tests__/professional-onboarding-integration.test.tsx[2m > [22mProfessional Onboarding Integration[2m > [22mInitial User Experience[2m > [22mshould show welcome message for new users[32m 37[2mms[22m[39m
+ [32m✓[39m src/__tests__/professional-onboarding-integration.test.tsx[2m > [22mProfessional Onboarding Integration[2m > [22mInitial User Experience[2m > [22mshould display initial security areas without gamification[32m 10[2mms[22m[39m
+ [32m✓[39m src/__tests__/professional-onboarding-integration.test.tsx[2m > [22mProfessional Onboarding Integration[2m > [22mProgress Tracking[2m > [22mshould show readiness levels instead of game scores[32m 6[2mms[22m[39m
+ [32m✓[39m src/__tests__/professional-onboarding-integration.test.tsx[2m > [22mProfessional Onboarding Integration[2m > [22mProgress Tracking[2m > [22mshould prioritize urgent actions without pressure[32m 10[2mms[22m[39m
+ [32m✓[39m src/__tests__/professional-onboarding-integration.test.tsx[2m > [22mProfessional Onboarding Integration[2m > [22mUser Actions[2m > [22mshould handle area completion without celebration animations[32m 12[2mms[22m[39m
+ [32m✓[39m src/__tests__/professional-onboarding-integration.test.tsx[2m > [22mProfessional Onboarding Integration[2m > [22mUser Actions[2m > [22mshould show time estimates instead of points[32m 11[2mms[22m[39m
+ [32m✓[39m src/__tests__/professional-onboarding-integration.test.tsx[2m > [22mProfessional Onboarding Integration[2m > [22mNavigation and Flow[2m > [22mshould allow skipping non-essential steps[32m 5[2mms[22m[39m
+ [32m✓[39m src/__tests__/professional-onboarding-integration.test.tsx[2m > [22mProfessional Onboarding Integration[2m > [22mNavigation and Flow[2m > [22mshould provide clear next steps without pressure[32m 5[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.test.tsx[2m > [22mStatusBadge[2m > [22mshould render complete status with correct styling[32m 33[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.test.tsx[2m > [22mStatusBadge[2m > [22mshould render in_progress status with correct icon[32m 5[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.test.tsx[2m > [22mStatusBadge[2m > [22mshould render needs_review status with warning styling[32m 4[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.test.tsx[2m > [22mStatusBadge[2m > [22mshould render not_started status with neutral styling[32m 4[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.test.tsx[2m > [22mPriorityIndicator[2m > [22mshould render urgent priority with red color[32m 4[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.test.tsx[2m > [22mPriorityIndicator[2m > [22mshould render high priority with orange color[32m 3[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.test.tsx[2m > [22mPriorityIndicator[2m > [22mshould hide label when showLabel is false[32m 7[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.test.tsx[2m > [22mPriorityIndicator[2m > [22mshould render low priority with gray color[32m 4[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.test.tsx[2m > [22mReadinessLevel[2m > [22mshould render initial level with orange styling[32m 4[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.test.tsx[2m > [22mReadinessLevel[2m > [22mshould render developing level with yellow styling[32m 1[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.test.tsx[2m > [22mReadinessLevel[2m > [22mshould render maintained level with green styling[32m 1[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.test.tsx[2m > [22mReadinessLevel[2m > [22mshould show description when showDescription is true[32m 5[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.test.tsx[2m > [22mReadinessLevel[2m > [22mshould hide description when showDescription is false[32m 3[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.test.tsx[2m > [22mSecurityAreaCard[2m > [22mshould render card with all provided information[32m 7[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.test.tsx[2m > [22mSecurityAreaCard[2m > [22mshould show priority indicator stripe for high priority[32m 2[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.test.tsx[2m > [22mSecurityAreaCard[2m > [22mshould show urgent priority stripe[32m 1[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.test.tsx[2m > [22mSecurityAreaCard[2m > [22mshould not show priority stripe for low priority[32m 2[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.test.tsx[2m > [22mSecurityAreaCard[2m > [22mshould call onClick when card is clicked[32m 7[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.test.tsx[2m > [22mRecommendationCard[2m > [22mshould render recommendation with all information[32m 6[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.test.tsx[2m > [22mRecommendationCard[2m > [22mshould show urgent styling for urgent priority[32m 3[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.test.tsx[2m > [22mRecommendationCard[2m > [22mshould show different icon for review type[32m 3[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.test.tsx[2m > [22mRecommendationCard[2m > [22mshould call onAction when button is clicked[32m 6[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.test.tsx[2m > [22mRecommendationCard[2m > [22mshould use default action label when not provided[32m 2[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.test.tsx[2m > [22mProgressOverview[2m > [22mshould display all metrics correctly[32m 7[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.test.tsx[2m > [22mProgressOverview[2m > [22mshould calculate and display percentage correctly[32m 3[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.test.tsx[2m > [22mProgressOverview[2m > [22mshould not show urgent actions card when count is 0[32m 12[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.test.tsx[2m > [22mProgressOverview[2m > [22mshould not show needs review card when count is 0[32m 2[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.test.tsx[2m > [22mProgressOverview[2m > [22mshould handle 100% completion correctly[32m 4[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.test.tsx[2m > [22mInfoAlert[2m > [22mshould render info alert with default type[32m 1[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.test.tsx[2m > [22mInfoAlert[2m > [22mshould render success alert with green styling[32m 1[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.test.tsx[2m > [22mInfoAlert[2m > [22mshould render warning alert with yellow styling[32m 1[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.test.tsx[2m > [22mInfoAlert[2m > [22mshould render error alert with red styling[32m 1[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.test.tsx[2m > [22mInfoAlert[2m > [22mshould render action button when provided[32m 3[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.test.tsx[2m > [22mInfoAlert[2m > [22mshould render without description when not provided[32m 1[2mms[22m[39m
+ [32m✓[39m src/__tests__/professional-onboarding-integration.test.tsx[2m > [22mProfessional Onboarding Integration[2m > [22mReview and Maintenance[2m > [22mshould remind about reviews without nagging[32m 9[2mms[22m[39m
+ [32m✓[39m src/__tests__/professional-onboarding-integration.test.tsx[2m > [22mProfessional Onboarding Integration[2m > [22mAccessibility[2m > [22mshould have proper ARIA labels and roles[32m 57[2mms[22m[39m
+ [32m✓[39m src/__tests__/professional-onboarding-integration.test.tsx[2m > [22mProfessional Onboarding Integration[2m > [22mAccessibility[2m > [22mshould be keyboard navigable[32m 17[2mms[22m[39m
+ [31m×[39m src/components/__tests__/SmartUploadZone.test.tsx[2m > [22mSmartUploadZone[2m > [22mshould render the upload zone[32m 64[2mms[22m[39m
+[31m   → Unable to find an element with the text: assets.zone.dropHere. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+[36m<body>[31m
+  [36m<div>[31m
+    [36m<div[31m
+      [33mclass[31m=[32m"relative rounded-xl border-2 border-dashed transition-all duration-200 border-gray-300 hover:border-gray-400"[31m
+      [33mdata-testid[31m=[32m"upload-zone"[31m
+    [36m>[31m
+      [36m<input[31m
+        [33maccept[31m=[32m"image/*,application/pdf"[31m
+        [33maria-label[31m=[32m"assets.smartUploadZone.file_upload_1"[31m
+        [33mclass[31m=[32m"hidden"[31m
+        [33mdata-testid[31m=[32m"file-input"[31m
+        [33mmultiple[31m=[32m""[31m
+        [33mtype[31m=[32m"file"[31m
+      [36m/>[31m
+      [36m<div[31m
+        [33mclass[31m=[32m"p-8 sm:p-12 text-center"[31m
+      [36m>[31m
+        [36m<div[31m
+          [33mclass[31m=[32m"mx-auto mb-6 relative"[31m
+        [36m>[31m
+          [36m<div[31m
+            [33mclass[31m=[32m"w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center transition-all"[31m
+          [36m>[31m
+            [36m<svg[31m
+              [33mclass[31m=[32m"lucide lucide-upload h-10 w-10 text-primary transition-all"[31m
+              [33mfill[31m=[32m"none"[31m
+              [33mheight[31m=[32m"24"[31m
+              [33mstroke[31m=[32m"currentColor"[31m
+              [33mstroke-linecap[31m=[32m"round"[31m
+              [33mstroke-linejoin[31m=[32m"round"[31m
+              [33mstroke-width[31m=[32m"2"[31m
+              [33mviewBox[31m=[32m"0 0 24 24"[31m
+              [33mwidth[31m=[32m"24"[31m
+              [33mxmlns[31m=[32m"http://www.w3.org/2000/svg"[31m
+            [36m>[31m
+              [36m<path[31m
+                [33md[31m=[32m"M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"[31m
+              [36m/>[31m
+              [36m<polyline[31m
+                [33mpoints[31m=[32m"17 8 12 3 7 8"[31m
+              [36m/>[31m
+              [36m<line[31m
+                [33mx1[31m=[32m"12"[31m
+                [33mx2[31m=[32m"12"[31m
+                [33my1[31m=[32m"3"[31m
+                [33my2[31m=[32m"15"[31m
+              [36m/>[31m
+            [36m</svg>[31m
+          [36m</div>[31m
+        [36m</div>[31m
+        [36m<h3[31m
+          [33mclass[31m=[32m"text-lg font-semibold mb-2"[31m
+        [36m>[31m
+          [0mcommon:assets.zone.dropHere[0m
+        [36m</h3>[31m
+        [36m<p[31m
+          [33mclass[31m=[32m"text-sm text-muted-foreground mb-6 max-w-sm mx-auto"[31m
+        [36m>[31m
+          [0mcommon:assets.zone.description[0m
+        [36m</p>[31m
+        [36m<div[31m
+          [33mclass[31m=[32m"flex flex-col sm:flex-row gap-3 justify-center"[31m
+        [36m>[31m
+          [36m<button[31m
+            [33mclass[31m=[32m"inline-flex items-center justify-center whitespace-nowrap rounded-lg text-sm font-medium ring-offset-background transition-all duration-150 ease-in-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-primary text-white hover:bg-primary/90 shadow-sm hover:shadow-md dark:bg-dark-primary dark:text-dark-background dark:hover:bg-dark-primary/90 h-10 px-4 py-2 gap-2"[31m
+          [36m>[31m
+            [36m<svg[31m
+              [33mclass[31m=[32m"lucide lucide-file-text h-4 w-4"[31m
+              [33mfill[31m=[32m"none"[31m
+              [33mheight[31m=[32m"24"[31m
+              [33mstroke[31m=[32m"currentColor"[31m
+              [33mstroke-linecap[31m=[32m"round"[31m
+              [33mstroke-linejoin[31m=[32m"round"[31m
+              [33mstroke-width[31m=[32m"2"[31m
+              [33mviewBox[31m=[32m"0 0 24 24"[31m
+              [33mwidth[31m=[32m"24"[31m
+              [33mxmlns[31m=[32m"http://www.w3.org/2000/svg"[31m
+            [36m>[31m
+              [36m<path[31m
+                [33md[31m=[32m"M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"[31m
+              [36m/>[31m
+              [36m<path[31m
+                [33md[31m=[32m"M14 2v4a2 2 0 0 0 2 2h4"[31m
+              [36m/>[31m
+              [36m<path[31m
+                [33md[31m=[32m"M10 9H8"[31m
+              [36m/>[31m
+              [36m<path[31m
+                [33md[31m=[32m"M16 13H8"[31m
+              [36m/>[31m
+              [36m<path[31m
+                [33md[31m=[32m"M16 17H8"[31m
+              [36m/>[31m
+            [36m</svg>[31m
+            [0massets.zone.chooseFiles[0m
+          [36m</button>[31m
+          [36m<button[31m
+            [33mclass[31m=[32m"inline-flex items-center justify-center whitespace-nowrap rounded-lg text-sm font-medium ring-offset-background transition-all duration-150 ease-in-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border border-primary bg-transparent text-primary hover:bg-primary hover:text-white shadow-sm dark:border-dark-primary dark:text-dark-primary dark:hover:bg-dark-primary dark:hover:text-dark-background h-10 px-4 py-2 gap-2 sm:hidden"[31m
+          [36m>[31m
+            [36m<svg[31m
+              [33mclass[31m=[32m"lucide lucide-camera h-4 w-4"[31m
+              [33mfill[31m=[32m"none"[31m
+              [33mheight[31m=[32m"24"[31m
+              [33mstroke[31m=[32m"currentColor"[31m
+              [33mstroke-linecap[31m=[32m"round"[31m
+              [33mstroke-linejoin[31m=[32m"round"[31m
+              [33mstroke-width[31m=[32m"2"[31m
+              [33mviewBox[31m=[32m"0 0 24 24"[31m
+              [33mwidth[31m=[32m"24"[31m
+              [33mxmlns[31m=[32m"http://www.w3.org/2000/svg"[31m
+            [36m>[31m
+              [36m<path[31m
+                [33md[31m=[32m"M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"[31m
+              [36m/>[31m
+              [36m<circle[31m
+                [33mcx[31m=[32m"12"[31m
+                [33mcy[31m=[32m"13"[31m
+                [33mr[31m=[32m"3"[31m
+              [36m/>[31m
+            [36m</svg>[31m
+            [0massets.zone.takePhoto[0m
+          [36m</button>[31m
+        [36m</div>[31m
+        [36m<p[31m
+          [33mclass[31m=[32m"text-xs text-muted-foreground mt-6"[31m
+        [36m>[31m
+          [0massets.smartUploadZone.supports_images_jpeg_png_and_p_2[0m
+          [0m10[0m
+          [0massets.smartUploadZone.files_at_once_3[0m
+        [36m</p>[31m
+        [36m<div[31m
+          [33mclass[31m=[32m"mt-4 inline-flex items-center gap-2 px-3 py-1 bg-green-100 text-green-800 rounded-full text-xs font-medium"[31m
+        [36m>[31m
+          [36m<div[31m
+            [33mclass[31m=[32m"w-2 h-2 bg-green-600 rounded-full"[31m
+          [36m/>[31m
+          [0massets.zone.processingLocally[0m
+        [36m</div>[31m
+      [36m</div>[31m
+    [36m</div>[31m
+  [36m</div>[31m
+[36m</body>[31m[39m
+ [32m✓[39m src/components/__tests__/PrivacyControlPanel.test.tsx[2m > [22mPrivacyControlPanel[2m > [22mshould render the privacy control panel[32m 82[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.edge-cases.test.tsx[2m > [22mProfessional UI Components - Edge Cases[2m > [22mStatusBadge - Edge Cases[2m > [22mshould handle undefined status gracefully[32m 30[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.edge-cases.test.tsx[2m > [22mProfessional UI Components - Edge Cases[2m > [22mStatusBadge - Edge Cases[2m > [22mshould handle null status[32m 3[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.edge-cases.test.tsx[2m > [22mProfessional UI Components - Edge Cases[2m > [22mStatusBadge - Edge Cases[2m > [22mshould handle invalid status string[32m 6[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.edge-cases.test.tsx[2m > [22mProfessional UI Components - Edge Cases[2m > [22mStatusBadge - Edge Cases[2m > [22mshould handle empty string status[32m 2[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.edge-cases.test.tsx[2m > [22mProfessional UI Components - Edge Cases[2m > [22mStatusBadge - Edge Cases[2m > [22mshould apply custom className[32m 2[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.edge-cases.test.tsx[2m > [22mProfessional UI Components - Edge Cases[2m > [22mStatusBadge - Edge Cases[2m > [22mshould handle very long text without breaking layout[32m 47[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.edge-cases.test.tsx[2m > [22mProfessional UI Components - Edge Cases[2m > [22mPriorityIndicator - Edge Cases[2m > [22mshould handle undefined priority[32m 6[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.edge-cases.test.tsx[2m > [22mProfessional UI Components - Edge Cases[2m > [22mPriorityIndicator - Edge Cases[2m > [22mshould handle numeric priority values[32m 4[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.edge-cases.test.tsx[2m > [22mProfessional UI Components - Edge Cases[2m > [22mPriorityIndicator - Edge Cases[2m > [22mshould handle boolean showLabel prop variations[32m 14[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.edge-cases.test.tsx[2m > [22mProfessional UI Components - Edge Cases[2m > [22mPriorityIndicator - Edge Cases[2m > [22mshould handle size prop edge cases[32m 5[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.edge-cases.test.tsx[2m > [22mProfessional UI Components - Edge Cases[2m > [22mPriorityIndicator - Edge Cases[2m > [22mshould handle mixed case priority strings[32m 2[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.edge-cases.test.tsx[2m > [22mProfessional UI Components - Edge Cases[2m > [22mReadinessLevel - Edge Cases[2m > [22mshould handle missing properties in level object[32m 3[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.edge-cases.test.tsx[2m > [22mProfessional UI Components - Edge Cases[2m > [22mReadinessLevel - Edge Cases[2m > [22mshould handle null level object[32m 7[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.edge-cases.test.tsx[2m > [22mProfessional UI Components - Edge Cases[2m > [22mReadinessLevel - Edge Cases[2m > [22mshould handle undefined level object[32m 1[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.edge-cases.test.tsx[2m > [22mProfessional UI Components - Edge Cases[2m > [22mReadinessLevel - Edge Cases[2m > [22mshould handle level with missing color property[32m 1[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.edge-cases.test.tsx[2m > [22mProfessional UI Components - Edge Cases[2m > [22mReadinessLevel - Edge Cases[2m > [22mshould handle level with invalid color value[32m 1[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.edge-cases.test.tsx[2m > [22mProfessional UI Components - Edge Cases[2m > [22mReadinessLevel - Edge Cases[2m > [22mshould render with size variations[32m 3[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.edge-cases.test.tsx[2m > [22mProfessional UI Components - Edge Cases[2m > [22mSecurityAreaCard - Edge Cases[2m > [22mshould handle area with all properties missing except id and name[32m 6[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.edge-cases.test.tsx[2m > [22mProfessional UI Components - Edge Cases[2m > [22mSecurityAreaCard - Edge Cases[2m > [22mshould handle onClick when disabled[32m 6[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.edge-cases.test.tsx[2m > [22mProfessional UI Components - Edge Cases[2m > [22mSecurityAreaCard - Edge Cases[2m > [22mshould handle keyboard navigation[32m 7[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.edge-cases.test.tsx[2m > [22mProfessional UI Components - Edge Cases[2m > [22mSecurityAreaCard - Edge Cases[2m > [22mshould handle very long description text[32m 2[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.edge-cases.test.tsx[2m > [22mProfessional UI Components - Edge Cases[2m > [22mSecurityAreaCard - Edge Cases[2m > [22mshould handle missing actionUrl[32m 2[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.edge-cases.test.tsx[2m > [22mProfessional UI Components - Edge Cases[2m > [22mSecurityAreaCard - Edge Cases[2m > [22mshould show review badge when reviewNeeded is true[32m 3[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.edge-cases.test.tsx[2m > [22mProfessional UI Components - Edge Cases[2m > [22mSecurityAreaCard - Edge Cases[2m > [22mshould handle null onClick prop[32m 2[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.edge-cases.test.tsx[2m > [22mProfessional UI Components - Edge Cases[2m > [22mSecurityAreaCard - Edge Cases[2m > [22mshould handle expanded state toggle[32m 2[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.edge-cases.test.tsx[2m > [22mProfessional UI Components - Edge Cases[2m > [22mRecommendationCard - Edge Cases[2m > [22mshould handle recommendation with minimal properties[32m 2[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.edge-cases.test.tsx[2m > [22mProfessional UI Components - Edge Cases[2m > [22mRecommendationCard - Edge Cases[2m > [22mshould handle all recommendation types[32m 6[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.edge-cases.test.tsx[2m > [22mProfessional UI Components - Edge Cases[2m > [22mRecommendationCard - Edge Cases[2m > [22mshould handle onAction callback[32m 16[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.edge-cases.test.tsx[2m > [22mProfessional UI Components - Edge Cases[2m > [22mRecommendationCard - Edge Cases[2m > [22mshould handle onDismiss callback[32m 3[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.edge-cases.test.tsx[2m > [22mProfessional UI Components - Edge Cases[2m > [22mRecommendationCard - Edge Cases[2m > [22mshould not show dismiss button when not dismissible[32m 1[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.edge-cases.test.tsx[2m > [22mProfessional UI Components - Edge Cases[2m > [22mRecommendationCard - Edge Cases[2m > [22mshould handle missing actionUrl[32m 2[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.edge-cases.test.tsx[2m > [22mProfessional UI Components - Edge Cases[2m > [22mRecommendationCard - Edge Cases[2m > [22mshould handle invalid type gracefully[32m 1[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.edge-cases.test.tsx[2m > [22mProfessional UI Components - Edge Cases[2m > [22mProgressOverview - Edge Cases[2m > [22mshould handle zero values in metrics[32m 2[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.edge-cases.test.tsx[2m > [22mProfessional UI Components - Edge Cases[2m > [22mProgressOverview - Edge Cases[2m > [22mshould handle division by zero for percentage[32m 4[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.edge-cases.test.tsx[2m > [22mProfessional UI Components - Edge Cases[2m > [22mProgressOverview - Edge Cases[2m > [22mshould handle 100% completion[32m 8[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.edge-cases.test.tsx[2m > [22mProfessional UI Components - Edge Cases[2m > [22mProgressOverview - Edge Cases[2m > [22mshould handle null lastActivityDate[32m 4[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.edge-cases.test.tsx[2m > [22mProfessional UI Components - Edge Cases[2m > [22mProgressOverview - Edge Cases[2m > [22mshould handle invalid date format[32m 2[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.edge-cases.test.tsx[2m > [22mProfessional UI Components - Edge Cases[2m > [22mProgressOverview - Edge Cases[2m > [22mshould handle missing readinessLevel[32m 3[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.edge-cases.test.tsx[2m > [22mProfessional UI Components - Edge Cases[2m > [22mProgressOverview - Edge Cases[2m > [22mshould show urgent banner when urgent actions exist[32m 4[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.edge-cases.test.tsx[2m > [22mProfessional UI Components - Edge Cases[2m > [22mProgressOverview - Edge Cases[2m > [22mshould not show urgent banner when disabled[32m 3[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.edge-cases.test.tsx[2m > [22mProfessional UI Components - Edge Cases[2m > [22mProgressOverview - Edge Cases[2m > [22mshould handle fractional percentages[32m 2[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.edge-cases.test.tsx[2m > [22mProfessional UI Components - Edge Cases[2m > [22mProgressOverview - Edge Cases[2m > [22mshould apply custom className[32m 1[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.edge-cases.test.tsx[2m > [22mProfessional UI Components - Edge Cases[2m > [22mInfoAlert - Edge Cases[2m > [22mshould handle all alert types[32m 3[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.edge-cases.test.tsx[2m > [22mProfessional UI Components - Edge Cases[2m > [22mInfoAlert - Edge Cases[2m > [22mshould handle undefined type[32m 0[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.edge-cases.test.tsx[2m > [22mProfessional UI Components - Edge Cases[2m > [22mInfoAlert - Edge Cases[2m > [22mshould handle dismissible alert[32m 1[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.edge-cases.test.tsx[2m > [22mProfessional UI Components - Edge Cases[2m > [22mInfoAlert - Edge Cases[2m > [22mshould handle missing title[32m 1[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.edge-cases.test.tsx[2m > [22mProfessional UI Components - Edge Cases[2m > [22mInfoAlert - Edge Cases[2m > [22mshould handle empty children[32m 0[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.edge-cases.test.tsx[2m > [22mProfessional UI Components - Edge Cases[2m > [22mInfoAlert - Edge Cases[2m > [22mshould handle complex children[32m 1[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.edge-cases.test.tsx[2m > [22mProfessional UI Components - Edge Cases[2m > [22mInfoAlert - Edge Cases[2m > [22mshould apply custom className[32m 2[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.edge-cases.test.tsx[2m > [22mProfessional UI Components - Edge Cases[2m > [22mInfoAlert - Edge Cases[2m > [22mshould handle very long title and content[32m 1[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.edge-cases.test.tsx[2m > [22mProfessional UI Components - Edge Cases[2m > [22mAccessibility - Edge Cases[2m > [22mshould maintain focus management in SecurityAreaCard[32m 5[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.edge-cases.test.tsx[2m > [22mProfessional UI Components - Edge Cases[2m > [22mAccessibility - Edge Cases[2m > [22mshould handle screen reader announcements[32m 4[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.edge-cases.test.tsx[2m > [22mProfessional UI Components - Edge Cases[2m > [22mAccessibility - Edge Cases[2m > [22mshould provide proper ARIA labels for interactive elements[32m 3[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.edge-cases.test.tsx[2m > [22mProfessional UI Components - Edge Cases[2m > [22mAccessibility - Edge Cases[2m > [22mshould handle high contrast mode styles[32m 1[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.edge-cases.test.tsx[2m > [22mProfessional UI Components - Edge Cases[2m > [22mPerformance - Edge Cases[2m > [22mshould handle rapid re-renders efficiently[32m 16[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.edge-cases.test.tsx[2m > [22mProfessional UI Components - Edge Cases[2m > [22mPerformance - Edge Cases[2m > [22mshould handle large lists of components[32m 70[2mms[22m[39m
+ [32m✓[39m src/components/professional/__tests__/ProfessionalUIComponents.edge-cases.test.tsx[2m > [22mProfessional UI Components - Edge Cases[2m > [22mError Boundaries - Edge Cases[2m > [22mshould handle render errors gracefully[32m 3[2mms[22m[39m
+ [32m✓[39m src/components/__tests__/PrivacyControlPanel.test.tsx[2m > [22mPrivacyControlPanel[2m > [22mshould display loading state initially[32m 25[2mms[22m[39m
+ [32m✓[39m src/components/__tests__/PrivacyControlPanel.test.tsx[2m > [22mPrivacyControlPanel[2m > [22mshould load and display privacy settings[32m 25[2mms[22m[39m
+ [32m✓[39m src/components/__tests__/PrivacyControlPanel.test.tsx[2m > [22mPrivacyControlPanel[2m > [22mshould handle processing mode change[32m 23[2mms[22m[39m
+ [32m✓[39m src/components/__tests__/PrivacyControlPanel.test.tsx[2m > [22mPrivacyControlPanel[2m > [22mshould handle auto delete setting change[32m 23[2mms[22m[39m
+ [32m✓[39m src/components/__tests__/PrivacyControlPanel.test.tsx[2m > [22mPrivacyControlPanel[2m > [22mshould toggle AI feature switches[32m 20[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/willGeneratorService.test.ts[2m > [22mWillGenerator Service[2m > [22mWill Template Fetching[2m > [22mshould fetch correct will template for Slovakia (SK)[32m 1[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/willGeneratorService.test.ts[2m > [22mWillGenerator Service[2m > [22mWill Template Fetching[2m > [22mshould fetch correct will template for Czech Republic (CZ)[32m 2[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/willGeneratorService.test.ts[2m > [22mWillGenerator Service[2m > [22mWill Template Fetching[2m > [22mshould fetch correct will template for United States (US)[32m 1[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/willGeneratorService.test.ts[2m > [22mWillGenerator Service[2m > [22mWill Template Fetching[2m > [22mshould return default template for unsupported country[32m 1[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/willGeneratorService.test.ts[2m > [22mWillGenerator Service[2m > [22mExecution Instructions[2m > [22mshould provide correct execution instructions for each country[32m 1[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/willGeneratorService.test.ts[2m > [22mWillGenerator Service[2m > [22mExecution Instructions[2m > [22mshould include special requirements for specific countries[32m 1[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/willGeneratorService.test.ts[2m > [22mWillGenerator Service[2m > [22mWill Generation Process[2m > [22mshould generate will with user data[32m 18[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/willGeneratorService.test.ts[2m > [22mWillGenerator Service[2m > [22mWill Generation Process[2m > [22mshould validate required fields before generation[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/willGeneratorService.test.ts[2m > [22mWillGenerator Service[2m > [22mWill Generation Process[2m > [22mshould encrypt will document before storage[32m 1[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/willGeneratorService.test.ts[2m > [22mWillGenerator Service[2m > [22mWill Backup and Versioning[2m > [22mshould create backup when will is updated[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/ProfessionalProgressService.edge-cases.test.ts[2m > [22mProfessionalProgressService - Edge Cases[2m > [22mError Handling[2m > [22mshould handle database errors gracefully[32m 3[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/ProfessionalProgressService.edge-cases.test.ts[2m > [22mProfessionalProgressService - Edge Cases[2m > [22mError Handling[2m > [22mshould handle null/undefined data from database[32m 1[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/ProfessionalProgressService.edge-cases.test.ts[2m > [22mProfessionalProgressService - Edge Cases[2m > [22mError Handling[2m > [22mshould handle malformed data from database[32m 1[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/ProfessionalProgressService.edge-cases.test.ts[2m > [22mProfessionalProgressService - Edge Cases[2m > [22mBoundary Conditions[2m > [22mshould handle empty arrays correctly[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/ProfessionalProgressService.edge-cases.test.ts[2m > [22mProfessionalProgressService - Edge Cases[2m > [22mBoundary Conditions[2m > [22mshould handle single item arrays[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/ProfessionalProgressService.edge-cases.test.ts[2m > [22mProfessionalProgressService - Edge Cases[2m > [22mBoundary Conditions[2m > [22mshould handle very large time estimates[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/ProfessionalProgressService.edge-cases.test.ts[2m > [22mProfessionalProgressService - Edge Cases[2m > [22mBoundary Conditions[2m > [22mshould handle edge percentage values for readiness level[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/ProfessionalProgressService.edge-cases.test.ts[2m > [22mProfessionalProgressService - Edge Cases[2m > [22mBoundary Conditions[2m > [22mshould handle division by zero in readiness calculation[32m 1[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/ProfessionalProgressService.edge-cases.test.ts[2m > [22mProfessionalProgressService - Edge Cases[2m > [22mTime Parsing Edge Cases[2m > [22mshould handle various time format inputs[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/ProfessionalProgressService.edge-cases.test.ts[2m > [22mProfessionalProgressService - Edge Cases[2m > [22mTime Parsing Edge Cases[2m > [22mshould handle fractional hours correctly[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/ProfessionalProgressService.edge-cases.test.ts[2m > [22mProfessionalProgressService - Edge Cases[2m > [22mTime Parsing Edge Cases[2m > [22mshould handle exactly 1 hour correctly[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/ProfessionalProgressService.edge-cases.test.ts[2m > [22mProfessionalProgressService - Edge Cases[2m > [22mDate Handling Edge Cases[2m > [22mshould handle various date formats for lastUpdated[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/ProfessionalProgressService.edge-cases.test.ts[2m > [22mProfessionalProgressService - Edge Cases[2m > [22mDate Handling Edge Cases[2m > [22mshould detect review needed for dates exactly 1 year old[32m 1[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/ProfessionalProgressService.edge-cases.test.ts[2m > [22mProfessionalProgressService - Edge Cases[2m > [22mDate Handling Edge Cases[2m > [22mshould handle future dates correctly[32m 1[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/ProfessionalProgressService.edge-cases.test.ts[2m > [22mProfessionalProgressService - Edge Cases[2m > [22mPriority Determination Edge Cases[2m > [22mshould handle all priority combinations[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/ProfessionalProgressService.edge-cases.test.ts[2m > [22mProfessionalProgressService - Edge Cases[2m > [22mRecommendation Generation Edge Cases[2m > [22mshould handle maximum recommendations limit[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/ProfessionalProgressService.edge-cases.test.ts[2m > [22mProfessionalProgressService - Edge Cases[2m > [22mRecommendation Generation Edge Cases[2m > [22mshould generate milestone recommendation at 50% completion[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/ProfessionalProgressService.edge-cases.test.ts[2m > [22mProfessionalProgressService - Edge Cases[2m > [22mRecommendation Generation Edge Cases[2m > [22mshould handle no incomplete areas[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/ProfessionalProgressService.edge-cases.test.ts[2m > [22mProfessionalProgressService - Edge Cases[2m > [22mActivity Timeline Edge Cases[2m > [22mshould handle empty timeline[32m 1[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/ProfessionalProgressService.edge-cases.test.ts[2m > [22mProfessionalProgressService - Edge Cases[2m > [22mActivity Timeline Edge Cases[2m > [22mshould merge and sort activities correctly[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/ProfessionalProgressService.edge-cases.test.ts[2m > [22mProfessionalProgressService - Edge Cases[2m > [22mLocalStorage Caching[2m > [22mshould cache data in localStorage[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/ProfessionalProgressService.edge-cases.test.ts[2m > [22mProfessionalProgressService - Edge Cases[2m > [22mLocalStorage Caching[2m > [22mshould use cached data if recent (< 5 minutes)[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/ProfessionalProgressService.edge-cases.test.ts[2m > [22mProfessionalProgressService - Edge Cases[2m > [22mLocalStorage Caching[2m > [22mshould refresh data if cache is stale (> 5 minutes)[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/ProfessionalProgressService.edge-cases.test.ts[2m > [22mProfessionalProgressService - Edge Cases[2m > [22mLocalStorage Caching[2m > [22mshould handle corrupted cache data[32m 8[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/ProfessionalProgressService.edge-cases.test.ts[2m > [22mProfessionalProgressService - Edge Cases[2m > [22mConcurrent Access[2m > [22mshould handle concurrent calls to the same method[32m 2[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/ProfessionalProgressService.edge-cases.test.ts[2m > [22mProfessionalProgressService - Edge Cases[2m > [22mStatus Determination Complex Cases[2m > [22mshould correctly determine estate planning status with partial completion[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/ProfessionalProgressService.edge-cases.test.ts[2m > [22mProfessionalProgressService - Edge Cases[2m > [22mStatus Determination Complex Cases[2m > [22mshould handle mixed document categories[32m 0[2mms[22m[39m
+ [32m✓[39m src/components/__tests__/Button.test.tsx[2m > [22mButton Component[2m > [22mrenders with text[32m 30[2mms[22m[39m
+ [32m✓[39m src/components/__tests__/Button.test.tsx[2m > [22mButton Component[2m > [22mhandles click events[32m 7[2mms[22m[39m
+ [32m✓[39m src/components/__tests__/Button.test.tsx[2m > [22mButton Component[2m > [22mcan be disabled[32m 3[2mms[22m[39m
+ [32m✓[39m src/components/__tests__/Button.test.tsx[2m > [22mButton Component[2m > [22mapplies variant classes[32m 7[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/ProfessionalProgressService.test.ts[2m > [22mProfessionalProgressService[2m > [22mgetSecurityAreas[2m > [22mshould return all 9 security areas[32m 4[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/ProfessionalProgressService.test.ts[2m > [22mProfessionalProgressService[2m > [22mgetSecurityAreas[2m > [22mshould correctly determine area status based on data[32m 1[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/ProfessionalProgressService.test.ts[2m > [22mProfessionalProgressService[2m > [22mgetSecurityAreas[2m > [22mshould detect when documents need review (older than 1 year)[32m 1[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/ProfessionalProgressService.test.ts[2m > [22mProfessionalProgressService[2m > [22mcalculateMetrics[2m > [22mshould calculate correct metrics from security areas[32m 1[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/ProfessionalProgressService.test.ts[2m > [22mProfessionalProgressService[2m > [22mcalculateMetrics[2m > [22mshould format estimated time correctly for hours and minutes[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/ProfessionalProgressService.test.ts[2m > [22mProfessionalProgressService[2m > [22mdetermineReadinessLevel[2m > [22mshould return "initial" for 0-30% completion[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/ProfessionalProgressService.test.ts[2m > [22mProfessionalProgressService[2m > [22mdetermineReadinessLevel[2m > [22mshould return "developing" for 30-60% completion[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/ProfessionalProgressService.test.ts[2m > [22mProfessionalProgressService[2m > [22mdetermineReadinessLevel[2m > [22mshould return "established" for 60-80% completion[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/ProfessionalProgressService.test.ts[2m > [22mProfessionalProgressService[2m > [22mdetermineReadinessLevel[2m > [22mshould return "comprehensive" for 80-99% completion[32m 1[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/ProfessionalProgressService.test.ts[2m > [22mProfessionalProgressService[2m > [22mdetermineReadinessLevel[2m > [22mshould return "maintained" for 100% completion with no reviews needed[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/ProfessionalProgressService.test.ts[2m > [22mProfessionalProgressService[2m > [22mdetermineReadinessLevel[2m > [22mshould not return "maintained" if reviews are needed[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/ProfessionalProgressService.test.ts[2m > [22mProfessionalProgressService[2m > [22mgenerateRecommendations[2m > [22mshould prioritize urgent incomplete areas first[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/ProfessionalProgressService.test.ts[2m > [22mProfessionalProgressService[2m > [22mgenerateRecommendations[2m > [22mshould include review recommendations for areas needing review[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/ProfessionalProgressService.test.ts[2m > [22mProfessionalProgressService[2m > [22mgenerateRecommendations[2m > [22mshould suggest professional consultation for comprehensive plans[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/ProfessionalProgressService.test.ts[2m > [22mProfessionalProgressService[2m > [22mgenerateRecommendations[2m > [22mshould limit recommendations to top 5[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/ProfessionalProgressService.test.ts[2m > [22mProfessionalProgressService[2m > [22mgetActivityTimeline[2m > [22mshould return timeline events sorted by date[32m 9[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/ProfessionalProgressService.test.ts[2m > [22mProfessionalProgressService[2m > [22mhelper methods[2m > [22mshould calculate completion percentage correctly[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/ProfessionalProgressService.test.ts[2m > [22mProfessionalProgressService[2m > [22mhelper methods[2m > [22mshould detect when immediate attention is needed[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/ProfessionalProgressService.test.ts[2m > [22mProfessionalProgressService[2m > [22mhelper methods[2m > [22mshould get next priority action from recommendations[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/ProfessionalProgressService.test.ts[2m > [22mProfessionalProgressService[2m > [22mhelper methods[2m > [22mshould store and retrieve area review dates[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/loggingService.test.ts[2m > [22mLoggingService[2m > [22mlogActivity[2m > [22mshould successfully log activity with all parameters[32m 2[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/loggingService.test.ts[2m > [22mLoggingService[2m > [22mlogActivity[2m > [22mshould successfully log activity with minimal parameters[32m 1[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/loggingService.test.ts[2m > [22mLoggingService[2m > [22mlogActivity[2m > [22mshould handle database errors gracefully[32m 1[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/loggingService.test.ts[2m > [22mLoggingService[2m > [22mlogActivity[2m > [22mshould handle network errors gracefully[32m 1[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/loggingService.test.ts[2m > [22mLoggingService[2m > [22mlogActivity[2m > [22mshould use default empty object for metadata when not provided[32m 1[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/loggingService.test.ts[2m > [22mLoggingService[2m > [22mlogActivity[2m > [22mshould handle all actor types correctly[32m 1[2mms[22m[39m
+ [31m×[39m src/components/__tests__/PrivacyControlPanel.test.tsx[2m > [22mPrivacyControlPanel[2m > [22mshould save settings successfully[33m 1012[2mms[22m[39m
+[31m   → Unable to find an element with the text: Save Privacy Settings. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+[36m<body>[31m
+  [36m<div>[31m
+    [36m<div>[31m
+      [36m<div[31m
+        [33mclass[31m=[32m"p-6 font-sans max-w-3xl mx-auto"[31m
+      [36m>[31m
+        [36m<h2[31m
+          [33mclass[31m=[32m"text-2xl font-bold text-gray-800"[31m
+        [36m>[31m
+          [0mPrivacy Data Controls[0m
+        [36m</h2>[31m
+        [36m<p[31m
+          [33mclass[31m=[32m"text-gray-600 mt-1"[31m
+        [36m>[31m
+          [0mManage how your data is processed[0m
+        [36m</p>[31m
+        [36m<div[31m
+          [33mclass[31m=[32m"rounded-lg bg-card-background text-text-heading border border-gray-200 shadow-sm transition-all duration-200 dark:bg-dark-card-background dark:text-dark-text-heading dark:border-gray-700 mt-6"[31m
+        [36m>[31m
+          [36m<div[31m
+            [33mclass[31m=[32m"flex flex-col space-y-1.5 p-6"[31m
+          [36m>[31m
+            [36m<h3[31m
+              [33mclass[31m=[32m"text-2xl font-semibold leading-none tracking-tight"[31m
+            [36m>[31m
+              [0mData Processing[0m
+            [36m</h3>[31m
+          [36m</div>[31m
+          [36m<div[31m
+            [33mclass[31m=[32m"p-6 pt-0 space-y-4"[31m
+          [36m>[31m
+            [36m<div>[31m
+              [36m<label[31m
+                [33mclass[31m=[32m"text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"[31m
+              [36m>[31m
+                [0mConfigure how we export and process data[0m
+              [36m</label>[31m
+              [36m<p[31m
+                [33mclass[31m=[32m"text-sm text-gray-500"[31m
+              [36m>[31m
+                [0mConfigure how we export and process data[0m
+              [36m</p>[31m
+            [36m</div>[31m
+            [36m<div>[31m
+              [36m<label[31m
+                [33mclass[31m=[32m"text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"[31m
+              [36m>[31m
+                [0mAutomatic Data Deletion[0m
+              [36m</label>[31m
+              [36m<p[31m
+                [33mclass[31m=[32m"text-sm text-gray-500"[31m
+              [36m>[31m
+                [0mAutomatic Data Deletion[0m
+              [36m</p>[31m
+              [36m<button[31m
+                [33maria-autocomplete[31m=[32m"none"[31m
+                [33maria-controls[31m=[32m"radix-:ro:"[31m
+                [33maria-expanded[31m=[32m"false"[31m
+                [33mclass[31m=[32m"flex h-10 w-full items-center justify-between rounded-lg border border-secondary bg-background px-3 py-2 text-sm text-text-main ring-offset-background placeholder:text-text-secondary focus:outline-none focus:ring-2 focus:ring-cta focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1 dark:border-dark-border dark:bg-dark-secondary dark:text-dark-text-main dark:placeholder:text-dark-text-secondary dark:focus:ring-dark-cta"[31m
+                [33mdata-state[31m=[32m"closed"[31m
+                [33mdir[31m=[32m"ltr"[31m
+                [33mrole[31m=[32m"combobox"[31m
+                [33mtype[31m=[32m"button"[31m
+              [36m>[31m
+                [36m<span[31m
+                  [33mstyle[31m=[32m"pointer-events: none;"[31m
+                [36m>[31m
+                  [0mAutomatic Data Deletion[0m
+                [36m</span>[31m
+                [36m<svg[31m
+                  [33maria-hidden[31m=[32m"true"[31m
+                  [33mclass[31m=[32m"lucide lucide-chevron-down h-4 w-4 opacity-50"[31m
+                  [33mfill[31m=[32m"none"[31m
+                  [33mheight[31m=[32m"24"[31m
+                  [33mstroke[31m=[32m"currentColor"[31m
+                  [33mstroke-linecap[31m=[32m"round"[31m
+                  [33mstroke-linejoin[31m=[32m"round"[31m
+                  [33mstroke-width[31m=[32m"2"[31m
+                  [33mviewBox[31m=[32m"0 0 24 24"[31m
+                  [33mwidth[31m=[32m"24"[31m
+                  [33mxmlns[31m=[32m"http://www.w3.org/2000/svg"[31m
+                [36m>[31m
+                  [36m<path[31m
+                    [33md[31m=[32m"m6 9 6 6 6-6"[31m
+                  [36m/>[31m
+                [36m</svg>[31m
+              [36m</button>[31m
+            [36m</div>[31m
+          [36m</div>[31m
+        [36m</div>[31m
+        [36m<div[31m
+          [33mclass[31m=[32m"rounded-lg bg-card-background text-text-heading border border-gray-200 shadow-sm transition-all duration-200 dark:bg-dark-card-background dark:text-dark-text-heading dark:border-gray-700 mt-6"[31m
+        [36m>[31m
+          [36m<div[31m
+            [33mclass[31m=[32m"flex flex-col space-y-1.5 p-6"[31m
+          [36m>[31m
+            [36m<h3[31m
+              [33mclass[31m=[32m"text-2xl font-semibold leading-none tracking-tight"[31m
+            [36m>[31m
+              [0mAI Assistant Features[0m
+            [36m</h3>[31m
+          [36m</div>[31m
+          [36m<div[31m
+            [33mclass[31m=[32m"p-6 pt-0 space-y-4"[31m
+          [36m>[31m
+            [36m<div[31m
+              [33mclass[31m=[32m"flex items-center justify-between"[31m
+            [36m>[31m
+              [36m<div>[31m
+                [36m<label[31m
+                  [33mclass[31m=[32m"text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"[31m
+                [36m>[31m
+                  [0mAI Feature Toggle[0m
+                [36m</label>[31m
+                [36m<p[31m
+                  [33mclass[31m=[32m"text-sm text-gray-500"[31m
+                [36m>[31m
+                  [0mAI Feature Toggle[0m
+                [36m</p>[31m
+              [36m</div>[31m
+              [36m<button[31m
+                [33maria-checked[31m=[32m"true"[31m
+                [33mclass[31m=[32m"peer inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=unchecked]:bg-input"[31m
+                [33mdata-state[31m=[32m"checked"[31m
+                [33mrole[31m=[32m"switch"[31m
+                [33mtype[31m=[32m"button"[31m
+                [33mvalue[31m=[32m"on"[31m
+              [36m>[31m
+                [36m<span[31m
+                  [33mclass[31m=[32m"pointer-events-none block h-5 w-5 rounded-full bg-background shadow-lg ring-0 transition-transform data-[state=checked]:translate-x-5 data-[state=unchecked]:translate-x-0"[31m
+                  [33mdata-state[31m=[32m"checked"[31m
+                [36m/>[31m
+              [36m</button>[31m
+            [36m</div>[31m
+          [36m</div>[31m
+        [36m</div>[31m
+        [36m<div[31m
+          [33mclass[31m=[32m"rounded-lg bg-card-background text-text-heading border border-gray-200 shadow-sm transition-all duration-200 dark:bg-dark-card-background dark:text-dark-text-heading dark:border-gray-700 mt-6 opacity-50"[31m
+        [36m>[31m
+          [36m<div[31m
+            [33mclass[31m=[32m"flex flex-col space-y-1.5 p-6"[31m
+          [36m>[31m
+            [36m<h3[31m
+              [33mclass[31m=[32m"text-2xl font-semibold leading-none tracking-tight"[31m
+            [36m>[31m
+              [0mFamily Access Management[0m
+            [36m</h3>[31m
+          [36m</div>[31m
+          [36m<div[31m
+            [33mclass[31m=[32m"p-6 pt-0 space-y-4"[31m
+          [36m>[31m
+            [36m<p[31m
+              [33mclass[31m=[32m"text-sm text-gray-500"[31m
+            [36m>[31m
+              [0mFamily Access Management[0m
+            [36m</p>[31m
+          [36m</div>[31m
+        [36m</div>[31m
+        [36m<button[31m
+          [33mclass[31m=[32m"inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg text-sm font-medium ring-offset-background transition-all duration-150 ease-in-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-primary text-white hover:bg-primary/90 shadow-sm hover:shadow-md dark:bg-dark-primary dark:text-dark-background dark:hover:bg-dark-primary/90 h-10 px-4 py-2 mt-8 w-full"[31m
+        [36m>[31m
+          [0msettings:actions.save[0m
+        [36m</button>[31m
+      [36m</div>[31m
+    [36m</div>[31m
+  [36m</div>[31m
+[36m</body>[31m
+
+Ignored nodes: comments, script, style
+[36m<html>[31m
+  [36m<head />[31m
+  [36m<body>[31m
+    [36m<div>[31m
+      [36m<div>[31m
+        [36m<div[31m
+          [33mclass[31m=[32m"p-6 font-sans max-w-3xl mx-auto"[31m
+        [36m>[31m
+          [36m<h2[31m
+            [33mclass[31m=[32m"text-2xl font-bold text-gray-800"[31m
+          [36m>[31m
+            [0mPrivacy Data Controls[0m
+          [36m</h2>[31m
+          [36m<p[31m
+            [33mclass[31m=[32m"text-gray-600 mt-1"[31m
+          [36m>[31m
+            [0mManage how your data is processed[0m
+          [36m</p>[31m
+          [36m<div[31m
+            [33mclass[31m=[32m"rounded-lg bg-card-background text-text-heading border border-gray-200 shadow-sm transition-all duration-200 dark:bg-dark-card-background dark:text-dark-text-heading dark:border-gray-700 mt-6"[31m
+          [36m>[31m
+            [36m<div[31m
+              [33mclass[31m=[32m"flex flex-col space-y-1.5 p-6"[31m
+            [36m>[31m
+              [36m<h3[31m
+                [33mclass[31m=[32m"text-2xl font-semibold leading-none tracking-tight"[31m
+              [36m>[31m
+                [0mData Processing[0m
+              [36m</h3>[31m
+            [36m</div>[31m
+            [36m<div[31m
+              [33mclass[31m=[32m"p-6 pt-0 space-y-4"[31m
+            [36m>[31m
+              [36m<div>[31m
+                [36m<label[31m
+                  [33mclass[31m=[32m"text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"[31m
+                [36m>[31m
+                  [0mConfigure how we export and process data[0m
+                [36m</label>[31m
+                [36m<p[31m
+                  [33mclass[31m=[32m"text-sm text-gray-500"[31m
+                [36m>[31m
+                  [0mConfigure how we export and process data[0m
+                [36m</p>[31m
+              [36m</div>[31m
+              [36m<div>[31m
+                [36m<label[31m
+                  [33mclass[31m=[32m"text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"[31m
+                [36m>[31m
+                  [0mAutomatic Data Deletion[0m
+                [36m</label>[31m
+                [36m<p[31m
+                  [33mclass[31m=[32m"text-sm text-gray-500"[31m
+                [36m>[31m
+                  [0mAutomatic Data Deletion[0m
+                [36m</p>[31m
+                [36m<button[31m
+                  [33maria-autocomplete[31m=[32m"none"[31m
+                  [33maria-controls[31m=[32m"radix-:ro:"[31m
+                  [33maria-expanded[31m=[32m"false"[31m
+                  [33mclass[31m=[32m"flex h-10 w-full items-center justify-between rounded-lg border border-secondary bg-background px-3 py-2 text-sm text-text-main ring-offset-background placeholder:text-text-secondary focus:outline-none focus:ring-2 focus:ring-cta focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1 dark:border-dark-border dark:bg-dark-secondary dark:text-dark-text-main dark:placeholder:text-dark-text-secondary dark:focus:ring-dark-cta"[31m
+                  [33mdata-state[31m=[32m"closed"[31m
+                  [33mdir[31m=[32m"ltr"[31m
+                  [33mrole[31m=[32m"combobox"[31m
+                  [33mtype[31m=[32m"button"[31m
+                [36m>[31m
+                  [36m<span[31m
+                    [33mstyle[31m=[32m"pointer-events: none;"[31m
+                  [36m>[31m
+                    [0mAutomatic Data Deletion[0m
+                  [36m</span>[31m
+                  [36m<svg[31m
+                    [33maria-hidden[31m=[32m"true"[31m
+                    [33mclass[31m=[32m"lucide lucide-chevron-down h-4 w-4 opacity-50"[31m
+                    [33mfill[31m=[32m"none"[31m
+                    [33mheight[31m=[32m"24"[31m
+                    [33mstroke[31m=[32m"currentColor"[31m
+                    [33mstroke-linecap[31m=[32m"round"[31m
+                    [33mstroke-linejoin[31m=[32m"round"[31m
+                    [33mstroke-width[31m=[32m"2"[31m
+                    [33mviewBox[31m=[32m"0 0 24 24"[31m
+                    [33mwidth[31m=[32m"24"[31m
+                    [33mxmlns[31m=[32m"http://www.w3.org/2000/svg"[31m
+                  [36m>[31m
+                    [36m<path[31m
+                      [33md[31m=[32m"m6 9 6 6 6-6"[31m
+                    [36m/>[31m
+                  [36m</svg>[31m
+                [36m</button>[31m
+              [36m</div>[31m
+            [36m</div>[31m
+          [36m</div>[31m
+          [36m<div[31m
+            [33mclass[31m=[32m"rounded-lg bg-card-background text-text-heading border border-gray-200 shadow-sm transition-all duration-200 dark:bg-dark-card-background dark:text-dark-text-heading dark:border-gray-700 mt-6"[31m
+          [36m>[31m
+            [36m<div[31m
+              [33mclass[31m=[32m"flex flex-col space-y-1.5 p-6"[31m
+            [36m>[31m
+              [36m<h3[31m
+                [33mclass[31m=[32m"text-2xl font-semibold leading-none tracking-tight"[31m
+              [36m>[31m
+                [0mAI Assistant Features[0m
+              [36m</h3>[31m
+            [36m</div>[31m
+            [36m<div[31m
+              [33mclass[31m=[32m"p-6 pt-0 space-y-4"[31m
+            [36m>[31m
+              [36m<div[31m
+                [33mclass[31m=[32m"flex items-center justify-between"[31m
+              [36m>[31m
+                [36m<div>[31m
+                  [36m<label[31m
+                    [33mclass[31m=[32m"text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"[31m
+                  [36m>[31m
+                    [0mAI Feature Toggle[0m
+                  [36m</label>[31m
+                  [36m<p[31m
+                    [33mclass[31m=[32m"text-sm text-gray-500"[31m
+                  [36m>[31m
+                    [0mAI Feature Toggle[0m
+                  [36m</p>[31m
+                [36m</div>[31m
+                [36m<button[31m
+                  [33maria-checked[31m=[32m"true"[31m
+                  [33mclass[31m=[32m"peer inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=unchecked]:bg-input"[31m
+                  [33mdata-state[31m=[32m"checked"[31m
+                  [33mrole[31m=[32m"switch"[31m
+                  [33mtype[31m=[32m"button"[31m
+                  [33mvalue[31m=[32m"on"[31m
+                [36m>[31m
+                  [36m<span[31m
+                    [33mclass[31m=[32m"pointer-events-none block h-5 w-5 roun...[39m
+[90mstdout[2m | src/services/__tests__/annualReviewService.test.ts[2m > [22m[2mAnnual Review Service[2m > [22m[2mReview Notifications[2m > [22m[2mshould send notification for overdue review
+[22m[39mSending annual review notification to test@example.com for user test-user-123
+
+ [32m✓[39m src/services/__tests__/annualReviewService.test.ts[2m > [22mAnnual Review Service[2m > [22mReview Identification[2m > [22mshould identify accounts that have never been reviewed[32m 1[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/annualReviewService.test.ts[2m > [22mAnnual Review Service[2m > [22mReview Identification[2m > [22mshould identify accounts needing annual review (> 365 days)[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/annualReviewService.test.ts[2m > [22mAnnual Review Service[2m > [22mReview Identification[2m > [22mshould not flag recent reviews (< 365 days)[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/annualReviewService.test.ts[2m > [22mAnnual Review Service[2m > [22mReview Notifications[2m > [22mshould send notification for overdue review[32m 2[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/annualReviewService.test.ts[2m > [22mLife Event Checklist Generator[2m > [22mNew Child Event[2m > [22mshould generate complete checklist for new child[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/annualReviewService.test.ts[2m > [22mLife Event Checklist Generator[2m > [22mMarriage Event[2m > [22mshould generate complete checklist for marriage[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/annualReviewService.test.ts[2m > [22mLife Event Checklist Generator[2m > [22mRetirement Event[2m > [22mshould generate complete checklist for retirement[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/annualReviewService.test.ts[2m > [22mLife Event Checklist Generator[2m > [22mNew Job Event[2m > [22mshould generate complete checklist for new job[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/annualReviewService.test.ts[2m > [22mLife Event Checklist Generator[2m > [22mDivorce Event[2m > [22mshould generate complete checklist for divorce[32m 1[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/annualReviewService.test.ts[2m > [22mLife Event Checklist Generator[2m > [22mEdge Cases[2m > [22mshould handle unknown life event types[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/annualReviewService.test.ts[2m > [22mLife Event Checklist Generator[2m > [22mEdge Cases[2m > [22mshould persist checklist to database[32m 1[2mms[22m[39m
+ [32m✓[39m src/lib/__tests__/utils.test.ts[2m > [22mutils[2m > [22mcn function[2m > [22mcombines class names[32m 5[2mms[22m[39m
+ [32m✓[39m src/lib/__tests__/utils.test.ts[2m > [22mutils[2m > [22mcn function[2m > [22mhandles conditional classes[32m 0[2mms[22m[39m
+ [32m✓[39m src/lib/__tests__/utils.test.ts[2m > [22mutils[2m > [22mcn function[2m > [22mmerges Tailwind classes correctly[32m 1[2mms[22m[39m
+ [32m✓[39m src/lib/__tests__/utils.test.ts[2m > [22mutils[2m > [22mcn function[2m > [22mhandles undefined and null values[32m 0[2mms[22m[39m
+ [32m✓[39m src/lib/__tests__/utils.test.ts[2m > [22mutils[2m > [22mcn function[2m > [22mhandles arrays[32m 0[2mms[22m[39m
+ [32m✓[39m src/lib/__tests__/utils.test.ts[2m > [22mutils[2m > [22mcn function[2m > [22mhandles objects[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/dashboardService.test.ts[2m > [22mDashboard Service - Plan Strength & Stages[2m > [22mPlan Strength Calculation[2m > [22mshould calculate 0% for a brand new user with no data[32m 1[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/dashboardService.test.ts[2m > [22mDashboard Service - Plan Strength & Stages[2m > [22mPlan Strength Calculation[2m > [22mshould calculate correct percentage based on completed items[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/dashboardService.test.ts[2m > [22mDashboard Service - Plan Strength & Stages[2m > [22mPlan Strength Calculation[2m > [22mshould return 100% for fully complete user profile[32m 1[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/dashboardService.test.ts[2m > [22mDashboard Service - Plan Strength & Stages[2m > [22mStage Determination[2m > [22mshould return "Foundation" stage for strength < 25%[32m 1[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/dashboardService.test.ts[2m > [22mDashboard Service - Plan Strength & Stages[2m > [22mStage Determination[2m > [22mshould return "Buildout" stage for strength 25-59%[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/dashboardService.test.ts[2m > [22mDashboard Service - Plan Strength & Stages[2m > [22mStage Determination[2m > [22mshould return "Reinforcement" stage for strength 60-74%[32m 1[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/dashboardService.test.ts[2m > [22mDashboard Service - Plan Strength & Stages[2m > [22mStage Determination[2m > [22mshould return "Advanced Planning" stage for strength 75-89%[32m 1[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/dashboardService.test.ts[2m > [22mDashboard Service - Plan Strength & Stages[2m > [22mStage Determination[2m > [22mshould return "Monitoring" stage for 100% completion[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/dashboardService.test.ts[2m > [22mDashboard Service - Plan Strength & Stages[2m > [22mNext Recommended Step[2m > [22mshould recommend adding trusted person for new users[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/dashboardService.test.ts[2m > [22mDashboard Service - Plan Strength & Stages[2m > [22mNext Recommended Step[2m > [22mshould recommend annual review when needed[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/dashboardService.test.ts[2m > [22mDashboard Service - Plan Strength & Stages[2m > [22mNext Recommended Step[2m > [22mshould not recommend review if done recently[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/dashboardService.test.ts[2m > [22mDashboard Service - Plan Strength & Stages[2m > [22mEdge Cases[2m > [22mshould handle null/undefined user data gracefully[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/dashboardService.test.ts[2m > [22mDashboard Service - Plan Strength & Stages[2m > [22mEdge Cases[2m > [22mshould handle progress status for users who never reviewed[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/dashboardService.test.ts[2m > [22mDashboard Service - Plan Strength & Stages[2m > [22mEdge Cases[2m > [22mshould update last review date correctly[32m 1[2mms[22m[39m
+ [32m✓[39m lib/services/__tests__/openai.service.test.ts[2m > [22mOpenAI Service[2m > [22mRate Limiting[2m > [22mshould respect rate limits[33m 2004[2mms[22m[39m
+ [32m✓[39m lib/services/__tests__/openai.service.test.ts[2m > [22mOpenAI Service[2m > [22mToken Usage and Cost Calculation[2m > [22mshould calculate costs correctly[32m 1[2mms[22m[39m
+ [32m✓[39m lib/services/__tests__/openai.service.test.ts[2m > [22mOpenAI Service[2m > [22mError Handling[2m > [22mshould handle authentication errors[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/analytics.test.ts[2m > [22mAnalytics Service[2m > [22mshould track events[32m 4[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/analytics.test.ts[2m > [22mAnalytics Service[2m > [22mshould track onboarding steps[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/analytics.test.ts[2m > [22mAnalytics Service[2m > [22mshould track document actions[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/analytics.test.ts[2m > [22mAnalytics Service[2m > [22mshould track family actions[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/analytics.test.ts[2m > [22mAnalytics Service[2m > [22mshould track emotional milestones[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/analytics.test.ts[2m > [22mAnalytics Service[2m > [22mshould track feature usage[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/analytics.test.ts[2m > [22mAnalytics Service[2m > [22mshould get user metrics[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/analytics.test.ts[2m > [22mAnalytics Service[2m > [22mshould set consent[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/analytics.test.ts[2m > [22mAnalytics Service[2m > [22mshould start new session[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/analytics.test.ts[2m > [22mAnalytics Service[2m > [22mshould end session[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/sharingService.test.ts[2m > [22mSharingService[2m > [22mcreateShareLink[2m > [22mshould create a new share link[32m 3[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/sharingService.test.ts[2m > [22mSharingService[2m > [22mgetUserShareLinks[2m > [22mshould retrieve all share links for the user[32m 1[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/sharingService.test.ts[2m > [22mSharingService[2m > [22mgetShareLinkByToken[2m > [22mshould retrieve a valid share link by token[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/sharingService.test.ts[2m > [22mSharingService[2m > [22mgetShareLinkByToken[2m > [22mshould return null for expired link[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/sharingService.test.ts[2m > [22mSharingService[2m > [22mvalidateSharePassword[2m > [22mshould validate correct password[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/sharingService.test.ts[2m > [22mSharingService[2m > [22mgenerateQRCode[2m > [22mshould generate QR code for a share URL[32m 0[2mms[22m[39m
+ [32m✓[39m src/__tests__/timeCapsule.integration.test.ts[2m > [22mTime Capsule System Integration Tests[2m > [22mEncryption/Decryption[2m > [22mshould encrypt and decrypt content correctly[32m 2[2mms[22m[39m
+ [32m✓[39m src/__tests__/timeCapsule.integration.test.ts[2m > [22mTime Capsule System Integration Tests[2m > [22mTime Capsule Types[2m > [22mshould validate message types[32m 1[2mms[22m[39m
+ [32m✓[39m src/__tests__/timeCapsule.integration.test.ts[2m > [22mTime Capsule System Integration Tests[2m > [22mTime Capsule Types[2m > [22mshould validate unlock conditions[32m 0[2mms[22m[39m
+ [32m✓[39m src/__tests__/timeCapsule.integration.test.ts[2m > [22mTime Capsule System Integration Tests[2m > [22mTime Capsule Types[2m > [22mshould validate capsule status[32m 0[2mms[22m[39m
+ [32m✓[39m src/__tests__/timeCapsule.integration.test.ts[2m > [22mTime Capsule System Integration Tests[2m > [22mDate-based Unlock Logic[2m > [22mshould unlock when date has passed[32m 0[2mms[22m[39m
+ [32m✓[39m src/__tests__/timeCapsule.integration.test.ts[2m > [22mTime Capsule System Integration Tests[2m > [22mDate-based Unlock Logic[2m > [22mshould not unlock when date is in future[32m 0[2mms[22m[39m
+ [32m✓[39m src/__tests__/timeCapsule.integration.test.ts[2m > [22mTime Capsule System Integration Tests[2m > [22mNotification Content[2m > [22mshould generate correct email subject[32m 0[2mms[22m[39m
+ [32m✓[39m src/__tests__/timeCapsule.integration.test.ts[2m > [22mTime Capsule System Integration Tests[2m > [22mNotification Content[2m > [22mshould generate correct notification message[32m 0[2mms[22m[39m
+ [32m✓[39m src/__tests__/timeCapsule.integration.test.ts[2m > [22mTime Capsule System Integration Tests[2m > [22mSecurity Validations[2m > [22mshould require authentication token[32m 0[2mms[22m[39m
+ [32m✓[39m src/__tests__/timeCapsule.integration.test.ts[2m > [22mTime Capsule System Integration Tests[2m > [22mSecurity Validations[2m > [22mshould validate required fields[32m 0[2mms[22m[39m
+ [32m✓[39m src/__tests__/timeCapsule.integration.test.ts[2m > [22mTime Capsule System Integration Tests[2m > [22mSecurity Validations[2m > [22mshould validate date requirement for date-based unlock[32m 0[2mms[22m[39m
+ [32m✓[39m src/__tests__/timeCapsule.integration.test.ts[2m > [22mTime Capsule System Integration Tests[2m > [22mFile Size Validations[2m > [22mshould validate file size limits[32m 0[2mms[22m[39m
+ [32m✓[39m src/__tests__/timeCapsule.integration.test.ts[2m > [22mTime Capsule System Integration Tests[2m > [22mFile Size Validations[2m > [22mshould reject oversized files[32m 0[2mms[22m[39m
+ [32m✓[39m src/__tests__/timeCapsule.integration.test.ts[2m > [22mTime Capsule System Integration Tests[2m > [22mRecipient Management[2m > [22mshould require at least one recipient[32m 0[2mms[22m[39m
+ [32m✓[39m src/__tests__/timeCapsule.integration.test.ts[2m > [22mTime Capsule System Integration Tests[2m > [22mRecipient Management[2m > [22mshould accept multiple recipients[32m 0[2mms[22m[39m
+ [32m✓[39m src/__tests__/timeCapsule.integration.test.ts[2m > [22mTime Capsule System Integration Tests[2m > [22mTime Capsule Status Transitions[2m > [22mshould allow editing only locked capsules[32m 0[2mms[22m[39m
+ [32m✓[39m src/__tests__/timeCapsule.integration.test.ts[2m > [22mTime Capsule System Integration Tests[2m > [22mTime Capsule Status Transitions[2m > [22mshould prevent editing unlocked capsules[32m 0[2mms[22m[39m
+ [32m✓[39m src/__tests__/timeCapsule.integration.test.ts[2m > [22mTime Capsule System Integration Tests[2m > [22mTime Capsule Status Transitions[2m > [22mshould prevent editing delivered capsules[32m 0[2mms[22m[39m
+[90mstdout[2m | src/services/__tests__/livingLegacyService.test.ts[2m > [22m[2mLife Event - LogLifeEvent Checklist Generation[2m > [22m[2mshould log life event in database
+[22m[39mLogging life event: New Child for user: user_123
+
+ [32m✓[39m src/services/__tests__/livingLegacyService.test.ts[2m > [22mLiving Legacy Service - Annual Review[2m > [22mshould identify accounts needing review[32m 1[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/livingLegacyService.test.ts[2m > [22mLife Event - LogLifeEvent Checklist Generation[2m > [22mshould generate the correct checklist for life events[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/livingLegacyService.test.ts[2m > [22mLife Event - LogLifeEvent Checklist Generation[2m > [22mshould log life event in database[32m 2[2mms[22m[39m
+ [31m×[39m src/components/__tests__/PrivacyControlPanel.test.tsx[2m > [22mPrivacyControlPanel[2m > [22mshould handle save error[33m 1009[2mms[22m[39m
+[31m   → Unable to find an element with the text: Save Privacy Settings. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+[36m<body>[31m
+  [36m<div>[31m
+    [36m<div>[31m
+      [36m<div[31m
+        [33mclass[31m=[32m"p-6 font-sans max-w-3xl mx-auto"[31m
+      [36m>[31m
+        [36m<h2[31m
+          [33mclass[31m=[32m"text-2xl font-bold text-gray-800"[31m
+        [36m>[31m
+          [0mPrivacy Data Controls[0m
+        [36m</h2>[31m
+        [36m<p[31m
+          [33mclass[31m=[32m"text-gray-600 mt-1"[31m
+        [36m>[31m
+          [0mManage how your data is processed[0m
+        [36m</p>[31m
+        [36m<div[31m
+          [33mclass[31m=[32m"rounded-lg bg-card-background text-text-heading border border-gray-200 shadow-sm transition-all duration-200 dark:bg-dark-card-background dark:text-dark-text-heading dark:border-gray-700 mt-6"[31m
+        [36m>[31m
+          [36m<div[31m
+            [33mclass[31m=[32m"flex flex-col space-y-1.5 p-6"[31m
+          [36m>[31m
+            [36m<h3[31m
+              [33mclass[31m=[32m"text-2xl font-semibold leading-none tracking-tight"[31m
+            [36m>[31m
+              [0mData Processing[0m
+            [36m</h3>[31m
+          [36m</div>[31m
+          [36m<div[31m
+            [33mclass[31m=[32m"p-6 pt-0 space-y-4"[31m
+          [36m>[31m
+            [36m<div>[31m
+              [36m<label[31m
+                [33mclass[31m=[32m"text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"[31m
+              [36m>[31m
+                [0mConfigure how we export and process data[0m
+              [36m</label>[31m
+              [36m<p[31m
+                [33mclass[31m=[32m"text-sm text-gray-500"[31m
+              [36m>[31m
+                [0mConfigure how we export and process data[0m
+              [36m</p>[31m
+            [36m</div>[31m
+            [36m<div>[31m
+              [36m<label[31m
+                [33mclass[31m=[32m"text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"[31m
+              [36m>[31m
+                [0mAutomatic Data Deletion[0m
+              [36m</label>[31m
+              [36m<p[31m
+                [33mclass[31m=[32m"text-sm text-gray-500"[31m
+              [36m>[31m
+                [0mAutomatic Data Deletion[0m
+              [36m</p>[31m
+              [36m<button[31m
+                [33maria-autocomplete[31m=[32m"none"[31m
+                [33maria-controls[31m=[32m"radix-:rs:"[31m
+                [33maria-expanded[31m=[32m"false"[31m
+                [33mclass[31m=[32m"flex h-10 w-full items-center justify-between rounded-lg border border-secondary bg-background px-3 py-2 text-sm text-text-main ring-offset-background placeholder:text-text-secondary focus:outline-none focus:ring-2 focus:ring-cta focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1 dark:border-dark-border dark:bg-dark-secondary dark:text-dark-text-main dark:placeholder:text-dark-text-secondary dark:focus:ring-dark-cta"[31m
+                [33mdata-state[31m=[32m"closed"[31m
+                [33mdir[31m=[32m"ltr"[31m
+                [33mrole[31m=[32m"combobox"[31m
+                [33mtype[31m=[32m"button"[31m
+              [36m>[31m
+                [36m<span[31m
+                  [33mstyle[31m=[32m"pointer-events: none;"[31m
+                [36m>[31m
+                  [0mAutomatic Data Deletion[0m
+                [36m</span>[31m
+                [36m<svg[31m
+                  [33maria-hidden[31m=[32m"true"[31m
+                  [33mclass[31m=[32m"lucide lucide-chevron-down h-4 w-4 opacity-50"[31m
+                  [33mfill[31m=[32m"none"[31m
+                  [33mheight[31m=[32m"24"[31m
+                  [33mstroke[31m=[32m"currentColor"[31m
+                  [33mstroke-linecap[31m=[32m"round"[31m
+                  [33mstroke-linejoin[31m=[32m"round"[31m
+                  [33mstroke-width[31m=[32m"2"[31m
+                  [33mviewBox[31m=[32m"0 0 24 24"[31m
+                  [33mwidth[31m=[32m"24"[31m
+                  [33mxmlns[31m=[32m"http://www.w3.org/2000/svg"[31m
+                [36m>[31m
+                  [36m<path[31m
+                    [33md[31m=[32m"m6 9 6 6 6-6"[31m
+                  [36m/>[31m
+                [36m</svg>[31m
+              [36m</button>[31m
+            [36m</div>[31m
+          [36m</div>[31m
+        [36m</div>[31m
+        [36m<div[31m
+          [33mclass[31m=[32m"rounded-lg bg-card-background text-text-heading border border-gray-200 shadow-sm transition-all duration-200 dark:bg-dark-card-background dark:text-dark-text-heading dark:border-gray-700 mt-6"[31m
+        [36m>[31m
+          [36m<div[31m
+            [33mclass[31m=[32m"flex flex-col space-y-1.5 p-6"[31m
+          [36m>[31m
+            [36m<h3[31m
+              [33mclass[31m=[32m"text-2xl font-semibold leading-none tracking-tight"[31m
+            [36m>[31m
+              [0mAI Assistant Features[0m
+            [36m</h3>[31m
+          [36m</div>[31m
+          [36m<div[31m
+            [33mclass[31m=[32m"p-6 pt-0 space-y-4"[31m
+          [36m>[31m
+            [36m<div[31m
+              [33mclass[31m=[32m"flex items-center justify-between"[31m
+            [36m>[31m
+              [36m<div>[31m
+                [36m<label[31m
+                  [33mclass[31m=[32m"text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"[31m
+                [36m>[31m
+                  [0mAI Feature Toggle[0m
+                [36m</label>[31m
+                [36m<p[31m
+                  [33mclass[31m=[32m"text-sm text-gray-500"[31m
+                [36m>[31m
+                  [0mAI Feature Toggle[0m
+                [36m</p>[31m
+              [36m</div>[31m
+              [36m<button[31m
+                [33maria-checked[31m=[32m"true"[31m
+                [33mclass[31m=[32m"peer inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=unchecked]:bg-input"[31m
+                [33mdata-state[31m=[32m"checked"[31m
+                [33mrole[31m=[32m"switch"[31m
+                [33mtype[31m=[32m"button"[31m
+                [33mvalue[31m=[32m"on"[31m
+              [36m>[31m
+                [36m<span[31m
+                  [33mclass[31m=[32m"pointer-events-none block h-5 w-5 rounded-full bg-background shadow-lg ring-0 transition-transform data-[state=checked]:translate-x-5 data-[state=unchecked]:translate-x-0"[31m
+                  [33mdata-state[31m=[32m"checked"[31m
+                [36m/>[31m
+              [36m</button>[31m
+            [36m</div>[31m
+          [36m</div>[31m
+        [36m</div>[31m
+        [36m<div[31m
+          [33mclass[31m=[32m"rounded-lg bg-card-background text-text-heading border border-gray-200 shadow-sm transition-all duration-200 dark:bg-dark-card-background dark:text-dark-text-heading dark:border-gray-700 mt-6 opacity-50"[31m
+        [36m>[31m
+          [36m<div[31m
+            [33mclass[31m=[32m"flex flex-col space-y-1.5 p-6"[31m
+          [36m>[31m
+            [36m<h3[31m
+              [33mclass[31m=[32m"text-2xl font-semibold leading-none tracking-tight"[31m
+            [36m>[31m
+              [0mFamily Access Management[0m
+            [36m</h3>[31m
+          [36m</div>[31m
+          [36m<div[31m
+            [33mclass[31m=[32m"p-6 pt-0 space-y-4"[31m
+          [36m>[31m
+            [36m<p[31m
+              [33mclass[31m=[32m"text-sm text-gray-500"[31m
+            [36m>[31m
+              [0mFamily Access Management[0m
+            [36m</p>[31m
+          [36m</div>[31m
+        [36m</div>[31m
+        [36m<button[31m
+          [33mclass[31m=[32m"inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg text-sm font-medium ring-offset-background transition-all duration-150 ease-in-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-primary text-white hover:bg-primary/90 shadow-sm hover:shadow-md dark:bg-dark-primary dark:text-dark-background dark:hover:bg-dark-primary/90 h-10 px-4 py-2 mt-8 w-full"[31m
+        [36m>[31m
+          [0msettings:actions.save[0m
+        [36m</button>[31m
+      [36m</div>[31m
+    [36m</div>[31m
+  [36m</div>[31m
+[36m</body>[31m
+
+Ignored nodes: comments, script, style
+[36m<html>[31m
+  [36m<head />[31m
+  [36m<body>[31m
+    [36m<div>[31m
+      [36m<div>[31m
+        [36m<div[31m
+          [33mclass[31m=[32m"p-6 font-sans max-w-3xl mx-auto"[31m
+        [36m>[31m
+          [36m<h2[31m
+            [33mclass[31m=[32m"text-2xl font-bold text-gray-800"[31m
+          [36m>[31m
+            [0mPrivacy Data Controls[0m
+          [36m</h2>[31m
+          [36m<p[31m
+            [33mclass[31m=[32m"text-gray-600 mt-1"[31m
+          [36m>[31m
+            [0mManage how your data is processed[0m
+          [36m</p>[31m
+          [36m<div[31m
+            [33mclass[31m=[32m"rounded-lg bg-card-background text-text-heading border border-gray-200 shadow-sm transition-all duration-200 dark:bg-dark-card-background dark:text-dark-text-heading dark:border-gray-700 mt-6"[31m
+          [36m>[31m
+            [36m<div[31m
+              [33mclass[31m=[32m"flex flex-col space-y-1.5 p-6"[31m
+            [36m>[31m
+              [36m<h3[31m
+                [33mclass[31m=[32m"text-2xl font-semibold leading-none tracking-tight"[31m
+              [36m>[31m
+                [0mData Processing[0m
+              [36m</h3>[31m
+            [36m</div>[31m
+            [36m<div[31m
+              [33mclass[31m=[32m"p-6 pt-0 space-y-4"[31m
+            [36m>[31m
+              [36m<div>[31m
+                [36m<label[31m
+                  [33mclass[31m=[32m"text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"[31m
+                [36m>[31m
+                  [0mConfigure how we export and process data[0m
+                [36m</label>[31m
+                [36m<p[31m
+                  [33mclass[31m=[32m"text-sm text-gray-500"[31m
+                [36m>[31m
+                  [0mConfigure how we export and process data[0m
+                [36m</p>[31m
+              [36m</div>[31m
+              [36m<div>[31m
+                [36m<label[31m
+                  [33mclass[31m=[32m"text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"[31m
+                [36m>[31m
+                  [0mAutomatic Data Deletion[0m
+                [36m</label>[31m
+                [36m<p[31m
+                  [33mclass[31m=[32m"text-sm text-gray-500"[31m
+                [36m>[31m
+                  [0mAutomatic Data Deletion[0m
+                [36m</p>[31m
+                [36m<button[31m
+                  [33maria-autocomplete[31m=[32m"none"[31m
+                  [33maria-controls[31m=[32m"radix-:rs:"[31m
+                  [33maria-expanded[31m=[32m"false"[31m
+                  [33mclass[31m=[32m"flex h-10 w-full items-center justify-between rounded-lg border border-secondary bg-background px-3 py-2 text-sm text-text-main ring-offset-background placeholder:text-text-secondary focus:outline-none focus:ring-2 focus:ring-cta focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1 dark:border-dark-border dark:bg-dark-secondary dark:text-dark-text-main dark:placeholder:text-dark-text-secondary dark:focus:ring-dark-cta"[31m
+                  [33mdata-state[31m=[32m"closed"[31m
+                  [33mdir[31m=[32m"ltr"[31m
+                  [33mrole[31m=[32m"combobox"[31m
+                  [33mtype[31m=[32m"button"[31m
+                [36m>[31m
+                  [36m<span[31m
+                    [33mstyle[31m=[32m"pointer-events: none;"[31m
+                  [36m>[31m
+                    [0mAutomatic Data Deletion[0m
+                  [36m</span>[31m
+                  [36m<svg[31m
+                    [33maria-hidden[31m=[32m"true"[31m
+                    [33mclass[31m=[32m"lucide lucide-chevron-down h-4 w-4 opacity-50"[31m
+                    [33mfill[31m=[32m"none"[31m
+                    [33mheight[31m=[32m"24"[31m
+                    [33mstroke[31m=[32m"currentColor"[31m
+                    [33mstroke-linecap[31m=[32m"round"[31m
+                    [33mstroke-linejoin[31m=[32m"round"[31m
+                    [33mstroke-width[31m=[32m"2"[31m
+                    [33mviewBox[31m=[32m"0 0 24 24"[31m
+                    [33mwidth[31m=[32m"24"[31m
+                    [33mxmlns[31m=[32m"http://www.w3.org/2000/svg"[31m
+                  [36m>[31m
+                    [36m<path[31m
+                      [33md[31m=[32m"m6 9 6 6 6-6"[31m
+                    [36m/>[31m
+                  [36m</svg>[31m
+                [36m</button>[31m
+              [36m</div>[31m
+            [36m</div>[31m
+          [36m</div>[31m
+          [36m<div[31m
+            [33mclass[31m=[32m"rounded-lg bg-card-background text-text-heading border border-gray-200 shadow-sm transition-all duration-200 dark:bg-dark-card-background dark:text-dark-text-heading dark:border-gray-700 mt-6"[31m
+          [36m>[31m
+            [36m<div[31m
+              [33mclass[31m=[32m"flex flex-col space-y-1.5 p-6"[31m
+            [36m>[31m
+              [36m<h3[31m
+                [33mclass[31m=[32m"text-2xl font-semibold leading-none tracking-tight"[31m
+              [36m>[31m
+                [0mAI Assistant Features[0m
+              [36m</h3>[31m
+            [36m</div>[31m
+            [36m<div[31m
+              [33mclass[31m=[32m"p-6 pt-0 space-y-4"[31m
+            [36m>[31m
+              [36m<div[31m
+                [33mclass[31m=[32m"flex items-center justify-between"[31m
+              [36m>[31m
+                [36m<div>[31m
+                  [36m<label[31m
+                    [33mclass[31m=[32m"text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"[31m
+                  [36m>[31m
+                    [0mAI Feature Toggle[0m
+                  [36m</label>[31m
+                  [36m<p[31m
+                    [33mclass[31m=[32m"text-sm text-gray-500"[31m
+                  [36m>[31m
+                    [0mAI Feature Toggle[0m
+                  [36m</p>[31m
+                [36m</div>[31m
+                [36m<button[31m
+                  [33maria-checked[31m=[32m"true"[31m
+                  [33mclass[31m=[32m"peer inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=unchecked]:bg-input"[31m
+                  [33mdata-state[31m=[32m"checked"[31m
+                  [33mrole[31m=[32m"switch"[31m
+                  [33mtype[31m=[32m"button"[31m
+                  [33mvalue[31m=[32m"on"[31m
+                [36m>[31m
+                  [36m<span[31m
+                    [33mclass[31m=[32m"pointer-events-none block h-5 w-5 roun...[39m
+ [32m✓[39m src/services/__tests__/preparednessScore.test.ts[2m > [22mPreparednessScore Calculation[2m > [22mcalculatePreparednessScore[2m > [22mshould return base score of 20 for minimal person data[32m 1[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/preparednessScore.test.ts[2m > [22mPreparednessScore Calculation[2m > [22mcalculatePreparednessScore[2m > [22mshould add 30 points for full access level[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/preparednessScore.test.ts[2m > [22mPreparednessScore Calculation[2m > [22mcalculatePreparednessScore[2m > [22mshould add 20 points for limited info access level[32m 1[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/preparednessScore.test.ts[2m > [22mPreparednessScore Calculation[2m > [22mcalculatePreparednessScore[2m > [22mshould add 10 points for emergency only access level[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/preparednessScore.test.ts[2m > [22mPreparednessScore Calculation[2m > [22mcalculatePreparednessScore[2m > [22mshould add 10 points for having an email[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/preparednessScore.test.ts[2m > [22mPreparednessScore Calculation[2m > [22mcalculatePreparednessScore[2m > [22mshould add 10 points for having a phone number[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/preparednessScore.test.ts[2m > [22mPreparednessScore Calculation[2m > [22mcalculatePreparednessScore[2m > [22mshould add points for responsibilities (max 20)[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/preparednessScore.test.ts[2m > [22mPreparednessScore Calculation[2m > [22mcalculatePreparednessScore[2m > [22mshould add 10 points for communication within 7 days[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/preparednessScore.test.ts[2m > [22mPreparednessScore Calculation[2m > [22mcalculatePreparednessScore[2m > [22mshould add 5 points for communication within 30 days[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/preparednessScore.test.ts[2m > [22mPreparednessScore Calculation[2m > [22mcalculatePreparednessScore[2m > [22mshould not add points for communication older than 30 days[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/preparednessScore.test.ts[2m > [22mPreparednessScore Calculation[2m > [22mcalculatePreparednessScore[2m > [22mshould calculate maximum score correctly[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/preparednessScore.test.ts[2m > [22mPreparednessScore Calculation[2m > [22mcalculatePreparednessScore[2m > [22mshould cap score at 100 even if calculation exceeds it[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/preparednessScore.test.ts[2m > [22mPreparednessScore Calculation[2m > [22mcalculatePreparednessScore[2m > [22mshould handle missing last_communicated gracefully[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/preparednessScore.test.ts[2m > [22mPreparednessScore Calculation[2m > [22mcalculatePreparednessScore[2m > [22mshould handle empty responsibilities array[32m 1[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/preparednessScore.test.ts[2m > [22mPreparednessScore Calculation[2m > [22mcalculatePreparednessScore[2m > [22mshould handle null responsibilities[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/preparednessScore.test.ts[2m > [22mPreparednessScore Calculation[2m > [22mcalculatePreparednessScore[2m > [22mshould handle undefined access_level[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/preparednessScore.test.ts[2m > [22mPreparednessScore Calculation[2m > [22mScore Categories[2m > [22mshould categorize scores correctly[32m 0[2mms[22m[39m
+ [32m✓[39m src/api/executor/__tests__/generateExecutorTasks.test.ts[2m > [22mgenerateExecutorTasks[2m > [22mallows admin users to generate tasks[32m 2[2mms[22m[39m
+ [32m✓[39m src/api/executor/__tests__/generateExecutorTasks.test.ts[2m > [22mgenerateExecutorTasks[2m > [22mrejects non-admin users[32m 2[2mms[22m[39m
+ [32m✓[39m src/types/__tests__/will.test.ts[2m > [22mWill Types[2m > [22mWillRequirements[2m > [22mshould have correct structure for will requirements[32m 1[2mms[22m[39m
+ [32m✓[39m src/types/__tests__/will.test.ts[2m > [22mWill Types[2m > [22mWillContent[2m > [22mshould have complete will content structure[32m 1[2mms[22m[39m
+ [32m✓[39m src/types/__tests__/will.test.ts[2m > [22mWill Types[2m > [22mAssetAllocation[2m > [22mshould support percentage allocation[32m 0[2mms[22m[39m
+ [32m✓[39m src/types/__tests__/will.test.ts[2m > [22mWill Types[2m > [22mAssetAllocation[2m > [22mshould support specific asset allocation[32m 0[2mms[22m[39m
+ [32m✓[39m src/types/__tests__/will.test.ts[2m > [22mWill Types[2m > [22mGeneratedWill[2m > [22mshould have correct status values[32m 0[2mms[22m[39m
+ [32m✓[39m src/types/__tests__/will.test.ts[2m > [22mWill Types[2m > [22mWillSignature[2m > [22mshould support different signatory types[32m 0[2mms[22m[39m
+ [32m✓[39m src/types/__tests__/will.test.ts[2m > [22mWill Types[2m > [22mExecutor with alternative[2m > [22mshould support alternative executor[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/willBackupService.test.ts[2m > [22mwillBackupService - Basic Tests[2m > [22mshould have all required methods[32m 1[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/willBackupService.test.ts[2m > [22mwillBackupService - Basic Tests[2m > [22mshould mock backupWill method[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/willBackupService.test.ts[2m > [22mwillBackupService - Basic Tests[2m > [22mshould mock restoreWillBackup method[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/willBackupService.test.ts[2m > [22mwillBackupService - Basic Tests[2m > [22mshould mock listWillBackups method[32m 0[2mms[22m[39m
+ [32m✓[39m src/services/__tests__/willBackupService.test.ts[2m > [22mwillBackupService - Basic Tests[2m > [22mshould mock cleanupOldBackups method[32m 0[2mms[22m[39m
+ [32m✓[39m tests/willSyncService.test.ts[2m > [22mWillSyncService[2m > [22mshould initialize with no subscriptions[32m 1[2mms[22m[39m
+ [32m✓[39m tests/willSyncService.test.ts[2m > [22mWillSyncService[2m > [22mshould merge will changes correctly[32m 1[2mms[22m[39m
+ [32m✓[39m tests/willSyncService.test.ts[2m > [22mWill Integration[2m > [22mshould create a new will version when changes are applied[32m 1[2mms[22m[39m
+ [31m×[39m src/components/__tests__/SmartUploadZone.test.tsx[2m > [22mSmartUploadZone[2m > [22mshould show active state when dragging over[33m 3027[2mms[22m[39m
+[31m   → Unable to find an element with the text: assets.zone.dropHereActive. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+[36m<body>[31m
+  [36m<div>[31m
+    [36m<div[31m
+      [33mclass[31m=[32m"relative rounded-xl border-2 border-dashed transition-all duration-200 border-primary bg-primary/5 scale-[1.02]"[31m
+      [33mdata-testid[31m=[32m"upload-zone"[31m
+    [36m>[31m
+      [36m<input[31m
+        [33maccept[31m=[32m"image/*,application/pdf"[31m
+        [33maria-label[31m=[32m"assets.smartUploadZone.file_upload_1"[31m
+        [33mclass[31m=[32m"hidden"[31m
+        [33mdata-testid[31m=[32m"file-input"[31m
+        [33mmultiple[31m=[32m""[31m
+        [33mtype[31m=[32m"file"[31m
+      [36m/>[31m
+      [36m<div[31m
+        [33mclass[31m=[32m"p-8 sm:p-12 text-center"[31m
+      [36m>[31m
+        [36m<div[31m
+          [33mclass[31m=[32m"mx-auto mb-6 relative"[31m
+        [36m>[31m
+          [36m<div[31m
+            [33mclass[31m=[32m"w-20 h-20 rounded-full flex items-center justify-center transition-all scale-110 bg-primary/20"[31m
+          [36m>[31m
+            [36m<svg[31m
+              [33mclass[31m=[32m"lucide lucide-upload h-10 w-10 text-primary transition-all scale-110"[31m
+              [33mfill[31m=[32m"none"[31m
+              [33mheight[31m=[32m"24"[31m
+              [33mstroke[31m=[32m"currentColor"[31m
+              [33mstroke-linecap[31m=[32m"round"[31m
+              [33mstroke-linejoin[31m=[32m"round"[31m
+              [33mstroke-width[31m=[32m"2"[31m
+              [33mviewBox[31m=[32m"0 0 24 24"[31m
+              [33mwidth[31m=[32m"24"[31m
+              [33mxmlns[31m=[32m"http://www.w3.org/2000/svg"[31m
+            [36m>[31m
+              [36m<path[31m
+                [33md[31m=[32m"M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"[31m
+              [36m/>[31m
+              [36m<polyline[31m
+                [33mpoints[31m=[32m"17 8 12 3 7 8"[31m
+              [36m/>[31m
+              [36m<line[31m
+                [33mx1[31m=[32m"12"[31m
+                [33mx2[31m=[32m"12"[31m
+                [33my1[31m=[32m"3"[31m
+                [33my2[31m=[32m"15"[31m
+              [36m/>[31m
+            [36m</svg>[31m
+          [36m</div>[31m
+          [36m<svg[31m
+            [33mclass[31m=[32m"lucide lucide-sparkles absolute -top-2 -right-2 h-6 w-6 text-primary animate-pulse"[31m
+            [33mfill[31m=[32m"none"[31m
+            [33mheight[31m=[32m"24"[31m
+            [33mstroke[31m=[32m"currentColor"[31m
+            [33mstroke-linecap[31m=[32m"round"[31m
+            [33mstroke-linejoin[31m=[32m"round"[31m
+            [33mstroke-width[31m=[32m"2"[31m
+            [33mviewBox[31m=[32m"0 0 24 24"[31m
+            [33mwidth[31m=[32m"24"[31m
+            [33mxmlns[31m=[32m"http://www.w3.org/2000/svg"[31m
+          [36m>[31m
+            [36m<path[31m
+              [33md[31m=[32m"M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"[31m
+            [36m/>[31m
+            [36m<path[31m
+              [33md[31m=[32m"M20 3v4"[31m
+            [36m/>[31m
+            [36m<path[31m
+              [33md[31m=[32m"M22 5h-4"[31m
+            [36m/>[31m
+            [36m<path[31m
+              [33md[31m=[32m"M4 17v2"[31m
+            [36m/>[31m
+            [36m<path[31m
+              [33md[31m=[32m"M5 18H3"[31m
+            [36m/>[31m
+          [36m</svg>[31m
+        [36m</div>[31m
+        [36m<h3[31m
+          [33mclass[31m=[32m"text-lg font-semibold mb-2"[31m
+        [36m>[31m
+          [0mcommon:assets.zone.dropHereActive[0m
+        [36m</h3>[31m
+        [36m<p[31m
+          [33mclass[31m=[32m"text-sm text-muted-foreground mb-6 max-w-sm mx-auto"[31m
+        [36m>[31m
+          [0mcommon:assets.zone.descriptionActive[0m
+        [36m</p>[31m
+        [36m<div[31m
+          [33mclass[31m=[32m"flex flex-col sm:flex-row gap-3 justify-center"[31m
+        [36m>[31m
+          [36m<button[31m
+            [33mclass[31m=[32m"inline-flex items-center justify-center whitespace-nowrap rounded-lg text-sm font-medium ring-offset-background transition-all duration-150 ease-in-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-primary text-white hover:bg-primary/90 shadow-sm hover:shadow-md dark:bg-dark-primary dark:text-dark-background dark:hover:bg-dark-primary/90 h-10 px-4 py-2 gap-2"[31m
+          [36m>[31m
+            [36m<svg[31m
+              [33mclass[31m=[32m"lucide lucide-file-text h-4 w-4"[31m
+              [33mfill[31m=[32m"none"[31m
+              [33mheight[31m=[32m"24"[31m
+              [33mstroke[31m=[32m"currentColor"[31m
+              [33mstroke-linecap[31m=[32m"round"[31m
+              [33mstroke-linejoin[31m=[32m"round"[31m
+              [33mstroke-width[31m=[32m"2"[31m
+              [33mviewBox[31m=[32m"0 0 24 24"[31m
+              [33mwidth[31m=[32m"24"[31m
+              [33mxmlns[31m=[32m"http://www.w3.org/2000/svg"[31m
+            [36m>[31m
+              [36m<path[31m
+                [33md[31m=[32m"M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"[31m
+              [36m/>[31m
+              [36m<path[31m
+                [33md[31m=[32m"M14 2v4a2 2 0 0 0 2 2h4"[31m
+              [36m/>[31m
+              [36m<path[31m
+                [33md[31m=[32m"M10 9H8"[31m
+              [36m/>[31m
+              [36m<path[31m
+                [33md[31m=[32m"M16 13H8"[31m
+              [36m/>[31m
+              [36m<path[31m
+                [33md[31m=[32m"M16 17H8"[31m
+              [36m/>[31m
+            [36m</svg>[31m
+            [0massets.zone.chooseFiles[0m
+          [36m</button>[31m
+          [36m<button[31m
+            [33mclass[31m=[32m"inline-flex items-center justify-center whitespace-nowrap rounded-lg text-sm font-medium ring-offset-background transition-all duration-150 ease-in-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border border-primary bg-transparent text-primary hover:bg-primary hover:text-white shadow-sm dark:border-dark-primary dark:text-dark-primary dark:hover:bg-dark-primary dark:hover:text-dark-background h-10 px-4 py-2 gap-2 sm:hidden"[31m
+          [36m>[31m
+            [36m<svg[31m
+              [33mclass[31m=[32m"lucide lucide-camera h-4 w-4"[31m
+              [33mfill[31m=[32m"none"[31m
+              [33mheight[31m=[32m"24"[31m
+              [33mstroke[31m=[32m"currentColor"[31m
+              [33mstroke-linecap[31m=[32m"round"[31m
+              [33mstroke-linejoin[31m=[32m"round"[31m
+              [33mstroke-width[31m=[32m"2"[31m
+              [33mviewBox[31m=[32m"0 0 24 24"[31m
+              [33mwidth[31m=[32m"24"[31m
+              [33mxmlns[31m=[32m"http://www.w3.org/2000/svg"[31m
+            [36m>[31m
+              [36m<path[31m
+                [33md[31m=[32m"M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"[31m
+              [36m/>[31m
+              [36m<circle[31m
+                [33mcx[31m=[32m"12"[31m
+                [33mcy[31m=[32m"13"[31m
+                [33mr[31m=[32m"3"[31m
+              [36m/>[31m
+            [36m</svg>[31m
+            [0massets.zone.takePhoto[0m
+          [36m</button>[31m
+        [36m</div>[31m
+        [36m<p[31m
+          [33mclass[31m=[32m"text-xs text-muted-foreground mt-6"[31m
+        [36m>[31m
+          [0massets.smartUploadZone.supports_images_jpeg_png_and_p_2[0m
+          [0m10[0m
+          [0massets.smartUploadZone.files_at_once_3[0m
+        [36m</p>[31m
+        [36m<div[31m
+          [33mclass[31m=[32m"mt-4 inline-flex items-center gap-2 px-3 py-1 bg-green-100 text-green-800 rounded-full text-xs font-medium"[31m
+        [36m>[31m
+          [36m<div[31m
+            [33mclass[31m=[32m"w-2 h-2 bg-green-600 rounded-full"[31m
+          [36m/>[31m
+          [0massets.zone.processingLocally[0m
+        [36m</div>[31m
+      [36m</div>[31m
+      [36m<div[31m
+        [33mclass[31m=[32m"absolute inset-0 bg-primary/5 backdrop-blur-sm rounded-xl flex items-center justify-center"[31m
+      [36m>[31m
+        [36m<div[31m
+          [33mclass[31m=[32m"text-center"[31m
+        [36m>[31m
+          [36m<svg[31m
+            [33mclass[31m=[32m"lucide lucide-upload h-12 w-12 text-primary mx-auto mb-3 animate-bounce"[31m
+            [33mfill[31m=[32m"none"[31m
+            [33mheight[31m=[32m"24"[31m
+            [33mstroke[31m=[32m"currentColor"[31m
+            [33mstroke-linecap[31m=[32m"round"[31m
+            [33mstroke-linejoin[31m=[32m"round"[31m
+            [33mstroke-width[31m=[32m"2"[31m
+            [33mviewBox[31m=[32m"0 0 24 24"[31m
+            [33mwidth[31m=[32m"24"[31m
+            [33mxmlns[31m=[32m"http://www.w3.org/2000/svg"[31m
+          [36m>[31m
+            [36m<path[31m
+              [33md[31m=[32m"M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"[31m
+            [36m/>[31m
+            [36m<polyline[31m
+              [33mpoints[31m=[32m"17 8 12 3 7 8"[31m
+            [36m/>[31m
+            [36m<line[31m
+              [33mx1[31m=[32m"12"[31m
+              [33mx2[31m=[32m"12"[31m
+              [33my1[31m=[32m"3"[31m
+              [33my2[31m=[32m"15"[31m
+            [36m/>[31m
+          [36m</svg>[31m
+          [36m<p[31m
+            [33mclass[31m=[32m"text-lg font-semibold text-primary"[31m
+          [36m>[31m
+            [0massets.zone.dragOverlay.title[0m
+          [36m</p>[31m
+          [36m<p[31m
+            [33mclass[31m=[32m"text-sm text-primary/70"[31m
+          [36m>[31m
+            [0massets.zone.dragOverlay.subtitle[0m
+          [36m</p>[31m
+        [36m</div>[31m
+      [36m</div>[31m
+    [36m</div>[31m
+  [36m</div>[31m
+[36m</body>[31m
+
+Ignored nodes: comments, script, style
+[36m<html>[31m
+  [36m<head />[31m
+  [36m<body>[31m
+    [36m<div>[31m
+      [36m<div[31m
+        [33mclass[31m=[32m"relative rounded-xl border-2 border-dashed transition-all duration-200 border-primary bg-primary/5 scale-[1.02]"[31m
+        [33mdata-testid[31m=[32m"upload-zone"[31m
+      [36m>[31m
+        [36m<input[31m
+          [33maccept[31m=[32m"image/*,application/pdf"[31m
+          [33maria-label[31m=[32m"assets.smartUploadZone.file_upload_1"[31m
+          [33mclass[31m=[32m"hidden"[31m
+          [33mdata-testid[31m=[32m"file-input"[31m
+          [33mmultiple[31m=[32m""[31m
+          [33mtype[31m=[32m"file"[31m
+        [36m/>[31m
+        [36m<div[31m
+          [33mclass[31m=[32m"p-8 sm:p-12 text-center"[31m
+        [36m>[31m
+          [36m<div[31m
+            [33mclass[31m=[32m"mx-auto mb-6 relative"[31m
+          [36m>[31m
+            [36m<div[31m
+              [33mclass[31m=[32m"w-20 h-20 rounded-full flex items-center justify-center transition-all scale-110 bg-primary/20"[31m
+            [36m>[31m
+              [36m<svg[31m
+                [33mclass[31m=[32m"lucide lucide-upload h-10 w-10 text-primary transition-all scale-110"[31m
+                [33mfill[31m=[32m"none"[31m
+                [33mheight[31m=[32m"24"[31m
+                [33mstroke[31m=[32m"currentColor"[31m
+                [33mstroke-linecap[31m=[32m"round"[31m
+                [33mstroke-linejoin[31m=[32m"round"[31m
+                [33mstroke-width[31m=[32m"2"[31m
+                [33mviewBox[31m=[32m"0 0 24 24"[31m
+                [33mwidth[31m=[32m"24"[31m
+                [33mxmlns[31m=[32m"http://www.w3.org/2000/svg"[31m
+              [36m>[31m
+                [36m<path[31m
+                  [33md[31m=[32m"M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"[31m
+                [36m/>[31m
+                [36m<polyline[31m
+                  [33mpoints[31m=[32m"17 8 12 3 7 8"[31m
+                [36m/>[31m
+                [36m<line[31m
+                  [33mx1[31m=[32m"12"[31m
+                  [33mx2[31m=[32m"12"[31m
+                  [33my1[31m=[32m"3"[31m
+                  [33my2[31m=[32m"15"[31m
+                [36m/>[31m
+              [36m</svg>[31m
+            [36m</div>[31m
+            [36m<svg[31m
+              [33mclass[31m=[32m"lucide lucide-sparkles absolute -top-2 -right-2 h-6 w-6 text-primary animate-pulse"[31m
+              [33mfill[31m=[32m"none"[31m
+              [33mheight[31m=[32m"24"[31m
+              [33mstroke[31m=[32m"currentColor"[31m
+              [33mstroke-linecap[31m=[32m"round"[31m
+              [33mstroke-linejoin[31m=[32m"round"[31m
+              [33mstroke-width[31m=[32m"2"[31m
+              [33mviewBox[31m=[32m"0 0 24 24"[31m
+              [33mwidth[31m=[32m"24"[31m
+              [33mxmlns[31m=[32m"http://www.w3.org/2000/svg"[31m
+            [36m>[31m
+              [36m<path[31m
+                [33md[31m=[32m"M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"[31m
+              [36m/>[31m
+              [36m<path[31m
+                [33md[31m=[32m"M20 3v4"[31m
+              [36m/>[31m
+              [36m<path[31m
+                [33md[31m=[32m"M22 5h-4"[31m
+              [36m/>[31m
+              [36m<path[31m
+                [33md[31m=[32m"M4 17v2"[31m
+              [36m/>[31m
+              [36m<path[31m
+                [33md[31m=[32m"M5 18H3"[31m
+              [36m/>[31m
+            [36m</svg>[31m
+          [36m</div>[31m
+          [36m<h3[31m
+            [33mclass[31m=[32m"text-lg font-semibold mb-2"[31m
+          [36m>[31m
+            [0mcommon:assets.zone.dropHereActive[0m
+          [36m</h3>[31m
+          [36m<p[31m
+            [33mclass[31m=[32m"text-sm text-muted-foreground mb-6 max-w-sm mx-auto"[31m
+          [36m>[31m
+            [0mcommon:assets.zone.descriptionActive[0m
+          [36m</p>[31m
+          [36m<div[31m
+            [33mclass[31m=[32m"flex flex-col sm:flex-row gap-3 justify-center"[31m
+          [36m>[31m
+            [36m<button[31m
+              [33mclass[31m=[32m"inline-flex items-center justify-center whitespace-nowrap rounded-lg text-sm font-medium ring-offset-background transition-all duration-150 ease-in-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-primary text-white hover:bg-primary/90 shadow-sm hover:shadow-md dark:bg-dark-primary dark:text-dark-background dark:hover:bg-dark-primary/90 h-10 px-4 py-2 gap-2"[31m
+            [36m>[31m
+              [36m<svg[31m
+                [33mclass[31m=[32m"lucide lucide-file-text h-4 w-4"[31m
+                [33mfill[31m=[32m"none"[31m
+                [33mheight[31m=[32m"24"[31m
+                [33mstroke[31m=[32m"currentColor"[31m
+                [33mstroke-linecap[31m=[32m"round"[31m
+                [33mstroke-linejoin[31m=[32m"round"[31m
+                [33mstroke-width[31m=[32m"2"[31m
+                [33mviewBox[31m=[32m"0 0 24 24"[31m
+                [33mwidth[31m=[32m"24"[31m
+                [33mxmlns[31m=[32m"http://www.w3.org/2000/svg"[31m
+              [36m>[31m
+                [36m<path[31m
+                  [33md[31m=[32m"M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"[31m
+                [36m/>[31m
+                [36m<path[31m
+                  [33md[31m=[32m"M14 2v4a2 2 0 0 0 2 2h4"[31m
+                [36m/>[31m
+                [36m<path[31m
+                  [33md[31m=[32m"M10 9H8"[31m
+                [36m/>[31m
+                [36m<path[31m
+                  [33md[31m=[32m"M16 13H8"[31m
+                [36m/>[31m
+                [36m<path[31m
+                  [33md[31m=[32m"M16 17H8"[31m
+                [36m/>[31m
+              [36m</svg>[31m
+              [0massets.zone.chooseFiles[0m
+            [36m</button>[31m
+            [36m<button[31m
+              [33mclass[31m=[32m"inline-flex items-center justify-center whitespace-nowrap rounded-lg text-sm font-medium ring-offset-background transition-all duration-150 ease-in-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border border-primary bg-transparent text-primary hover:bg-primary hover:text-white shadow-sm dark:border-dark-primary dark:text-dark-primary dark:hover:bg-dark-primary dark:hover:text-dark-background h-10 px-4 py-2 gap-2 sm:hidden"[31m
+            [36m>[31m
+              [36m<svg[31m
+                [33mclass[31m=[32m"lucide lucide-camera h-4 w-4"[31m
+                [33mfill[31m=[32m"none"[31m
+                [33mheight[31m=[32m"24"[31m
+                [33mstroke[31m=[32m"currentColor"[31m
+                [33mstroke-linecap[31m=[32m"round"[31m
+                [33mstroke-linejoin[31m=[32m"round"[31m
+                [33mstroke-width[31m=[32m"2"[31m
+                [33mviewBox[31m=[32m"0 0 24 24"[31m
+                [33mwidth[31m=[32m"24"[31m
+                [33mxmlns[31m=[32m"http://www.w3.org/2000/svg"[31m
+              [36m>[31m
+                [36m<path[31m
+                  [33md[31m=[32m"M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"[31m
+                [36m/>[31m
+                [36m<circle[31m
+                  [33mcx[31m=[32m"12"[31m
+                  [33mcy[31m=[32m"13"[31m
+                  [33mr[31m=[32m"3"[31m
+                [36m/>[31m
+              [36m</svg>[31m
+              [0massets.zone.takePhoto[0m
+            [36m</button>[31m
+          [36m</div>[31m
+          [36m<p[31m
+            [33mclass[31m=[32m"text-xs text-muted-foreground mt-6"[31m
+          [36m>[31m
+            [0massets.smartUploadZone.supports_images_jpeg_png_and_p_2[0m
+            [0m10[0m
+            [0massets.smartUploadZone.files_at_once_3[0m
+          [36m</p>[31m
+          [36m<div[31m
+            [33mclass[31m=[32m"mt-4 inline-flex items-center gap-2 px-3 py-1 bg-green-100 text-green-800 rounded-full text-xs font-medium"[31m
+          [36m>[31m
+            [36m<div[31m
+              [33mclass[31m=[32m"w-2 h-2 bg-green-600 rounded-full"[31m
+            [36m/>[31m
+            [0massets.zone.processingLocally[0m
+          [36m</div>[31m
+        [36m</div>[31m
+        [36m<div[31m
+          [33mclass[31m=[32m"absolute inset-0 bg-primary/5 backdrop-blur-sm rounded-xl flex items-center justify-center"[31m
+        [36m>[31m
+          [36m<div[31m
+            [33mclass[31m=[32m"text-center"[31m
+          [36m>[31m
+            [36m<svg[31m
+              [33mclass[31m=[32m"lucide lucide-upload h-12 w-12 text-primary mx-auto mb-3 animate-bounce"[31m
+              [33mfill[31m=[32m"none"[31m
+              [33mheight[31m=[32m"24"[31m
+              [33mstroke[31m=[32m"currentColor"[31m
+              [33mstroke-linecap[31m=[32m"round"[31m
+              [33mstroke-linejoin[31m=[32m"round"[31m
+              [33mstroke-width[31m=[32m"2"[31m
+              [33mviewBox[31m=[32m"0 0 24 24"[31m
+              [33mwidth[31m=[32m"24"[31m
+              [33mxmlns[31m=[32m"http://www.w3.org/2000/svg"[31m
+            [36m>[31m
+              [36m<path[31m
+                [33md[31m=[32m"M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"[31m
+              [36m/>[31m
+              [36m<polyline[31m
+                [33mpoints[31m=[32m"17 8 12 3 7 8"[31m
+              [36m/>[31m
+              [36m<line[31m
+                [33mx1[31m=[32m"12"[31m
+                [33mx2[31m=[32m"12"[31m
+                [33my1[31m=[32m"3"[31m
+                [33my2[31m=[32m"15"[31m
+              [36m/>[31m
+            [36m</svg>[31m
+            [36m<p[31m
+              [33mclass[31m=[32m"text-lg font-semibold text-primary"[31m
+            [36m>[31m
+              [0massets.zone.dragOverlay.title[0m
+            [36m</p>[31m
+            [36m<p[31m
+              [33mclass[31m=[32m"text-sm text-primary/70"[31m
+            [36m>[31m
+              [0massets.zone.dragOverlay.subtitle[0m
+            [36m</p>[31m
+          [36m</div>[31m
+        [36m</div>[31m
+      [36m</div>[31m
+    [36m</div>[31m
+  [36m</body>[31m
+[36m</html>[31m[39m
+ [32m✓[39m src/components/__tests__/SmartUploadZone.test.tsx[2m > [22mSmartUploadZone[2m > [22mshould handle file selection via button click[32m 8[2mms[22m[39m
+ [32m✓[39m src/components/__tests__/SmartUploadZone.test.tsx[2m > [22mSmartUploadZone[2m > [22mshould handle file drop[32m 6[2mms[22m[39m
+ [32m✓[39m src/components/__tests__/SmartUploadZone.test.tsx[2m > [22mSmartUploadZone[2m > [22mshould show camera button on mobile[32m 3[2mms[22m[39m
+ [32m✓[39m src/components/__tests__/SmartUploadZone.test.tsx[2m > [22mSmartUploadZone[2m > [22mshould show privacy indicator for local processing[32m 4[2mms[22m[39m
+ [32m✓[39m src/components/__tests__/SmartUploadZone.test.tsx[2m > [22mSmartUploadZone[2m > [22mshould handle multiple file uploads[32m 4[2mms[22m[39m
+ [32m✓[39m src/components/__tests__/SmartUploadZone.test.tsx[2m > [22mSmartUploadZone[2m > [22mshould validate file types[32m 5[2mms[22m[39m
+ [31m×[39m src/components/__tests__/SmartUploadZone.test.tsx[2m > [22mSmartUploadZone[2m > [22mshould handle drag leave correctly[33m 1016[2mms[22m[39m
+[31m   → Unable to find an element with the text: assets.zone.dropHere. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+[36m<body>[31m
+  [36m<div>[31m
+    [36m<div[31m
+      [33mclass[31m=[32m"relative rounded-xl border-2 border-dashed transition-all duration-200 border-gray-300 hover:border-gray-400"[31m
+      [33mdata-testid[31m=[32m"upload-zone"[31m
+    [36m>[31m
+      [36m<input[31m
+        [33maccept[31m=[32m"image/*,application/pdf"[31m
+        [33maria-label[31m=[32m"assets.smartUploadZone.file_upload_1"[31m
+        [33mclass[31m=[32m"hidden"[31m
+        [33mdata-testid[31m=[32m"file-input"[31m
+        [33mmultiple[31m=[32m""[31m
+        [33mtype[31m=[32m"file"[31m
+      [36m/>[31m
+      [36m<div[31m
+        [33mclass[31m=[32m"p-8 sm:p-12 text-center"[31m
+      [36m>[31m
+        [36m<div[31m
+          [33mclass[31m=[32m"mx-auto mb-6 relative"[31m
+        [36m>[31m
+          [36m<div[31m
+            [33mclass[31m=[32m"w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center transition-all"[31m
+          [36m>[31m
+            [36m<svg[31m
+              [33mclass[31m=[32m"lucide lucide-upload h-10 w-10 text-primary transition-all"[31m
+              [33mfill[31m=[32m"none"[31m
+              [33mheight[31m=[32m"24"[31m
+              [33mstroke[31m=[32m"currentColor"[31m
+              [33mstroke-linecap[31m=[32m"round"[31m
+              [33mstroke-linejoin[31m=[32m"round"[31m
+              [33mstroke-width[31m=[32m"2"[31m
+              [33mviewBox[31m=[32m"0 0 24 24"[31m
+              [33mwidth[31m=[32m"24"[31m
+              [33mxmlns[31m=[32m"http://www.w3.org/2000/svg"[31m
+            [36m>[31m
+              [36m<path[31m
+                [33md[31m=[32m"M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"[31m
+              [36m/>[31m
+              [36m<polyline[31m
+                [33mpoints[31m=[32m"17 8 12 3 7 8"[31m
+              [36m/>[31m
+              [36m<line[31m
+                [33mx1[31m=[32m"12"[31m
+                [33mx2[31m=[32m"12"[31m
+                [33my1[31m=[32m"3"[31m
+                [33my2[31m=[32m"15"[31m
+              [36m/>[31m
+            [36m</svg>[31m
+          [36m</div>[31m
+        [36m</div>[31m
+        [36m<h3[31m
+          [33mclass[31m=[32m"text-lg font-semibold mb-2"[31m
+        [36m>[31m
+          [0mcommon:assets.zone.dropHere[0m
+        [36m</h3>[31m
+        [36m<p[31m
+          [33mclass[31m=[32m"text-sm text-muted-foreground mb-6 max-w-sm mx-auto"[31m
+        [36m>[31m
+          [0mcommon:assets.zone.description[0m
+        [36m</p>[31m
+        [36m<div[31m
+          [33mclass[31m=[32m"flex flex-col sm:flex-row gap-3 justify-center"[31m
+        [36m>[31m
+          [36m<button[31m
+            [33mclass[31m=[32m"inline-flex items-center justify-center whitespace-nowrap rounded-lg text-sm font-medium ring-offset-background transition-all duration-150 ease-in-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-primary text-white hover:bg-primary/90 shadow-sm hover:shadow-md dark:bg-dark-primary dark:text-dark-background dark:hover:bg-dark-primary/90 h-10 px-4 py-2 gap-2"[31m
+          [36m>[31m
+            [36m<svg[31m
+              [33mclass[31m=[32m"lucide lucide-file-text h-4 w-4"[31m
+              [33mfill[31m=[32m"none"[31m
+              [33mheight[31m=[32m"24"[31m
+              [33mstroke[31m=[32m"currentColor"[31m
+              [33mstroke-linecap[31m=[32m"round"[31m
+              [33mstroke-linejoin[31m=[32m"round"[31m
+              [33mstroke-width[31m=[32m"2"[31m
+              [33mviewBox[31m=[32m"0 0 24 24"[31m
+              [33mwidth[31m=[32m"24"[31m
+              [33mxmlns[31m=[32m"http://www.w3.org/2000/svg"[31m
+            [36m>[31m
+              [36m<path[31m
+                [33md[31m=[32m"M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"[31m
+              [36m/>[31m
+              [36m<path[31m
+                [33md[31m=[32m"M14 2v4a2 2 0 0 0 2 2h4"[31m
+              [36m/>[31m
+              [36m<path[31m
+                [33md[31m=[32m"M10 9H8"[31m
+              [36m/>[31m
+              [36m<path[31m
+                [33md[31m=[32m"M16 13H8"[31m
+              [36m/>[31m
+              [36m<path[31m
+                [33md[31m=[32m"M16 17H8"[31m
+              [36m/>[31m
+            [36m</svg>[31m
+            [0massets.zone.chooseFiles[0m
+          [36m</button>[31m
+          [36m<button[31m
+            [33mclass[31m=[32m"inline-flex items-center justify-center whitespace-nowrap rounded-lg text-sm font-medium ring-offset-background transition-all duration-150 ease-in-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border border-primary bg-transparent text-primary hover:bg-primary hover:text-white shadow-sm dark:border-dark-primary dark:text-dark-primary dark:hover:bg-dark-primary dark:hover:text-dark-background h-10 px-4 py-2 gap-2 sm:hidden"[31m
+          [36m>[31m
+            [36m<svg[31m
+              [33mclass[31m=[32m"lucide lucide-camera h-4 w-4"[31m
+              [33mfill[31m=[32m"none"[31m
+              [33mheight[31m=[32m"24"[31m
+              [33mstroke[31m=[32m"currentColor"[31m
+              [33mstroke-linecap[31m=[32m"round"[31m
+              [33mstroke-linejoin[31m=[32m"round"[31m
+              [33mstroke-width[31m=[32m"2"[31m
+              [33mviewBox[31m=[32m"0 0 24 24"[31m
+              [33mwidth[31m=[32m"24"[31m
+              [33mxmlns[31m=[32m"http://www.w3.org/2000/svg"[31m
+            [36m>[31m
+              [36m<path[31m
+                [33md[31m=[32m"M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"[31m
+              [36m/>[31m
+              [36m<circle[31m
+                [33mcx[31m=[32m"12"[31m
+                [33mcy[31m=[32m"13"[31m
+                [33mr[31m=[32m"3"[31m
+              [36m/>[31m
+            [36m</svg>[31m
+            [0massets.zone.takePhoto[0m
+          [36m</button>[31m
+        [36m</div>[31m
+        [36m<p[31m
+          [33mclass[31m=[32m"text-xs text-muted-foreground mt-6"[31m
+        [36m>[31m
+          [0massets.smartUploadZone.supports_images_jpeg_png_and_p_2[0m
+          [0m10[0m
+          [0massets.smartUploadZone.files_at_once_3[0m
+        [36m</p>[31m
+        [36m<div[31m
+          [33mclass[31m=[32m"mt-4 inline-flex items-center gap-2 px-3 py-1 bg-green-100 text-green-800 rounded-full text-xs font-medium"[31m
+        [36m>[31m
+          [36m<div[31m
+            [33mclass[31m=[32m"w-2 h-2 bg-green-600 rounded-full"[31m
+          [36m/>[31m
+          [0massets.zone.processingLocally[0m
+        [36m</div>[31m
+      [36m</div>[31m
+    [36m</div>[31m
+  [36m</div>[31m
+[36m</body>[31m
+
+Ignored nodes: comments, script, style
+[36m<html>[31m
+  [36m<head />[31m
+  [36m<body>[31m
+    [36m<div>[31m
+      [36m<div[31m
+        [33mclass[31m=[32m"relative rounded-xl border-2 border-dashed transition-all duration-200 border-gray-300 hover:border-gray-400"[31m
+        [33mdata-testid[31m=[32m"upload-zone"[31m
+      [36m>[31m
+        [36m<input[31m
+          [33maccept[31m=[32m"image/*,application/pdf"[31m
+          [33maria-label[31m=[32m"assets.smartUploadZone.file_upload_1"[31m
+          [33mclass[31m=[32m"hidden"[31m
+          [33mdata-testid[31m=[32m"file-input"[31m
+          [33mmultiple[31m=[32m""[31m
+          [33mtype[31m=[32m"file"[31m
+        [36m/>[31m
+        [36m<div[31m
+          [33mclass[31m=[32m"p-8 sm:p-12 text-center"[31m
+        [36m>[31m
+          [36m<div[31m
+            [33mclass[31m=[32m"mx-auto mb-6 relative"[31m
+          [36m>[31m
+            [36m<div[31m
+              [33mclass[31m=[32m"w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center transition-all"[31m
+            [36m>[31m
+              [36m<svg[31m
+                [33mclass[31m=[32m"lucide lucide-upload h-10 w-10 text-primary transition-all"[31m
+                [33mfill[31m=[32m"none"[31m
+                [33mheight[31m=[32m"24"[31m
+                [33mstroke[31m=[32m"currentColor"[31m
+                [33mstroke-linecap[31m=[32m"round"[31m
+                [33mstroke-linejoin[31m=[32m"round"[31m
+                [33mstroke-width[31m=[32m"2"[31m
+                [33mviewBox[31m=[32m"0 0 24 24"[31m
+                [33mwidth[31m=[32m"24"[31m
+                [33mxmlns[31m=[32m"http://www.w3.org/2000/svg"[31m
+              [36m>[31m
+                [36m<path[31m
+                  [33md[31m=[32m"M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"[31m
+                [36m/>[31m
+                [36m<polyline[31m
+                  [33mpoints[31m=[32m"17 8 12 3 7 8"[31m
+                [36m/>[31m
+                [36m<line[31m
+                  [33mx1[31m=[32m"12"[31m
+                  [33mx2[31m=[32m"12"[31m
+                  [33my1[31m=[32m"3"[31m
+                  [33my2[31m=[32m"15"[31m
+                [36m/>[31m
+              [36m</svg>[31m
+            [36m</div>[31m
+          [36m</div>[31m
+          [36m<h3[31m
+            [33mclass[31m=[32m"text-lg font-semibold mb-2"[31m
+          [36m>[31m
+            [0mcommon:assets.zone.dropHere[0m
+          [36m</h3>[31m
+          [36m<p[31m
+            [33mclass[31m=[32m"text-sm text-muted-foreground mb-6 max-w-sm mx-auto"[31m
+          [36m>[31m
+            [0mcommon:assets.zone.description[0m
+          [36m</p>[31m
+          [36m<div[31m
+            [33mclass[31m=[32m"flex flex-col sm:flex-row gap-3 justify-center"[31m
+          [36m>[31m
+            [36m<button[31m
+              [33mclass[31m=[32m"inline-flex items-center justify-center whitespace-nowrap rounded-lg text-sm font-medium ring-offset-background transition-all duration-150 ease-in-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-primary text-white hover:bg-primary/90 shadow-sm hover:shadow-md dark:bg-dark-primary dark:text-dark-background dark:hover:bg-dark-primary/90 h-10 px-4 py-2 gap-2"[31m
+            [36m>[31m
+              [36m<svg[31m
+                [33mclass[31m=[32m"lucide lucide-file-text h-4 w-4"[31m
+                [33mfill[31m=[32m"none"[31m
+                [33mheight[31m=[32m"24"[31m
+                [33mstroke[31m=[32m"currentColor"[31m
+                [33mstroke-linecap[31m=[32m"round"[31m
+                [33mstroke-linejoin[31m=[32m"round"[31m
+                [33mstroke-width[31m=[32m"2"[31m
+                [33mviewBox[31m=[32m"0 0 24 24"[31m
+                [33mwidth[31m=[32m"24"[31m
+                [33mxmlns[31m=[32m"http://www.w3.org/2000/svg"[31m
+              [36m>[31m
+                [36m<path[31m
+                  [33md[31m=[32m"M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"[31m
+                [36m/>[31m
+                [36m<path[31m
+                  [33md[31m=[32m"M14 2v4a2 2 0 0 0 2 2h4"[31m
+                [36m/>[31m
+                [36m<path[31m
+                  [33md[31m=[32m"M10 9H8"[31m
+                [36m/>[31m
+                [36m<path[31m
+                  [33md[31m=[32m"M16 13H8"[31m
+                [36m/>[31m
+                [36m<path[31m
+                  [33md[31m=[32m"M16 17H8"[31m
+                [36m/>[31m
+              [36m</svg>[31m
+              [0massets.zone.chooseFiles[0m
+            [36m</button>[31m
+            [36m<button[31m
+              [33mclass[31m=[32m"inline-flex items-center justify-center whitespace-nowrap rounded-lg text-sm font-medium ring-offset-background transition-all duration-150 ease-in-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border border-primary bg-transparent text-primary hover:bg-primary hover:text-white shadow-sm dark:border-dark-primary dark:text-dark-primary dark:hover:bg-dark-primary dark:hover:text-dark-background h-10 px-4 py-2 gap-2 sm:hidden"[31m
+            [36m>[31m
+              [36m<svg[31m
+                [33mclass[31m=[32m"lucide lucide-camera h-4 w-4"[31m
+                [33mfill[31m=[32m"none"[31m
+                [33mheight[31m=[32m"24"[31m
+                [33mstroke[31m=[32m"currentColor"[31m
+                [33mstroke-linecap[31m=[32m"round"[31m
+                [33mstroke-linejoin[31m=[32m"round"[31m
+                [33mstroke-width[31m=[32m"2"[31m
+                [33mviewBox[31m=[32m"0 0 24 24"[31m
+                [33mwidth[31m=[32m"24"[31m
+                [33mxmlns[31m=[32m"http://www.w3.org/2000/svg"[31m
+              [36m>[31m
+                [36m<path[31m
+                  [33md[31m=[32m"M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"[31m
+                [36m/>[31m
+                [36m<circle[31m
+                  [33mcx[31m=[32m"12"[31m
+                  [33mcy[31m=[32m"13"[31m
+                  [33mr[31m=[32m"3"[31m
+                [36m/>[31m
+              [36m</svg>[31m
+              [0massets.zone.takePhoto[0m
+            [36m</button>[31m
+          [36m</div>[31m
+          [36m<p[31m
+            [33mclass[31m=[32m"text-xs text-muted-foreground mt-6"[31m
+          [36m>[31m
+            [0massets.smartUploadZone.supports_images_jpeg_png_and_p_2[0m
+            [0m10[0m
+            [0massets.smartUploadZone.files_at_once_3[0m
+          [36m</p>[31m
+          [36m<div[31m
+            [33mclass[31m=[32m"mt-4 inline-flex items-center gap-2 px-3 py-1 bg-green-100 text-green-800 rounded-full text-xs font-medium"[31m
+          [36m>[31m
+            [36m<div[31m
+              [33mclass[31m=[32m"w-2 h-2 bg-green-600 rounded-full"[31m
+            [36m/>[31m
+            [0massets.zone.processingLocally[0m
+          [36m</div>[31m
+        [36m</div>[31m
+      [36m</div>[31m
+    [36m</div>[31m
+  [36m</body>[31m
+[36m</html>[31m[39m
+ [31m×[39m src/components/__tests__/SmartUploadZone.test.tsx[2m > [22mSmartUploadZone[2m > [22mshould show drag overlay when dragging[33m 1018[2mms[22m[39m
+[31m   → Unable to find an element with the text: assets.zone.dropHere. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+[36m<body>[31m
+  [36m<div>[31m
+    [36m<div[31m
+      [33mclass[31m=[32m"relative rounded-xl border-2 border-dashed transition-all duration-200 border-gray-300 hover:border-gray-400"[31m
+      [33mdata-testid[31m=[32m"upload-zone"[31m
+    [36m>[31m
+      [36m<input[31m
+        [33maccept[31m=[32m"image/*,application/pdf"[31m
+        [33maria-label[31m=[32m"assets.smartUploadZone.file_upload_1"[31m
+        [33mclass[31m=[32m"hidden"[31m
+        [33mdata-testid[31m=[32m"file-input"[31m
+        [33mmultiple[31m=[32m""[31m
+        [33mtype[31m=[32m"file"[31m
+      [36m/>[31m
+      [36m<div[31m
+        [33mclass[31m=[32m"p-8 sm:p-12 text-center"[31m
+      [36m>[31m
+        [36m<div[31m
+          [33mclass[31m=[32m"mx-auto mb-6 relative"[31m
+        [36m>[31m
+          [36m<div[31m
+            [33mclass[31m=[32m"w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center transition-all"[31m
+          [36m>[31m
+            [36m<svg[31m
+              [33mclass[31m=[32m"lucide lucide-upload h-10 w-10 text-primary transition-all"[31m
+              [33mfill[31m=[32m"none"[31m
+              [33mheight[31m=[32m"24"[31m
+              [33mstroke[31m=[32m"currentColor"[31m
+              [33mstroke-linecap[31m=[32m"round"[31m
+              [33mstroke-linejoin[31m=[32m"round"[31m
+              [33mstroke-width[31m=[32m"2"[31m
+              [33mviewBox[31m=[32m"0 0 24 24"[31m
+              [33mwidth[31m=[32m"24"[31m
+              [33mxmlns[31m=[32m"http://www.w3.org/2000/svg"[31m
+            [36m>[31m
+              [36m<path[31m
+                [33md[31m=[32m"M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"[31m
+              [36m/>[31m
+              [36m<polyline[31m
+                [33mpoints[31m=[32m"17 8 12 3 7 8"[31m
+              [36m/>[31m
+              [36m<line[31m
+                [33mx1[31m=[32m"12"[31m
+                [33mx2[31m=[32m"12"[31m
+                [33my1[31m=[32m"3"[31m
+                [33my2[31m=[32m"15"[31m
+              [36m/>[31m
+            [36m</svg>[31m
+          [36m</div>[31m
+        [36m</div>[31m
+        [36m<h3[31m
+          [33mclass[31m=[32m"text-lg font-semibold mb-2"[31m
+        [36m>[31m
+          [0mcommon:assets.zone.dropHere[0m
+        [36m</h3>[31m
+        [36m<p[31m
+          [33mclass[31m=[32m"text-sm text-muted-foreground mb-6 max-w-sm mx-auto"[31m
+        [36m>[31m
+          [0mcommon:assets.zone.description[0m
+        [36m</p>[31m
+        [36m<div[31m
+          [33mclass[31m=[32m"flex flex-col sm:flex-row gap-3 justify-center"[31m
+        [36m>[31m
+          [36m<button[31m
+            [33mclass[31m=[32m"inline-flex items-center justify-center whitespace-nowrap rounded-lg text-sm font-medium ring-offset-background transition-all duration-150 ease-in-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-primary text-white hover:bg-primary/90 shadow-sm hover:shadow-md dark:bg-dark-primary dark:text-dark-background dark:hover:bg-dark-primary/90 h-10 px-4 py-2 gap-2"[31m
+          [36m>[31m
+            [36m<svg[31m
+              [33mclass[31m=[32m"lucide lucide-file-text h-4 w-4"[31m
+              [33mfill[31m=[32m"none"[31m
+              [33mheight[31m=[32m"24"[31m
+              [33mstroke[31m=[32m"currentColor"[31m
+              [33mstroke-linecap[31m=[32m"round"[31m
+              [33mstroke-linejoin[31m=[32m"round"[31m
+              [33mstroke-width[31m=[32m"2"[31m
+              [33mviewBox[31m=[32m"0 0 24 24"[31m
+              [33mwidth[31m=[32m"24"[31m
+              [33mxmlns[31m=[32m"http://www.w3.org/2000/svg"[31m
+            [36m>[31m
+              [36m<path[31m
+                [33md[31m=[32m"M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"[31m
+              [36m/>[31m
+              [36m<path[31m
+                [33md[31m=[32m"M14 2v4a2 2 0 0 0 2 2h4"[31m
+              [36m/>[31m
+              [36m<path[31m
+                [33md[31m=[32m"M10 9H8"[31m
+              [36m/>[31m
+              [36m<path[31m
+                [33md[31m=[32m"M16 13H8"[31m
+              [36m/>[31m
+              [36m<path[31m
+                [33md[31m=[32m"M16 17H8"[31m
+              [36m/>[31m
+            [36m</svg>[31m
+            [0massets.zone.chooseFiles[0m
+          [36m</button>[31m
+          [36m<button[31m
+            [33mclass[31m=[32m"inline-flex items-center justify-center whitespace-nowrap rounded-lg text-sm font-medium ring-offset-background transition-all duration-150 ease-in-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border border-primary bg-transparent text-primary hover:bg-primary hover:text-white shadow-sm dark:border-dark-primary dark:text-dark-primary dark:hover:bg-dark-primary dark:hover:text-dark-background h-10 px-4 py-2 gap-2 sm:hidden"[31m
+          [36m>[31m
+            [36m<svg[31m
+              [33mclass[31m=[32m"lucide lucide-camera h-4 w-4"[31m
+              [33mfill[31m=[32m"none"[31m
+              [33mheight[31m=[32m"24"[31m
+              [33mstroke[31m=[32m"currentColor"[31m
+              [33mstroke-linecap[31m=[32m"round"[31m
+              [33mstroke-linejoin[31m=[32m"round"[31m
+              [33mstroke-width[31m=[32m"2"[31m
+              [33mviewBox[31m=[32m"0 0 24 24"[31m
+              [33mwidth[31m=[32m"24"[31m
+              [33mxmlns[31m=[32m"http://www.w3.org/2000/svg"[31m
+            [36m>[31m
+              [36m<path[31m
+                [33md[31m=[32m"M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"[31m
+              [36m/>[31m
+              [36m<circle[31m
+                [33mcx[31m=[32m"12"[31m
+                [33mcy[31m=[32m"13"[31m
+                [33mr[31m=[32m"3"[31m
+              [36m/>[31m
+            [36m</svg>[31m
+            [0massets.zone.takePhoto[0m
+          [36m</button>[31m
+        [36m</div>[31m
+        [36m<p[31m
+          [33mclass[31m=[32m"text-xs text-muted-foreground mt-6"[31m
+        [36m>[31m
+          [0massets.smartUploadZone.supports_images_jpeg_png_and_p_2[0m
+          [0m10[0m
+          [0massets.smartUploadZone.files_at_once_3[0m
+        [36m</p>[31m
+        [36m<div[31m
+          [33mclass[31m=[32m"mt-4 inline-flex items-center gap-2 px-3 py-1 bg-green-100 text-green-800 rounded-full text-xs font-medium"[31m
+        [36m>[31m
+          [36m<div[31m
+            [33mclass[31m=[32m"w-2 h-2 bg-green-600 rounded-full"[31m
+          [36m/>[31m
+          [0massets.zone.processingLocally[0m
+        [36m</div>[31m
+      [36m</div>[31m
+    [36m</div>[31m
+  [36m</div>[31m
+[36m</body>[31m
+
+Ignored nodes: comments, script, style
+[36m<html>[31m
+  [36m<head />[31m
+  [36m<body>[31m
+    [36m<div>[31m
+      [36m<div[31m
+        [33mclass[31m=[32m"relative rounded-xl border-2 border-dashed transition-all duration-200 border-gray-300 hover:border-gray-400"[31m
+        [33mdata-testid[31m=[32m"upload-zone"[31m
+      [36m>[31m
+        [36m<input[31m
+          [33maccept[31m=[32m"image/*,application/pdf"[31m
+          [33maria-label[31m=[32m"assets.smartUploadZone.file_upload_1"[31m
+          [33mclass[31m=[32m"hidden"[31m
+          [33mdata-testid[31m=[32m"file-input"[31m
+          [33mmultiple[31m=[32m""[31m
+          [33mtype[31m=[32m"file"[31m
+        [36m/>[31m
+        [36m<div[31m
+          [33mclass[31m=[32m"p-8 sm:p-12 text-center"[31m
+        [36m>[31m
+          [36m<div[31m
+            [33mclass[31m=[32m"mx-auto mb-6 relative"[31m
+          [36m>[31m
+            [36m<div[31m
+              [33mclass[31m=[32m"w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center transition-all"[31m
+            [36m>[31m
+              [36m<svg[31m
+                [33mclass[31m=[32m"lucide lucide-upload h-10 w-10 text-primary transition-all"[31m
+                [33mfill[31m=[32m"none"[31m
+                [33mheight[31m=[32m"24"[31m
+                [33mstroke[31m=[32m"currentColor"[31m
+                [33mstroke-linecap[31m=[32m"round"[31m
+                [33mstroke-linejoin[31m=[32m"round"[31m
+                [33mstroke-width[31m=[32m"2"[31m
+                [33mviewBox[31m=[32m"0 0 24 24"[31m
+                [33mwidth[31m=[32m"24"[31m
+                [33mxmlns[31m=[32m"http://www.w3.org/2000/svg"[31m
+              [36m>[31m
+                [36m<path[31m
+                  [33md[31m=[32m"M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"[31m
+                [36m/>[31m
+                [36m<polyline[31m
+                  [33mpoints[31m=[32m"17 8 12 3 7 8"[31m
+                [36m/>[31m
+                [36m<line[31m
+                  [33mx1[31m=[32m"12"[31m
+                  [33mx2[31m=[32m"12"[31m
+                  [33my1[31m=[32m"3"[31m
+                  [33my2[31m=[32m"15"[31m
+                [36m/>[31m
+              [36m</svg>[31m
+            [36m</div>[31m
+          [36m</div>[31m
+          [36m<h3[31m
+            [33mclass[31m=[32m"text-lg font-semibold mb-2"[31m
+          [36m>[31m
+            [0mcommon:assets.zone.dropHere[0m
+          [36m</h3>[31m
+          [36m<p[31m
+            [33mclass[31m=[32m"text-sm text-muted-foreground mb-6 max-w-sm mx-auto"[31m
+          [36m>[31m
+            [0mcommon:assets.zone.description[0m
+          [36m</p>[31m
+          [36m<div[31m
+            [33mclass[31m=[32m"flex flex-col sm:flex-row gap-3 justify-center"[31m
+          [36m>[31m
+            [36m<button[31m
+              [33mclass[31m=[32m"inline-flex items-center justify-center whitespace-nowrap rounded-lg text-sm font-medium ring-offset-background transition-all duration-150 ease-in-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 bg-primary text-white hover:bg-primary/90 shadow-sm hover:shadow-md dark:bg-dark-primary dark:text-dark-background dark:hover:bg-dark-primary/90 h-10 px-4 py-2 gap-2"[31m
+            [36m>[31m
+              [36m<svg[31m
+                [33mclass[31m=[32m"lucide lucide-file-text h-4 w-4"[31m
+                [33mfill[31m=[32m"none"[31m
+                [33mheight[31m=[32m"24"[31m
+                [33mstroke[31m=[32m"currentColor"[31m
+                [33mstroke-linecap[31m=[32m"round"[31m
+                [33mstroke-linejoin[31m=[32m"round"[31m
+                [33mstroke-width[31m=[32m"2"[31m
+                [33mviewBox[31m=[32m"0 0 24 24"[31m
+                [33mwidth[31m=[32m"24"[31m
+                [33mxmlns[31m=[32m"http://www.w3.org/2000/svg"[31m
+              [36m>[31m
+                [36m<path[31m
+                  [33md[31m=[32m"M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"[31m
+                [36m/>[31m
+                [36m<path[31m
+                  [33md[31m=[32m"M14 2v4a2 2 0 0 0 2 2h4"[31m
+                [36m/>[31m
+                [36m<path[31m
+                  [33md[31m=[32m"M10 9H8"[31m
+                [36m/>[31m
+                [36m<path[31m
+                  [33md[31m=[32m"M16 13H8"[31m
+                [36m/>[31m
+                [36m<path[31m
+                  [33md[31m=[32m"M16 17H8"[31m
+                [36m/>[31m
+              [36m</svg>[31m
+              [0massets.zone.chooseFiles[0m
+            [36m</button>[31m
+            [36m<button[31m
+              [33mclass[31m=[32m"inline-flex items-center justify-center whitespace-nowrap rounded-lg text-sm font-medium ring-offset-background transition-all duration-150 ease-in-out focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border border-primary bg-transparent text-primary hover:bg-primary hover:text-white shadow-sm dark:border-dark-primary dark:text-dark-primary dark:hover:bg-dark-primary dark:hover:text-dark-background h-10 px-4 py-2 gap-2 sm:hidden"[31m
+            [36m>[31m
+              [36m<svg[31m
+                [33mclass[31m=[32m"lucide lucide-camera h-4 w-4"[31m
+                [33mfill[31m=[32m"none"[31m
+                [33mheight[31m=[32m"24"[31m
+                [33mstroke[31m=[32m"currentColor"[31m
+                [33mstroke-linecap[31m=[32m"round"[31m
+                [33mstroke-linejoin[31m=[32m"round"[31m
+                [33mstroke-width[31m=[32m"2"[31m
+                [33mviewBox[31m=[32m"0 0 24 24"[31m
+                [33mwidth[31m=[32m"24"[31m
+                [33mxmlns[31m=[32m"http://www.w3.org/2000/svg"[31m
+              [36m>[31m
+                [36m<path[31m
+                  [33md[31m=[32m"M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"[31m
+                [36m/>[31m
+                [36m<circle[31m
+                  [33mcx[31m=[32m"12"[31m
+                  [33mcy[31m=[32m"13"[31m
+                  [33mr[31m=[32m"3"[31m
+                [36m/>[31m
+              [36m</svg>[31m
+              [0massets.zone.takePhoto[0m
+            [36m</button>[31m
+          [36m</div>[31m
+          [36m<p[31m
+            [33mclass[31m=[32m"text-xs text-muted-foreground mt-6"[31m
+          [36m>[31m
+            [0massets.smartUploadZone.supports_images_jpeg_png_and_p_2[0m
+            [0m10[0m
+            [0massets.smartUploadZone.files_at_once_3[0m
+          [36m</p>[31m
+          [36m<div[31m
+            [33mclass[31m=[32m"mt-4 inline-flex items-center gap-2 px-3 py-1 bg-green-100 text-green-800 rounded-full text-xs font-medium"[31m
+          [36m>[31m
+            [36m<div[31m
+              [33mclass[31m=[32m"w-2 h-2 bg-green-600 rounded-full"[31m
+            [36m/>[31m
+            [0massets.zone.processingLocally[0m
+          [36m</div>[31m
+        [36m</div>[31m
+      [36m</div>[31m
+    [36m</div>[31m
+  [36m</body>[31m
+[36m</html>[31m[39m
+ [32m✓[39m src/components/__tests__/SmartUploadZone.test.tsx[2m > [22mSmartUploadZone[2m > [22mshould handle camera button click[32m 69[2mms[22m[39m
+ [32m✓[39m src/components/__tests__/SmartUploadZone.test.tsx[2m > [22mSmartUploadZone[2m > [22mshould apply custom className[32m 3[2mms[22m[39m
+ [32m✓[39m src/components/__tests__/SmartUploadZone.test.tsx[2m > [22mSmartUploadZone[2m > [22mshould handle file input change with no files[32m 3[2mms[22m[39m
+ [32m✓[39m src/components/__tests__/SmartUploadZone.test.tsx[2m > [22mSmartUploadZone[2m > [22mshould handle file input change with null files[32m 3[2mms[22m[39m
+
+[2m Test Files [22m [1m[31m3 failed[39m[22m[2m | [22m[1m[32m21 passed[39m[22m[90m (24)[39m
+[2m      Tests [22m [1m[31m14 failed[39m[22m[2m | [22m[1m[32m314 passed[39m[22m[90m (328)[39m
+[2m   Start at [22m 16:37:59
+[2m   Duration [22m 7.52s[2m (transform 1.51s, setup 2.25s, collect 4.50s, tests 10.47s, environment 11.81s, prepare 1.95s)[22m
+
