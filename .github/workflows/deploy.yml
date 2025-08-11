@@ -146,7 +146,11 @@ jobs:
           text: 'Production deployment completed'
           webhook_url: ${{ secrets.SLACK_WEBHOOK_URL }}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         if: always()
+=======
+        if: always() && secrets.SLACK_WEBHOOK_URL != ''
+>>>>>>> Stashed changes
 =======
         if: always() && secrets.SLACK_WEBHOOK_URL != ''
 >>>>>>> Stashed changes
