@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
-import type {
+import {
   BarChart3,
   FileText,
   Users,
