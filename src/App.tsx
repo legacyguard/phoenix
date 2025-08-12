@@ -31,72 +31,69 @@ const PageLoader = () => (
   </div>
 );
 
-// Lazy load all page components
-const Landing = React.lazy(() => import("./pages/Landing"));
-const Login = React.lazy(() => import("./pages/Login"));
-const Register = React.lazy(() => import("./pages/Register"));
-const Dashboard = React.lazy(
-  () => import("./features/dashboard/components/Dashboard"),
+// Optimized lazy loading with grouped components for better performance
+// Group 1: Marketing/Public pages (loaded together for better UX)
+const MarketingPages = React.lazy(() =>
+  import("./pages").then((m) => ({
+    Landing: m.Landing,
+    Login: m.Login,
+    Register: m.Register,
+    TermsOfService: m.TermsOfService,
+    RefundPolicy: m.RefundPolicy,
+    PrivacyPolicy: m.PrivacyPolicy,
+    CookiePolicy: m.CookiePolicy,
+    Pricing: m.Pricing,
+  }))
 );
-const TermsOfService = React.lazy(() => import("./pages/TermsOfService"));
-const RefundPolicy = React.lazy(() => import("./pages/RefundPolicy"));
-const AssetDetail = React.lazy(() =>
-  import("./features/assets-vault/components/AssetDetail").then((m) => ({
-    default: m.AssetDetail,
-  })),
+
+// Group 2: Core dashboard and main app features
+const CoreAppFeatures = React.lazy(() =>
+  import("./features").then((m) => ({
+    Dashboard: m.dashboard?.components?.Dashboard,
+    AssetOverview: m.assetsVault?.components?.AssetOverview,
+    AssetDetail: m.assetsVault?.components?.AssetDetail,
+    Vault: m.assetsVault?.components?.VaultDashboard?.Vault,
+    SubscriptionDashboard: m.subscriptions?.components?.SubscriptionDashboard,
+    TrustedCircle: m.familyCircle?.components?.TrustedCircle,
+    FamilyHub: m.familyCircle?.components?.FamilyHub,
+  }))
 );
-const Manual = React.lazy(() =>
-  import("./pages/Manual").then((m) => ({ default: m.Manual })),
+
+// Group 3: Will and legal features
+const LegalFeatures = React.lazy(() =>
+  import("./features/will-generator").then((m) => ({
+    Will: m.WillGenerator,
+  }))
 );
-const Will = React.lazy(() =>
-  import("./features/will-generator/components/WillGenerator").then((m) => ({
-    default: m.default,
-  })),
+
+// Group 4: Utility and demo pages (development only)
+const UtilityPages = React.lazy(() =>
+  import("./pages").then((m) => ({
+    Manual: m.Manual,
+    Help: m.Help,
+    NotFound: m.NotFound,
+    Analytics: m.Analytics,
+    AdminAnalytics: m.admin?.Analytics,
+    OCRDemo: m.OCRDemo,
+    UploadDemo: m.UploadDemo,
+    TestError: m.TestError,
+  }))
 );
-const InviteAcceptance = React.lazy(() =>
-  import("./pages/InviteAcceptance").then((m) => ({
-    default: m.InviteAcceptance,
-  })),
+
+// Group 5: Guardian and invitation features
+const GuardianFeatures = React.lazy(() =>
+  import("./pages").then((m) => ({
+    GuardianView: m.GuardianView,
+    InviteAcceptance: m.InviteAcceptance,
+  }))
 );
-const GuardianView = React.lazy(() =>
-  import("@/pages/GuardianView").then((m) => ({ default: m.GuardianView })),
+
+// Group 6: Legacy and family features
+const LegacyFeatures = React.lazy(() =>
+  import("./pages").then((m) => ({
+    LegacyLetters: m.LegacyLetters,
+  }))
 );
-const TestError = React.lazy(() => import("@/pages/TestError"));
-const PrivacyPolicy = React.lazy(() => import("./pages/PrivacyPolicy"));
-const CookiePolicy = React.lazy(() => import("./pages/CookiePolicy"));
-const NotFound = React.lazy(() => import("./pages/NotFound"));
-const Help = React.lazy(() => import("./pages/Help"));
-const AssetOverview = React.lazy(() =>
-  import("./features/assets-vault/components/AssetOverview").then((m) => ({
-    default: m.AssetOverview,
-  })),
-);
-const SubscriptionDashboard = React.lazy(() =>
-  import("./features/subscriptions/components/SubscriptionDashboard").then(
-    (m) => ({ default: m.SubscriptionDashboard }),
-  ),
-);
-const OCRDemo = React.lazy(() =>
-  import("./pages/OCRDemo").then((m) => ({ default: m.OCRDemo })),
-);
-const UploadDemo = React.lazy(() =>
-  import("./pages/UploadDemo").then((m) => ({ default: m.UploadDemo })),
-);
-const Analytics = React.lazy(() => import("./pages/Analytics"));
-const AdminAnalytics = React.lazy(() => import("./pages/admin/Analytics"));
-const Vault = React.lazy(() =>
-  import("./features/assets-vault/components/VaultDashboard").then((m) => ({
-    default: m.Vault,
-  })),
-);
-const TrustedCircle = React.lazy(
-  () => import("./features/family-circle/components/TrustedCircle"),
-);
-const FamilyHub = React.lazy(
-  () => import("./features/family-circle/components/FamilyHub"),
-);
-const LegacyLetters = React.lazy(() => import("./pages/LegacyLetters"));
-const Pricing = React.lazy(() => import("./pages/Pricing"));
 
 // Create the QueryClient outside of the component to avoid the hook issue
 const queryClient = new QueryClient({
@@ -163,7 +160,7 @@ const AppContent = () => {
                     element={
                       <MarketingLayout>
                         <AuthenticatedRedirect>
-                          <Landing />
+                          <MarketingPages.Landing />
                         </AuthenticatedRedirect>
                       </MarketingLayout>
                     }
@@ -172,7 +169,7 @@ const AppContent = () => {
                     path="/login"
                     element={
                       <MarketingLayout>
-                        <Login />
+                        <MarketingPages.Login />
                       </MarketingLayout>
                     }
                   />
@@ -180,7 +177,7 @@ const AppContent = () => {
                     path="/register"
                     element={
                       <MarketingLayout>
-                        <Register />
+                        <MarketingPages.Register />
                       </MarketingLayout>
                     }
                   />
@@ -188,7 +185,7 @@ const AppContent = () => {
                     path="/privacy-policy"
                     element={
                       <MarketingLayout>
-                        <PrivacyPolicy />
+                        <MarketingPages.PrivacyPolicy />
                       </MarketingLayout>
                     }
                   />
@@ -196,7 +193,7 @@ const AppContent = () => {
                     path="/cookies"
                     element={
                       <MarketingLayout>
-                        <CookiePolicy />
+                        <MarketingPages.CookiePolicy />
                       </MarketingLayout>
                     }
                   />
@@ -204,7 +201,7 @@ const AppContent = () => {
                     path="/terms-of-service"
                     element={
                       <MarketingLayout>
-                        <TermsOfService />
+                        <MarketingPages.TermsOfService />
                       </MarketingLayout>
                     }
                   />
@@ -212,7 +209,7 @@ const AppContent = () => {
                     path="/refund-policy"
                     element={
                       <MarketingLayout>
-                        <RefundPolicy />
+                        <MarketingPages.RefundPolicy />
                       </MarketingLayout>
                     }
                   />
@@ -220,7 +217,7 @@ const AppContent = () => {
                     path="/pricing"
                     element={
                       <MarketingLayout>
-                        <Pricing />
+                        <MarketingPages.Pricing />
                       </MarketingLayout>
                     }
                   />
@@ -234,7 +231,7 @@ const AppContent = () => {
                       </SignedIn>
                     }
                   >
-                    <Route index element={<Dashboard />} />
+                    <Route index element={<CoreAppFeatures.Dashboard />} />
                   </Route>
                   <Route
                     path="/assets"
@@ -244,8 +241,8 @@ const AppContent = () => {
                       </SignedIn>
                     }
                   >
-                    <Route index element={<AssetOverview />} />
-                    <Route path=":assetId" element={<AssetDetail />} />
+                    <Route index element={<CoreAppFeatures.AssetOverview />} />
+                    <Route path=":assetId" element={<CoreAppFeatures.AssetDetail />} />
                   </Route>
                   <Route
                     path="/subscriptions"
@@ -255,7 +252,7 @@ const AppContent = () => {
                       </SignedIn>
                     }
                   >
-                    <Route index element={<SubscriptionDashboard />} />
+                    <Route index element={<CoreAppFeatures.SubscriptionDashboard />} />
                   </Route>
                   <Route
                     path="/manual"
@@ -265,7 +262,7 @@ const AppContent = () => {
                       </SignedIn>
                     }
                   >
-                    <Route index element={<Manual />} />
+                    <Route index element={<UtilityPages.Manual />} />
                   </Route>
                   <Route
                     path="/will"
@@ -275,7 +272,7 @@ const AppContent = () => {
                       </SignedIn>
                     }
                   >
-                    <Route index element={<Will />} />
+                    <Route index element={<LegalFeatures.Will />} />
                   </Route>
                   <Route
                     path="/vault"
@@ -285,7 +282,7 @@ const AppContent = () => {
                       </SignedIn>
                     }
                   >
-                    <Route index element={<Vault />} />
+                    <Route index element={<CoreAppFeatures.Vault />} />
                   </Route>
                   <Route
                     path="/trusted-circle"
@@ -295,7 +292,7 @@ const AppContent = () => {
                       </SignedIn>
                     }
                   >
-                    <Route index element={<TrustedCircle />} />
+                    <Route index element={<CoreAppFeatures.TrustedCircle />} />
                   </Route>
                   <Route
                     path="/user-profile"
@@ -322,7 +319,7 @@ const AppContent = () => {
                       </SignedIn>
                     }
                   >
-                    <Route index element={<Help />} />
+                    <Route index element={<UtilityPages.Help />} />
                   </Route>
 
                   {/* Family Hub */}
@@ -334,7 +331,7 @@ const AppContent = () => {
                       </SignedIn>
                     }
                   >
-                    <Route index element={<FamilyHub />} />
+                    <Route index element={<CoreAppFeatures.FamilyHub />} />
                   </Route>
 
                   {/* Legacy Letters */}
@@ -346,7 +343,7 @@ const AppContent = () => {
                       </SignedIn>
                     }
                   >
-                    <Route index element={<LegacyLetters />} />
+                    <Route index element={<LegacyFeatures.LegacyLetters />} />
                   </Route>
 
                   {/* Demo routes - only in development */}
@@ -360,7 +357,7 @@ const AppContent = () => {
                           </SignedIn>
                         }
                       >
-                        <Route index element={<TestError />} />
+                        <Route index element={<UtilityPages.TestError />} />
                       </Route>
 
                       <Route
@@ -371,7 +368,7 @@ const AppContent = () => {
                           </SignedIn>
                         }
                       >
-                        <Route index element={<OCRDemo />} />
+                        <Route index element={<UtilityPages.OCRDemo />} />
                       </Route>
                       <Route
                         path="/upload-demo"
@@ -381,7 +378,7 @@ const AppContent = () => {
                           </SignedIn>
                         }
                       >
-                        <Route index element={<UploadDemo />} />
+                        <Route index element={<UtilityPages.UploadDemo />} />
                       </Route>
                     </>
                   )}
@@ -393,7 +390,7 @@ const AppContent = () => {
                       </SignedIn>
                     }
                   >
-                    <Route index element={<Analytics />} />
+                    <Route index element={<UtilityPages.Analytics />} />
                   </Route>
 
                   {/* Admin routes */}
@@ -405,7 +402,7 @@ const AppContent = () => {
                       </AdminRoute>
                     }
                   >
-                    <Route index element={<AdminAnalytics />} />
+                    <Route index element={<UtilityPages.AdminAnalytics />} />
                   </Route>
 
                   {/* Guardian routes */}
@@ -413,7 +410,7 @@ const AppContent = () => {
                     path="/invite/:inviteToken"
                     element={
                       <MarketingLayout>
-                        <InviteAcceptance />
+                        <GuardianFeatures.InviteAcceptance />
                       </MarketingLayout>
                     }
                   />
@@ -425,7 +422,7 @@ const AppContent = () => {
                       </SignedIn>
                     }
                   >
-                    <Route index element={<GuardianView />} />
+                    <Route index element={<GuardianFeatures.GuardianView />} />
                   </Route>
 
                   {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
@@ -433,7 +430,7 @@ const AppContent = () => {
                     path="*"
                     element={
                       <MarketingLayout>
-                        <NotFound />
+                        <UtilityPages.NotFound />
                       </MarketingLayout>
                     }
                   />

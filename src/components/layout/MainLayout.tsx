@@ -8,6 +8,7 @@ import { useAuthLogging } from "@/hooks/useAuthLogging";
 import { PWAInstallBanner } from "@/components/PWAInstallBanner";
 import { usePWA } from "@/hooks/usePWA";
 import { useAuth } from "@/hooks/useAuth";
+import RouteTap from '@/test/RouteTap';
 
 export const MainLayout: React.FC = () => {
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
@@ -44,7 +45,7 @@ export const MainLayout: React.FC = () => {
           )}
         >
           <div className="container mx-auto p-6">
-            <Outlet />
+            <RouteTap />
           </div>
         </main>
       </div>
@@ -53,7 +54,7 @@ export const MainLayout: React.FC = () => {
       <div className="md:hidden">
         <main className="pt-16 pb-16">
           <div className="container mx-auto p-4">
-            <Outlet />
+            <RouteTap />
           </div>
         </main>
         <MobileNav />
