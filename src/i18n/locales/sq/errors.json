@@ -1,1 +1,195 @@
+<<<<<<< Updated upstream
 {}
+=======
+{
+  "general": {
+    "networkError": "Problem me lidhjen e rrjetit. Kontrolloni lidhjen tuaj të internetit.",
+    "serverError": "Po përjetojmë vështirësi teknike. Ju lutemi provoni përsëri së shpejti.",
+    "timeoutError": "Kërkesa skadoi. Ju lutemi provoni përsëri.",
+    "maintenanceMode": "Aktualisht po kryejmë mirëmbajtje. Ju lutemi provoni përsëri pas disa minutash.",
+    "something_wrong": "Diçka nuk funksionoi tamam siç duhet, por mos u shqetëso - informacioni yt i rëndësishëm është i sigurt.",
+    "try_again": "Më lejo ta provoj përsëri për ty",
+    "contact_support": "Jam këtu për t'ju ndihmuar nëse keni nevojë për ndihmë",
+    "no_data_lost": "Lajmi i mirë është se asgjë mbi të cilën keni punuar nuk është humbur",
+    "temporary_issue": "Ky duket të jetë një problem i përkohshëm që duhet të zgjidhet shpejt"
+  },
+  "authentication": {
+    "sessionExpired": "Sesioni juaj ka skaduar. Ju lutemi, identifikohuni përsëri.",
+    "invalidCredentials": "Email ose fjalëkalim i pavlefshëm. Ju lutemi provoni përsëri.",
+    "accountLocked": "Llogaria juaj është bllokuar përkohësisht për arsye sigurie.",
+    "accountDisabled": "Llogaria juaj është çaktivizuar. Ju lutemi të kontaktoni mbështetjen.",
+    "emailNotVerified": "Ju lutemi verifikoni adresën tuaj të email-it përpara se të vazhdoni.",
+    "passwordResetRequired": "Kërkohet rivendosja e fjalëkalimit. Ju lutemi kontrolloni email-in tuaj."
+  },
+  "authorization": {
+    "accessDenied": "Ju nuk keni leje për të aksesuar këtë informacion.",
+    "insufficientPermissions": "Nuk keni leje të mjaftueshme për këtë veprim.",
+    "subscriptionRequired": "Kjo veçori kërkon një abonim aktiv.",
+    "upgradeRequired": "Ju lutemi përmirësoni planin tuaj për të pasur akses në këtë veçori."
+  },
+  "validation": {
+    "invalidEmail": "Ju lutemi shkruani një adresë të vlefshme email-i.",
+    "invalidPhone": "Ju lutemi futni një numër telefoni të vlefshëm.",
+    "invalidFormat": "Format i pavlefshëm. Ju lutemi kontrolloni të dhënat tuaja.",
+    "passwordTooWeak": "Fjalëkalimi duhet të jetë të paktën 8 karaktere me shkronja të mëdha, të vogla dhe numra.",
+    "passwordMismatch": "Fjalëkalimet nuk përputhen.",
+    "fileTooLarge": "Madhësia e skedarit tejkalon limitin maksimal prej {{size}}MB.",
+    "unsupportedFileType": "Ky lloj skedari nuk mbështetet.",
+    "required_field": "Familja juaj do të ketë nevojë për këtë informacion - a mund të më ndihmoni ta plotësoj këtë?",
+    "invalid_email": "Ajo adresë email-i nuk duket tamam e saktë. A mund ta verifikosh dy herë për mua?",
+    "invalid_phone": "Po has probleme me atë format të numrit të telefonit. A mund të provosh ta fusësh ndryshe?",
+    "invalid_date": "Ai format date nuk funksionon për mua. A mund të provosh MM/DD/YYYY?",
+    "password_weak": "Le ta bëjmë fjalëkalimin tënd pak më të fortë për ta mbajtur informacionin e familjes sate më të sigurt.",
+    "file_too_large": "Ai skedar është paksa shumë i madh për ta trajtuar. A mund të provosh një version më të vogël?",
+    "unsupported_file": "Nuk mund të punoj me atë lloj skedari. A mund të provosh një PDF ose një imazh në vend të tij?",
+    "errors": {
+      "assetNameRequired": "Emri i Asetit të Gabimeve i Kërkohet",
+      "assetTypeRequired": "Gabimet Lloji i Asetit të Kërkuar",
+      "nameMinLength": "Emri i gabimeve Gjatësia Min",
+      "allocationRequired": "Alokimi i gabimeve i detyrueshëm",
+      "allocationMustBeNumber": "Alokimi i gabimeve duhet të jetë numër",
+      "allocationRange": "Diapazoni i ndarjes së gabimeve",
+      "requiredField": "Gabime të kërkuara Fusha",
+      "mustBeNumber": "Gabimet duhet të jenë me numër",
+      "countryRequired": "Vendi i gabimeve I detyrueshëm",
+      "countryCodeLength": "Kodi i vendit të gabimeve Gjatësia",
+      "valueMustBeNumber": "Vlera e gabimeve duhet të jetë numër",
+      "valueMustBePositive": "Vlera e gabimeve duhet të jetë pozitive",
+      "currencyCodeLength": "Kodi i monedhës së gabimeve Gjatësia",
+      "beneficiaryNameRequired": "Gabime Emri i përfituesit i detyrueshëm",
+      "invalidEmail": "Gabime, email i pavlefshëm",
+      "invalidPhone": "Gabime Telefoni i pavlefshëm",
+      "documentNameRequired": "Dokumenti i gabimeve Emri i kërkuar",
+      "documentTypeRequired": "Lloji i dokumentit të gabimeve i kërkuar",
+      "expirationDateFuture": "Gabimet Data e skadimit E ardhmja",
+      "relationshipRequired": "Marrëdhënia e gabimeve e detyrueshme",
+      "unknownError": "Gabime të panjohura Gabim",
+      "dataNotFound": "Të dhënat e gabimeve nuk u gjetën",
+      "connectionError": "Gabime Gabim lidhjeje",
+      "permissionDenied": "Leja për gabime u mohua",
+      "duplicateRecord": "Gabimet e regjistrimit të dyfishtë"
+    },
+    "nameRequired": "Emri i validimit i detyrueshëm",
+    "nameMinLength": "Emri i validimit Gjatësia minimale",
+    "jurisdictionRequired": "Juridiksioni i validimit i kërkuar",
+    "dobRequired": "Data e validimit kërkohet",
+    "addressRequired": "Adresa e validimit e detyrueshme",
+    "allocationError": "Gabim në ndarjen e validimit",
+    "beneficiaryRequired": "Përfituesi i validimit i kërkuar",
+    "executorRequired": "Ekzekutuesi i validimit kërkohet"
+  },
+  "data": {
+    "loadingFailed": "Ngarkimi i të dhënave dështoi. Ju lutemi rifreskoni faqen.",
+    "savingFailed": "Ruajtja e ndryshimeve dështoi. Ju lutemi provoni përsëri.",
+    "deletingFailed": "Fshirja e artikullit dështoi. Ju lutemi provoni përsëri.",
+    "uploadFailed": "Ngarkimi i skedarit dështoi. Ju lutemi provoni përsëri.",
+    "exportFailed": "Eksportimi i të dhënave dështoi. Ju lutemi provoni përsëri më vonë.",
+    "importFailed": "Importimi i të dhënave dështoi. Ju lutemi kontrolloni formatin e skedarit.",
+    "syncFailed": "Sinkronizimi dështoi. Disa ndryshime mund të mos ruhen."
+  },
+  "payment": {
+    "paymentFailed": "Përpunimi i pagesës dështoi. Ju lutemi kontrolloni metodën tuaj të pagesës.",
+    "cardDeclined": "Karta juaj u refuzua. Ju lutemi provoni një metodë tjetër pagese.",
+    "insufficientFunds": "Fondet e pamjaftueshme. Ju lutemi kontrolloni bilancin e llogarisë suaj.",
+    "expiredCard": "Karta juaj ka skaduar. Ju lutemi përditësoni informacionin tuaj të pagesës.",
+    "invalidCard": "Informacion i pavlefshëm i kartës. Ju lutemi kontrolloni të dhënat tuaja.",
+    "paymentTimeout": "Përpunimi i pagesës skadoi. Ju lutemi provoni përsëri."
+  },
+  "actions": {
+    "tryAgain": "Provo përsëri",
+    "signInAgain": "Hyr përsëri",
+    "updatePayment": "Përditëso Pagesën",
+    "upgradeAccount": "Përmirëso llogarinë"
+  },
+  "debug": {
+    "i18nDebug": {
+      "current_lang_resources_7": "Burimet aktuale të gjuhës 7",
+      "has_resources_6": "Ka burime 6",
+      "i18n_debug_info_1": "Informacion mbi debugimin I18n 1",
+      "resolved_language_3": "Gjuhë e zgjidhur 3",
+      "test_translation_5": "Përkthim testi 5"
+    }
+  },
+  "test": {
+    "environment": {
+      "description": "Përshkrimi",
+      "title": "Titulli"
+    }
+  },
+  "notfound": {
+    "title": "Faqja nuk u gjet",
+    "description": "Faqja që po kërkoni nuk ekziston ose është zhvendosur.",
+    "goHome": "Shko në shtëpi",
+    "goBack": "Kthehu prapa"
+  },
+  "network": {
+    "connection_lost": "Me sa duket lidhja juaj e internetit është ndërprerë. Puna juaj është ruajtur dhe ne do të rilidhemi automatikisht.",
+    "slow_connection": "Lidhja juaj duket pak e ngadaltë sot. Do të pres me durim ndërsa gjërat ngarkohen.",
+    "server_busy": "Serverat tanë janë pak të zënë tani, por do të përpiqem të të ndihmoj.",
+    "timeout": "Kjo zgjati më shumë se sa pritej. Më lejoni të provoj një qasje tjetër."
+  },
+  "contextual": {
+    "assets": {
+      "save_failed": "Nuk munda ta ruaj informacionin e atij aseti tani, por do të vazhdoj të përpiqem. Informacioni i familjes suaj është i rëndësishëm për mua.",
+      "load_failed": "Po has probleme me ngarkimin e aseteve të tua tani. Më lejo të provoj përsëri pas pak.",
+      "delete_failed": "Nuk munda ta heq atë artikull tani. Dëshironi që ta provoj përsëri?"
+    },
+    "documents": {
+      "upload_failed": "Ai dokument nuk u ngarkua siç duhet. Mos u shqetëso - do të të ndihmoj të provosh përsëri.",
+      "processing_failed": "Pata probleme me përpunimin e atij dokumenti. Skedari është i sigurt dhe do të provoj përsëri.",
+      "access_failed": "Nuk mund ta hap atë dokument tani. Më lejoni të shoh se çfarë mund të bëj për të ndihmuar."
+    },
+    "family": {
+      "save_failed": "Nuk munda ta ruaj informacionin e atij personi tani. Më lejoni të provoj përsëri - rrethi juaj i besuar është i rëndësishëm.",
+      "invite_failed": "Nuk munda ta dërgoja atë ftesë tani. Do të të ndihmoj të provosh përsëri kur të jesh gati.",
+      "access_failed": "Kam probleme me cilësimet e aksesit familjar. Më lejo të punoj për këtë për ty."
+    },
+    "will": {
+      "generation_failed": "Nuk munda ta krijoj testamentin tënd tani. Mos u shqetëso - të gjitha vendimet e tua janë ruajtur dhe do të provoj përsëri.",
+      "save_failed": "Nuk munda t'i ruaja ato ndryshime të testamentit tani. Versioni yt i mëparshëm është i sigurt dhe do të vazhdoj të përpiqem.",
+      "legal_check_failed": "Nuk munda t'i verifikoj kërkesat ligjore tani. Më lejoni të provoj përsëri, ose mund të kërkojmë ndihmë nga ekipi ynë ligjor."
+    }
+  },
+  "emotional_support": {
+    "frustration": "E di që kjo është zhgënjyese kur përpiqesh të bësh diçka të rëndësishme për familjen tënde. Jam këtu për t'ju ndihmuar që kjo të funksionojë.",
+    "time_pressure": "E kuptoj që nuk ke shumë kohë për probleme teknike. Më lejo ta trajtoj shpejt këtë për ty.",
+    "overwhelm": "Çështjet teknike mund të duken të tepërta kur tashmë po merresh me planifikim të rëndësishëm familjar. Merr frymë thellë - e kuptova.",
+    "discouragement": "Mos e lejo këtë pengesë teknike të të dekurajojë. Ajo që po bën për familjen tënde është shumë e rëndësishme për t'u hequr dorë prej saj."
+  },
+  "solutions": {
+    "refresh_page": "Ndonjëherë rifreskimi i faqes ndihmon. Puna juaj ruhet, kështu që nuk do të humbisni asgjë.",
+    "try_different_browser": "Nëse kjo vazhdon të ndodhë, provo të përdorësh një shfletues tjetër. Chrome ose Firefox zakonisht funksionojnë më mirë.",
+    "check_internet": "A mund ta kontrollosh lidhjen tënde të internetit? Ndonjëherë mjafton vetëm kaq.",
+    "contact_support": "Do të doja shumë t'ju ndihmoja personalisht. Mund të kontaktoni ekipin tonë të mbështetjes, i cili do të kujdeset shumë për ju.",
+    "try_later": "Nëse je me nxitim, mund ta provosh përsëri më vonë. Çdo gjë që ke bërë është ruajtur në mënyrë të sigurt.",
+    "alternative_approach": "Më lejoni të sugjeroj një mënyrë tjetër për ta bërë këtë që mund të funksionojë më mirë."
+  },
+  "recovery": {
+    "auto_save_worked": "Lajmi i mirë është se gjithçka që keni futur është ruajtur automatikisht.",
+    "backup_available": "Kam një kopje rezervë të punës tënde nga disa minuta më parë nëse të nevojitet.",
+    "progress_preserved": "I gjithë progresi juaj ruhet - nuk do të keni nevojë të filloni nga e para.",
+    "data_secure": "Informacioni i familjes suaj mbetet plotësisht i sigurt pavarësisht këtij problemi teknik."
+  },
+  "errors": {
+    "notAuthenticated": "Gabime të paautorizuara",
+    "generic": "Gabime të përgjithshme",
+    "savingSettings": "Gabime gjatë ruajtjes së Cilësimeve",
+    "loadingSettings": "Gabime gjatë ngarkimit të Cilësimeve",
+    "networkError": "Gabimet e rrjetit Gabim",
+    "permissionDenied": "Leja për gabime u mohua",
+    "dataNotFound": "Të dhënat e gabimeve nuk u gjetën",
+    "unknown": "Gabime të panjohura",
+    "uploadFailed": "Gabimet e ngarkimit dështuan",
+    "accessDenied": "Gabime, qasja u mohua",
+    "reassurance": {
+      "data_safe": "Siguria e të dhënave",
+      "try_again": "Siguri, provo përsëri"
+    },
+    "loadingAssets": "Gabime gjatë ngarkimit të aseteve",
+    "failedToFetchStatus": "Gabimet dështuan në marrjen e statusit",
+    "validationFailed": "Validimi i gabimeve dështoi",
+    "generationFailed": "Gjenerimi i gabimeve dështoi",
+    "duplicateRecord": "Gabimet e regjistrimit të dyfishtë"
+  }
+}
+>>>>>>> Stashed changes

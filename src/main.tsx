@@ -18,29 +18,29 @@ if (!PUBLISHABLE_KEY) {
 }
 
 try {
-  const root = document.getElementById("root");
-
-  if (root) {
-    createRoot(root).render(
-      <React.StrictMode>
-        <I18nextProvider i18n={i18n}>
-          <ClerkProvider
-            publishableKey={PUBLISHABLE_KEY}
-            afterSignOutUrl="/"
-            fallbackRedirectUrl="/dashboard"
-            signInUrl="/login"
-            signUpUrl="/register"
-          >
-            <AuthSyncProvider>
-              <App />
-            </AuthSyncProvider>
-          </ClerkProvider>
-        </I18nextProvider>
-      </React.StrictMode>,
-    );
-  } else {
-    console.error("Root element not found!");
-  }
+  const __root = document.getElementById("root");
+  if (!__root) { (window as any).__MOUNT_OK__ = false; throw new Error('Root element not found'); }
+  const __start = performance.now();
+  createRoot(__root).render(
+    <React.StrictMode>
+      <I18nextProvider i18n={i18n}>
+        <ClerkProvider
+          publishableKey={PUBLISHABLE_KEY}
+          afterSignOutUrl="/"
+          fallbackRedirectUrl="/dashboard"
+          signInUrl="/login"
+          signUpUrl="/register"
+        >
+          <AuthSyncProvider>
+            <App />
+          </AuthSyncProvider>
+        </ClerkProvider>
+      </I18nextProvider>
+    </React.StrictMode>,
+  );
+  (window as any).__MOUNT_OK__ = true;
+  (window as any).__MOUNT_T0__ = __start;
+  console?.log?.('[MOUNT] ok in', Math.round(performance.now()-__start),'ms');
 } catch (error) {
   console.error("Error in main.tsx:", error);
   document.body.innerHTML =

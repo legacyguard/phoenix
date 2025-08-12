@@ -1,1 +1,195 @@
+<<<<<<< Updated upstream
 {}
+=======
+{
+  "general": {
+    "networkError": "Problem mit der Netzwerkverbindung. Bitte überprüfen Sie Ihre Internetverbindung.",
+    "serverError": "Wir haben technische Probleme. Bitte versuchen Sie es in Kürze noch einmal.",
+    "timeoutError": "Zeitüberschreitung der Anforderung. Bitte versuchen Sie es erneut.",
+    "maintenanceMode": "Wir führen derzeit Wartungsarbeiten durch. Bitte versuchen Sie es in ein paar Minuten erneut.",
+    "something_wrong": "Irgendetwas hat nicht ganz funktioniert, aber keine Sorge – Ihre wichtigen Informationen sind sicher.",
+    "try_again": "Ich versuche es noch einmal für Sie",
+    "contact_support": "Ich bin hier, um zu helfen, wenn Sie Hilfe benötigen",
+    "no_data_lost": "Die gute Nachricht ist, dass nichts, woran Sie gearbeitet haben, verloren gegangen ist",
+    "temporary_issue": "Dies scheint ein vorübergehendes Problem zu sein, das sich schnell lösen sollte"
+  },
+  "authentication": {
+    "sessionExpired": "Ihre Sitzung ist abgelaufen. Bitte melden Sie sich erneut an.",
+    "invalidCredentials": "Ungültige E-Mail oder ungültiges Passwort. Bitte versuchen Sie es erneut.",
+    "accountLocked": "Ihr Konto wurde aus Sicherheitsgründen vorübergehend gesperrt.",
+    "accountDisabled": "Ihr Konto wurde deaktiviert. Wenden Sie sich bitte an den Support.",
+    "emailNotVerified": "Bitte bestätigen Sie Ihre E-Mail-Adresse, bevor Sie fortfahren.",
+    "passwordResetRequired": "Das Zurücksetzen des Passworts ist erforderlich. Bitte überprüfen Sie Ihren E-Mail-Posteingang."
+  },
+  "authorization": {
+    "accessDenied": "Sie haben keine Berechtigung, auf diese Informationen zuzugreifen.",
+    "insufficientPermissions": "Sie verfügen nicht über die erforderlichen Berechtigungen für diese Aktion.",
+    "subscriptionRequired": "Diese Funktion erfordert ein aktives Abonnement.",
+    "upgradeRequired": "Bitte aktualisieren Sie Ihren Plan, um auf diese Funktion zuzugreifen."
+  },
+  "validation": {
+    "invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+    "invalidPhone": "Bitte geben Sie eine gültige Telefonnummer ein.",
+    "invalidFormat": "Ungültiges Format. Bitte überprüfen Sie Ihre Eingabe.",
+    "passwordTooWeak": "Das Passwort muss mindestens 8 Zeichen lang sein und Großbuchstaben, Kleinbuchstaben und Zahlen enthalten.",
+    "passwordMismatch": "Die Passwörter stimmen nicht überein.",
+    "fileTooLarge": "Die Dateigröße überschreitet die maximale Grenze von {{size}}MB.",
+    "unsupportedFileType": "Dieser Dateityp wird nicht unterstützt.",
+    "required_field": "Ihre Familie wird diese Informationen benötigen. Können Sie mir beim Ausfüllen helfen?",
+    "invalid_email": "Die E-Mail-Adresse sieht nicht ganz richtig aus. Könnten Sie sie für mich noch einmal überprüfen?",
+    "invalid_phone": "Ich habe Probleme mit diesem Telefonnummernformat. Könnten Sie versuchen, es anders einzugeben?",
+    "invalid_date": "Dieses Datumsformat funktioniert bei mir nicht. Könnten Sie es mit MM/TT/JJJJ versuchen?",
+    "password_weak": "Machen wir Ihr Passwort etwas sicherer, um die Informationen Ihrer Familie besonders zu schützen.",
+    "file_too_large": "Die Datei ist für mich etwas zu groß. Könnten Sie es mit einer kleineren Version versuchen?",
+    "unsupported_file": "Ich kann mit diesem Dateityp nicht arbeiten. Könnten Sie es stattdessen mit einem PDF oder Bild versuchen?",
+    "errors": {
+      "assetNameRequired": "Fehler Assetname Erforderlich",
+      "assetTypeRequired": "Fehler Asset-Typ Erforderlich",
+      "nameMinLength": "Fehlername Min. Länge",
+      "allocationRequired": "Fehlerzuordnung erforderlich",
+      "allocationMustBeNumber": "Fehlerzuordnung muss eine Zahl sein",
+      "allocationRange": "Fehlerzuordnungsbereich",
+      "requiredField": "Fehler erforderliches Feld",
+      "mustBeNumber": "Fehler müssen eine Nummer sein",
+      "countryRequired": "Fehler Land Erforderlich",
+      "countryCodeLength": "Fehler Land Code Länge",
+      "valueMustBeNumber": "Fehlerwert muss eine Zahl sein",
+      "valueMustBePositive": "Fehlerwert muss positiv sein",
+      "currencyCodeLength": "Fehler Währung Code Länge",
+      "beneficiaryNameRequired": "Fehler Begünstigter Name Erforderlich",
+      "invalidEmail": "Fehler: ungültige E-Mail",
+      "invalidPhone": "Fehler ungültiges Telefon",
+      "documentNameRequired": "Fehlerdokument Name Erforderlich",
+      "documentTypeRequired": "Fehlerdokument Typ Erforderlich",
+      "expirationDateFuture": "Fehler Ablaufdatum Zukunft",
+      "relationshipRequired": "Fehlerbeziehung Erforderlich",
+      "unknownError": "Fehler unbekannt Fehler",
+      "dataNotFound": "Fehlerdaten nicht gefunden",
+      "connectionError": "Fehler Verbindungsfehler",
+      "permissionDenied": "Fehler: Berechtigung verweigert",
+      "duplicateRecord": "Fehler beim Duplizieren des Datensatzes"
+    },
+    "nameRequired": "Validierungsname Erforderlich",
+    "nameMinLength": "Validierungsname, Mindestlänge",
+    "jurisdictionRequired": "Validierungsgerichtsbarkeit Erforderlich",
+    "dobRequired": "Validierungsdatum erforderlich",
+    "addressRequired": "Validierungsadresse erforderlich",
+    "allocationError": "Validierungszuordnungsfehler",
+    "beneficiaryRequired": "Validierung des Begünstigten Erforderlich",
+    "executorRequired": "Validierungs-Executor erforderlich"
+  },
+  "data": {
+    "loadingFailed": "Daten konnten nicht geladen werden. Bitte aktualisieren Sie die Seite.",
+    "savingFailed": "Änderungen konnten nicht gespeichert werden. Bitte versuchen Sie es erneut.",
+    "deletingFailed": "Das Löschen des Elements ist fehlgeschlagen. Bitte versuchen Sie es erneut.",
+    "uploadFailed": "Das Hochladen der Datei ist fehlgeschlagen. Bitte versuchen Sie es erneut.",
+    "exportFailed": "Der Datenexport ist fehlgeschlagen. Bitte versuchen Sie es später erneut.",
+    "importFailed": "Der Datenimport ist fehlgeschlagen. Bitte überprüfen Sie das Dateiformat.",
+    "syncFailed": "Die Synchronisierung ist fehlgeschlagen. Einige Änderungen wurden möglicherweise nicht gespeichert."
+  },
+  "payment": {
+    "paymentFailed": "Zahlungsabwicklung fehlgeschlagen. Bitte überprüfen Sie Ihre Zahlungsmethode.",
+    "cardDeclined": "Ihre Karte wurde abgelehnt. Bitte versuchen Sie es mit einer anderen Zahlungsmethode.",
+    "insufficientFunds": "Unzureichende Deckung. Bitte überprüfen Sie Ihren Kontostand.",
+    "expiredCard": "Ihre Karte ist abgelaufen. Bitte aktualisieren Sie Ihre Zahlungsinformationen.",
+    "invalidCard": "Ungültige Karteninformationen. Bitte überprüfen Sie Ihre Angaben.",
+    "paymentTimeout": "Bei der Zahlungsabwicklung ist eine Zeitüberschreitung aufgetreten. Bitte versuchen Sie es erneut."
+  },
+  "actions": {
+    "tryAgain": "Versuchen Sie es erneut",
+    "signInAgain": "Erneut anmelden",
+    "updatePayment": "Zahlung aktualisieren",
+    "upgradeAccount": "Konto aktualisieren"
+  },
+  "debug": {
+    "i18nDebug": {
+      "current_lang_resources_7": "Aktuelle Sprachressourcen 7",
+      "has_resources_6": "Hat Ressourcen 6",
+      "i18n_debug_info_1": "I18n-Debug-Info 1",
+      "resolved_language_3": "Gelöste Sprache 3",
+      "test_translation_5": "Testübersetzung 5"
+    }
+  },
+  "test": {
+    "environment": {
+      "description": "Beschreibung",
+      "title": "Titel"
+    }
+  },
+  "notfound": {
+    "title": "Seite nicht gefunden",
+    "description": "Die gesuchte Seite existiert nicht oder wurde verschoben.",
+    "goHome": "Nach Hause gehen",
+    "goBack": "Geh zurück"
+  },
+  "network": {
+    "connection_lost": "Ihre Internetverbindung wurde anscheinend unterbrochen. Ihre Arbeit wurde gespeichert und wir stellen die Verbindung automatisch wieder her.",
+    "slow_connection": "Ihre Verbindung scheint heute etwas langsam zu sein. Ich warte geduldig, während alles geladen wird.",
+    "server_busy": "Unsere Server sind derzeit etwas ausgelastet, aber ich werde weiterhin versuchen, Ihnen zu helfen.",
+    "timeout": "Das hat länger gedauert als erwartet. Ich versuche es anders."
+  },
+  "contextual": {
+    "assets": {
+      "save_failed": "Ich konnte die Vermögensinformationen momentan nicht speichern, aber ich werde es weiter versuchen. Die Informationen Ihrer Familie sind mir wichtig.",
+      "load_failed": "Ich habe derzeit Probleme beim Laden Ihrer Assets. Ich versuche es gleich noch einmal.",
+      "delete_failed": "Ich konnte das Element gerade nicht entfernen. Soll ich es noch einmal versuchen?"
+    },
+    "documents": {
+      "upload_failed": "Das Dokument wurde nicht ordnungsgemäß hochgeladen. Keine Sorge – ich helfe Ihnen, es erneut zu versuchen.",
+      "processing_failed": "Beim Verarbeiten des Dokuments ist ein Problem aufgetreten. Die Datei ist sicher. Ich werde es erneut versuchen.",
+      "access_failed": "Ich kann momentan nicht auf das Dokument zugreifen. Ich schaue, wie ich Ihnen helfen kann."
+    },
+    "family": {
+      "save_failed": "Ich konnte die Informationen dieser Person gerade nicht speichern. Ich versuche es noch einmal – Ihr Vertrauenskreis ist wichtig.",
+      "invite_failed": "Ich konnte die Einladung momentan nicht senden. Ich helfe Ihnen, es erneut zu versuchen, wenn Sie bereit sind.",
+      "access_failed": "Ich habe Probleme mit den Familienzugriffseinstellungen. Ich kümmere mich darum."
+    },
+    "will": {
+      "generation_failed": "Ich konnte Ihr Testament gerade nicht erstellen. Keine Sorge – alle Ihre Entscheidungen sind gespeichert, und ich werde es erneut versuchen.",
+      "save_failed": "Ich konnte die Änderungen momentan nicht speichern. Ihre vorherige Version ist sicher, und ich werde es weiter versuchen.",
+      "legal_check_failed": "Ich konnte die rechtlichen Anforderungen gerade nicht überprüfen. Ich versuche es noch einmal, oder wir können uns an unsere Rechtsabteilung wenden."
+    }
+  },
+  "emotional_support": {
+    "frustration": "Ich weiß, dass es frustrierend ist, wenn man versucht, etwas Wichtiges für seine Familie zu tun. Ich bin hier, um Ihnen dabei zu helfen, dass es klappt.",
+    "time_pressure": "Ich verstehe, dass Sie nicht viel Zeit für technische Probleme haben. Ich werde das schnell für Sie erledigen.",
+    "overwhelm": "Technische Probleme können überwältigend sein, wenn man sich bereits mit der wichtigen Familienplanung beschäftigt. Atmen Sie durch – ich kümmere mich darum.",
+    "discouragement": "Lassen Sie sich von diesem technischen Problem nicht entmutigen. Was Sie für Ihre Familie tun, ist zu wichtig, um es aufzugeben."
+  },
+  "solutions": {
+    "refresh_page": "Manchmal hilft es, die Seite zu aktualisieren. Ihre Arbeit wird gespeichert, sodass nichts verloren geht.",
+    "try_different_browser": "Wenn dies weiterhin passiert, versuchen Sie es mit einem anderen Browser. Chrome oder Firefox funktionieren normalerweise am besten.",
+    "check_internet": "Könnten Sie Ihre Internetverbindung überprüfen? Manchmal reicht das schon.",
+    "contact_support": "Gerne helfe ich Ihnen persönlich weiter. Sie erreichen unser Support-Team, das sich bestens um Sie kümmert.",
+    "try_later": "Wenn Sie es eilig haben, können Sie es später noch einmal versuchen. Alles, was Sie getan haben, ist sicher gespeichert.",
+    "alternative_approach": "Ich möchte Ihnen eine andere Möglichkeit vorschlagen, die möglicherweise besser funktioniert."
+  },
+  "recovery": {
+    "auto_save_worked": "Die gute Nachricht ist, dass alles, was Sie eingegeben haben, automatisch gespeichert wurde.",
+    "backup_available": "Ich habe eine Sicherungskopie Ihrer Arbeit von vor ein paar Minuten, falls Sie sie brauchen.",
+    "progress_preserved": "Ihr gesamter Fortschritt bleibt erhalten – Sie müssen nicht von vorne beginnen.",
+    "data_secure": "Die Informationen Ihrer Familie bleiben trotz dieses technischen Problems absolut sicher."
+  },
+  "errors": {
+    "notAuthenticated": "Fehler nicht authentifiziert",
+    "generic": "Fehler generisch",
+    "savingSettings": "Fehler beim Speichern der Einstellungen",
+    "loadingSettings": "Fehler beim Laden der Einstellungen",
+    "networkError": "Fehler Netzwerkfehler",
+    "permissionDenied": "Fehler: Berechtigung verweigert",
+    "dataNotFound": "Fehlerdaten nicht gefunden",
+    "unknown": "Fehler unbekannt",
+    "uploadFailed": "Fehler beim Hochladen fehlgeschlagen",
+    "accessDenied": "Fehler Zugriff verweigert",
+    "reassurance": {
+      "data_safe": "Datensicherheit",
+      "try_again": "Beruhigung, versuchen Sie es erneut"
+    },
+    "loadingAssets": "Fehler beim Laden von Assets",
+    "failedToFetchStatus": "Fehler beim Abrufen des Status",
+    "validationFailed": "Fehler bei der Validierung fehlgeschlagen",
+    "generationFailed": "Fehlergenerierung fehlgeschlagen",
+    "duplicateRecord": "Fehler beim Duplizieren des Datensatzes"
+  }
+}
+>>>>>>> Stashed changes

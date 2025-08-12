@@ -1,0 +1,1036 @@
+{
+  "crisisAssessment": {
+    "familyCapabilities": "Οικογενειακές δυνατότητες",
+    "familyDiscussion": "Οικογενειακή συζήτηση",
+    "familyDiscussionDescription": "Περιγραφή οικογενειακής συζήτησης"
+  },
+  "errors": {
+    "loadingFamily": "Αντιμετωπίσαμε πρόβλημα με τη φόρτωση των αξιόπιστων ατόμων σας. Ανανεώστε τη σελίδα.",
+    "accessDenied": "Δεν μπορείτε να αλλάξετε τα στοιχεία αυτού του ατόμου αυτήν τη στιγμή",
+    "assigningRole": "Δεν μπορέσαμε να τους αναθέσουμε αυτόν τον ρόλο. Δοκιμάστε ξανά.",
+    "dataNotFound": "Δεν μπορέσαμε να βρούμε αυτές τις πληροφορίες",
+    "duplicatePerson": "Αυτό το άτομο βρίσκεται ήδη στα έμπιστα άτομα που εμπιστεύεστε",
+    "duplicateRecord": "Αυτό έχει ήδη αποθηκευτεί",
+    "grantingAccess": "Δεν μπορέσαμε να τους δώσουμε πρόσβαση. Δοκιμάστε ξανά.",
+    "invalidEmail": "Αυτό το μήνυμα ηλεκτρονικού ταχυδρομείου δεν φαίνεται σωστό. Ελέγξτε το.",
+    "invalidPhone": "Αυτός ο αριθμός τηλεφώνου δεν φαίνεται σωστός. Ελέγξτε τον.",
+    "networkError": "Πρόβλημα σύνδεσης. Ελέγξτε τη σύνδεσή σας στο διαδίκτυο.",
+    "permissionDenied": "Δεν έχετε άδεια να το κάνετε αυτό",
+    "removingPerson": "Δεν μπορέσαμε να τα καταργήσουμε από τα έμπιστα άτομα που έχετε. Δοκιμάστε ξανά.",
+    "roleConflict": "Έχουν ήδη έναν διαφορετικό ρόλο που έρχεται σε αντίθεση με αυτόν",
+    "savingPerson": "Δεν ήταν δυνατή η αποθήκευση των πληροφοριών τους. Ελέγξτε και προσπαθήστε ξανά.",
+    "sendingInvitation": "Δεν ήταν δυνατή η αποστολή της πρόσκλησης. Ελέγξτε το email τους και προσπαθήστε ξανά.",
+    "unknown": "Κάτι πήγε στραβά"
+  },
+  "familyCapabilities": {
+    "businessOperations": "Επιχειρηματικές δραστηριότητες",
+    "canAccessBankAccounts": "Μπορεί να έχει πρόσβαση σε τραπεζικούς λογαριασμούς",
+    "canAccessDigitalAccounts": "Μπορεί να έχει πρόσβαση σε ψηφιακούς λογαριασμούς",
+    "canFileInsuranceClaims": "Μπορεί να υποβάλει ασφαλιστικές αξιώσεις",
+    "canManageBusiness": "Μπορεί να διαχειριστεί επιχειρήσεις",
+    "cannotAccessBankAccounts": "Δεν είναι δυνατή η πρόσβαση σε τραπεζικούς λογαριασμούς",
+    "cannotAccessDigitalAccounts": "Δεν είναι δυνατή η πρόσβαση σε ψηφιακούς λογαριασμούς",
+    "cannotFileInsuranceClaims": "Δεν είναι δυνατή η υποβολή ασφαλιστικών αιτήσεων",
+    "clearInheritancePlan": "Σαφές σχέδιο κληρονομιάς",
+    "digitalAccess": "Ψηφιακή πρόσβαση",
+    "digitalAccounts": "Ψηφιακοί λογαριασμοί",
+    "immediateFinancialNeeds": "Άμεσες οικονομικές ανάγκες",
+    "inheritance": "Κληρονομία",
+    "insuranceClaims": "Ασφαλιστικές απαιτήσεις",
+    "knowsLegalContacts": "Γνωρίζει νομικές επαφές",
+    "knowsMedicalWishes": "Γνωρίζει τις ιατρικές επιθυμίες",
+    "legalMatters": "Νομικά θέματα",
+    "medicalDecisions": "Ιατρικές αποφάσεις",
+    "noBusinessInfo": "Δεν υπάρχουν πληροφορίες επιχείρησης",
+    "noInheritancePlan": "Δεν υπάρχει σχέδιο κληρονομιάς",
+    "noLegalContacts": "Δεν υπάρχουν νομικές επαφές",
+    "noMedicalInfo": "Δεν υπάρχουν ιατρικές πληροφορίες",
+    "partialBusinessInfo": "Μερικές πληροφορίες επιχείρησης",
+    "partialInheritancePlan": "Μερικό σχέδιο κληρονομιάς",
+    "partialMedicalInfo": "Μερικές ιατρικές πληροφορίες",
+    "payBills": "Πληρωμή λογαριασμών"
+  },
+  "familyCrisisAssessment": {
+    "15_1": ""
+  },
+  "familyExecutorView": {
+    "communications": {
+      "description": "Περιγραφή",
+      "empty": "Αδειάζω",
+      "title": "Τίτλος",
+      "to": "Να"
+    },
+    "executor": "Εκτελεστής διαθήκης",
+    "footer": "Υποσέλιδο",
+    "subtitle": "Υπότιτλος",
+    "theExecutor": "Ο εκτελεστής",
+    "title": "Τίτλος"
+  },
+  "familyHub": {
+    "accessLevels": {
+      "emergencyOnly": {
+        "description": "Περιγραφή",
+        "fullDescription": "Πλήρης περιγραφή",
+        "title": "Τίτλος"
+      },
+      "fullAccess": {
+        "description": "Περιγραφή",
+        "fullDescription": "Πλήρης περιγραφή",
+        "title": "Τίτλος"
+      },
+      "limitedInfo": {
+        "description": "Περιγραφή",
+        "fullDescription": "Πλήρης περιγραφή",
+        "title": "Τίτλος"
+      },
+      "none": {
+        "description": "Περιγραφή",
+        "title": "Τίτλος"
+      }
+    },
+    "emergencyProtocol": {
+      "activeMessage": "Ενεργό μήνυμα",
+      "configure": "Ρύθμιση παραμέτρων",
+      "configured": "Διαμορφωμένο",
+      "description": "Περιγραφή",
+      "title": "Τίτλος"
+    },
+    "errors": {
+      "authenticationRequired": "Απαιτείται έλεγχος ταυτότητας",
+      "failedToFetchData": "Αποτυχία ανάκτησης δεδομένων",
+      "failedToLoadMembers": "Αποτυχία φόρτωσης μελών"
+    },
+    "memberManagement": {
+      "addMorePeople": "Προσθήκη περισσότερων ατόμων",
+      "addTrustedPerson": "Προσθήκη αξιόπιστου ατόμου",
+      "daysAgo": "Πριν από μέρες",
+      "informationAccessLevel": "Επίπεδο πρόσβασης σε πληροφορίες",
+      "lastContactOver30Days": "Τελευταία επαφή άνω των 30 ημερών",
+      "lastContacted": "Τελευταία επικοινωνία",
+      "preparedness": "Ετοιμότητα",
+      "sendUpdate": "Αποστολή ενημέρωσης",
+      "sendUpdateTo": "Αποστολή ενημέρωσης σε",
+      "title": "Τίτλος"
+    },
+    "messages": {
+      "accessLevelUpdated": "Το επίπεδο πρόσβασης ενημερώθηκε",
+      "failedToSendUpdate": "Αποτυχία αποστολής ενημέρωσης",
+      "updateSentTo": "Η ενημέρωση στάλθηκε σε"
+    },
+    "overallPreparedness": {
+      "description": "Περιγραφή",
+      "improvementNeeded": "Απαιτείται βελτίωση",
+      "title": "Τίτλος"
+    },
+    "subtitle": "Υπότιτλος",
+    "tabs": {
+      "familyMembers": "Μέλη της οικογένειας",
+      "members": "Μέλη",
+      "preparednessTools": "Εργαλεία ετοιμότητας",
+      "tools": "Εργαλεία"
+    },
+    "title": "Τίτλος"
+  },
+  "familyPreparednessTools": {
+    "create_a_printable_guide_for_y_3": "Δημιουργήστε έναν εκτυπώσιμο οδηγό για την τρίτη τάξη",
+    "errors": {
+      "comingSoon": "Σύντομα διαθέσιμο",
+      "generateFailed": "Η δημιουργία απέτυχε.",
+      "premiumRequired": "Απαιτείται premium",
+      "selectScenario": "Επιλογή σεναρίου"
+    },
+    "generate_another_5": "Δημιουργήστε άλλα 5",
+    "generate_emergency_guide_2": "Δημιουργήστε οδηγό έκτακτης ανάγκης 2",
+    "guides": {
+      "death": {
+        "bankAccounts": "Τραπεζικοί λογαριασμοί",
+        "contactExecutor": "Επικοινωνήστε με τον εκτελεστή",
+        "contactLawyer": "Επικοινωνήστε με δικηγόρο",
+        "deathCertificate": "Πιστοποιητικό θανάτου",
+        "disclaimer": "Αρνηση",
+        "employer": "Εργοδότης",
+        "financialInstitutions": "Χρηματοπιστωτικά ιδρύματα",
+        "first24Hours": "Πρώτες 24 ώρες",
+        "generatedOn": "Δημιουργήθηκε στις",
+        "importantDocuments": "Σημαντικά έγγραφα",
+        "insuranceCompanies": "Ασφαλιστικές εταιρείες",
+        "investmentAccounts": "Επενδυτικοί λογαριασμοί",
+        "locateWill": "Εντοπίστε τη βούληση",
+        "peopleToNotify": "Άτομα προς ειδοποίηση",
+        "secureResidence": "Ασφαλής κατοικία",
+        "socialSecurity": "Κοινωνική ασφάλιση",
+        "title": "Τίτλος"
+      },
+      "emergency": {
+        "address": "Διεύθυνση",
+        "attorney": "Δικηγόρος",
+        "emergency": "Επείγον",
+        "financialAdvisor": "Οικονομικός σύμβουλος",
+        "homeInformation": "Πληροφορίες για το σπίτι",
+        "insuranceAgent": "Ναυτικός πράκτωρας",
+        "keyContacts": "Βασικές επαφές",
+        "securitySystem": "Σύστημα ασφαλείας",
+        "spouse": "Σύζυγος",
+        "title": "Τίτλος",
+        "utilities": "Βοηθητικά προγράμματα"
+      },
+      "hospitalization": {
+        "allergies": "Αλλεργίες",
+        "bloodType": "Ομάδα αίματος",
+        "currentMedications": "Τρέχοντα φάρμακα",
+        "emergencyContacts": "Επαφές έκτακτης ανάγκης",
+        "healthcarePowerOfAttorney": "Πληρεξούσιο υγειονομικής περίθαλψης",
+        "hipaaRelease": "Απελευθέρωση Hipaa",
+        "legalDocuments": "Νομικά έγγραφα",
+        "livingWill": "Ζωντανή θέληση",
+        "medicalInformation": "Ιατρικές πληροφορίες",
+        "preferredHospital": "Προτιμώμενο νοσοκομείο",
+        "primaryCarePhysician": "Ιατρός πρωτοβάθμιας περίθαλψης",
+        "title": "Τίτλος"
+      },
+      "missing": {
+        "bankingApps": "Εφαρμογές τραπεζών",
+        "checkHospitals": "Ελέγξτε τα νοσοκομεία",
+        "checkWithWorkplace": "Ελέγξτε με τον χώρο εργασίας",
+        "contactCloseFriends": "Επικοινωνήστε με στενούς φίλους",
+        "contactLocalPolice": "Επικοινωνήστε με την τοπική αστυνομία",
+        "digitalFootprint": "Ψηφιακό αποτύπωμα",
+        "email": "E-mail",
+        "immediateActions": "Άμεσες ενέργειες",
+        "phoneProvider": "Πάροχος τηλεφωνίας",
+        "socialMedia": "Κοινωνικά μέσα",
+        "title": "Τίτλος"
+      }
+    },
+    "mockContent": {
+      "insurancePolicies": "Ασφαλιστήρια συμβόλαια"
+    },
+    "scenarios": {
+      "death": {
+        "description": "Περιγραφή",
+        "title": "Τίτλος"
+      },
+      "emergency": {
+        "description": "Περιγραφή",
+        "title": "Τίτλος"
+      },
+      "hospitalization": {
+        "description": "Περιγραφή",
+        "title": "Τίτλος"
+      },
+      "missing": {
+        "description": "Περιγραφή",
+        "title": "Τίτλος"
+      }
+    },
+    "select_scenario_4": "Επιλέξτε το σενάριο 4",
+    "tools": {
+      "cancel": "Ματαίωση",
+      "chooseScenario": "Επιλέξτε σενάριο",
+      "emergencySimulator": "Προσομοιωτής έκτακτης ανάγκης",
+      "emergencySimulatorDesc": "Περιγραφή προσομοιωτή έκτακτης ανάγκης",
+      "generateGuide": "Δημιουργία οδηγού",
+      "generating": "Δημιουργία",
+      "informationTreasureHunt": "Κυνήγι θησαυρού πληροφοριών",
+      "launch": "Εκτόξευση",
+      "printGuide": "Οδηγός εκτύπωσης",
+      "stepByStepGuides": "Οδηγοί βήμα προς βήμα",
+      "stepByStepGuidesDesc": "Οδηγοί βήμα προς βήμα περιγραφή",
+      "treasureHuntDesc": "Περιγραφή κυνηγιού θησαυρού",
+      "videoMessages": "Μηνύματα βίντεο",
+      "videoMessagesDesc": "Περιγραφή βίντεο μηνυμάτων"
+    },
+    "use_these_tools_to_ensure_your_1": "Χρησιμοποιήστε αυτά τα εργαλεία για να διασφαλίσετε ότι το 1 σας"
+  },
+  "form": {
+    "additionalRoles": "Άλλοι τρόποι με τους οποίους μπορούν να βοηθήσουν",
+    "assignedRoles": "Πώς θα βοηθήσουν την οικογένειά σας",
+    "selectRoles": "Επιλέξτε πώς μπορούν να βοηθήσουν την οικογένειά σας",
+    "accessDescription": "Τι μπορούν να δουν και πότε μπορούν να βοηθήσουν",
+    "accessInfo": "Τι μπορούν να κάνουν",
+    "accessLevel": "Πόσα μπορούν να δουν",
+    "addPerson": "Προσθέστε κάποιον για βοήθεια",
+    "alternatePhone": "Ένας άλλος αριθμός τηλεφώνου",
+    "backupFor": "Είναι ένα αντίγραφο ασφαλείας για",
+    "backupHelper": "Ποιον θα εκπροσωπήσουν αν χρειαστεί",
+    "capabilities": "Γιατί είναι κατάλληλοι για αυτό",
+    "capabilitiesHelper": "Τι τους καθιστά μια καλή επιλογή για να βοηθήσουν;",
+    "compensation": "Εάν Χρειάζονται Υποστήριξη",
+    "compensationHelper": "Οποιαδήποτε οικονομική βοήθεια που μπορεί να χρειαστούν",
+    "contactInfo": "Πώς να τους προσεγγίσετε",
+    "dateOfBirth": "Γενέθλια",
+    "editPerson": "Μπορούμε να ενημερώσουμε τα στοιχεία τους",
+    "emailAddress": "E-mail",
+    "fullName": "Το πλήρες όνομά τους",
+    "fullNameHelper": "Χρησιμοποιήστε το νόμιμο όνομά τους για σημαντικά έγγραφα",
+    "fullNamePlaceholder": "Η πλήρης νόμιμη ονομασία τους",
+    "homeAddress": "Πού ζουν",
+    "instructions": "Σημαντικά πράγματα που πρέπει να γνωρίζουν",
+    "instructionsHelper": "Οποιαδήποτε ειδική καθοδήγηση για να βοηθήσετε την οικογένειά σας",
+    "instructionsPlaceholder": "Τι πρέπει να γνωρίζουν για να βοηθήσουν",
+    "limitations": "Πράγματα που πρέπει να γνωρίζετε",
+    "limitationsHelper": "Οτιδήποτε θα μπορούσε να τους δυσκολέψει να βοηθήσουν",
+    "personalInfo": "Σχετικά με αυτούς",
+    "primaryPhone": "Καλύτερος αριθμός τηλεφώνου",
+    "primaryRole": "Κύριος τρόπος με τον οποίο θα βοηθήσουν",
+    "relationship": "Πώς τους γνωρίζετε",
+    "relationshipPlaceholder": "Όπως Σύζυγος, Παιδί, Αδελφός/Αδελφή, Καλύτερος Φίλος",
+    "roleInfo": "Πώς θα βοηθήσουν",
+    "workAddress": "Πού εργάζονται"
+  },
+  "preparedness": {
+    "familyBenefit": "Οικογενειακό επίδομα",
+    "familyCommunication": {
+      "description": "Περιγραφή",
+      "scheduleReview": "Προγραμματισμός αξιολόγησης",
+      "shareReport": "Κοινή χρήση αναφοράς",
+      "title": "Τίτλος"
+    },
+    "gaps": {
+      "basicAccessInfo": "Βασικές πληροφορίες πρόσβασης",
+      "addMedicalPreferences": "Προσθήκη ιατρικών προτιμήσεων",
+      "completeFinancialAccess": "Πλήρης οικονομική πρόσβαση",
+      "documentBusinessOperations": "Καταγραφή επιχειρηματικών δραστηριοτήτων",
+      "improveImmediateAccess": "Βελτιώστε την άμεση πρόσβαση",
+      "updateWillAndTrust": "Ενημέρωση θέλησης και εμπιστοσύνης"
+    },
+    "levels": {
+      "goodBasic": "Καλό βασικό",
+      "fullyPrepared": "Πλήρως προετοιμασμένος",
+      "minimalPreparation": "Ελάχιστη προετοιμασία",
+      "needsImmediate": "Χρειάζεται άμεσα",
+      "somePreparation": "Κάποια προετοιμασία",
+      "wellPrepared": "Καλά προετοιμασμένος"
+    },
+    "assessments": {
+      "decisionMaking": {
+        "good": "Καλός",
+        "needsWork": "Χρειάζεται δουλειά"
+      },
+      "immediateAccess": {
+        "good": "Καλός",
+        "needsWork": "Χρειάζεται δουλειά"
+      },
+      "longTermSecurity": {
+        "good": "Καλός",
+        "needsWork": "Χρειάζεται δουλειά"
+      }
+    },
+    "dimensions": {
+      "decisionMaking": "Λήψη αποφάσεων",
+      "immediateAccess": "Άμεση πρόσβαση",
+      "longTermSecurity": "Μακροπρόθεσμη ασφάλεια"
+    },
+    "impact": "Σύγκρουση",
+    "improvements": {
+      "addBankAccounts": "Προσθήκη τραπεζικών λογαριασμών",
+      "documentMedicalWishes": "Καταγράψτε ιατρικές επιθυμίες",
+      "uploadLegalDocuments": "Μεταφόρτωση νομικών εγγράφων"
+    },
+    "nextStep": "Επόμενο βήμα",
+    "scenarioReadiness": "Ετοιμότητα σεναρίου",
+    "scenarios": {
+      "extendedTravel": {
+        "description": "Περιγραφή",
+        "title": "Τίτλος"
+      },
+      "suddenDeath": {
+        "description": "Περιγραφή",
+        "title": "Τίτλος"
+      }
+    },
+    "title": "Τίτλος",
+    "toImprove": "Για να βελτιώσω"
+  },
+  "relationships": {
+    "child": "Παιδί",
+    "friend": "Φίλος",
+    "other": "Αλλος",
+    "parent": "Μητρική εταιρεία",
+    "sibling": "Αμφιθαλής αδελφός",
+    "spouse": "Σύζυγος"
+  },
+  "roles": {
+    "advisor": "Σύμβουλος",
+    "beneficiary": "Δικαιούχος",
+    "caregiver": "Φροντιστής",
+    "emergencyContact": "Επαφή έκτακτης ανάγκης",
+    "executor": "Εκτελεστής διαθήκης",
+    "financialAgent": "Χρηματοοικονομικός αντιπρόσωπος (πληρεξούσιο)",
+    "guardian": "Κηδεμόνας",
+    "healthcareProxy": "Πληρεξούσιος υγειονομικής περίθαλψης",
+    "representative": "Εκπρόσωπος",
+    "successor": "Εφεδρικός",
+    "trustee": "Θεματοφύλακας",
+    "witness": "Θα μάρτυρας"
+  },
+  "trustedCircle": {
+    "roles": "Πώς μπορούν να βοηθήσουν",
+    "totalMembers": "{{count}} άτομα έτοιμα να βοηθήσουν",
+    "addFirst": "Μπορούμε να προσθέσουμε κάποιον που μπορεί να βοηθήσει",
+    "description": "Επιλέξτε άτομα που εμπιστεύεστε και μπορούν να στηρίξουν την οικογένειά σας όταν χρειάζεται.",
+    "empty": "Μπορούμε να ξεκινήσουμε προσθέτοντας κάποιον στον οποίο μπορεί να βασιστεί η οικογένειά σας — έναν/μία σύζυγο, έναν στενό φίλο ή ένα έμπιστο μέλος της οικογένειας.",
+    "keyPeople": "Βασικά πρόσωπα",
+    "recentlyAdded": "Πρόσφατα προστέθηκε",
+    "subtitle": "Άνθρωποι που θα είναι εκεί για την οικογένειά σας",
+    "title": "Αξιόπιστοι Άνθρωποι",
+    "viewAll": "Δείτε όλους"
+  },
+  "family": {
+    "GuardianPlaybook": {
+      "className": {
+        "flex_itemscenter_justifycenter_h64": "κέντρο-ευέλικτων στοιχείων-justify-center h-64",
+        "grid_gridcols6_wfull": "πλέγμα πλέγμα-στήλες-6 w-full",
+        "flex_itemscenter_gap2": "",
+        "hidden_sminline": "κρυφό sm:inline",
+        "spacey4": "διαστημικό-y-4",
+        "minh200px": "λεπτά-ώ-[200px]",
+        "flex_justifybetween_itemscenter_mb4": "flex justify-μεταξύ-στοιχείων-κέντρου mb-4",
+        "grid_gridcols1_mdgridcols2_gap4": "πλέγμα πλέγμα-στήλες-1 md:πλέγμα-στήλες-2 κενό-4",
+        "mdcolspan2": "",
+        "minh80px": "λεπτά-ώ-[80px]",
+        "mt2": "",
+        "flex_itemscenter_justifybetween": "κέντρο-ευέλικτων στοιχείων στοίχιση-μεταξύ"
+      },
+      "htmlFor": {
+        "funeral_wishes": "ευχές_κηδείας",
+        "digital_accounts": "ψηφιακοί_λογαριασμοί",
+        "document_locations": "τοποθεσίες_εγγράφων",
+        "personal_messages": "προσωπικά_μηνύματα",
+        "practical_instructions": "πρακτικές_οδηγίες"
+      },
+      "id": {
+        "funeral_wishes": "ευχές_κηδείας",
+        "digital_accounts": "ψηφιακοί_λογαριασμοί",
+        "document_locations": "τοποθεσίες_εγγράφων",
+        "personal_messages": "προσωπικά_μηνύματα",
+        "practical_instructions": "πρακτικές_οδηγίες"
+      },
+      "playbooktabskey": "οικογένεια.καρτέλες.${key}",
+      "contactnameindex": "όνομα-επαφής-${index}",
+      "contactrelationshipindex": "επαφή-σχέση-${index}",
+      "contactphoneindex": "τηλέφωνο επικοινωνίας-${index}",
+      "contactemailindex": "email-επικοινωνίας-${index}",
+      "contactnotesindex": "σημειώσεις-επαφής-${index}",
+      "playbookstatusstatus": "κατάσταση οικογένειας.${status}"
+    },
+    "GuardianPlaybookView": {
+      "className": {
+        "minhscreen_flex_itemscenter_justifycenter": "κέντρο-στοιχείων-ευέλικτης οθόνης min-h-justify-center",
+        "animatepulse_textcenter": "κέντρο κειμένου animate-pulse",
+        "maxwmd": "μέγιστο-w-md",
+        "minhscreen_bggradienttobr_frombackground_tomuted20": "ελάχιστη-οθόνη-κλίση-bg-σε-br από-φόντο-σε-σίγαση/20",
+        "container_mxauto_px4_py8_maxw4xl": "δοχείο mx-auto px-4 py-8 max-w-4xl",
+        "flex_itemscenter_justifycenter_w20_h20_roundedfull": "κέντρο-ευέλικτων στοιχείων, ευθυγράμμιση-κέντρου w-20 h-20 στρογγυλεμένο-πλήρες bg-πρωτεύον/10 mx-αυτόματο mb-4",
+        "mt4": "",
+        "mb8": "",
+        "flex_itemscenter_gap2": "",
+        "grid_gap4_mdgridcols2": "διάκενο πλέγματος-4 md:στήλες πλέγματος-2",
+        "spacey2": "διαστημικό-y-2",
+        "flex_itemsstart_justifybetween": "ευέλικτα στοιχεία-έναρξη-δικαιολόγηση-μεταξύ",
+        "fontsemibold": "γραμματοσειρά-ημίτονο",
+        "spacey1": "διαστημικό-y-1",
+        "flex_itemscenter_gap2_textsm_textprimary_hoverunde": "flex items-center gap-2 text-sm text-primary password:underline",
+        "spacey6": "διαστημικό-y-6",
+        "prose_prosesm_maxwnone": "πεζογραφία πεζογραφία-sm max-w-none",
+        "whitespaceprewrap": "προ-αναδίπλωση κενού χώρου",
+        "mt12_textcenter_textsm_textmutedforeground": "mt-12 κείμενο-κέντρο κείμενο-sm κείμενο-σίγαση-πρώτο πλάνο"
+      },
+      "telcontactphone": "τηλ.:${contact.phone}",
+      "mailtocontactemail": "αλληλογραφία:${contact.email}"
+    }
+  },
+  "guardianUpload": {
+    "relationships": {
+      "child": "Παιδί",
+      "friend": "Φίλος",
+      "legalProfessional": "Νομικός επαγγελματίας",
+      "other": "Αλλος",
+      "parent": "Μητρική εταιρεία",
+      "sibling": "Αμφιθαλής αδελφός",
+      "spouse": "Σύζυγος"
+    },
+    "roles": {
+      "emergencyContact": "Επαφή έκτακτης ανάγκης",
+      "executorOfWill": "Εκτελεστής διαθήκης",
+      "financialPowerOfAttorney": "Οικονομικό πληρεξούσιο",
+      "guardianForChildren": "Φύλακας για παιδιά",
+      "healthcareProxy": "Πληρεξούσιος υγειονομικής περίθαλψης",
+      "trustee": "Θεματοφύλακας"
+    },
+    "rolesTitle": "Τίτλος ρόλων",
+    "addButton": "Προσθήκη κουμπιού",
+    "addTitle": "Προσθήκη τίτλου",
+    "added": "Προστέθηκε",
+    "countryDescription": "Περιγραφή χώρας",
+    "countryLabel": "Ετικέτα χώρας",
+    "countryPlaceholder": "Υποκατάστατο χώρας",
+    "description": "Περιγραφή",
+    "editTitle": "Επεξεργασία τίτλου",
+    "emailLabel": "Ετικέτα ηλεκτρονικού ταχυδρομείου",
+    "emailPlaceholder": "Θέση ηλεκτρονικού ταχυδρομείου",
+    "error": "Σφάλμα",
+    "errors": {
+      "connectionError": "Σφάλμα σύνδεσης",
+      "duplicateError": "Διπλότυπο σφάλμα",
+      "permissionError": "Σφάλμα άδειας",
+      "requiredDataNotFound": "Δεν βρέθηκαν τα απαραίτητα δεδομένα",
+      "saveError": "Σφάλμα αποθήκευσης",
+      "unknownError": "Άγνωστο σφάλμα"
+    },
+    "fullNameLabel": "Ετικέτα πλήρους ονόματος",
+    "fullNamePlaceholder": "Πλήρες όνομα",
+    "loginToSave": "Συνδεθείτε για αποθήκευση",
+    "phoneLabel": "Ετικέτα τηλεφώνου",
+    "phonePlaceholder": "Θέση τηλεφώνου",
+    "relationshipLabel": "Ετικέτα σχέσης",
+    "relationshipPlaceholder": "Θέση σχέσης",
+    "saving": "Οικονομία",
+    "success": "Επιτυχία",
+    "updateButton": "Κουμπί ενημέρωσης",
+    "updated": "Ενημερώθηκε"
+  },
+  "familyMembers": "Μέλη της οικογένειας",
+  "sensitivity": {
+    "step_family_dynamics": "Οι σχέσεις θετής οικογένειας χρειάζονται σαφή τεκμηρίωση",
+    "family_conflict": "Οι οικογενειακές συγκρούσεις απαιτούν επιπλέον σαφήνεια στον προγραμματισμό",
+    "previous_marriage_obligations": "Πρέπει να διευθετηθούν οι προηγούμενες γαμήλιες υποχρεώσεις",
+    "absent_parent_considerations": "Οι καταστάσεις απουσίας γονέων απαιτούν προσεκτικό σχεδιασμό",
+    "solo_responsibility_pressure": "Οι ευθύνες των μονογονέων μπορεί να φαίνονται κουραστικές",
+    "inheritance_disputes": "Πιθανές κληρονομικές διαφορές χρειάζονται πρόληψη",
+    "traditional_role_expectations": "Οι παραδοσιακοί οικογενειακοί ρόλοι μπορεί να χρειάζονται εξέταση",
+    "disability_planning_stress": "Ο σχεδιασμός για ειδικές ανάγκες μπορεί να είναι συναισθηματικά απαιτητικός",
+    "long_term_care_concerns": "Ο μακροπρόθεσμος σχεδιασμός φροντίδας είναι απαραίτητος"
+  },
+  "features": {
+    "family_communication_center": {
+      "title": "Κέντρο Οικογενειακής Επικοινωνίας",
+      "description": "Κρατήστε όλους ενημερωμένους και συνδεδεμένους"
+    },
+    "family_tree_visualizer": {
+      "title": "Οπτικοποιητής Οικογενειακού Δέντρου",
+      "description": "Χαρτογραφήστε οπτικά σύνθετες οικογενειακές σχέσεις"
+    },
+    "step_family_guidance": {
+      "title": "Καθοδήγηση θετής οικογένειας",
+      "description": "Πλοηγηθείτε στον μικτό οικογενειακό προγραμματισμό με σιγουριά."
+    },
+    "family_meeting_tools": {
+      "title": "Εργαλεία Οικογενειακών Συναντήσεων",
+      "description": "Διευκολύνετε σημαντικές οικογενειακές συζητήσεις"
+    },
+    "document_vault": {
+      "title": "Ασφαλής Θησαυροφυλάκιο Εγγράφων",
+      "description": "Αποθηκεύστε και μοιραστείτε σημαντικά έγγραφα με ασφάλεια"
+    },
+    "guardian_network_builder": {
+      "title": "Δημιουργός Δικτύου Guardian",
+      "description": "Δημιουργήστε ένα ισχυρό δίκτυο υποστήριξης για τα παιδιά σας"
+    },
+    "single_parent_resources": {
+      "title": "Πόροι για μονογονεϊκές οικογένειες",
+      "description": "Εξειδικευμένα εργαλεία και υποστήριξη για μονογονείς"
+    },
+    "complex_beneficiary_manager": {
+      "title": "Διευθυντής Δικαιούχων Συγκροτήματος",
+      "description": "Χειριστείτε πολλαπλές σχέσεις με σαφήνεια"
+    },
+    "multi_generation_planner": {
+      "title": "Σχεδιαστής πολλαπλών γενεών",
+      "description": "Ανάγκες ισορροπίας σε όλες τις γενιές"
+    },
+    "elder_care_resources": {
+      "title": "Πόροι Φροντίδας Ηλικιωμένων",
+      "description": "Υποστήριξη για τη φροντίδα ηλικιωμένων γονέων"
+    },
+    "special_needs_trust_wizard": {
+      "title": "Οδηγός Εμπιστοσύνης για Άτομα με Ειδικές Ανάγκες",
+      "description": "Δημιουργήστε κατάλληλα καταπιστεύματα για μέλη με ειδικές ανάγκες"
+    },
+    "care_instruction_builder": {
+      "title": "Δημιουργός οδηγιών φροντίδας",
+      "description": "Καταγράψτε λεπτομερείς απαιτήσεις φροντίδας"
+    },
+    "government_benefit_tracker": {
+      "title": "Παρακολούθηση κυβερνητικών παροχών",
+      "description": "Διασφάλιση της επιλεξιμότητας για σημαντικά οφέλη"
+    },
+    "business_succession_planner": {
+      "title": "Σχεδιαστής Διαδοχής Επιχειρήσεων",
+      "description": "Σχέδιο για τη συνέχεια της επιχειρηματικής δραστηριότητας"
+    },
+    "buy_sell_agreement_tracker": {
+      "title": "Παρακολούθηση Συμφωνίας Αγοράς-Πώλησης",
+      "description": "Διαχείριση συμφωνιών επιχειρηματικής συνεργασίας"
+    },
+    "remote_collaboration_tools": {
+      "title": "Εργαλεία απομακρυσμένης συνεργασίας",
+      "description": "Δουλέψτε μαζί παρά την απόσταση"
+    },
+    "multi_jurisdiction_guidance": {
+      "title": "Οδηγίες για Πολλαπλές Δικαιοδοσίες",
+      "description": "Πλοηγηθείτε σε νόμους σε διαφορετικές τοποθεσίες"
+    }
+  },
+  "cultural": {
+    "extended_family_obligations": "Εκτεταμένες οικογενειακές ευθύνες",
+    "islamic_inheritance": "Ισλαμικές αρχές κληρονομιάς",
+    "jewish_traditions": "Εβραϊκές οικογενειακές παραδόσεις",
+    "christian_values": "Χριστιανικές αξίες διαχείρισης",
+    "buddhist_principles": "Βουδιστικές αρχές συμπόνιας",
+    "patriarchal_hierarchy": "Παραδοσιακή πατριαρχική δομή",
+    "matriarchal_hierarchy": "Παραδοσιακή μητριαρχική δομή",
+    "elder_led_hierarchy": "Οικογενειακή δομή με επικεφαλής ηλικιωμένους",
+    "collective_decision_making": "Συλλογικές οικογενειακές αποφάσεις",
+    "elder_respect_obligations": "Υποχρεώσεις φροντίδας ηλικιωμένων",
+    "multilingual_documentation": "Απαιτήσεις τεκμηρίωσης σε πολλές γλώσσες"
+  },
+  "access": {
+    "descriptions": {
+      "executor": "Μπορούν να διαχειριστούν τα πάντα για να βοηθήσουν την οικογένειά σας",
+      "full": "Μπορούν να δουν και να διαχειριστούν όλες τις πληροφορίες της οικογένειάς σας",
+      "limited": "Μπορούν να δουν βασικές πληροφορίες επικοινωνίας και οδηγίες έκτακτης ανάγκης",
+      "standard": "Μπορούν να δουν τα περισσότερα από αυτά που θα χρειαζόταν η οικογένειά σας"
+    },
+    "levels": {
+      "executor": "Πλήρης πρόσβαση βοηθού",
+      "full": "Μπορεί να δει τα πάντα",
+      "limited": "Μόνο βασικές πληροφορίες",
+      "standard": "Τακτική πρόσβαση για οικογένειες"
+    },
+    "permissions": {
+      "editInformation": "Μπορεί να κάνει αλλαγές",
+      "manageAccess": "Μπορεί να διαχειριστεί άλλους βοηθούς",
+      "viewAssets": "Μπορεί να δει τα σημαντικά σας πράγματα",
+      "viewDocuments": "Μπορεί να διαβάσει έγγραφα"
+    }
+  },
+  "actions": {
+    "addPerson": "Μπορούμε να προσθέσουμε ένα έμπιστο άτομο",
+    "assignRole": "Μπορούμε να αναθέσουμε έναν ρόλο",
+    "contactPerson": "Μπορούμε να επικοινωνήσουμε",
+    "editPerson": "Ενημέρωση των πληροφοριών τους",
+    "grantAccess": "Μπορούμε να παραχωρήσουμε πρόσβαση",
+    "printSummary": "Μπορούμε να εκτυπώσουμε μια περίληψη",
+    "removePerson": "Μπορούμε να αφαιρέσουμε από αξιόπιστα άτομα",
+    "removeRole": "Μπορούμε να αλλάξουμε τον ρόλο τους",
+    "revokeAccess": "Μπορούμε να αλλάξουμε αυτό που βλέπουν",
+    "scheduleReview": "Μπορούμε να προγραμματίσουμε μια αξιολόγηση",
+    "sendInvitation": "Μπορούμε να τους καλέσουμε να βοηθήσουν",
+    "setBackup": "Μπορούμε να ορίσουμε έναν εφεδρικό βοηθό",
+    "viewProfile": "Μπορούμε να δούμε όλες τις λεπτομέρειες τους"
+  },
+  "common": {
+    "cancel": "Ματαίωση",
+    "fix": "Διορθώνω",
+    "minutes": "Πρακτικά",
+    "start": "Αρχή"
+  },
+  "estateStatus": {
+    "actions": {
+      "cancel": "Ματαίωση",
+      "update": "Εκσυγχρονίζω",
+      "updating": "Ενημέρωση"
+    },
+    "description": "Περιγραφή",
+    "dialog": {
+      "description": "Περιγραφή",
+      "title": "Τίτλος"
+    },
+    "empty": {
+      "noStatus": "Χωρίς κατάσταση",
+      "readOnly": "Μόνο για ανάγνωση"
+    },
+    "fields": {
+      "additionalDetails": "Πρόσθετες λεπτομέρειες",
+      "status": "Κατάσταση"
+    },
+    "lastUpdated": "Τελευταία ενημέρωση",
+    "logAction": "Ενέργεια καταγραφής",
+    "placeholders": {
+      "additionalContext": "Πρόσθετο πλαίσιο",
+      "selectStatus": "Επιλογή κατάστασης"
+    },
+    "progress": "Πρόοδος",
+    "statuses": {
+      "assetsBeingValued": "Περιουσιακά στοιχεία που αποτιμώνται",
+      "debtsBeingSettled": "Χρέη υπό ρύθμιση",
+      "distributionInProgress": "Διανομή σε εξέλιξη",
+      "estateClosed": "Κλειστό κτήμα",
+      "gatheringDocuments": "Συλλογή εγγράφων",
+      "initialReview": "Αρχική αξιολόγηση",
+      "probateInitiated": "Έναρξη διαδικασίας διαθήκης",
+      "readyForDistribution": "Έτοιμο για διανομή",
+      "taxPreparation": "Προετοιμασία φόρων"
+    },
+    "title": "Τίτλος"
+  },
+  "guardian": {
+    "templateModal": {
+      "_1": ""
+    }
+  },
+  "guardianView": {
+    "defaultUserName": "Προεπιλεγμένο όνομα χρήστη",
+    "errors": {
+      "failedToLoad": "Η φόρτωση απέτυχε",
+      "pleaseLogin": "Παρακαλώ συνδεθείτε"
+    },
+    "guardianInfo": {
+      "description": "Περιγραφή",
+      "securityNote": "Σημείωση ασφαλείας"
+    },
+    "readOnlyAccess": "Πρόσβαση μόνο για ανάγνωση",
+    "sections": {
+      "finalWishes": {
+        "description": "Περιγραφή",
+        "digitalAccounts": "Ψηφιακοί λογαριασμοί",
+        "empty": "Αδειάζω",
+        "funeralWishes": "Ευχές για κηδεία",
+        "title": "Τίτλος"
+      },
+      "keyDocuments": {
+        "description": "Περιγραφή",
+        "empty": "Αδειάζω",
+        "expires": "Λήγει",
+        "keyDocumentBadge": "Βασικό σήμα εγγράφου",
+        "noExpiration": "Χωρίς λήξη",
+        "title": "Τίτλος"
+      }
+    },
+    "subtitle": "Υπότιτλος",
+    "title": "Τίτλος"
+  },
+  "guardianship": {
+    "addDependent": "Προσθέστε κάποιον που χρειάζεται φροντίδα",
+    "alternateGuardian": "Εφεδρικός Φροντιστής",
+    "careStandards": "Πώς θέλετε να τους φροντίζετε",
+    "childGuardians": "Ποιος θα φροντίσει τα παιδιά σας",
+    "dependentCare": "Σχέδια Φροντίδας για τα Αγαπημένα σας Πρόσωπα",
+    "description": "Επιλέξτε στοργικούς ανθρώπους που θα φροντίσουν τα παιδιά σας ή τα μέλη της οικογένειάς σας που χρειάζονται βοήθεια, αν δεν μπορείτε να είστε εκεί.",
+    "educationPreferences": "Ευχές για το σχολείο και την εκπαίδευση",
+    "financialProvisions": "Χρήματα για τη Φροντίδα τους",
+    "guardianCompensation": "Υποστήριξη για τον Φροντιστή",
+    "guardianFor": "Ποιος θα φροντίσει για {{name}}",
+    "guardianInstructions": "Πώς να τα φροντίσετε",
+    "guardianQualifications": "Γιατί είναι η σωστή επιλογή",
+    "healthcarePreferences": "Υγεία και Ιατρική Περίθαλψη",
+    "lifestylePreferences": "Καθημερινή Ζωή και Δραστηριότητες",
+    "noChildren": "Δεν μας έχετε ενημερώσει ακόμα για κανένα παιδί ή μέλος της οικογένειάς σας που χρειάζεται φροντίδα.",
+    "primaryGuardian": "Φροντιστής Πρώτης Επιλογής",
+    "religiousPreferences": "Πίστη και Αξίες",
+    "reportingRequirements": "Κρατώντας την οικογένεια ενήμερη",
+    "subtitle": "Βεβαιωθείτε ότι τα αγαπημένα σας πρόσωπα φροντίζονται",
+    "temporaryGuardian": "Βραχυπρόθεσμος Φροντιστής",
+    "title": "Ποιος θα φροντίσει τα αγαπημένα σας πρόσωπα",
+    "visitationRights": "Διευθετήσεις για οικογενειακές επισκέψεις"
+  },
+  "notificationPreferences": {
+    "description": "Περιγραφή",
+    "emailRequired": "Απαιτείται email",
+    "errors": {
+      "loadFailed": "Η φόρτωση απέτυχε",
+      "updateFailed": "Η ενημέρωση απέτυχε."
+    },
+    "howItWorks": {
+      "point1": "Σημείο 1",
+      "point2": "Σημείο 2",
+      "point3": "Σημείο 3",
+      "title": "Τίτλος"
+    },
+    "info": "Πληροφορίες",
+    "lastUpdated": "Τελευταία ενημέρωση",
+    "noEmail": "Δεν υπάρχει ηλεκτρονικό ταχυδρομείο",
+    "title": "Τίτλος"
+  },
+  "playbook": {
+    "addContact": "Προσθήκη επαφής",
+    "autoSaveNotice": "Ειδοποίηση αυτόματης αποθήκευσης",
+    "contact": "Επαφή",
+    "contactFields": {
+      "email": "E-mail",
+      "emailPlaceholder": "Θέση ηλεκτρονικού ταχυδρομείου",
+      "name": "Ονομα",
+      "namePlaceholder": "Θέση ονόματος",
+      "notes": "Σημειώσεις",
+      "notesPlaceholder": "Σημειώσεις",
+      "phone": "Τηλέφωνο",
+      "phonePlaceholder": "Θέση τηλεφώνου",
+      "role": "Ρόλος",
+      "rolePlaceholder": "Θέση ρόλου"
+    },
+    "errors": {
+      "loadFailed": "Η φόρτωση απέτυχε",
+      "saveFailed": "Η αποθήκευση απέτυχε."
+    },
+    "loading": "Φόρτωση",
+    "noContent": "Δεν υπάρχει περιεχόμενο",
+    "preview": "Πρεμιέρα",
+    "save": "Εκτός",
+    "saving": "Οικονομία",
+    "sections": {
+      "digital": {
+        "description": "Περιγραφή",
+        "placeholder": "Θέση κράτησης θέσης",
+        "title": "Τίτλος"
+      },
+      "documents": {
+        "description": "Περιγραφή",
+        "placeholder": "Θέση κράτησης θέσης",
+        "title": "Τίτλος"
+      },
+      "funeral": {
+        "description": "Περιγραφή",
+        "placeholder": "Θέση κράτησης θέσης",
+        "title": "Τίτλος"
+      },
+      "practical": {
+        "description": "Περιγραφή",
+        "placeholder": "Θέση κράτησης θέσης",
+        "title": "Τίτλος"
+      }
+    },
+    "subtitle": {
+      "edit": "Εκδίδω",
+      "view": "Θέα"
+    },
+    "tabs": {
+      "digital": "Ψηφιακό",
+      "documents": "Εγγραφα",
+      "funeral": "Κηδεία",
+      "instructions": "Οδηγίες",
+      "practical": "Πρακτικός"
+    },
+    "templates": {
+      "append": "Προσαρτώ",
+      "backToTemplates": "Επιστροφή στα πρότυπα",
+      "description": "Περιγραφή",
+      "existingContent": "Υπάρχον περιεχόμενο",
+      "fillInVariables": "Συμπληρώστε μεταβλητές",
+      "insertTemplate": "Εισαγωγή προτύπου",
+      "preview": "Πρεμιέρα",
+      "replace": "Αντικαθιστώ",
+      "title": "Τίτλος",
+      "variableCount": "Αριθμός μεταβλητών",
+      "variablePlaceholder": "Μεταβλητή θέσης"
+    },
+    "title": "Τίτλος",
+    "useTemplate": "Χρήση προτύπου",
+    "accessDenied": "Δεν επιτρέπεται η πρόσβαση",
+    "description": "Περιγραφή",
+    "digitalAccounts": {
+      "description": "Περιγραφή",
+      "label": "Επιγραφή",
+      "placeholder": "Θέση κράτησης θέσης"
+    },
+    "discardChanges": {
+      "cancel": "Ματαίωση",
+      "confirm": "Επιβεβαιώνω",
+      "description": "Περιγραφή",
+      "title": "Τίτλος"
+    },
+    "documentLocations": {
+      "description": "Περιγραφή",
+      "label": "Επιγραφή",
+      "placeholder": "Θέση κράτησης θέσης"
+    },
+    "exitPreview": "Έξοδος από την προεπισκόπηση",
+    "fetchError": "Σφάλμα ανάκτησης",
+    "funeralWishes": {
+      "description": "Περιγραφή",
+      "label": "Επιγραφή",
+      "placeholder": "Θέση κράτησης θέσης"
+    },
+    "lastUpdated": "Τελευταία ενημέρωση",
+    "notAuthenticated": "Δεν έχει επαληθευτεί",
+    "notFound": {
+      "description": "Περιγραφή",
+      "title": "Τίτλος"
+    },
+    "practicalInstructions": {
+      "description": "Περιγραφή",
+      "label": "Επιγραφή",
+      "placeholder": "Θέση κράτησης θέσης"
+    },
+    "saveError": "Σφάλμα αποθήκευσης",
+    "saveSuccess": "Επιτυχής αποθήκευση",
+    "titleReadOnly": "Τίτλος μόνο για ανάγνωση",
+    "viewDescription": "Προβολή περιγραφής",
+    "viewFooter": "Προβολή υποσέλιδου",
+    "viewTitle": "Προβολή τίτλου"
+  },
+  "executor": {
+    "completed": "Ολοκληρώθηκε το",
+    "dashboard": {
+      "reminder": "Υπενθύμιση",
+      "subtitle": "Υπότιτλος",
+      "title": "Τίτλος"
+    },
+    "due": "Οφειλόμενος",
+    "errors": {
+      "loadTasksFailed": "Η φόρτωση εργασιών απέτυχε.",
+      "updateTaskFailed": "Η εργασία ενημέρωσης απέτυχε."
+    },
+    "highPriority": "Υψηλή προτεραιότητα",
+    "legalSupport": {
+      "button": "Κουμπί",
+      "description": "Περιγραφή",
+      "title": "Τίτλος"
+    },
+    "markComplete": "Σήμανση ολοκληρωμένου",
+    "sections": {
+      "firstWeek": {
+        "description": "Περιγραφή",
+        "empty": "Αδειάζω",
+        "title": "Τίτλος"
+      },
+      "immediate": {
+        "description": "Περιγραφή",
+        "empty": "Αδειάζω",
+        "title": "Τίτλος"
+      },
+      "ongoing": {
+        "description": "Περιγραφή",
+        "empty": "Αδειάζω",
+        "title": "Τίτλος"
+      }
+    },
+    "stats": {
+      "completed": "Ολοκληρώθηκε το",
+      "remaining": "Παραμένων",
+      "totalTasks": "Σύνολο εργασιών"
+    },
+    "undo": "Ξεκάνω",
+    "viewAccountDetails": "Προβολή λεπτομερειών λογαριασμού",
+    "viewRelatedDocuments": "Δείτε σχετικά έγγραφα"
+  },
+  "executorDashboard": {
+    "professional_guidance_1": "Επαγγελματική καθοδήγηση 1"
+  },
+  "executorManagement": {
+    "add_new_executor_10": "Προσθήκη νέου εκτελεστή 10",
+    "all_executors_must_have_legacy_23": "Όλοι οι εκτελεστές πρέπει να έχουν legacy 23",
+    "current_executors_17": "Τρέχοντες εκτελεστές 17",
+    "designate_trusted_individuals__9": "Ορίστε έμπιστα άτομα 9",
+    "email_address_11": "Διεύθυνση ηλεκτρονικού ταχυδρομείου 11",
+    "executor_example_com_12": "Παράδειγμα εκτελεστή com 12",
+    "executor_management_8": "Διαχείριση εκτελεστών 8",
+    "failed_to_add_executor_5": "Αποτυχία προσθήκης του εκτελεστή 5",
+    "failed_to_load_executors_2": "Αποτυχία φόρτωσης εκτελεστών 2",
+    "failed_to_remove_executor_6": "Αποτυχία κατάργησης του εκτελεστή 6",
+    "important_information_19": "Σημαντικές πληροφορίες 19",
+    "loading_executors_7": "Φόρτωση εκτελεστών 7",
+    "no_executors_designated_yet_ad_18": "Δεν έχουν οριστεί ακόμη εκτελεστές στις 18 Δεκεμβρίου",
+    "primary_executor_14": "Κύριος εκτελεστής 14",
+    "primary_executors_receive_imme_20": "Οι κύριοι εκτελεστές λαμβάνουν άμεσα 20",
+    "relationship_type_13": "Τύπος σχέσης 13",
+    "secondary_executor_15": "Δευτερεύων εκτελεστής 15",
+    "secondary_executors_are_notifi_21": "Οι δευτερεύοντες εκτελεστές ειδοποιούνται 21",
+    "statusLabels": {
+      "addExecutor": "Προσθήκη εκτελεστή",
+      "adding": "Αθροιση",
+      "unknownUser": "Άγνωστος χρήστης"
+    },
+    "this_person_is_already_designa_4": "Αυτό το άτομο έχει ήδη οριστεί ως 4",
+    "user_not_found_with_this_email_3": "Δεν βρέθηκε χρήστης με αυτό το email 3"
+  },
+  "invite": {
+    "title": "Τίτλος"
+  },
+  "inviteAcceptance": {
+    "buttons": {
+      "acceptRole": "Αποδοχή ρόλου",
+      "decline": "Πτώση",
+      "processing": "Επεξεργασία"
+    },
+    "defaultInviterName": "Προεπιλεγμένο όνομα προσκαλούντος",
+    "disclaimer": "Αρνηση",
+    "errors": {
+      "acceptFailed": "Η αποδοχή απέτυχε",
+      "alreadyProcessed": "Ήδη επεξεργασμένο",
+      "declineFailed": "Η απόρριψη απέτυχε",
+      "invalidLink": "Μη έγκυρος σύνδεσμος",
+      "loadingFailed": "Η φόρτωση απέτυχε.",
+      "notFound": "Δεν βρέθηκε"
+    },
+    "guardianRole": {
+      "relationship": "Σχέση",
+      "responsibilities": "Ευθύνες",
+      "title": "Τίτλος",
+      "yourName": "Το όνομά σας"
+    },
+    "loading": "Φόρτωση",
+    "notFound": {
+      "description": "Περιγραφή",
+      "title": "Τίτλος"
+    },
+    "subtitle": "Υπότιτλος",
+    "whatThisMeans": {
+      "point1": "Σημείο 1",
+      "point2": "Σημείο 2",
+      "point3": "Σημείο 3",
+      "point4": "Σημείο 4",
+      "title": "Τίτλος"
+    }
+  },
+  "structures": {
+    "nuclear": "Παραδοσιακή Οικογένεια",
+    "single_parent": "Μονογονεϊκή Οικογένεια",
+    "blended": "Μικτή Οικογένεια",
+    "multigenerational": "Πολυγενεακή οικογένεια",
+    "childless": "Ζευγάρι χωρίς παιδιά",
+    "empty_nest": "Οικογένεια Άδειας Φωλιάς",
+    "non_traditional": "Μοναδική Οικογενειακή Δομή"
+  },
+  "complexity": {
+    "simple": "Απλός",
+    "moderate": "Μέτριος",
+    "complex": "Συγκρότημα"
+  },
+  "personalized": "Η εξατομικευμένη εμπειρία οικογενειακού προγραμματισμού σας",
+  "specialConsiderations": "Ειδικές Σκέψεις",
+  "recommendedFeatures": "Προτεινόμενα χαρακτηριστικά",
+  "tabs": {
+    "overview": "Επισκόπηση",
+    "insights": "Πληροφορίες",
+    "features": "Χαρακτηριστικά",
+    "cultural": "Πολιτιστικός"
+  },
+  "keyConsiderations": "Βασικές Σκέψεις για την Οικογένειά σας",
+  "specialNeeds": "Ειδικές Ανάγκες Σχεδιασμού",
+  "sensitivities": "Περιοχές που απαιτούν επιπλέον φροντίδα",
+  "needs": {
+    "special_needs_planning": "Σχεδιασμός για Ειδικές Ανάγκες",
+    "long_term_care_planning": "Σχεδιασμός Μακροχρόνιας Φροντίδας",
+    "special_needs_trust": "Ίδρυμα για Άτομα με Ειδικές Ανάγκες",
+    "elder_care_planning": "Σχεδιασμός Φροντίδας Ηλικιωμένων",
+    "multi_generational_wealth_transfer": "Πολυγενεακή Μεταφορά",
+    "military_benefit_planning": "Στρατιωτικά οφέλη",
+    "deployment_planning": "Σχεδιασμός Ανάπτυξης",
+    "business_succession": "Επιχειρηματική Διαδοχή",
+    "key_person_planning": "Σχεδιασμός βασικών προσώπων",
+    "young_child_guardianship": "Κηδεμονία Μικρού Παιδιού",
+    "education_planning": "Εκπαιδευτικός Σχεδιασμός",
+    "sharia_compliant_planning": "Σχεδιασμός σύμφωνα με τη Σαρία"
+  },
+  "insightType": {
+    "structure": "Δομή Οικογένειας",
+    "need": "Ειδική Ανάγκη",
+    "opportunity": "Ευκαιρία",
+    "risk": "Παράγοντας κινδύνου"
+  },
+  "priority": {
+    "high": "Υψηλή προτεραιότητα",
+    "medium": "Μεσαία προτεραιότητα",
+    "low": "Χαμηλή προτεραιότητα"
+  },
+  "suggestedActions": "Προτεινόμενες ενέργειες",
+  "recommendedFeaturesTitle": "Χαρακτηριστικά προσαρμοσμένα για την οικογένειά σας",
+  "recommendedFeaturesDesc": "Με βάση τη δομή και τις ανάγκες της οικογένειάς σας, αυτές οι λειτουργίες θα είναι πιο χρήσιμες",
+  "culturalConsiderations": "Πολιτιστικές και Θρησκευτικές Σκέψεις",
+  "culturalDesc": "Σεβαστείτε τις αξίες και τις παραδόσεις της οικογένειάς σας στον προγραμματισμό σας",
+  "noCulturalSettings": "Δεν έχουν οριστεί πολιτισμικές προτιμήσεις. Προσθέστε τις για να διασφαλίσετε ότι ο προγραμματισμός σας σέβεται τις αξίες της οικογένειάς σας.",
+  "configureCultural": "Διαμόρφωση Πολιτισμικών Προτιμήσεων",
+  "culturalUpdated": "Ενημερώθηκαν οι Πολιτισμικές Προτιμήσεις",
+  "culturalUpdatedDesc": "Ο οικογενειακός σας προγραμματισμός θα αντικατοπτρίζει πλέον τις πολιτισμικές σας αξίες και παραδόσεις"
+}

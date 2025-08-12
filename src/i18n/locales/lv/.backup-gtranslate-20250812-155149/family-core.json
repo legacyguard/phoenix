@@ -1,0 +1,1036 @@
+{
+  "crisisAssessment": {
+    "familyCapabilities": "Ģimenes iespējas",
+    "familyDiscussion": "Ģimenes diskusija",
+    "familyDiscussionDescription": "Ģimenes diskusijas apraksts"
+  },
+  "errors": {
+    "loadingFamily": "Ielādējot jūsu uzticamās personas, radās problēmas. Lūdzu, atsvaidziniet lapu.",
+    "accessDenied": "Jūs pašlaik nevarat mainīt šīs personas informāciju.",
+    "assigningRole": "Mēs nevarējām viņiem piešķirt šo lomu. Lūdzu, mēģiniet vēlreiz.",
+    "dataNotFound": "Mēs nevarējām atrast šo informāciju",
+    "duplicatePerson": "Šī persona jau ir jūsu uzticamo personu sarakstā",
+    "duplicateRecord": "Tas jau ir saglabāts",
+    "grantingAccess": "Mēs nevarējām viņiem piešķirt piekļuvi. Lūdzu, mēģiniet vēlreiz.",
+    "invalidEmail": "Šī e-pasta adrese neizskatās pareiza. Lūdzu, pārbaudiet to.",
+    "invalidPhone": "Šis tālruņa numurs neizskatās pareizs. Lūdzu, pārbaudiet to.",
+    "networkError": "Savienojuma problēma. Lūdzu, pārbaudiet interneta savienojumu.",
+    "permissionDenied": "Jums nav atļaujas to darīt.",
+    "removingPerson": "Mēs nevarējām tos noņemt no jūsu uzticamo personu saraksta. Lūdzu, mēģiniet vēlreiz.",
+    "roleConflict": "Viņiem jau ir cita loma, kas konfliktē ar šo.",
+    "savingPerson": "Mums neizdevās saglabāt viņu informāciju. Lūdzu, pārbaudiet un mēģiniet vēlreiz.",
+    "sendingInvitation": "Neizdevās nosūtīt ielūgumu. Lūdzu, pārbaudiet viņu e-pastu un mēģiniet vēlreiz.",
+    "unknown": "Kaut kas nogāja greizi"
+  },
+  "familyCapabilities": {
+    "businessOperations": "Uzņēmējdarbības operācijas",
+    "canAccessBankAccounts": "Var piekļūt bankas kontiem",
+    "canAccessDigitalAccounts": "Var piekļūt digitālajiem kontiem",
+    "canFileInsuranceClaims": "Var iesniegt apdrošināšanas atlīdzības pieprasījumus",
+    "canManageBusiness": "Var pārvaldīt uzņēmējdarbību",
+    "cannotAccessBankAccounts": "Nevar piekļūt bankas kontiem",
+    "cannotAccessDigitalAccounts": "Nevar piekļūt digitālajiem kontiem",
+    "cannotFileInsuranceClaims": "Nevar iesniegt apdrošināšanas atlīdzības pieprasījumus",
+    "clearInheritancePlan": "Skaidrs mantojuma plāns",
+    "digitalAccess": "Digitālā piekļuve",
+    "digitalAccounts": "Digitālie konti",
+    "immediateFinancialNeeds": "Neatliekamās finansiālās vajadzības",
+    "inheritance": "Mantojums",
+    "insuranceClaims": "Apdrošināšanas atlīdzības pieprasījumi",
+    "knowsLegalContacts": "Zina juridiskos kontaktus",
+    "knowsMedicalWishes": "Zina medicīniskās vēlmes",
+    "legalMatters": "Juridiskie jautājumi",
+    "medicalDecisions": "Medicīniski lēmumi",
+    "noBusinessInfo": "Nav informācijas par uzņēmumu",
+    "noInheritancePlan": "Nav mantojuma plāna",
+    "noLegalContacts": "Nav juridisku kontaktu",
+    "noMedicalInfo": "Nav medicīniskas informācijas",
+    "partialBusinessInfo": "Daļēja uzņēmuma informācija",
+    "partialInheritancePlan": "Daļējas mantojuma plāns",
+    "partialMedicalInfo": "Daļēja medicīniskā informācija",
+    "payBills": "Apmaksāt rēķinus"
+  },
+  "familyCrisisAssessment": {
+    "15_1": ""
+  },
+  "familyExecutorView": {
+    "communications": {
+      "description": "Apraksts",
+      "empty": "Tukšs",
+      "title": "Nosaukums",
+      "to": "Uz"
+    },
+    "executor": "Izpildītājs",
+    "footer": "Kājene",
+    "subtitle": "Apakšvirsraksts",
+    "theExecutor": "Testamenta izpildītājs",
+    "title": "Nosaukums"
+  },
+  "familyHub": {
+    "accessLevels": {
+      "emergencyOnly": {
+        "description": "Apraksts",
+        "fullDescription": "Pilns apraksts",
+        "title": "Nosaukums"
+      },
+      "fullAccess": {
+        "description": "Apraksts",
+        "fullDescription": "Pilns apraksts",
+        "title": "Nosaukums"
+      },
+      "limitedInfo": {
+        "description": "Apraksts",
+        "fullDescription": "Pilns apraksts",
+        "title": "Nosaukums"
+      },
+      "none": {
+        "description": "Apraksts",
+        "title": "Nosaukums"
+      }
+    },
+    "emergencyProtocol": {
+      "activeMessage": "Aktīvs ziņojums",
+      "configure": "Konfigurēt",
+      "configured": "Konfigurēts",
+      "description": "Apraksts",
+      "title": "Nosaukums"
+    },
+    "errors": {
+      "authenticationRequired": "Nepieciešama autentifikācija",
+      "failedToFetchData": "Neizdevās izgūt datus",
+      "failedToLoadMembers": "Neizdevās ielādēt dalībniekus"
+    },
+    "memberManagement": {
+      "addMorePeople": "Pievienot vēl cilvēkus",
+      "addTrustedPerson": "Pievienot uzticamu personu",
+      "daysAgo": "Pirms dažām dienām",
+      "informationAccessLevel": "Informācijas piekļuves līmenis",
+      "lastContactOver30Days": "Pēdējais kontakts vairāk nekā 30 dienas",
+      "lastContacted": "Pēdējais sazināšanās datums",
+      "preparedness": "Sagatavotība",
+      "sendUpdate": "Sūtīt atjauninājumu",
+      "sendUpdateTo": "Sūtīt atjauninājumu uz",
+      "title": "Nosaukums"
+    },
+    "messages": {
+      "accessLevelUpdated": "Piekļuves līmenis ir atjaunināts",
+      "failedToSendUpdate": "Neizdevās nosūtīt atjauninājumu",
+      "updateSentTo": "Atjauninājums nosūtīts uz"
+    },
+    "overallPreparedness": {
+      "description": "Apraksts",
+      "improvementNeeded": "Nepieciešami uzlabojumi",
+      "title": "Nosaukums"
+    },
+    "subtitle": "Apakšvirsraksts",
+    "tabs": {
+      "familyMembers": "Ģimenes locekļi",
+      "members": "Dalībnieki",
+      "preparednessTools": "Sagatavotības rīki",
+      "tools": "Instrumenti"
+    },
+    "title": "Nosaukums"
+  },
+  "familyPreparednessTools": {
+    "create_a_printable_guide_for_y_3": "Izveidojiet drukājamu ceļvedi 3. klasei",
+    "errors": {
+      "comingSoon": "Drīzumā",
+      "generateFailed": "Ģenerēšana neizdevās",
+      "premiumRequired": "Nepieciešama prēmija",
+      "selectScenario": "Izvēlieties scenāriju"
+    },
+    "generate_another_5": "Ģenerējiet vēl 5",
+    "generate_emergency_guide_2": "Ģenerēt avārijas rokasgrāmatu 2",
+    "guides": {
+      "death": {
+        "bankAccounts": "Bankas konti",
+        "contactExecutor": "Sazinieties ar izpildītāju",
+        "contactLawyer": "Sazinieties ar juristu",
+        "deathCertificate": "Nāves apliecība",
+        "disclaimer": "Atruna",
+        "employer": "Darba devējs",
+        "financialInstitutions": "Finanšu iestādes",
+        "first24Hours": "Pirmās 24 stundas",
+        "generatedOn": "Ģenerēts",
+        "importantDocuments": "Svarīgi dokumenti",
+        "insuranceCompanies": "Apdrošināšanas kompānijas",
+        "investmentAccounts": "Investīciju konti",
+        "locateWill": "Atrašanās vieta",
+        "peopleToNotify": "Cilvēki, kuriem jāpaziņo",
+        "secureResidence": "Droša dzīvesvieta",
+        "socialSecurity": "Sociālā apdrošināšana",
+        "title": "Nosaukums"
+      },
+      "emergency": {
+        "address": "Adrese",
+        "attorney": "Advokāts",
+        "emergency": "Ārkārtas situācija",
+        "financialAdvisor": "Finanšu konsultants",
+        "homeInformation": "Mājas informācija",
+        "insuranceAgent": "Apdrošināšanas aģents",
+        "keyContacts": "Galvenie kontakti",
+        "securitySystem": "Drošības sistēma",
+        "spouse": "Laulātais",
+        "title": "Nosaukums",
+        "utilities": "Komunālie pakalpojumi"
+      },
+      "hospitalization": {
+        "allergies": "Alerģijas",
+        "bloodType": "Asinsgrupa",
+        "currentMedications": "Pašreizējās zāles",
+        "emergencyContacts": "Kontaktpersonas ārkārtas situācijās",
+        "healthcarePowerOfAttorney": "Veselības aprūpes pilnvara",
+        "hipaaRelease": "Hipaa izlaidums",
+        "legalDocuments": "Juridiskie dokumenti",
+        "livingWill": "Dzīves griba",
+        "medicalInformation": "Medicīniskā informācija",
+        "preferredHospital": "Vēlamā slimnīca",
+        "primaryCarePhysician": "Ģimenes ārsts",
+        "title": "Nosaukums"
+      },
+      "missing": {
+        "bankingApps": "Banku lietotnes",
+        "checkHospitals": "Pārbaudiet slimnīcas",
+        "checkWithWorkplace": "Pārbaudiet darba vietā",
+        "contactCloseFriends": "Sazinieties ar tuviem draugiem",
+        "contactLocalPolice": "Sazinieties ar vietējo policiju",
+        "digitalFootprint": "Digitālā pēda",
+        "email": "E-pasts",
+        "immediateActions": "Neatliekamās darbības",
+        "phoneProvider": "Telefona pakalpojumu sniedzējs",
+        "socialMedia": "Sociālie mediji",
+        "title": "Nosaukums"
+      }
+    },
+    "mockContent": {
+      "insurancePolicies": "Apdrošināšanas polises"
+    },
+    "scenarios": {
+      "death": {
+        "description": "Apraksts",
+        "title": "Nosaukums"
+      },
+      "emergency": {
+        "description": "Apraksts",
+        "title": "Nosaukums"
+      },
+      "hospitalization": {
+        "description": "Apraksts",
+        "title": "Nosaukums"
+      },
+      "missing": {
+        "description": "Apraksts",
+        "title": "Nosaukums"
+      }
+    },
+    "select_scenario_4": "Izvēlieties 4. scenāriju",
+    "tools": {
+      "cancel": "Atcelt",
+      "chooseScenario": "Izvēlieties scenāriju",
+      "emergencySimulator": "Avārijas simulators",
+      "emergencySimulatorDesc": "Avārijas simulatora apraksts",
+      "generateGuide": "Ģenerēt ceļvedi",
+      "generating": "Ģenerēšana",
+      "informationTreasureHunt": "Informācijas dārgumu medības",
+      "launch": "Palaišana",
+      "printGuide": "Drukas ceļvedis",
+      "stepByStepGuides": "Soli pa solim sniegtas instrukcijas",
+      "stepByStepGuidesDesc": "Soli pa solim sniegtas instrukcijas",
+      "treasureHuntDesc": "Dārgumu medību apraksts",
+      "videoMessages": "Video ziņojumi",
+      "videoMessagesDesc": "Video ziņojumu apraksts"
+    },
+    "use_these_tools_to_ensure_your_1": "Izmantojiet šos rīkus, lai nodrošinātu savu 1."
+  },
+  "form": {
+    "additionalRoles": "Citi veidi, kā viņi var palīdzēt",
+    "assignedRoles": "Kā viņi palīdzēs jūsu ģimenei",
+    "selectRoles": "Izvēlieties, kā viņi var palīdzēt jūsu ģimenei",
+    "accessDescription": "Ko viņi var redzēt un kad viņi var palīdzēt",
+    "accessInfo": "Ko viņi var darīt",
+    "accessLevel": "Cik daudz viņi var redzēt",
+    "addPerson": "Pievienot kādu, kas palīdzēs",
+    "alternatePhone": "Cits tālruņa numurs",
+    "backupFor": "Viņi ir rezerves variants",
+    "backupHelper": "Kura vietā viņi iejauksies, ja nepieciešams",
+    "capabilities": "Kāpēc viņiem tas ir piemērots",
+    "capabilitiesHelper": "Kas viņus padara par labu izvēli palīdzēt?",
+    "compensation": "Ja viņiem nepieciešams atbalsts",
+    "compensationHelper": "Jebkura finansiāla palīdzība, kas viņiem varētu būt nepieciešama",
+    "contactInfo": "Kā ar viņiem sazināties",
+    "dateOfBirth": "Dzimšanas diena",
+    "editPerson": "Mēs varam atjaunināt viņu informāciju",
+    "emailAddress": "E-pasts",
+    "fullName": "Viņu pilns vārds",
+    "fullNameHelper": "Svarīgiem dokumentiem izmantojiet viņu juridisko vārdu",
+    "fullNamePlaceholder": "Viņu pilns juridiskais nosaukums",
+    "homeAddress": "Kur viņi dzīvo",
+    "instructions": "Svarīgas lietas, kas viņiem jāzina",
+    "instructionsHelper": "Jebkādi īpaši norādījumi, kā palīdzēt savai ģimenei",
+    "instructionsPlaceholder": "Kas viņiem jāzina, lai palīdzētu",
+    "limitations": "Lietas, kas jāņem vērā",
+    "limitationsHelper": "Jebkas, kas varētu apgrūtināt viņiem palīdzēt",
+    "personalInfo": "Par viņiem",
+    "primaryPhone": "Labākais tālruņa numurs",
+    "primaryRole": "Galvenais veids, kā viņi palīdzēs",
+    "relationship": "Kā jūs tos pazīstat",
+    "relationshipPlaceholder": "Tāpat kā laulātais, bērns, brālis/māsa, labākais draugs",
+    "roleInfo": "Kā viņi palīdzēs",
+    "workAddress": "Kur viņi strādā"
+  },
+  "preparedness": {
+    "familyBenefit": "Ģimenes pabalsts",
+    "familyCommunication": {
+      "description": "Apraksts",
+      "scheduleReview": "Plānot pārskatīšanu",
+      "shareReport": "Kopīgot pārskatu",
+      "title": "Nosaukums"
+    },
+    "gaps": {
+      "basicAccessInfo": "Pamata piekļuves informācija",
+      "addMedicalPreferences": "Pievienot medicīniskās preferences",
+      "completeFinancialAccess": "Pilnīga piekļuve finansiālām vajadzībām",
+      "documentBusinessOperations": "Dokumentu biznesa operācijas",
+      "improveImmediateAccess": "Uzlabojiet tūlītēju piekļuvi",
+      "updateWillAndTrust": "Atjauninājums būs un uzticība"
+    },
+    "levels": {
+      "goodBasic": "Labs pamata līmenis",
+      "fullyPrepared": "Pilnībā sagatavots",
+      "minimalPreparation": "Minimāla sagatavošanās",
+      "needsImmediate": "Nepieciešams nekavējoties",
+      "somePreparation": "Daži sagatavošanās darbi",
+      "wellPrepared": "Labi sagatavots"
+    },
+    "assessments": {
+      "decisionMaking": {
+        "good": "Labi",
+        "needsWork": "Nepieciešams darbs"
+      },
+      "immediateAccess": {
+        "good": "Labi",
+        "needsWork": "Nepieciešams darbs"
+      },
+      "longTermSecurity": {
+        "good": "Labi",
+        "needsWork": "Nepieciešams darbs"
+      }
+    },
+    "dimensions": {
+      "decisionMaking": "Lēmumu pieņemšana",
+      "immediateAccess": "Tūlītēja piekļuve",
+      "longTermSecurity": "Ilgtermiņa drošība"
+    },
+    "impact": "Ietekme",
+    "improvements": {
+      "addBankAccounts": "Pievienot bankas kontus",
+      "documentMedicalWishes": "Dokumentējiet medicīniskās vēlmes",
+      "uploadLegalDocuments": "Augšupielādēt juridiskos dokumentus"
+    },
+    "nextStep": "Nākamais solis",
+    "scenarioReadiness": "Scenārija gatavība",
+    "scenarios": {
+      "extendedTravel": {
+        "description": "Apraksts",
+        "title": "Nosaukums"
+      },
+      "suddenDeath": {
+        "description": "Apraksts",
+        "title": "Nosaukums"
+      }
+    },
+    "title": "Nosaukums",
+    "toImprove": "Lai uzlabotu"
+  },
+  "relationships": {
+    "child": "Bērns",
+    "friend": "Draugs",
+    "other": "Citi",
+    "parent": "Vecāks",
+    "sibling": "Brālis/māsa",
+    "spouse": "Laulātais"
+  },
+  "roles": {
+    "advisor": "Padomnieks",
+    "beneficiary": "Saņēmējs",
+    "caregiver": "Aprūpētājs",
+    "emergencyContact": "Ārkārtas kontaktpersona",
+    "executor": "Izpildītājs",
+    "financialAgent": "Finanšu aģents (pilnvara)",
+    "guardian": "Aizbildnis",
+    "healthcareProxy": "Veselības aprūpes starpniekserveris",
+    "representative": "pārstāvis",
+    "successor": "Rezerves kopija",
+    "trustee": "Pilnvarnieks",
+    "witness": "Būs liecinieks"
+  },
+  "trustedCircle": {
+    "roles": "Kā viņi var palīdzēt",
+    "totalMembers": "{{count}} cilvēki ir gatavi palīdzēt",
+    "addFirst": "Varam pievienot kādu, kurš var palīdzēt",
+    "description": "Izvēlieties uzticamus cilvēkus, kuri var atbalstīt jūsu ģimeni nepieciešamības gadījumā.",
+    "empty": "Varam sākt, pievienojot kādu, uz ko jūsu ģimene var paļauties — dzīvesbiedru, tuvu draugu vai uzticamu ģimenes locekli.",
+    "keyPeople": "Galvenie cilvēki",
+    "recentlyAdded": "Nesen pievienots",
+    "subtitle": "Cilvēki, kas būs kopā ar jūsu ģimeni",
+    "title": "Uzticami cilvēki",
+    "viewAll": "Skatīt visus"
+  },
+  "family": {
+    "GuardianPlaybook": {
+      "className": {
+        "flex_itemscenter_justifycenter_h64": "",
+        "grid_gridcols6_wfull": "režģis režģa kolonnas-6 w-pilns",
+        "flex_itemscenter_gap2": "elastīgi priekšmeti-centra sprauga-2",
+        "hidden_sminline": "slēpts sm:inline",
+        "spacey4": "telpa-y-4",
+        "minh200px": "min-h-[200 pikseļi]",
+        "flex_justifybetween_itemscenter_mb4": "",
+        "grid_gridcols1_mdgridcols2_gap4": "režģis režģa-kolonnas-1 md:režģa-kolonnas-2 gap-4",
+        "mdcolspan2": "",
+        "minh80px": "min-h-[80 pikseļi]",
+        "mt2": "",
+        "flex_itemscenter_justifybetween": "flex items-center justified-between"
+      },
+      "htmlFor": {
+        "funeral_wishes": "bēru_vēlmes",
+        "digital_accounts": "digitālie_konti",
+        "document_locations": "dokumentu_vietas",
+        "personal_messages": "personīgās_ziņojumi",
+        "practical_instructions": "praktiski_norādījumi"
+      },
+      "id": {
+        "funeral_wishes": "bēru_vēlmes",
+        "digital_accounts": "digitālie_konti",
+        "document_locations": "dokumentu_vietas",
+        "personal_messages": "personīgās_ziņojumi",
+        "practical_instructions": "praktiski_norādījumi"
+      },
+      "playbooktabskey": "ģimene.cilnes.${key}",
+      "contactnameindex": "kontaktpersonas vārds-${index}",
+      "contactrelationshipindex": "kontaktpersonas-attiecības-${index}",
+      "contactphoneindex": "kontaktpersonas-tālrunis-${index}",
+      "contactemailindex": "kontaktinformācijas e-pasts-${index}",
+      "contactnotesindex": "kontaktu-piezīmes-${index}",
+      "playbookstatusstatus": "ģimenes.statuss.${status}"
+    },
+    "GuardianPlaybookView": {
+      "className": {
+        "minhscreen_flex_itemscenter_justifycenter": "",
+        "animatepulse_textcenter": "animēt pulsa teksta centru",
+        "maxwmd": "",
+        "minhscreen_bggradienttobr_frombackground_tomuted20": "min-h-screen bg-gradient-to-br no fona līdz apklusinātam/20",
+        "container_mxauto_px4_py8_maxw4xl": "konteiners mx-auto px-4 py-8 max-w-4xl",
+        "flex_itemscenter_justifycenter_w20_h20_roundedfull": "",
+        "mt4": "",
+        "mb8": "",
+        "flex_itemscenter_gap2": "elastīgi priekšmeti-centra sprauga-2",
+        "grid_gap4_mdgridcols2": "režģa atstarpe-4 md:režģa-kolonnas-2",
+        "spacey2": "telpa-y-2",
+        "flex_itemsstart_justifybetween": "elastīgi vienumi-sākt izlīdzināt-starp",
+        "fontsemibold": "pustreknraksts",
+        "spacey1": "telpa-y-1",
+        "flex_itemscenter_gap2_textsm_textprimary_hoverunde": "flex items-center gap-2 text-sm text-primary hover:pasvītrojums",
+        "spacey6": "telpa-y-6",
+        "prose_prosesm_maxwnone": "proza proza-sm max-w-none",
+        "whitespaceprewrap": "atstarpes pirms ietīšanas",
+        "mt12_textcenter_textsm_textmutedforeground": "mt-12 teksta centrs text-sm teksts-apklusināts priekšplāns"
+      },
+      "telcontactphone": "tālr.:${contact.phone}",
+      "mailtocontactemail": "e-pasts:${contact.email}"
+    }
+  },
+  "guardianUpload": {
+    "relationships": {
+      "child": "Bērns",
+      "friend": "Draugs",
+      "legalProfessional": "Juridiskais speciālists",
+      "other": "Citi",
+      "parent": "Vecāks",
+      "sibling": "Brālis/māsa",
+      "spouse": "Laulātais"
+    },
+    "roles": {
+      "emergencyContact": "Ārkārtas kontaktpersona",
+      "executorOfWill": "Testamenta izpildītājs",
+      "financialPowerOfAttorney": "Finanšu pilnvara",
+      "guardianForChildren": "Bērnu aizbildnis",
+      "healthcareProxy": "Veselības aprūpes starpniekserveris",
+      "trustee": "Pilnvarnieks"
+    },
+    "rolesTitle": "Lomu nosaukums",
+    "addButton": "Pievienot pogu",
+    "addTitle": "Pievienot nosaukumu",
+    "added": "Pievienots",
+    "countryDescription": "Valsts apraksts",
+    "countryLabel": "Valsts etiķete",
+    "countryPlaceholder": "Valsts vietturis",
+    "description": "Apraksts",
+    "editTitle": "Rediģēt nosaukumu",
+    "emailLabel": "E-pasta etiķete",
+    "emailPlaceholder": "E-pasta vietturis",
+    "error": "Kļūda",
+    "errors": {
+      "connectionError": "Savienojuma kļūda",
+      "duplicateError": "Dublikāta kļūda",
+      "permissionError": "Atļaujas kļūda",
+      "requiredDataNotFound": "Nepieciešamie dati nav atrasti",
+      "saveError": "Saglabāšanas kļūda",
+      "unknownError": "Nezināma kļūda"
+    },
+    "fullNameLabel": "Pilna vārda etiķete",
+    "fullNamePlaceholder": "Pilna vārda vietturis",
+    "loginToSave": "Piesakieties, lai saglabātu",
+    "phoneLabel": "Tālruņa etiķete",
+    "phonePlaceholder": "Tālruņa vietturis",
+    "relationshipLabel": "Attiecību etiķete",
+    "relationshipPlaceholder": "Relāciju vietturis",
+    "saving": "Saglabāšana",
+    "success": "Panākumi",
+    "updateButton": "Atjaunināšanas poga",
+    "updated": "Atjaunināts"
+  },
+  "familyMembers": "Ģimenes locekļi",
+  "sensitivity": {
+    "step_family_dynamics": "Paģimenes attiecībām ir nepieciešama skaidra dokumentācija",
+    "family_conflict": "Ģimenes konflikti prasa papildu skaidrību plānošanā",
+    "previous_marriage_obligations": "Jānokārto iepriekšējās laulības saistības",
+    "absent_parent_considerations": "Vecāku prombūtnes situācijas prasa rūpīgu plānošanu",
+    "solo_responsibility_pressure": "Vientuļo vecāku pienākumi var šķist milzīgi",
+    "inheritance_disputes": "Potenciālie mantojuma strīdi ir jānovērš",
+    "traditional_role_expectations": "Varētu būt nepieciešams apsvērt tradicionālās ģimenes lomas",
+    "disability_planning_stress": "Īpašo vajadzību plānošana var būt emocionāli sarežģīta",
+    "long_term_care_concerns": "Ilgtermiņa aprūpes plānošana ir būtiska"
+  },
+  "features": {
+    "family_communication_center": {
+      "title": "Ģimenes komunikācijas centrs",
+      "description": "Informējiet visus un saglabājiet savienojumus"
+    },
+    "family_tree_visualizer": {
+      "title": "Ģimenes koka vizualizētājs",
+      "description": "Vizuāli kartējiet sarežģītas ģimenes attiecības"
+    },
+    "step_family_guidance": {
+      "title": "Paaudzģimeņu atbalsts",
+      "description": "Pārliecināti virzieties jauktās ģimenes plānošanā"
+    },
+    "family_meeting_tools": {
+      "title": "Ģimenes sapulču rīki",
+      "description": "Veicināt svarīgas ģimenes diskusijas"
+    },
+    "document_vault": {
+      "title": "Droša dokumentu glabātuve",
+      "description": "Droši glabājiet un kopīgojiet svarīgus dokumentus"
+    },
+    "guardian_network_builder": {
+      "title": "Aizbildņu tīkla veidotājs",
+      "description": "Izveidojiet spēcīgu atbalsta tīklu saviem bērniem"
+    },
+    "single_parent_resources": {
+      "title": "Resursi vientuļajiem vecākiem",
+      "description": "Specializēti rīki un atbalsts vientuļajiem vecākiem"
+    },
+    "complex_beneficiary_manager": {
+      "title": "Kompleksa saņēmēju pārvaldnieks",
+      "description": "Skaidri pārvaldiet vairākas attiecības"
+    },
+    "multi_generation_planner": {
+      "title": "Vairāku paaudžu plānotājs",
+      "description": "Līdzsvarojiet vajadzības visās paaudzēs"
+    },
+    "elder_care_resources": {
+      "title": "Resursi vecāka gadagājuma cilvēku aprūpei",
+      "description": "Atbalsts novecojošu vecāku aprūpei"
+    },
+    "special_needs_trust_wizard": {
+      "title": "Īpašo vajadzību uzticības vednis",
+      "description": "Izveidojiet atbilstošus trastus biedriem ar īpašām vajadzībām"
+    },
+    "care_instruction_builder": {
+      "title": "Aprūpes instrukciju veidotājs",
+      "description": "Dokumentējiet detalizētas aprūpes prasības"
+    },
+    "government_benefit_tracker": {
+      "title": "Valdības pabalstu izsekotājs",
+      "description": "Nodrošiniet tiesības uz svarīgām priekšrocībām"
+    },
+    "business_succession_planner": {
+      "title": "Biznesa pēctecības plānotājs",
+      "description": "Biznesa nepārtrauktības plāns"
+    },
+    "buy_sell_agreement_tracker": {
+      "title": "Pirkuma-pārdošanas līgumu izsekotājs",
+      "description": "Pārvaldiet biznesa partnerības līgumus"
+    },
+    "remote_collaboration_tools": {
+      "title": "Attālās sadarbības rīki",
+      "description": "Strādājiet kopā, neskatoties uz attālumu"
+    },
+    "multi_jurisdiction_guidance": {
+      "title": "Vairākjurisdikcijas vadlīnijas",
+      "description": "Orientējieties uz likumiem dažādās vietās"
+    }
+  },
+  "cultural": {
+    "extended_family_obligations": "Paplašinātas ģimenes atbildības",
+    "islamic_inheritance": "Islāma mantojuma principi",
+    "jewish_traditions": "Ebreju ģimenes tradīcijas",
+    "christian_values": "Kristīgās pārvaldības vērtības",
+    "buddhist_principles": "Budistu līdzjūtības principi",
+    "patriarchal_hierarchy": "Tradicionālā patriarhālā struktūra",
+    "matriarchal_hierarchy": "Tradicionālā matriarhālā struktūra",
+    "elder_led_hierarchy": "Vecāko vadīta ģimenes struktūra",
+    "collective_decision_making": "Kolektīvi ģimenes lēmumi",
+    "elder_respect_obligations": "Vecāka gadagājuma cilvēku aprūpes pienākumi",
+    "multilingual_documentation": "Daudzvalodu dokumentācijas vajadzības"
+  },
+  "access": {
+    "descriptions": {
+      "executor": "Viņi var visu pārvaldīt, lai palīdzētu jūsu ģimenei",
+      "full": "Viņi var redzēt un pārvaldīt visu jūsu ģimenes informāciju",
+      "limited": "Viņi var redzēt pamata kontaktinformāciju un norādījumus ārkārtas situācijām",
+      "standard": "Viņi var redzēt lielāko daļu no tā, kas būtu nepieciešams jūsu ģimenei"
+    },
+    "levels": {
+      "executor": "Pilnīga palīga piekļuve",
+      "full": "Var redzēt visu",
+      "limited": "Tikai pamatinformācija",
+      "standard": "Regulāra ģimenes piekļuve"
+    },
+    "permissions": {
+      "editInformation": "Var veikt izmaiņas",
+      "manageAccess": "Var pārvaldīt citus palīgus",
+      "viewAssets": "Var redzēt jūsu svarīgās lietas",
+      "viewDocuments": "Var lasīt dokumentus"
+    }
+  },
+  "actions": {
+    "addPerson": "Mēs varam pievienot uzticamu personu",
+    "assignRole": "Mēs varam piešķirt lomu",
+    "contactPerson": "Mēs varam sazināties",
+    "editPerson": "Atjauniniet viņu informāciju",
+    "grantAccess": "Mēs varam piešķirt piekļuvi",
+    "printSummary": "Mēs varam izdrukāt kopsavilkumu",
+    "removePerson": "Mēs varam noņemt no uzticamiem cilvēkiem",
+    "removeRole": "Mēs varam mainīt viņu lomu",
+    "revokeAccess": "Mēs varam mainīt to, ko viņi var redzēt",
+    "scheduleReview": "Varam ieplānot apskati",
+    "sendInvitation": "Mēs varam viņus uzaicināt palīdzēt",
+    "setBackup": "Mēs varam iestatīt rezerves palīgu",
+    "viewProfile": "Mēs varam redzēt visas viņu detaļas"
+  },
+  "common": {
+    "cancel": "Atcelt",
+    "fix": "Labot",
+    "minutes": "Minūtes",
+    "start": "Sākt"
+  },
+  "estateStatus": {
+    "actions": {
+      "cancel": "Atcelt",
+      "update": "Atjauninājums",
+      "updating": "Atjaunināšana"
+    },
+    "description": "Apraksts",
+    "dialog": {
+      "description": "Apraksts",
+      "title": "Nosaukums"
+    },
+    "empty": {
+      "noStatus": "Nav statusa",
+      "readOnly": "Tikai lasāms"
+    },
+    "fields": {
+      "additionalDetails": "Papildu informācija",
+      "status": "Statuss"
+    },
+    "lastUpdated": "Pēdējoreiz atjaunināts",
+    "logAction": "Reģistrēšanas darbība",
+    "placeholders": {
+      "additionalContext": "Papildu konteksts",
+      "selectStatus": "Atlasīt statusu"
+    },
+    "progress": "",
+    "statuses": {
+      "assetsBeingValued": "Vērtējamie aktīvi",
+      "debtsBeingSettled": "Parādi tiek nokārtoti",
+      "distributionInProgress": "Izplatīšana notiek",
+      "estateClosed": "Īpašums slēgts",
+      "gatheringDocuments": "Dokumentu vākšana",
+      "initialReview": "Sākotnējā pārskatīšana",
+      "probateInitiated": "Uzsākta mantojuma apliecība",
+      "readyForDistribution": "Gatavs izplatīšanai",
+      "taxPreparation": "Nodokļu sagatavošana"
+    },
+    "title": "Nosaukums"
+  },
+  "guardian": {
+    "templateModal": {
+      "_1": ""
+    }
+  },
+  "guardianView": {
+    "defaultUserName": "Noklusējuma lietotājvārds",
+    "errors": {
+      "failedToLoad": "Neizdevās ielādēt",
+      "pleaseLogin": "Lūdzu, piesakieties"
+    },
+    "guardianInfo": {
+      "description": "Apraksts",
+      "securityNote": "Drošības piezīme"
+    },
+    "readOnlyAccess": "Tikai lasīšanas piekļuve",
+    "sections": {
+      "finalWishes": {
+        "description": "Apraksts",
+        "digitalAccounts": "Digitālie konti",
+        "empty": "Tukšs",
+        "funeralWishes": "Bēru vēlmes",
+        "title": "Nosaukums"
+      },
+      "keyDocuments": {
+        "description": "Apraksts",
+        "empty": "Tukšs",
+        "expires": "Derīguma termiņš beidzas",
+        "keyDocumentBadge": "Svarīga dokumenta nozīmīte",
+        "noExpiration": "Nav derīguma termiņa",
+        "title": "Nosaukums"
+      }
+    },
+    "subtitle": "Apakšvirsraksts",
+    "title": "Nosaukums"
+  },
+  "guardianship": {
+    "addDependent": "Pievienot kādu, kam nepieciešama aprūpe",
+    "alternateGuardian": "Rezerves aprūpētājs",
+    "careStandards": "Kā jūs vēlaties, lai par viņiem rūpētos",
+    "childGuardians": "Kas rūpēsies par jūsu bērniem",
+    "dependentCare": "Aprūpes plāni jūsu tuviniekiem",
+    "description": "Izvēlieties mīlošus cilvēkus, kuri rūpēsies par jūsu bērniem vai ģimenes locekļiem, kuriem nepieciešama palīdzība, ja jūs pats nevarat būt klāt.",
+    "educationPreferences": "Skolas un izglītības vēlmes",
+    "financialProvisions": "Nauda viņu aprūpei",
+    "guardianCompensation": "Atbalsts aprūpētājam",
+    "guardianFor": "Kas rūpēsies par {{name}}",
+    "guardianInstructions": "Kā par viņiem rūpēties",
+    "guardianQualifications": "Kāpēc viņi ir pareizā izvēle",
+    "healthcarePreferences": "Veselības un medicīniskā aprūpe",
+    "lifestylePreferences": "Ikdienas dzīve un aktivitātes",
+    "noChildren": "Jūs vēl neesat pastāstījis par bērniem vai ģimenes locekļiem, kuriem nepieciešama aprūpe.",
+    "primaryGuardian": "Pirmās izvēles aprūpētājs",
+    "religiousPreferences": "Ticība un vērtības",
+    "reportingRequirements": "Ģimenes informēšana",
+    "subtitle": "Rūpējoties par saviem mīļajiem",
+    "temporaryGuardian": "Īstermiņa aprūpētājs",
+    "title": "Kas rūpēsies par jūsu mīļajiem",
+    "visitationRights": "Ģimenes apmeklējumu kārtība"
+  },
+  "notificationPreferences": {
+    "description": "Apraksts",
+    "emailRequired": "Nepieciešama e-pasta adrese",
+    "errors": {
+      "loadFailed": "Ielāde neizdevās",
+      "updateFailed": "Atjaunināšana neizdevās"
+    },
+    "howItWorks": {
+      "point1": "1. punkts",
+      "point2": "2. punkts",
+      "point3": "3. punkts",
+      "title": "Nosaukums"
+    },
+    "info": "Informācija",
+    "lastUpdated": "Pēdējoreiz atjaunināts",
+    "noEmail": "Nav e-pasta",
+    "title": "Nosaukums"
+  },
+  "playbook": {
+    "addContact": "Pievienot kontaktu",
+    "autoSaveNotice": "Automātiskās saglabāšanas paziņojums",
+    "contact": "Kontaktinformācija",
+    "contactFields": {
+      "email": "E-pasts",
+      "emailPlaceholder": "E-pasta vietturis",
+      "name": "Vārds",
+      "namePlaceholder": "Nosaukuma vietturis",
+      "notes": "Piezīmes",
+      "notesPlaceholder": "Piezīmju vietturis",
+      "phone": "Tālrunis",
+      "phonePlaceholder": "Tālruņa vietturis",
+      "role": "Loma",
+      "rolePlaceholder": "Lomas vietturis"
+    },
+    "errors": {
+      "loadFailed": "Ielāde neizdevās",
+      "saveFailed": "Saglabāšana neizdevās"
+    },
+    "loading": "Ielādēšana",
+    "noContent": "Nav satura",
+    "preview": "Priekšskatījums",
+    "save": "Saglabāt",
+    "saving": "Saglabāšana",
+    "sections": {
+      "digital": {
+        "description": "Apraksts",
+        "placeholder": "Vietturis",
+        "title": "Nosaukums"
+      },
+      "documents": {
+        "description": "Apraksts",
+        "placeholder": "Vietturis",
+        "title": "Nosaukums"
+      },
+      "funeral": {
+        "description": "Apraksts",
+        "placeholder": "Vietturis",
+        "title": "Nosaukums"
+      },
+      "practical": {
+        "description": "Apraksts",
+        "placeholder": "Vietturis",
+        "title": "Nosaukums"
+      }
+    },
+    "subtitle": {
+      "edit": "Rediģēt",
+      "view": "Skatīt"
+    },
+    "tabs": {
+      "digital": "Digitāls",
+      "documents": "Dokumenti",
+      "funeral": "Bēres",
+      "instructions": "Norādījumi",
+      "practical": "Praktisks"
+    },
+    "templates": {
+      "append": "Pievienot",
+      "backToTemplates": "Atpakaļ pie veidnēm",
+      "description": "Apraksts",
+      "existingContent": "Esošais saturs",
+      "fillInVariables": "Aizpildiet mainīgos",
+      "insertTemplate": "Ievietot veidni",
+      "preview": "Priekšskatījums",
+      "replace": "Aizstāt",
+      "title": "Nosaukums",
+      "variableCount": "Mainīgo skaits",
+      "variablePlaceholder": "Mainīgā vietturis"
+    },
+    "title": "Nosaukums",
+    "useTemplate": "Izmantot veidni",
+    "accessDenied": "Piekļuve liegta",
+    "description": "Apraksts",
+    "digitalAccounts": {
+      "description": "Apraksts",
+      "label": "Etiķete",
+      "placeholder": "Vietturis"
+    },
+    "discardChanges": {
+      "cancel": "Atcelt",
+      "confirm": "Apstiprināt",
+      "description": "Apraksts",
+      "title": "Nosaukums"
+    },
+    "documentLocations": {
+      "description": "Apraksts",
+      "label": "Etiķete",
+      "placeholder": "Vietturis"
+    },
+    "exitPreview": "Iziet no priekšskatījuma",
+    "fetchError": "Ielādes kļūda",
+    "funeralWishes": {
+      "description": "Apraksts",
+      "label": "Etiķete",
+      "placeholder": "Vietturis"
+    },
+    "lastUpdated": "Pēdējoreiz atjaunināts",
+    "notAuthenticated": "Nav autentificēts",
+    "notFound": {
+      "description": "Apraksts",
+      "title": "Nosaukums"
+    },
+    "practicalInstructions": {
+      "description": "Apraksts",
+      "label": "Etiķete",
+      "placeholder": "Vietturis"
+    },
+    "saveError": "Saglabāšanas kļūda",
+    "saveSuccess": "Saglabāt panākumus",
+    "titleReadOnly": "Nosaukums tikai lasāms",
+    "viewDescription": "Skatīt aprakstu",
+    "viewFooter": "Skatīt kājeni",
+    "viewTitle": "Skatīt nosaukumu"
+  },
+  "executor": {
+    "completed": "Pabeigts",
+    "dashboard": {
+      "reminder": "Atgādinājums",
+      "subtitle": "Apakšvirsraksts",
+      "title": "Nosaukums"
+    },
+    "due": "Pienākas",
+    "errors": {
+      "loadTasksFailed": "Ielādēt uzdevumus neizdevās",
+      "updateTaskFailed": "Atjaunināšanas uzdevums neizdevās"
+    },
+    "highPriority": "Augsta prioritāte",
+    "legalSupport": {
+      "button": "Poga",
+      "description": "Apraksts",
+      "title": "Nosaukums"
+    },
+    "markComplete": "Atzīmēt kā pabeigtu",
+    "sections": {
+      "firstWeek": {
+        "description": "Apraksts",
+        "empty": "Tukšs",
+        "title": "Nosaukums"
+      },
+      "immediate": {
+        "description": "Apraksts",
+        "empty": "Tukšs",
+        "title": "Nosaukums"
+      },
+      "ongoing": {
+        "description": "Apraksts",
+        "empty": "Tukšs",
+        "title": "Nosaukums"
+      }
+    },
+    "stats": {
+      "completed": "Pabeigts",
+      "remaining": "Atlikušie",
+      "totalTasks": "Kopējais uzdevumu skaits"
+    },
+    "undo": "Atsaukt",
+    "viewAccountDetails": "Skatīt konta informāciju",
+    "viewRelatedDocuments": "Skatīt saistītos dokumentus"
+  },
+  "executorDashboard": {
+    "professional_guidance_1": "Profesionāla vadlīnija 1"
+  },
+  "executorManagement": {
+    "add_new_executor_10": "Pievienot jaunu izpildītāju 10",
+    "all_executors_must_have_legacy_23": "Visiem testamenta izpildītājiem ir jābūt mantojumam 23",
+    "current_executors_17": "Pašreizējie testamenta izpildītāji 17",
+    "designate_trusted_individuals__9": "Norādiet uzticamas personas 9",
+    "email_address_11": "E-pasta adrese 11",
+    "executor_example_com_12": "Izpildītāja piemērs com 12",
+    "executor_management_8": "Izpildītāja vadība 8",
+    "failed_to_add_executor_5": "Neizdevās pievienot izpildītāju 5.",
+    "failed_to_load_executors_2": "Neizdevās ielādēt izpildītājus 2",
+    "failed_to_remove_executor_6": "Neizdevās noņemt izpildītāju 6.",
+    "important_information_19": "Svarīga informācija 19",
+    "loading_executors_7": "Izpildītāju ielāde 7",
+    "no_executors_designated_yet_ad_18": "Vēl nav iecelti testamenta izpildītāji (reklāmas Nr. 18)",
+    "primary_executor_14": "Galvenais izpildītājs 14",
+    "primary_executors_receive_imme_20": "Primārie izpildītāji saņem nekavējoties 20",
+    "relationship_type_13": "Attiecību veids 13",
+    "secondary_executor_15": "Otrreizējais izpildītājs 15",
+    "secondary_executors_are_notifi_21": "Otrreizējie izpildītāji tiek informēti 21.",
+    "statusLabels": {
+      "addExecutor": "Pievienot izpildītāju",
+      "adding": "Pievienošana",
+      "unknownUser": "Nezināms lietotājs"
+    },
+    "this_person_is_already_designa_4": "Šī persona jau ir norādīta kā 4.",
+    "user_not_found_with_this_email_3": "Lietotājs ar šo e-pasta adresi nav atrasts 3"
+  },
+  "invite": {
+    "title": "Nosaukums"
+  },
+  "inviteAcceptance": {
+    "buttons": {
+      "acceptRole": "Pieņemt lomu",
+      "decline": "Noraidīt",
+      "processing": "Apstrāde"
+    },
+    "defaultInviterName": "Noklusējuma uzaicinātāja vārds",
+    "disclaimer": "Atruna",
+    "errors": {
+      "acceptFailed": "Pieņemšana neizdevās",
+      "alreadyProcessed": "Jau apstrādāts",
+      "declineFailed": "Noraidījums neizdevās",
+      "invalidLink": "Nederīga saite",
+      "loadingFailed": "Ielāde neizdevās",
+      "notFound": "Nav atrasts"
+    },
+    "guardianRole": {
+      "relationship": "Attiecības",
+      "responsibilities": "Pienākumi",
+      "title": "Nosaukums",
+      "yourName": "Tavs vārds"
+    },
+    "loading": "Ielādēšana",
+    "notFound": {
+      "description": "Apraksts",
+      "title": "Nosaukums"
+    },
+    "subtitle": "Apakšvirsraksts",
+    "whatThisMeans": {
+      "point1": "1. punkts",
+      "point2": "2. punkts",
+      "point3": "3. punkts",
+      "point4": "4. punkts",
+      "title": "Nosaukums"
+    }
+  },
+  "structures": {
+    "nuclear": "Tradicionālā ģimene",
+    "single_parent": "Vientuļo vecāku ģimene",
+    "blended": "Jaukta ģimene",
+    "multigenerational": "Daudzpaaudžu ģimene",
+    "childless": "Pāris bez bērniem",
+    "empty_nest": "Tukša ligzdas ģimene",
+    "non_traditional": "Unikāla ģimenes struktūra"
+  },
+  "complexity": {
+    "simple": "Vienkāršs",
+    "moderate": "Vidējs",
+    "complex": "Komplekss"
+  },
+  "personalized": "Jūsu personalizētā ģimenes plānošanas pieredze",
+  "specialConsiderations": "Īpaši apsvērumi",
+  "recommendedFeatures": "Ieteicamās funkcijas",
+  "tabs": {
+    "overview": "Pārskats",
+    "insights": "Ieskats",
+    "features": "Funkcijas",
+    "cultural": "Kultūras"
+  },
+  "keyConsiderations": "Svarīgākie apsvērumi jūsu ģimenei",
+  "specialNeeds": "Īpašas plānošanas vajadzības",
+  "sensitivities": "Vietas, kurām nepieciešama īpaša aprūpe",
+  "needs": {
+    "special_needs_planning": "Īpašo vajadzību plānošana",
+    "long_term_care_planning": "Ilgtermiņa aprūpes plānošana",
+    "special_needs_trust": "Īpašo vajadzību fonds",
+    "elder_care_planning": "Vecāka gadagājuma cilvēku aprūpes plānošana",
+    "multi_generational_wealth_transfer": "Vairāku paaudžu nodošana",
+    "military_benefit_planning": "Militārie pabalsti",
+    "deployment_planning": "Izvietošanas plānošana",
+    "business_succession": "Uzņēmējdarbības pēctecība",
+    "key_person_planning": "Galvenās personas plānošana",
+    "young_child_guardianship": "Mazu bērnu aizbildnība",
+    "education_planning": "Izglītības plānošana",
+    "sharia_compliant_planning": "Šariata atbilstoša plānošana"
+  },
+  "insightType": {
+    "structure": "Ģimenes struktūra",
+    "need": "Īpaša vajadzība",
+    "opportunity": "Iespēja",
+    "risk": "Riska faktors"
+  },
+  "priority": {
+    "high": "Augsta prioritāte",
+    "medium": "Vidēja prioritāte",
+    "low": "Zema prioritāte"
+  },
+  "suggestedActions": "Ieteicamās darbības",
+  "recommendedFeaturesTitle": "Jūsu ģimenei pielāgotas funkcijas",
+  "recommendedFeaturesDesc": "Pamatojoties uz jūsu ģimenes struktūru un vajadzībām, šīs funkcijas būs visnoderīgākās.",
+  "culturalConsiderations": "Kultūras un reliģiskie apsvērumi",
+  "culturalDesc": "Plānojot, ievērojiet savas ģimenes vērtības un tradīcijas",
+  "noCulturalSettings": "Nav noteiktas kultūras preferences. Pievienojiet tās, lai nodrošinātu, ka jūsu plānošana respektē jūsu ģimenes vērtības.",
+  "configureCultural": "Kultūras preferenču konfigurēšana",
+  "culturalUpdated": "Kultūras preferences atjauninātas",
+  "culturalUpdatedDesc": "Jūsu ģimenes plānošana tagad atspoguļos jūsu kultūras vērtības un tradīcijas"
+}

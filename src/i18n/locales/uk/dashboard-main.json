@@ -1,11 +1,459 @@
 {
+<<<<<<< Updated upstream
   "errors": {
     "initializationFailed": "[TODO-TRANSLATE] dashboard-main:errors.initializationFailed"
+=======
+  "annualReview": {
+    "complete": {
+      "summary": "Короткий огляд"
+    }
+  },
+  "dashboard": {
+    "welcome": {
+      "title": "Ми можемо продовжувати готуватися до майбутнього вашої родини"
+    },
+    "respectful": {
+      "greeting": "Ласкаво просимо назад, {{name}}",
+      "greetingNew": "Ласкаво просимо, {{name}}",
+      "statusOverview": {
+        "title": "Важливі документи",
+        "secured": "Документ {{count}} зберігається безпечно",
+        "secured_plural": "Документи {{count}} зберігаються в безпеці",
+        "suggestion": "Більшість людей зберігають 3–5 ключових документів",
+        "noDocuments": "Документів ще немає",
+        "getStarted": "Почніть зі свого посвідчення особи"
+      },
+      "suggestions": {
+        "title": "Ви також можете:",
+        "notNow": "Не зараз",
+        "considerAdding": "Розгляньте можливість додавання",
+        "whenReady": "Коли ти будеш готовий",
+        "noRush": "Не поспішайте — робіть це у своєму власному темпі"
+      },
+      "professionalStatus": {
+        "foundation": {
+          "title": "Початок роботи",
+          "description": "Ми створюємо основу для плану вашої родини"
+        },
+        "building": {
+          "title": "Досягнення прогресу",
+          "description": "Ми організовуємо важливу інформацію для вашої родини"
+        },
+        "established": {
+          "title": "Добре організований",
+          "description": "Ваші важливі документи зберігаються та доступні"
+        },
+        "comprehensive": {
+          "title": "Комплексний план",
+          "description": "Ваша родина має все, що їй потрібно"
+        }
+      },
+      "taskCategories": {
+        "essential": "Основне",
+        "recommended": "Рекомендовано",
+        "optional": "Необов'язково"
+      },
+      "taskStatus": {
+        "suggestion": "Пропозиція",
+        "completed": "Завершено",
+        "secured": "Забезпечено",
+        "ready": "Коли ви будете готові"
+      }
+    },
+    "notifications": {
+      "success": {
+        "assetAdded": "Ресурс успішно додано",
+        "profileUpdated": "Профіль успішно оновлено",
+        "settingsSaved": "Налаштування успішно збережено"
+      },
+      "info": {
+        "reviewDue": "Щорічний огляд має бути завершений незабаром",
+        "documentsExpiring": "Термін дії деяких документів незабаром закінчується"
+      }
+    },
+    "documentCard": {
+      "include_in_survivor_s_manual_1": "Включити до посібника для тих, хто вижив 1"
+    },
+    "expired": "Термін дії минув",
+    "expiresSoon": "Термін дії скоро закінчується",
+    "firstTimeGuide": {
+      "finish": "Фініш",
+      "helpfulTips": "Корисні поради",
+      "importantNote": "Важливе зауваження",
+      "next": "Далі",
+      "previous": "Попередній",
+      "progress": {
+        "description": "Опис",
+        "tip1": "Порада1",
+        "tip2": "Порада2",
+        "title": "Назва"
+      },
+      "recommendations": {
+        "description": "Опис",
+        "tip1": "Порада1",
+        "tip2": "Порада2",
+        "title": "Назва"
+      },
+      "skipTour": "Пропустити екскурсію",
+      "stages": {
+        "description": "Опис",
+        "tip1": "Порада1",
+        "tip2": "Порада2",
+        "tip3": "Порада 3",
+        "title": "Назва"
+      },
+      "stepProgress": "Прогрес кроків",
+      "welcome": {
+        "description": "Опис",
+        "tip1": "Порада1",
+        "tip2": "Порада2",
+        "tip3": "Порада 3",
+        "title": "Назва"
+      }
+    },
+    "guardianCard": {
+      "country_1": "Країна 1",
+      "roles_2": "Ролі 2"
+    },
+    "metadata": {
+      "contact": "Контакти",
+      "renewsOn": "Поновлюється"
+    },
+    "nudge": {
+      "completeNow": "Завершити зараз",
+      "continueSecuring": "Продовжуйте закріплення",
+      "dismiss": "Відхилити",
+      "finishToday": "Завершити сьогодні",
+      "oneTaskLeft": "Залишилося одне завдання",
+      "progressTitle": "Назва прогресу",
+      "tasksRemaining": "Залишилися завдання",
+      "welcomeBack": "Ласкаво просимо назад"
+    },
+    "stages": {
+      "advancedPlanning": "Попереднє планування",
+      "building": "Будівля",
+      "foundation": "Фонд",
+      "legacy": "Спадщина",
+      "strengthening": "Зміцнення"
+    },
+    "strategicSummary": {
+      "addBackupGuardian": "Додати резервного опікуна",
+      "addContingentBeneficiaries": "Додати умовних бенефіціарів",
+      "addFinancialAccounts": "Додати фінансові рахунки",
+      "addHomeProperty": "Додати житло",
+      "addPrimaryBeneficiary": "Додати основного бенефіціара",
+      "addPrimaryGuardian": "Додати основного опікуна",
+      "assetInventory": "Що важливо для вашої родини",
+      "assetInventoryDesc": "Важливі речі, які повинна знати ваша родина",
+      "criticalDocuments": "Важливі документи",
+      "criticalDocumentsDesc": "Документи, які знадобляться вашій родині",
+      "guardianNetwork": "Довірені люди",
+      "guardianNetworkDesc": "Люди, які можуть допомогти, коли це необхідно",
+      "ifNotDone": "Якщо не зроблено",
+      "impact": {
+        "familyProtection": "Захист сім'ї",
+        "immediateDecision": "Негайне рішення",
+        "preventsAssetLoss": "Запобігає втраті активів",
+        "preventsConflicts": "Запобігає конфліктам"
+      },
+      "inheritancePlan": "Майбутнє вашої родини",
+      "inheritancePlanDesc": "Як ви хочете забезпечити своїх близьких",
+      "minutes": "Хвилини",
+      "nextAction": "Наступна дія",
+      "nextCriticalStep": "Найважливіший крок для вашої родини",
+      "startWithNext": "Почніть з наступного",
+      "subtitle": "Підзаголовок",
+      "title": "Назва",
+      "whyImportant": "Чому важливо"
+    },
+    "allocation": "Розподіл",
+    "assetName": "Назва активу",
+    "assetType": "Тип активу",
+    "beneficiaryName": "Ім'я бенефіціара",
+    "errors": {
+      "failedToSaveAsset": "Не вдалося зберегти ресурс",
+      "failedToSaveBeneficiary": "Не вдалося зберегти бенефіціара"
+    },
+    "familyGuide": {
+      "discreteMode": "Дискретний режим",
+      "discreteModeDesc": "Опис дискретного режиму",
+      "emergency_contacts_1": "Контакти для екстрених випадків 1",
+      "export_guide_4": "Експортний посібник 4",
+      "generateGuide": "Згенерувати посібник",
+      "important_documents_2": "Важливі документи 2",
+      "last_updated_6": "Останнє оновлення 6",
+      "share_with_family_5": "Поділитися з родиною 5",
+      "subtitle": "Підзаголовок",
+      "title": "Назва",
+      "view": "Переглянути",
+      "what_to_do_when_3": "Що робити, коли 3"
+    },
+    "placeholders": {
+      "allocationPercentage": "Відсоток розподілу",
+      "assetName": "Назва активу",
+      "assetType": "Тип активу",
+      "beneficiaryName": "Ім'я бенефіціара"
+    },
+    "saveAsset": "Зберегти ресурс",
+    "saveBeneficiary": "Зберегти бенефіціара",
+    "tasks": {
+      "assetInventory": {
+        "description": "Опис",
+        "title": "Назва"
+      },
+      "bankAccount": {
+        "description": "Опис",
+        "title": "Назва"
+      },
+      "digitalAssetPlan": {
+        "description": "Опис",
+        "title": "Назва"
+      },
+      "documentCentralization": {
+        "description": "Опис",
+        "title": "Назва"
+      },
+      "emergencyContacts": {
+        "description": "Опис",
+        "title": "Назва"
+      },
+      "familyMeeting": {
+        "description": "Опис",
+        "title": "Назва"
+      },
+      "guardianInstructions": {
+        "description": "Опис",
+        "title": "Назва"
+      },
+      "inheritanceEducation": {
+        "description": "Опис",
+        "title": "Назва"
+      },
+      "personalMessages": {
+        "description": "Опис",
+        "title": "Назва"
+      },
+      "willPreparation": {
+        "description": "Опис",
+        "title": "Назва"
+      }
+    },
+    "updateAsset": "Оновити ресурс",
+    "updateBeneficiary": "Оновити бенефіціара",
+    "beneficiaries": {
+      "title": "Назва бенефіціарів",
+      "description": "Опис бенефіціарів",
+      "action": "Дії бенефіціарів",
+      "impact": "Вплив на бенефіціарів",
+      "prerequisite": "Вимога для бенефіціарів"
+    },
+    "will": {
+      "title": "Заповіт",
+      "description": "Опис заповіту",
+      "action": "Воля дії",
+      "impact": "Вплине"
+    },
+    "priority": {
+      "critical": "Пріоритет критично важливий",
+      "important": "Важливий пріоритет",
+      "suggested": "Запропонований пріоритет",
+      "recommended": "Рекомендований пріоритет"
+    },
+    "title": "Назва інформаційної панелі",
+    "subtitle": "Підзаголовок панелі інструментів",
+    "impact": {
+      "label": "Мітка впливу"
+    },
+    "prerequisites": {
+      "label": "Мітка передумов"
+    },
+    "status": {
+      "milestone": {
+        "foundation": "Фонд віхи",
+        "core": "Основні етапи",
+        "comprehensive": "Комплексний етап",
+        "maintain": "Підтримка етапу"
+      },
+      "building": "Розбудова статусу",
+      "organized": "Статус організований",
+      "comprehensive": "Статус вичерпний"
+    },
+    "areas": {
+      "documents": {
+        "title": "Назва документів",
+        "description": "Опис документів"
+      },
+      "guardians": {
+        "title": "Титул \"Охоронці\"",
+        "description": "Опис Вартових"
+      },
+      "assets": {
+        "title": "Назва активів",
+        "description": "Опис активів"
+      },
+      "beneficiaries": {
+        "title": "Назва бенефіціарів",
+        "description": "Опис бенефіціарів"
+      }
+    },
+    "guidance": {
+      "professional": "Професійний консультант"
+    },
+    "tabs": {
+      "overview": "Огляд вкладок",
+      "progress": "прогрес вкладок",
+      "resources": "Ресурси вкладок"
+    },
+    "continue": "Продовження панелі інструментів",
+    "resources": {
+      "title": "Назва ресурсів",
+      "description": "Опис ресурсів",
+      "support": "Ресурси підтримки"
+    },
+    "milestone": {
+      "reached": "Досягнуто віхи"
+    },
+    "badge": "Значок панелі інструментів",
+    "inputs": {
+      "title": "Назва вхідних даних",
+      "description": "Опис вхідних даних",
+      "dependents": "Залежні входи",
+      "income": "Дохід від витрат",
+      "property": "Властивість вхідних даних",
+      "business": "Бізнес-вхідні дані",
+      "accounts": "Рахунки вхідних даних"
+    },
+    "results": {
+      "title": "Назва результатів",
+      "description": "Опис результатів",
+      "emotional": {
+        "title": "Емоційний заголовок",
+        "stress": "Емоційний стрес",
+        "confidence": "Емоційна впевненість",
+        "peace": "Емоційний спокій"
+      },
+      "families": "Результати сімейств"
+    },
+    "testimonial": {
+      "quote": "Цитата відгуку",
+      "author": "Автор відгуків"
+    },
+    "dismiss": "Закрити панель керування",
+    "snooze": "Відкладення налаштування панелі інструментів",
+    "complete": "Інформаційна панель завершена",
+    "overdue": "Прострочено термін подачі інформації на інформаційну панель",
+    "settings": {
+      "saved": "Налаштування збережено",
+      "general": "Загальні налаштування",
+      "channels": "Канали налаштувань"
+    },
+    "types": {
+      "review": "Огляд типів"
+    },
+    "frequency": {
+      "monthly": "Періодичність щомісяця",
+      "quarterly": "Періодичність щокварталу",
+      "annually": "Частота щорічно"
+    },
+    "channels": {
+      "email": "Електронна пошта каналів"
+    },
+    "duration": {
+      "week": "Тривалість тиждень"
+    }
+  },
+  "empty": {
+    "noActivity": "Немає нещодавньої активності для відображення",
+    "noAssets": "Ще не додано жодних ресурсів",
+    "noDocuments": "Документів ще не завантажено",
+    "noPeople": "Довірених людей ще не додано",
+    "noTasks": "Немає доступних завдань"
+  },
+  "errors": {
+    "loadingDashboard": "Не вдалося завантажити інформаційну панель. Оновіть сторінку.",
+    "loadingStats": "Не вдалося завантажити статистику. Оновіть сторінку.",
+    "failedToFetchStatus": "Не вдалося отримати статус виконання",
+    "genericError": "Щось пішло не так. Оновіть сторінку та спробуйте ще раз.",
+    "loadingTasks": "Не вдалося завантажити завдання. Спробуйте ще раз.",
+    "markingComplete": "Не вдалося позначити завдання як виконане. Спробуйте ще раз.",
+    "savingProgress": "Не вдалося зберегти прогрес. Спробуйте ще раз.",
+    "initializationFailed": "Помилки ініціалізації: не вдалося"
+>>>>>>> Stashed changes
   },
   "tasks": {
+<<<<<<< Updated upstream
     "criticalGap": "[TODO-TRANSLATE] dashboard-main:tasks.criticalGap",
     "reviewDocument": "[TODO-TRANSLATE] dashboard-main:tasks.reviewDocument",
     "documentReviewDesc": "[TODO-TRANSLATE] dashboard-main:tasks.documentReviewDesc"
+=======
+    "actions": {
+      "start": "Початок"
+    },
+    "categories": {
+      "organize": "Організувати",
+      "secure": "Безпечний",
+      "transfer": "Передача"
+    },
+    "status": {
+      "blocked": "Заблоковано",
+      "completed": "Завершено",
+      "inProgress": "У процесі",
+      "notStarted": "Не розпочато",
+      "skipped": "Пропущено"
+    },
+    "types": {
+      "assetInventory": {
+        "description": "Документуйте свої цінні речі, щоб нічого не пропустити чи загубити.",
+        "title": "Створення інвентаризації активів"
+      },
+      "bankAccount": {
+        "description": "Запишіть свою банківську та інвестиційну інформацію, щоб ваша родина могла керувати фінансами.",
+        "title": "Документ фінансової звітності"
+      },
+      "digitalAssetPlan": {
+        "description": "Упорядкуйте свої онлайн-акаунти, паролі та цифрові ресурси для легкого доступу.",
+        "title": "План для цифрових активів"
+      },
+      "documentCentralization": {
+        "description": "Зберіть та оцифруйте найважливіші документи, щоб ваша родина могла знайти все в одному місці.",
+        "title": "Упорядкуйте важливі документи"
+      },
+      "emergencyContacts": {
+        "description": "Забезпечте доступ до критично важливої інформації потрібним людям, коли вона їм найбільше потрібна.",
+        "title": "Налаштування екстреного доступу"
+      },
+      "familyMeeting": {
+        "description": "Відверто поговоріть зі своєю родиною про ваші плани та їхні ролі.",
+        "title": "Проведіть сімейну дискусію"
+      },
+      "guardianInstructions": {
+        "description": "Оберіть перевірених людей, які зможуть допомогти вашій родині у скрутні часи.",
+        "title": "Призначте контакти для екстрених випадків"
+      },
+      "inheritanceEducation": {
+        "description": "Зрозумійте законодавчі вимоги у вашому регіоні, щоб уникнути ускладнень для вашої родини.",
+        "title": "Дізнайтеся про закони про спадщину"
+      },
+      "personalMessages": {
+        "description": "Залишайте зворушливі повідомлення та важливі настанови для своїх близьких.",
+        "title": "Запис особистих повідомлень"
+      },
+      "willPreparation": {
+        "description": "Створіть юридично дійсний документ, який чітко викладає ваші побажання щодо вашого майна та родини.",
+        "title": "Підготуйте свій заповіт"
+      }
+    },
+    "criticalGap": "Критичний пробіл у завданнях",
+    "reviewDocument": "Документ огляду завдань",
+    "documentReviewDesc": "Опис перевірки документа завдань"
+  },
+  "title": "План захисту вашої родини",
+  "progress": {
+    "step": "Крок"
+  },
+  "completion": {
+    "viewPlan": "Переглянути план"
+>>>>>>> Stashed changes
   },
   "push": {
     "taskReminder": {
@@ -20,5 +468,76 @@
       "showPriority": "[TODO-TRANSLATE] dashboard-main:respectful.tasks.showPriority",
       "showAll": "[TODO-TRANSLATE] dashboard-main:respectful.tasks.showAll"
     }
+<<<<<<< Updated upstream
+=======
+  },
+  "inApp": {
+    "welcome": {
+      "title": "Ласкаво просимо до LegacyGuard",
+      "message": "Ми можемо почати розробку вашого сімейного плану. Ви можете почати з короткої оцінки.",
+      "action": "Ми можемо розпочати оцінювання"
+    },
+    "firstAsset": {
+      "title": "Додайте свій перший ресурс",
+      "message": "Захистіть свою родину, задокументувавши свій найважливіший актив.",
+      "action": "Додати ресурс"
+    },
+    "inviteTrusted": {
+      "title": "Запросити довірену особу",
+      "message": "Призначте когось, хто може допомогти вашій родині в надзвичайних ситуаціях.",
+      "action": "Додати особу"
+    },
+    "createWill": {
+      "title": "Створіть свій заповіт",
+      "message": "Складіть юридично дійсний заповіт на основі ваших активів та побажань.",
+      "action": "Початок буде"
+    }
+  },
+  "alerts": {
+    "description": "Опис",
+    "dismiss": "Відхилити",
+    "errors": {
+      "dismissFailed": "Не вдалося відхилити",
+      "loadFailed": "Не вдалося завантажити",
+      "renewFailed": "Не вдалося поновити",
+      "snoozeFailed": "Не вдалося відкласти"
+    },
+    "expiresOn": "Термін дії закінчується",
+    "markAsRenewed": "Позначити як поновлене",
+    "messages": {
+      "dismissed": "Відхилено",
+      "markedAsRenewed": "Позначено як поновлене",
+      "snoozed": "Відкладено"
+    },
+    "noActiveAlerts": "Немає активних сповіщень",
+    "noDismissedAlerts": "Немає відхилених сповіщень",
+    "noSnoozedAlerts": "Немає відкладених сповіщень",
+    "renewalInstructions": "Інструкції з поновлення",
+    "snooze7Days": "Відкласти на 7 днів",
+    "snoozedUntil": "Відкладено до",
+    "tabs": {
+      "active": "Активний",
+      "dismissed": "Відхилено",
+      "snoozed": "Відкладено"
+    },
+    "title": "Назва",
+    "types": {
+      "expired": "Термін дії минув",
+      "expiring30": "Термін дії 30",
+      "expiring7": "Термін дії 7",
+      "expiring90": "Термін дії закінчується90"
+    },
+    "unread": "Непрочитане",
+    "unsnooze": "Скасувати відкладення"
+  },
+  "respectful": {
+    "encouragement": {
+      "comprehensive": "Комплексне заохочення"
+    },
+    "tasks": {
+      "showPriority": "Завдання показують пріоритет",
+      "showAll": "Завдання показують усі"
+    }
+>>>>>>> Stashed changes
   }
 }

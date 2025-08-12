@@ -1,1 +1,195 @@
+<<<<<<< Updated upstream
 {}
+=======
+{
+  "general": {
+    "networkError": "Tinklo ryšio problema. Patikrinkite interneto ryšį.",
+    "serverError": "Kyla techninių sunkumų. Bandykite dar kartą netrukus.",
+    "timeoutError": "Užklausos skirtasis laikas baigėsi. Bandykite dar kartą.",
+    "maintenanceMode": "Šiuo metu atliekame techninės priežiūros darbus. Bandykite dar kartą po kelių minučių.",
+    "something_wrong": "Kažkas neveikė tinkamai, bet nesijaudinkite – jūsų svarbi informacija yra saugi.",
+    "try_again": "Leisk man pabandyti dar kartą dėl tavęs",
+    "contact_support": "Esu čia, kad padėčiau, jei jums reikia pagalbos",
+    "no_data_lost": "Geros naujienos yra tai, kad niekas, ties kuo dirbote, nebuvo prarasta",
+    "temporary_issue": "Atrodo, kad tai laikina problema, kuri turėtų greitai išsispręsti"
+  },
+  "authentication": {
+    "sessionExpired": "Jūsų sesija baigėsi. Prisijunkite dar kartą.",
+    "invalidCredentials": "Neteisingas el. pašto adresas arba slaptažodis. Bandykite dar kartą.",
+    "accountLocked": "Jūsų paskyra laikinai užblokuota dėl saugumo priežasčių.",
+    "accountDisabled": "Jūsų paskyra buvo išjungta. Susisiekite su palaikymo tarnyba.",
+    "emailNotVerified": "Prieš tęsdami, patvirtinkite savo el. pašto adresą.",
+    "passwordResetRequired": "Reikia atkurti slaptažodį. Patikrinkite savo el. paštą."
+  },
+  "authorization": {
+    "accessDenied": "Jūs neturite leidimo pasiekti šios informacijos.",
+    "insufficientPermissions": "Jūs neturite pakankamai leidimų šiam veiksmui atlikti.",
+    "subscriptionRequired": "Šiai funkcijai reikalinga aktyvi prenumerata.",
+    "upgradeRequired": "Norėdami naudotis šia funkcija, atnaujinkite savo planą."
+  },
+  "validation": {
+    "invalidEmail": "Įveskite galiojantį el. pašto adresą.",
+    "invalidPhone": "Įveskite galiojantį telefono numerį.",
+    "invalidFormat": "Neteisingas formatas. Patikrinkite įvestį.",
+    "passwordTooWeak": "Slaptažodis turi būti sudarytas iš bent 8 simbolių, įskaitant didžiąsias, mažąsias raides ir skaičius.",
+    "passwordMismatch": "Slaptažodžiai nesutampa.",
+    "fileTooLarge": "Failo dydis viršija maksimalų {{size}}MB limitą.",
+    "unsupportedFileType": "Šis failo tipas nepalaikomas.",
+    "required_field": "Jūsų šeimai reikės šios informacijos – ar galėtumėte man padėti ją užpildyti?",
+    "invalid_email": "Tas el. pašto adresas atrodo neteisingas. Gal galėtumėte jį dar kartą patikrinti?",
+    "invalid_phone": "Man kyla problemų dėl šio telefono numerio formato. Gal galėtumėte pabandyti jį įvesti kitaip?",
+    "invalid_date": "Tas datos formatas man netinka. Gal galėtumėte pabandyti MM/DD/YYYY?",
+    "password_weak": "Sukurkime šiek tiek stipresnį slaptažodį, kad jūsų šeimos informacija būtų ypač saugi.",
+    "file_too_large": "Tas failas man šiek tiek per didelis. Gal galėtumėte pabandyti mažesnę versiją?",
+    "unsupported_file": "Negaliu dirbti su tokio tipo failu. Gal galėtumėte pabandyti PDF arba paveikslėlį?",
+    "errors": {
+      "assetNameRequired": "Klaidų ištekliaus pavadinimas (būtina)",
+      "assetTypeRequired": "Klaidų ištekliaus tipas (būtinas)",
+      "nameMinLength": "Klaidos pavadinimas Minimalus ilgis",
+      "allocationRequired": "Klaidų paskirstymas privalomas",
+      "allocationMustBeNumber": "Klaidų paskirstymas turi būti skaičius",
+      "allocationRange": "Klaidų paskirstymo diapazonas",
+      "requiredField": "Privalomi klaidos laukas",
+      "mustBeNumber": "Klaidos turi būti skaičius",
+      "countryRequired": "Klaidos šalis Privaloma",
+      "countryCodeLength": "Klaidos šalis Kodo ilgis",
+      "valueMustBeNumber": "Klaidos reikšmė turi būti skaičius",
+      "valueMustBePositive": "Klaidos reikšmė turi būti teigiama",
+      "currencyCodeLength": "Klaidos valiuta Kodo ilgis",
+      "beneficiaryNameRequired": "Klaidos gavėjo vardas (būtina)",
+      "invalidEmail": "Klaidos dėl netinkamo el. pašto adreso",
+      "invalidPhone": "Klaidos dėl netinkamo telefono",
+      "documentNameRequired": "Klaidų dokumento pavadinimas (būtina)",
+      "documentTypeRequired": "Klaidų dokumento tipas (privaloma)",
+      "expirationDateFuture": "Klaidų galiojimo pabaigos data ateityje",
+      "relationshipRequired": "Klaidų ryšys (būtinas)",
+      "unknownError": "Nežinomos klaidos",
+      "dataNotFound": "Klaidos duomenys nerasti",
+      "connectionError": "Klaidos ryšio klaida",
+      "permissionDenied": "Klaidos leidimas atmestas",
+      "duplicateRecord": "Klaidos pasikartojančiame įraše"
+    },
+    "nameRequired": "Patvirtinimo pavadinimas (būtinas)",
+    "nameMinLength": "Patvirtinto pavadinimo minimalus ilgis",
+    "jurisdictionRequired": "Reikalinga patvirtinimo jurisdikcija",
+    "dobRequired": "Reikalingas patvirtinimas gimimo data",
+    "addressRequired": "Patvirtinimo adresas Privalomas",
+    "allocationError": "Patvirtinimo paskirstymo klaida",
+    "beneficiaryRequired": "Patvirtinimo gavėjas Privalomas",
+    "executorRequired": "Patvirtinimo vykdytojas reikalingas"
+  },
+  "data": {
+    "loadingFailed": "Nepavyko įkelti duomenų. Atnaujinkite puslapį.",
+    "savingFailed": "Nepavyko išsaugoti pakeitimų. Bandykite dar kartą.",
+    "deletingFailed": "Nepavyko ištrinti elemento. Bandykite dar kartą.",
+    "uploadFailed": "Failo įkėlimas nepavyko. Bandykite dar kartą.",
+    "exportFailed": "Duomenų eksportavimas nepavyko. Bandykite dar kartą vėliau.",
+    "importFailed": "Duomenų importavimas nepavyko. Patikrinkite failo formatą.",
+    "syncFailed": "Sinchronizavimas nepavyko. Kai kurie pakeitimai gali būti neišsaugoti."
+  },
+  "payment": {
+    "paymentFailed": "Mokėjimo apdoroti nepavyko. Patikrinkite mokėjimo būdą.",
+    "cardDeclined": "Jūsų kortelė buvo atmesta. Pabandykite kitą mokėjimo būdą.",
+    "insufficientFunds": "Nepakanka lėšų. Patikrinkite savo sąskaitos likutį.",
+    "expiredCard": "Jūsų kortelės galiojimo laikas baigėsi. Atnaujinkite mokėjimo informaciją.",
+    "invalidCard": "Neteisinga kortelės informacija. Patikrinkite savo duomenis.",
+    "paymentTimeout": "Mokėjimo apdorojimo laikas baigėsi. Bandykite dar kartą."
+  },
+  "actions": {
+    "tryAgain": "Bandykite dar kartą",
+    "signInAgain": "Prisijungti dar kartą",
+    "updatePayment": "Atnaujinti mokėjimą",
+    "upgradeAccount": "Atnaujinti paskyrą"
+  },
+  "debug": {
+    "i18nDebug": {
+      "current_lang_resources_7": "Dabartiniai kalbos ištekliai 7",
+      "has_resources_6": "Turi 6 išteklių",
+      "i18n_debug_info_1": "I18n derinimo informacija 1",
+      "resolved_language_3": "Išspręsta 3 kalba",
+      "test_translation_5": "Bandomasis vertimas 5"
+    }
+  },
+  "test": {
+    "environment": {
+      "description": "Aprašymas",
+      "title": "Pavadinimas"
+    }
+  },
+  "notfound": {
+    "title": "Puslapis nerastas",
+    "description": "Puslapis, kurio ieškote, neegzistuoja arba buvo perkeltas.",
+    "goHome": "Grįžti namo",
+    "goBack": "Grįžti"
+  },
+  "network": {
+    "connection_lost": "Panašu, kad jūsų interneto ryšys nutrūko. Jūsų darbas išsaugotas ir mes automatiškai vėl prisijungsime.",
+    "slow_connection": "Šiandien jūsų ryšys atrodo šiek tiek lėtas. Kantriai palauksiu, kol viskas užsikraus.",
+    "server_busy": "Mūsų serveriai šiuo metu šiek tiek užimti, bet aš ir toliau bandysiu jums padėti.",
+    "timeout": "Tai užtruko ilgiau nei tikėjausi. Leiskite man pabandyti kitą būdą."
+  },
+  "contextual": {
+    "assets": {
+      "save_failed": "Šiuo metu negalėjau išsaugoti šios informacijos apie turtą, bet bandysiu toliau. Jūsų šeimos informacija man svarbi.",
+      "load_failed": "Šiuo metu kyla problemų įkeliant jūsų išteklius. Leiskite man pabandyti dar kartą po akimirkos.",
+      "delete_failed": "Nepavyko pašalinti to elemento dabar. Ar norite, kad pabandyčiau dar kartą?"
+    },
+    "documents": {
+      "upload_failed": "Dokumentas nebuvo tinkamai įkeltas. Nesijaudinkite – padėsiu jums bandyti dar kartą.",
+      "processing_failed": "Man kilo problemų apdorojant tą dokumentą. Failas saugus, bandysiu dar kartą.",
+      "access_failed": "Šiuo metu negaliu pasiekti to dokumento. Pažiūrėsiu, kuo galiu padėti."
+    },
+    "family": {
+      "save_failed": "Nepavyko išsaugoti to asmens informacijos. Bandysiu dar kartą – jūsų patikimas ratas yra svarbus.",
+      "invite_failed": "Šiuo metu negalėjau išsiųsti to kvietimo. Padėsiu jums bandyti dar kartą, kai būsite pasiruošę.",
+      "access_failed": "Kyla problemų dėl šeimos prieigos nustatymų. Leiskite man tai išspręsti."
+    },
+    "will": {
+      "generation_failed": "Šiuo metu negalėjau sukurti jūsų testamento. Nesijaudinkite – visi jūsų sprendimai išsaugoti ir aš bandysiu dar kartą.",
+      "save_failed": "Šiuo metu negalėjau išsaugoti tų pakeitimų. Ankstesnė versija saugi, bandysiu toliau.",
+      "legal_check_failed": "Šiuo metu negalėjau patikrinti teisinių reikalavimų. Leiskite man pabandyti dar kartą arba galime kreiptis pagalbos į mūsų teisininkų komandą."
+    }
+  },
+  "emotional_support": {
+    "frustration": "Žinau, kad tai erzina, kai bandai padaryti ką nors svarbaus savo šeimai. Esu čia, kad padėčiau, jog tai pavyktų.",
+    "time_pressure": "Suprantu, kad neturite daug laiko techninėms problemoms spręsti. Leiskite man greitai jas išspręsti.",
+    "overwhelm": "Techninės problemos gali atrodyti neįveikiamos, kai jau tvarkotės su svarbiais šeimos planavimo klausimais. Įkvėpkite – aš suprantu.",
+    "discouragement": "Neleiskite, kad šis techninis nesklandumas jus atbaidytų. Tai, ką darote savo šeimai, yra per daug svarbu, kad galėtumėte to atsisakyti."
+  },
+  "solutions": {
+    "refresh_page": "Kartais puslapio atnaujinimas padeda. Jūsų darbas išsaugomas, todėl nieko neprarasite.",
+    "try_different_browser": "Jei tai kartojasi, pabandykite naudoti kitą naršyklę. Paprastai geriausiai veikia „Chrome“ arba „Firefox“.",
+    "check_internet": "Gal galėtumėte patikrinti interneto ryšį? Kartais to pakanka.",
+    "contact_support": "Mielai jums padėsiu asmeniškai. Galite susisiekti su mūsų palaikymo komanda, kuri puikiai jumis pasirūpins.",
+    "try_later": "Jei skubate, galite pabandyti dar kartą vėliau. Viskas, ką atlikote, yra saugiai išsaugota.",
+    "alternative_approach": "Leiskite man pasiūlyti kitą būdą tai padaryti, kuris galbūt geriau veiktų."
+  },
+  "recovery": {
+    "auto_save_worked": "Geros žinios yra tai, kad viskas, ką įvedėte, buvo automatiškai išsaugota.",
+    "backup_available": "Turiu tavo darbo atsarginę kopiją, darytą prieš kelias minutes, jei tau jos reikia.",
+    "progress_preserved": "Visa jūsų pažanga išsaugoma – jums nereikės pradėti iš naujo.",
+    "data_secure": "Nepaisant šios techninės problemos, jūsų šeimos informacija išlieka visiškai saugi."
+  },
+  "errors": {
+    "notAuthenticated": "Klaidos neautentifikuotos",
+    "generic": "Bendrosios klaidos",
+    "savingSettings": "Klaidos išsaugant nustatymus",
+    "loadingSettings": "Klaidos įkeliant nustatymus",
+    "networkError": "Tinklo klaidos",
+    "permissionDenied": "Klaidos leidimas atmestas",
+    "dataNotFound": "Klaidos duomenys nerasti",
+    "unknown": "Klaidos nežinomos",
+    "uploadFailed": "Įkėlimo klaidos nepavyko",
+    "accessDenied": "Klaidos. Prieiga uždrausta.",
+    "reassurance": {
+      "data_safe": "Užtikrintas duomenų saugumas",
+      "try_again": "Nuraminkite, bandykite dar kartą"
+    },
+    "loadingAssets": "Klaidos įkeliant išteklius",
+    "failedToFetchStatus": "Klaidos nepavyko gauti būsenos",
+    "validationFailed": "Klaidų patvirtinimas nepavyko",
+    "generationFailed": "Nepavyko generuoti klaidų",
+    "duplicateRecord": "Klaidos pasikartojančiame įraše"
+  }
+}
+>>>>>>> Stashed changes

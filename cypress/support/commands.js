@@ -148,3 +148,18 @@ Cypress.Commands.add("shouldBeOnDashboard", () => {
 Cypress.Commands.add("shouldHavePremiumAccess", () => {
   cy.get("[data-cy=premium-badge]").should("be.visible");
 });
+
+Cypress.Commands.add('byTestId', (id) => {
+  return cy.get(`[data-testid="${id}"]`, { timeout: 10000 });
+});
+
+Cypress.Commands.add('safeClick', { prevSubject: 'element' }, (subject) => {
+  return cy.wrap(subject).scrollIntoView().should('be.visible').click({ force: true });
+});
+
+// Voliteľné: app môže čítať tento flag a vypnúť redirecty v DEV/teste
+Cypress.Commands.add('injectE2EFlag', () => {
+  cy.on('window:before:load', (win) => {
+    win.__E2E__ = true;
+  });
+});

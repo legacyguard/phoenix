@@ -1,0 +1,809 @@
+{
+  "actions": {
+    "consultLawyer": "Planlæg juridisk konsultation",
+    "createCodicil": "Opret ændringsforslag (Kodicil)",
+    "deleteWill": "Slet dette testamente",
+    "downloadPdf": "Download PDF-dokument",
+    "generateWill": "Opret et endeligt testamente",
+    "next": "Næste",
+    "previous": "Tidligere",
+    "printWill": "Udskriv testamentedokument",
+    "saveProgress": "Gem aktuelle fremskridt",
+    "shareWill": "Del med familien",
+    "updateWill": "Opdater testamenteoplysninger"
+  },
+  "errors": {
+    "assetLoadFailed": "Vi kunne ikke indlæse dine aktivoplysninger. Opdater venligst og prøv igen.",
+    "generationFailed": "Der opstod et problem med at generere dit testamente. Gennemgå venligst dine oplysninger, og prøv igen.",
+    "jurisdictionRequired": "Vælg venligst din juridiske jurisdiktion for at sikre overholdelse",
+    "loadFailed": "Vi kunne ikke indlæse dine testamenteoplysninger. Opdater siden, og prøv igen.",
+    "printFailed": "Der opstod et problem under forberedelsen af dit dokument til udskrivning. Prøv igen.",
+    "saveFailed": "Vi kunne ikke gemme dine fremskridt. Tjek din forbindelse, og prøv igen.",
+    "validationFailed": "Gennemgå og ret venligst de fremhævede oplysninger, før du fortsætter"
+  },
+  "execution": {
+    "copyDistribution": "Distribution af kopier",
+    "familyNotification": "Informer din familie",
+    "legalRequirements": "Juridiske krav til {{jurisdiction}}",
+    "notarization": "Krav til notarbekræftelse",
+    "notaryOptional": "Notar anbefales, men ikke påkrævet",
+    "notaryRequired": "Notar kræves",
+    "numberOfCopies": "Anbefalet antal kopier",
+    "safeStorage": "Sikre opbevaringssteder",
+    "selfProving": "Selvbevisende erklæring",
+    "signingInstructions": "Underskriftsinstruktioner",
+    "signingOrder": "Korrekt underskriftsrækkefølge",
+    "storageRecommendations": "Opbevaringsanbefalinger",
+    "subtitle": "Gør dit testamente juridisk bindende",
+    "title": "Krav til testamenteudførelse",
+    "witnessCount": "{{count}} vidner kræves",
+    "witnessInstructions": "Instruktioner til vidner",
+    "witnessQualifications": "Vidnekvalifikationer",
+    "witnessRequirements": "Krav til vidner"
+  },
+  "form": {
+    "assetSelection": {
+      "allAssets": "Inkluder alle nuværende og fremtidige aktiver",
+      "assetCategories": "Aktivkategorier, der skal inkluderes",
+      "businessInterests": "Forretningsinteresser",
+      "excludedAssets": "Aktiver, der skal ekskluderes",
+      "jointAssets": "Fællesejede aktiver",
+      "residualDescription": "Alle resterende aktiver, der ikke specifikt er nævnt andetsteds i dette testamente",
+      "residualEstate": "Restareal",
+      "selectAssets": "Vælg aktiver, der skal inkluderes",
+      "specificAssets": "Vælg kun specifikke aktiver"
+    },
+    "distribution": {
+      "addBeneficiary": "Tilføj yderligere modtager",
+      "ageRestriction": "Alderskrav",
+      "allocation": "Arvefordeling",
+      "beneficiaryName": "Modtagers fulde navn",
+      "conditions": "Betingelser eller begrænsninger",
+      "contingentBeneficiary": "Betinget modtager",
+      "percentage": "Procentdel af ejendom",
+      "primaryBeneficiary": "Primær modtager",
+      "relationship": "Forholdet til dig",
+      "specificAmount": "Specifikt dollarbeløb",
+      "specificAsset": "Specifikt aktiv eller ejendom",
+      "trustProvision": "Trustaftale"
+    },
+    "executor": {
+      "alternateExecutor": "Suppleant bobestyrer",
+      "bondRequirement": "Obligationskrav",
+      "coExecutors": "Medeksekutorer",
+      "executorAddress": "Bobestyrerens adresse",
+      "executorCompensation": "Bobestyrergodtgørelse",
+      "executorDuties": "Eksekutors ansvar",
+      "executorInstructions": "Særlige instruktioner for bobestyrer",
+      "executorName": "Eksekutors fulde navn",
+      "executorRelationship": "Forholdet til dig",
+      "primaryExecutor": "Primær bobestyrer",
+      "specialPowers": "Særlige beføjelser tildelt"
+    },
+    "guardianship": {
+      "backupGuardian": "Alternativ værge",
+      "educationPreferences": "Uddannelsespræferencer",
+      "guardianCompensation": "Værgekompensation",
+      "guardianFor": "Vogter for {{childName}}",
+      "guardianInstructions": "Instruktioner til værge",
+      "guardianQualifications": "Værgekvalifikationer",
+      "minorChildren": "Mindreårige børn, der kræver værgemål",
+      "primaryGuardian": "Primær værge",
+      "religiousUpbringing": "Religiøse opdragelsespræferencer"
+    },
+    "personalInfo": {
+      "addChild": "Tilføj barn",
+      "addressHelper": "Din primære bopælsadresse",
+      "childDateOfBirth": "Barnets fødselsdato",
+      "childName": "Barnets fulde navn",
+      "childRelation": "Forholdet til dig",
+      "children": "Børn og pårørende",
+      "currentAddress": "Nuværende juridiske adresse",
+      "dateOfBirth": "Fødselsdato",
+      "fullLegalName": "Fuldstændigt juridisk navn",
+      "fullLegalNameHelper": "Indtast dit navn præcis som det står på officielle dokumenter",
+      "maritalStatus": "Civilstand",
+      "marriageDate": "Dato for ægteskab",
+      "placeOfBirth": "Fødested",
+      "previousWills": "Tidligere testamenter",
+      "revokesPrevious": "Dette testamente ophæver alle tidligere testamenter",
+      "spouseName": "Ægtefælles fulde navn"
+    },
+    "provisions": {
+      "burialCremation": "Præference for begravelse eller kremering",
+      "businessContinuation": "Planer for forretningsfortsættelse",
+      "charitableBequests": "Velgørenhedsdonationer",
+      "charityAmount": "Donationsbeløb",
+      "charityName": "Velgørenhedsorganisation",
+      "digitalAssets": "Instruktioner til digitale aktiver",
+      "funeralInstructions": "Specifikke begravelsesinstruktioner",
+      "funeralWishes": "Begravelses- og bisættelsespræferencer",
+      "organDonation": "Ønsker om organdonation",
+      "personalMessages": "Personlige beskeder til familien",
+      "petCare": "Kæledyrspasningsordninger",
+      "specialInstructions": "Særlige instruktioner"
+    }
+  },
+  "generator": {
+    "continueWill": "Fortsæt testamenteforberedelse",
+    "description": "Udarbejd et omfattende, juridisk gyldigt testamente, der er skræddersyet til din jurisdiktion og din families unikke behov.",
+    "getStarted": "Begynd at oprette dit testamente",
+    "importance": "Sikring af, at dine ønsker er juridisk dokumenteret, og at din familie er beskyttet",
+    "newWill": "Opret nyt testamente",
+    "of": "Af",
+    "professionalGuidance": "Professionel juridisk vejledning anbefales til komplekse dødsboer",
+    "step": "Trin",
+    "subtitle": "Opret et juridisk forsvarligt testamente med professionel vejledning",
+    "title": "Testamentegenerator",
+    "viewExisting": "Gennemgå nuværende testamente"
+  },
+  "legal": {
+    "consultLawyer": "Rådfør dig med en advokat",
+    "disclaimer": "Vigtig juridisk ansvarsfraskrivelse",
+    "estatePlanning": "Omfattende ejendomsplanlægning",
+    "jurisdiction": "Juridisk jurisdiktion",
+    "lawsApply": "Lovene i {{jurisdiction}} gælder",
+    "lawyerRecommended": "Vi anbefaler kraftigt at konsultere en kvalificeret advokat ved komplekse dødsboer",
+    "legalCompliance": "Verifikation af juridisk overholdelse",
+    "notLegalAdvice": "Denne service udgør ikke juridisk rådgivning",
+    "probateProcess": "Oplysninger om skifteprocessen",
+    "professionalGuidance": "Professionel juridisk vejledning anbefales",
+    "professionalReview": "Professionel juridisk gennemgang",
+    "selectJurisdiction": "Vælg venligst din juridiske jurisdiktion",
+    "taxImplications": "Skattemæssige konsekvenser"
+  },
+  "notifications": {
+    "consultationScheduled": "Der er planlagt en juridisk konsultation",
+    "documentShared": "Testamentet er blevet delt med udvalgte familiemedlemmer",
+    "executionComplete": "Testamentets fuldbyrdelse er blevet registreret",
+    "progressSaved": "Dine fremskridt er blevet gemt",
+    "willDeleted": "Will er blevet permanent slettet",
+    "willUpdated": "Will er blevet opdateret"
+  },
+  "preview": {
+    "article": "ARTIKEL {{number}}",
+    "draftWatermark": "UDKAST - IKKE JURIDISK BINDENDE",
+    "executionInstructions": "UDFØRELSESINSTRUKTIONER",
+    "lastWillTestament": "TESTAMENTE",
+    "of": "AF",
+    "pageNumber": "Side {{current}} af {{total}}",
+    "reviewCarefully": "Gennemgå venligst dette dokument omhyggeligt, før du fortsætter",
+    "section": "Sektion {{number}}",
+    "signatureSection": "UNDERSKRIFTSSEKTION",
+    "subtitle": "Gennemgå dit fulde testamente, inden du færdiggør det",
+    "title": "Forhåndsvisning af testamentedokument",
+    "witnessClause": "VIDNEKLASUL"
+  },
+  "status": {
+    "archived": "Arkiveret version",
+    "draft": "Udkast i gang",
+    "executed": "Lovligt henrettet",
+    "generated": "Genereret - Kræver udførelse",
+    "outdated": "Kræver opdatering"
+  },
+  "policy": {
+    "duration": {
+      "session": "Session",
+      "minutes": "{{count}} minutter",
+      "hours": "{{count}} timer",
+      "days": "{{count}} dage",
+      "months": "{{count}} måneder",
+      "years": "{{count}} år"
+    }
+  },
+  "steps": {
+    "assets": {
+      "description": "Vælg hvilke aktiver du ønsker at inkludere i dit testamente, og hvordan de skal fordeles.",
+      "subtitle": "Dine værdifulde ejendele",
+      "title": "Fordeling af aktiver"
+    },
+    "beneficiaries": {
+      "description": "Beslut hvem der skal modtage dine aktiver, og i hvilke forhold.",
+      "subtitle": "Dine valgte modtagere",
+      "title": "Modtagerbetegnelser"
+    },
+    "executor": {
+      "description": "Vælg en ansvarlig person til at forvalte din ejendom og udføre dine ønsker.",
+      "subtitle": "Din repræsentant for boet",
+      "title": "Bobestyrer"
+    },
+    "guardians": {
+      "description": "Udpeg betroede personer til at passe mindreårige børn eller pårørende.",
+      "subtitle": "Pas på dine pårørende",
+      "title": "Udnævnelser til værgemål"
+    },
+    "personal": {
+      "description": "Vi har brug for dine komplette juridiske oplysninger for at sikre, at dit testamente opfylder alle juridiske krav.",
+      "subtitle": "Dine identificerende oplysninger",
+      "title": "Personlige oplysninger"
+    },
+    "preferences": {
+      "description": "Medtag eventuelle særlige instruktioner, velgørende testamentariske gaver eller personlige ønsker.",
+      "subtitle": "Yderligere instruktioner",
+      "title": "Særlige bestemmelser"
+    },
+    "review": {
+      "description": "Gennemgå omhyggeligt alle detaljer, før du genererer dit juridiske dokument.",
+      "subtitle": "Bekræft alle oplysninger",
+      "title": "Endelig gennemgang"
+    }
+  },
+  "validation": {
+    "addressRequired": "Din nuværende juridiske adresse er påkrævet",
+    "allocationError": "Den samlede procentvise tildeling skal være lig med 100%",
+    "beneficiaryRequired": "Mindst én modtager skal angives",
+    "dobRequired": "Fødselsdato er påkrævet for juridisk gyldighed",
+    "duplicateBeneficiary": "Denne modtager er allerede blevet tilføjet",
+    "executorBeneficiaryConflict": "Bobestyrer og primær begunstiget bør typisk være forskellige personer",
+    "executorRequired": "Mindst én bobestyrer skal udpeges",
+    "guardianRequired": "Værgeudpegning er påkrævet for mindreårige børn",
+    "invalidDate": "Indtast venligst en gyldig dato",
+    "invalidPercentage": "Procentdelen skal være mellem 0 og 100",
+    "jurisdictionRequired": "Krævet jurisdiktion",
+    "requiredField": "Obligatorisk felt"
+  },
+  "will": {
+    "address": "Adresse",
+    "addressPlaceholder": "Adressepladsholder",
+    "allocation": {
+      "addBeneficiary": "Tilføj modtager",
+      "description": "Beskrivelse",
+      "generalEstate": "Almen ejendom",
+      "percentage": "Procent",
+      "tips": {
+        "tip1": "Tip1",
+        "tip2": "Tip2",
+        "tip3": "Tip3",
+        "title": "Titel"
+      },
+      "title": "Titel",
+      "total": "Total"
+    },
+    "beneficiaries": {
+      "addBeneficiary": "Tilføj modtager",
+      "allocation": "Tildeling",
+      "alternativeBeneficiary": "Alternativ modtager",
+      "alternativePlaceholder": "Alternativ pladsholder",
+      "beneficiaryNumber": "Modtagernummer",
+      "currentAllocation": "Nuværende tildeling",
+      "description": "Beskrivelse",
+      "identification": "Identifikation",
+      "identificationPlaceholder": "Identifikationspladsholder",
+      "importantNotes": "Vigtige bemærkninger",
+      "name": "Navn",
+      "noBeneficiaries": "Ingen modtagere",
+      "note1": "Note1",
+      "note2": "Note2",
+      "note3": "Note3",
+      "ofEstate": "Af ejendom",
+      "title": "Titel"
+    },
+    "beneficiary": {
+      "name": "Navn",
+      "namePlaceholder": "Navnepladsholder",
+      "relationship": "Forhold",
+      "relationshipPlaceholder": "Relationspladsholder"
+    },
+    "birthDate": "Fødselsdato",
+    "birthDatePlaceholder": "Fødselsdato pladsholder",
+    "buttons": {
+      "saveWillInfo": "Gem testamentoplysninger",
+      "saving": "Gemmer"
+    },
+    "countryRequirements": "Landekrav",
+    "descriptions": {
+      "executorDescription": "Beskrivelse af eksekutor",
+      "physicalLocationDescription": "Beskrivelse af den fysiske placering",
+      "statusDescription": "Statusbeskrivelse"
+    },
+    "executor": {
+      "addAlternative": "Tilføj alternativ",
+      "address": "Adresse",
+      "addressPlaceholder": "Adressepladsholder",
+      "alternative": "Alternativ",
+      "alternativeDescription": "Alternativ beskrivelse",
+      "description": "Beskrivelse",
+      "name": "Navn",
+      "namePlaceholder": "Navnepladsholder",
+      "phone": "Telefon",
+      "phonePlaceholder": "Telefonens pladsholder",
+      "primary": "Primær",
+      "relationship": "Forhold",
+      "relationshipPlaceholder": "Relationspladsholder",
+      "responsibilities": "Ansvar",
+      "responsibility1": "Ansvar1",
+      "responsibility2": "Ansvar2",
+      "responsibility3": "Ansvar3",
+      "responsibility4": "Ansvar4",
+      "title": "Titel"
+    },
+    "fields": {
+      "additionalNotes": "Yderligere noter",
+      "currentStatus": "Nuværende status",
+      "executorContact": "Kontaktperson for eksekutor",
+      "physicalLocation": "Fysisk placering"
+    },
+    "legalReview": {
+      "button": "Knap",
+      "description": "Beskrivelse",
+      "title": "Titel"
+    },
+    "name": "Navn",
+    "namePlaceholder": "Navnepladsholder",
+    "options": {
+      "noContactSelected": "Ingen kontakt valgt"
+    },
+    "placeholders": {
+      "additionalNotes": "Yderligere noter",
+      "physicalLocation": "Fysisk placering",
+      "selectContact": "Vælg kontakt"
+    },
+    "preview": {
+      "address": "Adresse",
+      "alternative": "Alternativ",
+      "alternativeExecutor": "Alternativ bobestyrer",
+      "date": "Dato",
+      "description": "Beskrivelse",
+      "executor": "Eksekutor",
+      "generatePDF": "Generer pdf",
+      "legalRequirements": "Juridiske krav",
+      "name": "Navn",
+      "ofEstate": "Af ejendom",
+      "place": "Placere",
+      "print": "Trykke",
+      "signature": "Signatur",
+      "title": "Titel",
+      "witnesses": "Vidner"
+    },
+    "requirements": {
+      "handwriting": "Håndskrift",
+      "notarization": "Notarisering",
+      "typed": "Skrevet",
+      "witnesses": "Vidner"
+    },
+    "selectCountry": "Vælg land",
+    "selectedCountryDetails": "Detaljer om det valgte land",
+    "status": {
+      "draft": "Udkast",
+      "notarized": "Notariseret",
+      "stored": "Gemt",
+      "updated": "Opdateret"
+    },
+    "testatorInfo": "Oplysninger om testator",
+    "validation": {
+      "allocation100": "Tildeling100"
+    },
+    "willPreview": {
+      "_2": "2",
+      "critical_execution_instruction_3": "Kritisk udførelsesinstruktion 3",
+      "professional_review_4": "Professionel anmeldelse 4",
+      "provided_by_certified_legal_pa_5": "Leveret af certificeret juridisk advokat 5"
+    }
+  },
+  "willGenerator": {
+    "changeCountry": "Skift land",
+    "confirmCountry": "Bekræft land",
+    "confirmSigned": "Bekræft underskrift",
+    "console": {
+      "willGenerationCompleted": "Testamentegenerering fuldført"
+    },
+    "countries": {
+      "AL": "En l",
+      "AT": "En t",
+      "BA": "B a",
+      "BE": "Vær",
+      "BG": "B g",
+      "CH": "Ch",
+      "CY": "C y",
+      "CZ": "Cz",
+      "DE": "D e",
+      "DK": "Dk",
+      "EE": "Ø",
+      "ES": "E s",
+      "FI": "F i",
+      "FR": "Fr",
+      "GB": "G b",
+      "GR": "G r",
+      "HR": "Hr",
+      "HU": "H u",
+      "IE": "Jeg e",
+      "IS": "Jeg er",
+      "IT": "Jeg t",
+      "LI": "L i",
+      "LT": "Lt",
+      "LU": "L u",
+      "LV": "L v",
+      "MD": "M d",
+      "ME": "M e",
+      "MK": "M k",
+      "MT": "M t",
+      "NL": "N l",
+      "NO": "Nej",
+      "PL": "P l",
+      "PT": "Pt",
+      "RO": "R o",
+      "RS": "R'er",
+      "SE": "S e",
+      "SI": "S i",
+      "SK": "S k",
+      "UA": "Du er en"
+    },
+    "executionInstructions": "Udførelsesinstruktioner",
+    "failed_to_load_will_template_2": "Kunne ikke indlæse testamentskabelon 2",
+    "finalizeUpload": "Færdiggør upload",
+    "fullName": "Fulde navn",
+    "no_template_found_for_this_jur_1": "Ingen skabelon fundet til denne jur 1",
+    "please_confirm_that_you_have_s_3": "Bekræft venligst, at du har s 3",
+    "select_a_country_4": "Vælg et land 4",
+    "steps": {
+      "confirmJurisdiction": "Bekræft jurisdiktion",
+      "executorBeneficiaries": "Eksekutorbegunstigede",
+      "personalInformation": "Personlige oplysninger",
+      "reviewGenerate": "Generer anmeldelse",
+      "signConfirm": "Underskriv bekræftelse"
+    }
+  },
+  "willSync": {
+    "approve": "Godkende",
+    "autoApplied": "Automatisk anvendt",
+    "changes": {
+      "allocationsModified": "Tildelinger ændret",
+      "assetsAdded": "Tilføjede aktiver",
+      "beneficiariesRemoved": "Modtagere fjernet",
+      "noChanges": "Ingen ændringer"
+    },
+    "reject": "Afvise",
+    "viewChanges": "Se ændringer"
+  },
+  "willSyncSettings": {
+    "autoSync": "Automatisk synkronisering",
+    "autoSyncDescription": "Beskrivelse af automatisk synkronisering",
+    "frequencyDaily": "Hyppighed dagligt",
+    "frequencyImmediate": "Frekvens øjeblikkelig",
+    "frequencyWeekly": "Hyppighed ugentligt",
+    "generalDescription": "Generel beskrivelse",
+    "generalSettings": "Generelle indstillinger",
+    "requireApproval": "Kræv godkendelse",
+    "requireApprovalDescription": "Kræv godkendelsesbeskrivelse",
+    "saveError": "Gem fejl",
+    "saved": "Gemt",
+    "syncFrequency": "Synkroniseringsfrekvens",
+    "triggerDescription": "Beskrivelse af udløseren",
+    "triggerSettings": "Triggerindstillinger"
+  },
+  "willVersion": {
+    "added": "Tilføjet",
+    "compareDiff": "Sammenlign forskel",
+    "comparePrompt": "Sammenlign prompt",
+    "current": "Strøm",
+    "description": "Beskrivelse",
+    "modified": "Ændret",
+    "removed": "Fjernet",
+    "restore": "Gendan",
+    "title": "Titel",
+    "versionNumber": "Versionsnummer"
+  },
+  "disclaimers": {
+    "general": "LegacyGuard tilbyder værktøjer og vejledning til arvsplanlægning, men yder ikke juridisk rådgivning. Ved komplekse dødsboer eller specifikke juridiske spørgsmål bedes du kontakte en kvalificeret advokat i din jurisdiktion.",
+    "willGenerator": "Testamentegeneratoren opretter dokumenter baseret på de oplysninger, du giver. Selvom det er designet til at opfylde juridiske krav, anbefaler vi kraftigt, at ethvert genereret testamente gennemgås af en kvalificeret advokat før underskrivelse.",
+    "jurisdiction": "Juridiske krav varierer fra jurisdiktion til jurisdiktion. Sørg for, at dine dokumenter overholder lovgivningen i dit område.",
+    "notLegalAdvice": "Denne tjeneste udgør ikke juridisk rådgivning og bør ikke betragtes som sådan.",
+    "professionalReview": "Ved komplekse dødsboer, forretningsinteresser eller unikke familiesituationer anbefales professionel juridisk gennemgang kraftigt."
+  },
+  "terms": {
+    "serviceTerms": "Servicevilkår",
+    "privacyPolicy": "Privatlivspolitik",
+    "dataProcessing": "Databehandleraftale",
+    "userAgreement": "Brugeraftale",
+    "acceptanceRequired": "Ved at bruge LegacyGuard accepterer du vores servicevilkår og privatlivspolitik.",
+    "lastUpdated": "Sidst opdateret: {{date}}",
+    "effectiveDate": "Ikrafttrædelsesdato: {{date}}"
+  },
+  "compliance": {
+    "dataProtection": "Dine data er beskyttet i overensstemmelse med gældende databeskyttelseslovgivning, herunder GDPR og CCPA.",
+    "encryption": "Alle følsomme oplysninger krypteres ved hjælp af branchestandardiserede krypteringsmetoder.",
+    "retention": "Politikker for dataopbevaring er udviklet til at beskytte dit privatliv, samtidig med at det sikres, at din familie har adgang til vigtige oplysninger, når det er nødvendigt.",
+    "access": "Du har til enhver tid ret til at få adgang til, ændre eller slette dine personlige oplysninger.",
+    "portability": "Du kan eksportere dine data i standardformater til brug med andre tjenester."
+  },
+  "executionRequirements": {
+    "witnessRequirements": "Krav til vidner for {{jurisdiction}}",
+    "notaryRequirements": "Krav til notarbekræftelse",
+    "signingInstructions": "Instruktioner til korrekt underskrift",
+    "storageGuidelines": "Retningslinjer for sikker opbevaring",
+    "legalCompliance": "Verifikation af juridisk overholdelse"
+  },
+  "cookiePolicy": {
+    "cookieTypes": {
+      "analytics": "Analysecookies hjælper os med at forstå, hvordan besøgende interagerer med vores hjemmeside.",
+      "essential": "Essentielle cookies er nødvendige for at hjemmesiden kan fungere korrekt.",
+      "marketing": "Markedsføringscookies bruges til at spore besøgende på tværs af websteder for at vise relevante annoncer."
+    },
+    "howWeUseCookies": "Vi bruger cookies til at forbedre din oplevelse, analysere brugen af webstedet og levere personligt tilpasset indhold.",
+    "introduction": "Denne cookiepolitik forklarer, hvordan LegacyGuard bruger cookies og lignende teknologier.",
+    "manageCookies": "Du kan administrere dine cookiepræferencer via dine browserindstillinger eller vores cookiepræferencecenter.",
+    "title": "Titel",
+    "whatAreCookies": "Cookies er små tekstfiler, der gemmes på din enhed, når du besøger vores hjemmeside."
+  },
+  "header": {
+    "title": "Titel"
+  },
+  "hero": {
+    "headline": "Overskrift",
+    "subheadline": "Underoverskrift"
+  },
+  "termsOfService": {
+    "effectiveDate": "Ikrafttrædelsesdato: {{date}}",
+    "introduction": "Disse servicevilkår regulerer din brug af LegacyGuards familiebeskyttelsesplatform og -tjenester.",
+    "lastUpdated": "Sidst opdateret: {{date}}",
+    "sections": {
+      "acceptance": {
+        "content": "Ved at tilgå eller bruge LegacyGuard accepterer du at være bundet af disse servicevilkår og alle gældende love og regler.",
+        "title": "Accept af vilkår"
+      },
+      "description": {
+        "content": "LegacyGuard tilbyder digitale værktøjer og tjenester, der hjælper enkeltpersoner med at organisere deres vigtige oplysninger med henblik på familiebeskyttelse.",
+        "title": "Servicebeskrivelse"
+      },
+      "limitations": {
+        "content": "LegacyGuard tilbyder værktøjer og vejledning, men yder ikke juridisk rådgivning. Vi anbefaler at konsultere kvalificerede fagfolk i forbindelse med komplekse juridiske spørgsmål.",
+        "title": "Ansvarsbegrænsninger"
+      },
+      "privacy": {
+        "content": "Dit privatliv er vigtigt for os. Gennemgå venligst vores privatlivspolitik for at forstå, hvordan vi indsamler, bruger og beskytter dine oplysninger.",
+        "title": "Privatliv og databeskyttelse"
+      },
+      "userResponsibilities": {
+        "content": "Du er ansvarlig for at opretholde fortroligheden af dine kontooplysninger og for alle aktiviteter, der finder sted under din konto.",
+        "title": "Brugeransvar"
+      }
+    },
+    "title": "Servicevilkår"
+  },
+  "cookies": {
+    "policy": {
+      "analytics": {
+        "description": "Beskrivelse",
+        "examples": {
+          "ga": "Ga",
+          "gid": "Gid",
+          "session": "Session"
+        },
+        "purpose": "Formål",
+        "title": "Titel"
+      },
+      "categories": {
+        "title": "Titel"
+      },
+      "contact": {
+        "address": "Adresse",
+        "addressDetails": "Adresseoplysninger",
+        "description": "Beskrivelse",
+        "email": "E-mail",
+        "title": "Titel"
+      },
+      "examples": "Eksempler",
+      "lastUpdated": "Sidst opdateret",
+      "manage": {
+        "title": "Titel"
+      },
+      "marketing": {
+        "description": "Beskrivelse",
+        "examples": {
+          "facebook": "Facebook",
+          "google": "Google"
+        },
+        "purpose": "Formål",
+        "title": "Titel"
+      },
+      "necessary": {
+        "description": "Beskrivelse",
+        "examples": {
+          "auth": "Godkendelse",
+          "consent": "Samtykke",
+          "csrf": "Csrf",
+          "session": "Session"
+        },
+        "purpose": "Formål",
+        "title": "Titel"
+      },
+      "overview": {
+        "intro": "Introduktion",
+        "point1": "Punkt1",
+        "point2": "Punkt2",
+        "point3": "Punkt3",
+        "point4": "Punkt4",
+        "title": "Titel"
+      },
+      "preferences": {
+        "description": "Beskrivelse",
+        "examples": {
+          "language": "Sprog",
+          "theme": "Tema",
+          "ui": "Brugergrænseflade"
+        },
+        "purpose": "Formål",
+        "title": "Titel"
+      },
+      "purpose": "Formål",
+      "required": "Påkrævet",
+      "subtitle": "Undertekst",
+      "title": "Titel",
+      "yourRights": {
+        "description": "Beskrivelse",
+        "right1": "Højre1",
+        "right2": "Højre2",
+        "right3": "Højre3",
+        "right4": "Højre4",
+        "title": "Titel"
+      }
+    }
+  },
+  "wills": {
+    "errors": {
+      "unauthorized": "Uautoriserede fejl",
+      "not_found": "Fejl ikke fundet",
+      "failed_to_load": "Fejlene kunne ikke indlæses",
+      "cannot_update_non_draft": "Fejl kan ikke opdatere ikke-kladde",
+      "failed_to_save": "Fejlene kunne ikke gemmes",
+      "cannot_delete_non_draft": "Fejl kan ikke slette ikke-kladde",
+      "failed_to_delete": "Fejlene kunne ikke slettes",
+      "failed_to_generate": "Fejlene kunne ikke genereres",
+      "failed_to_fetch": "Fejlene kunne ikke hentes",
+      "failed_to_sign": "Fejl der opstod, da underskrivelsen mislykkedes"
+    },
+    "common": {
+      "confirm": "Fælles bekræftelse",
+      "next": "Fælles næste",
+      "cancel": "Fælles annullering"
+    },
+    "beneficiaries": {
+      "title": "Modtageres titel",
+      "description": "Beskrivelse af modtagere",
+      "name": "Navn på modtagere",
+      "allocation": "Tildeling af modtagere",
+      "identification": "Identifikation af modtagere",
+      "note1": "Modtageres note1",
+      "note2": "Modtageres note2",
+      "note3": "Modtagernes note3"
+    },
+    "allocation": {
+      "title": "Tildelingstitel",
+      "description": "Beskrivelse af tildeling",
+      "total": "Total tildeling",
+      "percentage": "Tildelingsprocent",
+      "tips": {
+        "title": "Tipstitel",
+        "tip1": "Tips tip1",
+        "tip2": "Tips tip2",
+        "tip3": "Tips tip3"
+      }
+    },
+    "validation": {
+      "allocation100": "Valideringsallokering100"
+    },
+    "beneficiary": {
+      "name": "Modtagernavn",
+      "relationship": "Modtagerforhold"
+    },
+    "name": "Testamentets navn",
+    "address": "Testamenteadresse",
+    "executor": {
+      "title": "Eksekutortitel",
+      "description": "Beskrivelse af eksekutor",
+      "primary": "Eksekutor primær",
+      "name": "Eksekutornavn",
+      "relationship": "Eksekutorforhold",
+      "address": "Eksekutoradresse",
+      "phone": "Eksekutor telefon",
+      "alternative": "Alternativ til bobestyrer",
+      "responsibilities": "Eksekutors ansvarsområder",
+      "responsibility1": "Eksekutoransvar1",
+      "responsibility2": "Eksekutoransvar2",
+      "responsibility3": "Eksekutoransvar3",
+      "responsibility4": "Eksekutoransvar4"
+    },
+    "status": {
+      "draft": "Statusudkast",
+      "notarized": "Status notariseret",
+      "stored": "Status gemt",
+      "updated": "Status opdateret"
+    },
+    "buttons": {
+      "saving": "Knapper gemmer"
+    },
+    "disclaimer": "Ansvarsfraskrivelse vedrørende testamenter",
+    "requirements": {
+      "handwriting": "Krav til håndskrift",
+      "typed": "Krav indtastet",
+      "witnesses": "Krav til vidner",
+      "notarization": "Krav til notarbekræftelse"
+    },
+    "preview": {
+      "alternative": "Forhåndsvisningsalternativ",
+      "executor": "Forhåndsvisning af eksekutor",
+      "place": "Forhåndsvisning af sted",
+      "witnesses": "Forhåndsvisning af vidner",
+      "name": "Forhåndsvisningsnavn",
+      "signature": "Forhåndsvisning af signatur",
+      "address": "Forhåndsvisning af adresse",
+      "date": "Forhåndsvisningsdato",
+      "title": "Forhåndsvisning af titel",
+      "description": "Forhåndsvisning af beskrivelse",
+      "print": "Forhåndsvisning af udskrift"
+    },
+    "compliance": {
+      "encryption": "Overholdelse af kryptering",
+      "retention": "Overholdelse af overholdelse",
+      "access": "Adgang til overholdelse af regler",
+      "portability": "Overholdelsesportabilitet"
+    },
+    "policy": {
+      "necessary": {
+        "examples": {
+          "auth": "Eksempler på godkendelse",
+          "session": "Eksempelsession",
+          "csrf": "Eksempler csrf",
+          "consent": "Eksempler på samtykke"
+        }
+      },
+      "duration": {
+        "session": "Varighedssession"
+      },
+      "analytics": {
+        "title": "Analysetitel",
+        "description": "Analysebeskrivelse",
+        "purpose": "Analyseformål",
+        "examples": {
+          "ga": "Eksempler ga",
+          "gid": "Eksempler gid",
+          "session": "Eksempelsession"
+        }
+      },
+      "marketing": {
+        "title": "Marketingtitel",
+        "description": "Markedsføringsbeskrivelse",
+        "purpose": "Markedsføringsformål",
+        "examples": {
+          "facebook": "Eksempler på Facebook",
+          "google": "Eksempler på Google"
+        }
+      },
+      "preferences": {
+        "title": "Præferencetitel",
+        "description": "Beskrivelse af præferencer",
+        "purpose": "Formål med præferencer",
+        "examples": {
+          "theme": "Eksempler på temaer",
+          "language": "Eksempler på sprog",
+          "ui": "Eksempler brugergrænseflade"
+        }
+      },
+      "title": "Politiktitel",
+      "subtitle": "Politikens undertitel",
+      "overview": {
+        "title": "Oversigtstitel",
+        "intro": "Oversigtsintroduktion",
+        "point1": "Oversigtspunkt 1",
+        "point2": "Oversigtspunkt 2",
+        "point3": "Oversigtspunkt 3",
+        "point4": "Oversigt punkt 4"
+      },
+      "categories": {
+        "title": "Kategoriertitel"
+      },
+      "required": "Politik påkrævet",
+      "purpose": "Politikkens formål",
+      "examples": "Eksempler på politikker",
+      "manage": {
+        "title": ""
+      },
+      "contact": {
+        "title": "",
+        "description": "",
+        "email": "",
+        "address": ""
+      }
+    }
+  }
+}

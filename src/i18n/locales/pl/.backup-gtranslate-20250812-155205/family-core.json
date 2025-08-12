@@ -1,0 +1,1036 @@
+{
+  "crisisAssessment": {
+    "familyCapabilities": "Możliwości rodzinne",
+    "familyDiscussion": "Dyskusja rodzinna",
+    "familyDiscussionDescription": "Opis dyskusji rodzinnej"
+  },
+  "errors": {
+    "loadingFamily": "Wystąpił problem z wczytaniem listy zaufanych osób. Odśwież stronę.",
+    "accessDenied": "Nie możesz teraz zmienić informacji o tej osobie",
+    "assigningRole": "Nie mogliśmy im powierzyć tej roli. Spróbuj ponownie.",
+    "dataNotFound": "Nie udało nam się znaleźć tych informacji",
+    "duplicatePerson": "Ta osoba jest już na liście osób, którym ufasz",
+    "duplicateRecord": "To już jest zapisane",
+    "grantingAccess": "Nie mogliśmy im przyznać dostępu. Spróbuj ponownie.",
+    "invalidEmail": "Ten e-mail wygląda na nieprawidłowy. Proszę go sprawdzić.",
+    "invalidPhone": "Ten numer telefonu wygląda na nieprawidłowy. Proszę go sprawdzić.",
+    "networkError": "Problem z połączeniem. Sprawdź połączenie internetowe.",
+    "permissionDenied": "Nie masz uprawnień, aby to zrobić",
+    "removingPerson": "Nie udało nam się usunąć ich z listy osób, którym ufasz. Spróbuj ponownie.",
+    "roleConflict": "Mają już inną rolę, która koliduje z tą",
+    "savingPerson": "Nie udało nam się zapisać ich danych. Sprawdź i spróbuj ponownie.",
+    "sendingInvitation": "Nie udało nam się wysłać zaproszenia. Sprawdź pocztę e-mail i spróbuj ponownie.",
+    "unknown": "Coś poszło nie tak"
+  },
+  "familyCapabilities": {
+    "businessOperations": "Operacje biznesowe",
+    "canAccessBankAccounts": "Możliwość dostępu do kont bankowych",
+    "canAccessDigitalAccounts": "Możliwość dostępu do kont cyfrowych",
+    "canFileInsuranceClaims": "Możliwość składania roszczeń ubezpieczeniowych",
+    "canManageBusiness": "Potrafi zarządzać biznesem",
+    "cannotAccessBankAccounts": "Nie można uzyskać dostępu do kont bankowych",
+    "cannotAccessDigitalAccounts": "Nie można uzyskać dostępu do kont cyfrowych",
+    "cannotFileInsuranceClaims": "Nie można składać roszczeń ubezpieczeniowych",
+    "clearInheritancePlan": "Przejrzysty plan dziedziczenia",
+    "digitalAccess": "Dostęp cyfrowy",
+    "digitalAccounts": "Konta cyfrowe",
+    "immediateFinancialNeeds": "Natychmiastowe potrzeby finansowe",
+    "inheritance": "Dziedzictwo",
+    "insuranceClaims": "Roszczenia ubezpieczeniowe",
+    "knowsLegalContacts": "Zna kontakty prawne",
+    "knowsMedicalWishes": "Zna potrzeby medyczne",
+    "legalMatters": "Sprawy prawne",
+    "medicalDecisions": "Decyzje medyczne",
+    "noBusinessInfo": "Brak informacji o firmie",
+    "noInheritancePlan": "Brak planu dziedziczenia",
+    "noLegalContacts": "Brak kontaktów prawnych",
+    "noMedicalInfo": "Brak informacji medycznych",
+    "partialBusinessInfo": "Częściowe informacje o firmie",
+    "partialInheritancePlan": "Częściowy plan dziedziczenia",
+    "partialMedicalInfo": "Częściowe informacje medyczne",
+    "payBills": "Zapłać rachunki"
+  },
+  "familyCrisisAssessment": {
+    "15_1": "15 1"
+  },
+  "familyExecutorView": {
+    "communications": {
+      "description": "Opis",
+      "empty": "Pusty",
+      "title": "Tytuł",
+      "to": "Do"
+    },
+    "executor": "Wykonawca",
+    "footer": "Stopka",
+    "subtitle": "Podtytuł",
+    "theExecutor": "Wykonawca",
+    "title": "Tytuł"
+  },
+  "familyHub": {
+    "accessLevels": {
+      "emergencyOnly": {
+        "description": "Opis",
+        "fullDescription": "Pełny opis",
+        "title": "Tytuł"
+      },
+      "fullAccess": {
+        "description": "Opis",
+        "fullDescription": "Pełny opis",
+        "title": "Tytuł"
+      },
+      "limitedInfo": {
+        "description": "Opis",
+        "fullDescription": "Pełny opis",
+        "title": "Tytuł"
+      },
+      "none": {
+        "description": "Opis",
+        "title": "Tytuł"
+      }
+    },
+    "emergencyProtocol": {
+      "activeMessage": "Aktywna wiadomość",
+      "configure": "Konfiguruj",
+      "configured": "Skonfigurowano",
+      "description": "Opis",
+      "title": "Tytuł"
+    },
+    "errors": {
+      "authenticationRequired": "Wymagane uwierzytelnienie",
+      "failedToFetchData": "Nie udało się pobrać danych",
+      "failedToLoadMembers": "Nie udało się załadować członków"
+    },
+    "memberManagement": {
+      "addMorePeople": "Dodaj więcej osób",
+      "addTrustedPerson": "Dodaj zaufaną osobę",
+      "daysAgo": "Dni temu",
+      "informationAccessLevel": "Poziom dostępu do informacji",
+      "lastContactOver30Days": "Ostatni kontakt ponad 30 dni",
+      "lastContacted": "Ostatni kontakt",
+      "preparedness": "Gotowość",
+      "sendUpdate": "Wyślij aktualizację",
+      "sendUpdateTo": "Wyślij aktualizację do",
+      "title": "Tytuł"
+    },
+    "messages": {
+      "accessLevelUpdated": "Zaktualizowano poziom dostępu",
+      "failedToSendUpdate": "Nie udało się wysłać aktualizacji",
+      "updateSentTo": "Aktualizacja wysłana do"
+    },
+    "overallPreparedness": {
+      "description": "Opis",
+      "improvementNeeded": "Potrzebna poprawa",
+      "title": "Tytuł"
+    },
+    "subtitle": "Podtytuł",
+    "tabs": {
+      "familyMembers": "Członkowie rodziny",
+      "members": "Członkowie",
+      "preparednessTools": "Narzędzia przygotowawcze",
+      "tools": "Narzędzia"
+    },
+    "title": "Tytuł"
+  },
+  "familyPreparednessTools": {
+    "create_a_printable_guide_for_y_3": "Utwórz przewodnik do druku dla klasy 3",
+    "errors": {
+      "comingSoon": "Już wkrótce",
+      "generateFailed": "Generowanie nie powiodło się",
+      "premiumRequired": "Wymagana premia",
+      "selectScenario": "Wybierz scenariusz"
+    },
+    "generate_another_5": "Wygeneruj kolejne 5",
+    "generate_emergency_guide_2": "Wygeneruj przewodnik awaryjny 2",
+    "guides": {
+      "death": {
+        "bankAccounts": "Konta bankowe",
+        "contactExecutor": "Skontaktuj się z wykonawcą",
+        "contactLawyer": "Skontaktuj się z prawnikiem",
+        "deathCertificate": "Akt zgonu",
+        "disclaimer": "Zastrzeżenie",
+        "employer": "Pracodawca",
+        "financialInstitutions": "Instytucje finansowe",
+        "first24Hours": "Pierwsze 24 godziny",
+        "generatedOn": "Wygenerowano w dniu",
+        "importantDocuments": "Ważne dokumenty",
+        "insuranceCompanies": "Firmy ubezpieczeniowe",
+        "investmentAccounts": "Rachunki inwestycyjne",
+        "locateWill": "Zlokalizuj będzie",
+        "peopleToNotify": "Osoby do powiadomienia",
+        "secureResidence": "Bezpieczne miejsce zamieszkania",
+        "socialSecurity": "Ubezpieczenie społeczne",
+        "title": "Tytuł"
+      },
+      "emergency": {
+        "address": "Adres",
+        "attorney": "Adwokat",
+        "emergency": "Nagły wypadek",
+        "financialAdvisor": "Doradca finansowy",
+        "homeInformation": "Informacje domowe",
+        "insuranceAgent": "Agent ubezpieczeniowy",
+        "keyContacts": "Kluczowe kontakty",
+        "securitySystem": "System bezpieczeństwa",
+        "spouse": "Współmałżonek",
+        "title": "Tytuł",
+        "utilities": "Usługi komunalne"
+      },
+      "hospitalization": {
+        "allergies": "Alergie",
+        "bloodType": "Grupa krwi",
+        "currentMedications": "Aktualne leki",
+        "emergencyContacts": "Kontakty alarmowe",
+        "healthcarePowerOfAttorney": "Pełnomocnictwo do spraw opieki zdrowotnej",
+        "hipaaRelease": "Wydanie HIPAA",
+        "legalDocuments": "Dokumenty prawne",
+        "livingWill": "testament życia",
+        "medicalInformation": "Informacje medyczne",
+        "preferredHospital": "Preferowany szpital",
+        "primaryCarePhysician": "Lekarz podstawowej opieki zdrowotnej",
+        "title": "Tytuł"
+      },
+      "missing": {
+        "bankingApps": "Aplikacje bankowe",
+        "checkHospitals": "Sprawdź szpitale",
+        "checkWithWorkplace": "Sprawdź w miejscu pracy",
+        "contactCloseFriends": "Skontaktuj się z bliskimi przyjaciółmi",
+        "contactLocalPolice": "Skontaktuj się z lokalną policją",
+        "digitalFootprint": "Cyfrowy ślad",
+        "email": "E-mail",
+        "immediateActions": "Natychmiastowe działania",
+        "phoneProvider": "Dostawca telefonii",
+        "socialMedia": "Media społecznościowe",
+        "title": "Tytuł"
+      }
+    },
+    "mockContent": {
+      "insurancePolicies": "Polisy ubezpieczeniowe"
+    },
+    "scenarios": {
+      "death": {
+        "description": "Opis",
+        "title": "Tytuł"
+      },
+      "emergency": {
+        "description": "Opis",
+        "title": "Tytuł"
+      },
+      "hospitalization": {
+        "description": "Opis",
+        "title": "Tytuł"
+      },
+      "missing": {
+        "description": "Opis",
+        "title": "Tytuł"
+      }
+    },
+    "select_scenario_4": "Wybierz scenariusz 4",
+    "tools": {
+      "cancel": "Anulować",
+      "chooseScenario": "Wybierz scenariusz",
+      "emergencySimulator": "Symulator awaryjny",
+      "emergencySimulatorDesc": "Opis symulatora awaryjnego",
+      "generateGuide": "Wygeneruj przewodnik",
+      "generating": "Generowanie",
+      "informationTreasureHunt": "Poszukiwanie skarbów informacyjnych",
+      "launch": "Początek",
+      "printGuide": "Wydrukuj przewodnik",
+      "stepByStepGuides": "Przewodniki krok po kroku",
+      "stepByStepGuidesDesc": "Przewodniki krok po kroku",
+      "treasureHuntDesc": "Opis polowania na skarb",
+      "videoMessages": "Wiadomości wideo",
+      "videoMessagesDesc": "Opis wiadomości wideo"
+    },
+    "use_these_tools_to_ensure_your_1": "Użyj tych narzędzi, aby zapewnić sobie 1"
+  },
+  "form": {
+    "additionalRoles": "Inne sposoby, w jakie mogą pomóc",
+    "assignedRoles": "Jak pomogą Twojej rodzinie",
+    "selectRoles": "Wybierz, w jaki sposób mogą pomóc Twojej rodzinie",
+    "accessDescription": "Co mogą zobaczyć i kiedy mogą pomóc",
+    "accessInfo": "Co potrafią zrobić",
+    "accessLevel": "Ile mogą zobaczyć",
+    "addPerson": "Dodaj kogoś do pomocy",
+    "alternatePhone": "Inny numer telefonu",
+    "backupFor": "Są kopią zapasową",
+    "backupHelper": "Za kogo się w razie potrzeby zabiorą",
+    "capabilities": "Dlaczego są do tego odpowiednie",
+    "capabilitiesHelper": "Co sprawia, że są dobrym wyborem, jeśli chodzi o udzielanie pomocy?",
+    "compensation": "Jeśli potrzebują wsparcia",
+    "compensationHelper": "Wszelka pomoc finansowa, której mogą potrzebować",
+    "contactInfo": "Jak do nich dotrzeć",
+    "dateOfBirth": "Urodziny",
+    "editPerson": "Możemy aktualizować ich dane",
+    "emailAddress": "E-mail",
+    "fullName": "Ich pełne imię i nazwisko",
+    "fullNameHelper": "Używaj ich prawnego imienia i nazwiska w ważnych dokumentach",
+    "fullNamePlaceholder": "Ich pełna nazwa prawna",
+    "homeAddress": "Gdzie mieszkają",
+    "instructions": "Ważne rzeczy, które powinni wiedzieć",
+    "instructionsHelper": "Jakieś specjalne wskazówki dotyczące pomocy rodzinie?",
+    "instructionsPlaceholder": "Co muszą wiedzieć, aby pomóc",
+    "limitations": "Rzeczy, o których należy pamiętać",
+    "limitationsHelper": "Wszystko, co mogłoby utrudnić im pomoc",
+    "personalInfo": "O nich",
+    "primaryPhone": "Najlepszy numer telefonu",
+    "primaryRole": "Główny sposób, w jaki pomogą",
+    "relationship": "Skąd ich znasz",
+    "relationshipPlaceholder": "Jak małżonek, dziecko, brat/siostra, najlepszy przyjaciel",
+    "roleInfo": "Jak pomogą",
+    "workAddress": "Gdzie pracują"
+  },
+  "preparedness": {
+    "familyBenefit": "Świadczenie rodzinne",
+    "familyCommunication": {
+      "description": "Opis",
+      "scheduleReview": "Przegląd harmonogramu",
+      "shareReport": "Udostępnij raport",
+      "title": "Tytuł"
+    },
+    "gaps": {
+      "basicAccessInfo": "Podstawowe informacje o dostępie",
+      "addMedicalPreferences": "Dodaj preferencje medyczne",
+      "completeFinancialAccess": "Pełny dostęp finansowy",
+      "documentBusinessOperations": "Dokumentowanie operacji biznesowych",
+      "improveImmediateAccess": "Popraw natychmiastowy dostęp",
+      "updateWillAndTrust": "Aktualizacja woli i zaufania"
+    },
+    "levels": {
+      "goodBasic": "Dobra podstawowa",
+      "fullyPrepared": "W pełni przygotowany",
+      "minimalPreparation": "Minimalne przygotowanie",
+      "needsImmediate": "Potrzeby natychmiastowe",
+      "somePreparation": "Trochę przygotowań",
+      "wellPrepared": "Dobrze przygotowany"
+    },
+    "assessments": {
+      "decisionMaking": {
+        "good": "Dobry",
+        "needsWork": "Wymaga pracy"
+      },
+      "immediateAccess": {
+        "good": "Dobry",
+        "needsWork": "Wymaga pracy"
+      },
+      "longTermSecurity": {
+        "good": "Dobry",
+        "needsWork": "Wymaga pracy"
+      }
+    },
+    "dimensions": {
+      "decisionMaking": "Podejmowanie decyzji",
+      "immediateAccess": "Natychmiastowy dostęp",
+      "longTermSecurity": "Długoterminowe bezpieczeństwo"
+    },
+    "impact": "Uderzenie",
+    "improvements": {
+      "addBankAccounts": "Dodaj konta bankowe",
+      "documentMedicalWishes": "Udokumentuj życzenia medyczne",
+      "uploadLegalDocuments": "Prześlij dokumenty prawne"
+    },
+    "nextStep": "Następny krok",
+    "scenarioReadiness": "Gotowość scenariusza",
+    "scenarios": {
+      "extendedTravel": {
+        "description": "Opis",
+        "title": "Tytuł"
+      },
+      "suddenDeath": {
+        "description": "Opis",
+        "title": "Tytuł"
+      }
+    },
+    "title": "Tytuł",
+    "toImprove": "Aby poprawić"
+  },
+  "relationships": {
+    "child": "Dziecko",
+    "friend": "Przyjaciel",
+    "other": "Inny",
+    "parent": "Roślina mateczna",
+    "sibling": "Rodzeństwo",
+    "spouse": "Współmałżonek"
+  },
+  "roles": {
+    "advisor": "Doradca",
+    "beneficiary": "Beneficjant",
+    "caregiver": "Opiekun",
+    "emergencyContact": "Kontakt alarmowy",
+    "executor": "Wykonawca",
+    "financialAgent": "Agent finansowy (pełnomocnictwo)",
+    "guardian": "Opiekun",
+    "healthcareProxy": "Pełnomocnictwo w sprawie opieki zdrowotnej",
+    "representative": "Przedstawiciel",
+    "successor": "Kopia zapasowa",
+    "trustee": "Powiernik",
+    "witness": "Będzie świadkiem"
+  },
+  "trustedCircle": {
+    "roles": "Jak mogą pomóc",
+    "totalMembers": "{{count}} osób gotowych do pomocy",
+    "addFirst": "Możemy dodać kogoś, kto może pomóc",
+    "description": "Wybieraj zaufane osoby, które będą mogły wesprzeć Twoją rodzinę, gdy zajdzie taka potrzeba.",
+    "empty": "Możemy zacząć od dodania kogoś, na kim nasza rodzina może polegać — współmałżonka, bliskiego przyjaciela lub zaufanego członka rodziny.",
+    "keyPeople": "Kluczowe osoby",
+    "recentlyAdded": "Ostatnio dodane",
+    "subtitle": "Ludzie, którzy będą dla Twojej rodziny",
+    "title": "Zaufani ludzie",
+    "viewAll": "Zobaczyć wszystkich"
+  },
+  "family": {
+    "GuardianPlaybook": {
+      "className": {
+        "flex_itemscenter_justifycenter_h64": "elementy elastyczne-środek wyśrodkuj-wyśrodkuj h-64",
+        "grid_gridcols6_wfull": "siatka grid-cols-6 w-full",
+        "flex_itemscenter_gap2": "elementy elastyczne-środek odstęp-2",
+        "hidden_sminline": "ukryty sm:inline",
+        "spacey4": "przestrzeń-y-4",
+        "minh200px": "min-h-[200px]",
+        "flex_justifybetween_itemscenter_mb4": "flex justify-between items-center mb-4",
+        "grid_gridcols1_mdgridcols2_gap4": "siatka siatka-kolumny-1 md:siatka-kolumny-2 przerwa-4",
+        "mdcolspan2": "md:col-span-2",
+        "minh80px": "min-h-[80px]",
+        "mt2": "mt-2",
+        "flex_itemscenter_justifybetween": "elementy elastyczne-centrowanie-wyrównanie-pomiędzy"
+      },
+      "htmlFor": {
+        "funeral_wishes": "życzenia_pogrzebowe",
+        "digital_accounts": "konta_cyfrowe",
+        "document_locations": "lokalizacje_dokumentów",
+        "personal_messages": "osobiste_wiadomości",
+        "practical_instructions": "praktyczne_instrukcje"
+      },
+      "id": {
+        "funeral_wishes": "życzenia_pogrzebowe",
+        "digital_accounts": "konta_cyfrowe",
+        "document_locations": "lokalizacje_dokumentów",
+        "personal_messages": "osobiste_wiadomości",
+        "practical_instructions": "praktyczne_instrukcje"
+      },
+      "playbooktabskey": "rodzina.tabs.${key}",
+      "contactnameindex": "nazwa-kontaktu-${index}",
+      "contactrelationshipindex": "relacja-kontaktowa-${index}",
+      "contactphoneindex": "kontakt-telefon-${index}",
+      "contactemailindex": "kontakt-e-mail-${index}",
+      "contactnotesindex": "notatki kontaktowe-${index}",
+      "playbookstatusstatus": "status.rodzinny.${status}"
+    },
+    "GuardianPlaybookView": {
+      "className": {
+        "minhscreen_flex_itemscenter_justifycenter": "min-h-screen flex elementy-centrum justify-center",
+        "animatepulse_textcenter": "animowany-pulsujący-centrum-tekstu",
+        "maxwmd": "max-w-md",
+        "minhscreen_bggradienttobr_frombackground_tomuted20": "min-h-screen bg-gradient-to-br-from-background-to-muted/20",
+        "container_mxauto_px4_py8_maxw4xl": "kontener mx-auto px-4 py-8 max-w-4xl",
+        "flex_itemscenter_justifycenter_w20_h20_roundedfull": "elementy elastyczne-centrowanie wyśrodkowanie wyjustowanie w-20 h-20 zaokrąglone-pełne tło-podstawowe/10 mx-automatyczne mb-4",
+        "mt4": "",
+        "mb8": "",
+        "flex_itemscenter_gap2": "elementy elastyczne-środek odstęp-2",
+        "grid_gap4_mdgridcols2": "odstęp siatki-4 md:grid-cols-2",
+        "spacey2": "przestrzeń-y-2",
+        "flex_itemsstart_justifybetween": "elementy elastyczne-start-wyrównaj-pomiędzy",
+        "fontsemibold": "czcionka-półpogrubiona",
+        "spacey1": "przestrzeń-y-1",
+        "flex_itemscenter_gap2_textsm_textprimary_hoverunde": "elementy elastyczne-środek odstęp-2 tekst-sm tekst-podstawowy najechanie kursorem:podkreślenie",
+        "spacey6": "przestrzeń-y-6",
+        "prose_prosesm_maxwnone": "proza proza-sm max-w-brak",
+        "whitespaceprewrap": "odstępy-przed-zawijaniem",
+        "mt12_textcenter_textsm_textmutedforeground": "mt-12 tekst-centrum tekst-sm tekst-wyciszony-na-pierwszym-planie"
+      },
+      "telcontactphone": "tel.:${contact.phone}",
+      "mailtocontactemail": ""
+    }
+  },
+  "guardianUpload": {
+    "relationships": {
+      "child": "Dziecko",
+      "friend": "Przyjaciel",
+      "legalProfessional": "Profesjonalista prawny",
+      "other": "Inny",
+      "parent": "Roślina mateczna",
+      "sibling": "Rodzeństwo",
+      "spouse": "Współmałżonek"
+    },
+    "roles": {
+      "emergencyContact": "Kontakt alarmowy",
+      "executorOfWill": "Wykonawca testamentu",
+      "financialPowerOfAttorney": "Pełnomocnictwo finansowe",
+      "guardianForChildren": "Opiekun dla dzieci",
+      "healthcareProxy": "Pełnomocnik ds. opieki zdrowotnej",
+      "trustee": "Powiernik"
+    },
+    "rolesTitle": "Tytuł roli",
+    "addButton": "Dodaj przycisk",
+    "addTitle": "Dodaj tytuł",
+    "added": "W dodatku",
+    "countryDescription": "Opis kraju",
+    "countryLabel": "Etykieta kraju",
+    "countryPlaceholder": "Symbol zastępczy kraju",
+    "description": "Opis",
+    "editTitle": "Edytuj tytuł",
+    "emailLabel": "Etykieta e-mail",
+    "emailPlaceholder": "Symbol zastępczy adresu e-mail",
+    "error": "Błąd",
+    "errors": {
+      "connectionError": "Błąd połączenia",
+      "duplicateError": "Błąd duplikatu",
+      "permissionError": "Błąd uprawnień",
+      "requiredDataNotFound": "Nie znaleziono wymaganych danych",
+      "saveError": "Zapisz błąd",
+      "unknownError": "Nieznany błąd"
+    },
+    "fullNameLabel": "Etykieta z pełną nazwą",
+    "fullNamePlaceholder": "Miejsce zastępcze pełnego imienia i nazwiska",
+    "loginToSave": "Zaloguj się, aby zapisać",
+    "phoneLabel": "Etykieta telefonu",
+    "phonePlaceholder": "Symbol zastępczy telefonu",
+    "relationshipLabel": "Etykieta relacji",
+    "relationshipPlaceholder": "Symbol zastępczy relacji",
+    "saving": "Oszczędność",
+    "success": "Sukces",
+    "updateButton": "Przycisk aktualizacji",
+    "updated": "Zaktualizowano"
+  },
+  "familyMembers": "Członkowie rodziny",
+  "sensitivity": {
+    "step_family_dynamics": "Relacje w rodzinach patchworkowych wymagają jasnej dokumentacji",
+    "family_conflict": "Konflikty rodzinne wymagają dodatkowej przejrzystości w planowaniu",
+    "previous_marriage_obligations": "Należy zająć się wcześniejszymi zobowiązaniami małżeńskimi",
+    "absent_parent_considerations": "Sytuacje, w których nie ma rodzica, wymagają starannego planowania",
+    "solo_responsibility_pressure": "Obowiązki samotnego rodzica mogą wydawać się przytłaczające",
+    "inheritance_disputes": "Potencjalnym sporom o dziedziczenie należy zapobiegać",
+    "traditional_role_expectations": "Tradycyjne role rodzinne mogą wymagać rozważenia",
+    "disability_planning_stress": "Planowanie potrzeb specjalnych może być wyzwaniem emocjonalnym",
+    "long_term_care_concerns": "Długoterminowe planowanie opieki jest niezbędne"
+  },
+  "features": {
+    "family_communication_center": {
+      "title": "Centrum Komunikacji Rodzinnej",
+      "description": "Informuj wszystkich i dbaj o ich łączność"
+    },
+    "family_tree_visualizer": {
+      "title": "Wizualizator drzewa genealogicznego",
+      "description": "Wizualne mapowanie złożonych relacji rodzinnych"
+    },
+    "step_family_guidance": {
+      "title": "Poradnictwo dla rodzin patchworkowych",
+      "description": "Poruszaj się pewnie po planowaniu rodziny patchworkowej"
+    },
+    "family_meeting_tools": {
+      "title": "Narzędzia do spotkań rodzinnych",
+      "description": "Ułatwiaj ważne dyskusje rodzinne"
+    },
+    "document_vault": {
+      "title": "Bezpieczne repozytorium dokumentów",
+      "description": "Przechowuj i udostępniaj ważne dokumenty bezpiecznie"
+    },
+    "guardian_network_builder": {
+      "title": "",
+      "description": "Zbuduj silną sieć wsparcia dla swoich dzieci"
+    },
+    "single_parent_resources": {
+      "title": "Zasoby dla samotnych rodziców",
+      "description": "Specjalistyczne narzędzia i wsparcie dla samotnych rodziców"
+    },
+    "complex_beneficiary_manager": {
+      "title": "Menedżer ds. złożonych beneficjentów",
+      "description": "Zarządzaj wieloma relacjami z jasnością"
+    },
+    "multi_generation_planner": {
+      "title": "Planista wielopokoleniowy",
+      "description": "Potrzeby równowagi między pokoleniami"
+    },
+    "elder_care_resources": {
+      "title": "Zasoby opieki nad osobami starszymi",
+      "description": "Wsparcie w opiece nad starzejącymi się rodzicami"
+    },
+    "special_needs_trust_wizard": {
+      "title": "Kreator ds. potrzeb specjalnych",
+      "description": "Utwórz odpowiednie fundusze powiernicze dla osób o specjalnych potrzebach"
+    },
+    "care_instruction_builder": {
+      "title": "Kreator instrukcji pielęgnacyjnych",
+      "description": "Udokumentuj szczegółowe wymagania dotyczące opieki"
+    },
+    "government_benefit_tracker": {
+      "title": "Monitor świadczeń rządowych",
+      "description": "Zapewnij sobie prawo do ważnych świadczeń"
+    },
+    "business_succession_planner": {
+      "title": "Planista sukcesji biznesowej",
+      "description": "Plan ciągłości działania"
+    },
+    "buy_sell_agreement_tracker": {
+      "title": "Monitor umów kupna-sprzedaży",
+      "description": "Zarządzanie umowami o partnerstwie biznesowym"
+    },
+    "remote_collaboration_tools": {
+      "title": "Narzędzia do współpracy zdalnej",
+      "description": "Współpracuj pomimo odległości"
+    },
+    "multi_jurisdiction_guidance": {
+      "title": "Wskazówki dotyczące wielu jurysdykcji",
+      "description": "Poruszaj się po przepisach obowiązujących w różnych lokalizacjach"
+    }
+  },
+  "cultural": {
+    "extended_family_obligations": "Rozszerzone obowiązki rodzinne",
+    "islamic_inheritance": "Zasady dziedziczenia w islamie",
+    "jewish_traditions": "Żydowskie tradycje rodzinne",
+    "christian_values": "Chrześcijańskie wartości zarządzania",
+    "buddhist_principles": "Buddyjskie zasady współczucia",
+    "patriarchal_hierarchy": "Tradycyjna struktura patriarchalna",
+    "matriarchal_hierarchy": "Tradycyjna struktura matriarchalna",
+    "elder_led_hierarchy": "Struktura rodziny kierowana przez osoby starsze",
+    "collective_decision_making": "Wspólne decyzje rodzinne",
+    "elder_respect_obligations": "Obowiązki opieki nad osobami starszymi",
+    "multilingual_documentation": "Potrzeby dokumentacji wielojęzycznej"
+  },
+  "access": {
+    "descriptions": {
+      "executor": "Mogą zarządzać wszystkim, aby pomóc Twojej rodzinie",
+      "full": "Mogą przeglądać i zarządzać wszystkimi informacjami o Twojej rodzinie",
+      "limited": "Mogą zobaczyć podstawowe dane kontaktowe i instrukcje dotyczące sytuacji awaryjnych",
+      "standard": "Mogą zobaczyć większość rzeczy, których potrzebuje Twoja rodzina"
+    },
+    "levels": {
+      "executor": "Pełny dostęp pomocniczy",
+      "full": "Widzi wszystko",
+      "limited": "Tylko podstawowe informacje",
+      "standard": "Regularny dostęp rodzinny"
+    },
+    "permissions": {
+      "editInformation": "Możliwość wprowadzania zmian",
+      "manageAccess": "Może zarządzać innymi pomocnikami",
+      "viewAssets": "Możesz zobaczyć swoje ważne rzeczy",
+      "viewDocuments": "Możliwość odczytu dokumentów"
+    }
+  },
+  "actions": {
+    "addPerson": "Możemy dodać zaufaną osobę",
+    "assignRole": "Możemy przypisać rolę",
+    "contactPerson": "Możemy się skontaktować",
+    "editPerson": "Zaktualizuj swoje informacje",
+    "grantAccess": "Możemy udzielić dostępu",
+    "printSummary": "Możemy wydrukować podsumowanie",
+    "removePerson": "Możemy usunąć osoby zaufane",
+    "removeRole": "Możemy zmienić ich rolę",
+    "revokeAccess": "Możemy zmienić to, co widzą",
+    "scheduleReview": "Możemy zaplanować przegląd",
+    "sendInvitation": "Możemy ich zaprosić do pomocy",
+    "setBackup": "Możemy ustawić pomocnika kopii zapasowej",
+    "viewProfile": "Możemy zobaczyć wszystkie ich szczegóły"
+  },
+  "common": {
+    "cancel": "Anulować",
+    "fix": "Naprawić",
+    "minutes": "Protokół",
+    "start": ""
+  },
+  "estateStatus": {
+    "actions": {
+      "cancel": "Anulować",
+      "update": "Aktualizacja",
+      "updating": "Aktualizacja"
+    },
+    "description": "Opis",
+    "dialog": {
+      "description": "Opis",
+      "title": "Tytuł"
+    },
+    "empty": {
+      "noStatus": "Brak statusu",
+      "readOnly": "Tylko do odczytu"
+    },
+    "fields": {
+      "additionalDetails": "Dodatkowe szczegóły",
+      "status": ""
+    },
+    "lastUpdated": "Ostatnia aktualizacja",
+    "logAction": "Rejestr działań",
+    "placeholders": {
+      "additionalContext": "Dodatkowy kontekst",
+      "selectStatus": "Wybierz status"
+    },
+    "progress": "Postęp",
+    "statuses": {
+      "assetsBeingValued": "Wycena aktywów",
+      "debtsBeingSettled": "Długi są spłacane",
+      "distributionInProgress": "Dystrybucja w toku",
+      "estateClosed": "Majątek zamknięty",
+      "gatheringDocuments": "Gromadzenie dokumentów",
+      "initialReview": "Przegląd wstępny",
+      "probateInitiated": "Zainicjowano postępowanie spadkowe",
+      "readyForDistribution": "Gotowe do dystrybucji",
+      "taxPreparation": "Przygotowanie zeznań podatkowych"
+    },
+    "title": "Tytuł"
+  },
+  "guardian": {
+    "templateModal": {
+      "_1": ""
+    }
+  },
+  "guardianView": {
+    "defaultUserName": "Domyślna nazwa użytkownika",
+    "errors": {
+      "failedToLoad": "Nie udało się załadować",
+      "pleaseLogin": "Proszę się zalogować"
+    },
+    "guardianInfo": {
+      "description": "Opis",
+      "securityNote": "Notatka bezpieczeństwa"
+    },
+    "readOnlyAccess": "Dostęp tylko do odczytu",
+    "sections": {
+      "finalWishes": {
+        "description": "Opis",
+        "digitalAccounts": "Konta cyfrowe",
+        "empty": "Pusty",
+        "funeralWishes": "Życzenia pogrzebowe",
+        "title": "Tytuł"
+      },
+      "keyDocuments": {
+        "description": "Opis",
+        "empty": "Pusty",
+        "expires": "Wygasa",
+        "keyDocumentBadge": "Odznaka dokumentu kluczowego",
+        "noExpiration": "Brak daty ważności",
+        "title": "Tytuł"
+      }
+    },
+    "subtitle": "Podtytuł",
+    "title": "Tytuł"
+  },
+  "guardianship": {
+    "addDependent": "Dodaj osobę potrzebującą opieki",
+    "alternateGuardian": "Zapasowy opiekun",
+    "careStandards": "Jak chcesz, żeby się nimi opiekowano",
+    "childGuardians": "Kto zaopiekuje się Twoimi dziećmi",
+    "dependentCare": "Plany opieki dla Twoich bliskich",
+    "description": "Wybierz kochające osoby, które zaopiekują się twoimi dziećmi lub członkami rodziny, którzy potrzebują pomocy, jeśli ciebie nie będzie.",
+    "educationPreferences": "Życzenia szkolne i edukacyjne",
+    "financialProvisions": "Pieniądze na ich opiekę",
+    "guardianCompensation": "Wsparcie dla Opiekuna",
+    "guardianFor": "Kto zaopiekuje się {{name}}",
+    "guardianInstructions": "Jak się nimi opiekować",
+    "guardianQualifications": "Dlaczego są właściwym wyborem",
+    "healthcarePreferences": "Zdrowie i opieka medyczna",
+    "lifestylePreferences": "Życie codzienne i zajęcia",
+    "noChildren": "Nie poinformowaliście nas jeszcze o żadnych dzieciach ani członkach rodziny, którzy potrzebują opieki.",
+    "primaryGuardian": "Opiekun pierwszego wyboru",
+    "religiousPreferences": "Wiara i wartości",
+    "reportingRequirements": "Utrzymywanie rodziny na bieżąco",
+    "subtitle": "Dbanie o to, aby Twoi bliscy mieli opiekę",
+    "temporaryGuardian": "Opiekun krótkoterminowy",
+    "title": "Kto zaopiekuje się Twoimi bliskimi",
+    "visitationRights": "Organizacja odwiedzin rodzinnych"
+  },
+  "notificationPreferences": {
+    "description": "Opis",
+    "emailRequired": "Wymagany adres e-mail",
+    "errors": {
+      "loadFailed": "Ładowanie nie powiodło się",
+      "updateFailed": "Aktualizacja nie powiodła się"
+    },
+    "howItWorks": {
+      "point1": "Punkt 1",
+      "point2": "Punkt 2",
+      "point3": "Punkt 3",
+      "title": "Tytuł"
+    },
+    "info": "Informacje",
+    "lastUpdated": "Ostatnia aktualizacja",
+    "noEmail": "Brak poczty e-mail",
+    "title": "Tytuł"
+  },
+  "playbook": {
+    "addContact": "Dodaj kontakt",
+    "autoSaveNotice": "Powiadomienie o automatycznym zapisywaniu",
+    "contact": "Kontakt",
+    "contactFields": {
+      "email": "E-mail",
+      "emailPlaceholder": "Symbol zastępczy adresu e-mail",
+      "name": "Nazwa",
+      "namePlaceholder": "Nazwa zastępcza",
+      "notes": "Notatki",
+      "notesPlaceholder": "Symbol zastępczy notatek",
+      "phone": "Telefon",
+      "phonePlaceholder": "Symbol zastępczy telefonu",
+      "role": "Rola",
+      "rolePlaceholder": "Symbol zastępczy roli"
+    },
+    "errors": {
+      "loadFailed": "Ładowanie nie powiodło się",
+      "saveFailed": "Zapisanie nie powiodło się"
+    },
+    "loading": "Załadunek",
+    "noContent": "Brak treści",
+    "preview": "Zapowiedź",
+    "save": "Ratować",
+    "saving": "Oszczędność",
+    "sections": {
+      "digital": {
+        "description": "Opis",
+        "placeholder": "Symbol zastępczy",
+        "title": "Tytuł"
+      },
+      "documents": {
+        "description": "Opis",
+        "placeholder": "Symbol zastępczy",
+        "title": "Tytuł"
+      },
+      "funeral": {
+        "description": "Opis",
+        "placeholder": "Symbol zastępczy",
+        "title": "Tytuł"
+      },
+      "practical": {
+        "description": "Opis",
+        "placeholder": "Symbol zastępczy",
+        "title": "Tytuł"
+      }
+    },
+    "subtitle": {
+      "edit": "Redagować",
+      "view": "Pogląd"
+    },
+    "tabs": {
+      "digital": "Cyfrowy",
+      "documents": "Dokumenty",
+      "funeral": "Pogrzeb",
+      "instructions": "Instrukcje",
+      "practical": "Praktyczny"
+    },
+    "templates": {
+      "append": "Dodać",
+      "backToTemplates": "Powrót do szablonów",
+      "description": "Opis",
+      "existingContent": "Istniejąca treść",
+      "fillInVariables": "Wypełnij zmienne",
+      "insertTemplate": "Wstaw szablon",
+      "preview": "Zapowiedź",
+      "replace": "Zastępować",
+      "title": "Tytuł",
+      "variableCount": "Liczba zmiennych",
+      "variablePlaceholder": "Zmienna zastępcza"
+    },
+    "title": "Tytuł",
+    "useTemplate": "Użyj szablonu",
+    "accessDenied": "Odmowa dostępu",
+    "description": "Opis",
+    "digitalAccounts": {
+      "description": "Opis",
+      "label": "Etykieta",
+      "placeholder": "Symbol zastępczy"
+    },
+    "discardChanges": {
+      "cancel": "Anulować",
+      "confirm": "Potwierdzać",
+      "description": "Opis",
+      "title": "Tytuł"
+    },
+    "documentLocations": {
+      "description": "Opis",
+      "label": "Etykieta",
+      "placeholder": "Symbol zastępczy"
+    },
+    "exitPreview": "Wyjdź z podglądu",
+    "fetchError": "Błąd pobierania",
+    "funeralWishes": {
+      "description": "Opis",
+      "label": "Etykieta",
+      "placeholder": "Symbol zastępczy"
+    },
+    "lastUpdated": "Ostatnia aktualizacja",
+    "notAuthenticated": "Nie uwierzytelniono",
+    "notFound": {
+      "description": "Opis",
+      "title": "Tytuł"
+    },
+    "practicalInstructions": {
+      "description": "Opis",
+      "label": "Etykieta",
+      "placeholder": "Symbol zastępczy"
+    },
+    "saveError": "Zapisz błąd",
+    "saveSuccess": "Zapisz sukces",
+    "titleReadOnly": "Tytuł tylko do odczytu",
+    "viewDescription": "Zobacz opis",
+    "viewFooter": "Zobacz stopkę",
+    "viewTitle": "Wyświetl tytuł"
+  },
+  "executor": {
+    "completed": "Zakończony",
+    "dashboard": {
+      "reminder": "Przypomnienie",
+      "subtitle": "Podtytuł",
+      "title": "Tytuł"
+    },
+    "due": "Należny",
+    "errors": {
+      "loadTasksFailed": "Zadania ładowania nie powiodły się",
+      "updateTaskFailed": "Zadanie aktualizacji nie powiodło się"
+    },
+    "highPriority": "Wysoki priorytet",
+    "legalSupport": {
+      "button": "Przycisk",
+      "description": "Opis",
+      "title": "Tytuł"
+    },
+    "markComplete": "Oznacz jako ukończone",
+    "sections": {
+      "firstWeek": {
+        "description": "Opis",
+        "empty": "Pusty",
+        "title": "Tytuł"
+      },
+      "immediate": {
+        "description": "Opis",
+        "empty": "Pusty",
+        "title": "Tytuł"
+      },
+      "ongoing": {
+        "description": "Opis",
+        "empty": "Pusty",
+        "title": "Tytuł"
+      }
+    },
+    "stats": {
+      "completed": "Zakończony",
+      "remaining": "Pozostały",
+      "totalTasks": "Łączna liczba zadań"
+    },
+    "undo": "Anulować",
+    "viewAccountDetails": "Wyświetl szczegóły konta",
+    "viewRelatedDocuments": "Wyświetl powiązane dokumenty"
+  },
+  "executorDashboard": {
+    "professional_guidance_1": "Poradnictwo zawodowe 1"
+  },
+  "executorManagement": {
+    "add_new_executor_10": "Dodaj nowego wykonawcę 10",
+    "all_executors_must_have_legacy_23": "Wszyscy wykonawcy muszą mieć dziedziczone 23",
+    "current_executors_17": "Obecni wykonawcy 17",
+    "designate_trusted_individuals__9": "Wyznacz zaufane osoby 9",
+    "email_address_11": "Adres e-mail 11",
+    "executor_example_com_12": "Przykład wykonawcy com 12",
+    "executor_management_8": "Zarządzanie wykonawcami 8",
+    "failed_to_add_executor_5": "Nie udało się dodać wykonawcy 5",
+    "failed_to_load_executors_2": "Nie udało się załadować wykonawców 2",
+    "failed_to_remove_executor_6": "Nie udało się usunąć wykonawcy 6",
+    "important_information_19": "Ważne informacje 19",
+    "loading_executors_7": "Ładowanie wykonawców 7",
+    "no_executors_designated_yet_ad_18": "Nie wyznaczono jeszcze wykonawców do 18. roku życia",
+    "primary_executor_14": "Główny wykonawca 14",
+    "primary_executors_receive_imme_20": "Główni wykonawcy otrzymują natychmiast 20",
+    "relationship_type_13": "Typ relacji 13",
+    "secondary_executor_15": "Wykonawca wtórny 15",
+    "secondary_executors_are_notifi_21": "Wykonawcy wtórni są powiadamiani 21",
+    "statusLabels": {
+      "addExecutor": "Dodaj wykonawcę",
+      "adding": "Dodawanie",
+      "unknownUser": "Nieznany użytkownik"
+    },
+    "this_person_is_already_designa_4": "Ta osoba jest już wyznaczona na 4",
+    "user_not_found_with_this_email_3": "Nie znaleziono użytkownika z tym adresem e-mail 3"
+  },
+  "invite": {
+    "title": "Tytuł"
+  },
+  "inviteAcceptance": {
+    "buttons": {
+      "acceptRole": "Zaakceptuj rolę",
+      "decline": "Spadek",
+      "processing": "Przetwarzanie"
+    },
+    "defaultInviterName": "Domyślna nazwa zapraszającego",
+    "disclaimer": "Zastrzeżenie",
+    "errors": {
+      "acceptFailed": "Akceptacja nie powiodła się",
+      "alreadyProcessed": "Już przetworzone",
+      "declineFailed": "Spadek nie powiódł się",
+      "invalidLink": "Nieprawidłowy link",
+      "loadingFailed": "Ładowanie nie powiodło się",
+      "notFound": "Nie znaleziono"
+    },
+    "guardianRole": {
+      "relationship": "Relacja",
+      "responsibilities": "Obowiązki",
+      "title": "Tytuł",
+      "yourName": "Twoje imię"
+    },
+    "loading": "Załadunek",
+    "notFound": {
+      "description": "Opis",
+      "title": "Tytuł"
+    },
+    "subtitle": "Podtytuł",
+    "whatThisMeans": {
+      "point1": "Punkt 1",
+      "point2": "Punkt 2",
+      "point3": "Punkt 3",
+      "point4": "Punkt 4",
+      "title": "Tytuł"
+    }
+  },
+  "structures": {
+    "nuclear": "Tradycyjna rodzina",
+    "single_parent": "Rodzina niepełna",
+    "blended": "Rodzina patchworkowa",
+    "multigenerational": "Rodzina wielopokoleniowa",
+    "childless": "Para bez dzieci",
+    "empty_nest": "Rodzina Pustego Gniazda",
+    "non_traditional": "Unikalna struktura rodziny"
+  },
+  "complexity": {
+    "simple": "Prosty",
+    "moderate": "Umiarkowany",
+    "complex": "Złożony"
+  },
+  "personalized": "Twoje spersonalizowane doświadczenie planowania rodziny",
+  "specialConsiderations": "Specjalne uwagi",
+  "recommendedFeatures": "Zalecane funkcje",
+  "tabs": {
+    "overview": "Przegląd",
+    "insights": "Wgląd",
+    "features": "Cechy",
+    "cultural": "Kulturalny"
+  },
+  "keyConsiderations": "Kluczowe kwestie dla Twojej rodziny",
+  "specialNeeds": "Specjalne potrzeby planowania",
+  "sensitivities": "Obszary wymagające szczególnej opieki",
+  "needs": {
+    "special_needs_planning": "Planowanie potrzeb specjalnych",
+    "long_term_care_planning": "Planowanie opieki długoterminowej",
+    "special_needs_trust": "Fundacja na rzecz osób o specjalnych potrzebach",
+    "elder_care_planning": "Planowanie opieki nad osobami starszymi",
+    "multi_generational_wealth_transfer": "Transfer międzypokoleniowy",
+    "military_benefit_planning": "Świadczenia wojskowe",
+    "deployment_planning": "Planowanie wdrożenia",
+    "business_succession": "Sukcesja biznesowa",
+    "key_person_planning": "Planowanie kluczowych osób",
+    "young_child_guardianship": "Opieka nad małymi dziećmi",
+    "education_planning": "Planowanie edukacji",
+    "sharia_compliant_planning": "Planowanie zgodne z szariatem"
+  },
+  "insightType": {
+    "structure": "Struktura rodziny",
+    "need": "Potrzeby specjalne",
+    "opportunity": "Możliwość",
+    "risk": "Czynnik ryzyka"
+  },
+  "priority": {
+    "high": "Wysoki priorytet",
+    "medium": "Średni priorytet",
+    "low": "Niski priorytet"
+  },
+  "suggestedActions": "Sugerowane działania",
+  "recommendedFeaturesTitle": "Funkcje dostosowane do Twojej rodziny",
+  "recommendedFeaturesDesc": "Funkcje te będą najbardziej przydatne w zależności od struktury i potrzeb Twojej rodziny",
+  "culturalConsiderations": "Rozważania kulturowe i religijne",
+  "culturalDesc": "W planowaniu uwzględnij wartości i tradycje swojej rodziny",
+  "noCulturalSettings": "Nie ustawiono żadnych preferencji kulturowych. Dodaj je, aby upewnić się, że Twoje planowanie uwzględnia wartości Twojej rodziny.",
+  "configureCultural": "Konfiguruj preferencje kulturowe",
+  "culturalUpdated": "Zaktualizowano preferencje kulturowe",
+  "culturalUpdatedDesc": "Twoje planowanie rodziny będzie teraz odzwierciedlać Twoje wartości kulturowe i tradycje"
+}

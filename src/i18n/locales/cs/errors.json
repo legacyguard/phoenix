@@ -1,1 +1,195 @@
+<<<<<<< Updated upstream
 {}
+=======
+{
+  "general": {
+    "networkError": "Problém s připojením k síti. Zkontrolujte prosím připojení k internetu.",
+    "serverError": "Máme technické potíže. Zkuste to prosím znovu brzy.",
+    "timeoutError": "Časový limit požadavku vypršel. Zkuste to prosím znovu.",
+    "maintenanceMode": "Momentálně provádíme údržbu. Zkuste to prosím znovu za několik minut.",
+    "something_wrong": "Něco nefungovalo úplně správně, ale nebojte se – vaše důležité informace jsou v bezpečí.",
+    "try_again": "Zkusím to pro tebe znovu",
+    "contact_support": "Jsem tu, abych vám pomohl/a, pokud potřebujete pomoc",
+    "no_data_lost": "Dobrou zprávou je, že nic, na čem jste pracovali, se neztratilo.",
+    "temporary_issue": "Zdá se, že se jedná o dočasný problém, který by se měl rychle vyřešit"
+  },
+  "authentication": {
+    "sessionExpired": "Vaše relace vypršela. Přihlaste se prosím znovu.",
+    "invalidCredentials": "Neplatný e-mail nebo heslo. Zkuste to prosím znovu.",
+    "accountLocked": "Váš účet byl z bezpečnostních důvodů dočasně uzamčen.",
+    "accountDisabled": "Váš účet byl deaktivován. Kontaktujte prosím podporu.",
+    "emailNotVerified": "Před pokračováním prosím ověřte svou e-mailovou adresu.",
+    "passwordResetRequired": "Je nutné obnovit heslo. Zkontrolujte si prosím e-mail."
+  },
+  "authorization": {
+    "accessDenied": "Nemáte oprávnění k přístupu k těmto informacím.",
+    "insufficientPermissions": "Pro tuto akci nemáte dostatečná oprávnění.",
+    "subscriptionRequired": "Tato funkce vyžaduje aktivní předplatné.",
+    "upgradeRequired": "Pro přístup k této funkci si prosím upgradujte svůj tarif."
+  },
+  "validation": {
+    "invalidEmail": "Zadejte prosím platnou e-mailovou adresu.",
+    "invalidPhone": "Zadejte prosím platné telefonní číslo.",
+    "invalidFormat": "Neplatný formát. Zkontrolujte prosím zadané údaje.",
+    "passwordTooWeak": "Heslo musí mít alespoň 8 znaků, velká písmena, malá písmena a číslice.",
+    "passwordMismatch": "Hesla se neshodují.",
+    "fileTooLarge": "Velikost souboru překračuje maximální limit {{size}}MB.",
+    "unsupportedFileType": "Tento typ souboru není podporován.",
+    "required_field": "Vaše rodina bude tyto informace potřebovat – mohli byste mi s jejich vyplněním pomoci?",
+    "invalid_email": "Ta e-mailová adresa nevypadá úplně správně. Mohl byste mi ji znovu zkontrolovat?",
+    "invalid_phone": "Mám problém s formátem telefonního čísla. Mohl byste ho zkusit zadat jinak?",
+    "invalid_date": "Ten formát data mi nefunguje. Mohl bys zkusit MM/DD/RRRR?",
+    "password_weak": "Zlepšeme si heslo, abychom zajistili větší bezpečnost informací vaší rodiny.",
+    "file_too_large": "Ten soubor je pro mě trochu moc velký. Mohl bys zkusit menší verzi?",
+    "unsupported_file": "S tímto typem souboru neumím pracovat. Mohl byste místo toho zkusit PDF nebo obrázek?",
+    "errors": {
+      "assetNameRequired": "Název aktiva Chyby Povinné",
+      "assetTypeRequired": "Typ podkladu Chyby Povinné",
+      "nameMinLength": "Název chyby Minimální délka",
+      "allocationRequired": "Alokace chyb Požadováno",
+      "allocationMustBeNumber": "Alokace chyb musí být číslo",
+      "allocationRange": "Rozsah alokace chyb",
+      "requiredField": "Pole s chybami (vyžadováno)",
+      "mustBeNumber": "Chyby musí být číslo",
+      "countryRequired": "Chyby Země Povinné",
+      "countryCodeLength": "Chyby Země Kód Délka",
+      "valueMustBeNumber": "Hodnota chyby musí být číslo",
+      "valueMustBePositive": "Hodnota chyb musí být kladná",
+      "currencyCodeLength": "Délka kódu měny chyb",
+      "beneficiaryNameRequired": "Chyby Jméno příjemce Povinné",
+      "invalidEmail": "Chyby neplatného e-mailu",
+      "invalidPhone": "Chyby neplatného telefonu",
+      "documentNameRequired": "Název dokumentu o chybách (povinné)",
+      "documentTypeRequired": "Typ dokumentu o chybách Povinný",
+      "expirationDateFuture": "Datum vypršení platnosti chyb Budoucí",
+      "relationshipRequired": "Vztah chyb Povinné",
+      "unknownError": "Chyby neznámá chyba",
+      "dataNotFound": "Chyby dat nenalezeny",
+      "connectionError": "Chyby připojení Chyba",
+      "permissionDenied": "Chyby Oprávnění zamítnuto",
+      "duplicateRecord": "Chyby duplicitního záznamu"
+    },
+    "nameRequired": "Ověřovací jméno Povinné",
+    "nameMinLength": "Ověřovací název Minimální délka",
+    "jurisdictionRequired": "Ověřovací jurisdikce Požadováno",
+    "dobRequired": "Ověření data narození je povinné",
+    "addressRequired": "Ověřovací adresa Povinné",
+    "allocationError": "Chyba přidělení ověření",
+    "beneficiaryRequired": "Ověření příjemce Povinné",
+    "executorRequired": "Vykonávač validace (validation executor) Povinný"
+  },
+  "data": {
+    "loadingFailed": "Načtení dat se nezdařilo. Obnovte prosím stránku.",
+    "savingFailed": "Uložení změn se nezdařilo. Zkuste to prosím znovu.",
+    "deletingFailed": "Položku se nepodařilo smazat. Zkuste to prosím znovu.",
+    "uploadFailed": "Nahrávání souboru se nezdařilo. Zkuste to prosím znovu.",
+    "exportFailed": "Export dat se nezdařil. Zkuste to prosím znovu později.",
+    "importFailed": "Import dat se nezdařil. Zkontrolujte prosím formát souboru.",
+    "syncFailed": "Synchronizace selhala. Některé změny se nemusí uložit."
+  },
+  "payment": {
+    "paymentFailed": "Zpracování platby se nezdařilo. Zkontrolujte prosím způsob platby.",
+    "cardDeclined": "Vaše karta byla odmítnuta. Zkuste prosím jinou platební metodu.",
+    "insufficientFunds": "Nedostatek finančních prostředků. Zkontrolujte prosím zůstatek na účtu.",
+    "expiredCard": "Platnost vaší karty vypršela. Aktualizujte prosím své platební údaje.",
+    "invalidCard": "Neplatné informace o kartě. Zkontrolujte prosím své údaje.",
+    "paymentTimeout": "Časový limit pro zpracování platby vypršel. Zkuste to prosím znovu."
+  },
+  "actions": {
+    "tryAgain": "Zkuste to znovu",
+    "signInAgain": "Přihlásit se znovu",
+    "updatePayment": "Aktualizace platby",
+    "upgradeAccount": "Upgradovat účet"
+  },
+  "debug": {
+    "i18nDebug": {
+      "current_lang_resources_7": "Aktuální jazykové zdroje 7",
+      "has_resources_6": "Má zdroje 6",
+      "i18n_debug_info_1": "Ladicí informace I18n 1",
+      "resolved_language_3": "Vyřešený jazyk 3",
+      "test_translation_5": "Zkušební překlad 5"
+    }
+  },
+  "test": {
+    "environment": {
+      "description": "Popis",
+      "title": "Titul"
+    }
+  },
+  "notfound": {
+    "title": "Stránka nenalezena",
+    "description": "Stránka, kterou hledáte, neexistuje nebo byla přesunuta.",
+    "goHome": "Jít domů",
+    "goBack": "Zpět"
+  },
+  "network": {
+    "connection_lost": "Zdá se, že vaše internetové připojení bylo přerušeno. Vaše práce je uložena a my se automaticky znovu připojíme.",
+    "slow_connection": "Dnes se zdá, že máte trochu pomalé připojení. Trpělivě počkám, než se věci načtou.",
+    "server_busy": "Naše servery jsou momentálně trochu vytížené, ale budu se vám i nadále snažit pomoci.",
+    "timeout": "To trvalo déle, než jsem očekával. Zkusím jiný přístup."
+  },
+  "contextual": {
+    "assets": {
+      "save_failed": "Informace o aktivech se mi teď nepodařilo uložit, ale budu se o to snažit dál. Informace o vaší rodině jsou pro mě důležité.",
+      "load_failed": "Momentálně mám potíže s načítáním vašich dat. Zkusím to znovu za chvíli.",
+      "delete_failed": "Tuto položku se mi právě nepodařilo odstranit. Chcete, abych to zkusil znovu?"
+    },
+    "documents": {
+      "upload_failed": "Ten dokument se nenahrál správně. Nebojte se, pomůžu vám to zkusit znovu.",
+      "processing_failed": "Měl jsem problém se zpracováním toho dokumentu. Soubor je v bezpečí, zkusím to znovu.",
+      "access_failed": "Momentálně se k tomu dokumentu nedostanu. Zkusím, co můžu udělat, abych ti pomohl."
+    },
+    "family": {
+      "save_failed": "Právě se mi nepodařilo uložit informace o dané osobě. Zkusím to znovu – váš důvěryhodný okruh lidí je důležitý.",
+      "invite_failed": "Tuto pozvánku se mi teď nepodařilo odeslat. Pomůžu ti to zkusit znovu, až budeš připraven/a.",
+      "access_failed": "Mám problém s nastavením přístupu pro rodinu. Dovolte mi, abych to vyřešil za vás."
+    },
+    "will": {
+      "generation_failed": "Právě se mi nepodařilo vytvořit vaši závěť. Nebojte se – všechna vaše rozhodnutí jsou uložena a zkusím to znovu.",
+      "save_failed": "Ty změny závěti se mi teď nepodařilo uložit. Vaše předchozí verze je bezpečná a budu se dál snažit.",
+      "legal_check_failed": "Právě se mi nepodařilo ověřit právní požadavky. Zkusím to znovu, nebo si můžeme vyžádat pomoc od našeho právního týmu."
+    }
+  },
+  "emotional_support": {
+    "frustration": "Vím, že je to frustrující, když se snažíte udělat něco důležitého pro svou rodinu. Jsem tu, abych vám pomohl/a s tím.",
+    "time_pressure": "Chápu, že nemáte moc času na technické problémy. Dovolte mi, abych to za vás rychle vyřešil.",
+    "overwhelm": "Technické problémy se mohou zdát ohromující, když už se potýkáte s důležitým plánováním rodiny. Nadechněte se – zvládnu to.",
+    "discouragement": "Nenechte se tímto technickým zádrhelem odradit. To, co děláte pro svou rodinu, je příliš důležité na to, abyste se toho vzdali."
+  },
+  "solutions": {
+    "refresh_page": "Někdy pomůže obnovení stránky. Vaše práce se uloží, takže o nic nepřijdete.",
+    "try_different_browser": "Pokud se to děje stále, zkuste použít jiný prohlížeč. Chrome nebo Firefox obvykle fungují nejlépe.",
+    "check_internet": "Mohl byste zkontrolovat připojení k internetu? Někdy to stačí.",
+    "contact_support": "Rád vám osobně pomůžu. Můžete se obrátit na náš tým podpory, který se o vás skvěle postará.",
+    "try_later": "Pokud spěcháte, můžete to zkusit znovu později. Všechno, co jste udělali, je bezpečně uloženo.",
+    "alternative_approach": "Dovolte mi navrhnout jiný způsob, jak to udělat, který by mohl fungovat lépe."
+  },
+  "recovery": {
+    "auto_save_worked": "Dobrou zprávou je, že vše, co jste zadali, se automaticky uložilo.",
+    "backup_available": "Mám zálohu tvé práce z doby před pár minutami, kdybys ji potřeboval.",
+    "progress_preserved": "Veškerý váš postup je zachován – nebudete muset začínat znovu.",
+    "data_secure": "Informace vaší rodiny zůstávají i přes tento technický problém zcela v bezpečí."
+  },
+  "errors": {
+    "notAuthenticated": "Chyby nebyly ověřeny",
+    "generic": "Obecné chyby",
+    "savingSettings": "Chyby při ukládání nastavení",
+    "loadingSettings": "Chyby při načítání nastavení",
+    "networkError": "Chyby sítě Chyba",
+    "permissionDenied": "Chyby Oprávnění zamítnuto",
+    "dataNotFound": "Chyby dat nenalezeny",
+    "unknown": "Chyby neznámé",
+    "uploadFailed": "Chyby při nahrávání selhaly",
+    "accessDenied": "Chyby – přístup odepřen",
+    "reassurance": {
+      "data_safe": "Ujištění o bezpečí dat",
+      "try_again": "Ujištění, zkuste to znovu"
+    },
+    "loadingAssets": "Chyby při načítání datových zdrojů",
+    "failedToFetchStatus": "Chyby selhaly při načítání stavu",
+    "validationFailed": "Ověření chyb selhalo",
+    "generationFailed": "Generování chyb selhalo",
+    "duplicateRecord": "Chyby duplicitního záznamu"
+  }
+}
+>>>>>>> Stashed changes

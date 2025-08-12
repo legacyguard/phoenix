@@ -1,1 +1,195 @@
+<<<<<<< Updated upstream
 {}
+=======
+{
+  "general": {
+    "networkError": "Ağ bağlantısı sorunu. Lütfen internet bağlantınızı kontrol edin.",
+    "serverError": "Teknik sorunlar yaşıyoruz. Lütfen kısa süre sonra tekrar deneyin.",
+    "timeoutError": "İstek zaman aşımına uğradı. Lütfen tekrar deneyin.",
+    "maintenanceMode": "Şu anda bakım çalışması yapıyoruz. Lütfen birkaç dakika sonra tekrar deneyin.",
+    "something_wrong": "Bir şeyler yolunda gitmedi, ancak endişelenmeyin; önemli bilgileriniz güvende.",
+    "try_again": "Bunu senin için tekrar deneyeyim",
+    "contact_support": "Yardıma ihtiyacınız varsa yardım etmek için buradayım",
+    "no_data_lost": "İyi haber şu ki üzerinde çalıştığınız hiçbir şey kaybolmadı",
+    "temporary_issue": "Bu, kısa sürede çözülmesi gereken geçici bir sorun gibi görünüyor"
+  },
+  "authentication": {
+    "sessionExpired": "Oturumunuz sona erdi. Lütfen tekrar oturum açın.",
+    "invalidCredentials": "Geçersiz e-posta veya şifre. Lütfen tekrar deneyin.",
+    "accountLocked": "Hesabınız güvenlik nedeniyle geçici olarak kilitlendi.",
+    "accountDisabled": "Hesabınız devre dışı bırakıldı. Lütfen destek ekibiyle iletişime geçin.",
+    "emailNotVerified": "Devam etmeden önce lütfen e-posta adresinizi doğrulayın.",
+    "passwordResetRequired": "Şifre sıfırlama gerekiyor. Lütfen e-postanızı kontrol edin."
+  },
+  "authorization": {
+    "accessDenied": "Bu bilgiye erişim izniniz bulunmamaktadır.",
+    "insufficientPermissions": "Bu eylem için yeterli izniniz yok.",
+    "subscriptionRequired": "Bu özellik aktif bir abonelik gerektirir.",
+    "upgradeRequired": "Bu özelliğe erişebilmek için lütfen planınızı yükseltin."
+  },
+  "validation": {
+    "invalidEmail": "Geçerli bir e.",
+    "invalidPhone": "Lütfen geçerli bir telefon numarası giriniz.",
+    "invalidFormat": "Geçersiz format. Lütfen girdinizi kontrol edin.",
+    "passwordTooWeak": "Şifre en az 8 karakterden oluşmalı; büyük harf, küçük harf ve rakam içermelidir.",
+    "passwordMismatch": "Şifreler uyuşmuyor.",
+    "fileTooLarge": "Dosya boyutu {{size}}MB'lık maksimum sınırı aşıyor.",
+    "unsupportedFileType": "Bu dosya türü desteklenmiyor.",
+    "required_field": "Ailenizin bu bilgiye ihtiyacı olacak - bunu doldurmamda bana yardımcı olabilir misiniz?",
+    "invalid_email": "Bu e-posta adresi pek doğru görünmüyor. Tekrar kontrol edebilir misiniz?",
+    "invalid_phone": "Telefon numarası formatıyla ilgili sorun yaşıyorum. Farklı bir şekilde girmeyi deneyebilir misiniz?",
+    "invalid_date": "Bu tarih formatı bende çalışmıyor. AA/GG/YYYY şeklinde deneyebilir misin?",
+    "password_weak": "Ailenizin bilgilerini daha da güvende tutmak için şifrenizi biraz daha güçlü hale getirelim.",
+    "file_too_large": "Bu dosya benim için biraz fazla büyük. Daha küçük bir versiyonunu deneyebilir misin?",
+    "unsupported_file": "Bu tür dosyalarla çalışamıyorum. Bunun yerine PDF veya resim dosyası deneyebilir misiniz?",
+    "errors": {
+      "assetNameRequired": "Hatalar varlık adı gerekli",
+      "assetTypeRequired": "Hatalar varlık türü gerekli",
+      "nameMinLength": "Hata adı Min Uzunluk",
+      "allocationRequired": "Hata tahsisi Gerekli",
+      "allocationMustBeNumber": "Hata tahsisi Sayı Olmalıdır",
+      "allocationRange": "Hata tahsisi Aralığı",
+      "requiredField": "Gerekli Alan Hataları",
+      "mustBeNumber": "Hatalar Sayı Olmalıdır",
+      "countryRequired": "Hatalar ülke Gerekli",
+      "countryCodeLength": "Hatalar ülke Kodu Uzunluğu",
+      "valueMustBeNumber": "Hata değeri Sayı Olmalıdır",
+      "valueMustBePositive": "Hata değeri Pozitif Olmalıdır",
+      "currencyCodeLength": "Hatalar para birimi Kod Uzunluğu",
+      "beneficiaryNameRequired": "Hatalar Yararlanıcı Adı Gerekli",
+      "invalidEmail": "Hatalar geçersiz E-posta",
+      "invalidPhone": "Hatalar geçersiz Telefon",
+      "documentNameRequired": "Hatalar Belge Adı Gerekli",
+      "documentTypeRequired": "Hatalar Belge Türü Gerekli",
+      "expirationDateFuture": "Hataların son kullanma tarihi Gelecek",
+      "relationshipRequired": "Hata ilişkisi Gerekli",
+      "unknownError": "Bilinmeyen Hatalar Hata",
+      "dataNotFound": "Hata verileri bulunamadı",
+      "connectionError": "Bağlantı Hatası Hatası",
+      "permissionDenied": "Hata izni reddedildi",
+      "duplicateRecord": "Kayıtta yinelenen hatalar"
+    },
+    "nameRequired": "Doğrulama adı Gerekli",
+    "nameMinLength": "Doğrulama adı Min Uzunluk",
+    "jurisdictionRequired": "Doğrulama yargı yetkisi gereklidir",
+    "dobRequired": "Doğrulama tarihi Gerekli",
+    "addressRequired": "Doğrulama adresi gerekli",
+    "allocationError": "Doğrulama tahsisi Hatası",
+    "beneficiaryRequired": "Doğrulama yararlanıcısı Gerekli",
+    "executorRequired": "Doğrulama yürütücüsü gerekli"
+  },
+  "data": {
+    "loadingFailed": "Veriler yüklenemedi. Lütfen sayfayı yenileyin.",
+    "savingFailed": "Değişiklikler kaydedilemedi. Lütfen tekrar deneyin.",
+    "deletingFailed": "Öğe silinemedi. Lütfen tekrar deneyin.",
+    "uploadFailed": "Dosya yükleme başarısız oldu. Lütfen tekrar deneyin.",
+    "exportFailed": "Veri aktarımı başarısız oldu. Lütfen daha sonra tekrar deneyin.",
+    "importFailed": "Veri aktarımı başarısız oldu. Lütfen dosya biçimini kontrol edin.",
+    "syncFailed": "Senkronizasyon başarısız oldu. Bazı değişiklikler kaydedilemeyebilir."
+  },
+  "payment": {
+    "paymentFailed": "Ödeme işlemi başarısız oldu. Lütfen ödeme yönteminizi kontrol edin.",
+    "cardDeclined": "Kartınız reddedildi. Lütfen farklı bir ödeme yöntemi deneyin.",
+    "insufficientFunds": "Yetersiz bakiye. Lütfen hesap bakiyenizi kontrol edin.",
+    "expiredCard": "Kartınızın son kullanma tarihi geçmiştir. Lütfen ödeme bilgilerinizi güncelleyin.",
+    "invalidCard": "Kart bilgisi geçersiz. Lütfen bilgilerinizi kontrol edin.",
+    "paymentTimeout": "Ödeme işlemi zaman aşımına uğradı. Lütfen tekrar deneyin."
+  },
+  "actions": {
+    "tryAgain": "Tekrar deneyin",
+    "signInAgain": "Tekrar Oturum Açın",
+    "updatePayment": "Ödemeyi Güncelle",
+    "upgradeAccount": "Hesabı Yükselt"
+  },
+  "debug": {
+    "i18nDebug": {
+      "current_lang_resources_7": "Güncel dil kaynakları 7",
+      "has_resources_6": "6 kaynağı var",
+      "i18n_debug_info_1": "I18n hata ayıklama bilgisi 1",
+      "resolved_language_3": "Çözülen dil 3",
+      "test_translation_5": "Test çevirisi 5"
+    }
+  },
+  "test": {
+    "environment": {
+      "description": "Tanım",
+      "title": "Başlık"
+    }
+  },
+  "notfound": {
+    "title": "Sayfa Bulunamadı",
+    "description": "Aradığınız sayfa bulunamadı veya taşınmış.",
+    "goHome": "Eve Git",
+    "goBack": "Geri gitmek"
+  },
+  "network": {
+    "connection_lost": "İnternet bağlantınızın kesildiği anlaşılıyor. Çalışmanız kaydedildi ve otomatik olarak yeniden bağlanacağız.",
+    "slow_connection": "Bağlantınız bugün biraz yavaş görünüyor. Yüklenene kadar sabırla bekleyeceğim.",
+    "server_busy": "Sunucularımız şu anda biraz yoğun, ancak size yardımcı olmaya devam edeceğim.",
+    "timeout": "Beklediğimden uzun sürdü. Farklı bir yaklaşım deneyeyim."
+  },
+  "contextual": {
+    "assets": {
+      "save_failed": "Şu anda varlık bilgilerinizi kaydedemiyorum ama denemeye devam edeceğim. Ailenizin bilgileri benim için önemli.",
+      "load_failed": "Şu anda varlıklarınızı yüklemekte sorun yaşıyorum. Birazdan tekrar deneyeceğim.",
+      "delete_failed": "Şu anda o öğeyi kaldıramadım. Tekrar denememi ister misiniz?"
+    },
+    "documents": {
+      "upload_failed": "Belge düzgün yüklenmedi. Endişelenmeyin, tekrar denemenize yardımcı olacağım.",
+      "processing_failed": "Bu belgeyi işlemekte sorun yaşadım. Dosya güvende, tekrar deneyeceğim.",
+      "access_failed": "Şu anda o belgeye erişemiyorum. Yardımcı olmak için ne yapabileceğime bir bakayım."
+    },
+    "family": {
+      "save_failed": "Şu anda o kişinin bilgilerini kaydedemedim. Tekrar deneyeyim - güvendiğiniz kişiler önemli.",
+      "invite_failed": "Şu anda o daveti gönderemedim. Hazır olduğunuzda tekrar denemenize yardımcı olacağım.",
+      "access_failed": "Aile erişim ayarlarıyla ilgili sorun yaşıyorum. Bunu sizin için halledeyim."
+    },
+    "will": {
+      "generation_failed": "Şu anda vasiyetinizi oluşturamadım. Merak etmeyin, tüm kararlarınız kaydedildi ve tekrar deneyeceğim.",
+      "save_failed": "Şu anda bu değişiklikleri kaydedemedim. Önceki sürümünüz güvenli ve denemeye devam edeceğim.",
+      "legal_check_failed": "Şu anda yasal gereklilikleri doğrulayamadım. Tekrar deneyeyim veya hukuk ekibimizden yardım alabiliriz."
+    }
+  },
+  "emotional_support": {
+    "frustration": "Aileniz için önemli bir şey yapmaya çalışırken bunun ne kadar sinir bozucu olduğunu biliyorum. Bunu başarmanıza yardımcı olmak için buradayım.",
+    "time_pressure": "Teknik sorunlarla uğraşmaya pek vaktinizin olmadığını anlıyorum. Bu konuyu sizin için hızlıca halledeyim.",
+    "overwhelm": "Zaten önemli bir aile planlamasıyla uğraşırken teknik sorunlar bunaltıcı gelebilir. Derin bir nefes alın - hallederim.",
+    "discouragement": "Bu teknik aksaklığın sizi yıldırmasına izin vermeyin. Aileniz için yaptığınız şey, vazgeçilemeyecek kadar önemli."
+  },
+  "solutions": {
+    "refresh_page": "Bazen sayfayı yenilemek işe yarar. Çalışmanız kaydedilir, böylece hiçbir şey kaybetmezsiniz.",
+    "try_different_browser": "Eğer bu durum devam ederse, farklı bir tarayıcı kullanmayı deneyin. Genellikle Chrome veya Firefox en iyi sonucu verir.",
+    "check_internet": "İnternet bağlantınızı kontrol edebilir misiniz? Bazen sadece bu yeterli olur.",
+    "contact_support": "Size şahsen yardımcı olmaktan mutluluk duyarım. Sizinle yakından ilgilenecek destek ekibimize ulaşabilirsiniz.",
+    "try_later": "Aceleniz varsa, bunu daha sonra tekrar deneyebilirsiniz. Yaptığınız her şey güvenli bir şekilde kaydedildi.",
+    "alternative_approach": "Bunu yapmanın daha iyi işe yarayabilecek farklı bir yolunu önermeme izin verin."
+  },
+  "recovery": {
+    "auto_save_worked": "İyi haber şu ki girdiğiniz her şey otomatik olarak kaydedildi.",
+    "backup_available": "İhtiyacınız olursa, birkaç dakika önce yaptığınız çalışmanın yedeğini aldım.",
+    "progress_preserved": "Tüm ilerlemeniz korunur; yeniden başlamanıza gerek kalmaz.",
+    "data_secure": "Bu teknik soruna rağmen ailenizin bilgileri tamamen güvende kalır."
+  },
+  "errors": {
+    "notAuthenticated": "Hatalar Doğrulanmadı",
+    "generic": "Hatalar genel",
+    "savingSettings": "Ayarlar kaydedilirken hatalar oluştu",
+    "loadingSettings": "Ayarlar yüklenirken hatalar oluştu",
+    "networkError": "Hatalar ağ hatası",
+    "permissionDenied": "Hata izni reddedildi",
+    "dataNotFound": "Hata verileri bulunamadı",
+    "unknown": "Bilinmeyen hatalar",
+    "uploadFailed": "Hatalar yükleme başarısız oldu",
+    "accessDenied": "Hatalar erişim engellendi",
+    "reassurance": {
+      "data_safe": "Güvence verileri güvenli",
+      "try_again": "Güvence tekrar deneyin"
+    },
+    "loadingAssets": "Varlıklar yüklenirken hatalar oluştu",
+    "failedToFetchStatus": "Durum Alınamadı Hataları",
+    "validationFailed": "Hata doğrulaması başarısız oldu",
+    "generationFailed": "Hata oluşturma başarısız oldu",
+    "duplicateRecord": "Kayıtta yinelenen hatalar"
+  }
+}
+>>>>>>> Stashed changes

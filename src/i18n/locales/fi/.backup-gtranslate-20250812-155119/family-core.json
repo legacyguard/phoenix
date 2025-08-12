@@ -1,0 +1,1036 @@
+{
+  "crisisAssessment": {
+    "familyCapabilities": "Perheominaisuudet",
+    "familyDiscussion": "Perhekeskustelu",
+    "familyDiscussionDescription": "Perhekeskustelun kuvaus"
+  },
+  "errors": {
+    "loadingFamily": "Luotettujen henkilöiden lataamisessa oli ongelmia. Päivitä sivu.",
+    "accessDenied": "Et voi muuttaa tämän henkilön tietoja juuri nyt",
+    "assigningRole": "Emme voineet antaa heille tätä roolia. Yritä uudelleen.",
+    "dataNotFound": "Emme löytäneet kyseisiä tietoja",
+    "duplicatePerson": "Tämä henkilö on jo luotettujen henkilöiden luettelossa",
+    "duplicateRecord": "Tämä on jo tallennettu",
+    "grantingAccess": "Emme voineet antaa heille käyttöoikeutta. Yritä uudelleen.",
+    "invalidEmail": "Sähköpostiosoite ei näytä oikealta. Tarkista se.",
+    "invalidPhone": "Puhelinnumero ei näytä oikealta. Tarkista se.",
+    "networkError": "Yhteysongelma. Tarkista internetyhteytesi.",
+    "permissionDenied": "Sinulla ei ole lupaa tehdä tätä",
+    "removingPerson": "Emme voineet poistaa heitä luotettujen henkilöiden listalta. Yritä uudelleen.",
+    "roleConflict": "Heillä on jo eri rooli, joka on ristiriidassa tämän kanssa",
+    "savingPerson": "Tietojen tallentaminen ei onnistunut. Tarkista tiedot ja yritä uudelleen.",
+    "sendingInvitation": "Kutsua ei voitu lähettää. Tarkista heidän sähköpostinsa ja yritä uudelleen.",
+    "unknown": "Jokin meni pieleen"
+  },
+  "familyCapabilities": {
+    "businessOperations": "Liiketoiminta",
+    "canAccessBankAccounts": "Pääsee pankkitileille",
+    "canAccessDigitalAccounts": "Voi käyttää digitaalisia tilejä",
+    "canFileInsuranceClaims": "Voi tehdä vakuutuskorvauksia",
+    "canManageBusiness": "Osaa hoitaa liiketoimintaa",
+    "cannotAccessBankAccounts": "Pankkitileille ei pääse käsiksi",
+    "cannotAccessDigitalAccounts": "Digitaalisiin tileihin ei pääse käsiksi",
+    "cannotFileInsuranceClaims": "Vakuutuskorvausvaatimuksia ei voi tehdä",
+    "clearInheritancePlan": "Selkeä perintösuunnitelma",
+    "digitalAccess": "Digitaalinen käyttöoikeus",
+    "digitalAccounts": "Digitaaliset tilit",
+    "immediateFinancialNeeds": "Välittömät taloudelliset tarpeet",
+    "inheritance": "Perintö",
+    "insuranceClaims": "Vakuutuskorvausvaatimukset",
+    "knowsLegalContacts": "Tuntee oikeudelliset yhteyshenkilöt",
+    "knowsMedicalWishes": "Tietää lääketieteelliset toiveet",
+    "legalMatters": "Oikeudelliset asiat",
+    "medicalDecisions": "Lääketieteelliset päätökset",
+    "noBusinessInfo": "Ei yritystietoja",
+    "noInheritancePlan": "Ei perintösuunnitelmaa",
+    "noLegalContacts": "Ei oikeudellisia yhteyksiä",
+    "noMedicalInfo": "Ei lääketieteellisiä tietoja",
+    "partialBusinessInfo": "Osittaiset yritystiedot",
+    "partialInheritancePlan": "Osittainen perintösuunnitelma",
+    "partialMedicalInfo": "Osittainen lääketieteellinen tieto",
+    "payBills": "Maksa laskuja"
+  },
+  "familyCrisisAssessment": {
+    "15_1": "15 1"
+  },
+  "familyExecutorView": {
+    "communications": {
+      "description": "Kuvaus",
+      "empty": "Tyhjä",
+      "title": "Otsikko",
+      "to": "Kohti"
+    },
+    "executor": "Toimeenpanija",
+    "footer": "Alatunniste",
+    "subtitle": "Alaotsikko",
+    "theExecutor": "Testamentin toimeenpanija",
+    "title": "Otsikko"
+  },
+  "familyHub": {
+    "accessLevels": {
+      "emergencyOnly": {
+        "description": "Kuvaus",
+        "fullDescription": "Täydellinen kuvaus",
+        "title": "Otsikko"
+      },
+      "fullAccess": {
+        "description": "Kuvaus",
+        "fullDescription": "Täydellinen kuvaus",
+        "title": "Otsikko"
+      },
+      "limitedInfo": {
+        "description": "Kuvaus",
+        "fullDescription": "Täydellinen kuvaus",
+        "title": "Otsikko"
+      },
+      "none": {
+        "description": "Kuvaus",
+        "title": "Otsikko"
+      }
+    },
+    "emergencyProtocol": {
+      "activeMessage": "Aktiivinen viesti",
+      "configure": "Määritä",
+      "configured": "Määritetty",
+      "description": "Kuvaus",
+      "title": "Otsikko"
+    },
+    "errors": {
+      "authenticationRequired": "Todennus vaaditaan",
+      "failedToFetchData": "Tietojen nouto epäonnistui",
+      "failedToLoadMembers": "Jäsenten lataaminen epäonnistui"
+    },
+    "memberManagement": {
+      "addMorePeople": "Lisää ihmisiä",
+      "addTrustedPerson": "Lisää luotettava henkilö",
+      "daysAgo": "Päiviä sitten",
+      "informationAccessLevel": "Tietojen käyttöoikeustaso",
+      "lastContactOver30Days": "Viimeisin yhteydenotto yli 30 päivää",
+      "lastContacted": "Viimeksi otettu yhteyttä",
+      "preparedness": "Valmius",
+      "sendUpdate": "Lähetä päivitys",
+      "sendUpdateTo": "Lähetä päivitys osoitteeseen",
+      "title": "Otsikko"
+    },
+    "messages": {
+      "accessLevelUpdated": "Käyttöoikeustaso päivitetty",
+      "failedToSendUpdate": "Päivityksen lähettäminen epäonnistui",
+      "updateSentTo": "Päivitys lähetetty"
+    },
+    "overallPreparedness": {
+      "description": "Kuvaus",
+      "improvementNeeded": "Parannusta tarvitaan",
+      "title": "Otsikko"
+    },
+    "subtitle": "Alaotsikko",
+    "tabs": {
+      "familyMembers": "Perheenjäsenet",
+      "members": "Jäsenet",
+      "preparednessTools": "Valmiustyökalut",
+      "tools": "Työkalut"
+    },
+    "title": "Otsikko"
+  },
+  "familyPreparednessTools": {
+    "create_a_printable_guide_for_y_3": "Luo tulostettava opas 3. luokalle",
+    "errors": {
+      "comingSoon": "Tulossa pian",
+      "generateFailed": "Luonti epäonnistui",
+      "premiumRequired": "Premium vaaditaan",
+      "selectScenario": "Valitse skenaario"
+    },
+    "generate_another_5": "Luo vielä 5",
+    "generate_emergency_guide_2": "Hätäohjeen 2 luominen",
+    "guides": {
+      "death": {
+        "bankAccounts": "Pankkitilit",
+        "contactExecutor": "Ota yhteyttä testamentin toimeenpanijaan",
+        "contactLawyer": "Ota yhteyttä lakimieheen",
+        "deathCertificate": "Kuolintodistus",
+        "disclaimer": "Vastuuvapauslauseke",
+        "employer": "Työnantaja",
+        "financialInstitutions": "Rahoituslaitokset",
+        "first24Hours": "Ensimmäiset 24 tuntia",
+        "generatedOn": "Luotu",
+        "importantDocuments": "Tärkeät asiakirjat",
+        "insuranceCompanies": "Vakuutusyhtiöt",
+        "investmentAccounts": "Sijoitustilit",
+        "locateWill": "Paikanna tahto",
+        "peopleToNotify": "Ilmoitettavat henkilöt",
+        "secureResidence": "Turvallinen asuinpaikka",
+        "socialSecurity": "Sosiaaliturva",
+        "title": "Otsikko"
+      },
+      "emergency": {
+        "address": "Osoite",
+        "attorney": "Asianajaja",
+        "emergency": "Hätätilanne",
+        "financialAdvisor": "Talousneuvoja",
+        "homeInformation": "Etusivun tiedot",
+        "insuranceAgent": "Vakuutusasiamies",
+        "keyContacts": "Tärkeimmät yhteyshenkilöt",
+        "securitySystem": "Turvajärjestelmä",
+        "spouse": "Puoliso",
+        "title": "Otsikko",
+        "utilities": "Apuohjelmat"
+      },
+      "hospitalization": {
+        "allergies": "Allergiat",
+        "bloodType": "Veriryhmä",
+        "currentMedications": "Nykyiset lääkkeet",
+        "emergencyContacts": "Hätäyhteyshenkilöt",
+        "healthcarePowerOfAttorney": "Terveydenhuollon valtakirja",
+        "hipaaRelease": "Hipaa-julkaisu",
+        "legalDocuments": "Oikeudelliset asiakirjat",
+        "livingWill": "Elävä tahto",
+        "medicalInformation": "Lääketieteelliset tiedot",
+        "preferredHospital": "Ensisijainen sairaala",
+        "primaryCarePhysician": "perusterveydenhuollon lääkäri",
+        "title": "Otsikko"
+      },
+      "missing": {
+        "bankingApps": "Pankkisovellukset",
+        "checkHospitals": "Tarkista sairaalat",
+        "checkWithWorkplace": "Tarkista työpaikalta",
+        "contactCloseFriends": "Ota yhteyttä läheisiin ystäviin",
+        "contactLocalPolice": "Ota yhteyttä paikalliseen poliisiin",
+        "digitalFootprint": "Digitaalinen jalanjälki",
+        "email": "Sähköposti",
+        "immediateActions": "Välittömät toimenpiteet",
+        "phoneProvider": "Puhelinoperaattori",
+        "socialMedia": "Sosiaalinen media",
+        "title": "Otsikko"
+      }
+    },
+    "mockContent": {
+      "insurancePolicies": "Vakuutukset"
+    },
+    "scenarios": {
+      "death": {
+        "description": "Kuvaus",
+        "title": "Otsikko"
+      },
+      "emergency": {
+        "description": "Kuvaus",
+        "title": "Otsikko"
+      },
+      "hospitalization": {
+        "description": "Kuvaus",
+        "title": "Otsikko"
+      },
+      "missing": {
+        "description": "Kuvaus",
+        "title": "Otsikko"
+      }
+    },
+    "select_scenario_4": "Valitse skenaario 4",
+    "tools": {
+      "cancel": "Peruuttaa",
+      "chooseScenario": "Valitse skenaario",
+      "emergencySimulator": "Hätätilannesimulaattori",
+      "emergencySimulatorDesc": "Hätäsimulaattorin kuvaus",
+      "generateGuide": "Luo opas",
+      "generating": "Luominen",
+      "informationTreasureHunt": "Tiedon aarteenetsintä",
+      "launch": "Käynnistää",
+      "printGuide": "Tulostusopas",
+      "stepByStepGuides": "Vaiheittaiset oppaat",
+      "stepByStepGuidesDesc": "Vaiheittaiset ohjeet desc",
+      "treasureHuntDesc": "Aarteenetsinnän kuvaus",
+      "videoMessages": "Videoviestit",
+      "videoMessagesDesc": "Videoviestien kuvaus"
+    },
+    "use_these_tools_to_ensure_your_1": "Käytä näitä työkaluja varmistaaksesi 1."
+  },
+  "form": {
+    "additionalRoles": "Muita tapoja, joilla he voivat auttaa",
+    "assignedRoles": "Kuinka he auttavat perhettäsi",
+    "selectRoles": "Valitse, miten he voivat auttaa perhettäsi",
+    "accessDescription": "Mitä he näkevät ja milloin he voivat auttaa",
+    "accessInfo": "Mitä he voivat tehdä",
+    "accessLevel": "Kuinka paljon he näkevät",
+    "addPerson": "Lisää joku avuksi",
+    "alternatePhone": "Toinen puhelinnumero",
+    "backupFor": "He ovat varahenkilöitä",
+    "backupHelper": "Kenen puolesta he tarvittaessa puuttuvat asiaan",
+    "capabilities": "Miksi he sopivat tähän",
+    "capabilitiesHelper": "Mikä tekee heistä hyvän vaihtoehdon auttamiseen?",
+    "compensation": "Jos he tarvitsevat tukea",
+    "compensationHelper": "Kaikki taloudellinen apu, jota he saattavat tarvita",
+    "contactInfo": "Kuinka tavoittaa heidät",
+    "dateOfBirth": "Syntymäpäivä",
+    "editPerson": "Voimme päivittää heidän tietojaan",
+    "emailAddress": "Sähköposti",
+    "fullName": "Heidän koko nimensä",
+    "fullNameHelper": "Käytä heidän virallista nimeään tärkeissä asiakirjoissa",
+    "fullNamePlaceholder": "Heidän koko virallinen nimensä",
+    "homeAddress": "Missä he asuvat",
+    "instructions": "Tärkeitä asioita, jotka heidän tulisi tietää",
+    "instructionsHelper": "Erityisohjeita perheesi auttamiseksi",
+    "instructionsPlaceholder": "Mitä heidän on tiedettävä auttaakseen",
+    "limitations": "Asiat, joista on hyvä olla tietoinen",
+    "limitationsHelper": "Mikä tahansa, mikä saattaisi vaikeuttaa heidän auttamistaan",
+    "personalInfo": "Tietoja heistä",
+    "primaryPhone": "Paras puhelinnumero",
+    "primaryRole": "Tärkein tapa, jolla he auttavat",
+    "relationship": "Mistä tunnet heidät",
+    "relationshipPlaceholder": "Kuten puoliso, lapsi, veli/sisko, paras ystävä",
+    "roleInfo": "Kuinka he auttavat",
+    "workAddress": "Missä he työskentelevät"
+  },
+  "preparedness": {
+    "familyBenefit": "Perhe-etuus",
+    "familyCommunication": {
+      "description": "Kuvaus",
+      "scheduleReview": "Aikatauluta tarkistus",
+      "shareReport": "Jaa raportti",
+      "title": "Otsikko"
+    },
+    "gaps": {
+      "basicAccessInfo": "Peruskäyttötiedot",
+      "addMedicalPreferences": "Lisää lääketieteelliset mieltymykset",
+      "completeFinancialAccess": "Täydellinen taloudellinen pääsy",
+      "documentBusinessOperations": "Dokumentoi liiketoimintaa",
+      "improveImmediateAccess": "Paranna välitöntä pääsyä",
+      "updateWillAndTrust": "Päivitys tahtoo ja luottaa"
+    },
+    "levels": {
+      "goodBasic": "Hyvä perusasia",
+      "fullyPrepared": "Täysin valmis",
+      "minimalPreparation": "Minimaalinen valmistelu",
+      "needsImmediate": "Tarvitsee välittömästi",
+      "somePreparation": "Jonkin verran valmisteluja",
+      "wellPrepared": "Hyvin valmistautunut"
+    },
+    "assessments": {
+      "decisionMaking": {
+        "good": "Hyvä",
+        "needsWork": "Tarvitsee työtä"
+      },
+      "immediateAccess": {
+        "good": "Hyvä",
+        "needsWork": "Tarvitsee työtä"
+      },
+      "longTermSecurity": {
+        "good": "Hyvä",
+        "needsWork": "Tarvitsee työtä"
+      }
+    },
+    "dimensions": {
+      "decisionMaking": "Päätöksenteko",
+      "immediateAccess": "Välitön pääsy",
+      "longTermSecurity": "Pitkäaikainen turvallisuus"
+    },
+    "impact": "Vaikutus",
+    "improvements": {
+      "addBankAccounts": "Lisää pankkitilejä",
+      "documentMedicalWishes": "Dokumentoi lääketieteelliset toiveet",
+      "uploadLegalDocuments": "Lataa lakiasiakirjoja"
+    },
+    "nextStep": "Seuraava vaihe",
+    "scenarioReadiness": "Skenaariovalmius",
+    "scenarios": {
+      "extendedTravel": {
+        "description": "Kuvaus",
+        "title": "Otsikko"
+      },
+      "suddenDeath": {
+        "description": "Kuvaus",
+        "title": "Otsikko"
+      }
+    },
+    "title": "Otsikko",
+    "toImprove": "Parantaakseen"
+  },
+  "relationships": {
+    "child": "Lapsi",
+    "friend": "Ystävä",
+    "other": "Muut",
+    "parent": "Vanhempi",
+    "sibling": "Sisarus",
+    "spouse": "Puoliso"
+  },
+  "roles": {
+    "advisor": "Neuvonantaja",
+    "beneficiary": "Edunsaaja",
+    "caregiver": "Hoitaja",
+    "emergencyContact": "Hätäyhteyshenkilö",
+    "executor": "Toimeenpanija",
+    "financialAgent": "Talousasiamies (valtakirja)",
+    "guardian": "Huoltaja",
+    "healthcareProxy": "Terveydenhuollon välityspalvelin",
+    "representative": "Edustaja",
+    "successor": "Varmuuskopio",
+    "trustee": "Edunvalvoja",
+    "witness": "Todistaa"
+  },
+  "trustedCircle": {
+    "roles": "Kuinka he voivat auttaa",
+    "totalMembers": "{{count}} ihmistä valmiina auttamaan",
+    "addFirst": "Voimme lisätä jonkun, joka voi auttaa",
+    "description": "Valitse luotettavia ihmisiä, jotka voivat tukea perhettäsi tarvittaessa.",
+    "empty": "Voimme aloittaa lisäämällä jonkun, johon perheesi voi luottaa – puolison, läheisen ystävän tai luotettavan perheenjäsenen.",
+    "keyPeople": "Avainhenkilöt",
+    "recentlyAdded": "Äskettäin lisätyt",
+    "subtitle": "Ihmiset, jotka ovat siellä perheesi tukena",
+    "title": "Luotetut ihmiset",
+    "viewAll": "Näe kaikki"
+  },
+  "family": {
+    "GuardianPlaybook": {
+      "className": {
+        "flex_itemscenter_justifycenter_h64": "flex items-center tasaus-keskitys h-64",
+        "grid_gridcols6_wfull": "ruudukko ruudukko-cols-6 w-full",
+        "flex_itemscenter_gap2": "flex items-center space-2",
+        "hidden_sminline": "piilotettu sm:rivissä",
+        "spacey4": "avaruus-y-4",
+        "minh200px": "min-h-[200px]",
+        "flex_justifybetween_itemscenter_mb4": "flex-perustelu-kohteiden välillä-keskipiste mb-4",
+        "grid_gridcols1_mdgridcols2_gap4": "ruudukko ruudukko-sarakkeet-1 md:ruudukko-sarakkeet-2 väli-4",
+        "mdcolspan2": "md:col-span-2",
+        "minh80px": "min-h-[80px]",
+        "mt2": "mt-2",
+        "flex_itemscenter_justifybetween": "flex items-center tasaus-väliin"
+      },
+      "htmlFor": {
+        "funeral_wishes": "hautajais_toiveet",
+        "digital_accounts": "digitaaliset_tilit",
+        "document_locations": "dokumenttien_sijainnit",
+        "personal_messages": "henkilökohtaiset_viestit",
+        "practical_instructions": "käytännön_ohjeet"
+      },
+      "id": {
+        "funeral_wishes": "hautajais_toiveet",
+        "digital_accounts": "digitaaliset_tilit",
+        "document_locations": "dokumenttien_sijainnit",
+        "personal_messages": "henkilökohtaiset_viestit",
+        "practical_instructions": "käytännön_ohjeet"
+      },
+      "playbooktabskey": "perhe.välilehdet.${key}",
+      "contactnameindex": "yhteyshenkilön-nimi-${index}",
+      "contactrelationshipindex": "yhteystietosuhde-${index}",
+      "contactphoneindex": "yhteyshenkilön puhelinnumero-${index}",
+      "contactemailindex": "yhteystietosähköpostiosoite-${index}",
+      "contactnotesindex": "yhteystietomuistiinpanot-${index}",
+      "playbookstatusstatus": "perhe.tila.${status}"
+    },
+    "GuardianPlaybookView": {
+      "className": {
+        "minhscreen_flex_itemscenter_justifycenter": "min-h-screen flex items-center tasaus-keskitys",
+        "animatepulse_textcenter": "animate-pulse tekstikeskus",
+        "maxwmd": "max-w-md",
+        "minhscreen_bggradienttobr_frombackground_tomuted20": "min-h-näytön taustagradientti-br taustasta mykistettyyn/20",
+        "container_mxauto_px4_py8_maxw4xl": "kontti mx-auto px-4 py-8 max-w-4xl",
+        "flex_itemscenter_justifycenter_w20_h20_roundedfull": "flex items-center justify-center w-20 h-20 rounded-full bg-primary/10 mx-auto mb-4",
+        "mt4": "mt-4",
+        "mb8": "mb-8",
+        "flex_itemscenter_gap2": "flex items-center space-2",
+        "grid_gap4_mdgridcols2": "ruudukon aukko-4 md:ruudukon-sarakkeet-2",
+        "spacey2": "väli-y-2",
+        "flex_itemsstart_justifybetween": "flex items-start tasaus-väliin",
+        "fontsemibold": "puolilihavoitu fontti",
+        "spacey1": "väli-y-1",
+        "flex_itemscenter_gap2_textsm_textprimary_hoverunde": "",
+        "spacey6": "avaruus-y-6",
+        "prose_prosesm_maxwnone": "proosa proosa-sm max-w-none",
+        "whitespaceprewrap": "välilyönti-esikääre",
+        "mt12_textcenter_textsm_textmutedforeground": "mt-12 tekstikeskus teksti-sm teksti-vaimennettu etuala"
+      },
+      "telcontactphone": "puh:${contact.phone}",
+      "mailtocontactemail": "sähköposti:${contact.email}"
+    }
+  },
+  "guardianUpload": {
+    "relationships": {
+      "child": "Lapsi",
+      "friend": "Ystävä",
+      "legalProfessional": "Oikeusalan ammattilainen",
+      "other": "Muut",
+      "parent": "Vanhempi",
+      "sibling": "Sisarus",
+      "spouse": "Puoliso"
+    },
+    "roles": {
+      "emergencyContact": "Hätäyhteyshenkilö",
+      "executorOfWill": "Testamentin toimeenpanija",
+      "financialPowerOfAttorney": "Taloudellinen valtakirja",
+      "guardianForChildren": "Lasten huoltaja",
+      "healthcareProxy": "Terveydenhuollon välityspalvelin",
+      "trustee": "Edunvalvoja"
+    },
+    "rolesTitle": "Roolien otsikko",
+    "addButton": "Lisää-painike",
+    "addTitle": "Lisää otsikko",
+    "added": "Lisätty",
+    "countryDescription": "Maakuvaus",
+    "countryLabel": "Maamerkintä",
+    "countryPlaceholder": "Maapaikkamerkki",
+    "description": "Kuvaus",
+    "editTitle": "Muokkaa otsikkoa",
+    "emailLabel": "Sähköpostiosoitetunniste",
+    "emailPlaceholder": "Sähköpostin paikkamerkki",
+    "error": "Virhe",
+    "errors": {
+      "connectionError": "Yhteysvirhe",
+      "duplicateError": "Kaksoiskappalevirhe",
+      "permissionError": "Käyttöoikeusvirhe",
+      "requiredDataNotFound": "Vaadittuja tietoja ei löytynyt",
+      "saveError": "Tallennusvirhe",
+      "unknownError": "Tuntematon virhe"
+    },
+    "fullNameLabel": "Koko nimilappu",
+    "fullNamePlaceholder": "Koko nimen paikkamerkki",
+    "loginToSave": "Kirjaudu sisään tallentaaksesi",
+    "phoneLabel": "Puhelimen etiketti",
+    "phonePlaceholder": "Puhelinnumeron paikkamerkki",
+    "relationshipLabel": "Suhdetunniste",
+    "relationshipPlaceholder": "Suhteen paikkamerkki",
+    "saving": "Tallennetaan",
+    "success": "Menestys",
+    "updateButton": "Päivityspainike",
+    "updated": "Päivitetty"
+  },
+  "familyMembers": "Perheenjäsenet",
+  "sensitivity": {
+    "step_family_dynamics": "Uusperheen suhteet vaativat selkeän dokumentaation",
+    "family_conflict": "Perhekonfliktien suunnittelu vaatii lisäselvyyttä",
+    "previous_marriage_obligations": "Aikaisempiin avioliittovelvoitteisiin on puututtava",
+    "absent_parent_considerations": "Poissaolevan vanhemman tilanteet vaativat huolellista suunnittelua",
+    "solo_responsibility_pressure": "Yksinhuoltajan vastuut voivat tuntua ylivoimaisilta",
+    "inheritance_disputes": "Mahdolliset perintökiistat on ehkäistävä",
+    "traditional_role_expectations": "Perinteiset perheroolit saattavat vaatia huomiota",
+    "disability_planning_stress": "Erityistarpeiden suunnittelu voi olla emotionaalisesti haastavaa",
+    "long_term_care_concerns": "Pitkäaikaishoidon suunnittelu on välttämätöntä"
+  },
+  "features": {
+    "family_communication_center": {
+      "title": "Perheviestintäkeskus",
+      "description": "Pidä kaikki ajan tasalla ja yhteydessä"
+    },
+    "family_tree_visualizer": {
+      "title": "Sukupuun visualisoija",
+      "description": "Kartoita monimutkaiset perhesuhteet visuaalisesti"
+    },
+    "step_family_guidance": {
+      "title": "Uusperheiden ohjaus",
+      "description": "Navigoi yhdistettyyn perhesuunnitteluun luottavaisin mielin"
+    },
+    "family_meeting_tools": {
+      "title": "Perhekokoustyökalut",
+      "description": "Helpottaa tärkeitä perhekeskusteluja"
+    },
+    "document_vault": {
+      "title": "Suojattu asiakirjaholvi",
+      "description": "Säilytä ja jaa tärkeitä asiakirjoja turvallisesti"
+    },
+    "guardian_network_builder": {
+      "title": "",
+      "description": "Rakenna lapsillesi vahva tukiverkosto"
+    },
+    "single_parent_resources": {
+      "title": "Yksinhuoltajien resurssit",
+      "description": "Erikoistyökalut ja tuki yksinhuoltajille"
+    },
+    "complex_beneficiary_manager": {
+      "title": "Monimutkainen edunsaajapäällikkö",
+      "description": "Käsittele useita suhteita selkeästi"
+    },
+    "multi_generation_planner": {
+      "title": "Monisukupolvisuunnittelija",
+      "description": "Tasapainota tarpeet kaikkien sukupolvien välillä"
+    },
+    "elder_care_resources": {
+      "title": "Vanhustenhoidon resurssit",
+      "description": "Tukea ikääntyvien vanhempien hoitoon"
+    },
+    "special_needs_trust_wizard": {
+      "title": "Erityistarpeiden luottamusavustaja",
+      "description": "Luo asianmukaisia ​​säätiöitä erityistarpeisille jäsenille"
+    },
+    "care_instruction_builder": {
+      "title": "Hoito-ohjeiden rakentaja",
+      "description": "Dokumentoi yksityiskohtaiset hoitovaatimukset"
+    },
+    "government_benefit_tracker": {
+      "title": "Valtion etuuksien seuranta",
+      "description": "Varmista oikeutesi tärkeisiin etuihin"
+    },
+    "business_succession_planner": {
+      "title": "Liiketoiminnan seuraajasuunnittelija",
+      "description": "Liiketoiminnan jatkuvuuden suunnitelma"
+    },
+    "buy_sell_agreement_tracker": {
+      "title": "Osto-myyntisopimusten seuranta",
+      "description": "Hallinnoi liikekumppanuussopimuksia"
+    },
+    "remote_collaboration_tools": {
+      "title": "Etäyhteistyötyökalut",
+      "description": "Työskentele yhdessä etäisyydestä huolimatta"
+    },
+    "multi_jurisdiction_guidance": {
+      "title": "Usean lainkäyttöalueen ohjeistus",
+      "description": "Navigoi lait eri paikoissa"
+    }
+  },
+  "cultural": {
+    "extended_family_obligations": "Laajennetut perhevastuut",
+    "islamic_inheritance": "Islamilaiset perintöperiaatteet",
+    "jewish_traditions": "Juutalaiset perheperinteet",
+    "christian_values": "Kristillisen taloudenhoidon arvot",
+    "buddhist_principles": "Buddhalaiset myötätunnon periaatteet",
+    "patriarchal_hierarchy": "Perinteinen patriarkaalinen rakenne",
+    "matriarchal_hierarchy": "Perinteinen matriarkaalinen rakenne",
+    "elder_led_hierarchy": "Vanhusten johtama perherakenne",
+    "collective_decision_making": "Yhteiset perheen päätökset",
+    "elder_respect_obligations": "Vanhustenhoitovelvoitteet",
+    "multilingual_documentation": "Monikielisen dokumentaation tarpeet"
+  },
+  "access": {
+    "descriptions": {
+      "executor": "He voivat hoitaa kaiken auttaakseen perhettäsi",
+      "full": "He voivat nähdä ja hallita kaikkia perheesi tietoja",
+      "limited": "He näkevät perusyhteystiedot ja hätäohjeet",
+      "standard": "He näkevät suurimman osan siitä, mitä perheesi tarvitsee"
+    },
+    "levels": {
+      "executor": "Täydet avustajan käyttöoikeudet",
+      "full": "Näkee kaiken",
+      "limited": "Vain perustiedot",
+      "standard": "Normaali perhekäyttöoikeus"
+    },
+    "permissions": {
+      "editInformation": "Voi tehdä muutoksia",
+      "manageAccess": "Voi hallita muita auttajia",
+      "viewAssets": "Näkee tärkeät asiasi",
+      "viewDocuments": "Voi lukea asiakirjoja"
+    }
+  },
+  "actions": {
+    "addPerson": "Voimme lisätä luotettavan henkilön",
+    "assignRole": "Voimme antaa roolin",
+    "contactPerson": "Voimme ottaa yhteyttä",
+    "editPerson": "Päivitä heidän tietonsa",
+    "grantAccess": "Voimme myöntää käyttöoikeuden",
+    "printSummary": "Voimme tulostaa yhteenvedon",
+    "removePerson": "Voimme poistaa luotettavilta ihmisiltä",
+    "removeRole": "Voimme muuttaa heidän rooliaan",
+    "revokeAccess": "Voimme muuttaa sitä, mitä he näkevät",
+    "scheduleReview": "Voimme sopia arvion",
+    "sendInvitation": "Voimme kutsua heidät avuksi",
+    "setBackup": "Voimme asettaa vara-avun",
+    "viewProfile": "Voimme nähdä kaikki heidän yksityiskohdat"
+  },
+  "common": {
+    "cancel": "Peruuttaa",
+    "fix": "Korjata",
+    "minutes": "Minuutit",
+    "start": "Aloita"
+  },
+  "estateStatus": {
+    "actions": {
+      "cancel": "Peruuttaa",
+      "update": "Päivittää",
+      "updating": "Päivittäminen"
+    },
+    "description": "Kuvaus",
+    "dialog": {
+      "description": "Kuvaus",
+      "title": "Otsikko"
+    },
+    "empty": {
+      "noStatus": "Ei tilaa",
+      "readOnly": "Vain lukuoikeus"
+    },
+    "fields": {
+      "additionalDetails": "Lisätietoja",
+      "status": ""
+    },
+    "lastUpdated": "Viimeksi päivitetty",
+    "logAction": "Lokitoiminto",
+    "placeholders": {
+      "additionalContext": "Lisäkonteksti",
+      "selectStatus": "Valitse tila"
+    },
+    "progress": "Edistyminen",
+    "statuses": {
+      "assetsBeingValued": "Arvostuskohteena olevat varat",
+      "debtsBeingSettled": "Velkojen selvittäminen",
+      "distributionInProgress": "Jakelu käynnissä",
+      "estateClosed": "Kartano suljettu",
+      "gatheringDocuments": "Asiakirjojen kerääminen",
+      "initialReview": "Alustava arviointi",
+      "probateInitiated": "Perunkirjoitus aloitettu",
+      "readyForDistribution": "Valmis jakeluun",
+      "taxPreparation": "Veroilmoituksen laatiminen"
+    },
+    "title": "Otsikko"
+  },
+  "guardian": {
+    "templateModal": {
+      "_1": ""
+    }
+  },
+  "guardianView": {
+    "defaultUserName": "Oletuskäyttäjänimi",
+    "errors": {
+      "failedToLoad": "Lataus epäonnistui",
+      "pleaseLogin": "Kirjaudu sisään"
+    },
+    "guardianInfo": {
+      "description": "Kuvaus",
+      "securityNote": "Turvallisuushuomautus"
+    },
+    "readOnlyAccess": "Vain lukuoikeus",
+    "sections": {
+      "finalWishes": {
+        "description": "Kuvaus",
+        "digitalAccounts": "Digitaaliset tilit",
+        "empty": "Tyhjä",
+        "funeralWishes": "Hautajaistervehdykset",
+        "title": "Otsikko"
+      },
+      "keyDocuments": {
+        "description": "Kuvaus",
+        "empty": "Tyhjä",
+        "expires": "Vanhenee",
+        "keyDocumentBadge": "Avainasiakirjan tunniste",
+        "noExpiration": "Ei vanhenemista",
+        "title": "Otsikko"
+      }
+    },
+    "subtitle": "Alaotsikko",
+    "title": "Otsikko"
+  },
+  "guardianship": {
+    "addDependent": "Lisää joku, joka tarvitsee hoitoa",
+    "alternateGuardian": "Varahoitaja",
+    "careStandards": "Miten haluat heistä huolehdittavan",
+    "childGuardians": "Kuka huolehtii lapsistasi",
+    "dependentCare": "Hoitosuunnitelmat läheisillesi",
+    "description": "Valitse rakastavia ihmisiä, jotka huolehtivat lapsistasi tai perheenjäsenistäsi, jotka tarvitsevat apua, jos et itse voi olla paikalla.",
+    "educationPreferences": "Koulu- ja koulutustoiveet",
+    "financialProvisions": "Rahaa heidän hoitoonsa",
+    "guardianCompensation": "Tuki hoitajalle",
+    "guardianFor": "Kuka huolehtii {{name}}:sta",
+    "guardianInstructions": "Kuinka huolehtia heistä",
+    "guardianQualifications": "Miksi he ovat oikea valinta",
+    "healthcarePreferences": "Terveys ja lääketieteellinen hoito",
+    "lifestylePreferences": "Päivittäinen elämä ja aktiviteetit",
+    "noChildren": "Et ole kertonut meille lapsista tai perheenjäsenistä, jotka tarvitsevat hoitoa.",
+    "primaryGuardian": "Ensisijainen hoitaja",
+    "religiousPreferences": "Usko ja arvot",
+    "reportingRequirements": "Perheen pitäminen ajan tasalla",
+    "subtitle": "Varmista, että läheisistäsi pidetään huolta",
+    "temporaryGuardian": "Lyhytaikainen hoitaja",
+    "title": "Kuka huolehtii läheisistäsi",
+    "visitationRights": "Perhevierailujärjestelyt"
+  },
+  "notificationPreferences": {
+    "description": "Kuvaus",
+    "emailRequired": "Sähköpostiosoite vaaditaan",
+    "errors": {
+      "loadFailed": "Lataus epäonnistui",
+      "updateFailed": "Päivitys epäonnistui"
+    },
+    "howItWorks": {
+      "point1": "Piste 1",
+      "point2": "Kohta 2",
+      "point3": "Kohta 3",
+      "title": "Otsikko"
+    },
+    "info": "Tiedot",
+    "lastUpdated": "Viimeksi päivitetty",
+    "noEmail": "Ei sähköpostia",
+    "title": "Otsikko"
+  },
+  "playbook": {
+    "addContact": "Lisää yhteystieto",
+    "autoSaveNotice": "Automaattisen tallennuksen ilmoitus",
+    "contact": "Yhteystiedot",
+    "contactFields": {
+      "email": "Sähköposti",
+      "emailPlaceholder": "Sähköpostin paikkamerkki",
+      "name": "Nimi",
+      "namePlaceholder": "Nimen paikkamerkki",
+      "notes": "Muistiinpanoja",
+      "notesPlaceholder": "Muistiinpanojen paikkamerkki",
+      "phone": "Puhelin",
+      "phonePlaceholder": "Puhelinnumeron paikkamerkki",
+      "role": "Rooli",
+      "rolePlaceholder": "Roolin paikkamerkki"
+    },
+    "errors": {
+      "loadFailed": "Lataus epäonnistui",
+      "saveFailed": "Tallennus epäonnistui"
+    },
+    "loading": "Ladataan",
+    "noContent": "Ei sisältöä",
+    "preview": "Esikatselu",
+    "save": "Tallentaa",
+    "saving": "Tallennetaan",
+    "sections": {
+      "digital": {
+        "description": "Kuvaus",
+        "placeholder": "Paikkamerkki",
+        "title": "Otsikko"
+      },
+      "documents": {
+        "description": "Kuvaus",
+        "placeholder": "Paikkamerkki",
+        "title": "Otsikko"
+      },
+      "funeral": {
+        "description": "Kuvaus",
+        "placeholder": "Paikkamerkki",
+        "title": "Otsikko"
+      },
+      "practical": {
+        "description": "Kuvaus",
+        "placeholder": "Paikkamerkki",
+        "title": "Otsikko"
+      }
+    },
+    "subtitle": {
+      "edit": "Muokata",
+      "view": "Näytä"
+    },
+    "tabs": {
+      "digital": "Digitaalinen",
+      "documents": "Dokumentit",
+      "funeral": "Hautajaiset",
+      "instructions": "Ohjeet",
+      "practical": "Käytännön"
+    },
+    "templates": {
+      "append": "Liitä",
+      "backToTemplates": "Takaisin malleihin",
+      "description": "Kuvaus",
+      "existingContent": "Olemassa oleva sisältö",
+      "fillInVariables": "Täytä muuttujat",
+      "insertTemplate": "Lisää mallipohja",
+      "preview": "Esikatselu",
+      "replace": "Korvata",
+      "title": "Otsikko",
+      "variableCount": "Muuttujien määrä",
+      "variablePlaceholder": "Muuttujan paikkamerkki"
+    },
+    "title": "Otsikko",
+    "useTemplate": "Käytä mallia",
+    "accessDenied": "Käyttö estetty",
+    "description": "Kuvaus",
+    "digitalAccounts": {
+      "description": "Kuvaus",
+      "label": "Tarra",
+      "placeholder": "Paikkamerkki"
+    },
+    "discardChanges": {
+      "cancel": "Peruuttaa",
+      "confirm": "Vahvistaa",
+      "description": "Kuvaus",
+      "title": "Otsikko"
+    },
+    "documentLocations": {
+      "description": "Kuvaus",
+      "label": "Tarra",
+      "placeholder": "Paikkamerkki"
+    },
+    "exitPreview": "Poistu esikatselusta",
+    "fetchError": "Noutovirhe",
+    "funeralWishes": {
+      "description": "Kuvaus",
+      "label": "Tarra",
+      "placeholder": "Paikkamerkki"
+    },
+    "lastUpdated": "Viimeksi päivitetty",
+    "notAuthenticated": "Ei todennettu",
+    "notFound": {
+      "description": "Kuvaus",
+      "title": "Otsikko"
+    },
+    "practicalInstructions": {
+      "description": "Kuvaus",
+      "label": "Tarra",
+      "placeholder": "Paikkamerkki"
+    },
+    "saveError": "Tallennusvirhe",
+    "saveSuccess": "Tallenna onnistuminen",
+    "titleReadOnly": "Otsikko vain luettavissa",
+    "viewDescription": "Näytä kuvaus",
+    "viewFooter": "Näytä alatunniste",
+    "viewTitle": "Näytä otsikko"
+  },
+  "executor": {
+    "completed": "Valmis",
+    "dashboard": {
+      "reminder": "Muistutus",
+      "subtitle": "Alaotsikko",
+      "title": "Otsikko"
+    },
+    "due": "Erääntyvä",
+    "errors": {
+      "loadTasksFailed": "Tehtävien lataus epäonnistui",
+      "updateTaskFailed": "Päivitystehtävä epäonnistui"
+    },
+    "highPriority": "Korkea prioriteetti",
+    "legalSupport": {
+      "button": "Painike",
+      "description": "Kuvaus",
+      "title": "Otsikko"
+    },
+    "markComplete": "Merkitse valmiiksi",
+    "sections": {
+      "firstWeek": {
+        "description": "Kuvaus",
+        "empty": "Tyhjä",
+        "title": "Otsikko"
+      },
+      "immediate": {
+        "description": "Kuvaus",
+        "empty": "Tyhjä",
+        "title": "Otsikko"
+      },
+      "ongoing": {
+        "description": "Kuvaus",
+        "empty": "Tyhjä",
+        "title": "Otsikko"
+      }
+    },
+    "stats": {
+      "completed": "Valmis",
+      "remaining": "Jäljellä",
+      "totalTasks": "Tehtävät yhteensä"
+    },
+    "undo": "Kumoa",
+    "viewAccountDetails": "Näytä tilin tiedot",
+    "viewRelatedDocuments": "Näytä aiheeseen liittyvät asiakirjat"
+  },
+  "executorDashboard": {
+    "professional_guidance_1": "Ammatillinen ohjaus 1"
+  },
+  "executorManagement": {
+    "add_new_executor_10": "Lisää uusi toimeenpanija 10",
+    "all_executors_must_have_legacy_23": "Kaikilla testamentin toimeenpanijoilla on oltava perintötodistus 23",
+    "current_executors_17": "Nykyiset pesänselvittäjät 17",
+    "designate_trusted_individuals__9": "Nimeä luotettavat henkilöt 9",
+    "email_address_11": "Sähköpostiosoite 11",
+    "executor_example_com_12": "Suorittajaesimerkki com 12",
+    "executor_management_8": "Toimeenpanijan hallinta 8",
+    "failed_to_add_executor_5": "Suorittajan 5 lisääminen epäonnistui",
+    "failed_to_load_executors_2": "Suorittajien 2 lataaminen epäonnistui",
+    "failed_to_remove_executor_6": "Suorittajan 6 poistaminen epäonnistui",
+    "important_information_19": "Tärkeitä tietoja 19",
+    "loading_executors_7": "Ladataan suorittimia 7",
+    "no_executors_designated_yet_ad_18": "Ei vielä nimettyjä testamentin toimeenpanijoita vuonna 18",
+    "primary_executor_14": "Ensisijainen toimeenpanija 14",
+    "primary_executors_receive_imme_20": "Ensisijaiset pesänselvittäjät saavat välittömästi 20",
+    "relationship_type_13": "Suhdetyyppi 13",
+    "secondary_executor_15": "Toissijainen toimeenpanija 15",
+    "secondary_executors_are_notifi_21": "Toissijaisille toimeenpanijoille ilmoitetaan 21",
+    "statusLabels": {
+      "addExecutor": "Lisää testamentin toimeenpanija",
+      "adding": "Lisätään",
+      "unknownUser": "Tuntematon käyttäjä"
+    },
+    "this_person_is_already_designa_4": "Tämä henkilö on jo nimetty 4:ksi",
+    "user_not_found_with_this_email_3": "Käyttäjää ei löydy tällä sähköpostiosoitteella 3"
+  },
+  "invite": {
+    "title": "Otsikko"
+  },
+  "inviteAcceptance": {
+    "buttons": {
+      "acceptRole": "Hyväksy rooli",
+      "decline": "Hylkää",
+      "processing": "Käsittely"
+    },
+    "defaultInviterName": "Kutsujan oletusnimi",
+    "disclaimer": "Vastuuvapauslauseke",
+    "errors": {
+      "acceptFailed": "Hyväksyntä epäonnistui",
+      "alreadyProcessed": "Jo käsitelty",
+      "declineFailed": "Hylkäys epäonnistui",
+      "invalidLink": "Virheellinen linkki",
+      "loadingFailed": "Lataus epäonnistui",
+      "notFound": "Ei löytynyt"
+    },
+    "guardianRole": {
+      "relationship": "Suhde",
+      "responsibilities": "Vastuut",
+      "title": "Otsikko",
+      "yourName": "Sinun nimesi"
+    },
+    "loading": "Ladataan",
+    "notFound": {
+      "description": "Kuvaus",
+      "title": "Otsikko"
+    },
+    "subtitle": "Alaotsikko",
+    "whatThisMeans": {
+      "point1": "Piste 1",
+      "point2": "Kohta 2",
+      "point3": "Kohta 3",
+      "point4": "Kohta 4",
+      "title": "Otsikko"
+    }
+  },
+  "structures": {
+    "nuclear": "Perinteinen perhe",
+    "single_parent": "Yksinhuoltajaperhe",
+    "blended": "Uusperhe",
+    "multigenerational": "Monisukupolvinen perhe",
+    "childless": "Pari ilman lapsia",
+    "empty_nest": "Tyhjä pesä -perhe",
+    "non_traditional": "Ainutlaatuinen perherakenne"
+  },
+  "complexity": {
+    "simple": "Yksinkertainen",
+    "moderate": "Kohtalainen",
+    "complex": "Kompleksi"
+  },
+  "personalized": "Henkilökohtainen perhesuunnittelukokemuksesi",
+  "specialConsiderations": "Erityishuomioita",
+  "recommendedFeatures": "Suositellut ominaisuudet",
+  "tabs": {
+    "overview": "Yleiskatsaus",
+    "insights": "Näkemyksiä",
+    "features": "Ominaisuudet",
+    "cultural": "Kulttuuri"
+  },
+  "keyConsiderations": "Keskeiset huomioitavat asiat perheellesi",
+  "specialNeeds": "Erityissuunnittelutarpeet",
+  "sensitivities": "Alueet, jotka vaativat erityistä hoitoa",
+  "needs": {
+    "special_needs_planning": "Erityistarpeiden suunnittelu",
+    "long_term_care_planning": "Pitkäaikaishoidon suunnittelu",
+    "special_needs_trust": "Erityistarpeiden luottamus",
+    "elder_care_planning": "Vanhustenhoidon suunnittelu",
+    "multi_generational_wealth_transfer": "Sukupolvien välinen siirto",
+    "military_benefit_planning": "Sotilaalliset edut",
+    "deployment_planning": "Käyttöönoton suunnittelu",
+    "business_succession": "Liiketoiminnan seuraaja",
+    "key_person_planning": "Avainhenkilöiden suunnittelu",
+    "young_child_guardianship": "Pienen lapsen huoltajuus",
+    "education_planning": "Koulutussuunnittelu",
+    "sharia_compliant_planning": "Sharia-yhteensopiva suunnittelu"
+  },
+  "insightType": {
+    "structure": "Perherakenne",
+    "need": "Erityistarve",
+    "opportunity": "Mahdollisuus",
+    "risk": "Riskitekijä"
+  },
+  "priority": {
+    "high": "Korkea prioriteetti",
+    "medium": "Keskitason prioriteetti",
+    "low": "Matala prioriteetti"
+  },
+  "suggestedActions": "Ehdotetut toimenpiteet",
+  "recommendedFeaturesTitle": "Perheellesi räätälöidyt ominaisuudet",
+  "recommendedFeaturesDesc": "Perherakenteestasi ja tarpeistasi riippuen näistä ominaisuuksista on eniten hyötyä",
+  "culturalConsiderations": "Kulttuuriset ja uskonnolliset näkökohdat",
+  "culturalDesc": "Kunnioita perheesi arvoja ja perinteitä suunnittelussasi",
+  "noCulturalSettings": "Kulttuurisia mieltymyksiä ei ole asetettu. Lisää ne varmistaaksesi, että suunnittelusi kunnioittaa perheesi arvoja.",
+  "configureCultural": "Kulttuuristen mieltymysten määrittäminen",
+  "culturalUpdated": "Kulttuurimieltymykset päivitetty",
+  "culturalUpdatedDesc": "Perhesuunnittelusi heijastaa nyt kulttuuriarvojasi ja perinteitäsi"
+}
