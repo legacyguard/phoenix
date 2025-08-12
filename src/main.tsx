@@ -1,3 +1,4 @@
+import { initPreload } from './perf/preload';
 import React from "react";
 import { createRoot } from "react-dom/client";
 import { ClerkProvider } from "@clerk/clerk-react";
@@ -46,3 +47,6 @@ try {
   document.body.innerHTML =
     "<h1>Error loading app</h1><pre>" + error + "</pre>";
 }
+
+// Idle preload (opt-in via VITE_PRELOAD=1)
+initPreload();
