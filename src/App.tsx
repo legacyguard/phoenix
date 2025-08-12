@@ -132,7 +132,7 @@ const App = () => {
               >
                 {/* Dev-only utilities: ErrorDebugPanel and FeatureFlagPanel are safe and non-production */}
                 <AssistantProvider>
-                  <ErrorBoundary showDetails={import.meta.env.DEV}>
+                  <ErrorBoundary showDetails={(import.meta.env.DEV || import.meta.env.VITE_E2E)}>
                     <AppContent />
                   </ErrorBoundary>
                 </AssistantProvider>
@@ -350,7 +350,7 @@ const AppContent = () => {
                   </Route>
 
                   {/* Demo routes - only in development */}
-                  {import.meta.env.DEV && (
+                  {(import.meta.env.DEV || import.meta.env.VITE_E2E) && (
                     <>
                       <Route
                         path="/test-error"

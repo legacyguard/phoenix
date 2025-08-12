@@ -452,7 +452,7 @@ const ProfessionalDashboardIntegration: React.FC<DashboardProps> = ({
     <ProfessionalFlowManager>
       <div className="container mx-auto px-4 py-8 max-w-7xl">
         {/* Development Tools */}
-        {import.meta.env.DEV && user && (
+        {(import.meta.env.DEV || import.meta.env.VITE_E2E) && user && (
           <div className="fixed bottom-4 right-4 z-50 flex gap-2">
             <Button
               variant="outline"

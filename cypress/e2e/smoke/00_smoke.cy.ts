@@ -25,6 +25,16 @@ describe('SMOKE / basic page health', () => {
       cy.mountOk().then(ok => {
         expect(ok, 'React mount sentinel').to.eq(true);
       });
+      cy.window().then((w:any) => {
+        const diag = {
+          MOUNT_OK: w.__MOUNT_OK__,
+          APP_VISIBLE: w.__APP_VISIBLE__,
+          APP_STAGE: w.__APP_STAGE__,
+          PROBE: w.__APP_PROBE__,
+          ERRORS: w.__E2E_ERRORS__
+        };
+        cy.writeFile('_e2e_app_probe_latest.json', JSON.stringify(diag,null,2), { log:false });
+      });
       hasInteractive();
       // vizuálny artefakt
       cy.screenshot(`smoke_${path.replace(/\W+/g,'_')}`, { capture: 'viewport' });

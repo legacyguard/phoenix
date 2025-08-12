@@ -90,30 +90,45 @@ i18n
 
     // Configure namespaces
     ns: initialNamespaces,
-    defaultNS: "ui",
-    fallbackNS: "ui",
+    defaultNS: "ui-common",
+    fallbackNS: ["ui-common", "errors"],
 
-    // Configure backend to load from new structure
+    // Configure backend to load from public symlinked path
     backend: {
-      loadPath: "/src/i18n/locales/{{lng}}/{{ns}}.json",
+      loadPath: "/locales/{{lng}}/{{ns}}.json",
       // Allow cross-domain requests
       crossDomain: false,
       // Parse JSON responses
       parse: (data: string) => {
         try {
-          // Check if the response is HTML (404 page)
-          if (
-            data.trim().startsWith("<!DOCTYPE") ||
-            data.trim().startsWith("<html")
-          ) {
+          const trimmed = data?.trim?.() ?? "";
+          const head = trimmed.slice(0, 256).toLowerCase();
+
+          // Guard against HTML (e.g., dev server 404 serving index.html)
+          if (head.startsWith("<!doctype") || head.startsWith("<html")) {
             console.warn(
               "Received HTML instead of JSON for translation file, returning empty object",
             );
             return {};
           }
-          const parsed = JSON.parse(data);
+
+          // Guard against merge conflict markers or non-JSON garbage
+          if (
+            trimmed.includes("<<<<<<< ") ||
+            trimmed.includes("=======") ||
+            trimmed.includes(">>>>>>> ")
+          ) {
+            console.warn(
+              "Detected merge conflict markers in translation file, returning empty object",
+            );
+            return {};
+          }
+
+          const parsed = JSON.parse(trimmed);
           // Remove _comment field if it exists
-          delete parsed._comment;
+          if (parsed && typeof parsed === "object") {
+            delete (parsed as any)._comment;
+          }
           return parsed;
         } catch (e) {
           console.error("Failed to parse translation file:", e);

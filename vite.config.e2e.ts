@@ -18,5 +18,10 @@ export default defineConfig(mergeConfig(toCfg(baseCfg), {
     'import.meta.env.VITE_ENABLE_SHARING': 'true',
     'import.meta.env.VITE_ENABLE_NOTIFICATIONS': 'true',
     'import.meta.env.VITE_PLACEHOLDER_URL': JSON.stringify('/placeholder.svg'),
+    'import.meta.env.VITE_E2E': 'true',
+    'import.meta.env.VITE_E2E_FORCE_SHELL': 'false',
+    'import.meta.env.VITE_DEV': 'true',
+    'import.meta.env.DEV': 'true',
+    'process.env.NODE_ENV': '"development"',
   }
 }));

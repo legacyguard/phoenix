@@ -38,7 +38,7 @@ export function clearAuthenticationData(): void {
  * Check if the application is running in a development environment
  */
 export function isDevelopment(): boolean {
-  return import.meta.env.DEV || import.meta.env.MODE === "development";
+  return (import.meta.env.DEV || import.meta.env.VITE_E2E) || import.meta.env.MODE === "development";
 }
 
 /**

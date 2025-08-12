@@ -315,7 +315,7 @@ const Dashboard = () => {
 
           <div className="container mx-auto px-4 py-8 max-w-7xl space-y-8">
             {/* Development only: Reset onboarding button */}
-            {import.meta.env.DEV && user && (
+            {(import.meta.env.DEV || import.meta.env.VITE_E2E) && user && (
               <div className="fixed bottom-4 right-4 z-50">
                 <Button
                   variant="outline"

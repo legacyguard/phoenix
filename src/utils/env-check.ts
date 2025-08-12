@@ -5,7 +5,7 @@
 import { logger } from "@/utils/logger";
 
 export const isProduction = import.meta.env.PROD;
-export const isDevelopment = import.meta.env.DEV;
+export const isDevelopment = (import.meta.env.DEV || import.meta.env.VITE_E2E);
 
 /**
  * Check if Clerk is using development keys
