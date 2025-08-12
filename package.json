@@ -33,7 +33,7 @@
     "check:i18n": "node scripts/ci/i18n-guard.cjs",
     "check:cycles": "node scripts/ci/cycles-guard.cjs",
     "check:exports": "node scripts/ci/exports-guard.cjs",
-    "check:all": "npm run -s check:i18n && npm run -s check:cycles && npm run -s check:exports && npm run -s check:size && npm run -s check:only && npm run -s check:console && npm run -s check:imports && npm run -s check:img",
+    "check:all": "npm run -s check:i18n && npm run -s check:cycles && npm run -s check:exports && npm run -s check:size && npm run -s check:only && npm run -s check:console && npm run -s check:imports && npm run -s check:img && npm run -s check:init",
     "ci": "npm run -s lint && npm run -s typecheck && npm run -s test:ci && npm run -s check:all",
     "check:i18n:strict": "node scripts/ci/i18n-guard.cjs --strict",
     "check:size": "node scripts/ci/size-guard.cjs",
@@ -52,7 +52,10 @@
     "img:baseline": "node scripts/ci/img-guard.cjs --write-baseline",
     "img:autofix": "node scripts/tools/img-autofix.cjs",
     "check:img:priority": "node scripts/ci/img-priority-guard.cjs",
-    "build:critical": "vite build --config vite.config.critical.ts"
+    "build:critical": "vite build --config vite.config.critical.ts",
+    "check:init": "node scripts/ci/init-chunk-guard.cjs",
+    "init:baseline": "node scripts/ci/init-chunk-guard.cjs --write-baseline",
+    "check:init:strict": "node scripts/ci/init-chunk-guard.cjs --strict"
   },
   "dependencies": {
     "@clerk/clerk-react": "^5.36.0",
