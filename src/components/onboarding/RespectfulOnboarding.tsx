@@ -175,7 +175,7 @@ const RespectfulOnboarding: React.FC<RespectfulOnboardingProps> = ({
         {/* Header */}
         <div className="px-6 py-4 border-b border-gray-200 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <Shield className="w-6 h-6 text-blue-600" />
+            <Shield className="w-6 h-6 text-blue-600" data-testid="respectfulonboarding-shield" />
             <h2 className="text-xl font-semibold text-gray-900">
               {t("onboarding:respectful.title")}
             </h2>
@@ -185,7 +185,7 @@ const RespectfulOnboarding: React.FC<RespectfulOnboardingProps> = ({
             className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
             aria-label="Close"
           >
-            <X className="w-5 h-5 text-gray-400" />
+            <X className="w-5 h-5 text-gray-400" data-testid="respectfulonboarding-x" />
           </button>
         </div>
 
@@ -195,7 +195,7 @@ const RespectfulOnboarding: React.FC<RespectfulOnboardingProps> = ({
             <WelcomeStep
               userName={userName}
               onContinue={() => setCurrentStep("questions")}
-              onSkipToUpload={() => setCurrentStep("upload")}
+              onSkipToUpload={() => setCurrentStep("upload")} data-testid="respectfulonboarding-welcomestep"
             />
           )}
 
@@ -204,7 +204,7 @@ const RespectfulOnboarding: React.FC<RespectfulOnboardingProps> = ({
               <EssentialQuestions
                 onComplete={handleQuestionsComplete}
                 onSkip={handleSkipQuestions}
-                showProgress={false}
+                showProgress={false} data-testid="respectfulonboarding-essentialquestions"
               />
             </div>
           )}
@@ -215,7 +215,7 @@ const RespectfulOnboarding: React.FC<RespectfulOnboardingProps> = ({
                 onComplete={handleUploadComplete}
                 onSkip={handleSkipUpload}
                 maxDocuments={3}
-                showOnboarding={true}
+                showOnboarding={true} data-testid="respectfulonboarding-immediatevalueupload"
               />
             </div>
           )}
@@ -224,7 +224,7 @@ const RespectfulOnboarding: React.FC<RespectfulOnboardingProps> = ({
             <RecommendationsStep
               answers={answers}
               documents={uploadedDocuments}
-              onComplete={handleFinalComplete}
+              onComplete={handleFinalComplete} data-testid="respectfulonboarding-recommendationsstep"
             />
           )}
         </div>
@@ -236,19 +236,19 @@ const RespectfulOnboarding: React.FC<RespectfulOnboardingProps> = ({
               <StepIndicator
                 label={t("onboarding:respectful.steps.understand")}
                 completed={completedSteps.includes("questions")}
-                active={currentStep === "questions"}
+                active={currentStep === "questions"} data-testid="respectfulonboarding-stepindicator"
               />
-              <ChevronRight className="w-4 h-4 text-gray-400" />
+              <ChevronRight className="w-4 h-4 text-gray-400" data-testid="respectfulonboarding-chevronright" />
               <StepIndicator
                 label={t("onboarding:respectful.steps.secure")}
                 completed={completedSteps.includes("upload")}
-                active={currentStep === "upload"}
+                active={currentStep === "upload"} data-testid="respectfulonboarding-stepindicator"
               />
-              <ChevronRight className="w-4 h-4 text-gray-400" />
+              <ChevronRight className="w-4 h-4 text-gray-400" data-testid="respectfulonboarding-chevronright" />
               <StepIndicator
                 label={t("onboarding:respectful.steps.plan")}
                 completed={completedSteps.includes("recommendations")}
-                active={currentStep === "recommendations"}
+                active={currentStep === "recommendations"} data-testid="respectfulonboarding-stepindicator"
               />
             </div>
 
@@ -274,13 +274,13 @@ const RespectfulOnboarding: React.FC<RespectfulOnboardingProps> = ({
             <div className="flex gap-3">
               <button
                 onClick={() => setShowCloseConfirm(false)}
-                className="flex-grow px-4 py-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 transition-colors"
+                className="flex-grow px-4 py-2 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 transition-colors" data-testid="respectfulonboarding-t-respectful-closeconfirm-continue"
               >
                 {t("respectful.closeConfirm.continue")}
               </button>
               <button
                 onClick={confirmClose}
-                className="flex-grow px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                className="flex-grow px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors" data-testid="respectfulonboarding-t-respectful-closeconfirm-saveandclose"
               >
                 {t("respectful.closeConfirm.saveAndClose")}
               </button>
@@ -304,7 +304,7 @@ const WelcomeStep: React.FC<{
     <div className="p-8 max-w-3xl mx-auto">
       <div className="text-center mb-8">
         <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">
-          <Heart className="w-8 h-8 text-blue-600" />
+          <Heart className="w-8 h-8 text-blue-600" data-testid="respectfulonboarding-heart" />
         </div>
         <h2 className="text-3xl font-bold text-gray-900 mb-4">
           {userName
@@ -322,7 +322,7 @@ const WelcomeStep: React.FC<{
       <div className="grid md:grid-cols-3 gap-6 mb-8">
         <div className="text-center">
           <div className="inline-flex items-center justify-center w-12 h-12 bg-purple-100 rounded-lg mb-3">
-            <Users className="w-6 h-6 text-purple-600" />
+            <Users className="w-6 h-6 text-purple-600" data-testid="respectfulonboarding-users" />
           </div>
           <h3 className="font-semibold text-gray-900 mb-2">
             {t("onboarding:respectful.welcome.benefit1.title")}
@@ -334,7 +334,7 @@ const WelcomeStep: React.FC<{
 
         <div className="text-center">
           <div className="inline-flex items-center justify-center w-12 h-12 bg-green-100 rounded-lg mb-3">
-            <Shield className="w-6 h-6 text-green-600" />
+            <Shield className="w-6 h-6 text-green-600" data-testid="respectfulonboarding-shield" />
           </div>
           <h3 className="font-semibold text-gray-900 mb-2">
             {t("onboarding:respectful.welcome.benefit2.title")}
@@ -346,7 +346,7 @@ const WelcomeStep: React.FC<{
 
         <div className="text-center">
           <div className="inline-flex items-center justify-center w-12 h-12 bg-orange-100 rounded-lg mb-3">
-            <Sparkles className="w-6 h-6 text-orange-600" />
+            <Sparkles className="w-6 h-6 text-orange-600" data-testid="respectfulonboarding-sparkles" />
           </div>
           <h3 className="font-semibold text-gray-900 mb-2">
             {t("onboarding:respectful.welcome.benefit3.title")}
@@ -360,21 +360,21 @@ const WelcomeStep: React.FC<{
       <div className="flex flex-col sm:flex-row gap-4">
         <button
           onClick={onContinue}
-          className="flex-grow bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
+          className="flex-grow bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2" data-testid="respectfulonboarding-t-respectful-welcome-startbutton"
         >
           {t("respectful.welcome.startButton")}
-          <ChevronRight className="w-5 h-5" />
+          <ChevronRight className="w-5 h-5" data-testid="respectfulonboarding-chevronright" />
         </button>
         <button
           onClick={onSkipToUpload}
-          className="flex-grow border border-gray-300 hover:bg-gray-50 text-gray-700 font-medium py-3 px-6 rounded-lg transition-colors"
+          className="flex-grow border border-gray-300 hover:bg-gray-50 text-gray-700 font-medium py-3 px-6 rounded-lg transition-colors" data-testid="respectfulonboarding-t-respectful-welcome-uploadfirst"
         >
           {t("respectful.welcome.uploadFirst")}
         </button>
       </div>
 
       <p className="text-center text-sm text-gray-500 mt-6">
-        <Info className="w-4 h-4 inline mr-1" />
+        <Info className="w-4 h-4 inline mr-1" data-testid="respectfulonboarding-info" />
         {t("respectful.welcome.timeEstimate")}
       </p>
     </div>
@@ -395,7 +395,7 @@ const RecommendationsStep: React.FC<{
     <div className="p-8 max-w-3xl mx-auto">
       <div className="text-center mb-8">
         <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">
-          <CheckCircle className="w-8 h-8 text-green-600" />
+          <CheckCircle className="w-8 h-8 text-green-600" data-testid="respectfulonboarding-checkcircle" />
         </div>
         <h2 className="text-3xl font-bold text-gray-900 mb-4">
           {t("onboarding:respectful.recommendations.title")}
@@ -458,7 +458,7 @@ const RecommendationsStep: React.FC<{
                   {rec.link && (
                     <a
                       href={rec.link}
-                      className="text-xs text-blue-600 hover:text-blue-700 font-medium"
+                      className="text-xs text-blue-600 hover:text-blue-700 font-medium" data-testid="respectfulonboarding-a"
                     >
                       {t("respectful.recommendations.startThis")} →
                     </a>
@@ -500,10 +500,10 @@ const RecommendationsStep: React.FC<{
 
       <button
         onClick={onComplete}
-        className="w-full bg-green-600 hover:bg-green-700 text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
+        className="w-full bg-green-600 hover:bg-green-700 text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2" data-testid="respectfulonboarding-t-respectful-recommendations-completebut"
       >
         {t("respectful.recommendations.completeButton")}
-        <CheckCircle className="w-5 h-5" />
+        <CheckCircle className="w-5 h-5" data-testid="respectfulonboarding-checkcircle" />
       </button>
 
       <p className="text-center text-sm text-gray-500 mt-4">
@@ -522,7 +522,7 @@ const StepIndicator: React.FC<{
   return (
     <div className="flex items-center gap-2">
       {completed ? (
-        <CheckCircle className="w-5 h-5 text-green-600" />
+        <CheckCircle className="w-5 h-5 text-green-600" data-testid="respectfulonboarding-checkcircle" />
       ) : (
         <div
           className={`

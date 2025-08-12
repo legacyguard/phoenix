@@ -122,15 +122,15 @@ export const LegacyBriefing: React.FC = () => {
   const getMessageIcon = (messageType: string) => {
     switch (messageType) {
       case "text":
-        return <MessageSquare className="h-5 w-5" />;
+        return <MessageSquare className="h-5 w-5" data-testid="legacybriefing-messagesquare" />;
       case "photo":
-        return <Image className="h-5 w-5" />;
+        return <Image className="h-5 w-5" data-testid="legacybriefing-image" />;
       case "video":
-        return <Video className="h-5 w-5" />;
+        return <Video className="h-5 w-5" data-testid="legacybriefing-video" />;
       case "audio":
-        return <Mic className="h-5 w-5" />;
+        return <Mic className="h-5 w-5" data-testid="legacybriefing-mic" />;
       default:
-        return <MessageSquare className="h-5 w-5" />;
+        return <MessageSquare className="h-5 w-5" data-testid="legacybriefing-messagesquare" />;
     }
   };
 
@@ -138,24 +138,24 @@ export const LegacyBriefing: React.FC = () => {
     switch (status) {
       case "locked":
         return (
-          <Badge variant="secondary" className="gap-1">
-            <Lock className="h-3 w-3" />
+          <Badge variant="secondary" className="gap-1" data-testid="legacybriefing-badge">
+            <Lock className="h-3 w-3" data-testid="legacybriefing-lock" />
             {t("legacyBriefing.statusLabels.locked")}
           </Badge>
         );
 
       case "unlocked":
         return (
-          <Badge variant="default" className="gap-1">
-            <Unlock className="h-3 w-3" />
+          <Badge variant="default" className="gap-1" data-testid="legacybriefing-badge">
+            <Unlock className="h-3 w-3" data-testid="legacybriefing-unlock" />
             {t("legacyBriefing.statusLabels.unlocked")}
           </Badge>
         );
 
       case "delivered":
         return (
-          <Badge variant="outline" className="gap-1">
-            <Users className="h-3 w-3" />
+          <Badge variant="outline" className="gap-1" data-testid="legacybriefing-badge">
+            <Users className="h-3 w-3" data-testid="legacybriefing-users" />
             {t("legacyBriefing.statusLabels.delivered")}
           </Badge>
         );
@@ -178,10 +178,10 @@ export const LegacyBriefing: React.FC = () => {
   if (loading) {
     return (
       <div className="space-y-4">
-        <Skeleton className="h-12 w-64" />
+        <Skeleton className="h-12 w-64" data-testid="legacybriefing-skeleton" />
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {[...Array(3)].map((_, i) => (
-            <Skeleton key={i} className="h-48" />
+            <Skeleton key={i} className="h-48" data-testid="legacybriefing-skeleton" />
           ))}
         </div>
       </div>
@@ -203,25 +203,25 @@ export const LegacyBriefing: React.FC = () => {
         <Button
           onClick={() => setShowCreateModal(true)}
           size="lg"
-          className="gap-2"
+          className="gap-2" data-testid="legacybriefing-button"
         >
-          <Plus className="h-5 w-5" />
+          <Plus className="h-5 w-5" data-testid="legacybriefing-plus" />
           {t("legacyLetters.create_new_message_5")}
         </Button>
       </div>
 
       {/* Error Alert */}
       {error && (
-        <Alert variant="destructive">
-          <AlertCircle className="h-4 w-4" />
-          <AlertDescription>{error}</AlertDescription>
+        <Alert variant="destructive" data-testid="legacybriefing-alert">
+          <AlertCircle className="h-4 w-4" data-testid="legacybriefing-alertcircle" />
+          <AlertDescription data-testid="legacybriefing-error">{error}</AlertDescription>
         </Alert>
       )}
 
       {/* Empty State */}
       {!loading && capsules.length === 0 && (
-        <Card className="p-12 text-center">
-          <Clock className="h-12 w-12 mx-auto mb-4 text-muted-foreground" />
+        <Card className="p-12 text-center" data-testid="legacybriefing-card">
+          <Clock className="h-12 w-12 mx-auto mb-4 text-muted-foreground" data-testid="legacybriefing-clock" />
           <h3 className="text-lg font-semibold mb-2">
             {t("legacyLetters.no_time_capsules_yet_6")}
           </h3>
@@ -231,9 +231,9 @@ export const LegacyBriefing: React.FC = () => {
           <Button
             onClick={() => setShowCreateModal(true)}
             size="lg"
-            className="gap-2"
+            className="gap-2" data-testid="legacybriefing-button"
           >
-            <Plus className="h-5 w-5" />
+            <Plus className="h-5 w-5" data-testid="legacybriefing-plus" />
             {t("legacyLetters.create_your_first_message_8")}
           </Button>
         </Card>
@@ -245,15 +245,15 @@ export const LegacyBriefing: React.FC = () => {
           {capsules.map((capsule) => (
             <Card
               key={capsule.id}
-              className="hover:shadow-lg transition-shadow"
+              className="hover:shadow-lg transition-shadow" data-testid="legacybriefing-card"
             >
-              <CardHeader>
+              <CardHeader data-testid="legacybriefing-cardheader">
                 <div className="flex items-start justify-between">
                   <div className="space-y-1 flex-1">
-                    <CardTitle className="line-clamp-1">
+                    <CardTitle className="line-clamp-1" data-testid="legacybriefing-capsule-title">
                       {capsule.title}
                     </CardTitle>
-                    <CardDescription className="flex items-center gap-2">
+                    <CardDescription className="flex items-center gap-2" data-testid="legacybriefing-getmessageicon-capsule-messagetype">
                       {getMessageIcon(capsule.messageType)}
                       <span className="capitalize">
                         {t(
@@ -265,10 +265,10 @@ export const LegacyBriefing: React.FC = () => {
                   {getStatusBadge(capsule.status)}
                 </div>
               </CardHeader>
-              <CardContent className="space-y-4">
+              <CardContent className="space-y-4" data-testid="legacybriefing-recipients">
                 {/* Recipients */}
                 <div className="flex items-center gap-2 text-sm">
-                  <Users className="h-4 w-4 text-muted-foreground" />
+                  <Users className="h-4 w-4 text-muted-foreground" data-testid="legacybriefing-users" />
                   <span className="text-muted-foreground">
                     {t("legacyLetters.to_9")}
                   </span>
@@ -281,7 +281,7 @@ export const LegacyBriefing: React.FC = () => {
                 <div className="flex items-center gap-2 text-sm">
                   {capsule.unlockCondition === "date" ? (
                     <>
-                      <Calendar className="h-4 w-4 text-muted-foreground" />
+                      <Calendar className="h-4 w-4 text-muted-foreground" data-testid="legacybriefing-calendar" />
                       <span className="text-muted-foreground">
                         {t("legacyLetters.unlocks_on_10")}
                       </span>
@@ -293,7 +293,7 @@ export const LegacyBriefing: React.FC = () => {
                     </>
                   ) : (
                     <>
-                      <Clock className="h-4 w-4 text-muted-foreground" />
+                      <Clock className="h-4 w-4 text-muted-foreground" data-testid="legacybriefing-clock" />
                       <span className="text-muted-foreground">
                         {t("legacyLetters.unlocks_11")}
                       </span>
@@ -322,18 +322,18 @@ export const LegacyBriefing: React.FC = () => {
                       onClick={() => {
                         setSelectedCapsule(capsule);
                         setShowCreateModal(true);
-                      }}
+                      }} data-testid="legacybriefing-button"
                     >
-                      <Edit className="h-4 w-4 mr-1" />
+                      <Edit className="h-4 w-4 mr-1" data-testid="legacybriefing-edit" />
                       {t("legacyBriefing.actions.edit")}
                     </Button>
                     <Button
                       variant="outline"
                       size="sm"
                       className="flex-1"
-                      onClick={() => handleDelete(capsule.id)}
+                      onClick={() => handleDelete(capsule.id)} data-testid="legacybriefing-handledelete-capsule-id"
                     >
-                      <Trash2 className="h-4 w-4 mr-1" />
+                      <Trash2 className="h-4 w-4 mr-1" data-testid="legacybriefing-trash2" />
                       {t("legacyBriefing.actions.delete")}
                     </Button>
                   </div>
@@ -358,7 +358,7 @@ export const LegacyBriefing: React.FC = () => {
             setShowCreateModal(false);
             setSelectedCapsule(null);
           }}
-          editingCapsule={selectedCapsule}
+          editingCapsule={selectedCapsule} data-testid="legacybriefing-createtimecapsulemodal"
         />
       )}
     </div>

@@ -94,36 +94,36 @@ export const BeneficiariesForm: React.FC<BeneficiariesFormProps> = ({
     return (
       <form onSubmit={handleSubmit(onFormSubmit)} className="space-y-4">
         <div>
-          <Label>{t("dashboard.beneficiaryName")}</Label>
+          <Label data-testid="beneficiariesform-t-dashboard-beneficiaryname">{t("dashboard.beneficiaryName")}</Label>
           <Input
             {...register("name")}
-            className={formErrors.name ? "border-red-500" : ""}
+            className={formErrors.name ? "border-red-500" : ""} data-testid="beneficiariesform-input"
           />
           {formErrors.name && (
             <p className="text-sm text-destructive flex items-center gap-1">
-              <AlertCircle className="h-3 w-3" />
+              <AlertCircle className="h-3 w-3" data-testid="beneficiariesform-alertcircle" />
               {formErrors.name.message}
             </p>
           )}
         </div>
         <div>
-          <Label>{t("dashboard-main:dashboard.allocation")}</Label>
+          <Label data-testid="beneficiariesform-t-dashboard-main-dashboard-allocation">{t("dashboard-main:dashboard.allocation")}</Label>
           <Input
             type="number"
             min={1}
             max={100}
             {...register("allocation")}
-            className={formErrors.allocation ? "border-red-500" : ""}
+            className={formErrors.allocation ? "border-red-500" : ""} data-testid="beneficiariesform-input"
           />
           {formErrors.allocation && (
             <p className="text-sm text-destructive flex items-center gap-1">
-              <AlertCircle className="h-3 w-3" />
+              <AlertCircle className="h-3 w-3" data-testid="beneficiariesform-alertcircle" />
               {formErrors.allocation.message}
             </p>
           )}
         </div>
         <div className="flex gap-3 pt-4">
-          <Button type="submit" disabled={isSubmitting} className="flex-1">
+          <Button type="submit" disabled={isSubmitting} className="flex-1" data-testid="beneficiariesform-button">
             {isEditingSingle
               ? t("dashboard.updateBeneficiary")
               : t("dashboard.saveBeneficiary")}
@@ -132,7 +132,7 @@ export const BeneficiariesForm: React.FC<BeneficiariesFormProps> = ({
             type="button"
             variant="outline"
             onClick={onCancelSingle}
-            disabled={isSubmitting}
+            disabled={isSubmitting} data-testid="beneficiariesform-t-ui-elements-ui-cancel"
           >
             {t("ui-elements:ui.cancel")}
           </Button>
@@ -152,29 +152,29 @@ export const BeneficiariesForm: React.FC<BeneficiariesFormProps> = ({
   };
 
   return (
-    <FormProvider {...methods}>
+    <FormProvider {...methods} data-testid="beneficiariesform-formprovider">
       <form className="space-y-6">
-        <Card>
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              <Users className="h-5 w-5" />
+        <Card data-testid="beneficiariesform-card">
+          <CardHeader data-testid="beneficiariesform-cardheader">
+            <CardTitle className="flex items-center gap-2" data-testid="beneficiariesform-cardtitle">
+              <Users className="h-5 w-5" data-testid="beneficiariesform-users" />
               {t("wills:wills.beneficiaries.title")}
             </CardTitle>
-            <CardDescription>
+            <CardDescription data-testid="beneficiariesform-t-wills-wills-beneficiaries-description">
               {t("wills:wills.beneficiaries.description")}
             </CardDescription>
           </CardHeader>
-          <CardContent>
+          <CardContent data-testid="beneficiariesform-fields-length-0">
             {fields.length === 0 ? (
               <div className="text-center py-8 text-muted-foreground">
-                <Users className="h-12 w-12 mx-auto mb-3 text-muted-foreground/50" />
+                <Users className="h-12 w-12 mx-auto mb-3 text-muted-foreground/50" data-testid="beneficiariesform-users" />
                 <p>{t("wills.beneficiaries.noBeneficiaries")}</p>
               </div>
             ) : (
               <div className="space-y-6">
                 {fields.map((field, index) => (
-                  <Card key={field.id}>
-                    <CardContent className="pt-6">
+                  <Card key={field.id} data-testid="beneficiariesform-card">
+                    <CardContent className="pt-6" data-testid="beneficiariesform-cardcontent">
                       <div className="space-y-4">
                         <h4 className="font-medium">
                           {t("will.beneficiaries.beneficiaryNumber", {
@@ -183,7 +183,7 @@ export const BeneficiariesForm: React.FC<BeneficiariesFormProps> = ({
                         </h4>
                         <div className="grid grid-cols-2 gap-4">
                           <div className="space-y-2">
-                            <Label htmlFor={`beneficiaries.${index}.name`}>
+                            <Label htmlFor={`beneficiaries.${index}.name`} data-testid="beneficiariesform-label">
                               {t("wills:wills.beneficiaries.name")}
                             </Label>
                             <Input
@@ -203,12 +203,12 @@ export const BeneficiariesForm: React.FC<BeneficiariesFormProps> = ({
                                     `beneficiaries.${index}.name`,
                                   ),
                                 })
-                              }
+                              } data-testid="beneficiariesform-input"
                             />
                             {methods.formState.errors.beneficiaries?.[index]
                               ?.name && (
                               <p className="text-sm text-destructive flex items-center gap-1">
-                                <AlertCircle className="h-3 w-3" />
+                                <AlertCircle className="h-3 w-3" data-testid="beneficiariesform-alertcircle" />
                                 {
                                   methods.formState.errors.beneficiaries[index]
                                     ?.name?.message
@@ -218,7 +218,7 @@ export const BeneficiariesForm: React.FC<BeneficiariesFormProps> = ({
                           </div>
                           <div className="space-y-2">
                             <Label
-                              htmlFor={`beneficiaries.${index}.allocation`}
+                              htmlFor={`beneficiaries.${index}.allocation`} data-testid="beneficiariesform-label"
                             >
                               {t("wills:wills.beneficiaries.allocation")}
                             </Label>
@@ -244,12 +244,12 @@ export const BeneficiariesForm: React.FC<BeneficiariesFormProps> = ({
                                     ),
                                   ),
                                 })
-                              }
+                              } data-testid="beneficiariesform-input"
                             />
                             {methods.formState.errors.beneficiaries?.[index]
                               ?.allocation && (
                               <p className="text-sm text-destructive flex items-center gap-1">
-                                <AlertCircle className="h-3 w-3" />
+                                <AlertCircle className="h-3 w-3" data-testid="beneficiariesform-alertcircle" />
                                 {
                                   methods.formState.errors.beneficiaries[index]
                                     ?.allocation?.message
@@ -261,7 +261,7 @@ export const BeneficiariesForm: React.FC<BeneficiariesFormProps> = ({
                         <Button
                           type="button"
                           variant="destructive"
-                          onClick={() => remove(index)}
+                          onClick={() => remove(index)} data-testid="beneficiariesform-t-ui-elements-ui-remove"
                         >
                           {t("ui-elements:ui.remove")}
                         </Button>
@@ -276,7 +276,7 @@ export const BeneficiariesForm: React.FC<BeneficiariesFormProps> = ({
               onClick={() =>
                 append({ id: Date.now().toString(), name: "", allocation: 0 })
               }
-              className="mt-4"
+              className="mt-4" data-testid="beneficiariesform-t-wills-beneficiaries-addbeneficiary"
             >
               {t("wills.beneficiaries.addBeneficiary")}
             </Button>

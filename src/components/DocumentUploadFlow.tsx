@@ -473,7 +473,7 @@ const DocumentUploadFlow: React.FC<DocumentUploadFlowProps> = ({
             </p>
             <button
               onClick={() => setCurrentStep("upload")}
-              className="px-4 py-2.5 bg-blue-600 text-white text-sm md:text-base font-semibold rounded-md hover:bg-blue-700 transition-colors"
+              className="px-4 py-2.5 bg-blue-600 text-white text-sm md:text-base font-semibold rounded-md hover:bg-blue-700 transition-colors" data-testid="documentuploadflow-continue"
             >
               Continue
             </button>
@@ -499,7 +499,7 @@ const DocumentUploadFlow: React.FC<DocumentUploadFlowProps> = ({
             id="file-upload"
             className="sr-only"
             accept={t("documentUploader.image_application_pdf_4")}
-            onChange={handleChange}
+            onChange={handleChange} data-testid="documentuploadflow-input"
           />
 
           <label htmlFor="file-upload" className="cursor-pointer">
@@ -690,12 +690,12 @@ const DocumentUploadFlow: React.FC<DocumentUploadFlowProps> = ({
 
           {/* Action Buttons */}
           <div className="mt-4 md:mt-6 flex flex-col sm:flex-row gap-3">
-            <button className="flex-1 px-4 py-2.5 bg-blue-600 text-white text-sm md:text-base font-semibold rounded-md hover:bg-blue-700 transition-colors">
+            <button className="flex-1 px-4 py-2.5 bg-blue-600 text-white text-sm md:text-base font-semibold rounded-md hover:bg-blue-700 transition-colors" data-testid="documentuploadflow-t-documentuploadflow-save-document-26">
               {t("documentUploadFlow.save_document_26")}
             </button>
             <button
               onClick={resetFlow}
-              className="px-4 py-2.5 border border-gray-300 text-gray-700 text-sm md:text-base font-semibold rounded-md hover:bg-gray-50 transition-colors"
+              className="px-4 py-2.5 border border-gray-300 text-gray-700 text-sm md:text-base font-semibold rounded-md hover:bg-gray-50 transition-colors" data-testid="documentuploadflow-t-documentuploadflow-upload-another-27"
             >
               {t("documentUploadFlow.upload_another_27")}
             </button>
@@ -709,7 +709,7 @@ const DocumentUploadFlow: React.FC<DocumentUploadFlowProps> = ({
           <p className="text-red-700">{error}</p>
           <button
             onClick={resetFlow}
-            className="mt-2 text-sm text-red-600 underline hover:text-red-800"
+            className="mt-2 text-sm text-red-600 underline hover:text-red-800" data-testid="documentuploadflow-t-documentuploadflow-try-again-28"
           >
             {t("documentUploadFlow.try_again_28")}
           </button>

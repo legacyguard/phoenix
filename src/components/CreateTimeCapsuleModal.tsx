@@ -279,30 +279,30 @@ export const CreateTimeCapsuleModal: React.FC<CreateTimeCapsuleModalProps> = ({
   };
 
   return (
-    <Dialog open={open} onOpenChange={onClose}>
-      <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
+    <Dialog open={open} onOpenChange={onClose} data-testid="createtimecapsulemodal-dialog">
+      <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto" data-testid="createtimecapsulemodal-dialogcontent">
         <form onSubmit={handleSubmit}>
-          <DialogHeader>
-            <DialogTitle>
+          <DialogHeader data-testid="createtimecapsulemodal-dialogheader">
+            <DialogTitle data-testid="createtimecapsulemodal-dialogtitle">
               {editingCapsule
                 ? t("createTimeCapsuleModal.titleEdit")
                 : t("createTimeCapsuleModal.titleCreate")}
             </DialogTitle>
-            <DialogDescription>
+            <DialogDescription data-testid="createtimecapsulemodal-t-createtimecapsulemodal-description">
               {t("createTimeCapsuleModal.description")}
             </DialogDescription>
           </DialogHeader>
 
           <div className="space-y-6 py-6">
             {error && (
-              <Alert variant="destructive">
-                <AlertCircle className="h-4 w-4" />
-                <AlertDescription>{error}</AlertDescription>
+              <Alert variant="destructive" data-testid="createtimecapsulemodal-alert">
+                <AlertCircle className="h-4 w-4" data-testid="createtimecapsulemodal-alertcircle" />
+                <AlertDescription data-testid="createtimecapsulemodal-error">{error}</AlertDescription>
               </Alert>
             )}
 
             <div className="space-y-2">
-              <Label htmlFor="title">
+              <Label htmlFor="title" data-testid="createtimecapsulemodal-t-createtimecapsulemodal-labels-title">
                 {t("createTimeCapsuleModal.labels.title")}
               </Label>
               <Input
@@ -310,55 +310,55 @@ export const CreateTimeCapsuleModal: React.FC<CreateTimeCapsuleModalProps> = ({
                 placeholder={t("createTimeCapsuleModal.placeholders.title")}
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
-                maxLength={100}
+                maxLength={100} data-testid="createtimecapsulemodal-input"
               />
             </div>
 
             <div className="space-y-2">
-              <Label>{t("createTimeCapsuleModal.labels.messageType")}</Label>
+              <Label data-testid="createtimecapsulemodal-t-createtimecapsulemodal-labels-messaget">{t("createTimeCapsuleModal.labels.messageType")}</Label>
               <RadioGroup
                 value={messageType}
                 onValueChange={(value) => setMessageType(value as MessageType)}
-                disabled={!!editingCapsule}
+                disabled={!!editingCapsule} data-testid="createtimecapsulemodal-radiogroup"
               >
                 <div className="grid grid-cols-2 gap-4">
                   <div className="flex items-center space-x-2 border rounded-lg p-3">
-                    <RadioGroupItem value="text" id="text" />
+                    <RadioGroupItem value="text" id="text" data-testid="createtimecapsulemodal-radiogroupitem" />
                     <Label
                       htmlFor="text"
-                      className="flex items-center gap-2 cursor-pointer"
+                      className="flex items-center gap-2 cursor-pointer" data-testid="createtimecapsulemodal-label"
                     >
-                      <FileText className="h-4 w-4" />
+                      <FileText className="h-4 w-4" data-testid="createtimecapsulemodal-filetext" />
                       {t("createTimeCapsuleModal.messageTypes.text")}
                     </Label>
                   </div>
                   <div className="flex items-center space-x-2 border rounded-lg p-3">
-                    <RadioGroupItem value="photo" id="photo" />
+                    <RadioGroupItem value="photo" id="photo" data-testid="createtimecapsulemodal-radiogroupitem" />
                     <Label
                       htmlFor="photo"
-                      className="flex items-center gap-2 cursor-pointer"
+                      className="flex items-center gap-2 cursor-pointer" data-testid="createtimecapsulemodal-label"
                     >
-                      <Image className="h-4 w-4" />
+                      <Image className="h-4 w-4" data-testid="createtimecapsulemodal-image" />
                       {t("createTimeCapsuleModal.messageTypes.photo")}
                     </Label>
                   </div>
                   <div className="flex items-center space-x-2 border rounded-lg p-3">
-                    <RadioGroupItem value="video" id="video" />
+                    <RadioGroupItem value="video" id="video" data-testid="createtimecapsulemodal-radiogroupitem" />
                     <Label
                       htmlFor="video"
-                      className="flex items-center gap-2 cursor-pointer"
+                      className="flex items-center gap-2 cursor-pointer" data-testid="createtimecapsulemodal-label"
                     >
-                      <Video className="h-4 w-4" />
+                      <Video className="h-4 w-4" data-testid="createtimecapsulemodal-video" />
                       {t("createTimeCapsuleModal.messageTypes.video")}
                     </Label>
                   </div>
                   <div className="flex items-center space-x-2 border rounded-lg p-3">
-                    <RadioGroupItem value="audio" id="audio" />
+                    <RadioGroupItem value="audio" id="audio" data-testid="createtimecapsulemodal-radiogroupitem" />
                     <Label
                       htmlFor="audio"
-                      className="flex items-center gap-2 cursor-pointer"
+                      className="flex items-center gap-2 cursor-pointer" data-testid="createtimecapsulemodal-label"
                     >
-                      <Mic className="h-4 w-4" />
+                      <Mic className="h-4 w-4" data-testid="createtimecapsulemodal-mic" />
                       {t("createTimeCapsuleModal.messageTypes.audio")}
                     </Label>
                   </div>
@@ -367,7 +367,7 @@ export const CreateTimeCapsuleModal: React.FC<CreateTimeCapsuleModalProps> = ({
             </div>
 
             <div className="space-y-2">
-              <Label>{t("createTimeCapsuleModal.labels.recipients")}</Label>
+              <Label data-testid="createtimecapsulemodal-t-createtimecapsulemodal-labels-recipien">{t("createTimeCapsuleModal.labels.recipients")}</Label>
               <div className="border rounded-lg p-4">
                 {trustedPeople.length === 0 ? (
                   <p className="text-sm text-muted-foreground">
@@ -383,7 +383,7 @@ export const CreateTimeCapsuleModal: React.FC<CreateTimeCapsuleModalProps> = ({
                       >
                         <div className="flex items-center gap-3">
                           <div className="w-10 h-10 bg-muted rounded-full flex items-center justify-center">
-                            <Users className="h-5 w-5" />
+                            <Users className="h-5 w-5" data-testid="createtimecapsulemodal-users" />
                           </div>
                           <div>
                             <p className="font-medium">{person.name}</p>
@@ -393,7 +393,7 @@ export const CreateTimeCapsuleModal: React.FC<CreateTimeCapsuleModalProps> = ({
                           </div>
                         </div>
                         {selectedRecipients.includes(person.id) && (
-                          <Badge variant="default">
+                          <Badge variant="default" data-testid="createtimecapsulemodal-badge">
                             {t("createTimeCapsuleModal.recipients.selected")}
                           </Badge>
                         )}
@@ -405,24 +405,24 @@ export const CreateTimeCapsuleModal: React.FC<CreateTimeCapsuleModalProps> = ({
             </div>
 
             <div className="space-y-2">
-              <Label>
+              <Label data-testid="createtimecapsulemodal-label">
                 {t("createTimeCapsuleModal.labels.deliveryQuestion")}
               </Label>
               <RadioGroup
                 value={unlockCondition}
                 onValueChange={(value) =>
                   setUnlockCondition(value as UnlockCondition)
-                }
+                } data-testid="createtimecapsulemodal-radiogroup"
               >
                 <div className="flex items-center space-x-2">
-                  <RadioGroupItem value="date" id="specific-date" />
-                  <Label htmlFor="specific-date">
+                  <RadioGroupItem value="date" id="specific-date" data-testid="createtimecapsulemodal-radiogroupitem" />
+                  <Label htmlFor="specific-date" data-testid="createtimecapsulemodal-label">
                     {t("createTimeCapsuleModal.unlockConditions.onDate")}
                   </Label>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <RadioGroupItem value="after_passing" id="after-passing" />
-                  <Label htmlFor="after-passing">
+                  <RadioGroupItem value="after_passing" id="after-passing" data-testid="createtimecapsulemodal-radiogroupitem" />
+                  <Label htmlFor="after-passing" data-testid="createtimecapsulemodal-label">
                     {t("createTimeCapsuleModal.unlockConditions.afterPassing")}
                   </Label>
                 </div>
@@ -431,29 +431,29 @@ export const CreateTimeCapsuleModal: React.FC<CreateTimeCapsuleModalProps> = ({
 
             {unlockCondition === "date" && (
               <div className="space-y-2">
-                <Label>{t("createTimeCapsuleModal.labels.unlockDate")}</Label>
-                <Popover>
-                  <PopoverTrigger asChild>
+                <Label data-testid="createtimecapsulemodal-t-createtimecapsulemodal-labels-unlockda">{t("createTimeCapsuleModal.labels.unlockDate")}</Label>
+                <Popover data-testid="createtimecapsulemodal-popover">
+                  <PopoverTrigger asChild data-testid="createtimecapsulemodal-popovertrigger">
                     <Button
                       variant="outline"
                       className={cn(
                         "w-full justify-start text-left font-normal",
                         !unlockDate && "text-muted-foreground",
-                      )}
+                      )} data-testid="createtimecapsulemodal-button"
                     >
-                      <CalendarIcon className="mr-2 h-4 w-4" />
+                      <CalendarIcon className="mr-2 h-4 w-4" data-testid="createtimecapsulemodal-calendaricon" />
                       {unlockDate
                         ? format(unlockDate, "PPP")
                         : t("createTimeCapsuleModal.placeholders.selectDate")}
                     </Button>
                   </PopoverTrigger>
-                  <PopoverContent className="w-auto p-0" align="start">
+                  <PopoverContent className="w-auto p-0" align="start" data-testid="createtimecapsulemodal-date">
                     <Calendar
                       mode="single"
                       selected={unlockDate}
                       onSelect={setUnlockDate}
                       initialFocus
-                      disabled={(date) => date < new Date()}
+                      disabled={(date) => date < new Date()} data-testid="createtimecapsulemodal-calendar"
                     />
                   </PopoverContent>
                 </Popover>
@@ -462,7 +462,7 @@ export const CreateTimeCapsuleModal: React.FC<CreateTimeCapsuleModalProps> = ({
 
             {messageType === "text" && (
               <div className="space-y-2">
-                <Label htmlFor="message">
+                <Label htmlFor="message" data-testid="createtimecapsulemodal-label">
                   {t("createTimeCapsuleModal.labels.yourMessage")}
                 </Label>
                 <Textarea
@@ -471,7 +471,7 @@ export const CreateTimeCapsuleModal: React.FC<CreateTimeCapsuleModalProps> = ({
                   value={textContent}
                   onChange={(e) => setTextContent(e.target.value)}
                   rows={6}
-                  maxLength={5000}
+                  maxLength={5000} data-testid="createtimecapsulemodal-textarea"
                 />
 
                 <p className="text-sm text-muted-foreground text-right">
@@ -487,18 +487,18 @@ export const CreateTimeCapsuleModal: React.FC<CreateTimeCapsuleModalProps> = ({
                 onVideoRecorded={handleVideoRecorded}
                 onClose={() => setShowVideoRecorder(false)}
                 maxDurationSeconds={300} // 5 minutes
-                maxFileSizeMB={500} // 500MB
+                maxFileSizeMB={500} data-testid="createtimecapsulemodal-videorecorder" // 500MB
               />
             )}
 
             {messageType === "video" && !isPremium && !showVideoRecorder && (
-              <Alert variant="default">
-                <AlertCircle className="h-4 w-4" />
-                <AlertDescription>
+              <Alert variant="default" data-testid="createtimecapsulemodal-alert">
+                <AlertCircle className="h-4 w-4" data-testid="createtimecapsulemodal-alertcircle" />
+                <AlertDescription data-testid="createtimecapsulemodal-alertdescription">
                   {t("createTimeCapsuleModal.premium.videoMessage")}{" "}
                   <Link
                     to={t("createTimeCapsuleModal.upgrade_1")}
-                    className="text-primary hover:underline"
+                    className="text-primary hover:underline" data-testid="createtimecapsulemodal-link"
                   >
                     {t("createTimeCapsuleModal.premium.upgradeNow")}
                   </Link>
@@ -507,14 +507,14 @@ export const CreateTimeCapsuleModal: React.FC<CreateTimeCapsuleModalProps> = ({
             )}
 
             {messageType === "video" && isPremium && !showVideoRecorder && (
-              <Button onClick={() => setShowVideoRecorder(true)}>
+              <Button onClick={() => setShowVideoRecorder(true)} data-testid="createtimecapsulemodal-button">
                 {t("createTimeCapsuleModal.buttons.recordVideo")}
               </Button>
             )}
 
             {messageType !== "text" && (
               <div className="space-y-2">
-                <Label>
+                <Label data-testid="createtimecapsulemodal-label">
                   {t("createTimeCapsuleModal.labels.uploadFile", {
                     messageType,
                   })}
@@ -523,7 +523,7 @@ export const CreateTimeCapsuleModal: React.FC<CreateTimeCapsuleModalProps> = ({
                   {attachment ? (
                     <div className="space-y-2">
                       <div className="flex items-center justify-center gap-2">
-                        <FileText className="h-8 w-8 text-muted-foreground" />
+                        <FileText className="h-8 w-8 text-muted-foreground" data-testid="createtimecapsulemodal-filetext" />
                         <span className="text-sm font-medium">
                           {attachment.name}
                         </span>
@@ -531,9 +531,9 @@ export const CreateTimeCapsuleModal: React.FC<CreateTimeCapsuleModalProps> = ({
                           type="button"
                           variant="ghost"
                           size="sm"
-                          onClick={() => setAttachment(null)}
+                          onClick={() => setAttachment(null)} data-testid="createtimecapsulemodal-setattachment-null"
                         >
-                          <X className="h-4 w-4" />
+                          <X className="h-4 w-4" data-testid="createtimecapsulemodal-x" />
                         </Button>
                       </div>
                       <p className="text-xs text-muted-foreground">
@@ -544,8 +544,8 @@ export const CreateTimeCapsuleModal: React.FC<CreateTimeCapsuleModalProps> = ({
                     </div>
                   ) : (
                     <>
-                      <Upload className="h-8 w-8 mx-auto mb-2 text-muted-foreground" />
-                      <Label htmlFor="file-upload" className="cursor-pointer">
+                      <Upload className="h-8 w-8 mx-auto mb-2 text-muted-foreground" data-testid="createtimecapsulemodal-upload" />
+                      <Label htmlFor="file-upload" className="cursor-pointer" data-testid="createtimecapsulemodal-label">
                         <span className="text-primary hover:underline">
                           {t("createTimeCapsuleModal.fileUpload.clickToUpload")}
                         </span>
@@ -564,7 +564,7 @@ export const CreateTimeCapsuleModal: React.FC<CreateTimeCapsuleModalProps> = ({
                             : messageType === "video"
                               ? "video/*"
                               : "audio/*"
-                        }
+                        } data-testid="createtimecapsulemodal-input"
                       />
 
                       <p className="text-xs text-muted-foreground mt-2">
@@ -577,16 +577,16 @@ export const CreateTimeCapsuleModal: React.FC<CreateTimeCapsuleModalProps> = ({
             )}
           </div>
 
-          <DialogFooter>
+          <DialogFooter data-testid="createtimecapsulemodal-dialogfooter">
             <Button
               type="button"
               variant="outline"
               onClick={onClose}
-              disabled={loading}
+              disabled={loading} data-testid="createtimecapsulemodal-t-createtimecapsulemodal-buttons-cancel"
             >
               {t("createTimeCapsuleModal.buttons.cancel")}
             </Button>
-            <Button type="submit" disabled={loading}>
+            <Button type="submit" disabled={loading} data-testid="createtimecapsulemodal-button">
               {loading
                 ? t("createTimeCapsuleModal.buttons.saving")
                 : editingCapsule

@@ -103,7 +103,7 @@ const EssentialQuestions: React.FC<EssentialQuestionsProps> = ({
   const questions: Question[] = [
     {
       id: "familyStructure",
-      icon: <Heart className="w-6 h-6 text-blue-600" />,
+      icon: <Heart className="w-6 h-6 text-blue-600" data-testid="essentialquestions-heart" />,
       title: t("respectful.questions.familyStructure.title"),
       subtitle: t("respectful.questions.familyStructure.subtitle"),
       helpText: t("respectful.questions.familyStructure.helpText"),
@@ -114,7 +114,7 @@ const EssentialQuestions: React.FC<EssentialQuestionsProps> = ({
           description: t(
             "respectful.questions.familyStructure.descriptions.single",
           ),
-          icon: <Users className="w-5 h-5" />,
+          icon: <Users className="w-5 h-5" data-testid="essentialquestions-users" />,
         },
         {
           value: "couple",
@@ -122,7 +122,7 @@ const EssentialQuestions: React.FC<EssentialQuestionsProps> = ({
           description: t(
             "respectful.questions.familyStructure.descriptions.couple",
           ),
-          icon: <Heart className="w-5 h-5" />,
+          icon: <Heart className="w-5 h-5" data-testid="essentialquestions-heart" />,
         },
         {
           value: "young_children",
@@ -132,7 +132,7 @@ const EssentialQuestions: React.FC<EssentialQuestionsProps> = ({
           description: t(
             "respectful.questions.familyStructure.descriptions.youngChildren",
           ),
-          icon: <Home className="w-5 h-5" />,
+          icon: <Home className="w-5 h-5" data-testid="essentialquestions-home" />,
         },
         {
           value: "adult_children",
@@ -142,7 +142,7 @@ const EssentialQuestions: React.FC<EssentialQuestionsProps> = ({
           description: t(
             "respectful.questions.familyStructure.descriptions.adultChildren",
           ),
-          icon: <Users className="w-5 h-5" />,
+          icon: <Users className="w-5 h-5" data-testid="essentialquestions-users" />,
         },
         {
           value: "multi_generation",
@@ -152,7 +152,7 @@ const EssentialQuestions: React.FC<EssentialQuestionsProps> = ({
           description: t(
             "respectful.questions.familyStructure.descriptions.multiGeneration",
           ),
-          icon: <Home className="w-5 h-5" />,
+          icon: <Home className="w-5 h-5" data-testid="essentialquestions-home" />,
         },
         {
           value: "blended",
@@ -160,13 +160,13 @@ const EssentialQuestions: React.FC<EssentialQuestionsProps> = ({
           description: t(
             "respectful.questions.familyStructure.descriptions.blended",
           ),
-          icon: <Heart className="w-5 h-5" />,
+          icon: <Heart className="w-5 h-5" data-testid="essentialquestions-heart" />,
         },
       ],
     },
     {
       id: "documentStatus",
-      icon: <FileText className="w-6 h-6 text-blue-600" />,
+      icon: <FileText className="w-6 h-6 text-blue-600" data-testid="essentialquestions-filetext" />,
       title: t("respectful.questions.documentStatus.title"),
       subtitle: t("respectful.questions.documentStatus.subtitle"),
       helpText: t("respectful.questions.documentStatus.helpText"),
@@ -217,7 +217,7 @@ const EssentialQuestions: React.FC<EssentialQuestionsProps> = ({
     },
     {
       id: "primaryConcern",
-      icon: <Shield className="w-6 h-6 text-blue-600" />,
+      icon: <Shield className="w-6 h-6 text-blue-600" data-testid="essentialquestions-shield" />,
       title: t("respectful.questions.primaryConcern.title"),
       subtitle: t("respectful.questions.primaryConcern.subtitle"),
       helpText: t("respectful.questions.primaryConcern.helpText"),
@@ -267,7 +267,7 @@ const EssentialQuestions: React.FC<EssentialQuestionsProps> = ({
     },
     {
       id: "supportNetwork",
-      icon: <Users className="w-6 h-6 text-blue-600" />,
+      icon: <Users className="w-6 h-6 text-blue-600" data-testid="essentialquestions-users" />,
       title: t("respectful.questions.supportNetwork.title"),
       subtitle: t("respectful.questions.supportNetwork.subtitle"),
       helpText: t("respectful.questions.supportNetwork.helpText"),
@@ -306,7 +306,7 @@ const EssentialQuestions: React.FC<EssentialQuestionsProps> = ({
     },
     {
       id: "timelinePreference",
-      icon: <Clock className="w-6 h-6 text-blue-600" />,
+      icon: <Clock className="w-6 h-6 text-blue-600" data-testid="essentialquestions-clock" />,
       title: t("respectful.questions.timelinePreference.title"),
       subtitle: t("respectful.questions.timelinePreference.subtitle"),
       helpText: t("respectful.questions.timelinePreference.helpText"),
@@ -345,7 +345,7 @@ const EssentialQuestions: React.FC<EssentialQuestionsProps> = ({
     },
     {
       id: "comfortLevel",
-      icon: <HelpCircle className="w-6 h-6 text-blue-600" />,
+      icon: <HelpCircle className="w-6 h-6 text-blue-600" data-testid="essentialquestions-helpcircle" />,
       title: t("respectful.questions.comfortLevel.title"),
       subtitle: t("respectful.questions.comfortLevel.subtitle"),
       helpText: t("respectful.questions.comfortLevel.helpText"),
@@ -478,7 +478,7 @@ const EssentialQuestions: React.FC<EssentialQuestionsProps> = ({
               {onSkip && (
                 <button
                   onClick={onSkip}
-                  className="text-sm text-gray-500 hover:text-gray-700 underline"
+                  className="text-sm text-gray-500 hover:text-gray-700 underline" data-testid="essentialquestions-t-respectful-questions-skipfornow"
                 >
                   {t("respectful.questions.skipForNow")}
                 </button>
@@ -511,7 +511,7 @@ const EssentialQuestions: React.FC<EssentialQuestionsProps> = ({
                 className="p-2 rounded-lg hover:bg-gray-100 transition-colors"
                 aria-label="Show help"
               >
-                <Info className="w-5 h-5 text-gray-400" />
+                <Info className="w-5 h-5 text-gray-400" data-testid="essentialquestions-info" />
               </button>
             )}
           </div>
@@ -543,7 +543,7 @@ const EssentialQuestions: React.FC<EssentialQuestionsProps> = ({
                     ? "border-blue-500 bg-blue-50 shadow-md"
                     : "border-gray-200 hover:border-gray-300 hover:shadow-sm bg-white"
                 }
-              `}
+              `} data-testid="essentialquestions-option-icon"
             >
               <div className="flex items-start gap-4">
                 {option.icon && (
@@ -561,7 +561,7 @@ const EssentialQuestions: React.FC<EssentialQuestionsProps> = ({
                       {option.label}
                     </span>
                     {isSelected && (
-                      <CheckCircle className="w-5 h-5 text-blue-600" />
+                      <CheckCircle className="w-5 h-5 text-blue-600" data-testid="essentialquestions-checkcircle" />
                     )}
                   </div>
                   {option.description && (
@@ -595,9 +595,9 @@ const EssentialQuestions: React.FC<EssentialQuestionsProps> = ({
                 ? "text-gray-400 cursor-not-allowed"
                 : "text-gray-700 hover:bg-gray-100"
             }
-          `}
+          `} data-testid="essentialquestions-button"
         >
-          <ChevronLeft className="w-5 h-5" />
+          <ChevronLeft className="w-5 h-5" data-testid="essentialquestions-chevronleft" />
           {t("onboarding:respectful.questions.previous")}
         </button>
 
@@ -631,12 +631,12 @@ const EssentialQuestions: React.FC<EssentialQuestionsProps> = ({
                   : "bg-blue-600 hover:bg-blue-700 text-white shadow-md"
                 : "bg-gray-200 text-gray-400 cursor-not-allowed"
             }
-          `}
+          `} data-testid="essentialquestions-button"
         >
           {currentQuestion === questions.length - 1
             ? t("onboarding:respectful.questions.complete")
             : t("onboarding:respectful.questions.next")}
-          <ChevronRight className="w-5 h-5" />
+          <ChevronRight className="w-5 h-5" data-testid="essentialquestions-chevronright" />
         </button>
       </div>
 

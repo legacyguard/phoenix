@@ -89,49 +89,49 @@ const ImmediateValueUpload: React.FC<ImmediateValueUploadProps> = ({
     {
       id: "identity",
       label: t("onboarding:respectful.upload.categories.identity"),
-      icon: <Users className="w-5 h-5" />,
+      icon: <Users className="w-5 h-5" data-testid="immediatevalueupload-users" />,
       color: "blue",
       examples: ["Passport", "Driver's License", "Birth Certificate"],
     },
     {
       id: "financial",
       label: t("onboarding:respectful.upload.categories.financial"),
-      icon: <CreditCard className="w-5 h-5" />,
+      icon: <CreditCard className="w-5 h-5" data-testid="immediatevalueupload-creditcard" />,
       color: "green",
       examples: ["Bank Statements", "Investment Accounts", "Tax Returns"],
     },
     {
       id: "property",
       label: t("onboarding:respectful.upload.categories.property"),
-      icon: <Home className="w-5 h-5" />,
+      icon: <Home className="w-5 h-5" data-testid="immediatevalueupload-home" />,
       color: "purple",
       examples: ["Deeds", "Titles", "Mortgages"],
     },
     {
       id: "insurance",
       label: t("onboarding:respectful.upload.categories.insurance"),
-      icon: <Shield className="w-5 h-5" />,
+      icon: <Shield className="w-5 h-5" data-testid="immediatevalueupload-shield" />,
       color: "orange",
       examples: ["Life Insurance", "Health Insurance", "Home Insurance"],
     },
     {
       id: "legal",
       label: t("onboarding:respectful.upload.categories.legal"),
-      icon: <FileCheck className="w-5 h-5" />,
+      icon: <FileCheck className="w-5 h-5" data-testid="immediatevalueupload-filecheck" />,
       color: "red",
       examples: ["Will", "Power of Attorney", "Trust Documents"],
     },
     {
       id: "medical",
       label: t("onboarding:respectful.upload.categories.medical"),
-      icon: <Heart className="w-5 h-5" />,
+      icon: <Heart className="w-5 h-5" data-testid="immediatevalueupload-heart" />,
       color: "pink",
       examples: ["Medical Records", "Prescriptions", "Insurance Cards"],
     },
     {
       id: "family",
       label: t("onboarding:respectful.upload.categories.family"),
-      icon: <Users className="w-5 h-5" />,
+      icon: <Users className="w-5 h-5" data-testid="immediatevalueupload-users" />,
       color: "indigo",
       examples: [
         "Marriage Certificate",
@@ -142,7 +142,7 @@ const ImmediateValueUpload: React.FC<ImmediateValueUploadProps> = ({
     {
       id: "other",
       label: t("onboarding:respectful.upload.categories.other"),
-      icon: <FileText className="w-5 h-5" />,
+      icon: <FileText className="w-5 h-5" data-testid="immediatevalueupload-filetext" />,
       color: "gray",
       examples: ["Contracts", "Warranties", "Other Documents"],
     },
@@ -390,7 +390,7 @@ const ImmediateValueUpload: React.FC<ImmediateValueUploadProps> = ({
       {/* Header */}
       <div className="text-center mb-8">
         <div className="inline-flex items-center gap-2 bg-green-100 text-green-800 px-4 py-2 rounded-full mb-4">
-          <Sparkles className="w-4 h-4" />
+          <Sparkles className="w-4 h-4" data-testid="immediatevalueupload-sparkles" />
           <span className="text-sm font-medium">
             {t("respectful.upload.instantValue")}
           </span>
@@ -420,7 +420,7 @@ const ImmediateValueUpload: React.FC<ImmediateValueUploadProps> = ({
             {onSkip && uploadedDocuments.length > 0 && (
               <button
                 onClick={handleComplete}
-                className="text-sm text-blue-600 hover:text-blue-700 font-medium"
+                className="text-sm text-blue-600 hover:text-blue-700 font-medium" data-testid="immediatevalueupload-t-respectful-upload-continuewiththese"
               >
                 {t("respectful.upload.continueWithThese")}
               </button>
@@ -466,7 +466,7 @@ const ImmediateValueUpload: React.FC<ImmediateValueUploadProps> = ({
                 onChange={handleFileSelect}
                 className="hidden"
                 accept=".pdf,.jpg,.jpeg,.png,.doc,.docx"
-                disabled={uploadedDocuments.length >= maxDocuments}
+                disabled={uploadedDocuments.length >= maxDocuments} data-testid="immediatevalueupload-input"
               />
 
               {isProcessing ? (
@@ -478,14 +478,14 @@ const ImmediateValueUpload: React.FC<ImmediateValueUploadProps> = ({
                 </div>
               ) : showSuccess ? (
                 <div className="py-4">
-                  <CheckCircle className="w-12 h-12 text-green-600 mx-auto mb-4" />
+                  <CheckCircle className="w-12 h-12 text-green-600 mx-auto mb-4" data-testid="immediatevalueupload-checkcircle" />
                   <p className="text-green-600 font-medium">
                     {t("onboarding:respectful.upload.success")}
                   </p>
                 </div>
               ) : (
                 <>
-                  <Upload className="w-12 h-12 text-gray-400 mx-auto mb-4" />
+                  <Upload className="w-12 h-12 text-gray-400 mx-auto mb-4" data-testid="immediatevalueupload-upload" />
                   <p className="text-lg font-medium text-gray-700 mb-2">
                     {isDragging
                       ? t("respectful.upload.dropHere")
@@ -495,7 +495,7 @@ const ImmediateValueUpload: React.FC<ImmediateValueUploadProps> = ({
                     {t("respectful.upload.supportedFormats")}
                   </p>
                   <div className="flex items-center justify-center gap-2 text-xs text-gray-400">
-                    <Lock className="w-3 h-3" />
+                    <Lock className="w-3 h-3" data-testid="immediatevalueupload-lock" />
                     <span>{t("onboarding:respectful.upload.encrypted")}</span>
                   </div>
                 </>
@@ -517,7 +517,7 @@ const ImmediateValueUpload: React.FC<ImmediateValueUploadProps> = ({
                       className={`p-2 rounded-lg bg-${getCategoryColor(doc.category)}-100`}
                     >
                       <FileText
-                        className={`w-5 h-5 text-${getCategoryColor(doc.category)}-600`}
+                        className={`w-5 h-5 text-${getCategoryColor(doc.category)}-600`} data-testid="immediatevalueupload-filetext"
                       />
                     </div>
                     <div className="flex-grow">
@@ -529,7 +529,7 @@ const ImmediateValueUpload: React.FC<ImmediateValueUploadProps> = ({
                         {formatFileSize(doc.size)}
                       </p>
                     </div>
-                    <CheckCircle className="w-5 h-5 text-green-500" />
+                    <CheckCircle className="w-5 h-5 text-green-500" data-testid="immediatevalueupload-checkcircle" />
                   </div>
                 ))}
               </div>
@@ -546,7 +546,7 @@ const ImmediateValueUpload: React.FC<ImmediateValueUploadProps> = ({
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
                   <div className="bg-white rounded-lg p-2 mt-1">
-                    <Shield className="w-5 h-5 text-blue-600" />
+                    <Shield className="w-5 h-5 text-blue-600" data-testid="immediatevalueupload-shield" />
                   </div>
                   <div>
                     <p className="font-medium text-gray-900">
@@ -560,7 +560,7 @@ const ImmediateValueUpload: React.FC<ImmediateValueUploadProps> = ({
 
                 <div className="flex items-start gap-3">
                   <div className="bg-white rounded-lg p-2 mt-1">
-                    <Users className="w-5 h-5 text-purple-600" />
+                    <Users className="w-5 h-5 text-purple-600" data-testid="immediatevalueupload-users" />
                   </div>
                   <div>
                     <p className="font-medium text-gray-900">
@@ -574,7 +574,7 @@ const ImmediateValueUpload: React.FC<ImmediateValueUploadProps> = ({
 
                 <div className="flex items-start gap-3">
                   <div className="bg-white rounded-lg p-2 mt-1">
-                    <Sparkles className="w-5 h-5 text-green-600" />
+                    <Sparkles className="w-5 h-5 text-green-600" data-testid="immediatevalueupload-sparkles" />
                   </div>
                   <div>
                     <p className="font-medium text-gray-900">
@@ -603,7 +603,7 @@ const ImmediateValueUpload: React.FC<ImmediateValueUploadProps> = ({
                       key={example}
                       className="flex items-center gap-2 text-xs text-gray-600"
                     >
-                      <CheckCircle className="w-3 h-3 text-green-500" />
+                      <CheckCircle className="w-3 h-3 text-green-500" data-testid="immediatevalueupload-checkcircle" />
                       <span>{example}</span>
                     </div>
                   ))}
@@ -613,7 +613,7 @@ const ImmediateValueUpload: React.FC<ImmediateValueUploadProps> = ({
 
             {/* Security Notice */}
             <div className="mt-4 bg-gray-50 rounded-lg p-4 flex items-start gap-3">
-              <Lock className="w-5 h-5 text-gray-400 mt-0.5" />
+              <Lock className="w-5 h-5 text-gray-400 mt-0.5" data-testid="immediatevalueupload-lock" />
               <div>
                 <p className="text-sm font-medium text-gray-700">
                   {t("onboarding:respectful.upload.security.title")}
@@ -630,14 +630,14 @@ const ImmediateValueUpload: React.FC<ImmediateValueUploadProps> = ({
         <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
           <div className="flex items-center justify-between mb-6">
             <div className="flex items-center gap-3">
-              <FileText className="w-8 h-8 text-blue-600" />
+              <FileText className="w-8 h-8 text-blue-600" data-testid="immediatevalueupload-filetext" />
               <div>
                 <input
                   type="text"
                   value={documentName}
                   onChange={(e) => setDocumentName(e.target.value)}
                   className="text-lg font-semibold text-gray-900 bg-transparent border-b border-transparent hover:border-gray-300 focus:border-blue-500 focus:outline-none transition-colors"
-                  placeholder={t("respectful.upload.documentName")}
+                  placeholder={t("respectful.upload.documentName")} data-testid="immediatevalueupload-input"
                 />
                 <p className="text-sm text-gray-500">
                   {currentDocument && formatFileSize(currentDocument.size)}
@@ -650,9 +650,9 @@ const ImmediateValueUpload: React.FC<ImmediateValueUploadProps> = ({
                 setCurrentDocument(null);
                 setSelectedCategory(null);
               }}
-              className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
+              className="p-2 hover:bg-gray-100 rounded-lg transition-colors" data-testid="immediatevalueupload-button"
             >
-              <X className="w-5 h-5 text-gray-400" />
+              <X className="w-5 h-5 text-gray-400" data-testid="immediatevalueupload-x" />
             </button>
           </div>
 
@@ -673,7 +673,7 @@ const ImmediateValueUpload: React.FC<ImmediateValueUploadProps> = ({
                         ? `border-${category.color}-500 bg-${category.color}-50`
                         : "border-gray-200 hover:border-gray-300 bg-white"
                     }
-                  `}
+                  `} data-testid="immediatevalueupload-category-icon"
                 >
                   <div className={`text-${category.color}-600 mb-2`}>
                     {category.icon}
@@ -692,7 +692,7 @@ const ImmediateValueUpload: React.FC<ImmediateValueUploadProps> = ({
               {/* Smart Insights */}
               <div>
                 <h3 className="text-sm font-medium text-gray-700 mb-3 flex items-center gap-2">
-                  <Sparkles className="w-4 h-4 text-yellow-500" />
+                  <Sparkles className="w-4 h-4 text-yellow-500" data-testid="immediatevalueupload-sparkles" />
                   {t("respectful.upload.smartInsights")}
                 </h3>
                 <div className="space-y-2">
@@ -703,7 +703,7 @@ const ImmediateValueUpload: React.FC<ImmediateValueUploadProps> = ({
                         className="bg-gray-50 rounded-lg p-3 flex items-start gap-3"
                       >
                         <Info
-                          className={`w-5 h-5 mt-0.5 text-${getPriorityColor(insight.priority)}-600`}
+                          className={`w-5 h-5 mt-0.5 text-${getPriorityColor(insight.priority)}-600`} data-testid="immediatevalueupload-info"
                         />
                         <div className="flex-grow">
                           <p className="font-medium text-gray-900 text-sm">
@@ -713,7 +713,7 @@ const ImmediateValueUpload: React.FC<ImmediateValueUploadProps> = ({
                             {insight.description}
                           </p>
                           {insight.action && (
-                            <button className="text-xs text-blue-600 hover:text-blue-700 font-medium mt-2">
+                            <button className="text-xs text-blue-600 hover:text-blue-700 font-medium mt-2" data-testid="immediatevalueupload-insight-action">
                               {insight.action} →
                             </button>
                           )}
@@ -735,7 +735,7 @@ const ImmediateValueUpload: React.FC<ImmediateValueUploadProps> = ({
                     .map((action, index) => (
                       <button
                         key={index}
-                        className="px-3 py-1.5 bg-white border border-gray-200 rounded-lg text-sm text-gray-700 hover:bg-gray-50 transition-colors"
+                        className="px-3 py-1.5 bg-white border border-gray-200 rounded-lg text-sm text-gray-700 hover:bg-gray-50 transition-colors" data-testid="immediatevalueupload-action"
                       >
                         {action}
                       </button>
@@ -747,9 +747,9 @@ const ImmediateValueUpload: React.FC<ImmediateValueUploadProps> = ({
               <div className="flex gap-3 pt-4 border-t border-gray-200">
                 <button
                   onClick={handleConfirmUpload}
-                  className="flex-grow bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
+                  className="flex-grow bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2" data-testid="immediatevalueupload-button"
                 >
-                  <Shield className="w-5 h-5" />
+                  <Shield className="w-5 h-5" data-testid="immediatevalueupload-shield" />
                   {t("respectful.upload.secureDocument")}
                 </button>
                 <button
@@ -757,7 +757,7 @@ const ImmediateValueUpload: React.FC<ImmediateValueUploadProps> = ({
                     setShowInsights(false);
                     setSelectedCategory(null);
                   }}
-                  className="px-6 py-3 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 transition-colors"
+                  className="px-6 py-3 border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 transition-colors" data-testid="immediatevalueupload-t-respectful-upload-changecategory"
                 >
                   {t("respectful.upload.changeCAtegory")}
                 </button>
@@ -773,7 +773,7 @@ const ImmediateValueUpload: React.FC<ImmediateValueUploadProps> = ({
           {onSkip && (
             <button
               onClick={onSkip}
-              className="text-gray-500 hover:text-gray-700 font-medium"
+              className="text-gray-500 hover:text-gray-700 font-medium" data-testid="immediatevalueupload-t-respectful-upload-skipfornow"
             >
               {t("respectful.upload.skipForNow")}
             </button>
@@ -782,10 +782,10 @@ const ImmediateValueUpload: React.FC<ImmediateValueUploadProps> = ({
           {uploadedDocuments.length >= maxDocuments && (
             <button
               onClick={handleComplete}
-              className="ml-auto bg-green-600 hover:bg-green-700 text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center gap-2"
+              className="ml-auto bg-green-600 hover:bg-green-700 text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center gap-2" data-testid="immediatevalueupload-t-onboarding-respectful-upload-continue"
             >
               {t("onboarding:respectful.upload.continue")}
-              <ArrowRight className="w-5 h-5" />
+              <ArrowRight className="w-5 h-5" data-testid="immediatevalueupload-arrowright" />
             </button>
           )}
         </div>

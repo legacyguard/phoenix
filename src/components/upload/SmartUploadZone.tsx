@@ -175,11 +175,11 @@ export function SmartUploadZone({
               className={cn(
                 "h-10 w-10 text-primary transition-all",
                 isDragging && "scale-110",
-              )}
+              )} data-testid="smartuploadzone-upload"
             />
           </div>
           {isDragging && (
-            <Sparkles className="absolute -top-2 -right-2 h-6 w-6 text-primary animate-pulse" />
+            <Sparkles className="absolute -top-2 -right-2 h-6 w-6 text-primary animate-pulse" data-testid="smartuploadzone-sparkles" />
           )}
         </div>
 
@@ -198,8 +198,8 @@ export function SmartUploadZone({
 
         {/* Action buttons */}
         <div className="flex flex-col sm:flex-row gap-3 justify-center">
-          <Button onClick={openFilePicker} variant="default" className="gap-2">
-            <FileText className="h-4 w-4" />
+          <Button onClick={openFilePicker} variant="default" className="gap-2" data-testid="smartuploadzone-t-assets-zone-choosefiles">
+            <FileText className="h-4 w-4" data-testid="smartuploadzone-filetext" />
             {t("assets.zone.chooseFiles")}
           </Button>
 
@@ -207,9 +207,9 @@ export function SmartUploadZone({
           <Button
             onClick={openCamera}
             variant="outline"
-            className="gap-2 sm:hidden"
+            className="gap-2 sm:hidden" data-testid="smartuploadzone-t-assets-zone-takephoto"
           >
-            <Camera className="h-4 w-4" />
+            <Camera className="h-4 w-4" data-testid="smartuploadzone-camera" />
             {t("assets.zone.takePhoto")}
           </Button>
         </div>
@@ -234,7 +234,7 @@ export function SmartUploadZone({
       {isDragging && (
         <div className="absolute inset-0 bg-primary/5 backdrop-blur-sm rounded-xl flex items-center justify-center">
           <div className="text-center">
-            <Upload className="h-12 w-12 text-primary mx-auto mb-3 animate-bounce" />
+            <Upload className="h-12 w-12 text-primary mx-auto mb-3 animate-bounce" data-testid="smartuploadzone-upload" />
             <p className="text-lg font-semibold text-primary">
               {t("assets.zone.dragOverlay.title")}
             </p>

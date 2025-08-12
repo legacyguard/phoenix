@@ -52,17 +52,17 @@ export function WillSyncSettings({
 
   return (
     <div className="space-y-6">
-      <Card>
-        <CardHeader>
-          <CardTitle>{t("willSyncSettings.generalSettings")}</CardTitle>
-          <CardDescription>
+      <Card data-testid="willsyncsettings-card">
+        <CardHeader data-testid="willsyncsettings-t-willsyncsettings-generalsettings">
+          <CardTitle data-testid="willsyncsettings-t-willsyncsettings-generalsettings">{t("willSyncSettings.generalSettings")}</CardTitle>
+          <CardDescription data-testid="willsyncsettings-t-willsyncsettings-generaldescription">
             {t("willSyncSettings.generalDescription")}
           </CardDescription>
         </CardHeader>
-        <CardContent className="space-y-6">
+        <CardContent className="space-y-6" data-testid="willsyncsettings-cardcontent">
           <div className="flex items-center justify-between">
             <div className="space-y-0.5">
-              <Label htmlFor="autoSyncEnabled">
+              <Label htmlFor="autoSyncEnabled" data-testid="willsyncsettings-t-willsyncsettings-autosync">
                 {t("willSyncSettings.autoSync")}
               </Label>
               <p className="text-sm text-muted-foreground">
@@ -74,13 +74,13 @@ export function WillSyncSettings({
               checked={preferences.auto_sync_enabled}
               onCheckedChange={(checked) =>
                 setPreferences({ ...preferences, auto_sync_enabled: checked })
-              }
+              } data-testid="willsyncsettings-switch"
             />
           </div>
 
           <div className="flex items-center justify-between">
             <div className="space-y-0.5">
-              <Label htmlFor="requireApproval">
+              <Label htmlFor="requireApproval" data-testid="willsyncsettings-t-willsyncsettings-requireapproval">
                 {t("willSyncSettings.requireApproval")}
               </Label>
               <p className="text-sm text-muted-foreground">
@@ -92,12 +92,12 @@ export function WillSyncSettings({
               checked={preferences.require_approval}
               onCheckedChange={(checked) =>
                 setPreferences({ ...preferences, require_approval: checked })
-              }
+              } data-testid="willsyncsettings-switch"
             />
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="syncFrequency">
+            <Label htmlFor="syncFrequency" data-testid="willsyncsettings-t-willsyncsettings-syncfrequency">
               {t("willSyncSettings.syncFrequency")}
             </Label>
             <Select
@@ -108,19 +108,19 @@ export function WillSyncSettings({
                   sync_frequency:
                     value as WillSyncPreferences["sync_frequency"],
                 })
-              }
+              } data-testid="willsyncsettings-select"
             >
-              <SelectTrigger id="syncFrequency">
-                <SelectValue />
+              <SelectTrigger id="syncFrequency" data-testid="willsyncsettings-selecttrigger">
+                <SelectValue data-testid="willsyncsettings-selectvalue" />
               </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="immediate">
+              <SelectContent data-testid="willsyncsettings-selectcontent">
+                <SelectItem value="immediate" data-testid="willsyncsettings-t-willsyncsettings-frequencyimmediate">
                   {t("willSyncSettings.frequencyImmediate")}
                 </SelectItem>
-                <SelectItem value="daily">
+                <SelectItem value="daily" data-testid="willsyncsettings-t-willsyncsettings-frequencydaily">
                   {t("willSyncSettings.frequencyDaily")}
                 </SelectItem>
-                <SelectItem value="weekly">
+                <SelectItem value="weekly" data-testid="willsyncsettings-t-willsyncsettings-frequencyweekly">
                   {t("willSyncSettings.frequencyWeekly")}
                 </SelectItem>
               </SelectContent>
@@ -129,17 +129,17 @@ export function WillSyncSettings({
         </CardContent>
       </Card>
 
-      <Card>
-        <CardHeader>
-          <CardTitle>{t("willSyncSettings.triggerSettings")}</CardTitle>
-          <CardDescription>
+      <Card data-testid="willsyncsettings-card">
+        <CardHeader data-testid="willsyncsettings-t-willsyncsettings-triggersettings">
+          <CardTitle data-testid="willsyncsettings-t-willsyncsettings-triggersettings">{t("willSyncSettings.triggerSettings")}</CardTitle>
+          <CardDescription data-testid="willsyncsettings-t-willsyncsettings-triggerdescription">
             {t("willSyncSettings.triggerDescription")}
           </CardDescription>
         </CardHeader>
-        <CardContent className="space-y-4">
+        <CardContent className="space-y-4" data-testid="willsyncsettings-control">
           {Object.entries(preferences.sync_triggers).map(([key, value]) => (
             <div className="flex items-center justify-between" key={key}>
-              <Label>{t(`willSyncSettings.triggers.${key}`)}</Label>
+              <Label data-testid="willsyncsettings-t-willsyncsettings-triggers-key">{t(`willSyncSettings.triggers.${key}`)}</Label>
               <Switch
                 checked={value}
                 onCheckedChange={(checked) =>
@@ -150,7 +150,7 @@ export function WillSyncSettings({
                       [key]: checked,
                     },
                   })
-                }
+                } data-testid="willsyncsettings-switch"
               />
             </div>
           ))}
@@ -158,7 +158,7 @@ export function WillSyncSettings({
       </Card>
 
       <div className="flex justify-end">
-        <Button onClick={handleSave} disabled={saving}>
+        <Button onClick={handleSave} disabled={saving} data-testid="willsyncsettings-button">
           {t(saving ? "common.saving" : "common.saveChanges")}
         </Button>
       </div>

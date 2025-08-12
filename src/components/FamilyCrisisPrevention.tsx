@@ -411,7 +411,7 @@ const FamilyCrisisPrevention: React.FC = () => {
                           }
                           onMouseLeave={(e) =>
                             (e.currentTarget.style.backgroundColor = "#DC2626")
-                          }
+                          } data-testid="familycrisisprevention-button"
                         >
                           {t("familyCrisisPrevention.prevent_this_crisis_11")}
                         </button>

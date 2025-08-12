@@ -354,25 +354,25 @@ export const GuardianView: React.FC = () => {
 
   if (loading) {
     return (
-      <ErrorBoundary>
+      <ErrorBoundary data-testid="guardianview-header-skeleton">
         <div className="container mx-auto px-4 lg:px-8 py-8 space-y-8">
           {/* Header Skeleton */}
           <div className="text-center space-y-4">
-            <Skeleton className="w-20 h-20 rounded-full mx-auto" />
+            <Skeleton className="w-20 h-20 rounded-full mx-auto" data-testid="guardianview-skeleton" />
             <div className="space-y-2">
-              <Skeleton className="h-8 w-64 mx-auto" />
-              <Skeleton className="h-4 w-96 mx-auto" />
+              <Skeleton className="h-8 w-64 mx-auto" data-testid="guardianview-skeleton" />
+              <Skeleton className="h-4 w-96 mx-auto" data-testid="guardianview-skeleton" />
             </div>
-            <Skeleton className="h-6 w-32 mx-auto" />
+            <Skeleton className="h-6 w-32 mx-auto" data-testid="guardianview-skeleton" />
           </div>
 
           {/* Key Documents Skeleton */}
-          <Card>
-            <CardHeader>
-              <Skeleton className="h-6 w-48" />
-              <Skeleton className="h-4 w-64" />
+          <Card data-testid="guardianview-card">
+            <CardHeader data-testid="guardianview-cardheader">
+              <Skeleton className="h-6 w-48" data-testid="guardianview-skeleton" />
+              <Skeleton className="h-4 w-64" data-testid="guardianview-skeleton" />
             </CardHeader>
-            <CardContent>
+            <CardContent data-testid="guardianview-1-2-3-map-i">
               <div className="space-y-3">
                 {[1, 2, 3].map((i) => (
                   <div
@@ -380,15 +380,15 @@ export const GuardianView: React.FC = () => {
                     className="flex items-center justify-between p-3 border rounded-lg"
                   >
                     <div className="flex items-center space-x-3">
-                      <Skeleton className="h-4 w-4" />
+                      <Skeleton className="h-4 w-4" data-testid="guardianview-skeleton" />
                       <div className="space-y-2">
-                        <Skeleton className="h-4 w-32" />
-                        <Skeleton className="h-3 w-48" />
+                        <Skeleton className="h-4 w-32" data-testid="guardianview-skeleton" />
+                        <Skeleton className="h-3 w-48" data-testid="guardianview-skeleton" />
                       </div>
                     </div>
                     <div className="space-y-1">
-                      <Skeleton className="h-4 w-20" />
-                      <Skeleton className="h-3 w-24" />
+                      <Skeleton className="h-4 w-20" data-testid="guardianview-skeleton" />
+                      <Skeleton className="h-3 w-24" data-testid="guardianview-skeleton" />
                     </div>
                   </div>
                 ))}
@@ -397,12 +397,12 @@ export const GuardianView: React.FC = () => {
           </Card>
 
           {/* Important Contacts Skeleton */}
-          <Card>
-            <CardHeader>
-              <Skeleton className="h-6 w-48" />
-              <Skeleton className="h-4 w-64" />
+          <Card data-testid="guardianview-card">
+            <CardHeader data-testid="guardianview-cardheader">
+              <Skeleton className="h-6 w-48" data-testid="guardianview-skeleton" />
+              <Skeleton className="h-4 w-64" data-testid="guardianview-skeleton" />
             </CardHeader>
-            <CardContent>
+            <CardContent data-testid="guardianview-1-2-map-i">
               <div className="space-y-3">
                 {[1, 2].map((i) => (
                   <div
@@ -410,15 +410,15 @@ export const GuardianView: React.FC = () => {
                     className="flex items-center justify-between p-3 border rounded-lg"
                   >
                     <div className="flex items-center space-x-3">
-                      <Skeleton className="h-8 w-8 rounded-full" />
+                      <Skeleton className="h-8 w-8 rounded-full" data-testid="guardianview-skeleton" />
                       <div className="space-y-1">
-                        <Skeleton className="h-4 w-32" />
-                        <Skeleton className="h-3 w-24" />
+                        <Skeleton className="h-4 w-32" data-testid="guardianview-skeleton" />
+                        <Skeleton className="h-3 w-24" data-testid="guardianview-skeleton" />
                       </div>
                     </div>
                     <div className="space-y-1">
-                      <Skeleton className="h-3 w-36" />
-                      <Skeleton className="h-3 w-28" />
+                      <Skeleton className="h-3 w-36" data-testid="guardianview-skeleton" />
+                      <Skeleton className="h-3 w-28" data-testid="guardianview-skeleton" />
                     </div>
                   </div>
                 ))}
@@ -427,20 +427,20 @@ export const GuardianView: React.FC = () => {
           </Card>
 
           {/* Final Wishes Skeleton */}
-          <Card>
-            <CardHeader>
-              <Skeleton className="h-6 w-56" />
-              <Skeleton className="h-4 w-64" />
+          <Card data-testid="guardianview-card">
+            <CardHeader data-testid="guardianview-cardheader">
+              <Skeleton className="h-6 w-56" data-testid="guardianview-skeleton" />
+              <Skeleton className="h-4 w-64" data-testid="guardianview-skeleton" />
             </CardHeader>
-            <CardContent>
+            <CardContent data-testid="guardianview-cardcontent">
               <div className="space-y-4">
                 <div className="space-y-2">
-                  <Skeleton className="h-5 w-32" />
-                  <Skeleton className="h-20 w-full rounded-lg" />
+                  <Skeleton className="h-5 w-32" data-testid="guardianview-skeleton" />
+                  <Skeleton className="h-20 w-full rounded-lg" data-testid="guardianview-skeleton" />
                 </div>
                 <div className="space-y-2">
-                  <Skeleton className="h-5 w-40" />
-                  <Skeleton className="h-20 w-full rounded-lg" />
+                  <Skeleton className="h-5 w-40" data-testid="guardianview-skeleton" />
+                  <Skeleton className="h-20 w-full rounded-lg" data-testid="guardianview-skeleton" />
                 </div>
               </div>
             </CardContent>
@@ -453,14 +453,14 @@ export const GuardianView: React.FC = () => {
   // Show error recovery UI if there's an error
   if (error) {
     return (
-      <ErrorBoundary>
+      <ErrorBoundary data-testid="guardianview-errorboundary">
         <ErrorRecovery
           error={error}
           onRetry={() => {
             setError(null);
             setLoading(true);
             loadGuardianData();
-          }}
+          }} data-testid="guardianview-errorrecovery"
         />
       </ErrorBoundary>
     );
@@ -471,7 +471,7 @@ export const GuardianView: React.FC = () => {
       {/* Header */}
       <div className="text-center space-y-4">
         <div className="flex items-center justify-center w-20 h-20 rounded-full bg-primary/10 mx-auto">
-          <Shield className="h-10 w-10 text-primary" />
+          <Shield className="h-10 w-10 text-primary" data-testid="guardianview-shield" />
         </div>
         <div>
           <h1 className="text-3xl font-bold">{t("guardianView.title")}</h1>
@@ -480,29 +480,29 @@ export const GuardianView: React.FC = () => {
           </p>
         </div>
         <div className="flex items-center justify-center gap-4">
-          <Badge variant="heritage">
-            <Eye className="h-3 w-3 mr-1" />
+          <Badge variant="heritage" data-testid="guardianview-t-guardianview-readonlyaccess">
+            <Eye className="h-3 w-3 mr-1" data-testid="guardianview-eye" />
             {t("guardianView.readOnlyAccess")}
           </Badge>
 
           {/* Emergency Access Button */}
           <Dialog
             open={showEmergencyModal}
-            onOpenChange={setShowEmergencyModal}
+            onOpenChange={setShowEmergencyModal} data-testid="guardianview-dialog"
           >
-            <DialogTrigger asChild>
-              <Button variant="destructive" size="lg" className="gap-2">
-                <AlertTriangle className="h-5 w-5" />
+            <DialogTrigger asChild data-testid="guardianview-dialogtrigger">
+              <Button variant="destructive" size="lg" className="gap-2" data-testid="guardianview-button">
+                <AlertTriangle className="h-5 w-5" data-testid="guardianview-alerttriangle" />
                 {t("guardianView.emergencyAccess.button")}
               </Button>
             </DialogTrigger>
-            <DialogContent className="sm:max-w-[500px]">
-              <DialogHeader>
-                <DialogTitle className="flex items-center gap-2 text-destructive">
-                  <AlertTriangle className="h-5 w-5" />
+            <DialogContent className="sm:max-w-[500px]" data-testid="guardianview-dialogcontent">
+              <DialogHeader data-testid="guardianview-dialogheader">
+                <DialogTitle className="flex items-center gap-2 text-destructive" data-testid="guardianview-dialogtitle">
+                  <AlertTriangle className="h-5 w-5" data-testid="guardianview-alerttriangle" />
                   {t("guardianView.emergencyAccess.modalTitle")}
                 </DialogTitle>
-                <DialogDescription className="space-y-2">
+                <DialogDescription className="space-y-2" data-testid="guardianview-t-guardianview-emergencyaccess-modaldesc">
                   <p>{t("guardianView.emergencyAccess.modalDescription")}</p>
                   <p className="text-sm font-medium text-destructive">
                     {t("guardianView.emergencyAccess.warningText")}
@@ -512,7 +512,7 @@ export const GuardianView: React.FC = () => {
 
               <div className="space-y-4 py-4">
                 <div className="space-y-2">
-                  <Label htmlFor="emergency-notes">
+                  <Label htmlFor="emergency-notes" data-testid="guardianview-label">
                     {t("guardianView.emergencyAccess.reasonLabel")}
                   </Label>
                   <Textarea
@@ -522,7 +522,7 @@ export const GuardianView: React.FC = () => {
                     )}
                     value={emergencyNotes}
                     onChange={(e) => setEmergencyNotes(e.target.value)}
-                    className="min-h-[100px]"
+                    className="min-h-[100px]" data-testid="guardianview-textarea"
                   />
                 </div>
 
@@ -532,25 +532,25 @@ export const GuardianView: React.FC = () => {
                     checked={emergencyConfirmed}
                     onCheckedChange={(checked) =>
                       setEmergencyConfirmed(checked as boolean)
-                    }
+                    } data-testid="guardianview-checkbox"
                   />
                   <Label
                     htmlFor="emergency-confirm"
-                    className="text-sm font-medium leading-normal cursor-pointer"
+                    className="text-sm font-medium leading-normal cursor-pointer" data-testid="guardianview-label"
                   >
                     {t("guardianView.emergencyAccess.confirmCheckbox")}
                   </Label>
                 </div>
               </div>
 
-              <DialogFooter>
+              <DialogFooter data-testid="guardianview-dialogfooter">
                 <Button
                   variant="outline"
                   onClick={() => {
                     setShowEmergencyModal(false);
                     setEmergencyConfirmed(false);
                     setEmergencyNotes("");
-                  }}
+                  }} data-testid="guardianview-t-ui-elements-ui-cancel"
                 >
                   {t("ui-elements:ui.cancel")}
                 </Button>
@@ -561,7 +561,7 @@ export const GuardianView: React.FC = () => {
                     !emergencyConfirmed ||
                     !emergencyNotes.trim() ||
                     accessingEmergency
-                  }
+                  } data-testid="guardianview-accessingemergency"
                 >
                   {accessingEmergency ? (
                     <>
@@ -579,17 +579,17 @@ export const GuardianView: React.FC = () => {
       </div>
 
       {/* Key Documents */}
-      <Card variant="heritage">
-        <CardHeader>
-          <CardTitle className="flex items-center">
-            <FileText className="h-5 w-5 mr-2" />
+      <Card variant="heritage" data-testid="guardianview-card">
+        <CardHeader data-testid="guardianview-cardheader">
+          <CardTitle className="flex items-center" data-testid="guardianview-cardtitle">
+            <FileText className="h-5 w-5 mr-2" data-testid="guardianview-filetext" />
             {t("guardianView.sections.keyDocuments.title")}
           </CardTitle>
-          <CardDescription>
+          <CardDescription data-testid="guardianview-carddescription">
             {t("guardianView.sections.keyDocuments.description")}
           </CardDescription>
         </CardHeader>
-        <CardContent>
+        <CardContent data-testid="guardianview-control">
           <div className="space-y-3">
             {documents.length > 0 ? (
               documents.map((document) => (
@@ -598,7 +598,7 @@ export const GuardianView: React.FC = () => {
                   className="flex items-center justify-between p-3 border rounded-lg"
                 >
                   <div className="flex items-center space-x-3">
-                    <FileText className="h-4 w-4 text-primary" />
+                    <FileText className="h-4 w-4 text-primary" data-testid="guardianview-filetext" />
                     <div>
                       <h4 className="font-medium">{document.name}</h4>
                       <div className="flex items-center space-x-2 text-sm text-muted-foreground">
@@ -618,12 +618,12 @@ export const GuardianView: React.FC = () => {
                     </div>
                   </div>
                   <div className="text-right space-y-1">
-                    <Badge variant="secondary" className="text-xs">
-                      <Star className="h-3 w-3 mr-1" />
+                    <Badge variant="secondary" className="text-xs" data-testid="guardianview-badge">
+                      <Star className="h-3 w-3 mr-1" data-testid="guardianview-star" />
                       {t("guardianView.sections.keyDocuments.keyDocumentBadge")}
                     </Badge>
                     <p className="text-xs text-muted-foreground">
-                      <Calendar className="h-3 w-3 inline mr-1" />
+                      <Calendar className="h-3 w-3 inline mr-1" data-testid="guardianview-calendar" />
                       {t("guardianView.sections.keyDocuments.expires")}:{" "}
                       {formatDate(document.expiration_date)}
                     </p>
@@ -640,17 +640,17 @@ export const GuardianView: React.FC = () => {
       </Card>
 
       {/* Important Contacts */}
-      <Card variant="earth">
-        <CardHeader>
-          <CardTitle className="flex items-center">
-            <Users className="h-5 w-5 mr-2" />
+      <Card variant="earth" data-testid="guardianview-card">
+        <CardHeader data-testid="guardianview-cardheader">
+          <CardTitle className="flex items-center" data-testid="guardianview-cardtitle">
+            <Users className="h-5 w-5 mr-2" data-testid="guardianview-users" />
             {t("guardianView.sections.importantContacts.title")}
           </CardTitle>
-          <CardDescription>
+          <CardDescription data-testid="guardianview-carddescription">
             {t("guardianView.sections.importantContacts.description")}
           </CardDescription>
         </CardHeader>
-        <CardContent>
+        <CardContent data-testid="guardianview-control">
           <div className="space-y-3">
             {contacts.length > 0 ? (
               contacts.map((contact) => (
@@ -660,7 +660,7 @@ export const GuardianView: React.FC = () => {
                 >
                   <div className="flex items-center space-x-3">
                     <div className="flex items-center justify-center w-8 h-8 rounded-full bg-primary/10">
-                      <Users className="h-4 w-4 text-primary" />
+                      <Users className="h-4 w-4 text-primary" data-testid="guardianview-users" />
                     </div>
                     <div>
                       <h4 className="font-medium">{contact.name}</h4>
@@ -672,13 +672,13 @@ export const GuardianView: React.FC = () => {
                   <div className="text-right space-y-1 text-sm">
                     {contact.email && (
                       <p className="flex items-center text-muted-foreground">
-                        <Mail className="h-3 w-3 mr-1" />
+                        <Mail className="h-3 w-3 mr-1" data-testid="guardianview-mail" />
                         {contact.email}
                       </p>
                     )}
                     {contact.phone_number && (
                       <p className="flex items-center text-muted-foreground">
-                        <Phone className="h-3 w-3 mr-1" />
+                        <Phone className="h-3 w-3 mr-1" data-testid="guardianview-phone" />
                         {contact.phone_number}
                       </p>
                     )}
@@ -695,17 +695,17 @@ export const GuardianView: React.FC = () => {
       </Card>
 
       {/* Final Wishes & Instructions */}
-      <Card variant="heritage">
-        <CardHeader>
-          <CardTitle className="flex items-center">
-            <Heart className="h-5 w-5 mr-2" />
+      <Card variant="heritage" data-testid="guardianview-card">
+        <CardHeader data-testid="guardianview-cardheader">
+          <CardTitle className="flex items-center" data-testid="guardianview-cardtitle">
+            <Heart className="h-5 w-5 mr-2" data-testid="guardianview-heart" />
             {t("guardianView.sections.finalWishes.title")}
           </CardTitle>
-          <CardDescription>
+          <CardDescription data-testid="guardianview-carddescription">
             {t("guardianView.sections.finalWishes.description")}
           </CardDescription>
         </CardHeader>
-        <CardContent>
+        <CardContent data-testid="guardianview-cardcontent">
           <div className="space-y-6">
             {/* Funeral Wishes */}
             {instructions?.funeral_wishes && (
@@ -757,9 +757,9 @@ export const GuardianView: React.FC = () => {
       </Card>
 
       {/* Guardian Information */}
-      <Card>
-        <CardContent className="text-center py-6">
-          <Shield className="h-8 w-8 text-primary mx-auto mb-2" />
+      <Card data-testid="guardianview-card">
+        <CardContent className="text-center py-6" data-testid="guardianview-cardcontent">
+          <Shield className="h-8 w-8 text-primary mx-auto mb-2" data-testid="guardianview-shield" />
           <p className="text-sm text-muted-foreground">
             {t("guardianView.guardianInfo.description")}
           </p>
@@ -771,22 +771,22 @@ export const GuardianView: React.FC = () => {
 
       {/* Emergency Contacts Display - Only shown after emergency access */}
       {showingEmergencyContacts && emergencyContacts.length > 0 && (
-        <Card className="border-destructive/50 bg-destructive/5">
-          <CardHeader>
-            <CardTitle className="flex items-center justify-between">
+        <Card className="border-destructive/50 bg-destructive/5" data-testid="guardianview-card">
+          <CardHeader data-testid="guardianview-cardheader">
+            <CardTitle className="flex items-center justify-between" data-testid="guardianview-cardtitle">
               <span className="flex items-center gap-2 text-destructive">
-                <AlertTriangle className="h-5 w-5" />
+                <AlertTriangle className="h-5 w-5" data-testid="guardianview-alerttriangle" />
                 {t("guardianView.emergencyAccess.contactsTitle")}
               </span>
-              <Badge variant="destructive">
+              <Badge variant="destructive" data-testid="guardianview-badge">
                 {t("guardianView.emergencyAccess.priorityOrder")}
               </Badge>
             </CardTitle>
-            <CardDescription>
+            <CardDescription data-testid="guardianview-carddescription">
               {t("guardianView.emergencyAccess.contactsDescription")}
             </CardDescription>
           </CardHeader>
-          <CardContent>
+          <CardContent data-testid="guardianview-control">
             <div className="space-y-4">
               {emergencyContacts.map((ec, index) => (
                 <div
@@ -817,15 +817,15 @@ export const GuardianView: React.FC = () => {
                             <div className="flex items-center gap-2">
                               <a
                                 href={`tel:${ec.contact.phone_number}`}
-                                className="flex items-center gap-2 text-sm text-primary hover:underline"
+                                className="flex items-center gap-2 text-sm text-primary hover:underline" data-testid="guardianview-a"
                               >
-                                <PhoneCall className="h-4 w-4" />
+                                <PhoneCall className="h-4 w-4" data-testid="guardianview-phonecall" />
                                 {ec.contact.phone_number}
                               </a>
                               <Button
                                 size="sm"
                                 variant="outline"
-                                onClick={() => logContactAttempt(ec.contact_id)}
+                                onClick={() => logContactAttempt(ec.contact_id)} data-testid="guardianview-button"
                               >
                                 {t("guardianView.emergencyAccess.logContact")}
                               </Button>
@@ -836,9 +836,9 @@ export const GuardianView: React.FC = () => {
                             <div className="flex items-center gap-2">
                               <a
                                 href={`mailto:${ec.contact.email}`}
-                                className="flex items-center gap-2 text-sm text-primary hover:underline"
+                                className="flex items-center gap-2 text-sm text-primary hover:underline" data-testid="guardianview-a"
                               >
-                                <Mail className="h-4 w-4" />
+                                <Mail className="h-4 w-4" data-testid="guardianview-mail" />
                                 {ec.contact.email}
                               </a>
                             </div>
@@ -848,14 +848,14 @@ export const GuardianView: React.FC = () => {
                     </div>
 
                     <div className="text-right space-y-1">
-                      <Badge variant="outline" className="text-xs">
+                      <Badge variant="outline" className="text-xs" data-testid="guardianview-badge">
                         {t("guardianView.emergencyAccess.priority", {
                           order: index + 1,
                         })}
                       </Badge>
                       {ec.last_contacted && (
                         <p className="text-xs text-muted-foreground flex items-center gap-1">
-                          <Clock className="h-3 w-3" />
+                          <Clock className="h-3 w-3" data-testid="guardianview-clock" />
                           {t("guardianView.emergencyAccess.lastContacted", {
                             time: new Date(ec.last_contacted).toLocaleString(),
                           })}
@@ -869,7 +869,7 @@ export const GuardianView: React.FC = () => {
 
             <div className="mt-6 p-4 bg-muted/50 rounded-lg">
               <p className="text-sm text-muted-foreground flex items-start gap-2">
-                <AlertTriangle className="h-4 w-4 text-destructive flex-shrink-0 mt-0.5" />
+                <AlertTriangle className="h-4 w-4 text-destructive flex-shrink-0 mt-0.5" data-testid="guardianview-alerttriangle" />
                 {t("guardianView.emergencyAccess.importantNote")}
               </p>
             </div>

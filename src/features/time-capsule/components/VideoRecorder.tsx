@@ -228,18 +228,18 @@ export function VideoRecorder({
             variant="ghost"
             size="icon"
             onClick={onClose}
-            className="hover:bg-gray-100"
+            className="hover:bg-gray-100" data-testid="videorecorder-button"
           >
-            <X className="h-5 w-5" />
+            <X className="h-5 w-5" data-testid="videorecorder-x" />
           </Button>
         </div>
 
         {/* Content */}
         <div className="p-6">
           {error && (
-            <Alert variant="destructive" className="mb-6">
-              <AlertCircle className="h-4 w-4" />
-              <AlertDescription>{error}</AlertDescription>
+            <Alert variant="destructive" className="mb-6" data-testid="videorecorder-alert">
+              <AlertCircle className="h-4 w-4" data-testid="videorecorder-alertcircle" />
+              <AlertDescription data-testid="videorecorder-error">{error}</AlertDescription>
             </Alert>
           )}
 
@@ -293,18 +293,18 @@ export function VideoRecorder({
                   <Button
                     size="lg"
                     onClick={startRecording}
-                    className="bg-red-600 hover:bg-red-700 text-white"
+                    className="bg-red-600 hover:bg-red-700 text-white" data-testid="videorecorder-button"
                   >
-                    <Circle className="h-5 w-5 mr-2" />
+                    <Circle className="h-5 w-5 mr-2" data-testid="videorecorder-circle" />
                     {t("TimeCapsule.videoRecorder.start_recording_6")}
                   </Button>
                 ) : (
                   <Button
                     size="lg"
                     onClick={stopRecording}
-                    className="bg-gray-900 hover:bg-gray-800 text-white"
+                    className="bg-gray-900 hover:bg-gray-800 text-white" data-testid="videorecorder-button"
                   >
-                    <StopCircle className="h-5 w-5 mr-2" />
+                    <StopCircle className="h-5 w-5 mr-2" data-testid="videorecorder-stopcircle" />
                     {t("TimeCapsule.videoRecorder.stop_recording_7")}
                   </Button>
                 )}
@@ -315,25 +315,25 @@ export function VideoRecorder({
                   variant="outline"
                   size="lg"
                   onClick={handleRetake}
-                  disabled={isProcessing}
+                  disabled={isProcessing} data-testid="videorecorder-button"
                 >
-                  <Video className="h-5 w-5 mr-2" />
+                  <Video className="h-5 w-5 mr-2" data-testid="videorecorder-video" />
                   {tMicro("tooltips.general.retry")}
                 </Button>
                 <Button
                   size="lg"
                   onClick={handleSaveVideo}
                   disabled={isProcessing}
-                  className="bg-primary hover:bg-primary/90"
+                  className="bg-primary hover:bg-primary/90" data-testid="videorecorder-isprocessing"
                 >
                   {isProcessing ? (
                     <>
-                      <Upload className="h-5 w-5 mr-2 animate-pulse" />
+                      <Upload className="h-5 w-5 mr-2 animate-pulse" data-testid="videorecorder-upload" />
                       {t("ocr.hybridDocumentProcessor.processing_6")}
                     </>
                   ) : (
                     <>
-                      <Upload className="h-5 w-5 mr-2" />
+                      <Upload className="h-5 w-5 mr-2" data-testid="videorecorder-upload" />
                       {t("TimeCapsule.videoRecorder.use_this_video_9")}
                     </>
                   )}
@@ -345,7 +345,7 @@ export function VideoRecorder({
           {/* Upload Progress */}
           {isProcessing && uploadProgress > 0 && (
             <div className="mt-6">
-              <Progress value={uploadProgress} className="h-2" />
+              <Progress value={uploadProgress} className="h-2" data-testid="videorecorder-progress" />
               <p className="text-sm text-gray-600 text-center mt-2">
                 {t("TimeCapsule.videoRecorder.processing_video_10")}
                 {uploadProgress}%

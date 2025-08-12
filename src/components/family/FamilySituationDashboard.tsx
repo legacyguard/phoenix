@@ -161,28 +161,28 @@ export const FamilySituationDashboard: React.FC<
   return (
     <div className="space-y-6">
       {/* Header */}
-      <Card>
-        <CardHeader>
+      <Card data-testid="familysituationdashboard-card">
+        <CardHeader data-testid="familysituationdashboard-cardheader">
           <div className="flex items-start justify-between">
             <div className="flex items-center gap-3">
               <div className="p-3 bg-blue-100 rounded-full">
-                <StructureIcon className="h-6 w-6 text-blue-600" />
+                <StructureIcon className="h-6 w-6 text-blue-600" data-testid="familysituationdashboard-structureicon" />
               </div>
               <div>
-                <CardTitle className="text-2xl">
+                <CardTitle className="text-2xl" data-testid="familysituationdashboard-cardtitle">
                   {t(`family.structures.${familySituation.structure}`)}
                 </CardTitle>
-                <CardDescription>
+                <CardDescription data-testid="familysituationdashboard-t-ui-common-family-personalized">
                   {t("ui-common:family.personalized")}
                 </CardDescription>
               </div>
             </div>
-            <Badge className={complexityColors[familySituation.complexity]}>
+            <Badge className={complexityColors[familySituation.complexity]} data-testid="familysituationdashboard-badge">
               {t(`family.complexity.${familySituation.complexity}`)}
             </Badge>
           </div>
         </CardHeader>
-        <CardContent>
+        <CardContent data-testid="familysituationdashboard-key-stats">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {/* Key Stats */}
             <div className="text-center p-4 bg-gray-50 rounded-lg">
@@ -214,35 +214,35 @@ export const FamilySituationDashboard: React.FC<
       </Card>
 
       {/* Main Content */}
-      <Tabs value={activeTab} onValueChange={setActiveTab}>
-        <TabsList className="grid w-full grid-cols-4">
-          <TabsTrigger value="overview">
-            <BarChart3 className="h-4 w-4 mr-2" />
+      <Tabs value={activeTab} onValueChange={setActiveTab} data-testid="familysituationdashboard-tabs">
+        <TabsList className="grid w-full grid-cols-4" data-testid="familysituationdashboard-tabslist">
+          <TabsTrigger value="overview" data-testid="familysituationdashboard-tabstrigger">
+            <BarChart3 className="h-4 w-4 mr-2" data-testid="familysituationdashboard-barchart3" />
             {t("ui-common:family.tabs.overview")}
           </TabsTrigger>
-          <TabsTrigger value="insights">
-            <Sparkles className="h-4 w-4 mr-2" />
+          <TabsTrigger value="insights" data-testid="familysituationdashboard-tabstrigger">
+            <Sparkles className="h-4 w-4 mr-2" data-testid="familysituationdashboard-sparkles" />
             {t("ui-common:family.tabs.insights")}
           </TabsTrigger>
-          <TabsTrigger value="features">
-            <Settings className="h-4 w-4 mr-2" />
+          <TabsTrigger value="features" data-testid="familysituationdashboard-tabstrigger">
+            <Settings className="h-4 w-4 mr-2" data-testid="familysituationdashboard-settings" />
             {t("ui-common:family.tabs.features")}
           </TabsTrigger>
-          <TabsTrigger value="cultural">
-            <Globe className="h-4 w-4 mr-2" />
+          <TabsTrigger value="cultural" data-testid="familysituationdashboard-tabstrigger">
+            <Globe className="h-4 w-4 mr-2" data-testid="familysituationdashboard-globe" />
             {t("ui-common:family.tabs.cultural")}
           </TabsTrigger>
         </TabsList>
 
         {/* Overview Tab */}
-        <TabsContent value="overview" className="space-y-4">
-          <Card>
-            <CardHeader>
-              <CardTitle className="text-lg">
+        <TabsContent value="overview" className="space-y-4" data-testid="familysituationdashboard-tabscontent">
+          <Card data-testid="familysituationdashboard-card">
+            <CardHeader data-testid="familysituationdashboard-cardheader">
+              <CardTitle className="text-lg" data-testid="familysituationdashboard-t-family-keyconsiderations">
                 {t("family.keyConsiderations")}
               </CardTitle>
             </CardHeader>
-            <CardContent>
+            <CardContent data-testid="familysituationdashboard-control">
               <div className="space-y-3">
                 {familySituation.keyConsiderations.map(
                   (consideration, index) => (
@@ -253,7 +253,7 @@ export const FamilySituationDashboard: React.FC<
                       transition={{ delay: index * 0.05 }}
                       className="flex items-start gap-3 p-3 bg-blue-50 rounded-lg"
                     >
-                      <CheckCircle2 className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                      <CheckCircle2 className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" data-testid="familysituationdashboard-checkcircle2" />
                       <p className="text-sm text-gray-700">{consideration}</p>
                     </motion.div>
                   ),
@@ -264,17 +264,17 @@ export const FamilySituationDashboard: React.FC<
 
           {/* Special Needs */}
           {familySituation.specialNeeds.length > 0 && (
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-lg">
+            <Card data-testid="familysituationdashboard-card">
+              <CardHeader data-testid="familysituationdashboard-cardheader">
+                <CardTitle className="text-lg" data-testid="familysituationdashboard-t-family-specialneeds">
                   {t("family.specialNeeds")}
                 </CardTitle>
               </CardHeader>
-              <CardContent>
+              <CardContent data-testid="familysituationdashboard-control">
                 <div className="flex flex-wrap gap-2">
                   {familySituation.specialNeeds.map((need) => (
-                    <Badge key={need} variant="secondary" className="px-3 py-1">
-                      <Shield className="h-3 w-3 mr-1" />
+                    <Badge key={need} variant="secondary" className="px-3 py-1" data-testid="familysituationdashboard-badge">
+                      <Shield className="h-3 w-3 mr-1" data-testid="familysituationdashboard-shield" />
                       {t(`family.needs.${need}`)}
                     </Badge>
                   ))}
@@ -285,10 +285,10 @@ export const FamilySituationDashboard: React.FC<
 
           {/* Sensitivities */}
           {familySituation.sensitivities.length > 0 && (
-            <Alert>
-              <AlertCircle className="h-4 w-4" />
-              <AlertTitle>{t("ui-common:family.sensitivities")}</AlertTitle>
-              <AlertDescription>
+            <Alert data-testid="familysituationdashboard-alert">
+              <AlertCircle className="h-4 w-4" data-testid="familysituationdashboard-alertcircle" />
+              <AlertTitle data-testid="familysituationdashboard-t-ui-common-family-sensitivities">{t("ui-common:family.sensitivities")}</AlertTitle>
+              <AlertDescription data-testid="familysituationdashboard-control">
                 <ul className="mt-2 space-y-1">
                   {familySituation.sensitivities.map((sensitivity) => (
                     <li key={sensitivity} className="text-sm">
@@ -302,8 +302,8 @@ export const FamilySituationDashboard: React.FC<
         </TabsContent>
 
         {/* Insights Tab */}
-        <TabsContent value="insights" className="space-y-4">
-          <ScrollArea className="h-[600px]">
+        <TabsContent value="insights" className="space-y-4" data-testid="familysituationdashboard-tabscontent">
+          <ScrollArea className="h-[600px]" data-testid="familysituationdashboard-scrollarea">
             <div className="space-y-4 pr-4">
               {insights.map((insight, index) => {
                 const InsightIcon = getInsightIcon(insight.type);
@@ -314,30 +314,30 @@ export const FamilySituationDashboard: React.FC<
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.1 }}
                   >
-                    <Card>
-                      <CardHeader>
+                    <Card data-testid="familysituationdashboard-card">
+                      <CardHeader data-testid="familysituationdashboard-cardheader">
                         <div className="flex items-start justify-between">
                           <div className="flex items-center gap-3">
                             <div
                               className={`p-2 rounded-full ${getInsightColor(insight.priority)}`}
                             >
-                              <InsightIcon className="h-5 w-5" />
+                              <InsightIcon className="h-5 w-5" data-testid="familysituationdashboard-insighticon" />
                             </div>
                             <div>
-                              <CardTitle className="text-lg">
+                              <CardTitle className="text-lg" data-testid="familysituationdashboard-insight-title">
                                 {insight.title}
                               </CardTitle>
-                              <Badge variant="outline" className="mt-1">
+                              <Badge variant="outline" className="mt-1" data-testid="familysituationdashboard-badge">
                                 {t(`family.insightType.${insight.type}`)}
                               </Badge>
                             </div>
                           </div>
-                          <Badge className={getInsightColor(insight.priority)}>
+                          <Badge className={getInsightColor(insight.priority)} data-testid="familysituationdashboard-badge">
                             {t(`family.priority.${insight.priority}`)}
                           </Badge>
                         </div>
                       </CardHeader>
-                      <CardContent>
+                      <CardContent data-testid="familysituationdashboard-0">
                         <p className="text-sm text-gray-600 mb-4">
                           {insight.description}
                         </p>
@@ -354,7 +354,7 @@ export const FamilySituationDashboard: React.FC<
                                       key={actionIndex}
                                       className="flex items-center gap-2"
                                     >
-                                      <ChevronRight className="h-4 w-4 text-gray-400" />
+                                      <ChevronRight className="h-4 w-4 text-gray-400" data-testid="familysituationdashboard-chevronright" />
                                       <span className="text-sm">{action}</span>
                                     </div>
                                   ),
@@ -372,17 +372,17 @@ export const FamilySituationDashboard: React.FC<
         </TabsContent>
 
         {/* Features Tab */}
-        <TabsContent value="features" className="space-y-4">
-          <Card>
-            <CardHeader>
-              <CardTitle className="text-lg">
+        <TabsContent value="features" className="space-y-4" data-testid="familysituationdashboard-tabscontent">
+          <Card data-testid="familysituationdashboard-card">
+            <CardHeader data-testid="familysituationdashboard-cardheader">
+              <CardTitle className="text-lg" data-testid="familysituationdashboard-t-family-recommendedfeaturestitle">
                 {t("family.recommendedFeaturesTitle")}
               </CardTitle>
-              <CardDescription>
+              <CardDescription data-testid="familysituationdashboard-t-family-recommendedfeaturesdesc">
                 {t("family.recommendedFeaturesDesc")}
               </CardDescription>
             </CardHeader>
-            <CardContent>
+            <CardContent data-testid="familysituationdashboard-control">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {familySituation.recommendedFeatures.map((feature, index) => (
                   <motion.div
@@ -391,11 +391,11 @@ export const FamilySituationDashboard: React.FC<
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: index * 0.05 }}
                   >
-                    <Card className="hover:shadow-md transition-shadow cursor-pointer">
-                      <CardContent className="p-4">
+                    <Card className="hover:shadow-md transition-shadow cursor-pointer" data-testid="familysituationdashboard-card">
+                      <CardContent className="p-4" data-testid="familysituationdashboard-cardcontent">
                         <div className="flex items-start gap-3">
                           <div className="p-2 bg-purple-100 rounded-lg">
-                            <Sparkles className="h-5 w-5 text-purple-600" />
+                            <Sparkles className="h-5 w-5 text-purple-600" data-testid="familysituationdashboard-sparkles" />
                           </div>
                           <div className="flex-1">
                             <h4 className="font-medium text-sm">
@@ -405,7 +405,7 @@ export const FamilySituationDashboard: React.FC<
                               {t(`family.features.${feature}.description`)}
                             </p>
                           </div>
-                          <ChevronRight className="h-4 w-4 text-gray-400" />
+                          <ChevronRight className="h-4 w-4 text-gray-400" data-testid="familysituationdashboard-chevronright" />
                         </div>
                       </CardContent>
                     </Card>
@@ -416,16 +416,16 @@ export const FamilySituationDashboard: React.FC<
           </Card>
 
           {/* Communication Style */}
-          <Card>
-            <CardHeader>
-              <CardTitle className="text-lg">
+          <Card data-testid="familysituationdashboard-card">
+            <CardHeader data-testid="familysituationdashboard-cardheader">
+              <CardTitle className="text-lg" data-testid="familysituationdashboard-t-family-communicationstyle">
                 {t("family.communicationStyle")}
               </CardTitle>
             </CardHeader>
-            <CardContent>
+            <CardContent data-testid="familysituationdashboard-cardcontent">
               <div className="p-4 bg-blue-50 rounded-lg">
                 <div className="flex items-center gap-3 mb-2">
-                  <BookOpen className="h-5 w-5 text-blue-600" />
+                  <BookOpen className="h-5 w-5 text-blue-600" data-testid="familysituationdashboard-bookopen" />
                   <span className="font-medium">
                     {t(
                       `family.communication.${familySituation.communicationStyle}`,
@@ -443,23 +443,23 @@ export const FamilySituationDashboard: React.FC<
         </TabsContent>
 
         {/* Cultural Tab */}
-        <TabsContent value="cultural" className="space-y-4">
+        <TabsContent value="cultural" className="space-y-4" data-testid="familysituationdashboard-showculturalsetup">
           {showCulturalSetup ? (
             <CulturalAdaptation
               culturalContext={culturalContext}
               onUpdate={handleCulturalUpdate}
-              onComplete={() => setShowCulturalSetup(false)}
+              onComplete={() => setShowCulturalSetup(false)} data-testid="familysituationdashboard-culturaladaptation"
             />
           ) : (
             <>
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-lg">
+              <Card data-testid="familysituationdashboard-card">
+                <CardHeader data-testid="familysituationdashboard-cardheader">
+                  <CardTitle className="text-lg" data-testid="familysituationdashboard-t-family-culturalconsiderations">
                     {t("family.culturalConsiderations")}
                   </CardTitle>
-                  <CardDescription>{t("family.culturalDesc")}</CardDescription>
+                  <CardDescription data-testid="familysituationdashboard-t-family-culturaldesc">{t("family.culturalDesc")}</CardDescription>
                 </CardHeader>
-                <CardContent>
+                <CardContent data-testid="familysituationdashboard-0">
                   {familySituation.culturalConsiderations.length > 0 ? (
                     <div className="space-y-3">
                       {familySituation.culturalConsiderations.map(
@@ -468,7 +468,7 @@ export const FamilySituationDashboard: React.FC<
                             key={index}
                             className="flex items-center gap-3 p-3 bg-purple-50 rounded-lg"
                           >
-                            <Globe className="h-5 w-5 text-purple-600" />
+                            <Globe className="h-5 w-5 text-purple-600" data-testid="familysituationdashboard-globe" />
                             <span className="text-sm">
                               {t(`family.cultural.${consideration}`)}
                             </span>
@@ -477,9 +477,9 @@ export const FamilySituationDashboard: React.FC<
                       )}
                     </div>
                   ) : (
-                    <Alert>
-                      <Info className="h-4 w-4" />
-                      <AlertDescription>
+                    <Alert data-testid="familysituationdashboard-alert">
+                      <Info className="h-4 w-4" data-testid="familysituationdashboard-info" />
+                      <AlertDescription data-testid="familysituationdashboard-t-family-noculturalsettings">
                         {t("family.noCulturalSettings")}
                       </AlertDescription>
                     </Alert>
@@ -487,9 +487,9 @@ export const FamilySituationDashboard: React.FC<
                   <Button
                     onClick={() => setShowCulturalSetup(true)}
                     className="mt-4 w-full"
-                    variant="outline"
+                    variant="outline" data-testid="familysituationdashboard-button"
                   >
-                    <Settings className="h-4 w-4 mr-2" />
+                    <Settings className="h-4 w-4 mr-2" data-testid="familysituationdashboard-settings" />
                     {t("family.configureCultural")}
                   </Button>
                 </CardContent>

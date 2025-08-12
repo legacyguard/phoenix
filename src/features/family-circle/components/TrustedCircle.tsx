@@ -330,7 +330,7 @@ export const TrustedCircle: React.FC = () => {
                   person.preparednessScore >= 70
                     ? "text-green-700 bg-green-50 border border-green-200 hover:bg-green-100"
                     : "text-white bg-blue-600 hover:bg-blue-700"
-                }`}
+                }`} data-testid="trustedcircle-button"
               >
                 {person.preparednessScore >= 70
                   ? t("trustedCircle.buttonText.prepared", {
@@ -345,7 +345,7 @@ export const TrustedCircle: React.FC = () => {
         ))}
         {/* Add New Person Button */}
         <div className="flex items-center justify-center p-4 border-2 border-dashed rounded-lg">
-          <button className="text-blue-600 font-semibold">
+          <button className="text-blue-600 font-semibold" data-testid="trustedcircle-t-trustedcircle-addtrustedperson">
             {t("trustedCircle.addTrustedPerson")}
           </button>
         </div>

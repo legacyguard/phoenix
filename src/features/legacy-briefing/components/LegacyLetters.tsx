@@ -130,15 +130,15 @@ export const LegacyLetters: React.FC = () => {
   const getMessageIcon = (messageType: string) => {
     switch (messageType) {
       case "text":
-        return <MessageSquare className="h-5 w-5" />;
+        return <MessageSquare className="h-5 w-5" data-testid="legacyletters-messagesquare" />;
       case "photo":
-        return <Image className="h-5 w-5" />;
+        return <Image className="h-5 w-5" data-testid="legacyletters-image" />;
       case "video":
-        return <Video className="h-5 w-5" />;
+        return <Video className="h-5 w-5" data-testid="legacyletters-video" />;
       case "audio":
-        return <Mic className="h-5 w-5" />;
+        return <Mic className="h-5 w-5" data-testid="legacyletters-mic" />;
       default:
-        return <MessageSquare className="h-5 w-5" />;
+        return <MessageSquare className="h-5 w-5" data-testid="legacyletters-messagesquare" />;
     }
   };
 
@@ -146,24 +146,24 @@ export const LegacyLetters: React.FC = () => {
     switch (status) {
       case "locked":
         return (
-          <Badge variant="secondary" className="gap-1">
-            <Lock className="h-3 w-3" />
+          <Badge variant="secondary" className="gap-1" data-testid="legacyletters-tmicro-badges-status-locked">
+            <Lock className="h-3 w-3" data-testid="legacyletters-lock" />
             {tMicro("badges.status.locked")}
           </Badge>
         );
 
       case "unlocked":
         return (
-          <Badge variant="default" className="gap-1">
-            <Unlock className="h-3 w-3" />
+          <Badge variant="default" className="gap-1" data-testid="legacyletters-tmicro-badges-status-unlocked">
+            <Unlock className="h-3 w-3" data-testid="legacyletters-unlock" />
             {tMicro("badges.status.unlocked")}
           </Badge>
         );
 
       case "delivered":
         return (
-          <Badge variant="outline" className="gap-1">
-            <Users className="h-3 w-3" />
+          <Badge variant="outline" className="gap-1" data-testid="legacyletters-tmicro-badges-status-delivered">
+            <Users className="h-3 w-3" data-testid="legacyletters-users" />
             {tMicro("badges.status.delivered")}
           </Badge>
         );
@@ -185,10 +185,10 @@ export const LegacyLetters: React.FC = () => {
   if (loading) {
     return (
       <div className="space-y-4">
-        <Skeleton className="h-12 w-64" />
+        <Skeleton className="h-12 w-64" data-testid="legacyletters-skeleton" />
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {[...Array(3)].map((_, i) => (
-            <Skeleton key={i} className="h-48" />
+            <Skeleton key={i} className="h-48" data-testid="legacyletters-skeleton" />
           ))}
         </div>
       </div>
@@ -210,25 +210,25 @@ export const LegacyLetters: React.FC = () => {
         <Button
           onClick={() => setShowCreateModal(true)}
           size="lg"
-          className="gap-2"
+          className="gap-2" data-testid="legacyletters-button"
         >
-          <Plus className="h-5 w-5" />
+          <Plus className="h-5 w-5" data-testid="legacyletters-plus" />
           {t("legacyLetters.create_new_message_5")}
         </Button>
       </div>
 
       {/* Error Alert */}
       {error && (
-        <Alert variant="destructive">
-          <AlertCircle className="h-4 w-4" />
-          <AlertDescription>{error}</AlertDescription>
+        <Alert variant="destructive" data-testid="legacyletters-alert">
+          <AlertCircle className="h-4 w-4" data-testid="legacyletters-alertcircle" />
+          <AlertDescription data-testid="legacyletters-error">{error}</AlertDescription>
         </Alert>
       )}
 
       {/* Empty State */}
       {!loading && capsules.length === 0 && (
-        <Card className="p-12 text-center">
-          <Clock className="h-12 w-12 mx-auto mb-4 text-muted-foreground" />
+        <Card className="p-12 text-center" data-testid="legacyletters-card">
+          <Clock className="h-12 w-12 mx-auto mb-4 text-muted-foreground" data-testid="legacyletters-clock" />
           <h3 className="text-lg font-semibold mb-2">
             {t("legacyLetters.no_time_capsules_yet_6")}
           </h3>
@@ -238,9 +238,9 @@ export const LegacyLetters: React.FC = () => {
           <Button
             onClick={() => setShowCreateModal(true)}
             size="lg"
-            className="gap-2"
+            className="gap-2" data-testid="legacyletters-button"
           >
-            <Plus className="h-5 w-5" />
+            <Plus className="h-5 w-5" data-testid="legacyletters-plus" />
             {t("legacyLetters.create_your_first_message_8")}
           </Button>
         </Card>
@@ -252,15 +252,15 @@ export const LegacyLetters: React.FC = () => {
           {capsules.map((capsule) => (
             <Card
               key={capsule.id}
-              className="hover:shadow-lg transition-shadow"
+              className="hover:shadow-lg transition-shadow" data-testid="legacyletters-card"
             >
-              <CardHeader>
+              <CardHeader data-testid="legacyletters-cardheader">
                 <div className="flex items-start justify-between">
                   <div className="space-y-1 flex-1">
-                    <CardTitle className="line-clamp-1">
+                    <CardTitle className="line-clamp-1" data-testid="legacyletters-capsule-title">
                       {capsule.title}
                     </CardTitle>
-                    <CardDescription className="flex items-center gap-2">
+                    <CardDescription className="flex items-center gap-2" data-testid="legacyletters-getmessageicon-capsule-messagetype">
                       {getMessageIcon(capsule.messageType)}
                       <span className="capitalize">
                         {capsule.messageType} message
@@ -270,10 +270,10 @@ export const LegacyLetters: React.FC = () => {
                   {getStatusBadge(capsule.status)}
                 </div>
               </CardHeader>
-              <CardContent className="space-y-4">
+              <CardContent className="space-y-4" data-testid="legacyletters-recipients">
                 {/* Recipients */}
                 <div className="flex items-center gap-2 text-sm">
-                  <Users className="h-4 w-4 text-muted-foreground" />
+                  <Users className="h-4 w-4 text-muted-foreground" data-testid="legacyletters-users" />
                   <span className="text-muted-foreground">
                     {t("legacyLetters.to_9")}
                   </span>
@@ -286,7 +286,7 @@ export const LegacyLetters: React.FC = () => {
                 <div className="flex items-center gap-2 text-sm">
                   {capsule.unlockCondition === "date" ? (
                     <>
-                      <Calendar className="h-4 w-4 text-muted-foreground" />
+                      <Calendar className="h-4 w-4 text-muted-foreground" data-testid="legacyletters-calendar" />
                       <span className="text-muted-foreground">
                         {t("legacyLetters.unlocks_on_10")}
                       </span>
@@ -298,7 +298,7 @@ export const LegacyLetters: React.FC = () => {
                     </>
                   ) : (
                     <>
-                      <Clock className="h-4 w-4 text-muted-foreground" />
+                      <Clock className="h-4 w-4 text-muted-foreground" data-testid="legacyletters-clock" />
                       <span className="text-muted-foreground">
                         {t("legacyLetters.unlocks_11")}
                       </span>
@@ -327,18 +327,18 @@ export const LegacyLetters: React.FC = () => {
                       onClick={() => {
                         setSelectedCapsule(capsule);
                         setShowCreateModal(true);
-                      }}
+                      }} data-testid="legacyletters-edit"
                     >
-                      <Edit className="h-4 w-4 mr-1" />
+                      <Edit className="h-4 w-4 mr-1" data-testid="legacyletters-edit" />
                       Edit
                     </Button>
                     <Button
                       variant="outline"
                       size="sm"
                       className="flex-1"
-                      onClick={() => handleDelete(capsule.id)}
+                      onClick={() => handleDelete(capsule.id)} data-testid="legacyletters-handledelete-capsule-id"
                     >
-                      <Trash2 className="h-4 w-4 mr-1" />
+                      <Trash2 className="h-4 w-4 mr-1" data-testid="legacyletters-trash2" />
                       Delete
                     </Button>
                   </div>
@@ -363,7 +363,7 @@ export const LegacyLetters: React.FC = () => {
             setShowCreateModal(false);
             setSelectedCapsule(null);
           }}
-          editingCapsule={selectedCapsule}
+          editingCapsule={selectedCapsule} data-testid="legacyletters-createtimecapsulemodal"
         />
       )}
     </div>

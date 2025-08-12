@@ -179,12 +179,12 @@ export const AssetOverview: React.FC = () => {
       <div className="space-y-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {[1, 2, 3].map((i) => (
-            <Skeleton key={i} className="h-32" />
+            <Skeleton key={i} className="h-32" data-testid="assetoverview-skeleton" />
           ))}
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          <Skeleton className="h-64" />
-          <Skeleton className="h-64" />
+          <Skeleton className="h-64" data-testid="assetoverview-skeleton" />
+          <Skeleton className="h-64" data-testid="assetoverview-skeleton" />
         </div>
       </div>
     );
@@ -204,45 +204,45 @@ export const AssetOverview: React.FC = () => {
       <LifeInventoryAssistant
         statistics={statistics}
         totalValue={totalValue}
-        unassignedCount={unassignedAssets.length}
+        unassignedCount={unassignedAssets.length} data-testid="assetoverview-lifeinventoryassistant"
       />
 
       {/* Quick Stats Summary */}
       {totalValue > 0 && (
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <Card>
-            <CardHeader className="pb-3">
-              <CardTitle className="text-sm font-medium text-muted-foreground">
+          <Card data-testid="assetoverview-card">
+            <CardHeader className="pb-3" data-testid="assetoverview-total-value-protected">
+              <CardTitle className="text-sm font-medium text-muted-foreground" data-testid="assetoverview-total-value-protected">
                 Total Value Protected
               </CardTitle>
             </CardHeader>
-            <CardContent>
+            <CardContent data-testid="assetoverview-formatcurrency-totalvalue">
               <div className="text-2xl font-bold">
                 {formatCurrency(totalValue)}
               </div>
             </CardContent>
           </Card>
 
-          <Card>
-            <CardHeader className="pb-3">
-              <CardTitle className="text-sm font-medium text-muted-foreground">
+          <Card data-testid="assetoverview-card">
+            <CardHeader className="pb-3" data-testid="assetoverview-items-documented">
+              <CardTitle className="text-sm font-medium text-muted-foreground" data-testid="assetoverview-items-documented">
                 Items Documented
               </CardTitle>
             </CardHeader>
-            <CardContent>
+            <CardContent data-testid="assetoverview-sum-stat-count-0">
               <div className="text-2xl font-bold">
                 {statistics.reduce((sum, stat) => sum + stat.count, 0)}
               </div>
             </CardContent>
           </Card>
 
-          <Card>
-            <CardHeader className="pb-3">
-              <CardTitle className="text-sm font-medium text-muted-foreground">
+          <Card data-testid="assetoverview-card">
+            <CardHeader className="pb-3" data-testid="assetoverview-categories-covered">
+              <CardTitle className="text-sm font-medium text-muted-foreground" data-testid="assetoverview-categories-covered">
                 Categories Covered
               </CardTitle>
             </CardHeader>
-            <CardContent>
+            <CardContent data-testid="assetoverview-s-count-0-length">
               <div className="text-2xl font-bold">
                 {statistics.filter((s) => s.count > 0).length}
               </div>
@@ -253,17 +253,17 @@ export const AssetOverview: React.FC = () => {
 
       {/* Recent Activity */}
       {unassignedAssets.length > 0 && (
-        <Card>
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              <AlertCircle className="h-5 w-5 text-amber-600" />
+        <Card data-testid="assetoverview-card">
+          <CardHeader data-testid="assetoverview-cardheader">
+            <CardTitle className="flex items-center gap-2" data-testid="assetoverview-items-that-need-organization">
+              <AlertCircle className="h-5 w-5 text-amber-600" data-testid="assetoverview-alertcircle" />
               Items That Need Organization
             </CardTitle>
-            <CardDescription>
+            <CardDescription data-testid="assetoverview-carddescription">
               Help your family by completing information about these items
             </CardDescription>
           </CardHeader>
-          <CardContent>
+          <CardContent data-testid="assetoverview-control">
             <div className="space-y-2 max-h-48 overflow-y-auto">
               {unassignedAssets.slice(0, 5).map((asset) => (
                 <div
@@ -287,7 +287,7 @@ export const AssetOverview: React.FC = () => {
                   <div className="flex items-center gap-2">
                     <Progress
                       value={asset.total_allocation}
-                      className="w-20 h-2"
+                      className="w-20 h-2" data-testid="assetoverview-progress"
                     />
                     <span className="text-xs text-muted-foreground">
                       {asset.total_allocation}%
@@ -301,7 +301,7 @@ export const AssetOverview: React.FC = () => {
               <Button
                 variant="outline"
                 className="w-full mt-3"
-                onClick={() => navigate("/dashboard")}
+                onClick={() => navigate("/dashboard")} data-testid="assetoverview-view-all-unassignedassets-length-items"
               >
                 View All {unassignedAssets.length} Items
               </Button>

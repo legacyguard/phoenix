@@ -90,26 +90,26 @@ export const WillForm: React.FC<WillFormProps> = ({
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
       {/* Current Status */}
       <div className="space-y-2">
-        <Label>{t("wills.fields.currentStatus")}</Label>
+        <Label data-testid="willform-t-wills-fields-currentstatus">{t("wills.fields.currentStatus")}</Label>
         <div className="flex items-center gap-3">
           <Select
             value={watchStatus}
-            onValueChange={(value) => setValue("status", value)}
+            onValueChange={(value) => setValue("status", value)} data-testid="willform-setvalue-status-value"
           >
             <SelectTrigger
-              className={errors.status ? "border-destructive" : ""}
+              className={errors.status ? "border-destructive" : ""} data-testid="willform-selecttrigger"
             >
-              <SelectValue />
+              <SelectValue data-testid="willform-selectvalue" />
             </SelectTrigger>
-            <SelectContent>
+            <SelectContent data-testid="willform-statusoptions-map-status">
               {statusOptions.map((status) => (
-                <SelectItem key={status.key} value={status.key}>
+                <SelectItem key={status.key} value={status.key} data-testid="willform-status-label">
                   {status.label}
                 </SelectItem>
               ))}
             </SelectContent>
           </Select>
-          <Badge variant={getStatusVariant(watchStatus)}>
+          <Badge variant={getStatusVariant(watchStatus)} data-testid="willform-badge">
             {statusOptions.find((opt) => opt.key === watchStatus)?.label ||
               watchStatus}
           </Badge>
@@ -124,12 +124,12 @@ export const WillForm: React.FC<WillFormProps> = ({
 
       {/* Physical Location */}
       <div className="space-y-2">
-        <Label htmlFor="location">{t("wills.fields.physicalLocation")}</Label>
+        <Label htmlFor="location" data-testid="willform-t-wills-fields-physicallocation">{t("wills.fields.physicalLocation")}</Label>
         <Input
           id="location"
           placeholder={t("wills.placeholders.physicalLocation")}
           {...register("physical_location")}
-          className={errors.physical_location ? "border-destructive" : ""}
+          className={errors.physical_location ? "border-destructive" : ""} data-testid="willform-input"
         />
         {errors.physical_location && (
           <p className="text-sm text-destructive">
@@ -143,25 +143,25 @@ export const WillForm: React.FC<WillFormProps> = ({
 
       {/* Executor Contact */}
       <div className="space-y-2">
-        <Label>{t("wills.fields.executorContact")}</Label>
+        <Label data-testid="willform-t-wills-fields-executorcontact">{t("wills.fields.executorContact")}</Label>
         <Select
           value={watch("executor_contact_id") || ""}
-          onValueChange={(value) => setValue("executor_contact_id", value)}
+          onValueChange={(value) => setValue("executor_contact_id", value)} data-testid="willform-setvalue-executor-contact-id-value"
         >
           <SelectTrigger
-            className={errors.executor_contact_id ? "border-destructive" : ""}
+            className={errors.executor_contact_id ? "border-destructive" : ""} data-testid="willform-selecttrigger"
           >
-            <SelectValue placeholder={t("wills.placeholders.selectContact")} />
+            <SelectValue placeholder={t("wills.placeholders.selectContact")} data-testid="willform-selectvalue" />
           </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="">
+          <SelectContent data-testid="willform-contacts-map-contact">
+            <SelectItem value="" data-testid="willform-t-wills-options-nocontactselected">
               {t("wills.options.noContactSelected")}
             </SelectItem>
             {contacts.map((contact) => (
-              <SelectItem key={contact.id} value={contact.id}>
+              <SelectItem key={contact.id} value={contact.id} data-testid="willform-selectitem">
                 <div className="flex items-center gap-2">
                   <span>{contact.name}</span>
-                  <Badge variant="outline" className="text-xs">
+                  <Badge variant="outline" className="text-xs" data-testid="willform-contact-role">
                     {contact.role}
                   </Badge>
                 </div>
@@ -181,13 +181,13 @@ export const WillForm: React.FC<WillFormProps> = ({
 
       {/* Notes */}
       <div className="space-y-2">
-        <Label htmlFor="notes">{t("wills.fields.additionalNotes")}</Label>
+        <Label htmlFor="notes" data-testid="willform-t-wills-fields-additionalnotes">{t("wills.fields.additionalNotes")}</Label>
         <Textarea
           id="notes"
           placeholder={t("wills.placeholders.additionalNotes")}
           {...register("notes")}
           rows={3}
-          className={errors.notes ? "border-destructive" : ""}
+          className={errors.notes ? "border-destructive" : ""} data-testid="willform-textarea"
         />
         {errors.notes && (
           <p className="text-sm text-destructive">{errors.notes.message}</p>
@@ -201,12 +201,12 @@ export const WillForm: React.FC<WillFormProps> = ({
             type="button"
             variant="outline"
             onClick={onCancel}
-            disabled={isLoading}
+            disabled={isLoading} data-testid="willform-t-wills-wills-common-cancel"
           >
             {t("wills:wills.common.cancel")}
           </Button>
         )}
-        <Button type="submit" disabled={isLoading} className="flex-1">
+        <Button type="submit" disabled={isLoading} className="flex-1" data-testid="willform-isloading">
           {isLoading ? (
             <>
               <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
@@ -214,7 +214,7 @@ export const WillForm: React.FC<WillFormProps> = ({
             </>
           ) : (
             <>
-              <Save className="mr-2 h-4 w-4" />
+              <Save className="mr-2 h-4 w-4" data-testid="willform-save" />
               {t("wills.buttons.saveWillInfo")}
             </>
           )}

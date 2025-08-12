@@ -78,16 +78,16 @@ export function DocumentUploadExample() {
   };
 
   return (
-    <Card className="w-full max-w-2xl mx-auto">
-      <CardHeader>
-        <CardTitle>
+    <Card className="w-full max-w-2xl mx-auto" data-testid="documentuploadexample-card">
+      <CardHeader data-testid="documentuploadexample-cardheader">
+        <CardTitle data-testid="documentuploadexample-cardtitle">
           {t("ai.documentUploadExample.document_analysis_example_1")}
         </CardTitle>
-        <CardDescription>
+        <CardDescription data-testid="documentuploadexample-carddescription">
           {t("ai.documentUploadExample.upload_a_document_image_to_see_2")}
         </CardDescription>
       </CardHeader>
-      <CardContent className="space-y-4">
+      <CardContent className="space-y-4" data-testid="documentuploadexample-file-upload">
         {/* File Upload */}
         <div className="border-2 border-dashed rounded-lg p-6 text-center">
           <input
@@ -95,14 +95,14 @@ export function DocumentUploadExample() {
             accept={t("ocr.hybridDocumentProcessor.image_3")}
             onChange={handleFileSelect}
             className="hidden"
-            id="file-upload"
+            id="file-upload" data-testid="documentuploadexample-input"
           />
 
           <label
             htmlFor="file-upload"
             className="cursor-pointer flex flex-col items-center space-y-2"
           >
-            <Upload className="h-8 w-8 text-muted-foreground" />
+            <Upload className="h-8 w-8 text-muted-foreground" data-testid="documentuploadexample-upload" />
             <span className="text-sm text-muted-foreground">
               {t(
                 "ocr.hybridDocumentProcessor.click_to_upload_a_document_ima_4",
@@ -116,9 +116,9 @@ export function DocumentUploadExample() {
 
         {/* Encouragement Message */}
         {encouragement && (
-          <Alert className="bg-blue-50 border-blue-200">
-            <AlertCircle className="h-4 w-4 text-blue-600" />
-            <AlertDescription className="text-blue-800">
+          <Alert className="bg-blue-50 border-blue-200" data-testid="documentuploadexample-alert">
+            <AlertCircle className="h-4 w-4 text-blue-600" data-testid="documentuploadexample-alertcircle" />
+            <AlertDescription className="text-blue-800" data-testid="documentuploadexample-encouragement">
               {encouragement}
             </AlertDescription>
           </Alert>
@@ -129,16 +129,16 @@ export function DocumentUploadExample() {
           <Button
             onClick={handleAnalyze}
             disabled={isAnalyzing}
-            className="w-full"
+            className="w-full" data-testid="documentuploadexample-isanalyzing"
           >
             {isAnalyzing ? (
               <>
-                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                <Loader2 className="mr-2 h-4 w-4 animate-spin" data-testid="documentuploadexample-loader2" />
                 {t("ai.documentUploadExample.analyzing_your_document_5")}
               </>
             ) : (
               <>
-                <FileText className="mr-2 h-4 w-4" />
+                <FileText className="mr-2 h-4 w-4" data-testid="documentuploadexample-filetext" />
                 {t("ai.documentUploadExample.analyze_document_6")}
               </>
             )}
@@ -147,9 +147,9 @@ export function DocumentUploadExample() {
 
         {/* Error Display */}
         {analysisError && (
-          <Alert variant="destructive">
-            <AlertCircle className="h-4 w-4" />
-            <AlertDescription>{analysisError.userMessage}</AlertDescription>
+          <Alert variant="destructive" data-testid="documentuploadexample-alert">
+            <AlertCircle className="h-4 w-4" data-testid="documentuploadexample-alertcircle" />
+            <AlertDescription data-testid="documentuploadexample-analysiserror-usermessage">{analysisError.userMessage}</AlertDescription>
           </Alert>
         )}
 
@@ -187,9 +187,9 @@ export function DocumentUploadExample() {
             )}
 
             {analysis.extractedData.expirationDate && (
-              <Alert className="bg-amber-50 border-amber-200">
-                <AlertCircle className="h-4 w-4 text-amber-600" />
-                <AlertDescription className="text-amber-800">
+              <Alert className="bg-amber-50 border-amber-200" data-testid="documentuploadexample-alert">
+                <AlertCircle className="h-4 w-4 text-amber-600" data-testid="documentuploadexample-alertcircle" />
+                <AlertDescription className="text-amber-800" data-testid="documentuploadexample-alertdescription">
                   {t("ai.documentUploadExample.expires_on_9")}
                   {new Date(
                     analysis.extractedData.expirationDate,
@@ -207,7 +207,7 @@ export function DocumentUploadExample() {
                 <ul className="space-y-2">
                   {analysis.suggestions.map((suggestion, idx) => (
                     <li key={idx} className="flex items-start space-x-2">
-                      <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" />
+                      <CheckCircle2 className="h-4 w-4 text-green-600 mt-0.5 flex-shrink-0" data-testid="documentuploadexample-checkcircle2" />
                       <span className="text-sm">{suggestion}</span>
                     </li>
                   ))}

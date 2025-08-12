@@ -34,7 +34,7 @@ export const FirstTimeUserGuide: React.FC<FirstTimeUserGuideProps> = ({
 
   const guideSteps = [
     {
-      icon: <Shield className="h-8 w-8 text-primary" />,
+      icon: <Shield className="h-8 w-8 text-primary" data-testid="firsttimeuserguide-shield" />,
       title: t("firstTimeGuide.step1.title", "Welcome to Your Heritage Vault"),
       description: t(
         "firstTimeGuide.step1.description",
@@ -56,7 +56,7 @@ export const FirstTimeUserGuide: React.FC<FirstTimeUserGuideProps> = ({
       ],
     },
     {
-      icon: <FileText className="h-8 w-8 text-primary" />,
+      icon: <FileText className="h-8 w-8 text-primary" data-testid="firsttimeuserguide-filetext" />,
       title: t("firstTimeGuide.step2.title", "Your Three Main Areas"),
       description: t(
         "firstTimeGuide.step2.description",
@@ -78,7 +78,7 @@ export const FirstTimeUserGuide: React.FC<FirstTimeUserGuideProps> = ({
       ],
     },
     {
-      icon: <Users className="h-8 w-8 text-primary" />,
+      icon: <Users className="h-8 w-8 text-primary" data-testid="firsttimeuserguide-users" />,
       title: t("firstTimeGuide.step3.title", "Start Small, Build Over Time"),
       description: t(
         "firstTimeGuide.step3.description",
@@ -128,20 +128,20 @@ export const FirstTimeUserGuide: React.FC<FirstTimeUserGuideProps> = ({
 
   return (
     <div className="min-h-screen bg-background flex items-center justify-center p-4">
-      <Card className="w-full max-w-2xl">
-        <CardHeader className="text-center">
+      <Card className="w-full max-w-2xl" data-testid="firsttimeuserguide-card">
+        <CardHeader className="text-center" data-testid="firsttimeuserguide-cardheader">
           <div className="flex justify-center mb-4">
             <div className="p-4 bg-primary/10 rounded-full">
               {currentGuideStep.icon}
             </div>
           </div>
-          <CardTitle className="text-2xl">{currentGuideStep.title}</CardTitle>
-          <CardDescription className="text-lg">
+          <CardTitle className="text-2xl" data-testid="firsttimeuserguide-currentguidestep-title">{currentGuideStep.title}</CardTitle>
+          <CardDescription className="text-lg" data-testid="firsttimeuserguide-currentguidestep-description">
             {currentGuideStep.description}
           </CardDescription>
         </CardHeader>
 
-        <CardContent className="space-y-6">
+        <CardContent className="space-y-6" data-testid="firsttimeuserguide-progress-indicator">
           {/* Progress indicator */}
           <div className="flex justify-center space-x-2">
             {guideSteps.map((_, index) => (
@@ -158,7 +158,7 @@ export const FirstTimeUserGuide: React.FC<FirstTimeUserGuideProps> = ({
           <div className="space-y-4">
             {currentGuideStep.details.map((detail, index) => (
               <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" />
+                <CheckCircle className="h-5 w-5 text-green-600 mt-0.5 flex-shrink-0" data-testid="firsttimeuserguide-checkcircle" />
                 <p className="text-muted-foreground">{detail}</p>
               </div>
             ))}
@@ -168,7 +168,7 @@ export const FirstTimeUserGuide: React.FC<FirstTimeUserGuideProps> = ({
           {currentStep === guideSteps.length - 1 && (
             <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
               <div className="flex items-start space-x-3">
-                <Lightbulb className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                <Lightbulb className="h-5 w-5 text-blue-600 mt-0.5 flex-shrink-0" data-testid="firsttimeuserguide-lightbulb" />
                 <div>
                   <h4 className="font-semibold text-blue-900 mb-1">
                     {t("firstTimeGuide.tip.title", "Pro Tip")}
@@ -189,7 +189,7 @@ export const FirstTimeUserGuide: React.FC<FirstTimeUserGuideProps> = ({
             <Button
               variant="outline"
               onClick={handlePrevious}
-              disabled={currentStep === 0}
+              disabled={currentStep === 0} data-testid="firsttimeuserguide-t-common-previous-previous"
             >
               {t("common.previous", "Previous")}
             </Button>
@@ -197,18 +197,18 @@ export const FirstTimeUserGuide: React.FC<FirstTimeUserGuideProps> = ({
             {currentStep === guideSteps.length - 1 ? (
               <Button
                 onClick={handleComplete}
-                className="flex items-center space-x-2"
+                className="flex items-center space-x-2" data-testid="firsttimeuserguide-t-firsttimeguide-getstarted-get-started"
               >
                 <span>{t("firstTimeGuide.getStarted", "Get Started")}</span>
-                <ArrowRight className="h-4 w-4" />
+                <ArrowRight className="h-4 w-4" data-testid="firsttimeuserguide-arrowright" />
               </Button>
             ) : (
               <Button
                 onClick={handleNext}
-                className="flex items-center space-x-2"
+                className="flex items-center space-x-2" data-testid="firsttimeuserguide-t-common-next-next"
               >
                 <span>{t("common.next", "Next")}</span>
-                <ArrowRight className="h-4 w-4" />
+                <ArrowRight className="h-4 w-4" data-testid="firsttimeuserguide-arrowright" />
               </Button>
             )}
           </div>

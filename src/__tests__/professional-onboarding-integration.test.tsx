@@ -46,7 +46,7 @@ vi.mock(
     ProfessionalFlowManager: () => (
       <div>
         <div>Welcome</div>
-        <button>Skip</button>
+        <button data-testid="professional-onboarding-integration-test-skip">Skip</button>
       </div>
     ),
   }),
@@ -70,8 +70,8 @@ vi.mock(
             </li>
           </ul>
           <div>
-            <button>Start Now</button>
-            <button>Skip</button>
+            <button data-testid="professional-onboarding-integration-test-start-now">Start Now</button>
+            <button data-testid="professional-onboarding-integration-test-skip">Skip</button>
           </div>
         </section>
       </main>
@@ -109,8 +109,8 @@ const TestWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   });
 
   return (
-    <QueryClientProvider client={queryClient}>
-      <BrowserRouter>{children}</BrowserRouter>
+    <QueryClientProvider client={queryClient} data-testid="professional-onboarding-integration-test-children">
+      <BrowserRouter data-testid="professional-onboarding-integration-test-children">{children}</BrowserRouter>
     </QueryClientProvider>
   );
 };
@@ -142,8 +142,8 @@ describe("Professional Onboarding Integration", () => {
       );
 
       render(
-        <TestWrapper>
-          <ProfessionalFlowManager />
+        <TestWrapper data-testid="professional-onboarding-integration-test-testwrapper">
+          <ProfessionalFlowManager data-testid="professional-onboarding-integration-test-professionalflowmanager" />
         </TestWrapper>,
       );
 
@@ -159,8 +159,8 @@ describe("Professional Onboarding Integration", () => {
 
     it("should display initial security areas without gamification", async () => {
       render(
-        <TestWrapper>
-          <ProfessionalDashboard />
+        <TestWrapper data-testid="professional-onboarding-integration-test-testwrapper">
+          <ProfessionalDashboard data-testid="professional-onboarding-integration-test-professionaldashboard" />
         </TestWrapper>,
       );
 
@@ -223,8 +223,8 @@ describe("Professional Onboarding Integration", () => {
       };
 
       render(
-        <TestWrapper>
-          <TestComponent />
+        <TestWrapper data-testid="professional-onboarding-integration-test-testwrapper">
+          <TestComponent data-testid="professional-onboarding-integration-test-testcomponent" />
         </TestWrapper>,
       );
 
@@ -266,8 +266,8 @@ describe("Professional Onboarding Integration", () => {
       );
 
       render(
-        <TestWrapper>
-          <ProfessionalDashboard />
+        <TestWrapper data-testid="professional-onboarding-integration-test-testwrapper">
+          <ProfessionalDashboard data-testid="professional-onboarding-integration-test-professionaldashboard" />
         </TestWrapper>,
       );
 
@@ -333,7 +333,7 @@ describe("Professional Onboarding Integration", () => {
         return (
           <div>
             {!completed ? (
-              <button onClick={handleComplete}>Complete Estate Planning</button>
+              <button onClick={handleComplete} data-testid="professional-onboarding-integration-test-complete-estate-planning">Complete Estate Planning</button>
             ) : (
               <div>
                 <span>✓ Complete</span>
@@ -345,8 +345,8 @@ describe("Professional Onboarding Integration", () => {
       };
 
       render(
-        <TestWrapper>
-          <TestComponent />
+        <TestWrapper data-testid="professional-onboarding-integration-test-testwrapper">
+          <TestComponent data-testid="professional-onboarding-integration-test-testcomponent" />
         </TestWrapper>,
       );
 
@@ -368,8 +368,8 @@ describe("Professional Onboarding Integration", () => {
 
     it("should show time estimates instead of points", async () => {
       render(
-        <TestWrapper>
-          <ProfessionalDashboard />
+        <TestWrapper data-testid="professional-onboarding-integration-test-testwrapper">
+          <ProfessionalDashboard data-testid="professional-onboarding-integration-test-professionaldashboard" />
         </TestWrapper>,
       );
 
@@ -388,8 +388,8 @@ describe("Professional Onboarding Integration", () => {
   describe("Navigation and Flow", () => {
     it("should allow skipping non-essential steps", async () => {
       render(
-        <TestWrapper>
-          <ProfessionalFlowManager />
+        <TestWrapper data-testid="professional-onboarding-integration-test-testwrapper">
+          <ProfessionalFlowManager data-testid="professional-onboarding-integration-test-professionalflowmanager" />
         </TestWrapper>,
       );
 
@@ -402,8 +402,8 @@ describe("Professional Onboarding Integration", () => {
 
     it("should provide clear next steps without pressure", async () => {
       render(
-        <TestWrapper>
-          <ProfessionalDashboard />
+        <TestWrapper data-testid="professional-onboarding-integration-test-testwrapper">
+          <ProfessionalDashboard data-testid="professional-onboarding-integration-test-professionaldashboard" />
         </TestWrapper>,
       );
 
@@ -473,8 +473,8 @@ describe("Professional Onboarding Integration", () => {
       };
 
       render(
-        <TestWrapper>
-          <TestComponent />
+        <TestWrapper data-testid="professional-onboarding-integration-test-testwrapper">
+          <TestComponent data-testid="professional-onboarding-integration-test-testcomponent" />
         </TestWrapper>,
       );
 
@@ -495,8 +495,8 @@ describe("Professional Onboarding Integration", () => {
   describe("Accessibility", () => {
     it("should have proper ARIA labels and roles", async () => {
       render(
-        <TestWrapper>
-          <ProfessionalDashboard />
+        <TestWrapper data-testid="professional-onboarding-integration-test-testwrapper">
+          <ProfessionalDashboard data-testid="professional-onboarding-integration-test-professionaldashboard" />
         </TestWrapper>,
       );
 
@@ -512,8 +512,8 @@ describe("Professional Onboarding Integration", () => {
 
     it("should be keyboard navigable", async () => {
       render(
-        <TestWrapper>
-          <ProfessionalDashboard />
+        <TestWrapper data-testid="professional-onboarding-integration-test-testwrapper">
+          <ProfessionalDashboard data-testid="professional-onboarding-integration-test-professionaldashboard" />
         </TestWrapper>,
       );
 

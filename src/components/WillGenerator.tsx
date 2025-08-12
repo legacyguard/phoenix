@@ -291,26 +291,26 @@ const WillGenerator: React.FC<WillGeneratorProps> = ({
             })}
           </p>
           <div className="mt-4">
-            <Button onClick={() => handleJurisdictionConfirm(true)}>
+            <Button onClick={() => handleJurisdictionConfirm(true)} data-testid="willgenerator-t-wills-wills-common-confirm">
               {t("wills:wills.common.confirm")}
             </Button>
-            <Button variant="outline" onClick={() => setChangeCountry(true)}>
+            <Button variant="outline" onClick={() => setChangeCountry(true)} data-testid="willgenerator-t-willgenerator-changecountry">
               {t("willGenerator.changeCountry")}
             </Button>
             {changeCountry && (
               <Select
                 value={countryCode}
                 onValueChange={handleCountryChange}
-                className="mt-4"
+                className="mt-4" data-testid="willgenerator-select"
               >
-                <SelectTrigger>
+                <SelectTrigger data-testid="willgenerator-selecttrigger">
                   <SelectValue
-                    placeholder={t("willGenerator.select_a_country_4")}
+                    placeholder={t("willGenerator.select_a_country_4")} data-testid="willgenerator-selectvalue"
                   />
                 </SelectTrigger>
-                <SelectContent>
+                <SelectContent data-testid="willgenerator-availablecountries-map-country">
                   {availableCountries.map((country) => (
-                    <SelectItem key={country.code} value={country.code}>
+                    <SelectItem key={country.code} value={country.code} data-testid="willgenerator-country-name">
                       {country.name}
                     </SelectItem>
                   ))}
@@ -325,7 +325,7 @@ const WillGenerator: React.FC<WillGeneratorProps> = ({
           <h2>{t("willGenerator.steps.personalInformation")}</h2>
           {/* Implement forms for capturing user data for placeholders */}
           <form onSubmit={handlePersonalInfoSubmit}>
-            <Label>{t("willGenerator.fullName")}</Label>
+            <Label data-testid="willgenerator-t-willgenerator-fullname">{t("willGenerator.fullName")}</Label>
             <Input
               type="text"
               value={userData.full_name}
@@ -333,9 +333,9 @@ const WillGenerator: React.FC<WillGeneratorProps> = ({
                 setUserData((prev) => ({ ...prev, full_name: e.target.value }))
               }
               className="mt-2"
-              required
+              required data-testid="willgenerator-input"
             />
-            <Button type="submit" className="mt-4">
+            <Button type="submit" className="mt-4" data-testid="willgenerator-t-wills-wills-common-next">
               {t("wills:wills.common.next")}
             </Button>
           </form>
@@ -360,12 +360,12 @@ const WillGenerator: React.FC<WillGeneratorProps> = ({
               checked={signedConfirmation}
               onCheckedChange={(checked) =>
                 setSignedConfirmation(checked as boolean)
-              }
+              } data-testid="willgenerator-checkbox"
             />
-            <Label htmlFor="signedConfirmation" className="ml-2">
+            <Label htmlFor="signedConfirmation" className="ml-2" data-testid="willgenerator-t-willgenerator-confirmsigned">
               {t("willGenerator.confirmSigned")}
             </Label>
-            <Button onClick={handleFinalConfirmation} className="mt-4">
+            <Button onClick={handleFinalConfirmation} className="mt-4" data-testid="willgenerator-t-willgenerator-finalizeupload">
               {t("willGenerator.finalizeUpload")}
             </Button>
           </div>

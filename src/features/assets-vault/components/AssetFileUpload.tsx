@@ -213,18 +213,18 @@ export const AssetFileUpload: React.FC<AssetFileUploadProps> = ({
   };
 
   return (
-    <Card className="w-full max-w-2xl">
-      <CardHeader>
+    <Card className="w-full max-w-2xl" data-testid="assetfileupload-card">
+      <CardHeader data-testid="assetfileupload-cardheader">
         <div className="flex items-center justify-between">
-          <CardTitle>{t("assets.fileUpload.title")}</CardTitle>
+          <CardTitle data-testid="assetfileupload-t-assets-fileupload-title">{t("assets.fileUpload.title")}</CardTitle>
           {onClose && (
-            <Button variant="ghost" size="icon" onClick={onClose}>
-              <X className="h-4 w-4" />
+            <Button variant="ghost" size="icon" onClick={onClose} data-testid="assetfileupload-button">
+              <X className="h-4 w-4" data-testid="assetfileupload-x" />
             </Button>
           )}
         </div>
       </CardHeader>
-      <CardContent className="space-y-6">
+      <CardContent className="space-y-6" data-testid="assetfileupload-drag-and-drop-area">
         {/* Drag and Drop Area */}
         <div
           className={cn(
@@ -243,10 +243,10 @@ export const AssetFileUpload: React.FC<AssetFileUploadProps> = ({
             accept={acceptedTypes.join(",")}
             onChange={handleFileSelect}
             className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
-            disabled={files.length >= maxFiles}
+            disabled={files.length >= maxFiles} data-testid="assetfileupload-input"
           />
 
-          <Upload className="h-12 w-12 mx-auto mb-4 text-gray-400" />
+          <Upload className="h-12 w-12 mx-auto mb-4 text-gray-400" data-testid="assetfileupload-upload" />
           <p className="text-lg font-medium mb-2">
             {t("assets.fileUpload.dragDropText")}
           </p>
@@ -261,9 +261,9 @@ export const AssetFileUpload: React.FC<AssetFileUploadProps> = ({
         {/* Encryption Toggle */}
         <div className="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
           <div className="flex items-center gap-3">
-            <Lock className="h-5 w-5 text-gray-600" />
+            <Lock className="h-5 w-5 text-gray-600" data-testid="assetfileupload-lock" />
             <div>
-              <Label htmlFor="encrypt-toggle" className="font-medium">
+              <Label htmlFor="encrypt-toggle" className="font-medium" data-testid="assetfileupload-t-assets-fileupload-encryptfiles">
                 {t("assets.fileUpload.encryptFiles")}
               </Label>
               <p className="text-sm text-gray-500">
@@ -274,13 +274,13 @@ export const AssetFileUpload: React.FC<AssetFileUploadProps> = ({
           <Switch
             id="encrypt-toggle"
             checked={encrypt}
-            onCheckedChange={setEncrypt}
+            onCheckedChange={setEncrypt} data-testid="assetfileupload-switch"
           />
         </div>
 
         {/* Tags */}
         <div className="space-y-3">
-          <Label>{t("assets.fileUpload.tags")}</Label>
+          <Label data-testid="assetfileupload-t-assets-fileupload-tags">{t("assets.fileUpload.tags")}</Label>
           <div className="flex gap-2">
             <Input
               placeholder={t("assets.fileUpload.addTag")}
@@ -288,21 +288,21 @@ export const AssetFileUpload: React.FC<AssetFileUploadProps> = ({
               onChange={(e) => setTagInput(e.target.value)}
               onKeyPress={(e) =>
                 e.key === "Enter" && (e.preventDefault(), addTag())
-              }
+              } data-testid="assetfileupload-input"
             />
-            <Button type="button" onClick={addTag} size="sm">
-              <Tag className="h-4 w-4 mr-1" />
+            <Button type="button" onClick={addTag} size="sm" data-testid="assetfileupload-t-ui-common-common-add">
+              <Tag className="h-4 w-4 mr-1" data-testid="assetfileupload-tag" />
               {t("ui-common:common.add")}
             </Button>
           </div>
           {tags.length > 0 && (
             <div className="flex flex-wrap gap-2">
               {tags.map((tag) => (
-                <Badge key={tag} variant="secondary" className="gap-1">
+                <Badge key={tag} variant="secondary" className="gap-1" data-testid="assetfileupload-tag">
                   {tag}
                   <X
                     className="h-3 w-3 cursor-pointer"
-                    onClick={() => removeTag(tag)}
+                    onClick={() => removeTag(tag)} data-testid="assetfileupload-x"
                   />
                 </Badge>
               ))}
@@ -313,7 +313,7 @@ export const AssetFileUpload: React.FC<AssetFileUploadProps> = ({
         {/* File List */}
         {files.length > 0 && (
           <div className="space-y-3">
-            <Label>{t("assets.fileUpload.selectedFiles")}</Label>
+            <Label data-testid="assetfileupload-t-assets-fileupload-selectedfiles">{t("assets.fileUpload.selectedFiles")}</Label>
             <div className="space-y-2">
               {files.map((fileItem) => (
                 <div
@@ -331,7 +331,7 @@ export const AssetFileUpload: React.FC<AssetFileUploadProps> = ({
                     {fileItem.status === "uploading" && (
                       <Progress
                         value={fileItem.progress}
-                        className="h-1 mt-2"
+                        className="h-1 mt-2" data-testid="assetfileupload-progress"
                       />
                     )}
 
@@ -347,22 +347,22 @@ export const AssetFileUpload: React.FC<AssetFileUploadProps> = ({
                       <Button
                         variant="ghost"
                         size="icon"
-                        onClick={() => removeFile(fileItem.id)}
+                        onClick={() => removeFile(fileItem.id)} data-testid="assetfileupload-removefile-fileitem-id"
                       >
-                        <X className="h-4 w-4" />
+                        <X className="h-4 w-4" data-testid="assetfileupload-x" />
                       </Button>
                     )}
 
                     {fileItem.status === "uploading" && (
-                      <Loader2 className="h-4 w-4 animate-spin text-primary" />
+                      <Loader2 className="h-4 w-4 animate-spin text-primary" data-testid="assetfileupload-loader2" />
                     )}
 
                     {fileItem.status === "complete" && (
-                      <FileCheck className="h-5 w-5 text-green-600" />
+                      <FileCheck className="h-5 w-5 text-green-600" data-testid="assetfileupload-filecheck" />
                     )}
 
                     {fileItem.status === "error" && (
-                      <AlertCircle className="h-5 w-5 text-red-600" />
+                      <AlertCircle className="h-5 w-5 text-red-600" data-testid="assetfileupload-alertcircle" />
                     )}
                   </div>
                 </div>
@@ -374,22 +374,22 @@ export const AssetFileUpload: React.FC<AssetFileUploadProps> = ({
         {/* Upload Button */}
         <div className="flex justify-end gap-3">
           {onClose && (
-            <Button variant="outline" onClick={onClose}>
+            <Button variant="outline" onClick={onClose} data-testid="assetfileupload-t-family-core-common-cancel">
               {t("family-core:common.cancel")}
             </Button>
           )}
           <Button
             onClick={uploadFiles}
-            disabled={files.length === 0 || uploading}
+            disabled={files.length === 0 || uploading} data-testid="assetfileupload-uploading"
           >
             {uploading ? (
               <>
-                <Loader2 className="h-4 w-4 mr-2 animate-spin" />
+                <Loader2 className="h-4 w-4 mr-2 animate-spin" data-testid="assetfileupload-loader2" />
                 {t("assets.fileUpload.uploading")}
               </>
             ) : (
               <>
-                <Upload className="h-4 w-4 mr-2" />
+                <Upload className="h-4 w-4 mr-2" data-testid="assetfileupload-upload" />
                 {t("assets.fileUpload.uploadFiles")}
               </>
             )}
@@ -398,9 +398,9 @@ export const AssetFileUpload: React.FC<AssetFileUploadProps> = ({
 
         {/* Info Alert */}
         {encrypt && (
-          <Alert>
-            <Lock className="h-4 w-4" />
-            <AlertDescription>
+          <Alert data-testid="assetfileupload-alert">
+            <Lock className="h-4 w-4" data-testid="assetfileupload-lock" />
+            <AlertDescription data-testid="assetfileupload-t-assets-fileupload-encryptioninfo">
               {t("assets.fileUpload.encryptionInfo")}
             </AlertDescription>
           </Alert>

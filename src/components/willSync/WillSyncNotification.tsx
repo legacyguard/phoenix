@@ -33,14 +33,14 @@ export function WillSyncNotification({
   const getStatusIcon = () => {
     switch (syncLog.status) {
       case "pending":
-        return <Clock className="h-5 w-5 text-orange-500" />;
+        return <Clock className="h-5 w-5 text-orange-500" data-testid="willsyncnotification-clock" />;
       case "approved":
       case "auto_applied":
-        return <CheckCircle2 className="h-5 w-5 text-green-500" />;
+        return <CheckCircle2 className="h-5 w-5 text-green-500" data-testid="willsyncnotification-checkcircle2" />;
       case "rejected":
-        return <X className="h-5 w-5 text-destructive" />;
+        return <X className="h-5 w-5 text-destructive" data-testid="willsyncnotification-x" />;
       default:
-        return <AlertCircle className="h-5 w-5 text-muted-foreground" />;
+        return <AlertCircle className="h-5 w-5 text-muted-foreground" data-testid="willsyncnotification-alertcircle" />;
     }
   };
 
@@ -53,7 +53,7 @@ export function WillSyncNotification({
           : "destructive";
 
     return (
-      <Badge variant={variant}>{t(`willSync.status.${syncLog.status}`)}</Badge>
+      <Badge variant={variant} data-testid="willsyncnotification-t-willsync-status-synclog-status">{t(`willSync.status.${syncLog.status}`)}</Badge>
     );
   };
 
@@ -88,16 +88,16 @@ export function WillSyncNotification({
   };
 
   return (
-    <Card className="relative">
-      <CardHeader>
+    <Card className="relative" data-testid="willsyncnotification-card">
+      <CardHeader data-testid="willsyncnotification-cardheader">
         <div className="flex items-start justify-between">
           <div className="flex items-start gap-3">
             {getStatusIcon()}
             <div className="space-y-1">
-              <CardTitle className="text-base">
+              <CardTitle className="text-base" data-testid="willsyncnotification-cardtitle">
                 {t(`willSync.events.${syncLog.trigger_event}`)}
               </CardTitle>
-              <CardDescription>
+              <CardDescription data-testid="willsyncnotification-carddescription">
                 {formatDistanceToNow(new Date(syncLog.created_at), {
                   addSuffix: true,
                 })}
@@ -111,15 +111,15 @@ export function WillSyncNotification({
                 variant="ghost"
                 size="icon"
                 className="h-8 w-8"
-                onClick={() => onDismiss(syncLog.id)}
+                onClick={() => onDismiss(syncLog.id)} data-testid="willsyncnotification-ondismiss-synclog-id"
               >
-                <X className="h-4 w-4" />
+                <X className="h-4 w-4" data-testid="willsyncnotification-x" />
               </Button>
             )}
           </div>
         </div>
       </CardHeader>
-      <CardContent>
+      <CardContent data-testid="willsyncnotification-cardcontent">
         <div className="space-y-4">
           <div className="text-sm text-muted-foreground">
             {renderChangeSummary(syncLog.changes_made)}
@@ -127,22 +127,22 @@ export function WillSyncNotification({
 
           {syncLog.status === "pending" && (
             <div className="flex items-center gap-2">
-              <Button size="sm" onClick={() => onApprove?.(syncLog.id)}>
-                <CheckCircle2 className="mr-2 h-4 w-4" />
+              <Button size="sm" onClick={() => onApprove?.(syncLog.id)} data-testid="willsyncnotification-onapprove-synclog-id">
+                <CheckCircle2 className="mr-2 h-4 w-4" data-testid="willsyncnotification-checkcircle2" />
                 {t("willSync.approve")}
               </Button>
               <Button
                 size="sm"
                 variant="outline"
-                onClick={() => onReject?.(syncLog.id)}
+                onClick={() => onReject?.(syncLog.id)} data-testid="willsyncnotification-onreject-synclog-id"
               >
-                <X className="mr-2 h-4 w-4" />
+                <X className="mr-2 h-4 w-4" data-testid="willsyncnotification-x" />
                 {t("willSync.reject")}
               </Button>
               <Button
                 size="sm"
                 variant="ghost"
-                onClick={() => onViewChanges?.(syncLog.id)}
+                onClick={() => onViewChanges?.(syncLog.id)} data-testid="willsyncnotification-t-willsync-viewchanges"
               >
                 {t("willSync.viewChanges")}
               </Button>
@@ -151,7 +151,7 @@ export function WillSyncNotification({
 
           {syncLog.status === "auto_applied" && (
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
-              <RefreshCw className="h-4 w-4" />
+              <RefreshCw className="h-4 w-4" data-testid="willsyncnotification-refreshcw" />
               {t("willSync.autoApplied")}
             </div>
           )}

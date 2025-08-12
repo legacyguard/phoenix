@@ -209,7 +209,7 @@ export const GuardianUpload: React.FC<GuardianUploadProps> = ({
   };
 
   return (
-    <AsyncErrorBoundary>
+    <AsyncErrorBoundary data-testid="guardianupload-asyncerrorboundary">
       <div className="space-y-6">
         <div>
           <h3 className="text-lg font-semibold">
@@ -225,14 +225,14 @@ export const GuardianUpload: React.FC<GuardianUploadProps> = ({
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
           {/* Guardian's Full Name */}
           <div className="space-y-2">
-            <Label htmlFor="full_name">
+            <Label htmlFor="full_name" data-testid="guardianupload-t-guardianupload-fullnamelabel">
               {t("guardianUpload.fullNameLabel")} *
             </Label>
             <Input
               id="full_name"
               {...register("full_name")}
               placeholder={t("guardianUpload.fullNamePlaceholder")}
-              className={errors.full_name ? "border-red-500" : ""}
+              className={errors.full_name ? "border-red-500" : ""} data-testid="guardianupload-input"
             />
             {errors.full_name && (
               <p className="text-sm text-red-500">{errors.full_name.message}</p>
@@ -241,23 +241,23 @@ export const GuardianUpload: React.FC<GuardianUploadProps> = ({
 
           {/* Relationship */}
           <div className="space-y-2">
-            <Label htmlFor="relationship">
+            <Label htmlFor="relationship" data-testid="guardianupload-t-guardianupload-relationshiplabel">
               {t("guardianUpload.relationshipLabel")} *
             </Label>
             <Select
               value={watch("relationship")}
-              onValueChange={(value) => setValue("relationship", value)}
+              onValueChange={(value) => setValue("relationship", value)} data-testid="guardianupload-setvalue-relationship-value"
             >
               <SelectTrigger
-                className={errors.relationship ? "border-red-500" : ""}
+                className={errors.relationship ? "border-red-500" : ""} data-testid="guardianupload-selecttrigger"
               >
                 <SelectValue
-                  placeholder={t("guardianUpload.relationshipPlaceholder")}
+                  placeholder={t("guardianUpload.relationshipPlaceholder")} data-testid="guardianupload-selectvalue"
                 />
               </SelectTrigger>
-              <SelectContent>
+              <SelectContent data-testid="guardianupload-relationships-map-rel">
                 {relationships.map((rel) => (
-                  <SelectItem key={rel.key} value={rel.value}>
+                  <SelectItem key={rel.key} value={rel.value} data-testid="guardianupload-rel-value">
                     {rel.value}
                   </SelectItem>
                 ))}
@@ -272,25 +272,25 @@ export const GuardianUpload: React.FC<GuardianUploadProps> = ({
 
           {/* Country of Residence */}
           <div className="space-y-2">
-            <Label htmlFor="country_code">
+            <Label htmlFor="country_code" data-testid="guardianupload-t-guardianupload-countrylabel">
               {t("guardianUpload.countryLabel")} *
             </Label>
             <Select
               value={watch("country_code")}
-              onValueChange={(value) => setValue("country_code", value)}
+              onValueChange={(value) => setValue("country_code", value)} data-testid="guardianupload-setvalue-country-code-value"
             >
               <SelectTrigger
-                className={errors.country_code ? "border-red-500" : ""}
+                className={errors.country_code ? "border-red-500" : ""} data-testid="guardianupload-selecttrigger"
               >
                 <SelectValue
-                  placeholder={t("guardianUpload.countryPlaceholder")}
+                  placeholder={t("guardianUpload.countryPlaceholder")} data-testid="guardianupload-selectvalue"
                 />
               </SelectTrigger>
-              <SelectContent>
+              <SelectContent data-testid="guardianupload-control">
                 {Object.values(COUNTRY_CONFIGS)
                   .sort((a, b) => a.name.localeCompare(b.name))
                   .map((config) => (
-                    <SelectItem key={config.code} value={config.code}>
+                    <SelectItem key={config.code} value={config.code} data-testid="guardianupload-selectitem">
                       <div className="flex items-center space-x-2">
                         <span>{config.flag}</span>
                         <span>{config.name}</span>
@@ -311,7 +311,7 @@ export const GuardianUpload: React.FC<GuardianUploadProps> = ({
 
           {/* Roles */}
           <div className="space-y-2">
-            <Label>{t("guardianUpload.rolesTitle")} *</Label>
+            <Label data-testid="guardianupload-t-guardianupload-rolestitle">{t("guardianUpload.rolesTitle")} *</Label>
             <div className="grid grid-cols-1 gap-3">
               {availableRoles.map((role) => (
                 <div key={role.key} className="flex items-center space-x-2">
@@ -320,9 +320,9 @@ export const GuardianUpload: React.FC<GuardianUploadProps> = ({
                     checked={watchedRoles?.includes(role.value) || false}
                     onCheckedChange={(checked) =>
                       handleRoleToggle(role.value, checked as boolean)
-                    }
+                    } data-testid="guardianupload-checkbox"
                   />
-                  <Label htmlFor={role.key} className="text-sm font-normal">
+                  <Label htmlFor={role.key} className="text-sm font-normal" data-testid="guardianupload-role-value">
                     {role.value}
                   </Label>
                 </div>
@@ -335,13 +335,13 @@ export const GuardianUpload: React.FC<GuardianUploadProps> = ({
 
           {/* Optional Email */}
           <div className="space-y-2">
-            <Label htmlFor="email">{t("guardianUpload.emailLabel")}</Label>
+            <Label htmlFor="email" data-testid="guardianupload-t-guardianupload-emaillabel">{t("guardianUpload.emailLabel")}</Label>
             <Input
               id="email"
               type="email"
               {...register("email")}
               placeholder={t("guardianUpload.emailPlaceholder")}
-              className={errors.email ? "border-red-500" : ""}
+              className={errors.email ? "border-red-500" : ""} data-testid="guardianupload-input"
             />
             {errors.email && (
               <p className="text-sm text-red-500">{errors.email.message}</p>
@@ -350,13 +350,13 @@ export const GuardianUpload: React.FC<GuardianUploadProps> = ({
 
           {/* Optional Phone */}
           <div className="space-y-2">
-            <Label htmlFor="phone">{t("guardianUpload.phoneLabel")}</Label>
+            <Label htmlFor="phone" data-testid="guardianupload-t-guardianupload-phonelabel">{t("guardianUpload.phoneLabel")}</Label>
             <Input
               id="phone"
               type="tel"
               {...register("phone")}
               placeholder={t("guardianUpload.phonePlaceholder")}
-              className={errors.phone ? "border-red-500" : ""}
+              className={errors.phone ? "border-red-500" : ""} data-testid="guardianupload-input"
             />
             {errors.phone && (
               <p className="text-sm text-red-500">{errors.phone.message}</p>
@@ -364,14 +364,14 @@ export const GuardianUpload: React.FC<GuardianUploadProps> = ({
           </div>
 
           <div className="flex space-x-3 pt-4">
-            <Button type="submit" disabled={isLoading}>
+            <Button type="submit" disabled={isLoading} data-testid="guardianupload-button">
               {isLoading
                 ? t("guardianUpload.saving")
                 : editingGuardian
                   ? t("guardianUpload.updateButton")
                   : t("guardianUpload.addButton")}
             </Button>
-            <Button type="button" variant="outline" onClick={onCancel}>
+            <Button type="button" variant="outline" onClick={onCancel} data-testid="guardianupload-t-ui-elements-ui-cancel">
               {t("ui-elements:ui.cancel")}
             </Button>
           </div>

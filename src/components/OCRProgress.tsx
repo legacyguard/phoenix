@@ -21,10 +21,10 @@ export function OCRProgress({
 
   // Select icon based on progress stage
   const getIcon = () => {
-    if (progress < 20) return <FileText className="h-5 w-5 text-blue-600" />;
+    if (progress < 20) return <FileText className="h-5 w-5 text-blue-600" data-testid="ocrprogress-filetext" />;
     if (progress < 80)
-      return <Sparkles className="h-5 w-5 text-purple-600 animate-pulse" />;
-    return <Heart className="h-5 w-5 text-green-600" />;
+      return <Sparkles className="h-5 w-5 text-purple-600 animate-pulse" data-testid="ocrprogress-sparkles" />;
+    return <Heart className="h-5 w-5 text-green-600" data-testid="ocrprogress-heart" />;
   };
 
   // Get encouraging subtitle based on progress
@@ -56,7 +56,7 @@ export function OCRProgress({
         </div>
 
         {/* Progress bar */}
-        <Progress value={progress} className="h-2" />
+        <Progress value={progress} className="h-2" data-testid="ocrprogress-progress" />
 
         {/* Progress percentage */}
         <div className="flex justify-between items-center text-xs text-gray-500">
@@ -126,7 +126,7 @@ export function OCRStatusMessage({
     <div className={cn("space-y-2", className)}>
       {documentType && (
         <div className="flex items-center space-x-2 text-sm">
-          <FileText className="h-4 w-4 text-gray-400" />
+          <FileText className="h-4 w-4 text-gray-400" data-testid="ocrprogress-filetext" />
           <span className="text-gray-600">{t("oCRProgress.detected_3")}</span>
           <span className="font-medium text-gray-900">
             {getDocumentTypeDisplay(documentType)}

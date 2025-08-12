@@ -50,24 +50,24 @@ export function WillPreview({
 
   const renderRequirements = () => {
     return (
-      <Card>
-        <CardHeader>
-          <CardTitle className="text-base">
+      <Card data-testid="willpreview-card">
+        <CardHeader data-testid="willpreview-cardheader">
+          <CardTitle className="text-base" data-testid="willpreview-t-wills-preview-legalrequirements">
             {t("wills.preview.legalRequirements")}
           </CardTitle>
         </CardHeader>
-        <CardContent className="space-y-3">
+        <CardContent className="space-y-3" data-testid="willpreview-cardcontent">
           <div className="flex items-center gap-2">
             {requirements.requires_handwriting ? (
               <>
-                <AlertCircle className="h-4 w-4 text-orange-500" />
+                <AlertCircle className="h-4 w-4 text-orange-500" data-testid="willpreview-alertcircle" />
                 <span className="text-sm">
                   {t("wills:wills.requirements.handwriting")}
                 </span>
               </>
             ) : (
               <>
-                <CheckCircle2 className="h-4 w-4 text-green-500" />
+                <CheckCircle2 className="h-4 w-4 text-green-500" data-testid="willpreview-checkcircle2" />
                 <span className="text-sm">
                   {t("wills:wills.requirements.typed")}
                 </span>
@@ -79,12 +79,12 @@ export function WillPreview({
             <span className="text-sm font-medium">
               {t("wills:wills.requirements.witnesses")}:
             </span>
-            <Badge variant="secondary">{requirements.witness_count}</Badge>
+            <Badge variant="secondary" data-testid="willpreview-requirements-witness-count">{requirements.witness_count}</Badge>
           </div>
 
           {requirements.requires_notarization && (
             <div className="flex items-center gap-2">
-              <AlertCircle className="h-4 w-4 text-orange-500" />
+              <AlertCircle className="h-4 w-4 text-orange-500" data-testid="willpreview-alertcircle" />
               <span className="text-sm">
                 {t("wills:wills.requirements.notarization")}
               </span>
@@ -239,14 +239,14 @@ export function WillPreview({
       {renderRequirements()}
 
       {/* Will preview */}
-      <Card>
-        <CardHeader>
-          <CardTitle>{t("wills:wills.preview.title")}</CardTitle>
-          <CardDescription>
+      <Card data-testid="willpreview-card">
+        <CardHeader data-testid="willpreview-t-wills-wills-preview-title">
+          <CardTitle data-testid="willpreview-t-wills-wills-preview-title">{t("wills:wills.preview.title")}</CardTitle>
+          <CardDescription data-testid="willpreview-t-wills-wills-preview-description">
             {t("wills:wills.preview.description")}
           </CardDescription>
         </CardHeader>
-        <CardContent>
+        <CardContent data-testid="willpreview-renderwillcontent">
           <div className="bg-white p-8 rounded-lg border min-h-[600px]">
             {renderWillContent()}
           </div>
@@ -254,9 +254,9 @@ export function WillPreview({
       </Card>
 
       {/* Critical Execution Instructions Alert */}
-      <Alert className="border-amber-200 bg-amber-50 dark:bg-amber-950/20">
-        <AlertCircle className="h-4 w-4 text-amber-600" />
-        <AlertDescription className="text-amber-900 dark:text-amber-200">
+      <Alert className="border-amber-200 bg-amber-50 dark:bg-amber-950/20" data-testid="willpreview-alert">
+        <AlertCircle className="h-4 w-4 text-amber-600" data-testid="willpreview-alertcircle" />
+        <AlertDescription className="text-amber-900 dark:text-amber-200" data-testid="willpreview-alertdescription">
           <strong className="font-semibold">
             {t("wills.willPreview.critical_execution_instruction_3")}
           </strong>
@@ -266,20 +266,20 @@ export function WillPreview({
       </Alert>
 
       {/* Legal Review Offer Section */}
-      <Card className="border-earth-primary/20 bg-earth-primary/5">
-        <CardHeader>
+      <Card className="border-earth-primary/20 bg-earth-primary/5" data-testid="willpreview-card">
+        <CardHeader data-testid="willpreview-cardheader">
           <div className="flex items-center gap-3">
             <div className="p-2 bg-earth-primary/10 rounded-lg">
-              <Scale className="h-6 w-6 text-earth-primary" />
+              <Scale className="h-6 w-6 text-earth-primary" data-testid="willpreview-scale" />
             </div>
             <div className="flex-1">
-              <CardTitle className="text-lg flex items-center gap-2">
+              <CardTitle className="text-lg flex items-center gap-2" data-testid="willpreview-cardtitle">
                 {t("will.legalReview.title", "Ensure Complete Confidence")}
-                <Badge variant="secondary" className="text-xs">
+                <Badge variant="secondary" className="text-xs" data-testid="willpreview-badge">
                   {t("wills.willPreview.professional_review_4")}
                 </Badge>
               </CardTitle>
-              <CardDescription className="mt-1">
+              <CardDescription className="mt-1" data-testid="willpreview-carddescription">
                 {t(
                   "will.legalReview.description",
                   `While this template is designed to be legally compliant in ${countryCode}, every family's situation is unique. For a one-time fee, a legal expert from our partner law firm can personally review your generated will and answer any specific questions you have.`,
@@ -288,10 +288,10 @@ export function WillPreview({
             </div>
           </div>
         </CardHeader>
-        <CardContent>
+        <CardContent data-testid="willpreview-cardcontent">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
-              <Shield className="h-4 w-4" />
+              <Shield className="h-4 w-4" data-testid="willpreview-shield" />
               <span>
                 {t("wills.willPreview.provided_by_certified_legal_pa_5")}
                 {countryCode}
@@ -299,9 +299,9 @@ export function WillPreview({
             </div>
             <Button
               onClick={() => setShowLegalConsultation(true)}
-              className="bg-earth-primary hover:bg-earth-primary/90"
+              className="bg-earth-primary hover:bg-earth-primary/90" data-testid="willpreview-button"
             >
-              <Scale className="mr-2 h-4 w-4" />
+              <Scale className="mr-2 h-4 w-4" data-testid="willpreview-scale" />
               {t("will.legalReview.button", "Request a Legal Review")}
             </Button>
           </div>
@@ -310,12 +310,12 @@ export function WillPreview({
 
       {/* Actions */}
       <div className="flex justify-end gap-3">
-        <Button variant="outline">
-          <Printer className="mr-2 h-4 w-4" />
+        <Button variant="outline" data-testid="willpreview-t-wills-wills-preview-print">
+          <Printer className="mr-2 h-4 w-4" data-testid="willpreview-printer" />
           {t("wills:wills.preview.print")}
         </Button>
-        <Button onClick={onGenerate}>
-          <Download className="mr-2 h-4 w-4" />
+        <Button onClick={onGenerate} data-testid="willpreview-t-wills-preview-generatepdf">
+          <Download className="mr-2 h-4 w-4" data-testid="willpreview-download" />
           {t("wills.preview.generatePDF")}
         </Button>
       </div>
@@ -330,7 +330,7 @@ export function WillPreview({
             countryCode,
             documentType: "will",
             generatedDate: new Date().toISOString(),
-          }}
+          }} data-testid="willpreview-legalconsultationmodal"
         />
       )}
     </div>

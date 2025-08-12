@@ -50,7 +50,7 @@ describe("SmartUploadZone", () => {
   });
 
   it("should render the upload zone", () => {
-    render(<SmartUploadZone onUploadStart={mockOnUploadStart} />);
+    render(<SmartUploadZone onUploadStart={mockOnUploadStart} data-testid="smartuploadzone-test-smartuploadzone" />);
 
     expect(screen.getByText("assets.zone.dropHere")).toBeInTheDocument();
     expect(screen.getByText("assets.zone.description")).toBeInTheDocument();
@@ -59,7 +59,7 @@ describe("SmartUploadZone", () => {
 
   it("should show active state when dragging over", async () => {
     const user = userEvent.setup();
-    render(<SmartUploadZone onUploadStart={mockOnUploadStart} />);
+    render(<SmartUploadZone onUploadStart={mockOnUploadStart} data-testid="smartuploadzone-test-smartuploadzone" />);
 
     const uploadZone = screen.getByTestId("upload-zone");
 
@@ -86,7 +86,7 @@ describe("SmartUploadZone", () => {
 
   it("should handle file selection via button click", async () => {
     const user = userEvent.setup();
-    render(<SmartUploadZone onUploadStart={mockOnUploadStart} />);
+    render(<SmartUploadZone onUploadStart={mockOnUploadStart} data-testid="smartuploadzone-test-smartuploadzone" />);
 
     const fileInput = screen.getByTestId("file-input");
     const chooseFilesButton = screen.getByText("assets.zone.chooseFiles");
@@ -104,7 +104,7 @@ describe("SmartUploadZone", () => {
 
   it("should handle file drop", async () => {
     const user = userEvent.setup();
-    render(<SmartUploadZone onUploadStart={mockOnUploadStart} />);
+    render(<SmartUploadZone onUploadStart={mockOnUploadStart} data-testid="smartuploadzone-test-smartuploadzone" />);
 
     const uploadZone = screen.getByTestId("upload-zone");
 
@@ -129,13 +129,13 @@ describe("SmartUploadZone", () => {
       value: 375,
     });
 
-    render(<SmartUploadZone onUploadStart={mockOnUploadStart} />);
+    render(<SmartUploadZone onUploadStart={mockOnUploadStart} data-testid="smartuploadzone-test-smartuploadzone" />);
 
     expect(screen.getByText("assets.zone.takePhoto")).toBeInTheDocument();
   });
 
   it("should show privacy indicator for local processing", () => {
-    render(<SmartUploadZone onUploadStart={mockOnUploadStart} />);
+    render(<SmartUploadZone onUploadStart={mockOnUploadStart} data-testid="smartuploadzone-test-smartuploadzone" />);
 
     expect(
       screen.getByText("assets.zone.processingLocally"),
@@ -144,7 +144,7 @@ describe("SmartUploadZone", () => {
 
   it("should handle multiple file uploads", async () => {
     const user = userEvent.setup();
-    render(<SmartUploadZone onUploadStart={mockOnUploadStart} maxFiles={3} />);
+    render(<SmartUploadZone onUploadStart={mockOnUploadStart} maxFiles={3} data-testid="smartuploadzone-test-smartuploadzone" />);
 
     const fileInput = screen.getByTestId("file-input");
     const multipleFiles = [
@@ -167,7 +167,7 @@ describe("SmartUploadZone", () => {
     render(
       <SmartUploadZone
         onUploadStart={mockOnUploadStart}
-        acceptedTypes={["image/*"]}
+        acceptedTypes={["image/*"]} data-testid="smartuploadzone-test-smartuploadzone"
       />,
     );
 
@@ -193,7 +193,7 @@ describe("SmartUploadZone", () => {
 
   it("should handle drag leave correctly", async () => {
     const user = userEvent.setup();
-    render(<SmartUploadZone onUploadStart={mockOnUploadStart} />);
+    render(<SmartUploadZone onUploadStart={mockOnUploadStart} data-testid="smartuploadzone-test-smartuploadzone" />);
 
     const uploadZone = screen.getByTestId("upload-zone");
 
@@ -208,7 +208,7 @@ describe("SmartUploadZone", () => {
 
   it("should show drag overlay when dragging", async () => {
     const user = userEvent.setup();
-    render(<SmartUploadZone onUploadStart={mockOnUploadStart} />);
+    render(<SmartUploadZone onUploadStart={mockOnUploadStart} data-testid="smartuploadzone-test-smartuploadzone" />);
 
     const uploadZone = screen.getByTestId("upload-zone");
 
@@ -221,7 +221,7 @@ describe("SmartUploadZone", () => {
 
   it("should handle camera button click", async () => {
     const user = userEvent.setup();
-    render(<SmartUploadZone onUploadStart={mockOnUploadStart} />);
+    render(<SmartUploadZone onUploadStart={mockOnUploadStart} data-testid="smartuploadzone-test-smartuploadzone" />);
 
     const cameraButton = screen.getByText("assets.zone.takePhoto");
     await user.click(cameraButton);
@@ -234,7 +234,7 @@ describe("SmartUploadZone", () => {
     render(
       <SmartUploadZone
         onUploadStart={mockOnUploadStart}
-        className="custom-class"
+        className="custom-class" data-testid="smartuploadzone-test-smartuploadzone"
       />,
     );
 
@@ -244,7 +244,7 @@ describe("SmartUploadZone", () => {
 
   it("should handle file input change with no files", async () => {
     const user = userEvent.setup();
-    render(<SmartUploadZone onUploadStart={mockOnUploadStart} />);
+    render(<SmartUploadZone onUploadStart={mockOnUploadStart} data-testid="smartuploadzone-test-smartuploadzone" />);
 
     const fileInput = screen.getByTestId("file-input");
 
@@ -258,7 +258,7 @@ describe("SmartUploadZone", () => {
 
   it("should handle file input change with null files", async () => {
     const user = userEvent.setup();
-    render(<SmartUploadZone onUploadStart={mockOnUploadStart} />);
+    render(<SmartUploadZone onUploadStart={mockOnUploadStart} data-testid="smartuploadzone-test-smartuploadzone" />);
 
     const fileInput = screen.getByTestId("file-input");
 

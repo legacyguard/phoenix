@@ -70,28 +70,28 @@ const questions: LifeQuestion[] = [
       {
         value: "spouse_children",
         label: "My spouse and children rely on me for everything",
-        icon: <Users className="h-5 w-5" />,
+        icon: <Users className="h-5 w-5" data-testid="basiclifequestions-users" />,
         description:
           "I handle the major decisions and keep our household running",
       },
       {
         value: "family_turns_to_me",
         label: "I'm the one my family turns to when things go wrong",
-        icon: <Shield className="h-5 w-5" />,
+        icon: <Shield className="h-5 w-5" data-testid="basiclifequestions-shield" />,
         description:
           "From emergencies to big decisions, they count on my judgment",
       },
       {
         value: "handle_decisions",
         label: "I handle most of the important family decisions",
-        icon: <FileCheck className="h-5 w-5" />,
+        icon: <FileCheck className="h-5 w-5" data-testid="basiclifequestions-filecheck" />,
         description:
           "Financial planning, major purchases, future planning - it's on me",
       },
       {
         value: "family_would_struggle",
         label: "My family would struggle without my guidance",
-        icon: <AlertCircle className="h-5 w-5" />,
+        icon: <AlertCircle className="h-5 w-5" data-testid="basiclifequestions-alertcircle" />,
         description:
           "They depend on my experience and knowledge to navigate life",
       },
@@ -108,27 +108,27 @@ const questions: LifeQuestion[] = [
       {
         value: "fully_organized",
         label: "I've got everything organized and under control",
-        icon: <FileCheck className="h-5 w-5" />,
+        icon: <FileCheck className="h-5 w-5" data-testid="basiclifequestions-filecheck" />,
         description: "Documents filed, accounts listed, everything documented",
       },
       {
         value: "know_but_scattered",
         label: "I know what I have, but it's not all in one place",
-        icon: <TrendingUp className="h-5 w-5" />,
+        icon: <TrendingUp className="h-5 w-5" data-testid="basiclifequestions-trendingup" />,
         description:
           "Information exists but it's spread across different locations",
       },
       {
         value: "need_time",
         label: "I'd need time to gather everything together",
-        icon: <AlertCircle className="h-5 w-5" />,
+        icon: <AlertCircle className="h-5 w-5" data-testid="basiclifequestions-alertcircle" />,
         description:
           "I could find what's needed, but it would take significant effort",
       },
       {
         value: "not_sure",
         label: "Honestly, I'm not sure where everything is",
-        icon: <Users className="h-5 w-5" />,
+        icon: <Users className="h-5 w-5" data-testid="basiclifequestions-users" />,
         description:
           "Things have accumulated over the years without much organization",
       },
@@ -145,28 +145,28 @@ const questions: LifeQuestion[] = [
       {
         value: "documents_passwords",
         label: "Finding important documents and passwords",
-        icon: <FileCheck className="h-5 w-5" />,
+        icon: <FileCheck className="h-5 w-5" data-testid="basiclifequestions-filecheck" />,
         description:
           "They wouldn't know where to look or how to access critical accounts",
       },
       {
         value: "contacts_actions",
         label: "Knowing who to contact and what to do",
-        icon: <Users className="h-5 w-5" />,
+        icon: <Users className="h-5 w-5" data-testid="basiclifequestions-users" />,
         description:
           "The network of professionals and steps to take in various situations",
       },
       {
         value: "financial_situation",
         label: "Understanding our financial situation",
-        icon: <TrendingUp className="h-5 w-5" />,
+        icon: <TrendingUp className="h-5 w-5" data-testid="basiclifequestions-trendingup" />,
         description:
           "Accounts, investments, debts, and ongoing financial obligations",
       },
       {
         value: "decisions_i_handle",
         label: "Making decisions I usually handle",
-        icon: <Shield className="h-5 w-5" />,
+        icon: <Shield className="h-5 w-5" data-testid="basiclifequestions-shield" />,
         description:
           "From daily operations to major life choices I typically manage",
       },
@@ -183,26 +183,26 @@ const questions: LifeQuestion[] = [
       {
         value: "family_security",
         label: "Providing for my family's future security",
-        icon: <Shield className="h-5 w-5" />,
+        icon: <Shield className="h-5 w-5" data-testid="basiclifequestions-shield" />,
         description:
           "Ensuring they're financially protected and prepared for the future",
       },
       {
         value: "financial_affairs",
         label: "Managing our family's financial affairs",
-        icon: <TrendingUp className="h-5 w-5" />,
+        icon: <TrendingUp className="h-5 w-5" data-testid="basiclifequestions-trendingup" />,
         description: "Investments, retirement planning, and building wealth",
       },
       {
         value: "aging_parents",
         label: "Taking care of aging parents",
-        icon: <Heart className="h-5 w-5" />,
+        icon: <Heart className="h-5 w-5" data-testid="basiclifequestions-heart" />,
         description: "Managing their care, finances, and end-of-life planning",
       },
       {
         value: "business_family",
         label: "Running a business that supports my family",
-        icon: <Briefcase className="h-5 w-5" />,
+        icon: <Briefcase className="h-5 w-5" data-testid="basiclifequestions-briefcase" />,
         description:
           "Ensuring business continuity and protecting family income",
       },
@@ -219,26 +219,26 @@ const questions: LifeQuestion[] = [
       {
         value: "family_confusion",
         label: "My family being confused and not knowing what to do",
-        icon: <AlertCircle className="h-5 w-5" />,
+        icon: <AlertCircle className="h-5 w-5" data-testid="basiclifequestions-alertcircle" />,
         description:
           "They might make costly mistakes or miss important deadlines",
       },
       {
         value: "financial_burden",
         label: "Leaving them with financial burdens or complications",
-        icon: <TrendingUp className="h-5 w-5" />,
+        icon: <TrendingUp className="h-5 w-5" data-testid="basiclifequestions-trendingup" />,
         description: "Unexpected costs, taxes, or debts they didn't know about",
       },
       {
         value: "family_conflict",
         label: "Family conflicts over assets or decisions",
-        icon: <Users className="h-5 w-5" />,
+        icon: <Users className="h-5 w-5" data-testid="basiclifequestions-users" />,
         description: "Disagreements that could damage family relationships",
       },
       {
         value: "lost_opportunities",
         label: "Important things being forgotten or lost",
-        icon: <Shield className="h-5 w-5" />,
+        icon: <Shield className="h-5 w-5" data-testid="basiclifequestions-shield" />,
         description:
           "Benefits, accounts, or opportunities they don't know exist",
       },
@@ -255,25 +255,25 @@ const questions: LifeQuestion[] = [
       {
         value: "immediate",
         label: "I need to get this done right away",
-        icon: <Clock className="h-5 w-5" />,
+        icon: <Clock className="h-5 w-5" data-testid="basiclifequestions-clock" />,
         description: "There's an urgent reason or upcoming event",
       },
       {
         value: "soon",
         label: "Within the next few months",
-        icon: <Calendar className="h-5 w-5" />,
+        icon: <Calendar className="h-5 w-5" data-testid="basiclifequestions-calendar" />,
         description: "It's important but not immediately urgent",
       },
       {
         value: "eventually",
         label: "Sometime this year",
-        icon: <CheckCircle className="h-5 w-5" />,
+        icon: <CheckCircle className="h-5 w-5" data-testid="basiclifequestions-checkcircle" />,
         description: "I want to check this off my list",
       },
       {
         value: "exploring",
         label: "Just exploring what I need to do",
-        icon: <FileCheck className="h-5 w-5" />,
+        icon: <FileCheck className="h-5 w-5" data-testid="basiclifequestions-filecheck" />,
         description: "Learning about the process before committing",
       },
     ],
@@ -289,26 +289,26 @@ const questions: LifeQuestion[] = [
       {
         value: "young_children",
         label: "I have young children who depend on me",
-        icon: <Heart className="h-5 w-5" />,
+        icon: <Heart className="h-5 w-5" data-testid="basiclifequestions-heart" />,
         description: "Minor children who need guardianship planning",
       },
       {
         value: "adult_children",
         label: "My children are grown but I still guide them",
-        icon: <Users className="h-5 w-5" />,
+        icon: <Users className="h-5 w-5" data-testid="basiclifequestions-users" />,
         description: "Adult children who may need help managing inheritance",
       },
       {
         value: "blended_family",
         label: "We're a blended family with multiple considerations",
-        icon: <Home className="h-5 w-5" />,
+        icon: <Home className="h-5 w-5" data-testid="basiclifequestions-home" />,
         description:
           "Step-children, multiple marriages, or complex relationships",
       },
       {
         value: "extended_care",
         label: "I care for extended family or have unique circumstances",
-        icon: <Shield className="h-5 w-5" />,
+        icon: <Shield className="h-5 w-5" data-testid="basiclifequestions-shield" />,
         description:
           "Elderly parents, special needs family members, or other dependents",
       },
@@ -325,25 +325,25 @@ const questions: LifeQuestion[] = [
       {
         value: "straightforward",
         label: "Pretty straightforward - job, home, some savings",
-        icon: <Home className="h-5 w-5" />,
+        icon: <Home className="h-5 w-5" data-testid="basiclifequestions-home" />,
         description: "Standard assets without major complications",
       },
       {
         value: "multiple_assets",
         label: "Multiple properties or significant investments",
-        icon: <TrendingUp className="h-5 w-5" />,
+        icon: <TrendingUp className="h-5 w-5" data-testid="basiclifequestions-trendingup" />,
         description: "Real estate, stocks, retirement accounts",
       },
       {
         value: "business_owner",
         label: "I own a business or have partnership interests",
-        icon: <Briefcase className="h-5 w-5" />,
+        icon: <Briefcase className="h-5 w-5" data-testid="basiclifequestions-briefcase" />,
         description: "Business succession planning needed",
       },
       {
         value: "complex_estate",
         label: "Complex with trusts, international assets, or tax concerns",
-        icon: <Shield className="h-5 w-5" />,
+        icon: <Shield className="h-5 w-5" data-testid="basiclifequestions-shield" />,
         description: "Requires sophisticated estate planning",
       },
     ],
@@ -435,7 +435,7 @@ export const BasicLifeQuestions: React.FC<BasicLifeQuestionsProps> = ({
           </span>
           <span className="text-xs">{Math.round(progress)}% complete</span>
         </div>
-        <Progress value={progress} className="h-2" />
+        <Progress value={progress} className="h-2" data-testid="basiclifequestions-progress" />
       </div>
 
       {/* Question Card */}
@@ -445,17 +445,17 @@ export const BasicLifeQuestions: React.FC<BasicLifeQuestionsProps> = ({
             "border-0 shadow-xl overflow-hidden transition-all duration-300",
             "bg-gradient-to-br",
             getThemeColors(currentQuestion.theme),
-          )}
+          )} data-testid="basiclifequestions-card"
         >
-          <CardHeader className="text-white pb-4">
-            <CardDescription className="text-white/80 text-base">
+          <CardHeader className="text-white pb-4" data-testid="basiclifequestions-currentquestion-subtitle">
+            <CardDescription className="text-white/80 text-base" data-testid="basiclifequestions-currentquestion-subtitle">
               {currentQuestion.subtitle}
             </CardDescription>
-            <CardTitle className="text-2xl md:text-3xl font-bold">
+            <CardTitle className="text-2xl md:text-3xl font-bold" data-testid="basiclifequestions-currentquestion-question">
               {currentQuestion.question}
             </CardTitle>
           </CardHeader>
-          <CardContent className="bg-background/95 backdrop-blur pt-6">
+          <CardContent className="bg-background/95 backdrop-blur pt-6" data-testid="basiclifequestions-currentquestion-explanation">
             <p className="text-muted-foreground mb-6">
               {currentQuestion.explanation}
             </p>
@@ -473,7 +473,7 @@ export const BasicLifeQuestions: React.FC<BasicLifeQuestionsProps> = ({
                     selectedOption === option.value
                       ? "border-primary bg-primary/10"
                       : "border-muted-foreground/20",
-                  )}
+                  )} data-testid="basiclifequestions-control"
                 >
                   <div className="flex items-start gap-3">
                     {option.icon && (
@@ -519,9 +519,9 @@ export const BasicLifeQuestions: React.FC<BasicLifeQuestionsProps> = ({
           variant="outline"
           size="lg"
           onClick={handlePrevious}
-          className="min-w-[120px]"
+          className="min-w-[120px]" data-testid="basiclifequestions-button"
         >
-          <ChevronLeft className="mr-2 h-4 w-4" />
+          <ChevronLeft className="mr-2 h-4 w-4" data-testid="basiclifequestions-chevronleft" />
           {currentQuestionIndex === 0
             ? tCommon("common.back")
             : tCommon("common.previous")}
@@ -532,12 +532,12 @@ export const BasicLifeQuestions: React.FC<BasicLifeQuestionsProps> = ({
           size="lg"
           onClick={handleNext}
           disabled={!selectedOption}
-          className={cn("min-w-[120px]", selectedOption && "animate-pulse")}
+          className={cn("min-w-[120px]", selectedOption && "animate-pulse")} data-testid="basiclifequestions-button"
         >
           {currentQuestionIndex === questions.length - 1
             ? t("completion.viewPlan")
             : tCommon("common.next")}
-          <ChevronRight className="ml-2 h-4 w-4" />
+          <ChevronRight className="ml-2 h-4 w-4" data-testid="basiclifequestions-chevronright" />
         </Button>
       </div>
     </div>

@@ -48,7 +48,7 @@ export const FirstTimeUserGuide: React.FC<FirstTimeUserGuideProps> = ({
       id: "welcome",
       title: t("dashboard.firstTimeGuide.welcome.title"),
       description: t("dashboard.firstTimeGuide.welcome.description"),
-      icon: <Shield className="h-8 w-8 text-primary" />,
+      icon: <Shield className="h-8 w-8 text-primary" data-testid="firsttimeuserguide-shield" />,
       tips: [
         t("dashboard.firstTimeGuide.welcome.tip1"),
         t("dashboard.firstTimeGuide.welcome.tip2"),
@@ -59,7 +59,7 @@ export const FirstTimeUserGuide: React.FC<FirstTimeUserGuideProps> = ({
       id: "progress",
       title: t("dashboard.firstTimeGuide.progress.title"),
       description: t("dashboard.firstTimeGuide.progress.description"),
-      icon: <Target className="h-8 w-8 text-primary" />,
+      icon: <Target className="h-8 w-8 text-primary" data-testid="firsttimeuserguide-target" />,
       tips: [
         t("dashboard.firstTimeGuide.progress.tip1"),
         t("dashboard.firstTimeGuide.progress.tip2"),
@@ -70,7 +70,7 @@ export const FirstTimeUserGuide: React.FC<FirstTimeUserGuideProps> = ({
       id: "stages",
       title: t("dashboard.firstTimeGuide.stages.title"),
       description: t("dashboard.firstTimeGuide.stages.description"),
-      icon: <ClipboardCheck className="h-8 w-8 text-primary" />,
+      icon: <ClipboardCheck className="h-8 w-8 text-primary" data-testid="firsttimeuserguide-clipboardcheck" />,
       tips: [
         t("dashboard.firstTimeGuide.stages.tip1"),
         t("dashboard.firstTimeGuide.stages.tip2"),
@@ -82,7 +82,7 @@ export const FirstTimeUserGuide: React.FC<FirstTimeUserGuideProps> = ({
       id: "recommendations",
       title: t("dashboard.firstTimeGuide.recommendations.title"),
       description: t("dashboard.firstTimeGuide.recommendations.description"),
-      icon: <Lightbulb className="h-8 w-8 text-primary" />,
+      icon: <Lightbulb className="h-8 w-8 text-primary" data-testid="firsttimeuserguide-lightbulb" />,
       tips: [
         t("dashboard.firstTimeGuide.recommendations.tip1"),
         t("dashboard.firstTimeGuide.recommendations.tip2"),
@@ -146,20 +146,20 @@ export const FirstTimeUserGuide: React.FC<FirstTimeUserGuideProps> = ({
 
   return (
     <div className="fixed inset-0 z-50 bg-black/50 flex items-center justify-center p-4">
-      <Card className="max-w-2xl w-full max-h-[90vh] overflow-hidden">
-        <CardHeader className="relative">
+      <Card className="max-w-2xl w-full max-h-[90vh] overflow-hidden" data-testid="firsttimeuserguide-card">
+        <CardHeader className="relative" data-testid="firsttimeuserguide-cardheader">
           <Button
             variant="ghost"
             size="icon"
             className="absolute top-4 right-4"
-            onClick={handleSkip}
+            onClick={handleSkip} data-testid="firsttimeuserguide-button"
           >
-            <X className="h-4 w-4" />
+            <X className="h-4 w-4" data-testid="firsttimeuserguide-x" />
           </Button>
           <div className="flex items-center space-x-4 mb-4">
             {currentStepData.icon}
             <div>
-              <CardTitle className="text-2xl">
+              <CardTitle className="text-2xl" data-testid="firsttimeuserguide-currentstepdata-title">
                 {currentStepData.title}
               </CardTitle>
               <p className="text-sm text-muted-foreground mt-1">
@@ -170,23 +170,23 @@ export const FirstTimeUserGuide: React.FC<FirstTimeUserGuideProps> = ({
               </p>
             </div>
           </div>
-          <Progress value={progress} className="h-2" />
+          <Progress value={progress} className="h-2" data-testid="firsttimeuserguide-progress" />
         </CardHeader>
-        <CardContent className="space-y-6 overflow-y-auto max-h-[60vh]">
-          <CardDescription className="text-base">
+        <CardContent className="space-y-6 overflow-y-auto max-h-[60vh]" data-testid="firsttimeuserguide-currentstepdata-description">
+          <CardDescription className="text-base" data-testid="firsttimeuserguide-currentstepdata-description">
             {currentStepData.description}
           </CardDescription>
 
           <div className="space-y-3">
             <h4 className="font-semibold text-sm flex items-center gap-2">
-              <Lightbulb className="h-4 w-4 text-primary" />
+              <Lightbulb className="h-4 w-4 text-primary" data-testid="firsttimeuserguide-lightbulb" />
               {t("dashboard.firstTimeGuide.helpfulTips")}
             </h4>
             <div className="space-y-2">
               {currentStepData.tips.map((tip, index) => (
-                <Alert key={index} className="border-l-4 border-l-primary">
-                  <AlertDescription className="flex items-start gap-2">
-                    <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                <Alert key={index} className="border-l-4 border-l-primary" data-testid="firsttimeuserguide-alert">
+                  <AlertDescription className="flex items-start gap-2" data-testid="firsttimeuserguide-alertdescription">
+                    <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" data-testid="firsttimeuserguide-checkcircle" />
                     <span>{tip}</span>
                   </AlertDescription>
                 </Alert>
@@ -194,9 +194,9 @@ export const FirstTimeUserGuide: React.FC<FirstTimeUserGuideProps> = ({
             </div>
           </div>
 
-          <Alert className="bg-muted/50 border-muted">
-            <AlertTriangle className="h-4 w-4" />
-            <AlertDescription>
+          <Alert className="bg-muted/50 border-muted" data-testid="firsttimeuserguide-alert">
+            <AlertTriangle className="h-4 w-4" data-testid="firsttimeuserguide-alerttriangle" />
+            <AlertDescription data-testid="firsttimeuserguide-t-dashboard-firsttimeguide-importantnote">
               {t("dashboard.firstTimeGuide.importantNote")}
             </AlertDescription>
           </Alert>
@@ -206,25 +206,25 @@ export const FirstTimeUserGuide: React.FC<FirstTimeUserGuideProps> = ({
               variant="outline"
               onClick={handlePrevious}
               disabled={currentStep === 0}
-              className="flex items-center gap-2"
+              className="flex items-center gap-2" data-testid="firsttimeuserguide-button"
             >
-              <ChevronLeft className="h-4 w-4" />
+              <ChevronLeft className="h-4 w-4" data-testid="firsttimeuserguide-chevronleft" />
               {t("dashboard.firstTimeGuide.previous")}
             </Button>
 
             <Button
               variant="ghost"
               onClick={handleSkip}
-              className="text-muted-foreground"
+              className="text-muted-foreground" data-testid="firsttimeuserguide-t-dashboard-firsttimeguide-skiptour"
             >
               {t("dashboard.firstTimeGuide.skipTour")}
             </Button>
 
-            <Button onClick={handleNext} className="flex items-center gap-2">
+            <Button onClick={handleNext} className="flex items-center gap-2" data-testid="firsttimeuserguide-button">
               {currentStep === steps.length - 1
                 ? t("dashboard.firstTimeGuide.finish")
                 : t("dashboard.firstTimeGuide.next")}
-              <ChevronRight className="h-4 w-4" />
+              <ChevronRight className="h-4 w-4" data-testid="firsttimeuserguide-chevronright" />
             </Button>
           </div>
         </CardContent>

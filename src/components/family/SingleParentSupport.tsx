@@ -99,22 +99,22 @@ export const SingleParentSupport: React.FC = () => {
   return (
     <div className="space-y-6">
       {/* Header */}
-      <Card>
-        <CardHeader>
+      <Card data-testid="singleparentsupport-card">
+        <CardHeader data-testid="singleparentsupport-cardheader">
           <div className="flex items-center gap-3">
             <div className="p-3 bg-pink-100 rounded-full">
-              <Heart className="h-6 w-6 text-pink-600" />
+              <Heart className="h-6 w-6 text-pink-600" data-testid="singleparentsupport-heart" />
             </div>
             <div>
-              <CardTitle>{t("singleParent.title")}</CardTitle>
-              <CardDescription>{t("singleParent.description")}</CardDescription>
+              <CardTitle data-testid="singleparentsupport-t-singleparent-title">{t("singleParent.title")}</CardTitle>
+              <CardDescription data-testid="singleparentsupport-t-singleparent-description">{t("singleParent.description")}</CardDescription>
             </div>
           </div>
         </CardHeader>
-        <CardContent>
-          <Alert>
-            <Heart className="h-4 w-4" />
-            <AlertDescription>
+        <CardContent data-testid="singleparentsupport-cardcontent">
+          <Alert data-testid="singleparentsupport-alert">
+            <Heart className="h-4 w-4" data-testid="singleparentsupport-heart" />
+            <AlertDescription data-testid="singleparentsupport-t-singleparent-encouragement">
               {t("singleParent.encouragement")}
             </AlertDescription>
           </Alert>
@@ -122,52 +122,52 @@ export const SingleParentSupport: React.FC = () => {
       </Card>
 
       {/* Main Content */}
-      <Tabs value={activeTab} onValueChange={setActiveTab}>
-        <TabsList className="grid w-full grid-cols-3">
-          <TabsTrigger value="network">
-            <Users className="h-4 w-4 mr-2" />
+      <Tabs value={activeTab} onValueChange={setActiveTab} data-testid="singleparentsupport-tabs">
+        <TabsList className="grid w-full grid-cols-3" data-testid="singleparentsupport-tabslist">
+          <TabsTrigger value="network" data-testid="singleparentsupport-t-singleparent-tabs-network">
+            <Users className="h-4 w-4 mr-2" data-testid="singleparentsupport-users" />
             {t("singleParent.tabs.network")}
           </TabsTrigger>
-          <TabsTrigger value="emergency">
-            <AlertCircle className="h-4 w-4 mr-2" />
+          <TabsTrigger value="emergency" data-testid="singleparentsupport-t-singleparent-tabs-emergency">
+            <AlertCircle className="h-4 w-4 mr-2" data-testid="singleparentsupport-alertcircle" />
             {t("singleParent.tabs.emergency")}
           </TabsTrigger>
-          <TabsTrigger value="resources">
-            <HelpCircle className="h-4 w-4 mr-2" />
+          <TabsTrigger value="resources" data-testid="singleparentsupport-t-singleparent-tabs-resources">
+            <HelpCircle className="h-4 w-4 mr-2" data-testid="singleparentsupport-helpcircle" />
             {t("singleParent.tabs.resources")}
           </TabsTrigger>
         </TabsList>
 
         {/* Guardian Network Tab */}
-        <TabsContent value="network" className="space-y-4">
-          <Card>
-            <CardHeader>
+        <TabsContent value="network" className="space-y-4" data-testid="singleparentsupport-tabscontent">
+          <Card data-testid="singleparentsupport-card">
+            <CardHeader data-testid="singleparentsupport-cardheader">
               <div className="flex items-center justify-between">
                 <div>
-                  <CardTitle className="text-lg">
+                  <CardTitle className="text-lg" data-testid="singleparentsupport-t-singleparent-guardiannetwork">
                     {t("singleParent.guardianNetwork")}
                   </CardTitle>
-                  <CardDescription>
+                  <CardDescription data-testid="singleparentsupport-t-singleparent-guardiannetworkdesc">
                     {t("singleParent.guardianNetworkDesc")}
                   </CardDescription>
                 </div>
-                <Button onClick={() => setShowAddGuardian(true)} size="sm">
-                  <Plus className="h-4 w-4 mr-2" />
+                <Button onClick={() => setShowAddGuardian(true)} size="sm" data-testid="singleparentsupport-setshowaddguardian-true-size-sm">
+                  <Plus className="h-4 w-4 mr-2" data-testid="singleparentsupport-plus" />
                   {t("singleParent.addGuardian")}
                 </Button>
               </div>
             </CardHeader>
-            <CardContent>
+            <CardContent data-testid="singleparentsupport-guardians-length-0">
               {guardians.length === 0 ? (
                 <div className="text-center py-8">
-                  <Users className="h-12 w-12 text-gray-300 mx-auto mb-3" />
+                  <Users className="h-12 w-12 text-gray-300 mx-auto mb-3" data-testid="singleparentsupport-users" />
                   <p className="text-gray-500">
                     {t("singleParent.noGuardians")}
                   </p>
                   <Button
                     onClick={() => setShowAddGuardian(true)}
                     variant="outline"
-                    className="mt-4"
+                    className="mt-4" data-testid="singleparentsupport-t-singleparent-startbuilding"
                   >
                     {t("singleParent.startBuilding")}
                   </Button>
@@ -183,14 +183,14 @@ export const SingleParentSupport: React.FC = () => {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: index * 0.1 }}
                       >
-                        <Card>
-                          <CardContent className="p-4">
+                        <Card data-testid="singleparentsupport-card">
+                          <CardContent className="p-4" data-testid="singleparentsupport-cardcontent">
                             <div className="flex items-start justify-between">
                               <div className="flex items-start gap-3">
                                 <div
                                   className={`p-2 rounded-full ${getGuardianColor(guardian.role)}`}
                                 >
-                                  <GuardianIcon className="h-5 w-5" />
+                                  <GuardianIcon className="h-5 w-5" data-testid="singleparentsupport-guardianicon" />
                                 </div>
                                 <div>
                                   <h4 className="font-medium">
@@ -201,11 +201,11 @@ export const SingleParentSupport: React.FC = () => {
                                   </p>
                                   <div className="flex items-center gap-4 mt-2 text-xs text-gray-500">
                                     <span className="flex items-center gap-1">
-                                      <Phone className="h-3 w-3" />
+                                      <Phone className="h-3 w-3" data-testid="singleparentsupport-phone" />
                                       {guardian.phone}
                                     </span>
                                     <span className="flex items-center gap-1">
-                                      <Clock className="h-3 w-3" />
+                                      <Clock className="h-3 w-3" data-testid="singleparentsupport-clock" />
                                       {guardian.availability}
                                     </span>
                                   </div>
@@ -215,7 +215,7 @@ export const SingleParentSupport: React.FC = () => {
                                         <Badge
                                           key={strength}
                                           variant="secondary"
-                                          className="text-xs"
+                                          className="text-xs" data-testid="singleparentsupport-strength"
                                         >
                                           {strength}
                                         </Badge>
@@ -224,7 +224,7 @@ export const SingleParentSupport: React.FC = () => {
                                   )}
                                 </div>
                               </div>
-                              <Badge variant="outline">
+                              <Badge variant="outline" data-testid="singleparentsupport-badge">
                                 {t(`singleParent.roles.${guardian.role}`)}
                               </Badge>
                             </div>
@@ -237,9 +237,9 @@ export const SingleParentSupport: React.FC = () => {
               )}
 
               {guardians.length > 0 && guardians.length < 3 && (
-                <Alert className="mt-4">
-                  <AlertCircle className="h-4 w-4" />
-                  <AlertDescription>
+                <Alert className="mt-4" data-testid="singleparentsupport-alert">
+                  <AlertCircle className="h-4 w-4" data-testid="singleparentsupport-alertcircle" />
+                  <AlertDescription data-testid="singleparentsupport-t-singleparent-needmoreguardians">
                     {t("singleParent.needMoreGuardians")}
                   </AlertDescription>
                 </Alert>
@@ -248,13 +248,13 @@ export const SingleParentSupport: React.FC = () => {
           </Card>
 
           {/* Guardian Strength Assessment */}
-          <Card>
-            <CardHeader>
-              <CardTitle className="text-lg">
+          <Card data-testid="singleparentsupport-card">
+            <CardHeader data-testid="singleparentsupport-cardheader">
+              <CardTitle className="text-lg" data-testid="singleparentsupport-t-singleparent-networkstrength">
                 {t("singleParent.networkStrength")}
               </CardTitle>
             </CardHeader>
-            <CardContent>
+            <CardContent data-testid="singleparentsupport-cardcontent">
               <div className="space-y-4">
                 <div>
                   <div className="flex justify-between mb-2">
@@ -265,31 +265,31 @@ export const SingleParentSupport: React.FC = () => {
                       {Math.min(100, guardians.length * 33)}%
                     </span>
                   </div>
-                  <Progress value={Math.min(100, guardians.length * 33)} />
+                  <Progress value={Math.min(100, guardians.length * 33)} data-testid="singleparentsupport-progress" />
                 </div>
 
                 <div className="grid grid-cols-2 gap-3 text-sm">
                   <div className="flex items-center gap-2">
                     <CheckCircle2
-                      className={`h-4 w-4 ${guardians.some((g) => g.role === "primary") ? "text-green-600" : "text-gray-300"}`}
+                      className={`h-4 w-4 ${guardians.some((g) => g.role === "primary") ? "text-green-600" : "text-gray-300"}`} data-testid="singleparentsupport-checkcircle2"
                     />
                     <span>{t("singleParent.primaryGuardian")}</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle2
-                      className={`h-4 w-4 ${guardians.some((g) => g.role === "backup") ? "text-green-600" : "text-gray-300"}`}
+                      className={`h-4 w-4 ${guardians.some((g) => g.role === "backup") ? "text-green-600" : "text-gray-300"}`} data-testid="singleparentsupport-checkcircle2"
                     />
                     <span>{t("singleParent.backupGuardian")}</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle2
-                      className={`h-4 w-4 ${guardians.some((g) => g.role === "emergency") ? "text-green-600" : "text-gray-300"}`}
+                      className={`h-4 w-4 ${guardians.some((g) => g.role === "emergency") ? "text-green-600" : "text-gray-300"}`} data-testid="singleparentsupport-checkcircle2"
                     />
                     <span>{t("singleParent.emergencyContact")}</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle2
-                      className={`h-4 w-4 ${guardians.length >= 3 ? "text-green-600" : "text-gray-300"}`}
+                      className={`h-4 w-4 ${guardians.length >= 3 ? "text-green-600" : "text-gray-300"}`} data-testid="singleparentsupport-checkcircle2"
                     />
                     <span>{t("singleParent.multipleOptions")}</span>
                   </div>
@@ -300,22 +300,22 @@ export const SingleParentSupport: React.FC = () => {
         </TabsContent>
 
         {/* Emergency Planning Tab */}
-        <TabsContent value="emergency" className="space-y-4">
-          <Card>
-            <CardHeader>
-              <CardTitle className="text-lg">
+        <TabsContent value="emergency" className="space-y-4" data-testid="singleparentsupport-tabscontent">
+          <Card data-testid="singleparentsupport-card">
+            <CardHeader data-testid="singleparentsupport-cardheader">
+              <CardTitle className="text-lg" data-testid="singleparentsupport-t-singleparent-emergencyplanning">
                 {t("singleParent.emergencyPlanning")}
               </CardTitle>
-              <CardDescription>
+              <CardDescription data-testid="singleparentsupport-t-singleparent-emergencyplanningdesc">
                 {t("singleParent.emergencyPlanningDesc")}
               </CardDescription>
             </CardHeader>
-            <CardContent>
+            <CardContent data-testid="singleparentsupport-cardcontent">
               <div className="space-y-4">
                 {/* Quick Emergency Cards */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <Card className="border-2 border-dashed">
-                    <CardContent className="p-4">
+                  <Card className="border-2 border-dashed" data-testid="singleparentsupport-card">
+                    <CardContent className="p-4" data-testid="singleparentsupport-cardcontent">
                       <h4 className="font-medium mb-2">
                         {t("singleParent.ifHospitalized")}
                       </h4>
@@ -327,8 +327,8 @@ export const SingleParentSupport: React.FC = () => {
                     </CardContent>
                   </Card>
 
-                  <Card className="border-2 border-dashed">
-                    <CardContent className="p-4">
+                  <Card className="border-2 border-dashed" data-testid="singleparentsupport-card">
+                    <CardContent className="p-4" data-testid="singleparentsupport-cardcontent">
                       <h4 className="font-medium mb-2">
                         {t("singleParent.ifTraveling")}
                       </h4>
@@ -342,15 +342,15 @@ export const SingleParentSupport: React.FC = () => {
                 </div>
 
                 {/* Emergency Documents */}
-                <Alert>
-                  <FileText className="h-4 w-4" />
-                  <AlertDescription>
+                <Alert data-testid="singleparentsupport-alert">
+                  <FileText className="h-4 w-4" data-testid="singleparentsupport-filetext" />
+                  <AlertDescription data-testid="singleparentsupport-t-singleparent-importantdocs">
                     {t("singleParent.importantDocs")}
                   </AlertDescription>
                 </Alert>
 
-                <Button className="w-full" variant="outline">
-                  <FileText className="h-4 w-4 mr-2" />
+                <Button className="w-full" variant="outline" data-testid="singleparentsupport-button">
+                  <FileText className="h-4 w-4 mr-2" data-testid="singleparentsupport-filetext" />
                   {t("singleParent.createEmergencyBinder")}
                 </Button>
               </div>
@@ -359,30 +359,30 @@ export const SingleParentSupport: React.FC = () => {
         </TabsContent>
 
         {/* Resources Tab */}
-        <TabsContent value="resources" className="space-y-4">
+        <TabsContent value="resources" className="space-y-4" data-testid="singleparentsupport-tabscontent">
           <div className="grid gap-4">
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-lg">
+            <Card data-testid="singleparentsupport-card">
+              <CardHeader data-testid="singleparentsupport-cardheader">
+                <CardTitle className="text-lg" data-testid="singleparentsupport-t-singleparent-resources-legal">
                   {t("singleParent.resources.legal")}
                 </CardTitle>
               </CardHeader>
-              <CardContent>
+              <CardContent data-testid="singleparentsupport-cardcontent">
                 <ul className="space-y-2">
                   <li className="flex items-center gap-2">
-                    <ChevronRight className="h-4 w-4 text-gray-400" />
+                    <ChevronRight className="h-4 w-4 text-gray-400" data-testid="singleparentsupport-chevronright" />
                     <span className="text-sm">
                       {t("singleParent.resources.guardianshipLaws")}
                     </span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <ChevronRight className="h-4 w-4 text-gray-400" />
+                    <ChevronRight className="h-4 w-4 text-gray-400" data-testid="singleparentsupport-chevronright" />
                     <span className="text-sm">
                       {t("singleParent.resources.temporaryGuardianship")}
                     </span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <ChevronRight className="h-4 w-4 text-gray-400" />
+                    <ChevronRight className="h-4 w-4 text-gray-400" data-testid="singleparentsupport-chevronright" />
                     <span className="text-sm">
                       {t("singleParent.resources.schoolAuthorization")}
                     </span>
@@ -391,28 +391,28 @@ export const SingleParentSupport: React.FC = () => {
               </CardContent>
             </Card>
 
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-lg">
+            <Card data-testid="singleparentsupport-card">
+              <CardHeader data-testid="singleparentsupport-cardheader">
+                <CardTitle className="text-lg" data-testid="singleparentsupport-t-singleparent-resources-support">
                   {t("singleParent.resources.support")}
                 </CardTitle>
               </CardHeader>
-              <CardContent>
+              <CardContent data-testid="singleparentsupport-cardcontent">
                 <ul className="space-y-2">
                   <li className="flex items-center gap-2">
-                    <ChevronRight className="h-4 w-4 text-gray-400" />
+                    <ChevronRight className="h-4 w-4 text-gray-400" data-testid="singleparentsupport-chevronright" />
                     <span className="text-sm">
                       {t("singleParent.resources.localGroups")}
                     </span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <ChevronRight className="h-4 w-4 text-gray-400" />
+                    <ChevronRight className="h-4 w-4 text-gray-400" data-testid="singleparentsupport-chevronright" />
                     <span className="text-sm">
                       {t("singleParent.resources.onlineCommunity")}
                     </span>
                   </li>
                   <li className="flex items-center gap-2">
-                    <ChevronRight className="h-4 w-4 text-gray-400" />
+                    <ChevronRight className="h-4 w-4 text-gray-400" data-testid="singleparentsupport-chevronright" />
                     <span className="text-sm">
                       {t("singleParent.resources.counseling")}
                     </span>
@@ -427,72 +427,72 @@ export const SingleParentSupport: React.FC = () => {
       {/* Add Guardian Modal */}
       {showAddGuardian && (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center p-4 z-50">
-          <Card className="w-full max-w-lg">
-            <CardHeader>
-              <CardTitle>{t("singleParent.addNewGuardian")}</CardTitle>
+          <Card className="w-full max-w-lg" data-testid="singleparentsupport-card">
+            <CardHeader data-testid="singleparentsupport-t-singleparent-addnewguardian">
+              <CardTitle data-testid="singleparentsupport-t-singleparent-addnewguardian">{t("singleParent.addNewGuardian")}</CardTitle>
             </CardHeader>
-            <CardContent>
+            <CardContent data-testid="singleparentsupport-cardcontent">
               <div className="space-y-4">
                 <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <Label>{t("singleParent.guardianName")}</Label>
+                    <Label data-testid="singleparentsupport-t-singleparent-guardianname">{t("singleParent.guardianName")}</Label>
                     <Input
-                      placeholder={t("singleParent.guardianNamePlaceholder")}
+                      placeholder={t("singleParent.guardianNamePlaceholder")} data-testid="singleparentsupport-input"
                     />
                   </div>
                   <div>
-                    <Label>{t("singleParent.relationship")}</Label>
+                    <Label data-testid="singleparentsupport-t-singleparent-relationship">{t("singleParent.relationship")}</Label>
                     <Input
-                      placeholder={t("singleParent.relationshipPlaceholder")}
+                      placeholder={t("singleParent.relationshipPlaceholder")} data-testid="singleparentsupport-input"
                     />
                   </div>
                 </div>
 
                 <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <Label>{t("singleParent.phone")}</Label>
+                    <Label data-testid="singleparentsupport-t-singleparent-phone">{t("singleParent.phone")}</Label>
                     <Input
                       type="tel"
-                      placeholder={t("singleParent.phonePlaceholder")}
+                      placeholder={t("singleParent.phonePlaceholder")} data-testid="singleparentsupport-input"
                     />
                   </div>
                   <div>
-                    <Label>{t("singleParent.email")}</Label>
+                    <Label data-testid="singleparentsupport-t-singleparent-email">{t("singleParent.email")}</Label>
                     <Input
                       type="email"
-                      placeholder={t("singleParent.emailPlaceholder")}
+                      placeholder={t("singleParent.emailPlaceholder")} data-testid="singleparentsupport-input"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <Label>{t("singleParent.role")}</Label>
+                  <Label data-testid="singleparentsupport-t-singleparent-role">{t("singleParent.role")}</Label>
                   <div className="grid grid-cols-3 gap-2 mt-2">
-                    <Button variant="outline" size="sm">
+                    <Button variant="outline" size="sm" data-testid="singleparentsupport-t-singleparent-roles-primary">
                       {t("singleParent.roles.primary")}
                     </Button>
-                    <Button variant="outline" size="sm">
+                    <Button variant="outline" size="sm" data-testid="singleparentsupport-t-singleparent-roles-backup">
                       {t("singleParent.roles.backup")}
                     </Button>
-                    <Button variant="outline" size="sm">
+                    <Button variant="outline" size="sm" data-testid="singleparentsupport-t-singleparent-roles-emergency">
                       {t("singleParent.roles.emergency")}
                     </Button>
                   </div>
                 </div>
 
                 <div>
-                  <Label>{t("singleParent.strengths")}</Label>
+                  <Label data-testid="singleparentsupport-t-singleparent-strengths">{t("singleParent.strengths")}</Label>
                   <Textarea
                     placeholder={t("singleParent.strengthsPlaceholder")}
-                    rows={3}
+                    rows={3} data-testid="singleparentsupport-textarea"
                   />
                 </div>
               </div>
             </CardContent>
-            <CardFooter className="flex gap-2">
+            <CardFooter className="flex gap-2" data-testid="singleparentsupport-t-common-cancel">
               <Button
                 variant="outline"
-                onClick={() => setShowAddGuardian(false)}
+                onClick={() => setShowAddGuardian(false)} data-testid="singleparentsupport-t-common-cancel"
               >
                 {t("common.cancel")}
               </Button>
@@ -509,7 +509,7 @@ export const SingleParentSupport: React.FC = () => {
                     strengths: ["Trustworthy", "Available weekends"],
                     availability: "Weekends and evenings",
                   });
-                }}
+                }} data-testid="singleparentsupport-t-singleparent-saveguardian"
               >
                 {t("singleParent.saveGuardian")}
               </Button>

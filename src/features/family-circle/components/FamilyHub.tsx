@@ -270,13 +270,13 @@ export const FamilyHub: React.FC = () => {
       </h1>
       <p className="text-lg text-gray-600 mt-1">{t("familyHub.subtitle")}</p>
 
-      <Tabs defaultValue="members" className="mt-4 md:mt-6">
-        <TabsList className="grid w-full grid-cols-2 h-auto">
+      <Tabs defaultValue="members" className="mt-4 md:mt-6" data-testid="familyhub-tabs">
+        <TabsList className="grid w-full grid-cols-2 h-auto" data-testid="familyhub-tabslist">
           <TabsTrigger
             value="members"
-            className="flex items-center gap-1 md:gap-2 py-3 px-2 md:px-4 text-xs md:text-sm"
+            className="flex items-center gap-1 md:gap-2 py-3 px-2 md:px-4 text-xs md:text-sm" data-testid="familyhub-tabstrigger"
           >
-            <Users className="w-4 h-4" />
+            <Users className="w-4 h-4" data-testid="familyhub-users" />
             <span className="hidden sm:inline">
               {t("familyHub.tabs.familyMembers")}
             </span>
@@ -284,9 +284,9 @@ export const FamilyHub: React.FC = () => {
           </TabsTrigger>
           <TabsTrigger
             value="tools"
-            className="flex items-center gap-1 md:gap-2 py-3 px-2 md:px-4 text-xs md:text-sm"
+            className="flex items-center gap-1 md:gap-2 py-3 px-2 md:px-4 text-xs md:text-sm" data-testid="familyhub-tabstrigger"
           >
-            <Wrench className="w-4 h-4" />
+            <Wrench className="w-4 h-4" data-testid="familyhub-wrench" />
             <span className="hidden sm:inline">
               {t("familyHub.tabs.preparednessTools")}
             </span>
@@ -296,21 +296,21 @@ export const FamilyHub: React.FC = () => {
 
         <TabsContent
           value="members"
-          className="mt-4 md:mt-6 space-y-4 md:space-y-6"
+          className="mt-4 md:mt-6 space-y-4 md:space-y-6" data-testid="familyhub-overall-family-preparedness"
         >
           {/* Overall Family Preparedness */}
-          <Card>
-            <CardContent className="text-center p-4 md:p-6">
+          <Card data-testid="familyhub-card">
+            <CardContent className="text-center p-4 md:p-6" data-testid="familyhub-cardcontent">
               <div className="flex flex-col sm:flex-row items-center justify-center mb-4 gap-2">
-                <Users className="w-6 md:w-8 h-6 md:h-8 text-blue-600" />
-                <CardTitle className="text-lg md:text-xl">
+                <Users className="w-6 md:w-8 h-6 md:h-8 text-blue-600" data-testid="familyhub-users" />
+                <CardTitle className="text-lg md:text-xl" data-testid="familyhub-t-familyhub-overallpreparedness-title">
                   {t("familyHub.overallPreparedness.title")}
                 </CardTitle>
               </div>
               <div className="relative inline-flex items-center justify-center">
                 <Progress
                   value={overallPreparedness}
-                  className="w-32 md:w-48 h-32 md:h-48 rounded-full"
+                  className="w-32 md:w-48 h-32 md:h-48 rounded-full" data-testid="familyhub-progress"
                 />
                 <div className="absolute">
                   <p
@@ -324,9 +324,9 @@ export const FamilyHub: React.FC = () => {
                 {t("familyHub.overallPreparedness.description")}
               </p>
               {overallPreparedness < 70 && (
-                <Alert className="mt-3 md:mt-4 bg-yellow-50 border-yellow-200">
-                  <AlertTriangle className="h-4 w-4 text-yellow-600" />
-                  <AlertDescription className="text-xs md:text-sm text-yellow-800">
+                <Alert className="mt-3 md:mt-4 bg-yellow-50 border-yellow-200" data-testid="familyhub-alert">
+                  <AlertTriangle className="h-4 w-4 text-yellow-600" data-testid="familyhub-alerttriangle" />
+                  <AlertDescription className="text-xs md:text-sm text-yellow-800" data-testid="familyhub-alertdescription">
                     {t("familyHub.overallPreparedness.improvementNeeded")}
                   </AlertDescription>
                 </Alert>
@@ -335,12 +335,12 @@ export const FamilyHub: React.FC = () => {
           </Card>
 
           {/* Emergency Protocol Configuration */}
-          <Card>
-            <CardHeader className="p-4 md:p-6">
+          <Card data-testid="familyhub-card">
+            <CardHeader className="p-4 md:p-6" data-testid="familyhub-cardheader">
               <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
                 <div className="flex items-center">
-                  <Shield className="w-5 h-5 text-red-600 mr-2 flex-shrink-0" />
-                  <CardTitle className="text-base md:text-lg">
+                  <Shield className="w-5 h-5 text-red-600 mr-2 flex-shrink-0" data-testid="familyhub-shield" />
+                  <CardTitle className="text-base md:text-lg" data-testid="familyhub-t-familyhub-emergencyprotocol-title">
                     {t("familyHub.emergencyProtocol.title")}
                   </CardTitle>
                 </div>
@@ -350,7 +350,7 @@ export const FamilyHub: React.FC = () => {
                   className="w-full sm:w-auto py-2"
                   onClick={() =>
                     setEmergencyProtocolEnabled(!emergencyProtocolEnabled)
-                  }
+                  } data-testid="familyhub-button"
                 >
                   {emergencyProtocolEnabled
                     ? t("familyHub.emergencyProtocol.configured")
@@ -358,14 +358,14 @@ export const FamilyHub: React.FC = () => {
                 </Button>
               </div>
             </CardHeader>
-            <CardContent className="p-4 md:p-6 pt-0 md:pt-0">
+            <CardContent className="p-4 md:p-6 pt-0 md:pt-0" data-testid="familyhub-cardcontent">
               <p className="text-xs md:text-sm text-gray-600">
                 {t("familyHub.emergencyProtocol.description")}
               </p>
               {emergencyProtocolEnabled && (
                 <div className="mt-3 p-2 md:p-3 bg-green-50 rounded-lg">
                   <p className="text-xs md:text-sm text-green-800 flex items-center">
-                    <CheckCircle2 className="w-4 h-4 mr-2 flex-shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 mr-2 flex-shrink-0" data-testid="familyhub-checkcircle2" />
                     {t("familyHub.emergencyProtocol.activeMessage")}
                   </p>
                 </div>
@@ -376,24 +376,24 @@ export const FamilyHub: React.FC = () => {
           {/* Member Management */}
           <div className="mt-6 md:mt-8">
             <h3 className="text-base md:text-lg font-semibold flex items-center mb-4">
-              <Users className="w-5 h-5 mr-2" />
+              <Users className="w-5 h-5 mr-2" data-testid="familyhub-users" />
               {t("familyHub.memberManagement.title")}
             </h3>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6">
               {familyMembers.map((member) => (
                 <Card
                   key={member.id}
-                  className="hover:shadow-lg transition-shadow"
+                  className="hover:shadow-lg transition-shadow" data-testid="familyhub-card"
                 >
-                  <CardHeader className="p-4 md:p-6">
+                  <CardHeader className="p-4 md:p-6" data-testid="familyhub-cardheader">
                     <div className="flex items-center justify-between">
                       <div className="flex items-center min-w-0">
-                        <Avatar className="h-10 md:h-12 w-10 md:w-12 flex-shrink-0">
+                        <Avatar className="h-10 md:h-12 w-10 md:w-12 flex-shrink-0" data-testid="familyhub-avatar">
                           <AvatarImage
                             src={member.avatarUrl}
-                            alt={member.name}
+                            alt={member.name} data-testid="familyhub-avatarimage"
                           />
-                          <AvatarFallback className="text-xs md:text-sm">
+                          <AvatarFallback className="text-xs md:text-sm" data-testid="familyhub-avatarfallback">
                             {member.name
                               .split(" ")
                               .map((n) => n[0])
@@ -401,7 +401,7 @@ export const FamilyHub: React.FC = () => {
                           </AvatarFallback>
                         </Avatar>
                         <div className="ml-3 min-w-0">
-                          <CardTitle className="text-base md:text-lg truncate">
+                          <CardTitle className="text-base md:text-lg truncate" data-testid="familyhub-member-name">
                             {member.name}
                           </CardTitle>
                           <p className="text-xs md:text-sm text-gray-500">
@@ -416,16 +416,16 @@ export const FamilyHub: React.FC = () => {
                             "familyHub.memberManagement.lastContactOver30Days",
                           )}
                         >
-                          <Clock className="w-4 md:w-5 h-4 md:h-5" />
+                          <Clock className="w-4 md:w-5 h-4 md:h-5" data-testid="familyhub-clock" />
                         </div>
                       )}
                     </div>
                   </CardHeader>
-                  <CardContent className="p-4 md:p-6 pt-0 md:pt-0 space-y-4">
+                  <CardContent className="p-4 md:p-6 pt-0 md:pt-0 space-y-4" data-testid="familyhub-cardcontent">
                     <div>
                       <Label
                         htmlFor={`access-${member.id}`}
-                        className="text-sm md:text-base"
+                        className="text-sm md:text-base" data-testid="familyhub-label"
                       >
                         {t("familyHub.memberManagement.informationAccessLevel")}
                       </Label>
@@ -436,16 +436,16 @@ export const FamilyHub: React.FC = () => {
                             member.id,
                             value as AccessLevel,
                           )
-                        }
+                        } data-testid="familyhub-select"
                       >
                         <SelectTrigger
                           id={`access-${member.id}`}
-                          className="mt-1 h-10 md:h-11"
+                          className="mt-1 h-10 md:h-11" data-testid="familyhub-selecttrigger"
                         >
-                          <SelectValue />
+                          <SelectValue data-testid="familyhub-selectvalue" />
                         </SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="none" className="py-3">
+                        <SelectContent data-testid="familyhub-selectcontent">
+                          <SelectItem value="none" className="py-3" data-testid="familyhub-selectitem">
                             <div>
                               <p className="font-medium text-sm">
                                 {t("familyHub.accessLevels.none.title")}
@@ -455,7 +455,7 @@ export const FamilyHub: React.FC = () => {
                               </p>
                             </div>
                           </SelectItem>
-                          <SelectItem value="emergency_only" className="py-3">
+                          <SelectItem value="emergency_only" className="py-3" data-testid="familyhub-selectitem">
                             <div>
                               <p className="font-medium text-sm">
                                 {t(
@@ -469,7 +469,7 @@ export const FamilyHub: React.FC = () => {
                               </p>
                             </div>
                           </SelectItem>
-                          <SelectItem value="limited_info" className="py-3">
+                          <SelectItem value="limited_info" className="py-3" data-testid="familyhub-selectitem">
                             <div>
                               <p className="font-medium text-sm">
                                 {t("familyHub.accessLevels.limitedInfo.title")}
@@ -481,7 +481,7 @@ export const FamilyHub: React.FC = () => {
                               </p>
                             </div>
                           </SelectItem>
-                          <SelectItem value="full_access" className="py-3">
+                          <SelectItem value="full_access" className="py-3" data-testid="familyhub-selectitem">
                             <div>
                               <p className="font-medium text-sm">
                                 {t("familyHub.accessLevels.fullAccess.title")}
@@ -515,7 +515,7 @@ export const FamilyHub: React.FC = () => {
                       </div>
                       <Progress
                         value={member.preparednessScore}
-                        className="h-2"
+                        className="h-2" data-testid="familyhub-progress"
                       />
                     </div>
 
@@ -532,9 +532,9 @@ export const FamilyHub: React.FC = () => {
                       <Button
                         variant="outline"
                         className="w-full py-2.5 md:py-2 text-sm"
-                        onClick={() => handleSendUpdate(member)}
+                        onClick={() => handleSendUpdate(member)} data-testid="familyhub-handlesendupdate-member"
                       >
-                        <Send className="w-4 h-4 mr-2" />
+                        <Send className="w-4 h-4 mr-2" data-testid="familyhub-send" />
                         <span className="hidden sm:inline">
                           {t("familyHub.memberManagement.sendUpdateTo", {
                             name: member.name.split(" ")[0],
@@ -551,13 +551,13 @@ export const FamilyHub: React.FC = () => {
             </div>
 
             {/* Add New Trusted Person */}
-            <Card className="mt-4 md:mt-6 border-dashed">
-              <CardContent className="text-center py-6 md:py-8">
-                <Users className="w-10 md:w-12 h-10 md:h-12 text-gray-400 mx-auto mb-3" />
+            <Card className="mt-4 md:mt-6 border-dashed" data-testid="familyhub-card">
+              <CardContent className="text-center py-6 md:py-8" data-testid="familyhub-cardcontent">
+                <Users className="w-10 md:w-12 h-10 md:h-12 text-gray-400 mx-auto mb-3" data-testid="familyhub-users" />
                 <p className="text-sm md:text-base text-gray-600 mb-3 px-4">
                   {t("familyHub.memberManagement.addMorePeople")}
                 </p>
-                <Button className="py-2.5 px-6">
+                <Button className="py-2.5 px-6" data-testid="familyhub-button">
                   {t("familyHub.memberManagement.addTrustedPerson")}
                 </Button>
               </CardContent>
@@ -565,8 +565,8 @@ export const FamilyHub: React.FC = () => {
           </div>
         </TabsContent>
 
-        <TabsContent value="tools" className="mt-6">
-          <FamilyPreparednessTools />
+        <TabsContent value="tools" className="mt-6" data-testid="familyhub-tabscontent">
+          <FamilyPreparednessTools data-testid="familyhub-familypreparednesstools" />
         </TabsContent>
       </Tabs>
 
@@ -583,7 +583,7 @@ export const FamilyHub: React.FC = () => {
                 getDaysSinceContact(m.lastCommunicated) > 30 ||
                 m.preparednessScore < 50,
             ).length,
-          }}
+          }} data-testid="familyhub-personalassistant"
         />
       )}
     </div>

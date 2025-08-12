@@ -38,27 +38,27 @@ export function BeneficiariesForm({
 
   return (
     <div className="space-y-6">
-      <Card>
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <Users className="h-5 w-5" />
+      <Card data-testid="beneficiariesform-card">
+        <CardHeader data-testid="beneficiariesform-cardheader">
+          <CardTitle className="flex items-center gap-2" data-testid="beneficiariesform-cardtitle">
+            <Users className="h-5 w-5" data-testid="beneficiariesform-users" />
             {t("wills:wills.beneficiaries.title")}
           </CardTitle>
-          <CardDescription>
+          <CardDescription data-testid="beneficiariesform-t-wills-wills-beneficiaries-description">
             {t("wills:wills.beneficiaries.description")}
           </CardDescription>
         </CardHeader>
-        <CardContent>
+        <CardContent data-testid="beneficiariesform-beneficiaries-length-0">
           {beneficiaries.length === 0 ? (
             <div className="text-center py-8 text-muted-foreground">
-              <Users className="h-12 w-12 mx-auto mb-3 text-muted-foreground/50" />
+              <Users className="h-12 w-12 mx-auto mb-3 text-muted-foreground/50" data-testid="beneficiariesform-users" />
               <p>{t("wills.beneficiaries.noBeneficiaries")}</p>
             </div>
           ) : (
             <div className="space-y-6">
               {beneficiaries.map((beneficiary, index) => (
-                <Card key={beneficiary.id}>
-                  <CardContent className="pt-6">
+                <Card key={beneficiary.id} data-testid="beneficiariesform-card">
+                  <CardContent className="pt-6" data-testid="beneficiariesform-cardcontent">
                     <div className="space-y-4">
                       <h4 className="font-medium">
                         {t("will.beneficiaries.beneficiaryNumber", {
@@ -68,7 +68,7 @@ export function BeneficiariesForm({
 
                       <div className="grid grid-cols-2 gap-4">
                         <div className="space-y-2">
-                          <Label htmlFor={`id-${beneficiary.id}`}>
+                          <Label htmlFor={`id-${beneficiary.id}`} data-testid="beneficiariesform-label">
                             {t("wills:wills.beneficiaries.identification")}
                           </Label>
                           <Input
@@ -81,12 +81,12 @@ export function BeneficiariesForm({
                             }
                             placeholder={t(
                               "wills.beneficiaries.identificationPlaceholder",
-                            )}
+                            )} data-testid="beneficiariesform-input"
                           />
                         </div>
 
                         <div className="space-y-2">
-                          <Label htmlFor={`alt-${beneficiary.id}`}>
+                          <Label htmlFor={`alt-${beneficiary.id}`} data-testid="beneficiariesform-label">
                             {t("wills.beneficiaries.alternativeBeneficiary")}
                           </Label>
                           <Input
@@ -99,7 +99,7 @@ export function BeneficiariesForm({
                             }
                             placeholder={t(
                               "wills.beneficiaries.alternativePlaceholder",
-                            )}
+                            )} data-testid="beneficiariesform-input"
                           />
                         </div>
                       </div>
@@ -129,13 +129,13 @@ export function BeneficiariesForm({
                       {/* Show validation errors */}
                       {errors[`beneficiary_${index}_name`] && (
                         <p className="text-sm text-destructive flex items-center gap-1">
-                          <AlertCircle className="h-3 w-3" />
+                          <AlertCircle className="h-3 w-3" data-testid="beneficiariesform-alertcircle" />
                           {errors[`beneficiary_${index}_name`]}
                         </p>
                       )}
                       {errors[`beneficiary_${index}_relationship`] && (
                         <p className="text-sm text-destructive flex items-center gap-1">
-                          <AlertCircle className="h-3 w-3" />
+                          <AlertCircle className="h-3 w-3" data-testid="beneficiariesform-alertcircle" />
                           {errors[`beneficiary_${index}_relationship`]}
                         </p>
                       )}
@@ -149,8 +149,8 @@ export function BeneficiariesForm({
       </Card>
 
       {/* Additional instructions */}
-      <Card>
-        <CardContent className="pt-6">
+      <Card data-testid="beneficiariesform-card">
+        <CardContent className="pt-6" data-testid="beneficiariesform-cardcontent">
           <h4 className="font-medium mb-2">
             {t("wills.beneficiaries.importantNotes")}
           </h4>

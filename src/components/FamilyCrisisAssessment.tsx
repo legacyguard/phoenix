@@ -106,9 +106,9 @@ export const FamilyCrisisAssessment: React.FC<FamilyCrisisAssessmentProps> = ({
         capability: t("familyCapabilities.payBills"),
         status: hasBankAccess ? "capable" : "vulnerable",
         icon: hasBankAccess ? (
-          <CheckCircle2 className="h-5 w-5 text-green-600" />
+          <CheckCircle2 className="h-5 w-5 text-green-600" data-testid="familycrisisassessment-checkcircle2" />
         ) : (
-          <XCircle className="h-5 w-5 text-red-600" />
+          <XCircle className="h-5 w-5 text-red-600" data-testid="familycrisisassessment-xcircle" />
         ),
         details: hasBankAccess
           ? t("familyCapabilities.canAccessBankAccounts")
@@ -119,9 +119,9 @@ export const FamilyCrisisAssessment: React.FC<FamilyCrisisAssessmentProps> = ({
         capability: t("familyCapabilities.insuranceClaims"),
         status: hasInsurance ? "capable" : "vulnerable",
         icon: hasInsurance ? (
-          <CheckCircle2 className="h-5 w-5 text-green-600" />
+          <CheckCircle2 className="h-5 w-5 text-green-600" data-testid="familycrisisassessment-checkcircle2" />
         ) : (
-          <XCircle className="h-5 w-5 text-red-600" />
+          <XCircle className="h-5 w-5 text-red-600" data-testid="familycrisisassessment-xcircle" />
         ),
         details: hasInsurance
           ? t("familyCapabilities.canFileInsuranceClaims")
@@ -132,9 +132,9 @@ export const FamilyCrisisAssessment: React.FC<FamilyCrisisAssessmentProps> = ({
         capability: t("familyCapabilities.legalMatters"),
         status: hasLegalContacts ? "capable" : "vulnerable",
         icon: hasLegalContacts ? (
-          <CheckCircle2 className="h-5 w-5 text-green-600" />
+          <CheckCircle2 className="h-5 w-5 text-green-600" data-testid="familycrisisassessment-checkcircle2" />
         ) : (
-          <XCircle className="h-5 w-5 text-red-600" />
+          <XCircle className="h-5 w-5 text-red-600" data-testid="familycrisisassessment-xcircle" />
         ),
         details: hasLegalContacts
           ? t("familyCapabilities.knowsLegalContacts")
@@ -145,9 +145,9 @@ export const FamilyCrisisAssessment: React.FC<FamilyCrisisAssessmentProps> = ({
         capability: t("familyCapabilities.digitalAccounts"),
         status: hasDigitalAccess ? "capable" : "vulnerable",
         icon: hasDigitalAccess ? (
-          <CheckCircle2 className="h-5 w-5 text-green-600" />
+          <CheckCircle2 className="h-5 w-5 text-green-600" data-testid="familycrisisassessment-checkcircle2" />
         ) : (
-          <XCircle className="h-5 w-5 text-red-600" />
+          <XCircle className="h-5 w-5 text-red-600" data-testid="familycrisisassessment-xcircle" />
         ),
         details: hasDigitalAccess
           ? t("familyCapabilities.canAccessDigitalAccounts")
@@ -162,11 +162,11 @@ export const FamilyCrisisAssessment: React.FC<FamilyCrisisAssessmentProps> = ({
             ? "partial"
             : "vulnerable",
         icon: hasMedicalDocs ? (
-          <CheckCircle2 className="h-5 w-5 text-green-600" />
+          <CheckCircle2 className="h-5 w-5 text-green-600" data-testid="familycrisisassessment-checkcircle2" />
         ) : userGuardians.length > 0 ? (
-          <AlertTriangle className="h-5 w-5 text-yellow-600" />
+          <AlertTriangle className="h-5 w-5 text-yellow-600" data-testid="familycrisisassessment-alerttriangle" />
         ) : (
-          <XCircle className="h-5 w-5 text-red-600" />
+          <XCircle className="h-5 w-5 text-red-600" data-testid="familycrisisassessment-xcircle" />
         ),
         details: hasMedicalDocs
           ? t("familyCapabilities.knowsMedicalWishes")
@@ -185,11 +185,11 @@ export const FamilyCrisisAssessment: React.FC<FamilyCrisisAssessmentProps> = ({
               : "vulnerable",
         icon:
           hasBusinessInfo && userAssets.length > 0 ? (
-            <CheckCircle2 className="h-5 w-5 text-green-600" />
+            <CheckCircle2 className="h-5 w-5 text-green-600" data-testid="familycrisisassessment-checkcircle2" />
           ) : hasBusinessInfo ? (
-            <AlertTriangle className="h-5 w-5 text-yellow-600" />
+            <AlertTriangle className="h-5 w-5 text-yellow-600" data-testid="familycrisisassessment-alerttriangle" />
           ) : (
-            <XCircle className="h-5 w-5 text-red-600" />
+            <XCircle className="h-5 w-5 text-red-600" data-testid="familycrisisassessment-xcircle" />
           ),
         details:
           hasBusinessInfo && userAssets.length > 0
@@ -209,11 +209,11 @@ export const FamilyCrisisAssessment: React.FC<FamilyCrisisAssessmentProps> = ({
               : "vulnerable",
         icon:
           hasWillOrTrust && userBeneficiaries.length > 0 ? (
-            <CheckCircle2 className="h-5 w-5 text-green-600" />
+            <CheckCircle2 className="h-5 w-5 text-green-600" data-testid="familycrisisassessment-checkcircle2" />
           ) : userBeneficiaries.length > 0 ? (
-            <AlertTriangle className="h-5 w-5 text-yellow-600" />
+            <AlertTriangle className="h-5 w-5 text-yellow-600" data-testid="familycrisisassessment-alerttriangle" />
           ) : (
-            <XCircle className="h-5 w-5 text-red-600" />
+            <XCircle className="h-5 w-5 text-red-600" data-testid="familycrisisassessment-xcircle" />
           ),
         details:
           hasWillOrTrust && userBeneficiaries.length > 0
@@ -238,7 +238,7 @@ export const FamilyCrisisAssessment: React.FC<FamilyCrisisAssessmentProps> = ({
         id: "emergency_hospital",
         title: t("crisisSituations.emergencyHospital.title"),
         description: t("crisisSituations.emergencyHospital.description"),
-        icon: <Heart className="h-5 w-5" />,
+        icon: <Heart className="h-5 w-5" data-testid="familycrisisassessment-heart" />,
         requiredCapabilities: [
           "pay_bills",
           "insurance_claims",
@@ -263,7 +263,7 @@ export const FamilyCrisisAssessment: React.FC<FamilyCrisisAssessmentProps> = ({
         id: "sudden_death",
         title: t("crisisSituations.suddenDeath.title"),
         description: t("crisisSituations.suddenDeath.description"),
-        icon: <AlertCircle className="h-5 w-5" />,
+        icon: <AlertCircle className="h-5 w-5" data-testid="familycrisisassessment-alertcircle" />,
         requiredCapabilities: [
           "pay_bills",
           "insurance_claims",
@@ -290,7 +290,7 @@ export const FamilyCrisisAssessment: React.FC<FamilyCrisisAssessmentProps> = ({
         id: "extended_travel",
         title: t("crisisSituations.extendedTravel.title"),
         description: t("crisisSituations.extendedTravel.description"),
-        icon: <Clock className="h-5 w-5" />,
+        icon: <Clock className="h-5 w-5" data-testid="familycrisisassessment-clock" />,
         requiredCapabilities: ["pay_bills", "digital_accounts"],
         isPrepared: ["pay_bills", "digital_accounts"].every(
           (cap) =>
@@ -305,7 +305,7 @@ export const FamilyCrisisAssessment: React.FC<FamilyCrisisAssessmentProps> = ({
         id: "business_emergency",
         title: t("crisisSituations.businessEmergency.title"),
         description: t("crisisSituations.businessEmergency.description"),
-        icon: <Briefcase className="h-5 w-5" />,
+        icon: <Briefcase className="h-5 w-5" data-testid="familycrisisassessment-briefcase" />,
         requiredCapabilities: [
           "business_operations",
           "pay_bills",
@@ -366,12 +366,12 @@ export const FamilyCrisisAssessment: React.FC<FamilyCrisisAssessmentProps> = ({
   return (
     <div className="space-y-6">
       {/* Main Crisis Assessment Card */}
-      <Card className="border-2">
-        <CardHeader className="pb-4">
-          <CardTitle className="text-2xl font-bold">
+      <Card className="border-2" data-testid="familycrisisassessment-card">
+        <CardHeader className="pb-4" data-testid="familycrisisassessment-t-crisisassessment-title">
+          <CardTitle className="text-2xl font-bold" data-testid="familycrisisassessment-t-crisisassessment-title">
             {t("crisisAssessment.title")}
           </CardTitle>
-          <CardDescription className="mt-2 text-base">
+          <CardDescription className="mt-2 text-base" data-testid="familycrisisassessment-carddescription">
             {t("crisisAssessment.subtitle", {
               prepared: preparedSituationsCount,
               total: crisisSituations.length,
@@ -379,12 +379,12 @@ export const FamilyCrisisAssessment: React.FC<FamilyCrisisAssessmentProps> = ({
           </CardDescription>
         </CardHeader>
 
-        <CardContent className="space-y-4">
+        <CardContent className="space-y-4" data-testid="familycrisisassessment-0">
           {/* Critical Vulnerabilities Alert */}
           {criticalVulnerabilities > 0 && (
-            <Alert className="border-red-200 bg-red-50">
-              <AlertCircle className="h-4 w-4 text-red-600" />
-              <AlertDescription className="text-red-900">
+            <Alert className="border-red-200 bg-red-50" data-testid="familycrisisassessment-alert">
+              <AlertCircle className="h-4 w-4 text-red-600" data-testid="familycrisisassessment-alertcircle" />
+              <AlertDescription className="text-red-900" data-testid="familycrisisassessment-mostcriticalgap">
                 <span className="font-medium">
                   {t("crisisAssessment.criticalVulnerabilities", {
                     count: criticalVulnerabilities,
@@ -431,13 +431,13 @@ export const FamilyCrisisAssessment: React.FC<FamilyCrisisAssessmentProps> = ({
       </Card>
 
       {/* Family Capabilities List */}
-      <Card>
-        <CardHeader>
-          <CardTitle className="text-lg">
+      <Card data-testid="familycrisisassessment-card">
+        <CardHeader data-testid="familycrisisassessment-cardheader">
+          <CardTitle className="text-lg" data-testid="familycrisisassessment-t-crisisassessment-familycapabilities">
             {t("crisisAssessment.familyCapabilities")}
           </CardTitle>
         </CardHeader>
-        <CardContent className="space-y-3">
+        <CardContent className="space-y-3" data-testid="familycrisisassessment-capabilities-map-capability">
           {capabilities.map((capability) => (
             <div
               key={capability.id}
@@ -453,7 +453,7 @@ export const FamilyCrisisAssessment: React.FC<FamilyCrisisAssessmentProps> = ({
                 )}
               </div>
               {capability.status === "vulnerable" && (
-                <Button size="sm" variant="outline">
+                <Button size="sm" variant="outline" data-testid="familycrisisassessment-t-ui-elements-ui-fix">
                   {t("ui-elements:ui.fix")}
                 </Button>
               )}
@@ -473,9 +473,9 @@ export const FamilyCrisisAssessment: React.FC<FamilyCrisisAssessmentProps> = ({
             key={situation.id}
             className={
               situation.isPrepared ? "border-green-200" : "border-red-200"
-            }
+            } data-testid="familycrisisassessment-card"
           >
-            <CardContent className="pt-6">
+            <CardContent className="pt-6" data-testid="familycrisisassessment-cardcontent">
               <div className="flex items-start space-x-4">
                 <div
                   className={`p-2 rounded-lg ${situation.isPrepared ? "bg-green-100" : "bg-red-100"}`}
@@ -494,16 +494,16 @@ export const FamilyCrisisAssessment: React.FC<FamilyCrisisAssessmentProps> = ({
 
                     <Badge
                       variant={situation.isPrepared ? "default" : "destructive"}
-                      className="ml-2"
+                      className="ml-2" data-testid="familycrisisassessment-situation-isprepared"
                     >
                       {situation.isPrepared ? (
                         <>
-                          <CheckCircle2 className="h-3 w-3 mr-1" />
+                          <CheckCircle2 className="h-3 w-3 mr-1" data-testid="familycrisisassessment-checkcircle2" />
                           {t("crisisAssessment.prepared")}
                         </>
                       ) : (
                         <>
-                          <XCircle className="h-3 w-3 mr-1" />
+                          <XCircle className="h-3 w-3 mr-1" data-testid="familycrisisassessment-xcircle" />
                           {t("crisisAssessment.notPrepared")}
                         </>
                       )}
@@ -536,10 +536,10 @@ export const FamilyCrisisAssessment: React.FC<FamilyCrisisAssessmentProps> = ({
 
       {/* Next Critical Action */}
       {mostCriticalGap && (
-        <Card className="bg-red-50 border-red-200">
-          <CardContent className="pt-6">
+        <Card className="bg-red-50 border-red-200" data-testid="familycrisisassessment-card">
+          <CardContent className="pt-6" data-testid="familycrisisassessment-cardcontent">
             <div className="flex items-start space-x-3">
-              <AlertCircle className="h-5 w-5 text-red-600 mt-0.5" />
+              <AlertCircle className="h-5 w-5 text-red-600 mt-0.5" data-testid="familycrisisassessment-alertcircle" />
               <div className="flex-1">
                 <p className="font-medium text-sm text-red-900">
                   {t("crisisAssessment.nextCriticalAction")}
@@ -555,7 +555,7 @@ export const FamilyCrisisAssessment: React.FC<FamilyCrisisAssessmentProps> = ({
                   {t("ui-elements:ui.minutes")}
                 </p>
               </div>
-              <Button size="sm" variant="destructive">
+              <Button size="sm" variant="destructive" data-testid="familycrisisassessment-t-crisisassessment-fixnow">
                 {t("crisisAssessment.fixNow")}
               </Button>
             </div>
@@ -564,22 +564,22 @@ export const FamilyCrisisAssessment: React.FC<FamilyCrisisAssessmentProps> = ({
       )}
 
       {/* Family Communication */}
-      <Card className="bg-muted/50">
-        <CardHeader>
-          <CardTitle className="text-base flex items-center space-x-2">
-            <Users className="h-5 w-5" />
+      <Card className="bg-muted/50" data-testid="familycrisisassessment-card">
+        <CardHeader data-testid="familycrisisassessment-cardheader">
+          <CardTitle className="text-base flex items-center space-x-2" data-testid="familycrisisassessment-cardtitle">
+            <Users className="h-5 w-5" data-testid="familycrisisassessment-users" />
             <span>{t("crisisAssessment.familyDiscussion")}</span>
           </CardTitle>
         </CardHeader>
-        <CardContent>
+        <CardContent data-testid="familycrisisassessment-cardcontent">
           <p className="text-sm text-muted-foreground mb-4">
             {t("crisisAssessment.familyDiscussionDescription")}
           </p>
           <div className="flex space-x-3">
-            <Button variant="outline" size="sm">
+            <Button variant="outline" size="sm" data-testid="familycrisisassessment-t-crisisassessment-printreport">
               {t("crisisAssessment.printReport")}
             </Button>
-            <Button variant="outline" size="sm">
+            <Button variant="outline" size="sm" data-testid="familycrisisassessment-t-crisisassessment-schedulereview">
               {t("crisisAssessment.scheduleReview")}
             </Button>
           </div>

@@ -77,7 +77,7 @@ export function DocumentPreview({
       className={cn(
         "overflow-hidden hover:shadow-lg transition-shadow",
         className,
-      )}
+      )} data-testid="documentpreview-thumbnail-and-basic-info"
     >
       <div className="p-4 space-y-4">
         {/* Thumbnail and basic info */}
@@ -93,7 +93,7 @@ export function DocumentPreview({
             />
           ) : (
             <div className="w-20 h-20 bg-gray-100 rounded-lg flex items-center justify-center">
-              <FileText className="h-8 w-8 text-gray-400" />
+              <FileText className="h-8 w-8 text-gray-400" data-testid="documentpreview-filetext" />
             </div>
           )}
 
@@ -104,13 +104,13 @@ export function DocumentPreview({
             </h3>
 
             <div className="flex items-center gap-2 mt-1">
-              <Badge variant="secondary" className="text-xs">
+              <Badge variant="secondary" className="text-xs" data-testid="documentpreview-getcategoryicon-document-category">
                 {getCategoryIcon()} {document.category}
               </Badge>
 
               {document.encryptionStatus === "encrypted" && (
-                <Badge variant="outline" className="text-xs">
-                  <Lock className="h-3 w-3 mr-1" />
+                <Badge variant="outline" className="text-xs" data-testid="documentpreview-encrypted">
+                  <Lock className="h-3 w-3 mr-1" data-testid="documentpreview-lock" />
                   Encrypted
                 </Badge>
               )}
@@ -120,18 +120,18 @@ export function DocumentPreview({
             <div className="flex items-center gap-1 mt-2 text-xs text-muted-foreground">
               {document.storageLocation === "local" ? (
                 <>
-                  <HardDrive className="h-3 w-3" />
+                  <HardDrive className="h-3 w-3" data-testid="documentpreview-harddrive" />
                   <span>{t("assets.documentPreview.on_device_1")}</span>
                 </>
               ) : document.storageLocation === "cloud" ? (
                 <>
-                  <Cloud className="h-3 w-3" />
+                  <Cloud className="h-3 w-3" data-testid="documentpreview-cloud" />
                   <span>Cloud</span>
                 </>
               ) : (
                 <>
-                  <HardDrive className="h-3 w-3" />
-                  <Cloud className="h-3 w-3" />
+                  <HardDrive className="h-3 w-3" data-testid="documentpreview-harddrive" />
+                  <Cloud className="h-3 w-3" data-testid="documentpreview-cloud" />
                   <span>Both</span>
                 </>
               )}
@@ -144,7 +144,7 @@ export function DocumentPreview({
           <div className="space-y-2">
             {document.metadata.documentDate && (
               <div className="flex items-center gap-2 text-xs">
-                <Calendar className="h-3 w-3 text-muted-foreground" />
+                <Calendar className="h-3 w-3 text-muted-foreground" data-testid="documentpreview-calendar" />
                 <span>
                   {t("assets.documentPreview.issued_2")}
                   {format(
@@ -163,7 +163,7 @@ export function DocumentPreview({
                   expiresWithin30Days && "text-orange-600",
                 )}
               >
-                <AlertCircle className="h-3 w-3" />
+                <AlertCircle className="h-3 w-3" data-testid="documentpreview-alertcircle" />
                 <span>
                   {isExpired ? "Expired" : "Expires"}:{" "}
                   {format(
@@ -180,7 +180,7 @@ export function DocumentPreview({
         {document.metadata.relatedPeople &&
           document.metadata.relatedPeople.length > 0 && (
             <div className="flex items-center gap-2 text-xs">
-              <Users className="h-3 w-3 text-muted-foreground" />
+              <Users className="h-3 w-3 text-muted-foreground" data-testid="documentpreview-users" />
               <span className="text-muted-foreground">
                 {document.metadata.relatedPeople.slice(0, 2).join(", ")}
                 {document.metadata.relatedPeople.length > 2 &&
@@ -196,9 +196,9 @@ export function DocumentPreview({
               variant="ghost"
               size="sm"
               onClick={onView}
-              className="flex-1"
+              className="flex-1" data-testid="documentpreview-view"
             >
-              <Eye className="h-4 w-4 mr-1" />
+              <Eye className="h-4 w-4 mr-1" data-testid="documentpreview-eye" />
               View
             </Button>
           )}
@@ -208,9 +208,9 @@ export function DocumentPreview({
               variant="ghost"
               size="sm"
               onClick={onDownload}
-              className="flex-1"
+              className="flex-1" data-testid="documentpreview-download"
             >
-              <Download className="h-4 w-4 mr-1" />
+              <Download className="h-4 w-4 mr-1" data-testid="documentpreview-download" />
               Download
             </Button>
           )}
@@ -220,9 +220,9 @@ export function DocumentPreview({
               variant="ghost"
               size="sm"
               onClick={onShare}
-              className="flex-1"
+              className="flex-1" data-testid="documentpreview-share"
             >
-              <Share2 className="h-4 w-4 mr-1" />
+              <Share2 className="h-4 w-4 mr-1" data-testid="documentpreview-share2" />
               Share
             </Button>
           )}
@@ -232,9 +232,9 @@ export function DocumentPreview({
               variant="ghost"
               size="sm"
               onClick={onDelete}
-              className="text-red-600 hover:text-red-700"
+              className="text-red-600 hover:text-red-700" data-testid="documentpreview-button"
             >
-              <Trash2 className="h-4 w-4" />
+              <Trash2 className="h-4 w-4" data-testid="documentpreview-trash2" />
             </Button>
           )}
         </div>
@@ -243,7 +243,7 @@ export function DocumentPreview({
         {document.sharingStatus?.isShared && (
           <div className="bg-blue-50 rounded-lg p-2 text-xs">
             <div className="flex items-center gap-2 text-blue-800">
-              <Share2 className="h-3 w-3" />
+              <Share2 className="h-3 w-3" data-testid="documentpreview-share2" />
               <span>
                 {t("assets.documentPreview.shared_with_3")}
                 {document.sharingStatus.sharedWith.length}
@@ -279,7 +279,7 @@ export function DocumentGrid({
   if (documents.length === 0) {
     return (
       <div className="text-center py-12">
-        <FileText className="h-12 w-12 text-gray-300 mx-auto mb-4" />
+        <FileText className="h-12 w-12 text-gray-300 mx-auto mb-4" data-testid="documentpreview-filetext" />
         <p className="text-gray-500">
           {t("assets.documentPreview.no_documents_uploaded_yet_4")}
         </p>
@@ -299,7 +299,7 @@ export function DocumentGrid({
           onView={onView ? () => onView(doc) : undefined}
           onDownload={onDownload ? () => onDownload(doc) : undefined}
           onShare={onShare ? () => onShare(doc) : undefined}
-          onDelete={onDelete ? () => onDelete(doc) : undefined}
+          onDelete={onDelete ? () => onDelete(doc) : undefined} data-testid="documentpreview-documentpreview"
         />
       ))}
     </div>

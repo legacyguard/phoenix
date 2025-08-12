@@ -135,7 +135,7 @@ export const FamilyTestimonials: React.FC = () => {
         {/* Section Header */}
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full mb-4">
-            <Heart className="h-4 w-4" />
+            <Heart className="h-4 w-4" data-testid="familytestimonials-heart" />
             <span className="text-sm font-medium">
               {t("testimonials.badge")}
             </span>
@@ -151,7 +151,7 @@ export const FamilyTestimonials: React.FC = () => {
         {/* Trust Indicators */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto mb-12">
           <div className="text-center p-4 bg-muted/50 rounded-lg">
-            <Users className="h-8 w-8 text-primary mx-auto mb-2" />
+            <Users className="h-8 w-8 text-primary mx-auto mb-2" data-testid="familytestimonials-users" />
             <p className="text-2xl font-bold text-foreground">
               {t("testimonials.stats.families")}
             </p>
@@ -160,7 +160,7 @@ export const FamilyTestimonials: React.FC = () => {
             </p>
           </div>
           <div className="text-center p-4 bg-muted/50 rounded-lg">
-            <Heart className="h-8 w-8 text-primary mx-auto mb-2" />
+            <Heart className="h-8 w-8 text-primary mx-auto mb-2" data-testid="familytestimonials-heart" />
             <p className="text-2xl font-bold text-foreground">
               {t("testimonials.stats.satisfaction")}
             </p>
@@ -169,7 +169,7 @@ export const FamilyTestimonials: React.FC = () => {
             </p>
           </div>
           <div className="text-center p-4 bg-muted/50 rounded-lg">
-            <TrendingUp className="h-8 w-8 text-primary mx-auto mb-2" />
+            <TrendingUp className="h-8 w-8 text-primary mx-auto mb-2" data-testid="familytestimonials-trendingup" />
             <p className="text-2xl font-bold text-foreground">
               {t("testimonials.stats.stressReduction")}
             </p>
@@ -178,7 +178,7 @@ export const FamilyTestimonials: React.FC = () => {
             </p>
           </div>
           <div className="text-center p-4 bg-muted/50 rounded-lg">
-            <Clock className="h-8 w-8 text-primary mx-auto mb-2" />
+            <Clock className="h-8 w-8 text-primary mx-auto mb-2" data-testid="familytestimonials-clock" />
             <p className="text-2xl font-bold text-foreground">
               {t("testimonials.stats.timeSaved")}
             </p>
@@ -197,21 +197,21 @@ export const FamilyTestimonials: React.FC = () => {
             >
               {testimonials.map((testimonial) => (
                 <div key={testimonial.id} className="w-full flex-shrink-0">
-                  <Card className="mx-4">
-                    <CardHeader className="pb-4">
+                  <Card className="mx-4" data-testid="familytestimonials-card">
+                    <CardHeader className="pb-4" data-testid="familytestimonials-cardheader">
                       <div className="flex items-start justify-between">
-                        <Quote className="h-8 w-8 text-primary/20" />
+                        <Quote className="h-8 w-8 text-primary/20" data-testid="familytestimonials-quote" />
                         <div className="flex items-center gap-1">
                           {[...Array(testimonial.rating)].map((_, i) => (
                             <Star
                               key={i}
-                              className="h-4 w-4 fill-primary text-primary"
+                              className="h-4 w-4 fill-primary text-primary" data-testid="familytestimonials-star"
                             />
                           ))}
                         </div>
                       </div>
                     </CardHeader>
-                    <CardContent className="space-y-4">
+                    <CardContent className="space-y-4" data-testid="familytestimonials-cardcontent">
                       <blockquote className="text-lg leading-relaxed text-foreground">
                         "{testimonial.quote}"
                       </blockquote>
@@ -233,7 +233,7 @@ export const FamilyTestimonials: React.FC = () => {
                             {testimonial.role}
                           </p>
                           <div className="flex items-center gap-2 mt-1">
-                            <MapPin className="h-3 w-3 text-muted-foreground" />
+                            <MapPin className="h-3 w-3 text-muted-foreground" data-testid="familytestimonials-mappin" />
                             <span className="text-sm text-muted-foreground">
                               {testimonial.location}
                             </span>
@@ -242,9 +242,9 @@ export const FamilyTestimonials: React.FC = () => {
                         {testimonial.verified && (
                           <Badge
                             variant="secondary"
-                            className="flex items-center gap-1"
+                            className="flex items-center gap-1" data-testid="familytestimonials-badge"
                           >
-                            <CheckCircle className="h-3 w-3" />
+                            <CheckCircle className="h-3 w-3" data-testid="familytestimonials-checkcircle" />
                             {t("testimonials.verified")}
                           </Badge>
                         )}
@@ -261,17 +261,17 @@ export const FamilyTestimonials: React.FC = () => {
             variant="ghost"
             size="icon"
             className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-12"
-            onClick={handlePrevious}
+            onClick={handlePrevious} data-testid="familytestimonials-button"
           >
-            <ChevronLeft className="h-6 w-6" />
+            <ChevronLeft className="h-6 w-6" data-testid="familytestimonials-chevronleft" />
           </Button>
           <Button
             variant="ghost"
             size="icon"
             className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-12"
-            onClick={handleNext}
+            onClick={handleNext} data-testid="familytestimonials-button"
           >
-            <ChevronRight className="h-6 w-6" />
+            <ChevronRight className="h-6 w-6" data-testid="familytestimonials-chevronright" />
           </Button>
 
           {/* Dots Indicator */}
@@ -284,7 +284,7 @@ export const FamilyTestimonials: React.FC = () => {
                     ? "w-8 bg-primary"
                     : "bg-muted-foreground/30 hover:bg-muted-foreground/50"
                 }`}
-                onClick={() => handleDotClick(index)}
+                onClick={() => handleDotClick(index)} data-testid="familytestimonials-button"
               />
             ))}
           </div>
@@ -297,19 +297,19 @@ export const FamilyTestimonials: React.FC = () => {
           </p>
           <div className="flex flex-wrap justify-center gap-6 items-center">
             <div className="flex items-center gap-2">
-              <Shield className="h-5 w-5 text-primary" />
+              <Shield className="h-5 w-5 text-primary" data-testid="familytestimonials-shield" />
               <span className="text-sm font-medium">
                 {t("testimonials.authority.advisors")}
               </span>
             </div>
             <div className="flex items-center gap-2">
-              <Shield className="h-5 w-5 text-primary" />
+              <Shield className="h-5 w-5 text-primary" data-testid="familytestimonials-shield" />
               <span className="text-sm font-medium">
                 {t("testimonials.authority.attorneys")}
               </span>
             </div>
             <div className="flex items-center gap-2">
-              <Shield className="h-5 w-5 text-primary" />
+              <Shield className="h-5 w-5 text-primary" data-testid="familytestimonials-shield" />
               <span className="text-sm font-medium">
                 {t("testimonials.authority.counselors")}
               </span>
@@ -318,13 +318,13 @@ export const FamilyTestimonials: React.FC = () => {
 
           {/* Compliance Badges */}
           <div className="flex justify-center gap-4 mt-6">
-            <Badge variant="outline" className="text-xs">
+            <Badge variant="outline" className="text-xs" data-testid="familytestimonials-t-testimonials-compliance-gdpr">
               ✓ {t("testimonials.compliance.gdpr")}
             </Badge>
-            <Badge variant="outline" className="text-xs">
+            <Badge variant="outline" className="text-xs" data-testid="familytestimonials-badge">
               🔒 {t("testimonials.compliance.dataProtection")}
             </Badge>
-            <Badge variant="outline" className="text-xs">
+            <Badge variant="outline" className="text-xs" data-testid="familytestimonials-t-testimonials-compliance-iso">
               ✓ {t("testimonials.compliance.iso")}
             </Badge>
           </div>

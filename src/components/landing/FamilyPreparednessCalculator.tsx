@@ -101,7 +101,7 @@ export const FamilyPreparednessCalculator: React.FC = () => {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full mb-4">
-            <Calculator className="h-4 w-4" />
+            <Calculator className="h-4 w-4" data-testid="familypreparednesscalculator-calculator" />
             <span className="text-sm font-medium">
               {t("dashboard-main:dashboard.badge")}
             </span>
@@ -116,21 +116,21 @@ export const FamilyPreparednessCalculator: React.FC = () => {
 
         <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {/* Inputs Card */}
-          <Card className="h-fit">
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <Users className="h-5 w-5 text-primary" />
+          <Card className="h-fit" data-testid="familypreparednesscalculator-card">
+            <CardHeader data-testid="familypreparednesscalculator-cardheader">
+              <CardTitle className="flex items-center gap-2" data-testid="familypreparednesscalculator-cardtitle">
+                <Users className="h-5 w-5 text-primary" data-testid="familypreparednesscalculator-users" />
                 {t("dashboard-main:dashboard.inputs.title")}
               </CardTitle>
-              <CardDescription>
+              <CardDescription data-testid="familypreparednesscalculator-carddescription">
                 {t("dashboard-main:dashboard.inputs.description")}
               </CardDescription>
             </CardHeader>
-            <CardContent className="space-y-6">
+            <CardContent className="space-y-6" data-testid="familypreparednesscalculator-dependents">
               {/* Dependents */}
               <div className="space-y-2">
-                <Label htmlFor="dependents" className="flex items-center gap-2">
-                  <Users className="h-4 w-4 text-muted-foreground" />
+                <Label htmlFor="dependents" className="flex items-center gap-2" data-testid="familypreparednesscalculator-label">
+                  <Users className="h-4 w-4 text-muted-foreground" data-testid="familypreparednesscalculator-users" />
                   {t("dashboard-main:dashboard.inputs.dependents")}
                 </Label>
                 <Input
@@ -140,7 +140,7 @@ export const FamilyPreparednessCalculator: React.FC = () => {
                   max="10"
                   value={dependents}
                   onChange={(e) => setDependents(Number(e.target.value))}
-                  className="text-lg"
+                  className="text-lg" data-testid="familypreparednesscalculator-input"
                 />
 
                 <p className="text-sm text-muted-foreground">
@@ -150,8 +150,8 @@ export const FamilyPreparednessCalculator: React.FC = () => {
 
               {/* Income */}
               <div className="space-y-2">
-                <Label htmlFor="income" className="flex items-center gap-2">
-                  <Euro className="h-4 w-4 text-muted-foreground" />
+                <Label htmlFor="income" className="flex items-center gap-2" data-testid="familypreparednesscalculator-label">
+                  <Euro className="h-4 w-4 text-muted-foreground" data-testid="familypreparednesscalculator-euro" />
                   {t("dashboard-main:dashboard.inputs.income")}
                 </Label>
                 <div className="relative">
@@ -164,7 +164,7 @@ export const FamilyPreparednessCalculator: React.FC = () => {
                     min="0"
                     value={income}
                     onChange={(e) => setIncome(Number(e.target.value))}
-                    className="pl-8 text-lg"
+                    className="pl-8 text-lg" data-testid="familypreparednesscalculator-input"
                   />
                 </div>
                 <p className="text-sm text-muted-foreground">
@@ -179,14 +179,14 @@ export const FamilyPreparednessCalculator: React.FC = () => {
                   checked={hasProperty}
                   onCheckedChange={(checked) =>
                     setHasProperty(checked as boolean)
-                  }
+                  } data-testid="familypreparednesscalculator-checkbox"
                 />
 
                 <Label
                   htmlFor="property"
-                  className="flex items-center gap-2 cursor-pointer"
+                  className="flex items-center gap-2 cursor-pointer" data-testid="familypreparednesscalculator-label"
                 >
-                  <HomeIcon className="h-4 w-4 text-muted-foreground" />
+                  <HomeIcon className="h-4 w-4 text-muted-foreground" data-testid="familypreparednesscalculator-homeicon" />
                   {t("dashboard-main:dashboard.inputs.property")}
                 </Label>
               </div>
@@ -198,22 +198,22 @@ export const FamilyPreparednessCalculator: React.FC = () => {
                   checked={hasBusiness}
                   onCheckedChange={(checked) =>
                     setHasBusiness(checked as boolean)
-                  }
+                  } data-testid="familypreparednesscalculator-checkbox"
                 />
 
                 <Label
                   htmlFor="business"
-                  className="flex items-center gap-2 cursor-pointer"
+                  className="flex items-center gap-2 cursor-pointer" data-testid="familypreparednesscalculator-label"
                 >
-                  <Building className="h-4 w-4 text-muted-foreground" />
+                  <Building className="h-4 w-4 text-muted-foreground" data-testid="familypreparednesscalculator-building" />
                   {t("dashboard-main:dashboard.inputs.business")}
                 </Label>
               </div>
 
               {/* Bank Accounts */}
               <div className="space-y-2">
-                <Label htmlFor="accounts" className="flex items-center gap-2">
-                  <Wallet className="h-4 w-4 text-muted-foreground" />
+                <Label htmlFor="accounts" className="flex items-center gap-2" data-testid="familypreparednesscalculator-label">
+                  <Wallet className="h-4 w-4 text-muted-foreground" data-testid="familypreparednesscalculator-wallet" />
                   {t("dashboard-main:dashboard.inputs.accounts")}
                 </Label>
                 <Input
@@ -223,7 +223,7 @@ export const FamilyPreparednessCalculator: React.FC = () => {
                   max="20"
                   value={accounts}
                   onChange={(e) => setAccounts(Number(e.target.value))}
-                  className="text-lg"
+                  className="text-lg" data-testid="familypreparednesscalculator-input"
                 />
 
                 <p className="text-sm text-muted-foreground">
@@ -231,8 +231,8 @@ export const FamilyPreparednessCalculator: React.FC = () => {
                 </p>
               </div>
 
-              <Button onClick={handleCalculate} size="lg" className="w-full">
-                <Calculator className="mr-2 h-4 w-4" />
+              <Button onClick={handleCalculate} size="lg" className="w-full" data-testid="familypreparednesscalculator-button">
+                <Calculator className="mr-2 h-4 w-4" data-testid="familypreparednesscalculator-calculator" />
                 {t("dashboard.calculateButton")}
               </Button>
             </CardContent>
@@ -241,22 +241,22 @@ export const FamilyPreparednessCalculator: React.FC = () => {
           {/* Results Card */}
           <Card
             id="calculator-results"
-            className={`transition-opacity duration-500 ${showResults ? "opacity-100" : "opacity-50"}`}
+            className={`transition-opacity duration-500 ${showResults ? "opacity-100" : "opacity-50"}`} data-testid="familypreparednesscalculator-card"
           >
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <Heart className="h-5 w-5 text-primary" />
+            <CardHeader data-testid="familypreparednesscalculator-cardheader">
+              <CardTitle className="flex items-center gap-2" data-testid="familypreparednesscalculator-cardtitle">
+                <Heart className="h-5 w-5 text-primary" data-testid="familypreparednesscalculator-heart" />
                 {t("dashboard-main:dashboard.results.title")}
               </CardTitle>
-              <CardDescription>
+              <CardDescription data-testid="familypreparednesscalculator-carddescription">
                 {t("dashboard-main:dashboard.results.description")}
               </CardDescription>
             </CardHeader>
-            <CardContent className="space-y-6">
+            <CardContent className="space-y-6" data-testid="familypreparednesscalculator-time-savings">
               {/* Time Savings */}
               <div className="space-y-4">
                 <div className="flex items-center gap-2">
-                  <Clock className="h-5 w-5 text-primary" />
+                  <Clock className="h-5 w-5 text-primary" data-testid="familypreparednesscalculator-clock" />
                   <h3 className="font-semibold text-lg">
                     {t("dashboard.results.timeSavings.title")}
                   </h3>
@@ -291,7 +291,7 @@ export const FamilyPreparednessCalculator: React.FC = () => {
               {/* Money Savings */}
               <div className="space-y-4">
                 <div className="flex items-center gap-2">
-                  <Euro className="h-5 w-5 text-primary" />
+                  <Euro className="h-5 w-5 text-primary" data-testid="familypreparednesscalculator-euro" />
                   <h3 className="font-semibold text-lg">
                     {t("dashboard.results.moneySavings.title")}
                   </h3>
@@ -337,7 +337,7 @@ export const FamilyPreparednessCalculator: React.FC = () => {
               {/* Emotional Impact */}
               <div className="space-y-4">
                 <div className="flex items-center gap-2">
-                  <Heart className="h-5 w-5 text-primary" />
+                  <Heart className="h-5 w-5 text-primary" data-testid="familypreparednesscalculator-heart" />
                   <h3 className="font-semibold text-lg">
                     {t("dashboard-main:dashboard.results.emotional.title")}
                   </h3>
@@ -352,7 +352,7 @@ export const FamilyPreparednessCalculator: React.FC = () => {
                         {stressReduction}%
                       </span>
                     </div>
-                    <Progress value={stressReduction} className="h-2" />
+                    <Progress value={stressReduction} className="h-2" data-testid="familypreparednesscalculator-progress" />
                   </div>
                   <div>
                     <div className="flex justify-between items-center mb-1">
@@ -365,7 +365,7 @@ export const FamilyPreparednessCalculator: React.FC = () => {
                         {confidenceIncrease}%
                       </span>
                     </div>
-                    <Progress value={confidenceIncrease} className="h-2" />
+                    <Progress value={confidenceIncrease} className="h-2" data-testid="familypreparednesscalculator-progress" />
                   </div>
                   <div>
                     <div className="flex justify-between items-center mb-1">
@@ -377,7 +377,7 @@ export const FamilyPreparednessCalculator: React.FC = () => {
                         {t("landing.familyPreparednessCalculator.10_3")}
                       </span>
                     </div>
-                    <Progress value={controlRating * 10} className="h-2" />
+                    <Progress value={controlRating * 10} className="h-2" data-testid="familypreparednesscalculator-progress" />
                   </div>
                 </div>
               </div>
@@ -405,18 +405,18 @@ export const FamilyPreparednessCalculator: React.FC = () => {
                   variant="default"
                   size="lg"
                   className="flex-1 animate-pulse"
-                  asChild
+                  asChild data-testid="familypreparednesscalculator-button"
                 >
-                  <a href="/register">
+                  <a href="/register" data-testid="familypreparednesscalculator-a">
                     {t("calculator.results.ctaButton", {
                       amount: moneySaved.toLocaleString(),
                       hours: timeSaved,
                     })}
-                    <ArrowRight className="ml-2 h-4 w-4" />
+                    <ArrowRight className="ml-2 h-4 w-4" data-testid="familypreparednesscalculator-arrowright" />
                   </a>
                 </Button>
-                <Button variant="outline" size="lg" onClick={handleShare}>
-                  <Share2 className="mr-2 h-4 w-4" />
+                <Button variant="outline" size="lg" onClick={handleShare} data-testid="familypreparednesscalculator-button">
+                  <Share2 className="mr-2 h-4 w-4" data-testid="familypreparednesscalculator-share2" />
                   {t("dashboard.results.shareButton")}
                 </Button>
               </div>

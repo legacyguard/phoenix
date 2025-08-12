@@ -470,7 +470,7 @@ export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({
       return (
         <div className="space-y-8 text-center">
           <div className="space-y-6">
-            <Loader2 className="h-12 w-12 text-primary mx-auto animate-spin" />
+            <Loader2 className="h-12 w-12 text-primary mx-auto animate-spin" data-testid="onboardingwizard-loader2" />
             <div className="space-y-2">
               <h3 className="text-xl font-bold">{t("analysis.title")}</h3>
               <p className="text-muted-foreground">{t("analysis.subtitle")}</p>
@@ -485,7 +485,7 @@ export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({
         <BasicLifeQuestions
           initialAnswers={mapProjectOrderToLifeAnswers(answers)}
           onComplete={handleLifeQuestionsComplete}
-          onBack={handleLifeQuestionsBack}
+          onBack={handleLifeQuestionsBack} data-testid="onboardingwizard-basiclifequestions"
         />
       );
     }
@@ -510,7 +510,7 @@ export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({
                     );
                   }}
                   size="lg"
-                  className="w-full text-left justify-start"
+                  className="w-full text-left justify-start" data-testid="onboardingwizard-t-help-help-q1-option1"
                 >
                   {t("help:help.q1.option1")}
                 </Button>
@@ -527,7 +527,7 @@ export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({
                     );
                   }}
                   size="lg"
-                  className="w-full text-left justify-start"
+                  className="w-full text-left justify-start" data-testid="onboardingwizard-t-help-help-q1-option2"
                 >
                   {t("help:help.q1.option2")}
                 </Button>
@@ -549,7 +549,7 @@ export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({
                     );
                   }}
                   size="lg"
-                  className="w-full text-left justify-start"
+                  className="w-full text-left justify-start" data-testid="onboardingwizard-t-help-help-q1-option3"
                 >
                   {t("help:help.q1.option3")}
                 </Button>
@@ -580,7 +580,7 @@ export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({
                     );
                   }}
                   size="lg"
-                  className="w-full text-left justify-start"
+                  className="w-full text-left justify-start" data-testid="onboardingwizard-t-help-help-q2-option1"
                 >
                   {t("help:help.q2.option1")}
                 </Button>
@@ -602,7 +602,7 @@ export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({
                     );
                   }}
                   size="lg"
-                  className="w-full text-left justify-start"
+                  className="w-full text-left justify-start" data-testid="onboardingwizard-t-help-help-q2-option2"
                 >
                   {t("help:help.q2.option2")}
                 </Button>
@@ -622,7 +622,7 @@ export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({
                     );
                   }}
                   size="lg"
-                  className="w-full text-left justify-start"
+                  className="w-full text-left justify-start" data-testid="onboardingwizard-t-help-help-q2-option3"
                 >
                   {t("help:help.q2.option3")}
                 </Button>
@@ -655,7 +655,7 @@ export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({
                     );
                   }}
                   size="lg"
-                  className="w-full text-left justify-start"
+                  className="w-full text-left justify-start" data-testid="onboardingwizard-t-help-help-q3-option1"
                 >
                   {t("help:help.q3.option1")}
                 </Button>
@@ -675,7 +675,7 @@ export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({
                     );
                   }}
                   size="lg"
-                  className="w-full text-left justify-start"
+                  className="w-full text-left justify-start" data-testid="onboardingwizard-t-help-help-q3-option2"
                 >
                   {t("help:help.q3.option2")}
                 </Button>
@@ -697,7 +697,7 @@ export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({
                     );
                   }}
                   size="lg"
-                  className="w-full text-left justify-start"
+                  className="w-full text-left justify-start" data-testid="onboardingwizard-t-help-help-q3-option3"
                 >
                   {t("help:help.q3.option3")}
                 </Button>
@@ -728,7 +728,7 @@ export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({
                     );
                   }}
                   size="lg"
-                  className="w-full text-left justify-start"
+                  className="w-full text-left justify-start" data-testid="onboardingwizard-t-help-help-q4-option1"
                 >
                   {t("help:help.q4.option1")}
                 </Button>
@@ -745,7 +745,7 @@ export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({
                     );
                   }}
                   size="lg"
-                  className="w-full text-left justify-start"
+                  className="w-full text-left justify-start" data-testid="onboardingwizard-t-help-help-q4-option2"
                 >
                   {t("help:help.q4.option2")}
                 </Button>
@@ -765,7 +765,7 @@ export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({
                     );
                   }}
                   size="lg"
-                  className="w-full text-left justify-start"
+                  className="w-full text-left justify-start" data-testid="onboardingwizard-t-help-help-q4-option3"
                 >
                   {t("help:help.q4.option3")}
                 </Button>
@@ -785,7 +785,7 @@ export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({
                     );
                   }}
                   size="lg"
-                  className="w-full text-left justify-start"
+                  className="w-full text-left justify-start" data-testid="onboardingwizard-t-help-help-q4-option4"
                 >
                   {t("help:help.q4.option4")}
                 </Button>
@@ -801,18 +801,18 @@ export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({
 
   return (
     <>
-      <Dialog open={isOpen} onOpenChange={onClose}>
+      <Dialog open={isOpen} onOpenChange={onClose} data-testid="onboardingwizard-showlifequestions">
         <DialogContent
           className={cn(
             "max-h-[90vh] overflow-y-auto",
             showLifeQuestions ? "sm:max-w-[900px]" : "sm:max-w-[700px]",
-          )}
+          )} data-testid="onboardingwizard-showlifequestions"
         >
           {!showLifeQuestions && (
-            <DialogHeader>
+            <DialogHeader data-testid="onboardingwizard-dialogheader">
               <div className="flex items-start justify-between">
                 <div className="flex-1">
-                  <DialogTitle className="text-center text-3xl font-bold">
+                  <DialogTitle className="text-center text-3xl font-bold" data-testid="onboardingwizard-t-welcome-title">
                     {t("welcome.title")}
                   </DialogTitle>
                   <p className="text-center text-muted-foreground mt-2 text-lg">
@@ -823,9 +823,9 @@ export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({
                   variant="ghost"
                   size="sm"
                   onClick={handleSkip}
-                  className="ml-4"
+                  className="ml-4" data-testid="onboardingwizard-button"
                 >
-                  <SkipForward className="mr-2 h-4 w-4" />
+                  <SkipForward className="mr-2 h-4 w-4" data-testid="onboardingwizard-skipforward" />
                   {t("welcome.skipForNow")}
                 </Button>
               </div>
@@ -847,7 +847,7 @@ export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({
                 </div>
                 <Progress
                   value={(currentStep / totalSteps) * 100}
-                  className="w-full h-2"
+                  className="w-full h-2" data-testid="onboardingwizard-progress"
                 />
               </div>
             )}
@@ -869,7 +869,7 @@ export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({
                   variant="outline"
                   onClick={handlePrevious}
                   disabled={currentStep === 1}
-                  size="lg"
+                  size="lg" data-testid="onboardingwizard-tcommon-common-back"
                 >
                   {tCommon("common.back")}
                 </Button>
@@ -878,26 +878,26 @@ export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({
                   <Button
                     onClick={handleNext}
                     disabled={!canProceed()}
-                    size="lg"
+                    size="lg" data-testid="onboardingwizard-tcommon-common-next"
                   >
                     {tCommon("common.next")}
-                    <ChevronRight className="ml-2 h-4 w-4" />
+                    <ChevronRight className="ml-2 h-4 w-4" data-testid="onboardingwizard-chevronright" />
                   </Button>
                 ) : (
                   <Button
                     onClick={handleComplete}
                     size="lg"
-                    disabled={isLoading}
+                    disabled={isLoading} data-testid="onboardingwizard-isloading"
                   >
                     {isLoading ? (
                       <>
-                        <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                        <Loader2 className="mr-2 h-4 w-4 animate-spin" data-testid="onboardingwizard-loader2" />
                         {t("analysis.title")}
                       </>
                     ) : (
                       <>
                         {t("completion.viewPlan")}
-                        <ChevronRight className="ml-2 h-4 w-4" />
+                        <ChevronRight className="ml-2 h-4 w-4" data-testid="onboardingwizard-chevronright" />
                       </>
                     )}
                   </Button>
@@ -909,19 +909,19 @@ export const OnboardingWizard: React.FC<OnboardingWizardProps> = ({
       </Dialog>
 
       {/* Skip Confirmation Dialog */}
-      <AlertDialog open={showSkipConfirm} onOpenChange={setShowSkipConfirm}>
-        <AlertDialogContent>
-          <AlertDialogHeader>
-            <AlertDialogTitle>{t("skip.title")}</AlertDialogTitle>
-            <AlertDialogDescription>
+      <AlertDialog open={showSkipConfirm} onOpenChange={setShowSkipConfirm} data-testid="onboardingwizard-alertdialog">
+        <AlertDialogContent data-testid="onboardingwizard-alertdialogcontent">
+          <AlertDialogHeader data-testid="onboardingwizard-t-skip-title">
+            <AlertDialogTitle data-testid="onboardingwizard-t-skip-title">{t("skip.title")}</AlertDialogTitle>
+            <AlertDialogDescription data-testid="onboardingwizard-t-skip-description">
               {t("skip.description")}
             </AlertDialogDescription>
           </AlertDialogHeader>
-          <AlertDialogFooter>
-            <AlertDialogCancel onClick={() => setShowSkipConfirm(false)}>
+          <AlertDialogFooter data-testid="onboardingwizard-t-skip-continuesetup">
+            <AlertDialogCancel onClick={() => setShowSkipConfirm(false)} data-testid="onboardingwizard-t-skip-continuesetup">
               {t("skip.continueSetup")}
             </AlertDialogCancel>
-            <AlertDialogAction onClick={handleSkipConfirm}>
+            <AlertDialogAction onClick={handleSkipConfirm} data-testid="onboardingwizard-t-skip-skipconfirm">
               {t("skip.skipConfirm")}
             </AlertDialogAction>
           </AlertDialogFooter>

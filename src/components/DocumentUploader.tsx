@@ -171,7 +171,7 @@ const DocumentUploader: React.FC<DocumentUploaderProps> = ({
           className="sr-only"
           accept={t("documentUploader.image_application_pdf_4")}
           onChange={handleChange}
-          disabled={isProcessing}
+          disabled={isProcessing} data-testid="documentuploader-input"
         />
 
         <label htmlFor="file-upload" className="cursor-pointer">
@@ -285,10 +285,10 @@ const DocumentUploader: React.FC<DocumentUploaderProps> = ({
 
           {/* Action Buttons */}
           <div className="mt-6 flex gap-3">
-            <button className="flex-1 px-4 py-2 bg-blue-600 text-white font-semibold rounded hover:bg-blue-700 transition-colors">
+            <button className="flex-1 px-4 py-2 bg-blue-600 text-white font-semibold rounded hover:bg-blue-700 transition-colors" data-testid="documentuploader-button">
               {t("documentUploader.continue_with_this_classificat_14")}
             </button>
-            <button className="px-4 py-2 border border-gray-300 text-gray-700 font-semibold rounded hover:bg-gray-50 transition-colors">
+            <button className="px-4 py-2 border border-gray-300 text-gray-700 font-semibold rounded hover:bg-gray-50 transition-colors" data-testid="documentuploader-t-documentuploader-change-category-15">
               {t("documentUploader.change_category_15")}
             </button>
           </div>

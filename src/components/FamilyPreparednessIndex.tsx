@@ -171,9 +171,9 @@ export const FamilyPreparednessIndex: React.FC<
           ? "capable"
           : "vulnerable",
         icon: userAssets.some((a) => a.type?.toLowerCase().includes("bank")) ? (
-          <CheckCircle2 />
+          <CheckCircle2 data-testid="familypreparednessindex-checkcircle2" />
         ) : (
-          <AlertTriangle />
+          <AlertTriangle data-testid="familypreparednessindex-alerttriangle" />
         ),
       },
       {
@@ -187,9 +187,9 @@ export const FamilyPreparednessIndex: React.FC<
         icon: userDocuments.some((d) =>
           d.type?.toLowerCase().includes("digital"),
         ) ? (
-          <CheckCircle2 />
+          <CheckCircle2 data-testid="familypreparednessindex-checkcircle2" />
         ) : (
-          <AlertTriangle />
+          <AlertTriangle data-testid="familypreparednessindex-alerttriangle" />
         ),
       },
       // Additional capabilities go here
@@ -203,7 +203,7 @@ export const FamilyPreparednessIndex: React.FC<
         id: "emergency_hospital",
         title: t("preparedness.scenarios.emergencyHospital.title"),
         description: t("preparedness.scenarios.emergencyHospital.description"),
-        icon: <Heart />,
+        icon: <Heart data-testid="familypreparednessindex-heart" />,
         isPrepared: true, // Example: conditionally calculate
         requiredCapabilities: [],
         missingCapabilities: [],
@@ -212,7 +212,7 @@ export const FamilyPreparednessIndex: React.FC<
         id: "sudden_death",
         title: t("preparedness.scenarios.suddenDeath.title"),
         description: t("preparedness.scenarios.suddenDeath.description"),
-        icon: <AlertCircle />,
+        icon: <AlertCircle data-testid="familypreparednessindex-alertcircle" />,
         isPrepared: false, // Example: conditionally calculate
         requiredCapabilities: ["immediate_financial_needs", "digital_access"],
         missingCapabilities: [],
@@ -262,7 +262,7 @@ export const FamilyPreparednessIndex: React.FC<
       id: "emergency_hospital",
       title: t("preparedness.scenarios.emergencyHospital.title"),
       description: t("preparedness.scenarios.emergencyHospital.description"),
-      icon: <Heart className="h-5 w-5" />,
+      icon: <Heart className="h-5 w-5" data-testid="familypreparednessindex-heart" />,
       requiredPreparedness: {
         immediateAccess: 80,
         decisionMaking: 60,
@@ -289,7 +289,7 @@ export const FamilyPreparednessIndex: React.FC<
       id: "sudden_death",
       title: t("preparedness.scenarios.suddenDeath.title"),
       description: t("preparedness.scenarios.suddenDeath.description"),
-      icon: <AlertCircle className="h-5 w-5" />,
+      icon: <AlertCircle className="h-5 w-5" data-testid="familypreparednessindex-alertcircle" />,
       requiredPreparedness: {
         immediateAccess: 90,
         decisionMaking: 85,
@@ -325,7 +325,7 @@ export const FamilyPreparednessIndex: React.FC<
       id: "extended_travel",
       title: t("preparedness.scenarios.extendedTravel.title"),
       description: t("preparedness.scenarios.extendedTravel.description"),
-      icon: <Clock className="h-5 w-5" />,
+      icon: <Clock className="h-5 w-5" data-testid="familypreparednessindex-clock" />,
       requiredPreparedness: {
         immediateAccess: 60,
         decisionMaking: 40,
@@ -385,9 +385,9 @@ export const FamilyPreparednessIndex: React.FC<
   return (
     <div className="space-y-6">
       {/* Main Preparedness Index Card */}
-      <Card className="border-2">
-        <CardHeader className="text-center pb-4">
-          <CardTitle className="text-3xl font-bold">
+      <Card className="border-2" data-testid="familypreparednessindex-card">
+        <CardHeader className="text-center pb-4" data-testid="familypreparednessindex-t-preparedness-title">
+          <CardTitle className="text-3xl font-bold" data-testid="familypreparednessindex-t-preparedness-title">
             {t("preparedness.title")}
           </CardTitle>
           <div className="mt-4">
@@ -400,7 +400,7 @@ export const FamilyPreparednessIndex: React.FC<
           </div>
         </CardHeader>
 
-        <CardContent className="space-y-6">
+        <CardContent className="space-y-6" data-testid="familypreparednessindex-dimension-breakdowns">
           {/* Dimension Breakdowns */}
           <div className="space-y-4">
             {/* Immediate Access */}
@@ -413,7 +413,7 @@ export const FamilyPreparednessIndex: React.FC<
                   {immediateAccessScore}%
                 </span>
               </div>
-              <Progress value={immediateAccessScore} className="h-3" />
+              <Progress value={immediateAccessScore} className="h-3" data-testid="familypreparednessindex-progress" />
               <p className="text-sm text-muted-foreground">
                 {immediateAccessScore >= 75
                   ? t("preparedness.assessments.immediateAccess.good")
@@ -431,7 +431,7 @@ export const FamilyPreparednessIndex: React.FC<
                   {decisionMakingScore}%
                 </span>
               </div>
-              <Progress value={decisionMakingScore} className="h-3" />
+              <Progress value={decisionMakingScore} className="h-3" data-testid="familypreparednessindex-progress" />
               <p className="text-sm text-muted-foreground">
                 {decisionMakingScore >= 70
                   ? t("preparedness.assessments.decisionMaking.good")
@@ -449,7 +449,7 @@ export const FamilyPreparednessIndex: React.FC<
                   {longTermSecurityScore}%
                 </span>
               </div>
-              <Progress value={longTermSecurityScore} className="h-3" />
+              <Progress value={longTermSecurityScore} className="h-3" data-testid="familypreparednessindex-progress" />
               <p className="text-sm text-muted-foreground">
                 {longTermSecurityScore >= 75
                   ? t("preparedness.assessments.longTermSecurity.good")
@@ -460,10 +460,10 @@ export const FamilyPreparednessIndex: React.FC<
 
           {/* Next Improvement */}
           {nextImprovement && overallIndex < 90 && (
-            <Card className="bg-primary/5 border-primary/20">
-              <CardContent className="pt-6">
+            <Card className="bg-primary/5 border-primary/20" data-testid="familypreparednessindex-card">
+              <CardContent className="pt-6" data-testid="familypreparednessindex-cardcontent">
                 <div className="flex items-start space-x-3">
-                  <TrendingUp className="h-5 w-5 text-primary mt-0.5" />
+                  <TrendingUp className="h-5 w-5 text-primary mt-0.5" data-testid="familypreparednessindex-trendingup" />
                   <div className="flex-1">
                     <p className="font-medium text-sm">
                       {t("preparedness.nextStep", { score: overallIndex + 5 })}
@@ -476,7 +476,7 @@ export const FamilyPreparednessIndex: React.FC<
                       {t("preparedness.familyBenefit")}
                     </p>
                   </div>
-                  <Button size="sm" variant="outline">
+                  <Button size="sm" variant="outline" data-testid="familypreparednessindex-t-ui-elements-ui-start">
                     {t("ui-elements:ui.start")}
                   </Button>
                 </div>
@@ -493,7 +493,7 @@ export const FamilyPreparednessIndex: React.FC<
         </h3>
 
         {scenarios.map((scenario) => (
-          <Card key={scenario.id} className="p-4">
+          <Card key={scenario.id} className="p-4" data-testid="familypreparednessindex-card">
             <div className="flex items-start space-x-4">
               <div className="p-2 rounded-lg bg-muted">{scenario.icon}</div>
 
@@ -515,10 +515,10 @@ export const FamilyPreparednessIndex: React.FC<
                           : scenario.familyReadiness === "partially_ready"
                             ? "outline"
                             : "destructive"
-                    }
+                    } data-testid="familypreparednessindex-badge"
                   >
                     {scenario.familyReadiness === "ready" && (
-                      <CheckCircle2 className="h-3 w-3 mr-1" />
+                      <CheckCircle2 className="h-3 w-3 mr-1" data-testid="familypreparednessindex-checkcircle2" />
                     )}
                     {t(`preparedness.readiness.${scenario.familyReadiness}`)}
                   </Badge>
@@ -537,22 +537,22 @@ export const FamilyPreparednessIndex: React.FC<
       </div>
 
       {/* Family Communication */}
-      <Card className="bg-muted/50">
-        <CardHeader>
-          <CardTitle className="text-base flex items-center space-x-2">
-            <Users className="h-5 w-5" />
+      <Card className="bg-muted/50" data-testid="familypreparednessindex-card">
+        <CardHeader data-testid="familypreparednessindex-cardheader">
+          <CardTitle className="text-base flex items-center space-x-2" data-testid="familypreparednessindex-cardtitle">
+            <Users className="h-5 w-5" data-testid="familypreparednessindex-users" />
             <span>{t("preparedness.familyCommunication.title")}</span>
           </CardTitle>
         </CardHeader>
-        <CardContent>
+        <CardContent data-testid="familypreparednessindex-cardcontent">
           <p className="text-sm text-muted-foreground mb-4">
             {t("preparedness.familyCommunication.description")}
           </p>
           <div className="flex space-x-3">
-            <Button variant="outline" size="sm">
+            <Button variant="outline" size="sm" data-testid="familypreparednessindex-button">
               {t("preparedness.familyCommunication.shareReport")}
             </Button>
-            <Button variant="outline" size="sm">
+            <Button variant="outline" size="sm" data-testid="familypreparednessindex-button">
               {t("preparedness.familyCommunication.scheduleReview")}
             </Button>
           </div>

@@ -394,14 +394,14 @@ export const DocumentUpload: React.FC<DocumentUploadProps> = ({
       <div className="space-y-6">
         <div className="flex items-center justify-between">
           <h2 className="text-xl font-semibold">{t("assets:assets.title")}</h2>
-          <Button variant="outline" onClick={handleCancel}>
+          <Button variant="outline" onClick={handleCancel} data-testid="documentupload-tcommon-common-buttons-cancel">
             {tCommon("common.buttons.cancel")}
           </Button>
         </div>
 
         <div className="space-y-4">
           <div>
-            <Label htmlFor="documentName">{t("details.fileName")} *</Label>
+            <Label htmlFor="documentName" data-testid="documentupload-t-details-filename">{t("details.fileName")} *</Label>
             <Input
               id="documentName"
               value={documentName}
@@ -410,7 +410,7 @@ export const DocumentUpload: React.FC<DocumentUploadProps> = ({
                 validateDocumentName(e.target.value);
               }}
               placeholder={t("details.fileName")}
-              className={cn(nameError && "border-red-500")}
+              className={cn(nameError && "border-red-500")} data-testid="documentupload-input"
             />
             {nameError && (
               <p className="text-sm text-red-500 mt-1">{nameError}</p>
@@ -418,14 +418,14 @@ export const DocumentUpload: React.FC<DocumentUploadProps> = ({
           </div>
 
           <div>
-            <Label htmlFor="documentType">{t("details.documentType")}</Label>
-            <Select value={documentType} onValueChange={setDocumentType}>
-              <SelectTrigger>
-                <SelectValue placeholder={t("details.documentType")} />
+            <Label htmlFor="documentType" data-testid="documentupload-t-details-documenttype">{t("details.documentType")}</Label>
+            <Select value={documentType} onValueChange={setDocumentType} data-testid="documentupload-select">
+              <SelectTrigger data-testid="documentupload-selecttrigger">
+                <SelectValue placeholder={t("details.documentType")} data-testid="documentupload-selectvalue" />
               </SelectTrigger>
-              <SelectContent>
+              <SelectContent data-testid="documentupload-documenttypes-map-type">
                 {documentTypes.map((type) => (
-                  <SelectItem key={type.key} value={type.value}>
+                  <SelectItem key={type.key} value={type.value} data-testid="documentupload-type-value">
                     {type.value}
                   </SelectItem>
                 ))}
@@ -434,14 +434,14 @@ export const DocumentUpload: React.FC<DocumentUploadProps> = ({
           </div>
 
           <div>
-            <Label htmlFor="countryCode">{t("details.jurisdiction")}</Label>
-            <Select value={countryCode} onValueChange={setCountryCode}>
-              <SelectTrigger>
-                <SelectValue />
+            <Label htmlFor="countryCode" data-testid="documentupload-t-details-jurisdiction">{t("details.jurisdiction")}</Label>
+            <Select value={countryCode} onValueChange={setCountryCode} data-testid="documentupload-select">
+              <SelectTrigger data-testid="documentupload-selecttrigger">
+                <SelectValue data-testid="documentupload-selectvalue" />
               </SelectTrigger>
-              <SelectContent>
+              <SelectContent data-testid="documentupload-supportedcountries-map-country">
                 {supportedCountries.map((country) => (
-                  <SelectItem key={country.code} value={country.code}>
+                  <SelectItem key={country.code} value={country.code} data-testid="documentupload-selectitem">
                     <div className="flex items-center gap-2">
                       <span className="text-lg">{country.flag}</span>
                       <span>{country.name}</span>
@@ -453,63 +453,63 @@ export const DocumentUpload: React.FC<DocumentUploadProps> = ({
           </div>
 
           <div>
-            <Label htmlFor="expirationDate">
+            <Label htmlFor="expirationDate" data-testid="documentupload-t-details-expirationdate">
               {t("details.expirationDate")}
             </Label>
-            <Popover>
-              <PopoverTrigger asChild>
+            <Popover data-testid="documentupload-popover">
+              <PopoverTrigger asChild data-testid="documentupload-popovertrigger">
                 <Button
                   variant="outline"
                   className={cn(
                     "w-full justify-start text-left font-normal",
                     !expirationDate && "text-muted-foreground",
-                  )}
+                  )} data-testid="documentupload-button"
                 >
-                  <CalendarIcon className="mr-2 h-4 w-4" />
+                  <CalendarIcon className="mr-2 h-4 w-4" data-testid="documentupload-calendaricon" />
                   {expirationDate
                     ? format(expirationDate, "PPP")
                     : t("details.expirationDate")}
                 </Button>
               </PopoverTrigger>
-              <PopoverContent className="w-auto p-0">
+              <PopoverContent className="w-auto p-0" data-testid="documentupload-popovercontent">
                 <Calendar
                   mode="single"
                   selected={expirationDate}
                   onSelect={setExpirationDate}
-                  initialFocus
+                  initialFocus data-testid="documentupload-calendar"
                 />
               </PopoverContent>
             </Popover>
           </div>
 
           <div>
-            <Label>{t("details.importanceLevel")}</Label>
+            <Label data-testid="documentupload-t-details-importancelevel">{t("details.importanceLevel")}</Label>
             <RadioGroup
               value={importanceLevel}
               onValueChange={(value: "critical" | "important" | "reference") =>
                 setImportanceLevel(value)
-              }
+              } data-testid="documentupload-radiogroup"
             >
               <div className="flex items-center space-x-2">
-                <RadioGroupItem value="critical" id="critical" />
-                <Label htmlFor="critical">{t("actions.markImportant")}</Label>
+                <RadioGroupItem value="critical" id="critical" data-testid="documentupload-radiogroupitem" />
+                <Label htmlFor="critical" data-testid="documentupload-t-actions-markimportant">{t("actions.markImportant")}</Label>
               </div>
               <div className="flex items-center space-x-2">
-                <RadioGroupItem value="important" id="important" />
-                <Label htmlFor="important">{t("details.important")}</Label>
+                <RadioGroupItem value="important" id="important" data-testid="documentupload-radiogroupitem" />
+                <Label htmlFor="important" data-testid="documentupload-t-details-important">{t("details.important")}</Label>
               </div>
               <div className="flex items-center space-x-2">
-                <RadioGroupItem value="reference" id="reference" />
-                <Label htmlFor="reference">{t("details.reference")}</Label>
+                <RadioGroupItem value="reference" id="reference" data-testid="documentupload-radiogroupitem" />
+                <Label htmlFor="reference" data-testid="documentupload-t-details-reference">{t("details.reference")}</Label>
               </div>
             </RadioGroup>
           </div>
 
           <div className="flex gap-4">
-            <Button onClick={handleSaveDocument} className="flex-1">
+            <Button onClick={handleSaveDocument} className="flex-1" data-testid="documentupload-t-actions-upload">
               {t("actions.upload")}
             </Button>
-            <Button variant="outline" onClick={handleCancel}>
+            <Button variant="outline" onClick={handleCancel} data-testid="documentupload-tcommon-common-buttons-cancel">
               {tCommon("common.buttons.cancel")}
             </Button>
           </div>
@@ -522,7 +522,7 @@ export const DocumentUpload: React.FC<DocumentUploadProps> = ({
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <h2 className="text-xl font-semibold">{t("assets:assets.title")}</h2>
-        <Button variant="outline" onClick={handleCancel}>
+        <Button variant="outline" onClick={handleCancel} data-testid="documentupload-tcommon-common-buttons-cancel">
           {tCommon("common.buttons.cancel")}
         </Button>
       </div>
@@ -534,7 +534,7 @@ export const DocumentUpload: React.FC<DocumentUploadProps> = ({
           onDragOver={handleDragOver}
           onClick={() => document.getElementById("fileInput")?.click()}
         >
-          <Upload className="mx-auto h-12 w-12 text-gray-400 mb-4" />
+          <Upload className="mx-auto h-12 w-12 text-gray-400 mb-4" data-testid="documentupload-upload" />
           <h3 className="text-lg font-medium text-gray-900 mb-2">
             {t("assets.dragDrop")}
           </h3>
@@ -551,13 +551,13 @@ export const DocumentUpload: React.FC<DocumentUploadProps> = ({
             type="file"
             className="hidden"
             accept=".pdf,.jpg,.jpeg,.png,.doc,.docx"
-            onChange={handleFileInputChange}
+            onChange={handleFileInputChange} data-testid="documentupload-input"
           />
         </div>
       ) : (
         <div className="space-y-4">
           <div className="flex items-center gap-4 p-4 border rounded-lg">
-            <FileText className="h-8 w-8 text-blue-500" />
+            <FileText className="h-8 w-8 text-blue-500" data-testid="documentupload-filetext" />
             <div className="flex-1">
               <h3 className="font-medium">{file.name}</h3>
               <p className="text-sm text-gray-500">
@@ -571,7 +571,7 @@ export const DocumentUpload: React.FC<DocumentUploadProps> = ({
                 setFile(null);
                 setDocumentName("");
                 setDocumentType("");
-              }}
+              }} data-testid="documentupload-tcommon-common-buttons-remove"
             >
               {tCommon("common.buttons.remove")}
             </Button>
@@ -583,11 +583,11 @@ export const DocumentUpload: React.FC<DocumentUploadProps> = ({
                 <span>{t("assets:assets.processing")}</span>
                 <span>{uploadProgress}%</span>
               </div>
-              <Progress value={uploadProgress} className="w-full" />
+              <Progress value={uploadProgress} className="w-full" data-testid="documentupload-progress" />
             </div>
           ) : (
-            <Button onClick={uploadFile} className="w-full">
-              <Upload className="mr-2 h-4 w-4" />
+            <Button onClick={uploadFile} className="w-full" data-testid="documentupload-t-assets-assets-title">
+              <Upload className="mr-2 h-4 w-4" data-testid="documentupload-upload" />
               {t("assets:assets.title")}
             </Button>
           )}

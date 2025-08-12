@@ -281,26 +281,26 @@ export function WillGenerator({ onComplete }: WillGeneratorProps) {
           </span>
           <span>{Math.round(calculateProgress())}%</span>
         </div>
-        <Progress value={calculateProgress()} className="w-full" />
+        <Progress value={calculateProgress()} className="w-full" data-testid="willgenerator-progress" />
       </div>
 
       {/* Step Content */}
-      <Card>
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2">
+      <Card data-testid="willgenerator-card">
+        <CardHeader data-testid="willgenerator-cardheader">
+          <CardTitle className="flex items-center gap-2" data-testid="willgenerator-cardtitle">
             {React.createElement(steps[currentStep].icon, {
               className: "h-5 w-5",
             })}
             {steps[currentStep].title}
           </CardTitle>
-          <CardDescription>{steps[currentStep].description}</CardDescription>
+          <CardDescription data-testid="willgenerator-steps-currentstep-description">{steps[currentStep].description}</CardDescription>
         </CardHeader>
-        <CardContent>
+        <CardContent data-testid="willgenerator-currentstep-0">
           {currentStep === 0 && (
             <div className="space-y-4">
               <CountrySelector
                 onCountrySelect={handleCountrySelect}
-                selectedCountry={countryCode}
+                selectedCountry={countryCode} data-testid="willgenerator-countryselector"
               />
               {Object.keys(validationErrors).length > 0 && (
                 <div className="space-y-2">
@@ -309,7 +309,7 @@ export function WillGenerator({ onComplete }: WillGeneratorProps) {
                       key={key}
                       className="flex items-center gap-2 text-sm text-red-600"
                     >
-                      <AlertCircle className="h-4 w-4" />
+                      <AlertCircle className="h-4 w-4" data-testid="willgenerator-alertcircle" />
                       <span>{error}</span>
                     </div>
                   ))}
@@ -322,7 +322,7 @@ export function WillGenerator({ onComplete }: WillGeneratorProps) {
             <AssetAllocationWizard
               beneficiaries={willContent.beneficiaries || []}
               onUpdate={handleBeneficiariesUpdate}
-              errors={validationErrors}
+              errors={validationErrors} data-testid="willgenerator-assetallocationwizard"
             />
           )}
 
@@ -330,7 +330,7 @@ export function WillGenerator({ onComplete }: WillGeneratorProps) {
             <BeneficiariesForm
               beneficiaries={willContent.beneficiaries || []}
               onUpdate={handleBeneficiariesUpdate}
-              errors={validationErrors}
+              errors={validationErrors} data-testid="willgenerator-beneficiariesform"
             />
           )}
 
@@ -350,7 +350,7 @@ export function WillGenerator({ onComplete }: WillGeneratorProps) {
             <ExecutorSelector
               executor={willContent.executor}
               onUpdate={handleExecutorUpdate}
-              errors={validationErrors}
+              errors={validationErrors} data-testid="willgenerator-executorselector"
             />
           )}
 
@@ -370,7 +370,7 @@ export function WillGenerator({ onComplete }: WillGeneratorProps) {
             <WillPreview
               willContent={willContent}
               requirements={requirements}
-              countryCode={countryCode}
+              countryCode={countryCode} data-testid="willgenerator-willpreview"
             />
           )}
         </CardContent>
@@ -381,16 +381,16 @@ export function WillGenerator({ onComplete }: WillGeneratorProps) {
         <Button
           variant="outline"
           onClick={handlePrevious}
-          disabled={currentStep === 0}
+          disabled={currentStep === 0} data-testid="willgenerator-t-actions-previous"
         >
           {t("actions.previous")}
         </Button>
 
         <div className="flex gap-2">
           {currentStep < steps.length - 1 ? (
-            <Button onClick={handleNext}>{t("actions.next")}</Button>
+            <Button onClick={handleNext} data-testid="willgenerator-t-actions-next">{t("actions.next")}</Button>
           ) : (
-            <Button onClick={handleGenerateWill}>
+            <Button onClick={handleGenerateWill} data-testid="willgenerator-t-actions-generatewill">
               {t("actions.generateWill")}
             </Button>
           )}
@@ -398,9 +398,9 @@ export function WillGenerator({ onComplete }: WillGeneratorProps) {
       </div>
 
       {/* Legal Disclaimer */}
-      <Alert>
-        <AlertCircle className="h-4 w-4" />
-        <AlertDescription>
+      <Alert data-testid="willgenerator-alert">
+        <AlertCircle className="h-4 w-4" data-testid="willgenerator-alertcircle" />
+        <AlertDescription data-testid="willgenerator-alertdescription">
           {t("wills:wills.disclaimer")} {t("wills.notLegalAdvice")}{" "}
           {t("wills.professionalGuidance")}
         </AlertDescription>

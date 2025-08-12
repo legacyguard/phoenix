@@ -110,7 +110,7 @@ const FamilyImpactPreview: React.FC<{ userActions: UserAction[] }> = ({
           <h4>What Your Family Now Has Access To:</h4>
           <div className="impact-scenarios">
             {impactScenarios.map((scenario) => (
-              <ImpactScenario key={scenario.id} scenario={scenario} />
+              <ImpactScenario key={scenario.id} scenario={scenario} data-testid="familyimpactpreview-impactscenario" />
             ))}
           </div>
         </div>

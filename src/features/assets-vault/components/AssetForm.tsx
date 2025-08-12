@@ -127,19 +127,19 @@ export const AssetForm: React.FC<AssetFormProps> = ({
           key={field.name}
           label={t(field.label)}
           error={errors[field.name]?.message as string}
-          required={field.required}
+          required={field.required} data-testid="assetform-formfield"
         >
           <Input
             id={field.name}
             type={field.type}
             placeholder={t(field.placeholder || "")}
             {...register(field.name)}
-            className={errors[field.name] ? "border-red-500" : ""}
+            className={errors[field.name] ? "border-red-500" : ""} data-testid="assetform-input"
           />
         </FormField>
       ))}
       <div className="flex gap-3 pt-4">
-        <Button type="submit" disabled={isSubmitting} className="flex-1">
+        <Button type="submit" disabled={isSubmitting} className="flex-1" data-testid="assetform-button">
           {isSubmitting
             ? t("ui-elements:ui.saving")
             : isEditing
@@ -150,7 +150,7 @@ export const AssetForm: React.FC<AssetFormProps> = ({
           type="button"
           variant="outline"
           onClick={onCancel}
-          disabled={isSubmitting}
+          disabled={isSubmitting} data-testid="assetform-t-ui-elements-ui-cancel"
         >
           {t("ui-elements:ui.cancel")}
         </Button>

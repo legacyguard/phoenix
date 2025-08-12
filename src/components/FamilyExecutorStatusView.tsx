@@ -79,10 +79,10 @@ export const FamilyExecutorStatusView: React.FC<
   if (loading) {
     return (
       <div className="p-6">
-        <Skeleton className="h-8 w-64 mb-6" />
+        <Skeleton className="h-8 w-64 mb-6" data-testid="familyexecutorstatusview-skeleton" />
         <div className="space-y-4">
-          <Skeleton className="h-32 w-full" />
-          <Skeleton className="h-32 w-full" />
+          <Skeleton className="h-32 w-full" data-testid="familyexecutorstatusview-skeleton" />
+          <Skeleton className="h-32 w-full" data-testid="familyexecutorstatusview-skeleton" />
         </div>
       </div>
     );
@@ -102,23 +102,23 @@ export const FamilyExecutorStatusView: React.FC<
       {/* Status Section - Read Only */}
       <ExecutorStatusReporting
         deceasedUserId={deceasedUserId}
-        isReadOnly={true}
+        isReadOnly={true} data-testid="familyexecutorstatusview-executorstatusreporting"
       />
 
       {/* Recent Communications Summary */}
-      <Card>
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <MessageSquare className="h-5 w-5" />
+      <Card data-testid="familyexecutorstatusview-card">
+        <CardHeader data-testid="familyexecutorstatusview-cardheader">
+          <CardTitle className="flex items-center gap-2" data-testid="familyexecutorstatusview-cardtitle">
+            <MessageSquare className="h-5 w-5" data-testid="familyexecutorstatusview-messagesquare" />
             {t("familyExecutorView.communications.title")}
           </CardTitle>
-          <CardDescription>
+          <CardDescription data-testid="familyexecutorstatusview-carddescription">
             {t("familyExecutorView.communications.description", {
               executor: executorName || t("familyExecutorView.theExecutor"),
             })}
           </CardDescription>
         </CardHeader>
-        <CardContent>
+        <CardContent data-testid="familyexecutorstatusview-communications-length-0">
           {communications.length === 0 ? (
             <p className="text-sm text-muted-foreground text-center py-4">
               {t("familyExecutorView.communications.empty")}
@@ -143,7 +143,7 @@ export const FamilyExecutorStatusView: React.FC<
                     </p>
                   </div>
                   <div className="text-xs text-muted-foreground flex items-center gap-1">
-                    <Clock className="h-3 w-3" />
+                    <Clock className="h-3 w-3" data-testid="familyexecutorstatusview-clock" />
                     {format(new Date(comm.communication_date), "MMM d")}
                   </div>
                 </div>

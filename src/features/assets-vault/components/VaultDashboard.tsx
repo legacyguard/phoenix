@@ -171,11 +171,11 @@ export const Vault: React.FC = () => {
   if (isLoading) {
     return (
       <div className="container mx-auto px-4 md:px-6 lg:px-8 py-4 md:py-8 max-w-screen-xl">
-        <Skeleton className="h-10 w-48 mb-2" />
-        <Skeleton className="h-6 w-96 mb-8" />
+        <Skeleton className="h-10 w-48 mb-2" data-testid="vaultdashboard-skeleton" />
+        <Skeleton className="h-6 w-96 mb-8" data-testid="vaultdashboard-skeleton" />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {[1, 2, 3, 4, 5, 6].map((i) => (
-            <Skeleton key={i} className="h-48" />
+            <Skeleton key={i} className="h-48" data-testid="vaultdashboard-skeleton" />
           ))}
         </div>
       </div>
@@ -194,8 +194,8 @@ export const Vault: React.FC = () => {
 
       {/* Error Alert */}
       {error && (
-        <Alert variant="destructive">
-          <AlertDescription>{error}</AlertDescription>
+        <Alert variant="destructive" data-testid="vaultdashboard-error">
+          <AlertDescription data-testid="vaultdashboard-error">{error}</AlertDescription>
         </Alert>
       )}
 
@@ -214,11 +214,11 @@ export const Vault: React.FC = () => {
               {/* Add Property */}
               <Card
                 className="hover:shadow-lg transition-all cursor-pointer border-2 hover:border-primary"
-                onClick={() => handleAssetTypeClick("Property")}
+                onClick={() => handleAssetTypeClick("Property")} data-testid="vaultdashboard-handleassettypeclick-property"
               >
-                <CardContent className="flex flex-col items-center justify-center p-8 space-y-4">
+                <CardContent className="flex flex-col items-center justify-center p-8 space-y-4" data-testid="vaultdashboard-cardcontent">
                   <div className="p-4 bg-primary/10 rounded-full">
-                    <Home className="h-12 w-12 text-primary" />
+                    <Home className="h-12 w-12 text-primary" data-testid="vaultdashboard-home" />
                   </div>
                   <h3 className="text-lg font-semibold">
                     {t("categories.realEstate")}
@@ -229,11 +229,11 @@ export const Vault: React.FC = () => {
               {/* Add Finances */}
               <Card
                 className="hover:shadow-lg transition-all cursor-pointer border-2 hover:border-primary"
-                onClick={() => handleAssetTypeClick("Finances")}
+                onClick={() => handleAssetTypeClick("Finances")} data-testid="vaultdashboard-handleassettypeclick-finances"
               >
-                <CardContent className="flex flex-col items-center justify-center p-8 space-y-4">
+                <CardContent className="flex flex-col items-center justify-center p-8 space-y-4" data-testid="vaultdashboard-cardcontent">
                   <div className="p-4 bg-primary/10 rounded-full">
-                    <Landmark className="h-12 w-12 text-primary" />
+                    <Landmark className="h-12 w-12 text-primary" data-testid="vaultdashboard-landmark" />
                   </div>
                   <h3 className="text-lg font-semibold">
                     {t("categories.financial")}
@@ -244,11 +244,11 @@ export const Vault: React.FC = () => {
               {/* Add Vehicle */}
               <Card
                 className="hover:shadow-lg transition-all cursor-pointer border-2 hover:border-primary"
-                onClick={() => handleAssetTypeClick("Vehicle")}
+                onClick={() => handleAssetTypeClick("Vehicle")} data-testid="vaultdashboard-handleassettypeclick-vehicle"
               >
-                <CardContent className="flex flex-col items-center justify-center p-8 space-y-4">
+                <CardContent className="flex flex-col items-center justify-center p-8 space-y-4" data-testid="vaultdashboard-cardcontent">
                   <div className="p-4 bg-primary/10 rounded-full">
-                    <Car className="h-12 w-12 text-primary" />
+                    <Car className="h-12 w-12 text-primary" data-testid="vaultdashboard-car" />
                   </div>
                   <h3 className="text-lg font-semibold">
                     {t("categories.vehicles")}
@@ -259,11 +259,11 @@ export const Vault: React.FC = () => {
               {/* Add Digital Asset */}
               <Card
                 className="hover:shadow-lg transition-all cursor-pointer border-2 hover:border-primary"
-                onClick={() => handleAssetTypeClick("Digital Asset")}
+                onClick={() => handleAssetTypeClick("Digital Asset")} data-testid="vaultdashboard-handleassettypeclick-digital-asset"
               >
-                <CardContent className="flex flex-col items-center justify-center p-8 space-y-4">
+                <CardContent className="flex flex-col items-center justify-center p-8 space-y-4" data-testid="vaultdashboard-cardcontent">
                   <div className="p-4 bg-primary/10 rounded-full">
-                    <Laptop className="h-12 w-12 text-primary" />
+                    <Laptop className="h-12 w-12 text-primary" data-testid="vaultdashboard-laptop" />
                   </div>
                   <h3 className="text-lg font-semibold">
                     {t("categories.digital")}
@@ -274,11 +274,11 @@ export const Vault: React.FC = () => {
               {/* Add Personal Item */}
               <Card
                 className="hover:shadow-lg transition-all cursor-pointer border-2 hover:border-primary"
-                onClick={() => handleAssetTypeClick("Personal Item")}
+                onClick={() => handleAssetTypeClick("Personal Item")} data-testid="vaultdashboard-handleassettypeclick-personal-item"
               >
-                <CardContent className="flex flex-col items-center justify-center p-8 space-y-4">
+                <CardContent className="flex flex-col items-center justify-center p-8 space-y-4" data-testid="vaultdashboard-cardcontent">
                   <div className="p-4 bg-primary/10 rounded-full">
-                    <Gem className="h-12 w-12 text-primary" />
+                    <Gem className="h-12 w-12 text-primary" data-testid="vaultdashboard-gem" />
                   </div>
                   <h3 className="text-lg font-semibold">
                     {t("categories.personal")}
@@ -289,11 +289,11 @@ export const Vault: React.FC = () => {
               {/* Add Something Else */}
               <Card
                 className="hover:shadow-lg transition-all cursor-pointer border-2 hover:border-primary"
-                onClick={() => handleAssetTypeClick("Other")}
+                onClick={() => handleAssetTypeClick("Other")} data-testid="vaultdashboard-handleassettypeclick-other"
               >
-                <CardContent className="flex flex-col items-center justify-center p-8 space-y-4">
+                <CardContent className="flex flex-col items-center justify-center p-8 space-y-4" data-testid="vaultdashboard-cardcontent">
                   <div className="p-4 bg-primary/10 rounded-full">
-                    <PlusCircle className="h-12 w-12 text-primary" />
+                    <PlusCircle className="h-12 w-12 text-primary" data-testid="vaultdashboard-pluscircle" />
                   </div>
                   <h3 className="text-lg font-semibold">
                     {t("assets.addOther")}
@@ -309,13 +309,13 @@ export const Vault: React.FC = () => {
           {/* Search and Add Asset Bar */}
           <div className="flex flex-col sm:flex-row gap-4">
             <div className="relative flex-1">
-              <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+              <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" data-testid="vaultdashboard-search" />
               <Input
                 type="search"
                 placeholder={t("assets.searchPlaceholder")}
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="pl-10"
+                className="pl-10" data-testid="vaultdashboard-input"
               />
             </div>
             <Button
@@ -331,25 +331,25 @@ export const Vault: React.FC = () => {
                   });
                 }
               }}
-              className="shrink-0"
+              className="shrink-0" data-testid="vaultdashboard-t-assets-addasset"
             >
-              <PlusCircle className="mr-2 h-4 w-4" />
+              <PlusCircle className="mr-2 h-4 w-4" data-testid="vaultdashboard-pluscircle" />
               {t("assets.addAsset")}
             </Button>
           </div>
 
           {/* Asset Summary Stats */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <Card>
-              <CardContent className="p-6">
+            <Card data-testid="vaultdashboard-card">
+              <CardContent className="p-6" data-testid="vaultdashboard-assets-length">
                 <div className="text-2xl font-bold">{assets.length}</div>
                 <p className="text-sm text-muted-foreground">
                   {t("assets.totalAssets")}
                 </p>
               </CardContent>
             </Card>
-            <Card>
-              <CardContent className="p-6">
+            <Card data-testid="vaultdashboard-card">
+              <CardContent className="p-6" data-testid="vaultdashboard-cardcontent">
                 <div className="text-2xl font-bold">
                   {assets
                     .reduce(
@@ -368,8 +368,8 @@ export const Vault: React.FC = () => {
                 </p>
               </CardContent>
             </Card>
-            <Card>
-              <CardContent className="p-6">
+            <Card data-testid="vaultdashboard-card">
+              <CardContent className="p-6" data-testid="vaultdashboard-a-main-category-length">
                 <div className="text-2xl font-bold">
                   {[...new Set(assets.map((a) => a.main_category))].length}
                 </div>
@@ -389,7 +389,7 @@ export const Vault: React.FC = () => {
                   asset={asset}
                   onView={handleViewAsset}
                   onEdit={handleEditAsset}
-                  onDelete={handleDeleteAsset}
+                  onDelete={handleDeleteAsset} data-testid="vaultdashboard-assetcard"
                 />
               ))}
             </div>
@@ -449,9 +449,9 @@ export const Vault: React.FC = () => {
                       variant="outline"
                       className="flex flex-col items-center gap-2 h-20"
                       onClick={() => handleAssetTypeClick(type.category)}
-                      data-asset-type={type.category}
+                      data-asset-type={type.category} data-testid="vaultdashboard-button"
                     >
-                      <Icon className="h-5 w-5" />
+                      <Icon className="h-5 w-5" data-testid="vaultdashboard-icon" />
                       <span className="text-xs">{type.label}</span>
                     </Button>
                   );
@@ -467,7 +467,7 @@ export const Vault: React.FC = () => {
         isOpen={showSubTypeModal}
         onClose={() => setShowSubTypeModal(false)}
         mainCategory={selectedMainCategory || ""}
-        onSelectSubType={handleSubTypeSelect}
+        onSelectSubType={handleSubTypeSelect} data-testid="vaultdashboard-assettypeselectormodal"
       />
 
       {/* Dynamic Asset Form */}
@@ -475,7 +475,7 @@ export const Vault: React.FC = () => {
         isOpen={showDynamicForm}
         onClose={handleFormClose}
         mainCategory={selectedMainCategory || ""}
-        subType={selectedSubType || ""}
+        subType={selectedSubType || ""} data-testid="vaultdashboard-dynamicassetform"
       />
 
       {/* Personal Assistant */}
@@ -490,7 +490,7 @@ export const Vault: React.FC = () => {
             ),
             categories: [...new Set(assets.map((a) => a.main_category))],
             hasNoAssets: assets.length === 0,
-          }}
+          }} data-testid="vaultdashboard-personalassistant"
         />
       )}
     </div>

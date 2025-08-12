@@ -100,15 +100,15 @@ export const ReceivedMessages: React.FC = () => {
   const getMessageIcon = (type: string) => {
     switch (type) {
       case "text":
-        return <FileText className="h-5 w-5" />;
+        return <FileText className="h-5 w-5" data-testid="receivedmessages-filetext" />;
       case "photo":
-        return <ImageIcon className="h-5 w-5" />;
+        return <ImageIcon className="h-5 w-5" data-testid="receivedmessages-imageicon" />;
       case "video":
-        return <Video className="h-5 w-5" />;
+        return <Video className="h-5 w-5" data-testid="receivedmessages-video" />;
       case "audio":
-        return <Mic className="h-5 w-5" />;
+        return <Mic className="h-5 w-5" data-testid="receivedmessages-mic" />;
       default:
-        return <Mail className="h-5 w-5" />;
+        return <Mail className="h-5 w-5" data-testid="receivedmessages-mail" />;
     }
   };
 
@@ -120,13 +120,13 @@ export const ReceivedMessages: React.FC = () => {
     <div className="space-y-6">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <Gift className="h-6 w-6 text-primary" />
+          <Gift className="h-6 w-6 text-primary" data-testid="receivedmessages-gift" />
           <h2 className="text-2xl font-bold">
             {t("TimeCapsule.receivedMessages.messages_for_you_1")}
           </h2>
         </div>
         {messages.length > 0 && (
-          <Badge variant="secondary">
+          <Badge variant="secondary" data-testid="receivedmessages-m-status-unlocked-length-new">
             {messages.filter((m) => m.status === "unlocked").length} new
           </Badge>
         )}
@@ -135,7 +135,7 @@ export const ReceivedMessages: React.FC = () => {
       {loading ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {[1, 2, 3].map((i) => (
-            <Skeleton key={i} className="h-40" />
+            <Skeleton key={i} className="h-40" data-testid="receivedmessages-skeleton" />
           ))}
         </div>
       ) : (
@@ -146,25 +146,25 @@ export const ReceivedMessages: React.FC = () => {
               className={`cursor-pointer transition-all hover:shadow-lg ${
                 message.status === "unlocked" ? "ring-2 ring-primary" : ""
               }`}
-              onClick={() => handleViewMessage(message)}
+              onClick={() => handleViewMessage(message)} data-testid="receivedmessages-handleviewmessage-message"
             >
-              <CardHeader>
+              <CardHeader data-testid="receivedmessages-cardheader">
                 <div className="flex items-start justify-between">
                   <div className="flex items-center gap-2">
                     {getMessageIcon(message.messageType)}
-                    <CardTitle className="text-lg">{message.title}</CardTitle>
+                    <CardTitle className="text-lg" data-testid="receivedmessages-message-title">{message.title}</CardTitle>
                   </div>
                   {message.status === "unlocked" && (
-                    <Badge variant="default" className="text-xs">
+                    <Badge variant="default" className="text-xs" data-testid="receivedmessages-new">
                       New
                     </Badge>
                   )}
                 </div>
-                <CardDescription>From {message.sender.name}</CardDescription>
+                <CardDescription data-testid="receivedmessages-from-message-sender-name">From {message.sender.name}</CardDescription>
               </CardHeader>
-              <CardContent>
+              <CardContent data-testid="receivedmessages-cardcontent">
                 <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                  <Calendar className="h-4 w-4" />
+                  <Calendar className="h-4 w-4" data-testid="receivedmessages-calendar" />
                   <span>
                     Unlocked{" "}
                     {format(new Date(message.unlockedAt), "MMM d, yyyy")}
@@ -172,7 +172,7 @@ export const ReceivedMessages: React.FC = () => {
                 </div>
                 {message.unlockCondition === "after_passing" && (
                   <div className="flex items-center gap-2 text-sm text-muted-foreground mt-2">
-                    <Clock className="h-4 w-4" />
+                    <Clock className="h-4 w-4" data-testid="receivedmessages-clock" />
                     <span>
                       {t("TimeCapsule.receivedMessages.final_message_2")}
                     </span>
@@ -188,13 +188,13 @@ export const ReceivedMessages: React.FC = () => {
       {selectedMessage && (
         <Dialog
           open={Boolean(selectedMessage)}
-          onOpenChange={() => setSelectedMessage(null)}
+          onOpenChange={() => setSelectedMessage(null)} data-testid="receivedmessages-setselectedmessage-null"
         >
-          <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
-            <DialogHeader>
+          <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto" data-testid="receivedmessages-dialogcontent">
+            <DialogHeader data-testid="receivedmessages-dialogheader">
               <div className="flex items-center justify-between">
                 <div>
-                  <DialogTitle className="text-2xl">
+                  <DialogTitle className="text-2xl" data-testid="receivedmessages-selectedmessage-title">
                     {selectedMessage.title}
                   </DialogTitle>
                   <p className="text-sm text-muted-foreground mt-1">
@@ -265,11 +265,11 @@ export const ReceivedMessages: React.FC = () => {
                 )}
             </div>
 
-            <DialogFooter className="mt-6">
+            <DialogFooter className="mt-6" data-testid="receivedmessages-dialogfooter">
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
                 {selectedMessage.unlockCondition === "date" ? (
                   <>
-                    <Calendar className="h-4 w-4" />
+                    <Calendar className="h-4 w-4" data-testid="receivedmessages-calendar" />
                     <span>
                       {t("TimeCapsule.receivedMessages.scheduled_for_5")}
                       {format(
@@ -280,7 +280,7 @@ export const ReceivedMessages: React.FC = () => {
                   </>
                 ) : (
                   <>
-                    <Heart className="h-4 w-4" />
+                    <Heart className="h-4 w-4" data-testid="receivedmessages-heart" />
                     <span>
                       {t("TimeCapsule.receivedMessages.final_message_from_6")}
                       {selectedMessage.sender.name}

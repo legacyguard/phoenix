@@ -91,28 +91,28 @@ export function HybridDocumentProcessor() {
   };
 
   return (
-    <Card className="w-full max-w-4xl mx-auto">
-      <CardHeader>
+    <Card className="w-full max-w-4xl mx-auto" data-testid="hybriddocumentprocessor-card">
+      <CardHeader data-testid="hybriddocumentprocessor-cardheader">
         <div className="flex items-center justify-between">
           <div>
-            <CardTitle>
+            <CardTitle data-testid="hybriddocumentprocessor-cardtitle">
               {t("ocr.hybridDocumentProcessor.hybrid_document_processor_1")}
             </CardTitle>
-            <CardDescription>
+            <CardDescription data-testid="hybriddocumentprocessor-carddescription">
               {t(
                 "ocr.hybridDocumentProcessor.process_documents_locally_with_2",
               )}
             </CardDescription>
           </div>
-          <LocalProcessingIndicator isLocal={isPrivacyMode} />
+          <LocalProcessingIndicator isLocal={isPrivacyMode} data-testid="hybriddocumentprocessor-localprocessingindicator" />
         </div>
       </CardHeader>
 
-      <CardContent className="space-y-6">
+      <CardContent className="space-y-6" data-testid="hybriddocumentprocessor-privacy-mode-toggle">
         {/* Privacy Mode Toggle */}
         <PrivacyToggle
           isPrivacyMode={isPrivacyMode}
-          onToggle={setPrivacyMode}
+          onToggle={setPrivacyMode} data-testid="hybriddocumentprocessor-privacytoggle"
         />
 
         {/* File Upload */}
@@ -122,14 +122,14 @@ export function HybridDocumentProcessor() {
             accept={t("ocr.hybridDocumentProcessor.image_3")}
             onChange={handleFileSelect}
             className="hidden"
-            id="ocr-file-upload"
+            id="ocr-file-upload" data-testid="hybriddocumentprocessor-input"
           />
 
           <label
             htmlFor="ocr-file-upload"
             className="cursor-pointer flex flex-col items-center space-y-2"
           >
-            <Upload className="h-8 w-8 text-muted-foreground" />
+            <Upload className="h-8 w-8 text-muted-foreground" data-testid="hybriddocumentprocessor-upload" />
             <span className="text-sm text-muted-foreground">
               {t(
                 "ocr.hybridDocumentProcessor.click_to_upload_a_document_ima_4",
@@ -151,13 +151,13 @@ export function HybridDocumentProcessor() {
           <Button
             onClick={handleProcess}
             disabled={isProcessing}
-            className="w-full"
+            className="w-full" data-testid="hybriddocumentprocessor-isprocessing"
           >
             {isProcessing ? (
               <>{t("ocr.hybridDocumentProcessor.processing_6")}</>
             ) : (
               <>
-                <FileText className="mr-2 h-4 w-4" />
+                <FileText className="mr-2 h-4 w-4" data-testid="hybriddocumentprocessor-filetext" />
                 {t("ocr.hybridDocumentProcessor.process_document_7")}
               </>
             )}
@@ -168,13 +168,13 @@ export function HybridDocumentProcessor() {
         <OCRProgress
           progress={progress}
           message={progressMessage}
-          isVisible={isProcessing}
+          isVisible={isProcessing} data-testid="hybriddocumentprocessor-ocrprogress"
         />
 
         {/* Error Display */}
         {(ocrError || analysisError) && (
-          <Alert variant="destructive">
-            <AlertDescription>
+          <Alert variant="destructive" data-testid="hybriddocumentprocessor-alert">
+            <AlertDescription data-testid="hybriddocumentprocessor-alertdescription">
               {ocrError?.userMessage || analysisError?.userMessage}
             </AlertDescription>
           </Alert>
@@ -192,7 +192,7 @@ export function HybridDocumentProcessor() {
                     ? ocrResult.documentType.confidence * 100
                     : undefined
                 }
-                language={ocrResult.language}
+                language={ocrResult.language} data-testid="hybriddocumentprocessor-ocrstatusmessage"
               />
 
               {getProcessingTime() && (
@@ -201,25 +201,25 @@ export function HybridDocumentProcessor() {
             </div>
 
             {/* Results Tabs */}
-            <Tabs defaultValue="summary" className="w-full">
-              <TabsList className="grid w-full grid-cols-3">
-                <TabsTrigger value="summary">
-                  <Shield className="mr-2 h-4 w-4" />
+            <Tabs defaultValue="summary" className="w-full" data-testid="hybriddocumentprocessor-tabs">
+              <TabsList className="grid w-full grid-cols-3" data-testid="hybriddocumentprocessor-tabslist">
+                <TabsTrigger value="summary" data-testid="hybriddocumentprocessor-summary">
+                  <Shield className="mr-2 h-4 w-4" data-testid="hybriddocumentprocessor-shield" />
                   Summary
                 </TabsTrigger>
-                <TabsTrigger value="extracted">
-                  <FileText className="mr-2 h-4 w-4" />
+                <TabsTrigger value="extracted" data-testid="hybriddocumentprocessor-tabstrigger">
+                  <FileText className="mr-2 h-4 w-4" data-testid="hybriddocumentprocessor-filetext" />
                   {t("ocr.hybridDocumentProcessor.extracted_data_8")}
                 </TabsTrigger>
                 {aiEnhancement && (
-                  <TabsTrigger value="enhanced">
-                    <Sparkles className="mr-2 h-4 w-4" />
+                  <TabsTrigger value="enhanced" data-testid="hybriddocumentprocessor-tabstrigger">
+                    <Sparkles className="mr-2 h-4 w-4" data-testid="hybriddocumentprocessor-sparkles" />
                     {t("ocr.hybridDocumentProcessor.ai_enhanced_9")}
                   </TabsTrigger>
                 )}
               </TabsList>
 
-              <TabsContent value="summary" className="space-y-4">
+              <TabsContent value="summary" className="space-y-4" data-testid="hybriddocumentprocessor-tabscontent">
                 <div className="prose prose-sm max-w-none">
                   <h4>
                     {t("ocr.hybridDocumentProcessor.document_overview_10")}
@@ -252,16 +252,16 @@ export function HybridDocumentProcessor() {
                       <Button
                         variant="ghost"
                         size="sm"
-                        onClick={() => setShowOriginalText(!showOriginalText)}
+                        onClick={() => setShowOriginalText(!showOriginalText)} data-testid="hybriddocumentprocessor-showoriginaltext"
                       >
                         {showOriginalText ? (
                           <>
-                            <EyeOff className="mr-2 h-4 w-4" />
+                            <EyeOff className="mr-2 h-4 w-4" data-testid="hybriddocumentprocessor-eyeoff" />
                             {t("ocr.hybridDocumentProcessor.hide_text_15")}
                           </>
                         ) : (
                           <>
-                            <Eye className="mr-2 h-4 w-4" />
+                            <Eye className="mr-2 h-4 w-4" data-testid="hybriddocumentprocessor-eye" />
                             {t("ocr.hybridDocumentProcessor.show_text_16")}
                           </>
                         )}
@@ -277,7 +277,7 @@ export function HybridDocumentProcessor() {
                 </div>
               </TabsContent>
 
-              <TabsContent value="extracted" className="space-y-4">
+              <TabsContent value="extracted" className="space-y-4" data-testid="hybriddocumentprocessor-ocrresult-structureddata">
                 {ocrResult.structuredData ? (
                   <div className="space-y-3">
                     {Object.entries(ocrResult.structuredData).map(
@@ -314,10 +314,10 @@ export function HybridDocumentProcessor() {
               </TabsContent>
 
               {aiEnhancement && (
-                <TabsContent value="enhanced" className="space-y-4">
-                  <Alert className="bg-blue-50 border-blue-200">
-                    <Sparkles className="h-4 w-4 text-blue-600" />
-                    <AlertDescription className="text-blue-800">
+                <TabsContent value="enhanced" className="space-y-4" data-testid="hybriddocumentprocessor-tabscontent">
+                  <Alert className="bg-blue-50 border-blue-200" data-testid="hybriddocumentprocessor-alert">
+                    <Sparkles className="h-4 w-4 text-blue-600" data-testid="hybriddocumentprocessor-sparkles" />
+                    <AlertDescription className="text-blue-800" data-testid="hybriddocumentprocessor-alertdescription">
                       {t(
                         "ocr.hybridDocumentProcessor.ai_enhancement_was_applied_to__18",
                       )}
@@ -343,9 +343,9 @@ export function HybridDocumentProcessor() {
 
             {/* Privacy Notice */}
             {isPrivacyMode && (
-              <Alert className="bg-green-50 border-green-200">
-                <Shield className="h-4 w-4 text-green-600" />
-                <AlertDescription className="text-green-800">
+              <Alert className="bg-green-50 border-green-200" data-testid="hybriddocumentprocessor-alert">
+                <Shield className="h-4 w-4 text-green-600" data-testid="hybriddocumentprocessor-shield" />
+                <AlertDescription className="text-green-800" data-testid="hybriddocumentprocessor-alertdescription">
                   {t(
                     "ocr.hybridDocumentProcessor.this_document_was_processed_en_20",
                   )}

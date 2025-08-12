@@ -17,7 +17,7 @@ const ProcrastinationSupport: React.FC = () => {
           Even spending 5 minutes today will help your family. Small steps
           count.
         </p>
-        <button>Just 5 Minutes Today</button>
+        <button data-testid="procrastinationsupport-just-5-minutes-today">Just 5 Minutes Today</button>
       </div>
     </div>
   );

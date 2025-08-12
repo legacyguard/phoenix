@@ -33,13 +33,13 @@ export function UploadProgress({
   const getStatusIcon = () => {
     switch (item.status) {
       case "completed":
-        return <CheckCircle2 className="h-5 w-5 text-green-600" />;
+        return <CheckCircle2 className="h-5 w-5 text-green-600" data-testid="uploadprogress-checkcircle2" />;
       case "failed":
-        return <XCircle className="h-5 w-5 text-red-600" />;
+        return <XCircle className="h-5 w-5 text-red-600" data-testid="uploadprogress-xcircle" />;
       case "processing":
-        return <Loader2 className="h-5 w-5 text-blue-600 animate-spin" />;
+        return <Loader2 className="h-5 w-5 text-blue-600 animate-spin" data-testid="uploadprogress-loader2" />;
       default:
-        return <FileText className="h-5 w-5 text-gray-400" />;
+        return <FileText className="h-5 w-5 text-gray-400" data-testid="uploadprogress-filetext" />;
     }
   };
 
@@ -80,7 +80,7 @@ export function UploadProgress({
         "p-4 transition-all duration-200",
         getStatusColor(),
         className,
-      )}
+      )} data-testid="uploadprogress-header"
     >
       <div className="space-y-3">
         {/* Header */}
@@ -102,9 +102,9 @@ export function UploadProgress({
                 variant="ghost"
                 size="sm"
                 onClick={() => onRetry(item.id)}
-                className="h-8 px-2"
+                className="h-8 px-2" data-testid="uploadprogress-button"
               >
-                <RefreshCw className="h-4 w-4" />
+                <RefreshCw className="h-4 w-4" data-testid="uploadprogress-refreshcw" />
               </Button>
             )}
 
@@ -113,9 +113,9 @@ export function UploadProgress({
                 variant="ghost"
                 size="sm"
                 onClick={() => onCancel(item.id)}
-                className="h-8 px-2"
+                className="h-8 px-2" data-testid="uploadprogress-button"
               >
-                <X className="h-4 w-4" />
+                <X className="h-4 w-4" data-testid="uploadprogress-x" />
               </Button>
             )}
           </div>
@@ -124,7 +124,7 @@ export function UploadProgress({
         {/* Progress */}
         {(item.status === "processing" || item.status === "pending") && (
           <>
-            <Progress value={item.progress} className="h-2" />
+            <Progress value={item.progress} className="h-2" data-testid="uploadprogress-progress" />
             <p className="text-xs text-muted-foreground">{getStageMessage()}</p>
           </>
         )}
@@ -132,7 +132,7 @@ export function UploadProgress({
         {/* Error message */}
         {item.status === "failed" && item.error && (
           <div className="flex items-start space-x-2 pt-1">
-            <AlertCircle className="h-4 w-4 text-red-600 mt-0.5 flex-shrink-0" />
+            <AlertCircle className="h-4 w-4 text-red-600 mt-0.5 flex-shrink-0" data-testid="uploadprogress-alertcircle" />
             <div className="flex-1">
               <p className="text-sm text-red-800">{item.error.userMessage}</p>
               {item.error.recoverable && (
@@ -207,7 +207,7 @@ export function UploadQueueList({
             variant="ghost"
             size="sm"
             onClick={onClearCompleted}
-            className="text-xs"
+            className="text-xs" data-testid="uploadprogress-button"
           >
             {t("assets.uploadProgress.clear_completed_4")}
             {completedCount})
@@ -222,7 +222,7 @@ export function UploadQueueList({
             key={item.id}
             item={item}
             onRetry={onRetry}
-            onCancel={onCancel}
+            onCancel={onCancel} data-testid="uploadprogress-uploadprogress"
           />
         ))}
       </div>

@@ -115,7 +115,7 @@ export default function GuardianPlaybookView({
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="animate-pulse text-center">
-          <Book className="h-8 w-8 text-primary mx-auto mb-4" />
+          <Book className="h-8 w-8 text-primary mx-auto mb-4" data-testid="guardianplaybookview-book" />
           <p className="text-muted-foreground">
             {t("ui-common:family.loading")}
           </p>
@@ -127,9 +127,9 @@ export default function GuardianPlaybookView({
   if (!playbook) {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <Card className="max-w-md">
-          <CardContent className="text-center p-8">
-            <Book className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
+        <Card className="max-w-md" data-testid="guardianplaybookview-card">
+          <CardContent className="text-center p-8" data-testid="guardianplaybookview-cardcontent">
+            <Book className="h-12 w-12 text-muted-foreground mx-auto mb-4" data-testid="guardianplaybookview-book" />
             <h2 className="text-xl font-semibold mb-2">
               {t("family.notFound.title")}
             </h2>
@@ -186,13 +186,13 @@ export default function GuardianPlaybookView({
         {/* Header */}
         <div className="text-center mb-8">
           <div className="flex items-center justify-center w-20 h-20 rounded-full bg-primary/10 mx-auto mb-4">
-            <Book className="h-10 w-10 text-primary" />
+            <Book className="h-10 w-10 text-primary" data-testid="guardianplaybookview-book" />
           </div>
           <h1 className="text-3xl font-bold mb-2">
             {t("playbook.viewTitle", { userName })}
           </h1>
           <p className="text-muted-foreground">{t("family.viewDescription")}</p>
-          <Badge variant="secondary" className="mt-4">
+          <Badge variant="secondary" className="mt-4" data-testid="guardianplaybookview-badge">
             {t("family.lastUpdated")}:{" "}
             {new Date(playbook.updated_at || "").toLocaleDateString()}
           </Badge>
@@ -200,20 +200,20 @@ export default function GuardianPlaybookView({
 
         {/* Important Contacts */}
         {playbook.important_contacts.length > 0 && (
-          <Card className="mb-8">
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <User className="h-5 w-5" />
+          <Card className="mb-8" data-testid="guardianplaybookview-card">
+            <CardHeader data-testid="guardianplaybookview-cardheader">
+              <CardTitle className="flex items-center gap-2" data-testid="guardianplaybookview-cardtitle">
+                <User className="h-5 w-5" data-testid="guardianplaybookview-user" />
                 {t("family.importantContacts.label")}
               </CardTitle>
-              <CardDescription>
+              <CardDescription data-testid="guardianplaybookview-carddescription">
                 {t("family.importantContacts.viewDescription")}
               </CardDescription>
             </CardHeader>
-            <CardContent>
+            <CardContent data-testid="guardianplaybookview-control">
               <div className="grid gap-4 md:grid-cols-2">
                 {playbook.important_contacts.map((contact, index) => (
-                  <Card key={index} className="p-4">
+                  <Card key={index} className="p-4" data-testid="guardianplaybookview-card">
                     <div className="space-y-2">
                       <div className="flex items-start justify-between">
                         <div>
@@ -227,18 +227,18 @@ export default function GuardianPlaybookView({
                         {contact.phone && (
                           <a
                             href={`tel:${contact.phone}`}
-                            className="flex items-center gap-2 text-sm text-primary hover:underline"
+                            className="flex items-center gap-2 text-sm text-primary hover:underline" data-testid="guardianplaybookview-a"
                           >
-                            <Phone className="h-3 w-3" />
+                            <Phone className="h-3 w-3" data-testid="guardianplaybookview-phone" />
                             {contact.phone}
                           </a>
                         )}
                         {contact.email && (
                           <a
                             href={`mailto:${contact.email}`}
-                            className="flex items-center gap-2 text-sm text-primary hover:underline"
+                            className="flex items-center gap-2 text-sm text-primary hover:underline" data-testid="guardianplaybookview-a"
                           >
-                            <Mail className="h-3 w-3" />
+                            <Mail className="h-3 w-3" data-testid="guardianplaybookview-mail" />
                             {contact.email}
                           </a>
                         )}
@@ -261,14 +261,14 @@ export default function GuardianPlaybookView({
           {sections.map((section) => {
             const Icon = section.icon;
             return section.content ? (
-              <Card key={section.id}>
-                <CardHeader>
-                  <CardTitle className="flex items-center gap-2">
-                    <Icon className={`h-5 w-5 ${section.color}`} />
+              <Card key={section.id} data-testid="guardianplaybookview-card">
+                <CardHeader data-testid="guardianplaybookview-cardheader">
+                  <CardTitle className="flex items-center gap-2" data-testid="guardianplaybookview-section-title">
+                    <Icon className={`h-5 w-5 ${section.color}`} data-testid="guardianplaybookview-icon" />
                     {section.title}
                   </CardTitle>
                 </CardHeader>
-                <CardContent>
+                <CardContent data-testid="guardianplaybookview-cardcontent">
                   <div className="prose prose-sm max-w-none">
                     <p className="whitespace-pre-wrap">{section.content}</p>
                   </div>

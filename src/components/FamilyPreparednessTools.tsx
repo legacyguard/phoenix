@@ -301,28 +301,28 @@ const FamilyPreparednessTools: React.FC = () => {
       id: "simulator",
       title: t("familyPreparednessTools.tools.emergencySimulator"),
       description: t("familyPreparednessTools.tools.emergencySimulatorDesc"),
-      icon: <AlertTriangle className="w-8 h-8 text-orange-600" />,
+      icon: <AlertTriangle className="w-8 h-8 text-orange-600" data-testid="familypreparednesstools-alerttriangle" />,
       targetUser: "user",
     },
     {
       id: "treasure_hunt",
       title: t("familyPreparednessTools.tools.informationTreasureHunt"),
       description: t("familyPreparednessTools.tools.treasureHuntDesc"),
-      icon: <Map className="w-8 h-8 text-blue-600" />,
+      icon: <Map className="w-8 h-8 text-blue-600" data-testid="familypreparednesstools-map" />,
       targetUser: "family_member",
     },
     {
       id: "guides",
       title: t("familyPreparednessTools.tools.stepByStepGuides"),
       description: t("familyPreparednessTools.tools.stepByStepGuidesDesc"),
-      icon: <BookOpen className="w-8 h-8 text-green-600" />,
+      icon: <BookOpen className="w-8 h-8 text-green-600" data-testid="familypreparednesstools-bookopen" />,
       targetUser: "user",
     },
     {
       id: "video_messages",
       title: t("familyPreparednessTools.tools.videoMessages"),
       description: t("familyPreparednessTools.tools.videoMessagesDesc"),
-      icon: <Video className="w-8 h-8 text-purple-600" />,
+      icon: <Video className="w-8 h-8 text-purple-600" data-testid="familypreparednesstools-video" />,
       targetUser: "user",
     },
   ];
@@ -336,20 +336,20 @@ const FamilyPreparednessTools: React.FC = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {tools.map((tool) => (
-          <Card key={tool.id} className="flex flex-col">
-            <CardHeader>
+          <Card key={tool.id} className="flex flex-col" data-testid="familypreparednesstools-card">
+            <CardHeader data-testid="familypreparednesstools-cardheader">
               <div className="flex items-center">
                 <div className="mr-4">{tool.icon}</div>
-                <CardTitle>{tool.title}</CardTitle>
+                <CardTitle data-testid="familypreparednesstools-tool-title">{tool.title}</CardTitle>
               </div>
             </CardHeader>
-            <CardContent className="flex-grow">
+            <CardContent className="flex-grow" data-testid="familypreparednesstools-tool-description">
               <p className="text-sm text-gray-700">{tool.description}</p>
             </CardContent>
-            <CardFooter>
+            <CardFooter data-testid="familypreparednesstools-cardfooter">
               <Button
                 className="w-full"
-                onClick={() => handleToolClick(tool.id)}
+                onClick={() => handleToolClick(tool.id)} data-testid="familypreparednesstools-button"
               >
                 {t("familyPreparednessTools.tools.launch")} {tool.title}
               </Button>
@@ -359,13 +359,13 @@ const FamilyPreparednessTools: React.FC = () => {
       </div>
 
       {/* Step-by-Step Guide Generator Modal */}
-      <Dialog open={showGuideModal} onOpenChange={setShowGuideModal}>
-        <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">
-          <DialogHeader>
-            <DialogTitle>
+      <Dialog open={showGuideModal} onOpenChange={setShowGuideModal} data-testid="familypreparednesstools-dialog">
+        <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto" data-testid="familypreparednesstools-dialogcontent">
+          <DialogHeader data-testid="familypreparednesstools-dialogheader">
+            <DialogTitle data-testid="familypreparednesstools-dialogtitle">
               {t("familyPreparednessTools.generate_emergency_guide_2")}
             </DialogTitle>
-            <DialogDescription>
+            <DialogDescription data-testid="familypreparednesstools-dialogdescription">
               {t("familyPreparednessTools.create_a_printable_guide_for_y_3")}
             </DialogDescription>
           </DialogHeader>
@@ -373,23 +373,23 @@ const FamilyPreparednessTools: React.FC = () => {
           {!generatedGuide ? (
             <div className="space-y-4 py-4">
               <div>
-                <Label htmlFor="scenario-select">
+                <Label htmlFor="scenario-select" data-testid="familypreparednesstools-label">
                   {t("familyPreparednessTools.select_scenario_4")}
                 </Label>
                 <Select
                   value={selectedScenario}
-                  onValueChange={setSelectedScenario}
+                  onValueChange={setSelectedScenario} data-testid="familypreparednesstools-select"
                 >
-                  <SelectTrigger id="scenario-select" className="w-full mt-2">
+                  <SelectTrigger id="scenario-select" className="w-full mt-2" data-testid="familypreparednesstools-selecttrigger">
                     <SelectValue
                       placeholder={t(
                         "familyPreparednessTools.tools.chooseScenario",
-                      )}
+                      )} data-testid="familypreparednesstools-selectvalue"
                     />
                   </SelectTrigger>
-                  <SelectContent>
+                  <SelectContent data-testid="familypreparednesstools-guidescenarios-map-scenario">
                     {guideScenarios.map((scenario) => (
-                      <SelectItem key={scenario.id} value={scenario.id}>
+                      <SelectItem key={scenario.id} value={scenario.id} data-testid="familypreparednesstools-selectitem">
                         <div>
                           <p className="font-medium">{scenario.title}</p>
                           <p className="text-xs text-gray-500">
@@ -402,14 +402,14 @@ const FamilyPreparednessTools: React.FC = () => {
                 </Select>
               </div>
 
-              <DialogFooter>
+              <DialogFooter data-testid="familypreparednesstools-dialogfooter">
                 <Button
                   variant="outline"
-                  onClick={() => setShowGuideModal(false)}
+                  onClick={() => setShowGuideModal(false)} data-testid="familypreparednesstools-t-familypreparednesstools-tools-cancel"
                 >
                   {t("familyPreparednessTools.tools.cancel")}
                 </Button>
-                <Button onClick={generateGuide} disabled={isGenerating}>
+                <Button onClick={generateGuide} disabled={isGenerating} data-testid="familypreparednesstools-button">
                   {isGenerating
                     ? t("familyPreparednessTools.tools.generating")
                     : t("familyPreparednessTools.tools.generateGuide")}
@@ -423,18 +423,18 @@ const FamilyPreparednessTools: React.FC = () => {
                 dangerouslySetInnerHTML={{ __html: generatedGuide }}
               />
 
-              <DialogFooter className="flex gap-2">
+              <DialogFooter className="flex gap-2" data-testid="familypreparednesstools-dialogfooter">
                 <Button
                   variant="outline"
                   onClick={() => {
                     setGeneratedGuide("");
                     setSelectedScenario("");
-                  }}
+                  }} data-testid="familypreparednesstools-button"
                 >
                   {t("familyPreparednessTools.generate_another_5")}
                 </Button>
-                <Button onClick={handlePrint}>
-                  <Printer className="w-4 h-4 mr-2" />
+                <Button onClick={handlePrint} data-testid="familypreparednesstools-button">
+                  <Printer className="w-4 h-4 mr-2" data-testid="familypreparednesstools-printer" />
                   {t("familyPreparednessTools.tools.printGuide")}
                 </Button>
               </DialogFooter>

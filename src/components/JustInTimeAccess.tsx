@@ -156,25 +156,25 @@ export const JustInTimeAccess: React.FC<JustInTimeAccessProps> = ({
 
     return (
       <div className="space-y-1">
-        <Label className="text-sm font-medium">{label}</Label>
+        <Label className="text-sm font-medium" data-testid="justintimeaccess-label">{label}</Label>
         <div className="flex items-center gap-2">
           <Input
             value={value}
             readOnly
             type={isPassword && !showPassword ? "password" : "text"}
-            className="font-mono"
+            className="font-mono" data-testid="justintimeaccess-input"
           />
           {isPassword && (
             <Button
               variant="ghost"
               size="sm"
               onClick={() => setShowPassword(!showPassword)}
-              className="px-2"
+              className="px-2" data-testid="justintimeaccess-showpassword"
             >
               {showPassword ? (
-                <EyeOff className="h-4 w-4" />
+                <EyeOff className="h-4 w-4" data-testid="justintimeaccess-eyeoff" />
               ) : (
-                <Eye className="h-4 w-4" />
+                <Eye className="h-4 w-4" data-testid="justintimeaccess-eye" />
               )}
             </Button>
           )}
@@ -184,38 +184,38 @@ export const JustInTimeAccess: React.FC<JustInTimeAccessProps> = ({
   };
 
   return (
-    <Dialog open={isOpen} onOpenChange={setIsOpen}>
-      <DialogTrigger asChild>
+    <Dialog open={isOpen} onOpenChange={setIsOpen} data-testid="justintimeaccess-trigger">
+      <DialogTrigger asChild data-testid="justintimeaccess-trigger">
         {trigger || (
-          <Button variant="ghost" size="sm" className="text-xs">
-            <Key className="h-3 w-3 mr-1" />
+          <Button variant="ghost" size="sm" className="text-xs" data-testid="justintimeaccess-button">
+            <Key className="h-3 w-3 mr-1" data-testid="justintimeaccess-key" />
             {t("justInTimeAccess.viewAccountDetails")}
           </Button>
         )}
       </DialogTrigger>
 
-      <DialogContent className="sm:max-w-md">
-        <DialogHeader>
-          <DialogTitle className="flex items-center gap-2">
-            <Shield className="h-5 w-5 text-blue-500" />
+      <DialogContent className="sm:max-w-md" data-testid="justintimeaccess-dialogcontent">
+        <DialogHeader data-testid="justintimeaccess-dialogheader">
+          <DialogTitle className="flex items-center gap-2" data-testid="justintimeaccess-t-justintimeaccess-title">
+            <Shield className="h-5 w-5 text-blue-500" data-testid="justintimeaccess-shield" />
             {t("justInTimeAccess.title")}
           </DialogTitle>
-          <DialogDescription>
+          <DialogDescription data-testid="justintimeaccess-dialogdescription">
             {t("justInTimeAccess.description", { taskTitle })}
           </DialogDescription>
         </DialogHeader>
 
         {!isAuthenticated ? (
           <div className="space-y-4">
-            <Alert>
-              <AlertCircle className="h-4 w-4" />
-              <AlertDescription>
+            <Alert data-testid="justintimeaccess-alert">
+              <AlertCircle className="h-4 w-4" data-testid="justintimeaccess-alertcircle" />
+              <AlertDescription data-testid="justintimeaccess-t-justintimeaccess-securitynotice">
                 {t("justInTimeAccess.securityNotice")}
               </AlertDescription>
             </Alert>
 
             <div className="space-y-2">
-              <Label htmlFor="password">
+              <Label htmlFor="password" data-testid="justintimeaccess-t-justintimeaccess-fields-password">
                 {t("justInTimeAccess.fields.password")}
               </Label>
               <Input
@@ -224,24 +224,24 @@ export const JustInTimeAccess: React.FC<JustInTimeAccessProps> = ({
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 onKeyDown={(e) => e.key === "Enter" && handleReauthentication()}
-                placeholder={t("justInTimeAccess.placeholders.enterPassword")}
+                placeholder={t("justInTimeAccess.placeholders.enterPassword")} data-testid="justintimeaccess-input"
               />
             </div>
 
             {error && (
-              <Alert variant="destructive">
-                <AlertCircle className="h-4 w-4" />
-                <AlertDescription>{error}</AlertDescription>
+              <Alert variant="destructive" data-testid="justintimeaccess-alert">
+                <AlertCircle className="h-4 w-4" data-testid="justintimeaccess-alertcircle" />
+                <AlertDescription data-testid="justintimeaccess-error">{error}</AlertDescription>
               </Alert>
             )}
 
             <div className="flex justify-end gap-2">
-              <Button variant="outline" onClick={handleClose}>
+              <Button variant="outline" onClick={handleClose} data-testid="justintimeaccess-t-justintimeaccess-actions-cancel">
                 {t("justInTimeAccess.actions.cancel")}
               </Button>
               <Button
                 onClick={handleReauthentication}
-                disabled={!password || loading}
+                disabled={!password || loading} data-testid="justintimeaccess-button"
               >
                 {loading
                   ? t("justInTimeAccess.actions.verifying")
@@ -252,8 +252,8 @@ export const JustInTimeAccess: React.FC<JustInTimeAccessProps> = ({
         ) : (
           <div className="space-y-4">
             {sensitiveData ? (
-              <Card>
-                <CardContent className="pt-6 space-y-4">
+              <Card data-testid="justintimeaccess-card">
+                <CardContent className="pt-6 space-y-4" data-testid="justintimeaccess-cardcontent">
                   {renderSensitiveField(
                     t("justInTimeAccess.fields.accountName"),
                     sensitiveData.accountName,
@@ -279,7 +279,7 @@ export const JustInTimeAccess: React.FC<JustInTimeAccessProps> = ({
 
                   {sensitiveData.notes && (
                     <div className="space-y-1">
-                      <Label className="text-sm font-medium">
+                      <Label className="text-sm font-medium" data-testid="justintimeaccess-label">
                         {t("justInTimeAccess.fields.additionalNotes")}
                       </Label>
                       <div className="p-3 bg-muted rounded-md">
@@ -290,15 +290,15 @@ export const JustInTimeAccess: React.FC<JustInTimeAccessProps> = ({
                 </CardContent>
               </Card>
             ) : (
-              <Alert>
-                <AlertCircle className="h-4 w-4" />
-                <AlertDescription>
+              <Alert data-testid="justintimeaccess-alert">
+                <AlertCircle className="h-4 w-4" data-testid="justintimeaccess-alertcircle" />
+                <AlertDescription data-testid="justintimeaccess-t-justintimeaccess-nosensitiveinfo">
                   {t("justInTimeAccess.noSensitiveInfo")}
                 </AlertDescription>
               </Alert>
             )}
 
-            <Separator />
+            <Separator data-testid="justintimeaccess-separator" />
 
             <div className="text-xs text-muted-foreground">
               <p>{t("justInTimeAccess.accessLogged")}</p>
@@ -310,7 +310,7 @@ export const JustInTimeAccess: React.FC<JustInTimeAccessProps> = ({
             </div>
 
             <div className="flex justify-end">
-              <Button onClick={handleClose}>
+              <Button onClick={handleClose} data-testid="justintimeaccess-t-justintimeaccess-actions-close">
                 {t("justInTimeAccess.actions.close")}
               </Button>
             </div>

@@ -227,8 +227,8 @@ export default function GuardianPlaybook({
 
   if (loading) {
     return (
-      <Card>
-        <CardContent className="flex items-center justify-center h-64">
+      <Card data-testid="guardianplaybook-card">
+        <CardContent className="flex items-center justify-center h-64" data-testid="guardianplaybook-t-ui-common-family-loading">
           <p className="text-muted-foreground">
             {t("ui-common:family.loading")}
           </p>
@@ -238,23 +238,23 @@ export default function GuardianPlaybook({
   }
 
   const renderContent = () => (
-    <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-      <TabsList className="grid grid-cols-6 w-full">
+    <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full" data-testid="guardianplaybook-control">
+      <TabsList className="grid grid-cols-6 w-full" data-testid="guardianplaybook-object-entries-tabicons-map-key-icon">
         {Object.entries(tabIcons).map(([key, Icon]) => (
           <TabsTrigger
             key={key}
             value={key}
-            className="flex items-center gap-2"
+            className="flex items-center gap-2" data-testid="guardianplaybook-tabstrigger"
           >
-            <Icon className="h-4 w-4" />
+            <Icon className="h-4 w-4" data-testid="guardianplaybook-icon" />
             <span className="hidden sm:inline">{t("family.tabs.${key}")}</span>
           </TabsTrigger>
         ))}
       </TabsList>
 
-      <TabsContent value="funeral" className="space-y-4">
+      <TabsContent value="funeral" className="space-y-4" data-testid="guardianplaybook-tabscontent">
         <div>
-          <Label htmlFor="funeral_wishes">
+          <Label htmlFor="funeral_wishes" data-testid="guardianplaybook-t-family-funeralwishes-label">
             {t("family.funeralWishes.label")}
           </Label>
           <p className="text-sm text-muted-foreground mb-2">
@@ -266,14 +266,14 @@ export default function GuardianPlaybook({
             onChange={(e) => updateField("funeral_wishes", e.target.value)}
             placeholder={t("family.funeralWishes.placeholder")}
             className="min-h-[200px]"
-            disabled={isReadOnly || previewMode}
+            disabled={isReadOnly || previewMode} data-testid="guardianplaybook-textarea"
           />
         </div>
       </TabsContent>
 
-      <TabsContent value="digital" className="space-y-4">
+      <TabsContent value="digital" className="space-y-4" data-testid="guardianplaybook-tabscontent">
         <div>
-          <Label htmlFor="digital_accounts">
+          <Label htmlFor="digital_accounts" data-testid="guardianplaybook-t-family-digitalaccounts-label">
             {t("family.digitalAccounts.label")}
           </Label>
           <p className="text-sm text-muted-foreground mb-2">
@@ -287,36 +287,36 @@ export default function GuardianPlaybook({
             }
             placeholder={t("family.digitalAccounts.placeholder")}
             className="min-h-[200px]"
-            disabled={isReadOnly || previewMode}
+            disabled={isReadOnly || previewMode} data-testid="guardianplaybook-textarea"
           />
         </div>
       </TabsContent>
 
-      <TabsContent value="contacts" className="space-y-4">
+      <TabsContent value="contacts" className="space-y-4" data-testid="guardianplaybook-tabscontent">
         <div>
           <div className="flex justify-between items-center mb-4">
             <div>
-              <Label>{t("family.importantContacts.label")}</Label>
+              <Label data-testid="guardianplaybook-t-family-importantcontacts-label">{t("family.importantContacts.label")}</Label>
               <p className="text-sm text-muted-foreground">
                 {t("family.importantContacts.description")}
               </p>
             </div>
             {!isReadOnly && !previewMode && (
-              <Button onClick={addContact} size="sm" variant="outline">
-                <Plus className="h-4 w-4 mr-2" />
+              <Button onClick={addContact} size="sm" variant="outline" data-testid="guardianplaybook-button">
+                <Plus className="h-4 w-4 mr-2" data-testid="guardianplaybook-plus" />
                 {t("family.importantContacts.add")}
               </Button>
             )}
           </div>
 
-          <ScrollArea className="h-[400px] pr-4">
+          <ScrollArea className="h-[400px] pr-4" data-testid="guardianplaybook-control">
             <div className="space-y-4">
               {playbook.important_contacts.map((contact, index) => (
-                <Card key={index}>
-                  <CardContent className="p-4">
+                <Card key={index} data-testid="guardianplaybook-card">
+                  <CardContent className="p-4" data-testid="guardianplaybook-cardcontent">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
-                        <Label htmlFor={`contact-name-${index}`}>
+                        <Label htmlFor={`contact-name-${index}`} data-testid="guardianplaybook-label">
                           {t("family.importantContacts.name")}
                         </Label>
                         <Input
@@ -328,11 +328,11 @@ export default function GuardianPlaybook({
                           placeholder={t(
                             "family.importantContacts.namePlaceholder",
                           )}
-                          disabled={isReadOnly || previewMode}
+                          disabled={isReadOnly || previewMode} data-testid="guardianplaybook-input"
                         />
                       </div>
                       <div>
-                        <Label htmlFor={`contact-relationship-${index}`}>
+                        <Label htmlFor={`contact-relationship-${index}`} data-testid="guardianplaybook-label">
                           {t("family.importantContacts.relationship")}
                         </Label>
                         <Input
@@ -344,11 +344,11 @@ export default function GuardianPlaybook({
                           placeholder={t(
                             "family.importantContacts.relationshipPlaceholder",
                           )}
-                          disabled={isReadOnly || previewMode}
+                          disabled={isReadOnly || previewMode} data-testid="guardianplaybook-input"
                         />
                       </div>
                       <div>
-                        <Label htmlFor={`contact-phone-${index}`}>
+                        <Label htmlFor={`contact-phone-${index}`} data-testid="guardianplaybook-label">
                           {t("family.importantContacts.phone")}
                         </Label>
                         <Input
@@ -361,11 +361,11 @@ export default function GuardianPlaybook({
                           placeholder={t(
                             "family.importantContacts.phonePlaceholder",
                           )}
-                          disabled={isReadOnly || previewMode}
+                          disabled={isReadOnly || previewMode} data-testid="guardianplaybook-input"
                         />
                       </div>
                       <div>
-                        <Label htmlFor={`contact-email-${index}`}>
+                        <Label htmlFor={`contact-email-${index}`} data-testid="guardianplaybook-label">
                           {t("family.importantContacts.email")}
                         </Label>
                         <Input
@@ -378,11 +378,11 @@ export default function GuardianPlaybook({
                           placeholder={t(
                             "family.importantContacts.emailPlaceholder",
                           )}
-                          disabled={isReadOnly || previewMode}
+                          disabled={isReadOnly || previewMode} data-testid="guardianplaybook-input"
                         />
                       </div>
                       <div className="md:col-span-2">
-                        <Label htmlFor={`contact-notes-${index}`}>
+                        <Label htmlFor={`contact-notes-${index}`} data-testid="guardianplaybook-label">
                           {t("family.importantContacts.notes")}
                         </Label>
                         <Textarea
@@ -395,7 +395,7 @@ export default function GuardianPlaybook({
                             "family.importantContacts.notesPlaceholder",
                           )}
                           className="min-h-[80px]"
-                          disabled={isReadOnly || previewMode}
+                          disabled={isReadOnly || previewMode} data-testid="guardianplaybook-textarea"
                         />
                       </div>
                     </div>
@@ -404,9 +404,9 @@ export default function GuardianPlaybook({
                         onClick={() => removeContact(index)}
                         variant="ghost"
                         size="sm"
-                        className="mt-2"
+                        className="mt-2" data-testid="guardianplaybook-button"
                       >
-                        <Trash2 className="h-4 w-4 mr-2" />
+                        <Trash2 className="h-4 w-4 mr-2" data-testid="guardianplaybook-trash2" />
                         {t("family.importantContacts.remove")}
                       </Button>
                     )}
@@ -423,9 +423,9 @@ export default function GuardianPlaybook({
         </div>
       </TabsContent>
 
-      <TabsContent value="documents" className="space-y-4">
+      <TabsContent value="documents" className="space-y-4" data-testid="guardianplaybook-tabscontent">
         <div>
-          <Label htmlFor="document_locations">
+          <Label htmlFor="document_locations" data-testid="guardianplaybook-t-family-documentlocations-label">
             {t("family.documentLocations.label")}
           </Label>
           <p className="text-sm text-muted-foreground mb-2">
@@ -437,14 +437,14 @@ export default function GuardianPlaybook({
             onChange={(e) => updateField("document_locations", e.target.value)}
             placeholder={t("family.documentLocations.placeholder")}
             className="min-h-[200px]"
-            disabled={isReadOnly || previewMode}
+            disabled={isReadOnly || previewMode} data-testid="guardianplaybook-textarea"
           />
         </div>
       </TabsContent>
 
-      <TabsContent value="messages" className="space-y-4">
+      <TabsContent value="messages" className="space-y-4" data-testid="guardianplaybook-tabscontent">
         <div>
-          <Label htmlFor="personal_messages">
+          <Label htmlFor="personal_messages" data-testid="guardianplaybook-t-family-personalmessages-label">
             {t("family.personalMessages.label")}
           </Label>
           <p className="text-sm text-muted-foreground mb-2">
@@ -456,14 +456,14 @@ export default function GuardianPlaybook({
             onChange={(e) => updateField("personal_messages", e.target.value)}
             placeholder={t("family.personalMessages.placeholder")}
             className="min-h-[200px]"
-            disabled={isReadOnly || previewMode}
+            disabled={isReadOnly || previewMode} data-testid="guardianplaybook-textarea"
           />
         </div>
       </TabsContent>
 
-      <TabsContent value="instructions" className="space-y-4">
+      <TabsContent value="instructions" className="space-y-4" data-testid="guardianplaybook-tabscontent">
         <div>
-          <Label htmlFor="practical_instructions">
+          <Label htmlFor="practical_instructions" data-testid="guardianplaybook-t-family-practicalinstructions-label">
             {t("family.practicalInstructions.label")}
           </Label>
           <p className="text-sm text-muted-foreground mb-2">
@@ -477,7 +477,7 @@ export default function GuardianPlaybook({
             }
             placeholder={t("family.practicalInstructions.placeholder")}
             className="min-h-[200px]"
-            disabled={isReadOnly || previewMode}
+            disabled={isReadOnly || previewMode} data-testid="guardianplaybook-textarea"
           />
         </div>
       </TabsContent>
@@ -493,21 +493,21 @@ export default function GuardianPlaybook({
 
   return (
     <>
-      <Card className="w-full">
-        <CardHeader>
+      <Card className="w-full" data-testid="guardianplaybook-card">
+        <CardHeader data-testid="guardianplaybook-cardheader">
           <div className="flex items-center justify-between">
             <div>
-              <CardTitle className="text-2xl">
+              <CardTitle className="text-2xl" data-testid="guardianplaybook-cardtitle">
                 {isReadOnly
                   ? t("playbook.titleReadOnly", { name: guardianName })
                   : t("playbook.title", { name: guardianName })}
               </CardTitle>
-              <CardDescription>
+              <CardDescription data-testid="guardianplaybook-t-ui-common-family-description">
                 {t("ui-common:family.description")}
               </CardDescription>
             </div>
             <div className="flex items-center gap-2">
-              <Badge variant={statusColors[status]}>
+              <Badge variant={statusColors[status]} data-testid="guardianplaybook-t-family-status-status">
                 {t("family.status.${status}")}
               </Badge>
               {!isReadOnly && (
@@ -515,16 +515,16 @@ export default function GuardianPlaybook({
                   <Button
                     onClick={() => setPreviewMode(!previewMode)}
                     variant="outline"
-                    size="sm"
+                    size="sm" data-testid="guardianplaybook-previewmode"
                   >
                     {previewMode ? (
                       <>
-                        <EyeOff className="h-4 w-4 mr-2" />
+                        <EyeOff className="h-4 w-4 mr-2" data-testid="guardianplaybook-eyeoff" />
                         {t("family.exitPreview")}
                       </>
                     ) : (
                       <>
-                        <Eye className="h-4 w-4 mr-2" />
+                        <Eye className="h-4 w-4 mr-2" data-testid="guardianplaybook-eye" />
                         {t("ui-common:family.preview")}
                       </>
                     )}
@@ -532,9 +532,9 @@ export default function GuardianPlaybook({
                   <Button
                     onClick={savePlaybook}
                     disabled={saving || !hasChanges || previewMode}
-                    size="sm"
+                    size="sm" data-testid="guardianplaybook-button"
                   >
-                    <Save className="h-4 w-4 mr-2" />
+                    <Save className="h-4 w-4 mr-2" data-testid="guardianplaybook-save" />
                     {saving
                       ? t("ui-common:family.saving")
                       : t("ui-common:family.save")}
@@ -544,28 +544,28 @@ export default function GuardianPlaybook({
             </div>
           </div>
         </CardHeader>
-        <CardContent>{renderContent()}</CardContent>
+        <CardContent data-testid="guardianplaybook-rendercontent">{renderContent()}</CardContent>
       </Card>
 
-      <AlertDialog open={showDiscardDialog} onOpenChange={setShowDiscardDialog}>
-        <AlertDialogContent>
-          <AlertDialogHeader>
-            <AlertDialogTitle>
+      <AlertDialog open={showDiscardDialog} onOpenChange={setShowDiscardDialog} data-testid="guardianplaybook-alertdialog">
+        <AlertDialogContent data-testid="guardianplaybook-alertdialogcontent">
+          <AlertDialogHeader data-testid="guardianplaybook-alertdialogheader">
+            <AlertDialogTitle data-testid="guardianplaybook-t-family-discardchanges-title">
               {t("family.discardChanges.title")}
             </AlertDialogTitle>
-            <AlertDialogDescription>
+            <AlertDialogDescription data-testid="guardianplaybook-t-family-discardchanges-description">
               {t("family.discardChanges.description")}
             </AlertDialogDescription>
           </AlertDialogHeader>
-          <AlertDialogFooter>
-            <AlertDialogCancel>
+          <AlertDialogFooter data-testid="guardianplaybook-alertdialogfooter">
+            <AlertDialogCancel data-testid="guardianplaybook-t-family-discardchanges-cancel">
               {t("family.discardChanges.cancel")}
             </AlertDialogCancel>
             <AlertDialogAction
               onClick={() => {
                 setHasChanges(false);
                 fetchPlaybook();
-              }}
+              }} data-testid="guardianplaybook-t-family-discardchanges-confirm"
             >
               {t("family.discardChanges.confirm")}
             </AlertDialogAction>

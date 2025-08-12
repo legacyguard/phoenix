@@ -108,7 +108,7 @@ const DocumentUploadDemo: React.FC = () => {
             apiKey={API_KEY}
             onDocumentProcessed={handleDocumentProcessed}
             existingPossessions={mockPossessions}
-            trustedPeople={mockTrustedPeople}
+            trustedPeople={mockTrustedPeople} data-testid="documentuploaddemo-documentuploadflow"
           />
         </div>
 

@@ -233,15 +233,15 @@ export const AssetDetail: React.FC = () => {
   const getAssetIcon = (type: string) => {
     switch (type) {
       case "RealEstate":
-        return <Home className="h-6 w-6" />;
+        return <Home className="h-6 w-6" data-testid="assetdetail-home" />;
       case "Business":
-        return <Building className="h-6 w-6" />;
+        return <Building className="h-6 w-6" data-testid="assetdetail-building" />;
       case "Vehicle":
-        return <Car className="h-6 w-6" />;
+        return <Car className="h-6 w-6" data-testid="assetdetail-car" />;
       case "FinancialAccount":
-        return <Wallet className="h-6 w-6" />;
+        return <Wallet className="h-6 w-6" data-testid="assetdetail-wallet" />;
       default:
-        return <Home className="h-6 w-6" />;
+        return <Home className="h-6 w-6" data-testid="assetdetail-home" />;
     }
   };
 
@@ -293,7 +293,7 @@ export const AssetDetail: React.FC = () => {
 
   if (isLoading) {
     return (
-      <ErrorBoundary>
+      <ErrorBoundary data-testid="assetdetail-errorboundary">
         <div className="container mx-auto px-4 lg:px-8 py-8">
           <div className="flex items-center justify-center min-h-[400px]">
             <div className="text-center">
@@ -315,9 +315,9 @@ export const AssetDetail: React.FC = () => {
         <Button
           variant="outline"
           size="icon"
-          onClick={() => navigate("/dashboard")}
+          onClick={() => navigate("/dashboard")} data-testid="assetdetail-navigate-dashboard"
         >
-          <ArrowLeft className="h-4 w-4" />
+          <ArrowLeft className="h-4 w-4" data-testid="assetdetail-arrowleft" />
         </Button>
         <div className="flex items-center gap-3">
           {getAssetIcon(formData.type)}
@@ -334,12 +334,12 @@ export const AssetDetail: React.FC = () => {
 
       {/* Asset Story Section - Only show for existing assets */}
       {!isNewAsset && asset && (
-        <Card>
-          <CardContent className="pt-6">
+        <Card data-testid="assetdetail-asset-asset-story">
+          <CardContent className="pt-6" data-testid="assetdetail-asset-asset-story">
             {asset.asset_story ? (
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
-                  <ScrollText className="h-5 w-5 text-accent-green mt-1" />
+                  <ScrollText className="h-5 w-5 text-accent-green mt-1" data-testid="assetdetail-scrolltext" />
                   <div className="flex-1">
                     <h3 className="font-semibold text-lg mb-2">
                       {t("details.familyNotes")}
@@ -350,22 +350,22 @@ export const AssetDetail: React.FC = () => {
                   </div>
                 </div>
                 <div className="flex justify-end">
-                  <Button variant="ghost" size="sm" onClick={handleStoryEdit}>
+                  <Button variant="ghost" size="sm" onClick={handleStoryEdit} data-testid="assetdetail-t-actions-addnote">
                     {t("actions.addNote")}
                   </Button>
                 </div>
               </div>
             ) : (
               <div className="flex flex-col items-center justify-center py-8 px-4 border-2 border-dashed border-gray-200 rounded-lg bg-gray-50/50">
-                <Feather className="h-8 w-8 text-accent-green mb-3" />
+                <Feather className="h-8 w-8 text-accent-green mb-3" data-testid="assetdetail-feather" />
                 <h3 className="text-lg font-semibold text-text-heading mb-2">
                   {t("assets:assets.empty")}
                 </h3>
                 <p className="text-sm text-text-body text-center max-w-md mb-4">
                   {t("assets:assets.description")}
                 </p>
-                <Button variant="default" size="sm" onClick={handleStoryEdit}>
-                  <Feather className="h-4 w-4 mr-2" />
+                <Button variant="default" size="sm" onClick={handleStoryEdit} data-testid="assetdetail-t-actions-addnote">
+                  <Feather className="h-4 w-4 mr-2" data-testid="assetdetail-feather" />
                   {t("actions.addNote")}
                 </Button>
               </div>
@@ -375,11 +375,11 @@ export const AssetDetail: React.FC = () => {
       )}
 
       {/* Asset Form */}
-      <Card>
-        <CardHeader>
-          <CardTitle>{t("form.assetDetails")}</CardTitle>
+      <Card data-testid="assetdetail-card">
+        <CardHeader data-testid="assetdetail-t-form-assetdetails">
+          <CardTitle data-testid="assetdetail-t-form-assetdetails">{t("form.assetDetails")}</CardTitle>
         </CardHeader>
-        <CardContent className="space-y-8">
+        <CardContent className="space-y-8" data-testid="assetdetail-basic-information-section">
           {/* Basic Information Section */}
           <div className="space-y-4">
             <h3 className="text-lg font-semibold border-b pb-2">
@@ -387,14 +387,14 @@ export const AssetDetail: React.FC = () => {
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
-                <Label htmlFor="name">{t("form.name")} *</Label>
+                <Label htmlFor="name" data-testid="assetdetail-t-form-name">{t("form.name")} *</Label>
                 <Input
                   id="name"
                   placeholder={t("form.namePlaceholder")}
                   value={formData.name}
                   onChange={(e) =>
                     setFormData((prev) => ({ ...prev, name: e.target.value }))
-                  }
+                  } data-testid="assetdetail-input"
                 />
                 <p className="text-xs text-muted-foreground">
                   {t("form.nameHelper")}
@@ -402,27 +402,27 @@ export const AssetDetail: React.FC = () => {
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="type">{t("form.type")}</Label>
+                <Label htmlFor="type" data-testid="assetdetail-t-form-type">{t("form.type")}</Label>
                 <Select
                   value={formData.type}
                   onValueChange={(value) =>
                     setFormData((prev) => ({ ...prev, type: value }))
-                  }
+                  } data-testid="assetdetail-select"
                 >
-                  <SelectTrigger>
-                    <SelectValue placeholder={t("form.selectType")} />
+                  <SelectTrigger data-testid="assetdetail-selecttrigger">
+                    <SelectValue placeholder={t("form.selectType")} data-testid="assetdetail-selectvalue" />
                   </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="RealEstate">
+                  <SelectContent data-testid="assetdetail-selectcontent">
+                    <SelectItem value="RealEstate" data-testid="assetdetail-t-types-primaryresidence">
                       {t("types.primaryResidence")}
                     </SelectItem>
-                    <SelectItem value="Business">
+                    <SelectItem value="Business" data-testid="assetdetail-t-types-businessownership">
                       {t("types.businessOwnership")}
                     </SelectItem>
-                    <SelectItem value="Vehicle">
+                    <SelectItem value="Vehicle" data-testid="assetdetail-t-types-automobile">
                       {t("types.automobile")}
                     </SelectItem>
-                    <SelectItem value="FinancialAccount">
+                    <SelectItem value="FinancialAccount" data-testid="assetdetail-t-types-checkingaccount">
                       {t("types.checkingAccount")}
                     </SelectItem>
                   </SelectContent>
@@ -442,7 +442,7 @@ export const AssetDetail: React.FC = () => {
               </h3>
               <div className="space-y-4">
                 <div className="space-y-2">
-                  <Label htmlFor="address">{t("form.location")}</Label>
+                  <Label htmlFor="address" data-testid="assetdetail-t-form-location">{t("form.location")}</Label>
                   <Textarea
                     id="address"
                     placeholder={t("form.locationPlaceholder")}
@@ -453,7 +453,7 @@ export const AssetDetail: React.FC = () => {
                         address: e.target.value,
                       }))
                     }
-                    rows={3}
+                    rows={3} data-testid="assetdetail-textarea"
                   />
                   <p className="text-xs text-muted-foreground">
                     {t("form.locationHelper")}
@@ -461,7 +461,7 @@ export const AssetDetail: React.FC = () => {
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="registry">
+                  <Label htmlFor="registry" data-testid="assetdetail-t-form-property-registry-number">
                     {t("form.property_registry_number")}
                   </Label>
                   <Input
@@ -473,7 +473,7 @@ export const AssetDetail: React.FC = () => {
                         ...prev,
                         property_registry_number: e.target.value,
                       }))
-                    }
+                    } data-testid="assetdetail-input"
                   />
                   <p className="text-xs text-muted-foreground">
                     {t("form.descriptionHelper")}
@@ -491,24 +491,24 @@ export const AssetDetail: React.FC = () => {
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <Label htmlFor="accountType">{t("form.account_type")}</Label>
+                  <Label htmlFor="accountType" data-testid="assetdetail-t-form-account-type">{t("form.account_type")}</Label>
                   <Select
                     value={formData.account_type}
                     onValueChange={(value) =>
                       setFormData((prev) => ({ ...prev, account_type: value }))
-                    }
+                    } data-testid="assetdetail-select"
                   >
-                    <SelectTrigger>
-                      <SelectValue placeholder={t("form.selectType")} />
+                    <SelectTrigger data-testid="assetdetail-selecttrigger">
+                      <SelectValue placeholder={t("form.selectType")} data-testid="assetdetail-selectvalue" />
                     </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="Bank Account">
+                    <SelectContent data-testid="assetdetail-selectcontent">
+                      <SelectItem value="Bank Account" data-testid="assetdetail-t-types-checkingaccount">
                         {t("types.checkingAccount")}
                       </SelectItem>
-                      <SelectItem value="Investment Portfolio">
+                      <SelectItem value="Investment Portfolio" data-testid="assetdetail-t-types-investmentaccount">
                         {t("types.investmentAccount")}
                       </SelectItem>
-                      <SelectItem value="Pension Fund">
+                      <SelectItem value="Pension Fund" data-testid="assetdetail-t-types-retirementaccount">
                         {t("types.retirementAccount")}
                       </SelectItem>
                     </SelectContent>
@@ -519,7 +519,7 @@ export const AssetDetail: React.FC = () => {
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="institution">{t("form.institution")}</Label>
+                  <Label htmlFor="institution" data-testid="assetdetail-t-form-institution">{t("form.institution")}</Label>
                   <Input
                     id="institution"
                     placeholder={t("form.institutionPlaceholder")}
@@ -529,7 +529,7 @@ export const AssetDetail: React.FC = () => {
                         ...prev,
                         financial_institution: e.target.value,
                       }))
-                    }
+                    } data-testid="assetdetail-input"
                   />
                   <p className="text-xs text-muted-foreground">
                     {t("form.descriptionHelper")}
@@ -538,7 +538,7 @@ export const AssetDetail: React.FC = () => {
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="accountNumber">{t("form.accountNumber")}</Label>
+                <Label htmlFor="accountNumber" data-testid="assetdetail-t-form-accountnumber">{t("form.accountNumber")}</Label>
                 <Input
                   id="accountNumber"
                   placeholder={t("form.accountPlaceholder")}
@@ -548,7 +548,7 @@ export const AssetDetail: React.FC = () => {
                       ...prev,
                       account_number: e.target.value,
                     }))
-                  }
+                  } data-testid="assetdetail-input"
                 />
                 <p className="text-xs text-muted-foreground">
                   {t("form.accountHelper")}
@@ -556,7 +556,7 @@ export const AssetDetail: React.FC = () => {
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="credentials">
+                <Label htmlFor="credentials" data-testid="assetdetail-t-form-login-credentials">
                   {t("form.login_credentials")}
                 </Label>
                 <Textarea
@@ -569,7 +569,7 @@ export const AssetDetail: React.FC = () => {
                       login_credentials: e.target.value,
                     }))
                   }
-                  rows={3}
+                  rows={3} data-testid="assetdetail-textarea"
                 />
                 <div className="bg-yellow-50 border border-yellow-200 rounded-md p-3">
                   <p className="text-xs text-yellow-800">
@@ -588,7 +588,7 @@ export const AssetDetail: React.FC = () => {
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
-                <Label htmlFor="value">{t("form.estimatedValue")}</Label>
+                <Label htmlFor="value" data-testid="assetdetail-t-form-estimatedvalue">{t("form.estimatedValue")}</Label>
                 <Input
                   id="value"
                   type="number"
@@ -599,7 +599,7 @@ export const AssetDetail: React.FC = () => {
                       ...prev,
                       estimated_value: e.target.value,
                     }))
-                  }
+                  } data-testid="assetdetail-input"
                 />
                 <p className="text-xs text-muted-foreground">
                   {t("form.valueHelper")}
@@ -607,19 +607,19 @@ export const AssetDetail: React.FC = () => {
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="currency">{t("form.currency")}</Label>
+                <Label htmlFor="currency" data-testid="assetdetail-t-form-currency">{t("form.currency")}</Label>
                 <Select
                   value={formData.currency_code}
                   onValueChange={(value) =>
                     setFormData((prev) => ({ ...prev, currency_code: value }))
-                  }
+                  } data-testid="assetdetail-select"
                 >
-                  <SelectTrigger>
-                    <SelectValue />
+                  <SelectTrigger data-testid="assetdetail-selecttrigger">
+                    <SelectValue data-testid="assetdetail-selectvalue" />
                   </SelectTrigger>
-                  <SelectContent>
+                  <SelectContent data-testid="assetdetail-currencies-map-currency">
                     {CURRENCIES.map((currency) => (
-                      <SelectItem key={currency.code} value={currency.code}>
+                      <SelectItem key={currency.code} value={currency.code} data-testid="assetdetail-currency-symbol-currency-name">
                         {currency.symbol} {currency.name}
                       </SelectItem>
                     ))}
@@ -637,11 +637,11 @@ export const AssetDetail: React.FC = () => {
             <Button
               variant="outline"
               onClick={() => navigate("/dashboard")}
-              disabled={isSaving}
+              disabled={isSaving} data-testid="assetdetail-t-actions-cancel"
             >
               {t("actions.cancel")}
             </Button>
-            <Button onClick={handleSave} disabled={isSaving}>
+            <Button onClick={handleSave} disabled={isSaving} data-testid="assetdetail-issaving">
               {isSaving ? (
                 <>
                   <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
@@ -649,7 +649,7 @@ export const AssetDetail: React.FC = () => {
                 </>
               ) : (
                 <>
-                  <Save className="mr-2 h-4 w-4" />
+                  <Save className="mr-2 h-4 w-4" data-testid="assetdetail-save" />
                   {isNewAsset
                     ? t("actions.saveAsset")
                     : t("actions.updateAsset")}
@@ -662,14 +662,14 @@ export const AssetDetail: React.FC = () => {
 
       {/* Related Liabilities & Documents Section - Only show for existing assets */}
       {!isNewAsset && assetId && assetId !== "new" && (
-        <Card>
-          <CardHeader>
-            <CardTitle>{t("details.documents")}</CardTitle>
+        <Card data-testid="assetdetail-card">
+          <CardHeader data-testid="assetdetail-t-details-documents">
+            <CardTitle data-testid="assetdetail-t-details-documents">{t("details.documents")}</CardTitle>
           </CardHeader>
-          <CardContent className="space-y-8">
+          <CardContent className="space-y-8" data-testid="assetdetail-t-actions-addliability">
             <Button
               onClick={() => setShowAddLiabilityModal(true)}
-              variant="outline"
+              variant="outline" data-testid="assetdetail-t-actions-addliability"
             >
               + {t("actions.addLiability")}
             </Button>
@@ -711,7 +711,7 @@ export const AssetDetail: React.FC = () => {
         <AddLiabilityModal
           assetId={assetId}
           onClose={() => setShowAddLiabilityModal(false)}
-          onLiabilityAdded={fetchLiabilities}
+          onLiabilityAdded={fetchLiabilities} data-testid="assetdetail-addliabilitymodal"
         />
       )}
 
@@ -722,7 +722,7 @@ export const AssetDetail: React.FC = () => {
           assetName={asset.name}
           currentStory={asset.asset_story}
           onClose={() => setShowEditStoryModal(false)}
-          onStorySaved={handleStorySaved}
+          onStorySaved={handleStorySaved} data-testid="assetdetail-editstorymodal"
         />
       )}
     </div>

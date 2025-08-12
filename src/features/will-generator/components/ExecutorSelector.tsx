@@ -57,24 +57,24 @@ export function ExecutorSelector({
 
   return (
     <div className="space-y-6">
-      <Card>
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <Briefcase className="h-5 w-5" />
+      <Card data-testid="executorselector-card">
+        <CardHeader data-testid="executorselector-cardheader">
+          <CardTitle className="flex items-center gap-2" data-testid="executorselector-t-wills-wills-executor-title">
+            <Briefcase className="h-5 w-5" data-testid="executorselector-briefcase" />
             {t("wills:wills.executor.title")}
           </CardTitle>
-          <CardDescription>
+          <CardDescription data-testid="executorselector-t-wills-wills-executor-description">
             {t("wills:wills.executor.description")}
           </CardDescription>
         </CardHeader>
-        <CardContent className="space-y-6">
+        <CardContent className="space-y-6" data-testid="executorselector-primary-executor">
           {/* Primary Executor */}
           <div className="space-y-4">
             <h4 className="font-medium">{t("wills:wills.executor.primary")}</h4>
 
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-2">
-                <Label htmlFor="executor-name">
+                <Label htmlFor="executor-name" data-testid="executorselector-t-wills-wills-executor-name">
                   {t("wills:wills.executor.name")} *
                 </Label>
                 <Input
@@ -83,18 +83,18 @@ export function ExecutorSelector({
                   onChange={(e) =>
                     handleExecutorUpdate({ name: e.target.value })
                   }
-                  placeholder={t("wills.executor.namePlaceholder")}
+                  placeholder={t("wills.executor.namePlaceholder")} data-testid="executorselector-input"
                 />
                 {errors.executor && (
                   <p className="text-sm text-destructive flex items-center gap-1">
-                    <AlertCircle className="h-3 w-3" />
+                    <AlertCircle className="h-3 w-3" data-testid="executorselector-alertcircle" />
                     {errors.executor}
                   </p>
                 )}
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="executor-relationship">
+                <Label htmlFor="executor-relationship" data-testid="executorselector-t-wills-wills-executor-relationship">
                   {t("wills:wills.executor.relationship")} *
                 </Label>
                 <Input
@@ -103,13 +103,13 @@ export function ExecutorSelector({
                   onChange={(e) =>
                     handleExecutorUpdate({ relationship: e.target.value })
                   }
-                  placeholder={t("wills.executor.relationshipPlaceholder")}
+                  placeholder={t("wills.executor.relationshipPlaceholder")} data-testid="executorselector-input"
                 />
               </div>
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="executor-address">
+              <Label htmlFor="executor-address" data-testid="executorselector-t-wills-wills-executor-address">
                 {t("wills:wills.executor.address")} *
               </Label>
               <Textarea
@@ -119,12 +119,12 @@ export function ExecutorSelector({
                   handleExecutorUpdate({ address: e.target.value })
                 }
                 placeholder={t("wills.executor.addressPlaceholder")}
-                rows={3}
+                rows={3} data-testid="executorselector-textarea"
               />
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="executor-phone">
+              <Label htmlFor="executor-phone" data-testid="executorselector-t-wills-wills-executor-phone">
                 {t("wills:wills.executor.phone")}
               </Label>
               <Input
@@ -134,7 +134,7 @@ export function ExecutorSelector({
                 onChange={(e) =>
                   handleExecutorUpdate({ phone: e.target.value })
                 }
-                placeholder={t("wills.executor.phonePlaceholder")}
+                placeholder={t("wills.executor.phonePlaceholder")} data-testid="executorselector-input"
               />
             </div>
           </div>
@@ -142,7 +142,7 @@ export function ExecutorSelector({
           {/* Alternative Executor Toggle */}
           <div className="flex items-center justify-between py-4 border-t">
             <div className="space-y-0.5">
-              <Label htmlFor="has-alternative">
+              <Label htmlFor="has-alternative" data-testid="executorselector-t-wills-executor-addalternative">
                 {t("wills.executor.addAlternative")}
               </Label>
               <p className="text-sm text-muted-foreground">
@@ -157,7 +157,7 @@ export function ExecutorSelector({
                 if (!checked) {
                   handleExecutorUpdate({ alternativeExecutor: undefined });
                 }
-              }}
+              }} data-testid="executorselector-switch"
             />
           </div>
 
@@ -165,13 +165,13 @@ export function ExecutorSelector({
           {hasAlternative && (
             <div className="space-y-4 pt-4 border-t">
               <h4 className="font-medium flex items-center gap-2">
-                <UserPlus className="h-4 w-4" />
+                <UserPlus className="h-4 w-4" data-testid="executorselector-userplus" />
                 {t("wills:wills.executor.alternative")}
               </h4>
 
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-2">
-                  <Label htmlFor="alt-executor-name">
+                  <Label htmlFor="alt-executor-name" data-testid="executorselector-t-wills-wills-executor-name">
                     {t("wills:wills.executor.name")}
                   </Label>
                   <Input
@@ -180,12 +180,12 @@ export function ExecutorSelector({
                     onChange={(e) =>
                       handleAlternativeUpdate({ name: e.target.value })
                     }
-                    placeholder={t("wills.executor.namePlaceholder")}
+                    placeholder={t("wills.executor.namePlaceholder")} data-testid="executorselector-input"
                   />
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="alt-executor-relationship">
+                  <Label htmlFor="alt-executor-relationship" data-testid="executorselector-t-wills-wills-executor-relationship">
                     {t("wills:wills.executor.relationship")}
                   </Label>
                   <Input
@@ -194,13 +194,13 @@ export function ExecutorSelector({
                     onChange={(e) =>
                       handleAlternativeUpdate({ relationship: e.target.value })
                     }
-                    placeholder={t("wills.executor.relationshipPlaceholder")}
+                    placeholder={t("wills.executor.relationshipPlaceholder")} data-testid="executorselector-input"
                   />
                 </div>
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="alt-executor-address">
+                <Label htmlFor="alt-executor-address" data-testid="executorselector-t-wills-wills-executor-address">
                   {t("wills:wills.executor.address")}
                 </Label>
                 <Textarea
@@ -210,12 +210,12 @@ export function ExecutorSelector({
                     handleAlternativeUpdate({ address: e.target.value })
                   }
                   placeholder={t("wills.executor.addressPlaceholder")}
-                  rows={3}
+                  rows={3} data-testid="executorselector-textarea"
                 />
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="alt-executor-phone">
+                <Label htmlFor="alt-executor-phone" data-testid="executorselector-t-wills-wills-executor-phone">
                   {t("wills:wills.executor.phone")}
                 </Label>
                 <Input
@@ -225,7 +225,7 @@ export function ExecutorSelector({
                   onChange={(e) =>
                     handleAlternativeUpdate({ phone: e.target.value })
                   }
-                  placeholder={t("wills.executor.phonePlaceholder")}
+                  placeholder={t("wills.executor.phonePlaceholder")} data-testid="executorselector-input"
                 />
               </div>
             </div>
@@ -234,8 +234,8 @@ export function ExecutorSelector({
       </Card>
 
       {/* Executor responsibilities */}
-      <Card>
-        <CardContent className="pt-6">
+      <Card data-testid="executorselector-card">
+        <CardContent className="pt-6" data-testid="executorselector-cardcontent">
           <h4 className="font-medium mb-2">
             {t("wills:wills.executor.responsibilities")}
           </h4>

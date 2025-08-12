@@ -4,7 +4,7 @@ import { LegacyLetters } from "@/features/legacy-briefing/components/LegacyLette
 const LegacyLettersPage: React.FC = () => {
   return (
     <div className="container mx-auto py-8 px-4 max-w-7xl">
-      <LegacyLetters />
+      <LegacyLetters data-testid="legacyletters-legacyletters" />
     </div>
   );
 };

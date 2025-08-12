@@ -157,18 +157,18 @@ export function CountrySelector({
 
   return (
     <div className="space-y-6">
-      <Card>
-        <CardHeader>
-          <CardTitle>{t("wills.countryRequirements")}</CardTitle>
-          <CardDescription>
+      <Card data-testid="countryselector-card">
+        <CardHeader data-testid="countryselector-t-wills-countryrequirements">
+          <CardTitle data-testid="countryselector-t-wills-countryrequirements">{t("wills.countryRequirements")}</CardTitle>
+          <CardDescription data-testid="countryselector-carddescription">
             {selectedCountry
               ? t("will.selectedCountryDetails", { country: selectedCountry })
               : t("wills.selectCountry")}
           </CardDescription>
         </CardHeader>
-        <CardContent className="space-y-4">
+        <CardContent className="space-y-4" data-testid="countryselector-cardcontent">
           <div className="space-y-2">
-            <Label>{t("wills.selectCountry")}</Label>
+            <Label data-testid="countryselector-t-wills-selectcountry">{t("wills.selectCountry")}</Label>
             <Select
               value={selectedCountry}
               onValueChange={(value) => {
@@ -184,16 +184,16 @@ export function CountrySelector({
                     onSelect(value, countryReqs);
                   }
                 }
-              }}
+              }} data-testid="countryselector-select"
             >
-              <SelectTrigger id="country">
+              <SelectTrigger id="country" data-testid="countryselector-selecttrigger">
                 <SelectValue
-                  placeholder={t("willGenerator.select_a_country_4")}
+                  placeholder={t("willGenerator.select_a_country_4")} data-testid="countryselector-selectvalue"
                 />
               </SelectTrigger>
-              <SelectContent>
+              <SelectContent data-testid="countryselector-countries-map-country">
                 {countries.map((country) => (
-                  <SelectItem key={country.id} value={country.country_code}>
+                  <SelectItem key={country.id} value={country.country_code} data-testid="countryselector-country-country-name">
                     {country.country_name}
                   </SelectItem>
                 ))}
@@ -201,7 +201,7 @@ export function CountrySelector({
             </Select>
             {errors.country && (
               <p className="text-sm text-destructive mt-1">
-                <AlertCircle className="h-4 w-4 inline mr-1" />
+                <AlertCircle className="h-4 w-4 inline mr-1" data-testid="countryselector-alertcircle" />
                 {errors.country}
               </p>
             )}
@@ -210,7 +210,7 @@ export function CountrySelector({
           {/* UK Jurisdiction Selection */}
           {selectedCountry === "GB" && (
             <div className="space-y-2 mt-4">
-              <Label>{t("will_generator.uk_jurisdiction_title")}</Label>
+              <Label data-testid="countryselector-t-will-generator-uk-jurisdiction-title">{t("will_generator.uk_jurisdiction_title")}</Label>
               <RadioGroup
                 value={ukJurisdiction}
                 onValueChange={(value) => {
@@ -224,36 +224,36 @@ export function CountrySelector({
                   if (countryReqs) {
                     onSelect(value, countryReqs);
                   }
-                }}
+                }} data-testid="countryselector-radiogroup"
               >
                 <div className="flex items-center space-x-2">
-                  <RadioGroupItem value="GB-ENG" id="england" />
-                  <Label htmlFor="england">
+                  <RadioGroupItem value="GB-ENG" id="england" data-testid="countryselector-radiogroupitem" />
+                  <Label htmlFor="england" data-testid="countryselector-label">
                     {t("will_generator.jurisdiction_england")}
                   </Label>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <RadioGroupItem value="GB-WLS" id="wales" />
-                  <Label htmlFor="wales">
+                  <RadioGroupItem value="GB-WLS" id="wales" data-testid="countryselector-radiogroupitem" />
+                  <Label htmlFor="wales" data-testid="countryselector-t-will-generator-jurisdiction-wales">
                     {t("will_generator.jurisdiction_wales")}
                   </Label>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <RadioGroupItem value="GB-SCT" id="scotland" />
-                  <Label htmlFor="scotland">
+                  <RadioGroupItem value="GB-SCT" id="scotland" data-testid="countryselector-radiogroupitem" />
+                  <Label htmlFor="scotland" data-testid="countryselector-label">
                     {t("will_generator.jurisdiction_scotland")}
                   </Label>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <RadioGroupItem value="GB-NIR" id="northern-ireland" />
-                  <Label htmlFor="northern-ireland">
+                  <RadioGroupItem value="GB-NIR" id="northern-ireland" data-testid="countryselector-radiogroupitem" />
+                  <Label htmlFor="northern-ireland" data-testid="countryselector-label">
                     {t("will_generator.jurisdiction_northern_ireland")}
                   </Label>
                 </div>
               </RadioGroup>
               {errors.ukJurisdiction && (
                 <p className="text-sm text-destructive mt-1">
-                  <AlertCircle className="h-4 w-4 inline mr-1" />
+                  <AlertCircle className="h-4 w-4 inline mr-1" data-testid="countryselector-alertcircle" />
                   {t("will_generator.error_uk_jurisdiction_required")}
                 </p>
               )}
@@ -264,7 +264,7 @@ export function CountrySelector({
           {ukJurisdiction &&
             ukJurisdictionLanguages[ukJurisdiction]?.length > 1 && (
               <div className="space-y-2 mt-4">
-                <Label>{t("will_generator.select_will_language_title")}</Label>
+                <Label data-testid="countryselector-t-will-generator-select-will-language-ti">{t("will_generator.select_will_language_title")}</Label>
                 <Select
                   value={selectedLanguage}
                   onValueChange={(value) => {
@@ -279,14 +279,14 @@ export function CountrySelector({
                         language_code: value,
                       });
                     }
-                  }}
+                  }} data-testid="countryselector-select"
                 >
-                  <SelectTrigger>
-                    <SelectValue />
+                  <SelectTrigger data-testid="countryselector-selecttrigger">
+                    <SelectValue data-testid="countryselector-selectvalue" />
                   </SelectTrigger>
-                  <SelectContent>
+                  <SelectContent data-testid="countryselector-control">
                     {ukJurisdictionLanguages[ukJurisdiction].map((lang) => (
-                      <SelectItem key={lang.code} value={lang.code}>
+                      <SelectItem key={lang.code} value={lang.code} data-testid="countryselector-lang-name">
                         {lang.name}
                       </SelectItem>
                     ))}
@@ -296,23 +296,23 @@ export function CountrySelector({
             )}
 
           <div className="space-y-4">
-            <Label>{t("wills.testatorInfo")}</Label>
+            <Label data-testid="countryselector-t-wills-testatorinfo">{t("wills.testatorInfo")}</Label>
             <div className="space-y-2">
-              <Label htmlFor="name">{t("wills:wills.name")}</Label>
+              <Label htmlFor="name" data-testid="countryselector-t-wills-wills-name">{t("wills:wills.name")}</Label>
               <Input
                 id="name"
                 value={testator.name}
                 onChange={(e) =>
                   onTestatorUpdate({ ...testator, name: e.target.value })
                 }
-                placeholder={t("wills.namePlaceholder")}
+                placeholder={t("wills.namePlaceholder")} data-testid="countryselector-input"
               />
               {errors.name && (
                 <p className="text-sm text-destructive">{errors.name}</p>
               )}
             </div>
             <div className="space-y-2">
-              <Label htmlFor="birthDate">{t("wills.birthDate")}</Label>
+              <Label htmlFor="birthDate" data-testid="countryselector-t-wills-birthdate">{t("wills.birthDate")}</Label>
               <Input
                 id="birthDate"
                 type="date"
@@ -320,21 +320,21 @@ export function CountrySelector({
                 onChange={(e) =>
                   onTestatorUpdate({ ...testator, birthDate: e.target.value })
                 }
-                placeholder={t("wills.birthDatePlaceholder")}
+                placeholder={t("wills.birthDatePlaceholder")} data-testid="countryselector-input"
               />
               {errors.birthDate && (
                 <p className="text-sm text-destructive">{errors.birthDate}</p>
               )}
             </div>
             <div className="space-y-2">
-              <Label htmlFor="address">{t("wills:wills.address")}</Label>
+              <Label htmlFor="address" data-testid="countryselector-t-wills-wills-address">{t("wills:wills.address")}</Label>
               <Input
                 id="address"
                 value={testator.address}
                 onChange={(e) =>
                   onTestatorUpdate({ ...testator, address: e.target.value })
                 }
-                placeholder={t("wills.addressPlaceholder")}
+                placeholder={t("wills.addressPlaceholder")} data-testid="countryselector-input"
               />
               {errors.address && (
                 <p className="text-sm text-destructive">{errors.address}</p>

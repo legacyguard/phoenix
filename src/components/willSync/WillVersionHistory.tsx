@@ -52,11 +52,11 @@ export function WillVersionHistory({
   const getCreatedByIcon = (createdBy: WillVersion["created_by"]) => {
     switch (createdBy) {
       case "user":
-        return <User className="h-4 w-4" />;
+        return <User className="h-4 w-4" data-testid="willversionhistory-user" />;
       case "system":
-        return <Cpu className="h-4 w-4" />;
+        return <Cpu className="h-4 w-4" data-testid="willversionhistory-cpu" />;
       case "auto_sync":
-        return <RefreshCw className="h-4 w-4" />;
+        return <RefreshCw className="h-4 w-4" data-testid="willversionhistory-refreshcw" />;
     }
   };
 
@@ -114,15 +114,15 @@ export function WillVersionHistory({
 
   return (
     <div className="space-y-6">
-      <Card>
-        <CardHeader>
+      <Card data-testid="willversionhistory-card">
+        <CardHeader data-testid="willversionhistory-cardheader">
           <div className="flex items-center justify-between">
             <div className="space-y-1">
-              <CardTitle className="flex items-center gap-2">
-                <GitBranch className="h-5 w-5" />
+              <CardTitle className="flex items-center gap-2" data-testid="willversionhistory-t-willversion-title">
+                <GitBranch className="h-5 w-5" data-testid="willversionhistory-gitbranch" />
                 {t("willVersion.title")}
               </CardTitle>
-              <CardDescription>
+              <CardDescription data-testid="willversionhistory-carddescription">
                 {t("willVersion.description", { count: versions.length })}
               </CardDescription>
             </div>
@@ -131,15 +131,15 @@ export function WillVersionHistory({
                 size="sm"
                 onClick={() =>
                   onViewDiff?.(selectedVersions[0]!, selectedVersions[1]!)
-                }
+                } data-testid="willversionhistory-t-willversion-comparediff"
               >
                 {t("willVersion.compareDiff")}
               </Button>
             )}
           </div>
         </CardHeader>
-        <CardContent>
-          <ScrollArea className="h-[400px] pr-4">
+        <CardContent data-testid="willversionhistory-cardcontent">
+          <ScrollArea className="h-[400px] pr-4" data-testid="willversionhistory-versions-map-version">
             <div className="space-y-4">
               {versions.map((version) => (
                 <Card
@@ -149,9 +149,9 @@ export function WillVersionHistory({
                       ? "border-primary"
                       : ""
                   } ${version.id === currentVersionId ? "bg-muted/50" : ""}`}
-                  onClick={() => handleVersionSelect(version.id)}
+                  onClick={() => handleVersionSelect(version.id)} data-testid="willversionhistory-handleversionselect-version-id"
                 >
-                  <CardContent className="pt-6">
+                  <CardContent className="pt-6" data-testid="willversionhistory-cardcontent">
                     <div className="flex items-start justify-between">
                       <div className="space-y-2">
                         <div className="flex items-center gap-2">
@@ -161,11 +161,11 @@ export function WillVersionHistory({
                             })}
                           </span>
                           {version.id === currentVersionId && (
-                            <Badge variant="default" className="text-xs">
+                            <Badge variant="default" className="text-xs" data-testid="willversionhistory-t-willversion-current">
                               {t("willVersion.current")}
                             </Badge>
                           )}
-                          <Badge variant="outline" className="text-xs">
+                          <Badge variant="outline" className="text-xs" data-testid="willversionhistory-badge">
                             {getCreatedByIcon(version.created_by)}
                             <span className="ml-1">
                               {t(`willVersion.createdBy.${version.created_by}`)}
@@ -183,7 +183,7 @@ export function WillVersionHistory({
                           </p>
                         )}
                         <div className="flex items-center gap-1 text-xs text-muted-foreground">
-                          <Clock className="h-3 w-3" />
+                          <Clock className="h-3 w-3" data-testid="willversionhistory-clock" />
                           {format(new Date(version.created_at), "PPp")}
                         </div>
                       </div>
@@ -195,9 +195,9 @@ export function WillVersionHistory({
                             onClick={(e) => {
                               e.stopPropagation();
                               onRestore(version.id);
-                            }}
+                            }} data-testid="willversionhistory-button"
                           >
-                            <RotateCcw className="h-4 w-4 mr-1" />
+                            <RotateCcw className="h-4 w-4 mr-1" data-testid="willversionhistory-rotateccw" />
                             {t("willVersion.restore")}
                           </Button>
                         )}
@@ -208,9 +208,9 @@ export function WillVersionHistory({
                             onClick={(e) => {
                               e.stopPropagation();
                               onExport(version.id);
-                            }}
+                            }} data-testid="willversionhistory-button"
                           >
-                            <Download className="h-4 w-4" />
+                            <Download className="h-4 w-4" data-testid="willversionhistory-download" />
                           </Button>
                         )}
                       </div>
@@ -224,8 +224,8 @@ export function WillVersionHistory({
       </Card>
 
       {selectedVersions[0] && selectedVersions[1] && (
-        <Card>
-          <CardContent className="pt-6">
+        <Card data-testid="willversionhistory-card">
+          <CardContent className="pt-6" data-testid="willversionhistory-cardcontent">
             <p className="text-sm text-muted-foreground text-center">
               {t("willVersion.comparePrompt", {
                 version1: versions.find((v) => v.id === selectedVersions[0])

@@ -273,20 +273,20 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
     switch (status) {
       case "complete":
         return (
-          <Badge variant="default" className="gap-1">
-            <CheckCircle className="h-3 w-3" />{" "}
+          <Badge variant="default" className="gap-1" data-testid="guardianplaybook-badge">
+            <CheckCircle className="h-3 w-3" data-testid="guardianplaybook-checkcircle" />{" "}
             {t("ui-common:family.status.complete")}
           </Badge>
         );
       case "draft":
         return (
-          <Badge variant="secondary">
+          <Badge variant="secondary" data-testid="guardianplaybook-t-ui-common-family-status-draft">
             {t("ui-common:family.status.draft")}
           </Badge>
         );
       default:
         return (
-          <Badge variant="outline">{t("ui-common:family.status.empty")}</Badge>
+          <Badge variant="outline" data-testid="guardianplaybook-t-ui-common-family-status-empty">{t("ui-common:family.status.empty")}</Badge>
         );
     }
   };
@@ -327,9 +327,9 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
               <Button
                 variant="outline"
                 size="sm"
-                onClick={() => setIsPreview(!isPreview)}
+                onClick={() => setIsPreview(!isPreview)} data-testid="guardianplaybook-setispreview-ispreview"
               >
-                <Eye className="h-4 w-4 mr-2" />
+                <Eye className="h-4 w-4 mr-2" data-testid="guardianplaybook-eye" />
                 {isPreview
                   ? t("ui-common:family.edit")
                   : t("ui-common:family.preview")}
@@ -339,9 +339,9 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
         </div>
 
         {!isReadOnly && !isPreview && (
-          <Alert className="border-primary/20 bg-primary/5">
-            <AlertCircle className="h-4 w-4" />
-            <AlertDescription>{t("family.autoSaveNotice")}</AlertDescription>
+          <Alert className="border-primary/20 bg-primary/5" data-testid="guardianplaybook-alert">
+            <AlertCircle className="h-4 w-4" data-testid="guardianplaybook-alertcircle" />
+            <AlertDescription data-testid="guardianplaybook-t-family-autosavenotice">{t("family.autoSaveNotice")}</AlertDescription>
           </Alert>
         )}
       </div>
@@ -350,57 +350,57 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
       <Tabs
         value={activeTab}
         onValueChange={setActiveTab}
-        className="space-y-4"
+        className="space-y-4" data-testid="guardianplaybook-tabs"
       >
-        <TabsList className="grid w-full grid-cols-3 lg:grid-cols-6">
-          <TabsTrigger value="funeral" className="text-xs">
-            <Heart className="h-3 w-3 mr-1" />
+        <TabsList className="grid w-full grid-cols-3 lg:grid-cols-6" data-testid="guardianplaybook-tabslist">
+          <TabsTrigger value="funeral" className="text-xs" data-testid="guardianplaybook-t-ui-common-family-tabs-funeral">
+            <Heart className="h-3 w-3 mr-1" data-testid="guardianplaybook-heart" />
             {t("ui-common:family.tabs.funeral")}
           </TabsTrigger>
-          <TabsTrigger value="digital" className="text-xs">
-            <FileText className="h-3 w-3 mr-1" />
+          <TabsTrigger value="digital" className="text-xs" data-testid="guardianplaybook-t-ui-common-family-tabs-digital">
+            <FileText className="h-3 w-3 mr-1" data-testid="guardianplaybook-filetext" />
             {t("ui-common:family.tabs.digital")}
           </TabsTrigger>
-          <TabsTrigger value="contacts" className="text-xs">
-            <Users className="h-3 w-3 mr-1" />
+          <TabsTrigger value="contacts" className="text-xs" data-testid="guardianplaybook-tabstrigger">
+            <Users className="h-3 w-3 mr-1" data-testid="guardianplaybook-users" />
             {t("ui-common:family.tabs.contacts")}
           </TabsTrigger>
-          <TabsTrigger value="documents" className="text-xs">
-            <MapPin className="h-3 w-3 mr-1" />
+          <TabsTrigger value="documents" className="text-xs" data-testid="guardianplaybook-tabstrigger">
+            <MapPin className="h-3 w-3 mr-1" data-testid="guardianplaybook-mappin" />
             {t("ui-common:family.tabs.documents")}
           </TabsTrigger>
-          <TabsTrigger value="messages" className="text-xs">
-            <MessageSquare className="h-3 w-3 mr-1" />
+          <TabsTrigger value="messages" className="text-xs" data-testid="guardianplaybook-tabstrigger">
+            <MessageSquare className="h-3 w-3 mr-1" data-testid="guardianplaybook-messagesquare" />
             {t("ui-common:family.tabs.messages")}
           </TabsTrigger>
-          <TabsTrigger value="practical" className="text-xs">
-            <Briefcase className="h-3 w-3 mr-1" />
+          <TabsTrigger value="practical" className="text-xs" data-testid="guardianplaybook-tabstrigger">
+            <Briefcase className="h-3 w-3 mr-1" data-testid="guardianplaybook-briefcase" />
             {t("ui-common:family.tabs.practical")}
           </TabsTrigger>
         </TabsList>
 
         {/* Funeral Wishes */}
-        <TabsContent value="funeral" className="space-y-4">
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center justify-between">
+        <TabsContent value="funeral" className="space-y-4" data-testid="guardianplaybook-tabscontent">
+          <Card data-testid="guardianplaybook-card">
+            <CardHeader data-testid="guardianplaybook-cardheader">
+              <CardTitle className="flex items-center justify-between" data-testid="guardianplaybook-t-ui-common-family-sections-funeral-titl">
                 <span>{t("ui-common:family.sections.funeral.title")}</span>
                 {!isReadOnly && !isPreview && (
                   <Button
                     variant="outline"
                     size="sm"
-                    onClick={() => handleUseTemplate("funeral_wishes")}
+                    onClick={() => handleUseTemplate("funeral_wishes")} data-testid="guardianplaybook-handleusetemplate-funeral-wishes"
                   >
-                    <Sparkles className="h-4 w-4 mr-2" />
+                    <Sparkles className="h-4 w-4 mr-2" data-testid="guardianplaybook-sparkles" />
                     {t("family.useTemplate")}
                   </Button>
                 )}
               </CardTitle>
-              <CardDescription>
+              <CardDescription data-testid="guardianplaybook-carddescription">
                 {t("ui-common:family.sections.funeral.description")}
               </CardDescription>
             </CardHeader>
-            <CardContent>
+            <CardContent data-testid="guardianplaybook-isreadonly-ispreview">
               {isReadOnly || isPreview ? (
                 <div className="prose prose-sm max-w-none">
                   {playbook.funeral_wishes || (
@@ -419,7 +419,7 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
                     "ui-common:family.sections.funeral.placeholder",
                   )}
                   rows={8}
-                  className="font-mono text-sm"
+                  className="font-mono text-sm" data-testid="guardianplaybook-textarea"
                 />
               )}
             </CardContent>
@@ -427,10 +427,10 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
         </TabsContent>
 
         {/* Digital Accounts */}
-        <TabsContent value="digital" className="space-y-4">
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center justify-between">
+        <TabsContent value="digital" className="space-y-4" data-testid="guardianplaybook-tabscontent">
+          <Card data-testid="guardianplaybook-card">
+            <CardHeader data-testid="guardianplaybook-cardheader">
+              <CardTitle className="flex items-center justify-between" data-testid="guardianplaybook-t-ui-common-family-sections-digital-titl">
                 <span>{t("ui-common:family.sections.digital.title")}</span>
                 {!isReadOnly && !isPreview && (
                   <Button
@@ -438,18 +438,18 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
                     size="sm"
                     onClick={() =>
                       handleUseTemplate("digital_accounts_shutdown")
-                    }
+                    } data-testid="guardianplaybook-button"
                   >
-                    <Sparkles className="h-4 w-4 mr-2" />
+                    <Sparkles className="h-4 w-4 mr-2" data-testid="guardianplaybook-sparkles" />
                     {t("family.useTemplate")}
                   </Button>
                 )}
               </CardTitle>
-              <CardDescription>
+              <CardDescription data-testid="guardianplaybook-carddescription">
                 {t("ui-common:family.sections.digital.description")}
               </CardDescription>
             </CardHeader>
-            <CardContent>
+            <CardContent data-testid="guardianplaybook-isreadonly-ispreview">
               {isReadOnly || isPreview ? (
                 <div className="prose prose-sm max-w-none">
                   {playbook.digital_accounts_shutdown || (
@@ -471,7 +471,7 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
                     "ui-common:family.sections.digital.placeholder",
                   )}
                   rows={8}
-                  className="font-mono text-sm"
+                  className="font-mono text-sm" data-testid="guardianplaybook-textarea"
                 />
               )}
             </CardContent>
@@ -479,32 +479,32 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
         </TabsContent>
 
         {/* Important Contacts */}
-        <TabsContent value="contacts" className="space-y-4">
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center justify-between">
+        <TabsContent value="contacts" className="space-y-4" data-testid="guardianplaybook-tabscontent">
+          <Card data-testid="guardianplaybook-card">
+            <CardHeader data-testid="guardianplaybook-cardheader">
+              <CardTitle className="flex items-center justify-between" data-testid="guardianplaybook-t-ui-common-family-sections-contacts-tit">
                 <span>{t("ui-common:family.sections.contacts.title")}</span>
                 {!isReadOnly && !isPreview && (
                   <Button
                     variant="outline"
                     size="sm"
-                    onClick={() => handleUseTemplate("important_contacts")}
+                    onClick={() => handleUseTemplate("important_contacts")} data-testid="guardianplaybook-button"
                   >
-                    <Sparkles className="h-4 w-4 mr-2" />
+                    <Sparkles className="h-4 w-4 mr-2" data-testid="guardianplaybook-sparkles" />
                     {t("family.useTemplate")}
                   </Button>
                 )}
               </CardTitle>
-              <CardDescription>
+              <CardDescription data-testid="guardianplaybook-carddescription">
                 {t("ui-common:family.sections.contacts.description")}
               </CardDescription>
             </CardHeader>
-            <CardContent className="space-y-4">
+            <CardContent className="space-y-4" data-testid="guardianplaybook-isreadonly-ispreview">
               {isReadOnly || isPreview ? (
                 <div className="space-y-3">
                   {playbook.important_contacts.length > 0 ? (
                     playbook.important_contacts.map((contact) => (
-                      <Card key={contact.id} className="p-4">
+                      <Card key={contact.id} className="p-4" data-testid="guardianplaybook-card">
                         <div className="space-y-2">
                           <div className="flex items-start justify-between">
                             <div>
@@ -517,10 +517,10 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
                           <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
                             {contact.phone && (
                               <div className="flex items-center gap-2">
-                                <Phone className="h-3 w-3 text-muted-foreground" />
+                                <Phone className="h-3 w-3 text-muted-foreground" data-testid="guardianplaybook-phone" />
                                 <a
                                   href={`tel:${contact.phone}`}
-                                  className="text-primary hover:underline"
+                                  className="text-primary hover:underline" data-testid="guardianplaybook-contact-phone"
                                 >
                                   {contact.phone}
                                 </a>
@@ -528,10 +528,10 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
                             )}
                             {contact.email && (
                               <div className="flex items-center gap-2">
-                                <Mail className="h-3 w-3 text-muted-foreground" />
+                                <Mail className="h-3 w-3 text-muted-foreground" data-testid="guardianplaybook-mail" />
                                 <a
                                   href={`mailto:${contact.email}`}
-                                  className="text-primary hover:underline"
+                                  className="text-primary hover:underline" data-testid="guardianplaybook-contact-email"
                                 >
                                   {contact.email}
                                 </a>
@@ -556,24 +556,24 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
                 <>
                   <div className="space-y-4">
                     {playbook.important_contacts.map((contact, index) => (
-                      <Card key={contact.id} className="p-4">
+                      <Card key={contact.id} className="p-4" data-testid="guardianplaybook-card">
                         <div className="space-y-3">
                           <div className="flex items-start justify-between">
-                            <Label>
+                            <Label data-testid="guardianplaybook-label">
                               {t("ui-common:family.contact")} {index + 1}
                             </Label>
                             <Button
                               variant="ghost"
                               size="sm"
-                              onClick={() => handleRemoveContact(contact.id)}
+                              onClick={() => handleRemoveContact(contact.id)} data-testid="guardianplaybook-button"
                             >
-                              <Trash2 className="h-4 w-4" />
+                              <Trash2 className="h-4 w-4" data-testid="guardianplaybook-trash2" />
                             </Button>
                           </div>
 
                           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                             <div className="space-y-1">
-                              <Label htmlFor={`name-${contact.id}`}>
+                              <Label htmlFor={`name-${contact.id}`} data-testid="guardianplaybook-label">
                                 {t("family.contactFields.name")}
                               </Label>
                               <Input
@@ -588,12 +588,12 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
                                 }
                                 placeholder={t(
                                   "family.contactFields.namePlaceholder",
-                                )}
+                                )} data-testid="guardianplaybook-input"
                               />
                             </div>
 
                             <div className="space-y-1">
-                              <Label htmlFor={`role-${contact.id}`}>
+                              <Label htmlFor={`role-${contact.id}`} data-testid="guardianplaybook-label">
                                 {t("family.contactFields.role")}
                               </Label>
                               <Input
@@ -608,12 +608,12 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
                                 }
                                 placeholder={t(
                                   "family.contactFields.rolePlaceholder",
-                                )}
+                                )} data-testid="guardianplaybook-input"
                               />
                             </div>
 
                             <div className="space-y-1">
-                              <Label htmlFor={`phone-${contact.id}`}>
+                              <Label htmlFor={`phone-${contact.id}`} data-testid="guardianplaybook-label">
                                 {t("family.contactFields.phone")}
                               </Label>
                               <Input
@@ -628,12 +628,12 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
                                 }
                                 placeholder={t(
                                   "family.contactFields.phonePlaceholder",
-                                )}
+                                )} data-testid="guardianplaybook-input"
                               />
                             </div>
 
                             <div className="space-y-1">
-                              <Label htmlFor={`email-${contact.id}`}>
+                              <Label htmlFor={`email-${contact.id}`} data-testid="guardianplaybook-label">
                                 {t("family.contactFields.email")}
                               </Label>
                               <Input
@@ -649,13 +649,13 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
                                 }
                                 placeholder={t(
                                   "family.contactFields.emailPlaceholder",
-                                )}
+                                )} data-testid="guardianplaybook-input"
                               />
                             </div>
                           </div>
 
                           <div className="space-y-1">
-                            <Label htmlFor={`notes-${contact.id}`}>
+                            <Label htmlFor={`notes-${contact.id}`} data-testid="guardianplaybook-label">
                               {t("family.contactFields.notes")}
                             </Label>
                             <Textarea
@@ -671,7 +671,7 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
                               placeholder={t(
                                 "family.contactFields.notesPlaceholder",
                               )}
-                              rows={2}
+                              rows={2} data-testid="guardianplaybook-textarea"
                             />
                           </div>
                         </div>
@@ -682,9 +682,9 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
                   <Button
                     variant="outline"
                     onClick={handleAddContact}
-                    className="w-full"
+                    className="w-full" data-testid="guardianplaybook-button"
                   >
-                    <Plus className="h-4 w-4 mr-2" />
+                    <Plus className="h-4 w-4 mr-2" data-testid="guardianplaybook-plus" />
                     {t("family.addContact")}
                   </Button>
                 </>
@@ -694,27 +694,27 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
         </TabsContent>
 
         {/* Document Locations */}
-        <TabsContent value="documents" className="space-y-4">
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center justify-between">
+        <TabsContent value="documents" className="space-y-4" data-testid="guardianplaybook-tabscontent">
+          <Card data-testid="guardianplaybook-card">
+            <CardHeader data-testid="guardianplaybook-cardheader">
+              <CardTitle className="flex items-center justify-between" data-testid="guardianplaybook-t-ui-common-family-sections-documents-ti">
                 <span>{t("ui-common:family.sections.documents.title")}</span>
                 {!isReadOnly && !isPreview && (
                   <Button
                     variant="outline"
                     size="sm"
-                    onClick={() => handleUseTemplate("document_locations")}
+                    onClick={() => handleUseTemplate("document_locations")} data-testid="guardianplaybook-button"
                   >
-                    <Sparkles className="h-4 w-4 mr-2" />
+                    <Sparkles className="h-4 w-4 mr-2" data-testid="guardianplaybook-sparkles" />
                     {t("family.useTemplate")}
                   </Button>
                 )}
               </CardTitle>
-              <CardDescription>
+              <CardDescription data-testid="guardianplaybook-carddescription">
                 {t("ui-common:family.sections.documents.description")}
               </CardDescription>
             </CardHeader>
-            <CardContent>
+            <CardContent data-testid="guardianplaybook-isreadonly-ispreview">
               {isReadOnly || isPreview ? (
                 <div className="prose prose-sm max-w-none">
                   {playbook.document_locations || (
@@ -733,7 +733,7 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
                     "ui-common:family.sections.documents.placeholder",
                   )}
                   rows={8}
-                  className="font-mono text-sm"
+                  className="font-mono text-sm" data-testid="guardianplaybook-textarea"
                 />
               )}
             </CardContent>
@@ -741,27 +741,27 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
         </TabsContent>
 
         {/* Personal Messages */}
-        <TabsContent value="messages" className="space-y-4">
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center justify-between">
+        <TabsContent value="messages" className="space-y-4" data-testid="guardianplaybook-tabscontent">
+          <Card data-testid="guardianplaybook-card">
+            <CardHeader data-testid="guardianplaybook-cardheader">
+              <CardTitle className="flex items-center justify-between" data-testid="guardianplaybook-t-ui-common-family-sections-messages-tit">
                 <span>{t("ui-common:family.sections.messages.title")}</span>
                 {!isReadOnly && !isPreview && (
                   <Button
                     variant="outline"
                     size="sm"
-                    onClick={() => handleUseTemplate("personal_messages")}
+                    onClick={() => handleUseTemplate("personal_messages")} data-testid="guardianplaybook-handleusetemplate-personal-messages"
                   >
-                    <Sparkles className="h-4 w-4 mr-2" />
+                    <Sparkles className="h-4 w-4 mr-2" data-testid="guardianplaybook-sparkles" />
                     {t("family.useTemplate")}
                   </Button>
                 )}
               </CardTitle>
-              <CardDescription>
+              <CardDescription data-testid="guardianplaybook-carddescription">
                 {t("ui-common:family.sections.messages.description")}
               </CardDescription>
             </CardHeader>
-            <CardContent>
+            <CardContent data-testid="guardianplaybook-isreadonly-ispreview">
               {isReadOnly || isPreview ? (
                 <div className="prose prose-sm max-w-none">
                   {playbook.personal_messages || (
@@ -780,7 +780,7 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
                     "ui-common:family.sections.messages.placeholder",
                   )}
                   rows={10}
-                  className="font-mono text-sm"
+                  className="font-mono text-sm" data-testid="guardianplaybook-textarea"
                 />
               )}
             </CardContent>
@@ -788,27 +788,27 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
         </TabsContent>
 
         {/* Practical Instructions */}
-        <TabsContent value="practical" className="space-y-4">
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center justify-between">
+        <TabsContent value="practical" className="space-y-4" data-testid="guardianplaybook-tabscontent">
+          <Card data-testid="guardianplaybook-card">
+            <CardHeader data-testid="guardianplaybook-cardheader">
+              <CardTitle className="flex items-center justify-between" data-testid="guardianplaybook-t-ui-common-family-sections-practical-ti">
                 <span>{t("ui-common:family.sections.practical.title")}</span>
                 {!isReadOnly && !isPreview && (
                   <Button
                     variant="outline"
                     size="sm"
-                    onClick={() => handleUseTemplate("practical_instructions")}
+                    onClick={() => handleUseTemplate("practical_instructions")} data-testid="guardianplaybook-button"
                   >
-                    <Sparkles className="h-4 w-4 mr-2" />
+                    <Sparkles className="h-4 w-4 mr-2" data-testid="guardianplaybook-sparkles" />
                     {t("family.useTemplate")}
                   </Button>
                 )}
               </CardTitle>
-              <CardDescription>
+              <CardDescription data-testid="guardianplaybook-carddescription">
                 {t("ui-common:family.sections.practical.description")}
               </CardDescription>
             </CardHeader>
-            <CardContent>
+            <CardContent data-testid="guardianplaybook-isreadonly-ispreview">
               {isReadOnly || isPreview ? (
                 <div className="prose prose-sm max-w-none">
                   {playbook.practical_instructions || (
@@ -827,7 +827,7 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
                     "ui-common:family.sections.practical.placeholder",
                   )}
                   rows={8}
-                  className="font-mono text-sm"
+                  className="font-mono text-sm" data-testid="guardianplaybook-textarea"
                 />
               )}
             </CardContent>
@@ -838,11 +838,11 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
       {/* Actions */}
       {!isReadOnly && (
         <div className="flex justify-end gap-3">
-          <Button variant="outline" onClick={onClose}>
+          <Button variant="outline" onClick={onClose} data-testid="guardianplaybook-t-ui-elements-ui-cancel">
             {t("ui-elements:ui.cancel")}
           </Button>
-          <Button onClick={handleSave} disabled={isSaving}>
-            <Save className="h-4 w-4 mr-2" />
+          <Button onClick={handleSave} disabled={isSaving} data-testid="guardianplaybook-button">
+            <Save className="h-4 w-4 mr-2" data-testid="guardianplaybook-save" />
             {isSaving
               ? t("ui-common:family.saving")
               : t("ui-common:family.save")}
@@ -871,7 +871,7 @@ export const GuardianPlaybook: React.FC<GuardianPlaybookProps> = ({
           playbook[
             templateSection.replace(/_/g, "_") as keyof PlaybookData
           ] as string
-        }
+        } data-testid="guardianplaybook-templatemodal"
       />
     </div>
   );

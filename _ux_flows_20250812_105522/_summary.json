@@ -1,0 +1,129 @@
+{
+  "routes": [
+    ":assetId",
+    "*",
+    "/",
+    "/admin/analytics",
+    "/analytics",
+    "/assets",
+    "/cookies",
+    "/dashboard",
+    "/family-hub",
+    "/guardian-view",
+    "/help",
+    "/invite/:inviteToken",
+    "/legacy-letters",
+    "/login",
+    "/manual",
+    "/ocr-demo",
+    "/pricing",
+    "/privacy-policy",
+    "/refund-policy",
+    "/register",
+    "/subscription",
+    "/subscriptions",
+    "/terms-of-service",
+    "/test-error",
+    "/trusted-circle",
+    "/upload-demo",
+    "/user-profile",
+    "/vault",
+    "/will",
+    "test-path"
+  ],
+  "lazyTop": [
+    {
+      "spec": "../components/dashboard/Dashboard",
+      "count": 3
+    },
+    {
+      "spec": "../components/analytics/AnalyticsDashboard",
+      "count": 3
+    },
+    {
+      "spec": "./features/dashboard/components/Dashboard",
+      "count": 2
+    },
+    {
+      "spec": "./features/subscriptions/components/SubscriptionDashboard",
+      "count": 2
+    },
+    {
+      "spec": "./features/assets-vault/components/VaultDashboard",
+      "count": 2
+    },
+    {
+      "spec": "../features/settings/SettingsPage",
+      "count": 2
+    },
+    {
+      "spec": "./pages/Landing",
+      "count": 1
+    },
+    {
+      "spec": "./pages/Login",
+      "count": 1
+    },
+    {
+      "spec": "./pages/Register",
+      "count": 1
+    },
+    {
+      "spec": "./pages/TermsOfService",
+      "count": 1
+    },
+    {
+      "spec": "./pages/RefundPolicy",
+      "count": 1
+    },
+    {
+      "spec": "./features/assets-vault/components/AssetDetail",
+      "count": 1
+    },
+    {
+      "spec": "./pages/Manual",
+      "count": 1
+    },
+    {
+      "spec": "./features/will-generator/components/WillGenerator",
+      "count": 1
+    },
+    {
+      "spec": "./pages/InviteAcceptance",
+      "count": 1
+    },
+    {
+      "spec": "./pages/PrivacyPolicy",
+      "count": 1
+    },
+    {
+      "spec": "./pages/CookiePolicy",
+      "count": 1
+    },
+    {
+      "spec": "./pages/NotFound",
+      "count": 1
+    },
+    {
+      "spec": "./pages/Help",
+      "count": 1
+    },
+    {
+      "spec": "./features/assets-vault/components/AssetOverview",
+      "count": 1
+    }
+  ],
+  "counts": {
+    "files": 608,
+    "routeDefs": 32,
+    "lazyImports": 31
+  },
+  "features": {
+    "scanner": 86,
+    "vault": 40,
+    "wills": 159,
+    "onboarding": 63,
+    "subscriptions": 71,
+    "settings": 86
+  }
+}
