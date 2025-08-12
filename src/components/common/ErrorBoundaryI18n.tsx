@@ -87,7 +87,7 @@ class ErrorBoundaryComponent extends Component<Props, State> {
     }
 
     // Toast notification for development
-    if (process.env.NODE_ENV === "development") {
+    if ((import.meta.env.DEV || import.meta.env.VITE_E2E)) {
       toast.error(`Application error (${errorId})`, {
         description: error.message,
         duration: 10000,
@@ -163,7 +163,7 @@ class ErrorBoundaryComponent extends Component<Props, State> {
       const { error, errorInfo, errorId, showStackTrace } = this.state;
       const {
         fallback,
-        showDetails = process.env.NODE_ENV === "development",
+        showDetails = (import.meta.env.DEV || import.meta.env.VITE_E2E),
         t,
       } = this.props;
 

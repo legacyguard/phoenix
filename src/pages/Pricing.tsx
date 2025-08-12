@@ -13,7 +13,7 @@ const Pricing = () => {
   const [isGrantingPremium, setIsGrantingPremium] = useState(false);
 
   // Check if we're in development mode
-  const isDevelopment = process.env.NODE_ENV === "development";
+  const isDevelopment = (import.meta.env.DEV || import.meta.env.VITE_E2E);
 
   const handleUpgrade = async () => {
     try {

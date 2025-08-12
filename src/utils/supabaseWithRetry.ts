@@ -13,7 +13,7 @@ export class SupabaseWithRetry {
     retryCondition: RetryConditions.supabaseErrors,
     onRetry: (error, attempt) => {
       console.warn(`[SupabaseRetry] Pokus ${attempt} zlyhal:`, error);
-      if (process.env.NODE_ENV === "development") {
+      if ((import.meta.env.DEV || import.meta.env.VITE_E2E)) {
         toast.warning(`Opakujem požiadavku... (pokus ${attempt + 1})`);
       }
     },

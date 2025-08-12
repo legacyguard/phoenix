@@ -89,7 +89,7 @@ export function RouteErrorBoundary() {
             </Button>
           </div>
 
-          {process.env.NODE_ENV === "development" && errorDetails && (
+          {(import.meta.env.DEV || import.meta.env.VITE_E2E) && errorDetails && (
             <details className="mt-4">
               <summary className="cursor-pointer text-sm text-muted-foreground hover:text-foreground">
                 {t("ui.routeErrorBoundary.technical_details_3")}

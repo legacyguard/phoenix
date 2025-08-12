@@ -98,7 +98,7 @@ const Analytics: React.FC = () => {
   return (
     <div className="container mx-auto px-4 lg:px-8 py-8 space-y-8">
       {/* Demo component for testing - REMOVE BEFORE PRODUCTION */}
-      {process.env.NODE_ENV === "development" && <AnalyticsDemo />}
+      {(import.meta.env.DEV || import.meta.env.VITE_E2E) && <AnalyticsDemo />}
 
       <AnalyticsDashboard />
     </div>

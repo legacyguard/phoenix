@@ -33,12 +33,12 @@ export const logEmpatheticError = (
   errorLogs.push(errorLog);
 
   // Send to monitoring service with empathetic context
-  if (process.env.NODE_ENV === "production") {
+  if ((import.meta.env.PROD && !import.meta.env.VITE_E2E)) {
     sendToMonitoring(errorLog);
   }
 
   // Log to console in development
-  if (process.env.NODE_ENV === "development") {
+  if ((import.meta.env.DEV || import.meta.env.VITE_E2E)) {
     logger.group("🤗 Empathetic Error Log");
     logger.error("Error:", error);
     logger.info("Context:", context);

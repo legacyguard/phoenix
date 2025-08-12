@@ -85,7 +85,7 @@ export const ErrorRecovery: React.FC<ErrorRecoveryProps> = ({
         </div>
 
         {/* Technical details for development */}
-        {process.env.NODE_ENV === "development" && (
+        {(import.meta.env.DEV || import.meta.env.VITE_E2E) && (
           <details className="mt-4">
             <summary className="text-sm text-muted-foreground cursor-pointer">
               {t("ui.routeErrorBoundary.technical_details_3")}

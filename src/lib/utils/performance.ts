@@ -104,7 +104,7 @@ PerformanceMonitor.prototype.recordRenderTime = function (
 
 // Web Vitals tracking
 export function reportWebVitals(metric: unknown) {
-  if (process.env.NODE_ENV === "production") {
+  if ((import.meta.env.PROD && !import.meta.env.VITE_E2E)) {
     // Send to analytics service
     console.log("Web Vital:", metric);
   }

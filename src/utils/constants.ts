@@ -96,8 +96,8 @@ export const API_URLS = {
 
 // Development and Environment Constants
 export const ENV = {
-  isDevelopment: process.env.NODE_ENV === "development",
-  isProduction: process.env.NODE_ENV === "production",
+  isDevelopment: (import.meta.env.DEV || import.meta.env.VITE_E2E),
+  isProduction: (import.meta.env.PROD && !import.meta.env.VITE_E2E),
   isTest: process.env.NODE_ENV === "test",
   localhostDomains: ["localhost", "127.0.0.1", "localhost:3000"],
 } as const;

@@ -13,7 +13,7 @@ export function initSentry() {
     environment: process.env.NODE_ENV || "development",
 
     // Performance Monitoring
-    tracesSampleRate: process.env.NODE_ENV === "production" ? 0.1 : 1.0,
+    tracesSampleRate: (import.meta.env.PROD && !import.meta.env.VITE_E2E) ? 0.1 : 1.0,
 
     // Session Replay
     replaysSessionSampleRate: 0.1,
@@ -39,7 +39,7 @@ export function initSentry() {
     // Filtering
     beforeSend(event, hint) {
       // Filter out non-error events in development
-      if (process.env.NODE_ENV === "development") {
+      if ((import.meta.env.DEV || import.meta.env.VITE_E2E)) {
         const error = hint.originalException;
         if (error && typeof error === "object" && "status" in error) {
           const status = (error as { status: number }).status;

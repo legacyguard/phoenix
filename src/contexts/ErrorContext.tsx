@@ -99,7 +99,7 @@ export const ErrorProvider: React.FC<ErrorProviderProps> = ({
       });
 
       // Zobraz toast v development
-      if (process.env.NODE_ENV === "development") {
+      if ((import.meta.env.DEV || import.meta.env.VITE_E2E)) {
         toast.error(`Chyba: ${error.message}`, {
           description: context || "Neznámy kontext",
           action: {

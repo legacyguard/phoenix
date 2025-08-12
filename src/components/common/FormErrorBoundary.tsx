@@ -62,7 +62,7 @@ class FormErrorBoundaryComponent extends Component<Props, State> {
                 "ui.common.formErrorBoundary.an_unexpected_error_occurred_w_2",
               )}
             </p>
-            {process.env.NODE_ENV === "development" && this.state.error && (
+            {(import.meta.env.DEV || import.meta.env.VITE_E2E) && this.state.error && (
               <p className="text-xs font-mono bg-destructive/10 p-2 rounded">
                 {this.state.error.message}
               </p>

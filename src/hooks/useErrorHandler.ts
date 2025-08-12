@@ -105,7 +105,7 @@ export const useErrorHandler = () => {
       console.error("[Error Log]:", errorDetails);
 
       // V produkcii by sa tu poslalo do monitorovacej služby
-      if (process.env.NODE_ENV === "production") {
+      if ((import.meta.env.PROD && !import.meta.env.VITE_E2E)) {
         // window.Sentry?.captureMessage(message, {
         //   level: 'error',
         //   extra: errorDetails
@@ -131,7 +131,7 @@ export const useErrorHandler = () => {
       console.error("[Exception Captured]:", errorDetails);
 
       // V produkcii poslať do monitorovacej služby
-      if (process.env.NODE_ENV === "production") {
+      if ((import.meta.env.PROD && !import.meta.env.VITE_E2E)) {
         // window.Sentry?.captureException(error, {
         //   contexts: { custom: context }
         // });
