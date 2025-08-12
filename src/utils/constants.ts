@@ -92,7 +92,21 @@ export const API_URLS = {
   support: "https://calendly.com/legacyguard/support",
   placeholder: "https://via.placeholder.com/50",
   api: "/api", // Base API URL for internal endpoints
+  // E2E test endpoints with safe defaults
+  ocr: "/api/ocr",
+  vault: "/api/vault",
+  willPreview: "/api/will/preview",
+  timeCapsuleBase: "/api/time-capsule",
+  timeCapsuleReceived: "/api/time-capsule/received",
+  dmsEnable: "/api/dms/enable",
+  dmsCheckIn: "/api/dms/check-in",
+  dmsTrigger: "/api/dms/trigger",
 } as const;
+
+// Force constants to be included in build (debug)
+if (typeof window !== 'undefined') {
+  console.log('Constants loaded:', { API_URLS });
+}
 
 // Development and Environment Constants
 export const ENV = {
