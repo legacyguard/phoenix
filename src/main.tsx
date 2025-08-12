@@ -1,3 +1,4 @@
+/* E2E wrapper injected */
 import React from "react";
 import { createRoot } from "react-dom/client";
 import { ClerkProvider } from "@clerk/clerk-react";
