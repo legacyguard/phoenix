@@ -50,7 +50,8 @@
     "check:img": "node scripts/ci/img-guard.cjs",
     "check:img:strict": "node scripts/ci/img-guard.cjs --strict",
     "img:baseline": "node scripts/ci/img-guard.cjs --write-baseline",
-    "img:autofix": "node scripts/tools/img-autofix.cjs"
+    "img:autofix": "node scripts/tools/img-autofix.cjs",
+    "check:img:priority": "node scripts/ci/img-priority-guard.cjs"
   },
   "dependencies": {
     "@clerk/clerk-react": "^5.36.0",
@@ -163,6 +164,7 @@
     "glob": "^10.4.5",
     "globals": "^15.9.0",
     "i18next-scanner": "^4.6.0",
+    "image-size": "^2.0.2",
     "jsdom": "^26.1.0",
     "lighthouse": "^12.8.1",
     "lovable-tagger": "^1.1.7",
