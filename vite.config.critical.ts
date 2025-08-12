@@ -31,10 +31,9 @@ function crittersPlugin(options: ConstructorParameters<typeof Critters>[0] = {})
   };
 }
 
-export default mergeConfig(
-  // @ts-expect-error base may be a function or config; mergeConfig can handle it
-  base as any,
-  defineConfig({
+export default defineConfig((env) => {
+  const baseCfg = typeof (base as any) === 'function' ? (base as any)(env) : (base as any);
+  return mergeConfig(baseCfg, {
     plugins: [crittersPlugin()],
-  })
-);
+  } as any);
+});
