@@ -1,0 +1,27 @@
+
+⚠ Warning: It looks like you're passing --spec a space-separated list of arguments:
+
+"cypress/e2e/00_simple_visit.cy.ts cypress/e2e/01_onboarding_dashboard.cy.ts cypress/e2e/02_scan_to_vault.cy.ts cypress/e2e/03_will_pdf.cy.ts cypress/e2e/04_time_capsule.cy.ts cypress/e2e/05_dead_man_switch.cy.ts"
+
+This will work, but it's not recommended.
+
+If you are trying to pass multiple arguments, separate them with commas instead:
+  cypress run --spec arg1,arg2,arg3
+  
+The most common cause of this warning is using an unescaped glob pattern. If you are
+trying to pass a glob pattern, escape it using quotes:
+  cypress run --spec "**/*.spec.js"
+
+
+DevTools listening on ws://127.0.0.1:57639/devtools/browser/e08670b9-47be-4b66-8451-182117df5425
+(node:95051) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("file%3A///Users/luborfedak/Library/Caches/Cypress/14.5.3/Cypress.app/Contents/Resources/app/node_modules/ts-node/esm/transpile-only.mjs", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:95051) ExperimentalWarning: The Node.js specifier resolution flag is experimental. It could change or be removed at any time.
+(node:95051) ExperimentalWarning: The Node.js specifier resolution flag is experimental. It could change or be removed at any time.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Can't run because no spec files were found.
+
+We searched for specs matching this glob pattern:
+
+  > /Users/luborfedak/Documents/Github/phoenix/cypress/e2e/00_simple_visit.cy.ts,cypress/e2e/01_onboarding_dashboard.cy.ts,cypress/e2e/02_scan_to_vault.cy.ts,cypress/e2e/03_will_pdf.cy.ts,cypress/e2e/04_time_capsule.cy.ts,cypress/e2e/05_dead_man_switch.cy.ts

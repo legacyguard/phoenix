@@ -1,0 +1,81 @@
+
+DevTools listening on ws://127.0.0.1:56966/devtools/browser/f0c34110-5712-42c9-a211-1af82ce83c3a
+(node:84482) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("file%3A///Users/luborfedak/Library/Caches/Cypress/14.5.3/Cypress.app/Contents/Resources/app/node_modules/ts-node/esm/transpile-only.mjs", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:84482) ExperimentalWarning: The Node.js specifier resolution flag is experimental. It could change or be removed at any time.
+(node:84482) ExperimentalWarning: The Node.js specifier resolution flag is experimental. It could change or be removed at any time.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+====================================================================================================
+
+  (Run Starting)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Cypress:        14.5.3                                                                         │
+  │ Browser:        Electron 130 (headless)                                                        │
+  │ Node Version:   v18.20.7 (/opt/homebrew/Cellar/node@18/18.20.7_1/bin/node)                     │
+  │ Specs:          1 found (00_smoke.cy.ts)                                                       │
+  │ Searched:       cypress/e2e/smoke/*.cy.ts                                                      │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                    
+  Running:  00_smoke.cy.ts                                                                  (1 of 1)
+
+
+  SMOKE / basic page health
+    ✓ loads / without fatal errors and has interactive elements (1311ms)
+    ✓ loads /dashboard without fatal errors and has interactive elements (608ms)
+    ✓ loads /upload-demo without fatal errors and has interactive elements (565ms)
+    ✓ loads /will without fatal errors and has interactive elements (462ms)
+    ✓ loads /legacy-letters without fatal errors and has interactive elements (456ms)
+    ✓ loads /guardian-view without fatal errors and has interactive elements (475ms)
+
+
+  6 passing (4s)
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        6                                                                                │
+  │ Passing:      6                                                                                │
+  │ Failing:      0                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  6                                                                                │
+  │ Video:        false                                                                            │
+  │ Duration:     3 seconds                                                                        │
+  │ Spec Ran:     00_smoke.cy.ts                                                                   │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+  (Screenshots)
+
+  -  /Users/luborfedak/Documents/Github/phoenix/cypress/screenshots/00_smoke.cy.ts/sm    (2000x1320)
+     oke__.png                                                                                      
+  -  /Users/luborfedak/Documents/Github/phoenix/cypress/screenshots/00_smoke.cy.ts/sm    (2000x1320)
+     oke__dashboard.png                                                                             
+  -  /Users/luborfedak/Documents/Github/phoenix/cypress/screenshots/00_smoke.cy.ts/sm    (2000x1320)
+     oke__upload_demo.png                                                                           
+  -  /Users/luborfedak/Documents/Github/phoenix/cypress/screenshots/00_smoke.cy.ts/sm    (2000x1320)
+     oke__will.png                                                                                  
+  -  /Users/luborfedak/Documents/Github/phoenix/cypress/screenshots/00_smoke.cy.ts/sm    (2000x1320)
+     oke__legacy_letters.png                                                                        
+  -  /Users/luborfedak/Documents/Github/phoenix/cypress/screenshots/00_smoke.cy.ts/sm    (2000x1320)
+     oke__guardian_view.png                                                                         
+
+
+====================================================================================================
+
+  (Run Finished)
+
+
+       Spec                                              Tests  Passing  Failing  Pending  Skipped  
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ ✔  00_smoke.cy.ts                           00:03        6        6        -        -        - │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+    ✔  All specs passed!                        00:03        6        6        -        -        -  
+

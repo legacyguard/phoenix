@@ -31,7 +31,9 @@
     "notRequested": "Als u geen wachtwoordherstel heeft aangevraagd, kunt u deze e-mail negeren. Uw account blijft veilig.",
     "linkExpiry": "Voor uw veiligheid verloopt deze wachtwoordherstellink over 1 uur.",
     "securityTip": "Voor de beveiliging van uw account raden wij u aan een sterk, uniek wachtwoord te gebruiken dat u nergens anders gebruikt.",
-    "contactSupport": "Als u nog steeds problemen ondervindt bij het openen van uw account, neem dan contact op met ons ondersteuningsteam."
+    "contactSupport": "Als u nog steeds problemen ondervindt bij het openen van uw account, neem dan contact op met ons ondersteuningsteam.",
+    "instruction": "[TRANSLATE] Click the button below to reset your password.",
+    "alternativeLink": "[TRANSLATE] If the button doesn't work, copy and paste this link into your browser:"
   },
   "notifications": {
     "taskReminder": {
@@ -97,7 +99,12 @@
   "security": {
     "loginAlert": {
       "subject": "Nieuwe login voor uw LegacyGuard-account",
-      "secureAccountButton": "Beveilig mijn account"
+      "secureAccountButton": "Beveilig mijn account",
+      "headline": "[TRANSLATE] Account Access Notification",
+      "message": "[TRANSLATE] We detected a new login to your account.",
+      "time": "[TRANSLATE] {{timestamp}}",
+      "location": "[TRANSLATE] {{location}}",
+      "device": "[TRANSLATE] {{device}}"
     },
     "suspiciousActivity": {
       "subject": "Beveiligingswaarschuwing: ongebruikelijke accountactiviteit gedetecteerd",
@@ -214,5 +221,37 @@
       "expiry": "Deze downloadlink verloopt om veiligheidsredenen na 7 dagen.",
       "format": "Gegevensformaat: beveiligd ZIP-bestand met JSON- en PDF-documenten",
       "security": "De download is gecodeerd en om toegang te krijgen, hebt u uw accountwachtwoord nodig."
-    }  }
+    }
+  },
+  "taskReminder": {
+    "headline": "[TRANSLATE] Your Family Protection Plan Needs Attention",
+    "message": "[TRANSLATE] You have {{count}} tasks that need your attention to keep your family protected.",
+    "instruction": "[TRANSLATE] Please log in to your account to review and complete these tasks.",
+    "urgent": "[TRANSLATE] Some tasks are marked as urgent and should be completed soon."
+  },
+  "documentExpiry": {
+    "headline": "[TRANSLATE] Document Renewal Reminder",
+    "message": "[TRANSLATE] The following document will expire soon and needs to be renewed:",
+    "documentName": "[TRANSLATE] {{documentName}}",
+    "expiryDate": "[TRANSLATE] Expires on {{date}}",
+    "instruction": "[TRANSLATE] Please log in to your account to upload the renewed document."
+  },
+  "ui": {
+    "loginAlert": {
+      "wasYou": "[TRANSLATE] If this was you, no action is needed.",
+      "notYou": "[TRANSLATE] If this wasn't you, please secure your account immediately.",
+      "action1": "[TRANSLATE] Change your password",
+      "action2": "[TRANSLATE] Enable two-factor authentication",
+      "action3": "[TRANSLATE] Contact our support team",
+      "supportContact": "[TRANSLATE] Our security team is available 24/7 to help you."
+    },
+    "taskReminder": {
+      "headline": "[TRANSLATE] Your Family Protection Plan Needs Attention",
+      "message": "[TRANSLATE] You have {{count}} tasks that need your attention."
+    },
+    "documentExpiry": {
+      "headline": "[TRANSLATE] Document Renewal Reminder",
+      "message": "[TRANSLATE] The following document will expire soon: {{documentName}}"
+    }
+  }
 }

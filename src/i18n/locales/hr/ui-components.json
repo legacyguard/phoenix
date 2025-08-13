@@ -1,2 +1,505 @@
 {
+  "terms": {
+    "vault": "Trezor",
+    "vaultLower": "trezor",
+    "trustedCircle": "Pouzdani krug",
+    "trustedCircleLower": "pouzdani krug",
+    "willGenerator": "Generator volje",
+    "willGeneratorLower": "generator volje",
+    "legacyLetters": "Naslijeđena pisma",
+    "secure": "Siguran",
+    "secureLower": "siguran"
+  },
+  "respectful": {
+    "status": {
+      "secured": "Osigurano",
+      "protected": "Zaštićen",
+      "ready": "Spreman",
+      "organized": "Organizirano",
+      "documented": "Dokumentirano",
+      "prepared": "Pripremljeno"
+    },
+    "suggestions": {
+      "consider": "Razmotriti",
+      "whenReady": "Kad budeš spreman/spremna",
+      "mightWant": "Možda biste htjeli",
+      "optional": "Izborno",
+      "recommended": "Preporučeno",
+      "noRush": "Nema žurbe"
+    },
+    "progress": {
+      "gettingStarted": "Početak rada",
+      "makingProgress": "Napredak",
+      "wellOrganized": "Dobro organizirano",
+      "comprehensive": "Sveobuhvatno",
+      "documentsSecured": "{{count}} dokument osiguran",
+      "documentsSecured_plural": "{{count}} dokumenti osigurani"
+    },
+    "actions": {
+      "secure": "Siguran",
+      "add": "Dodati",
+      "organize": "Organiziraj",
+      "protect": "Zaštititi",
+      "document": "Dokument",
+      "prepare": "Pripremiti"
+    },
+    "tone": {
+      "respectful": "Pun poštovanja",
+      "supportive": "Podržavajuće",
+      "clear": "Jasan",
+      "practical": "Praktično"
+    }
+  },
+  "actions": {
+    "contactSupport": "Zatražite pomoć",
+    "disable": "Isključiti",
+    "enable": "Uključi",
+    "goBack": "Natrag",
+    "refresh": "Osvježiti",
+    "save": "Čuvajte ovo na sigurnom",
+    "accept": "Prihvatiti",
+    "accepted": "Prihvaćeno",
+    "account": "Račun",
+    "activate": "Aktivirati",
+    "add": "Dodati",
+    "additional": "Više",
+    "adjust": "Prilagodi",
+    "advanced": "Napredne opcije",
+    "align": "Poravnaj",
+    "allowed": "Dopušteno",
+    "alter": "Promijeniti",
+    "approve": "Odobriti",
+    "approved": "Odobreno",
+    "arrange": "Organiziraj",
+    "authenticate": "Potvrdite da ste to vi",
+    "authenticated": "Potvrđeno",
+    "authorize": "Daj dopuštenje",
+    "authorized": "Dopuštenje dano",
+    "automatic": "Automatski",
+    "auxiliary": "Ekstra",
+    "available": "Dostupno",
+    "backedUp": "Sigurnosno pohranjeno",
+    "basic": "Jednostavan",
+    "begin": "Počnimo",
+    "blocked": "Blokiran",
+    "bonus": "Ekstra",
+    "bottom": "Dno",
+    "browse": "Pregledaj",
+    "center": "Centar",
+    "change": "Promijeniti",
+    "choose": "Odaberite",
+    "clear": "Jasan",
+    "clone": "Napravi kopiju",
+    "close": "Zatvoriti",
+    "collapse": "Sakrij detalje",
+    "compatible": "Radi s",
+    "complete": "Sve gotovo",
+    "configuration": "Postavke",
+    "configure": "Postaviti",
+    "confirm": "Da, siguran/sigurna",
+    "confirmed": "Potvrđeno",
+    "content": "Sadržaj",
+    "convert": "Promjena formata",
+    "create": "Stvori novo",
+    "crop": "Obrezivanje",
+    "current": "Trenutni",
+    "custom": "Običaj",
+    "customize": "Učinite to svojim",
+    "cut": "Rez",
+    "deactivate": "Isključiti",
+    "decline": "Ne, hvala",
+    "declined": "Odbijeno",
+    "decode": "Dešifriranje",
+    "decrypt": "Otključati",
+    "default": "",
+    "denied": "Nije dopušteno",
+    "deny": "Ne dopusti",
+    "deselect": "Poništi odabir",
+    "disabled": "Isključeno",
+    "done": "Sve je spremno",
+    "downgrade": "Koristite jednostavniju verziju",
+    "drag": "Povuci",
+    "drop": "Ispusti ovdje",
+    "editable": "Može se promijeniti",
+    "enabled": "Uključeno",
+    "encode": "Kodiraj",
+    "encrypt": "Čuvajte se",
+    "encrypted": "Osigurano",
+    "end": "Kraj",
+    "enhance": "Poboljšati",
+    "enterprise": "Poslovanje",
+    "exitFullscreen": "Izlaz iz režima cijelog zaslona",
+    "expand": "Prikaži više",
+    "export": "Preuzmi",
+    "extra": "Dodatno",
+    "filter": "Prikaži samo",
+    "find": "Tražiti",
+    "finish": "Završeno",
+    "flip": "Okretanje",
+    "forbidden": "Nije dopušteno",
+    "format": "",
+    "full": "Puno",
+    "fullscreen": "Cijeli zaslon",
+    "grant": "Omogući pristup",
+    "granted": "Pristup odobren",
+    "group": "Grupiraj zajedno",
+    "hash": "Sigurnosni kod",
+    "hide": "Sakriti",
+    "historical": "Prošlost",
+    "import": "Donesi",
+    "improve": "Učiniti boljim",
+    "incompatible": "Neće raditi",
+    "incomplete": "Nije završeno",
+    "insecure": "Nije sigurno",
+    "internationalize": "Prevesti",
+    "invalid": "Nije važeće",
+    "justify": "Poravnaj tekst",
+    "latest": "Najnovije",
+    "left": "Lijevo",
+    "localize": "Prevesti",
+    "lock": "Zaključaj",
+    "login": "Prijava",
+    "logout": "Odjava",
+    "main": "Glavni",
+    "mandatory": "Potreban",
+    "manual": "Uradi sam",
+    "maximize": "Učini većim",
+    "middle": "Srednji",
+    "minimize": "Omaliti",
+    "modify": "Promijeniti",
+    "newest": "Najnovije",
+    "nonEditable": "Ne može se promijeniti",
+    "notBackedUp": "Još nije napravljena sigurnosna kopija",
+    "notSynced": "Još nije ažurirano",
+    "oldest": "Najstariji",
+    "open": "Otvoriti",
+    "optimize": "Poboljšati",
+    "optional": "Nije obavezno",
+    "options": "Izbori",
+    "organize": "Organiziraj",
+    "outdated": "Potrebno ažuriranje",
+    "parse": "Čitaj",
+    "partial": "Neki",
+    "paste": "Zalijepiti",
+    "pause": "Pauza",
+    "permanent": "Uvijek",
+    "permitted": "Dopušteno",
+    "personalize": "Učinite to svojim",
+    "pick": "Odaberite",
+    "play": "Igrati",
+    "preferences": "Vaši izbori",
+    "premium": "Potpune značajke",
+    "prepare": "Pripremite se",
+    "primary": "Glavni",
+    "profile": "Vaši podaci",
+    "publish": "Udio",
+    "read": "Čitaj",
+    "readOnly": "Samo prikaz",
+    "readWrite": "Može uređivati",
+    "ready": "Spreman",
+    "recent": "Nedavno",
+    "recommended": "Predlažemo",
+    "register": "Prijavi se",
+    "reject": "Ne prihvaćaj",
+    "rejected": "Nije prihvaćeno",
+    "reload": "Osvježiti",
+    "remove": "Ukloniti",
+    "required": "Potrebno",
+    "reset": "Počni ispočetka",
+    "resize": "Promijeni veličinu",
+    "restart": "Počni ispočetka",
+    "resume": "Nastaviti",
+    "retry": "Pokušaj ponovno",
+    "right": "Pravo",
+    "rotate": "Okreni",
+    "scale": "Promjena veličine",
+    "search": "Pretraživanje",
+    "secondary": "Ostalo",
+    "secure": "Sef",
+    "select": "Odaberite",
+    "semiAutomatic": "Djelomično automatski",
+    "settings": "Vaše postavke",
+    "setup": "Postavi ovo",
+    "show": "Pokazati",
+    "sign": "Znak",
+    "signin": "Prijava",
+    "signout": "Odjava",
+    "signup": "Izradi račun",
+    "sort": "Organiziraj",
+    "standard": "Redovno",
+    "start": "Početi",
+    "stop": "",
+    "submit": "Poslati",
+    "suggested": "Preporučujemo",
+    "supplementary": "Ekstra",
+    "supported": "Radi s",
+    "synced": "Ažurirano",
+    "temporary": "Za sada",
+    "tertiary": "Druga opcija",
+    "top": "Vrh",
+    "transform": "Promijeniti",
+    "translate": "Prevesti",
+    "unarchive": "Vratiti",
+    "unauthenticated": "Niste prijavljeni",
+    "unauthorized": "Nije dopušteno",
+    "unconfirmed": "Nije potvrđeno",
+    "unencrypted": "Nije sigurno",
+    "ungroup": "Odvojeno",
+    "unlock": "Otključati",
+    "unpublish": "Postavi kao privatno",
+    "unsupported": "Nije kompatibilno",
+    "unvalidated": "Nije označeno",
+    "unverified": "Nije potvrđeno",
+    "upToDate": "Trenutni",
+    "update": "Ažurirati",
+    "upgrade": "Nabavite bolju verziju",
+    "valid": "Važeće",
+    "validate": "Provjerite ovo",
+    "validated": "Označeno",
+    "verified": "Potvrđeno",
+    "verify": "Potvrdi",
+    "viewOnly": "Samo gledam",
+    "zoomIn": "Učini većim",
+    "zoomOut": "Omaliti"
+  },
+  "app": {
+    "name": "Ime",
+    "tagline": "Slogan"
+  },
+  "auth": {
+    "loginButton": "Gumb za prijavu",
+    "signUpLink": "Veza za prijavu",
+    "signupButton": "Gumb za prijavu"
+  },
+  "debug": {
+    "panel": {
+      "actions": {
+        "clearAllErrors": "Obriši sve pogreške",
+        "downloadErrors": "Pogreške preuzimanja"
+      },
+      "error": {
+        "errorMessage": "Poruka o pogrešci",
+        "noMessage": "Nema poruke",
+        "unknownError": "Nepoznata pogreška"
+      },
+      "errorCount": "Broj pogrešaka",
+      "recentErrors": "Nedavne pogreške",
+      "sections": {
+        "browserInfo": "Informacije o pregledniku",
+        "context": "Kontekst",
+        "location": "Mjesto",
+        "stackTrace": "Trag stoga",
+        "time": "Vrijeme"
+      },
+      "title": "Titula"
+    },
+    "translationTest": {
+      "available_languages_3": "Dostupni jezici 3",
+      "current_language_2": "Trenutni jezik 2",
+      "dashboard_stats_translations_4": "Prijevodi statistike nadzorne ploče 4",
+      "exists_5": "Postoji 5",
+      "raw_resource_check_6": "Provjera sirovih resursa 6",
+      "translation_debug_test_1": "Test otklanjanja pogrešaka u prijevodu 1"
+    }
+  },
+  "firstTimeGuide": {
+    "getStarted": "Započnite",
+    "step1": {
+      "description": "Opis",
+      "detail1": "Detalj1",
+      "detail2": "Detalj2",
+      "detail3": "Detalj3",
+      "title": "Titula"
+    },
+    "step2": {
+      "description": "Opis",
+      "detail1": "Detalj1",
+      "detail2": "Detalj2",
+      "detail3": "Detalj3",
+      "title": "Titula"
+    },
+    "step3": {
+      "description": "Opis",
+      "detail1": "Detalj1",
+      "detail2": "Detalj2",
+      "detail3": "Detalj3",
+      "title": "Titula"
+    },
+    "tip": {
+      "description": "Opis",
+      "title": "Titula"
+    }
+  },
+  "index": {
+    "startBuilding": "Započni gradnju",
+    "welcome": "Dobrodošli"
+  },
+  "landing": {
+    "pricingSection": {
+      "upgrade_with_stripe_1": "Nadogradite s prugom 1"
+    }
+  },
+  "languages": {
+    "en": "engleski",
+    "selectLanguage": "Odaberite jezik",
+    "sk": ""
+  },
+  "loading": "Učitavanje",
+  "manual": {
+    "contacts": {
+      "addContact": "Dodaj kontakt",
+      "addFirstContact": "Dodaj prvi kontakt",
+      "card": {
+        "edit": "Uredi"
+      },
+      "description": "Opis",
+      "empty": {
+        "description": "Opis",
+        "title": "Titula"
+      },
+      "form": {
+        "addTitle": "Dodaj naslov",
+        "description": "Opis",
+        "editTitle": "Uredi naslov"
+      },
+      "loading": "Učitavanje",
+      "title": "Titula"
+    },
+    "documents": {
+      "card": {
+        "essentialNote": "Bitna napomena"
+      },
+      "description": "Opis",
+      "empty": {
+        "description": "Opis",
+        "tip": "Savjet",
+        "title": "Titula"
+      },
+      "expiration": {
+        "expired": "Istekao",
+        "expiresSoon": "Uskoro istječe",
+        "expiring": "Istječe"
+      },
+      "loading": "Učitavanje",
+      "title": "Titula"
+    },
+    "errors": {
+      "dataNotFound": "Podaci nisu pronađeni",
+      "deleteContact": "Izbriši kontakt",
+      "duplicateEntry": "Duplikat unosa",
+      "loadContacts": "Učitaj kontakte",
+      "loadInstructions": "Upute za učitavanje",
+      "loadKeyDocuments": "Učitaj ključne dokumente",
+      "network": "Mreža",
+      "noPermission": "Nema dopuštenja",
+      "saveContact": "Spremi kontakt",
+      "saveInstructions": "Spremi upute",
+      "unknown": "Nepoznato"
+    },
+    "instructions": {
+      "autoSaveNote": "Automatsko spremanje bilješke",
+      "description": "Opis",
+      "digitalAccounts": {
+        "description": "Opis",
+        "placeholder": "Rezervirano mjesto",
+        "title": "Titula"
+      },
+      "funeral": {
+        "description": "Opis",
+        "placeholder": "Rezervirano mjesto",
+        "title": "Titula"
+      },
+      "loading": "Učitavanje",
+      "title": "Titula"
+    },
+    "subtitle": "Titl",
+    "title": "Titula"
+  },
+  "notifications": {
+    "daysAgo": "Prije nekoliko dana",
+    "empty": "Prazan",
+    "hoursAgo": "Prije nekoliko sati",
+    "justNow": "Upravo sada",
+    "loading": "Učitavanje",
+    "title": "Titula",
+    "viewAll": "Prikaži sve",
+    "yesterday": "Jučer"
+  },
+  "subscriptions": {
+    "subscriptionDashboard": {
+      "_1": ""
+    }
+  },
+  "testimonials": {
+    "compliance": {
+      "dataProtection": "Zaštićeni podaci",
+      "gdpr": "Usklađeno s GDPR-om",
+      "iso": ""
+    },
+    "stats": {
+      "families": "10.000+",
+      "familiesLabel": "obitelji nam vjeruju"
+    }
+  },
+  "themeToggle": {
+    "dark": "Tamno",
+    "light": "Svjetlo",
+    "system": "Sustav",
+    "toggleTheme": "Uključi/isključi temu"
+  },
+  "upgradeCard": {
+    "defaultButtonText": "Nadogradi odmah",
+    "pricing": "/cijene"
+  },
+  "whatIfScenarios": {
+    "businessTravel": {
+      "impact": "Utjecaj",
+      "title": "Titula"
+    },
+    "disabilityIncapacity": {
+      "impact": "Utjecaj",
+      "title": "Titula"
+    },
+    "duration": "Trajanje",
+    "hospitalStay": {
+      "impact": "Utjecaj",
+      "title": "Titula"
+    },
+    "missing": "Nedostaje",
+    "needs": "Potrebe",
+    "readiness": "Spremnost",
+    "requirements": "Zahtjevi",
+    "suddenDeath": {
+      "impact": "Utjecaj",
+      "title": "Titula"
+    }
+  },
+  "accessibility": {
+    "fontSize": "Veličina fonta",
+    "visualSettings": "Vizualne postavke"
+  },
+  "solution": {
+    "feature1": {
+      "benefits": "Prednosti",
+      "description": "Opis",
+      "title": "Titula"
+    },
+    "feature2": {
+      "benefits": "Prednosti",
+      "description": "Opis",
+      "title": "Titula"
+    },
+    "feature3": {
+      "benefits": "Prednosti",
+      "description": "Opis",
+      "title": "Titula"
+    },
+    "feature4": {
+      "benefits": "Prednosti",
+      "description": "Opis",
+      "title": "Titula"
+    },
+    "sectionSubtitle": "Podnaslov odjeljka",
+    "sectionTitle": "Naslov odjeljka"
+  }
 }

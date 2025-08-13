@@ -1,2 +1,1001 @@
 {
+  "annualReview": {
+    "complete": {
+      "summary": "Résumé de l'évaluation"
+    }
+  },
+  "dashboard": {
+    "welcome": {
+      "title": "Nous pouvons continuer à préparer l'avenir de votre famille"
+    },
+    "respectful": {
+      "greeting": "Bienvenue, {{name}}",
+      "greetingNew": "Bienvenue, {{name}}",
+      "statusOverview": {
+        "title": "Documents importants",
+        "secured": "Document {{count}} stocké en toute sécurité",
+        "secured_plural": "{{count}} documents stockés en toute sécurité",
+        "suggestion": "La plupart des gens stockent 3 à 5 documents clés",
+        "noDocuments": "Aucun document n'est encore stocké",
+        "getStarted": "Commencez par votre carte d'identité"
+      },
+      "suggestions": {
+        "title": "Vous pourriez également vouloir :",
+        "notNow": "Pas maintenant",
+        "considerAdding": "Envisagez d'ajouter",
+        "whenReady": "Quand tu seras prêt",
+        "noRush": "Pas de précipitation – faites-le à votre rythme"
+      },
+      "professionalStatus": {
+        "foundation": {
+          "title": "Commencer",
+          "description": "Nous construisons les bases du projet de votre famille"
+        },
+        "building": {
+          "title": "Faire des progrès",
+          "description": "Nous organisons des informations importantes pour votre famille"
+        },
+        "established": {
+          "title": "Bien organisé",
+          "description": "Vos documents importants sont stockés et accessibles"
+        },
+        "comprehensive": {
+          "title": "Plan global",
+          "description": "Votre famille a ce dont elle a besoin"
+        }
+      },
+      "taskCategories": {
+        "essential": "Essentiel",
+        "recommended": "Recommandé",
+        "optional": "Facultatif"
+      },
+      "taskStatus": {
+        "suggestion": "Suggestion",
+        "completed": "Complété",
+        "secured": "Sécurisé",
+        "ready": "Quand tu seras prêt"
+      }
+    },
+    "notifications": {
+      "success": {
+        "assetAdded": "L'actif a été ajouté avec succès",
+        "profileUpdated": "Profil mis à jour avec succès",
+        "settingsSaved": "Paramètres enregistrés avec succès"
+      },
+      "info": {
+        "reviewDue": "Revue annuelle prévue prochainement",
+        "documentsExpiring": "Certains documents expirent bientôt"
+      }
+    },
+    "documentCard": {
+      "include_in_survivor_s_manual_1": "Inclure dans le manuel du survivant 1"
+    },
+    "expired": "Expiré",
+    "expiresSoon": "Expire bientôt",
+    "firstTimeGuide": {
+      "finish": "Finition",
+      "helpfulTips": "Conseils utiles",
+      "importantNote": "Note importante",
+      "next": "Suivant",
+      "previous": "Précédent",
+      "progress": {
+        "description": "Description",
+        "tip1": "Astuce 1",
+        "tip2": "Astuce 2",
+        "title": "Titre"
+      },
+      "recommendations": {
+        "description": "Description",
+        "tip1": "Astuce 1",
+        "tip2": "Astuce 2",
+        "title": "Titre"
+      },
+      "skipTour": "Visite guidée",
+      "stages": {
+        "description": "Description",
+        "tip1": "Astuce 1",
+        "tip2": "Astuce 2",
+        "tip3": "Astuce 3",
+        "title": "Titre"
+      },
+      "stepProgress": "Progression par étapes",
+      "welcome": {
+        "description": "Description",
+        "tip1": "Astuce 1",
+        "tip2": "Astuce 2",
+        "tip3": "Astuce 3",
+        "title": "Titre"
+      }
+    },
+    "guardianCard": {
+      "country_1": "Pays 1",
+      "roles_2": "Rôles 2"
+    },
+    "metadata": {
+      "contact": "Contact",
+      "renewsOn": "Renouvellement le"
+    },
+    "nudge": {
+      "completeNow": "Terminer maintenant",
+      "continueSecuring": "Continuer à sécuriser",
+      "dismiss": "Rejeter",
+      "finishToday": "Terminer aujourd'hui",
+      "oneTaskLeft": "Il reste une tâche",
+      "progressTitle": "Titre de progression",
+      "tasksRemaining": "Tâches restantes",
+      "welcomeBack": "Content de te revoir"
+    },
+    "stages": {
+      "advancedPlanning": "Planification avancée",
+      "building": "Bâtiment",
+      "foundation": "Fondation",
+      "legacy": "Héritage",
+      "strengthening": "Renforcement"
+    },
+    "strategicSummary": {
+      "addBackupGuardian": "Ajouter un tuteur de secours",
+      "addContingentBeneficiaries": "Ajouter des bénéficiaires éventuels",
+      "addFinancialAccounts": "Ajouter des comptes financiers",
+      "addHomeProperty": "Ajouter une propriété à la maison",
+      "addPrimaryBeneficiary": "Ajouter un bénéficiaire principal",
+      "addPrimaryGuardian": "Ajouter un tuteur principal",
+      "assetInventory": "Ce qui compte pour votre famille",
+      "assetInventoryDesc": "Choses importantes que votre famille devrait savoir",
+      "criticalDocuments": "Documents importants",
+      "criticalDocumentsDesc": "Documents dont votre famille aura besoin",
+      "guardianNetwork": "Des personnes de confiance",
+      "guardianNetworkDesc": "Les personnes qui peuvent aider en cas de besoin",
+      "ifNotDone": "Si ce n'est pas fait",
+      "impact": {
+        "familyProtection": "Protection de la famille",
+        "immediateDecision": "Décision immédiate",
+        "preventsAssetLoss": "Empêche la perte d'actifs",
+        "preventsConflicts": "Prévient les conflits"
+      },
+      "inheritancePlan": "L'avenir de votre famille",
+      "inheritancePlanDesc": "Comment souhaitez-vous subvenir aux besoins de vos proches",
+      "minutes": "Minutes",
+      "nextAction": "Prochaine action",
+      "nextCriticalStep": "L'étape la plus importante pour votre famille",
+      "startWithNext": "Commencer par le suivant",
+      "subtitle": "Sous-titre",
+      "title": "Titre",
+      "whyImportant": "Pourquoi c'est important"
+    },
+    "allocation": "Allocation",
+    "assetName": "Nom de l'actif",
+    "assetType": "Type d'actif",
+    "beneficiaryName": "Nom du bénéficiaire",
+    "errors": {
+      "failedToSaveAsset": "Échec de la sauvegarde de l'actif",
+      "failedToSaveBeneficiary": "Impossible de sauvegarder le bénéficiaire"
+    },
+    "familyGuide": {
+      "discreteMode": "Mode discret",
+      "discreteModeDesc": "Description du mode discret",
+      "emergency_contacts_1": "Contacts d'urgence 1",
+      "export_guide_4": "Guide d'exportation 4",
+      "generateGuide": "Générer un guide",
+      "important_documents_2": "Documents importants 2",
+      "last_updated_6": "Dernière mise à jour 6",
+      "share_with_family_5": "Partager avec la famille 5",
+      "subtitle": "Sous-titre",
+      "title": "Titre",
+      "view": "Voir",
+      "what_to_do_when_3": "Que faire quand 3"
+    },
+    "placeholders": {
+      "allocationPercentage": "Pourcentage d'allocation",
+      "assetName": "Nom de l'actif",
+      "assetType": "Type d'actif",
+      "beneficiaryName": "Nom du bénéficiaire"
+    },
+    "saveAsset": "Enregistrer l'actif",
+    "saveBeneficiary": "Enregistrer le bénéficiaire",
+    "tasks": {
+      "assetInventory": {
+        "description": "Description",
+        "title": "Titre"
+      },
+      "bankAccount": {
+        "description": "Description",
+        "title": "Titre"
+      },
+      "digitalAssetPlan": {
+        "description": "Description",
+        "title": "Titre"
+      },
+      "documentCentralization": {
+        "description": "Description",
+        "title": "Titre"
+      },
+      "emergencyContacts": {
+        "description": "Description",
+        "title": "Titre"
+      },
+      "familyMeeting": {
+        "description": "Description",
+        "title": "Titre"
+      },
+      "guardianInstructions": {
+        "description": "Description",
+        "title": "Titre"
+      },
+      "inheritanceEducation": {
+        "description": "Description",
+        "title": "Titre"
+      },
+      "personalMessages": {
+        "description": "Description",
+        "title": "Titre"
+      },
+      "willPreparation": {
+        "description": "Description",
+        "title": "Titre"
+      }
+    },
+    "updateAsset": "Mettre à jour l'actif",
+    "updateBeneficiary": "Mettre à jour le bénéficiaire",
+    "beneficiaries": {
+      "title": "Titre des bénéficiaires",
+      "description": "Description des bénéficiaires",
+      "action": "Action des bénéficiaires",
+      "impact": "Impact sur les bénéficiaires",
+      "prerequisite": "Conditions préalables pour les bénéficiaires"
+    },
+    "will": {
+      "title": "Titre du testament",
+      "description": "Description du testament",
+      "action": "L'action de la volonté",
+      "impact": "Aura un impact"
+    },
+    "priority": {
+      "critical": "Priorité critique",
+      "important": "Priorité importante",
+      "suggested": "Priorité suggérée",
+      "recommended": "Priorité recommandée"
+    },
+    "title": "Titre du tableau de bord",
+    "subtitle": "Sous-titre du tableau de bord",
+    "impact": {
+      "label": "Étiquette d'impact"
+    },
+    "prerequisites": {
+      "label": "Étiquette des prérequis"
+    },
+    "status": {
+      "milestone": {
+        "foundation": "Fondation Milestone",
+        "core": "Noyau Milestone",
+        "comprehensive": "Étape complète",
+        "maintain": "Maintien des jalons"
+      },
+      "building": "Renforcement du statut",
+      "organized": "Statut organisé",
+      "comprehensive": "Statut complet"
+    },
+    "areas": {
+      "documents": {
+        "title": "Titre du document",
+        "description": "Description des documents"
+      },
+      "guardians": {
+        "title": "Titre de tuteur",
+        "description": "Description des gardiens"
+      },
+      "assets": {
+        "title": "Titre des actifs",
+        "description": "Description des actifs"
+      },
+      "beneficiaries": {
+        "title": "Titre des bénéficiaires",
+        "description": "Description des bénéficiaires"
+      }
+    },
+    "guidance": {
+      "professional": "Professionnel de l'orientation"
+    },
+    "tabs": {
+      "overview": "Aperçu des onglets",
+      "progress": "Progression des onglets",
+      "resources": "Ressources des onglets"
+    },
+    "continue": "Tableau de bord continue",
+    "resources": {
+      "title": "Titre des ressources",
+      "description": "Description des ressources",
+      "support": "Ressources de soutien"
+    },
+    "milestone": {
+      "reached": "Étape importante atteinte"
+    },
+    "badge": "Badge du tableau de bord",
+    "inputs": {
+      "title": "Titre des entrées",
+      "description": "Description des entrées",
+      "dependents": "Dépendants des entrées",
+      "income": "Revenus des intrants",
+      "property": "Propriété des entrées",
+      "business": "Entreprise d'intrants",
+      "accounts": "Comptes d'entrées"
+    },
+    "results": {
+      "title": "Titre des résultats",
+      "description": "Description des résultats",
+      "emotional": {
+        "title": "Titre émotionnel",
+        "stress": "Stress émotionnel",
+        "confidence": "Confiance émotionnelle",
+        "peace": "Paix émotionnelle"
+      },
+      "families": "Résultats familles"
+    },
+    "testimonial": {
+      "quote": "Citation de témoignage",
+      "author": "Auteur du témoignage"
+    },
+    "dismiss": "Fermer le tableau de bord",
+    "snooze": "Tableau de bord snooze",
+    "complete": "Tableau de bord complet",
+    "overdue": "Tableau de bord en retard",
+    "settings": {
+      "saved": "Paramètres enregistrés",
+      "general": "Paramètres généraux",
+      "channels": "Paramètres des chaînes"
+    },
+    "types": {
+      "review": "Examen des types"
+    },
+    "frequency": {
+      "monthly": "Fréquence mensuelle",
+      "quarterly": "Fréquence trimestrielle",
+      "annually": "Fréquence annuelle"
+    },
+    "channels": {
+      "email": "Courriel des chaînes"
+    },
+    "duration": {
+      "week": "Durée semaine"
+    }
+  },
+  "empty": {
+    "noActivity": "Aucune activité récente à afficher",
+    "noAssets": "Aucun actif ajouté pour le moment",
+    "noDocuments": "Aucun document téléchargé pour le moment",
+    "noPeople": "Aucune personne de confiance n'a encore été ajoutée",
+    "noTasks": "Aucune tâche disponible"
+  },
+  "errors": {
+    "loadingDashboard": "Échec du chargement du tableau de bord. Veuillez actualiser la page.",
+    "loadingStats": "Échec du chargement des statistiques. Veuillez actualiser.",
+    "failedToFetchStatus": "Échec de la récupération de l'état de progression",
+    "genericError": "Une erreur s'est produite. Veuillez actualiser et réessayer.",
+    "loadingTasks": "Échec du chargement des tâches. Veuillez réessayer.",
+    "markingComplete": "Impossible de marquer la tâche comme terminée. Veuillez réessayer.",
+    "savingProgress": "Échec de l'enregistrement de la progression. Veuillez réessayer.",
+    "initializationFailed": "Erreurs d'initialisation échouées"
+  },
+  "quickTasks": {
+    "tasks": {
+      "homeProperty": {
+        "description": "Description",
+        "title": "Titre"
+      },
+      "backupGuardian": {
+        "description": "Description",
+        "title": "Titre"
+      },
+      "bankAccount": {
+        "description": "Description",
+        "title": "Titre"
+      },
+      "birthCertificate": {
+        "description": "Description",
+        "title": "Titre"
+      },
+      "childrenBeneficiaries": {
+        "description": "Description",
+        "title": "Titre"
+      },
+      "insurancePolicy": {
+        "description": "Description",
+        "title": "Titre"
+      },
+      "spouseBeneficiary": {
+        "description": "Description",
+        "title": "Titre"
+      },
+      "spouseGuardian": {
+        "description": "Description",
+        "title": "Titre"
+      },
+      "vehicle": {
+        "description": "Description",
+        "title": "Titre"
+      },
+      "will": {
+        "description": "Description",
+        "title": "Titre"
+      }
+    },
+    "allCompleted": "Tout est terminé",
+    "allTasks": "Toutes les tâches",
+    "assets": "Actifs",
+    "beneficiaries": "Bénéficiaires",
+    "completed": "Complété",
+    "documents": "Documents",
+    "greatProgress": "De grands progrès",
+    "guardians": "Gardiens",
+    "ifNotDone": "Si ce n'est pas fait",
+    "markAsComplete": "Marquer comme terminé",
+    "minutes": "Minutes",
+    "progress": "Progrès",
+    "start": "Commencer",
+    "title": "Titre",
+    "wellOnWay": "En bonne voie",
+    "whyImportant": "Pourquoi c'est important"
+  },
+  "sections": {
+    "recentActivity": {
+      "assetUpdated": "Actif mis à jour",
+      "daysAgo": "il y a {{days}} jours",
+      "documentAdded": "Document ajouté",
+      "noActivity": "Aucune activité récente",
+      "personAdded": "Personne de confiance ajoutée",
+      "subtitle": "Vos dernières mises à jour et modifications",
+      "taskCompleted": "Tâche accomplie",
+      "title": "Activité récente",
+      "today": "Aujourd'hui",
+      "viewAll": "Voir toutes les activités",
+      "willUpdated": "Mise à jour du testament",
+      "yesterday": "Hier"
+    },
+    "insights": {
+      "dismiss": "Compris",
+      "noInsights": "Au fur et à mesure que nous en apprendrons davantage sur votre famille, nous partagerons ici des suggestions utiles.",
+      "recommendation": "Quelque chose à considérer",
+      "subtitle": "Des conseils qui peuvent aider votre famille",
+      "tip": "Conseil utile",
+      "title": "Façons de renforcer votre plan",
+      "viewDetails": "Apprendre encore plus",
+      "warning": "A besoin de votre attention"
+    },
+    "nextSteps": {
+      "estimatedTime": "Environ {{minutes}} minutes",
+      "highPriority": "Le plus important",
+      "lowPriority": "Quand tu as le temps",
+      "markComplete": "Nous pouvons marquer complètement",
+      "mediumPriority": "Bientôt important",
+      "noTasks": "Votre famille est bien protégée.",
+      "startTask": "Nous pouvons commencer",
+      "subtitle": "Les étapes les plus importantes à suivre maintenant",
+      "title": "Prochaines étapes pour votre famille",
+      "viewAll": "Voir toutes les étapes"
+    },
+    "quickStart": {
+      "completed": "Complété",
+      "inProgress": "En cours",
+      "notStarted": "Pas commencé",
+      "step1": {
+        "action": "Parlez-nous de quelque chose d'important",
+        "description": "Commençons par votre domicile, votre compte bancaire principal ou votre entreprise",
+        "title": "Partagez ce qui compte le plus pour votre famille"
+      },
+      "step2": {
+        "action": "Choisissez quelqu'un pour vous aider",
+        "description": "Choisissez une personne vers qui votre famille peut se tourner lorsqu'elle a besoin de soutien",
+        "title": "Ajoutez votre premier assistant"
+      },
+      "step3": {
+        "action": "Ajouter des documents importants",
+        "description": "Conservez les polices d’assurance, les actes et les contrats là où votre famille peut les trouver",
+        "title": "Sécurisez vos documents importants"
+      },
+      "step4": {
+        "action": "Créez votre testament",
+        "description": "Créons un document juridique qui protège l'avenir de votre famille",
+        "title": "Rédigez votre testament"
+      },
+      "subtitle": "Faisons ensemble les premiers pas pour protéger vos proches",
+      "title": "Commencer"
+    }
+  },
+  "stats": {
+    "completionRate": "{{percentage}}% prêt",
+    "documentsStored": "Documents importants",
+    "documentsStoredDescription": "Documents importants auxquels votre famille peut accéder",
+    "excellent": "Bien protégé",
+    "gettingStarted": "Commencer",
+    "good": "Faire des progrès",
+    "needsWork": "Nécessite une attention particulière",
+    "planStrength": "Préparation du plan",
+    "planStrengthDescription": "Dans quelle mesure vos proches sont-ils préparés ?",
+    "protectionLevel": "Préparation familiale",
+    "protectionLevelDescription": "Dans quelle mesure votre famille peut-elle gérer les moments difficiles ?",
+    "tasksCompleted": "Étapes complétées",
+    "tasksCompletedDescription": "Vous avez terminé {{completed}} sur {{total}} étapes importantes",
+    "trustedPeople": "Des personnes de confiance",
+    "trustedPeopleDescription": "Des personnes prêtes à aider votre famille en cas de besoin"
+  },
+  "widgets": {
+    "familyAccess": {
+      "description": "Qui a accès à quelles informations",
+      "manageAccess": "Gérer l'accès",
+      "noAccess": "Aucun accès familial configuré",
+      "title": "Statut d'accès familial",
+      "viewPermissions": "Afficher les autorisations"
+    },
+    "planStrengthMeter": {
+      "description": "Indicateur visuel de votre niveau de préparation global",
+      "fullySecured": "Entièrement sécurisé",
+      "needsAttention": "Nécessite une attention particulière",
+      "onTrack": "Sur la bonne voie",
+      "title": "Plan de mesure de la force",
+      "wellProtected": "Bien protégé"
+    },
+    "upcomingDeadlines": {
+      "description": "Dates importantes et renouvellements à retenir",
+      "dueThisWeek": "À rendre cette semaine",
+      "dueToday": "À rendre aujourd'hui",
+      "dueTomorrow": "À rendre demain",
+      "noDeadlines": "Aucune échéance à venir",
+      "overdue": "En retard",
+      "title": "Prochaines échéances"
+    }
+  },
+  "admin": {
+    "analyticsDashboard": {
+      "a_b_tests_9": "Tests A/B",
+      "active_and_new_users_over_time_12": "Utilisateurs actifs et nouveaux au fil du temps",
+      "analytics_dashboard_2": "Tableau de bord d'analyse",
+      "avg_documents_per_user_19": "Nombre moyen de documents par utilisateur",
+      "avg_session_duration_17": "Durée moyenne d'une session",
+      "avg_trusted_people_per_user_20": "Nombre moyen de personnes de confiance par utilisateur",
+      "bounce_rate_18": "Taux de rebond",
+      "confidence_29": "Confiance",
+      "feature_adoption_8": "Adoption des fonctionnalités",
+      "feature_adoption_rates_23": "Taux d'adoption des fonctionnalités",
+      "from_last_month_6": "Depuis le mois dernier",
+      "key_platform_metrics_16": "Indicateurs clés de la plateforme",
+      "loading_analytics_data_1": "Chargement des données d'analyse...",
+      "monitor_user_engagement_featur_3": "Surveiller les fonctionnalités d'engagement des utilisateurs",
+      "percentage_of_users_using_each_24": "Pourcentage d'utilisateurs utilisant chaque fonctionnalité",
+      "platform_statistics_15": "Statistiques de la plateforme",
+      "refreshing_4": "Rafraîchissant..."
+    },
+    "accessDenied": {
+      "description": "Vous n'avez pas la permission d'accéder à cette zone",
+      "title": "Accès refusé"
+    }
+  },
+  "reminders": {
+    "dashboardDescription": "Description du tableau de bord",
+    "reminderDashboard": {
+      "reminders_1": "Rappels 1"
+    },
+    "channels": {
+      "email": "E-mail",
+      "emailDesc": "Description de l'e-mail",
+      "inApp": "Dans l'application",
+      "inAppDesc": "Dans la description de l'application"
+    },
+    "complete": "Complet",
+    "completedSuccess": "Succès terminé",
+    "dismiss": "Rejeter",
+    "due": "Exigible",
+    "dueOn": "À payer le",
+    "duration": {
+      "week": "Semaine"
+    },
+    "frequency": {
+      "monthly": "Mensuel",
+      "quarterly": "Trimestriel"
+    },
+    "noUpcoming": "Pas de prochain",
+    "overdue": "En retard",
+    "settings": {
+      "channels": "Chaînes",
+      "channelsDesc": "Description des chaînes",
+      "defaultFrequency": "Fréquence par défaut",
+      "enableReminders": "Activer les rappels",
+      "enableRemindersDesc": "Activer les rappels description",
+      "general": "Général",
+      "generalDesc": "Description générale",
+      "reminderTypes": "Types de rappels",
+      "reminderTypesDesc": "Description des types de rappels",
+      "saveError": "Erreur de sauvegarde",
+      "saved": "Sauvé"
+    },
+    "snooze": "Somnoler",
+    "snoozeWeek": "Semaine de sommeil",
+    "snoozedSuccess": "Succès mis en veille",
+    "title": "Titre",
+    "types": {
+      "contentUpdate": "Mise à jour du contenu",
+      "contentUpdateDesc": "Description de la mise à jour du contenu",
+      "documentExpiry": "Expiration du document",
+      "documentExpiryDesc": "Description de l'expiration du document",
+      "lifeEvent": "Événement de la vie",
+      "lifeEventDesc": "Description d'un événement de la vie"
+    },
+    "viewAll": "Tout voir"
+  },
+  "complexProfile": {
+    "businessSuccessionNote": "Note de succession d'entreprise",
+    "detected": "Détecté",
+    "discussWithExpert": "Discuter avec un expert",
+    "personalizedGuidance": "Accompagnement personnalisé"
+  },
+  "deepDive": {
+    "advancedPlanning": "Planification avancée",
+    "deepDiveDescription": "Vous avez appris les bases ! Passons maintenant aux stratégies de protection avancées.",
+    "milestoneAchieved": "Étape franchie"
+  },
+  "development": {
+    "resetOnboarding": "🔄 Réinitialiser l'intégration (Dev)"
+  },
+  "guardian": {
+    "accepted": "Accepté",
+    "declined": "Refusé",
+    "invitationSent": "Invitation envoyée",
+    "sendInvite": "Envoyer une invitation"
+  },
+  "header": {
+    "lastUpdated": "Nous vous avons aidé pour la dernière fois le {{date}}",
+    "quickActions": "Actions rapides",
+    "subtitle": "Voici à quel point votre famille est préparée",
+    "welcome": "Ravi de te revoir, {{name}}",
+    "welcomeDefault": "Content de te revoir"
+  },
+  "help": {
+    "basedOnProgress": "Basé sur les progrès",
+    "getHelp": "Obtenir de l'aide",
+    "helpAndTutorials": "Aide et tutoriels",
+    "needHelp": "Besoin d'aide",
+    "personalizedHelpDescription": "Description de l'aide personnalisée",
+    "quickTips": {
+      "tip1": "Astuce 1",
+      "tip2": "Astuce 2",
+      "tip3": "Astuce 3",
+      "tip4": "Astuce 4",
+      "title": "Titre"
+    },
+    "recommendedForYou": "Recommandé pour vous",
+    "recommendedTopics": "Sujets recommandés",
+    "stepDetails": {
+      "description": "Description",
+      "estimatedTime": "Temps estimé",
+      "gotIt": "J'ai compris",
+      "minutes": "Minutes",
+      "stepByStepInstructions": "Instructions étape par étape",
+      "steps": "Mesures",
+      "videoTutorial": "Tutoriel vidéo",
+      "watchVideoTutorial": "Regarder le didacticiel vidéo"
+    },
+    "topics": {
+      "addGuardians": {
+        "description": "Description",
+        "steps": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5"
+        },
+        "title": "Titre"
+      },
+      "createWill": {
+        "description": "Description",
+        "steps": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5"
+        },
+        "title": "Titre"
+      },
+      "designateBeneficiaries": {
+        "description": "Description",
+        "steps": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5"
+        },
+        "title": "Titre"
+      },
+      "listAssets": {
+        "description": "Description",
+        "steps": {
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4",
+          "5": "5"
+        },
+        "title": "Titre"
+      },
+      "uploadDocuments": {
+        "description": "Description",
+        "steps": {
+          "1": "1",
+          "2": "",
+          "3": "",
+          "4": "",
+          "5": ""
+        },
+        "title": "Titre"
+      }
+    }
+  },
+  "nextStep": {
+    "estimatedTime": "Durée estimée : {{time}}",
+    "title": "Votre prochaine priorité"
+  },
+  "notifications": {
+    "accessGranted": "{{name}} peut désormais aider votre famille",
+    "accessRevoked": "L'accès de {{name}} a été supprimé",
+    "assetAdded": "Nous avons conservé ces informations en toute sécurité pour votre famille",
+    "documentUploaded": "Votre document est maintenant stocké et prêt",
+    "personAdded": "{{name}} fait désormais partie de vos personnes de confiance",
+    "planUpdated": "Votre plan a été mis à jour",
+    "reminderSet": "Nous vous le rappellerons le {{date}}",
+    "taskCompleted": "Bon travail pour protéger votre famille",
+    "willGenerated": "Votre testament est prêt à protéger vos proches"
+  },
+  "playbook": {
+    "create": "Créer",
+    "edit": "Modifier",
+    "label": "Étiquette",
+    "status": {
+      "complete": "Complet",
+      "draft": "Brouillon",
+      "empty": "Vide"
+    }
+  },
+  "preservationMode": {
+    "description": "Votre plan de protection familiale est complet et bien géré. Des révisions régulières garantissent que tout reste à jour.",
+    "latestUpdates": "Dernières mises à jour",
+    "title": "Mode de conservation actif"
+  },
+  "progressTracking": {
+    "complete": "Complet",
+    "completionRange": "Gamme de finition",
+    "critical": "Critique",
+    "criticalGaps": {
+      "title": "Titre"
+    },
+    "current": "Actuel",
+    "currentStage": "Stade actuel",
+    "currentTasks": "Tâches en cours",
+    "progressDescription": "Description de la progression",
+    "stages": {
+      "buildout": {
+        "description": "",
+        "name": "Nom"
+      },
+      "foundation": {
+        "description": "",
+        "name": "Nom"
+      },
+      "reinforcement": {
+        "description": "",
+        "name": "Nom"
+      }
+    },
+    "subtitle": "Sous-titre",
+    "tasks": {
+      "accessVerification": "Vérification d'accès",
+      "assetInventory": "Inventaire des actifs",
+      "basicInfo": "Informations de base",
+      "beneficiaries": "Bénéficiaires",
+      "emergencyContacts": "Contacts d'urgence",
+      "guardianNetwork": "Réseau Guardian",
+      "instructions": "",
+      "keyDocuments": "Documents clés",
+      "willCreation": "Création d'un testament"
+    },
+    "title": "Titre"
+  },
+  "subscription": {
+    "autoRenewal": "Renouvellement automatique",
+    "cancellationNotice": "Avis d'annulation",
+    "days": "Jours",
+    "manual": "Manuel",
+    "types": {
+      "monthly": "Mensuel",
+      "yearly": "Annuel"
+    }
+  },
+  "subtitle": "Votre plan de protection familiale",
+  "tasks": {
+    "actions": {
+      "start": "Commencer"
+    },
+    "categories": {
+      "organize": "Organiser",
+      "secure": "Sécurisé",
+      "transfer": "Transfert"
+    },
+    "status": {
+      "blocked": "Bloqué",
+      "completed": "Complété",
+      "inProgress": "En cours",
+      "notStarted": "Pas commencé",
+      "skipped": "Sauté"
+    },
+    "types": {
+      "assetInventory": {
+        "description": "Documentez vos biens de valeur afin que rien ne soit oublié ou perdu.",
+        "title": "Créer un inventaire des actifs"
+      },
+      "bankAccount": {
+        "description": "Enregistrez vos informations bancaires et d’investissement afin que votre famille puisse gérer ses finances.",
+        "title": "Documenter les comptes financiers"
+      },
+      "digitalAssetPlan": {
+        "description": "Organisez vos comptes en ligne, vos mots de passe et vos biens numériques pour un accès facile.",
+        "title": "Plan pour les actifs numériques"
+      },
+      "documentCentralization": {
+        "description": "Rassemblez et numérisez vos documents les plus importants afin que votre famille puisse tout retrouver au même endroit.",
+        "title": "Organiser les documents importants"
+      },
+      "emergencyContacts": {
+        "description": "Assurez-vous que les bonnes personnes peuvent accéder aux informations critiques lorsqu’elles en ont le plus besoin.",
+        "title": "Configurer l'accès d'urgence"
+      },
+      "familyMeeting": {
+        "description": "Ayez une conversation ouverte avec votre famille sur vos projets et leurs rôles.",
+        "title": "Tenir une discussion familiale"
+      },
+      "guardianInstructions": {
+        "description": "Choisissez des personnes de confiance qui peuvent intervenir et aider votre famille dans les moments difficiles.",
+        "title": "Désigner les contacts d'urgence"
+      },
+      "inheritanceEducation": {
+        "description": "Comprenez les exigences légales de votre région pour éviter les complications pour votre famille.",
+        "title": "En savoir plus sur les lois sur l'héritage"
+      },
+      "personalMessages": {
+        "description": "Laissez des messages sincères et des instructions importantes à vos proches.",
+        "title": "Enregistrer des messages personnels"
+      },
+      "willPreparation": {
+        "description": "Créez un document juridiquement valide qui énonce clairement vos souhaits pour vos biens et votre famille.",
+        "title": "Préparez votre testament"
+      }
+    },
+    "criticalGap": "",
+    "reviewDocument": "",
+    "documentReviewDesc": ""
+  },
+  "title": "Le plan de protection de votre famille",
+  "progress": {
+    "step": "Étape"
+  },
+  "completion": {
+    "viewPlan": "Voir le plan"
+  },
+  "push": {
+    "taskReminder": {
+      "title": "Rappel sur la protection de la famille",
+      "body": "Vous avez {{count}} tâches en attente pour renforcer le plan de protection de votre famille.",
+      "action": "Réviser les tâches"
+    },
+    "documentExpiry": {
+      "title": "Renouvellement de document nécessaire",
+      "body": "{{documentName}} expire le {{date}}. Veuillez vérifier et mettre à jour.",
+      "action": "Mettre à jour le document"
+    },
+    "familyAccess": {
+      "title": "Mise à jour sur l'accès familial",
+      "body": "{{memberName}} a obtenu l'accès à vos informations de protection familiale.",
+      "action": "Gérer l'accès"
+    },
+    "securityAlert": {
+      "title": "Alerte de sécurité",
+      "body": "Nouvelle connexion détectée depuis {{location}}. Si ce n'est pas vous, sécurisez immédiatement votre compte.",
+      "action": "Activité de révision"
+    },
+    "willGenerated": {
+      "title": "Document de testament prêt",
+      "body": "Votre testament a été rédigé. Vérifiez les conditions d'exécution pour le rendre juridiquement contraignant.",
+      "action": "Voir la volonté"
+    },
+    "paymentIssue": {
+      "title": "Problème de paiement",
+      "body": "Nous n'avons pas pu traiter votre paiement. Veuillez mettre à jour votre mode de paiement.",
+      "action": "Mettre à jour le paiement"
+    },
+    "trialExpiring": {
+      "title": "Le procès se termine bientôt",
+      "body": "Votre essai LegacyGuard expire dans {{days}} jours. Choisissez une offre pour prolonger votre protection.",
+      "action": "Voir les plans"
+    }
+  },
+  "sms": {
+    "securityCode": {
+      "message": "Votre code de sécurité LegacyGuard est : {{code}}. Ce code expire dans 10 minutes. Ne le communiquez à personne."
+    },
+    "loginAlert": {
+      "message": "LegacyGuard : Nouvelle connexion détectée de {{location}} à {{time}}. Si ce n'est pas vous, sécurisez immédiatement votre compte : {{secureUrl}}"
+    },
+    "emergencyAccess": {
+      "message": "LegacyGuard : L'accès d'urgence a été activé pour le compte de {{familyName}}. Connectez-vous pour consulter les informations importantes : {{loginUrl}}"
+    },
+    "criticalReminder": {
+      "message": "LegacyGuard : Des tâches importantes de protection de la famille requièrent votre attention. Effectuez-les quand cela vous convient : {{dashboardUrl}}"
+    }
+  },
+  "inApp": {
+    "welcome": {
+      "title": "Bienvenue chez LegacyGuard",
+      "message": "Nous pouvons commencer à élaborer votre projet familial. Vous pouvez commencer par une courte évaluation.",
+      "action": "Nous pouvons commencer l'évaluation"
+    },
+    "firstAsset": {
+      "title": "Ajoutez votre premier actif",
+      "message": "Protégez votre famille en documentant votre bien le plus important.",
+      "action": "Ajouter un actif"
+    },
+    "inviteTrusted": {
+      "title": "Inviter une personne de confiance",
+      "message": "Désignez une personne qui peut aider votre famille en cas d’urgence.",
+      "action": "Ajouter une personne"
+    },
+    "createWill": {
+      "title": "Créez votre testament",
+      "message": "Générez un testament juridiquement valable basé sur vos biens et vos souhaits.",
+      "action": "Le départ sera"
+    }
+  },
+  "alerts": {
+    "description": "",
+    "dismiss": "Rejeter",
+    "errors": {
+      "dismissFailed": "Échec du rejet",
+      "loadFailed": "Échec du chargement",
+      "renewFailed": "Échec du renouvellement",
+      "snoozeFailed": "Échec de la répétition"
+    },
+    "expiresOn": "Expire le",
+    "markAsRenewed": "Marquer comme renouvelé",
+    "messages": {
+      "dismissed": "Rejeté",
+      "markedAsRenewed": "Marqué comme renouvelé",
+      "snoozed": "En veille"
+    },
+    "noActiveAlerts": "Aucune alerte active",
+    "noDismissedAlerts": "Aucune alerte rejetée",
+    "noSnoozedAlerts": "Aucune alerte en veille",
+    "renewalInstructions": "Instructions de renouvellement",
+    "snooze7Days": "Snooze7 jours",
+    "snoozedUntil": "En veille jusqu'à",
+    "tabs": {
+      "active": "Actif",
+      "dismissed": "Rejeté",
+      "snoozed": "En veille"
+    },
+    "title": "Titre",
+    "types": {
+      "expired": "Expiré",
+      "expiring30": "Expiration30",
+      "expiring7": "Expiration7",
+      "expiring90": "Expiration90"
+    },
+    "unread": "Non lu",
+    "unsnooze": "Réactiver la répétition"
+  },
+  "respectful": {
+    "encouragement": {
+      "comprehensive": ""
+    },
+    "tasks": {
+      "showPriority": "",
+      "showAll": ""
+    }
+  }
 }

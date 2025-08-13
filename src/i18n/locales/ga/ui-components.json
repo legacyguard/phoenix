@@ -1,2 +1,505 @@
 {
+  "terms": {
+    "vault": "Cruinneachán",
+    "vaultLower": "cruinneachán",
+    "trustedCircle": "Ciorcal Iontaofa",
+    "trustedCircleLower": "ciorcal iontaofa",
+    "willGenerator": "Gineadóir Uachtanna",
+    "willGeneratorLower": "gineadóir uachta",
+    "legacyLetters": "Litreacha Oidhreachta",
+    "secure": "Slán",
+    "secureLower": "slán"
+  },
+  "respectful": {
+    "status": {
+      "secured": "Slán",
+      "protected": "Cosanta",
+      "ready": "Réidh",
+      "organized": "Eagraithe",
+      "documented": "Doiciméadaithe",
+      "prepared": "Ullmhaithe"
+    },
+    "suggestions": {
+      "consider": "Smaoinigh",
+      "whenReady": "Nuair a bheidh tú réidh",
+      "mightWant": "B’fhéidir gur mhaith leat",
+      "optional": "Roghnach",
+      "recommended": "Molta",
+      "noRush": "Gan deifir"
+    },
+    "progress": {
+      "gettingStarted": "Ag Tosú",
+      "makingProgress": "Dul Chun Cinn a Dhéanamh",
+      "wellOrganized": "Eagraithe go maith",
+      "comprehensive": "Cuimsitheach",
+      "documentsSecured": "{{count}} doiciméad slán",
+      "documentsSecured_plural": "{{count}} doiciméid slán"
+    },
+    "actions": {
+      "secure": "Slán",
+      "add": "Cuir leis",
+      "organize": "Eagraigh",
+      "protect": "Cosain",
+      "document": "Doiciméad",
+      "prepare": "Ullmhaigh"
+    },
+    "tone": {
+      "respectful": "Measúil",
+      "supportive": "Tacaíochta",
+      "clear": "Glan",
+      "practical": "Praiticiúil"
+    }
+  },
+  "actions": {
+    "contactSupport": "Faigh Cabhair",
+    "disable": "Múch",
+    "enable": "Cas air",
+    "goBack": "Téigh Ar Ais",
+    "refresh": "Athnuachan",
+    "save": "Coinnigh Seo Sábháilte",
+    "accept": "Glac leis",
+    "accepted": "Glactha",
+    "account": "Cuntas",
+    "activate": "Gníomhachtaigh",
+    "add": "Cuir leis",
+    "additional": "Tuilleadh",
+    "adjust": "Coigeartaigh",
+    "advanced": "Roghanna Casta",
+    "align": "Ailínigh",
+    "allowed": "Ceadaithe",
+    "alter": "Athraigh",
+    "approve": "Ceadaigh",
+    "approved": "Ceadaithe",
+    "arrange": "Eagraigh",
+    "authenticate": "Fíoraigh gur tusa atá ann",
+    "authenticated": "Fíoraithe",
+    "authorize": "Tabhair Cead",
+    "authorized": "Cead Tugtha",
+    "automatic": "Uathoibríoch",
+    "auxiliary": "Breise",
+    "available": "Ar fáil",
+    "backedUp": "Cúltaca Sábháilte",
+    "basic": "Simplí",
+    "begin": "Tosaímis",
+    "blocked": "Blocáilte",
+    "bonus": "Breise",
+    "bottom": "Bun",
+    "browse": "Féach Tríd",
+    "center": "Lár",
+    "change": "Athraigh",
+    "choose": "Roghnaigh",
+    "clear": "Glan",
+    "clone": "Déan Cóip",
+    "close": "Dún",
+    "collapse": "Folaigh Sonraí",
+    "compatible": "Oibríonn Le",
+    "complete": "Gach Rud Déanta",
+    "configuration": "Socruithe",
+    "configure": "Socraigh",
+    "confirm": "Sea, táim cinnte",
+    "confirmed": "Deimhnithe",
+    "content": "Ábhar",
+    "convert": "Athraigh Formáid",
+    "create": "Cruthaigh Nua",
+    "crop": "Barr",
+    "current": "Reatha",
+    "custom": "Saincheaptha",
+    "customize": "Déan Leat Féin De",
+    "cut": "Gearr",
+    "deactivate": "Múch",
+    "decline": "Ní raibh maith agat",
+    "declined": "Diúltaithe",
+    "decode": "Díchódáil",
+    "decrypt": "Díghlasáil",
+    "default": "Caighdeánach",
+    "denied": "Ní Cheadaítear",
+    "deny": "Ná Ceadaigh",
+    "deselect": "Díroghnaigh",
+    "disabled": "Múchta",
+    "done": "Uile Socraithe",
+    "downgrade": "Úsáid Leagan Níos Simplí",
+    "drag": "Tarraing",
+    "drop": "Scaoil Anseo",
+    "editable": "Is féidir é a athrú",
+    "enabled": "Casadh Air",
+    "encode": "Ionchódaigh",
+    "encrypt": "Coinnigh Slán",
+    "encrypted": "Slán",
+    "end": "Deireadh",
+    "enhance": "Feabhsaigh",
+    "enterprise": "Gnó",
+    "exitFullscreen": "Scoir Lánscáileáin",
+    "expand": "Taispeáin Tuilleadh",
+    "export": "Íoslódáil",
+    "extra": "Breise",
+    "filter": "Taispeáin Amháin",
+    "find": "Cuardaigh",
+    "finish": "Críochnaithe",
+    "flip": "Smeach",
+    "forbidden": "Ní Cheadaítear",
+    "format": "Formáid",
+    "full": "Lán",
+    "fullscreen": "Lánscáileán",
+    "grant": "Tabhair Rochtain",
+    "granted": "Rochtain Tugtha",
+    "group": "Grúpáil le Chéile",
+    "hash": "Cód Slándála",
+    "hide": "Folaigh",
+    "historical": "Am atá thart",
+    "import": "Tabhair Isteach",
+    "improve": "Déan Níos Fearr",
+    "incompatible": "Ní oibreoidh sé",
+    "incomplete": "Gan Chríochnú",
+    "insecure": "Ní Slán",
+    "internationalize": "Aistrigh",
+    "invalid": "Ní bailí",
+    "justify": "Ailínigh Téacs",
+    "latest": "Is Déanaí",
+    "left": "Ar chlé",
+    "localize": "Aistrigh",
+    "lock": "Glasáil",
+    "login": "Sínigh Isteach",
+    "logout": "Sínigh Amach",
+    "main": "Príomh",
+    "mandatory": "Riachtanach",
+    "manual": "Déan É Féin",
+    "maximize": "Déan Níos Mó",
+    "middle": "Lár",
+    "minimize": "Déan Níos Lú",
+    "modify": "Athraigh",
+    "newest": "Is Déanaí",
+    "nonEditable": "Ní féidir é a athrú",
+    "notBackedUp": "Gan Cúltaca Fós",
+    "notSynced": "Níor Nuashonraíodh Fós",
+    "oldest": "Is sine",
+    "open": "Oscail",
+    "optimize": "Feabhsaigh",
+    "optional": "Ní Riachtanach",
+    "options": "Roghanna",
+    "organize": "Eagraigh",
+    "outdated": "Riachtanas Nuashonrú",
+    "parse": "Léigh",
+    "partial": "cuid acu",
+    "paste": "Greamaigh",
+    "pause": "Sos",
+    "permanent": "I gcónaí",
+    "permitted": "Ceadaithe",
+    "personalize": "Déan Leat Féin De",
+    "pick": "Roghnaigh",
+    "play": "Seinn",
+    "preferences": "Do Roghanna",
+    "premium": "Gnéithe Iomlána",
+    "prepare": "Bí Ullamh",
+    "primary": "Príomh",
+    "profile": "Do Chuid Faisnéise",
+    "publish": "Comhroinn",
+    "read": "Léigh",
+    "readOnly": "Amharc Amháin",
+    "readWrite": "Is féidir eagarthóireacht a dhéanamh",
+    "ready": "Réidh",
+    "recent": "Le déanaí",
+    "recommended": "Molaimid",
+    "register": "Cláraigh",
+    "reject": "Ná Glac",
+    "rejected": "Níor Glacadh leis",
+    "reload": "Athnuachan",
+    "remove": "Bain",
+    "required": "Riachtanach",
+    "reset": "Tosaigh Arís",
+    "resize": "Athraigh Méid",
+    "restart": "Tosaigh Arís",
+    "resume": "Lean ar aghaidh",
+    "retry": "Bain Triail Arís",
+    "right": "Ar dheis",
+    "rotate": "Cas",
+    "scale": "Athraigh méid",
+    "search": "Cuardaigh",
+    "secondary": "Eile",
+    "secure": "Sábháilte",
+    "select": "Roghnaigh",
+    "semiAutomatic": "Uathoibríoch go Páirteach",
+    "settings": "Do Roghanna",
+    "setup": "Socraigh Seo",
+    "show": "Taispeáin",
+    "sign": "Sínigh",
+    "signin": "Sínigh Isteach",
+    "signout": "Sínigh Amach",
+    "signup": "Cruthaigh Cuntas",
+    "sort": "Eagraigh",
+    "standard": "Rialta",
+    "start": "Tosaigh",
+    "stop": "",
+    "submit": "Seol",
+    "suggested": "Molaimid",
+    "supplementary": "Breise",
+    "supported": "Oibríonn Le",
+    "synced": "Suas chun Dáta",
+    "temporary": "Faoi láthair",
+    "tertiary": "Rogha Eile",
+    "top": "Barr",
+    "transform": "Athraigh",
+    "translate": "Aistrigh",
+    "unarchive": "Tabhair Ar Ais",
+    "unauthenticated": "Gan Sínithe Isteach",
+    "unauthorized": "Ní Cheadaítear",
+    "unconfirmed": "Gan Deimhniú",
+    "unencrypted": "Ní Slán",
+    "ungroup": "Ar leithligh",
+    "unlock": "Díghlasáil",
+    "unpublish": "Déan Príobháideach",
+    "unsupported": "Ní Comhoiriúnach",
+    "unvalidated": "Gan Seiceáil",
+    "unverified": "Gan Fíorú",
+    "upToDate": "Reatha",
+    "update": "Nuashonrú",
+    "upgrade": "Faigh Leagan Níos Fearr",
+    "valid": "Bailí",
+    "validate": "Seiceáil Seo",
+    "validated": "Seiceáilte",
+    "verified": "Fíoraithe",
+    "verify": "Fíoraigh",
+    "viewOnly": "Ag Breathnú Agat",
+    "zoomIn": "Déan Níos Mó",
+    "zoomOut": "Déan Níos Lú"
+  },
+  "app": {
+    "name": "Ainm",
+    "tagline": "Slogan"
+  },
+  "auth": {
+    "loginButton": "Cnaipe logála isteach",
+    "signUpLink": "Nasc clárúcháin",
+    "signupButton": "Cnaipe clárúcháin"
+  },
+  "debug": {
+    "panel": {
+      "actions": {
+        "clearAllErrors": "Glan gach earráid",
+        "downloadErrors": "Earráidí íoslódála"
+      },
+      "error": {
+        "errorMessage": "Teachtaireacht earráide",
+        "noMessage": "Gan teachtaireacht",
+        "unknownError": "Earráid anaithnid"
+      },
+      "errorCount": "Líon na n-earráidí",
+      "recentErrors": "Earráidí le déanaí",
+      "sections": {
+        "browserInfo": "Eolas brabhsálaí",
+        "context": "Comhthéacs",
+        "location": "Suíomh",
+        "stackTrace": "Rian cruachta",
+        "time": "Am"
+      },
+      "title": "Teideal"
+    },
+    "translationTest": {
+      "available_languages_3": "Teangacha atá ar fáil 3",
+      "current_language_2": "Teanga reatha 2",
+      "dashboard_stats_translations_4": "Aistriúcháin staitisticí painéil 4",
+      "exists_5": "Tá 5 ann",
+      "raw_resource_check_6": "Seiceáil acmhainní amh 6",
+      "translation_debug_test_1": "Tástáil dífhabhtaithe aistriúcháin 1"
+    }
+  },
+  "firstTimeGuide": {
+    "getStarted": "Tosaigh",
+    "step1": {
+      "description": "Cur síos",
+      "detail1": "Mionsonraí1",
+      "detail2": "Mionsonraí2",
+      "detail3": "Sonraigh3",
+      "title": "Teideal"
+    },
+    "step2": {
+      "description": "Cur síos",
+      "detail1": "Mionsonraí1",
+      "detail2": "Mionsonraí2",
+      "detail3": "Sonraigh3",
+      "title": "Teideal"
+    },
+    "step3": {
+      "description": "Cur síos",
+      "detail1": "Mionsonraí1",
+      "detail2": "Mionsonraí2",
+      "detail3": "Sonraigh3",
+      "title": "Teideal"
+    },
+    "tip": {
+      "description": "Cur síos",
+      "title": "Teideal"
+    }
+  },
+  "index": {
+    "startBuilding": "Tosaigh ag tógáil",
+    "welcome": "Fáilte"
+  },
+  "landing": {
+    "pricingSection": {
+      "upgrade_with_stripe_1": "Uasghrádaigh le Stripe 1"
+    }
+  },
+  "languages": {
+    "en": "Béarla",
+    "selectLanguage": "Roghnaigh teanga",
+    "sk": "Slóivéinis"
+  },
+  "loading": "Ag luchtú",
+  "manual": {
+    "contacts": {
+      "addContact": "Cuir teagmhálaí leis",
+      "addFirstContact": "Cuir an chéad teagmhálaí leis",
+      "card": {
+        "edit": "Cuir in Eagar"
+      },
+      "description": "Cur síos",
+      "empty": {
+        "description": "Cur síos",
+        "title": "Teideal"
+      },
+      "form": {
+        "addTitle": "Cuir teideal leis",
+        "description": "Cur síos",
+        "editTitle": "Cuir an teideal in eagar"
+      },
+      "loading": "Ag luchtú",
+      "title": "Teideal"
+    },
+    "documents": {
+      "card": {
+        "essentialNote": "Nóta riachtanach"
+      },
+      "description": "Cur síos",
+      "empty": {
+        "description": "Cur síos",
+        "tip": "Leid",
+        "title": "Teideal"
+      },
+      "expiration": {
+        "expired": "Imithe in éag",
+        "expiresSoon": "Rachaidh in éag go luath",
+        "expiring": "Ag dul in éag"
+      },
+      "loading": "Ag luchtú",
+      "title": "Teideal"
+    },
+    "errors": {
+      "dataNotFound": "Níor aimsíodh sonraí",
+      "deleteContact": "Scrios an teagmhálaí",
+      "duplicateEntry": "Iontráil dhúblach",
+      "loadContacts": "Luchtaigh teagmhálacha",
+      "loadInstructions": "Luchtaigh treoracha",
+      "loadKeyDocuments": "Luchtaigh doiciméid thábhachtacha",
+      "network": "Líonra",
+      "noPermission": "Gan cead",
+      "saveContact": "Sábháil teagmhálaí",
+      "saveInstructions": "Sábháil treoracha",
+      "unknown": "Anaithnid"
+    },
+    "instructions": {
+      "autoSaveNote": "Nóta sábháil uathoibríoch",
+      "description": "Cur síos",
+      "digitalAccounts": {
+        "description": "Cur síos",
+        "placeholder": "Coinnitheoir áite",
+        "title": "Teideal"
+      },
+      "funeral": {
+        "description": "Cur síos",
+        "placeholder": "Coinnitheoir áite",
+        "title": "Teideal"
+      },
+      "loading": "Ag luchtú",
+      "title": "Teideal"
+    },
+    "subtitle": "Fotheideal",
+    "title": "Teideal"
+  },
+  "notifications": {
+    "daysAgo": "Laethanta ó shin",
+    "empty": "Folamh",
+    "hoursAgo": "Uaireanta ó shin",
+    "justNow": "Díreach anois",
+    "loading": "Ag luchtú",
+    "title": "Teideal",
+    "viewAll": "Féach ar gach rud",
+    "yesterday": "Inné"
+  },
+  "subscriptions": {
+    "subscriptionDashboard": {
+      "_1": ""
+    }
+  },
+  "testimonials": {
+    "compliance": {
+      "dataProtection": "Sonraí faoi Chosaint",
+      "gdpr": "Comhlíontach le GDPR",
+      "iso": ""
+    },
+    "stats": {
+      "families": "",
+      "familiesLabel": "muinín ag teaghlaigh ionainn"
+    }
+  },
+  "themeToggle": {
+    "dark": "Dorcha",
+    "light": "Solas",
+    "system": "Córas",
+    "toggleTheme": "Téama a scoránaigh"
+  },
+  "upgradeCard": {
+    "defaultButtonText": "Uasghrádaigh Anois",
+    "pricing": "/praghsáil"
+  },
+  "whatIfScenarios": {
+    "businessTravel": {
+      "impact": "Tionchar",
+      "title": "Teideal"
+    },
+    "disabilityIncapacity": {
+      "impact": "Tionchar",
+      "title": "Teideal"
+    },
+    "duration": "Fad",
+    "hospitalStay": {
+      "impact": "Tionchar",
+      "title": "Teideal"
+    },
+    "missing": "Ar iarraidh",
+    "needs": "Riachtanais",
+    "readiness": "Ullmhacht",
+    "requirements": "Riachtanais",
+    "suddenDeath": {
+      "impact": "Tionchar",
+      "title": "Teideal"
+    }
+  },
+  "accessibility": {
+    "fontSize": "Méid cló",
+    "visualSettings": "Socruithe amhairc"
+  },
+  "solution": {
+    "feature1": {
+      "benefits": "Sochair",
+      "description": "Cur síos",
+      "title": "Teideal"
+    },
+    "feature2": {
+      "benefits": "Sochair",
+      "description": "Cur síos",
+      "title": "Teideal"
+    },
+    "feature3": {
+      "benefits": "Sochair",
+      "description": "Cur síos",
+      "title": "Teideal"
+    },
+    "feature4": {
+      "benefits": "Sochair",
+      "description": "Cur síos",
+      "title": "Teideal"
+    },
+    "sectionSubtitle": "Fotheideal na rannóige",
+    "sectionTitle": "Teideal na rannóige"
+  }
 }

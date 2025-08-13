@@ -1,1 +1,1036 @@
-{}
+{
+  "crisisAssessment": {
+    "familyCapabilities": "Capacități familiale",
+    "familyDiscussion": "Discuție în familie",
+    "familyDiscussionDescription": "Descrierea discuției de familie"
+  },
+  "errors": {
+    "loadingFamily": "Am întâmpinat probleme cu încărcarea persoanelor dvs. de încredere. Vă rugăm să actualizați pagina.",
+    "accessDenied": "Nu puteți modifica informațiile acestei persoane acum.",
+    "assigningRole": "Nu le-am putut acorda acest rol. Vă rugăm să încercați din nou.",
+    "dataNotFound": "Nu am putut găsi acea informație",
+    "duplicatePerson": "Această persoană este deja printre persoanele tale de încredere.",
+    "duplicateRecord": "Aceasta este deja salvată",
+    "grantingAccess": "Nu le-am putut acorda acces. Vă rugăm să încercați din nou.",
+    "invalidEmail": "Adresa de e-mail nu pare corectă. Vă rugăm să o verificați.",
+    "invalidPhone": "Numărul de telefon nu pare corect. Vă rugăm să îl verificați.",
+    "networkError": "Problemă de conexiune. Vă rugăm să verificați conexiunea la internet.",
+    "permissionDenied": "Nu aveți permisiunea de a face asta",
+    "removingPerson": "Nu le-am putut elimina din lista persoanelor de încredere. Vă rugăm să încercați din nou.",
+    "roleConflict": "Ei au deja un rol diferit care intră în conflict cu acesta.",
+    "savingPerson": "Nu am putut salva informațiile lor. Vă rugăm să verificați și să încercați din nou.",
+    "sendingInvitation": "Nu am putut trimite invitația. Vă rugăm să verificați e-mailul lor și să încercați din nou.",
+    "unknown": "Ceva nu a mers bine"
+  },
+  "familyCapabilities": {
+    "businessOperations": "Operațiuni comerciale",
+    "canAccessBankAccounts": "Poate accesa conturile bancare",
+    "canAccessDigitalAccounts": "Poate accesa conturi digitale",
+    "canFileInsuranceClaims": "Poate depune cereri de despăgubire la asigurare",
+    "canManageBusiness": "Poate gestiona afacerea",
+    "cannotAccessBankAccounts": "Nu pot accesa conturile bancare",
+    "cannotAccessDigitalAccounts": "Nu pot accesa conturile digitale",
+    "cannotFileInsuranceClaims": "Nu se pot depune cereri de despăgubire la asigurare",
+    "clearInheritancePlan": "Plan clar de moștenire",
+    "digitalAccess": "Acces digital",
+    "digitalAccounts": "Conturi digitale",
+    "immediateFinancialNeeds": "Nevoi financiare imediate",
+    "inheritance": "Moştenire",
+    "insuranceClaims": "Cereri de despăgubire",
+    "knowsLegalContacts": "Cunoaște contactele juridice",
+    "knowsMedicalWishes": "Cunoaște dorințele medicale",
+    "legalMatters": "Probleme juridice",
+    "medicalDecisions": "Decizii medicale",
+    "noBusinessInfo": "Nicio informație despre afacere",
+    "noInheritancePlan": "Fără plan de moștenire",
+    "noLegalContacts": "Fără contacte juridice",
+    "noMedicalInfo": "Fără informații medicale",
+    "partialBusinessInfo": "Informații parțiale despre afacere",
+    "partialInheritancePlan": "Plan de moștenire parțială",
+    "partialMedicalInfo": "Informații medicale parțiale",
+    "payBills": "Plătește facturi"
+  },
+  "familyCrisisAssessment": {
+    "15_1": "15 1"
+  },
+  "familyExecutorView": {
+    "communications": {
+      "description": "Descriere",
+      "empty": "Gol",
+      "title": "Titlu",
+      "to": "La"
+    },
+    "executor": "Executor testamentar",
+    "footer": "Subsol",
+    "subtitle": "Subtitlu",
+    "theExecutor": "Executorul",
+    "title": "Titlu"
+  },
+  "familyHub": {
+    "accessLevels": {
+      "emergencyOnly": {
+        "description": "Descriere",
+        "fullDescription": "Descriere completă",
+        "title": "Titlu"
+      },
+      "fullAccess": {
+        "description": "Descriere",
+        "fullDescription": "Descriere completă",
+        "title": "Titlu"
+      },
+      "limitedInfo": {
+        "description": "Descriere",
+        "fullDescription": "Descriere completă",
+        "title": "Titlu"
+      },
+      "none": {
+        "description": "Descriere",
+        "title": "Titlu"
+      }
+    },
+    "emergencyProtocol": {
+      "activeMessage": "Mesaj activ",
+      "configure": "Configurați",
+      "configured": "Configurat",
+      "description": "Descriere",
+      "title": "Titlu"
+    },
+    "errors": {
+      "authenticationRequired": "Autentificare necesară",
+      "failedToFetchData": "Nu s-au putut prelua datele",
+      "failedToLoadMembers": "Nu s-au putut încărca membrii"
+    },
+    "memberManagement": {
+      "addMorePeople": "Adăugați mai multe persoane",
+      "addTrustedPerson": "Adăugați o persoană de încredere",
+      "daysAgo": "Acum câteva zile",
+      "informationAccessLevel": "Nivelul de acces la informații",
+      "lastContactOver30Days": "Ultimul contact peste 30 de zile",
+      "lastContacted": "Ultima contactare",
+      "preparedness": "Pregătire",
+      "sendUpdate": "Trimiteți actualizarea",
+      "sendUpdateTo": "Trimiteți actualizarea către",
+      "title": "Titlu"
+    },
+    "messages": {
+      "accessLevelUpdated": "Nivelul de acces a fost actualizat",
+      "failedToSendUpdate": "Nu s-a putut trimite actualizarea",
+      "updateSentTo": "Actualizare trimisă către"
+    },
+    "overallPreparedness": {
+      "description": "Descriere",
+      "improvementNeeded": "Îmbunătățiri necesare",
+      "title": "Titlu"
+    },
+    "subtitle": "Subtitlu",
+    "tabs": {
+      "familyMembers": "Membrii familiei",
+      "members": "Membri",
+      "preparednessTools": "Instrumente de pregătire",
+      "tools": "Instrumente"
+    },
+    "title": "Titlu"
+  },
+  "familyPreparednessTools": {
+    "create_a_printable_guide_for_y_3": "Creați un ghid imprimabil pentru clasa a 3-a",
+    "errors": {
+      "comingSoon": "În curând",
+      "generateFailed": "Generarea a eșuat",
+      "premiumRequired": "Premium necesar",
+      "selectScenario": "Selectați scenariul"
+    },
+    "generate_another_5": "Generați încă 5",
+    "generate_emergency_guide_2": "Generați ghidul de urgență 2",
+    "guides": {
+      "death": {
+        "bankAccounts": "Conturi bancare",
+        "contactExecutor": "Contactați executorul",
+        "contactLawyer": "Contactați un avocat",
+        "deathCertificate": "Certificat de deces",
+        "disclaimer": "Declinare de responsabilitate",
+        "employer": "Angajator",
+        "financialInstitutions": "Instituții financiare",
+        "first24Hours": "Primele 24 de ore",
+        "generatedOn": "Generat pe",
+        "importantDocuments": "Documente importante",
+        "insuranceCompanies": "Companiile de asigurări",
+        "investmentAccounts": "Conturi de investiții",
+        "locateWill": "Localizați va",
+        "peopleToNotify": "Persoane de notificat",
+        "secureResidence": "Reședință sigură",
+        "socialSecurity": "Securitate Socială",
+        "title": "Titlu"
+      },
+      "emergency": {
+        "address": "Adresa",
+        "attorney": "Avocat",
+        "emergency": "Urgență",
+        "financialAdvisor": "Consultant financiar",
+        "homeInformation": "Informații despre casă",
+        "insuranceAgent": "Agent de asigurări",
+        "keyContacts": "Contacte cheie",
+        "securitySystem": "Sistem de securitate",
+        "spouse": "Soț/soție",
+        "title": "Titlu",
+        "utilities": "Utilități"
+      },
+      "hospitalization": {
+        "allergies": "Alergii",
+        "bloodType": "Grupa sanguină",
+        "currentMedications": "Medicamente actuale",
+        "emergencyContacts": "Contacte de urgență",
+        "healthcarePowerOfAttorney": "Procură în domeniul sănătății",
+        "hipaaRelease": "Lansare Hipaa",
+        "legalDocuments": "Documente juridice",
+        "livingWill": "Testament biologic",
+        "medicalInformation": "Informații medicale",
+        "preferredHospital": "Spital preferat",
+        "primaryCarePhysician": "Medic de familie",
+        "title": "Titlu"
+      },
+      "missing": {
+        "bankingApps": "Aplicații bancare",
+        "checkHospitals": "Verificați spitalele",
+        "checkWithWorkplace": "Verificați la locul de muncă",
+        "contactCloseFriends": "Contactează-ți prietenii apropiați",
+        "contactLocalPolice": "Contactați poliția locală",
+        "digitalFootprint": "Amprentă digitală",
+        "email": "E-mail",
+        "immediateActions": "Acțiuni imediate",
+        "phoneProvider": "Furnizor de telefonie",
+        "socialMedia": "Rețele sociale",
+        "title": "Titlu"
+      }
+    },
+    "mockContent": {
+      "insurancePolicies": "Polițe de asigurare"
+    },
+    "scenarios": {
+      "death": {
+        "description": "Descriere",
+        "title": "Titlu"
+      },
+      "emergency": {
+        "description": "Descriere",
+        "title": "Titlu"
+      },
+      "hospitalization": {
+        "description": "Descriere",
+        "title": "Titlu"
+      },
+      "missing": {
+        "description": "Descriere",
+        "title": "Titlu"
+      }
+    },
+    "select_scenario_4": "Selectați scenariul 4",
+    "tools": {
+      "cancel": "Anula",
+      "chooseScenario": "Alegeți scenariul",
+      "emergencySimulator": "Simulator de urgență",
+      "emergencySimulatorDesc": "Descrierea simulatorului de urgență",
+      "generateGuide": "Generați ghidul",
+      "generating": "Generarea",
+      "informationTreasureHunt": "Vânătoare de comori informaționale",
+      "launch": "Lansa",
+      "printGuide": "Ghid de imprimare",
+      "stepByStepGuides": "Ghiduri pas cu pas",
+      "stepByStepGuidesDesc": "Ghiduri pas cu pas descrieri",
+      "treasureHuntDesc": "Descrieri despre vânătoarea de comori",
+      "videoMessages": "Mesaje video",
+      "videoMessagesDesc": "Descrierea mesajelor video"
+    },
+    "use_these_tools_to_ensure_your_1": "Folosește aceste instrumente pentru a te asigura că 1"
+  },
+  "form": {
+    "additionalRoles": "Alte modalități prin care pot ajuta",
+    "assignedRoles": "Cum îți vor ajuta familia",
+    "selectRoles": "Alege cum îți pot ajuta familia",
+    "accessDescription": "Ce pot vedea și când pot ajuta",
+    "accessInfo": "Ce pot face ei",
+    "accessLevel": "Cât de mult pot vedea",
+    "addPerson": "Adaugă pe cineva care să te ajute",
+    "alternatePhone": "Un alt număr de telefon",
+    "backupFor": "Sunt o rezervă pentru",
+    "backupHelper": "Pentru cine vor interveni dacă va fi nevoie",
+    "capabilities": "De ce sunt potriviți pentru asta",
+    "capabilitiesHelper": "Ce îi face o alegere bună pentru a ajuta?",
+    "compensation": "Dacă au nevoie de sprijin",
+    "compensationHelper": "Orice ajutor financiar de care ar putea avea nevoie",
+    "contactInfo": "Cum să ajungeți la ei",
+    "dateOfBirth": "Ziua de naștere",
+    "editPerson": "Putem actualiza informațiile lor",
+    "emailAddress": "E-mail",
+    "fullName": "Numele lor complet",
+    "fullNameHelper": "Folosiți numele lor legal pentru documentele importante",
+    "fullNamePlaceholder": "Numele lor legal complet",
+    "homeAddress": "Unde locuiesc",
+    "instructions": "Lucruri importante pe care ar trebui să le știe",
+    "instructionsHelper": "Orice îndrumare specială pentru a vă ajuta familia",
+    "instructionsPlaceholder": "Ce trebuie să știe pentru a ajuta",
+    "limitations": "Lucruri de care trebuie să fii conștient",
+    "limitationsHelper": "Orice lucru care le-ar putea îngreuna ajutorul",
+    "personalInfo": "Despre ei",
+    "primaryPhone": "Cel mai bun număr de telefon",
+    "primaryRole": "Modul principal în care vor ajuta",
+    "relationship": "Cum îi cunoști",
+    "relationshipPlaceholder": "Ca soț/soție, copil, frate/soră, cel mai bun prieten",
+    "roleInfo": "Cum te vor ajuta",
+    "workAddress": "Unde lucrează"
+  },
+  "preparedness": {
+    "familyBenefit": "Alocație familială",
+    "familyCommunication": {
+      "description": "Descriere",
+      "scheduleReview": "Revizuirea programului",
+      "shareReport": "Distribuiți raportul",
+      "title": "Titlu"
+    },
+    "gaps": {
+      "basicAccessInfo": "Informații de acces de bază",
+      "addMedicalPreferences": "Adăugați preferințe medicale",
+      "completeFinancialAccess": "Acces financiar complet",
+      "documentBusinessOperations": "Documentați operațiunile de afaceri",
+      "improveImmediateAccess": "Îmbunătățiți accesul imediat",
+      "updateWillAndTrust": "Actualizați voința și încrederea"
+    },
+    "levels": {
+      "goodBasic": "Bună și simplă",
+      "fullyPrepared": "Complet pregătit",
+      "minimalPreparation": "Pregătire minimă",
+      "needsImmediate": "Nevoi imediate",
+      "somePreparation": "O oarecare pregătire",
+      "wellPrepared": "Bine pregătit"
+    },
+    "assessments": {
+      "decisionMaking": {
+        "good": "Bun",
+        "needsWork": "Necesită lucrări"
+      },
+      "immediateAccess": {
+        "good": "Bun",
+        "needsWork": "Necesită lucrări"
+      },
+      "longTermSecurity": {
+        "good": "Bun",
+        "needsWork": "Necesită lucrări"
+      }
+    },
+    "dimensions": {
+      "decisionMaking": "Luarea deciziilor",
+      "immediateAccess": "Acces imediat",
+      "longTermSecurity": "Securitate pe termen lung"
+    },
+    "impact": "Impact",
+    "improvements": {
+      "addBankAccounts": "Adăugați conturi bancare",
+      "documentMedicalWishes": "Documentați dorințele medicale",
+      "uploadLegalDocuments": "Încărcați documente legale"
+    },
+    "nextStep": "Pasul următor",
+    "scenarioReadiness": "Pregătirea pentru scenarii",
+    "scenarios": {
+      "extendedTravel": {
+        "description": "Descriere",
+        "title": "Titlu"
+      },
+      "suddenDeath": {
+        "description": "Descriere",
+        "title": "Titlu"
+      }
+    },
+    "title": "Titlu",
+    "toImprove": "Pentru a îmbunătăți"
+  },
+  "relationships": {
+    "child": "Copil",
+    "friend": "Prieten",
+    "other": "Alte",
+    "parent": "Mamă",
+    "sibling": "Frate/Sora",
+    "spouse": "Soț/soție"
+  },
+  "roles": {
+    "advisor": "Consilier",
+    "beneficiary": "Beneficiar",
+    "caregiver": "Îngrijitor",
+    "emergencyContact": "Contact de urgență",
+    "executor": "Executor testamentar",
+    "financialAgent": "Agent financiar (împuternicire)",
+    "guardian": "Tutore",
+    "healthcareProxy": "Proxy pentru asistență medicală",
+    "representative": "Reprezentant",
+    "successor": "Copie de rezervă",
+    "trustee": "Administrator",
+    "witness": "Va fi martor"
+  },
+  "trustedCircle": {
+    "roles": "Cum pot ajuta",
+    "totalMembers": "{{count}} oameni gata să ajute",
+    "addFirst": "Putem adăuga pe cineva care ne poate ajuta",
+    "description": "Alege persoane de încredere care îți pot sprijini familia atunci când este nevoie.",
+    "empty": "Putem începe prin a adăuga pe cineva pe care familia ta se poate baza - un soț/o soție, un prieten apropiat sau un membru de încredere al familiei.",
+    "keyPeople": "Persoane cheie",
+    "recentlyAdded": "Adăugate recent",
+    "subtitle": "Oameni care vor fi acolo pentru familia ta",
+    "title": "Oameni de încredere",
+    "viewAll": "Vezi pe toată lumea"
+  },
+  "family": {
+    "GuardianPlaybook": {
+      "className": {
+        "flex_itemscenter_justifycenter_h64": "elemente flexibile-centru-justificare-centru h-64",
+        "grid_gridcols6_wfull": "grilă grilă-col-6 w-full",
+        "flex_itemscenter_gap2": "articole flexibile - spațiu central - 2",
+        "hidden_sminline": "sm ascuns: în linie",
+        "spacey4": "spațiu-y-4",
+        "minh200px": "min-h-[200px]",
+        "flex_justifybetween_itemscenter_mb4": "flex justificare-între-elemente-centru mb-4",
+        "grid_gridcols1_mdgridcols2_gap4": "grid grid-cols-1 md:grid-cols-2 gap-4",
+        "mdcolspan2": "md:col-span-2",
+        "minh80px": "min-h-[80px]",
+        "mt2": "mt-2",
+        "flex_itemscenter_justifybetween": "elemente flexibile - centru - justificare între"
+      },
+      "htmlFor": {
+        "funeral_wishes": "urări_de_înmormântare",
+        "digital_accounts": "conturi_digitale",
+        "document_locations": "locații_documente",
+        "personal_messages": "mesaje_personale",
+        "practical_instructions": "instrucțiuni_practice"
+      },
+      "id": {
+        "funeral_wishes": "urări_de_înmormântare",
+        "digital_accounts": "conturi_digitale",
+        "document_locations": "locații_documente",
+        "personal_messages": "mesaje_personale",
+        "practical_instructions": "instrucțiuni_practice"
+      },
+      "playbooktabskey": "familie.file.${key}",
+      "contactnameindex": "nume-contact-${index}",
+      "contactrelationshipindex": "relație-de-contact-${index}",
+      "contactphoneindex": "telefon-contact-${index}",
+      "contactemailindex": "e-mail de contact ${index}",
+      "contactnotesindex": "note-de-contact-${index}",
+      "playbookstatusstatus": "starea familiei.${status}"
+    },
+    "GuardianPlaybookView": {
+      "className": {
+        "minhscreen_flex_itemscenter_justifycenter": "min-h-screen flex element-centrare justificare-centrare",
+        "animatepulse_textcenter": "animate-pulse text-center",
+        "maxwmd": "max-w-md",
+        "minhscreen_bggradienttobr_frombackground_tomuted20": "min-h-screen bg-gradient-to-br de la fundal la dezactivat/20",
+        "container_mxauto_px4_py8_maxw4xl": "container mx-auto px-4 py-8 max-w-4xl",
+        "flex_itemscenter_justifycenter_w20_h20_roundedfull": "elemente flexibile centru-justificare-centru w-20 h-20 rotunjit-complet bg-primary/10 mx-auto mb-4",
+        "mt4": "mt-4",
+        "mb8": "mb-8",
+        "flex_itemscenter_gap2": "articole flexibile - spațiu central - 2",
+        "grid_gap4_mdgridcols2": "grid gap-4 md:grid-cols-2",
+        "spacey2": "spațiu-y-2",
+        "flex_itemsstart_justifybetween": "elemente flexibile - start justificare între",
+        "fontsemibold": "font-semibold",
+        "spacey1": "spațiu-y-1",
+        "flex_itemscenter_gap2_textsm_textprimary_hoverunde": "elemente flexibile-centru spațiu-2 text-sm text-primar trecere cu mouse-ul: subliniere",
+        "spacey6": "spațiu-y-6",
+        "prose_prosesm_maxwnone": "proză proză-sm max-w-none",
+        "whitespaceprewrap": "pre-încadrare spații albe",
+        "mt12_textcenter_textsm_textmutedforeground": "mt-12 text-center text-sm text-muted-foreground"
+      },
+      "telcontactphone": "tel:${contact.phone}",
+      "mailtocontactemail": "adresa de e-mail:${contact.email}"
+    }
+  },
+  "guardianUpload": {
+    "relationships": {
+      "child": "Copil",
+      "friend": "Prieten",
+      "legalProfessional": "profesionist juridic",
+      "other": "Alte",
+      "parent": "Mamă",
+      "sibling": "Frate/Sora",
+      "spouse": "Soț/soție"
+    },
+    "roles": {
+      "emergencyContact": "Contact de urgență",
+      "executorOfWill": "Executor testamentar",
+      "financialPowerOfAttorney": "Procură financiară",
+      "guardianForChildren": "Tutore pentru copii",
+      "healthcareProxy": "Proxy pentru asistență medicală",
+      "trustee": "Administrator"
+    },
+    "rolesTitle": "Titlul rolurilor",
+    "addButton": "Buton Adăugare",
+    "addTitle": "Adăugați titlu",
+    "added": "Adăugat",
+    "countryDescription": "Descrierea țării",
+    "countryLabel": "Etichetă de țară",
+    "countryPlaceholder": "Substitut pentru țară",
+    "description": "Descriere",
+    "editTitle": "Editați titlul",
+    "emailLabel": "Etichetă de e-mail",
+    "emailPlaceholder": "Substitut pentru e-mail",
+    "error": "Eroare",
+    "errors": {
+      "connectionError": "Eroare de conexiune",
+      "duplicateError": "Eroare duplicată",
+      "permissionError": "Eroare de permisiune",
+      "requiredDataNotFound": "Datele necesare nu au fost găsite",
+      "saveError": "Eroare de salvare",
+      "unknownError": "Eroare necunoscută"
+    },
+    "fullNameLabel": "Etichetă cu numele complet",
+    "fullNamePlaceholder": "Substitut pentru numele complet",
+    "loginToSave": "Conectați-vă pentru a salva",
+    "phoneLabel": "Etichetă telefonică",
+    "phonePlaceholder": "Substitut pentru telefon",
+    "relationshipLabel": "Etichetă de relație",
+    "relationshipPlaceholder": "Substitut pentru relație",
+    "saving": "Economisire",
+    "success": "Succes",
+    "updateButton": "Butonul Actualizare",
+    "updated": "Actualizat"
+  },
+  "familyMembers": "Membrii familiei",
+  "sensitivity": {
+    "step_family_dynamics": "Relațiile de familie vitregă necesită documentație clară",
+    "family_conflict": "Conflictele familiale necesită o claritate sporită în planificare",
+    "previous_marriage_obligations": "Obligațiile matrimoniale anterioare trebuie îndeplinite",
+    "absent_parent_considerations": "Situațiile cu părinți absenți necesită o planificare atentă",
+    "solo_responsibility_pressure": "Responsabilitățile unui părinte singur pot fi copleșitoare",
+    "inheritance_disputes": "Potențialele litigii privind moștenirea necesită prevenire",
+    "traditional_role_expectations": "Rolurile familiale tradiționale ar putea necesita atenție",
+    "disability_planning_stress": "Planificarea nevoilor speciale poate fi o provocare emoțională",
+    "long_term_care_concerns": "Planificarea îngrijirii pe termen lung este esențială"
+  },
+  "features": {
+    "family_communication_center": {
+      "title": "Centrul de Comunicare Familială",
+      "description": "Mențineți pe toată lumea informată și conectată"
+    },
+    "family_tree_visualizer": {
+      "title": "Vizualizator de arbore genealogic",
+      "description": "Cartografiați vizual relațiile familiale complexe"
+    },
+    "step_family_guidance": {
+      "title": "Îndrumare pentru familiile vitrege",
+      "description": "Navigați cu încredere în planificarea familială mixtă"
+    },
+    "family_meeting_tools": {
+      "title": "Instrumente pentru întâlniri de familie",
+      "description": "Facilitați discuțiile importante în familie"
+    },
+    "document_vault": {
+      "title": "Seif securizat pentru documente",
+      "description": "Stocați și partajați documente importante în siguranță"
+    },
+    "guardian_network_builder": {
+      "title": "Constructor de rețea Guardian",
+      "description": "Construiește o rețea puternică de sprijin pentru copiii tăi"
+    },
+    "single_parent_resources": {
+      "title": "Resurse pentru părinții singuri",
+      "description": "Instrumente specializate și suport pentru părinții singuri"
+    },
+    "complex_beneficiary_manager": {
+      "title": "Manager Beneficiar Complex",
+      "description": "Gestionați mai multe relații cu claritate"
+    },
+    "multi_generation_planner": {
+      "title": "Planificator multi-generațional",
+      "description": "Echilibrul nevoilor între toate generațiile"
+    },
+    "elder_care_resources": {
+      "title": "Resurse pentru îngrijirea vârstnicilor",
+      "description": "Sprijin pentru îngrijirea părinților în vârstă"
+    },
+    "special_needs_trust_wizard": {
+      "title": "Expertul de încredere pentru nevoi speciale",
+      "description": "Creați trusturi adecvate pentru membrii cu nevoi speciale"
+    },
+    "care_instruction_builder": {
+      "title": "Constructor de instrucțiuni de îngrijire",
+      "description": "Documentați cerințele detaliate de îngrijire"
+    },
+    "government_benefit_tracker": {
+      "title": "Urmărirea beneficiilor guvernamentale",
+      "description": "Asigurați eligibilitatea pentru beneficii importante"
+    },
+    "business_succession_planner": {
+      "title": "Planificator de succesiune în afaceri",
+      "description": "Planificați continuitatea afacerii"
+    },
+    "buy_sell_agreement_tracker": {
+      "title": "Urmărirea acordurilor de cumpărare-vânzare",
+      "description": "Gestionarea acordurilor de parteneriat comercial"
+    },
+    "remote_collaboration_tools": {
+      "title": "Instrumente de colaborare la distanță",
+      "description": "Lucrați împreună în ciuda distanței"
+    },
+    "multi_jurisdiction_guidance": {
+      "title": "Ghid multi-jurisdicțional",
+      "description": "Navigați prin legile din diferite locații"
+    }
+  },
+  "cultural": {
+    "extended_family_obligations": "Responsabilitățile familiei extinse",
+    "islamic_inheritance": "Principiile islamice ale moștenirii",
+    "jewish_traditions": "Tradițiile familiale evreiești",
+    "christian_values": "Valorile creștine ale administrării",
+    "buddhist_principles": "Principiile compasiunii budiste",
+    "patriarchal_hierarchy": "Structura patriarhală tradițională",
+    "matriarchal_hierarchy": "Structura matriarhală tradițională",
+    "elder_led_hierarchy": "Structura familială condusă de vârstnici",
+    "collective_decision_making": "Decizii familiale colective",
+    "elder_respect_obligations": "Obligațiile de îngrijire a persoanelor în vârstă",
+    "multilingual_documentation": "Nevoi de documentație multilingvă"
+  },
+  "access": {
+    "descriptions": {
+      "executor": "Ei pot gestiona totul pentru a ajuta familia ta",
+      "full": "Aceștia pot vedea și gestiona toate informațiile familiei tale",
+      "limited": "Pot vedea informațiile de contact de bază și instrucțiunile de urgență",
+      "standard": "Ei pot vedea majoritatea lucrurilor de care ar avea nevoie familia ta."
+    },
+    "levels": {
+      "executor": "Acces complet pentru ajutor",
+      "full": "Poate vedea totul",
+      "limited": "Doar informații de bază",
+      "standard": "Acces regulat pentru familii"
+    },
+    "permissions": {
+      "editInformation": "Poate face schimbări",
+      "manageAccess": "Poate gestiona alți ajutoare",
+      "viewAssets": "Îți poate vedea lucrurile importante",
+      "viewDocuments": "Poate citi documente"
+    }
+  },
+  "actions": {
+    "addPerson": "Putem adăuga o persoană de încredere",
+    "assignRole": "Putem atribui un rol",
+    "contactPerson": "Putem lua legătura",
+    "editPerson": "Actualizați-le informațiile",
+    "grantAccess": "Putem acorda acces",
+    "printSummary": "Putem imprima un rezumat",
+    "removePerson": "Putem elimina persoane de încredere",
+    "removeRole": "Le putem schimba rolul",
+    "revokeAccess": "Putem schimba ceea ce ei pot vedea",
+    "scheduleReview": "Putem programa o revizuire",
+    "sendInvitation": "Îi putem invita să ne ajute",
+    "setBackup": "Putem seta un ajutor de rezervă",
+    "viewProfile": "Putem vedea toate detaliile lor"
+  },
+  "common": {
+    "cancel": "Anula",
+    "fix": "Reparare",
+    "minutes": "Minute",
+    "start": "Început"
+  },
+  "estateStatus": {
+    "actions": {
+      "cancel": "Anula",
+      "update": "Actualizare",
+      "updating": "Actualizare"
+    },
+    "description": "Descriere",
+    "dialog": {
+      "description": "Descriere",
+      "title": "Titlu"
+    },
+    "empty": {
+      "noStatus": "Fără statut",
+      "readOnly": "Numai citire"
+    },
+    "fields": {
+      "additionalDetails": "Detalii suplimentare",
+      "status": "Stare"
+    },
+    "lastUpdated": "Ultima actualizare",
+    "logAction": "Acțiune în jurnal",
+    "placeholders": {
+      "additionalContext": "Context suplimentar",
+      "selectStatus": "Selectați starea"
+    },
+    "progress": "Progres",
+    "statuses": {
+      "assetsBeingValued": "Activele evaluate",
+      "debtsBeingSettled": "Datoriile în curs de achitare",
+      "distributionInProgress": "Distribuție în curs",
+      "estateClosed": "Proprietatea închisă",
+      "gatheringDocuments": "Colectarea documentelor",
+      "initialReview": "Revizuire inițială",
+      "probateInitiated": "Procedura de succesiune inițiată",
+      "readyForDistribution": "Gata de distribuție",
+      "taxPreparation": "Pregătirea impozitelor"
+    },
+    "title": "Titlu"
+  },
+  "guardian": {
+    "templateModal": {
+      "_1": "1"
+    }
+  },
+  "guardianView": {
+    "defaultUserName": "Nume de utilizator implicit",
+    "errors": {
+      "failedToLoad": "Încărcarea nu a reușit",
+      "pleaseLogin": "Vă rugăm să vă conectați"
+    },
+    "guardianInfo": {
+      "description": "Descriere",
+      "securityNote": "Notă de securitate"
+    },
+    "readOnlyAccess": "Acces doar pentru citire",
+    "sections": {
+      "finalWishes": {
+        "description": "Descriere",
+        "digitalAccounts": "Conturi digitale",
+        "empty": "Gol",
+        "funeralWishes": "Urări funerare",
+        "title": "Titlu"
+      },
+      "keyDocuments": {
+        "description": "Descriere",
+        "empty": "Gol",
+        "expires": "Expiră",
+        "keyDocumentBadge": "Insignă pentru documente cheie",
+        "noExpiration": "Fără expirare",
+        "title": "Titlu"
+      }
+    },
+    "subtitle": "Subtitlu",
+    "title": "Titlu"
+  },
+  "guardianship": {
+    "addDependent": "Adăugați pe cineva care are nevoie de îngrijire",
+    "alternateGuardian": "Îngrijitor de rezervă",
+    "careStandards": "Cum vrei să fie îngrijiți",
+    "childGuardians": "Cine va avea grijă de copiii voștri",
+    "dependentCare": "Planuri de îngrijire pentru cei dragi",
+    "description": "Alege oameni iubitori care vor avea grijă de copiii sau de membrii familiei tale care au nevoie de ajutor dacă tu nu poți fi acolo.",
+    "educationPreferences": "Dorințe pentru școală și educație",
+    "financialProvisions": "Bani pentru îngrijirea lor",
+    "guardianCompensation": "Sprijin pentru îngrijitor",
+    "guardianFor": "Cui îi va păsa {{name}}",
+    "guardianInstructions": "Cum să ai grijă de ei",
+    "guardianQualifications": "De ce sunt alegerea potrivită",
+    "healthcarePreferences": "Sănătate și îngrijire medicală",
+    "lifestylePreferences": "Viața de zi cu zi și activitățile",
+    "noChildren": "Nu ne-ați spus încă despre niciun copil sau membru al familiei care are nevoie de îngrijire.",
+    "primaryGuardian": "Îngrijitor de primă alegere",
+    "religiousPreferences": "Credință și valori",
+    "reportingRequirements": "Menținerea familiei la curent",
+    "subtitle": "Asigurându-vă că cei dragi sunt îngrijiți",
+    "temporaryGuardian": "Îngrijitor pe termen scurt",
+    "title": "Cine va avea grijă de cei dragi",
+    "visitationRights": "Aranjamente pentru vizitele familiei"
+  },
+  "notificationPreferences": {
+    "description": "Descriere",
+    "emailRequired": "Adresă de e-mail obligatorie",
+    "errors": {
+      "loadFailed": "Încărcarea a eșuat",
+      "updateFailed": "Actualizarea a eșuat"
+    },
+    "howItWorks": {
+      "point1": "Punctul 1",
+      "point2": "Punctul 2",
+      "point3": "Punctul 3",
+      "title": "Titlu"
+    },
+    "info": "Informații",
+    "lastUpdated": "Ultima actualizare",
+    "noEmail": "Fără e-mail",
+    "title": "Titlu"
+  },
+  "playbook": {
+    "addContact": "Adăugați contactul",
+    "autoSaveNotice": "Notificare de salvare automată",
+    "contact": "Contact",
+    "contactFields": {
+      "email": "E-mail",
+      "emailPlaceholder": "Substitut pentru e-mail",
+      "name": "Nume",
+      "namePlaceholder": "Substitut pentru nume",
+      "notes": "Note",
+      "notesPlaceholder": "Substitut pentru note",
+      "phone": "Telefon",
+      "phonePlaceholder": "Substitut pentru telefon",
+      "role": "Rol",
+      "rolePlaceholder": "Substitut pentru rol"
+    },
+    "errors": {
+      "loadFailed": "Încărcarea a eșuat",
+      "saveFailed": "Salvarea a eșuat"
+    },
+    "loading": "Încărcare",
+    "noContent": "Fără conținut",
+    "preview": "Previzualizare",
+    "save": "Salva",
+    "saving": "Economisire",
+    "sections": {
+      "digital": {
+        "description": "Descriere",
+        "placeholder": "Substitut",
+        "title": "Titlu"
+      },
+      "documents": {
+        "description": "Descriere",
+        "placeholder": "Substitut",
+        "title": "Titlu"
+      },
+      "funeral": {
+        "description": "Descriere",
+        "placeholder": "Substitut",
+        "title": "Titlu"
+      },
+      "practical": {
+        "description": "Descriere",
+        "placeholder": "Substitut",
+        "title": "Titlu"
+      }
+    },
+    "subtitle": {
+      "edit": "Edita",
+      "view": "Vedere"
+    },
+    "tabs": {
+      "digital": "Digital",
+      "documents": "Documente",
+      "funeral": "Înmormântare",
+      "instructions": "Instrucţiuni",
+      "practical": "Practic"
+    },
+    "templates": {
+      "append": "Adăuga",
+      "backToTemplates": "Înapoi la șabloane",
+      "description": "Descriere",
+      "existingContent": "Conținut existent",
+      "fillInVariables": "Completați variabilele",
+      "insertTemplate": "Inserați șablonul",
+      "preview": "Previzualizare",
+      "replace": "Înlocui",
+      "title": "Titlu",
+      "variableCount": "Număr de variabile",
+      "variablePlaceholder": "Substitut variabil"
+    },
+    "title": "Titlu",
+    "useTemplate": "Folosește șablonul",
+    "accessDenied": "Acces interzis",
+    "description": "Descriere",
+    "digitalAccounts": {
+      "description": "Descriere",
+      "label": "Eticheta",
+      "placeholder": "Substitut"
+    },
+    "discardChanges": {
+      "cancel": "Anula",
+      "confirm": "Confirma",
+      "description": "Descriere",
+      "title": "Titlu"
+    },
+    "documentLocations": {
+      "description": "Descriere",
+      "label": "Eticheta",
+      "placeholder": "Substitut"
+    },
+    "exitPreview": "Ieșire din previzualizare",
+    "fetchError": "Eroare de preluare",
+    "funeralWishes": {
+      "description": "Descriere",
+      "label": "Eticheta",
+      "placeholder": "Substitut"
+    },
+    "lastUpdated": "Ultima actualizare",
+    "notAuthenticated": "Neautentificat",
+    "notFound": {
+      "description": "Descriere",
+      "title": "Titlu"
+    },
+    "practicalInstructions": {
+      "description": "Descriere",
+      "label": "Eticheta",
+      "placeholder": "Substitut"
+    },
+    "saveError": "Eroare de salvare",
+    "saveSuccess": "Salvați succesul",
+    "titleReadOnly": "Titlu doar pentru citire",
+    "viewDescription": "Vedeți descrierea",
+    "viewFooter": "Vizualizați subsolul",
+    "viewTitle": "Vizualizare titlu"
+  },
+  "executor": {
+    "completed": "Finalizat",
+    "dashboard": {
+      "reminder": "Memento",
+      "subtitle": "Subtitlu",
+      "title": "Titlu"
+    },
+    "due": "Scadent",
+    "errors": {
+      "loadTasksFailed": "Încărcarea sarcinilor a eșuat",
+      "updateTaskFailed": "Sarcina de actualizare a eșuat"
+    },
+    "highPriority": "Prioritate ridicată",
+    "legalSupport": {
+      "button": "Buton",
+      "description": "Descriere",
+      "title": "Titlu"
+    },
+    "markComplete": "Marcare finalizată",
+    "sections": {
+      "firstWeek": {
+        "description": "Descriere",
+        "empty": "Gol",
+        "title": "Titlu"
+      },
+      "immediate": {
+        "description": "Descriere",
+        "empty": "Gol",
+        "title": "Titlu"
+      },
+      "ongoing": {
+        "description": "Descriere",
+        "empty": "Gol",
+        "title": "Titlu"
+      }
+    },
+    "stats": {
+      "completed": "Finalizat",
+      "remaining": "Rămas",
+      "totalTasks": "Sarcini totale"
+    },
+    "undo": "Anula",
+    "viewAccountDetails": "Vizualizați detaliile contului",
+    "viewRelatedDocuments": "Vizualizați documentele conexe"
+  },
+  "executorDashboard": {
+    "professional_guidance_1": "Îndrumare profesională 1"
+  },
+  "executorManagement": {
+    "add_new_executor_10": "Adăugați un nou executor 10",
+    "all_executors_must_have_legacy_23": "Toți executorii testamentari trebuie să aibă moștenire 23",
+    "current_executors_17": "Executori testamentari actuali 17",
+    "designate_trusted_individuals__9": "Desemnați persoane de încredere 9",
+    "email_address_11": "Adresă de e-mail 11",
+    "executor_example_com_12": "Exemplu de executor com 12",
+    "executor_management_8": "Managementul executorului 8",
+    "failed_to_add_executor_5": "Nu s-a putut adăuga executorul 5",
+    "failed_to_load_executors_2": "Nu s-au putut încărca executorii 2",
+    "failed_to_remove_executor_6": "Nu s-a putut elimina executorul 6",
+    "important_information_19": "Informații importante 19",
+    "loading_executors_7": "Încărcarea executorilor 7",
+    "no_executors_designated_yet_ad_18": "Încă nu au fost desemnați executori testamentari în anul 18.",
+    "primary_executor_14": "Executor principal 14",
+    "primary_executors_receive_imme_20": "Executorii principali primesc imediat 20",
+    "relationship_type_13": "Tipul de relație 13",
+    "secondary_executor_15": "Executor secundar 15",
+    "secondary_executors_are_notifi_21": "Executorii secundari sunt notificați 21",
+    "statusLabels": {
+      "addExecutor": "Adăugați executor",
+      "adding": "Adăugarea",
+      "unknownUser": "Utilizator necunoscut"
+    },
+    "this_person_is_already_designa_4": "Această persoană este deja desemnată 4.",
+    "user_not_found_with_this_email_3": "Utilizator negăsit cu această adresă de e-mail 3"
+  },
+  "invite": {
+    "title": "Titlu"
+  },
+  "inviteAcceptance": {
+    "buttons": {
+      "acceptRole": "Acceptă rolul",
+      "decline": "Declin",
+      "processing": "Prelucrare"
+    },
+    "defaultInviterName": "Numele implicit al invitatorului",
+    "disclaimer": "Declinare de responsabilitate",
+    "errors": {
+      "acceptFailed": "Acceptare eșuată",
+      "alreadyProcessed": "Deja procesat",
+      "declineFailed": "Refuzarea a eșuat",
+      "invalidLink": "Link nevalid",
+      "loadingFailed": "Încărcarea a eșuat",
+      "notFound": "Nu a fost găsit"
+    },
+    "guardianRole": {
+      "relationship": "Relaţie",
+      "responsibilities": "Responsabilități",
+      "title": "Titlu",
+      "yourName": "Numele dumneavoastră"
+    },
+    "loading": "Încărcare",
+    "notFound": {
+      "description": "Descriere",
+      "title": "Titlu"
+    },
+    "subtitle": "Subtitlu",
+    "whatThisMeans": {
+      "point1": "Punctul 1",
+      "point2": "Punctul 2",
+      "point3": "Punctul 3",
+      "point4": "Punctul 4",
+      "title": "Titlu"
+    }
+  },
+  "structures": {
+    "nuclear": "Familie tradițională",
+    "single_parent": "Familie monoparentală",
+    "blended": "Familie mixtă",
+    "multigenerational": "Familie multigenerațională",
+    "childless": "Cuplu fără copii",
+    "empty_nest": "Familia Cuib Gol",
+    "non_traditional": "Structura familială unică"
+  },
+  "complexity": {
+    "simple": "Simplu",
+    "moderate": "Moderat",
+    "complex": ""
+  },
+  "personalized": "Experiența ta personalizată de planificare familială",
+  "specialConsiderations": "Considerații speciale",
+  "recommendedFeatures": "Caracteristici recomandate",
+  "tabs": {
+    "overview": "Prezentare generală",
+    "insights": "Informații",
+    "features": "Caracteristici",
+    "cultural": ""
+  },
+  "keyConsiderations": "Considerații cheie pentru familia dumneavoastră",
+  "specialNeeds": "Nevoi speciale de planificare",
+  "sensitivities": "Zone care necesită îngrijire suplimentară",
+  "needs": {
+    "special_needs_planning": "Planificarea nevoilor speciale",
+    "long_term_care_planning": "Planificarea îngrijirii pe termen lung",
+    "special_needs_trust": "Trust pentru Nevoi Speciale",
+    "elder_care_planning": "Planificarea îngrijirii persoanelor vârstnice",
+    "multi_generational_wealth_transfer": "Transfer multigenerațional",
+    "military_benefit_planning": "Beneficii militare",
+    "deployment_planning": "Planificarea implementării",
+    "business_succession": "Succesiunea în afaceri",
+    "key_person_planning": "Planificarea persoanei cheie",
+    "young_child_guardianship": "Tutela copilului mic",
+    "education_planning": "Planificarea educației",
+    "sharia_compliant_planning": "Planificare conformă cu Sharia"
+  },
+  "insightType": {
+    "structure": "Structura familiei",
+    "need": "Nevoie specială",
+    "opportunity": "Oportunitate",
+    "risk": "Factorul de risc"
+  },
+  "priority": {
+    "high": "Prioritate ridicată",
+    "medium": "Prioritate medie",
+    "low": "Prioritate scăzută"
+  },
+  "suggestedActions": "Acțiuni sugerate",
+  "recommendedFeaturesTitle": "Caracteristici adaptate pentru familia ta",
+  "recommendedFeaturesDesc": "În funcție de structura și nevoile familiei tale, aceste caracteristici vor fi cele mai utile",
+  "culturalConsiderations": "Considerații culturale și religioase",
+  "culturalDesc": "Respectă valorile și tradițiile familiei tale în planificarea ta",
+  "noCulturalSettings": "Nu au fost setate preferințe culturale. Adăugați-le pentru a vă asigura că planificarea respectă valorile familiei dumneavoastră.",
+  "configureCultural": "Configurați preferințele culturale",
+  "culturalUpdated": "Preferințe culturale actualizate",
+  "culturalUpdatedDesc": "Planificarea familială va reflecta acum valorile și tradițiile tale culturale"
+}

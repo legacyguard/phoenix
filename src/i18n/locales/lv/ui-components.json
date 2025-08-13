@@ -1,2 +1,505 @@
 {
+  "terms": {
+    "vault": "Seifs",
+    "vaultLower": "velve",
+    "trustedCircle": "Uzticamais loks",
+    "trustedCircleLower": "uzticams loks",
+    "willGenerator": "Gribas ģenerators",
+    "willGeneratorLower": "gribas ģenerators",
+    "legacyLetters": "Mantojuma vēstules",
+    "secure": "Drošs",
+    "secureLower": "drošs"
+  },
+  "respectful": {
+    "status": {
+      "secured": "Nodrošināts",
+      "protected": "Aizsargāts",
+      "ready": "Gatavs",
+      "organized": "Organizēts",
+      "documented": "Dokumentēts",
+      "prepared": "Sagatavots"
+    },
+    "suggestions": {
+      "consider": "Apsveriet",
+      "whenReady": "Kad esat gatavs",
+      "mightWant": "Jūs varētu vēlēties",
+      "optional": "Pēc izvēles",
+      "recommended": "Ieteicams",
+      "noRush": "Nav steigas"
+    },
+    "progress": {
+      "gettingStarted": "Darba sākšana",
+      "makingProgress": "Progresa gūšana",
+      "wellOrganized": "Labi organizēts",
+      "comprehensive": "Visaptverošs",
+      "documentsSecured": "{{count}} dokuments ir aizsargāts",
+      "documentsSecured_plural": "{{count}} dokumenti ir aizsargāti"
+    },
+    "actions": {
+      "secure": "Drošs",
+      "add": "Pievienot",
+      "organize": "Organizēt",
+      "protect": "Aizsargāt",
+      "document": "Dokuments",
+      "prepare": "Sagatavot"
+    },
+    "tone": {
+      "respectful": "Cieņpilns",
+      "supportive": "Atbalstošs",
+      "clear": "Skaidrs",
+      "practical": "Praktisks"
+    }
+  },
+  "actions": {
+    "contactSupport": "Saņemt palīdzību",
+    "disable": "Izslēgt",
+    "enable": "Ieslēgt",
+    "goBack": "Atgriezties",
+    "refresh": "Atsvaidzināt",
+    "save": "Saglabājiet šo drošībā",
+    "accept": "Pieņemt",
+    "accepted": "Pieņemts",
+    "account": "Konts",
+    "activate": "Aktivizēt",
+    "add": "Pievienot",
+    "additional": "Vairāk",
+    "adjust": "Pielāgot",
+    "advanced": "Papildu opcijas",
+    "align": "Izlīdzināt",
+    "allowed": "Atļauts",
+    "alter": "Mainīt",
+    "approve": "Apstiprināt",
+    "approved": "Apstiprināts",
+    "arrange": "Organizēt",
+    "authenticate": "Apstipriniet savu identitāti",
+    "authenticated": "Verificēts",
+    "authorize": "Dot atļauju",
+    "authorized": "Atļauja piešķirta",
+    "automatic": "Automātiska",
+    "auxiliary": "Papildus",
+    "available": "Pieejams",
+    "backedUp": "Droši dublēts",
+    "basic": "Vienkāršs",
+    "begin": "Sāksim",
+    "blocked": "Bloķēts",
+    "bonus": "Papildus",
+    "bottom": "Apakšā",
+    "browse": "Skatieties cauri",
+    "center": "Centrs",
+    "change": "Mainīt",
+    "choose": "Izvēlieties",
+    "clear": "Skaidrs",
+    "clone": "Izveidot kopiju",
+    "close": "Aizvērt",
+    "collapse": "Slēpt informāciju",
+    "compatible": "Darbojas ar",
+    "complete": "Viss paveikts",
+    "configuration": "Iestatījumi",
+    "configure": "Iestatīt",
+    "confirm": "Jā, esmu pārliecināts",
+    "confirmed": "Apstiprināts",
+    "content": "Saturs",
+    "convert": "Mainīt formātu",
+    "create": "Izveidot jaunu",
+    "crop": "Apgriezt",
+    "current": "Pašreizējais",
+    "custom": "Pielāgots",
+    "customize": "Padariet to par savu",
+    "cut": "Griezt",
+    "deactivate": "Izslēgt",
+    "decline": "Nē, paldies",
+    "declined": "Noraidīts",
+    "decode": "Atšifrēt",
+    "decrypt": "Atbloķēt",
+    "default": "Standarta",
+    "denied": "Nav atļauts",
+    "deny": "Neatļaut",
+    "deselect": "Noņemt atlasi",
+    "disabled": "Izslēgts",
+    "done": "Viss gatavs",
+    "downgrade": "Izmantojiet vienkāršāku versiju",
+    "drag": "Velciet",
+    "drop": "Nometiet šeit",
+    "editable": "Var mainīt",
+    "enabled": "Ieslēgts",
+    "encode": "Kodēt",
+    "encrypt": "Saglabājiet drošību",
+    "encrypted": "Nodrošināts",
+    "end": "Beigas",
+    "enhance": "Uzlabot",
+    "enterprise": "Bizness",
+    "exitFullscreen": "Iziet no pilnekrāna režīma",
+    "expand": "Rādīt vairāk",
+    "export": "Lejupielādēt",
+    "extra": "Papildu",
+    "filter": "Rādīt tikai",
+    "find": "Meklēt",
+    "finish": "Pabeigts",
+    "flip": "Apgriezt",
+    "forbidden": "Nav atļauts",
+    "format": "Formāts",
+    "full": "Pilns",
+    "fullscreen": "Pilnekrāna režīms",
+    "grant": "Piešķirt piekļuvi",
+    "granted": "Piekļuve piešķirta",
+    "group": "Grupēt kopā",
+    "hash": "Drošības kods",
+    "hide": "Slēpt",
+    "historical": "Pagātne",
+    "import": "Ienest",
+    "improve": "Uzlabot",
+    "incompatible": "Nedarbosies",
+    "incomplete": "Nav pabeigts",
+    "insecure": "Nav drošs",
+    "internationalize": "Tulkot",
+    "invalid": "Nav derīgs",
+    "justify": "Izlīdzināt tekstu",
+    "latest": "Jaunākie",
+    "left": "Kreisā",
+    "localize": "Tulkot",
+    "lock": "Slēdzene",
+    "login": "Pierakstīties",
+    "logout": "Izrakstīties",
+    "main": "Galvenais",
+    "mandatory": "Obligāti",
+    "manual": "Dari pats",
+    "maximize": "Palielināt",
+    "middle": "Vidējais",
+    "minimize": "Samazināt",
+    "modify": "Mainīt",
+    "newest": "Jaunākie",
+    "nonEditable": "Nevar mainīt",
+    "notBackedUp": "Vēl nav dublēts",
+    "notSynced": "Vēl nav atjaunināts",
+    "oldest": "Vecākais",
+    "open": "Atvērt",
+    "optimize": "Uzlabot",
+    "optional": "Nav nepieciešams",
+    "options": "Izvēles iespējas",
+    "organize": "Organizēt",
+    "outdated": "Nepieciešams atjauninājums",
+    "parse": "Lasīt",
+    "partial": "Daži",
+    "paste": "Ielīmēt",
+    "pause": "Pauze",
+    "permanent": "Vienmēr",
+    "permitted": "Atļauts",
+    "personalize": "Padariet to par savu",
+    "pick": "Izvēlieties",
+    "play": "Spēlēt",
+    "preferences": "Jūsu izvēles",
+    "premium": "Pilnas funkcijas",
+    "prepare": "Gatavojieties",
+    "primary": "Galvenais",
+    "profile": "Jūsu informācija",
+    "publish": "Kopīgot",
+    "read": "Lasīt",
+    "readOnly": "Tikai skatīšanai",
+    "readWrite": "Var rediģēt",
+    "ready": "Gatavs",
+    "recent": "Jaunākie",
+    "recommended": "Mēs iesakām",
+    "register": "Reģistrēties",
+    "reject": "Nepieņemt",
+    "rejected": "Nav pieņemts",
+    "reload": "Atsvaidzināt",
+    "remove": "Noņemt",
+    "required": "Nepieciešams",
+    "reset": "Sākt no jauna",
+    "resize": "Mainīt izmēru",
+    "restart": "Sākt no jauna",
+    "resume": "Turpināt",
+    "retry": "Mēģiniet vēlreiz",
+    "right": "Pa labi",
+    "rotate": "Pagrieziens",
+    "scale": "Mainīt izmēru",
+    "search": "Meklēt",
+    "secondary": "Citi",
+    "secure": "Drošs",
+    "select": "Izvēlieties",
+    "semiAutomatic": "Daļēji automātiska",
+    "settings": "Jūsu preferences",
+    "setup": "Iestatīt šo",
+    "show": "Rādīt",
+    "sign": "Zīme",
+    "signin": "Pierakstīties",
+    "signout": "Izrakstīties",
+    "signup": "Izveidot kontu",
+    "sort": "Organizēt",
+    "standard": "Regulāri",
+    "start": "Sākt",
+    "stop": "Apstāties",
+    "submit": "Sūtīt",
+    "suggested": "Mēs iesakām",
+    "supplementary": "Papildus",
+    "supported": "Darbojas ar",
+    "synced": "Atjaunināts",
+    "temporary": "Pagaidām",
+    "tertiary": "Cita iespēja",
+    "top": "Augšā",
+    "transform": "Mainīt",
+    "translate": "Tulkot",
+    "unarchive": "Atgriezt atpakaļ",
+    "unauthenticated": "Nav pierakstījies",
+    "unauthorized": "Nav atļauts",
+    "unconfirmed": "Nav apstiprināts",
+    "unencrypted": "Nav drošs",
+    "ungroup": "Atsevišķi",
+    "unlock": "Atbloķēt",
+    "unpublish": "Padarīt privātu",
+    "unsupported": "Nav saderīgs",
+    "unvalidated": "Nav atzīmēts",
+    "unverified": "Nav verificēts",
+    "upToDate": "Pašreizējais",
+    "update": "Atjauninājums",
+    "upgrade": "Iegūstiet labāku versiju",
+    "valid": "Derīgs",
+    "validate": "Pārbaudiet šo",
+    "validated": "Pārbaudīts",
+    "verified": "Verificēts",
+    "verify": "Pārbaudīt",
+    "viewOnly": "Tikai skatos",
+    "zoomIn": "Palielināt",
+    "zoomOut": "Samazināt"
+  },
+  "app": {
+    "name": "Vārds",
+    "tagline": "Devīze"
+  },
+  "auth": {
+    "loginButton": "Pieteikšanās poga",
+    "signUpLink": "Reģistrācijas saite",
+    "signupButton": "Reģistrācijas poga"
+  },
+  "debug": {
+    "panel": {
+      "actions": {
+        "clearAllErrors": "Notīrīt visas kļūdas",
+        "downloadErrors": "Lejupielādes kļūdas"
+      },
+      "error": {
+        "errorMessage": "Kļūdas ziņojums",
+        "noMessage": "Nav ziņojumu",
+        "unknownError": "Nezināma kļūda"
+      },
+      "errorCount": "Kļūdu skaits",
+      "recentErrors": "Jaunākās kļūdas",
+      "sections": {
+        "browserInfo": "Pārlūkprogrammas informācija",
+        "context": "Konteksts",
+        "location": "Atrašanās vieta",
+        "stackTrace": "Steka izsekošanas dati",
+        "time": "Laiks"
+      },
+      "title": "Nosaukums"
+    },
+    "translationTest": {
+      "available_languages_3": "Pieejamās valodas 3",
+      "current_language_2": "Pašreizējā valoda 2",
+      "dashboard_stats_translations_4": "Informācijas paneļa statistikas tulkojumi 4",
+      "exists_5": "Pastāv 5",
+      "raw_resource_check_6": "Neapstrādātu resursu pārbaude 6",
+      "translation_debug_test_1": "Tulkojuma atkļūdošanas tests 1"
+    }
+  },
+  "firstTimeGuide": {
+    "getStarted": "Sākt darbu",
+    "step1": {
+      "description": "Apraksts",
+      "detail1": "Detaļa1",
+      "detail2": "Detaļa2",
+      "detail3": "Sīkāka informācija3",
+      "title": "Nosaukums"
+    },
+    "step2": {
+      "description": "Apraksts",
+      "detail1": "Detaļa1",
+      "detail2": "Detaļa2",
+      "detail3": "Sīkāka informācija3",
+      "title": "Nosaukums"
+    },
+    "step3": {
+      "description": "Apraksts",
+      "detail1": "Detaļa1",
+      "detail2": "Detaļa2",
+      "detail3": "Sīkāka informācija3",
+      "title": "Nosaukums"
+    },
+    "tip": {
+      "description": "Apraksts",
+      "title": "Nosaukums"
+    }
+  },
+  "index": {
+    "startBuilding": "Sākt būvniecību",
+    "welcome": "Laipni lūdzam"
+  },
+  "landing": {
+    "pricingSection": {
+      "upgrade_with_stripe_1": "Jauniniet ar 1. stripu"
+    }
+  },
+  "languages": {
+    "en": "Angļu",
+    "selectLanguage": "Izvēlieties valodu",
+    "sk": "Slovēņu"
+  },
+  "loading": "Ielādēšana",
+  "manual": {
+    "contacts": {
+      "addContact": "Pievienot kontaktu",
+      "addFirstContact": "Pievienot pirmo kontaktpersonu",
+      "card": {
+        "edit": "Rediģēt"
+      },
+      "description": "Apraksts",
+      "empty": {
+        "description": "Apraksts",
+        "title": "Nosaukums"
+      },
+      "form": {
+        "addTitle": "Pievienot nosaukumu",
+        "description": "Apraksts",
+        "editTitle": "Rediģēt nosaukumu"
+      },
+      "loading": "Ielādēšana",
+      "title": "Nosaukums"
+    },
+    "documents": {
+      "card": {
+        "essentialNote": "Būtiska piezīme"
+      },
+      "description": "Apraksts",
+      "empty": {
+        "description": "Apraksts",
+        "tip": "Padoms",
+        "title": "Nosaukums"
+      },
+      "expiration": {
+        "expired": "Beidzies derīguma termiņš",
+        "expiresSoon": "Drīz beigsies derīguma termiņš",
+        "expiring": "Beidzas derīguma termiņš"
+      },
+      "loading": "Ielādēšana",
+      "title": "Nosaukums"
+    },
+    "errors": {
+      "dataNotFound": "Dati nav atrasti",
+      "deleteContact": "Dzēst kontaktu",
+      "duplicateEntry": "Dublikāta ieraksts",
+      "loadContacts": "Ielādēt kontaktus",
+      "loadInstructions": "Ielādes instrukcijas",
+      "loadKeyDocuments": "Ielādēt galvenos dokumentus",
+      "network": "Tīkls",
+      "noPermission": "Nav atļaujas",
+      "saveContact": "Saglabāt kontaktu",
+      "saveInstructions": "Saglabāt norādījumus",
+      "unknown": "Nezināms"
+    },
+    "instructions": {
+      "autoSaveNote": "Automātiski saglabāt piezīmi",
+      "description": "Apraksts",
+      "digitalAccounts": {
+        "description": "Apraksts",
+        "placeholder": "Vietturis",
+        "title": "Nosaukums"
+      },
+      "funeral": {
+        "description": "Apraksts",
+        "placeholder": "Vietturis",
+        "title": "Nosaukums"
+      },
+      "loading": "Ielādēšana",
+      "title": "Nosaukums"
+    },
+    "subtitle": "Apakšvirsraksts",
+    "title": "Nosaukums"
+  },
+  "notifications": {
+    "daysAgo": "Pirms dažām dienām",
+    "empty": "Tukšs",
+    "hoursAgo": "Pirms stundām",
+    "justNow": "Tikko",
+    "loading": "Ielādēšana",
+    "title": "Nosaukums",
+    "viewAll": "Skatīt visu",
+    "yesterday": "Vakar"
+  },
+  "subscriptions": {
+    "subscriptionDashboard": {
+      "_1": ""
+    }
+  },
+  "testimonials": {
+    "compliance": {
+      "dataProtection": "Datu aizsardzība",
+      "gdpr": "Atbilst GDPR prasībām",
+      "iso": ""
+    },
+    "stats": {
+      "families": "10 000+",
+      "familiesLabel": "ģimenes mums uzticas"
+    }
+  },
+  "themeToggle": {
+    "dark": "Tumšs",
+    "light": "Gaisma",
+    "system": "Sistēma",
+    "toggleTheme": "Pārslēgt tēmu"
+  },
+  "upgradeCard": {
+    "defaultButtonText": "Jaunināt tūlīt",
+    "pricing": "/cenu noteikšana"
+  },
+  "whatIfScenarios": {
+    "businessTravel": {
+      "impact": "Ietekme",
+      "title": "Nosaukums"
+    },
+    "disabilityIncapacity": {
+      "impact": "Ietekme",
+      "title": "Nosaukums"
+    },
+    "duration": "Ilgums",
+    "hospitalStay": {
+      "impact": "Ietekme",
+      "title": "Nosaukums"
+    },
+    "missing": "Trūkst",
+    "needs": "Vajadzības",
+    "readiness": "Gatavība",
+    "requirements": "Prasības",
+    "suddenDeath": {
+      "impact": "Ietekme",
+      "title": "Nosaukums"
+    }
+  },
+  "accessibility": {
+    "fontSize": "Fonta lielums",
+    "visualSettings": "Vizuālie iestatījumi"
+  },
+  "solution": {
+    "feature1": {
+      "benefits": "Ieguvumi",
+      "description": "Apraksts",
+      "title": "Nosaukums"
+    },
+    "feature2": {
+      "benefits": "Ieguvumi",
+      "description": "Apraksts",
+      "title": "Nosaukums"
+    },
+    "feature3": {
+      "benefits": "Ieguvumi",
+      "description": "Apraksts",
+      "title": "Nosaukums"
+    },
+    "feature4": {
+      "benefits": "Ieguvumi",
+      "description": "Apraksts",
+      "title": "Nosaukums"
+    },
+    "sectionSubtitle": "Sadaļas apakšvirsraksts",
+    "sectionTitle": "Sadaļas nosaukums"
+  }
 }

@@ -99,6 +99,13 @@ export function usePWA(): PWAHook {
     };
   }, []);
 
+  // Update app function - defined before registerServiceWorker to avoid circular dependency
+  const updateApp = useCallback(() => {
+    if ("serviceWorker" in navigator && navigator.serviceWorker.controller) {
+      navigator.serviceWorker.controller.postMessage({ type: "SKIP_WAITING" });
+    }
+  }, []);
+
   // Register service worker and handle updates
   const registerServiceWorker = useCallback(async () => {
     try {
@@ -167,13 +174,6 @@ export function usePWA(): PWAHook {
       toast.error("Failed to install app");
     }
   }, [state.installPrompt]);
-
-  // Update app function
-  const updateApp = useCallback(() => {
-    if ("serviceWorker" in navigator && navigator.serviceWorker.controller) {
-      navigator.serviceWorker.controller.postMessage({ type: "SKIP_WAITING" });
-    }
-  }, []);
 
   // Check for updates manually
   const checkForUpdates = useCallback(async () => {

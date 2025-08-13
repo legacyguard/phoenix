@@ -92,7 +92,9 @@
     "notRequested": "Ako niste zahtijevali resetovanje lozinke, ignorišite ovaj email. Vaš nalog ostaje bezbjedan.",
     "linkExpiry": "Ovaj link za resetovanje lozinke ističe za 1 sat iz bezbjednosnih razloga.",
     "securityTip": "Radi bezbjednosti Vašeg naloga, preporučujemo Vam da koristite jaku, jedinstvenu lozinku koju ne koristite nigdje drugdje.",
-    "contactSupport": "Ako i dalje imate problema sa pristupom svom nalogu, kontaktirajte naš tim za podršku."
+    "contactSupport": "Ako i dalje imate problema sa pristupom svom nalogu, kontaktirajte naš tim za podršku.",
+    "instruction": "[TRANSLATE] Click the button below to reset your password.",
+    "alternativeLink": "[TRANSLATE] If the button doesn't work, copy and paste this link into your browser:"
   },
   "notifications": {
     "taskReminder": {
@@ -158,7 +160,12 @@
   "security": {
     "loginAlert": {
       "subject": "Novi pristup Vašem LegacyGuard nalogu",
-      "secureAccountButton": "Obezbijedite moj nalog"
+      "secureAccountButton": "Obezbijedite moj nalog",
+      "headline": "[TRANSLATE] Account Access Notification",
+      "message": "[TRANSLATE] We detected a new login to your account.",
+      "time": "[TRANSLATE] {{timestamp}}",
+      "location": "[TRANSLATE] {{location}}",
+      "device": "[TRANSLATE] {{device}}"
     },
     "suspiciousActivity": {
       "subject": "Bezbjednosno upozorenje: Otkrivena je neobična aktivnost na nalogu",
@@ -275,5 +282,37 @@
       "expiry": "Ovaj link za preuzimanje ističe za 7 dana iz bezbjednosnih razloga.",
       "format": "Format podataka: Bezbjedna ZIP datoteka sa JSON i PDF dokumentima",
       "security": "Preuzimanje je šifrovano i za pristup je potrebna lozinka Vašeg naloga."
-    }  }
+    }
+  },
+  "taskReminder": {
+    "headline": "[TRANSLATE] Your Family Protection Plan Needs Attention",
+    "message": "[TRANSLATE] You have {{count}} tasks that need your attention to keep your family protected.",
+    "instruction": "[TRANSLATE] Please log in to your account to review and complete these tasks.",
+    "urgent": "[TRANSLATE] Some tasks are marked as urgent and should be completed soon."
+  },
+  "documentExpiry": {
+    "headline": "[TRANSLATE] Document Renewal Reminder",
+    "message": "[TRANSLATE] The following document will expire soon and needs to be renewed:",
+    "documentName": "[TRANSLATE] {{documentName}}",
+    "expiryDate": "[TRANSLATE] Expires on {{date}}",
+    "instruction": "[TRANSLATE] Please log in to your account to upload the renewed document."
+  },
+  "ui": {
+    "loginAlert": {
+      "wasYou": "[TRANSLATE] If this was you, no action is needed.",
+      "notYou": "[TRANSLATE] If this wasn't you, please secure your account immediately.",
+      "action1": "[TRANSLATE] Change your password",
+      "action2": "[TRANSLATE] Enable two-factor authentication",
+      "action3": "[TRANSLATE] Contact our support team",
+      "supportContact": "[TRANSLATE] Our security team is available 24/7 to help you."
+    },
+    "taskReminder": {
+      "headline": "[TRANSLATE] Your Family Protection Plan Needs Attention",
+      "message": "[TRANSLATE] You have {{count}} tasks that need your attention."
+    },
+    "documentExpiry": {
+      "headline": "[TRANSLATE] Document Renewal Reminder",
+      "message": "[TRANSLATE] The following document will expire soon: {{documentName}}"
+    }
+  }
 }

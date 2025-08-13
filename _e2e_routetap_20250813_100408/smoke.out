@@ -1,0 +1,118 @@
+
+====================================================================================================
+
+  (Run Starting)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Cypress:        14.5.3                                                                         │
+  │ Browser:        Electron 130 (headless)                                                        │
+  │ Node Version:   v18.20.7 (/opt/homebrew/Cellar/node@18/18.20.7_1/bin/node)                     │
+  │ Specs:          1 found (00_smoke.cy.ts)                                                       │
+  │ Searched:       cypress/e2e/smoke/00_smoke.cy.ts                                               │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                    
+  Running:  00_smoke.cy.ts                                                                  (1 of 1)
+
+
+  SMOKE / basic page health
+    1) loads / without fatal errors and has interactive elements
+    2) loads /dashboard without fatal errors and has interactive elements
+    3) loads /upload-demo without fatal errors and has interactive elements
+    4) loads /will without fatal errors and has interactive elements
+    5) loads /legacy-letters without fatal errors and has interactive elements
+    6) loads /guardian-view without fatal errors and has interactive elements
+
+
+  0 passing (26s)
+  6 failing
+
+  1) SMOKE / basic page health
+       loads / without fatal errors and has interactive elements:
+     AssertionError: Timed out retrying after 4000ms: Expected to find element: `button,[role=button],input,select,textarea,a[href]`, but never found it.
+      at hasInteractive (webpack://vite_react_shadcn_ts/./cypress/e2e/smoke/00_smoke.cy.ts:13:5)
+      at Context.eval (webpack://vite_react_shadcn_ts/./cypress/e2e/smoke/00_smoke.cy.ts:38:6)
+
+  2) SMOKE / basic page health
+       loads /dashboard without fatal errors and has interactive elements:
+     AssertionError: Timed out retrying after 4000ms: Expected to find element: `button,[role=button],input,select,textarea,a[href]`, but never found it.
+      at hasInteractive (webpack://vite_react_shadcn_ts/./cypress/e2e/smoke/00_smoke.cy.ts:13:5)
+      at Context.eval (webpack://vite_react_shadcn_ts/./cypress/e2e/smoke/00_smoke.cy.ts:38:6)
+
+  3) SMOKE / basic page health
+       loads /upload-demo without fatal errors and has interactive elements:
+     AssertionError: Timed out retrying after 4000ms: Expected to find element: `button,[role=button],input,select,textarea,a[href]`, but never found it.
+      at hasInteractive (webpack://vite_react_shadcn_ts/./cypress/e2e/smoke/00_smoke.cy.ts:13:5)
+      at Context.eval (webpack://vite_react_shadcn_ts/./cypress/e2e/smoke/00_smoke.cy.ts:38:6)
+
+  4) SMOKE / basic page health
+       loads /will without fatal errors and has interactive elements:
+     AssertionError: Timed out retrying after 4000ms: Expected to find element: `button,[role=button],input,select,textarea,a[href]`, but never found it.
+      at hasInteractive (webpack://vite_react_shadcn_ts/./cypress/e2e/smoke/00_smoke.cy.ts:13:5)
+      at Context.eval (webpack://vite_react_shadcn_ts/./cypress/e2e/smoke/00_smoke.cy.ts:38:6)
+
+  5) SMOKE / basic page health
+       loads /legacy-letters without fatal errors and has interactive elements:
+     AssertionError: Timed out retrying after 4000ms: Expected to find element: `button,[role=button],input,select,textarea,a[href]`, but never found it.
+      at hasInteractive (webpack://vite_react_shadcn_ts/./cypress/e2e/smoke/00_smoke.cy.ts:13:5)
+      at Context.eval (webpack://vite_react_shadcn_ts/./cypress/e2e/smoke/00_smoke.cy.ts:38:6)
+
+  6) SMOKE / basic page health
+       loads /guardian-view without fatal errors and has interactive elements:
+     AssertionError: Timed out retrying after 4000ms: Expected to find element: `button,[role=button],input,select,textarea,a[href]`, but never found it.
+      at hasInteractive (webpack://vite_react_shadcn_ts/./cypress/e2e/smoke/00_smoke.cy.ts:13:5)
+      at Context.eval (webpack://vite_react_shadcn_ts/./cypress/e2e/smoke/00_smoke.cy.ts:38:6)
+
+
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        6                                                                                │
+  │ Passing:      0                                                                                │
+  │ Failing:      6                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  6                                                                                │
+  │ Video:        false                                                                            │
+  │ Duration:     25 seconds                                                                       │
+  │ Spec Ran:     00_smoke.cy.ts                                                                   │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+  (Screenshots)
+
+  -  /Users/luborfedak/Documents/Github/phoenix/cypress/screenshots/00_smoke.cy.ts/SM     (1280x720)
+     OKE  basic page health -- loads  without fatal errors and has interactive elemen               
+     ts (failed).png                                                                                
+  -  /Users/luborfedak/Documents/Github/phoenix/cypress/screenshots/00_smoke.cy.ts/SM     (1280x720)
+     OKE  basic page health -- loads dashboard without fatal errors and has interacti               
+     ve elements (failed).png                                                                       
+  -  /Users/luborfedak/Documents/Github/phoenix/cypress/screenshots/00_smoke.cy.ts/SM     (1280x720)
+     OKE  basic page health -- loads upload-demo without fatal errors and has interac               
+     tive elements (failed).png                                                                     
+  -  /Users/luborfedak/Documents/Github/phoenix/cypress/screenshots/00_smoke.cy.ts/SM     (1280x720)
+     OKE  basic page health -- loads will without fatal errors and has interactive el               
+     ements (failed).png                                                                            
+  -  /Users/luborfedak/Documents/Github/phoenix/cypress/screenshots/00_smoke.cy.ts/SM     (1280x720)
+     OKE  basic page health -- loads legacy-letters without fatal errors and has inte               
+     ractive elements (failed).png                                                                  
+  -  /Users/luborfedak/Documents/Github/phoenix/cypress/screenshots/00_smoke.cy.ts/SM     (1280x720)
+     OKE  basic page health -- loads guardian-view without fatal errors and has inter               
+     active elements (failed).png                                                                   
+
+
+====================================================================================================
+
+  (Run Finished)
+
+
+       Spec                                              Tests  Passing  Failing  Pending  Skipped  
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ ✖  00_smoke.cy.ts                           00:25        6        -        6        -        - │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+    ✖  1 of 1 failed (100%)                     00:25        6        -        6        -        -  
+

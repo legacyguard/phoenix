@@ -1,1 +1,1036 @@
-{}
+{
+  "crisisAssessment": {
+    "familyCapabilities": "Družinske zmogljivosti",
+    "familyDiscussion": "Družinski pogovor",
+    "familyDiscussionDescription": "Opis družinske razprave"
+  },
+  "errors": {
+    "loadingFamily": "Pri nalaganju seznama zaupanja vrednih oseb smo imeli težave. Osvežite stran.",
+    "accessDenied": "Trenutno ne morete spremeniti podatkov te osebe.",
+    "assigningRole": "Te vloge jim nismo mogli dodeliti. Poskusite znova.",
+    "dataNotFound": "Te informacije nismo mogli najti.",
+    "duplicatePerson": "Ta oseba je že na seznamu vaših zaupanja vrednih oseb",
+    "duplicateRecord": "To je že shranjeno",
+    "grantingAccess": "Nismo jim mogli omogočiti dostopa. Poskusite znova.",
+    "invalidEmail": "To e-poštno sporočilo ni videti pravilno. Prosim, preverite ga.",
+    "invalidPhone": "Ta telefonska številka ni videti pravilna. Prosim, preverite jo.",
+    "networkError": "Težava s povezavo. Preverite internetno povezavo.",
+    "permissionDenied": "Nimate dovoljenja za to.",
+    "removingPerson": "Nismo jih mogli odstraniti s seznama zaupanja vrednih oseb. Poskusite znova.",
+    "roleConflict": "Že imajo drugačno vlogo, ki je v nasprotju s to.",
+    "savingPerson": "Njihovih podatkov nismo mogli shraniti. Preverite in poskusite znova.",
+    "sendingInvitation": "Povabila ni bilo mogoče poslati. Preverite njihov e-poštni naslov in poskusite znova.",
+    "unknown": "Nekaj je šlo narobe"
+  },
+  "familyCapabilities": {
+    "businessOperations": "Poslovne operacije",
+    "canAccessBankAccounts": "Lahko dostopa do bančnih računov",
+    "canAccessDigitalAccounts": "Lahko dostopa do digitalnih računov",
+    "canFileInsuranceClaims": "Lahko vloži zavarovalniške zahtevke",
+    "canManageBusiness": "Lahko upravlja poslovanje",
+    "cannotAccessBankAccounts": "Ne morem dostopati do bančnih računov",
+    "cannotAccessDigitalAccounts": "Ni mogoče dostopati do digitalnih računov",
+    "cannotFileInsuranceClaims": "Ne morem vložiti zavarovalnih zahtevkov",
+    "clearInheritancePlan": "Jasen načrt dedovanja",
+    "digitalAccess": "Digitalni dostop",
+    "digitalAccounts": "Digitalni računi",
+    "immediateFinancialNeeds": "Takojšnje finančne potrebe",
+    "inheritance": "Dedovanje",
+    "insuranceClaims": "Zavarovalniški zahtevki",
+    "knowsLegalContacts": "Pozna pravne stike",
+    "knowsMedicalWishes": "Pozna medicinske želje",
+    "legalMatters": "Pravne zadeve",
+    "medicalDecisions": "Medicinske odločitve",
+    "noBusinessInfo": "Ni podatkov o podjetju",
+    "noInheritancePlan": "Brez načrta dedovanja",
+    "noLegalContacts": "Brez pravnih stikov",
+    "noMedicalInfo": "Brez zdravstvenih podatkov",
+    "partialBusinessInfo": "Delni podatki o podjetju",
+    "partialInheritancePlan": "Načrt delnega dedovanja",
+    "partialMedicalInfo": "Delni zdravstveni podatki",
+    "payBills": "Plačevanje računov"
+  },
+  "familyCrisisAssessment": {
+    "15_1": ""
+  },
+  "familyExecutorView": {
+    "communications": {
+      "description": "Opis",
+      "empty": "Prazno",
+      "title": "Naslov",
+      "to": "Do"
+    },
+    "executor": "Izvršitelj",
+    "footer": "Noga",
+    "subtitle": "Podnaslov",
+    "theExecutor": "Izvršitelj",
+    "title": "Naslov"
+  },
+  "familyHub": {
+    "accessLevels": {
+      "emergencyOnly": {
+        "description": "Opis",
+        "fullDescription": "Celoten opis",
+        "title": "Naslov"
+      },
+      "fullAccess": {
+        "description": "Opis",
+        "fullDescription": "Celoten opis",
+        "title": "Naslov"
+      },
+      "limitedInfo": {
+        "description": "Opis",
+        "fullDescription": "Celoten opis",
+        "title": "Naslov"
+      },
+      "none": {
+        "description": "Opis",
+        "title": "Naslov"
+      }
+    },
+    "emergencyProtocol": {
+      "activeMessage": "Aktivno sporočilo",
+      "configure": "Konfiguriraj",
+      "configured": "Konfigurirano",
+      "description": "Opis",
+      "title": "Naslov"
+    },
+    "errors": {
+      "authenticationRequired": "Zahtevana je avtentikacija",
+      "failedToFetchData": "Pridobivanje podatkov ni uspelo",
+      "failedToLoadMembers": "Nalaganje članov ni uspelo"
+    },
+    "memberManagement": {
+      "addMorePeople": "Dodaj več ljudi",
+      "addTrustedPerson": "Dodaj zaupanja vredno osebo",
+      "daysAgo": "Pred dnevi",
+      "informationAccessLevel": "Raven dostopa do informacij",
+      "lastContactOver30Days": "Zadnji stik v več kot 30 dneh",
+      "lastContacted": "Nazadnje kontaktiran/a",
+      "preparedness": "Pripravljenost",
+      "sendUpdate": "Pošlji posodobitev",
+      "sendUpdateTo": "Pošlji posodobitev",
+      "title": "Naslov"
+    },
+    "messages": {
+      "accessLevelUpdated": "Posodobljena raven dostopa",
+      "failedToSendUpdate": "Pošiljanje posodobitve ni uspelo",
+      "updateSentTo": "Posodobitev poslana osebi"
+    },
+    "overallPreparedness": {
+      "description": "Opis",
+      "improvementNeeded": "Potrebna izboljšava",
+      "title": "Naslov"
+    },
+    "subtitle": "Podnaslov",
+    "tabs": {
+      "familyMembers": "Družinski člani",
+      "members": "Člani",
+      "preparednessTools": "Orodja za pripravljenost",
+      "tools": "Orodja"
+    },
+    "title": "Naslov"
+  },
+  "familyPreparednessTools": {
+    "create_a_printable_guide_for_y_3": "Ustvarite natisljiv vodnik za 3. razred",
+    "errors": {
+      "comingSoon": "Kmalu na voljo",
+      "generateFailed": "Generiranje ni uspelo",
+      "premiumRequired": "Zahtevana premija",
+      "selectScenario": "Izberite scenarij"
+    },
+    "generate_another_5": "Ustvari še 5",
+    "generate_emergency_guide_2": "Ustvari vodnik za nujne primere 2",
+    "guides": {
+      "death": {
+        "bankAccounts": "Bančni računi",
+        "contactExecutor": "Kontaktni izvršitelj",
+        "contactLawyer": "Kontaktirajte odvetnika",
+        "deathCertificate": "Mrliški list",
+        "disclaimer": "Izjava o omejitvi odgovornosti",
+        "employer": "Delodajalec",
+        "financialInstitutions": "Finančne institucije",
+        "first24Hours": "Prvih 24 ur",
+        "generatedOn": "Ustvarjeno dne",
+        "importantDocuments": "Pomembni dokumenti",
+        "insuranceCompanies": "Zavarovalnice",
+        "investmentAccounts": "Investicijski računi",
+        "locateWill": "Poiščite voljo",
+        "peopleToNotify": "Osebe, ki jih je treba obvestiti",
+        "secureResidence": "Varno prebivališče",
+        "socialSecurity": "Socialna varnost",
+        "title": "Naslov"
+      },
+      "emergency": {
+        "address": "Naslov",
+        "attorney": "Odvetnik",
+        "emergency": "Nujni primer",
+        "financialAdvisor": "Finančni svetovalec",
+        "homeInformation": "Informacije o domu",
+        "insuranceAgent": "Zavarovalni agent",
+        "keyContacts": "Ključni stiki",
+        "securitySystem": "Varnostni sistem",
+        "spouse": "Zakonec/ka",
+        "title": "Naslov",
+        "utilities": "Komunalne storitve"
+      },
+      "hospitalization": {
+        "allergies": "Alergije",
+        "bloodType": "Krvna skupina",
+        "currentMedications": "Trenutna zdravila",
+        "emergencyContacts": "Stiki za nujne primere",
+        "healthcarePowerOfAttorney": "Pooblastilo za zdravstveno varstvo",
+        "hipaaRelease": "Izdaja Hipaa",
+        "legalDocuments": "Pravni dokumenti",
+        "livingWill": "Živa oporoka",
+        "medicalInformation": "Medicinske informacije",
+        "preferredHospital": "Prednostna bolnišnica",
+        "primaryCarePhysician": "Zdravnik primarne zdravstvene oskrbe",
+        "title": "Naslov"
+      },
+      "missing": {
+        "bankingApps": "Bančne aplikacije",
+        "checkHospitals": "Preverite bolnišnice",
+        "checkWithWorkplace": "Preverite na delovnem mestu",
+        "contactCloseFriends": "Stopite v stik s tesnimi prijatelji",
+        "contactLocalPolice": "Obrnite se na lokalno policijo",
+        "digitalFootprint": "Digitalni odtis",
+        "email": "E-pošta",
+        "immediateActions": "Takojšnji ukrepi",
+        "phoneProvider": "Ponudnik telefonskih storitev",
+        "socialMedia": "Družbeni mediji",
+        "title": "Naslov"
+      }
+    },
+    "mockContent": {
+      "insurancePolicies": "Zavarovalne police"
+    },
+    "scenarios": {
+      "death": {
+        "description": "Opis",
+        "title": "Naslov"
+      },
+      "emergency": {
+        "description": "Opis",
+        "title": "Naslov"
+      },
+      "hospitalization": {
+        "description": "Opis",
+        "title": "Naslov"
+      },
+      "missing": {
+        "description": "Opis",
+        "title": "Naslov"
+      }
+    },
+    "select_scenario_4": "Izberite scenarij 4",
+    "tools": {
+      "cancel": "Prekliči",
+      "chooseScenario": "Izberite scenarij",
+      "emergencySimulator": "Simulator izrednih razmer",
+      "emergencySimulatorDesc": "Opis simulatorja nujnih primerov",
+      "generateGuide": "Ustvari vodnik",
+      "generating": "Ustvarjanje",
+      "informationTreasureHunt": "Lov na informacijski zaklad",
+      "launch": "Izstrelitev",
+      "printGuide": "Vodnik za tiskanje",
+      "stepByStepGuides": "Vodniki po korakih",
+      "stepByStepGuidesDesc": "Opis navodil po korakih",
+      "treasureHuntDesc": "Opis lova na zaklad",
+      "videoMessages": "Video sporočila",
+      "videoMessagesDesc": "Opis video sporočil"
+    },
+    "use_these_tools_to_ensure_your_1": "Uporabite ta orodja, da zagotovite svoj 1"
+  },
+  "form": {
+    "additionalRoles": "Drugi načini, kako lahko pomagajo",
+    "assignedRoles": "Kako bodo pomagali vaši družini",
+    "selectRoles": "Izberite, kako lahko pomagajo vaši družini",
+    "accessDescription": "Kaj lahko vidijo in kdaj lahko pomagajo",
+    "accessInfo": "Kaj lahko storijo",
+    "accessLevel": "Koliko lahko vidijo",
+    "addPerson": "Dodaj nekoga za pomoč",
+    "alternatePhone": "Druga telefonska številka",
+    "backupFor": "So rezervna kopija za",
+    "backupHelper": "Za koga bodo posredovali, če bo potrebno",
+    "capabilities": "Zakaj so pravi za to",
+    "capabilitiesHelper": "Zakaj so dobra izbira za pomoč?",
+    "compensation": "Če potrebujejo podporo",
+    "compensationHelper": "Kakršno koli finančno pomoč, ki jo morda potrebujejo",
+    "contactInfo": "Kako jih doseči",
+    "dateOfBirth": "Rojstni dan",
+    "editPerson": "Njihove podatke lahko posodobimo",
+    "emailAddress": "E-pošta",
+    "fullName": "Njihovo polno ime",
+    "fullNameHelper": "Za pomembne dokumente uporabite njihovo uradno ime",
+    "fullNamePlaceholder": "Njihovo polno pravno ime",
+    "homeAddress": "Kje živijo",
+    "instructions": "Pomembne stvari, ki jih morajo vedeti",
+    "instructionsHelper": "Kakšna posebna navodila za pomoč vaši družini",
+    "instructionsPlaceholder": "Kaj morajo vedeti, da bi pomagali",
+    "limitations": "Stvari, na katere morate biti pozorni",
+    "limitationsHelper": "Karkoli, kar bi jim lahko otežilo pomoč",
+    "personalInfo": "O njih",
+    "primaryPhone": "Najboljša telefonska številka",
+    "primaryRole": "Glavni način, kako vam bodo pomagali",
+    "relationship": "Kako jih poznate",
+    "relationshipPlaceholder": "Kot zakonec/zakonka, otrok, brat/sestra, najboljši prijatelj/prijateljica",
+    "roleInfo": "Kako bodo pomagali",
+    "workAddress": "Kje delajo"
+  },
+  "preparedness": {
+    "familyBenefit": "Družinska ugodnost",
+    "familyCommunication": {
+      "description": "Opis",
+      "scheduleReview": "Načrtujte pregled",
+      "shareReport": "Deli poročilo",
+      "title": "Naslov"
+    },
+    "gaps": {
+      "basicAccessInfo": "Osnovni podatki za dostop",
+      "addMedicalPreferences": "Dodajte zdravstvene nastavitve",
+      "completeFinancialAccess": "Popoln finančni dostop",
+      "documentBusinessOperations": "Dokumentiranje poslovnih operacij",
+      "improveImmediateAccess": "Izboljšajte takojšen dostop",
+      "updateWillAndTrust": "Posodobitev volje in zaupanja"
+    },
+    "levels": {
+      "goodBasic": "Dobro osnovno",
+      "fullyPrepared": "Popolnoma pripravljen",
+      "minimalPreparation": "Minimalna priprava",
+      "needsImmediate": "Potrebuje takoj",
+      "somePreparation": "Nekaj priprav",
+      "wellPrepared": "Dobro pripravljeni"
+    },
+    "assessments": {
+      "decisionMaking": {
+        "good": "Dobro",
+        "needsWork": "Potrebno je delo"
+      },
+      "immediateAccess": {
+        "good": "Dobro",
+        "needsWork": "Potrebno je delo"
+      },
+      "longTermSecurity": {
+        "good": "Dobro",
+        "needsWork": "Potrebno je delo"
+      }
+    },
+    "dimensions": {
+      "decisionMaking": "Odločanje",
+      "immediateAccess": "Takojšen dostop",
+      "longTermSecurity": "Dolgoročna varnost"
+    },
+    "impact": "Vpliv",
+    "improvements": {
+      "addBankAccounts": "Dodaj bančne račune",
+      "documentMedicalWishes": "Dokumentirajte zdravstvene želje",
+      "uploadLegalDocuments": "Naložite pravne dokumente"
+    },
+    "nextStep": "Naslednji korak",
+    "scenarioReadiness": "Pripravljenost na scenarij",
+    "scenarios": {
+      "extendedTravel": {
+        "description": "Opis",
+        "title": "Naslov"
+      },
+      "suddenDeath": {
+        "description": "Opis",
+        "title": "Naslov"
+      }
+    },
+    "title": "Naslov",
+    "toImprove": "Za izboljšanje"
+  },
+  "relationships": {
+    "child": "Otrok",
+    "friend": "Prijatelj",
+    "other": "Drugo",
+    "parent": "Starš",
+    "sibling": "Brat/sestra",
+    "spouse": "Zakonec/ka"
+  },
+  "roles": {
+    "advisor": "Svetovalec",
+    "beneficiary": "Upravičenec",
+    "caregiver": "Negovalec/ka",
+    "emergencyContact": "Kontakt v sili",
+    "executor": "Izvršitelj",
+    "financialAgent": "Finančni zastopnik (pooblastilo)",
+    "guardian": "Skrbnik",
+    "healthcareProxy": "Proksi za zdravstveno varstvo",
+    "representative": "Predstavnik",
+    "successor": "Varnostno kopiranje",
+    "trustee": "Skrbnik",
+    "witness": "Bo priča"
+  },
+  "trustedCircle": {
+    "roles": "Kako lahko pomagajo",
+    "totalMembers": "{{count}} ljudi, ki so pripravljeni pomagati",
+    "addFirst": "Lahko dodamo nekoga, ki nam lahko pomaga",
+    "description": "Izberite zaupanja vredne ljudi, ki lahko podpirajo vašo družino, ko jo potrebujete.",
+    "empty": "Začnemo lahko z dodajanjem nekoga, na katerega se vaša družina lahko zanese – zakonca, bližnjega prijatelja ali zaupanja vrednega družinskega člana.",
+    "keyPeople": "Ključne osebe",
+    "recentlyAdded": "Nedavno dodano",
+    "subtitle": "Ljudje, ki bodo tam za vašo družino",
+    "title": "Zaupanja vredni ljudje",
+    "viewAll": "Glej vse"
+  },
+  "family": {
+    "GuardianPlaybook": {
+      "className": {
+        "flex_itemscenter_justifycenter_h64": "",
+        "grid_gridcols6_wfull": "mreža grid-cols-6 w-full",
+        "flex_itemscenter_gap2": "fleksibilni elementi-sredinska vrzel-2",
+        "hidden_sminline": "skriti sm:v vrstici",
+        "spacey4": "vesolje-y-4",
+        "minh200px": "",
+        "flex_justifybetween_itemscenter_mb4": "fleksibilna poravnava med elementi na sredini mb-4",
+        "grid_gridcols1_mdgridcols2_gap4": "mreža grid-cols-1 md:grid-cols-2 vrzel-4",
+        "mdcolspan2": "",
+        "minh80px": "",
+        "mt2": "",
+        "flex_itemscenter_justifybetween": "flex elementi-na sredino-poravnava-med"
+      },
+      "htmlFor": {
+        "funeral_wishes": "pogrebne_želje",
+        "digital_accounts": "digitalni_računi",
+        "document_locations": "lokacije_dokumentov",
+        "personal_messages": "osebna_sporočila",
+        "practical_instructions": "praktična_navodila"
+      },
+      "id": {
+        "funeral_wishes": "pogrebne_želje",
+        "digital_accounts": "digitalni_računi",
+        "document_locations": "lokacije_dokumentov",
+        "personal_messages": "osebna_sporočila",
+        "practical_instructions": "praktična_navodila"
+      },
+      "playbooktabskey": "družinski.zavihki.${key}",
+      "contactnameindex": "ime-stika-${index}",
+      "contactrelationshipindex": "stik-razmerje-${index}",
+      "contactphoneindex": "kontaktni-telefon-${index}",
+      "contactemailindex": "kontaktni-e-naslov-${index}",
+      "contactnotesindex": "kontaktne-zapiske-${index}",
+      "playbookstatusstatus": "družinski.status.${status}"
+    },
+    "GuardianPlaybookView": {
+      "className": {
+        "minhscreen_flex_itemscenter_justifycenter": "",
+        "animatepulse_textcenter": "animiraj-pulz besedilno-središče",
+        "maxwmd": "",
+        "minhscreen_bggradienttobr_frombackground_tomuted20": "",
+        "container_mxauto_px4_py8_maxw4xl": "vsebnik mx-auto px-4 py-8 max-w-4xl",
+        "flex_itemscenter_justifycenter_w20_h20_roundedfull": "",
+        "mt4": "",
+        "mb8": "",
+        "flex_itemscenter_gap2": "fleksibilni elementi-sredinska vrzel-2",
+        "grid_gap4_mdgridcols2": "mrežna vrzel-4 md:mrežni-stolpci-2",
+        "spacey2": "vesolje-y-2",
+        "flex_itemsstart_justifybetween": "flex elementov-začetek-poravnava-med",
+        "fontsemibold": "polkrepka pisava",
+        "spacey1": "vesolje-y-1",
+        "flex_itemscenter_gap2_textsm_textprimary_hoverunde": "flex items-center gap-2 text-sm text-primary lebdenje:podčrtano",
+        "spacey6": "vesolje-y-6",
+        "prose_prosesm_maxwnone": "proza proza-sm max-w-none",
+        "whitespaceprewrap": "prelom-presledkov",
+        "mt12_textcenter_textsm_textmutedforeground": "mt-12 besedilno-središče besedilno-sm besedilo-utišano-ospredje"
+      },
+      "telcontactphone": "tel.:${contact.phone}",
+      "mailtocontactemail": "poštni naslov: ${contact.email}"
+    }
+  },
+  "guardianUpload": {
+    "relationships": {
+      "child": "Otrok",
+      "friend": "Prijatelj",
+      "legalProfessional": "Pravni strokovnjak",
+      "other": "Drugo",
+      "parent": "Starš",
+      "sibling": "Brat/sestra",
+      "spouse": "Zakonec/ka"
+    },
+    "roles": {
+      "emergencyContact": "Kontakt v sili",
+      "executorOfWill": "Izvršitelj oporoke",
+      "financialPowerOfAttorney": "Finančno pooblastilo",
+      "guardianForChildren": "Skrbnik za otroke",
+      "healthcareProxy": "Proksi za zdravstveno varstvo",
+      "trustee": "Skrbnik"
+    },
+    "rolesTitle": "Naziv vloge",
+    "addButton": "Gumb Dodaj",
+    "addTitle": "Dodaj naslov",
+    "added": "Dodano",
+    "countryDescription": "Opis države",
+    "countryLabel": "Oznaka države",
+    "countryPlaceholder": "Nadomestno besedilo države",
+    "description": "Opis",
+    "editTitle": "Uredi naslov",
+    "emailLabel": "Oznaka e-pošte",
+    "emailPlaceholder": "Nadomestno besedilo za e-pošto",
+    "error": "Napaka",
+    "errors": {
+      "connectionError": "Napaka povezave",
+      "duplicateError": "Podvojena napaka",
+      "permissionError": "Napaka dovoljenja",
+      "requiredDataNotFound": "Zahtevanih podatkov ni bilo mogoče najti.",
+      "saveError": "Napaka pri shranjevanju",
+      "unknownError": "Neznana napaka"
+    },
+    "fullNameLabel": "Oznaka s polnim imenom",
+    "fullNamePlaceholder": "Nadomestno besedilo za polno ime",
+    "loginToSave": "Prijavite se za shranjevanje",
+    "phoneLabel": "Oznaka telefona",
+    "phonePlaceholder": "Nadomestno besedilo za telefon",
+    "relationshipLabel": "Oznaka razmerja",
+    "relationshipPlaceholder": "Nadomestno besedilo za razmerje",
+    "saving": "Shranjevanje",
+    "success": "Uspeh",
+    "updateButton": "Gumb za posodobitev",
+    "updated": "Posodobljeno"
+  },
+  "familyMembers": "Družinski člani",
+  "sensitivity": {
+    "step_family_dynamics": "Odnosi med pastorki in krušnimi družinami potrebujejo jasno dokumentacijo",
+    "family_conflict": "Družinski konflikti zahtevajo dodatno jasnost pri načrtovanju",
+    "previous_marriage_obligations": "Obravnavati je treba obveznosti iz prejšnje zakonske zveze",
+    "absent_parent_considerations": "Odsotnost staršev zahteva skrbno načrtovanje",
+    "solo_responsibility_pressure": "Odgovornosti staršev samohranilcev se lahko zdijo preobremenjujoče",
+    "inheritance_disputes": "Morebitne dedne spore je treba preprečiti",
+    "traditional_role_expectations": "Morda bo treba razmisliti o tradicionalnih družinskih vlogah",
+    "disability_planning_stress": "Načrtovanje posebnih potreb je lahko čustveno zahtevno",
+    "long_term_care_concerns": "Načrtovanje dolgoročne oskrbe je bistvenega pomena"
+  },
+  "features": {
+    "family_communication_center": {
+      "title": "Družinski komunikacijski center",
+      "description": "Obveščajte vse in jih ohranjajte povezane"
+    },
+    "family_tree_visualizer": {
+      "title": "Vizualizator družinskega drevesa",
+      "description": "Vizualno preslikajte kompleksne družinske odnose"
+    },
+    "step_family_guidance": {
+      "title": "Vodenje za pastorke in družine",
+      "description": "Samozavestno krmarite po mešanem načrtovanju družine"
+    },
+    "family_meeting_tools": {
+      "title": "Orodja za družinska srečanja",
+      "description": "Omogočite pomembne družinske pogovore"
+    },
+    "document_vault": {
+      "title": "Varni trezor dokumentov",
+      "description": "Varno shranjujte in delite pomembne dokumente"
+    },
+    "guardian_network_builder": {
+      "title": "Graditelj omrežja Guardian",
+      "description": "Zgradite močno podporno mrežo za svoje otroke"
+    },
+    "single_parent_resources": {
+      "title": "Viri za starše samohranilce",
+      "description": "Specializirana orodja in podpora za starše samohranilce"
+    },
+    "complex_beneficiary_manager": {
+      "title": "Vodja kompleksnih upravičencev",
+      "description": "Jasno obvladujte več odnosov"
+    },
+    "multi_generation_planner": {
+      "title": "Večgeneracijski načrtovalec",
+      "description": "Uravnoteženje potreb med vsemi generacijami"
+    },
+    "elder_care_resources": {
+      "title": "Viri za oskrbo starejših",
+      "description": "Podpora pri skrbi za ostarele starše"
+    },
+    "special_needs_trust_wizard": {
+      "title": "Čarovnik za sklade za posebne potrebe",
+      "description": "Ustvarite ustrezne sklade za člane s posebnimi potrebami"
+    },
+    "care_instruction_builder": {
+      "title": "Izdelovalec navodil za nego",
+      "description": "Podrobne zahteve glede oskrbe v dokumentu"
+    },
+    "government_benefit_tracker": {
+      "title": "Sledilnik vladnih ugodnosti",
+      "description": "Zagotovite upravičenost do pomembnih ugodnosti"
+    },
+    "business_succession_planner": {
+      "title": "Načrtovalec poslovnega nasledstva",
+      "description": "Načrt za neprekinjeno poslovanje"
+    },
+    "buy_sell_agreement_tracker": {
+      "title": "Sledilnik kupoprodajnih pogodb",
+      "description": "Upravljajte pogodbe o poslovnem partnerstvu"
+    },
+    "remote_collaboration_tools": {
+      "title": "Orodja za oddaljeno sodelovanje",
+      "description": "Sodelujte kljub razdalji"
+    },
+    "multi_jurisdiction_guidance": {
+      "title": "Smernice za več jurisdikcij",
+      "description": "Krmarite po zakonih na različnih lokacijah"
+    }
+  },
+  "cultural": {
+    "extended_family_obligations": "Razširjene družinske odgovornosti",
+    "islamic_inheritance": "Islamska načela dedovanja",
+    "jewish_traditions": "Judovske družinske tradicije",
+    "christian_values": "Vrednote krščanskega skrbništva",
+    "buddhist_principles": "Budistična načela sočutja",
+    "patriarchal_hierarchy": "Tradicionalna patriarhalna struktura",
+    "matriarchal_hierarchy": "Tradicionalna matriarhalna struktura",
+    "elder_led_hierarchy": "Družinska struktura, ki jo vodijo starejši",
+    "collective_decision_making": "Kolektivne družinske odločitve",
+    "elder_respect_obligations": "Obveznosti oskrbe starejših",
+    "multilingual_documentation": "Potrebe po večjezični dokumentaciji"
+  },
+  "access": {
+    "descriptions": {
+      "executor": "Lahko uredijo vse, da bi pomagali vaši družini",
+      "full": "Vidijo in upravljajo lahko vse podatke vaše družine",
+      "limited": "Vidijo lahko osnovne kontaktne podatke in navodila za nujne primere",
+      "standard": "Vidijo lahko večino tega, kar bi vaša družina potrebovala"
+    },
+    "levels": {
+      "executor": "Poln dostop za pomočnike",
+      "full": "Lahko vidi vse",
+      "limited": "Samo osnovne informacije",
+      "standard": "Redni družinski dostop"
+    },
+    "permissions": {
+      "editInformation": "Lahko naredi spremembe",
+      "manageAccess": "Lahko upravlja druge pomočnike",
+      "viewAssets": "Lahko vidi vaše pomembne stvari",
+      "viewDocuments": "Lahko bere dokumente"
+    }
+  },
+  "actions": {
+    "addPerson": "Lahko dodamo zaupanja vredno osebo",
+    "assignRole": "Lahko dodelimo vlogo",
+    "contactPerson": "Lahko stopimo v stik",
+    "editPerson": "Posodobite svoje podatke",
+    "grantAccess": "Dostop lahko odobrimo",
+    "printSummary": "Lahko natisnemo povzetek",
+    "removePerson": "Lahko odstranimo od zaupanja vrednih oseb",
+    "removeRole": "Njihovo vlogo lahko spremenimo",
+    "revokeAccess": "Lahko spremenimo, kaj lahko vidijo",
+    "scheduleReview": "Lahko se dogovorimo za pregled",
+    "sendInvitation": "Lahko jih povabimo na pomoč",
+    "setBackup": "Lahko nastavimo rezervnega pomočnika",
+    "viewProfile": "Vidimo lahko vse njihove podrobnosti"
+  },
+  "common": {
+    "cancel": "Prekliči",
+    "fix": "Popravi",
+    "minutes": "Zapisnik",
+    "start": "Začni"
+  },
+  "estateStatus": {
+    "actions": {
+      "cancel": "Prekliči",
+      "update": "Posodobitev",
+      "updating": "Posodabljanje"
+    },
+    "description": "Opis",
+    "dialog": {
+      "description": "Opis",
+      "title": "Naslov"
+    },
+    "empty": {
+      "noStatus": "Brez statusa",
+      "readOnly": "Samo za branje"
+    },
+    "fields": {
+      "additionalDetails": "Dodatne podrobnosti",
+      "status": "Stanje"
+    },
+    "lastUpdated": "Zadnja posodobitev",
+    "logAction": "Dejanje beleženja",
+    "placeholders": {
+      "additionalContext": "Dodaten kontekst",
+      "selectStatus": "Izberite stanje"
+    },
+    "progress": "Napredek",
+    "statuses": {
+      "assetsBeingValued": "Sredstva, ki se vrednotijo",
+      "debtsBeingSettled": "Poravnava dolgov",
+      "distributionInProgress": "Distribucija v teku",
+      "estateClosed": "Posestvo zaprto",
+      "gatheringDocuments": "Zbiranje dokumentov",
+      "initialReview": "Začetni pregled",
+      "probateInitiated": "Zapuščinski postopek se je začel",
+      "readyForDistribution": "Pripravljeno za distribucijo",
+      "taxPreparation": "Priprava davčnih napovedi"
+    },
+    "title": "Naslov"
+  },
+  "guardian": {
+    "templateModal": {
+      "_1": ""
+    }
+  },
+  "guardianView": {
+    "defaultUserName": "Privzeto uporabniško ime",
+    "errors": {
+      "failedToLoad": "Nalaganje ni uspelo",
+      "pleaseLogin": "Prosim, prijavite se"
+    },
+    "guardianInfo": {
+      "description": "Opis",
+      "securityNote": "Varnostno obvestilo"
+    },
+    "readOnlyAccess": "Dostop samo za branje",
+    "sections": {
+      "finalWishes": {
+        "description": "Opis",
+        "digitalAccounts": "Digitalni računi",
+        "empty": "Prazno",
+        "funeralWishes": "Pogrebne želje",
+        "title": "Naslov"
+      },
+      "keyDocuments": {
+        "description": "Opis",
+        "empty": "Prazno",
+        "expires": "Poteče",
+        "keyDocumentBadge": "Značka ključnega dokumenta",
+        "noExpiration": "Brez poteka veljavnosti",
+        "title": "Naslov"
+      }
+    },
+    "subtitle": "Podnaslov",
+    "title": "Naslov"
+  },
+  "guardianship": {
+    "addDependent": "Dodajte osebo, ki potrebuje oskrbo",
+    "alternateGuardian": "Rezervni negovalec",
+    "careStandards": "Kako želite, da je zanje poskrbljeno",
+    "childGuardians": "Kdo bo skrbel za vaše otroke",
+    "dependentCare": "Načrti oskrbe za vaše ljubljene",
+    "description": "Izberite ljubeče ljudi, ki bodo skrbeli za vaše otroke ali družinske člane, ki potrebujejo pomoč, če vi ne morete biti tam.",
+    "educationPreferences": "Šolske in izobraževalne želje",
+    "financialProvisions": "Denar za njihovo oskrbo",
+    "guardianCompensation": "Podpora za negovalca",
+    "guardianFor": "Kdo bo skrbel za {{name}}",
+    "guardianInstructions": "Kako skrbeti zanje",
+    "guardianQualifications": "Zakaj so prava izbira",
+    "healthcarePreferences": "Zdravje in zdravstvena oskrba",
+    "lifestylePreferences": "Vsakdanje življenje in dejavnosti",
+    "noChildren": "Niste nam še povedali o nobenih otrocih ali družinskih članih, ki potrebujejo oskrbo.",
+    "primaryGuardian": "Negovalec prve izbire",
+    "religiousPreferences": "Vera in vrednote",
+    "reportingRequirements": "Obveščanje družine",
+    "subtitle": "Poskrbite za svoje ljubljene",
+    "temporaryGuardian": "Kratkoročni negovalec",
+    "title": "Kdo bo skrbel za vaše ljubljene",
+    "visitationRights": "Družinski obiski"
+  },
+  "notificationPreferences": {
+    "description": "Opis",
+    "emailRequired": "Zahtevan e-poštni naslov",
+    "errors": {
+      "loadFailed": "Nalaganje ni uspelo",
+      "updateFailed": "Posodobitev ni uspela"
+    },
+    "howItWorks": {
+      "point1": "Točka1",
+      "point2": "Točka2",
+      "point3": "Točka3",
+      "title": "Naslov"
+    },
+    "info": "Informacije",
+    "lastUpdated": "Zadnja posodobitev",
+    "noEmail": "Brez e-pošte",
+    "title": "Naslov"
+  },
+  "playbook": {
+    "addContact": "Dodaj stik",
+    "autoSaveNotice": "Obvestilo o samodejnem shranjevanju",
+    "contact": "Kontakt",
+    "contactFields": {
+      "email": "E-pošta",
+      "emailPlaceholder": "Nadomestno besedilo za e-pošto",
+      "name": "Ime",
+      "namePlaceholder": "Nadomestno ime",
+      "notes": "Opombe",
+      "notesPlaceholder": "Nadomestno besedilo za opombe",
+      "phone": "Telefon",
+      "phonePlaceholder": "Nadomestno besedilo za telefon",
+      "role": "Vloga",
+      "rolePlaceholder": "Nadomestno besedilo vloge"
+    },
+    "errors": {
+      "loadFailed": "Nalaganje ni uspelo",
+      "saveFailed": "Shranjevanje ni uspelo"
+    },
+    "loading": "Nalaganje",
+    "noContent": "Brez vsebine",
+    "preview": "Predogled",
+    "save": "Shrani",
+    "saving": "Shranjevanje",
+    "sections": {
+      "digital": {
+        "description": "Opis",
+        "placeholder": "Nadomestno besedilo",
+        "title": "Naslov"
+      },
+      "documents": {
+        "description": "Opis",
+        "placeholder": "Nadomestno besedilo",
+        "title": "Naslov"
+      },
+      "funeral": {
+        "description": "Opis",
+        "placeholder": "Nadomestno besedilo",
+        "title": "Naslov"
+      },
+      "practical": {
+        "description": "Opis",
+        "placeholder": "Nadomestno besedilo",
+        "title": "Naslov"
+      }
+    },
+    "subtitle": {
+      "edit": "Uredi",
+      "view": "Ogled"
+    },
+    "tabs": {
+      "digital": "Digitalno",
+      "documents": "Dokumenti",
+      "funeral": "Pogreb",
+      "instructions": "Navodila",
+      "practical": "Praktično"
+    },
+    "templates": {
+      "append": "Dodaj",
+      "backToTemplates": "Nazaj na predloge",
+      "description": "Opis",
+      "existingContent": "Obstoječa vsebina",
+      "fillInVariables": "Izpolnite spremenljivke",
+      "insertTemplate": "Vstavi predlogo",
+      "preview": "Predogled",
+      "replace": "Zamenjaj",
+      "title": "Naslov",
+      "variableCount": "Število spremenljivk",
+      "variablePlaceholder": "Spremenljivka"
+    },
+    "title": "Naslov",
+    "useTemplate": "Uporabi predlogo",
+    "accessDenied": "Dostop zavrnjen",
+    "description": "Opis",
+    "digitalAccounts": {
+      "description": "Opis",
+      "label": "Oznaka",
+      "placeholder": "Nadomestno besedilo"
+    },
+    "discardChanges": {
+      "cancel": "Prekliči",
+      "confirm": "Potrdi",
+      "description": "Opis",
+      "title": "Naslov"
+    },
+    "documentLocations": {
+      "description": "Opis",
+      "label": "Oznaka",
+      "placeholder": "Nadomestno besedilo"
+    },
+    "exitPreview": "Zapri predogled",
+    "fetchError": "Napaka pri pridobivanju",
+    "funeralWishes": {
+      "description": "Opis",
+      "label": "Oznaka",
+      "placeholder": "Nadomestno besedilo"
+    },
+    "lastUpdated": "Zadnja posodobitev",
+    "notAuthenticated": "Ni overjeno",
+    "notFound": {
+      "description": "Opis",
+      "title": "Naslov"
+    },
+    "practicalInstructions": {
+      "description": "Opis",
+      "label": "Oznaka",
+      "placeholder": "Nadomestno besedilo"
+    },
+    "saveError": "Napaka pri shranjevanju",
+    "saveSuccess": "Shrani uspeh",
+    "titleReadOnly": "Naslov samo za branje",
+    "viewDescription": "Ogled opisa",
+    "viewFooter": "Ogled noge",
+    "viewTitle": "Ogled naslova"
+  },
+  "executor": {
+    "completed": "Dokončano",
+    "dashboard": {
+      "reminder": "Opomnik",
+      "subtitle": "Podnaslov",
+      "title": "Naslov"
+    },
+    "due": "Zapadlo",
+    "errors": {
+      "loadTasksFailed": "Nalaganje nalog ni uspelo",
+      "updateTaskFailed": "Posodobitev ni uspela"
+    },
+    "highPriority": "Visoka prioriteta",
+    "legalSupport": {
+      "button": "Gumb",
+      "description": "Opis",
+      "title": "Naslov"
+    },
+    "markComplete": "Označi kot dokončano",
+    "sections": {
+      "firstWeek": {
+        "description": "Opis",
+        "empty": "Prazno",
+        "title": "Naslov"
+      },
+      "immediate": {
+        "description": "Opis",
+        "empty": "Prazno",
+        "title": "Naslov"
+      },
+      "ongoing": {
+        "description": "Opis",
+        "empty": "Prazno",
+        "title": "Naslov"
+      }
+    },
+    "stats": {
+      "completed": "Dokončano",
+      "remaining": "Preostanek",
+      "totalTasks": "Skupaj nalog"
+    },
+    "undo": "Razveljavi",
+    "viewAccountDetails": "Ogled podrobnosti računa",
+    "viewRelatedDocuments": "Ogled povezanih dokumentov"
+  },
+  "executorDashboard": {
+    "professional_guidance_1": "Strokovno svetovanje 1"
+  },
+  "executorManagement": {
+    "add_new_executor_10": "Dodaj novega izvršitelja 10",
+    "all_executors_must_have_legacy_23": "Vsi izvršitelji morajo imeti zapuščino 23",
+    "current_executors_17": "Trenutni izvršitelji 17",
+    "designate_trusted_individuals__9": "Določite zaupanja vredne posameznike 9",
+    "email_address_11": "E-poštni naslov 11",
+    "executor_example_com_12": "Primer izvajalca com 12",
+    "executor_management_8": "Upravljanje izvajalcev 8",
+    "failed_to_add_executor_5": "Izvršitelja 5 ni bilo mogoče dodati.",
+    "failed_to_load_executors_2": "Nalaganje izvajalcev 2 ni uspelo",
+    "failed_to_remove_executor_6": "Odstranitev izvršitelja 6 ni uspela",
+    "important_information_19": "Pomembne informacije 19",
+    "loading_executors_7": "Nalaganje izvršiteljev 7",
+    "no_executors_designated_yet_ad_18": "Izvrševalcev še ni bilo določenih, oglas 18",
+    "primary_executor_14": "Glavni izvršitelj 14",
+    "primary_executors_receive_imme_20": "Glavni izvršitelji prejmejo takoj 20",
+    "relationship_type_13": "Vrsta razmerja 13",
+    "secondary_executor_15": "Sekundarni izvršitelj 15",
+    "secondary_executors_are_notifi_21": "Sekundarni izvršitelji so obveščeni 21",
+    "statusLabels": {
+      "addExecutor": "Dodaj izvršitelja",
+      "adding": "Dodajanje",
+      "unknownUser": "Neznan uporabnik"
+    },
+    "this_person_is_already_designa_4": "Ta oseba je že označena kot 4",
+    "user_not_found_with_this_email_3": "Uporabnika s tem e-poštnim naslovom ni mogoče najti 3"
+  },
+  "invite": {
+    "title": "Naslov"
+  },
+  "inviteAcceptance": {
+    "buttons": {
+      "acceptRole": "Sprejmi vlogo",
+      "decline": "Zavrnitev",
+      "processing": "Obdelava"
+    },
+    "defaultInviterName": "Privzeto ime povabilca",
+    "disclaimer": "Izjava o omejitvi odgovornosti",
+    "errors": {
+      "acceptFailed": "Sprejem ni uspel",
+      "alreadyProcessed": "Že obdelano",
+      "declineFailed": "Zavrnitev ni uspela",
+      "invalidLink": "Neveljavna povezava",
+      "loadingFailed": "Nalaganje ni uspelo",
+      "notFound": "Ni najdeno"
+    },
+    "guardianRole": {
+      "relationship": "Razmerje",
+      "responsibilities": "Odgovornosti",
+      "title": "Naslov",
+      "yourName": "Vaše ime"
+    },
+    "loading": "Nalaganje",
+    "notFound": {
+      "description": "Opis",
+      "title": "Naslov"
+    },
+    "subtitle": "Podnaslov",
+    "whatThisMeans": {
+      "point1": "Točka1",
+      "point2": "Točka2",
+      "point3": "Točka3",
+      "point4": "Točka4",
+      "title": "Naslov"
+    }
+  },
+  "structures": {
+    "nuclear": "Tradicionalna družina",
+    "single_parent": "Enostarševska družina",
+    "blended": "Mešana družina",
+    "multigenerational": "Večgeneracijska družina",
+    "childless": "Par brez otrok",
+    "empty_nest": "Družina praznega gnezda",
+    "non_traditional": "Edinstvena družinska struktura"
+  },
+  "complexity": {
+    "simple": "Preprosto",
+    "moderate": "Zmerno",
+    "complex": "Kompleksno"
+  },
+  "personalized": "Vaša prilagojena izkušnja načrtovanja družine",
+  "specialConsiderations": "Posebni premisleki",
+  "recommendedFeatures": "Priporočene funkcije",
+  "tabs": {
+    "overview": "Pregled",
+    "insights": "Vpogledi",
+    "features": "Značilnosti",
+    "cultural": "Kulturno"
+  },
+  "keyConsiderations": "Ključni dejavniki za vašo družino",
+  "specialNeeds": "Posebne potrebe načrtovanja",
+  "sensitivities": "Območja, ki zahtevajo dodatno nego",
+  "needs": {
+    "special_needs_planning": "Načrtovanje posebnih potreb",
+    "long_term_care_planning": "Načrtovanje dolgotrajne oskrbe",
+    "special_needs_trust": "Sklad za posebne potrebe",
+    "elder_care_planning": "Načrtovanje oskrbe starejših",
+    "multi_generational_wealth_transfer": "Večgeneracijski prenos",
+    "military_benefit_planning": "Vojaške ugodnosti",
+    "deployment_planning": "Načrtovanje uvajanja",
+    "business_succession": "Nasledstvo podjetja",
+    "key_person_planning": "Načrtovanje ključnih oseb",
+    "young_child_guardianship": "Skrbništvo nad mladimi otroki",
+    "education_planning": "Načrtovanje izobraževanja",
+    "sharia_compliant_planning": "Načrtovanje v skladu s šeriatskim pravom"
+  },
+  "insightType": {
+    "structure": "Družinska struktura",
+    "need": "Posebne potrebe",
+    "opportunity": "Priložnost",
+    "risk": "Dejavniki tveganja"
+  },
+  "priority": {
+    "high": "Visoka prioriteta",
+    "medium": "Srednja prioriteta",
+    "low": "Nizka prioriteta"
+  },
+  "suggestedActions": "Predlagana dejanja",
+  "recommendedFeaturesTitle": "Funkcije, prilagojene vaši družini",
+  "recommendedFeaturesDesc": "Glede na vašo družinsko strukturo in potrebe bodo te funkcije najbolj koristne",
+  "culturalConsiderations": "Kulturni in verski vidiki",
+  "culturalDesc": "Pri načrtovanju spoštujte vrednote in tradicije svoje družine",
+  "noCulturalSettings": "Kulturne preference niso bile določene. Dodajte jih, da zagotovite, da vaše načrtovanje spoštuje vrednote vaše družine.",
+  "configureCultural": "Konfigurirajte kulturne nastavitve",
+  "culturalUpdated": "Posodobljeno",
+  "culturalUpdatedDesc": "Vaše načrtovanje družine bo zdaj odražalo vaše kulturne vrednote in tradicije"
+}

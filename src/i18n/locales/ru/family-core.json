@@ -1,1 +1,1036 @@
-{}
+{
+  "crisisAssessment": {
+    "familyCapabilities": "Возможности семьи",
+    "familyDiscussion": "Семейное обсуждение",
+    "familyDiscussionDescription": "Описание семейного обсуждения"
+  },
+  "errors": {
+    "loadingFamily": "Возникли проблемы с загрузкой списка доверенных лиц. Пожалуйста, обновите страницу.",
+    "accessDenied": "Вы не можете изменить информацию об этом человеке прямо сейчас.",
+    "assigningRole": "Мы не смогли предоставить им эту роль. Попробуйте ещё раз.",
+    "dataNotFound": "Мы не смогли найти эту информацию.",
+    "duplicatePerson": "Этот человек уже есть в вашем списке доверенных лиц",
+    "duplicateRecord": "Это уже сохранено.",
+    "grantingAccess": "Мы не смогли предоставить им доступ. Попробуйте ещё раз.",
+    "invalidEmail": "Этот адрес электронной почты выглядит некорректным. Пожалуйста, проверьте его.",
+    "invalidPhone": "Номер телефона неверный. Проверьте, пожалуйста.",
+    "networkError": "Проблема с подключением. Проверьте подключение к Интернету.",
+    "permissionDenied": "У вас нет разрешения на это.",
+    "removingPerson": "Не удалось удалить их из списка доверенных лиц. Попробуйте ещё раз.",
+    "roleConflict": "У них уже есть другая роль, которая конфликтует с этой.",
+    "savingPerson": "Не удалось сохранить их данные. Проверьте и повторите попытку.",
+    "sendingInvitation": "Не удалось отправить приглашение. Проверьте электронную почту и повторите попытку.",
+    "unknown": "Что-то пошло не так"
+  },
+  "familyCapabilities": {
+    "businessOperations": "Бизнес-операции",
+    "canAccessBankAccounts": "Может получить доступ к банковским счетам",
+    "canAccessDigitalAccounts": "Может получить доступ к цифровым аккаунтам",
+    "canFileInsuranceClaims": "Может подавать страховые иски",
+    "canManageBusiness": "Может управлять бизнесом",
+    "cannotAccessBankAccounts": "Невозможно получить доступ к банковским счетам",
+    "cannotAccessDigitalAccounts": "Невозможно получить доступ к цифровым аккаунтам",
+    "cannotFileInsuranceClaims": "Невозможно подать страховые иски",
+    "clearInheritancePlan": "Четкий план наследования",
+    "digitalAccess": "Цифровой доступ",
+    "digitalAccounts": "Цифровые счета",
+    "immediateFinancialNeeds": "Немедленные финансовые потребности",
+    "inheritance": "Наследование",
+    "insuranceClaims": "Страховые претензии",
+    "knowsLegalContacts": "Знает юридические контакты",
+    "knowsMedicalWishes": "Знает медицинские пожелания",
+    "legalMatters": "Правовые вопросы",
+    "medicalDecisions": "Медицинские решения",
+    "noBusinessInfo": "Нет информации о бизнесе",
+    "noInheritancePlan": "Нет плана наследования",
+    "noLegalContacts": "Никаких юридических контактов",
+    "noMedicalInfo": "Нет медицинской информации",
+    "partialBusinessInfo": "Частичная информация о бизнесе",
+    "partialInheritancePlan": "Частичный план наследования",
+    "partialMedicalInfo": "Частичная медицинская информация",
+    "payBills": "Оплачивать счета"
+  },
+  "familyCrisisAssessment": {
+    "15_1": "15 1"
+  },
+  "familyExecutorView": {
+    "communications": {
+      "description": "Описание",
+      "empty": "Пустой",
+      "title": "Заголовок",
+      "to": "К"
+    },
+    "executor": "Исполнитель",
+    "footer": "Нижний колонтитул",
+    "subtitle": "Подзаголовок",
+    "theExecutor": "Исполнитель",
+    "title": "Заголовок"
+  },
+  "familyHub": {
+    "accessLevels": {
+      "emergencyOnly": {
+        "description": "Описание",
+        "fullDescription": "Полное описание",
+        "title": "Заголовок"
+      },
+      "fullAccess": {
+        "description": "Описание",
+        "fullDescription": "Полное описание",
+        "title": "Заголовок"
+      },
+      "limitedInfo": {
+        "description": "Описание",
+        "fullDescription": "Полное описание",
+        "title": "Заголовок"
+      },
+      "none": {
+        "description": "Описание",
+        "title": "Заголовок"
+      }
+    },
+    "emergencyProtocol": {
+      "activeMessage": "Активное сообщение",
+      "configure": "Настроить",
+      "configured": "Настроено",
+      "description": "Описание",
+      "title": "Заголовок"
+    },
+    "errors": {
+      "authenticationRequired": "Требуется аутентификация",
+      "failedToFetchData": "Не удалось получить данные",
+      "failedToLoadMembers": "Не удалось загрузить участников"
+    },
+    "memberManagement": {
+      "addMorePeople": "Добавить больше людей",
+      "addTrustedPerson": "Добавить доверенное лицо",
+      "daysAgo": "Дней назад",
+      "informationAccessLevel": "Уровень доступа к информации",
+      "lastContactOver30Days": "Последний контакт более 30 дней",
+      "lastContacted": "Последний контакт",
+      "preparedness": "Готовность",
+      "sendUpdate": "Отправить обновление",
+      "sendUpdateTo": "Отправить обновление",
+      "title": "Заголовок"
+    },
+    "messages": {
+      "accessLevelUpdated": "Уровень доступа обновлен",
+      "failedToSendUpdate": "Не удалось отправить обновление.",
+      "updateSentTo": "Обновление отправлено"
+    },
+    "overallPreparedness": {
+      "description": "Описание",
+      "improvementNeeded": "Требуется улучшение",
+      "title": "Заголовок"
+    },
+    "subtitle": "Подзаголовок",
+    "tabs": {
+      "familyMembers": "Члены семьи",
+      "members": "Участники",
+      "preparednessTools": "Инструменты обеспечения готовности",
+      "tools": "Инструменты"
+    },
+    "title": "Заголовок"
+  },
+  "familyPreparednessTools": {
+    "create_a_printable_guide_for_y_3": "Создайте печатное руководство для y 3",
+    "errors": {
+      "comingSoon": "Вскоре",
+      "generateFailed": "Сгенерировать не удалось",
+      "premiumRequired": "Требуется премия",
+      "selectScenario": "Выберите сценарий"
+    },
+    "generate_another_5": "Сгенерировать еще 5",
+    "generate_emergency_guide_2": "Создать руководство по действиям в чрезвычайных ситуациях 2",
+    "guides": {
+      "death": {
+        "bankAccounts": "Банковские счета",
+        "contactExecutor": "Связаться с исполнителем",
+        "contactLawyer": "Связаться с юристом",
+        "deathCertificate": "Свидетельство о смерти",
+        "disclaimer": "Отказ от ответственности",
+        "employer": "Работодатель",
+        "financialInstitutions": "Финансовые учреждения",
+        "first24Hours": "Первые 24 часа",
+        "generatedOn": "Сгенерировано на",
+        "importantDocuments": "Важные документы",
+        "insuranceCompanies": "Страховые компании",
+        "investmentAccounts": "Инвестиционные счета",
+        "locateWill": "Найдите волю",
+        "peopleToNotify": "Людей, которых следует уведомить",
+        "secureResidence": "Безопасное проживание",
+        "socialSecurity": "Социальное обеспечение",
+        "title": "Заголовок"
+      },
+      "emergency": {
+        "address": "Адрес",
+        "attorney": "Адвокат",
+        "emergency": "Чрезвычайная ситуация",
+        "financialAdvisor": "Финансовый консультант",
+        "homeInformation": "Домашняя информация",
+        "insuranceAgent": "Страховой агент",
+        "keyContacts": "Ключевые контакты",
+        "securitySystem": "Система безопасности",
+        "spouse": "Супруг",
+        "title": "Заголовок",
+        "utilities": "Коммунальные услуги"
+      },
+      "hospitalization": {
+        "allergies": "Аллергии",
+        "bloodType": "Группа крови",
+        "currentMedications": "Текущие лекарства",
+        "emergencyContacts": "Контакты для экстренных случаев",
+        "healthcarePowerOfAttorney": "Доверенность на здравоохранение",
+        "hipaaRelease": "релиз Hipaa",
+        "legalDocuments": "Юридические документы",
+        "livingWill": "Живая воля",
+        "medicalInformation": "Медицинская информация",
+        "preferredHospital": "Предпочтительная больница",
+        "primaryCarePhysician": "Врач первичной медико-санитарной помощи",
+        "title": "Заголовок"
+      },
+      "missing": {
+        "bankingApps": "Банковские приложения",
+        "checkHospitals": "Проверьте больницы",
+        "checkWithWorkplace": "Уточните на рабочем месте",
+        "contactCloseFriends": "Связаться с близкими друзьями",
+        "contactLocalPolice": "Свяжитесь с местной полицией",
+        "digitalFootprint": "Цифровой след",
+        "email": "Электронная почта",
+        "immediateActions": "Немедленные действия",
+        "phoneProvider": "Телефонный провайдер",
+        "socialMedia": "Социальные сети",
+        "title": "Заголовок"
+      }
+    },
+    "mockContent": {
+      "insurancePolicies": "Страховые полисы"
+    },
+    "scenarios": {
+      "death": {
+        "description": "Описание",
+        "title": "Заголовок"
+      },
+      "emergency": {
+        "description": "Описание",
+        "title": "Заголовок"
+      },
+      "hospitalization": {
+        "description": "Описание",
+        "title": "Заголовок"
+      },
+      "missing": {
+        "description": "Описание",
+        "title": "Заголовок"
+      }
+    },
+    "select_scenario_4": "Выберите сценарий 4",
+    "tools": {
+      "cancel": "Отмена",
+      "chooseScenario": "Выберите сценарий",
+      "emergencySimulator": "Симулятор аварийной ситуации",
+      "emergencySimulatorDesc": "Описание симулятора экстренной помощи",
+      "generateGuide": "Создать руководство",
+      "generating": "Генерация",
+      "informationTreasureHunt": "Информационная охота за сокровищами",
+      "launch": "Запуск",
+      "printGuide": "Распечатать руководство",
+      "stepByStepGuides": "Пошаговые руководства",
+      "stepByStepGuidesDesc": "Пошаговые руководства по описанию",
+      "treasureHuntDesc": "Описание поиска сокровищ",
+      "videoMessages": "Видеосообщения",
+      "videoMessagesDesc": "Описание видеосообщений"
+    },
+    "use_these_tools_to_ensure_your_1": "Используйте эти инструменты, чтобы обеспечить себе 1"
+  },
+  "form": {
+    "additionalRoles": "Другие способы помощи",
+    "assignedRoles": "Как они помогут вашей семье",
+    "selectRoles": "Выберите, как они могут помочь вашей семье",
+    "accessDescription": "Что они могут видеть и когда они могут помочь",
+    "accessInfo": "Что они могут сделать",
+    "accessLevel": "Как много они могут видеть",
+    "addPerson": "Добавить кого-нибудь для помощи",
+    "alternatePhone": "Другой номер телефона",
+    "backupFor": "Они — резервная копия для",
+    "backupHelper": "Кого они заменят в случае необходимости?",
+    "capabilities": "Почему они подходят для этого",
+    "capabilitiesHelper": "Почему они являются хорошим выбором для оказания помощи?",
+    "compensation": "Если им нужна поддержка",
+    "compensationHelper": "Любая финансовая помощь, которая может им понадобиться",
+    "contactInfo": "Как с ними связаться",
+    "dateOfBirth": "День рождения",
+    "editPerson": "Мы можем обновить их информацию",
+    "emailAddress": "Электронная почта",
+    "fullName": "Их полное имя",
+    "fullNameHelper": "Используйте свое законное имя для важных документов",
+    "fullNamePlaceholder": "Их полное официальное имя",
+    "homeAddress": "Где они живут",
+    "instructions": "Важные вещи, которые им следует знать",
+    "instructionsHelper": "Какие-либо особые рекомендации по оказанию помощи вашей семье",
+    "instructionsPlaceholder": "Что им нужно знать, чтобы помочь",
+    "limitations": "Что нужно знать",
+    "limitationsHelper": "Все, что может затруднить им помощь",
+    "personalInfo": "О них",
+    "primaryPhone": "Лучший номер телефона",
+    "primaryRole": "Главный способ, которым они помогут",
+    "relationship": "Откуда вы их знаете",
+    "relationshipPlaceholder": "Как супруг/супруга, ребенок, брат/сестра, лучший друг",
+    "roleInfo": "Как они помогут",
+    "workAddress": "Где они работают"
+  },
+  "preparedness": {
+    "familyBenefit": "Семейное пособие",
+    "familyCommunication": {
+      "description": "Описание",
+      "scheduleReview": "График обзора",
+      "shareReport": "Поделиться отчетом",
+      "title": "Заголовок"
+    },
+    "gaps": {
+      "basicAccessInfo": "Базовая информация о доступе",
+      "addMedicalPreferences": "Добавить медицинские предпочтения",
+      "completeFinancialAccess": "Полный финансовый доступ",
+      "documentBusinessOperations": "Документирование бизнес-операций",
+      "improveImmediateAccess": "Улучшить немедленный доступ",
+      "updateWillAndTrust": "Обновление воли и доверия"
+    },
+    "levels": {
+      "goodBasic": "Хороший базовый",
+      "fullyPrepared": "Полностью готов",
+      "minimalPreparation": "Минимальная подготовка",
+      "needsImmediate": "Нужны немедленные",
+      "somePreparation": "Некоторая подготовка",
+      "wellPrepared": "Хорошо подготовленный"
+    },
+    "assessments": {
+      "decisionMaking": {
+        "good": "Хороший",
+        "needsWork": "Нужна работа"
+      },
+      "immediateAccess": {
+        "good": "Хороший",
+        "needsWork": "Нужна работа"
+      },
+      "longTermSecurity": {
+        "good": "Хороший",
+        "needsWork": "Нужна работа"
+      }
+    },
+    "dimensions": {
+      "decisionMaking": "Принятие решений",
+      "immediateAccess": "Немедленный доступ",
+      "longTermSecurity": "Долгосрочная безопасность"
+    },
+    "impact": "Влияние",
+    "improvements": {
+      "addBankAccounts": "Добавить банковские счета",
+      "documentMedicalWishes": "Документировать медицинские пожелания",
+      "uploadLegalDocuments": "Загрузить юридические документы"
+    },
+    "nextStep": "Следующий шаг",
+    "scenarioReadiness": "Готовность сценария",
+    "scenarios": {
+      "extendedTravel": {
+        "description": "Описание",
+        "title": "Заголовок"
+      },
+      "suddenDeath": {
+        "description": "Описание",
+        "title": "Заголовок"
+      }
+    },
+    "title": "Заголовок",
+    "toImprove": "Чтобы улучшить"
+  },
+  "relationships": {
+    "child": "Ребенок",
+    "friend": "Друг",
+    "other": "Другой",
+    "parent": "Родитель",
+    "sibling": "Брат или сестра",
+    "spouse": "Супруг"
+  },
+  "roles": {
+    "advisor": "Советник",
+    "beneficiary": "Бенефициар",
+    "caregiver": "Опекун",
+    "emergencyContact": "Экстренный контакт",
+    "executor": "Исполнитель",
+    "financialAgent": "Финансовый агент (доверенность)",
+    "guardian": "Хранитель",
+    "healthcareProxy": "Прокси-сервер здравоохранения",
+    "representative": "Представитель",
+    "successor": "Резервное копирование",
+    "trustee": "Попечитель",
+    "witness": "Будет свидетелем"
+  },
+  "trustedCircle": {
+    "roles": "Как они могут помочь",
+    "totalMembers": "{{count}} люди готовы помочь",
+    "addFirst": "Мы можем добавить кого-то, кто может помочь",
+    "description": "Выбирайте проверенных людей, которые смогут поддержать вашу семью в случае необходимости.",
+    "empty": "Для начала можно добавить человека, на которого может положиться ваша семья: супруга/супругу, близкого друга или доверенного члена семьи.",
+    "keyPeople": "Ключевые люди",
+    "recentlyAdded": "Недавно добавлено",
+    "subtitle": "Люди, которые будут рядом с вашей семьей",
+    "title": "Доверенные люди",
+    "viewAll": "Увидеть всех"
+  },
+  "family": {
+    "GuardianPlaybook": {
+      "className": {
+        "flex_itemscenter_justifycenter_h64": "flex items-center justify-center h-64",
+        "grid_gridcols6_wfull": "сетка grid-cols-6 w-full",
+        "flex_itemscenter_gap2": "flex items-center gap-2",
+        "hidden_sminline": "скрытый sm:inline",
+        "spacey4": "пробел-y-4",
+        "minh200px": "мин-ч-[200px]",
+        "flex_justifybetween_itemscenter_mb4": "flex justify-between items-center mb-4",
+        "grid_gridcols1_mdgridcols2_gap4": "сетка сетка-столбцы-1 md:grid-cols-2 gap-4",
+        "mdcolspan2": "md:col-span-2",
+        "minh80px": "мин-ч-[80px]",
+        "mt2": "МТ-2",
+        "flex_itemscenter_justifybetween": "flex items-center justify-between"
+      },
+      "htmlFor": {
+        "funeral_wishes": "похоронные_пожелания",
+        "digital_accounts": "цифровые_аккаунты",
+        "document_locations": "расположение_документов",
+        "personal_messages": "личные_сообщения",
+        "practical_instructions": "практические_инструкции"
+      },
+      "id": {
+        "funeral_wishes": "похоронные_пожелания",
+        "digital_accounts": "цифровые_аккаунты",
+        "document_locations": "расположение_документов",
+        "personal_messages": "личные_сообщения",
+        "practical_instructions": "практические_инструкции"
+      },
+      "playbooktabskey": "семейные.табы.${key}",
+      "contactnameindex": "контактное имя-${index}",
+      "contactrelationshipindex": "контакт-отношение-${index}",
+      "contactphoneindex": "контактный телефон-${index}",
+      "contactemailindex": "контакт-электронная почта-${index}",
+      "contactnotesindex": "контакт-заметки-${index}",
+      "playbookstatusstatus": "семейный.статус.${status}"
+    },
+    "GuardianPlaybookView": {
+      "className": {
+        "minhscreen_flex_itemscenter_justifycenter": "min-h-screen flex items-center justify-center",
+        "animatepulse_textcenter": "анимированный пульсирующий текстовый центр",
+        "maxwmd": "макс-в-мд",
+        "minhscreen_bggradienttobr_frombackground_tomuted20": "min-h-screen bg-gradient-to-br from-background to-muted/20",
+        "container_mxauto_px4_py8_maxw4xl": "контейнер mx-auto px-4 py-8 max-w-4xl",
+        "flex_itemscenter_justifycenter_w20_h20_roundedfull": "flex items-center justify-center w-20 h-20 rounded-full bg-primary/10 mx-auto mb-4",
+        "mt4": "МТ-4",
+        "mb8": "мб-8",
+        "flex_itemscenter_gap2": "flex items-center gap-2",
+        "grid_gap4_mdgridcols2": "grid gap-4 md:grid-cols-2",
+        "spacey2": "пространство-y-2",
+        "flex_itemsstart_justifybetween": "flex items-start justify-between",
+        "fontsemibold": "шрифт-полужирный",
+        "spacey1": "пространство-y-1",
+        "flex_itemscenter_gap2_textsm_textprimary_hoverunde": "flex items-center gap-2 text-sm text-primary hover:underline",
+        "spacey6": "космос-y-6",
+        "prose_prosesm_maxwnone": "проза проза-см макс-в-нет",
+        "whitespaceprewrap": "пробел-предварительный перенос",
+        "mt12_textcenter_textsm_textmutedforeground": ""
+      },
+      "telcontactphone": "тел:${contact.phone}",
+      "mailtocontactemail": ""
+    }
+  },
+  "guardianUpload": {
+    "relationships": {
+      "child": "Ребенок",
+      "friend": "Друг",
+      "legalProfessional": "Юридический специалист",
+      "other": "Другой",
+      "parent": "Родитель",
+      "sibling": "Брат или сестра",
+      "spouse": "Супруг"
+    },
+    "roles": {
+      "emergencyContact": "Экстренный контакт",
+      "executorOfWill": "Исполнитель завещания",
+      "financialPowerOfAttorney": "Финансовая доверенность",
+      "guardianForChildren": "Опекун для детей",
+      "healthcareProxy": "Прокси-сервер здравоохранения",
+      "trustee": "Попечитель"
+    },
+    "rolesTitle": "Название роли",
+    "addButton": "Добавить кнопку",
+    "addTitle": "Добавить заголовок",
+    "added": "Добавлен",
+    "countryDescription": "Описание страны",
+    "countryLabel": "Метка страны",
+    "countryPlaceholder": "Заполнитель страны",
+    "description": "Описание",
+    "editTitle": "Изменить заголовок",
+    "emailLabel": "Метка электронной почты",
+    "emailPlaceholder": "Заполнитель электронной почты",
+    "error": "Ошибка",
+    "errors": {
+      "connectionError": "Ошибка подключения",
+      "duplicateError": "Повторяющаяся ошибка",
+      "permissionError": "Ошибка разрешения",
+      "requiredDataNotFound": "Необходимые данные не найдены",
+      "saveError": "Ошибка сохранения",
+      "unknownError": "Неизвестная ошибка"
+    },
+    "fullNameLabel": "Полное имя этикетки",
+    "fullNamePlaceholder": "Заполнитель полного имени",
+    "loginToSave": "Войдите, чтобы сохранить",
+    "phoneLabel": "Этикетка телефона",
+    "phonePlaceholder": "Заполнитель для телефона",
+    "relationshipLabel": "Метка отношений",
+    "relationshipPlaceholder": "Заполнитель отношений",
+    "saving": "Экономия",
+    "success": "Успех",
+    "updateButton": "Кнопка обновления",
+    "updated": "Обновлено"
+  },
+  "familyMembers": "Члены семьи",
+  "sensitivity": {
+    "step_family_dynamics": "Отношения между приемными родителями и детьми требуют четкой документации",
+    "family_conflict": "Семейные конфликты требуют большей ясности в планировании",
+    "previous_marriage_obligations": "Необходимо выполнить предыдущие супружеские обязательства.",
+    "absent_parent_considerations": "Ситуации отсутствия родителей требуют тщательного планирования",
+    "solo_responsibility_pressure": "Обязанности родителя-одиночки могут показаться невыполнимыми",
+    "inheritance_disputes": "Потенциальные наследственные споры необходимо предотвращать",
+    "traditional_role_expectations": "Традиционные семейные роли могут потребовать рассмотрения",
+    "disability_planning_stress": "Планирование особых потребностей может быть эмоционально сложным",
+    "long_term_care_concerns": "Планирование долгосрочного ухода имеет важное значение"
+  },
+  "features": {
+    "family_communication_center": {
+      "title": "Центр семейного общения",
+      "description": "Держите всех в курсе и на связи"
+    },
+    "family_tree_visualizer": {
+      "title": "Визуализатор генеалогического древа",
+      "description": "Визуально отображайте сложные семейные отношения"
+    },
+    "step_family_guidance": {
+      "title": "Руководство для приемных семей",
+      "description": "Уверенно используйте смешанное планирование семьи"
+    },
+    "family_meeting_tools": {
+      "title": "Инструменты для семейных встреч",
+      "description": "Организуйте важные семейные обсуждения"
+    },
+    "document_vault": {
+      "title": "Безопасное хранилище документов",
+      "description": "Безопасное хранение и передача важных документов"
+    },
+    "guardian_network_builder": {
+      "title": "Создатель сети Guardian",
+      "description": "Создайте сильную сеть поддержки для своих детей"
+    },
+    "single_parent_resources": {
+      "title": "Ресурсы для родителей-одиночек",
+      "description": "Специализированные инструменты и поддержка для родителей-одиночек"
+    },
+    "complex_beneficiary_manager": {
+      "title": "Комплексный менеджер по бенефициарам",
+      "description": "Ясно управляйте многочисленными отношениями"
+    },
+    "multi_generation_planner": {
+      "title": "Планировщик для нескольких поколений",
+      "description": "Баланс потребностей всех поколений"
+    },
+    "elder_care_resources": {
+      "title": "Ресурсы по уходу за пожилыми людьми",
+      "description": "Поддержка ухода за стареющими родителями"
+    },
+    "special_needs_trust_wizard": {
+      "title": "Мастер по работе с особыми потребностями",
+      "description": "Создайте соответствующие трасты для членов с особыми потребностями"
+    },
+    "care_instruction_builder": {
+      "title": "Конструктор инструкций по уходу",
+      "description": "Документируйте подробные требования к уходу"
+    },
+    "government_benefit_tracker": {
+      "title": "Отслеживание государственных пособий",
+      "description": "Обеспечить право на получение важных льгот"
+    },
+    "business_succession_planner": {
+      "title": "Планировщик преемственности бизнеса",
+      "description": "План обеспечения непрерывности бизнеса"
+    },
+    "buy_sell_agreement_tracker": {
+      "title": "Трекер договоров купли-продажи",
+      "description": "Управление соглашениями о деловом партнерстве"
+    },
+    "remote_collaboration_tools": {
+      "title": "Инструменты для удаленной совместной работы",
+      "description": "Работайте вместе, несмотря на расстояние"
+    },
+    "multi_jurisdiction_guidance": {
+      "title": "Руководство по работе с несколькими юрисдикциями",
+      "description": "Навигация по законам в разных местах"
+    }
+  },
+  "cultural": {
+    "extended_family_obligations": "Расширенные семейные обязанности",
+    "islamic_inheritance": "Исламские принципы наследования",
+    "jewish_traditions": "Еврейские семейные традиции",
+    "christian_values": "Ценности христианского служения",
+    "buddhist_principles": "Буддийские принципы сострадания",
+    "patriarchal_hierarchy": "Традиционная патриархальная структура",
+    "matriarchal_hierarchy": "Традиционная матриархальная структура",
+    "elder_led_hierarchy": "Структура семьи, возглавляемая старейшинами",
+    "collective_decision_making": "Коллективные семейные решения",
+    "elder_respect_obligations": "Обязанности по уходу за пожилыми людьми",
+    "multilingual_documentation": "Потребности в многоязычной документации"
+  },
+  "access": {
+    "descriptions": {
+      "executor": "Они могут сделать все, чтобы помочь вашей семье.",
+      "full": "Они могут видеть и управлять всей информацией вашей семьи.",
+      "limited": "Они могут видеть основную контактную информацию и инструкции на случай чрезвычайной ситуации.",
+      "standard": "Они могут увидеть большую часть того, что может понадобиться вашей семье."
+    },
+    "levels": {
+      "executor": "Полный доступ помощника",
+      "full": "Может видеть все",
+      "limited": "Только основная информация",
+      "standard": "Регулярный семейный доступ"
+    },
+    "permissions": {
+      "editInformation": "Может вносить изменения",
+      "manageAccess": "Может управлять другими помощниками",
+      "viewAssets": "Может видеть ваши важные вещи",
+      "viewDocuments": "Может читать документы"
+    }
+  },
+  "actions": {
+    "addPerson": "Мы можем добавить доверенное лицо",
+    "assignRole": "Мы можем назначить роль",
+    "contactPerson": "Мы можем связаться с вами",
+    "editPerson": "Обновите свою информацию",
+    "grantAccess": "Мы можем предоставить доступ",
+    "printSummary": "Мы можем распечатать резюме",
+    "removePerson": "Мы можем удалить из доверенных лиц",
+    "removeRole": "Мы можем изменить их роль",
+    "revokeAccess": "Мы можем изменить то, что они видят.",
+    "scheduleReview": "Мы можем запланировать проверку",
+    "sendInvitation": "Мы можем пригласить их помочь",
+    "setBackup": "Мы можем установить резервного помощника",
+    "viewProfile": "Мы можем видеть все их детали"
+  },
+  "common": {
+    "cancel": "Отмена",
+    "fix": "Исправить",
+    "minutes": "Минуты",
+    "start": "Начинать"
+  },
+  "estateStatus": {
+    "actions": {
+      "cancel": "Отмена",
+      "update": "Обновлять",
+      "updating": "Обновление"
+    },
+    "description": "Описание",
+    "dialog": {
+      "description": "Описание",
+      "title": "Заголовок"
+    },
+    "empty": {
+      "noStatus": "Нет статуса",
+      "readOnly": "Только для чтения"
+    },
+    "fields": {
+      "additionalDetails": "Дополнительные детали",
+      "status": "Статус"
+    },
+    "lastUpdated": "Последнее обновление",
+    "logAction": "Действие журнала",
+    "placeholders": {
+      "additionalContext": "Дополнительный контекст",
+      "selectStatus": "Выберите статус"
+    },
+    "progress": "Прогресс",
+    "statuses": {
+      "assetsBeingValued": "Оцениваемые активы",
+      "debtsBeingSettled": "Долги урегулированы",
+      "distributionInProgress": "Распространение в процессе",
+      "estateClosed": "Имение закрыто",
+      "gatheringDocuments": "Сбор документов",
+      "initialReview": "Первоначальный обзор",
+      "probateInitiated": "Инициировано завещание",
+      "readyForDistribution": "Готово к распространению",
+      "taxPreparation": "Подготовка налоговой отчетности"
+    },
+    "title": "Заголовок"
+  },
+  "guardian": {
+    "templateModal": {
+      "_1": ""
+    }
+  },
+  "guardianView": {
+    "defaultUserName": "Имя пользователя по умолчанию",
+    "errors": {
+      "failedToLoad": "Не удалось загрузить",
+      "pleaseLogin": "Пожалуйста, войдите в систему"
+    },
+    "guardianInfo": {
+      "description": "Описание",
+      "securityNote": "Примечание по безопасности"
+    },
+    "readOnlyAccess": "Доступ только для чтения",
+    "sections": {
+      "finalWishes": {
+        "description": "Описание",
+        "digitalAccounts": "Цифровые счета",
+        "empty": "Пустой",
+        "funeralWishes": "Похоронные пожелания",
+        "title": "Заголовок"
+      },
+      "keyDocuments": {
+        "description": "Описание",
+        "empty": "Пустой",
+        "expires": "Истекает",
+        "keyDocumentBadge": "Значок ключа документа",
+        "noExpiration": "Нет срока действия",
+        "title": "Заголовок"
+      }
+    },
+    "subtitle": "Подзаголовок",
+    "title": "Заголовок"
+  },
+  "guardianship": {
+    "addDependent": "Добавьте того, кому нужна помощь",
+    "alternateGuardian": "Резервный сиделка",
+    "careStandards": "Как вы хотите, чтобы о них заботились",
+    "childGuardians": "Кто позаботится о ваших детях?",
+    "dependentCare": "Планы ухода за вашими близкими",
+    "description": "Выбирайте любящих людей, которые позаботятся о ваших детях или членах семьи, которым нужна помощь, если вы не сможете быть рядом.",
+    "educationPreferences": "Пожелания по школе и образованию",
+    "financialProvisions": "Деньги на их уход",
+    "guardianCompensation": "Поддержка лица, осуществляющего уход",
+    "guardianFor": "Кто позаботится о {{name}}",
+    "guardianInstructions": "Как за ними ухаживать",
+    "guardianQualifications": "Почему это правильный выбор",
+    "healthcarePreferences": "Здравоохранение и медицинское обслуживание",
+    "lifestylePreferences": "Повседневная жизнь и занятия",
+    "noChildren": "Вы еще не сообщили нам о детях или членах семьи, которым необходим уход.",
+    "primaryGuardian": "Лучший помощник по уходу",
+    "religiousPreferences": "Вера и ценности",
+    "reportingRequirements": "Информирование семьи",
+    "subtitle": "Обеспечьте заботу о своих близких",
+    "temporaryGuardian": "Краткосрочный сиделка",
+    "title": "Кто позаботится о ваших близких?",
+    "visitationRights": "Организация посещений семьи"
+  },
+  "notificationPreferences": {
+    "description": "Описание",
+    "emailRequired": "Требуется электронная почта",
+    "errors": {
+      "loadFailed": "Загрузка не удалась",
+      "updateFailed": "Обновление не удалось"
+    },
+    "howItWorks": {
+      "point1": "Точка 1",
+      "point2": "Пункт 2",
+      "point3": "Пункт 3",
+      "title": "Заголовок"
+    },
+    "info": "Информация",
+    "lastUpdated": "Последнее обновление",
+    "noEmail": "Нет электронной почты",
+    "title": "Заголовок"
+  },
+  "playbook": {
+    "addContact": "Добавить контакт",
+    "autoSaveNotice": "Уведомление об автоматическом сохранении",
+    "contact": "Контакт",
+    "contactFields": {
+      "email": "Электронная почта",
+      "emailPlaceholder": "Заполнитель электронной почты",
+      "name": "Имя",
+      "namePlaceholder": "Имя заполнителя",
+      "notes": "Примечания",
+      "notesPlaceholder": "Заполнитель для примечаний",
+      "phone": "Телефон",
+      "phonePlaceholder": "Заполнитель для телефона",
+      "role": "Роль",
+      "rolePlaceholder": "Заполнитель роли"
+    },
+    "errors": {
+      "loadFailed": "Загрузка не удалась",
+      "saveFailed": "Сохранить не удалось"
+    },
+    "loading": "Загрузка",
+    "noContent": "Нет контента",
+    "preview": "Предварительный просмотр",
+    "save": "Сохранять",
+    "saving": "Экономия",
+    "sections": {
+      "digital": {
+        "description": "Описание",
+        "placeholder": "Заполнитель",
+        "title": "Заголовок"
+      },
+      "documents": {
+        "description": "Описание",
+        "placeholder": "Заполнитель",
+        "title": "Заголовок"
+      },
+      "funeral": {
+        "description": "Описание",
+        "placeholder": "Заполнитель",
+        "title": "Заголовок"
+      },
+      "practical": {
+        "description": "Описание",
+        "placeholder": "Заполнитель",
+        "title": "Заголовок"
+      }
+    },
+    "subtitle": {
+      "edit": "Редактировать",
+      "view": "Вид"
+    },
+    "tabs": {
+      "digital": "Цифровой",
+      "documents": "Документы",
+      "funeral": "Похороны",
+      "instructions": "Инструкции",
+      "practical": "Практический"
+    },
+    "templates": {
+      "append": "Добавить",
+      "backToTemplates": "Вернуться к шаблонам",
+      "description": "Описание",
+      "existingContent": "Существующий контент",
+      "fillInVariables": "Заполните переменные",
+      "insertTemplate": "Вставить шаблон",
+      "preview": "Предварительный просмотр",
+      "replace": "Заменять",
+      "title": "Заголовок",
+      "variableCount": "Переменное количество",
+      "variablePlaceholder": "Переменный заполнитель"
+    },
+    "title": "Заголовок",
+    "useTemplate": "Использовать шаблон",
+    "accessDenied": "Доступ запрещен",
+    "description": "Описание",
+    "digitalAccounts": {
+      "description": "Описание",
+      "label": "Этикетка",
+      "placeholder": "Заполнитель"
+    },
+    "discardChanges": {
+      "cancel": "Отмена",
+      "confirm": "Подтверждать",
+      "description": "Описание",
+      "title": "Заголовок"
+    },
+    "documentLocations": {
+      "description": "Описание",
+      "label": "Этикетка",
+      "placeholder": "Заполнитель"
+    },
+    "exitPreview": "Выйти из предварительного просмотра",
+    "fetchError": "Ошибка выборки",
+    "funeralWishes": {
+      "description": "Описание",
+      "label": "Этикетка",
+      "placeholder": "Заполнитель"
+    },
+    "lastUpdated": "Последнее обновление",
+    "notAuthenticated": "Не аутентифицировано",
+    "notFound": {
+      "description": "Описание",
+      "title": "Заголовок"
+    },
+    "practicalInstructions": {
+      "description": "Описание",
+      "label": "Этикетка",
+      "placeholder": "Заполнитель"
+    },
+    "saveError": "Ошибка сохранения",
+    "saveSuccess": "Сохранить успех",
+    "titleReadOnly": "Заголовок только для чтения",
+    "viewDescription": "Посмотреть описание",
+    "viewFooter": "Посмотреть нижний колонтитул",
+    "viewTitle": "Просмотреть заголовок"
+  },
+  "executor": {
+    "completed": "Завершенный",
+    "dashboard": {
+      "reminder": "Напоминание",
+      "subtitle": "Подзаголовок",
+      "title": "Заголовок"
+    },
+    "due": "Должный",
+    "errors": {
+      "loadTasksFailed": "Задачи загрузки не удалось",
+      "updateTaskFailed": "Задача обновления не выполнена"
+    },
+    "highPriority": "Высокий приоритет",
+    "legalSupport": {
+      "button": "Кнопка",
+      "description": "Описание",
+      "title": "Заголовок"
+    },
+    "markComplete": "Отметить как завершенное",
+    "sections": {
+      "firstWeek": {
+        "description": "Описание",
+        "empty": "Пустой",
+        "title": "Заголовок"
+      },
+      "immediate": {
+        "description": "Описание",
+        "empty": "Пустой",
+        "title": "Заголовок"
+      },
+      "ongoing": {
+        "description": "Описание",
+        "empty": "Пустой",
+        "title": "Заголовок"
+      }
+    },
+    "stats": {
+      "completed": "Завершенный",
+      "remaining": "Оставшийся",
+      "totalTasks": "Всего задач"
+    },
+    "undo": "Отменить",
+    "viewAccountDetails": "Просмотреть данные учетной записи",
+    "viewRelatedDocuments": "Просмотреть связанные документы"
+  },
+  "executorDashboard": {
+    "professional_guidance_1": "Профессиональное руководство 1"
+  },
+  "executorManagement": {
+    "add_new_executor_10": "Добавить нового исполнителя 10",
+    "all_executors_must_have_legacy_23": "Все исполнители должны иметь наследие 23",
+    "current_executors_17": "Текущие исполнители 17",
+    "designate_trusted_individuals__9": "Назначить доверенных лиц 9",
+    "email_address_11": "Адрес электронной почты 11",
+    "executor_example_com_12": "Пример исполнителя com 12",
+    "executor_management_8": "Управление исполнителями 8",
+    "failed_to_add_executor_5": "Не удалось добавить исполнителя 5",
+    "failed_to_load_executors_2": "Не удалось загрузить исполнителей 2",
+    "failed_to_remove_executor_6": "Не удалось удалить исполнителя 6",
+    "important_information_19": "Важная информация 19",
+    "loading_executors_7": "Загрузка исполнителей 7",
+    "no_executors_designated_yet_ad_18": "Исполнители пока не назначены. 18",
+    "primary_executor_14": "Основной исполнитель 14",
+    "primary_executors_receive_imme_20": "Основные исполнители получают немедленно 20",
+    "relationship_type_13": "Тип отношений 13",
+    "secondary_executor_15": "Вторичный исполнитель 15",
+    "secondary_executors_are_notifi_21": "Вторичные исполнители уведомляются 21",
+    "statusLabels": {
+      "addExecutor": "Добавить исполнителя",
+      "adding": "Добавление",
+      "unknownUser": "Неизвестный пользователь"
+    },
+    "this_person_is_already_designa_4": "Этот человек уже назначен 4",
+    "user_not_found_with_this_email_3": "Пользователь с этим адресом электронной почты не найден 3"
+  },
+  "invite": {
+    "title": "Заголовок"
+  },
+  "inviteAcceptance": {
+    "buttons": {
+      "acceptRole": "Принять роль",
+      "decline": "Отклонить",
+      "processing": "Обработка"
+    },
+    "defaultInviterName": "Имя приглашающего по умолчанию",
+    "disclaimer": "Отказ от ответственности",
+    "errors": {
+      "acceptFailed": "Принять не удалось",
+      "alreadyProcessed": "Уже обработано",
+      "declineFailed": "Отклонение не удалось",
+      "invalidLink": "Неверная ссылка",
+      "loadingFailed": "Загрузка не удалась",
+      "notFound": "Не найдено"
+    },
+    "guardianRole": {
+      "relationship": "Отношение",
+      "responsibilities": "Обязанности",
+      "title": "Заголовок",
+      "yourName": "Ваше имя"
+    },
+    "loading": "Загрузка",
+    "notFound": {
+      "description": "Описание",
+      "title": "Заголовок"
+    },
+    "subtitle": "Подзаголовок",
+    "whatThisMeans": {
+      "point1": "Точка 1",
+      "point2": "Пункт 2",
+      "point3": "Пункт 3",
+      "point4": "Пункт 4",
+      "title": "Заголовок"
+    }
+  },
+  "structures": {
+    "nuclear": "Традиционная семья",
+    "single_parent": "Семья с одним родителем",
+    "blended": "Смешанная семья",
+    "multigenerational": "Многопоколенная семья",
+    "childless": "Пара без детей",
+    "empty_nest": "Семья «Пустое гнездо»",
+    "non_traditional": "Уникальная структура семьи"
+  },
+  "complexity": {
+    "simple": "Простой",
+    "moderate": "Умеренный",
+    "complex": "Сложный"
+  },
+  "personalized": "Ваш индивидуальный опыт планирования семьи",
+  "specialConsiderations": "Особые соображения",
+  "recommendedFeatures": "Рекомендуемые функции",
+  "tabs": {
+    "overview": "Обзор",
+    "insights": "Инсайты",
+    "features": "Функции",
+    "cultural": "Культурный"
+  },
+  "keyConsiderations": "Ключевые моменты для вашей семьи",
+  "specialNeeds": "Особые потребности планирования",
+  "sensitivities": "Зоны, требующие особого ухода",
+  "needs": {
+    "special_needs_planning": "Планирование особых потребностей",
+    "long_term_care_planning": "Планирование долгосрочного ухода",
+    "special_needs_trust": "Фонд особых потребностей",
+    "elder_care_planning": "Планирование ухода за пожилыми людьми",
+    "multi_generational_wealth_transfer": "Передача между поколениями",
+    "military_benefit_planning": "Военные льготы",
+    "deployment_planning": "Планирование развертывания",
+    "business_succession": "Наследование бизнеса",
+    "key_person_planning": "Планирование ключевых лиц",
+    "young_child_guardianship": "Опека над маленькими детьми",
+    "education_planning": "Планирование образования",
+    "sharia_compliant_planning": "Планирование, соответствующее нормам шариата"
+  },
+  "insightType": {
+    "structure": "Структура семьи",
+    "need": "Особые потребности",
+    "opportunity": "Возможность",
+    "risk": "Фактор риска"
+  },
+  "priority": {
+    "high": "Высокий приоритет",
+    "medium": "Средний приоритет",
+    "low": "Низкий приоритет"
+  },
+  "suggestedActions": "Предлагаемые действия",
+  "recommendedFeaturesTitle": "Функции, созданные специально для вашей семьи",
+  "recommendedFeaturesDesc": "В зависимости от структуры и потребностей вашей семьи эти функции будут наиболее полезны.",
+  "culturalConsiderations": "Культурные и религиозные соображения",
+  "culturalDesc": "Уважайте ценности и традиции своей семьи при планировании",
+  "noCulturalSettings": "Культурные предпочтения не установлены. Добавьте их, чтобы убедиться, что при планировании учитываются ценности вашей семьи.",
+  "configureCultural": "Настроить культурные предпочтения",
+  "culturalUpdated": "Культурные предпочтения обновлены",
+  "culturalUpdatedDesc": "Планирование вашей семьи теперь будет отражать ваши культурные ценности и традиции."
+}

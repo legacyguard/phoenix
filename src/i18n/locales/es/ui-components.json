@@ -1,2 +1,505 @@
 {
+  "terms": {
+    "vault": "Bóveda",
+    "vaultLower": "bóveda",
+    "trustedCircle": "Círculo de confianza",
+    "trustedCircleLower": "círculo de confianza",
+    "willGenerator": "Generador de voluntades",
+    "willGeneratorLower": "generador de voluntad",
+    "legacyLetters": "Cartas heredadas",
+    "secure": "Seguro",
+    "secureLower": "seguro"
+  },
+  "respectful": {
+    "status": {
+      "secured": "Asegurado",
+      "protected": "Protegido",
+      "ready": "Listo",
+      "organized": "Organizado",
+      "documented": "Documentado",
+      "prepared": "Preparado"
+    },
+    "suggestions": {
+      "consider": "Considerar",
+      "whenReady": "Cuando estés listo",
+      "mightWant": "Quizás quieras",
+      "optional": "Opcional",
+      "recommended": "Recomendado",
+      "noRush": "Sin prisa"
+    },
+    "progress": {
+      "gettingStarted": "Empezando",
+      "makingProgress": "Progresando",
+      "wellOrganized": "Bien organizado",
+      "comprehensive": "Integral",
+      "documentsSecured": "{{count}} documento asegurado",
+      "documentsSecured_plural": "{{count}} documentos asegurados"
+    },
+    "actions": {
+      "secure": "Seguro",
+      "add": "Agregar",
+      "organize": "Organizar",
+      "protect": "Proteger",
+      "document": "Documento",
+      "prepare": "Preparar"
+    },
+    "tone": {
+      "respectful": "Respetuoso",
+      "supportive": "De apoyo",
+      "clear": "Claro",
+      "practical": "Práctico"
+    }
+  },
+  "actions": {
+    "contactSupport": "Obtener ayuda",
+    "disable": "Apagar",
+    "enable": "Encender",
+    "goBack": "Volver",
+    "refresh": "Refrescar",
+    "save": "Mantén esto seguro",
+    "accept": "Aceptar",
+    "accepted": "Aceptado",
+    "account": "Cuenta",
+    "activate": "Activar",
+    "add": "Agregar",
+    "additional": "Más",
+    "adjust": "Ajustar",
+    "advanced": "Opciones avanzadas",
+    "align": "Alinear",
+    "allowed": "Permitido",
+    "alter": "Cambiar",
+    "approve": "Aprobar",
+    "approved": "Aprobado",
+    "arrange": "Organizar",
+    "authenticate": "Verifica que eres tú",
+    "authenticated": "Verificado",
+    "authorize": "Dar permiso",
+    "authorized": "Permiso dado",
+    "automatic": "Automático",
+    "auxiliary": "",
+    "available": "Disponible",
+    "backedUp": "Copia de seguridad segura",
+    "basic": "",
+    "begin": "Vamos a empezar",
+    "blocked": "Obstruido",
+    "bonus": "",
+    "bottom": "Abajo",
+    "browse": "Mirar por",
+    "center": "Centro",
+    "change": "Cambiar",
+    "choose": "Elegir",
+    "clear": "Claro",
+    "clone": "Hacer una copia",
+    "close": "Cerca",
+    "collapse": "Ocultar detalles",
+    "compatible": "Funciona con",
+    "complete": "Todo listo",
+    "configuration": "Ajustes",
+    "configure": "Configuración",
+    "confirm": "Sí, estoy seguro",
+    "confirmed": "Confirmado",
+    "content": "Contenido",
+    "convert": "Cambiar formato",
+    "create": "Crear nuevo",
+    "crop": "Cultivo",
+    "current": "Actual",
+    "custom": "Costumbre",
+    "customize": "Hazlo tuyo",
+    "cut": "Cortar",
+    "deactivate": "Apagar",
+    "decline": "No, gracias",
+    "declined": "Rechazado",
+    "decode": "Descodificar",
+    "decrypt": "Descubrir",
+    "default": "Estándar",
+    "denied": "No permitido",
+    "deny": "No permitir",
+    "deselect": "Deseleccionar",
+    "disabled": "Apagado",
+    "done": "Listo",
+    "downgrade": "Utilice la versión más sencilla",
+    "drag": "Arrastrar",
+    "drop": "Deja caer aquí",
+    "editable": "Se puede cambiar",
+    "enabled": "Encendido",
+    "encode": "Codificar",
+    "encrypt": "Mantenerse seguro",
+    "encrypted": "Asegurado",
+    "end": "Fin",
+    "enhance": "Mejorar",
+    "enterprise": "Negocio",
+    "exitFullscreen": "Salir de pantalla completa",
+    "expand": "Mostrar más",
+    "export": "Descargar",
+    "extra": "Adicional",
+    "filter": "Mostrar solo",
+    "find": "Buscar",
+    "finish": "Completo",
+    "flip": "Voltear",
+    "forbidden": "No permitido",
+    "format": "Formato",
+    "full": "Lleno",
+    "fullscreen": "Pantalla completa",
+    "grant": "Dar acceso",
+    "granted": "Acceso dado",
+    "group": "Agruparse juntos",
+    "hash": "Código de seguridad",
+    "hide": "Esconder",
+    "historical": "Pasado",
+    "import": "Traer",
+    "improve": "Hacer mejor",
+    "incompatible": "No funcionará",
+    "incomplete": "No terminado",
+    "insecure": "No seguro",
+    "internationalize": "Traducir",
+    "invalid": "No válido",
+    "justify": "Alinear texto",
+    "latest": "Más reciente",
+    "left": "Izquierda",
+    "localize": "Traducir",
+    "lock": "Cerrar",
+    "login": "Iniciar sesión",
+    "logout": "Desconectar",
+    "main": "Principal",
+    "mandatory": "Requerido",
+    "manual": "Hazlo tú mismo",
+    "maximize": "Extender",
+    "middle": "Medio",
+    "minimize": "Hacer más pequeño",
+    "modify": "Cambiar",
+    "newest": "Más reciente",
+    "nonEditable": "No se puede cambiar",
+    "notBackedUp": "Aún no se ha realizado una copia de seguridad",
+    "notSynced": "Aún no actualizado",
+    "oldest": "El más antiguo",
+    "open": "Abierto",
+    "optimize": "Mejorar",
+    "optional": "No requerido",
+    "options": "Opciones",
+    "organize": "Organizar",
+    "outdated": "Necesita actualización",
+    "parse": "Leer",
+    "partial": "Alguno",
+    "paste": "Pasta",
+    "pause": "Pausa",
+    "permanent": "Siempre",
+    "permitted": "Permitido",
+    "personalize": "Hazlo tuyo",
+    "pick": "Elegir",
+    "play": "Jugar",
+    "preferences": "Tus opciones",
+    "premium": "Funciones completas",
+    "prepare": "Prepararse",
+    "primary": "Principal",
+    "profile": "Su información",
+    "publish": "Compartir",
+    "read": "Leer",
+    "readOnly": "Sólo lectura",
+    "readWrite": "Puede editar",
+    "ready": "Listo",
+    "recent": "Reciente",
+    "recommended": "Te sugerimos",
+    "register": "Inscribirse",
+    "reject": "No aceptes",
+    "rejected": "No aceptado",
+    "reload": "Refrescar",
+    "remove": "Eliminar",
+    "required": "Necesario",
+    "reset": "Empezar de nuevo",
+    "resize": "Cambiar tamaño",
+    "restart": "Empezar de nuevo",
+    "resume": "Continuar",
+    "retry": "Intentar otra vez",
+    "right": "Bien",
+    "rotate": "Doblar",
+    "scale": "Cambiar el tamaño",
+    "search": "Buscar",
+    "secondary": "Otro",
+    "secure": "Seguro",
+    "select": "Elegir",
+    "semiAutomatic": "Parcialmente automático",
+    "settings": "Tus preferencias",
+    "setup": "Configurar esto",
+    "show": "Espectáculo",
+    "sign": "Firmar",
+    "signin": "Iniciar sesión",
+    "signout": "Desconectar",
+    "signup": "Crear una cuenta",
+    "sort": "Organizar",
+    "standard": "",
+    "start": "Comenzar",
+    "stop": "Detener",
+    "submit": "Enviar",
+    "suggested": "Te recomendamos",
+    "supplementary": "",
+    "supported": "Funciona con",
+    "synced": "A hoy",
+    "temporary": "Por ahora",
+    "tertiary": "Otra opción",
+    "top": "Arriba",
+    "transform": "Cambiar",
+    "translate": "Traducir",
+    "unarchive": "Devolver",
+    "unauthenticated": "No he iniciado sesión",
+    "unauthorized": "No permitido",
+    "unconfirmed": "No confirmado",
+    "unencrypted": "No seguro",
+    "ungroup": "Separado",
+    "unlock": "Descubrir",
+    "unpublish": "Hacer privado",
+    "unsupported": "No compatible",
+    "unvalidated": "No marcado",
+    "unverified": "No verificado",
+    "upToDate": "Actual",
+    "update": "Actualizar",
+    "upgrade": "Obtenga una mejor versión",
+    "valid": "Válido",
+    "validate": "Mira esto",
+    "validated": "Comprobado",
+    "verified": "Verificado",
+    "verify": "Verificar",
+    "viewOnly": "Sólo mirando",
+    "zoomIn": "Extender",
+    "zoomOut": "Hacer más pequeño"
+  },
+  "app": {
+    "name": "Nombre",
+    "tagline": "Lema"
+  },
+  "auth": {
+    "loginButton": "Botón de inicio de sesión",
+    "signUpLink": "Enlace de registro",
+    "signupButton": "Botón de registro"
+  },
+  "debug": {
+    "panel": {
+      "actions": {
+        "clearAllErrors": "Borrar todos los errores",
+        "downloadErrors": "Errores de descarga"
+      },
+      "error": {
+        "errorMessage": "Mensaje de error",
+        "noMessage": "No hay mensaje",
+        "unknownError": "Error desconocido"
+      },
+      "errorCount": "Recuento de errores",
+      "recentErrors": "Errores recientes",
+      "sections": {
+        "browserInfo": "Información del navegador",
+        "context": "Contexto",
+        "location": "Ubicación",
+        "stackTrace": "Rastreo de pila",
+        "time": "Tiempo"
+      },
+      "title": "Título"
+    },
+    "translationTest": {
+      "available_languages_3": "Idiomas disponibles 3",
+      "current_language_2": "Idioma actual 2",
+      "dashboard_stats_translations_4": "Traducciones de estadísticas del panel 4",
+      "exists_5": "Existen 5",
+      "raw_resource_check_6": "Comprobación de recursos brutos 6",
+      "translation_debug_test_1": "Prueba de depuración de traducción 1"
+    }
+  },
+  "firstTimeGuide": {
+    "getStarted": "Empezar",
+    "step1": {
+      "description": "Descripción",
+      "detail1": "Detalle1",
+      "detail2": "Detalle2",
+      "detail3": "Detalle3",
+      "title": "Título"
+    },
+    "step2": {
+      "description": "Descripción",
+      "detail1": "Detalle1",
+      "detail2": "Detalle2",
+      "detail3": "Detalle3",
+      "title": "Título"
+    },
+    "step3": {
+      "description": "Descripción",
+      "detail1": "Detalle1",
+      "detail2": "Detalle2",
+      "detail3": "Detalle3",
+      "title": "Título"
+    },
+    "tip": {
+      "description": "Descripción",
+      "title": "Título"
+    }
+  },
+  "index": {
+    "startBuilding": "Empieza a construir",
+    "welcome": "Bienvenido"
+  },
+  "landing": {
+    "pricingSection": {
+      "upgrade_with_stripe_1": "Actualización con la franja 1"
+    }
+  },
+  "languages": {
+    "en": "Inglés",
+    "selectLanguage": "Seleccionar idioma",
+    "sk": "Eslovena"
+  },
+  "loading": "Cargando",
+  "manual": {
+    "contacts": {
+      "addContact": "Añadir contacto",
+      "addFirstContact": "Añadir primer contacto",
+      "card": {
+        "edit": "Editar"
+      },
+      "description": "Descripción",
+      "empty": {
+        "description": "Descripción",
+        "title": "Título"
+      },
+      "form": {
+        "addTitle": "Añadir título",
+        "description": "Descripción",
+        "editTitle": "Editar título"
+      },
+      "loading": "Cargando",
+      "title": "Título"
+    },
+    "documents": {
+      "card": {
+        "essentialNote": "Nota esencial"
+      },
+      "description": "Descripción",
+      "empty": {
+        "description": "Descripción",
+        "tip": "Consejo",
+        "title": "Título"
+      },
+      "expiration": {
+        "expired": "Venció",
+        "expiresSoon": "Caduca pronto",
+        "expiring": "Vencimiento"
+      },
+      "loading": "Cargando",
+      "title": "Título"
+    },
+    "errors": {
+      "dataNotFound": "Datos no encontrados",
+      "deleteContact": "Eliminar contacto",
+      "duplicateEntry": "Entrada duplicada",
+      "loadContacts": "Cargar contactos",
+      "loadInstructions": "Instrucciones de carga",
+      "loadKeyDocuments": "Cargar documentos clave",
+      "network": "Red",
+      "noPermission": "Sin permiso",
+      "saveContact": "Guardar contacto",
+      "saveInstructions": "Guardar instrucciones",
+      "unknown": "Desconocido"
+    },
+    "instructions": {
+      "autoSaveNote": "Nota de guardado automático",
+      "description": "Descripción",
+      "digitalAccounts": {
+        "description": "Descripción",
+        "placeholder": "Marcador de posición",
+        "title": "Título"
+      },
+      "funeral": {
+        "description": "Descripción",
+        "placeholder": "Marcador de posición",
+        "title": "Título"
+      },
+      "loading": "Cargando",
+      "title": "Título"
+    },
+    "subtitle": "Subtitular",
+    "title": "Título"
+  },
+  "notifications": {
+    "daysAgo": "Hace días",
+    "empty": "Vacío",
+    "hoursAgo": "Hace horas",
+    "justNow": "En este momento",
+    "loading": "Cargando",
+    "title": "Título",
+    "viewAll": "Ver todo",
+    "yesterday": "Ayer"
+  },
+  "subscriptions": {
+    "subscriptionDashboard": {
+      "_1": ""
+    }
+  },
+  "testimonials": {
+    "compliance": {
+      "dataProtection": "Datos protegidos",
+      "gdpr": "Cumple con el RGPD",
+      "iso": ""
+    },
+    "stats": {
+      "families": "más de 10.000",
+      "familiesLabel": "las familias confían en nosotros"
+    }
+  },
+  "themeToggle": {
+    "dark": "Oscuro",
+    "light": "Luz",
+    "system": "Sistema",
+    "toggleTheme": "Cambiar tema"
+  },
+  "upgradeCard": {
+    "defaultButtonText": "Actualizar ahora",
+    "pricing": "/precios"
+  },
+  "whatIfScenarios": {
+    "businessTravel": {
+      "impact": "Impacto",
+      "title": "Título"
+    },
+    "disabilityIncapacity": {
+      "impact": "Impacto",
+      "title": "Título"
+    },
+    "duration": "Duración",
+    "hospitalStay": {
+      "impact": "Impacto",
+      "title": "Título"
+    },
+    "missing": "Desaparecido",
+    "needs": "Necesidades",
+    "readiness": "Preparación",
+    "requirements": "Requisitos",
+    "suddenDeath": {
+      "impact": "Impacto",
+      "title": "Título"
+    }
+  },
+  "accessibility": {
+    "fontSize": "Tamaño de fuente",
+    "visualSettings": "Configuraciones visuales"
+  },
+  "solution": {
+    "feature1": {
+      "benefits": "Beneficios",
+      "description": "Descripción",
+      "title": "Título"
+    },
+    "feature2": {
+      "benefits": "Beneficios",
+      "description": "Descripción",
+      "title": "Título"
+    },
+    "feature3": {
+      "benefits": "Beneficios",
+      "description": "Descripción",
+      "title": "Título"
+    },
+    "feature4": {
+      "benefits": "Beneficios",
+      "description": "Descripción",
+      "title": "Título"
+    },
+    "sectionSubtitle": "Subtítulo de la sección",
+    "sectionTitle": "Título de la sección"
+  }
 }

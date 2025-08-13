@@ -62,8 +62,9 @@
     "check:secrets:strict": "node scripts/ci/secrets-guard.cjs --strict",
     "e2e:open": "cypress open",
     "e2e:run": "cypress run --browser electron --headless",
-    "build:e2e": "vite build -c vite.config.e2e.ts",
-    "preview:e2e": "vite preview --port 4173 --strictPort"
+    "build:e2e": "vite -c vite.config.e2e.shim.ts build",
+    "preview:e2e": "vite preview --port 4173 --strictPort",
+    "e2e:run:smoke": "cypress run --browser electron --headless --spec \"cypress/e2e/smoke/*.cy.ts\""
   },
   "dependencies": {
     "@clerk/clerk-react": "^5.40.0",
