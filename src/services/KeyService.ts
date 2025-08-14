@@ -62,7 +62,7 @@ export const KeyService = {
     const subtle = getCrypto().subtle;
     // Generate new DEK
     const dekRaw = randomBytes(32);
-    const dekKey = await subtle.importKey('raw', dekRaw, { name: 'AES-GCM' }, false, ['encrypt', 'decrypt']);
+    const dekKey = await subtle.importKey('raw', dekRaw, { name: 'AES-GCM' }, true, ['encrypt', 'decrypt']);
 
     // Derive KEK
     const kekSalt = randomBytes(16);
@@ -141,7 +141,7 @@ export const KeyService = {
     const iv = fromBase64(wrapped.iv);
     const cipher = fromBase64(wrapped.cipherText);
     const dekRaw = await subtle.decrypt({ name: 'AES-GCM', iv }, kek, cipher);
-    const dekKey = await subtle.importKey('raw', dekRaw, { name: 'AES-GCM' }, false, ['encrypt', 'decrypt']);
+    const dekKey = await subtle.importKey('raw', dekRaw, { name: 'AES-GCM' }, true, ['encrypt', 'decrypt']);
     inMemoryDEK = dekKey;
     // zeroize temp
     zeroizeBytes(new Uint8Array(dekRaw));
