@@ -26,7 +26,7 @@ Tento jednoduchý prehľad slúži na sledovanie všetkých plánovaných funkci
 
 -   [X] Smart Notifications & Behavioral Nudges – inteligentné pripomienky a motivácia
 
--   [ ] Privacy‑first architektúra – lokálne spracovanie citlivých dát a transparentnosť
+-   [X] Privacy‑first architektúra – lokálne spracovanie citlivých dát a transparentnosť
 
 -   [ ] Family Communication Hub – riadenie prístupových práv rodiny a preparedness score
 

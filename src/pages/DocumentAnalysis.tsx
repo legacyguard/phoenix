@@ -57,7 +57,12 @@ const DocumentAnalysis: React.FC = () => {
 
       {analysisResult && (
         <div style={{ marginTop: 16 }}>
-          <h2>Výsledok</h2>
+          <h2>
+            Výsledok
+            <span title={(PreferencesService.get().cloudSyncEnabled && PreferencesService.get().syncDocuments) ? 'Synced to cloud (encrypted)' : 'Stored locally only'} style={{ marginLeft: 8 }}>
+              {(PreferencesService.get().cloudSyncEnabled && PreferencesService.get().syncDocuments) ? '☁️' : '🔒'}
+            </span>
+          </h2>
           <p>
             Typ: <strong>{analysisResult.type}</strong> | Dôvera: {Math.round(analysisResult.confidence * 100)}%
           </p>

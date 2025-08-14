@@ -15,6 +15,7 @@ const Vault: React.FC = () => {
   const [editingDocId, setEditingDocId] = useState<string | null>(null);
   const [metadataForm, setMetadataForm] = useState<Metadata>({});
   const [formErrors, setFormErrors] = useState<Record<string, string>>({});
+  const [metadataById, setMetadataById] = useState<Record<string, Metadata | null>>({});
   const fileInputRef = useRef<HTMLInputElement | null>(null);
   const [toast, setToast] = useState<{ visible: boolean; message: string }>({ visible: false, message: "" });
   const toastTimer = useRef<number | null>(null);
@@ -44,7 +45,22 @@ const Vault: React.FC = () => {
     (async () => {
       try {
         const list = await VaultService.listDocuments();
-        if (isActive) setDocuments(list);
+        if (isActive) {
+          setDocuments(list);
+          // prefetch metadata for each document (encrypted first)
+          const entries: Array<Promise<[string, Metadata | null]>> = list.map(async (d) => {
+            try {
+              const m = await DocumentMetadataService.getMetadata(d.id);
+              return [d.id, m] as [string, Metadata | null];
+            } catch {
+              return [d.id, null] as [string, Metadata | null];
+            }
+          });
+          const resolved = await Promise.all(entries);
+          const map: Record<string, Metadata | null> = {};
+          for (const [id, m] of resolved) map[id] = m;
+          if (isActive) setMetadataById(map);
+        }
       } catch (e) {
         if (isActive) setDocuments([]);
       }
@@ -89,9 +105,9 @@ const Vault: React.FC = () => {
     }
   };
 
-  const handleEdit = (docId: string) => {
+  const handleEdit = async (docId: string) => {
     const existing =
-      DocumentMetadataService.getMetadata(docId) || {
+      (await DocumentMetadataService.getMetadata(docId)) || {
         title: "",
         contractNumber: "",
         issuer: "",
@@ -138,7 +154,7 @@ const Vault: React.FC = () => {
       </div>
       <ul>
         {documents.map((doc) => {
-          const meta = DocumentMetadataService.getMetadata(doc.id) as Metadata | null;
+          const meta = metadataById[doc.id] as Metadata | null;
           const displayTitle = meta?.title || (meta as any)?.contractName || "—";
           const displayNumber = meta?.contractNumber || "—";
           const displayIssuer = meta?.issuer || (meta as any)?.providerName || "—";
@@ -150,6 +166,9 @@ const Vault: React.FC = () => {
             <li key={doc.id} style={{ marginBottom: 12 }}>
               <div>
                 <strong>{doc.name}</strong> – {doc.createdAt.toLocaleString()} {" "}
+                <span title={(PreferencesService.get().cloudSyncEnabled && PreferencesService.get().syncDocuments) ? 'Synced to cloud (encrypted)' : 'Stored locally only'}>
+                  {(PreferencesService.get().cloudSyncEnabled && PreferencesService.get().syncDocuments) ? '☁️' : '🔒'}
+                </span>
                 <button onClick={() => handleDelete(doc.id)} style={{ marginLeft: 8 }}>Delete</button>
               </div>
 

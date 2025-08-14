@@ -162,6 +162,9 @@ const Settings: React.FC = () => {
           />
         </div>
       </div>
+      <div style={{ marginTop: 16 }}>
+        <a href="/settings/privacy" style={{ color: '#0353a4' }}>Privacy & Data Control</a>
+      </div>
       {process.env.NODE_ENV !== 'production' && (
         <div style={{ marginTop: 16 }}>
           <button

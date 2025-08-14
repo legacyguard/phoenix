@@ -14,14 +14,42 @@ import Playbook from "@/pages/Playbook";
 import DocumentAnalysis from "@/pages/DocumentAnalysis";
 import PersonalizedOnboarding from "@/pages/PersonalizedOnboarding";
 import Settings from "@/pages/Settings";
+import SettingsPrivacy from "@/pages/SettingsPrivacy";
+import SettingsPrivacyPassphrase from "@/pages/SettingsPrivacyPassphrase";
+import { runSecureStorageMigration } from "@/services/MigrationService";
+import { KeyService } from "@/services/KeyService";
 import { HeartbeatService } from "@/services/HeartbeatService";
+import { CloudSyncService } from "@/services/CloudSyncService";
 
 const queryClient = new QueryClient();
 const publishableKey = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY as string;
 
 const RouterShell: React.FC = () => {
   const location = useLocation();
-  useEffect(() => { HeartbeatService.touch('web'); }, []);
+  useEffect(() => {
+    HeartbeatService.touch('web');
+    (async () => { try { await runSecureStorageMigration(); } catch {} })();
+  }, []);
+
+  // Gentle unlock modal
+  const [showUnlock, setShowUnlock] = React.useState<boolean>(() => KeyService.hasPassphrase());
+  const [unlockPass, setUnlockPass] = React.useState('');
+  useEffect(() => {
+    // kick initial sync after mount and after unlock
+    const prefs = PreferencesService.get?.() || undefined;
+    const runAll = async () => {
+      try {
+        await Promise.all([
+          CloudSyncService.syncCategory('reminders').catch(() => {}),
+          CloudSyncService.syncCategory('documents').catch(() => {}),
+          CloudSyncService.syncCategory('preferences').catch(() => {}),
+        ]);
+      } catch {}
+    };
+    runAll();
+    const iv = window.setInterval(runAll, 10 * 60 * 1000);
+    return () => { window.clearInterval(iv); };
+  }, [showUnlock]);
   useEffect(() => { HeartbeatService.touch('web'); }, [location.pathname]);
   return (
     <ClerkProvider publishableKey={publishableKey}>
@@ -39,8 +67,37 @@ const RouterShell: React.FC = () => {
               <li><Link to="/document-analysis">AI Document Analysis</Link></li>
               <li><Link to="/personal-onboarding">Personalized Setup</Link></li>
               <li><Link to="/settings">Settings</Link></li>
+              <li><Link to="/settings/privacy">Privacy</Link></li>
+              <li><Link to="/settings/privacy/passphrase">Passphrase</Link></li>
             </ul>
           </nav>
+          {showUnlock && (
+            <div style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.35)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 1000 }}>
+              <div style={{ background: '#fff', padding: 16, borderRadius: 8, width: 360, boxShadow: '0 2px 12px rgba(0,0,0,0.2)' }}>
+                <h3>Odomknúť dáta</h3>
+                <p style={{ color: '#555' }}>Zadajte passphrase pre prístup k šifrovaným dátam.</p>
+                <input
+                  type="password"
+                  value={unlockPass}
+                  onChange={(e) => setUnlockPass(e.target.value)}
+                  placeholder="Passphrase"
+                  style={{ width: '100%', padding: 8, border: '1px solid #ddd' }}
+                />
+                <div style={{ marginTop: 12, display: 'flex', justifyContent: 'flex-end', gap: 8 }}>
+                  <button onClick={() => setShowUnlock(false)} style={{ background: 'transparent', border: '1px solid #ddd', padding: '6px 10px' }}>Neskôr</button>
+                  <button
+                    onClick={async () => {
+                      try { await KeyService.unlock(unlockPass); setShowUnlock(false); CloudSyncService.schedule('reminders', 30000); CloudSyncService.schedule('documents', 30000); CloudSyncService.schedule('preferences', 30000); } catch {}
+                    }}
+                    disabled={!unlockPass}
+                    style={{ background: '#0353a4', color: '#fff', border: 'none', padding: '6px 10px' }}
+                  >
+                    Odomknúť
+                  </button>
+                </div>
+              </div>
+            </div>
+          )}
           <Routes>
             <Route path="/" element={<Landing />} />
             <Route path="/dashboard" element={<Dashboard />} />
@@ -53,6 +110,8 @@ const RouterShell: React.FC = () => {
             <Route path="/document-analysis" element={<DocumentAnalysis />} />
             <Route path="/personal-onboarding" element={<PersonalizedOnboarding />} />
             <Route path="/settings" element={<Settings />} />
+            <Route path="/settings/privacy" element={<SettingsPrivacy />} />
+            <Route path="/settings/privacy/passphrase" element={<SettingsPrivacyPassphrase />} />
           </Routes>
       </QueryClientProvider>
     </ClerkProvider>

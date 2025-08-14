@@ -219,7 +219,8 @@ const Dashboard: React.FC = () => {
 
   // Handle reminders due
   useEffect(() => {
-    const rs = ReminderService.list();
+    (async () => {
+      const rs = await (ReminderService as any).listSecureFirst?.() || ReminderService.list();
     const now = Date.now();
     const toleranceMs = 5 * 60 * 1000; // ±5 min
     const due = rs.filter((r) => {
@@ -228,6 +229,7 @@ const Dashboard: React.FC = () => {
     });
     const quietNow = prefs.quietHoursEnabled && isWithinQuietHours(prefs.quietHoursStart, prefs.quietHoursEnd);
     setDueReminders(!prefs.remindersEnabled || quietNow ? [] : due);
+    })();
   }, [prefs]);
 
   function addReminderFor(title: string, preset: 'today_evening' | 'tomorrow_morning' | 'week' | 'custom', customISO?: string) {
@@ -435,7 +437,12 @@ const Dashboard: React.FC = () => {
           const remaining = stats.total - stats.completed;
           return (
             <div key={cat} style={{ marginBottom: 16, padding: 12, border: "1px solid #eee" }}>
-              <h3>{cat === "zavet" ? "Závet" : "Inventár"}</h3>
+              <h3>
+                {cat === "zavet" ? "Závet" : "Inventár"}
+                <span title={(() => { const p = PreferencesService.get(); return (p.cloudSyncEnabled && p.syncTasks) ? 'Synced to cloud (encrypted)' : 'Stored locally only'; })()} style={{ marginLeft: 8 }}>
+                  {(PreferencesService.get().cloudSyncEnabled && PreferencesService.get().syncTasks) ? '☁️' : '🔒'}
+                </span>
+              </h3>
               {stats.total === 0 ? (
                 <p>Žiadne úlohy v tejto kategórii.</p>
               ) : remaining === 0 ? (
