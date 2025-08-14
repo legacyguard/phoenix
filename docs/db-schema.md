@@ -21,11 +21,10 @@ enum GuardianStatus {
 
 // Defines the type of an asset.
 enum AssetType {
-  FINANCIAL
   REAL_ESTATE
-  DIGITAL
-  PERSONAL_ITEM
-  LEGAL_DOCUMENT
+  VEHICLE
+  DIGITAL_ASSET
+  INVESTMENT
   OTHER
 }
 
@@ -117,23 +116,39 @@ model Guardian {
 ### Asset Model
 // Represents a single asset (financial, physical, digital).
 model Asset {
-  id              String    @id @default(cuid())
+  id              String    @id @default(uuid()) // UUID, equivalent to uuid_generate_v4()
   userId          String
   user            User      @relation(fields: [userId], references: [id])
-  
-  name            String
-  description     String?
-  type            AssetType @default(OTHER)
-  value           Float?    // Estimated value
-  
+
+  name            String                         // required
+  description     String?                        // optional long description
+  type            AssetType                      // required
+  value           Decimal                        // required estimated value
+
   // Story attached to the asset
   story           String?
-  
+
   // Relation to documents
   relatedDocuments Document[]
-  
+  attachments     AssetAttachment[]
+
   createdAt       DateTime  @default(now())
   updatedAt       DateTime  @updatedAt
+}
+
+### AssetAttachment Model
+// Stores metadata for files uploaded to Supabase Storage and linked to an Asset.
+model AssetAttachment {
+  id         String   @id @default(uuid())
+  assetId    String
+  asset      Asset    @relation(fields: [assetId], references: [id])
+
+  filePath   String   // e.g., user-uuid/asset-uuid/document.pdf
+  fileName   String   // original file name
+  fileType   String   // MIME type (e.g., application/pdf)
+  fileSize   Int      // size in bytes
+
+  createdAt  DateTime @default(now())
 }
 
 ### Document Model
