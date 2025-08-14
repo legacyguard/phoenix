@@ -1,9 +1,13 @@
 {
-  "name": "vite_react_shadcn_ts",
+  "name": "phoenix-monorepo",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "Phoenix Legacy Planning Platform",
   "type": "module",
   "scripts": {
+    "dev:frontend": "pnpm --filter frontend dev",
+    "dev:backend": "pnpm --filter backend dev",
+    "build:apps": "pnpm --filter \"./apps/**\" build",
     "dev": "vite",
     "dev:respectful": "VITE_RESPECTFUL_ONBOARDING=true vite",
     "build": "vite build",

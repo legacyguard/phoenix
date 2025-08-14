@@ -57,6 +57,21 @@ export const LocalDataAdapter = {
     idx.delete(key);
     writeIndex(category, Array.from(idx));
   },
+
+  repairIndex(category: Exclude<Category, 'tasks'>): void {
+    try {
+      const prefix = `${category}_v1:`;
+      const keys: string[] = [];
+      for (let i = 0; i < localStorage.length; i++) {
+        const k = localStorage.key(i) || '';
+        if (k.startsWith(prefix)) {
+          const id = k.substring(prefix.length);
+          if (id && id !== 'index') keys.push(id);
+        }
+      }
+      writeIndex(category, keys);
+    } catch {}
+  },
 };
 
 

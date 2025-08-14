@@ -9,6 +9,9 @@ import { KeyService } from '@/services/KeyService';
 type Category = 'reminders' | 'documents' | 'preferences';
 
 const perCategoryTimers: Partial<Record<Category, number>> = {};
+const inFlight: Partial<Record<Category, boolean>> = {};
+const lastRunAtMs: Partial<Record<Category, number>> = {};
+let intervalHandle: number | null = null;
 
 function isCategoryEnabled(prefs: ReturnType<typeof PreferencesService.get>, category: Category): boolean {
   if (!prefs.cloudSyncEnabled) return false;
@@ -20,8 +23,51 @@ function isCategoryEnabled(prefs: ReturnType<typeof PreferencesService.get>, cat
 
 export const CloudSyncService = {
   schedule(category: Category, delayMs = 5000): void {
-    if (perCategoryTimers[category]) window.clearTimeout(perCategoryTimers[category]);
-    perCategoryTimers[category] = window.setTimeout(() => { this.syncCategory(category).catch(() => {}); }, delayMs);
+    const now = Date.now();
+    const last = lastRunAtMs[category] || 0;
+    if (inFlight[category]) return; // already running, skip
+    if (now - last < 5000) return; // hard limit: ignore if within 5s of last run
+    if (perCategoryTimers[category]) window.clearTimeout(perCategoryTimers[category]!);
+    perCategoryTimers[category] = window.setTimeout(async () => {
+      perCategoryTimers[category] = undefined;
+      try {
+        inFlight[category] = true;
+        await this.syncCategory(category);
+      } catch {
+        // swallow
+      } finally {
+        inFlight[category] = false;
+        lastRunAtMs[category] = Date.now();
+      }
+    }, delayMs);
+  },
+
+  startInterval(): void {
+    if (intervalHandle) window.clearInterval(intervalHandle);
+    const runAll = async () => {
+      await Promise.all([
+        this.syncCategory('reminders').catch(() => {}),
+        this.syncCategory('documents').catch(() => {}),
+        this.syncCategory('preferences').catch(() => {}),
+      ]);
+    };
+    intervalHandle = window.setInterval(runAll, 10 * 60 * 1000);
+  },
+
+  stopInterval(): void {
+    if (intervalHandle) { window.clearInterval(intervalHandle); intervalHandle = null; }
+    // clear debounced per-category timers
+    (['reminders','documents','preferences'] as Category[]).forEach((c) => {
+      if (perCategoryTimers[c]) { window.clearTimeout(perCategoryTimers[c]!); perCategoryTimers[c] = undefined; }
+    });
+  },
+
+  async runOnceAllEnabledCategories(): Promise<void> {
+    await Promise.all([
+      this.syncCategory('reminders').catch(() => {}),
+      this.syncCategory('documents').catch(() => {}),
+      this.syncCategory('preferences').catch(() => {}),
+    ]);
   },
 
   async syncCategory(category: Category): Promise<void> {
@@ -80,8 +126,8 @@ export const CloudSyncService = {
           await CloudSyncAdapter.upsertEncrypted(userId, category, key, localEnc);
           AuditLogService.logEvent({ id: String(Date.now()), type: 'sync', category, key, ts: new Date().toISOString(), details: { direction: 'local->remote' } });
         } else {
-          // tie → prefer local, log tie
-          AuditLogService.logEvent({ id: String(Date.now()), type: 'sync', category, key, ts: new Date().toISOString(), details: { tie: true } });
+          // tie → prefer local, log conflict details
+          AuditLogService.logEvent({ id: String(Date.now()), type: 'sync', category, key, ts: new Date().toISOString(), details: { conflict: 'tie', localUpdatedAt, remoteUpdatedAt } });
         }
       }
     }

@@ -19,6 +19,9 @@ export type AppPreferences = {
   syncDocuments: boolean;
   syncReminders: boolean;
   syncPreferences: boolean;
+  // privacy locking
+  autoLockEnabled: boolean;
+  autoLockMinutes: number;
 };
 
 const STORAGE_KEY = "appPreferences";
@@ -43,6 +46,8 @@ const DEFAULT_PREFERENCES: AppPreferences = {
   syncDocuments: false,
   syncReminders: false,
   syncPreferences: false,
+  autoLockEnabled: true,
+  autoLockMinutes: 15,
 };
 
 function readStored(): Partial<AppPreferences> | null {

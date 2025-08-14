@@ -13,7 +13,7 @@ vi.mock('@/services/KeyService', () => {
       getDEK: () => dek,
       lock: () => { dek = null; },
       __setDEK: async (bytes: Uint8Array) => {
-        dek = await crypto.subtle.importKey('raw', bytes, { name: 'AES-GCM' }, false, ['encrypt', 'decrypt']);
+        dek = await crypto.subtle.importKey('raw', bytes, { name: 'AES-GCM' }, true, ['encrypt', 'decrypt']);
       },
     },
   };

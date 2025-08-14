@@ -20,6 +20,11 @@ import { runSecureStorageMigration } from "@/services/MigrationService";
 import { KeyService } from "@/services/KeyService";
 import { HeartbeatService } from "@/services/HeartbeatService";
 import { CloudSyncService } from "@/services/CloudSyncService";
+import { InactivityService } from "@/services/InactivityService";
+import { PreferencesService } from "@/services/PreferencesService";
+import { LockGuard } from "@/services/LockGuard";
+import UnlockModal from "@/components/UnlockModal";
+import { LocalDataAdapter } from "@/services/LocalDataAdapter";
 
 const queryClient = new QueryClient();
 const publishableKey = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY as string;
@@ -29,6 +34,12 @@ const RouterShell: React.FC = () => {
   useEffect(() => {
     HeartbeatService.touch('web');
     (async () => { try { await runSecureStorageMigration(); } catch {} })();
+    // Repair encrypted indexes silently
+    try {
+      LocalDataAdapter.repairIndex('reminders');
+      LocalDataAdapter.repairIndex('documents');
+      LocalDataAdapter.repairIndex('preferences');
+    } catch {}
   }, []);
 
   // Gentle unlock modal
@@ -50,6 +61,35 @@ const RouterShell: React.FC = () => {
     const iv = window.setInterval(runAll, 10 * 60 * 1000);
     return () => { window.clearInterval(iv); };
   }, [showUnlock]);
+
+  useEffect(() => {
+    // Inactivity auto-lock start
+    const prefs = PreferencesService.get();
+    const mins = Math.min(Math.max(prefs.autoLockMinutes || 15, 5), 120);
+    const enabled = prefs.autoLockEnabled !== false;
+    InactivityService.start(enabled ? mins * 60 * 1000 : Infinity, () => {
+      KeyService.lock();
+      CloudSyncService.stopInterval();
+      setShowUnlock(KeyService.hasPassphrase());
+    });
+    const poke = () => InactivityService.poke();
+    document.addEventListener('pointerdown', poke, { passive: true });
+    document.addEventListener('keydown', poke as any);
+    document.addEventListener('visibilitychange', poke as any);
+    return () => {
+      InactivityService.stop();
+      document.removeEventListener('pointerdown', poke as any);
+      document.removeEventListener('keydown', poke as any);
+      document.removeEventListener('visibilitychange', poke as any);
+    };
+  }, []);
+
+  // Central lock handler
+  useEffect(() => {
+    const onLock = () => setShowUnlock(true);
+    LockGuard.addLockListener(onLock);
+    return () => { LockGuard.removeLockListener(onLock); };
+  }, []);
   useEffect(() => { HeartbeatService.touch('web'); }, [location.pathname]);
   return (
     <ClerkProvider publishableKey={publishableKey}>
@@ -71,33 +111,11 @@ const RouterShell: React.FC = () => {
               <li><Link to="/settings/privacy/passphrase">Passphrase</Link></li>
             </ul>
           </nav>
-          {showUnlock && (
-            <div style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.35)', display: 'flex', alignItems: 'center', justifyContent: 'center', zIndex: 1000 }}>
-              <div style={{ background: '#fff', padding: 16, borderRadius: 8, width: 360, boxShadow: '0 2px 12px rgba(0,0,0,0.2)' }}>
-                <h3>Odomknúť dáta</h3>
-                <p style={{ color: '#555' }}>Zadajte passphrase pre prístup k šifrovaným dátam.</p>
-                <input
-                  type="password"
-                  value={unlockPass}
-                  onChange={(e) => setUnlockPass(e.target.value)}
-                  placeholder="Passphrase"
-                  style={{ width: '100%', padding: 8, border: '1px solid #ddd' }}
-                />
-                <div style={{ marginTop: 12, display: 'flex', justifyContent: 'flex-end', gap: 8 }}>
-                  <button onClick={() => setShowUnlock(false)} style={{ background: 'transparent', border: '1px solid #ddd', padding: '6px 10px' }}>Neskôr</button>
-                  <button
-                    onClick={async () => {
-                      try { await KeyService.unlock(unlockPass); setShowUnlock(false); CloudSyncService.schedule('reminders', 30000); CloudSyncService.schedule('documents', 30000); CloudSyncService.schedule('preferences', 30000); } catch {}
-                    }}
-                    disabled={!unlockPass}
-                    style={{ background: '#0353a4', color: '#fff', border: 'none', padding: '6px 10px' }}
-                  >
-                    Odomknúť
-                  </button>
-                </div>
-              </div>
-            </div>
-          )}
+          <UnlockModal
+            open={showUnlock}
+            onClose={() => setShowUnlock(false)}
+            onUnlock={async (pp) => { try { await KeyService.unlock(pp); setShowUnlock(false); await CloudSyncService.runOnceAllEnabledCategories(); CloudSyncService.startInterval(); } catch {} }}
+          />
           <Routes>
             <Route path="/" element={<Landing />} />
             <Route path="/dashboard" element={<Dashboard />} />

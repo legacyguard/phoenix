@@ -368,7 +368,51 @@ HeartbeatService.setAdapter(new SupabaseHeartbeatAdapter(supabase, userId));
 
 -   Presence banner: nastavte deadManSwitchEnabled, zvýšte inactivityDays na malú hodnotu a testnite mount.
 
-**10. Budúce rozšírenia**
+##10. A11y & Unlock Modal
+
+ Nový komponent UnlockModal zaisťuje prístupné a bezpečné odomykanie citlivých dát.
+
+ - Prístupnosť: aria-labelledby, aria-describedby, focus trap, zákaz scrollovania pozadia (body.modal-open), návrat focusu po zavretí.
+
+ - Ovládanie klávesnicou: Escape zavrie modal bez odomknutia, Enter spustí odomknutie.
+
+ - Integrácia: V App.tsx nahrádza pôvodný inline modal.
+
+ - UX gating: V SettingsPrivacy sú všetky sync prepínače automaticky deaktivované, ak sú dáta zamknuté alebo neexistuje passphrase, s jasným textom „Vyžaduje odomknutie (passphrase)“.
+
+##11. Index Repair & Data Consistency
+
+ Aby sa predišlo chýbajúcim alebo zastaraným indexom v LocalDataAdapter, bol pridaný mechanizmus obnovy.
+
+ - repairIndex(category): Na štarte aplikácie preiteruje localStorage a obnoví index pre reminders, documents, preferences.
+
+ - Bezpečné mazanie: remove() po odstránení položky vždy uloží aktualizovaný index.
+
+ - Výhoda: Minimalizuje riziko „osirelých“ dát a zvyšuje spoľahlivosť offline úložiska.
+
+##12. Cloud Sync Throttle & In-Flight Guard
+
+ Nový ochranný mechanizmus zabraňuje preťaženiu synchronizácie a zbytočným kolíziám.
+
+ - In-flight kontrola: Každá kategória môže mať len jednu čakajúcu alebo bežiacu sync úlohu naraz.
+
+ - Časová ochrana: Ak od posledného behu kategórie uplynulo menej ako 5 sekúnd, nová sync úloha sa ignoruje.
+
+- Efekt: Znižuje duplicitu requestov, šetrí batériu a optimalizuje prácu s API.
+
+##13. Export Hygiene
+
+ Export mechanizmus bol upravený tak, aby chránil citlivé údaje a dodržiaval zásadu minimálnych práv.
+
+ - Odomknutie vyžadované: Ak nie je DEK v pamäti, spustí sa UnlockModal a export sa vykoná až po úspešnom odomknutí.
+
+ - Cielený export: Exportuje sa iba dešifrovaný obsah kategórií reminders, documents, preferences (a prípadne tasks, ak existuje index).
+
+ - Vynechané kľúče: Neexportujú sa interné kľúče (wrappedDEK_v1, kekSalt_v1, iterCount_v1, deviceId_v1, auditLog_v1, appPreferences legacy, secure_migration_v1_done) a dočasné vzory (heartbeat_*, nudgeBannerClosed_*).
+
+ - Cieľ: Zabrániť úniku kryptografických kľúčov a interných metadát mimo bezpečné prostredie.
+
+**14. Budúce rozšírenia**
 
 -   Repeat logic pre remindery: pri potvrdení due vytvoriť nové dueAt +7/30 dní (zachovať tzOffset).
 

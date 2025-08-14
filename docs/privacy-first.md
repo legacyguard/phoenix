@@ -24,4 +24,16 @@
 - Do cloudu nikdy neposielame dešifrované dáta.
 - Pri migráciách zvýšiť `SecurePayload.version` a `EncryptedPayload.version`.
 
+## Session & Locking
+- Auto-lock po neaktivite (predvolene 15 min; nastaviteľné v Preferences). Pri lock sa DEK vymaže z pamäte.
+- Unlock modal sa zobrazí pri potrebe prístupu k šifrovaným dátam a pri štarte, ak je nastavený wrapped DEK.
+- Pri sign-out sa DEK purge-ne z pamäte a zastaví cloud sync interval.
+
+## Export gating
+- Export lokálnych dát prebieha len pri odomknutej session (DEK v pamäti). V opačnom prípade sa zobrazí Unlock modal.
+
+## Cloud sync lifecycle
+- Po úspešnom unlock sa okamžite spustí synchronizácia a následne periodický interval (10 min).
+- Po lock sa interval zastaví a naplánované syncy sa zrušia.
+
 

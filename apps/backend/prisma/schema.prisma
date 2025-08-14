@@ -1,0 +1,164 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// --- Enums from db-schema.md ---
+enum Role {
+  USER
+  ADMIN
+}
+
+enum GuardianStatus {
+  INVITED
+  ACTIVE
+  INACTIVE
+}
+
+enum AssetType {
+  FINANCIAL
+  REAL_ESTATE
+  DIGITAL
+  PERSONAL_ITEM
+  LEGAL_DOCUMENT
+  OTHER
+}
+
+enum NotificationType {
+  EMAIL
+  SMS
+  PUSH
+}
+
+// --- Models from db-schema.md ---
+model User {
+  id           String   @id @default(cuid())
+  email        String   @unique
+  passwordHash String
+  firstName    String?
+  lastName     String?
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  role         Role     @default(USER)
+
+  plan     Plan?
+  settings UserSettings?
+
+  assets       Asset[]
+  documents    Document[]
+  guardians    Guardian[]
+  timeCapsules TimeCapsule[]
+}
+
+model UserSettings {
+  id     String @id @default(cuid())
+  userId String @unique
+  user   User   @relation(fields: [userId], references: [id])
+
+  // Heart-Beat Protocol Settings
+  heartbeatIntervalDays    Int       @default(30)
+  heartbeatGracePeriodDays Int       @default(90)
+  lastHeartbeatAck         DateTime?
+
+  // Notification Preferences
+  notificationPreferences Json?
+}
+
+model Plan {
+  id     String @id @default(cuid())
+  userId String @unique
+  user   User   @relation(fields: [userId], references: [id])
+
+  // Subscription Details
+  subscriptionType String  @default("free")
+  stripeCustomerId String? @unique
+
+  // Preparedness Score
+  preparednessScore Int      @default(0)
+  lastScoreUpdate   DateTime @updatedAt
+}
+
+model Guardian {
+  id     String @id @default(cuid())
+  userId String
+  user   User   @relation(fields: [userId], references: [id])
+
+  email        String
+  firstName    String
+  lastName     String
+  relationship String?
+  status       GuardianStatus @default(INVITED)
+
+  // Permissions
+  accessPermissions Json?
+
+  @@unique([userId, email])
+}
+
+model Asset {
+  id     String @id @default(cuid())
+  userId String
+  user   User   @relation(fields: [userId], references: [id])
+
+  name        String
+  description String?
+  type        AssetType @default(OTHER)
+  value       Float?
+
+  // Story attached to the asset
+  story String?
+
+  // Relation to documents
+  relatedDocuments Document[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Document {
+  id     String @id @default(cuid())
+  userId String
+  user   User   @relation(fields: [userId], references: [id])
+
+  filename    String
+  storagePath String
+  filetype    String
+  size        Int
+
+  // AI-extracted metadata
+  classification String?
+  extractedText  String?
+  metadata       Json?
+
+  // Relations
+  assetId String?
+  asset   Asset?  @relation(fields: [assetId], references: [id])
+
+  createdAt DateTime @default(now())
+}
+
+model TimeCapsule {
+  id     String @id @default(cuid())
+  userId String
+  user   User   @relation(fields: [userId], references: [id])
+
+  title          String
+  message        String?
+  attachmentPath String?
+
+  releaseDate DateTime?
+
+  // Who receives this?
+  recipients Json
+}
