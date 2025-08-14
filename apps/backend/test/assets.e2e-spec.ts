@@ -25,7 +25,8 @@ describe('Assets (e2e)', () => {
     await app.init();
 
     prisma = app.get(PrismaService);
-    // Clean database (assets first due FK)
+    // Clean database respecting FKs
+    await prisma.assetAttachment.deleteMany();
     await prisma.asset.deleteMany();
     await prisma.user.deleteMany();
 
@@ -42,6 +43,7 @@ describe('Assets (e2e)', () => {
   });
 
   afterAll(async () => {
+    await prisma.assetAttachment.deleteMany();
     await prisma.asset.deleteMany();
     await prisma.user.deleteMany();
     await app.close();
@@ -149,6 +151,72 @@ describe('Assets (e2e)', () => {
         .get(`/assets/${assetId}`)
         .set('Authorization', `Bearer ${user1Token}`)
         .expect(404);
+    });
+  });
+
+  describe('POST /assets/:id/attachments', () => {
+    let attachmentAssetId: string;
+
+    beforeAll(async () => {
+      // Ensure we have a fresh asset for attachment tests
+      const createRes = await request(app.getHttpServer())
+        .post('/assets')
+        .set('Authorization', `Bearer ${user1Token}`)
+        .send({
+          name: 'Asset for attachments',
+          description: 'attachment test',
+          type: 'REAL_ESTATE',
+          value: 12345,
+        })
+        .expect(201);
+      attachmentAssetId = createRes.body.id;
+    });
+
+    it('should upload an attachment for the asset owner (user1)', async () => {
+      const res = await request(app.getHttpServer())
+        .post(`/assets/${attachmentAssetId}/attachments`)
+        .set('Authorization', `Bearer ${user1Token}`)
+        .attach('file', Buffer.from('%PDF-1.4\n%âãÏÓ\n1 0 obj\n<< /Type /Catalog >>\nendobj'), { filename: 'test.pdf', contentType: 'application/pdf' })
+        .expect(201);
+
+      expect(res.body).toHaveProperty('id');
+      expect(res.body.assetId).toBe(attachmentAssetId);
+      expect(res.body.fileName).toBe('test.pdf');
+      expect(res.body.fileType).toBe('application/pdf');
+      expect(typeof res.body.fileSize).toBe('number');
+      expect(typeof res.body.filePath).toBe('string');
+    });
+
+    it('should reject a file that is too large', async () => {
+      const largeBuffer = Buffer.alloc(6 * 1024 * 1024, 0);
+      await request(app.getHttpServer())
+        .post(`/assets/${attachmentAssetId}/attachments`)
+        .set('Authorization', `Bearer ${user1Token}`)
+        .attach('file', largeBuffer, { filename: 'huge.pdf', contentType: 'application/pdf' })
+        .expect(400);
+    });
+
+    it('should reject a file with an unsupported type', async () => {
+      await request(app.getHttpServer())
+        .post(`/assets/${attachmentAssetId}/attachments`)
+        .set('Authorization', `Bearer ${user1Token}`)
+        .attach('file', Buffer.from('invalid'), { filename: 'test.txt', contentType: 'text/plain' })
+        .expect(400);
+    });
+
+    it("should not allow a non-owner (user2) to upload an attachment", async () => {
+      await request(app.getHttpServer())
+        .post(`/assets/${attachmentAssetId}/attachments`)
+        .set('Authorization', `Bearer ${user2Token}`)
+        .attach('file', Buffer.from('%PDF-1.4\n'), { filename: 'test.pdf', contentType: 'application/pdf' })
+        .expect(403);
+    });
+
+    it('should not allow an unauthenticated user to upload an attachment', async () => {
+      await request(app.getHttpServer())
+        .post(`/assets/${attachmentAssetId}/attachments`)
+        .attach('file', Buffer.from('test pdf data'), 'test.pdf')
+        .expect(401);
     });
   });
 });
