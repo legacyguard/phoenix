@@ -8,20 +8,20 @@ This document tracks all major tasks required to build, launch, and grow the Pho
 
 *The goal of this phase is to set up a robust, scalable, and secure foundation for the entire project.*
 
--   [ ] **Project Setup:**
-    -   [ ] Initialize a monorepo (e.g., using pnpm workspaces or Nx).
-    -   [ ] Set up the folder structure: `/apps/frontend`, `/apps/backend`, `/apps/ai-service`, `/packages/types`.
+-   [X] **Project Setup:**
+    -   [X] Initialize a monorepo (e.g., using pnpm workspaces or Nx).
+    -   [X] Set up the folder structure: `/apps/frontend`, `/apps/backend`, `/apps/ai-service`, `/packages/types`.
     -   [ ] Configure shared TypeScript configurations and linting rules (ESLint, Prettier) across the monorepo.
--   [ ] **Documentation:**
-    -   [ ] Finalize and commit `db-schema.md`.
-    -   [ ] Finalize and commit `api-schema.md`.
-    -   [ ] Finalize and commit `component-library.md`.
-    -   [ ] This `TODO.md` file is created and committed.
--   [ ] **Backend (NestJS) Setup:**
-    -   [ ] Initialize the NestJS application in `/apps/backend`.
-    -   [ ] Integrate Prisma ORM and connect it to a PostgreSQL database.
-    -   [ ] Generate the initial Prisma schema from `db-schema.md`.
-    -   [ ] Set up environment variable management (e.g., using `@nestjs/config`).
+-   [X] **Documentation:**
+    -   [X] Finalize and commit `db-schema.md`.
+    -   [X] Finalize and commit `api-schema.md`.
+    -   [X] Finalize and commit `component-library.md`.
+    -   [X] This `TODO.md` file is created and committed.
+-   [X] **Backend (NestJS) Setup:**
+    -   [X] Initialize the NestJS application in `/apps/backend`.
+    -   [X] Integrate Prisma ORM and connect it to a PostgreSQL database.
+    -   [X] Generate the initial Prisma schema from `db-schema.md`.
+    -   [X] Set up environment variable management (e.g., using `@nestjs/config`).
 -   [ ] **Frontend (React) Setup:**
     -   [ ] Move the existing React app into `/apps/frontend`.
     -   [ ] Ensure it works correctly within the monorepo setup.
@@ -142,3 +142,8 @@ This document tracks all major tasks required to build, launch, and grow the Pho
     -   [ ] Create a landing page for pre-launch sign-ups.
     -   [ ] Define the pricing strategy for the premium plan.
     -   [ ] Prepare launch materials (blog posts, social media announcements).
+-   [ ] **polishing Pre-Launch Polish & Security:**
+    -   [ ] Implement Refresh Token strategy for long-lived user sessions.
+    -   [ ] Implement Email Confirmation flow for new user registrations.
+    -   [ ] Implement Roles Guard for admin-only functionalities.
+    -   [ ] Conduct a full security review of all dependencies and configurations.
