@@ -11,6 +11,16 @@ vi.stubEnv("VITE_CLERK_PUBLISHABLE_KEY", "test-clerk-key");
 vi.stubEnv("VITE_APP_URL", "http://localhost:3000");
 vi.stubEnv("VITE_ENCRYPTION_KEY", "test-encryption-key");
 vi.stubEnv("VITE_OPENAI_API_KEY", "test-openai-key");
+vi.stubEnv("VITE_PBKDF2_ITER", "100000");
+
+// Provide WebCrypto in test env
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const nodeCrypto = require('node:crypto');
+// Ensure WebCrypto in both global and window scopes
+// @ts-expect-error
+globalThis.crypto = nodeCrypto.webcrypto;
+// @ts-expect-error
+if (typeof window !== 'undefined') { (window as any).crypto = nodeCrypto.webcrypto; }
 
 // Mock window.matchMedia
 Object.defineProperty(window, "matchMedia", {
