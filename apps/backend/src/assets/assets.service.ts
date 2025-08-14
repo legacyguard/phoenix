@@ -76,7 +76,7 @@ export class AssetsService {
     const path = `${userId}/${assetId}/${uniqueName}`;
 
     // In test environment, skip real upload to external storage
-    if (process.env.NODE_ENV !== 'test' && file.size <= 5 * 1024 * 1024 && /^(application\/pdf|image\/png|image\/jpeg)$/i.test(file.mimetype)) {
+    if (process.env.NODE_ENV !== 'test') {
       const storage = this.supabase.getStorageClient();
       const { error: uploadError } = await storage
         .from('asset-attachments')
