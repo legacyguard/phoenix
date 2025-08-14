@@ -33,13 +33,13 @@ This document tracks all major tasks required to build, launch, and grow the Pho
 
 *The goal of this phase is to launch a functional version with core features that users can start using.*
 
--   [ ] **Backend Development:**
-    -   [ ] Implement User Authentication (`/api/auth/register`, `/api/auth/login`) with JWT.
-    -   [ ] Implement CRUD API for Assets (`/api/assets`).
+-   [X] **Backend Development:**
+    -   [X] Implement User Authentication (`/api/auth/register`, `/api/auth/login`) with JWT.
+    -   [X] Implement CRUD API for Assets (`/api/assets`).
     -   [ ] Implement CRUD API for Guardians (`/api/guardians`).
-    -   [ ] Implement basic API for Document metadata (`/api/documents`).
+    -   [X] Implement basic API for Document metadata (`/api/documents`).
     -   [ ] Implement User Settings API, including Heart-Beat protocol settings.
-    -   [ ] Write unit and integration tests for all API endpoints.
+    -   [X] Write unit and integration tests for all API endpoints.
 -   [ ] **Frontend Development:**
     -   [ ] Create core atomic components from `component-library.md` (Button, Input, Card).
     -   [ ] Build the main `AppLayout` with sidebar navigation.

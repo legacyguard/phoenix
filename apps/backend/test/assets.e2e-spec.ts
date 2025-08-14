@@ -156,6 +156,7 @@ describe('Assets (e2e)', () => {
 
   describe('POST /assets/:id/attachments', () => {
     let attachmentAssetId: string;
+    let attachmentId: string;
 
     beforeAll(async () => {
       // Ensure we have a fresh asset for attachment tests
@@ -185,6 +186,39 @@ describe('Assets (e2e)', () => {
       expect(res.body.fileType).toBe('application/pdf');
       expect(typeof res.body.fileSize).toBe('number');
       expect(typeof res.body.filePath).toBe('string');
+      attachmentId = res.body.id;
+    });
+
+    it('should return a signed download URL for the asset owner (user1)', async () => {
+      const res = await request(app.getHttpServer())
+        .get(`/assets/${attachmentAssetId}/attachments/${attachmentId}/download-url`)
+        .set('Authorization', `Bearer ${user1Token}`)
+        .expect(200);
+
+      expect(res.body).toHaveProperty('downloadUrl');
+      expect(typeof res.body.downloadUrl).toBe('string');
+      expect(res.body.downloadUrl).toContain('http');
+    });
+
+    it('should not return a download URL for a non-owner (user2)', async () => {
+      await request(app.getHttpServer())
+        .get(`/assets/${attachmentAssetId}/attachments/${attachmentId}/download-url`)
+        .set('Authorization', `Bearer ${user2Token}`)
+        .expect(403);
+    });
+
+    it('should not return a download URL for an unauthenticated user', async () => {
+      await request(app.getHttpServer())
+        .get(`/assets/${attachmentAssetId}/attachments/${attachmentId}/download-url`)
+        .expect(401);
+    });
+
+    it('should return 404 for a non-existent attachment', async () => {
+      const fakeId = '00000000-0000-0000-0000-000000000000';
+      await request(app.getHttpServer())
+        .get(`/assets/${attachmentAssetId}/attachments/${fakeId}/download-url`)
+        .set('Authorization', `Bearer ${user1Token}`)
+        .expect(404);
     });
 
     it('should reject a file that is too large', async () => {
@@ -217,6 +251,33 @@ describe('Assets (e2e)', () => {
         .post(`/assets/${attachmentAssetId}/attachments`)
         .attach('file', Buffer.from('test pdf data'), 'test.pdf')
         .expect(401);
+    });
+
+    it('should not allow a non-owner (user2) to delete an attachment', async () => {
+      await request(app.getHttpServer())
+        .delete(`/assets/${attachmentAssetId}/attachments/${attachmentId}`)
+        .set('Authorization', `Bearer ${user2Token}`)
+        .expect(403);
+    });
+
+    it('should not allow an unauthenticated user to delete an attachment', async () => {
+      await request(app.getHttpServer())
+        .delete(`/assets/${attachmentAssetId}/attachments/${attachmentId}`)
+        .expect(401);
+    });
+
+    it('should delete an attachment for the asset owner (user1)', async () => {
+      await request(app.getHttpServer())
+        .delete(`/assets/${attachmentAssetId}/attachments/${attachmentId}`)
+        .set('Authorization', `Bearer ${user1Token}`)
+        .expect(204);
+    });
+
+    it('should return 404 when trying to delete an already deleted attachment', async () => {
+      await request(app.getHttpServer())
+        .delete(`/assets/${attachmentAssetId}/attachments/${attachmentId}`)
+        .set('Authorization', `Bearer ${user1Token}`)
+        .expect(404);
     });
   });
 });

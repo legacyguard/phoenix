@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete, UseGuards, Req, UploadedFile, UseInterceptors, BadRequestException } from '@nestjs/common';
+import { Controller, Get, Post, Body, Patch, Param, Delete, UseGuards, Req, UploadedFile, UseInterceptors, BadRequestException, HttpCode } from '@nestjs/common';
 import { AssetsService } from './assets.service';
 import { CreateAssetDto } from './dto/create-asset.dto';
 import { UpdateAssetDto } from './dto/update-asset.dto';
@@ -54,5 +54,26 @@ export class AssetsController {
       throw new BadRequestException('File is required');
     }
     return this.assetsService.addAttachment(userId, assetId, file);
+  }
+
+  @Delete(':assetId/attachments/:attachmentId')
+  @HttpCode(204)
+  deleteAttachment(
+    @Param('assetId') assetId: string,
+    @Param('attachmentId') attachmentId: string,
+    @Req() req: Request,
+  ) {
+    const userId = (req.user as any)?.id ?? (req.user as any)?.sub;
+    return this.assetsService.deleteAttachment(userId, assetId, attachmentId);
+  }
+
+  @Get(':assetId/attachments/:attachmentId/download-url')
+  getAttachmentDownloadUrl(
+    @Param('assetId') assetId: string,
+    @Param('attachmentId') attachmentId: string,
+    @Req() req: Request,
+  ) {
+    const userId = (req.user as any)?.id ?? (req.user as any)?.sub;
+    return this.assetsService.getAttachmentDownloadUrl(userId, assetId, attachmentId);
   }
 }

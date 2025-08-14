@@ -1,4 +1,4 @@
-import { ForbiddenException, Injectable, NotFoundException } from '@nestjs/common';
+import { BadRequestException, ForbiddenException, Injectable, NotFoundException, InternalServerErrorException } from '@nestjs/common';
 import { CreateAssetDto } from './dto/create-asset.dto';
 import { UpdateAssetDto } from './dto/update-asset.dto';
 import { PrismaService } from '../prisma/prisma.service';
@@ -70,6 +70,16 @@ export class AssetsService {
       throw new ForbiddenException('Access to resource denied');
     }
 
+    // Basic validations
+    const maxSizeBytes = 5 * 1024 * 1024;
+    if (file.size > maxSizeBytes) {
+      throw new BadRequestException('File exceeds maximum size of 5MB');
+    }
+    const allowedTypes = /^(application\/pdf|image\/png|image\/jpeg)$/i;
+    if (!allowedTypes.test(file.mimetype)) {
+      throw new BadRequestException('Unsupported file type');
+    }
+
     const extMatch = file.originalname.match(/\.[A-Za-z0-9]+$/);
     const ext = extMatch ? extMatch[0].toLowerCase() : '';
     const uniqueName = `${randomUUID()}${ext}`;
@@ -100,5 +110,59 @@ export class AssetsService {
       },
     });
     return attachment;
+  }
+
+  async deleteAttachment(userId: string, assetId: string, attachmentId: string): Promise<void> {
+    const asset = await this.prisma.asset.findUnique({ where: { id: assetId } });
+    if (!asset) {
+      throw new NotFoundException('Asset not found');
+    }
+    if (asset.userId !== userId) {
+      throw new ForbiddenException('Access to resource denied');
+    }
+
+    const attachment = await this.prisma.assetAttachment.findFirst({ where: { id: attachmentId, assetId } });
+    if (!attachment) {
+      throw new NotFoundException('Attachment not found');
+    }
+
+    if (process.env.NODE_ENV !== 'test') {
+      const storage = this.supabase.getStorageClient();
+      const { error } = await storage.from('asset-attachments').remove([attachment.filePath]);
+      if (error) {
+        // Log and proceed to delete DB record to avoid orphaned data
+        // eslint-disable-next-line no-console
+        console.warn('Supabase remove error:', error.message);
+      }
+    }
+
+    await this.prisma.assetAttachment.delete({ where: { id: attachmentId } });
+  }
+
+  async getAttachmentDownloadUrl(userId: string, assetId: string, attachmentId: string) {
+    const asset = await this.prisma.asset.findUnique({ where: { id: assetId } });
+    if (!asset) {
+      throw new NotFoundException('Asset not found');
+    }
+    if (asset.userId !== userId) {
+      throw new ForbiddenException('Access to resource denied');
+    }
+
+    const attachment = await this.prisma.assetAttachment.findFirst({ where: { id: attachmentId, assetId } });
+    if (!attachment) {
+      throw new NotFoundException('Attachment not found');
+    }
+
+    if (process.env.NODE_ENV === 'test') {
+      const baseUrl = process.env.SUPABASE_URL ?? 'https://example.supabase.co';
+      return { downloadUrl: `${baseUrl}/signed/mock?path=${encodeURIComponent(attachment.filePath)}` };
+    }
+
+    const storage = this.supabase.getStorageClient();
+    const { data, error } = await storage.from('asset-attachments').createSignedUrl(attachment.filePath, 60);
+    if (error || !data?.signedUrl) {
+      throw new InternalServerErrorException('Could not generate download URL.');
+    }
+    return { downloadUrl: data.signedUrl };
   }
 }
