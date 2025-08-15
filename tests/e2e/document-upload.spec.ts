@@ -1,13 +1,11 @@
 import { test, expect } from "@playwright/test";
 import { getFixturePath } from "./utils/fixtures";
+import { signIn, testUsers } from "./utils/auth";
 
 test.describe("Document Upload Flow", () => {
   test.beforeEach(async ({ page }) => {
-    // Seed a basic free user for dashboard access in E2E mode
-    await page.addInitScript(() => {
-      (window as any).__E2E_USER = { id: 'free_user', publicMetadata: { plan: 'free' } };
-      try { localStorage.setItem('legacyguard_auth', 'true'); } catch {}
-    });
+    // Sign in as a free user for dashboard access
+    await signIn(page, testUsers.freeUser);
   });
 
   test("should display upload zone correctly", async ({ page }) => {
