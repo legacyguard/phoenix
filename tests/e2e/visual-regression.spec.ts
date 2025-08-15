@@ -19,7 +19,7 @@ test.describe('Visual Regression Tests', () => {
 
     // Mark the page as being in visual regression mode
     // This will trigger CSS rules to hide E2E-only elements
-    await page.evaluateOnNewDocument(() => {
+    await page.addInitScript(() => {
       // Wait for DOM to be ready then set the attribute
       if (document.readyState !== 'loading') {
         document.body.setAttribute('data-visual-regression', 'true');

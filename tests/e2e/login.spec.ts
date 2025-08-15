@@ -24,9 +24,9 @@ test.describe("User Login Flow", () => {
     // Should be on the dashboard
     await expect(page).toHaveURL(/.*dashboard.*/);
     
-    // Wait for dashboard elements to be visible
+    // Wait for dashboard container to be visible
     await expect(
-      page.locator('[data-testid="dashboard-container"], [data-testid="upload-zone"], #e2e-probe')
+      page.locator('[data-testid="dashboard-container"]').first()
     ).toBeVisible({ timeout: 10000 });
   });
 
