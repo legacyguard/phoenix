@@ -1,19 +1,11 @@
-/* E2E wrapper injected */
 import React from "react";
 import { createRoot } from "react-dom/client";
 import { ClerkProvider } from "@clerk/clerk-react";
 import { I18nextProvider } from "react-i18next";
 import i18n from "./i18n/index";
 import App from "./App.tsx";
-import { AuthSyncProvider } from "./components/auth/AuthSyncProvider";
-import { validateSecurityConfig } from "./utils/security";
-import { E2EErrorBoundary } from './test/E2EErrorBoundary';
-import E2EShell from './test/E2EShell';
-import E2EAppProbe from './test/E2EAppProbe';
 import "./index.css";
 
-// Initialize security configuration
-validateSecurityConfig();
 
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
 
@@ -23,386 +15,50 @@ const isE2E = import.meta.env.VITE_E2E === 'true';
 
 // Clerk appearance configuration for our premium design
 const clerkAppearance = {
-  baseTheme: 'dark',
+  baseTheme: 'dark' as const,
   variables: {
-    colorPrimary: '#CDB89F', // Our dark primary color
+    colorPrimary: '#CDB89F',
     colorBackground: '#1C1C1C',
     colorInputBackground: '#303030',
     colorText: '#F2F2F2',
-    colorTextSecondary: '#A3A3A3',
-    colorTextTertiary: '#737373',
-    colorNeutral: '#404040',
-    colorNeutralSecondary: '#525252',
-    colorNeutralTertiary: '#262626',
-    colorBorder: '#404040',
-    colorBorderSecondary: '#525252',
-    colorInputBorder: '#404040',
-    colorInputBorderFocus: '#CDB89F',
-    colorInputText: '#F2F2F2',
-    colorInputPlaceholder: '#737373',
-    colorButtonBackground: '#CDB89F',
-    colorButtonBackgroundHover: '#B8A58C',
-    colorButtonText: '#1C1C1C',
-    colorButtonTextSecondary: '#F2F2F2',
-    colorButtonBorder: '#CDB89F',
-    colorButtonBorderHover: '#B8A58C',
-    colorButtonBorderSecondary: '#404040',
-    colorButtonBorderSecondaryHover: '#525252',
-    colorButtonBackgroundSecondary: '#303030',
-    colorButtonBackgroundSecondaryHover: '#404040',
-    colorButtonBackgroundDanger: '#DC2626',
-    colorButtonBackgroundDangerHover: '#B91C1C',
-    colorButtonTextDanger: '#F2F2F2',
-    colorButtonBorderDanger: '#DC2626',
-    colorButtonBorderDangerHover: '#B91C1C',
-    colorButtonBackgroundSuccess: '#059669',
-    colorButtonBackgroundSuccessHover: '#047857',
-    colorButtonTextSuccess: '#F2F2F2',
-    colorButtonBorderSuccess: '#059669',
-    colorButtonBorderSuccessHover: '#047857',
-    colorButtonBackgroundWarning: '#D97706',
-    colorButtonBackgroundWarningHover: '#B45309',
-    colorButtonTextWarning: '#F2F2F2',
-    colorButtonBorderWarning: '#D97706',
-    colorButtonBorderWarningHover: '#B45309',
-    colorButtonBackgroundInfo: '#2563EB',
-    colorButtonBackgroundInfoHover: '#1D4ED8',
-    colorButtonTextInfo: '#F2F2F2',
-    colorButtonBorderInfo: '#2563EB',
-    colorButtonBorderInfoHover: '#1D4ED8',
-    colorButtonBackgroundLight: '#F3F4F6',
-    colorButtonBackgroundLightHover: '#E5E7EB',
-    colorButtonTextLight: '#1F2937',
-    colorButtonBorderLight: '#D1D5DB',
-    colorButtonBorderLightHover: '#9CA3AF',
-    colorButtonBackgroundDark: '#1F2937',
-    colorButtonBackgroundDarkHover: '#111827',
-    colorButtonTextDark: '#F9FAFB',
-    colorButtonBorderDark: '#374151',
-    colorButtonBorderDarkHover: '#4B5563',
-    colorButtonBackgroundGhost: 'transparent',
-    colorButtonBackgroundGhostHover: '#262626',
-    colorButtonTextGhost: '#F2F2F2',
-    colorButtonBorderGhost: 'transparent',
-    colorButtonBorderGhostHover: '#404040',
-    colorButtonBackgroundLink: 'transparent',
-    colorButtonBackgroundLinkHover: '#262626',
-    colorButtonTextLink: '#CDB89F',
-    colorButtonBorderLink: 'transparent',
-    colorButtonBorderLinkHover: '#404040',
-    colorButtonBackgroundOutline: 'transparent',
-    colorButtonBackgroundOutlineHover: '#262626',
-    colorButtonTextOutline: '#F2F2F2',
-    colorButtonBorderOutline: '#404040',
-    colorButtonBorderOutlineHover: '#525252',
-    colorButtonBackgroundSolid: '#CDB89F',
-    colorButtonBackgroundSolidHover: '#B8A58C',
-    colorButtonTextSolid: '#1C1C1C',
-    colorButtonBorderSolid: '#CDB89F',
-    colorButtonBorderSolidHover: '#B8A58C',
-    colorButtonBackgroundSubtle: '#262626',
-    colorButtonBackgroundSubtleHover: '#404040',
-    colorButtonTextSubtle: '#F2F2F2',
-    colorButtonBorderSubtle: '#404040',
-    colorButtonBorderSubtleHover: '#525252',
-    colorButtonBackgroundDestructive: '#DC2626',
-    colorButtonBackgroundDestructiveHover: '#B91C1C',
-    colorButtonTextDestructive: '#F2F2F2',
-    colorButtonBorderDestructive: '#DC2626',
-    colorButtonBorderDestructiveHover: '#B91C1C',
-    colorButtonBackgroundSecondary: '#303030',
-    colorButtonBackgroundSecondaryHover: '#404040',
-    colorButtonTextSecondary: '#F2F2F2',
-    colorButtonBorderSecondary: '#404040',
-    colorButtonBorderSecondaryHover: '#525252',
-    colorButtonBackgroundMuted: '#262626',
-    colorButtonBackgroundMutedHover: '#404040',
-    colorButtonTextMuted: '#A3A3A3',
-    colorButtonBorderMuted: '#404040',
-    colorButtonBorderMutedHover: '#525252',
-    colorButtonBackgroundAccent: '#CDB89F',
-    colorButtonBackgroundAccentHover: '#B8A58C',
-    colorButtonTextAccent: '#1C1C1C',
-    colorButtonBorderAccent: '#CDB89F',
-    colorButtonBorderAccentHover: '#B8A58C',
-    colorButtonBackgroundPopover: '#1C1C1C',
-    colorButtonBackgroundPopoverHover: '#262626',
-    colorButtonTextPopover: '#F2F2F2',
-    colorButtonBorderPopover: '#404040',
-    colorButtonBorderPopoverHover: '#525252',
-    colorButtonBackgroundCard: '#1C1C1C',
-    colorButtonBackgroundCardHover: '#262626',
-    colorButtonTextCard: '#F2F2F2',
-    colorButtonBorderCard: '#404040',
-    colorButtonBorderCardHover: '#525252',
-    colorButtonBackgroundTooltip: '#1C1C1C',
-    colorButtonBackgroundTooltipHover: '#262626',
-    colorButtonTextTooltip: '#F2F2F2',
-    colorButtonBorderTooltip: '#404040',
-    colorButtonBorderTooltipHover: '#525252',
-    colorButtonBackgroundAlert: '#1C1C1C',
-    colorButtonBackgroundAlertHover: '#262626',
-    colorButtonTextAlert: '#F2F2F2',
-    colorButtonBorderAlert: '#404040',
-    colorButtonBorderAlertHover: '#525252',
-    colorButtonBackgroundNotification: '#1C1C1C',
-    colorButtonBackgroundNotificationHover: '#262626',
-    colorButtonTextNotification: '#F2F2F2',
-    colorButtonBorderNotification: '#404040',
-    colorButtonBorderNotificationHover: '#525252',
-    colorButtonBackgroundModal: '#1C1C1C',
-    colorButtonBackgroundModalHover: '#262626',
-    colorButtonTextModal: '#F2F2F2',
-    colorButtonBorderModal: '#404040',
-    colorButtonBorderModalHover: '#525252',
-    colorButtonBackgroundDrawer: '#1C1C1C',
-    colorButtonBackgroundDrawerHover: '#262626',
-    colorButtonTextDrawer: '#F2F2F2',
-    colorButtonBorderDrawer: '#404040',
-    colorButtonBorderDrawerHover: '#525252',
-    colorButtonBackgroundSheet: '#1C1C1C',
-    colorButtonBackgroundSheetHover: '#262626',
-    colorButtonTextSheet: '#F2F2F2',
-    colorButtonBorderSheet: '#404040',
-    colorButtonBorderSheetHover: '#525252',
-    colorButtonBackgroundAccordion: '#1C1C1C',
-    colorButtonBackgroundAccordionHover: '#262626',
-    colorButtonTextAccordion: '#F2F2F2',
-    colorButtonBorderAccordion: '#404040',
-    colorButtonBorderAccordionHover: '#525252',
-    colorButtonBackgroundTabs: '#1C1C1C',
-    colorButtonBackgroundTabsHover: '#262626',
-    colorButtonTextTabs: '#F2F2F2',
-    colorButtonBorderTabs: '#404040',
-    colorButtonBorderTabsHover: '#525252',
-    colorButtonBackgroundCarousel: '#1C1C1C',
-    colorButtonBackgroundCarouselHover: '#262626',
-    colorButtonTextCarousel: '#F2F2F2',
-    colorButtonBorderCarousel: '#404040',
-    colorButtonBorderCarouselHover: '#525252',
-    colorButtonBackgroundCommand: '#1C1C1C',
-    colorButtonBackgroundCommandHover: '#262626',
-    colorButtonTextCommand: '#F2F2F2',
-    colorButtonBorderCommand: '#404040',
-    colorButtonBorderCommandHover: '#525252',
-    colorButtonBackgroundDialog: '#1C1C1C',
-    colorButtonBackgroundDialogHover: '#262626',
-    colorButtonTextDialog: '#F2F2F2',
-    colorButtonBorderDialog: '#404040',
-    colorButtonBorderDialogHover: '#525252',
-    colorButtonBackgroundDropdownMenu: '#1C1C1C',
-    colorButtonBackgroundDropdownMenuHover: '#262626',
-    colorButtonTextDropdownMenu: '#F2F2F2',
-    colorButtonBorderDropdownMenu: '#404040',
-    colorButtonBorderDropdownMenuHover: '#525252',
-    colorButtonBackgroundHoverCard: '#1C1C1C',
-    colorButtonBackgroundHoverCardHover: '#262626',
-    colorButtonTextHoverCard: '#F2F2F2',
-    colorButtonBorderHoverCard: '#404040',
-    colorButtonBorderHoverCardHover: '#525252',
-    colorButtonBackgroundMenubar: '#1C1C1C',
-    colorButtonBackgroundMenubarHover: '#262626',
-    colorButtonTextMenubar: '#F2F2F2',
-    colorButtonBorderMenubar: '#404040',
-    colorButtonBorderMenubarHover: '#525252',
-    colorButtonBackgroundNavigationMenu: '#1C1C1C',
-    colorButtonBackgroundNavigationMenuHover: '#262626',
-    colorButtonTextNavigationMenu: '#F2F2F2',
-    colorButtonBorderNavigationMenu: '#404040',
-    colorButtonBorderNavigationMenuHover: '#525252',
-    colorButtonBackgroundPagination: '#1C1C1C',
-    colorButtonBackgroundPaginationHover: '#262626',
-    colorButtonTextPagination: '#F2F2F2',
-    colorButtonBorderPagination: '#404040',
-    colorButtonBorderPaginationHover: '#525252',
-    colorButtonBackgroundProgress: '#1C1C1C',
-    colorButtonBackgroundProgressHover: '#262626',
-    colorButtonTextProgress: '#F2F2F2',
-    colorButtonBorderProgress: '#404040',
-    colorButtonBorderProgressHover: '#525252',
-    colorButtonBackgroundRadioGroup: '#1C1C1C',
-    colorButtonBackgroundRadioGroupHover: '#262626',
-    colorButtonTextRadioGroup: '#F2F2F2',
-    colorButtonBorderRadioGroup: '#404040',
-    colorButtonBorderRadioGroupHover: '#525252',
-    colorButtonBackgroundScrollArea: '#1C1C1C',
-    colorButtonBackgroundScrollAreaHover: '#262626',
-    colorButtonTextScrollArea: '#F2F2F2',
-    colorButtonBorderScrollArea: '#404040',
-    colorButtonBorderScrollAreaHover: '#525252',
-    colorButtonBackgroundSelect: '#1C1C1C',
-    colorButtonBackgroundSelectHover: '#262626',
-    colorButtonTextSelect: '#F2F2F2',
-    colorButtonBorderSelect: '#404040',
-    colorButtonBorderSelectHover: '#525252',
-    colorButtonBackgroundSeparator: '#1C1C1C',
-    colorButtonBackgroundSeparatorHover: '#262626',
-    colorButtonTextSeparator: '#F2F2F2',
-    colorButtonBorderSeparator: '#404040',
-    colorButtonBorderSeparatorHover: '#525252',
-    colorButtonBackgroundSlider: '#1C1C1C',
-    colorButtonBackgroundSliderHover: '#262626',
-    colorButtonTextSlider: '#F2F2F2',
-    colorButtonBorderSlider: '#404040',
-    colorButtonBorderSliderHover: '#525252',
-    colorButtonBackgroundSwitch: '#1C1C1C',
-    colorButtonBackgroundSwitchHover: '#262626',
-    colorButtonTextSwitch: '#F2F2F2',
-    colorButtonBorderSwitch: '#404040',
-    colorButtonBorderSwitchHover: '#525252',
-    colorButtonBackgroundTable: '#1C1C1C',
-    colorButtonBackgroundTableHover: '#262626',
-    colorButtonTextTable: '#F2F2F2',
-    colorButtonBorderTable: '#404040',
-    colorButtonBorderTableHover: '#525252',
-    colorButtonBackgroundTabsList: '#1C1C1C',
-    colorButtonBackgroundTabsListHover: '#262626',
-    colorButtonTextTabsList: '#F2F2F2',
-    colorButtonBorderTabsList: '#404040',
-    colorButtonBorderTabsListHover: '#525252',
-    colorButtonBackgroundTextarea: '#1C1C1C',
-    colorButtonBackgroundTextareaHover: '#262626',
-    colorButtonTextTextarea: '#F2F2F2',
-    colorButtonBorderTextarea: '#404040',
-    colorButtonBorderTextareaHover: '#525252',
-    colorButtonBackgroundToast: '#1C1C1C',
-    colorButtonBackgroundToastHover: '#262626',
-    colorButtonTextToast: '#F2F2F2',
-    colorButtonBorderToast: '#404040',
-    colorButtonBorderToastHover: '#525252',
-    colorButtonBackgroundToggle: '#1C1C1C',
-    colorButtonBackgroundToggleHover: '#262626',
-    colorButtonTextToggle: '#F2F2F2',
-    colorButtonBorderToggle: '#404040',
-    colorButtonBorderToggleHover: '#525252',
-    colorButtonBackgroundToggleGroup: '#1C1C1C',
-    colorButtonBackgroundToggleGroupHover: '#262626',
-    colorButtonTextToggleGroup: '#F2F2F2',
-    colorButtonBorderToggleGroup: '#404040',
-    colorButtonBorderToggleGroupHover: '#525252',
-    colorButtonBackgroundTooltip: '#1C1C1C',
-    colorButtonBackgroundTooltipHover: '#262626',
-    colorButtonTextTooltip: '#F2F2F2',
-    colorButtonBorderTooltip: '#404040',
-    colorButtonBorderTooltipHover: '#525252',
-    colorButtonBackgroundTreeView: '#1C1C1C',
-    colorButtonBackgroundTreeViewHover: '#262626',
-    colorButtonTextTreeView: '#F2F2F2',
-    colorButtonBorderTreeView: '#404040',
-    colorButtonBorderTreeViewHover: '#525252',
-    colorButtonBackgroundWizard: '#1C1C1C',
-    colorButtonBackgroundWizardHover: '#262626',
-    colorButtonTextWizard: '#F2F2F2',
-    colorButtonBorderWizard: '#404040',
-    colorButtonBorderWizardHover: '#525252',
-    borderRadius: '0.75rem', // Our --radius
+    colorTextSecondary: '#AAAAAA',
+    colorTextOnPrimaryBackground: '#1C1C1C',
+    colorDanger: '#DC2626',
+    borderRadius: '0.75rem',
     fontFamily: 'Inter, system-ui, sans-serif',
-    fontSize: '14px',
-    fontWeight: '400',
-    lineHeight: '1.5',
-    letterSpacing: '0.025em',
-    spacingUnit: '4px',
-    animationDuration: '200ms',
-    animationTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)',
-    boxShadow: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
-    boxShadowHover: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
-    boxShadowFocus: '0 0 0 3px rgba(205, 184, 159, 0.1)',
-    boxShadowError: '0 0 0 3px rgba(220, 38, 38, 0.1)',
-    boxShadowSuccess: '0 0 0 3px rgba(5, 150, 105, 0.1)',
-    boxShadowWarning: '0 0 0 3px rgba(217, 119, 6, 0.1)',
-    boxShadowInfo: '0 0 0 3px rgba(37, 99, 235, 0.1)',
-    boxShadowLight: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
-    boxShadowDark: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
-    boxShadowGhost: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
-    boxShadowLink: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
-    boxShadowOutline: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
-    boxShadowSolid: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
-    boxShadowSubtle: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
-    boxShadowDestructive: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
-    boxShadowSecondary: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
-    boxShadowMuted: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
-    boxShadowAccent: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
-    boxShadowPopover: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
-    boxShadowCard: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
-    boxShadowAlert: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
-    boxShadowNotification: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
-    boxShadowModal: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
-    boxShadowDrawer: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
-    boxShadowSheet: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
-    boxShadowAccordion: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
-    boxShadowTabs: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
-    boxShadowCarousel: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
-    boxShadowCommand: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
-    boxShadowDialog: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
-    boxShadowDropdownMenu: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
-    boxShadowHoverCard: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
-    boxShadowMenubar: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
-    boxShadowNavigationMenu: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
-    boxShadowPagination: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
-    boxShadowProgress: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
-    boxShadowRadioGroup: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
-    boxShadowScrollArea: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
-    boxShadowSelect: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
-    boxShadowSeparator: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
-    boxShadowSlider: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
-    boxShadowSwitch: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
-    boxShadowTable: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
-    boxShadowTabsList: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
-    boxShadowTextarea: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
-    boxShadowToast: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
-    boxShadowToggle: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
-    boxShadowToggleGroup: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
-    boxShadowTreeView: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
-    boxShadowWizard: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
   },
 };
 
-try {
-  const __root = document.getElementById("root");
-  if (!__root) { (window as any).__MOUNT_OK__ = false; throw new Error('Root element not found'); }
-  const __start = performance.now();
+// Main app initialization
+const root = document.getElementById("root");
+if (!root) throw new Error("Root element not found");
 
-  const withClerkProvider = !!PUBLISHABLE_KEY && !hasBrowserClerkStub;
+const rootElement = createRoot(root);
 
-  const appNode = (
-    <I18nextProvider i18n={i18n}>
-      {withClerkProvider ? (
+// Render app with or without Clerk based on environment
+if (PUBLISHABLE_KEY && !isE2E && !hasBrowserClerkStub) {
+  rootElement.render(
+    <React.StrictMode>
+      <I18nextProvider i18n={i18n}>
         <ClerkProvider
           publishableKey={PUBLISHABLE_KEY}
           appearance={clerkAppearance}
           afterSignOutUrl="/"
-          fallbackRedirectUrl="/dashboard"
           signInUrl="/sign-in"
           signUpUrl="/sign-up"
         >
-          <AuthSyncProvider>
-            <App />
-          </AuthSyncProvider>
-        </ClerkProvider>
-      ) : (
-        <AuthSyncProvider>
           <App />
-        </AuthSyncProvider>
-      )}
-    </I18nextProvider>
+        </ClerkProvider>
+      </I18nextProvider>
+    </React.StrictMode>
   );
-
-  const node = (isE2E && import.meta.env.VITE_E2E_FORCE_SHELL) ? (
-    <E2EShell />
-  ) : (
-    <E2EErrorBoundary>
-      <E2EAppProbe>
-        <React.StrictMode>{appNode}</React.StrictMode>
-      </E2EAppProbe>
-    </E2EErrorBoundary>
+} else {
+  // E2E or development mode without Clerk
+  rootElement.render(
+    <React.StrictMode>
+      <I18nextProvider i18n={i18n}>
+        <App />
+      </I18nextProvider>
+    </React.StrictMode>
   );
-
-  createRoot(__root).render(node);
-  (window as any).__MOUNT_OK__ = true;
-  (window as any).__MOUNT_T0__ = __start;
-  console?.log?.('[MOUNT] ok in', Math.round(performance.now()-__start),'ms', '(withClerkProvider=', withClerkProvider, ')');
-} catch (error) {
-  console.error("Error in main.tsx:", error);
-  document.body.innerHTML =
-    "<h1>Error loading app</h1><pre>" + error + "</pre>";
 }
