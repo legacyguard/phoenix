@@ -1,170 +1,94 @@
-@import "./fonts.css";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Georgia:ital@1&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* LegacyGuard Design System v1 - Premium Digital Heritage Platform */
+/* Phoenix Premium Design System - Apple-inspired with Earthy Tones */
 
 @layer base {
   body {
     font-family: "Inter", sans-serif;
     line-height: 1.6;
-    @apply bg-background text-text-body dark:bg-dark-background dark:text-dark-text-body;
+    @apply bg-background text-foreground antialiased;
   }
 
   :root {
-    /* LegacyGuard Light Mode Color Palette */
-    --background: 42 44% 97%; /* #FAF8F5 */
+    /* Phoenix Premium Light Mode - Apple-inspired with Earthy Tones */
+    --background: 36 33% 97%; /* #FAF8F5 */
     --foreground: 0 0% 11%; /* #1C1C1C */
-
-    --card: 42 44% 97%; /* #FAF8F5 */
+    
+    --card: 0 0% 100%; /* #FFFFFF */
     --card-foreground: 0 0% 11%; /* #1C1C1C */
-
-    --popover: 42 44% 97%; /* #FAF8F5 */
+    
+    --popover: 0 0% 100%; /* #FFFFFF */
     --popover-foreground: 0 0% 11%; /* #1C1C1C */
-
+    
     --primary: 26 29% 33%; /* #6B4F3B */
-    --primary-foreground: 42 44% 97%; /* #FAF8F5 */
-
-    --secondary: 33 24% 54%; /* #A68C6D */
+    --primary-foreground: 0 0% 100%; /* #FFFFFF */
+    
+    --secondary: 30 22% 55%; /* #A68C6D */
     --secondary-foreground: 0 0% 11%; /* #1C1C1C */
-
-    --cta-accent: 26 40% 39%; /* #8A5E3B */
-    --cta-accent-foreground: 42 44% 97%; /* #FAF8F5 */
-
-    --muted: 42 20% 92%;
+    
+    --accent: 24 40% 39%; /* #8A5E3B */
+    --accent-foreground: 0 0% 100%; /* #FFFFFF */
+    
+    --muted: 0 0% 37%; /* #5F5F5F */
     --muted-foreground: 0 0% 37%; /* #5F5F5F */
-
-    --accent: 33 24% 54%; /* #A68C6D */
-    --accent-foreground: 0 0% 11%; /* #1C1C1C */
-
+    
     --destructive: 0 84% 60%;
-    --destructive-foreground: 42 44% 97%;
-
-    --border: 42 20% 88%;
-    --input: 42 20% 88%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 0 0% 92%; /* #EAEAEA */
+    --input: 30 20% 94%; /* #F0ECE8 */
     --ring: 26 29% 33%; /* #6B4F3B */
-
-    --radius: 0.5rem;
-
-    /* Earth tones for components */
-    --earth-primary: 26 29% 33%; /* #6B4F3B */
-    --earth-secondary: 33 24% 54%; /* #A68C6D */
-    --earth-accent: 26 40% 39%; /* #8A5E3B */
-
-    /* Heritage-inspired gradients */
-    --gradient-heritage: linear-gradient(
-      135deg,
-      hsl(var(--primary)),
-      hsl(var(--secondary))
-    );
-    --gradient-earth: linear-gradient(
-      180deg,
-      hsl(var(--earth-primary)),
-      hsl(var(--earth-accent))
-    );
-    --gradient-warm: linear-gradient(
-      45deg,
-      hsl(var(--cta-accent)),
-      hsl(var(--secondary))
-    );
-
-    /* Warm palette for empathetic design */
-    --warm-primary: 150 18% 50%; /* #7C9885 - Soft sage green */
-    --warm-light: 30 23% 96%; /* #F7F5F3 - Warm cream */
-    --warm-accent: 36 41% 60%; /* #D4A574 - Gentle gold */
-
-    /* Elegant shadows */
-    --shadow-heritage: 0 4px 20px hsl(var(--primary) / 0.15);
-    --shadow-earth: 0 8px 30px hsl(var(--earth-primary) / 0.12);
-    --shadow-warm: 0 2px 15px hsl(var(--cta-accent) / 0.2);
-
-    /* Sidebar variables */
-    --sidebar-background: 42 44% 97%;
-    --sidebar-foreground: 0 0% 11%;
-    --sidebar-primary: 26 29% 33%;
-    --sidebar-primary-foreground: 42 44% 97%;
-    --sidebar-accent: 42 20% 92%;
-    --sidebar-accent-foreground: 0 0% 11%;
-    --sidebar-border: 42 20% 88%;
-    --sidebar-ring: 26 29% 33%;
+    
+    --radius: 0.75rem;
+    
+    /* Chart colors */
+    --chart-1: 26 29% 33%; /* Primary brown */
+    --chart-2: 30 22% 55%; /* Secondary brown */
+    --chart-3: 24 40% 39%; /* Accent brown */
+    --chart-4: 30 20% 70%; /* Lighter brown */
+    --chart-5: 36 33% 85%; /* Very light brown */
   }
-
+  
   .dark {
-    /* LegacyGuard Dark Mode Color Palette */
+    /* Phoenix Premium Dark Mode - Sophisticated Earth Tones */
     --background: 0 0% 11%; /* #1C1C1C */
     --foreground: 0 0% 95%; /* #F2F2F2 */
-
-    --card: 0 0% 11%; /* #1C1C1C */
+    
+    --card: 0 0% 16%; /* #2A2A2A */
     --card-foreground: 0 0% 95%; /* #F2F2F2 */
-
-    --popover: 0 0% 11%; /* #1C1C1C */
+    
+    --popover: 0 0% 16%; /* #2A2A2A */
     --popover-foreground: 0 0% 95%; /* #F2F2F2 */
-
-    --primary: 33 32% 72%; /* #CDB89F */
+    
+    --primary: 30 23% 72%; /* #CDB89F */
     --primary-foreground: 0 0% 11%; /* #1C1C1C */
-
-    --secondary: 26 23% 44%; /* #8A6F57 */
+    
+    --secondary: 25 24% 44%; /* #8A6F57 */
     --secondary-foreground: 0 0% 95%; /* #F2F2F2 */
-
-    --cta-accent: 32 52% 65%; /* #D6A574 */
-    --cta-accent-foreground: 0 0% 11%; /* #1C1C1C */
-
-    --muted: 0 0% 15%;
+    
+    --accent: 30 45% 60%; /* #D6A574 */
+    --accent-foreground: 0 0% 11%; /* #1C1C1C */
+    
+    --muted: 0 0% 67%; /* #AAAAAA */
     --muted-foreground: 0 0% 67%; /* #AAAAAA */
-
-    --accent: 26 23% 44%; /* #8A6F57 */
-    --accent-foreground: 0 0% 95%; /* #F2F2F2 */
-
+    
     --destructive: 0 62% 51%;
     --destructive-foreground: 0 0% 95%;
-
-    --border: 0 0% 18%;
-    --input: 0 0% 18%;
-    --ring: 33 32% 72%; /* #CDB89F */
-
-    /* Dark mode earth tones */
-    --earth-primary: 33 32% 72%; /* #CDB89F */
-    --earth-secondary: 26 23% 44%; /* #8A6F57 */
-    --earth-accent: 32 52% 65%; /* #D6A574 */
-
-    /* Dark mode gradients */
-    --gradient-heritage: linear-gradient(
-      135deg,
-      hsl(var(--primary)),
-      hsl(var(--secondary))
-    );
-    --gradient-earth: linear-gradient(
-      180deg,
-      hsl(var(--earth-primary)),
-      hsl(var(--earth-accent))
-    );
-    --gradient-warm: linear-gradient(
-      45deg,
-      hsl(var(--cta-accent)),
-      hsl(var(--secondary))
-    );
-
-    /* Dark mode warm palette */
-    --warm-primary: 150 18% 60%; /* Adjusted for dark mode */
-    --warm-light: 30 10% 15%; /* Dark warm background */
-    --warm-accent: 36 41% 70%; /* Brighter gold for dark mode */
-
-    /* Dark mode shadows */
-    --shadow-heritage: 0 4px 20px hsl(0 0% 0% / 0.3);
-    --shadow-earth: 0 8px 30px hsl(0 0% 0% / 0.25);
-    --shadow-warm: 0 2px 15px hsl(var(--cta-accent) / 0.15);
-
-    /* Dark sidebar variables */
-    --sidebar-background: 0 0% 8%;
-    --sidebar-foreground: 0 0% 95%;
-    --sidebar-primary: 33 32% 72%;
-    --sidebar-primary-foreground: 0 0% 11%;
-    --sidebar-accent: 0 0% 15%;
-    --sidebar-accent-foreground: 0 0% 95%;
-    --sidebar-border: 0 0% 18%;
-    --sidebar-ring: 33 32% 72%;
+    
+    --border: 0 0% 23%; /* #3A3A3A */
+    --input: 0 0% 19%; /* #303030 */
+    --ring: 30 23% 72%; /* #CDB89F */
+    
+    /* Chart colors for dark mode */
+    --chart-1: 30 23% 72%; /* Primary light brown */
+    --chart-2: 25 24% 54%; /* Secondary brown */
+    --chart-3: 30 45% 60%; /* Accent gold */
+    --chart-4: 30 20% 50%; /* Medium brown */
+    --chart-5: 0 0% 40%; /* Gray */
   }
 }
 
@@ -172,68 +96,48 @@
   * {
     @apply border-border;
   }
-
-  body {
-    @apply bg-background text-foreground font-sans antialiased;
-    font-feature-settings:
-      "rlig" 1,
-      "calt" 1;
-    transition:
-      background-color 300ms ease-in-out,
-      color 300ms ease-in-out;
+  
+  /* Typography base */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-sans font-semibold tracking-tight;
   }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
+  
+  h1 {
+    @apply text-4xl lg:text-5xl;
+  }
+  
+  h2 {
+    @apply text-3xl lg:text-4xl;
+  }
+  
+  h3 {
+    @apply text-2xl lg:text-3xl;
+  }
+  
+  h4 {
+    @apply text-xl lg:text-2xl;
+  }
+  
+  h5 {
+    @apply text-lg lg:text-xl;
+  }
+  
   h6 {
-    @apply font-sans;
-    font-weight: 600;
-    line-height: 1.2;
+    @apply text-base lg:text-lg;
   }
-
-  .font-heritage {
-    @apply font-serif;
+  
+  p {
+    @apply leading-7;
+  }
+  
+  /* Smooth transitions */
+  * {
+    @apply transition-colors duration-300;
   }
 }
 
 @layer components {
-  /* Heritage-themed component classes */
-  .heritage-card {
-    @apply bg-gradient-to-br from-background to-primary/5 border border-primary/20 shadow-heritage;
-  }
-
-  .earth-button {
-    @apply bg-gradient-earth text-background hover:shadow-earth hover:scale-105;
-  }
-
-  .legacy-text {
-    @apply text-muted-foreground font-heritage italic;
-  }
-
-  .vault-container {
-    @apply max-w-7xl mx-auto px-4 lg:px-8;
-  }
-
-  /* Smooth transitions for interactive elements */
-  .interactive {
-    @apply transition-all duration-200 ease-in-out;
-  }
-
-  /* Theme transition for all elements */
-  * {
-    transition:
-      border-color 300ms ease-in-out,
-      background-color 300ms ease-in-out,
-      color 300ms ease-in-out;
-  }
-
-  /* Focus styles for accessibility */
-  .focus-heritage:focus-visible {
-    @apply outline-none ring-2 ring-primary ring-offset-2 ring-offset-background;
-  }
+  /* Komponenty budú React komponenty, nie CSS triedy - podľa filozofie Tailwind/Shadcn */
 }
 
 /* Hide E2E-specific elements ONLY during visual regression tests */

@@ -1,149 +1,102 @@
-# Phoenix Project: Comprehensive To-Do List
+# TODO - Phoenix Projekt
 
-This document tracks all major tasks required to build, launch, and grow the Phoenix application. It is organized by development phase and cross-functional areas.
+## ✅ Dokončené Úlohy
 
----
+### UI Komponenty
+- [x] **Button komponent** - Prémiový button s variantmi a animáciami
+- [x] **Card komponent** - Flexibilný kontajner s 5 sub-komponentmi (Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter)
+- [x] **Input komponent** - Typovo bezpečný input s Shadcn UI štýlovaním
 
-## 🏛️ Phase 0: Foundation & Architecture
+### Layout Komponenty
+- [x] **AppLayout komponent** - Hlavný layout aplikácie s pevnou bočnou navigáciou
+  - Sidebar s navigáciou (Dashboard, Assets, Guardians, Settings)
+  - Profil používateľa s logout funkcionalitou
+  - Responzívny dizajn (sidebar sa skryje na mobile)
+  - Používa všetky naše UI komponenty (Button, Card)
 
-*The goal of this phase is to set up a robust, scalable, and secure foundation for the entire project.*
+### Testovanie
+- [x] **Card testy** - 7 testov pre všetky Card sub-komponenty
+- [x] **Input testy** - 7 testov pre Input komponent
+- [x] **Button testy** - Kompletné testovanie button komponentu
+- [x] **AppLayout testy** - 9 testov pre layout funkcionalitu
 
--   [X] **Project Setup:**
-    -   [X] Initialize a monorepo (e.g., using pnpm workspaces or Nx).
-    -   [X] Set up the folder structure: `/apps/frontend`, `/apps/backend`, `/apps/ai-service`, `/packages/types`.
-    -   [ ] Configure shared TypeScript configurations and linting rules (ESLint, Prettier) across the monorepo.
--   [X] **Documentation:**
-    -   [X] Finalize and commit `db-schema.md`.
-    -   [X] Finalize and commit `api-schema.md`.
-    -   [X] Finalize and commit `component-library.md`.
-    -   [X] This `TODO.md` file is created and committed.
--   [X] **Backend (NestJS) Setup:**
-    -   [X] Initialize the NestJS application in `/apps/backend`.
-    -   [X] Integrate Prisma ORM and connect it to a PostgreSQL database.
-    -   [X] Generate the initial Prisma schema from `db-schema.md`.
-    -   [X] Set up environment variable management (e.g., using `@nestjs/config`).
--   [ ] **Frontend (React) Setup:**
-    -   [ ] Move the existing React app into `/apps/frontend`.
-    -   [ ] Ensure it works correctly within the monorepo setup.
-    -   [ ] Configure it to import from the shared `/packages/types` directory.
+### Dokumentácia
+- [x] **README.md** - Kompletná dokumentácia pre UI komponenty
+- [x] **Layout README.md** - Dokumentácia pre layout komponenty
+- [x] **Príklady použitia** - Demonštračné súbory s CardInputExample a AppLayoutExample
+- [x] **Index exporty** - Centralizované exporty všetkých UI a layout komponentov
 
----
+## 🔄 Aktuálne Úlohy
 
-## 🚀 Phase 1: Core MVP (Minimum Viable Product)
+### Formulárové Komponenty
+- [ ] **Form komponent** - Kompletný formulárový systém s validáciou
+- [ ] **Select komponent** - Dropdown výber s vyhľadávaním
+- [ ] **Checkbox komponent** - Checkbox s rôznymi stavmi
+- [ ] **Radio komponent** - Radio button skupina
+- [ ] **Textarea komponent** - Viacriadkový text input
 
-*The goal of this phase is to launch a functional version with core features that users can start using.*
+### Navigačné Komponenty
+- [ ] **Navigation Menu** - Hlavná navigácia aplikácie
+- [ ] **Breadcrumb** - Navigačná cesta
+- [ ] **Pagination** - Stránkovanie pre zoznamy
 
--   [X] **Backend Development:**
-    -   [X] Implement User Authentication (`/api/auth/register`, `/api/auth/login`) with JWT.
-    -   [X] Implement CRUD API for Assets (`/api/assets`).
-    -   [X] Implement CRUD API for Guardians (`/api/guardians`).
-    -   [X] Implement basic API for Document metadata (`/api/documents`).
-    -   [x] Implement User Settings API, including Heart-Beat protocol settings.
-    -   [X] Write unit and integration tests for all API endpoints.
--   [ ] **Frontend Development:**
-    -   [ ] Create core atomic components from `component-library.md` (Button, Input, Card).
-    -   [ ] Build the main `AppLayout` with sidebar navigation.
-    -   [ ] Implement the registration and login pages, connecting them to the backend API.
-    -   [ ] Build the "Life Inventory Dashboard" to display assets and guardians fetched from the API.
-    -   [ ] Create forms for adding/editing assets and guardians.
-    -   [ ] Implement the user onboarding flow ("OnboardingWizard").
-    -   [ ] Build the "Guardian's Playbook" page (statically for now).
--   [ ] **Deployment & DevOps:**
-    -   [ ] Set up a staging/development environment.
-    -   [ ] Configure a CI/CD pipeline (e.g., using GitHub Actions) to automatically build and test the code on push.
-    -   [ ] Choose a cloud provider (e.g., Vercel for Frontend, Render/Heroku for Backend) and deploy the first version.
+### Feedback Komponenty
+- [ ] **Toast** - Notifikácie a správy
+- [ ] **Alert** - Upozornenia a chyby
+- [ ] **Progress** - Progress bary a indikátory
+- [ ] **Skeleton** - Loading stavy
 
----
+## 📋 Plánované Úlohy
 
-## 🧠 Phase 2: Intelligence & Monetization
+### Pokročilé Komponenty
+- [ ] **Data Table** - Tabuľky s filtrovanie a zoraďovaním
+- [ ] **Calendar** - Kalendár komponent
+- [ ] **Date Picker** - Výber dátumu
+- [ ] **Time Picker** - Výber času
+- [ ] **File Upload** - Nahrávanie súborov
 
-*The goal of this phase is to introduce premium AI features and start generating revenue.*
+### Layout Komponenty
+- [ ] **Grid System** - Flexibilný grid layout
+- [ ] **Container** - Responzívne kontajnery
+- [ ] **Divider** - Rozdeľovače obsahu
+- [ ] **Spacer** - Priestorové komponenty
 
--   [ ] **AI Service (Python/FastAPI) Setup:**
-    -   [ ] Initialize the FastAPI application in `/apps/ai-service`.
-    -   [ ] Set up secure communication between the main Backend and the AI Service.
-    -   [ ] Manage API keys (OpenAI, etc.) securely using environment variables.
--   [ ] **AI Feature Development:**
-    -   [ ] **AI Document Intelligence (Premium):**
-        -   [ ] Integrate an OCR library/service.
-        -   [ ] Build the `/api/ai/process-document` endpoint.
-        -   [ ] Implement logic to call OpenAI API for classification and metadata extraction.
-        -   [ ] Update the frontend to display extracted metadata and classification badges.
-    -   [ ] **Time Capsule & Story Generator (Premium):**
-        -   [ ] Build the `/api/ai/generate-story` endpoint.
-        -   [ ] Integrate Whisper API for speech-to-text if voice input is supported.
-        -   [ ] Create the "Time Capsule" UI on the frontend for users to create messages.
--   [ ] **Monetization:**
-    -   [ ] Choose and integrate a payment provider (e.g., Stripe).
-    -   [ ] Create the subscription plan logic in the `Plan` model.
-    -   [ ] Implement API middleware to check for "premium" status before allowing access to AI endpoints.
-    -   [ ] Build the "Upgrade to Premium" page/flow on the frontend.
+### Interaktívne Komponenty
+- [ ] **Modal** - Modálne okná
+- [ ] **Drawer** - Bočné panely
+- [ ] **Popover** - Kontextové informácie
+- [ ] **Tooltip** - Nápovedy a tipy
 
----
+## 🎯 Priorita
 
-## ⚖️ Phase 3: Legal & Advanced Planning
+### Vysoká Priorita (Tento týždeň)
+1. **Form komponent** - Základ pre všetky formuláre
+2. **Select komponent** - Nevyhnutný pre formuláre
+3. **Toast komponent** - Feedback pre používateľov
 
-*The goal of this phase is to tackle the complex legal aspects and become a true legacy planning tool.*
+### Stredná Priorita (Budúci týždeň)
+1. **Alert komponent** - Zobrazovanie chýb a upozornení
+2. **Progress komponent** - Loading stavy
+3. **Navigation Menu** - Hlavná navigácia
 
--   [ ] **Knowledge Base Development:**
-    -   [ ] Research and structure the legal requirements for wills/inheritance for the first 2 target countries (e.g., Slovakia, Germany).
-    -   [ ] Create the initial version of the "Knowledge Base" (e.g., as structured Markdown or JSON files).
--   [ ] **Will Generator 2.0 (Premium):**
-    -   [ ] Enhance the AI Service to use RAG (Retrieval-Augmented Generation) with the new Knowledge Base.
-    -   [ ] Upgrade the multi-step will generator form on the frontend.
-    -   [ ] Implement real-time validation and suggestions based on the user's country.
-    -   [ ] Add a very prominent legal disclaimer about the need for a lawyer's review.
--   [ ] **Advanced Features:**
-    -   [ ] **Document Relationship Intelligence:** Implement backend logic to suggest links between documents and assets.
-    -   **Expiration Monitoring:** Create a scheduled job (cron job) to check for expiring documents and send notifications.
+### Nízka Priorita (Neskôr)
+1. Pokročilé komponenty (Data Table, Calendar)
+2. Layout komponenty
+3. Interaktívne komponenty
 
----
+## 📚 Zdroje a Referencie
 
-## 🌐 Phase 4: Ecosystem & Community
+- **Shadcn UI** - Základný dizajn systém
+- **Tailwind CSS** - Utility-first CSS framework
+- **React Aria** - Accessibility komponenty
+- **Framer Motion** - Animácie a prechody
+- **Lucide React** - Ikony pre navigáciu
 
-*The goal of this phase is to expand the platform's reach and functionality, creating a full ecosystem.*
+## 🔧 Technické Poznámky
 
--   [ ] **Family Communication Hub:**
-    -   [ ] Implement the login flow for Guardians.
-    -   [ ] Build the Guardian-facing dashboard, showing only the information they have permission to see.
-    -   [ ] Implement the "Preparedness Score" for Guardians.
--   [ ] **Dead Man's Switch & Heart-Beat Protocol:**
-    -   [ ] Implement the scheduled job for the Heart-Beat check-in.
-    -   [ ] Develop the notification logic (email, push) for check-ins.
-    -   [ ] Build the secure mechanism for activating the switch and releasing information to the designated executor. **(Requires extensive testing).**
--   [ ] **Mobile Application:**
-    -   [ ] Plan the architecture for the mobile app (e.g., React Native).
-    -   [ ] Develop the document scanning feature using the phone's camera.
-    -   [ ] Ensure the mobile app reuses the existing backend API.
--   [ ] **Localization & Expansion:**
-    -   [ ] Implement an internationalization (i18n) framework in the frontend (e.g., `i18next`).
-    -   [ ] Add language packs for the next 5-10 languages.
-    -   [ ] Expand the legal Knowledge Base with 5-10 new countries.
-
----
-
-## ✅ Cross-Functional Tasks (Ongoing)
-
-*These tasks are not tied to a single phase and must be considered throughout the project.*
-
--   [ ] **Security:**
-    -   [ ] Conduct regular dependency security scans.
-    -   [ ] Implement rate limiting and other protections against abuse.
-    -   [ ] Ensure all data is encrypted at rest and in transit.
-    -   [ ] Plan for a third-party security audit before a major public launch.
--   [ ] **Legal & Compliance:**
-    -   [ ] Draft a comprehensive Privacy Policy and Terms of Service.
-    -   [ ] Ensure GDPR compliance for all EU users.
-    -   [ ] Consult with lawyers in target countries to validate the Knowledge Base.
--   [ ] **UI/UX:**
-    -   [ ] Conduct user testing sessions with target personas.
-    -   [ ] Ensure the application is fully responsive and accessible (WCAG).
--   [ ] **Marketing & Launch:**
-    -   [ ] Create a landing page for pre-launch sign-ups.
-    -   [ ] Define the pricing strategy for the premium plan.
-    -   [ ] Prepare launch materials (blog posts, social media announcements).
--   [ ] **polishing Pre-Launch Polish & Security:**
-    -   [ ] Implement Refresh Token strategy for long-lived user sessions.
-    -   [ ] Implement Email Confirmation flow for new user registrations.
-    -   [ ] Implement Roles Guard for admin-only functionalities.
-    -   [ ] Conduct a full security review of all dependencies and configurations.
+- Všetky komponenty používajú `React.forwardRef`
+- Typová bezpečnosť s TypeScript
+- CSS premenné pre konzistentné farby a veľkosti
+- Testovanie s Vitest a React Testing Library
+- Modulárna architektúra bez common.json súborov
+- Layout komponenty sú pripravené na integráciu s React Router

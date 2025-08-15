@@ -66,12 +66,13 @@ test.describe("Heritage Vault Golden Path", () => {
     ];
 
     for (const section of sections) {
-      await page.goto(section.url);
-      await page.waitForLoadState('networkidle');
+      await page.goto(section.url, { waitUntil: 'domcontentloaded', timeout: 20000 });
+      // Add a small delay for React to mount
+      await page.waitForTimeout(500);
       
       if (section.testId) {
         // For pages with known test IDs, verify they're visible
-        await expect(page.locator(`[data-testid="${section.testId}"]`)).toBeVisible({ timeout: 15000 });
+        await expect(page.locator(`[data-testid="${section.testId}"]`)).toBeVisible({ timeout: 10000 });
       } else {
         // For other pages, just ensure the page loaded without errors
         // Check that we're not on an error page

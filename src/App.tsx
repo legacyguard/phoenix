@@ -1,10 +1,11 @@
 import React, { useEffect } from "react";
 import { BrowserRouter, Routes, Route, Link, useLocation } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { ClerkProvider } from "@clerk/clerk-react";
+import { ClerkProvider, SignedIn, SignedOut, RedirectToSignIn } from "@clerk/clerk-react";
 import "./i18n";
 import Landing from "@/pages/Landing";
 import Dashboard from "@/pages/Dashboard";
+import { DashboardPage } from "@/pages/DashboardPage";
 import Vault from "@/pages/Vault";
 import { ProtectedRoute } from "@/components/auth/ProtectedRoute";
 import Onboarding from "@/pages/Onboarding";
@@ -18,6 +19,8 @@ import PersonalizedOnboarding from "@/pages/PersonalizedOnboarding";
 import Settings from "@/pages/Settings";
 import SettingsPrivacy from "@/pages/SettingsPrivacy";
 import SettingsPrivacyPassphrase from "@/pages/SettingsPrivacyPassphrase";
+import { SignInPage } from "@/pages/auth/SignInPage";
+import { SignUpPage } from "@/pages/auth/SignUpPage";
 import { runSecureStorageMigration } from "@/services/MigrationService";
 import { KeyService } from "@/services/KeyService";
 import { HeartbeatService } from "@/services/HeartbeatService";
@@ -110,21 +113,32 @@ const RouterShell: React.FC = () => {
   const AppContent = (
     <QueryClientProvider client={queryClient}>
       <nav style={{ padding: 12, borderBottom: "1px solid #ddd", marginBottom: 16 }}>
-          <ul style={{ display: "flex", listStyle: "none", gap: 12, margin: 0, padding: 0 }}>
+          <ul style={{ display: "flex", listStyle: "none", gap: 12, margin: 0, padding: 0, position: 'relative', zIndex: 1 }}>
             <li><Link data-testid="nav-home" to="/">Home</Link></li>
             <li><Link data-testid="nav-dashboard" to="/dashboard">Dashboard</Link></li>
             <li><Link data-testid="nav-vault" to="/vault">Vault</Link></li>
             <li><Link data-testid="nav-trusted-circle" to="/trusted-circle">Trusted Circle</Link></li>
             <li><Link data-testid="nav-generate-will" to="/generate-will">Generate Will</Link></li>
             <li><Link data-testid="nav-inventory" to="/inventory">Life Inventory</Link></li>
-            <li><Link data-testid="nav-playbook" to="/playbook">Guardian’s Playbook</Link></li>
+            <li><Link data-testid="nav-playbook" to="/playbook">Guardian's Playbook</Link></li>
             <li><Link data-testid="nav-document-analysis" to="/document-analysis">AI Document Analysis</Link></li>
             <li><Link data-testid="nav-personal-onboarding" to="/personal-onboarding">Personalized Setup</Link></li>
             <li><Link data-testid="nav-settings" to="/settings">Settings</Link></li>
             <li><Link data-testid="nav-privacy" to="/settings/privacy">Privacy</Link></li>
             <li><Link data-testid="nav-passphrase" to="/settings/privacy/passphrase">Passphrase</Link></li>
-            <li style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-              <Link data-testid="nav-executor-toolkit" to="/executor-toolkit" style={{ position: 'relative', zIndex: 10, pointerEvents: 'auto' }}>Executor Toolkit</Link>
+            <li style={{ display: 'flex', alignItems: 'center', gap: 8, position: 'relative', zIndex: 999 }}>
+              <Link 
+                data-testid="nav-executor-toolkit" 
+                to="/executor-toolkit" 
+                style={{ 
+                  position: 'relative', 
+                  zIndex: 1000, 
+                  pointerEvents: 'auto',
+                  display: 'inline-block'
+                }}
+              >
+                Executor Toolkit
+              </Link>
               {isE2E && typeof window !== 'undefined' && (window as any).__E2E_USER && ((((window as any).__E2E_USER.publicMetadata?.plan) ?? (window as any).__E2E_USER.plan) !== 'premium') && (
                 <span className="premium-badge" data-premium="true" style={{ padding: '2px 6px', borderRadius: 4, background: '#f59e0b', color: '#111' }}>Premium</span>
               )}
@@ -140,19 +154,26 @@ const RouterShell: React.FC = () => {
           />
         )}
         <Routes>
+          {/* Public routes */}
           <Route path="/" element={<Landing />} />
+          <Route path="/sign-in" element={<SignInPage />} />
+          <Route path="/sign-up" element={<SignUpPage />} />
+          
+          {/* Protected routes - require authentication */}
           <Route path="/dashboard" element={
-            <ProtectedRoute>
-              <Dashboard />
-            </ProtectedRoute>
+            <SignedIn>
+              <DashboardPage />
+            </SignedIn>
           } />
           <Route path="/executor-toolkit" element={
             isE2E ? (
               <ExecutorDashboard />
             ) : (
-              <ProtectedRoute>
-                <ExecutorDashboard />
-              </ProtectedRoute>
+              <SignedIn>
+                <ProtectedRoute>
+                  <ExecutorDashboard />
+                </ProtectedRoute>
+              </SignedIn>
             )
           } />
           <Route path="/vault" element={<Vault />} />
@@ -166,6 +187,7 @@ const RouterShell: React.FC = () => {
           <Route path="/settings" element={<Settings />} />
           <Route path="/settings/privacy" element={<SettingsPrivacy />} />
           <Route path="/settings/privacy/passphrase" element={<SettingsPrivacyPassphrase />} />
+          
           {/* E2E placeholder routes for pages used by tests */}
           {isE2E && (
             <>

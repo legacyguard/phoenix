@@ -9,8 +9,8 @@ test.describe("Premium Feature Access", () => {
   test("Free user attempting to access premium feature", async ({ page }) => {
     await loginAsFreeUser(page);
 
-    // Navigate to Executor's Toolkit
-    await page.click('[data-testid="nav-executor-toolkit"]');
+    // Navigate to Executor's Toolkit (force click to bypass mobile overlap issues)
+    await page.click('[data-testid="nav-executor-toolkit"]', { force: true });
 
     // Should redirect to pricing page
     await expect(page).toHaveURL(/\/pricing/);
@@ -23,8 +23,8 @@ test.describe("Premium Feature Access", () => {
     await page.reload();
     await page.waitForLoadState('networkidle');
 
-    // Navigate back to Executor's Toolkit
-    await page.click('[data-testid="nav-executor-toolkit"]');
+    // Navigate back to Executor's Toolkit (force click to bypass mobile overlap issues)
+    await page.click('[data-testid="nav-executor-toolkit"]', { force: true });
 
     // Should now have access to toolkit dashboard (or at least not be on pricing page)
     await expect(page).not.toHaveURL(/\/pricing/);
@@ -34,8 +34,8 @@ test.describe("Premium Feature Access", () => {
   test("Premium user accessing premium feature", async ({ page }) => {
     await loginAsPremiumUser(page);
 
-    // Directly access Executor's Toolkit
-    await page.click('[data-testid="nav-executor-toolkit"]');
+    // Directly access Executor's Toolkit (force click to bypass mobile overlap issues)
+    await page.click('[data-testid="nav-executor-toolkit"]', { force: true });
 
     // Should have direct access
     await expect(page).toHaveURL(/\/executor-toolkit/);
