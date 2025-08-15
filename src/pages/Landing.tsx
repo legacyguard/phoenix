@@ -41,7 +41,7 @@ export const Landing: React.FC = () => {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-warm-light via-background to-primary/5 text-foreground py-20 lg:py-32">
+      <section data-testid="hero-section" className="relative bg-gradient-to-br from-warm-light via-background to-primary/5 text-foreground py-20 lg:py-32">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="max-w-4xl mx-auto text-center space-y-6">
             {/* Trust indicator */}

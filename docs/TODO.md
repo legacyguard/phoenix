@@ -36,9 +36,9 @@ This document tracks all major tasks required to build, launch, and grow the Pho
 -   [X] **Backend Development:**
     -   [X] Implement User Authentication (`/api/auth/register`, `/api/auth/login`) with JWT.
     -   [X] Implement CRUD API for Assets (`/api/assets`).
-    -   [ ] Implement CRUD API for Guardians (`/api/guardians`).
+    -   [X] Implement CRUD API for Guardians (`/api/guardians`).
     -   [X] Implement basic API for Document metadata (`/api/documents`).
-    -   [ ] Implement User Settings API, including Heart-Beat protocol settings.
+    -   [x] Implement User Settings API, including Heart-Beat protocol settings.
     -   [X] Write unit and integration tests for all API endpoints.
 -   [ ] **Frontend Development:**
     -   [ ] Create core atomic components from `component-library.md` (Button, Input, Card).

@@ -8,7 +8,7 @@ const LandingPage: React.FC = () => {
   return (
     <div className="landing-page">
       {/* Hero Section */}
-      <section className="hero-section bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
+      <section data-testid="hero-section" className="hero-section bg-gradient-to-br from-blue-50 to-indigo-100 py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-5xl font-bold text-gray-900 mb-6">

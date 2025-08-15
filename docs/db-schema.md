@@ -1,193 +1,253 @@
-# Phoenix Project - Database Schema
+# Database Schema Documentation
 
-This document defines the database structure for the Phoenix application. It serves as the single source of truth for all database models and their relations. The schema is written in a Prisma-like syntax for clarity and ease of use with AI code generation tools.
+## Overview
+This document describes the database schema for the LegacyGuard application, including all tables, relationships, and constraints.
 
----
+## Tables
 
-## Enums (Enumerated Types)
+### HeartbeatGuardianLink
+A join table linking UserSettings to Guardian for the Heart-Beat protocol, capturing the priority order in which guardians should be contacted.
 
-// Defines a set of possible roles for a user in the system.
-enum Role {
-  USER
-  ADMIN
-}
+| Column          | Type      | Constraints                                        | Description                                                  |
+|-----------------|-----------|----------------------------------------------------|--------------------------------------------------------------|
+| id              | UUID      | PRIMARY KEY, DEFAULT uuid_generate_v4()            | Unique link identifier                                       |
+| userSettingsId  | UUID      | FOREIGN KEY (UserSettings.id), NOT NULL            | The UserSettings this link belongs to                        |
+| guardianId      | UUID      | FOREIGN KEY (Guardian.id), NOT NULL                | The Guardian to contact                                      |
+| priority        | INTEGER   | NOT NULL                                           | The order to contact the guardian (1, 2, 3, ...)             |
+| createdAt       | TIMESTAMP | DEFAULT NOW()                                      | Link creation timestamp                                      |
 
-// Defines the status of a guardian's invitation or preparedness.
-enum GuardianStatus {
-  INVITED
-  ACTIVE
-  INACTIVE
-}
+- Composite unique key on (userSettingsId, guardianId) prevents duplicate links for the same settings and guardian.
+- Composite unique key on (userSettingsId, priority) ensures that each priority is used only once within a given user's settings.
+- On delete cascade: deleting either the referenced UserSettings or Guardian will automatically delete the link to maintain data consistency.
 
-// Defines the type of an asset.
-enum AssetType {
-  REAL_ESTATE
-  VEHICLE
-  DIGITAL_ASSET
-  INVESTMENT
-  OTHER
-}
+### User
+Stores user account information and authentication details.
 
-// Defines the type of a notification.
-enum NotificationType {
-  EMAIL
-  SMS
-  PUSH
-}
+| Column | Type | Constraints | Description |
+|--------|------|-------------|-------------|
+| id | UUID | PRIMARY KEY, DEFAULT uuid_generate_v4() | Unique user identifier |
+| email | VARCHAR(255) | UNIQUE, NOT NULL | User's email address |
+| passwordHash | VARCHAR(255) | NOT NULL | Hashed password using bcrypt |
+| createdAt | TIMESTAMP | DEFAULT NOW() | Account creation timestamp |
+| updatedAt | TIMESTAMP | DEFAULT NOW(), ON UPDATE NOW() | Last update timestamp |
 
----
+**Relationships:**
+- One-to-many with Asset (user.assets)
+- One-to-many with Guardian (user.guardians)
+- One-to-one with UserSettings (user.settings)
 
-## Models
+### Asset
+Represents user-owned assets with metadata and categorization.
 
-### User Model
-// Represents the main user of the application.
-model User {
-  id              String   @id @default(cuid())
-  email           String   @unique
-  passwordHash    String
-  firstName       String?
-  lastName        String?
-  createdAt       DateTime @default(now())
-  updatedAt       DateTime @updatedAt
-  role            Role     @default(USER)
-  
-  // User's plan and settings
-  plan            Plan?
-  settings        UserSettings?
-  
-  // Relations
-  assets          Asset[]
-  documents       Document[]
-  guardians       Guardian[]
-  timeCapsules    TimeCapsule[]
-}
+| Column | Type | Constraints | Description |
+|--------|------|-------------|-------------|
+| id | UUID | PRIMARY KEY, DEFAULT uuid_generate_v4() | Unique asset identifier |
+| userId | UUID | FOREIGN KEY (User.id), NOT NULL | Owner of the asset |
+| name | VARCHAR(255) | NOT NULL | Asset name/description |
+| description | TEXT | NULL | Detailed asset description |
+| type | AssetType | NOT NULL | Category of the asset |
+| value | DECIMAL(15,2) | NOT NULL | Estimated monetary value |
+| createdAt | TIMESTAMP | DEFAULT NOW() | Asset creation timestamp |
+| updatedAt | TIMESTAMP | DEFAULT NOW(), ON UPDATE NOW() | Last update timestamp |
 
-### UserSettings Model
-// Stores user-specific settings, including the Dead Man's Switch configuration.
-model UserSettings {
-  id              String   @id @default(cuid())
-  userId          String   @unique
-  user            User     @relation(fields: [userId], references: [id])
-  
-  // Heart-Beat Protocol Settings
-  heartbeatIntervalDays Int @default(30) // e.g., check every 30 days
-  heartbeatGracePeriodDays Int @default(90) // e.g., activate switch after 90 days of no response
-  lastHeartbeatAck  DateTime? // Last time the user acknowledged the check-in
-  
-  // Notification Preferences
-  notificationPreferences Json? // e.g., { email: true, sms: false }
-}
+**Relationships:**
+- Many-to-one with User (asset.user)
+- One-to-many with AssetAttachment (asset.attachments)
 
-### Plan Model
-// Represents the user's subscription plan and overall preparedness.
-model Plan {
-  id              String   @id @default(cuid())
-  userId          String   @unique
-  user            User     @relation(fields: [userId], references: [id])
-  
-  // Subscription Details
-  subscriptionType String   @default("free") // "free", "premium"
-  stripeCustomerId String?  @unique
-  
-  // Preparedness Score
-  preparednessScore Int      @default(0) // Calculated score from 0 to 100
-  lastScoreUpdate DateTime @updatedAt
-}
+**AssetType Enum Values:**
+- REAL_ESTATE: Real estate properties
+- VEHICLE: Cars, boats, motorcycles, etc.
+- DIGITAL_ASSET: Cryptocurrency, NFTs, digital files
+- INVESTMENT: Stocks, bonds, mutual funds
+- OTHER: Miscellaneous assets
 
-### Guardian Model
-// Represents a trusted person in the user's network.
-model Guardian {
-  id              String   @id @default(cuid())
-  userId          String   // The main user who added this guardian
-  user            User     @relation(fields: [userId], references: [id])
-  
-  email           String
-  firstName       String
-  lastName        String
-  relationship    String?  // e.g., "Spouse", "Son", "Lawyer"
-  status          GuardianStatus @default(INVITED)
-  
-  // Permissions
-  accessPermissions Json?  // Defines what this guardian can see, e.g., { "financials": true, "documents": ["will.pdf"] }
-  
-  @@unique([userId, email])
-}
+### AssetAttachment
+Stores file attachments associated with assets.
 
-### Asset Model
-// Represents a single asset (financial, physical, digital).
-model Asset {
-  id              String    @id @default(uuid()) // UUID, equivalent to uuid_generate_v4()
-  userId          String
-  user            User      @relation(fields: [userId], references: [id])
+| Column | Type | Constraints | Description |
+|--------|------|-------------|-------------|
+| id | UUID | PRIMARY KEY, DEFAULT uuid_generate_v4() | Unique attachment identifier |
+| assetId | UUID | FOREIGN KEY (Asset.id), NOT NULL | Associated asset |
+| filePath | VARCHAR(500) | NOT NULL | Path in Supabase Storage |
+| fileName | VARCHAR(255) | NOT NULL | Original filename |
+| fileType | VARCHAR(100) | NOT NULL | MIME type of the file |
+| fileSize | INTEGER | NOT NULL | File size in bytes |
+| createdAt | TIMESTAMP | DEFAULT NOW() | Upload timestamp |
 
-  name            String                         // required
-  description     String?                        // optional long description
-  type            AssetType                      // required
-  value           Decimal                        // required estimated value
+**Relationships:**
+- Many-to-one with Asset (attachment.asset)
 
-  // Story attached to the asset
-  story           String?
+### Guardian
+Represents trusted individuals designated by users for asset management.
 
-  // Relation to documents
-  relatedDocuments Document[]
-  attachments     AssetAttachment[]
+| Column | Type | Constraints | Description |
+|--------|------|-------------|-------------|
+| id | UUID | PRIMARY KEY, DEFAULT uuid_generate_v4() | Unique guardian identifier |
+| userId | UUID | FOREIGN KEY (User.id), NOT NULL | User who designated this guardian |
+| firstName | VARCHAR(100) | NOT NULL | Guardian's first name |
+| lastName | VARCHAR(100) | NOT NULL | Guardian's last name |
+| email | VARCHAR(255) | NOT NULL | Guardian's email address |
+| phone | VARCHAR(20) | NULL | Guardian's phone number |
+| relationship | VARCHAR(100) | NOT NULL | Relationship to the user |
+| status | GuardianStatus | NOT NULL, DEFAULT ACTIVE | Current guardian status |
+| accessPermissions | GuardianPermission[] | NOT NULL, DEFAULT ['READ'] | Permissions granted |
+| createdAt | TIMESTAMP | DEFAULT NOW() | Guardian designation timestamp |
+| updatedAt | TIMESTAMP | DEFAULT NOW(), ON UPDATE NOW() | Last update timestamp |
 
-  createdAt       DateTime  @default(now())
-  updatedAt       DateTime  @updatedAt
-}
+**Relationships:**
+- Many-to-one with User (guardian.user)
+- Linked to UserSettings via HeartbeatGuardianLink for Heart-Beat contact order
 
-### AssetAttachment Model
-// Stores metadata for files uploaded to Supabase Storage and linked to an Asset.
-model AssetAttachment {
-  id         String   @id @default(uuid())
-  assetId    String
-  asset      Asset    @relation(fields: [assetId], references: [id])
+**Constraints:**
+- Composite unique constraint on (userId, email)
 
-  filePath   String   // e.g., user-uuid/asset-uuid/document.pdf
-  fileName   String   // original file name
-  fileType   String   // MIME type (e.g., application/pdf)
-  fileSize   Int      // size in bytes
+**GuardianStatus Enum Values:**
+- ACTIVE: Guardian is currently active
+- INACTIVE: Guardian is temporarily inactive
+- SUSPENDED: Guardian access is suspended
+- REMOVED: Guardian has been removed
 
-  createdAt  DateTime @default(now())
-}
+**GuardianPermission Enum Values:**
+- READ: Can view asset information
+- WRITE: Can modify asset details
+- DELETE: Can remove assets
+- ADMIN: Full administrative access
 
-### Document Model
-// Represents an uploaded document.
-model Document {
-  id              String    @id @default(cuid())
-  userId          String
-  user            User      @relation(fields: [userId], references: [id])
-  
-  filename        String
-  storagePath     String    // Path in the cloud storage (e.g., S3 key)
-  filetype        String    // e.g., "application/pdf"
-  size            Int       // in bytes
-  
-  // AI-extracted metadata
-  classification  String?   // e.g., "Last Will", "Insurance Policy"
-  extractedText   String?   // Full text from OCR
-  metadata        Json?     // Extracted entities, e.g., { "policy_number": "123", "expiry_date": "2030-12-31" }
-  
-  // Relations
-  assetId         String?
-  asset           Asset?    @relation(fields: [assetId], references: [id])
-  
-  createdAt       DateTime  @default(now())
-}
+### UserSettings
+Stores user-specific configuration and preferences.
 
-### TimeCapsule Model
-// Represents a message or file to be released to specific people after the user's passing.
-model TimeCapsule {
-  id              String    @id @default(cuid())
-  userId          String
-  user            User      @relation(fields: [userId], references: [id])
-  
-  title           String
-  message         String?   // Text message
-  attachmentPath  String?   // Path to a video/audio file
-  
-  releaseDate     DateTime? // Can be set to a specific date or triggered by the Dead Man's Switch
-  
-  // Who receives this?
-  recipients      Json      // e.g., [{ "email": "son@example.com", "name": "John" }]
-}
+| Column | Type | Constraints | Description |
+|--------|------|-------------|-------------|
+| id | UUID | PRIMARY KEY, DEFAULT uuid_generate_v4() | Unique settings identifier |
+| userId | UUID | FOREIGN KEY (User.id), UNIQUE, NOT NULL | Associated user |
+| heartbeatIntervalDays | INTEGER | NOT NULL, DEFAULT 30 | Heart-beat check interval |
+| lastHeartbeatAt | TIMESTAMP | NULL | Last heart-beat timestamp |
+| isHeartbeatActive | BOOLEAN | NOT NULL, DEFAULT FALSE | Heart-beat monitoring status |
+| notificationChannels | STRING[] | NOT NULL, DEFAULT [] | Preferred notification channels |
+| createdAt | TIMESTAMP | DEFAULT NOW() | Settings creation timestamp |
+| updatedAt | TIMESTAMP | DEFAULT NOW(), ON UPDATE NOW() | Last update timestamp |
+
+**Relationships:**
+- One-to-one with User (settings.user)
+- Linked to Guardian via HeartbeatGuardianLink for Heart-Beat contact order
+
+**Notification Channels:**
+- email: Email notifications
+- sms: SMS notifications (future)
+- push: Push notifications (future)
+
+### Plan
+Represents subscription plans and pricing tiers.
+
+| Column | Type | Constraints | Description |
+|--------|------|-------------|-------------|
+| id | UUID | PRIMARY KEY, DEFAULT uuid_generate_v4() | Unique plan identifier |
+| name | VARCHAR(100) | NOT NULL | Plan name |
+| description | TEXT | NULL | Plan description |
+| price | DECIMAL(10,2) | NOT NULL | Monthly price |
+| features | JSONB | NOT NULL | Plan features and limits |
+| isActive | BOOLEAN | NOT NULL, DEFAULT TRUE | Plan availability status |
+| createdAt | TIMESTAMP | DEFAULT NOW() | Plan creation timestamp |
+| updatedAt | TIMESTAMP | DEFAULT NOW(), ON UPDATE NOW() | Last update timestamp |
+
+### Document
+Represents uploaded documents and their metadata.
+
+| Column | Type | Constraints | Description |
+|--------|------|-------------|-------------|
+| id | UUID | PRIMARY KEY, DEFAULT uuid_generate_v4() | Unique document identifier |
+| userId | UUID | FOREIGN KEY (User.id), NOT NULL | Document owner |
+| title | VARCHAR(255) | NOT NULL | Document title |
+| description | TEXT | NULL | Document description |
+| filePath | VARCHAR(500) | NOT NULL | Path in Supabase Storage |
+| fileType | VARCHAR(100) | NOT NULL | Document MIME type |
+| fileSize | INTEGER | NOT NULL | File size in bytes |
+| category | DocumentCategory | NOT NULL | Document category |
+| tags | STRING[] | NULL | Document tags for organization |
+| isEncrypted | BOOLEAN | NOT NULL, DEFAULT FALSE | Encryption status |
+| createdAt | TIMESTAMP | DEFAULT NOW() | Upload timestamp |
+| updatedAt | TIMESTAMP | DEFAULT NOW(), ON UPDATE NOW() | Last update timestamp |
+
+**Relationships:**
+- Many-to-one with User (document.user)
+
+**DocumentCategory Enum Values:**
+- LEGAL: Legal documents, contracts, wills
+- FINANCIAL: Bank statements, tax returns
+- INSURANCE: Insurance policies, claims
+- MEDICAL: Medical records, prescriptions
+- PERSONAL: Personal documents, IDs
+- OTHER: Miscellaneous documents
+
+### TimeCapsule
+Represents time-delayed messages or documents.
+
+| Column | Type | Constraints | Description |
+|--------|------|-------------|-------------|
+| id | UUID | PRIMARY KEY, DEFAULT uuid_generate_v4() | Unique time capsule identifier |
+| userId | UUID | FOREIGN KEY (User.id), NOT NULL | Time capsule creator |
+| title | VARCHAR(255) | NOT NULL | Time capsule title |
+| message | TEXT | NOT NULL | Time capsule content |
+| scheduledDate | TIMESTAMP | NOT NULL | Scheduled release date |
+| isActive | BOOLEAN | NOT NULL, DEFAULT TRUE | Time capsule status |
+| createdAt | TIMESTAMP | DEFAULT NOW() | Creation timestamp |
+| updatedAt | TIMESTAMP | DEFAULT NOW(), ON UPDATE NOW() | Last update timestamp |
+
+**Relationships:**
+- Many-to-one with User (timeCapsule.user)
+
+## Database Functions and Extensions
+
+### UUID Extension
+```sql
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+```
+
+### Timestamp Triggers
+All tables with `updatedAt` columns automatically update this field when records are modified.
+
+## Indexes and Performance
+
+### Primary Indexes
+- All tables have primary key indexes on their `id` columns
+- User table has unique index on `email` column
+- UserSettings table has unique index on `userId` column
+
+### Foreign Key Indexes
+- Asset table: `userId` index for user asset queries
+- Guardian table: `userId` index for user guardian queries
+- AssetAttachment table: `assetId` index for asset attachment queries
+- Document table: `userId` index for user document queries
+- TimeCapsule table: `userId` index for user time capsule queries
+
+### Composite Indexes
+- Guardian table: `(userId, email)` unique composite index
+
+## Data Integrity
+
+### Foreign Key Constraints
+All foreign key relationships are properly defined with CASCADE or RESTRICT rules as appropriate.
+
+### Check Constraints
+- Asset value must be positive
+- Heartbeat interval must be between 7 and 365 days
+- Guardian permissions must contain valid enum values
+
+### Not Null Constraints
+Critical fields are marked as NOT NULL to prevent data corruption.
+
+## Security Considerations
+
+### Password Security
+- Passwords are never stored in plain text
+- All passwords are hashed using bcrypt with salt rounds of 10
+
+### Data Access
+- Users can only access their own data
+- All API endpoints require proper authentication
+- JWT tokens are used for session management
+
+### File Storage
+- Files are stored in Supabase Storage with proper access controls
+- File paths are generated using UUIDs to prevent enumeration attacks
+- File size and type validation is enforced

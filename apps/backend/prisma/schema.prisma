@@ -67,12 +67,18 @@ model UserSettings {
   user   User   @relation(fields: [userId], references: [id])
 
   // Heart-Beat Protocol Settings
-  heartbeatIntervalDays    Int       @default(30)
-  heartbeatGracePeriodDays Int       @default(90)
-  lastHeartbeatAck         DateTime?
+  heartbeatIntervalDays Int      @default(30)
+  lastHeartbeatAt       DateTime?
+  isHeartbeatActive     Boolean  @default(false)
 
   // Notification Preferences
-  notificationPreferences Json?
+  notificationChannels String[] @default([])
+
+  // Relations
+  heartbeatGuardians HeartbeatGuardianLink[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }
 
 model Plan {
@@ -97,11 +103,18 @@ model Guardian {
   email        String
   firstName    String
   lastName     String
+  phone        String?
   relationship String?
   status       GuardianStatus @default(INVITED)
 
   // Permissions
   accessPermissions Json?
+
+  // Relations
+  heartbeatLinks HeartbeatGuardianLink[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 
   @@unique([userId, email])
 }
@@ -175,4 +188,21 @@ model TimeCapsule {
 
   // Who receives this?
   recipients Json
+}
+
+model HeartbeatGuardianLink {
+  id        String   @id @default(uuid())
+  priority  Int
+  createdAt DateTime @default(now())
+
+  userSettings   UserSettings @relation(fields: [userSettingsId], references: [id], onDelete: Cascade)
+  userSettingsId String
+
+  guardian   Guardian @relation(fields: [guardianId], references: [id], onDelete: Cascade)
+  guardianId String
+
+  @@unique([userSettingsId, guardianId])
+  @@unique([userSettingsId, priority])
+  @@index([userSettingsId])
+  @@index([guardianId])
 }

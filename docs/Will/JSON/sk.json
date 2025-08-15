@@ -1,0 +1,293 @@
+{
+"version": "1.0",
+"jurisdiction": "SK",
+"language": "sk",
+"documents": \[
+{
+"id": "will\_holographic\_sk",
+"type": "will",
+"variant": "holographic",
+"title": "Vlastnoručný závet (holografný)",
+"description": "Šablóna pre vlastnoručný závet spísaný a podpísaný poručiteľom.",
+"schema": {
+"type": "object",
+"additionalProperties": false,
+"required": \["testator", "heirs", "declarations", "execution"],
+"properties": {
+"testator": {
+"type": "object",
+"title": "Údaje o poručiteľovi",
+"required": \["fullName", "dateOfBirth", "address"],
+"properties": {
+"fullName": { "type": "string", "title": "Meno a priezvisko" },
+"dateOfBirth": { "type": "string", "format": "date", "title": "Dátum narodenia" },
+"address": { "type": "string", "title": "Trvalý pobyt" }
+}
+},
+"heirs": {
+"type": "array",
+"title": "Dedičia",
+"minItems": 1,
+"items": {
+"type": "object",
+"required": \["fullName", "relation", "share"],
+"properties": {
+"relation": { "type": "string", "title": "Vzťah k osobe" },
+"fullName": { "type": "string", "title": "Meno a priezvisko" },
+"dateOfBirth": { "type": "string", "format": "date", "title": "Dátum narodenia" },
+"address": { "type": "string", "title": "Trvalý pobyt" },
+"share": {
+"type": "number",
+"title": "Výška podielu (%)",
+"minimum": 0,
+"maximum": 100,
+"multipleOf": 0.01
+},
+"substitute": {
+"type": "object",
+"title": "Náhradník (voliteľné)",
+"properties": {
+"relation": { "type": "string", "title": "Vzťah k osobe" },
+"fullName": { "type": "string", "title": "Meno a priezvisko" },
+"dateOfBirth": { "type": "string", "format": "date", "title": "Dátum narodenia" },
+"address": { "type": "string", "title": "Trvalý pobyt" }
+}
+}
+}
+}
+},
+"declarations": {
+"type": "object",
+"title": "Vyhlásenia",
+"required": \["noOtherReservedHeirs", "revokePriorWills"],
+"properties": {
+"noOtherReservedHeirs": {
+"type": "boolean",
+"const": true,
+"title": "Prehlasujem, že nemám iných, ako vyššie uvedených, neopomenuteľných dedičov v zmysle § 479 Občianskeho zákonníka."
+},
+"revokePriorWills": {
+"type": "boolean",
+"const": true,
+"title": "Odvolávam všetky svoje predchádzajúce závetné dispozície."
+},
+"revokedWillDate": {
+"type": "string",
+"format": "date",
+"title": "Dátum odvolávaného závetu (voliteľné)"
+},
+"freeAndInformed": {
+"type": "boolean",
+"const": true,
+"default": true,
+"title": "Tento závet robím po dôkladnom zvážení, vážne a bez nátlaku."
+}
+}
+},
+"execution": {
+"type": "object",
+"title": "Miesto, dátum a podpis",
+"required": \["city", "date", "signatureConfirm"],
+"properties": {
+"city": { "type": "string", "title": "Mesto" },
+"date": { "type": "string", "format": "date", "title": "Dátum" },
+"signatureConfirm": {
+"type": "boolean",
+"const": true,
+"title": "Na konci dokument vlastnoručne podpíšem."
+}
+}
+},
+"sumSharesMustEqual100": {
+"type": "boolean",
+"const": true,
+"default": true,
+"title": "Kontrola: Súčet podielov = 100 %",
+"description": "Technické pole pre kontrolu pred odoslaním; používateľ nevyplňuje."
+}
+}
+},
+"ui": {
+"sections": \[
+{ "key": "testator", "title": "Poručiteľ" },
+{ "key": "heirs", "title": "Dedičia a podiely" },
+{ "key": "declarations", "title": "Vyhlásenia" },
+{ "key": "execution", "title": "Podpis" }
+],
+"hints": {
+"heirs.share": "Zadajte percento (napr. 100 pre jedného dediča alebo súčtovo pre viacerých).",
+"sumSharesMustEqual100": "Pred podpisom skontrolujte, že súčet podielov je 100 %."
+},
+"signing": {
+"handwrittenRequired": true,
+"witnessesRequired": 0
+}
+},
+"print": {
+"template": "Závet\n\nJa, nižšie podpísaný/á {{testator.fullName}}, dátum narodenia {{testator.dateOfBirth}}, s trvalým pobytom {{testator.address}}, prehlasujem, že som plne spôsobilý/á na právne úkony a že tento závet robím po dôkladnom zvážení, vážne a bez nátlaku.\n\nI.\n{{#each heirs}}\nDedičom {{#if (eq this.share 100)}}celého môjho majetku{{else}}časti môjho majetku vo výške {{this.share}} %{{/if}} ustanovujem {{this.relation}}, {{this.fullName}}, dátum narodenia {{this.dateOfBirth}}, s trvalým pobytom {{this.address}}.\n{{#if this.substitute}}Ak by uvedený/á dedič/ka z akéhokoľvek dôvodu nededil/a, ustanovujem ako náhradníka {{this.substitute.relation}}, {{this.substitute.fullName}}, dátum narodenia {{this.substitute.dateOfBirth}}, s trvalým pobytom {{this.substitute.address}}.\n{{/if}}{{/each}}\n\nII.\nPrehlasujem, že nemám iných, ako vyššie uvedených, neopomenuteľných dedičov v zmysle § 479 Občianskeho zákonníka.\n{{#if declarations.revokedWillDate}}Odvolávam svoj závet spísaný dňa {{declarations.revokedWillDate}}, ako aj všetky iné závetné dispozície, ktoré som kedy urobil/a.{{else}}Odvolávam všetky svoje predchádzajúce závetné dispozície.{{/if}}\nToto je moja posledná vôľa, pokiaľ sa dedičia nedohodnú inak.\n\nV {{execution.city}} dňa {{execution.date}}\n\n\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\nvlastnoručný podpis"
+}
+},
+{
+"id": "will\_alographic\_sk",
+"type": "will",
+"variant": "alographic",
+"title": "Alografný závet (so svedkami)",
+"description": "Šablóna pre písomný závet podpísaný za súčasnej prítomnosti dvoch svedkov.",
+"schema": {
+"type": "object",
+"additionalProperties": false,
+"required": \["testator", "heirs", "declarations", "witnesses", "execution"],
+"properties": {
+"testator": {
+"type": "object",
+"title": "Údaje o poručiteľovi",
+"required": \["fullName", "dateOfBirth", "address"],
+"properties": {
+"fullName": { "type": "string", "title": "Meno a priezvisko" },
+"dateOfBirth": { "type": "string", "format": "date", "title": "Dátum narodenia" },
+"address": { "type": "string", "title": "Trvalý pobyt" }
+}
+},
+"heirs": {
+"type": "array",
+"title": "Dedičia",
+"minItems": 1,
+"items": {
+"type": "object",
+"required": \["fullName", "relation", "share"],
+"properties": {
+"relation": { "type": "string", "title": "Vzťah k osobe" },
+"fullName": { "type": "string", "title": "Meno a priezvisko" },
+"dateOfBirth": { "type": "string", "format": "date", "title": "Dátum narodenia" },
+"address": { "type": "string", "title": "Trvalý pobyt" },
+"share": {
+"type": "number",
+"title": "Výška podielu (%)",
+"minimum": 0,
+"maximum": 100,
+"multipleOf": 0.01
+},
+"substitute": {
+"type": "object",
+"title": "Náhradník (voliteľné)",
+"properties": {
+"relation": { "type": "string", "title": "Vzťah k osobe" },
+"fullName": { "type": "string", "title": "Meno a priezvisko" },
+"dateOfBirth": { "type": "string", "format": "date", "title": "Dátum narodenia" },
+"address": { "type": "string", "title": "Trvalý pobyt" }
+}
+}
+}
+}
+},
+"declarations": {
+"type": "object",
+"title": "Vyhlásenia",
+"required": \["noOtherReservedHeirs", "revokePriorWills"],
+"properties": {
+"noOtherReservedHeirs": {
+"type": "boolean",
+"const": true,
+"title": "Prehlasujem, že nemám iných, ako vyššie uvedených, neopomenuteľných dedičov v zmysle § 479 Občianskeho zákonníka."
+},
+"revokePriorWills": {
+"type": "boolean",
+"const": true,
+"title": "Odvolávam všetky svoje predchádzajúce závetné dispozície."
+},
+"revokedWillDate": {
+"type": "string",
+"format": "date",
+"title": "Dátum odvolávaného závetu (voliteľné)"
+},
+"freeAndInformed": {
+"type": "boolean",
+"const": true,
+"default": true,
+"title": "Tento závet robím po dôkladnom zvážení, vážne a bez nátlaku."
+}
+}
+},
+"witnesses": {
+"type": "array",
+"title": "Svedkovia (2 osoby)",
+"minItems": 2,
+"maxItems": 2,
+"items": {
+"type": "object",
+"required": \["fullName", "dateOfBirth", "address", "attestation"],
+"properties": {
+"fullName": { "type": "string", "title": "Meno a priezvisko" },
+"dateOfBirth": { "type": "string", "format": "date", "title": "Dátum narodenia" },
+"address": { "type": "string", "title": "Trvalý pobyt" },
+"attestation": {
+"type": "boolean",
+"const": true,
+"title": "Prehlasujem, že som plnoletý/á a plne spôsobilý/á na právne úkony, ovládam jazyk, v ktorom je tento prejav vôle urobený, nie som osobou blízkou poručiteľovi, nie som dedičom z tohto závetu a že som bol/a spolu s druhým svedkom prítomný/á podpisu a vyhláseniu poručiteľa, že ide o jeho poslednú vôľu."
+}
+}
+}
+},
+"execution": {
+"type": "object",
+"title": "Miesto, dátum a podpis",
+"required": \["city", "date", "signatureConfirm"],
+"properties": {
+"city": { "type": "string", "title": "Mesto" },
+"date": { "type": "string", "format": "date", "title": "Dátum" },
+"signatureConfirm": {
+"type": "boolean",
+"const": true,
+"title": "Na konci dokument vlastnoručne podpíšem."
+}
+}
+},
+"sumSharesMustEqual100": {
+"type": "boolean",
+"const": true,
+"default": true,
+"title": "Kontrola: Súčet podielov = 100 %",
+"description": "Technické pole pre kontrolu pred odoslaním; používateľ nevyplňuje."
+}
+}
+},
+"ui": {
+"sections": \[
+{ "key": "testator", "title": "Poručiteľ" },
+{ "key": "heirs", "title": "Dedičia a podiely" },
+{ "key": "declarations", "title": "Vyhlásenia" },
+{ "key": "witnesses", "title": "Svedkovia" },
+{ "key": "execution", "title": "Podpis" }
+],
+"hints": {
+"witnesses": "Uveďte presne dvoch svedkov. Systém vyžiada ich potvrdenie.",
+"heirs.share": "Zadajte percentá tak, aby súčet činil 100 %.",
+"sumSharesMustEqual100": "Pred podpisom skontrolujte, že súčet podielov je 100 %."
+},
+"signing": {
+"handwrittenRequired": true,
+"witnessesRequired": 2
+}
+},
+"print": {
+"template": "Závet\n\nJa, nižšie podpísaný/á {{testator.fullName}}, dátum narodenia {{testator.dateOfBirth}}, s trvalým pobytom {{testator.address}}, prehlasujem, že som plne spôsobilý/á na právne úkony a že tento závet robím po dôkladnom zvážení, vážne a bez nátlaku.\n\nČasť A\n\nI.\n{{#each heirs}}\nDedičom {{#if (eq this.share 100)}}celého môjho majetku{{else}}časti môjho majetku vo výške {{this.share}} %{{/if}} ustanovujem {{this.relation}}, {{this.fullName}}, dátum narodenia {{this.dateOfBirth}}, s trvalým pobytom {{this.address}}.\n{{#if this.substitute}}Ak by uvedený/á dedič/ka z akéhokoľvek dôvodu nededil/a, ustanovujem ako náhradníka {{this.substitute.relation}}, {{this.substitute.fullName}}, dátum narodenia {{this.substitute.dateOfBirth}}, s trvalým pobytom {{this.substitute.address}}.\n{{/if}}{{/each}}\n\nII.\nPrehlasujem, že nemám iných, ako vyššie uvedených, neopomenuteľných dedičov v zmysle § 479 Občianskeho zákonníka.\n{{#if declarations.revokedWillDate}}Odvolávam svoj závet spísaný dňa {{declarations.revokedWillDate}}, ako aj všetky iné závetné dispozície, ktoré som kedy urobil/a.{{else}}Odvolávam všetky svoje predchádzajúce závetné dispozície.{{/if}}\nToto je moja posledná vôľa, pokiaľ sa dedičia nedohodnú inak.\n\nIII.\nPrehlasujem, že k podpisu tohto môjho závetu došlo pred dvoma súčasne prítomnými svedkami, {{witnesses.\[0].fullName}}, dátum narodenia {{witnesses.\[0].dateOfBirth}}, s trvalým pobytom {{witnesses.\[0].address}}, a {{witnesses.\[1].fullName}}, dátum narodenia {{witnesses.\[1].dateOfBirth}}, s trvalým pobytom {{witnesses.\[1].address}}, a že som vyhlásil/a, že táto listina obsahuje moju poslednú vôľu.\n\nV {{execution.city}} dňa {{execution.date}}\n\n\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\nvlastnoručný podpis\n\nČasť B\n\nSvedok 1:\nJa, nižšie podpísaný/á {{witnesses.\[0].fullName}}, dátum narodenia {{witnesses.\[0].dateOfBirth}}, s trvalým pobytom {{witnesses.\[0].address}}, prehlasujem, že som plnoletý/á a plne spôsobilý/á na právne úkony, ovládam jazyk, v ktorom je tento prejav vôle urobený, nie som osobou blízkou poručiteľovi, nie som dedičom z tohto závetu a že som spolu s {{witnesses.\[1].fullName}} bol/a prítomný/á pri podpise a vyhlásení poručiteľa, že ide o jeho poslednú vôľu.\n\nV {{execution.city}} dňa {{execution.date}}\n\n\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\nvlastnoručný podpis svedka\n\nSvedok 2:\nJa, nižšie podpísaný/á {{witnesses.\[1].fullName}}, dátum narodenia {{witnesses.\[1].dateOfBirth}}, s trvalým pobytom {{witnesses.\[1].address}}, prehlasujem, že som plnoletý/á a plne spôsobilý/á na právne úkony, ovládam jazyk, v ktorom je tento prejav vôle urobený, nie som osobou blízkou poručiteľovi, nie som dedičom z tohto závetu a že som spolu s {{witnesses.\[0].fullName}} bol/a prítomný/á pri podpise a vyhlásení poručiteľa, že ide o jeho poslednú vôľu.\n\nV {{execution.city}} dňa {{execution.date}}\n\n\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\nvlastnoručný podpis svedka"
+}
+}
+],
+"clientRules": \[
+{
+"id": "shares\_sum\_100",
+"appliesTo": \["will\_holographic\_sk", "will\_alographic\_sk"],
+"type": "computedValidation",
+"messageSk": "Súčet podielov musí byť presne 100 %.",
+"fn": "sum(heirs\[\*].share) === 100"
+},
+{
+"id": "witness\_count\_2",
+"appliesTo": \["will\_alographic\_sk"],
+"type": "hardValidation",
+"messageSk": "Sú potrební presne dvaja svedkovia.",
+"fn": "Array.isArray(witnesses) && witnesses.length === 2"
+}
+]
+}

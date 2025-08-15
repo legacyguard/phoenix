@@ -28,6 +28,7 @@ describe('Assets (e2e)', () => {
     // Clean database respecting FKs
     await prisma.assetAttachment.deleteMany();
     await prisma.asset.deleteMany();
+    await prisma.userSettings.deleteMany();
     await prisma.user.deleteMany();
 
     // Register users (ignore conflicts if already exist due to retries)
@@ -45,6 +46,7 @@ describe('Assets (e2e)', () => {
   afterAll(async () => {
     await prisma.assetAttachment.deleteMany();
     await prisma.asset.deleteMany();
+    await prisma.userSettings.deleteMany();
     await prisma.user.deleteMany();
     await app.close();
   });

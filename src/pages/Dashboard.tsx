@@ -280,7 +280,7 @@ const Dashboard: React.FC = () => {
 
   if (!progress) return <div>Loading progress…</div>;
   return (
-    <div>
+    <div data-testid="dashboard-container">
       {!onboardingCompleted && (
         <div style={{ marginBottom: 12 }}>
           <h2>Onboarding incomplete</h2>

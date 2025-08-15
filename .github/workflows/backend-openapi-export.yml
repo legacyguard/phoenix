@@ -1,0 +1,40 @@
+name: backend-openapi-export
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+jobs:
+  export-openapi:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Use Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'pnpm'
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build backend
+        run: pnpm --filter backend build
+
+      - name: Export OpenAPI spec
+        run: pnpm --filter backend openapi:export
+
+      - name: Upload OpenAPI artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: openapi-backend
+          path: apps/backend/openapi.json
+

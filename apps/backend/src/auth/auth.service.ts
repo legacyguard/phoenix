@@ -4,12 +4,14 @@ import { PrismaService } from '../prisma/prisma.service';
 import { RegisterUserDto } from './dto/register-user.dto';
 import { LoginUserDto } from './dto/login-user.dto';
 import * as bcrypt from 'bcrypt';
+import { UserSettingsService } from '../user-settings/user-settings.service';
 
 @Injectable()
 export class AuthService {
   constructor(
     private readonly prisma: PrismaService,
     private readonly jwtService: JwtService,
+    private readonly userSettingsService: UserSettingsService,
   ) {}
 
   async register(registerUserDto: RegisterUserDto): Promise<{ user: { id: string; email: string }; accessToken: string }> {
@@ -28,6 +30,9 @@ export class AuthService {
         passwordHash: hashedPassword,
       },
     });
+
+    // Initialize default user settings
+    await this.userSettingsService.createDefaultSettings(user.id);
 
     return this.generateTokens(user.id, user.email);
   }

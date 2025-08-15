@@ -8,6 +8,8 @@ import { ThrottlerModule, ThrottlerGuard } from '@nestjs/throttler';
 import { APP_GUARD } from '@nestjs/core';
 import { AssetsModule } from './assets/assets.module';
 import { SupabaseModule } from './supabase/supabase.module';
+import { GuardiansModule } from './guardians/guardians.module';
+import { UserSettingsModule } from './user-settings/user-settings.module';
 
 @Module({
   imports: [
@@ -24,6 +26,8 @@ import { SupabaseModule } from './supabase/supabase.module';
     ]),
     AssetsModule,
     SupabaseModule,
+    GuardiansModule,
+    UserSettingsModule,
   ],
   controllers: [AppController],
   providers: [

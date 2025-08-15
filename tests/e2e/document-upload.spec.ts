@@ -1,5 +1,5 @@
 import { test, expect } from "@playwright/test";
-import path from "path";
+import { getFixturePath } from "./utils/fixtures";
 
 test.describe("Document Upload Flow", () => {
   test.beforeEach(async ({ page }) => {
@@ -34,7 +34,7 @@ test.describe("Document Upload Flow", () => {
     await page.goto("/dashboard");
 
     // Create a test file
-    const testFilePath = path.join(__dirname, "../fixtures/test-document.pdf");
+const testFilePath = getFixturePath("test-document.pdf");
 
     // Mock file input
     await page.setInputFiles('input[type="file"]', testFilePath);
@@ -49,7 +49,7 @@ test.describe("Document Upload Flow", () => {
     const uploadZone = page.locator('[data-testid="upload-zone"]');
 
     // Create a test file
-    const testFilePath = path.join(__dirname, "../fixtures/test-document.pdf");
+    const testFilePath = getFixturePath("test-document.pdf");
 
     // Simulate drag and drop
     await uploadZone.dispatchEvent("drop", {
@@ -66,10 +66,7 @@ test.describe("Document Upload Flow", () => {
     await page.goto("/dashboard");
 
     // Create an invalid file
-    const invalidFilePath = path.join(
-      __dirname,
-      "../fixtures/invalid-file.txt",
-    );
+const invalidFilePath = getFixturePath("invalid-file.txt");
 
     // Mock file input with invalid file
     await page.setInputFiles('input[type="file"]', invalidFilePath);
@@ -86,7 +83,7 @@ test.describe("Document Upload Flow", () => {
       route.abort("failed");
     });
 
-    const testFilePath = path.join(__dirname, "../fixtures/test-document.pdf");
+    const testFilePath = getFixturePath("test-document.pdf");
     await page.setInputFiles('input[type="file"]', testFilePath);
 
     // Should show error message
@@ -105,7 +102,7 @@ test.describe("Document Upload Flow", () => {
       });
     });
 
-    const testFilePath = path.join(__dirname, "../fixtures/test-document.pdf");
+    const testFilePath = getFixturePath("test-document.pdf");
     await page.setInputFiles('input[type="file"]', testFilePath);
 
     // Should show progress indicator
@@ -127,7 +124,7 @@ test.describe("Document Upload Flow", () => {
       });
     });
 
-    const testFilePath = path.join(__dirname, "../fixtures/test-document.pdf");
+    const testFilePath = getFixturePath("test-document.pdf");
     await page.setInputFiles('input[type="file"]', testFilePath);
 
     // Should show success message

@@ -25,8 +25,17 @@ export class AssetsService {
     });
   }
 
-  async findAll(userId: string) {
-    return this.prisma.asset.findMany({ where: { userId } });
+  async findAll(userId: string, page = 1, limit = 10) {
+    const take = Math.max(1, Math.min(100, Number(limit) || 10));
+    const currentPage = Math.max(1, Number(page) || 1);
+    const skip = (currentPage - 1) * take;
+
+    const [items, total] = await Promise.all([
+      this.prisma.asset.findMany({ where: { userId }, skip, take, orderBy: { createdAt: 'desc' } }),
+      this.prisma.asset.count({ where: { userId } }),
+    ]);
+
+    return { items, page: currentPage, limit: take, total };
   }
 
   async findOne(id: string, userId: string) {
