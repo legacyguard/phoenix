@@ -266,7 +266,7 @@ export const FamilyHub: React.FC = () => {
   }
 
   return (
-    <div className="p-4 md:p-6 font-sans max-w-screen-xl mx-auto">
+    cdiv className="p-4 md:p-6 font-sans max-w-screen-xl mx-auto" data-testid="family-hub-container"e
       <h1 className="text-3xl font-bold text-gray-800">
         {t("familyHub.title")}
       </h1>

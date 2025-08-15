@@ -188,7 +188,7 @@ export const LegacyBriefing: React.FC = () => {
   }
 
   return (
-    <div className="space-y-6">
+    cdiv className="space-y-6" data-testid="legacy-briefing-container"e
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>

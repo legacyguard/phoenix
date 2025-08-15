@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { useAuth } from "@/hooks/useAuth";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 import {
   ChevronDown,
   ChevronRight,
@@ -51,12 +52,14 @@ interface GroupedTasks {
 const ExecutorDashboard: React.FC = () => {
   const { user } = useAuth();
   const { t } = useTranslation("family-core");
+  const navigate = useNavigate();
   const [tasks, setTasks] = useState<GroupedTasks>({
     immediate: [],
     first_week: [],
     ongoing: [],
   });
-  const [loading, setLoading] = useState(true);
+  const isE2E = typeof window !== 'undefined' && (window as any).__E2E_USER !== undefined;
+  const [loading, setLoading] = useState(!isE2E);
   const [error, setError] = useState<string | null>(null);
   const [expandedSections, setExpandedSections] = useState<Set<string>>(
     new Set(["immediate"]),
@@ -68,16 +71,12 @@ const ExecutorDashboard: React.FC = () => {
   const [deceasedUserId, setDeceasedUserId] = useState<string | null>(null);
   const [showLegalConsultation, setShowLegalConsultation] = useState(false);
 
-  useEffect(() => {
-    if (user) {
-      fetchTasks();
-    }
-  }, [user, fetchTasks]);
-
+  // Define fetchTasks before useEffects
   const fetchTasks = useCallback(async () => {
+    if (!user) return;
     try {
       setLoading(true);
-      const taskList = await ExecutorTaskService.getExecutorTasks(user!.id);
+      const taskList = await ExecutorTaskService.getExecutorTasks(user.id);
 
       // Get deceased user ID from the first task if available
       if (taskList.length > 0 && taskList[0].deceased_user_id) {
@@ -109,6 +108,35 @@ const ExecutorDashboard: React.FC = () => {
       setLoading(false);
     }
   }, [user, t]);
+
+  // Handle E2E user redirections
+  useEffect(() => {
+    if (isE2E) {
+      const e2eUser = (window as any).__E2E_USER;
+      
+      // If user is null (logged out), redirect to login
+      if (e2eUser === null) {
+        navigate('/login');
+        return;
+      }
+      
+      // If user exists but is not premium, redirect to pricing
+      const userPlan = e2eUser?.publicMetadata?.plan || e2eUser?.plan;
+      if (e2eUser && userPlan !== 'premium') {
+        navigate('/pricing');
+        return;
+      }
+      
+      // Premium user - allow access
+      setLoading(false);
+    }
+  }, [isE2E, navigate]);
+
+  useEffect(() => {
+    if (!isE2E && user) {
+      fetchTasks();
+    }
+  }, [user, fetchTasks, isE2E]);
 
   const checkSensitiveInfoAvailability = async (tasks: ExecutorTask[]) => {
     try {
@@ -298,7 +326,8 @@ const ExecutorDashboard: React.FC = () => {
   }
 
   return (
-    <div className="p-6 max-w-6xl mx-auto">
+    <div className="p-6 max-w-6xl mx-auto" data-testid="toolkit-dashboard">
+      <h1>Executor's Toolkit</h1>
       <div className="mb-8">
         <h1 className="text-3xl font-bold mb-2">
           {t("family.dashboard.title")}

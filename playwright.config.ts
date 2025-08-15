@@ -20,6 +20,11 @@ export default defineConfig({
     /* Base URL to use in actions like `await page.goto('/')`. */
     baseURL: "http://localhost:8080",
 
+    /* Ensure app runs in E2E test mode. */
+    env: {
+      VITE_E2E: "1",
+    },
+
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: "on-first-retry",
   },
@@ -66,6 +71,9 @@ export default defineConfig({
   webServer: {
     command: "npm run dev",
     url: "http://localhost:8080",
-    reuseExistingServer: !process.env.CI,
+    reuseExistingServer: false,
+    env: {
+      VITE_E2E: "1",
+    },
   },
 });

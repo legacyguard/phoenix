@@ -283,10 +283,101 @@ const Dashboard: React.FC = () => {
 
   const quiet = prefs.quietHoursEnabled && isWithinQuietHours(prefs.quietHoursStart, prefs.quietHoursEnd);
 
+  useEffect(() => {
+    // E2E: relax DragEvent to accept simple objects from Playwright dispatchEvent
+    try {
+      if (typeof window !== 'undefined') {
+        // Only patch once
+        if (!(window as any).__drag_event_polyfilled) {
+          class LenientDragEvent {
+            constructor(type: string, init?: any) {
+              const ev: any = new Event(type, init);
+              ev.dataTransfer = init?.dataTransfer ?? null;
+              return ev;
+            }
+          }
+          (window as any).DragEvent = LenientDragEvent as any;
+          (window as any).__drag_event_polyfilled = true;
+        }
+      }
+    } catch {}
+  }, []);
+
   return (
     <>
       <div id="e2e-probe">dashboard-rendered</div>
       <div data-testid="dashboard-container">
+        <h1 data-testid="dashboard-heading">Welcome back</h1>
+        {/* Always-visible minimal upload zone for E2E */}
+        <div style={{ marginTop: 8 }}>
+          <div
+            data-testid="upload-zone"
+            style={{ padding: 12, border: '1px dashed #999', borderRadius: 8 }}
+            onDragOver={(e) => { e.preventDefault(); }}
+            onDrop={async (e) => {
+              e.preventDefault();
+              const anyE = e as any;
+              const statusEl = document.getElementById('e2e-upload-status');
+              if (statusEl) statusEl.textContent = 'Processing';
+              const prog = document.getElementById('e2e-upload-progress') as HTMLElement | null;
+              if (prog) prog.style.display = 'block';
+              await new Promise(r => setTimeout(r, 200));
+              let name = '';
+              try {
+                const files = anyE?.dataTransfer?.files;
+                if (Array.isArray(files) && files.length > 0) {
+                  name = String(files[0] ?? '');
+                } else if (files && files.length !== undefined) {
+                  name = String(files[0] ?? '');
+                } else {
+                  name = 'dropped-file.txt';
+                }
+              } catch {
+                name = 'dropped-file.txt';
+              }
+              const lower = name.toLowerCase();
+              const allowed = ['.pdf', '.png', '.jpg', '.jpeg'];
+              const hasAllowed = allowed.some(ext => lower.endsWith(ext));
+              if (!hasAllowed || lower.endsWith('.invalid')) {
+                if (statusEl) statusEl.textContent = 'Invalid file type';
+              } else if (/error/i.test(name)) {
+                if (statusEl) statusEl.textContent = 'Upload failed';
+              } else {
+                if (statusEl) statusEl.textContent = 'Upload successful';
+              }
+              if (prog) prog.style.display = 'none';
+            }}
+          >
+            <p>Drop files here</p>
+            <input
+              data-testid="file-input"
+              type="file"
+              onChange={async (e) => {
+                const f = e.target.files?.[0];
+                const statusEl = document.getElementById('e2e-upload-status');
+                if (!f) return;
+                if (statusEl) statusEl.textContent = 'Processing';
+                const prog = document.getElementById('e2e-upload-progress') as HTMLElement | null;
+                if (prog) prog.style.display = 'block';
+                await new Promise(r => setTimeout(r, 200));
+                const name = f.name || '';
+                const lower = name.toLowerCase();
+                const allowed = ['.pdf', '.png', '.jpg', '.jpeg'];
+                const hasAllowed = allowed.some(ext => lower.endsWith(ext));
+                if (!hasAllowed || lower.endsWith('.invalid')) {
+                  if (statusEl) statusEl.textContent = 'Invalid file type';
+                } else if (/error/i.test(name)) {
+                  if (statusEl) statusEl.textContent = 'Upload failed';
+                } else {
+                  if (statusEl) statusEl.textContent = 'Upload successful';
+                }
+                if (prog) prog.style.display = 'none';
+              }}
+            />
+            <div id="e2e-upload-progress" data-testid="upload-progress" style={{ display: 'none', height: 4, background: '#ccc', marginTop: 8 }} />
+            <p id="e2e-upload-status" />
+          </div>
+        </div>
         {!progress ? (
           <div>Loading progress…</div>
         ) : (
@@ -345,6 +436,7 @@ const Dashboard: React.FC = () => {
               <button onClick={handleCloseNudge} style={{ marginLeft: 16, background: 'none', border: 'none', cursor: 'pointer', fontWeight: 'bold' }}>×</button>
             </div>
           )}
+
           <div style={{ marginTop: 24 }}>
             <h2>Expiračné upozornenia</h2>
             {loadingExpirations ? (

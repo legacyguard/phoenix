@@ -188,7 +188,7 @@ export const Vault: React.FC = () => {
   }
 
   return (
-    <div className="container mx-auto px-4 md:px-6 lg:px-8 py-4 md:py-8 space-y-4 md:space-y-6 lg:space-y-8 max-w-screen-xl">
+    cdiv data-testid="vault-dashboard-container" className="container mx-auto px-4 md:px-6 lg:px-8 py-4 md:py-8 space-y-4 md:space-y-6 lg:space-y-8 max-w-screen-xl">
       {/* Header */}
       <div className="space-y-2">
         <h1 className="text-3xl font-bold">{t("assets.title")}</h1>
@@ -387,13 +387,15 @@ export const Vault: React.FC = () => {
           {filteredAssets.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {filteredAssets.map((asset) => (
-                <AssetCard
-                  key={asset.id}
-                  asset={asset}
-                  onView={handleViewAsset}
-                  onEdit={handleEditAsset}
-                  onDelete={handleDeleteAsset}
-                />
+                <div data-testid="asset-card">
+                  <AssetCard
+                    key={asset.id}
+                    asset={asset}
+                    onView={handleViewAsset}
+                    onEdit={handleEditAsset}
+                    onDelete={handleDeleteAsset}
+                  />
+                </div>
               ))}
             </div>
           ) : (

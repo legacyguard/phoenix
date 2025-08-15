@@ -1,0 +1,50 @@
+# Page snapshot
+
+```yaml
+- navigation:
+  - list:
+    - listitem:
+      - link "Home":
+        - /url: /
+    - listitem:
+      - link "Dashboard":
+        - /url: /dashboard
+    - listitem:
+      - link "Vault":
+        - /url: /vault
+    - listitem:
+      - link "Trusted Circle":
+        - /url: /trusted-circle
+    - listitem:
+      - link "Generate Will":
+        - /url: /generate-will
+    - listitem:
+      - link "Life Inventory":
+        - /url: /inventory
+    - listitem:
+      - link "Guardian’s Playbook":
+        - /url: /playbook
+    - listitem:
+      - link "AI Document Analysis":
+        - /url: /document-analysis
+    - listitem:
+      - link "Personalized Setup":
+        - /url: /personal-onboarding
+    - listitem:
+      - link "Settings":
+        - /url: /settings
+    - listitem:
+      - link "Privacy":
+        - /url: /settings/privacy
+    - listitem:
+      - link "Passphrase":
+        - /url: /settings/privacy/passphrase
+    - listitem:
+      - link "Executor Toolkit":
+        - /url: /executor-toolkit
+      - text: Premium
+    - listitem:
+      - link "Pricing":
+        - /url: /pricing
+- heading "Pricing" [level=1]
+```

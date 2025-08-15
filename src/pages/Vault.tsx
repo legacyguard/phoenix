@@ -144,7 +144,7 @@ const Vault: React.FC = () => {
   if (documents === null) return <div>Loading…</div>;
 
   return (
-    <div>
+    <div data-testid="vault-container">
       <h1>Vault</h1>
       <div style={{ marginBottom: 16 }}>
         <input ref={fileInputRef} type="file" />

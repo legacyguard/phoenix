@@ -173,6 +173,8 @@ export const Sidebar: React.FC<SidebarProps> = ({ isCollapsed, onToggle }) => {
                   <Link
                     key={item.href}
                     to={isLocked ? "/pricing" : item.href}
+                    data-testid={item.label === "executorToolkit" ? "nav-executor-toolkit" : undefined}
+                    style={item.label === "executorToolkit" ? { position: 'relative', zIndex: 10, pointerEvents: 'auto' } : undefined}
                     className={cn(
                       "flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition-all duration-200 hover:bg-accent hover:text-accent-foreground",
                       isItemActive &&
