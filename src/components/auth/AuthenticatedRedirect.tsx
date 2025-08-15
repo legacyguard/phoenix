@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { useUser } from "@clerk/clerk-react";
 import { Loader2 } from "lucide-react";
+import { useAuth } from "@/hooks/useAuth";
 
 interface AuthenticatedRedirectProps {
   children: React.ReactNode;
@@ -10,7 +10,7 @@ interface AuthenticatedRedirectProps {
 export const AuthenticatedRedirect: React.FC<AuthenticatedRedirectProps> = ({
   children,
 }) => {
-  const { user, isLoaded } = useUser();
+  const { user, isLoaded } = useAuth();
   const navigate = useNavigate();
 
   useEffect(() => {

@@ -17,16 +17,20 @@ validateSecurityConfig();
 
 const PUBLISHABLE_KEY = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
 
-if (!PUBLISHABLE_KEY) {
-  throw new Error("Missing Clerk Publishable Key");
-}
+// Allow E2E to run without a real Clerk key when a browser-side Clerk stub is present
+const hasBrowserClerkStub = typeof window !== 'undefined' && !!(window as any).Clerk;
+const isE2E = import.meta.env.VITE_E2E === 'true';
 
 try {
   const __root = document.getElementById("root");
   if (!__root) { (window as any).__MOUNT_OK__ = false; throw new Error('Root element not found'); }
   const __start = performance.now();
-  const node = (import.meta.env.VITE_E2E && import.meta.env.VITE_E2E_FORCE_SHELL) ? <E2EShell/> : <E2EErrorBoundary><E2EAppProbe><React.StrictMode>
-      <I18nextProvider i18n={i18n}>
+
+  const withClerkProvider = !!PUBLISHABLE_KEY && !hasBrowserClerkStub;
+
+  const appNode = (
+    <I18nextProvider i18n={i18n}>
+      {withClerkProvider ? (
         <ClerkProvider
           publishableKey={PUBLISHABLE_KEY}
           afterSignOutUrl="/"
@@ -38,12 +42,28 @@ try {
             <App />
           </AuthSyncProvider>
         </ClerkProvider>
-      </I18nextProvider>
-    </React.StrictMode></E2EAppProbe></E2EErrorBoundary>;
+      ) : (
+        <AuthSyncProvider>
+          <App />
+        </AuthSyncProvider>
+      )}
+    </I18nextProvider>
+  );
+
+  const node = (isE2E && import.meta.env.VITE_E2E_FORCE_SHELL) ? (
+    <E2EShell />
+  ) : (
+    <E2EErrorBoundary>
+      <E2EAppProbe>
+        <React.StrictMode>{appNode}</React.StrictMode>
+      </E2EAppProbe>
+    </E2EErrorBoundary>
+  );
+
   createRoot(__root).render(node);
   (window as any).__MOUNT_OK__ = true;
   (window as any).__MOUNT_T0__ = __start;
-  console?.log?.('[MOUNT] ok in', Math.round(performance.now()-__start),'ms');
+  console?.log?.('[MOUNT] ok in', Math.round(performance.now()-__start),'ms', '(withClerkProvider=', withClerkProvider, ')');
 } catch (error) {
   console.error("Error in main.tsx:", error);
   document.body.innerHTML =

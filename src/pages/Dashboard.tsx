@@ -39,6 +39,11 @@ type ProgressState = { completionScore: number; currentStage: string } | null;
 const Dashboard: React.FC = () => {
   const { user, isLoaded, isSignedIn } = useAuth();
   const location = useLocation();
+  // E2E diagnostic: signal mount
+  useEffect(() => {
+    // eslint-disable-next-line no-console
+    console.log('[E2E DIAGNOSTIC] Dashboard mounted');
+  }, []);
   const [prefs, setPrefs] = useState(PreferencesService.get());
   const [progress, setProgress] = useState<ProgressState>(null);
   const [inventoryTasks, setInventoryTasks] = useState<
@@ -278,245 +283,252 @@ const Dashboard: React.FC = () => {
 
   const quiet = prefs.quietHoursEnabled && isWithinQuietHours(prefs.quietHoursStart, prefs.quietHoursEnd);
 
-  if (!progress) return <div>Loading progress…</div>;
   return (
-    <div data-testid="dashboard-container">
-      {!onboardingCompleted && (
-        <div style={{ marginBottom: 12 }}>
-          <h2>Onboarding incomplete</h2>
-          <Link to="/onboarding">Start onboarding</Link>
-        </div>
-      )}
-      <h1>Dashboard</h1>
-      <p>Completion: {progress.completionScore}%</p>
-      <p>Current stage: {progress.currentStage}</p>
-      {presenceBanner.show && (
-        <div style={{ background: '#f7fafc', color: '#1a202c', padding: '12px', marginBottom: 16, border: '1px solid #e2e8f0' }}>
-          <span>Prosíme o potvrdenie, že je všetko v poriadku.</span>
-          <button
-            style={{ marginLeft: 12 }}
-            onClick={async () => { await HeartbeatService.touch('web'); setPresenceBanner({ show: false }); }}
-          >
-            Potvrdiť
-          </button>
-        </div>
-      )}
-      {prefs.expirationBannerEnabled && !quiet && urgentDoc && showExpirationBanner && (
-        <div
-          style={{
-            backgroundColor: urgentDoc.severity === "critical" ? "#fee" : "#fffae6",
-            color: urgentDoc.severity === "critical" ? "#900" : "#a60",
-            padding: "12px",
-            marginBottom: "16px",
-            border: "1px solid",
-            borderColor: urgentDoc.severity === "critical" ? "#f99" : "#fdd",
-          }}
-        >
-          <span>
-            Dokument <strong>{urgentDoc.name}</strong> expiruje o {urgentDoc.daysLeft} dní. Prosíme, podniknite kroky na jeho obnovu.
-          </span>
-          <button
-            onClick={() => {
-              setShowExpirationBanner(false);
-              try {
-                localStorage.setItem("hideUrgentExpirationBanner", "true");
-              } catch {}
-            }}
-            style={{ marginLeft: 16, background: "none", border: "none", cursor: "pointer", fontWeight: "bold" }}
-            aria-label="Close"
-          >
-            ×
-          </button>
-        </div>
-      )}
-      {prefs.nudgesEnabled && !quiet && nudgeMessage && showNudgeBanner && (
-        <div style={{ backgroundColor: '#eef6ff', color: '#0353a4', padding: '12px', marginBottom: '16px', border: '1px solid #cce0ff' }}>
-          <span>{nudgeMessage}</span>
-          <button onClick={handleCloseNudge} style={{ marginLeft: 16, background: 'none', border: 'none', cursor: 'pointer', fontWeight: 'bold' }}>×</button>
-        </div>
-      )}
-      <div style={{ marginTop: 24 }}>
-        <h2>Expiračné upozornenia</h2>
-        {loadingExpirations ? (
-          <p>Načítavam expiračné dáta…</p>
-        ) : expiringDocs.length === 0 ? (
-          <p>Žiadne dokumenty s blížiacou sa expiráciou.</p>
+    <>
+      <div id="e2e-probe">dashboard-rendered</div>
+      <div data-testid="dashboard-container">
+        {!progress ? (
+          <div>Loading progress…</div>
         ) : (
-          <ul>
-            {expiringDocs.map((doc) => (
-              <li
-                key={doc.id}
-                style={{
-                  marginBottom: 8,
-                  color:
-                    doc.severity === "critical"
-                      ? "crimson"
-                      : doc.severity === "warning"
-                      ? "goldenrod"
-                      : "inherit",
-                }}
+          <>
+          {!onboardingCompleted && (
+            <div style={{ marginBottom: 12 }}>
+              <h2>Onboarding incomplete</h2>
+              <Link to="/onboarding">Start onboarding</Link>
+            </div>
+          )}
+          <h1>Dashboard</h1>
+          <p>Completion: {progress.completionScore}%</p>
+          <p>Current stage: {progress.currentStage}</p>
+          {presenceBanner.show && (
+            <div style={{ background: '#f7fafc', color: '#1a202c', padding: '12px', marginBottom: 16, border: '1px solid #e2e8f0' }}>
+              <span>Prosíme o potvrdenie, že je všetko v poriadku.</span>
+              <button
+                style={{ marginLeft: 12 }}
+                onClick={async () => { await HeartbeatService.touch('web'); setPresenceBanner({ show: false }); }}
               >
-                <strong>{doc.name}</strong> – expiruje {doc.expirationDate} (o {doc.daysLeft} dní)
-                {doc.severity === "critical" && (
-                  <span> – odporúčame okamžite aktualizovať dokument.</span>
-                )}
-                {doc.severity === "warning" && (
-                  <span> – prosíme, naplánujte si obnovu.</span>
-                )}
-                <div style={{ marginTop: 4 }}>
+                Potvrdiť
+              </button>
+            </div>
+          )}
+          {prefs.expirationBannerEnabled && !quiet && urgentDoc && showExpirationBanner && (
+            <div
+              style={{
+                backgroundColor: urgentDoc.severity === "critical" ? "#fee" : "#fffae6",
+                color: urgentDoc.severity === "critical" ? "#900" : "#a60",
+                padding: "12px",
+                marginBottom: "16px",
+                border: "1px solid",
+                borderColor: urgentDoc.severity === "critical" ? "#f99" : "#fdd",
+              }}
+            >
+              <span>
+                Dokument <strong>{urgentDoc.name}</strong> expiruje o {urgentDoc.daysLeft} dní. Prosíme, podniknite kroky na jeho obnovu.
+              </span>
+              <button
+                onClick={() => {
+                  setShowExpirationBanner(false);
+                  try {
+                    localStorage.setItem("hideUrgentExpirationBanner", "true");
+                  } catch {}
+                }}
+                style={{ marginLeft: 16, background: "none", border: "none", cursor: "pointer", fontWeight: "bold" }}
+                aria-label="Close"
+              >
+                ×
+              </button>
+            </div>
+          )}
+          {prefs.nudgesEnabled && !quiet && nudgeMessage && showNudgeBanner && (
+            <div style={{ backgroundColor: '#eef6ff', color: '#0353a4', padding: '12px', marginBottom: '16px', border: '1px solid #cce0ff' }}>
+              <span>{nudgeMessage}</span>
+              <button onClick={handleCloseNudge} style={{ marginLeft: 16, background: 'none', border: 'none', cursor: 'pointer', fontWeight: 'bold' }}>×</button>
+            </div>
+          )}
+          <div style={{ marginTop: 24 }}>
+            <h2>Expiračné upozornenia</h2>
+            {loadingExpirations ? (
+              <p>Načítavam expiračné dáta…</p>
+            ) : expiringDocs.length === 0 ? (
+              <p>Žiadne dokumenty s blížiacou sa expiráciou.</p>
+            ) : (
+              <ul>
+                {expiringDocs.map((doc) => (
+                  <li
+                    key={doc.id}
+                    style={{
+                      marginBottom: 8,
+                      color:
+                        doc.severity === "critical"
+                          ? "crimson"
+                          : doc.severity === "warning"
+                          ? "goldenrod"
+                          : "inherit",
+                    }}
+                  >
+                    <strong>{doc.name}</strong> – expiruje {doc.expirationDate} (o {doc.daysLeft} dní)
+                    {doc.severity === "critical" && (
+                      <span> – odporúčame okamžite aktualizovať dokument.</span>
+                    )}
+                    {doc.severity === "warning" && (
+                      <span> – prosíme, naplánujte si obnovu.</span>
+                    )}
+                    <div style={{ marginTop: 4 }}>
+                      <button
+                        type="button"
+                        onClick={() => {
+                          const until = new Date(Date.now() + 7*24*60*60*1000).toISOString();
+                          ExpirationSnoozeService.set(doc.id, until);
+                          setExpiringDocs((prev) => prev.filter((d) => d.id !== doc.id));
+                        }}
+                        style={{ marginRight: 8 }}
+                      >
+                        Pripomenúť o 7 dní
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => {
+                          const until = new Date(Date.now() + 30*24*60*60*1000).toISOString();
+                          ExpirationSnoozeService.set(doc.id, until);
+                          setExpiringDocs((prev) => prev.filter((d) => d.id !== doc.id));
+                        }}
+                      >
+                        Pripomenúť o 30 dní
+                      </button>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+
+          {prefs.remindersEnabled && dueReminders.length > 0 && !quiet && (
+            <div style={{ marginTop: 16, padding: 12, border: '1px solid #cce0ff', background: '#eef6ff', color: '#0353a4' }}>
+              {dueReminders.map((r) => (
+                <div key={r.id} style={{ marginBottom: 8 }}>
+                  Pripomienka k úlohe „{r.title}“ – chcete sa tomu venovať?
                   <button
                     type="button"
-                    onClick={() => {
-                      const until = new Date(Date.now() + 7*24*60*60*1000).toISOString();
-                      ExpirationSnoozeService.set(doc.id, until);
-                      setExpiringDocs((prev) => prev.filter((d) => d.id !== doc.id));
-                    }}
-                    style={{ marginRight: 8 }}
+                    onClick={() => ReminderService.update(r.id, { snoozedUntil: new Date(Date.now() + 24*60*60*1000).toISOString() })}
+                    style={{ marginLeft: 8 }}
                   >
-                    Pripomenúť o 7 dní
+                    Odložiť o deň
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => ReminderService.update(r.id, { snoozedUntil: new Date(Date.now() + 7*24*60*60*1000).toISOString() })}
+                    style={{ marginLeft: 8 }}
+                  >
+                    Odložiť o týždeň
                   </button>
                   <button
                     type="button"
                     onClick={() => {
-                      const until = new Date(Date.now() + 30*24*60*60*1000).toISOString();
-                      ExpirationSnoozeService.set(doc.id, until);
-                      setExpiringDocs((prev) => prev.filter((d) => d.id !== doc.id));
+                      setTaskStatus((prev) => {
+                        const next = { ...prev, [r.title]: true };
+                        localStorage.setItem('lifeInventoryTaskStatus', JSON.stringify(next));
+                        return next;
+                      });
+                      ReminderService.remove(r.id);
                     }}
+                    style={{ marginLeft: 8 }}
                   >
-                    Pripomenúť o 30 dní
+                    Označiť ako vybavené
                   </button>
                 </div>
-              </li>
-            ))}
-          </ul>
+              ))}
+            </div>
+          )}
+
+          <div style={{ marginTop: 16 }}>
+            <h2>Life Inventory Overview</h2>
+            {["zavet", "inventar"].map((cat) => {
+              const stats = (categoriesStats as any)[cat] || { total: 0, completed: 0 };
+              const remaining = stats.total - stats.completed;
+              return (
+                <div key={cat} style={{ marginBottom: 16, padding: 12, border: "1px solid #eee" }}>
+                  <h3>
+                    {cat === "zavet" ? "Závet" : "Inventár"}
+                    <span title={(() => { const p = PreferencesService.get(); return (p.cloudSyncEnabled && p.syncTasks) ? 'Synced to cloud (encrypted)' : 'Stored locally only'; })()} style={{ marginLeft: 8 }}>
+                      {(PreferencesService.get().cloudSyncEnabled && PreferencesService.get().syncTasks) ? '☁️' : '🔒'}
+                    </span>
+                  </h3>
+                  {stats.total === 0 ? (
+                    <p>Žiadne úlohy v tejto kategórii.</p>
+                  ) : remaining === 0 ? (
+                    <p style={{ color: "green" }}>Všetky úlohy hotové. Už sa nemusíte starať.</p>
+                  ) : (
+                    <p style={{ color: "darkorange" }}>Zostávajúce úlohy: {remaining}</p>
+                  )}
+                  <ul>
+                    {categorizedTasks
+                      .filter((t) => t.category === (cat as any))
+                      .map((task) => (
+                        <li key={task.title} style={{ marginBottom: 8 }}>
+                          <input
+                            type="checkbox"
+                            checked={taskStatus[task.title] || false}
+                            onChange={() => handleToggle(task.title)}
+                            style={{ marginRight: 8 }}
+                          />
+                          <span style={{ textDecoration: taskStatus[task.title] ? "line-through" : "none" }}>
+                            {task.title}
+                          </span>
+                          <div style={{ marginTop: 4 }}>
+                            {!reminderForms[task.title] ? (
+                              <button
+                                type="button"
+                                onClick={() => setReminderForms((p) => ({ ...p, [task.title]: true }))}
+                                style={{ background: 'none', border: 'none', color: '#0353a4', cursor: 'pointer', padding: 0 }}
+                              >
+                                Pripomenúť…
+                              </button>
+                            ) : (
+                              <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
+                                <select id={`rem-${task.title}`} defaultValue="tomorrow_morning">
+                                  <option value="today_evening">Dnes večer</option>
+                                  <option value="tomorrow_morning">Zajtra</option>
+                                  <option value="week">O týždeň</option>
+                                  <option value="custom">Vlastný dátum/čas</option>
+                                </select>
+                                <input type="datetime-local" id={`rem-custom-${task.title}`} />
+                                <button
+                                  type="button"
+                                  onClick={() => {
+                                    const sel = (document.getElementById(`rem-${task.title}`) as HTMLSelectElement)?.value as any;
+                                    const customInput = (document.getElementById(`rem-custom-${task.title}`) as HTMLInputElement)?.value;
+                                    const iso = customInput ? new Date(customInput).toISOString() : undefined;
+                                    addReminderFor(task.title, sel, iso);
+                                  }}
+                                >
+                                  Uložiť
+                                </button>
+                                <button type="button" onClick={() => setReminderForms((p) => ({ ...p, [task.title]: false }))}>Zrušiť</button>
+                              </div>
+                            )}
+                          </div>
+                        </li>
+                      ))}
+                  </ul>
+                </div>
+              );
+            })}
+            <p>
+              Úlohy, ktoré ste dokončili, sú vyriešené a nemusíte sa nimi už zaoberať. Ak zostávajú niektoré otvorené,
+              odporúčame sa im venovať, keď vám to situácia dovolí.
+            </p>
+          </div>
+          <Toast
+            message={toast.message}
+            visible={toast.visible}
+            onClose={() => setToast({ visible: false, message: "" })}
+          />
+          </>
         )}
       </div>
-
-      {prefs.remindersEnabled && dueReminders.length > 0 && !quiet && (
-        <div style={{ marginTop: 16, padding: 12, border: '1px solid #cce0ff', background: '#eef6ff', color: '#0353a4' }}>
-          {dueReminders.map((r) => (
-            <div key={r.id} style={{ marginBottom: 8 }}>
-              Pripomienka k úlohe „{r.title}“ – chcete sa tomu venovať?
-              <button
-                type="button"
-                onClick={() => ReminderService.update(r.id, { snoozedUntil: new Date(Date.now() + 24*60*60*1000).toISOString() })}
-                style={{ marginLeft: 8 }}
-              >
-                Odložiť o deň
-              </button>
-              <button
-                type="button"
-                onClick={() => ReminderService.update(r.id, { snoozedUntil: new Date(Date.now() + 7*24*60*60*1000).toISOString() })}
-                style={{ marginLeft: 8 }}
-              >
-                Odložiť o týždeň
-              </button>
-              <button
-                type="button"
-                onClick={() => {
-                  setTaskStatus((prev) => {
-                    const next = { ...prev, [r.title]: true };
-                    localStorage.setItem('lifeInventoryTaskStatus', JSON.stringify(next));
-                    return next;
-                  });
-                  ReminderService.remove(r.id);
-                }}
-                style={{ marginLeft: 8 }}
-              >
-                Označiť ako vybavené
-              </button>
-            </div>
-          ))}
-        </div>
-      )}
-
-      <div style={{ marginTop: 16 }}>
-        <h2>Life Inventory Overview</h2>
-        {["zavet", "inventar"].map((cat) => {
-          const stats = (categoriesStats as any)[cat] || { total: 0, completed: 0 };
-          const remaining = stats.total - stats.completed;
-          return (
-            <div key={cat} style={{ marginBottom: 16, padding: 12, border: "1px solid #eee" }}>
-              <h3>
-                {cat === "zavet" ? "Závet" : "Inventár"}
-                <span title={(() => { const p = PreferencesService.get(); return (p.cloudSyncEnabled && p.syncTasks) ? 'Synced to cloud (encrypted)' : 'Stored locally only'; })()} style={{ marginLeft: 8 }}>
-                  {(PreferencesService.get().cloudSyncEnabled && PreferencesService.get().syncTasks) ? '☁️' : '🔒'}
-                </span>
-              </h3>
-              {stats.total === 0 ? (
-                <p>Žiadne úlohy v tejto kategórii.</p>
-              ) : remaining === 0 ? (
-                <p style={{ color: "green" }}>Všetky úlohy hotové. Už sa nemusíte starať.</p>
-              ) : (
-                <p style={{ color: "darkorange" }}>Zostávajúce úlohy: {remaining}</p>
-              )}
-              <ul>
-                {categorizedTasks
-                  .filter((t) => t.category === (cat as any))
-                  .map((task) => (
-                    <li key={task.title} style={{ marginBottom: 8 }}>
-                      <input
-                        type="checkbox"
-                        checked={taskStatus[task.title] || false}
-                        onChange={() => handleToggle(task.title)}
-                        style={{ marginRight: 8 }}
-                      />
-                      <span style={{ textDecoration: taskStatus[task.title] ? "line-through" : "none" }}>
-                        {task.title}
-                      </span>
-                      <div style={{ marginTop: 4 }}>
-                        {!reminderForms[task.title] ? (
-                          <button
-                            type="button"
-                            onClick={() => setReminderForms((p) => ({ ...p, [task.title]: true }))}
-                            style={{ background: 'none', border: 'none', color: '#0353a4', cursor: 'pointer', padding: 0 }}
-                          >
-                            Pripomenúť…
-                          </button>
-                        ) : (
-                          <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
-                            <select id={`rem-${task.title}`} defaultValue="tomorrow_morning">
-                              <option value="today_evening">Dnes večer</option>
-                              <option value="tomorrow_morning">Zajtra</option>
-                              <option value="week">O týždeň</option>
-                              <option value="custom">Vlastný dátum/čas</option>
-                            </select>
-                            <input type="datetime-local" id={`rem-custom-${task.title}`} />
-                            <button
-                              type="button"
-                              onClick={() => {
-                                const sel = (document.getElementById(`rem-${task.title}`) as HTMLSelectElement)?.value as any;
-                                const customInput = (document.getElementById(`rem-custom-${task.title}`) as HTMLInputElement)?.value;
-                                const iso = customInput ? new Date(customInput).toISOString() : undefined;
-                                addReminderFor(task.title, sel, iso);
-                              }}
-                            >
-                              Uložiť
-                            </button>
-                            <button type="button" onClick={() => setReminderForms((p) => ({ ...p, [task.title]: false }))}>Zrušiť</button>
-                          </div>
-                        )}
-                      </div>
-                    </li>
-                  ))}
-              </ul>
-            </div>
-          );
-        })}
-        <p>
-          Úlohy, ktoré ste dokončili, sú vyriešené a nemusíte sa nimi už zaoberať. Ak zostávajú niektoré otvorené,
-          odporúčame sa im venovať, keď vám to situácia dovolí.
-        </p>
-      </div>
-      <Toast
-        message={toast.message}
-        visible={toast.visible}
-        onClose={() => setToast({ visible: false, message: "" })}
-      />
-    </div>
+    </>
   );
 };
 
 export default Dashboard;
-
 

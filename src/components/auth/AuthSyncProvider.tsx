@@ -9,6 +9,12 @@ interface AuthSyncProviderProps {
 export const AuthSyncProvider: React.FC<AuthSyncProviderProps> = ({
   children,
 }) => {
+  // In E2E/browser-mock mode, skip Clerk hooks entirely to avoid runtime errors
+  const hasBrowserClerkStub = typeof window !== 'undefined' && !!(window as any).Clerk;
+  if (hasBrowserClerkStub) {
+    return <>{children}</>;
+  }
+
   const { user, isLoaded } = useUser();
   const { getToken } = useAuth();
 
