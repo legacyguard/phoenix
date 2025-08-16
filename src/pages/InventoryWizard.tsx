@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-type Answer = "Áno" | "Nie" | undefined;
+type Answer = "Yes" | "No" | undefined;
 
 const questions = [
-  { id: "hasWill", text: "Máte spísaný závet?", type: "boolean" as const },
+  { id: "hasWill", text: "Do you have a written will?", type: "boolean" as const },
   {
     id: "hasInventory",
-    text: "Máte vytvorený inventár toho, čo chcete po sebe zanechať?",
+    text: "Do you have an inventory of what you want to leave behind?",
     type: "boolean" as const,
   },
 ];
@@ -25,16 +25,16 @@ const InventoryWizard: React.FC = () => {
     setIsGenerating(true);
     const tasks: { title: string; priority: "high" | "medium" }[] = [];
 
-    if (answers.hasWill === "Áno") {
-      tasks.push({ title: "Overiť aktuálnosť a právnu platnosť závetu", priority: "medium" });
+    if (answers.hasWill === "Yes") {
+      tasks.push({ title: "Verify the currency and legal validity of the will", priority: "medium" });
     } else {
-      tasks.push({ title: "Vytvoriť závet", priority: "high" });
+      tasks.push({ title: "Create a will", priority: "high" });
     }
 
-    if (answers.hasInventory === "Áno") {
-      tasks.push({ title: "Aktualizovať a uložiť inventár", priority: "medium" });
+    if (answers.hasInventory === "Yes") {
+      tasks.push({ title: "Update and save inventory", priority: "medium" });
     } else {
-      tasks.push({ title: "Vytvoriť inventár", priority: "high" });
+      tasks.push({ title: "Create inventory", priority: "high" });
     }
 
     localStorage.setItem("lifeInventoryAnswers", JSON.stringify(answers));
@@ -52,8 +52,8 @@ const InventoryWizard: React.FC = () => {
       <h1>Life Inventory</h1>
       {isGenerating ? (
         <div style={{ textAlign: "center", marginTop: 40 }}>
-          <p>Generujeme váš personalizovaný akčný plán...</p>
-          <p>Prosím, čakajte.</p>
+          <p>Generating your personalized action plan...</p>
+          <p>Please wait.</p>
         </div>
       ) : (
       <div style={{ display: "grid", gap: 12, maxWidth: 520 }}>
@@ -64,17 +64,17 @@ const InventoryWizard: React.FC = () => {
               <div style={{ display: "flex", gap: 8 }}>
                 <button
                   type="button"
-                  onClick={() => setAnswer(q.id, "Áno")}
-                  aria-pressed={answers[q.id] === "Áno"}
+                  onClick={() => setAnswer(q.id, "Yes")}
+                  aria-pressed={answers[q.id] === "Yes"}
                 >
-                  Áno
+                  Yes
                 </button>
                 <button
                   type="button"
-                  onClick={() => setAnswer(q.id, "Nie")}
-                  aria-pressed={answers[q.id] === "Nie"}
+                  onClick={() => setAnswer(q.id, "No")}
+                  aria-pressed={answers[q.id] === "No"}
                 >
-                  Nie
+                  No
                 </button>
               </div>
             )}
@@ -84,7 +84,7 @@ const InventoryWizard: React.FC = () => {
       )}
       <div style={{ marginTop: 16 }}>
         {!isGenerating && (
-          <button type="button" onClick={handleFinish}>Dokončiť</button>
+          <button type="button" onClick={handleFinish}>Finish</button>
         )}
       </div>
     </div>

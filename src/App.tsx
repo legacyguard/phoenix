@@ -2,21 +2,22 @@ import React from "react";
 import { BrowserRouter, Routes, Route, Link, useLocation } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { SignedIn, SignedOut, RedirectToSignIn } from "@clerk/clerk-react";
-import "./i18n";
 
 // Pages - Using simple placeholders temporarily
 import Landing from "@/pages/LandingSimple";
 import { DashboardPage } from "@/pages/DashboardPageSimple";
-import Onboarding from "@/pages/OnboardingSimple";
 import TrustedCircle from "@/pages/TrustedCircleSimple";
 import GenerateWill from "@/pages/GenerateWillSimple";
 import InventoryWizard from "@/pages/InventoryWizardSimple";
 import PersonalizedOnboarding from "@/pages/PersonalizedOnboardingSimple";
 import { SignInPage } from "@/pages/auth/SignInPage";
 import { SignUpPage } from "@/pages/auth/SignUpPage";
+import { OnboardingIntroPage } from "@/pages/onboarding/OnboardingIntroPage";
+import { EmotionalOnboarding } from "@/pages/onboarding/EmotionalOnboarding";
 
 // Components
 import ExecutorDashboard from "@/components/ExecutorDashboardSimple";
+import { RequireOnboarding } from "@/components/auth/RequireOnboarding";
 
 const queryClient = new QueryClient();
 
@@ -69,10 +70,12 @@ const RouterShell: React.FC = () => {
           <Route path="/sign-in" element={<SignInPage />} />
           <Route path="/sign-up" element={<SignUpPage />} />
           
-          {/* Protected routes - require authentication */}
+          {/* Protected routes - require authentication and onboarding */}
           <Route path="/dashboard" element={
             <SignedIn>
-              <DashboardPage />
+              <RequireOnboarding>
+                <DashboardPage />
+              </RequireOnboarding>
             </SignedIn>
           } />
           <Route path="/executor-toolkit" element={
@@ -85,7 +88,24 @@ const RouterShell: React.FC = () => {
             )
           } />
           {/* <Route path="/vault" element={<Vault />} /> */}
-          <Route path="/onboarding" element={<Onboarding />} />
+          
+          {/* Onboarding routes */}
+          <Route path="/onboarding/intro" element={
+            <SignedIn>
+              <OnboardingIntroPage />
+            </SignedIn>
+          } />
+          <Route path="/onboarding/wizard" element={
+            <SignedIn>
+              <EmotionalOnboarding />
+            </SignedIn>
+          } />
+          <Route path="/onboarding" element={
+            <SignedIn>
+              <OnboardingIntroPage />
+            </SignedIn>
+          } />
+          
           <Route path="/trusted-circle" element={<TrustedCircle />} />
           <Route path="/generate-will" element={<GenerateWill />} />
           <Route path="/inventory" element={<InventoryWizard />} />

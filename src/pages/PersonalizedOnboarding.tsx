@@ -4,9 +4,9 @@ import { useNavigate } from "react-router-dom";
 type AnswerMap = Record<string, boolean>;
 
 const questions = [
-  { id: "ownsProperty", text: "Vlastníte nehnuteľnosť?", type: "boolean" as const },
-  { id: "hasDependents", text: "Máte deti alebo iných závislých?", type: "boolean" as const },
-  { id: "hasBusiness", text: "Prevádzkujete podnikanie alebo živnosť?", type: "boolean" as const },
+  { id: "ownsProperty", text: "Do you own real estate?", type: "boolean" as const },
+  { id: "hasDependents", text: "Do you have children or other dependents?", type: "boolean" as const },
+  { id: "hasBusiness", text: "Do you run a business?", type: "boolean" as const },
 ];
 
 const PersonalizedOnboarding: React.FC = () => {
@@ -18,13 +18,13 @@ const PersonalizedOnboarding: React.FC = () => {
     const newTasks: { title: string; priority: "high" | "medium" }[] = [];
     if (!skip) {
       if (answers.ownsProperty) {
-        newTasks.push({ title: "Zaobstarať poistenie nehnuteľnosti", priority: "medium" });
+        newTasks.push({ title: "Obtain property insurance", priority: "medium" });
       }
       if (answers.hasDependents) {
-        newTasks.push({ title: "Priradiť opatrovníka pre deti", priority: "high" });
+        newTasks.push({ title: "Assign guardian for children", priority: "high" });
       }
       if (answers.hasBusiness) {
-        newTasks.push({ title: "Vytvoriť plán kontinuity podnikania", priority: "medium" });
+        newTasks.push({ title: "Create business continuity plan", priority: "medium" });
       }
     }
 
@@ -58,16 +58,16 @@ const PersonalizedOnboarding: React.FC = () => {
   return (
     <div>
       <h1>Personalized Setup</h1>
-      <p style={{ color: "#555" }}>Len pár klikov – pripravíme odporúčania na mieru.</p>
+      <p style={{ color: "#555" }}>Just a few clicks to prepare personalized recommendations.</p>
       <div style={{ marginTop: 16 }}>
         <div style={{ marginBottom: 12 }}>{q.text}</div>
         <div style={{ display: "flex", gap: 8 }}>
-          <button type="button" onClick={() => handleAnswer(true)}>Áno</button>
-          <button type="button" onClick={() => handleAnswer(false)}>Nie</button>
-          <button type="button" onClick={handleSkip} style={{ marginLeft: 8 }}>Preskočiť</button>
+          <button type="button" onClick={() => handleAnswer(true)}>Yes</button>
+          <button type="button" onClick={() => handleAnswer(false)}>No</button>
+          <button type="button" onClick={handleSkip} style={{ marginLeft: 8 }}>Skip</button>
         </div>
         <div style={{ marginTop: 12, fontSize: 12, color: "#666" }}>
-          Otázka {currentIndex + 1} / {questions.length}
+          Question {currentIndex + 1} / {questions.length}
         </div>
       </div>
     </div>

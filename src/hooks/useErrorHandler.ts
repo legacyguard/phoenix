@@ -18,7 +18,7 @@ export const useErrorHandler = () => {
         captureStackTrace = true,
       } = options;
 
-      // Konvertujeme error na Error objekt
+      // Convert error to Error object
       let errorObj: Error;
       if (error instanceof Error) {
         errorObj = error;
@@ -28,12 +28,12 @@ export const useErrorHandler = () => {
         errorObj = new Error(fallbackMessage);
       }
 
-      // Zachytiť stack trace ak ešte neexistuje
+      // Capture stack trace if it doesn't exist yet
       if (captureStackTrace && !errorObj.stack) {
         Error.captureStackTrace(errorObj, handleError);
       }
 
-      // Vytvoríme detailný error objekt
+      // Create detailed error object
       const errorDetails = {
         timestamp: new Date().toISOString(),
         context,
@@ -55,15 +55,15 @@ export const useErrorHandler = () => {
         },
       };
 
-      // Logovanie do konzoly
+      // Log to console
       console.error(`[${context}] Error:`, errorDetails);
 
-      // Toast notifikácia
+      // Toast notification
       if (showToast) {
         toast.error(errorObj.message || fallbackMessage);
       }
 
-      // Uložiť do localStorage pre debugging
+      // Save to localStorage for debugging
       try {
         const errors = JSON.parse(localStorage.getItem("app_errors") || "[]");
         errors.push(errorDetails);
@@ -75,7 +75,7 @@ export const useErrorHandler = () => {
         console.error("Failed to save error to localStorage:", e);
       }
 
-      // Hodiť error ďalej pre Error Boundary
+      // Throw error forward for Error Boundary
       throw errorObj;
     },
     [],
@@ -104,7 +104,7 @@ export const useErrorHandler = () => {
 
       console.error("[Error Log]:", errorDetails);
 
-      // V produkcii by sa tu poslalo do monitorovacej služby
+      // In production this would be sent to monitoring service
       if ((import.meta.env.PROD && !import.meta.env.VITE_E2E)) {
         // window.Sentry?.captureMessage(message, {
         //   level: 'error',
@@ -130,7 +130,7 @@ export const useErrorHandler = () => {
 
       console.error("[Exception Captured]:", errorDetails);
 
-      // V produkcii poslať do monitorovacej služby
+      // In production send to monitoring service
       if ((import.meta.env.PROD && !import.meta.env.VITE_E2E)) {
         // window.Sentry?.captureException(error, {
         //   contexts: { custom: context }
@@ -147,11 +147,11 @@ export const useErrorHandler = () => {
   };
 };
 
-// Helper funkcia pre získanie breadcrumbs
+// Helper function to get breadcrumbs
 function getBreadcrumbs(): Array<Record<string, unknown>> {
   try {
-    // Tu by sme mohli implementovať vlastný breadcrumb systém
-    // Zatiaľ vrátime základné informácie
+    // Here we could implement custom breadcrumb system
+    // For now return basic information
     return [
       {
         timestamp: new Date().toISOString(),

@@ -20,7 +20,7 @@ const Settings: React.FC = () => {
     <div>
       <h1>Settings</h1>
       <p style={{ color: "#555" }}>
-        Tieto nastavenia ovplyvnia len oznamy v aplikácii. E-mail/SMS prídu neskôr.
+        These settings only affect in-app notifications. Email/SMS will come later.
       </p>
       <div style={{ display: "grid", gap: 12, marginTop: 12 }}>
         <label>
@@ -29,11 +29,11 @@ const Settings: React.FC = () => {
             checked={prefs.deadManSwitchEnabled}
             onChange={(e) => update({ deadManSwitchEnabled: e.target.checked })}
           />
-          {" "}Dead-man switch (vyžiadať potvrdenie prítomnosti po neaktivite)
+          {" "}Dead-man switch (request presence confirmation after inactivity)
         </label>
         <div style={{ display: 'flex', gap: 12, alignItems: 'center' }}>
           <div>
-            <label>Dní neaktivity</label>{" "}
+            <label>Days of inactivity</label>{" "}
             <input
               type="number"
               min={7}
@@ -45,11 +45,11 @@ const Settings: React.FC = () => {
               }}
             />
             {(prefs.inactivityDays < 7 || prefs.inactivityDays > 365) && (
-              <small style={{ color: 'crimson' }}>Rozsah 7–365 dní.</small>
+              <small style={{ color: 'crimson' }}>Range 7-365 days.</small>
             )}
           </div>
           <div>
-            <label>Grace (hodiny)</label>{" "}
+            <label>Grace (hours)</label>{" "}
             <input
               type="number"
               min={0}
@@ -61,7 +61,7 @@ const Settings: React.FC = () => {
               }}
             />
             {(prefs.inactivityGraceHours < 0 || prefs.inactivityGraceHours > 48) && (
-              <small style={{ color: 'crimson' }}>Rozsah 0–48 hodín.</small>
+              <small style={{ color: 'crimson' }}>Range 0-48 hours.</small>
             )}
           </div>
         </div>
@@ -71,7 +71,7 @@ const Settings: React.FC = () => {
             checked={prefs.nudgesEnabled}
             onChange={(e) => update({ nudgesEnabled: e.target.checked })}
           />
-          {" "}Motivačný nudge banner
+          {" "}Motivational nudge banner
         </label>
         <label>
           <input
@@ -79,7 +79,7 @@ const Settings: React.FC = () => {
             checked={prefs.expirationBannerEnabled}
             onChange={(e) => update({ expirationBannerEnabled: e.target.checked })}
           />
-          {" "}Expiračný banner
+          {" "}Expiration banner
         </label>
         <label>
           <input
@@ -87,7 +87,7 @@ const Settings: React.FC = () => {
             checked={prefs.completionToastEnabled}
             onChange={(e) => update({ completionToastEnabled: e.target.checked })}
           />
-          {" "}Toast pri označení úlohy ako splnenej
+          {" "}Toast when marking task as completed
         </label>
         <label>
           <input
@@ -95,7 +95,7 @@ const Settings: React.FC = () => {
             checked={prefs.metadataToastsEnabled}
             onChange={(e) => update({ metadataToastsEnabled: e.target.checked })}
           />
-          {" "}Toasty pri práci s metadátami
+          {" "}Toasts when working with metadata
         </label>
         <label>
           <input
@@ -103,11 +103,11 @@ const Settings: React.FC = () => {
             checked={prefs.quietHoursEnabled}
             onChange={(e) => update({ quietHoursEnabled: e.target.checked })}
           />
-          {" "}Quiet hours (stíšené hodiny)
+          {" "}Quiet hours
         </label>
         <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
           <div>
-            <label>Začiatok:</label>
+            <label>Start:</label>
             <input
               type="time"
               value={prefs.quietHoursStart}
@@ -118,7 +118,7 @@ const Settings: React.FC = () => {
             />
           </div>
           <div>
-            <label>Koniec:</label>
+            <label>End:</label>
             <input
               type="time"
               value={prefs.quietHoursEnd}
@@ -130,7 +130,7 @@ const Settings: React.FC = () => {
           </div>
         </div>
         {(!/^\d{2}:\d{2}$/.test(prefs.quietHoursStart) || !/^\d{2}:\d{2}$/.test(prefs.quietHoursEnd)) && (
-          <small style={{ color: "crimson" }}>Prosím, použite formát HH:MM.</small>
+          <small style={{ color: "crimson" }}>Please use HH:MM format.</small>
         )}
 
         <hr />
@@ -140,7 +140,7 @@ const Settings: React.FC = () => {
             checked={prefs.remindersEnabled}
             onChange={(e) => update({ remindersEnabled: e.target.checked })}
           />
-          {" "}Pripomienky k úlohám (v app)
+          {" "}Task reminders (in app)
         </label>
         <label>
           <input
@@ -148,10 +148,10 @@ const Settings: React.FC = () => {
             checked={prefs.dailyDigestEnabled}
             onChange={(e) => update({ dailyDigestEnabled: e.target.checked })}
           />
-          {" "}Denný prehľad (digest)
+          {" "}Daily digest
         </label>
         <div>
-          <label>Čas digestu:</label>{" "}
+          <label>Digest time:</label>{" "}
           <input
             type="time"
             value={prefs.dailyDigestTime}

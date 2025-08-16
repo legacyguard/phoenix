@@ -31,7 +31,7 @@ describe('Label Component', () => {
     render(<Label htmlFor="email-input" data-testid="label">Email</Label>);
     const label = screen.getByTestId('label');
     
-    expect(label).toHaveAttribute('htmlFor', 'email-input');
+    expect(label).toHaveAttribute('for', 'email-input');
   });
 
   test('can be customized with className', () => {
@@ -55,7 +55,7 @@ describe('Label Component', () => {
     );
     const label = screen.getByTestId('label');
     
-    expect(label).toHaveAttribute('htmlFor', 'test-input');
+    expect(label).toHaveAttribute('for', 'test-input');
     expect(label).toHaveAttribute('id', 'test-label');
     expect(label).toHaveAttribute('title', 'Test tooltip');
     expect(label).toHaveClass('test-class');

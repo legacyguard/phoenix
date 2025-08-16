@@ -18,7 +18,7 @@ export const AppLayoutExample: React.FC = () => {
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-foreground">Dashboard</h1>
         <p className="text-muted-foreground mt-2">
-          Vitajte späť! Tu je prehľad vašej aktivity.
+          Welcome back! Here's an overview of your activity.
         </p>
       </div>
 
@@ -31,7 +31,7 @@ export const AppLayoutExample: React.FC = () => {
                 <TrendingUp className="w-5 h-5 text-blue-600 dark:text-blue-400" />
               </div>
               <div>
-                <p className="text-sm font-medium text-muted-foreground">Celková Hodnota</p>
+                <p className="text-sm font-medium text-muted-foreground">Total Value</p>
                 <p className="text-2xl font-bold text-foreground">€125,000</p>
               </div>
             </div>
@@ -59,7 +59,7 @@ export const AppLayoutExample: React.FC = () => {
                 <FileText className="w-5 h-5 text-purple-600 dark:text-purple-400" />
               </div>
               <div>
-                <p className="text-sm font-medium text-muted-foreground">Dokumenty</p>
+                <p className="text-sm font-medium text-muted-foreground">Documents</p>
                 <p className="text-2xl font-bold text-foreground">24</p>
               </div>
             </div>
@@ -73,7 +73,7 @@ export const AppLayoutExample: React.FC = () => {
                 <Shield className="w-5 h-5 text-orange-600 dark:text-orange-400" />
               </div>
               <div>
-                <p className="text-sm font-medium text-muted-foreground">Bezpečnosť</p>
+                <p className="text-sm font-medium text-muted-foreground">Security</p>
                 <p className="text-2xl font-bold text-foreground">85%</p>
               </div>
             </div>
@@ -88,10 +88,10 @@ export const AppLayoutExample: React.FC = () => {
           <CardHeader>
             <CardTitle className="flex items-center space-x-2">
               <Calendar className="w-5 h-5" />
-              <span>Posledná Aktivita</span>
+              <span>Recent Activity</span>
             </CardTitle>
             <CardDescription>
-              Prehľad vašich nedávnych akcií
+              Overview of your recent actions
             </CardDescription>
           </CardHeader>
           <CardContent>
@@ -99,22 +99,22 @@ export const AppLayoutExample: React.FC = () => {
               <div className="flex items-center space-x-3 p-3 rounded-lg bg-muted/50">
                 <div className="w-2 h-2 rounded-full bg-green-500"></div>
                 <div className="flex-1">
-                  <p className="text-sm font-medium">Pridaný nový asset</p>
-                  <p className="text-xs text-muted-foreground">Pred 2 hodinami</p>
+                  <p className="text-sm font-medium">New asset added</p>
+                  <p className="text-xs text-muted-foreground">2 hours ago</p>
                 </div>
               </div>
               <div className="flex items-center space-x-3 p-3 rounded-lg bg-muted/50">
                 <div className="w-2 h-2 rounded-full bg-blue-500"></div>
                 <div className="flex-1">
-                  <p className="text-sm font-medium">Aktualizovaný profil</p>
-                  <p className="text-xs text-muted-foreground">Pred 1 dňom</p>
+                  <p className="text-sm font-medium">Profile updated</p>
+                  <p className="text-xs text-muted-foreground">1 day ago</p>
                 </div>
               </div>
               <div className="flex items-center space-x-3 p-3 rounded-lg bg-muted/50">
                 <div className="w-2 h-2 rounded-full bg-purple-500"></div>
                 <div className="flex-1">
-                  <p className="text-sm font-medium">Nahraný dokument</p>
-                  <p className="text-xs text-muted-foreground">Pred 3 dňami</p>
+                  <p className="text-sm font-medium">Document uploaded</p>
+                  <p className="text-xs text-muted-foreground">3 days ago</p>
                 </div>
               </div>
             </div>
@@ -126,29 +126,29 @@ export const AppLayoutExample: React.FC = () => {
           <CardHeader>
             <CardTitle className="flex items-center space-x-2">
               <Bell className="w-5 h-5" />
-              <span>Rýchle Akcie</span>
+              <span>Quick Actions</span>
             </CardTitle>
             <CardDescription>
-              Často používané funkcie
+              Frequently used features
             </CardDescription>
           </CardHeader>
           <CardContent>
             <div className="grid grid-cols-2 gap-3">
               <Button variant="outline" className="h-20 flex-col space-y-2">
                 <FileText className="w-6 h-6" />
-                <span className="text-sm">Pridať Asset</span>
+                <span className="text-sm">Add Asset</span>
               </Button>
               <Button variant="outline" className="h-20 flex-col space-y-2">
                 <Users className="w-6 h-6" />
-                <span className="text-sm">Pridať Guardian</span>
+                <span className="text-sm">Add Guardian</span>
               </Button>
               <Button variant="outline" className="h-20 flex-col space-y-2">
                 <Shield className="w-6 h-6" />
-                <span className="text-sm">Bezpečnosť</span>
+                <span className="text-sm">Security</span>
               </Button>
               <Button variant="outline" className="h-20 flex-col space-y-2">
                 <Calendar className="w-6 h-6" />
-                <span className="text-sm">Kalendár</span>
+                <span className="text-sm">Calendar</span>
               </Button>
             </div>
           </CardContent>
@@ -160,18 +160,18 @@ export const AppLayoutExample: React.FC = () => {
         <CardContent className="p-6">
           <div className="text-center">
             <h3 className="text-lg font-semibold text-foreground mb-2">
-              Vitajte v Phoenix aplikácii! 🎉
+              Welcome to Phoenix Application!
             </h3>
             <p className="text-muted-foreground mb-4">
-              Toto je demonštračná stránka pre AppLayout komponent. 
-              Môžete vidieť, ako sa sidebar a hlavný obsah komponujú dohromady.
+              This is a demonstration page for the AppLayout component. 
+              You can see how the sidebar and main content are composed together.
             </p>
             <div className="flex justify-center space-x-3">
               <Button variant="outline">
-                Prezrieť dokumentáciu
+                View Documentation
               </Button>
               <Button>
-                Začať používať
+                Get Started
               </Button>
             </div>
           </div>

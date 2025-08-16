@@ -124,9 +124,9 @@ const Vault: React.FC = () => {
     if (!editingDocId) return;
     setFormErrors({});
     const errors: Record<string, string> = {};
-    if (!metadataForm.title?.trim()) errors.title = "Povinné";
-    if (!metadataForm.contractNumber?.trim()) errors.contractNumber = "Povinné";
-    if (!metadataForm.expirationDate?.trim()) errors.expirationDate = "Povinné";
+    if (!metadataForm.title?.trim()) errors.title = "Required";
+    if (!metadataForm.contractNumber?.trim()) errors.contractNumber = "Required";
+    if (!metadataForm.expirationDate?.trim()) errors.expirationDate = "Required";
     if (Object.keys(errors).length > 0) {
       setFormErrors(errors);
       return;
@@ -136,7 +136,7 @@ const Vault: React.FC = () => {
     const prefs = PreferencesService.get();
     const quiet = prefs.quietHoursEnabled && isWithinQuietHours(prefs.quietHoursStart, prefs.quietHoursEnd);
     if (prefs.metadataToastsEnabled && !quiet) {
-      showGentleToast("Údaje k dokumentu sú uložené.");
+      showGentleToast("Document metadata saved.");
     }
     HeartbeatService.touch('web');
   };
@@ -277,7 +277,7 @@ const Vault: React.FC = () => {
                 </div>
               ) : (
                 <button onClick={() => handleEdit(doc.id)} style={{ marginTop: 4 }}>
-                  Pridať metadáta
+                  Add metadata
                 </button>
               )}
             </li>

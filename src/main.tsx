@@ -1,8 +1,6 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 import { ClerkProvider } from "@clerk/clerk-react";
-import { I18nextProvider } from "react-i18next";
-import i18n from "./i18n/index";
 import App from "./App.tsx";
 import "./index.css";
 
@@ -39,26 +37,22 @@ const rootElement = createRoot(root);
 if (PUBLISHABLE_KEY && !isE2E && !hasBrowserClerkStub) {
   rootElement.render(
     <React.StrictMode>
-      <I18nextProvider i18n={i18n}>
-        <ClerkProvider
-          publishableKey={PUBLISHABLE_KEY}
-          appearance={clerkAppearance}
-          afterSignOutUrl="/"
-          signInUrl="/sign-in"
-          signUpUrl="/sign-up"
-        >
-          <App />
-        </ClerkProvider>
-      </I18nextProvider>
+      <ClerkProvider
+        publishableKey={PUBLISHABLE_KEY}
+        appearance={clerkAppearance}
+        afterSignOutUrl="/"
+        signInUrl="/sign-in"
+        signUpUrl="/sign-up"
+      >
+        <App />
+      </ClerkProvider>
     </React.StrictMode>
   );
 } else {
   // E2E or development mode without Clerk
   rootElement.render(
     <React.StrictMode>
-      <I18nextProvider i18n={i18n}>
-        <App />
-      </I18nextProvider>
+      <App />
     </React.StrictMode>
   );
 }
