@@ -1,115 +1,84 @@
-import React from 'react';
-import { useUser } from '@clerk/clerk-react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { Heart, Shield, Users, ArrowRight } from 'lucide-react';
+import { ArrowRight, ChevronDown, Shield, Eye } from 'lucide-react';
 
 export const OnboardingIntroPage: React.FC = () => {
-  const { user } = useUser();
   const navigate = useNavigate();
+  const [showScrollHint, setShowScrollHint] = useState(false);
 
-  const handleStartOnboarding = () => {
-    navigate('/onboarding/wizard');
-  };
+  useEffect(() => {
+    const t = setTimeout(() => setShowScrollHint(true), 5000);
+    return () => clearTimeout(t);
+  }, []);
 
-  const userName = user?.firstName || user?.emailAddresses[0]?.emailAddress?.split('@')[0] || 'there';
+  const handleStart = () => navigate('/onboarding/wizard');
 
   return (
-    <div className="min-h-screen bg-background flex items-center justify-center p-4">
-      <div className="max-w-4xl mx-auto text-center space-y-12">
-        {/* Welcome Header */}
-        <div className="space-y-6">
-          <div className="flex justify-center mb-8">
-            <div className="p-4 bg-primary/10 rounded-full">
-              <Heart className="w-12 h-12 text-primary" />
-            </div>
-          </div>
-          
-          <h1 className="text-5xl md:text-6xl font-bold text-card-foreground leading-tight">
-            Welcome, <span className="text-primary">{userName}</span>.
+    <div className="min-h-screen w-full bg-gradient-to-b from-background to-muted/30">
+      {/* Hero - minimalist, centered */}
+      <section className="min-h-screen flex items-center justify-center px-6">
+        <div className="max-w-4xl mx-auto text-center space-y-6">
+          <h1 className="text-3xl md:text-5xl font-semibold tracking-tight text-card-foreground">
+            “Each of us has things in life we don’t want to leave to chance.”
           </h1>
-          <h2 className="text-3xl md:text-4xl font-semibold text-card-foreground/80 leading-tight">
-            Let's begin your life's inventory.
-          </h2>
-        </div>
-
-        {/* Main Content */}
-        <div className="space-y-8 max-w-3xl mx-auto">
-          {/* Pain Point 1: Chaos and Uncertainty */}
-          <div className="space-y-4">
-            <div className="flex items-center justify-center space-x-3 text-muted-foreground">
-              <Shield className="w-5 h-5" />
-              <span className="text-sm font-medium">Understanding Your Concerns</span>
-            </div>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              We know that thinking about the future can be overwhelming. You've worked hard to build your life, 
-              and the thought of your loved ones navigating stress and confusion in a difficult time is a heavy burden. 
-              <span className="text-card-foreground font-medium"> That's why we're here.</span>
-            </p>
-          </div>
-
-          {/* Pain Point 2: Procrastination and Complexity */}
-          <div className="space-y-4">
-            <div className="flex items-center justify-center space-x-3 text-muted-foreground">
-              <Users className="w-5 h-5" />
-              <span className="text-sm font-medium">Our Approach</span>
-            </div>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              In the next few minutes, we will guide you through a series of simple, human questions – 
-              <span className="text-card-foreground font-medium"> not legal jargon</span>. There are no right or wrong answers. 
-              This is not a test. It's a quiet moment for reflection, designed to help us understand what matters most to you.
-            </p>
-          </div>
-
-          {/* Value Promise */}
-          <div className="space-y-4">
-            <div className="flex items-center justify-center space-x-3 text-muted-foreground">
-              <Heart className="w-5 h-5" />
-              <span className="text-sm font-medium">What You'll Get</span>
-            </div>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Your responses will allow us to create a personalized dashboard for you – 
-              <span className="text-card-foreground font-medium"> a clear, simple overview of your life's inventory</span>. 
-              It will show you, step-by-step, how to achieve complete peace of mind. 
-              Your information is secure, private, and you are always in control.
-            </p>
-          </div>
-        </div>
-
-        {/* Call to Action */}
-        <div className="space-y-6 pt-8">
-          <Button 
-            onClick={handleStartOnboarding}
-            size="lg"
-            className="text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out"
-          >
-            <span>I'm ready. Let's start.</span>
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Button>
-          
-          <p className="text-sm text-muted-foreground/70 max-w-md mx-auto">
-            This will take approximately 5-10 minutes. You can pause and continue at any time.
+          <p className="text-lg md:text-2xl text-muted-foreground/90">
+            “Documents, memories, contacts — small pieces of certainty for our loved ones.”
           </p>
-        </div>
 
-        {/* Trust Indicators */}
-        <div className="pt-12 border-t border-border/20">
-          <div className="flex flex-wrap justify-center items-center gap-8 text-xs text-muted-foreground/60">
-            <div className="flex items-center space-x-2">
-              <Shield className="w-4 h-4" />
-              <span>Bank-level security</span>
+          {showScrollHint && (
+            <div className="mt-16 flex items-center justify-center animate-bounce text-muted-foreground/70">
+              <ChevronDown className="w-7 h-7" aria-hidden="true" />
+              <span className="sr-only">Scroll down</span>
             </div>
-            <div className="flex items-center space-x-2">
-              <Users className="w-4 h-4" />
-              <span>Your data, your control</span>
+          )}
+        </div>
+      </section>
+
+      {/* Story Cards */}
+      <section className="min-h-[80vh] px-6 py-16 flex flex-col items-center justify-center">
+        <div className="max-w-6xl w-full mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="rounded-xl border bg-card p-6 shadow-sm">
+              <p className="text-card-foreground text-base md:text-lg leading-relaxed">
+                “Your partner needs to find the insurance policy but doesn’t know where it is.”
+              </p>
             </div>
-            <div className="flex items-center space-x-2">
-              <Heart className="w-4 h-4" />
-              <span>Built with care</span>
+            <div className="rounded-xl border bg-card p-6 shadow-sm">
+              <p className="text-card-foreground text-base md:text-lg leading-relaxed">
+                “One day your child will need to know what you wanted to tell them.”
+              </p>
+            </div>
+            <div className="rounded-xl border bg-card p-6 shadow-sm">
+              <p className="text-card-foreground text-base md:text-lg leading-relaxed">
+                “Your parents will appreciate a clear list of contacts and tasks.”
+              </p>
             </div>
           </div>
+
+          <div className="mt-10 flex flex-col items-center gap-4 text-center">
+            <Button onClick={handleStart} size="lg" className="text-base md:text-lg">
+              <span>Begin calmly, step by step</span>
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Button>
+            <p className="text-xs md:text-sm text-muted-foreground/80">
+              It takes 3–5 minutes. Your answers stay on your device.
+            </p>
+          </div>
         </div>
-      </div>
+
+        {/* Trust cues */}
+        <div className="mt-14 text-xs text-muted-foreground/70 flex items-center gap-6">
+          <div className="flex items-center gap-2">
+            <Shield className="w-4 h-4" />
+            <span>Your answers are encrypted and only you can see them.</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <Eye className="w-4 h-4" />
+            <span>We never analyze or sell them.</span>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };

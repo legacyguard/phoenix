@@ -14,7 +14,9 @@ import {
   ArrowRight,
   CheckCircle,
   Clock,
-  AlertTriangle
+  AlertTriangle,
+  CheckCircle2,
+  ArrowRightCircle
 } from 'lucide-react';
 
 interface OnboardingData {
@@ -53,27 +55,27 @@ export const LifeInventoryDashboard: React.FC = () => {
   const generateDashboardCards = (data: OnboardingData) => {
     const cards: DashboardCard[] = [];
 
-    // Mission Card (always present)
+    // Core Wish Card (always present)
     cards.push({
-      id: 'mission',
-      title: `Mission: ${data.mainMotivation}`,
-      description: 'This is your primary focus. Let\'s break it down into small, manageable steps.',
+      id: 'core-wish',
+      title: `Your Core Wish`,
+      description: data.mainMotivation ? `“${data.mainMotivation}”` : 'This is the heart of your plan.',
       icon: Target,
       status: 'not_started',
       statusText: 'Ready to begin',
-      actionText: 'Start First Step',
+      actionText: 'View & Secure',
       actionVariant: 'default'
     });
 
-    // Trusted Circle Card (always present)
+    // Keepers of the Keys Card (always present)
     cards.push({
-      id: 'trusted-circle',
-      title: 'Your Trusted Circle',
-      description: `Your trusted people: ${data.trustedPeople}`,
+      id: 'keepers-of-keys',
+      title: 'The Keepers of the Keys',
+      description: data.trustedPeople ? `Trusted people: ${data.trustedPeople}` : 'Add the people you trust.',
       icon: Users,
       status: 'needs_attention',
-      statusText: 'Not yet invited',
-      actionText: 'Manage Your Circle',
+      statusText: 'Next Step Recommended',
+      actionText: 'Manage Keepers',
       actionVariant: 'outline'
     });
 
@@ -85,8 +87,8 @@ export const LifeInventoryDashboard: React.FC = () => {
         description: 'Secure documentation and access to your real estate assets.',
         icon: Home,
         status: 'needs_attention',
-        statusText: 'Needs attention',
-        actionText: 'Secure Properties',
+        statusText: 'Next Step Recommended',
+        actionText: 'View & Secure',
         actionVariant: 'outline'
       });
     }
@@ -98,8 +100,8 @@ export const LifeInventoryDashboard: React.FC = () => {
         description: 'Ensure your children have access to resources and guidance they need.',
         icon: Heart,
         status: 'critical',
-        statusText: 'Critical priority',
-        actionText: 'Plan Future',
+        statusText: 'Immediate Priority',
+        actionText: 'Start this 5-minute step',
         actionVariant: 'default'
       });
     }
@@ -111,8 +113,8 @@ export const LifeInventoryDashboard: React.FC = () => {
         description: 'Maintain business operations and transfer ownership smoothly.',
         icon: Building2,
         status: 'needs_attention',
-        statusText: 'Needs attention',
-        actionText: 'Plan Continuity',
+        statusText: 'Next Step Recommended',
+        actionText: 'View & Secure',
         actionVariant: 'outline'
       });
     }
@@ -125,7 +127,7 @@ export const LifeInventoryDashboard: React.FC = () => {
       case 'critical':
         return 'text-red-500 bg-red-500/10 border-red-500/20';
       case 'needs_attention':
-        return 'text-yellow-500 bg-yellow-500/10 border-yellow-500/20';
+        return 'text-amber-600 bg-amber-500/10 border-amber-500/20';
       case 'completed':
         return 'text-green-500 bg-green-500/10 border-green-500/20';
       case 'not_started':
@@ -140,9 +142,9 @@ export const LifeInventoryDashboard: React.FC = () => {
       case 'critical':
         return <AlertTriangle className="w-4 h-4" />;
       case 'needs_attention':
-        return <Clock className="w-4 h-4" />;
+        return <ArrowRightCircle className="w-4 h-4" />;
       case 'completed':
-        return <CheckCircle className="w-4 h-4" />;
+        return <CheckCircle2 className="w-4 h-4" />;
       case 'not_started':
         return <Target className="w-4 h-4" />;
       default:
@@ -175,11 +177,9 @@ export const LifeInventoryDashboard: React.FC = () => {
       {/* Main Header */}
       <div className="mb-8">
         <h1 className="text-4xl font-bold text-card-foreground mb-2">
-          Welcome to Your Life Inventory, {userName}
+          {userName ? `Your Treasure Box, ${userName}` : 'Your Treasure Box'}
         </h1>
-        <p className="text-xl text-muted-foreground">
-          Based on your responses, we've created a personalized plan to help you secure what matters most.
-        </p>
+        <p className="text-xl text-muted-foreground">An overview of your legacy — calm, clear, and personal.</p>
       </div>
 
       {/* Dashboard Cards Grid */}
@@ -189,10 +189,12 @@ export const LifeInventoryDashboard: React.FC = () => {
           return (
             <Card 
               key={card.id} 
-              className="hover:shadow-lg transition-all duration-200"
+              className="hover:shadow-lg hover:scale-[1.02] transition-all duration-300 ease-in-out focus-within:ring-2 focus-within:ring-primary/40"
               id={card.id === 'mission' ? 'mission-card' : 
-                  card.id === 'trusted-circle' ? 'trusted-circle-card' : 
+                  card.id === 'keepers-of-keys' ? 'trusted-circle-card' : 
                   card.id === 'real-estate' || card.id === 'children-future' || card.id === 'business-continuity' ? 'life-area-card' : undefined}
+              role="region"
+              aria-label={`Life Area: ${card.title}, Status: ${card.statusText}`}
             >
               <CardHeader className="pb-4">
                 <div className="flex items-center justify-between">
@@ -229,50 +231,17 @@ export const LifeInventoryDashboard: React.FC = () => {
         })}
       </div>
 
-      {/* Quick Actions Section */}
-      <Card className="mb-8" id="quick-actions-section">
-        <CardHeader>
-          <CardTitle className="text-xl">Quick Actions</CardTitle>
-          <CardDescription>
-            Common tasks to help you get started with your life inventory
-          </CardDescription>
-        </CardHeader>
-        <CardContent>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <Button variant="outline" className="h-auto p-4 flex flex-col items-center space-y-2">
-              <Shield className="w-6 h-6" />
-              <span className="font-medium">Review Security</span>
-              <span className="text-xs text-muted-foreground">Check your current setup</span>
-            </Button>
-            
-            <Button variant="outline" className="h-auto p-4 flex flex-col items-center space-y-2">
-              <Users className="w-6 h-6" />
-              <span className="font-medium">Invite Guardians</span>
-              <span className="text-xs text-muted-foreground">Add trusted people</span>
-            </Button>
-            
-            <Button variant="outline" className="h-auto p-4 flex flex-col items-center space-y-2">
-              <Target className="w-6 h-6" />
-              <span className="text-xs text-muted-foreground">Define your priorities</span>
-            </Button>
-          </div>
-        </CardContent>
-      </Card>
+      {/* Removed Quick Actions temporarily to reduce cognitive load */}
 
       {/* Welcome Message */}
       <Card className="bg-gradient-to-r from-primary/5 to-primary/10 border-primary/20">
         <CardContent className="p-6">
-          <h3 className="text-lg font-semibold text-card-foreground mb-2">
-            Welcome to Your Personalized Life Inventory
-          </h3>
-          <p className="text-muted-foreground mb-4">
-            You've taken the first step toward securing your legacy. Each card above represents an area of your life 
-            that we can help you protect and organize. Start with your Mission card to begin building your plan.
-          </p>
+          <h3 className="text-lg font-semibold text-card-foreground mb-2">Calm, clear next steps</h3>
+          <p className="text-muted-foreground mb-4">Each card above is part of your Treasure Box. Start where the app recommends — one gentle step at a time.</p>
           <div className="flex space-x-3">
             <Button size="sm">
               <Target className="w-4 h-4 mr-2" />
-              Start with Mission
+              Open Your Core Wish
             </Button>
             <Button variant="outline" size="sm">
               <Shield className="w-4 h-4 mr-2" />

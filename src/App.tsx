@@ -13,7 +13,7 @@ import PersonalizedOnboarding from "@/pages/PersonalizedOnboardingSimple";
 import { SignInPage } from "@/pages/auth/SignInPage";
 import { SignUpPage } from "@/pages/auth/SignUpPage";
 import { OnboardingIntroPage } from "@/pages/onboarding/OnboardingIntroPage";
-import { EmotionalOnboarding } from "@/pages/onboarding/EmotionalOnboarding";
+import { OnboardingConversation } from "@/pages/onboarding/OnboardingConversation";
 import { WillGeneratorPage } from "@/pages/will/WillGeneratorPage";
 import { NextStepsPage } from "@/pages/will/NextStepsPage";
 
@@ -99,7 +99,7 @@ const RouterShell: React.FC = () => {
           } />
           <Route path="/onboarding/wizard" element={
             <SignedIn>
-              <EmotionalOnboarding />
+              <OnboardingConversation />
             </SignedIn>
           } />
           <Route path="/onboarding" element={

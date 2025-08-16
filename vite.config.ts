@@ -75,12 +75,12 @@ export default defineConfig(({ mode }) => ({
           "vendor-auth": ["@clerk/clerk-react"],
           "vendor-ai": ["openai", "tesseract.js"],
           "vendor-supabase": ["@supabase/supabase-js", "@supabase/ssr"],
-          "vendor-i18n": [
-            "i18next",
-            "react-i18next",
-            "i18next-browser-languagedetector",
-            "i18next-http-backend",
-          ],
+          // vendor-i18n: [
+          //   "i18next",
+          //   "react-i18next",
+          //   "i18next-browser-languagedetector",
+          //   "i18next-http-backend",
+          // ],
         },
       },
     },

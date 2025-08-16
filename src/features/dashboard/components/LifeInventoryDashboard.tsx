@@ -21,7 +21,8 @@ import {
   Circle,
   Info,
   Sparkles,
-  Building2
+  Building2,
+  ArrowRightCircle
 } from 'lucide-react';
 import { MicroTaskEngine } from '@/features/tasks/MicroTaskEngine';
 import { ScenarioPlanner } from '@/features/scenarios/components/ScenarioPlanner';
@@ -56,6 +57,7 @@ export function LifeInventoryDashboard() {
   const [lifeAreas, setLifeAreas] = useState<LifeArea[]>([]);
   const [isPlannerOpen, setIsPlannerOpen] = useState(false);
   const [selectedScenario, setSelectedScenario] = useState<'incapacity' | 'sudden-death' | 'accident' | 'illness'>('sudden-death');
+  const [hasMounted, setHasMounted] = useState(false);
   
   // Get all task progress from Clerk (synced across devices)
   const { allProgress, isLoading: isProgressLoading } = useAllTaskProgress();
@@ -65,6 +67,7 @@ export function LifeInventoryDashboard() {
   const onboardingData = user?.publicMetadata?.onboardingData as any;
 
   useEffect(() => {
+    setHasMounted(true);
     // Initialize life areas based on user's onboarding answers
     const areas: LifeArea[] = [];
 
@@ -205,6 +208,17 @@ export function LifeInventoryDashboard() {
     localStorage.setItem(`secure_${selectedTaskSequence?.id}`, encryptedData);
   };
 
+  const humanStatus = (status: string) => {
+    switch (status) {
+      case 'complete':
+        return 'Secured';
+      case 'critical':
+        return 'Immediate Priority';
+      default:
+        return 'Next Step Recommended';
+    }
+  };
+
   const getStatusIcon = (status: string) => {
     switch (status) {
       case 'complete':
@@ -212,18 +226,18 @@ export function LifeInventoryDashboard() {
       case 'critical':
         return <AlertTriangle className="w-5 h-5 text-red-600" />;
       default:
-        return <Circle className="w-5 h-5 text-amber-600" />;
+        return <ArrowRightCircle className="w-5 h-5 text-amber-600" />;
     }
   };
 
   const getStatusBadge = (status: string) => {
     switch (status) {
       case 'complete':
-        return <Badge className="bg-green-100 text-green-800 border-green-200">Complete</Badge>;
+        return <Badge className="bg-green-100 text-green-800 border-green-200">Secured</Badge>;
       case 'critical':
-        return <Badge className="bg-red-100 text-red-800 border-red-200">Critical</Badge>;
+        return <Badge className="bg-red-100 text-red-800 border-red-200">Immediate Priority</Badge>;
       default:
-        return <Badge className="bg-amber-100 text-amber-800 border-amber-200">Needs Attention</Badge>;
+        return <Badge className="bg-amber-100 text-amber-800 border-amber-200">Next Step Recommended</Badge>;
     }
   };
 
@@ -267,17 +281,57 @@ export function LifeInventoryDashboard() {
     );
   }
 
+  const userName = user?.firstName || user?.emailAddresses?.[0]?.emailAddress?.split('@')[0] || '';
+
+  // Determine Next Best Action (NBA)
+  const nextBestArea = lifeAreas.find(a => a.status === 'critical') || lifeAreas.find(a => a.status === 'needs_attention');
+
+  // Map life areas to task sequences (extensible)
+  const areaIdToSequence: Record<string, TaskSequence | undefined> = {
+    'financial-security': addBankAccountSequence,
+    // 'family-protection': appointGuardianSequence, // future
+    // 'home-property': addPropertySequence, // future
+    // 'business-continuity': businessContinuitySequence, // future
+  };
+
+  const nextBestSequence: TaskSequence | undefined = nextBestArea
+    ? nextBestArea.taskSequence || areaIdToSequence[nextBestArea.id]
+    : undefined;
+
   return (
     <div className="space-y-6 p-6">
-      {/* Header with empathetic message */}
-      <div className="space-y-4">
+      {/* Header reframed to match onboarding tone */}
+      <div className="space-y-2">
         <h1 className="text-3xl font-bold tracking-tight">
-          Your Life Inventory
+          {userName ? `Your Treasure Box, ${userName}` : 'Your Treasure Box'}
         </h1>
-        <p className="text-muted-foreground text-lg">
-          Secure what matters most, one step at a time
-        </p>
+        <p className="text-muted-foreground text-lg">An overview of your legacy — calm, clear, and personal.</p>
       </div>
+
+      {/* Next Best Action (aria-live for SR announcement) */}
+      {nextBestArea && (
+        <div
+          className="rounded-xl border bg-muted/40 p-4 md:p-5 flex items-start gap-3"
+          aria-live="polite"
+          role="status"
+        >
+          <div className="mt-0.5">{getStatusIcon(nextBestArea.status)}</div>
+          <div className="flex-1">
+            <div className="text-sm text-muted-foreground">Next Best Step</div>
+            <div className="text-base md:text-lg text-card-foreground">
+              {nextBestArea.title} is an <span className="font-medium">{humanStatus(nextBestArea.status)}</span>. Let’s secure it now.
+            </div>
+          </div>
+          {nextBestSequence && (
+            <Button
+              onClick={() => handleStartTask(nextBestSequence!)}
+              className="ml-auto"
+            >
+              Start this 5-minute step
+            </Button>
+          )}
+        </div>
+      )}
 
       {/* Status Overview (not gamified, just informative) */}
       {criticalCount > 0 && (
@@ -357,15 +411,23 @@ export function LifeInventoryDashboard() {
 
       {/* Life Areas Grid */}
       <div className="grid gap-6 md:grid-cols-2">
-        {lifeAreas.map((area) => (
+        {lifeAreas.map((area, i) => (
           <Card 
             key={area.id}
             id={`life-area-${area.id}`}
             className={cn(
-              "transition-all duration-300 hover:shadow-lg",
+              "transition-all duration-300 hover:shadow-lg hover:scale-[1.02] focus-within:ring-2 focus-within:ring-primary/40",
               area.status === 'critical' && "border-red-200 dark:border-red-800",
               area.status === 'complete' && "border-green-200 dark:border-green-800"
             )}
+            role="region"
+            aria-label={`Life Area: ${area.title}, Status: ${humanStatus(area.status)}`}
+            style={{
+              opacity: hasMounted ? 1 : 0,
+              transform: hasMounted ? 'none' : 'translateY(12px)',
+              transition: 'opacity 500ms ease, transform 500ms ease',
+              transitionDelay: `${i * 60}ms`
+            }}
           >
             <CardHeader>
               <div className="flex items-start justify-between">
@@ -430,7 +492,7 @@ export function LifeInventoryDashboard() {
                   )}
                 >
                   <Sparkles className="w-4 h-4 mr-2" />
-                  {area.nextAction}
+                  View & Secure
                   <ChevronRight className="w-4 h-4 ml-auto" />
                 </Button>
               )}

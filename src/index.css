@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Georgia:ital@1&display=swap');
+@import 'shepherd.js/dist/css/shepherd.css';
+@import './styles/shepherd-theme.css';
 
 @tailwind base;
 @tailwind components;
@@ -99,45 +101,115 @@
   
   /* Typography base */
   h1, h2, h3, h4, h5, h6 {
-    @apply font-sans font-semibold tracking-tight;
+    @apply font-semibold tracking-tight;
   }
   
   h1 {
-    @apply text-4xl lg:text-5xl;
+    @apply text-4xl md:text-5xl;
   }
   
   h2 {
-    @apply text-3xl lg:text-4xl;
+    @apply text-3xl md:text-4xl;
   }
   
   h3 {
-    @apply text-2xl lg:text-3xl;
+    @apply text-2xl md:text-3xl;
   }
   
   h4 {
-    @apply text-xl lg:text-2xl;
+    @apply text-xl md:text-2xl;
   }
   
   h5 {
-    @apply text-lg lg:text-xl;
+    @apply text-lg md:text-xl;
   }
   
   h6 {
-    @apply text-base lg:text-lg;
-  }
-  
-  p {
-    @apply leading-7;
-  }
-  
-  /* Smooth transitions */
-  * {
-    @apply transition-colors duration-300;
+    @apply text-base md:text-lg;
   }
 }
 
 @layer components {
-  /* Komponenty budú React komponenty, nie CSS triedy - podľa filozofie Tailwind/Shadcn */
+  /* Premium Button Styles */
+  .btn-primary {
+    @apply bg-primary text-primary-foreground hover:bg-primary/90 px-6 py-3 rounded-lg font-medium transition-all duration-200 shadow-lg hover:shadow-xl;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary text-secondary-foreground hover:bg-secondary/90 px-6 py-3 rounded-lg font-medium transition-all duration-200 border border-border;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground px-6 py-3 rounded-lg font-medium transition-all duration-200;
+  }
+  
+  /* Premium Card Styles */
+  .card-premium {
+    @apply bg-card border border-border rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6;
+  }
+  
+  /* Premium Form Styles */
+  .input-premium {
+    @apply bg-input border border-border rounded-lg px-4 py-3 focus:ring-2 focus:ring-ring focus:border-transparent transition-all duration-200;
+  }
+  
+  /* Premium Navigation */
+  .nav-premium {
+    @apply bg-card/80 backdrop-blur-md border-b border-border sticky top-0 z-50;
+  }
+}
+
+@layer utilities {
+  /* Custom scrollbar */
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--muted)) transparent;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: hsl(var(--muted));
+    border-radius: 3px;
+  }
+  
+  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--muted-foreground));
+  }
+  
+  /* Premium animations */
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.3s ease-out;
+  }
+  
+  .animate-scale-in {
+    animation: scaleIn 0.2s ease-out;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
 }
 
 /* Hide E2E-specific elements ONLY during visual regression tests */
@@ -148,7 +220,3 @@ body[data-visual-regression="true"] #e2e-upload-progress,
 body[data-visual-regression="true"] .e2e-only {
   display: none !important;
 }
-
-/* Shepherd.js CSS */
-@import 'shepherd.js/dist/css/shepherd.css';
-@import './styles/shepherd-theme.css';
