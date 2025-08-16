@@ -18,8 +18,8 @@ import {
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { DocumentRow } from './DocumentRow';
 import { Document, DocumentCategory } from '@/types/documents';
-import { getDocuments, deleteDocument } from '@/services/documentService';
 import { toast } from 'sonner';
+import { useDocuments, useDocumentLoading, useDocumentStore } from '@/stores/documentStore';
 import { 
   Search, 
   Filter, 
@@ -36,38 +36,24 @@ import { Skeleton } from '@/components/ui/skeleton';
 
 interface DocumentListProps {
   onEdit: (document: Document) => void;
-  refreshTrigger?: number;
 }
 
-export function DocumentList({ onEdit, refreshTrigger }: DocumentListProps) {
-  const [documents, setDocuments] = useState<Document[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
+export function DocumentList({ onEdit }: DocumentListProps) {
+  // Use Zustand store instead of local state
+  const documents = useDocuments();
+  const isLoading = useDocumentLoading();
+  const { fetchDocuments, deleteDocument } = useDocumentStore();
+  
   const [searchTerm, setSearchTerm] = useState('');
   const [filterCategory, setFilterCategory] = useState<DocumentCategory | 'all'>('all');
   const [sortBy, setSortBy] = useState<'name' | 'date' | 'expiry'>('date');
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc');
   const [deleteDialog, setDeleteDialog] = useState<{ isOpen: boolean; document: Document | null }>({ isOpen: false, document: null });
 
-  // Load documents on mount and when refreshTrigger changes
+  // Load documents on mount
   useEffect(() => {
-    loadDocuments();
-  }, [refreshTrigger]);
-
-  const loadDocuments = async () => {
-    setIsLoading(true);
-    try {
-      const loadedDocuments = await getDocuments();
-      setDocuments(loadedDocuments);
-    } catch (error) {
-      console.error('Error loading documents:', error);
-      const message = error instanceof Error 
-        ? error.message 
-        : 'Failed to load documents. Please try again.';
-      toast.error(message);
-    } finally {
-      setIsLoading(false);
-    }
-  };
+    fetchDocuments();
+  }, [fetchDocuments]);
 
   // Filter and sort documents
   const filteredAndSortedDocuments = useMemo(() => {
@@ -132,13 +118,9 @@ export function DocumentList({ onEdit, refreshTrigger }: DocumentListProps) {
     if (!deleteDialog.document) return;
 
     try {
-      const success = await deleteDocument(deleteDialog.document.id);
-      if (success) {
-        toast.success('Document deleted successfully');
-        await loadDocuments();
-      } else {
-        toast.error('Failed to delete document');
-      }
+      await deleteDocument(deleteDialog.document.id);
+      toast.success('Document deleted successfully');
+      // Store automatically updates the state, no need to reload
     } catch (error) {
       console.error('Error deleting document:', error);
       const message = error instanceof Error 

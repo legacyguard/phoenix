@@ -1,31 +1,63 @@
-import "@testing-library/jest-dom";
-import { vi } from "vitest";
-import { mockSupabaseClient } from "./mocks/supabase";
+import '@testing-library/jest-dom';
+import { vi } from 'vitest';
 
-// Mock environment variables for tests
-vi.stubEnv("VITE_SUPABASE_URL", "https://test.supabase.co");
-vi.stubEnv("VITE_SUPABASE_ANON_KEY", "test-anon-key");
-vi.stubEnv("NEXT_PUBLIC_SUPABASE_URL", "https://test.supabase.co");
-vi.stubEnv("SUPABASE_SERVICE_ROLE_KEY", "test-service-role-key");
-vi.stubEnv("VITE_CLERK_PUBLISHABLE_KEY", "test-clerk-key");
-vi.stubEnv("VITE_APP_URL", "http://localhost:3000");
-vi.stubEnv("VITE_ENCRYPTION_KEY", "test-encryption-key");
-vi.stubEnv("VITE_OPENAI_API_KEY", "test-openai-key");
-vi.stubEnv("VITE_PBKDF2_ITER", "100000");
+// Mock pre react-router-dom
+vi.mock('react-router-dom', () => ({
+  ...vi.importActual('react-router-dom'),
+  BrowserRouter: ({ children }: any) => {
+    const { createElement } = require('react');
+    return createElement('div', { 'data-testid': 'browser-router' }, children);
+  },
+  useNavigate: () => vi.fn(),
+  useLocation: () => ({ pathname: '/', search: '', hash: '', state: null }),
+  useParams: () => ({}),
+  useSearchParams: () => [new URLSearchParams(), vi.fn()],
+  Link: ({ children, to, ...props }: any) => {
+    const { createElement } = require('react');
+    return createElement('a', { href: to, ...props }, children);
+  },
+  NavLink: ({ children, to, ...props }: any) => {
+    const { createElement } = require('react');
+    return createElement('a', { href: to, ...props }, children);
+  },
+}));
 
-// Provide WebCrypto in test env
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const nodeCrypto = require('node:crypto');
-// Ensure WebCrypto in both global and window scopes
-// @ts-expect-error
-globalThis.crypto = nodeCrypto.webcrypto;
-// @ts-expect-error
-if (typeof window !== 'undefined') { (window as any).crypto = nodeCrypto.webcrypto; }
+// Mock pre Clerk
+vi.mock('@clerk/clerk-react', () => ({
+  useAuth: () => ({
+    isSignedIn: true,
+    userId: 'test-user-id',
+    sessionId: 'test-session-id',
+  }),
+  useUser: () => ({
+    id: 'test-user-id',
+    emailAddresses: [{ emailAddress: 'test@example.com' }],
+    firstName: 'Test',
+    lastName: 'User',
+    imageUrl: 'https://example.com/avatar.jpg',
+  }),
+  ClerkProvider: ({ children }: any) => {
+    const { createElement } = require('react');
+    return createElement('div', { 'data-testid': 'clerk-provider' }, children);
+  },
+  SignIn: () => {
+    const { createElement } = require('react');
+    return createElement('div', { 'data-testid': 'sign-in' }, 'Sign In');
+  },
+  SignUp: () => {
+    const { createElement } = require('react');
+    return createElement('div', { 'data-testid': 'sign-up' }, 'Sign Up');
+  },
+  UserButton: () => {
+    const { createElement } = require('react');
+    return createElement('div', { 'data-testid': 'user-button' }, 'User Button');
+  },
+}));
 
-// Mock window.matchMedia
-Object.defineProperty(window, "matchMedia", {
+// Mock pre matchMedia (potrebné pre responsive komponenty)
+Object.defineProperty(window, 'matchMedia', {
   writable: true,
-  value: vi.fn().mockImplementation((query) => ({
+  value: vi.fn().mockImplementation(query => ({
     matches: false,
     media: query,
     onchange: null,
@@ -37,48 +69,40 @@ Object.defineProperty(window, "matchMedia", {
   })),
 });
 
-// Mock IntersectionObserver
-global.IntersectionObserver = vi.fn().mockImplementation(() => ({
-  observe: vi.fn(),
-  unobserve: vi.fn(),
-  disconnect: vi.fn(),
-}));
-
-// Mock ResizeObserver
+// Mock pre ResizeObserver
 global.ResizeObserver = vi.fn().mockImplementation(() => ({
   observe: vi.fn(),
   unobserve: vi.fn(),
   disconnect: vi.fn(),
 }));
 
-// Suppress console errors during tests (can be removed for debugging)
+// Mock pre IntersectionObserver
+global.IntersectionObserver = vi.fn().mockImplementation(() => ({
+  observe: vi.fn(),
+  unobserve: vi.fn(),
+  disconnect: vi.fn(),
+}));
+
+// Mock pre window.scrollTo
+Object.defineProperty(window, 'scrollTo', {
+  writable: true,
+  value: vi.fn(),
+});
+
+// Mock pre console.error aby sa nezobrazovali warning-y v testoch
 const originalError = console.error;
-const originalWarn = console.warn;
 beforeAll(() => {
-  console.error = (...args: unknown[]) => {
+  console.error = (...args: any[]) => {
     if (
-      typeof args[0] === "string" &&
-      (args[0].includes("Warning: ReactDOM.render") ||
-        args[0].includes("Could not parse CSS") ||
-        args[0].includes("act()"))
+      typeof args[0] === 'string' &&
+      args[0].includes('Warning: ReactDOM.render is no longer supported')
     ) {
       return;
     }
     originalError.call(console, ...args);
   };
-
-  console.warn = (...args: unknown[]) => {
-    if (
-      typeof args[0] === "string" &&
-      (args[0].includes("act()") || args[0].includes("was not wrapped in act"))
-    ) {
-      return;
-    }
-    originalWarn.call(console, ...args);
-  };
 });
 
 afterAll(() => {
   console.error = originalError;
-  console.warn = originalWarn;
 });

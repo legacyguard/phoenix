@@ -6,12 +6,13 @@ import { Person } from '@/types/people';
 import { PeopleList } from '@/features/family-circle/components/PeopleList';
 import { AddPersonDialog } from '@/features/family-circle/components/AddPersonDialog';
 import { EditPersonDialog } from '@/features/family-circle/components/EditPersonDialog';
+import { usePeopleStore } from '@/stores/peopleStore';
 
 export function MyLovedOnesPage() {
   const [isAddDialogOpen, setIsAddDialogOpen] = useState(false);
   const [isEditDialogOpen, setIsEditDialogOpen] = useState(false);
   const [selectedPersonForEdit, setSelectedPersonForEdit] = useState<Person | null>(null);
-  const [refreshTrigger, setRefreshTrigger] = useState(0);
+  const { fetchPeople } = usePeopleStore();
 
   const handleAddPerson = () => {
     setIsAddDialogOpen(true);
@@ -23,18 +24,18 @@ export function MyLovedOnesPage() {
   };
 
   const handlePersonAdded = () => {
-    setRefreshTrigger(prev => prev + 1);
+    fetchPeople(); // Refresh people from store
     setIsAddDialogOpen(false);
   };
 
   const handlePersonUpdated = () => {
-    setRefreshTrigger(prev => prev + 1);
+    fetchPeople(); // Refresh people from store
     setIsEditDialogOpen(false);
     setSelectedPersonForEdit(null);
   };
 
   const handlePersonDeleted = () => {
-    setRefreshTrigger(prev => prev + 1);
+    fetchPeople(); // Refresh people from store
     setIsEditDialogOpen(false);
     setSelectedPersonForEdit(null);
   };
@@ -76,7 +77,6 @@ export function MyLovedOnesPage() {
       <div className="space-y-6">
         <PeopleList 
           onEditPerson={handleEditPerson}
-          refreshTrigger={refreshTrigger}
         />
       </div>
 

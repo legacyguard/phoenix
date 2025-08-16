@@ -42,8 +42,8 @@ import {
   AlertTriangle
 } from 'lucide-react';
 import { Person, PersonFormData, PersonRelationship, PersonRole } from '@/types/people';
-import { updatePerson, deletePerson } from '@/services/peopleService';
 import { toast } from 'sonner';
+import { usePeopleStore } from '@/stores/peopleStore';
 
 interface EditPersonDialogProps {
   isOpen: boolean;
@@ -63,6 +63,7 @@ export function EditPersonDialog({
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isDeleting, setIsDeleting] = useState(false);
   const [showDeleteDialog, setShowDeleteDialog] = useState(false);
+  const { updatePerson, deletePerson } = usePeopleStore();
   
   const [formData, setFormData] = useState<PersonFormData>({
     fullName: '',

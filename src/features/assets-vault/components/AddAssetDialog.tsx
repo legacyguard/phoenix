@@ -35,8 +35,8 @@ import {
   Loader2
 } from 'lucide-react';
 import { AssetCategory, AssetFormData } from '@/types/assets';
-import { createAsset } from '@/services/assetService';
 import { toast } from 'sonner';
+import { useAssetStore } from '@/stores/assetStore';
 
 interface AddAssetDialogProps {
   isOpen: boolean;
@@ -48,6 +48,7 @@ export function AddAssetDialog({ isOpen, onClose, onAssetAdded }: AddAssetDialog
   const [step, setStep] = useState(1);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [trustedPerson, setTrustedPerson] = useState('');
+  const { addAsset } = useAssetStore();
   
   const [formData, setFormData] = useState<AssetFormData>({
     name: '',
@@ -95,7 +96,7 @@ export function AddAssetDialog({ isOpen, onClose, onAssetAdded }: AddAssetDialog
 
     setIsSubmitting(true);
     try {
-      await createAsset(formData);
+      await addAsset(formData);
       toast.success('Possession added successfully');
       onAssetAdded();
       handleClose();

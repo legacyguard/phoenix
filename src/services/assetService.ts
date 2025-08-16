@@ -1,11 +1,11 @@
 /**
- * Asset Service - manages asset data with localStorage
+ * Asset Service - manages asset data with centralized storage
  * Following WARP.md privacy-first principles
  */
 
 import { Asset, AssetFormData, AssetStatus } from '@/types/assets';
-
-const STORAGE_KEY = 'legacyguard_assets';
+import { storageService } from './storageService';
+import { storageKeys } from '@/config/storageKeys';
 
 // Mock initial data for demo
 const mockAssets: Asset[] = [
@@ -58,11 +58,11 @@ const mockAssets: Asset[] = [
   }
 ];
 
-// Initialize localStorage with mock data if empty
+// Initialize storage with mock data if empty
 const initializeStorage = () => {
-  const existing = localStorage.getItem(STORAGE_KEY);
+  const existing = storageService.get<Asset[]>(storageKeys.assets);
   if (!existing) {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(mockAssets));
+    storageService.set(storageKeys.assets, mockAssets);
   }
 };
 
@@ -95,8 +95,7 @@ export const getAssets = async (): Promise<Asset[]> => {
   initializeStorage();
   
   try {
-    const data = localStorage.getItem(STORAGE_KEY);
-    const assets = data ? JSON.parse(data) : [];
+    const assets = storageService.get<Asset[]>(storageKeys.assets) || [];
     
     // In a real app, filter by current user ID
     return assets;
@@ -126,7 +125,7 @@ export const createAsset = async (formData: AssetFormData): Promise<Asset> => {
   };
   
   const updatedAssets = [...assets, newAsset];
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(updatedAssets));
+  storageService.set(storageKeys.assets, updatedAssets);
   
   return newAsset;
 };
@@ -151,7 +150,7 @@ export const updateAsset = async (
   };
   
   assets[index] = updatedAsset;
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(assets));
+  storageService.set(storageKeys.assets, assets);
   
   return updatedAsset;
 };
@@ -165,7 +164,7 @@ export const deleteAsset = async (id: string): Promise<boolean> => {
     return false; // Asset not found
   }
   
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(filteredAssets));
+  storageService.set(storageKeys.assets, filteredAssets);
   return true;
 };
 

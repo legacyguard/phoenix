@@ -3,14 +3,15 @@ import { Button } from '@/components/ui/button';
 import { PlusCircle } from 'lucide-react';
 import { AssetList } from '@/features/assets-vault/components/AssetList';
 import { AddAssetDialog } from '@/features/assets-vault/components/AddAssetDialog';
+import { useAssetStore } from '@/stores/assetStore';
 
 export function MyPossessionsPage() {
   const [isAddDialogOpen, setIsAddDialogOpen] = useState(false);
-  const [refreshTrigger, setRefreshTrigger] = useState(0);
+  const { fetchAssets } = useAssetStore();
 
   const handleAssetAdded = () => {
-    // Trigger a refresh of the asset list
-    setRefreshTrigger(prev => prev + 1);
+    // Refresh assets from store (no need for local state trigger)
+    fetchAssets();
     setIsAddDialogOpen(false);
   };
 
@@ -49,7 +50,7 @@ export function MyPossessionsPage() {
         </div>
 
         {/* Asset List Component */}
-        <AssetList refreshTrigger={refreshTrigger} />
+        <AssetList />
 
         {/* Add Asset Dialog */}
         <AddAssetDialog 

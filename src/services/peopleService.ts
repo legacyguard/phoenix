@@ -1,18 +1,18 @@
 /**
- * People Service - manages loved ones data with localStorage
+ * People Service - manages loved ones data with centralized storage
  * Following WARP.md privacy-first principles
  */
 
 import { Person, PersonFormData } from '@/types/people';
 import { mockPeople } from '@/features/family-circle/data/mock-people';
+import { storageService } from './storageService';
+import { storageKeys } from '@/config/storageKeys';
 
-const STORAGE_KEY = 'legacyguard_people';
-
-// Initialize localStorage with mock data if empty
+// Initialize storage with mock data if empty
 const initializeStorage = () => {
-  const existing = localStorage.getItem(STORAGE_KEY);
+  const existing = storageService.get<Person[]>(storageKeys.people);
   if (!existing) {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(mockPeople));
+    storageService.set(storageKeys.people, mockPeople);
   }
 };
 
@@ -21,8 +21,7 @@ export const getPeople = async (): Promise<Person[]> => {
   initializeStorage();
   
   try {
-    const data = localStorage.getItem(STORAGE_KEY);
-    const people = data ? JSON.parse(data) : [];
+    const people = storageService.get<Person[]>(storageKeys.people) || [];
     
     // In a real app, filter by current user ID
     return people;
@@ -53,7 +52,7 @@ export const createPerson = async (formData: PersonFormData): Promise<Person> =>
   };
   
   const updatedPeople = [...people, newPerson];
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(updatedPeople));
+  storageService.set(storageKeys.people, updatedPeople);
   
   return newPerson;
 };
@@ -77,7 +76,7 @@ export const updatePerson = async (
   };
   
   people[index] = updatedPerson;
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(people));
+  storageService.set(storageKeys.people, people);
   
   return updatedPerson;
 };
@@ -91,7 +90,7 @@ export const deletePerson = async (id: string): Promise<boolean> => {
     return false; // Person not found
   }
   
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(filteredPeople));
+  storageService.set(storageKeys.people, filteredPeople);
   return true;
 };
 

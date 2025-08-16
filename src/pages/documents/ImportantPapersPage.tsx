@@ -4,6 +4,7 @@ import { Alert, AlertDescription } from '@/components/ui/alert';
 import { DocumentList } from '@/features/documents-vault/components/DocumentList';
 import { AddDocumentDialog } from '@/features/documents-vault/components/AddDocumentDialog';
 import { Document } from '@/types/documents';
+import { useDocumentStore } from '@/stores/documentStore';
 import {
   FileText,
   Upload,
@@ -15,12 +16,12 @@ import {
 
 export function ImportantPapersPage() {
   const [isAddDialogOpen, setIsAddDialogOpen] = useState(false);
-  const [refreshTrigger, setRefreshTrigger] = useState(0);
   const [selectedDocument, setSelectedDocument] = useState<Document | null>(null);
+  const { fetchDocuments } = useDocumentStore();
 
   const handleDocumentAdded = () => {
-    // Trigger a refresh of the document list
-    setRefreshTrigger(prev => prev + 1);
+    // Refresh documents from store
+    fetchDocuments();
   };
 
   const handleEditDocument = (document: Document) => {
@@ -118,7 +119,6 @@ export function ImportantPapersPage() {
       <div className="bg-card border rounded-lg p-6">
         <DocumentList 
           onEdit={handleEditDocument}
-          refreshTrigger={refreshTrigger}
         />
       </div>
 

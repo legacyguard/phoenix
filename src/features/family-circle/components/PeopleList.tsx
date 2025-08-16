@@ -23,20 +23,22 @@ import {
 } from 'lucide-react';
 import { Person, PersonRelationship } from '@/types/people';
 import { PersonCard } from './PersonCard';
-import { getPeople } from '@/services/peopleService';
+import { usePeople, usePeopleLoading, usePeopleStore } from '@/stores/peopleStore';
 
 interface PeopleListProps {
   onEditPerson: (person: Person) => void;
-  refreshTrigger?: number;
 }
 
 type FilterOption = 'all' | PersonRelationship | 'has-roles' | 'no-roles';
 type SortOption = 'name' | 'relationship' | 'recent';
 
-export function PeopleList({ onEditPerson, refreshTrigger }: PeopleListProps) {
-  const [people, setPeople] = useState<Person[]>([]);
+export function PeopleList({ onEditPerson }: PeopleListProps) {
+  // Use Zustand store instead of local state
+  const people = usePeople();
+  const isLoading = usePeopleLoading();
+  const { fetchPeople } = usePeopleStore();
+  
   const [filteredPeople, setFilteredPeople] = useState<Person[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState('');
   const [filterBy, setFilterBy] = useState<FilterOption>('all');
   const [sortBy, setSortBy] = useState<SortOption>('name');
@@ -46,23 +48,10 @@ export function PeopleList({ onEditPerson, refreshTrigger }: PeopleListProps) {
 
   // Load people
   useEffect(() => {
-    const loadPeople = async () => {
-      setIsLoading(true);
-      try {
-        const loadedPeople = await getPeople();
-        setPeople(loadedPeople);
-        setFilteredPeople(loadedPeople);
-      } catch (error) {
-        console.error('Error loading people:', error);
-      } finally {
-        setIsLoading(false);
-      }
-    };
+    fetchPeople();
+  }, [fetchPeople]);
 
-    loadPeople();
-  }, [refreshTrigger]);
-
-  // Apply filters and sorting
+  // Apply filters and sorting when people, search, filter, or sort changes
   useEffect(() => {
     let result = [...people];
 
@@ -93,10 +82,10 @@ export function PeopleList({ onEditPerson, refreshTrigger }: PeopleListProps) {
       switch (sortBy) {
         case 'name':
           return a.fullName.localeCompare(b.fullName);
-        case 'relationship':
-          return a.relationship.localeCompare(b.relationship);
         case 'recent':
           return new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime();
+        case 'relationship':
+          return a.relationship.localeCompare(b.relationship);
         default:
           return 0;
       }

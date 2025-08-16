@@ -20,7 +20,6 @@ import {
 } from '@/components/ui/select';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { DocumentFormData, DocumentCategory } from '@/types/documents';
-import { createDocument } from '@/services/documentService';
 import { toast } from 'sonner';
 import {
   Upload,
@@ -34,7 +33,10 @@ import {
   FileUp
 } from 'lucide-react';
 import { formatFileSize } from '@/services/documentService';
-import { useDialogStateWithFields } from '@/hooks/useDialogState';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { addDocumentSchema, AddDocumentData } from '@/lib/validators/documents';
+import { useDocumentStore } from '@/stores/documentStore';
 
 interface AddDocumentDialogProps {
   isOpen: boolean;
@@ -49,37 +51,34 @@ export function AddDocumentDialog({
 }: AddDocumentDialogProps) {
   const fileInputRef = useRef<HTMLInputElement>(null);
   const [selectedFile, setSelectedFile] = React.useState<File | null>(null);
+  const { addDocument } = useDocumentStore();
   
   const {
-    formData,
-    updateFormData,
-    handleInputChange,
-    isSubmitting,
-    setIsSubmitting,
-    handleClose: resetAndClose
-  } = useDialogStateWithFields<DocumentFormData>(
-    {
+    register,
+    handleSubmit,
+    formState: { errors, isSubmitting },
+    reset,
+    setValue,
+    watch
+  } = useForm<AddDocumentData>({
+    resolver: zodResolver(addDocumentSchema),
+    defaultValues: {
       name: '',
       category: 'personal',
       status: 'active'
-    },
-    onClose
-  );
+    }
+  });
+
+  const watchedName = watch('name');
 
   const handleFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (file) {
-      // Check file size (limit to 10MB)
-      if (file.size > 10 * 1024 * 1024) {
-        toast.error('File size must be less than 10MB');
-        return;
-      }
-
       setSelectedFile(file);
       // Auto-fill document name if empty
-      if (!formData.name) {
+      if (!watchedName) {
         const nameWithoutExtension = file.name.replace(/\.[^/.]+$/, '');
-        updateFormData({ name: nameWithoutExtension });
+        setValue('name', nameWithoutExtension);
       }
     }
   };
@@ -91,21 +90,14 @@ export function AddDocumentDialog({
     }
   };
 
-  const handleSubmit = async () => {
-    // Validate form
-    if (!formData.name.trim()) {
-      toast.error('Please provide a document name');
-      return;
-    }
-
+  const onSubmit = async (data: AddDocumentData) => {
     if (!selectedFile) {
       toast.error('Please select a file to upload');
       return;
     }
 
-    setIsSubmitting(true);
     try {
-      await createDocument(formData, selectedFile);
+      await addDocument(data, selectedFile);
       toast.success('Document uploaded successfully');
       onDocumentAdded();
       handleClose();
@@ -115,8 +107,6 @@ export function AddDocumentDialog({
         ? error.message 
         : 'Failed to upload document. Please try again.';
       toast.error(message);
-    } finally {
-      setIsSubmitting(false);
     }
   };
 
@@ -125,7 +115,8 @@ export function AddDocumentDialog({
     if (fileInputRef.current) {
       fileInputRef.current.value = '';
     }
-    resetAndClose();
+    reset();
+    onClose();
   };
 
   const categoryOptions: { value: DocumentCategory; label: string }[] = [
@@ -148,7 +139,7 @@ export function AddDocumentDialog({
           </SheetDescription>
         </SheetHeader>
 
-        <div className="grid gap-4 py-4">
+        <form onSubmit={handleSubmit(onSubmit)} className="grid gap-4 py-4">
           {/* File Upload */}
           <div className="space-y-2">
             <Label htmlFor="file">Document File *</Label>
@@ -201,19 +192,21 @@ export function AddDocumentDialog({
             <Input
               id="name"
               placeholder="e.g., Passport - John Doe"
-              value={formData.name}
-              onChange={handleInputChange('name')}
+              {...register('name')}
+              className={errors.name ? 'border-red-500' : ''}
             />
+            {errors.name && (
+              <p className="text-xs text-red-500">{errors.name.message}</p>
+            )}
           </div>
 
           {/* Category */}
           <div className="space-y-2">
             <Label htmlFor="category">Category *</Label>
             <Select
-              value={formData.category}
-              onValueChange={(value) => updateFormData({ category: value as DocumentCategory })}
+              onValueChange={(value) => setValue('category', value as DocumentCategory)}
             >
-              <SelectTrigger id="category">
+              <SelectTrigger id="category" className={errors.category ? 'border-red-500' : ''}>
                 <SelectValue placeholder="Select a category" />
               </SelectTrigger>
               <SelectContent>
@@ -224,6 +217,9 @@ export function AddDocumentDialog({
                 ))}
               </SelectContent>
             </Select>
+            {errors.category && (
+              <p className="text-xs text-red-500">{errors.category.message}</p>
+            )}
           </div>
 
           {/* Document Number */}
@@ -235,9 +231,12 @@ export function AddDocumentDialog({
             <Input
               id="documentNumber"
               placeholder="e.g., N12345678 (Passport number, policy number, etc.)"
-              value={formData.documentNumber || ''}
-              onChange={handleInputChange('documentNumber')}
+              {...register('documentNumber')}
+              className={errors.documentNumber ? 'border-red-500' : ''}
             />
+            {errors.documentNumber && (
+              <p className="text-xs text-red-500">{errors.documentNumber.message}</p>
+            )}
           </div>
 
           {/* Issuing Authority */}
@@ -249,9 +248,12 @@ export function AddDocumentDialog({
             <Input
               id="issuingAuthority"
               placeholder="e.g., U.S. Department of State"
-              value={formData.issuingAuthority || ''}
-              onChange={handleInputChange('issuingAuthority')}
+              {...register('issuingAuthority')}
+              className={errors.issuingAuthority ? 'border-red-500' : ''}
             />
+            {errors.issuingAuthority && (
+              <p className="text-xs text-red-500">{errors.issuingAuthority.message}</p>
+            )}
           </div>
 
           {/* Issue Date */}
@@ -264,9 +266,12 @@ export function AddDocumentDialog({
               <Input
                 id="issueDate"
                 type="date"
-                value={formData.issueDate || ''}
-                onChange={handleInputChange('issueDate')}
+                {...register('issueDate')}
+                className={errors.issueDate ? 'border-red-500' : ''}
               />
+              {errors.issueDate && (
+                <p className="text-xs text-red-500">{errors.issueDate.message}</p>
+              )}
             </div>
 
             {/* Expiry Date */}
@@ -278,9 +283,12 @@ export function AddDocumentDialog({
               <Input
                 id="expiryDate"
                 type="date"
-                value={formData.expiryDate || ''}
-                onChange={handleInputChange('expiryDate')}
+                {...register('expiryDate')}
+                className={errors.expiryDate ? 'border-red-500' : ''}
               />
+              {errors.expiryDate && (
+                <p className="text-xs text-red-500">{errors.expiryDate.message}</p>
+              )}
             </div>
           </div>
 
@@ -290,10 +298,13 @@ export function AddDocumentDialog({
             <Textarea
               id="notes"
               placeholder="Any additional information about this document..."
-              value={formData.notes || ''}
-              onChange={handleInputChange('notes')}
+              {...register('notes')}
               rows={3}
+              className={errors.notes ? 'border-red-500' : ''}
             />
+            {errors.notes && (
+              <p className="text-xs text-red-500">{errors.notes.message}</p>
+            )}
           </div>
 
           {/* Privacy Notice */}
@@ -304,7 +315,7 @@ export function AddDocumentDialog({
               trusted people will have access to this document.
             </AlertDescription>
           </Alert>
-        </div>
+        </form>
 
         <SheetFooter className="gap-2">
           <Button
@@ -315,8 +326,8 @@ export function AddDocumentDialog({
             Cancel
           </Button>
           <Button
-            onClick={handleSubmit}
-            disabled={isSubmitting || !selectedFile || !formData.name.trim()}
+            type="submit"
+            disabled={isSubmitting || !selectedFile}
           >
             {isSubmitting && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
             Upload Document

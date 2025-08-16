@@ -30,10 +30,10 @@ import {
   Calendar
 } from 'lucide-react';
 import { PersonFormData, PersonRelationship, PersonRole } from '@/types/people';
-import { createPerson } from '@/services/peopleService';
 import { toast } from 'sonner';
 import { PersonSchema } from '@/lib/validators/people';
 import { useFormValidation } from '@/hooks/useFormValidation';
+import { usePeopleStore } from '@/stores/peopleStore';
 
 interface AddPersonDialogProps {
   isOpen: boolean;
@@ -43,6 +43,7 @@ interface AddPersonDialogProps {
 
 export function AddPersonDialog({ isOpen, onClose, onPersonAdded }: AddPersonDialogProps) {
   const [isSubmitting, setIsSubmitting] = React.useState(false);
+  const { addPerson } = usePeopleStore();
   
   const {
     formData,
@@ -127,7 +128,7 @@ export function AddPersonDialog({ isOpen, onClose, onPersonAdded }: AddPersonDia
 
     setIsSubmitting(true);
     try {
-      await createPerson(formData);
+      await addPerson(formData);
       toast.success('Person added successfully');
       onPersonAdded();
       handleClose();

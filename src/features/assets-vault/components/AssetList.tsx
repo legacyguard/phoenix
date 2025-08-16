@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { AssetCard } from './AssetCard';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -14,18 +14,20 @@ import {
   Filter,
   LayoutGrid
 } from 'lucide-react';
-import { Asset, AssetCategory } from '@/types/assets';
-import { getAssets, updateAsset, deleteAsset } from '@/services/assetService';
+import { AssetCategory } from '@/types/assets';
 import { cn } from '@/lib/utils';
 import { usePersistedState } from '@/hooks/usePersistedState';
+import { 
+  useAssets, 
+  useAssetLoading,
+  useAssetStore
+} from '@/stores/assetStore';
 
-interface AssetListProps {
-  refreshTrigger?: number;
-}
-
-export function AssetList({ refreshTrigger }: AssetListProps) {
-  const [assets, setAssets] = useState<Asset[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
+export function AssetList() {
+  // Use Zustand store instead of local state
+  const assets = useAssets();
+  const isLoading = useAssetLoading();
+  const { fetchAssets, updateAsset, deleteAsset, getTotalAssetValue } = useAssetStore();
   
   // Use persisted state for category filter to remember user's selection
   const [selectedCategory, setSelectedCategory] = usePersistedState<AssetCategory | 'all'>(
@@ -48,20 +50,8 @@ export function AssetList({ refreshTrigger }: AssetListProps) {
 
   // Load assets
   useEffect(() => {
-    loadAssets();
-  }, [refreshTrigger]);
-
-  const loadAssets = async () => {
-    setIsLoading(true);
-    try {
-      const loadedAssets = await getAssets();
-      setAssets(loadedAssets);
-    } catch (error) {
-      console.error('Error loading assets:', error);
-    } finally {
-      setIsLoading(false);
-    }
-  };
+    fetchAssets();
+  }, [fetchAssets]);
 
   // Filter assets by category
   const filteredAssets = selectedCategory === 'all' 
@@ -77,21 +67,15 @@ export function AssetList({ refreshTrigger }: AssetListProps) {
   }));
 
   const handleUpdateAsset = async (assetId: string, updates: Partial<Asset>) => {
-    const updatedAsset = await updateAsset(assetId, updates);
-    if (updatedAsset) {
-      setAssets(prev => prev.map(a => a.id === assetId ? updatedAsset : a));
-    }
+    await updateAsset(assetId, updates);
   };
 
   const handleDeleteAsset = async (assetId: string) => {
-    const success = await deleteAsset(assetId);
-    if (success) {
-      setAssets(prev => prev.filter(a => a.id !== assetId));
-    }
+    await deleteAsset(assetId);
   };
 
-  // Calculate total value
-  const totalValue = assets.reduce((sum, asset) => sum + (asset.estimatedValue || 0), 0);
+  // Calculate values using store computed functions
+  const totalValue = getTotalAssetValue();
   const securedCount = assets.filter(a => a.status === 'secured').length;
   const needsAttentionCount = assets.filter(a => a.status === 'needs-attention').length;
 

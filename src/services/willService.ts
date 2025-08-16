@@ -1,18 +1,16 @@
 /**
- * Will Service - manages will data with localStorage
+ * Will Service - manages will data with centralized storage
  * Following WARP.md privacy-first principles
  */
 
 import { Will, WillWizardState } from '@/types/will';
-
-const STORAGE_KEY = 'legacyguard_wills';
-const DRAFT_KEY = 'legacyguard_will_draft';
+import { storageService } from './storageService';
+import { storageKeys } from '@/config/storageKeys';
 
 // Get all wills for the current user
 export const getWills = async (): Promise<Will[]> => {
   try {
-    const data = localStorage.getItem(STORAGE_KEY);
-    const wills = data ? JSON.parse(data) : [];
+    const wills = storageService.get<Will[]>(storageKeys.wills) || [];
     
     // In a real app, filter by current user ID
     return wills;
@@ -59,7 +57,7 @@ export const createWill = async (wizardState: WillWizardState): Promise<Will> =>
   };
   
   const updatedWills = [...wills, newWill];
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(updatedWills));
+  storageService.set(storageKeys.wills, updatedWills);
   
   // Clear the draft
   clearDraft();
@@ -86,7 +84,7 @@ export const updateWill = async (
   };
   
   wills[index] = updatedWill;
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(wills));
+  storageService.set(storageKeys.wills, wills);
   
   return updatedWill;
 };
@@ -100,7 +98,7 @@ export const deleteWill = async (id: string): Promise<boolean> => {
     return false; // Will not found
   }
   
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(filteredWills));
+  storageService.set(storageKeys.wills, filteredWills);
   return true;
 };
 
@@ -112,7 +110,7 @@ export const saveDraft = (wizardState: WillWizardState): void => {
       ...wizardState,
       completedSteps: Array.from(wizardState.completedSteps)
     };
-    localStorage.setItem(DRAFT_KEY, JSON.stringify(serializableState));
+    storageService.set(storageKeys.willDraft, serializableState);
   } catch (error) {
     console.error('Error saving draft:', error);
   }
@@ -121,10 +119,9 @@ export const saveDraft = (wizardState: WillWizardState): void => {
 // Load draft of wizard state
 export const loadDraft = (): WillWizardState | null => {
   try {
-    const data = localStorage.getItem(DRAFT_KEY);
-    if (!data) return null;
+    const parsed = storageService.get<WillWizardState>(storageKeys.willDraft);
+    if (!parsed) return null;
     
-    const parsed = JSON.parse(data);
     // Convert Array back to Set
     return {
       ...parsed,
@@ -138,7 +135,7 @@ export const loadDraft = (): WillWizardState | null => {
 
 // Clear draft
 export const clearDraft = (): void => {
-  localStorage.removeItem(DRAFT_KEY);
+  storageService.remove(storageKeys.willDraft);
 };
 
 // Calculate will completeness
