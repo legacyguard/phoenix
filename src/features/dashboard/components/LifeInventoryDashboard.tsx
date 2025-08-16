@@ -14,6 +14,7 @@ import {
   Users,
   Landmark,
   AlertTriangle,
+  AlertCircle,
   ChevronRight,
   Clock,
   CheckCircle2,
@@ -23,6 +24,7 @@ import {
   Building2
 } from 'lucide-react';
 import { MicroTaskEngine } from '@/features/tasks/MicroTaskEngine';
+import { ScenarioPlanner } from '@/features/scenarios/components/ScenarioPlanner';
 import { addBankAccountSequence } from '@/features/tasks/sequences';
 import { TaskSequence, TaskProgress } from '@/types/tasks';
 import { cn } from '@/lib/utils';
@@ -52,6 +54,8 @@ export function LifeInventoryDashboard() {
   const [isTaskEngineOpen, setIsTaskEngineOpen] = useState(false);
   const [selectedTaskSequence, setSelectedTaskSequence] = useState<TaskSequence | null>(null);
   const [lifeAreas, setLifeAreas] = useState<LifeArea[]>([]);
+  const [isPlannerOpen, setIsPlannerOpen] = useState(false);
+  const [selectedScenario, setSelectedScenario] = useState<'incapacity' | 'sudden-death' | 'accident' | 'illness'>('sudden-death');
   
   // Get all task progress from Clerk (synced across devices)
   const { allProgress, isLoading: isProgressLoading } = useAllTaskProgress();
@@ -262,6 +266,9 @@ export function LifeInventoryDashboard() {
       </div>
     );
   }
+
+  return (
+    <div className="space-y-6 p-6">
       {/* Header with empathetic message */}
       <div className="space-y-4">
         <h1 className="text-3xl font-bold tracking-tight">
@@ -282,6 +289,71 @@ export function LifeInventoryDashboard() {
           </AlertDescription>
         </Alert>
       )}
+
+      {/* Scenario Planning Section */}
+      <Card className="border-primary/20 bg-gradient-to-br from-primary/5 to-primary/10">
+        <CardHeader>
+          <div className="flex items-center gap-3">
+            <div className="p-2 rounded-lg bg-primary/10">
+              <AlertTriangle className="w-5 h-5 text-primary" />
+            </div>
+            <div>
+              <CardTitle>Life Scenario Planning</CardTitle>
+              <CardDescription>
+                Explore "What if..." scenarios to identify and address critical gaps
+              </CardDescription>
+            </div>
+          </div>
+        </CardHeader>
+        <CardContent>
+          <div className="grid gap-3 sm:grid-cols-2">
+            <Button
+              variant="outline"
+              onClick={() => {
+                setSelectedScenario('sudden-death');
+                setIsPlannerOpen(true);
+              }}
+              className="justify-start"
+            >
+              <Heart className="w-4 h-4 mr-2" />
+              What if something happens tomorrow?
+            </Button>
+            <Button
+              variant="outline"
+              onClick={() => {
+                setSelectedScenario('incapacity');
+                setIsPlannerOpen(true);
+              }}
+              className="justify-start"
+            >
+              <Shield className="w-4 h-4 mr-2" />
+              What if you're incapacitated?
+            </Button>
+            <Button
+              variant="outline"
+              onClick={() => {
+                setSelectedScenario('accident');
+                setIsPlannerOpen(true);
+              }}
+              className="justify-start"
+            >
+              <AlertCircle className="w-4 h-4 mr-2" />
+              What if you have an accident?
+            </Button>
+            <Button
+              variant="outline"
+              onClick={() => {
+                setSelectedScenario('illness');
+                setIsPlannerOpen(true);
+              }}
+              className="justify-start"
+            >
+              <FileText className="w-4 h-4 mr-2" />
+              What if you face illness?
+            </Button>
+          </div>
+        </CardContent>
+      </Card>
 
       {/* Life Areas Grid */}
       <div className="grid gap-6 md:grid-cols-2">
@@ -390,6 +462,18 @@ export function LifeInventoryDashboard() {
           onComplete={handleTaskComplete}
         />
       )}
+
+      {/* ScenarioPlanner Modal */}
+      <ScenarioPlanner
+        isOpen={isPlannerOpen}
+        onClose={() => setIsPlannerOpen(false)}
+        scenarioType={selectedScenario}
+        userLifeAreas={lifeAreas}
+        userProgress={{
+          trustedPeopleAdded: onboardingData?.trustedPeople ? true : false,
+          medicalInfoAdded: false // This would come from actual user data
+        }}
+      />
     </div>
   );
 }

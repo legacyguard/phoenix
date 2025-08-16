@@ -5,7 +5,7 @@ import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter }
 import { Button } from '@/components/ui/button';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Textarea } from '@/components/ui/textarea';
-import { AnimatedProgress } from '@/components/ui/AnimatedProgress';
+import { AnimatedProgress } from '@/components/ui';
 import { toast } from 'sonner';
 
 interface OnboardingData {

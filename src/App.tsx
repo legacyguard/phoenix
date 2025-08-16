@@ -14,6 +14,8 @@ import { SignInPage } from "@/pages/auth/SignInPage";
 import { SignUpPage } from "@/pages/auth/SignUpPage";
 import { OnboardingIntroPage } from "@/pages/onboarding/OnboardingIntroPage";
 import { EmotionalOnboarding } from "@/pages/onboarding/EmotionalOnboarding";
+import { WillGeneratorPage } from "@/pages/will/WillGeneratorPage";
+import { NextStepsPage } from "@/pages/will/NextStepsPage";
 
 // Components
 import ExecutorDashboard from "@/components/ExecutorDashboardSimple";
@@ -108,6 +110,8 @@ const RouterShell: React.FC = () => {
           
           <Route path="/trusted-circle" element={<TrustedCircle />} />
           <Route path="/generate-will" element={<GenerateWill />} />
+          <Route path="/will" element={<WillGeneratorPage />} />
+          <Route path="/will/next-steps" element={<NextStepsPage />} />
           <Route path="/inventory" element={<InventoryWizard />} />
           {/* <Route path="/playbook" element={<Playbook />} /> */}
           {/* <Route path="/document-analysis" element={<DocumentAnalysis />} /> */}

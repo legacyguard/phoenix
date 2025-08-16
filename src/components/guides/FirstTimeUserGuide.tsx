@@ -1,8 +1,9 @@
 import React, { useEffect, useRef } from 'react';
-import { ShepherdTour, ShepherdTourContext } from 'react-shepherd';
+import { ShepherdJourneyProvider, useShepherd } from 'react-shepherd';
 import Shepherd from 'shepherd.js';
 
-const FirstTimeUserGuide: React.FC = () => {
+const FirstTimeUserGuideContent: React.FC = () => {
+  const { shepherd } = useShepherd();
   const tourRef = useRef<Shepherd.Tour | null>(null);
 
   useEffect(() => {
@@ -184,22 +185,32 @@ const FirstTimeUserGuide: React.FC = () => {
     localStorage.setItem('firstTimeGuideShown', 'true');
   };
 
+  useEffect(() => {
+    if (shepherd) {
+      // Create the tour using the new API
+      const tour = new Shepherd.Tour({
+        ...tourOptions,
+        steps: steps
+      });
+
+      tour.on('complete', handleTourComplete);
+      tour.on('cancel', handleTourCancel);
+
+      tourRef.current = tour;
+    }
+  }, [shepherd]);
+
+  return null;
+};
+
+const FirstTimeUserGuide: React.FC = () => {
   return (
-    <ShepherdTour
+    <ShepherdJourneyProvider
       steps={steps}
       tourOptions={tourOptions}
-      onComplete={handleTourComplete}
-      onCancel={handleTourCancel}
     >
-      <ShepherdTourContext.Consumer>
-        {({ tourContext }) => {
-          if (tourContext) {
-            tourRef.current = tourContext;
-          }
-          return null;
-        }}
-      </ShepherdTourContext.Consumer>
-    </ShepherdTour>
+      <FirstTimeUserGuideContent />
+    </ShepherdJourneyProvider>
   );
 };
 

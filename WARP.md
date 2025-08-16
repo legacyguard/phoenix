@@ -283,8 +283,54 @@ Each domain includes:
 - **Family Hub**: Family preparedness scoring and emergency protocols
 - **Time Capsule**: Video messages for future viewing
 - **Legacy Letters**: Sealed messages for specific individuals
-- **Will Generator**: Step-by-step will creation with validation
+- **Will Generator (Core Feature - Complete)**: Step-by-step will creation with validation
+  - **Purpose**: Guide users through creating a legally-compliant will
+  - **Implementation**: Multi-step wizard with draft persistence
+  - **Steps**:
+    1. Personal Information (pre-filled from Clerk profile)
+    2. Executor Selection (primary and alternate)
+    3. Guardian Appointment (skippable if no minor children)
+    4. Specific Gifts (assign assets to beneficiaries)
+    5. Residual Estate (percentage-based distribution)
+    6. Final Wishes (burial preferences, messages)
+    7. Review & Generate (summary and PDF generation)
+  - **Features**:
+    - Integration with Trusted Circle for executor/beneficiary selection
+    - Asset linking from existing asset management
+    - Draft auto-save to prevent data loss
+    - Legal compliance validation
+    - PDF generation with formatted will document
+  - **Components**:
+    - `WillGeneratorPage.tsx`: Main hosting page with legal notices
+    - `WillWizard.tsx`: Step navigation and state management
+    - `Step[1-7]_*.tsx`: Individual step components
+    - `WillService.ts`: Data persistence and management
+  - **Privacy**: Will data stored locally, generated PDFs stay on device
 - **Asset Management**: Comprehensive asset tracking and allocation
+
+### My Loved Ones (Trusted Circle)
+- Central hub for managing important people (Guardians, Beneficiaries, etc.)
+- Assign roles and responsibilities
+- Securely store contact information
+
+### Important Papers (Core Feature - Complete)
+- **Purpose**: Centralized, secure storage for all important documents
+- **Implementation**: Full CRUD functionality with privacy-first design
+- **Features**:
+  - Document upload with drag-and-drop support
+  - Categorization (Legal, Financial, Medical, Property, Personal, Insurance, Other)
+  - Advanced metadata management (description, tags, expiry dates)
+  - Access control with viewer/editor permissions
+  - Search, filter, and sort capabilities
+  - Batch operations (download, delete)
+  - File size validation (max 10MB per document)
+  - Status indicators (Active, Expiring Soon, Expired, Archived)
+- **Components**:
+  - `ImportantPapersPage.tsx`: Main page with list and add dialog integration
+  - `DocumentList.tsx`: Sortable, filterable table view
+  - `AddDocumentDialog.tsx`: Upload dialog with validation
+  - `DocumentService.ts`: LocalStorage-based data management
+- **Privacy**: All documents stored locally in browser, no cloud upload by default
 
 ### Development Workflow
 
@@ -469,10 +515,74 @@ The project is developed in partnership with a law firm that:
 - **Family Communication Hub**: Coordinated access and updates
 - **Preparedness Score**: Family readiness assessment
 
+#### 2. My Possessions (`/assets`)
+Comprehensive asset management system integrated with will generation.
+
+**Features**:
+- Asset categorization (Financial, Real Estate, Personal Property, etc.)
+- Person assignment for access control
+- Status tracking (Active, At-Risk, Archived)
+- Integration with Will Generator for specific gifts
+
+#### 3. Important Papers (`/documents`)
+Secure document vault with metadata management.
+
+**Features**:
+- Document categorization and tagging
+- Expiration tracking
+- Secure file upload and storage
+- Quick search and filtering
+- Table layout with inline actions
+
 #### Smart Notifications
 - **Behavioral Nudges**: Intelligent reminders
 - **Context Awareness**: Time and situation-appropriate alerts
 - **Progressive Disclosure**: Gradual feature introduction
+
+### Completed Major Features
+
+#### 1. Will Generator (`/will`)
+A comprehensive step-by-step wizard for creating a legally compliant last will and testament.
+
+**Purpose**: Guide users through creating a basic will that meets legal requirements while utilizing data already in the system.
+
+**Implementation**:
+- **Location**: `src/features/will-generator/` and `src/pages/will/`
+- **Data Service**: `src/services/willService.ts` (localStorage-based with draft persistence)
+- **Types**: `src/types/will.ts`
+
+**Features**:
+- **7-Step Wizard Process**:
+  1. **Personal Information**: Confirm legal name and address (pre-filled from Clerk profile)
+  2. **Executor Appointment**: Select primary and alternate executors from trusted circle
+  3. **Guardian Selection**: Appoint guardians for minor children (skippable if no children)
+  4. **Specific Gifts**: Assign specific assets to beneficiaries
+  5. **Residual Estate**: Distribute remaining assets by percentage
+  6. **Final Wishes**: Optional funeral arrangements and special instructions
+  7. **Review & Generate**: Summary and will generation
+
+- **Auto-Save Draft**: Progress automatically saved to localStorage
+- **Smart Step Navigation**: Conditional step display based on user situation
+- **Data Integration**: Leverages existing People and Assets data
+- **Validation**: Ensures legal requirements are met (e.g., residual percentages = 100%)
+
+**Next Steps Page** (`/will/next-steps`):
+- Interactive checklist for making the will legally binding
+- Legal requirements by state
+- Witness and notarization guidance
+- Storage recommendations
+- Attorney consultation options
+
+**Privacy & Security**:
+- All will data stored locally by default
+- No automatic cloud sync without explicit user consent
+- Sensitive information never exposed in URLs or logs
+
+**Key Components**:
+- `WillWizard.tsx`: Main wizard orchestrator with progress tracking
+- `Step1_PersonalInfo.tsx` through `Step7_Review.tsx`: Individual step components
+- `NextStepsPage.tsx`: Post-generation guidance and checklist
+- `willService.ts`: Data persistence and validation logic
 
 ## Additional Resources
 
