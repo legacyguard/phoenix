@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Textarea } from '@/components/ui/textarea';
 import { AnimatedProgress } from '@/components/ui/AnimatedProgress';
-import { Heart, Users, Home, Building2, ArrowRight, ArrowLeft } from 'lucide-react';
+import { toast } from 'sonner';
 
 interface OnboardingData {
   // Step 1: Life Situation
@@ -27,7 +27,7 @@ const TOTAL_STEPS = 3;
 export const EmotionalOnboarding: React.FC = () => {
   const { user } = useUser();
   const navigate = useNavigate();
-  const [currentStep, setCurrentStep] = useState(1);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState<OnboardingData>({
     hasSpouse: false,
     hasChildren: false,
@@ -57,6 +57,7 @@ export const EmotionalOnboarding: React.FC = () => {
   };
 
   const handleSubmit = async () => {
+    setIsSubmitting(true);
     try {
       // Save onboarding data to user metadata
       await user?.update({
@@ -74,8 +75,9 @@ export const EmotionalOnboarding: React.FC = () => {
       navigate('/dashboard');
     } catch (error) {
       console.error('Error saving onboarding data:', error);
-      // Still redirect even if saving fails
-      navigate('/dashboard');
+      toast.error('An error occurred. Please try again.');
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -105,7 +107,7 @@ export const EmotionalOnboarding: React.FC = () => {
       </div>
 
       <div className="space-y-4">
-        <div className="flex items-center space-x-3 p-4 rounded-lg border hover:bg-muted/50 transition-colors">
+        <div className="flex items-center space-x-3 p-4 rounded-lg border hover:bg-muted/50 transition-all duration-300 ease-in-out">
           <Checkbox
             id="hasSpouse"
             checked={formData.hasSpouse}
@@ -116,7 +118,7 @@ export const EmotionalOnboarding: React.FC = () => {
           </label>
         </div>
 
-        <div className="flex items-center space-x-3 p-4 rounded-lg border hover:bg-muted/50 transition-colors">
+        <div className="flex items-center space-x-3 p-4 rounded-lg border hover:bg-muted/50 transition-all duration-300 ease-in-out">
           <Checkbox
             id="hasChildren"
             checked={formData.hasChildren}
@@ -127,7 +129,7 @@ export const EmotionalOnboarding: React.FC = () => {
           </label>
         </div>
 
-        <div className="flex items-center space-x-3 p-4 rounded-lg border hover:bg-muted/50 transition-colors">
+        <div className="flex items-center space-x-3 p-4 rounded-lg border hover:bg-muted/50 transition-all duration-300 ease-in-out">
           <Checkbox
             id="ownsBusiness"
             checked={formData.ownsBusiness}
@@ -138,7 +140,7 @@ export const EmotionalOnboarding: React.FC = () => {
           </label>
         </div>
 
-        <div className="flex items-center space-x-3 p-4 rounded-lg border hover:bg-muted/50 transition-colors">
+        <div className="flex items-center space-x-3 p-4 rounded-lg border hover:bg-muted/50 transition-all duration-300 ease-in-out">
           <Checkbox
             id="ownsRealEstate"
             checked={formData.ownsRealEstate}
@@ -241,29 +243,27 @@ export const EmotionalOnboarding: React.FC = () => {
               variant="outline"
               onClick={handlePrevious}
               disabled={currentStep === 1}
-              className="flex items-center space-x-2"
             >
-              <ArrowLeft className="w-4 h-4" />
+              <ArrowLeft className="w-4 h-4 mr-2" />
               <span>Previous</span>
             </Button>
 
             {currentStep === TOTAL_STEPS ? (
               <Button
                 onClick={handleSubmit}
-                disabled={!canProceed()}
-                className="flex items-center space-x-2"
+                disabled={!canProceed() || isSubmitting}
               >
+                {isSubmitting && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
                 <span>Complete Setup</span>
-                <Heart className="w-4 h-4" />
+                <Heart className="w-4 h-4 ml-2" />
               </Button>
             ) : (
               <Button
                 onClick={handleNext}
                 disabled={!canProceed()}
-                className="flex items-center space-x-2"
               >
                 <span>Next</span>
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
             )}
           </CardFooter>

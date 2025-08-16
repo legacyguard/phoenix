@@ -81,7 +81,7 @@ export const OnboardingIntroPage: React.FC = () => {
           <Button 
             onClick={handleStartOnboarding}
             size="lg"
-            className="px-8 py-6 text-lg font-semibold bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg hover:shadow-xl transition-all duration-300"
+            className="text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out"
           >
             <span>I'm ready. Let's start.</span>
             <ArrowRight className="w-5 h-5 ml-2" />

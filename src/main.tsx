@@ -1,7 +1,7 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 import { ClerkProvider } from "@clerk/clerk-react";
-import App from "./App.tsx";
+import { Toaster } from 'sonner';
 import "./index.css";
 
 
@@ -45,6 +45,7 @@ if (PUBLISHABLE_KEY && !isE2E && !hasBrowserClerkStub) {
         signUpUrl="/sign-up"
       >
         <App />
+        <Toaster />
       </ClerkProvider>
     </React.StrictMode>
   );
@@ -53,6 +54,7 @@ if (PUBLISHABLE_KEY && !isE2E && !hasBrowserClerkStub) {
   rootElement.render(
     <React.StrictMode>
       <App />
+      <Toaster />
     </React.StrictMode>
   );
 }

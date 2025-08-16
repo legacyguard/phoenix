@@ -26,6 +26,7 @@ import { MicroTaskEngine } from '@/features/tasks/MicroTaskEngine';
 import { addBankAccountSequence } from '@/features/tasks/sequences';
 import { TaskSequence, TaskProgress } from '@/types/tasks';
 import { cn } from '@/lib/utils';
+import { useAllTaskProgress } from '@/hooks/useTaskProgress';
 
 interface LifeItem {
   id: string;
@@ -51,6 +52,10 @@ export function LifeInventoryDashboard() {
   const [isTaskEngineOpen, setIsTaskEngineOpen] = useState(false);
   const [selectedTaskSequence, setSelectedTaskSequence] = useState<TaskSequence | null>(null);
   const [lifeAreas, setLifeAreas] = useState<LifeArea[]>([]);
+  
+  // Get all task progress from Clerk (synced across devices)
+  const { allProgress, isLoading: isProgressLoading } = useAllTaskProgress();
+  const isLoading = !isLoaded || isProgressLoading;
 
   // Get onboarding data from Clerk metadata
   const onboardingData = user?.publicMetadata?.onboardingData as any;
@@ -146,23 +151,26 @@ export function LifeInventoryDashboard() {
       scenario: 'Without proper legal documents, your wishes may not be honored during critical times.'
     });
 
-    // Check for saved progress
+    // Check for saved progress from Clerk metadata (synced across devices)
     areas.forEach(area => {
       if (area.taskSequence) {
-        const savedProgress = localStorage.getItem(`task_progress_${area.taskSequence.id}`);
-        if (savedProgress) {
-          const progress: TaskProgress = JSON.parse(savedProgress);
+        const progress = allProgress[area.taskSequence.id];
+        if (progress) {
           if (progress.completedAt) {
             // Mark first item as complete if sequence is done
             area.items[0].completed = true;
             area.status = area.items.every(item => item.completed) ? 'complete' : 'needs_attention';
+          } else if (progress.currentTaskIndex > 0) {
+            // Show as in progress if started but not completed
+            area.status = 'needs_attention';
+            // You could add additional UI to show "In Progress" badge
           }
         }
       }
     });
 
     setLifeAreas(areas);
-  }, [user, onboardingData]);
+  }, [user, onboardingData, allProgress]);
 
   const handleStartTask = (taskSequence: TaskSequence) => {
     setSelectedTaskSequence(taskSequence);
@@ -171,6 +179,7 @@ export function LifeInventoryDashboard() {
 
   const handleTaskComplete = (data: Record<string, any>) => {
     // Update the dashboard to reflect completion
+    // The progress is already synced to Clerk via MicroTaskEngine
     setLifeAreas(prev => prev.map(area => {
       if (area.taskSequence?.id === selectedTaskSequence?.id) {
         // Mark first item as complete
@@ -187,6 +196,7 @@ export function LifeInventoryDashboard() {
     }));
 
     // Save the collected data (following privacy-first architecture)
+    // This is separate from progress tracking - it's the actual sensitive data
     const encryptedData = btoa(JSON.stringify(data)); // Simple encoding for demo
     localStorage.setItem(`secure_${selectedTaskSequence?.id}`, encryptedData);
   };
@@ -216,8 +226,42 @@ export function LifeInventoryDashboard() {
   const criticalCount = lifeAreas.filter(area => area.status === 'critical').length;
   const completedCount = lifeAreas.filter(area => area.status === 'complete').length;
 
-  return (
-    <div className="space-y-6 p-6">
+  if (isLoading) {
+    return (
+      <div className="space-y-6 p-6">
+        <div className="space-y-4">
+          <Skeleton className="h-12 w-1/2" />
+          <Skeleton className="h-6 w-3/4" />
+        </div>
+        <div className="grid gap-6 md:grid-cols-2">
+          {[...Array(4)].map((_, i) => (
+            <Card key={i}>
+              <CardHeader>
+                <div className="flex items-start justify-between">
+                  <div className="flex items-center gap-3">
+                    <Skeleton className="h-12 w-12 rounded-lg" />
+                    <div>
+                      <Skeleton className="h-6 w-32" />
+                      <Skeleton className="h-4 w-24 mt-2" />
+                    </div>
+                  </div>
+                </div>
+                <Skeleton className="h-4 w-full mt-3" />
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="space-y-2">
+                  <Skeleton className="h-4 w-full" />
+                  <Skeleton className="h-4 w-full" />
+                  <Skeleton className="h-4 w-2/3" />
+                </div>
+                <Skeleton className="h-10 w-full" />
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </div>
+    );
+  }
       {/* Header with empathetic message */}
       <div className="space-y-4">
         <h1 className="text-3xl font-bold tracking-tight">
@@ -307,12 +351,13 @@ export function LifeInventoryDashboard() {
               {area.status !== 'complete' && area.taskSequence && (
                 <Button
                   onClick={() => handleStartTask(area.taskSequence!)}
+                  size="default"
                   className={cn(
-                    "w-full gap-2",
+                    "w-full",
                     area.status === 'critical' && "bg-red-600 hover:bg-red-700"
                   )}
                 >
-                  <Sparkles className="w-4 h-4" />
+                  <Sparkles className="w-4 h-4 mr-2" />
                   {area.nextAction}
                   <ChevronRight className="w-4 h-4 ml-auto" />
                 </Button>

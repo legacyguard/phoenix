@@ -23,32 +23,30 @@ import {
   Shield,
   Heart
 } from 'lucide-react';
-import { TaskSequence, MicroTask, TaskProgress } from '@/types/tasks';
+import { TaskSequence, MicroTask } from '@/types/tasks';
 import { cn } from '@/lib/utils';
 import { toast } from 'sonner';
+import { useTaskProgress } from '@/hooks/useTaskProgress';
 
 interface MicroTaskEngineProps {
   taskSequence: TaskSequence;
   isOpen: boolean;
   onClose: () => void;
   onComplete?: (data: Record<string, any>) => void;
-  initialProgress?: TaskProgress;
 }
 
 export function MicroTaskEngine({
   taskSequence,
   isOpen,
   onClose,
-  onComplete,
-  initialProgress
+  onComplete
 }: MicroTaskEngineProps) {
   
-  const [currentTaskIndex, setCurrentTaskIndex] = useState(
-    initialProgress?.currentTaskIndex || 0
-  );
-  const [taskData, setTaskData] = useState<Record<string, any>>(
-    initialProgress?.data || {}
-  );
+  // Use the custom hook for progress synchronization with Clerk
+  const { progress, isLoading, updateProgress } = useTaskProgress(taskSequence.id);
+  
+  const [currentTaskIndex, setCurrentTaskIndex] = useState(0);
+  const [taskData, setTaskData] = useState<Record<string, any>>({});
   const [currentValue, setCurrentValue] = useState<any>('');
   const [isValid, setIsValid] = useState(false);
   const [validationError, setValidationError] = useState<string>('');
@@ -57,11 +55,19 @@ export function MicroTaskEngine({
   const isLastTask = currentTaskIndex === taskSequence.tasks.length - 1;
   const progressPercentage = ((currentTaskIndex) / taskSequence.tasks.length) * 100;
 
+  // Initialize from synced progress when available
+  useEffect(() => {
+    if (!isLoading && progress && !taskData[currentTask?.id]) {
+      setCurrentTaskIndex(progress.currentTaskIndex || 0);
+      setTaskData(progress.data || {});
+    }
+  }, [isLoading, progress]);
+
   useEffect(() => {
     // Reset current value when task changes
     setCurrentValue(taskData[currentTask?.id] || '');
     setValidationError('');
-  }, [currentTaskIndex, currentTask?.id]);
+  }, [currentTaskIndex, currentTask?.id, taskData]);
 
   useEffect(() => {
     // Validate current input
@@ -98,7 +104,7 @@ export function MicroTaskEngine({
     }
   }, [currentValue, currentTask]);
 
-  const handleNext = () => {
+  const handleNext = async () => {
     if (!isValid && currentTask.required) return;
 
     // Save current task data
@@ -118,27 +124,30 @@ export function MicroTaskEngine({
 
     if (isLastTask) {
       // Complete the sequence
-      handleComplete(newTaskData);
+      await handleComplete(newTaskData);
     } else {
       // Move to next task
-      setCurrentTaskIndex(prev => prev + 1);
+      const nextIndex = currentTaskIndex + 1;
+      setCurrentTaskIndex(nextIndex);
       setCurrentValue('');
+      
+      // Update progress in Clerk and localStorage
+      await updateProgress({
+        currentTaskIndex: nextIndex,
+        completedTasks: taskSequence.tasks.slice(0, nextIndex).map(t => t.id),
+        data: newTaskData
+      });
     }
   };
 
-  const handleComplete = (finalData: Record<string, any>) => {
-    // Save progress to localStorage (privacy-first, per WARP.md)
-    const progress: TaskProgress = {
-      sequenceId: taskSequence.id,
+  const handleComplete = async (finalData: Record<string, any>) => {
+    // Update progress with completion status (syncs to Clerk and localStorage)
+    await updateProgress({
       currentTaskIndex: taskSequence.tasks.length,
       completedTasks: taskSequence.tasks.map(t => t.id),
       data: finalData,
-      startedAt: initialProgress?.startedAt || new Date().toISOString(),
-      lastUpdatedAt: new Date().toISOString(),
       completedAt: new Date().toISOString()
-    };
-    
-    localStorage.setItem(`task_progress_${taskSequence.id}`, JSON.stringify(progress));
+    });
     
     if (onComplete) {
       onComplete(finalData);
@@ -161,18 +170,13 @@ export function MicroTaskEngine({
     onClose();
   };
 
-  const handlePause = () => {
-    // Save current progress
-    const progress: TaskProgress = {
-      sequenceId: taskSequence.id,
+  const handlePause = async () => {
+    // Save current progress (syncs to Clerk and localStorage)
+    await updateProgress({
       currentTaskIndex,
       completedTasks: taskSequence.tasks.slice(0, currentTaskIndex).map(t => t.id),
-      data: taskData,
-      startedAt: initialProgress?.startedAt || new Date().toISOString(),
-      lastUpdatedAt: new Date().toISOString()
-    };
-    
-    localStorage.setItem(`task_progress_${taskSequence.id}`, JSON.stringify(progress));
+      data: taskData
+    });
     
     toast.info('Progress saved', {
       description: 'You can continue from where you left off anytime',
@@ -251,6 +255,22 @@ export function MicroTaskEngine({
     }
   };
 
+  // Show loading state while fetching progress from Clerk
+  if (isLoading) {
+    return (
+      <Sheet open={isOpen} onOpenChange={onClose}>
+        <SheetContent className="w-full sm:max-w-lg">
+          <div className="flex items-center justify-center h-full">
+            <div className="text-center space-y-4">
+              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto" />
+              <p className="text-sm text-muted-foreground">Loading your progress...</p>
+            </div>
+          </div>
+        </SheetContent>
+      </Sheet>
+    );
+  }
+
   if (!currentTask) return null;
 
   return (
@@ -320,7 +340,7 @@ export function MicroTaskEngine({
           <Button
             variant="outline"
             onClick={handlePause}
-            className="w-full sm:w-auto"
+            size="default"
           >
             Save & Continue Later
           </Button>
@@ -328,20 +348,20 @@ export function MicroTaskEngine({
           <Button
             onClick={handleNext}
             disabled={!isValid && currentTask.required}
+            size="default"
             className={cn(
-              "w-full sm:w-auto gap-2 transition-all duration-300",
               isLastTask && "bg-green-600 hover:bg-green-700"
             )}
           >
             {isLastTask ? (
               <>
-                <CheckCircle2 className="w-4 h-4" />
+                <CheckCircle2 className="w-4 h-4 mr-2" />
                 Complete
               </>
             ) : (
               <>
                 Next
-                <ChevronRight className="w-4 h-4" />
+                <ChevronRight className="w-4 h-4 ml-2" />
               </>
             )}
           </Button>
