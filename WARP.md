@@ -170,6 +170,8 @@ The application uses a service-oriented architecture with adapter pattern for ex
 - **Respectful UX**: Soft language, accessible design, quiet hours support
 - **Offline-first**: Core functionality works without internet
 - **Progressive enhancement**: Mobile-responsive, PWA-ready
+- **Peace of Mind Focus**: Every element should contribute to user's sense of security and peace
+- **Empathetic Design**: Acknowledge the emotional weight of legacy planning topics
 
 ### Testing Strategy
 
@@ -400,7 +402,45 @@ Users don't come to use a "will creation tool". They come to take "inventory of 
 
 The onboarding must be emotionally intelligent and highly persuasive while remaining sensitive to the serious nature of the topics.
 
-#### Onboarding Flow Structure
+#### Operation "Peace of Mind" - Premium Onboarding Experience
+
+**Goal**: Create an application experience that truly brings peace of mind to users. Every pixel, every word must serve this goal. The first impression is crucial - it changes the entire context and feeling of the application.
+
+**Phase 1: New Beginning - Premium Onboarding (Quick Wins)**
+
+1. **OnboardingIntroPage.tsx - The Peaceful Pause**:
+   - **Layout**: Extremely minimalist. Large, empty space. Gentle, almost invisible background (e.g., very soft gradient or texture).
+   - **Main Text** (large, centered): "Everyone has things in their life they don't want to leave to chance."
+   - **Secondary text** (smaller, below): "Documents, memories, contacts – small pieces of certainty for our loved ones."
+   - **Interaction**: No button. User scrolls down with gentle scroll-down gesture that reveals the next section (or after 5 seconds, a gentle down arrow appears).
+
+2. **Story Section Addition** (part of OnboardingIntroPage):
+   - **Layout**: After scrolling, three horizontal cards appear.
+   - **Card Texts**:
+     - Card 1: "Your partner needs to find the insurance policy, but doesn't know where it is."
+     - Card 2: "Your child will one day need to know what you wanted to leave them."
+     - Card 3: "Your parents will appreciate if you leave them a clear list of contacts and tasks."
+   - **Interaction**: Main CTA appears below the cards.
+
+3. **OnboardingConversation.tsx** (renamed from EmotionalOnboarding):
+   - **Layout**: Remove technical "wizard" appearance. Each question is a separate "scene" on full screen.
+   - **Introduction** (before first question): "We'll help you organize this - peacefully and step by step. Let's start with a brief conversation to prepare your personal plan."
+   - **Scene 1 - Box of Security**:
+     - Visual: Gentle, elegant visualization of a box in background
+     - Question: "Imagine a small box that your loved ones will find after you. What should definitely not be missing in it, so they feel secure?"
+     - Input: Large Textarea field
+   - **Scene 2 - Person of Trust**:
+     - Visual: Gentle visualization of a key in background
+     - Question: "If you could give someone the key to this box, who would it be?"
+     - Input: Textarea for names, not structured form
+   - **Conclusion** (after answers):
+     - Text: "Thank you. Now we'll prepare your personal plan - so you have everything important in one place and your loved ones will one day find peace and security."
+     - Interaction: Shows Spinner and redirects to dashboard after a moment
+
+4. **Trust Cues Implementation**:
+   - In the footer of each onboarding scene, add a small, discrete line with icons: (Shield) "Your answers are encrypted and only you can see them." (Eye) "We never analyze or sell them."
+
+#### Traditional Onboarding Flow Structure
 
 1. **Pre-Onboarding Screen**: Sensitively explains why we ask 2 basic questions and their benefits
 2. **EmotionalOnboarding.tsx**: Life-focused wizard with questions:

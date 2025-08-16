@@ -71,7 +71,7 @@ export default defineConfig({
   webServer: {
     command: "npm run preview:e2e",
     url: "http://localhost:4173",
-    reuseExistingServer: false,
+    reuseExistingServer: true,
     env: {
       VITE_E2E: "1",
     },
